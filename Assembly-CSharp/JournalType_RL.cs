@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200074A RID: 1866
+// Token: 0x02000C08 RID: 3080
 public class JournalType_RL
 {
-	// Token: 0x06004110 RID: 16656 RVA: 0x000E65C0 File Offset: 0x000E47C0
+	// Token: 0x06005A8D RID: 23181 RVA: 0x00155EBC File Offset: 0x001540BC
 	public static JournalCategoryType ConvertBiomeToJournalCategoryType(BiomeType biome)
 	{
 		if (biome <= BiomeType.ForestBottom)
@@ -42,7 +42,7 @@ public class JournalType_RL
 		return JournalCategoryType.None;
 	}
 
-	// Token: 0x06004111 RID: 16657 RVA: 0x000E6631 File Offset: 0x000E4831
+	// Token: 0x06005A8E RID: 23182 RVA: 0x000319AE File Offset: 0x0002FBAE
 	public static BiomeType ConvertJournalCategoryTypeToBiome(JournalCategoryType journalCategoryType)
 	{
 		if (journalCategoryType <= JournalCategoryType.Study)
@@ -78,8 +78,8 @@ public class JournalType_RL
 		return BiomeType.None;
 	}
 
-	// Token: 0x17001637 RID: 5687
-	// (get) Token: 0x06004112 RID: 16658 RVA: 0x000E6670 File Offset: 0x000E4870
+	// Token: 0x17001E33 RID: 7731
+	// (get) Token: 0x06005A8F RID: 23183 RVA: 0x000319ED File Offset: 0x0002FBED
 	public static JournalCategoryType[] CategoryTypeArray
 	{
 		get
@@ -92,8 +92,8 @@ public class JournalType_RL
 		}
 	}
 
-	// Token: 0x17001638 RID: 5688
-	// (get) Token: 0x06004113 RID: 16659 RVA: 0x000E6697 File Offset: 0x000E4897
+	// Token: 0x17001E34 RID: 7732
+	// (get) Token: 0x06005A90 RID: 23184 RVA: 0x00031A14 File Offset: 0x0002FC14
 	public static JournalCategoryType[] SortedCategoryTypeArray
 	{
 		get
@@ -115,9 +115,9 @@ public class JournalType_RL
 		}
 	}
 
-	// Token: 0x040034E6 RID: 13542
+	// Token: 0x04004762 RID: 18274
 	private static JournalCategoryType[] m_categoryTypeArray;
 
-	// Token: 0x040034E7 RID: 13543
+	// Token: 0x04004763 RID: 18275
 	private static JournalCategoryType[] m_sortedCategoryTypeArray;
 }

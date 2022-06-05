@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Rewired.Demos
 {
-	// Token: 0x0200093A RID: 2362
+	// Token: 0x02000EC9 RID: 3785
 	[AddComponentMenu("")]
 	public class ControlRemappingDemo1 : MonoBehaviour
 	{
-		// Token: 0x06004FE2 RID: 20450 RVA: 0x00117E6C File Offset: 0x0011606C
+		// Token: 0x06006D6C RID: 28012 RVA: 0x0003C034 File Offset: 0x0003A234
 		private void Awake()
 		{
 			this.inputMapper.options.timeout = 5f;
@@ -17,19 +17,19 @@ namespace Rewired.Demos
 			this.Initialize();
 		}
 
-		// Token: 0x06004FE3 RID: 20451 RVA: 0x00117EAB File Offset: 0x001160AB
+		// Token: 0x06006D6D RID: 28013 RVA: 0x0003C073 File Offset: 0x0003A273
 		private void OnEnable()
 		{
 			this.Subscribe();
 		}
 
-		// Token: 0x06004FE4 RID: 20452 RVA: 0x00117EB3 File Offset: 0x001160B3
+		// Token: 0x06006D6E RID: 28014 RVA: 0x0003C07B File Offset: 0x0003A27B
 		private void OnDisable()
 		{
 			this.Unsubscribe();
 		}
 
-		// Token: 0x06004FE5 RID: 20453 RVA: 0x00117EBC File Offset: 0x001160BC
+		// Token: 0x06006D6F RID: 28015 RVA: 0x00186A64 File Offset: 0x00184C64
 		private void Initialize()
 		{
 			this.dialog = new ControlRemappingDemo1.DialogHelper();
@@ -47,7 +47,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06004FE6 RID: 20454 RVA: 0x00117F44 File Offset: 0x00116144
+		// Token: 0x06006D70 RID: 28016 RVA: 0x00186AEC File Offset: 0x00184CEC
 		private void Setup()
 		{
 			if (this.setupFinished)
@@ -61,7 +61,7 @@ namespace Rewired.Demos
 			this.setupFinished = true;
 		}
 
-		// Token: 0x06004FE7 RID: 20455 RVA: 0x00117FA3 File Offset: 0x001161A3
+		// Token: 0x06006D71 RID: 28017 RVA: 0x0003C083 File Offset: 0x0003A283
 		private void Subscribe()
 		{
 			this.Unsubscribe();
@@ -69,13 +69,13 @@ namespace Rewired.Demos
 			this.inputMapper.StoppedEvent += this.OnStopped;
 		}
 
-		// Token: 0x06004FE8 RID: 20456 RVA: 0x00117FD9 File Offset: 0x001161D9
+		// Token: 0x06006D72 RID: 28018 RVA: 0x0003C0B9 File Offset: 0x0003A2B9
 		private void Unsubscribe()
 		{
 			this.inputMapper.RemoveAllEventListeners();
 		}
 
-		// Token: 0x06004FE9 RID: 20457 RVA: 0x00117FE8 File Offset: 0x001161E8
+		// Token: 0x06006D73 RID: 28019 RVA: 0x00186B4C File Offset: 0x00184D4C
 		public void OnGUI()
 		{
 			if (!this.initialized)
@@ -97,7 +97,7 @@ namespace Rewired.Demos
 			this.busy = false;
 		}
 
-		// Token: 0x06004FEA RID: 20458 RVA: 0x00118040 File Offset: 0x00116240
+		// Token: 0x06006D74 RID: 28020 RVA: 0x00186BA4 File Offset: 0x00184DA4
 		private void HandleMenuControl()
 		{
 			if (this.dialog.enabled)
@@ -116,20 +116,20 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06004FEB RID: 20459 RVA: 0x0011809D File Offset: 0x0011629D
+		// Token: 0x06006D75 RID: 28021 RVA: 0x0003C0C6 File Offset: 0x0003A2C6
 		private void Close()
 		{
 			this.ClearWorkingVars();
 			this.showMenu = false;
 		}
 
-		// Token: 0x06004FEC RID: 20460 RVA: 0x001180AC File Offset: 0x001162AC
+		// Token: 0x06006D76 RID: 28022 RVA: 0x0003C0D5 File Offset: 0x0003A2D5
 		private void Open()
 		{
 			this.showMenu = true;
 		}
 
-		// Token: 0x06004FED RID: 20461 RVA: 0x001180B8 File Offset: 0x001162B8
+		// Token: 0x06006D77 RID: 28023 RVA: 0x00186C04 File Offset: 0x00184E04
 		private void DrawInitialScreen()
 		{
 			ActionElementMap firstElementMapWithAction = ReInput.players.GetSystemPlayer().controllers.maps.GetFirstElementMapWithAction("Menu", true);
@@ -151,7 +151,7 @@ namespace Rewired.Demos
 			GUILayout.EndArea();
 		}
 
-		// Token: 0x06004FEE RID: 20462 RVA: 0x00118150 File Offset: 0x00116350
+		// Token: 0x06006D78 RID: 28024 RVA: 0x00186C9C File Offset: 0x00184E9C
 		private void DrawPage()
 		{
 			if (GUI.enabled != this.pageGUIState)
@@ -171,7 +171,7 @@ namespace Rewired.Demos
 			GUILayout.EndArea();
 		}
 
-		// Token: 0x06004FEF RID: 20463 RVA: 0x00118214 File Offset: 0x00116414
+		// Token: 0x06006D79 RID: 28025 RVA: 0x00186D60 File Offset: 0x00184F60
 		private void DrawPlayerSelector()
 		{
 			if (ReInput.players.allPlayerCount == 0)
@@ -203,7 +203,7 @@ namespace Rewired.Demos
 			GUILayout.EndHorizontal();
 		}
 
-		// Token: 0x06004FF0 RID: 20464 RVA: 0x00118328 File Offset: 0x00116528
+		// Token: 0x06006D7A RID: 28026 RVA: 0x00186E74 File Offset: 0x00185074
 		private void DrawMouseAssignment()
 		{
 			bool enabled = GUI.enabled;
@@ -247,7 +247,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06004FF1 RID: 20465 RVA: 0x00118444 File Offset: 0x00116644
+		// Token: 0x06006D7B RID: 28027 RVA: 0x00186F90 File Offset: 0x00185190
 		private void DrawJoystickSelector()
 		{
 			bool enabled = GUI.enabled;
@@ -290,7 +290,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06004FF2 RID: 20466 RVA: 0x001185A0 File Offset: 0x001167A0
+		// Token: 0x06006D7C RID: 28028 RVA: 0x001870EC File Offset: 0x001852EC
 		private void DrawControllerSelector()
 		{
 			if (this.selectedPlayer == null)
@@ -351,7 +351,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06004FF3 RID: 20467 RVA: 0x00118774 File Offset: 0x00116974
+		// Token: 0x06006D7D RID: 28029 RVA: 0x001872C0 File Offset: 0x001854C0
 		private void DrawCalibrateButton()
 		{
 			if (this.selectedPlayer == null)
@@ -394,7 +394,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06004FF4 RID: 20468 RVA: 0x00118870 File Offset: 0x00116A70
+		// Token: 0x06006D7E RID: 28030 RVA: 0x001873BC File Offset: 0x001855BC
 		private void DrawMapCategories()
 		{
 			if (this.selectedPlayer == null)
@@ -441,7 +441,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06004FF5 RID: 20469 RVA: 0x00118A44 File Offset: 0x00116C44
+		// Token: 0x06006D7F RID: 28031 RVA: 0x00187590 File Offset: 0x00185790
 		private void DrawCategoryActions()
 		{
 			if (this.selectedPlayer == null)
@@ -548,7 +548,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06004FF6 RID: 20470 RVA: 0x00118F38 File Offset: 0x00117138
+		// Token: 0x06006D80 RID: 28032 RVA: 0x00187A84 File Offset: 0x00185C84
 		private void DrawActionAssignmentButton(int playerId, InputAction action, AxisRange actionRange, ControlRemappingDemo1.ControllerSelection controller, ControllerMap controllerMap, ActionElementMap elementMap)
 		{
 			if (GUILayout.Button(elementMap.elementIdentifierName, new GUILayoutOption[]
@@ -570,7 +570,7 @@ namespace Rewired.Demos
 			GUILayout.Space(4f);
 		}
 
-		// Token: 0x06004FF7 RID: 20471 RVA: 0x00118FB8 File Offset: 0x001171B8
+		// Token: 0x06006D81 RID: 28033 RVA: 0x00187B04 File Offset: 0x00185D04
 		private void DrawInvertButton(int playerId, InputAction action, Pole actionAxisContribution, ControlRemappingDemo1.ControllerSelection controller, ControllerMap controllerMap, ActionElementMap elementMap)
 		{
 			bool invert = elementMap.invert;
@@ -585,7 +585,7 @@ namespace Rewired.Demos
 			GUILayout.Space(10f);
 		}
 
-		// Token: 0x06004FF8 RID: 20472 RVA: 0x00119000 File Offset: 0x00117200
+		// Token: 0x06006D82 RID: 28034 RVA: 0x00187B4C File Offset: 0x00185D4C
 		private void DrawAddActionMapButton(int playerId, InputAction action, AxisRange actionRange, ControlRemappingDemo1.ControllerSelection controller, ControllerMap controllerMap)
 		{
 			if (GUILayout.Button("Add...", new GUILayoutOption[]
@@ -605,13 +605,13 @@ namespace Rewired.Demos
 			GUILayout.Space(10f);
 		}
 
-		// Token: 0x06004FF9 RID: 20473 RVA: 0x00119067 File Offset: 0x00117267
+		// Token: 0x06006D83 RID: 28035 RVA: 0x0003C0DE File Offset: 0x0003A2DE
 		private void ShowDialog()
 		{
 			this.dialog.Update();
 		}
 
-		// Token: 0x06004FFA RID: 20474 RVA: 0x00119074 File Offset: 0x00117274
+		// Token: 0x06006D84 RID: 28036 RVA: 0x00187BB4 File Offset: 0x00185DB4
 		private void DrawModalWindow(string title, string message)
 		{
 			if (!this.dialog.enabled)
@@ -628,7 +628,7 @@ namespace Rewired.Demos
 			GUILayout.EndHorizontal();
 		}
 
-		// Token: 0x06004FFB RID: 20475 RVA: 0x001190E0 File Offset: 0x001172E0
+		// Token: 0x06006D85 RID: 28037 RVA: 0x00187C20 File Offset: 0x00185E20
 		private void DrawModalWindow_OkayOnly(string title, string message)
 		{
 			if (!this.dialog.enabled)
@@ -643,7 +643,7 @@ namespace Rewired.Demos
 			GUILayout.EndHorizontal();
 		}
 
-		// Token: 0x06004FFC RID: 20476 RVA: 0x0011913C File Offset: 0x0011733C
+		// Token: 0x06006D86 RID: 28038 RVA: 0x00187C7C File Offset: 0x00185E7C
 		private void DrawElementAssignmentWindow(string title, string message)
 		{
 			if (!this.dialog.enabled)
@@ -686,7 +686,7 @@ namespace Rewired.Demos
 			GUILayout.Label("Assignment will be canceled in " + ((int)Mathf.Ceil(num)).ToString() + "...", this.style_wordWrap, Array.Empty<GUILayoutOption>());
 		}
 
-		// Token: 0x06004FFD RID: 20477 RVA: 0x00119248 File Offset: 0x00117448
+		// Token: 0x06006D87 RID: 28039 RVA: 0x00187D88 File Offset: 0x00185F88
 		private void DrawElementAssignmentProtectedConflictWindow(string title, string message)
 		{
 			if (!this.dialog.enabled)
@@ -708,7 +708,7 @@ namespace Rewired.Demos
 			GUILayout.EndHorizontal();
 		}
 
-		// Token: 0x06004FFE RID: 20478 RVA: 0x001192D4 File Offset: 0x001174D4
+		// Token: 0x06006D88 RID: 28040 RVA: 0x00187E14 File Offset: 0x00186014
 		private void DrawElementAssignmentNormalConflictWindow(string title, string message)
 		{
 			if (!this.dialog.enabled)
@@ -732,7 +732,7 @@ namespace Rewired.Demos
 			GUILayout.EndHorizontal();
 		}
 
-		// Token: 0x06004FFF RID: 20479 RVA: 0x00119374 File Offset: 0x00117574
+		// Token: 0x06006D89 RID: 28041 RVA: 0x00187EB4 File Offset: 0x001860B4
 		private void DrawReassignOrRemoveElementAssignmentWindow(string title, string message)
 		{
 			if (!this.dialog.enabled)
@@ -749,7 +749,7 @@ namespace Rewired.Demos
 			GUILayout.EndHorizontal();
 		}
 
-		// Token: 0x06005000 RID: 20480 RVA: 0x001193E4 File Offset: 0x001175E4
+		// Token: 0x06006D8A RID: 28042 RVA: 0x00187F24 File Offset: 0x00186124
 		private void DrawFallbackJoystickIdentificationWindow(string title, string message)
 		{
 			if (!this.dialog.enabled)
@@ -782,7 +782,7 @@ namespace Rewired.Demos
 			this.dialog.Confirm();
 		}
 
-		// Token: 0x06005001 RID: 20481 RVA: 0x001194B4 File Offset: 0x001176B4
+		// Token: 0x06006D8B RID: 28043 RVA: 0x00187FF4 File Offset: 0x001861F4
 		private void DrawCalibrationWindow(string title, string message)
 		{
 			if (!this.dialog.enabled)
@@ -940,7 +940,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005002 RID: 20482 RVA: 0x00119954 File Offset: 0x00117B54
+		// Token: 0x06006D8C RID: 28044 RVA: 0x00188494 File Offset: 0x00186694
 		private void DialogResultCallback(int queueActionId, ControlRemappingDemo1.UserResponse response)
 		{
 			foreach (ControlRemappingDemo1.QueueEntry queueEntry in this.actionQueue)
@@ -958,13 +958,13 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005003 RID: 20483 RVA: 0x001199C0 File Offset: 0x00117BC0
+		// Token: 0x06006D8D RID: 28045 RVA: 0x0003C0EB File Offset: 0x0003A2EB
 		private Rect GetScreenCenteredRect(float width, float height)
 		{
 			return new Rect((float)Screen.width * 0.5f - width * 0.5f, (float)((double)Screen.height * 0.5 - (double)(height * 0.5f)), width, height);
 		}
 
-		// Token: 0x06005004 RID: 20484 RVA: 0x001199F8 File Offset: 0x00117BF8
+		// Token: 0x06006D8E RID: 28046 RVA: 0x0003C123 File Offset: 0x0003A323
 		private void EnqueueAction(ControlRemappingDemo1.QueueEntry entry)
 		{
 			if (entry == null)
@@ -976,7 +976,7 @@ namespace Rewired.Demos
 			this.actionQueue.Enqueue(entry);
 		}
 
-		// Token: 0x06005005 RID: 20485 RVA: 0x00119A18 File Offset: 0x00117C18
+		// Token: 0x06006D8F RID: 28047 RVA: 0x00188500 File Offset: 0x00186700
 		private void ProcessQueue()
 		{
 			if (this.dialog.enabled)
@@ -1014,7 +1014,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005006 RID: 20486 RVA: 0x00119AD4 File Offset: 0x00117CD4
+		// Token: 0x06006D90 RID: 28048 RVA: 0x001885BC File Offset: 0x001867BC
 		private bool ProcessJoystickAssignmentChange(ControlRemappingDemo1.JoystickAssignmentChange entry)
 		{
 			if (entry.state == ControlRemappingDemo1.QueueEntry.State.Canceled)
@@ -1052,7 +1052,7 @@ namespace Rewired.Demos
 			return false;
 		}
 
-		// Token: 0x06005007 RID: 20487 RVA: 0x00119BEC File Offset: 0x00117DEC
+		// Token: 0x06006D91 RID: 28049 RVA: 0x001886D4 File Offset: 0x001868D4
 		private bool ProcessElementAssignmentChange(ControlRemappingDemo1.ElementAssignmentChange entry)
 		{
 			switch (entry.changeType)
@@ -1071,7 +1071,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005008 RID: 20488 RVA: 0x00119C44 File Offset: 0x00117E44
+		// Token: 0x06006D92 RID: 28050 RVA: 0x0018872C File Offset: 0x0018692C
 		private bool ProcessRemoveOrReassignElementAssignment(ControlRemappingDemo1.ElementAssignmentChange entry)
 		{
 			if (entry.context.controllerMap == null)
@@ -1102,7 +1102,7 @@ namespace Rewired.Demos
 			return false;
 		}
 
-		// Token: 0x06005009 RID: 20489 RVA: 0x00119D18 File Offset: 0x00117F18
+		// Token: 0x06006D93 RID: 28051 RVA: 0x00188800 File Offset: 0x00186A00
 		private bool ProcessRemoveElementAssignment(ControlRemappingDemo1.ElementAssignmentChange entry)
 		{
 			if (entry.context.controllerMap == null)
@@ -1128,7 +1128,7 @@ namespace Rewired.Demos
 			return false;
 		}
 
-		// Token: 0x0600500A RID: 20490 RVA: 0x00119DD8 File Offset: 0x00117FD8
+		// Token: 0x06006D94 RID: 28052 RVA: 0x001888C0 File Offset: 0x00186AC0
 		private bool ProcessAddOrReplaceElementAssignment(ControlRemappingDemo1.ElementAssignmentChange entry)
 		{
 			if (entry.state == ControlRemappingDemo1.QueueEntry.State.Canceled)
@@ -1184,7 +1184,7 @@ namespace Rewired.Demos
 			return true;
 		}
 
-		// Token: 0x0600500B RID: 20491 RVA: 0x00119F08 File Offset: 0x00118108
+		// Token: 0x06006D95 RID: 28053 RVA: 0x001889F0 File Offset: 0x00186BF0
 		private bool ProcessElementAssignmentConflictCheck(ControlRemappingDemo1.ElementAssignmentChange entry)
 		{
 			if (entry.context.controllerMap == null)
@@ -1241,7 +1241,7 @@ namespace Rewired.Demos
 			return false;
 		}
 
-		// Token: 0x0600500C RID: 20492 RVA: 0x0011A0A4 File Offset: 0x001182A4
+		// Token: 0x06006D96 RID: 28054 RVA: 0x00188B8C File Offset: 0x00186D8C
 		private bool ProcessFallbackJoystickIdentification(ControlRemappingDemo1.FallbackJoystickIdentification entry)
 		{
 			if (entry.state == ControlRemappingDemo1.QueueEntry.State.Canceled)
@@ -1262,7 +1262,7 @@ namespace Rewired.Demos
 			return false;
 		}
 
-		// Token: 0x0600500D RID: 20493 RVA: 0x0011A138 File Offset: 0x00118338
+		// Token: 0x06006D97 RID: 28055 RVA: 0x00188C20 File Offset: 0x00186E20
 		private bool ProcessCalibration(ControlRemappingDemo1.Calibration entry)
 		{
 			if (entry.state == ControlRemappingDemo1.QueueEntry.State.Canceled)
@@ -1283,33 +1283,33 @@ namespace Rewired.Demos
 			return false;
 		}
 
-		// Token: 0x0600500E RID: 20494 RVA: 0x0011A1DA File Offset: 0x001183DA
+		// Token: 0x06006D98 RID: 28056 RVA: 0x0003C142 File Offset: 0x0003A342
 		private void PlayerSelectionChanged()
 		{
 			this.ClearControllerSelection();
 		}
 
-		// Token: 0x0600500F RID: 20495 RVA: 0x0011A1E2 File Offset: 0x001183E2
+		// Token: 0x06006D99 RID: 28057 RVA: 0x0003C14A File Offset: 0x0003A34A
 		private void ControllerSelectionChanged()
 		{
 			this.ClearMapSelection();
 		}
 
-		// Token: 0x06005010 RID: 20496 RVA: 0x0011A1EA File Offset: 0x001183EA
+		// Token: 0x06006D9A RID: 28058 RVA: 0x0003C152 File Offset: 0x0003A352
 		private void ClearControllerSelection()
 		{
 			this.selectedController.Clear();
 			this.ClearMapSelection();
 		}
 
-		// Token: 0x06005011 RID: 20497 RVA: 0x0011A1FD File Offset: 0x001183FD
+		// Token: 0x06006D9B RID: 28059 RVA: 0x0003C165 File Offset: 0x0003A365
 		private void ClearMapSelection()
 		{
 			this.selectedMapCategoryId = -1;
 			this.selectedMap = null;
 		}
 
-		// Token: 0x06005012 RID: 20498 RVA: 0x0011A20D File Offset: 0x0011840D
+		// Token: 0x06006D9C RID: 28060 RVA: 0x0003C175 File Offset: 0x0003A375
 		private void ResetAll()
 		{
 			this.ClearWorkingVars();
@@ -1317,7 +1317,7 @@ namespace Rewired.Demos
 			this.showMenu = false;
 		}
 
-		// Token: 0x06005013 RID: 20499 RVA: 0x0011A224 File Offset: 0x00118424
+		// Token: 0x06006D9D RID: 28061 RVA: 0x00188CC4 File Offset: 0x00186EC4
 		private void ClearWorkingVars()
 		{
 			this.selectedPlayer = null;
@@ -1332,7 +1332,7 @@ namespace Rewired.Demos
 			this.inputMapper.Stop();
 		}
 
-		// Token: 0x06005014 RID: 20500 RVA: 0x0011A28C File Offset: 0x0011848C
+		// Token: 0x06006D9E RID: 28062 RVA: 0x00188D2C File Offset: 0x00186F2C
 		private void SetGUIStateStart()
 		{
 			this.guiState = true;
@@ -1347,7 +1347,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005015 RID: 20501 RVA: 0x0011A2FB File Offset: 0x001184FB
+		// Token: 0x06006D9F RID: 28063 RVA: 0x0003C18B File Offset: 0x0003A38B
 		private void SetGUIStateEnd()
 		{
 			this.guiState = true;
@@ -1357,7 +1357,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005016 RID: 20502 RVA: 0x0011A318 File Offset: 0x00118518
+		// Token: 0x06006DA0 RID: 28064 RVA: 0x00188D9C File Offset: 0x00186F9C
 		private void JoystickConnected(ControllerStatusChangedEventArgs args)
 		{
 			if (ReInput.controllers.IsControllerAssigned(args.controllerType, args.controllerId))
@@ -1383,7 +1383,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005017 RID: 20503 RVA: 0x0011A3D4 File Offset: 0x001185D4
+		// Token: 0x06006DA1 RID: 28065 RVA: 0x00188E58 File Offset: 0x00187058
 		private void JoystickPreDisconnect(ControllerStatusChangedEventArgs args)
 		{
 			if (this.selectedController.hasSelection && args.controllerType == this.selectedController.type && args.controllerId == this.selectedController.id)
@@ -1411,7 +1411,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005018 RID: 20504 RVA: 0x0011A4C8 File Offset: 0x001186C8
+		// Token: 0x06006DA2 RID: 28066 RVA: 0x0003C1A6 File Offset: 0x0003A3A6
 		private void JoystickDisconnected(ControllerStatusChangedEventArgs args)
 		{
 			if (this.showMenu)
@@ -1424,19 +1424,19 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005019 RID: 20505 RVA: 0x0011A4E5 File Offset: 0x001186E5
+		// Token: 0x06006DA3 RID: 28067 RVA: 0x0003C1C3 File Offset: 0x0003A3C3
 		private void OnConflictFound(InputMapper.ConflictFoundEventData data)
 		{
 			this.conflictFoundEventData = data;
 		}
 
-		// Token: 0x0600501A RID: 20506 RVA: 0x0011A4EE File Offset: 0x001186EE
+		// Token: 0x06006DA4 RID: 28068 RVA: 0x0003C1CC File Offset: 0x0003A3CC
 		private void OnStopped(InputMapper.StoppedEventData data)
 		{
 			this.conflictFoundEventData = null;
 		}
 
-		// Token: 0x0600501B RID: 20507 RVA: 0x0011A4F8 File Offset: 0x001186F8
+		// Token: 0x06006DA5 RID: 28069 RVA: 0x00188F4C File Offset: 0x0018714C
 		public void IdentifyAllJoysticks()
 		{
 			if (ReInput.controllers.joystickCount == 0)
@@ -1451,98 +1451,98 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x0600501C RID: 20508 RVA: 0x0011A578 File Offset: 0x00118778
+		// Token: 0x06006DA6 RID: 28070 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected void CheckRecompile()
 		{
 		}
 
-		// Token: 0x0600501D RID: 20509 RVA: 0x0011A57A File Offset: 0x0011877A
+		// Token: 0x06006DA7 RID: 28071 RVA: 0x00002FCA File Offset: 0x000011CA
 		private void RecompileWindow(int windowId)
 		{
 		}
 
-		// Token: 0x0400426A RID: 17002
+		// Token: 0x04005808 RID: 22536
 		private const float defaultModalWidth = 250f;
 
-		// Token: 0x0400426B RID: 17003
+		// Token: 0x04005809 RID: 22537
 		private const float defaultModalHeight = 200f;
 
-		// Token: 0x0400426C RID: 17004
+		// Token: 0x0400580A RID: 22538
 		private const float assignmentTimeout = 5f;
 
-		// Token: 0x0400426D RID: 17005
+		// Token: 0x0400580B RID: 22539
 		private ControlRemappingDemo1.DialogHelper dialog;
 
-		// Token: 0x0400426E RID: 17006
+		// Token: 0x0400580C RID: 22540
 		private InputMapper inputMapper = new InputMapper();
 
-		// Token: 0x0400426F RID: 17007
+		// Token: 0x0400580D RID: 22541
 		private InputMapper.ConflictFoundEventData conflictFoundEventData;
 
-		// Token: 0x04004270 RID: 17008
+		// Token: 0x0400580E RID: 22542
 		private bool guiState;
 
-		// Token: 0x04004271 RID: 17009
+		// Token: 0x0400580F RID: 22543
 		private bool busy;
 
-		// Token: 0x04004272 RID: 17010
+		// Token: 0x04005810 RID: 22544
 		private bool pageGUIState;
 
-		// Token: 0x04004273 RID: 17011
+		// Token: 0x04005811 RID: 22545
 		private Player selectedPlayer;
 
-		// Token: 0x04004274 RID: 17012
+		// Token: 0x04005812 RID: 22546
 		private int selectedMapCategoryId;
 
-		// Token: 0x04004275 RID: 17013
+		// Token: 0x04005813 RID: 22547
 		private ControlRemappingDemo1.ControllerSelection selectedController;
 
-		// Token: 0x04004276 RID: 17014
+		// Token: 0x04005814 RID: 22548
 		private ControllerMap selectedMap;
 
-		// Token: 0x04004277 RID: 17015
+		// Token: 0x04005815 RID: 22549
 		private bool showMenu;
 
-		// Token: 0x04004278 RID: 17016
+		// Token: 0x04005816 RID: 22550
 		private bool startListening;
 
-		// Token: 0x04004279 RID: 17017
+		// Token: 0x04005817 RID: 22551
 		private Vector2 actionScrollPos;
 
-		// Token: 0x0400427A RID: 17018
+		// Token: 0x04005818 RID: 22552
 		private Vector2 calibrateScrollPos;
 
-		// Token: 0x0400427B RID: 17019
+		// Token: 0x04005819 RID: 22553
 		private Queue<ControlRemappingDemo1.QueueEntry> actionQueue;
 
-		// Token: 0x0400427C RID: 17020
+		// Token: 0x0400581A RID: 22554
 		private bool setupFinished;
 
-		// Token: 0x0400427D RID: 17021
+		// Token: 0x0400581B RID: 22555
 		[NonSerialized]
 		private bool initialized;
 
-		// Token: 0x0400427E RID: 17022
+		// Token: 0x0400581C RID: 22556
 		private bool isCompiling;
 
-		// Token: 0x0400427F RID: 17023
+		// Token: 0x0400581D RID: 22557
 		private GUIStyle style_wordWrap;
 
-		// Token: 0x04004280 RID: 17024
+		// Token: 0x0400581E RID: 22558
 		private GUIStyle style_centeredBox;
 
-		// Token: 0x02000EFE RID: 3838
+		// Token: 0x02000ECA RID: 3786
 		private class ControllerSelection
 		{
-			// Token: 0x06006FC6 RID: 28614 RVA: 0x0019E6D4 File Offset: 0x0019C8D4
+			// Token: 0x06006DA9 RID: 28073 RVA: 0x0003C1E8 File Offset: 0x0003A3E8
 			public ControllerSelection()
 			{
 				this.Clear();
 			}
 
-			// Token: 0x1700244F RID: 9295
-			// (get) Token: 0x06006FC7 RID: 28615 RVA: 0x0019E6E2 File Offset: 0x0019C8E2
-			// (set) Token: 0x06006FC8 RID: 28616 RVA: 0x0019E6EA File Offset: 0x0019C8EA
+			// Token: 0x170023EC RID: 9196
+			// (get) Token: 0x06006DAA RID: 28074 RVA: 0x0003C1F6 File Offset: 0x0003A3F6
+			// (set) Token: 0x06006DAB RID: 28075 RVA: 0x0003C1FE File Offset: 0x0003A3FE
 			public int id
 			{
 				get
@@ -1556,9 +1556,9 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x17002450 RID: 9296
-			// (get) Token: 0x06006FC9 RID: 28617 RVA: 0x0019E6FF File Offset: 0x0019C8FF
-			// (set) Token: 0x06006FCA RID: 28618 RVA: 0x0019E707 File Offset: 0x0019C907
+			// Token: 0x170023ED RID: 9197
+			// (get) Token: 0x06006DAC RID: 28076 RVA: 0x0003C213 File Offset: 0x0003A413
+			// (set) Token: 0x06006DAD RID: 28077 RVA: 0x0003C21B File Offset: 0x0003A41B
 			public ControllerType type
 			{
 				get
@@ -1572,8 +1572,8 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x17002451 RID: 9297
-			// (get) Token: 0x06006FCB RID: 28619 RVA: 0x0019E71C File Offset: 0x0019C91C
+			// Token: 0x170023EE RID: 9198
+			// (get) Token: 0x06006DAE RID: 28078 RVA: 0x0003C230 File Offset: 0x0003A430
 			public int idPrev
 			{
 				get
@@ -1582,8 +1582,8 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x17002452 RID: 9298
-			// (get) Token: 0x06006FCC RID: 28620 RVA: 0x0019E724 File Offset: 0x0019C924
+			// Token: 0x170023EF RID: 9199
+			// (get) Token: 0x06006DAF RID: 28079 RVA: 0x0003C238 File Offset: 0x0003A438
 			public ControllerType typePrev
 			{
 				get
@@ -1592,8 +1592,8 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x17002453 RID: 9299
-			// (get) Token: 0x06006FCD RID: 28621 RVA: 0x0019E72C File Offset: 0x0019C92C
+			// Token: 0x170023F0 RID: 9200
+			// (get) Token: 0x06006DB0 RID: 28080 RVA: 0x0003C240 File Offset: 0x0003A440
 			public bool hasSelection
 			{
 				get
@@ -1602,14 +1602,14 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x06006FCE RID: 28622 RVA: 0x0019E73A File Offset: 0x0019C93A
+			// Token: 0x06006DB1 RID: 28081 RVA: 0x0003C24E File Offset: 0x0003A44E
 			public void Set(int id, ControllerType type)
 			{
 				this.id = id;
 				this.type = type;
 			}
 
-			// Token: 0x06006FCF RID: 28623 RVA: 0x0019E74A File Offset: 0x0019C94A
+			// Token: 0x06006DB2 RID: 28082 RVA: 0x0003C25E File Offset: 0x0003A45E
 			public void Clear()
 			{
 				this._id = -1;
@@ -1618,24 +1618,24 @@ namespace Rewired.Demos
 				this._typePrev = ControllerType.Joystick;
 			}
 
-			// Token: 0x04005A0B RID: 23051
+			// Token: 0x0400581F RID: 22559
 			private int _id;
 
-			// Token: 0x04005A0C RID: 23052
+			// Token: 0x04005820 RID: 22560
 			private int _idPrev;
 
-			// Token: 0x04005A0D RID: 23053
+			// Token: 0x04005821 RID: 22561
 			private ControllerType _type;
 
-			// Token: 0x04005A0E RID: 23054
+			// Token: 0x04005822 RID: 22562
 			private ControllerType _typePrev;
 		}
 
-		// Token: 0x02000EFF RID: 3839
+		// Token: 0x02000ECB RID: 3787
 		private class DialogHelper
 		{
-			// Token: 0x17002454 RID: 9300
-			// (get) Token: 0x06006FD0 RID: 28624 RVA: 0x0019E768 File Offset: 0x0019C968
+			// Token: 0x170023F1 RID: 9201
+			// (get) Token: 0x06006DB3 RID: 28083 RVA: 0x0003C27C File Offset: 0x0003A47C
 			private float busyTimer
 			{
 				get
@@ -1648,9 +1648,9 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x17002455 RID: 9301
-			// (get) Token: 0x06006FD1 RID: 28625 RVA: 0x0019E784 File Offset: 0x0019C984
-			// (set) Token: 0x06006FD2 RID: 28626 RVA: 0x0019E78C File Offset: 0x0019C98C
+			// Token: 0x170023F2 RID: 9202
+			// (get) Token: 0x06006DB4 RID: 28084 RVA: 0x0003C298 File Offset: 0x0003A498
+			// (set) Token: 0x06006DB5 RID: 28085 RVA: 0x0003C2A0 File Offset: 0x0003A4A0
 			public bool enabled
 			{
 				get
@@ -1674,9 +1674,9 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x17002456 RID: 9302
-			// (get) Token: 0x06006FD3 RID: 28627 RVA: 0x0019E7BF File Offset: 0x0019C9BF
-			// (set) Token: 0x06006FD4 RID: 28628 RVA: 0x0019E7D1 File Offset: 0x0019C9D1
+			// Token: 0x170023F3 RID: 9203
+			// (get) Token: 0x06006DB6 RID: 28086 RVA: 0x0003C2D3 File Offset: 0x0003A4D3
+			// (set) Token: 0x06006DB7 RID: 28087 RVA: 0x0003C2E5 File Offset: 0x0003A4E5
 			public ControlRemappingDemo1.DialogHelper.DialogType type
 			{
 				get
@@ -1703,8 +1703,8 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x17002457 RID: 9303
-			// (get) Token: 0x06006FD5 RID: 28629 RVA: 0x0019E803 File Offset: 0x0019CA03
+			// Token: 0x170023F4 RID: 9204
+			// (get) Token: 0x06006DB8 RID: 28088 RVA: 0x0003C317 File Offset: 0x0003A517
 			public bool busy
 			{
 				get
@@ -1713,20 +1713,20 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x06006FD6 RID: 28630 RVA: 0x0019E80B File Offset: 0x0019CA0B
+			// Token: 0x06006DB9 RID: 28089 RVA: 0x0003C31F File Offset: 0x0003A51F
 			public DialogHelper()
 			{
 				this.drawWindowDelegate = new Action<int>(this.DrawWindow);
 				this.drawWindowFunction = new GUI.WindowFunction(this.drawWindowDelegate.Invoke);
 			}
 
-			// Token: 0x06006FD7 RID: 28631 RVA: 0x0019E83C File Offset: 0x0019CA3C
+			// Token: 0x06006DBA RID: 28090 RVA: 0x0003C350 File Offset: 0x0003A550
 			public void StartModal(int queueActionId, ControlRemappingDemo1.DialogHelper.DialogType type, ControlRemappingDemo1.WindowProperties windowProperties, Action<int, ControlRemappingDemo1.UserResponse> resultCallback)
 			{
 				this.StartModal(queueActionId, type, windowProperties, resultCallback, -1f);
 			}
 
-			// Token: 0x06006FD8 RID: 28632 RVA: 0x0019E84E File Offset: 0x0019CA4E
+			// Token: 0x06006DBB RID: 28091 RVA: 0x0003C362 File Offset: 0x0003A562
 			public void StartModal(int queueActionId, ControlRemappingDemo1.DialogHelper.DialogType type, ControlRemappingDemo1.WindowProperties windowProperties, Action<int, ControlRemappingDemo1.UserResponse> resultCallback, float openBusyDelay)
 			{
 				this.currentActionId = queueActionId;
@@ -1739,14 +1739,14 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x06006FD9 RID: 28633 RVA: 0x0019E87E File Offset: 0x0019CA7E
+			// Token: 0x06006DBC RID: 28092 RVA: 0x0003C392 File Offset: 0x0003A592
 			public void Update()
 			{
 				this.Draw();
 				this.UpdateTimers();
 			}
 
-			// Token: 0x06006FDA RID: 28634 RVA: 0x0019E88C File Offset: 0x0019CA8C
+			// Token: 0x06006DBD RID: 28093 RVA: 0x00188FCC File Offset: 0x001871CC
 			public void Draw()
 			{
 				if (!this._enabled)
@@ -1763,13 +1763,13 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x06006FDB RID: 28635 RVA: 0x0019E8FE File Offset: 0x0019CAFE
+			// Token: 0x06006DBE RID: 28094 RVA: 0x0003C3A0 File Offset: 0x0003A5A0
 			public void DrawConfirmButton()
 			{
 				this.DrawConfirmButton("Confirm");
 			}
 
-			// Token: 0x06006FDC RID: 28636 RVA: 0x0019E90C File Offset: 0x0019CB0C
+			// Token: 0x06006DBF RID: 28095 RVA: 0x00189040 File Offset: 0x00187240
 			public void DrawConfirmButton(string title)
 			{
 				bool enabled = GUI.enabled;
@@ -1787,13 +1787,13 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x06006FDD RID: 28637 RVA: 0x0019E94F File Offset: 0x0019CB4F
+			// Token: 0x06006DC0 RID: 28096 RVA: 0x0003C3AD File Offset: 0x0003A5AD
 			public void DrawConfirmButton(ControlRemappingDemo1.UserResponse response)
 			{
 				this.DrawConfirmButton(response, "Confirm");
 			}
 
-			// Token: 0x06006FDE RID: 28638 RVA: 0x0019E960 File Offset: 0x0019CB60
+			// Token: 0x06006DC1 RID: 28097 RVA: 0x00189084 File Offset: 0x00187284
 			public void DrawConfirmButton(ControlRemappingDemo1.UserResponse response, string title)
 			{
 				bool enabled = GUI.enabled;
@@ -1811,13 +1811,13 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x06006FDF RID: 28639 RVA: 0x0019E9A3 File Offset: 0x0019CBA3
+			// Token: 0x06006DC2 RID: 28098 RVA: 0x0003C3BB File Offset: 0x0003A5BB
 			public void DrawCancelButton()
 			{
 				this.DrawCancelButton("Cancel");
 			}
 
-			// Token: 0x06006FE0 RID: 28640 RVA: 0x0019E9B0 File Offset: 0x0019CBB0
+			// Token: 0x06006DC3 RID: 28099 RVA: 0x001890C8 File Offset: 0x001872C8
 			public void DrawCancelButton(string title)
 			{
 				bool enabled = GUI.enabled;
@@ -1835,33 +1835,33 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x06006FE1 RID: 28641 RVA: 0x0019E9F2 File Offset: 0x0019CBF2
+			// Token: 0x06006DC4 RID: 28100 RVA: 0x0003C3C8 File Offset: 0x0003A5C8
 			public void Confirm()
 			{
 				this.Confirm(ControlRemappingDemo1.UserResponse.Confirm);
 			}
 
-			// Token: 0x06006FE2 RID: 28642 RVA: 0x0019E9FB File Offset: 0x0019CBFB
+			// Token: 0x06006DC5 RID: 28101 RVA: 0x0003C3D1 File Offset: 0x0003A5D1
 			public void Confirm(ControlRemappingDemo1.UserResponse response)
 			{
 				this.resultCallback(this.currentActionId, response);
 				this.Close();
 			}
 
-			// Token: 0x06006FE3 RID: 28643 RVA: 0x0019EA15 File Offset: 0x0019CC15
+			// Token: 0x06006DC6 RID: 28102 RVA: 0x0003C3EB File Offset: 0x0003A5EB
 			public void Cancel()
 			{
 				this.resultCallback(this.currentActionId, ControlRemappingDemo1.UserResponse.Cancel);
 				this.Close();
 			}
 
-			// Token: 0x06006FE4 RID: 28644 RVA: 0x0019EA2F File Offset: 0x0019CC2F
+			// Token: 0x06006DC7 RID: 28103 RVA: 0x0003C405 File Offset: 0x0003A605
 			private void DrawWindow(int windowId)
 			{
 				this.windowProperties.windowDrawDelegate(this.windowProperties.title, this.windowProperties.message);
 			}
 
-			// Token: 0x06006FE5 RID: 28645 RVA: 0x0019EA57 File Offset: 0x0019CC57
+			// Token: 0x06006DC8 RID: 28104 RVA: 0x0003C42D File Offset: 0x0003A62D
 			private void UpdateTimers()
 			{
 				if (this._busyTimerRunning && this.busyTimer <= 0f)
@@ -1870,27 +1870,27 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x06006FE6 RID: 28646 RVA: 0x0019EA75 File Offset: 0x0019CC75
+			// Token: 0x06006DC9 RID: 28105 RVA: 0x0003C44B File Offset: 0x0003A64B
 			private void StartBusyTimer(float time)
 			{
 				this._busyTime = time + Time.realtimeSinceStartup;
 				this._busyTimerRunning = true;
 			}
 
-			// Token: 0x06006FE7 RID: 28647 RVA: 0x0019EA8B File Offset: 0x0019CC8B
+			// Token: 0x06006DCA RID: 28106 RVA: 0x0003C461 File Offset: 0x0003A661
 			private void Close()
 			{
 				this.Reset();
 				this.StateChanged(0.1f);
 			}
 
-			// Token: 0x06006FE8 RID: 28648 RVA: 0x0019EA9E File Offset: 0x0019CC9E
+			// Token: 0x06006DCB RID: 28107 RVA: 0x0003C474 File Offset: 0x0003A674
 			private void StateChanged(float delay)
 			{
 				this.StartBusyTimer(delay);
 			}
 
-			// Token: 0x06006FE9 RID: 28649 RVA: 0x0019EAA7 File Offset: 0x0019CCA7
+			// Token: 0x06006DCC RID: 28108 RVA: 0x0003C47D File Offset: 0x0003A67D
 			private void Reset()
 			{
 				this._enabled = false;
@@ -1899,95 +1899,95 @@ namespace Rewired.Demos
 				this.resultCallback = null;
 			}
 
-			// Token: 0x06006FEA RID: 28650 RVA: 0x0019EAC5 File Offset: 0x0019CCC5
+			// Token: 0x06006DCD RID: 28109 RVA: 0x0003C49B File Offset: 0x0003A69B
 			private void ResetTimers()
 			{
 				this._busyTimerRunning = false;
 			}
 
-			// Token: 0x06006FEB RID: 28651 RVA: 0x0019EACE File Offset: 0x0019CCCE
+			// Token: 0x06006DCE RID: 28110 RVA: 0x0003C4A4 File Offset: 0x0003A6A4
 			public void FullReset()
 			{
 				this.Reset();
 				this.ResetTimers();
 			}
 
-			// Token: 0x04005A0F RID: 23055
+			// Token: 0x04005823 RID: 22563
 			private const float openBusyDelay = 0.25f;
 
-			// Token: 0x04005A10 RID: 23056
+			// Token: 0x04005824 RID: 22564
 			private const float closeBusyDelay = 0.1f;
 
-			// Token: 0x04005A11 RID: 23057
+			// Token: 0x04005825 RID: 22565
 			private ControlRemappingDemo1.DialogHelper.DialogType _type;
 
-			// Token: 0x04005A12 RID: 23058
+			// Token: 0x04005826 RID: 22566
 			private bool _enabled;
 
-			// Token: 0x04005A13 RID: 23059
+			// Token: 0x04005827 RID: 22567
 			private float _busyTime;
 
-			// Token: 0x04005A14 RID: 23060
+			// Token: 0x04005828 RID: 22568
 			private bool _busyTimerRunning;
 
-			// Token: 0x04005A15 RID: 23061
+			// Token: 0x04005829 RID: 22569
 			private Action<int> drawWindowDelegate;
 
-			// Token: 0x04005A16 RID: 23062
+			// Token: 0x0400582A RID: 22570
 			private GUI.WindowFunction drawWindowFunction;
 
-			// Token: 0x04005A17 RID: 23063
+			// Token: 0x0400582B RID: 22571
 			private ControlRemappingDemo1.WindowProperties windowProperties;
 
-			// Token: 0x04005A18 RID: 23064
+			// Token: 0x0400582C RID: 22572
 			private int currentActionId;
 
-			// Token: 0x04005A19 RID: 23065
+			// Token: 0x0400582D RID: 22573
 			private Action<int, ControlRemappingDemo1.UserResponse> resultCallback;
 
-			// Token: 0x02000F3F RID: 3903
+			// Token: 0x02000ECC RID: 3788
 			public enum DialogType
 			{
-				// Token: 0x04005AE3 RID: 23267
+				// Token: 0x0400582F RID: 22575
 				None,
-				// Token: 0x04005AE4 RID: 23268
+				// Token: 0x04005830 RID: 22576
 				JoystickConflict,
-				// Token: 0x04005AE5 RID: 23269
+				// Token: 0x04005831 RID: 22577
 				ElementConflict,
-				// Token: 0x04005AE6 RID: 23270
+				// Token: 0x04005832 RID: 22578
 				KeyConflict,
-				// Token: 0x04005AE7 RID: 23271
+				// Token: 0x04005833 RID: 22579
 				DeleteAssignmentConfirmation = 10,
-				// Token: 0x04005AE8 RID: 23272
+				// Token: 0x04005834 RID: 22580
 				AssignElement
 			}
 		}
 
-		// Token: 0x02000F00 RID: 3840
+		// Token: 0x02000ECD RID: 3789
 		private abstract class QueueEntry
 		{
-			// Token: 0x17002458 RID: 9304
-			// (get) Token: 0x06006FEC RID: 28652 RVA: 0x0019EADC File Offset: 0x0019CCDC
-			// (set) Token: 0x06006FED RID: 28653 RVA: 0x0019EAE4 File Offset: 0x0019CCE4
+			// Token: 0x170023F5 RID: 9205
+			// (get) Token: 0x06006DCF RID: 28111 RVA: 0x0003C4B2 File Offset: 0x0003A6B2
+			// (set) Token: 0x06006DD0 RID: 28112 RVA: 0x0003C4BA File Offset: 0x0003A6BA
 			public int id { get; protected set; }
 
-			// Token: 0x17002459 RID: 9305
-			// (get) Token: 0x06006FEE RID: 28654 RVA: 0x0019EAED File Offset: 0x0019CCED
-			// (set) Token: 0x06006FEF RID: 28655 RVA: 0x0019EAF5 File Offset: 0x0019CCF5
+			// Token: 0x170023F6 RID: 9206
+			// (get) Token: 0x06006DD1 RID: 28113 RVA: 0x0003C4C3 File Offset: 0x0003A6C3
+			// (set) Token: 0x06006DD2 RID: 28114 RVA: 0x0003C4CB File Offset: 0x0003A6CB
 			public ControlRemappingDemo1.QueueActionType queueActionType { get; protected set; }
 
-			// Token: 0x1700245A RID: 9306
-			// (get) Token: 0x06006FF0 RID: 28656 RVA: 0x0019EAFE File Offset: 0x0019CCFE
-			// (set) Token: 0x06006FF1 RID: 28657 RVA: 0x0019EB06 File Offset: 0x0019CD06
+			// Token: 0x170023F7 RID: 9207
+			// (get) Token: 0x06006DD3 RID: 28115 RVA: 0x0003C4D4 File Offset: 0x0003A6D4
+			// (set) Token: 0x06006DD4 RID: 28116 RVA: 0x0003C4DC File Offset: 0x0003A6DC
 			public ControlRemappingDemo1.QueueEntry.State state { get; protected set; }
 
-			// Token: 0x1700245B RID: 9307
-			// (get) Token: 0x06006FF2 RID: 28658 RVA: 0x0019EB0F File Offset: 0x0019CD0F
-			// (set) Token: 0x06006FF3 RID: 28659 RVA: 0x0019EB17 File Offset: 0x0019CD17
+			// Token: 0x170023F8 RID: 9208
+			// (get) Token: 0x06006DD5 RID: 28117 RVA: 0x0003C4E5 File Offset: 0x0003A6E5
+			// (set) Token: 0x06006DD6 RID: 28118 RVA: 0x0003C4ED File Offset: 0x0003A6ED
 			public ControlRemappingDemo1.UserResponse response { get; protected set; }
 
-			// Token: 0x1700245C RID: 9308
-			// (get) Token: 0x06006FF4 RID: 28660 RVA: 0x0019EB20 File Offset: 0x0019CD20
+			// Token: 0x170023F9 RID: 9209
+			// (get) Token: 0x06006DD7 RID: 28119 RVA: 0x0003C4F6 File Offset: 0x0003A6F6
 			protected static int nextId
 			{
 				get
@@ -1998,60 +1998,60 @@ namespace Rewired.Demos
 				}
 			}
 
-			// Token: 0x06006FF5 RID: 28661 RVA: 0x0019EB33 File Offset: 0x0019CD33
+			// Token: 0x06006DD8 RID: 28120 RVA: 0x0003C509 File Offset: 0x0003A709
 			public QueueEntry(ControlRemappingDemo1.QueueActionType queueActionType)
 			{
 				this.id = ControlRemappingDemo1.QueueEntry.nextId;
 				this.queueActionType = queueActionType;
 			}
 
-			// Token: 0x06006FF6 RID: 28662 RVA: 0x0019EB4D File Offset: 0x0019CD4D
+			// Token: 0x06006DD9 RID: 28121 RVA: 0x0003C523 File Offset: 0x0003A723
 			public void Confirm(ControlRemappingDemo1.UserResponse response)
 			{
 				this.state = ControlRemappingDemo1.QueueEntry.State.Confirmed;
 				this.response = response;
 			}
 
-			// Token: 0x06006FF7 RID: 28663 RVA: 0x0019EB5D File Offset: 0x0019CD5D
+			// Token: 0x06006DDA RID: 28122 RVA: 0x0003C533 File Offset: 0x0003A733
 			public void Cancel()
 			{
 				this.state = ControlRemappingDemo1.QueueEntry.State.Canceled;
 			}
 
-			// Token: 0x04005A1E RID: 23070
+			// Token: 0x04005839 RID: 22585
 			private static int uidCounter;
 
-			// Token: 0x02000F40 RID: 3904
+			// Token: 0x02000ECE RID: 3790
 			public enum State
 			{
-				// Token: 0x04005AEA RID: 23274
+				// Token: 0x0400583B RID: 22587
 				Waiting,
-				// Token: 0x04005AEB RID: 23275
+				// Token: 0x0400583C RID: 22588
 				Confirmed,
-				// Token: 0x04005AEC RID: 23276
+				// Token: 0x0400583D RID: 22589
 				Canceled
 			}
 		}
 
-		// Token: 0x02000F01 RID: 3841
+		// Token: 0x02000ECF RID: 3791
 		private class JoystickAssignmentChange : ControlRemappingDemo1.QueueEntry
 		{
-			// Token: 0x1700245D RID: 9309
-			// (get) Token: 0x06006FF8 RID: 28664 RVA: 0x0019EB66 File Offset: 0x0019CD66
-			// (set) Token: 0x06006FF9 RID: 28665 RVA: 0x0019EB6E File Offset: 0x0019CD6E
+			// Token: 0x170023FA RID: 9210
+			// (get) Token: 0x06006DDB RID: 28123 RVA: 0x0003C53C File Offset: 0x0003A73C
+			// (set) Token: 0x06006DDC RID: 28124 RVA: 0x0003C544 File Offset: 0x0003A744
 			public int playerId { get; private set; }
 
-			// Token: 0x1700245E RID: 9310
-			// (get) Token: 0x06006FFA RID: 28666 RVA: 0x0019EB77 File Offset: 0x0019CD77
-			// (set) Token: 0x06006FFB RID: 28667 RVA: 0x0019EB7F File Offset: 0x0019CD7F
+			// Token: 0x170023FB RID: 9211
+			// (get) Token: 0x06006DDD RID: 28125 RVA: 0x0003C54D File Offset: 0x0003A74D
+			// (set) Token: 0x06006DDE RID: 28126 RVA: 0x0003C555 File Offset: 0x0003A755
 			public int joystickId { get; private set; }
 
-			// Token: 0x1700245F RID: 9311
-			// (get) Token: 0x06006FFC RID: 28668 RVA: 0x0019EB88 File Offset: 0x0019CD88
-			// (set) Token: 0x06006FFD RID: 28669 RVA: 0x0019EB90 File Offset: 0x0019CD90
+			// Token: 0x170023FC RID: 9212
+			// (get) Token: 0x06006DDF RID: 28127 RVA: 0x0003C55E File Offset: 0x0003A75E
+			// (set) Token: 0x06006DE0 RID: 28128 RVA: 0x0003C566 File Offset: 0x0003A766
 			public bool assign { get; private set; }
 
-			// Token: 0x06006FFE RID: 28670 RVA: 0x0019EB99 File Offset: 0x0019CD99
+			// Token: 0x06006DE1 RID: 28129 RVA: 0x0003C56F File Offset: 0x0003A76F
 			public JoystickAssignmentChange(int newPlayerId, int joystickId, bool assign) : base(ControlRemappingDemo1.QueueActionType.JoystickAssignment)
 			{
 				this.playerId = newPlayerId;
@@ -2060,46 +2060,46 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x02000F02 RID: 3842
+		// Token: 0x02000ED0 RID: 3792
 		private class ElementAssignmentChange : ControlRemappingDemo1.QueueEntry
 		{
-			// Token: 0x17002460 RID: 9312
-			// (get) Token: 0x06006FFF RID: 28671 RVA: 0x0019EBB7 File Offset: 0x0019CDB7
-			// (set) Token: 0x06007000 RID: 28672 RVA: 0x0019EBBF File Offset: 0x0019CDBF
+			// Token: 0x170023FD RID: 9213
+			// (get) Token: 0x06006DE2 RID: 28130 RVA: 0x0003C58D File Offset: 0x0003A78D
+			// (set) Token: 0x06006DE3 RID: 28131 RVA: 0x0003C595 File Offset: 0x0003A795
 			public ControlRemappingDemo1.ElementAssignmentChangeType changeType { get; set; }
 
-			// Token: 0x17002461 RID: 9313
-			// (get) Token: 0x06007001 RID: 28673 RVA: 0x0019EBC8 File Offset: 0x0019CDC8
-			// (set) Token: 0x06007002 RID: 28674 RVA: 0x0019EBD0 File Offset: 0x0019CDD0
+			// Token: 0x170023FE RID: 9214
+			// (get) Token: 0x06006DE4 RID: 28132 RVA: 0x0003C59E File Offset: 0x0003A79E
+			// (set) Token: 0x06006DE5 RID: 28133 RVA: 0x0003C5A6 File Offset: 0x0003A7A6
 			public InputMapper.Context context { get; private set; }
 
-			// Token: 0x06007003 RID: 28675 RVA: 0x0019EBD9 File Offset: 0x0019CDD9
+			// Token: 0x06006DE6 RID: 28134 RVA: 0x0003C5AF File Offset: 0x0003A7AF
 			public ElementAssignmentChange(ControlRemappingDemo1.ElementAssignmentChangeType changeType, InputMapper.Context context) : base(ControlRemappingDemo1.QueueActionType.ElementAssignment)
 			{
 				this.changeType = changeType;
 				this.context = context;
 			}
 
-			// Token: 0x06007004 RID: 28676 RVA: 0x0019EBF0 File Offset: 0x0019CDF0
+			// Token: 0x06006DE7 RID: 28135 RVA: 0x0003C5C6 File Offset: 0x0003A7C6
 			public ElementAssignmentChange(ControlRemappingDemo1.ElementAssignmentChange other) : this(other.changeType, other.context.Clone())
 			{
 			}
 		}
 
-		// Token: 0x02000F03 RID: 3843
+		// Token: 0x02000ED1 RID: 3793
 		private class FallbackJoystickIdentification : ControlRemappingDemo1.QueueEntry
 		{
-			// Token: 0x17002462 RID: 9314
-			// (get) Token: 0x06007005 RID: 28677 RVA: 0x0019EC09 File Offset: 0x0019CE09
-			// (set) Token: 0x06007006 RID: 28678 RVA: 0x0019EC11 File Offset: 0x0019CE11
+			// Token: 0x170023FF RID: 9215
+			// (get) Token: 0x06006DE8 RID: 28136 RVA: 0x0003C5DF File Offset: 0x0003A7DF
+			// (set) Token: 0x06006DE9 RID: 28137 RVA: 0x0003C5E7 File Offset: 0x0003A7E7
 			public int joystickId { get; private set; }
 
-			// Token: 0x17002463 RID: 9315
-			// (get) Token: 0x06007007 RID: 28679 RVA: 0x0019EC1A File Offset: 0x0019CE1A
-			// (set) Token: 0x06007008 RID: 28680 RVA: 0x0019EC22 File Offset: 0x0019CE22
+			// Token: 0x17002400 RID: 9216
+			// (get) Token: 0x06006DEA RID: 28138 RVA: 0x0003C5F0 File Offset: 0x0003A7F0
+			// (set) Token: 0x06006DEB RID: 28139 RVA: 0x0003C5F8 File Offset: 0x0003A7F8
 			public string joystickName { get; private set; }
 
-			// Token: 0x06007009 RID: 28681 RVA: 0x0019EC2B File Offset: 0x0019CE2B
+			// Token: 0x06006DEC RID: 28140 RVA: 0x0003C601 File Offset: 0x0003A801
 			public FallbackJoystickIdentification(int joystickId, string joystickName) : base(ControlRemappingDemo1.QueueActionType.FallbackJoystickIdentification)
 			{
 				this.joystickId = joystickId;
@@ -2107,30 +2107,30 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x02000F04 RID: 3844
+		// Token: 0x02000ED2 RID: 3794
 		private class Calibration : ControlRemappingDemo1.QueueEntry
 		{
-			// Token: 0x17002464 RID: 9316
-			// (get) Token: 0x0600700A RID: 28682 RVA: 0x0019EC42 File Offset: 0x0019CE42
-			// (set) Token: 0x0600700B RID: 28683 RVA: 0x0019EC4A File Offset: 0x0019CE4A
+			// Token: 0x17002401 RID: 9217
+			// (get) Token: 0x06006DED RID: 28141 RVA: 0x0003C618 File Offset: 0x0003A818
+			// (set) Token: 0x06006DEE RID: 28142 RVA: 0x0003C620 File Offset: 0x0003A820
 			public Player player { get; private set; }
 
-			// Token: 0x17002465 RID: 9317
-			// (get) Token: 0x0600700C RID: 28684 RVA: 0x0019EC53 File Offset: 0x0019CE53
-			// (set) Token: 0x0600700D RID: 28685 RVA: 0x0019EC5B File Offset: 0x0019CE5B
+			// Token: 0x17002402 RID: 9218
+			// (get) Token: 0x06006DEF RID: 28143 RVA: 0x0003C629 File Offset: 0x0003A829
+			// (set) Token: 0x06006DF0 RID: 28144 RVA: 0x0003C631 File Offset: 0x0003A831
 			public ControllerType controllerType { get; private set; }
 
-			// Token: 0x17002466 RID: 9318
-			// (get) Token: 0x0600700E RID: 28686 RVA: 0x0019EC64 File Offset: 0x0019CE64
-			// (set) Token: 0x0600700F RID: 28687 RVA: 0x0019EC6C File Offset: 0x0019CE6C
+			// Token: 0x17002403 RID: 9219
+			// (get) Token: 0x06006DF1 RID: 28145 RVA: 0x0003C63A File Offset: 0x0003A83A
+			// (set) Token: 0x06006DF2 RID: 28146 RVA: 0x0003C642 File Offset: 0x0003A842
 			public Joystick joystick { get; private set; }
 
-			// Token: 0x17002467 RID: 9319
-			// (get) Token: 0x06007010 RID: 28688 RVA: 0x0019EC75 File Offset: 0x0019CE75
-			// (set) Token: 0x06007011 RID: 28689 RVA: 0x0019EC7D File Offset: 0x0019CE7D
+			// Token: 0x17002404 RID: 9220
+			// (get) Token: 0x06006DF3 RID: 28147 RVA: 0x0003C64B File Offset: 0x0003A84B
+			// (set) Token: 0x06006DF4 RID: 28148 RVA: 0x0003C653 File Offset: 0x0003A853
 			public CalibrationMap calibrationMap { get; private set; }
 
-			// Token: 0x06007012 RID: 28690 RVA: 0x0019EC86 File Offset: 0x0019CE86
+			// Token: 0x06006DF5 RID: 28149 RVA: 0x0003C65C File Offset: 0x0003A85C
 			public Calibration(Player player, Joystick joystick, CalibrationMap calibrationMap) : base(ControlRemappingDemo1.QueueActionType.Calibrate)
 			{
 				this.player = player;
@@ -2139,72 +2139,72 @@ namespace Rewired.Demos
 				this.selectedElementIdentifierId = -1;
 			}
 
-			// Token: 0x04005A2A RID: 23082
+			// Token: 0x04005849 RID: 22601
 			public int selectedElementIdentifierId;
 
-			// Token: 0x04005A2B RID: 23083
+			// Token: 0x0400584A RID: 22602
 			public bool recording;
 		}
 
-		// Token: 0x02000F05 RID: 3845
+		// Token: 0x02000ED3 RID: 3795
 		private struct WindowProperties
 		{
-			// Token: 0x04005A2C RID: 23084
+			// Token: 0x0400584B RID: 22603
 			public int windowId;
 
-			// Token: 0x04005A2D RID: 23085
+			// Token: 0x0400584C RID: 22604
 			public Rect rect;
 
-			// Token: 0x04005A2E RID: 23086
+			// Token: 0x0400584D RID: 22605
 			public Action<string, string> windowDrawDelegate;
 
-			// Token: 0x04005A2F RID: 23087
+			// Token: 0x0400584E RID: 22606
 			public string title;
 
-			// Token: 0x04005A30 RID: 23088
+			// Token: 0x0400584F RID: 22607
 			public string message;
 		}
 
-		// Token: 0x02000F06 RID: 3846
+		// Token: 0x02000ED4 RID: 3796
 		private enum QueueActionType
 		{
-			// Token: 0x04005A32 RID: 23090
+			// Token: 0x04005851 RID: 22609
 			None,
-			// Token: 0x04005A33 RID: 23091
+			// Token: 0x04005852 RID: 22610
 			JoystickAssignment,
-			// Token: 0x04005A34 RID: 23092
+			// Token: 0x04005853 RID: 22611
 			ElementAssignment,
-			// Token: 0x04005A35 RID: 23093
+			// Token: 0x04005854 RID: 22612
 			FallbackJoystickIdentification,
-			// Token: 0x04005A36 RID: 23094
+			// Token: 0x04005855 RID: 22613
 			Calibrate
 		}
 
-		// Token: 0x02000F07 RID: 3847
+		// Token: 0x02000ED5 RID: 3797
 		private enum ElementAssignmentChangeType
 		{
-			// Token: 0x04005A38 RID: 23096
+			// Token: 0x04005857 RID: 22615
 			Add,
-			// Token: 0x04005A39 RID: 23097
+			// Token: 0x04005858 RID: 22616
 			Replace,
-			// Token: 0x04005A3A RID: 23098
+			// Token: 0x04005859 RID: 22617
 			Remove,
-			// Token: 0x04005A3B RID: 23099
+			// Token: 0x0400585A RID: 22618
 			ReassignOrRemove,
-			// Token: 0x04005A3C RID: 23100
+			// Token: 0x0400585B RID: 22619
 			ConflictCheck
 		}
 
-		// Token: 0x02000F08 RID: 3848
+		// Token: 0x02000ED6 RID: 3798
 		public enum UserResponse
 		{
-			// Token: 0x04005A3E RID: 23102
+			// Token: 0x0400585D RID: 22621
 			Confirm,
-			// Token: 0x04005A3F RID: 23103
+			// Token: 0x0400585E RID: 22622
 			Cancel,
-			// Token: 0x04005A40 RID: 23104
+			// Token: 0x0400585F RID: 22623
 			Custom1,
-			// Token: 0x04005A41 RID: 23105
+			// Token: 0x04005860 RID: 22624
 			Custom2
 		}
 	}

@@ -2,22 +2,22 @@
 
 namespace RewiredConstants
 {
-	// Token: 0x0200087F RID: 2175
+	// Token: 0x02000D9B RID: 3483
 	public static class Category
 	{
-		// Token: 0x04003C90 RID: 15504
+		// Token: 0x0400508B RID: 20619
 		public const int Default = 0;
 
-		// Token: 0x04003C91 RID: 15505
+		// Token: 0x0400508C RID: 20620
 		public const int Player = 1;
 
-		// Token: 0x04003C92 RID: 15506
+		// Token: 0x0400508D RID: 20621
 		public const int UI = 2;
 
-		// Token: 0x04003C93 RID: 15507
+		// Token: 0x0400508E RID: 20622
 		public const int PauseWindow = 3;
 
-		// Token: 0x04003C94 RID: 15508
+		// Token: 0x0400508F RID: 20623
 		public const int Game = 4;
 	}
 }

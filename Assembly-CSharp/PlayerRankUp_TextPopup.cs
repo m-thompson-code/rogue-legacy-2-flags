@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200053F RID: 1343
+// Token: 0x020008D9 RID: 2265
 public class PlayerRankUp_TextPopup : TextPopupObj
 {
-	// Token: 0x06003122 RID: 12578 RVA: 0x000A6977 File Offset: 0x000A4B77
+	// Token: 0x060044B8 RID: 17592 RVA: 0x00025C8A File Offset: 0x00023E8A
 	protected override IEnumerator SpawnEffectCoroutine()
 	{
 		float speed = 0.35f;

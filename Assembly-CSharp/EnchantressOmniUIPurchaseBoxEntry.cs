@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020003A7 RID: 935
+// Token: 0x0200063A RID: 1594
 public class EnchantressOmniUIPurchaseBoxEntry : BaseOmniUIPurchaseBoxEntry<EnchantressOmniUIDescriptionEventArgs>
 {
-	// Token: 0x060022B4 RID: 8884 RVA: 0x000710A4 File Offset: 0x0006F2A4
+	// Token: 0x060030CC RID: 12492 RVA: 0x000D1AF0 File Offset: 0x000CFCF0
 	protected override void DisplayNullPurchaseBox()
 	{
 		base.DisplayNullPurchaseBox();
@@ -28,7 +28,7 @@ public class EnchantressOmniUIPurchaseBoxEntry : BaseOmniUIPurchaseBoxEntry<Ench
 		}
 	}
 
-	// Token: 0x060022B5 RID: 8885 RVA: 0x00071140 File Offset: 0x0006F340
+	// Token: 0x060030CD RID: 12493 RVA: 0x000D1B8C File Offset: 0x000CFD8C
 	protected override void DisplayPurchaseBox(EnchantressOmniUIDescriptionEventArgs args)
 	{
 		RuneObj rune = RuneManager.GetRune(args.RuneType);

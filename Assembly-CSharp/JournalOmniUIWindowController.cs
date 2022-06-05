@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000588 RID: 1416
+// Token: 0x02000980 RID: 2432
 public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalOmniUICategoryEntry, JournalOmniUIEntry>
 {
-	// Token: 0x170012CC RID: 4812
-	// (get) Token: 0x060034EC RID: 13548 RVA: 0x000B62D7 File Offset: 0x000B44D7
+	// Token: 0x170019DD RID: 6621
+	// (get) Token: 0x06004AA9 RID: 19113 RVA: 0x00028D83 File Offset: 0x00026F83
 	public GameObject ScrollArrow
 	{
 		get
@@ -14,8 +14,8 @@ public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalO
 		}
 	}
 
-	// Token: 0x170012CD RID: 4813
-	// (get) Token: 0x060034ED RID: 13549 RVA: 0x000B62DF File Offset: 0x000B44DF
+	// Token: 0x170019DE RID: 6622
+	// (get) Token: 0x06004AAA RID: 19114 RVA: 0x00028D8B File Offset: 0x00026F8B
 	public ScrollBarInput_RL DescriptionBoxScrollInput
 	{
 		get
@@ -24,8 +24,8 @@ public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalO
 		}
 	}
 
-	// Token: 0x170012CE RID: 4814
-	// (get) Token: 0x060034EE RID: 13550 RVA: 0x000B62E7 File Offset: 0x000B44E7
+	// Token: 0x170019DF RID: 6623
+	// (get) Token: 0x06004AAB RID: 19115 RVA: 0x00008269 File Offset: 0x00006469
 	public override WindowID ID
 	{
 		get
@@ -34,8 +34,8 @@ public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalO
 		}
 	}
 
-	// Token: 0x170012CF RID: 4815
-	// (get) Token: 0x060034EF RID: 13551 RVA: 0x000B62EC File Offset: 0x000B44EC
+	// Token: 0x170019E0 RID: 6624
+	// (get) Token: 0x06004AAC RID: 19116 RVA: 0x00122F3C File Offset: 0x0012113C
 	public JournalCategoryType HighlightedCategory
 	{
 		get
@@ -66,7 +66,7 @@ public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalO
 		}
 	}
 
-	// Token: 0x060034F0 RID: 13552 RVA: 0x000B6378 File Offset: 0x000B4578
+	// Token: 0x06004AAD RID: 19117 RVA: 0x00122FC8 File Offset: 0x001211C8
 	protected override void CreateCategoryEntries()
 	{
 		if (base.CategoryEntryArray != null)
@@ -91,7 +91,7 @@ public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalO
 		}
 	}
 
-	// Token: 0x060034F1 RID: 13553 RVA: 0x000B6464 File Offset: 0x000B4664
+	// Token: 0x06004AAE RID: 19118 RVA: 0x001230B4 File Offset: 0x001212B4
 	protected override void CreateEntries()
 	{
 		if (base.EntryArray != null)
@@ -111,7 +111,7 @@ public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalO
 		}
 	}
 
-	// Token: 0x060034F2 RID: 13554 RVA: 0x000B6530 File Offset: 0x000B4730
+	// Token: 0x06004AAF RID: 19119 RVA: 0x00123180 File Offset: 0x00121380
 	protected override void OnOpen()
 	{
 		this.UpdateCategoryVisibility();
@@ -122,7 +122,7 @@ public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalO
 		base.OnOpen();
 	}
 
-	// Token: 0x060034F3 RID: 13555 RVA: 0x000B6594 File Offset: 0x000B4794
+	// Token: 0x06004AB0 RID: 19120 RVA: 0x001231E4 File Offset: 0x001213E4
 	protected override void OnConfirmButtonJustPressed()
 	{
 		base.OnConfirmButtonJustPressed();
@@ -132,7 +132,7 @@ public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalO
 		}
 	}
 
-	// Token: 0x060034F4 RID: 13556 RVA: 0x000B65E5 File Offset: 0x000B47E5
+	// Token: 0x06004AB1 RID: 19121 RVA: 0x00028D93 File Offset: 0x00026F93
 	protected override void OnCancelButtonJustPressed()
 	{
 		base.OnCancelButtonJustPressed();
@@ -142,7 +142,7 @@ public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalO
 		}
 	}
 
-	// Token: 0x060034F5 RID: 13557 RVA: 0x000B6614 File Offset: 0x000B4814
+	// Token: 0x06004AB2 RID: 19122 RVA: 0x00123238 File Offset: 0x00121438
 	private void UpdateCategoryVisibility()
 	{
 		foreach (JournalOmniUICategoryEntry journalOmniUICategoryEntry in base.CategoryEntryLayoutGroup.GetComponentsInChildren<JournalOmniUICategoryEntry>(true))
@@ -166,21 +166,21 @@ public class JournalOmniUIWindowController : BaseOmniUIWindowController<JournalO
 		base.ActiveCategoryEntryArray = base.CategoryEntryLayoutGroup.GetComponentsInChildren<JournalOmniUICategoryEntry>(false);
 	}
 
-	// Token: 0x060034F6 RID: 13558 RVA: 0x000B66D8 File Offset: 0x000B48D8
+	// Token: 0x06004AB3 RID: 19123 RVA: 0x00028DC2 File Offset: 0x00026FC2
 	public void ResetDescriptionScrollBar()
 	{
 		this.m_descriptionBoxScrollInput.ResetScrollBar();
 	}
 
-	// Token: 0x04002948 RID: 10568
+	// Token: 0x04003903 RID: 14595
 	[SerializeField]
 	private ScrollBarInput_RL m_descriptionBoxScrollInput;
 
-	// Token: 0x04002949 RID: 10569
+	// Token: 0x04003904 RID: 14596
 	[SerializeField]
 	private RectTransform m_descriptionBoxContentRectTransform;
 
-	// Token: 0x0400294A RID: 10570
+	// Token: 0x04003905 RID: 14597
 	[SerializeField]
 	private GameObject m_scrollArrow;
 }

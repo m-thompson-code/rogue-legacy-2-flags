@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 namespace Rewired.Demos
 {
-	// Token: 0x0200094B RID: 2379
+	// Token: 0x02000EEA RID: 3818
 	[AddComponentMenu("")]
 	public class SimpleCombinedKeyboardMouseRemapping : MonoBehaviour
 	{
-		// Token: 0x17001ACE RID: 6862
-		// (get) Token: 0x06005097 RID: 20631 RVA: 0x0011C93D File Offset: 0x0011AB3D
+		// Token: 0x1700240C RID: 9228
+		// (get) Token: 0x06006E72 RID: 28274 RVA: 0x0003CC1D File Offset: 0x0003AE1D
 		private Player player
 		{
 			get
@@ -20,7 +20,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005098 RID: 20632 RVA: 0x0011C94C File Offset: 0x0011AB4C
+		// Token: 0x06006E73 RID: 28275 RVA: 0x0018AF1C File Offset: 0x0018911C
 		private void OnEnable()
 		{
 			if (!ReInput.isReady)
@@ -40,7 +40,7 @@ namespace Rewired.Demos
 			this.InitializeUI();
 		}
 
-		// Token: 0x06005099 RID: 20633 RVA: 0x0011CA31 File Offset: 0x0011AC31
+		// Token: 0x06006E74 RID: 28276 RVA: 0x0003CC2A File Offset: 0x0003AE2A
 		private void OnDisable()
 		{
 			this.inputMapper_keyboard.Stop();
@@ -49,7 +49,7 @@ namespace Rewired.Demos
 			this.inputMapper_mouse.RemoveAllEventListeners();
 		}
 
-		// Token: 0x0600509A RID: 20634 RVA: 0x0011CA60 File Offset: 0x0011AC60
+		// Token: 0x06006E75 RID: 28277 RVA: 0x0018B004 File Offset: 0x00189204
 		private void RedrawUI()
 		{
 			this.controllerNameUIText.text = "Keyboard/Mouse";
@@ -86,7 +86,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x0600509B RID: 20635 RVA: 0x0011CBCC File Offset: 0x0011ADCC
+		// Token: 0x06006E76 RID: 28278 RVA: 0x0018B170 File Offset: 0x00189370
 		private void ClearUI()
 		{
 			this.controllerNameUIText.text = string.Empty;
@@ -96,7 +96,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x0600509C RID: 20636 RVA: 0x0011CC1C File Offset: 0x0011AE1C
+		// Token: 0x06006E77 RID: 28279 RVA: 0x0018B1C0 File Offset: 0x001893C0
 		private void InitializeUI()
 		{
 			foreach (object obj in this.actionGroupTransform)
@@ -123,7 +123,7 @@ namespace Rewired.Demos
 			this.RedrawUI();
 		}
 
-		// Token: 0x0600509D RID: 20637 RVA: 0x0011CD94 File Offset: 0x0011AF94
+		// Token: 0x06006E78 RID: 28280 RVA: 0x0018B338 File Offset: 0x00189538
 		private void CreateUIRow(InputAction action, AxisRange actionRange, string label)
 		{
 			GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(this.textPrefab);
@@ -142,7 +142,7 @@ namespace Rewired.Demos
 			});
 		}
 
-		// Token: 0x0600509E RID: 20638 RVA: 0x0011CE34 File Offset: 0x0011B034
+		// Token: 0x06006E79 RID: 28281 RVA: 0x0018B3D8 File Offset: 0x001895D8
 		private void OnInputFieldClicked(int index, int actionElementMapToReplaceId)
 		{
 			if (index < 0 || index >= this.rows.Count)
@@ -172,7 +172,7 @@ namespace Rewired.Demos
 			base.StartCoroutine(this.StartListeningDelayed(index, map, map2, actionElementMapToReplaceId));
 		}
 
-		// Token: 0x0600509F RID: 20639 RVA: 0x0011CEE4 File Offset: 0x0011B0E4
+		// Token: 0x06006E7A RID: 28282 RVA: 0x0003CC58 File Offset: 0x0003AE58
 		private IEnumerator StartListeningDelayed(int index, ControllerMap keyboardMap, ControllerMap mouseMap, int actionElementMapToReplaceId)
 		{
 			yield return new WaitForSeconds(0.1f);
@@ -195,7 +195,7 @@ namespace Rewired.Demos
 			yield break;
 		}
 
-		// Token: 0x060050A0 RID: 20640 RVA: 0x0011CF10 File Offset: 0x0011B110
+		// Token: 0x06006E7B RID: 28283 RVA: 0x0018B488 File Offset: 0x00189688
 		private void OnInputMapped(InputMapper.InputMappedEventData data)
 		{
 			this.inputMapper_keyboard.Stop();
@@ -207,75 +207,75 @@ namespace Rewired.Demos
 			this.RedrawUI();
 		}
 
-		// Token: 0x060050A1 RID: 20641 RVA: 0x0011CF7A File Offset: 0x0011B17A
+		// Token: 0x06006E7C RID: 28284 RVA: 0x0003CC84 File Offset: 0x0003AE84
 		private void OnStopped(InputMapper.StoppedEventData data)
 		{
 			this.statusUIText.text = string.Empty;
 			this.player.controllers.maps.SetMapsEnabled(true, "UI");
 		}
 
-		// Token: 0x040042E3 RID: 17123
+		// Token: 0x040058C8 RID: 22728
 		private const string category = "Default";
 
-		// Token: 0x040042E4 RID: 17124
+		// Token: 0x040058C9 RID: 22729
 		private const string layout = "Default";
 
-		// Token: 0x040042E5 RID: 17125
+		// Token: 0x040058CA RID: 22730
 		private const string uiCategory = "UI";
 
-		// Token: 0x040042E6 RID: 17126
+		// Token: 0x040058CB RID: 22731
 		private InputMapper inputMapper_keyboard = new InputMapper();
 
-		// Token: 0x040042E7 RID: 17127
+		// Token: 0x040058CC RID: 22732
 		private InputMapper inputMapper_mouse = new InputMapper();
 
-		// Token: 0x040042E8 RID: 17128
+		// Token: 0x040058CD RID: 22733
 		public GameObject buttonPrefab;
 
-		// Token: 0x040042E9 RID: 17129
+		// Token: 0x040058CE RID: 22734
 		public GameObject textPrefab;
 
-		// Token: 0x040042EA RID: 17130
+		// Token: 0x040058CF RID: 22735
 		public RectTransform fieldGroupTransform;
 
-		// Token: 0x040042EB RID: 17131
+		// Token: 0x040058D0 RID: 22736
 		public RectTransform actionGroupTransform;
 
-		// Token: 0x040042EC RID: 17132
+		// Token: 0x040058D1 RID: 22737
 		public Text controllerNameUIText;
 
-		// Token: 0x040042ED RID: 17133
+		// Token: 0x040058D2 RID: 22738
 		public Text statusUIText;
 
-		// Token: 0x040042EE RID: 17134
+		// Token: 0x040058D3 RID: 22739
 		private List<SimpleCombinedKeyboardMouseRemapping.Row> rows = new List<SimpleCombinedKeyboardMouseRemapping.Row>();
 
-		// Token: 0x040042EF RID: 17135
+		// Token: 0x040058D4 RID: 22740
 		private SimpleCombinedKeyboardMouseRemapping.TargetMapping _replaceTargetMapping;
 
-		// Token: 0x02000F0C RID: 3852
+		// Token: 0x02000EEB RID: 3819
 		private class Row
 		{
-			// Token: 0x04005A47 RID: 23111
+			// Token: 0x040058D5 RID: 22741
 			public InputAction action;
 
-			// Token: 0x04005A48 RID: 23112
+			// Token: 0x040058D6 RID: 22742
 			public AxisRange actionRange;
 
-			// Token: 0x04005A49 RID: 23113
+			// Token: 0x040058D7 RID: 22743
 			public Button button;
 
-			// Token: 0x04005A4A RID: 23114
+			// Token: 0x040058D8 RID: 22744
 			public Text text;
 		}
 
-		// Token: 0x02000F0D RID: 3853
+		// Token: 0x02000EEC RID: 3820
 		private struct TargetMapping
 		{
-			// Token: 0x04005A4B RID: 23115
+			// Token: 0x040058D9 RID: 22745
 			public ControllerMap controllerMap;
 
-			// Token: 0x04005A4C RID: 23116
+			// Token: 0x040058DA RID: 22746
 			public int actionElementMapId;
 		}
 	}

@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200021F RID: 543
+// Token: 0x020003D2 RID: 978
 [CreateAssetMenu(menuName = "Custom/Libraries/BurdenLibrary")]
 public class BurdenLibrary : ScriptableObject
 {
-	// Token: 0x17000B1D RID: 2845
-	// (get) Token: 0x06001662 RID: 5730 RVA: 0x00045DE6 File Offset: 0x00043FE6
+	// Token: 0x17000E44 RID: 3652
+	// (get) Token: 0x06001FFE RID: 8190 RVA: 0x00010F00 File Offset: 0x0000F100
 	private static BurdenLibrary Instance
 	{
 		get
@@ -19,7 +19,7 @@ public class BurdenLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001663 RID: 5731 RVA: 0x00045E10 File Offset: 0x00044010
+	// Token: 0x06001FFF RID: 8191 RVA: 0x000A427C File Offset: 0x000A247C
 	public static BurdenData GetBurdenData(BurdenType burdenType)
 	{
 		BurdenData result;
@@ -36,13 +36,13 @@ public class BurdenLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x040015A0 RID: 5536
+	// Token: 0x04001CA3 RID: 7331
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/BurdenLibrary";
 
-	// Token: 0x040015A1 RID: 5537
+	// Token: 0x04001CA4 RID: 7332
 	[SerializeField]
 	private BurdenTypeBurdenDataDictionary m_burdenLibrary;
 
-	// Token: 0x040015A2 RID: 5538
+	// Token: 0x04001CA5 RID: 7333
 	private static BurdenLibrary m_instance;
 }

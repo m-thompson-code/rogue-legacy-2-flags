@@ -3,10 +3,10 @@ using System.Collections;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000551 RID: 1361
+// Token: 0x02000905 RID: 2309
 public class DriftHouseInteriorController : MonoBehaviour
 {
-	// Token: 0x060031ED RID: 12781 RVA: 0x000A8D80 File Offset: 0x000A6F80
+	// Token: 0x0600461F RID: 17951 RVA: 0x00112BE8 File Offset: 0x00110DE8
 	private void Awake()
 	{
 		this.m_room = base.GetComponent<Room>();
@@ -14,13 +14,13 @@ public class DriftHouseInteriorController : MonoBehaviour
 		this.m_insightEventArgs = new InsightObjectiveCompleteHUDEventArgs(InsightType.ScarChallenges_Complete, true, 5f, null, null, null);
 	}
 
-	// Token: 0x060031EE RID: 12782 RVA: 0x000A8DD0 File Offset: 0x000A6FD0
+	// Token: 0x06004620 RID: 17952 RVA: 0x00026883 File Offset: 0x00024A83
 	private void OnDestroy()
 	{
 		this.m_room.PlayerEnterRelay.RemoveListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom));
 	}
 
-	// Token: 0x060031EF RID: 12783 RVA: 0x000A8DF0 File Offset: 0x000A6FF0
+	// Token: 0x06004621 RID: 17953 RVA: 0x00112C38 File Offset: 0x00110E38
 	private void FixedUpdate()
 	{
 		if (Time.time < this.m_regenTick + 0.05f)
@@ -57,7 +57,7 @@ public class DriftHouseInteriorController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060031F0 RID: 12784 RVA: 0x000A8ECC File Offset: 0x000A70CC
+	// Token: 0x06004622 RID: 17954 RVA: 0x00112D14 File Offset: 0x00110F14
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		if (PlayerManager.IsInstantiated)
@@ -86,7 +86,7 @@ public class DriftHouseInteriorController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060031F1 RID: 12785 RVA: 0x000A8FFF File Offset: 0x000A71FF
+	// Token: 0x06004623 RID: 17955 RVA: 0x000268A2 File Offset: 0x00024AA2
 	private IEnumerator ResetEggplantHealthCoroutine()
 	{
 		yield return null;
@@ -100,12 +100,12 @@ public class DriftHouseInteriorController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0400274F RID: 10063
+	// Token: 0x04003624 RID: 13860
 	private Room m_room;
 
-	// Token: 0x04002750 RID: 10064
+	// Token: 0x04003625 RID: 13861
 	private float m_regenTick;
 
-	// Token: 0x04002751 RID: 10065
+	// Token: 0x04003626 RID: 13862
 	private InsightObjectiveCompleteHUDEventArgs m_insightEventArgs;
 }

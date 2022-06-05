@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020003A5 RID: 933
+// Token: 0x02000638 RID: 1592
 public interface IEnchantressOmniUIButton
 {
-	// Token: 0x17000E56 RID: 3670
-	// (get) Token: 0x060022AB RID: 8875
-	// (set) Token: 0x060022AC RID: 8876
+	// Token: 0x170012E9 RID: 4841
+	// (get) Token: 0x060030C3 RID: 12483
+	// (set) Token: 0x060030C4 RID: 12484
 	RuneType RuneType { get; set; }
 }

@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-// Token: 0x02000665 RID: 1637
+// Token: 0x02000AC5 RID: 2757
 public class CreateRoomBackgrounds_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B34 RID: 15156 RVA: 0x000CB797 File Offset: 0x000C9997
+	// Token: 0x060052EF RID: 21231 RVA: 0x0002D1E3 File Offset: 0x0002B3E3
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		using (List<Room>.Enumerator enumerator = biomeController.StandaloneRooms.GetEnumerator())

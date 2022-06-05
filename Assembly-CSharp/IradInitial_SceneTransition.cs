@@ -5,10 +5,10 @@ using RLAudio;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020002E0 RID: 736
+// Token: 0x020004D9 RID: 1241
 public class IradInitial_SceneTransition : Transition_V2, ISceneLoadingTransition, ITransition, IAudioEventEmitter
 {
-	// Token: 0x06001D45 RID: 7493 RVA: 0x000608A4 File Offset: 0x0005EAA4
+	// Token: 0x06002824 RID: 10276 RVA: 0x000168EC File Offset: 0x00014AEC
 	protected override void Awake()
 	{
 		base.Awake();
@@ -16,20 +16,20 @@ public class IradInitial_SceneTransition : Transition_V2, ISceneLoadingTransitio
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x06001D46 RID: 7494 RVA: 0x000608CD File Offset: 0x0005EACD
+	// Token: 0x06002825 RID: 10277 RVA: 0x00016915 File Offset: 0x00014B15
 	public void SetDistortInPosition(GameObject obj)
 	{
 		this.m_distortInPosObj = obj;
 	}
 
-	// Token: 0x06001D47 RID: 7495 RVA: 0x000608D6 File Offset: 0x0005EAD6
+	// Token: 0x06002826 RID: 10278 RVA: 0x0001691E File Offset: 0x00014B1E
 	public void SetDistortOutPosition(GameObject obj)
 	{
 		this.m_distortOutPosObj = obj;
 	}
 
-	// Token: 0x17000CD5 RID: 3285
-	// (get) Token: 0x06001D48 RID: 7496 RVA: 0x000608DF File Offset: 0x0005EADF
+	// Token: 0x17001064 RID: 4196
+	// (get) Token: 0x06002827 RID: 10279 RVA: 0x00004A89 File Offset: 0x00002C89
 	public override TransitionID ID
 	{
 		get
@@ -38,8 +38,8 @@ public class IradInitial_SceneTransition : Transition_V2, ISceneLoadingTransitio
 		}
 	}
 
-	// Token: 0x17000CD6 RID: 3286
-	// (get) Token: 0x06001D49 RID: 7497 RVA: 0x000608E3 File Offset: 0x0005EAE3
+	// Token: 0x17001065 RID: 4197
+	// (get) Token: 0x06002828 RID: 10280 RVA: 0x00016927 File Offset: 0x00014B27
 	public string Description
 	{
 		get
@@ -52,13 +52,13 @@ public class IradInitial_SceneTransition : Transition_V2, ISceneLoadingTransitio
 		}
 	}
 
-	// Token: 0x06001D4A RID: 7498 RVA: 0x00060909 File Offset: 0x0005EB09
+	// Token: 0x06002829 RID: 10281 RVA: 0x0001694D File Offset: 0x00014B4D
 	public override IEnumerator Run()
 	{
 		yield break;
 	}
 
-	// Token: 0x06001D4B RID: 7499 RVA: 0x00060911 File Offset: 0x0005EB11
+	// Token: 0x0600282A RID: 10282 RVA: 0x00016955 File Offset: 0x00014B55
 	public IEnumerator TransitionIn()
 	{
 		RewiredMapController.SetIsInCutscene(true);
@@ -119,7 +119,7 @@ public class IradInitial_SceneTransition : Transition_V2, ISceneLoadingTransitio
 		yield break;
 	}
 
-	// Token: 0x06001D4C RID: 7500 RVA: 0x00060920 File Offset: 0x0005EB20
+	// Token: 0x0600282B RID: 10283 RVA: 0x00016964 File Offset: 0x00014B64
 	public IEnumerator TransitionOut()
 	{
 		PlayerManager.GetPlayerController().FallMultiplierOverride = this.m_storedFallMultiplier;
@@ -155,42 +155,42 @@ public class IradInitial_SceneTransition : Transition_V2, ISceneLoadingTransitio
 		yield break;
 	}
 
-	// Token: 0x06001D4D RID: 7501 RVA: 0x0006092F File Offset: 0x0005EB2F
+	// Token: 0x0600282C RID: 10284 RVA: 0x00016973 File Offset: 0x00014B73
 	private void OnDisable()
 	{
 		this.m_distortInPosObj = null;
 		this.m_distortOutPosObj = null;
 	}
 
-	// Token: 0x04001B41 RID: 6977
+	// Token: 0x04002356 RID: 9046
 	[SerializeField]
 	private float m_distortDuration = 1f;
 
-	// Token: 0x04001B42 RID: 6978
+	// Token: 0x04002357 RID: 9047
 	[SerializeField]
 	[EventRef]
 	private string m_transitionInAudioEventPath;
 
-	// Token: 0x04001B43 RID: 6979
+	// Token: 0x04002358 RID: 9048
 	[SerializeField]
 	[EventRef]
 	private string m_transitionOutAudioEventPath;
 
-	// Token: 0x04001B44 RID: 6980
+	// Token: 0x04002359 RID: 9049
 	private GameObject m_distortInPosObj;
 
-	// Token: 0x04001B45 RID: 6981
+	// Token: 0x0400235A RID: 9050
 	private GameObject m_distortOutPosObj;
 
-	// Token: 0x04001B46 RID: 6982
+	// Token: 0x0400235B RID: 9051
 	private HeirloomWarp_Effect m_warpEffect;
 
-	// Token: 0x04001B47 RID: 6983
+	// Token: 0x0400235C RID: 9052
 	private string m_description = string.Empty;
 
-	// Token: 0x04001B48 RID: 6984
+	// Token: 0x0400235D RID: 9053
 	private float m_storedFallMultiplier = 1f;
 
-	// Token: 0x04001B49 RID: 6985
+	// Token: 0x0400235E RID: 9054
 	private WaitRL_Yield m_waitYield;
 }

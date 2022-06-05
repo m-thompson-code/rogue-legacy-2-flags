@@ -2,10 +2,10 @@
 
 namespace TweenRL
 {
-	// Token: 0x02000873 RID: 2163
+	// Token: 0x02000D8D RID: 3469
 	public class Bounce
 	{
-		// Token: 0x06004773 RID: 18291 RVA: 0x0010105C File Offset: 0x000FF25C
+		// Token: 0x06006270 RID: 25200 RVA: 0x00155850 File Offset: 0x00153A50
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			if ((t /= d) < 0.36363637f)
@@ -23,13 +23,13 @@ namespace TweenRL
 			return c * (7.5625f * (t -= 0.95454544f) * t + 0.984375f) + b;
 		}
 
-		// Token: 0x06004774 RID: 18292 RVA: 0x001010EA File Offset: 0x000FF2EA
+		// Token: 0x06006271 RID: 25201 RVA: 0x000364DE File Offset: 0x000346DE
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			return c - Bounce.EaseOut(d - t, 0f, c, d) + b;
 		}
 
-		// Token: 0x06004775 RID: 18293 RVA: 0x00101100 File Offset: 0x000FF300
+		// Token: 0x06006272 RID: 25202 RVA: 0x00170278 File Offset: 0x0016E478
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			if (t < d / 2f)

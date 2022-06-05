@@ -10,23 +10,23 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Token: 0x02000828 RID: 2088
+// Token: 0x02000D02 RID: 3330
 public class UserReportingScript : MonoBehaviour
 {
-	// Token: 0x06004501 RID: 17665 RVA: 0x000F5600 File Offset: 0x000F3800
+	// Token: 0x06005EDD RID: 24285 RVA: 0x00034479 File Offset: 0x00032679
 	public UserReportingScript()
 	{
 		this.UserReportSubmitting = new UnityEvent();
 		this.unityUserReportingUpdater = new UnityUserReportingUpdater();
 	}
 
-	// Token: 0x17001714 RID: 5908
-	// (get) Token: 0x06004502 RID: 17666 RVA: 0x000F561E File Offset: 0x000F381E
-	// (set) Token: 0x06004503 RID: 17667 RVA: 0x000F5626 File Offset: 0x000F3826
+	// Token: 0x17001F26 RID: 7974
+	// (get) Token: 0x06005EDE RID: 24286 RVA: 0x00034497 File Offset: 0x00032697
+	// (set) Token: 0x06005EDF RID: 24287 RVA: 0x0003449F File Offset: 0x0003269F
 	public UserReport CurrentUserReport { get; private set; }
 
-	// Token: 0x17001715 RID: 5909
-	// (get) Token: 0x06004504 RID: 17668 RVA: 0x000F562F File Offset: 0x000F382F
+	// Token: 0x17001F27 RID: 7975
+	// (get) Token: 0x06005EE0 RID: 24288 RVA: 0x000344A8 File Offset: 0x000326A8
 	public UserReportingState State
 	{
 		get
@@ -54,14 +54,14 @@ public class UserReportingScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06004505 RID: 17669 RVA: 0x000F565A File Offset: 0x000F385A
+	// Token: 0x06005EE1 RID: 24289 RVA: 0x000344D3 File Offset: 0x000326D3
 	public void CancelUserReport()
 	{
 		this.CurrentUserReport = null;
 		this.ClearForm();
 	}
 
-	// Token: 0x06004506 RID: 17670 RVA: 0x000F5669 File Offset: 0x000F3869
+	// Token: 0x06005EE2 RID: 24290 RVA: 0x000344E2 File Offset: 0x000326E2
 	private IEnumerator ClearError()
 	{
 		yield return new WaitForSeconds(10f);
@@ -69,14 +69,14 @@ public class UserReportingScript : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06004507 RID: 17671 RVA: 0x000F5678 File Offset: 0x000F3878
+	// Token: 0x06005EE3 RID: 24291 RVA: 0x000344F1 File Offset: 0x000326F1
 	private void ClearForm()
 	{
 		this.SummaryInput.text = null;
 		this.DescriptionInput.text = null;
 	}
 
-	// Token: 0x06004508 RID: 17672 RVA: 0x000F5694 File Offset: 0x000F3894
+	// Token: 0x06005EE4 RID: 24292 RVA: 0x001631D4 File Offset: 0x001613D4
 	public void CreateUserReport()
 	{
 		if (this.isCreatingUserReport)
@@ -121,19 +121,19 @@ public class UserReportingScript : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06004509 RID: 17673 RVA: 0x000F572D File Offset: 0x000F392D
+	// Token: 0x06005EE5 RID: 24293 RVA: 0x0003450B File Offset: 0x0003270B
 	private UserReportingClientConfiguration GetConfiguration()
 	{
 		return new UserReportingClientConfiguration();
 	}
 
-	// Token: 0x0600450A RID: 17674 RVA: 0x000F5734 File Offset: 0x000F3934
+	// Token: 0x06005EE6 RID: 24294 RVA: 0x00034512 File Offset: 0x00032712
 	public bool IsSubmitting()
 	{
 		return this.isSubmitting;
 	}
 
-	// Token: 0x0600450B RID: 17675 RVA: 0x000F573C File Offset: 0x000F393C
+	// Token: 0x06005EE7 RID: 24295 RVA: 0x00163270 File Offset: 0x00161470
 	private void SetThumbnail(UserReport userReport)
 	{
 		if (userReport != null && this.ThumbnailViewer != null)
@@ -146,7 +146,7 @@ public class UserReportingScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600450C RID: 17676 RVA: 0x000F57C8 File Offset: 0x000F39C8
+	// Token: 0x06005EE8 RID: 24296 RVA: 0x001632FC File Offset: 0x001614FC
 	private void Start()
 	{
 		if (Application.isPlaying && UnityEngine.Object.FindObjectOfType<EventSystem>() == null)
@@ -181,7 +181,7 @@ public class UserReportingScript : MonoBehaviour
 		});
 	}
 
-	// Token: 0x0600450D RID: 17677 RVA: 0x000F58C8 File Offset: 0x000F3AC8
+	// Token: 0x06005EE9 RID: 24297 RVA: 0x001633FC File Offset: 0x001615FC
 	public void SubmitUserReport()
 	{
 		if (this.isSubmitting || this.CurrentUserReport == null)
@@ -227,7 +227,7 @@ public class UserReportingScript : MonoBehaviour
 		});
 	}
 
-	// Token: 0x0600450E RID: 17678 RVA: 0x000F59F0 File Offset: 0x000F3BF0
+	// Token: 0x06005EEA RID: 24298 RVA: 0x00163524 File Offset: 0x00161724
 	private void Update()
 	{
 		if (this.IsHotkeyEnabled && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.B))
@@ -256,7 +256,7 @@ public class UserReportingScript : MonoBehaviour
 		base.StartCoroutine(this.unityUserReportingUpdater);
 	}
 
-	// Token: 0x0600450F RID: 17679 RVA: 0x000F5AE9 File Offset: 0x000F3CE9
+	// Token: 0x06005EEB RID: 24299 RVA: 0x0003451A File Offset: 0x0003271A
 	protected virtual void RaiseUserReportSubmitting()
 	{
 		if (this.UserReportSubmitting != null)
@@ -265,75 +265,75 @@ public class UserReportingScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003AD8 RID: 15064
+	// Token: 0x04004DE7 RID: 19943
 	[Tooltip("The category dropdown.")]
 	public Dropdown CategoryDropdown;
 
-	// Token: 0x04003AD9 RID: 15065
+	// Token: 0x04004DE8 RID: 19944
 	[Tooltip("The description input on the user report form.")]
 	public InputField DescriptionInput;
 
-	// Token: 0x04003ADA RID: 15066
+	// Token: 0x04004DE9 RID: 19945
 	[Tooltip("The UI shown when there's an error.")]
 	public Canvas ErrorPopup;
 
-	// Token: 0x04003ADB RID: 15067
+	// Token: 0x04004DEA RID: 19946
 	private bool isCreatingUserReport;
 
-	// Token: 0x04003ADC RID: 15068
+	// Token: 0x04004DEB RID: 19947
 	[Tooltip("A value indicating whether the hotkey is enabled (Left Alt + Left Shift + B).")]
 	public bool IsHotkeyEnabled;
 
-	// Token: 0x04003ADD RID: 15069
+	// Token: 0x04004DEC RID: 19948
 	[Tooltip("A value indicating whether the prefab is in silent mode. Silent mode does not show the user report form.")]
 	public bool IsInSilentMode;
 
-	// Token: 0x04003ADE RID: 15070
+	// Token: 0x04004DED RID: 19949
 	[Tooltip("A value indicating whether the user report client reports metrics about itself.")]
 	public bool IsSelfReporting;
 
-	// Token: 0x04003ADF RID: 15071
+	// Token: 0x04004DEE RID: 19950
 	private bool isShowingError;
 
-	// Token: 0x04003AE0 RID: 15072
+	// Token: 0x04004DEF RID: 19951
 	private bool isSubmitting;
 
-	// Token: 0x04003AE1 RID: 15073
+	// Token: 0x04004DF0 RID: 19952
 	[Tooltip("The display text for the progress text.")]
 	public Text ProgressText;
 
-	// Token: 0x04003AE2 RID: 15074
+	// Token: 0x04004DF1 RID: 19953
 	[Tooltip("A value indicating whether the user report client send events to analytics.")]
 	public bool SendEventsToAnalytics;
 
-	// Token: 0x04003AE3 RID: 15075
+	// Token: 0x04004DF2 RID: 19954
 	[Tooltip("The UI shown while submitting.")]
 	public Canvas SubmittingPopup;
 
-	// Token: 0x04003AE4 RID: 15076
+	// Token: 0x04004DF3 RID: 19955
 	[Tooltip("The summary input on the user report form.")]
 	public InputField SummaryInput;
 
-	// Token: 0x04003AE5 RID: 15077
+	// Token: 0x04004DF4 RID: 19956
 	[Tooltip("The thumbnail viewer on the user report form.")]
 	public Image ThumbnailViewer;
 
-	// Token: 0x04003AE6 RID: 15078
+	// Token: 0x04004DF5 RID: 19957
 	private UnityUserReportingUpdater unityUserReportingUpdater;
 
-	// Token: 0x04003AE7 RID: 15079
+	// Token: 0x04004DF6 RID: 19958
 	[Tooltip("The user report button used to create a user report.")]
 	public Button UserReportButton;
 
-	// Token: 0x04003AE8 RID: 15080
+	// Token: 0x04004DF7 RID: 19959
 	[Tooltip("The UI for the user report form. Shown after a user report is created.")]
 	public Canvas UserReportForm;
 
-	// Token: 0x04003AE9 RID: 15081
+	// Token: 0x04004DF8 RID: 19960
 	[Tooltip("The User Reporting platform. Different platforms have different features but may require certain Unity versions or target platforms. The Async platform adds async screenshotting and report creation, but requires Unity 2018.3 and above, the package manager version of Unity User Reporting, and a target platform that supports asynchronous GPU readback such as DirectX.")]
 	public UserReportingPlatformType UserReportingPlatform;
 
-	// Token: 0x04003AEA RID: 15082
+	// Token: 0x04004DF9 RID: 19961
 	[Tooltip("The event raised when a user report is submitting.")]
 	public UnityEvent UserReportSubmitting;
 }

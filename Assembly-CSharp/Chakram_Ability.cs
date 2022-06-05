@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000195 RID: 405
+// Token: 0x020002EC RID: 748
 public class Chakram_Ability : BaseAbility_RL, IAttack, IAbility
 {
-	// Token: 0x17000856 RID: 2134
-	// (get) Token: 0x06000F3B RID: 3899 RVA: 0x0002D54E File Offset: 0x0002B74E
+	// Token: 0x17000AF0 RID: 2800
+	// (get) Token: 0x06001710 RID: 5904 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -13,8 +13,8 @@ public class Chakram_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000857 RID: 2135
-	// (get) Token: 0x06000F3C RID: 3900 RVA: 0x0002D555 File Offset: 0x0002B755
+	// Token: 0x17000AF1 RID: 2801
+	// (get) Token: 0x06001711 RID: 5905 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -23,8 +23,8 @@ public class Chakram_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000858 RID: 2136
-	// (get) Token: 0x06000F3D RID: 3901 RVA: 0x0002D55C File Offset: 0x0002B75C
+	// Token: 0x17000AF2 RID: 2802
+	// (get) Token: 0x06001712 RID: 5906 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float TellAnimSpeed
 	{
 		get
@@ -33,8 +33,8 @@ public class Chakram_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000859 RID: 2137
-	// (get) Token: 0x06000F3E RID: 3902 RVA: 0x0002D563 File Offset: 0x0002B763
+	// Token: 0x17000AF3 RID: 2803
+	// (get) Token: 0x06001713 RID: 5907 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -43,8 +43,8 @@ public class Chakram_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700085A RID: 2138
-	// (get) Token: 0x06000F3F RID: 3903 RVA: 0x0002D56A File Offset: 0x0002B76A
+	// Token: 0x17000AF4 RID: 2804
+	// (get) Token: 0x06001714 RID: 5908 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -53,8 +53,8 @@ public class Chakram_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700085B RID: 2139
-	// (get) Token: 0x06000F40 RID: 3904 RVA: 0x0002D571 File Offset: 0x0002B771
+	// Token: 0x17000AF5 RID: 2805
+	// (get) Token: 0x06001715 RID: 5909 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -63,8 +63,8 @@ public class Chakram_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700085C RID: 2140
-	// (get) Token: 0x06000F41 RID: 3905 RVA: 0x0002D578 File Offset: 0x0002B778
+	// Token: 0x17000AF6 RID: 2806
+	// (get) Token: 0x06001716 RID: 5910 RVA: 0x000052A9 File Offset: 0x000034A9
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -73,8 +73,8 @@ public class Chakram_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700085D RID: 2141
-	// (get) Token: 0x06000F42 RID: 3906 RVA: 0x0002D57F File Offset: 0x0002B77F
+	// Token: 0x17000AF7 RID: 2807
+	// (get) Token: 0x06001717 RID: 5911 RVA: 0x0000457A File Offset: 0x0000277A
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -83,8 +83,8 @@ public class Chakram_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700085E RID: 2142
-	// (get) Token: 0x06000F43 RID: 3907 RVA: 0x0002D586 File Offset: 0x0002B786
+	// Token: 0x17000AF8 RID: 2808
+	// (get) Token: 0x06001718 RID: 5912 RVA: 0x00005FAA File Offset: 0x000041AA
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -93,8 +93,8 @@ public class Chakram_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700085F RID: 2143
-	// (get) Token: 0x06000F44 RID: 3908 RVA: 0x0002D58D File Offset: 0x0002B78D
+	// Token: 0x17000AF9 RID: 2809
+	// (get) Token: 0x06001719 RID: 5913 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get

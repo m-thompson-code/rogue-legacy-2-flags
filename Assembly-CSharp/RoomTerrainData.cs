@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020004BA RID: 1210
+// Token: 0x020007D2 RID: 2002
 public class RoomTerrainData : ScriptableObject
 {
-	// Token: 0x1700113E RID: 4414
-	// (get) Token: 0x06002D0C RID: 11532 RVA: 0x00098C72 File Offset: 0x00096E72
-	// (set) Token: 0x06002D0D RID: 11533 RVA: 0x00098C7A File Offset: 0x00096E7A
+	// Token: 0x170016A5 RID: 5797
+	// (get) Token: 0x06003DB8 RID: 15800 RVA: 0x000222B4 File Offset: 0x000204B4
+	// (set) Token: 0x06003DB9 RID: 15801 RVA: 0x000222BC File Offset: 0x000204BC
 	public List<TerrainData> Terrain
 	{
 		get
@@ -20,7 +20,7 @@ public class RoomTerrainData : ScriptableObject
 		}
 	}
 
-	// Token: 0x06002D0E RID: 11534 RVA: 0x00098C84 File Offset: 0x00096E84
+	// Token: 0x06003DBA RID: 15802 RVA: 0x000F9B10 File Offset: 0x000F7D10
 	public void Initialise(BaseRoom room)
 	{
 		this.Terrain = new List<TerrainData>();
@@ -30,7 +30,7 @@ public class RoomTerrainData : ScriptableObject
 		}
 	}
 
-	// Token: 0x04002433 RID: 9267
+	// Token: 0x04003096 RID: 12438
 	[SerializeField]
 	private List<TerrainData> m_terrain;
 }

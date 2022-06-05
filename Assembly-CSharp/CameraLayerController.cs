@@ -2,11 +2,11 @@
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x020005FC RID: 1532
+// Token: 0x02000A19 RID: 2585
 public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRootObj
 {
-	// Token: 0x170013A3 RID: 5027
-	// (get) Token: 0x0600376C RID: 14188 RVA: 0x000BDF83 File Offset: 0x000BC183
+	// Token: 0x17001AF6 RID: 6902
+	// (get) Token: 0x06004DF5 RID: 19957 RVA: 0x0002A64C File Offset: 0x0002884C
 	public bool IsProp
 	{
 		get
@@ -15,8 +15,8 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x170013A4 RID: 5028
-	// (get) Token: 0x0600376D RID: 14189 RVA: 0x000BDF90 File Offset: 0x000BC190
+	// Token: 0x17001AF7 RID: 6903
+	// (get) Token: 0x06004DF6 RID: 19958 RVA: 0x0002A659 File Offset: 0x00028859
 	public bool IsSet
 	{
 		get
@@ -25,9 +25,9 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x170013A5 RID: 5029
-	// (get) Token: 0x0600376E RID: 14190 RVA: 0x000BDF98 File Offset: 0x000BC198
-	// (set) Token: 0x0600376F RID: 14191 RVA: 0x000BDFA0 File Offset: 0x000BC1A0
+	// Token: 0x17001AF8 RID: 6904
+	// (get) Token: 0x06004DF7 RID: 19959 RVA: 0x0002A661 File Offset: 0x00028861
+	// (set) Token: 0x06004DF8 RID: 19960 RVA: 0x0002A669 File Offset: 0x00028869
 	public CameraLayer CameraLayer
 	{
 		get
@@ -40,9 +40,9 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x170013A6 RID: 5030
-	// (get) Token: 0x06003770 RID: 14192 RVA: 0x000BDFA9 File Offset: 0x000BC1A9
-	// (set) Token: 0x06003771 RID: 14193 RVA: 0x000BDFB1 File Offset: 0x000BC1B1
+	// Token: 0x17001AF9 RID: 6905
+	// (get) Token: 0x06004DF9 RID: 19961 RVA: 0x0002A672 File Offset: 0x00028872
+	// (set) Token: 0x06004DFA RID: 19962 RVA: 0x0002A67A File Offset: 0x0002887A
 	public bool DisableNonGameLayerCollisions
 	{
 		get
@@ -58,9 +58,9 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x170013A7 RID: 5031
-	// (get) Token: 0x06003772 RID: 14194 RVA: 0x000BDFC1 File Offset: 0x000BC1C1
-	// (set) Token: 0x06003773 RID: 14195 RVA: 0x000BDFC9 File Offset: 0x000BC1C9
+	// Token: 0x17001AFA RID: 6906
+	// (get) Token: 0x06004DFB RID: 19963 RVA: 0x0002A68A File Offset: 0x0002888A
+	// (set) Token: 0x06004DFC RID: 19964 RVA: 0x0002A692 File Offset: 0x00028892
 	public bool SetVisualLayers
 	{
 		get
@@ -73,9 +73,9 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x170013A8 RID: 5032
-	// (get) Token: 0x06003774 RID: 14196 RVA: 0x000BDFD2 File Offset: 0x000BC1D2
-	// (set) Token: 0x06003775 RID: 14197 RVA: 0x000BDFDA File Offset: 0x000BC1DA
+	// Token: 0x17001AFB RID: 6907
+	// (get) Token: 0x06004DFD RID: 19965 RVA: 0x0002A69B File Offset: 0x0002889B
+	// (set) Token: 0x06004DFE RID: 19966 RVA: 0x0002A6A3 File Offset: 0x000288A3
 	public int SubLayer
 	{
 		get
@@ -88,9 +88,9 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x170013A9 RID: 5033
-	// (get) Token: 0x06003776 RID: 14198 RVA: 0x000BDFE3 File Offset: 0x000BC1E3
-	// (set) Token: 0x06003777 RID: 14199 RVA: 0x000BDFEB File Offset: 0x000BC1EB
+	// Token: 0x17001AFC RID: 6908
+	// (get) Token: 0x06004DFF RID: 19967 RVA: 0x0002A6AC File Offset: 0x000288AC
+	// (set) Token: 0x06004E00 RID: 19968 RVA: 0x0002A6B4 File Offset: 0x000288B4
 	public GameObject Visuals
 	{
 		get
@@ -103,13 +103,13 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x06003778 RID: 14200 RVA: 0x000BDFF4 File Offset: 0x000BC1F4
+	// Token: 0x06004E01 RID: 19969 RVA: 0x0002A6BD File Offset: 0x000288BD
 	private void Awake()
 	{
 		this.m_prop = base.gameObject.GetComponent<Prop>();
 	}
 
-	// Token: 0x06003779 RID: 14201 RVA: 0x000BE007 File Offset: 0x000BC207
+	// Token: 0x06004E02 RID: 19970 RVA: 0x0002A6D0 File Offset: 0x000288D0
 	private void Start()
 	{
 		if (!this.m_isSet)
@@ -118,20 +118,20 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x0600377A RID: 14202 RVA: 0x000BE017 File Offset: 0x000BC217
+	// Token: 0x06004E03 RID: 19971 RVA: 0x0002A6E0 File Offset: 0x000288E0
 	public void SetLayerAndSubLayer()
 	{
 		this.SetLayer();
 		this.SetZPosition(false);
 	}
 
-	// Token: 0x0600377B RID: 14203 RVA: 0x000BE026 File Offset: 0x000BC226
+	// Token: 0x06004E04 RID: 19972 RVA: 0x0002A6EF File Offset: 0x000288EF
 	public void SetIsDeco(bool isDeco)
 	{
 		this.m_isDeco = isDeco;
 	}
 
-	// Token: 0x0600377C RID: 14204 RVA: 0x000BE02F File Offset: 0x000BC22F
+	// Token: 0x06004E05 RID: 19973 RVA: 0x0002A6F8 File Offset: 0x000288F8
 	public void SetCameraLayer(CameraLayer cameraLayer)
 	{
 		this.CameraLayer = cameraLayer;
@@ -142,7 +142,7 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x0600377D RID: 14205 RVA: 0x000BE04C File Offset: 0x000BC24C
+	// Token: 0x06004E06 RID: 19974 RVA: 0x0012CB4C File Offset: 0x0012AD4C
 	private void SetLayer()
 	{
 		if (!this.SetVisualLayers)
@@ -257,7 +257,7 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x0600377E RID: 14206 RVA: 0x000BE3F0 File Offset: 0x000BC5F0
+	// Token: 0x06004E07 RID: 19975 RVA: 0x0012CEF0 File Offset: 0x0012B0F0
 	private void InitializeTransforms(GameObject obj)
 	{
 		if (this.m_transforms == null)
@@ -277,7 +277,7 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x0600377F RID: 14207 RVA: 0x000BE45C File Offset: 0x000BC65C
+	// Token: 0x06004E08 RID: 19976 RVA: 0x0012CF5C File Offset: 0x0012B15C
 	private void SetLayersRecursively(GameObject obj, LayerMask layer)
 	{
 		if (this.CameraLayer == CameraLayer.Game)
@@ -303,7 +303,7 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x06003780 RID: 14208 RVA: 0x000BE4E8 File Offset: 0x000BC6E8
+	// Token: 0x06004E09 RID: 19977 RVA: 0x0012CFE8 File Offset: 0x0012B1E8
 	public void SetSubLayer(int subLayer, bool isDeco = false)
 	{
 		Vector2Int subLayerRange = CameraLayerUtility.GetSubLayerRange(this.CameraLayer);
@@ -315,7 +315,7 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x06003781 RID: 14209 RVA: 0x000BE530 File Offset: 0x000BC730
+	// Token: 0x06004E0A RID: 19978 RVA: 0x0012D030 File Offset: 0x0012B230
 	private void SetZPosition(bool isDeco = false)
 	{
 		if (!this.Visuals)
@@ -359,68 +359,68 @@ public class CameraLayerController : MonoBehaviour, ICameraLayerController, IRoo
 		}
 	}
 
-	// Token: 0x06003783 RID: 14211 RVA: 0x000BE6EE File Offset: 0x000BC8EE
+	// Token: 0x06004E0C RID: 19980 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002A96 RID: 10902
+	// Token: 0x04003AE8 RID: 15080
 	[SerializeField]
 	private GameObject m_visuals;
 
-	// Token: 0x04002A97 RID: 10903
+	// Token: 0x04003AE9 RID: 15081
 	[SerializeField]
 	private CameraLayer m_cameraLayer = CameraLayer.Game;
 
-	// Token: 0x04002A98 RID: 10904
+	// Token: 0x04003AEA RID: 15082
 	[SerializeField]
 	private int m_subLayer;
 
-	// Token: 0x04002A99 RID: 10905
+	// Token: 0x04003AEB RID: 15083
 	[SerializeField]
 	private bool m_setVisualLayers = true;
 
-	// Token: 0x04002A9A RID: 10906
+	// Token: 0x04003AEC RID: 15084
 	[SerializeField]
 	private bool m_disableNonGameLayerCollisions = true;
 
-	// Token: 0x04002A9B RID: 10907
+	// Token: 0x04003AED RID: 15085
 	private const int CHARACTER_DEFAULT_Z_POSITION = 0;
 
-	// Token: 0x04002A9C RID: 10908
+	// Token: 0x04003AEE RID: 15086
 	private Prop m_prop;
 
-	// Token: 0x04002A9D RID: 10909
+	// Token: 0x04003AEF RID: 15087
 	private bool m_isDeco;
 
-	// Token: 0x04002A9E RID: 10910
+	// Token: 0x04003AF0 RID: 15088
 	private bool m_isSet;
 
-	// Token: 0x04002A9F RID: 10911
+	// Token: 0x04003AF1 RID: 15089
 	private ZPositionOverride[] m_zPositionOverrides;
 
-	// Token: 0x04002AA0 RID: 10912
+	// Token: 0x04003AF2 RID: 15090
 	private ICameraLayerController[] m_childCameraLayerControllers;
 
-	// Token: 0x04002AA1 RID: 10913
+	// Token: 0x04003AF3 RID: 15091
 	private CorgiController_RL[] m_corgiControllers;
 
-	// Token: 0x04002AA2 RID: 10914
+	// Token: 0x04003AF4 RID: 15092
 	private IHitboxController[] m_hbControllers;
 
-	// Token: 0x04002AA3 RID: 10915
+	// Token: 0x04003AF5 RID: 15093
 	private Transform[] m_transforms;
 
-	// Token: 0x04002AA4 RID: 10916
+	// Token: 0x04003AF6 RID: 15094
 	private Collider2D[] m_platformColliders;
 
-	// Token: 0x04002AA5 RID: 10917
+	// Token: 0x04003AF7 RID: 15095
 	private Collider2D[] m_propColliders;
 
-	// Token: 0x04002AA6 RID: 10918
+	// Token: 0x04003AF8 RID: 15096
 	private bool m_transparentFXLayersAssigned;
 
-	// Token: 0x04002AA7 RID: 10919
+	// Token: 0x04003AF9 RID: 15097
 	private int m_transparentFXLayerFlags;
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 using Sigtrap.Relays;
 
-// Token: 0x020001AF RID: 431
+// Token: 0x0200031E RID: 798
 public class AbilityAnimBehaviourManager
 {
-	// Token: 0x17000987 RID: 2439
-	// (get) Token: 0x0600111C RID: 4380 RVA: 0x00031655 File Offset: 0x0002F855
+	// Token: 0x17000C47 RID: 3143
+	// (get) Token: 0x06001965 RID: 6501 RVA: 0x0000CC96 File Offset: 0x0000AE96
 	private static AbilityAnimBehaviourManager Instance
 	{
 		get
@@ -19,8 +19,8 @@ public class AbilityAnimBehaviourManager
 		}
 	}
 
-	// Token: 0x17000988 RID: 2440
-	// (get) Token: 0x0600111D RID: 4381 RVA: 0x00031677 File Offset: 0x0002F877
+	// Token: 0x17000C48 RID: 3144
+	// (get) Token: 0x06001966 RID: 6502 RVA: 0x0000CCB8 File Offset: 0x0000AEB8
 	public static IRelayLink<AbilityAnimState> OnAnimStateEnterRelay
 	{
 		get
@@ -29,8 +29,8 @@ public class AbilityAnimBehaviourManager
 		}
 	}
 
-	// Token: 0x17000989 RID: 2441
-	// (get) Token: 0x0600111E RID: 4382 RVA: 0x00031688 File Offset: 0x0002F888
+	// Token: 0x17000C49 RID: 3145
+	// (get) Token: 0x06001967 RID: 6503 RVA: 0x0000CCC9 File Offset: 0x0000AEC9
 	public static IRelayLink<AbilityAnimState> OnAnimStateExitRelay
 	{
 		get
@@ -39,9 +39,9 @@ public class AbilityAnimBehaviourManager
 		}
 	}
 
-	// Token: 0x1700098A RID: 2442
-	// (get) Token: 0x0600111F RID: 4383 RVA: 0x00031699 File Offset: 0x0002F899
-	// (set) Token: 0x06001120 RID: 4384 RVA: 0x000316A5 File Offset: 0x0002F8A5
+	// Token: 0x17000C4A RID: 3146
+	// (get) Token: 0x06001968 RID: 6504 RVA: 0x0000CCDA File Offset: 0x0000AEDA
+	// (set) Token: 0x06001969 RID: 6505 RVA: 0x0000CCE6 File Offset: 0x0000AEE6
 	public static AbilityAnimBehaviour CurrentAnimatorState
 	{
 		get
@@ -54,9 +54,9 @@ public class AbilityAnimBehaviourManager
 		}
 	}
 
-	// Token: 0x1700098B RID: 2443
-	// (get) Token: 0x06001121 RID: 4385 RVA: 0x000316B2 File Offset: 0x0002F8B2
-	// (set) Token: 0x06001122 RID: 4386 RVA: 0x000316BE File Offset: 0x0002F8BE
+	// Token: 0x17000C4B RID: 3147
+	// (get) Token: 0x0600196A RID: 6506 RVA: 0x0000CCF3 File Offset: 0x0000AEF3
+	// (set) Token: 0x0600196B RID: 6507 RVA: 0x0000CCFF File Offset: 0x0000AEFF
 	public static bool AnimationComplete
 	{
 		get
@@ -69,42 +69,42 @@ public class AbilityAnimBehaviourManager
 		}
 	}
 
-	// Token: 0x06001123 RID: 4387 RVA: 0x000316CB File Offset: 0x0002F8CB
+	// Token: 0x0600196C RID: 6508 RVA: 0x0000CD0C File Offset: 0x0000AF0C
 	public static void InvokeAnimOnEnter(AbilityAnimState animState)
 	{
 		AbilityAnimBehaviourManager.Instance.m_onAnimStateEnterRelay.Dispatch(animState);
 	}
 
-	// Token: 0x06001124 RID: 4388 RVA: 0x000316DD File Offset: 0x0002F8DD
+	// Token: 0x0600196D RID: 6509 RVA: 0x0000CD1E File Offset: 0x0000AF1E
 	public static void InvokeAnimOnExit(AbilityAnimState animState)
 	{
 		AbilityAnimBehaviourManager.Instance.m_onAnimStateExitRelay.Dispatch(animState);
 	}
 
-	// Token: 0x06001125 RID: 4389 RVA: 0x000316EF File Offset: 0x0002F8EF
+	// Token: 0x0600196E RID: 6510 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Initialize()
 	{
 	}
 
-	// Token: 0x06001126 RID: 4390 RVA: 0x000316F1 File Offset: 0x0002F8F1
+	// Token: 0x0600196F RID: 6511 RVA: 0x0000CD30 File Offset: 0x0000AF30
 	public static void ResetManager()
 	{
 		AbilityAnimBehaviourManager.CurrentAnimatorState = null;
 		AbilityAnimBehaviourManager.AnimationComplete = false;
 	}
 
-	// Token: 0x04001203 RID: 4611
+	// Token: 0x0400180C RID: 6156
 	private AbilityAnimBehaviour m_currentAnimatorState;
 
-	// Token: 0x04001204 RID: 4612
+	// Token: 0x0400180D RID: 6157
 	private bool m_animationComplete;
 
-	// Token: 0x04001205 RID: 4613
+	// Token: 0x0400180E RID: 6158
 	private Relay<AbilityAnimState> m_onAnimStateEnterRelay = new Relay<AbilityAnimState>();
 
-	// Token: 0x04001206 RID: 4614
+	// Token: 0x0400180F RID: 6159
 	private Relay<AbilityAnimState> m_onAnimStateExitRelay = new Relay<AbilityAnimState>();
 
-	// Token: 0x04001207 RID: 4615
+	// Token: 0x04001810 RID: 6160
 	private static AbilityAnimBehaviourManager m_instance;
 }

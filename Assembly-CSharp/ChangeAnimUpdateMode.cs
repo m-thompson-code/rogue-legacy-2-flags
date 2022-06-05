@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001CE RID: 462
+// Token: 0x02000348 RID: 840
 public class ChangeAnimUpdateMode : MonoBehaviour
 {
-	// Token: 0x0600129D RID: 4765 RVA: 0x00036BD0 File Offset: 0x00034DD0
+	// Token: 0x06001B1B RID: 6939 RVA: 0x00094270 File Offset: 0x00092470
 	private void Awake()
 	{
 		this.m_animators = base.GetComponentsInChildren<Animator>(true);
@@ -21,7 +21,7 @@ public class ChangeAnimUpdateMode : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600129E RID: 4766 RVA: 0x00036C78 File Offset: 0x00034E78
+	// Token: 0x06001B1C RID: 6940 RVA: 0x00094318 File Offset: 0x00092518
 	private void OnEnable()
 	{
 		AnimatorUpdateMode updateMode = AnimatorUpdateMode.Normal;
@@ -42,7 +42,7 @@ public class ChangeAnimUpdateMode : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600129F RID: 4767 RVA: 0x00036CE4 File Offset: 0x00034EE4
+	// Token: 0x06001B1D RID: 6941 RVA: 0x00094384 File Offset: 0x00092584
 	private void OnDisable()
 	{
 		for (int i = 0; i < this.m_animators.Length; i++)
@@ -55,36 +55,36 @@ public class ChangeAnimUpdateMode : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001301 RID: 4865
+	// Token: 0x04001934 RID: 6452
 	[SerializeField]
 	private ChangeAnimUpdateMode.UpdateModeType m_updateMode;
 
-	// Token: 0x04001302 RID: 4866
+	// Token: 0x04001935 RID: 6453
 	[SerializeField]
 	private bool m_changeAllAnimators;
 
-	// Token: 0x04001303 RID: 4867
+	// Token: 0x04001936 RID: 6454
 	[SerializeField]
 	private bool m_changeAllParticleSystems;
 
-	// Token: 0x04001304 RID: 4868
+	// Token: 0x04001937 RID: 6455
 	private Animator[] m_animators;
 
-	// Token: 0x04001305 RID: 4869
+	// Token: 0x04001938 RID: 6456
 	private ParticleSystem[] m_particleSystems;
 
-	// Token: 0x04001306 RID: 4870
+	// Token: 0x04001939 RID: 6457
 	private AnimatorUpdateMode[] m_storedAnimatorModes;
 
-	// Token: 0x04001307 RID: 4871
+	// Token: 0x0400193A RID: 6458
 	private bool[] m_storedPartSysModes;
 
-	// Token: 0x02000AF3 RID: 2803
+	// Token: 0x02000349 RID: 841
 	private enum UpdateModeType
 	{
-		// Token: 0x04004AC9 RID: 19145
+		// Token: 0x0400193C RID: 6460
 		ScaledTime,
-		// Token: 0x04004ACA RID: 19146
+		// Token: 0x0400193D RID: 6461
 		UnscaledTime
 	}
 }

@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-// Token: 0x020005EF RID: 1519
+// Token: 0x020009FA RID: 2554
 [CreateAssetMenu(menuName = "Custom/Biome Rules/Camera Offset")]
 public class CameraOffset_BiomeRule : BiomeRule
 {
-	// Token: 0x1700136E RID: 4974
-	// (get) Token: 0x060036DC RID: 14044 RVA: 0x000BCA48 File Offset: 0x000BAC48
+	// Token: 0x17001AA1 RID: 6817
+	// (get) Token: 0x06004D00 RID: 19712 RVA: 0x00029D60 File Offset: 0x00027F60
 	public override BiomeRuleExecutionTime ExecutionTime
 	{
 		get
@@ -22,7 +22,7 @@ public class CameraOffset_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x060036DD RID: 14045 RVA: 0x000BCA54 File Offset: 0x000BAC54
+	// Token: 0x06004D01 RID: 19713 RVA: 0x00029D6C File Offset: 0x00027F6C
 	public override IEnumerator RunRule(BiomeType biome)
 	{
 		if (GameUtility.IsInLevelEditor && OnPlayManager.BiomeController)
@@ -56,7 +56,7 @@ public class CameraOffset_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x060036DE RID: 14046 RVA: 0x000BCA6A File Offset: 0x000BAC6A
+	// Token: 0x06004D02 RID: 19714 RVA: 0x00029D82 File Offset: 0x00027F82
 	private void SetOffset(CinemachineVirtualCamera virtualCamera)
 	{
 		CinemachineFramingTransposer cinemachineComponent = virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
@@ -64,12 +64,12 @@ public class CameraOffset_BiomeRule : BiomeRule
 		cinemachineComponent.m_ScreenY = this.m_offsetOverride.y;
 	}
 
-	// Token: 0x060036DF RID: 14047 RVA: 0x000BCA93 File Offset: 0x000BAC93
+	// Token: 0x06004D03 RID: 19715 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void UndoRule(BiomeType biome)
 	{
 	}
 
-	// Token: 0x04002A3C RID: 10812
+	// Token: 0x04003A48 RID: 14920
 	[SerializeField]
 	private Vector2 m_offsetOverride = new Vector2(0.5f, 0.6f);
 }

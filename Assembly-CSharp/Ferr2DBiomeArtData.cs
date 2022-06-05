@@ -1,13 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006BA RID: 1722
+// Token: 0x02000B65 RID: 2917
 [Serializable]
 public class Ferr2DBiomeArtData
 {
-	// Token: 0x170015A8 RID: 5544
-	// (get) Token: 0x06003F7A RID: 16250 RVA: 0x000E22B4 File Offset: 0x000E04B4
-	// (set) Token: 0x06003F7B RID: 16251 RVA: 0x000E22BC File Offset: 0x000E04BC
+	// Token: 0x17001DA0 RID: 7584
+	// (get) Token: 0x060058B1 RID: 22705 RVA: 0x000303D9 File Offset: 0x0002E5D9
+	// (set) Token: 0x060058B2 RID: 22706 RVA: 0x000303E1 File Offset: 0x0002E5E1
 	public Color Tint
 	{
 		get
@@ -20,9 +20,9 @@ public class Ferr2DBiomeArtData
 		}
 	}
 
-	// Token: 0x170015A9 RID: 5545
-	// (get) Token: 0x06003F7C RID: 16252 RVA: 0x000E22C5 File Offset: 0x000E04C5
-	// (set) Token: 0x06003F7D RID: 16253 RVA: 0x000E22CD File Offset: 0x000E04CD
+	// Token: 0x17001DA1 RID: 7585
+	// (get) Token: 0x060058B3 RID: 22707 RVA: 0x000303EA File Offset: 0x0002E5EA
+	// (set) Token: 0x060058B4 RID: 22708 RVA: 0x000303F2 File Offset: 0x0002E5F2
 	public Color MapColor
 	{
 		get
@@ -35,8 +35,8 @@ public class Ferr2DBiomeArtData
 		}
 	}
 
-	// Token: 0x170015AA RID: 5546
-	// (get) Token: 0x06003F7E RID: 16254 RVA: 0x000E22D6 File Offset: 0x000E04D6
+	// Token: 0x17001DA2 RID: 7586
+	// (get) Token: 0x060058B5 RID: 22709 RVA: 0x000303FB File Offset: 0x0002E5FB
 	public MasterFerr2DEntry TerrainMaster
 	{
 		get
@@ -45,8 +45,8 @@ public class Ferr2DBiomeArtData
 		}
 	}
 
-	// Token: 0x170015AB RID: 5547
-	// (get) Token: 0x06003F7F RID: 16255 RVA: 0x000E22DE File Offset: 0x000E04DE
+	// Token: 0x17001DA3 RID: 7587
+	// (get) Token: 0x060058B6 RID: 22710 RVA: 0x00030403 File Offset: 0x0002E603
 	public MasterFerr2DEntry OneWayMaster
 	{
 		get
@@ -55,31 +55,31 @@ public class Ferr2DBiomeArtData
 		}
 	}
 
-	// Token: 0x06003F80 RID: 16256 RVA: 0x000E22E6 File Offset: 0x000E04E6
+	// Token: 0x060058B7 RID: 22711 RVA: 0x0003040B File Offset: 0x0002E60B
 	public void SetTint(Color tint)
 	{
 		this.Tint = tint;
 	}
 
-	// Token: 0x06003F81 RID: 16257 RVA: 0x000E22EF File Offset: 0x000E04EF
+	// Token: 0x060058B8 RID: 22712 RVA: 0x00030414 File Offset: 0x0002E614
 	public void SetMapColor(Color color)
 	{
 		this.MapColor = color;
 	}
 
-	// Token: 0x04002F20 RID: 12064
+	// Token: 0x0400416F RID: 16751
 	[SerializeField]
 	private MasterFerr2DEntry m_terrainMaster;
 
-	// Token: 0x04002F21 RID: 12065
+	// Token: 0x04004170 RID: 16752
 	[SerializeField]
 	private MasterFerr2DEntry m_oneWayMaster;
 
-	// Token: 0x04002F22 RID: 12066
+	// Token: 0x04004171 RID: 16753
 	[SerializeField]
 	private Color m_tint = Color.white;
 
-	// Token: 0x04002F23 RID: 12067
+	// Token: 0x04004172 RID: 16754
 	[SerializeField]
 	private Color m_mapColor = Color.white;
 }

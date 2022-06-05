@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200047A RID: 1146
+// Token: 0x02000770 RID: 1904
 public class RuneOreDrop : BaseItemDrop
 {
-	// Token: 0x1700104C RID: 4172
-	// (get) Token: 0x060029EB RID: 10731 RVA: 0x0008A8B5 File Offset: 0x00088AB5
+	// Token: 0x17001581 RID: 5505
+	// (get) Token: 0x060039F5 RID: 14837 RVA: 0x00004527 File Offset: 0x00002727
 	public override ItemDropType ItemDropType
 	{
 		get
@@ -15,7 +15,7 @@ public class RuneOreDrop : BaseItemDrop
 		}
 	}
 
-	// Token: 0x060029EC RID: 10732 RVA: 0x0008A8BC File Offset: 0x00088ABC
+	// Token: 0x060039F6 RID: 14838 RVA: 0x000EC4D4 File Offset: 0x000EA6D4
 	protected override void Collect(GameObject collector)
 	{
 		int num = Economy_EV.GetItemDropValue(this.ItemDropType, false);

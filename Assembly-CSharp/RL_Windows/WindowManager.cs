@@ -10,21 +10,21 @@ using UnityEngine.SceneManagement;
 
 namespace RL_Windows
 {
-	// Token: 0x020008BF RID: 2239
+	// Token: 0x02000E03 RID: 3587
 	public class WindowManager : MonoBehaviour
 	{
 		// Token: 0x1400000E RID: 14
-		// (add) Token: 0x06004956 RID: 18774 RVA: 0x0010889C File Offset: 0x00106A9C
-		// (remove) Token: 0x06004957 RID: 18775 RVA: 0x001088D0 File Offset: 0x00106AD0
+		// (add) Token: 0x06006520 RID: 25888 RVA: 0x00177E28 File Offset: 0x00176028
+		// (remove) Token: 0x06006521 RID: 25889 RVA: 0x00177E5C File Offset: 0x0017605C
 		public static event EventHandler<WindowStateChangeEventArgs> WindowStateChangeEvent;
 
-		// Token: 0x170017E9 RID: 6121
-		// (get) Token: 0x06004958 RID: 18776 RVA: 0x00108903 File Offset: 0x00106B03
-		// (set) Token: 0x06004959 RID: 18777 RVA: 0x0010890A File Offset: 0x00106B0A
+		// Token: 0x17002083 RID: 8323
+		// (get) Token: 0x06006522 RID: 25890 RVA: 0x00037C00 File Offset: 0x00035E00
+		// (set) Token: 0x06006523 RID: 25891 RVA: 0x00037C07 File Offset: 0x00035E07
 		private static WindowManager Instance { get; set; }
 
-		// Token: 0x170017EA RID: 6122
-		// (get) Token: 0x0600495A RID: 18778 RVA: 0x00108914 File Offset: 0x00106B14
+		// Token: 0x17002084 RID: 8324
+		// (get) Token: 0x06006524 RID: 25892 RVA: 0x00177E90 File Offset: 0x00176090
 		public static EventSystem EventSystem
 		{
 			get
@@ -44,8 +44,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017EB RID: 6123
-		// (get) Token: 0x0600495B RID: 18779 RVA: 0x00108962 File Offset: 0x00106B62
+		// Token: 0x17002085 RID: 8325
+		// (get) Token: 0x06006525 RID: 25893 RVA: 0x00037C0F File Offset: 0x00035E0F
 		public static Dictionary<SceneID, List<WindowID>> SceneIDToLoadedWindowIDsTable
 		{
 			get
@@ -54,8 +54,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017EC RID: 6124
-		// (get) Token: 0x0600495C RID: 18780 RVA: 0x00108969 File Offset: 0x00106B69
+		// Token: 0x17002086 RID: 8326
+		// (get) Token: 0x06006526 RID: 25894 RVA: 0x00037C16 File Offset: 0x00035E16
 		public static WindowController ActiveWindow
 		{
 			get
@@ -68,9 +68,9 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017ED RID: 6125
-		// (get) Token: 0x0600495D RID: 18781 RVA: 0x0010898B File Offset: 0x00106B8B
-		// (set) Token: 0x0600495E RID: 18782 RVA: 0x00108992 File Offset: 0x00106B92
+		// Token: 0x17002087 RID: 8327
+		// (get) Token: 0x06006527 RID: 25895 RVA: 0x00037C38 File Offset: 0x00035E38
+		// (set) Token: 0x06006528 RID: 25896 RVA: 0x00037C3F File Offset: 0x00035E3F
 		public static List<WindowController> OpenWindows
 		{
 			get
@@ -83,9 +83,9 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017EE RID: 6126
-		// (get) Token: 0x0600495F RID: 18783 RVA: 0x0010899A File Offset: 0x00106B9A
-		// (set) Token: 0x06004960 RID: 18784 RVA: 0x001089A1 File Offset: 0x00106BA1
+		// Token: 0x17002088 RID: 8328
+		// (get) Token: 0x06006529 RID: 25897 RVA: 0x00037C47 File Offset: 0x00035E47
+		// (set) Token: 0x0600652A RID: 25898 RVA: 0x00037C4E File Offset: 0x00035E4E
 		public static List<WindowController> LoadedWindows
 		{
 			get
@@ -98,8 +98,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017EF RID: 6127
-		// (get) Token: 0x06004961 RID: 18785 RVA: 0x001089A9 File Offset: 0x00106BA9
+		// Token: 0x17002089 RID: 8329
+		// (get) Token: 0x0600652B RID: 25899 RVA: 0x00037C56 File Offset: 0x00035E56
 		public static bool IsInstantiated
 		{
 			get
@@ -108,7 +108,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004962 RID: 18786 RVA: 0x001089B8 File Offset: 0x00106BB8
+		// Token: 0x0600652C RID: 25900 RVA: 0x00177EE0 File Offset: 0x001760E0
 		private void Awake()
 		{
 			if (WindowManager.Instance && WindowManager.Instance != this)
@@ -123,7 +123,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004963 RID: 18787 RVA: 0x00108A10 File Offset: 0x00106C10
+		// Token: 0x0600652D RID: 25901 RVA: 0x00177F38 File Offset: 0x00176138
 		private void Start()
 		{
 			SceneManager.sceneLoaded -= WindowManager.OnSceneLoaded;
@@ -135,7 +135,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004964 RID: 18788 RVA: 0x00108A8C File Offset: 0x00106C8C
+		// Token: 0x0600652E RID: 25902 RVA: 0x00177FB4 File Offset: 0x001761B4
 		private void OnDestroy()
 		{
 			if (WindowManager.Instance != null && WindowManager.Instance == this)
@@ -149,13 +149,13 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004965 RID: 18789 RVA: 0x00108B11 File Offset: 0x00106D11
+		// Token: 0x0600652F RID: 25903 RVA: 0x00037C63 File Offset: 0x00035E63
 		private static void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
 		{
 			WindowManager.LoadSceneWindows(scene);
 		}
 
-		// Token: 0x06004966 RID: 18790 RVA: 0x00108B1C File Offset: 0x00106D1C
+		// Token: 0x06006530 RID: 25904 RVA: 0x0017803C File Offset: 0x0017623C
 		private void OnSelectButtonDown(InputActionEventData obj)
 		{
 			if (WindowManager.DISABLED_PAUSE_SCENES.Contains(SceneManager.GetActiveScene().name))
@@ -172,7 +172,7 @@ namespace RL_Windows
 			(WindowManager.LoadedWindows.Single((WindowController x) => x.ID == WindowID.Pause) as PauseWindowController).SetSelectedTab(WindowID.Map);
 		}
 
-		// Token: 0x06004967 RID: 18791 RVA: 0x00108BC4 File Offset: 0x00106DC4
+		// Token: 0x06006531 RID: 25905 RVA: 0x001780E4 File Offset: 0x001762E4
 		private void OnStartButtonDown(InputActionEventData obj)
 		{
 			if (WindowManager.DISABLED_PAUSE_SCENES.Contains(SceneManager.GetActiveScene().name))
@@ -182,7 +182,7 @@ namespace RL_Windows
 			WindowManager.SetWindowIsOpen(WindowID.Pause, true);
 		}
 
-		// Token: 0x06004968 RID: 18792 RVA: 0x00108BF4 File Offset: 0x00106DF4
+		// Token: 0x06006532 RID: 25906 RVA: 0x00178114 File Offset: 0x00176314
 		public static void CloseAllOpenWindows()
 		{
 			WindowManager.m_openWindowHelper.Clear();
@@ -193,7 +193,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004969 RID: 18793 RVA: 0x00108C64 File Offset: 0x00106E64
+		// Token: 0x06006533 RID: 25907 RVA: 0x00178184 File Offset: 0x00176384
 		private static void CloseWindow(WindowID windowID)
 		{
 			WindowController windowController = WindowManager.OpenWindows.Single((WindowController x) => x.ID == windowID);
@@ -226,7 +226,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600496A RID: 18794 RVA: 0x00108D5C File Offset: 0x00106F5C
+		// Token: 0x06006534 RID: 25908 RVA: 0x0017827C File Offset: 0x0017647C
 		private static void CreateWindowInstanceAndAddToLoadedWindows(WindowID windowID)
 		{
 			WindowController windowController = WindowManager.Instance.m_windowControllerPrefabs.SingleOrDefault((WindowController prefab) => prefab.ID == windowID);
@@ -252,7 +252,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600496B RID: 18795 RVA: 0x00108E30 File Offset: 0x00107030
+		// Token: 0x06006535 RID: 25909 RVA: 0x00178350 File Offset: 0x00176550
 		private static void UpdateOpenWindowsSortOrder()
 		{
 			for (int i = 0; i < WindowManager.OpenWindows.Count; i++)
@@ -269,7 +269,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600496C RID: 18796 RVA: 0x00108E8C File Offset: 0x0010708C
+		// Token: 0x06006536 RID: 25910 RVA: 0x001783AC File Offset: 0x001765AC
 		public static bool GetIsWindowLoaded(WindowID windowID)
 		{
 			using (List<WindowController>.Enumerator enumerator = WindowManager.LoadedWindows.GetEnumerator())
@@ -285,7 +285,7 @@ namespace RL_Windows
 			return false;
 		}
 
-		// Token: 0x0600496D RID: 18797 RVA: 0x00108EE8 File Offset: 0x001070E8
+		// Token: 0x06006537 RID: 25911 RVA: 0x00178408 File Offset: 0x00176608
 		public static bool GetIsWindowOpen(WindowID windowID)
 		{
 			using (List<WindowController>.Enumerator enumerator = WindowManager.OpenWindows.GetEnumerator())
@@ -301,8 +301,8 @@ namespace RL_Windows
 			return false;
 		}
 
-		// Token: 0x170017F0 RID: 6128
-		// (get) Token: 0x0600496E RID: 18798 RVA: 0x00108F44 File Offset: 0x00107144
+		// Token: 0x1700208A RID: 8330
+		// (get) Token: 0x06006538 RID: 25912 RVA: 0x00037C6B File Offset: 0x00035E6B
 		public static bool IsAnyWindowOpen
 		{
 			get
@@ -311,7 +311,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600496F RID: 18799 RVA: 0x00108F54 File Offset: 0x00107154
+		// Token: 0x06006539 RID: 25913 RVA: 0x00178464 File Offset: 0x00176664
 		public static WindowController GetWindowController(WindowID windowID)
 		{
 			if (WindowManager.GetIsWindowLoaded(windowID))
@@ -321,7 +321,7 @@ namespace RL_Windows
 			return null;
 		}
 
-		// Token: 0x06004970 RID: 18800 RVA: 0x00108F94 File Offset: 0x00107194
+		// Token: 0x0600653A RID: 25914 RVA: 0x001784A4 File Offset: 0x001766A4
 		private static List<WindowID> GetWindowsToLoad(SceneID sceneID)
 		{
 			List<WindowID> result = null;
@@ -332,7 +332,7 @@ namespace RL_Windows
 			return new List<WindowID>();
 		}
 
-		// Token: 0x06004971 RID: 18801 RVA: 0x00108FBC File Offset: 0x001071BC
+		// Token: 0x0600653B RID: 25915 RVA: 0x001784CC File Offset: 0x001766CC
 		private static List<WindowID> GetWindowsToUnload(List<WindowID> windowsToLoad)
 		{
 			List<WindowID> list = new List<WindowID>();
@@ -346,7 +346,7 @@ namespace RL_Windows
 			return list;
 		}
 
-		// Token: 0x06004972 RID: 18802 RVA: 0x00109028 File Offset: 0x00107228
+		// Token: 0x0600653C RID: 25916 RVA: 0x00178538 File Offset: 0x00176738
 		private static void InitialiseWindowsInActiveScene()
 		{
 			WindowController[] array = (from windowController in UnityEngine.Object.FindObjectsOfType<WindowController>()
@@ -366,7 +366,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004973 RID: 18803 RVA: 0x001090C8 File Offset: 0x001072C8
+		// Token: 0x0600653D RID: 25917 RVA: 0x001785D8 File Offset: 0x001767D8
 		public static void LoadSceneWindows(Scene scene)
 		{
 			WindowManager.InitialiseWindowsInActiveScene();
@@ -399,13 +399,13 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004974 RID: 18804 RVA: 0x001091F0 File Offset: 0x001073F0
+		// Token: 0x0600653E RID: 25918 RVA: 0x00037C7A File Offset: 0x00035E7A
 		public static void LoadWindow(WindowID windowID)
 		{
 			WindowManager.CreateWindowInstanceAndAddToLoadedWindows(windowID);
 		}
 
-		// Token: 0x06004975 RID: 18805 RVA: 0x001091F8 File Offset: 0x001073F8
+		// Token: 0x0600653F RID: 25919 RVA: 0x00178700 File Offset: 0x00176900
 		private static void OpenWindow(WindowID windowID)
 		{
 			if (WindowManager.LoadedWindows.Exists((WindowController x) => x.ID == windowID))
@@ -445,7 +445,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004976 RID: 18806 RVA: 0x001092F7 File Offset: 0x001074F7
+		// Token: 0x06006540 RID: 25920 RVA: 0x00037C82 File Offset: 0x00035E82
 		public static void SetWindowIsOpen(WindowID windowID, bool isOpen)
 		{
 			if (isOpen)
@@ -466,7 +466,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004977 RID: 18807 RVA: 0x00109338 File Offset: 0x00107538
+		// Token: 0x06006541 RID: 25921 RVA: 0x00178800 File Offset: 0x00176A00
 		private static void UnloadWindows(List<WindowID> windowsToUnload)
 		{
 			foreach (WindowID windowID in windowsToUnload)
@@ -495,8 +495,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017F1 RID: 6129
-		// (get) Token: 0x06004978 RID: 18808 RVA: 0x001093F0 File Offset: 0x001075F0
+		// Token: 0x1700208B RID: 8331
+		// (get) Token: 0x06006542 RID: 25922 RVA: 0x00037CC2 File Offset: 0x00035EC2
 		private static bool CanPauseNow
 		{
 			get
@@ -505,8 +505,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017F2 RID: 6130
-		// (get) Token: 0x06004979 RID: 18809 RVA: 0x00109412 File Offset: 0x00107612
+		// Token: 0x1700208C RID: 8332
+		// (get) Token: 0x06006543 RID: 25923 RVA: 0x00037CE4 File Offset: 0x00035EE4
 		private static bool IsAlreadyPaused
 		{
 			get
@@ -515,7 +515,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600497A RID: 18810 RVA: 0x00109429 File Offset: 0x00107629
+		// Token: 0x06006544 RID: 25924 RVA: 0x00037CFB File Offset: 0x00035EFB
 		public static void PauseWhenPossible(bool shouldPause, bool gamepadDisconnected = false)
 		{
 			if (shouldPause)
@@ -543,7 +543,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600497B RID: 18811 RVA: 0x00109465 File Offset: 0x00107665
+		// Token: 0x06006545 RID: 25925 RVA: 0x00037D37 File Offset: 0x00035F37
 		private void Update()
 		{
 			if (WindowManager.m_pauseIfPossible)
@@ -560,21 +560,21 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600497C RID: 18812 RVA: 0x00109487 File Offset: 0x00107687
+		// Token: 0x06006546 RID: 25926 RVA: 0x00037D59 File Offset: 0x00035F59
 		private static void ForcePause()
 		{
 			WindowManager.SetWindowIsOpen(WindowID.Pause, true);
 			WindowManager.ResetPauseRequestState();
 		}
 
-		// Token: 0x0600497D RID: 18813 RVA: 0x00109495 File Offset: 0x00107695
+		// Token: 0x06006547 RID: 25927 RVA: 0x00037D67 File Offset: 0x00035F67
 		private static void ResetPauseRequestState()
 		{
 			WindowManager.m_pauseIfPossible = false;
 			WindowManager.m_pauseForGamepadDisconnected = false;
 		}
 
-		// Token: 0x0600497E RID: 18814 RVA: 0x001094A3 File Offset: 0x001076A3
+		// Token: 0x06006548 RID: 25928 RVA: 0x00037D75 File Offset: 0x00035F75
 		public static void SetWindowIsOpen(WindowID windowID, bool isOpen, TransitionID transitionID)
 		{
 			if (WindowManager.m_loadWindowCoroutine == null)
@@ -588,7 +588,7 @@ namespace RL_Windows
 			});
 		}
 
-		// Token: 0x0600497F RID: 18815 RVA: 0x001094DC File Offset: 0x001076DC
+		// Token: 0x06006549 RID: 25929 RVA: 0x00037DAE File Offset: 0x00035FAE
 		private static IEnumerator LoadWindowWithTransitionCoroutine(WindowID windowID, bool isOpen, TransitionID transitionID)
 		{
 			yield return null;
@@ -605,7 +605,7 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x06004980 RID: 18816 RVA: 0x001094F9 File Offset: 0x001076F9
+		// Token: 0x0600654A RID: 25930 RVA: 0x00037DCB File Offset: 0x00035FCB
 		private static void SetInputIsEnabled(bool isEnabled)
 		{
 			if (ReInput.isReady && PlayerManager.IsInstantiated)
@@ -614,32 +614,32 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x04003DCE RID: 15822
+		// Token: 0x04005251 RID: 21073
 		[SerializeField]
 		private WindowController[] m_windowControllerPrefabs;
 
-		// Token: 0x04003DD0 RID: 15824
+		// Token: 0x04005253 RID: 21075
 		private static List<WindowController> m_openWindows = new List<WindowController>();
 
-		// Token: 0x04003DD1 RID: 15825
+		// Token: 0x04005254 RID: 21076
 		private static List<WindowController> m_loadedWindows = new List<WindowController>();
 
-		// Token: 0x04003DD2 RID: 15826
+		// Token: 0x04005255 RID: 21077
 		private static Coroutine m_loadWindowCoroutine = null;
 
-		// Token: 0x04003DD3 RID: 15827
+		// Token: 0x04005256 RID: 21078
 		private static EventSystem m_eventSystem = null;
 
-		// Token: 0x04003DD4 RID: 15828
+		// Token: 0x04005257 RID: 21079
 		private static bool m_pauseIfPossible = false;
 
-		// Token: 0x04003DD5 RID: 15829
+		// Token: 0x04005258 RID: 21080
 		private static bool m_pauseForGamepadDisconnected = false;
 
-		// Token: 0x04003DD6 RID: 15830
+		// Token: 0x04005259 RID: 21081
 		private static string PREFAB_PATH = "Prefabs/Managers/WindowManager";
 
-		// Token: 0x04003DD7 RID: 15831
+		// Token: 0x0400525A RID: 21082
 		private static Dictionary<SceneID, List<WindowID>> SCENE_ID_TO_LOADED_WINDOW_IDS_TABLE = new Dictionary<SceneID, List<WindowID>>
 		{
 			{
@@ -781,7 +781,7 @@ namespace RL_Windows
 			}
 		};
 
-		// Token: 0x04003DD8 RID: 15832
+		// Token: 0x0400525B RID: 21083
 		private static string[] DISABLED_PAUSE_SCENES = new string[]
 		{
 			"MainMenu",
@@ -792,7 +792,7 @@ namespace RL_Windows
 			"Disclaimer"
 		};
 
-		// Token: 0x04003DDA RID: 15834
+		// Token: 0x0400525D RID: 21085
 		private static List<WindowController> m_openWindowHelper = new List<WindowController>();
 	}
 }

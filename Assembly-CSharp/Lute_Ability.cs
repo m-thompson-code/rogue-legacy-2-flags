@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001A1 RID: 417
+// Token: 0x02000305 RID: 773
 public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 {
-	// Token: 0x170008E8 RID: 2280
-	// (get) Token: 0x06001014 RID: 4116 RVA: 0x0002ED13 File Offset: 0x0002CF13
+	// Token: 0x17000B96 RID: 2966
+	// (get) Token: 0x06001825 RID: 6181 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -14,8 +14,8 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008E9 RID: 2281
-	// (get) Token: 0x06001015 RID: 4117 RVA: 0x0002ED1A File Offset: 0x0002CF1A
+	// Token: 0x17000B97 RID: 2967
+	// (get) Token: 0x06001826 RID: 6182 RVA: 0x0000C00F File Offset: 0x0000A20F
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -24,8 +24,8 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008EA RID: 2282
-	// (get) Token: 0x06001016 RID: 4118 RVA: 0x0002ED21 File Offset: 0x0002CF21
+	// Token: 0x17000B98 RID: 2968
+	// (get) Token: 0x06001827 RID: 6183 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float TellAnimSpeed
 	{
 		get
@@ -34,8 +34,8 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008EB RID: 2283
-	// (get) Token: 0x06001017 RID: 4119 RVA: 0x0002ED28 File Offset: 0x0002CF28
+	// Token: 0x17000B99 RID: 2969
+	// (get) Token: 0x06001828 RID: 6184 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -44,8 +44,8 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008EC RID: 2284
-	// (get) Token: 0x06001018 RID: 4120 RVA: 0x0002ED2F File Offset: 0x0002CF2F
+	// Token: 0x17000B9A RID: 2970
+	// (get) Token: 0x06001829 RID: 6185 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -54,8 +54,8 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008ED RID: 2285
-	// (get) Token: 0x06001019 RID: 4121 RVA: 0x0002ED36 File Offset: 0x0002CF36
+	// Token: 0x17000B9B RID: 2971
+	// (get) Token: 0x0600182A RID: 6186 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -64,8 +64,8 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008EE RID: 2286
-	// (get) Token: 0x0600101A RID: 4122 RVA: 0x0002ED3D File Offset: 0x0002CF3D
+	// Token: 0x17000B9C RID: 2972
+	// (get) Token: 0x0600182B RID: 6187 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -74,8 +74,8 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008EF RID: 2287
-	// (get) Token: 0x0600101B RID: 4123 RVA: 0x0002ED44 File Offset: 0x0002CF44
+	// Token: 0x17000B9D RID: 2973
+	// (get) Token: 0x0600182C RID: 6188 RVA: 0x00003FB0 File Offset: 0x000021B0
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -84,8 +84,8 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008F0 RID: 2288
-	// (get) Token: 0x0600101C RID: 4124 RVA: 0x0002ED4B File Offset: 0x0002CF4B
+	// Token: 0x17000B9E RID: 2974
+	// (get) Token: 0x0600182D RID: 6189 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -94,8 +94,8 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008F1 RID: 2289
-	// (get) Token: 0x0600101D RID: 4125 RVA: 0x0002ED52 File Offset: 0x0002CF52
+	// Token: 0x17000B9F RID: 2975
+	// (get) Token: 0x0600182E RID: 6190 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -104,7 +104,7 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x0600101E RID: 4126 RVA: 0x0002ED5C File Offset: 0x0002CF5C
+	// Token: 0x0600182F RID: 6191 RVA: 0x0008D778 File Offset: 0x0008B978
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		if (this.m_endAimIndicatorPivot)
@@ -114,7 +114,7 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		base.Initialize(abilityController, castAbilityType);
 	}
 
-	// Token: 0x0600101F RID: 4127 RVA: 0x0002EDB4 File Offset: 0x0002CFB4
+	// Token: 0x06001830 RID: 6192 RVA: 0x0008D7D0 File Offset: 0x0008B9D0
 	protected override void FireProjectile()
 	{
 		Vector2 vector = CDGHelper.AngleToVector(-this.m_aimAngle);
@@ -131,7 +131,7 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06001020 RID: 4128 RVA: 0x0002EE59 File Offset: 0x0002D059
+	// Token: 0x06001831 RID: 6193 RVA: 0x0000C283 File Offset: 0x0000A483
 	protected override void Update()
 	{
 		base.Update();
@@ -141,7 +141,7 @@ public class Lute_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x040011A7 RID: 4519
+	// Token: 0x04001784 RID: 6020
 	[SerializeField]
 	private GameObject m_endAimIndicatorPivot;
 }

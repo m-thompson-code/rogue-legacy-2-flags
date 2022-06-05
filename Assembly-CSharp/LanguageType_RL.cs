@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200074C RID: 1868
+// Token: 0x02000C0A RID: 3082
 public static class LanguageType_RL
 {
-	// Token: 0x17001639 RID: 5689
-	// (get) Token: 0x06004115 RID: 16661 RVA: 0x000E66C3 File Offset: 0x000E48C3
+	// Token: 0x17001E35 RID: 7733
+	// (get) Token: 0x06005A92 RID: 23186 RVA: 0x00031A38 File Offset: 0x0002FC38
 	public static LanguageType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public static class LanguageType_RL
 		}
 	}
 
-	// Token: 0x040034F4 RID: 13556
+	// Token: 0x04004770 RID: 18288
 	private static LanguageType[] m_typeArray;
 }

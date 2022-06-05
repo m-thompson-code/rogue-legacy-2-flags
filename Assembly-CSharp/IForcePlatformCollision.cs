@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020005B0 RID: 1456
+// Token: 0x020009B8 RID: 2488
 public interface IForcePlatformCollision
 {
-	// Token: 0x06003637 RID: 13879
+	// Token: 0x06004C49 RID: 19529
 	void ForcePlatformCollision();
 }

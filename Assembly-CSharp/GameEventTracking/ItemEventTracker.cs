@@ -4,41 +4,41 @@ using UnityEngine;
 
 namespace GameEventTracking
 {
-	// Token: 0x020008AE RID: 2222
+	// Token: 0x02000DE1 RID: 3553
 	public class ItemEventTracker : MonoBehaviour, IGameEventTracker<IItemEventTrackerState>
 	{
-		// Token: 0x170017C6 RID: 6086
-		// (get) Token: 0x06004873 RID: 18547 RVA: 0x001041D7 File Offset: 0x001023D7
-		// (set) Token: 0x06004874 RID: 18548 RVA: 0x001041DF File Offset: 0x001023DF
+		// Token: 0x17002040 RID: 8256
+		// (get) Token: 0x060063D3 RID: 25555 RVA: 0x000370BF File Offset: 0x000352BF
+		// (set) Token: 0x060063D4 RID: 25556 RVA: 0x000370C7 File Offset: 0x000352C7
 		public List<ChestTrackerData> ChestsOpened { get; private set; } = new List<ChestTrackerData>();
 
-		// Token: 0x170017C7 RID: 6087
-		// (get) Token: 0x06004875 RID: 18549 RVA: 0x001041E8 File Offset: 0x001023E8
-		// (set) Token: 0x06004876 RID: 18550 RVA: 0x001041F0 File Offset: 0x001023F0
+		// Token: 0x17002041 RID: 8257
+		// (get) Token: 0x060063D5 RID: 25557 RVA: 0x000370D0 File Offset: 0x000352D0
+		// (set) Token: 0x060063D6 RID: 25558 RVA: 0x000370D8 File Offset: 0x000352D8
 		public List<ItemTrackerData> ItemsCollected { get; private set; } = new List<ItemTrackerData>();
 
-		// Token: 0x06004877 RID: 18551 RVA: 0x001041F9 File Offset: 0x001023F9
+		// Token: 0x060063D7 RID: 25559 RVA: 0x000370E1 File Offset: 0x000352E1
 		private void Awake()
 		{
 			this.m_onItemCollected = new Action<MonoBehaviour, EventArgs>(this.OnItemCollected);
 			this.m_onChestOpened = new Action<MonoBehaviour, EventArgs>(this.OnChestOpened);
 		}
 
-		// Token: 0x06004878 RID: 18552 RVA: 0x0010421F File Offset: 0x0010241F
+		// Token: 0x060063D8 RID: 25560 RVA: 0x00037107 File Offset: 0x00035307
 		private void Start()
 		{
 			Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.ItemCollected, this.m_onItemCollected);
 			Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.ChestOpened, this.m_onChestOpened);
 		}
 
-		// Token: 0x06004879 RID: 18553 RVA: 0x0010423B File Offset: 0x0010243B
+		// Token: 0x060063D9 RID: 25561 RVA: 0x00037123 File Offset: 0x00035323
 		private void OnDestroy()
 		{
 			Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.ItemCollected, this.m_onItemCollected);
 			Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.ChestOpened, this.m_onChestOpened);
 		}
 
-		// Token: 0x0600487A RID: 18554 RVA: 0x00104257 File Offset: 0x00102457
+		// Token: 0x060063DA RID: 25562 RVA: 0x0003713F File Offset: 0x0003533F
 		public IEnumerable<IGameEventData> GetGameEvents()
 		{
 			foreach (ChestTrackerData chestTrackerData in this.ChestsOpened)
@@ -55,7 +55,7 @@ namespace GameEventTracking
 			yield break;
 		}
 
-		// Token: 0x0600487B RID: 18555 RVA: 0x00104268 File Offset: 0x00102468
+		// Token: 0x060063DB RID: 25563 RVA: 0x00172D00 File Offset: 0x00170F00
 		private void OnChestOpened(MonoBehaviour sender, EventArgs eventArgs)
 		{
 			if (eventArgs is ChestOpenedEventArgs)
@@ -73,7 +73,7 @@ namespace GameEventTracking
 			});
 		}
 
-		// Token: 0x0600487C RID: 18556 RVA: 0x001042E0 File Offset: 0x001024E0
+		// Token: 0x060063DC RID: 25564 RVA: 0x00172D78 File Offset: 0x00170F78
 		private void OnItemCollected(MonoBehaviour sender, EventArgs eventArgs)
 		{
 			ItemCollectedEventArgs itemCollectedEventArgs = eventArgs as ItemCollectedEventArgs;
@@ -94,7 +94,7 @@ namespace GameEventTracking
 			});
 		}
 
-		// Token: 0x0600487D RID: 18557 RVA: 0x00104348 File Offset: 0x00102548
+		// Token: 0x060063DD RID: 25565 RVA: 0x0003714F File Offset: 0x0003534F
 		public void Reset()
 		{
 			if (this.ChestsOpened != null)
@@ -107,14 +107,14 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x0600487E RID: 18558 RVA: 0x00104370 File Offset: 0x00102570
+		// Token: 0x060063DE RID: 25566 RVA: 0x00037177 File Offset: 0x00035377
 		public void RestoreState(IItemEventTrackerState state)
 		{
 			this.ChestsOpened = state.ChestsOpened;
 			this.ItemsCollected = state.ItemsCollected;
 		}
 
-		// Token: 0x0600487F RID: 18559 RVA: 0x0010438A File Offset: 0x0010258A
+		// Token: 0x060063DF RID: 25567 RVA: 0x00037191 File Offset: 0x00035391
 		public IItemEventTrackerState SaveState()
 		{
 			if (this.m_state == null)
@@ -128,13 +128,13 @@ namespace GameEventTracking
 			return this.m_state;
 		}
 
-		// Token: 0x04003D2A RID: 15658
+		// Token: 0x04005171 RID: 20849
 		private IItemEventTrackerState m_state;
 
-		// Token: 0x04003D2B RID: 15659
+		// Token: 0x04005172 RID: 20850
 		private Action<MonoBehaviour, EventArgs> m_onItemCollected;
 
-		// Token: 0x04003D2C RID: 15660
+		// Token: 0x04005173 RID: 20851
 		private Action<MonoBehaviour, EventArgs> m_onChestOpened;
 	}
 }

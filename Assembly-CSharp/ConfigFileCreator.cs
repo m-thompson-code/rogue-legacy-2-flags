@@ -1,15 +1,15 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001D9 RID: 473
+// Token: 0x0200035B RID: 859
 public class ConfigFileCreator : MonoBehaviour
 {
-	// Token: 0x060013A7 RID: 5031 RVA: 0x0003B85E File Offset: 0x00039A5E
+	// Token: 0x06001C40 RID: 7232 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Start()
 	{
 	}
 
-	// Token: 0x060013A8 RID: 5032 RVA: 0x0003B860 File Offset: 0x00039A60
+	// Token: 0x06001C41 RID: 7233 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Update()
 	{
 	}

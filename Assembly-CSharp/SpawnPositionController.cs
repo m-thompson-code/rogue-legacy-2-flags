@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020002EE RID: 750
+// Token: 0x020004F8 RID: 1272
 public class SpawnPositionController : MonoBehaviour
 {
-	// Token: 0x17000CE5 RID: 3301
-	// (get) Token: 0x06001DCD RID: 7629 RVA: 0x00061F83 File Offset: 0x00060183
+	// Token: 0x17001096 RID: 4246
+	// (get) Token: 0x06002912 RID: 10514 RVA: 0x00017321 File Offset: 0x00015521
 	public SpawnPositionObj[] SpawnPositionArray
 	{
 		get
@@ -15,13 +15,13 @@ public class SpawnPositionController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001DCE RID: 7630 RVA: 0x00061F8B File Offset: 0x0006018B
+	// Token: 0x06002913 RID: 10515 RVA: 0x00017329 File Offset: 0x00015529
 	public bool HasSpawnPosition(int index)
 	{
 		return index < this.m_spawnPositionArray.Length;
 	}
 
-	// Token: 0x06001DCF RID: 7631 RVA: 0x00061F98 File Offset: 0x00060198
+	// Token: 0x06002914 RID: 10516 RVA: 0x000BF6A0 File Offset: 0x000BD8A0
 	public Vector3 GetSpawnPosition(int index)
 	{
 		if (index < this.m_spawnPositionArray.Length)
@@ -32,7 +32,7 @@ public class SpawnPositionController : MonoBehaviour
 		return Vector3.zero;
 	}
 
-	// Token: 0x06001DD0 RID: 7632 RVA: 0x00061FE8 File Offset: 0x000601E8
+	// Token: 0x06002915 RID: 10517 RVA: 0x000BF6F0 File Offset: 0x000BD8F0
 	public Vector3 GetLocalSpawnPosition(int index)
 	{
 		if (index < this.m_spawnPositionArray.Length)
@@ -43,7 +43,7 @@ public class SpawnPositionController : MonoBehaviour
 		return Vector3.zero;
 	}
 
-	// Token: 0x06001DD1 RID: 7633 RVA: 0x00062038 File Offset: 0x00060238
+	// Token: 0x06002916 RID: 10518 RVA: 0x000BF740 File Offset: 0x000BD940
 	private void Awake()
 	{
 		SpawnPositionObj[] componentsInChildren = base.GetComponentsInChildren<SpawnPositionObj>(true);
@@ -78,9 +78,9 @@ public class SpawnPositionController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001B7E RID: 7038
+	// Token: 0x040023C9 RID: 9161
 	private SpawnPositionObj[] m_spawnPositionArray;
 
-	// Token: 0x04001B7F RID: 7039
+	// Token: 0x040023CA RID: 9162
 	private static List<string> m_warningIssuedTracker = new List<string>();
 }

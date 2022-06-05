@@ -3,14 +3,14 @@ using System.CodeDom.Compiler;
 
 namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 {
-	// Token: 0x0200084A RID: 2122
+	// Token: 0x02000D38 RID: 3384
 	[GeneratedCode("simple-json", "1.0.0")]
 	public interface IJsonSerializerStrategy
 	{
-		// Token: 0x06004658 RID: 18008
+		// Token: 0x060060B7 RID: 24759
 		bool TrySerializeNonPrimitiveObject(object input, out object output);
 
-		// Token: 0x06004659 RID: 18009
+		// Token: 0x060060B8 RID: 24760
 		object DeserializeObject(object value, Type type);
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000440 RID: 1088
+// Token: 0x02000709 RID: 1801
 public class Puzzle_FairyRule : FairyRule
 {
-	// Token: 0x17000FBC RID: 4028
-	// (get) Token: 0x060027ED RID: 10221 RVA: 0x00084708 File Offset: 0x00082908
+	// Token: 0x1700149F RID: 5279
+	// (get) Token: 0x060036FF RID: 14079 RVA: 0x0001E437 File Offset: 0x0001C637
 	public override string Description
 	{
 		get
@@ -13,8 +13,8 @@ public class Puzzle_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FBD RID: 4029
-	// (get) Token: 0x060027EE RID: 10222 RVA: 0x0008470F File Offset: 0x0008290F
+	// Token: 0x170014A0 RID: 5280
+	// (get) Token: 0x06003700 RID: 14080 RVA: 0x00004527 File Offset: 0x00002727
 	public override FairyRuleID ID
 	{
 		get
@@ -23,8 +23,8 @@ public class Puzzle_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FBE RID: 4030
-	// (get) Token: 0x060027EF RID: 10223 RVA: 0x00084713 File Offset: 0x00082913
+	// Token: 0x170014A1 RID: 5281
+	// (get) Token: 0x06003701 RID: 14081 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool LockChestAtStart
 	{
 		get
@@ -33,7 +33,7 @@ public class Puzzle_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027F0 RID: 10224 RVA: 0x00084716 File Offset: 0x00082916
+	// Token: 0x06003702 RID: 14082 RVA: 0x0001E43E File Offset: 0x0001C63E
 	public override void RunRule(FairyRoomController fairyRoomController)
 	{
 		base.State = FairyRoomState.Running;

@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000502 RID: 1282
+// Token: 0x0200086C RID: 2156
 public class GoldenDoorsEntranceRoomController : BossEntranceRoomController
 {
-	// Token: 0x06002FE8 RID: 12264 RVA: 0x000A3EE4 File Offset: 0x000A20E4
+	// Token: 0x06004268 RID: 17000 RVA: 0x0010A9A8 File Offset: 0x00108BA8
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (CutsceneManager.IsCutsceneActive && BossEntranceRoomController.RunDoorCrumbleAnimation)
@@ -19,7 +19,7 @@ public class GoldenDoorsEntranceRoomController : BossEntranceRoomController
 		this.SetBossTunnelState(BossTunnelState.Closed, true);
 	}
 
-	// Token: 0x06002FE9 RID: 12265 RVA: 0x000A3F88 File Offset: 0x000A2188
+	// Token: 0x06004269 RID: 17001 RVA: 0x0010AA4C File Offset: 0x00108C4C
 	public override void SetBossTunnelState(BossTunnelState state, bool skipToIdleState)
 	{
 		if (state == BossTunnelState.PartlyOpen)
@@ -32,6 +32,6 @@ public class GoldenDoorsEntranceRoomController : BossEntranceRoomController
 		base.SetBossTunnelState(state, skipToIdleState);
 	}
 
-	// Token: 0x04002632 RID: 9778
+	// Token: 0x040033F6 RID: 13302
 	private const bool UNLOCK_DOOR = true;
 }

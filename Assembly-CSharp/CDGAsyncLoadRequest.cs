@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200079F RID: 1951
+// Token: 0x02000C65 RID: 3173
 public struct CDGAsyncLoadRequest<T> where T : UnityEngine.Object
 {
-	// Token: 0x17001660 RID: 5728
-	// (get) Token: 0x060041FC RID: 16892 RVA: 0x000EB3C7 File Offset: 0x000E95C7
+	// Token: 0x17001E5E RID: 7774
+	// (get) Token: 0x06005B85 RID: 23429 RVA: 0x000322C4 File Offset: 0x000304C4
 	public T Asset
 	{
 		get
@@ -18,8 +18,8 @@ public struct CDGAsyncLoadRequest<T> where T : UnityEngine.Object
 		}
 	}
 
-	// Token: 0x17001661 RID: 5729
-	// (get) Token: 0x060041FD RID: 16893 RVA: 0x000EB3ED File Offset: 0x000E95ED
+	// Token: 0x17001E5F RID: 7775
+	// (get) Token: 0x06005B86 RID: 23430 RVA: 0x000322EA File Offset: 0x000304EA
 	public bool IsDone
 	{
 		get
@@ -28,7 +28,7 @@ public struct CDGAsyncLoadRequest<T> where T : UnityEngine.Object
 		}
 	}
 
-	// Token: 0x060041FE RID: 16894 RVA: 0x000EB404 File Offset: 0x000E9604
+	// Token: 0x06005B87 RID: 23431 RVA: 0x00032301 File Offset: 0x00030501
 	public CDGAsyncLoadRequest(bool isAssetDatabase, T asset, AssetBundleRequest request)
 	{
 		this.m_isAssetDatabase = isAssetDatabase;
@@ -36,12 +36,12 @@ public struct CDGAsyncLoadRequest<T> where T : UnityEngine.Object
 		this.m_bundleRequest = request;
 	}
 
-	// Token: 0x04003942 RID: 14658
+	// Token: 0x04004C07 RID: 19463
 	private bool m_isAssetDatabase;
 
-	// Token: 0x04003943 RID: 14659
+	// Token: 0x04004C08 RID: 19464
 	private T m_asset;
 
-	// Token: 0x04003944 RID: 14660
+	// Token: 0x04004C09 RID: 19465
 	private AssetBundleRequest m_bundleRequest;
 }

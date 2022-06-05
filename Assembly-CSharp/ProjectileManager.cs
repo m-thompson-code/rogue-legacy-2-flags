@@ -4,11 +4,11 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x020006A3 RID: 1699
+// Token: 0x02000B3E RID: 2878
 public class ProjectileManager : MonoBehaviour
 {
-	// Token: 0x17001562 RID: 5474
-	// (get) Token: 0x06003E20 RID: 15904 RVA: 0x000D97DC File Offset: 0x000D79DC
+	// Token: 0x17001D4A RID: 7498
+	// (get) Token: 0x06005712 RID: 22290 RVA: 0x0002F68E File Offset: 0x0002D88E
 	public static bool IsInitialized
 	{
 		get
@@ -17,8 +17,8 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001563 RID: 5475
-	// (get) Token: 0x06003E21 RID: 15905 RVA: 0x000D97E3 File Offset: 0x000D79E3
+	// Token: 0x17001D4B RID: 7499
+	// (get) Token: 0x06005713 RID: 22291 RVA: 0x0002F695 File Offset: 0x0002D895
 	public static ProjectileManager Instance
 	{
 		get
@@ -31,7 +31,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E22 RID: 15906 RVA: 0x000D9804 File Offset: 0x000D7A04
+	// Token: 0x06005714 RID: 22292 RVA: 0x00149F14 File Offset: 0x00148114
 	private void Awake()
 	{
 		this.m_createAbilityPool = new Action<MonoBehaviour, EventArgs>(this.CreateAbilityPool);
@@ -41,7 +41,7 @@ public class ProjectileManager : MonoBehaviour
 		SceneManager.sceneLoaded += this.OnSceneLoaded;
 	}
 
-	// Token: 0x06003E23 RID: 15907 RVA: 0x000D9859 File Offset: 0x000D7A59
+	// Token: 0x06005715 RID: 22293 RVA: 0x0002F6B3 File Offset: 0x0002D8B3
 	private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
 		if (ProjectileManager.IsInitialized)
@@ -50,7 +50,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E24 RID: 15908 RVA: 0x000D9868 File Offset: 0x000D7A68
+	// Token: 0x06005716 RID: 22294 RVA: 0x00149F6C File Offset: 0x0014816C
 	private void OnDestroy()
 	{
 		if (!GameManager.IsApplicationClosing)
@@ -64,7 +64,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E25 RID: 15909 RVA: 0x000D98B8 File Offset: 0x000D7AB8
+	// Token: 0x06005717 RID: 22295 RVA: 0x00149FBC File Offset: 0x001481BC
 	private void Initialize()
 	{
 		this.m_projectileDict = new Dictionary<string, GenericPool_RL<Projectile_RL>>(StringComparer.OrdinalIgnoreCase);
@@ -74,7 +74,7 @@ public class ProjectileManager : MonoBehaviour
 		ProjectileManager.m_isInitialized = true;
 	}
 
-	// Token: 0x06003E26 RID: 15910 RVA: 0x000D9908 File Offset: 0x000D7B08
+	// Token: 0x06005718 RID: 22296 RVA: 0x0014A00C File Offset: 0x0014820C
 	public void CreateEnemyProjectilePools(List<EnemyController> enemyPrefabList)
 	{
 		foreach (EnemyController enemyController in enemyPrefabList)
@@ -100,7 +100,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E27 RID: 15911 RVA: 0x000D99FC File Offset: 0x000D7BFC
+	// Token: 0x06005719 RID: 22297 RVA: 0x0014A100 File Offset: 0x00148300
 	private void CreateAbilityPool(MonoBehaviour sender, EventArgs args)
 	{
 		ChangeAbilityEventArgs changeAbilityEventArgs = args as ChangeAbilityEventArgs;
@@ -117,7 +117,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E28 RID: 15912 RVA: 0x000D9A5C File Offset: 0x000D7C5C
+	// Token: 0x0600571A RID: 22298 RVA: 0x0014A160 File Offset: 0x00148360
 	private void Internal_CreateBiomePools(BiomeType biomeType)
 	{
 		BiomeController biomeController;
@@ -169,7 +169,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E29 RID: 15913 RVA: 0x000D9BCC File Offset: 0x000D7DCC
+	// Token: 0x0600571B RID: 22299 RVA: 0x0014A2D0 File Offset: 0x001484D0
 	public void AddProjectileToPool(string projectileName)
 	{
 		if (!string.IsNullOrEmpty(projectileName) && !this.m_projectileDict.ContainsKey(projectileName))
@@ -192,13 +192,13 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E2A RID: 15914 RVA: 0x000D9C6A File Offset: 0x000D7E6A
+	// Token: 0x0600571C RID: 22300 RVA: 0x0002F6C2 File Offset: 0x0002D8C2
 	public static void ClearProjectileQueue()
 	{
 		ProjectileManager.m_queueProjectileSet.Clear();
 	}
 
-	// Token: 0x06003E2B RID: 15915 RVA: 0x000D9C78 File Offset: 0x000D7E78
+	// Token: 0x0600571D RID: 22301 RVA: 0x0014A370 File Offset: 0x00148570
 	private void QueueProjectileToPool(string projectileName)
 	{
 		if (!string.IsNullOrEmpty(projectileName) && !ProjectileManager.m_queueProjectileSet.Contains(projectileName))
@@ -221,13 +221,13 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E2C RID: 15916 RVA: 0x000D9D00 File Offset: 0x000D7F00
+	// Token: 0x0600571E RID: 22302 RVA: 0x0002F6CE File Offset: 0x0002D8CE
 	public static void CreatePoolsFromQueuedProjectiles()
 	{
 		ProjectileManager.Instance.CreatePoolsFromQueuedProjectiles_Internal();
 	}
 
-	// Token: 0x06003E2D RID: 15917 RVA: 0x000D9D0C File Offset: 0x000D7F0C
+	// Token: 0x0600571F RID: 22303 RVA: 0x0014A3F8 File Offset: 0x001485F8
 	private void CreatePoolsFromQueuedProjectiles_Internal()
 	{
 		List<string> list = this.m_projectileDict.Keys.ToList<string>();
@@ -260,7 +260,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E2E RID: 15918 RVA: 0x000D9E24 File Offset: 0x000D8024
+	// Token: 0x06005720 RID: 22304 RVA: 0x0002F6DA File Offset: 0x0002D8DA
 	private GenericPool_RL<Projectile_RL> CreatePool(Projectile_RL prefab, int poolSize)
 	{
 		if (!prefab)
@@ -272,7 +272,7 @@ public class ProjectileManager : MonoBehaviour
 		return genericPool_RL;
 	}
 
-	// Token: 0x06003E2F RID: 15919 RVA: 0x000D9E40 File Offset: 0x000D8040
+	// Token: 0x06005721 RID: 22305 RVA: 0x0014A510 File Offset: 0x00148710
 	private Projectile_RL FireProjectile_Internal(GameObject source, string projectileName, Vector2 positionOffset, bool matchFacing = true, float angleInDeg = 0f, float speedMod = 1f, bool useAbsPos = false, bool playSpawnAudio = true, bool playLifetimeAudio = true, bool playDeathAudio = true)
 	{
 		GenericPool_RL<Projectile_RL> genericPool_RL = null;
@@ -413,7 +413,7 @@ public class ProjectileManager : MonoBehaviour
 		return freeObj;
 	}
 
-	// Token: 0x06003E30 RID: 15920 RVA: 0x000DA22C File Offset: 0x000D842C
+	// Token: 0x06005722 RID: 22306 RVA: 0x0014A8FC File Offset: 0x00148AFC
 	public static void ApplyProjectileDamage(BaseCharacterController characterController, Projectile_RL projectile)
 	{
 		projectile.MagicScale = projectile.ProjectileData.MagicScale;
@@ -591,7 +591,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E31 RID: 15921 RVA: 0x000DAA48 File Offset: 0x000D8C48
+	// Token: 0x06005723 RID: 22307 RVA: 0x0014B118 File Offset: 0x00149318
 	public static float CalculateProjectileCritDamage(Projectile_RL projectile, bool getMagicCritDmg)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -613,7 +613,7 @@ public class ProjectileManager : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x06003E32 RID: 15922 RVA: 0x000DAAB4 File Offset: 0x000D8CB4
+	// Token: 0x06005724 RID: 22308 RVA: 0x0014B184 File Offset: 0x00149384
 	private void AddTraitEffects(Projectile_RL projectile)
 	{
 		if (TraitManager.IsTraitActive(TraitType.ColorTrails) && projectile.Speed > 0f)
@@ -631,7 +631,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E33 RID: 15923 RVA: 0x000DAB9C File Offset: 0x000D8D9C
+	// Token: 0x06005725 RID: 22309 RVA: 0x0014B26C File Offset: 0x0014946C
 	public static Vector3 DetermineSpawnPosition(GameObject source, Vector2 spawnOffset, bool isFacingRight)
 	{
 		Vector3 result = Vector2.zero;
@@ -646,13 +646,13 @@ public class ProjectileManager : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x06003E34 RID: 15924 RVA: 0x000DAC1C File Offset: 0x000D8E1C
+	// Token: 0x06005726 RID: 22310 RVA: 0x0014B2EC File Offset: 0x001494EC
 	public static Projectile_RL FireProjectile(GameObject source, string projectileName, Vector2 offset, bool matchFacing = true, float angleInDeg = 0f, float speedMod = 1f, bool useAbsPos = false, bool playSpawnAudio = true, bool playLifetimeAudio = true, bool playDeathAudio = true)
 	{
 		return ProjectileManager.Instance.FireProjectile_Internal(source, projectileName, offset, matchFacing, angleInDeg, speedMod, useAbsPos, playSpawnAudio, playLifetimeAudio, playDeathAudio);
 	}
 
-	// Token: 0x06003E35 RID: 15925 RVA: 0x000DAC44 File Offset: 0x000D8E44
+	// Token: 0x06005727 RID: 22311 RVA: 0x0014B314 File Offset: 0x00149514
 	public static void DisableAllProjectiles(bool flagForDestruction)
 	{
 		foreach (KeyValuePair<string, GenericPool_RL<Projectile_RL>> keyValuePair in ProjectileManager.Instance.m_projectileDict)
@@ -673,7 +673,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E36 RID: 15926 RVA: 0x000DACEC File Offset: 0x000D8EEC
+	// Token: 0x06005728 RID: 22312 RVA: 0x0014B3BC File Offset: 0x001495BC
 	public static void DisableAllProjectiles(bool flagForDestruction, params string[] tags)
 	{
 		foreach (KeyValuePair<string, GenericPool_RL<Projectile_RL>> keyValuePair in ProjectileManager.Instance.m_projectileDict)
@@ -701,7 +701,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E37 RID: 15927 RVA: 0x000DADC0 File Offset: 0x000D8FC0
+	// Token: 0x06005729 RID: 22313 RVA: 0x0014B490 File Offset: 0x00149690
 	public static void DisableAllProjectiles(bool flagForDestruction, GameObject source, string projectileName)
 	{
 		GenericPool_RL<Projectile_RL> genericPool_RL;
@@ -724,7 +724,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E38 RID: 15928 RVA: 0x000DAE58 File Offset: 0x000D9058
+	// Token: 0x0600572A RID: 22314 RVA: 0x0014B528 File Offset: 0x00149728
 	private static void DisableExitRoomProjectiles(object sender, EventArgs args)
 	{
 		foreach (KeyValuePair<string, GenericPool_RL<Projectile_RL>> keyValuePair in ProjectileManager.Instance.m_projectileDict)
@@ -739,7 +739,7 @@ public class ProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E39 RID: 15929 RVA: 0x000DAF10 File Offset: 0x000D9110
+	// Token: 0x0600572B RID: 22315 RVA: 0x0014B5E0 File Offset: 0x001497E0
 	public static void DestroyBiomePools()
 	{
 		foreach (KeyValuePair<string, GenericPool_RL<Projectile_RL>> keyValuePair in ProjectileManager.Instance.m_projectileDict)
@@ -749,19 +749,19 @@ public class ProjectileManager : MonoBehaviour
 		ProjectileManager.Instance.m_projectileDict.Clear();
 	}
 
-	// Token: 0x06003E3A RID: 15930 RVA: 0x000DAF7C File Offset: 0x000D917C
+	// Token: 0x0600572C RID: 22316 RVA: 0x0002F6F5 File Offset: 0x0002D8F5
 	public static void DestroyOffscreenIconPool()
 	{
 		ProjectileManager.Instance.m_offscreenIconPool.DestroyPool();
 	}
 
-	// Token: 0x06003E3B RID: 15931 RVA: 0x000DAF8D File Offset: 0x000D918D
+	// Token: 0x0600572D RID: 22317 RVA: 0x0002F706 File Offset: 0x0002D906
 	public static void CreateBiomePools(BiomeType biome)
 	{
 		ProjectileManager.Instance.Internal_CreateBiomePools(biome);
 	}
 
-	// Token: 0x06003E3C RID: 15932 RVA: 0x000DAF9A File Offset: 0x000D919A
+	// Token: 0x0600572E RID: 22318 RVA: 0x0002F713 File Offset: 0x0002D913
 	public static void AttachOffscreenIcon(IOffscreenObj offscreenObj, bool isEnemy)
 	{
 		OffscreenIconObj freeObj = ProjectileManager.Instance.m_offscreenIconPool.GetFreeObj();
@@ -769,46 +769,46 @@ public class ProjectileManager : MonoBehaviour
 		freeObj.AttachOffscreenObj(offscreenObj, isEnemy);
 	}
 
-	// Token: 0x06003E3D RID: 15933 RVA: 0x000DAFBE File Offset: 0x000D91BE
+	// Token: 0x0600572F RID: 22319 RVA: 0x0002F737 File Offset: 0x0002D937
 	public static void Reset()
 	{
 		ProjectileManager.DisableAllProjectiles(false);
 	}
 
-	// Token: 0x04002E49 RID: 11849
+	// Token: 0x04004066 RID: 16486
 	private const string PROJECTILEMANAGER_NAME = "ProjectileManager";
 
-	// Token: 0x04002E4A RID: 11850
+	// Token: 0x04004067 RID: 16487
 	private const string RESOURCE_PATH = "Prefabs/Managers/ProjectileManager";
 
-	// Token: 0x04002E4B RID: 11851
+	// Token: 0x04004068 RID: 16488
 	private const byte OFFSCREEN_ICON_POOLSIZE = 50;
 
-	// Token: 0x04002E4C RID: 11852
+	// Token: 0x04004069 RID: 16489
 	[SerializeField]
 	private OffscreenIconObj m_offscreenIconPrefab;
 
-	// Token: 0x04002E4D RID: 11853
+	// Token: 0x0400406A RID: 16490
 	private Dictionary<string, GenericPool_RL<Projectile_RL>> m_projectileDict;
 
-	// Token: 0x04002E4E RID: 11854
+	// Token: 0x0400406B RID: 16491
 	private GenericPool_RL<OffscreenIconObj> m_offscreenIconPool;
 
-	// Token: 0x04002E4F RID: 11855
+	// Token: 0x0400406C RID: 16492
 	private Action<MonoBehaviour, EventArgs> m_createAbilityPool;
 
-	// Token: 0x04002E50 RID: 11856
+	// Token: 0x0400406D RID: 16493
 	private Action<MonoBehaviour, EventArgs> m_disableExitRoomProjectiles;
 
-	// Token: 0x04002E51 RID: 11857
+	// Token: 0x0400406E RID: 16494
 	private static bool m_isInitialized;
 
-	// Token: 0x04002E52 RID: 11858
+	// Token: 0x0400406F RID: 16495
 	private static ProjectileManager m_projectileManager = null;
 
-	// Token: 0x04002E53 RID: 11859
+	// Token: 0x04004070 RID: 16496
 	public static int ActiveProjectileCount = 0;
 
-	// Token: 0x04002E54 RID: 11860
+	// Token: 0x04004071 RID: 16497
 	private static HashSet<string> m_queueProjectileSet = new HashSet<string>();
 }

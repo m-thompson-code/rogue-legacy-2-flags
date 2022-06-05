@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace RLWorldCreation
 {
-	// Token: 0x02000891 RID: 2193
+	// Token: 0x02000DBA RID: 3514
 	public class MergeRoomStrategy_Dragon : MergeRoomStrategy
 	{
-		// Token: 0x060047F2 RID: 18418 RVA: 0x00102B49 File Offset: 0x00100D49
+		// Token: 0x0600631B RID: 25371 RVA: 0x0003699A File Offset: 0x00034B9A
 		public IEnumerator Run(BiomeController biomeController)
 		{
 			List<GridPointManager> connectedRooms = (from room in biomeController.GridPointManager.GridPointManagers

@@ -5,10 +5,10 @@ using System.Linq;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x0200065A RID: 1626
+// Token: 0x02000AAB RID: 2731
 public class CreateRoomsBuildRule_Stone : CreateRoomsBuildRule
 {
-	// Token: 0x06003AF4 RID: 15092 RVA: 0x000CA900 File Offset: 0x000C8B00
+	// Token: 0x06005263 RID: 21091 RVA: 0x0002CDA0 File Offset: 0x0002AFA0
 	public override IEnumerator CreateRooms(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		if (biomeCreator.BuildQueue.Peek().RoomType == RoomType.Transition)
@@ -21,7 +21,7 @@ public class CreateRoomsBuildRule_Stone : CreateRoomsBuildRule
 		yield break;
 	}
 
-	// Token: 0x06003AF5 RID: 15093 RVA: 0x000CA920 File Offset: 0x000C8B20
+	// Token: 0x06005264 RID: 21092 RVA: 0x001392BC File Offset: 0x001374BC
 	private void CreateStartOfBridge(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		GridPointManager gridPointManager = biomeController.GridPointManager.GridPointManagers.First<GridPointManager>();
@@ -30,7 +30,7 @@ public class CreateRoomsBuildRule_Stone : CreateRoomsBuildRule
 		base.CreateSpecificRoom(biomeCreator, biomeController, RoomReferenceLibrary.GetRoomMetaData(RoomReferenceType.FirstNonTransitionRoom_Bridge), new Vector2Int(x, y), new DoorLocation(RoomSide.Left, 2), BiomeType.None, RoomType.Standard, false);
 	}
 
-	// Token: 0x06003AF6 RID: 15094 RVA: 0x000CA98C File Offset: 0x000C8B8C
+	// Token: 0x06005265 RID: 21093 RVA: 0x00139328 File Offset: 0x00137528
 	private void CreateEndOfBridge(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		GridPointManager gridPointManager = biomeController.GridPointManager.GridPointManagers.First<GridPointManager>();
@@ -41,7 +41,7 @@ public class CreateRoomsBuildRule_Stone : CreateRoomsBuildRule
 		base.CreateSpecificRoom(biomeCreator, biomeController, RoomReferenceLibrary.GetRoomMetaData(RoomReferenceType.LastRoom_Bridge), new Vector2Int(x, y), new DoorLocation(RoomSide.Left, 2), BiomeType.None, RoomType.BossEntrance, true);
 	}
 
-	// Token: 0x06003AF7 RID: 15095 RVA: 0x000CAA20 File Offset: 0x000C8C20
+	// Token: 0x06005266 RID: 21094 RVA: 0x001393BC File Offset: 0x001375BC
 	protected override void BuildRoomsAtRandomDoorLocations(BiomeCreator biomeCreator, BiomeController biomeController, int finalRoomCountInBiome, GridPointManager originRoom, List<RoomSetEntry> standardRoomPoolOverride)
 	{
 		int num = biomeController.TargetRoomCountsByRoomType.Sum((KeyValuePair<RoomType, int> entry) => entry.Value) + 2 + 3 + 2;
@@ -86,18 +86,18 @@ public class CreateRoomsBuildRule_Stone : CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x04002CF0 RID: 11504
+	// Token: 0x04003DEE RID: 15854
 	private bool m_isToTowerBuilt;
 
-	// Token: 0x04002CF1 RID: 11505
+	// Token: 0x04003DEF RID: 15855
 	private bool m_isFirstSplitBuilt;
 
-	// Token: 0x04002CF2 RID: 11506
+	// Token: 0x04003DF0 RID: 15856
 	private bool m_isSecondSplitBuilt;
 
-	// Token: 0x04002CF3 RID: 11507
+	// Token: 0x04003DF1 RID: 15857
 	private const bool BUILD_TO_TOWER = true;
 
-	// Token: 0x04002CF4 RID: 11508
+	// Token: 0x04003DF2 RID: 15858
 	public static int BRIDGE_HEIGHT = 3;
 }

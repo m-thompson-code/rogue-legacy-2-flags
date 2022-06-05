@@ -7,21 +7,21 @@ using UnityEngine.SceneManagement;
 
 namespace SceneManagement_RL
 {
-	// Token: 0x020008C2 RID: 2242
+	// Token: 0x02000E0D RID: 3597
 	public class SceneLoader_RL : MonoBehaviour
 	{
-		// Token: 0x170017F4 RID: 6132
-		// (get) Token: 0x06004988 RID: 18824 RVA: 0x00109983 File Offset: 0x00107B83
-		// (set) Token: 0x06004989 RID: 18825 RVA: 0x0010998A File Offset: 0x00107B8A
+		// Token: 0x17002090 RID: 8336
+		// (get) Token: 0x06006569 RID: 25961 RVA: 0x00037EA8 File Offset: 0x000360A8
+		// (set) Token: 0x0600656A RID: 25962 RVA: 0x00037EAF File Offset: 0x000360AF
 		public static TransitionID CurrentTransitionID { get; private set; } = TransitionID.None;
 
-		// Token: 0x170017F5 RID: 6133
-		// (get) Token: 0x0600498A RID: 18826 RVA: 0x00109992 File Offset: 0x00107B92
-		// (set) Token: 0x0600498B RID: 18827 RVA: 0x00109999 File Offset: 0x00107B99
+		// Token: 0x17002091 RID: 8337
+		// (get) Token: 0x0600656B RID: 25963 RVA: 0x00037EB7 File Offset: 0x000360B7
+		// (set) Token: 0x0600656C RID: 25964 RVA: 0x00037EBE File Offset: 0x000360BE
 		private static SceneLoader_RL Instance { get; set; }
 
-		// Token: 0x170017F6 RID: 6134
-		// (get) Token: 0x0600498C RID: 18828 RVA: 0x001099A1 File Offset: 0x00107BA1
+		// Token: 0x17002092 RID: 8338
+		// (get) Token: 0x0600656D RID: 25965 RVA: 0x00037EC6 File Offset: 0x000360C6
 		public static bool IsLoading
 		{
 			get
@@ -30,8 +30,8 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x170017F7 RID: 6135
-		// (get) Token: 0x0600498D RID: 18829 RVA: 0x001099AB File Offset: 0x00107BAB
+		// Token: 0x17002093 RID: 8339
+		// (get) Token: 0x0600656E RID: 25966 RVA: 0x00037ED0 File Offset: 0x000360D0
 		public static bool IsRunningTransitionWithLogic
 		{
 			get
@@ -40,9 +40,9 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x170017F8 RID: 6136
-		// (get) Token: 0x0600498E RID: 18830 RVA: 0x001099B5 File Offset: 0x00107BB5
-		// (set) Token: 0x0600498F RID: 18831 RVA: 0x001099BC File Offset: 0x00107BBC
+		// Token: 0x17002094 RID: 8340
+		// (get) Token: 0x0600656F RID: 25967 RVA: 0x00037EDA File Offset: 0x000360DA
+		// (set) Token: 0x06006570 RID: 25968 RVA: 0x00037EE1 File Offset: 0x000360E1
 		public static string PreviousScene
 		{
 			get
@@ -55,9 +55,9 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x170017F9 RID: 6137
-		// (get) Token: 0x06004990 RID: 18832 RVA: 0x001099C4 File Offset: 0x00107BC4
-		// (set) Token: 0x06004991 RID: 18833 RVA: 0x001099CB File Offset: 0x00107BCB
+		// Token: 0x17002095 RID: 8341
+		// (get) Token: 0x06006571 RID: 25969 RVA: 0x00037EE9 File Offset: 0x000360E9
+		// (set) Token: 0x06006572 RID: 25970 RVA: 0x00037EF0 File Offset: 0x000360F0
 		public static string CurrentScene
 		{
 			get
@@ -70,7 +70,7 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x06004992 RID: 18834 RVA: 0x001099D4 File Offset: 0x00107BD4
+		// Token: 0x06006573 RID: 25971 RVA: 0x00178DF4 File Offset: 0x00176FF4
 		private void Awake()
 		{
 			if (SceneLoader_RL.Instance == null)
@@ -90,7 +90,7 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x06004993 RID: 18835 RVA: 0x00109A35 File Offset: 0x00107C35
+		// Token: 0x06006574 RID: 25972 RVA: 0x00037EF8 File Offset: 0x000360F8
 		private static IEnumerator TransitionIn(ISceneLoadingTransition transition)
 		{
 			SceneLoader_RL.CurrentTransitionID = transition.ID;
@@ -104,7 +104,7 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x06004994 RID: 18836 RVA: 0x00109A44 File Offset: 0x00107C44
+		// Token: 0x06006575 RID: 25973 RVA: 0x00037F07 File Offset: 0x00036107
 		private static IEnumerator TransitionOut(ISceneLoadingTransition transition)
 		{
 			if (transition != null)
@@ -127,7 +127,7 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x06004995 RID: 18837 RVA: 0x00109A54 File Offset: 0x00107C54
+		// Token: 0x06006576 RID: 25974 RVA: 0x00178E58 File Offset: 0x00177058
 		public static void LoadScene(SceneID sceneID, TransitionID transitionID)
 		{
 			SceneLoader_RL.PreviousScene = SceneLoadingUtility.ActiveScene.name;
@@ -143,7 +143,7 @@ namespace SceneManagement_RL
 			});
 		}
 
-		// Token: 0x06004996 RID: 18838 RVA: 0x00109AB8 File Offset: 0x00107CB8
+		// Token: 0x06006577 RID: 25975 RVA: 0x00037F16 File Offset: 0x00036116
 		private static IEnumerator LoadSceneAsynchronously(string sceneName)
 		{
 			AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
@@ -152,7 +152,7 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x06004997 RID: 18839 RVA: 0x00109AC7 File Offset: 0x00107CC7
+		// Token: 0x06006578 RID: 25976 RVA: 0x00037F25 File Offset: 0x00036125
 		private static IEnumerator LoadSceneCoroutine(string sceneName, TransitionID transitionID)
 		{
 			SceneLoader_RL.SceneLoadingStartRelay.Dispatch(sceneName);
@@ -188,7 +188,7 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x06004998 RID: 18840 RVA: 0x00109ADD File Offset: 0x00107CDD
+		// Token: 0x06006579 RID: 25977 RVA: 0x00037F3B File Offset: 0x0003613B
 		public static void RunTransitionWithLogic(IEnumerator logicCoroutine, TransitionID transitionID, bool cleanup)
 		{
 			if (SceneLoader_RL.m_runTransitionWithLogicCoroutine != null)
@@ -198,7 +198,7 @@ namespace SceneManagement_RL
 			SceneLoader_RL.m_runTransitionWithLogicCoroutine = SceneLoader_RL.Instance.StartCoroutine(SceneLoader_RL.RunTransitionWithLogicCoroutine(logicCoroutine, transitionID, cleanup));
 		}
 
-		// Token: 0x06004999 RID: 18841 RVA: 0x00109B0C File Offset: 0x00107D0C
+		// Token: 0x0600657A RID: 25978 RVA: 0x00037F6A File Offset: 0x0003616A
 		private static IEnumerator RunTransitionWithLogicCoroutine(IEnumerator logicCoroutine, TransitionID transitionID, bool cleanup)
 		{
 			SceneLoader_RL.SetInputIsEnabled(false);
@@ -228,7 +228,7 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x0600499A RID: 18842 RVA: 0x00109B29 File Offset: 0x00107D29
+		// Token: 0x0600657B RID: 25979 RVA: 0x00037F87 File Offset: 0x00036187
 		public static void RunTransitionWithLogic(Action action, TransitionID transitionID, bool cleanup)
 		{
 			if (SceneLoader_RL.m_runTransitionWithLogicCoroutine != null)
@@ -238,7 +238,7 @@ namespace SceneManagement_RL
 			SceneLoader_RL.m_runTransitionWithLogicCoroutine = SceneLoader_RL.Instance.StartCoroutine(SceneLoader_RL.RunTransitionWithLogicCoroutine(action, transitionID, cleanup));
 		}
 
-		// Token: 0x0600499B RID: 18843 RVA: 0x00109B58 File Offset: 0x00107D58
+		// Token: 0x0600657C RID: 25980 RVA: 0x00037FB6 File Offset: 0x000361B6
 		private static IEnumerator RunTransitionWithLogicCoroutine(Action action, TransitionID transitionID, bool cleanup)
 		{
 			SceneLoader_RL.SetInputIsEnabled(false);
@@ -268,7 +268,7 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x0600499C RID: 18844 RVA: 0x00109B75 File Offset: 0x00107D75
+		// Token: 0x0600657D RID: 25981 RVA: 0x00037FD3 File Offset: 0x000361D3
 		private static void SetInputIsEnabled(bool isEnabled)
 		{
 			if (ReInput.isReady)
@@ -277,31 +277,31 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x04003DEF RID: 15855
+		// Token: 0x04005282 RID: 21122
 		private static Coroutine m_loadSceneCoroutine = null;
 
-		// Token: 0x04003DF0 RID: 15856
+		// Token: 0x04005283 RID: 21123
 		private static Coroutine m_runTransitionWithLogicCoroutine = null;
 
-		// Token: 0x04003DF1 RID: 15857
+		// Token: 0x04005284 RID: 21124
 		private static WaitForSeconds m_runTransitionOutYield;
 
-		// Token: 0x04003DF2 RID: 15858
+		// Token: 0x04005285 RID: 21125
 		private static string m_previousScene;
 
-		// Token: 0x04003DF3 RID: 15859
+		// Token: 0x04005286 RID: 21126
 		private static string m_currentScene;
 
-		// Token: 0x04003DF4 RID: 15860
+		// Token: 0x04005287 RID: 21127
 		public static Relay<string> SceneLoadingStartRelay = new Relay<string>();
 
-		// Token: 0x04003DF5 RID: 15861
+		// Token: 0x04005288 RID: 21128
 		public static Relay<string> SceneLoadingEndRelay = new Relay<string>();
 
-		// Token: 0x04003DF6 RID: 15862
+		// Token: 0x04005289 RID: 21129
 		public static Relay TransitionStartRelay = new Relay();
 
-		// Token: 0x04003DF7 RID: 15863
+		// Token: 0x0400528A RID: 21130
 		public static Relay TransitionCompleteRelay = new Relay();
 	}
 }

@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200051A RID: 1306
+// Token: 0x0200088E RID: 2190
 [Serializable]
 public class AwardHeirloom_SummonRule : BaseSummonRule
 {
-	// Token: 0x170011D3 RID: 4563
-	// (get) Token: 0x0600305E RID: 12382 RVA: 0x000A5BB0 File Offset: 0x000A3DB0
+	// Token: 0x170017E8 RID: 6120
+	// (get) Token: 0x0600431A RID: 17178 RVA: 0x00025210 File Offset: 0x00023410
 	public override SummonRuleType RuleType
 	{
 		get
@@ -16,8 +16,8 @@ public class AwardHeirloom_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011D4 RID: 4564
-	// (get) Token: 0x0600305F RID: 12383 RVA: 0x000A5BB7 File Offset: 0x000A3DB7
+	// Token: 0x170017E9 RID: 6121
+	// (get) Token: 0x0600431B RID: 17179 RVA: 0x00025217 File Offset: 0x00023417
 	public override string RuleLabel
 	{
 		get
@@ -26,7 +26,7 @@ public class AwardHeirloom_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x06003060 RID: 12384 RVA: 0x000A5BBE File Offset: 0x000A3DBE
+	// Token: 0x0600431C RID: 17180 RVA: 0x0002521E File Offset: 0x0002341E
 	public override IEnumerator RunSummonRule()
 	{
 		SaveManager.PlayerSaveData.SetHeirloomLevel(this.m_heirloomType, 1, false, true);
@@ -35,7 +35,7 @@ public class AwardHeirloom_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x0400267A RID: 9850
+	// Token: 0x04003462 RID: 13410
 	[SerializeField]
 	private HeirloomType m_heirloomType;
 }

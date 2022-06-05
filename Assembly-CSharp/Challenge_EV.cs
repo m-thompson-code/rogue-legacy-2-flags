@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x0200004B RID: 75
+// Token: 0x02000053 RID: 83
 public class Challenge_EV
 {
-	// Token: 0x04000241 RID: 577
+	// Token: 0x04000262 RID: 610
 	public static readonly Dictionary<string, ChallengeType> ScarUnlockTable = new Dictionary<string, ChallengeType>
 	{
 		{
@@ -85,7 +85,7 @@ public class Challenge_EV
 		}
 	};
 
-	// Token: 0x04000242 RID: 578
+	// Token: 0x04000263 RID: 611
 	public static readonly Dictionary<ChallengeType, PlayerSaveFlag> ScarBossRequirementTable = new Dictionary<ChallengeType, PlayerSaveFlag>
 	{
 		{
@@ -162,7 +162,7 @@ public class Challenge_EV
 		}
 	};
 
-	// Token: 0x04000243 RID: 579
+	// Token: 0x04000264 RID: 612
 	public static readonly RelicType[] RELIC_EXCLUSION_ARRAY = new RelicType[]
 	{
 		RelicType.GoldCombatChallenge,
@@ -189,7 +189,7 @@ public class Challenge_EV
 		RelicType.LowResolveWeaponDamage
 	};
 
-	// Token: 0x04000244 RID: 580
+	// Token: 0x04000265 RID: 613
 	public static readonly ChallengeType[] CHALLENGE_ORDER = new ChallengeType[]
 	{
 		ChallengeType.Tutorial,
@@ -210,75 +210,75 @@ public class Challenge_EV
 		ChallengeType.TwoRebels
 	};
 
-	// Token: 0x04000245 RID: 581
+	// Token: 0x04000266 RID: 614
 	public const float HANDICAP_DROP_RATE_GOLD_CHESTS = 0f;
 
-	// Token: 0x04000246 RID: 582
+	// Token: 0x04000267 RID: 615
 	public const float HANDICAP_DROP_RATE_FAIRY_CHESTS = 0f;
 
-	// Token: 0x04000247 RID: 583
+	// Token: 0x04000268 RID: 616
 	public const int MAX_SCORE = 50000;
 
-	// Token: 0x04000248 RID: 584
+	// Token: 0x04000269 RID: 617
 	public const int FLAT_VICTORY_POINTS = 2500;
 
-	// Token: 0x04000249 RID: 585
+	// Token: 0x0400026A RID: 618
 	public const int HIT_MAX_SCORE = 7500;
 
-	// Token: 0x0400024A RID: 586
+	// Token: 0x0400026B RID: 619
 	public const int HIT_TAKEN_SCORE_PENALTY_ADD = 500;
 
-	// Token: 0x0400024B RID: 587
+	// Token: 0x0400026C RID: 620
 	public const int RESOLVE_MAX_SCORE = 7500;
 
-	// Token: 0x0400024C RID: 588
+	// Token: 0x0400026D RID: 621
 	public const int RESOLVE_STARTING_AMOUNT = 250;
 
-	// Token: 0x0400024D RID: 589
+	// Token: 0x0400026E RID: 622
 	public const int RESOLVE_SCORE_PENALTY = 50;
 
-	// Token: 0x0400024E RID: 590
+	// Token: 0x0400026F RID: 623
 	public const int TIMER_MAX_SCORE = 7500;
 
-	// Token: 0x0400024F RID: 591
+	// Token: 0x04000270 RID: 624
 	public const int TIMER_SCORE_PENALTY_ADD = 10;
 
-	// Token: 0x04000250 RID: 592
+	// Token: 0x04000271 RID: 625
 	public const float TIMER_SCORE_PENALTY_INTERVAL = 0.1f;
 
-	// Token: 0x04000251 RID: 593
+	// Token: 0x04000272 RID: 626
 	public const float HANDICAP_STARTING_MOD_BONUS = 2f;
 
-	// Token: 0x04000252 RID: 594
+	// Token: 0x04000273 RID: 627
 	public const float HANDICAP_MOD_SCORE_PENALTY = 0.1f;
 
-	// Token: 0x04000253 RID: 595
+	// Token: 0x04000274 RID: 628
 	public const int PLATFORM_GOLD_OVER_PAR = 0;
 
-	// Token: 0x04000254 RID: 596
+	// Token: 0x04000275 RID: 629
 	public const int PLATFORM_SILVER_OVER_PAR = 3;
 
-	// Token: 0x04000255 RID: 597
+	// Token: 0x04000276 RID: 630
 	public const int PLATFORM_BRONZE_OVER_PAR = 10;
 
-	// Token: 0x04000256 RID: 598
+	// Token: 0x04000277 RID: 631
 	public const float DEATH_SLOW_TIMESCALE = 0.25f;
 
-	// Token: 0x04000257 RID: 599
+	// Token: 0x04000278 RID: 632
 	public const float DEATH_SECONDS_BEFORE_WARP = 1.5f;
 
-	// Token: 0x04000258 RID: 600
+	// Token: 0x04000279 RID: 633
 	public const int RELIC_COST_DOWN_SKILL_LEVEL_OVERRIDE = 5;
 
-	// Token: 0x04000259 RID: 601
+	// Token: 0x0400027A RID: 634
 	public const int RELIC_REROLL_SKILL_LEVEL_OVERRIDE = 3;
 
-	// Token: 0x0400025A RID: 602
+	// Token: 0x0400027B RID: 635
 	public const int REROLL_RELIC_ROOM_CAP_SKILL_LEVEL_OVERRIDE = 1;
 
-	// Token: 0x0400025B RID: 603
+	// Token: 0x0400027C RID: 636
 	public const float END_CHALLENGE_DELAY_TIME = 3f;
 
-	// Token: 0x0400025C RID: 604
+	// Token: 0x0400027D RID: 637
 	public const float TIMER_HIT_ADD_TIME = 0f;
 }

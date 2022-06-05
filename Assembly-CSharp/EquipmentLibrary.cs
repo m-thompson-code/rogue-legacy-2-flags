@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200022B RID: 555
+// Token: 0x020003E2 RID: 994
 [CreateAssetMenu(menuName = "Custom/Libraries/Equipment Library")]
 public class EquipmentLibrary : ScriptableObject
 {
-	// Token: 0x17000B2D RID: 2861
-	// (get) Token: 0x0600169E RID: 5790 RVA: 0x00046805 File Offset: 0x00044A05
+	// Token: 0x17000E56 RID: 3670
+	// (get) Token: 0x06002043 RID: 8259 RVA: 0x000111F1 File Offset: 0x0000F3F1
 	private static EquipmentLibrary Instance
 	{
 		get
@@ -19,7 +19,7 @@ public class EquipmentLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x0600169F RID: 5791 RVA: 0x00046830 File Offset: 0x00044A30
+	// Token: 0x06002044 RID: 8260 RVA: 0x000A49F0 File Offset: 0x000A2BF0
 	public static EquipmentData GetEquipmentData(EquipmentCategoryType categoryType, EquipmentType equipType)
 	{
 		if (equipType == EquipmentType.None || categoryType == EquipmentCategoryType.None)
@@ -54,34 +54,34 @@ public class EquipmentLibrary : ScriptableObject
 		throw new Exception("Equipment Library is null.");
 	}
 
-	// Token: 0x040015D2 RID: 5586
+	// Token: 0x04001CE2 RID: 7394
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/EquipmentLibrary";
 
-	// Token: 0x040015D3 RID: 5587
+	// Token: 0x04001CE3 RID: 7395
 	[Space(10f)]
 	[SerializeField]
 	private EquipmentTypeEquipmentDataDictionary m_weaponEquipmentLibrary;
 
-	// Token: 0x040015D4 RID: 5588
+	// Token: 0x04001CE4 RID: 7396
 	[Space(10f)]
 	[SerializeField]
 	private EquipmentTypeEquipmentDataDictionary m_headEquipmentLibrary;
 
-	// Token: 0x040015D5 RID: 5589
+	// Token: 0x04001CE5 RID: 7397
 	[Space(10f)]
 	[SerializeField]
 	private EquipmentTypeEquipmentDataDictionary m_chestEquipmentLibrary;
 
-	// Token: 0x040015D6 RID: 5590
+	// Token: 0x04001CE6 RID: 7398
 	[Space(10f)]
 	[SerializeField]
 	private EquipmentTypeEquipmentDataDictionary m_capeEquipmentLibrary;
 
-	// Token: 0x040015D7 RID: 5591
+	// Token: 0x04001CE7 RID: 7399
 	[Space(10f)]
 	[SerializeField]
 	private EquipmentTypeEquipmentDataDictionary m_trinketEquipmentLibrary;
 
-	// Token: 0x040015D8 RID: 5592
+	// Token: 0x04001CE8 RID: 7400
 	private static EquipmentLibrary m_instance;
 }

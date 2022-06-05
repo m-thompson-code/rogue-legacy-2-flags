@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200012D RID: 301
+// Token: 0x0200020A RID: 522
 public class Starburst_Advanced_AIScript : Starburst_Basic_AIScript
 {
-	// Token: 0x17000505 RID: 1285
-	// (get) Token: 0x0600095C RID: 2396 RVA: 0x0001EB21 File Offset: 0x0001CD21
+	// Token: 0x170006AF RID: 1711
+	// (get) Token: 0x06000E5F RID: 3679 RVA: 0x00004792 File Offset: 0x00002992
 	protected override int NumberOfShots
 	{
 		get
@@ -13,8 +13,8 @@ public class Starburst_Advanced_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000506 RID: 1286
-	// (get) Token: 0x0600095D RID: 2397 RVA: 0x0001EB24 File Offset: 0x0001CD24
+	// Token: 0x170006B0 RID: 1712
+	// (get) Token: 0x06000E60 RID: 3680 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool AlternateShots
 	{
 		get

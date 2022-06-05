@@ -7,16 +7,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000576 RID: 1398
+// Token: 0x0200094D RID: 2381
 public class DeathDefyWindowController : WindowController
 {
-	// Token: 0x1700127F RID: 4735
-	// (get) Token: 0x06003367 RID: 13159 RVA: 0x000ADF70 File Offset: 0x000AC170
-	// (set) Token: 0x06003368 RID: 13160 RVA: 0x000ADF78 File Offset: 0x000AC178
+	// Token: 0x17001952 RID: 6482
+	// (get) Token: 0x06004866 RID: 18534 RVA: 0x00027C87 File Offset: 0x00025E87
+	// (set) Token: 0x06004867 RID: 18535 RVA: 0x00027C8F File Offset: 0x00025E8F
 	public DeathDefiedType DeathDefiedType { get; set; }
 
-	// Token: 0x17001280 RID: 4736
-	// (get) Token: 0x06003369 RID: 13161 RVA: 0x000ADF81 File Offset: 0x000AC181
+	// Token: 0x17001953 RID: 6483
+	// (get) Token: 0x06004868 RID: 18536 RVA: 0x00007B8D File Offset: 0x00005D8D
 	public override WindowID ID
 	{
 		get
@@ -25,14 +25,14 @@ public class DeathDefyWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600336A RID: 13162 RVA: 0x000ADF85 File Offset: 0x000AC185
+	// Token: 0x06004869 RID: 18537 RVA: 0x00027C98 File Offset: 0x00025E98
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, true);
 		this.m_hudArgs = new PlayerHUDVisibilityEventArgs(0.5f);
 	}
 
-	// Token: 0x0600336B RID: 13163 RVA: 0x000ADFA8 File Offset: 0x000AC1A8
+	// Token: 0x0600486A RID: 18538 RVA: 0x00027CBB File Offset: 0x00025EBB
 	protected override void OnOpen()
 	{
 		CameraController.CinemachineBrain.enabled = false;
@@ -41,7 +41,7 @@ public class DeathDefyWindowController : WindowController
 		base.StartCoroutine(this.OnOpenCoroutine());
 	}
 
-	// Token: 0x0600336C RID: 13164 RVA: 0x000ADFE1 File Offset: 0x000AC1E1
+	// Token: 0x0600486B RID: 18539 RVA: 0x00027CF4 File Offset: 0x00025EF4
 	private IEnumerator OnOpenCoroutine()
 	{
 		this.m_snapshotEventEmitter.Play();
@@ -157,7 +157,7 @@ public class DeathDefyWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x0600336D RID: 13165 RVA: 0x000ADFF0 File Offset: 0x000AC1F0
+	// Token: 0x0600486C RID: 18540 RVA: 0x0011875C File Offset: 0x0011695C
 	private void RevivePlayer(PlayerController player)
 	{
 		switch (this.DeathDefiedType)
@@ -184,7 +184,7 @@ public class DeathDefyWindowController : WindowController
 		PlayerHUDController.IgnoreHealthChangeEvents = false;
 	}
 
-	// Token: 0x0600336E RID: 13166 RVA: 0x000AE081 File Offset: 0x000AC281
+	// Token: 0x0600486D RID: 18541 RVA: 0x00027D03 File Offset: 0x00025F03
 	private IEnumerator OnCloseCoroutine()
 	{
 		PlayerController player = PlayerManager.GetPlayerController();
@@ -224,17 +224,17 @@ public class DeathDefyWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x0600336F RID: 13167 RVA: 0x000AE090 File Offset: 0x000AC290
+	// Token: 0x0600486E RID: 18542 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnFocus()
 	{
 	}
 
-	// Token: 0x06003370 RID: 13168 RVA: 0x000AE092 File Offset: 0x000AC292
+	// Token: 0x0600486F RID: 18543 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnLostFocus()
 	{
 	}
 
-	// Token: 0x06003371 RID: 13169 RVA: 0x000AE094 File Offset: 0x000AC294
+	// Token: 0x06004870 RID: 18544 RVA: 0x001187F0 File Offset: 0x001169F0
 	protected override void OnClose()
 	{
 		this.m_bgCanvasGroup.gameObject.SetActive(false);
@@ -244,47 +244,47 @@ public class DeathDefyWindowController : WindowController
 		CameraController.SoloCam.gameObject.SetActive(false);
 	}
 
-	// Token: 0x04002824 RID: 10276
+	// Token: 0x04003768 RID: 14184
 	[SerializeField]
 	private Image m_banner;
 
-	// Token: 0x04002825 RID: 10277
+	// Token: 0x04003769 RID: 14185
 	[SerializeField]
 	private CanvasGroup m_bannerCanvasGroup;
 
-	// Token: 0x04002826 RID: 10278
+	// Token: 0x0400376A RID: 14186
 	[SerializeField]
 	private CanvasGroup m_spotlightCanvasGroup;
 
-	// Token: 0x04002827 RID: 10279
+	// Token: 0x0400376B RID: 14187
 	[SerializeField]
 	private TMP_Text m_text;
 
-	// Token: 0x04002828 RID: 10280
+	// Token: 0x0400376C RID: 14188
 	[SerializeField]
 	private CanvasGroup m_bgCanvasGroup;
 
-	// Token: 0x04002829 RID: 10281
+	// Token: 0x0400376D RID: 14189
 	[SerializeField]
 	private StudioEventEmitter m_snapshotEventEmitter;
 
-	// Token: 0x0400282A RID: 10282
+	// Token: 0x0400376E RID: 14190
 	[SerializeField]
 	private StudioEventEmitter m_deathLoopEventEmitter;
 
-	// Token: 0x0400282B RID: 10283
+	// Token: 0x0400376F RID: 14191
 	[SerializeField]
 	private StudioEventEmitter m_reverseLoopEventEmitter;
 
-	// Token: 0x0400282C RID: 10284
+	// Token: 0x04003770 RID: 14192
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x0400282D RID: 10285
+	// Token: 0x04003771 RID: 14193
 	private PlayerHUDVisibilityEventArgs m_hudArgs;
 
-	// Token: 0x0400282E RID: 10286
+	// Token: 0x04003772 RID: 14194
 	private List<Transform> m_visualsTransformList = new List<Transform>();
 
-	// Token: 0x0400282F RID: 10287
+	// Token: 0x04003773 RID: 14195
 	private List<LayerMask> m_visualsLayerMaskList = new List<LayerMask>();
 }

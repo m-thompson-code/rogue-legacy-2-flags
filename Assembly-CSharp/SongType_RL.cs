@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000774 RID: 1908
+// Token: 0x02000C35 RID: 3125
 public class SongType_RL
 {
-	// Token: 0x17001648 RID: 5704
-	// (get) Token: 0x0600414F RID: 16719 RVA: 0x000E8386 File Offset: 0x000E6586
+	// Token: 0x17001E44 RID: 7748
+	// (get) Token: 0x06005ACC RID: 23244 RVA: 0x00031D13 File Offset: 0x0002FF13
 	public static SongID[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class SongType_RL
 		}
 	}
 
-	// Token: 0x04003756 RID: 14166
+	// Token: 0x04004A06 RID: 18950
 	private static SongID[] m_typeArray;
 }

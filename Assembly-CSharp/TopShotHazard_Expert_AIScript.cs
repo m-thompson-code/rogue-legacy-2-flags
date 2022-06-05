@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000141 RID: 321
+// Token: 0x02000234 RID: 564
 public class TopShotHazard_Expert_AIScript : TopShotHazard_Basic_AIScript
 {
-	// Token: 0x1700059E RID: 1438
-	// (get) Token: 0x06000A59 RID: 2649 RVA: 0x00020876 File Offset: 0x0001EA76
+	// Token: 0x17000774 RID: 1908
+	// (get) Token: 0x06000FE0 RID: 4064 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_fireBullet_TargetPlayer
 	{
 		get
@@ -13,8 +13,8 @@ public class TopShotHazard_Expert_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700059F RID: 1439
-	// (get) Token: 0x06000A5A RID: 2650 RVA: 0x00020879 File Offset: 0x0001EA79
+	// Token: 0x17000775 RID: 1909
+	// (get) Token: 0x06000FE1 RID: 4065 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float m_fireBullet_AdditionalSpreadBullets
 	{
 		get
@@ -23,8 +23,8 @@ public class TopShotHazard_Expert_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005A0 RID: 1440
-	// (get) Token: 0x06000A5B RID: 2651 RVA: 0x00020880 File Offset: 0x0001EA80
+	// Token: 0x17000776 RID: 1910
+	// (get) Token: 0x06000FE2 RID: 4066 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_spreadShot_TargetPlayer
 	{
 		get
@@ -33,8 +33,8 @@ public class TopShotHazard_Expert_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005A1 RID: 1441
-	// (get) Token: 0x06000A5C RID: 2652 RVA: 0x00020883 File Offset: 0x0001EA83
+	// Token: 0x17000777 RID: 1911
+	// (get) Token: 0x06000FE3 RID: 4067 RVA: 0x0000886A File Offset: 0x00006A6A
 	protected override float m_spreadShot_InitialAngle
 	{
 		get
@@ -43,8 +43,8 @@ public class TopShotHazard_Expert_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005A2 RID: 1442
-	// (get) Token: 0x06000A5D RID: 2653 RVA: 0x0002088A File Offset: 0x0001EA8A
+	// Token: 0x17000778 RID: 1912
+	// (get) Token: 0x06000FE4 RID: 4068 RVA: 0x00003DA4 File Offset: 0x00001FA4
 	protected override float m_spreadShot_SpreadAngle
 	{
 		get
@@ -53,8 +53,8 @@ public class TopShotHazard_Expert_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005A3 RID: 1443
-	// (get) Token: 0x06000A5E RID: 2654 RVA: 0x00020891 File Offset: 0x0001EA91
+	// Token: 0x17000779 RID: 1913
+	// (get) Token: 0x06000FE5 RID: 4069 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float m_spreadShot_AdditionalSpreadBullets
 	{
 		get
@@ -63,8 +63,8 @@ public class TopShotHazard_Expert_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005A4 RID: 1444
-	// (get) Token: 0x06000A5F RID: 2655 RVA: 0x00020898 File Offset: 0x0001EA98
+	// Token: 0x1700077A RID: 1914
+	// (get) Token: 0x06000FE6 RID: 4070 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected override float m_spreadShot_ShotLoop
 	{
 		get
@@ -73,8 +73,8 @@ public class TopShotHazard_Expert_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005A5 RID: 1445
-	// (get) Token: 0x06000A60 RID: 2656 RVA: 0x0002089F File Offset: 0x0001EA9F
+	// Token: 0x1700077B RID: 1915
+	// (get) Token: 0x06000FE7 RID: 4071 RVA: 0x000050CB File Offset: 0x000032CB
 	protected override float m_spreadShot_ShotLoopDelay
 	{
 		get

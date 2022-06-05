@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000643 RID: 1603
+// Token: 0x02000A71 RID: 2673
 [Serializable]
 public abstract class SpawnScenario
 {
-	// Token: 0x17001472 RID: 5234
-	// (get) Token: 0x060039E7 RID: 14823 RVA: 0x000C5005 File Offset: 0x000C3205
+	// Token: 0x17001BD9 RID: 7129
+	// (get) Token: 0x060050C9 RID: 20681 RVA: 0x0002C1AD File Offset: 0x0002A3AD
 	public virtual SpawnScenarioCheckStage CheckStage
 	{
 		get
@@ -15,13 +15,13 @@ public abstract class SpawnScenario
 		}
 	}
 
-	// Token: 0x17001473 RID: 5235
-	// (get) Token: 0x060039E8 RID: 14824
+	// Token: 0x17001BDA RID: 7130
+	// (get) Token: 0x060050CA RID: 20682
 	public abstract string GizmoDescription { get; }
 
-	// Token: 0x17001474 RID: 5236
-	// (get) Token: 0x060039E9 RID: 14825 RVA: 0x000C500D File Offset: 0x000C320D
-	// (set) Token: 0x060039EA RID: 14826 RVA: 0x000C5015 File Offset: 0x000C3215
+	// Token: 0x17001BDB RID: 7131
+	// (get) Token: 0x060050CB RID: 20683 RVA: 0x0002C1B5 File Offset: 0x0002A3B5
+	// (set) Token: 0x060050CC RID: 20684 RVA: 0x0002C1BD File Offset: 0x0002A3BD
 	public virtual bool IsTrue
 	{
 		get
@@ -34,42 +34,42 @@ public abstract class SpawnScenario
 		}
 	}
 
-	// Token: 0x17001475 RID: 5237
-	// (get) Token: 0x060039EB RID: 14827
+	// Token: 0x17001BDC RID: 7132
+	// (get) Token: 0x060050CD RID: 20685
 	public abstract SpawnScenarioType Type { get; }
 
-	// Token: 0x060039EC RID: 14828 RVA: 0x000C501E File Offset: 0x000C321E
+	// Token: 0x060050CE RID: 20686 RVA: 0x0002C1C6 File Offset: 0x0002A3C6
 	public string GetDataAsString()
 	{
 		return JsonUtility.ToJson(this);
 	}
 
-	// Token: 0x060039ED RID: 14829 RVA: 0x000C5026 File Offset: 0x000C3226
+	// Token: 0x060050CF RID: 20687 RVA: 0x0002C1CE File Offset: 0x0002A3CE
 	public string GetTypeAsString()
 	{
 		return base.GetType().ToString();
 	}
 
-	// Token: 0x060039EE RID: 14830 RVA: 0x000C5033 File Offset: 0x000C3233
+	// Token: 0x060050D0 RID: 20688 RVA: 0x00002FCA File Offset: 0x000011CA
 	public virtual void RunIsTrueCheck(BaseRoom room)
 	{
 	}
 
-	// Token: 0x060039EF RID: 14831 RVA: 0x000C5035 File Offset: 0x000C3235
+	// Token: 0x060050D1 RID: 20689 RVA: 0x00002FCA File Offset: 0x000011CA
 	public virtual void RunIsTrueCheck(GridPointManager gridPointManager)
 	{
 	}
 
-	// Token: 0x060039F0 RID: 14832 RVA: 0x000C5037 File Offset: 0x000C3237
+	// Token: 0x060050D2 RID: 20690 RVA: 0x00002FCA File Offset: 0x000011CA
 	public virtual void Start()
 	{
 	}
 
-	// Token: 0x04002C7E RID: 11390
+	// Token: 0x04003D12 RID: 15634
 	[SerializeField]
 	protected SpawnScenarioCheckStage m_checkStage;
 
-	// Token: 0x04002C7F RID: 11391
+	// Token: 0x04003D13 RID: 15635
 	[SerializeField]
 	[ReadOnly]
 	private bool m_isTrue;

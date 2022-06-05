@@ -2,12 +2,12 @@
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x0200022C RID: 556
+// Token: 0x020003E3 RID: 995
 [CreateAssetMenu(menuName = "Custom/Libraries/Equipment Look Library")]
 public class EquipmentLookLibrary : ScriptableObject
 {
-	// Token: 0x17000B2E RID: 2862
-	// (get) Token: 0x060016A2 RID: 5794 RVA: 0x000468CB File Offset: 0x00044ACB
+	// Token: 0x17000E57 RID: 3671
+	// (get) Token: 0x06002047 RID: 8263 RVA: 0x0001121A File Offset: 0x0000F41A
 	private static EquipmentLookLibrary Instance
 	{
 		get
@@ -20,7 +20,7 @@ public class EquipmentLookLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x060016A3 RID: 5795 RVA: 0x000468F4 File Offset: 0x00044AF4
+	// Token: 0x06002048 RID: 8264 RVA: 0x000A4A84 File Offset: 0x000A2C84
 	public static Material GetFabledMaterial(AbilityType abilityType)
 	{
 		Material result;
@@ -31,8 +31,8 @@ public class EquipmentLookLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x17000B2F RID: 2863
-	// (get) Token: 0x060016A4 RID: 5796 RVA: 0x00046918 File Offset: 0x00044B18
+	// Token: 0x17000E58 RID: 3672
+	// (get) Token: 0x06002049 RID: 8265 RVA: 0x00011243 File Offset: 0x0000F443
 	public static Material CantAttackMaterial
 	{
 		get
@@ -41,13 +41,13 @@ public class EquipmentLookLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x060016A5 RID: 5797 RVA: 0x00046924 File Offset: 0x00044B24
+	// Token: 0x0600204A RID: 8266 RVA: 0x0001124F File Offset: 0x0000F44F
 	public static MaterialGeoObject[] GetHelmetEquipmentLookData()
 	{
 		return EquipmentLookLibrary.Instance.m_helmetEquipmentLookLibrary.ObjectList;
 	}
 
-	// Token: 0x060016A6 RID: 5798 RVA: 0x00046938 File Offset: 0x00044B38
+	// Token: 0x0600204B RID: 8267 RVA: 0x000A4AA8 File Offset: 0x000A2CA8
 	public static MaterialGeoObject GetHelmetEquipmentLookData(EquipmentType equipType)
 	{
 		return (from obj in EquipmentLookLibrary.Instance.m_helmetEquipmentLookLibrary.ObjectList
@@ -55,13 +55,13 @@ public class EquipmentLookLibrary : ScriptableObject
 		select obj).SingleOrDefault<MaterialGeoObject>();
 	}
 
-	// Token: 0x060016A7 RID: 5799 RVA: 0x00046977 File Offset: 0x00044B77
+	// Token: 0x0600204C RID: 8268 RVA: 0x00011260 File Offset: 0x0000F460
 	public static MaterialGeoObject[] GetArmorEquipmentLookData()
 	{
 		return EquipmentLookLibrary.Instance.m_armorEquipmentLookLibrary.ObjectList;
 	}
 
-	// Token: 0x060016A8 RID: 5800 RVA: 0x00046988 File Offset: 0x00044B88
+	// Token: 0x0600204D RID: 8269 RVA: 0x000A4AE8 File Offset: 0x000A2CE8
 	public static MaterialGeoObject GetArmorEquipmentLookData(EquipmentType equipType)
 	{
 		return (from obj in EquipmentLookLibrary.Instance.m_armorEquipmentLookLibrary.ObjectList
@@ -69,13 +69,13 @@ public class EquipmentLookLibrary : ScriptableObject
 		select obj).SingleOrDefault<MaterialGeoObject>();
 	}
 
-	// Token: 0x060016A9 RID: 5801 RVA: 0x000469C7 File Offset: 0x00044BC7
+	// Token: 0x0600204E RID: 8270 RVA: 0x00011271 File Offset: 0x0000F471
 	public static MaterialBlendWeightObject[] GetCapeEquipmentLookData()
 	{
 		return EquipmentLookLibrary.Instance.m_capeEquipmentLookLibrary.ObjectList;
 	}
 
-	// Token: 0x060016AA RID: 5802 RVA: 0x000469D8 File Offset: 0x00044BD8
+	// Token: 0x0600204F RID: 8271 RVA: 0x000A4B28 File Offset: 0x000A2D28
 	public static MaterialBlendWeightObject GetCapeEquipmentLookData(EquipmentType equipType)
 	{
 		return (from obj in EquipmentLookLibrary.Instance.m_capeEquipmentLookLibrary.ObjectList
@@ -83,7 +83,7 @@ public class EquipmentLookLibrary : ScriptableObject
 		select obj).SingleOrDefault<MaterialBlendWeightObject>();
 	}
 
-	// Token: 0x060016AB RID: 5803 RVA: 0x00046A18 File Offset: 0x00044C18
+	// Token: 0x06002050 RID: 8272 RVA: 0x000A4B68 File Offset: 0x000A2D68
 	public static MaterialGeo_EquipmentLookData GetWeaponEquipmentLookData(AbilityType weaponAbilityType)
 	{
 		if (weaponAbilityType > AbilityType.AxeSpinnerWeapon)
@@ -186,7 +186,7 @@ public class EquipmentLookLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x060016AC RID: 5804 RVA: 0x00046BD4 File Offset: 0x00044DD4
+	// Token: 0x06002051 RID: 8273 RVA: 0x000A4D24 File Offset: 0x000A2F24
 	public static MaterialGeoObject GetWeaponEquipmentLookData(AbilityType weaponAbilityType, EquipmentType equipType)
 	{
 		MaterialGeo_EquipmentLookData weaponEquipmentLookData = EquipmentLookLibrary.GetWeaponEquipmentLookData(weaponAbilityType);
@@ -199,115 +199,115 @@ public class EquipmentLookLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x040015D9 RID: 5593
+	// Token: 0x04001CE9 RID: 7401
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/EquipmentLookLibrary";
 
-	// Token: 0x040015DA RID: 5594
+	// Token: 0x04001CEA RID: 7402
 	[Space(10f)]
 	[Header("Body Parts")]
 	[Space(10f)]
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_helmetEquipmentLookLibrary;
 
-	// Token: 0x040015DB RID: 5595
+	// Token: 0x04001CEB RID: 7403
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_armorEquipmentLookLibrary;
 
-	// Token: 0x040015DC RID: 5596
+	// Token: 0x04001CEC RID: 7404
 	[SerializeField]
 	private MaterialBlendWeight_EquipmentLookData m_capeEquipmentLookLibrary;
 
-	// Token: 0x040015DD RID: 5597
+	// Token: 0x04001CED RID: 7405
 	[Space(10f)]
 	[Header("Weapons")]
 	[Space(10f)]
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_swordEquipmentLookLibrary;
 
-	// Token: 0x040015DE RID: 5598
+	// Token: 0x04001CEE RID: 7406
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_spearEquipmentLookLibrary;
 
-	// Token: 0x040015DF RID: 5599
+	// Token: 0x04001CEF RID: 7407
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_staffEquipmentLookLibrary;
 
-	// Token: 0x040015E0 RID: 5600
+	// Token: 0x04001CF0 RID: 7408
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_lanceEquipmentLookLibrary;
 
-	// Token: 0x040015E1 RID: 5601
+	// Token: 0x04001CF1 RID: 7409
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_bowEquipmentLookLibrary;
 
-	// Token: 0x040015E2 RID: 5602
+	// Token: 0x04001CF2 RID: 7410
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_saberEquipmentLookLibrary;
 
-	// Token: 0x040015E3 RID: 5603
+	// Token: 0x04001CF3 RID: 7411
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_ladleEquipmentLookLibrary;
 
-	// Token: 0x040015E4 RID: 5604
+	// Token: 0x04001CF4 RID: 7412
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_axeEquipmentLookLibrary;
 
-	// Token: 0x040015E5 RID: 5605
+	// Token: 0x04001CF5 RID: 7413
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_kunaiEquipmentLookLibrary;
 
-	// Token: 0x040015E6 RID: 5606
+	// Token: 0x04001CF6 RID: 7414
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_chakramEquipmentLookLibrary;
 
-	// Token: 0x040015E7 RID: 5607
+	// Token: 0x04001CF7 RID: 7415
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_tonfaEquipmentLookLibrary;
 
-	// Token: 0x040015E8 RID: 5608
+	// Token: 0x04001CF8 RID: 7416
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_dualBladesEquipmentLookLibrary;
 
-	// Token: 0x040015E9 RID: 5609
+	// Token: 0x04001CF9 RID: 7417
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_fryingPanEquipmentLookLibrary;
 
-	// Token: 0x040015EA RID: 5610
+	// Token: 0x04001CFA RID: 7418
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_pistolEquipmentLookLibrary;
 
-	// Token: 0x040015EB RID: 5611
+	// Token: 0x04001CFB RID: 7419
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_boxingGloveEquipmentLookLibrary;
 
-	// Token: 0x040015EC RID: 5612
+	// Token: 0x04001CFC RID: 7420
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_katanaEquipmentLookLibrary;
 
-	// Token: 0x040015ED RID: 5613
+	// Token: 0x04001CFD RID: 7421
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_cannonEquipmentLookLibrary;
 
-	// Token: 0x040015EE RID: 5614
+	// Token: 0x04001CFE RID: 7422
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_luteEquipmentLookLibrary;
 
-	// Token: 0x040015EF RID: 5615
+	// Token: 0x04001CFF RID: 7423
 	[SerializeField]
 	private MaterialGeo_EquipmentLookData m_astroWandEquipmentLookLibrary;
 
-	// Token: 0x040015F0 RID: 5616
+	// Token: 0x04001D00 RID: 7424
 	[Space(10f)]
 	[SerializeField]
 	private Material m_cantAttackMaterial;
 
-	// Token: 0x040015F1 RID: 5617
+	// Token: 0x04001D01 RID: 7425
 	[Space(10f)]
 	[Header("Fabled Weapon Materials")]
 	[Space(10f)]
 	[SerializeField]
 	private AbilityTypeMaterialDictionary m_fabledWeaponDict;
 
-	// Token: 0x040015F2 RID: 5618
+	// Token: 0x04001D02 RID: 7426
 	private static EquipmentLookLibrary m_instance;
 }

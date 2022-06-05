@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02000750 RID: 1872
+// Token: 0x02000C0E RID: 3086
 public enum LookType
 {
-	// Token: 0x04003535 RID: 13621
+	// Token: 0x040047B1 RID: 18353
 	Eyes,
-	// Token: 0x04003536 RID: 13622
+	// Token: 0x040047B2 RID: 18354
 	Mouth,
-	// Token: 0x04003537 RID: 13623
+	// Token: 0x040047B3 RID: 18355
 	FacialHair,
-	// Token: 0x04003538 RID: 13624
+	// Token: 0x040047B4 RID: 18356
 	SkinColor,
-	// Token: 0x04003539 RID: 13625
+	// Token: 0x040047B5 RID: 18357
 	Hair,
-	// Token: 0x0400353A RID: 13626
+	// Token: 0x040047B6 RID: 18358
 	Body,
-	// Token: 0x0400353B RID: 13627
+	// Token: 0x040047B7 RID: 18359
 	HairColor
 }

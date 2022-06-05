@@ -4,16 +4,16 @@ using FMOD;
 using FMODUnity;
 using UnityEngine;
 
-// Token: 0x020003B6 RID: 950
+// Token: 0x0200064C RID: 1612
 public class JukeboxSpectrumAnalyzer : MonoBehaviour
 {
-	// Token: 0x06002322 RID: 8994 RVA: 0x000725C7 File Offset: 0x000707C7
+	// Token: 0x0600313A RID: 12602 RVA: 0x0001B04E File Offset: 0x0001924E
 	private void Start()
 	{
 		this.InitializeSpectrum();
 	}
 
-	// Token: 0x06002323 RID: 8995 RVA: 0x000725D0 File Offset: 0x000707D0
+	// Token: 0x0600313B RID: 12603 RVA: 0x000D2BD8 File Offset: 0x000D0DD8
 	private void InitializeSpectrum()
 	{
 		RuntimeManager.CoreSystem.createDSPByType(DSP_TYPE.FFT, out this.m_fft);
@@ -25,7 +25,7 @@ public class JukeboxSpectrumAnalyzer : MonoBehaviour
 		this.m_spectrumInitialized = true;
 	}
 
-	// Token: 0x06002324 RID: 8996 RVA: 0x00072639 File Offset: 0x00070839
+	// Token: 0x0600313C RID: 12604 RVA: 0x0001B056 File Offset: 0x00019256
 	public void StartSpectrum()
 	{
 		if (this.m_isPlaying)
@@ -35,7 +35,7 @@ public class JukeboxSpectrumAnalyzer : MonoBehaviour
 		this.m_isPlaying = true;
 	}
 
-	// Token: 0x06002325 RID: 8997 RVA: 0x0007264C File Offset: 0x0007084C
+	// Token: 0x0600313D RID: 12605 RVA: 0x000D2C44 File Offset: 0x000D0E44
 	public void StopSpectrum()
 	{
 		if (!this.m_isPlaying)
@@ -52,7 +52,7 @@ public class JukeboxSpectrumAnalyzer : MonoBehaviour
 		this.m_isPlaying = false;
 	}
 
-	// Token: 0x06002326 RID: 8998 RVA: 0x000726A8 File Offset: 0x000708A8
+	// Token: 0x0600313E RID: 12606 RVA: 0x000D2CA0 File Offset: 0x000D0EA0
 	private void Update()
 	{
 		if (this.m_spectrumAnalyzer && this.m_spectrumInitialized && this.m_isPlaying)
@@ -68,16 +68,16 @@ public class JukeboxSpectrumAnalyzer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001E00 RID: 7680
+	// Token: 0x0400282D RID: 10285
 	[SerializeField]
 	private SimpleSpectrum m_spectrumAnalyzer;
 
-	// Token: 0x04001E01 RID: 7681
+	// Token: 0x0400282E RID: 10286
 	private DSP m_fft;
 
-	// Token: 0x04001E02 RID: 7682
+	// Token: 0x0400282F RID: 10287
 	private bool m_spectrumInitialized;
 
-	// Token: 0x04001E03 RID: 7683
+	// Token: 0x04002830 RID: 10288
 	private bool m_isPlaying;
 }

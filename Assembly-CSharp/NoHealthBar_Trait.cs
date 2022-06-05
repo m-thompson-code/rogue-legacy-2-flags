@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000353 RID: 851
+// Token: 0x020005BE RID: 1470
 public class NoHealthBar_Trait : BaseTrait
 {
-	// Token: 0x17000DD6 RID: 3542
-	// (get) Token: 0x0600205A RID: 8282 RVA: 0x00066759 File Offset: 0x00064959
+	// Token: 0x17001233 RID: 4659
+	// (get) Token: 0x06002DBD RID: 11709 RVA: 0x000054AD File Offset: 0x000036AD
 	public override TraitType TraitType
 	{
 		get
@@ -14,7 +14,7 @@ public class NoHealthBar_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x0600205B RID: 8283 RVA: 0x0006675D File Offset: 0x0006495D
+	// Token: 0x06002DBE RID: 11710 RVA: 0x0001923F File Offset: 0x0001743F
 	private IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -26,7 +26,7 @@ public class NoHealthBar_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x0600205C RID: 8284 RVA: 0x0006676C File Offset: 0x0006496C
+	// Token: 0x06002DBF RID: 11711 RVA: 0x000C7444 File Offset: 0x000C5644
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

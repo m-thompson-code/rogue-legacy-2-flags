@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x0200006F RID: 111
+// Token: 0x02000077 RID: 119
 public class Jukebox_EV
 {
-	// Token: 0x0400039F RID: 927
+	// Token: 0x040003C0 RID: 960
 	public static Dictionary<SongID, JukeboxData> JukeboxDataDict = new Dictionary<SongID, JukeboxData>
 	{
 		{

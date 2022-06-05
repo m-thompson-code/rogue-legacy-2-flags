@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x020003BE RID: 958
+// Token: 0x02000655 RID: 1621
 public enum OmniUIButtonType
 {
-	// Token: 0x04001E12 RID: 7698
+	// Token: 0x04002844 RID: 10308
 	None,
-	// Token: 0x04001E13 RID: 7699
+	// Token: 0x04002845 RID: 10309
 	Purchasing,
-	// Token: 0x04001E14 RID: 7700
+	// Token: 0x04002846 RID: 10310
 	Upgrading,
-	// Token: 0x04001E15 RID: 7701
+	// Token: 0x04002847 RID: 10311
 	Equipping,
-	// Token: 0x04001E16 RID: 7702
+	// Token: 0x04002848 RID: 10312
 	Unequipping,
-	// Token: 0x04001E17 RID: 7703
+	// Token: 0x04002849 RID: 10313
 	CategorySelection
 }

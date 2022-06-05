@@ -3,11 +3,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000473 RID: 1139
+// Token: 0x02000769 RID: 1897
 public class ManaDrop : BaseItemDrop
 {
-	// Token: 0x17001042 RID: 4162
-	// (get) Token: 0x060029D2 RID: 10706 RVA: 0x0008A363 File Offset: 0x00088563
+	// Token: 0x17001577 RID: 5495
+	// (get) Token: 0x060039DC RID: 14812 RVA: 0x000065B4 File Offset: 0x000047B4
 	public override ItemDropType ItemDropType
 	{
 		get
@@ -16,7 +16,7 @@ public class ManaDrop : BaseItemDrop
 		}
 	}
 
-	// Token: 0x060029D3 RID: 10707 RVA: 0x0008A368 File Offset: 0x00088568
+	// Token: 0x060039DD RID: 14813 RVA: 0x000EC054 File Offset: 0x000EA254
 	protected override void Collect(GameObject collector)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -96,10 +96,10 @@ public class ManaDrop : BaseItemDrop
 		base.Collect(collector);
 	}
 
-	// Token: 0x0400224A RID: 8778
+	// Token: 0x04002E26 RID: 11814
 	private static HealthChangeEventArgs m_healthChangeArgs_STATIC;
 
-	// Token: 0x0400224B RID: 8779
+	// Token: 0x04002E27 RID: 11815
 	[SerializeField]
 	private UnityEvent m_maxManaMessageShownUnityEvent;
 }

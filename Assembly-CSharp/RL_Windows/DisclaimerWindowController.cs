@@ -7,11 +7,11 @@ using UnityEngine;
 
 namespace RL_Windows
 {
-	// Token: 0x020008B7 RID: 2231
+	// Token: 0x02000DEE RID: 3566
 	public class DisclaimerWindowController : WindowController
 	{
-		// Token: 0x170017D3 RID: 6099
-		// (get) Token: 0x060048B4 RID: 18612 RVA: 0x00104EC9 File Offset: 0x001030C9
+		// Token: 0x17002055 RID: 8277
+		// (get) Token: 0x06006434 RID: 25652 RVA: 0x000054B5 File Offset: 0x000036B5
 		public override WindowID ID
 		{
 			get
@@ -20,7 +20,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048B5 RID: 18613 RVA: 0x00104ECD File Offset: 0x001030CD
+		// Token: 0x06006435 RID: 25653 RVA: 0x000375FF File Offset: 0x000357FF
 		protected override void OnOpen()
 		{
 			this.m_windowCanvas.gameObject.SetActive(true);
@@ -29,7 +29,7 @@ namespace RL_Windows
 			base.StartCoroutine(this.AnimateControllerCoroutine());
 		}
 
-		// Token: 0x060048B6 RID: 18614 RVA: 0x00104EFF File Offset: 0x001030FF
+		// Token: 0x06006436 RID: 25654 RVA: 0x00037631 File Offset: 0x00035831
 		private IEnumerator AnimateControllerCoroutine()
 		{
 			float delay = Time.time + 1f;
@@ -59,22 +59,22 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x060048B7 RID: 18615 RVA: 0x00104F0E File Offset: 0x0010310E
+		// Token: 0x06006437 RID: 25655 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected override void OnClose()
 		{
 		}
 
-		// Token: 0x060048B8 RID: 18616 RVA: 0x00104F10 File Offset: 0x00103110
+		// Token: 0x06006438 RID: 25656 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected override void OnFocus()
 		{
 		}
 
-		// Token: 0x060048B9 RID: 18617 RVA: 0x00104F12 File Offset: 0x00103112
+		// Token: 0x06006439 RID: 25657 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected override void OnLostFocus()
 		{
 		}
 
-		// Token: 0x060048BA RID: 18618 RVA: 0x00104F14 File Offset: 0x00103114
+		// Token: 0x0600643A RID: 25658 RVA: 0x00173CAC File Offset: 0x00171EAC
 		private void Update()
 		{
 			if (!ReInput.isReady)
@@ -120,27 +120,27 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048BB RID: 18619 RVA: 0x00104FD3 File Offset: 0x001031D3
+		// Token: 0x0600643B RID: 25659 RVA: 0x00037640 File Offset: 0x00035840
 		private void LoadMainMenu()
 		{
 			this.m_isLoading = true;
 			SceneLoader_RL.LoadScene(SceneID.MainMenu, TransitionID.FadeToBlackNoLoading);
 		}
 
-		// Token: 0x04003D5C RID: 15708
+		// Token: 0x040051B6 RID: 20918
 		private const float AUTO_LOAD_DELAY = 10f;
 
-		// Token: 0x04003D5D RID: 15709
+		// Token: 0x040051B7 RID: 20919
 		private const float INPUT_LOCKOUT_DURATION = 1f;
 
-		// Token: 0x04003D5E RID: 15710
+		// Token: 0x040051B8 RID: 20920
 		[SerializeField]
 		private RectTransform m_controllerRectTransform;
 
-		// Token: 0x04003D5F RID: 15711
+		// Token: 0x040051B9 RID: 20921
 		private bool m_isLoading;
 
-		// Token: 0x04003D60 RID: 15712
+		// Token: 0x040051BA RID: 20922
 		private float m_entryTime;
 	}
 }

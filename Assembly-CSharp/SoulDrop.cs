@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200047B RID: 1147
+// Token: 0x02000771 RID: 1905
 public class SoulDrop : BaseItemDrop
 {
-	// Token: 0x1700104D RID: 4173
-	// (get) Token: 0x060029EE RID: 10734 RVA: 0x0008A9B1 File Offset: 0x00088BB1
+	// Token: 0x17001582 RID: 5506
+	// (get) Token: 0x060039F8 RID: 14840 RVA: 0x00006CB3 File Offset: 0x00004EB3
 	public override ItemDropType ItemDropType
 	{
 		get
@@ -15,7 +15,7 @@ public class SoulDrop : BaseItemDrop
 		}
 	}
 
-	// Token: 0x060029EF RID: 10735 RVA: 0x0008A9B8 File Offset: 0x00088BB8
+	// Token: 0x060039F9 RID: 14841 RVA: 0x000EC5C4 File Offset: 0x000EA7C4
 	protected override void Collect(GameObject collector)
 	{
 		int num = Economy_EV.GetItemDropValue(this.ItemDropType, false);
@@ -44,9 +44,9 @@ public class SoulDrop : BaseItemDrop
 		}
 	}
 
-	// Token: 0x04002251 RID: 8785
+	// Token: 0x04002E2D RID: 11821
 	public static int FakeSoulCounter_STATIC;
 
-	// Token: 0x04002252 RID: 8786
+	// Token: 0x04002E2E RID: 11822
 	private GoldChangedEventArgs m_goldChangedEventArgs;
 }

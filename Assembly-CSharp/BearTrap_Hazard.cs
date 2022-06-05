@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000443 RID: 1091
+// Token: 0x0200070E RID: 1806
 public class BearTrap_Hazard : Hazard, ILevelConsumer
 {
-	// Token: 0x17000FC8 RID: 4040
-	// (get) Token: 0x06002805 RID: 10245 RVA: 0x000848B3 File Offset: 0x00082AB3
+	// Token: 0x170014AF RID: 5295
+	// (get) Token: 0x06003723 RID: 14115 RVA: 0x00005391 File Offset: 0x00003591
 	public override float BaseDamage
 	{
 		get
@@ -15,7 +15,7 @@ public class BearTrap_Hazard : Hazard, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002806 RID: 10246 RVA: 0x000848BC File Offset: 0x00082ABC
+	// Token: 0x06003724 RID: 14116 RVA: 0x000E5198 File Offset: 0x000E3398
 	private void OnEnable()
 	{
 		BaseRoom componentInParent = base.GetComponentInParent<BaseRoom>();
@@ -25,7 +25,7 @@ public class BearTrap_Hazard : Hazard, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002807 RID: 10247 RVA: 0x000848F4 File Offset: 0x00082AF4
+	// Token: 0x06003725 RID: 14117 RVA: 0x000E51D0 File Offset: 0x000E33D0
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -36,7 +36,7 @@ public class BearTrap_Hazard : Hazard, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002808 RID: 10248 RVA: 0x0008492F File Offset: 0x00082B2F
+	// Token: 0x06003726 RID: 14118 RVA: 0x0001E570 File Offset: 0x0001C770
 	public void ExtendSpike()
 	{
 		this.m_retractSpikes = false;
@@ -48,7 +48,7 @@ public class BearTrap_Hazard : Hazard, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002809 RID: 10249 RVA: 0x0008495A File Offset: 0x00082B5A
+	// Token: 0x06003727 RID: 14119 RVA: 0x0001E59B File Offset: 0x0001C79B
 	private IEnumerator ExtensionCoroutine()
 	{
 		float extensionTimer = Time.time + 0.425f;
@@ -61,13 +61,13 @@ public class BearTrap_Hazard : Hazard, ILevelConsumer
 		yield break;
 	}
 
-	// Token: 0x0600280A RID: 10250 RVA: 0x00084969 File Offset: 0x00082B69
+	// Token: 0x06003728 RID: 14120 RVA: 0x0001E5AA File Offset: 0x0001C7AA
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		base.InitialState = hazardArgs.InitialState;
 	}
 
-	// Token: 0x0600280B RID: 10251 RVA: 0x00084977 File Offset: 0x00082B77
+	// Token: 0x06003729 RID: 14121 RVA: 0x0001E5B8 File Offset: 0x0001C7B8
 	private IEnumerator PerformExtensionCheck()
 	{
 		while (!this.m_retractSpikes)
@@ -78,7 +78,7 @@ public class BearTrap_Hazard : Hazard, ILevelConsumer
 		yield break;
 	}
 
-	// Token: 0x0600280C RID: 10252 RVA: 0x00084986 File Offset: 0x00082B86
+	// Token: 0x0600372A RID: 14122 RVA: 0x0001E5C7 File Offset: 0x0001C7C7
 	private IEnumerator RetractionCoroutine()
 	{
 		this.m_extendSpikes = false;
@@ -91,19 +91,19 @@ public class BearTrap_Hazard : Hazard, ILevelConsumer
 		yield break;
 	}
 
-	// Token: 0x0600280D RID: 10253 RVA: 0x00084995 File Offset: 0x00082B95
+	// Token: 0x0600372B RID: 14123 RVA: 0x0001E5D6 File Offset: 0x0001C7D6
 	public void RetractSpike()
 	{
 		this.m_retractSpikes = true;
 	}
 
-	// Token: 0x0600280E RID: 10254 RVA: 0x0008499E File Offset: 0x00082B9E
+	// Token: 0x0600372C RID: 14124 RVA: 0x0001E5DF File Offset: 0x0001C7DF
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		this.ResetHazard();
 	}
 
-	// Token: 0x0600280F RID: 10255 RVA: 0x000849A6 File Offset: 0x00082BA6
+	// Token: 0x0600372D RID: 14125 RVA: 0x0001E5E7 File Offset: 0x0001C7E7
 	public override void ResetHazard()
 	{
 		base.Animator.SetBool("SpikesOut", false);
@@ -111,15 +111,15 @@ public class BearTrap_Hazard : Hazard, ILevelConsumer
 		this.m_extendSpikes = false;
 	}
 
-	// Token: 0x04002140 RID: 8512
+	// Token: 0x04002C78 RID: 11384
 	private const float m_extensionDelay = 0.425f;
 
-	// Token: 0x04002141 RID: 8513
+	// Token: 0x04002C79 RID: 11385
 	private const float m_retractionDelay = 0.45f;
 
-	// Token: 0x04002142 RID: 8514
+	// Token: 0x04002C7A RID: 11386
 	private bool m_extendSpikes;
 
-	// Token: 0x04002143 RID: 8515
+	// Token: 0x04002C7B RID: 11387
 	private bool m_retractSpikes;
 }

@@ -2,10 +2,10 @@
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x0200042B RID: 1067
+// Token: 0x020006F1 RID: 1777
 public class EggplantTriggerController : MonoBehaviour
 {
-	// Token: 0x0600274C RID: 10060 RVA: 0x00082E0B File Offset: 0x0008100B
+	// Token: 0x0600364F RID: 13903 RVA: 0x0001DD85 File Offset: 0x0001BF85
 	private void Awake()
 	{
 		this.m_enemyController = base.GetComponent<EnemyController>();
@@ -13,19 +13,19 @@ public class EggplantTriggerController : MonoBehaviour
 		this.m_onPlayerEnterRoom = new Action<object, EventArgs>(this.OnPlayerEnterRoom);
 	}
 
-	// Token: 0x0600274D RID: 10061 RVA: 0x00082E37 File Offset: 0x00081037
+	// Token: 0x06003650 RID: 13904 RVA: 0x0001DDB1 File Offset: 0x0001BFB1
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x0600274E RID: 10062 RVA: 0x00082E45 File Offset: 0x00081045
+	// Token: 0x06003651 RID: 13905 RVA: 0x0001DDBF File Offset: 0x0001BFBF
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x0600274F RID: 10063 RVA: 0x00082E54 File Offset: 0x00081054
+	// Token: 0x06003652 RID: 13906 RVA: 0x000E3BF4 File Offset: 0x000E1DF4
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		PlayerSaveFlag eggplantFlag = this.GetEggplantFlag();
@@ -53,7 +53,7 @@ public class EggplantTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002750 RID: 10064 RVA: 0x00082ED4 File Offset: 0x000810D4
+	// Token: 0x06003653 RID: 13907 RVA: 0x000E3C74 File Offset: 0x000E1E74
 	private PlayerSaveFlag GetEggplantFlag()
 	{
 		switch (this.m_enemyController.EnemyRank)
@@ -71,7 +71,7 @@ public class EggplantTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002751 RID: 10065 RVA: 0x00082F20 File Offset: 0x00081120
+	// Token: 0x06003654 RID: 13908 RVA: 0x000E3CC0 File Offset: 0x000E1EC0
 	public void CollectEggplant()
 	{
 		PlayerSaveFlag eggplantFlag = this.GetEggplantFlag();
@@ -85,12 +85,12 @@ public class EggplantTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040020F9 RID: 8441
+	// Token: 0x04002C1C RID: 11292
 	private Interactable m_interactable;
 
-	// Token: 0x040020FA RID: 8442
+	// Token: 0x04002C1D RID: 11293
 	private EnemyController m_enemyController;
 
-	// Token: 0x040020FB RID: 8443
+	// Token: 0x04002C1E RID: 11294
 	private Action<object, EventArgs> m_onPlayerEnterRoom;
 }

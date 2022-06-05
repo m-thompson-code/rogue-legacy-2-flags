@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002A1 RID: 673
+// Token: 0x0200046F RID: 1135
 public class ToggleVsyncOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001A18 RID: 6680 RVA: 0x00052258 File Offset: 0x00050458
+	// Token: 0x06002413 RID: 9235 RVA: 0x00013FB3 File Offset: 0x000121B3
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class ToggleVsyncOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001A19 RID: 6681 RVA: 0x00052290 File Offset: 0x00050490
+	// Token: 0x06002414 RID: 9236 RVA: 0x00013FEB File Offset: 0x000121EB
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class ToggleVsyncOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001A1A RID: 6682 RVA: 0x000522CA File Offset: 0x000504CA
+	// Token: 0x06002415 RID: 9237 RVA: 0x00014025 File Offset: 0x00012225
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Toggle Vsync to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001A1B RID: 6683 RVA: 0x000522E1 File Offset: 0x000504E1
+	// Token: 0x06002416 RID: 9238 RVA: 0x0001403C File Offset: 0x0001223C
 	public override void ConfirmOptionChange()
 	{
 		if (this.m_selectedIndex == 0)

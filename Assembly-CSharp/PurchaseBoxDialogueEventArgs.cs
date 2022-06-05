@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x020007DD RID: 2013
+// Token: 0x02000CA3 RID: 3235
 public class PurchaseBoxDialogueEventArgs : EventArgs
 {
-	// Token: 0x06004342 RID: 17218 RVA: 0x000EC5ED File Offset: 0x000EA7ED
+	// Token: 0x06005CCB RID: 23755 RVA: 0x00033003 File Offset: 0x00031203
 	public PurchaseBoxDialogueEventArgs(PurchaseBoxDialogueType dialogueType)
 	{
 		this.Initialize(dialogueType);
 	}
 
-	// Token: 0x06004343 RID: 17219 RVA: 0x000EC5FC File Offset: 0x000EA7FC
+	// Token: 0x06005CCC RID: 23756 RVA: 0x00033012 File Offset: 0x00031212
 	public void Initialize(PurchaseBoxDialogueType dialogueType)
 	{
 		this.DialogueType = dialogueType;
 	}
 
-	// Token: 0x170016C6 RID: 5830
-	// (get) Token: 0x06004344 RID: 17220 RVA: 0x000EC605 File Offset: 0x000EA805
-	// (set) Token: 0x06004345 RID: 17221 RVA: 0x000EC60D File Offset: 0x000EA80D
+	// Token: 0x17001EC4 RID: 7876
+	// (get) Token: 0x06005CCD RID: 23757 RVA: 0x0003301B File Offset: 0x0003121B
+	// (set) Token: 0x06005CCE RID: 23758 RVA: 0x00033023 File Offset: 0x00031223
 	public PurchaseBoxDialogueType DialogueType { get; private set; }
 }

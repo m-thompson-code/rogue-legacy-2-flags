@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200048E RID: 1166
+// Token: 0x0200078F RID: 1935
 public class Platform : MonoBehaviour, IPlayHitEffect
 {
-	// Token: 0x17001090 RID: 4240
-	// (get) Token: 0x06002AFD RID: 11005 RVA: 0x00091C97 File Offset: 0x0008FE97
+	// Token: 0x170015D3 RID: 5587
+	// (get) Token: 0x06003B3A RID: 15162 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public bool PlayDirectionalHitEffect
 	{
 		get
@@ -14,8 +14,8 @@ public class Platform : MonoBehaviour, IPlayHitEffect
 		}
 	}
 
-	// Token: 0x17001091 RID: 4241
-	// (get) Token: 0x06002AFE RID: 11006 RVA: 0x00091C9A File Offset: 0x0008FE9A
+	// Token: 0x170015D4 RID: 5588
+	// (get) Token: 0x06003B3B RID: 15163 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool PlayHitEffect
 	{
 		get
@@ -24,8 +24,8 @@ public class Platform : MonoBehaviour, IPlayHitEffect
 		}
 	}
 
-	// Token: 0x17001092 RID: 4242
-	// (get) Token: 0x06002AFF RID: 11007 RVA: 0x00091C9D File Offset: 0x0008FE9D
+	// Token: 0x170015D5 RID: 5589
+	// (get) Token: 0x06003B3C RID: 15164 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string EffectNameOverride
 	{
 		get

@@ -2,10 +2,10 @@
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000560 RID: 1376
+// Token: 0x0200092D RID: 2349
 public class ArenaTunnel : Tunnel
 {
-	// Token: 0x06003296 RID: 12950 RVA: 0x000AB240 File Offset: 0x000A9440
+	// Token: 0x06004759 RID: 18265 RVA: 0x00027241 File Offset: 0x00025441
 	protected override void Awake()
 	{
 		base.Awake();
@@ -13,7 +13,7 @@ public class ArenaTunnel : Tunnel
 		this.m_confirmEnterArena = new Action(this.ConfirmEnterArena);
 	}
 
-	// Token: 0x06003297 RID: 12951 RVA: 0x000AB26C File Offset: 0x000A946C
+	// Token: 0x0600475A RID: 18266 RVA: 0x001159DC File Offset: 0x00113BDC
 	protected override void OnPlayerInteractedWithTunnel(GameObject otherObj)
 	{
 		if (SaveManager.PlayerSaveData.CurrentCharacter.TraitOne == TraitType.CantAttack || SaveManager.PlayerSaveData.CurrentCharacter.TraitTwo == TraitType.CantAttack)
@@ -25,7 +25,7 @@ public class ArenaTunnel : Tunnel
 		base.OnPlayerInteractedWithTunnel(otherObj);
 	}
 
-	// Token: 0x06003298 RID: 12952 RVA: 0x000AB2BC File Offset: 0x000A94BC
+	// Token: 0x0600475B RID: 18267 RVA: 0x00115A2C File Offset: 0x00113C2C
 	private void InitializeWarningConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -45,22 +45,22 @@ public class ArenaTunnel : Tunnel
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x06003299 RID: 12953 RVA: 0x000AB34B File Offset: 0x000A954B
+	// Token: 0x0600475C RID: 18268 RVA: 0x0002726D File Offset: 0x0002546D
 	private void ConfirmEnterArena()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 		base.OnPlayerInteractedWithTunnel(null);
 	}
 
-	// Token: 0x0600329A RID: 12954 RVA: 0x000AB35C File Offset: 0x000A955C
+	// Token: 0x0600475D RID: 18269 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenuSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x040027A4 RID: 10148
+	// Token: 0x040036C8 RID: 14024
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x040027A5 RID: 10149
+	// Token: 0x040036C9 RID: 14025
 	private Action m_confirmEnterArena;
 }

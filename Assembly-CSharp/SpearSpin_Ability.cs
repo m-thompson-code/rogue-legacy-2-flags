@@ -2,11 +2,11 @@
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x0200018A RID: 394
+// Token: 0x020002D7 RID: 727
 public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 {
-	// Token: 0x1700078B RID: 1931
-	// (get) Token: 0x06000E14 RID: 3604 RVA: 0x0002B55F File Offset: 0x0002975F
+	// Token: 0x17000A11 RID: 2577
+	// (get) Token: 0x060015AD RID: 5549 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -15,8 +15,8 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700078C RID: 1932
-	// (get) Token: 0x06000E15 RID: 3605 RVA: 0x0002B566 File Offset: 0x00029766
+	// Token: 0x17000A12 RID: 2578
+	// (get) Token: 0x060015AE RID: 5550 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -25,8 +25,8 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700078D RID: 1933
-	// (get) Token: 0x06000E16 RID: 3606 RVA: 0x0002B56D File Offset: 0x0002976D
+	// Token: 0x17000A13 RID: 2579
+	// (get) Token: 0x060015AF RID: 5551 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellAnimSpeed
 	{
 		get
@@ -35,8 +35,8 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700078E RID: 1934
-	// (get) Token: 0x06000E17 RID: 3607 RVA: 0x0002B574 File Offset: 0x00029774
+	// Token: 0x17000A14 RID: 2580
+	// (get) Token: 0x060015B0 RID: 5552 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -45,8 +45,8 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700078F RID: 1935
-	// (get) Token: 0x06000E18 RID: 3608 RVA: 0x0002B57B File Offset: 0x0002977B
+	// Token: 0x17000A15 RID: 2581
+	// (get) Token: 0x060015B1 RID: 5553 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -55,8 +55,8 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000790 RID: 1936
-	// (get) Token: 0x06000E19 RID: 3609 RVA: 0x0002B582 File Offset: 0x00029782
+	// Token: 0x17000A16 RID: 2582
+	// (get) Token: 0x060015B2 RID: 5554 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -65,8 +65,8 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000791 RID: 1937
-	// (get) Token: 0x06000E1A RID: 3610 RVA: 0x0002B589 File Offset: 0x00029789
+	// Token: 0x17000A17 RID: 2583
+	// (get) Token: 0x060015B3 RID: 5555 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -75,8 +75,8 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000792 RID: 1938
-	// (get) Token: 0x06000E1B RID: 3611 RVA: 0x0002B590 File Offset: 0x00029790
+	// Token: 0x17000A18 RID: 2584
+	// (get) Token: 0x060015B4 RID: 5556 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -85,8 +85,8 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000793 RID: 1939
-	// (get) Token: 0x06000E1C RID: 3612 RVA: 0x0002B597 File Offset: 0x00029797
+	// Token: 0x17000A19 RID: 2585
+	// (get) Token: 0x060015B5 RID: 5557 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -95,8 +95,8 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000794 RID: 1940
-	// (get) Token: 0x06000E1D RID: 3613 RVA: 0x0002B59E File Offset: 0x0002979E
+	// Token: 0x17000A1A RID: 2586
+	// (get) Token: 0x060015B6 RID: 5558 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -105,19 +105,19 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000E1E RID: 3614 RVA: 0x0002B5A5 File Offset: 0x000297A5
+	// Token: 0x060015B7 RID: 5559 RVA: 0x0000ABEA File Offset: 0x00008DEA
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onCollision = new Action<Projectile_RL, GameObject>(this.OnCollision);
 	}
 
-	// Token: 0x06000E1F RID: 3615 RVA: 0x0002B5BF File Offset: 0x000297BF
+	// Token: 0x060015B8 RID: 5560 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void FireProjectile()
 	{
 	}
 
-	// Token: 0x06000E20 RID: 3616 RVA: 0x0002B5C4 File Offset: 0x000297C4
+	// Token: 0x060015B9 RID: 5561 RVA: 0x0008A824 File Offset: 0x00088A24
 	public override void PreCastAbility()
 	{
 		this.m_abilityController.PlayerController.PauseGravity(true, true);
@@ -132,7 +132,7 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000E21 RID: 3617 RVA: 0x0002B638 File Offset: 0x00029838
+	// Token: 0x060015BA RID: 5562 RVA: 0x0008A898 File Offset: 0x00088A98
 	protected void OnCollision(Projectile_RL projectile, GameObject colliderObj)
 	{
 		if (colliderObj.CompareTag("EnemyProjectile"))
@@ -151,7 +151,7 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000E22 RID: 3618 RVA: 0x0002B6DC File Offset: 0x000298DC
+	// Token: 0x060015BB RID: 5563 RVA: 0x0000AC04 File Offset: 0x00008E04
 	public override void StartCooldownTimer()
 	{
 		if (this.m_spearSpinStartTime < this.m_spearSpinSuccessStartTime + 0.05f)
@@ -161,7 +161,7 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		base.StartCooldownTimer();
 	}
 
-	// Token: 0x06000E23 RID: 3619 RVA: 0x0002B6F9 File Offset: 0x000298F9
+	// Token: 0x060015BC RID: 5564 RVA: 0x0000AC21 File Offset: 0x00008E21
 	private void RegenMana(GameObject colliderObj)
 	{
 		this.m_regenEventArgs.Initialise(15f, false);
@@ -169,7 +169,7 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.PlayerForceManaRegen, this, this.m_regenEventArgs);
 	}
 
-	// Token: 0x06000E24 RID: 3620 RVA: 0x0002B734 File Offset: 0x00029934
+	// Token: 0x060015BD RID: 5565 RVA: 0x0008A93C File Offset: 0x00088B3C
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		this.SpinCompleteRelay.Dispatch(this.m_hitProjectilesWhileActive);
@@ -184,24 +184,24 @@ public class SpearSpin_Ability : BaseAbility_RL, ITalent, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x04001110 RID: 4368
+	// Token: 0x04001693 RID: 5779
 	private bool m_hitProjectilesWhileActive;
 
-	// Token: 0x04001111 RID: 4369
+	// Token: 0x04001694 RID: 5780
 	private float m_spearSpinSuccessStartTime;
 
-	// Token: 0x04001112 RID: 4370
+	// Token: 0x04001695 RID: 5781
 	private float m_spearSpinStartTime;
 
-	// Token: 0x04001113 RID: 4371
+	// Token: 0x04001696 RID: 5782
 	private Action<Projectile_RL, GameObject> m_onCollision;
 
-	// Token: 0x04001114 RID: 4372
+	// Token: 0x04001697 RID: 5783
 	public Relay<bool> SpinCompleteRelay = new Relay<bool>();
 
-	// Token: 0x04001115 RID: 4373
+	// Token: 0x04001698 RID: 5784
 	public Relay HitProjectileRelay = new Relay();
 
-	// Token: 0x04001116 RID: 4374
+	// Token: 0x04001699 RID: 5785
 	private ForceManaRegenEventArgs m_regenEventArgs = new ForceManaRegenEventArgs(0f, false);
 }

@@ -6,11 +6,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x0200057C RID: 1404
+// Token: 0x0200095D RID: 2397
 public class EndGameStatsWindowController : WindowController
 {
-	// Token: 0x17001289 RID: 4745
-	// (get) Token: 0x060033A0 RID: 13216 RVA: 0x000AEE03 File Offset: 0x000AD003
+	// Token: 0x1700196E RID: 6510
+	// (get) Token: 0x060048D5 RID: 18645 RVA: 0x00027F71 File Offset: 0x00026171
 	public override WindowID ID
 	{
 		get
@@ -19,13 +19,13 @@ public class EndGameStatsWindowController : WindowController
 		}
 	}
 
-	// Token: 0x060033A1 RID: 13217 RVA: 0x000AEE07 File Offset: 0x000AD007
+	// Token: 0x060048D6 RID: 18646 RVA: 0x00027F75 File Offset: 0x00026175
 	private void Awake()
 	{
 		this.m_onCancelButtonDown = new Action<InputActionEventData>(this.OnCancelButtonDown);
 	}
 
-	// Token: 0x060033A2 RID: 13218 RVA: 0x000AEE1C File Offset: 0x000AD01C
+	// Token: 0x060048D7 RID: 18647 RVA: 0x0011A54C File Offset: 0x0011874C
 	public override void Initialize()
 	{
 		this.m_canvasGroup = this.m_windowCanvas.GetComponent<CanvasGroup>();
@@ -36,7 +36,7 @@ public class EndGameStatsWindowController : WindowController
 		}
 	}
 
-	// Token: 0x060033A3 RID: 13219 RVA: 0x000AEE6C File Offset: 0x000AD06C
+	// Token: 0x060048D8 RID: 18648 RVA: 0x0011A59C File Offset: 0x0011879C
 	protected override void OnOpen()
 	{
 		this.UpdateAllStats();
@@ -48,7 +48,7 @@ public class EndGameStatsWindowController : WindowController
 		base.StartCoroutine(this.OnOpenCoroutine());
 	}
 
-	// Token: 0x060033A4 RID: 13220 RVA: 0x000AEEEF File Offset: 0x000AD0EF
+	// Token: 0x060048D9 RID: 18649 RVA: 0x00027F89 File Offset: 0x00026189
 	private IEnumerator OnOpenCoroutine()
 	{
 		this.m_canvasGroup.alpha = 0f;
@@ -62,34 +62,34 @@ public class EndGameStatsWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x060033A5 RID: 13221 RVA: 0x000AEEFE File Offset: 0x000AD0FE
+	// Token: 0x060048DA RID: 18650 RVA: 0x00027F98 File Offset: 0x00026198
 	protected override void OnClose()
 	{
 		this.m_windowCanvas.gameObject.SetActive(false);
 		this.m_biomeLightController.SetActive(false);
 	}
 
-	// Token: 0x060033A6 RID: 13222 RVA: 0x000AEF1D File Offset: 0x000AD11D
+	// Token: 0x060048DB RID: 18651 RVA: 0x00027FB7 File Offset: 0x000261B7
 	protected override void OnFocus()
 	{
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onCancelButtonDown, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onCancelButtonDown, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Cancel");
 	}
 
-	// Token: 0x060033A7 RID: 13223 RVA: 0x000AEF4F File Offset: 0x000AD14F
+	// Token: 0x060048DC RID: 18652 RVA: 0x00027FE9 File Offset: 0x000261E9
 	protected override void OnLostFocus()
 	{
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onCancelButtonDown, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onCancelButtonDown, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Cancel");
 	}
 
-	// Token: 0x060033A8 RID: 13224 RVA: 0x000AEF81 File Offset: 0x000AD181
+	// Token: 0x060048DD RID: 18653 RVA: 0x0002801B File Offset: 0x0002621B
 	private void OnCancelButtonDown(InputActionEventData data)
 	{
 		WindowManager.SetWindowIsOpen(WindowID.EndGameStats, false);
 	}
 
-	// Token: 0x060033A9 RID: 13225 RVA: 0x000AEF8C File Offset: 0x000AD18C
+	// Token: 0x060048DE RID: 18654 RVA: 0x0011A620 File Offset: 0x00118820
 	private void UpdateAllStats()
 	{
 		this.m_bannerName.text = LocalizationManager.GetLocalizedPlayerName(SaveManager.PlayerSaveData.CurrentCharacter);
@@ -122,7 +122,7 @@ public class EndGameStatsWindowController : WindowController
 		this.m_ratingEntry.UpdateStat(true);
 	}
 
-	// Token: 0x060033AA RID: 13226 RVA: 0x000AF090 File Offset: 0x000AD290
+	// Token: 0x060048DF RID: 18655 RVA: 0x0011A724 File Offset: 0x00118924
 	private void UpdateTraits()
 	{
 		bool flag = false;
@@ -154,7 +154,7 @@ public class EndGameStatsWindowController : WindowController
 		this.m_noTraitsText.SetActive(true);
 	}
 
-	// Token: 0x060033AB RID: 13227 RVA: 0x000AF1A8 File Offset: 0x000AD3A8
+	// Token: 0x060048E0 RID: 18656 RVA: 0x0011A83C File Offset: 0x00118A3C
 	private void UpdateGear(EquipmentCategoryType categoryType, ref bool gearFound)
 	{
 		Image image = null;
@@ -187,7 +187,7 @@ public class EndGameStatsWindowController : WindowController
 		image.transform.parent.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060033AC RID: 13228 RVA: 0x000AF24C File Offset: 0x000AD44C
+	// Token: 0x060048E1 RID: 18657 RVA: 0x0011A8E0 File Offset: 0x00118AE0
 	private void Update()
 	{
 		if (this.m_windowCanvas.gameObject.activeSelf)
@@ -197,81 +197,81 @@ public class EndGameStatsWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0400286B RID: 10347
+	// Token: 0x040037D1 RID: 14289
 	[SerializeField]
 	private Image m_ray;
 
-	// Token: 0x0400286C RID: 10348
+	// Token: 0x040037D2 RID: 14290
 	[SerializeField]
 	private GameObject m_biomeLightController;
 
-	// Token: 0x0400286D RID: 10349
+	// Token: 0x040037D3 RID: 14291
 	[Header("Banner")]
 	[SerializeField]
 	private TMP_Text m_bannerName;
 
-	// Token: 0x0400286E RID: 10350
+	// Token: 0x040037D4 RID: 14292
 	[Header("Player")]
 	[SerializeField]
 	private TMP_Text m_levelText;
 
-	// Token: 0x0400286F RID: 10351
+	// Token: 0x040037D5 RID: 14293
 	[SerializeField]
 	private TMP_Text m_classText;
 
-	// Token: 0x04002870 RID: 10352
+	// Token: 0x040037D6 RID: 14294
 	[SerializeField]
 	private Image m_trait1Icon;
 
-	// Token: 0x04002871 RID: 10353
+	// Token: 0x040037D7 RID: 14295
 	[SerializeField]
 	private Image m_trait2Icon;
 
-	// Token: 0x04002872 RID: 10354
+	// Token: 0x040037D8 RID: 14296
 	[SerializeField]
 	private GameObject m_noTraitsText;
 
-	// Token: 0x04002873 RID: 10355
+	// Token: 0x040037D9 RID: 14297
 	[SerializeField]
 	private Image m_weaponEquipmentIcon;
 
-	// Token: 0x04002874 RID: 10356
+	// Token: 0x040037DA RID: 14298
 	[SerializeField]
 	private Image m_headEquipmentIcon;
 
-	// Token: 0x04002875 RID: 10357
+	// Token: 0x040037DB RID: 14299
 	[SerializeField]
 	private Image m_chestEquipmentIcon;
 
-	// Token: 0x04002876 RID: 10358
+	// Token: 0x040037DC RID: 14300
 	[SerializeField]
 	private Image m_capeEquipmentIcon;
 
-	// Token: 0x04002877 RID: 10359
+	// Token: 0x040037DD RID: 14301
 	[SerializeField]
 	private Image m_trinketEquipmentIcon;
 
-	// Token: 0x04002878 RID: 10360
+	// Token: 0x040037DE RID: 14302
 	[SerializeField]
 	private GameObject m_noGearText;
 
-	// Token: 0x04002879 RID: 10361
+	// Token: 0x040037DF RID: 14303
 	[SerializeField]
 	private PlayerLookController m_playerModel;
 
-	// Token: 0x0400287A RID: 10362
+	// Token: 0x040037E0 RID: 14304
 	[Header("Stats")]
 	[SerializeField]
 	private EndGameStatsStatsEntry[] m_statsEntries;
 
-	// Token: 0x0400287B RID: 10363
+	// Token: 0x040037E1 RID: 14305
 	[Header("Rating")]
 	[SerializeField]
 	private EndGameStatsStatsEntry m_ratingEntry;
 
-	// Token: 0x0400287C RID: 10364
+	// Token: 0x040037E2 RID: 14306
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x0400287D RID: 10365
+	// Token: 0x040037E3 RID: 14307
 	private Action<InputActionEventData> m_onCancelButtonDown;
 }

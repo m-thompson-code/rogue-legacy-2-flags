@@ -1,17 +1,17 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001C9 RID: 457
+// Token: 0x02000341 RID: 833
 [RequireComponent(typeof(Camera))]
 public class CameraHelper : MonoBehaviour
 {
-	// Token: 0x06001270 RID: 4720 RVA: 0x00035D1C File Offset: 0x00033F1C
+	// Token: 0x06001AEC RID: 6892 RVA: 0x0000DF5C File Offset: 0x0000C15C
 	private void Awake()
 	{
 		this.m_camera = base.GetComponent<Camera>();
 		this.m_camera.eventMask = 0;
 	}
 
-	// Token: 0x040012D8 RID: 4824
+	// Token: 0x04001906 RID: 6406
 	private Camera m_camera;
 }

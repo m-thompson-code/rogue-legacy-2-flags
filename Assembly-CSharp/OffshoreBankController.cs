@@ -6,11 +6,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200026D RID: 621
+// Token: 0x02000436 RID: 1078
 public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechBubble, IAudioEventEmitter
 {
-	// Token: 0x17000BDE RID: 3038
-	// (get) Token: 0x060018B2 RID: 6322 RVA: 0x0004D600 File Offset: 0x0004B800
+	// Token: 0x17000F1F RID: 3871
+	// (get) Token: 0x060022A1 RID: 8865 RVA: 0x000047A7 File Offset: 0x000029A7
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -19,8 +19,8 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		}
 	}
 
-	// Token: 0x17000BDF RID: 3039
-	// (get) Token: 0x060018B3 RID: 6323 RVA: 0x0004D603 File Offset: 0x0004B803
+	// Token: 0x17000F20 RID: 3872
+	// (get) Token: 0x060022A2 RID: 8866 RVA: 0x0001286A File Offset: 0x00010A6A
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -29,8 +29,8 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		}
 	}
 
-	// Token: 0x17000BE0 RID: 3040
-	// (get) Token: 0x060018B4 RID: 6324 RVA: 0x0004D60B File Offset: 0x0004B80B
+	// Token: 0x17000F21 RID: 3873
+	// (get) Token: 0x060022A3 RID: 8867 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -39,7 +39,7 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		}
 	}
 
-	// Token: 0x060018B5 RID: 6325 RVA: 0x0004D613 File Offset: 0x0004B813
+	// Token: 0x060022A4 RID: 8868 RVA: 0x00012872 File Offset: 0x00010A72
 	private bool HasEventDialogue()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround && !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.SeenParade))
@@ -49,7 +49,7 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		return !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.OffshoreBankDialogue_Intro);
 	}
 
-	// Token: 0x060018B6 RID: 6326 RVA: 0x0004D650 File Offset: 0x0004B850
+	// Token: 0x060022A5 RID: 8869 RVA: 0x000AB32C File Offset: 0x000A952C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -60,7 +60,7 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		this.m_closeBank = new Action(this.CloseBank);
 	}
 
-	// Token: 0x060018B7 RID: 6327 RVA: 0x0004D6BC File Offset: 0x0004B8BC
+	// Token: 0x060022A6 RID: 8870 RVA: 0x000AB398 File Offset: 0x000A9598
 	protected override void InitializePooledPropOnEnter()
 	{
 		this.m_endingSpeechBubblePlayed = false;
@@ -94,7 +94,7 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		}
 	}
 
-	// Token: 0x060018B8 RID: 6328 RVA: 0x0004D818 File Offset: 0x0004BA18
+	// Token: 0x060022A7 RID: 8871 RVA: 0x000AB4F4 File Offset: 0x000A96F4
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.GoldSavedChanged, this.m_onGoldSavedChanged);
@@ -135,14 +135,14 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		}
 	}
 
-	// Token: 0x060018B9 RID: 6329 RVA: 0x0004D905 File Offset: 0x0004BB05
+	// Token: 0x060022A8 RID: 8872 RVA: 0x000128AF File Offset: 0x00010AAF
 	protected override void OnDisable()
 	{
 		base.OnDisable();
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.GoldSavedChanged, this.m_onGoldSavedChanged);
 	}
 
-	// Token: 0x060018BA RID: 6330 RVA: 0x0004D91C File Offset: 0x0004BB1C
+	// Token: 0x060022A9 RID: 8873 RVA: 0x000AB5E4 File Offset: 0x000A97E4
 	private void OnGoldSavedChanged(object sender, EventArgs args)
 	{
 		CharonShop charonShop = sender as CharonShop;
@@ -164,7 +164,7 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		this.m_goldSavedText.text = "[Coin_Icon] " + SaveManager.PlayerSaveData.GoldSaved.ToString();
 	}
 
-	// Token: 0x060018BB RID: 6331 RVA: 0x0004D9C4 File Offset: 0x0004BBC4
+	// Token: 0x060022AA RID: 8874 RVA: 0x000AB68C File Offset: 0x000A988C
 	public void UpdateTextAnim()
 	{
 		Vector3 localScale = this.m_storedScale + new Vector3(0.15f, 0.15f, 0.15f);
@@ -186,7 +186,7 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		}
 	}
 
-	// Token: 0x060018BC RID: 6332 RVA: 0x0004DAE4 File Offset: 0x0004BCE4
+	// Token: 0x060022AB RID: 8875 RVA: 0x000AB7AC File Offset: 0x000A99AC
 	public void DisplayDialogue()
 	{
 		AudioManager.PlayOneShotAttached(this, this.m_greetingAudioEvent, base.gameObject);
@@ -213,7 +213,7 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		this.DisplayGoldStats();
 	}
 
-	// Token: 0x060018BD RID: 6333 RVA: 0x0004DBC8 File Offset: 0x0004BDC8
+	// Token: 0x060022AC RID: 8876 RVA: 0x000AB890 File Offset: 0x000A9A90
 	private void DisplayGoldStats()
 	{
 		int goldSaved = SaveManager.PlayerSaveData.GoldSaved;
@@ -275,7 +275,7 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeBank);
 	}
 
-	// Token: 0x060018BE RID: 6334 RVA: 0x0004DDA4 File Offset: 0x0004BFA4
+	// Token: 0x060022AD RID: 8877 RVA: 0x000ABA6C File Offset: 0x000A9C6C
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -305,58 +305,58 @@ public class OffshoreBankController : BaseSpecialPropController, IDisplaySpeechB
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeBank);
 	}
 
-	// Token: 0x060018BF RID: 6335 RVA: 0x0004DE43 File Offset: 0x0004C043
+	// Token: 0x060022AE RID: 8878 RVA: 0x000128C4 File Offset: 0x00010AC4
 	private void CloseBank()
 	{
 		AudioManager.PlayOneShotAttached(this, this.m_farewellAudioEvent, base.gameObject);
 		this.m_interactable.SetIsInteractableActive(true);
 	}
 
-	// Token: 0x040017F9 RID: 6137
+	// Token: 0x04001F3E RID: 7998
 	[SerializeField]
 	private TMP_Text m_goldSavedText;
 
-	// Token: 0x040017FA RID: 6138
+	// Token: 0x04001F3F RID: 7999
 	[SerializeField]
 	private GameObject m_sprite;
 
-	// Token: 0x040017FB RID: 6139
+	// Token: 0x04001F40 RID: 8000
 	[SerializeField]
 	private GameObject m_pizzaSprite;
 
-	// Token: 0x040017FC RID: 6140
+	// Token: 0x04001F41 RID: 8001
 	[SerializeField]
 	private GameObject m_christmasSprite;
 
-	// Token: 0x040017FD RID: 6141
+	// Token: 0x04001F42 RID: 8002
 	[SerializeField]
 	private UnityEvent m_goldSavedUnityEvent;
 
-	// Token: 0x040017FE RID: 6142
+	// Token: 0x04001F43 RID: 8003
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x040017FF RID: 6143
+	// Token: 0x04001F44 RID: 8004
 	[SerializeField]
 	[EventRef]
 	private string m_farewellAudioEvent;
 
-	// Token: 0x04001800 RID: 6144
+	// Token: 0x04001F45 RID: 8005
 	private Vector3 m_storedScale;
 
-	// Token: 0x04001801 RID: 6145
+	// Token: 0x04001F46 RID: 8006
 	private int m_goldSavedDiff;
 
-	// Token: 0x04001802 RID: 6146
+	// Token: 0x04001F47 RID: 8007
 	private NPCController m_npcController;
 
-	// Token: 0x04001803 RID: 6147
+	// Token: 0x04001F48 RID: 8008
 	private Action<MonoBehaviour, EventArgs> m_onGoldSavedChanged;
 
-	// Token: 0x04001804 RID: 6148
+	// Token: 0x04001F49 RID: 8009
 	private Action m_closeBank;
 
-	// Token: 0x04001805 RID: 6149
+	// Token: 0x04001F4A RID: 8010
 	private bool m_endingSpeechBubblePlayed;
 }

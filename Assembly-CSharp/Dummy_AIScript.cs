@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000A2 RID: 162
+// Token: 0x020000E5 RID: 229
 public class Dummy_AIScript : BaseAIScript
 {
-	// Token: 0x06000385 RID: 901 RVA: 0x0001500B File Offset: 0x0001320B
+	// Token: 0x060004F8 RID: 1272 RVA: 0x00004E17 File Offset: 0x00003017
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -14,8 +14,8 @@ public class Dummy_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x1700013E RID: 318
-	// (get) Token: 0x06000386 RID: 902 RVA: 0x00015021 File Offset: 0x00013221
+	// Token: 0x170001B8 RID: 440
+	// (get) Token: 0x060004F9 RID: 1273 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ArrowAttack_AnimSpeed
 	{
 		get
@@ -24,8 +24,8 @@ public class Dummy_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700013F RID: 319
-	// (get) Token: 0x06000387 RID: 903 RVA: 0x00015028 File Offset: 0x00013228
+	// Token: 0x170001B9 RID: 441
+	// (get) Token: 0x060004FA RID: 1274 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float ArrowAttack_Duration
 	{
 		get
@@ -34,8 +34,8 @@ public class Dummy_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000140 RID: 320
-	// (get) Token: 0x06000388 RID: 904 RVA: 0x0001502F File Offset: 0x0001322F
+	// Token: 0x170001BA RID: 442
+	// (get) Token: 0x060004FB RID: 1275 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float ArrowAttack_Exit_ForceIdle
 	{
 		get
@@ -44,8 +44,8 @@ public class Dummy_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000141 RID: 321
-	// (get) Token: 0x06000389 RID: 905 RVA: 0x00015036 File Offset: 0x00013236
+	// Token: 0x170001BB RID: 443
+	// (get) Token: 0x060004FC RID: 1276 RVA: 0x00004573 File Offset: 0x00002773
 	protected virtual float ArrowAttack_Exit_AttackCD
 	{
 		get
@@ -54,8 +54,8 @@ public class Dummy_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000142 RID: 322
-	// (get) Token: 0x0600038A RID: 906 RVA: 0x0001503D File Offset: 0x0001323D
+	// Token: 0x170001BC RID: 444
+	// (get) Token: 0x060004FD RID: 1277 RVA: 0x000046FA File Offset: 0x000028FA
 	protected virtual int ArrowAttack_NumProjectiles
 	{
 		get
@@ -64,7 +64,7 @@ public class Dummy_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600038B RID: 907 RVA: 0x00015041 File Offset: 0x00013241
+	// Token: 0x060004FE RID: 1278 RVA: 0x00004E2D File Offset: 0x0000302D
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -89,7 +89,7 @@ public class Dummy_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600038C RID: 908 RVA: 0x00015050 File Offset: 0x00013250
+	// Token: 0x060004FF RID: 1279 RVA: 0x00004E3C File Offset: 0x0000303C
 	private IEnumerator BlinkCoroutine(Color color)
 	{
 		for (;;)
@@ -104,26 +104,26 @@ public class Dummy_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600038D RID: 909 RVA: 0x00015066 File Offset: 0x00013266
+	// Token: 0x06000500 RID: 1280 RVA: 0x00004E52 File Offset: 0x00003052
 	public override void OnLBCompleteOrCancelled()
 	{
 		this.StopPersistentCoroutine(this.m_blinkCoroutine);
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x0600038E RID: 910 RVA: 0x0001507A File Offset: 0x0001327A
+	// Token: 0x06000501 RID: 1281 RVA: 0x00004E66 File Offset: 0x00003066
 	public override void ResetScript()
 	{
 		base.EnemyController.ControllerCorgi.GravityActive(false);
 		base.ResetScript();
 	}
 
-	// Token: 0x040007CA RID: 1994
+	// Token: 0x040008EE RID: 2286
 	protected const string ARROW_ATTACK_ATTACK = "Stunned";
 
-	// Token: 0x040007CB RID: 1995
+	// Token: 0x040008EF RID: 2287
 	protected const string ARROW_PROJECTILE = "SkeletonArcherBoltProjectile";
 
-	// Token: 0x040007CC RID: 1996
+	// Token: 0x040008F0 RID: 2288
 	private Coroutine m_blinkCoroutine;
 }

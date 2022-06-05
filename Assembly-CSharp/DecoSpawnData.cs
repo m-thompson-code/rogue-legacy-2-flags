@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200062B RID: 1579
+// Token: 0x02000A58 RID: 2648
 public struct DecoSpawnData
 {
-	// Token: 0x04002BFE RID: 11262
+	// Token: 0x04003C90 RID: 15504
 	public bool ShouldSpawn;
 
-	// Token: 0x04002BFF RID: 11263
+	// Token: 0x04003C91 RID: 15505
 	public bool IsFlipped;
 
-	// Token: 0x04002C00 RID: 11264
+	// Token: 0x04003C92 RID: 15506
 	public byte DecoPropIndex;
 }

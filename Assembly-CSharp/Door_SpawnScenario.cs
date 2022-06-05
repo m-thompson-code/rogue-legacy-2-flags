@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x0200063C RID: 1596
+// Token: 0x02000A69 RID: 2665
 public class Door_SpawnScenario : SpawnScenario
 {
-	// Token: 0x1700145E RID: 5214
-	// (get) Token: 0x060039B2 RID: 14770 RVA: 0x000C47A9 File Offset: 0x000C29A9
-	// (set) Token: 0x060039B3 RID: 14771 RVA: 0x000C47B1 File Offset: 0x000C29B1
+	// Token: 0x17001BC5 RID: 7109
+	// (get) Token: 0x06005091 RID: 20625 RVA: 0x0002BFCA File Offset: 0x0002A1CA
+	// (set) Token: 0x06005092 RID: 20626 RVA: 0x0002BFD2 File Offset: 0x0002A1D2
 	public override bool IsTrue { get; protected set; }
 
-	// Token: 0x1700145F RID: 5215
-	// (get) Token: 0x060039B4 RID: 14772 RVA: 0x000C47BA File Offset: 0x000C29BA
+	// Token: 0x17001BC6 RID: 7110
+	// (get) Token: 0x06005093 RID: 20627 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override SpawnScenarioType Type
 	{
 		get
@@ -21,8 +21,8 @@ public class Door_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x17001460 RID: 5216
-	// (get) Token: 0x060039B5 RID: 14773 RVA: 0x000C47C0 File Offset: 0x000C29C0
+	// Token: 0x17001BC7 RID: 7111
+	// (get) Token: 0x06005094 RID: 20628 RVA: 0x00132B1C File Offset: 0x00130D1C
 	public override string GizmoDescription
 	{
 		get
@@ -53,12 +53,12 @@ public class Door_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x060039B6 RID: 14774 RVA: 0x000C4868 File Offset: 0x000C2A68
+	// Token: 0x06005095 RID: 20629 RVA: 0x0002BFDB File Offset: 0x0002A1DB
 	public Door_SpawnScenario() : this(RoomSide.Top, -1, InclusiveOrExclusive.Inclusive, DoorState.Open)
 	{
 	}
 
-	// Token: 0x060039B7 RID: 14775 RVA: 0x000C4874 File Offset: 0x000C2A74
+	// Token: 0x06005096 RID: 20630 RVA: 0x00132BC4 File Offset: 0x00130DC4
 	public Door_SpawnScenario(RoomSide side, int doorNumber, InclusiveOrExclusive inclusiveOrExclusive, DoorState doorState)
 	{
 		if (side != RoomSide.Left && side != RoomSide.Right && side != RoomSide.Top && side != RoomSide.Bottom)
@@ -71,7 +71,7 @@ public class Door_SpawnScenario : SpawnScenario
 		this.State = doorState;
 	}
 
-	// Token: 0x060039B8 RID: 14776 RVA: 0x000C48C4 File Offset: 0x000C2AC4
+	// Token: 0x06005097 RID: 20631 RVA: 0x00132C14 File Offset: 0x00130E14
 	public override void RunIsTrueCheck(BaseRoom room)
 	{
 		if (room && room is Room)
@@ -143,7 +143,7 @@ public class Door_SpawnScenario : SpawnScenario
 		});
 	}
 
-	// Token: 0x060039B9 RID: 14777 RVA: 0x000C4A00 File Offset: 0x000C2C00
+	// Token: 0x06005098 RID: 20632 RVA: 0x00132D50 File Offset: 0x00130F50
 	public override void RunIsTrueCheck(GridPointManager gridPointManager)
 	{
 		bool isTrue = true;
@@ -227,15 +227,15 @@ public class Door_SpawnScenario : SpawnScenario
 		this.IsTrue = isTrue;
 	}
 
-	// Token: 0x04002C6B RID: 11371
+	// Token: 0x04003CFD RID: 15613
 	public InclusiveOrExclusive InclusiveOrExclusive;
 
-	// Token: 0x04002C6C RID: 11372
+	// Token: 0x04003CFE RID: 15614
 	public int Number = -1;
 
-	// Token: 0x04002C6D RID: 11373
+	// Token: 0x04003CFF RID: 15615
 	public RoomSide Side = RoomSide.None;
 
-	// Token: 0x04002C6E RID: 11374
+	// Token: 0x04003D00 RID: 15616
 	public DoorState State;
 }

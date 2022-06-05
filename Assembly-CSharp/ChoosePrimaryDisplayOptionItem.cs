@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000284 RID: 644
+// Token: 0x02000450 RID: 1104
 public class ChoosePrimaryDisplayOptionItem : SelectionListOptionItem
 {
-	// Token: 0x17000BF6 RID: 3062
-	// (get) Token: 0x0600196C RID: 6508 RVA: 0x0004FBFA File Offset: 0x0004DDFA
+	// Token: 0x17000F37 RID: 3895
+	// (get) Token: 0x0600235B RID: 9051 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected override bool UsesLocID
 	{
 		get
@@ -14,7 +14,7 @@ public class ChoosePrimaryDisplayOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x0600196D RID: 6509 RVA: 0x0004FC00 File Offset: 0x0004DE00
+	// Token: 0x0600235C RID: 9052 RVA: 0x000ACEEC File Offset: 0x000AB0EC
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -29,7 +29,7 @@ public class ChoosePrimaryDisplayOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x0600196E RID: 6510 RVA: 0x0004FC54 File Offset: 0x0004DE54
+	// Token: 0x0600235D RID: 9053 RVA: 0x000ACF40 File Offset: 0x000AB140
 	public override void Initialize()
 	{
 		Display[] displays = Display.displays;
@@ -46,13 +46,13 @@ public class ChoosePrimaryDisplayOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x0600196F RID: 6511 RVA: 0x0004FCC8 File Offset: 0x0004DEC8
+	// Token: 0x0600235E RID: 9054 RVA: 0x000131E7 File Offset: 0x000113E7
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Change Primary Display to monitor: " + this.m_selectionLocIDArray[this.m_selectedIndex]);
 	}
 
-	// Token: 0x06001970 RID: 6512 RVA: 0x0004FCE6 File Offset: 0x0004DEE6
+	// Token: 0x0600235F RID: 9055 RVA: 0x00013205 File Offset: 0x00011405
 	public override void ConfirmOptionChange()
 	{
 		PlayerPrefs.SetInt("UnitySelectMonitor", this.m_selectedIndex);

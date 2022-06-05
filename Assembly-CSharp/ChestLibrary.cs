@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000221 RID: 545
+// Token: 0x020003D6 RID: 982
 [CreateAssetMenu(menuName = "Custom/Libraries/Chest Library")]
 public class ChestLibrary : ScriptableObject
 {
-	// Token: 0x0600166A RID: 5738 RVA: 0x00045EE0 File Offset: 0x000440E0
+	// Token: 0x06002007 RID: 8199 RVA: 0x000A430C File Offset: 0x000A250C
 	public static ChestObj GetChestPrefab(ChestType chestType)
 	{
 		ChestObj result = null;
@@ -17,8 +17,8 @@ public class ChestLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x17000B1F RID: 2847
-	// (get) Token: 0x0600166B RID: 5739 RVA: 0x00045F27 File Offset: 0x00044127
+	// Token: 0x17000E46 RID: 3654
+	// (get) Token: 0x06002008 RID: 8200 RVA: 0x00010F52 File Offset: 0x0000F152
 	public static ChestLibrary Instance
 	{
 		get
@@ -31,13 +31,13 @@ public class ChestLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x040015A6 RID: 5542
+	// Token: 0x04001CB2 RID: 7346
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/ChestLibrary";
 
-	// Token: 0x040015A7 RID: 5543
+	// Token: 0x04001CB3 RID: 7347
 	[SerializeField]
 	private ChestTypeChestObjDictionary m_chestLibrary;
 
-	// Token: 0x040015A8 RID: 5544
+	// Token: 0x04001CB4 RID: 7348
 	private static ChestLibrary m_instance;
 }

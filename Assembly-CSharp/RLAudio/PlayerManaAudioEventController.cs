@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000907 RID: 2311
+	// Token: 0x02000E83 RID: 3715
 	public class PlayerManaAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x1700186A RID: 6250
-		// (get) Token: 0x06004BD0 RID: 19408 RVA: 0x001109EB File Offset: 0x0010EBEB
+		// Token: 0x17002161 RID: 8545
+		// (get) Token: 0x060068C5 RID: 26821 RVA: 0x0003A037 File Offset: 0x00038237
 		public string Description
 		{
 			get
@@ -22,7 +22,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BD1 RID: 19409 RVA: 0x00110A11 File Offset: 0x0010EC11
+		// Token: 0x060068C6 RID: 26822 RVA: 0x0003A05D File Offset: 0x0003825D
 		private IEnumerator Start()
 		{
 			while (!PlayerManager.IsInstantiated)
@@ -33,7 +33,7 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004BD2 RID: 19410 RVA: 0x00110A20 File Offset: 0x0010EC20
+		// Token: 0x060068C7 RID: 26823 RVA: 0x00180CB0 File Offset: 0x0017EEB0
 		private void OnManaChange(ManaChangeEventArgs manaChangeEventArgs)
 		{
 			PlayerController playerController = PlayerManager.GetPlayerController();
@@ -49,7 +49,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BD3 RID: 19411 RVA: 0x00110A83 File Offset: 0x0010EC83
+		// Token: 0x060068C8 RID: 26824 RVA: 0x0003A06C File Offset: 0x0003826C
 		private void OnDestroy()
 		{
 			if (!GameManager.IsApplicationClosing && PlayerManager.IsInstantiated && PlayerManager.GetPlayerController().ManaChangeRelay != null)
@@ -58,15 +58,15 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003FE0 RID: 16352
+		// Token: 0x0400553D RID: 21821
 		[SerializeField]
 		[EventRef]
 		private string m_maxManaAudioEventPath;
 
-		// Token: 0x04003FE1 RID: 16353
+		// Token: 0x0400553E RID: 21822
 		private string m_description = string.Empty;
 
-		// Token: 0x04003FE2 RID: 16354
+		// Token: 0x0400553F RID: 21823
 		private bool m_hasMaxManaAudioPlayed = true;
 	}
 }

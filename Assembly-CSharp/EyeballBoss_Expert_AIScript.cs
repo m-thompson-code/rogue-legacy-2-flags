@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000BD RID: 189
+// Token: 0x02000117 RID: 279
 public class EyeballBoss_Expert_AIScript : EyeballBoss_Basic_AIScript
 {
-	// Token: 0x17000237 RID: 567
-	// (get) Token: 0x060004DA RID: 1242 RVA: 0x00016675 File Offset: 0x00014875
+	// Token: 0x170002DD RID: 733
+	// (get) Token: 0x060006D1 RID: 1745 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool ZoneBlast_Variant
 	{
 		get
@@ -13,8 +13,8 @@ public class EyeballBoss_Expert_AIScript : EyeballBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000238 RID: 568
-	// (get) Token: 0x060004DB RID: 1243 RVA: 0x00016678 File Offset: 0x00014878
+	// Token: 0x170002DE RID: 734
+	// (get) Token: 0x060006D2 RID: 1746 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool SpinningFireball_Variant
 	{
 		get
@@ -23,8 +23,8 @@ public class EyeballBoss_Expert_AIScript : EyeballBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000239 RID: 569
-	// (get) Token: 0x060004DC RID: 1244 RVA: 0x0001667B File Offset: 0x0001487B
+	// Token: 0x170002DF RID: 735
+	// (get) Token: 0x060006D3 RID: 1747 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool HomingFireball_Variant
 	{
 		get
@@ -33,8 +33,8 @@ public class EyeballBoss_Expert_AIScript : EyeballBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700023A RID: 570
-	// (get) Token: 0x060004DD RID: 1245 RVA: 0x0001667E File Offset: 0x0001487E
+	// Token: 0x170002E0 RID: 736
+	// (get) Token: 0x060006D4 RID: 1748 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool HomingFireball_Variant_Blue
 	{
 		get
@@ -43,8 +43,8 @@ public class EyeballBoss_Expert_AIScript : EyeballBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700023B RID: 571
-	// (get) Token: 0x060004DE RID: 1246 RVA: 0x00016681 File Offset: 0x00014881
+	// Token: 0x170002E1 RID: 737
+	// (get) Token: 0x060006D5 RID: 1749 RVA: 0x00005319 File Offset: 0x00003519
 	protected override float MultiShot_Exit_AttackCD
 	{
 		get

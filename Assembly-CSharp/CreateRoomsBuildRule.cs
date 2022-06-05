@@ -5,10 +5,10 @@ using System.Linq;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000655 RID: 1621
+// Token: 0x02000AA0 RID: 2720
 public class CreateRoomsBuildRule
 {
-	// Token: 0x06003AD5 RID: 15061 RVA: 0x000C985C File Offset: 0x000C7A5C
+	// Token: 0x0600522B RID: 21035 RVA: 0x00138034 File Offset: 0x00136234
 	protected static void BuildRoom(BiomeCreator biomeCreator, BiomeController biomeController, GridPointManager originRoom, DoorLocation doorLocation, Dictionary<Vector2Int, List<DoorLocation>> roomSizesThatFit, RoomType roomType, RoomSetEntry[] potentialRooms, BiomeType biomeOverride = BiomeType.None)
 	{
 		RoomSetEntry randomRoom = default(RoomSetEntry);
@@ -64,7 +64,7 @@ public class CreateRoomsBuildRule
 		biomeCreator.SetState(biomeController, BiomeBuildStateID.Failed, text);
 	}
 
-	// Token: 0x06003AD6 RID: 15062 RVA: 0x000C9A68 File Offset: 0x000C7C68
+	// Token: 0x0600522C RID: 21036 RVA: 0x00138240 File Offset: 0x00136440
 	protected virtual void BuildRoomsAtRandomDoorLocations(BiomeCreator biomeCreator, BiomeController biomeController, int finalRoomCountInBiome, GridPointManager originRoom, List<RoomSetEntry> standardRoomPoolOverride)
 	{
 		List<DoorLocation> buildRoomAtDoorLocations = biomeCreator.GetBuildRoomAtDoorLocations(biomeController, originRoom);
@@ -204,7 +204,7 @@ public class CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x06003AD7 RID: 15063 RVA: 0x000C9EC4 File Offset: 0x000C80C4
+	// Token: 0x0600522D RID: 21037 RVA: 0x0013869C File Offset: 0x0013689C
 	protected void CreateSpecificRoom(BiomeCreator biomeCreator, BiomeController biomeController, RoomMetaData room, Vector2Int coords, DoorLocation doorLocation, BiomeType biomeOverride = BiomeType.None, RoomType roomTypeOverride = RoomType.None, bool incrementRoomCount = true)
 	{
 		BiomeType overrideBiome = biomeController.Biome;
@@ -220,7 +220,7 @@ public class CreateRoomsBuildRule
 		biomeCreator.BuildRoom(biomeController, roomType, new RoomSetEntry(room, false), coords, doorLocation, overrideBiome, incrementRoomCount);
 	}
 
-	// Token: 0x06003AD8 RID: 15064 RVA: 0x000C9F08 File Offset: 0x000C8108
+	// Token: 0x0600522E RID: 21038 RVA: 0x001386E0 File Offset: 0x001368E0
 	public static List<GridPointManager> GetGridPointManagersWithAvailableDoors(BiomeController biomeController)
 	{
 		List<GridPointManager> list = new List<GridPointManager>();
@@ -241,13 +241,13 @@ public class CreateRoomsBuildRule
 		return list;
 	}
 
-	// Token: 0x06003AD9 RID: 15065 RVA: 0x000C9F82 File Offset: 0x000C8182
+	// Token: 0x0600522F RID: 21039 RVA: 0x0002CC6A File Offset: 0x0002AE6A
 	protected static int GetNumberOfRoomsPlacedSoFar(BiomeController biomeController)
 	{
 		return biomeController.GridPointManager.StandardRoomCount + biomeController.GridPointManager.SpecialRoomCount;
 	}
 
-	// Token: 0x06003ADA RID: 15066 RVA: 0x000C9F9B File Offset: 0x000C819B
+	// Token: 0x06005230 RID: 21040 RVA: 0x0002CC83 File Offset: 0x0002AE83
 	public virtual IEnumerator CreateRooms(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		int num = biomeController.TargetRoomCountsByRoomType.Sum((KeyValuePair<RoomType, int> entry) => entry.Value);
@@ -284,14 +284,14 @@ public class CreateRoomsBuildRule
 		yield break;
 	}
 
-	// Token: 0x06003ADB RID: 15067 RVA: 0x000C9FB8 File Offset: 0x000C81B8
+	// Token: 0x06005231 RID: 21041 RVA: 0x0002CCA0 File Offset: 0x0002AEA0
 	protected static RoomSetEntry[] GetDefaultPotentialRooms(Dictionary<Vector2Int, List<DoorLocation>> roomSizesThatFit, RoomTypeEntry roomRequirements, List<RoomSetEntry> standardRoomPoolOverride, out RoomType roomType, BiomeType biome)
 	{
 		roomType = roomRequirements.RoomType;
 		return CreateRoomsBuildRule.GetSetOfPotentialRooms(biome, roomType, roomSizesThatFit, SpecialRoomType.None, roomRequirements.MustBeEasy, standardRoomPoolOverride);
 	}
 
-	// Token: 0x06003ADC RID: 15068 RVA: 0x000C9FD4 File Offset: 0x000C81D4
+	// Token: 0x06005232 RID: 21042 RVA: 0x0013875C File Offset: 0x0013695C
 	protected static RoomSetEntry[] GetPotentialRooms(BiomeCreator biomeCreator, BiomeController biomeController, Dictionary<Vector2Int, List<DoorLocation>> roomSizesThatFit, RoomTypeEntry roomRequirements, List<RoomSetEntry> standardRoomPoolOverride, out RoomType roomType, BiomeType biomeOverride = BiomeType.None)
 	{
 		BiomeType biome = (biomeOverride == BiomeType.None) ? biomeController.Biome : biomeOverride;
@@ -306,7 +306,7 @@ public class CreateRoomsBuildRule
 		return CreateRoomsBuildRule.GetDefaultPotentialRooms(roomSizesThatFit, roomRequirements, standardRoomPoolOverride, out roomType, biome);
 	}
 
-	// Token: 0x06003ADD RID: 15069 RVA: 0x000CA02C File Offset: 0x000C822C
+	// Token: 0x06005233 RID: 21043 RVA: 0x001387B4 File Offset: 0x001369B4
 	protected static RoomSetEntry[] GetPotentialRoomsWhenPrefabIsSet(Dictionary<Vector2Int, List<DoorLocation>> roomSizesThatFit, RoomTypeEntry roomRequirements, out RoomType roomType)
 	{
 		roomType = RoomType.Mandatory;
@@ -323,7 +323,7 @@ public class CreateRoomsBuildRule
 		return result;
 	}
 
-	// Token: 0x06003ADE RID: 15070 RVA: 0x000CA0C0 File Offset: 0x000C82C0
+	// Token: 0x06005234 RID: 21044 RVA: 0x00138848 File Offset: 0x00136A48
 	protected static RoomSetEntry[] GetPotentialRoomsWhenRoomIsNotStandard(BiomeCreator biomeCreator, BiomeController biomeController, Dictionary<Vector2Int, List<DoorLocation>> roomSizesThatFit, RoomTypeEntry roomRequirements, out RoomType roomType, BiomeType biome)
 	{
 		SpecialRoomType specialRoomType = SpecialRoomType.None;
@@ -350,7 +350,7 @@ public class CreateRoomsBuildRule
 		return array;
 	}
 
-	// Token: 0x06003ADF RID: 15071 RVA: 0x000CA140 File Offset: 0x000C8340
+	// Token: 0x06005235 RID: 21045 RVA: 0x001388C8 File Offset: 0x00136AC8
 	public static SpecialRoomType GetRandomBonusRoomType(BiomeController biomeController, RngID rngID = RngID.BiomeCreation, List<SpecialRoomType> onlyCheckSpecialRoomTypes = null)
 	{
 		SpecialRoomType result = SpecialRoomType.None;
@@ -393,7 +393,7 @@ public class CreateRoomsBuildRule
 		return result;
 	}
 
-	// Token: 0x06003AE0 RID: 15072 RVA: 0x000CA284 File Offset: 0x000C8484
+	// Token: 0x06005236 RID: 21046 RVA: 0x00138A0C File Offset: 0x00136C0C
 	protected static RoomSetEntry[] GetSetOfPotentialRooms(BiomeType biome, RoomType roomType, Dictionary<Vector2Int, List<DoorLocation>> roomSizesAndWhatDoorNumbersTheyFitAt, SpecialRoomType specialRoomType, bool mustBeEasy, List<RoomSetEntry> standardRoomPoolOverride)
 	{
 		RoomSide roomSide = roomSizesAndWhatDoorNumbersTheyFitAt.First<KeyValuePair<Vector2Int, List<DoorLocation>>>().Value[0].RoomSide;
@@ -408,7 +408,7 @@ public class CreateRoomsBuildRule
 		return RoomLibrary.GetSetCollection(biome).GetRoomsMatchingCriteria(CreateRoomsBuildRule.m_roomCriteriaKey, standardRoomPoolOverride);
 	}
 
-	// Token: 0x06003AE1 RID: 15073 RVA: 0x000CA2EC File Offset: 0x000C84EC
+	// Token: 0x06005237 RID: 21047 RVA: 0x00138A74 File Offset: 0x00136C74
 	protected void PrintNoPotentialRoomsErrorMessage(BiomeType biome, Dictionary<Vector2Int, List<DoorLocation>> roomSizesThatFit)
 	{
 		if (roomSizesThatFit.Count > 0)
@@ -462,6 +462,6 @@ public class CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x04002CEF RID: 11503
+	// Token: 0x04003DDA RID: 15834
 	protected static RoomCriteriaLookupCacheKey m_roomCriteriaKey;
 }

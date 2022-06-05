@@ -7,10 +7,10 @@ using System.Threading;
 
 namespace Unity.Screenshots
 {
-	// Token: 0x0200082C RID: 2092
+	// Token: 0x02000D0B RID: 3339
 	public static class PngEncoder
 	{
-		// Token: 0x0600452B RID: 17707 RVA: 0x000F6E0C File Offset: 0x000F500C
+		// Token: 0x06005F24 RID: 24356 RVA: 0x00164924 File Offset: 0x00162B24
 		private static uint Adler32(byte[] bytes)
 		{
 			uint num = 1U;
@@ -23,14 +23,14 @@ namespace Unity.Screenshots
 			return num2 << 16 | num;
 		}
 
-		// Token: 0x0600452C RID: 17708 RVA: 0x000F6E4D File Offset: 0x000F504D
+		// Token: 0x06005F25 RID: 24357 RVA: 0x000346CA File Offset: 0x000328CA
 		private static void AppendByte(this byte[] data, ref int position, byte value)
 		{
 			data[position] = value;
 			position++;
 		}
 
-		// Token: 0x0600452D RID: 17709 RVA: 0x000F6E5C File Offset: 0x000F505C
+		// Token: 0x06005F26 RID: 24358 RVA: 0x00164968 File Offset: 0x00162B68
 		private static void AppendBytes(this byte[] data, ref int position, byte[] value)
 		{
 			foreach (byte value2 in value)
@@ -39,7 +39,7 @@ namespace Unity.Screenshots
 			}
 		}
 
-		// Token: 0x0600452E RID: 17710 RVA: 0x000F6E88 File Offset: 0x000F5088
+		// Token: 0x06005F27 RID: 24359 RVA: 0x00164994 File Offset: 0x00162B94
 		private static void AppendChunk(this byte[] data, ref int position, string chunkType, byte[] chunkData)
 		{
 			byte[] chunkTypeBytes = PngEncoder.GetChunkTypeBytes(chunkType);
@@ -52,7 +52,7 @@ namespace Unity.Screenshots
 			}
 		}
 
-		// Token: 0x0600452F RID: 17711 RVA: 0x000F6EC8 File Offset: 0x000F50C8
+		// Token: 0x06005F28 RID: 24360 RVA: 0x001649D4 File Offset: 0x00162BD4
 		private static void AppendInt(this byte[] data, ref int position, int value)
 		{
 			byte[] bytes = BitConverter.GetBytes(value);
@@ -63,7 +63,7 @@ namespace Unity.Screenshots
 			data.AppendBytes(ref position, bytes);
 		}
 
-		// Token: 0x06004530 RID: 17712 RVA: 0x000F6EF4 File Offset: 0x000F50F4
+		// Token: 0x06005F29 RID: 24361 RVA: 0x00164A00 File Offset: 0x00162C00
 		private static void AppendUInt(this byte[] data, ref int position, uint value)
 		{
 			byte[] bytes = BitConverter.GetBytes(value);
@@ -74,7 +74,7 @@ namespace Unity.Screenshots
 			data.AppendBytes(ref position, bytes);
 		}
 
-		// Token: 0x06004531 RID: 17713 RVA: 0x000F6F20 File Offset: 0x000F5120
+		// Token: 0x06005F2A RID: 24362 RVA: 0x00164A2C File Offset: 0x00162C2C
 		private static byte[] Compress(byte[] bytes)
 		{
 			byte[] result;
@@ -92,7 +92,7 @@ namespace Unity.Screenshots
 			return result;
 		}
 
-		// Token: 0x06004532 RID: 17714 RVA: 0x000F6F9C File Offset: 0x000F519C
+		// Token: 0x06005F2B RID: 24363 RVA: 0x00164AA8 File Offset: 0x00162CA8
 		public static byte[] Encode(byte[] dataRgba, int stride)
 		{
 			if (dataRgba == null)
@@ -170,7 +170,7 @@ namespace Unity.Screenshots
 			return array5;
 		}
 
-		// Token: 0x06004533 RID: 17715 RVA: 0x000F7197 File Offset: 0x000F5397
+		// Token: 0x06005F2C RID: 24364 RVA: 0x000346D7 File Offset: 0x000328D7
 		public static void EncodeAsync(byte[] dataRgba, int stride, Action<Exception, byte[]> callback)
 		{
 			ThreadPool.QueueUserWorkItem(delegate(object state)
@@ -188,7 +188,7 @@ namespace Unity.Screenshots
 			}, null);
 		}
 
-		// Token: 0x06004534 RID: 17716 RVA: 0x000F71C8 File Offset: 0x000F53C8
+		// Token: 0x06005F2D RID: 24365 RVA: 0x00164CA4 File Offset: 0x00162EA4
 		private static uint GetChunkCrc(byte[] chunkTypeBytes, byte[] chunkData)
 		{
 			byte[] array = new byte[chunkTypeBytes.Length + chunkData.Length];
@@ -197,7 +197,7 @@ namespace Unity.Screenshots
 			return PngEncoder.crc32.Calculate<byte>(array);
 		}
 
-		// Token: 0x06004535 RID: 17717 RVA: 0x000F7208 File Offset: 0x000F5408
+		// Token: 0x06005F2E RID: 24366 RVA: 0x00164CE4 File Offset: 0x00162EE4
 		private static byte[] GetChunkTypeBytes(string value)
 		{
 			char[] array = value.ToCharArray();
@@ -213,13 +213,13 @@ namespace Unity.Screenshots
 			return array2;
 		}
 
-		// Token: 0x04003B0E RID: 15118
+		// Token: 0x04004E30 RID: 20016
 		private static PngEncoder.Crc32 crc32 = new PngEncoder.Crc32();
 
-		// Token: 0x02000E51 RID: 3665
+		// Token: 0x02000D0C RID: 3340
 		public class Crc32
 		{
-			// Token: 0x06006C3D RID: 27709 RVA: 0x00193B68 File Offset: 0x00191D68
+			// Token: 0x06005F2F RID: 24367 RVA: 0x00164D20 File Offset: 0x00162F20
 			public Crc32()
 			{
 				this.checksumTable = Enumerable.Range(0, 256).Select(delegate(int i)
@@ -233,16 +233,16 @@ namespace Unity.Screenshots
 				}).ToArray<uint>();
 			}
 
-			// Token: 0x06006C3E RID: 27710 RVA: 0x00193BB5 File Offset: 0x00191DB5
+			// Token: 0x06005F30 RID: 24368 RVA: 0x00034705 File Offset: 0x00032905
 			public uint Calculate<T>(IEnumerable<T> byteStream)
 			{
 				return ~byteStream.Aggregate(uint.MaxValue, (uint checksumRegister, T currentByte) => this.checksumTable[(int)((checksumRegister & 255U) ^ (uint)Convert.ToByte(currentByte))] ^ checksumRegister >> 8);
 			}
 
-			// Token: 0x04005798 RID: 22424
+			// Token: 0x04004E31 RID: 20017
 			private static uint generator = 3988292384U;
 
-			// Token: 0x04005799 RID: 22425
+			// Token: 0x04004E32 RID: 20018
 			private readonly uint[] checksumTable;
 		}
 	}

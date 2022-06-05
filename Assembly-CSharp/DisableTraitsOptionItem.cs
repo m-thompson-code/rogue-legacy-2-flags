@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200028B RID: 651
+// Token: 0x02000457 RID: 1111
 public class DisableTraitsOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001992 RID: 6546 RVA: 0x000501BA File Offset: 0x0004E3BA
+	// Token: 0x06002381 RID: 9089 RVA: 0x00013605 File Offset: 0x00011805
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class DisableTraitsOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001993 RID: 6547 RVA: 0x000501F2 File Offset: 0x0004E3F2
+	// Token: 0x06002382 RID: 9090 RVA: 0x0001363D File Offset: 0x0001183D
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class DisableTraitsOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001994 RID: 6548 RVA: 0x0005022C File Offset: 0x0004E42C
+	// Token: 0x06002383 RID: 9091 RVA: 0x00013677 File Offset: 0x00011877
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed Disable Traits to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001995 RID: 6549 RVA: 0x00050244 File Offset: 0x0004E444
+	// Token: 0x06002384 RID: 9092 RVA: 0x000ACFE0 File Offset: 0x000AB1E0
 	public override void ConfirmOptionChange()
 	{
 		bool assist_DisableTraits = this.m_selectedIndex == 0;
@@ -41,7 +41,7 @@ public class DisableTraitsOptionItem : SelectionListOptionItem
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.HouseRulesChanged, null, null);
 	}
 
-	// Token: 0x06001996 RID: 6550 RVA: 0x00050270 File Offset: 0x0004E470
+	// Token: 0x06002385 RID: 9093 RVA: 0x000AC7CC File Offset: 0x000AA9CC
 	private void Update()
 	{
 		if (!SaveManager.PlayerSaveData.EnableHouseRules)
@@ -54,7 +54,7 @@ public class DisableTraitsOptionItem : SelectionListOptionItem
 		this.m_incrementValueText.alpha = 1f;
 	}
 
-	// Token: 0x06001997 RID: 6551 RVA: 0x000502CA File Offset: 0x0004E4CA
+	// Token: 0x06002386 RID: 9094 RVA: 0x00012DF4 File Offset: 0x00010FF4
 	public override void ActivateOption()
 	{
 		if (SaveManager.PlayerSaveData.EnableHouseRules)

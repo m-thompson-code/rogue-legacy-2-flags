@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000302 RID: 770
+// Token: 0x02000527 RID: 1319
 public class EnemyInvulnStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D4A RID: 3402
-	// (get) Token: 0x06001EA2 RID: 7842 RVA: 0x00063220 File Offset: 0x00061420
+	// Token: 0x1700112F RID: 4399
+	// (get) Token: 0x06002A83 RID: 10883 RVA: 0x00017CC0 File Offset: 0x00015EC0
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -16,8 +16,8 @@ public class EnemyInvulnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D4B RID: 3403
-	// (get) Token: 0x06001EA3 RID: 7843 RVA: 0x00063227 File Offset: 0x00061427
+	// Token: 0x17001130 RID: 4400
+	// (get) Token: 0x06002A84 RID: 10884 RVA: 0x0000457A File Offset: 0x0000277A
 	public override float StartingDurationOverride
 	{
 		get
@@ -26,12 +26,12 @@ public class EnemyInvulnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D4C RID: 3404
-	// (get) Token: 0x06001EA4 RID: 7844 RVA: 0x0006322E File Offset: 0x0006142E
-	// (set) Token: 0x06001EA5 RID: 7845 RVA: 0x00063236 File Offset: 0x00061436
+	// Token: 0x17001131 RID: 4401
+	// (get) Token: 0x06002A85 RID: 10885 RVA: 0x00017CC7 File Offset: 0x00015EC7
+	// (set) Token: 0x06002A86 RID: 10886 RVA: 0x00017CCF File Offset: 0x00015ECF
 	public GameObject Source { get; private set; }
 
-	// Token: 0x06001EA6 RID: 7846 RVA: 0x0006323F File Offset: 0x0006143F
+	// Token: 0x06002A87 RID: 10887 RVA: 0x00017CD8 File Offset: 0x00015ED8
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		EnemyController enemyController = this.m_charController as EnemyController;
@@ -70,7 +70,7 @@ public class EnemyInvulnStatusEffect : BaseStatusEffect
 		goto IL_E0;
 	}
 
-	// Token: 0x06001EA7 RID: 7847 RVA: 0x00063258 File Offset: 0x00061458
+	// Token: 0x06002A88 RID: 10888 RVA: 0x000C1C48 File Offset: 0x000BFE48
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);

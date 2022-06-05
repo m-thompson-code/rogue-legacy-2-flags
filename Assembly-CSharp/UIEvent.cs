@@ -1,106 +1,106 @@
 ﻿using System;
 
-// Token: 0x02000610 RID: 1552
+// Token: 0x02000A32 RID: 2610
 public enum UIEvent
 {
-	// Token: 0x04002B52 RID: 11090
+	// Token: 0x04003BB9 RID: 15289
 	WindowVisibilityStateChanged,
-	// Token: 0x04002B53 RID: 11091
+	// Token: 0x04003BBA RID: 15290
 	Blacksmith_EquipmentCategoryChanged,
-	// Token: 0x04002B54 RID: 11092
+	// Token: 0x04003BBB RID: 15291
 	Blacksmith_HighlightedEquipmentChanged,
-	// Token: 0x04002B55 RID: 11093
+	// Token: 0x04003BBC RID: 15292
 	Blacksmith_Shop_Opened,
-	// Token: 0x04002B56 RID: 11094
+	// Token: 0x04003BBD RID: 15293
 	Blacksmith_Shop_Closed,
-	// Token: 0x04002B57 RID: 11095
+	// Token: 0x04003BBE RID: 15294
 	EquippedChanged,
-	// Token: 0x04002B58 RID: 11096
+	// Token: 0x04003BBF RID: 15295
 	EquipmentPurchasedLevelChanged,
-	// Token: 0x04002B59 RID: 11097
+	// Token: 0x04003BC0 RID: 15296
 	EquipmentFoundLevelChanged,
-	// Token: 0x04002B5A RID: 11098
+	// Token: 0x04003BC1 RID: 15297
 	EquipmentFoundStateChanged,
-	// Token: 0x04002B5B RID: 11099
+	// Token: 0x04003BC2 RID: 15298
 	Enchantress_HighlightedRuneChanged,
-	// Token: 0x04002B5C RID: 11100
+	// Token: 0x04003BC3 RID: 15299
 	Enchantress_Shop_Opened,
-	// Token: 0x04002B5D RID: 11101
+	// Token: 0x04003BC4 RID: 15300
 	Enchantress_Shop_Closed,
-	// Token: 0x04002B5E RID: 11102
+	// Token: 0x04003BC5 RID: 15301
 	Charon_Shop_Opened,
-	// Token: 0x04002B5F RID: 11103
+	// Token: 0x04003BC6 RID: 15302
 	Charon_Shop_Closed,
-	// Token: 0x04002B60 RID: 11104
+	// Token: 0x04003BC7 RID: 15303
 	RuneEquippedLevelChanged,
-	// Token: 0x04002B61 RID: 11105
+	// Token: 0x04003BC8 RID: 15304
 	RunePurchaseLevelChanged,
-	// Token: 0x04002B62 RID: 11106
+	// Token: 0x04003BC9 RID: 15305
 	RuneBlueprintsFoundChanged,
-	// Token: 0x04002B63 RID: 11107
+	// Token: 0x04003BCA RID: 15306
 	RuneFoundStateChanged,
-	// Token: 0x04002B64 RID: 11108
+	// Token: 0x04003BCB RID: 15307
 	SkillTree_HighlightedSkillChanged,
-	// Token: 0x04002B65 RID: 11109
+	// Token: 0x04003BCC RID: 15308
 	SkillTree_Opened,
-	// Token: 0x04002B66 RID: 11110
+	// Token: 0x04003BCD RID: 15309
 	SkillTree_Closed,
-	// Token: 0x04002B67 RID: 11111
+	// Token: 0x04003BCE RID: 15310
 	SkillLevelChanged,
-	// Token: 0x04002B68 RID: 11112
+	// Token: 0x04003BCF RID: 15311
 	Lineage_ConfirmHeir,
-	// Token: 0x04002B69 RID: 11113
+	// Token: 0x04003BD0 RID: 15312
 	Lineage_SelectedNewHeir,
-	// Token: 0x04002B6A RID: 11114
+	// Token: 0x04003BD1 RID: 15313
 	DialogueWindow_Opened,
-	// Token: 0x04002B6B RID: 11115
+	// Token: 0x04003BD2 RID: 15314
 	DialogueWindow_Closed,
-	// Token: 0x04002B6C RID: 11116
+	// Token: 0x04003BD3 RID: 15315
 	PlayerCardWindow_Opened,
-	// Token: 0x04002B6D RID: 11117
+	// Token: 0x04003BD4 RID: 15316
 	PlayerCardWindow_Closed,
-	// Token: 0x04002B6E RID: 11118
+	// Token: 0x04003BD5 RID: 15317
 	PlayerDeathWindow_Opened,
-	// Token: 0x04002B6F RID: 11119
+	// Token: 0x04003BD6 RID: 15318
 	PlayerDeathWindow_Closed,
-	// Token: 0x04002B70 RID: 11120
+	// Token: 0x04003BD7 RID: 15319
 	OmniUI_UpdateState,
-	// Token: 0x04002B71 RID: 11121
+	// Token: 0x04003BD8 RID: 15320
 	OmniUI_UpdateDescription,
-	// Token: 0x04002B72 RID: 11122
+	// Token: 0x04003BD9 RID: 15321
 	PauseWindow_Opened,
-	// Token: 0x04002B73 RID: 11123
+	// Token: 0x04003BDA RID: 15322
 	PauseWindow_Closed,
-	// Token: 0x04002B74 RID: 11124
+	// Token: 0x04003BDB RID: 15323
 	DisplayObjectiveCompleteHUD,
-	// Token: 0x04002B75 RID: 11125
+	// Token: 0x04003BDC RID: 15324
 	DisplayPlayerHUD,
-	// Token: 0x04002B76 RID: 11126
+	// Token: 0x04003BDD RID: 15325
 	HidePlayerHUD,
-	// Token: 0x04002B77 RID: 11127
+	// Token: 0x04003BDE RID: 15326
 	HideEnemyHUD,
-	// Token: 0x04002B78 RID: 11128
+	// Token: 0x04003BDF RID: 15327
 	UpdatePurchaseBoxDialogue,
-	// Token: 0x04002B79 RID: 11129
+	// Token: 0x04003BE0 RID: 15328
 	ChallengeNPC_Menu_Opened,
-	// Token: 0x04002B7A RID: 11130
+	// Token: 0x04003BE1 RID: 15329
 	ChallengeNPC_Menu_Closed,
-	// Token: 0x04002B7B RID: 11131
+	// Token: 0x04003BE2 RID: 15330
 	ChallengeNPC_EnterChallenge,
-	// Token: 0x04002B7C RID: 11132
+	// Token: 0x04003BE3 RID: 15331
 	ChallengeNPC_ExitChallenge,
-	// Token: 0x04002B7D RID: 11133
+	// Token: 0x04003BE4 RID: 15332
 	DisplayGlobalTimer,
-	// Token: 0x04002B7E RID: 11134
+	// Token: 0x04003BE5 RID: 15333
 	HideGlobalTimer,
-	// Token: 0x04002B7F RID: 11135
+	// Token: 0x04003BE6 RID: 15334
 	StartGlobalTimer,
-	// Token: 0x04002B80 RID: 11136
+	// Token: 0x04003BE7 RID: 15335
 	StopGlobalTimer,
-	// Token: 0x04002B81 RID: 11137
+	// Token: 0x04003BE8 RID: 15336
 	ResetGlobalTimer,
-	// Token: 0x04002B82 RID: 11138
+	// Token: 0x04003BE9 RID: 15337
 	ForceNowEntering,
-	// Token: 0x04002B83 RID: 11139
+	// Token: 0x04003BEA RID: 15338
 	LanguageChanged
 }

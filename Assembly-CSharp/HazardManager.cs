@@ -5,12 +5,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x0200069A RID: 1690
+// Token: 0x02000B2C RID: 2860
 public class HazardManager : MonoBehaviour
 {
-	// Token: 0x1700154A RID: 5450
-	// (get) Token: 0x06003DAA RID: 15786 RVA: 0x000D7086 File Offset: 0x000D5286
-	// (set) Token: 0x06003DAB RID: 15787 RVA: 0x000D708D File Offset: 0x000D528D
+	// Token: 0x17001D26 RID: 7462
+	// (get) Token: 0x06005671 RID: 22129 RVA: 0x0002EFE5 File Offset: 0x0002D1E5
+	// (set) Token: 0x06005672 RID: 22130 RVA: 0x0002EFEC File Offset: 0x0002D1EC
 	private static HazardManager Instance
 	{
 		get
@@ -23,12 +23,12 @@ public class HazardManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700154B RID: 5451
-	// (get) Token: 0x06003DAC RID: 15788 RVA: 0x000D7095 File Offset: 0x000D5295
-	// (set) Token: 0x06003DAD RID: 15789 RVA: 0x000D709C File Offset: 0x000D529C
+	// Token: 0x17001D27 RID: 7463
+	// (get) Token: 0x06005673 RID: 22131 RVA: 0x0002EFF4 File Offset: 0x0002D1F4
+	// (set) Token: 0x06005674 RID: 22132 RVA: 0x0002EFFB File Offset: 0x0002D1FB
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06003DAE RID: 15790 RVA: 0x000D70A4 File Offset: 0x000D52A4
+	// Token: 0x06005675 RID: 22133 RVA: 0x00147748 File Offset: 0x00145948
 	private void Awake()
 	{
 		if (!HazardManager.Instance)
@@ -42,7 +42,7 @@ public class HazardManager : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06003DAF RID: 15791 RVA: 0x000D70F0 File Offset: 0x000D52F0
+	// Token: 0x06005676 RID: 22134 RVA: 0x0002F003 File Offset: 0x0002D203
 	private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
 		if (HazardManager.IsInitialized)
@@ -51,7 +51,7 @@ public class HazardManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DB0 RID: 15792 RVA: 0x000D7100 File Offset: 0x000D5300
+	// Token: 0x06005677 RID: 22135 RVA: 0x00147794 File Offset: 0x00145994
 	private void OnDestroy()
 	{
 		HazardManager.DestroyPools();
@@ -68,7 +68,7 @@ public class HazardManager : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_refreshCullingGroup);
 	}
 
-	// Token: 0x06003DB1 RID: 15793 RVA: 0x000D7180 File Offset: 0x000D5380
+	// Token: 0x06005678 RID: 22136 RVA: 0x0002F011 File Offset: 0x0002D211
 	private void Initialize()
 	{
 		HazardManager.m_hazardTable = new Dictionary<HazardType, GenericPool_RL<Hazard>>();
@@ -76,7 +76,7 @@ public class HazardManager : MonoBehaviour
 		HazardManager.IsInitialized = true;
 	}
 
-	// Token: 0x06003DB2 RID: 15794 RVA: 0x000D71A4 File Offset: 0x000D53A4
+	// Token: 0x06005679 RID: 22137 RVA: 0x0002F035 File Offset: 0x0002D235
 	private IEnumerator Start()
 	{
 		while (!CameraController.IsInstantiated)
@@ -87,7 +87,7 @@ public class HazardManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003DB3 RID: 15795 RVA: 0x000D71B4 File Offset: 0x000D53B4
+	// Token: 0x0600567A RID: 22138 RVA: 0x00147814 File Offset: 0x00145A14
 	private void InitializeCullingGroup()
 	{
 		this.m_cullingGroup = new CullingGroup();
@@ -104,7 +104,7 @@ public class HazardManager : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_refreshCullingGroup);
 	}
 
-	// Token: 0x06003DB4 RID: 15796 RVA: 0x000D7268 File Offset: 0x000D5468
+	// Token: 0x0600567B RID: 22139 RVA: 0x001478C8 File Offset: 0x00145AC8
 	private void RefreshCullingGroup(object sender, EventArgs args)
 	{
 		BaseRoom currentPlayerRoom = PlayerManager.GetCurrentPlayerRoom();
@@ -130,7 +130,7 @@ public class HazardManager : MonoBehaviour
 		base.StartCoroutine(this.UpdateStartingCullStatesCoroutine());
 	}
 
-	// Token: 0x06003DB5 RID: 15797 RVA: 0x000D7362 File Offset: 0x000D5562
+	// Token: 0x0600567C RID: 22140 RVA: 0x0002F044 File Offset: 0x0002D244
 	private IEnumerator UpdateStartingCullStatesCoroutine()
 	{
 		yield return null;
@@ -144,7 +144,7 @@ public class HazardManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003DB6 RID: 15798 RVA: 0x000D7374 File Offset: 0x000D5574
+	// Token: 0x0600567D RID: 22141 RVA: 0x001479C4 File Offset: 0x00145BC4
 	private void CullingSphereStateChanged(CullingGroupEvent evt)
 	{
 		if (this.m_cullingHazardList.Count > evt.index)
@@ -166,7 +166,7 @@ public class HazardManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DB7 RID: 15799 RVA: 0x000D73D0 File Offset: 0x000D55D0
+	// Token: 0x0600567E RID: 22142 RVA: 0x00147A20 File Offset: 0x00145C20
 	private void Internal_CreateBiomePools(BiomeType biomeType)
 	{
 		Dictionary<HazardType, int> dictionary = new Dictionary<HazardType, int>();
@@ -313,7 +313,7 @@ public class HazardManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DB8 RID: 15800 RVA: 0x000D7830 File Offset: 0x000D5A30
+	// Token: 0x0600567F RID: 22143 RVA: 0x00147E80 File Offset: 0x00146080
 	private GenericPool_RL<Hazard> CreatePool(Hazard prefab, int poolSize)
 	{
 		if (!prefab)
@@ -332,7 +332,7 @@ public class HazardManager : MonoBehaviour
 		return genericPool_RL;
 	}
 
-	// Token: 0x06003DB9 RID: 15801 RVA: 0x000D786C File Offset: 0x000D5A6C
+	// Token: 0x06005680 RID: 22144 RVA: 0x0002F053 File Offset: 0x0002D253
 	public static IHazard GetHazard(HazardType hazardType)
 	{
 		if (HazardManager.m_hazardTable.ContainsKey(hazardType))
@@ -346,7 +346,7 @@ public class HazardManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003DBA RID: 15802 RVA: 0x000D78A8 File Offset: 0x000D5AA8
+	// Token: 0x06005681 RID: 22145 RVA: 0x00147EBC File Offset: 0x001460BC
 	public static void DestroyPools()
 	{
 		foreach (KeyValuePair<HazardType, GenericPool_RL<Hazard>> keyValuePair in HazardManager.m_hazardTable)
@@ -356,13 +356,13 @@ public class HazardManager : MonoBehaviour
 		HazardManager.m_hazardTable.Clear();
 	}
 
-	// Token: 0x06003DBB RID: 15803 RVA: 0x000D790C File Offset: 0x000D5B0C
+	// Token: 0x06005682 RID: 22146 RVA: 0x0002F08D File Offset: 0x0002D28D
 	public static void CreateBiomePools(BiomeType biome)
 	{
 		HazardManager.Instance.Internal_CreateBiomePools(biome);
 	}
 
-	// Token: 0x06003DBC RID: 15804 RVA: 0x000D791C File Offset: 0x000D5B1C
+	// Token: 0x06005683 RID: 22147 RVA: 0x00147F20 File Offset: 0x00146120
 	public static void DisableAllHazards()
 	{
 		foreach (KeyValuePair<HazardType, GenericPool_RL<Hazard>> keyValuePair in HazardManager.m_hazardTable)
@@ -371,31 +371,31 @@ public class HazardManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002DFE RID: 11774
+	// Token: 0x04003FF2 RID: 16370
 	private const int CULLING_GROUP_SIZE = 100;
 
-	// Token: 0x04002DFF RID: 11775
+	// Token: 0x04003FF3 RID: 16371
 	[SerializeField]
 	private int m_poolSize = 5;
 
-	// Token: 0x04002E00 RID: 11776
+	// Token: 0x04003FF4 RID: 16372
 	private static HazardManager m_instance;
 
-	// Token: 0x04002E01 RID: 11777
+	// Token: 0x04003FF5 RID: 16373
 	private static Dictionary<HazardType, GenericPool_RL<Hazard>> m_hazardTable;
 
-	// Token: 0x04002E02 RID: 11778
+	// Token: 0x04003FF6 RID: 16374
 	private CullingGroup m_cullingGroup;
 
-	// Token: 0x04002E03 RID: 11779
+	// Token: 0x04003FF7 RID: 16375
 	private BoundingSphere[] m_cullingSpheres;
 
-	// Token: 0x04002E04 RID: 11780
+	// Token: 0x04003FF8 RID: 16376
 	private List<IHazard> m_cullingHazardList = new List<IHazard>();
 
-	// Token: 0x04002E05 RID: 11781
+	// Token: 0x04003FF9 RID: 16377
 	private Action<MonoBehaviour, EventArgs> m_refreshCullingGroup;
 
-	// Token: 0x04002E06 RID: 11782
+	// Token: 0x04003FFA RID: 16378
 	public const string RESOURCES_PATH = "Prefabs/Managers/HazardManager";
 }

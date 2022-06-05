@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004C5 RID: 1221
+// Token: 0x020007E4 RID: 2020
 public class IcePlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitResponse, ITerrainOnExitHitResponse
 {
-	// Token: 0x06002D59 RID: 11609 RVA: 0x00099850 File Offset: 0x00097A50
+	// Token: 0x06003E2F RID: 15919 RVA: 0x00022678 File Offset: 0x00020878
 	protected override IEnumerator Start()
 	{
 		yield return base.Start();
@@ -22,7 +22,7 @@ public class IcePlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRespo
 		yield break;
 	}
 
-	// Token: 0x06002D5A RID: 11610 RVA: 0x0009985F File Offset: 0x00097A5F
+	// Token: 0x06003E30 RID: 15920 RVA: 0x00022687 File Offset: 0x00020887
 	public void TerrainOnStayHitResponse(IHitboxController otherHBController)
 	{
 		if (otherHBController.RootGameObject.CompareTag("Player"))
@@ -31,7 +31,7 @@ public class IcePlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x06002D5B RID: 11611 RVA: 0x0009987E File Offset: 0x00097A7E
+	// Token: 0x06003E31 RID: 15921 RVA: 0x000226A6 File Offset: 0x000208A6
 	public void TerrainOnExitHitResponse(IHitboxController otherHBController)
 	{
 		if (otherHBController.RootGameObject.CompareTag("Player"))
@@ -40,14 +40,14 @@ public class IcePlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x06002D5C RID: 11612 RVA: 0x0009989D File Offset: 0x00097A9D
+	// Token: 0x06003E32 RID: 15922 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void SetState(StateID state)
 	{
 	}
 
-	// Token: 0x0400245F RID: 9311
+	// Token: 0x040030DD RID: 12509
 	protected BoxCollider2D m_terrainCollider;
 
-	// Token: 0x04002460 RID: 9312
+	// Token: 0x040030DE RID: 12510
 	protected BoxCollider2D m_platformCollider;
 }

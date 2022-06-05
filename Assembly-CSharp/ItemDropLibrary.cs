@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000239 RID: 569
+// Token: 0x020003F6 RID: 1014
 [CreateAssetMenu(menuName = "Custom/Libraries/Item Drop Library")]
 public class ItemDropLibrary : ScriptableObject
 {
-	// Token: 0x17000B37 RID: 2871
-	// (get) Token: 0x060016EA RID: 5866 RVA: 0x00047AFB File Offset: 0x00045CFB
+	// Token: 0x17000E64 RID: 3684
+	// (get) Token: 0x0600209D RID: 8349 RVA: 0x00011428 File Offset: 0x0000F628
 	public static List<ItemDropEntry> ItemDropEntryList
 	{
 		get
@@ -16,8 +16,8 @@ public class ItemDropLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B38 RID: 2872
-	// (get) Token: 0x060016EB RID: 5867 RVA: 0x00047B07 File Offset: 0x00045D07
+	// Token: 0x17000E65 RID: 3685
+	// (get) Token: 0x0600209E RID: 8350 RVA: 0x00011434 File Offset: 0x0000F634
 	public static ItemDropLibrary Instance
 	{
 		get
@@ -30,13 +30,13 @@ public class ItemDropLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x04001672 RID: 5746
+	// Token: 0x04001D8A RID: 7562
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/ItemDropLibrary";
 
-	// Token: 0x04001673 RID: 5747
+	// Token: 0x04001D8B RID: 7563
 	[SerializeField]
 	private List<ItemDropEntry> m_itemDropEntryList = new List<ItemDropEntry>();
 
-	// Token: 0x04001674 RID: 5748
+	// Token: 0x04001D8C RID: 7564
 	private static ItemDropLibrary m_instance;
 }

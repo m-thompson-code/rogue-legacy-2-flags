@@ -7,11 +7,11 @@ using UnityEngine.Serialization;
 
 namespace RLAudio
 {
-	// Token: 0x020008ED RID: 2285
+	// Token: 0x02000E62 RID: 3682
 	public class DialogWindowAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001853 RID: 6227
-		// (get) Token: 0x06004B15 RID: 19221 RVA: 0x0010E149 File Offset: 0x0010C349
+		// Token: 0x1700213C RID: 8508
+		// (get) Token: 0x060067E0 RID: 26592 RVA: 0x000396B2 File Offset: 0x000378B2
 		public string Description
 		{
 			get
@@ -24,7 +24,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B16 RID: 19222 RVA: 0x0010E170 File Offset: 0x0010C370
+		// Token: 0x060067E1 RID: 26593 RVA: 0x0017E4B0 File Offset: 0x0017C6B0
 		private void Awake()
 		{
 			DialogueWindowController component = base.GetComponent<DialogueWindowController>();
@@ -37,7 +37,7 @@ namespace RLAudio
 			this.m_writeLineEventInstance = AudioUtility.GetEventInstance(this.m_writeTextEventPath, base.transform);
 		}
 
-		// Token: 0x06004B17 RID: 19223 RVA: 0x0010E22D File Offset: 0x0010C42D
+		// Token: 0x060067E2 RID: 26594 RVA: 0x000396D8 File Offset: 0x000378D8
 		private void OnDestroy()
 		{
 			if (this.m_writeLineEventInstance.isValid())
@@ -46,27 +46,27 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B18 RID: 19224 RVA: 0x0010E248 File Offset: 0x0010C448
+		// Token: 0x060067E3 RID: 26595 RVA: 0x0017E570 File Offset: 0x0017C770
 		private void OnWindowOpened()
 		{
 			AudioManager.PlayOneShot(this, this.m_windowOpenedEventPath, default(Vector3));
 			this.m_isFirstPage = true;
 		}
 
-		// Token: 0x06004B19 RID: 19225 RVA: 0x0010E274 File Offset: 0x0010C474
+		// Token: 0x060067E4 RID: 26596 RVA: 0x0017E59C File Offset: 0x0017C79C
 		private void OnWindowClosed()
 		{
 			AudioManager.PlayOneShot(this, this.m_windowClosedEventPath, default(Vector3));
 			this.StopWriteTextAudio();
 		}
 
-		// Token: 0x06004B1A RID: 19226 RVA: 0x0010E29C File Offset: 0x0010C49C
+		// Token: 0x060067E5 RID: 26597 RVA: 0x000396F3 File Offset: 0x000378F3
 		private void OnWriteCharacter()
 		{
 			this.PlayWriteTextAudio();
 		}
 
-		// Token: 0x06004B1B RID: 19227 RVA: 0x0010E2A4 File Offset: 0x0010C4A4
+		// Token: 0x060067E6 RID: 26598 RVA: 0x000396FB File Offset: 0x000378FB
 		private void PlayWriteTextAudio()
 		{
 			if (!this.m_isPlayingWriteLineAudio)
@@ -76,14 +76,14 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B1C RID: 19228 RVA: 0x0010E2C4 File Offset: 0x0010C4C4
+		// Token: 0x060067E7 RID: 26599 RVA: 0x0017E5C4 File Offset: 0x0017C7C4
 		private void OnWritePunctuation()
 		{
 			this.StopWriteTextAudio();
 			AudioManager.PlayOneShot(this, this.m_writePunctuationEventPath, default(Vector3));
 		}
 
-		// Token: 0x06004B1D RID: 19229 RVA: 0x0010E2EC File Offset: 0x0010C4EC
+		// Token: 0x060067E8 RID: 26600 RVA: 0x00039718 File Offset: 0x00037918
 		private void StopWriteTextAudio()
 		{
 			if (this.m_isPlayingWriteLineAudio)
@@ -93,7 +93,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B1E RID: 19230 RVA: 0x0010E30C File Offset: 0x0010C50C
+		// Token: 0x060067E9 RID: 26601 RVA: 0x0017E5EC File Offset: 0x0017C7EC
 		private void OnNextPage()
 		{
 			if (this.m_isFirstPage)
@@ -108,56 +108,56 @@ namespace RLAudio
 			this.PlayWriteTextAudio();
 		}
 
-		// Token: 0x06004B1F RID: 19231 RVA: 0x0010E34C File Offset: 0x0010C54C
+		// Token: 0x060067EA RID: 26602 RVA: 0x0017E62C File Offset: 0x0017C82C
 		private void OnWritePageComplete()
 		{
 			AudioManager.PlayOneShot(this, this.m_completeEventPath, default(Vector3));
 			this.StopWriteTextAudio();
 		}
 
-		// Token: 0x04003F18 RID: 16152
+		// Token: 0x04005452 RID: 21586
 		[SerializeField]
 		[EventRef]
 		private string m_windowOpenedEventPath;
 
-		// Token: 0x04003F19 RID: 16153
+		// Token: 0x04005453 RID: 21587
 		[SerializeField]
 		[EventRef]
 		private string m_windowClosedEventPath;
 
-		// Token: 0x04003F1A RID: 16154
+		// Token: 0x04005454 RID: 21588
 		[SerializeField]
 		[EventRef]
 		[FormerlySerializedAs("m_writeLineEventPath")]
 		private string m_writeTextEventPath;
 
-		// Token: 0x04003F1B RID: 16155
+		// Token: 0x04005455 RID: 21589
 		[SerializeField]
 		[EventRef]
 		[FormerlySerializedAs("m_writeCharacterEventPath")]
 		private string m_writePunctuationEventPath;
 
-		// Token: 0x04003F1C RID: 16156
+		// Token: 0x04005456 RID: 21590
 		[SerializeField]
 		[EventRef]
 		[FormerlySerializedAs("m_writeCharacterEventPath")]
 		private string m_playerInputToNextPageEventPath;
 
-		// Token: 0x04003F1D RID: 16157
+		// Token: 0x04005457 RID: 21591
 		[SerializeField]
 		[EventRef]
 		private string m_completeEventPath;
 
-		// Token: 0x04003F1E RID: 16158
+		// Token: 0x04005458 RID: 21592
 		private EventInstance m_writeLineEventInstance;
 
-		// Token: 0x04003F1F RID: 16159
+		// Token: 0x04005459 RID: 21593
 		private string m_description = string.Empty;
 
-		// Token: 0x04003F20 RID: 16160
+		// Token: 0x0400545A RID: 21594
 		private bool m_isPlayingWriteLineAudio;
 
-		// Token: 0x04003F21 RID: 16161
+		// Token: 0x0400545B RID: 21595
 		private bool m_isFirstPage = true;
 	}
 }

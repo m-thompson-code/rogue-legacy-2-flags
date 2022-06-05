@@ -4,11 +4,11 @@ using Sigtrap.Relays;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003D7 RID: 983
+// Token: 0x02000673 RID: 1651
 public class PlayerDeathRankTextController : MonoBehaviour
 {
-	// Token: 0x17000ECB RID: 3787
-	// (get) Token: 0x06002422 RID: 9250 RVA: 0x00077258 File Offset: 0x00075458
+	// Token: 0x17001362 RID: 4962
+	// (get) Token: 0x06003246 RID: 12870 RVA: 0x0001B979 File Offset: 0x00019B79
 	public TMP_Text CounterText
 	{
 		get
@@ -17,8 +17,8 @@ public class PlayerDeathRankTextController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000ECC RID: 3788
-	// (get) Token: 0x06002423 RID: 9251 RVA: 0x00077260 File Offset: 0x00075460
+	// Token: 0x17001363 RID: 4963
+	// (get) Token: 0x06003247 RID: 12871 RVA: 0x0001B981 File Offset: 0x00019B81
 	public TMP_Text Text
 	{
 		get
@@ -27,12 +27,12 @@ public class PlayerDeathRankTextController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000ECD RID: 3789
-	// (get) Token: 0x06002424 RID: 9252 RVA: 0x00077268 File Offset: 0x00075468
-	// (set) Token: 0x06002425 RID: 9253 RVA: 0x00077270 File Offset: 0x00075470
+	// Token: 0x17001364 RID: 4964
+	// (get) Token: 0x06003248 RID: 12872 RVA: 0x0001B989 File Offset: 0x00019B89
+	// (set) Token: 0x06003249 RID: 12873 RVA: 0x0001B991 File Offset: 0x00019B91
 	public bool IsComplete { get; private set; }
 
-	// Token: 0x06002426 RID: 9254 RVA: 0x0007727C File Offset: 0x0007547C
+	// Token: 0x0600324A RID: 12874 RVA: 0x000D70BC File Offset: 0x000D52BC
 	public void UpdateMessage()
 	{
 		ClassType classType = SaveManager.PlayerSaveData.CurrentCharacter.ClassType;
@@ -56,7 +56,7 @@ public class PlayerDeathRankTextController : MonoBehaviour
 		this.m_rankCounterText.text = classXP.ToString() + "/" + num.ToString();
 	}
 
-	// Token: 0x06002427 RID: 9255 RVA: 0x000773AB File Offset: 0x000755AB
+	// Token: 0x0600324B RID: 12875 RVA: 0x0001B99A File Offset: 0x00019B9A
 	public void StartTally()
 	{
 		this.IsComplete = false;
@@ -64,7 +64,7 @@ public class PlayerDeathRankTextController : MonoBehaviour
 		base.StartCoroutine(this.RankCoroutineV2());
 	}
 
-	// Token: 0x06002428 RID: 9256 RVA: 0x000773C8 File Offset: 0x000755C8
+	// Token: 0x0600324C RID: 12876 RVA: 0x0001B9B7 File Offset: 0x00019BB7
 	private IEnumerator RankCoroutineV2()
 	{
 		this.IsComplete = false;
@@ -124,7 +124,7 @@ public class PlayerDeathRankTextController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002429 RID: 9257 RVA: 0x000773D8 File Offset: 0x000755D8
+	// Token: 0x0600324D RID: 12877 RVA: 0x000D71EC File Offset: 0x000D53EC
 	private void RankComplete()
 	{
 		this.IsComplete = true;
@@ -151,7 +151,7 @@ public class PlayerDeathRankTextController : MonoBehaviour
 		this.m_rankText.text = string.Format(LocalizationManager.GetString("LOC_ID_RANK_RANK_FORMATTER_1", false, false), arg, classMasteryRank);
 	}
 
-	// Token: 0x0600242A RID: 9258 RVA: 0x0007750C File Offset: 0x0007570C
+	// Token: 0x0600324E RID: 12878 RVA: 0x000D7320 File Offset: 0x000D5520
 	private void RankUpAnim(int numRanks)
 	{
 		Vector3 localScale = this.m_rankText.transform.localScale;
@@ -184,7 +184,7 @@ public class PlayerDeathRankTextController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600242B RID: 9259 RVA: 0x000776B4 File Offset: 0x000758B4
+	// Token: 0x0600324F RID: 12879 RVA: 0x000D74C8 File Offset: 0x000D56C8
 	private void DisplayRankUpText(int numRanks)
 	{
 		string text = LocalizationManager.GetString("LOC_ID_RANK_RANK_UP_1", false, false) + "\n";
@@ -223,7 +223,7 @@ public class PlayerDeathRankTextController : MonoBehaviour
 		TextPopupManager.DisplayTextAtAbsPos(TextPopupType.PlayerRankUp, text, this.m_rankText.transform.position, null, TextAlignmentOptions.Center);
 	}
 
-	// Token: 0x0600242C RID: 9260 RVA: 0x000777E0 File Offset: 0x000759E0
+	// Token: 0x06003250 RID: 12880 RVA: 0x000D75F4 File Offset: 0x000D57F4
 	public void SkipTally()
 	{
 		if (!this.IsComplete && this.m_tallyStarted)
@@ -236,7 +236,7 @@ public class PlayerDeathRankTextController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600242D RID: 9261 RVA: 0x00077834 File Offset: 0x00075A34
+	// Token: 0x06003251 RID: 12881 RVA: 0x000D7648 File Offset: 0x000D5848
 	private void ApplyXPToSaveFile()
 	{
 		ClassType classType = SaveManager.PlayerSaveData.CurrentCharacter.ClassType;
@@ -248,29 +248,29 @@ public class PlayerDeathRankTextController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001E9E RID: 7838
+	// Token: 0x04002903 RID: 10499
 	[SerializeField]
 	private TMP_Text m_rankText;
 
-	// Token: 0x04001E9F RID: 7839
+	// Token: 0x04002904 RID: 10500
 	[SerializeField]
 	private TMP_Text m_rankCounterText;
 
-	// Token: 0x04001EA0 RID: 7840
+	// Token: 0x04002905 RID: 10501
 	private int m_currentRank;
 
-	// Token: 0x04001EA1 RID: 7841
+	// Token: 0x04002906 RID: 10502
 	private bool m_tallyStarted;
 
-	// Token: 0x04001EA2 RID: 7842
+	// Token: 0x04002907 RID: 10503
 	public Relay<int, int> XPGainedRelay = new Relay<int, int>();
 
-	// Token: 0x04001EA3 RID: 7843
+	// Token: 0x04002908 RID: 10504
 	public Relay<int> LevelGainedRelay = new Relay<int>();
 
-	// Token: 0x04001EA4 RID: 7844
+	// Token: 0x04002909 RID: 10505
 	public Relay XPGainStartRelay = new Relay();
 
-	// Token: 0x04001EA5 RID: 7845
+	// Token: 0x0400290A RID: 10506
 	public Relay XPGainCompleteRelay = new Relay();
 }

@@ -10,11 +10,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000593 RID: 1427
+// Token: 0x02000992 RID: 2450
 public class SkillTreeWindowController : WindowController, ILocalizable
 {
-	// Token: 0x170012E5 RID: 4837
-	// (get) Token: 0x06003595 RID: 13717 RVA: 0x000BA298 File Offset: 0x000B8498
+	// Token: 0x17001A04 RID: 6660
+	// (get) Token: 0x06004B7D RID: 19325 RVA: 0x00029605 File Offset: 0x00027805
 	public int SkillCount
 	{
 		get
@@ -23,8 +23,8 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x170012E6 RID: 4838
-	// (get) Token: 0x06003596 RID: 13718 RVA: 0x000BA2A5 File Offset: 0x000B84A5
+	// Token: 0x17001A05 RID: 6661
+	// (get) Token: 0x06004B7E RID: 19326 RVA: 0x00029612 File Offset: 0x00027812
 	public HashSet<SkillTreeType> AvailableSkills
 	{
 		get
@@ -33,8 +33,8 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x170012E7 RID: 4839
-	// (get) Token: 0x06003597 RID: 13719 RVA: 0x000BA2AD File Offset: 0x000B84AD
+	// Token: 0x17001A06 RID: 6662
+	// (get) Token: 0x06004B7F RID: 19327 RVA: 0x0002961A File Offset: 0x0002781A
 	public GameObject SkillTreeCastleParentObj
 	{
 		get
@@ -43,8 +43,8 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x170012E8 RID: 4840
-	// (get) Token: 0x06003598 RID: 13720 RVA: 0x000BA2B5 File Offset: 0x000B84B5
+	// Token: 0x17001A07 RID: 6663
+	// (get) Token: 0x06004B80 RID: 19328 RVA: 0x000047A4 File Offset: 0x000029A4
 	public override WindowID ID
 	{
 		get
@@ -53,9 +53,9 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x170012E9 RID: 4841
-	// (get) Token: 0x06003599 RID: 13721 RVA: 0x000BA2B8 File Offset: 0x000B84B8
-	// (set) Token: 0x0600359A RID: 13722 RVA: 0x000BA2C0 File Offset: 0x000B84C0
+	// Token: 0x17001A08 RID: 6664
+	// (get) Token: 0x06004B81 RID: 19329 RVA: 0x00029622 File Offset: 0x00027822
+	// (set) Token: 0x06004B82 RID: 19330 RVA: 0x0002962A File Offset: 0x0002782A
 	public Animator CastleAnimator
 	{
 		get
@@ -68,7 +68,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600359B RID: 13723 RVA: 0x000BA2CC File Offset: 0x000B84CC
+	// Token: 0x06004B83 RID: 19331 RVA: 0x00127E2C File Offset: 0x0012602C
 	private void Awake()
 	{
 		this.m_onHighlightedSkillChanged = new Action<MonoBehaviour, EventArgs>(this.OnHighlightedSkillChanged);
@@ -81,7 +81,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		this.m_onPurchaseMultipleButtonPressed = new Action<InputActionEventData>(this.OnPurchaseMultipleButtonPressed);
 	}
 
-	// Token: 0x0600359C RID: 13724 RVA: 0x000BA36C File Offset: 0x000B856C
+	// Token: 0x06004B84 RID: 19332 RVA: 0x00127ECC File Offset: 0x001260CC
 	public override void Initialize()
 	{
 		this.m_standaloneInputModule = UnityEngine.Object.FindObjectOfType<RewiredStandaloneInputModule>();
@@ -137,7 +137,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		base.Initialize();
 	}
 
-	// Token: 0x0600359D RID: 13725 RVA: 0x000BA534 File Offset: 0x000B8734
+	// Token: 0x06004B85 RID: 19333 RVA: 0x00029633 File Offset: 0x00027833
 	protected override void OnFocus()
 	{
 		this.m_infoPlateIcon.sprite = IconLibrary.GetSkillTreeIcon(this.m_selectedSkillTreeButton.SkillTreeType);
@@ -146,23 +146,23 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		this.AddListeners();
 	}
 
-	// Token: 0x0600359E RID: 13726 RVA: 0x000BA574 File Offset: 0x000B8774
+	// Token: 0x06004B86 RID: 19334 RVA: 0x00029673 File Offset: 0x00027873
 	protected override void OnLostFocus()
 	{
 		this.RemoveListeners();
 	}
 
-	// Token: 0x0600359F RID: 13727 RVA: 0x000BA57C File Offset: 0x000B877C
+	// Token: 0x06004B87 RID: 19335 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnPause()
 	{
 	}
 
-	// Token: 0x060035A0 RID: 13728 RVA: 0x000BA57E File Offset: 0x000B877E
+	// Token: 0x06004B88 RID: 19336 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnUnpause()
 	{
 	}
 
-	// Token: 0x060035A1 RID: 13729 RVA: 0x000BA580 File Offset: 0x000B8780
+	// Token: 0x06004B89 RID: 19337 RVA: 0x00128094 File Offset: 0x00126294
 	private void SetTraitsVisible(bool visible)
 	{
 		foreach (BaseTrait baseTrait in TraitManager.ActiveTraitList)
@@ -182,7 +182,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035A2 RID: 13730 RVA: 0x000BA600 File Offset: 0x000B8800
+	// Token: 0x06004B8A RID: 19338 RVA: 0x00128114 File Offset: 0x00126314
 	public void EnableGardenTransitionState(bool enableTransitionState)
 	{
 		this.m_transitionStateEnabled = enableTransitionState;
@@ -197,7 +197,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		this.m_shopSignRectTransform.gameObject.SetActive(!enableTransitionState);
 	}
 
-	// Token: 0x060035A3 RID: 13731 RVA: 0x000BA6C4 File Offset: 0x000B88C4
+	// Token: 0x06004B8B RID: 19339 RVA: 0x001281D8 File Offset: 0x001263D8
 	protected override void OnOpen()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -265,7 +265,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035A4 RID: 13732 RVA: 0x000BA978 File Offset: 0x000B8B78
+	// Token: 0x06004B8C RID: 19340 RVA: 0x0012848C File Offset: 0x0012668C
 	public bool HasAllSkills()
 	{
 		bool result = true;
@@ -283,7 +283,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		return result;
 	}
 
-	// Token: 0x060035A5 RID: 13733 RVA: 0x000BA9D4 File Offset: 0x000B8BD4
+	// Token: 0x06004B8D RID: 19341 RVA: 0x001284E8 File Offset: 0x001266E8
 	private void StopAllStatusEffects()
 	{
 		BaseRoom currentPlayerRoom = PlayerManager.GetCurrentPlayerRoom();
@@ -299,7 +299,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035A6 RID: 13734 RVA: 0x000BAA2C File Offset: 0x000B8C2C
+	// Token: 0x06004B8E RID: 19342 RVA: 0x00128540 File Offset: 0x00126740
 	private void UpdateLabourCosts()
 	{
 		if (SkillTreeManager.GetTotalSkillObjLevel() > 20)
@@ -319,14 +319,14 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035A7 RID: 13735 RVA: 0x000BAABC File Offset: 0x000B8CBC
+	// Token: 0x06004B8F RID: 19343 RVA: 0x001285D0 File Offset: 0x001267D0
 	private void UpdateLevelText()
 	{
 		int totalSkillObjLevel = SkillTreeManager.GetTotalSkillObjLevel();
 		this.m_levelText.text = string.Format(LocalizationManager.GetString("LOC_ID_HUD_TITLE_CHARACTER_LEVEL_1", false, false), totalSkillObjLevel.ToString());
 	}
 
-	// Token: 0x060035A8 RID: 13736 RVA: 0x000BAAF4 File Offset: 0x000B8CF4
+	// Token: 0x06004B90 RID: 19344 RVA: 0x00128608 File Offset: 0x00126808
 	private void UpdateShopSign()
 	{
 		if (this.m_transitionStateEnabled)
@@ -396,7 +396,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035A9 RID: 13737 RVA: 0x000BAC90 File Offset: 0x000B8E90
+	// Token: 0x06004B91 RID: 19345 RVA: 0x0002967B File Offset: 0x0002787B
 	private IEnumerator ReparentSkillTreeToSky()
 	{
 		this.m_skyIsReparenting = true;
@@ -424,7 +424,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x060035AA RID: 13738 RVA: 0x000BACA0 File Offset: 0x000B8EA0
+	// Token: 0x06004B92 RID: 19346 RVA: 0x001287A4 File Offset: 0x001269A4
 	protected override void OnClose()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -447,7 +447,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		SaveManager.PlayerSaveData.UpdateCachedData();
 	}
 
-	// Token: 0x060035AB RID: 13739 RVA: 0x000BAD74 File Offset: 0x000B8F74
+	// Token: 0x06004B93 RID: 19347 RVA: 0x00128878 File Offset: 0x00126A78
 	private void AddListeners()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.SkillTree_HighlightedSkillChanged, this.m_onHighlightedSkillChanged);
@@ -458,7 +458,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onPurchaseMultipleButtonPressed, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_X");
 	}
 
-	// Token: 0x060035AC RID: 13740 RVA: 0x000BADFC File Offset: 0x000B8FFC
+	// Token: 0x06004B94 RID: 19348 RVA: 0x00128900 File Offset: 0x00126B00
 	private void RemoveListeners()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.SkillTree_HighlightedSkillChanged, this.m_onHighlightedSkillChanged);
@@ -469,7 +469,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onPurchaseMultipleButtonPressed, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_X");
 	}
 
-	// Token: 0x060035AD RID: 13741 RVA: 0x000BAE84 File Offset: 0x000B9084
+	// Token: 0x06004B95 RID: 19349 RVA: 0x00128988 File Offset: 0x00126B88
 	private void OnHighlightedSkillChanged(MonoBehaviour sender, EventArgs args)
 	{
 		HighlightedSkillChangedEventArgs highlightedSkillChangedEventArgs = args as HighlightedSkillChangedEventArgs;
@@ -495,7 +495,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035AE RID: 13742 RVA: 0x000BAF1C File Offset: 0x000B911C
+	// Token: 0x06004B96 RID: 19350 RVA: 0x00128A20 File Offset: 0x00126C20
 	private void OnToggleCastleViewPressed(InputActionEventData eventData)
 	{
 		SkillTreeWindowController.CastleViewEnabled = !SkillTreeWindowController.CastleViewEnabled;
@@ -518,7 +518,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		this.m_descriptionBoxCanvasGroup.alpha = 0f;
 	}
 
-	// Token: 0x060035AF RID: 13743 RVA: 0x000BB028 File Offset: 0x000B9228
+	// Token: 0x06004B97 RID: 19351 RVA: 0x0002968A File Offset: 0x0002788A
 	private void OnPurchaseButtonPressed(InputActionEventData eventData)
 	{
 		if (eventData.IsCurrentInputSource(ControllerType.Mouse))
@@ -532,7 +532,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		this.m_selectedSkillTreeButton.PurchaseSkillUpgrade(1);
 	}
 
-	// Token: 0x060035B0 RID: 13744 RVA: 0x000BB049 File Offset: 0x000B9249
+	// Token: 0x06004B98 RID: 19352 RVA: 0x000296AB File Offset: 0x000278AB
 	private void OnPurchaseMultipleButtonPressed(InputActionEventData eventData)
 	{
 		if (eventData.IsCurrentInputSource(ControllerType.Mouse))
@@ -546,7 +546,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		this.m_selectedSkillTreeButton.PurchaseSkillUpgrade(5);
 	}
 
-	// Token: 0x060035B1 RID: 13745 RVA: 0x000BB06C File Offset: 0x000B926C
+	// Token: 0x06004B99 RID: 19353 RVA: 0x00128B2C File Offset: 0x00126D2C
 	private void OnSkillLevelChanged(object sender, EventArgs args)
 	{
 		if (args == null)
@@ -589,7 +589,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035B2 RID: 13746 RVA: 0x000BB14C File Offset: 0x000B934C
+	// Token: 0x06004B9A RID: 19354 RVA: 0x00128C0C File Offset: 0x00126E0C
 	private void RunPurchaseAnim(SkillTreeSlot slot)
 	{
 		BaseEffect baseEffect = EffectManager.PlayEffect(slot.gameObject, null, "Purchase_Effect", Vector3.zero, 0f, EffectStopType.Gracefully, EffectTriggerDirection.None);
@@ -612,7 +612,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		});
 	}
 
-	// Token: 0x060035B3 RID: 13747 RVA: 0x000BB24B File Offset: 0x000B944B
+	// Token: 0x06004B9B RID: 19355 RVA: 0x000296CC File Offset: 0x000278CC
 	private IEnumerator AnimateBGImageCoroutine(SkillTreeSlot changedSkillSlot)
 	{
 		EffectTriggerAnimBehaviour.DISABLE_GLOBALLY = false;
@@ -648,7 +648,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x060035B4 RID: 13748 RVA: 0x000BB261 File Offset: 0x000B9461
+	// Token: 0x06004B9C RID: 19356 RVA: 0x000296E2 File Offset: 0x000278E2
 	private void OnCancelButtonPressed(InputActionEventData eventData)
 	{
 		if (!this.m_skyIsReparenting)
@@ -657,7 +657,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035B5 RID: 13749 RVA: 0x000BB273 File Offset: 0x000B9473
+	// Token: 0x06004B9D RID: 19357 RVA: 0x000296F4 File Offset: 0x000278F4
 	private IEnumerator DisplaySkillTreePopUp(SkillTreeType skillTreeType, SkillTreeSlot changedSkillSlot)
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.SkillTreePopUp))
@@ -715,7 +715,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x060035B6 RID: 13750 RVA: 0x000BB290 File Offset: 0x000B9490
+	// Token: 0x06004B9E RID: 19358 RVA: 0x00029711 File Offset: 0x00027911
 	private IEnumerator UnlockLabourCostAnimCoroutine()
 	{
 		if (!SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.LabourCostsUnlocked) && SkillTreeManager.GetTotalSkillObjLevel() > 20)
@@ -736,7 +736,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x060035B7 RID: 13751 RVA: 0x000BB2A0 File Offset: 0x000B94A0
+	// Token: 0x06004B9F RID: 19359 RVA: 0x00128D0C File Offset: 0x00126F0C
 	private void RunFarShoresResetWarning()
 	{
 		if (SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.PlayFarShoresWarning))
@@ -759,7 +759,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035B8 RID: 13752 RVA: 0x000BB348 File Offset: 0x000B9548
+	// Token: 0x06004BA0 RID: 19360 RVA: 0x00128DB4 File Offset: 0x00126FB4
 	private void RunArcaneHallowsResetWarning()
 	{
 		if (SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.PlayArcaneHallowsWarning))
@@ -782,7 +782,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035B9 RID: 13753 RVA: 0x000BB3F0 File Offset: 0x000B95F0
+	// Token: 0x06004BA1 RID: 19361 RVA: 0x00128E5C File Offset: 0x0012705C
 	private void RunDriftingWorldsResetWarning()
 	{
 		if (SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.PlayDriftingWorldsWarning))
@@ -805,7 +805,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035BA RID: 13754 RVA: 0x000BB498 File Offset: 0x000B9698
+	// Token: 0x06004BA2 RID: 19362 RVA: 0x00128F04 File Offset: 0x00127104
 	private void RunPizzaMundiResetWarning()
 	{
 		if (SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.PlayPizzaMundiWarning))
@@ -828,7 +828,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035BB RID: 13755 RVA: 0x000BB540 File Offset: 0x000B9740
+	// Token: 0x06004BA3 RID: 19363 RVA: 0x00128FAC File Offset: 0x001271AC
 	private void RunDragonsVowResetWarning()
 	{
 		if (SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.PlayDragonsVowWarning))
@@ -851,13 +851,13 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035BC RID: 13756 RVA: 0x000BB5E8 File Offset: 0x000B97E8
+	// Token: 0x06004BA4 RID: 19364 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelResetWarning()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x060035BD RID: 13757 RVA: 0x000BB5F4 File Offset: 0x000B97F4
+	// Token: 0x06004BA5 RID: 19365 RVA: 0x00129054 File Offset: 0x00127254
 	private void RefreshAllButtons(bool updateAnimParams)
 	{
 		foreach (KeyValuePair<SkillTreeType, SkillTreeSlot> keyValuePair in this.m_skillTreeButtonDict)
@@ -871,7 +871,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035BE RID: 13758 RVA: 0x000BB684 File Offset: 0x000B9884
+	// Token: 0x06004BA6 RID: 19366 RVA: 0x001290E4 File Offset: 0x001272E4
 	public void ForceUpdateSkillTreeAnimatorParams()
 	{
 		foreach (KeyValuePair<SkillTreeType, SkillTreeSlot> keyValuePair in this.m_skillTreeButtonDict)
@@ -883,7 +883,7 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060035BF RID: 13759 RVA: 0x000BB6EC File Offset: 0x000B98EC
+	// Token: 0x06004BA7 RID: 19367 RVA: 0x0012914C File Offset: 0x0012734C
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.UpdateLevelText();
@@ -895,111 +895,111 @@ public class SkillTreeWindowController : WindowController, ILocalizable
 		this.m_affordableItemsText.text = LocalizationManager.GetString("LOC_ID_SKILL_TREE_UI_SIGN_BUY_DOCKS_1", SaveManager.PlayerSaveData.CurrentCharacter.IsFemale, false);
 	}
 
-	// Token: 0x040029D5 RID: 10709
+	// Token: 0x040039B1 RID: 14769
 	public const int MULTIPLE_PURCHASE_COUNT = 5;
 
-	// Token: 0x040029D6 RID: 10710
+	// Token: 0x040039B2 RID: 14770
 	[SerializeField]
 	private SkillTreeSlot m_startingHighlightedButton;
 
-	// Token: 0x040029D7 RID: 10711
+	// Token: 0x040039B3 RID: 14771
 	[SerializeField]
 	private Image m_infoPlateIcon;
 
-	// Token: 0x040029D8 RID: 10712
+	// Token: 0x040039B4 RID: 14772
 	[SerializeField]
 	private GameObject m_castleParentObj;
 
-	// Token: 0x040029D9 RID: 10713
+	// Token: 0x040039B5 RID: 14773
 	[SerializeField]
 	private Animator m_castleAnimator;
 
-	// Token: 0x040029DA RID: 10714
+	// Token: 0x040039B6 RID: 14774
 	[SerializeField]
 	private CanvasGroup m_skillTreeIconsCanvasGroup;
 
-	// Token: 0x040029DB RID: 10715
+	// Token: 0x040039B7 RID: 14775
 	[SerializeField]
 	private CanvasGroup m_descriptionBoxCanvasGroup;
 
-	// Token: 0x040029DC RID: 10716
+	// Token: 0x040039B8 RID: 14776
 	[SerializeField]
 	private RectTransform m_shopSignRectTransform;
 
-	// Token: 0x040029DD RID: 10717
+	// Token: 0x040039B9 RID: 14777
 	[SerializeField]
 	private GameObject m_labourCostGO;
 
-	// Token: 0x040029DE RID: 10718
+	// Token: 0x040039BA RID: 14778
 	[SerializeField]
 	private TMP_Text m_labourCostText;
 
-	// Token: 0x040029DF RID: 10719
+	// Token: 0x040039BB RID: 14779
 	[SerializeField]
 	private TMP_Text m_levelText;
 
-	// Token: 0x040029E0 RID: 10720
+	// Token: 0x040039BC RID: 14780
 	[SerializeField]
 	private TMP_Text m_affordableItemsText;
 
-	// Token: 0x040029E1 RID: 10721
+	// Token: 0x040039BD RID: 14781
 	[SerializeField]
 	private GameObject m_navigationObj;
 
-	// Token: 0x040029E2 RID: 10722
+	// Token: 0x040039BE RID: 14782
 	private SkillTreeSlot m_selectedSkillTreeButton;
 
-	// Token: 0x040029E3 RID: 10723
+	// Token: 0x040039BF RID: 14783
 	private Dictionary<SkillTreeType, SkillTreeSlot> m_skillTreeButtonDict;
 
-	// Token: 0x040029E4 RID: 10724
+	// Token: 0x040039C0 RID: 14784
 	private RewiredStandaloneInputModule m_standaloneInputModule;
 
-	// Token: 0x040029E5 RID: 10725
+	// Token: 0x040039C1 RID: 14785
 	private Vector2 m_shopSignStartingPos;
 
-	// Token: 0x040029E6 RID: 10726
+	// Token: 0x040039C2 RID: 14786
 	private bool m_shopSignDisplayed;
 
-	// Token: 0x040029E7 RID: 10727
+	// Token: 0x040039C3 RID: 14787
 	private Coroutine m_currentAnimCoroutine;
 
-	// Token: 0x040029E8 RID: 10728
+	// Token: 0x040039C4 RID: 14788
 	private bool m_skyIsReparenting;
 
-	// Token: 0x040029E9 RID: 10729
+	// Token: 0x040039C5 RID: 14789
 	private bool m_transitionStateEnabled;
 
-	// Token: 0x040029EA RID: 10730
+	// Token: 0x040039C6 RID: 14790
 	private HashSet<SkillTreeType> m_availableSkillsSet;
 
-	// Token: 0x040029EB RID: 10731
+	// Token: 0x040039C7 RID: 14791
 	private Action<MonoBehaviour, EventArgs> m_onHighlightedSkillChanged;
 
-	// Token: 0x040029EC RID: 10732
+	// Token: 0x040039C8 RID: 14792
 	private Action<MonoBehaviour, EventArgs> m_onSkillLevelChanged;
 
-	// Token: 0x040029ED RID: 10733
+	// Token: 0x040039C9 RID: 14793
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x040029EE RID: 10734
+	// Token: 0x040039CA RID: 14794
 	private Action m_cancelResetWarning;
 
-	// Token: 0x040029EF RID: 10735
+	// Token: 0x040039CB RID: 14795
 	private Action<InputActionEventData> m_onCancelButtonPressed;
 
-	// Token: 0x040029F0 RID: 10736
+	// Token: 0x040039CC RID: 14796
 	private Action<InputActionEventData> m_onPurchaseButtonPressed;
 
-	// Token: 0x040029F1 RID: 10737
+	// Token: 0x040039CD RID: 14797
 	private Action<InputActionEventData> m_onToggleCastleViewPressed;
 
-	// Token: 0x040029F2 RID: 10738
+	// Token: 0x040039CE RID: 14798
 	private Action<InputActionEventData> m_onPurchaseMultipleButtonPressed;
 
-	// Token: 0x040029F3 RID: 10739
+	// Token: 0x040039CF RID: 14799
 	public static bool CastleViewEnabled;
 
-	// Token: 0x040029F4 RID: 10740
+	// Token: 0x040039D0 RID: 14800
 	private Tween m_purchaseTween;
 }

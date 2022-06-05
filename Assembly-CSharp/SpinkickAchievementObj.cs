@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200055D RID: 1373
+// Token: 0x02000928 RID: 2344
 public class SpinkickAchievementObj : MonoBehaviour
 {
 }

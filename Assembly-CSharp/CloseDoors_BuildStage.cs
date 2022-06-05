@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000660 RID: 1632
+// Token: 0x02000ABA RID: 2746
 public class CloseDoors_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B2A RID: 15146 RVA: 0x000CB70F File Offset: 0x000C990F
+	// Token: 0x060052C5 RID: 21189 RVA: 0x0002D100 File Offset: 0x0002B300
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		if (biomeController.StandaloneRooms != null)

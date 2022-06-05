@@ -4,11 +4,11 @@ using Rooms;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x0200064A RID: 1610
+// Token: 0x02000A79 RID: 2681
 public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawnController
 {
-	// Token: 0x17001483 RID: 5251
-	// (get) Token: 0x06003A25 RID: 14885 RVA: 0x000C5892 File Offset: 0x000C3A92
+	// Token: 0x17001BEA RID: 7146
+	// (get) Token: 0x0600510A RID: 20746 RVA: 0x0002C42F File Offset: 0x0002A62F
 	public TransitionID TransitionType
 	{
 		get
@@ -17,8 +17,8 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x17001484 RID: 5252
-	// (get) Token: 0x06003A26 RID: 14886 RVA: 0x000C589A File Offset: 0x000C3A9A
+	// Token: 0x17001BEB RID: 7147
+	// (get) Token: 0x0600510B RID: 20747 RVA: 0x0002C437 File Offset: 0x0002A637
 	public GameObject TunnelPrefabOverride
 	{
 		get
@@ -27,13 +27,13 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x17001485 RID: 5253
-	// (get) Token: 0x06003A27 RID: 14887 RVA: 0x000C58A2 File Offset: 0x000C3AA2
-	// (set) Token: 0x06003A28 RID: 14888 RVA: 0x000C58AA File Offset: 0x000C3AAA
+	// Token: 0x17001BEC RID: 7148
+	// (get) Token: 0x0600510C RID: 20748 RVA: 0x0002C43F File Offset: 0x0002A63F
+	// (set) Token: 0x0600510D RID: 20749 RVA: 0x0002C447 File Offset: 0x0002A647
 	public Room DestinationRoomPrefab { get; private set; }
 
-	// Token: 0x17001486 RID: 5254
-	// (get) Token: 0x06003A29 RID: 14889 RVA: 0x000C58B3 File Offset: 0x000C3AB3
+	// Token: 0x17001BED RID: 7149
+	// (get) Token: 0x0600510E RID: 20750 RVA: 0x00003713 File Offset: 0x00001913
 	public GameObject GameObject
 	{
 		get
@@ -42,13 +42,13 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x17001487 RID: 5255
-	// (get) Token: 0x06003A2A RID: 14890 RVA: 0x000C58BB File Offset: 0x000C3ABB
-	// (set) Token: 0x06003A2B RID: 14891 RVA: 0x000C58C3 File Offset: 0x000C3AC3
+	// Token: 0x17001BEE RID: 7150
+	// (get) Token: 0x0600510F RID: 20751 RVA: 0x0002C450 File Offset: 0x0002A650
+	// (set) Token: 0x06005110 RID: 20752 RVA: 0x0002C458 File Offset: 0x0002A658
 	public bool HasBeenSpawned { get; private set; }
 
-	// Token: 0x17001488 RID: 5256
-	// (get) Token: 0x06003A2C RID: 14892 RVA: 0x000C58CC File Offset: 0x000C3ACC
+	// Token: 0x17001BEF RID: 7151
+	// (get) Token: 0x06005111 RID: 20753 RVA: 0x0002C461 File Offset: 0x0002A661
 	public bool ShouldSpawn
 	{
 		get
@@ -57,9 +57,9 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x17001489 RID: 5257
-	// (get) Token: 0x06003A2D RID: 14893 RVA: 0x000C58E8 File Offset: 0x000C3AE8
-	// (set) Token: 0x06003A2E RID: 14894 RVA: 0x000C58F0 File Offset: 0x000C3AF0
+	// Token: 0x17001BF0 RID: 7152
+	// (get) Token: 0x06005112 RID: 20754 RVA: 0x0002C47D File Offset: 0x0002A67D
+	// (set) Token: 0x06005113 RID: 20755 RVA: 0x0002C485 File Offset: 0x0002A685
 	public int Index
 	{
 		get
@@ -75,8 +75,8 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x1700148A RID: 5258
-	// (get) Token: 0x06003A2F RID: 14895 RVA: 0x000C5900 File Offset: 0x000C3B00
+	// Token: 0x17001BF1 RID: 7153
+	// (get) Token: 0x06005114 RID: 20756 RVA: 0x00133710 File Offset: 0x00131910
 	public RoomType LeadsToRoomType
 	{
 		get
@@ -108,8 +108,8 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x1700148B RID: 5259
-	// (get) Token: 0x06003A30 RID: 14896 RVA: 0x000C593E File Offset: 0x000C3B3E
+	// Token: 0x17001BF2 RID: 7154
+	// (get) Token: 0x06005115 RID: 20757 RVA: 0x0002C495 File Offset: 0x0002A695
 	public bool IsLocked
 	{
 		get
@@ -118,8 +118,8 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x1700148C RID: 5260
-	// (get) Token: 0x06003A31 RID: 14897 RVA: 0x000C5946 File Offset: 0x000C3B46
+	// Token: 0x17001BF3 RID: 7155
+	// (get) Token: 0x06005116 RID: 20758 RVA: 0x0002C49D File Offset: 0x0002A69D
 	public BaseRoom Room
 	{
 		get
@@ -128,8 +128,8 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x1700148D RID: 5261
-	// (get) Token: 0x06003A32 RID: 14898 RVA: 0x000C594E File Offset: 0x000C3B4E
+	// Token: 0x17001BF4 RID: 7156
+	// (get) Token: 0x06005117 RID: 20759 RVA: 0x0002C4A5 File Offset: 0x0002A6A5
 	public SpawnLogicController SpawnLogicController
 	{
 		get
@@ -138,14 +138,14 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x1700148E RID: 5262
-	// (get) Token: 0x06003A33 RID: 14899 RVA: 0x000C5956 File Offset: 0x000C3B56
-	// (set) Token: 0x06003A34 RID: 14900 RVA: 0x000C595E File Offset: 0x000C3B5E
+	// Token: 0x17001BF5 RID: 7157
+	// (get) Token: 0x06005118 RID: 20760 RVA: 0x0002C4AD File Offset: 0x0002A6AD
+	// (set) Token: 0x06005119 RID: 20761 RVA: 0x0002C4B5 File Offset: 0x0002A6B5
 	public Tunnel Tunnel { get; private set; }
 
-	// Token: 0x1700148F RID: 5263
-	// (get) Token: 0x06003A35 RID: 14901 RVA: 0x000C5967 File Offset: 0x000C3B67
-	// (set) Token: 0x06003A36 RID: 14902 RVA: 0x000C596F File Offset: 0x000C3B6F
+	// Token: 0x17001BF6 RID: 7158
+	// (get) Token: 0x0600511A RID: 20762 RVA: 0x0002C4BE File Offset: 0x0002A6BE
+	// (set) Token: 0x0600511B RID: 20763 RVA: 0x0002C4C6 File Offset: 0x0002A6C6
 	public TunnelCategory Category
 	{
 		get
@@ -161,9 +161,9 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x17001490 RID: 5264
-	// (get) Token: 0x06003A37 RID: 14903 RVA: 0x000C597F File Offset: 0x000C3B7F
-	// (set) Token: 0x06003A38 RID: 14904 RVA: 0x000C5987 File Offset: 0x000C3B87
+	// Token: 0x17001BF7 RID: 7159
+	// (get) Token: 0x0600511C RID: 20764 RVA: 0x0002C4D6 File Offset: 0x0002A6D6
+	// (set) Token: 0x0600511D RID: 20765 RVA: 0x0002C4DE File Offset: 0x0002A6DE
 	public TunnelDirection Direction
 	{
 		get
@@ -176,9 +176,9 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x17001491 RID: 5265
-	// (get) Token: 0x06003A39 RID: 14905 RVA: 0x000C5990 File Offset: 0x000C3B90
-	// (set) Token: 0x06003A3A RID: 14906 RVA: 0x000C5998 File Offset: 0x000C3B98
+	// Token: 0x17001BF8 RID: 7160
+	// (get) Token: 0x0600511E RID: 20766 RVA: 0x0002C4E7 File Offset: 0x0002A6E7
+	// (set) Token: 0x0600511F RID: 20767 RVA: 0x0002C4EF File Offset: 0x0002A6EF
 	public RoomMetaData[] DestinationRoomPrefabsOverride
 	{
 		get
@@ -194,8 +194,8 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x17001492 RID: 5266
-	// (get) Token: 0x06003A3B RID: 14907 RVA: 0x000C59A8 File Offset: 0x000C3BA8
+	// Token: 0x17001BF9 RID: 7161
+	// (get) Token: 0x06005120 RID: 20768 RVA: 0x0002C4FF File Offset: 0x0002A6FF
 	public bool IsDestinationRoot
 	{
 		get
@@ -204,8 +204,8 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x17001493 RID: 5267
-	// (get) Token: 0x06003A3C RID: 14908 RVA: 0x000C59B0 File Offset: 0x000C3BB0
+	// Token: 0x17001BFA RID: 7162
+	// (get) Token: 0x06005121 RID: 20769 RVA: 0x0002C507 File Offset: 0x0002A707
 	public bool ShowTunnel
 	{
 		get
@@ -214,9 +214,9 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x17001494 RID: 5268
-	// (get) Token: 0x06003A3D RID: 14909 RVA: 0x000C59B8 File Offset: 0x000C3BB8
-	// (set) Token: 0x06003A3E RID: 14910 RVA: 0x000C59C0 File Offset: 0x000C3BC0
+	// Token: 0x17001BFB RID: 7163
+	// (get) Token: 0x06005122 RID: 20770 RVA: 0x0002C50F File Offset: 0x0002A70F
+	// (set) Token: 0x06005123 RID: 20771 RVA: 0x0002C517 File Offset: 0x0002A717
 	public RoomMetaData RoomMetaData
 	{
 		get
@@ -229,7 +229,7 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x06003A3F RID: 14911 RVA: 0x000C59CC File Offset: 0x000C3BCC
+	// Token: 0x06005124 RID: 20772 RVA: 0x00133750 File Offset: 0x00131950
 	private RoomMetaData GetRandomRoomMetaData(RoomMetaData[] rooms)
 	{
 		if (rooms == null)
@@ -257,13 +257,13 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		return null;
 	}
 
-	// Token: 0x06003A40 RID: 14912 RVA: 0x000C5A2B File Offset: 0x000C3C2B
+	// Token: 0x06005125 RID: 20773 RVA: 0x0002C520 File Offset: 0x0002A720
 	public void SetRoom(BaseRoom room)
 	{
 		this.m_room = room;
 	}
 
-	// Token: 0x06003A41 RID: 14913 RVA: 0x000C5A34 File Offset: 0x000C3C34
+	// Token: 0x06005126 RID: 20774 RVA: 0x001337B0 File Offset: 0x001319B0
 	public void SetTunnelInstance(Tunnel instance)
 	{
 		this.Tunnel = instance;
@@ -283,7 +283,7 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x06003A42 RID: 14914 RVA: 0x000C5AF8 File Offset: 0x000C3CF8
+	// Token: 0x06005127 RID: 20775 RVA: 0x00133874 File Offset: 0x00131A74
 	public bool Spawn()
 	{
 		bool result = false;
@@ -314,7 +314,7 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		return result;
 	}
 
-	// Token: 0x06003A43 RID: 14915 RVA: 0x000C5BD8 File Offset: 0x000C3DD8
+	// Token: 0x06005128 RID: 20776 RVA: 0x0002C529 File Offset: 0x0002A729
 	public void SetDestinationRoomPrefab(RoomMetaData roomMetaData)
 	{
 		if (roomMetaData)
@@ -324,69 +324,69 @@ public class TunnelSpawnController : MonoBehaviour, ISimpleSpawnController, ISpa
 		}
 	}
 
-	// Token: 0x06003A45 RID: 14917 RVA: 0x000C5C14 File Offset: 0x000C3E14
+	// Token: 0x0600512A RID: 20778 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISpawnController.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002C98 RID: 11416
+	// Token: 0x04003D2E RID: 15662
 	[SerializeField]
 	private TunnelDirection m_tunnelType = TunnelDirection.Entrance;
 
-	// Token: 0x04002C99 RID: 11417
+	// Token: 0x04003D2F RID: 15663
 	[SerializeField]
 	private TransitionID m_transitionType = TransitionID.QuickSwipe;
 
-	// Token: 0x04002C9A RID: 11418
+	// Token: 0x04003D30 RID: 15664
 	[SerializeField]
 	private SpawnLogicController m_spawnLogicController;
 
-	// Token: 0x04002C9B RID: 11419
+	// Token: 0x04003D31 RID: 15665
 	[SerializeField]
 	private GameObject m_prefab;
 
-	// Token: 0x04002C9C RID: 11420
+	// Token: 0x04003D32 RID: 15666
 	[SerializeField]
 	private RoomMetaData[] m_destinationRoomPrefabsOverride;
 
-	// Token: 0x04002C9D RID: 11421
+	// Token: 0x04003D33 RID: 15667
 	[SerializeField]
 	[ReadOnly]
 	private RoomID[] m_destinationRoomIds;
 
-	// Token: 0x04002C9E RID: 11422
+	// Token: 0x04003D34 RID: 15668
 	[SerializeField]
 	[Range(0f, 10f)]
 	private int m_index;
 
-	// Token: 0x04002C9F RID: 11423
+	// Token: 0x04003D35 RID: 15669
 	[SerializeField]
 	private TunnelCategory m_tunnelCategory;
 
-	// Token: 0x04002CA0 RID: 11424
+	// Token: 0x04003D36 RID: 15670
 	[SerializeField]
 	public TunnelSpawnControllerVisuals Visuals;
 
-	// Token: 0x04002CA1 RID: 11425
+	// Token: 0x04003D37 RID: 15671
 	[SerializeField]
 	private bool m_isLocked;
 
-	// Token: 0x04002CA2 RID: 11426
+	// Token: 0x04003D38 RID: 15672
 	[SerializeField]
 	private bool m_leadsToRoot;
 
-	// Token: 0x04002CA3 RID: 11427
+	// Token: 0x04003D39 RID: 15673
 	[SerializeField]
 	private bool m_showTunnel = true;
 
-	// Token: 0x04002CA4 RID: 11428
+	// Token: 0x04003D3A RID: 15674
 	[SerializeField]
 	private bool m_disableInteractIcon;
 
-	// Token: 0x04002CA5 RID: 11429
+	// Token: 0x04003D3B RID: 15675
 	private BaseRoom m_room;
 
-	// Token: 0x04002CA6 RID: 11430
+	// Token: 0x04003D3C RID: 15676
 	private RoomMetaData m_roomMetaData;
 }

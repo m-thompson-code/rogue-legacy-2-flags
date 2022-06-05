@@ -3,10 +3,10 @@ using System.Collections;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x020002C0 RID: 704
+// Token: 0x020004B1 RID: 1201
 public class RicochetCollision : MonoBehaviour, IWeaponOnEnterHitResponse, IHitResponse, ITerrainOnEnterHitResponse
 {
-	// Token: 0x06001C02 RID: 7170 RVA: 0x0005A514 File Offset: 0x00058714
+	// Token: 0x060026BE RID: 9918 RVA: 0x00015AF9 File Offset: 0x00013CF9
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(this.m_ricochetControlsLockoutDuration, false);
@@ -17,19 +17,19 @@ public class RicochetCollision : MonoBehaviour, IWeaponOnEnterHitResponse, IHitR
 		}
 	}
 
-	// Token: 0x06001C03 RID: 7171 RVA: 0x0005A554 File Offset: 0x00058754
+	// Token: 0x060026BF RID: 9919 RVA: 0x00015B39 File Offset: 0x00013D39
 	public void WeaponOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		this.Ricochet(otherHBController.gameObject);
 	}
 
-	// Token: 0x06001C04 RID: 7172 RVA: 0x0005A562 File Offset: 0x00058762
+	// Token: 0x060026C0 RID: 9920 RVA: 0x00015B39 File Offset: 0x00013D39
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		this.Ricochet(otherHBController.gameObject);
 	}
 
-	// Token: 0x06001C05 RID: 7173 RVA: 0x0005A570 File Offset: 0x00058770
+	// Token: 0x060026C1 RID: 9921 RVA: 0x000B6F38 File Offset: 0x000B5138
 	private void Ricochet(GameObject otherObj)
 	{
 		if (this.m_controlsLockoutCoroutine != null)
@@ -84,7 +84,7 @@ public class RicochetCollision : MonoBehaviour, IWeaponOnEnterHitResponse, IHitR
 		baseCharacterController.SetVelocity(-base_RICOCHET_DISTANCE.x, base_RICOCHET_DISTANCE.y, false);
 	}
 
-	// Token: 0x06001C06 RID: 7174 RVA: 0x0005A6FB File Offset: 0x000588FB
+	// Token: 0x060026C2 RID: 9922 RVA: 0x00015B47 File Offset: 0x00013D47
 	private IEnumerator LockoutControls(float duration, BaseCharacterController objToRicochet)
 	{
 		this.m_waitYield.CreateNew(duration, false);
@@ -96,42 +96,42 @@ public class RicochetCollision : MonoBehaviour, IWeaponOnEnterHitResponse, IHitR
 		yield break;
 	}
 
-	// Token: 0x04001980 RID: 6528
+	// Token: 0x04002172 RID: 8562
 	[SerializeField]
 	private RicochetCollision.KnockbackType m_knockbackType;
 
-	// Token: 0x04001981 RID: 6529
+	// Token: 0x04002173 RID: 8563
 	[SerializeField]
 	private bool m_ricochetMatchFacing;
 
-	// Token: 0x04001982 RID: 6530
+	// Token: 0x04002174 RID: 8564
 	[SerializeField]
 	private float m_ricochetControlsLockoutDuration;
 
-	// Token: 0x04001983 RID: 6531
+	// Token: 0x04002175 RID: 8565
 	[SerializeField]
 	private bool m_resetsPlayerJump;
 
-	// Token: 0x04001984 RID: 6532
+	// Token: 0x04002176 RID: 8566
 	private Projectile_RL m_projectile;
 
-	// Token: 0x04001985 RID: 6533
+	// Token: 0x04002177 RID: 8567
 	private BaseCharacterController m_charController;
 
-	// Token: 0x04001986 RID: 6534
+	// Token: 0x04002178 RID: 8568
 	private Coroutine m_controlsLockoutCoroutine;
 
-	// Token: 0x04001987 RID: 6535
+	// Token: 0x04002179 RID: 8569
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x02000B6A RID: 2922
+	// Token: 0x020004B2 RID: 1202
 	private enum KnockbackType
 	{
-		// Token: 0x04004C88 RID: 19592
+		// Token: 0x0400217B RID: 8571
 		Any,
-		// Token: 0x04004C89 RID: 19593
+		// Token: 0x0400217C RID: 8572
 		VerticalOnly,
-		// Token: 0x04004C8A RID: 19594
+		// Token: 0x0400217D RID: 8573
 		HorizontalOnly
 	}
 }

@@ -2,10 +2,10 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003E0 RID: 992
+// Token: 0x02000680 RID: 1664
 public class SeedPanelController : MonoBehaviour
 {
-	// Token: 0x0600248F RID: 9359 RVA: 0x00079C9C File Offset: 0x00077E9C
+	// Token: 0x060032CB RID: 13003 RVA: 0x000D9FA0 File Offset: 0x000D81A0
 	private void OnEnable()
 	{
 		if (SceneLoadingUtility.ActiveScene.name == SceneLoadingUtility.GetSceneName(SceneID.World))
@@ -17,7 +17,7 @@ public class SeedPanelController : MonoBehaviour
 		this.m_seedText.text = string.Empty;
 	}
 
-	// Token: 0x04001F16 RID: 7958
+	// Token: 0x0400298E RID: 10638
 	[SerializeField]
 	private TextMeshProUGUI m_seedText;
 }

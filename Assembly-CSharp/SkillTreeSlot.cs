@@ -11,16 +11,16 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Token: 0x020006F2 RID: 1778
+// Token: 0x02000BA1 RID: 2977
 public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHandler, ISelectHandler, IDeselectHandler, IPointerClickHandler
 {
-	// Token: 0x170015F8 RID: 5624
-	// (get) Token: 0x0600404A RID: 16458 RVA: 0x000E3FD2 File Offset: 0x000E21D2
-	// (set) Token: 0x0600404B RID: 16459 RVA: 0x000E3FDA File Offset: 0x000E21DA
+	// Token: 0x17001DF0 RID: 7664
+	// (get) Token: 0x06005987 RID: 22919 RVA: 0x00030CB0 File Offset: 0x0002EEB0
+	// (set) Token: 0x06005988 RID: 22920 RVA: 0x00030CB8 File Offset: 0x0002EEB8
 	public bool HasAnimated { get; private set; }
 
-	// Token: 0x170015F9 RID: 5625
-	// (get) Token: 0x0600404C RID: 16460 RVA: 0x000E3FE3 File Offset: 0x000E21E3
+	// Token: 0x17001DF1 RID: 7665
+	// (get) Token: 0x06005989 RID: 22921 RVA: 0x00030CC1 File Offset: 0x0002EEC1
 	public Vector3 StoredScale
 	{
 		get
@@ -29,8 +29,8 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x170015FA RID: 5626
-	// (get) Token: 0x0600404D RID: 16461 RVA: 0x000E3FEB File Offset: 0x000E21EB
+	// Token: 0x17001DF2 RID: 7666
+	// (get) Token: 0x0600598A RID: 22922 RVA: 0x00030CC9 File Offset: 0x0002EEC9
 	public bool HasAnimParam
 	{
 		get
@@ -39,14 +39,14 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x170015FB RID: 5627
-	// (get) Token: 0x0600404E RID: 16462 RVA: 0x000E3FFB File Offset: 0x000E21FB
-	// (set) Token: 0x0600404F RID: 16463 RVA: 0x000E4003 File Offset: 0x000E2203
+	// Token: 0x17001DF3 RID: 7667
+	// (get) Token: 0x0600598B RID: 22923 RVA: 0x00030CD9 File Offset: 0x0002EED9
+	// (set) Token: 0x0600598C RID: 22924 RVA: 0x00030CE1 File Offset: 0x0002EEE1
 	public int SlotIndex { get; private set; }
 
-	// Token: 0x170015FC RID: 5628
-	// (get) Token: 0x06004050 RID: 16464 RVA: 0x000E400C File Offset: 0x000E220C
-	// (set) Token: 0x06004051 RID: 16465 RVA: 0x000E4014 File Offset: 0x000E2214
+	// Token: 0x17001DF4 RID: 7668
+	// (get) Token: 0x0600598D RID: 22925 RVA: 0x00030CEA File Offset: 0x0002EEEA
+	// (set) Token: 0x0600598E RID: 22926 RVA: 0x00030CF2 File Offset: 0x0002EEF2
 	public SkillTreeType SkillTreeType
 	{
 		get
@@ -64,9 +64,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x170015FD RID: 5629
-	// (get) Token: 0x06004052 RID: 16466 RVA: 0x000E4031 File Offset: 0x000E2231
-	// (set) Token: 0x06004053 RID: 16467 RVA: 0x000E4039 File Offset: 0x000E2239
+	// Token: 0x17001DF5 RID: 7669
+	// (get) Token: 0x0600598F RID: 22927 RVA: 0x00030D0F File Offset: 0x0002EF0F
+	// (set) Token: 0x06005990 RID: 22928 RVA: 0x00030D17 File Offset: 0x0002EF17
 	public string BGAnimatorParam
 	{
 		get
@@ -79,9 +79,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x170015FE RID: 5630
-	// (get) Token: 0x06004054 RID: 16468 RVA: 0x000E4042 File Offset: 0x000E2242
-	// (set) Token: 0x06004055 RID: 16469 RVA: 0x000E404A File Offset: 0x000E224A
+	// Token: 0x17001DF6 RID: 7670
+	// (get) Token: 0x06005991 RID: 22929 RVA: 0x00030D20 File Offset: 0x0002EF20
+	// (set) Token: 0x06005992 RID: 22930 RVA: 0x00030D28 File Offset: 0x0002EF28
 	public SkillTreeSlot.SkillTreeAnimType AnimType
 	{
 		get
@@ -94,9 +94,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x170015FF RID: 5631
-	// (get) Token: 0x06004056 RID: 16470 RVA: 0x000E4053 File Offset: 0x000E2253
-	// (set) Token: 0x06004057 RID: 16471 RVA: 0x000E405B File Offset: 0x000E225B
+	// Token: 0x17001DF7 RID: 7671
+	// (get) Token: 0x06005993 RID: 22931 RVA: 0x00030D31 File Offset: 0x0002EF31
+	// (set) Token: 0x06005994 RID: 22932 RVA: 0x00030D39 File Offset: 0x0002EF39
 	public Vector2 AnimEffectOffset
 	{
 		get
@@ -109,8 +109,8 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x17001600 RID: 5632
-	// (get) Token: 0x06004058 RID: 16472 RVA: 0x000E4064 File Offset: 0x000E2264
+	// Token: 0x17001DF8 RID: 7672
+	// (get) Token: 0x06005995 RID: 22933 RVA: 0x00030D42 File Offset: 0x0002EF42
 	public bool HasData
 	{
 		get
@@ -119,9 +119,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x17001601 RID: 5633
-	// (get) Token: 0x06004059 RID: 16473 RVA: 0x000E406F File Offset: 0x000E226F
-	// (set) Token: 0x0600405A RID: 16474 RVA: 0x000E4077 File Offset: 0x000E2277
+	// Token: 0x17001DF9 RID: 7673
+	// (get) Token: 0x06005996 RID: 22934 RVA: 0x00030D4D File Offset: 0x0002EF4D
+	// (set) Token: 0x06005997 RID: 22935 RVA: 0x00030D55 File Offset: 0x0002EF55
 	public bool DisableTopNavigationNode
 	{
 		get
@@ -134,9 +134,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x17001602 RID: 5634
-	// (get) Token: 0x0600405B RID: 16475 RVA: 0x000E4080 File Offset: 0x000E2280
-	// (set) Token: 0x0600405C RID: 16476 RVA: 0x000E4088 File Offset: 0x000E2288
+	// Token: 0x17001DFA RID: 7674
+	// (get) Token: 0x06005998 RID: 22936 RVA: 0x00030D5E File Offset: 0x0002EF5E
+	// (set) Token: 0x06005999 RID: 22937 RVA: 0x00030D66 File Offset: 0x0002EF66
 	public bool DisableBottomNavigationNode
 	{
 		get
@@ -149,9 +149,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x17001603 RID: 5635
-	// (get) Token: 0x0600405D RID: 16477 RVA: 0x000E4091 File Offset: 0x000E2291
-	// (set) Token: 0x0600405E RID: 16478 RVA: 0x000E4099 File Offset: 0x000E2299
+	// Token: 0x17001DFB RID: 7675
+	// (get) Token: 0x0600599A RID: 22938 RVA: 0x00030D6F File Offset: 0x0002EF6F
+	// (set) Token: 0x0600599B RID: 22939 RVA: 0x00030D77 File Offset: 0x0002EF77
 	public bool DisableLeftNavigationNode
 	{
 		get
@@ -164,9 +164,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x17001604 RID: 5636
-	// (get) Token: 0x0600405F RID: 16479 RVA: 0x000E40A2 File Offset: 0x000E22A2
-	// (set) Token: 0x06004060 RID: 16480 RVA: 0x000E40AA File Offset: 0x000E22AA
+	// Token: 0x17001DFC RID: 7676
+	// (get) Token: 0x0600599C RID: 22940 RVA: 0x00030D80 File Offset: 0x0002EF80
+	// (set) Token: 0x0600599D RID: 22941 RVA: 0x00030D88 File Offset: 0x0002EF88
 	public bool DisableRightNavigationNode
 	{
 		get
@@ -179,9 +179,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x17001605 RID: 5637
-	// (get) Token: 0x06004061 RID: 16481 RVA: 0x000E40B3 File Offset: 0x000E22B3
-	// (set) Token: 0x06004062 RID: 16482 RVA: 0x000E40BB File Offset: 0x000E22BB
+	// Token: 0x17001DFD RID: 7677
+	// (get) Token: 0x0600599E RID: 22942 RVA: 0x00030D91 File Offset: 0x0002EF91
+	// (set) Token: 0x0600599F RID: 22943 RVA: 0x00030D99 File Offset: 0x0002EF99
 	public SkillTreeSlot TopNode
 	{
 		get
@@ -198,9 +198,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x17001606 RID: 5638
-	// (get) Token: 0x06004063 RID: 16483 RVA: 0x000E40D8 File Offset: 0x000E22D8
-	// (set) Token: 0x06004064 RID: 16484 RVA: 0x000E40E0 File Offset: 0x000E22E0
+	// Token: 0x17001DFE RID: 7678
+	// (get) Token: 0x060059A0 RID: 22944 RVA: 0x00030DB6 File Offset: 0x0002EFB6
+	// (set) Token: 0x060059A1 RID: 22945 RVA: 0x00030DBE File Offset: 0x0002EFBE
 	public SkillTreeSlot BottomNode
 	{
 		get
@@ -217,9 +217,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x17001607 RID: 5639
-	// (get) Token: 0x06004065 RID: 16485 RVA: 0x000E40FD File Offset: 0x000E22FD
-	// (set) Token: 0x06004066 RID: 16486 RVA: 0x000E4105 File Offset: 0x000E2305
+	// Token: 0x17001DFF RID: 7679
+	// (get) Token: 0x060059A2 RID: 22946 RVA: 0x00030DDB File Offset: 0x0002EFDB
+	// (set) Token: 0x060059A3 RID: 22947 RVA: 0x00030DE3 File Offset: 0x0002EFE3
 	public SkillTreeSlot LeftNode
 	{
 		get
@@ -236,9 +236,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x17001608 RID: 5640
-	// (get) Token: 0x06004067 RID: 16487 RVA: 0x000E4122 File Offset: 0x000E2322
-	// (set) Token: 0x06004068 RID: 16488 RVA: 0x000E412A File Offset: 0x000E232A
+	// Token: 0x17001E00 RID: 7680
+	// (get) Token: 0x060059A4 RID: 22948 RVA: 0x00030E00 File Offset: 0x0002F000
+	// (set) Token: 0x060059A5 RID: 22949 RVA: 0x00030E08 File Offset: 0x0002F008
 	public SkillTreeSlot RightNode
 	{
 		get
@@ -255,8 +255,8 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x17001609 RID: 5641
-	// (get) Token: 0x06004069 RID: 16489 RVA: 0x000E4147 File Offset: 0x000E2347
+	// Token: 0x17001E01 RID: 7681
+	// (get) Token: 0x060059A6 RID: 22950 RVA: 0x00030E25 File Offset: 0x0002F025
 	public Button Button
 	{
 		get
@@ -269,9 +269,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x1700160A RID: 5642
-	// (get) Token: 0x0600406A RID: 16490 RVA: 0x000E4169 File Offset: 0x000E2369
-	// (set) Token: 0x0600406B RID: 16491 RVA: 0x000E4171 File Offset: 0x000E2371
+	// Token: 0x17001E02 RID: 7682
+	// (get) Token: 0x060059A7 RID: 22951 RVA: 0x00030E47 File Offset: 0x0002F047
+	// (set) Token: 0x060059A8 RID: 22952 RVA: 0x00030E4F File Offset: 0x0002F04F
 	public List<SkillTreeSlot> UnlockSlotList
 	{
 		get
@@ -284,9 +284,9 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x1700160B RID: 5643
-	// (get) Token: 0x0600406C RID: 16492 RVA: 0x000E417A File Offset: 0x000E237A
-	// (set) Token: 0x0600406D RID: 16493 RVA: 0x000E4182 File Offset: 0x000E2382
+	// Token: 0x17001E03 RID: 7683
+	// (get) Token: 0x060059A9 RID: 22953 RVA: 0x00030E58 File Offset: 0x0002F058
+	// (set) Token: 0x060059AA RID: 22954 RVA: 0x00030E60 File Offset: 0x0002F060
 	public List<bool> UnlockSlotDisableList
 	{
 		get
@@ -299,12 +299,12 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x1700160C RID: 5644
-	// (get) Token: 0x0600406E RID: 16494 RVA: 0x000E418B File Offset: 0x000E238B
-	// (set) Token: 0x0600406F RID: 16495 RVA: 0x000E4193 File Offset: 0x000E2393
+	// Token: 0x17001E04 RID: 7684
+	// (get) Token: 0x060059AB RID: 22955 RVA: 0x00030E69 File Offset: 0x0002F069
+	// (set) Token: 0x060059AC RID: 22956 RVA: 0x00030E71 File Offset: 0x0002F071
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x06004070 RID: 16496 RVA: 0x000E419C File Offset: 0x000E239C
+	// Token: 0x060059AD RID: 22957 RVA: 0x00153628 File Offset: 0x00151828
 	public void Initialize(int slotIndex, Animator castleAnimator)
 	{
 		this.m_storedScale = base.transform.localScale;
@@ -324,7 +324,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x06004071 RID: 16497 RVA: 0x000E4238 File Offset: 0x000E2438
+	// Token: 0x060059AE RID: 22958 RVA: 0x001536C4 File Offset: 0x001518C4
 	public void UpdateSkillTreeType()
 	{
 		SkillTreeObj skillTreeObj = SkillTreeManager.GetSkillTreeObj(this.SkillTreeType);
@@ -354,7 +354,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		base.name = "SkillTreeSlot_" + this.SkillTreeType.ToString();
 	}
 
-	// Token: 0x06004072 RID: 16498 RVA: 0x000E42F0 File Offset: 0x000E24F0
+	// Token: 0x060059AF RID: 22959 RVA: 0x0015377C File Offset: 0x0015197C
 	public void PurchaseSkillUpgrade(int numLevels)
 	{
 		SkillTreeObj skillTreeObj = SkillTreeManager.GetSkillTreeObj(this.SkillTreeType);
@@ -415,7 +415,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		this.UpgradeFailedRelay.Dispatch();
 	}
 
-	// Token: 0x06004073 RID: 16499 RVA: 0x000E450D File Offset: 0x000E270D
+	// Token: 0x060059B0 RID: 22960 RVA: 0x00030E7A File Offset: 0x0002F07A
 	private IEnumerator ShakeAnimCoroutine()
 	{
 		base.transform.localScale = this.m_storedScale + new Vector3(0.1f, 0.1f, 0.1f);
@@ -452,7 +452,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		yield break;
 	}
 
-	// Token: 0x06004074 RID: 16500 RVA: 0x000E451C File Offset: 0x000E271C
+	// Token: 0x060059B1 RID: 22961 RVA: 0x00030E89 File Offset: 0x0002F089
 	public void OnPointerClick(PointerEventData eventData)
 	{
 		if (eventData.button == PointerEventData.InputButton.Left && !SkillTreeWindowController.CastleViewEnabled)
@@ -461,7 +461,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x06004075 RID: 16501 RVA: 0x000E4534 File Offset: 0x000E2734
+	// Token: 0x060059B2 RID: 22962 RVA: 0x00030EA1 File Offset: 0x0002F0A1
 	public void OnPointerEnter(PointerEventData eventData)
 	{
 		if (RewiredOnStartupController.CurrentActiveControllerType != ControllerType.Mouse)
@@ -474,7 +474,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x06004076 RID: 16502 RVA: 0x000E454D File Offset: 0x000E274D
+	// Token: 0x060059B3 RID: 22963 RVA: 0x00030EBA File Offset: 0x0002F0BA
 	public void OnSelect(BaseEventData eventData)
 	{
 		if (SkillTreeWindowController.CastleViewEnabled)
@@ -487,7 +487,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x06004077 RID: 16503 RVA: 0x000E4578 File Offset: 0x000E2778
+	// Token: 0x060059B4 RID: 22964 RVA: 0x0015399C File Offset: 0x00151B9C
 	public void Select(bool dispatchSelectedEvent = true)
 	{
 		if (this.m_selected)
@@ -527,7 +527,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x06004078 RID: 16504 RVA: 0x000E46B4 File Offset: 0x000E28B4
+	// Token: 0x060059B5 RID: 22965 RVA: 0x00153AD8 File Offset: 0x00151CD8
 	public void OnDeselect(BaseEventData eventData)
 	{
 		this.m_selected = false;
@@ -537,7 +537,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		base.transform.localEulerAngles = localEulerAngles;
 	}
 
-	// Token: 0x06004079 RID: 16505 RVA: 0x000E46F8 File Offset: 0x000E28F8
+	// Token: 0x060059B6 RID: 22966 RVA: 0x00030EE5 File Offset: 0x0002F0E5
 	private void OnDisable()
 	{
 		this.m_selected = false;
@@ -545,7 +545,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		this.m_alreadyUnlockedEventPlayed = false;
 	}
 
-	// Token: 0x0600407A RID: 16506 RVA: 0x000E4714 File Offset: 0x000E2914
+	// Token: 0x060059B7 RID: 22967 RVA: 0x00030F01 File Offset: 0x0002F101
 	public IEnumerator AnimateBGImage()
 	{
 		this.HasAnimated = true;
@@ -711,7 +711,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		yield break;
 	}
 
-	// Token: 0x0600407B RID: 16507 RVA: 0x000E4724 File Offset: 0x000E2924
+	// Token: 0x060059B8 RID: 22968 RVA: 0x00153B1C File Offset: 0x00151D1C
 	public void RefreshSlotState(bool updateAnimParams)
 	{
 		this.m_iconCanvasGroup.alpha = 1f;
@@ -766,7 +766,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x0600407C RID: 16508 RVA: 0x000E48D8 File Offset: 0x000E2AD8
+	// Token: 0x060059B9 RID: 22969 RVA: 0x00153CD0 File Offset: 0x00151ED0
 	public void UpdateAnimatorParams()
 	{
 		if (SkillTreeManager.GetSkillTreeObj(this.SkillTreeType).Level > 0)
@@ -787,7 +787,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x0600407D RID: 16509 RVA: 0x000E4950 File Offset: 0x000E2B50
+	// Token: 0x060059BA RID: 22970 RVA: 0x00153D48 File Offset: 0x00151F48
 	public void UnlockConnectedSkillSlots()
 	{
 		for (int i = 0; i < this.m_unlockSlotList.Count; i++)
@@ -806,7 +806,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		this.UpdateNavigationNodes();
 	}
 
-	// Token: 0x0600407E RID: 16510 RVA: 0x000E49C4 File Offset: 0x000E2BC4
+	// Token: 0x060059BB RID: 22971 RVA: 0x00153DBC File Offset: 0x00151FBC
 	public void UpdateNavigationNodes()
 	{
 		Navigation navigation = this.m_button.navigation;
@@ -837,7 +837,7 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		this.m_button.navigation = navigation;
 	}
 
-	// Token: 0x0600407F RID: 16511 RVA: 0x000E4A90 File Offset: 0x000E2C90
+	// Token: 0x060059BC RID: 22972 RVA: 0x00153E88 File Offset: 0x00152088
 	public SkillTreeSlot RecursiveNodeSearch(SkillTreeSlot.NodeDirection direction, int recursionCount)
 	{
 		recursionCount++;
@@ -876,248 +876,248 @@ public class SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		return result;
 	}
 
-	// Token: 0x0400318C RID: 12684
+	// Token: 0x040043E7 RID: 17383
 	private const string CAVE_APPEAR_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_digDeep";
 
-	// Token: 0x0400318D RID: 12685
+	// Token: 0x040043E8 RID: 17384
 	private const string FOUNDATION_APPEAR_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_buildFoundation";
 
-	// Token: 0x0400318E RID: 12686
+	// Token: 0x040043E9 RID: 17385
 	private const string TOWER_APPEAR_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_buildTower";
 
-	// Token: 0x0400318F RID: 12687
+	// Token: 0x040043EA RID: 17386
 	private const string WOODEN_APPEAR_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_wooden_structure";
 
-	// Token: 0x04003190 RID: 12688
+	// Token: 0x040043EB RID: 17387
 	private const string FOREST_APPEAR_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_tree_grow";
 
-	// Token: 0x04003191 RID: 12689
+	// Token: 0x040043EC RID: 17388
 	private const string FOREST_GROW_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_garden_expand";
 
-	// Token: 0x04003192 RID: 12690
+	// Token: 0x040043ED RID: 17389
 	private const string FLAGPOLE_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_flagpole";
 
-	// Token: 0x04003193 RID: 12691
+	// Token: 0x040043EE RID: 17390
 	private const string WEATHERVANE_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_flagpole";
 
-	// Token: 0x04003194 RID: 12692
+	// Token: 0x040043EF RID: 17391
 	private const string BALCONY_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_balcony_small";
 
-	// Token: 0x04003195 RID: 12693
+	// Token: 0x040043F0 RID: 17392
 	private const string TIRESWING_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_flagpole";
 
-	// Token: 0x04003196 RID: 12694
+	// Token: 0x040043F1 RID: 17393
 	private const string CONSTRUCTION_END_SFX = "event:/SFX/UpgradingCastle/sfx_upgrade_castle_constructionEnd";
 
-	// Token: 0x04003197 RID: 12695
+	// Token: 0x040043F2 RID: 17394
 	private const string VERY_SMALL_CAMERASHAKE_FX = "CameraShakeVerySmall_Effect";
 
-	// Token: 0x04003198 RID: 12696
+	// Token: 0x040043F3 RID: 17395
 	private const float CAVE_CAMERASHAKE_DURATION = 0.6f;
 
-	// Token: 0x04003199 RID: 12697
+	// Token: 0x040043F4 RID: 17396
 	private const float TOWER_CAMERASHAKE_DURATION = 1f;
 
-	// Token: 0x0400319A RID: 12698
+	// Token: 0x040043F5 RID: 17397
 	private const string CAVE_APPEAR_FX = "SkillTreeCastle_CaveAppear_Effect";
 
-	// Token: 0x0400319B RID: 12699
+	// Token: 0x040043F6 RID: 17398
 	private const string HORIZONTAL_TOWER_APPEAR_FX = "SkillTreeCastle_HorizontalDust_Effect";
 
-	// Token: 0x0400319C RID: 12700
+	// Token: 0x040043F7 RID: 17399
 	private const string VERTICAL_TOWER_APPEAR_FX = "SkillTreeCastle_VerticalDust_Effect";
 
-	// Token: 0x0400319D RID: 12701
+	// Token: 0x040043F8 RID: 17400
 	[SerializeField]
 	private SkillTreeType m_skillTreeType;
 
-	// Token: 0x0400319E RID: 12702
+	// Token: 0x040043F9 RID: 17401
 	[Header("Animations")]
 	[SerializeField]
 	private string m_bgAnimatorParam;
 
-	// Token: 0x0400319F RID: 12703
+	// Token: 0x040043FA RID: 17402
 	[SerializeField]
 	private SkillTreeSlot.SkillTreeAnimType m_animType;
 
-	// Token: 0x040031A0 RID: 12704
+	// Token: 0x040043FB RID: 17403
 	[SerializeField]
 	private Vector2 m_animEffectOffset;
 
-	// Token: 0x040031A1 RID: 12705
+	// Token: 0x040043FC RID: 17404
 	[Header("Icons")]
 	[SerializeField]
 	private CanvasGroup m_iconCanvasGroup;
 
-	// Token: 0x040031A2 RID: 12706
+	// Token: 0x040043FD RID: 17405
 	[SerializeField]
 	private Image m_iconImage;
 
-	// Token: 0x040031A3 RID: 12707
+	// Token: 0x040043FE RID: 17406
 	[SerializeField]
 	private Image m_iconFrame;
 
-	// Token: 0x040031A4 RID: 12708
+	// Token: 0x040043FF RID: 17407
 	[SerializeField]
 	private GameObject m_highlightGO;
 
-	// Token: 0x040031A5 RID: 12709
+	// Token: 0x04004400 RID: 17408
 	[SerializeField]
 	private Image m_canBeUpgradedImage;
 
-	// Token: 0x040031A6 RID: 12710
+	// Token: 0x04004401 RID: 17409
 	[SerializeField]
 	private TMP_Text m_levelText;
 
-	// Token: 0x040031A7 RID: 12711
+	// Token: 0x04004402 RID: 17410
 	[Header("Navigation Nodes")]
 	[SerializeField]
 	private SkillTreeSlot m_leftNode;
 
-	// Token: 0x040031A8 RID: 12712
+	// Token: 0x04004403 RID: 17411
 	[SerializeField]
 	private SkillTreeSlot m_rightNode;
 
-	// Token: 0x040031A9 RID: 12713
+	// Token: 0x04004404 RID: 17412
 	[SerializeField]
 	private SkillTreeSlot m_topNode;
 
-	// Token: 0x040031AA RID: 12714
+	// Token: 0x04004405 RID: 17413
 	[SerializeField]
 	private SkillTreeSlot m_bottomNode;
 
-	// Token: 0x040031AB RID: 12715
+	// Token: 0x04004406 RID: 17414
 	[SerializeField]
 	private Image m_newIndicator;
 
-	// Token: 0x040031AC RID: 12716
+	// Token: 0x04004407 RID: 17415
 	[SerializeField]
 	private GameObject m_levelLockGO;
 
-	// Token: 0x040031AD RID: 12717
+	// Token: 0x04004408 RID: 17416
 	[SerializeField]
 	private TMP_Text m_levelLockText;
 
-	// Token: 0x040031AE RID: 12718
+	// Token: 0x04004409 RID: 17417
 	[SerializeField]
 	private bool m_disableTopNavNode;
 
-	// Token: 0x040031AF RID: 12719
+	// Token: 0x0400440A RID: 17418
 	[SerializeField]
 	private bool m_disableBottomNavNode;
 
-	// Token: 0x040031B0 RID: 12720
+	// Token: 0x0400440B RID: 17419
 	[SerializeField]
 	private bool m_disableLeftNavNode;
 
-	// Token: 0x040031B1 RID: 12721
+	// Token: 0x0400440C RID: 17420
 	[SerializeField]
 	private bool m_disableRightNavNode;
 
-	// Token: 0x040031B2 RID: 12722
+	// Token: 0x0400440D RID: 17421
 	[Header("Unlockable Nodes")]
 	[SerializeField]
 	[ReadOnly]
 	private List<SkillTreeSlot> m_unlockSlotList;
 
-	// Token: 0x040031B3 RID: 12723
+	// Token: 0x0400440E RID: 17422
 	[SerializeField]
 	[ReadOnly]
 	private List<bool> m_unlockSlotDisableList;
 
-	// Token: 0x040031B4 RID: 12724
+	// Token: 0x0400440F RID: 17423
 	[Header("Debug")]
 	[SerializeField]
 	private Sprite m_hasNoLinkedDataSprite;
 
-	// Token: 0x040031B5 RID: 12725
+	// Token: 0x04004410 RID: 17424
 	[SerializeField]
 	private Sprite m_goldFrameSprite;
 
-	// Token: 0x040031B6 RID: 12726
+	// Token: 0x04004411 RID: 17425
 	private Button m_button;
 
-	// Token: 0x040031B7 RID: 12727
+	// Token: 0x04004412 RID: 17426
 	private static HighlightedSkillChangedEventArgs m_highlightedSkillChangedArgs = new HighlightedSkillChangedEventArgs(SkillTreeType.None);
 
-	// Token: 0x040031B8 RID: 12728
+	// Token: 0x04004413 RID: 17427
 	private static GoldChangedEventArgs m_goldChangedArgs = new GoldChangedEventArgs(0, 0);
 
-	// Token: 0x040031B9 RID: 12729
+	// Token: 0x04004414 RID: 17428
 	private SkillTreeData m_skillTreeData;
 
-	// Token: 0x040031BA RID: 12730
+	// Token: 0x04004415 RID: 17429
 	private Animator m_castleAnimator;
 
-	// Token: 0x040031BB RID: 12731
+	// Token: 0x04004416 RID: 17430
 	private Vector3 m_storedScale;
 
-	// Token: 0x040031BC RID: 12732
+	// Token: 0x04004417 RID: 17431
 	private bool m_alreadyUnlockedEventPlayed;
 
-	// Token: 0x040031BD RID: 12733
+	// Token: 0x04004418 RID: 17432
 	private bool m_selected;
 
-	// Token: 0x040031BE RID: 12734
+	// Token: 0x04004419 RID: 17433
 	public Relay UpgradedRelay = new Relay();
 
-	// Token: 0x040031BF RID: 12735
+	// Token: 0x0400441A RID: 17434
 	public Relay UpgradeFailedRelay = new Relay();
 
-	// Token: 0x040031C0 RID: 12736
+	// Token: 0x0400441B RID: 17435
 	public Relay FullyUpgradedRelay = new Relay();
 
-	// Token: 0x040031C1 RID: 12737
+	// Token: 0x0400441C RID: 17436
 	public Relay SelectedRelay = new Relay();
 
-	// Token: 0x040031C3 RID: 12739
+	// Token: 0x0400441E RID: 17438
 	public UnityEvent OnAlreadyUnlockedEvent;
 
-	// Token: 0x02000E23 RID: 3619
+	// Token: 0x02000BA2 RID: 2978
 	public enum NodeDirection
 	{
-		// Token: 0x040056DF RID: 22239
+		// Token: 0x04004422 RID: 17442
 		Up,
-		// Token: 0x040056E0 RID: 22240
+		// Token: 0x04004423 RID: 17443
 		Down,
-		// Token: 0x040056E1 RID: 22241
+		// Token: 0x04004424 RID: 17444
 		Left,
-		// Token: 0x040056E2 RID: 22242
+		// Token: 0x04004425 RID: 17445
 		Right
 	}
 
-	// Token: 0x02000E24 RID: 3620
+	// Token: 0x02000BA3 RID: 2979
 	public enum SkillTreeAnimType
 	{
-		// Token: 0x040056E4 RID: 22244
+		// Token: 0x04004427 RID: 17447
 		None,
-		// Token: 0x040056E5 RID: 22245
+		// Token: 0x04004428 RID: 17448
 		CastleWingHorizontal_Foundation = 100,
-		// Token: 0x040056E6 RID: 22246
+		// Token: 0x04004429 RID: 17449
 		CastleWingHorizontal_Tower = 110,
-		// Token: 0x040056E7 RID: 22247
+		// Token: 0x0400442A RID: 17450
 		CastleWingHorizontal_Wooden = 120,
-		// Token: 0x040056E8 RID: 22248
+		// Token: 0x0400442B RID: 17451
 		CastleWingVertical_Foundation = 200,
-		// Token: 0x040056E9 RID: 22249
+		// Token: 0x0400442C RID: 17452
 		CastleWingVertical_Tower = 210,
-		// Token: 0x040056EA RID: 22250
+		// Token: 0x0400442D RID: 17453
 		CastleWingVertical_Wooden = 220,
-		// Token: 0x040056EB RID: 22251
+		// Token: 0x0400442E RID: 17454
 		Cave = 300,
-		// Token: 0x040056EC RID: 22252
+		// Token: 0x0400442F RID: 17455
 		Forest_Foundation = 400,
-		// Token: 0x040056ED RID: 22253
+		// Token: 0x04004430 RID: 17456
 		Forest_Grow = 410,
-		// Token: 0x040056EE RID: 22254
+		// Token: 0x04004431 RID: 17457
 		FlagPole = 450,
-		// Token: 0x040056EF RID: 22255
+		// Token: 0x04004432 RID: 17458
 		WeatherVane = 460,
-		// Token: 0x040056F0 RID: 22256
+		// Token: 0x04004433 RID: 17459
 		BalconyOrSign = 470,
-		// Token: 0x040056F1 RID: 22257
+		// Token: 0x04004434 RID: 17460
 		TireSwing = 480,
-		// Token: 0x040056F2 RID: 22258
+		// Token: 0x04004435 RID: 17461
 		CameraShakeOnly = 500
 	}
 }

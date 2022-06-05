@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020006A0 RID: 1696
+// Token: 0x02000B3B RID: 2875
 public enum CursorIconType
 {
-	// Token: 0x04002E3C RID: 11836
+	// Token: 0x04004059 RID: 16473
 	None,
-	// Token: 0x04002E3D RID: 11837
+	// Token: 0x0400405A RID: 16474
 	Standard
 }

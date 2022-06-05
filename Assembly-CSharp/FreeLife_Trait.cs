@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200033E RID: 830
+// Token: 0x0200059D RID: 1437
 public class FreeLife_Trait : BaseTrait
 {
-	// Token: 0x17000DC1 RID: 3521
-	// (get) Token: 0x06002017 RID: 8215 RVA: 0x00066267 File Offset: 0x00064467
+	// Token: 0x1700120C RID: 4620
+	// (get) Token: 0x06002D3B RID: 11579 RVA: 0x00018FC1 File Offset: 0x000171C1
 	public override TraitType TraitType
 	{
 		get
@@ -13,13 +13,13 @@ public class FreeLife_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002018 RID: 8216 RVA: 0x0006626E File Offset: 0x0006446E
+	// Token: 0x06002D3C RID: 11580 RVA: 0x00018FC8 File Offset: 0x000171C8
 	private void Start()
 	{
 		this.GiveFreeLife();
 	}
 
-	// Token: 0x06002019 RID: 8217 RVA: 0x00066278 File Offset: 0x00064478
+	// Token: 0x06002D3D RID: 11581 RVA: 0x000C6D40 File Offset: 0x000C4F40
 	private void GiveFreeLife()
 	{
 		bool flag = false;

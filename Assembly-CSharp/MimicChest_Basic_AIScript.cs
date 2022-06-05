@@ -4,10 +4,10 @@ using FMOD.Studio;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020000FA RID: 250
+// Token: 0x02000194 RID: 404
 public class MimicChest_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x060007A6 RID: 1958 RVA: 0x0001AAC4 File Offset: 0x00018CC4
+	// Token: 0x06000B17 RID: 2839 RVA: 0x00006ED8 File Offset: 0x000050D8
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -19,8 +19,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000420 RID: 1056
-	// (get) Token: 0x060007A7 RID: 1959 RVA: 0x0001AAF2 File Offset: 0x00018CF2
+	// Token: 0x17000544 RID: 1348
+	// (get) Token: 0x06000B18 RID: 2840 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool ForceDeathAnimation
 	{
 		get
@@ -29,8 +29,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000421 RID: 1057
-	// (get) Token: 0x060007A8 RID: 1960 RVA: 0x0001AAF5 File Offset: 0x00018CF5
+	// Token: 0x17000545 RID: 1349
+	// (get) Token: 0x06000B19 RID: 2841 RVA: 0x00006F06 File Offset: 0x00005106
 	protected virtual string JumpAudioEventPath
 	{
 		get
@@ -39,8 +39,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000422 RID: 1058
-	// (get) Token: 0x060007A9 RID: 1961 RVA: 0x0001AAFC File Offset: 0x00018CFC
+	// Token: 0x17000546 RID: 1350
+	// (get) Token: 0x06000B1A RID: 2842 RVA: 0x00006F0D File Offset: 0x0000510D
 	protected virtual string LandAudioEventPath
 	{
 		get
@@ -49,8 +49,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000423 RID: 1059
-	// (get) Token: 0x060007AA RID: 1962 RVA: 0x0001AB03 File Offset: 0x00018D03
+	// Token: 0x17000547 RID: 1351
+	// (get) Token: 0x06000B1B RID: 2843 RVA: 0x00006F14 File Offset: 0x00005114
 	protected virtual string DeathHitAudioEventPath
 	{
 		get
@@ -59,8 +59,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000424 RID: 1060
-	// (get) Token: 0x060007AB RID: 1963 RVA: 0x0001AB0A File Offset: 0x00018D0A
+	// Token: 0x17000548 RID: 1352
+	// (get) Token: 0x06000B1C RID: 2844 RVA: 0x00006F1B File Offset: 0x0000511B
 	private string DashLoopAudioEventPath
 	{
 		get
@@ -69,8 +69,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000425 RID: 1061
-	// (get) Token: 0x060007AC RID: 1964 RVA: 0x0001AB11 File Offset: 0x00018D11
+	// Token: 0x17000549 RID: 1353
+	// (get) Token: 0x06000B1D RID: 2845 RVA: 0x00006F22 File Offset: 0x00005122
 	private string ChangeDirectionAudioEventPath
 	{
 		get
@@ -79,8 +79,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000426 RID: 1062
-	// (get) Token: 0x060007AD RID: 1965 RVA: 0x0001AB18 File Offset: 0x00018D18
+	// Token: 0x1700054A RID: 1354
+	// (get) Token: 0x06000B1E RID: 2846 RVA: 0x00006F29 File Offset: 0x00005129
 	protected virtual Vector2 JumpHeight
 	{
 		get
@@ -89,8 +89,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000427 RID: 1063
-	// (get) Token: 0x060007AE RID: 1966 RVA: 0x0001AB29 File Offset: 0x00018D29
+	// Token: 0x1700054B RID: 1355
+	// (get) Token: 0x06000B1F RID: 2847 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual int NumCoinsFiredOnHit
 	{
 		get
@@ -99,8 +99,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000428 RID: 1064
-	// (get) Token: 0x060007AF RID: 1967 RVA: 0x0001AB2C File Offset: 0x00018D2C
+	// Token: 0x1700054C RID: 1356
+	// (get) Token: 0x06000B20 RID: 2848 RVA: 0x00006F3A File Offset: 0x0000513A
 	protected virtual Vector2 CoinFireAngle_OnHit
 	{
 		get
@@ -109,8 +109,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000429 RID: 1065
-	// (get) Token: 0x060007B0 RID: 1968 RVA: 0x0001AB3D File Offset: 0x00018D3D
+	// Token: 0x1700054D RID: 1357
+	// (get) Token: 0x06000B21 RID: 2849 RVA: 0x00006F4B File Offset: 0x0000514B
 	protected virtual Vector2 CoinFireSpeed_OnHit
 	{
 		get
@@ -119,8 +119,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700042A RID: 1066
-	// (get) Token: 0x060007B1 RID: 1969 RVA: 0x0001AB4E File Offset: 0x00018D4E
+	// Token: 0x1700054E RID: 1358
+	// (get) Token: 0x06000B22 RID: 2850 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual int NumCoinsFiredOnLanding
 	{
 		get
@@ -129,8 +129,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700042B RID: 1067
-	// (get) Token: 0x060007B2 RID: 1970 RVA: 0x0001AB51 File Offset: 0x00018D51
+	// Token: 0x1700054F RID: 1359
+	// (get) Token: 0x06000B23 RID: 2851 RVA: 0x00006F3A File Offset: 0x0000513A
 	protected virtual Vector2 CoinFireAngle_OnLand
 	{
 		get
@@ -139,8 +139,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700042C RID: 1068
-	// (get) Token: 0x060007B3 RID: 1971 RVA: 0x0001AB62 File Offset: 0x00018D62
+	// Token: 0x17000550 RID: 1360
+	// (get) Token: 0x06000B24 RID: 2852 RVA: 0x00006F4B File Offset: 0x0000514B
 	protected virtual Vector2 CoinFireSpeed_OnLand
 	{
 		get
@@ -149,8 +149,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700042D RID: 1069
-	// (get) Token: 0x060007B4 RID: 1972 RVA: 0x0001AB73 File Offset: 0x00018D73
+	// Token: 0x17000551 RID: 1361
+	// (get) Token: 0x06000B25 RID: 2853 RVA: 0x00004762 File Offset: 0x00002962
 	protected virtual int NumCoinsFiredOnDeath
 	{
 		get
@@ -159,8 +159,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700042E RID: 1070
-	// (get) Token: 0x060007B5 RID: 1973 RVA: 0x0001AB76 File Offset: 0x00018D76
+	// Token: 0x17000552 RID: 1362
+	// (get) Token: 0x06000B26 RID: 2854 RVA: 0x00006F5C File Offset: 0x0000515C
 	protected virtual Vector2 CoinFireAngle_OnDeath
 	{
 		get
@@ -169,8 +169,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700042F RID: 1071
-	// (get) Token: 0x060007B6 RID: 1974 RVA: 0x0001AB87 File Offset: 0x00018D87
+	// Token: 0x17000553 RID: 1363
+	// (get) Token: 0x06000B27 RID: 2855 RVA: 0x00006F6D File Offset: 0x0000516D
 	protected virtual Vector2 CoinFireSpeed_OnDeath
 	{
 		get
@@ -179,8 +179,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000430 RID: 1072
-	// (get) Token: 0x060007B7 RID: 1975 RVA: 0x0001AB98 File Offset: 0x00018D98
+	// Token: 0x17000554 RID: 1364
+	// (get) Token: 0x06000B28 RID: 2856 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int DeathCoinAttack_CoinSpreadAmount
 	{
 		get
@@ -189,8 +189,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000431 RID: 1073
-	// (get) Token: 0x060007B8 RID: 1976 RVA: 0x0001AB9B File Offset: 0x00018D9B
+	// Token: 0x17000555 RID: 1365
+	// (get) Token: 0x06000B29 RID: 2857 RVA: 0x000052B0 File Offset: 0x000034B0
 	protected virtual float DeathCoinAttack_AngleSpread
 	{
 		get
@@ -199,8 +199,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000432 RID: 1074
-	// (get) Token: 0x060007B9 RID: 1977 RVA: 0x0001ABA2 File Offset: 0x00018DA2
+	// Token: 0x17000556 RID: 1366
+	// (get) Token: 0x06000B2A RID: 2858 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_advancedBoss
 	{
 		get
@@ -209,8 +209,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000433 RID: 1075
-	// (get) Token: 0x060007BA RID: 1978 RVA: 0x0001ABA5 File Offset: 0x00018DA5
+	// Token: 0x17000557 RID: 1367
+	// (get) Token: 0x06000B2B RID: 2859 RVA: 0x00006780 File Offset: 0x00004980
 	protected virtual float m_airborneKO_AnimationDelay
 	{
 		get
@@ -219,13 +219,13 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007BB RID: 1979 RVA: 0x0001ABAC File Offset: 0x00018DAC
+	// Token: 0x06000B2C RID: 2860 RVA: 0x00006F7E File Offset: 0x0000517E
 	private void Awake()
 	{
 		this.m_onPlayerHit = new Action<object, CharacterHitEventArgs>(this.OnPlayerHit);
 	}
 
-	// Token: 0x060007BC RID: 1980 RVA: 0x0001ABC0 File Offset: 0x00018DC0
+	// Token: 0x06000B2D RID: 2861 RVA: 0x000696FC File Offset: 0x000678FC
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -242,7 +242,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		this.m_dashEventInstance = AudioUtility.GetEventInstance(this.DashLoopAudioEventPath, base.transform);
 	}
 
-	// Token: 0x060007BD RID: 1981 RVA: 0x0001AC9E File Offset: 0x00018E9E
+	// Token: 0x06000B2E RID: 2862 RVA: 0x00006F92 File Offset: 0x00005192
 	private void OnEnable()
 	{
 		if (PlayerManager.IsInstantiated && !PlayerManager.IsDisposed)
@@ -251,7 +251,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007BE RID: 1982 RVA: 0x0001ACCC File Offset: 0x00018ECC
+	// Token: 0x06000B2F RID: 2863 RVA: 0x000697DC File Offset: 0x000679DC
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -278,7 +278,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007BF RID: 1983 RVA: 0x0001ADC4 File Offset: 0x00018FC4
+	// Token: 0x06000B30 RID: 2864 RVA: 0x000698D4 File Offset: 0x00067AD4
 	public override void OnEnemyActivated()
 	{
 		base.OnEnemyActivated();
@@ -296,14 +296,14 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007C0 RID: 1984 RVA: 0x0001AE6C File Offset: 0x0001906C
+	// Token: 0x06000B31 RID: 2865 RVA: 0x00006FBE File Offset: 0x000051BE
 	private void OnEnemyHit(object sender, CharacterHitEventArgs args)
 	{
 		base.EnemyController.StatusEffectController.SetAllStatusEffectsHidden(false);
 		base.EnemyController.DisableOffscreenWarnings = false;
 	}
 
-	// Token: 0x060007C1 RID: 1985 RVA: 0x0001AE8C File Offset: 0x0001908C
+	// Token: 0x06000B32 RID: 2866 RVA: 0x0006997C File Offset: 0x00067B7C
 	private void OnPlayerHit(object sender, CharacterHitEventArgs args)
 	{
 		if (args.Attacker == base.EnemyController)
@@ -318,7 +318,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007C2 RID: 1986 RVA: 0x0001AF08 File Offset: 0x00019108
+	// Token: 0x06000B33 RID: 2867 RVA: 0x000699F8 File Offset: 0x00067BF8
 	private void OnDestroy()
 	{
 		if (this.m_dashEventInstance.isValid())
@@ -332,7 +332,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007C3 RID: 1987 RVA: 0x0001AF7C File Offset: 0x0001917C
+	// Token: 0x06000B34 RID: 2868 RVA: 0x00069A6C File Offset: 0x00067C6C
 	protected void SpewCoins(object sender, HealthChangeEventArgs args)
 	{
 		if (args.PrevHealthValue <= args.NewHealthValue)
@@ -351,8 +351,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000434 RID: 1076
-	// (get) Token: 0x060007C4 RID: 1988 RVA: 0x0001B003 File Offset: 0x00019203
+	// Token: 0x17000558 RID: 1368
+	// (get) Token: 0x06000B35 RID: 2869 RVA: 0x00006FDD File Offset: 0x000051DD
 	protected virtual string m_verticalShotProjectileName
 	{
 		get
@@ -361,8 +361,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000435 RID: 1077
-	// (get) Token: 0x060007C5 RID: 1989 RVA: 0x0001B00A File Offset: 0x0001920A
+	// Token: 0x17000559 RID: 1369
+	// (get) Token: 0x06000B36 RID: 2870 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected virtual int m_verticalShot_TotalShotSpread
 	{
 		get
@@ -371,8 +371,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000436 RID: 1078
-	// (get) Token: 0x060007C6 RID: 1990 RVA: 0x0001B00D File Offset: 0x0001920D
+	// Token: 0x1700055A RID: 1370
+	// (get) Token: 0x06000B37 RID: 2871 RVA: 0x00004762 File Offset: 0x00002962
 	protected virtual int m_verticalShot_TotalLoops
 	{
 		get
@@ -381,8 +381,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000437 RID: 1079
-	// (get) Token: 0x060007C7 RID: 1991 RVA: 0x0001B010 File Offset: 0x00019210
+	// Token: 0x1700055B RID: 1371
+	// (get) Token: 0x06000B38 RID: 2872 RVA: 0x00006CB3 File Offset: 0x00004EB3
 	protected virtual int m_verticalShot_InitialAngle
 	{
 		get
@@ -391,8 +391,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000438 RID: 1080
-	// (get) Token: 0x060007C8 RID: 1992 RVA: 0x0001B014 File Offset: 0x00019214
+	// Token: 0x1700055C RID: 1372
+	// (get) Token: 0x06000B39 RID: 2873 RVA: 0x00006FE4 File Offset: 0x000051E4
 	protected virtual Vector2 m_verticalShot_RandomAngleAngleOffset
 	{
 		get
@@ -401,8 +401,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000439 RID: 1081
-	// (get) Token: 0x060007C9 RID: 1993 RVA: 0x0001B025 File Offset: 0x00019225
+	// Token: 0x1700055D RID: 1373
+	// (get) Token: 0x06000B3A RID: 2874 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected virtual float m_verticalShot_LoopDelay
 	{
 		get
@@ -411,8 +411,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700043A RID: 1082
-	// (get) Token: 0x060007CA RID: 1994 RVA: 0x0001B02C File Offset: 0x0001922C
+	// Token: 0x1700055E RID: 1374
+	// (get) Token: 0x06000B3B RID: 2875 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_verticalShot_SpeedMod
 	{
 		get
@@ -421,7 +421,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007CB RID: 1995 RVA: 0x0001B033 File Offset: 0x00019233
+	// Token: 0x06000B3C RID: 2876 RVA: 0x00006FF5 File Offset: 0x000051F5
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -452,8 +452,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x1700043B RID: 1083
-	// (get) Token: 0x060007CC RID: 1996 RVA: 0x0001B042 File Offset: 0x00019242
+	// Token: 0x1700055F RID: 1375
+	// (get) Token: 0x06000B3D RID: 2877 RVA: 0x00003D93 File Offset: 0x00001F93
 	protected virtual float m_dashAttack_Exit_AttackCD
 	{
 		get
@@ -462,8 +462,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700043C RID: 1084
-	// (get) Token: 0x060007CD RID: 1997 RVA: 0x0001B049 File Offset: 0x00019249
+	// Token: 0x17000560 RID: 1376
+	// (get) Token: 0x06000B3E RID: 2878 RVA: 0x0000521E File Offset: 0x0000341E
 	protected virtual float m_dashAttackSpeed
 	{
 		get
@@ -472,8 +472,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700043D RID: 1085
-	// (get) Token: 0x060007CE RID: 1998 RVA: 0x0001B050 File Offset: 0x00019250
+	// Token: 0x17000561 RID: 1377
+	// (get) Token: 0x06000B3F RID: 2879 RVA: 0x00006E9D File Offset: 0x0000509D
 	protected virtual Vector2 m_dashAttackDuration
 	{
 		get
@@ -482,8 +482,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700043E RID: 1086
-	// (get) Token: 0x060007CF RID: 1999 RVA: 0x0001B061 File Offset: 0x00019261
+	// Token: 0x17000562 RID: 1378
+	// (get) Token: 0x06000B40 RID: 2880 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_canDashWake
 	{
 		get
@@ -492,8 +492,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700043F RID: 1087
-	// (get) Token: 0x060007D0 RID: 2000 RVA: 0x0001B064 File Offset: 0x00019264
+	// Token: 0x17000563 RID: 1379
+	// (get) Token: 0x06000B41 RID: 2881 RVA: 0x00005FB1 File Offset: 0x000041B1
 	protected virtual float m_dashWakeActivationRange
 	{
 		get
@@ -502,8 +502,8 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000440 RID: 1088
-	// (get) Token: 0x060007D1 RID: 2001 RVA: 0x0001B06B File Offset: 0x0001926B
+	// Token: 0x17000564 RID: 1380
+	// (get) Token: 0x06000B42 RID: 2882 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float m_dashWakeAttackOdds
 	{
 		get
@@ -512,7 +512,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007D2 RID: 2002 RVA: 0x0001B072 File Offset: 0x00019272
+	// Token: 0x06000B43 RID: 2883 RVA: 0x00007004 File Offset: 0x00005204
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -558,31 +558,31 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060007D3 RID: 2003 RVA: 0x0001B081 File Offset: 0x00019281
+	// Token: 0x06000B44 RID: 2884 RVA: 0x00007013 File Offset: 0x00005213
 	protected virtual void OnStartDashing()
 	{
 		AudioManager.PlayAttached(this, this.m_dashEventInstance, base.gameObject);
 	}
 
-	// Token: 0x060007D4 RID: 2004 RVA: 0x0001B095 File Offset: 0x00019295
+	// Token: 0x06000B45 RID: 2885 RVA: 0x00007027 File Offset: 0x00005227
 	protected virtual void OnStopDashing()
 	{
 		AudioManager.Stop(this.m_dashEventInstance, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 	}
 
-	// Token: 0x060007D5 RID: 2005 RVA: 0x0001B0A3 File Offset: 0x000192A3
+	// Token: 0x06000B46 RID: 2886 RVA: 0x00007035 File Offset: 0x00005235
 	private void OnJump()
 	{
 		AudioManager.PlayOneShotAttached(this, this.JumpAudioEventPath, base.gameObject);
 	}
 
-	// Token: 0x060007D6 RID: 2006 RVA: 0x0001B0B7 File Offset: 0x000192B7
+	// Token: 0x06000B47 RID: 2887 RVA: 0x00007049 File Offset: 0x00005249
 	private void OnGrounded()
 	{
 		AudioManager.PlayOneShotAttached(this, this.LandAudioEventPath, base.gameObject);
 	}
 
-	// Token: 0x060007D7 RID: 2007 RVA: 0x0001B0CB File Offset: 0x000192CB
+	// Token: 0x06000B48 RID: 2888 RVA: 0x0000705D File Offset: 0x0000525D
 	private IEnumerator OnBeginDeathAnim()
 	{
 		AudioManager.PlayOneShotAttached(this, this.DeathHitAudioEventPath, base.gameObject);
@@ -593,7 +593,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060007D8 RID: 2008 RVA: 0x0001B0DA File Offset: 0x000192DA
+	// Token: 0x06000B49 RID: 2889 RVA: 0x0000706C File Offset: 0x0000526C
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.EnemyController.DisableFriction = false;
@@ -602,7 +602,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x060007D9 RID: 2009 RVA: 0x0001B101 File Offset: 0x00019301
+	// Token: 0x06000B4A RID: 2890 RVA: 0x00007093 File Offset: 0x00005293
 	public override IEnumerator WalkTowards()
 	{
 		while (base.EnemyController.KnockedIntoAir)
@@ -644,7 +644,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060007DA RID: 2010 RVA: 0x0001B110 File Offset: 0x00019310
+	// Token: 0x06000B4B RID: 2891 RVA: 0x000070A2 File Offset: 0x000052A2
 	public override IEnumerator DeathAnim()
 	{
 		if (base.EnemyController && base.EnemyController.EnemySpawnController)
@@ -684,7 +684,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060007DB RID: 2011 RVA: 0x0001B120 File Offset: 0x00019320
+	// Token: 0x06000B4C RID: 2892 RVA: 0x00069AF4 File Offset: 0x00067CF4
 	protected void LateUpdate()
 	{
 		if (!base.IsInitialized)
@@ -737,7 +737,7 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		this.m_wasGrounded = base.EnemyController.IsGrounded;
 	}
 
-	// Token: 0x060007DC RID: 2012 RVA: 0x0001B300 File Offset: 0x00019500
+	// Token: 0x06000B4D RID: 2893 RVA: 0x00069CD4 File Offset: 0x00067ED4
 	public override void ResetScript()
 	{
 		string forceExecuteLogicBlockName_OnceOnly = base.LogicController.ForceExecuteLogicBlockName_OnceOnly;
@@ -751,108 +751,108 @@ public class MimicChest_Basic_AIScript : BaseAIScript
 		base.EnemyController.LockFlip = true;
 	}
 
-	// Token: 0x04000B2B RID: 2859
+	// Token: 0x04000DDD RID: 3549
 	protected float m_death_AnimationSpeed = 1f;
 
-	// Token: 0x04000B2C RID: 2860
+	// Token: 0x04000DDE RID: 3550
 	protected float m_death_AnimationDelay = 0.5f;
 
-	// Token: 0x04000B2D RID: 2861
+	// Token: 0x04000DDF RID: 3551
 	protected float m_airborneKO_AnimationSpeed = 1f;
 
-	// Token: 0x04000B2E RID: 2862
+	// Token: 0x04000DE0 RID: 3552
 	protected float m_groundedKOAnimationSpeed = 1f;
 
-	// Token: 0x04000B2F RID: 2863
+	// Token: 0x04000DE1 RID: 3553
 	protected float m_groundedKOAnimationDelay = 0.5f;
 
-	// Token: 0x04000B30 RID: 2864
+	// Token: 0x04000DE2 RID: 3554
 	protected bool m_playDeathParticlesOnZeroHP = true;
 
-	// Token: 0x04000B31 RID: 2865
+	// Token: 0x04000DE3 RID: 3555
 	protected float m_deathParticleDuration = 0.5f;
 
-	// Token: 0x04000B32 RID: 2866
+	// Token: 0x04000DE4 RID: 3556
 	private const string DEATH_POOF_EFFECT = "EnemyGenericDeathPuff_Small_Effect_MediumVariant";
 
-	// Token: 0x04000B33 RID: 2867
+	// Token: 0x04000DE5 RID: 3557
 	private Color m_deathTintColor = new Color(0f, 0f, 0f, 0.5f);
 
-	// Token: 0x04000B34 RID: 2868
+	// Token: 0x04000DE6 RID: 3558
 	protected bool m_isDashAttacking;
 
-	// Token: 0x04000B35 RID: 2869
+	// Token: 0x04000DE7 RID: 3559
 	private MaterialPropertyBlock m_matPropertyBlock;
 
-	// Token: 0x04000B36 RID: 2870
+	// Token: 0x04000DE8 RID: 3560
 	private bool m_playerWasInDashWakeRange;
 
-	// Token: 0x04000B37 RID: 2871
+	// Token: 0x04000DE9 RID: 3561
 	private bool m_wasGrounded = true;
 
-	// Token: 0x04000B38 RID: 2872
+	// Token: 0x04000DEA RID: 3562
 	private EventInstance m_dashEventInstance;
 
-	// Token: 0x04000B39 RID: 2873
+	// Token: 0x04000DEB RID: 3563
 	private Action<object, CharacterHitEventArgs> m_onPlayerHit;
 
-	// Token: 0x04000B3A RID: 2874
+	// Token: 0x04000DEC RID: 3564
 	protected float m_verticalShot_TellHold_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000B3B RID: 2875
+	// Token: 0x04000DED RID: 3565
 	protected float m_verticalShot_TellHold_Delay = 1.25f;
 
-	// Token: 0x04000B3C RID: 2876
+	// Token: 0x04000DEE RID: 3566
 	protected float m_verticalShot_AttackIntro_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000B3D RID: 2877
+	// Token: 0x04000DEF RID: 3567
 	protected float m_verticalShot_AttackIntro_Delay;
 
-	// Token: 0x04000B3E RID: 2878
+	// Token: 0x04000DF0 RID: 3568
 	protected float m_verticalShot_AttackHold_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000B3F RID: 2879
+	// Token: 0x04000DF1 RID: 3569
 	protected float m_verticalShot_AttackHold_Delay = 0.25f;
 
-	// Token: 0x04000B40 RID: 2880
+	// Token: 0x04000DF2 RID: 3570
 	protected float m_verticalShot_Exit_AnimationSpeed = 0.65f;
 
-	// Token: 0x04000B41 RID: 2881
+	// Token: 0x04000DF3 RID: 3571
 	protected float m_verticalShot_Exit_Delay;
 
-	// Token: 0x04000B42 RID: 2882
+	// Token: 0x04000DF4 RID: 3572
 	protected float m_verticalShot_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000B43 RID: 2883
+	// Token: 0x04000DF5 RID: 3573
 	protected float m_verticalShot_Exit_AttackCD = 10f;
 
-	// Token: 0x04000B44 RID: 2884
+	// Token: 0x04000DF6 RID: 3574
 	protected float m_dashAttack_TellIntro_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000B45 RID: 2885
+	// Token: 0x04000DF7 RID: 3575
 	protected float m_dashAttack_TellHold_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000B46 RID: 2886
+	// Token: 0x04000DF8 RID: 3576
 	protected float m_dashAttack_TellIntroAndHold_Delay = 0.75f;
 
-	// Token: 0x04000B47 RID: 2887
+	// Token: 0x04000DF9 RID: 3577
 	protected float m_dashAttack_AttackIntro_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000B48 RID: 2888
+	// Token: 0x04000DFA RID: 3578
 	protected float m_dashAttack_AttackIntro_Delay;
 
-	// Token: 0x04000B49 RID: 2889
+	// Token: 0x04000DFB RID: 3579
 	protected float m_dashAttack_AttackHold_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000B4A RID: 2890
+	// Token: 0x04000DFC RID: 3580
 	protected float m_dashAttack_AttackHold_Delay = 0.15f;
 
-	// Token: 0x04000B4B RID: 2891
+	// Token: 0x04000DFD RID: 3581
 	protected float m_dashAttack_Exit_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000B4C RID: 2892
+	// Token: 0x04000DFE RID: 3582
 	protected float m_dashAttack_Exit_Delay;
 
-	// Token: 0x04000B4D RID: 2893
+	// Token: 0x04000DFF RID: 3583
 	protected float m_dashAttack_Exit_ForceIdle = 0.25f;
 }

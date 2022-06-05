@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-// Token: 0x0200025F RID: 607
+// Token: 0x02000420 RID: 1056
 public class StringMethodInfo_Dictionary : Dictionary<string, MethodInfo>
 {
 }

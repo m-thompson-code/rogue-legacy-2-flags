@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000869 RID: 2153
+	// Token: 0x02000D79 RID: 3449
 	public class TextMeshProFloatingText : MonoBehaviour
 	{
-		// Token: 0x06004734 RID: 18228 RVA: 0x00100248 File Offset: 0x000FE448
+		// Token: 0x060061FF RID: 25087 RVA: 0x00036091 File Offset: 0x00034291
 		private void Awake()
 		{
 			this.m_transform = base.transform;
@@ -15,7 +15,7 @@ namespace TMPro.Examples
 			this.m_cameraTransform = Camera.main.transform;
 		}
 
-		// Token: 0x06004735 RID: 18229 RVA: 0x00100284 File Offset: 0x000FE484
+		// Token: 0x06006200 RID: 25088 RVA: 0x0016D8E4 File Offset: 0x0016BAE4
 		private void Start()
 		{
 			if (this.SpawnType == 0)
@@ -48,7 +48,7 @@ namespace TMPro.Examples
 			int spawnType = this.SpawnType;
 		}
 
-		// Token: 0x06004736 RID: 18230 RVA: 0x00100494 File Offset: 0x000FE694
+		// Token: 0x06006201 RID: 25089 RVA: 0x000360CA File Offset: 0x000342CA
 		public IEnumerator DisplayTextMeshProFloatingText()
 		{
 			float CountDuration = 2f;
@@ -85,7 +85,7 @@ namespace TMPro.Examples
 			yield break;
 		}
 
-		// Token: 0x06004737 RID: 18231 RVA: 0x001004A3 File Offset: 0x000FE6A3
+		// Token: 0x06006202 RID: 25090 RVA: 0x000360D9 File Offset: 0x000342D9
 		public IEnumerator DisplayTextMeshFloatingText()
 		{
 			float CountDuration = 2f;
@@ -122,34 +122,34 @@ namespace TMPro.Examples
 			yield break;
 		}
 
-		// Token: 0x04003C42 RID: 15426
+		// Token: 0x04004FFD RID: 20477
 		public Font TheFont;
 
-		// Token: 0x04003C43 RID: 15427
+		// Token: 0x04004FFE RID: 20478
 		private GameObject m_floatingText;
 
-		// Token: 0x04003C44 RID: 15428
+		// Token: 0x04004FFF RID: 20479
 		private TextMeshPro m_textMeshPro;
 
-		// Token: 0x04003C45 RID: 15429
+		// Token: 0x04005000 RID: 20480
 		private TextMesh m_textMesh;
 
-		// Token: 0x04003C46 RID: 15430
+		// Token: 0x04005001 RID: 20481
 		private Transform m_transform;
 
-		// Token: 0x04003C47 RID: 15431
+		// Token: 0x04005002 RID: 20482
 		private Transform m_floatingText_Transform;
 
-		// Token: 0x04003C48 RID: 15432
+		// Token: 0x04005003 RID: 20483
 		private Transform m_cameraTransform;
 
-		// Token: 0x04003C49 RID: 15433
+		// Token: 0x04005004 RID: 20484
 		private Vector3 lastPOS = Vector3.zero;
 
-		// Token: 0x04003C4A RID: 15434
+		// Token: 0x04005005 RID: 20485
 		private Quaternion lastRotation = Quaternion.identity;
 
-		// Token: 0x04003C4B RID: 15435
+		// Token: 0x04005006 RID: 20486
 		public int SpawnType;
 	}
 }

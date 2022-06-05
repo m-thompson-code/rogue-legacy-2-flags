@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200045B RID: 1115
+// Token: 0x02000745 RID: 1861
 public class SnowMound_Hazard : SingleLine_Multi_Hazard, ITerrainOnEnterHitResponse, IHitResponse, ITerrainOnExitHitResponse
 {
-	// Token: 0x06002925 RID: 10533 RVA: 0x000881A8 File Offset: 0x000863A8
+	// Token: 0x060038ED RID: 14573 RVA: 0x0001F481 File Offset: 0x0001D681
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_hbController = base.GetComponentInChildren<IHitboxController>();
 	}
 
-	// Token: 0x06002926 RID: 10534 RVA: 0x000881BC File Offset: 0x000863BC
+	// Token: 0x060038EE RID: 14574 RVA: 0x000E9DB0 File Offset: 0x000E7FB0
 	public override void Initialize(PivotPoint pivot, int width, HazardArgs hazardArgs)
 	{
 		base.Initialize(pivot, width, hazardArgs);
@@ -24,7 +24,7 @@ public class SnowMound_Hazard : SingleLine_Multi_Hazard, ITerrainOnEnterHitRespo
 		base.StartCoroutine(this.SetSnowMoundWidth(width));
 	}
 
-	// Token: 0x06002927 RID: 10535 RVA: 0x0008821B File Offset: 0x0008641B
+	// Token: 0x060038EF RID: 14575 RVA: 0x0001F495 File Offset: 0x0001D695
 	private IEnumerator SetSnowMoundWidth(int width)
 	{
 		while (!this.m_hbController.IsInitialized)
@@ -40,7 +40,7 @@ public class SnowMound_Hazard : SingleLine_Multi_Hazard, ITerrainOnEnterHitRespo
 		yield break;
 	}
 
-	// Token: 0x06002928 RID: 10536 RVA: 0x00088231 File Offset: 0x00086431
+	// Token: 0x060038F0 RID: 14576 RVA: 0x0001F4AB File Offset: 0x0001D6AB
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (otherHBController.RootGameObject.CompareTag("Player") && !this.m_slowApplied)
@@ -49,7 +49,7 @@ public class SnowMound_Hazard : SingleLine_Multi_Hazard, ITerrainOnEnterHitRespo
 		}
 	}
 
-	// Token: 0x06002929 RID: 10537 RVA: 0x0008825F File Offset: 0x0008645F
+	// Token: 0x060038F1 RID: 14577 RVA: 0x0001F4D9 File Offset: 0x0001D6D9
 	private IEnumerator IsGroundedCheck()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -86,7 +86,7 @@ public class SnowMound_Hazard : SingleLine_Multi_Hazard, ITerrainOnEnterHitRespo
 		yield break;
 	}
 
-	// Token: 0x0600292A RID: 10538 RVA: 0x00088270 File Offset: 0x00086470
+	// Token: 0x060038F2 RID: 14578 RVA: 0x000E9E10 File Offset: 0x000E8010
 	public void TerrainOnExitHitResponse(IHitboxController otherHBController)
 	{
 		if (otherHBController.RootGameObject.CompareTag("Player"))
@@ -130,7 +130,7 @@ public class SnowMound_Hazard : SingleLine_Multi_Hazard, ITerrainOnEnterHitRespo
 		}
 	}
 
-	// Token: 0x0600292B RID: 10539 RVA: 0x0008837F File Offset: 0x0008657F
+	// Token: 0x060038F3 RID: 14579 RVA: 0x0001F4E8 File Offset: 0x0001D6E8
 	private IEnumerator PauseSnowMoundEffectCoroutine()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -150,7 +150,7 @@ public class SnowMound_Hazard : SingleLine_Multi_Hazard, ITerrainOnEnterHitRespo
 		yield break;
 	}
 
-	// Token: 0x0600292C RID: 10540 RVA: 0x00088388 File Offset: 0x00086588
+	// Token: 0x060038F4 RID: 14580 RVA: 0x000E9F20 File Offset: 0x000E8120
 	public override void ResetHazard()
 	{
 		if (this.m_slowApplied)
@@ -179,28 +179,28 @@ public class SnowMound_Hazard : SingleLine_Multi_Hazard, ITerrainOnEnterHitRespo
 		this.m_slowApplied = false;
 	}
 
-	// Token: 0x040021ED RID: 8685
+	// Token: 0x04002D9E RID: 11678
 	[SerializeField]
 	private SpriteRenderer m_lineSprite;
 
-	// Token: 0x040021EE RID: 8686
+	// Token: 0x04002D9F RID: 11679
 	private IHitboxController m_hbController;
 
-	// Token: 0x040021EF RID: 8687
+	// Token: 0x04002DA0 RID: 11680
 	private bool m_slowApplied;
 
-	// Token: 0x040021F0 RID: 8688
+	// Token: 0x04002DA1 RID: 11681
 	private Coroutine m_groundCheckCoroutine;
 
-	// Token: 0x040021F1 RID: 8689
+	// Token: 0x04002DA2 RID: 11682
 	private static int m_numSnowMoundsCollided_STATIC;
 
-	// Token: 0x040021F2 RID: 8690
+	// Token: 0x04002DA3 RID: 11683
 	private static GenericEffect m_snowMoundEffect_STATIC;
 
-	// Token: 0x040021F3 RID: 8691
+	// Token: 0x04002DA4 RID: 11684
 	private static Coroutine m_pauseSnowMoundEffectCoroutine_STATIC;
 
-	// Token: 0x040021F4 RID: 8692
+	// Token: 0x04002DA5 RID: 11685
 	private static SnowMound_Hazard m_activeSnowMound_STATIC;
 }

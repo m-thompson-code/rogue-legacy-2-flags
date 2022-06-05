@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000569 RID: 1385
+// Token: 0x02000939 RID: 2361
 public class EarthShiftTunnel : Tunnel
 {
-	// Token: 0x060032BC RID: 12988 RVA: 0x000ABAC0 File Offset: 0x000A9CC0
+	// Token: 0x06004791 RID: 18321 RVA: 0x0011631C File Offset: 0x0011451C
 	protected override void OnPlayerInteractedWithTunnel(GameObject otherObj)
 	{
 		Tunnel destination = base.Destination;

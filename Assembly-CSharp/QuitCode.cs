@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200075F RID: 1887
+// Token: 0x02000C1D RID: 3101
 public enum QuitCode
 {
-	// Token: 0x040035A2 RID: 13730
+	// Token: 0x0400481E RID: 18462
 	QuitFromOptions = 10,
-	// Token: 0x040035A3 RID: 13731
+	// Token: 0x0400481F RID: 18463
 	QuitFromMainMenu = 20,
-	// Token: 0x040035A4 RID: 13732
+	// Token: 0x04004820 RID: 18464
 	QuitFromFailedLoad = 30
 }

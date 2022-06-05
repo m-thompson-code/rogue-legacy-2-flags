@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020001F3 RID: 499
+// Token: 0x02000391 RID: 913
 [RequireComponent(typeof(EnemyController))]
 public class EnemyGroupHPController : MonoBehaviour
 {
-	// Token: 0x06001541 RID: 5441 RVA: 0x0004100C File Offset: 0x0003F20C
+	// Token: 0x06001E7A RID: 7802 RVA: 0x0000FE1D File Offset: 0x0000E01D
 	private void Awake()
 	{
 		this.m_baseEnemy = base.GetComponent<EnemyController>();
@@ -15,7 +15,7 @@ public class EnemyGroupHPController : MonoBehaviour
 		this.m_onEnemyHPGain = new Action<object, HealthChangeEventArgs>(this.OnEnemyHPGain);
 	}
 
-	// Token: 0x06001542 RID: 5442 RVA: 0x0004103E File Offset: 0x0003F23E
+	// Token: 0x06001E7B RID: 7803 RVA: 0x0000FE4F File Offset: 0x0000E04F
 	private IEnumerator Initialize()
 	{
 		while (!this.m_baseEnemy.IsInitialized)
@@ -27,7 +27,7 @@ public class EnemyGroupHPController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001543 RID: 5443 RVA: 0x0004104D File Offset: 0x0003F24D
+	// Token: 0x06001E7C RID: 7804 RVA: 0x0000FE5E File Offset: 0x0000E05E
 	private void OnEnable()
 	{
 		if (!this.m_isInitialized)
@@ -38,13 +38,13 @@ public class EnemyGroupHPController : MonoBehaviour
 		this.GroupEnemyHits();
 	}
 
-	// Token: 0x06001544 RID: 5444 RVA: 0x0004106B File Offset: 0x0003F26B
+	// Token: 0x06001E7D RID: 7805 RVA: 0x0000FE7C File Offset: 0x0000E07C
 	private void OnDisable()
 	{
 		this.StartAddingEnemyGroup();
 	}
 
-	// Token: 0x06001545 RID: 5445 RVA: 0x00041074 File Offset: 0x0003F274
+	// Token: 0x06001E7E RID: 7806 RVA: 0x0009F688 File Offset: 0x0009D888
 	public void StartAddingEnemyGroup()
 	{
 		if (this.m_baseEnemy && this.m_baseEnemy.IsInitialized)
@@ -55,14 +55,14 @@ public class EnemyGroupHPController : MonoBehaviour
 		this.m_enemyGroup.Clear();
 	}
 
-	// Token: 0x06001546 RID: 5446 RVA: 0x000410D9 File Offset: 0x0003F2D9
+	// Token: 0x06001E7F RID: 7807 RVA: 0x0000FE84 File Offset: 0x0000E084
 	public void StopAddingEnemyGroup()
 	{
 		this.m_baseEnemy.CharacterHitResponse.OnCharacterHitRelay.AddListener(this.m_onEnemyHit, false);
 		this.m_baseEnemy.HealthChangeRelay.AddListener(this.m_onEnemyHPGain, false);
 	}
 
-	// Token: 0x06001547 RID: 5447 RVA: 0x00041110 File Offset: 0x0003F310
+	// Token: 0x06001E80 RID: 7808 RVA: 0x0000FEBB File Offset: 0x0000E0BB
 	public void AddEnemyToGroup(EnemyController enemy)
 	{
 		if (!this.m_enemyGroup.Contains(enemy))
@@ -71,7 +71,7 @@ public class EnemyGroupHPController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001548 RID: 5448 RVA: 0x0004112C File Offset: 0x0003F32C
+	// Token: 0x06001E81 RID: 7809 RVA: 0x0000FED7 File Offset: 0x0000E0D7
 	public void RemoveEnemyFromGroup(EnemyController enemy)
 	{
 		if (this.m_enemyGroup.Contains(enemy))
@@ -80,7 +80,7 @@ public class EnemyGroupHPController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001549 RID: 5449 RVA: 0x0004114C File Offset: 0x0003F34C
+	// Token: 0x06001E82 RID: 7810 RVA: 0x0009F6F0 File Offset: 0x0009D8F0
 	private void GroupEnemyHits()
 	{
 		if (!this.m_disableAutoGrouping)
@@ -106,7 +106,7 @@ public class EnemyGroupHPController : MonoBehaviour
 		this.StopAddingEnemyGroup();
 	}
 
-	// Token: 0x0600154A RID: 5450 RVA: 0x0004121C File Offset: 0x0003F41C
+	// Token: 0x06001E83 RID: 7811 RVA: 0x0009F7C0 File Offset: 0x0009D9C0
 	private void OnEnemyHPGain(object sender, EventArgs args)
 	{
 		HealthChangeEventArgs healthChangeEventArgs = args as HealthChangeEventArgs;
@@ -116,7 +116,7 @@ public class EnemyGroupHPController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600154B RID: 5451 RVA: 0x00041248 File Offset: 0x0003F448
+	// Token: 0x06001E84 RID: 7812 RVA: 0x0009F7EC File Offset: 0x0009D9EC
 	private void OnEnemyHit(object sender, CharacterHitEventArgs args)
 	{
 		if (!this.m_baseEnemy.IsDead && args.DamageTaken > 0f)
@@ -146,7 +146,7 @@ public class EnemyGroupHPController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600154C RID: 5452 RVA: 0x0004134C File Offset: 0x0003F54C
+	// Token: 0x06001E85 RID: 7813 RVA: 0x0009F8F0 File Offset: 0x0009DAF0
 	private void SyncHP()
 	{
 		float num = 0f;
@@ -166,32 +166,32 @@ public class EnemyGroupHPController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001485 RID: 5253
+	// Token: 0x04001B3C RID: 6972
 	[SerializeField]
 	private bool m_disableAutoGrouping;
 
-	// Token: 0x04001486 RID: 5254
+	// Token: 0x04001B3D RID: 6973
 	[SerializeField]
 	[ConditionalHide("m_disableAutoGrouping", true, true)]
 	private bool m_autoGroupBySameEnemyType;
 
-	// Token: 0x04001487 RID: 5255
+	// Token: 0x04001B3E RID: 6974
 	[SerializeField]
 	[ConditionalHide("m_disableAutoGrouping", true, true)]
 	private bool m_autoGroupBySameEnemyRank;
 
-	// Token: 0x04001488 RID: 5256
+	// Token: 0x04001B3F RID: 6975
 	private List<EnemyController> m_enemyGroup = new List<EnemyController>();
 
-	// Token: 0x04001489 RID: 5257
+	// Token: 0x04001B40 RID: 6976
 	private EnemyController m_baseEnemy;
 
-	// Token: 0x0400148A RID: 5258
+	// Token: 0x04001B41 RID: 6977
 	private bool m_isInitialized;
 
-	// Token: 0x0400148B RID: 5259
+	// Token: 0x04001B42 RID: 6978
 	private Action<object, CharacterHitEventArgs> m_onEnemyHit;
 
-	// Token: 0x0400148C RID: 5260
+	// Token: 0x04001B43 RID: 6979
 	private Action<object, HealthChangeEventArgs> m_onEnemyHPGain;
 }

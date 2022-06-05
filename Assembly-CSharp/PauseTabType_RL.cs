@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200075C RID: 1884
+// Token: 0x02000C1A RID: 3098
 public class PauseTabType_RL
 {
 }

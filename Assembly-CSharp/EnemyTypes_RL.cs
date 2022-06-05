@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200072F RID: 1839
+// Token: 0x02000BED RID: 3053
 public static class EnemyTypes_RL
 {
-	// Token: 0x1700162D RID: 5677
-	// (get) Token: 0x060040FB RID: 16635 RVA: 0x000E635E File Offset: 0x000E455E
+	// Token: 0x17001E29 RID: 7721
+	// (get) Token: 0x06005A78 RID: 23160 RVA: 0x00031828 File Offset: 0x0002FA28
 	public static EnemyType[] TypeArray
 	{
 		get
@@ -17,8 +17,8 @@ public static class EnemyTypes_RL
 		}
 	}
 
-	// Token: 0x1700162E RID: 5678
-	// (get) Token: 0x060040FC RID: 16636 RVA: 0x000E6385 File Offset: 0x000E4585
+	// Token: 0x17001E2A RID: 7722
+	// (get) Token: 0x06005A79 RID: 23161 RVA: 0x0003184F File Offset: 0x0002FA4F
 	public static EnemyRank[] RankArray
 	{
 		get
@@ -31,9 +31,9 @@ public static class EnemyTypes_RL
 		}
 	}
 
-	// Token: 0x0400341A RID: 13338
+	// Token: 0x04004696 RID: 18070
 	private static EnemyType[] m_typeArray;
 
-	// Token: 0x0400341B RID: 13339
+	// Token: 0x04004697 RID: 18071
 	private static EnemyRank[] m_rankArray;
 }

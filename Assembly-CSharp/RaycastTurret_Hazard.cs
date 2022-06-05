@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000455 RID: 1109
+// Token: 0x02000739 RID: 1849
 public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazardConsumer
 {
-	// Token: 0x17001008 RID: 4104
-	// (get) Token: 0x060028E6 RID: 10470 RVA: 0x000873FC File Offset: 0x000855FC
+	// Token: 0x1700151B RID: 5403
+	// (get) Token: 0x0600388A RID: 14474 RVA: 0x0001F0E9 File Offset: 0x0001D2E9
 	public string[] ProjectileNameArray
 	{
 		get
@@ -23,8 +23,8 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		}
 	}
 
-	// Token: 0x17001009 RID: 4105
-	// (get) Token: 0x060028E7 RID: 10471 RVA: 0x00087421 File Offset: 0x00085621
+	// Token: 0x1700151C RID: 5404
+	// (get) Token: 0x0600388B RID: 14475 RVA: 0x00005FA3 File Offset: 0x000041A3
 	protected virtual Vector2 FireOffset
 	{
 		get
@@ -33,8 +33,8 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		}
 	}
 
-	// Token: 0x1700100A RID: 4106
-	// (get) Token: 0x060028E8 RID: 10472 RVA: 0x00087428 File Offset: 0x00085628
+	// Token: 0x1700151D RID: 5405
+	// (get) Token: 0x0600388C RID: 14476 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool AllTurretsFire
 	{
 		get
@@ -43,8 +43,8 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		}
 	}
 
-	// Token: 0x1700100B RID: 4107
-	// (get) Token: 0x060028E9 RID: 10473 RVA: 0x0008742B File Offset: 0x0008562B
+	// Token: 0x1700151E RID: 5406
+	// (get) Token: 0x0600388D RID: 14477 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float InitializationDelay
 	{
 		get
@@ -53,8 +53,8 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		}
 	}
 
-	// Token: 0x1700100C RID: 4108
-	// (get) Token: 0x060028EA RID: 10474 RVA: 0x00087432 File Offset: 0x00085632
+	// Token: 0x1700151F RID: 5407
+	// (get) Token: 0x0600388E RID: 14478 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float FireDelay
 	{
 		get
@@ -63,8 +63,8 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		}
 	}
 
-	// Token: 0x1700100D RID: 4109
-	// (get) Token: 0x060028EB RID: 10475 RVA: 0x00087439 File Offset: 0x00085639
+	// Token: 0x17001520 RID: 5408
+	// (get) Token: 0x0600388F RID: 14479 RVA: 0x0000611B File Offset: 0x0000431B
 	protected virtual float DelayBetweenShots
 	{
 		get
@@ -73,8 +73,8 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		}
 	}
 
-	// Token: 0x1700100E RID: 4110
-	// (get) Token: 0x060028EC RID: 10476 RVA: 0x00087440 File Offset: 0x00085640
+	// Token: 0x17001521 RID: 5409
+	// (get) Token: 0x06003890 RID: 14480 RVA: 0x00006E96 File Offset: 0x00005096
 	protected virtual float DetectedRange
 	{
 		get
@@ -83,13 +83,13 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		}
 	}
 
-	// Token: 0x1700100F RID: 4111
-	// (get) Token: 0x060028ED RID: 10477 RVA: 0x00087447 File Offset: 0x00085647
-	// (set) Token: 0x060028EE RID: 10478 RVA: 0x0008744F File Offset: 0x0008564F
+	// Token: 0x17001522 RID: 5410
+	// (get) Token: 0x06003891 RID: 14481 RVA: 0x0001F10E File Offset: 0x0001D30E
+	// (set) Token: 0x06003892 RID: 14482 RVA: 0x0001F116 File Offset: 0x0001D316
 	public Multi_Hazard MultiHazard { get; set; }
 
-	// Token: 0x17001010 RID: 4112
-	// (get) Token: 0x060028EF RID: 10479 RVA: 0x00087458 File Offset: 0x00085658
+	// Token: 0x17001523 RID: 5411
+	// (get) Token: 0x06003893 RID: 14483 RVA: 0x000E8998 File Offset: 0x000E6B98
 	private bool IsShotWithinRange
 	{
 		get
@@ -104,7 +104,7 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		}
 	}
 
-	// Token: 0x060028F0 RID: 10480 RVA: 0x000874EE File Offset: 0x000856EE
+	// Token: 0x06003894 RID: 14484 RVA: 0x0001F11F File Offset: 0x0001D31F
 	protected override void Awake()
 	{
 		base.Awake();
@@ -112,20 +112,20 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		this.m_initialDelay = new WaitForSeconds(this.FireDelay);
 	}
 
-	// Token: 0x060028F1 RID: 10481 RVA: 0x00087512 File Offset: 0x00085712
+	// Token: 0x06003895 RID: 14485 RVA: 0x0001F143 File Offset: 0x0001D343
 	private void OnEnable()
 	{
 		this.m_onEnterTime = Time.time;
 	}
 
-	// Token: 0x060028F2 RID: 10482 RVA: 0x0008751F File Offset: 0x0008571F
+	// Token: 0x06003896 RID: 14486 RVA: 0x0001F150 File Offset: 0x0001D350
 	protected override void OnDisable()
 	{
 		base.OnDisable();
 		this.m_shotDelayTimer = 0f;
 	}
 
-	// Token: 0x060028F3 RID: 10483 RVA: 0x00087534 File Offset: 0x00085734
+	// Token: 0x06003897 RID: 14487 RVA: 0x000E8A30 File Offset: 0x000E6C30
 	private void FixedUpdate()
 	{
 		if (Time.time < this.m_onEnterTime + this.InitializationDelay)
@@ -183,7 +183,7 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		}
 	}
 
-	// Token: 0x060028F4 RID: 10484 RVA: 0x000876DC File Offset: 0x000858DC
+	// Token: 0x06003898 RID: 14488 RVA: 0x0001F163 File Offset: 0x0001D363
 	public void FireRaycastArrow()
 	{
 		if (this.m_initialDelayCoroutine == null)
@@ -192,7 +192,7 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		}
 	}
 
-	// Token: 0x060028F5 RID: 10485 RVA: 0x000876F8 File Offset: 0x000858F8
+	// Token: 0x06003899 RID: 14489 RVA: 0x0001F17F File Offset: 0x0001D37F
 	private IEnumerator FireAfterInitialDelay()
 	{
 		base.Animator.SetTrigger("Tell");
@@ -205,39 +205,39 @@ public class RaycastTurret_Hazard : Hazard, IHasProjectileNameArray, IMultiHazar
 		yield break;
 	}
 
-	// Token: 0x060028F6 RID: 10486 RVA: 0x00087707 File Offset: 0x00085907
+	// Token: 0x0600389A RID: 14490 RVA: 0x0001F18E File Offset: 0x0001D38E
 	public override void ResetHazard()
 	{
 		this.m_initialDelayCoroutine = null;
 		this.m_needsReloading = false;
 	}
 
-	// Token: 0x040021C3 RID: 8643
+	// Token: 0x04002D5F RID: 11615
 	[SerializeField]
 	private string m_projectileName;
 
-	// Token: 0x040021C4 RID: 8644
+	// Token: 0x04002D60 RID: 11616
 	private const int SHOT_TRIGGER_WIDTH = 2;
 
-	// Token: 0x040021C5 RID: 8645
+	// Token: 0x04002D61 RID: 11617
 	private float m_shotDelayTimer;
 
-	// Token: 0x040021C6 RID: 8646
+	// Token: 0x04002D62 RID: 11618
 	private int m_triggerShotMask;
 
-	// Token: 0x040021C7 RID: 8647
+	// Token: 0x04002D63 RID: 11619
 	private Coroutine m_initialDelayCoroutine;
 
-	// Token: 0x040021C8 RID: 8648
+	// Token: 0x04002D64 RID: 11620
 	private WaitForSeconds m_initialDelay;
 
-	// Token: 0x040021C9 RID: 8649
+	// Token: 0x04002D65 RID: 11621
 	private float m_onEnterTime;
 
-	// Token: 0x040021CA RID: 8650
+	// Token: 0x04002D66 RID: 11622
 	private bool m_needsReloading;
 
-	// Token: 0x040021CB RID: 8651
+	// Token: 0x04002D67 RID: 11623
 	[NonSerialized]
 	private string[] m_projectileNameArray;
 }

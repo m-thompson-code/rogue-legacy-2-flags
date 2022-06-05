@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000218 RID: 536
+// Token: 0x020003CB RID: 971
 [CreateAssetMenu(menuName = "Custom/Libraries/Ability Library")]
 public class AbilityLibrary : ScriptableObject
 {
-	// Token: 0x17000B18 RID: 2840
-	// (get) Token: 0x0600164C RID: 5708 RVA: 0x00045A7C File Offset: 0x00043C7C
+	// Token: 0x17000E3F RID: 3647
+	// (get) Token: 0x06001FE8 RID: 8168 RVA: 0x00010DFC File Offset: 0x0000EFFC
 	private static AbilityLibrary Instance
 	{
 		get
@@ -21,7 +21,7 @@ public class AbilityLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x0600164D RID: 5709 RVA: 0x00045AB0 File Offset: 0x00043CB0
+	// Token: 0x06001FE9 RID: 8169 RVA: 0x000A4050 File Offset: 0x000A2250
 	public void Initialize()
 	{
 		if (this.m_abilityLibrary == null)
@@ -46,7 +46,7 @@ public class AbilityLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x0600164E RID: 5710 RVA: 0x00045B48 File Offset: 0x00043D48
+	// Token: 0x06001FEA RID: 8170 RVA: 0x000A40E8 File Offset: 0x000A22E8
 	public static BaseAbility_RL GetAbility(AbilityType abilityType)
 	{
 		BaseAbility_RL baseAbility_RL = null;
@@ -66,16 +66,16 @@ public class AbilityLibrary : ScriptableObject
 		return baseAbility_RL;
 	}
 
-	// Token: 0x04001589 RID: 5513
+	// Token: 0x04001C8C RID: 7308
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/AbilityLibrary";
 
-	// Token: 0x0400158A RID: 5514
+	// Token: 0x04001C8D RID: 7309
 	[SerializeField]
 	private BaseAbility_RL[] m_abilityList;
 
-	// Token: 0x0400158B RID: 5515
+	// Token: 0x04001C8E RID: 7310
 	private static AbilityLibrary m_instance;
 
-	// Token: 0x0400158C RID: 5516
+	// Token: 0x04001C8F RID: 7311
 	private Dictionary<AbilityType, BaseAbility_RL> m_abilityLibrary;
 }

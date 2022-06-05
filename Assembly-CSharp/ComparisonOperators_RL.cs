@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x0200063B RID: 1595
+// Token: 0x02000A68 RID: 2664
 public enum ComparisonOperators_RL
 {
-	// Token: 0x04002C64 RID: 11364
+	// Token: 0x04003CF6 RID: 15606
 	EqualTo,
-	// Token: 0x04002C65 RID: 11365
+	// Token: 0x04003CF7 RID: 15607
 	NotEqualTo,
-	// Token: 0x04002C66 RID: 11366
+	// Token: 0x04003CF8 RID: 15608
 	GreaterThan,
-	// Token: 0x04002C67 RID: 11367
+	// Token: 0x04003CF9 RID: 15609
 	LessThan,
-	// Token: 0x04002C68 RID: 11368
+	// Token: 0x04003CFA RID: 15610
 	EqualsOrGreaterThan,
-	// Token: 0x04002C69 RID: 11369
+	// Token: 0x04003CFB RID: 15611
 	EqualsOrLessThan
 }

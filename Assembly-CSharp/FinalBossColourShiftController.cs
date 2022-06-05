@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000C3 RID: 195
+// Token: 0x02000129 RID: 297
 public class FinalBossColourShiftController : MonoBehaviour
 {
-	// Token: 0x06000542 RID: 1346 RVA: 0x00016EA4 File Offset: 0x000150A4
+	// Token: 0x06000781 RID: 1921 RVA: 0x0005D8CC File Offset: 0x0005BACC
 	public void ShiftColour(bool shiftToWhite, float lerpSpeed, bool isAdvanced)
 	{
 		if (FinalBossColourShiftController.m_colourShiftMatBlock == null)
@@ -48,7 +48,7 @@ public class FinalBossColourShiftController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000543 RID: 1347 RVA: 0x00016F98 File Offset: 0x00015198
+	// Token: 0x06000782 RID: 1922 RVA: 0x000059C7 File Offset: 0x00003BC7
 	private IEnumerator ColourShiftLerpCoroutine(bool shiftToWhite, float lerpSpeed, bool isAdvanced)
 	{
 		if (!shiftToWhite)
@@ -84,16 +84,16 @@ public class FinalBossColourShiftController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04000904 RID: 2308
+	// Token: 0x04000AD9 RID: 2777
 	private const string TextureBlendShaderID = "_TextureBlend";
 
-	// Token: 0x04000905 RID: 2309
+	// Token: 0x04000ADA RID: 2778
 	[SerializeField]
 	private Renderer[] m_renderers;
 
-	// Token: 0x04000906 RID: 2310
+	// Token: 0x04000ADB RID: 2779
 	private static MaterialPropertyBlock m_colourShiftMatBlock;
 
-	// Token: 0x04000907 RID: 2311
+	// Token: 0x04000ADC RID: 2780
 	private Coroutine m_colourShiftLerpCoroutine;
 }

@@ -6,10 +6,10 @@ using Sigtrap.Relays;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x0200069C RID: 1692
+// Token: 0x02000B30 RID: 2864
 public class ItemDropManager : MonoBehaviour
 {
-	// Token: 0x06003DC0 RID: 15808 RVA: 0x000D7998 File Offset: 0x000D5B98
+	// Token: 0x06005693 RID: 22163 RVA: 0x0002F0EA File Offset: 0x0002D2EA
 	private void Awake()
 	{
 		this.m_onPlayerEnterRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerEnterRoom);
@@ -18,7 +18,7 @@ public class ItemDropManager : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x06003DC1 RID: 15809 RVA: 0x000D79CF File Offset: 0x000D5BCF
+	// Token: 0x06005694 RID: 22164 RVA: 0x0002F121 File Offset: 0x0002D321
 	private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
 		if (ItemDropManager.IsInitialized && ItemDropManager.m_itemDropManager)
@@ -27,7 +27,7 @@ public class ItemDropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DC2 RID: 15810 RVA: 0x000D79E9 File Offset: 0x000D5BE9
+	// Token: 0x06005695 RID: 22165 RVA: 0x0002F13B File Offset: 0x0002D33B
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		SoulDrop.FakeSoulCounter_STATIC = 0;
@@ -37,7 +37,7 @@ public class ItemDropManager : MonoBehaviour
 		base.StopAllCoroutines();
 	}
 
-	// Token: 0x06003DC3 RID: 15811 RVA: 0x000D7A0C File Offset: 0x000D5C0C
+	// Token: 0x06005696 RID: 22166 RVA: 0x0002F15E File Offset: 0x0002D35E
 	private void OnDestroy()
 	{
 		ItemDropManager.IsInitialized = false;
@@ -46,7 +46,7 @@ public class ItemDropManager : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x06003DC4 RID: 15812 RVA: 0x000D7A38 File Offset: 0x000D5C38
+	// Token: 0x06005697 RID: 22167 RVA: 0x00148048 File Offset: 0x00146248
 	private void Initialize()
 	{
 		this.m_itemDropDict = new Dictionary<ItemDropType, GenericPool_RL<BaseItemDrop>>();
@@ -74,7 +74,7 @@ public class ItemDropManager : MonoBehaviour
 		ItemDropManager.IsInitialized = true;
 	}
 
-	// Token: 0x06003DC5 RID: 15813 RVA: 0x000D7B90 File Offset: 0x000D5D90
+	// Token: 0x06005698 RID: 22168 RVA: 0x0002F189 File Offset: 0x0002D389
 	private int GoldValueSort(ItemDropType obj1, ItemDropType obj2)
 	{
 		if (obj1 == obj2)
@@ -88,7 +88,7 @@ public class ItemDropManager : MonoBehaviour
 		return 1;
 	}
 
-	// Token: 0x06003DC6 RID: 15814 RVA: 0x000D7BAC File Offset: 0x000D5DAC
+	// Token: 0x06005699 RID: 22169 RVA: 0x001481A0 File Offset: 0x001463A0
 	private bool CanDropGold(bool fromChest)
 	{
 		float architectGoldMod = NPC_EV.GetArchitectGoldMod(-1);
@@ -97,7 +97,7 @@ public class ItemDropManager : MonoBehaviour
 		return architectGoldMod > 0f && level <= 0 && flag;
 	}
 
-	// Token: 0x06003DC7 RID: 15815 RVA: 0x000D7BF4 File Offset: 0x000D5DF4
+	// Token: 0x0600569A RID: 22170 RVA: 0x001481E8 File Offset: 0x001463E8
 	private void Internal_DropItem(ItemDropType itemDropType, int amount, Vector3 position, bool useLargeSpurt, bool forceMagnetize, bool fromChest, bool dropOneWithFullAmount)
 	{
 		if (Economy_EV.GetItemDropValue(itemDropType, true) > 0 && !this.CanDropGold(fromChest))
@@ -190,7 +190,7 @@ public class ItemDropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DC8 RID: 15816 RVA: 0x000D7E78 File Offset: 0x000D6078
+	// Token: 0x0600569B RID: 22171 RVA: 0x0014846C File Offset: 0x0014666C
 	private void Internal_DropSpecialItem(ISpecialItemDrop specialItemDrop, bool displayItemDropWindow)
 	{
 		IBlueprintDrop blueprintDrop = specialItemDrop as IBlueprintDrop;
@@ -273,7 +273,7 @@ public class ItemDropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DC9 RID: 15817 RVA: 0x000D8054 File Offset: 0x000D6254
+	// Token: 0x0600569C RID: 22172 RVA: 0x00148648 File Offset: 0x00146848
 	private void Internal_DropGold(int amount, Vector3 position, bool largeSpurt, bool forceMagnetize, bool fromChest)
 	{
 		if (!this.CanDropGold(fromChest))
@@ -330,7 +330,7 @@ public class ItemDropManager : MonoBehaviour
 		base.StartCoroutine(this.DropGoldCoroutine(num5, num6, position, list, largeSpurt, forceMagnetize, fromChest));
 	}
 
-	// Token: 0x06003DCA RID: 15818 RVA: 0x000D81F0 File Offset: 0x000D63F0
+	// Token: 0x0600569D RID: 22173 RVA: 0x001487E4 File Offset: 0x001469E4
 	private IEnumerator DropGoldCoroutine(int totalItemDrops, int numDropsPerDelay, Vector2 position, List<ItemDropManager.GoldDropData> allItemsDroppedList, bool largeSpurt, bool forceMagnetize, bool fromChest)
 	{
 		int dropCounter = 0;
@@ -367,7 +367,7 @@ public class ItemDropManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003DCB RID: 15819 RVA: 0x000D8240 File Offset: 0x000D6440
+	// Token: 0x0600569E RID: 22174 RVA: 0x00148834 File Offset: 0x00146A34
 	private void DispatchDropGoldRelay(List<ItemDropManager.GoldDropData> allItemsDroppedList, Vector2 position)
 	{
 		foreach (ItemDropType itemDropType in ItemDropType_RL.Types)
@@ -387,8 +387,8 @@ public class ItemDropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700154C RID: 5452
-	// (get) Token: 0x06003DCC RID: 15820 RVA: 0x000D82A2 File Offset: 0x000D64A2
+	// Token: 0x17001D2C RID: 7468
+	// (get) Token: 0x0600569F RID: 22175 RVA: 0x0002F1A4 File Offset: 0x0002D3A4
 	private static ItemDropManager Instance
 	{
 		get
@@ -401,8 +401,8 @@ public class ItemDropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700154D RID: 5453
-	// (get) Token: 0x06003DCD RID: 15821 RVA: 0x000D82C0 File Offset: 0x000D64C0
+	// Token: 0x17001D2D RID: 7469
+	// (get) Token: 0x060056A0 RID: 22176 RVA: 0x00148898 File Offset: 0x00146A98
 	public static bool HasActiveItemDrops
 	{
 		get
@@ -419,7 +419,7 @@ public class ItemDropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DCE RID: 15822 RVA: 0x000D834C File Offset: 0x000D654C
+	// Token: 0x060056A1 RID: 22177 RVA: 0x00148924 File Offset: 0x00146B24
 	public static bool HasActiveItemDropsOfType(ItemDropType itemDropType)
 	{
 		foreach (KeyValuePair<ItemDropType, GenericPool_RL<BaseItemDrop>> keyValuePair in ItemDropManager.Instance.m_itemDropDict)
@@ -432,30 +432,30 @@ public class ItemDropManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x1700154E RID: 5454
-	// (get) Token: 0x06003DCF RID: 15823 RVA: 0x000D83BC File Offset: 0x000D65BC
-	// (set) Token: 0x06003DD0 RID: 15824 RVA: 0x000D83C3 File Offset: 0x000D65C3
+	// Token: 0x17001D2E RID: 7470
+	// (get) Token: 0x060056A2 RID: 22178 RVA: 0x0002F1C2 File Offset: 0x0002D3C2
+	// (set) Token: 0x060056A3 RID: 22179 RVA: 0x0002F1C9 File Offset: 0x0002D3C9
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06003DD1 RID: 15825 RVA: 0x000D83CB File Offset: 0x000D65CB
+	// Token: 0x060056A4 RID: 22180 RVA: 0x0002F1D1 File Offset: 0x0002D3D1
 	public static void DropGold(int amount, Vector3 position, bool largeSpurt, bool forceMagnetize = false, bool fromChest = false)
 	{
 		ItemDropManager.Instance.Internal_DropGold(amount, position, largeSpurt, forceMagnetize, fromChest);
 	}
 
-	// Token: 0x06003DD2 RID: 15826 RVA: 0x000D83DD File Offset: 0x000D65DD
+	// Token: 0x060056A5 RID: 22181 RVA: 0x0002F1E3 File Offset: 0x0002D3E3
 	public static void DropItem(ItemDropType itemDropType, int amount, Vector3 position, bool largeSpurt, bool forceMagnetize = false, bool fromChest = false)
 	{
 		ItemDropManager.Instance.Internal_DropItem(itemDropType, amount, position, largeSpurt, forceMagnetize, fromChest, false);
 	}
 
-	// Token: 0x06003DD3 RID: 15827 RVA: 0x000D83F2 File Offset: 0x000D65F2
+	// Token: 0x060056A6 RID: 22182 RVA: 0x0002F1F8 File Offset: 0x0002D3F8
 	public static void DropSpecialItem(ISpecialItemDrop specialItemDrop, bool displayItemDropWindow = true)
 	{
 		ItemDropManager.Instance.Internal_DropSpecialItem(specialItemDrop, displayItemDropWindow);
 	}
 
-	// Token: 0x06003DD4 RID: 15828 RVA: 0x000D8400 File Offset: 0x000D6600
+	// Token: 0x060056A7 RID: 22183 RVA: 0x00148994 File Offset: 0x00146B94
 	public static void DisableAllItemDrops()
 	{
 		foreach (KeyValuePair<ItemDropType, GenericPool_RL<BaseItemDrop>> keyValuePair in ItemDropManager.Instance.m_itemDropDict)
@@ -464,13 +464,13 @@ public class ItemDropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DD5 RID: 15829 RVA: 0x000D8460 File Offset: 0x000D6660
+	// Token: 0x060056A8 RID: 22184 RVA: 0x0002F206 File Offset: 0x0002D406
 	public static void Reset()
 	{
 		ItemDropManager.DisableAllItemDrops();
 	}
 
-	// Token: 0x06003DD6 RID: 15830 RVA: 0x000D8468 File Offset: 0x000D6668
+	// Token: 0x060056A9 RID: 22185 RVA: 0x001489F4 File Offset: 0x00146BF4
 	public static void DestroyPools()
 	{
 		foreach (KeyValuePair<ItemDropType, GenericPool_RL<BaseItemDrop>> keyValuePair in ItemDropManager.Instance.m_itemDropDict)
@@ -480,53 +480,53 @@ public class ItemDropManager : MonoBehaviour
 		ItemDropManager.Instance.m_itemDropDict.Clear();
 	}
 
-	// Token: 0x04002E08 RID: 11784
+	// Token: 0x04004002 RID: 16386
 	private const string ITEMDROPMANAGER_NAME = "ItemDropManager";
 
-	// Token: 0x04002E09 RID: 11785
+	// Token: 0x04004003 RID: 16387
 	private const string RESOURCE_PATH = "Prefabs/Managers/ItemDropManager";
 
-	// Token: 0x04002E0A RID: 11786
+	// Token: 0x04004004 RID: 16388
 	private const float DELAY_BETWEEN_GOLD_DROPS = 0.02f;
 
-	// Token: 0x04002E0B RID: 11787
+	// Token: 0x04004005 RID: 16389
 	private const float MAX_GOLD_DROP_ANIM_DURATION = 1.5f;
 
-	// Token: 0x04002E0C RID: 11788
+	// Token: 0x04004006 RID: 16390
 	public Relay<ItemDropType, Vector2, int> DropGoldRelay = new Relay<ItemDropType, Vector2, int>();
 
-	// Token: 0x04002E0D RID: 11789
+	// Token: 0x04004007 RID: 16391
 	public Relay<ItemDropType, Vector2> DropItemRelay = new Relay<ItemDropType, Vector2>();
 
-	// Token: 0x04002E0E RID: 11790
+	// Token: 0x04004008 RID: 16392
 	private Dictionary<ItemDropType, GenericPool_RL<BaseItemDrop>> m_itemDropDict;
 
-	// Token: 0x04002E0F RID: 11791
+	// Token: 0x04004009 RID: 16393
 	private List<ItemDropType> m_goldDropTypes;
 
-	// Token: 0x04002E10 RID: 11792
+	// Token: 0x0400400A RID: 16394
 	private WaitForSeconds m_coinDropWaitYield = new WaitForSeconds(0.02f);
 
-	// Token: 0x04002E11 RID: 11793
+	// Token: 0x0400400B RID: 16395
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04002E12 RID: 11794
+	// Token: 0x0400400C RID: 16396
 	private static ItemDropManager m_itemDropManager;
 
-	// Token: 0x02000E0A RID: 3594
+	// Token: 0x02000B31 RID: 2865
 	private struct GoldDropData
 	{
-		// Token: 0x06006B2C RID: 27436 RVA: 0x00190C28 File Offset: 0x0018EE28
+		// Token: 0x060056AC RID: 22188 RVA: 0x0002F23B File Offset: 0x0002D43B
 		public GoldDropData(ItemDropType type, int amount)
 		{
 			this.Type = type;
 			this.Amount = amount;
 		}
 
-		// Token: 0x04005682 RID: 22146
+		// Token: 0x0400400E RID: 16398
 		public ItemDropType Type;
 
-		// Token: 0x04005683 RID: 22147
+		// Token: 0x0400400F RID: 16399
 		public int Amount;
 	}
 }

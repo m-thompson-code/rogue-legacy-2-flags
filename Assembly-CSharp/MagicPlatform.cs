@@ -3,15 +3,15 @@ using System.Collections;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020004C6 RID: 1222
+// Token: 0x020007E6 RID: 2022
 public class MagicPlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitResponse, ITerrainOnEnterHitResponse, IRootObj, IRoomConsumer, IForcePlatformCollision
 {
-	// Token: 0x1700114A RID: 4426
-	// (get) Token: 0x06002D5F RID: 11615 RVA: 0x000998AF File Offset: 0x00097AAF
-	// (set) Token: 0x06002D60 RID: 11616 RVA: 0x000998B7 File Offset: 0x00097AB7
+	// Token: 0x170016C1 RID: 5825
+	// (get) Token: 0x06003E3B RID: 15931 RVA: 0x000226DC File Offset: 0x000208DC
+	// (set) Token: 0x06003E3C RID: 15932 RVA: 0x000226E4 File Offset: 0x000208E4
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x06002D61 RID: 11617 RVA: 0x000998C0 File Offset: 0x00097AC0
+	// Token: 0x06003E3D RID: 15933 RVA: 0x000226ED File Offset: 0x000208ED
 	protected override void Awake()
 	{
 		base.Awake();
@@ -19,7 +19,7 @@ public class MagicPlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRes
 		this.m_onPlayerJump = new Action<MonoBehaviour, EventArgs>(this.OnPlayerJump);
 	}
 
-	// Token: 0x06002D62 RID: 11618 RVA: 0x000998E6 File Offset: 0x00097AE6
+	// Token: 0x06003E3E RID: 15934 RVA: 0x00022713 File Offset: 0x00020913
 	protected override IEnumerator Start()
 	{
 		this.m_hbController.RepeatHitDuration = 0f;
@@ -41,18 +41,18 @@ public class MagicPlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRes
 		yield break;
 	}
 
-	// Token: 0x06002D63 RID: 11619 RVA: 0x000998F5 File Offset: 0x00097AF5
+	// Token: 0x06003E3F RID: 15935 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void ForcePlatformCollision()
 	{
 	}
 
-	// Token: 0x06002D64 RID: 11620 RVA: 0x000998F7 File Offset: 0x00097AF7
+	// Token: 0x06003E40 RID: 15936 RVA: 0x00022722 File Offset: 0x00020922
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		this.TerrainOnStayHitResponse(otherHBController);
 	}
 
-	// Token: 0x06002D65 RID: 11621 RVA: 0x00099900 File Offset: 0x00097B00
+	// Token: 0x06003E41 RID: 15937 RVA: 0x000FAAD8 File Offset: 0x000F8CD8
 	public void TerrainOnStayHitResponse(IHitboxController otherHBController)
 	{
 		if (!this.m_active)
@@ -75,14 +75,14 @@ public class MagicPlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRes
 		}
 	}
 
-	// Token: 0x06002D66 RID: 11622 RVA: 0x00099AAD File Offset: 0x00097CAD
+	// Token: 0x06003E42 RID: 15938 RVA: 0x0002272B File Offset: 0x0002092B
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerJump, this.m_onPlayerJump);
 		this.m_playerIsInRoom = true;
 	}
 
-	// Token: 0x06002D67 RID: 11623 RVA: 0x00099AC3 File Offset: 0x00097CC3
+	// Token: 0x06003E43 RID: 15939 RVA: 0x00022741 File Offset: 0x00020941
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerJump, this.m_onPlayerJump);
@@ -90,19 +90,19 @@ public class MagicPlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRes
 		this.SetInactive();
 	}
 
-	// Token: 0x06002D68 RID: 11624 RVA: 0x00099ADF File Offset: 0x00097CDF
+	// Token: 0x06003E44 RID: 15940 RVA: 0x0002275D File Offset: 0x0002095D
 	private void OnPlayerJump(object sender, EventArgs eventArgs)
 	{
 		this.SetInactive();
 	}
 
-	// Token: 0x06002D69 RID: 11625 RVA: 0x00099AE7 File Offset: 0x00097CE7
+	// Token: 0x06003E45 RID: 15941 RVA: 0x0002275D File Offset: 0x0002095D
 	private void OnSpawnPlatform(object sender, EventArgs eventArgs)
 	{
 		this.SetInactive();
 	}
 
-	// Token: 0x06002D6A RID: 11626 RVA: 0x00099AEF File Offset: 0x00097CEF
+	// Token: 0x06003E46 RID: 15942 RVA: 0x00022765 File Offset: 0x00020965
 	private IEnumerator SetInactiveCoroutine(float delay)
 	{
 		if (!this.m_active)
@@ -118,7 +118,7 @@ public class MagicPlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRes
 		yield break;
 	}
 
-	// Token: 0x06002D6B RID: 11627 RVA: 0x00099B08 File Offset: 0x00097D08
+	// Token: 0x06003E47 RID: 15943 RVA: 0x000FAC88 File Offset: 0x000F8E88
 	private void SetInactive()
 	{
 		if (!this.m_active)
@@ -134,12 +134,12 @@ public class MagicPlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRes
 		this.m_animator.SetBool("Active", false);
 	}
 
-	// Token: 0x06002D6C RID: 11628 RVA: 0x00099BC0 File Offset: 0x00097DC0
+	// Token: 0x06003E48 RID: 15944 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void SetState(StateID state)
 	{
 	}
 
-	// Token: 0x06002D6D RID: 11629 RVA: 0x00099BC4 File Offset: 0x00097DC4
+	// Token: 0x06003E49 RID: 15945 RVA: 0x000FAD40 File Offset: 0x000F8F40
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
@@ -147,7 +147,7 @@ public class MagicPlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRes
 		this.Room.PlayerExitRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerExitRoom), false);
 	}
 
-	// Token: 0x06002D6E RID: 11630 RVA: 0x00099C14 File Offset: 0x00097E14
+	// Token: 0x06003E4A RID: 15946 RVA: 0x000FAD90 File Offset: 0x000F8F90
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -162,46 +162,46 @@ public class MagicPlatform : SpecialPlatform, ITerrainOnStayHitResponse, IHitRes
 		}
 	}
 
-	// Token: 0x06002D71 RID: 11633 RVA: 0x00099CB9 File Offset: 0x00097EB9
+	// Token: 0x06003E4D RID: 15949 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002461 RID: 9313
+	// Token: 0x040030E2 RID: 12514
 	[SerializeField]
 	private float m_spawnedPlatformWidth = 4f;
 
-	// Token: 0x04002462 RID: 9314
+	// Token: 0x040030E3 RID: 12515
 	private BoxCollider2D m_terrainCollider;
 
-	// Token: 0x04002463 RID: 9315
+	// Token: 0x040030E4 RID: 12516
 	private BoxCollider2D m_platformCollider;
 
-	// Token: 0x04002464 RID: 9316
+	// Token: 0x040030E5 RID: 12517
 	private SpriteRenderer m_outlineSprite;
 
-	// Token: 0x04002465 RID: 9317
+	// Token: 0x040030E6 RID: 12518
 	private SpriteRenderer m_platformSprite;
 
-	// Token: 0x04002466 RID: 9318
+	// Token: 0x040030E7 RID: 12519
 	private Vector3 m_origColliderPosition;
 
-	// Token: 0x04002467 RID: 9319
+	// Token: 0x040030E8 RID: 12520
 	private bool m_active;
 
-	// Token: 0x04002468 RID: 9320
+	// Token: 0x040030E9 RID: 12521
 	private Animator m_animator;
 
-	// Token: 0x04002469 RID: 9321
+	// Token: 0x040030EA RID: 12522
 	private bool m_playerIsInRoom;
 
-	// Token: 0x0400246A RID: 9322
+	// Token: 0x040030EB RID: 12523
 	private Coroutine m_setInactiveCoroutine;
 
-	// Token: 0x0400246B RID: 9323
+	// Token: 0x040030EC RID: 12524
 	private Action<MonoBehaviour, EventArgs> m_onPlayerJump;
 
-	// Token: 0x0400246C RID: 9324
+	// Token: 0x040030ED RID: 12525
 	private static Relay<MonoBehaviour, EventArgs> SpawnPlatformRelay = new Relay<MonoBehaviour, EventArgs>();
 }

@@ -4,21 +4,21 @@ using Rewired;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020002BF RID: 703
+// Token: 0x020004AF RID: 1199
 public class RewiredOnStartupController : MonoBehaviour
 {
-	// Token: 0x17000C8F RID: 3215
-	// (get) Token: 0x06001BF2 RID: 7154 RVA: 0x0005A212 File Offset: 0x00058412
-	// (set) Token: 0x06001BF3 RID: 7155 RVA: 0x0005A219 File Offset: 0x00058419
+	// Token: 0x17001012 RID: 4114
+	// (get) Token: 0x060026A8 RID: 9896 RVA: 0x000159CB File Offset: 0x00013BCB
+	// (set) Token: 0x060026A9 RID: 9897 RVA: 0x000159D2 File Offset: 0x00013BD2
 	public static ControllerType CurrentActiveControllerType { get; private set; } = ControllerType.Custom;
 
-	// Token: 0x17000C90 RID: 3216
-	// (get) Token: 0x06001BF4 RID: 7156 RVA: 0x0005A221 File Offset: 0x00058421
-	// (set) Token: 0x06001BF5 RID: 7157 RVA: 0x0005A228 File Offset: 0x00058428
+	// Token: 0x17001013 RID: 4115
+	// (get) Token: 0x060026AA RID: 9898 RVA: 0x000159DA File Offset: 0x00013BDA
+	// (set) Token: 0x060026AB RID: 9899 RVA: 0x000159E1 File Offset: 0x00013BE1
 	public static GamepadType CurrentActiveGamepadType { get; private set; } = GamepadType.Default_Xbox;
 
-	// Token: 0x17000C91 RID: 3217
-	// (get) Token: 0x06001BF6 RID: 7158 RVA: 0x0005A230 File Offset: 0x00058430
+	// Token: 0x17001014 RID: 4116
+	// (get) Token: 0x060026AC RID: 9900 RVA: 0x000159E9 File Offset: 0x00013BE9
 	public static Controller ActiveControllerUsed
 	{
 		get
@@ -27,7 +27,7 @@ public class RewiredOnStartupController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BF7 RID: 7159 RVA: 0x0005A238 File Offset: 0x00058438
+	// Token: 0x060026AD RID: 9901 RVA: 0x000B6CFC File Offset: 0x000B4EFC
 	public static int GetFirstAvailableJoystickControllerID()
 	{
 		foreach (Joystick joystick in ReInput.controllers.Joysticks)
@@ -40,7 +40,7 @@ public class RewiredOnStartupController : MonoBehaviour
 		return -1;
 	}
 
-	// Token: 0x06001BF8 RID: 7160 RVA: 0x0005A2A0 File Offset: 0x000584A0
+	// Token: 0x060026AE RID: 9902 RVA: 0x000159F0 File Offset: 0x00013BF0
 	private void OnEnable()
 	{
 		ReInput.ControllerConnectedEvent += this.OnControllerConnected;
@@ -49,7 +49,7 @@ public class RewiredOnStartupController : MonoBehaviour
 		RewiredOnStartupController.UpdateJoystickCalibrationMap();
 	}
 
-	// Token: 0x06001BF9 RID: 7161 RVA: 0x0005A2DF File Offset: 0x000584DF
+	// Token: 0x060026AF RID: 9903 RVA: 0x00015A2F File Offset: 0x00013C2F
 	private IEnumerator Start()
 	{
 		while (StoreAPIManager.InitState != StoreAPIManager.StoreInitState.Succeeded || !SaveManager.IsInitialized)
@@ -62,7 +62,7 @@ public class RewiredOnStartupController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001BFA RID: 7162 RVA: 0x0005A2E7 File Offset: 0x000584E7
+	// Token: 0x060026B0 RID: 9904 RVA: 0x00015A37 File Offset: 0x00013C37
 	private void OnDisable()
 	{
 		ReInput.ControllerConnectedEvent -= this.OnControllerConnected;
@@ -70,7 +70,7 @@ public class RewiredOnStartupController : MonoBehaviour
 		ReInput.controllers.RemoveLastActiveControllerChangedDelegate(new ActiveControllerChangedDelegate(this.ActiveControllerChanged));
 	}
 
-	// Token: 0x06001BFB RID: 7163 RVA: 0x0005A324 File Offset: 0x00058524
+	// Token: 0x060026B1 RID: 9905 RVA: 0x000B6D64 File Offset: 0x000B4F64
 	private void OnControllerConnected(ControllerStatusChangedEventArgs args)
 	{
 		if (args.controllerType == ControllerType.Joystick && !Rewired_RL.IsStandardJoystick(args.controller))
@@ -102,7 +102,7 @@ public class RewiredOnStartupController : MonoBehaviour
 		RewiredOnStartupController.UpdateJoystickCalibrationMap();
 	}
 
-	// Token: 0x06001BFC RID: 7164 RVA: 0x0005A3B8 File Offset: 0x000585B8
+	// Token: 0x060026B2 RID: 9906 RVA: 0x00015A71 File Offset: 0x00013C71
 	private void OnControllerDisconnected(ControllerStatusChangedEventArgs args)
 	{
 		if (!RewiredOnStartupController.m_activeControllerUsed.isConnected)
@@ -111,7 +111,7 @@ public class RewiredOnStartupController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BFD RID: 7165 RVA: 0x0005A3D0 File Offset: 0x000585D0
+	// Token: 0x060026B3 RID: 9907 RVA: 0x000B6DF8 File Offset: 0x000B4FF8
 	public static void UpdateJoystickCalibrationMap()
 	{
 		if (!ReInput.isReady)
@@ -138,7 +138,7 @@ public class RewiredOnStartupController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BFE RID: 7166 RVA: 0x0005A4B0 File Offset: 0x000586B0
+	// Token: 0x060026B4 RID: 9908 RVA: 0x00015A86 File Offset: 0x00013C86
 	private void ActiveControllerChanged(Controller newActiveController)
 	{
 		if (newActiveController.type == ControllerType.Joystick)
@@ -155,12 +155,12 @@ public class RewiredOnStartupController : MonoBehaviour
 		RewiredOnStartupController.CurrentActiveControllerType = newActiveController.type;
 	}
 
-	// Token: 0x06001BFF RID: 7167 RVA: 0x0005A4E6 File Offset: 0x000586E6
+	// Token: 0x060026B5 RID: 9909 RVA: 0x00015ABC File Offset: 0x00013CBC
 	public static void UpdateActiveGamepadType()
 	{
 		RewiredOnStartupController.CurrentActiveGamepadType = ControllerGlyphLibrary.GetGamepadTypeFromInputIconSetting(SaveManager.ConfigData.InputIconSetting);
 	}
 
-	// Token: 0x0400197D RID: 6525
+	// Token: 0x0400216D RID: 8557
 	private static Controller m_activeControllerUsed;
 }

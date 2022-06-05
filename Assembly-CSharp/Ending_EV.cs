@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02000062 RID: 98
+// Token: 0x0200006A RID: 106
 public class Ending_EV
 {
-	// Token: 0x04000296 RID: 662
+	// Token: 0x040002B7 RID: 695
 	public const int MAX_NUMBER_OF_PORTRAITS_FOR_LINEAGE = 20;
 
-	// Token: 0x04000297 RID: 663
+	// Token: 0x040002B8 RID: 696
 	public const float ENDING_COUNTDOWN_TIMER = 10f;
 
-	// Token: 0x04000298 RID: 664
+	// Token: 0x040002B9 RID: 697
 	public static readonly string[] GARDEN_PREFIGHT_DIALOGUE_LOCIDS = new string[]
 	{
 		"LOC_ID_J_GARDEN_EXPLAINING_EVERYTHING_1",
@@ -23,7 +23,7 @@ public class Ending_EV
 		"LOC_ID_J_GARDEN_REPEATING_FIGHT_1"
 	};
 
-	// Token: 0x04000299 RID: 665
+	// Token: 0x040002BA RID: 698
 	public static readonly string[] GARDEN_PREFIGHT_REPEAT_DIALOGUE_LOCIDS = new string[]
 	{
 		"LOC_ID_J_GARDEN_REPEAT_FIGHT_1",
@@ -34,7 +34,7 @@ public class Ending_EV
 		"LOC_ID_J_GARDEN_REPEAT_FIGHT_6"
 	};
 
-	// Token: 0x0400029A RID: 666
+	// Token: 0x040002BB RID: 699
 	public static readonly string[] GARDEN_POSTFIGHT_DIALOGUE_LOCIDS = new string[]
 	{
 		"LOC_ID_J_GARDEN_BEATEN_BY_PLAYER_1",
@@ -45,7 +45,7 @@ public class Ending_EV
 		"LOC_ID_J_GARDEN_SPECIAL_BEATEN_GIVE_KEY_1"
 	};
 
-	// Token: 0x0400029B RID: 667
+	// Token: 0x040002BC RID: 700
 	public static readonly string[] GARDEN_POSTFIGHT_REPEAT_DIALOGUE_LOCIDS = new string[]
 	{
 		"LOC_ID_J_GARDEN_BEATEN_IDLE_TALK_1",
@@ -55,16 +55,16 @@ public class Ending_EV
 		"LOC_ID_J_GARDEN_BEATEN_IDLE_TALK_5"
 	};
 
-	// Token: 0x0400029C RID: 668
+	// Token: 0x040002BD RID: 701
 	public const int MIN_DEATHS_BEFORE_HESTIA_CUTSCENE = 6;
 
-	// Token: 0x0400029D RID: 669
+	// Token: 0x040002BE RID: 702
 	public const float HESTIA_CUTSCENE_CHANCE_PER_DEATH = 0.25f;
 
-	// Token: 0x0400029E RID: 670
+	// Token: 0x040002BF RID: 703
 	public const float DEATH_DEFY_TRANSITION_DELAY = 1f;
 
-	// Token: 0x0400029F RID: 671
+	// Token: 0x040002C0 RID: 704
 	public static readonly string[] TREE_CUTSCENE_DIALOGUE_1_LOCID = new string[]
 	{
 		"LOC_ID_TREE_BIG_TEXT_YOUR_DUTY_1",
@@ -75,7 +75,7 @@ public class Ending_EV
 		"LOC_ID_TREE_BIG_TEXT_WHITE_TREE_1"
 	};
 
-	// Token: 0x040002A0 RID: 672
+	// Token: 0x040002C1 RID: 705
 	public static readonly string[] TREE_CUTSCENE_DIALOGUE_2_LOCID = new string[]
 	{
 		"LOC_ID_TREE_BIG_TEXT_YOUR_DUTY_2",
@@ -86,7 +86,7 @@ public class Ending_EV
 		"LOC_ID_TREE_BIG_TEXT_WHITE_TREE_2"
 	};
 
-	// Token: 0x040002A1 RID: 673
+	// Token: 0x040002C2 RID: 706
 	public static readonly string[] HESTIA_CUTSCENE_DIALOGUE_1_LOCID = new string[]
 	{
 		"LOC_ID_HESTIA_BIG_TEXT_NEW_CONTRACT_1",
@@ -99,7 +99,7 @@ public class Ending_EV
 		"LOC_ID_HESTIA_BIG_TEXT_LEGACY_1"
 	};
 
-	// Token: 0x040002A2 RID: 674
+	// Token: 0x040002C3 RID: 707
 	public static readonly string[] HESTIA_CUTSCENE_DIALOGUE_2_LOCID = new string[]
 	{
 		"LOC_ID_HESTIA_BIG_TEXT_NEW_CONTRACT_2",

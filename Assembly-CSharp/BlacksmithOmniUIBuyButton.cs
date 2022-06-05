@@ -4,21 +4,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000394 RID: 916
+// Token: 0x02000623 RID: 1571
 public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 {
-	// Token: 0x17000E3D RID: 3645
-	// (get) Token: 0x06002236 RID: 8758 RVA: 0x0006D2EF File Offset: 0x0006B4EF
-	// (set) Token: 0x06002237 RID: 8759 RVA: 0x0006D2F7 File Offset: 0x0006B4F7
+	// Token: 0x170012CE RID: 4814
+	// (get) Token: 0x06003048 RID: 12360 RVA: 0x0001A7A1 File Offset: 0x000189A1
+	// (set) Token: 0x06003049 RID: 12361 RVA: 0x0001A7A9 File Offset: 0x000189A9
 	public EquipmentCategoryType CategoryType { get; set; }
 
-	// Token: 0x17000E3E RID: 3646
-	// (get) Token: 0x06002238 RID: 8760 RVA: 0x0006D300 File Offset: 0x0006B500
-	// (set) Token: 0x06002239 RID: 8761 RVA: 0x0006D308 File Offset: 0x0006B508
+	// Token: 0x170012CF RID: 4815
+	// (get) Token: 0x0600304A RID: 12362 RVA: 0x0001A7B2 File Offset: 0x000189B2
+	// (set) Token: 0x0600304B RID: 12363 RVA: 0x0001A7BA File Offset: 0x000189BA
 	public EquipmentType EquipmentType { get; set; }
 
-	// Token: 0x17000E3F RID: 3647
-	// (get) Token: 0x0600223A RID: 8762 RVA: 0x0006D311 File Offset: 0x0006B511
+	// Token: 0x170012D0 RID: 4816
+	// (get) Token: 0x0600304C RID: 12364 RVA: 0x0001A7C3 File Offset: 0x000189C3
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -27,7 +27,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		}
 	}
 
-	// Token: 0x0600223B RID: 8763 RVA: 0x0006D319 File Offset: 0x0006B519
+	// Token: 0x0600304D RID: 12365 RVA: 0x0001A7CB File Offset: 0x000189CB
 	protected override void Awake()
 	{
 		base.Awake();
@@ -35,7 +35,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		this.m_confirmUpgradePurchase = new Action(this.ConfirmUpgradePurchase);
 	}
 
-	// Token: 0x0600223C RID: 8764 RVA: 0x0006D348 File Offset: 0x0006B548
+	// Token: 0x0600304E RID: 12366 RVA: 0x000CE110 File Offset: 0x000CC310
 	protected override void InitializeButtonEventArgs()
 	{
 		OmniUIButtonType buttonType = OmniUIButtonType.Purchasing;
@@ -51,7 +51,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		this.m_descriptionEventArgs.Initialize(this.CategoryType, this.EquipmentType, buttonType);
 	}
 
-	// Token: 0x0600223D RID: 8765 RVA: 0x0006D39A File Offset: 0x0006B59A
+	// Token: 0x0600304F RID: 12367 RVA: 0x0001A7F7 File Offset: 0x000189F7
 	public override void OnConfirmButtonPressed()
 	{
 		if (!this.IsButtonActive)
@@ -70,7 +70,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		this.RunOnConfirmPressedAnimation();
 	}
 
-	// Token: 0x0600223E RID: 8766 RVA: 0x0006D3C8 File Offset: 0x0006B5C8
+	// Token: 0x06003050 RID: 12368 RVA: 0x000CE164 File Offset: 0x000CC364
 	private void OnPurchaseSuccessful()
 	{
 		BaseEffect baseEffect = EffectManager.PlayEffect(base.gameObject, null, "Purchase_Effect", Vector3.zero, 0f, EffectStopType.Gracefully, EffectTriggerDirection.None);
@@ -88,7 +88,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		}
 	}
 
-	// Token: 0x0600223F RID: 8767 RVA: 0x0006D4A4 File Offset: 0x0006B6A4
+	// Token: 0x06003051 RID: 12369 RVA: 0x000CE240 File Offset: 0x000CC440
 	private void OnPurchaseFailed()
 	{
 		EquipmentObj equipment = EquipmentManager.GetEquipment(this.CategoryType, this.EquipmentType);
@@ -109,7 +109,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		base.StartCoroutine(this.ShakeAnimCoroutine());
 	}
 
-	// Token: 0x06002240 RID: 8768 RVA: 0x0006D524 File Offset: 0x0006B724
+	// Token: 0x06003052 RID: 12370 RVA: 0x000CE2C0 File Offset: 0x000CC4C0
 	public override void UpdateState()
 	{
 		this.m_deselectedSprite.SetAlpha(1f);
@@ -150,7 +150,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		}
 	}
 
-	// Token: 0x06002241 RID: 8769 RVA: 0x0006D670 File Offset: 0x0006B870
+	// Token: 0x06003053 RID: 12371 RVA: 0x000CE40C File Offset: 0x000CC60C
 	private void PurchaseEquipment()
 	{
 		if (!EquipmentManager.CanPurchaseEquipment(this.CategoryType, this.EquipmentType, false))
@@ -200,7 +200,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		this.OnPurchaseSuccessful();
 	}
 
-	// Token: 0x06002242 RID: 8770 RVA: 0x0006D824 File Offset: 0x0006BA24
+	// Token: 0x06003054 RID: 12372 RVA: 0x000CE5C0 File Offset: 0x000CC7C0
 	private void UpgradeEquipment()
 	{
 		if (EquipmentManager.CanPurchaseEquipment(this.CategoryType, this.EquipmentType, false))
@@ -262,7 +262,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		}
 	}
 
-	// Token: 0x06002243 RID: 8771 RVA: 0x0006DA2C File Offset: 0x0006BC2C
+	// Token: 0x06003055 RID: 12373 RVA: 0x000CE7C8 File Offset: 0x000CC9C8
 	private void ConfirmUpgradePurchase()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
@@ -306,7 +306,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		this.OnPurchaseSuccessful();
 	}
 
-	// Token: 0x06002244 RID: 8772 RVA: 0x0006DBD4 File Offset: 0x0006BDD4
+	// Token: 0x06003056 RID: 12374 RVA: 0x000CE970 File Offset: 0x000CCB70
 	private void InitializeCantEquipConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -323,7 +323,7 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		buttonAtIndex.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x06002245 RID: 8773 RVA: 0x0006DC48 File Offset: 0x0006BE48
+	// Token: 0x06003057 RID: 12375 RVA: 0x000CE9E4 File Offset: 0x000CCBE4
 	private void InitializeUpgradeUnequipConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -343,36 +343,36 @@ public class BlacksmithOmniUIBuyButton : OmniUIButton, IBlacksmithOmniUIButton
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x06002246 RID: 8774 RVA: 0x0006DCD7 File Offset: 0x0006BED7
+	// Token: 0x06003058 RID: 12376 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenuSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x04001DA4 RID: 7588
+	// Token: 0x040027A4 RID: 10148
 	[SerializeField]
 	private TMP_Text m_buyText;
 
-	// Token: 0x04001DA5 RID: 7589
+	// Token: 0x040027A5 RID: 10149
 	[SerializeField]
 	private UnityEvent m_cantAffordPurchaseUnityEvent;
 
-	// Token: 0x04001DA6 RID: 7590
+	// Token: 0x040027A6 RID: 10150
 	[SerializeField]
 	private TMP_Text m_maxText;
 
-	// Token: 0x04001DA7 RID: 7591
+	// Token: 0x040027A7 RID: 10151
 	private bool m_buttonIsUpgrade;
 
-	// Token: 0x04001DA8 RID: 7592
+	// Token: 0x040027A8 RID: 10152
 	private BlacksmithOmniUIDescriptionEventArgs m_descriptionEventArgs;
 
-	// Token: 0x04001DA9 RID: 7593
+	// Token: 0x040027A9 RID: 10153
 	private PurchaseBoxDialogueEventArgs m_purchaseDialogueArgs = new PurchaseBoxDialogueEventArgs(PurchaseBoxDialogueType.Welcome);
 
-	// Token: 0x04001DAA RID: 7594
+	// Token: 0x040027AA RID: 10154
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x04001DAB RID: 7595
+	// Token: 0x040027AB RID: 10155
 	private Action m_confirmUpgradePurchase;
 }

@@ -1,61 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x020004B7 RID: 1207
+// Token: 0x020007CF RID: 1999
 public class RoomSpawnControllerManager
 {
-	// Token: 0x17001130 RID: 4400
-	// (get) Token: 0x06002CEB RID: 11499 RVA: 0x00098776 File Offset: 0x00096976
+	// Token: 0x17001697 RID: 5783
+	// (get) Token: 0x06003D97 RID: 15767 RVA: 0x0002219D File Offset: 0x0002039D
 	public BaseRoom Room { get; }
 
-	// Token: 0x17001131 RID: 4401
-	// (get) Token: 0x06002CEC RID: 11500 RVA: 0x0009877E File Offset: 0x0009697E
-	// (set) Token: 0x06002CED RID: 11501 RVA: 0x00098786 File Offset: 0x00096986
+	// Token: 0x17001698 RID: 5784
+	// (get) Token: 0x06003D98 RID: 15768 RVA: 0x000221A5 File Offset: 0x000203A5
+	// (set) Token: 0x06003D99 RID: 15769 RVA: 0x000221AD File Offset: 0x000203AD
 	public ISpawnController[] SpawnControllers { get; private set; }
 
-	// Token: 0x17001132 RID: 4402
-	// (get) Token: 0x06002CEE RID: 11502 RVA: 0x0009878F File Offset: 0x0009698F
-	// (set) Token: 0x06002CEF RID: 11503 RVA: 0x00098797 File Offset: 0x00096997
+	// Token: 0x17001699 RID: 5785
+	// (get) Token: 0x06003D9A RID: 15770 RVA: 0x000221B6 File Offset: 0x000203B6
+	// (set) Token: 0x06003D9B RID: 15771 RVA: 0x000221BE File Offset: 0x000203BE
 	public SpawnLogicController[] SpawnLogicControllers { get; private set; }
 
-	// Token: 0x17001133 RID: 4403
-	// (get) Token: 0x06002CF0 RID: 11504 RVA: 0x000987A0 File Offset: 0x000969A0
-	// (set) Token: 0x06002CF1 RID: 11505 RVA: 0x000987A8 File Offset: 0x000969A8
+	// Token: 0x1700169A RID: 5786
+	// (get) Token: 0x06003D9C RID: 15772 RVA: 0x000221C7 File Offset: 0x000203C7
+	// (set) Token: 0x06003D9D RID: 15773 RVA: 0x000221CF File Offset: 0x000203CF
 	public EnemySpawnController[] EnemySpawnControllers { get; private set; }
 
-	// Token: 0x17001134 RID: 4404
-	// (get) Token: 0x06002CF2 RID: 11506 RVA: 0x000987B1 File Offset: 0x000969B1
-	// (set) Token: 0x06002CF3 RID: 11507 RVA: 0x000987B9 File Offset: 0x000969B9
+	// Token: 0x1700169B RID: 5787
+	// (get) Token: 0x06003D9E RID: 15774 RVA: 0x000221D8 File Offset: 0x000203D8
+	// (set) Token: 0x06003D9F RID: 15775 RVA: 0x000221E0 File Offset: 0x000203E0
 	public ISimpleSpawnController[] SimpleSpawnControllers_NoProps { get; private set; }
 
-	// Token: 0x17001135 RID: 4405
-	// (get) Token: 0x06002CF4 RID: 11508 RVA: 0x000987C2 File Offset: 0x000969C2
-	// (set) Token: 0x06002CF5 RID: 11509 RVA: 0x000987CA File Offset: 0x000969CA
+	// Token: 0x1700169C RID: 5788
+	// (get) Token: 0x06003DA0 RID: 15776 RVA: 0x000221E9 File Offset: 0x000203E9
+	// (set) Token: 0x06003DA1 RID: 15777 RVA: 0x000221F1 File Offset: 0x000203F1
 	public TunnelSpawnController[] TunnelSpawnControllers { get; private set; }
 
-	// Token: 0x17001136 RID: 4406
-	// (get) Token: 0x06002CF6 RID: 11510 RVA: 0x000987D3 File Offset: 0x000969D3
-	// (set) Token: 0x06002CF7 RID: 11511 RVA: 0x000987DB File Offset: 0x000969DB
+	// Token: 0x1700169D RID: 5789
+	// (get) Token: 0x06003DA2 RID: 15778 RVA: 0x000221FA File Offset: 0x000203FA
+	// (set) Token: 0x06003DA3 RID: 15779 RVA: 0x00022202 File Offset: 0x00020402
 	public PropSpawnController[] PropSpawnControllers { get; private set; }
 
-	// Token: 0x17001137 RID: 4407
-	// (get) Token: 0x06002CF8 RID: 11512 RVA: 0x000987E4 File Offset: 0x000969E4
-	// (set) Token: 0x06002CF9 RID: 11513 RVA: 0x000987EC File Offset: 0x000969EC
+	// Token: 0x1700169E RID: 5790
+	// (get) Token: 0x06003DA4 RID: 15780 RVA: 0x0002220B File Offset: 0x0002040B
+	// (set) Token: 0x06003DA5 RID: 15781 RVA: 0x00022213 File Offset: 0x00020413
 	public ChestSpawnController[] ChestSpawnControllers { get; private set; }
 
-	// Token: 0x17001138 RID: 4408
-	// (get) Token: 0x06002CFA RID: 11514 RVA: 0x000987F5 File Offset: 0x000969F5
-	// (set) Token: 0x06002CFB RID: 11515 RVA: 0x000987FD File Offset: 0x000969FD
+	// Token: 0x1700169F RID: 5791
+	// (get) Token: 0x06003DA6 RID: 15782 RVA: 0x0002221C File Offset: 0x0002041C
+	// (set) Token: 0x06003DA7 RID: 15783 RVA: 0x00022224 File Offset: 0x00020424
 	public IHazardSpawnController[] HazardSpawnControllers { get; private set; }
 
-	// Token: 0x06002CFC RID: 11516 RVA: 0x00098806 File Offset: 0x00096A06
+	// Token: 0x06003DA8 RID: 15784 RVA: 0x0002222D File Offset: 0x0002042D
 	public RoomSpawnControllerManager(BaseRoom room)
 	{
 		this.Room = room;
 		this.InitializeProperties();
 	}
 
-	// Token: 0x06002CFD RID: 11517 RVA: 0x0009881C File Offset: 0x00096A1C
+	// Token: 0x06003DA9 RID: 15785 RVA: 0x000F972C File Offset: 0x000F792C
 	private void InitializeProperties()
 	{
 		this.GenerateAllSpawnControllers();
@@ -69,7 +69,7 @@ public class RoomSpawnControllerManager
 		}
 	}
 
-	// Token: 0x06002CFE RID: 11518 RVA: 0x00098874 File Offset: 0x00096A74
+	// Token: 0x06003DAA RID: 15786 RVA: 0x000F9784 File Offset: 0x000F7984
 	private void GenerateAllSpawnControllers()
 	{
 		RoomSpawnControllerManager.m_spawnControllerHelper_STATIC.Clear();
@@ -165,27 +165,27 @@ public class RoomSpawnControllerManager
 		}
 	}
 
-	// Token: 0x04002426 RID: 9254
+	// Token: 0x04003089 RID: 12425
 	private static List<ISpawnController> m_spawnControllerHelper_STATIC = new List<ISpawnController>();
 
-	// Token: 0x04002427 RID: 9255
+	// Token: 0x0400308A RID: 12426
 	private static List<PropSpawnController> m_propSpawnerHelper_STATIC = new List<PropSpawnController>();
 
-	// Token: 0x04002428 RID: 9256
+	// Token: 0x0400308B RID: 12427
 	private static List<EnemySpawnController> m_enemySpawnerHelper_STATIC = new List<EnemySpawnController>();
 
-	// Token: 0x04002429 RID: 9257
+	// Token: 0x0400308C RID: 12428
 	private static List<ISimpleSpawnController> m_noPropSimpleSpawnerHelper_STATIC = new List<ISimpleSpawnController>();
 
-	// Token: 0x0400242A RID: 9258
+	// Token: 0x0400308D RID: 12429
 	private static List<ChestSpawnController> m_chestSpawnerHelper_STATIC = new List<ChestSpawnController>();
 
-	// Token: 0x0400242B RID: 9259
+	// Token: 0x0400308E RID: 12430
 	private static List<TunnelSpawnController> m_tunnelSpawnerHelper_STATIC = new List<TunnelSpawnController>();
 
-	// Token: 0x0400242C RID: 9260
+	// Token: 0x0400308F RID: 12431
 	private static List<IHazardSpawnController> m_hazardSpawnerHelper_STATIC = new List<IHazardSpawnController>();
 
-	// Token: 0x0400242D RID: 9261
+	// Token: 0x04003090 RID: 12432
 	private static List<SpawnLogicController> m_spawnLogicHelper_STATIC = new List<SpawnLogicController>();
 }

@@ -6,21 +6,21 @@ using SceneManagement_RL;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000204 RID: 516
+// Token: 0x020003B0 RID: 944
 public class GlobalTeleporterController : MonoBehaviour, IRootObj
 {
-	// Token: 0x17000AFF RID: 2815
-	// (get) Token: 0x060015C6 RID: 5574 RVA: 0x00043EC0 File Offset: 0x000420C0
-	// (set) Token: 0x060015C7 RID: 5575 RVA: 0x00043EC7 File Offset: 0x000420C7
+	// Token: 0x17000E1A RID: 3610
+	// (get) Token: 0x06001F3A RID: 7994 RVA: 0x00010602 File Offset: 0x0000E802
+	// (set) Token: 0x06001F3B RID: 7995 RVA: 0x00010609 File Offset: 0x0000E809
 	public static bool StayInCutsceneAfterTeleporting { get; set; }
 
-	// Token: 0x17000B00 RID: 2816
-	// (get) Token: 0x060015C8 RID: 5576 RVA: 0x00043ECF File Offset: 0x000420CF
-	// (set) Token: 0x060015C9 RID: 5577 RVA: 0x00043ED6 File Offset: 0x000420D6
+	// Token: 0x17000E1B RID: 3611
+	// (get) Token: 0x06001F3C RID: 7996 RVA: 0x00010611 File Offset: 0x0000E811
+	// (set) Token: 0x06001F3D RID: 7997 RVA: 0x00010618 File Offset: 0x0000E818
 	public static bool IsTeleporting { get; private set; }
 
-	// Token: 0x17000B01 RID: 2817
-	// (get) Token: 0x060015CA RID: 5578 RVA: 0x00043EDE File Offset: 0x000420DE
+	// Token: 0x17000E1C RID: 3612
+	// (get) Token: 0x06001F3E RID: 7998 RVA: 0x00010620 File Offset: 0x0000E820
 	public GlobalTeleporterType TeleporterType
 	{
 		get
@@ -29,12 +29,12 @@ public class GlobalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x17000B02 RID: 2818
-	// (get) Token: 0x060015CB RID: 5579 RVA: 0x00043EE6 File Offset: 0x000420E6
-	// (set) Token: 0x060015CC RID: 5580 RVA: 0x00043EEE File Offset: 0x000420EE
+	// Token: 0x17000E1D RID: 3613
+	// (get) Token: 0x06001F3F RID: 7999 RVA: 0x00010628 File Offset: 0x0000E828
+	// (set) Token: 0x06001F40 RID: 8000 RVA: 0x00010630 File Offset: 0x0000E830
 	public Room Room { get; set; }
 
-	// Token: 0x060015CD RID: 5581 RVA: 0x00043EF7 File Offset: 0x000420F7
+	// Token: 0x06001F41 RID: 8001 RVA: 0x00010639 File Offset: 0x0000E839
 	private void OnDisable()
 	{
 		if (this.m_interactable != null)
@@ -43,7 +43,7 @@ public class GlobalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x060015CE RID: 5582 RVA: 0x00043F24 File Offset: 0x00042124
+	// Token: 0x06001F42 RID: 8002 RVA: 0x000A2444 File Offset: 0x000A0644
 	private void OnEnable()
 	{
 		if (this.m_hitboxController.IsInitialized)
@@ -56,7 +56,7 @@ public class GlobalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x060015CF RID: 5583 RVA: 0x00043F7C File Offset: 0x0004217C
+	// Token: 0x06001F43 RID: 8003 RVA: 0x000A249C File Offset: 0x000A069C
 	private void Awake()
 	{
 		this.Room = base.GetComponentInParent<Room>();
@@ -67,7 +67,7 @@ public class GlobalTeleporterController : MonoBehaviour, IRootObj
 		this.m_animWaitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x060015D0 RID: 5584 RVA: 0x00044012 File Offset: 0x00042212
+	// Token: 0x06001F44 RID: 8004 RVA: 0x00010665 File Offset: 0x0000E865
 	private IEnumerator Start()
 	{
 		while (!this.m_hitboxController.IsInitialized)
@@ -79,7 +79,7 @@ public class GlobalTeleporterController : MonoBehaviour, IRootObj
 		yield break;
 	}
 
-	// Token: 0x060015D1 RID: 5585 RVA: 0x00044021 File Offset: 0x00042221
+	// Token: 0x06001F45 RID: 8005 RVA: 0x00010674 File Offset: 0x0000E874
 	private void OnInteract(GameObject otherObj)
 	{
 		GlobalTeleporterController.ActiveTeleporter = this;
@@ -90,13 +90,13 @@ public class GlobalTeleporterController : MonoBehaviour, IRootObj
 		WindowManager.SetWindowIsOpen(WindowID.Teleporter, true);
 	}
 
-	// Token: 0x060015D2 RID: 5586 RVA: 0x00044044 File Offset: 0x00042244
+	// Token: 0x06001F46 RID: 8006 RVA: 0x00010697 File Offset: 0x0000E897
 	public void OnEnterTeleportPlayer_V2(BiomeType biomeType, GridPointManager gridPointManager)
 	{
 		base.StartCoroutine(this.RunOnEnterTeleporterCoroutine_V2(biomeType, gridPointManager));
 	}
 
-	// Token: 0x060015D3 RID: 5587 RVA: 0x00044055 File Offset: 0x00042255
+	// Token: 0x06001F47 RID: 8007 RVA: 0x000106A8 File Offset: 0x0000E8A8
 	private IEnumerator RunOnEnterTeleporterCoroutine_V2(BiomeType biomeType, GridPointManager gridPointManager)
 	{
 		GlobalTeleporterController.IsTeleporting = true;
@@ -171,7 +171,7 @@ public class GlobalTeleporterController : MonoBehaviour, IRootObj
 		yield break;
 	}
 
-	// Token: 0x060015D4 RID: 5588 RVA: 0x00044072 File Offset: 0x00042272
+	// Token: 0x06001F48 RID: 8008 RVA: 0x000106C5 File Offset: 0x0000E8C5
 	private IEnumerator TeleportPlayer_V2(BiomeType biomeType, GridPointManager gridPointManager)
 	{
 		yield return MapController.TeleportPlayerToRoom_Coroutine(biomeType, gridPointManager, true);
@@ -180,14 +180,14 @@ public class GlobalTeleporterController : MonoBehaviour, IRootObj
 		yield break;
 	}
 
-	// Token: 0x060015D5 RID: 5589 RVA: 0x0004408F File Offset: 0x0004228F
+	// Token: 0x06001F49 RID: 8009 RVA: 0x000106E2 File Offset: 0x0000E8E2
 	public void OnExitTeleportPlayer()
 	{
 		GlobalTeleporterController.ActiveTeleporter = null;
 		base.StartCoroutine(this.RunOnExitTeleporterCoroutine());
 	}
 
-	// Token: 0x060015D6 RID: 5590 RVA: 0x000440A4 File Offset: 0x000422A4
+	// Token: 0x06001F4A RID: 8010 RVA: 0x000106F7 File Offset: 0x0000E8F7
 	private IEnumerator RunOnExitTeleporterCoroutine()
 	{
 		yield return null;
@@ -215,74 +215,74 @@ public class GlobalTeleporterController : MonoBehaviour, IRootObj
 		yield break;
 	}
 
-	// Token: 0x060015D9 RID: 5593 RVA: 0x000440BD File Offset: 0x000422BD
+	// Token: 0x06001F4D RID: 8013 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040014F4 RID: 5364
+	// Token: 0x04001BDB RID: 7131
 	public static GlobalTeleporterController ActiveTeleporter;
 
-	// Token: 0x040014F7 RID: 5367
+	// Token: 0x04001BDE RID: 7134
 	[SerializeField]
 	private ParticleSystem m_onActivateParticleSystem;
 
-	// Token: 0x040014F8 RID: 5368
+	// Token: 0x04001BDF RID: 7135
 	[SerializeField]
 	private GlobalTeleporterType m_teleporterType;
 
-	// Token: 0x040014F9 RID: 5369
+	// Token: 0x04001BE0 RID: 7136
 	[SerializeField]
 	private GameObject m_distortPosition;
 
-	// Token: 0x040014FA RID: 5370
+	// Token: 0x04001BE1 RID: 7137
 	[SerializeField]
 	private UnityEvent m_playerInteractedWithEvent;
 
-	// Token: 0x040014FB RID: 5371
+	// Token: 0x04001BE2 RID: 7138
 	[SerializeField]
 	private UnityEvent m_teleportStart;
 
-	// Token: 0x040014FC RID: 5372
+	// Token: 0x04001BE3 RID: 7139
 	[SerializeField]
 	private UnityEvent m_playerJumpedOnPlatformEvent;
 
-	// Token: 0x040014FD RID: 5373
+	// Token: 0x04001BE4 RID: 7140
 	[SerializeField]
 	private UnityEvent m_dematerializeStartEvent;
 
-	// Token: 0x040014FE RID: 5374
+	// Token: 0x04001BE5 RID: 7141
 	[SerializeField]
 	private UnityEvent m_dematerializeCompleteEvent;
 
-	// Token: 0x040014FF RID: 5375
+	// Token: 0x04001BE6 RID: 7142
 	[SerializeField]
 	private UnityEvent m_rematerializeStartEvent;
 
-	// Token: 0x04001500 RID: 5376
+	// Token: 0x04001BE7 RID: 7143
 	[SerializeField]
 	private UnityEvent m_transitionStartEvent;
 
-	// Token: 0x04001501 RID: 5377
+	// Token: 0x04001BE8 RID: 7144
 	[SerializeField]
 	private UnityEvent m_transitionCompleteEvent;
 
-	// Token: 0x04001502 RID: 5378
+	// Token: 0x04001BE9 RID: 7145
 	private Interactable m_interactable;
 
-	// Token: 0x04001503 RID: 5379
+	// Token: 0x04001BEA RID: 7146
 	private IHitboxController m_hitboxController;
 
-	// Token: 0x04001504 RID: 5380
+	// Token: 0x04001BEB RID: 7147
 	private WaitRL_Yield m_animWaitYield;
 
-	// Token: 0x04001505 RID: 5381
+	// Token: 0x04001BEC RID: 7148
 	private WaitUntil m_animWaitUntilLandedYield;
 
-	// Token: 0x04001506 RID: 5382
+	// Token: 0x04001BED RID: 7149
 	private WaitUntil m_animWaitUntilTransitionYield;
 
-	// Token: 0x04001507 RID: 5383
+	// Token: 0x04001BEE RID: 7150
 	private HeirloomWarp_Effect m_warpEffect;
 }

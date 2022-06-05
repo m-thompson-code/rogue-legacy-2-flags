@@ -4,12 +4,12 @@ using Sigtrap.Relays;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200036E RID: 878
+// Token: 0x020005ED RID: 1517
 [RequireComponent(typeof(TMP_Text))]
 public class Typewrite_RL : MonoBehaviour
 {
-	// Token: 0x17000DFF RID: 3583
-	// (get) Token: 0x060020D1 RID: 8401 RVA: 0x000672DA File Offset: 0x000654DA
+	// Token: 0x17001278 RID: 4728
+	// (get) Token: 0x06002E9A RID: 11930 RVA: 0x000196F6 File Offset: 0x000178F6
 	public IRelayLink OnTypewriteCompleteRelay
 	{
 		get
@@ -18,8 +18,8 @@ public class Typewrite_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E00 RID: 3584
-	// (get) Token: 0x060020D2 RID: 8402 RVA: 0x000672E7 File Offset: 0x000654E7
+	// Token: 0x17001279 RID: 4729
+	// (get) Token: 0x06002E9B RID: 11931 RVA: 0x00019703 File Offset: 0x00017903
 	public IRelayLink OnTypewriteLongDelayRelay
 	{
 		get
@@ -28,8 +28,8 @@ public class Typewrite_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E01 RID: 3585
-	// (get) Token: 0x060020D3 RID: 8403 RVA: 0x000672F4 File Offset: 0x000654F4
+	// Token: 0x1700127A RID: 4730
+	// (get) Token: 0x06002E9C RID: 11932 RVA: 0x00019710 File Offset: 0x00017910
 	public IRelayLink OnTypewriteShortDelayRelay
 	{
 		get
@@ -38,9 +38,9 @@ public class Typewrite_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E02 RID: 3586
-	// (get) Token: 0x060020D4 RID: 8404 RVA: 0x00067301 File Offset: 0x00065501
-	// (set) Token: 0x060020D5 RID: 8405 RVA: 0x00067309 File Offset: 0x00065509
+	// Token: 0x1700127B RID: 4731
+	// (get) Token: 0x06002E9D RID: 11933 RVA: 0x0001971D File Offset: 0x0001791D
+	// (set) Token: 0x06002E9E RID: 11934 RVA: 0x00019725 File Offset: 0x00017925
 	public bool UseUnscaledTime
 	{
 		get
@@ -53,9 +53,9 @@ public class Typewrite_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E03 RID: 3587
-	// (get) Token: 0x060020D6 RID: 8406 RVA: 0x00067312 File Offset: 0x00065512
-	// (set) Token: 0x060020D7 RID: 8407 RVA: 0x0006731A File Offset: 0x0006551A
+	// Token: 0x1700127C RID: 4732
+	// (get) Token: 0x06002E9F RID: 11935 RVA: 0x0001972E File Offset: 0x0001792E
+	// (set) Token: 0x06002EA0 RID: 11936 RVA: 0x00019736 File Offset: 0x00017936
 	public bool TypewriteOnStart
 	{
 		get
@@ -68,19 +68,19 @@ public class Typewrite_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E04 RID: 3588
-	// (get) Token: 0x060020D8 RID: 8408 RVA: 0x00067323 File Offset: 0x00065523
-	// (set) Token: 0x060020D9 RID: 8409 RVA: 0x0006732B File Offset: 0x0006552B
+	// Token: 0x1700127D RID: 4733
+	// (get) Token: 0x06002EA1 RID: 11937 RVA: 0x0001973F File Offset: 0x0001793F
+	// (set) Token: 0x06002EA2 RID: 11938 RVA: 0x00019747 File Offset: 0x00017947
 	public bool IsPaused { get; private set; }
 
-	// Token: 0x17000E05 RID: 3589
-	// (get) Token: 0x060020DA RID: 8410 RVA: 0x00067334 File Offset: 0x00065534
-	// (set) Token: 0x060020DB RID: 8411 RVA: 0x0006733C File Offset: 0x0006553C
+	// Token: 0x1700127E RID: 4734
+	// (get) Token: 0x06002EA3 RID: 11939 RVA: 0x00019750 File Offset: 0x00017950
+	// (set) Token: 0x06002EA4 RID: 11940 RVA: 0x00019758 File Offset: 0x00017958
 	public bool IsTypewriting { get; private set; }
 
-	// Token: 0x17000E06 RID: 3590
-	// (get) Token: 0x060020DC RID: 8412 RVA: 0x00067345 File Offset: 0x00065545
-	// (set) Token: 0x060020DD RID: 8413 RVA: 0x0006734D File Offset: 0x0006554D
+	// Token: 0x1700127F RID: 4735
+	// (get) Token: 0x06002EA5 RID: 11941 RVA: 0x00019761 File Offset: 0x00017961
+	// (set) Token: 0x06002EA6 RID: 11942 RVA: 0x00019769 File Offset: 0x00017969
 	public float TypewriteCharDelay
 	{
 		get
@@ -93,9 +93,9 @@ public class Typewrite_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E07 RID: 3591
-	// (get) Token: 0x060020DE RID: 8414 RVA: 0x00067356 File Offset: 0x00065556
-	// (set) Token: 0x060020DF RID: 8415 RVA: 0x0006735E File Offset: 0x0006555E
+	// Token: 0x17001280 RID: 4736
+	// (get) Token: 0x06002EA7 RID: 11943 RVA: 0x00019772 File Offset: 0x00017972
+	// (set) Token: 0x06002EA8 RID: 11944 RVA: 0x0001977A File Offset: 0x0001797A
 	public float TypewriteCharLongDelay
 	{
 		get
@@ -108,7 +108,7 @@ public class Typewrite_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060020E0 RID: 8416 RVA: 0x00067367 File Offset: 0x00065567
+	// Token: 0x06002EA9 RID: 11945 RVA: 0x00019783 File Offset: 0x00017983
 	private void Awake()
 	{
 		this.m_tmpText = base.GetComponent<TMP_Text>();
@@ -116,7 +116,7 @@ public class Typewrite_RL : MonoBehaviour
 		this.m_typewriteLongWaitYield = new WaitRL_Yield(this.TypewriteCharLongDelay, this.UseUnscaledTime);
 	}
 
-	// Token: 0x060020E1 RID: 8417 RVA: 0x000673A3 File Offset: 0x000655A3
+	// Token: 0x06002EAA RID: 11946 RVA: 0x000197BF File Offset: 0x000179BF
 	private void Start()
 	{
 		if (this.TypewriteOnStart)
@@ -125,13 +125,13 @@ public class Typewrite_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060020E2 RID: 8418 RVA: 0x000673B3 File Offset: 0x000655B3
+	// Token: 0x06002EAB RID: 11947 RVA: 0x000197CF File Offset: 0x000179CF
 	public void StartTypewriting()
 	{
 		this.m_typewriteCoroutine = base.StartCoroutine(this.TypewriterCoroutine());
 	}
 
-	// Token: 0x060020E3 RID: 8419 RVA: 0x000673C7 File Offset: 0x000655C7
+	// Token: 0x06002EAC RID: 11948 RVA: 0x000197E3 File Offset: 0x000179E3
 	private IEnumerator TypewriterCoroutine()
 	{
 		this.IsTypewriting = true;
@@ -171,7 +171,7 @@ public class Typewrite_RL : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060020E4 RID: 8420 RVA: 0x000673D8 File Offset: 0x000655D8
+	// Token: 0x06002EAD RID: 11949 RVA: 0x000C8308 File Offset: 0x000C6508
 	public void StopTypewriting()
 	{
 		if (this.m_typewriteCoroutine != null)
@@ -183,52 +183,52 @@ public class Typewrite_RL : MonoBehaviour
 		this.m_onTypewriteCompleteRelay.Dispatch();
 	}
 
-	// Token: 0x060020E5 RID: 8421 RVA: 0x00067426 File Offset: 0x00065626
+	// Token: 0x06002EAE RID: 11950 RVA: 0x000197F2 File Offset: 0x000179F2
 	public void PauseTypewriting()
 	{
 		this.IsPaused = true;
 	}
 
-	// Token: 0x060020E6 RID: 8422 RVA: 0x0006742F File Offset: 0x0006562F
+	// Token: 0x06002EAF RID: 11951 RVA: 0x000197FB File Offset: 0x000179FB
 	public void ResumeTypewriting()
 	{
 		this.IsPaused = false;
 	}
 
-	// Token: 0x04001C75 RID: 7285
+	// Token: 0x04002628 RID: 9768
 	[SerializeField]
 	private float m_typewriteCharDelay = 0.015f;
 
-	// Token: 0x04001C76 RID: 7286
+	// Token: 0x04002629 RID: 9769
 	[SerializeField]
 	private float m_typewriteCharLongDelay = 0.1f;
 
-	// Token: 0x04001C77 RID: 7287
+	// Token: 0x0400262A RID: 9770
 	[SerializeField]
 	private bool m_typewriteOnStart = true;
 
-	// Token: 0x04001C78 RID: 7288
+	// Token: 0x0400262B RID: 9771
 	[SerializeField]
 	private bool m_useUnscaledTime;
 
-	// Token: 0x04001C79 RID: 7289
+	// Token: 0x0400262C RID: 9772
 	private TMP_Text m_tmpText;
 
-	// Token: 0x04001C7A RID: 7290
+	// Token: 0x0400262D RID: 9773
 	private WaitRL_Yield m_typewriteWaitYield;
 
-	// Token: 0x04001C7B RID: 7291
+	// Token: 0x0400262E RID: 9774
 	private WaitRL_Yield m_typewriteLongWaitYield;
 
-	// Token: 0x04001C7C RID: 7292
+	// Token: 0x0400262F RID: 9775
 	private Coroutine m_typewriteCoroutine;
 
-	// Token: 0x04001C7D RID: 7293
+	// Token: 0x04002630 RID: 9776
 	private Relay m_onTypewriteCompleteRelay = new Relay();
 
-	// Token: 0x04001C7E RID: 7294
+	// Token: 0x04002631 RID: 9777
 	private Relay m_onTypewriteLongDelayRelay = new Relay();
 
-	// Token: 0x04001C7F RID: 7295
+	// Token: 0x04002632 RID: 9778
 	private Relay m_onTypewriteShortDelayRelay = new Relay();
 }

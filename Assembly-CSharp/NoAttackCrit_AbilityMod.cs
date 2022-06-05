@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200016E RID: 366
+// Token: 0x020002A4 RID: 676
 public class NoAttackCrit_AbilityMod : MonoBehaviour
 {
-	// Token: 0x06000C9D RID: 3229 RVA: 0x00026FD0 File Offset: 0x000251D0
+	// Token: 0x060013B0 RID: 5040 RVA: 0x000860AC File Offset: 0x000842AC
 	private void Awake()
 	{
 		this.m_ability = base.GetComponent<BaseAbility_RL>();
@@ -13,7 +13,7 @@ public class NoAttackCrit_AbilityMod : MonoBehaviour
 		this.m_ability.StopCastingRelay.AddListener(new Action(this.StartCritWindowTimer), false);
 	}
 
-	// Token: 0x06000C9E RID: 3230 RVA: 0x00027028 File Offset: 0x00025228
+	// Token: 0x060013B1 RID: 5041 RVA: 0x00086104 File Offset: 0x00084304
 	private void OnDestroy()
 	{
 		if (this.m_ability)
@@ -23,20 +23,20 @@ public class NoAttackCrit_AbilityMod : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000C9F RID: 3231 RVA: 0x0002707C File Offset: 0x0002527C
+	// Token: 0x060013B2 RID: 5042 RVA: 0x0000A098 File Offset: 0x00008298
 	private void OnEnable()
 	{
 		this.StartCritWindowTimer();
 	}
 
-	// Token: 0x06000CA0 RID: 3232 RVA: 0x00027084 File Offset: 0x00025284
+	// Token: 0x060013B3 RID: 5043 RVA: 0x0000A0A0 File Offset: 0x000082A0
 	private void StartCritWindowTimer()
 	{
 		this.StopCritWindowTimer();
 		this.m_critWindowTimerCoroutine = base.StartCoroutine(this.CritWindowTimerCoroutine());
 	}
 
-	// Token: 0x06000CA1 RID: 3233 RVA: 0x0002709E File Offset: 0x0002529E
+	// Token: 0x060013B4 RID: 5044 RVA: 0x0000A0BA File Offset: 0x000082BA
 	private IEnumerator CritWindowTimerCoroutine()
 	{
 		float delay = Time.time + this.m_noAttackCritDuration;
@@ -57,7 +57,7 @@ public class NoAttackCrit_AbilityMod : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000CA2 RID: 3234 RVA: 0x000270AD File Offset: 0x000252AD
+	// Token: 0x060013B5 RID: 5045 RVA: 0x0000A0C9 File Offset: 0x000082C9
 	private void StopCritWindowTimer()
 	{
 		if (this.m_critWindowTimerCoroutine != null)
@@ -71,16 +71,16 @@ public class NoAttackCrit_AbilityMod : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040010A5 RID: 4261
+	// Token: 0x040015D9 RID: 5593
 	[SerializeField]
 	private float m_noAttackCritDuration = 1f;
 
-	// Token: 0x040010A6 RID: 4262
+	// Token: 0x040015DA RID: 5594
 	private BaseAbility_RL m_ability;
 
-	// Token: 0x040010A7 RID: 4263
+	// Token: 0x040015DB RID: 5595
 	private Coroutine m_critWindowTimerCoroutine;
 
-	// Token: 0x040010A8 RID: 4264
+	// Token: 0x040015DC RID: 5596
 	private bool m_critDebugOn;
 }

@@ -7,11 +7,11 @@ using Sigtrap.Relays;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000578 RID: 1400
+// Token: 0x02000951 RID: 2385
 public class DialogueWindowController : WindowController, ILocalizable
 {
-	// Token: 0x17001281 RID: 4737
-	// (get) Token: 0x06003373 RID: 13171 RVA: 0x000AE10A File Offset: 0x000AC30A
+	// Token: 0x17001958 RID: 6488
+	// (get) Token: 0x0600487E RID: 18558 RVA: 0x00027D5E File Offset: 0x00025F5E
 	public IRelayLink OnDialogueCompleteRelay
 	{
 		get
@@ -20,8 +20,8 @@ public class DialogueWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x17001282 RID: 4738
-	// (get) Token: 0x06003374 RID: 13172 RVA: 0x000AE117 File Offset: 0x000AC317
+	// Token: 0x17001959 RID: 6489
+	// (get) Token: 0x0600487F RID: 18559 RVA: 0x00004A07 File Offset: 0x00002C07
 	public override WindowID ID
 	{
 		get
@@ -30,7 +30,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003375 RID: 13173 RVA: 0x000AE11C File Offset: 0x000AC31C
+	// Token: 0x06004880 RID: 18560 RVA: 0x0011919C File Offset: 0x0011739C
 	private Vector2 GetDialogueWindowPosition(DialogueWindowStyle windowStyle, float appliedOffset)
 	{
 		switch (windowStyle)
@@ -48,7 +48,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003376 RID: 13174 RVA: 0x000AE1B0 File Offset: 0x000AC3B0
+	// Token: 0x06004881 RID: 18561 RVA: 0x00119230 File Offset: 0x00117430
 	private void Awake()
 	{
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
@@ -58,7 +58,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		this.m_dialogueComplete = new Action(this.DialogueComplete);
 	}
 
-	// Token: 0x06003377 RID: 13175 RVA: 0x000AE218 File Offset: 0x000AC418
+	// Token: 0x06004882 RID: 18562 RVA: 0x00119298 File Offset: 0x00117498
 	protected override void OnOpen()
 	{
 		Messenger<UIMessenger, UIEvent>.Broadcast(UIEvent.DialogueWindow_Opened, this, null);
@@ -76,7 +76,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		base.StartCoroutine(this.OnOpenAnimCoroutine());
 	}
 
-	// Token: 0x06003378 RID: 13176 RVA: 0x000AE2A8 File Offset: 0x000AC4A8
+	// Token: 0x06004883 RID: 18563 RVA: 0x00119328 File Offset: 0x00117528
 	private void SetCurrentDialogueWindowEntry(DialogueWindowStyle windowStyle)
 	{
 		switch (windowStyle)
@@ -98,7 +98,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003379 RID: 13177 RVA: 0x000AE2FF File Offset: 0x000AC4FF
+	// Token: 0x06004884 RID: 18564 RVA: 0x00027D6B File Offset: 0x00025F6B
 	private IEnumerator OnOpenAnimCoroutine()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -135,7 +135,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x0600337A RID: 13178 RVA: 0x000AE30E File Offset: 0x000AC50E
+	// Token: 0x06004885 RID: 18565 RVA: 0x00027D7A File Offset: 0x00025F7A
 	private IEnumerator TweenPortraitCoroutine()
 	{
 		if (this.m_currentDialogueNode != null && this.m_currentDialogueNode.Value.PortraitType != DialoguePortraitType.None)
@@ -178,7 +178,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x0600337B RID: 13179 RVA: 0x000AE320 File Offset: 0x000AC520
+	// Token: 0x06004886 RID: 18566 RVA: 0x00119380 File Offset: 0x00117580
 	protected override void OnClose()
 	{
 		this.RemoveListeners();
@@ -201,7 +201,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600337C RID: 13180 RVA: 0x000AE3B6 File Offset: 0x000AC5B6
+	// Token: 0x06004887 RID: 18567 RVA: 0x00027D89 File Offset: 0x00025F89
 	private IEnumerator OnExitAnimCoroutine()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -241,7 +241,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x0600337D RID: 13181 RVA: 0x000AE3C5 File Offset: 0x000AC5C5
+	// Token: 0x06004888 RID: 18568 RVA: 0x00027D98 File Offset: 0x00025F98
 	private IEnumerator RunInsightEndHandler()
 	{
 		yield return null;
@@ -264,7 +264,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x0600337E RID: 13182 RVA: 0x000AE3D4 File Offset: 0x000AC5D4
+	// Token: 0x06004889 RID: 18569 RVA: 0x00027DA7 File Offset: 0x00025FA7
 	private IEnumerator RunScarEndHandler()
 	{
 		yield return null;
@@ -275,7 +275,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x0600337F RID: 13183 RVA: 0x000AE3E3 File Offset: 0x000AC5E3
+	// Token: 0x0600488A RID: 18570 RVA: 0x00027DB6 File Offset: 0x00025FB6
 	private IEnumerator RunEndHandlerCoroutine()
 	{
 		this.m_isRunningEndHandlers = true;
@@ -285,7 +285,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x06003380 RID: 13184 RVA: 0x000AE3F4 File Offset: 0x000AC5F4
+	// Token: 0x0600488B RID: 18571 RVA: 0x00119418 File Offset: 0x00117618
 	private void RunEndHandler()
 	{
 		DialogueManager.UpdateNPCDialogueState();
@@ -298,7 +298,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		this.m_queuedEndHandlers.Clear();
 	}
 
-	// Token: 0x06003381 RID: 13185 RVA: 0x000AE478 File Offset: 0x000AC678
+	// Token: 0x0600488C RID: 18572 RVA: 0x00027DC5 File Offset: 0x00025FC5
 	public void AddEndHandler(Action action)
 	{
 		if (this.m_isRunningEndHandlers)
@@ -309,7 +309,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		this.OnDialogueCompleteRelay.AddListener(action, false);
 	}
 
-	// Token: 0x06003382 RID: 13186 RVA: 0x000AE4A0 File Offset: 0x000AC6A0
+	// Token: 0x0600488D RID: 18573 RVA: 0x0011949C File Offset: 0x0011769C
 	private void AddListeners()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -322,19 +322,19 @@ public class DialogueWindowController : WindowController, ILocalizable
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onConfirmButtonPressed, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
 	}
 
-	// Token: 0x06003383 RID: 13187 RVA: 0x000AE580 File Offset: 0x000AC780
+	// Token: 0x0600488E RID: 18574 RVA: 0x00027DEA File Offset: 0x00025FEA
 	private void OnWriteSpecialCharacter()
 	{
 		this.WriteCharacterStartRelay.Dispatch();
 	}
 
-	// Token: 0x06003384 RID: 13188 RVA: 0x000AE58D File Offset: 0x000AC78D
+	// Token: 0x0600488F RID: 18575 RVA: 0x00027DF7 File Offset: 0x00025FF7
 	private void OnWriteLine()
 	{
 		this.WriteLineOfDialogStartRelay.Dispatch();
 	}
 
-	// Token: 0x06003385 RID: 13189 RVA: 0x000AE59C File Offset: 0x000AC79C
+	// Token: 0x06004890 RID: 18576 RVA: 0x0011957C File Offset: 0x0011777C
 	private void RemoveListeners()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -347,29 +347,29 @@ public class DialogueWindowController : WindowController, ILocalizable
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onConfirmButtonPressed, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
 	}
 
-	// Token: 0x06003386 RID: 13190 RVA: 0x000AE676 File Offset: 0x000AC876
+	// Token: 0x06004891 RID: 18577 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnFocus()
 	{
 	}
 
-	// Token: 0x06003387 RID: 13191 RVA: 0x000AE678 File Offset: 0x000AC878
+	// Token: 0x06004892 RID: 18578 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnLostFocus()
 	{
 	}
 
-	// Token: 0x06003388 RID: 13192 RVA: 0x000AE67A File Offset: 0x000AC87A
+	// Token: 0x06004893 RID: 18579 RVA: 0x00027E04 File Offset: 0x00026004
 	protected override void OnPause()
 	{
 		throw new NotImplementedException();
 	}
 
-	// Token: 0x06003389 RID: 13193 RVA: 0x000AE681 File Offset: 0x000AC881
+	// Token: 0x06004894 RID: 18580 RVA: 0x00027E04 File Offset: 0x00026004
 	protected override void OnUnpause()
 	{
 		throw new NotImplementedException();
 	}
 
-	// Token: 0x0600338A RID: 13194 RVA: 0x000AE688 File Offset: 0x000AC888
+	// Token: 0x06004895 RID: 18581 RVA: 0x00027E0B File Offset: 0x0002600B
 	private void OnConfirmButtonPressed(InputActionEventData eventData)
 	{
 		if (this.m_inputDelayTime > Time.unscaledTime)
@@ -386,7 +386,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		this.StartDialogue();
 	}
 
-	// Token: 0x0600338B RID: 13195 RVA: 0x000AE6C8 File Offset: 0x000AC8C8
+	// Token: 0x06004896 RID: 18582 RVA: 0x00119658 File Offset: 0x00117858
 	protected void GoToNextDialogueNode()
 	{
 		if (this.m_currentDialogueNode == null)
@@ -406,7 +406,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600338C RID: 13196 RVA: 0x000AE73C File Offset: 0x000AC93C
+	// Token: 0x06004897 RID: 18583 RVA: 0x001196CC File Offset: 0x001178CC
 	protected void StartDialogue()
 	{
 		if (this.m_currentDialogueNode != null)
@@ -446,27 +446,27 @@ public class DialogueWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600338D RID: 13197 RVA: 0x000AE864 File Offset: 0x000ACA64
+	// Token: 0x06004898 RID: 18584 RVA: 0x00027E4B File Offset: 0x0002604B
 	protected void SkipTypewriting()
 	{
 		this.m_currentDialogueWindowEntry.Typewrite.StopTypewriting();
 	}
 
-	// Token: 0x0600338E RID: 13198 RVA: 0x000AE876 File Offset: 0x000ACA76
+	// Token: 0x06004899 RID: 18585 RVA: 0x00027E5D File Offset: 0x0002605D
 	protected void EndAllDialogue()
 	{
 		this.DialogCompleteRelay.Dispatch();
 		base.StartCoroutine(this.OnExitAnimCoroutine());
 	}
 
-	// Token: 0x0600338F RID: 13199 RVA: 0x000AE890 File Offset: 0x000ACA90
+	// Token: 0x0600489A RID: 18586 RVA: 0x00027E77 File Offset: 0x00026077
 	protected void DialogueComplete()
 	{
 		this.WriteLineOfDialogEndRelay.Dispatch();
 		base.StartCoroutine(this.DialogueCompleteCoroutine());
 	}
 
-	// Token: 0x06003390 RID: 13200 RVA: 0x000AE8AA File Offset: 0x000ACAAA
+	// Token: 0x0600489B RID: 18587 RVA: 0x00027E91 File Offset: 0x00026091
 	private IEnumerator DialogueCompleteCoroutine()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -501,7 +501,7 @@ public class DialogueWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x06003391 RID: 13201 RVA: 0x000AE8BC File Offset: 0x000ACABC
+	// Token: 0x0600489C RID: 18588 RVA: 0x001197F4 File Offset: 0x001179F4
 	public void RefreshText(object sender, EventArgs args)
 	{
 		if (this.m_currentDialogueWindowEntry && !this.m_currentDialogueWindowEntry.Typewrite.IsTypewriting)
@@ -516,132 +516,132 @@ public class DialogueWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x04002836 RID: 10294
+	// Token: 0x04003782 RID: 14210
 	[SerializeField]
 	private CanvasGroup m_fadeBGCanvasGroup;
 
-	// Token: 0x04002837 RID: 10295
+	// Token: 0x04003783 RID: 14211
 	[SerializeField]
 	private DialogueWindowEntry m_horzDialogueWindowEntry;
 
-	// Token: 0x04002838 RID: 10296
+	// Token: 0x04003784 RID: 14212
 	[SerializeField]
 	private DialogueWindowEntry m_vertDialogueWindowEntry;
 
-	// Token: 0x04002839 RID: 10297
+	// Token: 0x04003785 RID: 14213
 	[SerializeField]
 	private Vector2 m_dialogueWindowOffsets;
 
-	// Token: 0x0400283A RID: 10298
+	// Token: 0x04003786 RID: 14214
 	[SerializeField]
 	private RectTransform m_portraitRectTransform;
 
-	// Token: 0x0400283B RID: 10299
+	// Token: 0x04003787 RID: 14215
 	[SerializeField]
 	private Image m_portraitImage;
 
-	// Token: 0x0400283C RID: 10300
+	// Token: 0x04003788 RID: 14216
 	[SerializeField]
 	private CanvasGroup m_portraitCanvasGroup;
 
-	// Token: 0x0400283D RID: 10301
+	// Token: 0x04003789 RID: 14217
 	[SerializeField]
 	private RectTransform m_vertLeftPortraitPosRectTransform;
 
-	// Token: 0x0400283E RID: 10302
+	// Token: 0x0400378A RID: 14218
 	[SerializeField]
 	private RectTransform m_vertRightPortraitPosRectTransform;
 
-	// Token: 0x0400283F RID: 10303
+	// Token: 0x0400378B RID: 14219
 	[SerializeField]
 	private RectTransform m_horzUpperPortraitPosRectTransform;
 
-	// Token: 0x04002840 RID: 10304
+	// Token: 0x0400378C RID: 14220
 	[SerializeField]
 	private RectTransform m_horzLowerPortraitPosRectTransform;
 
-	// Token: 0x04002841 RID: 10305
+	// Token: 0x0400378D RID: 14221
 	private LinkedListNode<DialogueObj> m_currentDialogueNode;
 
-	// Token: 0x04002842 RID: 10306
+	// Token: 0x0400378E RID: 14222
 	private float m_inputDelayTime;
 
-	// Token: 0x04002843 RID: 10307
+	// Token: 0x0400378F RID: 14223
 	private int m_currentDialogueNodeIndex;
 
-	// Token: 0x04002844 RID: 10308
+	// Token: 0x04003790 RID: 14224
 	private DialogueWindowEntry m_currentDialogueWindowEntry;
 
-	// Token: 0x04002845 RID: 10309
+	// Token: 0x04003791 RID: 14225
 	private DialogueWindowStyle m_currentWindowStyle;
 
-	// Token: 0x04002846 RID: 10310
+	// Token: 0x04003792 RID: 14226
 	private string m_insightEndHandlerKey;
 
-	// Token: 0x04002847 RID: 10311
+	// Token: 0x04003793 RID: 14227
 	private string m_scarEndHandlerKey;
 
-	// Token: 0x04002848 RID: 10312
+	// Token: 0x04003794 RID: 14228
 	private InsightObjectiveCompleteHUDEventArgs m_insightEventArgs = new InsightObjectiveCompleteHUDEventArgs(InsightType.None, false, 5f, null, null, null);
 
-	// Token: 0x04002849 RID: 10313
+	// Token: 0x04003795 RID: 14229
 	private ScarObjectiveCompleteHUDEventArgs m_scarEventArgs = new ScarObjectiveCompleteHUDEventArgs(ChallengeType.None, 5f, null, null, null);
 
-	// Token: 0x0400284A RID: 10314
+	// Token: 0x04003796 RID: 14230
 	public Relay WriteLineOfDialogStartRelay = new Relay();
 
-	// Token: 0x0400284B RID: 10315
+	// Token: 0x04003797 RID: 14231
 	public Relay WriteLineOfDialogEndRelay = new Relay();
 
-	// Token: 0x0400284C RID: 10316
+	// Token: 0x04003798 RID: 14232
 	public Relay NextLineOfDialogRelay = new Relay();
 
-	// Token: 0x0400284D RID: 10317
+	// Token: 0x04003799 RID: 14233
 	public Relay DialogCompleteRelay = new Relay();
 
-	// Token: 0x0400284E RID: 10318
+	// Token: 0x0400379A RID: 14234
 	public Relay DialogWindowBeginClosingRelay = new Relay();
 
-	// Token: 0x0400284F RID: 10319
+	// Token: 0x0400379B RID: 14235
 	public Relay WriteCharacterStartRelay = new Relay();
 
-	// Token: 0x04002850 RID: 10320
+	// Token: 0x0400379C RID: 14236
 	private List<Action> m_queuedEndHandlers = new List<Action>();
 
-	// Token: 0x04002851 RID: 10321
+	// Token: 0x0400379D RID: 14237
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x04002852 RID: 10322
+	// Token: 0x0400379E RID: 14238
 	private Action m_onWriteSpecialCharacter;
 
-	// Token: 0x04002853 RID: 10323
+	// Token: 0x0400379F RID: 14239
 	private Action m_onWriteLine;
 
-	// Token: 0x04002854 RID: 10324
+	// Token: 0x040037A0 RID: 14240
 	private Action m_dialogueComplete;
 
-	// Token: 0x04002855 RID: 10325
+	// Token: 0x040037A1 RID: 14241
 	private Action<InputActionEventData> m_onConfirmButtonPressed;
 
-	// Token: 0x04002856 RID: 10326
+	// Token: 0x040037A2 RID: 14242
 	private bool m_globalTimerIsRunning;
 
-	// Token: 0x04002857 RID: 10327
+	// Token: 0x040037A3 RID: 14243
 	private bool m_isRunningEndHandlers;
 
-	// Token: 0x04002858 RID: 10328
+	// Token: 0x040037A4 RID: 14244
 	private Relay m_onDialogueCompleteRelay = new Relay();
 
-	// Token: 0x02000D52 RID: 3410
+	// Token: 0x02000952 RID: 2386
 	public enum TextState
 	{
-		// Token: 0x040053DF RID: 21471
+		// Token: 0x040037A6 RID: 14246
 		Disabled,
-		// Token: 0x040053E0 RID: 21472
+		// Token: 0x040037A7 RID: 14247
 		Typewriting,
-		// Token: 0x040053E1 RID: 21473
+		// Token: 0x040037A8 RID: 14248
 		TypewritingComplete,
-		// Token: 0x040053E2 RID: 21474
+		// Token: 0x040037A9 RID: 14249
 		WaitingForInput
 	}
 }

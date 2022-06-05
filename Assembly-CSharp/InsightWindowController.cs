@@ -5,11 +5,11 @@ using Rewired;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x0200057F RID: 1407
+// Token: 0x02000963 RID: 2403
 public class InsightWindowController : WindowController
 {
-	// Token: 0x1700128C RID: 4748
-	// (get) Token: 0x060033D5 RID: 13269 RVA: 0x000B0137 File Offset: 0x000AE337
+	// Token: 0x17001977 RID: 6519
+	// (get) Token: 0x0600491C RID: 18716 RVA: 0x0002827D File Offset: 0x0002647D
 	public override WindowID ID
 	{
 		get
@@ -18,13 +18,13 @@ public class InsightWindowController : WindowController
 		}
 	}
 
-	// Token: 0x060033D6 RID: 13270 RVA: 0x000B013B File Offset: 0x000AE33B
+	// Token: 0x0600491D RID: 18717 RVA: 0x00028281 File Offset: 0x00026481
 	private void Awake()
 	{
 		this.m_onCancelButtonDown = new Action<InputActionEventData>(this.OnCancelButtonDown);
 	}
 
-	// Token: 0x060033D7 RID: 13271 RVA: 0x000B0150 File Offset: 0x000AE350
+	// Token: 0x0600491E RID: 18718 RVA: 0x0011B958 File Offset: 0x00119B58
 	public override void Initialize()
 	{
 		InsightWindowEntry[] componentsInChildren = this.m_rightPageCanvasGroup.GetComponentsInChildren<InsightWindowEntry>();
@@ -46,7 +46,7 @@ public class InsightWindowController : WindowController
 		}
 	}
 
-	// Token: 0x060033D8 RID: 13272 RVA: 0x000B021C File Offset: 0x000AE41C
+	// Token: 0x0600491F RID: 18719 RVA: 0x0011BA24 File Offset: 0x00119C24
 	private void UpdateArrays()
 	{
 		int num = 0;
@@ -102,7 +102,7 @@ public class InsightWindowController : WindowController
 		this.m_noInsightsResolvedTextGO.gameObject.SetActive(true);
 	}
 
-	// Token: 0x060033D9 RID: 13273 RVA: 0x000B038A File Offset: 0x000AE58A
+	// Token: 0x06004920 RID: 18720 RVA: 0x00028296 File Offset: 0x00026496
 	protected override void OnOpen()
 	{
 		this.UpdateArrays();
@@ -110,7 +110,7 @@ public class InsightWindowController : WindowController
 		base.StartCoroutine(this.RunOpenAnimation());
 	}
 
-	// Token: 0x060033DA RID: 13274 RVA: 0x000B03B0 File Offset: 0x000AE5B0
+	// Token: 0x06004921 RID: 18721 RVA: 0x000282BC File Offset: 0x000264BC
 	private IEnumerator RunOpenAnimation()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -150,25 +150,25 @@ public class InsightWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x060033DB RID: 13275 RVA: 0x000B03BF File Offset: 0x000AE5BF
+	// Token: 0x06004922 RID: 18722 RVA: 0x0000EE94 File Offset: 0x0000D094
 	protected override void OnClose()
 	{
 		this.m_windowCanvas.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060033DC RID: 13276 RVA: 0x000B03D2 File Offset: 0x000AE5D2
+	// Token: 0x06004923 RID: 18723 RVA: 0x000282CB File Offset: 0x000264CB
 	protected override void OnFocus()
 	{
 		this.AddInputListeners();
 	}
 
-	// Token: 0x060033DD RID: 13277 RVA: 0x000B03DA File Offset: 0x000AE5DA
+	// Token: 0x06004924 RID: 18724 RVA: 0x000282D3 File Offset: 0x000264D3
 	protected override void OnLostFocus()
 	{
 		this.RemoveInputListeners();
 	}
 
-	// Token: 0x060033DE RID: 13278 RVA: 0x000B03E2 File Offset: 0x000AE5E2
+	// Token: 0x06004925 RID: 18725 RVA: 0x000282DB File Offset: 0x000264DB
 	protected void AddInputListeners()
 	{
 		if (ReInput.isReady && base.RewiredPlayer != null)
@@ -177,7 +177,7 @@ public class InsightWindowController : WindowController
 		}
 	}
 
-	// Token: 0x060033DF RID: 13279 RVA: 0x000B040B File Offset: 0x000AE60B
+	// Token: 0x06004926 RID: 18726 RVA: 0x00028304 File Offset: 0x00026504
 	protected void RemoveInputListeners()
 	{
 		if (ReInput.isReady && base.RewiredPlayer != null)
@@ -186,7 +186,7 @@ public class InsightWindowController : WindowController
 		}
 	}
 
-	// Token: 0x060033E0 RID: 13280 RVA: 0x000B0434 File Offset: 0x000AE634
+	// Token: 0x06004927 RID: 18727 RVA: 0x00028116 File Offset: 0x00026316
 	protected virtual void OnCancelButtonDown(InputActionEventData obj)
 	{
 		if (WindowManager.GetIsWindowOpen(WindowID.Pause))
@@ -197,28 +197,28 @@ public class InsightWindowController : WindowController
 		WindowManager.SetWindowIsOpen(this.ID, false);
 	}
 
-	// Token: 0x040028A8 RID: 10408
+	// Token: 0x04003817 RID: 14359
 	[SerializeField]
 	private CanvasGroup m_leftPageCanvasGroup;
 
-	// Token: 0x040028A9 RID: 10409
+	// Token: 0x04003818 RID: 14360
 	[SerializeField]
 	private CanvasGroup m_rightPageCanvasGroup;
 
-	// Token: 0x040028AA RID: 10410
+	// Token: 0x04003819 RID: 14361
 	[SerializeField]
 	private GameObject m_noInsightsDiscoveredTextGO;
 
-	// Token: 0x040028AB RID: 10411
+	// Token: 0x0400381A RID: 14362
 	[SerializeField]
 	private GameObject m_noInsightsResolvedTextGO;
 
-	// Token: 0x040028AC RID: 10412
+	// Token: 0x0400381B RID: 14363
 	private InsightWindowEntry[] m_discoveredEntries;
 
-	// Token: 0x040028AD RID: 10413
+	// Token: 0x0400381C RID: 14364
 	private InsightWindowEntry[] m_resolvedEntries;
 
-	// Token: 0x040028AE RID: 10414
+	// Token: 0x0400381D RID: 14365
 	private Action<InputActionEventData> m_onCancelButtonDown;
 }

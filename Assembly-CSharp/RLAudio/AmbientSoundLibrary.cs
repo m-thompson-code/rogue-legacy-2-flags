@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008D3 RID: 2259
+	// Token: 0x02000E41 RID: 3649
 	[CreateAssetMenu(menuName = "Custom/Libraries/Ambient Sound Library")]
 	public class AmbientSoundLibrary : AudioLibrary<AmbientSoundLibraryEntry>
 	{
-		// Token: 0x1700181F RID: 6175
-		// (get) Token: 0x06004A43 RID: 19011 RVA: 0x0010B91B File Offset: 0x00109B1B
+		// Token: 0x170020FE RID: 8446
+		// (get) Token: 0x060066F3 RID: 26355 RVA: 0x00038A75 File Offset: 0x00036C75
 		private static AmbientSoundLibrary Instance
 		{
 			get
@@ -22,7 +22,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A44 RID: 19012 RVA: 0x0010B944 File Offset: 0x00109B44
+		// Token: 0x060066F4 RID: 26356 RVA: 0x00038A9E File Offset: 0x00036C9E
 		public static string[] GetAmbientAudioEventPaths(BiomeType biome, RoomType roomType, bool isRoomLarge)
 		{
 			if (roomType != RoomType.Fairy)
@@ -36,7 +36,7 @@ namespace RLAudio
 			return AmbientSoundLibrary.Instance.m_fairyRoomSmall;
 		}
 
-		// Token: 0x06004A45 RID: 19013 RVA: 0x0010B982 File Offset: 0x00109B82
+		// Token: 0x060066F5 RID: 26357 RVA: 0x00038ADC File Offset: 0x00036CDC
 		public static string GetAmbientAudioSnapshotPath(BiomeType biome, RoomType roomType, bool isRoomLarge)
 		{
 			if (roomType != RoomType.Fairy)
@@ -50,7 +50,7 @@ namespace RLAudio
 			return AmbientSoundLibrary.Instance.m_fairyRoomSmallSnapshot;
 		}
 
-		// Token: 0x06004A46 RID: 19014 RVA: 0x0010B9C0 File Offset: 0x00109BC0
+		// Token: 0x060066F6 RID: 26358 RVA: 0x0017C3B8 File Offset: 0x0017A5B8
 		private static string[] GetEventPaths(AmbientSoundLibraryEntry entry, RoomType roomType, bool isRoomLarge)
 		{
 			string[] result = new string[0];
@@ -87,7 +87,7 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004A47 RID: 19015 RVA: 0x0010BAA8 File Offset: 0x00109CA8
+		// Token: 0x060066F7 RID: 26359 RVA: 0x0017C4A0 File Offset: 0x0017A6A0
 		private static string GetSnapshotPath(AmbientSoundLibraryEntry entry, RoomType roomType, bool isRoomLarge)
 		{
 			string result = string.Empty;
@@ -124,33 +124,33 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x04003E68 RID: 15976
+		// Token: 0x0400537D RID: 21373
 		[SerializeField]
 		[EventRef]
 		private string[] m_fairyRoomSmall;
 
-		// Token: 0x04003E69 RID: 15977
+		// Token: 0x0400537E RID: 21374
 		[SerializeField]
 		[EventRef]
 		private string m_fairyRoomSmallSnapshot;
 
-		// Token: 0x04003E6A RID: 15978
+		// Token: 0x0400537F RID: 21375
 		[SerializeField]
 		[EventRef]
 		private string[] m_fairyRoomLarge;
 
-		// Token: 0x04003E6B RID: 15979
+		// Token: 0x04005380 RID: 21376
 		[SerializeField]
 		[EventRef]
 		private string m_fairyRoomLargeSnapshot;
 
-		// Token: 0x04003E6C RID: 15980
+		// Token: 0x04005381 RID: 21377
 		public const string RESOURCES_PATH = "Scriptable Objects/Libraries/AmbientSoundLibrary";
 
-		// Token: 0x04003E6D RID: 15981
+		// Token: 0x04005382 RID: 21378
 		public const string ASSET_PATH = "Assets/Content/Scriptable Objects/Libraries/AmbientSoundLibrary.asset";
 
-		// Token: 0x04003E6E RID: 15982
+		// Token: 0x04005383 RID: 21379
 		private static AmbientSoundLibrary m_instance;
 	}
 }

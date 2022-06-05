@@ -3,10 +3,10 @@ using System.Collections;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x020002AE RID: 686
+// Token: 0x02000493 RID: 1171
 public class PlayerMovementHelper
 {
-	// Token: 0x06001B60 RID: 7008 RVA: 0x00057AF9 File Offset: 0x00055CF9
+	// Token: 0x060025D8 RID: 9688 RVA: 0x0001509E File Offset: 0x0001329E
 	public static void StopAllMovementInput()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -18,7 +18,7 @@ public class PlayerMovementHelper
 		}
 	}
 
-	// Token: 0x06001B61 RID: 7009 RVA: 0x00057B29 File Offset: 0x00055D29
+	// Token: 0x060025D9 RID: 9689 RVA: 0x000150CE File Offset: 0x000132CE
 	public static void ResumeAllMovementInput()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -27,7 +27,7 @@ public class PlayerMovementHelper
 		}
 	}
 
-	// Token: 0x06001B62 RID: 7010 RVA: 0x00057B3D File Offset: 0x00055D3D
+	// Token: 0x060025DA RID: 9690 RVA: 0x000150E2 File Offset: 0x000132E2
 	private static IEnumerator MovePlayerHorizontal(float speed, float duration)
 	{
 		if (PlayerManager.IsInstantiated)
@@ -46,21 +46,21 @@ public class PlayerMovementHelper
 		yield break;
 	}
 
-	// Token: 0x06001B63 RID: 7011 RVA: 0x00057B53 File Offset: 0x00055D53
+	// Token: 0x060025DB RID: 9691 RVA: 0x000150F8 File Offset: 0x000132F8
 	public static IEnumerator MovePlayerLeft(float duration)
 	{
 		yield return PlayerMovementHelper.MovePlayerHorizontal(-1f, duration);
 		yield break;
 	}
 
-	// Token: 0x06001B64 RID: 7012 RVA: 0x00057B62 File Offset: 0x00055D62
+	// Token: 0x060025DC RID: 9692 RVA: 0x00015107 File Offset: 0x00013307
 	public static IEnumerator MovePlayerRight(float duration)
 	{
 		yield return PlayerMovementHelper.MovePlayerHorizontal(1f, duration);
 		yield break;
 	}
 
-	// Token: 0x06001B65 RID: 7013 RVA: 0x00057B71 File Offset: 0x00055D71
+	// Token: 0x060025DD RID: 9693 RVA: 0x00015116 File Offset: 0x00013316
 	public static IEnumerator MoveTo(Vector2 position, bool checkXAxisOnly)
 	{
 		if (PlayerManager.IsInstantiated)
@@ -102,7 +102,7 @@ public class PlayerMovementHelper
 		yield break;
 	}
 
-	// Token: 0x06001B66 RID: 7014 RVA: 0x00057B87 File Offset: 0x00055D87
+	// Token: 0x060025DE RID: 9694 RVA: 0x0001512C File Offset: 0x0001332C
 	public static IEnumerator MoveTo_Old(Vector2 position, bool xAxisOnly)
 	{
 		if (PlayerManager.IsInstantiated)
@@ -138,7 +138,7 @@ public class PlayerMovementHelper
 		yield break;
 	}
 
-	// Token: 0x06001B67 RID: 7015 RVA: 0x00057B9D File Offset: 0x00055D9D
+	// Token: 0x060025DF RID: 9695 RVA: 0x00015142 File Offset: 0x00013342
 	public static IEnumerator JumpPlayer(float duration)
 	{
 		if (PlayerManager.IsInstantiated)

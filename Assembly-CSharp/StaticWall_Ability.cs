@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200018B RID: 395
+// Token: 0x020002D8 RID: 728
 public class StaticWall_Ability : GenericSpell_Ability, ITalent, IAbility
 {
-	// Token: 0x06000E26 RID: 3622 RVA: 0x0002B7E0 File Offset: 0x000299E0
+	// Token: 0x060015BF RID: 5567 RVA: 0x0000AC8A File Offset: 0x00008E8A
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_resumeCooldown = new Action<Projectile_RL, GameObject>(this.ResumeCooldown);
 	}
 
-	// Token: 0x06000E27 RID: 3623 RVA: 0x0002B7FC File Offset: 0x000299FC
+	// Token: 0x060015C0 RID: 5568 RVA: 0x0008A9BC File Offset: 0x00088BBC
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -25,7 +25,7 @@ public class StaticWall_Ability : GenericSpell_Ability, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000E28 RID: 3624 RVA: 0x0002B84F File Offset: 0x00029A4F
+	// Token: 0x060015C1 RID: 5569 RVA: 0x0000ACA4 File Offset: 0x00008EA4
 	private IEnumerator FlashCoroutine()
 	{
 		if (this.m_firedProjectile)
@@ -44,16 +44,16 @@ public class StaticWall_Ability : GenericSpell_Ability, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000E29 RID: 3625 RVA: 0x0002B85E File Offset: 0x00029A5E
+	// Token: 0x060015C2 RID: 5570 RVA: 0x0000ACB3 File Offset: 0x00008EB3
 	private void ResumeCooldown(Projectile_RL proj, GameObject obj)
 	{
 		base.DecreaseCooldownWhenHit = true;
 		base.DisplayPausedAbilityCooldown = false;
 	}
 
-	// Token: 0x04001117 RID: 4375
+	// Token: 0x0400169A RID: 5786
 	private const float FLASH_KICK_IN_DURATION = 1f;
 
-	// Token: 0x04001118 RID: 4376
+	// Token: 0x0400169B RID: 5787
 	private Action<Projectile_RL, GameObject> m_resumeCooldown;
 }

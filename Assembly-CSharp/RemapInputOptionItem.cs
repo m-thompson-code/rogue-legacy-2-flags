@@ -6,10 +6,10 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Token: 0x02000298 RID: 664
+// Token: 0x02000464 RID: 1124
 public class RemapInputOptionItem : ExecuteImmediateOptionItem
 {
-	// Token: 0x060019DD RID: 6621 RVA: 0x00051208 File Offset: 0x0004F408
+	// Token: 0x060023CC RID: 9164 RVA: 0x000AD910 File Offset: 0x000ABB10
 	protected override void Awake()
 	{
 		base.Awake();
@@ -28,7 +28,7 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		this.m_resetToDefault = new Action<InputActionEventData>(this.ResetToDefault);
 	}
 
-	// Token: 0x060019DE RID: 6622 RVA: 0x00051290 File Offset: 0x0004F490
+	// Token: 0x060023CD RID: 9165 RVA: 0x000AD998 File Offset: 0x000ABB98
 	public override void OnSelect(BaseEventData eventData)
 	{
 		base.OnSelect(eventData);
@@ -43,7 +43,7 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		}
 	}
 
-	// Token: 0x060019DF RID: 6623 RVA: 0x0005132C File Offset: 0x0004F52C
+	// Token: 0x060023CE RID: 9166 RVA: 0x000ADA34 File Offset: 0x000ABC34
 	private void UpdateLockState()
 	{
 		string @string;
@@ -78,7 +78,7 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		this.m_lockIcon.SetActive(this.m_lockInput);
 	}
 
-	// Token: 0x060019E0 RID: 6624 RVA: 0x00051438 File Offset: 0x0004F638
+	// Token: 0x060023CF RID: 9167 RVA: 0x000ADB40 File Offset: 0x000ABD40
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -118,7 +118,7 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		ReInput.players.GetPlayer(0).AddInputEventDelegate(this.m_resetToDefault, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_R");
 	}
 
-	// Token: 0x060019E1 RID: 6625 RVA: 0x000515CC File Offset: 0x0004F7CC
+	// Token: 0x060023D0 RID: 9168 RVA: 0x000ADCD4 File Offset: 0x000ABED4
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -129,7 +129,7 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		}
 	}
 
-	// Token: 0x060019E2 RID: 6626 RVA: 0x00051624 File Offset: 0x0004F824
+	// Token: 0x060023D1 RID: 9169 RVA: 0x000ADD2C File Offset: 0x000ABF2C
 	private void ResetToDefault(InputActionEventData eventData)
 	{
 		if (this.m_remapListener.UsesGamepad && !eventData.IsCurrentInputSource(ControllerType.Joystick))
@@ -171,7 +171,7 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		}
 	}
 
-	// Token: 0x060019E3 RID: 6627 RVA: 0x00051790 File Offset: 0x0004F990
+	// Token: 0x060023D2 RID: 9170 RVA: 0x000ADE98 File Offset: 0x000AC098
 	private void InitializeDefaultConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -189,13 +189,13 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x060019E4 RID: 6628 RVA: 0x00051809 File Offset: 0x0004FA09
+	// Token: 0x060023D3 RID: 9171 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void ConfirmResetToDefault()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x060019E5 RID: 6629 RVA: 0x00051814 File Offset: 0x0004FA14
+	// Token: 0x060023D4 RID: 9172 RVA: 0x000ADF14 File Offset: 0x000AC114
 	public override void ActivateOption()
 	{
 		if (this.m_remapListener.UsesGamepad && ReInput.controllers.GetLastActiveController() != this.m_assignedController)
@@ -222,7 +222,7 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		});
 	}
 
-	// Token: 0x060019E6 RID: 6630 RVA: 0x000518F3 File Offset: 0x0004FAF3
+	// Token: 0x060023D5 RID: 9173 RVA: 0x00013B85 File Offset: 0x00011D85
 	private IEnumerator RunInputRemapListenerCoroutine()
 	{
 		this.m_textBox.transform.parent.gameObject.SetActive(true);
@@ -240,7 +240,7 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		yield break;
 	}
 
-	// Token: 0x060019E7 RID: 6631 RVA: 0x00051904 File Offset: 0x0004FB04
+	// Token: 0x060023D6 RID: 9174 RVA: 0x000ADFF4 File Offset: 0x000AC1F4
 	private void InputRemapListenerComplete(bool remapSuccessful)
 	{
 		if (remapSuccessful)
@@ -255,7 +255,7 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		base.StartCoroutine(this.EndInputRemapListenerCoroutine());
 	}
 
-	// Token: 0x060019E8 RID: 6632 RVA: 0x00051959 File Offset: 0x0004FB59
+	// Token: 0x060023D7 RID: 9175 RVA: 0x00013B94 File Offset: 0x00011D94
 	private IEnumerator EndInputRemapListenerCoroutine()
 	{
 		LocalizationManager.ForceRefreshAllTextGlyphs();
@@ -282,7 +282,7 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		yield break;
 	}
 
-	// Token: 0x060019E9 RID: 6633 RVA: 0x00051968 File Offset: 0x0004FB68
+	// Token: 0x060023D8 RID: 9176 RVA: 0x000AE04C File Offset: 0x000AC24C
 	private void UpdateInputName(bool remapSuccessful)
 	{
 		string str = "";
@@ -304,41 +304,41 @@ public class RemapInputOptionItem : ExecuteImmediateOptionItem
 		}
 	}
 
-	// Token: 0x04001874 RID: 6260
+	// Token: 0x04001FC5 RID: 8133
 	[SerializeField]
 	private GenericInfoTextBox m_textBox;
 
-	// Token: 0x04001875 RID: 6261
+	// Token: 0x04001FC6 RID: 8134
 	[SerializeField]
 	private GameObject m_lockIcon;
 
-	// Token: 0x04001876 RID: 6262
+	// Token: 0x04001FC7 RID: 8135
 	[SerializeField]
 	private GamepadImageSelectorController m_gamepadImageSelectorController;
 
-	// Token: 0x04001877 RID: 6263
+	// Token: 0x04001FC8 RID: 8136
 	[SerializeField]
 	private StudioEventEmitter m_successfulRemapSFX;
 
-	// Token: 0x04001878 RID: 6264
+	// Token: 0x04001FC9 RID: 8137
 	[SerializeField]
 	private StudioEventEmitter m_failedRemapSFX;
 
-	// Token: 0x04001879 RID: 6265
+	// Token: 0x04001FCA RID: 8138
 	private bool m_lockInput;
 
-	// Token: 0x0400187A RID: 6266
+	// Token: 0x04001FCB RID: 8139
 	private RLInputRemapListener m_remapListener;
 
-	// Token: 0x0400187B RID: 6267
+	// Token: 0x04001FCC RID: 8140
 	private TextGlyphConverter m_textGlyphConverter;
 
-	// Token: 0x0400187C RID: 6268
+	// Token: 0x04001FCD RID: 8141
 	private Controller m_assignedController;
 
-	// Token: 0x0400187D RID: 6269
+	// Token: 0x04001FCE RID: 8142
 	private Action m_confirmResetToDefault;
 
-	// Token: 0x0400187E RID: 6270
+	// Token: 0x04001FCF RID: 8143
 	private Action<InputActionEventData> m_resetToDefault;
 }

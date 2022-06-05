@@ -4,28 +4,28 @@ using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x02000966 RID: 2406
+	// Token: 0x02000F0F RID: 3855
 	[AddComponentMenu("Corgi Engine/Character/Abilities/Character Horizontal Movement")]
 	public class CharacterHorizontalMovement : CharacterAbility
 	{
-		// Token: 0x0600513A RID: 20794 RVA: 0x0011ED2D File Offset: 0x0011CF2D
+		// Token: 0x06006F34 RID: 28468 RVA: 0x0000341B File Offset: 0x0000161B
 		public override string HelpBoxText()
 		{
 			return "This component handles basic left/right movement, friction, and ground hit detection. Here you can define standard movement speed, walk speed, and what effects to use when the character hits the ground after a jump/fall.";
 		}
 
-		// Token: 0x17001AE9 RID: 6889
-		// (get) Token: 0x0600513B RID: 20795 RVA: 0x0011ED34 File Offset: 0x0011CF34
-		// (set) Token: 0x0600513C RID: 20796 RVA: 0x0011ED3C File Offset: 0x0011CF3C
+		// Token: 0x1700242E RID: 9262
+		// (get) Token: 0x06006F35 RID: 28469 RVA: 0x0003D48B File Offset: 0x0003B68B
+		// (set) Token: 0x06006F36 RID: 28470 RVA: 0x0003D493 File Offset: 0x0003B693
 		public float MovementSpeed { get; set; }
 
-		// Token: 0x17001AEA RID: 6890
-		// (get) Token: 0x0600513D RID: 20797 RVA: 0x0011ED45 File Offset: 0x0011CF45
-		// (set) Token: 0x0600513E RID: 20798 RVA: 0x0011ED4D File Offset: 0x0011CF4D
+		// Token: 0x1700242F RID: 9263
+		// (get) Token: 0x06006F37 RID: 28471 RVA: 0x0003D49C File Offset: 0x0003B69C
+		// (set) Token: 0x06006F38 RID: 28472 RVA: 0x0003D4A4 File Offset: 0x0003B6A4
 		public float MovementSpeedMultiplier { get; set; }
 
-		// Token: 0x17001AEB RID: 6891
-		// (get) Token: 0x0600513F RID: 20799 RVA: 0x0011ED56 File Offset: 0x0011CF56
+		// Token: 0x17002430 RID: 9264
+		// (get) Token: 0x06006F39 RID: 28473 RVA: 0x0003D4AD File Offset: 0x0003B6AD
 		public float HorizontalMovementForce
 		{
 			get
@@ -34,12 +34,12 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001AEC RID: 6892
-		// (get) Token: 0x06005140 RID: 20800 RVA: 0x0011ED5E File Offset: 0x0011CF5E
-		// (set) Token: 0x06005141 RID: 20801 RVA: 0x0011ED66 File Offset: 0x0011CF66
+		// Token: 0x17002431 RID: 9265
+		// (get) Token: 0x06006F3A RID: 28474 RVA: 0x0003D4B5 File Offset: 0x0003B6B5
+		// (set) Token: 0x06006F3B RID: 28475 RVA: 0x0003D4BD File Offset: 0x0003B6BD
 		public bool MovementForbidden { get; set; }
 
-		// Token: 0x06005142 RID: 20802 RVA: 0x0011ED6F File Offset: 0x0011CF6F
+		// Token: 0x06006F3C RID: 28476 RVA: 0x0003D4C6 File Offset: 0x0003B6C6
 		protected override void Initialization()
 		{
 			base.Initialization();
@@ -48,15 +48,15 @@ namespace MoreMountains.CorgiEngine
 			this.MovementForbidden = false;
 		}
 
-		// Token: 0x06005143 RID: 20803 RVA: 0x0011ED95 File Offset: 0x0011CF95
+		// Token: 0x06006F3D RID: 28477 RVA: 0x0003D4EC File Offset: 0x0003B6EC
 		public override void ProcessAbility()
 		{
 			base.ProcessAbility();
 			this.HandleHorizontalMovement();
 		}
 
-		// Token: 0x17001AED RID: 6893
-		// (get) Token: 0x06005144 RID: 20804 RVA: 0x0011EDA3 File Offset: 0x0011CFA3
+		// Token: 0x17002432 RID: 9266
+		// (get) Token: 0x06006F3E RID: 28478 RVA: 0x0003D4FA File Offset: 0x0003B6FA
 		public bool IsFlickDetected
 		{
 			get
@@ -65,7 +65,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005145 RID: 20805 RVA: 0x0011EDAC File Offset: 0x0011CFAC
+		// Token: 0x06006F3F RID: 28479 RVA: 0x0018D01C File Offset: 0x0018B21C
 		protected override void HandleInput()
 		{
 			this.m_movementVector2.x = this._horizontalInput;
@@ -108,13 +108,13 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005146 RID: 20806 RVA: 0x0011EF0E File Offset: 0x0011D10E
+		// Token: 0x06006F40 RID: 28480 RVA: 0x0003D502 File Offset: 0x0003B702
 		public virtual void SetHorizontalMove(float value)
 		{
 			this._horizontalMovement = value;
 		}
 
-		// Token: 0x06005147 RID: 20807 RVA: 0x0011EF18 File Offset: 0x0011D118
+		// Token: 0x06006F41 RID: 28481 RVA: 0x0018D180 File Offset: 0x0018B380
 		protected virtual void HandleHorizontalMovement()
 		{
 			this.CheckJustGotGrounded();
@@ -161,7 +161,7 @@ namespace MoreMountains.CorgiEngine
 			this._controller.SetHorizontalForce(this._horizontalMovementForce);
 		}
 
-		// Token: 0x06005148 RID: 20808 RVA: 0x0011F0F0 File Offset: 0x0011D2F0
+		// Token: 0x06006F42 RID: 28482 RVA: 0x0018D358 File Offset: 0x0018B558
 		protected virtual void CheckJustGotGrounded()
 		{
 			if (this._controller.State.JustGotGrounded)
@@ -174,7 +174,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005149 RID: 20809 RVA: 0x0011F140 File Offset: 0x0011D340
+		// Token: 0x06006F43 RID: 28483 RVA: 0x0018D3A8 File Offset: 0x0018B5A8
 		protected virtual float HandleFriction(float force)
 		{
 			if (this._controller.Friction > 1f)
@@ -188,82 +188,82 @@ namespace MoreMountains.CorgiEngine
 			return force;
 		}
 
-		// Token: 0x0600514A RID: 20810 RVA: 0x0011F1C2 File Offset: 0x0011D3C2
+		// Token: 0x06006F44 RID: 28484 RVA: 0x0003D50B File Offset: 0x0003B70B
 		public virtual void ResetHorizontalSpeed()
 		{
 			this.MovementSpeed = this.WalkSpeed;
 		}
 
-		// Token: 0x0600514B RID: 20811 RVA: 0x0011F1D0 File Offset: 0x0011D3D0
+		// Token: 0x06006F45 RID: 28485 RVA: 0x0003D519 File Offset: 0x0003B719
 		protected override void InitializeAnimatorParameters()
 		{
 			this.RegisterAnimatorParameter("Speed", AnimatorControllerParameterType.Float);
 			this.RegisterAnimatorParameter("Walking", AnimatorControllerParameterType.Bool);
 		}
 
-		// Token: 0x0600514C RID: 20812 RVA: 0x0011F1EC File Offset: 0x0011D3EC
+		// Token: 0x06006F46 RID: 28486 RVA: 0x0018D42C File Offset: 0x0018B62C
 		public override void UpdateAnimator()
 		{
 			MMAnimator.UpdateAnimatorFloat(this._animator, "Speed", Mathf.Abs(this._normalizedHorizontalSpeed), this._character._animatorParameters);
 			MMAnimator.UpdateAnimatorBool(this._animator, "Walking", this._movement.CurrentState == CharacterStates.MovementStates.Walking, this._character._animatorParameters);
 		}
 
-		// Token: 0x0600514D RID: 20813 RVA: 0x0011F248 File Offset: 0x0011D448
+		// Token: 0x06006F47 RID: 28487 RVA: 0x0003D33F File Offset: 0x0003B53F
 		protected virtual void OnRevive()
 		{
 			this.Initialization();
 		}
 
-		// Token: 0x0600514E RID: 20814 RVA: 0x0011F250 File Offset: 0x0011D450
+		// Token: 0x06006F48 RID: 28488 RVA: 0x0003D533 File Offset: 0x0003B733
 		protected override void OnEnable()
 		{
 			base.OnEnable();
 		}
 
-		// Token: 0x0600514F RID: 20815 RVA: 0x0011F258 File Offset: 0x0011D458
+		// Token: 0x06006F49 RID: 28489 RVA: 0x0003D53B File Offset: 0x0003B73B
 		protected override void OnDisable()
 		{
 			base.OnDisable();
 		}
 
-		// Token: 0x0400435C RID: 17244
+		// Token: 0x04005966 RID: 22886
 		[Header("Speed")]
 		public float WalkSpeed = 6f;
 
-		// Token: 0x0400435F RID: 17247
+		// Token: 0x04005969 RID: 22889
 		protected float _horizontalMovement;
 
-		// Token: 0x04004360 RID: 17248
+		// Token: 0x0400596A RID: 22890
 		protected float _horizontalMovementForce;
 
-		// Token: 0x04004361 RID: 17249
+		// Token: 0x0400596B RID: 22891
 		protected float _normalizedHorizontalSpeed;
 
-		// Token: 0x04004362 RID: 17250
+		// Token: 0x0400596C RID: 22892
 		private bool m_isMovingRight;
 
-		// Token: 0x04004363 RID: 17251
+		// Token: 0x0400596D RID: 22893
 		private bool m_wasMovingLastFrame;
 
-		// Token: 0x04004364 RID: 17252
+		// Token: 0x0400596E RID: 22894
 		private bool m_checkingRightFlick;
 
-		// Token: 0x04004365 RID: 17253
+		// Token: 0x0400596F RID: 22895
 		private bool m_checkingLeftFlick;
 
-		// Token: 0x04004366 RID: 17254
+		// Token: 0x04005970 RID: 22896
 		private bool m_flickDetected;
 
-		// Token: 0x04004367 RID: 17255
+		// Token: 0x04005971 RID: 22897
 		private const float ANTIFLICK_CHECK_DURATION = 0.06f;
 
-		// Token: 0x04004368 RID: 17256
+		// Token: 0x04005972 RID: 22898
 		private const float ANTIFLICK_DEADZONE_BUFFER = 0.9f;
 
-		// Token: 0x04004369 RID: 17257
+		// Token: 0x04005973 RID: 22899
 		private float m_flickDetectionStartTimer;
 
-		// Token: 0x0400436A RID: 17258
+		// Token: 0x04005974 RID: 22900
 		private Vector2 m_movementVector2;
 	}
 }

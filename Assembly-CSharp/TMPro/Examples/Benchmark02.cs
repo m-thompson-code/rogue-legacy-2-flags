@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000857 RID: 2135
+	// Token: 0x02000D5C RID: 3420
 	public class Benchmark02 : MonoBehaviour
 	{
-		// Token: 0x060046E5 RID: 18149 RVA: 0x000FD3C4 File Offset: 0x000FB5C4
+		// Token: 0x06006192 RID: 24978 RVA: 0x0016A4F0 File Offset: 0x001686F0
 		private void Start()
 		{
 			for (int i = 0; i < this.NumberOfNPC; i++)
@@ -58,13 +58,13 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x04003BD1 RID: 15313
+		// Token: 0x04004F56 RID: 20310
 		public int SpawnType;
 
-		// Token: 0x04003BD2 RID: 15314
+		// Token: 0x04004F57 RID: 20311
 		public int NumberOfNPC = 12;
 
-		// Token: 0x04003BD3 RID: 15315
+		// Token: 0x04004F58 RID: 20312
 		private TextMeshProFloatingText floatingText_Script;
 	}
 }

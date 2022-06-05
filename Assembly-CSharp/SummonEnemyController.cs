@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000319 RID: 793
+// Token: 0x0200055B RID: 1371
 [RequireComponent(typeof(EnemyController))]
 public class SummonEnemyController : MonoBehaviour
 {
-	// Token: 0x17000D8C RID: 3468
-	// (get) Token: 0x06001F5B RID: 8027 RVA: 0x000648A4 File Offset: 0x00062AA4
+	// Token: 0x170011AB RID: 4523
+	// (get) Token: 0x06002BEA RID: 11242 RVA: 0x000186B7 File Offset: 0x000168B7
 	public SummonEnemyController.SummonEnemyEntry[] EnemiesToSummon
 	{
 		get
@@ -15,7 +15,7 @@ public class SummonEnemyController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F5C RID: 8028 RVA: 0x000648AC File Offset: 0x00062AAC
+	// Token: 0x06002BEB RID: 11243 RVA: 0x000C4AF4 File Offset: 0x000C2CF4
 	public bool Contains(EnemyType type, EnemyRank rank)
 	{
 		foreach (SummonEnemyController.SummonEnemyEntry summonEnemyEntry in this.EnemiesToSummon)
@@ -28,21 +28,21 @@ public class SummonEnemyController : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x04001C0E RID: 7182
+	// Token: 0x04002521 RID: 9505
 	[SerializeField]
 	private SummonEnemyController.SummonEnemyEntry[] m_enemiesToSummon;
 
-	// Token: 0x02000BBB RID: 3003
+	// Token: 0x0200055C RID: 1372
 	[Serializable]
 	public struct SummonEnemyEntry
 	{
-		// Token: 0x04004DA8 RID: 19880
+		// Token: 0x04002522 RID: 9506
 		public EnemyType EnemyType;
 
-		// Token: 0x04004DA9 RID: 19881
+		// Token: 0x04002523 RID: 9507
 		public EnemyRank EnemyRank;
 
-		// Token: 0x04004DAA RID: 19882
+		// Token: 0x04002524 RID: 9508
 		public int NumSummons;
 	}
 }

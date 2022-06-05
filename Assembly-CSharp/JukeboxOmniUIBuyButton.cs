@@ -3,21 +3,21 @@ using RLAudio;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003B3 RID: 947
+// Token: 0x02000648 RID: 1608
 public class JukeboxOmniUIBuyButton : OmniUIButton, IJukeboxOmniUIButton
 {
-	// Token: 0x17000E74 RID: 3700
-	// (get) Token: 0x06002307 RID: 8967 RVA: 0x00071F11 File Offset: 0x00070111
-	// (set) Token: 0x06002308 RID: 8968 RVA: 0x00071F19 File Offset: 0x00070119
+	// Token: 0x17001307 RID: 4871
+	// (get) Token: 0x0600311F RID: 12575 RVA: 0x0001AF41 File Offset: 0x00019141
+	// (set) Token: 0x06003120 RID: 12576 RVA: 0x0001AF49 File Offset: 0x00019149
 	public JukeboxOmniUIWindowController JukeboxWindowController { get; set; }
 
-	// Token: 0x17000E75 RID: 3701
-	// (get) Token: 0x06002309 RID: 8969 RVA: 0x00071F22 File Offset: 0x00070122
-	// (set) Token: 0x0600230A RID: 8970 RVA: 0x00071F2A File Offset: 0x0007012A
+	// Token: 0x17001308 RID: 4872
+	// (get) Token: 0x06003121 RID: 12577 RVA: 0x0001AF52 File Offset: 0x00019152
+	// (set) Token: 0x06003122 RID: 12578 RVA: 0x0001AF5A File Offset: 0x0001915A
 	public JukeboxOmniUIEntry JukeboxEntry { get; set; }
 
-	// Token: 0x17000E76 RID: 3702
-	// (get) Token: 0x0600230B RID: 8971 RVA: 0x00071F33 File Offset: 0x00070133
+	// Token: 0x17001309 RID: 4873
+	// (get) Token: 0x06003123 RID: 12579 RVA: 0x0001AF63 File Offset: 0x00019163
 	public bool IsPlayingSong
 	{
 		get
@@ -26,8 +26,8 @@ public class JukeboxOmniUIBuyButton : OmniUIButton, IJukeboxOmniUIButton
 		}
 	}
 
-	// Token: 0x17000E77 RID: 3703
-	// (get) Token: 0x0600230C RID: 8972 RVA: 0x00071F49 File Offset: 0x00070149
+	// Token: 0x1700130A RID: 4874
+	// (get) Token: 0x06003124 RID: 12580 RVA: 0x0001AF79 File Offset: 0x00019179
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -36,9 +36,9 @@ public class JukeboxOmniUIBuyButton : OmniUIButton, IJukeboxOmniUIButton
 		}
 	}
 
-	// Token: 0x17000E78 RID: 3704
-	// (get) Token: 0x0600230D RID: 8973 RVA: 0x00071F51 File Offset: 0x00070151
-	// (set) Token: 0x0600230E RID: 8974 RVA: 0x00071F59 File Offset: 0x00070159
+	// Token: 0x1700130B RID: 4875
+	// (get) Token: 0x06003125 RID: 12581 RVA: 0x0001AF81 File Offset: 0x00019181
+	// (set) Token: 0x06003126 RID: 12582 RVA: 0x0001AF89 File Offset: 0x00019189
 	public SongID SongType
 	{
 		get
@@ -51,7 +51,7 @@ public class JukeboxOmniUIBuyButton : OmniUIButton, IJukeboxOmniUIButton
 		}
 	}
 
-	// Token: 0x0600230F RID: 8975 RVA: 0x00071F62 File Offset: 0x00070162
+	// Token: 0x06003127 RID: 12583 RVA: 0x0001AF92 File Offset: 0x00019192
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -62,7 +62,7 @@ public class JukeboxOmniUIBuyButton : OmniUIButton, IJukeboxOmniUIButton
 		this.m_descriptionEventArgs.Initialize(this.SongType, this.IsPlayingSong);
 	}
 
-	// Token: 0x06002310 RID: 8976 RVA: 0x00071F9C File Offset: 0x0007019C
+	// Token: 0x06003128 RID: 12584 RVA: 0x000D2644 File Offset: 0x000D0844
 	public override void OnConfirmButtonPressed()
 	{
 		base.OnConfirmButtonPressed();
@@ -81,7 +81,7 @@ public class JukeboxOmniUIBuyButton : OmniUIButton, IJukeboxOmniUIButton
 		this.RunOnConfirmPressedAnimation();
 	}
 
-	// Token: 0x06002311 RID: 8977 RVA: 0x00071FF0 File Offset: 0x000701F0
+	// Token: 0x06003129 RID: 12585 RVA: 0x000D2698 File Offset: 0x000D0898
 	public void PlaySong()
 	{
 		MusicManager.StopMusicOverride();
@@ -99,7 +99,7 @@ public class JukeboxOmniUIBuyButton : OmniUIButton, IJukeboxOmniUIButton
 		}
 	}
 
-	// Token: 0x06002312 RID: 8978 RVA: 0x00072094 File Offset: 0x00070294
+	// Token: 0x0600312A RID: 12586 RVA: 0x000D273C File Offset: 0x000D093C
 	public void StopSong()
 	{
 		MusicManager.StopMusicOverride();
@@ -111,7 +111,7 @@ public class JukeboxOmniUIBuyButton : OmniUIButton, IJukeboxOmniUIButton
 		this.JukeboxWindowController.JukeboxSpectrum.StopSpectrum();
 	}
 
-	// Token: 0x06002313 RID: 8979 RVA: 0x000720FC File Offset: 0x000702FC
+	// Token: 0x0600312B RID: 12587 RVA: 0x000D27A4 File Offset: 0x000D09A4
 	public override void UpdateState()
 	{
 		JukeboxData jukeboxData;
@@ -164,21 +164,21 @@ public class JukeboxOmniUIBuyButton : OmniUIButton, IJukeboxOmniUIButton
 		}
 	}
 
-	// Token: 0x04001DF7 RID: 7671
+	// Token: 0x04002820 RID: 10272
 	[SerializeField]
 	private TMP_Text m_buyText;
 
-	// Token: 0x04001DF8 RID: 7672
+	// Token: 0x04002821 RID: 10273
 	[SerializeField]
 	private GameObject m_playSymbol;
 
-	// Token: 0x04001DF9 RID: 7673
+	// Token: 0x04002822 RID: 10274
 	[SerializeField]
 	private GameObject m_stopSymbol;
 
-	// Token: 0x04001DFA RID: 7674
+	// Token: 0x04002823 RID: 10275
 	private SongID m_songType;
 
-	// Token: 0x04001DFB RID: 7675
+	// Token: 0x04002824 RID: 10276
 	private JukeboxOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

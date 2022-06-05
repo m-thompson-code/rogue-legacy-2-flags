@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000505 RID: 1285
+// Token: 0x02000872 RID: 2162
 public class LQASwapEnemyRoomController : MonoBehaviour
 {
-	// Token: 0x06003001 RID: 12289 RVA: 0x000A4428 File Offset: 0x000A2628
+	// Token: 0x06004293 RID: 17043 RVA: 0x0010B130 File Offset: 0x00109330
 	private void SwapEnemyType(bool swapUp)
 	{
 		int num = EnemyTypes_RL.TypeArray.IndexOf(this.m_enemySpawner.Type);
@@ -50,7 +50,7 @@ public class LQASwapEnemyRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003002 RID: 12290 RVA: 0x000A4534 File Offset: 0x000A2734
+	// Token: 0x06004294 RID: 17044 RVA: 0x0010B23C File Offset: 0x0010943C
 	private void SwapEnemyRank(bool swapUp)
 	{
 		int num = EnemyTypes_RL.RankArray.IndexOf(this.m_enemySpawner.Rank);
@@ -92,7 +92,7 @@ public class LQASwapEnemyRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003003 RID: 12291 RVA: 0x000A45F8 File Offset: 0x000A27F8
+	// Token: 0x06004295 RID: 17045 RVA: 0x0010B300 File Offset: 0x00109500
 	private void UpdateSpawnedEnemy()
 	{
 		if (EnemyLibrary.GetEnemyPrefab(this.m_enemySpawner.Type, this.m_enemySpawner.Rank))
@@ -106,7 +106,7 @@ public class LQASwapEnemyRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003004 RID: 12292 RVA: 0x000A4684 File Offset: 0x000A2884
+	// Token: 0x06004296 RID: 17046 RVA: 0x0010B38C File Offset: 0x0010958C
 	private void Update()
 	{
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
@@ -133,11 +133,11 @@ public class LQASwapEnemyRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400263F RID: 9791
+	// Token: 0x0400340C RID: 13324
 	[SerializeField]
 	private EnemySpawnController m_enemySpawner;
 
-	// Token: 0x04002640 RID: 9792
+	// Token: 0x0400340D RID: 13325
 	private EnemyType[] m_exclusionArray = new EnemyType[]
 	{
 		EnemyType.Eggplant,

@@ -1,24 +1,24 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006CD RID: 1741
+// Token: 0x02000B78 RID: 2936
 public class ClassWeaponData : ScriptableObject
 {
-	// Token: 0x04002FAF RID: 12207
+	// Token: 0x040041FE RID: 16894
 	public string ClassName;
 
-	// Token: 0x04002FB0 RID: 12208
+	// Token: 0x040041FF RID: 16895
 	public AbilityType[] WeaponAbilityArray;
 
-	// Token: 0x04002FB1 RID: 12209
+	// Token: 0x04004200 RID: 16896
 	[Space]
 	[Header("Text Fields")]
 	[Space]
 	public string Title;
 
-	// Token: 0x04002FB2 RID: 12210
+	// Token: 0x04004201 RID: 16897
 	public string Controls;
 
-	// Token: 0x04002FB3 RID: 12211
+	// Token: 0x04004202 RID: 16898
 	public string Description;
 }

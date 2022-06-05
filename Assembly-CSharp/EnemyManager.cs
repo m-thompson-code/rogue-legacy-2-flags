@@ -5,10 +5,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x02000697 RID: 1687
+// Token: 0x02000B22 RID: 2850
 public class EnemyManager : MonoBehaviour
 {
-	// Token: 0x06003D51 RID: 15697 RVA: 0x000D4C10 File Offset: 0x000D2E10
+	// Token: 0x060055F4 RID: 22004 RVA: 0x00144BF8 File Offset: 0x00142DF8
 	private void Awake()
 	{
 		this.m_onPlayerExitRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerExitRoom);
@@ -19,14 +19,14 @@ public class EnemyManager : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerExitRoom, this.m_onPlayerExitRoom);
 	}
 
-	// Token: 0x06003D52 RID: 15698 RVA: 0x000D4C6F File Offset: 0x000D2E6F
+	// Token: 0x060055F5 RID: 22005 RVA: 0x0002EC25 File Offset: 0x0002CE25
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		base.StopAllCoroutines();
 		EnemyManager.DisableAllSummonedEnemies();
 	}
 
-	// Token: 0x06003D53 RID: 15699 RVA: 0x000D4C7C File Offset: 0x000D2E7C
+	// Token: 0x060055F6 RID: 22006 RVA: 0x0002EC32 File Offset: 0x0002CE32
 	private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
 		if (EnemyManager.IsInitialized)
@@ -37,7 +37,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D54 RID: 15700 RVA: 0x000D4C95 File Offset: 0x000D2E95
+	// Token: 0x060055F7 RID: 22007 RVA: 0x0002EC4B File Offset: 0x0002CE4B
 	private IEnumerator Start()
 	{
 		while (!CameraController.IsInstantiated)
@@ -48,7 +48,7 @@ public class EnemyManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003D55 RID: 15701 RVA: 0x000D4CA4 File Offset: 0x000D2EA4
+	// Token: 0x060055F8 RID: 22008 RVA: 0x00144C58 File Offset: 0x00142E58
 	private void InitializeCullingGroup()
 	{
 		this.m_cullingGroup = new CullingGroup();
@@ -65,7 +65,7 @@ public class EnemyManager : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_refreshCullingGroup);
 	}
 
-	// Token: 0x06003D56 RID: 15702 RVA: 0x000D4D58 File Offset: 0x000D2F58
+	// Token: 0x060055F9 RID: 22009 RVA: 0x00144D0C File Offset: 0x00142F0C
 	private void RefreshCullingGroup(object sender, EventArgs args)
 	{
 		BaseRoom currentPlayerRoom = PlayerManager.GetCurrentPlayerRoom();
@@ -91,7 +91,7 @@ public class EnemyManager : MonoBehaviour
 		base.StartCoroutine(this.UpdateStartingCullStatesCoroutine());
 	}
 
-	// Token: 0x06003D57 RID: 15703 RVA: 0x000D4E71 File Offset: 0x000D3071
+	// Token: 0x060055FA RID: 22010 RVA: 0x0002EC5A File Offset: 0x0002CE5A
 	private IEnumerator UpdateStartingCullStatesCoroutine()
 	{
 		yield return null;
@@ -105,7 +105,7 @@ public class EnemyManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003D58 RID: 15704 RVA: 0x000D4E80 File Offset: 0x000D3080
+	// Token: 0x060055FB RID: 22011 RVA: 0x00144E28 File Offset: 0x00143028
 	private void CullingSphereStateChanged(CullingGroupEvent evt)
 	{
 		if (this.m_cullingEnemyList.Count > evt.index)
@@ -123,7 +123,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D59 RID: 15705 RVA: 0x000D4EE8 File Offset: 0x000D30E8
+	// Token: 0x060055FC RID: 22012 RVA: 0x00144E90 File Offset: 0x00143090
 	private void FixedUpdate()
 	{
 		for (int i = 0; i < this.m_cullingEnemyList.Count; i++)
@@ -135,7 +135,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D5A RID: 15706 RVA: 0x000D4F4A File Offset: 0x000D314A
+	// Token: 0x060055FD RID: 22013 RVA: 0x0002EC69 File Offset: 0x0002CE69
 	public static IEnumerator SetEnemyCulled(EnemyController enemy, bool culled, bool isSpawning = false)
 	{
 		if (!enemy.IsCulled && (enemy.DisableCulling || enemy.IsBoss))
@@ -216,7 +216,7 @@ public class EnemyManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003D5B RID: 15707 RVA: 0x000D4F68 File Offset: 0x000D3168
+	// Token: 0x060055FE RID: 22014 RVA: 0x00144EF4 File Offset: 0x001430F4
 	private void OnDestroy()
 	{
 		SceneManager.sceneLoaded -= this.OnSceneLoaded;
@@ -243,7 +243,7 @@ public class EnemyManager : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerExitRoom, this.m_onPlayerExitRoom);
 	}
 
-	// Token: 0x06003D5C RID: 15708 RVA: 0x000D500E File Offset: 0x000D320E
+	// Token: 0x060055FF RID: 22015 RVA: 0x0002EC86 File Offset: 0x0002CE86
 	private void Initialize()
 	{
 		this.m_matPropertyBlock = new MaterialPropertyBlock();
@@ -252,7 +252,7 @@ public class EnemyManager : MonoBehaviour
 		EnemyManager.m_isInitialized = true;
 	}
 
-	// Token: 0x06003D5D RID: 15709 RVA: 0x000D503C File Offset: 0x000D323C
+	// Token: 0x06005600 RID: 22016 RVA: 0x00144F9C File Offset: 0x0014319C
 	private void Internal_CreateBiomePools(BiomeType biomeType)
 	{
 		Dictionary<EnemyController, int> dictionary = new Dictionary<EnemyController, int>();
@@ -465,7 +465,7 @@ public class EnemyManager : MonoBehaviour
 		ProjectileManager.Instance.CreateEnemyProjectilePools(dictionary4.Keys.ToList<EnemyController>());
 	}
 
-	// Token: 0x06003D5E RID: 15710 RVA: 0x000D5808 File Offset: 0x000D3A08
+	// Token: 0x06005601 RID: 22017 RVA: 0x00145768 File Offset: 0x00143968
 	private void RecursivelyAddSummonedEnemies(Dictionary<EnemyController, int> enemyCountDict, SummonEnemyController.SummonEnemyEntry summonEntry)
 	{
 		if (summonEntry.NumSummons <= 0)
@@ -495,7 +495,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D5F RID: 15711 RVA: 0x000D58AB File Offset: 0x000D3AAB
+	// Token: 0x06005602 RID: 22018 RVA: 0x0002ECB1 File Offset: 0x0002CEB1
 	private GenericPool_RL<EnemyController> CreateEnemyPool(EnemyController prefab, int poolSize)
 	{
 		if (!prefab)
@@ -507,8 +507,8 @@ public class EnemyManager : MonoBehaviour
 		return genericPool_RL;
 	}
 
-	// Token: 0x1700153E RID: 5438
-	// (get) Token: 0x06003D60 RID: 15712 RVA: 0x000D58C6 File Offset: 0x000D3AC6
+	// Token: 0x17001D0E RID: 7438
+	// (get) Token: 0x06005603 RID: 22019 RVA: 0x0002ECCC File Offset: 0x0002CECC
 	public static List<EnemyController> SummonedEnemyList
 	{
 		get
@@ -517,8 +517,8 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700153F RID: 5439
-	// (get) Token: 0x06003D61 RID: 15713 RVA: 0x000D58D2 File Offset: 0x000D3AD2
+	// Token: 0x17001D0F RID: 7439
+	// (get) Token: 0x06005604 RID: 22020 RVA: 0x0002ECD8 File Offset: 0x0002CED8
 	private static EnemyManager Instance
 	{
 		get
@@ -531,14 +531,14 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D62 RID: 15714 RVA: 0x000D58F0 File Offset: 0x000D3AF0
+	// Token: 0x06005605 RID: 22021 RVA: 0x0002ECF6 File Offset: 0x0002CEF6
 	public static bool Contains(EnemyType enemyType, EnemyRank enemyRank)
 	{
 		return !string.IsNullOrEmpty(EnemyLibrary.GetEnemyPrefabPath(enemyType, enemyRank));
 	}
 
-	// Token: 0x17001540 RID: 5440
-	// (get) Token: 0x06003D63 RID: 15715 RVA: 0x000D5904 File Offset: 0x000D3B04
+	// Token: 0x17001D10 RID: 7440
+	// (get) Token: 0x06005606 RID: 22022 RVA: 0x0014580C File Offset: 0x00143A0C
 	public static int NumActiveSummonedEnemies
 	{
 		get
@@ -555,7 +555,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D64 RID: 15716 RVA: 0x000D5978 File Offset: 0x000D3B78
+	// Token: 0x06005607 RID: 22023 RVA: 0x00145880 File Offset: 0x00143A80
 	public static int GetNumActiveSummonedEnemiesOfType(EnemyType enemyType, EnemyRank enemyRank)
 	{
 		int num = 0;
@@ -569,8 +569,8 @@ public class EnemyManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x17001541 RID: 5441
-	// (get) Token: 0x06003D65 RID: 15717 RVA: 0x000D5A08 File Offset: 0x000D3C08
+	// Token: 0x17001D11 RID: 7441
+	// (get) Token: 0x06005608 RID: 22024 RVA: 0x00145910 File Offset: 0x00143B10
 	public static int NumActiveEnemies
 	{
 		get
@@ -596,7 +596,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D66 RID: 15718 RVA: 0x000D5A7C File Offset: 0x000D3C7C
+	// Token: 0x06005609 RID: 22025 RVA: 0x00145984 File Offset: 0x00143B84
 	public static int GetNumActiveEnemiesOfType(EnemyType enemyType, EnemyRank enemyRank)
 	{
 		int num = 0;
@@ -617,8 +617,8 @@ public class EnemyManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x17001542 RID: 5442
-	// (get) Token: 0x06003D67 RID: 15719 RVA: 0x000D5B29 File Offset: 0x000D3D29
+	// Token: 0x17001D12 RID: 7442
+	// (get) Token: 0x0600560A RID: 22026 RVA: 0x0002ED07 File Offset: 0x0002CF07
 	public static bool IsInitialized
 	{
 		get
@@ -627,7 +627,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D68 RID: 15720 RVA: 0x000D5B30 File Offset: 0x000D3D30
+	// Token: 0x0600560B RID: 22027 RVA: 0x00145A34 File Offset: 0x00143C34
 	public static EnemyController GetEnemyFromPool(EnemyType enemyType, EnemyRank enemyRank)
 	{
 		if (!EnemyManager.IsInitialized)
@@ -659,7 +659,7 @@ public class EnemyManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003D69 RID: 15721 RVA: 0x000D5BCC File Offset: 0x000D3DCC
+	// Token: 0x0600560C RID: 22028 RVA: 0x00145AD0 File Offset: 0x00143CD0
 	public static EnemyController SummonEnemy(ISummoner summoner, EnemyType enemyType, EnemyRank enemyRank, Vector2 spawnPosOffset, bool useAbsPos = false, bool runSummonAnim = true, float speedMod = 1f, float hpMod = 1f)
 	{
 		EnemyController enemyFromPool = EnemyManager.GetEnemyFromPool(enemyType, enemyRank);
@@ -695,14 +695,14 @@ public class EnemyManager : MonoBehaviour
 		return enemyFromPool;
 	}
 
-	// Token: 0x06003D6A RID: 15722 RVA: 0x000D5CD9 File Offset: 0x000D3ED9
+	// Token: 0x0600560D RID: 22029 RVA: 0x0002ED0E File Offset: 0x0002CF0E
 	public static IEnumerator RunSummonAnimCoroutine(EnemyController enemy, float speedMod = 1f, bool disableEnemyOffset = false, float hpMod = 1f)
 	{
 		yield return EnemyManager.Instance.Internal_RunSummonAnimCoroutine(enemy, speedMod, disableEnemyOffset, hpMod);
 		yield break;
 	}
 
-	// Token: 0x06003D6B RID: 15723 RVA: 0x000D5CFD File Offset: 0x000D3EFD
+	// Token: 0x0600560E RID: 22030 RVA: 0x0002ED32 File Offset: 0x0002CF32
 	private IEnumerator Internal_RunSummonAnimCoroutine(EnemyController enemy, float speedMod = 1f, bool disableEnemyOffset = false, float hpMod = 1f)
 	{
 		enemy.ResetCharacter();
@@ -790,7 +790,7 @@ public class EnemyManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003D6C RID: 15724 RVA: 0x000D5D2C File Offset: 0x000D3F2C
+	// Token: 0x0600560F RID: 22031 RVA: 0x00145BE0 File Offset: 0x00143DE0
 	public static void KillAllSummonedEnemies()
 	{
 		foreach (EnemyController enemyController in EnemyManager.Instance.m_summonedEnemyList)
@@ -802,7 +802,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D6D RID: 15725 RVA: 0x000D5DA0 File Offset: 0x000D3FA0
+	// Token: 0x06005610 RID: 22032 RVA: 0x00145C54 File Offset: 0x00143E54
 	public static void DisableAllSummonedEnemies()
 	{
 		foreach (EnemyController enemyController in EnemyManager.Instance.m_summonedEnemyList)
@@ -816,7 +816,7 @@ public class EnemyManager : MonoBehaviour
 		EnemyManager.Instance.m_summonedEnemyList.Clear();
 	}
 
-	// Token: 0x06003D6E RID: 15726 RVA: 0x000D5E1C File Offset: 0x000D401C
+	// Token: 0x06005611 RID: 22033 RVA: 0x00145CD0 File Offset: 0x00143ED0
 	public static void KillAllNonSummonedEnemies()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -837,7 +837,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D6F RID: 15727 RVA: 0x000D5E84 File Offset: 0x000D4084
+	// Token: 0x06005612 RID: 22034 RVA: 0x00145D38 File Offset: 0x00143F38
 	private static void ResetEnemySummonState(EnemyController enemy)
 	{
 		if (enemy.IsBeingSummoned)
@@ -867,7 +867,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D70 RID: 15728 RVA: 0x000D5F80 File Offset: 0x000D4180
+	// Token: 0x06005613 RID: 22035 RVA: 0x00145E34 File Offset: 0x00144034
 	public static void DisableAllEnemies()
 	{
 		foreach (KeyValuePair<EnemyType, Dictionary<EnemyRank, GenericPool_RL<EnemyController>>> keyValuePair in EnemyManager.Instance.m_enemyPoolTable)
@@ -879,7 +879,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D71 RID: 15729 RVA: 0x000D601C File Offset: 0x000D421C
+	// Token: 0x06005614 RID: 22036 RVA: 0x00145ED0 File Offset: 0x001440D0
 	private void LateUpdate()
 	{
 		for (int i = 0; i < this.m_summonedEnemyList.Count; i++)
@@ -893,7 +893,7 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D72 RID: 15730 RVA: 0x000D608C File Offset: 0x000D428C
+	// Token: 0x06005615 RID: 22037 RVA: 0x00145F40 File Offset: 0x00144140
 	public static void DestroyPools()
 	{
 		if (!GameManager.IsApplicationClosing)
@@ -918,67 +918,67 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D73 RID: 15731 RVA: 0x000D616C File Offset: 0x000D436C
+	// Token: 0x06005616 RID: 22038 RVA: 0x0002ED5E File Offset: 0x0002CF5E
 	public static void CreateBiomePools(BiomeType biome)
 	{
 		EnemyManager.Instance.Internal_CreateBiomePools(biome);
 	}
 
-	// Token: 0x04002DE1 RID: 11745
+	// Token: 0x04003FB5 RID: 16309
 	private const int CULLING_GROUP_SIZE = 100;
 
-	// Token: 0x04002DE2 RID: 11746
+	// Token: 0x04003FB6 RID: 16310
 	private const string MANAGER_NAME = "EnemyManager";
 
-	// Token: 0x04002DE3 RID: 11747
+	// Token: 0x04003FB7 RID: 16311
 	private const string RESOURCE_PATH = "Prefabs/Managers/EnemyManager";
 
-	// Token: 0x04002DE4 RID: 11748
+	// Token: 0x04003FB8 RID: 16312
 	private static readonly int NEUTRAL_ANIM_PARAM = Animator.StringToHash("Neutral");
 
-	// Token: 0x04002DE5 RID: 11749
+	// Token: 0x04003FB9 RID: 16313
 	private Dictionary<EnemyType, Dictionary<EnemyRank, GenericPool_RL<EnemyController>>> m_enemyPoolTable;
 
-	// Token: 0x04002DE6 RID: 11750
+	// Token: 0x04003FBA RID: 16314
 	private List<EnemyController> m_summonedEnemyList = new List<EnemyController>();
 
-	// Token: 0x04002DE7 RID: 11751
+	// Token: 0x04003FBB RID: 16315
 	private CullingGroup m_cullingGroup;
 
-	// Token: 0x04002DE8 RID: 11752
+	// Token: 0x04003FBC RID: 16316
 	private List<EnemyController> m_cullingEnemyList = new List<EnemyController>();
 
-	// Token: 0x04002DE9 RID: 11753
+	// Token: 0x04003FBD RID: 16317
 	private BoundingSphere[] m_cullingSpheres;
 
-	// Token: 0x04002DEA RID: 11754
+	// Token: 0x04003FBE RID: 16318
 	private MaterialPropertyBlock m_matPropertyBlock;
 
-	// Token: 0x04002DEB RID: 11755
+	// Token: 0x04003FBF RID: 16319
 	private EnemySummonedEventArgs m_enemySummonedArgs;
 
-	// Token: 0x04002DEC RID: 11756
+	// Token: 0x04003FC0 RID: 16320
 	private Action<MonoBehaviour, EventArgs> m_onPlayerExitRoom;
 
-	// Token: 0x04002DED RID: 11757
+	// Token: 0x04003FC1 RID: 16321
 	private Action<MonoBehaviour, EventArgs> m_refreshCullingGroup;
 
-	// Token: 0x04002DEE RID: 11758
+	// Token: 0x04003FC2 RID: 16322
 	private static bool m_isInitialized;
 
-	// Token: 0x04002DEF RID: 11759
+	// Token: 0x04003FC3 RID: 16323
 	private static EnemyManager m_enemyManager = null;
 
-	// Token: 0x02000E01 RID: 3585
+	// Token: 0x02000B23 RID: 2851
 	public struct EnemyPreSummonedState
 	{
-		// Token: 0x0400565C RID: 22108
+		// Token: 0x04003FC4 RID: 16324
 		public bool StoredActivationState;
 
-		// Token: 0x0400565D RID: 22109
+		// Token: 0x04003FC5 RID: 16325
 		public bool StoredLockFlip;
 
-		// Token: 0x0400565E RID: 22110
+		// Token: 0x04003FC6 RID: 16326
 		public float StoredLocalScaleX;
 	}
 }

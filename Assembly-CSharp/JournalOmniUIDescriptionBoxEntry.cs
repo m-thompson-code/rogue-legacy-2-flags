@@ -3,17 +3,17 @@ using System.Text;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003AE RID: 942
+// Token: 0x02000642 RID: 1602
 public class JournalOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<JournalOmniUIDescriptionEventArgs, JournalOmniUIDescriptionBoxEntry.JournalOmniUIDescriptionBoxType>
 {
-	// Token: 0x060022D8 RID: 8920 RVA: 0x000717DE File Offset: 0x0006F9DE
+	// Token: 0x060030F0 RID: 12528 RVA: 0x0001ADF6 File Offset: 0x00018FF6
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_journalStringBuilder = new StringBuilder();
 	}
 
-	// Token: 0x060022D9 RID: 8921 RVA: 0x000717F1 File Offset: 0x0006F9F1
+	// Token: 0x060030F1 RID: 12529 RVA: 0x0001AE09 File Offset: 0x00019009
 	protected override void DisplayNullDescriptionBox(MonoBehaviour sender)
 	{
 		base.DisplayNullDescriptionBox(sender);
@@ -27,7 +27,7 @@ public class JournalOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<Jo
 		}
 	}
 
-	// Token: 0x060022DA RID: 8922 RVA: 0x00071834 File Offset: 0x0006FA34
+	// Token: 0x060030F2 RID: 12530 RVA: 0x000D2074 File Offset: 0x000D0274
 	protected override void DisplayDescriptionBox(JournalOmniUIDescriptionEventArgs args)
 	{
 		JournalCategoryType journalCategoryType = args.JournalCategoryType;
@@ -62,10 +62,10 @@ public class JournalOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<Jo
 		this.m_titleText.SetText(this.m_journalStringBuilder);
 	}
 
-	// Token: 0x04001DE9 RID: 7657
+	// Token: 0x0400280E RID: 10254
 	private const string CARRIAGE_RETURN_REPLACEMENT = "\n\n";
 
-	// Token: 0x04001DEA RID: 7658
+	// Token: 0x0400280F RID: 10255
 	private readonly string[] CARRIAGE_RETURN_ARRAY = new string[]
 	{
 		"</CR>    ",
@@ -75,21 +75,21 @@ public class JournalOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<Jo
 		"</CR>"
 	};
 
-	// Token: 0x04001DEB RID: 7659
+	// Token: 0x04002810 RID: 10256
 	[SerializeField]
 	private TMP_Text m_journalNumberText;
 
-	// Token: 0x04001DEC RID: 7660
+	// Token: 0x04002811 RID: 10257
 	private StringBuilder m_journalStringBuilder;
 
-	// Token: 0x02000C0D RID: 3085
+	// Token: 0x02000643 RID: 1603
 	public enum JournalOmniUIDescriptionBoxType
 	{
-		// Token: 0x04004EBA RID: 20154
+		// Token: 0x04002813 RID: 10259
 		None,
-		// Token: 0x04004EBB RID: 20155
+		// Token: 0x04002814 RID: 10260
 		Title,
-		// Token: 0x04004EBC RID: 20156
+		// Token: 0x04002815 RID: 10261
 		Text
 	}
 }

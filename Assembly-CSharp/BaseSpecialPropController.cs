@@ -2,35 +2,35 @@
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020004CE RID: 1230
+// Token: 0x020007F9 RID: 2041
 public abstract class BaseSpecialPropController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x17001154 RID: 4436
-	// (get) Token: 0x06002DB5 RID: 11701 RVA: 0x0009A43E File Offset: 0x0009863E
-	// (set) Token: 0x06002DB6 RID: 11702 RVA: 0x0009A446 File Offset: 0x00098646
+	// Token: 0x170016E1 RID: 5857
+	// (get) Token: 0x06003ED3 RID: 16083 RVA: 0x00022B80 File Offset: 0x00020D80
+	// (set) Token: 0x06003ED4 RID: 16084 RVA: 0x00022B88 File Offset: 0x00020D88
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17001155 RID: 4437
-	// (get) Token: 0x06002DB7 RID: 11703 RVA: 0x0009A44F File Offset: 0x0009864F
-	// (set) Token: 0x06002DB8 RID: 11704 RVA: 0x0009A457 File Offset: 0x00098657
+	// Token: 0x170016E2 RID: 5858
+	// (get) Token: 0x06003ED5 RID: 16085 RVA: 0x00022B91 File Offset: 0x00020D91
+	// (set) Token: 0x06003ED6 RID: 16086 RVA: 0x00022B99 File Offset: 0x00020D99
 	private protected BaseSpecialRoomController SpecialRoomController { protected get; private set; }
 
-	// Token: 0x17001156 RID: 4438
-	// (get) Token: 0x06002DB9 RID: 11705 RVA: 0x0009A460 File Offset: 0x00098660
-	// (set) Token: 0x06002DBA RID: 11706 RVA: 0x0009A468 File Offset: 0x00098668
+	// Token: 0x170016E3 RID: 5859
+	// (get) Token: 0x06003ED7 RID: 16087 RVA: 0x00022BA2 File Offset: 0x00020DA2
+	// (set) Token: 0x06003ED8 RID: 16088 RVA: 0x00022BAA File Offset: 0x00020DAA
 	public Animator Animator { get; private set; }
 
-	// Token: 0x17001157 RID: 4439
-	// (get) Token: 0x06002DBB RID: 11707 RVA: 0x0009A471 File Offset: 0x00098671
-	// (set) Token: 0x06002DBC RID: 11708 RVA: 0x0009A479 File Offset: 0x00098679
+	// Token: 0x170016E4 RID: 5860
+	// (get) Token: 0x06003ED9 RID: 16089 RVA: 0x00022BB3 File Offset: 0x00020DB3
+	// (set) Token: 0x06003EDA RID: 16090 RVA: 0x00022BBB File Offset: 0x00020DBB
 	public bool IsDisabled { get; protected set; }
 
-	// Token: 0x17001158 RID: 4440
-	// (get) Token: 0x06002DBD RID: 11709 RVA: 0x0009A482 File Offset: 0x00098682
-	// (set) Token: 0x06002DBE RID: 11710 RVA: 0x0009A48A File Offset: 0x0009868A
+	// Token: 0x170016E5 RID: 5861
+	// (get) Token: 0x06003EDB RID: 16091 RVA: 0x00022BC4 File Offset: 0x00020DC4
+	// (set) Token: 0x06003EDC RID: 16092 RVA: 0x00022BCC File Offset: 0x00020DCC
 	private protected RoomSaveData RoomSaveData { protected get; private set; }
 
-	// Token: 0x06002DBF RID: 11711 RVA: 0x0009A493 File Offset: 0x00098693
+	// Token: 0x06003EDD RID: 16093 RVA: 0x00022BD5 File Offset: 0x00020DD5
 	protected string GetRoomMiscData(string id)
 	{
 		if (this.SpecialRoomController)
@@ -40,7 +40,7 @@ public abstract class BaseSpecialPropController : MonoBehaviour, IRoomConsumer
 		return null;
 	}
 
-	// Token: 0x06002DC0 RID: 11712 RVA: 0x0009A4B0 File Offset: 0x000986B0
+	// Token: 0x06003EDE RID: 16094 RVA: 0x00022BF2 File Offset: 0x00020DF2
 	protected void SetRoomMiscData(string id, string value)
 	{
 		if (this.SpecialRoomController)
@@ -49,8 +49,8 @@ public abstract class BaseSpecialPropController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17001159 RID: 4441
-	// (get) Token: 0x06002DC1 RID: 11713 RVA: 0x0009A4CC File Offset: 0x000986CC
+	// Token: 0x170016E6 RID: 5862
+	// (get) Token: 0x06003EDF RID: 16095 RVA: 0x00022C0E File Offset: 0x00020E0E
 	public IRelayLink<bool> DisableSpecialPropRelay
 	{
 		get
@@ -59,8 +59,8 @@ public abstract class BaseSpecialPropController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x1700115A RID: 4442
-	// (get) Token: 0x06002DC2 RID: 11714 RVA: 0x0009A4D9 File Offset: 0x000986D9
+	// Token: 0x170016E7 RID: 5863
+	// (get) Token: 0x06003EE0 RID: 16096 RVA: 0x00022C1B File Offset: 0x00020E1B
 	public bool IsPropComplete
 	{
 		get
@@ -69,7 +69,7 @@ public abstract class BaseSpecialPropController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002DC3 RID: 11715 RVA: 0x0009A4F5 File Offset: 0x000986F5
+	// Token: 0x06003EE1 RID: 16097 RVA: 0x00022C37 File Offset: 0x00020E37
 	protected virtual void DisableProp(bool firstTimeDisabled)
 	{
 		if (this.m_interactable)
@@ -84,17 +84,17 @@ public abstract class BaseSpecialPropController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002DC4 RID: 11716 RVA: 0x0009A52B File Offset: 0x0009872B
+	// Token: 0x06003EE2 RID: 16098 RVA: 0x00022C6D File Offset: 0x00020E6D
 	protected virtual void Awake()
 	{
 		this.Animator = base.GetComponent<Animator>();
 		this.m_initializeProp = new Action(this.InitializeProp);
 	}
 
-	// Token: 0x06002DC5 RID: 11717
+	// Token: 0x06003EE3 RID: 16099
 	protected abstract void InitializePooledPropOnEnter();
 
-	// Token: 0x06002DC6 RID: 11718 RVA: 0x0009A54C File Offset: 0x0009874C
+	// Token: 0x06003EE4 RID: 16100 RVA: 0x000FBCB4 File Offset: 0x000F9EB4
 	private void InitializeProp()
 	{
 		this.RoomSaveData = SaveManager.StageSaveData.GetRoomSaveData(this.Room.BiomeType, this.Room.BiomeControllerIndex);
@@ -114,7 +114,7 @@ public abstract class BaseSpecialPropController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002DC7 RID: 11719 RVA: 0x0009A5CC File Offset: 0x000987CC
+	// Token: 0x06003EE5 RID: 16101 RVA: 0x000FBD34 File Offset: 0x000F9F34
 	public virtual void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
@@ -130,7 +130,7 @@ public abstract class BaseSpecialPropController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002DC8 RID: 11720 RVA: 0x0009A62A File Offset: 0x0009882A
+	// Token: 0x06003EE6 RID: 16102 RVA: 0x00022C8D File Offset: 0x00020E8D
 	protected virtual void PropComplete()
 	{
 		if (this.SpecialRoomController && !this.SpecialRoomController.IsRoomComplete)
@@ -139,7 +139,7 @@ public abstract class BaseSpecialPropController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002DC9 RID: 11721 RVA: 0x0009A651 File Offset: 0x00098851
+	// Token: 0x06003EE7 RID: 16103 RVA: 0x00022CB4 File Offset: 0x00020EB4
 	protected virtual void OnDisable()
 	{
 		if (this.SpecialRoomController)
@@ -148,13 +148,13 @@ public abstract class BaseSpecialPropController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x04002497 RID: 9367
+	// Token: 0x0400313F RID: 12607
 	[SerializeField]
 	protected Interactable m_interactable;
 
-	// Token: 0x04002498 RID: 9368
+	// Token: 0x04003140 RID: 12608
 	private Action m_initializeProp;
 
-	// Token: 0x0400249E RID: 9374
+	// Token: 0x04003146 RID: 12614
 	private Relay<bool> m_disableSpecialPropRelay = new Relay<bool>();
 }

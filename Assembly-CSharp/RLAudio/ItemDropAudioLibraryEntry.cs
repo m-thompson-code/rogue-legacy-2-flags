@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008F4 RID: 2292
+	// Token: 0x02000E6B RID: 3691
 	[Serializable]
 	public class ItemDropAudioLibraryEntry : AudioLibraryEntry
 	{
-		// Token: 0x17001859 RID: 6233
-		// (get) Token: 0x06004B4D RID: 19277 RVA: 0x0010EE36 File Offset: 0x0010D036
+		// Token: 0x17002146 RID: 8518
+		// (get) Token: 0x06006824 RID: 26660 RVA: 0x000399E1 File Offset: 0x00037BE1
 		public string SpawnSingleEventPath
 		{
 			get
@@ -18,8 +18,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700185A RID: 6234
-		// (get) Token: 0x06004B4E RID: 19278 RVA: 0x0010EE3E File Offset: 0x0010D03E
+		// Token: 0x17002147 RID: 8519
+		// (get) Token: 0x06006825 RID: 26661 RVA: 0x000399E9 File Offset: 0x00037BE9
 		public string SpawnManyEventPath
 		{
 			get
@@ -28,8 +28,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700185B RID: 6235
-		// (get) Token: 0x06004B4F RID: 19279 RVA: 0x0010EE46 File Offset: 0x0010D046
+		// Token: 0x17002148 RID: 8520
+		// (get) Token: 0x06006826 RID: 26662 RVA: 0x000399F1 File Offset: 0x00037BF1
 		public string LandEventPath
 		{
 			get
@@ -38,8 +38,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700185C RID: 6236
-		// (get) Token: 0x06004B50 RID: 19280 RVA: 0x0010EE4E File Offset: 0x0010D04E
+		// Token: 0x17002149 RID: 8521
+		// (get) Token: 0x06006827 RID: 26663 RVA: 0x000399F9 File Offset: 0x00037BF9
 		public string CollectEventPath
 		{
 			get
@@ -48,8 +48,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700185D RID: 6237
-		// (get) Token: 0x06004B51 RID: 19281 RVA: 0x0010EE56 File Offset: 0x0010D056
+		// Token: 0x1700214A RID: 8522
+		// (get) Token: 0x06006828 RID: 26664 RVA: 0x00039A01 File Offset: 0x00037C01
 		public bool UseManyAudio
 		{
 			get
@@ -58,26 +58,26 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003F52 RID: 16210
+		// Token: 0x04005496 RID: 21654
 		[SerializeField]
 		[EventRef]
 		private string m_spawnSingleEventPath;
 
-		// Token: 0x04003F53 RID: 16211
+		// Token: 0x04005497 RID: 21655
 		[SerializeField]
 		private bool m_useManyAudio;
 
-		// Token: 0x04003F54 RID: 16212
+		// Token: 0x04005498 RID: 21656
 		[SerializeField]
 		[EventRef]
 		private string m_spawnManyEventPath;
 
-		// Token: 0x04003F55 RID: 16213
+		// Token: 0x04005499 RID: 21657
 		[SerializeField]
 		[EventRef]
 		private string m_landEventPath;
 
-		// Token: 0x04003F56 RID: 16214
+		// Token: 0x0400549A RID: 21658
 		[SerializeField]
 		[EventRef]
 		private string m_collectEventPath;

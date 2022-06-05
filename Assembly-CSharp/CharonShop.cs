@@ -7,11 +7,11 @@ using RL_Windows;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x0200054B RID: 1355
+// Token: 0x020008F9 RID: 2297
 public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEventEmitter, IRoomConsumer
 {
-	// Token: 0x1700123F RID: 4671
-	// (get) Token: 0x060031B8 RID: 12728 RVA: 0x000A81E2 File Offset: 0x000A63E2
+	// Token: 0x170018C2 RID: 6338
+	// (get) Token: 0x060045C6 RID: 17862 RVA: 0x000047A7 File Offset: 0x000029A7
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -20,8 +20,8 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		}
 	}
 
-	// Token: 0x17001240 RID: 4672
-	// (get) Token: 0x060031B9 RID: 12729 RVA: 0x000A81E5 File Offset: 0x000A63E5
+	// Token: 0x170018C3 RID: 6339
+	// (get) Token: 0x060045C7 RID: 17863 RVA: 0x00026519 File Offset: 0x00024719
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -30,13 +30,13 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		}
 	}
 
-	// Token: 0x17001241 RID: 4673
-	// (get) Token: 0x060031BA RID: 12730 RVA: 0x000A81ED File Offset: 0x000A63ED
-	// (set) Token: 0x060031BB RID: 12731 RVA: 0x000A81F5 File Offset: 0x000A63F5
+	// Token: 0x170018C4 RID: 6340
+	// (get) Token: 0x060045C8 RID: 17864 RVA: 0x00026521 File Offset: 0x00024721
+	// (set) Token: 0x060045C9 RID: 17865 RVA: 0x00026529 File Offset: 0x00024729
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17001242 RID: 4674
-	// (get) Token: 0x060031BC RID: 12732 RVA: 0x000A81FE File Offset: 0x000A63FE
+	// Token: 0x170018C5 RID: 6341
+	// (get) Token: 0x060045CA RID: 17866 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -45,7 +45,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		}
 	}
 
-	// Token: 0x060031BD RID: 12733 RVA: 0x000A8208 File Offset: 0x000A6408
+	// Token: 0x060045CB RID: 17867 RVA: 0x001119E4 File Offset: 0x0010FBE4
 	private bool HasEventDialogue()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround)
@@ -59,7 +59,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		return !this.m_hasSpoken;
 	}
 
-	// Token: 0x060031BE RID: 12734 RVA: 0x000A8264 File Offset: 0x000A6464
+	// Token: 0x060045CC RID: 17868 RVA: 0x00111A40 File Offset: 0x0010FC40
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -70,14 +70,14 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		this.m_confirmEnterCastleSelection = new Action(this.ConfirmEnterCastleSelection);
 	}
 
-	// Token: 0x060031BF RID: 12735 RVA: 0x000A82D6 File Offset: 0x000A64D6
+	// Token: 0x060045CD RID: 17869 RVA: 0x00026532 File Offset: 0x00024732
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x060031C0 RID: 12736 RVA: 0x000A82FD File Offset: 0x000A64FD
+	// Token: 0x060045CE RID: 17870 RVA: 0x00026559 File Offset: 0x00024759
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -86,14 +86,14 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		}
 	}
 
-	// Token: 0x060031C1 RID: 12737 RVA: 0x000A8329 File Offset: 0x000A6529
+	// Token: 0x060045CF RID: 17871 RVA: 0x00026585 File Offset: 0x00024785
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		this.m_endingSpeechBubblePlayed = false;
 		this.m_hasSpoken = false;
 	}
 
-	// Token: 0x060031C2 RID: 12738 RVA: 0x000A8339 File Offset: 0x000A6539
+	// Token: 0x060045D0 RID: 17872 RVA: 0x00026595 File Offset: 0x00024795
 	public void OpenCharon()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
@@ -101,7 +101,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		base.StartCoroutine(this.OpenCharonCoroutine());
 	}
 
-	// Token: 0x060031C3 RID: 12739 RVA: 0x000A835C File Offset: 0x000A655C
+	// Token: 0x060045D1 RID: 17873 RVA: 0x00111AB4 File Offset: 0x0010FCB4
 	private void CloseCharon()
 	{
 		this.m_interactable.SetIsInteractableActive(true);
@@ -110,7 +110,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		AudioManager.PlayOneShot(this, this.m_cancelEnterCastleAudioEvent, default(Vector3));
 	}
 
-	// Token: 0x060031C4 RID: 12740 RVA: 0x000A839D File Offset: 0x000A659D
+	// Token: 0x060045D2 RID: 17874 RVA: 0x000265B6 File Offset: 0x000247B6
 	private IEnumerator OpenCharonCoroutine()
 	{
 		this.m_charon.SetNPCState(NPCState.AtAttention, false);
@@ -141,7 +141,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		yield break;
 	}
 
-	// Token: 0x060031C5 RID: 12741 RVA: 0x000A83AC File Offset: 0x000A65AC
+	// Token: 0x060045D3 RID: 17875 RVA: 0x00111AF8 File Offset: 0x0010FCF8
 	private void RunCharonIntroDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.CharonDialogue_Intro, true);
@@ -152,7 +152,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_runEnterCastleMenu);
 	}
 
-	// Token: 0x060031C6 RID: 12742 RVA: 0x000A8410 File Offset: 0x000A6610
+	// Token: 0x060045D4 RID: 17876 RVA: 0x00111B5C File Offset: 0x0010FD5C
 	private void RunGardenDialogue()
 	{
 		string textLocID = "LOC_ID_GARDEN_CHARON_DENYING_TRAVEL_1";
@@ -171,7 +171,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeCharon);
 	}
 
-	// Token: 0x060031C7 RID: 12743 RVA: 0x000A8498 File Offset: 0x000A6698
+	// Token: 0x060045D5 RID: 17877 RVA: 0x00111BE4 File Offset: 0x0010FDE4
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -201,7 +201,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeCharon);
 	}
 
-	// Token: 0x060031C8 RID: 12744 RVA: 0x000A8538 File Offset: 0x000A6738
+	// Token: 0x060045D6 RID: 17878 RVA: 0x00111C84 File Offset: 0x0010FE84
 	private void RunEnterCastleMenu()
 	{
 		this.InitializeEnterCastleConfirmMenu();
@@ -209,7 +209,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x060031C9 RID: 12745 RVA: 0x000A8568 File Offset: 0x000A6768
+	// Token: 0x060045D7 RID: 17879 RVA: 0x00111CB4 File Offset: 0x0010FEB4
 	private void InitializeEnterCastleConfirmMenu()
 	{
 		if (WindowManager.GetWindowController(WindowID.ConfirmMenu) == null)
@@ -236,14 +236,14 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		buttonAtIndex2.SetOnClickAction(this.m_cancelEnterCastleSelection);
 	}
 
-	// Token: 0x060031CA RID: 12746 RVA: 0x000A8615 File Offset: 0x000A6815
+	// Token: 0x060045D8 RID: 17880 RVA: 0x000265C5 File Offset: 0x000247C5
 	private void CancelEnterCastleSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 		this.CloseCharon();
 	}
 
-	// Token: 0x060031CB RID: 12747 RVA: 0x000A8628 File Offset: 0x000A6828
+	// Token: 0x060045D9 RID: 17881 RVA: 0x00111D64 File Offset: 0x0010FF64
 	private void ConfirmEnterCastleSelection()
 	{
 		AudioManager.PlayOneShot(this, this.m_chooseEnterCastleAudioEvent, default(Vector3));
@@ -252,7 +252,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		base.StartCoroutine(this.LoadWorldCoroutine());
 	}
 
-	// Token: 0x060031CC RID: 12748 RVA: 0x000A866B File Offset: 0x000A686B
+	// Token: 0x060045DA RID: 17882 RVA: 0x000265D5 File Offset: 0x000247D5
 	private IEnumerator MovePlayerToCharon()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -268,7 +268,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		yield break;
 	}
 
-	// Token: 0x060031CD RID: 12749 RVA: 0x000A867A File Offset: 0x000A687A
+	// Token: 0x060045DB RID: 17883 RVA: 0x000265E4 File Offset: 0x000247E4
 	public IEnumerator LoadWorldCoroutine()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -367,7 +367,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		yield break;
 	}
 
-	// Token: 0x060031CE RID: 12750 RVA: 0x000A8689 File Offset: 0x000A6889
+	// Token: 0x060045DC RID: 17884 RVA: 0x000265F3 File Offset: 0x000247F3
 	private IEnumerator PizzaGirlAnimCoroutine(Prop pizzaGirl)
 	{
 		pizzaGirl.GetComponentInChildren<SpeechBubbleController>(true).SetSpeechBubbleEnabled(false);
@@ -406,7 +406,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		yield break;
 	}
 
-	// Token: 0x060031CF RID: 12751 RVA: 0x000A869F File Offset: 0x000A689F
+	// Token: 0x060045DD RID: 17885 RVA: 0x00026609 File Offset: 0x00024809
 	private IEnumerator YSpeedCoroutine(Prop pizzaGirl)
 	{
 		for (;;)
@@ -417,7 +417,7 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		yield break;
 	}
 
-	// Token: 0x060031D0 RID: 12752 RVA: 0x000A86AE File Offset: 0x000A68AE
+	// Token: 0x060045DE RID: 17886 RVA: 0x00026618 File Offset: 0x00024818
 	private IEnumerator EnterDocksCoroutine()
 	{
 		this.m_waitYield.CreateNew(1.5f, false);
@@ -429,109 +429,109 @@ public class CharonShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioE
 		yield break;
 	}
 
-	// Token: 0x060031D2 RID: 12754 RVA: 0x000A86FC File Offset: 0x000A68FC
+	// Token: 0x060045E0 RID: 17888 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002721 RID: 10017
+	// Token: 0x040035DE RID: 13790
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x04002722 RID: 10018
+	// Token: 0x040035DF RID: 13791
 	[SerializeField]
 	private GameObject m_pizzaGirlPositionObj;
 
-	// Token: 0x04002723 RID: 10019
+	// Token: 0x040035E0 RID: 13792
 	[SerializeField]
 	private NPCController m_charon;
 
-	// Token: 0x04002724 RID: 10020
+	// Token: 0x040035E1 RID: 13793
 	[SerializeField]
 	private bool m_useGardenLogic;
 
-	// Token: 0x04002725 RID: 10021
+	// Token: 0x040035E2 RID: 13794
 	[Header("Animation Timings")]
 	[SerializeField]
 	private float m_cameraShiftAmount = 2f;
 
-	// Token: 0x04002726 RID: 10022
+	// Token: 0x040035E3 RID: 13795
 	[SerializeField]
 	private float m_cameraShiftDuration = 3f;
 
-	// Token: 0x04002727 RID: 10023
+	// Token: 0x040035E4 RID: 13796
 	[SerializeField]
 	private float m_boatShiftAmount = 3f;
 
-	// Token: 0x04002728 RID: 10024
+	// Token: 0x040035E5 RID: 13797
 	[SerializeField]
 	private float m_boatShiftDuration = 3f;
 
-	// Token: 0x04002729 RID: 10025
+	// Token: 0x040035E6 RID: 13798
 	[SerializeField]
 	private float m_totalDelayBeforeLoading = 2f;
 
-	// Token: 0x0400272A RID: 10026
+	// Token: 0x040035E7 RID: 13799
 	[SerializeField]
 	[EventRef]
 	private string m_boatMoveAudioEvent;
 
-	// Token: 0x0400272B RID: 10027
+	// Token: 0x040035E8 RID: 13800
 	[SerializeField]
 	[EventRef]
 	private string m_charonWindowOpenedAudioEvent;
 
-	// Token: 0x0400272C RID: 10028
+	// Token: 0x040035E9 RID: 13801
 	[SerializeField]
 	[EventRef]
 	private string m_cancelEnterCastleAudioEvent;
 
-	// Token: 0x0400272D RID: 10029
+	// Token: 0x040035EA RID: 13802
 	[SerializeField]
 	[EventRef]
 	private string m_chooseEnterCastleAudioEvent;
 
-	// Token: 0x0400272E RID: 10030
+	// Token: 0x040035EB RID: 13803
 	[SerializeField]
 	[EventRef]
 	private string m_tollPaidAudioEvent;
 
-	// Token: 0x0400272F RID: 10031
+	// Token: 0x040035EC RID: 13804
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x04002730 RID: 10032
+	// Token: 0x040035ED RID: 13805
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002731 RID: 10033
+	// Token: 0x040035EE RID: 13806
 	private Interactable m_interactable;
 
-	// Token: 0x04002732 RID: 10034
+	// Token: 0x040035EF RID: 13807
 	private bool m_hasSpoken;
 
-	// Token: 0x04002733 RID: 10035
+	// Token: 0x040035F0 RID: 13808
 	private Tween m_playerBoatMoveTween;
 
-	// Token: 0x04002734 RID: 10036
+	// Token: 0x040035F1 RID: 13809
 	private Tween m_boatBoatMoveTween;
 
-	// Token: 0x04002735 RID: 10037
+	// Token: 0x040035F2 RID: 13810
 	private Tween m_charonBoatMoveTween;
 
-	// Token: 0x04002736 RID: 10038
+	// Token: 0x040035F3 RID: 13811
 	private bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x04002737 RID: 10039
+	// Token: 0x040035F4 RID: 13812
 	private Action m_runEnterCastleMenu;
 
-	// Token: 0x04002738 RID: 10040
+	// Token: 0x040035F5 RID: 13813
 	private Action m_closeCharon;
 
-	// Token: 0x04002739 RID: 10041
+	// Token: 0x040035F6 RID: 13814
 	private Action m_cancelEnterCastleSelection;
 
-	// Token: 0x0400273A RID: 10042
+	// Token: 0x040035F7 RID: 13815
 	private Action m_confirmEnterCastleSelection;
 }

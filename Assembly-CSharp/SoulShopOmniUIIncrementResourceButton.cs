@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003CC RID: 972
+// Token: 0x02000665 RID: 1637
 public class SoulShopOmniUIIncrementResourceButton : OmniUIButton, ISoulShopOmniUIButton
 {
-	// Token: 0x17000EBE RID: 3774
-	// (get) Token: 0x060023D2 RID: 9170 RVA: 0x00074D66 File Offset: 0x00072F66
+	// Token: 0x17001353 RID: 4947
+	// (get) Token: 0x060031F0 RID: 12784 RVA: 0x0001B66F File Offset: 0x0001986F
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -15,17 +15,17 @@ public class SoulShopOmniUIIncrementResourceButton : OmniUIButton, ISoulShopOmni
 		}
 	}
 
-	// Token: 0x17000EBF RID: 3775
-	// (get) Token: 0x060023D3 RID: 9171 RVA: 0x00074D6E File Offset: 0x00072F6E
-	// (set) Token: 0x060023D4 RID: 9172 RVA: 0x00074D76 File Offset: 0x00072F76
+	// Token: 0x17001354 RID: 4948
+	// (get) Token: 0x060031F1 RID: 12785 RVA: 0x0001B677 File Offset: 0x00019877
+	// (set) Token: 0x060031F2 RID: 12786 RVA: 0x0001B67F File Offset: 0x0001987F
 	public SoulShopType SoulShopType { get; set; }
 
-	// Token: 0x17000EC0 RID: 3776
-	// (get) Token: 0x060023D5 RID: 9173 RVA: 0x00074D7F File Offset: 0x00072F7F
-	// (set) Token: 0x060023D6 RID: 9174 RVA: 0x00074D87 File Offset: 0x00072F87
+	// Token: 0x17001355 RID: 4949
+	// (get) Token: 0x060031F3 RID: 12787 RVA: 0x0001B688 File Offset: 0x00019888
+	// (set) Token: 0x060031F4 RID: 12788 RVA: 0x0001B690 File Offset: 0x00019890
 	public SoulShopOmniUIEntry ParentEntry { get; set; }
 
-	// Token: 0x060023D7 RID: 9175 RVA: 0x00074D90 File Offset: 0x00072F90
+	// Token: 0x060031F5 RID: 12789 RVA: 0x0001B699 File Offset: 0x00019899
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -36,7 +36,7 @@ public class SoulShopOmniUIIncrementResourceButton : OmniUIButton, ISoulShopOmni
 		this.m_descriptionEventArgs.Initialize(this.SoulShopType, OmniUIButtonType.Equipping);
 	}
 
-	// Token: 0x060023D8 RID: 9176 RVA: 0x00074DC0 File Offset: 0x00072FC0
+	// Token: 0x060031F6 RID: 12790 RVA: 0x000D4E50 File Offset: 0x000D3050
 	public override void UpdateState()
 	{
 		if (this.m_soulSwap)
@@ -97,7 +97,7 @@ public class SoulShopOmniUIIncrementResourceButton : OmniUIButton, ISoulShopOmni
 		this.m_resourceText.text = string.Format("{0} : {1}", text3, text4);
 	}
 
-	// Token: 0x060023D9 RID: 9177 RVA: 0x00074FE0 File Offset: 0x000731E0
+	// Token: 0x060031F7 RID: 12791 RVA: 0x000D5070 File Offset: 0x000D3270
 	public override void OnConfirmButtonPressed()
 	{
 		if (!this.IsButtonActive)
@@ -145,32 +145,32 @@ public class SoulShopOmniUIIncrementResourceButton : OmniUIButton, ISoulShopOmni
 		Messenger<UIMessenger, UIEvent>.Broadcast(UIEvent.OmniUI_UpdateDescription, this, this.ButtonEventArgs);
 	}
 
-	// Token: 0x04001E6D RID: 7789
+	// Token: 0x040028AB RID: 10411
 	public static int OreTransferAmount;
 
-	// Token: 0x04001E6E RID: 7790
+	// Token: 0x040028AC RID: 10412
 	public static int AetherTransferAmount;
 
-	// Token: 0x04001E6F RID: 7791
+	// Token: 0x040028AD RID: 10413
 	public static int SoulTransferLevel;
 
-	// Token: 0x04001E70 RID: 7792
+	// Token: 0x040028AE RID: 10414
 	[SerializeField]
 	private TMP_Text m_resourceText;
 
-	// Token: 0x04001E71 RID: 7793
+	// Token: 0x040028AF RID: 10415
 	[SerializeField]
 	private bool m_soulSwap;
 
-	// Token: 0x04001E72 RID: 7794
+	// Token: 0x040028B0 RID: 10416
 	[SerializeField]
 	[ConditionalHide("m_soulSwap", true, Inverse = true)]
 	private bool m_aetherToOre;
 
-	// Token: 0x04001E73 RID: 7795
+	// Token: 0x040028B1 RID: 10417
 	[SerializeField]
 	private bool m_isDecrement;
 
-	// Token: 0x04001E74 RID: 7796
+	// Token: 0x040028B2 RID: 10418
 	protected SoulShopOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

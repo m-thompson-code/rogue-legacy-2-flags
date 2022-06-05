@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-// Token: 0x02000272 RID: 626
+// Token: 0x0200043B RID: 1083
 public abstract class IncrementDecrementOptionItem : BaseOptionItem
 {
-	// Token: 0x17000BED RID: 3053
-	// (get) Token: 0x060018F1 RID: 6385 RVA: 0x0004E3EA File Offset: 0x0004C5EA
+	// Token: 0x17000F2E RID: 3886
+	// (get) Token: 0x060022E0 RID: 8928 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override OptionsControlType OptionsControlType
 	{
 		get
@@ -17,8 +17,8 @@ public abstract class IncrementDecrementOptionItem : BaseOptionItem
 		}
 	}
 
-	// Token: 0x17000BEE RID: 3054
-	// (get) Token: 0x060018F2 RID: 6386 RVA: 0x0004E3ED File Offset: 0x0004C5ED
+	// Token: 0x17000F2F RID: 3887
+	// (get) Token: 0x060022E1 RID: 8929 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool PressAndHoldEnabled
 	{
 		get
@@ -27,14 +27,14 @@ public abstract class IncrementDecrementOptionItem : BaseOptionItem
 		}
 	}
 
-	// Token: 0x060018F3 RID: 6387 RVA: 0x0004E3F0 File Offset: 0x0004C5F0
+	// Token: 0x060022E2 RID: 8930 RVA: 0x00012A64 File Offset: 0x00010C64
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_storedIncrementBarWidth = this.m_incrementMaskRectTransform.sizeDelta.x;
 	}
 
-	// Token: 0x060018F4 RID: 6388 RVA: 0x0004E410 File Offset: 0x0004C610
+	// Token: 0x060022E3 RID: 8931 RVA: 0x000ABEFC File Offset: 0x000AA0FC
 	public override void Initialize()
 	{
 		this.m_incrementAmount = (this.m_maxValue - this.m_minValue) / (float)this.m_numberOfIncrements;
@@ -44,7 +44,7 @@ public abstract class IncrementDecrementOptionItem : BaseOptionItem
 		this.m_incrementValueText.color = Color.white;
 	}
 
-	// Token: 0x060018F5 RID: 6389 RVA: 0x0004E460 File Offset: 0x0004C660
+	// Token: 0x060022E4 RID: 8932 RVA: 0x000ABF4C File Offset: 0x000AA14C
 	public override void InvokeIncrement()
 	{
 		if (this.m_currentIncrementValue < this.m_maxValue)
@@ -63,7 +63,7 @@ public abstract class IncrementDecrementOptionItem : BaseOptionItem
 		}
 	}
 
-	// Token: 0x060018F6 RID: 6390 RVA: 0x0004E4EC File Offset: 0x0004C6EC
+	// Token: 0x060022E5 RID: 8933 RVA: 0x000ABFD8 File Offset: 0x000AA1D8
 	public override void InvokeDecrement()
 	{
 		if (this.m_currentIncrementValue > this.m_minValue)
@@ -82,41 +82,41 @@ public abstract class IncrementDecrementOptionItem : BaseOptionItem
 		}
 	}
 
-	// Token: 0x060018F7 RID: 6391 RVA: 0x0004E578 File Offset: 0x0004C778
+	// Token: 0x060022E6 RID: 8934 RVA: 0x00012A82 File Offset: 0x00010C82
 	public override void ActivateOption()
 	{
 		base.ActivateOption();
 		this.m_storedOnActivateValue = this.m_currentIncrementValue;
 	}
 
-	// Token: 0x060018F8 RID: 6392 RVA: 0x0004E58C File Offset: 0x0004C78C
+	// Token: 0x060022E7 RID: 8935 RVA: 0x00012A96 File Offset: 0x00010C96
 	public override void CancelOptionChange()
 	{
 		this.m_currentIncrementValue = this.m_storedOnActivateValue;
 		this.UpdateIncrementBar();
 	}
 
-	// Token: 0x060018F9 RID: 6393
+	// Token: 0x060022E8 RID: 8936
 	protected abstract void Increment();
 
-	// Token: 0x060018FA RID: 6394
+	// Token: 0x060022E9 RID: 8937
 	protected abstract void Decrement();
 
-	// Token: 0x060018FB RID: 6395 RVA: 0x0004E5A0 File Offset: 0x0004C7A0
+	// Token: 0x060022EA RID: 8938 RVA: 0x00012AAA File Offset: 0x00010CAA
 	public override void OnSelect(BaseEventData eventData)
 	{
 		base.OnSelect(eventData);
 		this.m_incrementValueText.color = Color.white;
 	}
 
-	// Token: 0x060018FC RID: 6396 RVA: 0x0004E5B9 File Offset: 0x0004C7B9
+	// Token: 0x060022EB RID: 8939 RVA: 0x00012AC3 File Offset: 0x00010CC3
 	public override void OnDeselect(BaseEventData eventData)
 	{
 		base.OnDeselect(eventData);
 		this.m_incrementValueText.color = Color.white;
 	}
 
-	// Token: 0x060018FD RID: 6397 RVA: 0x0004E5D4 File Offset: 0x0004C7D4
+	// Token: 0x060022EC RID: 8940 RVA: 0x000AC064 File Offset: 0x000AA264
 	protected virtual void UpdateIncrementBar()
 	{
 		if (Mathf.Floor(this.m_currentIncrementValue) == this.m_currentIncrementValue)
@@ -136,7 +136,7 @@ public abstract class IncrementDecrementOptionItem : BaseOptionItem
 		this.m_invertedIncrementMaskRectTransform.sizeDelta = new Vector2(x, this.m_incrementMaskRectTransform.sizeDelta.y);
 	}
 
-	// Token: 0x060018FE RID: 6398 RVA: 0x0004E6DC File Offset: 0x0004C8DC
+	// Token: 0x060022ED RID: 8941 RVA: 0x000AC16C File Offset: 0x000AA36C
 	public virtual void SetCurrentIncrementValue(float value, bool useNormalizedValue)
 	{
 		float currentIncrementValue = this.m_currentIncrementValue;
@@ -164,39 +164,39 @@ public abstract class IncrementDecrementOptionItem : BaseOptionItem
 		}
 	}
 
-	// Token: 0x0400181B RID: 6171
+	// Token: 0x04001F60 RID: 8032
 	[SerializeField]
 	protected TMP_Text m_invertedIncrementText;
 
-	// Token: 0x0400181C RID: 6172
+	// Token: 0x04001F61 RID: 8033
 	[SerializeField]
 	protected RectTransform m_invertedIncrementMaskRectTransform;
 
-	// Token: 0x0400181D RID: 6173
+	// Token: 0x04001F62 RID: 8034
 	[SerializeField]
 	protected UnityEvent m_scrollEvent;
 
-	// Token: 0x0400181E RID: 6174
+	// Token: 0x04001F63 RID: 8035
 	protected float m_minValue;
 
-	// Token: 0x0400181F RID: 6175
+	// Token: 0x04001F64 RID: 8036
 	protected float m_maxValue = 1f;
 
-	// Token: 0x04001820 RID: 6176
+	// Token: 0x04001F65 RID: 8037
 	protected int m_numberOfIncrements = 10;
 
-	// Token: 0x04001821 RID: 6177
+	// Token: 0x04001F66 RID: 8038
 	private float m_incrementAmount;
 
-	// Token: 0x04001822 RID: 6178
+	// Token: 0x04001F67 RID: 8039
 	protected float m_currentIncrementValue;
 
-	// Token: 0x04001823 RID: 6179
+	// Token: 0x04001F68 RID: 8040
 	protected int m_snapToMultiplesOf = 1;
 
-	// Token: 0x04001824 RID: 6180
+	// Token: 0x04001F69 RID: 8041
 	protected float m_storedOnActivateValue;
 
-	// Token: 0x04001825 RID: 6181
+	// Token: 0x04001F6A RID: 8042
 	private float m_storedIncrementBarWidth;
 }

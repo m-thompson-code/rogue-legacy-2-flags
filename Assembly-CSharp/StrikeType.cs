@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200077E RID: 1918
+// Token: 0x02000C3F RID: 3135
 public enum StrikeType
 {
-	// Token: 0x040037E9 RID: 14313
+	// Token: 0x04004A99 RID: 19097
 	None,
-	// Token: 0x040037EA RID: 14314
+	// Token: 0x04004A9A RID: 19098
 	Blunt = 10,
-	// Token: 0x040037EB RID: 14315
+	// Token: 0x04004A9B RID: 19099
 	Sharp = 20,
-	// Token: 0x040037EC RID: 14316
+	// Token: 0x04004A9C RID: 19100
 	NoDamage = 30,
-	// Token: 0x040037ED RID: 14317
+	// Token: 0x04004A9D RID: 19101
 	Invincible_StatusEffect = 40,
-	// Token: 0x040037EE RID: 14318
+	// Token: 0x04004A9E RID: 19102
 	Critical = 50,
-	// Token: 0x040037EF RID: 14319
+	// Token: 0x04004A9F RID: 19103
 	OnHitAreaRelic = 60
 }

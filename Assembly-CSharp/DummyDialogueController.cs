@@ -5,11 +5,11 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000552 RID: 1362
+// Token: 0x02000907 RID: 2311
 public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmitter
 {
-	// Token: 0x17001247 RID: 4679
-	// (get) Token: 0x060031F3 RID: 12787 RVA: 0x000A9016 File Offset: 0x000A7216
+	// Token: 0x170018D8 RID: 6360
+	// (get) Token: 0x0600462B RID: 17963 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -18,8 +18,8 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		}
 	}
 
-	// Token: 0x17001248 RID: 4680
-	// (get) Token: 0x060031F4 RID: 12788 RVA: 0x000A901E File Offset: 0x000A721E
+	// Token: 0x170018D9 RID: 6361
+	// (get) Token: 0x0600462C RID: 17964 RVA: 0x000047A7 File Offset: 0x000029A7
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -28,8 +28,8 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		}
 	}
 
-	// Token: 0x17001249 RID: 4681
-	// (get) Token: 0x060031F5 RID: 12789 RVA: 0x000A9021 File Offset: 0x000A7221
+	// Token: 0x170018DA RID: 6362
+	// (get) Token: 0x0600462D RID: 17965 RVA: 0x000268C8 File Offset: 0x00024AC8
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -38,7 +38,7 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		}
 	}
 
-	// Token: 0x060031F6 RID: 12790 RVA: 0x000A9029 File Offset: 0x000A7229
+	// Token: 0x0600462E RID: 17966 RVA: 0x000268D0 File Offset: 0x00024AD0
 	private bool HasEventDialogue()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround && !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.SeenParade))
@@ -48,7 +48,7 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		return !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.DummyDialogue_Intro);
 	}
 
-	// Token: 0x060031F7 RID: 12791 RVA: 0x000A9068 File Offset: 0x000A7268
+	// Token: 0x0600462F RID: 17967 RVA: 0x00112ECC File Offset: 0x001110CC
 	private void Awake()
 	{
 		foreach (ClassType classType in ClassType_RL.TypeArray)
@@ -63,7 +63,7 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		this.m_closeDummyTips = new Action(this.CloseDummyTips);
 	}
 
-	// Token: 0x060031F8 RID: 12792 RVA: 0x000A90C7 File Offset: 0x000A72C7
+	// Token: 0x06004630 RID: 17968 RVA: 0x0002690D File Offset: 0x00024B0D
 	private void OnEnable()
 	{
 		this.m_endingSpeechBubblePlayed = false;
@@ -75,7 +75,7 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		this.m_speechBubble.DisplayOffscreen = true;
 	}
 
-	// Token: 0x060031F9 RID: 12793 RVA: 0x000A90FC File Offset: 0x000A72FC
+	// Token: 0x06004631 RID: 17969 RVA: 0x00112F2C File Offset: 0x0011112C
 	public void ActivateDialogue()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -105,7 +105,7 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		}
 	}
 
-	// Token: 0x060031FA RID: 12794 RVA: 0x000A91E7 File Offset: 0x000A73E7
+	// Token: 0x06004632 RID: 17970 RVA: 0x0002693F File Offset: 0x00024B3F
 	private void CloseDummyTips()
 	{
 		if (this.m_npcController.CurrentState != NPCState.Idle)
@@ -116,7 +116,7 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		AudioManager.PlayOneShotAttached(this, this.m_farewellAudioEvent, base.gameObject);
 	}
 
-	// Token: 0x060031FB RID: 12795 RVA: 0x000A9224 File Offset: 0x000A7424
+	// Token: 0x06004633 RID: 17971 RVA: 0x00113018 File Offset: 0x00111218
 	private void OpenDummyTips()
 	{
 		ClassType classType = SaveManager.PlayerSaveData.CurrentCharacter.ClassType;
@@ -142,7 +142,7 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		this.CloseDummyTips();
 	}
 
-	// Token: 0x060031FC RID: 12796 RVA: 0x000A92EC File Offset: 0x000A74EC
+	// Token: 0x06004634 RID: 17972 RVA: 0x001130E0 File Offset: 0x001112E0
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -172,7 +172,7 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeDummyTips);
 	}
 
-	// Token: 0x04002752 RID: 10066
+	// Token: 0x0400362A RID: 13866
 	private static Dictionary<ClassType, DummyDialogueController.DummyDialogueEntry> m_dialogueDict = new Dictionary<ClassType, DummyDialogueController.DummyDialogueEntry>
 	{
 		{
@@ -391,42 +391,42 @@ public class DummyDialogueController : MonoBehaviour, IDisplaySpeechBubble, IAud
 		}
 	};
 
-	// Token: 0x04002753 RID: 10067
+	// Token: 0x0400362B RID: 13867
 	[SerializeField]
 	private SpeechBubbleController m_speechBubble;
 
-	// Token: 0x04002754 RID: 10068
+	// Token: 0x0400362C RID: 13868
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x04002755 RID: 10069
+	// Token: 0x0400362D RID: 13869
 	[SerializeField]
 	[EventRef]
 	private string m_farewellAudioEvent;
 
-	// Token: 0x04002756 RID: 10070
+	// Token: 0x0400362E RID: 13870
 	private Dictionary<ClassType, int> m_dialogueIndexDict = new Dictionary<ClassType, int>();
 
-	// Token: 0x04002757 RID: 10071
+	// Token: 0x0400362F RID: 13871
 	private NPCController m_npcController;
 
-	// Token: 0x04002758 RID: 10072
+	// Token: 0x04003630 RID: 13872
 	private Interactable m_interactable;
 
-	// Token: 0x04002759 RID: 10073
+	// Token: 0x04003631 RID: 13873
 	private bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x0400275A RID: 10074
+	// Token: 0x04003632 RID: 13874
 	private Action m_closeDummyTips;
 
-	// Token: 0x02000D2E RID: 3374
+	// Token: 0x02000908 RID: 2312
 	private class DummyDialogueEntry
 	{
-		// Token: 0x0400536A RID: 21354
+		// Token: 0x04003633 RID: 13875
 		public string TitleLocID;
 
-		// Token: 0x0400536B RID: 21355
+		// Token: 0x04003634 RID: 13876
 		public string[] TextLocIDArray;
 	}
 }

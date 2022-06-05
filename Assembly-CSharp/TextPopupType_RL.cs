@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000786 RID: 1926
+// Token: 0x02000C47 RID: 3143
 public class TextPopupType_RL
 {
-	// Token: 0x1700164B RID: 5707
-	// (get) Token: 0x0600415C RID: 16732 RVA: 0x000E935A File Offset: 0x000E755A
+	// Token: 0x17001E47 RID: 7751
+	// (get) Token: 0x06005AD9 RID: 23257 RVA: 0x00031D88 File Offset: 0x0002FF88
 	public static TextPopupType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class TextPopupType_RL
 		}
 	}
 
-	// Token: 0x04003881 RID: 14465
+	// Token: 0x04004B31 RID: 19249
 	private static TextPopupType[] m_typeArray;
 }

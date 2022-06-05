@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000281 RID: 641
+// Token: 0x0200044C RID: 1100
 public class ChangeResolutionOptionItem : SelectionListOptionItem
 {
-	// Token: 0x17000BF5 RID: 3061
-	// (get) Token: 0x06001952 RID: 6482 RVA: 0x0004F686 File Offset: 0x0004D886
+	// Token: 0x17000F36 RID: 3894
+	// (get) Token: 0x06002341 RID: 9025 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected override bool UsesLocID
 	{
 		get
@@ -15,14 +15,14 @@ public class ChangeResolutionOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001953 RID: 6483 RVA: 0x0004F689 File Offset: 0x0004D889
+	// Token: 0x06002342 RID: 9026 RVA: 0x00013010 File Offset: 0x00011210
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onPrimaryDisplayChanged = new Action<MonoBehaviour, EventArgs>(this.OnPrimaryDisplayChanged);
 	}
 
-	// Token: 0x06001954 RID: 6484 RVA: 0x0004F6A4 File Offset: 0x0004D8A4
+	// Token: 0x06002343 RID: 9027 RVA: 0x000ACB8C File Offset: 0x000AAD8C
 	public override void Initialize()
 	{
 		Resolution[] resolutions = Screen.resolutions;
@@ -60,13 +60,13 @@ public class ChangeResolutionOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001955 RID: 6485 RVA: 0x0004F844 File Offset: 0x0004DA44
+	// Token: 0x06002344 RID: 9028 RVA: 0x000129D0 File Offset: 0x00010BD0
 	private void OnPrimaryDisplayChanged(object sender, EventArgs args)
 	{
 		this.Initialize();
 	}
 
-	// Token: 0x06001956 RID: 6486 RVA: 0x0004F84C File Offset: 0x0004DA4C
+	// Token: 0x06002345 RID: 9029 RVA: 0x000ACD2C File Offset: 0x000AAF2C
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -85,29 +85,29 @@ public class ChangeResolutionOptionItem : SelectionListOptionItem
 		Messenger<SceneMessenger, SceneEvent>.AddListener(SceneEvent.PrimaryDisplayChanged, this.m_onPrimaryDisplayChanged);
 	}
 
-	// Token: 0x06001957 RID: 6487 RVA: 0x0004F8E9 File Offset: 0x0004DAE9
+	// Token: 0x06002346 RID: 9030 RVA: 0x0001302A File Offset: 0x0001122A
 	protected override void OnDisable()
 	{
 		base.OnDisable();
 		Messenger<SceneMessenger, SceneEvent>.RemoveListener(SceneEvent.PrimaryDisplayChanged, this.m_onPrimaryDisplayChanged);
 	}
 
-	// Token: 0x06001958 RID: 6488 RVA: 0x0004F8FD File Offset: 0x0004DAFD
+	// Token: 0x06002347 RID: 9031 RVA: 0x0001303E File Offset: 0x0001123E
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Change resolution to: " + this.m_selectionLocIDArray[this.m_selectedIndex]);
 	}
 
-	// Token: 0x06001959 RID: 6489 RVA: 0x0004F91C File Offset: 0x0004DB1C
+	// Token: 0x06002348 RID: 9032 RVA: 0x000ACDCC File Offset: 0x000AAFCC
 	public override void ConfirmOptionChange()
 	{
 		Resolution resolution = this.m_resolutionsToUse[this.m_selectedIndex];
 		GameResolutionManager.SetResolution(resolution.width, resolution.height, GameResolutionManager.FullscreenMode, true);
 	}
 
-	// Token: 0x04001845 RID: 6213
+	// Token: 0x04001F92 RID: 8082
 	private List<Resolution> m_resolutionsToUse = new List<Resolution>();
 
-	// Token: 0x04001846 RID: 6214
+	// Token: 0x04001F93 RID: 8083
 	private Action<MonoBehaviour, EventArgs> m_onPrimaryDisplayChanged;
 }

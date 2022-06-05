@@ -2,12 +2,12 @@
 
 namespace Rewired.Integration.UnityUI
 {
-	// Token: 0x02000938 RID: 2360
+	// Token: 0x02000EC6 RID: 3782
 	public enum PointerEventType
 	{
-		// Token: 0x04004245 RID: 16965
+		// Token: 0x040057E1 RID: 22497
 		Mouse,
-		// Token: 0x04004246 RID: 16966
+		// Token: 0x040057E2 RID: 22498
 		Touch
 	}
 }

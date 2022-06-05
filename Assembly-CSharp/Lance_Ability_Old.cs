@@ -4,10 +4,10 @@ using MoreMountains.CorgiEngine;
 using Rewired;
 using UnityEngine;
 
-// Token: 0x020001A0 RID: 416
+// Token: 0x02000300 RID: 768
 public class Lance_Ability_Old : BaseAbility_RL
 {
-	// Token: 0x06000FFD RID: 4093 RVA: 0x0002E8D9 File Offset: 0x0002CAD9
+	// Token: 0x060017FC RID: 6140 RVA: 0x0000C1D7 File Offset: 0x0000A3D7
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -17,8 +17,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		};
 	}
 
-	// Token: 0x170008DD RID: 2269
-	// (get) Token: 0x06000FFE RID: 4094 RVA: 0x0002E8F7 File Offset: 0x0002CAF7
+	// Token: 0x17000B85 RID: 2949
+	// (get) Token: 0x060017FD RID: 6141 RVA: 0x0000C1F5 File Offset: 0x0000A3F5
 	public override string ProjectileName
 	{
 		get
@@ -31,8 +31,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170008DE RID: 2270
-	// (get) Token: 0x06000FFF RID: 4095 RVA: 0x0002E90C File Offset: 0x0002CB0C
+	// Token: 0x17000B86 RID: 2950
+	// (get) Token: 0x060017FE RID: 6142 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -41,8 +41,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170008DF RID: 2271
-	// (get) Token: 0x06001000 RID: 4096 RVA: 0x0002E913 File Offset: 0x0002CB13
+	// Token: 0x17000B87 RID: 2951
+	// (get) Token: 0x060017FF RID: 6143 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -51,8 +51,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170008E0 RID: 2272
-	// (get) Token: 0x06001001 RID: 4097 RVA: 0x0002E91A File Offset: 0x0002CB1A
+	// Token: 0x17000B88 RID: 2952
+	// (get) Token: 0x06001800 RID: 6144 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float TellAnimSpeed
 	{
 		get
@@ -61,8 +61,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170008E1 RID: 2273
-	// (get) Token: 0x06001002 RID: 4098 RVA: 0x0002E921 File Offset: 0x0002CB21
+	// Token: 0x17000B89 RID: 2953
+	// (get) Token: 0x06001801 RID: 6145 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -71,8 +71,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170008E2 RID: 2274
-	// (get) Token: 0x06001003 RID: 4099 RVA: 0x0002E928 File Offset: 0x0002CB28
+	// Token: 0x17000B8A RID: 2954
+	// (get) Token: 0x06001802 RID: 6146 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -81,8 +81,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170008E3 RID: 2275
-	// (get) Token: 0x06001004 RID: 4100 RVA: 0x0002E92F File Offset: 0x0002CB2F
+	// Token: 0x17000B8B RID: 2955
+	// (get) Token: 0x06001803 RID: 6147 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -91,8 +91,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170008E4 RID: 2276
-	// (get) Token: 0x06001005 RID: 4101 RVA: 0x0002E936 File Offset: 0x0002CB36
+	// Token: 0x17000B8C RID: 2956
+	// (get) Token: 0x06001804 RID: 6148 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -101,8 +101,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170008E5 RID: 2277
-	// (get) Token: 0x06001006 RID: 4102 RVA: 0x0002E93D File Offset: 0x0002CB3D
+	// Token: 0x17000B8D RID: 2957
+	// (get) Token: 0x06001805 RID: 6149 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -111,8 +111,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170008E6 RID: 2278
-	// (get) Token: 0x06001007 RID: 4103 RVA: 0x0002E944 File Offset: 0x0002CB44
+	// Token: 0x17000B8E RID: 2958
+	// (get) Token: 0x06001806 RID: 6150 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -121,8 +121,8 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170008E7 RID: 2279
-	// (get) Token: 0x06001008 RID: 4104 RVA: 0x0002E94B File Offset: 0x0002CB4B
+	// Token: 0x17000B8F RID: 2959
+	// (get) Token: 0x06001807 RID: 6151 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -131,7 +131,7 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06001009 RID: 4105 RVA: 0x0002E952 File Offset: 0x0002CB52
+	// Token: 0x06001808 RID: 6152 RVA: 0x0000C20A File Offset: 0x0000A40A
 	public override IEnumerator CastAbility()
 	{
 		if (!ReInput.isReady)
@@ -149,14 +149,14 @@ public class Lance_Ability_Old : BaseAbility_RL
 		yield break;
 	}
 
-	// Token: 0x0600100A RID: 4106 RVA: 0x0002E961 File Offset: 0x0002CB61
+	// Token: 0x06001809 RID: 6153 RVA: 0x0000A2B3 File Offset: 0x000084B3
 	protected override void OnEnterAttackLogic()
 	{
 		this.m_abilityController.BroadcastAbilityCastEvents(base.CastAbilityType);
 		this.FireProjectile();
 	}
 
-	// Token: 0x0600100B RID: 4107 RVA: 0x0002E97A File Offset: 0x0002CB7A
+	// Token: 0x0600180A RID: 6154 RVA: 0x0000C219 File Offset: 0x0000A419
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		while (base.CurrentAbilityAnimState == AbilityAnimState.Tell && Rewired_RL.Player.GetButton(this.m_abilityController.GetAbilityInputString(base.CastAbilityType)))
@@ -188,7 +188,7 @@ public class Lance_Ability_Old : BaseAbility_RL
 		yield break;
 	}
 
-	// Token: 0x0600100C RID: 4108 RVA: 0x0002E990 File Offset: 0x0002CB90
+	// Token: 0x0600180B RID: 6155 RVA: 0x0008D030 File Offset: 0x0008B230
 	private void StartChargeEffect()
 	{
 		this.m_thrustChargingUpEffect = (EffectManager.PlayEffect(this.m_abilityController.PlayerController.gameObject, this.m_abilityController.PlayerController.Animator, "ThrustChargingUp_Effect", Vector2.zero, -1f, EffectStopType.Gracefully, EffectTriggerDirection.None) as GenericEffect);
@@ -203,7 +203,7 @@ public class Lance_Ability_Old : BaseAbility_RL
 		this.m_lanceChargingUpEffect.Animator.SetInteger("State", 0);
 	}
 
-	// Token: 0x0600100D RID: 4109 RVA: 0x0002EAF4 File Offset: 0x0002CCF4
+	// Token: 0x0600180C RID: 6156 RVA: 0x0008D194 File Offset: 0x0008B394
 	private void SetChargeState()
 	{
 		Lance_Ability_Old.ChargeState currentChargeState = this.m_currentChargeState;
@@ -241,7 +241,7 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x0600100E RID: 4110 RVA: 0x0002EC18 File Offset: 0x0002CE18
+	// Token: 0x0600180D RID: 6157 RVA: 0x0008D2B8 File Offset: 0x0008B4B8
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -256,7 +256,7 @@ public class Lance_Ability_Old : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x0600100F RID: 4111 RVA: 0x0002EC6E File Offset: 0x0002CE6E
+	// Token: 0x0600180E RID: 6158 RVA: 0x0000C22F File Offset: 0x0000A42F
 	protected IEnumerator PushForward()
 	{
 		float speed = 0f;
@@ -304,7 +304,7 @@ public class Lance_Ability_Old : BaseAbility_RL
 		yield break;
 	}
 
-	// Token: 0x06001010 RID: 4112 RVA: 0x0002EC80 File Offset: 0x0002CE80
+	// Token: 0x0600180F RID: 6159 RVA: 0x0008D310 File Offset: 0x0008B510
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		this.m_abilityController.PlayerController.DisableFriction = false;
@@ -320,42 +320,42 @@ public class Lance_Ability_Old : BaseAbility_RL
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x0400119E RID: 4510
+	// Token: 0x0400176A RID: 5994
 	private const string THRUST_ATTACK_PROJECTILE_NAME = "LanceWeaponSwingProjectile";
 
-	// Token: 0x0400119F RID: 4511
+	// Token: 0x0400176B RID: 5995
 	private const string DASH_ATTACK_PROJECTILE_NAME = "LanceWeaponProjectile";
 
-	// Token: 0x040011A0 RID: 4512
+	// Token: 0x0400176C RID: 5996
 	[SerializeField]
 	private AnimationCurve m_attackCurve;
 
-	// Token: 0x040011A1 RID: 4513
+	// Token: 0x0400176D RID: 5997
 	private float m_attackStartTime;
 
-	// Token: 0x040011A2 RID: 4514
+	// Token: 0x0400176E RID: 5998
 	private Lance_Ability_Old.ChargeState m_currentChargeState;
 
-	// Token: 0x040011A3 RID: 4515
+	// Token: 0x0400176F RID: 5999
 	private GenericEffect m_thrustChargingUpEffect;
 
-	// Token: 0x040011A4 RID: 4516
+	// Token: 0x04001770 RID: 6000
 	private GenericEffect m_lanceChargingUpEffect;
 
-	// Token: 0x040011A5 RID: 4517
+	// Token: 0x04001771 RID: 6001
 	private bool m_isChargeEffectPlaying;
 
-	// Token: 0x040011A6 RID: 4518
+	// Token: 0x04001772 RID: 6002
 	private float m_storedFallMultiplier;
 
-	// Token: 0x02000AD9 RID: 2777
+	// Token: 0x02000301 RID: 769
 	private enum ChargeState
 	{
-		// Token: 0x04004A62 RID: 19042
+		// Token: 0x04001774 RID: 6004
 		Thrust,
-		// Token: 0x04004A63 RID: 19043
+		// Token: 0x04001775 RID: 6005
 		ShortDash,
-		// Token: 0x04004A64 RID: 19044
+		// Token: 0x04001776 RID: 6006
 		LongDash
 	}
 }

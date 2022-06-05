@@ -3,11 +3,11 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000311 RID: 785
+// Token: 0x02000548 RID: 1352
 public class PlayerFreeCritStatusEffect : BaseStatusEffect, IAudioEventEmitter
 {
-	// Token: 0x17000D6C RID: 3436
-	// (get) Token: 0x06001F04 RID: 7940 RVA: 0x00063E5C File Offset: 0x0006205C
+	// Token: 0x17001175 RID: 4469
+	// (get) Token: 0x06002B51 RID: 11089 RVA: 0x00018298 File Offset: 0x00016498
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -16,8 +16,8 @@ public class PlayerFreeCritStatusEffect : BaseStatusEffect, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x17000D6D RID: 3437
-	// (get) Token: 0x06001F05 RID: 7941 RVA: 0x00063E63 File Offset: 0x00062063
+	// Token: 0x17001176 RID: 4470
+	// (get) Token: 0x06002B52 RID: 11090 RVA: 0x00004536 File Offset: 0x00002736
 	public override float StartingDurationOverride
 	{
 		get
@@ -26,8 +26,8 @@ public class PlayerFreeCritStatusEffect : BaseStatusEffect, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x17000D6E RID: 3438
-	// (get) Token: 0x06001F06 RID: 7942 RVA: 0x00063E6A File Offset: 0x0006206A
+	// Token: 0x17001177 RID: 4471
+	// (get) Token: 0x06002B53 RID: 11091 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -36,7 +36,7 @@ public class PlayerFreeCritStatusEffect : BaseStatusEffect, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06001F07 RID: 7943 RVA: 0x00063E72 File Offset: 0x00062072
+	// Token: 0x06002B54 RID: 11092 RVA: 0x0001829F File Offset: 0x0001649F
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.FreeCrit, base.Duration);
@@ -54,7 +54,7 @@ public class PlayerFreeCritStatusEffect : BaseStatusEffect, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x06001F08 RID: 7944 RVA: 0x00063E81 File Offset: 0x00062081
+	// Token: 0x06002B55 RID: 11093 RVA: 0x000182AE File Offset: 0x000164AE
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -64,7 +64,7 @@ public class PlayerFreeCritStatusEffect : BaseStatusEffect, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06001F09 RID: 7945 RVA: 0x00063EA2 File Offset: 0x000620A2
+	// Token: 0x06002B56 RID: 11094 RVA: 0x000182CF File Offset: 0x000164CF
 	private void PlayChargedStartAudio(PlayerController playerController)
 	{
 		if (playerController.CharacterClass.ClassType == ClassType.MagicWandClass)

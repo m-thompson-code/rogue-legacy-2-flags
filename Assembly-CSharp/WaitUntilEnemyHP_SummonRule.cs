@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000536 RID: 1334
+// Token: 0x020008C7 RID: 2247
 public class WaitUntilEnemyHP_SummonRule : BaseSummonRule
 {
-	// Token: 0x1700121D RID: 4637
-	// (get) Token: 0x06003105 RID: 12549 RVA: 0x000A672E File Offset: 0x000A492E
+	// Token: 0x17001866 RID: 6246
+	// (get) Token: 0x06004465 RID: 17509 RVA: 0x000192D8 File Offset: 0x000174D8
 	public override SummonRuleType RuleType
 	{
 		get
@@ -15,8 +15,8 @@ public class WaitUntilEnemyHP_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x1700121E RID: 4638
-	// (get) Token: 0x06003106 RID: 12550 RVA: 0x000A6735 File Offset: 0x000A4935
+	// Token: 0x17001867 RID: 6247
+	// (get) Token: 0x06004466 RID: 17510 RVA: 0x000253BE File Offset: 0x000235BE
 	public override Color BoxColor
 	{
 		get
@@ -25,8 +25,8 @@ public class WaitUntilEnemyHP_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x1700121F RID: 4639
-	// (get) Token: 0x06003107 RID: 12551 RVA: 0x000A673C File Offset: 0x000A493C
+	// Token: 0x17001868 RID: 6248
+	// (get) Token: 0x06004467 RID: 17511 RVA: 0x00025AE8 File Offset: 0x00023CE8
 	public override string RuleLabel
 	{
 		get
@@ -35,7 +35,7 @@ public class WaitUntilEnemyHP_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x06003108 RID: 12552 RVA: 0x000A6743 File Offset: 0x000A4943
+	// Token: 0x06004468 RID: 17512 RVA: 0x00025AEF File Offset: 0x00023CEF
 	public override IEnumerator RunSummonRule()
 	{
 		bool equalitySatisfied = false;
@@ -75,7 +75,7 @@ public class WaitUntilEnemyHP_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x06003109 RID: 12553 RVA: 0x000A6754 File Offset: 0x000A4954
+	// Token: 0x06004469 RID: 17513 RVA: 0x0010E748 File Offset: 0x0010C948
 	private bool EqualitySatisfied(float currentEnemyHP)
 	{
 		float num = base.SummonController.SavedCurrentEnemyHP;
@@ -99,19 +99,19 @@ public class WaitUntilEnemyHP_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x040026C6 RID: 9926
+	// Token: 0x04003513 RID: 13587
 	[SerializeField]
 	private ParamEqualityType m_equalityType;
 
-	// Token: 0x040026C7 RID: 9927
+	// Token: 0x04003514 RID: 13588
 	[SerializeField]
 	private float m_percentValue;
 
-	// Token: 0x040026C8 RID: 9928
+	// Token: 0x04003515 RID: 13589
 	[SerializeField]
 	private bool m_includeRegularEnemies = true;
 
-	// Token: 0x040026C9 RID: 9929
+	// Token: 0x04003516 RID: 13590
 	[SerializeField]
 	private bool m_includeSummonedEnemies = true;
 }

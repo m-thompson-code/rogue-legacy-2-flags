@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x0200074B RID: 1867
+// Token: 0x02000C09 RID: 3081
 public enum LanguageType
 {
-	// Token: 0x040034E9 RID: 13545
+	// Token: 0x04004765 RID: 18277
 	English,
-	// Token: 0x040034EA RID: 13546
+	// Token: 0x04004766 RID: 18278
 	French,
-	// Token: 0x040034EB RID: 13547
+	// Token: 0x04004767 RID: 18279
 	German,
-	// Token: 0x040034EC RID: 13548
+	// Token: 0x04004768 RID: 18280
 	Russian,
-	// Token: 0x040034ED RID: 13549
+	// Token: 0x04004769 RID: 18281
 	Spanish,
-	// Token: 0x040034EE RID: 13550
+	// Token: 0x0400476A RID: 18282
 	Portuguese_BR,
-	// Token: 0x040034EF RID: 13551
+	// Token: 0x0400476B RID: 18283
 	Chinese_Simp,
-	// Token: 0x040034F0 RID: 13552
+	// Token: 0x0400476C RID: 18284
 	Korean,
-	// Token: 0x040034F1 RID: 13553
+	// Token: 0x0400476D RID: 18285
 	Turkish,
-	// Token: 0x040034F2 RID: 13554
+	// Token: 0x0400476E RID: 18286
 	Chinese_Trad,
-	// Token: 0x040034F3 RID: 13555
+	// Token: 0x0400476F RID: 18287
 	Italian
 }

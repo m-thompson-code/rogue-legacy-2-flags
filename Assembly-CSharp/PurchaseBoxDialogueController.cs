@@ -2,10 +2,10 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003C4 RID: 964
+// Token: 0x0200065C RID: 1628
 public class PurchaseBoxDialogueController : MonoBehaviour
 {
-	// Token: 0x06002391 RID: 9105 RVA: 0x000738C8 File Offset: 0x00071AC8
+	// Token: 0x060031AF RID: 12719 RVA: 0x000D3BC4 File Offset: 0x000D1DC4
 	private void Awake()
 	{
 		if (this.m_purchaseBoxGoldGO)
@@ -20,21 +20,21 @@ public class PurchaseBoxDialogueController : MonoBehaviour
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 	}
 
-	// Token: 0x06002392 RID: 9106 RVA: 0x0007393F File Offset: 0x00071B3F
+	// Token: 0x060031B0 RID: 12720 RVA: 0x0001B46B File Offset: 0x0001966B
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.UpdatePurchaseBoxDialogue, this.m_onPurchaseDialogueUpdated);
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06002393 RID: 9107 RVA: 0x0007395B File Offset: 0x00071B5B
+	// Token: 0x060031B1 RID: 12721 RVA: 0x0001B487 File Offset: 0x00019687
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.UpdatePurchaseBoxDialogue, this.m_onPurchaseDialogueUpdated);
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06002394 RID: 9108 RVA: 0x00073978 File Offset: 0x00071B78
+	// Token: 0x060031B2 RID: 12722 RVA: 0x000D3C3C File Offset: 0x000D1E3C
 	private void OnPurchaseDialogueUpdated(object sender, EventArgs args)
 	{
 		PurchaseBoxDialogueEventArgs purchaseBoxDialogueEventArgs = args as PurchaseBoxDialogueEventArgs;
@@ -109,7 +109,7 @@ public class PurchaseBoxDialogueController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002395 RID: 9109 RVA: 0x00073C40 File Offset: 0x00071E40
+	// Token: 0x060031B3 RID: 12723 RVA: 0x000D3F04 File Offset: 0x000D2104
 	private void RefreshText(object sender, EventArgs args)
 	{
 		if (this.m_usesLocIDs)
@@ -119,61 +119,61 @@ public class PurchaseBoxDialogueController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001E47 RID: 7751
+	// Token: 0x04002880 RID: 10368
 	[SerializeField]
 	private TMP_Text m_purchaseBoxDialogueText;
 
-	// Token: 0x04001E48 RID: 7752
+	// Token: 0x04002881 RID: 10369
 	[SerializeField]
 	private GameObject m_purchaseBoxGoldGO;
 
-	// Token: 0x04001E49 RID: 7753
+	// Token: 0x04002882 RID: 10370
 	[SerializeField]
 	private GameObject m_purchaseBoxOreTextGO;
 
-	// Token: 0x04001E4A RID: 7754
+	// Token: 0x04002883 RID: 10371
 	[SerializeField]
 	private bool m_usesLocIDs = true;
 
-	// Token: 0x04001E4B RID: 7755
+	// Token: 0x04002884 RID: 10372
 	[SerializeField]
 	private string[] m_welcomeDialogue;
 
-	// Token: 0x04001E4C RID: 7756
+	// Token: 0x04002885 RID: 10373
 	[SerializeField]
 	private string m_purchaseSuccessfulDialogue;
 
-	// Token: 0x04001E4D RID: 7757
+	// Token: 0x04002886 RID: 10374
 	[SerializeField]
 	private string m_purchaseFailedNoMoneyDialogue;
 
-	// Token: 0x04001E4E RID: 7758
+	// Token: 0x04002887 RID: 10375
 	[SerializeField]
 	private string m_purchaseFailedNoOreDialogue;
 
-	// Token: 0x04001E4F RID: 7759
+	// Token: 0x04002888 RID: 10376
 	[SerializeField]
 	private string[] m_gearDescriptionDialogue;
 
-	// Token: 0x04001E50 RID: 7760
+	// Token: 0x04002889 RID: 10377
 	[SerializeField]
 	private string m_gearNotFoundDialogue;
 
-	// Token: 0x04001E51 RID: 7761
+	// Token: 0x0400288A RID: 10378
 	private float m_flavourDescriptionTimer;
 
-	// Token: 0x04001E52 RID: 7762
+	// Token: 0x0400288B RID: 10379
 	private Vector3 m_storedGoldTextScale;
 
-	// Token: 0x04001E53 RID: 7763
+	// Token: 0x0400288C RID: 10380
 	private Vector3 m_storedOreTextScale;
 
-	// Token: 0x04001E54 RID: 7764
+	// Token: 0x0400288D RID: 10381
 	private string m_purchaseDialogueLocID;
 
-	// Token: 0x04001E55 RID: 7765
+	// Token: 0x0400288E RID: 10382
 	private Action<MonoBehaviour, EventArgs> m_onPurchaseDialogueUpdated;
 
-	// Token: 0x04001E56 RID: 7766
+	// Token: 0x0400288F RID: 10383
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 }

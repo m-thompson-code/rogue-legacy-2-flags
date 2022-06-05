@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002FA RID: 762
+// Token: 0x02000514 RID: 1300
 public class EnemyAppliesInvulnStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D32 RID: 3378
-	// (get) Token: 0x06001E63 RID: 7779 RVA: 0x00062AD5 File Offset: 0x00060CD5
+	// Token: 0x17001101 RID: 4353
+	// (get) Token: 0x06002A02 RID: 10754 RVA: 0x00017907 File Offset: 0x00015B07
 	public override string[] ProjectileNameArray
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyAppliesInvulnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D33 RID: 3379
-	// (get) Token: 0x06001E64 RID: 7780 RVA: 0x00062ADC File Offset: 0x00060CDC
+	// Token: 0x17001102 RID: 4354
+	// (get) Token: 0x06002A03 RID: 10755 RVA: 0x0001790E File Offset: 0x00015B0E
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -25,8 +25,8 @@ public class EnemyAppliesInvulnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D34 RID: 3380
-	// (get) Token: 0x06001E65 RID: 7781 RVA: 0x00062AE3 File Offset: 0x00060CE3
+	// Token: 0x17001103 RID: 4355
+	// (get) Token: 0x06002A04 RID: 10756 RVA: 0x00017838 File Offset: 0x00015A38
 	public override float StartingDurationOverride
 	{
 		get
@@ -35,14 +35,14 @@ public class EnemyAppliesInvulnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E66 RID: 7782 RVA: 0x00062AEA File Offset: 0x00060CEA
+	// Token: 0x06002A05 RID: 10757 RVA: 0x00017915 File Offset: 0x00015B15
 	public override void StartEffect(float duration, IDamageObj caster)
 	{
 		base.StartEffect(duration, caster);
 		this.m_charController.StatusEffectController.StopStatusEffect(StatusEffectType.Enemy_Invuln, false);
 	}
 
-	// Token: 0x06001E67 RID: 7783 RVA: 0x00062B0A File Offset: 0x00060D0A
+	// Token: 0x06002A06 RID: 10758 RVA: 0x00017935 File Offset: 0x00015B35
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.AppliesInvuln);
@@ -85,7 +85,7 @@ public class EnemyAppliesInvulnStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001E68 RID: 7784 RVA: 0x00062B1C File Offset: 0x00060D1C
+	// Token: 0x06002A07 RID: 10759 RVA: 0x000C0CA0 File Offset: 0x000BEEA0
 	private void CreateInvulnProjectileEffect()
 	{
 		if (this.m_invulnRadiusProjectile && !this.m_invulnRadiusProjectile.IsFreePoolObj && this.m_invulnRadiusProjectile.OwnerController == this.m_charController)
@@ -97,7 +97,7 @@ public class EnemyAppliesInvulnStatusEffect : BaseStatusEffect
 		this.m_invulnRadiusProjectile.transform.localScale = new Vector3(num, num, this.m_invulnRadiusProjectile.transform.localScale.z);
 	}
 
-	// Token: 0x06001E69 RID: 7785 RVA: 0x00062C1C File Offset: 0x00060E1C
+	// Token: 0x06002A08 RID: 10760 RVA: 0x000C0DA0 File Offset: 0x000BEFA0
 	private void ApplyInvulnToEnemy(EnemyController enemy, EnemyController sourceEnemyController)
 	{
 		if (!enemy || enemy.IsDead)
@@ -114,7 +114,7 @@ public class EnemyAppliesInvulnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E6A RID: 7786 RVA: 0x00062C8C File Offset: 0x00060E8C
+	// Token: 0x06002A09 RID: 10761 RVA: 0x000C0E10 File Offset: 0x000BF010
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -145,7 +145,7 @@ public class EnemyAppliesInvulnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E6B RID: 7787 RVA: 0x00062D88 File Offset: 0x00060F88
+	// Token: 0x06002A0A RID: 10762 RVA: 0x000C0F0C File Offset: 0x000BF10C
 	public override void SetIsHidden(bool hide)
 	{
 		base.SetIsHidden(hide);
@@ -167,12 +167,12 @@ public class EnemyAppliesInvulnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x04001BB2 RID: 7090
+	// Token: 0x04002436 RID: 9270
 	private static string[] m_projectileNameArray = new string[]
 	{
 		"StatusEffectTeamInvincibilityProjectile"
 	};
 
-	// Token: 0x04001BB3 RID: 7091
+	// Token: 0x04002437 RID: 9271
 	private Projectile_RL m_invulnRadiusProjectile;
 }

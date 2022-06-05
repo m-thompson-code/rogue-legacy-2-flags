@@ -1,29 +1,29 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000207 RID: 519
+// Token: 0x020003B8 RID: 952
 public class HidePropCrackOverride : MonoBehaviour
 {
-	// Token: 0x060015E3 RID: 5603 RVA: 0x00044474 File Offset: 0x00042674
+	// Token: 0x06001F73 RID: 8051 RVA: 0x000107DA File Offset: 0x0000E9DA
 	private void Awake()
 	{
 		this.m_propSpawner = base.GetComponent<PropSpawnController>();
 		this.m_onPlayerEnterRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerEnterRoom);
 	}
 
-	// Token: 0x060015E4 RID: 5604 RVA: 0x00044494 File Offset: 0x00042694
+	// Token: 0x06001F74 RID: 8052 RVA: 0x000107FA File Offset: 0x0000E9FA
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x060015E5 RID: 5605 RVA: 0x000444A2 File Offset: 0x000426A2
+	// Token: 0x06001F75 RID: 8053 RVA: 0x00010808 File Offset: 0x0000EA08
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x060015E6 RID: 5606 RVA: 0x000444B0 File Offset: 0x000426B0
+	// Token: 0x06001F76 RID: 8054 RVA: 0x000A2EB0 File Offset: 0x000A10B0
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		if (this.m_propSpawner != null && this.m_propSpawner.PropInstance != null && this.m_propSpawner.IsBreakable && !this.m_propSpawner.PropInstance.Breakable.IsBroken)
@@ -32,9 +32,9 @@ public class HidePropCrackOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001516 RID: 5398
+	// Token: 0x04001C13 RID: 7187
 	private PropSpawnController m_propSpawner;
 
-	// Token: 0x04001517 RID: 5399
+	// Token: 0x04001C14 RID: 7188
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 }

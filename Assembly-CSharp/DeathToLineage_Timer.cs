@@ -2,15 +2,15 @@
 using System.Diagnostics;
 using UnityEngine;
 
-// Token: 0x020006F4 RID: 1780
+// Token: 0x02000BA7 RID: 2983
 public class DeathToLineage_Timer : MonoBehaviour
 {
-	// Token: 0x1700160F RID: 5647
-	// (get) Token: 0x0600408A RID: 16522 RVA: 0x000E4DFE File Offset: 0x000E2FFE
-	// (set) Token: 0x0600408B RID: 16523 RVA: 0x000E4E05 File Offset: 0x000E3005
+	// Token: 0x17001E0B RID: 7691
+	// (get) Token: 0x060059D3 RID: 22995 RVA: 0x00030FF7 File Offset: 0x0002F1F7
+	// (set) Token: 0x060059D4 RID: 22996 RVA: 0x00030FFE File Offset: 0x0002F1FE
 	private static DeathToLineage_Timer Instance { get; set; }
 
-	// Token: 0x0600408C RID: 16524 RVA: 0x000E4E10 File Offset: 0x000E3010
+	// Token: 0x060059D5 RID: 22997 RVA: 0x00154770 File Offset: 0x00152970
 	private void Awake()
 	{
 		if (DeathToLineage_Timer.Instance == null)
@@ -23,26 +23,26 @@ public class DeathToLineage_Timer : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x0600408D RID: 16525 RVA: 0x000E4E60 File Offset: 0x000E3060
+	// Token: 0x060059D6 RID: 22998 RVA: 0x00031006 File Offset: 0x0002F206
 	private void Start()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.PlayerDeathWindow_Closed, this.m_onDeathWindowClosed);
 		Messenger<SceneMessenger, SceneEvent>.AddListener(SceneEvent.EnterLineageScreen, this.m_onEnterLineageScreen);
 	}
 
-	// Token: 0x0600408E RID: 16526 RVA: 0x000E4E7B File Offset: 0x000E307B
+	// Token: 0x060059D7 RID: 22999 RVA: 0x00031021 File Offset: 0x0002F221
 	private void OnEnterLineageScreen(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		DeathToLineage_Timer.StopTimer();
 	}
 
-	// Token: 0x0600408F RID: 16527 RVA: 0x000E4E82 File Offset: 0x000E3082
+	// Token: 0x060059D8 RID: 23000 RVA: 0x00031028 File Offset: 0x0002F228
 	private void OnDeathWindowClosed(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		DeathToLineage_Timer.StartTimer();
 	}
 
-	// Token: 0x06004090 RID: 16528 RVA: 0x000E4E89 File Offset: 0x000E3089
+	// Token: 0x060059D9 RID: 23001 RVA: 0x0003102F File Offset: 0x0002F22F
 	private void OnDestroy()
 	{
 		if (DeathToLineage_Timer.Instance == this)
@@ -54,7 +54,7 @@ public class DeathToLineage_Timer : MonoBehaviour
 		Messenger<SceneMessenger, SceneEvent>.RemoveListener(SceneEvent.EnterLineageScreen, this.m_onEnterLineageScreen);
 	}
 
-	// Token: 0x06004091 RID: 16529 RVA: 0x000E4EBD File Offset: 0x000E30BD
+	// Token: 0x060059DA RID: 23002 RVA: 0x00031063 File Offset: 0x0002F263
 	public static void StartTimer()
 	{
 		if (DeathToLineage_Timer.m_stopwatch == null)
@@ -64,7 +64,7 @@ public class DeathToLineage_Timer : MonoBehaviour
 		DeathToLineage_Timer.m_stopwatch.Restart();
 	}
 
-	// Token: 0x06004092 RID: 16530 RVA: 0x000E4EDC File Offset: 0x000E30DC
+	// Token: 0x060059DB RID: 23003 RVA: 0x001547C0 File Offset: 0x001529C0
 	public static void StopTimer()
 	{
 		if (DeathToLineage_Timer.m_stopwatch != null && DeathToLineage_Timer.m_stopwatch.IsRunning)
@@ -77,12 +77,12 @@ public class DeathToLineage_Timer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040031CB RID: 12747
+	// Token: 0x04004446 RID: 17478
 	private Action<MonoBehaviour, EventArgs> m_onDeathWindowClosed;
 
-	// Token: 0x040031CC RID: 12748
+	// Token: 0x04004447 RID: 17479
 	private Action<MonoBehaviour, EventArgs> m_onEnterLineageScreen;
 
-	// Token: 0x040031CD RID: 12749
+	// Token: 0x04004448 RID: 17480
 	private static Stopwatch m_stopwatch;
 }

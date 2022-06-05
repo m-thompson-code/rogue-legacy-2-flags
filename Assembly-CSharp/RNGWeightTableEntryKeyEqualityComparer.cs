@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x02000684 RID: 1668
+// Token: 0x02000B04 RID: 2820
 public class RNGWeightTableEntryKeyEqualityComparer : IEqualityComparer<RNGWeightTableEntryKey>
 {
-	// Token: 0x06003C27 RID: 15399 RVA: 0x000D0304 File Offset: 0x000CE504
+	// Token: 0x06005486 RID: 21638 RVA: 0x001400D8 File Offset: 0x0013E2D8
 	public bool Equals(RNGWeightTableEntryKey x, RNGWeightTableEntryKey y)
 	{
 		bool flag = x.ID == y.ID;
@@ -12,7 +12,7 @@ public class RNGWeightTableEntryKeyEqualityComparer : IEqualityComparer<RNGWeigh
 		return flag && flag2;
 	}
 
-	// Token: 0x06003C28 RID: 15400 RVA: 0x000D0334 File Offset: 0x000CE534
+	// Token: 0x06005487 RID: 21639 RVA: 0x00140108 File Offset: 0x0013E308
 	public int GetHashCode(RNGWeightTableEntryKey obj)
 	{
 		int num = 1;

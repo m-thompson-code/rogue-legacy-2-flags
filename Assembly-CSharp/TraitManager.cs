@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020006B3 RID: 1715
+// Token: 0x02000B5B RID: 2907
 public class TraitManager : MonoBehaviour
 {
-	// Token: 0x17001593 RID: 5523
-	// (get) Token: 0x06003F3B RID: 16187 RVA: 0x000E1698 File Offset: 0x000DF898
-	// (set) Token: 0x06003F3C RID: 16188 RVA: 0x000E169F File Offset: 0x000DF89F
+	// Token: 0x17001D8B RID: 7563
+	// (get) Token: 0x0600586F RID: 22639 RVA: 0x000300F8 File Offset: 0x0002E2F8
+	// (set) Token: 0x06005870 RID: 22640 RVA: 0x000300FF File Offset: 0x0002E2FF
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x17001594 RID: 5524
-	// (get) Token: 0x06003F3D RID: 16189 RVA: 0x000E16A7 File Offset: 0x000DF8A7
-	// (set) Token: 0x06003F3E RID: 16190 RVA: 0x000E16AE File Offset: 0x000DF8AE
+	// Token: 0x17001D8C RID: 7564
+	// (get) Token: 0x06005871 RID: 22641 RVA: 0x00030107 File Offset: 0x0002E307
+	// (set) Token: 0x06005872 RID: 22642 RVA: 0x0003010E File Offset: 0x0002E30E
 	public static TraitManager Instance { get; private set; }
 
-	// Token: 0x17001595 RID: 5525
-	// (get) Token: 0x06003F3F RID: 16191 RVA: 0x000E16B6 File Offset: 0x000DF8B6
+	// Token: 0x17001D8D RID: 7565
+	// (get) Token: 0x06005873 RID: 22643 RVA: 0x00030116 File Offset: 0x0002E316
 	public static List<BaseTrait> ActiveTraitList
 	{
 		get
@@ -25,8 +25,8 @@ public class TraitManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001596 RID: 5526
-	// (get) Token: 0x06003F40 RID: 16192 RVA: 0x000E16C2 File Offset: 0x000DF8C2
+	// Token: 0x17001D8E RID: 7566
+	// (get) Token: 0x06005874 RID: 22644 RVA: 0x00030122 File Offset: 0x0002E322
 	public static List<TraitType> ActiveTraitTypeList
 	{
 		get
@@ -35,7 +35,7 @@ public class TraitManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F41 RID: 16193 RVA: 0x000E16D0 File Offset: 0x000DF8D0
+	// Token: 0x06005875 RID: 22645 RVA: 0x001519BC File Offset: 0x0014FBBC
 	public static float GetActualTraitGoldGain(TraitType traitType)
 	{
 		if (SkillTreeManager.GetSkillObjLevel(SkillTreeType.Traits_Give_Gold) > 0)
@@ -49,7 +49,7 @@ public class TraitManager : MonoBehaviour
 		return 0f;
 	}
 
-	// Token: 0x06003F42 RID: 16194 RVA: 0x000E171C File Offset: 0x000DF91C
+	// Token: 0x06005876 RID: 22646 RVA: 0x00151A08 File Offset: 0x0014FC08
 	public static bool IsTraitActive(TraitType traitType)
 	{
 		if (traitType == TraitType.None)
@@ -75,7 +75,7 @@ public class TraitManager : MonoBehaviour
 		return TraitManager.Instance.m_activeTraitTypeList.Contains(traitType);
 	}
 
-	// Token: 0x06003F43 RID: 16195 RVA: 0x000E1790 File Offset: 0x000DF990
+	// Token: 0x06005877 RID: 22647 RVA: 0x00151A7C File Offset: 0x0014FC7C
 	public static BaseTrait GetActiveTrait(TraitType traitType)
 	{
 		if (TraitManager.IsInitialized)
@@ -91,8 +91,8 @@ public class TraitManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x17001597 RID: 5527
-	// (get) Token: 0x06003F44 RID: 16196 RVA: 0x000E17F8 File Offset: 0x000DF9F8
+	// Token: 0x17001D8F RID: 7567
+	// (get) Token: 0x06005878 RID: 22648 RVA: 0x0003012E File Offset: 0x0002E32E
 	private static Dictionary<TraitType, SerializableVector3Int> TraitSpawnOddsTable
 	{
 		get
@@ -101,7 +101,7 @@ public class TraitManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F45 RID: 16197 RVA: 0x000E1804 File Offset: 0x000DFA04
+	// Token: 0x06005879 RID: 22649 RVA: 0x0003013A File Offset: 0x0002E33A
 	private void Awake()
 	{
 		if (!TraitManager.Instance)
@@ -113,7 +113,7 @@ public class TraitManager : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06003F46 RID: 16198 RVA: 0x000E182C File Offset: 0x000DFA2C
+	// Token: 0x0600587A RID: 22650 RVA: 0x00151AE4 File Offset: 0x0014FCE4
 	private void Initialize()
 	{
 		TraitManager.IsInitialized = true;
@@ -129,7 +129,7 @@ public class TraitManager : MonoBehaviour
 		Debug.Log("<color=red>WARNING: TRAITMANAGER INITIALIZED BEFORE PLAYERMANAGER. THIS IS BAD.</color>");
 	}
 
-	// Token: 0x06003F47 RID: 16199 RVA: 0x000E18A0 File Offset: 0x000DFAA0
+	// Token: 0x0600587B RID: 22651 RVA: 0x00151B58 File Offset: 0x0014FD58
 	private void OnTraitsChanged(object sender, EventArgs args)
 	{
 		TraitChangedEventArgs traitChangedEventArgs = args as TraitChangedEventArgs;
@@ -144,7 +144,7 @@ public class TraitManager : MonoBehaviour
 		this.InstantiateTrait(traitChangedEventArgs.TraitTwo, false);
 	}
 
-	// Token: 0x06003F48 RID: 16200 RVA: 0x000E1934 File Offset: 0x000DFB34
+	// Token: 0x0600587C RID: 22652 RVA: 0x00151BEC File Offset: 0x0014FDEC
 	private void InstantiateTrait(TraitType traitType, bool isTraitOne)
 	{
 		BaseTrait baseTrait = TraitLibrary.GetTrait(traitType);
@@ -171,7 +171,7 @@ public class TraitManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F49 RID: 16201 RVA: 0x000E19B4 File Offset: 0x000DFBB4
+	// Token: 0x0600587D RID: 22653 RVA: 0x00151C6C File Offset: 0x0014FE6C
 	public static FoundState GetTraitFoundState(TraitType traitType)
 	{
 		SerializableVector3Int serializableVector3Int;
@@ -186,7 +186,7 @@ public class TraitManager : MonoBehaviour
 		return (FoundState)serializableVector3Int.z;
 	}
 
-	// Token: 0x06003F4A RID: 16202 RVA: 0x000E1A04 File Offset: 0x000DFC04
+	// Token: 0x0600587E RID: 22654 RVA: 0x00151CBC File Offset: 0x0014FEBC
 	public static void SetTraitFoundState(TraitType traitType, FoundState foundState)
 	{
 		if (!TraitManager.TraitSpawnOddsTable.ContainsKey(traitType))
@@ -203,7 +203,7 @@ public class TraitManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F4B RID: 16203 RVA: 0x000E1A78 File Offset: 0x000DFC78
+	// Token: 0x0600587F RID: 22655 RVA: 0x00151D30 File Offset: 0x0014FF30
 	public static TraitSpawnOdds GetTraitSpawnOdds(TraitType traitType)
 	{
 		SerializableVector3Int serializableVector3Int;
@@ -214,7 +214,7 @@ public class TraitManager : MonoBehaviour
 		throw new KeyNotFoundException("Cannot GET trait spawn odds [" + traitType.ToString() + "] because entry not found in Player Save Data.");
 	}
 
-	// Token: 0x06003F4C RID: 16204 RVA: 0x000E1AC8 File Offset: 0x000DFCC8
+	// Token: 0x06005880 RID: 22656 RVA: 0x00151D80 File Offset: 0x0014FF80
 	public static void SetTraitSpawnOdds(TraitType traitType, int odds, bool additive)
 	{
 		if (!TraitManager.TraitSpawnOddsTable.ContainsKey(traitType))
@@ -241,7 +241,7 @@ public class TraitManager : MonoBehaviour
 		TraitManager.TraitSpawnOddsTable[traitType] = rValue;
 	}
 
-	// Token: 0x06003F4D RID: 16205 RVA: 0x000E1B60 File Offset: 0x000DFD60
+	// Token: 0x06005881 RID: 22657 RVA: 0x00151E18 File Offset: 0x00150018
 	public static void SetTraitSpawnOdds(TraitType traitType, TraitSpawnOdds traitSpawnOdds)
 	{
 		if (TraitManager.TraitSpawnOddsTable.ContainsKey(traitType))
@@ -254,7 +254,7 @@ public class TraitManager : MonoBehaviour
 		throw new KeyNotFoundException("Cannot SET trait spawn odds [" + traitType.ToString() + "] because entry not found in Player Save Data.");
 	}
 
-	// Token: 0x06003F4E RID: 16206 RVA: 0x000E1BC8 File Offset: 0x000DFDC8
+	// Token: 0x06005882 RID: 22658 RVA: 0x00151E80 File Offset: 0x00150080
 	public static int GetTraitBlueprintLevel(TraitType traitType)
 	{
 		SerializableVector3Int serializableVector3Int;
@@ -265,7 +265,7 @@ public class TraitManager : MonoBehaviour
 		throw new KeyNotFoundException("Cannot GET trait blueprint level [" + traitType.ToString() + "] because entry not found in Player Save Data.");
 	}
 
-	// Token: 0x06003F4F RID: 16207 RVA: 0x000E1C0C File Offset: 0x000DFE0C
+	// Token: 0x06005883 RID: 22659 RVA: 0x00151EC4 File Offset: 0x001500C4
 	public static void SetTraitBlueprintLevel(TraitType traitType, int level, bool additive)
 	{
 		if (TraitManager.TraitSpawnOddsTable.ContainsKey(traitType))
@@ -287,7 +287,7 @@ public class TraitManager : MonoBehaviour
 		throw new KeyNotFoundException("Cannot SET trait blueprint level [" + traitType.ToString() + "] because entry not found in Player Save Data.");
 	}
 
-	// Token: 0x06003F50 RID: 16208 RVA: 0x000E1C8C File Offset: 0x000DFE8C
+	// Token: 0x06005884 RID: 22660 RVA: 0x00151F44 File Offset: 0x00150144
 	public static int GetTraitUpgradeLevel(TraitType traitType)
 	{
 		SerializableVector3Int serializableVector3Int;
@@ -298,7 +298,7 @@ public class TraitManager : MonoBehaviour
 		throw new KeyNotFoundException("Cannot GET trait upgrade level [" + traitType.ToString() + "] because entry not found in Player Save Data.");
 	}
 
-	// Token: 0x06003F51 RID: 16209 RVA: 0x000E1CD0 File Offset: 0x000DFED0
+	// Token: 0x06005885 RID: 22661 RVA: 0x00151F88 File Offset: 0x00150188
 	public static bool SetTraitUpgradeLevel(TraitType traitType, int level, bool additive, bool overrideValues)
 	{
 		if (!TraitManager.TraitSpawnOddsTable.ContainsKey(traitType))
@@ -344,13 +344,13 @@ public class TraitManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003F52 RID: 16210 RVA: 0x000E1DC9 File Offset: 0x000DFFC9
+	// Token: 0x06005886 RID: 22662 RVA: 0x00030160 File Offset: 0x0002E360
 	public static bool CanAfford(TraitType traitType)
 	{
 		return SaveManager.PlayerSaveData.GoldCollectedIncludingBank >= 0 && SaveManager.PlayerSaveData.EquipmentOreCollected >= 0;
 	}
 
-	// Token: 0x06003F53 RID: 16211 RVA: 0x000E1DE8 File Offset: 0x000DFFE8
+	// Token: 0x06005887 RID: 22663 RVA: 0x00152084 File Offset: 0x00150284
 	public static bool CanPurchaseTrait(TraitType traitType)
 	{
 		FoundState traitFoundState = TraitManager.GetTraitFoundState(traitType);
@@ -358,7 +358,7 @@ public class TraitManager : MonoBehaviour
 		return traitFoundState > FoundState.NotFound && traitFoundState < FoundState.Purchased && traitBlueprintLevel > 0 && TraitManager.CanAfford(traitType);
 	}
 
-	// Token: 0x06003F54 RID: 16212 RVA: 0x000E1E1C File Offset: 0x000E001C
+	// Token: 0x06005888 RID: 22664 RVA: 0x001520B8 File Offset: 0x001502B8
 	public static bool CanUpgradeTrait(TraitType traitType)
 	{
 		bool traitFoundState = TraitManager.GetTraitFoundState(traitType) != FoundState.Purchased;
@@ -367,7 +367,7 @@ public class TraitManager : MonoBehaviour
 		return !traitFoundState && traitUpgradeLevel < traitBlueprintLevel && traitUpgradeLevel < 3 && TraitManager.CanAfford(traitType);
 	}
 
-	// Token: 0x06003F55 RID: 16213 RVA: 0x000E1E54 File Offset: 0x000E0054
+	// Token: 0x06005889 RID: 22665 RVA: 0x001520F0 File Offset: 0x001502F0
 	public static TraitSeenState GetTraitSeenState(TraitType traitType)
 	{
 		if (traitType == TraitType.Antique)
@@ -382,7 +382,7 @@ public class TraitManager : MonoBehaviour
 		return TraitSeenState.NeverSeen;
 	}
 
-	// Token: 0x06003F56 RID: 16214 RVA: 0x000E1E82 File Offset: 0x000E0082
+	// Token: 0x0600588A RID: 22666 RVA: 0x0003017F File Offset: 0x0002E37F
 	public static void SetTraitSeenState(TraitType traitType, TraitSeenState seenState, bool forceState)
 	{
 		if (SaveManager.PlayerSaveData.TraitSeenTable.ContainsKey(traitType) && (SaveManager.PlayerSaveData.TraitSeenTable[traitType] < seenState || forceState))
@@ -391,19 +391,19 @@ public class TraitManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F57 RID: 16215 RVA: 0x000E1EBD File Offset: 0x000E00BD
+	// Token: 0x0600588B RID: 22667 RVA: 0x000301BA File Offset: 0x0002E3BA
 	private void OnDestroy()
 	{
 		TraitManager.IsInitialized = false;
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.TraitsChanged, this.m_onTraitsChanged);
 	}
 
-	// Token: 0x04002EF5 RID: 12021
+	// Token: 0x0400413E RID: 16702
 	private List<BaseTrait> m_activeTraitsList = new List<BaseTrait>();
 
-	// Token: 0x04002EF6 RID: 12022
+	// Token: 0x0400413F RID: 16703
 	private List<TraitType> m_activeTraitTypeList = new List<TraitType>();
 
-	// Token: 0x04002EF7 RID: 12023
+	// Token: 0x04004140 RID: 16704
 	private Action<MonoBehaviour, EventArgs> m_onTraitsChanged;
 }

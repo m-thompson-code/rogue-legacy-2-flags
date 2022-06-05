@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000106 RID: 262
+// Token: 0x020001A7 RID: 423
 public class Plant_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x0600080B RID: 2059 RVA: 0x0001BD2C File Offset: 0x00019F2C
+	// Token: 0x06000BA6 RID: 2982 RVA: 0x00007260 File Offset: 0x00005460
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -18,8 +18,8 @@ public class Plant_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000450 RID: 1104
-	// (get) Token: 0x0600080C RID: 2060 RVA: 0x0001BD62 File Offset: 0x00019F62
+	// Token: 0x17000582 RID: 1410
+	// (get) Token: 0x06000BA7 RID: 2983 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -28,7 +28,7 @@ public class Plant_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600080D RID: 2061 RVA: 0x0001BD73 File Offset: 0x00019F73
+	// Token: 0x06000BA8 RID: 2984 RVA: 0x00007296 File Offset: 0x00005496
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -36,8 +36,8 @@ public class Plant_Basic_AIScript : BaseAIScript
 		base.EnemyController.LockFlip = true;
 	}
 
-	// Token: 0x17000451 RID: 1105
-	// (get) Token: 0x0600080E RID: 2062 RVA: 0x0001BD9E File Offset: 0x00019F9E
+	// Token: 0x17000583 RID: 1411
+	// (get) Token: 0x06000BA9 RID: 2985 RVA: 0x000072C1 File Offset: 0x000054C1
 	protected virtual Vector2 m_numSporesFired
 	{
 		get
@@ -46,8 +46,8 @@ public class Plant_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000452 RID: 1106
-	// (get) Token: 0x0600080F RID: 2063 RVA: 0x0001BDAF File Offset: 0x00019FAF
+	// Token: 0x17000584 RID: 1412
+	// (get) Token: 0x06000BAA RID: 2986 RVA: 0x00004A48 File Offset: 0x00002C48
 	protected virtual Vector2 m_delayBetweenSporesFired
 	{
 		get
@@ -56,8 +56,8 @@ public class Plant_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000453 RID: 1107
-	// (get) Token: 0x06000810 RID: 2064 RVA: 0x0001BDC0 File Offset: 0x00019FC0
+	// Token: 0x17000585 RID: 1413
+	// (get) Token: 0x06000BAB RID: 2987 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_spore_Exit_ForceIdle
 	{
 		get
@@ -66,8 +66,8 @@ public class Plant_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000454 RID: 1108
-	// (get) Token: 0x06000811 RID: 2065 RVA: 0x0001BDC7 File Offset: 0x00019FC7
+	// Token: 0x17000586 RID: 1414
+	// (get) Token: 0x06000BAC RID: 2988 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_spore_AttackCD
 	{
 		get
@@ -76,7 +76,7 @@ public class Plant_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000812 RID: 2066 RVA: 0x0001BDCE File Offset: 0x00019FCE
+	// Token: 0x06000BAD RID: 2989 RVA: 0x000072D2 File Offset: 0x000054D2
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -103,8 +103,8 @@ public class Plant_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x17000455 RID: 1109
-	// (get) Token: 0x06000813 RID: 2067 RVA: 0x0001BDDD File Offset: 0x00019FDD
+	// Token: 0x17000587 RID: 1415
+	// (get) Token: 0x06000BAE RID: 2990 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_altAttack_Exit_ForceIdle
 	{
 		get
@@ -113,8 +113,8 @@ public class Plant_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000456 RID: 1110
-	// (get) Token: 0x06000814 RID: 2068 RVA: 0x0001BDE4 File Offset: 0x00019FE4
+	// Token: 0x17000588 RID: 1416
+	// (get) Token: 0x06000BAF RID: 2991 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_altAttack_AttackCD
 	{
 		get
@@ -123,7 +123,7 @@ public class Plant_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000815 RID: 2069 RVA: 0x0001BDEB File Offset: 0x00019FEB
+	// Token: 0x06000BB0 RID: 2992 RVA: 0x000072E1 File Offset: 0x000054E1
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -149,72 +149,72 @@ public class Plant_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x04000B67 RID: 2919
+	// Token: 0x04000E31 RID: 3633
 	protected float m_spore_TellIntro_AnimationSpeed = 0.85f;
 
-	// Token: 0x04000B68 RID: 2920
+	// Token: 0x04000E32 RID: 3634
 	protected float m_spore_TellHold_AnimationSpeed = 1.3f;
 
-	// Token: 0x04000B69 RID: 2921
+	// Token: 0x04000E33 RID: 3635
 	protected float m_spore_Tell_Delay = 1.15f;
 
-	// Token: 0x04000B6A RID: 2922
+	// Token: 0x04000E34 RID: 3636
 	protected float m_spore_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B6B RID: 2923
+	// Token: 0x04000E35 RID: 3637
 	protected float m_spore_AttackIntro_Delay;
 
-	// Token: 0x04000B6C RID: 2924
+	// Token: 0x04000E36 RID: 3638
 	protected float m_spore_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000B6D RID: 2925
+	// Token: 0x04000E37 RID: 3639
 	protected float m_spore_AttackHold_Delay;
 
-	// Token: 0x04000B6E RID: 2926
+	// Token: 0x04000E38 RID: 3640
 	protected float m_spore_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000B6F RID: 2927
+	// Token: 0x04000E39 RID: 3641
 	protected float m_spore_Exit_Delay;
 
-	// Token: 0x04000B70 RID: 2928
+	// Token: 0x04000E3A RID: 3642
 	protected const string SPAWN_PROJECTILE = "PlantSpawnSporeProjectile";
 
-	// Token: 0x04000B71 RID: 2929
+	// Token: 0x04000E3B RID: 3643
 	protected const string FALL_PROJECTILE = "PlantFallSporeProjectile";
 
-	// Token: 0x04000B72 RID: 2930
+	// Token: 0x04000E3C RID: 3644
 	protected float m_altAttack_TellIntro_AnimationSpeed = 0.85f;
 
-	// Token: 0x04000B73 RID: 2931
+	// Token: 0x04000E3D RID: 3645
 	protected float m_altAttack_TellHold_AnimationSpeed = 1.3f;
 
-	// Token: 0x04000B74 RID: 2932
+	// Token: 0x04000E3E RID: 3646
 	protected float m_altAttack_Tell_Delay = 1.15f;
 
-	// Token: 0x04000B75 RID: 2933
+	// Token: 0x04000E3F RID: 3647
 	protected float m_altAttack_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B76 RID: 2934
+	// Token: 0x04000E40 RID: 3648
 	protected float m_altAttack_AttackIntro_Delay;
 
-	// Token: 0x04000B77 RID: 2935
+	// Token: 0x04000E41 RID: 3649
 	protected float m_altAttack_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000B78 RID: 2936
+	// Token: 0x04000E42 RID: 3650
 	protected float m_altAttack_AttackHold_Delay;
 
-	// Token: 0x04000B79 RID: 2937
+	// Token: 0x04000E43 RID: 3651
 	protected float m_altAttack_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000B7A RID: 2938
+	// Token: 0x04000E44 RID: 3652
 	protected float m_altAttack_Exit_Delay;
 
-	// Token: 0x04000B7B RID: 2939
+	// Token: 0x04000E45 RID: 3653
 	protected const string HOMING_PROJECTILE = "PlantHomingSporeProjectile";
 
-	// Token: 0x04000B7C RID: 2940
+	// Token: 0x04000E46 RID: 3654
 	protected const string BOLT_PROJECTILE = "PlantBoltProjectile";
 
-	// Token: 0x04000B7D RID: 2941
+	// Token: 0x04000E47 RID: 3655
 	protected const string HOMING_PROJECTILE_EXPERT = "PlantHomingSporeProjectileExpertVariant";
 }

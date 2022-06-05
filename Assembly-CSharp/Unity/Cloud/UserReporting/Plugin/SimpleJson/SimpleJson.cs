@@ -10,11 +10,11 @@ using Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection;
 
 namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 {
-	// Token: 0x02000849 RID: 2121
+	// Token: 0x02000D37 RID: 3383
 	[GeneratedCode("simple-json", "1.0.0")]
 	public static class SimpleJson
 	{
-		// Token: 0x0600463B RID: 17979 RVA: 0x000FA498 File Offset: 0x000F8698
+		// Token: 0x0600609A RID: 24730 RVA: 0x00167178 File Offset: 0x00165378
 		static SimpleJson()
 		{
 			SimpleJson.EscapeTable = new char[93];
@@ -27,7 +27,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			SimpleJson.EscapeTable[9] = 't';
 		}
 
-		// Token: 0x0600463C RID: 17980 RVA: 0x000FA50C File Offset: 0x000F870C
+		// Token: 0x0600609B RID: 24731 RVA: 0x001671EC File Offset: 0x001653EC
 		public static object DeserializeObject(string json)
 		{
 			object result;
@@ -38,7 +38,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			throw new SerializationException("Invalid JSON string");
 		}
 
-		// Token: 0x0600463D RID: 17981 RVA: 0x000FA530 File Offset: 0x000F8730
+		// Token: 0x0600609C RID: 24732 RVA: 0x00167210 File Offset: 0x00165410
 		public static bool TryDeserializeObject(string json, out object obj)
 		{
 			bool result = true;
@@ -55,7 +55,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return result;
 		}
 
-		// Token: 0x0600463E RID: 17982 RVA: 0x000FA560 File Offset: 0x000F8760
+		// Token: 0x0600609D RID: 24733 RVA: 0x00167240 File Offset: 0x00165440
 		public static object DeserializeObject(string json, Type type, IJsonSerializerStrategy jsonSerializerStrategy)
 		{
 			object obj = SimpleJson.DeserializeObject(json);
@@ -66,25 +66,25 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return obj;
 		}
 
-		// Token: 0x0600463F RID: 17983 RVA: 0x000FA5A1 File Offset: 0x000F87A1
+		// Token: 0x0600609E RID: 24734 RVA: 0x000354C5 File Offset: 0x000336C5
 		public static object DeserializeObject(string json, Type type)
 		{
 			return SimpleJson.DeserializeObject(json, type, null);
 		}
 
-		// Token: 0x06004640 RID: 17984 RVA: 0x000FA5AB File Offset: 0x000F87AB
+		// Token: 0x0600609F RID: 24735 RVA: 0x000354CF File Offset: 0x000336CF
 		public static T DeserializeObject<T>(string json, IJsonSerializerStrategy jsonSerializerStrategy)
 		{
 			return (T)((object)SimpleJson.DeserializeObject(json, typeof(T), jsonSerializerStrategy));
 		}
 
-		// Token: 0x06004641 RID: 17985 RVA: 0x000FA5C3 File Offset: 0x000F87C3
+		// Token: 0x060060A0 RID: 24736 RVA: 0x000354E7 File Offset: 0x000336E7
 		public static T DeserializeObject<T>(string json)
 		{
 			return (T)((object)SimpleJson.DeserializeObject(json, typeof(T), null));
 		}
 
-		// Token: 0x06004642 RID: 17986 RVA: 0x000FA5DC File Offset: 0x000F87DC
+		// Token: 0x060060A1 RID: 24737 RVA: 0x00167284 File Offset: 0x00165484
 		public static string SerializeObject(object json, IJsonSerializerStrategy jsonSerializerStrategy)
 		{
 			StringBuilder stringBuilder = new StringBuilder(2000);
@@ -95,13 +95,13 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x06004643 RID: 17987 RVA: 0x000FA606 File Offset: 0x000F8806
+		// Token: 0x060060A2 RID: 24738 RVA: 0x000354FF File Offset: 0x000336FF
 		public static string SerializeObject(object json)
 		{
 			return SimpleJson.SerializeObject(json, SimpleJson.CurrentJsonSerializerStrategy);
 		}
 
-		// Token: 0x06004644 RID: 17988 RVA: 0x000FA614 File Offset: 0x000F8814
+		// Token: 0x060060A3 RID: 24739 RVA: 0x001672B0 File Offset: 0x001654B0
 		public static string EscapeToJavascriptString(string jsonString)
 		{
 			if (string.IsNullOrEmpty(jsonString))
@@ -158,7 +158,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x06004645 RID: 17989 RVA: 0x000FA6F8 File Offset: 0x000F88F8
+		// Token: 0x060060A4 RID: 24740 RVA: 0x00167394 File Offset: 0x00165594
 		private static IDictionary<string, object> ParseObject(char[] json, ref int index, ref bool success)
 		{
 			IDictionary<string, object> dictionary = new JsonObject();
@@ -207,7 +207,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return dictionary;
 		}
 
-		// Token: 0x06004646 RID: 17990 RVA: 0x000FA788 File Offset: 0x000F8988
+		// Token: 0x060060A5 RID: 24741 RVA: 0x00167424 File Offset: 0x00165624
 		private static JsonArray ParseArray(char[] json, ref int index, ref bool success)
 		{
 			JsonArray jsonArray = new JsonArray();
@@ -243,7 +243,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return jsonArray;
 		}
 
-		// Token: 0x06004647 RID: 17991 RVA: 0x000FA7F0 File Offset: 0x000F89F0
+		// Token: 0x060060A6 RID: 24742 RVA: 0x0016748C File Offset: 0x0016568C
 		private static object ParseValue(char[] json, ref int index, ref bool success)
 		{
 			switch (SimpleJson.LookAhead(json, index))
@@ -270,7 +270,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return null;
 		}
 
-		// Token: 0x06004648 RID: 17992 RVA: 0x000FA890 File Offset: 0x000F8A90
+		// Token: 0x060060A7 RID: 24743 RVA: 0x0016752C File Offset: 0x0016572C
 		private static string ParseString(char[] json, ref int index, ref bool success)
 		{
 			StringBuilder stringBuilder = new StringBuilder(2000);
@@ -374,7 +374,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x06004649 RID: 17993 RVA: 0x000FAA98 File Offset: 0x000F8C98
+		// Token: 0x060060A8 RID: 24744 RVA: 0x00167734 File Offset: 0x00165934
 		private static string ConvertFromUtf32(int utf32)
 		{
 			if (utf32 < 0 || utf32 > 1114111)
@@ -397,7 +397,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			});
 		}
 
-		// Token: 0x0600464A RID: 17994 RVA: 0x000FAB28 File Offset: 0x000F8D28
+		// Token: 0x060060A9 RID: 24745 RVA: 0x001677C4 File Offset: 0x001659C4
 		private static object ParseNumber(char[] json, ref int index, ref bool success)
 		{
 			SimpleJson.EatWhitespace(json, ref index);
@@ -421,7 +421,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return result;
 		}
 
-		// Token: 0x0600464B RID: 17995 RVA: 0x000FABC4 File Offset: 0x000F8DC4
+		// Token: 0x060060AA RID: 24746 RVA: 0x00167860 File Offset: 0x00165A60
 		private static int GetLastIndexOfNumber(char[] json, int index)
 		{
 			int num = index;
@@ -432,7 +432,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return num - 1;
 		}
 
-		// Token: 0x0600464C RID: 17996 RVA: 0x000FABF2 File Offset: 0x000F8DF2
+		// Token: 0x060060AB RID: 24747 RVA: 0x0003550C File Offset: 0x0003370C
 		private static void EatWhitespace(char[] json, ref int index)
 		{
 			while (index < json.Length && " \t\n\r\b\f".IndexOf(json[index]) != -1)
@@ -441,14 +441,14 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			}
 		}
 
-		// Token: 0x0600464D RID: 17997 RVA: 0x000FAC14 File Offset: 0x000F8E14
+		// Token: 0x060060AC RID: 24748 RVA: 0x00167890 File Offset: 0x00165A90
 		private static int LookAhead(char[] json, int index)
 		{
 			int num = index;
 			return SimpleJson.NextToken(json, ref num);
 		}
 
-		// Token: 0x0600464E RID: 17998 RVA: 0x000FAC2C File Offset: 0x000F8E2C
+		// Token: 0x060060AD RID: 24749 RVA: 0x001678A8 File Offset: 0x00165AA8
 		private static int NextToken(char[] json, ref int index)
 		{
 			SimpleJson.EatWhitespace(json, ref index);
@@ -535,7 +535,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return 0;
 		}
 
-		// Token: 0x0600464F RID: 17999 RVA: 0x000FADA0 File Offset: 0x000F8FA0
+		// Token: 0x060060AE RID: 24750 RVA: 0x00167A1C File Offset: 0x00165C1C
 		private static bool SerializeValue(IJsonSerializerStrategy jsonSerializerStrategy, object value, StringBuilder builder)
 		{
 			bool flag = true;
@@ -592,7 +592,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return flag;
 		}
 
-		// Token: 0x06004650 RID: 18000 RVA: 0x000FAE84 File Offset: 0x000F9084
+		// Token: 0x060060AF RID: 24751 RVA: 0x00167B00 File Offset: 0x00165D00
 		private static bool SerializeObject(IJsonSerializerStrategy jsonSerializerStrategy, IEnumerable keys, IEnumerable values, StringBuilder builder)
 		{
 			builder.Append("{");
@@ -627,7 +627,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return true;
 		}
 
-		// Token: 0x06004651 RID: 18001 RVA: 0x000FAF24 File Offset: 0x000F9124
+		// Token: 0x060060B0 RID: 24752 RVA: 0x00167BA0 File Offset: 0x00165DA0
 		private static bool SerializeArray(IJsonSerializerStrategy jsonSerializerStrategy, IEnumerable anArray, StringBuilder builder)
 		{
 			builder.Append("[");
@@ -648,7 +648,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return true;
 		}
 
-		// Token: 0x06004652 RID: 18002 RVA: 0x000FAFAC File Offset: 0x000F91AC
+		// Token: 0x060060B1 RID: 24753 RVA: 0x00167C28 File Offset: 0x00165E28
 		private static bool SerializeString(string aString, StringBuilder builder)
 		{
 			if (aString.IndexOfAny(SimpleJson.EscapeCharacters) == -1)
@@ -687,7 +687,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return true;
 		}
 
-		// Token: 0x06004653 RID: 18003 RVA: 0x000FB068 File Offset: 0x000F9268
+		// Token: 0x060060B2 RID: 24754 RVA: 0x00167CE4 File Offset: 0x00165EE4
 		private static bool SerializeNumber(object number, StringBuilder builder)
 		{
 			if (number is long)
@@ -721,15 +721,15 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return true;
 		}
 
-		// Token: 0x06004654 RID: 18004 RVA: 0x000FB180 File Offset: 0x000F9380
+		// Token: 0x060060B3 RID: 24755 RVA: 0x00167DFC File Offset: 0x00165FFC
 		private static bool IsNumeric(object value)
 		{
 			return value is sbyte || value is byte || value is short || value is ushort || value is int || value is uint || value is long || value is ulong || value is float || value is double || value is decimal;
 		}
 
-		// Token: 0x1700176A RID: 5994
-		// (get) Token: 0x06004655 RID: 18005 RVA: 0x000FB1FC File Offset: 0x000F93FC
-		// (set) Token: 0x06004656 RID: 18006 RVA: 0x000FB212 File Offset: 0x000F9412
+		// Token: 0x17001FA9 RID: 8105
+		// (get) Token: 0x060060B4 RID: 24756 RVA: 0x0003552E File Offset: 0x0003372E
+		// (set) Token: 0x060060B5 RID: 24757 RVA: 0x00035544 File Offset: 0x00033744
 		public static IJsonSerializerStrategy CurrentJsonSerializerStrategy
 		{
 			get
@@ -747,8 +747,8 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			}
 		}
 
-		// Token: 0x1700176B RID: 5995
-		// (get) Token: 0x06004657 RID: 18007 RVA: 0x000FB21A File Offset: 0x000F941A
+		// Token: 0x17001FAA RID: 8106
+		// (get) Token: 0x060060B6 RID: 24758 RVA: 0x0003554C File Offset: 0x0003374C
 		[EditorBrowsable(EditorBrowsableState.Advanced)]
 		public static PocoJsonSerializerStrategy PocoJsonSerializerStrategy
 		{
@@ -763,49 +763,49 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			}
 		}
 
-		// Token: 0x04003B7A RID: 15226
+		// Token: 0x04004EDC RID: 20188
 		private const int TOKEN_NONE = 0;
 
-		// Token: 0x04003B7B RID: 15227
+		// Token: 0x04004EDD RID: 20189
 		private const int TOKEN_CURLY_OPEN = 1;
 
-		// Token: 0x04003B7C RID: 15228
+		// Token: 0x04004EDE RID: 20190
 		private const int TOKEN_CURLY_CLOSE = 2;
 
-		// Token: 0x04003B7D RID: 15229
+		// Token: 0x04004EDF RID: 20191
 		private const int TOKEN_SQUARED_OPEN = 3;
 
-		// Token: 0x04003B7E RID: 15230
+		// Token: 0x04004EE0 RID: 20192
 		private const int TOKEN_SQUARED_CLOSE = 4;
 
-		// Token: 0x04003B7F RID: 15231
+		// Token: 0x04004EE1 RID: 20193
 		private const int TOKEN_COLON = 5;
 
-		// Token: 0x04003B80 RID: 15232
+		// Token: 0x04004EE2 RID: 20194
 		private const int TOKEN_COMMA = 6;
 
-		// Token: 0x04003B81 RID: 15233
+		// Token: 0x04004EE3 RID: 20195
 		private const int TOKEN_STRING = 7;
 
-		// Token: 0x04003B82 RID: 15234
+		// Token: 0x04004EE4 RID: 20196
 		private const int TOKEN_NUMBER = 8;
 
-		// Token: 0x04003B83 RID: 15235
+		// Token: 0x04004EE5 RID: 20197
 		private const int TOKEN_TRUE = 9;
 
-		// Token: 0x04003B84 RID: 15236
+		// Token: 0x04004EE6 RID: 20198
 		private const int TOKEN_FALSE = 10;
 
-		// Token: 0x04003B85 RID: 15237
+		// Token: 0x04004EE7 RID: 20199
 		private const int TOKEN_NULL = 11;
 
-		// Token: 0x04003B86 RID: 15238
+		// Token: 0x04004EE8 RID: 20200
 		private const int BUILDER_CAPACITY = 2000;
 
-		// Token: 0x04003B87 RID: 15239
+		// Token: 0x04004EE9 RID: 20201
 		private static readonly char[] EscapeTable;
 
-		// Token: 0x04003B88 RID: 15240
+		// Token: 0x04004EEA RID: 20202
 		private static readonly char[] EscapeCharacters = new char[]
 		{
 			'"',
@@ -817,10 +817,10 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			'\t'
 		};
 
-		// Token: 0x04003B89 RID: 15241
+		// Token: 0x04004EEB RID: 20203
 		private static IJsonSerializerStrategy _currentJsonSerializerStrategy;
 
-		// Token: 0x04003B8A RID: 15242
+		// Token: 0x04004EEC RID: 20204
 		private static PocoJsonSerializerStrategy _pocoJsonSerializerStrategy;
 	}
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000279 RID: 633
+// Token: 0x02000444 RID: 1092
 public class ChangeDeadZoneOptionItem : IncrementDecrementOptionItem
 {
-	// Token: 0x06001932 RID: 6450 RVA: 0x0004F0E6 File Offset: 0x0004D2E6
+	// Token: 0x06002321 RID: 8993 RVA: 0x00012E08 File Offset: 0x00011008
 	public override void Initialize()
 	{
 		this.m_minValue = 0f;
@@ -12,7 +12,7 @@ public class ChangeDeadZoneOptionItem : IncrementDecrementOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001933 RID: 6451 RVA: 0x0004F10C File Offset: 0x0004D30C
+	// Token: 0x06002322 RID: 8994 RVA: 0x00012E2E File Offset: 0x0001102E
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -20,24 +20,24 @@ public class ChangeDeadZoneOptionItem : IncrementDecrementOptionItem
 		this.UpdateIncrementBar();
 	}
 
-	// Token: 0x06001934 RID: 6452 RVA: 0x0004F12A File Offset: 0x0004D32A
+	// Token: 0x06002323 RID: 8995 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void Increment()
 	{
 	}
 
-	// Token: 0x06001935 RID: 6453 RVA: 0x0004F12C File Offset: 0x0004D32C
+	// Token: 0x06002324 RID: 8996 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void Decrement()
 	{
 	}
 
-	// Token: 0x06001936 RID: 6454 RVA: 0x0004F12E File Offset: 0x0004D32E
+	// Token: 0x06002325 RID: 8997 RVA: 0x00012E4C File Offset: 0x0001104C
 	public override void ConfirmOptionChange()
 	{
 		SaveManager.ConfigData.DeadZone = this.m_currentIncrementValue;
 		RewiredOnStartupController.UpdateJoystickCalibrationMap();
 	}
 
-	// Token: 0x06001937 RID: 6455 RVA: 0x0004F145 File Offset: 0x0004D345
+	// Token: 0x06002326 RID: 8998 RVA: 0x00012E63 File Offset: 0x00011063
 	public override void RefreshText(object sender, EventArgs args)
 	{
 		this.m_currentIncrementValue = SaveManager.ConfigData.DeadZone;

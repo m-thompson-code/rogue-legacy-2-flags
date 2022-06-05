@@ -6,11 +6,11 @@ using UnityEngine;
 
 namespace SceneManagement_RL
 {
-	// Token: 0x020008C5 RID: 2245
+	// Token: 0x02000E1C RID: 3612
 	public class GardenToManor_SceneTransition : Transition_V2, ISceneLoadingTransition, ITransition
 	{
-		// Token: 0x170017FC RID: 6140
-		// (get) Token: 0x060049AC RID: 18860 RVA: 0x00109CE2 File Offset: 0x00107EE2
+		// Token: 0x170020B0 RID: 8368
+		// (get) Token: 0x060065D5 RID: 26069 RVA: 0x00005303 File Offset: 0x00003503
 		public override TransitionID ID
 		{
 			get
@@ -19,7 +19,7 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x060049AD RID: 18861 RVA: 0x00109CE8 File Offset: 0x00107EE8
+		// Token: 0x060065D6 RID: 26070 RVA: 0x001797E0 File Offset: 0x001779E0
 		protected override void Awake()
 		{
 			base.Awake();
@@ -30,7 +30,7 @@ namespace SceneManagement_RL
 			this.m_skyObj.SetLayerRecursively(23, true);
 		}
 
-		// Token: 0x060049AE RID: 18862 RVA: 0x00109D56 File Offset: 0x00107F56
+		// Token: 0x060065D7 RID: 26071 RVA: 0x0003820A File Offset: 0x0003640A
 		public IEnumerator TransitionIn()
 		{
 			RewiredMapController.SetIsInCutscene(true);
@@ -50,7 +50,7 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x060049AF RID: 18863 RVA: 0x00109D65 File Offset: 0x00107F65
+		// Token: 0x060065D8 RID: 26072 RVA: 0x00038219 File Offset: 0x00036419
 		public IEnumerator TransitionOut()
 		{
 			this.m_playerModel.gameObject.SetActive(true);
@@ -116,36 +116,36 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x060049B0 RID: 18864 RVA: 0x00109D74 File Offset: 0x00107F74
+		// Token: 0x060065D9 RID: 26073 RVA: 0x00038228 File Offset: 0x00036428
 		public override IEnumerator Run()
 		{
 			yield break;
 		}
 
-		// Token: 0x04003E00 RID: 15872
+		// Token: 0x040052BF RID: 21183
 		[SerializeField]
 		private float m_timeToFade = 1f;
 
-		// Token: 0x04003E01 RID: 15873
+		// Token: 0x040052C0 RID: 21184
 		[SerializeField]
 		private CanvasGroup m_canvasGroup;
 
-		// Token: 0x04003E02 RID: 15874
+		// Token: 0x040052C1 RID: 21185
 		[SerializeField]
 		private PlayerLookController m_playerModel;
 
-		// Token: 0x04003E03 RID: 15875
+		// Token: 0x040052C2 RID: 21186
 		[SerializeField]
 		private GameObject m_biomeLightController;
 
-		// Token: 0x04003E04 RID: 15876
+		// Token: 0x040052C3 RID: 21187
 		[SerializeField]
 		private GameObject m_skyObj;
 
-		// Token: 0x04003E05 RID: 15877
+		// Token: 0x040052C4 RID: 21188
 		private Animator m_swipeAnimator;
 
-		// Token: 0x04003E06 RID: 15878
+		// Token: 0x040052C5 RID: 21189
 		private WaitRL_Yield m_waitRL;
 	}
 }

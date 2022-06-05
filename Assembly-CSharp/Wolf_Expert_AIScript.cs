@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000151 RID: 337
+// Token: 0x0200026A RID: 618
 public class Wolf_Expert_AIScript : Wolf_Basic_AIScript
 {
-	// Token: 0x17000648 RID: 1608
-	// (get) Token: 0x06000B64 RID: 2916 RVA: 0x00022AD9 File Offset: 0x00020CD9
+	// Token: 0x17000868 RID: 2152
+	// (get) Token: 0x060011C9 RID: 4553 RVA: 0x00009180 File Offset: 0x00007380
 	protected override Vector2 m_jumpPower
 	{
 		get
@@ -14,8 +14,8 @@ public class Wolf_Expert_AIScript : Wolf_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000649 RID: 1609
-	// (get) Token: 0x06000B65 RID: 2917 RVA: 0x00022AEA File Offset: 0x00020CEA
+	// Token: 0x17000869 RID: 2153
+	// (get) Token: 0x060011CA RID: 4554 RVA: 0x0000931E File Offset: 0x0000751E
 	protected override Vector2 m_dash_AttackHold_ForwardPower
 	{
 		get

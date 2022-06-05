@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200042D RID: 1069
+// Token: 0x020006F3 RID: 1779
 public class EnemyVoidDashable : MonoBehaviour
 {
 }

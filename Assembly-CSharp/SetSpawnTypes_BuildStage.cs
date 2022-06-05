@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-// Token: 0x02000671 RID: 1649
+// Token: 0x02000AE3 RID: 2787
 public class SetSpawnTypes_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B68 RID: 15208 RVA: 0x000CC48B File Offset: 0x000CA68B
+	// Token: 0x0600538A RID: 21386 RVA: 0x0002D5F8 File Offset: 0x0002B7F8
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		Stopwatch timer = new Stopwatch();
@@ -46,7 +46,7 @@ public class SetSpawnTypes_BuildStage : IBiomeBuildStage
 		yield break;
 	}
 
-	// Token: 0x06003B69 RID: 15209 RVA: 0x000CC4A4 File Offset: 0x000CA6A4
+	// Token: 0x0600538B RID: 21387 RVA: 0x0013C1EC File Offset: 0x0013A3EC
 	private void SetSpawnTypes(Room room)
 	{
 		if (room.GridPointManager == null)
@@ -70,7 +70,7 @@ public class SetSpawnTypes_BuildStage : IBiomeBuildStage
 		room.RoomEnemyManager.SetSpawnType();
 	}
 
-	// Token: 0x06003B6A RID: 15210 RVA: 0x000CC550 File Offset: 0x000CA750
+	// Token: 0x0600538C RID: 21388 RVA: 0x0013C298 File Offset: 0x0013A498
 	private void SetSpawnTypes(MergeRoom room)
 	{
 		for (int i = 0; i < room.StandaloneGridPointManagers.Length; i++)

@@ -1,22 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200054C RID: 1356
+// Token: 0x02000900 RID: 2304
 public class CheckPlayerFlagUnlockController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x17001243 RID: 4675
-	// (get) Token: 0x060031D3 RID: 12755 RVA: 0x000A8704 File Offset: 0x000A6904
-	// (set) Token: 0x060031D4 RID: 12756 RVA: 0x000A870C File Offset: 0x000A690C
+	// Token: 0x170018D2 RID: 6354
+	// (get) Token: 0x06004605 RID: 17925 RVA: 0x000266F0 File Offset: 0x000248F0
+	// (set) Token: 0x06004606 RID: 17926 RVA: 0x000266F8 File Offset: 0x000248F8
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x060031D5 RID: 12757 RVA: 0x000A8715 File Offset: 0x000A6915
+	// Token: 0x06004607 RID: 17927 RVA: 0x00026701 File Offset: 0x00024901
 	private void Awake()
 	{
 		this.m_spawner = base.GetComponent<ISpawnController>();
 		this.m_onPlayerEnterRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerEnterRoom);
 	}
 
-	// Token: 0x060031D6 RID: 12758 RVA: 0x000A8735 File Offset: 0x000A6935
+	// Token: 0x06004608 RID: 17928 RVA: 0x00026721 File Offset: 0x00024921
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
@@ -24,7 +24,7 @@ public class CheckPlayerFlagUnlockController : MonoBehaviour, IRoomConsumer
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterHubTown, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x060031D7 RID: 12759 RVA: 0x000A8769 File Offset: 0x000A6969
+	// Token: 0x06004609 RID: 17929 RVA: 0x00026755 File Offset: 0x00024955
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -34,7 +34,7 @@ public class CheckPlayerFlagUnlockController : MonoBehaviour, IRoomConsumer
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterHubTown, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x060031D8 RID: 12760 RVA: 0x000A87A4 File Offset: 0x000A69A4
+	// Token: 0x0600460A RID: 17930 RVA: 0x00112730 File Offset: 0x00110930
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		bool flag = SaveManager.PlayerSaveData.GetFlag(this.m_playerFlagToCheck);
@@ -88,22 +88,22 @@ public class CheckPlayerFlagUnlockController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x0400273C RID: 10044
+	// Token: 0x04003611 RID: 13841
 	[SerializeField]
 	private PlayerSaveFlag m_playerFlagToCheck;
 
-	// Token: 0x0400273D RID: 10045
+	// Token: 0x04003612 RID: 13842
 	[SerializeField]
 	private bool m_disableWhenUnlocked;
 
-	// Token: 0x0400273E RID: 10046
+	// Token: 0x04003613 RID: 13843
 	[SerializeField]
 	[Tooltip("If enabled, will be considered unlocked if Global_EV.UNLOCK_ALL_SHOPS == true.")]
 	private bool m_isShop;
 
-	// Token: 0x04002740 RID: 10048
+	// Token: 0x04003615 RID: 13845
 	private ISpawnController m_spawner;
 
-	// Token: 0x04002741 RID: 10049
+	// Token: 0x04003616 RID: 13846
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 }

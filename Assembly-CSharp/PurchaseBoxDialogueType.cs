@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x020003C3 RID: 963
+// Token: 0x0200065B RID: 1627
 public enum PurchaseBoxDialogueType
 {
-	// Token: 0x04001E41 RID: 7745
+	// Token: 0x0400287A RID: 10362
 	Welcome,
-	// Token: 0x04001E42 RID: 7746
+	// Token: 0x0400287B RID: 10363
 	PurchaseSuccessful,
-	// Token: 0x04001E43 RID: 7747
+	// Token: 0x0400287C RID: 10364
 	PurchaseFailed_NoMoney,
-	// Token: 0x04001E44 RID: 7748
+	// Token: 0x0400287D RID: 10365
 	PurchaseFailed_NoOre,
-	// Token: 0x04001E45 RID: 7749
+	// Token: 0x0400287E RID: 10366
 	GearDescription,
-	// Token: 0x04001E46 RID: 7750
+	// Token: 0x0400287F RID: 10367
 	GearNotFound
 }

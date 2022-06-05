@@ -2,22 +2,22 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000162 RID: 354
+// Token: 0x02000290 RID: 656
 public static class SummonProjectile_AIExtension
 {
-	// Token: 0x06000BD7 RID: 3031 RVA: 0x00023BE0 File Offset: 0x00021DE0
+	// Token: 0x060012BA RID: 4794 RVA: 0x00082990 File Offset: 0x00080B90
 	public static void SummonProjectile(this BaseAIScript aiScript, string projectileName, Vector2 offset, bool matchFacing = true, float angle = 0f, float speedMod = 1f, bool playSummonAudio = true, bool playSpawnAudio = true, bool playLifetimeAudio = true, bool playDeathAudio = true)
 	{
 		aiScript.RunPersistentCoroutine(aiScript.SummonProjectileCoroutine_V2(projectileName, offset, matchFacing, angle, speedMod, -1, playSummonAudio, playSpawnAudio, playLifetimeAudio, playDeathAudio));
 	}
 
-	// Token: 0x06000BD8 RID: 3032 RVA: 0x00023C0C File Offset: 0x00021E0C
+	// Token: 0x060012BB RID: 4795 RVA: 0x000829BC File Offset: 0x00080BBC
 	public static void SummonProjectileFromRoomPos(this BaseAIScript aiScript, string projectileName, int spawnPosIndex, bool matchFacing = true, float angle = 0f, float speedMod = 1f, bool playSummonAudio = true, bool playSpawnAudio = true, bool playLifetimeAudio = true, bool playDeathAudio = true)
 	{
 		aiScript.RunPersistentCoroutine(aiScript.SummonProjectileCoroutine_V2(projectileName, Vector2.zero, matchFacing, angle, speedMod, spawnPosIndex, playSummonAudio, playSpawnAudio, playLifetimeAudio, playDeathAudio));
 	}
 
-	// Token: 0x06000BD9 RID: 3033 RVA: 0x00023C3C File Offset: 0x00021E3C
+	// Token: 0x060012BC RID: 4796 RVA: 0x000829EC File Offset: 0x00080BEC
 	private static IEnumerator SummonProjectileCoroutine_V2(this BaseAIScript aiScript, string projectileName, Vector2 offset, bool matchFacing = true, float angle = 0f, float speedMod = 1f, int spawnPosIndex = -1, bool playSummonAudio = true, bool playSpawnAudio = true, bool playLifetimeAudio = true, bool playDeathAudio = true)
 	{
 		bool isFacingRight = true;

@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000289 RID: 649
+// Token: 0x02000455 RID: 1109
 public class DisableRumbleOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001988 RID: 6536 RVA: 0x00050056 File Offset: 0x0004E256
+	// Token: 0x06002377 RID: 9079 RVA: 0x000134B1 File Offset: 0x000116B1
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class DisableRumbleOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001989 RID: 6537 RVA: 0x0005008E File Offset: 0x0004E28E
+	// Token: 0x06002378 RID: 9080 RVA: 0x000134E9 File Offset: 0x000116E9
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class DisableRumbleOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x0600198A RID: 6538 RVA: 0x000500C8 File Offset: 0x0004E2C8
+	// Token: 0x06002379 RID: 9081 RVA: 0x00013523 File Offset: 0x00011723
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed Toggle Rumble: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x0600198B RID: 6539 RVA: 0x000500DF File Offset: 0x0004E2DF
+	// Token: 0x0600237A RID: 9082 RVA: 0x0001353A File Offset: 0x0001173A
 	public override void ConfirmOptionChange()
 	{
 		if (this.m_selectedIndex == 0)

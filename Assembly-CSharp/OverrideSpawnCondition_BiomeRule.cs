@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020005F6 RID: 1526
+// Token: 0x02000A0B RID: 2571
 [CreateAssetMenu(menuName = "Custom/Biome Rules/Override Spawn Condition")]
 public class OverrideSpawnCondition_BiomeRule : BiomeRule
 {
-	// Token: 0x1700137A RID: 4986
-	// (get) Token: 0x06003706 RID: 14086 RVA: 0x000BCE9F File Offset: 0x000BB09F
+	// Token: 0x17001ABD RID: 6845
+	// (get) Token: 0x06004D5F RID: 19807 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override BiomeRuleExecutionTime ExecutionTime
 	{
 		get
@@ -16,7 +16,7 @@ public class OverrideSpawnCondition_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x06003707 RID: 14087 RVA: 0x000BCEA4 File Offset: 0x000BB0A4
+	// Token: 0x06004D60 RID: 19808 RVA: 0x0012B81C File Offset: 0x00129A1C
 	private SpawnConditionOverride GetSpawnConditionOverride(BiomeType biome)
 	{
 		SpawnConditionOverride spawnConditionOverride = BiomeRuleManager.GetSpawnConditionOverride(biome);
@@ -31,7 +31,7 @@ public class OverrideSpawnCondition_BiomeRule : BiomeRule
 		return spawnConditionOverride;
 	}
 
-	// Token: 0x06003708 RID: 14088 RVA: 0x000BCED9 File Offset: 0x000BB0D9
+	// Token: 0x06004D61 RID: 19809 RVA: 0x0002A03B File Offset: 0x0002823B
 	public override IEnumerator RunRule(BiomeType biome)
 	{
 		SpawnConditionOverride spawnConditionOverride = this.GetSpawnConditionOverride(biome);
@@ -43,13 +43,13 @@ public class OverrideSpawnCondition_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x06003709 RID: 14089 RVA: 0x000BCEEF File Offset: 0x000BB0EF
+	// Token: 0x06004D62 RID: 19810 RVA: 0x0002A051 File Offset: 0x00028251
 	private void SetOverrideIsOn(SpawnConditionOverride spawnConditionOverride, bool isOn)
 	{
 		spawnConditionOverride.SetIsOverrideOn(this.m_condition, isOn);
 	}
 
-	// Token: 0x0600370A RID: 14090 RVA: 0x000BCF00 File Offset: 0x000BB100
+	// Token: 0x06004D63 RID: 19811 RVA: 0x0012B854 File Offset: 0x00129A54
 	public override void UndoRule(BiomeType biome)
 	{
 		SpawnConditionOverride spawnConditionOverride = this.GetSpawnConditionOverride(biome);
@@ -59,11 +59,11 @@ public class OverrideSpawnCondition_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x04002A60 RID: 10848
+	// Token: 0x04003A8F RID: 14991
 	[SerializeField]
 	private SpawnConditionOverrideID m_condition = SpawnConditionOverrideID.Dash;
 
-	// Token: 0x04002A61 RID: 10849
+	// Token: 0x04003A90 RID: 14992
 	[SerializeField]
 	private bool m_value = true;
 }

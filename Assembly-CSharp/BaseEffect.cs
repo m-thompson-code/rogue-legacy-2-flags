@@ -2,11 +2,11 @@
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x02000407 RID: 1031
+// Token: 0x020006BD RID: 1725
 public abstract class BaseEffect : MonoBehaviour, IGenericPoolObj
 {
-	// Token: 0x17000F63 RID: 3939
-	// (get) Token: 0x06002674 RID: 9844 RVA: 0x0007F8F9 File Offset: 0x0007DAF9
+	// Token: 0x17001424 RID: 5156
+	// (get) Token: 0x0600351D RID: 13597 RVA: 0x0001D1E2 File Offset: 0x0001B3E2
 	public IRelayLink<BaseEffect> OnPlayRelay
 	{
 		get
@@ -15,38 +15,38 @@ public abstract class BaseEffect : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17000F64 RID: 3940
-	// (get) Token: 0x06002675 RID: 9845 RVA: 0x0007F906 File Offset: 0x0007DB06
-	// (set) Token: 0x06002676 RID: 9846 RVA: 0x0007F90E File Offset: 0x0007DB0E
+	// Token: 0x17001425 RID: 5157
+	// (get) Token: 0x0600351E RID: 13598 RVA: 0x0001D1EF File Offset: 0x0001B3EF
+	// (set) Token: 0x0600351F RID: 13599 RVA: 0x0001D1F7 File Offset: 0x0001B3F7
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x17000F65 RID: 3941
-	// (get) Token: 0x06002677 RID: 9847 RVA: 0x0007F917 File Offset: 0x0007DB17
-	// (set) Token: 0x06002678 RID: 9848 RVA: 0x0007F91F File Offset: 0x0007DB1F
+	// Token: 0x17001426 RID: 5158
+	// (get) Token: 0x06003520 RID: 13600 RVA: 0x0001D200 File Offset: 0x0001B400
+	// (set) Token: 0x06003521 RID: 13601 RVA: 0x0001D208 File Offset: 0x0001B408
 	public bool IsAwakeCalled { get; protected set; }
 
-	// Token: 0x17000F66 RID: 3942
-	// (get) Token: 0x06002679 RID: 9849 RVA: 0x0007F928 File Offset: 0x0007DB28
-	// (set) Token: 0x0600267A RID: 9850 RVA: 0x0007F930 File Offset: 0x0007DB30
+	// Token: 0x17001427 RID: 5159
+	// (get) Token: 0x06003522 RID: 13602 RVA: 0x0001D211 File Offset: 0x0001B411
+	// (set) Token: 0x06003523 RID: 13603 RVA: 0x0001D219 File Offset: 0x0001B419
 	public int AnimatorLayer { get; set; }
 
-	// Token: 0x17000F67 RID: 3943
-	// (get) Token: 0x0600267B RID: 9851 RVA: 0x0007F939 File Offset: 0x0007DB39
-	// (set) Token: 0x0600267C RID: 9852 RVA: 0x0007F941 File Offset: 0x0007DB41
+	// Token: 0x17001428 RID: 5160
+	// (get) Token: 0x06003524 RID: 13604 RVA: 0x0001D222 File Offset: 0x0001B422
+	// (set) Token: 0x06003525 RID: 13605 RVA: 0x0001D22A File Offset: 0x0001B42A
 	public bool DisableDestroyOnRoomChange { get; set; }
 
-	// Token: 0x17000F68 RID: 3944
-	// (get) Token: 0x0600267D RID: 9853 RVA: 0x0007F94A File Offset: 0x0007DB4A
-	// (set) Token: 0x0600267E RID: 9854 RVA: 0x0007F952 File Offset: 0x0007DB52
+	// Token: 0x17001429 RID: 5161
+	// (get) Token: 0x06003526 RID: 13606 RVA: 0x0001D233 File Offset: 0x0001B433
+	// (set) Token: 0x06003527 RID: 13607 RVA: 0x0001D23B File Offset: 0x0001B43B
 	public bool IsPlaying { get; protected set; }
 
-	// Token: 0x17000F69 RID: 3945
-	// (get) Token: 0x0600267F RID: 9855 RVA: 0x0007F95B File Offset: 0x0007DB5B
-	// (set) Token: 0x06002680 RID: 9856 RVA: 0x0007F963 File Offset: 0x0007DB63
+	// Token: 0x1700142A RID: 5162
+	// (get) Token: 0x06003528 RID: 13608 RVA: 0x0001D244 File Offset: 0x0001B444
+	// (set) Token: 0x06003529 RID: 13609 RVA: 0x0001D24C File Offset: 0x0001B44C
 	public EffectTriggerDirection EffectDirection { get; set; }
 
-	// Token: 0x17000F6A RID: 3946
-	// (get) Token: 0x06002681 RID: 9857 RVA: 0x0007F96C File Offset: 0x0007DB6C
+	// Token: 0x1700142B RID: 5163
+	// (get) Token: 0x0600352A RID: 13610 RVA: 0x0001D255 File Offset: 0x0001B455
 	public bool IsFlipped
 	{
 		get
@@ -55,22 +55,22 @@ public abstract class BaseEffect : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17000F6B RID: 3947
-	// (get) Token: 0x06002682 RID: 9858 RVA: 0x0007F98A File Offset: 0x0007DB8A
-	// (set) Token: 0x06002683 RID: 9859 RVA: 0x0007F992 File Offset: 0x0007DB92
+	// Token: 0x1700142C RID: 5164
+	// (get) Token: 0x0600352B RID: 13611 RVA: 0x0001D273 File Offset: 0x0001B473
+	// (set) Token: 0x0600352C RID: 13612 RVA: 0x0001D27B File Offset: 0x0001B47B
 	public BaseEffect EffectPrefab { get; set; }
 
-	// Token: 0x17000F6C RID: 3948
-	// (get) Token: 0x06002684 RID: 9860 RVA: 0x0007F99B File Offset: 0x0007DB9B
-	// (set) Token: 0x06002685 RID: 9861 RVA: 0x0007F9A3 File Offset: 0x0007DBA3
+	// Token: 0x1700142D RID: 5165
+	// (get) Token: 0x0600352D RID: 13613 RVA: 0x0001D284 File Offset: 0x0001B484
+	// (set) Token: 0x0600352E RID: 13614 RVA: 0x0001D28C File Offset: 0x0001B48C
 	public GameObject Source { get; set; }
 
-	// Token: 0x17000F6D RID: 3949
-	// (get) Token: 0x06002686 RID: 9862 RVA: 0x0007F9AC File Offset: 0x0007DBAC
-	// (set) Token: 0x06002687 RID: 9863 RVA: 0x0007F9B4 File Offset: 0x0007DBB4
+	// Token: 0x1700142E RID: 5166
+	// (get) Token: 0x0600352F RID: 13615 RVA: 0x0001D295 File Offset: 0x0001B495
+	// (set) Token: 0x06003530 RID: 13616 RVA: 0x0001D29D File Offset: 0x0001B49D
 	public Animator SourceAnimator { get; set; }
 
-	// Token: 0x06002688 RID: 9864 RVA: 0x0007F9C0 File Offset: 0x0007DBC0
+	// Token: 0x06003531 RID: 13617 RVA: 0x000E00E4 File Offset: 0x000DE2E4
 	protected virtual void Awake()
 	{
 		this.m_startingScale = base.transform.localScale;
@@ -81,7 +81,7 @@ public abstract class BaseEffect : MonoBehaviour, IGenericPoolObj
 		this.IsAwakeCalled = true;
 	}
 
-	// Token: 0x06002689 RID: 9865 RVA: 0x0007FA2A File Offset: 0x0007DC2A
+	// Token: 0x06003532 RID: 13618 RVA: 0x0001D2A6 File Offset: 0x0001B4A6
 	protected virtual void OnDisable()
 	{
 		if (this.m_disableObj != null)
@@ -91,21 +91,21 @@ public abstract class BaseEffect : MonoBehaviour, IGenericPoolObj
 		DisablePooledObjectManager.DisablePooledObject(this, false);
 	}
 
-	// Token: 0x0600268A RID: 9866 RVA: 0x0007FA47 File Offset: 0x0007DC47
+	// Token: 0x06003533 RID: 13619 RVA: 0x0001D2C3 File Offset: 0x0001B4C3
 	public void AddDetachListener(IPreOnDisable disableObj)
 	{
 		this.m_disableObj = disableObj;
 		disableObj.PreOnDisableRelay.AddOnce(this.m_detachFromSource, false);
 	}
 
-	// Token: 0x0600268B RID: 9867 RVA: 0x0007FA63 File Offset: 0x0007DC63
+	// Token: 0x06003534 RID: 13620 RVA: 0x0001D2DF File Offset: 0x0001B4DF
 	public void RemoveDetachListener(IPreOnDisable disableObj)
 	{
 		this.m_disableObj = null;
 		disableObj.PreOnDisableRelay.RemoveOnce(this.m_detachFromSource);
 	}
 
-	// Token: 0x0600268C RID: 9868 RVA: 0x0007FA7E File Offset: 0x0007DC7E
+	// Token: 0x06003535 RID: 13621 RVA: 0x0001D2FA File Offset: 0x0001B4FA
 	private void DetachFromSource(IPreOnDisable disableObj)
 	{
 		this.Source = null;
@@ -113,17 +113,17 @@ public abstract class BaseEffect : MonoBehaviour, IGenericPoolObj
 		base.transform.SetParent(null, true);
 	}
 
-	// Token: 0x0600268D RID: 9869 RVA: 0x0007FA9B File Offset: 0x0007DC9B
+	// Token: 0x06003536 RID: 13622 RVA: 0x0001D317 File Offset: 0x0001B517
 	public virtual void Play(float duration, EffectStopType stopType)
 	{
 		this.IsPlaying = true;
 		this.m_onPlayRelay.Dispatch(this);
 	}
 
-	// Token: 0x0600268E RID: 9870
+	// Token: 0x06003537 RID: 13623
 	public abstract void Stop(EffectStopType stopType);
 
-	// Token: 0x0600268F RID: 9871 RVA: 0x0007FAB0 File Offset: 0x0007DCB0
+	// Token: 0x06003538 RID: 13624 RVA: 0x0001D32C File Offset: 0x0001B52C
 	protected virtual void PlayComplete()
 	{
 		this.IsPlaying = false;
@@ -133,13 +133,13 @@ public abstract class BaseEffect : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x06002690 RID: 9872 RVA: 0x0007FAD2 File Offset: 0x0007DCD2
+	// Token: 0x06003539 RID: 13625 RVA: 0x0001D34E File Offset: 0x0001B54E
 	public virtual void Flip()
 	{
 		base.transform.localScale = Vector3.Scale(base.transform.localScale, new Vector3(-1f, 1f, 1f));
 	}
 
-	// Token: 0x06002691 RID: 9873 RVA: 0x0007FB04 File Offset: 0x0007DD04
+	// Token: 0x0600353A RID: 13626 RVA: 0x000E0150 File Offset: 0x000DE350
 	public virtual void ResetValues()
 	{
 		if (this.m_disableObj != null)
@@ -159,30 +159,30 @@ public abstract class BaseEffect : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x06002693 RID: 9875 RVA: 0x0007FBB1 File Offset: 0x0007DDB1
+	// Token: 0x0600353C RID: 13628 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002044 RID: 8260
+	// Token: 0x04002B1E RID: 11038
 	private Vector3 m_startingScale;
 
-	// Token: 0x04002045 RID: 8261
+	// Token: 0x04002B1F RID: 11039
 	private Vector3 m_startingRotation;
 
-	// Token: 0x04002046 RID: 8262
+	// Token: 0x04002B20 RID: 11040
 	private Vector3 m_startingPosition;
 
-	// Token: 0x04002047 RID: 8263
+	// Token: 0x04002B21 RID: 11041
 	private int m_startingLayer;
 
-	// Token: 0x04002048 RID: 8264
+	// Token: 0x04002B22 RID: 11042
 	private IPreOnDisable m_disableObj;
 
-	// Token: 0x04002049 RID: 8265
+	// Token: 0x04002B23 RID: 11043
 	private Relay<BaseEffect> m_onPlayRelay = new Relay<BaseEffect>();
 
-	// Token: 0x0400204A RID: 8266
+	// Token: 0x04002B24 RID: 11044
 	private Action<IPreOnDisable> m_detachFromSource;
 }

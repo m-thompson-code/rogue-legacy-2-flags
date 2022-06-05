@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000306 RID: 774
+// Token: 0x0200052F RID: 1327
 public class EnemySpeedStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D54 RID: 3412
-	// (get) Token: 0x06001EBD RID: 7869 RVA: 0x00063682 File Offset: 0x00061882
+	// Token: 0x17001141 RID: 4417
+	// (get) Token: 0x06002AB6 RID: 10934 RVA: 0x00017E0D File Offset: 0x0001600D
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemySpeedStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D55 RID: 3413
-	// (get) Token: 0x06001EBE RID: 7870 RVA: 0x00063689 File Offset: 0x00061889
+	// Token: 0x17001142 RID: 4418
+	// (get) Token: 0x06002AB7 RID: 10935 RVA: 0x00017838 File Offset: 0x00015A38
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class EnemySpeedStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EBF RID: 7871 RVA: 0x00063690 File Offset: 0x00061890
+	// Token: 0x06002AB8 RID: 10936 RVA: 0x00017E14 File Offset: 0x00016014
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.Speed);
@@ -38,13 +38,13 @@ public class EnemySpeedStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001EC0 RID: 7872 RVA: 0x0006369F File Offset: 0x0006189F
+	// Token: 0x06002AB9 RID: 10937 RVA: 0x00017E23 File Offset: 0x00016023
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
 		this.m_charController.ResetBaseValues();
 	}
 
-	// Token: 0x04001BCC RID: 7116
+	// Token: 0x04002486 RID: 9350
 	private Vector3 m_storedScale;
 }

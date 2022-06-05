@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200050B RID: 1291
+// Token: 0x0200087A RID: 2170
 public class PortraitType_RL
 {
-	// Token: 0x170011CD RID: 4557
-	// (get) Token: 0x06003015 RID: 12309 RVA: 0x000A4897 File Offset: 0x000A2A97
+	// Token: 0x170017D8 RID: 6104
+	// (get) Token: 0x060042B3 RID: 17075 RVA: 0x00024E7C File Offset: 0x0002307C
 	public static PortraitType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class PortraitType_RL
 		}
 	}
 
-	// Token: 0x0400264A RID: 9802
+	// Token: 0x0400341C RID: 13340
 	private static PortraitType[] m_typeArray;
 }

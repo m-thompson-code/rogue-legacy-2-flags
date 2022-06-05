@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using RL_Windows;
 
-// Token: 0x020001EA RID: 490
+// Token: 0x02000382 RID: 898
 public class DialogueManager
 {
-	// Token: 0x17000A6B RID: 2667
-	// (get) Token: 0x0600141A RID: 5146 RVA: 0x0003D047 File Offset: 0x0003B247
+	// Token: 0x17000D69 RID: 3433
+	// (get) Token: 0x06001D2F RID: 7471 RVA: 0x0000F09D File Offset: 0x0000D29D
 	public static DialogueManager Instance
 	{
 		get
@@ -21,14 +21,14 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x0600141B RID: 5147 RVA: 0x0003D069 File Offset: 0x0003B269
+	// Token: 0x06001D30 RID: 7472 RVA: 0x0000F0BF File Offset: 0x0000D2BF
 	private void Initialize()
 	{
 		this.m_dialogueObjLinkedList = new LinkedList<DialogueObj>();
 		this.m_carriageParsedStrings = new List<string>();
 	}
 
-	// Token: 0x0600141C RID: 5148 RVA: 0x0003D084 File Offset: 0x0003B284
+	// Token: 0x06001D31 RID: 7473 RVA: 0x0009BE48 File Offset: 0x0009A048
 	private void ForceRefreshText_Internal()
 	{
 		if (!string.IsNullOrEmpty(DialogueManager.LastTextLocID))
@@ -56,7 +56,7 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x0600141D RID: 5149 RVA: 0x0003D188 File Offset: 0x0003B388
+	// Token: 0x06001D32 RID: 7474 RVA: 0x0009BF4C File Offset: 0x0009A14C
 	private void AddDialogue_Internal(string speakerLocID, string textLocID, bool isFemale, DialogueWindowStyle windowStyle, DialoguePortraitType portraitType, NPCState npcState, float typewriteSpeed)
 	{
 		string @string = LocalizationManager.GetString(textLocID, isFemale, false);
@@ -78,7 +78,7 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x0600141E RID: 5150 RVA: 0x0003D24C File Offset: 0x0003B44C
+	// Token: 0x06001D33 RID: 7475 RVA: 0x0009C010 File Offset: 0x0009A210
 	private void AddNonLocDialogue_Internal(string speakerTitle, string text, bool disableWordScramble, DialogueWindowStyle windowStyle, DialoguePortraitType portraitType, NPCState npcState, float typewriteSpeed)
 	{
 		text = text.Replace("</LB>", "\n");
@@ -100,13 +100,13 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x0600141F RID: 5151 RVA: 0x0003D310 File Offset: 0x0003B510
+	// Token: 0x06001D34 RID: 7476 RVA: 0x0000F0D7 File Offset: 0x0000D2D7
 	private void ClearLinkedList()
 	{
 		this.m_dialogueObjLinkedList.Clear();
 	}
 
-	// Token: 0x06001420 RID: 5152 RVA: 0x0003D320 File Offset: 0x0003B520
+	// Token: 0x06001D35 RID: 7477 RVA: 0x0009C0D4 File Offset: 0x0009A2D4
 	private void ParseCarriageReturns(string text)
 	{
 		this.m_carriageParsedStrings.Clear();
@@ -125,8 +125,8 @@ public class DialogueManager
 		this.m_carriageParsedStrings.Add(text);
 	}
 
-	// Token: 0x17000A6C RID: 2668
-	// (get) Token: 0x06001421 RID: 5153 RVA: 0x0003D391 File Offset: 0x0003B591
+	// Token: 0x17000D6A RID: 3434
+	// (get) Token: 0x06001D36 RID: 7478 RVA: 0x0000F0E4 File Offset: 0x0000D2E4
 	public static NPCState OnCompleteNPCState
 	{
 		get
@@ -135,8 +135,8 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x17000A6D RID: 2669
-	// (get) Token: 0x06001422 RID: 5154 RVA: 0x0003D39D File Offset: 0x0003B59D
+	// Token: 0x17000D6B RID: 3435
+	// (get) Token: 0x06001D37 RID: 7479 RVA: 0x0000F0F0 File Offset: 0x0000D2F0
 	public static NPCController NPCController
 	{
 		get
@@ -145,8 +145,8 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x17000A6E RID: 2670
-	// (get) Token: 0x06001423 RID: 5155 RVA: 0x0003D3A9 File Offset: 0x0003B5A9
+	// Token: 0x17000D6C RID: 3436
+	// (get) Token: 0x06001D38 RID: 7480 RVA: 0x0000F0FC File Offset: 0x0000D2FC
 	public static bool IsNPCDialogue
 	{
 		get
@@ -155,8 +155,8 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x17000A6F RID: 2671
-	// (get) Token: 0x06001424 RID: 5156 RVA: 0x0003D3B5 File Offset: 0x0003B5B5
+	// Token: 0x17000D6D RID: 3437
+	// (get) Token: 0x06001D39 RID: 7481 RVA: 0x0000F108 File Offset: 0x0000D308
 	public static string LastSpeakerLocID
 	{
 		get
@@ -165,8 +165,8 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x17000A70 RID: 2672
-	// (get) Token: 0x06001425 RID: 5157 RVA: 0x0003D3C1 File Offset: 0x0003B5C1
+	// Token: 0x17000D6E RID: 3438
+	// (get) Token: 0x06001D3A RID: 7482 RVA: 0x0000F114 File Offset: 0x0000D314
 	public static string LastTextLocID
 	{
 		get
@@ -175,8 +175,8 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x17000A71 RID: 2673
-	// (get) Token: 0x06001426 RID: 5158 RVA: 0x0003D3CD File Offset: 0x0003B5CD
+	// Token: 0x17000D6F RID: 3439
+	// (get) Token: 0x06001D3B RID: 7483 RVA: 0x0000F120 File Offset: 0x0000D320
 	public static bool LastIsFemaleState
 	{
 		get
@@ -185,8 +185,8 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x17000A72 RID: 2674
-	// (get) Token: 0x06001427 RID: 5159 RVA: 0x0003D3D9 File Offset: 0x0003B5D9
+	// Token: 0x17000D70 RID: 3440
+	// (get) Token: 0x06001D3C RID: 7484 RVA: 0x0000F12C File Offset: 0x0000D32C
 	public static LinkedList<DialogueObj> DialogueObjLinkedList
 	{
 		get
@@ -195,8 +195,8 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x17000A73 RID: 2675
-	// (get) Token: 0x06001428 RID: 5160 RVA: 0x0003D3E5 File Offset: 0x0003B5E5
+	// Token: 0x17000D71 RID: 3441
+	// (get) Token: 0x06001D3D RID: 7485 RVA: 0x0000F138 File Offset: 0x0000D338
 	public static LinkedListNode<DialogueObj> GetFirstDialogueNode
 	{
 		get
@@ -205,8 +205,8 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x17000A74 RID: 2676
-	// (get) Token: 0x06001429 RID: 5161 RVA: 0x0003D3F6 File Offset: 0x0003B5F6
+	// Token: 0x17000D72 RID: 3442
+	// (get) Token: 0x06001D3E RID: 7486 RVA: 0x0000F149 File Offset: 0x0000D349
 	public static LinkedListNode<DialogueObj> GetLastDialogueNode
 	{
 		get
@@ -215,7 +215,7 @@ public class DialogueManager
 		}
 	}
 
-	// Token: 0x0600142A RID: 5162 RVA: 0x0003D408 File Offset: 0x0003B608
+	// Token: 0x06001D3F RID: 7487 RVA: 0x0009C148 File Offset: 0x0009A348
 	public static LinkedListNode<DialogueObj> GetDialogueNodeAtIndex(int index)
 	{
 		if (index >= DialogueManager.Instance.m_dialogueObjLinkedList.Count)
@@ -230,14 +230,14 @@ public class DialogueManager
 		return linkedListNode;
 	}
 
-	// Token: 0x0600142B RID: 5163 RVA: 0x0003D443 File Offset: 0x0003B643
+	// Token: 0x06001D40 RID: 7488 RVA: 0x0000F15A File Offset: 0x0000D35A
 	public static void StartNewNPCDialogue(NPCController npcController, NPCState onCompleteNPCState = NPCState.Idle)
 	{
 		DialogueManager.StartNewDialogue(npcController, onCompleteNPCState);
 		DialogueManager.Instance.m_isNPCDialogue = true;
 	}
 
-	// Token: 0x0600142C RID: 5164 RVA: 0x0003D457 File Offset: 0x0003B657
+	// Token: 0x06001D41 RID: 7489 RVA: 0x0000F16E File Offset: 0x0000D36E
 	public static void StartNewDialogue(NPCController npcController = null, NPCState onCompleteNPCState = NPCState.Idle)
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.Dialogue))
@@ -250,7 +250,7 @@ public class DialogueManager
 		DialogueManager.Instance.m_isNPCDialogue = false;
 	}
 
-	// Token: 0x0600142D RID: 5165 RVA: 0x0003D494 File Offset: 0x0003B694
+	// Token: 0x06001D42 RID: 7490 RVA: 0x0009C184 File Offset: 0x0009A384
 	public static void UpdateNPCDialogueState()
 	{
 		if (DialogueManager.Instance.m_npcController)
@@ -261,60 +261,60 @@ public class DialogueManager
 		DialogueManager.Instance.m_isNPCDialogue = false;
 	}
 
-	// Token: 0x0600142E RID: 5166 RVA: 0x0003D4F0 File Offset: 0x0003B6F0
+	// Token: 0x06001D43 RID: 7491 RVA: 0x0000F1A9 File Offset: 0x0000D3A9
 	public static void AddDialogue(string speakerLocID, string textLocID, bool isFemale, DialogueWindowStyle windowStyle = DialogueWindowStyle.HorizontalUpper, DialoguePortraitType portraitType = DialoguePortraitType.None, NPCState npcState = NPCState.None, float typewriterSpeed = 0.015f)
 	{
 		DialogueManager.Instance.AddDialogue_Internal(speakerLocID, textLocID, isFemale, windowStyle, portraitType, npcState, typewriterSpeed);
 	}
 
-	// Token: 0x0600142F RID: 5167 RVA: 0x0003D506 File Offset: 0x0003B706
+	// Token: 0x06001D44 RID: 7492 RVA: 0x0000F1BF File Offset: 0x0000D3BF
 	public static void AddNonLocDialogue(string speaker, string text, bool disableWordScramble = false, DialogueWindowStyle windowStyle = DialogueWindowStyle.HorizontalUpper, DialoguePortraitType portraitType = DialoguePortraitType.None, NPCState npcState = NPCState.None, float typeWriterSpeed = 0.015f)
 	{
 		DialogueManager.Instance.AddNonLocDialogue_Internal(speaker, text, disableWordScramble, windowStyle, portraitType, npcState, typeWriterSpeed);
 	}
 
-	// Token: 0x06001430 RID: 5168 RVA: 0x0003D51C File Offset: 0x0003B71C
+	// Token: 0x06001D45 RID: 7493 RVA: 0x0000F1D5 File Offset: 0x0000D3D5
 	public static void AddDialogueCompleteEndHandler(Action action)
 	{
 		(WindowManager.GetWindowController(WindowID.Dialogue) as DialogueWindowController).AddEndHandler(action);
 	}
 
-	// Token: 0x06001431 RID: 5169 RVA: 0x0003D52F File Offset: 0x0003B72F
+	// Token: 0x06001D46 RID: 7494 RVA: 0x0000F1E8 File Offset: 0x0000D3E8
 	public static void ForceRefreshText()
 	{
 		DialogueManager.Instance.ForceRefreshText_Internal();
 	}
 
-	// Token: 0x04001409 RID: 5129
+	// Token: 0x04001AA9 RID: 6825
 	private static DialogueManager m_instance;
 
-	// Token: 0x0400140A RID: 5130
+	// Token: 0x04001AAA RID: 6826
 	private const string CARRIAGE_RETURN = "</CR>";
 
-	// Token: 0x0400140B RID: 5131
+	// Token: 0x04001AAB RID: 6827
 	private const string LINE_BREAK = "</LB>";
 
-	// Token: 0x0400140C RID: 5132
+	// Token: 0x04001AAC RID: 6828
 	private LinkedList<DialogueObj> m_dialogueObjLinkedList;
 
-	// Token: 0x0400140D RID: 5133
+	// Token: 0x04001AAD RID: 6829
 	private List<string> m_carriageParsedStrings;
 
-	// Token: 0x0400140E RID: 5134
+	// Token: 0x04001AAE RID: 6830
 	private NPCController m_npcController;
 
-	// Token: 0x0400140F RID: 5135
+	// Token: 0x04001AAF RID: 6831
 	private NPCState m_onCompleteNPCState;
 
-	// Token: 0x04001410 RID: 5136
+	// Token: 0x04001AB0 RID: 6832
 	private bool m_isNPCDialogue;
 
-	// Token: 0x04001411 RID: 5137
+	// Token: 0x04001AB1 RID: 6833
 	private string m_lastSpeakerLocID;
 
-	// Token: 0x04001412 RID: 5138
+	// Token: 0x04001AB2 RID: 6834
 	private string m_lastTextLocID;
 
-	// Token: 0x04001413 RID: 5139
+	// Token: 0x04001AB3 RID: 6835
 	private bool m_lastIsFemale;
 }

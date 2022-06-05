@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200014E RID: 334
+// Token: 0x02000261 RID: 609
 public class Wisp_Miniboss_AIScript : Wisp_Basic_AIScript
 {
-	// Token: 0x17000630 RID: 1584
-	// (get) Token: 0x06000B40 RID: 2880 RVA: 0x00022827 File Offset: 0x00020A27
+	// Token: 0x17000844 RID: 2116
+	// (get) Token: 0x06001181 RID: 4481 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float m_dash_TellHold_Delay
 	{
 		get
@@ -13,8 +13,8 @@ public class Wisp_Miniboss_AIScript : Wisp_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000631 RID: 1585
-	// (get) Token: 0x06000B41 RID: 2881 RVA: 0x0002282E File Offset: 0x00020A2E
+	// Token: 0x17000845 RID: 2117
+	// (get) Token: 0x06001182 RID: 4482 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float m_dash_Exit_AttackCD
 	{
 		get

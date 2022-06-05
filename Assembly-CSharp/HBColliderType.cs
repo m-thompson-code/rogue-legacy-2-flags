@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x0200073F RID: 1855
+// Token: 0x02000BFD RID: 3069
 public enum HBColliderType
 {
-	// Token: 0x04003480 RID: 13440
+	// Token: 0x040046FC RID: 18172
 	None,
-	// Token: 0x04003481 RID: 13441
+	// Token: 0x040046FD RID: 18173
 	Box,
-	// Token: 0x04003482 RID: 13442
+	// Token: 0x040046FE RID: 18174
 	Circle,
-	// Token: 0x04003483 RID: 13443
+	// Token: 0x040046FF RID: 18175
 	Capsule,
-	// Token: 0x04003484 RID: 13444
+	// Token: 0x04004700 RID: 18176
 	PolygonToBox,
-	// Token: 0x04003485 RID: 13445
+	// Token: 0x04004701 RID: 18177
 	Polygon
 }

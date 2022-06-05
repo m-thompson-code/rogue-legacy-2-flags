@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000124 RID: 292
+// Token: 0x020001F1 RID: 497
 public class Sniper_Miniboss_AIScript : Sniper_Basic_AIScript
 {
-	// Token: 0x170004D2 RID: 1234
-	// (get) Token: 0x06000904 RID: 2308 RVA: 0x0001DBD8 File Offset: 0x0001BDD8
+	// Token: 0x1700065C RID: 1628
+	// (get) Token: 0x06000DA7 RID: 3495 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool AimShot_FireSideShot
 	{
 		get
@@ -13,8 +13,8 @@ public class Sniper_Miniboss_AIScript : Sniper_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004D3 RID: 1235
-	// (get) Token: 0x06000905 RID: 2309 RVA: 0x0001DBDB File Offset: 0x0001BDDB
+	// Token: 0x1700065D RID: 1629
+	// (get) Token: 0x06000DA8 RID: 3496 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float AimShot_SideShotSpread
 	{
 		get
@@ -23,8 +23,8 @@ public class Sniper_Miniboss_AIScript : Sniper_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004D4 RID: 1236
-	// (get) Token: 0x06000906 RID: 2310 RVA: 0x0001DBE2 File Offset: 0x0001BDE2
+	// Token: 0x1700065E RID: 1630
+	// (get) Token: 0x06000DA9 RID: 3497 RVA: 0x00005315 File Offset: 0x00003515
 	protected override int AimShot_TotalShots
 	{
 		get

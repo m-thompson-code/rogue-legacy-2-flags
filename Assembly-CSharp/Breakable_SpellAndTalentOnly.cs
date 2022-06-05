@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020003F5 RID: 1013
+// Token: 0x0200069E RID: 1694
 public class Breakable_SpellAndTalentOnly : Breakable
 {
-	// Token: 0x060025A0 RID: 9632 RVA: 0x0007C660 File Offset: 0x0007A860
+	// Token: 0x0600340E RID: 13326 RVA: 0x000DC348 File Offset: 0x000DA548
 	protected override void TriggerCollision(IDamageObj damageObj)
 	{
 		if (damageObj.gameObject.CompareTag("PlayerProjectile"))

@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200045F RID: 1119
+// Token: 0x02000752 RID: 1874
 public class Triple_Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 {
-	// Token: 0x06002949 RID: 10569 RVA: 0x000887B4 File Offset: 0x000869B4
+	// Token: 0x06003947 RID: 14663 RVA: 0x000EA8C0 File Offset: 0x000E8AC0
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		PointHazardArgs pointHazardArgs = hazardArgs as PointHazardArgs;
@@ -33,7 +33,7 @@ public class Triple_Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x0600294A RID: 10570 RVA: 0x000888C8 File Offset: 0x00086AC8
+	// Token: 0x06003948 RID: 14664 RVA: 0x000EA9D4 File Offset: 0x000E8BD4
 	public override void ResetHazard()
 	{
 		for (int i = 0; i < this.m_orbiters.Length; i++)
@@ -42,7 +42,7 @@ public class Triple_Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x0600294B RID: 10571 RVA: 0x000888F8 File Offset: 0x00086AF8
+	// Token: 0x06003949 RID: 14665 RVA: 0x000EAA04 File Offset: 0x000E8C04
 	protected override void OnDisable()
 	{
 		for (int i = 0; i < this.m_orbiters.Length; i++)
@@ -55,19 +55,19 @@ public class Triple_Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		base.OnDisable();
 	}
 
-	// Token: 0x0600294E RID: 10574 RVA: 0x00088980 File Offset: 0x00086B80
+	// Token: 0x0600394C RID: 14668 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002200 RID: 8704
+	// Token: 0x04002DD1 RID: 11729
 	public const int NUM_ORBITERS = 3;
 
-	// Token: 0x04002201 RID: 8705
+	// Token: 0x04002DD2 RID: 11730
 	private const float SPEED_MOD = 0.75f;
 
-	// Token: 0x04002202 RID: 8706
+	// Token: 0x04002DD3 RID: 11731
 	private static readonly float[] m_angleOffsets = new float[]
 	{
 		0f,
@@ -75,6 +75,6 @@ public class Triple_Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		240f
 	};
 
-	// Token: 0x04002203 RID: 8707
+	// Token: 0x04002DD4 RID: 11732
 	private IHazard[] m_orbiters = new IHazard[3];
 }

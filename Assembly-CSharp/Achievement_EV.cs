@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000046 RID: 70
+// Token: 0x0200004E RID: 78
 public class Achievement_EV
 {
-	// Token: 0x06000135 RID: 309 RVA: 0x0000B4D4 File Offset: 0x000096D4
+	// Token: 0x06000149 RID: 329 RVA: 0x00047E8C File Offset: 0x0004608C
 	public static void RunAchievementSafetyChecks()
 	{
 		if (SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.CastleBoss_Defeated_FirstTime))

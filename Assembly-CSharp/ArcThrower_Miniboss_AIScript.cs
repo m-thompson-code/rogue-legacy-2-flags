@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200008E RID: 142
+// Token: 0x0200009A RID: 154
 public class ArcThrower_Miniboss_AIScript : ArcThrower_Basic_AIScript
 {
-	// Token: 0x17000055 RID: 85
-	// (get) Token: 0x060001FB RID: 507 RVA: 0x000120EB File Offset: 0x000102EB
+	// Token: 0x17000063 RID: 99
+	// (get) Token: 0x06000227 RID: 551 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_shoot_Explosive_Bullets
 	{
 		get
@@ -13,8 +13,8 @@ public class ArcThrower_Miniboss_AIScript : ArcThrower_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000056 RID: 86
-	// (get) Token: 0x060001FC RID: 508 RVA: 0x000120EE File Offset: 0x000102EE
+	// Token: 0x17000064 RID: 100
+	// (get) Token: 0x06000228 RID: 552 RVA: 0x00003D8C File Offset: 0x00001F8C
 	protected override float m_spray_ProjectileDelay
 	{
 		get
@@ -23,8 +23,8 @@ public class ArcThrower_Miniboss_AIScript : ArcThrower_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000057 RID: 87
-	// (get) Token: 0x060001FD RID: 509 RVA: 0x000120F5 File Offset: 0x000102F5
+	// Token: 0x17000065 RID: 101
+	// (get) Token: 0x06000229 RID: 553 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float m_spray_ProjectileAmount
 	{
 		get
@@ -33,8 +33,8 @@ public class ArcThrower_Miniboss_AIScript : ArcThrower_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000058 RID: 88
-	// (get) Token: 0x060001FE RID: 510 RVA: 0x000120FC File Offset: 0x000102FC
+	// Token: 0x17000066 RID: 102
+	// (get) Token: 0x0600022A RID: 554 RVA: 0x00003DA4 File Offset: 0x00001FA4
 	protected override float m_spray_TiltSpeed
 	{
 		get
@@ -43,8 +43,8 @@ public class ArcThrower_Miniboss_AIScript : ArcThrower_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000059 RID: 89
-	// (get) Token: 0x060001FF RID: 511 RVA: 0x00012103 File Offset: 0x00010303
+	// Token: 0x17000067 RID: 103
+	// (get) Token: 0x0600022B RID: 555 RVA: 0x00003DA4 File Offset: 0x00001FA4
 	protected override float m_spray_LowAngle
 	{
 		get
@@ -53,8 +53,8 @@ public class ArcThrower_Miniboss_AIScript : ArcThrower_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700005A RID: 90
-	// (get) Token: 0x06000200 RID: 512 RVA: 0x0001210A File Offset: 0x0001030A
+	// Token: 0x17000068 RID: 104
+	// (get) Token: 0x0600022C RID: 556 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float m_spray_SpeedMod
 	{
 		get

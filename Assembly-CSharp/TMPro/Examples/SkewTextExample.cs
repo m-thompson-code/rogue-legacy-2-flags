@@ -4,22 +4,22 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x0200085E RID: 2142
+	// Token: 0x02000D66 RID: 3430
 	public class SkewTextExample : MonoBehaviour
 	{
-		// Token: 0x060046FB RID: 18171 RVA: 0x000FE348 File Offset: 0x000FC548
+		// Token: 0x060061AE RID: 25006 RVA: 0x00035D07 File Offset: 0x00033F07
 		private void Awake()
 		{
 			this.m_TextComponent = base.gameObject.GetComponent<TMP_Text>();
 		}
 
-		// Token: 0x060046FC RID: 18172 RVA: 0x000FE35B File Offset: 0x000FC55B
+		// Token: 0x060061AF RID: 25007 RVA: 0x00035D1A File Offset: 0x00033F1A
 		private void Start()
 		{
 			base.StartCoroutine(this.WarpText());
 		}
 
-		// Token: 0x060046FD RID: 18173 RVA: 0x000FE36A File Offset: 0x000FC56A
+		// Token: 0x060061B0 RID: 25008 RVA: 0x00033E33 File Offset: 0x00032033
 		private AnimationCurve CopyAnimationCurve(AnimationCurve curve)
 		{
 			return new AnimationCurve
@@ -28,7 +28,7 @@ namespace TMPro.Examples
 			};
 		}
 
-		// Token: 0x060046FE RID: 18174 RVA: 0x000FE37D File Offset: 0x000FC57D
+		// Token: 0x060061B1 RID: 25009 RVA: 0x00035D29 File Offset: 0x00033F29
 		private IEnumerator WarpText()
 		{
 			this.VertexCurve.preWrapMode = WrapMode.Once;
@@ -102,10 +102,10 @@ namespace TMPro.Examples
 			yield break;
 		}
 
-		// Token: 0x04003C06 RID: 15366
+		// Token: 0x04004F96 RID: 20374
 		private TMP_Text m_TextComponent;
 
-		// Token: 0x04003C07 RID: 15367
+		// Token: 0x04004F97 RID: 20375
 		public AnimationCurve VertexCurve = new AnimationCurve(new Keyframe[]
 		{
 			new Keyframe(0f, 0f),
@@ -115,10 +115,10 @@ namespace TMPro.Examples
 			new Keyframe(1f, 0f)
 		});
 
-		// Token: 0x04003C08 RID: 15368
+		// Token: 0x04004F98 RID: 20376
 		public float CurveScale = 1f;
 
-		// Token: 0x04003C09 RID: 15369
+		// Token: 0x04004F99 RID: 20377
 		public float ShearAmount = 1f;
 	}
 }

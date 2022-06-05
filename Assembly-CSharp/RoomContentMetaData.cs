@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x0200067D RID: 1661
+// Token: 0x02000AFC RID: 2812
 [CreateAssetMenu(menuName = "Custom/Level Editor/Room Content")]
 public class RoomContentMetaData : ScriptableObject
 {
-	// Token: 0x170014EC RID: 5356
-	// (get) Token: 0x06003C0B RID: 15371 RVA: 0x000CFEA0 File Offset: 0x000CE0A0
-	// (set) Token: 0x06003C0C RID: 15372 RVA: 0x000CFEA8 File Offset: 0x000CE0A8
+	// Token: 0x17001CAA RID: 7338
+	// (get) Token: 0x06005467 RID: 21607 RVA: 0x0002DB91 File Offset: 0x0002BD91
+	// (set) Token: 0x06005468 RID: 21608 RVA: 0x0002DB99 File Offset: 0x0002BD99
 	public RoomContentEntry[] ContentEntries
 	{
 		get
@@ -22,7 +22,7 @@ public class RoomContentMetaData : ScriptableObject
 		}
 	}
 
-	// Token: 0x06003C0D RID: 15373 RVA: 0x000CFEB4 File Offset: 0x000CE0B4
+	// Token: 0x06005469 RID: 21609 RVA: 0x0013FDD0 File Offset: 0x0013DFD0
 	public void AddEntry(RoomContentType contentType, Vector2 localPosition, SpawnConditionsEntry[] spawnConditions)
 	{
 		if (Application.isPlaying)
@@ -39,7 +39,7 @@ public class RoomContentMetaData : ScriptableObject
 		this.ContentEntries = list.ToArray();
 	}
 
-	// Token: 0x06003C0E RID: 15374 RVA: 0x000CFF05 File Offset: 0x000CE105
+	// Token: 0x0600546A RID: 21610 RVA: 0x0002DBA2 File Offset: 0x0002BDA2
 	public void ClearEntries()
 	{
 		if (Application.isPlaying)
@@ -49,7 +49,7 @@ public class RoomContentMetaData : ScriptableObject
 		this.ContentEntries = new RoomContentEntry[0];
 	}
 
-	// Token: 0x04002D41 RID: 11585
+	// Token: 0x04003EE8 RID: 16104
 	[SerializeField]
 	private RoomContentEntry[] m_contentEntries;
 }

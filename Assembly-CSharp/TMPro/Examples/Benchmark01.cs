@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000855 RID: 2133
+	// Token: 0x02000D58 RID: 3416
 	public class Benchmark01 : MonoBehaviour
 	{
-		// Token: 0x060046E1 RID: 18145 RVA: 0x000FD396 File Offset: 0x000FB596
+		// Token: 0x06006182 RID: 24962 RVA: 0x00035BA6 File Offset: 0x00033DA6
 		private IEnumerator Start()
 		{
 			if (this.BenchmarkType == 0)
@@ -63,34 +63,34 @@ namespace TMPro.Examples
 			yield break;
 		}
 
-		// Token: 0x04003BBD RID: 15293
+		// Token: 0x04004F3A RID: 20282
 		public int BenchmarkType;
 
-		// Token: 0x04003BBE RID: 15294
+		// Token: 0x04004F3B RID: 20283
 		public TMP_FontAsset TMProFont;
 
-		// Token: 0x04003BBF RID: 15295
+		// Token: 0x04004F3C RID: 20284
 		public Font TextMeshFont;
 
-		// Token: 0x04003BC0 RID: 15296
+		// Token: 0x04004F3D RID: 20285
 		private TextMeshPro m_textMeshPro;
 
-		// Token: 0x04003BC1 RID: 15297
+		// Token: 0x04004F3E RID: 20286
 		private TextContainer m_textContainer;
 
-		// Token: 0x04003BC2 RID: 15298
+		// Token: 0x04004F3F RID: 20287
 		private TextMesh m_textMesh;
 
-		// Token: 0x04003BC3 RID: 15299
+		// Token: 0x04004F40 RID: 20288
 		private const string label01 = "The <#0050FF>count is: </color>{0}";
 
-		// Token: 0x04003BC4 RID: 15300
+		// Token: 0x04004F41 RID: 20289
 		private const string label02 = "The <color=#0050FF>count is: </color>";
 
-		// Token: 0x04003BC5 RID: 15301
+		// Token: 0x04004F42 RID: 20290
 		private Material m_material01;
 
-		// Token: 0x04003BC6 RID: 15302
+		// Token: 0x04004F43 RID: 20291
 		private Material m_material02;
 	}
 }

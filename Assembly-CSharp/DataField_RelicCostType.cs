@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200005D RID: 93
+// Token: 0x02000065 RID: 101
 [Serializable]
 public class DataField_RelicCostType : DataField<RelicCostType>
 {

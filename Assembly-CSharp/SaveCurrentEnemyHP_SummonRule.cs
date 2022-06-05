@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000523 RID: 1315
+// Token: 0x0200089F RID: 2207
 public class SaveCurrentEnemyHP_SummonRule : BaseSummonRule
 {
-	// Token: 0x170011EC RID: 4588
-	// (get) Token: 0x06003091 RID: 12433 RVA: 0x000A5D92 File Offset: 0x000A3F92
+	// Token: 0x17001811 RID: 6161
+	// (get) Token: 0x0600437D RID: 17277 RVA: 0x00018B42 File Offset: 0x00016D42
 	public override SummonRuleType RuleType
 	{
 		get
@@ -15,8 +15,8 @@ public class SaveCurrentEnemyHP_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011ED RID: 4589
-	// (get) Token: 0x06003092 RID: 12434 RVA: 0x000A5D99 File Offset: 0x000A3F99
+	// Token: 0x17001812 RID: 6162
+	// (get) Token: 0x0600437E RID: 17278 RVA: 0x00025470 File Offset: 0x00023670
 	public override string RuleLabel
 	{
 		get
@@ -25,7 +25,7 @@ public class SaveCurrentEnemyHP_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x06003093 RID: 12435 RVA: 0x000A5DA0 File Offset: 0x000A3FA0
+	// Token: 0x0600437F RID: 17279 RVA: 0x00025477 File Offset: 0x00023677
 	public override IEnumerator RunSummonRule()
 	{
 		float num = 0f;
@@ -60,11 +60,11 @@ public class SaveCurrentEnemyHP_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x0400268C RID: 9868
+	// Token: 0x0400348D RID: 13453
 	[SerializeField]
 	private bool m_includeRegularEnemies = true;
 
-	// Token: 0x0400268D RID: 9869
+	// Token: 0x0400348E RID: 13454
 	[SerializeField]
 	private bool m_includeSummonedEnemies = true;
 }

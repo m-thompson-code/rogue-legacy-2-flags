@@ -5,12 +5,12 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000594 RID: 1428
+// Token: 0x02000997 RID: 2455
 [Obsolete("Use QuestWindowController")]
 public class TimelineWindowController : WindowController
 {
-	// Token: 0x170012EA RID: 4842
-	// (get) Token: 0x060035C1 RID: 13761 RVA: 0x000BB763 File Offset: 0x000B9963
+	// Token: 0x17001A11 RID: 6673
+	// (get) Token: 0x06004BC1 RID: 19393 RVA: 0x0002977C File Offset: 0x0002797C
 	public override WindowID ID
 	{
 		get
@@ -19,13 +19,13 @@ public class TimelineWindowController : WindowController
 		}
 	}
 
-	// Token: 0x060035C2 RID: 13762 RVA: 0x000BB767 File Offset: 0x000B9967
+	// Token: 0x06004BC2 RID: 19394 RVA: 0x00029780 File Offset: 0x00027980
 	private void Awake()
 	{
 		this.m_onCancelButtonDown = new Action<InputActionEventData>(this.OnCancelButtonDown);
 	}
 
-	// Token: 0x060035C3 RID: 13763 RVA: 0x000BB77C File Offset: 0x000B997C
+	// Token: 0x06004BC3 RID: 19395 RVA: 0x00129730 File Offset: 0x00127930
 	public override void Initialize()
 	{
 		this.m_burdenEntries = new TimelineWindowEntry[BurdenType_RL.TypeArray.Length - 1];
@@ -49,7 +49,7 @@ public class TimelineWindowController : WindowController
 		base.Initialize();
 	}
 
-	// Token: 0x060035C4 RID: 13764 RVA: 0x000BB824 File Offset: 0x000B9A24
+	// Token: 0x06004BC4 RID: 19396 RVA: 0x001297D8 File Offset: 0x001279D8
 	private void UpdateArrays()
 	{
 		if (SaveManager.PlayerSaveData.NewGamePlusLevel == 0)
@@ -89,7 +89,7 @@ public class TimelineWindowController : WindowController
 		this.m_noneText.gameObject.SetActive(true);
 	}
 
-	// Token: 0x060035C5 RID: 13765 RVA: 0x000BB915 File Offset: 0x000B9B15
+	// Token: 0x06004BC5 RID: 19397 RVA: 0x00029795 File Offset: 0x00027995
 	protected override void OnOpen()
 	{
 		this.UpdateArrays();
@@ -97,7 +97,7 @@ public class TimelineWindowController : WindowController
 		base.StartCoroutine(this.RunOpenAnimation());
 	}
 
-	// Token: 0x060035C6 RID: 13766 RVA: 0x000BB93B File Offset: 0x000B9B3B
+	// Token: 0x06004BC6 RID: 19398 RVA: 0x000297BB File Offset: 0x000279BB
 	private IEnumerator RunOpenAnimation()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -137,25 +137,25 @@ public class TimelineWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x060035C7 RID: 13767 RVA: 0x000BB94A File Offset: 0x000B9B4A
+	// Token: 0x06004BC7 RID: 19399 RVA: 0x0000EE94 File Offset: 0x0000D094
 	protected override void OnClose()
 	{
 		this.m_windowCanvas.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060035C8 RID: 13768 RVA: 0x000BB95D File Offset: 0x000B9B5D
+	// Token: 0x06004BC8 RID: 19400 RVA: 0x000297CA File Offset: 0x000279CA
 	protected override void OnFocus()
 	{
 		this.AddInputListeners();
 	}
 
-	// Token: 0x060035C9 RID: 13769 RVA: 0x000BB965 File Offset: 0x000B9B65
+	// Token: 0x06004BC9 RID: 19401 RVA: 0x000297D2 File Offset: 0x000279D2
 	protected override void OnLostFocus()
 	{
 		this.RemoveInputListeners();
 	}
 
-	// Token: 0x060035CA RID: 13770 RVA: 0x000BB96D File Offset: 0x000B9B6D
+	// Token: 0x06004BCA RID: 19402 RVA: 0x000297DA File Offset: 0x000279DA
 	protected void AddInputListeners()
 	{
 		if (ReInput.isReady && base.RewiredPlayer != null)
@@ -164,7 +164,7 @@ public class TimelineWindowController : WindowController
 		}
 	}
 
-	// Token: 0x060035CB RID: 13771 RVA: 0x000BB996 File Offset: 0x000B9B96
+	// Token: 0x06004BCB RID: 19403 RVA: 0x00029803 File Offset: 0x00027A03
 	protected void RemoveInputListeners()
 	{
 		if (ReInput.isReady && base.RewiredPlayer != null)
@@ -173,7 +173,7 @@ public class TimelineWindowController : WindowController
 		}
 	}
 
-	// Token: 0x060035CC RID: 13772 RVA: 0x000BB9BF File Offset: 0x000B9BBF
+	// Token: 0x06004BCC RID: 19404 RVA: 0x00028116 File Offset: 0x00026316
 	protected virtual void OnCancelButtonDown(InputActionEventData obj)
 	{
 		if (WindowManager.GetIsWindowOpen(WindowID.Pause))
@@ -184,33 +184,33 @@ public class TimelineWindowController : WindowController
 		WindowManager.SetWindowIsOpen(this.ID, false);
 	}
 
-	// Token: 0x040029F5 RID: 10741
+	// Token: 0x040039E2 RID: 14818
 	[SerializeField]
 	private CanvasGroup m_leftPageCanvasGroup;
 
-	// Token: 0x040029F6 RID: 10742
+	// Token: 0x040039E3 RID: 14819
 	[SerializeField]
 	private CanvasGroup m_rightPageCanvasGroup;
 
-	// Token: 0x040029F7 RID: 10743
+	// Token: 0x040039E4 RID: 14820
 	[SerializeField]
 	private TMP_Text m_timelineText;
 
-	// Token: 0x040029F8 RID: 10744
+	// Token: 0x040039E5 RID: 14821
 	[SerializeField]
 	private TMP_Text m_noneText;
 
-	// Token: 0x040029F9 RID: 10745
+	// Token: 0x040039E6 RID: 14822
 	[SerializeField]
 	private GameObject m_content;
 
-	// Token: 0x040029FA RID: 10746
+	// Token: 0x040039E7 RID: 14823
 	[SerializeField]
 	private TimelineWindowEntry m_burdenEntryPrefab;
 
-	// Token: 0x040029FB RID: 10747
+	// Token: 0x040039E8 RID: 14824
 	private TimelineWindowEntry[] m_burdenEntries;
 
-	// Token: 0x040029FC RID: 10748
+	// Token: 0x040039E9 RID: 14825
 	private Action<InputActionEventData> m_onCancelButtonDown;
 }

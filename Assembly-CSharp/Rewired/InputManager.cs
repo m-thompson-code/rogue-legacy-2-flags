@@ -9,24 +9,24 @@ using UnityEngine.SceneManagement;
 
 namespace Rewired
 {
-	// Token: 0x02000930 RID: 2352
+	// Token: 0x02000EAF RID: 3759
 	[AddComponentMenu("Rewired/Input Manager")]
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public sealed class InputManager : InputManager_Base
 	{
-		// Token: 0x06004E9A RID: 20122 RVA: 0x00113938 File Offset: 0x00111B38
+		// Token: 0x06006BA1 RID: 27553 RVA: 0x0003B029 File Offset: 0x00039229
 		protected override void OnInitialized()
 		{
 			this.SubscribeEvents();
 		}
 
-		// Token: 0x06004E9B RID: 20123 RVA: 0x00113940 File Offset: 0x00111B40
+		// Token: 0x06006BA2 RID: 27554 RVA: 0x0003B031 File Offset: 0x00039231
 		protected override void OnDeinitialized()
 		{
 			this.UnsubscribeEvents();
 		}
 
-		// Token: 0x06004E9C RID: 20124 RVA: 0x00113948 File Offset: 0x00111B48
+		// Token: 0x06006BA3 RID: 27555 RVA: 0x00182958 File Offset: 0x00180B58
 		protected override void DetectPlatform()
 		{
 			this.scriptingBackend = ScriptingBackend.Mono;
@@ -48,43 +48,43 @@ namespace Rewired
 			this.scriptingAPILevel = ScriptingAPILevel.Net46;
 		}
 
-		// Token: 0x06004E9D RID: 20125 RVA: 0x001139AE File Offset: 0x00111BAE
+		// Token: 0x06006BA4 RID: 27556 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected override void CheckRecompile()
 		{
 		}
 
-		// Token: 0x06004E9E RID: 20126 RVA: 0x001139B0 File Offset: 0x00111BB0
+		// Token: 0x06006BA5 RID: 27557 RVA: 0x0003B039 File Offset: 0x00039239
 		protected override IExternalTools GetExternalTools()
 		{
 			return new ExternalTools();
 		}
 
-		// Token: 0x06004E9F RID: 20127 RVA: 0x001139B7 File Offset: 0x00111BB7
+		// Token: 0x06006BA6 RID: 27558 RVA: 0x0003B040 File Offset: 0x00039240
 		private bool CheckDeviceName(string searchPattern, string deviceName, string deviceModel)
 		{
 			return Regex.IsMatch(deviceName, searchPattern, RegexOptions.IgnoreCase) || Regex.IsMatch(deviceModel, searchPattern, RegexOptions.IgnoreCase);
 		}
 
-		// Token: 0x06004EA0 RID: 20128 RVA: 0x001139CD File Offset: 0x00111BCD
+		// Token: 0x06006BA7 RID: 27559 RVA: 0x0003B056 File Offset: 0x00039256
 		private void SubscribeEvents()
 		{
 			this.UnsubscribeEvents();
 			SceneManager.sceneLoaded += this.OnSceneLoaded;
 		}
 
-		// Token: 0x06004EA1 RID: 20129 RVA: 0x001139E6 File Offset: 0x00111BE6
+		// Token: 0x06006BA8 RID: 27560 RVA: 0x0003B06F File Offset: 0x0003926F
 		private void UnsubscribeEvents()
 		{
 			SceneManager.sceneLoaded -= this.OnSceneLoaded;
 		}
 
-		// Token: 0x06004EA2 RID: 20130 RVA: 0x001139F9 File Offset: 0x00111BF9
+		// Token: 0x06006BA9 RID: 27561 RVA: 0x0003B082 File Offset: 0x00039282
 		private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 		{
 			base.OnSceneLoaded();
 		}
 
-		// Token: 0x04004215 RID: 16917
+		// Token: 0x04005781 RID: 22401
 		private bool ignoreRecompile;
 	}
 }

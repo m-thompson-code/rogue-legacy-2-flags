@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000055 RID: 85
+// Token: 0x0200005D RID: 93
 [Serializable]
 public class DataField_DamageType : DataField<DamageType>
 {

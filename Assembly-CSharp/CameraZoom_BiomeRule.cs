@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x020005F0 RID: 1520
+// Token: 0x020009FC RID: 2556
 [CreateAssetMenu(menuName = "Custom/Biome Rules/Camera Zoom")]
 public class CameraZoom_BiomeRule : BiomeRule
 {
-	// Token: 0x1700136F RID: 4975
-	// (get) Token: 0x060036E1 RID: 14049 RVA: 0x000BCAB2 File Offset: 0x000BACB2
+	// Token: 0x17001AA4 RID: 6820
+	// (get) Token: 0x06004D0B RID: 19723 RVA: 0x000046FA File Offset: 0x000028FA
 	public override BiomeRuleExecutionTime ExecutionTime
 	{
 		get
@@ -18,7 +18,7 @@ public class CameraZoom_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x060036E2 RID: 14050 RVA: 0x000BCAB6 File Offset: 0x000BACB6
+	// Token: 0x06004D0C RID: 19724 RVA: 0x00029DDF File Offset: 0x00027FDF
 	public override IEnumerator RunRule(BiomeType biome)
 	{
 		if (GameUtility.IsInLevelEditor && OnPlayManager.BiomeController)
@@ -66,7 +66,7 @@ public class CameraZoom_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x060036E3 RID: 14051 RVA: 0x000BCACC File Offset: 0x000BACCC
+	// Token: 0x06004D0D RID: 19725 RVA: 0x0012AD78 File Offset: 0x00128F78
 	public override void UndoRule(BiomeType biome)
 	{
 		if (GameUtility.IsInLevelEditor && OnPlayManager.CurrentRoom)
@@ -79,10 +79,10 @@ public class CameraZoom_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x04002A3D RID: 10813
+	// Token: 0x04003A4D RID: 14925
 	[SerializeField]
 	private float m_zoomLevel = 1f;
 
-	// Token: 0x04002A3E RID: 10814
+	// Token: 0x04003A4E RID: 14926
 	private float m_previousZoomLevel;
 }

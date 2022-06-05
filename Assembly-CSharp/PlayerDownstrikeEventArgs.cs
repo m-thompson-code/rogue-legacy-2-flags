@@ -1,29 +1,29 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020007B2 RID: 1970
+// Token: 0x02000C78 RID: 3192
 public class PlayerDownstrikeEventArgs : EventArgs
 {
-	// Token: 0x0600424B RID: 16971 RVA: 0x000EBB39 File Offset: 0x000E9D39
+	// Token: 0x06005BD4 RID: 23508 RVA: 0x0003254F File Offset: 0x0003074F
 	public PlayerDownstrikeEventArgs(Projectile_RL projectile, GameObject collidedObj)
 	{
 		this.Initialise(projectile, collidedObj);
 	}
 
-	// Token: 0x0600424C RID: 16972 RVA: 0x000EBB49 File Offset: 0x000E9D49
+	// Token: 0x06005BD5 RID: 23509 RVA: 0x0003255F File Offset: 0x0003075F
 	public void Initialise(Projectile_RL projectile, GameObject collidedObj)
 	{
 		this.Projectile = projectile;
 		this.CollidedObj = collidedObj;
 	}
 
-	// Token: 0x17001672 RID: 5746
-	// (get) Token: 0x0600424D RID: 16973 RVA: 0x000EBB59 File Offset: 0x000E9D59
-	// (set) Token: 0x0600424E RID: 16974 RVA: 0x000EBB61 File Offset: 0x000E9D61
+	// Token: 0x17001E70 RID: 7792
+	// (get) Token: 0x06005BD6 RID: 23510 RVA: 0x0003256F File Offset: 0x0003076F
+	// (set) Token: 0x06005BD7 RID: 23511 RVA: 0x00032577 File Offset: 0x00030777
 	public Projectile_RL Projectile { get; private set; }
 
-	// Token: 0x17001673 RID: 5747
-	// (get) Token: 0x0600424F RID: 16975 RVA: 0x000EBB6A File Offset: 0x000E9D6A
-	// (set) Token: 0x06004250 RID: 16976 RVA: 0x000EBB72 File Offset: 0x000E9D72
+	// Token: 0x17001E71 RID: 7793
+	// (get) Token: 0x06005BD8 RID: 23512 RVA: 0x00032580 File Offset: 0x00030780
+	// (set) Token: 0x06005BD9 RID: 23513 RVA: 0x00032588 File Offset: 0x00030788
 	public GameObject CollidedObj { get; private set; }
 }

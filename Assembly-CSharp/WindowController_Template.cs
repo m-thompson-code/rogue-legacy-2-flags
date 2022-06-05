@@ -1,11 +1,11 @@
 ﻿using System;
 using RL_Windows;
 
-// Token: 0x02000598 RID: 1432
+// Token: 0x0200099F RID: 2463
 public class WindowController_Template : WindowController
 {
-	// Token: 0x170012EE RID: 4846
-	// (get) Token: 0x060035EC RID: 13804 RVA: 0x000BBFFC File Offset: 0x000BA1FC
+	// Token: 0x17001A1B RID: 6683
+	// (get) Token: 0x06004BFE RID: 19454 RVA: 0x00004792 File Offset: 0x00002992
 	public override WindowID ID
 	{
 		get
@@ -14,24 +14,24 @@ public class WindowController_Template : WindowController
 		}
 	}
 
-	// Token: 0x060035ED RID: 13805 RVA: 0x000BBFFF File Offset: 0x000BA1FF
+	// Token: 0x06004BFF RID: 19455 RVA: 0x00027C06 File Offset: 0x00025E06
 	protected override void OnOpen()
 	{
 		this.m_windowCanvas.gameObject.SetActive(true);
 	}
 
-	// Token: 0x060035EE RID: 13806 RVA: 0x000BC012 File Offset: 0x000BA212
+	// Token: 0x06004C00 RID: 19456 RVA: 0x0000EE94 File Offset: 0x0000D094
 	protected override void OnClose()
 	{
 		this.m_windowCanvas.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060035EF RID: 13807 RVA: 0x000BC025 File Offset: 0x000BA225
+	// Token: 0x06004C01 RID: 19457 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnFocus()
 	{
 	}
 
-	// Token: 0x060035F0 RID: 13808 RVA: 0x000BC027 File Offset: 0x000BA227
+	// Token: 0x06004C02 RID: 19458 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnLostFocus()
 	{
 	}

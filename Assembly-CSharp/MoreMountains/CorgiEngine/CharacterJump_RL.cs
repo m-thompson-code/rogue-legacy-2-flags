@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x02000977 RID: 2423
+	// Token: 0x02000F2F RID: 3887
 	[AddComponentMenu("Corgi Engine/Character/Abilities/Character Jump RL")]
 	public class CharacterJump_RL : CharacterJump
 	{
-		// Token: 0x17001B35 RID: 6965
-		// (get) Token: 0x06005253 RID: 21075 RVA: 0x00124E21 File Offset: 0x00123021
+		// Token: 0x17002488 RID: 9352
+		// (get) Token: 0x06007078 RID: 28792 RVA: 0x0003E131 File Offset: 0x0003C331
 		public bool IsJumpDash
 		{
 			get
@@ -19,8 +19,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B36 RID: 6966
-		// (get) Token: 0x06005254 RID: 21076 RVA: 0x00124E29 File Offset: 0x00123029
+		// Token: 0x17002489 RID: 9353
+		// (get) Token: 0x06007079 RID: 28793 RVA: 0x0003E139 File Offset: 0x0003C339
 		public override bool JumpAuthorized
 		{
 			get
@@ -48,39 +48,39 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005255 RID: 21077 RVA: 0x00124E67 File Offset: 0x00123067
+		// Token: 0x0600707A RID: 28794 RVA: 0x0003E177 File Offset: 0x0003C377
 		public void StartJumpTime()
 		{
 			this.m_jumpStartTime = Time.time;
 		}
 
-		// Token: 0x06005256 RID: 21078 RVA: 0x00124E74 File Offset: 0x00123074
+		// Token: 0x0600707B RID: 28795 RVA: 0x0003E184 File Offset: 0x0003C384
 		public void ResetBrakeForce()
 		{
 			this.m_useBrakeForce = false;
 		}
 
-		// Token: 0x06005257 RID: 21079 RVA: 0x00124E7D File Offset: 0x0012307D
+		// Token: 0x0600707C RID: 28796 RVA: 0x0003E18D File Offset: 0x0003C38D
 		private void Awake()
 		{
 			this.m_onPlayerEnterRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerEnterRoom);
 		}
 
-		// Token: 0x06005258 RID: 21080 RVA: 0x00124E91 File Offset: 0x00123091
+		// Token: 0x0600707D RID: 28797 RVA: 0x0003E1A1 File Offset: 0x0003C3A1
 		protected override void OnEnable()
 		{
 			base.OnEnable();
 			Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 		}
 
-		// Token: 0x06005259 RID: 21081 RVA: 0x00124EA5 File Offset: 0x001230A5
+		// Token: 0x0600707E RID: 28798 RVA: 0x0003E1B5 File Offset: 0x0003C3B5
 		protected override void OnDisable()
 		{
 			base.OnDisable();
 			Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 		}
 
-		// Token: 0x0600525A RID: 21082 RVA: 0x00124EBC File Offset: 0x001230BC
+		// Token: 0x0600707F RID: 28799 RVA: 0x00193274 File Offset: 0x00191474
 		private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs eventArgs)
 		{
 			RoomViaDoorEventArgs roomViaDoorEventArgs = eventArgs as RoomViaDoorEventArgs;
@@ -99,7 +99,7 @@ namespace MoreMountains.CorgiEngine
 			playerController.SetVelocityY(Mathf.Min(playerController.Velocity.y, b), false);
 		}
 
-		// Token: 0x0600525B RID: 21083 RVA: 0x00124F58 File Offset: 0x00123158
+		// Token: 0x06007080 RID: 28800 RVA: 0x0003E1C9 File Offset: 0x0003C3C9
 		private IEnumerator PreventBraking()
 		{
 			if (this.m_disableBrakeWaitYield == null)
@@ -113,7 +113,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x0600525C RID: 21084 RVA: 0x00124F68 File Offset: 0x00123168
+		// Token: 0x06007081 RID: 28801 RVA: 0x00193310 File Offset: 0x00191510
 		protected override void HandleInput()
 		{
 			if (!ReInput.isReady)
@@ -147,13 +147,13 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600525D RID: 21085 RVA: 0x001250AD File Offset: 0x001232AD
+		// Token: 0x06007082 RID: 28802 RVA: 0x00003DA1 File Offset: 0x00001FA1
 		public bool IsAbilityPermitted()
 		{
 			return true;
 		}
 
-		// Token: 0x0600525E RID: 21086 RVA: 0x001250B0 File Offset: 0x001232B0
+		// Token: 0x06007083 RID: 28803 RVA: 0x00193458 File Offset: 0x00191658
 		public override void ProcessAbility()
 		{
 			base.ProcessAbility();
@@ -209,7 +209,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600525F RID: 21087 RVA: 0x00125244 File Offset: 0x00123444
+		// Token: 0x06007084 RID: 28804 RVA: 0x001935EC File Offset: 0x001917EC
 		private bool OtherAbilitiesCanBeInterruptedByJump()
 		{
 			if (this.m_playerController && this.m_playerController.IsInitialized)
@@ -230,7 +230,7 @@ namespace MoreMountains.CorgiEngine
 			return true;
 		}
 
-		// Token: 0x06005260 RID: 21088 RVA: 0x001252FC File Offset: 0x001234FC
+		// Token: 0x06007085 RID: 28805 RVA: 0x001936A4 File Offset: 0x001918A4
 		protected override bool EvaluateJumpConditions()
 		{
 			if (this.m_playerController.IsGrounded && this._condition.CurrentState == CharacterStates.CharacterConditions.Normal && !this.m_playerController.CharacterDownStrike.IsHoldingDownStrikeAngle)
@@ -297,13 +297,13 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005261 RID: 21089 RVA: 0x001255E4 File Offset: 0x001237E4
+		// Token: 0x06007086 RID: 28806 RVA: 0x0003E1D8 File Offset: 0x0003C3D8
 		public bool IsJumpWithinLeeway()
 		{
 			return this._controller.State.IsGrounded || (this._controller.Velocity.y <= 0f && this._controller.IsWithinJumpLeeway);
 		}
 
-		// Token: 0x06005262 RID: 21090 RVA: 0x00125623 File Offset: 0x00123823
+		// Token: 0x06007087 RID: 28807 RVA: 0x0003E217 File Offset: 0x0003C417
 		private IEnumerator QueueJumpCoroutine()
 		{
 			float startTime = Time.time;
@@ -325,7 +325,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x06005263 RID: 21091 RVA: 0x00125634 File Offset: 0x00123834
+		// Token: 0x06007088 RID: 28808 RVA: 0x0019398C File Offset: 0x00191B8C
 		public override void JumpStart()
 		{
 			this.m_queueJump = false;
@@ -418,7 +418,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005264 RID: 21092 RVA: 0x001259A1 File Offset: 0x00123BA1
+		// Token: 0x06007089 RID: 28809 RVA: 0x0003E226 File Offset: 0x0003C426
 		private IEnumerator HighJumpEffectCoroutine()
 		{
 			this.m_playerController.Animator.SetBool("Trait_HighJump", true);
@@ -428,7 +428,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x06005265 RID: 21093 RVA: 0x001259B0 File Offset: 0x00123BB0
+		// Token: 0x0600708A RID: 28810 RVA: 0x0003E235 File Offset: 0x0003C435
 		private IEnumerator DebugJump(float jumpHeight)
 		{
 			this._playerYPositionAtStart_DEBUG = base.transform.position.y;
@@ -446,7 +446,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x06005266 RID: 21094 RVA: 0x001259C6 File Offset: 0x00123BC6
+		// Token: 0x0600708B RID: 28811 RVA: 0x0003E24B File Offset: 0x0003C44B
 		private void ResetDoubleJump()
 		{
 			base.NumberOfJumpsLeft = this.NumberOfJumps;
@@ -455,19 +455,19 @@ namespace MoreMountains.CorgiEngine
 			this._animator.ResetTrigger("AirJump");
 		}
 
-		// Token: 0x06005267 RID: 21095 RVA: 0x001259F2 File Offset: 0x00123BF2
+		// Token: 0x0600708C RID: 28812 RVA: 0x0003E277 File Offset: 0x0003C477
 		public override void UpdateAnimator()
 		{
 			this._animator.SetBool("IsDoubleJumping", this._doubleJumping);
 			base.UpdateAnimator();
 		}
 
-		// Token: 0x06005268 RID: 21096 RVA: 0x00125A10 File Offset: 0x00123C10
+		// Token: 0x0600708D RID: 28813 RVA: 0x00002FCA File Offset: 0x000011CA
 		private void OnDrawGizmos()
 		{
 		}
 
-		// Token: 0x06005269 RID: 21097 RVA: 0x00125A12 File Offset: 0x00123C12
+		// Token: 0x0600708E RID: 28814 RVA: 0x0003E295 File Offset: 0x0003C495
 		public override void SetJumpFlags()
 		{
 			this._jumpButtonPressTime = Time.time;
@@ -479,83 +479,83 @@ namespace MoreMountains.CorgiEngine
 			this.m_useBrakeForce = false;
 		}
 
-		// Token: 0x0600526A RID: 21098 RVA: 0x00125A52 File Offset: 0x00123C52
+		// Token: 0x0600708F RID: 28815 RVA: 0x0003E2D5 File Offset: 0x0003C4D5
 		public override void ResetJumpButtonReleased()
 		{
 			this._jumpButtonReleased = false;
 			this._prevJumpButtonReleased = this._jumpButtonReleased;
 		}
 
-		// Token: 0x04004460 RID: 17504
+		// Token: 0x04005AB8 RID: 23224
 		[Tooltip("Deceleration Force applied if Jump Button is released when Character's Jump Height is above the Minimum Jump Height")]
 		public float JumpReleaseForce = 2f;
 
-		// Token: 0x04004461 RID: 17505
+		// Token: 0x04005AB9 RID: 23225
 		[Tooltip("Deceleration Force applied if Jump Button is released when Character's Jump Height is below the Minimum Jump Height")]
 		public float MinimumJumpReleaseForce = 2f;
 
-		// Token: 0x04004462 RID: 17506
+		// Token: 0x04005ABA RID: 23226
 		public float FallGravityMultiplier = -1f;
 
-		// Token: 0x04004463 RID: 17507
+		// Token: 0x04005ABB RID: 23227
 		public float MinimumJumpHeight = 1f;
 
-		// Token: 0x04004464 RID: 17508
+		// Token: 0x04005ABC RID: 23228
 		public float DoubleJumpHeight = 3f;
 
-		// Token: 0x04004465 RID: 17509
+		// Token: 0x04005ABD RID: 23229
 		public float JumpHeightMultiplier = 1f;
 
-		// Token: 0x04004466 RID: 17510
+		// Token: 0x04005ABE RID: 23230
 		public bool DisableBrakeForce;
 
-		// Token: 0x04004467 RID: 17511
+		// Token: 0x04005ABF RID: 23231
 		[Space(10f)]
 		public bool CanJumpWhileDashing = true;
 
-		// Token: 0x04004468 RID: 17512
+		// Token: 0x04005AC0 RID: 23232
 		private bool _prevJumpButtonReleased;
 
-		// Token: 0x04004469 RID: 17513
+		// Token: 0x04005AC1 RID: 23233
 		private bool _prevIsFalling;
 
-		// Token: 0x0400446A RID: 17514
+		// Token: 0x04005AC2 RID: 23234
 		private bool m_isJumpDash;
 
-		// Token: 0x0400446B RID: 17515
+		// Token: 0x04005AC3 RID: 23235
 		private bool m_useBrakeForce;
 
-		// Token: 0x0400446C RID: 17516
+		// Token: 0x04005AC4 RID: 23236
 		private float m_jumpStartTime;
 
-		// Token: 0x0400446D RID: 17517
+		// Token: 0x04005AC5 RID: 23237
 		private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 
-		// Token: 0x0400446E RID: 17518
+		// Token: 0x04005AC6 RID: 23238
 		private Coroutine m_preventBrakingCoroutine;
 
-		// Token: 0x0400446F RID: 17519
+		// Token: 0x04005AC7 RID: 23239
 		private WaitRL_Yield m_disableBrakeWaitYield;
 
-		// Token: 0x04004470 RID: 17520
+		// Token: 0x04005AC8 RID: 23240
 		private bool m_queueJump;
 
-		// Token: 0x04004471 RID: 17521
+		// Token: 0x04005AC9 RID: 23241
 		private Coroutine m_queueJumpCoroutine;
 
-		// Token: 0x04004472 RID: 17522
+		// Token: 0x04005ACA RID: 23242
 		private Coroutine _debugJumpCoroutine;
 
-		// Token: 0x04004473 RID: 17523
+		// Token: 0x04005ACB RID: 23243
 		private float _playerYPositionAtStart_DEBUG;
 
-		// Token: 0x04004474 RID: 17524
+		// Token: 0x04005ACC RID: 23244
 		private float _heightAtPeak_DEBUG;
 
-		// Token: 0x04004475 RID: 17525
+		// Token: 0x04005ACD RID: 23245
 		private float _peakYPosition_DEBUG;
 
-		// Token: 0x04004476 RID: 17526
+		// Token: 0x04005ACE RID: 23246
 		private float _brakeForce;
 	}
 }

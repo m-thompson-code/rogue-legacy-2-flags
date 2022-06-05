@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200021A RID: 538
+// Token: 0x020003CD RID: 973
 [CreateAssetMenu(menuName = "Custom/Libraries/Achievement Library")]
 public class AchievementLibrary : ScriptableObject
 {
-	// Token: 0x17000B19 RID: 2841
-	// (get) Token: 0x06001652 RID: 5714 RVA: 0x00045BBF File Offset: 0x00043DBF
+	// Token: 0x17000E40 RID: 3648
+	// (get) Token: 0x06001FEE RID: 8174 RVA: 0x00010E36 File Offset: 0x0000F036
 	private static AchievementLibrary Instance
 	{
 		get
@@ -19,7 +19,7 @@ public class AchievementLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001653 RID: 5715 RVA: 0x00045BE8 File Offset: 0x00043DE8
+	// Token: 0x06001FEF RID: 8175 RVA: 0x000A4150 File Offset: 0x000A2350
 	public static AchievementData GetAchievementData(AchievementType achievementType)
 	{
 		AchievementData result = null;
@@ -31,13 +31,13 @@ public class AchievementLibrary : ScriptableObject
 		throw new Exception("Achievement Library is null.");
 	}
 
-	// Token: 0x04001591 RID: 5521
+	// Token: 0x04001C94 RID: 7316
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/AchievementLibrary";
 
-	// Token: 0x04001592 RID: 5522
+	// Token: 0x04001C95 RID: 7317
 	[SerializeField]
 	private AchievementTypeAchievementDataDictionary m_achievementLibrary;
 
-	// Token: 0x04001593 RID: 5523
+	// Token: 0x04001C96 RID: 7318
 	private static AchievementLibrary m_instance;
 }

@@ -4,26 +4,26 @@ using SceneManagement_RL;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200056D RID: 1389
+// Token: 0x0200093E RID: 2366
 public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 {
 	// Token: 0x14000004 RID: 4
-	// (add) Token: 0x060032CA RID: 13002 RVA: 0x000ABDF0 File Offset: 0x000A9FF0
-	// (remove) Token: 0x060032CB RID: 13003 RVA: 0x000ABE28 File Offset: 0x000AA028
+	// (add) Token: 0x060047A5 RID: 18341 RVA: 0x001166C4 File Offset: 0x001148C4
+	// (remove) Token: 0x060047A6 RID: 18342 RVA: 0x001166FC File Offset: 0x001148FC
 	public event EventHandler<EventArgs> DestroyedEvent;
 
 	// Token: 0x14000005 RID: 5
-	// (add) Token: 0x060032CC RID: 13004 RVA: 0x000ABE60 File Offset: 0x000AA060
-	// (remove) Token: 0x060032CD RID: 13005 RVA: 0x000ABE98 File Offset: 0x000AA098
+	// (add) Token: 0x060047A7 RID: 18343 RVA: 0x00116734 File Offset: 0x00114934
+	// (remove) Token: 0x060047A8 RID: 18344 RVA: 0x0011676C File Offset: 0x0011496C
 	public event EventHandler<EventArgs> PlayerEnteredEvent;
 
 	// Token: 0x14000006 RID: 6
-	// (add) Token: 0x060032CE RID: 13006 RVA: 0x000ABED0 File Offset: 0x000AA0D0
-	// (remove) Token: 0x060032CF RID: 13007 RVA: 0x000ABF08 File Offset: 0x000AA108
+	// (add) Token: 0x060047A9 RID: 18345 RVA: 0x001167A4 File Offset: 0x001149A4
+	// (remove) Token: 0x060047AA RID: 18346 RVA: 0x001167DC File Offset: 0x001149DC
 	public event EventHandler<EventArgs> PlayerExitedEvent;
 
-	// Token: 0x17001265 RID: 4709
-	// (get) Token: 0x060032D0 RID: 13008 RVA: 0x000ABF3D File Offset: 0x000AA13D
+	// Token: 0x1700192C RID: 6444
+	// (get) Token: 0x060047AB RID: 18347 RVA: 0x0002740B File Offset: 0x0002560B
 	public Interactable Interactable
 	{
 		get
@@ -32,13 +32,13 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x17001266 RID: 4710
-	// (get) Token: 0x060032D1 RID: 13009 RVA: 0x000ABF45 File Offset: 0x000AA145
-	// (set) Token: 0x060032D2 RID: 13010 RVA: 0x000ABF4D File Offset: 0x000AA14D
+	// Token: 0x1700192D RID: 6445
+	// (get) Token: 0x060047AC RID: 18348 RVA: 0x00027413 File Offset: 0x00025613
+	// (set) Token: 0x060047AD RID: 18349 RVA: 0x0002741B File Offset: 0x0002561B
 	public bool IsInstantiated { get; private set; }
 
-	// Token: 0x17001267 RID: 4711
-	// (get) Token: 0x060032D3 RID: 13011 RVA: 0x000ABF56 File Offset: 0x000AA156
+	// Token: 0x1700192E RID: 6446
+	// (get) Token: 0x060047AE RID: 18350 RVA: 0x00027424 File Offset: 0x00025624
 	protected bool IsCutsceneTeleport
 	{
 		get
@@ -47,9 +47,9 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x17001268 RID: 4712
-	// (get) Token: 0x060032D4 RID: 13012 RVA: 0x000ABF63 File Offset: 0x000AA163
-	// (set) Token: 0x060032D5 RID: 13013 RVA: 0x000ABF7F File Offset: 0x000AA17F
+	// Token: 0x1700192F RID: 6447
+	// (get) Token: 0x060047AF RID: 18351 RVA: 0x00027431 File Offset: 0x00025631
+	// (set) Token: 0x060047B0 RID: 18352 RVA: 0x0002744D File Offset: 0x0002564D
 	public Tunnel Destination
 	{
 		get
@@ -66,8 +66,8 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x17001269 RID: 4713
-	// (get) Token: 0x060032D6 RID: 13014 RVA: 0x000ABF88 File Offset: 0x000AA188
+	// Token: 0x17001930 RID: 6448
+	// (get) Token: 0x060047B1 RID: 18353 RVA: 0x00003713 File Offset: 0x00001913
 	public GameObject GameObject
 	{
 		get
@@ -76,29 +76,29 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x1700126A RID: 4714
-	// (get) Token: 0x060032D7 RID: 13015 RVA: 0x000ABF90 File Offset: 0x000AA190
-	// (set) Token: 0x060032D8 RID: 13016 RVA: 0x000ABF98 File Offset: 0x000AA198
+	// Token: 0x17001931 RID: 6449
+	// (get) Token: 0x060047B2 RID: 18354 RVA: 0x00027456 File Offset: 0x00025656
+	// (set) Token: 0x060047B3 RID: 18355 RVA: 0x0002745E File Offset: 0x0002565E
 	public int Index { get; private set; }
 
-	// Token: 0x1700126B RID: 4715
-	// (get) Token: 0x060032D9 RID: 13017 RVA: 0x000ABFA1 File Offset: 0x000AA1A1
-	// (set) Token: 0x060032DA RID: 13018 RVA: 0x000ABFA9 File Offset: 0x000AA1A9
+	// Token: 0x17001932 RID: 6450
+	// (get) Token: 0x060047B4 RID: 18356 RVA: 0x00027467 File Offset: 0x00025667
+	// (set) Token: 0x060047B5 RID: 18357 RVA: 0x0002746F File Offset: 0x0002566F
 	public bool LeadsToRoot { get; private set; }
 
-	// Token: 0x1700126C RID: 4716
-	// (get) Token: 0x060032DB RID: 13019 RVA: 0x000ABFB2 File Offset: 0x000AA1B2
-	// (set) Token: 0x060032DC RID: 13020 RVA: 0x000ABFBA File Offset: 0x000AA1BA
+	// Token: 0x17001933 RID: 6451
+	// (get) Token: 0x060047B6 RID: 18358 RVA: 0x00027478 File Offset: 0x00025678
+	// (set) Token: 0x060047B7 RID: 18359 RVA: 0x00027480 File Offset: 0x00025680
 	public bool IsLocked { get; protected set; }
 
-	// Token: 0x1700126D RID: 4717
-	// (get) Token: 0x060032DD RID: 13021 RVA: 0x000ABFC3 File Offset: 0x000AA1C3
-	// (set) Token: 0x060032DE RID: 13022 RVA: 0x000ABFCB File Offset: 0x000AA1CB
+	// Token: 0x17001934 RID: 6452
+	// (get) Token: 0x060047B8 RID: 18360 RVA: 0x00027489 File Offset: 0x00025689
+	// (set) Token: 0x060047B9 RID: 18361 RVA: 0x00027491 File Offset: 0x00025691
 	public TransitionID TransitionType { get; private set; }
 
-	// Token: 0x1700126E RID: 4718
-	// (get) Token: 0x060032DF RID: 13023 RVA: 0x000ABFD4 File Offset: 0x000AA1D4
-	// (set) Token: 0x060032E0 RID: 13024 RVA: 0x000ABFDC File Offset: 0x000AA1DC
+	// Token: 0x17001935 RID: 6453
+	// (get) Token: 0x060047BA RID: 18362 RVA: 0x0002749A File Offset: 0x0002569A
+	// (set) Token: 0x060047BB RID: 18363 RVA: 0x000274A2 File Offset: 0x000256A2
 	public BaseRoom Room
 	{
 		get
@@ -111,23 +111,23 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x1700126F RID: 4719
-	// (get) Token: 0x060032E1 RID: 13025 RVA: 0x000ABFE5 File Offset: 0x000AA1E5
-	// (set) Token: 0x060032E2 RID: 13026 RVA: 0x000ABFED File Offset: 0x000AA1ED
+	// Token: 0x17001936 RID: 6454
+	// (get) Token: 0x060047BC RID: 18364 RVA: 0x000274AB File Offset: 0x000256AB
+	// (set) Token: 0x060047BD RID: 18365 RVA: 0x000274B3 File Offset: 0x000256B3
 	public Tunnel Root { get; private set; }
 
-	// Token: 0x17001270 RID: 4720
-	// (get) Token: 0x060032E3 RID: 13027 RVA: 0x000ABFF6 File Offset: 0x000AA1F6
-	// (set) Token: 0x060032E4 RID: 13028 RVA: 0x000ABFFE File Offset: 0x000AA1FE
+	// Token: 0x17001937 RID: 6455
+	// (get) Token: 0x060047BE RID: 18366 RVA: 0x000274BC File Offset: 0x000256BC
+	// (set) Token: 0x060047BF RID: 18367 RVA: 0x000274C4 File Offset: 0x000256C4
 	public Animator Animator { get; private set; }
 
-	// Token: 0x060032E5 RID: 13029 RVA: 0x000AC007 File Offset: 0x000AA207
+	// Token: 0x060047C0 RID: 18368 RVA: 0x000274CD File Offset: 0x000256CD
 	protected virtual void Awake()
 	{
 		this.Animator = base.GetComponent<Animator>();
 	}
 
-	// Token: 0x060032E6 RID: 13030 RVA: 0x000AC015 File Offset: 0x000AA215
+	// Token: 0x060047C1 RID: 18369 RVA: 0x000274DB File Offset: 0x000256DB
 	private void OnDestroy()
 	{
 		if (this.DestroyedEvent != null)
@@ -136,7 +136,7 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x060032E7 RID: 13031 RVA: 0x000AC030 File Offset: 0x000AA230
+	// Token: 0x060047C2 RID: 18370 RVA: 0x000274F6 File Offset: 0x000256F6
 	private void OnDisable()
 	{
 		if (this.m_interactable)
@@ -145,7 +145,7 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x060032E8 RID: 13032 RVA: 0x000AC05C File Offset: 0x000AA25C
+	// Token: 0x060047C3 RID: 18371 RVA: 0x00027522 File Offset: 0x00025722
 	protected virtual void OnEnable()
 	{
 		if (this.m_interactable)
@@ -154,13 +154,13 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x060032E9 RID: 13033 RVA: 0x000AC088 File Offset: 0x000AA288
+	// Token: 0x060047C4 RID: 18372 RVA: 0x0002754E File Offset: 0x0002574E
 	public void Initialise()
 	{
 		this.IsInstantiated = true;
 	}
 
-	// Token: 0x060032EA RID: 13034 RVA: 0x000AC091 File Offset: 0x000AA291
+	// Token: 0x060047C5 RID: 18373 RVA: 0x00027557 File Offset: 0x00025757
 	public virtual void ForceEnterTunnel(bool animate, Tunnel tempDestinationOverride = null)
 	{
 		this.m_tempDestinationOverride = tempDestinationOverride;
@@ -173,7 +173,7 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		this.EnterTunnel();
 	}
 
-	// Token: 0x060032EB RID: 13035 RVA: 0x000AC0B8 File Offset: 0x000AA2B8
+	// Token: 0x060047C6 RID: 18374 RVA: 0x00116814 File Offset: 0x00114A14
 	protected virtual void OnPlayerInteractedWithTunnel(GameObject otherObj)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -185,7 +185,7 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		base.StartCoroutine(this.EnterTunnelCoroutine());
 	}
 
-	// Token: 0x060032EC RID: 13036 RVA: 0x000AC0F2 File Offset: 0x000AA2F2
+	// Token: 0x060047C7 RID: 18375 RVA: 0x0002757C File Offset: 0x0002577C
 	protected virtual IEnumerator EnterTunnelCoroutine()
 	{
 		if (this.IsCutsceneTeleport)
@@ -205,7 +205,7 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		yield break;
 	}
 
-	// Token: 0x060032ED RID: 13037 RVA: 0x000AC104 File Offset: 0x000AA304
+	// Token: 0x060047C8 RID: 18376 RVA: 0x00116850 File Offset: 0x00114A50
 	public void SetRoot(Tunnel root)
 	{
 		if (root == null)
@@ -224,7 +224,7 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x060032EE RID: 13038 RVA: 0x000AC156 File Offset: 0x000AA356
+	// Token: 0x060047C9 RID: 18377 RVA: 0x0002758B File Offset: 0x0002578B
 	public void SetIsDestinationRoot(bool leadsToRoot)
 	{
 		if (this.Root == this)
@@ -239,7 +239,7 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		this.LeadsToRoot = leadsToRoot;
 	}
 
-	// Token: 0x060032EF RID: 13039 RVA: 0x000AC190 File Offset: 0x000AA390
+	// Token: 0x060047CA RID: 18378 RVA: 0x001168A4 File Offset: 0x00114AA4
 	protected void EnterTunnel()
 	{
 		if (PlayerManager.GetPlayerController().CurrentHealth <= 0f && !ChallengeManager.IsInChallenge)
@@ -279,7 +279,7 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		RoomSaveController.DisableCutsceneSaving = false;
 	}
 
-	// Token: 0x060032F0 RID: 13040 RVA: 0x000AC27C File Offset: 0x000AA47C
+	// Token: 0x060047CB RID: 18379 RVA: 0x00116990 File Offset: 0x00114B90
 	public void PlacePlayerHere()
 	{
 		if (this.Room)
@@ -315,25 +315,25 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x060032F1 RID: 13041 RVA: 0x000AC366 File Offset: 0x000AA566
+	// Token: 0x060047CC RID: 18380 RVA: 0x000275C3 File Offset: 0x000257C3
 	public void SetDestination(Tunnel tunnel)
 	{
 		this.Destination = tunnel;
 	}
 
-	// Token: 0x060032F2 RID: 13042 RVA: 0x000AC36F File Offset: 0x000AA56F
+	// Token: 0x060047CD RID: 18381 RVA: 0x000275CC File Offset: 0x000257CC
 	public void SetIndex(int index)
 	{
 		this.Index = index;
 	}
 
-	// Token: 0x060032F3 RID: 13043 RVA: 0x000AC378 File Offset: 0x000AA578
+	// Token: 0x060047CE RID: 18382 RVA: 0x000275D5 File Offset: 0x000257D5
 	public void SetTransitionType(TransitionID transitionType)
 	{
 		this.TransitionType = transitionType;
 	}
 
-	// Token: 0x060032F4 RID: 13044 RVA: 0x000AC381 File Offset: 0x000AA581
+	// Token: 0x060047CF RID: 18383 RVA: 0x000275DE File Offset: 0x000257DE
 	public virtual void SetIsLocked(bool isLocked)
 	{
 		this.IsLocked = isLocked;
@@ -343,13 +343,13 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x060032F5 RID: 13045 RVA: 0x000AC3A6 File Offset: 0x000AA5A6
+	// Token: 0x060047D0 RID: 18384 RVA: 0x00027603 File Offset: 0x00025803
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 	}
 
-	// Token: 0x060032F6 RID: 13046 RVA: 0x000AC3AF File Offset: 0x000AA5AF
+	// Token: 0x060047D1 RID: 18385 RVA: 0x0002760C File Offset: 0x0002580C
 	public void SetIsVisible(bool isVisible)
 	{
 		if (this.m_visuals)
@@ -358,37 +358,37 @@ public class Tunnel : MonoBehaviour, IRoomConsumer, IRootObj
 		}
 	}
 
-	// Token: 0x060032F9 RID: 13049 RVA: 0x000AC3ED File Offset: 0x000AA5ED
+	// Token: 0x060047D4 RID: 18388 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040027B3 RID: 10163
+	// Token: 0x040036E4 RID: 14052
 	private static Vector3 OFFSET = new Vector3(0f, 0.1f, 0f);
 
-	// Token: 0x040027B4 RID: 10164
+	// Token: 0x040036E5 RID: 14053
 	[SerializeField]
 	protected Interactable m_interactable;
 
-	// Token: 0x040027B5 RID: 10165
+	// Token: 0x040036E6 RID: 14054
 	[SerializeField]
 	private GameObject m_visuals;
 
-	// Token: 0x040027B6 RID: 10166
+	// Token: 0x040036E7 RID: 14055
 	[SerializeField]
 	private UnityEvent m_enterUnityEvent;
 
-	// Token: 0x040027B7 RID: 10167
+	// Token: 0x040036E8 RID: 14056
 	[SerializeField]
 	private UnityEvent m_exitUnityEvent;
 
-	// Token: 0x040027B8 RID: 10168
+	// Token: 0x040036E9 RID: 14057
 	private BaseRoom m_room;
 
-	// Token: 0x040027BD RID: 10173
+	// Token: 0x040036EE RID: 14062
 	private Tunnel m_destination;
 
-	// Token: 0x040027BE RID: 10174
+	// Token: 0x040036EF RID: 14063
 	protected Tunnel m_tempDestinationOverride;
 }

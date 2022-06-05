@@ -4,10 +4,10 @@ using RLAudio;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200012A RID: 298
+// Token: 0x020001FE RID: 510
 public class SpellswordBoss_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x06000938 RID: 2360 RVA: 0x0001E04C File Offset: 0x0001C24C
+	// Token: 0x06000E05 RID: 3589 RVA: 0x000724D4 File Offset: 0x000706D4
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -34,8 +34,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x170004F6 RID: 1270
-	// (get) Token: 0x06000939 RID: 2361 RVA: 0x0001E108 File Offset: 0x0001C308
+	// Token: 0x1700068E RID: 1678
+	// (get) Token: 0x06000E06 RID: 3590 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float m_modeShiftHealthMod
 	{
 		get
@@ -44,8 +44,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004F7 RID: 1271
-	// (get) Token: 0x0600093A RID: 2362 RVA: 0x0001E10F File Offset: 0x0001C30F
+	// Token: 0x1700068F RID: 1679
+	// (get) Token: 0x06000E07 RID: 3591 RVA: 0x00007E0D File Offset: 0x0000600D
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -54,8 +54,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004F8 RID: 1272
-	// (get) Token: 0x0600093B RID: 2363 RVA: 0x0001E120 File Offset: 0x0001C320
+	// Token: 0x17000690 RID: 1680
+	// (get) Token: 0x06000E08 RID: 3592 RVA: 0x00007E1E File Offset: 0x0000601E
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -64,8 +64,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004F9 RID: 1273
-	// (get) Token: 0x0600093C RID: 2364 RVA: 0x0001E131 File Offset: 0x0001C331
+	// Token: 0x17000691 RID: 1681
+	// (get) Token: 0x06000E09 RID: 3593 RVA: 0x00007E1E File Offset: 0x0000601E
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -74,8 +74,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004FA RID: 1274
-	// (get) Token: 0x0600093D RID: 2365 RVA: 0x0001E142 File Offset: 0x0001C342
+	// Token: 0x17000692 RID: 1682
+	// (get) Token: 0x06000E0A RID: 3594 RVA: 0x00004F89 File Offset: 0x00003189
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -84,8 +84,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004FB RID: 1275
-	// (get) Token: 0x0600093E RID: 2366 RVA: 0x0001E153 File Offset: 0x0001C353
+	// Token: 0x17000693 RID: 1683
+	// (get) Token: 0x06000E0B RID: 3595 RVA: 0x00007E2F File Offset: 0x0000602F
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -94,8 +94,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004FC RID: 1276
-	// (get) Token: 0x0600093F RID: 2367 RVA: 0x0001E164 File Offset: 0x0001C364
+	// Token: 0x17000694 RID: 1684
+	// (get) Token: 0x06000E0C RID: 3596 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool UseVariant
 	{
 		get
@@ -104,7 +104,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000940 RID: 2368 RVA: 0x0001E168 File Offset: 0x0001C368
+	// Token: 0x06000E0D RID: 3597 RVA: 0x00072590 File Offset: 0x00070790
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -113,7 +113,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		this.m_modeShiftController = base.EnemyController.GetComponent<BossModeShiftController>();
 	}
 
-	// Token: 0x06000941 RID: 2369 RVA: 0x0001E1B7 File Offset: 0x0001C3B7
+	// Token: 0x06000E0E RID: 3598 RVA: 0x00007E40 File Offset: 0x00006040
 	public override void ResetScript()
 	{
 		base.ResetScript();
@@ -122,7 +122,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		base.LogicController.DisableLogicActivationByDistance = true;
 	}
 
-	// Token: 0x06000942 RID: 2370 RVA: 0x0001E1E3 File Offset: 0x0001C3E3
+	// Token: 0x06000E0F RID: 3599 RVA: 0x00007E6C File Offset: 0x0000606C
 	private void OnDestroy()
 	{
 		if (base.EnemyController)
@@ -131,7 +131,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000943 RID: 2371 RVA: 0x0001E210 File Offset: 0x0001C410
+	// Token: 0x06000E10 RID: 3600 RVA: 0x000725E0 File Offset: 0x000707E0
 	private void OnBossHit(object sender, HealthChangeEventArgs args)
 	{
 		if (this.m_inSecondMode)
@@ -160,7 +160,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000944 RID: 2372 RVA: 0x0001E2B8 File Offset: 0x0001C4B8
+	// Token: 0x06000E11 RID: 3601 RVA: 0x00007E98 File Offset: 0x00006098
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -213,8 +213,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x170004FD RID: 1277
-	// (get) Token: 0x06000945 RID: 2373 RVA: 0x0001E2C7 File Offset: 0x0001C4C7
+	// Token: 0x17000695 RID: 1685
+	// (get) Token: 0x06000E12 RID: 3602 RVA: 0x00007B8D File Offset: 0x00005D8D
 	protected virtual int m_numStaffFireballs
 	{
 		get
@@ -223,8 +223,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004FE RID: 1278
-	// (get) Token: 0x06000946 RID: 2374 RVA: 0x0001E2CB File Offset: 0x0001C4CB
+	// Token: 0x17000696 RID: 1686
+	// (get) Token: 0x06000E13 RID: 3603 RVA: 0x00005315 File Offset: 0x00003515
 	protected virtual int m_numStaffFireballs_AddSecondMode
 	{
 		get
@@ -233,7 +233,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000947 RID: 2375 RVA: 0x0001E2CF File Offset: 0x0001C4CF
+	// Token: 0x06000E14 RID: 3604 RVA: 0x00007EA7 File Offset: 0x000060A7
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -300,7 +300,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000948 RID: 2376 RVA: 0x0001E2DE File Offset: 0x0001C4DE
+	// Token: 0x06000E15 RID: 3605 RVA: 0x00007EB6 File Offset: 0x000060B6
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -382,8 +382,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x170004FF RID: 1279
-	// (get) Token: 0x06000949 RID: 2377 RVA: 0x0001E2ED File Offset: 0x0001C4ED
+	// Token: 0x17000697 RID: 1687
+	// (get) Token: 0x06000E16 RID: 3606 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected virtual int m_numDaggerThrowPirhouettes
 	{
 		get
@@ -392,8 +392,8 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000500 RID: 1280
-	// (get) Token: 0x0600094A RID: 2378 RVA: 0x0001E2F0 File Offset: 0x0001C4F0
+	// Token: 0x17000698 RID: 1688
+	// (get) Token: 0x06000E17 RID: 3607 RVA: 0x000047A7 File Offset: 0x000029A7
 	protected virtual int m_numDaggerThrowDaggers_SecondModeAdd
 	{
 		get
@@ -402,7 +402,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600094B RID: 2379 RVA: 0x0001E2F3 File Offset: 0x0001C4F3
+	// Token: 0x06000E18 RID: 3608 RVA: 0x00007EC5 File Offset: 0x000060C5
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -466,7 +466,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600094C RID: 2380 RVA: 0x0001E302 File Offset: 0x0001C502
+	// Token: 0x06000E19 RID: 3609 RVA: 0x00007ED4 File Offset: 0x000060D4
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -541,7 +541,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600094D RID: 2381 RVA: 0x0001E311 File Offset: 0x0001C511
+	// Token: 0x06000E1A RID: 3610 RVA: 0x00007EE3 File Offset: 0x000060E3
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -595,7 +595,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600094E RID: 2382 RVA: 0x0001E320 File Offset: 0x0001C520
+	// Token: 0x06000E1B RID: 3611 RVA: 0x00007EF2 File Offset: 0x000060F2
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -681,7 +681,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600094F RID: 2383 RVA: 0x0001E32F File Offset: 0x0001C52F
+	// Token: 0x06000E1C RID: 3612 RVA: 0x00007F01 File Offset: 0x00006101
 	public override IEnumerator DeathAnim()
 	{
 		yield return base.DeathAnim();
@@ -693,7 +693,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000950 RID: 2384 RVA: 0x0001E33E File Offset: 0x0001C53E
+	// Token: 0x06000E1D RID: 3613 RVA: 0x00007F10 File Offset: 0x00006110
 	public override IEnumerator SpawnAnim()
 	{
 		yield return this.Default_Animation("Intro_Idle", this.m_spawn_Idle_AnimSpeed, this.m_spawn_Idle_Delay, true);
@@ -703,7 +703,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000951 RID: 2385 RVA: 0x0001E350 File Offset: 0x0001C550
+	// Token: 0x06000E1E RID: 3614 RVA: 0x00072688 File Offset: 0x00070888
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.StopProjectile(ref this.m_swordFlameProjectile);
@@ -719,7 +719,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x06000952 RID: 2386 RVA: 0x0001E3D4 File Offset: 0x0001C5D4
+	// Token: 0x06000E1F RID: 3615 RVA: 0x0007270C File Offset: 0x0007090C
 	public override void Pause()
 	{
 		base.Pause();
@@ -749,7 +749,7 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000953 RID: 2387 RVA: 0x0001E514 File Offset: 0x0001C714
+	// Token: 0x06000E20 RID: 3616 RVA: 0x0007284C File Offset: 0x00070A4C
 	public override void Unpause()
 	{
 		base.Unpause();
@@ -773,693 +773,693 @@ public class SpellswordBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x04000CCE RID: 3278
+	// Token: 0x0400104F RID: 4175
 	public UnityEvent ModeShiftEvent;
 
-	// Token: 0x04000CCF RID: 3279
+	// Token: 0x04001050 RID: 4176
 	protected const int SPAWN_POS_INDEX = 0;
 
-	// Token: 0x04000CD0 RID: 3280
+	// Token: 0x04001051 RID: 4177
 	protected const int MID_POS_INDEX = 1;
 
-	// Token: 0x04000CD1 RID: 3281
+	// Token: 0x04001052 RID: 4178
 	protected const int TOP_POS_INDEX = 2;
 
-	// Token: 0x04000CD2 RID: 3282
+	// Token: 0x04001053 RID: 4179
 	protected const int FRONT_POS_INDEX = 3;
 
-	// Token: 0x04000CD3 RID: 3283
+	// Token: 0x04001054 RID: 4180
 	protected const int MID_FRONT_POS_INDEX = 4;
 
-	// Token: 0x04000CD4 RID: 3284
+	// Token: 0x04001055 RID: 4181
 	protected const int FOOT_FRONT_POS_INDEX = 5;
 
-	// Token: 0x04000CD5 RID: 3285
+	// Token: 0x04001056 RID: 4182
 	protected const int FOOT_BACK_POS_INDEX = 6;
 
-	// Token: 0x04000CD6 RID: 3286
+	// Token: 0x04001057 RID: 4183
 	protected const int STAFF_TOP_POS_INDEX = 7;
 
-	// Token: 0x04000CD7 RID: 3287
+	// Token: 0x04001058 RID: 4184
 	protected const int STAFF_FRONT_POS_INDEX = 8;
 
-	// Token: 0x04000CD8 RID: 3288
+	// Token: 0x04001059 RID: 4185
 	protected const int SHOUT_MOUTH_POS_INDEX = 9;
 
-	// Token: 0x04000CD9 RID: 3289
+	// Token: 0x0400105A RID: 4186
 	protected const int FAR_FRONT_POS_INDEX = 10;
 
-	// Token: 0x04000CDA RID: 3290
+	// Token: 0x0400105B RID: 4187
 	protected const int VERY_FAR_POS_INDEX = 11;
 
-	// Token: 0x04000CDB RID: 3291
+	// Token: 0x0400105C RID: 4188
 	protected const int SUPER_FAR_POS_INDEX = 12;
 
-	// Token: 0x04000CDC RID: 3292
+	// Token: 0x0400105D RID: 4189
 	protected const int LOW_GROUND_POS_INDEX = 13;
 
-	// Token: 0x04000CDD RID: 3293
+	// Token: 0x0400105E RID: 4190
 	private bool m_inSecondMode;
 
-	// Token: 0x04000CDE RID: 3294
+	// Token: 0x0400105F RID: 4191
 	private BossModeShiftController m_modeShiftController;
 
-	// Token: 0x04000CDF RID: 3295
+	// Token: 0x04001060 RID: 4192
 	private EnemyModeShiftEventArgs m_modeShiftEventArgs;
 
-	// Token: 0x04000CE0 RID: 3296
+	// Token: 0x04001061 RID: 4193
 	protected const string THRUST_TELL_INTRO = "SpearThrust_Tell_Intro";
 
-	// Token: 0x04000CE1 RID: 3297
+	// Token: 0x04001062 RID: 4194
 	protected const string THRUST_TELL_HOLD = "SpearThrust_Tell_Hold";
 
-	// Token: 0x04000CE2 RID: 3298
+	// Token: 0x04001063 RID: 4195
 	protected const string THRUST_ATTACK_INTRO = "SpearThrust_Attack_Intro";
 
-	// Token: 0x04000CE3 RID: 3299
+	// Token: 0x04001064 RID: 4196
 	protected const string THRUST_ATTACK_HOLD = "SpearThrust_Attack_Hold";
 
-	// Token: 0x04000CE4 RID: 3300
+	// Token: 0x04001065 RID: 4197
 	protected const string THRUST_EXIT = "SpearThrust_Exit";
 
-	// Token: 0x04000CE5 RID: 3301
+	// Token: 0x04001066 RID: 4198
 	protected const string THRUST_SPEAR_PROJECTILE = "SpellSwordSpearBounceBoltProjectile";
 
-	// Token: 0x04000CE6 RID: 3302
+	// Token: 0x04001067 RID: 4199
 	protected float m_thrust_AttackSpeed = 35f;
 
-	// Token: 0x04000CE7 RID: 3303
+	// Token: 0x04001068 RID: 4200
 	protected float m_thrust_AttackDuration = 0.65f;
 
-	// Token: 0x04000CE8 RID: 3304
+	// Token: 0x04001069 RID: 4201
 	protected float m_thrust_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000CE9 RID: 3305
+	// Token: 0x0400106A RID: 4202
 	protected float m_thrust_TellHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000CEA RID: 3306
+	// Token: 0x0400106B RID: 4203
 	protected float m_thrust_TellIntroAndHold_Delay = 0.9f;
 
-	// Token: 0x04000CEB RID: 3307
+	// Token: 0x0400106C RID: 4204
 	protected float m_thrust_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000CEC RID: 3308
+	// Token: 0x0400106D RID: 4205
 	protected float m_thrust_AttackIntro_Delay;
 
-	// Token: 0x04000CED RID: 3309
+	// Token: 0x0400106E RID: 4206
 	protected float m_thrust_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000CEE RID: 3310
+	// Token: 0x0400106F RID: 4207
 	protected float m_thrust_AttackHold_Delay;
 
-	// Token: 0x04000CEF RID: 3311
+	// Token: 0x04001070 RID: 4208
 	protected float m_thrust_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x04000CF0 RID: 3312
+	// Token: 0x04001071 RID: 4209
 	protected float m_thrust_Exit_Delay = 0.45f;
 
-	// Token: 0x04000CF1 RID: 3313
+	// Token: 0x04001072 RID: 4210
 	protected float m_thrust_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000CF2 RID: 3314
+	// Token: 0x04001073 RID: 4211
 	protected float m_thrust_AttackCD = 12f;
 
-	// Token: 0x04000CF3 RID: 3315
+	// Token: 0x04001074 RID: 4212
 	protected int m_numThrustDaggers = 8;
 
-	// Token: 0x04000CF4 RID: 3316
+	// Token: 0x04001075 RID: 4213
 	protected int m_thrustDaggerSpread = 90;
 
-	// Token: 0x04000CF5 RID: 3317
+	// Token: 0x04001076 RID: 4214
 	protected const string STAFF_TELL_INTRO = "StaffCircle_Tell_Intro";
 
-	// Token: 0x04000CF6 RID: 3318
+	// Token: 0x04001077 RID: 4215
 	protected const string STAFF_TELL_HOLD = "StaffCircle_Tell_Hold";
 
-	// Token: 0x04000CF7 RID: 3319
+	// Token: 0x04001078 RID: 4216
 	protected const string STAFF_ATTACK_INTRO = "StaffCircle_Attack_Intro";
 
-	// Token: 0x04000CF8 RID: 3320
+	// Token: 0x04001079 RID: 4217
 	protected const string STAFF_ATTACK_HOLD = "StaffCircle_Attack_Hold";
 
-	// Token: 0x04000CF9 RID: 3321
+	// Token: 0x0400107A RID: 4218
 	protected const string STAFF_EXIT = "StaffCircle_Exit";
 
-	// Token: 0x04000CFA RID: 3322
+	// Token: 0x0400107B RID: 4219
 	protected const string STAFF_CIRCLE_PROJECTILE = "SpellSwordStaffCircleBoltProjectile";
 
-	// Token: 0x04000CFB RID: 3323
+	// Token: 0x0400107C RID: 4220
 	protected const string STAFF_CIRCLEHOMING_PROJECTILE = "SpellSwordStaffCircleHomingBoltProjectile";
 
-	// Token: 0x04000CFC RID: 3324
+	// Token: 0x0400107D RID: 4221
 	protected float m_staff_AttackDuration = 2f;
 
-	// Token: 0x04000CFD RID: 3325
+	// Token: 0x0400107E RID: 4222
 	protected float m_staff_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000CFE RID: 3326
+	// Token: 0x0400107F RID: 4223
 	protected float m_staff_TellHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000CFF RID: 3327
+	// Token: 0x04001080 RID: 4224
 	protected float m_staff_TellIntroAndHold_Delay = 0.95f;
 
-	// Token: 0x04000D00 RID: 3328
+	// Token: 0x04001081 RID: 4225
 	protected float m_staff_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D01 RID: 3329
+	// Token: 0x04001082 RID: 4226
 	protected float m_staff_AttackIntro_Delay;
 
-	// Token: 0x04000D02 RID: 3330
+	// Token: 0x04001083 RID: 4227
 	protected float m_staff_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D03 RID: 3331
+	// Token: 0x04001084 RID: 4228
 	protected float m_staff_AttackHold_Delay;
 
-	// Token: 0x04000D04 RID: 3332
+	// Token: 0x04001085 RID: 4229
 	protected float m_staff_AttackHold_ExitDelay = 0.75f;
 
-	// Token: 0x04000D05 RID: 3333
+	// Token: 0x04001086 RID: 4230
 	protected float m_staff_Exit_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D06 RID: 3334
+	// Token: 0x04001087 RID: 4231
 	protected float m_staff_Exit_Delay;
 
-	// Token: 0x04000D07 RID: 3335
+	// Token: 0x04001088 RID: 4232
 	protected float m_staff_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000D08 RID: 3336
+	// Token: 0x04001089 RID: 4233
 	protected float m_staff_AttackCD = 12f;
 
-	// Token: 0x04000D09 RID: 3337
+	// Token: 0x0400108A RID: 4234
 	private Projectile_RL m_staffShieldProjectile;
 
-	// Token: 0x04000D0A RID: 3338
+	// Token: 0x0400108B RID: 4235
 	protected int m_numStaffFireballs_Variant = 15;
 
-	// Token: 0x04000D0B RID: 3339
+	// Token: 0x0400108C RID: 4236
 	protected int m_staffFireballSpread = 720;
 
-	// Token: 0x04000D0C RID: 3340
+	// Token: 0x0400108D RID: 4237
 	protected const string SWORD1_TELL_INTRO = "Sword1_Tell_Intro";
 
-	// Token: 0x04000D0D RID: 3341
+	// Token: 0x0400108E RID: 4238
 	protected const string SWORD1_TELL_HOLD = "Sword1_Tell_Hold";
 
-	// Token: 0x04000D0E RID: 3342
+	// Token: 0x0400108F RID: 4239
 	protected const string SWORD1_ATTACK_INTRO = "Sword1_Attack_Intro";
 
-	// Token: 0x04000D0F RID: 3343
+	// Token: 0x04001090 RID: 4240
 	protected const string SWORD1_ATTACK_HOLD = "Sword1_Attack_Hold";
 
-	// Token: 0x04000D10 RID: 3344
+	// Token: 0x04001091 RID: 4241
 	protected const string SWORD2_TELL_INTRO = "Sword2_Tell_Intro";
 
-	// Token: 0x04000D11 RID: 3345
+	// Token: 0x04001092 RID: 4242
 	protected const string SWORD2_TELL_HOLD = "Sword2_Tell_Hold";
 
-	// Token: 0x04000D12 RID: 3346
+	// Token: 0x04001093 RID: 4243
 	protected const string SWORD2_ATTACK_INTRO = "Sword2_Attack_Intro";
 
-	// Token: 0x04000D13 RID: 3347
+	// Token: 0x04001094 RID: 4244
 	protected const string SWORD2_ATTACK_HOLD = "Sword2_Attack_Hold";
 
-	// Token: 0x04000D14 RID: 3348
+	// Token: 0x04001095 RID: 4245
 	protected const string SWORD2_EXIT = "Sword2_Exit";
 
-	// Token: 0x04000D15 RID: 3349
+	// Token: 0x04001096 RID: 4246
 	protected const string SWORD_FLAMEGOUT_PROJECTILE = "SpellSwordFlameGoutProjectile";
 
-	// Token: 0x04000D16 RID: 3350
+	// Token: 0x04001097 RID: 4247
 	protected const string SWORD1_PROJECTILE = "SpellSwordSlashDownProjectile";
 
-	// Token: 0x04000D17 RID: 3351
+	// Token: 0x04001098 RID: 4248
 	protected const string SWORD2_PROJECTILE = "SpellSwordSlashUpProjectile";
 
-	// Token: 0x04000D18 RID: 3352
+	// Token: 0x04001099 RID: 4249
 	protected float m_sword_AttackSpeed = 16f;
 
-	// Token: 0x04000D19 RID: 3353
+	// Token: 0x0400109A RID: 4250
 	protected float m_sword_AttackDuration = 0.185f;
 
-	// Token: 0x04000D1A RID: 3354
+	// Token: 0x0400109B RID: 4251
 	protected float m_sword_PostAttack_Delay = 0.1f;
 
-	// Token: 0x04000D1B RID: 3355
+	// Token: 0x0400109C RID: 4252
 	protected float m_sword2_PostAttack_Delay = 0.75f;
 
-	// Token: 0x04000D1C RID: 3356
+	// Token: 0x0400109D RID: 4253
 	protected float m_sword2_AttackSpeed = 15f;
 
-	// Token: 0x04000D1D RID: 3357
+	// Token: 0x0400109E RID: 4254
 	protected float m_sword2_AttackDuration = 0.175f;
 
-	// Token: 0x04000D1E RID: 3358
+	// Token: 0x0400109F RID: 4255
 	protected float m_sword_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D1F RID: 3359
+	// Token: 0x040010A0 RID: 4256
 	protected float m_sword_TellHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D20 RID: 3360
+	// Token: 0x040010A1 RID: 4257
 	protected float m_sword_TellIntroAndHold_Delay = 0.75f;
 
-	// Token: 0x04000D21 RID: 3361
+	// Token: 0x040010A2 RID: 4258
 	protected float m_sword_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D22 RID: 3362
+	// Token: 0x040010A3 RID: 4259
 	protected float m_sword_AttackIntro_Delay;
 
-	// Token: 0x04000D23 RID: 3363
+	// Token: 0x040010A4 RID: 4260
 	protected float m_sword_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D24 RID: 3364
+	// Token: 0x040010A5 RID: 4261
 	protected float m_sword_AttackHold_Delay;
 
-	// Token: 0x04000D25 RID: 3365
+	// Token: 0x040010A6 RID: 4262
 	protected float m_sword2_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D26 RID: 3366
+	// Token: 0x040010A7 RID: 4263
 	protected float m_sword2_TellHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D27 RID: 3367
+	// Token: 0x040010A8 RID: 4264
 	protected float m_sword2_TellIntroAndHold_Delay = 0.35f;
 
-	// Token: 0x04000D28 RID: 3368
+	// Token: 0x040010A9 RID: 4265
 	protected float m_sword2_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D29 RID: 3369
+	// Token: 0x040010AA RID: 4266
 	protected float m_sword2_AttackIntro_Delay;
 
-	// Token: 0x04000D2A RID: 3370
+	// Token: 0x040010AB RID: 4267
 	protected float m_sword2_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D2B RID: 3371
+	// Token: 0x040010AC RID: 4268
 	protected float m_sword2_AttackHold_Delay;
 
-	// Token: 0x04000D2C RID: 3372
+	// Token: 0x040010AD RID: 4269
 	protected float m_sword_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x04000D2D RID: 3373
+	// Token: 0x040010AE RID: 4270
 	protected float m_sword_Exit_Delay;
 
-	// Token: 0x04000D2E RID: 3374
+	// Token: 0x040010AF RID: 4271
 	protected float m_sword_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000D2F RID: 3375
+	// Token: 0x040010B0 RID: 4272
 	protected float m_sword_AttackCD = 8f;
 
-	// Token: 0x04000D30 RID: 3376
+	// Token: 0x040010B1 RID: 4273
 	private Projectile_RL m_swordFlameProjectile;
 
-	// Token: 0x04000D31 RID: 3377
+	// Token: 0x040010B2 RID: 4274
 	private Projectile_RL m_swordFlameProjectile2;
 
-	// Token: 0x04000D32 RID: 3378
+	// Token: 0x040010B3 RID: 4275
 	private Projectile_RL m_swordFlameProjectile3;
 
-	// Token: 0x04000D33 RID: 3379
+	// Token: 0x040010B4 RID: 4276
 	private Projectile_RL m_swordFlameProjectile4;
 
-	// Token: 0x04000D34 RID: 3380
+	// Token: 0x040010B5 RID: 4277
 	protected const string DAGGERTHROW_TELL_INTRO = "DaggerThrow_Tell_Intro";
 
-	// Token: 0x04000D35 RID: 3381
+	// Token: 0x040010B6 RID: 4278
 	protected const string DAGGERTHROW_TELL_HOLD = "DaggerThrow_Tell_Hold";
 
-	// Token: 0x04000D36 RID: 3382
+	// Token: 0x040010B7 RID: 4279
 	protected const string DAGGERTHROW_ATTACK_INTRO = "DaggerThrow_Attack_Intro";
 
-	// Token: 0x04000D37 RID: 3383
+	// Token: 0x040010B8 RID: 4280
 	protected const string DAGGERTHROW_ATTACK_HOLD = "DaggerThrow_Attack_Hold";
 
-	// Token: 0x04000D38 RID: 3384
+	// Token: 0x040010B9 RID: 4281
 	protected const string DAGGERTHROW_EXIT = "DaggerThrow_Exit";
 
-	// Token: 0x04000D39 RID: 3385
+	// Token: 0x040010BA RID: 4282
 	protected const string DAGGERTHROW_PROJECTILE = "SpellSwordDaggerBoltBlueProjectile";
 
-	// Token: 0x04000D3A RID: 3386
+	// Token: 0x040010BB RID: 4283
 	protected float m_daggerThrowPirhouetteDelay = 0.15f;
 
-	// Token: 0x04000D3B RID: 3387
+	// Token: 0x040010BC RID: 4284
 	protected int m_numDaggerThrowDaggers = 3;
 
-	// Token: 0x04000D3C RID: 3388
+	// Token: 0x040010BD RID: 4285
 	protected int m_numDaggerThrowDaggers_Variant = 3;
 
-	// Token: 0x04000D3D RID: 3389
+	// Token: 0x040010BE RID: 4286
 	protected float m_daggerThrow_AttackSpeed = 28f;
 
-	// Token: 0x04000D3E RID: 3390
+	// Token: 0x040010BF RID: 4287
 	protected float m_daggerThrow_AttackDuration = 0.25f;
 
-	// Token: 0x04000D3F RID: 3391
+	// Token: 0x040010C0 RID: 4288
 	protected float m_daggerThrow_TellIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000D40 RID: 3392
+	// Token: 0x040010C1 RID: 4289
 	protected float m_daggerThrow_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000D41 RID: 3393
+	// Token: 0x040010C2 RID: 4290
 	protected float m_daggerThrow_TellIntroAndHold_Delay = 0.75f;
 
-	// Token: 0x04000D42 RID: 3394
+	// Token: 0x040010C3 RID: 4291
 	protected float m_daggerThrow_AttackIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000D43 RID: 3395
+	// Token: 0x040010C4 RID: 4292
 	protected float m_daggerThrow_AttackIntro_Delay;
 
-	// Token: 0x04000D44 RID: 3396
+	// Token: 0x040010C5 RID: 4293
 	protected float m_daggerThrow_AttackHold_AnimSpeed = 1f;
 
-	// Token: 0x04000D45 RID: 3397
+	// Token: 0x040010C6 RID: 4294
 	protected float m_daggerThrow_AttackHold_Delay;
 
-	// Token: 0x04000D46 RID: 3398
+	// Token: 0x040010C7 RID: 4295
 	protected float m_daggerThrow_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x04000D47 RID: 3399
+	// Token: 0x040010C8 RID: 4296
 	protected float m_daggerThrow_Exit_Delay;
 
-	// Token: 0x04000D48 RID: 3400
+	// Token: 0x040010C9 RID: 4297
 	protected float m_daggerThrow_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000D49 RID: 3401
+	// Token: 0x040010CA RID: 4298
 	protected float m_daggerThrow_AttackCD = 12f;
 
-	// Token: 0x04000D4A RID: 3402
+	// Token: 0x040010CB RID: 4299
 	protected const string AXE_TELL_INTRO = "AxeJump_Tell_Intro";
 
-	// Token: 0x04000D4B RID: 3403
+	// Token: 0x040010CC RID: 4300
 	protected const string AXE_TELL_HOLD = "AxeJump_Tell_Hold";
 
-	// Token: 0x04000D4C RID: 3404
+	// Token: 0x040010CD RID: 4301
 	protected const string AXE_ATTACK_INTRO = "AxeJump_Attack_Intro";
 
-	// Token: 0x04000D4D RID: 3405
+	// Token: 0x040010CE RID: 4302
 	protected const string AXE_ATTACK_HOLD = "AxeJump_Attack_Hold";
 
-	// Token: 0x04000D4E RID: 3406
+	// Token: 0x040010CF RID: 4303
 	protected const string AXE_EXIT_BLADE_OUT = "AxeJump_Land";
 
-	// Token: 0x04000D4F RID: 3407
+	// Token: 0x040010D0 RID: 4304
 	protected const string AXE_EXIT_RETRACT = "AxeJump_Exit";
 
-	// Token: 0x04000D50 RID: 3408
+	// Token: 0x040010D1 RID: 4305
 	protected const string AXE_SPIN_PROJECTILE = "SpellSwordAxeSpinProjectile";
 
-	// Token: 0x04000D51 RID: 3409
+	// Token: 0x040010D2 RID: 4306
 	protected const string AXE_LAND_PROJECTILE = "SpellSwordGroundRubbleProjectile";
 
-	// Token: 0x04000D52 RID: 3410
+	// Token: 0x040010D3 RID: 4307
 	protected const string AXE_LAND_ADVANCED_PROJECTILE = "SpellSwordVoidProjectile";
 
-	// Token: 0x04000D53 RID: 3411
+	// Token: 0x040010D4 RID: 4308
 	private Projectile_RL m_axeSpinProjectile;
 
-	// Token: 0x04000D54 RID: 3412
+	// Token: 0x040010D5 RID: 4309
 	protected Vector2 m_axeAttackVelocity = new Vector2(12f, 32f);
 
-	// Token: 0x04000D55 RID: 3413
+	// Token: 0x040010D6 RID: 4310
 	protected Vector2 m_axeAttack_Land_ThrowAngle = new Vector2(85f, 85f);
 
-	// Token: 0x04000D56 RID: 3414
+	// Token: 0x040010D7 RID: 4311
 	protected Vector2 m_axeAttack_Land_ThrowAngle2 = new Vector2(78f, 78f);
 
-	// Token: 0x04000D57 RID: 3415
+	// Token: 0x040010D8 RID: 4312
 	protected Vector2 m_axeAttack_Land_ThrowAngle3 = new Vector2(71f, 71f);
 
-	// Token: 0x04000D58 RID: 3416
+	// Token: 0x040010D9 RID: 4313
 	protected Vector2 m_axeAttack_Land_ThrowAngle4 = new Vector2(55f, 55f);
 
-	// Token: 0x04000D59 RID: 3417
+	// Token: 0x040010DA RID: 4314
 	protected Vector2 m_axeAttack_Land_ThrowAngle5 = new Vector2(82f, 82f);
 
-	// Token: 0x04000D5A RID: 3418
+	// Token: 0x040010DB RID: 4315
 	protected Vector2 m_axeAttack_Land_ThrowAngle6 = new Vector2(74f, 74f);
 
-	// Token: 0x04000D5B RID: 3419
+	// Token: 0x040010DC RID: 4316
 	protected Vector2 m_axeAttack_Land_ThrowPower = new Vector2(1f, 1f);
 
-	// Token: 0x04000D5C RID: 3420
+	// Token: 0x040010DD RID: 4317
 	protected float m_jump_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D5D RID: 3421
+	// Token: 0x040010DE RID: 4318
 	protected float m_jump_TellHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D5E RID: 3422
+	// Token: 0x040010DF RID: 4319
 	protected float m_jump_TellIntroAndHold_Delay = 0.65f;
 
-	// Token: 0x04000D5F RID: 3423
+	// Token: 0x040010E0 RID: 4320
 	protected float m_axeAttack_TellIntro_AnimSpeed = 1.5f;
 
-	// Token: 0x04000D60 RID: 3424
+	// Token: 0x040010E1 RID: 4321
 	protected float m_axeAttack_TellHold_AnimSpeed = 1.5f;
 
-	// Token: 0x04000D61 RID: 3425
+	// Token: 0x040010E2 RID: 4322
 	protected float m_axeAttack_TellIntroAndHold_Delay;
 
-	// Token: 0x04000D62 RID: 3426
+	// Token: 0x040010E3 RID: 4323
 	protected float m_axeAttack_AttackIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000D63 RID: 3427
+	// Token: 0x040010E4 RID: 4324
 	protected float m_axeAttack_AttackIntro_Delay;
 
-	// Token: 0x04000D64 RID: 3428
+	// Token: 0x040010E5 RID: 4325
 	protected float m_axeAttack_AttackHold_AnimSpeed = 1.5f;
 
-	// Token: 0x04000D65 RID: 3429
+	// Token: 0x040010E6 RID: 4326
 	protected float m_axeAttack_AttackHold_Delay;
 
-	// Token: 0x04000D66 RID: 3430
+	// Token: 0x040010E7 RID: 4327
 	protected float m_axeAttack_ExitHold_Delay = 0.375f;
 
-	// Token: 0x04000D67 RID: 3431
+	// Token: 0x040010E8 RID: 4328
 	protected float m_axeAttack_ExitHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D68 RID: 3432
+	// Token: 0x040010E9 RID: 4329
 	protected float m_axeAttack_Exit_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D69 RID: 3433
+	// Token: 0x040010EA RID: 4330
 	protected float m_axeAttack_Exit_Delay;
 
-	// Token: 0x04000D6A RID: 3434
+	// Token: 0x040010EB RID: 4331
 	protected float m_axeAttack_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000D6B RID: 3435
+	// Token: 0x040010EC RID: 4332
 	protected float m_axeAttack_AttackCD = 5f;
 
-	// Token: 0x04000D6C RID: 3436
+	// Token: 0x040010ED RID: 4333
 	protected const string STAFFTHROW_TELL_INTRO = "StaffForward_Tell_Intro";
 
-	// Token: 0x04000D6D RID: 3437
+	// Token: 0x040010EE RID: 4334
 	protected const string STAFFTHROW_TELL_HOLD = "StaffForward_Tell_Hold";
 
-	// Token: 0x04000D6E RID: 3438
+	// Token: 0x040010EF RID: 4335
 	protected const string STAFFTHROW_ATTACK_INTRO = "StaffForward_Attack_Intro";
 
-	// Token: 0x04000D6F RID: 3439
+	// Token: 0x040010F0 RID: 4336
 	protected const string STAFFTHROW_ATTACK_HOLD = "StaffForward_Attack_Hold";
 
-	// Token: 0x04000D70 RID: 3440
+	// Token: 0x040010F1 RID: 4337
 	protected const string STAFFTHROW_EXIT = "StaffForward_Attack_Exit";
 
-	// Token: 0x04000D71 RID: 3441
+	// Token: 0x040010F2 RID: 4338
 	protected const string STAFFTHROW_PROJECTILE = "SpellSwordStaffForwardBoltProjectile";
 
-	// Token: 0x04000D72 RID: 3442
+	// Token: 0x040010F3 RID: 4339
 	protected const string STAFFTHROW_BEAM_PROJECTILE = "SpellSwordStaffForwardBeamProjectile";
 
-	// Token: 0x04000D73 RID: 3443
+	// Token: 0x040010F4 RID: 4340
 	protected const string STAFFTHROW_BEAM_WARNING_PROJECTILE = "SpellSwordStaffWarningForwardBeamProjectile";
 
-	// Token: 0x04000D74 RID: 3444
+	// Token: 0x040010F5 RID: 4341
 	protected const string STAFFTHROW_BEAM_ADVANCED_PROJECTILE = "SpellSwordStaffForwardBeamAdvancedProjectile";
 
-	// Token: 0x04000D75 RID: 3445
+	// Token: 0x040010F6 RID: 4342
 	protected const string STAFFTHROW_BEAM_WARNING_ADVANCED_PROJECTILE = "SpellSwordStaffWarningForwardBeamAdvancedProjectile";
 
-	// Token: 0x04000D76 RID: 3446
+	// Token: 0x040010F7 RID: 4343
 	protected float m_staffThrow_BeamAttack_Duration = 0.75f;
 
-	// Token: 0x04000D77 RID: 3447
+	// Token: 0x040010F8 RID: 4344
 	protected float m_staffThrow_BeamAttack_Variant_Duration = 1f;
 
-	// Token: 0x04000D78 RID: 3448
+	// Token: 0x040010F9 RID: 4345
 	protected float m_staffThrow_AttackSpeed = 28f;
 
-	// Token: 0x04000D79 RID: 3449
+	// Token: 0x040010FA RID: 4346
 	protected float m_staffThrow_AttackDuration_EndDelay = 1f;
 
-	// Token: 0x04000D7A RID: 3450
+	// Token: 0x040010FB RID: 4347
 	protected float m_staffThrow_TellIntro_AnimSpeed = 1.5f;
 
-	// Token: 0x04000D7B RID: 3451
+	// Token: 0x040010FC RID: 4348
 	protected float m_staffThrow_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000D7C RID: 3452
+	// Token: 0x040010FD RID: 4349
 	protected float m_staffThrow_TellIntroAndHold_Delay = 0.9f;
 
-	// Token: 0x04000D7D RID: 3453
+	// Token: 0x040010FE RID: 4350
 	protected float m_staffThrow_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D7E RID: 3454
+	// Token: 0x040010FF RID: 4351
 	protected float m_staffThrow_AttackIntro_Delay;
 
-	// Token: 0x04000D7F RID: 3455
+	// Token: 0x04001100 RID: 4352
 	protected float m_staffThrow_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000D80 RID: 3456
+	// Token: 0x04001101 RID: 4353
 	protected float m_staffThrow_AttackHold_Delay;
 
-	// Token: 0x04000D81 RID: 3457
+	// Token: 0x04001102 RID: 4354
 	protected float m_staffThrow_Exit_AnimSpeed = 1f;
 
-	// Token: 0x04000D82 RID: 3458
+	// Token: 0x04001103 RID: 4355
 	protected float m_staffThrow_Exit_Delay;
 
-	// Token: 0x04000D83 RID: 3459
+	// Token: 0x04001104 RID: 4356
 	protected float m_staffThrow_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000D84 RID: 3460
+	// Token: 0x04001105 RID: 4357
 	protected float m_staffThrow_AttackCD = 12f;
 
-	// Token: 0x04000D85 RID: 3461
+	// Token: 0x04001106 RID: 4358
 	private Projectile_RL m_staffBeamProjectile;
 
-	// Token: 0x04000D86 RID: 3462
+	// Token: 0x04001107 RID: 4359
 	private Projectile_RL m_staffBeamWarningProjectile;
 
-	// Token: 0x04000D87 RID: 3463
+	// Token: 0x04001108 RID: 4360
 	protected const string MODESHIFT_DOWNED = "ModeShift_Intro";
 
-	// Token: 0x04000D88 RID: 3464
+	// Token: 0x04001109 RID: 4361
 	protected const string MODESHIFT_GETUP = "ModeShift_GetUp";
 
-	// Token: 0x04000D89 RID: 3465
+	// Token: 0x0400110A RID: 4362
 	protected const string MODESHIFT_ATTACK_INTRO = "ModeShift_Scream_Intro";
 
-	// Token: 0x04000D8A RID: 3466
+	// Token: 0x0400110B RID: 4363
 	protected const string MODESHIFT_ATTACK_HOLD = "ModeShift_Scream_Hold";
 
-	// Token: 0x04000D8B RID: 3467
+	// Token: 0x0400110C RID: 4364
 	protected const string MODESHIFT_EXIT = "ModeShift_Scream_Exit";
 
-	// Token: 0x04000D8C RID: 3468
+	// Token: 0x0400110D RID: 4365
 	protected const string MODESHIFT_PROJECTILE_WARNING = "SpellSwordShoutWarningProjectile";
 
-	// Token: 0x04000D8D RID: 3469
+	// Token: 0x0400110E RID: 4366
 	protected const string MODESHIFT_PROJECTILE_ATTACK = "SpellSwordShoutAttackProjectile";
 
-	// Token: 0x04000D8E RID: 3470
+	// Token: 0x0400110F RID: 4367
 	protected const string MODESHIFT_PROJECTILE_HOMING = "SpellSwordShoutHomingBoltProjectile";
 
-	// Token: 0x04000D8F RID: 3471
+	// Token: 0x04001110 RID: 4368
 	private Projectile_RL m_modeShiftProjectile;
 
-	// Token: 0x04000D90 RID: 3472
+	// Token: 0x04001111 RID: 4369
 	private Projectile_RL m_modeShiftProjectile2;
 
-	// Token: 0x04000D91 RID: 3473
+	// Token: 0x04001112 RID: 4370
 	protected float m_modeShift_AttackSpeed = 28f;
 
-	// Token: 0x04000D92 RID: 3474
+	// Token: 0x04001113 RID: 4371
 	protected float m_modeShift_AttackDuration_Initial_Delay = 0.5f;
 
-	// Token: 0x04000D93 RID: 3475
+	// Token: 0x04001114 RID: 4372
 	protected float m_modeShift_AttackDuration_Fire_Duration = 0.05f;
 
-	// Token: 0x04000D94 RID: 3476
+	// Token: 0x04001115 RID: 4373
 	protected float m_modeShift_AttackDuration_Exit_Delay = 0.5f;
 
-	// Token: 0x04000D95 RID: 3477
+	// Token: 0x04001116 RID: 4374
 	protected float m_modeShift_AttackDuration_SecondShot_Delay = 1.5f;
 
-	// Token: 0x04000D96 RID: 3478
+	// Token: 0x04001117 RID: 4375
 	protected float m_modeShift_ProjectilesThrown_Variant = 5f;
 
-	// Token: 0x04000D97 RID: 3479
+	// Token: 0x04001118 RID: 4376
 	protected float m_modeShift_Damage_Mod = 0.1f;
 
-	// Token: 0x04000D98 RID: 3480
+	// Token: 0x04001119 RID: 4377
 	protected Vector2 m_modeShift_Shout_ThrowAngle = new Vector2(-40f, 40f);
 
-	// Token: 0x04000D99 RID: 3481
+	// Token: 0x0400111A RID: 4378
 	protected Vector2 m_modeShift_Shout_ThrowPower = new Vector2(0.525f, 0.625f);
 
-	// Token: 0x04000D9A RID: 3482
+	// Token: 0x0400111B RID: 4379
 	protected float m_modeShift_Downed_AnimSpeed = 1f;
 
-	// Token: 0x04000D9B RID: 3483
+	// Token: 0x0400111C RID: 4380
 	protected float m_modeShift_Downed_Delay = 1.3f;
 
-	// Token: 0x04000D9C RID: 3484
+	// Token: 0x0400111D RID: 4381
 	protected float m_modeShift_GetUp_AnimSpeed = 1f;
 
-	// Token: 0x04000D9D RID: 3485
+	// Token: 0x0400111E RID: 4382
 	protected float m_modeShift_GetUp_Delay = 1f;
 
-	// Token: 0x04000D9E RID: 3486
+	// Token: 0x0400111F RID: 4383
 	protected float m_modeShift_AttackIntro_AnimSpeed = 1.25f;
 
-	// Token: 0x04000D9F RID: 3487
+	// Token: 0x04001120 RID: 4384
 	protected float m_modeShift_AttackIntro_Delay;
 
-	// Token: 0x04000DA0 RID: 3488
+	// Token: 0x04001121 RID: 4385
 	protected float m_modeShift_AttackHold_AnimSpeed = 1.25f;
 
-	// Token: 0x04000DA1 RID: 3489
+	// Token: 0x04001122 RID: 4386
 	protected float m_modeShift_AttackHold_Delay;
 
-	// Token: 0x04000DA2 RID: 3490
+	// Token: 0x04001123 RID: 4387
 	protected float m_modeShift_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x04000DA3 RID: 3491
+	// Token: 0x04001124 RID: 4388
 	protected float m_modeShift_Exit_Delay;
 
-	// Token: 0x04000DA4 RID: 3492
+	// Token: 0x04001125 RID: 4389
 	protected float m_modeShift_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000DA5 RID: 3493
+	// Token: 0x04001126 RID: 4390
 	protected float m_modeShift_AttackCD = 99f;
 
-	// Token: 0x04000DA6 RID: 3494
+	// Token: 0x04001127 RID: 4391
 	protected const string DEATH_INTRO = "Death_Intro";
 
-	// Token: 0x04000DA7 RID: 3495
+	// Token: 0x04001128 RID: 4392
 	protected const string DEATH_HOLD = "Death_Loop";
 
-	// Token: 0x04000DA8 RID: 3496
+	// Token: 0x04001129 RID: 4393
 	protected float m_death_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000DA9 RID: 3497
+	// Token: 0x0400112A RID: 4394
 	protected float m_death_Intro_Delay;
 
-	// Token: 0x04000DAA RID: 3498
+	// Token: 0x0400112B RID: 4395
 	protected float m_death_Hold_AnimSpeed = 1f;
 
-	// Token: 0x04000DAB RID: 3499
+	// Token: 0x0400112C RID: 4396
 	protected float m_death_Hold_Delay = 4.5f;
 
-	// Token: 0x04000DAC RID: 3500
+	// Token: 0x0400112D RID: 4397
 	protected const string SPAWN_IDLE = "Intro_Idle";
 
-	// Token: 0x04000DAD RID: 3501
+	// Token: 0x0400112E RID: 4398
 	protected const string SPAWN_INTRO = "Intro";
 
-	// Token: 0x04000DAE RID: 3502
+	// Token: 0x0400112F RID: 4399
 	protected float m_spawn_Idle_AnimSpeed = 1f;
 
-	// Token: 0x04000DAF RID: 3503
+	// Token: 0x04001130 RID: 4400
 	protected float m_spawn_Idle_Delay = 2f;
 
-	// Token: 0x04000DB0 RID: 3504
+	// Token: 0x04001131 RID: 4401
 	protected float m_spawn_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000DB1 RID: 3505
+	// Token: 0x04001132 RID: 4402
 	protected float m_spawn_Intro_Delay;
 
-	// Token: 0x04000DB2 RID: 3506
+	// Token: 0x04001133 RID: 4403
 	protected bool m_isAxeSpinning;
 
-	// Token: 0x04000DB3 RID: 3507
+	// Token: 0x04001134 RID: 4404
 	protected bool m_isStaffBeaming;
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020007A1 RID: 1953
+// Token: 0x02000C67 RID: 3175
 public class ChangeShaderColorComponent : MonoBehaviour
 {
-	// Token: 0x0600420F RID: 16911 RVA: 0x000EB65C File Offset: 0x000E985C
+	// Token: 0x06005B98 RID: 23448 RVA: 0x0015A79C File Offset: 0x0015899C
 	private void Awake()
 	{
 		if (ChangeShaderColorComponent.m_matBlock == null)
@@ -23,14 +23,14 @@ public class ChangeShaderColorComponent : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003945 RID: 14661
+	// Token: 0x04004C0A RID: 19466
 	private static MaterialPropertyBlock m_matBlock;
 
-	// Token: 0x04003946 RID: 14662
+	// Token: 0x04004C0B RID: 19467
 	[SerializeField]
 	private Color m_color;
 
-	// Token: 0x04003947 RID: 14663
+	// Token: 0x04004C0C RID: 19468
 	[SerializeField]
 	private ShaderID[] m_shaderIDsToChange;
 }

@@ -3,15 +3,15 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x020006F5 RID: 1781
+// Token: 0x02000BA8 RID: 2984
 public class HubTownToWorld_Timer : MonoBehaviour
 {
-	// Token: 0x17001610 RID: 5648
-	// (get) Token: 0x06004094 RID: 16532 RVA: 0x000E4F30 File Offset: 0x000E3130
-	// (set) Token: 0x06004095 RID: 16533 RVA: 0x000E4F37 File Offset: 0x000E3137
+	// Token: 0x17001E0C RID: 7692
+	// (get) Token: 0x060059DD RID: 23005 RVA: 0x00031080 File Offset: 0x0002F280
+	// (set) Token: 0x060059DE RID: 23006 RVA: 0x00031087 File Offset: 0x0002F287
 	private static HubTownToWorld_Timer Instance { get; set; }
 
-	// Token: 0x06004096 RID: 16534 RVA: 0x000E4F40 File Offset: 0x000E3140
+	// Token: 0x060059DF RID: 23007 RVA: 0x0015480C File Offset: 0x00152A0C
 	private void Awake()
 	{
 		if (!HubTownToWorld_Timer.Instance)
@@ -24,14 +24,14 @@ public class HubTownToWorld_Timer : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06004097 RID: 16535 RVA: 0x000E4F8F File Offset: 0x000E318F
+	// Token: 0x060059E0 RID: 23008 RVA: 0x0003108F File Offset: 0x0002F28F
 	private void Start()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerExitHubTown, this.m_onExitHubTown);
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.LevelManagerStateChange, this.m_onLevelManagerStateChange);
 	}
 
-	// Token: 0x06004098 RID: 16536 RVA: 0x000E4FAB File Offset: 0x000E31AB
+	// Token: 0x060059E1 RID: 23009 RVA: 0x000310AB File Offset: 0x0002F2AB
 	private void OnLevelManagerStateChange(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		if (eventArgs is LevelManagerStateChangeEventArgs && (eventArgs as LevelManagerStateChangeEventArgs).State == LevelManagerState.BuildComplete)
@@ -40,13 +40,13 @@ public class HubTownToWorld_Timer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06004099 RID: 16537 RVA: 0x000E4FC8 File Offset: 0x000E31C8
+	// Token: 0x060059E2 RID: 23010 RVA: 0x000310C8 File Offset: 0x0002F2C8
 	private void OnExitHubTown(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		HubTownToWorld_Timer.StartTimer();
 	}
 
-	// Token: 0x0600409A RID: 16538 RVA: 0x000E4FCF File Offset: 0x000E31CF
+	// Token: 0x060059E3 RID: 23011 RVA: 0x000310CF File Offset: 0x0002F2CF
 	private void OnDestroy()
 	{
 		if (HubTownToWorld_Timer.Instance == this)
@@ -58,7 +58,7 @@ public class HubTownToWorld_Timer : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.LevelManagerStateChange, this.m_onLevelManagerStateChange);
 	}
 
-	// Token: 0x0600409B RID: 16539 RVA: 0x000E5004 File Offset: 0x000E3204
+	// Token: 0x060059E4 RID: 23012 RVA: 0x00031104 File Offset: 0x0002F304
 	public static void StartTimer()
 	{
 		if (HubTownToWorld_Timer.m_stopwatch == null)
@@ -68,7 +68,7 @@ public class HubTownToWorld_Timer : MonoBehaviour
 		HubTownToWorld_Timer.m_stopwatch.Restart();
 	}
 
-	// Token: 0x0600409C RID: 16540 RVA: 0x000E5024 File Offset: 0x000E3224
+	// Token: 0x060059E5 RID: 23013 RVA: 0x0015485C File Offset: 0x00152A5C
 	public static void StopTimer()
 	{
 		if (SceneManager.GetActiveScene().name.StartsWith("World") && HubTownToWorld_Timer.m_stopwatch != null && HubTownToWorld_Timer.m_stopwatch.IsRunning)
@@ -81,12 +81,12 @@ public class HubTownToWorld_Timer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040031CF RID: 12751
+	// Token: 0x0400444A RID: 17482
 	private Action<MonoBehaviour, EventArgs> m_onExitHubTown;
 
-	// Token: 0x040031D0 RID: 12752
+	// Token: 0x0400444B RID: 17483
 	private Action<MonoBehaviour, EventArgs> m_onLevelManagerStateChange;
 
-	// Token: 0x040031D1 RID: 12753
+	// Token: 0x0400444C RID: 17484
 	private static Stopwatch m_stopwatch;
 }

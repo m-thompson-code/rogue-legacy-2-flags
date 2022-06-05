@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x0200060E RID: 1550
+// Token: 0x02000A30 RID: 2608
 public enum DebugEvent
 {
-	// Token: 0x04002B3D RID: 11069
+	// Token: 0x04003BA4 RID: 15268
 	ZoomOutCamera,
-	// Token: 0x04002B3E RID: 11070
+	// Token: 0x04003BA5 RID: 15269
 	ToggleRoomInfo,
-	// Token: 0x04002B3F RID: 11071
+	// Token: 0x04003BA6 RID: 15270
 	ToggleWorldInfo,
-	// Token: 0x04002B40 RID: 11072
+	// Token: 0x04003BA7 RID: 15271
 	ToggleWeaponHitBox,
-	// Token: 0x04002B41 RID: 11073
+	// Token: 0x04003BA8 RID: 15272
 	TogglePlatformHitBox,
-	// Token: 0x04002B42 RID: 11074
+	// Token: 0x04003BA9 RID: 15273
 	ToggleBodyHitBox,
-	// Token: 0x04002B43 RID: 11075
+	// Token: 0x04003BAA RID: 15274
 	ToggleHazardHitBox,
-	// Token: 0x04002B44 RID: 11076
+	// Token: 0x04003BAB RID: 15275
 	ToggleEnlargePlayer,
-	// Token: 0x04002B45 RID: 11077
+	// Token: 0x04003BAC RID: 15276
 	ToggleDwarfPlayer,
-	// Token: 0x04002B46 RID: 11078
+	// Token: 0x04003BAD RID: 15277
 	TogglePlayerInvincible,
-	// Token: 0x04002B47 RID: 11079
+	// Token: 0x04003BAE RID: 15278
 	ToggleAudio = 100,
-	// Token: 0x04002B48 RID: 11080
+	// Token: 0x04003BAF RID: 15279
 	ToggleFPSCounter
 }

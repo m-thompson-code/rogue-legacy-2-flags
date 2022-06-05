@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200035A RID: 858
+// Token: 0x020005C9 RID: 1481
 public class OneHitDeath_Trait : BaseTrait
 {
-	// Token: 0x17000DEB RID: 3563
-	// (get) Token: 0x06002082 RID: 8322 RVA: 0x00066A91 File Offset: 0x00064C91
+	// Token: 0x1700124E RID: 4686
+	// (get) Token: 0x06002DFA RID: 11770 RVA: 0x00017CC0 File Offset: 0x00015EC0
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class OneHitDeath_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002083 RID: 8323 RVA: 0x00066A98 File Offset: 0x00064C98
+	// Token: 0x06002DFB RID: 11771 RVA: 0x0001937B File Offset: 0x0001757B
 	private IEnumerator Start()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -26,7 +26,7 @@ public class OneHitDeath_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06002084 RID: 8324 RVA: 0x00066AA0 File Offset: 0x00064CA0
+	// Token: 0x06002DFC RID: 11772 RVA: 0x00019383 File Offset: 0x00017583
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

@@ -2,16 +2,16 @@
 
 namespace Unity.Cloud.UserReporting
 {
-	// Token: 0x0200083B RID: 2107
+	// Token: 0x02000D21 RID: 3361
 	public enum UserReportEventLevel
 	{
-		// Token: 0x04003B44 RID: 15172
+		// Token: 0x04004E85 RID: 20101
 		Info,
-		// Token: 0x04003B45 RID: 15173
+		// Token: 0x04004E86 RID: 20102
 		Success,
-		// Token: 0x04003B46 RID: 15174
+		// Token: 0x04004E87 RID: 20103
 		Warning,
-		// Token: 0x04003B47 RID: 15175
+		// Token: 0x04004E88 RID: 20104
 		Error
 	}
 }

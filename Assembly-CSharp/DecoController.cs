@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000601 RID: 1537
+// Token: 0x02000A20 RID: 2592
 public class DecoController : MonoBehaviour
 {
-	// Token: 0x170013C4 RID: 5060
-	// (get) Token: 0x060037CD RID: 14285 RVA: 0x000BF04C File Offset: 0x000BD24C
-	// (set) Token: 0x060037CE RID: 14286 RVA: 0x000BF054 File Offset: 0x000BD254
+	// Token: 0x17001B17 RID: 6935
+	// (get) Token: 0x06004E5E RID: 20062 RVA: 0x0002AA56 File Offset: 0x00028C56
+	// (set) Token: 0x06004E5F RID: 20063 RVA: 0x0002AA5E File Offset: 0x00028C5E
 	public DecoLocation[] DecoLocations
 	{
 		get
@@ -19,8 +19,8 @@ public class DecoController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013C5 RID: 5061
-	// (get) Token: 0x060037CF RID: 14287 RVA: 0x000BF05D File Offset: 0x000BD25D
+	// Token: 0x17001B18 RID: 6936
+	// (get) Token: 0x06004E60 RID: 20064 RVA: 0x0002AA67 File Offset: 0x00028C67
 	public Prop OwnerProp
 	{
 		get
@@ -33,7 +33,7 @@ public class DecoController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060037D0 RID: 14288 RVA: 0x000BF080 File Offset: 0x000BD280
+	// Token: 0x06004E61 RID: 20065 RVA: 0x0012D85C File Offset: 0x0012BA5C
 	public void Initialize(DecoSpawnData[] decoLocationSpawnData)
 	{
 		int num = this.DecoLocations.Length;
@@ -57,10 +57,10 @@ public class DecoController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002AC1 RID: 10945
+	// Token: 0x04003B19 RID: 15129
 	[SerializeField]
 	private DecoLocation[] m_decoLocations;
 
-	// Token: 0x04002AC2 RID: 10946
+	// Token: 0x04003B1A RID: 15130
 	private Prop m_ownerProp;
 }

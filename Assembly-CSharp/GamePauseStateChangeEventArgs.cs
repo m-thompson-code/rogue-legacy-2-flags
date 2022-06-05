@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x020007C0 RID: 1984
+// Token: 0x02000C86 RID: 3206
 public class GamePauseStateChangeEventArgs : EventArgs
 {
-	// Token: 0x0600429B RID: 17051 RVA: 0x000EBEA3 File Offset: 0x000EA0A3
+	// Token: 0x06005C24 RID: 23588 RVA: 0x000328B9 File Offset: 0x00030AB9
 	public GamePauseStateChangeEventArgs(bool isPaused)
 	{
 		this.Initialize(isPaused);
 	}
 
-	// Token: 0x0600429C RID: 17052 RVA: 0x000EBEB2 File Offset: 0x000EA0B2
+	// Token: 0x06005C25 RID: 23589 RVA: 0x000328C8 File Offset: 0x00030AC8
 	public void Initialize(bool isPaused)
 	{
 		this.IsPaused = isPaused;
 	}
 
-	// Token: 0x1700168C RID: 5772
-	// (get) Token: 0x0600429D RID: 17053 RVA: 0x000EBEBB File Offset: 0x000EA0BB
-	// (set) Token: 0x0600429E RID: 17054 RVA: 0x000EBEC3 File Offset: 0x000EA0C3
+	// Token: 0x17001E8A RID: 7818
+	// (get) Token: 0x06005C26 RID: 23590 RVA: 0x000328D1 File Offset: 0x00030AD1
+	// (set) Token: 0x06005C27 RID: 23591 RVA: 0x000328D9 File Offset: 0x00030AD9
 	public bool IsPaused { get; private set; }
 }

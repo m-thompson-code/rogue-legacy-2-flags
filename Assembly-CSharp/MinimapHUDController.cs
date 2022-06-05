@@ -5,15 +5,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000384 RID: 900
+// Token: 0x0200060D RID: 1549
 public class MinimapHUDController : MonoBehaviour
 {
-	// Token: 0x17000E24 RID: 3620
-	// (get) Token: 0x060021A9 RID: 8617 RVA: 0x0006A73B File Offset: 0x0006893B
-	// (set) Token: 0x060021AA RID: 8618 RVA: 0x0006A742 File Offset: 0x00068942
+	// Token: 0x170012AB RID: 4779
+	// (get) Token: 0x06002F9D RID: 12189 RVA: 0x0001A122 File Offset: 0x00018322
+	// (set) Token: 0x06002F9E RID: 12190 RVA: 0x0001A129 File Offset: 0x00018329
 	public static bool UpdateTextOnly { get; set; }
 
-	// Token: 0x060021AB RID: 8619 RVA: 0x0006A74C File Offset: 0x0006894C
+	// Token: 0x06002F9F RID: 12191 RVA: 0x000CB458 File Offset: 0x000C9658
 	private void Awake()
 	{
 		this.m_runeWaitYield = new WaitRL_Yield(0f, false);
@@ -30,7 +30,7 @@ public class MinimapHUDController : MonoBehaviour
 		this.m_onNewGamePlusChange = new Action<MonoBehaviour, EventArgs>(this.OnNewGamePlusChange);
 	}
 
-	// Token: 0x060021AC RID: 8620 RVA: 0x0006A830 File Offset: 0x00068A30
+	// Token: 0x06002FA0 RID: 12192 RVA: 0x000CB53C File Offset: 0x000C973C
 	private void OnEnable()
 	{
 		this.m_goldText.text = SaveManager.PlayerSaveData.GoldCollected.ToString();
@@ -62,7 +62,7 @@ public class MinimapHUDController : MonoBehaviour
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_onNewGamePlusChange);
 	}
 
-	// Token: 0x060021AD RID: 8621 RVA: 0x0006A9E0 File Offset: 0x00068BE0
+	// Token: 0x06002FA1 RID: 12193 RVA: 0x000CB6EC File Offset: 0x000C98EC
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.RuneEquippedLevelChanged, this.m_onRuneChanged);
@@ -78,7 +78,7 @@ public class MinimapHUDController : MonoBehaviour
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_onNewGamePlusChange);
 	}
 
-	// Token: 0x060021AE RID: 8622 RVA: 0x0006AA7B File Offset: 0x00068C7B
+	// Token: 0x06002FA2 RID: 12194 RVA: 0x0001A131 File Offset: 0x00018331
 	private void OnExitChallenge(MonoBehaviour sender, EventArgs args)
 	{
 		this.m_runeCanvasGroup.gameObject.SetActive(true);
@@ -86,7 +86,7 @@ public class MinimapHUDController : MonoBehaviour
 		this.m_soulCanvasGroup.gameObject.SetActive(true);
 	}
 
-	// Token: 0x060021AF RID: 8623 RVA: 0x0006AAB0 File Offset: 0x00068CB0
+	// Token: 0x06002FA3 RID: 12195 RVA: 0x0001A166 File Offset: 0x00018366
 	private void OnEnterWorld(MonoBehaviour sender, EventArgs args)
 	{
 		this.m_runeCanvasGroup.gameObject.SetActive(false);
@@ -94,7 +94,7 @@ public class MinimapHUDController : MonoBehaviour
 		this.m_soulCanvasGroup.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060021B0 RID: 8624 RVA: 0x0006AAE5 File Offset: 0x00068CE5
+	// Token: 0x06002FA4 RID: 12196 RVA: 0x0001A19B File Offset: 0x0001839B
 	private void OnRuneChanged(MonoBehaviour sender, EventArgs args)
 	{
 		if ((args as RuneEquippedLevelChangeEventArgs).RuneType == RuneType.GoldGain)
@@ -103,7 +103,7 @@ public class MinimapHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060021B1 RID: 8625 RVA: 0x0006AB00 File Offset: 0x00068D00
+	// Token: 0x06002FA5 RID: 12197 RVA: 0x000CB788 File Offset: 0x000C9988
 	private void OnGoldChanged(MonoBehaviour sender, EventArgs args)
 	{
 		this.m_goldText.text = SaveManager.PlayerSaveData.GoldCollected.ToString();
@@ -166,7 +166,7 @@ public class MinimapHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060021B2 RID: 8626 RVA: 0x0006AD90 File Offset: 0x00068F90
+	// Token: 0x06002FA6 RID: 12198 RVA: 0x000CBA18 File Offset: 0x000C9C18
 	private void OnRuneOreChanged(MonoBehaviour sender, EventArgs args)
 	{
 		this.m_runeOreText.text = SaveManager.PlayerSaveData.RuneOreCollected.ToString();
@@ -209,7 +209,7 @@ public class MinimapHUDController : MonoBehaviour
 		LayoutRebuilder.ForceRebuildLayoutImmediate(this.m_runeCanvasGroup.GetComponent<RectTransform>());
 	}
 
-	// Token: 0x060021B3 RID: 8627 RVA: 0x0006AEAA File Offset: 0x000690AA
+	// Token: 0x06002FA7 RID: 12199 RVA: 0x0001A1B4 File Offset: 0x000183B4
 	private IEnumerator RuneOreDisplayCoroutine()
 	{
 		this.m_runeDisplayComplete = false;
@@ -234,7 +234,7 @@ public class MinimapHUDController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060021B4 RID: 8628 RVA: 0x0006AEBC File Offset: 0x000690BC
+	// Token: 0x06002FA8 RID: 12200 RVA: 0x000CBB34 File Offset: 0x000C9D34
 	private void OnEquipmentOreChanged(MonoBehaviour sender, EventArgs args)
 	{
 		this.m_equipmentOreText.text = SaveManager.PlayerSaveData.EquipmentOreCollected.ToString();
@@ -277,7 +277,7 @@ public class MinimapHUDController : MonoBehaviour
 		LayoutRebuilder.ForceRebuildLayoutImmediate(this.m_equipmentCanvasGroup.GetComponent<RectTransform>());
 	}
 
-	// Token: 0x060021B5 RID: 8629 RVA: 0x0006AFD6 File Offset: 0x000691D6
+	// Token: 0x06002FA9 RID: 12201 RVA: 0x0001A1C3 File Offset: 0x000183C3
 	private IEnumerator EquipmentDisplayCoroutine()
 	{
 		this.m_equipmentDisplayComplete = false;
@@ -302,7 +302,7 @@ public class MinimapHUDController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060021B6 RID: 8630 RVA: 0x0006AFE8 File Offset: 0x000691E8
+	// Token: 0x06002FAA RID: 12202 RVA: 0x000CBC50 File Offset: 0x000C9E50
 	private void OnSoulChanged(MonoBehaviour sender, EventArgs args)
 	{
 		int num = Souls_EV.GetTotalSoulsCollected(SaveManager.PlayerSaveData.GameModeType, true) - SoulDrop.FakeSoulCounter_STATIC;
@@ -352,7 +352,7 @@ public class MinimapHUDController : MonoBehaviour
 		LayoutRebuilder.ForceRebuildLayoutImmediate(this.m_soulCanvasGroup.GetComponent<RectTransform>());
 	}
 
-	// Token: 0x060021B7 RID: 8631 RVA: 0x0006B15F File Offset: 0x0006935F
+	// Token: 0x06002FAB RID: 12203 RVA: 0x0001A1D2 File Offset: 0x000183D2
 	private IEnumerator SoulDisplayCoroutine()
 	{
 		this.m_soulDisplayComplete = false;
@@ -377,7 +377,7 @@ public class MinimapHUDController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060021B8 RID: 8632 RVA: 0x0006B170 File Offset: 0x00069370
+	// Token: 0x06002FAC RID: 12204 RVA: 0x000CBDC8 File Offset: 0x000C9FC8
 	private void OnNewGamePlusChange(MonoBehaviour sender, EventArgs args)
 	{
 		this.m_ngPlusText.text = "";
@@ -412,129 +412,129 @@ public class MinimapHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001D1D RID: 7453
+	// Token: 0x04002706 RID: 9990
 	private const float RESOURCE_DISPLAY_DURATION = 3f;
 
-	// Token: 0x04001D1E RID: 7454
+	// Token: 0x04002707 RID: 9991
 	[SerializeField]
 	private TMP_Text m_goldText;
 
-	// Token: 0x04001D1F RID: 7455
+	// Token: 0x04002708 RID: 9992
 	[SerializeField]
 	private RectTransform m_goldTextRectTransform;
 
-	// Token: 0x04001D20 RID: 7456
+	// Token: 0x04002709 RID: 9993
 	[SerializeField]
 	private TMP_Text m_goldModText;
 
-	// Token: 0x04001D21 RID: 7457
+	// Token: 0x0400270A RID: 9994
 	[SerializeField]
 	private RectTransform m_goldModTextRectTransform;
 
-	// Token: 0x04001D22 RID: 7458
+	// Token: 0x0400270B RID: 9995
 	[SerializeField]
 	private TMP_Text m_runeOreText;
 
-	// Token: 0x04001D23 RID: 7459
+	// Token: 0x0400270C RID: 9996
 	[SerializeField]
 	private TMP_Text m_equipmentOreText;
 
-	// Token: 0x04001D24 RID: 7460
+	// Token: 0x0400270D RID: 9997
 	[SerializeField]
 	private TMP_Text m_soulText;
 
-	// Token: 0x04001D25 RID: 7461
+	// Token: 0x0400270E RID: 9998
 	[SerializeField]
 	private CanvasGroup m_runeCanvasGroup;
 
-	// Token: 0x04001D26 RID: 7462
+	// Token: 0x0400270F RID: 9999
 	[SerializeField]
 	private CanvasGroup m_equipmentCanvasGroup;
 
-	// Token: 0x04001D27 RID: 7463
+	// Token: 0x04002710 RID: 10000
 	[SerializeField]
 	private CanvasGroup m_soulCanvasGroup;
 
-	// Token: 0x04001D28 RID: 7464
+	// Token: 0x04002711 RID: 10001
 	[SerializeField]
 	private GameObject m_bankedGoldGO;
 
-	// Token: 0x04001D29 RID: 7465
+	// Token: 0x04002712 RID: 10002
 	[SerializeField]
 	private TMP_Text m_bankedGoldText;
 
-	// Token: 0x04001D2A RID: 7466
+	// Token: 0x04002713 RID: 10003
 	[SerializeField]
 	private TMP_Text m_ngPlusText;
 
-	// Token: 0x04001D2B RID: 7467
+	// Token: 0x04002714 RID: 10004
 	[SerializeField]
 	private CanvasGroup m_minimapCanvasGroup;
 
-	// Token: 0x04001D2C RID: 7468
+	// Token: 0x04002715 RID: 10005
 	[SerializeField]
 	private FadeOutHUDCollider m_fadeOutHUDCollider;
 
-	// Token: 0x04001D2D RID: 7469
+	// Token: 0x04002716 RID: 10006
 	private bool m_runeDisplayComplete;
 
-	// Token: 0x04001D2E RID: 7470
+	// Token: 0x04002717 RID: 10007
 	private bool m_equipmentDisplayComplete;
 
-	// Token: 0x04001D2F RID: 7471
+	// Token: 0x04002718 RID: 10008
 	private bool m_soulDisplayComplete;
 
-	// Token: 0x04001D30 RID: 7472
+	// Token: 0x04002719 RID: 10009
 	private Tween m_runeTween;
 
-	// Token: 0x04001D31 RID: 7473
+	// Token: 0x0400271A RID: 10010
 	private Tween m_equipmentTween;
 
-	// Token: 0x04001D32 RID: 7474
+	// Token: 0x0400271B RID: 10011
 	private Tween m_soulTween;
 
-	// Token: 0x04001D33 RID: 7475
+	// Token: 0x0400271C RID: 10012
 	private Coroutine m_runeCoroutine;
 
-	// Token: 0x04001D34 RID: 7476
+	// Token: 0x0400271D RID: 10013
 	private Coroutine m_equipmentCoroutine;
 
-	// Token: 0x04001D35 RID: 7477
+	// Token: 0x0400271E RID: 10014
 	private Coroutine m_soulCoroutine;
 
-	// Token: 0x04001D36 RID: 7478
+	// Token: 0x0400271F RID: 10015
 	private WaitRL_Yield m_runeWaitYield;
 
-	// Token: 0x04001D37 RID: 7479
+	// Token: 0x04002720 RID: 10016
 	private WaitRL_Yield m_equipmentWaitYield;
 
-	// Token: 0x04001D38 RID: 7480
+	// Token: 0x04002721 RID: 10017
 	private WaitRL_Yield m_soulWaitYield;
 
-	// Token: 0x04001D39 RID: 7481
+	// Token: 0x04002722 RID: 10018
 	private Action<MonoBehaviour, EventArgs> m_onRuneChanged;
 
-	// Token: 0x04001D3A RID: 7482
+	// Token: 0x04002723 RID: 10019
 	private Action<MonoBehaviour, EventArgs> m_onEnterWorld;
 
-	// Token: 0x04001D3B RID: 7483
+	// Token: 0x04002724 RID: 10020
 	private Action<MonoBehaviour, EventArgs> m_onExitChallenge;
 
-	// Token: 0x04001D3C RID: 7484
+	// Token: 0x04002725 RID: 10021
 	private Action<MonoBehaviour, EventArgs> m_onGoldChanged;
 
-	// Token: 0x04001D3D RID: 7485
+	// Token: 0x04002726 RID: 10022
 	private Action<MonoBehaviour, EventArgs> m_onEquipmentOreChanged;
 
-	// Token: 0x04001D3E RID: 7486
+	// Token: 0x04002727 RID: 10023
 	private Action<MonoBehaviour, EventArgs> m_onRuneOreChanged;
 
-	// Token: 0x04001D3F RID: 7487
+	// Token: 0x04002728 RID: 10024
 	private Action<MonoBehaviour, EventArgs> m_onSoulChanged;
 
-	// Token: 0x04001D40 RID: 7488
+	// Token: 0x04002729 RID: 10025
 	private Action<MonoBehaviour, EventArgs> m_onNewGamePlusChange;
 
-	// Token: 0x04001D41 RID: 7489
+	// Token: 0x0400272A RID: 10026
 	private int m_previousSoulAmount;
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000694 RID: 1684
+// Token: 0x02000B1D RID: 2845
 public class DecoManager : MonoBehaviour
 {
-	// Token: 0x17001538 RID: 5432
-	// (get) Token: 0x06003D1E RID: 15646 RVA: 0x000D3E99 File Offset: 0x000D2099
-	// (set) Token: 0x06003D1F RID: 15647 RVA: 0x000D3EA0 File Offset: 0x000D20A0
+	// Token: 0x17001D04 RID: 7428
+	// (get) Token: 0x060055B3 RID: 21939 RVA: 0x0002E915 File Offset: 0x0002CB15
+	// (set) Token: 0x060055B4 RID: 21940 RVA: 0x0002E91C File Offset: 0x0002CB1C
 	private static DecoManager Instance
 	{
 		get
@@ -21,12 +21,12 @@ public class DecoManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001539 RID: 5433
-	// (get) Token: 0x06003D20 RID: 15648 RVA: 0x000D3EA8 File Offset: 0x000D20A8
-	// (set) Token: 0x06003D21 RID: 15649 RVA: 0x000D3EAF File Offset: 0x000D20AF
+	// Token: 0x17001D05 RID: 7429
+	// (get) Token: 0x060055B5 RID: 21941 RVA: 0x0002E924 File Offset: 0x0002CB24
+	// (set) Token: 0x060055B6 RID: 21942 RVA: 0x0002E92B File Offset: 0x0002CB2B
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06003D22 RID: 15650 RVA: 0x000D3EB7 File Offset: 0x000D20B7
+	// Token: 0x060055B7 RID: 21943 RVA: 0x0002E933 File Offset: 0x0002CB33
 	private void Awake()
 	{
 		if (!DecoManager.Instance)
@@ -38,7 +38,7 @@ public class DecoManager : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06003D23 RID: 15651 RVA: 0x000D3EDD File Offset: 0x000D20DD
+	// Token: 0x060055B8 RID: 21944 RVA: 0x0002E959 File Offset: 0x0002CB59
 	private void OnDestroy()
 	{
 		DecoManager.DestroyPools();
@@ -46,7 +46,7 @@ public class DecoManager : MonoBehaviour
 		DecoManager.m_decoTable = null;
 	}
 
-	// Token: 0x06003D24 RID: 15652 RVA: 0x000D3EF0 File Offset: 0x000D20F0
+	// Token: 0x060055B9 RID: 21945 RVA: 0x0002E96C File Offset: 0x0002CB6C
 	private GenericPool_RL<Deco> CreatePool(Deco prefab, int poolSize)
 	{
 		if (!prefab)
@@ -58,13 +58,13 @@ public class DecoManager : MonoBehaviour
 		return genericPool_RL;
 	}
 
-	// Token: 0x06003D25 RID: 15653 RVA: 0x000D3F0B File Offset: 0x000D210B
+	// Token: 0x060055BA RID: 21946 RVA: 0x0002E987 File Offset: 0x0002CB87
 	public static Deco GetDeco(Deco deco)
 	{
 		return DecoManager.GetDeco(deco.NameHash);
 	}
 
-	// Token: 0x06003D26 RID: 15654 RVA: 0x000D3F18 File Offset: 0x000D2118
+	// Token: 0x060055BB RID: 21947 RVA: 0x0002E994 File Offset: 0x0002CB94
 	public static Deco GetDeco(int decoNameHash)
 	{
 		if (DecoManager.m_decoTable.ContainsKey(decoNameHash))
@@ -78,14 +78,14 @@ public class DecoManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003D27 RID: 15655 RVA: 0x000D3F52 File Offset: 0x000D2152
+	// Token: 0x060055BC RID: 21948 RVA: 0x0002E9CE File Offset: 0x0002CBCE
 	private void Initialize()
 	{
 		DecoManager.m_decoTable = new Dictionary<int, GenericPool_RL<Deco>>();
 		DecoManager.IsInitialized = true;
 	}
 
-	// Token: 0x06003D28 RID: 15656 RVA: 0x000D3F64 File Offset: 0x000D2164
+	// Token: 0x060055BD RID: 21949 RVA: 0x00143F08 File Offset: 0x00142108
 	private void Internal_CreateBiomePools(BiomeType biomeType)
 	{
 		Dictionary<Deco, int> dictionary = new Dictionary<Deco, int>();
@@ -200,7 +200,7 @@ public class DecoManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D29 RID: 15657 RVA: 0x000D43A0 File Offset: 0x000D25A0
+	// Token: 0x060055BE RID: 21950 RVA: 0x00144344 File Offset: 0x00142544
 	public static void DestroyPools()
 	{
 		foreach (KeyValuePair<int, GenericPool_RL<Deco>> keyValuePair in DecoManager.m_decoTable)
@@ -210,13 +210,13 @@ public class DecoManager : MonoBehaviour
 		DecoManager.m_decoTable.Clear();
 	}
 
-	// Token: 0x06003D2A RID: 15658 RVA: 0x000D4404 File Offset: 0x000D2604
+	// Token: 0x060055BF RID: 21951 RVA: 0x0002E9E0 File Offset: 0x0002CBE0
 	public static void CreateBiomePools(BiomeType biome)
 	{
 		DecoManager.Instance.Internal_CreateBiomePools(biome);
 	}
 
-	// Token: 0x06003D2B RID: 15659 RVA: 0x000D4414 File Offset: 0x000D2614
+	// Token: 0x060055C0 RID: 21952 RVA: 0x001443A8 File Offset: 0x001425A8
 	public static void DisableAllDecos()
 	{
 		foreach (KeyValuePair<int, GenericPool_RL<Deco>> keyValuePair in DecoManager.m_decoTable)
@@ -225,13 +225,13 @@ public class DecoManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002DD0 RID: 11728
+	// Token: 0x04003F9B RID: 16283
 	[SerializeField]
 	private int m_poolSize = 5;
 
-	// Token: 0x04002DD1 RID: 11729
+	// Token: 0x04003F9C RID: 16284
 	private static DecoManager m_instance;
 
-	// Token: 0x04002DD2 RID: 11730
+	// Token: 0x04003F9D RID: 16285
 	private static Dictionary<int, GenericPool_RL<Deco>> m_decoTable;
 }

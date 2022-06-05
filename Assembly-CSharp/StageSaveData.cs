@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using GameEventTracking;
 
-// Token: 0x020002DA RID: 730
+// Token: 0x020004CF RID: 1231
 [Serializable]
 public class StageSaveData : IVersionUpdateable
 {
-	// Token: 0x17000CCE RID: 3278
-	// (get) Token: 0x06001D10 RID: 7440 RVA: 0x0005F9D4 File Offset: 0x0005DBD4
-	// (set) Token: 0x06001D11 RID: 7441 RVA: 0x0005F9DC File Offset: 0x0005DBDC
+	// Token: 0x17001057 RID: 4183
+	// (get) Token: 0x060027DA RID: 10202 RVA: 0x00016676 File Offset: 0x00014876
+	// (set) Token: 0x060027DB RID: 10203 RVA: 0x0001667E File Offset: 0x0001487E
 	public Dictionary<BiomeType, List<RoomSaveData>> RoomSaveDataDict
 	{
 		get
@@ -21,7 +21,7 @@ public class StageSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001D12 RID: 7442 RVA: 0x0005F9E8 File Offset: 0x0005DBE8
+	// Token: 0x060027DC RID: 10204 RVA: 0x000BBCBC File Offset: 0x000B9EBC
 	public void LinkTrackerData()
 	{
 		this.RoomTrackerDataList = GameEventTrackerManager.RoomEventTracker.RoomsEntered;
@@ -30,7 +30,7 @@ public class StageSaveData : IVersionUpdateable
 		this.ItemTrackerDataList = GameEventTrackerManager.ItemEventTracker.ItemsCollected;
 	}
 
-	// Token: 0x06001D13 RID: 7443 RVA: 0x0005FA38 File Offset: 0x0005DC38
+	// Token: 0x060027DD RID: 10205 RVA: 0x000BBD0C File Offset: 0x000B9F0C
 	public RoomSaveData GetRoomSaveData(BiomeType biomeType, int biomeControllerIndex)
 	{
 		Dictionary<int, RoomSaveData> roomDataLookupTable = this.GetRoomDataLookupTable(biomeType);
@@ -41,7 +41,7 @@ public class StageSaveData : IVersionUpdateable
 		return null;
 	}
 
-	// Token: 0x06001D14 RID: 7444 RVA: 0x0005FA64 File Offset: 0x0005DC64
+	// Token: 0x060027DE RID: 10206 RVA: 0x000BBD38 File Offset: 0x000B9F38
 	public Dictionary<int, RoomSaveData> GetRoomDataLookupTable(BiomeType biomeType)
 	{
 		biomeType = BiomeType_RL.GetGroupedBiomeType(biomeType);
@@ -53,7 +53,7 @@ public class StageSaveData : IVersionUpdateable
 		return null;
 	}
 
-	// Token: 0x06001D15 RID: 7445 RVA: 0x0005FA8C File Offset: 0x0005DC8C
+	// Token: 0x060027DF RID: 10207 RVA: 0x000BBD60 File Offset: 0x000B9F60
 	public List<RoomSaveData> GetRoomDataList(BiomeType biomeType)
 	{
 		biomeType = BiomeType_RL.GetGroupedBiomeType(biomeType);
@@ -65,7 +65,7 @@ public class StageSaveData : IVersionUpdateable
 		return null;
 	}
 
-	// Token: 0x06001D16 RID: 7446 RVA: 0x0005FAB4 File Offset: 0x0005DCB4
+	// Token: 0x060027E0 RID: 10208 RVA: 0x000BBD88 File Offset: 0x000B9F88
 	public void CreateLevelEditorRoomSaveDataList(BaseRoom levelEditorRoom)
 	{
 		this.RoomSaveDataDict.Clear();
@@ -82,7 +82,7 @@ public class StageSaveData : IVersionUpdateable
 		this.CreateAllBiomeLookupTable();
 	}
 
-	// Token: 0x06001D17 RID: 7447 RVA: 0x0005FB54 File Offset: 0x0005DD54
+	// Token: 0x060027E1 RID: 10209 RVA: 0x000BBE28 File Offset: 0x000BA028
 	public void CreateEmptyRoomSaveDataList()
 	{
 		this.RoomSaveDataDict.Clear();
@@ -104,7 +104,7 @@ public class StageSaveData : IVersionUpdateable
 		this.CreateAllBiomeLookupTable();
 	}
 
-	// Token: 0x06001D18 RID: 7448 RVA: 0x0005FC34 File Offset: 0x0005DE34
+	// Token: 0x060027E2 RID: 10210 RVA: 0x000BBF08 File Offset: 0x000BA108
 	private static RoomSaveData CreateRoomSaveData(BiomeType biomeType, GridPointManager gridPointRoom)
 	{
 		RoomSaveData roomSaveData = new RoomSaveData();
@@ -128,7 +128,7 @@ public class StageSaveData : IVersionUpdateable
 		return roomSaveData;
 	}
 
-	// Token: 0x06001D19 RID: 7449 RVA: 0x0005FD3A File Offset: 0x0005DF3A
+	// Token: 0x060027E3 RID: 10211 RVA: 0x00016687 File Offset: 0x00014887
 	public void UpdateVersion()
 	{
 		if (this.REVISION_NUMBER != 14)
@@ -138,7 +138,7 @@ public class StageSaveData : IVersionUpdateable
 		this.REVISION_NUMBER = 14;
 	}
 
-	// Token: 0x06001D1A RID: 7450 RVA: 0x0005FD58 File Offset: 0x0005DF58
+	// Token: 0x060027E4 RID: 10212 RVA: 0x000BC010 File Offset: 0x000BA210
 	public void VerifyBiomeSaveData(BiomeType biome)
 	{
 		BiomeController biomeController = WorldBuilder.GetBiomeController(biome);
@@ -164,7 +164,7 @@ public class StageSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001D1B RID: 7451 RVA: 0x0005FE18 File Offset: 0x0005E018
+	// Token: 0x060027E5 RID: 10213 RVA: 0x000BC0D0 File Offset: 0x000BA2D0
 	public void CreateAllBiomeLookupTable()
 	{
 		foreach (KeyValuePair<BiomeType, List<RoomSaveData>> keyValuePair in this.RoomSaveDataDict)
@@ -173,7 +173,7 @@ public class StageSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001D1C RID: 7452 RVA: 0x0005FE74 File Offset: 0x0005E074
+	// Token: 0x060027E6 RID: 10214 RVA: 0x000BC12C File Offset: 0x000BA32C
 	public void CreateRoomSaveDataLookupTable(BiomeType biome)
 	{
 		if (this.m_roomSaveDataLookupTable == null)
@@ -203,46 +203,46 @@ public class StageSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x04001B05 RID: 6917
+	// Token: 0x0400230C RID: 8972
 	public int REVISION_NUMBER = 14;
 
-	// Token: 0x04001B06 RID: 6918
+	// Token: 0x0400230D RID: 8973
 	public int FILE_NUMBER;
 
-	// Token: 0x04001B07 RID: 6919
+	// Token: 0x0400230E RID: 8974
 	public int BiomeCreationSeed = -1;
 
-	// Token: 0x04001B08 RID: 6920
+	// Token: 0x0400230F RID: 8975
 	public int MergeRoomSeed = -1;
 
-	// Token: 0x04001B09 RID: 6921
+	// Token: 0x04002310 RID: 8976
 	public int EnemySeed = -1;
 
-	// Token: 0x04001B0A RID: 6922
+	// Token: 0x04002311 RID: 8977
 	public int PropSeed = -1;
 
-	// Token: 0x04001B0B RID: 6923
+	// Token: 0x04002312 RID: 8978
 	private Dictionary<BiomeType, List<RoomSaveData>> m_roomSaveDataDict = new Dictionary<BiomeType, List<RoomSaveData>>();
 
-	// Token: 0x04001B0C RID: 6924
+	// Token: 0x04002313 RID: 8979
 	[NonSerialized]
 	private Dictionary<BiomeType, Dictionary<int, RoomSaveData>> m_roomSaveDataLookupTable;
 
-	// Token: 0x04001B0D RID: 6925
+	// Token: 0x04002314 RID: 8980
 	public int TimesTrackerWasLoaded;
 
-	// Token: 0x04001B0E RID: 6926
+	// Token: 0x04002315 RID: 8981
 	public List<EnemyTrackerData> EnemyTrackerDataList;
 
-	// Token: 0x04001B0F RID: 6927
+	// Token: 0x04002316 RID: 8982
 	public List<ChestTrackerData> ChestTrackerDataList;
 
-	// Token: 0x04001B10 RID: 6928
+	// Token: 0x04002317 RID: 8983
 	public List<ItemTrackerData> ItemTrackerDataList;
 
-	// Token: 0x04001B11 RID: 6929
+	// Token: 0x04002318 RID: 8984
 	public List<RoomTrackerData> RoomTrackerDataList;
 
-	// Token: 0x04001B12 RID: 6930
+	// Token: 0x04002319 RID: 8985
 	public bool ForceResetWorld;
 }

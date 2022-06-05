@@ -5,20 +5,20 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Token: 0x02000392 RID: 914
+// Token: 0x02000620 RID: 1568
 public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEventSystemHandler, ISelectHandler, IDeselectHandler
 {
-	// Token: 0x17000E37 RID: 3639
-	// (get) Token: 0x06002215 RID: 8725
+	// Token: 0x170012C8 RID: 4808
+	// (get) Token: 0x06003027 RID: 12327
 	public abstract bool IsEntryActive { get; }
 
-	// Token: 0x17000E38 RID: 3640
-	// (get) Token: 0x06002216 RID: 8726
+	// Token: 0x170012C9 RID: 4809
+	// (get) Token: 0x06003028 RID: 12328
 	public abstract EventArgs EntryEventArgs { get; }
 
-	// Token: 0x17000E39 RID: 3641
-	// (get) Token: 0x06002217 RID: 8727 RVA: 0x0006C9F4 File Offset: 0x0006ABF4
-	// (set) Token: 0x06002218 RID: 8728 RVA: 0x0006C9FC File Offset: 0x0006ABFC
+	// Token: 0x170012CA RID: 4810
+	// (get) Token: 0x06003029 RID: 12329 RVA: 0x0001A69B File Offset: 0x0001889B
+	// (set) Token: 0x0600302A RID: 12330 RVA: 0x000CD92C File Offset: 0x000CBB2C
 	public bool Interactable
 	{
 		get
@@ -39,8 +39,8 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x17000E3A RID: 3642
-	// (get) Token: 0x06002219 RID: 8729 RVA: 0x0006CA38 File Offset: 0x0006AC38
+	// Token: 0x170012CB RID: 4811
+	// (get) Token: 0x0600302B RID: 12331 RVA: 0x000CD968 File Offset: 0x000CBB68
 	public bool HasActiveButtons
 	{
 		get
@@ -59,12 +59,12 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x17000E3B RID: 3643
-	// (get) Token: 0x0600221A RID: 8730 RVA: 0x0006CA7F File Offset: 0x0006AC7F
-	// (set) Token: 0x0600221B RID: 8731 RVA: 0x0006CA87 File Offset: 0x0006AC87
+	// Token: 0x170012CC RID: 4812
+	// (get) Token: 0x0600302C RID: 12332 RVA: 0x0001A6A3 File Offset: 0x000188A3
+	// (set) Token: 0x0600302D RID: 12333 RVA: 0x0001A6AB File Offset: 0x000188AB
 	public int EntryIndex { get; protected set; }
 
-	// Token: 0x0600221C RID: 8732 RVA: 0x0006CA90 File Offset: 0x0006AC90
+	// Token: 0x0600302E RID: 12334 RVA: 0x000CD9B0 File Offset: 0x000CBBB0
 	public int GetFirstActiveButtonIndex()
 	{
 		if (this.HasActiveButtons)
@@ -80,7 +80,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		return -1;
 	}
 
-	// Token: 0x0600221D RID: 8733 RVA: 0x0006CAE0 File Offset: 0x0006ACE0
+	// Token: 0x0600302F RID: 12335 RVA: 0x000CDA00 File Offset: 0x000CBC00
 	public int GetLastActiveButtonIndex()
 	{
 		if (this.HasActiveButtons)
@@ -96,8 +96,8 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		return -1;
 	}
 
-	// Token: 0x17000E3C RID: 3644
-	// (get) Token: 0x0600221E RID: 8734 RVA: 0x0006CB30 File Offset: 0x0006AD30
+	// Token: 0x170012CD RID: 4813
+	// (get) Token: 0x06003030 RID: 12336 RVA: 0x0001A6B4 File Offset: 0x000188B4
 	public IOmniUIWindowController WindowController
 	{
 		get
@@ -106,7 +106,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x0600221F RID: 8735 RVA: 0x0006CB38 File Offset: 0x0006AD38
+	// Token: 0x06003031 RID: 12337 RVA: 0x000CDA50 File Offset: 0x000CBC50
 	public virtual void Initialize(IOmniUIWindowController windowController)
 	{
 		this.m_windowController = windowController;
@@ -120,13 +120,13 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x06002220 RID: 8736 RVA: 0x0006CBC2 File Offset: 0x0006ADC2
+	// Token: 0x06003032 RID: 12338 RVA: 0x0001A6BC File Offset: 0x000188BC
 	public virtual void SetEntryIndex(int index)
 	{
 		this.EntryIndex = index;
 	}
 
-	// Token: 0x06002221 RID: 8737 RVA: 0x0006CBCB File Offset: 0x0006ADCB
+	// Token: 0x06003033 RID: 12339 RVA: 0x0001A6C5 File Offset: 0x000188C5
 	private void OnButtonSelected(OmniUIButton button)
 	{
 		if (this.m_localSelectedButtonIndex != button.ButtonIndex)
@@ -139,10 +139,10 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x06002222 RID: 8738
+	// Token: 0x06003034 RID: 12340
 	public abstract void UpdateActive();
 
-	// Token: 0x06002223 RID: 8739 RVA: 0x0006CC0C File Offset: 0x0006AE0C
+	// Token: 0x06003035 RID: 12341 RVA: 0x000CDADC File Offset: 0x000CBCDC
 	public virtual void UpdateState()
 	{
 		if (!this.IsEntryActive)
@@ -219,7 +219,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x06002224 RID: 8740 RVA: 0x0006CDEC File Offset: 0x0006AFEC
+	// Token: 0x06003036 RID: 12342 RVA: 0x000CDCBC File Offset: 0x000CBEBC
 	public virtual void DeselectAllButtons()
 	{
 		OmniUIButton[] buttonArray = this.m_buttonArray;
@@ -229,7 +229,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x06002225 RID: 8741 RVA: 0x0006CE18 File Offset: 0x0006B018
+	// Token: 0x06003037 RID: 12343 RVA: 0x000CDCE8 File Offset: 0x000CBEE8
 	public void SelectRightMostButton()
 	{
 		for (int i = 0; i < this.m_buttonArray.Length; i++)
@@ -238,7 +238,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x06002226 RID: 8742 RVA: 0x0006CE40 File Offset: 0x0006B040
+	// Token: 0x06003038 RID: 12344 RVA: 0x000CDD10 File Offset: 0x000CBF10
 	public void SelectLeftMostButton()
 	{
 		for (int i = 0; i < this.m_buttonArray.Length; i++)
@@ -247,7 +247,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x06002227 RID: 8743 RVA: 0x0006CE68 File Offset: 0x0006B068
+	// Token: 0x06003039 RID: 12345 RVA: 0x000CDD38 File Offset: 0x000CBF38
 	public void SelectButton(bool selectRight)
 	{
 		if (!this.Interactable)
@@ -316,7 +316,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x06002228 RID: 8744 RVA: 0x0006CF84 File Offset: 0x0006B184
+	// Token: 0x0600303A RID: 12346 RVA: 0x000CDE54 File Offset: 0x000CC054
 	public virtual void OnSelect(BaseEventData eventData)
 	{
 		if (!this.Interactable)
@@ -364,7 +364,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x06002229 RID: 8745 RVA: 0x0006D098 File Offset: 0x0006B298
+	// Token: 0x0600303B RID: 12347 RVA: 0x000CDF68 File Offset: 0x000CC168
 	public virtual void OnDeselect(BaseEventData eventData)
 	{
 		if (!this.Interactable)
@@ -382,7 +382,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x0600222A RID: 8746 RVA: 0x0006D0EF File Offset: 0x0006B2EF
+	// Token: 0x0600303C RID: 12348 RVA: 0x0001A704 File Offset: 0x00018904
 	private void PlayConfirmPressedSFX(OmniUIButton button)
 	{
 		if (this.m_windowController.SelectOptionEvent != null)
@@ -391,7 +391,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x0600222B RID: 8747 RVA: 0x0006D10E File Offset: 0x0006B30E
+	// Token: 0x0600303D RID: 12349 RVA: 0x0001A723 File Offset: 0x00018923
 	public virtual void OnConfirmButtonPressed()
 	{
 		if (!this.Interactable)
@@ -404,7 +404,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x0600222C RID: 8748 RVA: 0x0006D133 File Offset: 0x0006B333
+	// Token: 0x0600303E RID: 12350 RVA: 0x0001A748 File Offset: 0x00018948
 	public virtual void OnPointerEnter(PointerEventData eventData)
 	{
 		if (RewiredOnStartupController.CurrentActiveControllerType != ControllerType.Mouse)
@@ -418,7 +418,7 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		this.m_windowController.SetSelectedEntryIndex(this.EntryIndex, true, true);
 	}
 
-	// Token: 0x0600222D RID: 8749 RVA: 0x0006D15C File Offset: 0x0006B35C
+	// Token: 0x0600303F RID: 12351 RVA: 0x000CDFC0 File Offset: 0x000CC1C0
 	private void OnDestroy()
 	{
 		if (this.m_buttonArray != null)
@@ -431,42 +431,42 @@ public abstract class BaseOmniUIEntry : MonoBehaviour, IPointerEnterHandler, IEv
 		}
 	}
 
-	// Token: 0x04001D94 RID: 7572
+	// Token: 0x0400278F RID: 10127
 	public static int StaticSelectedButtonIndex;
 
-	// Token: 0x04001D95 RID: 7573
+	// Token: 0x04002790 RID: 10128
 	[SerializeField]
 	protected Image m_icon;
 
-	// Token: 0x04001D96 RID: 7574
+	// Token: 0x04002791 RID: 10129
 	[SerializeField]
 	protected GameObject m_iconGO;
 
-	// Token: 0x04001D97 RID: 7575
+	// Token: 0x04002792 RID: 10130
 	[SerializeField]
 	protected GameObject m_inactiveIconGO;
 
-	// Token: 0x04001D98 RID: 7576
+	// Token: 0x04002793 RID: 10131
 	[SerializeField]
 	protected TMP_Text m_titleText;
 
-	// Token: 0x04001D99 RID: 7577
+	// Token: 0x04002794 RID: 10132
 	[SerializeField]
 	protected Image m_selectedSprite;
 
-	// Token: 0x04001D9A RID: 7578
+	// Token: 0x04002795 RID: 10133
 	[SerializeField]
 	protected Image m_newSymbol;
 
-	// Token: 0x04001D9B RID: 7579
+	// Token: 0x04002796 RID: 10134
 	protected IOmniUIWindowController m_windowController;
 
-	// Token: 0x04001D9C RID: 7580
+	// Token: 0x04002797 RID: 10135
 	protected OmniUIButton[] m_buttonArray;
 
-	// Token: 0x04001D9D RID: 7581
+	// Token: 0x04002798 RID: 10136
 	protected int m_localSelectedButtonIndex;
 
-	// Token: 0x04001D9E RID: 7582
+	// Token: 0x04002799 RID: 10137
 	private bool m_interactable;
 }

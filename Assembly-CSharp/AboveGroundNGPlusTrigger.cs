@@ -2,10 +2,10 @@
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000544 RID: 1348
+// Token: 0x020008E3 RID: 2275
 public class AboveGroundNGPlusTrigger : MonoBehaviour
 {
-	// Token: 0x06003144 RID: 12612 RVA: 0x000A6C30 File Offset: 0x000A4E30
+	// Token: 0x060044F8 RID: 17656 RVA: 0x0010FC0C File Offset: 0x0010DE0C
 	public void TriggerNGPlus()
 	{
 		PropSpawnController propSpawnController = PlayerManager.GetCurrentPlayerRoom().gameObject.FindObjectReference("Elpis", false, false);

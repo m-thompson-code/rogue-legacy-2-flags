@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200068B RID: 1675
+// Token: 0x02000B10 RID: 2832
 public class BurdenManager : MonoBehaviour
 {
-	// Token: 0x17001511 RID: 5393
-	// (get) Token: 0x06003C7C RID: 15484 RVA: 0x000D1043 File Offset: 0x000CF243
-	// (set) Token: 0x06003C7D RID: 15485 RVA: 0x000D104A File Offset: 0x000CF24A
+	// Token: 0x17001CD9 RID: 7385
+	// (get) Token: 0x060054FB RID: 21755 RVA: 0x0002E22F File Offset: 0x0002C42F
+	// (set) Token: 0x060054FC RID: 21756 RVA: 0x0002E236 File Offset: 0x0002C436
 	private static BurdenManager Instance
 	{
 		get
@@ -19,25 +19,25 @@ public class BurdenManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001512 RID: 5394
-	// (get) Token: 0x06003C7E RID: 15486 RVA: 0x000D1052 File Offset: 0x000CF252
-	// (set) Token: 0x06003C7F RID: 15487 RVA: 0x000D1059 File Offset: 0x000CF259
+	// Token: 0x17001CDA RID: 7386
+	// (get) Token: 0x060054FD RID: 21757 RVA: 0x0002E23E File Offset: 0x0002C43E
+	// (set) Token: 0x060054FE RID: 21758 RVA: 0x0002E245 File Offset: 0x0002C445
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06003C80 RID: 15488 RVA: 0x000D1061 File Offset: 0x000CF261
+	// Token: 0x060054FF RID: 21759 RVA: 0x0002E24D File Offset: 0x0002C44D
 	private void Awake()
 	{
 		BurdenManager.Instance = this;
 		BurdenManager.IsInitialized = true;
 	}
 
-	// Token: 0x06003C81 RID: 15489 RVA: 0x000D106F File Offset: 0x000CF26F
+	// Token: 0x06005500 RID: 21760 RVA: 0x0002E25B File Offset: 0x0002C45B
 	private void OnDestroy()
 	{
 		BurdenManager.IsInitialized = false;
 	}
 
-	// Token: 0x06003C82 RID: 15490 RVA: 0x000D1077 File Offset: 0x000CF277
+	// Token: 0x06005501 RID: 21761 RVA: 0x0002E263 File Offset: 0x0002C463
 	public static BurdenObj GetBurden(BurdenType burdenType)
 	{
 		if (burdenType == BurdenType.None)
@@ -47,14 +47,14 @@ public class BurdenManager : MonoBehaviour
 		return SaveManager.PlayerSaveData.GetBurden(burdenType);
 	}
 
-	// Token: 0x06003C83 RID: 15491 RVA: 0x000D108C File Offset: 0x000CF28C
+	// Token: 0x06005502 RID: 21762 RVA: 0x001415A4 File Offset: 0x0013F7A4
 	public static bool IsBurdenActive(BurdenType burdenType)
 	{
 		BurdenObj burden = BurdenManager.GetBurden(burdenType);
 		return !burden.IsNativeNull() && burden.CurrentLevel > 0;
 	}
 
-	// Token: 0x06003C84 RID: 15492 RVA: 0x000D10B4 File Offset: 0x000CF2B4
+	// Token: 0x06005503 RID: 21763 RVA: 0x001415CC File Offset: 0x0013F7CC
 	public static void SetBurdenLevel(BurdenType burdenType, int level, bool additive, bool broadcast = true)
 	{
 		BurdenObj burden = BurdenManager.GetBurden(burdenType);
@@ -64,7 +64,7 @@ public class BurdenManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003C85 RID: 15493 RVA: 0x000D10DC File Offset: 0x000CF2DC
+	// Token: 0x06005504 RID: 21764 RVA: 0x001415F4 File Offset: 0x0013F7F4
 	public static int GetBurdenLevel(BurdenType burdenType)
 	{
 		BurdenObj burden = BurdenManager.GetBurden(burdenType);
@@ -75,7 +75,7 @@ public class BurdenManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003C86 RID: 15494 RVA: 0x000D1108 File Offset: 0x000CF308
+	// Token: 0x06005505 RID: 21765 RVA: 0x00141620 File Offset: 0x0013F820
 	public static int GetTotalBurdenLevel()
 	{
 		int num = 0;
@@ -89,7 +89,7 @@ public class BurdenManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003C87 RID: 15495 RVA: 0x000D113C File Offset: 0x000CF33C
+	// Token: 0x06005506 RID: 21766 RVA: 0x00141654 File Offset: 0x0013F854
 	public static int GetTotalBurdenMaxLevel()
 	{
 		int num = 0;
@@ -103,7 +103,7 @@ public class BurdenManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003C88 RID: 15496 RVA: 0x000D1178 File Offset: 0x000CF378
+	// Token: 0x06005507 RID: 21767 RVA: 0x00141690 File Offset: 0x0013F890
 	public static float GetBurdenStatGain(BurdenType burdenType)
 	{
 		BurdenObj burden = BurdenManager.GetBurden(burdenType);
@@ -114,7 +114,7 @@ public class BurdenManager : MonoBehaviour
 		return 0f;
 	}
 
-	// Token: 0x06003C89 RID: 15497 RVA: 0x000D11A8 File Offset: 0x000CF3A8
+	// Token: 0x06005508 RID: 21768 RVA: 0x001416C0 File Offset: 0x0013F8C0
 	public static int GetBurdenWeight(BurdenType burdenType)
 	{
 		BurdenObj burden = BurdenManager.GetBurden(burdenType);
@@ -125,7 +125,7 @@ public class BurdenManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003C8A RID: 15498 RVA: 0x000D11D4 File Offset: 0x000CF3D4
+	// Token: 0x06005509 RID: 21769 RVA: 0x001416EC File Offset: 0x0013F8EC
 	public static int GetTotalBurdenWeight()
 	{
 		int num = 0;
@@ -139,7 +139,7 @@ public class BurdenManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003C8B RID: 15499 RVA: 0x000D1208 File Offset: 0x000CF408
+	// Token: 0x0600550A RID: 21770 RVA: 0x00141720 File Offset: 0x0013F920
 	public static FoundState GetFoundState(BurdenType burdenType)
 	{
 		BurdenObj burden = BurdenManager.GetBurden(burdenType);
@@ -150,7 +150,7 @@ public class BurdenManager : MonoBehaviour
 		return FoundState.NotFound;
 	}
 
-	// Token: 0x06003C8C RID: 15500 RVA: 0x000D1230 File Offset: 0x000CF430
+	// Token: 0x0600550B RID: 21771 RVA: 0x00141748 File Offset: 0x0013F948
 	public static void SetFoundState(BurdenType burdenType, FoundState foundState, bool overrideValues)
 	{
 		BurdenObj burden = BurdenManager.GetBurden(burdenType);
@@ -160,7 +160,7 @@ public class BurdenManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003C8D RID: 15501 RVA: 0x000D1260 File Offset: 0x000CF460
+	// Token: 0x0600550C RID: 21772 RVA: 0x00141778 File Offset: 0x0013F978
 	public static bool IsBurdenUnlocked(BurdenType burdenType)
 	{
 		BurdenObj burden = BurdenManager.GetBurden(burdenType);
@@ -237,7 +237,7 @@ public class BurdenManager : MonoBehaviour
 		return !burden.IsNativeNull() && !burden.BurdenData.Disabled;
 	}
 
-	// Token: 0x06003C8E RID: 15502 RVA: 0x000D1434 File Offset: 0x000CF634
+	// Token: 0x0600550D RID: 21773 RVA: 0x0014194C File Offset: 0x0013FB4C
 	public static int BurdenRequiredForNG(int ngPlusLevel)
 	{
 		int num = NewGamePlus_EV.GetBurdensRequiredForNG(ngPlusLevel);
@@ -253,12 +253,12 @@ public class BurdenManager : MonoBehaviour
 		return num - totalBurdenWeight;
 	}
 
-	// Token: 0x06003C8F RID: 15503 RVA: 0x000D149B File Offset: 0x000CF69B
+	// Token: 0x0600550E RID: 21774 RVA: 0x0002E275 File Offset: 0x0002C475
 	public static bool CanEnterNewGamePlus(int ngPlusLevel)
 	{
 		return BurdenManager.BurdenRequiredForNG(ngPlusLevel) <= 0;
 	}
 
-	// Token: 0x04002D7C RID: 11644
+	// Token: 0x04003F3A RID: 16186
 	private static BurdenManager m_instance;
 }

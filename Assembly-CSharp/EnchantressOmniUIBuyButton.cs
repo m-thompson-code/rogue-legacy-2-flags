@@ -4,11 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x020003A2 RID: 930
+// Token: 0x02000634 RID: 1588
 public class EnchantressOmniUIBuyButton : OmniUIButton, IEnchantressOmniUIButton
 {
-	// Token: 0x17000E51 RID: 3665
-	// (get) Token: 0x06002291 RID: 8849 RVA: 0x000703FE File Offset: 0x0006E5FE
+	// Token: 0x170012E4 RID: 4836
+	// (get) Token: 0x060030A9 RID: 12457 RVA: 0x0001AAFC File Offset: 0x00018CFC
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -17,19 +17,19 @@ public class EnchantressOmniUIBuyButton : OmniUIButton, IEnchantressOmniUIButton
 		}
 	}
 
-	// Token: 0x17000E52 RID: 3666
-	// (get) Token: 0x06002292 RID: 8850 RVA: 0x00070406 File Offset: 0x0006E606
-	// (set) Token: 0x06002293 RID: 8851 RVA: 0x0007040E File Offset: 0x0006E60E
+	// Token: 0x170012E5 RID: 4837
+	// (get) Token: 0x060030AA RID: 12458 RVA: 0x0001AB04 File Offset: 0x00018D04
+	// (set) Token: 0x060030AB RID: 12459 RVA: 0x0001AB0C File Offset: 0x00018D0C
 	public RuneType RuneType { get; set; }
 
-	// Token: 0x06002294 RID: 8852 RVA: 0x00070417 File Offset: 0x0006E617
+	// Token: 0x060030AC RID: 12460 RVA: 0x0001AB15 File Offset: 0x00018D15
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_cancelConfirmMenuSelection = new Action(this.CancelConfirmMenuSelection);
 	}
 
-	// Token: 0x06002295 RID: 8853 RVA: 0x00070431 File Offset: 0x0006E631
+	// Token: 0x060030AD RID: 12461 RVA: 0x0001AB2F File Offset: 0x00018D2F
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -40,7 +40,7 @@ public class EnchantressOmniUIBuyButton : OmniUIButton, IEnchantressOmniUIButton
 		this.m_descriptionEventArgs.Initialize(this.RuneType, OmniUIButtonType.Purchasing);
 	}
 
-	// Token: 0x06002296 RID: 8854 RVA: 0x00070460 File Offset: 0x0006E660
+	// Token: 0x060030AE RID: 12462 RVA: 0x000D0FBC File Offset: 0x000CF1BC
 	public override void OnConfirmButtonPressed()
 	{
 		if (!this.IsButtonActive)
@@ -78,7 +78,7 @@ public class EnchantressOmniUIBuyButton : OmniUIButton, IEnchantressOmniUIButton
 		this.RunOnConfirmPressedAnimation();
 	}
 
-	// Token: 0x06002297 RID: 8855 RVA: 0x00070550 File Offset: 0x0006E750
+	// Token: 0x060030AF RID: 12463 RVA: 0x000D10AC File Offset: 0x000CF2AC
 	public override void UpdateState()
 	{
 		this.m_deselectedSprite.SetAlpha(1f);
@@ -110,7 +110,7 @@ public class EnchantressOmniUIBuyButton : OmniUIButton, IEnchantressOmniUIButton
 		}
 	}
 
-	// Token: 0x06002298 RID: 8856 RVA: 0x00070630 File Offset: 0x0006E830
+	// Token: 0x060030B0 RID: 12464 RVA: 0x000D118C File Offset: 0x000CF38C
 	private bool PurchaseRune()
 	{
 		if (!RuneManager.CanPurchaseRune(this.RuneType, true))
@@ -166,7 +166,7 @@ public class EnchantressOmniUIBuyButton : OmniUIButton, IEnchantressOmniUIButton
 		return true;
 	}
 
-	// Token: 0x06002299 RID: 8857 RVA: 0x0007080C File Offset: 0x0006EA0C
+	// Token: 0x060030B1 RID: 12465 RVA: 0x000D1368 File Offset: 0x000CF568
 	private void InitializeCantEquipConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -183,30 +183,30 @@ public class EnchantressOmniUIBuyButton : OmniUIButton, IEnchantressOmniUIButton
 		buttonAtIndex.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x0600229A RID: 8858 RVA: 0x0007087D File Offset: 0x0006EA7D
+	// Token: 0x060030B2 RID: 12466 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenuSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x04001DD0 RID: 7632
+	// Token: 0x040027E9 RID: 10217
 	[SerializeField]
 	private TMP_Text m_buyText;
 
-	// Token: 0x04001DD1 RID: 7633
+	// Token: 0x040027EA RID: 10218
 	[SerializeField]
 	private UnityEvent m_cantAffordPurchaseUnityEvent;
 
-	// Token: 0x04001DD2 RID: 7634
+	// Token: 0x040027EB RID: 10219
 	[SerializeField]
 	private TMP_Text m_maxText;
 
-	// Token: 0x04001DD3 RID: 7635
+	// Token: 0x040027EC RID: 10220
 	private EnchantressOmniUIDescriptionEventArgs m_descriptionEventArgs;
 
-	// Token: 0x04001DD4 RID: 7636
+	// Token: 0x040027ED RID: 10221
 	private PurchaseBoxDialogueEventArgs m_purchaseDialogueArgs = new PurchaseBoxDialogueEventArgs(PurchaseBoxDialogueType.Welcome);
 
-	// Token: 0x04001DD5 RID: 7637
+	// Token: 0x040027EE RID: 10222
 	private Action m_cancelConfirmMenuSelection;
 }

@@ -3,40 +3,40 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000379 RID: 889
+// Token: 0x020005FE RID: 1534
 public class GlobalTimerHUDController : MonoBehaviour
 {
-	// Token: 0x17000E15 RID: 3605
-	// (get) Token: 0x0600215A RID: 8538 RVA: 0x0006909F File Offset: 0x0006729F
-	// (set) Token: 0x0600215B RID: 8539 RVA: 0x000690A6 File Offset: 0x000672A6
+	// Token: 0x17001298 RID: 4760
+	// (get) Token: 0x06002F41 RID: 12097 RVA: 0x00019DEC File Offset: 0x00017FEC
+	// (set) Token: 0x06002F42 RID: 12098 RVA: 0x00019DF3 File Offset: 0x00017FF3
 	public static float ElapsedTime { get; set; }
 
-	// Token: 0x17000E16 RID: 3606
-	// (get) Token: 0x0600215C RID: 8540 RVA: 0x000690AE File Offset: 0x000672AE
-	// (set) Token: 0x0600215D RID: 8541 RVA: 0x000690B5 File Offset: 0x000672B5
+	// Token: 0x17001299 RID: 4761
+	// (get) Token: 0x06002F43 RID: 12099 RVA: 0x00019DFB File Offset: 0x00017FFB
+	// (set) Token: 0x06002F44 RID: 12100 RVA: 0x00019E02 File Offset: 0x00018002
 	public static bool IsRunning { get; private set; }
 
-	// Token: 0x17000E17 RID: 3607
-	// (get) Token: 0x0600215E RID: 8542 RVA: 0x000690BD File Offset: 0x000672BD
-	// (set) Token: 0x0600215F RID: 8543 RVA: 0x000690C4 File Offset: 0x000672C4
+	// Token: 0x1700129A RID: 4762
+	// (get) Token: 0x06002F45 RID: 12101 RVA: 0x00019E0A File Offset: 0x0001800A
+	// (set) Token: 0x06002F46 RID: 12102 RVA: 0x00019E11 File Offset: 0x00018011
 	public static bool ReverseTimer { get; set; }
 
-	// Token: 0x17000E18 RID: 3608
-	// (get) Token: 0x06002160 RID: 8544 RVA: 0x000690CC File Offset: 0x000672CC
-	// (set) Token: 0x06002161 RID: 8545 RVA: 0x000690D3 File Offset: 0x000672D3
+	// Token: 0x1700129B RID: 4763
+	// (get) Token: 0x06002F47 RID: 12103 RVA: 0x00019E19 File Offset: 0x00018019
+	// (set) Token: 0x06002F48 RID: 12104 RVA: 0x00019E20 File Offset: 0x00018020
 	public static bool SlowTime { get; set; }
 
-	// Token: 0x17000E19 RID: 3609
-	// (get) Token: 0x06002162 RID: 8546 RVA: 0x000690DB File Offset: 0x000672DB
-	// (set) Token: 0x06002163 RID: 8547 RVA: 0x000690E2 File Offset: 0x000672E2
+	// Token: 0x1700129C RID: 4764
+	// (get) Token: 0x06002F49 RID: 12105 RVA: 0x00019E28 File Offset: 0x00018028
+	// (set) Token: 0x06002F4A RID: 12106 RVA: 0x00019E2F File Offset: 0x0001802F
 	public static float ReverseStartTime { get; set; }
 
-	// Token: 0x17000E1A RID: 3610
-	// (get) Token: 0x06002164 RID: 8548 RVA: 0x000690EA File Offset: 0x000672EA
-	// (set) Token: 0x06002165 RID: 8549 RVA: 0x000690F1 File Offset: 0x000672F1
+	// Token: 0x1700129D RID: 4765
+	// (get) Token: 0x06002F4B RID: 12107 RVA: 0x00019E37 File Offset: 0x00018037
+	// (set) Token: 0x06002F4C RID: 12108 RVA: 0x00019E3E File Offset: 0x0001803E
 	public static bool TrackNegativeTimeAchievement { get; set; }
 
-	// Token: 0x06002166 RID: 8550 RVA: 0x000690FC File Offset: 0x000672FC
+	// Token: 0x06002F4D RID: 12109 RVA: 0x000C9F2C File Offset: 0x000C812C
 	private void Awake()
 	{
 		this.OnResetTimer(null, null);
@@ -48,7 +48,7 @@ public class GlobalTimerHUDController : MonoBehaviour
 		this.m_onResetTimer = new Action<MonoBehaviour, EventArgs>(this.OnResetTimer);
 	}
 
-	// Token: 0x06002167 RID: 8551 RVA: 0x00069174 File Offset: 0x00067374
+	// Token: 0x06002F4E RID: 12110 RVA: 0x000C9FA4 File Offset: 0x000C81A4
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.DisplayGlobalTimer, this.m_onDisplayTimer);
@@ -58,7 +58,7 @@ public class GlobalTimerHUDController : MonoBehaviour
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.ResetGlobalTimer, this.m_onResetTimer);
 	}
 
-	// Token: 0x06002168 RID: 8552 RVA: 0x000691C4 File Offset: 0x000673C4
+	// Token: 0x06002F4F RID: 12111 RVA: 0x000C9FF4 File Offset: 0x000C81F4
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.DisplayGlobalTimer, this.m_onDisplayTimer);
@@ -68,7 +68,7 @@ public class GlobalTimerHUDController : MonoBehaviour
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.ResetGlobalTimer, this.m_onResetTimer);
 	}
 
-	// Token: 0x06002169 RID: 8553 RVA: 0x00069212 File Offset: 0x00067412
+	// Token: 0x06002F50 RID: 12112 RVA: 0x00019E46 File Offset: 0x00018046
 	private void OnDisplayTimer(object sender, EventArgs args)
 	{
 		if (!this.m_canvasGO.activeSelf)
@@ -77,7 +77,7 @@ public class GlobalTimerHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600216A RID: 8554 RVA: 0x0006922D File Offset: 0x0006742D
+	// Token: 0x06002F51 RID: 12113 RVA: 0x00019E61 File Offset: 0x00018061
 	private void OnHideTimer(object sender, EventArgs args)
 	{
 		if (this.m_canvasGO.activeSelf)
@@ -86,7 +86,7 @@ public class GlobalTimerHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600216B RID: 8555 RVA: 0x00069248 File Offset: 0x00067448
+	// Token: 0x06002F52 RID: 12114 RVA: 0x00019E7C File Offset: 0x0001807C
 	private void OnStartTimer(object sender, EventArgs args)
 	{
 		base.StopAllCoroutines();
@@ -94,14 +94,14 @@ public class GlobalTimerHUDController : MonoBehaviour
 		base.StartCoroutine(this.TimerCoroutine());
 	}
 
-	// Token: 0x0600216C RID: 8556 RVA: 0x00069263 File Offset: 0x00067463
+	// Token: 0x06002F53 RID: 12115 RVA: 0x00019E97 File Offset: 0x00018097
 	private void OnStopTimer(object sender, EventArgs args)
 	{
 		GlobalTimerHUDController.IsRunning = false;
 		base.StopAllCoroutines();
 	}
 
-	// Token: 0x0600216D RID: 8557 RVA: 0x00069274 File Offset: 0x00067474
+	// Token: 0x06002F54 RID: 12116 RVA: 0x000CA044 File Offset: 0x000C8244
 	private void OnResetTimer(object sender, EventArgs args)
 	{
 		GlobalTimerHUDController.ElapsedTime = 0f;
@@ -112,7 +112,7 @@ public class GlobalTimerHUDController : MonoBehaviour
 		this.m_timerTextObj.text = string.Format("{0:D2}:{1:D2}:{2:D2}", 0, 0, 0);
 	}
 
-	// Token: 0x0600216E RID: 8558 RVA: 0x000692CE File Offset: 0x000674CE
+	// Token: 0x06002F55 RID: 12117 RVA: 0x00019EA5 File Offset: 0x000180A5
 	private IEnumerator TimerCoroutine()
 	{
 		for (;;)
@@ -156,7 +156,7 @@ public class GlobalTimerHUDController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600216F RID: 8559 RVA: 0x000692E0 File Offset: 0x000674E0
+	// Token: 0x06002F56 RID: 12118 RVA: 0x000CA0A0 File Offset: 0x000C82A0
 	public static string GetTimerString()
 	{
 		float num = Mathf.Abs(GlobalTimerHUDController.ElapsedTime);
@@ -191,35 +191,35 @@ public class GlobalTimerHUDController : MonoBehaviour
 		});
 	}
 
-	// Token: 0x04001CDE RID: 7390
+	// Token: 0x040026AE RID: 9902
 	private const string INITIAL_TIMER_FORMAT = "{0:D2}:{1:D2}:{2:D2}";
 
-	// Token: 0x04001CDF RID: 7391
+	// Token: 0x040026AF RID: 9903
 	private const string TIMER_FORMAT_A = "{3}{0:D2}:{1:D2}:{2:D2}";
 
-	// Token: 0x04001CE0 RID: 7392
+	// Token: 0x040026B0 RID: 9904
 	private const string TIMER_FORMAT_B = "{4}{0}:{1:D2}:{2:D2}:{3:D2}";
 
-	// Token: 0x04001CE1 RID: 7393
+	// Token: 0x040026B1 RID: 9905
 	[SerializeField]
 	private GameObject m_canvasGO;
 
-	// Token: 0x04001CE2 RID: 7394
+	// Token: 0x040026B2 RID: 9906
 	[SerializeField]
 	private TMP_Text m_timerTextObj;
 
-	// Token: 0x04001CE9 RID: 7401
+	// Token: 0x040026B9 RID: 9913
 	private Action<MonoBehaviour, EventArgs> m_onDisplayTimer;
 
-	// Token: 0x04001CEA RID: 7402
+	// Token: 0x040026BA RID: 9914
 	private Action<MonoBehaviour, EventArgs> m_onHideTimer;
 
-	// Token: 0x04001CEB RID: 7403
+	// Token: 0x040026BB RID: 9915
 	private Action<MonoBehaviour, EventArgs> m_onStartTimer;
 
-	// Token: 0x04001CEC RID: 7404
+	// Token: 0x040026BC RID: 9916
 	private Action<MonoBehaviour, EventArgs> m_onStopTimer;
 
-	// Token: 0x04001CED RID: 7405
+	// Token: 0x040026BD RID: 9917
 	private Action<MonoBehaviour, EventArgs> m_onResetTimer;
 }

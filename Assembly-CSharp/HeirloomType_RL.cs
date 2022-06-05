@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200073C RID: 1852
+// Token: 0x02000BFA RID: 3066
 public class HeirloomType_RL
 {
-	// Token: 0x17001632 RID: 5682
-	// (get) Token: 0x06004104 RID: 16644 RVA: 0x000E6487 File Offset: 0x000E4687
+	// Token: 0x17001E2E RID: 7726
+	// (get) Token: 0x06005A81 RID: 23169 RVA: 0x000318EB File Offset: 0x0002FAEB
 	public static HeirloomType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class HeirloomType_RL
 		}
 	}
 
-	// Token: 0x04003475 RID: 13429
+	// Token: 0x040046F1 RID: 18161
 	private static HeirloomType[] m_typeArray;
 }

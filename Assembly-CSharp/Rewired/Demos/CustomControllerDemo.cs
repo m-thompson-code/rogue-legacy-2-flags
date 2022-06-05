@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Rewired.Demos
 {
-	// Token: 0x0200093C RID: 2364
+	// Token: 0x02000ED8 RID: 3800
 	[AddComponentMenu("")]
 	public class CustomControllerDemo : MonoBehaviour
 	{
-		// Token: 0x06005023 RID: 20515 RVA: 0x0011A6CC File Offset: 0x001188CC
+		// Token: 0x06006DFA RID: 28154 RVA: 0x00189238 File Offset: 0x00187438
 		private void Awake()
 		{
 			ScreenOrientation screenOrientation = ScreenOrientation.LandscapeLeft;
@@ -18,7 +18,7 @@ namespace Rewired.Demos
 			this.Initialize();
 		}
 
-		// Token: 0x06005024 RID: 20516 RVA: 0x0011A6F8 File Offset: 0x001188F8
+		// Token: 0x06006DFB RID: 28155 RVA: 0x00189264 File Offset: 0x00187464
 		private void Initialize()
 		{
 			ReInput.InputSourceUpdateEvent += this.OnInputSourceUpdate;
@@ -46,7 +46,7 @@ namespace Rewired.Demos
 			this.initialized = true;
 		}
 
-		// Token: 0x06005025 RID: 20517 RVA: 0x0011A831 File Offset: 0x00118A31
+		// Token: 0x06006DFC RID: 28156 RVA: 0x0003C694 File Offset: 0x0003A894
 		private void Update()
 		{
 			if (!ReInput.isReady)
@@ -59,7 +59,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005026 RID: 20518 RVA: 0x0011A849 File Offset: 0x00118A49
+		// Token: 0x06006DFD RID: 28157 RVA: 0x0003C6AC File Offset: 0x0003A8AC
 		private void OnInputSourceUpdate()
 		{
 			this.GetSourceAxisValues();
@@ -71,7 +71,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005027 RID: 20519 RVA: 0x0011A86C File Offset: 0x00118A6C
+		// Token: 0x06006DFE RID: 28158 RVA: 0x001893A0 File Offset: 0x001875A0
 		private void GetSourceAxisValues()
 		{
 			for (int i = 0; i < this.axisValues.Length; i++)
@@ -87,7 +87,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005028 RID: 20520 RVA: 0x0011A8CC File Offset: 0x00118ACC
+		// Token: 0x06006DFF RID: 28159 RVA: 0x00189400 File Offset: 0x00187600
 		private void GetSourceButtonValues()
 		{
 			for (int i = 0; i < this.buttonValues.Length; i++)
@@ -96,7 +96,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005029 RID: 20521 RVA: 0x0011A904 File Offset: 0x00118B04
+		// Token: 0x06006E00 RID: 28160 RVA: 0x00189438 File Offset: 0x00187638
 		private void SetControllerAxisValues()
 		{
 			for (int i = 0; i < this.axisValues.Length; i++)
@@ -105,7 +105,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x0600502A RID: 20522 RVA: 0x0011A938 File Offset: 0x00118B38
+		// Token: 0x06006E01 RID: 28161 RVA: 0x0018946C File Offset: 0x0018766C
 		private void SetControllerButtonValues()
 		{
 			for (int i = 0; i < this.buttonValues.Length; i++)
@@ -114,7 +114,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x0600502B RID: 20523 RVA: 0x0011A96C File Offset: 0x00118B6C
+		// Token: 0x06006E02 RID: 28162 RVA: 0x0003C6CE File Offset: 0x0003A8CE
 		private float GetAxisValueCallback(int index)
 		{
 			if (index >= this.axisValues.Length)
@@ -124,43 +124,43 @@ namespace Rewired.Demos
 			return this.axisValues[index];
 		}
 
-		// Token: 0x0600502C RID: 20524 RVA: 0x0011A987 File Offset: 0x00118B87
+		// Token: 0x06006E03 RID: 28163 RVA: 0x0003C6E9 File Offset: 0x0003A8E9
 		private bool GetButtonValueCallback(int index)
 		{
 			return index < this.buttonValues.Length && this.buttonValues[index];
 		}
 
-		// Token: 0x04004285 RID: 17029
+		// Token: 0x04005865 RID: 22629
 		public int playerId;
 
-		// Token: 0x04004286 RID: 17030
+		// Token: 0x04005866 RID: 22630
 		public string controllerTag;
 
-		// Token: 0x04004287 RID: 17031
+		// Token: 0x04005867 RID: 22631
 		public bool useUpdateCallbacks;
 
-		// Token: 0x04004288 RID: 17032
+		// Token: 0x04005868 RID: 22632
 		private int buttonCount;
 
-		// Token: 0x04004289 RID: 17033
+		// Token: 0x04005869 RID: 22633
 		private int axisCount;
 
-		// Token: 0x0400428A RID: 17034
+		// Token: 0x0400586A RID: 22634
 		private float[] axisValues;
 
-		// Token: 0x0400428B RID: 17035
+		// Token: 0x0400586B RID: 22635
 		private bool[] buttonValues;
 
-		// Token: 0x0400428C RID: 17036
+		// Token: 0x0400586C RID: 22636
 		private TouchJoystickExample[] joysticks;
 
-		// Token: 0x0400428D RID: 17037
+		// Token: 0x0400586D RID: 22637
 		private TouchButtonExample[] buttons;
 
-		// Token: 0x0400428E RID: 17038
+		// Token: 0x0400586E RID: 22638
 		private CustomController controller;
 
-		// Token: 0x0400428F RID: 17039
+		// Token: 0x0400586F RID: 22639
 		[NonSerialized]
 		private bool initialized;
 	}

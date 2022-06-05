@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200050D RID: 1293
+// Token: 0x0200087C RID: 2172
 public class RebelRoomController : BaseSpecialRoomController
 {
-	// Token: 0x06003019 RID: 12313 RVA: 0x000A4988 File Offset: 0x000A2B88
+	// Token: 0x060042B7 RID: 17079 RVA: 0x0010B5C0 File Offset: 0x001097C0
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);

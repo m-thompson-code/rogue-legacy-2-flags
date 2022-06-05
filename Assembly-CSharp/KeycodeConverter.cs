@@ -1,10 +1,10 @@
 ﻿using System;
 using Rewired;
 
-// Token: 0x020007FF RID: 2047
+// Token: 0x02000CC7 RID: 3271
 public class KeycodeConverter
 {
-	// Token: 0x060043EC RID: 17388 RVA: 0x000EFDE0 File Offset: 0x000EDFE0
+	// Token: 0x06005D75 RID: 23925 RVA: 0x0015DB34 File Offset: 0x0015BD34
 	public static string GetKeycodeStringName(KeyboardKeyCode key, bool shift, bool capsLock, bool numLock)
 	{
 		if (key > KeyboardKeyCode.Tab)
@@ -382,7 +382,7 @@ public class KeycodeConverter
 		return "";
 	}
 
-	// Token: 0x060043ED RID: 17389 RVA: 0x000F041C File Offset: 0x000EE61C
+	// Token: 0x06005D76 RID: 23926 RVA: 0x0015E170 File Offset: 0x0015C370
 	public static string TranslateAlphabetic(char baseChar, bool shift, bool capsLock)
 	{
 		return ((capsLock ^ shift) ? char.ToUpper(baseChar) : baseChar).ToString();

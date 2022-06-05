@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020007A4 RID: 1956
+// Token: 0x02000C6A RID: 3178
 public enum HelpBoxMessageType
 {
-	// Token: 0x04003953 RID: 14675
+	// Token: 0x04004C18 RID: 19480
 	None,
-	// Token: 0x04003954 RID: 14676
+	// Token: 0x04004C19 RID: 19481
 	Info,
-	// Token: 0x04003955 RID: 14677
+	// Token: 0x04004C1A RID: 19482
 	Warning,
-	// Token: 0x04003956 RID: 14678
+	// Token: 0x04004C1B RID: 19483
 	Error
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000F8 RID: 248
+// Token: 0x02000192 RID: 402
 public class MimicChestBoss_Miniboss_AIScript : MimicChestBoss_Basic_AIScript
 {
-	// Token: 0x17000417 RID: 1047
-	// (get) Token: 0x0600079B RID: 1947 RVA: 0x0001AA5F File Offset: 0x00018C5F
+	// Token: 0x1700053B RID: 1339
+	// (get) Token: 0x06000B0C RID: 2828 RVA: 0x00006E96 File Offset: 0x00005096
 	protected override float m_dashAttackSpeed
 	{
 		get
@@ -14,8 +14,8 @@ public class MimicChestBoss_Miniboss_AIScript : MimicChestBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000418 RID: 1048
-	// (get) Token: 0x0600079C RID: 1948 RVA: 0x0001AA66 File Offset: 0x00018C66
+	// Token: 0x1700053C RID: 1340
+	// (get) Token: 0x06000B0D RID: 2829 RVA: 0x00006E9D File Offset: 0x0000509D
 	protected override Vector2 m_dashAttackDuration
 	{
 		get
@@ -24,8 +24,8 @@ public class MimicChestBoss_Miniboss_AIScript : MimicChestBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000419 RID: 1049
-	// (get) Token: 0x0600079D RID: 1949 RVA: 0x0001AA77 File Offset: 0x00018C77
+	// Token: 0x1700053D RID: 1341
+	// (get) Token: 0x06000B0E RID: 2830 RVA: 0x00006EAE File Offset: 0x000050AE
 	protected override Vector2 JumpHeight
 	{
 		get

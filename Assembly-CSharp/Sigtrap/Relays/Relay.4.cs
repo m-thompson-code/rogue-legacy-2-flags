@@ -3,11 +3,11 @@ using Sigtrap.Relays.Link;
 
 namespace Sigtrap.Relays
 {
-	// Token: 0x02000954 RID: 2388
+	// Token: 0x02000EFC RID: 3836
 	public class Relay<T, U, V> : RelayBase<Action<T, U, V>>, IRelayLink<T, U, V>, IRelayLinkBase<Action<T, U, V>>
 	{
-		// Token: 0x17001AD9 RID: 6873
-		// (get) Token: 0x060050E8 RID: 20712 RVA: 0x0011E6AB File Offset: 0x0011C8AB
+		// Token: 0x1700241C RID: 9244
+		// (get) Token: 0x06006EDC RID: 28380 RVA: 0x0003D1A8 File Offset: 0x0003B3A8
 		public IRelayLink<T, U, V> link
 		{
 			get
@@ -21,7 +21,7 @@ namespace Sigtrap.Relays
 			}
 		}
 
-		// Token: 0x060050E9 RID: 20713 RVA: 0x0011E6D0 File Offset: 0x0011C8D0
+		// Token: 0x06006EDD RID: 28381 RVA: 0x0018CAEC File Offset: 0x0018ACEC
 		public void Dispatch(T t, U u, V v)
 		{
 			for (uint num = this._count; num > 0U; num -= 1U)
@@ -50,7 +50,7 @@ namespace Sigtrap.Relays
 			}
 		}
 
-		// Token: 0x04004339 RID: 17209
+		// Token: 0x04005940 RID: 22848
 		private IRelayLink<T, U, V> _link;
 	}
 }

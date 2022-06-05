@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000476 RID: 1142
+// Token: 0x0200076C RID: 1900
 public class MushroomDrop : HealthDrop
 {
-	// Token: 0x17001045 RID: 4165
-	// (get) Token: 0x060029D9 RID: 10713 RVA: 0x0008A6AD File Offset: 0x000888AD
+	// Token: 0x1700157A RID: 5498
+	// (get) Token: 0x060039E3 RID: 14819 RVA: 0x0001FCF3 File Offset: 0x0001DEF3
 	public override ItemDropType ItemDropType
 	{
 		get
@@ -13,7 +13,7 @@ public class MushroomDrop : HealthDrop
 		}
 	}
 
-	// Token: 0x060029DA RID: 10714 RVA: 0x0008A6B1 File Offset: 0x000888B1
+	// Token: 0x060039E4 RID: 14820 RVA: 0x0001FCF7 File Offset: 0x0001DEF7
 	protected override void GainHealth(float hpGain = 0f)
 	{
 		base.GainHealth(hpGain);
@@ -23,14 +23,14 @@ public class MushroomDrop : HealthDrop
 		}
 	}
 
-	// Token: 0x060029DB RID: 10715 RVA: 0x0008A6D2 File Offset: 0x000888D2
+	// Token: 0x060039E5 RID: 14821 RVA: 0x0001FD18 File Offset: 0x0001DF18
 	public override void OnSpawnCollectCollisionCheck()
 	{
 		base.OnSpawnCollectCollisionCheck();
 		this.m_moveRight = (base.CorgiController.Velocity.x > 0f);
 	}
 
-	// Token: 0x060029DC RID: 10716 RVA: 0x0008A6F8 File Offset: 0x000888F8
+	// Token: 0x060039E6 RID: 14822 RVA: 0x000EC37C File Offset: 0x000EA57C
 	protected override void Update()
 	{
 		base.Update();
@@ -52,9 +52,9 @@ public class MushroomDrop : HealthDrop
 		}
 	}
 
-	// Token: 0x0400224C RID: 8780
+	// Token: 0x04002E28 RID: 11816
 	private const float MOVEMENT_SPEED = 5f;
 
-	// Token: 0x0400224D RID: 8781
+	// Token: 0x04002E29 RID: 11817
 	private bool m_moveRight;
 }

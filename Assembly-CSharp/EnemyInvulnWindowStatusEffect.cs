@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000304 RID: 772
+// Token: 0x0200052B RID: 1323
 public class EnemyInvulnWindowStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D4F RID: 3407
-	// (get) Token: 0x06001EAE RID: 7854 RVA: 0x0006336F File Offset: 0x0006156F
+	// Token: 0x17001138 RID: 4408
+	// (get) Token: 0x06002A9B RID: 10907 RVA: 0x00017D4C File Offset: 0x00015F4C
 	public override string[] ProjectileNameArray
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyInvulnWindowStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D50 RID: 3408
-	// (get) Token: 0x06001EAF RID: 7855 RVA: 0x00063376 File Offset: 0x00061576
+	// Token: 0x17001139 RID: 4409
+	// (get) Token: 0x06002A9C RID: 10908 RVA: 0x00017D53 File Offset: 0x00015F53
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -25,8 +25,8 @@ public class EnemyInvulnWindowStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D51 RID: 3409
-	// (get) Token: 0x06001EB0 RID: 7856 RVA: 0x0006337D File Offset: 0x0006157D
+	// Token: 0x1700113A RID: 4410
+	// (get) Token: 0x06002A9D RID: 10909 RVA: 0x00017838 File Offset: 0x00015A38
 	public override float StartingDurationOverride
 	{
 		get
@@ -35,14 +35,14 @@ public class EnemyInvulnWindowStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EB1 RID: 7857 RVA: 0x00063384 File Offset: 0x00061584
+	// Token: 0x06002A9E RID: 10910 RVA: 0x00017D5A File Offset: 0x00015F5A
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onEnemyHit = new Action<object, CharacterHitEventArgs>(this.OnEnemyHit);
 	}
 
-	// Token: 0x06001EB2 RID: 7858 RVA: 0x0006339E File Offset: 0x0006159E
+	// Token: 0x06002A9F RID: 10911 RVA: 0x00017D74 File Offset: 0x00015F74
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.InvulnWindow);
@@ -92,7 +92,7 @@ public class EnemyInvulnWindowStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001EB3 RID: 7859 RVA: 0x000633B0 File Offset: 0x000615B0
+	// Token: 0x06002AA0 RID: 10912 RVA: 0x000C1EC8 File Offset: 0x000C00C8
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -114,7 +114,7 @@ public class EnemyInvulnWindowStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EB4 RID: 7860 RVA: 0x000634D8 File Offset: 0x000616D8
+	// Token: 0x06002AA1 RID: 10913 RVA: 0x000C1FF0 File Offset: 0x000C01F0
 	private void OnEnemyHit(object sender, CharacterHitEventArgs args)
 	{
 		if (this.m_countdownStarted)
@@ -141,7 +141,7 @@ public class EnemyInvulnWindowStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EB5 RID: 7861 RVA: 0x000635E0 File Offset: 0x000617E0
+	// Token: 0x06002AA2 RID: 10914 RVA: 0x00017D83 File Offset: 0x00015F83
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -151,15 +151,15 @@ public class EnemyInvulnWindowStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x04001BC9 RID: 7113
+	// Token: 0x0400247B RID: 9339
 	private static string[] m_projectileNameArray = new string[]
 	{
 		"StatusEffectInvulnWindowProjectile"
 	};
 
-	// Token: 0x04001BCA RID: 7114
+	// Token: 0x0400247C RID: 9340
 	private Action<object, CharacterHitEventArgs> m_onEnemyHit;
 
-	// Token: 0x04001BCB RID: 7115
+	// Token: 0x0400247D RID: 9341
 	private bool m_countdownStarted;
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000058 RID: 88
+// Token: 0x02000060 RID: 96
 [Serializable]
 public class DataField_EnemyType : DataField<EnemyType>
 {

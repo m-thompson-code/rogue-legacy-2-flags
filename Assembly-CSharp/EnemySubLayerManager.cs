@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020007F6 RID: 2038
+// Token: 0x02000CBC RID: 3260
 [CreateAssetMenu(menuName = "Custom/Enemy Sub Layer Manager")]
 public class EnemySubLayerManager : ScriptableObject
 {
-	// Token: 0x170016EA RID: 5866
-	// (get) Token: 0x060043B9 RID: 17337 RVA: 0x000ECC2D File Offset: 0x000EAE2D
+	// Token: 0x17001EE8 RID: 7912
+	// (get) Token: 0x06005D42 RID: 23874 RVA: 0x000334DD File Offset: 0x000316DD
 	private static EnemySubLayerManager Instance
 	{
 		get
@@ -24,9 +24,9 @@ public class EnemySubLayerManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170016EB RID: 5867
-	// (get) Token: 0x060043BA RID: 17338 RVA: 0x000ECC63 File Offset: 0x000EAE63
-	// (set) Token: 0x060043BB RID: 17339 RVA: 0x000ECC6B File Offset: 0x000EAE6B
+	// Token: 0x17001EE9 RID: 7913
+	// (get) Token: 0x06005D43 RID: 23875 RVA: 0x00033513 File Offset: 0x00031713
+	// (set) Token: 0x06005D44 RID: 23876 RVA: 0x0003351B File Offset: 0x0003171B
 	public List<EnemySubLayerEntry> EnemySubLayers
 	{
 		get
@@ -39,7 +39,7 @@ public class EnemySubLayerManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x060043BC RID: 17340 RVA: 0x000ECC74 File Offset: 0x000EAE74
+	// Token: 0x06005D45 RID: 23877 RVA: 0x0015AB84 File Offset: 0x00158D84
 	public static int GetSubLayer(EnemyTypeAndRank enemy)
 	{
 		if (EnemySubLayerManager.Instance.m_subLayerTable == null)
@@ -68,7 +68,7 @@ public class EnemySubLayerManager : ScriptableObject
 		return 0;
 	}
 
-	// Token: 0x060043BD RID: 17341 RVA: 0x000ECDA0 File Offset: 0x000EAFA0
+	// Token: 0x06005D46 RID: 23878 RVA: 0x0015ACB0 File Offset: 0x00158EB0
 	public void PrintSizes()
 	{
 		for (int i = 0; i < EnemySubLayerManager.Instance.m_enemySubLayers.Count; i++)
@@ -87,7 +87,7 @@ public class EnemySubLayerManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x060043BE RID: 17342 RVA: 0x000ECEA3 File Offset: 0x000EB0A3
+	// Token: 0x06005D47 RID: 23879 RVA: 0x00033524 File Offset: 0x00031724
 	public void Reset()
 	{
 		if (Application.isPlaying)
@@ -102,38 +102,38 @@ public class EnemySubLayerManager : ScriptableObject
 		this.EnemySubLayers.Clear();
 	}
 
-	// Token: 0x060043BF RID: 17343 RVA: 0x000ECECC File Offset: 0x000EB0CC
+	// Token: 0x06005D48 RID: 23880 RVA: 0x0003354D File Offset: 0x0003174D
 	public void UpdateSubLayers()
 	{
 		bool isPlaying = Application.isPlaying;
 	}
 
-	// Token: 0x040039E6 RID: 14822
+	// Token: 0x04004CAB RID: 19627
 	[SerializeField]
 	private List<EnemySubLayerEntry> m_enemySubLayers;
 
-	// Token: 0x040039E7 RID: 14823
+	// Token: 0x04004CAC RID: 19628
 	[SerializeField]
 	private int m_subLayerDelta = 10;
 
-	// Token: 0x040039E8 RID: 14824
+	// Token: 0x04004CAD RID: 19629
 	public const string RESOURCES_PATH = "Scriptable Objects/EnemySubLayerManager";
 
-	// Token: 0x040039E9 RID: 14825
+	// Token: 0x04004CAE RID: 19630
 	public const string ASSETS_PATH = "Assets/Content/Scriptable Objects/EnemySubLayerManager.asset";
 
-	// Token: 0x040039EA RID: 14826
+	// Token: 0x04004CAF RID: 19631
 	public const string ENEMY_PREFABS_RESOURCES_PATH = "Prefabs/Enemies";
 
-	// Token: 0x040039EB RID: 14827
+	// Token: 0x04004CB0 RID: 19632
 	public const string ENEMY_PREFABS_ASSETS_PATH = "Assets/Content/Prefabs/Enemies";
 
-	// Token: 0x040039EC RID: 14828
+	// Token: 0x04004CB1 RID: 19633
 	private static EnemySubLayerManager m_instance;
 
-	// Token: 0x040039ED RID: 14829
+	// Token: 0x04004CB2 RID: 19634
 	private EnemySizeComparer m_enemySizeComparer;
 
-	// Token: 0x040039EE RID: 14830
+	// Token: 0x04004CB3 RID: 19635
 	private Dictionary<EnemyTypeAndRank, int> m_subLayerTable;
 }

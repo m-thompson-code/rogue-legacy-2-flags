@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000313 RID: 787
+// Token: 0x0200054C RID: 1356
 public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 {
-	// Token: 0x17000D71 RID: 3441
-	// (get) Token: 0x06001F0F RID: 7951 RVA: 0x00063F0D File Offset: 0x0006210D
+	// Token: 0x1700117E RID: 4478
+	// (get) Token: 0x06002B68 RID: 11112 RVA: 0x00006732 File Offset: 0x00004932
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -16,8 +16,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D72 RID: 3442
-	// (get) Token: 0x06001F10 RID: 7952 RVA: 0x00063F11 File Offset: 0x00062111
+	// Token: 0x1700117F RID: 4479
+	// (get) Token: 0x06002B69 RID: 11113 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public StatusEffectType[] StatusEffectTypes
 	{
 		get
@@ -26,8 +26,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D73 RID: 3443
-	// (get) Token: 0x06001F11 RID: 7953 RVA: 0x00063F14 File Offset: 0x00062114
+	// Token: 0x17001180 RID: 4480
+	// (get) Token: 0x06002B6A RID: 11114 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public float[] StatusEffectDurations
 	{
 		get
@@ -36,8 +36,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D74 RID: 3444
-	// (get) Token: 0x06001F12 RID: 7954 RVA: 0x00063F17 File Offset: 0x00062117
+	// Token: 0x17001181 RID: 4481
+	// (get) Token: 0x06002B6B RID: 11115 RVA: 0x0000611B File Offset: 0x0000431B
 	public override float StartingDurationOverride
 	{
 		get
@@ -46,8 +46,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D75 RID: 3445
-	// (get) Token: 0x06001F13 RID: 7955 RVA: 0x00063F1E File Offset: 0x0006211E
+	// Token: 0x17001182 RID: 4482
+	// (get) Token: 0x06002B6C RID: 11116 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool IsDotDamage
 	{
 		get
@@ -56,8 +56,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D76 RID: 3446
-	// (get) Token: 0x06001F14 RID: 7956 RVA: 0x00063F24 File Offset: 0x00062124
+	// Token: 0x17001183 RID: 4483
+	// (get) Token: 0x06002B6D RID: 11117 RVA: 0x000C3A44 File Offset: 0x000C1C44
 	public float BaseDamage
 	{
 		get
@@ -67,8 +67,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D77 RID: 3447
-	// (get) Token: 0x06001F15 RID: 7957 RVA: 0x00063F49 File Offset: 0x00062149
+	// Token: 0x17001184 RID: 4484
+	// (get) Token: 0x06002B6E RID: 11118 RVA: 0x00018358 File Offset: 0x00016558
 	public float ActualDamage
 	{
 		get
@@ -77,8 +77,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D78 RID: 3448
-	// (get) Token: 0x06001F16 RID: 7958 RVA: 0x00063F59 File Offset: 0x00062159
+	// Token: 0x17001185 RID: 4485
+	// (get) Token: 0x06002B6F RID: 11119 RVA: 0x00018368 File Offset: 0x00016568
 	public float ActualCritChance
 	{
 		get
@@ -91,13 +91,13 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D79 RID: 3449
-	// (get) Token: 0x06001F17 RID: 7959 RVA: 0x00063F73 File Offset: 0x00062173
-	// (set) Token: 0x06001F18 RID: 7960 RVA: 0x00063F7B File Offset: 0x0006217B
+	// Token: 0x17001186 RID: 4486
+	// (get) Token: 0x06002B70 RID: 11120 RVA: 0x00018382 File Offset: 0x00016582
+	// (set) Token: 0x06002B71 RID: 11121 RVA: 0x0001838A File Offset: 0x0001658A
 	public float ActualCritDamage { get; private set; }
 
-	// Token: 0x17000D7A RID: 3450
-	// (get) Token: 0x06001F19 RID: 7961 RVA: 0x00063F84 File Offset: 0x00062184
+	// Token: 0x17001187 RID: 4487
+	// (get) Token: 0x06002B72 RID: 11122 RVA: 0x00005FA3 File Offset: 0x000041A3
 	public Vector2 ExternalKnockbackMod
 	{
 		get
@@ -106,8 +106,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D7B RID: 3451
-	// (get) Token: 0x06001F1A RID: 7962 RVA: 0x00063F8B File Offset: 0x0006218B
+	// Token: 0x17001188 RID: 4488
+	// (get) Token: 0x06002B73 RID: 11123 RVA: 0x00018393 File Offset: 0x00016593
 	public float ActualKnockbackStrength
 	{
 		get
@@ -116,8 +116,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D7C RID: 3452
-	// (get) Token: 0x06001F1B RID: 7963 RVA: 0x00063F93 File Offset: 0x00062193
+	// Token: 0x17001189 RID: 4489
+	// (get) Token: 0x06002B74 RID: 11124 RVA: 0x0001839B File Offset: 0x0001659B
 	public float ActualStunStrength
 	{
 		get
@@ -126,9 +126,9 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D7D RID: 3453
-	// (get) Token: 0x06001F1C RID: 7964 RVA: 0x00063F9B File Offset: 0x0006219B
-	// (set) Token: 0x06001F1D RID: 7965 RVA: 0x00063FA2 File Offset: 0x000621A2
+	// Token: 0x1700118A RID: 4490
+	// (get) Token: 0x06002B75 RID: 11125 RVA: 0x00003CCB File Offset: 0x00001ECB
+	// (set) Token: 0x06002B76 RID: 11126 RVA: 0x00002FCA File Offset: 0x000011CA
 	public float BaseStunStrength
 	{
 		get
@@ -140,9 +140,9 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D7E RID: 3454
-	// (get) Token: 0x06001F1E RID: 7966 RVA: 0x00063FA4 File Offset: 0x000621A4
-	// (set) Token: 0x06001F1F RID: 7967 RVA: 0x00063FAB File Offset: 0x000621AB
+	// Token: 0x1700118B RID: 4491
+	// (get) Token: 0x06002B77 RID: 11127 RVA: 0x00003CCB File Offset: 0x00001ECB
+	// (set) Token: 0x06002B78 RID: 11128 RVA: 0x00002FCA File Offset: 0x000011CA
 	public float BaseKnockbackStrength
 	{
 		get
@@ -154,8 +154,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D7F RID: 3455
-	// (get) Token: 0x06001F20 RID: 7968 RVA: 0x00063FAD File Offset: 0x000621AD
+	// Token: 0x1700118C RID: 4492
+	// (get) Token: 0x06002B79 RID: 11129 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float KnockbackStrength
 	{
 		get
@@ -164,8 +164,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D80 RID: 3456
-	// (get) Token: 0x06001F21 RID: 7969 RVA: 0x00063FB4 File Offset: 0x000621B4
+	// Token: 0x1700118D RID: 4493
+	// (get) Token: 0x06002B7A RID: 11130 RVA: 0x000046FA File Offset: 0x000028FA
 	public StrikeType StrikeType
 	{
 		get
@@ -174,8 +174,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D81 RID: 3457
-	// (get) Token: 0x06001F22 RID: 7970 RVA: 0x00063FB8 File Offset: 0x000621B8
+	// Token: 0x1700118E RID: 4494
+	// (get) Token: 0x06002B7B RID: 11131 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float StatusEffectDuration
 	{
 		get
@@ -184,8 +184,8 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D82 RID: 3458
-	// (get) Token: 0x06001F23 RID: 7971 RVA: 0x00063FC0 File Offset: 0x000621C0
+	// Token: 0x1700118F RID: 4495
+	// (get) Token: 0x06002B7C RID: 11132 RVA: 0x000C3A6C File Offset: 0x000C1C6C
 	public override int StacksPerHit
 	{
 		get
@@ -200,7 +200,7 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x06001F24 RID: 7972 RVA: 0x00063FF0 File Offset: 0x000621F0
+	// Token: 0x06002B7D RID: 11133 RVA: 0x000C3A9C File Offset: 0x000C1C9C
 	public override void Initialize(StatusEffectController statusEffectController, BaseCharacterController charController)
 	{
 		base.Initialize(statusEffectController, charController);
@@ -210,7 +210,7 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		base.AppliesTint = true;
 	}
 
-	// Token: 0x06001F25 RID: 7973 RVA: 0x0006403F File Offset: 0x0006223F
+	// Token: 0x06002B7E RID: 11134 RVA: 0x000183A3 File Offset: 0x000165A3
 	private IEnumerator PulseCoroutine()
 	{
 		for (;;)
@@ -248,7 +248,7 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		yield break;
 	}
 
-	// Token: 0x06001F26 RID: 7974 RVA: 0x0006404E File Offset: 0x0006224E
+	// Token: 0x06002B7F RID: 11135 RVA: 0x000183B2 File Offset: 0x000165B2
 	private IEnumerator DealDamageCoroutine()
 	{
 		int totalPoisonCount = (int)((base.Duration + this.m_poisonTicRemaining) / 0.5f);
@@ -272,7 +272,7 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		yield break;
 	}
 
-	// Token: 0x06001F27 RID: 7975 RVA: 0x0006405D File Offset: 0x0006225D
+	// Token: 0x06002B80 RID: 11136 RVA: 0x000183C1 File Offset: 0x000165C1
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		if (justCasted)
@@ -327,7 +327,7 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		yield break;
 	}
 
-	// Token: 0x06001F28 RID: 7976 RVA: 0x0006407A File Offset: 0x0006227A
+	// Token: 0x06002B81 RID: 11137 RVA: 0x000183DE File Offset: 0x000165DE
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -341,45 +341,45 @@ public class PoisonStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x06001F2A RID: 7978 RVA: 0x000640CA File Offset: 0x000622CA
+	// Token: 0x06002B83 RID: 11139 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IDamageObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04001BEC RID: 7148
+	// Token: 0x040024DD RID: 9437
 	private const string MULTIPLY_COLOR = "#65A633";
 
-	// Token: 0x04001BED RID: 7149
+	// Token: 0x040024DE RID: 9438
 	private const string PULSE_ON_COLOR = "#2B4500";
 
-	// Token: 0x04001BEE RID: 7150
+	// Token: 0x040024DF RID: 9439
 	private const string PULSE_OFF_COLOR = "#000000";
 
-	// Token: 0x04001BEF RID: 7151
+	// Token: 0x040024E0 RID: 9440
 	private Color m_multiplyColor;
 
-	// Token: 0x04001BF0 RID: 7152
+	// Token: 0x040024E1 RID: 9441
 	private Color m_addColorPulseOn;
 
-	// Token: 0x04001BF1 RID: 7153
+	// Token: 0x040024E2 RID: 9442
 	private Color m_addColorPulseOff;
 
-	// Token: 0x04001BF2 RID: 7154
+	// Token: 0x040024E3 RID: 9443
 	private bool m_pulseOn;
 
-	// Token: 0x04001BF3 RID: 7155
+	// Token: 0x040024E4 RID: 9444
 	private float m_poisonPulseRate = 0.1f;
 
-	// Token: 0x04001BF4 RID: 7156
+	// Token: 0x040024E5 RID: 9445
 	private float m_poisonMagicDmg;
 
-	// Token: 0x04001BF5 RID: 7157
+	// Token: 0x040024E6 RID: 9446
 	private BaseEffect m_poisonEffect;
 
-	// Token: 0x04001BF6 RID: 7158
+	// Token: 0x040024E7 RID: 9447
 	private float m_poisonSkillCritTime;
 
-	// Token: 0x04001BF7 RID: 7159
+	// Token: 0x040024E8 RID: 9448
 	private float m_poisonTicRemaining;
 }

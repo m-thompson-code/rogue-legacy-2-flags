@@ -4,11 +4,11 @@ using RLAudio;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x02000145 RID: 325
+// Token: 0x0200024E RID: 590
 public class TraitorBoss_Expert_AIScript : TraitorBoss_Basic_AIScript
 {
-	// Token: 0x170005FC RID: 1532
-	// (get) Token: 0x06000AEB RID: 2795 RVA: 0x00022021 File Offset: 0x00020221
+	// Token: 0x170007FC RID: 2044
+	// (get) Token: 0x060010F0 RID: 4336 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override int m_magma_ProjectilesFired
 	{
 		get
@@ -17,8 +17,8 @@ public class TraitorBoss_Expert_AIScript : TraitorBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005FD RID: 1533
-	// (get) Token: 0x06000AEC RID: 2796 RVA: 0x00022024 File Offset: 0x00020224
+	// Token: 0x170007FD RID: 2045
+	// (get) Token: 0x060010F1 RID: 4337 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected override float m_magma_ProjectileDelay
 	{
 		get
@@ -27,7 +27,7 @@ public class TraitorBoss_Expert_AIScript : TraitorBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000AED RID: 2797 RVA: 0x0002202B File Offset: 0x0002022B
+	// Token: 0x060010F2 RID: 4338 RVA: 0x00008E70 File Offset: 0x00007070
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -73,8 +73,8 @@ public class TraitorBoss_Expert_AIScript : TraitorBoss_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x170005FE RID: 1534
-	// (get) Token: 0x06000AEE RID: 2798 RVA: 0x0002203A File Offset: 0x0002023A
+	// Token: 0x170007FE RID: 2046
+	// (get) Token: 0x060010F3 RID: 4339 RVA: 0x00008269 File Offset: 0x00006469
 	protected virtual int m_shout_fireballsAtEnd
 	{
 		get
@@ -83,8 +83,8 @@ public class TraitorBoss_Expert_AIScript : TraitorBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005FF RID: 1535
-	// (get) Token: 0x06000AEF RID: 2799 RVA: 0x0002203E File Offset: 0x0002023E
+	// Token: 0x170007FF RID: 2047
+	// (get) Token: 0x060010F4 RID: 4340 RVA: 0x00008E7F File Offset: 0x0000707F
 	public IRelayLink ShoutAttackWarningAppearedRelay
 	{
 		get
@@ -93,8 +93,8 @@ public class TraitorBoss_Expert_AIScript : TraitorBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000600 RID: 1536
-	// (get) Token: 0x06000AF0 RID: 2800 RVA: 0x0002204B File Offset: 0x0002024B
+	// Token: 0x17000800 RID: 2048
+	// (get) Token: 0x060010F5 RID: 4341 RVA: 0x00008E8C File Offset: 0x0000708C
 	public IRelayLink ShoutAttackExplodedRelay
 	{
 		get
@@ -103,7 +103,7 @@ public class TraitorBoss_Expert_AIScript : TraitorBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000AF1 RID: 2801 RVA: 0x00022058 File Offset: 0x00020258
+	// Token: 0x060010F6 RID: 4342 RVA: 0x00008E99 File Offset: 0x00007099
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -139,7 +139,7 @@ public class TraitorBoss_Expert_AIScript : TraitorBoss_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x06000AF2 RID: 2802 RVA: 0x00022067 File Offset: 0x00020267
+	// Token: 0x060010F7 RID: 4343 RVA: 0x00008EA8 File Offset: 0x000070A8
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -170,7 +170,7 @@ public class TraitorBoss_Expert_AIScript : TraitorBoss_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x06000AF3 RID: 2803 RVA: 0x00022076 File Offset: 0x00020276
+	// Token: 0x060010F8 RID: 4344 RVA: 0x00008EB7 File Offset: 0x000070B7
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.OnLBCompleteOrCancelled();
@@ -179,141 +179,141 @@ public class TraitorBoss_Expert_AIScript : TraitorBoss_Basic_AIScript
 		base.StopProjectile(ref this.m_shoutWarningProjectile);
 	}
 
-	// Token: 0x04000F72 RID: 3954
+	// Token: 0x040013EE RID: 5102
 	private const string SHOUT_TELL_INTRO = "OmniSpellCast_Tell_Intro";
 
-	// Token: 0x04000F73 RID: 3955
+	// Token: 0x040013EF RID: 5103
 	private const string SHOUT_TELL_HOLD = "OmniSpellCast_Tell_Hold";
 
-	// Token: 0x04000F74 RID: 3956
+	// Token: 0x040013F0 RID: 5104
 	private const string SHOUT_ATTACK_INTRO = "OmniSpellCast_Attack_Intro";
 
-	// Token: 0x04000F75 RID: 3957
+	// Token: 0x040013F1 RID: 5105
 	private const string SHOUT_ATTACK_HOLD = "OmniSpellCast_Attack_Hold";
 
-	// Token: 0x04000F76 RID: 3958
+	// Token: 0x040013F2 RID: 5106
 	private const string SHOUT_EXIT = "OmniSpellCast_Exit";
 
-	// Token: 0x04000F77 RID: 3959
+	// Token: 0x040013F3 RID: 5107
 	private float m_shout_TellIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000F78 RID: 3960
+	// Token: 0x040013F4 RID: 5108
 	private float m_shout_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000F79 RID: 3961
+	// Token: 0x040013F5 RID: 5109
 	private float m_shout_TellIntroAndHold_Delay = 1.5f;
 
-	// Token: 0x04000F7A RID: 3962
+	// Token: 0x040013F6 RID: 5110
 	private float m_shout_AttackIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000F7B RID: 3963
+	// Token: 0x040013F7 RID: 5111
 	private float m_shout_AttackIntro_Delay;
 
-	// Token: 0x04000F7C RID: 3964
+	// Token: 0x040013F8 RID: 5112
 	private float m_shout_AttackHold_AnimSpeed = 1f;
 
-	// Token: 0x04000F7D RID: 3965
+	// Token: 0x040013F9 RID: 5113
 	private float m_shout_AttackHold_Delay;
 
-	// Token: 0x04000F7E RID: 3966
+	// Token: 0x040013FA RID: 5114
 	private float m_shout_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x04000F7F RID: 3967
+	// Token: 0x040013FB RID: 5115
 	private float m_shout_Exit_Delay;
 
-	// Token: 0x04000F80 RID: 3968
+	// Token: 0x040013FC RID: 5116
 	private float m_shout_Exit_IdleDuration = 0.35f;
 
-	// Token: 0x04000F81 RID: 3969
+	// Token: 0x040013FD RID: 5117
 	private float m_shout_AttackCD = 12f;
 
-	// Token: 0x04000F82 RID: 3970
+	// Token: 0x040013FE RID: 5118
 	private float m_shoutAttackTimeToExplosion;
 
-	// Token: 0x04000F83 RID: 3971
+	// Token: 0x040013FF RID: 5119
 	private bool m_shout_stopMovingWhileAttacking = true;
 
-	// Token: 0x04000F84 RID: 3972
+	// Token: 0x04001400 RID: 5120
 	private float m_shoutAttackDelaySecondExplosion = 0.65f;
 
-	// Token: 0x04000F85 RID: 3973
+	// Token: 0x04001401 RID: 5121
 	private int m_shoutAttackDelaySecondExplosionAngleAdd = 10;
 
-	// Token: 0x04000F86 RID: 3974
+	// Token: 0x04001402 RID: 5122
 	private Projectile_RL m_shoutWarningProjectile;
 
-	// Token: 0x04000F87 RID: 3975
+	// Token: 0x04001403 RID: 5123
 	private Relay m_shoutAttackWarningAppearedRelay = new Relay();
 
-	// Token: 0x04000F88 RID: 3976
+	// Token: 0x04001404 RID: 5124
 	private Relay m_shoutAttackExplodedRelay = new Relay();
 
-	// Token: 0x04000F89 RID: 3977
+	// Token: 0x04001405 RID: 5125
 	protected const string STAFFTHROW_TELL_INTRO = "SpellCast_Attack_Intro";
 
-	// Token: 0x04000F8A RID: 3978
+	// Token: 0x04001406 RID: 5126
 	protected const string STAFFTHROW_TELL_HOLD = "StaffForward_Tell_Hold";
 
-	// Token: 0x04000F8B RID: 3979
+	// Token: 0x04001407 RID: 5127
 	protected const string STAFFTHROW_ATTACK_INTRO = "StaffForward_Attack_Intro";
 
-	// Token: 0x04000F8C RID: 3980
+	// Token: 0x04001408 RID: 5128
 	protected const string STAFFTHROW_ATTACK_HOLD = "SpellCast_Attack_Hold";
 
-	// Token: 0x04000F8D RID: 3981
+	// Token: 0x04001409 RID: 5129
 	protected const string STAFFTHROW_EXIT = "SpellCast_Exit";
 
-	// Token: 0x04000F8E RID: 3982
+	// Token: 0x0400140A RID: 5130
 	protected float m_staffThrow_BeamAttack_Duration = 0.75f;
 
-	// Token: 0x04000F8F RID: 3983
+	// Token: 0x0400140B RID: 5131
 	protected float m_staffThrow_BeamAttack_Variant_Duration = 1f;
 
-	// Token: 0x04000F90 RID: 3984
+	// Token: 0x0400140C RID: 5132
 	protected float m_staffThrow_AttackSpeed = 28f;
 
-	// Token: 0x04000F91 RID: 3985
+	// Token: 0x0400140D RID: 5133
 	protected float m_staffThrow_AttackDuration_EndDelay = 1f;
 
-	// Token: 0x04000F92 RID: 3986
+	// Token: 0x0400140E RID: 5134
 	protected float m_staffThrow_TellIntro_AnimSpeed = 1.5f;
 
-	// Token: 0x04000F93 RID: 3987
+	// Token: 0x0400140F RID: 5135
 	protected float m_staffThrow_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000F94 RID: 3988
+	// Token: 0x04001410 RID: 5136
 	protected float m_staffThrow_TellIntroAndHold_Delay = 0.9f;
 
-	// Token: 0x04000F95 RID: 3989
+	// Token: 0x04001411 RID: 5137
 	protected float m_staffThrow_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000F96 RID: 3990
+	// Token: 0x04001412 RID: 5138
 	protected float m_staffThrow_AttackIntro_Delay;
 
-	// Token: 0x04000F97 RID: 3991
+	// Token: 0x04001413 RID: 5139
 	protected float m_staffThrow_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000F98 RID: 3992
+	// Token: 0x04001414 RID: 5140
 	protected float m_staffThrow_AttackHold_Delay;
 
-	// Token: 0x04000F99 RID: 3993
+	// Token: 0x04001415 RID: 5141
 	protected float m_staffThrow_Exit_AnimSpeed = 1f;
 
-	// Token: 0x04000F9A RID: 3994
+	// Token: 0x04001416 RID: 5142
 	protected float m_staffThrow_Exit_Delay;
 
-	// Token: 0x04000F9B RID: 3995
+	// Token: 0x04001417 RID: 5143
 	protected float m_staffThrow_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000F9C RID: 3996
+	// Token: 0x04001418 RID: 5144
 	protected float m_staffThrow_AttackCD = 12f;
 
-	// Token: 0x04000F9D RID: 3997
+	// Token: 0x04001419 RID: 5145
 	protected int STAFF_FRONT_POS_INDEX = 1;
 
-	// Token: 0x04000F9E RID: 3998
+	// Token: 0x0400141A RID: 5146
 	private Projectile_RL m_staffBeamProjectile;
 
-	// Token: 0x04000F9F RID: 3999
+	// Token: 0x0400141B RID: 5147
 	private Projectile_RL m_staffBeamWarningProjectile;
 }

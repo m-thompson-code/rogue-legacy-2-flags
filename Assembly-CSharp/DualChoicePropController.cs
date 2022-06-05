@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020004D3 RID: 1235
+// Token: 0x02000805 RID: 2053
 public abstract class DualChoicePropController : BaseSpecialPropController
 {
-	// Token: 0x17001165 RID: 4453
-	// (get) Token: 0x06002DFA RID: 11770 RVA: 0x0009AEAF File Offset: 0x000990AF
+	// Token: 0x17001700 RID: 5888
+	// (get) Token: 0x06003F42 RID: 16194 RVA: 0x00022FC7 File Offset: 0x000211C7
 	public GenericInfoTextBox LeftInfoTextBox
 	{
 		get
@@ -17,8 +17,8 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x17001166 RID: 4454
-	// (get) Token: 0x06002DFB RID: 11771 RVA: 0x0009AEB7 File Offset: 0x000990B7
+	// Token: 0x17001701 RID: 5889
+	// (get) Token: 0x06003F43 RID: 16195 RVA: 0x00022FCF File Offset: 0x000211CF
 	public SpriteRenderer LeftIcon
 	{
 		get
@@ -27,8 +27,8 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x17001167 RID: 4455
-	// (get) Token: 0x06002DFC RID: 11772 RVA: 0x0009AEBF File Offset: 0x000990BF
+	// Token: 0x17001702 RID: 5890
+	// (get) Token: 0x06003F44 RID: 16196 RVA: 0x00022FD7 File Offset: 0x000211D7
 	public GenericInfoTextBox RightInfoTextBox
 	{
 		get
@@ -37,8 +37,8 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x17001168 RID: 4456
-	// (get) Token: 0x06002DFD RID: 11773 RVA: 0x0009AEC7 File Offset: 0x000990C7
+	// Token: 0x17001703 RID: 5891
+	// (get) Token: 0x06003F45 RID: 16197 RVA: 0x00022FDF File Offset: 0x000211DF
 	public SpriteRenderer RightIcon
 	{
 		get
@@ -47,7 +47,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x06002DFE RID: 11774 RVA: 0x0009AED0 File Offset: 0x000990D0
+	// Token: 0x06003F46 RID: 16198 RVA: 0x000FCFF8 File Offset: 0x000FB1F8
 	protected override void Awake()
 	{
 		base.Awake();
@@ -65,7 +65,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x06002DFF RID: 11775 RVA: 0x0009AF70 File Offset: 0x00099170
+	// Token: 0x06003F47 RID: 16199 RVA: 0x000FD098 File Offset: 0x000FB298
 	protected override void InitializePooledPropOnEnter()
 	{
 		this.LeftInfoTextBox.CanvasGroup.alpha = 0f;
@@ -84,7 +84,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x06002E00 RID: 11776 RVA: 0x0009B070 File Offset: 0x00099270
+	// Token: 0x06003F48 RID: 16200 RVA: 0x000FD198 File Offset: 0x000FB398
 	public override void SetRoom(BaseRoom room)
 	{
 		base.SetRoom(room);
@@ -95,7 +95,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x06002E01 RID: 11777 RVA: 0x0009B0A4 File Offset: 0x000992A4
+	// Token: 0x06003F49 RID: 16201 RVA: 0x000FD1CC File Offset: 0x000FB3CC
 	public void DisplayLeftTextBox()
 	{
 		if (!base.IsDisabled)
@@ -115,7 +115,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x06002E02 RID: 11778 RVA: 0x0009B138 File Offset: 0x00099338
+	// Token: 0x06003F4A RID: 16202 RVA: 0x000FD260 File Offset: 0x000FB460
 	public void DisplayRightTextBox()
 	{
 		if (!base.IsDisabled)
@@ -135,7 +135,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x06002E03 RID: 11779 RVA: 0x0009B1CC File Offset: 0x000993CC
+	// Token: 0x06003F4B RID: 16203 RVA: 0x000FD2F4 File Offset: 0x000FB4F4
 	public void HideLeftTextBox()
 	{
 		if (!base.IsDisabled)
@@ -154,7 +154,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x06002E04 RID: 11780 RVA: 0x0009B24C File Offset: 0x0009944C
+	// Token: 0x06003F4C RID: 16204 RVA: 0x000FD374 File Offset: 0x000FB574
 	public void HideRightTextBox()
 	{
 		if (!base.IsDisabled)
@@ -173,7 +173,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x06002E05 RID: 11781 RVA: 0x0009B2C9 File Offset: 0x000994C9
+	// Token: 0x06003F4D RID: 16205 RVA: 0x00022FE7 File Offset: 0x000211E7
 	private IEnumerator TextBoxAnimInCoroutine(GenericInfoTextBox textBox, GameObject textBoxNoHB)
 	{
 		textBox.CanvasGroup.alpha = 0f;
@@ -193,7 +193,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		yield break;
 	}
 
-	// Token: 0x06002E06 RID: 11782 RVA: 0x0009B2E6 File Offset: 0x000994E6
+	// Token: 0x06003F4E RID: 16206 RVA: 0x00023004 File Offset: 0x00021204
 	private IEnumerator TextBoxAnimOutCoroutine(GenericInfoTextBox textBox, GameObject textBoxNoHB)
 	{
 		textBox.CanvasGroup.alpha = 1f;
@@ -210,7 +210,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		yield break;
 	}
 
-	// Token: 0x06002E07 RID: 11783 RVA: 0x0009B2FC File Offset: 0x000994FC
+	// Token: 0x06003F4F RID: 16207 RVA: 0x000FD3F4 File Offset: 0x000FB5F4
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -223,7 +223,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x06002E08 RID: 11784 RVA: 0x0009B361 File Offset: 0x00099561
+	// Token: 0x06003F50 RID: 16208 RVA: 0x0002301A File Offset: 0x0002121A
 	private IEnumerator DisableTextboxAnimOutCoroutine()
 	{
 		this.m_leftIcon.gameObject.SetActive(false);
@@ -253,7 +253,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		yield break;
 	}
 
-	// Token: 0x06002E09 RID: 11785 RVA: 0x0009B370 File Offset: 0x00099570
+	// Token: 0x06003F51 RID: 16209 RVA: 0x000FD45C File Offset: 0x000FB65C
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 		foreach (Interactable interactable in this.m_leftBoxInteractableList)
@@ -298,7 +298,7 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		base.DisableProp(firstTimeDisabled);
 	}
 
-	// Token: 0x06002E0A RID: 11786 RVA: 0x0009B500 File Offset: 0x00099700
+	// Token: 0x06003F52 RID: 16210 RVA: 0x000FD5EC File Offset: 0x000FB7EC
 	protected virtual void Update()
 	{
 		bool flag = this.m_leftIcon;
@@ -321,63 +321,63 @@ public abstract class DualChoicePropController : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x040024B5 RID: 9397
+	// Token: 0x04003177 RID: 12663
 	[SerializeField]
 	private GenericInfoTextBox m_leftInfoTextBox;
 
-	// Token: 0x040024B6 RID: 9398
+	// Token: 0x04003178 RID: 12664
 	[SerializeField]
 	private GameObject m_leftBoxBGObj;
 
-	// Token: 0x040024B7 RID: 9399
+	// Token: 0x04003179 RID: 12665
 	[SerializeField]
 	private SpriteRenderer m_leftIcon;
 
-	// Token: 0x040024B8 RID: 9400
+	// Token: 0x0400317A RID: 12666
 	[SerializeField]
 	private GenericInfoTextBox m_rightInfoTextBox;
 
-	// Token: 0x040024B9 RID: 9401
+	// Token: 0x0400317B RID: 12667
 	[SerializeField]
 	private GameObject m_rightBoxBGObj;
 
-	// Token: 0x040024BA RID: 9402
+	// Token: 0x0400317C RID: 12668
 	[SerializeField]
 	private SpriteRenderer m_rightIcon;
 
-	// Token: 0x040024BB RID: 9403
+	// Token: 0x0400317D RID: 12669
 	public Relay<GameObject> LeftHoverRelay = new Relay<GameObject>();
 
-	// Token: 0x040024BC RID: 9404
+	// Token: 0x0400317E RID: 12670
 	public Relay<GameObject> RightHoverRelay = new Relay<GameObject>();
 
-	// Token: 0x040024BD RID: 9405
+	// Token: 0x0400317F RID: 12671
 	protected float m_startingIconY;
 
-	// Token: 0x040024BE RID: 9406
+	// Token: 0x04003180 RID: 12672
 	private float m_startingInfoBoxY;
 
-	// Token: 0x040024BF RID: 9407
+	// Token: 0x04003181 RID: 12673
 	private Coroutine m_textBoxLeftInCoroutine;
 
-	// Token: 0x040024C0 RID: 9408
+	// Token: 0x04003182 RID: 12674
 	private Coroutine m_textBoxLeftOutCoroutine;
 
-	// Token: 0x040024C1 RID: 9409
+	// Token: 0x04003183 RID: 12675
 	private Coroutine m_textBoxRightInCoroutine;
 
-	// Token: 0x040024C2 RID: 9410
+	// Token: 0x04003184 RID: 12676
 	private Coroutine m_textBoxRightOutCoroutine;
 
-	// Token: 0x040024C3 RID: 9411
+	// Token: 0x04003185 RID: 12677
 	private float m_storedLeftTextBoxAlpha;
 
-	// Token: 0x040024C4 RID: 9412
+	// Token: 0x04003186 RID: 12678
 	private float m_storedRightTextBoxAlpha;
 
-	// Token: 0x040024C5 RID: 9413
+	// Token: 0x04003187 RID: 12679
 	private List<Interactable> m_leftBoxInteractableList = new List<Interactable>(2);
 
-	// Token: 0x040024C6 RID: 9414
+	// Token: 0x04003188 RID: 12680
 	private List<Interactable> m_rightBoxInteractableList = new List<Interactable>(2);
 }

@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200077F RID: 1919
+// Token: 0x02000C40 RID: 3136
 public enum CriticalStrikeType
 {
-	// Token: 0x040037F1 RID: 14321
+	// Token: 0x04004AA1 RID: 19105
 	None,
-	// Token: 0x040037F2 RID: 14322
+	// Token: 0x04004AA2 RID: 19106
 	Regular = 10,
-	// Token: 0x040037F3 RID: 14323
+	// Token: 0x04004AA3 RID: 19107
 	Guaranteed = 20,
-	// Token: 0x040037F4 RID: 14324
+	// Token: 0x04004AA4 RID: 19108
 	Super = 30
 }

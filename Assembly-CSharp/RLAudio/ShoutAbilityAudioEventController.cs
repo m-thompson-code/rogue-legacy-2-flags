@@ -6,11 +6,11 @@ using UnityEngine.Events;
 
 namespace RLAudio
 {
-	// Token: 0x02000913 RID: 2323
+	// Token: 0x02000E90 RID: 3728
 	public class ShoutAbilityAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001884 RID: 6276
-		// (get) Token: 0x06004C30 RID: 19504 RVA: 0x00111A8F File Offset: 0x0010FC8F
+		// Token: 0x1700217D RID: 8573
+		// (get) Token: 0x0600692B RID: 26923 RVA: 0x0003A54E File Offset: 0x0003874E
 		public string Description
 		{
 			get
@@ -23,14 +23,14 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C31 RID: 19505 RVA: 0x00111AB5 File Offset: 0x0010FCB5
+		// Token: 0x0600692C RID: 26924 RVA: 0x0003A574 File Offset: 0x00038774
 		private void Awake()
 		{
 			base.GetComponent<Shout_Ability>().OnShoutEvent.AddListener(new UnityAction<GameObject>(this.OnShout));
 			this.m_shoutEventInstance = AudioUtility.GetEventInstance(this.m_shoutAudioPath, base.transform);
 		}
 
-		// Token: 0x06004C32 RID: 19506 RVA: 0x00111AEA File Offset: 0x0010FCEA
+		// Token: 0x0600692D RID: 26925 RVA: 0x0003A5A9 File Offset: 0x000387A9
 		private void OnDestroy()
 		{
 			if (this.m_shoutEventInstance.isValid())
@@ -39,7 +39,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C33 RID: 19507 RVA: 0x00111B08 File Offset: 0x0010FD08
+		// Token: 0x0600692E RID: 26926 RVA: 0x001818A0 File Offset: 0x0017FAA0
 		private void OnShout(GameObject playerGameObject)
 		{
 			float playerGenderAudioParameterValue = AudioUtility.GetPlayerGenderAudioParameterValue();
@@ -49,15 +49,15 @@ namespace RLAudio
 			AudioManager.PlayAttached(this, this.m_shoutEventInstance, base.gameObject);
 		}
 
-		// Token: 0x04004024 RID: 16420
+		// Token: 0x04005584 RID: 21892
 		[SerializeField]
 		[EventRef]
 		private string m_shoutAudioPath;
 
-		// Token: 0x04004025 RID: 16421
+		// Token: 0x04005585 RID: 21893
 		private string m_description = string.Empty;
 
-		// Token: 0x04004026 RID: 16422
+		// Token: 0x04005586 RID: 21894
 		private EventInstance m_shoutEventInstance;
 	}
 }

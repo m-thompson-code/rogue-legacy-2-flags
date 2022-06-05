@@ -3,10 +3,10 @@ using RL_Windows;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x0200029A RID: 666
+// Token: 0x02000468 RID: 1128
 public class RetirePlayerOptionItem : ExecuteImmediateOptionItem
 {
-	// Token: 0x060019F2 RID: 6642 RVA: 0x00051B6C File Offset: 0x0004FD6C
+	// Token: 0x060023ED RID: 9197 RVA: 0x00013C37 File Offset: 0x00011E37
 	protected override void Awake()
 	{
 		base.Awake();
@@ -15,7 +15,7 @@ public class RetirePlayerOptionItem : ExecuteImmediateOptionItem
 		this.m_confirmRetirePlayer = new Action(this.ConfirmRetirePlayer);
 	}
 
-	// Token: 0x060019F3 RID: 6643 RVA: 0x00051BAA File Offset: 0x0004FDAA
+	// Token: 0x060023EE RID: 9198 RVA: 0x00013C75 File Offset: 0x00011E75
 	public override void ActivateOption()
 	{
 		if (ChallengeManager.IsInChallenge)
@@ -29,7 +29,7 @@ public class RetirePlayerOptionItem : ExecuteImmediateOptionItem
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x060019F4 RID: 6644 RVA: 0x00051BCC File Offset: 0x0004FDCC
+	// Token: 0x060023EF RID: 9199 RVA: 0x000AE410 File Offset: 0x000AC610
 	private void InitializeConfirmQuitChallengeMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -49,7 +49,7 @@ public class RetirePlayerOptionItem : ExecuteImmediateOptionItem
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x060019F5 RID: 6645 RVA: 0x00051C5C File Offset: 0x0004FE5C
+	// Token: 0x060023F0 RID: 9200 RVA: 0x000AE4A0 File Offset: 0x000AC6A0
 	private void InitializeConfirmRetireMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -69,7 +69,7 @@ public class RetirePlayerOptionItem : ExecuteImmediateOptionItem
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x060019F6 RID: 6646 RVA: 0x00051CEB File Offset: 0x0004FEEB
+	// Token: 0x060023F1 RID: 9201 RVA: 0x00013C94 File Offset: 0x00011E94
 	private void ConfirmQuitChallenge()
 	{
 		WindowManager.CloseAllOpenWindows();
@@ -78,7 +78,7 @@ public class RetirePlayerOptionItem : ExecuteImmediateOptionItem
 		SceneLoader_RL.RunTransitionWithLogic(new Action(this.ChallengeExitTransition), TransitionID.FadeToBlackNoLoading, false);
 	}
 
-	// Token: 0x060019F7 RID: 6647 RVA: 0x00051D15 File Offset: 0x0004FF15
+	// Token: 0x060023F2 RID: 9202 RVA: 0x00013CBE File Offset: 0x00011EBE
 	private void ChallengeExitTransition()
 	{
 		ChallengeManager.ChallengeTunnelController.ReturnToDriftHouse(true);
@@ -86,7 +86,7 @@ public class RetirePlayerOptionItem : ExecuteImmediateOptionItem
 		RLTimeScale.Reset();
 	}
 
-	// Token: 0x060019F8 RID: 6648 RVA: 0x00051D30 File Offset: 0x0004FF30
+	// Token: 0x060023F3 RID: 9203 RVA: 0x000AE530 File Offset: 0x000AC730
 	private void ConfirmRetirePlayer()
 	{
 		SaveManager.PlayerSaveData.CurrentCharacter.IsRetired = true;
@@ -103,18 +103,18 @@ public class RetirePlayerOptionItem : ExecuteImmediateOptionItem
 		playerController.KillCharacter(null, true);
 	}
 
-	// Token: 0x060019F9 RID: 6649 RVA: 0x00051DA8 File Offset: 0x0004FFA8
+	// Token: 0x060023F4 RID: 9204 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenuSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x04001881 RID: 6273
+	// Token: 0x04001FD8 RID: 8152
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x04001882 RID: 6274
+	// Token: 0x04001FD9 RID: 8153
 	private Action m_confirmQuitChallenge;
 
-	// Token: 0x04001883 RID: 6275
+	// Token: 0x04001FDA RID: 8154
 	private Action m_confirmRetirePlayer;
 }

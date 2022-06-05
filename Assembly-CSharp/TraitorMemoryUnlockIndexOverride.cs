@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004E5 RID: 1253
+// Token: 0x02000830 RID: 2096
 public class TraitorMemoryUnlockIndexOverride : MonoBehaviour
 {
-	// Token: 0x17001195 RID: 4501
-	// (get) Token: 0x06002EEF RID: 12015 RVA: 0x000A00AF File Offset: 0x0009E2AF
+	// Token: 0x1700175C RID: 5980
+	// (get) Token: 0x060040BB RID: 16571 RVA: 0x00023C5D File Offset: 0x00021E5D
 	public int TraitorMemoryUnlockIndex
 	{
 		get
@@ -14,7 +14,7 @@ public class TraitorMemoryUnlockIndexOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400255D RID: 9565
+	// Token: 0x0400329B RID: 12955
 	[SerializeField]
 	private int m_traitorMemoryUnlockIndex = -1;
 }

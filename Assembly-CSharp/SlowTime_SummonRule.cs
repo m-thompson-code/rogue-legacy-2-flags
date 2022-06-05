@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200052A RID: 1322
+// Token: 0x020008AD RID: 2221
 public class SlowTime_SummonRule : BaseSummonRule
 {
-	// Token: 0x17001200 RID: 4608
-	// (get) Token: 0x060030B4 RID: 12468 RVA: 0x000A5F06 File Offset: 0x000A4106
+	// Token: 0x17001833 RID: 6195
+	// (get) Token: 0x060043CA RID: 17354 RVA: 0x000252B5 File Offset: 0x000234B5
 	public override Color BoxColor
 	{
 		get
@@ -15,8 +15,8 @@ public class SlowTime_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001201 RID: 4609
-	// (get) Token: 0x060030B5 RID: 12469 RVA: 0x000A5F0D File Offset: 0x000A410D
+	// Token: 0x17001834 RID: 6196
+	// (get) Token: 0x060043CB RID: 17355 RVA: 0x00025651 File Offset: 0x00023851
 	public override SummonRuleType RuleType
 	{
 		get
@@ -25,8 +25,8 @@ public class SlowTime_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001202 RID: 4610
-	// (get) Token: 0x060030B6 RID: 12470 RVA: 0x000A5F14 File Offset: 0x000A4114
+	// Token: 0x17001835 RID: 6197
+	// (get) Token: 0x060043CC RID: 17356 RVA: 0x00025658 File Offset: 0x00023858
 	public override string RuleLabel
 	{
 		get
@@ -35,7 +35,7 @@ public class SlowTime_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x060030B7 RID: 12471 RVA: 0x000A5F1B File Offset: 0x000A411B
+	// Token: 0x060043CD RID: 17357 RVA: 0x0002565F File Offset: 0x0002385F
 	public override IEnumerator RunSummonRule()
 	{
 		TimeScaleType timeScaleType = RLTimeScale.GetAvailableSlowTimeStack();
@@ -50,11 +50,11 @@ public class SlowTime_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x040026A0 RID: 9888
+	// Token: 0x040034B6 RID: 13494
 	[SerializeField]
 	private float m_slowAmount;
 
-	// Token: 0x040026A1 RID: 9889
+	// Token: 0x040034B7 RID: 13495
 	[SerializeField]
 	private float m_slowDuration;
 }

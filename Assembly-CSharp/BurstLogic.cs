@@ -1,20 +1,20 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000409 RID: 1033
+// Token: 0x020006C0 RID: 1728
 public class BurstLogic : MonoBehaviour
 {
-	// Token: 0x17000F70 RID: 3952
-	// (get) Token: 0x0600269E RID: 9886 RVA: 0x0007FD6A File Offset: 0x0007DF6A
-	// (set) Token: 0x0600269F RID: 9887 RVA: 0x0007FD72 File Offset: 0x0007DF72
+	// Token: 0x17001433 RID: 5171
+	// (get) Token: 0x0600354D RID: 13645 RVA: 0x0001D3E7 File Offset: 0x0001B5E7
+	// (set) Token: 0x0600354E RID: 13646 RVA: 0x0001D3EF File Offset: 0x0001B5EF
 	public Transform DestinationOverride { get; set; }
 
-	// Token: 0x17000F71 RID: 3953
-	// (get) Token: 0x060026A0 RID: 9888 RVA: 0x0007FD7B File Offset: 0x0007DF7B
-	// (set) Token: 0x060026A1 RID: 9889 RVA: 0x0007FD83 File Offset: 0x0007DF83
+	// Token: 0x17001434 RID: 5172
+	// (get) Token: 0x0600354F RID: 13647 RVA: 0x0001D3F8 File Offset: 0x0001B5F8
+	// (set) Token: 0x06003550 RID: 13648 RVA: 0x0001D400 File Offset: 0x0001B600
 	public IMidpointObj DestinationMidpointOverride { get; set; }
 
-	// Token: 0x060026A2 RID: 9890 RVA: 0x0007FD8C File Offset: 0x0007DF8C
+	// Token: 0x06003551 RID: 13649 RVA: 0x0001D409 File Offset: 0x0001B609
 	public void ClearTrail()
 	{
 		if (this.m_trailRenderer)
@@ -23,7 +23,7 @@ public class BurstLogic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060026A3 RID: 9891 RVA: 0x0007FDA8 File Offset: 0x0007DFA8
+	// Token: 0x06003552 RID: 13650 RVA: 0x000E04E4 File Offset: 0x000DE6E4
 	public void Burst(float speed, float angle = -1f)
 	{
 		this.m_speed = speed;
@@ -38,7 +38,7 @@ public class BurstLogic : MonoBehaviour
 		this.m_internalSpeed = 0f;
 	}
 
-	// Token: 0x060026A4 RID: 9892 RVA: 0x0007FE08 File Offset: 0x0007E008
+	// Token: 0x06003553 RID: 13651 RVA: 0x000E0544 File Offset: 0x000DE744
 	public void BurstTowards(float speed)
 	{
 		this.m_heading = Vector2.one;
@@ -50,7 +50,7 @@ public class BurstLogic : MonoBehaviour
 		this.m_moveTowardsStartingPos = base.transform.position;
 	}
 
-	// Token: 0x060026A5 RID: 9893 RVA: 0x0007FE68 File Offset: 0x0007E068
+	// Token: 0x06003554 RID: 13652 RVA: 0x000E05A4 File Offset: 0x000DE7A4
 	private void FixedUpdate()
 	{
 		if (this.m_movingAway)
@@ -94,28 +94,28 @@ public class BurstLogic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400205C RID: 8284
+	// Token: 0x04002B3C RID: 11068
 	[SerializeField]
 	private TrailRenderer m_trailRenderer;
 
-	// Token: 0x0400205D RID: 8285
+	// Token: 0x04002B3D RID: 11069
 	private float m_speed;
 
-	// Token: 0x0400205E RID: 8286
+	// Token: 0x04002B3E RID: 11070
 	private Vector2 m_heading;
 
-	// Token: 0x0400205F RID: 8287
+	// Token: 0x04002B3F RID: 11071
 	private float m_startTime;
 
-	// Token: 0x04002060 RID: 8288
+	// Token: 0x04002B40 RID: 11072
 	private float m_duration;
 
-	// Token: 0x04002061 RID: 8289
+	// Token: 0x04002B41 RID: 11073
 	private float m_internalSpeed;
 
-	// Token: 0x04002062 RID: 8290
+	// Token: 0x04002B42 RID: 11074
 	private Vector2 m_moveTowardsStartingPos;
 
-	// Token: 0x04002065 RID: 8293
+	// Token: 0x04002B45 RID: 11077
 	private bool m_movingAway;
 }

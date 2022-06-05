@@ -5,11 +5,11 @@ using ClipperLibFerr;
 using Ferr;
 using UnityEngine;
 
-// Token: 0x02000630 RID: 1584
+// Token: 0x02000A5D RID: 2653
 public class RoomCreator : MonoBehaviour
 {
-	// Token: 0x1700143C RID: 5180
-	// (get) Token: 0x06003950 RID: 14672 RVA: 0x000C325E File Offset: 0x000C145E
+	// Token: 0x17001BA3 RID: 7075
+	// (get) Token: 0x0600502F RID: 20527 RVA: 0x0002BCCD File Offset: 0x00029ECD
 	public GameObject RoomTemplatePrefab
 	{
 		get
@@ -18,8 +18,8 @@ public class RoomCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700143D RID: 5181
-	// (get) Token: 0x06003951 RID: 14673 RVA: 0x000C3266 File Offset: 0x000C1466
+	// Token: 0x17001BA4 RID: 7076
+	// (get) Token: 0x06005030 RID: 20528 RVA: 0x0002BCD5 File Offset: 0x00029ED5
 	public GameObject SimpleRoomPrefab
 	{
 		get
@@ -28,8 +28,8 @@ public class RoomCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700143E RID: 5182
-	// (get) Token: 0x06003952 RID: 14674 RVA: 0x000C326E File Offset: 0x000C146E
+	// Token: 0x17001BA5 RID: 7077
+	// (get) Token: 0x06005031 RID: 20529 RVA: 0x0002BCDD File Offset: 0x00029EDD
 	public GameObject Bridge1x3RoomPrefab
 	{
 		get
@@ -38,7 +38,7 @@ public class RoomCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003953 RID: 14675 RVA: 0x000C3278 File Offset: 0x000C1478
+	// Token: 0x06005032 RID: 20530 RVA: 0x00131958 File Offset: 0x0012FB58
 	public GameObject CreateRoomInstance(int roomWidth, int roomHeight)
 	{
 		GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(this.m_roomPrefab);
@@ -55,7 +55,7 @@ public class RoomCreator : MonoBehaviour
 		return gameObject;
 	}
 
-	// Token: 0x06003954 RID: 14676 RVA: 0x000C32EC File Offset: 0x000C14EC
+	// Token: 0x06005033 RID: 20531 RVA: 0x001319CC File Offset: 0x0012FBCC
 	private GameObject CreateRoomBounds(int roomWidth, int roomHeight, Room room)
 	{
 		Ferr2DT_PathTerrain component = room.gameObject.GetComponent<Ferr2DT_PathTerrain>();
@@ -72,7 +72,7 @@ public class RoomCreator : MonoBehaviour
 		return component.gameObject;
 	}
 
-	// Token: 0x06003955 RID: 14677 RVA: 0x000C337C File Offset: 0x000C157C
+	// Token: 0x06005034 RID: 20532 RVA: 0x00131A5C File Offset: 0x0012FC5C
 	public Ferr2DT_PathTerrain CreateTerrain(Room room)
 	{
 		Ferr2DT_PathTerrain ferr2DT_PathTerrain = UnityEngine.Object.Instantiate<Ferr2DT_PathTerrain>(this.m_defaultTerrainPrefab);
@@ -91,7 +91,7 @@ public class RoomCreator : MonoBehaviour
 		return ferr2DT_PathTerrain;
 	}
 
-	// Token: 0x06003956 RID: 14678 RVA: 0x000C3460 File Offset: 0x000C1660
+	// Token: 0x06005035 RID: 20533 RVA: 0x00131B40 File Offset: 0x0012FD40
 	public Ferr2DT_PathTerrain CreateOneWay(Room room)
 	{
 		if (room == null)
@@ -114,7 +114,7 @@ public class RoomCreator : MonoBehaviour
 		return ferr2DT_PathTerrain;
 	}
 
-	// Token: 0x06003957 RID: 14679 RVA: 0x000C34E8 File Offset: 0x000C16E8
+	// Token: 0x06005036 RID: 20534 RVA: 0x00131BC8 File Offset: 0x0012FDC8
 	private void CreateRoomSides(Room room)
 	{
 		int x = room.UnitDimensions.x;
@@ -213,82 +213,82 @@ public class RoomCreator : MonoBehaviour
 		Ferr2DUtilities.EasyBoolean(ClipType.ctUnion, list, Ferr2DUtilities.Ferr2DUndoType.DestroyImmediate, true);
 	}
 
-	// Token: 0x06003958 RID: 14680 RVA: 0x000C3A90 File Offset: 0x000C1C90
+	// Token: 0x06005037 RID: 20535 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public GameObject CreateBuildingInterior(Room currentlySelectedRoom)
 	{
 		return null;
 	}
 
-	// Token: 0x06003959 RID: 14681 RVA: 0x000C3A93 File Offset: 0x000C1C93
+	// Token: 0x06005038 RID: 20536 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public GameObject CreateHiddenRoomWall(Room currentlySelectedRoom)
 	{
 		return null;
 	}
 
-	// Token: 0x0600395A RID: 14682 RVA: 0x000C3A98 File Offset: 0x000C1C98
+	// Token: 0x06005039 RID: 20537 RVA: 0x00132170 File Offset: 0x00130370
 	public GameObject CreateCloud(Room room)
 	{
 		return this.InstantiatePrefabInRoomAtLocalPosition(this.m_cloudSpawnControllerPrefab, room, default(Vector3));
 	}
 
-	// Token: 0x0600395B RID: 14683 RVA: 0x000C3ABC File Offset: 0x000C1CBC
+	// Token: 0x0600503A RID: 20538 RVA: 0x00132194 File Offset: 0x00130394
 	public GameObject CreateInvisibleCeiling(Room room)
 	{
 		return this.InstantiatePrefabInRoomAtLocalPosition(this.m_invisibleCeilingSpawnControllerPrefab, room, default(Vector3));
 	}
 
-	// Token: 0x0600395C RID: 14684 RVA: 0x000C3AE0 File Offset: 0x000C1CE0
+	// Token: 0x0600503B RID: 20539 RVA: 0x001321B8 File Offset: 0x001303B8
 	public GameObject CreateTunnel(Room room)
 	{
 		return this.InstantiatePrefabInRoomAtLocalPosition(this.m_tunnelSpawnControllerPrefab, room, default(Vector3));
 	}
 
-	// Token: 0x0600395D RID: 14685 RVA: 0x000C3B03 File Offset: 0x000C1D03
+	// Token: 0x0600503C RID: 20540 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void CreateSpikes(Room room)
 	{
 	}
 
-	// Token: 0x0600395E RID: 14686 RVA: 0x000C3B05 File Offset: 0x000C1D05
+	// Token: 0x0600503D RID: 20541 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void CreateLocalTeleporter(Room room)
 	{
 	}
 
-	// Token: 0x0600395F RID: 14687 RVA: 0x000C3B07 File Offset: 0x000C1D07
+	// Token: 0x0600503E RID: 20542 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void CreateTeleporterLeyLines(Room room)
 	{
 	}
 
-	// Token: 0x06003960 RID: 14688 RVA: 0x000C3B09 File Offset: 0x000C1D09
+	// Token: 0x0600503F RID: 20543 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void CreateGlobalTeleporter(Room room)
 	{
 	}
 
-	// Token: 0x06003961 RID: 14689 RVA: 0x000C3B0B File Offset: 0x000C1D0B
+	// Token: 0x06005040 RID: 20544 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void CreateOrbiter(Room room)
 	{
 	}
 
-	// Token: 0x06003962 RID: 14690 RVA: 0x000C3B0D File Offset: 0x000C1D0D
+	// Token: 0x06005041 RID: 20545 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void CreateTurret(Room room, bool diagonal)
 	{
 	}
 
-	// Token: 0x06003963 RID: 14691 RVA: 0x000C3B0F File Offset: 0x000C1D0F
+	// Token: 0x06005042 RID: 20546 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void CreateHazardSpawnController(HazardCategory hazardCategory, Room room)
 	{
 	}
 
-	// Token: 0x06003964 RID: 14692 RVA: 0x000C3B11 File Offset: 0x000C1D11
+	// Token: 0x06005043 RID: 20547 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void CreateChest(Room room)
 	{
 	}
 
-	// Token: 0x06003965 RID: 14693 RVA: 0x000C3B13 File Offset: 0x000C1D13
+	// Token: 0x06005044 RID: 20548 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void CreateBouncePlatform(Room room)
 	{
 	}
 
-	// Token: 0x06003966 RID: 14694 RVA: 0x000C3B18 File Offset: 0x000C1D18
+	// Token: 0x06005045 RID: 20549 RVA: 0x001321DC File Offset: 0x001303DC
 	public GameObject CreateEnemy(Room room)
 	{
 		if (room == null)
@@ -305,7 +305,7 @@ public class RoomCreator : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003967 RID: 14695 RVA: 0x000C3B74 File Offset: 0x000C1D74
+	// Token: 0x06005046 RID: 20550 RVA: 0x00132238 File Offset: 0x00130438
 	private void CreateRoomDoors(Room room)
 	{
 		int x = room.UnitDimensions.x;
@@ -380,13 +380,13 @@ public class RoomCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003968 RID: 14696 RVA: 0x000C3F6C File Offset: 0x000C216C
+	// Token: 0x06005047 RID: 20551 RVA: 0x00132630 File Offset: 0x00130830
 	public void CreatePlayerSpawn(Room room)
 	{
 		this.InstantiatePrefabInRoomAtLocalPosition(this.m_playerSpawnPrefab, room, default(Vector3));
 	}
 
-	// Token: 0x06003969 RID: 14697 RVA: 0x000C3F90 File Offset: 0x000C2190
+	// Token: 0x06005048 RID: 20552 RVA: 0x0002BCE5 File Offset: 0x00029EE5
 	public GameObject CreateRoomForTunnelTesting(Vector3 position)
 	{
 		if (this.m_roomForTunnelTestingPrefab != null)
@@ -398,128 +398,128 @@ public class RoomCreator : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x0600396A RID: 14698 RVA: 0x000C3FB9 File Offset: 0x000C21B9
+	// Token: 0x06005049 RID: 20553 RVA: 0x0000F49B File Offset: 0x0000D69B
 	private GameObject InstantiatePrefabInRoomAtLocalPosition(GameObject prefab, Room room, Vector3 localPosition = default(Vector3))
 	{
 		return null;
 	}
 
-	// Token: 0x04002C21 RID: 11297
+	// Token: 0x04003CB3 RID: 15539
 	[SerializeField]
 	private GameObject m_playerSpawnPrefab;
 
-	// Token: 0x04002C22 RID: 11298
+	// Token: 0x04003CB4 RID: 15540
 	[SerializeField]
 	private GameObject m_roomPrefab;
 
-	// Token: 0x04002C23 RID: 11299
+	// Token: 0x04003CB5 RID: 15541
 	[SerializeField]
 	private GameObject m_chestPrefab;
 
-	// Token: 0x04002C24 RID: 11300
+	// Token: 0x04003CB6 RID: 15542
 	[SerializeField]
 	private GameObject m_specialPlatformSpawnerPrefab;
 
-	// Token: 0x04002C25 RID: 11301
+	// Token: 0x04003CB7 RID: 15543
 	[SerializeField]
 	private GameObject m_spikePrefab;
 
-	// Token: 0x04002C26 RID: 11302
+	// Token: 0x04003CB8 RID: 15544
 	[SerializeField]
 	private GameObject m_localTeleporterPrefab;
 
-	// Token: 0x04002C27 RID: 11303
+	// Token: 0x04003CB9 RID: 15545
 	[SerializeField]
 	private GameObject m_teleporterLeyLinesPrefab;
 
-	// Token: 0x04002C28 RID: 11304
+	// Token: 0x04003CBA RID: 15546
 	[SerializeField]
 	private GameObject m_globalTeleporterPrefab;
 
-	// Token: 0x04002C29 RID: 11305
+	// Token: 0x04003CBB RID: 15547
 	[SerializeField]
 	private GameObject m_lineHazardSpawnControllerPrefab;
 
-	// Token: 0x04002C2A RID: 11306
+	// Token: 0x04003CBC RID: 15548
 	[SerializeField]
 	private GameObject m_pointHazardSpawnControllerPrefab;
 
-	// Token: 0x04002C2B RID: 11307
+	// Token: 0x04003CBD RID: 15549
 	[SerializeField]
 	private GameObject m_turretHazardSpawnControllerPrefab;
 
-	// Token: 0x04002C2C RID: 11308
+	// Token: 0x04003CBE RID: 15550
 	[SerializeField]
 	private GameObject m_turretDiagonalPrefab;
 
-	// Token: 0x04002C2D RID: 11309
+	// Token: 0x04003CBF RID: 15551
 	[SerializeField]
 	private Ferr2DT_PathTerrain m_defaultTerrainPrefab;
 
-	// Token: 0x04002C2E RID: 11310
+	// Token: 0x04003CC0 RID: 15552
 	[SerializeField]
 	private Ferr2DT_PathTerrain m_defaultDoorsPrefab;
 
-	// Token: 0x04002C2F RID: 11311
+	// Token: 0x04003CC1 RID: 15553
 	[SerializeField]
 	private Ferr2DT_PathTerrain m_defaultOneWayTerrainPrefab;
 
-	// Token: 0x04002C30 RID: 11312
+	// Token: 0x04003CC2 RID: 15554
 	[SerializeField]
 	private CinemachineVirtualCamera m_cinemachineVirtualCameraPrefab;
 
-	// Token: 0x04002C31 RID: 11313
+	// Token: 0x04003CC3 RID: 15555
 	[SerializeField]
 	private GameObject m_enemyPrefab;
 
-	// Token: 0x04002C32 RID: 11314
+	// Token: 0x04003CC4 RID: 15556
 	[SerializeField]
 	private GameObject m_cutoutPrefab;
 
-	// Token: 0x04002C33 RID: 11315
+	// Token: 0x04003CC5 RID: 15557
 	[SerializeField]
 	private GameObject m_tunnelSpawnControllerPrefab;
 
-	// Token: 0x04002C34 RID: 11316
+	// Token: 0x04003CC6 RID: 15558
 	[SerializeField]
 	private GameObject m_cloudSpawnControllerPrefab;
 
-	// Token: 0x04002C35 RID: 11317
+	// Token: 0x04003CC7 RID: 15559
 	[SerializeField]
 	private GameObject m_invisibleCeilingSpawnControllerPrefab;
 
-	// Token: 0x04002C36 RID: 11318
+	// Token: 0x04003CC8 RID: 15560
 	[SerializeField]
 	private GameObject m_simpleRoomPrefab;
 
-	// Token: 0x04002C37 RID: 11319
+	// Token: 0x04003CC9 RID: 15561
 	[SerializeField]
 	private GameObject m_bridge1x3RoomPrefab;
 
-	// Token: 0x04002C38 RID: 11320
+	// Token: 0x04003CCA RID: 15562
 	[SerializeField]
 	private GameObject m_roomForTunnelTestingPrefab;
 
-	// Token: 0x04002C39 RID: 11321
+	// Token: 0x04003CCB RID: 15563
 	[SerializeField]
 	private GameObject m_hiddenWallPrefab;
 
-	// Token: 0x04002C3A RID: 11322
+	// Token: 0x04003CCC RID: 15564
 	[SerializeField]
 	private GameObject m_buildingInteriorPrefab;
 
-	// Token: 0x04002C3B RID: 11323
+	// Token: 0x04003CCD RID: 15565
 	public const int ROOM_UNIT_WIDTH = 32;
 
-	// Token: 0x04002C3C RID: 11324
+	// Token: 0x04003CCE RID: 15566
 	public const int ROOM_UNIT_HEIGHT = 18;
 
-	// Token: 0x04002C3D RID: 11325
+	// Token: 0x04003CCF RID: 15567
 	public const int SIDE_DOOR_UNIT_SIZE = 5;
 
-	// Token: 0x04002C3E RID: 11326
+	// Token: 0x04003CD0 RID: 15568
 	public const int UPPER_LOWER_DOOR_UNIT_SIZE = 6;
 
-	// Token: 0x04002C3F RID: 11327
+	// Token: 0x04003CD1 RID: 15569
 	public const float WALL_WIDTH = 1f;
 }

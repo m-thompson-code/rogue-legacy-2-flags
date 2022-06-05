@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020002C9 RID: 713
+// Token: 0x020004BE RID: 1214
 [Serializable]
 public class ConfigSaveData : IVersionUpdateable
 {
-	// Token: 0x06001C67 RID: 7271 RVA: 0x0005BC54 File Offset: 0x00059E54
+	// Token: 0x06002731 RID: 10033 RVA: 0x000B81F8 File Offset: 0x000B63F8
 	public void UpdateVersion()
 	{
 		if (this.REVISION_NUMBER <= 0 && this.DeadZone < 0.25f)
@@ -22,96 +22,96 @@ public class ConfigSaveData : IVersionUpdateable
 		this.REVISION_NUMBER = 3;
 	}
 
-	// Token: 0x040019A5 RID: 6565
+	// Token: 0x040021AC RID: 8620
 	public int REVISION_NUMBER = 3;
 
-	// Token: 0x040019A6 RID: 6566
+	// Token: 0x040021AD RID: 8621
 	public byte CurrentProfile;
 
-	// Token: 0x040019A7 RID: 6567
+	// Token: 0x040021AE RID: 8622
 	public float MusicVolume = 1f;
 
-	// Token: 0x040019A8 RID: 6568
+	// Token: 0x040021AF RID: 8623
 	public float SFXVolume = 1f;
 
-	// Token: 0x040019A9 RID: 6569
+	// Token: 0x040021B0 RID: 8624
 	public float MasterVolume = 1f;
 
-	// Token: 0x040019AA RID: 6570
+	// Token: 0x040021B1 RID: 8625
 	public float DeadZone = 0.25f;
 
-	// Token: 0x040019AB RID: 6571
+	// Token: 0x040021B2 RID: 8626
 	public int AimFidelity = 2;
 
-	// Token: 0x040019AC RID: 6572
+	// Token: 0x040021B3 RID: 8627
 	public int QualitySetting = 2;
 
-	// Token: 0x040019AD RID: 6573
+	// Token: 0x040021B4 RID: 8628
 	public bool EnableVsync = true;
 
-	// Token: 0x040019AE RID: 6574
+	// Token: 0x040021B5 RID: 8629
 	public int PrimaryDisplay;
 
-	// Token: 0x040019AF RID: 6575
+	// Token: 0x040021B6 RID: 8630
 	public int ScreenWidth = -1;
 
-	// Token: 0x040019B0 RID: 6576
+	// Token: 0x040021B7 RID: 8631
 	public int ScreenHeight = -1;
 
-	// Token: 0x040019B1 RID: 6577
+	// Token: 0x040021B8 RID: 8632
 	public int ScreenMode = 1;
 
-	// Token: 0x040019B2 RID: 6578
+	// Token: 0x040021B9 RID: 8633
 	public bool Disable_16_9;
 
-	// Token: 0x040019B3 RID: 6579
+	// Token: 0x040021BA RID: 8634
 	public bool DisableCursorConfine;
 
-	// Token: 0x040019B4 RID: 6580
+	// Token: 0x040021BB RID: 8635
 	public LanguageType Language;
 
-	// Token: 0x040019B5 RID: 6581
+	// Token: 0x040021BC RID: 8636
 	public int FPSLimit = 120;
 
-	// Token: 0x040019B6 RID: 6582
+	// Token: 0x040021BD RID: 8637
 	public string UserReportName;
 
-	// Token: 0x040019B7 RID: 6583
+	// Token: 0x040021BE RID: 8638
 	public string UserReportEmail;
 
-	// Token: 0x040019B8 RID: 6584
+	// Token: 0x040021BF RID: 8639
 	public bool UseNonScientificNames;
 
-	// Token: 0x040019B9 RID: 6585
+	// Token: 0x040021C0 RID: 8640
 	public bool EnableDualButtonDash;
 
-	// Token: 0x040019BA RID: 6586
+	// Token: 0x040021C1 RID: 8641
 	public bool EnableQuickDrop;
 
-	// Token: 0x040019BB RID: 6587
+	// Token: 0x040021C2 RID: 8642
 	public bool ToggleMouseAiming = true;
 
-	// Token: 0x040019BC RID: 6588
+	// Token: 0x040021C3 RID: 8643
 	public bool DisableSlowdownOnHit;
 
-	// Token: 0x040019BD RID: 6589
+	// Token: 0x040021C4 RID: 8644
 	public bool DisablePressDownSpinKick;
 
-	// Token: 0x040019BE RID: 6590
+	// Token: 0x040021C5 RID: 8645
 	public bool DisableReloadInteractButton;
 
-	// Token: 0x040019BF RID: 6591
+	// Token: 0x040021C6 RID: 8646
 	public bool DisableHUDFadeOut;
 
-	// Token: 0x040019C0 RID: 6592
+	// Token: 0x040021C7 RID: 8647
 	public bool ToggleMouseAttackFlip;
 
-	// Token: 0x040019C1 RID: 6593
+	// Token: 0x040021C8 RID: 8648
 	public bool DisableRumble;
 
-	// Token: 0x040019C2 RID: 6594
+	// Token: 0x040021C9 RID: 8649
 	public bool EnableMusicOnPause;
 
-	// Token: 0x040019C3 RID: 6595
+	// Token: 0x040021CA RID: 8650
 	public InputIconSetting InputIconSetting;
 }

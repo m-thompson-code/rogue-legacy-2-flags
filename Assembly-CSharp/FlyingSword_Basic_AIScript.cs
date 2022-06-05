@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000EA RID: 234
+// Token: 0x02000179 RID: 377
 public class FlyingSword_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x06000720 RID: 1824 RVA: 0x0001A16F File Offset: 0x0001836F
+	// Token: 0x06000A4F RID: 2639 RVA: 0x00006997 File Offset: 0x00004B97
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -16,8 +16,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x170003C8 RID: 968
-	// (get) Token: 0x06000721 RID: 1825 RVA: 0x0001A195 File Offset: 0x00018395
+	// Token: 0x170004D6 RID: 1238
+	// (get) Token: 0x06000A50 RID: 2640 RVA: 0x000069BD File Offset: 0x00004BBD
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -26,8 +26,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003C9 RID: 969
-	// (get) Token: 0x06000722 RID: 1826 RVA: 0x0001A1A6 File Offset: 0x000183A6
+	// Token: 0x170004D7 RID: 1239
+	// (get) Token: 0x06000A51 RID: 2641 RVA: 0x00006275 File Offset: 0x00004475
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -36,8 +36,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003CA RID: 970
-	// (get) Token: 0x06000723 RID: 1827 RVA: 0x0001A1B7 File Offset: 0x000183B7
+	// Token: 0x170004D8 RID: 1240
+	// (get) Token: 0x06000A52 RID: 2642 RVA: 0x00006275 File Offset: 0x00004475
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -46,8 +46,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003CB RID: 971
-	// (get) Token: 0x06000724 RID: 1828 RVA: 0x0001A1C8 File Offset: 0x000183C8
+	// Token: 0x170004D9 RID: 1241
+	// (get) Token: 0x06000A53 RID: 2643 RVA: 0x000069CE File Offset: 0x00004BCE
 	protected virtual float m_thrust_Attack_InitialTargetTurnRate
 	{
 		get
@@ -56,8 +56,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003CC RID: 972
-	// (get) Token: 0x06000725 RID: 1829 RVA: 0x0001A1CF File Offset: 0x000183CF
+	// Token: 0x170004DA RID: 1242
+	// (get) Token: 0x06000A54 RID: 2644 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_thrust_Attack_TurnRate
 	{
 		get
@@ -66,8 +66,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003CD RID: 973
-	// (get) Token: 0x06000726 RID: 1830 RVA: 0x0001A1D6 File Offset: 0x000183D6
+	// Token: 0x170004DB RID: 1243
+	// (get) Token: 0x06000A55 RID: 2645 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected virtual float m_thrust_Exit_ForceIdle
 	{
 		get
@@ -76,8 +76,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003CE RID: 974
-	// (get) Token: 0x06000727 RID: 1831 RVA: 0x0001A1DD File Offset: 0x000183DD
+	// Token: 0x170004DC RID: 1244
+	// (get) Token: 0x06000A56 RID: 2646 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_thrustFast_DashAttackAmount
 	{
 		get
@@ -86,8 +86,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003CF RID: 975
-	// (get) Token: 0x06000728 RID: 1832 RVA: 0x0001A1E4 File Offset: 0x000183E4
+	// Token: 0x170004DD RID: 1245
+	// (get) Token: 0x06000A57 RID: 2647 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_thrustFast_AttackTell_Delay
 	{
 		get
@@ -96,8 +96,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003D0 RID: 976
-	// (get) Token: 0x06000729 RID: 1833 RVA: 0x0001A1EB File Offset: 0x000183EB
+	// Token: 0x170004DE RID: 1246
+	// (get) Token: 0x06000A58 RID: 2648 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_thrustFast_AttackHold_Delay
 	{
 		get
@@ -106,8 +106,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003D1 RID: 977
-	// (get) Token: 0x0600072A RID: 1834 RVA: 0x0001A1F2 File Offset: 0x000183F2
+	// Token: 0x170004DF RID: 1247
+	// (get) Token: 0x06000A59 RID: 2649 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_thrustFastAttackExitEndDuration_Fast
 	{
 		get
@@ -116,8 +116,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003D2 RID: 978
-	// (get) Token: 0x0600072B RID: 1835 RVA: 0x0001A1F9 File Offset: 0x000183F9
+	// Token: 0x170004E0 RID: 1248
+	// (get) Token: 0x06000A5A RID: 2650 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_thrust_SpawnProjectilesAtEnd
 	{
 		get
@@ -126,8 +126,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003D3 RID: 979
-	// (get) Token: 0x0600072C RID: 1836 RVA: 0x0001A1FC File Offset: 0x000183FC
+	// Token: 0x170004E1 RID: 1249
+	// (get) Token: 0x06000A5B RID: 2651 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_thrust_SpawnMinibossProjectilesAtEnd
 	{
 		get
@@ -136,7 +136,7 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600072D RID: 1837 RVA: 0x0001A1FF File Offset: 0x000183FF
+	// Token: 0x06000A5C RID: 2652 RVA: 0x000069D5 File Offset: 0x00004BD5
 	public IEnumerator Custom_Tell_Animation(float tellIntroDuration, float tellHoldDuration, float reverseDuration)
 	{
 		base.EnemyController.FollowOffset = Vector3.zero;
@@ -165,7 +165,7 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600072E RID: 1838 RVA: 0x0001A223 File Offset: 0x00018423
+	// Token: 0x06000A5D RID: 2653 RVA: 0x000069F9 File Offset: 0x00004BF9
 	public IEnumerator Custom_Thrust_Attack()
 	{
 		base.EnemyController.BaseTurnSpeed = this.m_thrust_Attack_TurnRate;
@@ -204,7 +204,7 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600072F RID: 1839 RVA: 0x0001A232 File Offset: 0x00018432
+	// Token: 0x06000A5E RID: 2654 RVA: 0x00006A08 File Offset: 0x00004C08
 	public IEnumerator Custom_Fast_Exit_Animation()
 	{
 		yield return this.Default_Animation("Thrust_Exit_Intro", this.m_thrustFast_ExitIntro_AnimationSpeed, this.m_thrustFastAttackExitEndDuration_Fast, true);
@@ -215,7 +215,7 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000730 RID: 1840 RVA: 0x0001A241 File Offset: 0x00018441
+	// Token: 0x06000A5F RID: 2655 RVA: 0x00006A17 File Offset: 0x00004C17
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -253,8 +253,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x170003D4 RID: 980
-	// (get) Token: 0x06000731 RID: 1841 RVA: 0x0001A250 File Offset: 0x00018450
+	// Token: 0x170004E2 RID: 1250
+	// (get) Token: 0x06000A60 RID: 2656 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_vertSpin_Attack_TurnSpeed
 	{
 		get
@@ -263,8 +263,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003D5 RID: 981
-	// (get) Token: 0x06000732 RID: 1842 RVA: 0x0001A257 File Offset: 0x00018457
+	// Token: 0x170004E3 RID: 1251
+	// (get) Token: 0x06000A61 RID: 2657 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_vertSpin_Attack_MovementSpeed
 	{
 		get
@@ -273,8 +273,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003D6 RID: 982
-	// (get) Token: 0x06000733 RID: 1843 RVA: 0x0001A25E File Offset: 0x0001845E
+	// Token: 0x170004E4 RID: 1252
+	// (get) Token: 0x06000A62 RID: 2658 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected virtual int m_vertSpin_Attack_TotalLoops
 	{
 		get
@@ -283,8 +283,8 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003D7 RID: 983
-	// (get) Token: 0x06000734 RID: 1844 RVA: 0x0001A261 File Offset: 0x00018461
+	// Token: 0x170004E5 RID: 1253
+	// (get) Token: 0x06000A63 RID: 2659 RVA: 0x00006A26 File Offset: 0x00004C26
 	protected virtual float m_vertSpin_Attack_DelayPerLoop
 	{
 		get
@@ -293,7 +293,7 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000735 RID: 1845 RVA: 0x0001A268 File Offset: 0x00018468
+	// Token: 0x06000A64 RID: 2660 RVA: 0x00006A2D File Offset: 0x00004C2D
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -331,21 +331,21 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000736 RID: 1846 RVA: 0x0001A277 File Offset: 0x00018477
+	// Token: 0x06000A65 RID: 2661 RVA: 0x00006A3C File Offset: 0x00004C3C
 	public override IEnumerator WalkAway()
 	{
 		base.EnemyController.ResetPivotRotation();
 		return base.WalkAway();
 	}
 
-	// Token: 0x06000737 RID: 1847 RVA: 0x0001A28A File Offset: 0x0001848A
+	// Token: 0x06000A66 RID: 2662 RVA: 0x00006A4F File Offset: 0x00004C4F
 	public override IEnumerator WalkTowards()
 	{
 		base.EnemyController.ResetPivotRotation();
 		return base.WalkTowards();
 	}
 
-	// Token: 0x06000738 RID: 1848 RVA: 0x0001A29D File Offset: 0x0001849D
+	// Token: 0x06000A67 RID: 2663 RVA: 0x00006A62 File Offset: 0x00004C62
 	public override IEnumerator Idle()
 	{
 		base.EnemyController.ResetPivotRotation();
@@ -364,7 +364,7 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000739 RID: 1849 RVA: 0x0001A2AC File Offset: 0x000184AC
+	// Token: 0x06000A68 RID: 2664 RVA: 0x00006A71 File Offset: 0x00004C71
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.EnemyController.PivotFollowsOrientation = false;
@@ -373,99 +373,99 @@ public class FlyingSword_Basic_AIScript : BaseAIScript
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x04000AEE RID: 2798
+	// Token: 0x04000D78 RID: 3448
 	private const string GENERIC_PROJECTILE_NAME = "FlyingSwordProjectile";
 
-	// Token: 0x04000AEF RID: 2799
+	// Token: 0x04000D79 RID: 3449
 	private const string MINIBOSS_PROJECTILE_NAME = "FlyingSwordMinibossProjectile";
 
-	// Token: 0x04000AF0 RID: 2800
+	// Token: 0x04000D7A RID: 3450
 	private const string DAGGER_PROJECTILE_NAME = "FlyingSwordDaggerProjectile";
 
-	// Token: 0x04000AF1 RID: 2801
+	// Token: 0x04000D7B RID: 3451
 	protected float m_thrust_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000AF2 RID: 2802
+	// Token: 0x04000D7C RID: 3452
 	protected float m_thrust_TellIntro_Delay;
 
-	// Token: 0x04000AF3 RID: 2803
+	// Token: 0x04000D7D RID: 3453
 	protected float m_thrust_TellHold_AnimationSpeed = 1.5f;
 
-	// Token: 0x04000AF4 RID: 2804
+	// Token: 0x04000D7E RID: 3454
 	protected float m_thrust_TellHold_Delay = 0.55f;
 
-	// Token: 0x04000AF5 RID: 2805
+	// Token: 0x04000D7F RID: 3455
 	protected float m_thrust_TellHold_ReverseDuration = 0.325f;
 
-	// Token: 0x04000AF6 RID: 2806
+	// Token: 0x04000D80 RID: 3456
 	protected float m_thrust_AttackIntro_AnimationSpeed = 2.75f;
 
-	// Token: 0x04000AF7 RID: 2807
+	// Token: 0x04000D81 RID: 3457
 	protected float m_thrust_AttackIntro_Delay;
 
-	// Token: 0x04000AF8 RID: 2808
+	// Token: 0x04000D82 RID: 3458
 	protected float m_thrust_AttackHold_AnimationSpeed = 2.75f;
 
-	// Token: 0x04000AF9 RID: 2809
+	// Token: 0x04000D83 RID: 3459
 	protected float m_thrust_AttackHold_Delay;
 
-	// Token: 0x04000AFA RID: 2810
+	// Token: 0x04000D84 RID: 3460
 	protected float m_thrust_ExitIntro_AnimationSpeed = 1.2f;
 
-	// Token: 0x04000AFB RID: 2811
+	// Token: 0x04000D85 RID: 3461
 	protected float m_thrust_ExitIntro_Delay = 0.175f;
 
-	// Token: 0x04000AFC RID: 2812
+	// Token: 0x04000D86 RID: 3462
 	protected float m_thrust_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000AFD RID: 2813
+	// Token: 0x04000D87 RID: 3463
 	protected float m_thrust_Exit_Delay;
 
-	// Token: 0x04000AFE RID: 2814
+	// Token: 0x04000D88 RID: 3464
 	protected float m_thrust_Attack_ReverseSpeed = -3f;
 
-	// Token: 0x04000AFF RID: 2815
+	// Token: 0x04000D89 RID: 3465
 	protected float m_thrust_Attack_ForwardDuration = 0.625f;
 
-	// Token: 0x04000B00 RID: 2816
+	// Token: 0x04000D8A RID: 3466
 	protected float m_thrust_Attack_ForwardSpeed = 28f;
 
-	// Token: 0x04000B01 RID: 2817
+	// Token: 0x04000D8B RID: 3467
 	protected float m_thrust_Exit_AttackCD = 1f;
 
-	// Token: 0x04000B02 RID: 2818
+	// Token: 0x04000D8C RID: 3468
 	protected float m_thrustFast_ExitIntro_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000B03 RID: 2819
+	// Token: 0x04000D8D RID: 3469
 	protected float m_vertSpin_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B04 RID: 2820
+	// Token: 0x04000D8E RID: 3470
 	protected float m_vertSpin_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000B05 RID: 2821
+	// Token: 0x04000D8F RID: 3471
 	protected float m_vertSpin_TellIntroAndHold_Delay = 0.6f;
 
-	// Token: 0x04000B06 RID: 2822
+	// Token: 0x04000D90 RID: 3472
 	protected float m_vertSpin_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B07 RID: 2823
+	// Token: 0x04000D91 RID: 3473
 	protected float m_vertSpin_AttackIntro_Delay;
 
-	// Token: 0x04000B08 RID: 2824
+	// Token: 0x04000D92 RID: 3474
 	protected const float m_vertSpin_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000B09 RID: 2825
+	// Token: 0x04000D93 RID: 3475
 	protected const float m_vertSpin_AttackHold_Delay = 0.5f;
 
-	// Token: 0x04000B0A RID: 2826
+	// Token: 0x04000D94 RID: 3476
 	protected float m_vertSpin_ExitIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B0B RID: 2827
+	// Token: 0x04000D95 RID: 3477
 	protected const float m_vertSpin_ExitIntro_EndDelay = 0.15f;
 
-	// Token: 0x04000B0C RID: 2828
+	// Token: 0x04000D96 RID: 3478
 	protected const float m_vertSpin_Exit_ForceIdle = 0.25f;
 
-	// Token: 0x04000B0D RID: 2829
+	// Token: 0x04000D97 RID: 3479
 	protected float m_vertSpin_Exit_AttackCD = 5f;
 }

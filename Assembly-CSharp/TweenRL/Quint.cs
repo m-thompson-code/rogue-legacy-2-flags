@@ -2,22 +2,22 @@
 
 namespace TweenRL
 {
-	// Token: 0x0200087B RID: 2171
+	// Token: 0x02000D95 RID: 3477
 	public class Quint
 	{
-		// Token: 0x06004794 RID: 18324 RVA: 0x00101777 File Offset: 0x000FF977
+		// Token: 0x06006291 RID: 25233 RVA: 0x0003178A File Offset: 0x0002F98A
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			return c * (t /= d) * t * t * t * t + b;
 		}
 
-		// Token: 0x06004795 RID: 18325 RVA: 0x0010178B File Offset: 0x000FF98B
+		// Token: 0x06006292 RID: 25234 RVA: 0x0003179E File Offset: 0x0002F99E
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			return c * ((t = t / d - 1f) * t * t * t * t + 1f) + b;
 		}
 
-		// Token: 0x06004796 RID: 18326 RVA: 0x001017AC File Offset: 0x000FF9AC
+		// Token: 0x06006293 RID: 25235 RVA: 0x00155DC8 File Offset: 0x00153FC8
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			if ((t /= d / 2f) < 1f)

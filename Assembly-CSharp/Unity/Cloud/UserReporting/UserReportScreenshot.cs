@@ -2,26 +2,26 @@
 
 namespace Unity.Cloud.UserReporting
 {
-	// Token: 0x02000841 RID: 2113
+	// Token: 0x02000D27 RID: 3367
 	public struct UserReportScreenshot
 	{
-		// Token: 0x1700175D RID: 5981
-		// (get) Token: 0x060045EA RID: 17898 RVA: 0x000F8776 File Offset: 0x000F6976
-		// (set) Token: 0x060045EB RID: 17899 RVA: 0x000F877E File Offset: 0x000F697E
+		// Token: 0x17001F8B RID: 8075
+		// (get) Token: 0x06006022 RID: 24610 RVA: 0x00035039 File Offset: 0x00033239
+		// (set) Token: 0x06006023 RID: 24611 RVA: 0x00035041 File Offset: 0x00033241
 		public string DataBase64 { readonly get; set; }
 
-		// Token: 0x1700175E RID: 5982
-		// (get) Token: 0x060045EC RID: 17900 RVA: 0x000F8787 File Offset: 0x000F6987
-		// (set) Token: 0x060045ED RID: 17901 RVA: 0x000F878F File Offset: 0x000F698F
+		// Token: 0x17001F8C RID: 8076
+		// (get) Token: 0x06006024 RID: 24612 RVA: 0x0003504A File Offset: 0x0003324A
+		// (set) Token: 0x06006025 RID: 24613 RVA: 0x00035052 File Offset: 0x00033252
 		public string DataIdentifier { readonly get; set; }
 
-		// Token: 0x1700175F RID: 5983
-		// (get) Token: 0x060045EE RID: 17902 RVA: 0x000F8798 File Offset: 0x000F6998
-		// (set) Token: 0x060045EF RID: 17903 RVA: 0x000F87A0 File Offset: 0x000F69A0
+		// Token: 0x17001F8D RID: 8077
+		// (get) Token: 0x06006026 RID: 24614 RVA: 0x0003505B File Offset: 0x0003325B
+		// (set) Token: 0x06006027 RID: 24615 RVA: 0x00035063 File Offset: 0x00033263
 		public int FrameNumber { readonly get; set; }
 
-		// Token: 0x17001760 RID: 5984
-		// (get) Token: 0x060045F0 RID: 17904 RVA: 0x000F87A9 File Offset: 0x000F69A9
+		// Token: 0x17001F8E RID: 8078
+		// (get) Token: 0x06006028 RID: 24616 RVA: 0x0003506C File Offset: 0x0003326C
 		public int Height
 		{
 			get
@@ -30,8 +30,8 @@ namespace Unity.Cloud.UserReporting
 			}
 		}
 
-		// Token: 0x17001761 RID: 5985
-		// (get) Token: 0x060045F1 RID: 17905 RVA: 0x000F87B6 File Offset: 0x000F69B6
+		// Token: 0x17001F8F RID: 8079
+		// (get) Token: 0x06006029 RID: 24617 RVA: 0x00035079 File Offset: 0x00033279
 		public int Width
 		{
 			get

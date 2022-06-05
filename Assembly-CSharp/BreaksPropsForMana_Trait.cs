@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000329 RID: 809
+// Token: 0x0200057A RID: 1402
 public class BreaksPropsForMana_Trait : BaseTrait
 {
-	// Token: 0x17000DAD RID: 3501
-	// (get) Token: 0x06001FBB RID: 8123 RVA: 0x000653CC File Offset: 0x000635CC
+	// Token: 0x170011E4 RID: 4580
+	// (get) Token: 0x06002C98 RID: 11416 RVA: 0x0001799D File Offset: 0x00015B9D
 	public override TraitType TraitType
 	{
 		get

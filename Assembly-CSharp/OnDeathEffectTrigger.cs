@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000417 RID: 1047
+// Token: 0x020006CF RID: 1743
 public class OnDeathEffectTrigger : BaseEffectTrigger
 {
-	// Token: 0x17000F7A RID: 3962
-	// (get) Token: 0x060026C7 RID: 9927 RVA: 0x00080EAA File Offset: 0x0007F0AA
+	// Token: 0x1700143F RID: 5183
+	// (get) Token: 0x0600357C RID: 13692 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool RequiresCollider
 	{
 		get
@@ -14,8 +14,8 @@ public class OnDeathEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x17000F7B RID: 3963
-	// (get) Token: 0x060026C8 RID: 9928 RVA: 0x00080EB0 File Offset: 0x0007F0B0
+	// Token: 0x17001440 RID: 5184
+	// (get) Token: 0x0600357D RID: 13693 RVA: 0x000E14E0 File Offset: 0x000DF6E0
 	public override Vector3 Midpoint
 	{
 		get
@@ -32,7 +32,7 @@ public class OnDeathEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026C9 RID: 9929 RVA: 0x00080F0C File Offset: 0x0007F10C
+	// Token: 0x0600357E RID: 13694 RVA: 0x000E153C File Offset: 0x000DF73C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -45,7 +45,7 @@ public class OnDeathEffectTrigger : BaseEffectTrigger
 		this.m_invokeOnDeathTrigger = new Action<GameObject>(this.InvokeOnDeathTrigger);
 	}
 
-	// Token: 0x060026CA RID: 9930 RVA: 0x00080F70 File Offset: 0x0007F170
+	// Token: 0x0600357F RID: 13695 RVA: 0x000E15A0 File Offset: 0x000DF7A0
 	private void OnEnable()
 	{
 		IEffectTriggerEvent_OnDeath[] effectTriggerEventArray = this.m_effectTriggerEventArray;
@@ -55,7 +55,7 @@ public class OnDeathEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026CB RID: 9931 RVA: 0x00080FA8 File Offset: 0x0007F1A8
+	// Token: 0x06003580 RID: 13696 RVA: 0x000E15D8 File Offset: 0x000DF7D8
 	private void OnDisable()
 	{
 		IEffectTriggerEvent_OnDeath[] effectTriggerEventArray = this.m_effectTriggerEventArray;
@@ -65,7 +65,7 @@ public class OnDeathEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026CC RID: 9932 RVA: 0x00080FE0 File Offset: 0x0007F1E0
+	// Token: 0x06003581 RID: 13697 RVA: 0x000E1610 File Offset: 0x000DF810
 	public void InvokeOnDeathTrigger(GameObject otherObj)
 	{
 		BaseCharacterController baseCharacterController;
@@ -122,15 +122,15 @@ public class OnDeathEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x040020AB RID: 8363
+	// Token: 0x04002B8E RID: 11150
 	private IEffectTriggerEvent_OnDeath[] m_effectTriggerEventArray;
 
-	// Token: 0x040020AC RID: 8364
+	// Token: 0x04002B8F RID: 11151
 	private Collider2D m_collider;
 
-	// Token: 0x040020AD RID: 8365
+	// Token: 0x04002B90 RID: 11152
 	private BaseCharacterController m_charController;
 
-	// Token: 0x040020AE RID: 8366
+	// Token: 0x04002B91 RID: 11153
 	private Action<GameObject> m_invokeOnDeathTrigger;
 }

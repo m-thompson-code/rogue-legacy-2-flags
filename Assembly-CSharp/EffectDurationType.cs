@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000413 RID: 1043
+// Token: 0x020006CB RID: 1739
 public enum EffectDurationType
 {
-	// Token: 0x04002099 RID: 8345
+	// Token: 0x04002B7C RID: 11132
 	CustomDuration,
-	// Token: 0x0400209A RID: 8346
+	// Token: 0x04002B7D RID: 11133
 	PlayUntilSourceDeathOrAnimStateChange = -1,
-	// Token: 0x0400209B RID: 8347
+	// Token: 0x04002B7E RID: 11134
 	PlayUntilSourceDeath = -2
 }

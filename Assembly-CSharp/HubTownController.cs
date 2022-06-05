@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000555 RID: 1365
+// Token: 0x0200090F RID: 2319
 public class HubTownController : MonoBehaviour
 {
-	// Token: 0x0600321A RID: 12826 RVA: 0x000A9DD8 File Offset: 0x000A7FD8
+	// Token: 0x0600466B RID: 18027 RVA: 0x00113D9C File Offset: 0x00111F9C
 	private void Awake()
 	{
 		this.m_room = base.GetComponent<Room>();
@@ -18,7 +18,7 @@ public class HubTownController : MonoBehaviour
 		this.m_onBounce = new Action<MonoBehaviour, EventArgs>(this.OnBounce);
 	}
 
-	// Token: 0x0600321B RID: 12827 RVA: 0x000A9E5C File Offset: 0x000A805C
+	// Token: 0x0600466C RID: 18028 RVA: 0x00113E20 File Offset: 0x00112020
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.SkillTree_Closed, this.m_skillTreeWindowClosed);
@@ -27,7 +27,7 @@ public class HubTownController : MonoBehaviour
 		this.m_room.PlayerEnterRelay.AddListener(this.m_onPlayerEnterRoom, false);
 	}
 
-	// Token: 0x0600321C RID: 12828 RVA: 0x000A9EA8 File Offset: 0x000A80A8
+	// Token: 0x0600466D RID: 18029 RVA: 0x00026AD2 File Offset: 0x00024CD2
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.SkillTree_Closed, this.m_skillTreeWindowClosed);
@@ -36,7 +36,7 @@ public class HubTownController : MonoBehaviour
 		this.m_room.PlayerEnterRelay.RemoveListener(this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x0600321D RID: 12829 RVA: 0x000A9EE8 File Offset: 0x000A80E8
+	// Token: 0x0600466E RID: 18030 RVA: 0x00113E6C File Offset: 0x0011206C
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs e)
 	{
 		SaveManager.PlayerSaveData.InCastle = false;
@@ -52,7 +52,7 @@ public class HubTownController : MonoBehaviour
 		});
 	}
 
-	// Token: 0x0600321E RID: 12830 RVA: 0x000A9F3A File Offset: 0x000A813A
+	// Token: 0x0600466F RID: 18031 RVA: 0x00026B12 File Offset: 0x00024D12
 	private void SkillTreeWindowClosed(object sender, EventArgs eventArgs)
 	{
 		if (this.m_refreshTownCoroutine == null)
@@ -66,7 +66,7 @@ public class HubTownController : MonoBehaviour
 		});
 	}
 
-	// Token: 0x0600321F RID: 12831 RVA: 0x000A9F6B File Offset: 0x000A816B
+	// Token: 0x06004670 RID: 18032 RVA: 0x00026B43 File Offset: 0x00024D43
 	private IEnumerator RefreshTown()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -119,7 +119,7 @@ public class HubTownController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003220 RID: 12832 RVA: 0x000A9F7C File Offset: 0x000A817C
+	// Token: 0x06004671 RID: 18033 RVA: 0x00113EC0 File Offset: 0x001120C0
 	private void OnExitHubTown(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		if (SaveManager.PlayerSaveData.CastleLockState != CastleLockState.NotLocked)
@@ -138,7 +138,7 @@ public class HubTownController : MonoBehaviour
 		playerController.ResetAbilityCooldowns();
 	}
 
-	// Token: 0x06003221 RID: 12833 RVA: 0x000A9FD4 File Offset: 0x000A81D4
+	// Token: 0x06004672 RID: 18034 RVA: 0x00113F18 File Offset: 0x00112118
 	private void CalculateGoldilocksLimit()
 	{
 		int num = int.MaxValue;
@@ -168,7 +168,7 @@ public class HubTownController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003222 RID: 12834 RVA: 0x000AA098 File Offset: 0x000A8298
+	// Token: 0x06004673 RID: 18035 RVA: 0x00113FDC File Offset: 0x001121DC
 	private void FixedUpdate()
 	{
 		if (Time.time < this.m_regenTick + 0.05f)
@@ -209,7 +209,7 @@ public class HubTownController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003223 RID: 12835 RVA: 0x000AA1A4 File Offset: 0x000A83A4
+	// Token: 0x06004674 RID: 18036 RVA: 0x001140E8 File Offset: 0x001122E8
 	private void OnBounce(object sender, EventArgs args)
 	{
 		if (!this.m_hasStartedSpinkickAchievement)
@@ -232,53 +232,53 @@ public class HubTownController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002767 RID: 10087
+	// Token: 0x0400364D RID: 13901
 	[Header("Shops")]
 	[SerializeField]
 	private SkillTreeShop m_skillTree;
 
-	// Token: 0x04002768 RID: 10088
+	// Token: 0x0400364E RID: 13902
 	private PolygonCollider2D m_collider;
 
-	// Token: 0x04002769 RID: 10089
+	// Token: 0x0400364F RID: 13903
 	private Coroutine m_refreshTownCoroutine;
 
-	// Token: 0x0400276A RID: 10090
+	// Token: 0x04003650 RID: 13904
 	private bool m_firstTimeEntering = true;
 
-	// Token: 0x0400276B RID: 10091
+	// Token: 0x04003651 RID: 13905
 	private BaseRoom m_room;
 
-	// Token: 0x0400276C RID: 10092
+	// Token: 0x04003652 RID: 13906
 	private HubTownEnteredEventArgs m_hubtownEnteredArgs;
 
-	// Token: 0x0400276D RID: 10093
+	// Token: 0x04003653 RID: 13907
 	private ObjectiveCompleteHUDEventArgs m_traitsDisplayHUDArgs;
 
-	// Token: 0x0400276E RID: 10094
+	// Token: 0x04003654 RID: 13908
 	private bool m_traitsDisplayed;
 
-	// Token: 0x0400276F RID: 10095
+	// Token: 0x04003655 RID: 13909
 	private Action<MonoBehaviour, EventArgs> m_skillTreeWindowClosed;
 
-	// Token: 0x04002770 RID: 10096
+	// Token: 0x04003656 RID: 13910
 	private Action<MonoBehaviour, EventArgs> m_onExitHubTown;
 
-	// Token: 0x04002771 RID: 10097
+	// Token: 0x04003657 RID: 13911
 	private Action<MonoBehaviour, EventArgs> m_onBounce;
 
-	// Token: 0x04002772 RID: 10098
+	// Token: 0x04003658 RID: 13912
 	private Action<object, RoomViaDoorEventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04002773 RID: 10099
+	// Token: 0x04003659 RID: 13913
 	private float m_regenTick;
 
-	// Token: 0x04002774 RID: 10100
+	// Token: 0x0400365A RID: 13914
 	private const int SPINKICK_ACHIEVEMENT_CONDITION_COUNT = 11;
 
-	// Token: 0x04002775 RID: 10101
+	// Token: 0x0400365B RID: 13915
 	private bool m_hasStartedSpinkickAchievement;
 
-	// Token: 0x04002776 RID: 10102
+	// Token: 0x0400365C RID: 13916
 	private HashSet<SpinkickAchievementObj> m_spinKickAchievementObjs = new HashSet<SpinkickAchievementObj>();
 }

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000462 RID: 1122
+// Token: 0x02000755 RID: 1877
 public class VoidTrap_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjectileNameArray, ITerrainOnEnterHitResponse, IHitResponse
 {
-	// Token: 0x1700101E RID: 4126
-	// (get) Token: 0x06002961 RID: 10593 RVA: 0x00088DCB File Offset: 0x00086FCB
+	// Token: 0x1700154F RID: 5455
+	// (get) Token: 0x0600395F RID: 14687 RVA: 0x0001F8B1 File Offset: 0x0001DAB1
 	public string[] ProjectileNameArray
 	{
 		get
@@ -22,7 +22,7 @@ public class VoidTrap_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProj
 		}
 	}
 
-	// Token: 0x06002962 RID: 10594 RVA: 0x00088DF0 File Offset: 0x00086FF0
+	// Token: 0x06003960 RID: 14688 RVA: 0x000EAD50 File Offset: 0x000E8F50
 	protected override void Awake()
 	{
 		base.Awake();
@@ -38,7 +38,7 @@ public class VoidTrap_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProj
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x06002963 RID: 10595 RVA: 0x00088EA8 File Offset: 0x000870A8
+	// Token: 0x06003961 RID: 14689 RVA: 0x000EAE08 File Offset: 0x000E9008
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		base.Initialize(hazardArgs);
@@ -55,7 +55,7 @@ public class VoidTrap_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProj
 		this.ResetHazard();
 	}
 
-	// Token: 0x06002964 RID: 10596 RVA: 0x00088EFF File Offset: 0x000870FF
+	// Token: 0x06003962 RID: 14690 RVA: 0x0001F8D5 File Offset: 0x0001DAD5
 	private IEnumerator FireProjectile()
 	{
 		this.m_state = VoidTrap_Hazard.VoidTrapState.Activated;
@@ -83,7 +83,7 @@ public class VoidTrap_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProj
 		yield break;
 	}
 
-	// Token: 0x06002965 RID: 10597 RVA: 0x00088F10 File Offset: 0x00087110
+	// Token: 0x06003963 RID: 14691 RVA: 0x000EAE60 File Offset: 0x000E9060
 	private void FixedUpdate()
 	{
 		if (this.m_state == VoidTrap_Hazard.VoidTrapState.Attacking && this.m_projectileArray[0] != null && this.m_projectileArray[0].isActiveAndEnabled)
@@ -99,7 +99,7 @@ public class VoidTrap_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProj
 		}
 	}
 
-	// Token: 0x06002966 RID: 10598 RVA: 0x00088FA4 File Offset: 0x000871A4
+	// Token: 0x06003964 RID: 14692 RVA: 0x0001F8E4 File Offset: 0x0001DAE4
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (this.m_state == VoidTrap_Hazard.VoidTrapState.Idle)
@@ -108,7 +108,7 @@ public class VoidTrap_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProj
 		}
 	}
 
-	// Token: 0x06002967 RID: 10599 RVA: 0x00088FBC File Offset: 0x000871BC
+	// Token: 0x06003965 RID: 14693 RVA: 0x000EAEF4 File Offset: 0x000E90F4
 	private void StopCarousel()
 	{
 		foreach (Projectile_RL projectile_RL in this.m_projectileArray)
@@ -120,7 +120,7 @@ public class VoidTrap_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProj
 		}
 	}
 
-	// Token: 0x06002968 RID: 10600 RVA: 0x00088FFA File Offset: 0x000871FA
+	// Token: 0x06003966 RID: 14694 RVA: 0x0001F8FB File Offset: 0x0001DAFB
 	public override void ResetHazard()
 	{
 		if (this.m_state == VoidTrap_Hazard.VoidTrapState.Attacking)
@@ -131,52 +131,52 @@ public class VoidTrap_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProj
 		this.m_renderer.color = Color.white;
 	}
 
-	// Token: 0x0600296A RID: 10602 RVA: 0x0008902A File Offset: 0x0008722A
+	// Token: 0x06003968 RID: 14696 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002217 RID: 8727
+	// Token: 0x04002DE8 RID: 11752
 	[SerializeField]
 	private SpriteRenderer m_renderer;
 
-	// Token: 0x04002218 RID: 8728
+	// Token: 0x04002DE9 RID: 11753
 	[SerializeField]
 	private CircleCollider2D m_triggerCollider;
 
-	// Token: 0x04002219 RID: 8729
+	// Token: 0x04002DEA RID: 11754
 	private Projectile_RL[] m_projectileArray;
 
-	// Token: 0x0400221A RID: 8730
+	// Token: 0x04002DEB RID: 11755
 	private GameObject m_carouselGO;
 
-	// Token: 0x0400221B RID: 8731
+	// Token: 0x04002DEC RID: 11756
 	private float m_rotationDiff;
 
-	// Token: 0x0400221C RID: 8732
+	// Token: 0x04002DED RID: 11757
 	private float m_ringRadius;
 
-	// Token: 0x0400221D RID: 8733
+	// Token: 0x04002DEE RID: 11758
 	private VoidTrap_Hazard.VoidTrapState m_state;
 
-	// Token: 0x0400221E RID: 8734
+	// Token: 0x04002DEF RID: 11759
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x0400221F RID: 8735
+	// Token: 0x04002DF0 RID: 11760
 	[NonSerialized]
 	private string[] m_projectileNameArray;
 
-	// Token: 0x02000C6C RID: 3180
+	// Token: 0x02000756 RID: 1878
 	private enum VoidTrapState
 	{
-		// Token: 0x04005066 RID: 20582
+		// Token: 0x04002DF2 RID: 11762
 		Idle,
-		// Token: 0x04005067 RID: 20583
+		// Token: 0x04002DF3 RID: 11763
 		Activated,
-		// Token: 0x04005068 RID: 20584
+		// Token: 0x04002DF4 RID: 11764
 		Attacking,
-		// Token: 0x04005069 RID: 20585
+		// Token: 0x04002DF5 RID: 11765
 		CoolingDown
 	}
 }

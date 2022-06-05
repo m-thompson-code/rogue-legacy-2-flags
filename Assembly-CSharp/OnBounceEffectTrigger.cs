@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000415 RID: 1045
+// Token: 0x020006CD RID: 1741
 public class OnBounceEffectTrigger : BaseEffectTrigger
 {
-	// Token: 0x17000F76 RID: 3958
-	// (get) Token: 0x060026B9 RID: 9913 RVA: 0x00080A43 File Offset: 0x0007EC43
+	// Token: 0x1700143B RID: 5179
+	// (get) Token: 0x0600356E RID: 13678 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool RequiresCollider
 	{
 		get
@@ -14,8 +14,8 @@ public class OnBounceEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x17000F77 RID: 3959
-	// (get) Token: 0x060026BA RID: 9914 RVA: 0x00080A46 File Offset: 0x0007EC46
+	// Token: 0x1700143C RID: 5180
+	// (get) Token: 0x0600356F RID: 13679 RVA: 0x0001D513 File Offset: 0x0001B713
 	public override Vector3 Midpoint
 	{
 		get
@@ -28,7 +28,7 @@ public class OnBounceEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026BB RID: 9915 RVA: 0x00080A68 File Offset: 0x0007EC68
+	// Token: 0x06003570 RID: 13680 RVA: 0x000E10FC File Offset: 0x000DF2FC
 	protected override void Awake()
 	{
 		base.Awake();
@@ -41,7 +41,7 @@ public class OnBounceEffectTrigger : BaseEffectTrigger
 		this.m_triggerBounceEvent = new Action<GameObject>(this.TriggerBounceEvent);
 	}
 
-	// Token: 0x060026BC RID: 9916 RVA: 0x00080AC7 File Offset: 0x0007ECC7
+	// Token: 0x06003571 RID: 13681 RVA: 0x0001D534 File Offset: 0x0001B734
 	private void OnEnable()
 	{
 		if (this.m_bounce)
@@ -50,7 +50,7 @@ public class OnBounceEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026BD RID: 9917 RVA: 0x00080AEE File Offset: 0x0007ECEE
+	// Token: 0x06003572 RID: 13682 RVA: 0x0001D55B File Offset: 0x0001B75B
 	private void OnDisable()
 	{
 		if (this.m_bounce)
@@ -59,7 +59,7 @@ public class OnBounceEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026BE RID: 9918 RVA: 0x00080B14 File Offset: 0x0007ED14
+	// Token: 0x06003573 RID: 13683 RVA: 0x000E115C File Offset: 0x000DF35C
 	private void TriggerBounceEvent(GameObject otherObj)
 	{
 		GameObject root = otherObj.GetRoot(false);
@@ -92,12 +92,12 @@ public class OnBounceEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x040020A4 RID: 8356
+	// Token: 0x04002B87 RID: 11143
 	private IMidpointObj m_midpointObj;
 
-	// Token: 0x040020A5 RID: 8357
+	// Token: 0x04002B88 RID: 11144
 	private BounceCollision m_bounce;
 
-	// Token: 0x040020A6 RID: 8358
+	// Token: 0x04002B89 RID: 11145
 	private Action<GameObject> m_triggerBounceEvent;
 }

@@ -3,12 +3,12 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020002A7 RID: 679
+// Token: 0x0200047B RID: 1147
 public class ParadePortrait : MonoBehaviour
 {
-	// Token: 0x17000C00 RID: 3072
-	// (get) Token: 0x06001A31 RID: 6705 RVA: 0x00052A5F File Offset: 0x00050C5F
-	// (set) Token: 0x06001A32 RID: 6706 RVA: 0x00052A67 File Offset: 0x00050C67
+	// Token: 0x17000F4F RID: 3919
+	// (get) Token: 0x06002448 RID: 9288 RVA: 0x000141F0 File Offset: 0x000123F0
+	// (set) Token: 0x06002449 RID: 9289 RVA: 0x000141F8 File Offset: 0x000123F8
 	public bool LoopAnim
 	{
 		get
@@ -21,9 +21,9 @@ public class ParadePortrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000C01 RID: 3073
-	// (get) Token: 0x06001A33 RID: 6707 RVA: 0x00052A70 File Offset: 0x00050C70
-	// (set) Token: 0x06001A34 RID: 6708 RVA: 0x00052A78 File Offset: 0x00050C78
+	// Token: 0x17000F50 RID: 3920
+	// (get) Token: 0x0600244A RID: 9290 RVA: 0x00014201 File Offset: 0x00012401
+	// (set) Token: 0x0600244B RID: 9291 RVA: 0x00014209 File Offset: 0x00012409
 	public bool RunSimpleAnim
 	{
 		get
@@ -36,8 +36,8 @@ public class ParadePortrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000C02 RID: 3074
-	// (get) Token: 0x06001A35 RID: 6709 RVA: 0x00052A81 File Offset: 0x00050C81
+	// Token: 0x17000F51 RID: 3921
+	// (get) Token: 0x0600244C RID: 9292 RVA: 0x00014212 File Offset: 0x00012412
 	public Animator Animator
 	{
 		get
@@ -46,9 +46,9 @@ public class ParadePortrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000C03 RID: 3075
-	// (get) Token: 0x06001A36 RID: 6710 RVA: 0x00052A89 File Offset: 0x00050C89
-	// (set) Token: 0x06001A37 RID: 6711 RVA: 0x00052A91 File Offset: 0x00050C91
+	// Token: 0x17000F52 RID: 3922
+	// (get) Token: 0x0600244D RID: 9293 RVA: 0x0001421A File Offset: 0x0001241A
+	// (set) Token: 0x0600244E RID: 9294 RVA: 0x00014222 File Offset: 0x00012422
 	public EnemyType EnemyType
 	{
 		get
@@ -61,9 +61,9 @@ public class ParadePortrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000C04 RID: 3076
-	// (get) Token: 0x06001A38 RID: 6712 RVA: 0x00052A9A File Offset: 0x00050C9A
-	// (set) Token: 0x06001A39 RID: 6713 RVA: 0x00052AA2 File Offset: 0x00050CA2
+	// Token: 0x17000F53 RID: 3923
+	// (get) Token: 0x0600244F RID: 9295 RVA: 0x0001422B File Offset: 0x0001242B
+	// (set) Token: 0x06002450 RID: 9296 RVA: 0x00014233 File Offset: 0x00012433
 	public EnemyRank EnemyRank
 	{
 		get
@@ -76,9 +76,9 @@ public class ParadePortrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000C05 RID: 3077
-	// (get) Token: 0x06001A3A RID: 6714 RVA: 0x00052AAB File Offset: 0x00050CAB
-	// (set) Token: 0x06001A3B RID: 6715 RVA: 0x00052AB3 File Offset: 0x00050CB3
+	// Token: 0x17000F54 RID: 3924
+	// (get) Token: 0x06002451 RID: 9297 RVA: 0x0001423C File Offset: 0x0001243C
+	// (set) Token: 0x06002452 RID: 9298 RVA: 0x00014244 File Offset: 0x00012444
 	public GameObject Model
 	{
 		get
@@ -91,8 +91,8 @@ public class ParadePortrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000C06 RID: 3078
-	// (get) Token: 0x06001A3C RID: 6716 RVA: 0x00052ABC File Offset: 0x00050CBC
+	// Token: 0x17000F55 RID: 3925
+	// (get) Token: 0x06002453 RID: 9299 RVA: 0x0001424D File Offset: 0x0001244D
 	public TMP_Text NameText
 	{
 		get
@@ -101,7 +101,7 @@ public class ParadePortrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001A3D RID: 6717 RVA: 0x00052AC4 File Offset: 0x00050CC4
+	// Token: 0x06002454 RID: 9300 RVA: 0x000AF1B4 File Offset: 0x000AD3B4
 	private void Awake()
 	{
 		if (this.m_animator)
@@ -168,7 +168,7 @@ public class ParadePortrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001A3E RID: 6718 RVA: 0x00052CEA File Offset: 0x00050EEA
+	// Token: 0x06002455 RID: 9301 RVA: 0x00014255 File Offset: 0x00012455
 	private IEnumerator AnimateCoroutine()
 	{
 		EffectManager.AddAnimatorToDisableList(this.m_animator);
@@ -206,7 +206,7 @@ public class ParadePortrait : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001A3F RID: 6719 RVA: 0x00052CFC File Offset: 0x00050EFC
+	// Token: 0x06002456 RID: 9302 RVA: 0x000AF3DC File Offset: 0x000AD5DC
 	public void UpdateEnemyType()
 	{
 		EnemyController enemyPrefab = EnemyLibrary.GetEnemyPrefab(this.EnemyType, this.EnemyRank);
@@ -249,72 +249,72 @@ public class ParadePortrait : MonoBehaviour
 		}));
 	}
 
-	// Token: 0x04001898 RID: 6296
+	// Token: 0x04002008 RID: 8200
 	[SerializeField]
 	private EnemyType m_enemyType;
 
-	// Token: 0x04001899 RID: 6297
+	// Token: 0x04002009 RID: 8201
 	[SerializeField]
 	private EnemyRank m_enemyRank;
 
-	// Token: 0x0400189A RID: 6298
+	// Token: 0x0400200A RID: 8202
 	[SerializeField]
 	private TMP_Text m_nameText;
 
-	// Token: 0x0400189B RID: 6299
+	// Token: 0x0400200B RID: 8203
 	[SerializeField]
 	private TMP_Text m_slainByPlayerText;
 
-	// Token: 0x0400189C RID: 6300
+	// Token: 0x0400200C RID: 8204
 	[SerializeField]
 	private TMP_Text m_slainPlayerText;
 
-	// Token: 0x0400189D RID: 6301
+	// Token: 0x0400200D RID: 8205
 	[SerializeField]
 	private Animator m_animator;
 
-	// Token: 0x0400189E RID: 6302
+	// Token: 0x0400200E RID: 8206
 	[SerializeField]
 	private GameObject m_model;
 
-	// Token: 0x0400189F RID: 6303
+	// Token: 0x0400200F RID: 8207
 	[SerializeField]
 	private GameObject m_hiddenGO;
 
-	// Token: 0x040018A0 RID: 6304
+	// Token: 0x04002010 RID: 8208
 	[SerializeField]
 	private ParadePortrait.ParadeAnimatorEntry[] m_paradeAnimatorArray;
 
-	// Token: 0x040018A1 RID: 6305
+	// Token: 0x04002011 RID: 8209
 	[SerializeField]
 	private bool m_runSimpleAnim;
 
-	// Token: 0x040018A2 RID: 6306
+	// Token: 0x04002012 RID: 8210
 	[SerializeField]
 	private string m_startingAnimName;
 
-	// Token: 0x040018A3 RID: 6307
+	// Token: 0x04002013 RID: 8211
 	[SerializeField]
 	private float m_loopDelay = 1f;
 
-	// Token: 0x040018A4 RID: 6308
+	// Token: 0x04002014 RID: 8212
 	[SerializeField]
 	private bool m_loopAnim;
 
-	// Token: 0x040018A5 RID: 6309
+	// Token: 0x04002015 RID: 8213
 	private int m_animatorArrayIndex;
 
-	// Token: 0x02000B4D RID: 2893
+	// Token: 0x0200047C RID: 1148
 	[Serializable]
 	private class ParadeAnimatorEntry
 	{
-		// Token: 0x04004C05 RID: 19461
+		// Token: 0x04002016 RID: 8214
 		public string StateName;
 
-		// Token: 0x04004C06 RID: 19462
+		// Token: 0x04002017 RID: 8215
 		public float AnimSpeed = 1f;
 
-		// Token: 0x04004C07 RID: 19463
+		// Token: 0x04002018 RID: 8216
 		public float ExitHoldDuration;
 	}
 }

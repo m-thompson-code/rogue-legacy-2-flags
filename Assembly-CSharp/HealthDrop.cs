@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000471 RID: 1137
+// Token: 0x02000767 RID: 1895
 public class HealthDrop : BaseItemDrop
 {
-	// Token: 0x1700103F RID: 4159
-	// (get) Token: 0x060029C8 RID: 10696 RVA: 0x00089FC1 File Offset: 0x000881C1
+	// Token: 0x17001574 RID: 5492
+	// (get) Token: 0x060039D2 RID: 14802 RVA: 0x00006732 File Offset: 0x00004932
 	public override ItemDropType ItemDropType
 	{
 		get
@@ -15,14 +15,14 @@ public class HealthDrop : BaseItemDrop
 		}
 	}
 
-	// Token: 0x060029C9 RID: 10697 RVA: 0x00089FC5 File Offset: 0x000881C5
+	// Token: 0x060039D3 RID: 14803 RVA: 0x0001FC98 File Offset: 0x0001DE98
 	protected override void Collect(GameObject collector)
 	{
 		this.GainHealth(0f);
 		base.Collect(collector);
 	}
 
-	// Token: 0x060029CA RID: 10698 RVA: 0x00089FDC File Offset: 0x000881DC
+	// Token: 0x060039D4 RID: 14804 RVA: 0x000EBD14 File Offset: 0x000E9F14
 	protected virtual void GainHealth(float hpGain = 0f)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -87,7 +87,7 @@ public class HealthDrop : BaseItemDrop
 		}
 	}
 
-	// Token: 0x060029CB RID: 10699 RVA: 0x0008A280 File Offset: 0x00088480
+	// Token: 0x060039D5 RID: 14805 RVA: 0x000EBFB8 File Offset: 0x000EA1B8
 	public static void IncrementFoodChallengeRelicCounter(MonoBehaviour itemDrop)
 	{
 		RelicObj relic = SaveManager.PlayerSaveData.GetRelic(RelicType.FoodChallenge);
@@ -109,9 +109,9 @@ public class HealthDrop : BaseItemDrop
 		}
 	}
 
-	// Token: 0x04002247 RID: 8775
+	// Token: 0x04002E23 RID: 11811
 	private static MaxHealthChangeEventArgs m_healthChangeArgs_STATIC = new MaxHealthChangeEventArgs(0f, 0f);
 
-	// Token: 0x04002248 RID: 8776
+	// Token: 0x04002E24 RID: 11812
 	private static RelicChangedEventArgs m_relicChangedEventArgs_STATIC = new RelicChangedEventArgs(RelicType.None);
 }

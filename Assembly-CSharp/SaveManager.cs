@@ -13,11 +13,11 @@ using RLAudio;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020006AD RID: 1709
+// Token: 0x02000B4B RID: 2891
 public class SaveManager : MonoBehaviour
 {
-	// Token: 0x17001579 RID: 5497
-	// (get) Token: 0x06003EA7 RID: 16039 RVA: 0x000DD15A File Offset: 0x000DB35A
+	// Token: 0x17001D63 RID: 7523
+	// (get) Token: 0x060057A5 RID: 22437 RVA: 0x0002FB2B File Offset: 0x0002DD2B
 	private static SaveManager Instance
 	{
 		get
@@ -26,9 +26,9 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700157A RID: 5498
-	// (get) Token: 0x06003EA8 RID: 16040 RVA: 0x000DD161 File Offset: 0x000DB361
-	// (set) Token: 0x06003EA9 RID: 16041 RVA: 0x000DD168 File Offset: 0x000DB368
+	// Token: 0x17001D64 RID: 7524
+	// (get) Token: 0x060057A6 RID: 22438 RVA: 0x0002FB32 File Offset: 0x0002DD32
+	// (set) Token: 0x060057A7 RID: 22439 RVA: 0x0002FB39 File Offset: 0x0002DD39
 	public static bool IsRunning
 	{
 		get
@@ -41,23 +41,23 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700157B RID: 5499
-	// (get) Token: 0x06003EAA RID: 16042 RVA: 0x000DD170 File Offset: 0x000DB370
-	// (set) Token: 0x06003EAB RID: 16043 RVA: 0x000DD177 File Offset: 0x000DB377
+	// Token: 0x17001D65 RID: 7525
+	// (get) Token: 0x060057A8 RID: 22440 RVA: 0x0002FB41 File Offset: 0x0002DD41
+	// (set) Token: 0x060057A9 RID: 22441 RVA: 0x0002FB48 File Offset: 0x0002DD48
 	public static bool LoadingFailed { get; set; }
 
-	// Token: 0x1700157C RID: 5500
-	// (get) Token: 0x06003EAC RID: 16044 RVA: 0x000DD17F File Offset: 0x000DB37F
-	// (set) Token: 0x06003EAD RID: 16045 RVA: 0x000DD186 File Offset: 0x000DB386
+	// Token: 0x17001D66 RID: 7526
+	// (get) Token: 0x060057AA RID: 22442 RVA: 0x0002FB50 File Offset: 0x0002DD50
+	// (set) Token: 0x060057AB RID: 22443 RVA: 0x0002FB57 File Offset: 0x0002DD57
 	public static float TimeSinceLastSave { get; private set; }
 
-	// Token: 0x1700157D RID: 5501
-	// (get) Token: 0x06003EAE RID: 16046 RVA: 0x000DD18E File Offset: 0x000DB38E
-	// (set) Token: 0x06003EAF RID: 16047 RVA: 0x000DD195 File Offset: 0x000DB395
+	// Token: 0x17001D67 RID: 7527
+	// (get) Token: 0x060057AC RID: 22444 RVA: 0x0002FB5F File Offset: 0x0002DD5F
+	// (set) Token: 0x060057AD RID: 22445 RVA: 0x0002FB66 File Offset: 0x0002DD66
 	private static int FrameCountSinceLastSave { get; set; }
 
-	// Token: 0x1700157E RID: 5502
-	// (get) Token: 0x06003EB0 RID: 16048 RVA: 0x000DD19D File Offset: 0x000DB39D
+	// Token: 0x17001D68 RID: 7528
+	// (get) Token: 0x060057AE RID: 22446 RVA: 0x0002FB6E File Offset: 0x0002DD6E
 	public static int CurrentProfile
 	{
 		get
@@ -66,32 +66,32 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700157F RID: 5503
-	// (get) Token: 0x06003EB1 RID: 16049 RVA: 0x000DD1A9 File Offset: 0x000DB3A9
-	// (set) Token: 0x06003EB2 RID: 16050 RVA: 0x000DD1B0 File Offset: 0x000DB3B0
+	// Token: 0x17001D69 RID: 7529
+	// (get) Token: 0x060057AF RID: 22447 RVA: 0x0002FB7A File Offset: 0x0002DD7A
+	// (set) Token: 0x060057B0 RID: 22448 RVA: 0x0002FB81 File Offset: 0x0002DD81
 	public static bool DisableSaving { get; set; }
 
-	// Token: 0x17001580 RID: 5504
-	// (get) Token: 0x06003EB3 RID: 16051 RVA: 0x000DD1B8 File Offset: 0x000DB3B8
-	// (set) Token: 0x06003EB4 RID: 16052 RVA: 0x000DD1BF File Offset: 0x000DB3BF
+	// Token: 0x17001D6A RID: 7530
+	// (get) Token: 0x060057B1 RID: 22449 RVA: 0x0002FB89 File Offset: 0x0002DD89
+	// (set) Token: 0x060057B2 RID: 22450 RVA: 0x0002FB90 File Offset: 0x0002DD90
 	public static bool IsCopyingBackupFiles { get; set; }
 
-	// Token: 0x17001581 RID: 5505
-	// (get) Token: 0x06003EB5 RID: 16053 RVA: 0x000DD1C7 File Offset: 0x000DB3C7
-	// (set) Token: 0x06003EB6 RID: 16054 RVA: 0x000DD1CF File Offset: 0x000DB3CF
+	// Token: 0x17001D6B RID: 7531
+	// (get) Token: 0x060057B3 RID: 22451 RVA: 0x0002FB98 File Offset: 0x0002DD98
+	// (set) Token: 0x060057B4 RID: 22452 RVA: 0x0002FBA0 File Offset: 0x0002DDA0
 	private BinaryFormatter BinaryFormatter { get; set; }
 
-	// Token: 0x17001582 RID: 5506
-	// (get) Token: 0x06003EB7 RID: 16055 RVA: 0x000DD1D8 File Offset: 0x000DB3D8
-	// (set) Token: 0x06003EB8 RID: 16056 RVA: 0x000DD1DF File Offset: 0x000DB3DF
+	// Token: 0x17001D6C RID: 7532
+	// (get) Token: 0x060057B5 RID: 22453 RVA: 0x0002FBA9 File Offset: 0x0002DDA9
+	// (set) Token: 0x060057B6 RID: 22454 RVA: 0x0002FBB0 File Offset: 0x0002DDB0
 	private static CultureInfo ForcedCulture { get; set; }
 
-	// Token: 0x17001583 RID: 5507
-	// (get) Token: 0x06003EB9 RID: 16057 RVA: 0x000DD1E7 File Offset: 0x000DB3E7
-	// (set) Token: 0x06003EBA RID: 16058 RVA: 0x000DD1EF File Offset: 0x000DB3EF
+	// Token: 0x17001D6D RID: 7533
+	// (get) Token: 0x060057B7 RID: 22455 RVA: 0x0002FBB8 File Offset: 0x0002DDB8
+	// (set) Token: 0x060057B8 RID: 22456 RVA: 0x0002FBC0 File Offset: 0x0002DDC0
 	private bool Internal_IsInitialized { get; set; }
 
-	// Token: 0x06003EBB RID: 16059 RVA: 0x000DD1F8 File Offset: 0x000DB3F8
+	// Token: 0x060057B9 RID: 22457 RVA: 0x0014D4A4 File Offset: 0x0014B6A4
 	private static string GetSaveDirectoryPath(int profileSlot, bool getBackupDirectory)
 	{
 		string text = SaveFileSystem.PersistentDataPath;
@@ -114,7 +114,7 @@ public class SaveManager : MonoBehaviour
 		return text;
 	}
 
-	// Token: 0x06003EBC RID: 16060 RVA: 0x000DD268 File Offset: 0x000DB468
+	// Token: 0x060057BA RID: 22458 RVA: 0x0014D514 File Offset: 0x0014B714
 	private static void CreateBaseSaveDirectories()
 	{
 		string text = SaveFileSystem.PersistentDataPath;
@@ -141,7 +141,7 @@ public class SaveManager : MonoBehaviour
 		Debug.Log("Created base save directories");
 	}
 
-	// Token: 0x06003EBD RID: 16061 RVA: 0x000DD300 File Offset: 0x000DB500
+	// Token: 0x060057BB RID: 22459 RVA: 0x0014D5AC File Offset: 0x0014B7AC
 	private static string GetFullFilePath(int profileSlot, SaveDataType saveType, bool useBackupFileName)
 	{
 		string saveDirectoryPath = SaveManager.GetSaveDirectoryPath(profileSlot, useBackupFileName);
@@ -158,7 +158,7 @@ public class SaveManager : MonoBehaviour
 		return Path.Combine(saveDirectoryPath, path);
 	}
 
-	// Token: 0x06003EBE RID: 16062 RVA: 0x000DD370 File Offset: 0x000DB570
+	// Token: 0x060057BC RID: 22460 RVA: 0x0014D61C File Offset: 0x0014B81C
 	private List<string> GetBackupFullFilePathes(int profileSlot, SaveDataType saveType)
 	{
 		List<string> list = this.m_backFilePathsArray[profileSlot];
@@ -179,7 +179,7 @@ public class SaveManager : MonoBehaviour
 		return this.m_backupFilesListHelper;
 	}
 
-	// Token: 0x06003EBF RID: 16063 RVA: 0x000DD41C File Offset: 0x000DB61C
+	// Token: 0x060057BD RID: 22461 RVA: 0x0014D6C8 File Offset: 0x0014B8C8
 	private bool IsValidBackupPath(string path, string saveTypeString)
 	{
 		if (!path.Contains(saveTypeString))
@@ -196,7 +196,7 @@ public class SaveManager : MonoBehaviour
 		return DateTime.TryParseExact(path.Substring(num - length, length), "dd_MM_yyyy__HH_mm_ss", SaveManager.ForcedCulture, DateTimeStyles.None, out dateTime);
 	}
 
-	// Token: 0x06003EC0 RID: 16064 RVA: 0x000DD476 File Offset: 0x000DB676
+	// Token: 0x060057BE RID: 22462 RVA: 0x0002FBC9 File Offset: 0x0002DDC9
 	private void Awake()
 	{
 		if (SaveManager.m_instance == null)
@@ -207,7 +207,7 @@ public class SaveManager : MonoBehaviour
 		throw new Exception("SaveManager has been instantiated twice.  This should never happen");
 	}
 
-	// Token: 0x06003EC1 RID: 16065 RVA: 0x000DD496 File Offset: 0x000DB696
+	// Token: 0x060057BF RID: 22463 RVA: 0x0002FBE9 File Offset: 0x0002DDE9
 	private IEnumerator Start()
 	{
 		while (StoreAPIManager.InitState != StoreAPIManager.StoreInitState.Succeeded)
@@ -219,13 +219,13 @@ public class SaveManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003EC2 RID: 16066 RVA: 0x000DD49E File Offset: 0x000DB69E
+	// Token: 0x060057C0 RID: 22464 RVA: 0x0002FBF1 File Offset: 0x0002DDF1
 	public static void SetCultureInfo(CultureInfo cultureInfo)
 	{
 		SaveManager.ForcedCulture = cultureInfo;
 	}
 
-	// Token: 0x06003EC3 RID: 16067 RVA: 0x000DD4A8 File Offset: 0x000DB6A8
+	// Token: 0x060057C1 RID: 22465 RVA: 0x0014D724 File Offset: 0x0014B924
 	private void Initialize()
 	{
 		this.BinaryFormatter = new BinaryFormatter();
@@ -252,7 +252,7 @@ public class SaveManager : MonoBehaviour
 		this.Internal_IsInitialized = true;
 	}
 
-	// Token: 0x06003EC4 RID: 16068 RVA: 0x000DD588 File Offset: 0x000DB788
+	// Token: 0x060057C2 RID: 22466 RVA: 0x0014D804 File Offset: 0x0014BA04
 	private static void CreateSaveDirectoriesIfNeeded()
 	{
 		if (!SaveManager.Instance.m_checkedForSaveDirectories)
@@ -277,7 +277,7 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003EC5 RID: 16069 RVA: 0x000DD600 File Offset: 0x000DB800
+	// Token: 0x060057C3 RID: 22467 RVA: 0x0014D87C File Offset: 0x0014BA7C
 	private void OnAwakeLoadConfig()
 	{
 		if (!SaveManager.IsConfigFileLoaded)
@@ -299,7 +299,7 @@ public class SaveManager : MonoBehaviour
 		SaveManager.LoadProfileConfigFile();
 	}
 
-	// Token: 0x06003EC6 RID: 16070 RVA: 0x000DD6B4 File Offset: 0x000DB8B4
+	// Token: 0x060057C4 RID: 22468 RVA: 0x0014D930 File Offset: 0x0014BB30
 	public static void LoadCurrentProfileData()
 	{
 		SaveManager.IsRunning = true;
@@ -329,7 +329,7 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003EC7 RID: 16071 RVA: 0x000DD736 File Offset: 0x000DB936
+	// Token: 0x060057C5 RID: 22469 RVA: 0x0002FBF9 File Offset: 0x0002DDF9
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.WorldCreationComplete, this.m_onWorldCreationComplete_UpdateSaveData);
@@ -337,7 +337,7 @@ public class SaveManager : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.BiomeCreationComplete, this.m_onBiomeCreationComplete_UpdateSaveData);
 	}
 
-	// Token: 0x06003EC8 RID: 16072 RVA: 0x000DD760 File Offset: 0x000DB960
+	// Token: 0x060057C6 RID: 22470 RVA: 0x0014D9B4 File Offset: 0x0014BBB4
 	private void OnBiomeCreationComplete_UpdateSaveData(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		BiomeEventArgs biomeEventArgs = eventArgs as BiomeEventArgs;
@@ -347,7 +347,7 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003EC9 RID: 16073 RVA: 0x000DD788 File Offset: 0x000DB988
+	// Token: 0x060057C7 RID: 22471 RVA: 0x0014D9DC File Offset: 0x0014BBDC
 	private void OnWorldCreationComplete_UpdateSaveData(MonoBehaviour sender, EventArgs args)
 	{
 		SaveManager.PlayerSaveData.HasStartedGame = true;
@@ -508,7 +508,7 @@ public class SaveManager : MonoBehaviour
 		MapController.LoadStageSaveData();
 	}
 
-	// Token: 0x06003ECA RID: 16074 RVA: 0x000DDEA0 File Offset: 0x000DC0A0
+	// Token: 0x060057C8 RID: 22472 RVA: 0x0014E0F4 File Offset: 0x0014C2F4
 	private void OnLevelEditorWorldCreationComplete(MonoBehaviour sender, EventArgs args)
 	{
 		LevelEditorWorldCreationCompleteEventArgs levelEditorWorldCreationCompleteEventArgs = args as LevelEditorWorldCreationCompleteEventArgs;
@@ -519,7 +519,7 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003ECB RID: 16075 RVA: 0x000DDEF8 File Offset: 0x000DC0F8
+	// Token: 0x060057C9 RID: 22473 RVA: 0x0014E14C File Offset: 0x0014C34C
 	private static void CreateSaveFile(SaveFileSystem.SaveBatch saveBatch, string fileNameAndPath, object saveObject, BinaryFormatter binaryFormatter)
 	{
 		try
@@ -535,7 +535,7 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003ECC RID: 16076 RVA: 0x000DDF58 File Offset: 0x000DC158
+	// Token: 0x060057CA RID: 22474 RVA: 0x0014E1AC File Offset: 0x0014C3AC
 	private void SaveFileAsync(SaveFileSystem.SaveBatch saveBatch, int profileSlot, SaveDataType saveType, bool saveBackup, object saveObject = null)
 	{
 		if (saveObject == null)
@@ -565,7 +565,7 @@ public class SaveManager : MonoBehaviour
 		SaveManager.m_lastAsyncTask = this.SaveAsync(lastAsyncTask, saveBatch, fullFilePath, profileSlot, saveType, saveBackup, saveObject);
 	}
 
-	// Token: 0x06003ECD RID: 16077 RVA: 0x000DDFE0 File Offset: 0x000DC1E0
+	// Token: 0x060057CB RID: 22475 RVA: 0x0014E234 File Offset: 0x0014C434
 	private Task SaveAsync(Task lastAsyncTask, SaveFileSystem.SaveBatch saveBatch, string filePath, int profileSlot, SaveDataType saveType, bool saveBackup, object saveObject)
 	{
 		SaveManager.<SaveAsync>d__81 <SaveAsync>d__;
@@ -584,7 +584,7 @@ public class SaveManager : MonoBehaviour
 		return <SaveAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06003ECE RID: 16078 RVA: 0x000DE064 File Offset: 0x000DC264
+	// Token: 0x060057CC RID: 22476 RVA: 0x0014E2B8 File Offset: 0x0014C4B8
 	private void DeleteOldBackups(SaveFileSystem.SaveBatch saveBatch, int profileSlot, SaveDataType saveType)
 	{
 		List<string> backupFullFilePathes = this.GetBackupFullFilePathes(profileSlot, saveType);
@@ -602,7 +602,7 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003ECF RID: 16079 RVA: 0x000DE0F4 File Offset: 0x000DC2F4
+	// Token: 0x060057CD RID: 22477 RVA: 0x0014E348 File Offset: 0x0014C548
 	private int DateTimeComparator(string fileA, string fileB)
 	{
 		DateTime t = SaveManager.PathToDateTime(fileA);
@@ -610,7 +610,7 @@ public class SaveManager : MonoBehaviour
 		return DateTime.Compare(t, t2);
 	}
 
-	// Token: 0x06003ED0 RID: 16080 RVA: 0x000DE114 File Offset: 0x000DC314
+	// Token: 0x060057CE RID: 22478 RVA: 0x0014E368 File Offset: 0x0014C568
 	public static DateTime PathToDateTime(string filePath)
 	{
 		int length = "dd_MM_yyyy__HH_mm_ss".Length;
@@ -618,7 +618,7 @@ public class SaveManager : MonoBehaviour
 		return DateTime.ParseExact(filePath.Substring(num - length, length), "dd_MM_yyyy__HH_mm_ss", SaveManager.ForcedCulture);
 	}
 
-	// Token: 0x06003ED1 RID: 16081 RVA: 0x000DE154 File Offset: 0x000DC354
+	// Token: 0x060057CF RID: 22479 RVA: 0x0014E3A8 File Offset: 0x0014C5A8
 	private static LOAD_RESULT LoadFile(string filePath, out object output, BinaryFormatter binaryFormatter)
 	{
 		output = null;
@@ -697,13 +697,13 @@ public class SaveManager : MonoBehaviour
 		return LOAD_RESULT.NO_FILE_FOUND_UNKNOWN;
 	}
 
-	// Token: 0x06003ED2 RID: 16082 RVA: 0x000DE324 File Offset: 0x000DC524
+	// Token: 0x060057D0 RID: 22480 RVA: 0x0002FC20 File Offset: 0x0002DE20
 	public static void ForceInitialize()
 	{
 		bool isInitialized = SaveManager.IsInitialized;
 	}
 
-	// Token: 0x06003ED3 RID: 16083 RVA: 0x000DE32C File Offset: 0x000DC52C
+	// Token: 0x060057D1 RID: 22481 RVA: 0x0002FC28 File Offset: 0x0002DE28
 	public static bool DoesSaveExist(int profileSlot, SaveDataType saveType, bool checkForBackup)
 	{
 		if (!checkForBackup)
@@ -713,8 +713,8 @@ public class SaveManager : MonoBehaviour
 		return SaveManager.Instance.GetBackupFullFilePathes(profileSlot, saveType).Count > 0;
 	}
 
-	// Token: 0x17001584 RID: 5508
-	// (get) Token: 0x06003ED4 RID: 16084 RVA: 0x000DE353 File Offset: 0x000DC553
+	// Token: 0x17001D6E RID: 7534
+	// (get) Token: 0x060057D2 RID: 22482 RVA: 0x0002FC4F File Offset: 0x0002DE4F
 	public static CultureInfo CultureInfo
 	{
 		get
@@ -723,8 +723,8 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001585 RID: 5509
-	// (get) Token: 0x06003ED5 RID: 16085 RVA: 0x000DE35A File Offset: 0x000DC55A
+	// Token: 0x17001D6F RID: 7535
+	// (get) Token: 0x060057D3 RID: 22483 RVA: 0x0002FC56 File Offset: 0x0002DE56
 	public static bool IsInitialized
 	{
 		get
@@ -733,19 +733,19 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003ED6 RID: 16086 RVA: 0x000DE366 File Offset: 0x000DC566
+	// Token: 0x060057D4 RID: 22484 RVA: 0x0002FC62 File Offset: 0x0002DE62
 	public static List<string> GetBackupPathes(int profileSlot, SaveDataType saveType)
 	{
 		return SaveManager.Instance.GetBackupFullFilePathes(profileSlot, saveType);
 	}
 
-	// Token: 0x06003ED7 RID: 16087 RVA: 0x000DE374 File Offset: 0x000DC574
+	// Token: 0x060057D5 RID: 22485 RVA: 0x0002FC70 File Offset: 0x0002DE70
 	public static void SaveCurrentProfileGameData(SaveFileSystem.SaveBatch saveBatch, SaveDataType saveType, SavingType backupType, bool ignoreTimeRestriction, object saveObject = null)
 	{
 		SaveManager.SaveGameData(saveBatch, SaveManager.CurrentProfile, saveType, backupType, ignoreTimeRestriction, saveObject);
 	}
 
-	// Token: 0x06003ED8 RID: 16088 RVA: 0x000DE386 File Offset: 0x000DC586
+	// Token: 0x060057D6 RID: 22486 RVA: 0x0002FC82 File Offset: 0x0002DE82
 	public static void SaveCurrentProfileGameData(SaveDataType saveType, SavingType backupType, bool ignoreTimeRestriction, object saveObject = null)
 	{
 		SaveFileSystem.SaveBatch saveBatch = SaveFileSystem.BeginSaveBatch(SaveManager.CurrentProfile);
@@ -753,7 +753,7 @@ public class SaveManager : MonoBehaviour
 		saveBatch.End();
 	}
 
-	// Token: 0x06003ED9 RID: 16089 RVA: 0x000DE3A4 File Offset: 0x000DC5A4
+	// Token: 0x060057D7 RID: 22487 RVA: 0x0014E578 File Offset: 0x0014C778
 	public static void SaveAllCurrentProfileGameData(SavingType savingType, bool saveStageData, bool ignoreTimeRestriction)
 	{
 		SaveFileSystem.SaveBatch saveBatch = SaveFileSystem.BeginSaveBatch(SaveManager.CurrentProfile);
@@ -768,7 +768,7 @@ public class SaveManager : MonoBehaviour
 		saveBatch.End();
 	}
 
-	// Token: 0x06003EDA RID: 16090 RVA: 0x000DE3F8 File Offset: 0x000DC5F8
+	// Token: 0x060057D8 RID: 22488 RVA: 0x0014E5CC File Offset: 0x0014C7CC
 	private static void SaveGameData(SaveFileSystem.SaveBatch saveBatch, int profileSlot, SaveDataType saveType, SavingType backupType, bool ignoreTimeRestriction, object saveObject = null)
 	{
 		if (SaveManager.DisableSaving)
@@ -824,7 +824,7 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003EDB RID: 16091 RVA: 0x000DE511 File Offset: 0x000DC711
+	// Token: 0x060057D9 RID: 22489 RVA: 0x0002FC9D File Offset: 0x0002DE9D
 	public static void CreateNewSaveData()
 	{
 		SaveManager.PlayerSaveData = new global::PlayerSaveData();
@@ -833,7 +833,7 @@ public class SaveManager : MonoBehaviour
 		SaveManager.ModeSaveData = new ModeSaveData();
 	}
 
-	// Token: 0x06003EDC RID: 16092 RVA: 0x000DE53C File Offset: 0x000DC73C
+	// Token: 0x060057DA RID: 22490 RVA: 0x0014E6E8 File Offset: 0x0014C8E8
 	public static LOAD_RESULT LoadGameDataAndUpdate(int profileSlot, SaveDataType saveType)
 	{
 		object obj = null;
@@ -886,19 +886,19 @@ public class SaveManager : MonoBehaviour
 		return load_RESULT;
 	}
 
-	// Token: 0x06003EDD RID: 16093 RVA: 0x000DE5F7 File Offset: 0x000DC7F7
+	// Token: 0x060057DB RID: 22491 RVA: 0x0002FCC7 File Offset: 0x0002DEC7
 	public static LOAD_RESULT LoadGameDataByFilePath(string filePath, out object loadDataOutput)
 	{
 		return SaveManager.LoadFile(filePath, out loadDataOutput, SaveManager.Instance.BinaryFormatter);
 	}
 
-	// Token: 0x06003EDE RID: 16094 RVA: 0x000DE60A File Offset: 0x000DC80A
+	// Token: 0x060057DC RID: 22492 RVA: 0x0002FCDA File Offset: 0x0002DEDA
 	public static LOAD_RESULT LoadGameData(int profileSlot, SaveDataType saveType, out object loadDataOutput)
 	{
 		return SaveManager.LoadFile(SaveManager.GetFullFilePath(profileSlot, saveType, false), out loadDataOutput, SaveManager.Instance.BinaryFormatter);
 	}
 
-	// Token: 0x06003EDF RID: 16095 RVA: 0x000DE624 File Offset: 0x000DC824
+	// Token: 0x060057DD RID: 22493 RVA: 0x0014E7A4 File Offset: 0x0014C9A4
 	public static LOAD_RESULT LoadAllGameData(int profileSlot)
 	{
 		LOAD_RESULT load_RESULT = SaveManager.LoadGameDataAndUpdate(profileSlot, SaveDataType.GameMode);
@@ -943,14 +943,14 @@ public class SaveManager : MonoBehaviour
 		return LOAD_RESULT.OK;
 	}
 
-	// Token: 0x06003EE0 RID: 16096 RVA: 0x000DE77C File Offset: 0x000DC97C
+	// Token: 0x060057DE RID: 22494 RVA: 0x0014E8FC File Offset: 0x0014CAFC
 	public static LOAD_RESULT LoadGameDataViaEditor(int profileSlot, SaveDataType saveType, out object loadDataOutput)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
 		return SaveManager.LoadFile(SaveManager.GetFullFilePath(profileSlot, saveType, false), out loadDataOutput, binaryFormatter);
 	}
 
-	// Token: 0x06003EE1 RID: 16097 RVA: 0x000DE7A0 File Offset: 0x000DC9A0
+	// Token: 0x060057DF RID: 22495 RVA: 0x0014E920 File Offset: 0x0014CB20
 	public static void SaveGameDataViaEditor(int profileSlot, SaveDataType saveType, object saveObject)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -958,7 +958,7 @@ public class SaveManager : MonoBehaviour
 		SaveManager.CreateSaveFile(new SaveFileSystem.SaveBatch(), fullFilePath, saveObject, binaryFormatter);
 	}
 
-	// Token: 0x06003EE2 RID: 16098 RVA: 0x000DE7CC File Offset: 0x000DC9CC
+	// Token: 0x060057E0 RID: 22496 RVA: 0x0014E94C File Offset: 0x0014CB4C
 	public static void DeleteSaveFile(SaveFileSystem.SaveBatch saveBatch, int profileSlot, SaveDataType saveType)
 	{
 		string fullFilePath = SaveManager.GetFullFilePath(profileSlot, saveType, false);
@@ -969,12 +969,12 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001586 RID: 5510
-	// (get) Token: 0x06003EE3 RID: 16099 RVA: 0x000DE819 File Offset: 0x000DCA19
-	// (set) Token: 0x06003EE4 RID: 16100 RVA: 0x000DE820 File Offset: 0x000DCA20
+	// Token: 0x17001D70 RID: 7536
+	// (get) Token: 0x060057E1 RID: 22497 RVA: 0x0002FCF4 File Offset: 0x0002DEF4
+	// (set) Token: 0x060057E2 RID: 22498 RVA: 0x0002FCFB File Offset: 0x0002DEFB
 	public static bool IsConfigFileLoaded { get; private set; }
 
-	// Token: 0x06003EE5 RID: 16101 RVA: 0x000DE828 File Offset: 0x000DCA28
+	// Token: 0x060057E3 RID: 22499 RVA: 0x0014E99C File Offset: 0x0014CB9C
 	public static void SaveConfigFile()
 	{
 		SaveManager.CreateSaveDirectoriesIfNeeded();
@@ -1044,7 +1044,7 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003EE6 RID: 16102 RVA: 0x000DED64 File Offset: 0x000DCF64
+	// Token: 0x060057E4 RID: 22500 RVA: 0x0014EED8 File Offset: 0x0014D0D8
 	public static string GetConfigPath()
 	{
 		string path = Path.Combine(SaveFileSystem.PersistentDataPath, "Saves");
@@ -1052,7 +1052,7 @@ public class SaveManager : MonoBehaviour
 		return Path.Combine(Path.Combine(path, platformDirectoryName), "GameConfig.ini");
 	}
 
-	// Token: 0x06003EE7 RID: 16103 RVA: 0x000DED98 File Offset: 0x000DCF98
+	// Token: 0x060057E5 RID: 22501 RVA: 0x0014EF0C File Offset: 0x0014D10C
 	public static void LoadConfigFile()
 	{
 		string configPath = SaveManager.GetConfigPath();
@@ -1351,14 +1351,14 @@ public class SaveManager : MonoBehaviour
 		SaveManager.IsConfigFileLoaded = true;
 	}
 
-	// Token: 0x06003EE8 RID: 16104 RVA: 0x000DF70C File Offset: 0x000DD90C
+	// Token: 0x060057E6 RID: 22502 RVA: 0x0002FD03 File Offset: 0x0002DF03
 	public static void SaveAllControllerMaps()
 	{
 		SaveManager.SaveControllerMap(false);
 		SaveManager.SaveControllerMap(true);
 	}
 
-	// Token: 0x06003EE9 RID: 16105 RVA: 0x000DF71C File Offset: 0x000DD91C
+	// Token: 0x060057E7 RID: 22503 RVA: 0x0014F880 File Offset: 0x0014DA80
 	public static void SaveControllerMap(bool saveGamepad)
 	{
 		int mapCategoryID = Rewired_RL.GetMapCategoryID(Rewired_RL.MapCategoryType.ActionRemappable);
@@ -1390,7 +1390,7 @@ public class SaveManager : MonoBehaviour
 		Debug.Log("<color=yellow>Failed to save Gamepad controller map. No viable Gamepad connected.</color>");
 	}
 
-	// Token: 0x06003EEA RID: 16106 RVA: 0x000DF83C File Offset: 0x000DDA3C
+	// Token: 0x060057E8 RID: 22504 RVA: 0x0014F9A0 File Offset: 0x0014DBA0
 	private static void SaveMapToXML(ControllerMap controllerMap, string mapPrependID)
 	{
 		SaveManager.CreateSaveDirectoriesIfNeeded();
@@ -1423,7 +1423,7 @@ public class SaveManager : MonoBehaviour
 		Debug.Log("<color=green>Controller Map " + str + " saved successfully.</color>");
 	}
 
-	// Token: 0x06003EEB RID: 16107 RVA: 0x000DF8FC File Offset: 0x000DDAFC
+	// Token: 0x060057E9 RID: 22505 RVA: 0x0014FA60 File Offset: 0x0014DC60
 	private static string GetControllerPath(string mapPrependID)
 	{
 		string path = SaveFileSystem.PersistentDataPath;
@@ -1439,7 +1439,7 @@ public class SaveManager : MonoBehaviour
 		return Path.Combine(path, path2);
 	}
 
-	// Token: 0x06003EEC RID: 16108 RVA: 0x000DF954 File Offset: 0x000DDB54
+	// Token: 0x060057EA RID: 22506 RVA: 0x0014FAB8 File Offset: 0x0014DCB8
 	public static void LoadAllControllerMaps()
 	{
 		SaveManager.LoadControllerMap(false, 0);
@@ -1456,7 +1456,7 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003EED RID: 16109 RVA: 0x000DF9D0 File Offset: 0x000DDBD0
+	// Token: 0x060057EB RID: 22507 RVA: 0x0014FB34 File Offset: 0x0014DD34
 	public static void LoadControllerMap(bool loadGamepad, int controllerID = 0)
 	{
 		int mapCategoryID = Rewired_RL.GetMapCategoryID(Rewired_RL.MapCategoryType.ActionRemappable);
@@ -1480,7 +1480,7 @@ public class SaveManager : MonoBehaviour
 		SaveManager.LoadMapFromXML(map6, "GamepadWindow");
 	}
 
-	// Token: 0x06003EEE RID: 16110 RVA: 0x000DFAC0 File Offset: 0x000DDCC0
+	// Token: 0x060057EC RID: 22508 RVA: 0x0014FC24 File Offset: 0x0014DE24
 	private static void LoadMapFromXML(ControllerMap controllerMap, string mapPrependID)
 	{
 		string controllerPath = SaveManager.GetControllerPath(mapPrependID);
@@ -1516,12 +1516,12 @@ public class SaveManager : MonoBehaviour
 		Debug.Log("<color=green>Controller Map " + str + " loaded successfully.</color>");
 	}
 
-	// Token: 0x17001587 RID: 5511
-	// (get) Token: 0x06003EEF RID: 16111 RVA: 0x000DFBBC File Offset: 0x000DDDBC
-	// (set) Token: 0x06003EF0 RID: 16112 RVA: 0x000DFBC3 File Offset: 0x000DDDC3
+	// Token: 0x17001D71 RID: 7537
+	// (get) Token: 0x060057ED RID: 22509 RVA: 0x0002FD11 File Offset: 0x0002DF11
+	// (set) Token: 0x060057EE RID: 22510 RVA: 0x0002FD18 File Offset: 0x0002DF18
 	public static bool IsProfileConfigFileLoaded { get; private set; }
 
-	// Token: 0x06003EF1 RID: 16113 RVA: 0x000DFBCC File Offset: 0x000DDDCC
+	// Token: 0x060057EF RID: 22511 RVA: 0x0014FD20 File Offset: 0x0014DF20
 	public static void LoadProfileConfigFile()
 	{
 		string text = SaveManager.GetSaveDirectoryPath(SaveManager.CurrentProfile, false);
@@ -1615,7 +1615,7 @@ public class SaveManager : MonoBehaviour
 		SaveManager.IsProfileConfigFileLoaded = true;
 	}
 
-	// Token: 0x06003EF2 RID: 16114 RVA: 0x000DFE74 File Offset: 0x000DE074
+	// Token: 0x060057F0 RID: 22512 RVA: 0x0014FFC8 File Offset: 0x0014E1C8
 	public static void SaveProfileConfigFile()
 	{
 		string text = SaveManager.GetSaveDirectoryPath(SaveManager.CurrentProfile, false);
@@ -1647,12 +1647,12 @@ public class SaveManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001588 RID: 5512
-	// (get) Token: 0x06003EF3 RID: 16115 RVA: 0x000E0020 File Offset: 0x000DE220
-	// (set) Token: 0x06003EF4 RID: 16116 RVA: 0x000E0027 File Offset: 0x000DE227
+	// Token: 0x17001D72 RID: 7538
+	// (get) Token: 0x060057F1 RID: 22513 RVA: 0x0002FD20 File Offset: 0x0002DF20
+	// (set) Token: 0x060057F2 RID: 22514 RVA: 0x0002FD27 File Offset: 0x0002DF27
 	public static bool IsTrailerConfigFileLoaded { get; private set; }
 
-	// Token: 0x06003EF5 RID: 16117 RVA: 0x000E0030 File Offset: 0x000DE230
+	// Token: 0x060057F3 RID: 22515 RVA: 0x00150174 File Offset: 0x0014E374
 	public static void LoadTrailerConfigFile()
 	{
 		string trailerPath = SaveManager.GetTrailerPath();
@@ -1707,7 +1707,7 @@ public class SaveManager : MonoBehaviour
 		SaveManager.IsTrailerConfigFileLoaded = true;
 	}
 
-	// Token: 0x06003EF6 RID: 16118 RVA: 0x000E0174 File Offset: 0x000DE374
+	// Token: 0x060057F4 RID: 22516 RVA: 0x001502B8 File Offset: 0x0014E4B8
 	private static string GetTrailerPath()
 	{
 		string path = Path.Combine(SaveFileSystem.PersistentDataPath, "Saves");
@@ -1715,96 +1715,96 @@ public class SaveManager : MonoBehaviour
 		return Path.Combine(Path.Combine(path, platformDirectoryName), "TrailerConfig.ini");
 	}
 
-	// Token: 0x04002EA8 RID: 11944
+	// Token: 0x040040CC RID: 16588
 	private const string SAVE_PATH_SAVE_FOLDER = "Saves";
 
-	// Token: 0x04002EA9 RID: 11945
+	// Token: 0x040040CD RID: 16589
 	private const string SAVE_PATH_PROFILE_FOLDER = "Profile";
 
-	// Token: 0x04002EAA RID: 11946
+	// Token: 0x040040CE RID: 16590
 	public const string DATE_FORMAT = "dd_MM_yyyy__HH_mm_ss";
 
-	// Token: 0x04002EAB RID: 11947
+	// Token: 0x040040CF RID: 16591
 	private const string FOREST_LILY_ROOM1_ID = "Levels Forest Mandatory 1";
 
-	// Token: 0x04002EAC RID: 11948
+	// Token: 0x040040D0 RID: 16592
 	private const string FOREST_LILY_ROOM2_ID = "Levels Forest Mandatory 2";
 
-	// Token: 0x04002EAD RID: 11949
+	// Token: 0x040040D1 RID: 16593
 	private const string FOREST_LILY_ROOM3_ID = "Levels Forest Mandatory 3";
 
-	// Token: 0x04002EAE RID: 11950
+	// Token: 0x040040D2 RID: 16594
 	private const string CAVE_WHITE_KEY_ROOM_ID = "Levels Cave Mandatory 22";
 
-	// Token: 0x04002EAF RID: 11951
+	// Token: 0x040040D3 RID: 16595
 	private const string CAVE_BLACK_KEY_ROOM_ID = "Levels Cave Mandatory 19";
 
-	// Token: 0x04002EB0 RID: 11952
+	// Token: 0x040040D4 RID: 16596
 	public static global::PlayerSaveData PlayerSaveData = new global::PlayerSaveData();
 
-	// Token: 0x04002EB1 RID: 11953
+	// Token: 0x040040D5 RID: 16597
 	public static StageSaveData StageSaveData = new StageSaveData();
 
-	// Token: 0x04002EB2 RID: 11954
+	// Token: 0x040040D6 RID: 16598
 	public static EquipmentSaveData EquipmentSaveData = new EquipmentSaveData();
 
-	// Token: 0x04002EB3 RID: 11955
+	// Token: 0x040040D7 RID: 16599
 	public static LineageSaveData LineageSaveData = new LineageSaveData();
 
-	// Token: 0x04002EB4 RID: 11956
+	// Token: 0x040040D8 RID: 16600
 	public static ModeSaveData ModeSaveData = new ModeSaveData();
 
-	// Token: 0x04002EB5 RID: 11957
+	// Token: 0x040040D9 RID: 16601
 	private static Task m_lastAsyncTask;
 
-	// Token: 0x04002EB6 RID: 11958
+	// Token: 0x040040DA RID: 16602
 	private static bool m_isRunning;
 
-	// Token: 0x04002EB7 RID: 11959
+	// Token: 0x040040DB RID: 16603
 	private static bool m_hasLevelEditorSaveFailedMessageBeenLogged = false;
 
-	// Token: 0x04002EB8 RID: 11960
+	// Token: 0x040040DC RID: 16604
 	private static bool m_hasMainMenuSaveFailedMessageBeenLogged = false;
 
-	// Token: 0x04002EB9 RID: 11961
+	// Token: 0x040040DD RID: 16605
 	private static SaveManager m_instance;
 
-	// Token: 0x04002EBF RID: 11967
+	// Token: 0x040040E3 RID: 16611
 	private List<string>[] m_backFilePathsArray = new List<string>[5];
 
-	// Token: 0x04002EC0 RID: 11968
+	// Token: 0x040040E4 RID: 16612
 	private List<string> m_backupFilesListHelper = new List<string>();
 
-	// Token: 0x04002EC1 RID: 11969
+	// Token: 0x040040E5 RID: 16613
 	private bool m_checkedForSaveDirectories;
 
-	// Token: 0x04002EC2 RID: 11970
+	// Token: 0x040040E6 RID: 16614
 	private Action<MonoBehaviour, EventArgs> m_onWorldCreationComplete_UpdateSaveData;
 
-	// Token: 0x04002EC3 RID: 11971
+	// Token: 0x040040E7 RID: 16615
 	private Action<MonoBehaviour, EventArgs> m_onLevelEditorWorldCreationComplete;
 
-	// Token: 0x04002EC4 RID: 11972
+	// Token: 0x040040E8 RID: 16616
 	private Action<MonoBehaviour, EventArgs> m_onBiomeCreationComplete_UpdateSaveData;
 
-	// Token: 0x04002EC8 RID: 11976
+	// Token: 0x040040EC RID: 16620
 	private const string CONFIG_FILE_NAME = "GameConfig.ini";
 
-	// Token: 0x04002EC9 RID: 11977
+	// Token: 0x040040ED RID: 16621
 	public static ConfigSaveData ConfigData = new ConfigSaveData();
 
-	// Token: 0x04002ECB RID: 11979
+	// Token: 0x040040EF RID: 16623
 	private const string CONTROLLERMAP_FILE_NAME = "ControllerMapV3RL1.xml";
 
-	// Token: 0x04002ECC RID: 11980
+	// Token: 0x040040F0 RID: 16624
 	private const string PROFILE_CONFIG_FILE_NAME = "ProfileConfig.ini";
 
-	// Token: 0x04002ECD RID: 11981
+	// Token: 0x040040F1 RID: 16625
 	public static ProfileConfigSaveData ProfileConfigData = new ProfileConfigSaveData();
 
-	// Token: 0x04002ECF RID: 11983
+	// Token: 0x040040F3 RID: 16627
 	private const string TRAILER_CONFIG_FILE_NAME = "TrailerConfig.ini";
 
-	// Token: 0x04002ED0 RID: 11984
+	// Token: 0x040040F4 RID: 16628
 	public static TrailerConfigData TrailerConfigData = new TrailerConfigData();
 }

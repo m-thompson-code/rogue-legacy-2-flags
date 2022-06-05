@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000361 RID: 865
+// Token: 0x020005D7 RID: 1495
 public class SuperFart_Trait : BaseTrait
 {
-	// Token: 0x17000DF2 RID: 3570
-	// (get) Token: 0x06002099 RID: 8345 RVA: 0x00066BE9 File Offset: 0x00064DE9
+	// Token: 0x1700125D RID: 4701
+	// (get) Token: 0x06002E32 RID: 11826 RVA: 0x00019493 File Offset: 0x00017693
 	public override TraitType TraitType
 	{
 		get
@@ -13,7 +13,7 @@ public class SuperFart_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x0600209A RID: 8346 RVA: 0x00066BF0 File Offset: 0x00064DF0
+	// Token: 0x06002E33 RID: 11827 RVA: 0x000C7A30 File Offset: 0x000C5C30
 	private void Start()
 	{
 		if (SaveManager.PlayerSaveData.GetRelic(RelicType.TalentSwap).Level <= 0)
@@ -24,9 +24,9 @@ public class SuperFart_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x04001C61 RID: 7265
+	// Token: 0x040025FB RID: 9723
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04001C62 RID: 7266
+	// Token: 0x040025FC RID: 9724
 	private bool m_isFarting;
 }

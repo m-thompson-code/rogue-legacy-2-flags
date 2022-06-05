@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02000231 RID: 561
+// Token: 0x020003EE RID: 1006
 public enum HazardCategory
 {
-	// Token: 0x04001629 RID: 5673
+	// Token: 0x04001D41 RID: 7489
 	None,
-	// Token: 0x0400162A RID: 5674
+	// Token: 0x04001D42 RID: 7490
 	Point = 10,
-	// Token: 0x0400162B RID: 5675
+	// Token: 0x04001D43 RID: 7491
 	Line = 20,
-	// Token: 0x0400162C RID: 5676
+	// Token: 0x04001D44 RID: 7492
 	Turret = 30,
-	// Token: 0x0400162D RID: 5677
+	// Token: 0x04001D45 RID: 7493
 	Ferr2D = 40
 }

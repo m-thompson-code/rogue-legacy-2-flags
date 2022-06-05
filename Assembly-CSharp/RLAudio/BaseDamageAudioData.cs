@@ -4,23 +4,23 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008DF RID: 2271
+	// Token: 0x02000E4F RID: 3663
 	public abstract class BaseDamageAudioData : MonoBehaviour
 	{
-		// Token: 0x17001842 RID: 6210
-		// (get) Token: 0x06004AA7 RID: 19111
+		// Token: 0x17002125 RID: 8485
+		// (get) Token: 0x06006760 RID: 26464
 		public abstract string BreakableDamageAudioPath { get; }
 
-		// Token: 0x17001843 RID: 6211
-		// (get) Token: 0x06004AA8 RID: 19112
+		// Token: 0x17002126 RID: 8486
+		// (get) Token: 0x06006761 RID: 26465
 		public abstract string CharacterDamageAudioPath { get; }
 
-		// Token: 0x17001844 RID: 6212
-		// (get) Token: 0x06004AA9 RID: 19113 RVA: 0x0010C8B0 File Offset: 0x0010AAB0
-		// (set) Token: 0x06004AAA RID: 19114 RVA: 0x0010C8B8 File Offset: 0x0010AAB8
+		// Token: 0x17002127 RID: 8487
+		// (get) Token: 0x06006762 RID: 26466 RVA: 0x00038F45 File Offset: 0x00037145
+		// (set) Token: 0x06006763 RID: 26467 RVA: 0x00038F4D File Offset: 0x0003714D
 		public Dictionary<string, float> HitAudioParameters { get; private set; }
 
-		// Token: 0x06004AAB RID: 19115 RVA: 0x0010C8C1 File Offset: 0x0010AAC1
+		// Token: 0x06006764 RID: 26468 RVA: 0x00038F56 File Offset: 0x00037156
 		public void AddHitAudioParameter(string parameterName, float parameterValue)
 		{
 			if (this.HitAudioParameters == null)
@@ -35,7 +35,7 @@ namespace RLAudio
 			this.HitAudioParameters[parameterName] = parameterValue;
 		}
 
-		// Token: 0x06004AAC RID: 19116 RVA: 0x0010C8FF File Offset: 0x0010AAFF
+		// Token: 0x06006765 RID: 26469 RVA: 0x00038F94 File Offset: 0x00037194
 		public void RemoveAudioParameter(string parameterName)
 		{
 			if (this.HitAudioParameters != null && this.HitAudioParameters.ContainsKey(parameterName))
@@ -44,7 +44,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AAD RID: 19117 RVA: 0x0010C924 File Offset: 0x0010AB24
+		// Token: 0x06006766 RID: 26470 RVA: 0x00038FB9 File Offset: 0x000371B9
 		protected virtual void OnDisable()
 		{
 			if (this.HitAudioParameters != null)

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200039A RID: 922
+// Token: 0x0200062B RID: 1579
 public class BlacksmithOmniUIPurchaseBoxEntry : BaseOmniUIPurchaseBoxEntry<BlacksmithOmniUIDescriptionEventArgs>
 {
-	// Token: 0x0600226C RID: 8812 RVA: 0x0006F584 File Offset: 0x0006D784
+	// Token: 0x06003084 RID: 12420 RVA: 0x000D02D4 File Offset: 0x000CE4D4
 	protected override void DisplayNullPurchaseBox()
 	{
 		base.DisplayNullPurchaseBox();
@@ -28,7 +28,7 @@ public class BlacksmithOmniUIPurchaseBoxEntry : BaseOmniUIPurchaseBoxEntry<Black
 		}
 	}
 
-	// Token: 0x0600226D RID: 8813 RVA: 0x0006F620 File Offset: 0x0006D820
+	// Token: 0x06003085 RID: 12421 RVA: 0x000D0370 File Offset: 0x000CE570
 	protected override void DisplayPurchaseBox(BlacksmithOmniUIDescriptionEventArgs args)
 	{
 		EquipmentCategoryType categoryType = args.CategoryType;

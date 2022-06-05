@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000820 RID: 2080
+// Token: 0x02000CF7 RID: 3319
 internal class WaitUntilAnimComplete_Yield : IEnumerator
 {
-	// Token: 0x060044E7 RID: 17639 RVA: 0x000F4FD0 File Offset: 0x000F31D0
+	// Token: 0x06005EB3 RID: 24243 RVA: 0x0003436E File Offset: 0x0003256E
 	public WaitUntilAnimComplete_Yield(Animator animator, int animLayer)
 	{
 		this.CreateNew(animator, animLayer);
 	}
 
-	// Token: 0x17001713 RID: 5907
-	// (get) Token: 0x060044E8 RID: 17640 RVA: 0x000F4FE0 File Offset: 0x000F31E0
+	// Token: 0x17001F21 RID: 7969
+	// (get) Token: 0x06005EB4 RID: 24244 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public object Current
 	{
 		get
@@ -21,7 +21,7 @@ internal class WaitUntilAnimComplete_Yield : IEnumerator
 		}
 	}
 
-	// Token: 0x060044E9 RID: 17641 RVA: 0x000F4FE4 File Offset: 0x000F31E4
+	// Token: 0x06005EB5 RID: 24245 RVA: 0x00162B78 File Offset: 0x00160D78
 	public bool MoveNext()
 	{
 		if (this.m_needsReset)
@@ -42,7 +42,7 @@ internal class WaitUntilAnimComplete_Yield : IEnumerator
 		return false;
 	}
 
-	// Token: 0x060044EA RID: 17642 RVA: 0x000F5058 File Offset: 0x000F3258
+	// Token: 0x06005EB6 RID: 24246 RVA: 0x00162BEC File Offset: 0x00160DEC
 	public void CreateNew(Animator animator, int animLayer)
 	{
 		this.m_needsReset = false;
@@ -52,24 +52,24 @@ internal class WaitUntilAnimComplete_Yield : IEnumerator
 		this.m_clipIsEmpty = (this.m_animator.GetCurrentAnimatorClipInfoCount(this.m_animLayer) <= 0);
 	}
 
-	// Token: 0x060044EB RID: 17643 RVA: 0x000F50B6 File Offset: 0x000F32B6
+	// Token: 0x06005EB7 RID: 24247 RVA: 0x0003437E File Offset: 0x0003257E
 	public void Reset()
 	{
 		this.CreateNew(this.m_animator, this.m_animLayer);
 	}
 
-	// Token: 0x04003AC1 RID: 15041
+	// Token: 0x04004DC5 RID: 19909
 	private Animator m_animator;
 
-	// Token: 0x04003AC2 RID: 15042
+	// Token: 0x04004DC6 RID: 19910
 	private int m_storedStateNameHash;
 
-	// Token: 0x04003AC3 RID: 15043
+	// Token: 0x04004DC7 RID: 19911
 	private bool m_needsReset;
 
-	// Token: 0x04003AC4 RID: 15044
+	// Token: 0x04004DC8 RID: 19912
 	private int m_animLayer;
 
-	// Token: 0x04003AC5 RID: 15045
+	// Token: 0x04004DC9 RID: 19913
 	private bool m_clipIsEmpty;
 }

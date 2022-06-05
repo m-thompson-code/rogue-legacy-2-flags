@@ -6,10 +6,10 @@ using System.Reflection;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x02000696 RID: 1686
+// Token: 0x02000B1F RID: 2847
 public class EffectManager : MonoBehaviour, ILoadable
 {
-	// Token: 0x06003D36 RID: 15670 RVA: 0x000D4504 File Offset: 0x000D2704
+	// Token: 0x060055CB RID: 21963 RVA: 0x00144400 File Offset: 0x00142600
 	private void Awake()
 	{
 		if (EffectManager.m_effectManager == null)
@@ -23,7 +23,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06003D37 RID: 15671 RVA: 0x000D455A File Offset: 0x000D275A
+	// Token: 0x060055CC RID: 21964 RVA: 0x0002EA78 File Offset: 0x0002CC78
 	private void OnDestroy()
 	{
 		EffectManager.m_effectManager = null;
@@ -31,14 +31,14 @@ public class EffectManager : MonoBehaviour, ILoadable
 		EffectManager.m_isInitialized = false;
 	}
 
-	// Token: 0x06003D38 RID: 15672 RVA: 0x000D4575 File Offset: 0x000D2775
+	// Token: 0x060055CD RID: 21965 RVA: 0x0002EA93 File Offset: 0x0002CC93
 	public void LoadSync()
 	{
 		this.PopulateDictionary();
 		EffectManager.m_isInitialized = true;
 	}
 
-	// Token: 0x06003D39 RID: 15673 RVA: 0x000D4584 File Offset: 0x000D2784
+	// Token: 0x060055CE RID: 21966 RVA: 0x00144458 File Offset: 0x00142658
 	private void PopulateDictionary()
 	{
 		foreach (object obj in Enum.GetValues(typeof(EffectCategoryType)))
@@ -50,7 +50,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		}
 	}
 
-	// Token: 0x06003D3A RID: 15674 RVA: 0x000D4620 File Offset: 0x000D2820
+	// Token: 0x060055CF RID: 21967 RVA: 0x0002EAA1 File Offset: 0x0002CCA1
 	public IEnumerator LoadAsync()
 	{
 		yield return EffectLibrary.LoadAsync();
@@ -59,7 +59,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		yield break;
 	}
 
-	// Token: 0x06003D3B RID: 15675 RVA: 0x000D462F File Offset: 0x000D282F
+	// Token: 0x060055D0 RID: 21968 RVA: 0x0002EAB0 File Offset: 0x0002CCB0
 	private IEnumerator PopulateDictionaryAsync()
 	{
 		Stopwatch timer = new Stopwatch();
@@ -83,7 +83,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		yield break;
 	}
 
-	// Token: 0x06003D3C RID: 15676 RVA: 0x000D4640 File Offset: 0x000D2840
+	// Token: 0x060055D1 RID: 21969 RVA: 0x001444F4 File Offset: 0x001426F4
 	private void AddDictionaryEntry(EffectEntry entry)
 	{
 		BaseEffect effectPrefab = entry.EffectPrefab;
@@ -96,8 +96,8 @@ public class EffectManager : MonoBehaviour, ILoadable
 		this.m_effectStringDict.Add(effectPrefab.name, genericPool_RL);
 	}
 
-	// Token: 0x1700153C RID: 5436
-	// (get) Token: 0x06003D3D RID: 15677 RVA: 0x000D46A9 File Offset: 0x000D28A9
+	// Token: 0x17001D08 RID: 7432
+	// (get) Token: 0x060055D2 RID: 21970 RVA: 0x0002EABF File Offset: 0x0002CCBF
 	public static bool IsInitialized
 	{
 		get
@@ -106,8 +106,8 @@ public class EffectManager : MonoBehaviour, ILoadable
 		}
 	}
 
-	// Token: 0x1700153D RID: 5437
-	// (get) Token: 0x06003D3E RID: 15678 RVA: 0x000D46B0 File Offset: 0x000D28B0
+	// Token: 0x17001D09 RID: 7433
+	// (get) Token: 0x060055D3 RID: 21971 RVA: 0x0002EAC6 File Offset: 0x0002CCC6
 	public static EffectManager Instance
 	{
 		get
@@ -116,13 +116,13 @@ public class EffectManager : MonoBehaviour, ILoadable
 		}
 	}
 
-	// Token: 0x06003D3F RID: 15679 RVA: 0x000D46B7 File Offset: 0x000D28B7
+	// Token: 0x060055D4 RID: 21972 RVA: 0x0002EACD File Offset: 0x0002CCCD
 	public static bool HasEffect(string effectName)
 	{
 		return EffectManager.Instance.m_effectStringDict.ContainsKey(effectName);
 	}
 
-	// Token: 0x06003D40 RID: 15680 RVA: 0x000D46C9 File Offset: 0x000D28C9
+	// Token: 0x060055D5 RID: 21973 RVA: 0x0002EADF File Offset: 0x0002CCDF
 	public static List<BaseEffect> GetEffectList(string effectName)
 	{
 		if (EffectManager.HasEffect(effectName))
@@ -132,7 +132,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		return null;
 	}
 
-	// Token: 0x06003D41 RID: 15681 RVA: 0x000D46EA File Offset: 0x000D28EA
+	// Token: 0x060055D6 RID: 21974 RVA: 0x0002EB00 File Offset: 0x0002CD00
 	public static void SetEffectParams(string effectName, params object[] args)
 	{
 		if (args.Length % 2 != 0)
@@ -143,7 +143,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		EffectManager.m_effectArgs = args;
 	}
 
-	// Token: 0x06003D42 RID: 15682 RVA: 0x000D470C File Offset: 0x000D290C
+	// Token: 0x060055D7 RID: 21975 RVA: 0x00144560 File Offset: 0x00142760
 	private static void ApplyEffectParams(string effectName, BaseEffect effect)
 	{
 		if (EffectManager.m_effectArgs != null)
@@ -165,7 +165,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		EffectManager.m_effectArgsName = null;
 	}
 
-	// Token: 0x06003D43 RID: 15683 RVA: 0x000D47AC File Offset: 0x000D29AC
+	// Token: 0x060055D8 RID: 21976 RVA: 0x00144600 File Offset: 0x00142800
 	public static BaseEffect PlayEffect(GameObject source, Animator sourceAnimator, string effectName, Vector3 effectPosition, float duration, EffectStopType stopType, EffectTriggerDirection direction = EffectTriggerDirection.None)
 	{
 		GenericPool_RL<BaseEffect> genericPool_RL = null;
@@ -184,7 +184,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		return freeObj;
 	}
 
-	// Token: 0x06003D44 RID: 15684 RVA: 0x000D4858 File Offset: 0x000D2A58
+	// Token: 0x060055D9 RID: 21977 RVA: 0x001446AC File Offset: 0x001428AC
 	public static BaseEffect PlayHitEffect(IDamageObj damageObj, Vector3 collisionPoint, string effectNameOverride, StrikeType strikeType, bool isUnscaled = false)
 	{
 		if (!string.IsNullOrEmpty(effectNameOverride))
@@ -228,7 +228,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		return EffectManager.PlayEffect(damageObj.gameObject, null, "HitSparksGeneric_Effect" + str, collisionPoint, 0f, EffectStopType.Gracefully, EffectTriggerDirection.None);
 	}
 
-	// Token: 0x06003D45 RID: 15685 RVA: 0x000D4978 File Offset: 0x000D2B78
+	// Token: 0x060055DA RID: 21978 RVA: 0x001447CC File Offset: 0x001429CC
 	public static BaseEffect PlayDirectionalHitEffect(IDamageObj damageObj, GameObject damageRootObj, Vector3 collisionPoint)
 	{
 		Vector3 v = damageRootObj.transform.position;
@@ -243,19 +243,19 @@ public class EffectManager : MonoBehaviour, ILoadable
 		return baseEffect;
 	}
 
-	// Token: 0x06003D46 RID: 15686 RVA: 0x000D49DF File Offset: 0x000D2BDF
+	// Token: 0x060055DB RID: 21979 RVA: 0x0002EB20 File Offset: 0x0002CD20
 	public static BaseEffect PlayHitEffectCamShake(float duration)
 	{
 		return EffectManager.PlayEffect(PlayerManager.GetCurrentPlayerRoom().gameObject, null, "CameraShakeVerySmall_Effect", Vector3.zero, duration, EffectStopType.Gracefully, EffectTriggerDirection.None);
 	}
 
-	// Token: 0x06003D47 RID: 15687 RVA: 0x000D49FE File Offset: 0x000D2BFE
+	// Token: 0x060055DC RID: 21980 RVA: 0x0002EB3F File Offset: 0x0002CD3F
 	public static void StopEffect(BaseEffect effect, EffectStopType stopMode)
 	{
 		effect.Stop(stopMode);
 	}
 
-	// Token: 0x06003D48 RID: 15688 RVA: 0x000D4A08 File Offset: 0x000D2C08
+	// Token: 0x060055DD RID: 21981 RVA: 0x00144834 File Offset: 0x00142A34
 	public static void DisableAllEffectWithName(string effectName)
 	{
 		if (!EffectManager.Instance)
@@ -269,7 +269,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		}
 	}
 
-	// Token: 0x06003D49 RID: 15689 RVA: 0x000D4A40 File Offset: 0x000D2C40
+	// Token: 0x060055DE RID: 21982 RVA: 0x0014486C File Offset: 0x00142A6C
 	public static void DisableAllEffects()
 	{
 		foreach (KeyValuePair<string, GenericPool_RL<BaseEffect>> keyValuePair in EffectManager.Instance.m_effectStringDict)
@@ -281,7 +281,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		}
 	}
 
-	// Token: 0x06003D4A RID: 15690 RVA: 0x000D4AB8 File Offset: 0x000D2CB8
+	// Token: 0x060055DF RID: 21983 RVA: 0x001448E4 File Offset: 0x00142AE4
 	private void DisableExitRoomEffects(object sender, EventArgs args)
 	{
 		if (SceneLoader_RL.IsRunningTransitionWithLogic)
@@ -301,7 +301,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		}
 	}
 
-	// Token: 0x06003D4B RID: 15691 RVA: 0x000D4B78 File Offset: 0x000D2D78
+	// Token: 0x060055E0 RID: 21984 RVA: 0x0002EB48 File Offset: 0x0002CD48
 	public static void AddAnimatorToDisableList(Animator animator)
 	{
 		if (!animator)
@@ -315,7 +315,7 @@ public class EffectManager : MonoBehaviour, ILoadable
 		EffectManager.Instance.m_globalEffectDisableList.Add(animator);
 	}
 
-	// Token: 0x06003D4C RID: 15692 RVA: 0x000D4BA7 File Offset: 0x000D2DA7
+	// Token: 0x060055E1 RID: 21985 RVA: 0x0002EB77 File Offset: 0x0002CD77
 	public static void RemoveAnimatorFromDisableList(Animator animator)
 	{
 		if (!animator)
@@ -329,45 +329,45 @@ public class EffectManager : MonoBehaviour, ILoadable
 		EffectManager.Instance.m_globalEffectDisableList.Remove(animator);
 	}
 
-	// Token: 0x06003D4D RID: 15693 RVA: 0x000D4BD6 File Offset: 0x000D2DD6
+	// Token: 0x060055E2 RID: 21986 RVA: 0x0002EBA6 File Offset: 0x0002CDA6
 	public static bool AnimatorEffectsDisabled(Animator animator)
 	{
 		return animator && EffectManager.Instance.m_globalEffectDisableList.Contains(animator);
 	}
 
-	// Token: 0x06003D4E RID: 15694 RVA: 0x000D4BF2 File Offset: 0x000D2DF2
+	// Token: 0x060055E3 RID: 21987 RVA: 0x0002EBC2 File Offset: 0x0002CDC2
 	public static void Reset()
 	{
 		EffectManager.DisableAllEffects();
 	}
 
-	// Token: 0x04002DD7 RID: 11735
+	// Token: 0x04003FA2 RID: 16290
 	private const string EFFECTSMANAGER_NAME = "EffectManager";
 
-	// Token: 0x04002DD8 RID: 11736
+	// Token: 0x04003FA3 RID: 16291
 	private const string RESOURCE_PATH = "Prefabs/Managers/EffectManager";
 
-	// Token: 0x04002DD9 RID: 11737
+	// Token: 0x04003FA4 RID: 16292
 	private const bool LOG_CALLER_STACK = false;
 
-	// Token: 0x04002DDA RID: 11738
+	// Token: 0x04003FA5 RID: 16293
 	private Dictionary<string, GenericPool_RL<BaseEffect>> m_effectStringDict;
 
-	// Token: 0x04002DDB RID: 11739
+	// Token: 0x04003FA6 RID: 16294
 	private HashSet<Animator> m_globalEffectDisableList = new HashSet<Animator>();
 
-	// Token: 0x04002DDC RID: 11740
+	// Token: 0x04003FA7 RID: 16295
 	private static bool m_isInitialized;
 
-	// Token: 0x04002DDD RID: 11741
+	// Token: 0x04003FA8 RID: 16296
 	private static EffectManager m_effectManager;
 
-	// Token: 0x04002DDE RID: 11742
+	// Token: 0x04003FA9 RID: 16297
 	private Action<MonoBehaviour, EventArgs> m_disableExitRoomEffects;
 
-	// Token: 0x04002DDF RID: 11743
+	// Token: 0x04003FAA RID: 16298
 	private static object[] m_effectArgs;
 
-	// Token: 0x04002DE0 RID: 11744
+	// Token: 0x04003FAB RID: 16299
 	private static string m_effectArgsName;
 }

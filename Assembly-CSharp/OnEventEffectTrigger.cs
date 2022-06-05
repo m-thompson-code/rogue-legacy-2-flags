@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200041A RID: 1050
+// Token: 0x020006D2 RID: 1746
 public class OnEventEffectTrigger : BaseEffectTrigger
 {
-	// Token: 0x17000F7E RID: 3966
-	// (get) Token: 0x060026DB RID: 9947 RVA: 0x000813C3 File Offset: 0x0007F5C3
+	// Token: 0x17001443 RID: 5187
+	// (get) Token: 0x06003590 RID: 13712 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool RequiresCollider
 	{
 		get
@@ -14,8 +14,8 @@ public class OnEventEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x17000F7F RID: 3967
-	// (get) Token: 0x060026DC RID: 9948 RVA: 0x000813C6 File Offset: 0x0007F5C6
+	// Token: 0x17001444 RID: 5188
+	// (get) Token: 0x06003591 RID: 13713 RVA: 0x0001D67D File Offset: 0x0001B87D
 	public override Vector3 Midpoint
 	{
 		get
@@ -28,14 +28,14 @@ public class OnEventEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026DD RID: 9949 RVA: 0x000813F2 File Offset: 0x0007F5F2
+	// Token: 0x06003592 RID: 13714 RVA: 0x0001D6A9 File Offset: 0x0001B8A9
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_charController = this.m_rootObj.GetComponent<BaseCharacterController>();
 	}
 
-	// Token: 0x060026DE RID: 9950 RVA: 0x0008140C File Offset: 0x0007F60C
+	// Token: 0x06003593 RID: 13715 RVA: 0x000E18E4 File Offset: 0x000DFAE4
 	public void TriggerEffect()
 	{
 		GameObject rootObj = this.m_rootObj;
@@ -69,6 +69,6 @@ public class OnEventEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x040020B3 RID: 8371
+	// Token: 0x04002B96 RID: 11158
 	private BaseCharacterController m_charController;
 }

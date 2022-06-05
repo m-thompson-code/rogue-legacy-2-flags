@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001EE RID: 494
+// Token: 0x02000388 RID: 904
 public class DialogueDisplayOverride : MonoBehaviour
 {
-	// Token: 0x17000A7A RID: 2682
-	// (get) Token: 0x06001459 RID: 5209 RVA: 0x0003DDDE File Offset: 0x0003BFDE
+	// Token: 0x17000D7C RID: 3452
+	// (get) Token: 0x06001D7A RID: 7546 RVA: 0x0000F362 File Offset: 0x0000D562
 	public bool UseLocIDOverride
 	{
 		get
@@ -14,8 +14,8 @@ public class DialogueDisplayOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A7B RID: 2683
-	// (get) Token: 0x0600145A RID: 5210 RVA: 0x0003DDE6 File Offset: 0x0003BFE6
+	// Token: 0x17000D7D RID: 3453
+	// (get) Token: 0x06001D7B RID: 7547 RVA: 0x0000F36A File Offset: 0x0000D56A
 	public string DialogueOverride
 	{
 		get
@@ -24,8 +24,8 @@ public class DialogueDisplayOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A7C RID: 2684
-	// (get) Token: 0x0600145B RID: 5211 RVA: 0x0003DDEE File Offset: 0x0003BFEE
+	// Token: 0x17000D7E RID: 3454
+	// (get) Token: 0x06001D7C RID: 7548 RVA: 0x0000F372 File Offset: 0x0000D572
 	public string RepeatedDialogueOverride
 	{
 		get
@@ -34,8 +34,8 @@ public class DialogueDisplayOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A7D RID: 2685
-	// (get) Token: 0x0600145C RID: 5212 RVA: 0x0003DDF6 File Offset: 0x0003BFF6
+	// Token: 0x17000D7F RID: 3455
+	// (get) Token: 0x06001D7D RID: 7549 RVA: 0x0000F37A File Offset: 0x0000D57A
 	public string SpeakerOverride
 	{
 		get
@@ -44,8 +44,8 @@ public class DialogueDisplayOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A7E RID: 2686
-	// (get) Token: 0x0600145D RID: 5213 RVA: 0x0003DDFE File Offset: 0x0003BFFE
+	// Token: 0x17000D80 RID: 3456
+	// (get) Token: 0x06001D7E RID: 7550 RVA: 0x0000F382 File Offset: 0x0000D582
 	public PlayerSaveFlag SpokenFlagOverride
 	{
 		get
@@ -54,23 +54,23 @@ public class DialogueDisplayOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001421 RID: 5153
+	// Token: 0x04001AC8 RID: 6856
 	[SerializeField]
 	private bool m_useLocIDOverride = true;
 
-	// Token: 0x04001422 RID: 5154
+	// Token: 0x04001AC9 RID: 6857
 	[SerializeField]
 	private string m_dialogueOverride;
 
-	// Token: 0x04001423 RID: 5155
+	// Token: 0x04001ACA RID: 6858
 	[SerializeField]
 	private string m_repeatedDialogueOverride;
 
-	// Token: 0x04001424 RID: 5156
+	// Token: 0x04001ACB RID: 6859
 	[SerializeField]
 	private string m_speakerOverride;
 
-	// Token: 0x04001425 RID: 5157
+	// Token: 0x04001ACC RID: 6860
 	[SerializeField]
 	private PlayerSaveFlag m_spokenFlagOverride;
 }

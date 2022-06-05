@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000866 RID: 2150
+	// Token: 0x02000D72 RID: 3442
 	public class TMPro_InstructionOverlay : MonoBehaviour
 	{
-		// Token: 0x06004726 RID: 18214 RVA: 0x000FFF6C File Offset: 0x000FE16C
+		// Token: 0x060061DF RID: 25055 RVA: 0x0016D37C File Offset: 0x0016B57C
 		private void Awake()
 		{
 			if (!base.enabled)
@@ -28,7 +28,7 @@ namespace TMPro.Examples
 			this.m_TextMeshPro.text = "Camera Control - <#ffff00>Shift + RMB\n</color>Zoom - <#ffff00>Mouse wheel.";
 		}
 
-		// Token: 0x06004727 RID: 18215 RVA: 0x00100044 File Offset: 0x000FE244
+		// Token: 0x060061E0 RID: 25056 RVA: 0x0016D454 File Offset: 0x0016B654
 		private void Set_FrameCounter_Position(TMPro_InstructionOverlay.FpsCounterAnchorPositions anchor_position)
 		{
 			switch (anchor_position)
@@ -54,34 +54,34 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x04003C37 RID: 15415
+		// Token: 0x04004FDA RID: 20442
 		public TMPro_InstructionOverlay.FpsCounterAnchorPositions AnchorPosition = TMPro_InstructionOverlay.FpsCounterAnchorPositions.BottomLeft;
 
-		// Token: 0x04003C38 RID: 15416
+		// Token: 0x04004FDB RID: 20443
 		private const string instructions = "Camera Control - <#ffff00>Shift + RMB\n</color>Zoom - <#ffff00>Mouse wheel.";
 
-		// Token: 0x04003C39 RID: 15417
+		// Token: 0x04004FDC RID: 20444
 		private TextMeshPro m_TextMeshPro;
 
-		// Token: 0x04003C3A RID: 15418
+		// Token: 0x04004FDD RID: 20445
 		private TextContainer m_textContainer;
 
-		// Token: 0x04003C3B RID: 15419
+		// Token: 0x04004FDE RID: 20446
 		private Transform m_frameCounter_transform;
 
-		// Token: 0x04003C3C RID: 15420
+		// Token: 0x04004FDF RID: 20447
 		private Camera m_camera;
 
-		// Token: 0x02000E7D RID: 3709
+		// Token: 0x02000D73 RID: 3443
 		public enum FpsCounterAnchorPositions
 		{
-			// Token: 0x04005818 RID: 22552
+			// Token: 0x04004FE1 RID: 20449
 			TopLeft,
-			// Token: 0x04005819 RID: 22553
+			// Token: 0x04004FE2 RID: 20450
 			BottomLeft,
-			// Token: 0x0400581A RID: 22554
+			// Token: 0x04004FE3 RID: 20451
 			TopRight,
-			// Token: 0x0400581B RID: 22555
+			// Token: 0x04004FE4 RID: 20452
 			BottomRight
 		}
 	}

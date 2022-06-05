@@ -6,24 +6,24 @@ using System.ComponentModel;
 
 namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 {
-	// Token: 0x02000848 RID: 2120
+	// Token: 0x02000D36 RID: 3382
 	[GeneratedCode("simple-json", "1.0.0")]
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public class JsonObject : IDictionary<string, object>, ICollection<KeyValuePair<string, object>>, IEnumerable<KeyValuePair<string, object>>, IEnumerable
 	{
-		// Token: 0x06004625 RID: 17957 RVA: 0x000FA25A File Offset: 0x000F845A
+		// Token: 0x06006084 RID: 24708 RVA: 0x00035389 File Offset: 0x00033589
 		public JsonObject()
 		{
 			this._members = new Dictionary<string, object>();
 		}
 
-		// Token: 0x06004626 RID: 17958 RVA: 0x000FA26D File Offset: 0x000F846D
+		// Token: 0x06006085 RID: 24709 RVA: 0x0003539C File Offset: 0x0003359C
 		public JsonObject(IEqualityComparer<string> comparer)
 		{
 			this._members = new Dictionary<string, object>(comparer);
 		}
 
-		// Token: 0x17001764 RID: 5988
+		// Token: 0x17001FA3 RID: 8099
 		public object this[int index]
 		{
 			get
@@ -32,7 +32,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			}
 		}
 
-		// Token: 0x06004628 RID: 17960 RVA: 0x000FA290 File Offset: 0x000F8490
+		// Token: 0x06006087 RID: 24711 RVA: 0x0016708C File Offset: 0x0016528C
 		internal static object GetAtIndex(IDictionary<string, object> obj, int index)
 		{
 			if (obj == null)
@@ -54,20 +54,20 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return null;
 		}
 
-		// Token: 0x06004629 RID: 17961 RVA: 0x000FA30C File Offset: 0x000F850C
+		// Token: 0x06006088 RID: 24712 RVA: 0x000353BE File Offset: 0x000335BE
 		public void Add(string key, object value)
 		{
 			this._members.Add(key, value);
 		}
 
-		// Token: 0x0600462A RID: 17962 RVA: 0x000FA31B File Offset: 0x000F851B
+		// Token: 0x06006089 RID: 24713 RVA: 0x000353CD File Offset: 0x000335CD
 		public bool ContainsKey(string key)
 		{
 			return this._members.ContainsKey(key);
 		}
 
-		// Token: 0x17001765 RID: 5989
-		// (get) Token: 0x0600462B RID: 17963 RVA: 0x000FA329 File Offset: 0x000F8529
+		// Token: 0x17001FA4 RID: 8100
+		// (get) Token: 0x0600608A RID: 24714 RVA: 0x000353DB File Offset: 0x000335DB
 		public ICollection<string> Keys
 		{
 			get
@@ -76,20 +76,20 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			}
 		}
 
-		// Token: 0x0600462C RID: 17964 RVA: 0x000FA336 File Offset: 0x000F8536
+		// Token: 0x0600608B RID: 24715 RVA: 0x000353E8 File Offset: 0x000335E8
 		public bool Remove(string key)
 		{
 			return this._members.Remove(key);
 		}
 
-		// Token: 0x0600462D RID: 17965 RVA: 0x000FA344 File Offset: 0x000F8544
+		// Token: 0x0600608C RID: 24716 RVA: 0x000353F6 File Offset: 0x000335F6
 		public bool TryGetValue(string key, out object value)
 		{
 			return this._members.TryGetValue(key, out value);
 		}
 
-		// Token: 0x17001766 RID: 5990
-		// (get) Token: 0x0600462E RID: 17966 RVA: 0x000FA353 File Offset: 0x000F8553
+		// Token: 0x17001FA5 RID: 8101
+		// (get) Token: 0x0600608D RID: 24717 RVA: 0x00035405 File Offset: 0x00033605
 		public ICollection<object> Values
 		{
 			get
@@ -98,7 +98,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			}
 		}
 
-		// Token: 0x17001767 RID: 5991
+		// Token: 0x17001FA6 RID: 8102
 		public object this[string key]
 		{
 			get
@@ -111,25 +111,25 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			}
 		}
 
-		// Token: 0x06004631 RID: 17969 RVA: 0x000FA37D File Offset: 0x000F857D
+		// Token: 0x06006090 RID: 24720 RVA: 0x0003542F File Offset: 0x0003362F
 		public void Add(KeyValuePair<string, object> item)
 		{
 			this._members.Add(item.Key, item.Value);
 		}
 
-		// Token: 0x06004632 RID: 17970 RVA: 0x000FA398 File Offset: 0x000F8598
+		// Token: 0x06006091 RID: 24721 RVA: 0x0003544A File Offset: 0x0003364A
 		public void Clear()
 		{
 			this._members.Clear();
 		}
 
-		// Token: 0x06004633 RID: 17971 RVA: 0x000FA3A5 File Offset: 0x000F85A5
+		// Token: 0x06006092 RID: 24722 RVA: 0x00035457 File Offset: 0x00033657
 		public bool Contains(KeyValuePair<string, object> item)
 		{
 			return this._members.ContainsKey(item.Key) && this._members[item.Key] == item.Value;
 		}
 
-		// Token: 0x06004634 RID: 17972 RVA: 0x000FA3D8 File Offset: 0x000F85D8
+		// Token: 0x06006093 RID: 24723 RVA: 0x00167108 File Offset: 0x00165308
 		public void CopyTo(KeyValuePair<string, object>[] array, int arrayIndex)
 		{
 			if (array == null)
@@ -147,8 +147,8 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			}
 		}
 
-		// Token: 0x17001768 RID: 5992
-		// (get) Token: 0x06004635 RID: 17973 RVA: 0x000FA448 File Offset: 0x000F8648
+		// Token: 0x17001FA7 RID: 8103
+		// (get) Token: 0x06006094 RID: 24724 RVA: 0x0003548A File Offset: 0x0003368A
 		public int Count
 		{
 			get
@@ -157,8 +157,8 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			}
 		}
 
-		// Token: 0x17001769 RID: 5993
-		// (get) Token: 0x06004636 RID: 17974 RVA: 0x000FA455 File Offset: 0x000F8655
+		// Token: 0x17001FA8 RID: 8104
+		// (get) Token: 0x06006095 RID: 24725 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public bool IsReadOnly
 		{
 			get
@@ -167,31 +167,31 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			}
 		}
 
-		// Token: 0x06004637 RID: 17975 RVA: 0x000FA458 File Offset: 0x000F8658
+		// Token: 0x06006096 RID: 24726 RVA: 0x00035497 File Offset: 0x00033697
 		public bool Remove(KeyValuePair<string, object> item)
 		{
 			return this._members.Remove(item.Key);
 		}
 
-		// Token: 0x06004638 RID: 17976 RVA: 0x000FA46C File Offset: 0x000F866C
+		// Token: 0x06006097 RID: 24727 RVA: 0x000354AB File Offset: 0x000336AB
 		public IEnumerator<KeyValuePair<string, object>> GetEnumerator()
 		{
 			return this._members.GetEnumerator();
 		}
 
-		// Token: 0x06004639 RID: 17977 RVA: 0x000FA47E File Offset: 0x000F867E
+		// Token: 0x06006098 RID: 24728 RVA: 0x000354AB File Offset: 0x000336AB
 		IEnumerator IEnumerable.GetEnumerator()
 		{
 			return this._members.GetEnumerator();
 		}
 
-		// Token: 0x0600463A RID: 17978 RVA: 0x000FA490 File Offset: 0x000F8690
+		// Token: 0x06006099 RID: 24729 RVA: 0x000354BD File Offset: 0x000336BD
 		public override string ToString()
 		{
 			return SimpleJson.SerializeObject(this);
 		}
 
-		// Token: 0x04003B79 RID: 15225
+		// Token: 0x04004EDB RID: 20187
 		private readonly Dictionary<string, object> _members;
 	}
 }

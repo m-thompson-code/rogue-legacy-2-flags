@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020002CA RID: 714
+// Token: 0x020004BF RID: 1215
 [Serializable]
 public class ProfileConfigSaveData : IVersionUpdateable
 {
-	// Token: 0x06001C69 RID: 7273 RVA: 0x0005BD3C File Offset: 0x00059F3C
+	// Token: 0x06002733 RID: 10035 RVA: 0x000B82E0 File Offset: 0x000B64E0
 	public void UpdateVersion()
 	{
 		if (this.REVISION_NUMBER == 0)
@@ -22,24 +22,24 @@ public class ProfileConfigSaveData : IVersionUpdateable
 		this.REVISION_NUMBER = 1;
 	}
 
-	// Token: 0x040019C4 RID: 6596
+	// Token: 0x040021CB RID: 8651
 	public int REVISION_NUMBER;
 
-	// Token: 0x040019C5 RID: 6597
+	// Token: 0x040021CC RID: 8652
 	public bool UseNonScientificNames;
 
-	// Token: 0x040019C6 RID: 6598
+	// Token: 0x040021CD RID: 8653
 	public bool EnableDualButtonDash;
 
-	// Token: 0x040019C7 RID: 6599
+	// Token: 0x040021CE RID: 8654
 	public bool EnableQuickDrop;
 
-	// Token: 0x040019C8 RID: 6600
+	// Token: 0x040021CF RID: 8655
 	public bool ToggleMouseAiming = true;
 
-	// Token: 0x040019C9 RID: 6601
+	// Token: 0x040021D0 RID: 8656
 	public bool DisableSlowdownOnHit;
 
-	// Token: 0x040019CA RID: 6602
+	// Token: 0x040021D1 RID: 8657
 	public bool DisablePressDownSpinKick;
 }

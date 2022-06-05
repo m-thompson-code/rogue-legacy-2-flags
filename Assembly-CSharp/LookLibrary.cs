@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200023B RID: 571
+// Token: 0x020003F8 RID: 1016
 [CreateAssetMenu(menuName = "Custom/Libraries/Look Library")]
 public class LookLibrary : ScriptableObject
 {
-	// Token: 0x17000B3B RID: 2875
-	// (get) Token: 0x060016F3 RID: 5875 RVA: 0x00047B76 File Offset: 0x00045D76
+	// Token: 0x17000E68 RID: 3688
+	// (get) Token: 0x060020A6 RID: 8358 RVA: 0x000114A1 File Offset: 0x0000F6A1
 	private static LookLibrary Instance
 	{
 		get
@@ -21,8 +21,8 @@ public class LookLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B3C RID: 2876
-	// (get) Token: 0x060016F4 RID: 5876 RVA: 0x00047B9F File Offset: 0x00045D9F
+	// Token: 0x17000E69 RID: 3689
+	// (get) Token: 0x060020A7 RID: 8359 RVA: 0x000114CA File Offset: 0x0000F6CA
 	public static Material VampireFangsMaterial
 	{
 		get
@@ -31,8 +31,8 @@ public class LookLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B3D RID: 2877
-	// (get) Token: 0x060016F5 RID: 5877 RVA: 0x00047BAB File Offset: 0x00045DAB
+	// Token: 0x17000E6A RID: 3690
+	// (get) Token: 0x060020A8 RID: 8360 RVA: 0x000114D6 File Offset: 0x0000F6D6
 	public static Material ClownEyesMaterial
 	{
 		get
@@ -41,8 +41,8 @@ public class LookLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B3E RID: 2878
-	// (get) Token: 0x060016F6 RID: 5878 RVA: 0x00047BB7 File Offset: 0x00045DB7
+	// Token: 0x17000E6B RID: 3691
+	// (get) Token: 0x060020A9 RID: 8361 RVA: 0x000114E2 File Offset: 0x0000F6E2
 	public static Material ClownMouthMaterial
 	{
 		get
@@ -51,8 +51,8 @@ public class LookLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B3F RID: 2879
-	// (get) Token: 0x060016F7 RID: 5879 RVA: 0x00047BC3 File Offset: 0x00045DC3
+	// Token: 0x17000E6C RID: 3692
+	// (get) Token: 0x060020AA RID: 8362 RVA: 0x000114EE File Offset: 0x0000F6EE
 	public static Material ClownHeadMaterial
 	{
 		get
@@ -61,7 +61,7 @@ public class LookLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x060016F8 RID: 5880 RVA: 0x00047BD0 File Offset: 0x00045DD0
+	// Token: 0x060020AB RID: 8363 RVA: 0x000A5AB0 File Offset: 0x000A3CB0
 	public static List<T> GetLookDataByTag<T>(string tag, LookType lookType)
 	{
 		List<T> list = new List<T>();
@@ -106,139 +106,139 @@ public class LookLibrary : ScriptableObject
 		return list;
 	}
 
-	// Token: 0x060016F9 RID: 5881 RVA: 0x00047CC0 File Offset: 0x00045EC0
+	// Token: 0x060020AC RID: 8364 RVA: 0x000114FA File Offset: 0x0000F6FA
 	public static List<MaterialWeightObject> GetEyeLookData()
 	{
 		return LookLibrary.Instance.m_eyeData.WeightList;
 	}
 
-	// Token: 0x060016FA RID: 5882 RVA: 0x00047CD1 File Offset: 0x00045ED1
+	// Token: 0x060020AD RID: 8365 RVA: 0x0001150B File Offset: 0x0000F70B
 	public static List<MaterialWeightObject> GetEyeLookData(string tag)
 	{
 		return LookLibrary.GetLookDataByTag<MaterialWeightObject>(tag, LookType.Eyes);
 	}
 
-	// Token: 0x060016FB RID: 5883 RVA: 0x00047CDA File Offset: 0x00045EDA
+	// Token: 0x060020AE RID: 8366 RVA: 0x00011514 File Offset: 0x0000F714
 	public static List<MaterialWeightObject> GetMouthLookData()
 	{
 		return LookLibrary.Instance.m_mouthData.WeightList;
 	}
 
-	// Token: 0x060016FC RID: 5884 RVA: 0x00047CEB File Offset: 0x00045EEB
+	// Token: 0x060020AF RID: 8367 RVA: 0x00011525 File Offset: 0x0000F725
 	public static List<MaterialWeightObject> GetMouthLookData(string tag)
 	{
 		return LookLibrary.GetLookDataByTag<MaterialWeightObject>(tag, LookType.Mouth);
 	}
 
-	// Token: 0x060016FD RID: 5885 RVA: 0x00047CF4 File Offset: 0x00045EF4
+	// Token: 0x060020B0 RID: 8368 RVA: 0x0001152E File Offset: 0x0000F72E
 	public static List<MaterialWeightObject> GetFacialHairLookData()
 	{
 		return LookLibrary.Instance.m_facialHairData.WeightList;
 	}
 
-	// Token: 0x060016FE RID: 5886 RVA: 0x00047D05 File Offset: 0x00045F05
+	// Token: 0x060020B1 RID: 8369 RVA: 0x0001153F File Offset: 0x0000F73F
 	public static List<MaterialWeightObject> GetFacialHairLookData(string tag)
 	{
 		return LookLibrary.GetLookDataByTag<MaterialWeightObject>(tag, LookType.FacialHair);
 	}
 
-	// Token: 0x060016FF RID: 5887 RVA: 0x00047D0E File Offset: 0x00045F0E
+	// Token: 0x060020B2 RID: 8370 RVA: 0x00011548 File Offset: 0x0000F748
 	public static List<ColorWeightObject> GetSkinColorLookData()
 	{
 		return LookLibrary.Instance.m_skinColorData.WeightList;
 	}
 
-	// Token: 0x06001700 RID: 5888 RVA: 0x00047D1F File Offset: 0x00045F1F
+	// Token: 0x060020B3 RID: 8371 RVA: 0x00011559 File Offset: 0x0000F759
 	public static List<ColorWeightObject> GetSkinColorLookData(string tag)
 	{
 		return LookLibrary.GetLookDataByTag<ColorWeightObject>(tag, LookType.SkinColor);
 	}
 
-	// Token: 0x06001701 RID: 5889 RVA: 0x00047D28 File Offset: 0x00045F28
+	// Token: 0x060020B4 RID: 8372 RVA: 0x00011562 File Offset: 0x0000F762
 	public static List<MaterialWeightObject> GetHairLookData()
 	{
 		return LookLibrary.Instance.m_hairData.WeightList;
 	}
 
-	// Token: 0x06001702 RID: 5890 RVA: 0x00047D39 File Offset: 0x00045F39
+	// Token: 0x060020B5 RID: 8373 RVA: 0x00011573 File Offset: 0x0000F773
 	public static List<MaterialWeightObject> GetHairLookData(string tag)
 	{
 		return LookLibrary.GetLookDataByTag<MaterialWeightObject>(tag, LookType.Hair);
 	}
 
-	// Token: 0x06001703 RID: 5891 RVA: 0x00047D42 File Offset: 0x00045F42
+	// Token: 0x060020B6 RID: 8374 RVA: 0x0001157C File Offset: 0x0000F77C
 	public static List<BodyWeightObject> GetBodyLookData()
 	{
 		return LookLibrary.Instance.m_bodyData.WeightList;
 	}
 
-	// Token: 0x06001704 RID: 5892 RVA: 0x00047D53 File Offset: 0x00045F53
+	// Token: 0x060020B7 RID: 8375 RVA: 0x0001158D File Offset: 0x0000F78D
 	public static List<BodyWeightObject> GetBodyLookData(string tag)
 	{
 		return LookLibrary.GetLookDataByTag<BodyWeightObject>(tag, LookType.Body);
 	}
 
-	// Token: 0x06001705 RID: 5893 RVA: 0x00047D5C File Offset: 0x00045F5C
+	// Token: 0x060020B8 RID: 8376 RVA: 0x00011596 File Offset: 0x0000F796
 	public static List<ColorWeightObject> GetHairColorLookData()
 	{
 		return LookLibrary.Instance.m_hairColorData.WeightList;
 	}
 
-	// Token: 0x06001706 RID: 5894 RVA: 0x00047D6D File Offset: 0x00045F6D
+	// Token: 0x060020B9 RID: 8377 RVA: 0x000115A7 File Offset: 0x0000F7A7
 	public static List<ColorWeightObject> GetHairColorLookData(string tag)
 	{
 		return LookLibrary.GetLookDataByTag<ColorWeightObject>(tag, LookType.HairColor);
 	}
 
-	// Token: 0x04001677 RID: 5751
+	// Token: 0x04001D8F RID: 7567
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/LookLibrary";
 
-	// Token: 0x04001678 RID: 5752
+	// Token: 0x04001D90 RID: 7568
 	[SerializeField]
 	private MaterialWeight_LookData m_eyeData;
 
-	// Token: 0x04001679 RID: 5753
+	// Token: 0x04001D91 RID: 7569
 	[SerializeField]
 	private MaterialWeight_LookData m_mouthData;
 
-	// Token: 0x0400167A RID: 5754
+	// Token: 0x04001D92 RID: 7570
 	[SerializeField]
 	private MaterialWeight_LookData m_facialHairData;
 
-	// Token: 0x0400167B RID: 5755
+	// Token: 0x04001D93 RID: 7571
 	[SerializeField]
 	private ColorWeight_LookData m_skinColorData;
 
-	// Token: 0x0400167C RID: 5756
+	// Token: 0x04001D94 RID: 7572
 	[SerializeField]
 	private MaterialWeight_LookData m_hairData;
 
-	// Token: 0x0400167D RID: 5757
+	// Token: 0x04001D95 RID: 7573
 	[SerializeField]
 	private ColorWeight_LookData m_hairColorData;
 
-	// Token: 0x0400167E RID: 5758
+	// Token: 0x04001D96 RID: 7574
 	[SerializeField]
 	private BodyWeight_LookData m_bodyData;
 
-	// Token: 0x0400167F RID: 5759
+	// Token: 0x04001D97 RID: 7575
 	[Header("Special Materials")]
 	[SerializeField]
 	private Material m_vampireFangs_Material;
 
-	// Token: 0x04001680 RID: 5760
+	// Token: 0x04001D98 RID: 7576
 	[Space(5f)]
 	[SerializeField]
 	private Material m_clownEyes_Material;
 
-	// Token: 0x04001681 RID: 5761
+	// Token: 0x04001D99 RID: 7577
 	[SerializeField]
 	private Material m_clownMouth_Material;
 
-	// Token: 0x04001682 RID: 5762
+	// Token: 0x04001D9A RID: 7578
 	[SerializeField]
 	private Material m_clownHead_Material;
 
-	// Token: 0x04001683 RID: 5763
+	// Token: 0x04001D9B RID: 7579
 	private static LookLibrary m_instance;
 }

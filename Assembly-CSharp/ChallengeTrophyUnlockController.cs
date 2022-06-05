@@ -1,28 +1,28 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200054A RID: 1354
+// Token: 0x020008F8 RID: 2296
 public class ChallengeTrophyUnlockController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x1700123E RID: 4670
-	// (get) Token: 0x060031B1 RID: 12721 RVA: 0x000A809F File Offset: 0x000A629F
-	// (set) Token: 0x060031B2 RID: 12722 RVA: 0x000A80A7 File Offset: 0x000A62A7
+	// Token: 0x170018C1 RID: 6337
+	// (get) Token: 0x060045BF RID: 17855 RVA: 0x000264A7 File Offset: 0x000246A7
+	// (set) Token: 0x060045C0 RID: 17856 RVA: 0x000264AF File Offset: 0x000246AF
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x060031B3 RID: 12723 RVA: 0x000A80B0 File Offset: 0x000A62B0
+	// Token: 0x060045C1 RID: 17857 RVA: 0x000264B8 File Offset: 0x000246B8
 	private void Awake()
 	{
 		this.m_propSpawner = base.GetComponent<PropSpawnController>();
 	}
 
-	// Token: 0x060031B4 RID: 12724 RVA: 0x000A80BE File Offset: 0x000A62BE
+	// Token: 0x060045C2 RID: 17858 RVA: 0x000264C6 File Offset: 0x000246C6
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x060031B5 RID: 12725 RVA: 0x000A80E5 File Offset: 0x000A62E5
+	// Token: 0x060045C3 RID: 17859 RVA: 0x000264ED File Offset: 0x000246ED
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -31,7 +31,7 @@ public class ChallengeTrophyUnlockController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x060031B6 RID: 12726 RVA: 0x000A8114 File Offset: 0x000A6314
+	// Token: 0x060045C4 RID: 17860 RVA: 0x0011191C File Offset: 0x0010FB1C
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		if (this.m_propSpawner == null || this.m_propSpawner.PropInstance.IsNativeNull())
@@ -63,10 +63,10 @@ public class ChallengeTrophyUnlockController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x0400271E RID: 10014
+	// Token: 0x040035DB RID: 13787
 	[SerializeField]
 	private ChallengeType m_challengeToCheckUnlock;
 
-	// Token: 0x04002720 RID: 10016
+	// Token: 0x040035DD RID: 13789
 	private PropSpawnController m_propSpawner;
 }

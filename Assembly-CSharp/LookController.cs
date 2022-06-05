@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000261 RID: 609
+// Token: 0x02000425 RID: 1061
 public class LookController : MonoBehaviour
 {
-	// Token: 0x17000B91 RID: 2961
-	// (get) Token: 0x06001810 RID: 6160 RVA: 0x0004AFBD File Offset: 0x000491BD
-	// (set) Token: 0x06001811 RID: 6161 RVA: 0x0004AFC5 File Offset: 0x000491C5
+	// Token: 0x17000ECA RID: 3786
+	// (get) Token: 0x060021E7 RID: 8679 RVA: 0x0001219B File Offset: 0x0001039B
+	// (set) Token: 0x060021E8 RID: 8680 RVA: 0x000121A3 File Offset: 0x000103A3
 	public bool IsInitialized { get; protected set; }
 
-	// Token: 0x17000B92 RID: 2962
-	// (get) Token: 0x06001812 RID: 6162 RVA: 0x0004AFCE File Offset: 0x000491CE
+	// Token: 0x17000ECB RID: 3787
+	// (get) Token: 0x060021E9 RID: 8681 RVA: 0x000121AC File Offset: 0x000103AC
 	public bool IsShopModel
 	{
 		get
@@ -19,8 +19,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B93 RID: 2963
-	// (get) Token: 0x06001813 RID: 6163 RVA: 0x0004AFD6 File Offset: 0x000491D6
+	// Token: 0x17000ECC RID: 3788
+	// (get) Token: 0x060021EA RID: 8682 RVA: 0x000121B4 File Offset: 0x000103B4
 	public bool IsPortraitModel
 	{
 		get
@@ -29,8 +29,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B94 RID: 2964
-	// (get) Token: 0x06001814 RID: 6164 RVA: 0x0004AFDE File Offset: 0x000491DE
+	// Token: 0x17000ECD RID: 3789
+	// (get) Token: 0x060021EB RID: 8683 RVA: 0x000121BC File Offset: 0x000103BC
 	public SkinnedMeshRenderer LeftEyeGeo
 	{
 		get
@@ -39,8 +39,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B95 RID: 2965
-	// (get) Token: 0x06001815 RID: 6165 RVA: 0x0004AFE6 File Offset: 0x000491E6
+	// Token: 0x17000ECE RID: 3790
+	// (get) Token: 0x060021EC RID: 8684 RVA: 0x000121C4 File Offset: 0x000103C4
 	public SkinnedMeshRenderer RightEyeGeo
 	{
 		get
@@ -49,8 +49,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B96 RID: 2966
-	// (get) Token: 0x06001816 RID: 6166 RVA: 0x0004AFEE File Offset: 0x000491EE
+	// Token: 0x17000ECF RID: 3791
+	// (get) Token: 0x060021ED RID: 8685 RVA: 0x000121CC File Offset: 0x000103CC
 	public SkinnedMeshRenderer MouthGeo
 	{
 		get
@@ -59,8 +59,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B97 RID: 2967
-	// (get) Token: 0x06001817 RID: 6167 RVA: 0x0004AFF6 File Offset: 0x000491F6
+	// Token: 0x17000ED0 RID: 3792
+	// (get) Token: 0x060021EE RID: 8686 RVA: 0x000121D4 File Offset: 0x000103D4
 	public SkinnedMeshRenderer HeadGeo
 	{
 		get
@@ -69,8 +69,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B98 RID: 2968
-	// (get) Token: 0x06001818 RID: 6168 RVA: 0x0004AFFE File Offset: 0x000491FE
+	// Token: 0x17000ED1 RID: 3793
+	// (get) Token: 0x060021EF RID: 8687 RVA: 0x000121DC File Offset: 0x000103DC
 	public SkinnedMeshRenderer HelmetGeo
 	{
 		get
@@ -79,8 +79,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B99 RID: 2969
-	// (get) Token: 0x06001819 RID: 6169 RVA: 0x0004B006 File Offset: 0x00049206
+	// Token: 0x17000ED2 RID: 3794
+	// (get) Token: 0x060021F0 RID: 8688 RVA: 0x000121E4 File Offset: 0x000103E4
 	public SkinnedMeshRenderer ChestHairGeo
 	{
 		get
@@ -89,8 +89,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B9A RID: 2970
-	// (get) Token: 0x0600181A RID: 6170 RVA: 0x0004B00E File Offset: 0x0004920E
+	// Token: 0x17000ED3 RID: 3795
+	// (get) Token: 0x060021F1 RID: 8689 RVA: 0x000121EC File Offset: 0x000103EC
 	public SkinnedMeshRenderer HelmetHairGeo
 	{
 		get
@@ -99,8 +99,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B9B RID: 2971
-	// (get) Token: 0x0600181B RID: 6171 RVA: 0x0004B016 File Offset: 0x00049216
+	// Token: 0x17000ED4 RID: 3796
+	// (get) Token: 0x060021F2 RID: 8690 RVA: 0x000121F4 File Offset: 0x000103F4
 	public SkinnedMeshRenderer LeftShoulderGeo
 	{
 		get
@@ -109,8 +109,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B9C RID: 2972
-	// (get) Token: 0x0600181C RID: 6172 RVA: 0x0004B01E File Offset: 0x0004921E
+	// Token: 0x17000ED5 RID: 3797
+	// (get) Token: 0x060021F3 RID: 8691 RVA: 0x000121FC File Offset: 0x000103FC
 	public SkinnedMeshRenderer RightShoulderGeo
 	{
 		get
@@ -119,8 +119,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B9D RID: 2973
-	// (get) Token: 0x0600181D RID: 6173 RVA: 0x0004B026 File Offset: 0x00049226
+	// Token: 0x17000ED6 RID: 3798
+	// (get) Token: 0x060021F4 RID: 8692 RVA: 0x00012204 File Offset: 0x00010404
 	public SkinnedMeshRenderer CapeGeo
 	{
 		get
@@ -129,8 +129,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B9E RID: 2974
-	// (get) Token: 0x0600181E RID: 6174 RVA: 0x0004B02E File Offset: 0x0004922E
+	// Token: 0x17000ED7 RID: 3799
+	// (get) Token: 0x060021F5 RID: 8693 RVA: 0x0001220C File Offset: 0x0001040C
 	public SkinnedMeshRenderer ScarfGeo
 	{
 		get
@@ -139,8 +139,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B9F RID: 2975
-	// (get) Token: 0x0600181F RID: 6175 RVA: 0x0004B036 File Offset: 0x00049236
+	// Token: 0x17000ED8 RID: 3800
+	// (get) Token: 0x060021F6 RID: 8694 RVA: 0x00012214 File Offset: 0x00010414
 	public SkinnedMeshRenderer ChestGeo
 	{
 		get
@@ -149,8 +149,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BA0 RID: 2976
-	// (get) Token: 0x06001820 RID: 6176 RVA: 0x0004B03E File Offset: 0x0004923E
+	// Token: 0x17000ED9 RID: 3801
+	// (get) Token: 0x060021F7 RID: 8695 RVA: 0x0001221C File Offset: 0x0001041C
 	public SkinnedMeshRenderer LeftHandClosedGeo
 	{
 		get
@@ -159,8 +159,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BA1 RID: 2977
-	// (get) Token: 0x06001821 RID: 6177 RVA: 0x0004B046 File Offset: 0x00049246
+	// Token: 0x17000EDA RID: 3802
+	// (get) Token: 0x060021F8 RID: 8696 RVA: 0x00012224 File Offset: 0x00010424
 	public SkinnedMeshRenderer RightHandClosedGeo
 	{
 		get
@@ -169,8 +169,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BA2 RID: 2978
-	// (get) Token: 0x06001822 RID: 6178 RVA: 0x0004B04E File Offset: 0x0004924E
+	// Token: 0x17000EDB RID: 3803
+	// (get) Token: 0x060021F9 RID: 8697 RVA: 0x0001222C File Offset: 0x0001042C
 	public SkinnedMeshRenderer LeftHandOpenGeo
 	{
 		get
@@ -179,8 +179,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BA3 RID: 2979
-	// (get) Token: 0x06001823 RID: 6179 RVA: 0x0004B056 File Offset: 0x00049256
+	// Token: 0x17000EDC RID: 3804
+	// (get) Token: 0x060021FA RID: 8698 RVA: 0x00012234 File Offset: 0x00010434
 	public SkinnedMeshRenderer RightHandOpenGeo
 	{
 		get
@@ -189,8 +189,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BA4 RID: 2980
-	// (get) Token: 0x06001824 RID: 6180 RVA: 0x0004B05E File Offset: 0x0004925E
+	// Token: 0x17000EDD RID: 3805
+	// (get) Token: 0x060021FB RID: 8699 RVA: 0x0001223C File Offset: 0x0001043C
 	public SkinnedMeshRenderer[] BodyGeoArray
 	{
 		get
@@ -199,8 +199,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BA5 RID: 2981
-	// (get) Token: 0x06001825 RID: 6181 RVA: 0x0004B066 File Offset: 0x00049266
+	// Token: 0x17000EDE RID: 3806
+	// (get) Token: 0x060021FC RID: 8700 RVA: 0x00012244 File Offset: 0x00010444
 	public GameObject KnightGeo
 	{
 		get
@@ -209,8 +209,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BA6 RID: 2982
-	// (get) Token: 0x06001826 RID: 6182 RVA: 0x0004B06E File Offset: 0x0004926E
+	// Token: 0x17000EDF RID: 3807
+	// (get) Token: 0x060021FD RID: 8701 RVA: 0x0001224C File Offset: 0x0001044C
 	public GameObject BarbarianGeo
 	{
 		get
@@ -219,8 +219,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BA7 RID: 2983
-	// (get) Token: 0x06001827 RID: 6183 RVA: 0x0004B076 File Offset: 0x00049276
+	// Token: 0x17000EE0 RID: 3808
+	// (get) Token: 0x060021FE RID: 8702 RVA: 0x00012254 File Offset: 0x00010454
 	public GameObject MageGeo
 	{
 		get
@@ -229,8 +229,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BA8 RID: 2984
-	// (get) Token: 0x06001828 RID: 6184 RVA: 0x0004B07E File Offset: 0x0004927E
+	// Token: 0x17000EE1 RID: 3809
+	// (get) Token: 0x060021FF RID: 8703 RVA: 0x0001225C File Offset: 0x0001045C
 	public GameObject ArcherGeo
 	{
 		get
@@ -239,8 +239,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BA9 RID: 2985
-	// (get) Token: 0x06001829 RID: 6185 RVA: 0x0004B086 File Offset: 0x00049286
+	// Token: 0x17000EE2 RID: 3810
+	// (get) Token: 0x06002200 RID: 8704 RVA: 0x00012264 File Offset: 0x00010464
 	public GameObject DuelistGeo
 	{
 		get
@@ -249,8 +249,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BAA RID: 2986
-	// (get) Token: 0x0600182A RID: 6186 RVA: 0x0004B08E File Offset: 0x0004928E
+	// Token: 0x17000EE3 RID: 3811
+	// (get) Token: 0x06002201 RID: 8705 RVA: 0x0001226C File Offset: 0x0001046C
 	public GameObject SpearmanGeo
 	{
 		get
@@ -259,8 +259,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BAB RID: 2987
-	// (get) Token: 0x0600182B RID: 6187 RVA: 0x0004B096 File Offset: 0x00049296
+	// Token: 0x17000EE4 RID: 3812
+	// (get) Token: 0x06002202 RID: 8706 RVA: 0x00012274 File Offset: 0x00010474
 	public GameObject ChefGeo
 	{
 		get
@@ -269,8 +269,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BAC RID: 2988
-	// (get) Token: 0x0600182C RID: 6188 RVA: 0x0004B09E File Offset: 0x0004929E
+	// Token: 0x17000EE5 RID: 3813
+	// (get) Token: 0x06002203 RID: 8707 RVA: 0x0001227C File Offset: 0x0001047C
 	public GameObject AssassinGeo
 	{
 		get
@@ -279,8 +279,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BAD RID: 2989
-	// (get) Token: 0x0600182D RID: 6189 RVA: 0x0004B0A6 File Offset: 0x000492A6
+	// Token: 0x17000EE6 RID: 3814
+	// (get) Token: 0x06002204 RID: 8708 RVA: 0x00012284 File Offset: 0x00010484
 	public GameObject GunslingerGeo
 	{
 		get
@@ -289,8 +289,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BAE RID: 2990
-	// (get) Token: 0x0600182E RID: 6190 RVA: 0x0004B0AE File Offset: 0x000492AE
+	// Token: 0x17000EE7 RID: 3815
+	// (get) Token: 0x06002205 RID: 8709 RVA: 0x0001228C File Offset: 0x0001048C
 	public GameObject BoxerGeo
 	{
 		get
@@ -299,8 +299,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BAF RID: 2991
-	// (get) Token: 0x0600182F RID: 6191 RVA: 0x0004B0B6 File Offset: 0x000492B6
+	// Token: 0x17000EE8 RID: 3816
+	// (get) Token: 0x06002206 RID: 8710 RVA: 0x00012294 File Offset: 0x00010494
 	public GameObject LancerGeo
 	{
 		get
@@ -309,8 +309,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BB0 RID: 2992
-	// (get) Token: 0x06001830 RID: 6192 RVA: 0x0004B0BE File Offset: 0x000492BE
+	// Token: 0x17000EE9 RID: 3817
+	// (get) Token: 0x06002207 RID: 8711 RVA: 0x0001229C File Offset: 0x0001049C
 	public GameObject RoninGeo
 	{
 		get
@@ -319,8 +319,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BB1 RID: 2993
-	// (get) Token: 0x06001831 RID: 6193 RVA: 0x0004B0C6 File Offset: 0x000492C6
+	// Token: 0x17000EEA RID: 3818
+	// (get) Token: 0x06002208 RID: 8712 RVA: 0x000122A4 File Offset: 0x000104A4
 	public GameObject BardGeo
 	{
 		get
@@ -329,8 +329,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BB2 RID: 2994
-	// (get) Token: 0x06001832 RID: 6194 RVA: 0x0004B0CE File Offset: 0x000492CE
+	// Token: 0x17000EEB RID: 3819
+	// (get) Token: 0x06002209 RID: 8713 RVA: 0x000122AC File Offset: 0x000104AC
 	public GameObject PirateGeo
 	{
 		get
@@ -339,8 +339,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BB3 RID: 2995
-	// (get) Token: 0x06001833 RID: 6195 RVA: 0x0004B0D6 File Offset: 0x000492D6
+	// Token: 0x17000EEC RID: 3820
+	// (get) Token: 0x0600220A RID: 8714 RVA: 0x000122B4 File Offset: 0x000104B4
 	public GameObject AstroGeo
 	{
 		get
@@ -349,8 +349,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BB4 RID: 2996
-	// (get) Token: 0x06001834 RID: 6196 RVA: 0x0004B0DE File Offset: 0x000492DE
+	// Token: 0x17000EED RID: 3821
+	// (get) Token: 0x0600220B RID: 8715 RVA: 0x000122BC File Offset: 0x000104BC
 	public GameObject VisualsGameObject
 	{
 		get
@@ -359,8 +359,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BB5 RID: 2997
-	// (get) Token: 0x06001835 RID: 6197 RVA: 0x0004B0E6 File Offset: 0x000492E6
+	// Token: 0x17000EEE RID: 3822
+	// (get) Token: 0x0600220C RID: 8716 RVA: 0x000122C4 File Offset: 0x000104C4
 	public SkinnedMeshRenderer[] CurrentOutfitGeoArray
 	{
 		get
@@ -369,8 +369,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BB6 RID: 2998
-	// (get) Token: 0x06001836 RID: 6198 RVA: 0x0004B0EE File Offset: 0x000492EE
+	// Token: 0x17000EEF RID: 3823
+	// (get) Token: 0x0600220D RID: 8717 RVA: 0x000122CC File Offset: 0x000104CC
 	public SkinnedMeshRenderer SwordGeo
 	{
 		get
@@ -379,8 +379,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BB7 RID: 2999
-	// (get) Token: 0x06001837 RID: 6199 RVA: 0x0004B0F6 File Offset: 0x000492F6
+	// Token: 0x17000EF0 RID: 3824
+	// (get) Token: 0x0600220E RID: 8718 RVA: 0x000122D4 File Offset: 0x000104D4
 	public SkinnedMeshRenderer SpearGeo
 	{
 		get
@@ -389,8 +389,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BB8 RID: 3000
-	// (get) Token: 0x06001838 RID: 6200 RVA: 0x0004B0FE File Offset: 0x000492FE
+	// Token: 0x17000EF1 RID: 3825
+	// (get) Token: 0x0600220F RID: 8719 RVA: 0x000122DC File Offset: 0x000104DC
 	public SkinnedMeshRenderer LanceGeo
 	{
 		get
@@ -399,8 +399,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BB9 RID: 3001
-	// (get) Token: 0x06001839 RID: 6201 RVA: 0x0004B106 File Offset: 0x00049306
+	// Token: 0x17000EF2 RID: 3826
+	// (get) Token: 0x06002210 RID: 8720 RVA: 0x000122E4 File Offset: 0x000104E4
 	public SkinnedMeshRenderer WandGeo
 	{
 		get
@@ -409,8 +409,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BBA RID: 3002
-	// (get) Token: 0x0600183A RID: 6202 RVA: 0x0004B10E File Offset: 0x0004930E
+	// Token: 0x17000EF3 RID: 3827
+	// (get) Token: 0x06002211 RID: 8721 RVA: 0x000122EC File Offset: 0x000104EC
 	public SkinnedMeshRenderer BowGeo
 	{
 		get
@@ -419,8 +419,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BBB RID: 3003
-	// (get) Token: 0x0600183B RID: 6203 RVA: 0x0004B116 File Offset: 0x00049316
+	// Token: 0x17000EF4 RID: 3828
+	// (get) Token: 0x06002212 RID: 8722 RVA: 0x000122F4 File Offset: 0x000104F4
 	public SkinnedMeshRenderer ArrowGeo
 	{
 		get
@@ -429,8 +429,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BBC RID: 3004
-	// (get) Token: 0x0600183C RID: 6204 RVA: 0x0004B11E File Offset: 0x0004931E
+	// Token: 0x17000EF5 RID: 3829
+	// (get) Token: 0x06002213 RID: 8723 RVA: 0x000122FC File Offset: 0x000104FC
 	public SkinnedMeshRenderer SaberGeo
 	{
 		get
@@ -439,8 +439,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BBD RID: 3005
-	// (get) Token: 0x0600183D RID: 6205 RVA: 0x0004B126 File Offset: 0x00049326
+	// Token: 0x17000EF6 RID: 3830
+	// (get) Token: 0x06002214 RID: 8724 RVA: 0x00012304 File Offset: 0x00010504
 	public SkinnedMeshRenderer LadleGeo
 	{
 		get
@@ -449,8 +449,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BBE RID: 3006
-	// (get) Token: 0x0600183E RID: 6206 RVA: 0x0004B12E File Offset: 0x0004932E
+	// Token: 0x17000EF7 RID: 3831
+	// (get) Token: 0x06002215 RID: 8725 RVA: 0x0001230C File Offset: 0x0001050C
 	public SkinnedMeshRenderer AxeGeo
 	{
 		get
@@ -459,8 +459,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BBF RID: 3007
-	// (get) Token: 0x0600183F RID: 6207 RVA: 0x0004B136 File Offset: 0x00049336
+	// Token: 0x17000EF8 RID: 3832
+	// (get) Token: 0x06002216 RID: 8726 RVA: 0x00012314 File Offset: 0x00010514
 	public SkinnedMeshRenderer TonfaLeftGeo
 	{
 		get
@@ -469,8 +469,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BC0 RID: 3008
-	// (get) Token: 0x06001840 RID: 6208 RVA: 0x0004B13E File Offset: 0x0004933E
+	// Token: 0x17000EF9 RID: 3833
+	// (get) Token: 0x06002217 RID: 8727 RVA: 0x0001231C File Offset: 0x0001051C
 	public SkinnedMeshRenderer TonfaRightGeo
 	{
 		get
@@ -479,8 +479,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BC1 RID: 3009
-	// (get) Token: 0x06001841 RID: 6209 RVA: 0x0004B146 File Offset: 0x00049346
+	// Token: 0x17000EFA RID: 3834
+	// (get) Token: 0x06002218 RID: 8728 RVA: 0x00012324 File Offset: 0x00010524
 	public SkinnedMeshRenderer ChakramGeo
 	{
 		get
@@ -489,8 +489,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BC2 RID: 3010
-	// (get) Token: 0x06001842 RID: 6210 RVA: 0x0004B14E File Offset: 0x0004934E
+	// Token: 0x17000EFB RID: 3835
+	// (get) Token: 0x06002219 RID: 8729 RVA: 0x0001232C File Offset: 0x0001052C
 	public SkinnedMeshRenderer KunaiGeo
 	{
 		get
@@ -499,8 +499,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BC3 RID: 3011
-	// (get) Token: 0x06001843 RID: 6211 RVA: 0x0004B156 File Offset: 0x00049356
+	// Token: 0x17000EFC RID: 3836
+	// (get) Token: 0x0600221A RID: 8730 RVA: 0x00012334 File Offset: 0x00010534
 	public SkinnedMeshRenderer DualBladeLeftGeo
 	{
 		get
@@ -509,8 +509,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BC4 RID: 3012
-	// (get) Token: 0x06001844 RID: 6212 RVA: 0x0004B15E File Offset: 0x0004935E
+	// Token: 0x17000EFD RID: 3837
+	// (get) Token: 0x0600221B RID: 8731 RVA: 0x0001233C File Offset: 0x0001053C
 	public SkinnedMeshRenderer DualBladeRightGeo
 	{
 		get
@@ -519,8 +519,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BC5 RID: 3013
-	// (get) Token: 0x06001845 RID: 6213 RVA: 0x0004B166 File Offset: 0x00049366
+	// Token: 0x17000EFE RID: 3838
+	// (get) Token: 0x0600221C RID: 8732 RVA: 0x00012344 File Offset: 0x00010544
 	public SkinnedMeshRenderer FryingPanGeo
 	{
 		get
@@ -529,8 +529,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BC6 RID: 3014
-	// (get) Token: 0x06001846 RID: 6214 RVA: 0x0004B16E File Offset: 0x0004936E
+	// Token: 0x17000EFF RID: 3839
+	// (get) Token: 0x0600221D RID: 8733 RVA: 0x0001234C File Offset: 0x0001054C
 	public SkinnedMeshRenderer PistolGeo
 	{
 		get
@@ -539,8 +539,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BC7 RID: 3015
-	// (get) Token: 0x06001847 RID: 6215 RVA: 0x0004B176 File Offset: 0x00049376
+	// Token: 0x17000F00 RID: 3840
+	// (get) Token: 0x0600221E RID: 8734 RVA: 0x00012354 File Offset: 0x00010554
 	public SkinnedMeshRenderer BoxingGloveGeo
 	{
 		get
@@ -549,8 +549,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BC8 RID: 3016
-	// (get) Token: 0x06001848 RID: 6216 RVA: 0x0004B17E File Offset: 0x0004937E
+	// Token: 0x17000F01 RID: 3841
+	// (get) Token: 0x0600221F RID: 8735 RVA: 0x0001235C File Offset: 0x0001055C
 	public SkinnedMeshRenderer KatanaGeo
 	{
 		get
@@ -559,8 +559,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BC9 RID: 3017
-	// (get) Token: 0x06001849 RID: 6217 RVA: 0x0004B186 File Offset: 0x00049386
+	// Token: 0x17000F02 RID: 3842
+	// (get) Token: 0x06002220 RID: 8736 RVA: 0x00012364 File Offset: 0x00010564
 	public SkinnedMeshRenderer CannonGeo
 	{
 		get
@@ -569,8 +569,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BCA RID: 3018
-	// (get) Token: 0x0600184A RID: 6218 RVA: 0x0004B18E File Offset: 0x0004938E
+	// Token: 0x17000F03 RID: 3843
+	// (get) Token: 0x06002221 RID: 8737 RVA: 0x0001236C File Offset: 0x0001056C
 	public SkinnedMeshRenderer LuteGeo
 	{
 		get
@@ -579,8 +579,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BCB RID: 3019
-	// (get) Token: 0x0600184B RID: 6219 RVA: 0x0004B196 File Offset: 0x00049396
+	// Token: 0x17000F04 RID: 3844
+	// (get) Token: 0x06002222 RID: 8738 RVA: 0x00012374 File Offset: 0x00010574
 	public SkinnedMeshRenderer AstroWandGeo
 	{
 		get
@@ -589,19 +589,19 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BCC RID: 3020
-	// (get) Token: 0x0600184C RID: 6220 RVA: 0x0004B19E File Offset: 0x0004939E
-	// (set) Token: 0x0600184D RID: 6221 RVA: 0x0004B1A6 File Offset: 0x000493A6
+	// Token: 0x17000F05 RID: 3845
+	// (get) Token: 0x06002223 RID: 8739 RVA: 0x0001237C File Offset: 0x0001057C
+	// (set) Token: 0x06002224 RID: 8740 RVA: 0x00012384 File Offset: 0x00010584
 	public SkinnedMeshRenderer CurrentWeaponGeo { get; set; }
 
-	// Token: 0x17000BCD RID: 3021
-	// (get) Token: 0x0600184E RID: 6222 RVA: 0x0004B1AF File Offset: 0x000493AF
-	// (set) Token: 0x0600184F RID: 6223 RVA: 0x0004B1B7 File Offset: 0x000493B7
+	// Token: 0x17000F06 RID: 3846
+	// (get) Token: 0x06002225 RID: 8741 RVA: 0x0001238D File Offset: 0x0001058D
+	// (set) Token: 0x06002226 RID: 8742 RVA: 0x00012395 File Offset: 0x00010595
 	public SkinnedMeshRenderer SecondaryWeaponGeo { get; set; }
 
-	// Token: 0x17000BCE RID: 3022
-	// (get) Token: 0x06001850 RID: 6224 RVA: 0x0004B1C0 File Offset: 0x000493C0
-	// (set) Token: 0x06001851 RID: 6225 RVA: 0x0004B1C8 File Offset: 0x000493C8
+	// Token: 0x17000F07 RID: 3847
+	// (get) Token: 0x06002227 RID: 8743 RVA: 0x0001239E File Offset: 0x0001059E
+	// (set) Token: 0x06002228 RID: 8744 RVA: 0x000123A6 File Offset: 0x000105A6
 	public GameObject CustomArmorMesh
 	{
 		get
@@ -618,9 +618,9 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BCF RID: 3023
-	// (get) Token: 0x06001852 RID: 6226 RVA: 0x0004B1E6 File Offset: 0x000493E6
-	// (set) Token: 0x06001853 RID: 6227 RVA: 0x0004B1EE File Offset: 0x000493EE
+	// Token: 0x17000F08 RID: 3848
+	// (get) Token: 0x06002229 RID: 8745 RVA: 0x000123C4 File Offset: 0x000105C4
+	// (set) Token: 0x0600222A RID: 8746 RVA: 0x000123CC File Offset: 0x000105CC
 	public GameObject CustomHelmetMesh
 	{
 		get
@@ -637,8 +637,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BD0 RID: 3024
-	// (get) Token: 0x06001854 RID: 6228 RVA: 0x0004B20C File Offset: 0x0004940C
+	// Token: 0x17000F09 RID: 3849
+	// (get) Token: 0x0600222B RID: 8747 RVA: 0x000123EA File Offset: 0x000105EA
 	public SkinnedMeshRenderer[] CustomGeoArray
 	{
 		get
@@ -647,9 +647,9 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BD1 RID: 3025
-	// (get) Token: 0x06001855 RID: 6229 RVA: 0x0004B214 File Offset: 0x00049414
-	// (set) Token: 0x06001856 RID: 6230 RVA: 0x0004B21C File Offset: 0x0004941C
+	// Token: 0x17000F0A RID: 3850
+	// (get) Token: 0x0600222C RID: 8748 RVA: 0x000123F2 File Offset: 0x000105F2
+	// (set) Token: 0x0600222D RID: 8749 RVA: 0x000A9074 File Offset: 0x000A7274
 	public GameObject CurrentClassOutfit
 	{
 		get
@@ -671,8 +671,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BD2 RID: 3026
-	// (get) Token: 0x06001857 RID: 6231 RVA: 0x0004B272 File Offset: 0x00049472
+	// Token: 0x17000F0B RID: 3851
+	// (get) Token: 0x0600222E RID: 8750 RVA: 0x000123FA File Offset: 0x000105FA
 	public Animator Animator
 	{
 		get
@@ -681,8 +681,8 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BD3 RID: 3027
-	// (get) Token: 0x06001858 RID: 6232 RVA: 0x0004B27A File Offset: 0x0004947A
+	// Token: 0x17000F0C RID: 3852
+	// (get) Token: 0x0600222F RID: 8751 RVA: 0x00012402 File Offset: 0x00010602
 	public MaterialPropertyBlock PropertyBlock
 	{
 		get
@@ -691,9 +691,9 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BD4 RID: 3028
-	// (get) Token: 0x06001859 RID: 6233 RVA: 0x0004B282 File Offset: 0x00049482
-	// (set) Token: 0x0600185A RID: 6234 RVA: 0x0004B29C File Offset: 0x0004949C
+	// Token: 0x17000F0D RID: 3853
+	// (get) Token: 0x06002230 RID: 8752 RVA: 0x0001240A File Offset: 0x0001060A
+	// (set) Token: 0x06002231 RID: 8753 RVA: 0x00012424 File Offset: 0x00010624
 	public bool GenerateRandomLook
 	{
 		get
@@ -706,7 +706,7 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600185B RID: 6235 RVA: 0x0004B2A5 File Offset: 0x000494A5
+	// Token: 0x06002232 RID: 8754 RVA: 0x0001242D File Offset: 0x0001062D
 	protected virtual void Awake()
 	{
 		if (!this.IsInitialized)
@@ -715,7 +715,7 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600185C RID: 6236 RVA: 0x0004B2B5 File Offset: 0x000494B5
+	// Token: 0x06002233 RID: 8755 RVA: 0x0001243D File Offset: 0x0001063D
 	public virtual void Initialize()
 	{
 		this.m_animator = base.GetComponent<Animator>();
@@ -724,7 +724,7 @@ public class LookController : MonoBehaviour
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x0600185D RID: 6237 RVA: 0x0004B2F1 File Offset: 0x000494F1
+	// Token: 0x06002234 RID: 8756 RVA: 0x00012479 File Offset: 0x00010679
 	public virtual void InitializeLook(CharacterData charData)
 	{
 		if (!this.IsInitialized)
@@ -736,7 +736,7 @@ public class LookController : MonoBehaviour
 		LookCreator.DisableAllWeaponGeo(this);
 	}
 
-	// Token: 0x0600185E RID: 6238 RVA: 0x0004B320 File Offset: 0x00049520
+	// Token: 0x06002235 RID: 8757 RVA: 0x000A90CC File Offset: 0x000A72CC
 	protected void ApplyOutlineScale()
 	{
 		if (this.IsShopModel)
@@ -762,13 +762,13 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600185F RID: 6239 RVA: 0x0004B404 File Offset: 0x00049604
+	// Token: 0x06002236 RID: 8758 RVA: 0x000124A8 File Offset: 0x000106A8
 	public void SetCustomMeshDirty()
 	{
 		this.m_customGeoMeshIsDirty = true;
 	}
 
-	// Token: 0x06001860 RID: 6240 RVA: 0x0004B410 File Offset: 0x00049610
+	// Token: 0x06002237 RID: 8759 RVA: 0x000A91B0 File Offset: 0x000A73B0
 	protected void UpdateCustomMeshArray()
 	{
 		if (this.m_customGeoMeshIsDirty || this.m_customGeoArray == null)
@@ -790,266 +790,266 @@ public class LookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001773 RID: 6003
+	// Token: 0x04001EA5 RID: 7845
 	public const float SHOP_MODEL_OUTLINE_SCALE = 1.7f;
 
-	// Token: 0x04001774 RID: 6004
+	// Token: 0x04001EA6 RID: 7846
 	[SerializeField]
 	private bool m_isShopModel;
 
-	// Token: 0x04001775 RID: 6005
+	// Token: 0x04001EA7 RID: 7847
 	[SerializeField]
 	private bool m_isPortraitModel;
 
-	// Token: 0x04001776 RID: 6006
+	// Token: 0x04001EA8 RID: 7848
 	[Header("Debug")]
 	[SerializeField]
 	private bool m_generateRandomLook;
 
-	// Token: 0x04001777 RID: 6007
+	// Token: 0x04001EA9 RID: 7849
 	[Header("Player Geo")]
 	[SerializeField]
 	private SkinnedMeshRenderer m_leftEyeGeo;
 
-	// Token: 0x04001778 RID: 6008
+	// Token: 0x04001EAA RID: 7850
 	[SerializeField]
 	private SkinnedMeshRenderer m_rightEyeGeo;
 
-	// Token: 0x04001779 RID: 6009
+	// Token: 0x04001EAB RID: 7851
 	[SerializeField]
 	private SkinnedMeshRenderer m_mouthGeo;
 
-	// Token: 0x0400177A RID: 6010
+	// Token: 0x04001EAC RID: 7852
 	[SerializeField]
 	private SkinnedMeshRenderer m_headGeo;
 
-	// Token: 0x0400177B RID: 6011
+	// Token: 0x04001EAD RID: 7853
 	[SerializeField]
 	private SkinnedMeshRenderer m_helmetGeo;
 
-	// Token: 0x0400177C RID: 6012
+	// Token: 0x04001EAE RID: 7854
 	[SerializeField]
 	private SkinnedMeshRenderer m_chestHairGeo;
 
-	// Token: 0x0400177D RID: 6013
+	// Token: 0x04001EAF RID: 7855
 	[SerializeField]
 	private SkinnedMeshRenderer m_helmetHairGeo;
 
-	// Token: 0x0400177E RID: 6014
+	// Token: 0x04001EB0 RID: 7856
 	[SerializeField]
 	private SkinnedMeshRenderer m_leftShoulderGeo;
 
-	// Token: 0x0400177F RID: 6015
+	// Token: 0x04001EB1 RID: 7857
 	[SerializeField]
 	private SkinnedMeshRenderer m_rightShoulderGeo;
 
-	// Token: 0x04001780 RID: 6016
+	// Token: 0x04001EB2 RID: 7858
 	[SerializeField]
 	private SkinnedMeshRenderer m_capeGeo;
 
-	// Token: 0x04001781 RID: 6017
+	// Token: 0x04001EB3 RID: 7859
 	[SerializeField]
 	private SkinnedMeshRenderer m_scarfGeo;
 
-	// Token: 0x04001782 RID: 6018
+	// Token: 0x04001EB4 RID: 7860
 	[SerializeField]
 	private SkinnedMeshRenderer m_chestGeo;
 
-	// Token: 0x04001783 RID: 6019
+	// Token: 0x04001EB5 RID: 7861
 	[SerializeField]
 	private SkinnedMeshRenderer m_leftHandClosedGeo;
 
-	// Token: 0x04001784 RID: 6020
+	// Token: 0x04001EB6 RID: 7862
 	[SerializeField]
 	private SkinnedMeshRenderer m_rightHandClosedGeo;
 
-	// Token: 0x04001785 RID: 6021
+	// Token: 0x04001EB7 RID: 7863
 	[SerializeField]
 	private SkinnedMeshRenderer m_leftHandOpenGeo;
 
-	// Token: 0x04001786 RID: 6022
+	// Token: 0x04001EB8 RID: 7864
 	[SerializeField]
 	private SkinnedMeshRenderer m_rightHandOpenGeo;
 
-	// Token: 0x04001787 RID: 6023
+	// Token: 0x04001EB9 RID: 7865
 	[Header("Player Class Geo", order = 10)]
 	[SerializeField]
 	private GameObject m_knightGeo;
 
-	// Token: 0x04001788 RID: 6024
+	// Token: 0x04001EBA RID: 7866
 	[SerializeField]
 	private GameObject m_barbarianGeo;
 
-	// Token: 0x04001789 RID: 6025
+	// Token: 0x04001EBB RID: 7867
 	[SerializeField]
 	private GameObject m_mageGeo;
 
-	// Token: 0x0400178A RID: 6026
+	// Token: 0x04001EBC RID: 7868
 	[SerializeField]
 	private GameObject m_archerGeo;
 
-	// Token: 0x0400178B RID: 6027
+	// Token: 0x04001EBD RID: 7869
 	[SerializeField]
 	private GameObject m_duelistGeo;
 
-	// Token: 0x0400178C RID: 6028
+	// Token: 0x04001EBE RID: 7870
 	[SerializeField]
 	private GameObject m_spearmanGeo;
 
-	// Token: 0x0400178D RID: 6029
+	// Token: 0x04001EBF RID: 7871
 	[SerializeField]
 	private GameObject m_chefGeo;
 
-	// Token: 0x0400178E RID: 6030
+	// Token: 0x04001EC0 RID: 7872
 	[SerializeField]
 	private GameObject m_assassinGeo;
 
-	// Token: 0x0400178F RID: 6031
+	// Token: 0x04001EC1 RID: 7873
 	[SerializeField]
 	private GameObject m_gunslingerGeo;
 
-	// Token: 0x04001790 RID: 6032
+	// Token: 0x04001EC2 RID: 7874
 	[SerializeField]
 	private GameObject m_boxerGeo;
 
-	// Token: 0x04001791 RID: 6033
+	// Token: 0x04001EC3 RID: 7875
 	[SerializeField]
 	private GameObject m_lancerGeo;
 
-	// Token: 0x04001792 RID: 6034
+	// Token: 0x04001EC4 RID: 7876
 	[SerializeField]
 	private GameObject m_roninGeo;
 
-	// Token: 0x04001793 RID: 6035
+	// Token: 0x04001EC5 RID: 7877
 	[SerializeField]
 	private GameObject m_pirateGeo;
 
-	// Token: 0x04001794 RID: 6036
+	// Token: 0x04001EC6 RID: 7878
 	[SerializeField]
 	private GameObject m_bardGeo;
 
-	// Token: 0x04001795 RID: 6037
+	// Token: 0x04001EC7 RID: 7879
 	[SerializeField]
 	private GameObject m_astroGeo;
 
-	// Token: 0x04001796 RID: 6038
+	// Token: 0x04001EC8 RID: 7880
 	[Header("Player Weapon Geo")]
 	[SerializeField]
 	private SkinnedMeshRenderer m_swordGeo;
 
-	// Token: 0x04001797 RID: 6039
+	// Token: 0x04001EC9 RID: 7881
 	[SerializeField]
 	private SkinnedMeshRenderer m_spearGeo;
 
-	// Token: 0x04001798 RID: 6040
+	// Token: 0x04001ECA RID: 7882
 	[SerializeField]
 	private SkinnedMeshRenderer m_lanceGeo;
 
-	// Token: 0x04001799 RID: 6041
+	// Token: 0x04001ECB RID: 7883
 	[SerializeField]
 	private SkinnedMeshRenderer m_staffGeo;
 
-	// Token: 0x0400179A RID: 6042
+	// Token: 0x04001ECC RID: 7884
 	[SerializeField]
 	private SkinnedMeshRenderer m_bowGeo;
 
-	// Token: 0x0400179B RID: 6043
+	// Token: 0x04001ECD RID: 7885
 	[SerializeField]
 	private SkinnedMeshRenderer m_arrowGeo;
 
-	// Token: 0x0400179C RID: 6044
+	// Token: 0x04001ECE RID: 7886
 	[SerializeField]
 	private SkinnedMeshRenderer m_saberGeo;
 
-	// Token: 0x0400179D RID: 6045
+	// Token: 0x04001ECF RID: 7887
 	[SerializeField]
 	private SkinnedMeshRenderer m_ladleGeo;
 
-	// Token: 0x0400179E RID: 6046
+	// Token: 0x04001ED0 RID: 7888
 	[SerializeField]
 	private SkinnedMeshRenderer m_axeGeo;
 
-	// Token: 0x0400179F RID: 6047
+	// Token: 0x04001ED1 RID: 7889
 	[SerializeField]
 	private SkinnedMeshRenderer m_kunaiGeo;
 
-	// Token: 0x040017A0 RID: 6048
+	// Token: 0x04001ED2 RID: 7890
 	[SerializeField]
 	private SkinnedMeshRenderer m_tonfaGeoL;
 
-	// Token: 0x040017A1 RID: 6049
+	// Token: 0x04001ED3 RID: 7891
 	[SerializeField]
 	private SkinnedMeshRenderer m_tonfaGeoR;
 
-	// Token: 0x040017A2 RID: 6050
+	// Token: 0x04001ED4 RID: 7892
 	[SerializeField]
 	private SkinnedMeshRenderer m_chakramGeo;
 
-	// Token: 0x040017A3 RID: 6051
+	// Token: 0x04001ED5 RID: 7893
 	[SerializeField]
 	private SkinnedMeshRenderer m_dualBladeL;
 
-	// Token: 0x040017A4 RID: 6052
+	// Token: 0x04001ED6 RID: 7894
 	[SerializeField]
 	private SkinnedMeshRenderer m_dualBladeR;
 
-	// Token: 0x040017A5 RID: 6053
+	// Token: 0x04001ED7 RID: 7895
 	[SerializeField]
 	private SkinnedMeshRenderer m_fryingPanGeo;
 
-	// Token: 0x040017A6 RID: 6054
+	// Token: 0x04001ED8 RID: 7896
 	[SerializeField]
 	private SkinnedMeshRenderer m_pistolGeo;
 
-	// Token: 0x040017A7 RID: 6055
+	// Token: 0x04001ED9 RID: 7897
 	[SerializeField]
 	private SkinnedMeshRenderer m_boxingGlovesGeo;
 
-	// Token: 0x040017A8 RID: 6056
+	// Token: 0x04001EDA RID: 7898
 	[SerializeField]
 	private SkinnedMeshRenderer m_katanaGeo;
 
-	// Token: 0x040017A9 RID: 6057
+	// Token: 0x04001EDB RID: 7899
 	[SerializeField]
 	private SkinnedMeshRenderer m_cannonGeo;
 
-	// Token: 0x040017AA RID: 6058
+	// Token: 0x04001EDC RID: 7900
 	[SerializeField]
 	private SkinnedMeshRenderer m_luteGeo;
 
-	// Token: 0x040017AB RID: 6059
+	// Token: 0x04001EDD RID: 7901
 	[SerializeField]
 	private SkinnedMeshRenderer m_astroWandGeo;
 
-	// Token: 0x040017AC RID: 6060
+	// Token: 0x04001EDE RID: 7902
 	[Header("Misc Geo")]
 	[SerializeField]
 	private GameObject m_visualsGO;
 
-	// Token: 0x040017AD RID: 6061
+	// Token: 0x04001EDF RID: 7903
 	private Animator m_animator;
 
-	// Token: 0x040017AE RID: 6062
+	// Token: 0x04001EE0 RID: 7904
 	private MaterialPropertyBlock m_matPropBlock;
 
-	// Token: 0x040017AF RID: 6063
+	// Token: 0x04001EE1 RID: 7905
 	private SkinnedMeshRenderer[] m_bodyGeoArray;
 
-	// Token: 0x040017B0 RID: 6064
+	// Token: 0x04001EE2 RID: 7906
 	private SkinnedMeshRenderer[] m_outfitGeoArray;
 
-	// Token: 0x040017B1 RID: 6065
+	// Token: 0x04001EE3 RID: 7907
 	private SkinnedMeshRenderer[] m_customGeoArray;
 
-	// Token: 0x040017B2 RID: 6066
+	// Token: 0x04001EE4 RID: 7908
 	private GameObject m_currentOutfit;
 
-	// Token: 0x040017B3 RID: 6067
+	// Token: 0x04001EE5 RID: 7909
 	private GameObject m_customArmorMesh;
 
-	// Token: 0x040017B4 RID: 6068
+	// Token: 0x04001EE6 RID: 7910
 	private GameObject m_customHelmetMesh;
 
-	// Token: 0x040017B5 RID: 6069
+	// Token: 0x04001EE7 RID: 7911
 	private bool m_customGeoMeshIsDirty;
 }

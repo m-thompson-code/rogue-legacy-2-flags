@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020006AA RID: 1706
+// Token: 0x02000B47 RID: 2887
 public class RuneManager : MonoBehaviour
 {
-	// Token: 0x06003E8D RID: 16013 RVA: 0x000DC930 File Offset: 0x000DAB30
+	// Token: 0x06005788 RID: 22408 RVA: 0x0002FA82 File Offset: 0x0002DC82
 	private void Awake()
 	{
 		this.Initialize();
 	}
 
-	// Token: 0x06003E8E RID: 16014 RVA: 0x000DC938 File Offset: 0x000DAB38
+	// Token: 0x06005789 RID: 22409 RVA: 0x0014CCFC File Offset: 0x0014AEFC
 	private void Initialize()
 	{
 		this.m_onRuneBlueprintsFoundChangedArgs = new RuneFoundLevelChangeEventArgs(RuneType.None, 0);
@@ -33,14 +33,14 @@ public class RuneManager : MonoBehaviour
 		RuneManager.m_isInitialized = true;
 	}
 
-	// Token: 0x06003E8F RID: 16015 RVA: 0x000DC9BF File Offset: 0x000DABBF
+	// Token: 0x0600578A RID: 22410 RVA: 0x0002FA8A File Offset: 0x0002DC8A
 	private void OnDestroy()
 	{
 		RuneManager.m_isDisposed = true;
 	}
 
-	// Token: 0x17001576 RID: 5494
-	// (get) Token: 0x06003E90 RID: 16016 RVA: 0x000DC9C7 File Offset: 0x000DABC7
+	// Token: 0x17001D60 RID: 7520
+	// (get) Token: 0x0600578B RID: 22411 RVA: 0x0002FA92 File Offset: 0x0002DC92
 	public static RuneManager Instance
 	{
 		get
@@ -55,8 +55,8 @@ public class RuneManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001577 RID: 5495
-	// (get) Token: 0x06003E91 RID: 16017 RVA: 0x000DC9F2 File Offset: 0x000DABF2
+	// Token: 0x17001D61 RID: 7521
+	// (get) Token: 0x0600578C RID: 22412 RVA: 0x0002FABD File Offset: 0x0002DCBD
 	public static bool IsInitialized
 	{
 		get
@@ -65,8 +65,8 @@ public class RuneManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001578 RID: 5496
-	// (get) Token: 0x06003E92 RID: 16018 RVA: 0x000DC9F9 File Offset: 0x000DABF9
+	// Token: 0x17001D62 RID: 7522
+	// (get) Token: 0x0600578D RID: 22413 RVA: 0x0002FAC4 File Offset: 0x0002DCC4
 	public static bool IsDisposed
 	{
 		get
@@ -75,20 +75,20 @@ public class RuneManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E93 RID: 16019 RVA: 0x000DCA00 File Offset: 0x000DAC00
+	// Token: 0x0600578E RID: 22414 RVA: 0x0002FACB File Offset: 0x0002DCCB
 	public static bool DoesRuneExist(RuneType runeType)
 	{
 		return RuneManager.GetRune(runeType) != null;
 	}
 
-	// Token: 0x06003E94 RID: 16020 RVA: 0x000DCA0C File Offset: 0x000DAC0C
+	// Token: 0x0600578F RID: 22415 RVA: 0x0014CD84 File Offset: 0x0014AF84
 	public static bool CanAfford(RuneType runeType)
 	{
 		RuneObj rune = RuneManager.GetRune(runeType);
 		return SaveManager.PlayerSaveData.GoldCollectedIncludingBank >= rune.GoldCostToUpgrade && SaveManager.PlayerSaveData.RuneOreCollected >= rune.OreCostToUpgrade;
 	}
 
-	// Token: 0x06003E95 RID: 16021 RVA: 0x000DCA48 File Offset: 0x000DAC48
+	// Token: 0x06005790 RID: 22416 RVA: 0x0014CDC0 File Offset: 0x0014AFC0
 	public static bool CanPurchaseRune(RuneType runeType, bool suppressLogs = true)
 	{
 		if (!RuneManager.DoesRuneExist(runeType))
@@ -144,7 +144,7 @@ public class RuneManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003E96 RID: 16022 RVA: 0x000DCB00 File Offset: 0x000DAD00
+	// Token: 0x06005791 RID: 22417 RVA: 0x0014CE78 File Offset: 0x0014B078
 	public static bool CanEquip(RuneType runeType, bool suppressLogs = true)
 	{
 		if (!RuneManager.DoesRuneExist(runeType))
@@ -204,14 +204,14 @@ public class RuneManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003E97 RID: 16023 RVA: 0x000DCBEB File Offset: 0x000DADEB
+	// Token: 0x06005792 RID: 22418 RVA: 0x0002FAD6 File Offset: 0x0002DCD6
 	public static List<RuneType> GetAllRunesWithFoundState(FoundState foundState)
 	{
 		RuneManager.GetAllRunesWithFoundState(foundState, RuneManager.m_runeTypeListHelper);
 		return RuneManager.m_runeTypeListHelper;
 	}
 
-	// Token: 0x06003E98 RID: 16024 RVA: 0x000DCC00 File Offset: 0x000DAE00
+	// Token: 0x06005793 RID: 22419 RVA: 0x0014CF64 File Offset: 0x0014B164
 	public static void GetAllRunesWithFoundState(FoundState foundState, List<RuneType> results)
 	{
 		results.Clear();
@@ -225,7 +225,7 @@ public class RuneManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E99 RID: 16025 RVA: 0x000DCC74 File Offset: 0x000DAE74
+	// Token: 0x06005794 RID: 22420 RVA: 0x0014CFD8 File Offset: 0x0014B1D8
 	public static int GetTotalEquippedWeight()
 	{
 		int num = 0;
@@ -243,7 +243,7 @@ public class RuneManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003E9A RID: 16026 RVA: 0x000DCCC0 File Offset: 0x000DAEC0
+	// Token: 0x06005795 RID: 22421 RVA: 0x0014D024 File Offset: 0x0014B224
 	public static FoundState GetFoundState(RuneType runeType)
 	{
 		RuneObj rune = RuneManager.GetRune(runeType);
@@ -259,7 +259,7 @@ public class RuneManager : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x06003E9B RID: 16027 RVA: 0x000DCCE8 File Offset: 0x000DAEE8
+	// Token: 0x06005796 RID: 22422 RVA: 0x0014D04C File Offset: 0x0014B24C
 	public static bool SetFoundState(RuneType runeType, FoundState foundState, bool overrideValues, bool runEvents = true)
 	{
 		RuneObj rune = RuneManager.GetRune(runeType);
@@ -292,7 +292,7 @@ public class RuneManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06003E9C RID: 16028 RVA: 0x000DCD98 File Offset: 0x000DAF98
+	// Token: 0x06005797 RID: 22423 RVA: 0x0014D0FC File Offset: 0x0014B2FC
 	public static int GetUpgradeBlueprintsFound(RuneType runeType, bool ignoreInfinitePurchasePower = false)
 	{
 		RuneObj rune = RuneManager.GetRune(runeType);
@@ -304,7 +304,7 @@ public class RuneManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003E9D RID: 16029 RVA: 0x000DCDC8 File Offset: 0x000DAFC8
+	// Token: 0x06005798 RID: 22424 RVA: 0x0014D12C File Offset: 0x0014B32C
 	public static bool SetUpgradeBlueprintsFound(RuneType runeType, int level, bool additive, bool runEvents = true)
 	{
 		RuneObj rune = RuneManager.GetRune(runeType);
@@ -339,7 +339,7 @@ public class RuneManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003E9E RID: 16030 RVA: 0x000DCE80 File Offset: 0x000DB080
+	// Token: 0x06005799 RID: 22425 RVA: 0x0014D1E4 File Offset: 0x0014B3E4
 	public static int GetUpgradeLevel(RuneType runeType)
 	{
 		RuneObj rune = RuneManager.GetRune(runeType);
@@ -350,7 +350,7 @@ public class RuneManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003E9F RID: 16031 RVA: 0x000DCEA0 File Offset: 0x000DB0A0
+	// Token: 0x0600579A RID: 22426 RVA: 0x0014D204 File Offset: 0x0014B404
 	public static bool SetRuneUpgradeLevel(RuneType runeType, int level, bool additive, bool overrideValues, bool runEvents = true)
 	{
 		RuneObj rune = RuneManager.GetRune(runeType);
@@ -404,7 +404,7 @@ public class RuneManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003EA0 RID: 16032 RVA: 0x000DCFA4 File Offset: 0x000DB1A4
+	// Token: 0x0600579B RID: 22427 RVA: 0x0014D308 File Offset: 0x0014B508
 	public static int GetRuneEquippedLevel(RuneType runeType)
 	{
 		RuneObj rune = RuneManager.GetRune(runeType);
@@ -415,7 +415,7 @@ public class RuneManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003EA1 RID: 16033 RVA: 0x000DCFD0 File Offset: 0x000DB1D0
+	// Token: 0x0600579C RID: 22428 RVA: 0x0014D334 File Offset: 0x0014B534
 	public static bool SetRuneEquippedLevel(RuneType runeType, int level, bool additive, bool runEvents = true)
 	{
 		RuneObj rune = RuneManager.GetRune(runeType);
@@ -446,7 +446,7 @@ public class RuneManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06003EA2 RID: 16034 RVA: 0x000DD04C File Offset: 0x000DB24C
+	// Token: 0x0600579D RID: 22429 RVA: 0x0014D3B0 File Offset: 0x0014B5B0
 	public static float GetMinRuneLevelScale()
 	{
 		int num = 0;
@@ -458,7 +458,7 @@ public class RuneManager : MonoBehaviour
 		return (float)num * 1.25f;
 	}
 
-	// Token: 0x06003EA3 RID: 16035 RVA: 0x000DD0BC File Offset: 0x000DB2BC
+	// Token: 0x0600579E RID: 22430 RVA: 0x0014D420 File Offset: 0x0014B620
 	public static int GetTotalAvailableRuneBlueprints(List<RuneObj> populatedList = null)
 	{
 		if (populatedList != null)
@@ -484,7 +484,7 @@ public class RuneManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003EA4 RID: 16036 RVA: 0x000DD11C File Offset: 0x000DB31C
+	// Token: 0x0600579F RID: 22431 RVA: 0x0014D480 File Offset: 0x0014B680
 	public static RuneObj GetRune(RuneType runeType)
 	{
 		RuneObj result;
@@ -495,27 +495,27 @@ public class RuneManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x04002E8E RID: 11918
+	// Token: 0x040040B0 RID: 16560
 	private static bool m_isDisposed;
 
-	// Token: 0x04002E8F RID: 11919
+	// Token: 0x040040B1 RID: 16561
 	private static bool m_isInitialized;
 
-	// Token: 0x04002E90 RID: 11920
+	// Token: 0x040040B2 RID: 16562
 	private RuneFoundLevelChangeEventArgs m_onRuneBlueprintsFoundChangedArgs;
 
-	// Token: 0x04002E91 RID: 11921
+	// Token: 0x040040B3 RID: 16563
 	private RuneEquippedLevelChangeEventArgs m_onRuneEquippedLevelChangeArgs;
 
-	// Token: 0x04002E92 RID: 11922
+	// Token: 0x040040B4 RID: 16564
 	private RunePurchaseLevelChangeEventArgs m_onRunePurchaseLevelChangeArgs;
 
-	// Token: 0x04002E93 RID: 11923
+	// Token: 0x040040B5 RID: 16565
 	private RuneFoundStateChangeEventArgs m_onRuneFoundStateChangeArgs;
 
-	// Token: 0x04002E94 RID: 11924
+	// Token: 0x040040B6 RID: 16566
 	private static RuneManager m_runeManager = null;
 
-	// Token: 0x04002E95 RID: 11925
+	// Token: 0x040040B7 RID: 16567
 	private static List<RuneType> m_runeTypeListHelper = new List<RuneType>();
 }

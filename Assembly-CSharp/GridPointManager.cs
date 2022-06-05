@@ -3,56 +3,56 @@ using System.Collections.Generic;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000678 RID: 1656
+// Token: 0x02000AEF RID: 2799
 public class GridPointManager
 {
-	// Token: 0x170014D0 RID: 5328
-	// (get) Token: 0x06003BA4 RID: 15268 RVA: 0x000CD5AD File Offset: 0x000CB7AD
-	// (set) Token: 0x06003BA5 RID: 15269 RVA: 0x000CD5B5 File Offset: 0x000CB7B5
+	// Token: 0x17001C8C RID: 7308
+	// (get) Token: 0x060053E1 RID: 21473 RVA: 0x0002D847 File Offset: 0x0002BA47
+	// (set) Token: 0x060053E2 RID: 21474 RVA: 0x0002D84F File Offset: 0x0002BA4F
 	public int RoomSeed { get; private set; } = -1;
 
-	// Token: 0x170014D1 RID: 5329
-	// (get) Token: 0x06003BA6 RID: 15270 RVA: 0x000CD5BE File Offset: 0x000CB7BE
-	// (set) Token: 0x06003BA7 RID: 15271 RVA: 0x000CD5C6 File Offset: 0x000CB7C6
+	// Token: 0x17001C8D RID: 7309
+	// (get) Token: 0x060053E3 RID: 21475 RVA: 0x0002D858 File Offset: 0x0002BA58
+	// (set) Token: 0x060053E4 RID: 21476 RVA: 0x0002D860 File Offset: 0x0002BA60
 	public int TunnelRoomSeed { get; private set; } = -1;
 
-	// Token: 0x170014D2 RID: 5330
-	// (get) Token: 0x06003BA8 RID: 15272 RVA: 0x000CD5CF File Offset: 0x000CB7CF
-	// (set) Token: 0x06003BA9 RID: 15273 RVA: 0x000CD5D7 File Offset: 0x000CB7D7
+	// Token: 0x17001C8E RID: 7310
+	// (get) Token: 0x060053E5 RID: 21477 RVA: 0x0002D869 File Offset: 0x0002BA69
+	// (set) Token: 0x060053E6 RID: 21478 RVA: 0x0002D871 File Offset: 0x0002BA71
 	public int PropSeed { get; private set; } = -1;
 
-	// Token: 0x170014D3 RID: 5331
-	// (get) Token: 0x06003BAA RID: 15274 RVA: 0x000CD5E0 File Offset: 0x000CB7E0
-	// (set) Token: 0x06003BAB RID: 15275 RVA: 0x000CD5E8 File Offset: 0x000CB7E8
+	// Token: 0x17001C8F RID: 7311
+	// (get) Token: 0x060053E7 RID: 21479 RVA: 0x0002D87A File Offset: 0x0002BA7A
+	// (set) Token: 0x060053E8 RID: 21480 RVA: 0x0002D882 File Offset: 0x0002BA82
 	public int DecoSeed { get; private set; } = -1;
 
-	// Token: 0x170014D4 RID: 5332
-	// (get) Token: 0x06003BAC RID: 15276 RVA: 0x000CD5F1 File Offset: 0x000CB7F1
-	// (set) Token: 0x06003BAD RID: 15277 RVA: 0x000CD5F9 File Offset: 0x000CB7F9
+	// Token: 0x17001C90 RID: 7312
+	// (get) Token: 0x060053E9 RID: 21481 RVA: 0x0002D88B File Offset: 0x0002BA8B
+	// (set) Token: 0x060053EA RID: 21482 RVA: 0x0002D893 File Offset: 0x0002BA93
 	public int EnemySeed { get; private set; } = -1;
 
-	// Token: 0x170014D5 RID: 5333
-	// (get) Token: 0x06003BAE RID: 15278 RVA: 0x000CD602 File Offset: 0x000CB802
-	// (set) Token: 0x06003BAF RID: 15279 RVA: 0x000CD60A File Offset: 0x000CB80A
+	// Token: 0x17001C91 RID: 7313
+	// (get) Token: 0x060053EB RID: 21483 RVA: 0x0002D89C File Offset: 0x0002BA9C
+	// (set) Token: 0x060053EC RID: 21484 RVA: 0x0002D8A4 File Offset: 0x0002BAA4
 	public int ChestSeed { get; private set; } = -1;
 
-	// Token: 0x170014D6 RID: 5334
-	// (get) Token: 0x06003BB0 RID: 15280 RVA: 0x000CD613 File Offset: 0x000CB813
-	// (set) Token: 0x06003BB1 RID: 15281 RVA: 0x000CD61B File Offset: 0x000CB81B
+	// Token: 0x17001C92 RID: 7314
+	// (get) Token: 0x060053ED RID: 21485 RVA: 0x0002D8AD File Offset: 0x0002BAAD
+	// (set) Token: 0x060053EE RID: 21486 RVA: 0x0002D8B5 File Offset: 0x0002BAB5
 	public int HazardSeed { get; private set; } = -1;
 
-	// Token: 0x170014D7 RID: 5335
-	// (get) Token: 0x06003BB2 RID: 15282 RVA: 0x000CD624 File Offset: 0x000CB824
-	// (set) Token: 0x06003BB3 RID: 15283 RVA: 0x000CD62C File Offset: 0x000CB82C
+	// Token: 0x17001C93 RID: 7315
+	// (get) Token: 0x060053EF RID: 21487 RVA: 0x0002D8BE File Offset: 0x0002BABE
+	// (set) Token: 0x060053F0 RID: 21488 RVA: 0x0002D8C6 File Offset: 0x0002BAC6
 	public int SpecialPropSeed { get; private set; } = -1;
 
-	// Token: 0x170014D8 RID: 5336
-	// (get) Token: 0x06003BB4 RID: 15284 RVA: 0x000CD635 File Offset: 0x000CB835
+	// Token: 0x17001C94 RID: 7316
+	// (get) Token: 0x060053F1 RID: 21489 RVA: 0x0002D8CF File Offset: 0x0002BACF
 	public BiomeType Biome { get; }
 
-	// Token: 0x170014D9 RID: 5337
-	// (get) Token: 0x06003BB5 RID: 15285 RVA: 0x000CD63D File Offset: 0x000CB83D
-	// (set) Token: 0x06003BB6 RID: 15286 RVA: 0x000CD645 File Offset: 0x000CB845
+	// Token: 0x17001C95 RID: 7317
+	// (get) Token: 0x060053F2 RID: 21490 RVA: 0x0002D8D7 File Offset: 0x0002BAD7
+	// (set) Token: 0x060053F3 RID: 21491 RVA: 0x0002D8DF File Offset: 0x0002BADF
 	public BiomeType AppearanceOverride
 	{
 		get
@@ -65,17 +65,17 @@ public class GridPointManager
 		}
 	}
 
-	// Token: 0x170014DA RID: 5338
-	// (get) Token: 0x06003BB7 RID: 15287 RVA: 0x000CD64E File Offset: 0x000CB84E
+	// Token: 0x17001C96 RID: 7318
+	// (get) Token: 0x060053F4 RID: 21492 RVA: 0x0002D8E8 File Offset: 0x0002BAE8
 	public Bounds Bounds { get; }
 
-	// Token: 0x170014DB RID: 5339
-	// (get) Token: 0x06003BB8 RID: 15288 RVA: 0x000CD656 File Offset: 0x000CB856
-	// (set) Token: 0x06003BB9 RID: 15289 RVA: 0x000CD65E File Offset: 0x000CB85E
+	// Token: 0x17001C97 RID: 7319
+	// (get) Token: 0x060053F5 RID: 21493 RVA: 0x0002D8F0 File Offset: 0x0002BAF0
+	// (set) Token: 0x060053F6 RID: 21494 RVA: 0x0002D8F8 File Offset: 0x0002BAF8
 	public GridPointManagerContentEntry[] Content { get; set; }
 
-	// Token: 0x170014DC RID: 5340
-	// (get) Token: 0x06003BBA RID: 15290 RVA: 0x000CD668 File Offset: 0x000CB868
+	// Token: 0x17001C98 RID: 7320
+	// (get) Token: 0x060053F7 RID: 21495 RVA: 0x0013D3F0 File Offset: 0x0013B5F0
 	public List<DoorLocation> DoorLocations
 	{
 		get
@@ -92,31 +92,31 @@ public class GridPointManager
 		}
 	}
 
-	// Token: 0x170014DD RID: 5341
-	// (get) Token: 0x06003BBB RID: 15291 RVA: 0x000CD6C2 File Offset: 0x000CB8C2
+	// Token: 0x17001C99 RID: 7321
+	// (get) Token: 0x060053F8 RID: 21496 RVA: 0x0002D901 File Offset: 0x0002BB01
 	public Vector2Int GridCoordinates { get; }
 
-	// Token: 0x170014DE RID: 5342
-	// (get) Token: 0x06003BBC RID: 15292 RVA: 0x000CD6CA File Offset: 0x000CB8CA
-	// (set) Token: 0x06003BBD RID: 15293 RVA: 0x000CD6D2 File Offset: 0x000CB8D2
+	// Token: 0x17001C9A RID: 7322
+	// (get) Token: 0x060053F9 RID: 21497 RVA: 0x0002D909 File Offset: 0x0002BB09
+	// (set) Token: 0x060053FA RID: 21498 RVA: 0x0002D911 File Offset: 0x0002BB11
 	public GridPoint[,] GridPoints { get; private set; }
 
-	// Token: 0x170014DF RID: 5343
-	// (get) Token: 0x06003BBE RID: 15294 RVA: 0x000CD6DB File Offset: 0x000CB8DB
-	// (set) Token: 0x06003BBF RID: 15295 RVA: 0x000CD6E3 File Offset: 0x000CB8E3
+	// Token: 0x17001C9B RID: 7323
+	// (get) Token: 0x060053FB RID: 21499 RVA: 0x0002D91A File Offset: 0x0002BB1A
+	// (set) Token: 0x060053FC RID: 21500 RVA: 0x0002D922 File Offset: 0x0002BB22
 	public List<GridPoint> GridPointList { get; private set; }
 
-	// Token: 0x170014E0 RID: 5344
-	// (get) Token: 0x06003BC0 RID: 15296 RVA: 0x000CD6EC File Offset: 0x000CB8EC
-	// (set) Token: 0x06003BC1 RID: 15297 RVA: 0x000CD6F4 File Offset: 0x000CB8F4
+	// Token: 0x17001C9C RID: 7324
+	// (get) Token: 0x060053FD RID: 21501 RVA: 0x0002D92B File Offset: 0x0002BB2B
+	// (set) Token: 0x060053FE RID: 21502 RVA: 0x0002D933 File Offset: 0x0002BB33
 	public bool IsRoomMirrored { get; private set; }
 
-	// Token: 0x170014E1 RID: 5345
-	// (get) Token: 0x06003BC2 RID: 15298 RVA: 0x000CD6FD File Offset: 0x000CB8FD
+	// Token: 0x17001C9D RID: 7325
+	// (get) Token: 0x060053FF RID: 21503 RVA: 0x0002D93C File Offset: 0x0002BB3C
 	public bool IsTunnelDestination { get; }
 
-	// Token: 0x170014E2 RID: 5346
-	// (get) Token: 0x06003BC3 RID: 15299 RVA: 0x000CD705 File Offset: 0x000CB905
+	// Token: 0x17001C9E RID: 7326
+	// (get) Token: 0x06005400 RID: 21504 RVA: 0x0002D944 File Offset: 0x0002BB44
 	public Vector2Int MinExtents
 	{
 		get
@@ -125,8 +125,8 @@ public class GridPointManager
 		}
 	}
 
-	// Token: 0x170014E3 RID: 5347
-	// (get) Token: 0x06003BC4 RID: 15300 RVA: 0x000CD70D File Offset: 0x000CB90D
+	// Token: 0x17001C9F RID: 7327
+	// (get) Token: 0x06005401 RID: 21505 RVA: 0x0002D94C File Offset: 0x0002BB4C
 	public Vector2Int MaxExtents
 	{
 		get
@@ -135,27 +135,27 @@ public class GridPointManager
 		}
 	}
 
-	// Token: 0x170014E4 RID: 5348
-	// (get) Token: 0x06003BC5 RID: 15301 RVA: 0x000CD720 File Offset: 0x000CB920
-	// (set) Token: 0x06003BC6 RID: 15302 RVA: 0x000CD728 File Offset: 0x000CB928
+	// Token: 0x17001CA0 RID: 7328
+	// (get) Token: 0x06005402 RID: 21506 RVA: 0x0002D95F File Offset: 0x0002BB5F
+	// (set) Token: 0x06005403 RID: 21507 RVA: 0x0002D967 File Offset: 0x0002BB67
 	public RoomMetaData RoomMetaData { get; private set; }
 
-	// Token: 0x170014E5 RID: 5349
-	// (get) Token: 0x06003BC7 RID: 15303 RVA: 0x000CD731 File Offset: 0x000CB931
+	// Token: 0x17001CA1 RID: 7329
+	// (get) Token: 0x06005404 RID: 21508 RVA: 0x0002D970 File Offset: 0x0002BB70
 	public int RoomNumber { get; }
 
-	// Token: 0x170014E6 RID: 5350
-	// (get) Token: 0x06003BC8 RID: 15304 RVA: 0x000CD739 File Offset: 0x000CB939
-	// (set) Token: 0x06003BC9 RID: 15305 RVA: 0x000CD741 File Offset: 0x000CB941
+	// Token: 0x17001CA2 RID: 7330
+	// (get) Token: 0x06005405 RID: 21509 RVA: 0x0002D978 File Offset: 0x0002BB78
+	// (set) Token: 0x06005406 RID: 21510 RVA: 0x0002D980 File Offset: 0x0002BB80
 	public RoomType RoomType { get; set; }
 
-	// Token: 0x170014E7 RID: 5351
-	// (get) Token: 0x06003BCA RID: 15306 RVA: 0x000CD74A File Offset: 0x000CB94A
+	// Token: 0x17001CA3 RID: 7331
+	// (get) Token: 0x06005407 RID: 21511 RVA: 0x0002D989 File Offset: 0x0002BB89
 	public Vector2Int Size { get; }
 
-	// Token: 0x170014E8 RID: 5352
-	// (get) Token: 0x06003BCB RID: 15307 RVA: 0x000CD752 File Offset: 0x000CB952
-	// (set) Token: 0x06003BCC RID: 15308 RVA: 0x000CD75A File Offset: 0x000CB95A
+	// Token: 0x17001CA4 RID: 7332
+	// (get) Token: 0x06005408 RID: 21512 RVA: 0x0002D991 File Offset: 0x0002BB91
+	// (set) Token: 0x06005409 RID: 21513 RVA: 0x0002D999 File Offset: 0x0002BB99
 	public List<GridPointManager> MergeWithGridPointManagers
 	{
 		get
@@ -168,9 +168,9 @@ public class GridPointManager
 		}
 	}
 
-	// Token: 0x170014E9 RID: 5353
-	// (get) Token: 0x06003BCD RID: 15309 RVA: 0x000CD763 File Offset: 0x000CB963
-	// (set) Token: 0x06003BCE RID: 15310 RVA: 0x000CD76B File Offset: 0x000CB96B
+	// Token: 0x17001CA5 RID: 7333
+	// (get) Token: 0x0600540A RID: 21514 RVA: 0x0002D9A2 File Offset: 0x0002BBA2
+	// (set) Token: 0x0600540B RID: 21515 RVA: 0x0002D9AA File Offset: 0x0002BBAA
 	public int BiomeControllerIndex
 	{
 		get
@@ -183,7 +183,7 @@ public class GridPointManager
 		}
 	}
 
-	// Token: 0x06003BCF RID: 15311 RVA: 0x000CD774 File Offset: 0x000CB974
+	// Token: 0x0600540C RID: 21516 RVA: 0x0013D44C File Offset: 0x0013B64C
 	public GridPointManager(int roomNumber, Vector2Int coordinates, BiomeType biome, RoomType roomType, RoomMetaData roomMetaData, bool isRoomMirrored, bool isTunnelDestination = false)
 	{
 		this.RoomNumber = roomNumber;
@@ -221,7 +221,7 @@ public class GridPointManager
 		this.AppearanceOverride = roomMetaData.BiomeOverride;
 	}
 
-	// Token: 0x06003BD0 RID: 15312 RVA: 0x000CD8F8 File Offset: 0x000CBAF8
+	// Token: 0x0600540D RID: 21517 RVA: 0x0013D5D0 File Offset: 0x0013B7D0
 	private void CreateGridPoints()
 	{
 		if (this.GridPointList == null)
@@ -264,7 +264,7 @@ public class GridPointManager
 		}
 	}
 
-	// Token: 0x06003BD1 RID: 15313 RVA: 0x000CDA84 File Offset: 0x000CBC84
+	// Token: 0x0600540E RID: 21518 RVA: 0x0013D75C File Offset: 0x0013B95C
 	private void CreateGridPoint(int xCoord, int yCoord, List<DoorLocation> doorLocations)
 	{
 		GridPoint gridPoint = this.GridPoints[xCoord, yCoord];
@@ -285,19 +285,19 @@ public class GridPointManager
 		}
 	}
 
-	// Token: 0x06003BD2 RID: 15314 RVA: 0x000CDAE8 File Offset: 0x000CBCE8
+	// Token: 0x0600540F RID: 21519 RVA: 0x0002D9B3 File Offset: 0x0002BBB3
 	public void SetBiomeControllerIndex(int index)
 	{
 		this.BiomeControllerIndex = index;
 	}
 
-	// Token: 0x06003BD3 RID: 15315 RVA: 0x000CDAF1 File Offset: 0x000CBCF1
+	// Token: 0x06005410 RID: 21520 RVA: 0x0002D9BC File Offset: 0x0002BBBC
 	public void SetAppearanceOverride(BiomeType biome)
 	{
 		this.AppearanceOverride = biome;
 	}
 
-	// Token: 0x06003BD4 RID: 15316 RVA: 0x000CDAFC File Offset: 0x000CBCFC
+	// Token: 0x06005411 RID: 21521 RVA: 0x0013D7C0 File Offset: 0x0013B9C0
 	public List<DoorLocation> GetDoorLocationsOnSide(RoomSide side)
 	{
 		if (side == RoomSide.Any)
@@ -315,7 +315,7 @@ public class GridPointManager
 		return list;
 	}
 
-	// Token: 0x06003BD5 RID: 15317 RVA: 0x000CDB6C File Offset: 0x000CBD6C
+	// Token: 0x06005412 RID: 21522 RVA: 0x0002D9C5 File Offset: 0x0002BBC5
 	public void SetMergeWithRooms(List<GridPointManager> roomsToMerge)
 	{
 		this.MergeWithGridPointManagers = new List<GridPointManager>(roomsToMerge);
@@ -325,7 +325,7 @@ public class GridPointManager
 		}
 	}
 
-	// Token: 0x06003BD6 RID: 15318 RVA: 0x000CDB98 File Offset: 0x000CBD98
+	// Token: 0x06005413 RID: 21523 RVA: 0x0013D830 File Offset: 0x0013BA30
 	public GridPointManager GetConnectedRoom(DoorLocation doorLocation)
 	{
 		GridPoint gridPoint = GridController.GetGridPoint(this.GetDoorLeadsToGridCoordinates(doorLocation));
@@ -341,7 +341,7 @@ public class GridPointManager
 		return result;
 	}
 
-	// Token: 0x06003BD7 RID: 15319 RVA: 0x000CDBE0 File Offset: 0x000CBDE0
+	// Token: 0x06005414 RID: 21524 RVA: 0x0013D878 File Offset: 0x0013BA78
 	public DoorLocation GetDoorLocation(RoomSide side, int doorNumber)
 	{
 		DoorLocation empty = DoorLocation.Empty;
@@ -361,13 +361,13 @@ public class GridPointManager
 		return empty;
 	}
 
-	// Token: 0x06003BD8 RID: 15320 RVA: 0x000CDC34 File Offset: 0x000CBE34
+	// Token: 0x06005415 RID: 21525 RVA: 0x0002D9EE File Offset: 0x0002BBEE
 	public Vector2Int GetDoorLeadsToGridCoordinates(DoorLocation location)
 	{
 		return GridController.GetDoorLeadsToGridCoordinates(this.GridCoordinates, this.Size, location);
 	}
 
-	// Token: 0x06003BD9 RID: 15321 RVA: 0x000CDC48 File Offset: 0x000CBE48
+	// Token: 0x06005416 RID: 21526 RVA: 0x0002DA02 File Offset: 0x0002BC02
 	public void SetRoomMetaData(RoomMetaData roomMetaData, bool isRoomMirrored)
 	{
 		if (!roomMetaData.IsSpecialRoom && this.RoomType != RoomType.Standard && this.RoomType != RoomType.Trap)
@@ -379,7 +379,7 @@ public class GridPointManager
 		this.CreateGridPoints();
 	}
 
-	// Token: 0x06003BDA RID: 15322 RVA: 0x000CDC80 File Offset: 0x000CBE80
+	// Token: 0x06005417 RID: 21527 RVA: 0x0013D8CC File Offset: 0x0013BACC
 	public void SetRoomSeed(int seed)
 	{
 		this.RoomSeed = seed;
@@ -393,7 +393,7 @@ public class GridPointManager
 		this.TunnelRoomSeed = RNGManager.GetRandomNumber(RngID.Room_RNGSeed_Generator, "GridPointManager.SetRoomSeed()", 0, int.MaxValue);
 	}
 
-	// Token: 0x06003BDB RID: 15323 RVA: 0x000CDD4C File Offset: 0x000CBF4C
+	// Token: 0x06005418 RID: 21528 RVA: 0x0013D998 File Offset: 0x0013BB98
 	public GridPoint GetGridPoint(DoorLocation doorLocation)
 	{
 		for (int i = 0; i < this.GridPointList.Count; i++)
@@ -406,12 +406,12 @@ public class GridPointManager
 		return null;
 	}
 
-	// Token: 0x04002D1F RID: 11551
+	// Token: 0x04003EAF RID: 16047
 	private List<GridPointManager> m_mergeWithGridPointManagers = new List<GridPointManager>();
 
-	// Token: 0x04002D20 RID: 11552
+	// Token: 0x04003EB0 RID: 16048
 	private int m_biomeControllerIndex = -1;
 
-	// Token: 0x04002D21 RID: 11553
+	// Token: 0x04003EB1 RID: 16049
 	private BiomeType m_appearanceOverride;
 }

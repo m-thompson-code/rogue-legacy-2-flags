@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003A6 RID: 934
+// Token: 0x02000639 RID: 1593
 public class EnchantressOmniUIEquipButton : OmniUIButton, IEnchantressOmniUIButton
 {
-	// Token: 0x17000E57 RID: 3671
-	// (get) Token: 0x060022AD RID: 8877 RVA: 0x00070F07 File Offset: 0x0006F107
+	// Token: 0x170012EA RID: 4842
+	// (get) Token: 0x060030C5 RID: 12485 RVA: 0x0001AC48 File Offset: 0x00018E48
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -15,12 +15,12 @@ public class EnchantressOmniUIEquipButton : OmniUIButton, IEnchantressOmniUIButt
 		}
 	}
 
-	// Token: 0x17000E58 RID: 3672
-	// (get) Token: 0x060022AE RID: 8878 RVA: 0x00070F0F File Offset: 0x0006F10F
-	// (set) Token: 0x060022AF RID: 8879 RVA: 0x00070F17 File Offset: 0x0006F117
+	// Token: 0x170012EB RID: 4843
+	// (get) Token: 0x060030C6 RID: 12486 RVA: 0x0001AC50 File Offset: 0x00018E50
+	// (set) Token: 0x060030C7 RID: 12487 RVA: 0x0001AC58 File Offset: 0x00018E58
 	public RuneType RuneType { get; set; }
 
-	// Token: 0x060022B0 RID: 8880 RVA: 0x00070F20 File Offset: 0x0006F120
+	// Token: 0x060030C8 RID: 12488 RVA: 0x000D1974 File Offset: 0x000CFB74
 	protected override void InitializeButtonEventArgs()
 	{
 		OmniUIButtonType buttonType = this.m_isRightArrow ? OmniUIButtonType.Equipping : OmniUIButtonType.Unequipping;
@@ -32,7 +32,7 @@ public class EnchantressOmniUIEquipButton : OmniUIButton, IEnchantressOmniUIButt
 		this.m_descriptionEventArgs.Initialize(this.RuneType, buttonType);
 	}
 
-	// Token: 0x060022B1 RID: 8881 RVA: 0x00070F68 File Offset: 0x0006F168
+	// Token: 0x060030C9 RID: 12489 RVA: 0x000D19BC File Offset: 0x000CFBBC
 	public override void UpdateState()
 	{
 		RuneManager.GetRune(this.RuneType);
@@ -51,7 +51,7 @@ public class EnchantressOmniUIEquipButton : OmniUIButton, IEnchantressOmniUIButt
 		this.m_levelText.text = runeEquippedLevel.ToString() + "/" + upgradeLevel.ToString();
 	}
 
-	// Token: 0x060022B2 RID: 8882 RVA: 0x00070FF0 File Offset: 0x0006F1F0
+	// Token: 0x060030CA RID: 12490 RVA: 0x000D1A44 File Offset: 0x000CFC44
 	public override void OnConfirmButtonPressed()
 	{
 		if (this.m_isRightArrow)
@@ -84,18 +84,18 @@ public class EnchantressOmniUIEquipButton : OmniUIButton, IEnchantressOmniUIButt
 		base.OnConfirmButtonPressed();
 	}
 
-	// Token: 0x04001DD9 RID: 7641
+	// Token: 0x040027F9 RID: 10233
 	[SerializeField]
 	private bool m_isRightArrow;
 
-	// Token: 0x04001DDA RID: 7642
+	// Token: 0x040027FA RID: 10234
 	[SerializeField]
 	private GameObject m_buttonGO;
 
-	// Token: 0x04001DDB RID: 7643
+	// Token: 0x040027FB RID: 10235
 	[SerializeField]
 	private TMP_Text m_levelText;
 
-	// Token: 0x04001DDC RID: 7644
+	// Token: 0x040027FC RID: 10236
 	private EnchantressOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000776 RID: 1910
+// Token: 0x02000C37 RID: 3127
 public class SoulShopType_RL
 {
-	// Token: 0x17001649 RID: 5705
-	// (get) Token: 0x06004151 RID: 16721 RVA: 0x000E83B5 File Offset: 0x000E65B5
+	// Token: 0x17001E45 RID: 7749
+	// (get) Token: 0x06005ACE RID: 23246 RVA: 0x00031D3A File Offset: 0x0002FF3A
 	public static SoulShopType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class SoulShopType_RL
 		}
 	}
 
-	// Token: 0x04003774 RID: 14196
+	// Token: 0x04004A24 RID: 18980
 	private static SoulShopType[] m_typeArray;
 }

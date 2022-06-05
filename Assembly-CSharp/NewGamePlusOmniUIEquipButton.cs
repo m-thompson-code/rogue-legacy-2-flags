@@ -4,12 +4,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Token: 0x020003BB RID: 955
+// Token: 0x02000652 RID: 1618
 public class NewGamePlusOmniUIEquipButton : OmniUIButton, INewGamePlusOmniUIButton
 {
-	// Token: 0x17000E85 RID: 3717
-	// (get) Token: 0x06002344 RID: 9028 RVA: 0x0007306E File Offset: 0x0007126E
-	// (set) Token: 0x06002345 RID: 9029 RVA: 0x00073075 File Offset: 0x00071275
+	// Token: 0x17001318 RID: 4888
+	// (get) Token: 0x0600315C RID: 12636 RVA: 0x0001B070 File Offset: 0x00019270
+	// (set) Token: 0x0600315D RID: 12637 RVA: 0x0001B1B4 File Offset: 0x000193B4
 	public int CurrentNewGamePlusLevel
 	{
 		get
@@ -22,8 +22,8 @@ public class NewGamePlusOmniUIEquipButton : OmniUIButton, INewGamePlusOmniUIButt
 		}
 	}
 
-	// Token: 0x17000E86 RID: 3718
-	// (get) Token: 0x06002346 RID: 9030 RVA: 0x0007307D File Offset: 0x0007127D
+	// Token: 0x17001319 RID: 4889
+	// (get) Token: 0x0600315E RID: 12638 RVA: 0x0001B1BC File Offset: 0x000193BC
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -32,12 +32,12 @@ public class NewGamePlusOmniUIEquipButton : OmniUIButton, INewGamePlusOmniUIButt
 		}
 	}
 
-	// Token: 0x17000E87 RID: 3719
-	// (get) Token: 0x06002347 RID: 9031 RVA: 0x00073085 File Offset: 0x00071285
-	// (set) Token: 0x06002348 RID: 9032 RVA: 0x0007308D File Offset: 0x0007128D
+	// Token: 0x1700131A RID: 4890
+	// (get) Token: 0x0600315F RID: 12639 RVA: 0x0001B1C4 File Offset: 0x000193C4
+	// (set) Token: 0x06003160 RID: 12640 RVA: 0x0001B1CC File Offset: 0x000193CC
 	public BurdenType BurdenType { get; set; }
 
-	// Token: 0x06002349 RID: 9033 RVA: 0x00073096 File Offset: 0x00071296
+	// Token: 0x06003161 RID: 12641 RVA: 0x0001B1D5 File Offset: 0x000193D5
 	public override void OnSelect(BaseEventData eventData)
 	{
 		if (this.BurdenType != BurdenType.None || (WindowManager.GetWindowController(WindowID.NewGamePlusNPC) as NewGamePlusOmniUIWindowController).InTimelineEntry)
@@ -46,7 +46,7 @@ public class NewGamePlusOmniUIEquipButton : OmniUIButton, INewGamePlusOmniUIButt
 		}
 	}
 
-	// Token: 0x0600234A RID: 9034 RVA: 0x000730BC File Offset: 0x000712BC
+	// Token: 0x06003162 RID: 12642 RVA: 0x000D350C File Offset: 0x000D170C
 	protected override void InitializeButtonEventArgs()
 	{
 		OmniUIButtonType buttonType = this.m_isRightArrow ? OmniUIButtonType.Equipping : OmniUIButtonType.Unequipping;
@@ -58,7 +58,7 @@ public class NewGamePlusOmniUIEquipButton : OmniUIButton, INewGamePlusOmniUIButt
 		this.m_descriptionEventArgs.Initialize(this.BurdenType, buttonType);
 	}
 
-	// Token: 0x0600234B RID: 9035 RVA: 0x00073104 File Offset: 0x00071304
+	// Token: 0x06003163 RID: 12643 RVA: 0x000D3554 File Offset: 0x000D1754
 	public override void UpdateState()
 	{
 		if (this.BurdenType == BurdenType.None)
@@ -91,7 +91,7 @@ public class NewGamePlusOmniUIEquipButton : OmniUIButton, INewGamePlusOmniUIButt
 		this.m_levelText.text = currentLevel.ToString() + "/" + maxLevel.ToString();
 	}
 
-	// Token: 0x0600234C RID: 9036 RVA: 0x000731CD File Offset: 0x000713CD
+	// Token: 0x06003164 RID: 12644 RVA: 0x0001B1F9 File Offset: 0x000193F9
 	public override void OnConfirmButtonPressed()
 	{
 		if (this.BurdenType == BurdenType.None)
@@ -106,7 +106,7 @@ public class NewGamePlusOmniUIEquipButton : OmniUIButton, INewGamePlusOmniUIButt
 		base.OnConfirmButtonPressed();
 	}
 
-	// Token: 0x0600234D RID: 9037 RVA: 0x000731F4 File Offset: 0x000713F4
+	// Token: 0x06003165 RID: 12645 RVA: 0x000D3620 File Offset: 0x000D1820
 	private void ChangeBurdenLevel()
 	{
 		BurdenObj burden = BurdenManager.GetBurden(this.BurdenType);
@@ -147,7 +147,7 @@ public class NewGamePlusOmniUIEquipButton : OmniUIButton, INewGamePlusOmniUIButt
 		}
 	}
 
-	// Token: 0x0600234E RID: 9038 RVA: 0x000732D0 File Offset: 0x000714D0
+	// Token: 0x06003166 RID: 12646 RVA: 0x000D36FC File Offset: 0x000D18FC
 	private void ChangeNGPlusLevel()
 	{
 		int currentNewGamePlusLevel = this.CurrentNewGamePlusLevel;
@@ -171,18 +171,18 @@ public class NewGamePlusOmniUIEquipButton : OmniUIButton, INewGamePlusOmniUIButt
 		base.StartCoroutine(this.ShakeAnimCoroutine());
 	}
 
-	// Token: 0x04001E0C RID: 7692
+	// Token: 0x0400283E RID: 10302
 	[SerializeField]
 	private bool m_isRightArrow;
 
-	// Token: 0x04001E0D RID: 7693
+	// Token: 0x0400283F RID: 10303
 	[SerializeField]
 	private GameObject m_buttonGO;
 
-	// Token: 0x04001E0E RID: 7694
+	// Token: 0x04002840 RID: 10304
 	[SerializeField]
 	private TMP_Text m_levelText;
 
-	// Token: 0x04001E0F RID: 7695
+	// Token: 0x04002841 RID: 10305
 	private NewGamePlusOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

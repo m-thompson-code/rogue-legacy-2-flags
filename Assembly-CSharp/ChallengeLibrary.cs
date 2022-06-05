@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000220 RID: 544
+// Token: 0x020003D3 RID: 979
 [CreateAssetMenu(menuName = "Custom/Libraries/Challenge Library")]
 public class ChallengeLibrary : ScriptableObject
 {
-	// Token: 0x17000B1E RID: 2846
-	// (get) Token: 0x06001666 RID: 5734 RVA: 0x00045E6C File Offset: 0x0004406C
+	// Token: 0x17000E45 RID: 3653
+	// (get) Token: 0x06002002 RID: 8194 RVA: 0x00010F29 File Offset: 0x0000F129
 	private static ChallengeLibrary Instance
 	{
 		get
@@ -19,7 +19,7 @@ public class ChallengeLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001667 RID: 5735 RVA: 0x00045E98 File Offset: 0x00044098
+	// Token: 0x06002003 RID: 8195 RVA: 0x000A42D0 File Offset: 0x000A24D0
 	public static ChallengeData GetChallengeData(ChallengeType challengeType)
 	{
 		ChallengeData result = null;
@@ -31,44 +31,44 @@ public class ChallengeLibrary : ScriptableObject
 		throw new Exception("Challenge Library is null.");
 	}
 
-	// Token: 0x040015A3 RID: 5539
+	// Token: 0x04001CA6 RID: 7334
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/ChallengeLibrary";
 
-	// Token: 0x040015A4 RID: 5540
+	// Token: 0x04001CA7 RID: 7335
 	[Space(10f)]
 	[SerializeField]
 	private ChallengeTypeChallengeDataDictionary m_challengeLibrary;
 
-	// Token: 0x040015A5 RID: 5541
+	// Token: 0x04001CA8 RID: 7336
 	private static ChallengeLibrary m_instance;
 
-	// Token: 0x02000B2C RID: 2860
+	// Token: 0x020003D4 RID: 980
 	[Serializable]
 	public class ChallengeIconEntry
 	{
-		// Token: 0x04004B98 RID: 19352
+		// Token: 0x04001CA9 RID: 7337
 		public Sprite ChallengeIcon;
 
-		// Token: 0x04004B99 RID: 19353
+		// Token: 0x04001CAA RID: 7338
 		public Sprite BronzeTrophyIcon;
 
-		// Token: 0x04004B9A RID: 19354
+		// Token: 0x04001CAB RID: 7339
 		public Sprite SilverTrophyIcon;
 
-		// Token: 0x04004B9B RID: 19355
+		// Token: 0x04001CAC RID: 7340
 		public Sprite GoldTrophyIcon;
 	}
 
-	// Token: 0x02000B2D RID: 2861
+	// Token: 0x020003D5 RID: 981
 	public enum ChallengeIconEntryType
 	{
-		// Token: 0x04004B9D RID: 19357
+		// Token: 0x04001CAE RID: 7342
 		Challenge,
-		// Token: 0x04004B9E RID: 19358
+		// Token: 0x04001CAF RID: 7343
 		Bronze,
-		// Token: 0x04004B9F RID: 19359
+		// Token: 0x04001CB0 RID: 7344
 		Silver,
-		// Token: 0x04004BA0 RID: 19360
+		// Token: 0x04001CB1 RID: 7345
 		Gold
 	}
 }

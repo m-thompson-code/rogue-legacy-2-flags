@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020007F2 RID: 2034
+// Token: 0x02000CB8 RID: 3256
 public class DesignNote : MonoBehaviour
 {
-	// Token: 0x170016E7 RID: 5863
-	// (get) Token: 0x060043AC RID: 17324 RVA: 0x000ECA6D File Offset: 0x000EAC6D
-	// (set) Token: 0x060043AD RID: 17325 RVA: 0x000ECA75 File Offset: 0x000EAC75
+	// Token: 0x17001EE5 RID: 7909
+	// (get) Token: 0x06005D35 RID: 23861 RVA: 0x00033483 File Offset: 0x00031683
+	// (set) Token: 0x06005D36 RID: 23862 RVA: 0x0003348B File Offset: 0x0003168B
 	public string Text
 	{
 		get
@@ -19,9 +19,9 @@ public class DesignNote : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170016E8 RID: 5864
-	// (get) Token: 0x060043AE RID: 17326 RVA: 0x000ECA7E File Offset: 0x000EAC7E
-	// (set) Token: 0x060043AF RID: 17327 RVA: 0x000ECA86 File Offset: 0x000EAC86
+	// Token: 0x17001EE6 RID: 7910
+	// (get) Token: 0x06005D37 RID: 23863 RVA: 0x00033494 File Offset: 0x00031694
+	// (set) Token: 0x06005D38 RID: 23864 RVA: 0x0003349C File Offset: 0x0003169C
 	public Color TextColour
 	{
 		get
@@ -34,11 +34,11 @@ public class DesignNote : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040039E1 RID: 14817
+	// Token: 0x04004CA6 RID: 19622
 	[SerializeField]
 	private string m_text;
 
-	// Token: 0x040039E2 RID: 14818
+	// Token: 0x04004CA7 RID: 19623
 	[SerializeField]
 	private Color m_textColour = Color.yellow;
 }

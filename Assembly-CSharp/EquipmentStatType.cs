@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x020001F5 RID: 501
+// Token: 0x02000395 RID: 917
 public enum EquipmentStatType
 {
-	// Token: 0x04001492 RID: 5266
+	// Token: 0x04001B4F RID: 6991
 	None,
-	// Token: 0x04001493 RID: 5267
+	// Token: 0x04001B50 RID: 6992
 	Weight,
-	// Token: 0x04001494 RID: 5268
+	// Token: 0x04001B51 RID: 6993
 	Cooldown,
-	// Token: 0x04001495 RID: 5269
+	// Token: 0x04001B52 RID: 6994
 	Strength,
-	// Token: 0x04001496 RID: 5270
+	// Token: 0x04001B53 RID: 6995
 	Vitality,
-	// Token: 0x04001497 RID: 5271
+	// Token: 0x04001B54 RID: 6996
 	Magic,
-	// Token: 0x04001498 RID: 5272
+	// Token: 0x04001B55 RID: 6997
 	Armor,
-	// Token: 0x04001499 RID: 5273
+	// Token: 0x04001B56 RID: 6998
 	Dexterity_Add,
-	// Token: 0x0400149A RID: 5274
+	// Token: 0x04001B57 RID: 6999
 	CritDamage,
-	// Token: 0x0400149B RID: 5275
+	// Token: 0x04001B58 RID: 7000
 	Focus_Add,
-	// Token: 0x0400149C RID: 5276
+	// Token: 0x04001B59 RID: 7001
 	MagicCritDamage,
-	// Token: 0x0400149D RID: 5277
+	// Token: 0x04001B5A RID: 7002
 	Unity
 }

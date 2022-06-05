@@ -3,10 +3,10 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003CE RID: 974
+// Token: 0x02000667 RID: 1639
 public class SoulShopOmniUISoulSwapBuyButton : SoulShopOmniUIBuyButton
 {
-	// Token: 0x060023E0 RID: 9184 RVA: 0x00075218 File Offset: 0x00073418
+	// Token: 0x060031FE RID: 12798 RVA: 0x0001B6D0 File Offset: 0x000198D0
 	protected override void Awake()
 	{
 		base.Awake();
@@ -14,7 +14,7 @@ public class SoulShopOmniUISoulSwapBuyButton : SoulShopOmniUIBuyButton
 		this.m_confirmTransfer = new Action(this.ConfirmTransfer);
 	}
 
-	// Token: 0x060023E1 RID: 9185 RVA: 0x00075244 File Offset: 0x00073444
+	// Token: 0x060031FF RID: 12799 RVA: 0x000D528C File Offset: 0x000D348C
 	public override void OnConfirmButtonPressed()
 	{
 		if (!this.IsButtonActive)
@@ -41,7 +41,7 @@ public class SoulShopOmniUISoulSwapBuyButton : SoulShopOmniUIBuyButton
 		this.RunOnConfirmPressedAnimation();
 	}
 
-	// Token: 0x060023E2 RID: 9186 RVA: 0x000752F0 File Offset: 0x000734F0
+	// Token: 0x06003200 RID: 12800 RVA: 0x000D5338 File Offset: 0x000D3538
 	private void InitializeConfirmMenu()
 	{
 		int soulSwapCost = Souls_EV.GetSoulSwapCost(SaveManager.ModeSaveData.GetSoulShopObj(base.SoulShopType).CurrentOwnedLevel);
@@ -64,7 +64,7 @@ public class SoulShopOmniUISoulSwapBuyButton : SoulShopOmniUIBuyButton
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenu);
 	}
 
-	// Token: 0x060023E3 RID: 9187 RVA: 0x000753C8 File Offset: 0x000735C8
+	// Token: 0x06003201 RID: 12801 RVA: 0x000D5410 File Offset: 0x000D3610
 	private void ConfirmTransfer()
 	{
 		Vector3 b = Vector3.up * 6f;
@@ -89,13 +89,13 @@ public class SoulShopOmniUISoulSwapBuyButton : SoulShopOmniUIBuyButton
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x060023E4 RID: 9188 RVA: 0x0007550A File Offset: 0x0007370A
+	// Token: 0x06003202 RID: 12802 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenu()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x060023E5 RID: 9189 RVA: 0x00075514 File Offset: 0x00073714
+	// Token: 0x06003203 RID: 12803 RVA: 0x000D5554 File Offset: 0x000D3754
 	public override void UpdateState()
 	{
 		this.m_titleText.text = LocalizationManager.GetString("LOC_ID_BLACKSMITH_BUY_TITLE_1", false, false);
@@ -120,9 +120,9 @@ public class SoulShopOmniUISoulSwapBuyButton : SoulShopOmniUIBuyButton
 		this.IsButtonActive = true;
 	}
 
-	// Token: 0x04001E77 RID: 7799
+	// Token: 0x040028B5 RID: 10421
 	private Action m_cancelConfirmMenu;
 
-	// Token: 0x04001E78 RID: 7800
+	// Token: 0x040028B6 RID: 10422
 	private Action m_confirmTransfer;
 }

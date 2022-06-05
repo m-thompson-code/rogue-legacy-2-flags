@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200023C RID: 572
+// Token: 0x020003F9 RID: 1017
 [CreateAssetMenu(menuName = "Custom/Libraries/MapTerrain Library")]
 public class MapTerrainLibrary : ScriptableObject
 {
-	// Token: 0x17000B40 RID: 2880
-	// (get) Token: 0x06001709 RID: 5897 RVA: 0x00047D80 File Offset: 0x00045F80
+	// Token: 0x17000E6D RID: 3693
+	// (get) Token: 0x060020BC RID: 8380 RVA: 0x000115B0 File Offset: 0x0000F7B0
 	private static MapTerrainLibrary Instance
 	{
 		get
@@ -19,7 +19,7 @@ public class MapTerrainLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x0600170A RID: 5898 RVA: 0x00047DB0 File Offset: 0x00045FB0
+	// Token: 0x060020BD RID: 8381 RVA: 0x000A5BA0 File Offset: 0x000A3DA0
 	public static Ferr2DT_PathTerrain GetMapTerrain(int width, int height)
 	{
 		Ferr2DT_PathTerrain[] array = null;
@@ -42,35 +42,35 @@ public class MapTerrainLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x0600170B RID: 5899 RVA: 0x00047E0C File Offset: 0x0004600C
+	// Token: 0x060020BE RID: 8382 RVA: 0x000115E0 File Offset: 0x0000F7E0
 	public static Ferr2DT_PathTerrain GetDefaultMapTerrain()
 	{
 		return MapTerrainLibrary.Instance.m_defaultMapTerrain;
 	}
 
-	// Token: 0x04001684 RID: 5764
+	// Token: 0x04001D9C RID: 7580
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/MapTerrainLibrary";
 
-	// Token: 0x04001685 RID: 5765
+	// Token: 0x04001D9D RID: 7581
 	private const string ASSET_PATH = "Assets/Content/Scriptable Objects/Libraries/MapTerrainLibrary.asset";
 
-	// Token: 0x04001686 RID: 5766
+	// Token: 0x04001D9E RID: 7582
 	[HelpBox("The elements must be in ascending Y size order. E.g. Element 0 must have a Y size of 1, element 1 must have a Y size of 2, etc.", HelpBoxMessageType.None)]
 	[SerializeField]
 	private Ferr2DT_PathTerrain[] m_oneWidthMapTerrains;
 
-	// Token: 0x04001687 RID: 5767
+	// Token: 0x04001D9F RID: 7583
 	[SerializeField]
 	private Ferr2DT_PathTerrain[] m_twoWidthMapTerrains;
 
-	// Token: 0x04001688 RID: 5768
+	// Token: 0x04001DA0 RID: 7584
 	[SerializeField]
 	private Ferr2DT_PathTerrain[] m_threeWidthMapTerrains;
 
-	// Token: 0x04001689 RID: 5769
+	// Token: 0x04001DA1 RID: 7585
 	[SerializeField]
 	private Ferr2DT_PathTerrain m_defaultMapTerrain;
 
-	// Token: 0x0400168A RID: 5770
+	// Token: 0x04001DA2 RID: 7586
 	private static MapTerrainLibrary m_instance;
 }

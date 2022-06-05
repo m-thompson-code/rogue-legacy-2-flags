@@ -3,10 +3,10 @@ using System.Globalization;
 using System.IO;
 using UnityEngine;
 
-// Token: 0x02000803 RID: 2051
+// Token: 0x02000CCB RID: 3275
 public class OnGameLoadManager
 {
-	// Token: 0x060043F5 RID: 17397 RVA: 0x000F064C File Offset: 0x000EE84C
+	// Token: 0x06005D7E RID: 23934 RVA: 0x0015E354 File Offset: 0x0015C554
 	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
 	private static void Run()
 	{
@@ -40,7 +40,7 @@ public class OnGameLoadManager
 		OnGameLoadManager.ConfineMouseToGameWindow(!SaveManager.ConfigData.DisableCursorConfine);
 	}
 
-	// Token: 0x060043F6 RID: 17398 RVA: 0x000F0778 File Offset: 0x000EE978
+	// Token: 0x06005D7F RID: 23935 RVA: 0x0015E480 File Offset: 0x0015C680
 	private static LanguageType GetLanguageType(CultureInfo cultureInfo)
 	{
 		if (cultureInfo.TwoLetterISOLanguageName == "en")
@@ -90,7 +90,7 @@ public class OnGameLoadManager
 		return LanguageType.English;
 	}
 
-	// Token: 0x060043F7 RID: 17399 RVA: 0x000F0864 File Offset: 0x000EEA64
+	// Token: 0x06005D80 RID: 23936 RVA: 0x000336FE File Offset: 0x000318FE
 	private static void OnFocusChanged(bool isFocused)
 	{
 		if (isFocused)
@@ -101,7 +101,7 @@ public class OnGameLoadManager
 		OnGameLoadManager.ConfineMouseToGameWindow(false);
 	}
 
-	// Token: 0x060043F8 RID: 17400 RVA: 0x000F0882 File Offset: 0x000EEA82
+	// Token: 0x06005D81 RID: 23937 RVA: 0x0003371C File Offset: 0x0003191C
 	public static void ConfineMouseToGameWindow(bool isConfined)
 	{
 		if (GameManager.IsGameManagerInstantiated && GameManager.IsGamePaused)
@@ -116,7 +116,7 @@ public class OnGameLoadManager
 		Cursor.lockState = CursorLockMode.None;
 	}
 
-	// Token: 0x060043F9 RID: 17401 RVA: 0x000F08A8 File Offset: 0x000EEAA8
+	// Token: 0x06005D82 RID: 23938 RVA: 0x0015E56C File Offset: 0x0015C76C
 	private static void SetScreenModeAndResolution()
 	{
 		int screenWidth = SaveManager.ConfigData.ScreenWidth;

@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008D8 RID: 2264
+	// Token: 0x02000E46 RID: 3654
 	public class AmbientSoundOverride : MonoBehaviour
 	{
-		// Token: 0x17001830 RID: 6192
-		// (get) Token: 0x06004A5D RID: 19037 RVA: 0x0010BC20 File Offset: 0x00109E20
+		// Token: 0x1700210F RID: 8463
+		// (get) Token: 0x0600670D RID: 26381 RVA: 0x0017C574 File Offset: 0x0017A774
 		public EventInstance[] Audio
 		{
 			get
@@ -38,8 +38,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001831 RID: 6193
-		// (get) Token: 0x06004A5E RID: 19038 RVA: 0x0010BCC0 File Offset: 0x00109EC0
+		// Token: 0x17002110 RID: 8464
+		// (get) Token: 0x0600670E RID: 26382 RVA: 0x00038BAA File Offset: 0x00036DAA
 		public bool HasAudioOverride
 		{
 			get
@@ -48,8 +48,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001832 RID: 6194
-		// (get) Token: 0x06004A5F RID: 19039 RVA: 0x0010BCCC File Offset: 0x00109ECC
+		// Token: 0x17002111 RID: 8465
+		// (get) Token: 0x0600670F RID: 26383 RVA: 0x00038BB6 File Offset: 0x00036DB6
 		public bool HasSnapshotOverride
 		{
 			get
@@ -58,8 +58,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001833 RID: 6195
-		// (get) Token: 0x06004A60 RID: 19040 RVA: 0x0010BCDC File Offset: 0x00109EDC
+		// Token: 0x17002112 RID: 8466
+		// (get) Token: 0x06006710 RID: 26384 RVA: 0x00038BC6 File Offset: 0x00036DC6
 		public EventInstance Snapshot
 		{
 			get
@@ -72,20 +72,20 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003E83 RID: 16003
+		// Token: 0x04005398 RID: 21400
 		[SerializeField]
 		[EventRef]
 		private string[] m_audioPaths;
 
-		// Token: 0x04003E84 RID: 16004
+		// Token: 0x04005399 RID: 21401
 		[SerializeField]
 		[EventRef]
 		private string m_snapshotPath;
 
-		// Token: 0x04003E85 RID: 16005
+		// Token: 0x0400539A RID: 21402
 		private EventInstance[] m_audioInstances;
 
-		// Token: 0x04003E86 RID: 16006
+		// Token: 0x0400539B RID: 21403
 		private EventInstance m_snapshotInstance;
 	}
 }

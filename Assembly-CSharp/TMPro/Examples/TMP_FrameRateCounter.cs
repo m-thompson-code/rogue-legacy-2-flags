@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000860 RID: 2144
+	// Token: 0x02000D6A RID: 3434
 	public class TMP_FrameRateCounter : MonoBehaviour
 	{
-		// Token: 0x06004703 RID: 18179 RVA: 0x000FE540 File Offset: 0x000FC740
+		// Token: 0x060061BC RID: 25020 RVA: 0x0016BB34 File Offset: 0x00169D34
 		private void Awake()
 		{
 			if (!base.enabled)
@@ -29,14 +29,14 @@ namespace TMPro.Examples
 			this.last_AnchorPosition = this.AnchorPosition;
 		}
 
-		// Token: 0x06004704 RID: 18180 RVA: 0x000FE61A File Offset: 0x000FC81A
+		// Token: 0x060061BD RID: 25021 RVA: 0x00035D84 File Offset: 0x00033F84
 		private void Start()
 		{
 			this.m_LastInterval = Time.realtimeSinceStartup;
 			this.m_Frames = 0;
 		}
 
-		// Token: 0x06004705 RID: 18181 RVA: 0x000FE630 File Offset: 0x000FC830
+		// Token: 0x060061BE RID: 25022 RVA: 0x0016BC10 File Offset: 0x00169E10
 		private void Update()
 		{
 			if (this.AnchorPosition != this.last_AnchorPosition)
@@ -68,7 +68,7 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x06004706 RID: 18182 RVA: 0x000FE710 File Offset: 0x000FC910
+		// Token: 0x060061BF RID: 25023 RVA: 0x0016BCF0 File Offset: 0x00169EF0
 		private void Set_FrameCounter_Position(TMP_FrameRateCounter.FpsCounterAnchorPositions anchor_position)
 		{
 			this.m_TextMeshPro.margin = new Vector4(1f, 1f, 1f, 1f);
@@ -99,46 +99,46 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x04003C0F RID: 15375
+		// Token: 0x04004FA8 RID: 20392
 		public float UpdateInterval = 5f;
 
-		// Token: 0x04003C10 RID: 15376
+		// Token: 0x04004FA9 RID: 20393
 		private float m_LastInterval;
 
-		// Token: 0x04003C11 RID: 15377
+		// Token: 0x04004FAA RID: 20394
 		private int m_Frames;
 
-		// Token: 0x04003C12 RID: 15378
+		// Token: 0x04004FAB RID: 20395
 		public TMP_FrameRateCounter.FpsCounterAnchorPositions AnchorPosition = TMP_FrameRateCounter.FpsCounterAnchorPositions.TopRight;
 
-		// Token: 0x04003C13 RID: 15379
+		// Token: 0x04004FAC RID: 20396
 		private string htmlColorTag;
 
-		// Token: 0x04003C14 RID: 15380
+		// Token: 0x04004FAD RID: 20397
 		private const string fpsLabel = "{0:2}</color> <#8080ff>FPS \n<#FF8000>{1:2} <#8080ff>MS";
 
-		// Token: 0x04003C15 RID: 15381
+		// Token: 0x04004FAE RID: 20398
 		private TextMeshPro m_TextMeshPro;
 
-		// Token: 0x04003C16 RID: 15382
+		// Token: 0x04004FAF RID: 20399
 		private Transform m_frameCounter_transform;
 
-		// Token: 0x04003C17 RID: 15383
+		// Token: 0x04004FB0 RID: 20400
 		private Camera m_camera;
 
-		// Token: 0x04003C18 RID: 15384
+		// Token: 0x04004FB1 RID: 20401
 		private TMP_FrameRateCounter.FpsCounterAnchorPositions last_AnchorPosition;
 
-		// Token: 0x02000E7B RID: 3707
+		// Token: 0x02000D6B RID: 3435
 		public enum FpsCounterAnchorPositions
 		{
-			// Token: 0x0400580E RID: 22542
+			// Token: 0x04004FB3 RID: 20403
 			TopLeft,
-			// Token: 0x0400580F RID: 22543
+			// Token: 0x04004FB4 RID: 20404
 			BottomLeft,
-			// Token: 0x04005810 RID: 22544
+			// Token: 0x04004FB5 RID: 20405
 			TopRight,
-			// Token: 0x04005811 RID: 22545
+			// Token: 0x04004FB6 RID: 20406
 			BottomRight
 		}
 	}

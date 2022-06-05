@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x0200075B RID: 1883
+// Token: 0x02000C19 RID: 3097
 public enum PauseTabType
 {
-	// Token: 0x04003589 RID: 13705
+	// Token: 0x04004805 RID: 18437
 	None,
-	// Token: 0x0400358A RID: 13706
+	// Token: 0x04004806 RID: 18438
 	Settings = 10,
-	// Token: 0x0400358B RID: 13707
+	// Token: 0x04004807 RID: 18439
 	Map,
-	// Token: 0x0400358C RID: 13708
+	// Token: 0x04004808 RID: 18440
 	Profile,
-	// Token: 0x0400358D RID: 13709
+	// Token: 0x04004809 RID: 18441
 	Beastiary,
-	// Token: 0x0400358E RID: 13710
+	// Token: 0x0400480A RID: 18442
 	Items
 }

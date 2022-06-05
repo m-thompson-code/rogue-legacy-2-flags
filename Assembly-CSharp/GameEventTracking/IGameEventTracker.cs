@@ -3,19 +3,19 @@ using System.Collections.Generic;
 
 namespace GameEventTracking
 {
-	// Token: 0x0200089B RID: 2203
+	// Token: 0x02000DC8 RID: 3528
 	public interface IGameEventTracker<T> where T : IGameEventTrackerState
 	{
-		// Token: 0x06004814 RID: 18452
+		// Token: 0x0600634F RID: 25423
 		IEnumerable<IGameEventData> GetGameEvents();
 
-		// Token: 0x06004815 RID: 18453
+		// Token: 0x06006350 RID: 25424
 		void Reset();
 
-		// Token: 0x06004816 RID: 18454
+		// Token: 0x06006351 RID: 25425
 		void RestoreState(T state);
 
-		// Token: 0x06004817 RID: 18455
+		// Token: 0x06006352 RID: 25426
 		T SaveState();
 	}
 }

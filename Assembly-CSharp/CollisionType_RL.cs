@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200071C RID: 1820
+// Token: 0x02000BCF RID: 3023
 public class CollisionType_RL
 {
-	// Token: 0x060040E7 RID: 16615 RVA: 0x000E5B20 File Offset: 0x000E3D20
+	// Token: 0x06005A30 RID: 23088 RVA: 0x00154E84 File Offset: 0x00153084
 	public static TagType GetEquivalentTag(CollisionType collisionType)
 	{
 		if (collisionType <= CollisionType.Chest)
@@ -90,7 +90,7 @@ public class CollisionType_RL
 		throw new Exception("Cannot find Tag from CollisionType: " + collisionType.ToString() + ". Please make sure any tags related to collision are added to CollisionType_RL.");
 	}
 
-	// Token: 0x060040E8 RID: 16616 RVA: 0x000E5C1C File Offset: 0x000E3E1C
+	// Token: 0x06005A31 RID: 23089 RVA: 0x00154F80 File Offset: 0x00153180
 	public static CollisionType GetEquivalentCollisionType(TagType tagType)
 	{
 		if (tagType != TagType.Untagged)
@@ -158,14 +158,14 @@ public class CollisionType_RL
 		return CollisionType.None;
 	}
 
-	// Token: 0x060040E9 RID: 16617 RVA: 0x000E5CFC File Offset: 0x000E3EFC
+	// Token: 0x06005A32 RID: 23090 RVA: 0x00031598 File Offset: 0x0002F798
 	public static bool IsProjectile(GameObject obj)
 	{
 		return obj.CompareTag("Projectile") || obj.CompareTag("PlayerProjectile") || obj.CompareTag("EnemyProjectile");
 	}
 
-	// Token: 0x1700162B RID: 5675
-	// (get) Token: 0x060040EA RID: 16618 RVA: 0x000E5D28 File Offset: 0x000E3F28
+	// Token: 0x17001E27 RID: 7719
+	// (get) Token: 0x06005A33 RID: 23091 RVA: 0x000315C4 File Offset: 0x0002F7C4
 	public static CollisionType[] TypeArray
 	{
 		get
@@ -178,6 +178,6 @@ public class CollisionType_RL
 		}
 	}
 
-	// Token: 0x04003364 RID: 13156
+	// Token: 0x040045DF RID: 17887
 	private static CollisionType[] m_typeArray;
 }

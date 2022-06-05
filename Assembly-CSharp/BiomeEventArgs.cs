@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020007C2 RID: 1986
+// Token: 0x02000C88 RID: 3208
 public class BiomeEventArgs : EventArgs
 {
-	// Token: 0x060042A2 RID: 17058 RVA: 0x000EBEEC File Offset: 0x000EA0EC
+	// Token: 0x06005C2B RID: 23595 RVA: 0x00032902 File Offset: 0x00030B02
 	public BiomeEventArgs()
 	{
 		this.Biome = BiomeType.None;
 	}
 
-	// Token: 0x060042A3 RID: 17059 RVA: 0x000EBEFB File Offset: 0x000EA0FB
+	// Token: 0x06005C2C RID: 23596 RVA: 0x00032911 File Offset: 0x00030B11
 	public BiomeEventArgs(BiomeType biome)
 	{
 		this.SetBiome(biome);
 	}
 
-	// Token: 0x060042A4 RID: 17060 RVA: 0x000EBF0A File Offset: 0x000EA10A
+	// Token: 0x06005C2D RID: 23597 RVA: 0x00032920 File Offset: 0x00030B20
 	public void SetBiome(BiomeType biome)
 	{
 		this.Biome = biome;
 	}
 
-	// Token: 0x1700168E RID: 5774
-	// (get) Token: 0x060042A5 RID: 17061 RVA: 0x000EBF13 File Offset: 0x000EA113
-	// (set) Token: 0x060042A6 RID: 17062 RVA: 0x000EBF1B File Offset: 0x000EA11B
+	// Token: 0x17001E8C RID: 7820
+	// (get) Token: 0x06005C2E RID: 23598 RVA: 0x00032929 File Offset: 0x00030B29
+	// (set) Token: 0x06005C2F RID: 23599 RVA: 0x00032931 File Offset: 0x00030B31
 	public BiomeType Biome { get; private set; }
 }

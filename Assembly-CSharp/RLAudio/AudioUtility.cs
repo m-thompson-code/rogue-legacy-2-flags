@@ -6,10 +6,10 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008DE RID: 2270
+	// Token: 0x02000E4E RID: 3662
 	public static class AudioUtility
 	{
-		// Token: 0x06004AA2 RID: 19106 RVA: 0x0010C738 File Offset: 0x0010A938
+		// Token: 0x0600675B RID: 26459 RVA: 0x0017CDC4 File Offset: 0x0017AFC4
 		public static EventInstance GetEventInstance(string eventPath, Transform transform)
 		{
 			if (!string.IsNullOrEmpty(eventPath))
@@ -45,7 +45,7 @@ namespace RLAudio
 			return default(EventInstance);
 		}
 
-		// Token: 0x06004AA3 RID: 19107 RVA: 0x0010C7B8 File Offset: 0x0010A9B8
+		// Token: 0x0600675C RID: 26460 RVA: 0x0017CE44 File Offset: 0x0017B044
 		public static float GetPlayerSizeAudioParameterValue()
 		{
 			float result = 0.5f;
@@ -63,7 +63,7 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004AA4 RID: 19108 RVA: 0x0010C818 File Offset: 0x0010AA18
+		// Token: 0x0600675D RID: 26461 RVA: 0x0017CEA4 File Offset: 0x0017B0A4
 		public static float GetPlayerGenderAudioParameterValue()
 		{
 			float result = 1f;
@@ -82,14 +82,14 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004AA5 RID: 19109 RVA: 0x0010C864 File Offset: 0x0010AA64
+		// Token: 0x0600675E RID: 26462 RVA: 0x0017CEF0 File Offset: 0x0017B0F0
 		public static bool GetHasParameter(EventInstance eventInstance, string parameterName)
 		{
 			float num;
 			return eventInstance.isValid() && parameterName != string.Empty && eventInstance.getParameterByName(parameterName, out num) == RESULT.OK;
 		}
 
-		// Token: 0x06004AA6 RID: 19110 RVA: 0x0010C898 File Offset: 0x0010AA98
+		// Token: 0x0600675F RID: 26463 RVA: 0x0017CF24 File Offset: 0x0017B124
 		public static PLAYBACK_STATE GetCurrentPlaybackState(EventInstance eventInstance)
 		{
 			PLAYBACK_STATE result;
@@ -97,10 +97,10 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x04003EAA RID: 16042
+		// Token: 0x040053C8 RID: 21448
 		public const string PLAYER_SIZE_PARAMETER = "Player_Size";
 
-		// Token: 0x04003EAB RID: 16043
+		// Token: 0x040053C9 RID: 21449
 		public const string GENDER_PARAMETER = "gender";
 	}
 }

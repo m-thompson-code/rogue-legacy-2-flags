@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000492 RID: 1170
+// Token: 0x02000795 RID: 1941
 public class GroundBowProjectile_RL : Projectile_RL
 {
-	// Token: 0x06002B19 RID: 11033 RVA: 0x000920AC File Offset: 0x000902AC
+	// Token: 0x06003B62 RID: 15202 RVA: 0x000F3C14 File Offset: 0x000F1E14
 	public override void WeaponOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		bool flag = false;

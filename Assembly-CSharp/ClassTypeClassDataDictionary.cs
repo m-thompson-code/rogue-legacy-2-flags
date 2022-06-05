@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200002F RID: 47
+// Token: 0x02000032 RID: 50
 [Serializable]
 public class ClassTypeClassDataDictionary : SerializableDictionary<ClassType, ClassData>
 {

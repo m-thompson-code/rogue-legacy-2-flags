@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000647 RID: 1607
+// Token: 0x02000A76 RID: 2678
 [Serializable]
 public class BiomeSpecialPlatformEntry
 {
-	// Token: 0x04002C88 RID: 11400
+	// Token: 0x04003D1E RID: 15646
 	public BiomeType Biome;
 
-	// Token: 0x04002C89 RID: 11401
+	// Token: 0x04003D1F RID: 15647
 	public SpecialPlatformType[] SpecialPlatforms;
 }

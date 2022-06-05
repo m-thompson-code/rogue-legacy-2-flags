@@ -1,68 +1,68 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020005AC RID: 1452
+// Token: 0x020009B4 RID: 2484
 public interface IDamageObj
 {
-	// Token: 0x1700130A RID: 4874
-	// (get) Token: 0x0600361C RID: 13852
+	// Token: 0x17001A37 RID: 6711
+	// (get) Token: 0x06004C2E RID: 19502
 	GameObject gameObject { get; }
 
-	// Token: 0x1700130B RID: 4875
-	// (get) Token: 0x0600361D RID: 13853
+	// Token: 0x17001A38 RID: 6712
+	// (get) Token: 0x06004C2F RID: 19503
 	float BaseDamage { get; }
 
-	// Token: 0x1700130C RID: 4876
-	// (get) Token: 0x0600361E RID: 13854
+	// Token: 0x17001A39 RID: 6713
+	// (get) Token: 0x06004C30 RID: 19504
 	float ActualDamage { get; }
 
-	// Token: 0x1700130D RID: 4877
-	// (get) Token: 0x0600361F RID: 13855
+	// Token: 0x17001A3A RID: 6714
+	// (get) Token: 0x06004C31 RID: 19505
 	float ActualCritChance { get; }
 
-	// Token: 0x1700130E RID: 4878
-	// (get) Token: 0x06003620 RID: 13856
+	// Token: 0x17001A3B RID: 6715
+	// (get) Token: 0x06004C32 RID: 19506
 	float ActualCritDamage { get; }
 
-	// Token: 0x1700130F RID: 4879
-	// (get) Token: 0x06003621 RID: 13857
+	// Token: 0x17001A3C RID: 6716
+	// (get) Token: 0x06004C33 RID: 19507
 	Vector2 ExternalKnockbackMod { get; }
 
-	// Token: 0x17001310 RID: 4880
-	// (get) Token: 0x06003622 RID: 13858
-	// (set) Token: 0x06003623 RID: 13859
+	// Token: 0x17001A3D RID: 6717
+	// (get) Token: 0x06004C34 RID: 19508
+	// (set) Token: 0x06004C35 RID: 19509
 	float BaseKnockbackStrength { get; set; }
 
-	// Token: 0x17001311 RID: 4881
-	// (get) Token: 0x06003624 RID: 13860
+	// Token: 0x17001A3E RID: 6718
+	// (get) Token: 0x06004C36 RID: 19510
 	float ActualKnockbackStrength { get; }
 
-	// Token: 0x17001312 RID: 4882
-	// (get) Token: 0x06003625 RID: 13861
-	// (set) Token: 0x06003626 RID: 13862
+	// Token: 0x17001A3F RID: 6719
+	// (get) Token: 0x06004C37 RID: 19511
+	// (set) Token: 0x06004C38 RID: 19512
 	float BaseStunStrength { get; set; }
 
-	// Token: 0x17001313 RID: 4883
-	// (get) Token: 0x06003627 RID: 13863
+	// Token: 0x17001A40 RID: 6720
+	// (get) Token: 0x06004C39 RID: 19513
 	float ActualStunStrength { get; }
 
-	// Token: 0x17001314 RID: 4884
-	// (get) Token: 0x06003628 RID: 13864
+	// Token: 0x17001A41 RID: 6721
+	// (get) Token: 0x06004C3A RID: 19514
 	string RelicDamageTypeString { get; }
 
-	// Token: 0x17001315 RID: 4885
-	// (get) Token: 0x06003629 RID: 13865
+	// Token: 0x17001A42 RID: 6722
+	// (get) Token: 0x06004C3B RID: 19515
 	StrikeType StrikeType { get; }
 
-	// Token: 0x17001316 RID: 4886
-	// (get) Token: 0x0600362A RID: 13866
+	// Token: 0x17001A43 RID: 6723
+	// (get) Token: 0x06004C3C RID: 19516
 	bool IsDotDamage { get; }
 
-	// Token: 0x17001317 RID: 4887
-	// (get) Token: 0x0600362B RID: 13867
+	// Token: 0x17001A44 RID: 6724
+	// (get) Token: 0x06004C3D RID: 19517
 	StatusEffectType[] StatusEffectTypes { get; }
 
-	// Token: 0x17001318 RID: 4888
-	// (get) Token: 0x0600362C RID: 13868
+	// Token: 0x17001A45 RID: 6725
+	// (get) Token: 0x06004C3E RID: 19518
 	float[] StatusEffectDurations { get; }
 }

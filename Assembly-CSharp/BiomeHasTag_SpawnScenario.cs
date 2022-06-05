@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000637 RID: 1591
+// Token: 0x02000A64 RID: 2660
 public class BiomeHasTag_SpawnScenario : SpawnScenario
 {
-	// Token: 0x1700144E RID: 5198
-	// (get) Token: 0x06003989 RID: 14729 RVA: 0x000C4324 File Offset: 0x000C2524
+	// Token: 0x17001BB5 RID: 7093
+	// (get) Token: 0x06005068 RID: 20584 RVA: 0x0013282C File Offset: 0x00130A2C
 	public override string GizmoDescription
 	{
 		get
@@ -20,8 +20,8 @@ public class BiomeHasTag_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x1700144F RID: 5199
-	// (get) Token: 0x0600398A RID: 14730 RVA: 0x000C4372 File Offset: 0x000C2572
+	// Token: 0x17001BB6 RID: 7094
+	// (get) Token: 0x06005069 RID: 20585 RVA: 0x000065B4 File Offset: 0x000047B4
 	public override SpawnScenarioType Type
 	{
 		get
@@ -30,9 +30,9 @@ public class BiomeHasTag_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x17001450 RID: 5200
-	// (get) Token: 0x0600398B RID: 14731 RVA: 0x000C4376 File Offset: 0x000C2576
-	// (set) Token: 0x0600398C RID: 14732 RVA: 0x000C437E File Offset: 0x000C257E
+	// Token: 0x17001BB7 RID: 7095
+	// (get) Token: 0x0600506A RID: 20586 RVA: 0x0002BE50 File Offset: 0x0002A050
+	// (set) Token: 0x0600506B RID: 20587 RVA: 0x0002BE58 File Offset: 0x0002A058
 	public BiomeTag Tag
 	{
 		get
@@ -45,19 +45,19 @@ public class BiomeHasTag_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x0600398D RID: 14733 RVA: 0x000C4387 File Offset: 0x000C2587
+	// Token: 0x0600506C RID: 20588 RVA: 0x0002BE61 File Offset: 0x0002A061
 	public override void RunIsTrueCheck(BaseRoom room)
 	{
 		this.IsTrue = this.GetHasTag(room.AppearanceBiomeType);
 	}
 
-	// Token: 0x0600398E RID: 14734 RVA: 0x000C439B File Offset: 0x000C259B
+	// Token: 0x0600506D RID: 20589 RVA: 0x0002BE75 File Offset: 0x0002A075
 	public override void RunIsTrueCheck(GridPointManager gridPointManager)
 	{
 		this.IsTrue = this.GetHasTag(gridPointManager.Biome);
 	}
 
-	// Token: 0x0600398F RID: 14735 RVA: 0x000C43B0 File Offset: 0x000C25B0
+	// Token: 0x0600506E RID: 20590 RVA: 0x0013287C File Offset: 0x00130A7C
 	private bool GetHasTag(BiomeType biome)
 	{
 		bool result = false;
@@ -78,13 +78,13 @@ public class BiomeHasTag_SpawnScenario : SpawnScenario
 		return result;
 	}
 
-	// Token: 0x04002C54 RID: 11348
+	// Token: 0x04003CE6 RID: 15590
 	[SerializeField]
 	private BiomeTag m_tag;
 
-	// Token: 0x04002C55 RID: 11349
+	// Token: 0x04003CE7 RID: 15591
 	private string m_description = string.Empty;
 
-	// Token: 0x04002C56 RID: 11350
+	// Token: 0x04003CE8 RID: 15592
 	private BiomeTag m_previousTag;
 }

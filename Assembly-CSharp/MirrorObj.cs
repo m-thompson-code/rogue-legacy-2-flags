@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000267 RID: 615
+// Token: 0x0200042E RID: 1070
 public class MirrorObj : MonoBehaviour, IMirror
 {
-	// Token: 0x0600188A RID: 6282 RVA: 0x0004CD84 File Offset: 0x0004AF84
+	// Token: 0x06002273 RID: 8819 RVA: 0x000AAB2C File Offset: 0x000A8D2C
 	public void Mirror()
 	{
 		Vector3 localEulerAngles = base.gameObject.transform.localEulerAngles;
@@ -35,23 +35,23 @@ public class MirrorObj : MonoBehaviour, IMirror
 		base.gameObject.transform.localScale = localScale;
 	}
 
-	// Token: 0x040017D5 RID: 6101
+	// Token: 0x04001F14 RID: 7956
 	[SerializeField]
 	private bool m_mirrorZRotation;
 
-	// Token: 0x040017D6 RID: 6102
+	// Token: 0x04001F15 RID: 7957
 	[SerializeField]
 	private bool m_mirrorXPosition;
 
-	// Token: 0x040017D7 RID: 6103
+	// Token: 0x04001F16 RID: 7958
 	[SerializeField]
 	private bool m_mirrorYPosition;
 
-	// Token: 0x040017D8 RID: 6104
+	// Token: 0x04001F17 RID: 7959
 	[SerializeField]
 	private bool m_mirrorXScale;
 
-	// Token: 0x040017D9 RID: 6105
+	// Token: 0x04001F18 RID: 7960
 	[SerializeField]
 	private bool m_mirrorYScale;
 }

@@ -4,10 +4,10 @@ using UnityEngine.EventSystems;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000863 RID: 2147
+	// Token: 0x02000D6E RID: 3438
 	public class TMP_TextSelector_A : MonoBehaviour, IPointerEnterHandler, IEventSystemHandler, IPointerExitHandler
 	{
-		// Token: 0x06004711 RID: 18193 RVA: 0x000FEBBF File Offset: 0x000FCDBF
+		// Token: 0x060061CA RID: 25034 RVA: 0x00035E2E File Offset: 0x0003402E
 		private void Awake()
 		{
 			this.m_TextMeshPro = base.gameObject.GetComponent<TextMeshPro>();
@@ -15,7 +15,7 @@ namespace TMPro.Examples
 			this.m_TextMeshPro.ForceMeshUpdate(false, false);
 		}
 
-		// Token: 0x06004712 RID: 18194 RVA: 0x000FEBEC File Offset: 0x000FCDEC
+		// Token: 0x060061CB RID: 25035 RVA: 0x0016C0F8 File Offset: 0x0016A2F8
 		private void LateUpdate()
 		{
 			this.m_isHoveringObject = false;
@@ -78,36 +78,36 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x06004713 RID: 18195 RVA: 0x000FEF55 File Offset: 0x000FD155
+		// Token: 0x060061CC RID: 25036 RVA: 0x00035E59 File Offset: 0x00034059
 		public void OnPointerEnter(PointerEventData eventData)
 		{
 			Debug.Log("OnPointerEnter()");
 			this.m_isHoveringObject = true;
 		}
 
-		// Token: 0x06004714 RID: 18196 RVA: 0x000FEF68 File Offset: 0x000FD168
+		// Token: 0x060061CD RID: 25037 RVA: 0x00035E6C File Offset: 0x0003406C
 		public void OnPointerExit(PointerEventData eventData)
 		{
 			Debug.Log("OnPointerExit()");
 			this.m_isHoveringObject = false;
 		}
 
-		// Token: 0x04003C1A RID: 15386
+		// Token: 0x04004FB8 RID: 20408
 		private TextMeshPro m_TextMeshPro;
 
-		// Token: 0x04003C1B RID: 15387
+		// Token: 0x04004FB9 RID: 20409
 		private Camera m_Camera;
 
-		// Token: 0x04003C1C RID: 15388
+		// Token: 0x04004FBA RID: 20410
 		private bool m_isHoveringObject;
 
-		// Token: 0x04003C1D RID: 15389
+		// Token: 0x04004FBB RID: 20411
 		private int m_selectedLink = -1;
 
-		// Token: 0x04003C1E RID: 15390
+		// Token: 0x04004FBC RID: 20412
 		private int m_lastCharIndex = -1;
 
-		// Token: 0x04003C1F RID: 15391
+		// Token: 0x04004FBD RID: 20413
 		private int m_lastWordIndex = -1;
 	}
 }

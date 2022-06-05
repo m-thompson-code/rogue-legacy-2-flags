@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020006A5 RID: 1701
+// Token: 0x02000B41 RID: 2881
 [Serializable]
 public class RNGController
 {
-	// Token: 0x17001566 RID: 5478
-	// (get) Token: 0x06003E59 RID: 15961 RVA: 0x000DBD3B File Offset: 0x000D9F3B
-	// (set) Token: 0x06003E5A RID: 15962 RVA: 0x000DBD43 File Offset: 0x000D9F43
+	// Token: 0x17001D50 RID: 7504
+	// (get) Token: 0x06005751 RID: 22353 RVA: 0x0002F881 File Offset: 0x0002DA81
+	// (set) Token: 0x06005752 RID: 22354 RVA: 0x0002F889 File Offset: 0x0002DA89
 	public List<RNGData> CallerData { get; private set; }
 
-	// Token: 0x17001567 RID: 5479
-	// (get) Token: 0x06003E5B RID: 15963 RVA: 0x000DBD4C File Offset: 0x000D9F4C
-	// (set) Token: 0x06003E5C RID: 15964 RVA: 0x000DBD54 File Offset: 0x000D9F54
+	// Token: 0x17001D51 RID: 7505
+	// (get) Token: 0x06005753 RID: 22355 RVA: 0x0002F892 File Offset: 0x0002DA92
+	// (set) Token: 0x06005754 RID: 22356 RVA: 0x0002F89A File Offset: 0x0002DA9A
 	public RngID ID
 	{
 		get
@@ -26,14 +26,14 @@ public class RNGController
 		}
 	}
 
-	// Token: 0x17001568 RID: 5480
-	// (get) Token: 0x06003E5D RID: 15965 RVA: 0x000DBD5D File Offset: 0x000D9F5D
-	// (set) Token: 0x06003E5E RID: 15966 RVA: 0x000DBD65 File Offset: 0x000D9F65
+	// Token: 0x17001D52 RID: 7506
+	// (get) Token: 0x06005755 RID: 22357 RVA: 0x0002F8A3 File Offset: 0x0002DAA3
+	// (set) Token: 0x06005756 RID: 22358 RVA: 0x0002F8AB File Offset: 0x0002DAAB
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x17001569 RID: 5481
-	// (get) Token: 0x06003E5F RID: 15967 RVA: 0x000DBD6E File Offset: 0x000D9F6E
-	// (set) Token: 0x06003E60 RID: 15968 RVA: 0x000DBD76 File Offset: 0x000D9F76
+	// Token: 0x17001D53 RID: 7507
+	// (get) Token: 0x06005757 RID: 22359 RVA: 0x0002F8B4 File Offset: 0x0002DAB4
+	// (set) Token: 0x06005758 RID: 22360 RVA: 0x0002F8BC File Offset: 0x0002DABC
 	public int Seed
 	{
 		get
@@ -46,14 +46,14 @@ public class RNGController
 		}
 	}
 
-	// Token: 0x06003E61 RID: 15969 RVA: 0x000DBD7F File Offset: 0x000D9F7F
+	// Token: 0x06005759 RID: 22361 RVA: 0x0002F8C5 File Offset: 0x0002DAC5
 	public RNGController(RngID id)
 	{
 		this.ID = id;
 		this.Seed = -1;
 	}
 
-	// Token: 0x06003E62 RID: 15970 RVA: 0x000DBD9C File Offset: 0x000D9F9C
+	// Token: 0x0600575A RID: 22362 RVA: 0x0014C304 File Offset: 0x0014A504
 	public int GetRandomNumber(string callerDescription, int min, int max)
 	{
 		if (min >= max)
@@ -70,7 +70,7 @@ public class RNGController
 		return this.m_randomNumberGenerator.Next(min, max);
 	}
 
-	// Token: 0x06003E63 RID: 15971 RVA: 0x000DBDF8 File Offset: 0x000D9FF8
+	// Token: 0x0600575B RID: 22363 RVA: 0x0014C360 File Offset: 0x0014A560
 	public float GetRandomNumber(string callerDescription, float min, float max)
 	{
 		if (min >= max)
@@ -87,14 +87,14 @@ public class RNGController
 		return min + (float)this.m_randomNumberGenerator.NextDouble() * (max - min);
 	}
 
-	// Token: 0x06003E64 RID: 15972 RVA: 0x000DBE59 File Offset: 0x000DA059
+	// Token: 0x0600575C RID: 22364 RVA: 0x0002F8E2 File Offset: 0x0002DAE2
 	private void InitialiseRandomNumberGenerator(int seed)
 	{
 		this.Seed = seed;
 		this.m_randomNumberGenerator = new System.Random(this.Seed);
 	}
 
-	// Token: 0x06003E65 RID: 15973 RVA: 0x000DBE74 File Offset: 0x000DA074
+	// Token: 0x0600575D RID: 22365 RVA: 0x0014C3C4 File Offset: 0x0014A5C4
 	public void SetSeed(int seed)
 	{
 		if (Application.isPlaying)
@@ -117,12 +117,12 @@ public class RNGController
 		});
 	}
 
-	// Token: 0x04002E63 RID: 11875
+	// Token: 0x04004083 RID: 16515
 	private RngID m_id;
 
-	// Token: 0x04002E64 RID: 11876
+	// Token: 0x04004084 RID: 16516
 	private System.Random m_randomNumberGenerator;
 
-	// Token: 0x04002E65 RID: 11877
+	// Token: 0x04004085 RID: 16517
 	private int m_seed = -1;
 }

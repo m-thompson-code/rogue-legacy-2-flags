@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace SceneManagement_RL
 {
-	// Token: 0x020008C1 RID: 2241
+	// Token: 0x02000E0C RID: 3596
 	[CreateAssetMenu(menuName = "Custom/Transition Library")]
 	public class TransitionLibrary : ScriptableObject
 	{
-		// Token: 0x170017F3 RID: 6131
-		// (get) Token: 0x06004983 RID: 18819 RVA: 0x00109877 File Offset: 0x00107A77
+		// Token: 0x1700208F RID: 8335
+		// (get) Token: 0x06006564 RID: 25956 RVA: 0x00037E67 File Offset: 0x00036067
 		private static TransitionLibrary Instance
 		{
 			get
@@ -22,7 +22,7 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x06004984 RID: 18820 RVA: 0x001098A0 File Offset: 0x00107AA0
+		// Token: 0x06006565 RID: 25957 RVA: 0x00178D30 File Offset: 0x00176F30
 		public static void InitializeTransitionInstances()
 		{
 			if (TransitionLibrary.m_transitionTable == null)
@@ -39,7 +39,7 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x06004985 RID: 18821 RVA: 0x0010990C File Offset: 0x00107B0C
+		// Token: 0x06006566 RID: 25958 RVA: 0x00178D9C File Offset: 0x00176F9C
 		public static ITransition GetTransitionInstance(TransitionID transitionID)
 		{
 			if (TransitionLibrary.m_transitionTable == null)
@@ -61,20 +61,20 @@ namespace SceneManagement_RL
 			return null;
 		}
 
-		// Token: 0x04003DEA RID: 15850
+		// Token: 0x0400527D RID: 21117
 		[SerializeField]
 		private Transition_V2[] m_transitions;
 
-		// Token: 0x04003DEB RID: 15851
+		// Token: 0x0400527E RID: 21118
 		private const string RESOURCES_PATH = "Scriptable Objects/Libraries/TransitionLibrary";
 
-		// Token: 0x04003DEC RID: 15852
+		// Token: 0x0400527F RID: 21119
 		public static string ASSET_PATH = "Assets/Content/Scriptable Objects/Libraries/TransitionLibrary.asset";
 
-		// Token: 0x04003DED RID: 15853
+		// Token: 0x04005280 RID: 21120
 		private static Dictionary<TransitionID, ITransition> m_transitionTable = null;
 
-		// Token: 0x04003DEE RID: 15854
+		// Token: 0x04005281 RID: 21121
 		private static TransitionLibrary m_instance = null;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000AF RID: 175
+// Token: 0x020000FB RID: 251
 public class ElementalDash_Advanced_AIScript : ElementalDash_Basic_AIScript
 {
-	// Token: 0x17000191 RID: 401
-	// (get) Token: 0x060003FA RID: 1018 RVA: 0x000156CC File Offset: 0x000138CC
+	// Token: 0x1700021D RID: 541
+	// (get) Token: 0x060005A3 RID: 1443 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override int m_shoot_TotalShots
 	{
 		get
@@ -13,8 +13,8 @@ public class ElementalDash_Advanced_AIScript : ElementalDash_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000192 RID: 402
-	// (get) Token: 0x060003FB RID: 1019 RVA: 0x000156CF File Offset: 0x000138CF
+	// Token: 0x1700021E RID: 542
+	// (get) Token: 0x060005A4 RID: 1444 RVA: 0x0000457A File Offset: 0x0000277A
 	protected override float m_shoot_TotalShotDuration
 	{
 		get

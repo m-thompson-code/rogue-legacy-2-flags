@@ -2,20 +2,20 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004C9 RID: 1225
+// Token: 0x020007EF RID: 2031
 public class SegmentedBreakablePlatformParent : SpecialPlatform, IRoomConsumer
 {
-	// Token: 0x1700114D RID: 4429
-	// (get) Token: 0x06002D92 RID: 11666 RVA: 0x0009A1B4 File Offset: 0x000983B4
-	// (set) Token: 0x06002D93 RID: 11667 RVA: 0x0009A1BC File Offset: 0x000983BC
+	// Token: 0x170016D0 RID: 5840
+	// (get) Token: 0x06003E92 RID: 16018 RVA: 0x000229DE File Offset: 0x00020BDE
+	// (set) Token: 0x06003E93 RID: 16019 RVA: 0x000229E6 File Offset: 0x00020BE6
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x06002D94 RID: 11668 RVA: 0x0009A1C5 File Offset: 0x000983C5
+	// Token: 0x06003E94 RID: 16020 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void Awake()
 	{
 	}
 
-	// Token: 0x06002D95 RID: 11669 RVA: 0x0009A1C7 File Offset: 0x000983C7
+	// Token: 0x06003E95 RID: 16021 RVA: 0x000229EF File Offset: 0x00020BEF
 	protected override IEnumerator Start()
 	{
 		int num = (int)base.Width / 2;
@@ -35,21 +35,21 @@ public class SegmentedBreakablePlatformParent : SpecialPlatform, IRoomConsumer
 		yield break;
 	}
 
-	// Token: 0x06002D96 RID: 11670 RVA: 0x0009A1D6 File Offset: 0x000983D6
+	// Token: 0x06003E96 RID: 16022 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void SetState(StateID state)
 	{
 	}
 
-	// Token: 0x06002D97 RID: 11671 RVA: 0x0009A1D8 File Offset: 0x000983D8
+	// Token: 0x06003E97 RID: 16023 RVA: 0x000229FE File Offset: 0x00020BFE
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 	}
 
-	// Token: 0x04002488 RID: 9352
+	// Token: 0x0400311F RID: 12575
 	[SerializeField]
 	private GameObject m_platformPrefab;
 
-	// Token: 0x04002489 RID: 9353
+	// Token: 0x04003120 RID: 12576
 	private GameObject[] m_segments;
 }

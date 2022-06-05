@@ -4,10 +4,10 @@ using System.Linq;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000659 RID: 1625
+// Token: 0x02000AAA RID: 2730
 public class CreateRoomsBuildRule_PlaceRoomOnBiomeSide : CreateRoomsBuildRule
 {
-	// Token: 0x06003AEB RID: 15083 RVA: 0x000CA4E0 File Offset: 0x000C86E0
+	// Token: 0x0600525A RID: 21082 RVA: 0x00138EA4 File Offset: 0x001370A4
 	protected void CreateRoomOnBiomeSide(BiomeCreator biomeCreator, BiomeController biomeController, RoomSide biomeSide, RoomMetaData roomMetaData, RoomType roomTypeOverride = RoomType.None)
 	{
 		Dictionary<GridPoint, List<DoorLocation>> dictionary = null;
@@ -68,7 +68,7 @@ public class CreateRoomsBuildRule_PlaceRoomOnBiomeSide : CreateRoomsBuildRule
 		biomeCreator.SetState(biomeController, BiomeBuildStateID.Failed, text);
 	}
 
-	// Token: 0x06003AEC RID: 15084 RVA: 0x000CA614 File Offset: 0x000C8814
+	// Token: 0x0600525B RID: 21083 RVA: 0x00138FD8 File Offset: 0x001371D8
 	private Dictionary<GridPoint, List<DoorLocation>> GetGridPointsOnBorderWithAvailableDoorsWhereMandatoryRoomFits(BiomeController biomeController, RoomMetaData MandatoryRoomMetaData, RoomSide biomeSide)
 	{
 		RoomSide oppositeSide = RoomUtility.GetOppositeSide(biomeSide);
@@ -82,7 +82,7 @@ public class CreateRoomsBuildRule_PlaceRoomOnBiomeSide : CreateRoomsBuildRule
 		return dictionary;
 	}
 
-	// Token: 0x06003AED RID: 15085 RVA: 0x000CA68C File Offset: 0x000C888C
+	// Token: 0x0600525C RID: 21084 RVA: 0x00139050 File Offset: 0x00137250
 	private Dictionary<GridPoint, List<DoorLocation>> GetGridPointsWithAvailableDoorsWhereMandatoryRoomFits(BiomeController biomeController, RoomMetaData MandatoryRoomMetaData, RoomSide biomeSide)
 	{
 		RoomSide oppositeSide = RoomUtility.GetOppositeSide(biomeSide);
@@ -96,7 +96,7 @@ public class CreateRoomsBuildRule_PlaceRoomOnBiomeSide : CreateRoomsBuildRule
 		return dictionary;
 	}
 
-	// Token: 0x06003AEE RID: 15086 RVA: 0x000CA708 File Offset: 0x000C8908
+	// Token: 0x0600525D RID: 21085 RVA: 0x001390CC File Offset: 0x001372CC
 	private Dictionary<GridPoint, List<DoorLocation>> GetGridPointsWithNoAvailableDoorsWhereMandatoryRoomFits(BiomeController biomeController, RoomMetaData MandatoryRoomMetaData, RoomSide biomeSide)
 	{
 		RoomSide oppositeSide = RoomUtility.GetOppositeSide(biomeSide);
@@ -110,7 +110,7 @@ public class CreateRoomsBuildRule_PlaceRoomOnBiomeSide : CreateRoomsBuildRule
 		return dictionary;
 	}
 
-	// Token: 0x06003AEF RID: 15087 RVA: 0x000CA780 File Offset: 0x000C8980
+	// Token: 0x0600525E RID: 21086 RVA: 0x00139144 File Offset: 0x00137344
 	private Dictionary<GridPoint, List<DoorLocation>> GetGridPointsOnBorderWithNoAvailableDoorsWhereMandatoryRoomFits(BiomeController biomeController, RoomMetaData MandatoryRoomMetaData, RoomSide biomeSide)
 	{
 		RoomSide oppositeSide = RoomUtility.GetOppositeSide(biomeSide);
@@ -124,7 +124,7 @@ public class CreateRoomsBuildRule_PlaceRoomOnBiomeSide : CreateRoomsBuildRule
 		return dictionary;
 	}
 
-	// Token: 0x06003AF0 RID: 15088 RVA: 0x000CA7F8 File Offset: 0x000C89F8
+	// Token: 0x0600525F RID: 21087 RVA: 0x001391BC File Offset: 0x001373BC
 	private static void AddPotentialConnectionPoints(Dictionary<GridPoint, List<DoorLocation>> potentialConnectionPoints, DoorLocation doorLocation, List<GridPoint> connectionPoints)
 	{
 		for (int i = 0; i < connectionPoints.Count; i++)
@@ -137,7 +137,7 @@ public class CreateRoomsBuildRule_PlaceRoomOnBiomeSide : CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x06003AF1 RID: 15089 RVA: 0x000CA84C File Offset: 0x000C8A4C
+	// Token: 0x06005260 RID: 21088 RVA: 0x00139210 File Offset: 0x00137410
 	private GridPoint GetConnectionPoint(Dictionary<GridPoint, List<DoorLocation>> potentialConnectionPoints)
 	{
 		GridPoint key = potentialConnectionPoints.First<KeyValuePair<GridPoint, List<DoorLocation>>>().Key;
@@ -149,7 +149,7 @@ public class CreateRoomsBuildRule_PlaceRoomOnBiomeSide : CreateRoomsBuildRule
 		return key;
 	}
 
-	// Token: 0x06003AF2 RID: 15090 RVA: 0x000CA898 File Offset: 0x000C8A98
+	// Token: 0x06005261 RID: 21089 RVA: 0x0013925C File Offset: 0x0013745C
 	private static GridPoint ReplaceRandomRoomWithNoDoorWithOneWithDoor(BiomeController biomeController, Dictionary<GridPoint, List<DoorLocation>> potentialConnectionPoints, RoomSide biomeSide)
 	{
 		GridPoint result = null;

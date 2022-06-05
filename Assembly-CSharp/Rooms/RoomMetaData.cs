@@ -7,12 +7,12 @@ using UnityEngine;
 
 namespace Rooms
 {
-	// Token: 0x020008D0 RID: 2256
+	// Token: 0x02000E3A RID: 3642
 	public class RoomMetaData : ScriptableObject
 	{
-		// Token: 0x1700180D RID: 6157
-		// (get) Token: 0x060049F2 RID: 18930 RVA: 0x0010A7FC File Offset: 0x001089FC
-		// (set) Token: 0x060049F3 RID: 18931 RVA: 0x0010A804 File Offset: 0x00108A04
+		// Token: 0x170020E7 RID: 8423
+		// (get) Token: 0x0600668D RID: 26253 RVA: 0x000386CB File Offset: 0x000368CB
+		// (set) Token: 0x0600668E RID: 26254 RVA: 0x000386D3 File Offset: 0x000368D3
 		public bool CanFlip
 		{
 			get
@@ -25,9 +25,9 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x1700180E RID: 6158
-		// (get) Token: 0x060049F4 RID: 18932 RVA: 0x0010A80D File Offset: 0x00108A0D
-		// (set) Token: 0x060049F5 RID: 18933 RVA: 0x0010A815 File Offset: 0x00108A15
+		// Token: 0x170020E8 RID: 8424
+		// (get) Token: 0x0600668F RID: 26255 RVA: 0x000386DC File Offset: 0x000368DC
+		// (set) Token: 0x06006690 RID: 26256 RVA: 0x000386E4 File Offset: 0x000368E4
 		public bool CanMerge
 		{
 			get
@@ -40,9 +40,9 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x1700180F RID: 6159
-		// (get) Token: 0x060049F6 RID: 18934 RVA: 0x0010A81E File Offset: 0x00108A1E
-		// (set) Token: 0x060049F7 RID: 18935 RVA: 0x0010A826 File Offset: 0x00108A26
+		// Token: 0x170020E9 RID: 8425
+		// (get) Token: 0x06006691 RID: 26257 RVA: 0x000386ED File Offset: 0x000368ED
+		// (set) Token: 0x06006692 RID: 26258 RVA: 0x000386F5 File Offset: 0x000368F5
 		public DoorLocation[] DoorLocations
 		{
 			get
@@ -55,9 +55,9 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x17001810 RID: 6160
-		// (get) Token: 0x060049F8 RID: 18936 RVA: 0x0010A82F File Offset: 0x00108A2F
-		// (set) Token: 0x060049F9 RID: 18937 RVA: 0x0010A837 File Offset: 0x00108A37
+		// Token: 0x170020EA RID: 8426
+		// (get) Token: 0x06006693 RID: 26259 RVA: 0x000386FE File Offset: 0x000368FE
+		// (set) Token: 0x06006694 RID: 26260 RVA: 0x00038706 File Offset: 0x00036906
 		public string RoomPath
 		{
 			get
@@ -70,9 +70,9 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x17001811 RID: 6161
-		// (get) Token: 0x060049FA RID: 18938 RVA: 0x0010A840 File Offset: 0x00108A40
-		// (set) Token: 0x060049FB RID: 18939 RVA: 0x0010A848 File Offset: 0x00108A48
+		// Token: 0x170020EB RID: 8427
+		// (get) Token: 0x06006695 RID: 26261 RVA: 0x0003870F File Offset: 0x0003690F
+		// (set) Token: 0x06006696 RID: 26262 RVA: 0x00038717 File Offset: 0x00036917
 		public bool IsEasy
 		{
 			get
@@ -85,7 +85,7 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x060049FC RID: 18940 RVA: 0x0010A851 File Offset: 0x00108A51
+		// Token: 0x06006697 RID: 26263 RVA: 0x00038720 File Offset: 0x00036920
 		public IEnumerator LoadPrefabAsync()
 		{
 			if (!this.m_cachedPrefab && !string.IsNullOrEmpty(this.RoomPath))
@@ -101,7 +101,7 @@ namespace Rooms
 			yield break;
 		}
 
-		// Token: 0x060049FD RID: 18941 RVA: 0x0010A860 File Offset: 0x00108A60
+		// Token: 0x06006698 RID: 26264 RVA: 0x0003872F File Offset: 0x0003692F
 		public Room GetPrefab(bool throwOnNull = true)
 		{
 			if (!this.m_cachedPrefab && !string.IsNullOrEmpty(this.RoomPath))
@@ -111,7 +111,7 @@ namespace Rooms
 			return this.m_cachedPrefab;
 		}
 
-		// Token: 0x060049FE RID: 18942 RVA: 0x0010A89E File Offset: 0x00108A9E
+		// Token: 0x06006699 RID: 26265 RVA: 0x0003876D File Offset: 0x0003696D
 		public RoomContentMetaData GetContent()
 		{
 			if (this.m_cachedContent == null && !string.IsNullOrEmpty(this.ContentPath))
@@ -121,27 +121,27 @@ namespace Rooms
 			return this.m_cachedContent;
 		}
 
-		// Token: 0x060049FF RID: 18943 RVA: 0x0010A8D8 File Offset: 0x00108AD8
+		// Token: 0x0600669A RID: 26266 RVA: 0x000387A7 File Offset: 0x000369A7
 		public void ClearCachedPrefab()
 		{
 			this.m_cachedPrefab = null;
 		}
 
-		// Token: 0x06004A00 RID: 18944 RVA: 0x0010A8E1 File Offset: 0x00108AE1
+		// Token: 0x0600669B RID: 26267 RVA: 0x000387B0 File Offset: 0x000369B0
 		public void ClearCachedContentData()
 		{
 			this.m_cachedContent = null;
 		}
 
-		// Token: 0x06004A01 RID: 18945 RVA: 0x0010A8EA File Offset: 0x00108AEA
+		// Token: 0x0600669C RID: 26268 RVA: 0x000387B9 File Offset: 0x000369B9
 		public void UpdateRoomPath(string path)
 		{
 			this.RoomPath = path;
 		}
 
-		// Token: 0x17001812 RID: 6162
-		// (get) Token: 0x06004A02 RID: 18946 RVA: 0x0010A8F3 File Offset: 0x00108AF3
-		// (set) Token: 0x06004A03 RID: 18947 RVA: 0x0010A8FB File Offset: 0x00108AFB
+		// Token: 0x170020EC RID: 8428
+		// (get) Token: 0x0600669D RID: 26269 RVA: 0x000387C2 File Offset: 0x000369C2
+		// (set) Token: 0x0600669E RID: 26270 RVA: 0x000387CA File Offset: 0x000369CA
 		public RoomID ID
 		{
 			get
@@ -154,9 +154,9 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x17001813 RID: 6163
-		// (get) Token: 0x06004A04 RID: 18948 RVA: 0x0010A904 File Offset: 0x00108B04
-		// (set) Token: 0x06004A05 RID: 18949 RVA: 0x0010A90C File Offset: 0x00108B0C
+		// Token: 0x170020ED RID: 8429
+		// (get) Token: 0x0600669F RID: 26271 RVA: 0x000387D3 File Offset: 0x000369D3
+		// (set) Token: 0x060066A0 RID: 26272 RVA: 0x000387DB File Offset: 0x000369DB
 		public Vector2Int Size
 		{
 			get
@@ -169,9 +169,9 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x17001814 RID: 6164
-		// (get) Token: 0x06004A06 RID: 18950 RVA: 0x0010A915 File Offset: 0x00108B15
-		// (set) Token: 0x06004A07 RID: 18951 RVA: 0x0010A91D File Offset: 0x00108B1D
+		// Token: 0x170020EE RID: 8430
+		// (get) Token: 0x060066A1 RID: 26273 RVA: 0x000387E4 File Offset: 0x000369E4
+		// (set) Token: 0x060066A2 RID: 26274 RVA: 0x000387EC File Offset: 0x000369EC
 		public int[] ExitTunnels
 		{
 			get
@@ -184,8 +184,8 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x17001815 RID: 6165
-		// (get) Token: 0x06004A08 RID: 18952 RVA: 0x0010A926 File Offset: 0x00108B26
+		// Token: 0x170020EF RID: 8431
+		// (get) Token: 0x060066A3 RID: 26275 RVA: 0x000387F5 File Offset: 0x000369F5
 		public bool IsSpecialRoom
 		{
 			get
@@ -194,9 +194,9 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x17001816 RID: 6166
-		// (get) Token: 0x06004A09 RID: 18953 RVA: 0x0010A931 File Offset: 0x00108B31
-		// (set) Token: 0x06004A0A RID: 18954 RVA: 0x0010A939 File Offset: 0x00108B39
+		// Token: 0x170020F0 RID: 8432
+		// (get) Token: 0x060066A4 RID: 26276 RVA: 0x00038800 File Offset: 0x00036A00
+		// (set) Token: 0x060066A5 RID: 26277 RVA: 0x00038808 File Offset: 0x00036A08
 		public SpecialRoomType SpecialRoomType
 		{
 			get
@@ -209,8 +209,8 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x17001817 RID: 6167
-		// (get) Token: 0x06004A0B RID: 18955 RVA: 0x0010A942 File Offset: 0x00108B42
+		// Token: 0x170020F1 RID: 8433
+		// (get) Token: 0x060066A6 RID: 26278 RVA: 0x00038811 File Offset: 0x00036A11
 		public string ContentPath
 		{
 			get
@@ -219,9 +219,9 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x17001818 RID: 6168
-		// (get) Token: 0x06004A0C RID: 18956 RVA: 0x0010A94A File Offset: 0x00108B4A
-		// (set) Token: 0x06004A0D RID: 18957 RVA: 0x0010A952 File Offset: 0x00108B52
+		// Token: 0x170020F2 RID: 8434
+		// (get) Token: 0x060066A7 RID: 26279 RVA: 0x00038819 File Offset: 0x00036A19
+		// (set) Token: 0x060066A8 RID: 26280 RVA: 0x00038821 File Offset: 0x00036A21
 		public bool ShowIconOnMap
 		{
 			get
@@ -234,9 +234,9 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x17001819 RID: 6169
-		// (get) Token: 0x06004A0E RID: 18958 RVA: 0x0010A95B File Offset: 0x00108B5B
-		// (set) Token: 0x06004A0F RID: 18959 RVA: 0x0010A963 File Offset: 0x00108B63
+		// Token: 0x170020F3 RID: 8435
+		// (get) Token: 0x060066A9 RID: 26281 RVA: 0x0003882A File Offset: 0x00036A2A
+		// (set) Token: 0x060066AA RID: 26282 RVA: 0x00038832 File Offset: 0x00036A32
 		public BiomeType BiomeOverride
 		{
 			get
@@ -249,13 +249,13 @@ namespace Rooms
 			}
 		}
 
-		// Token: 0x06004A10 RID: 18960 RVA: 0x0010A96C File Offset: 0x00108B6C
+		// Token: 0x060066AB RID: 26283 RVA: 0x0003883B File Offset: 0x00036A3B
 		public RoomMetaData(Room room)
 		{
 			this.UpdateData(room);
 		}
 
-		// Token: 0x06004A11 RID: 18961 RVA: 0x0010A984 File Offset: 0x00108B84
+		// Token: 0x060066AC RID: 26284 RVA: 0x0017B480 File Offset: 0x00179680
 		public void UpdateData(Room room)
 		{
 			this.CanFlip = room.CanFlip;
@@ -307,7 +307,7 @@ namespace Rooms
 			this.IsEasy = room.IsEasy;
 		}
 
-		// Token: 0x06004A12 RID: 18962 RVA: 0x0010AB34 File Offset: 0x00108D34
+		// Token: 0x060066AD RID: 26285 RVA: 0x0017B630 File Offset: 0x00179830
 		public bool GetHasExitTunnel(int index)
 		{
 			for (int i = 0; i < this.ExitTunnels.Length; i++)
@@ -320,7 +320,7 @@ namespace Rooms
 			return false;
 		}
 
-		// Token: 0x06004A13 RID: 18963 RVA: 0x0010AB64 File Offset: 0x00108D64
+		// Token: 0x060066AE RID: 26286 RVA: 0x0017B660 File Offset: 0x00179860
 		public bool GetHasDoor(DoorLocation doorLocation, bool isMirrored = false)
 		{
 			if (isMirrored)
@@ -345,7 +345,7 @@ namespace Rooms
 			return false;
 		}
 
-		// Token: 0x06004A14 RID: 18964 RVA: 0x0010ABD8 File Offset: 0x00108DD8
+		// Token: 0x060066AF RID: 26287 RVA: 0x0017B6D4 File Offset: 0x001798D4
 		public IEnumerable<DoorLocation> GetDoorsOnSide(RoomSide side, bool isMirrored = false)
 		{
 			if (this.DoorLocations == null)
@@ -361,74 +361,74 @@ namespace Rooms
 			select location;
 		}
 
-		// Token: 0x06004A15 RID: 18965 RVA: 0x0010AC2A File Offset: 0x00108E2A
+		// Token: 0x060066B0 RID: 26288 RVA: 0x00038851 File Offset: 0x00036A51
 		public bool GetHasDoorsOnSide(RoomSide side, bool isMirrored)
 		{
 			return this.GetDoorsOnSide(side, isMirrored).Count<DoorLocation>() > 0;
 		}
 
-		// Token: 0x04003E36 RID: 15926
+		// Token: 0x04005340 RID: 21312
 		[SerializeField]
 		[ReadOnly]
 		private bool m_canFlip;
 
-		// Token: 0x04003E37 RID: 15927
+		// Token: 0x04005341 RID: 21313
 		[SerializeField]
 		[ReadOnly]
 		private bool m_canMerge;
 
-		// Token: 0x04003E38 RID: 15928
+		// Token: 0x04005342 RID: 21314
 		[SerializeField]
 		[ReadOnly]
 		private DoorLocation[] m_doorLocations;
 
-		// Token: 0x04003E39 RID: 15929
+		// Token: 0x04005343 RID: 21315
 		[SerializeField]
 		[ReadOnly]
 		private RoomID m_id;
 
-		// Token: 0x04003E3A RID: 15930
+		// Token: 0x04005344 RID: 21316
 		[SerializeField]
 		private string m_roomPath;
 
-		// Token: 0x04003E3B RID: 15931
+		// Token: 0x04005345 RID: 21317
 		[SerializeField]
 		[ReadOnly]
 		private string m_contentPath;
 
-		// Token: 0x04003E3C RID: 15932
+		// Token: 0x04005346 RID: 21318
 		[SerializeField]
 		[ReadOnly]
 		private Vector2Int m_size;
 
-		// Token: 0x04003E3D RID: 15933
+		// Token: 0x04005347 RID: 21319
 		[SerializeField]
 		[ReadOnly]
 		private int[] m_tunnelExits;
 
-		// Token: 0x04003E3E RID: 15934
+		// Token: 0x04005348 RID: 21320
 		[SerializeField]
 		[ReadOnly]
 		private SpecialRoomType m_specialRoomType;
 
-		// Token: 0x04003E3F RID: 15935
+		// Token: 0x04005349 RID: 21321
 		[SerializeField]
 		[ReadOnly]
 		private bool m_showIconOnMap = true;
 
-		// Token: 0x04003E40 RID: 15936
+		// Token: 0x0400534A RID: 21322
 		[SerializeField]
 		[ReadOnly]
 		private bool m_isEasy;
 
-		// Token: 0x04003E41 RID: 15937
+		// Token: 0x0400534B RID: 21323
 		[SerializeField]
 		private BiomeType m_biomeOverride;
 
-		// Token: 0x04003E42 RID: 15938
+		// Token: 0x0400534C RID: 21324
 		private Room m_cachedPrefab;
 
-		// Token: 0x04003E43 RID: 15939
+		// Token: 0x0400534D RID: 21325
 		private RoomContentMetaData m_cachedContent;
 	}
 }

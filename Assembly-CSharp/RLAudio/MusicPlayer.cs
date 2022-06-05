@@ -3,16 +3,16 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008FC RID: 2300
+	// Token: 0x02000E76 RID: 3702
 	public class MusicPlayer : MonoBehaviour
 	{
-		// Token: 0x06004B92 RID: 19346 RVA: 0x0010FB43 File Offset: 0x0010DD43
+		// Token: 0x0600687B RID: 26747 RVA: 0x00039D01 File Offset: 0x00037F01
 		private void Start()
 		{
 			MusicManager.PlayMusic(this.m_song, false, false);
 		}
 
-		// Token: 0x06004B93 RID: 19347 RVA: 0x0010FB52 File Offset: 0x0010DD52
+		// Token: 0x0600687C RID: 26748 RVA: 0x00039D10 File Offset: 0x00037F10
 		private void OnDestroy()
 		{
 			if (this.m_stopOnDestroy)
@@ -21,17 +21,17 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B94 RID: 19348 RVA: 0x0010FB62 File Offset: 0x0010DD62
+		// Token: 0x0600687D RID: 26749 RVA: 0x00039D20 File Offset: 0x00037F20
 		public void Stop()
 		{
 			MusicManager.StopMusic();
 		}
 
-		// Token: 0x04003F90 RID: 16272
+		// Token: 0x040054E2 RID: 21730
 		[SerializeField]
 		private SongID m_song;
 
-		// Token: 0x04003F91 RID: 16273
+		// Token: 0x040054E3 RID: 21731
 		[SerializeField]
 		private bool m_stopOnDestroy = true;
 	}

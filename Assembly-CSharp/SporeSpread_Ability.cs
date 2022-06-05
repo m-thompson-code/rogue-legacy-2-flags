@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000178 RID: 376
+// Token: 0x020002B7 RID: 695
 public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 {
-	// Token: 0x1700071B RID: 1819
-	// (get) Token: 0x06000D28 RID: 3368 RVA: 0x00027E44 File Offset: 0x00026044
+	// Token: 0x17000985 RID: 2437
+	// (get) Token: 0x0600146D RID: 5229 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -13,8 +13,8 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700071C RID: 1820
-	// (get) Token: 0x06000D29 RID: 3369 RVA: 0x00027E4B File Offset: 0x0002604B
+	// Token: 0x17000986 RID: 2438
+	// (get) Token: 0x0600146E RID: 5230 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -23,8 +23,8 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700071D RID: 1821
-	// (get) Token: 0x06000D2A RID: 3370 RVA: 0x00027E52 File Offset: 0x00026052
+	// Token: 0x17000987 RID: 2439
+	// (get) Token: 0x0600146F RID: 5231 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float TellAnimSpeed
 	{
 		get
@@ -33,8 +33,8 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700071E RID: 1822
-	// (get) Token: 0x06000D2B RID: 3371 RVA: 0x00027E59 File Offset: 0x00026059
+	// Token: 0x17000988 RID: 2440
+	// (get) Token: 0x06001470 RID: 5232 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -43,8 +43,8 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700071F RID: 1823
-	// (get) Token: 0x06000D2C RID: 3372 RVA: 0x00027E60 File Offset: 0x00026060
+	// Token: 0x17000989 RID: 2441
+	// (get) Token: 0x06001471 RID: 5233 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -53,8 +53,8 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000720 RID: 1824
-	// (get) Token: 0x06000D2D RID: 3373 RVA: 0x00027E67 File Offset: 0x00026067
+	// Token: 0x1700098A RID: 2442
+	// (get) Token: 0x06001472 RID: 5234 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -63,8 +63,8 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000721 RID: 1825
-	// (get) Token: 0x06000D2E RID: 3374 RVA: 0x00027E6E File Offset: 0x0002606E
+	// Token: 0x1700098B RID: 2443
+	// (get) Token: 0x06001473 RID: 5235 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -73,8 +73,8 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000722 RID: 1826
-	// (get) Token: 0x06000D2F RID: 3375 RVA: 0x00027E75 File Offset: 0x00026075
+	// Token: 0x1700098C RID: 2444
+	// (get) Token: 0x06001474 RID: 5236 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -83,8 +83,8 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000723 RID: 1827
-	// (get) Token: 0x06000D30 RID: 3376 RVA: 0x00027E7C File Offset: 0x0002607C
+	// Token: 0x1700098D RID: 2445
+	// (get) Token: 0x06001475 RID: 5237 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -93,8 +93,8 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000724 RID: 1828
-	// (get) Token: 0x06000D31 RID: 3377 RVA: 0x00027E83 File Offset: 0x00026083
+	// Token: 0x1700098E RID: 2446
+	// (get) Token: 0x06001476 RID: 5238 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -103,7 +103,7 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x06000D32 RID: 3378 RVA: 0x00027E8C File Offset: 0x0002608C
+	// Token: 0x06001477 RID: 5239 RVA: 0x00086E9C File Offset: 0x0008509C
 	protected override void FireProjectile()
 	{
 		if (!string.IsNullOrEmpty(this.ProjectileName))
@@ -128,12 +128,12 @@ public class SporeSpread_Ability : AimedAbilityFast_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x040010C1 RID: 4289
+	// Token: 0x04001613 RID: 5651
 	private float m_fireAngle;
 
-	// Token: 0x040010C2 RID: 4290
+	// Token: 0x04001614 RID: 5652
 	private float m_fireAngle2 = 7.5f;
 
-	// Token: 0x040010C3 RID: 4291
+	// Token: 0x04001615 RID: 5653
 	private float m_fireAngle3 = 15f;
 }

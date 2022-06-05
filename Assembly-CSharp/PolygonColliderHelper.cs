@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020002B1 RID: 689
+// Token: 0x0200049C RID: 1180
 public class PolygonColliderHelper : MonoBehaviour
 {
-	// Token: 0x17000C79 RID: 3193
-	// (get) Token: 0x06001B72 RID: 7026 RVA: 0x00057CE6 File Offset: 0x00055EE6
-	// (set) Token: 0x06001B73 RID: 7027 RVA: 0x00057CF2 File Offset: 0x00055EF2
+	// Token: 0x17000FF4 RID: 4084
+	// (get) Token: 0x0600260E RID: 9742 RVA: 0x0001524D File Offset: 0x0001344D
+	// (set) Token: 0x0600260F RID: 9743 RVA: 0x00015259 File Offset: 0x00013459
 	public static CompositeCollider2D CompositeCollider
 	{
 		get
@@ -20,9 +20,9 @@ public class PolygonColliderHelper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000C7A RID: 3194
-	// (get) Token: 0x06001B74 RID: 7028 RVA: 0x00057CFF File Offset: 0x00055EFF
-	// (set) Token: 0x06001B75 RID: 7029 RVA: 0x00057D06 File Offset: 0x00055F06
+	// Token: 0x17000FF5 RID: 4085
+	// (get) Token: 0x06002610 RID: 9744 RVA: 0x00015266 File Offset: 0x00013466
+	// (set) Token: 0x06002611 RID: 9745 RVA: 0x0001526D File Offset: 0x0001346D
 	private static PolygonColliderHelper Instance
 	{
 		get
@@ -35,7 +35,7 @@ public class PolygonColliderHelper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B76 RID: 7030 RVA: 0x00057D0E File Offset: 0x00055F0E
+	// Token: 0x06002612 RID: 9746 RVA: 0x00015275 File Offset: 0x00013475
 	private void Awake()
 	{
 		if (PolygonColliderHelper.Instance == null)
@@ -46,7 +46,7 @@ public class PolygonColliderHelper : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06001B77 RID: 7031 RVA: 0x00057D30 File Offset: 0x00055F30
+	// Token: 0x06002613 RID: 9747 RVA: 0x000B4A1C File Offset: 0x000B2C1C
 	private void OnDestroy()
 	{
 		PolygonColliderHelper.m_instance = null;
@@ -61,7 +61,7 @@ public class PolygonColliderHelper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B78 RID: 7032 RVA: 0x00057D84 File Offset: 0x00055F84
+	// Token: 0x06002614 RID: 9748 RVA: 0x000B4A70 File Offset: 0x000B2C70
 	public static void UpdateCompositeCollider(PolygonCollider2D[] collider2Ds)
 	{
 		if (PolygonColliderHelper.m_colliders == null)
@@ -97,17 +97,17 @@ public class PolygonColliderHelper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001924 RID: 6436
+	// Token: 0x04002100 RID: 8448
 	[SerializeField]
 	private CompositeCollider2D m_compositeCollider;
 
-	// Token: 0x04001925 RID: 6437
+	// Token: 0x04002101 RID: 8449
 	[SerializeField]
 	private PolygonCollider2D[] m_debugPolygonColliders;
 
-	// Token: 0x04001926 RID: 6438
+	// Token: 0x04002102 RID: 8450
 	private static List<PolygonCollider2D> m_colliders;
 
-	// Token: 0x04001927 RID: 6439
+	// Token: 0x04002103 RID: 8451
 	private static PolygonColliderHelper m_instance;
 }

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace GameEventTracking
 {
-	// Token: 0x0200089E RID: 2206
+	// Token: 0x02000DCB RID: 3531
 	public interface IRoomEventTrackerState : IGameEventTrackerState
 	{
-		// Token: 0x1700179A RID: 6042
-		// (get) Token: 0x0600481A RID: 18458
+		// Token: 0x1700200C RID: 8204
+		// (get) Token: 0x06006355 RID: 25429
 		List<RoomTrackerData> RoomsEntered { get; }
 
-		// Token: 0x0600481B RID: 18459
+		// Token: 0x06006356 RID: 25430
 		void Initialise(List<RoomTrackerData> roomsEntered);
 	}
 }

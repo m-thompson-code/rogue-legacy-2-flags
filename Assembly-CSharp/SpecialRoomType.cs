@@ -1,48 +1,48 @@
 ﻿using System;
 
-// Token: 0x02000767 RID: 1895
+// Token: 0x02000C28 RID: 3112
 public enum SpecialRoomType
 {
-	// Token: 0x0400363E RID: 13886
+	// Token: 0x040048EE RID: 18670
 	None,
-	// Token: 0x0400363F RID: 13887
+	// Token: 0x040048EF RID: 18671
 	Clown = 10,
-	// Token: 0x04003640 RID: 13888
+	// Token: 0x040048F0 RID: 18672
 	ClownEntrance = 15,
-	// Token: 0x04003641 RID: 13889
+	// Token: 0x040048F1 RID: 18673
 	Journal = 20,
-	// Token: 0x04003642 RID: 13890
+	// Token: 0x040048F2 RID: 18674
 	Healing = 30,
-	// Token: 0x04003643 RID: 13891
+	// Token: 0x040048F3 RID: 18675
 	Relic = 40,
-	// Token: 0x04003644 RID: 13892
+	// Token: 0x040048F4 RID: 18676
 	Portrait = 50,
-	// Token: 0x04003645 RID: 13893
+	// Token: 0x040048F5 RID: 18677
 	Subboss = 60,
-	// Token: 0x04003646 RID: 13894
+	// Token: 0x040048F6 RID: 18678
 	SubbossEntrance = 65,
-	// Token: 0x04003647 RID: 13895
+	// Token: 0x040048F7 RID: 18679
 	Heirloom = 70,
-	// Token: 0x04003648 RID: 13896
+	// Token: 0x040048F8 RID: 18680
 	HeirloomEntrance = 75,
-	// Token: 0x04003649 RID: 13897
+	// Token: 0x040048F9 RID: 18681
 	Boss = 80,
-	// Token: 0x0400364A RID: 13898
+	// Token: 0x040048FA RID: 18682
 	BossEntrance = 85,
-	// Token: 0x0400364B RID: 13899
+	// Token: 0x040048FB RID: 18683
 	Fairy = 90,
-	// Token: 0x0400364C RID: 13900
+	// Token: 0x040048FC RID: 18684
 	Teleporter = 100,
-	// Token: 0x0400364D RID: 13901
+	// Token: 0x040048FD RID: 18685
 	IncludeInAll = 110,
-	// Token: 0x0400364E RID: 13902
+	// Token: 0x040048FE RID: 18686
 	Arena = 120,
-	// Token: 0x0400364F RID: 13903
+	// Token: 0x040048FF RID: 18687
 	Curio = 130,
-	// Token: 0x04003650 RID: 13904
+	// Token: 0x04004900 RID: 18688
 	WhitePip = 147,
-	// Token: 0x04003651 RID: 13905
+	// Token: 0x04004901 RID: 18689
 	WhitePipUnique,
-	// Token: 0x04003652 RID: 13906
+	// Token: 0x04004902 RID: 18690
 	NPC = 1000
 }

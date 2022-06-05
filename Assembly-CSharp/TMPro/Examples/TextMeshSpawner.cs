@@ -3,15 +3,15 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x0200086A RID: 2154
+	// Token: 0x02000D7C RID: 3452
 	public class TextMeshSpawner : MonoBehaviour
 	{
-		// Token: 0x06004739 RID: 18233 RVA: 0x001004D0 File Offset: 0x000FE6D0
+		// Token: 0x06006210 RID: 25104 RVA: 0x00002FCA File Offset: 0x000011CA
 		private void Awake()
 		{
 		}
 
-		// Token: 0x0600473A RID: 18234 RVA: 0x001004D4 File Offset: 0x000FE6D4
+		// Token: 0x06006211 RID: 25105 RVA: 0x0016E054 File Offset: 0x0016C254
 		private void Start()
 		{
 			for (int i = 0; i < this.NumberOfNPC; i++)
@@ -44,16 +44,16 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x04003C4C RID: 15436
+		// Token: 0x0400501B RID: 20507
 		public int SpawnType;
 
-		// Token: 0x04003C4D RID: 15437
+		// Token: 0x0400501C RID: 20508
 		public int NumberOfNPC = 12;
 
-		// Token: 0x04003C4E RID: 15438
+		// Token: 0x0400501D RID: 20509
 		public Font TheFont;
 
-		// Token: 0x04003C4F RID: 15439
+		// Token: 0x0400501E RID: 20510
 		private TextMeshProFloatingText floatingText_Script;
 	}
 }

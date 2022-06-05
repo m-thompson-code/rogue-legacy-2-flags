@@ -3,35 +3,35 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020003D5 RID: 981
+// Token: 0x02000670 RID: 1648
 public class PlayerCardRightPageEntry : MonoBehaviour, ILocalizable
 {
-	// Token: 0x06002418 RID: 9240 RVA: 0x000768D5 File Offset: 0x00074AD5
+	// Token: 0x0600323C RID: 12860 RVA: 0x0001B930 File Offset: 0x00019B30
 	private void Awake()
 	{
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 	}
 
-	// Token: 0x06002419 RID: 9241 RVA: 0x000768EA File Offset: 0x00074AEA
+	// Token: 0x0600323D RID: 12861 RVA: 0x0001B945 File Offset: 0x00019B45
 	private void OnEnable()
 	{
 		this.UpdateCard();
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x0600241A RID: 9242 RVA: 0x000768FF File Offset: 0x00074AFF
+	// Token: 0x0600323E RID: 12862 RVA: 0x0001B95A File Offset: 0x00019B5A
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x0600241B RID: 9243 RVA: 0x0007690E File Offset: 0x00074B0E
+	// Token: 0x0600323F RID: 12863 RVA: 0x0001B969 File Offset: 0x00019B69
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.UpdateCard();
 	}
 
-	// Token: 0x0600241C RID: 9244 RVA: 0x00076918 File Offset: 0x00074B18
+	// Token: 0x06003240 RID: 12864 RVA: 0x000D678C File Offset: 0x000D498C
 	private void UpdateCard()
 	{
 		CharacterData currentCharacter = SaveManager.PlayerSaveData.CurrentCharacter;
@@ -224,41 +224,41 @@ public class PlayerCardRightPageEntry : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x04001E96 RID: 7830
+	// Token: 0x040028F3 RID: 10483
 	[SerializeField]
 	private TMP_Text m_descriptionText;
 
-	// Token: 0x04001E97 RID: 7831
+	// Token: 0x040028F4 RID: 10484
 	[SerializeField]
 	private TMP_Text m_titleText;
 
-	// Token: 0x04001E98 RID: 7832
+	// Token: 0x040028F5 RID: 10485
 	[SerializeField]
 	private Image m_icon;
 
-	// Token: 0x04001E99 RID: 7833
+	// Token: 0x040028F6 RID: 10486
 	[SerializeField]
 	private PlayerCardRightPageEntry.PlayerRightCardType m_cardType;
 
-	// Token: 0x04001E9A RID: 7834
+	// Token: 0x040028F7 RID: 10487
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x02000C14 RID: 3092
+	// Token: 0x02000671 RID: 1649
 	private enum PlayerRightCardType
 	{
-		// Token: 0x04004EF2 RID: 20210
+		// Token: 0x040028F9 RID: 10489
 		None,
-		// Token: 0x04004EF3 RID: 20211
+		// Token: 0x040028FA RID: 10490
 		Class,
-		// Token: 0x04004EF4 RID: 20212
+		// Token: 0x040028FB RID: 10491
 		Weapon,
-		// Token: 0x04004EF5 RID: 20213
+		// Token: 0x040028FC RID: 10492
 		Talent,
-		// Token: 0x04004EF6 RID: 20214
+		// Token: 0x040028FD RID: 10493
 		Spell,
-		// Token: 0x04004EF7 RID: 20215
+		// Token: 0x040028FE RID: 10494
 		TraitOne,
-		// Token: 0x04004EF8 RID: 20216
+		// Token: 0x040028FF RID: 10495
 		TraitTwo
 	}
 }

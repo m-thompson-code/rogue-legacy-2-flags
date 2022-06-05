@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace TMPro
 {
-	// Token: 0x02000853 RID: 2131
+	// Token: 0x02000D51 RID: 3409
 	[Serializable]
 	public class TMP_PhoneNumberValidator : TMP_InputValidator
 	{
-		// Token: 0x060046CB RID: 18123 RVA: 0x000FCD68 File Offset: 0x000FAF68
+		// Token: 0x06006167 RID: 24935 RVA: 0x00169AA0 File Offset: 0x00167CA0
 		public override char Validate(ref string text, ref int pos, char ch)
 		{
 			Debug.Log("Trying to validate...");

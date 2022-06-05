@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020006D4 RID: 1748
+// Token: 0x02000B7F RID: 2943
 public class EquipmentSetBonusType_RL
 {
-	// Token: 0x170015CB RID: 5579
-	// (get) Token: 0x06003FCC RID: 16332 RVA: 0x000E287E File Offset: 0x000E0A7E
+	// Token: 0x17001DC3 RID: 7619
+	// (get) Token: 0x06005903 RID: 22787 RVA: 0x000306D6 File Offset: 0x0002E8D6
 	public static EquipmentSetBonusType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class EquipmentSetBonusType_RL
 		}
 	}
 
-	// Token: 0x04003038 RID: 12344
+	// Token: 0x04004287 RID: 17031
 	private static EquipmentSetBonusType[] m_typeArray;
 }

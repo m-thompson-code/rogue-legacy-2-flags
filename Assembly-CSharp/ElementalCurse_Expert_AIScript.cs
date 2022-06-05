@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000AD RID: 173
+// Token: 0x020000F9 RID: 249
 public class ElementalCurse_Expert_AIScript : ElementalCurse_Basic_AIScript
 {
-	// Token: 0x1700018D RID: 397
-	// (get) Token: 0x060003F4 RID: 1012 RVA: 0x000156AC File Offset: 0x000138AC
+	// Token: 0x17000219 RID: 537
+	// (get) Token: 0x0600059D RID: 1437 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected override int m_shoot_TotalShots
 	{
 		get
@@ -13,8 +13,8 @@ public class ElementalCurse_Expert_AIScript : ElementalCurse_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700018E RID: 398
-	// (get) Token: 0x060003F5 RID: 1013 RVA: 0x000156AF File Offset: 0x000138AF
+	// Token: 0x1700021A RID: 538
+	// (get) Token: 0x0600059E RID: 1438 RVA: 0x00005125 File Offset: 0x00003325
 	protected override float m_shoot_TotalShotDuration
 	{
 		get
@@ -23,8 +23,8 @@ public class ElementalCurse_Expert_AIScript : ElementalCurse_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700018F RID: 399
-	// (get) Token: 0x060003F6 RID: 1014 RVA: 0x000156B6 File Offset: 0x000138B6
+	// Token: 0x1700021B RID: 539
+	// (get) Token: 0x0600059F RID: 1439 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override int m_spinAttack_TotalShots
 	{
 		get
@@ -33,8 +33,8 @@ public class ElementalCurse_Expert_AIScript : ElementalCurse_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000190 RID: 400
-	// (get) Token: 0x060003F7 RID: 1015 RVA: 0x000156B9 File Offset: 0x000138B9
+	// Token: 0x1700021C RID: 540
+	// (get) Token: 0x060005A0 RID: 1440 RVA: 0x00004762 File Offset: 0x00002962
 	protected override int m_spinAttack_ShotPatternLoops
 	{
 		get

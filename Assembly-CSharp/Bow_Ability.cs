@@ -3,11 +3,11 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000192 RID: 402
+// Token: 0x020002E6 RID: 742
 public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitter
 {
-	// Token: 0x17000806 RID: 2054
-	// (get) Token: 0x06000ECA RID: 3786 RVA: 0x0002C6FD File Offset: 0x0002A8FD
+	// Token: 0x17000A9A RID: 2714
+	// (get) Token: 0x0600168D RID: 5773 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -16,8 +16,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x17000807 RID: 2055
-	// (get) Token: 0x06000ECB RID: 3787 RVA: 0x0002C704 File Offset: 0x0002A904
+	// Token: 0x17000A9B RID: 2715
+	// (get) Token: 0x0600168E RID: 5774 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -26,8 +26,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x17000808 RID: 2056
-	// (get) Token: 0x06000ECC RID: 3788 RVA: 0x0002C70B File Offset: 0x0002A90B
+	// Token: 0x17000A9C RID: 2716
+	// (get) Token: 0x0600168F RID: 5775 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float TellAnimSpeed
 	{
 		get
@@ -36,8 +36,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x17000809 RID: 2057
-	// (get) Token: 0x06000ECD RID: 3789 RVA: 0x0002C712 File Offset: 0x0002A912
+	// Token: 0x17000A9D RID: 2717
+	// (get) Token: 0x06001690 RID: 5776 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -46,8 +46,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x1700080A RID: 2058
-	// (get) Token: 0x06000ECE RID: 3790 RVA: 0x0002C719 File Offset: 0x0002A919
+	// Token: 0x17000A9E RID: 2718
+	// (get) Token: 0x06001691 RID: 5777 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -56,8 +56,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x1700080B RID: 2059
-	// (get) Token: 0x06000ECF RID: 3791 RVA: 0x0002C720 File Offset: 0x0002A920
+	// Token: 0x17000A9F RID: 2719
+	// (get) Token: 0x06001692 RID: 5778 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -66,8 +66,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x1700080C RID: 2060
-	// (get) Token: 0x06000ED0 RID: 3792 RVA: 0x0002C727 File Offset: 0x0002A927
+	// Token: 0x17000AA0 RID: 2720
+	// (get) Token: 0x06001693 RID: 5779 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -76,8 +76,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x1700080D RID: 2061
-	// (get) Token: 0x06000ED1 RID: 3793 RVA: 0x0002C72E File Offset: 0x0002A92E
+	// Token: 0x17000AA1 RID: 2721
+	// (get) Token: 0x06001694 RID: 5780 RVA: 0x0000B4E9 File Offset: 0x000096E9
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -86,8 +86,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x1700080E RID: 2062
-	// (get) Token: 0x06000ED2 RID: 3794 RVA: 0x0002C735 File Offset: 0x0002A935
+	// Token: 0x17000AA2 RID: 2722
+	// (get) Token: 0x06001695 RID: 5781 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -96,8 +96,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x1700080F RID: 2063
-	// (get) Token: 0x06000ED3 RID: 3795 RVA: 0x0002C73C File Offset: 0x0002A93C
+	// Token: 0x17000AA3 RID: 2723
+	// (get) Token: 0x06001696 RID: 5782 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -106,8 +106,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x17000810 RID: 2064
-	// (get) Token: 0x06000ED4 RID: 3796 RVA: 0x0002C743 File Offset: 0x0002A943
+	// Token: 0x17000AA4 RID: 2724
+	// (get) Token: 0x06001697 RID: 5783 RVA: 0x00006764 File Offset: 0x00004964
 	protected virtual float GravityReduction
 	{
 		get
@@ -116,8 +116,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x17000811 RID: 2065
-	// (get) Token: 0x06000ED5 RID: 3797 RVA: 0x0002C74A File Offset: 0x0002A94A
+	// Token: 0x17000AA5 RID: 2725
+	// (get) Token: 0x06001698 RID: 5784 RVA: 0x0000B4F0 File Offset: 0x000096F0
 	protected virtual Vector2 BowPushbackAmount
 	{
 		get
@@ -126,8 +126,8 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x17000812 RID: 2066
-	// (get) Token: 0x06000ED6 RID: 3798 RVA: 0x0002C75B File Offset: 0x0002A95B
+	// Token: 0x17000AA6 RID: 2726
+	// (get) Token: 0x06001699 RID: 5785 RVA: 0x0000B501 File Offset: 0x00009701
 	public override Vector2 PushbackAmount
 	{
 		get
@@ -136,21 +136,21 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x06000ED7 RID: 3799 RVA: 0x0002C763 File Offset: 0x0002A963
+	// Token: 0x0600169A RID: 5786 RVA: 0x0000B509 File Offset: 0x00009709
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		base.Initialize(abilityController, castAbilityType);
 		this.m_gravityReductionModWhenAiming = this.GravityReduction;
 	}
 
-	// Token: 0x06000ED8 RID: 3800 RVA: 0x0002C779 File Offset: 0x0002A979
+	// Token: 0x0600169B RID: 5787 RVA: 0x0000B51F File Offset: 0x0000971F
 	public override void PreCastAbility()
 	{
 		base.PreCastAbility();
 		this.m_abilityController.PlayerController.LookController.ArrowGeo.gameObject.SetActive(true);
 	}
 
-	// Token: 0x06000ED9 RID: 3801 RVA: 0x0002C7A1 File Offset: 0x0002A9A1
+	// Token: 0x0600169C RID: 5788 RVA: 0x0000B547 File Offset: 0x00009747
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (base.CurrentAbilityAnimState == AbilityAnimState.Attack_Intro)
@@ -162,7 +162,7 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		yield break;
 	}
 
-	// Token: 0x06000EDA RID: 3802 RVA: 0x0002C7B8 File Offset: 0x0002A9B8
+	// Token: 0x0600169D RID: 5789 RVA: 0x0008B584 File Offset: 0x00089784
 	protected override void Update()
 	{
 		base.Update();
@@ -174,14 +174,14 @@ public class Bow_Ability : AimedAbility_RL, IAttack, IAbility, IAudioEventEmitte
 		}
 	}
 
-	// Token: 0x06000EDB RID: 3803 RVA: 0x0002C807 File Offset: 0x0002AA07
+	// Token: 0x0600169E RID: 5790 RVA: 0x0000B55D File Offset: 0x0000975D
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		this.m_abilityController.PlayerController.LookController.ArrowGeo.gameObject.SetActive(false);
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x06000EDC RID: 3804 RVA: 0x0002C830 File Offset: 0x0002AA30
+	// Token: 0x0600169F RID: 5791 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void PlayCritWindowAudio()
 	{
 	}

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000807 RID: 2055
+// Token: 0x02000CCF RID: 3279
 public class ProjectileSizeComparer : IComparer<Projectile_RL>
 {
-	// Token: 0x06004404 RID: 17412 RVA: 0x000F0B3C File Offset: 0x000EED3C
+	// Token: 0x06005D8D RID: 23949 RVA: 0x0015AB20 File Offset: 0x00158D20
 	public int Compare(Projectile_RL a, Projectile_RL b)
 	{
 		Bounds bounds = EnemyUtility.GetBounds(a.gameObject);

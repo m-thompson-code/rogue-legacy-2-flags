@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000127 RID: 295
+// Token: 0x020001FA RID: 506
 public class SpearKnight_Expert_AIScript : SpearKnight_Basic_AIScript
 {
-	// Token: 0x170004EA RID: 1258
-	// (get) Token: 0x06000927 RID: 2343 RVA: 0x0001DF69 File Offset: 0x0001C169
+	// Token: 0x17000680 RID: 1664
+	// (get) Token: 0x06000DEE RID: 3566 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float DashUppercut_JumpSpeed
 	{
 		get
@@ -13,8 +13,8 @@ public class SpearKnight_Expert_AIScript : SpearKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004EB RID: 1259
-	// (get) Token: 0x06000928 RID: 2344 RVA: 0x0001DF70 File Offset: 0x0001C170
+	// Token: 0x17000681 RID: 1665
+	// (get) Token: 0x06000DEF RID: 3567 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override int m_throw_Attack_ProjectileAmount
 	{
 		get

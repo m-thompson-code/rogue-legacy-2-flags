@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x020002CF RID: 719
+// Token: 0x020004C4 RID: 1220
 [Serializable]
 public class LineageSaveData : IVersionUpdateable
 {
-	// Token: 0x06001C87 RID: 7303 RVA: 0x0005C8A8 File Offset: 0x0005AAA8
+	// Token: 0x06002751 RID: 10065 RVA: 0x000B8D18 File Offset: 0x000B6F18
 	public LineageSaveData()
 	{
 		this.AddCharacterToLineage(new CharacterData
@@ -30,7 +30,7 @@ public class LineageSaveData : IVersionUpdateable
 		});
 	}
 
-	// Token: 0x06001C88 RID: 7304 RVA: 0x0005C958 File Offset: 0x0005AB58
+	// Token: 0x06002752 RID: 10066 RVA: 0x000B8DC8 File Offset: 0x000B6FC8
 	public void CreatePortraitTest()
 	{
 		if (this.m_portraitTestComplete)
@@ -74,7 +74,7 @@ public class LineageSaveData : IVersionUpdateable
 		this.m_portraitTestComplete = true;
 	}
 
-	// Token: 0x06001C89 RID: 7305 RVA: 0x0005CB58 File Offset: 0x0005AD58
+	// Token: 0x06002753 RID: 10067 RVA: 0x000B8FC8 File Offset: 0x000B71C8
 	public void AddCharacterToLineage(CharacterData charData)
 	{
 		int count = this.LineageHeirList.Count;
@@ -93,7 +93,7 @@ public class LineageSaveData : IVersionUpdateable
 		this.NumberOfHeirs++;
 	}
 
-	// Token: 0x06001C8A RID: 7306 RVA: 0x0005CBCC File Offset: 0x0005ADCC
+	// Token: 0x06002754 RID: 10068 RVA: 0x000B903C File Offset: 0x000B723C
 	public void UpdateVersion()
 	{
 		if (this.REVISION_NUMBER != 1 && this.REVISION_NUMBER <= 0)
@@ -128,25 +128,25 @@ public class LineageSaveData : IVersionUpdateable
 		this.REVISION_NUMBER = 1;
 	}
 
-	// Token: 0x040019E4 RID: 6628
+	// Token: 0x040021EB RID: 8683
 	public const int MAX_PORTRAITS = 100;
 
-	// Token: 0x040019E5 RID: 6629
+	// Token: 0x040021EC RID: 8684
 	public int REVISION_NUMBER = 1;
 
-	// Token: 0x040019E6 RID: 6630
+	// Token: 0x040021ED RID: 8685
 	public int FILE_NUMBER;
 
-	// Token: 0x040019E7 RID: 6631
+	// Token: 0x040021EE RID: 8686
 	public List<CharacterData> LineageHeirList = new List<CharacterData>(100);
 
-	// Token: 0x040019E8 RID: 6632
+	// Token: 0x040021EF RID: 8687
 	public Dictionary<string, int> DuplicateNameCountDict = new Dictionary<string, int>(20);
 
-	// Token: 0x040019E9 RID: 6633
+	// Token: 0x040021F0 RID: 8688
 	public int NumberOfHeirs;
 
-	// Token: 0x040019EA RID: 6634
+	// Token: 0x040021F1 RID: 8689
 	[NonSerialized]
 	private bool m_portraitTestComplete;
 }

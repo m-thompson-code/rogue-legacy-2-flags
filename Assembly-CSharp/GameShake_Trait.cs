@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000341 RID: 833
+// Token: 0x020005A2 RID: 1442
 public class GameShake_Trait : BaseTrait
 {
-	// Token: 0x17000DC4 RID: 3524
-	// (get) Token: 0x06002023 RID: 8227 RVA: 0x000663B0 File Offset: 0x000645B0
+	// Token: 0x17001211 RID: 4625
+	// (get) Token: 0x06002D50 RID: 11600 RVA: 0x00019023 File Offset: 0x00017223
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class GameShake_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002024 RID: 8228 RVA: 0x000663B7 File Offset: 0x000645B7
+	// Token: 0x06002D51 RID: 11601 RVA: 0x0001902A File Offset: 0x0001722A
 	private void Start()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -25,7 +25,7 @@ public class GameShake_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002025 RID: 8229 RVA: 0x000663E7 File Offset: 0x000645E7
+	// Token: 0x06002D52 RID: 11602 RVA: 0x0001905A File Offset: 0x0001725A
 	private IEnumerator RandomShakeCoroutine()
 	{
 		this.m_isShaking = true;
@@ -51,7 +51,7 @@ public class GameShake_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06002026 RID: 8230 RVA: 0x000663F8 File Offset: 0x000645F8
+	// Token: 0x06002D53 RID: 11603 RVA: 0x000C6EA0 File Offset: 0x000C50A0
 	public override void SetPaused(bool paused)
 	{
 		base.SetPaused(paused);
@@ -71,12 +71,12 @@ public class GameShake_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x04001C4A RID: 7242
+	// Token: 0x040025B2 RID: 9650
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04001C4B RID: 7243
+	// Token: 0x040025B3 RID: 9651
 	private bool m_isShaking;
 
-	// Token: 0x04001C4C RID: 7244
+	// Token: 0x040025B4 RID: 9652
 	private BaseEffect m_shakeEffect;
 }

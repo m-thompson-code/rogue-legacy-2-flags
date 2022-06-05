@@ -3,10 +3,10 @@ using FMOD.Studio;
 
 namespace RLAudio
 {
-	// Token: 0x020008DB RID: 2267
+	// Token: 0x02000E49 RID: 3657
 	public static class AnimBehaviourEventEmitterUtility
 	{
-		// Token: 0x06004A6F RID: 19055 RVA: 0x0010BFD4 File Offset: 0x0010A1D4
+		// Token: 0x0600671F RID: 26399 RVA: 0x0017C838 File Offset: 0x0017AA38
 		public static PARAMETER_ID GetParameterID(EventDescription eventDescription, string parameterName)
 		{
 			PARAMETER_DESCRIPTION parameter_DESCRIPTION;

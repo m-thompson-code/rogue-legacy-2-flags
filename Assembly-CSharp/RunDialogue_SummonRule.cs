@@ -3,11 +3,11 @@ using System.Collections;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000522 RID: 1314
+// Token: 0x0200089D RID: 2205
 public class RunDialogue_SummonRule : BaseSummonRule
 {
-	// Token: 0x170011EA RID: 4586
-	// (get) Token: 0x0600308D RID: 12429 RVA: 0x000A5D6D File Offset: 0x000A3F6D
+	// Token: 0x1700180D RID: 6157
+	// (get) Token: 0x06004373 RID: 17267 RVA: 0x0002543C File Offset: 0x0002363C
 	public override SummonRuleType RuleType
 	{
 		get
@@ -16,8 +16,8 @@ public class RunDialogue_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011EB RID: 4587
-	// (get) Token: 0x0600308E RID: 12430 RVA: 0x000A5D74 File Offset: 0x000A3F74
+	// Token: 0x1700180E RID: 6158
+	// (get) Token: 0x06004374 RID: 17268 RVA: 0x00025443 File Offset: 0x00023643
 	public override string RuleLabel
 	{
 		get
@@ -26,7 +26,7 @@ public class RunDialogue_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x0600308F RID: 12431 RVA: 0x000A5D7B File Offset: 0x000A3F7B
+	// Token: 0x06004375 RID: 17269 RVA: 0x0002544A File Offset: 0x0002364A
 	public override IEnumerator RunSummonRule()
 	{
 		DialogueManager.StartNewDialogue(null, NPCState.Idle);
@@ -40,11 +40,11 @@ public class RunDialogue_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x0400268A RID: 9866
+	// Token: 0x04003488 RID: 13448
 	[SerializeField]
 	private string m_titleTextLocID;
 
-	// Token: 0x0400268B RID: 9867
+	// Token: 0x04003489 RID: 13449
 	[SerializeField]
 	private string m_bodyTextLocID;
 }

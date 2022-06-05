@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000441 RID: 1089
+// Token: 0x0200070A RID: 1802
 public class ReachMe_FairyRule : FairyRule
 {
-	// Token: 0x17000FBF RID: 4031
-	// (get) Token: 0x060027F2 RID: 10226 RVA: 0x00084728 File Offset: 0x00082928
+	// Token: 0x170014A2 RID: 5282
+	// (get) Token: 0x06003704 RID: 14084 RVA: 0x00006581 File Offset: 0x00004781
 	public override FairyRuleID ID
 	{
 		get
@@ -14,8 +14,8 @@ public class ReachMe_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FC0 RID: 4032
-	// (get) Token: 0x060027F3 RID: 10227 RVA: 0x0008472C File Offset: 0x0008292C
+	// Token: 0x170014A3 RID: 5283
+	// (get) Token: 0x06003705 RID: 14085 RVA: 0x0001E448 File Offset: 0x0001C648
 	public override string Description
 	{
 		get
@@ -24,8 +24,8 @@ public class ReachMe_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FC1 RID: 4033
-	// (get) Token: 0x060027F4 RID: 10228 RVA: 0x00084733 File Offset: 0x00082933
+	// Token: 0x170014A4 RID: 5284
+	// (get) Token: 0x06003706 RID: 14086 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool LockChestAtStart
 	{
 		get
@@ -34,14 +34,14 @@ public class ReachMe_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027F5 RID: 10229 RVA: 0x00084736 File Offset: 0x00082936
+	// Token: 0x06003707 RID: 14087 RVA: 0x0001E44F File Offset: 0x0001C64F
 	public override void RunRule(FairyRoomController fairyRoomController)
 	{
 		base.State = FairyRoomState.Running;
 		this.m_chestInteractable = fairyRoomController.Chest.Interactable;
 	}
 
-	// Token: 0x060027F6 RID: 10230 RVA: 0x00084751 File Offset: 0x00082951
+	// Token: 0x06003708 RID: 14088 RVA: 0x0001E46A File Offset: 0x0001C66A
 	private IEnumerator RunTimer()
 	{
 		for (;;)
@@ -56,13 +56,13 @@ public class ReachMe_FairyRule : FairyRule
 		yield break;
 	}
 
-	// Token: 0x060027F7 RID: 10231 RVA: 0x00084760 File Offset: 0x00082960
+	// Token: 0x06003709 RID: 14089 RVA: 0x0001E479 File Offset: 0x0001C679
 	public override void StopRule()
 	{
 		base.StopRule();
 		base.StopAllCoroutines();
 	}
 
-	// Token: 0x0400213D RID: 8509
+	// Token: 0x04002C6E RID: 11374
 	private Interactable m_chestInteractable;
 }

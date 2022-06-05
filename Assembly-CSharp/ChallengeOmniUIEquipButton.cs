@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200039F RID: 927
+// Token: 0x02000631 RID: 1585
 public class ChallengeOmniUIEquipButton : OmniUIButton, IChallengeOmniUIButton
 {
-	// Token: 0x17000E4F RID: 3663
-	// (get) Token: 0x06002285 RID: 8837 RVA: 0x000700AF File Offset: 0x0006E2AF
+	// Token: 0x170012E2 RID: 4834
+	// (get) Token: 0x0600309D RID: 12445 RVA: 0x0001AAB1 File Offset: 0x00018CB1
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -15,12 +15,12 @@ public class ChallengeOmniUIEquipButton : OmniUIButton, IChallengeOmniUIButton
 		}
 	}
 
-	// Token: 0x17000E50 RID: 3664
-	// (get) Token: 0x06002286 RID: 8838 RVA: 0x000700B7 File Offset: 0x0006E2B7
-	// (set) Token: 0x06002287 RID: 8839 RVA: 0x000700BF File Offset: 0x0006E2BF
+	// Token: 0x170012E3 RID: 4835
+	// (get) Token: 0x0600309E RID: 12446 RVA: 0x0001AAB9 File Offset: 0x00018CB9
+	// (set) Token: 0x0600309F RID: 12447 RVA: 0x0001AAC1 File Offset: 0x00018CC1
 	public ChallengeType ChallengeType { get; set; }
 
-	// Token: 0x06002288 RID: 8840 RVA: 0x000700C8 File Offset: 0x0006E2C8
+	// Token: 0x060030A0 RID: 12448 RVA: 0x000D0CC4 File Offset: 0x000CEEC4
 	protected override void InitializeButtonEventArgs()
 	{
 		OmniUIButtonType buttonType = this.m_isRightArrow ? OmniUIButtonType.Equipping : OmniUIButtonType.Unequipping;
@@ -32,7 +32,7 @@ public class ChallengeOmniUIEquipButton : OmniUIButton, IChallengeOmniUIButton
 		this.m_descriptionEventArgs.Initialize(this.ChallengeType, buttonType);
 	}
 
-	// Token: 0x06002289 RID: 8841 RVA: 0x00070110 File Offset: 0x0006E310
+	// Token: 0x060030A1 RID: 12449 RVA: 0x000D0D0C File Offset: 0x000CEF0C
 	public override void UpdateState()
 	{
 		ChallengeManager.GetChallenge(this.ChallengeType);
@@ -50,7 +50,7 @@ public class ChallengeOmniUIEquipButton : OmniUIButton, IChallengeOmniUIButton
 		this.m_levelText.text = "";
 	}
 
-	// Token: 0x0600228A RID: 8842 RVA: 0x000701A8 File Offset: 0x0006E3A8
+	// Token: 0x060030A2 RID: 12450 RVA: 0x000D0DA4 File Offset: 0x000CEFA4
 	public override void OnConfirmButtonPressed()
 	{
 		if (this.m_isRightArrow)
@@ -79,18 +79,18 @@ public class ChallengeOmniUIEquipButton : OmniUIButton, IChallengeOmniUIButton
 		base.OnConfirmButtonPressed();
 	}
 
-	// Token: 0x04001DC6 RID: 7622
+	// Token: 0x040027DF RID: 10207
 	[SerializeField]
 	private bool m_isRightArrow;
 
-	// Token: 0x04001DC7 RID: 7623
+	// Token: 0x040027E0 RID: 10208
 	[SerializeField]
 	private GameObject m_buttonGO;
 
-	// Token: 0x04001DC8 RID: 7624
+	// Token: 0x040027E1 RID: 10209
 	[SerializeField]
 	private TMP_Text m_levelText;
 
-	// Token: 0x04001DC9 RID: 7625
+	// Token: 0x040027E2 RID: 10210
 	private ChallengeOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

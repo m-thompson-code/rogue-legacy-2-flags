@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x0200006C RID: 108
+// Token: 0x02000074 RID: 116
 public struct InsightUnlockEntry
 {
-	// Token: 0x04000399 RID: 921
+	// Token: 0x040003BA RID: 954
 	public InsightType InsightToUnlock;
 
-	// Token: 0x0400039A RID: 922
+	// Token: 0x040003BB RID: 955
 	public bool Discovered;
 }

@@ -9,13 +9,13 @@ using UnityEngine.UI;
 
 namespace Rewired.Utils
 {
-	// Token: 0x02000932 RID: 2354
+	// Token: 0x02000EB4 RID: 3764
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public class ExternalTools : IExternalTools
 	{
-		// Token: 0x17001A92 RID: 6802
-		// (get) Token: 0x06004EA7 RID: 20135 RVA: 0x00113A21 File Offset: 0x00111C21
-		// (set) Token: 0x06004EA8 RID: 20136 RVA: 0x00113A28 File Offset: 0x00111C28
+		// Token: 0x170023A7 RID: 9127
+		// (get) Token: 0x06006BFA RID: 27642 RVA: 0x0003B2E7 File Offset: 0x000394E7
+		// (set) Token: 0x06006BFB RID: 27643 RVA: 0x0003B2EE File Offset: 0x000394EE
 		public static Func<object> getPlatformInitializerDelegate
 		{
 			get
@@ -28,13 +28,13 @@ namespace Rewired.Utils
 			}
 		}
 
-		// Token: 0x06004EAA RID: 20138 RVA: 0x00113A38 File Offset: 0x00111C38
+		// Token: 0x06006BFD RID: 27645 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void Destroy()
 		{
 		}
 
-		// Token: 0x17001A93 RID: 6803
-		// (get) Token: 0x06004EAB RID: 20139 RVA: 0x00113A3A File Offset: 0x00111C3A
+		// Token: 0x170023A8 RID: 9128
+		// (get) Token: 0x06006BFE RID: 27646 RVA: 0x0003B2F6 File Offset: 0x000394F6
 		public bool isEditorPaused
 		{
 			get
@@ -44,8 +44,8 @@ namespace Rewired.Utils
 		}
 
 		// Token: 0x1400000F RID: 15
-		// (add) Token: 0x06004EAC RID: 20140 RVA: 0x00113A42 File Offset: 0x00111C42
-		// (remove) Token: 0x06004EAD RID: 20141 RVA: 0x00113A5B File Offset: 0x00111C5B
+		// (add) Token: 0x06006BFF RID: 27647 RVA: 0x0003B2FE File Offset: 0x000394FE
+		// (remove) Token: 0x06006C00 RID: 27648 RVA: 0x0003B317 File Offset: 0x00039517
 		public event Action<bool> EditorPausedStateChangedEvent
 		{
 			add
@@ -58,100 +58,100 @@ namespace Rewired.Utils
 			}
 		}
 
-		// Token: 0x06004EAE RID: 20142 RVA: 0x00113A74 File Offset: 0x00111C74
+		// Token: 0x06006C01 RID: 27649 RVA: 0x0003B330 File Offset: 0x00039530
 		public object GetPlatformInitializer()
 		{
 			return Main.GetPlatformInitializer();
 		}
 
-		// Token: 0x06004EAF RID: 20143 RVA: 0x00113A7B File Offset: 0x00111C7B
+		// Token: 0x06006C02 RID: 27650 RVA: 0x0002FEF1 File Offset: 0x0002E0F1
 		public string GetFocusedEditorWindowTitle()
 		{
 			return string.Empty;
 		}
 
-		// Token: 0x06004EB0 RID: 20144 RVA: 0x00113A82 File Offset: 0x00111C82
+		// Token: 0x06006C03 RID: 27651 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public bool IsEditorSceneViewFocused()
 		{
 			return false;
 		}
 
-		// Token: 0x06004EB1 RID: 20145 RVA: 0x00113A85 File Offset: 0x00111C85
+		// Token: 0x06006C04 RID: 27652 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public bool LinuxInput_IsJoystickPreconfigured(string name)
 		{
 			return false;
 		}
 
 		// Token: 0x14000010 RID: 16
-		// (add) Token: 0x06004EB2 RID: 20146 RVA: 0x00113A88 File Offset: 0x00111C88
-		// (remove) Token: 0x06004EB3 RID: 20147 RVA: 0x00113AC0 File Offset: 0x00111CC0
+		// (add) Token: 0x06006C05 RID: 27653 RVA: 0x00182F74 File Offset: 0x00181174
+		// (remove) Token: 0x06006C06 RID: 27654 RVA: 0x00182FAC File Offset: 0x001811AC
 		public event Action<uint, bool> XboxOneInput_OnGamepadStateChange;
 
-		// Token: 0x06004EB4 RID: 20148 RVA: 0x00113AF5 File Offset: 0x00111CF5
+		// Token: 0x06006C07 RID: 27655 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int XboxOneInput_GetUserIdForGamepad(uint id)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004EB5 RID: 20149 RVA: 0x00113AF8 File Offset: 0x00111CF8
+		// Token: 0x06006C08 RID: 27656 RVA: 0x0003B337 File Offset: 0x00039537
 		public ulong XboxOneInput_GetControllerId(uint unityJoystickId)
 		{
 			return 0UL;
 		}
 
-		// Token: 0x06004EB6 RID: 20150 RVA: 0x00113AFC File Offset: 0x00111CFC
+		// Token: 0x06006C09 RID: 27657 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public bool XboxOneInput_IsGamepadActive(uint unityJoystickId)
 		{
 			return false;
 		}
 
-		// Token: 0x06004EB7 RID: 20151 RVA: 0x00113AFF File Offset: 0x00111CFF
+		// Token: 0x06006C0A RID: 27658 RVA: 0x0002FEF1 File Offset: 0x0002E0F1
 		public string XboxOneInput_GetControllerType(ulong xboxControllerId)
 		{
 			return string.Empty;
 		}
 
-		// Token: 0x06004EB8 RID: 20152 RVA: 0x00113B06 File Offset: 0x00111D06
+		// Token: 0x06006C0B RID: 27659 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public uint XboxOneInput_GetJoystickId(ulong xboxControllerId)
 		{
 			return 0U;
 		}
 
-		// Token: 0x06004EB9 RID: 20153 RVA: 0x00113B09 File Offset: 0x00111D09
+		// Token: 0x06006C0C RID: 27660 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void XboxOne_Gamepad_UpdatePlugin()
 		{
 		}
 
-		// Token: 0x06004EBA RID: 20154 RVA: 0x00113B0B File Offset: 0x00111D0B
+		// Token: 0x06006C0D RID: 27661 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public bool XboxOne_Gamepad_SetGamepadVibration(ulong xboxOneJoystickId, float leftMotor, float rightMotor, float leftTriggerLevel, float rightTriggerLevel)
 		{
 			return false;
 		}
 
-		// Token: 0x06004EBB RID: 20155 RVA: 0x00113B0E File Offset: 0x00111D0E
+		// Token: 0x06006C0E RID: 27662 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void XboxOne_Gamepad_PulseVibrateMotor(ulong xboxOneJoystickId, int motorInt, float startLevel, float endLevel, ulong durationMS)
 		{
 		}
 
-		// Token: 0x06004EBC RID: 20156 RVA: 0x00113B10 File Offset: 0x00111D10
+		// Token: 0x06006C0F RID: 27663 RVA: 0x0003B33B File Offset: 0x0003953B
 		public Vector3 PS4Input_GetLastAcceleration(int id)
 		{
 			return Vector3.zero;
 		}
 
-		// Token: 0x06004EBD RID: 20157 RVA: 0x00113B17 File Offset: 0x00111D17
+		// Token: 0x06006C10 RID: 27664 RVA: 0x0003B33B File Offset: 0x0003953B
 		public Vector3 PS4Input_GetLastGyro(int id)
 		{
 			return Vector3.zero;
 		}
 
-		// Token: 0x06004EBE RID: 20158 RVA: 0x00113B1E File Offset: 0x00111D1E
+		// Token: 0x06006C11 RID: 27665 RVA: 0x0003B342 File Offset: 0x00039542
 		public Vector4 PS4Input_GetLastOrientation(int id)
 		{
 			return Vector4.zero;
 		}
 
-		// Token: 0x06004EBF RID: 20159 RVA: 0x00113B25 File Offset: 0x00111D25
+		// Token: 0x06006C12 RID: 27666 RVA: 0x0003B349 File Offset: 0x00039549
 		public void PS4Input_GetLastTouchData(int id, out int touchNum, out int touch0x, out int touch0y, out int touch0id, out int touch1x, out int touch1y, out int touch1id)
 		{
 			touchNum = 0;
@@ -163,7 +163,7 @@ namespace Rewired.Utils
 			touch1id = 0;
 		}
 
-		// Token: 0x06004EC0 RID: 20160 RVA: 0x00113B41 File Offset: 0x00111D41
+		// Token: 0x06006C13 RID: 27667 RVA: 0x0003B365 File Offset: 0x00039565
 		public void PS4Input_GetPadControllerInformation(int id, out float touchpixelDensity, out int touchResolutionX, out int touchResolutionY, out int analogDeadZoneLeft, out int analogDeadZoneright, out int connectionType)
 		{
 			touchpixelDensity = 0f;
@@ -174,303 +174,303 @@ namespace Rewired.Utils
 			connectionType = 0;
 		}
 
-		// Token: 0x06004EC1 RID: 20161 RVA: 0x00113B5D File Offset: 0x00111D5D
+		// Token: 0x06006C14 RID: 27668 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_PadSetMotionSensorState(int id, bool bEnable)
 		{
 		}
 
-		// Token: 0x06004EC2 RID: 20162 RVA: 0x00113B5F File Offset: 0x00111D5F
+		// Token: 0x06006C15 RID: 27669 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_PadSetTiltCorrectionState(int id, bool bEnable)
 		{
 		}
 
-		// Token: 0x06004EC3 RID: 20163 RVA: 0x00113B61 File Offset: 0x00111D61
+		// Token: 0x06006C16 RID: 27670 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_PadSetAngularVelocityDeadbandState(int id, bool bEnable)
 		{
 		}
 
-		// Token: 0x06004EC4 RID: 20164 RVA: 0x00113B63 File Offset: 0x00111D63
+		// Token: 0x06006C17 RID: 27671 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_PadSetLightBar(int id, int red, int green, int blue)
 		{
 		}
 
-		// Token: 0x06004EC5 RID: 20165 RVA: 0x00113B65 File Offset: 0x00111D65
+		// Token: 0x06006C18 RID: 27672 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_PadResetLightBar(int id)
 		{
 		}
 
-		// Token: 0x06004EC6 RID: 20166 RVA: 0x00113B67 File Offset: 0x00111D67
+		// Token: 0x06006C19 RID: 27673 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_PadSetVibration(int id, int largeMotor, int smallMotor)
 		{
 		}
 
-		// Token: 0x06004EC7 RID: 20167 RVA: 0x00113B69 File Offset: 0x00111D69
+		// Token: 0x06006C1A RID: 27674 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_PadResetOrientation(int id)
 		{
 		}
 
-		// Token: 0x06004EC8 RID: 20168 RVA: 0x00113B6B File Offset: 0x00111D6B
+		// Token: 0x06006C1B RID: 27675 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public bool PS4Input_PadIsConnected(int id)
 		{
 			return false;
 		}
 
-		// Token: 0x06004EC9 RID: 20169 RVA: 0x00113B6E File Offset: 0x00111D6E
+		// Token: 0x06006C1C RID: 27676 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_GetUsersDetails(int slot, object loggedInUser)
 		{
 		}
 
-		// Token: 0x06004ECA RID: 20170 RVA: 0x00113B70 File Offset: 0x00111D70
+		// Token: 0x06006C1D RID: 27677 RVA: 0x00037B9A File Offset: 0x00035D9A
 		public int PS4Input_GetDeviceClassForHandle(int handle)
 		{
 			return -1;
 		}
 
-		// Token: 0x06004ECB RID: 20171 RVA: 0x00113B73 File Offset: 0x00111D73
+		// Token: 0x06006C1E RID: 27678 RVA: 0x0000F49B File Offset: 0x0000D69B
 		public string PS4Input_GetDeviceClassString(int intValue)
 		{
 			return null;
 		}
 
-		// Token: 0x06004ECC RID: 20172 RVA: 0x00113B76 File Offset: 0x00111D76
+		// Token: 0x06006C1F RID: 27679 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_PadGetUsersHandles2(int maxControllers, int[] handles)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004ECD RID: 20173 RVA: 0x00113B79 File Offset: 0x00111D79
+		// Token: 0x06006C20 RID: 27680 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_GetSpecialControllerInformation(int id, int padIndex, object controllerInformation)
 		{
 		}
 
-		// Token: 0x06004ECE RID: 20174 RVA: 0x00113B7B File Offset: 0x00111D7B
+		// Token: 0x06006C21 RID: 27681 RVA: 0x0003B33B File Offset: 0x0003953B
 		public Vector3 PS4Input_SpecialGetLastAcceleration(int id)
 		{
 			return Vector3.zero;
 		}
 
-		// Token: 0x06004ECF RID: 20175 RVA: 0x00113B82 File Offset: 0x00111D82
+		// Token: 0x06006C22 RID: 27682 RVA: 0x0003B33B File Offset: 0x0003953B
 		public Vector3 PS4Input_SpecialGetLastGyro(int id)
 		{
 			return Vector3.zero;
 		}
 
-		// Token: 0x06004ED0 RID: 20176 RVA: 0x00113B89 File Offset: 0x00111D89
+		// Token: 0x06006C23 RID: 27683 RVA: 0x0003B342 File Offset: 0x00039542
 		public Vector4 PS4Input_SpecialGetLastOrientation(int id)
 		{
 			return Vector4.zero;
 		}
 
-		// Token: 0x06004ED1 RID: 20177 RVA: 0x00113B90 File Offset: 0x00111D90
+		// Token: 0x06006C24 RID: 27684 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_SpecialGetUsersHandles(int maxNumberControllers, int[] handles)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004ED2 RID: 20178 RVA: 0x00113B93 File Offset: 0x00111D93
+		// Token: 0x06006C25 RID: 27685 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_SpecialGetUsersHandles2(int maxNumberControllers, int[] handles)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004ED3 RID: 20179 RVA: 0x00113B96 File Offset: 0x00111D96
+		// Token: 0x06006C26 RID: 27686 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public bool PS4Input_SpecialIsConnected(int id)
 		{
 			return false;
 		}
 
-		// Token: 0x06004ED4 RID: 20180 RVA: 0x00113B99 File Offset: 0x00111D99
+		// Token: 0x06006C27 RID: 27687 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_SpecialResetLightSphere(int id)
 		{
 		}
 
-		// Token: 0x06004ED5 RID: 20181 RVA: 0x00113B9B File Offset: 0x00111D9B
+		// Token: 0x06006C28 RID: 27688 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_SpecialResetOrientation(int id)
 		{
 		}
 
-		// Token: 0x06004ED6 RID: 20182 RVA: 0x00113B9D File Offset: 0x00111D9D
+		// Token: 0x06006C29 RID: 27689 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_SpecialSetAngularVelocityDeadbandState(int id, bool bEnable)
 		{
 		}
 
-		// Token: 0x06004ED7 RID: 20183 RVA: 0x00113B9F File Offset: 0x00111D9F
+		// Token: 0x06006C2A RID: 27690 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_SpecialSetLightSphere(int id, int red, int green, int blue)
 		{
 		}
 
-		// Token: 0x06004ED8 RID: 20184 RVA: 0x00113BA1 File Offset: 0x00111DA1
+		// Token: 0x06006C2B RID: 27691 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_SpecialSetMotionSensorState(int id, bool bEnable)
 		{
 		}
 
-		// Token: 0x06004ED9 RID: 20185 RVA: 0x00113BA3 File Offset: 0x00111DA3
+		// Token: 0x06006C2C RID: 27692 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_SpecialSetTiltCorrectionState(int id, bool bEnable)
 		{
 		}
 
-		// Token: 0x06004EDA RID: 20186 RVA: 0x00113BA5 File Offset: 0x00111DA5
+		// Token: 0x06006C2D RID: 27693 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_SpecialSetVibration(int id, int largeMotor, int smallMotor)
 		{
 		}
 
-		// Token: 0x06004EDB RID: 20187 RVA: 0x00113BA7 File Offset: 0x00111DA7
+		// Token: 0x06006C2E RID: 27694 RVA: 0x0003B33B File Offset: 0x0003953B
 		public Vector3 PS4Input_AimGetLastAcceleration(int id)
 		{
 			return Vector3.zero;
 		}
 
-		// Token: 0x06004EDC RID: 20188 RVA: 0x00113BAE File Offset: 0x00111DAE
+		// Token: 0x06006C2F RID: 27695 RVA: 0x0003B33B File Offset: 0x0003953B
 		public Vector3 PS4Input_AimGetLastGyro(int id)
 		{
 			return Vector3.zero;
 		}
 
-		// Token: 0x06004EDD RID: 20189 RVA: 0x00113BB5 File Offset: 0x00111DB5
+		// Token: 0x06006C30 RID: 27696 RVA: 0x0003B342 File Offset: 0x00039542
 		public Vector4 PS4Input_AimGetLastOrientation(int id)
 		{
 			return Vector4.zero;
 		}
 
-		// Token: 0x06004EDE RID: 20190 RVA: 0x00113BBC File Offset: 0x00111DBC
+		// Token: 0x06006C31 RID: 27697 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_AimGetUsersHandles(int maxNumberControllers, int[] handles)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004EDF RID: 20191 RVA: 0x00113BBF File Offset: 0x00111DBF
+		// Token: 0x06006C32 RID: 27698 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_AimGetUsersHandles2(int maxNumberControllers, int[] handles)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004EE0 RID: 20192 RVA: 0x00113BC2 File Offset: 0x00111DC2
+		// Token: 0x06006C33 RID: 27699 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public bool PS4Input_AimIsConnected(int id)
 		{
 			return false;
 		}
 
-		// Token: 0x06004EE1 RID: 20193 RVA: 0x00113BC5 File Offset: 0x00111DC5
+		// Token: 0x06006C34 RID: 27700 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_AimResetLightSphere(int id)
 		{
 		}
 
-		// Token: 0x06004EE2 RID: 20194 RVA: 0x00113BC7 File Offset: 0x00111DC7
+		// Token: 0x06006C35 RID: 27701 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_AimResetOrientation(int id)
 		{
 		}
 
-		// Token: 0x06004EE3 RID: 20195 RVA: 0x00113BC9 File Offset: 0x00111DC9
+		// Token: 0x06006C36 RID: 27702 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_AimSetAngularVelocityDeadbandState(int id, bool bEnable)
 		{
 		}
 
-		// Token: 0x06004EE4 RID: 20196 RVA: 0x00113BCB File Offset: 0x00111DCB
+		// Token: 0x06006C37 RID: 27703 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_AimSetLightSphere(int id, int red, int green, int blue)
 		{
 		}
 
-		// Token: 0x06004EE5 RID: 20197 RVA: 0x00113BCD File Offset: 0x00111DCD
+		// Token: 0x06006C38 RID: 27704 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_AimSetMotionSensorState(int id, bool bEnable)
 		{
 		}
 
-		// Token: 0x06004EE6 RID: 20198 RVA: 0x00113BCF File Offset: 0x00111DCF
+		// Token: 0x06006C39 RID: 27705 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_AimSetTiltCorrectionState(int id, bool bEnable)
 		{
 		}
 
-		// Token: 0x06004EE7 RID: 20199 RVA: 0x00113BD1 File Offset: 0x00111DD1
+		// Token: 0x06006C3A RID: 27706 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void PS4Input_AimSetVibration(int id, int largeMotor, int smallMotor)
 		{
 		}
 
-		// Token: 0x06004EE8 RID: 20200 RVA: 0x00113BD3 File Offset: 0x00111DD3
+		// Token: 0x06006C3B RID: 27707 RVA: 0x0003B33B File Offset: 0x0003953B
 		public Vector3 PS4Input_GetLastMoveAcceleration(int id, int index)
 		{
 			return Vector3.zero;
 		}
 
-		// Token: 0x06004EE9 RID: 20201 RVA: 0x00113BDA File Offset: 0x00111DDA
+		// Token: 0x06006C3C RID: 27708 RVA: 0x0003B33B File Offset: 0x0003953B
 		public Vector3 PS4Input_GetLastMoveGyro(int id, int index)
 		{
 			return Vector3.zero;
 		}
 
-		// Token: 0x06004EEA RID: 20202 RVA: 0x00113BE1 File Offset: 0x00111DE1
+		// Token: 0x06006C3D RID: 27709 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_MoveGetButtons(int id, int index)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004EEB RID: 20203 RVA: 0x00113BE4 File Offset: 0x00111DE4
+		// Token: 0x06006C3E RID: 27710 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_MoveGetAnalogButton(int id, int index)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004EEC RID: 20204 RVA: 0x00113BE7 File Offset: 0x00111DE7
+		// Token: 0x06006C3F RID: 27711 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public bool PS4Input_MoveIsConnected(int id, int index)
 		{
 			return false;
 		}
 
-		// Token: 0x06004EED RID: 20205 RVA: 0x00113BEA File Offset: 0x00111DEA
+		// Token: 0x06006C40 RID: 27712 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_MoveGetUsersMoveHandles(int maxNumberControllers, int[] primaryHandles, int[] secondaryHandles)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004EEE RID: 20206 RVA: 0x00113BED File Offset: 0x00111DED
+		// Token: 0x06006C41 RID: 27713 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_MoveGetUsersMoveHandles(int maxNumberControllers, int[] primaryHandles)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004EEF RID: 20207 RVA: 0x00113BF0 File Offset: 0x00111DF0
+		// Token: 0x06006C42 RID: 27714 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_MoveGetUsersMoveHandles(int maxNumberControllers)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004EF0 RID: 20208 RVA: 0x00113BF3 File Offset: 0x00111DF3
+		// Token: 0x06006C43 RID: 27715 RVA: 0x0003B381 File Offset: 0x00039581
 		public IntPtr PS4Input_MoveGetControllerInputForTracking()
 		{
 			return IntPtr.Zero;
 		}
 
-		// Token: 0x06004EF1 RID: 20209 RVA: 0x00113BFA File Offset: 0x00111DFA
+		// Token: 0x06006C44 RID: 27716 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_MoveSetLightSphere(int id, int index, int red, int green, int blue)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004EF2 RID: 20210 RVA: 0x00113BFD File Offset: 0x00111DFD
+		// Token: 0x06006C45 RID: 27717 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public int PS4Input_MoveSetVibration(int id, int index, int motor)
 		{
 			return 0;
 		}
 
-		// Token: 0x06004EF3 RID: 20211 RVA: 0x00113C00 File Offset: 0x00111E00
+		// Token: 0x06006C46 RID: 27718 RVA: 0x0003B388 File Offset: 0x00039588
 		public void GetDeviceVIDPIDs(out List<int> vids, out List<int> pids)
 		{
 			vids = new List<int>();
 			pids = new List<int>();
 		}
 
-		// Token: 0x06004EF4 RID: 20212 RVA: 0x00113C10 File Offset: 0x00111E10
+		// Token: 0x06006C47 RID: 27719 RVA: 0x00037B9A File Offset: 0x00035D9A
 		public int GetAndroidAPILevel()
 		{
 			return -1;
 		}
 
-		// Token: 0x06004EF5 RID: 20213 RVA: 0x00113C13 File Offset: 0x00111E13
+		// Token: 0x06006C48 RID: 27720 RVA: 0x0003B398 File Offset: 0x00039598
 		public bool UnityUI_Graphic_GetRaycastTarget(object graphic)
 		{
 			return !(graphic as Graphic == null) && (graphic as Graphic).raycastTarget;
 		}
 
-		// Token: 0x06004EF6 RID: 20214 RVA: 0x00113C30 File Offset: 0x00111E30
+		// Token: 0x06006C49 RID: 27721 RVA: 0x0003B3B5 File Offset: 0x000395B5
 		public void UnityUI_Graphic_SetRaycastTarget(object graphic, bool value)
 		{
 			if (graphic as Graphic == null)
@@ -480,8 +480,8 @@ namespace Rewired.Utils
 			(graphic as Graphic).raycastTarget = value;
 		}
 
-		// Token: 0x17001A94 RID: 6804
-		// (get) Token: 0x06004EF7 RID: 20215 RVA: 0x00113C4D File Offset: 0x00111E4D
+		// Token: 0x170023A9 RID: 9129
+		// (get) Token: 0x06006C4A RID: 27722 RVA: 0x0003B3D2 File Offset: 0x000395D2
 		public bool UnityInput_IsTouchPressureSupported
 		{
 			get
@@ -490,43 +490,43 @@ namespace Rewired.Utils
 			}
 		}
 
-		// Token: 0x06004EF8 RID: 20216 RVA: 0x00113C54 File Offset: 0x00111E54
+		// Token: 0x06006C4B RID: 27723 RVA: 0x0003B3D9 File Offset: 0x000395D9
 		public float UnityInput_GetTouchPressure(ref Touch touch)
 		{
 			return touch.pressure;
 		}
 
-		// Token: 0x06004EF9 RID: 20217 RVA: 0x00113C5C File Offset: 0x00111E5C
+		// Token: 0x06006C4C RID: 27724 RVA: 0x0003B3E1 File Offset: 0x000395E1
 		public float UnityInput_GetTouchMaximumPossiblePressure(ref Touch touch)
 		{
 			return touch.maximumPossiblePressure;
 		}
 
-		// Token: 0x06004EFA RID: 20218 RVA: 0x00113C64 File Offset: 0x00111E64
+		// Token: 0x06006C4D RID: 27725 RVA: 0x0003B3E9 File Offset: 0x000395E9
 		public IControllerTemplate CreateControllerTemplate(Guid typeGuid, object payload)
 		{
 			return ControllerTemplateFactory.Create(typeGuid, payload);
 		}
 
-		// Token: 0x06004EFB RID: 20219 RVA: 0x00113C6D File Offset: 0x00111E6D
+		// Token: 0x06006C4E RID: 27726 RVA: 0x0003B3F2 File Offset: 0x000395F2
 		public Type[] GetControllerTemplateTypes()
 		{
 			return ControllerTemplateFactory.templateTypes;
 		}
 
-		// Token: 0x06004EFC RID: 20220 RVA: 0x00113C74 File Offset: 0x00111E74
+		// Token: 0x06006C4F RID: 27727 RVA: 0x0003B3F9 File Offset: 0x000395F9
 		public Type[] GetControllerTemplateInterfaceTypes()
 		{
 			return ControllerTemplateFactory.templateInterfaceTypes;
 		}
 
-		// Token: 0x04004217 RID: 16919
+		// Token: 0x0400579B RID: 22427
 		private static Func<object> _getPlatformInitializerDelegate;
 
-		// Token: 0x04004218 RID: 16920
+		// Token: 0x0400579C RID: 22428
 		private bool _isEditorPaused;
 
-		// Token: 0x04004219 RID: 16921
+		// Token: 0x0400579D RID: 22429
 		private Action<bool> _EditorPausedStateChangedEvent;
 	}
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000229 RID: 553
+// Token: 0x020003E0 RID: 992
 [CreateAssetMenu(menuName = "Custom/Libraries/Enemy Library")]
 public class EnemyLibrary : ScriptableObject
 {
-	// Token: 0x17000B2B RID: 2859
-	// (get) Token: 0x06001693 RID: 5779 RVA: 0x000465DD File Offset: 0x000447DD
+	// Token: 0x17000E54 RID: 3668
+	// (get) Token: 0x06002038 RID: 8248 RVA: 0x0001115F File Offset: 0x0000F35F
 	private static EnemyLibrary Instance
 	{
 		get
@@ -22,8 +22,8 @@ public class EnemyLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B2C RID: 2860
-	// (get) Token: 0x06001694 RID: 5780 RVA: 0x00046610 File Offset: 0x00044810
+	// Token: 0x17000E55 RID: 3669
+	// (get) Token: 0x06002039 RID: 8249 RVA: 0x00011192 File Offset: 0x0000F392
 	public static EnemyPrefabEntry[] EnemyPrefabEntryList
 	{
 		get
@@ -32,7 +32,7 @@ public class EnemyLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001695 RID: 5781 RVA: 0x0004661C File Offset: 0x0004481C
+	// Token: 0x0600203A RID: 8250 RVA: 0x000A4864 File Offset: 0x000A2A64
 	private void Initialize()
 	{
 		this.m_enemyPrefabEntryDict = new Dictionary<EnemyType, EnemyPrefabEntry>();
@@ -42,7 +42,7 @@ public class EnemyLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001696 RID: 5782 RVA: 0x00046660 File Offset: 0x00044860
+	// Token: 0x0600203B RID: 8251 RVA: 0x000A48A8 File Offset: 0x000A2AA8
 	public static string GetEnemyPrefabPath(EnemyType enemyType, EnemyRank enemyRank)
 	{
 		EnemyPrefabEntry enemyPrefabEntry;
@@ -53,7 +53,7 @@ public class EnemyLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x06001697 RID: 5783 RVA: 0x0004668C File Offset: 0x0004488C
+	// Token: 0x0600203C RID: 8252 RVA: 0x000A48D4 File Offset: 0x000A2AD4
 	public static EnemyController GetEnemyPrefab(EnemyType enemyType, EnemyRank enemyRank)
 	{
 		string enemyPrefabPath = EnemyLibrary.GetEnemyPrefabPath(enemyType, enemyRank);
@@ -70,7 +70,7 @@ public class EnemyLibrary : ScriptableObject
 		return component;
 	}
 
-	// Token: 0x06001698 RID: 5784 RVA: 0x000466F4 File Offset: 0x000448F4
+	// Token: 0x0600203D RID: 8253 RVA: 0x000A493C File Offset: 0x000A2B3C
 	public static void ClearLoadedPrefabs()
 	{
 		foreach (string key in EnemyLibrary.Instance.m_loadedEnemyPrefabDict.Keys.ToArray<string>())
@@ -80,7 +80,7 @@ public class EnemyLibrary : ScriptableObject
 		EnemyLibrary.Instance.m_loadedEnemyPrefabDict.Clear();
 	}
 
-	// Token: 0x06001699 RID: 5785 RVA: 0x00046748 File Offset: 0x00044948
+	// Token: 0x0600203E RID: 8254 RVA: 0x0001119E File Offset: 0x0000F39E
 	private static string GetSpecialEnemyName(EnemyType enemyType, EnemyRank enemyRank)
 	{
 		if (enemyType != EnemyType.BouncySpike)
@@ -105,19 +105,19 @@ public class EnemyLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x040015C8 RID: 5576
+	// Token: 0x04001CD8 RID: 7384
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/EnemyLibrary";
 
-	// Token: 0x040015C9 RID: 5577
+	// Token: 0x04001CD9 RID: 7385
 	[SerializeField]
 	private EnemyPrefabEntry[] m_enemyPrefabEntryList;
 
-	// Token: 0x040015CA RID: 5578
+	// Token: 0x04001CDA RID: 7386
 	private Dictionary<EnemyType, EnemyPrefabEntry> m_enemyPrefabEntryDict;
 
-	// Token: 0x040015CB RID: 5579
+	// Token: 0x04001CDB RID: 7387
 	private Dictionary<string, EnemyController> m_loadedEnemyPrefabDict = new Dictionary<string, EnemyController>();
 
-	// Token: 0x040015CC RID: 5580
+	// Token: 0x04001CDC RID: 7388
 	private static EnemyLibrary m_instance;
 }

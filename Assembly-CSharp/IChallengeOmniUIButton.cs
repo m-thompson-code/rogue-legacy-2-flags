@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200039E RID: 926
+// Token: 0x02000630 RID: 1584
 public interface IChallengeOmniUIButton
 {
-	// Token: 0x17000E4E RID: 3662
-	// (get) Token: 0x06002283 RID: 8835
-	// (set) Token: 0x06002284 RID: 8836
+	// Token: 0x170012E1 RID: 4833
+	// (get) Token: 0x0600309B RID: 12443
+	// (set) Token: 0x0600309C RID: 12444
 	ChallengeType ChallengeType { get; set; }
 }

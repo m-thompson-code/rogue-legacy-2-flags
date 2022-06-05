@@ -4,45 +4,45 @@ using System.Diagnostics;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x0200065E RID: 1630
+// Token: 0x02000AB4 RID: 2740
 public class DebugCreateRooms : MonoBehaviour
 {
-	// Token: 0x06003B13 RID: 15123 RVA: 0x000CB436 File Offset: 0x000C9636
+	// Token: 0x0600529E RID: 21150 RVA: 0x0002CFA6 File Offset: 0x0002B1A6
 	public static void BuildRoom(BiomeType biome, Vector2Int coords, DoorLocation doorLocation, RoomSetEntry room)
 	{
 		DebugCreateRooms.m_buildRoomReports.Enqueue(new DebugCreateRooms.BuildRoomReport(biome, coords, doorLocation, room));
 	}
 
-	// Token: 0x06003B14 RID: 15124 RVA: 0x000CB44B File Offset: 0x000C964B
+	// Token: 0x0600529F RID: 21151 RVA: 0x0002CFBB File Offset: 0x0002B1BB
 	public static void PotentialRooms(GridPointManager originRoom, DoorLocation doorLocation, RoomTypeEntry roomRequirements, HashSet<RoomSetEntry> potentialRooms)
 	{
 		DebugCreateRooms.m_buildRoomReports.Enqueue(new DebugCreateRooms.PotentialRoomsBuildReport(originRoom, doorLocation, roomRequirements, potentialRooms));
 	}
 
-	// Token: 0x06003B15 RID: 15125 RVA: 0x000CB460 File Offset: 0x000C9660
+	// Token: 0x060052A0 RID: 21152 RVA: 0x0002CFD0 File Offset: 0x0002B1D0
 	public static void Reset()
 	{
 		DebugCreateRooms.m_buildRoomReports.Clear();
 	}
 
-	// Token: 0x06003B16 RID: 15126 RVA: 0x000CB46C File Offset: 0x000C966C
+	// Token: 0x060052A1 RID: 21153 RVA: 0x0002CFDC File Offset: 0x0002B1DC
 	internal static void MaxIterationCountReached()
 	{
 		Debugger.Break();
 	}
 
-	// Token: 0x04002CFF RID: 11519
+	// Token: 0x04003E14 RID: 15892
 	private static Queue<DebugCreateRooms.IBuildRoomReport> m_buildRoomReports = new Queue<DebugCreateRooms.IBuildRoomReport>();
 
-	// Token: 0x02000DCC RID: 3532
+	// Token: 0x02000AB5 RID: 2741
 	private interface IBuildRoomReport
 	{
 	}
 
-	// Token: 0x02000DCD RID: 3533
+	// Token: 0x02000AB6 RID: 2742
 	private class PotentialRoomsBuildReport : DebugCreateRooms.IBuildRoomReport
 	{
-		// Token: 0x060069E4 RID: 27108 RVA: 0x0018C958 File Offset: 0x0018AB58
+		// Token: 0x060052A4 RID: 21156 RVA: 0x00139E34 File Offset: 0x00138034
 		public PotentialRoomsBuildReport(GridPointManager originRoom, DoorLocation doorLocation, RoomTypeEntry roomRequirements, HashSet<RoomSetEntry> potentialRooms)
 		{
 			this.Biome = originRoom.Biome;
@@ -53,32 +53,32 @@ public class DebugCreateRooms : MonoBehaviour
 			this.PotentialRooms = potentialRooms;
 		}
 
-		// Token: 0x170022B2 RID: 8882
-		// (get) Token: 0x060069E5 RID: 27109 RVA: 0x0018C9AA File Offset: 0x0018ABAA
+		// Token: 0x17001C3A RID: 7226
+		// (get) Token: 0x060052A5 RID: 21157 RVA: 0x0002CFEF File Offset: 0x0002B1EF
 		public BiomeType Biome { get; }
 
-		// Token: 0x170022B3 RID: 8883
-		// (get) Token: 0x060069E6 RID: 27110 RVA: 0x0018C9B2 File Offset: 0x0018ABB2
+		// Token: 0x17001C3B RID: 7227
+		// (get) Token: 0x060052A6 RID: 21158 RVA: 0x0002CFF7 File Offset: 0x0002B1F7
 		public int OriginRoomNumber { get; }
 
-		// Token: 0x170022B4 RID: 8884
-		// (get) Token: 0x060069E7 RID: 27111 RVA: 0x0018C9BA File Offset: 0x0018ABBA
+		// Token: 0x17001C3C RID: 7228
+		// (get) Token: 0x060052A7 RID: 21159 RVA: 0x0002CFFF File Offset: 0x0002B1FF
 		public Vector2Int OriginRoomCoords { get; }
 
-		// Token: 0x170022B5 RID: 8885
-		// (get) Token: 0x060069E8 RID: 27112 RVA: 0x0018C9C2 File Offset: 0x0018ABC2
+		// Token: 0x17001C3D RID: 7229
+		// (get) Token: 0x060052A8 RID: 21160 RVA: 0x0002D007 File Offset: 0x0002B207
 		public DoorLocation DoorLocation { get; }
 
-		// Token: 0x170022B6 RID: 8886
-		// (get) Token: 0x060069E9 RID: 27113 RVA: 0x0018C9CA File Offset: 0x0018ABCA
+		// Token: 0x17001C3E RID: 7230
+		// (get) Token: 0x060052A9 RID: 21161 RVA: 0x0002D00F File Offset: 0x0002B20F
 		public RoomType RoomType { get; }
 
-		// Token: 0x170022B7 RID: 8887
-		// (get) Token: 0x060069EA RID: 27114 RVA: 0x0018C9D2 File Offset: 0x0018ABD2
+		// Token: 0x17001C3F RID: 7231
+		// (get) Token: 0x060052AA RID: 21162 RVA: 0x0002D017 File Offset: 0x0002B217
 		public HashSet<RoomSetEntry> PotentialRooms { get; }
 
-		// Token: 0x170022B8 RID: 8888
-		// (get) Token: 0x060069EB RID: 27115 RVA: 0x0018C9DA File Offset: 0x0018ABDA
+		// Token: 0x17001C40 RID: 7232
+		// (get) Token: 0x060052AB RID: 21163 RVA: 0x0002D01F File Offset: 0x0002B21F
 		public int PotentialRoomCount
 		{
 			get
@@ -88,10 +88,10 @@ public class DebugCreateRooms : MonoBehaviour
 		}
 	}
 
-	// Token: 0x02000DCE RID: 3534
+	// Token: 0x02000AB7 RID: 2743
 	private class BuildRoomReport : DebugCreateRooms.IBuildRoomReport
 	{
-		// Token: 0x060069EC RID: 27116 RVA: 0x0018C9E7 File Offset: 0x0018ABE7
+		// Token: 0x060052AC RID: 21164 RVA: 0x0002D02C File Offset: 0x0002B22C
 		public BuildRoomReport(BiomeType biome, Vector2Int coords, DoorLocation doorLocation, RoomSetEntry room)
 		{
 			this.Biome = biome;
@@ -100,20 +100,20 @@ public class DebugCreateRooms : MonoBehaviour
 			this.RoomSize = room.RoomMetaData.Size;
 		}
 
-		// Token: 0x170022B9 RID: 8889
-		// (get) Token: 0x060069ED RID: 27117 RVA: 0x0018CA16 File Offset: 0x0018AC16
+		// Token: 0x17001C41 RID: 7233
+		// (get) Token: 0x060052AD RID: 21165 RVA: 0x0002D05B File Offset: 0x0002B25B
 		public BiomeType Biome { get; }
 
-		// Token: 0x170022BA RID: 8890
-		// (get) Token: 0x060069EE RID: 27118 RVA: 0x0018CA1E File Offset: 0x0018AC1E
+		// Token: 0x17001C42 RID: 7234
+		// (get) Token: 0x060052AE RID: 21166 RVA: 0x0002D063 File Offset: 0x0002B263
 		public Vector2Int Coords { get; }
 
-		// Token: 0x170022BB RID: 8891
-		// (get) Token: 0x060069EF RID: 27119 RVA: 0x0018CA26 File Offset: 0x0018AC26
+		// Token: 0x17001C43 RID: 7235
+		// (get) Token: 0x060052AF RID: 21167 RVA: 0x0002D06B File Offset: 0x0002B26B
 		public DoorLocation DoorLocation { get; }
 
-		// Token: 0x170022BC RID: 8892
-		// (get) Token: 0x060069F0 RID: 27120 RVA: 0x0018CA2E File Offset: 0x0018AC2E
+		// Token: 0x17001C44 RID: 7236
+		// (get) Token: 0x060052B0 RID: 21168 RVA: 0x0002D073 File Offset: 0x0002B273
 		public Vector2Int RoomSize { get; }
 	}
 }

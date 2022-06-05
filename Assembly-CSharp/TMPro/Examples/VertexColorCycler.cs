@@ -4,22 +4,22 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x0200086B RID: 2155
+	// Token: 0x02000D7D RID: 3453
 	public class VertexColorCycler : MonoBehaviour
 	{
-		// Token: 0x0600473C RID: 18236 RVA: 0x00100656 File Offset: 0x000FE856
+		// Token: 0x06006213 RID: 25107 RVA: 0x00036144 File Offset: 0x00034344
 		private void Awake()
 		{
 			this.m_TextComponent = base.GetComponent<TMP_Text>();
 		}
 
-		// Token: 0x0600473D RID: 18237 RVA: 0x00100664 File Offset: 0x000FE864
+		// Token: 0x06006214 RID: 25108 RVA: 0x00036152 File Offset: 0x00034352
 		private void Start()
 		{
 			base.StartCoroutine(this.AnimateVertexColors());
 		}
 
-		// Token: 0x0600473E RID: 18238 RVA: 0x00100673 File Offset: 0x000FE873
+		// Token: 0x06006215 RID: 25109 RVA: 0x00036161 File Offset: 0x00034361
 		private IEnumerator AnimateVertexColors()
 		{
 			this.m_TextComponent.ForceMeshUpdate(false, false);
@@ -54,7 +54,7 @@ namespace TMPro.Examples
 			yield break;
 		}
 
-		// Token: 0x04003C50 RID: 15440
+		// Token: 0x0400501F RID: 20511
 		private TMP_Text m_TextComponent;
 	}
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000053 RID: 83
+// Token: 0x0200005B RID: 91
 [Serializable]
 public class DataField_ManaRegenType : DataField<ManaRegenType>
 {

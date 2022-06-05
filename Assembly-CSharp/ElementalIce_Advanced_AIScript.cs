@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000B7 RID: 183
+// Token: 0x02000107 RID: 263
 public class ElementalIce_Advanced_AIScript : ElementalIce_Basic_AIScript
 {
-	// Token: 0x170001EB RID: 491
-	// (get) Token: 0x06000468 RID: 1128 RVA: 0x00015B7F File Offset: 0x00013D7F
+	// Token: 0x1700027F RID: 639
+	// (get) Token: 0x06000629 RID: 1577 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_shoot_CentreShot
 	{
 		get

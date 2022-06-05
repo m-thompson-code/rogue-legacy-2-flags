@@ -1,13 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000240 RID: 576
+// Token: 0x020003FD RID: 1021
 [Serializable]
 public class ProjectileEntry
 {
-	// Token: 0x17000B49 RID: 2889
-	// (get) Token: 0x0600171F RID: 5919 RVA: 0x00048039 File Offset: 0x00046239
-	// (set) Token: 0x06001720 RID: 5920 RVA: 0x00048041 File Offset: 0x00046241
+	// Token: 0x17000E76 RID: 3702
+	// (get) Token: 0x060020D2 RID: 8402 RVA: 0x00011675 File Offset: 0x0000F875
+	// (set) Token: 0x060020D3 RID: 8403 RVA: 0x0001167D File Offset: 0x0000F87D
 	public Projectile_RL ProjectilePrefab
 	{
 		get
@@ -20,9 +20,9 @@ public class ProjectileEntry
 		}
 	}
 
-	// Token: 0x17000B4A RID: 2890
-	// (get) Token: 0x06001721 RID: 5921 RVA: 0x0004804A File Offset: 0x0004624A
-	// (set) Token: 0x06001722 RID: 5922 RVA: 0x00048052 File Offset: 0x00046252
+	// Token: 0x17000E77 RID: 3703
+	// (get) Token: 0x060020D4 RID: 8404 RVA: 0x00011686 File Offset: 0x0000F886
+	// (set) Token: 0x060020D5 RID: 8405 RVA: 0x0001168E File Offset: 0x0000F88E
 	public int PoolSize
 	{
 		get
@@ -35,11 +35,11 @@ public class ProjectileEntry
 		}
 	}
 
-	// Token: 0x04001698 RID: 5784
+	// Token: 0x04001DB0 RID: 7600
 	[SerializeField]
 	private Projectile_RL m_projectilePrefab;
 
-	// Token: 0x04001699 RID: 5785
+	// Token: 0x04001DB1 RID: 7601
 	[SerializeField]
 	private int m_poolSize = 10;
 }

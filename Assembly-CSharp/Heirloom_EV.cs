@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000067 RID: 103
+// Token: 0x0200006F RID: 111
 public class Heirloom_EV
 {
-	// Token: 0x06000181 RID: 385 RVA: 0x0000D16C File Offset: 0x0000B36C
+	// Token: 0x06000195 RID: 405 RVA: 0x000497B4 File Offset: 0x000479B4
 	public static HeirloomDialogueEntry GetDialogueEntry(HeirloomType heirloomType)
 	{
 		HeirloomDialogueEntry result;
@@ -16,7 +16,7 @@ public class Heirloom_EV
 		return null;
 	}
 
-	// Token: 0x06000182 RID: 386 RVA: 0x0000D18C File Offset: 0x0000B38C
+	// Token: 0x06000196 RID: 406 RVA: 0x000497D4 File Offset: 0x000479D4
 	public static bool IsHeirloomLocked(HeirloomType heirloomType)
 	{
 		if (heirloomType != HeirloomType.UnlockBouncableDownstrike)
@@ -26,7 +26,7 @@ public class Heirloom_EV
 		return SaveManager.PlayerSaveData.GetHeirloomLevel(HeirloomType.UnlockAirDash) <= 0;
 	}
 
-	// Token: 0x06000183 RID: 387 RVA: 0x0000D1DD File Offset: 0x0000B3DD
+	// Token: 0x06000197 RID: 407 RVA: 0x00003A4E File Offset: 0x00001C4E
 	public static string GetLockedHeirloomLocID(HeirloomType heirloomType, bool isRepeat)
 	{
 		if (heirloomType != HeirloomType.UnlockBouncableDownstrike)
@@ -47,7 +47,7 @@ public class Heirloom_EV
 		}
 	}
 
-	// Token: 0x04000381 RID: 897
+	// Token: 0x040003A2 RID: 930
 	private static Dictionary<HeirloomType, HeirloomDialogueEntry> m_heirloomDialogueTable = new Dictionary<HeirloomType, HeirloomDialogueEntry>
 	{
 		{
@@ -130,27 +130,27 @@ public class Heirloom_EV
 		}
 	};
 
-	// Token: 0x04000382 RID: 898
+	// Token: 0x040003A3 RID: 931
 	public static readonly Color CAVE_LANTERN_DARKNESS_COLOR_DIM = new Color(0.03f, 0.03f, 0.03f);
 
-	// Token: 0x04000383 RID: 899
+	// Token: 0x040003A4 RID: 932
 	public const float CAVE_LANTERN_DARKNESS_AMOUNT_DIM = 0.73f;
 
-	// Token: 0x04000384 RID: 900
+	// Token: 0x040003A5 RID: 933
 	public const float CAVE_LANTERN_DARKNESS_SOFTNESS_DIM = 0.13f;
 
-	// Token: 0x04000385 RID: 901
+	// Token: 0x040003A6 RID: 934
 	public static readonly Color CAVE_LANTERN_DARKNESS_COLOR_LIT = new Color(0.03f, 0.03f, 0.03f);
 
-	// Token: 0x04000386 RID: 902
+	// Token: 0x040003A7 RID: 935
 	public const float CAVE_LANTERN_DARKNESS_AMOUNT_LIT = 0.45f;
 
-	// Token: 0x04000387 RID: 903
+	// Token: 0x040003A8 RID: 936
 	public const float CAVE_LANTERN_DARKNESS_SOFTNESS_LIT = 0.31f;
 
-	// Token: 0x04000388 RID: 904
+	// Token: 0x040003A9 RID: 937
 	public const float CAVE_LANTERN_BURDEN_VIEW_MOD = 0.05f;
 
-	// Token: 0x04000389 RID: 905
+	// Token: 0x040003AA RID: 938
 	public const float CAVE_LANTERN_BURDEN_VIEW_CAP = 0.25f;
 }

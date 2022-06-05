@@ -2,10 +2,10 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200057B RID: 1403
+// Token: 0x0200095C RID: 2396
 public class EndGameStatsStatsEntry : MonoBehaviour
 {
-	// Token: 0x0600339A RID: 13210 RVA: 0x000AE9EC File Offset: 0x000ACBEC
+	// Token: 0x060048CF RID: 18639 RVA: 0x0011A13C File Offset: 0x0011833C
 	public void UpdateStat(bool animate)
 	{
 		string text = null;
@@ -51,7 +51,7 @@ public class EndGameStatsStatsEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600339B RID: 13211 RVA: 0x000AEB24 File Offset: 0x000ACD24
+	// Token: 0x060048D0 RID: 18640 RVA: 0x0011A274 File Offset: 0x00118474
 	private int CalculateScore(EndGameStatsEntryType statType)
 	{
 		switch (statType)
@@ -102,7 +102,7 @@ public class EndGameStatsStatsEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600339C RID: 13212 RVA: 0x000AEC94 File Offset: 0x000ACE94
+	// Token: 0x060048D1 RID: 18641 RVA: 0x0011A3E4 File Offset: 0x001185E4
 	private string CalculateLetterGrade()
 	{
 		int num = 100000;
@@ -112,7 +112,7 @@ public class EndGameStatsStatsEntry : MonoBehaviour
 		return EndGameStatsStatsEntry.m_letterGradeArray[num4];
 	}
 
-	// Token: 0x0600339D RID: 13213 RVA: 0x000AECD0 File Offset: 0x000ACED0
+	// Token: 0x060048D2 RID: 18642 RVA: 0x0011A420 File Offset: 0x00118620
 	private string CalculateRating()
 	{
 		int num = 100000;
@@ -122,19 +122,19 @@ public class EndGameStatsStatsEntry : MonoBehaviour
 		return EndGameStatsStatsEntry.m_ratingArray[num4];
 	}
 
-	// Token: 0x04002866 RID: 10342
+	// Token: 0x040037CC RID: 14284
 	[SerializeField]
 	private EndGameStatsEntryType m_statsEntryType;
 
-	// Token: 0x04002867 RID: 10343
+	// Token: 0x040037CD RID: 14285
 	[SerializeField]
 	private TMP_Text m_amount;
 
-	// Token: 0x04002868 RID: 10344
+	// Token: 0x040037CE RID: 14286
 	[SerializeField]
 	private TMP_Text m_score;
 
-	// Token: 0x04002869 RID: 10345
+	// Token: 0x040037CF RID: 14287
 	private static string[] m_letterGradeArray = new string[]
 	{
 		"C",
@@ -159,7 +159,7 @@ public class EndGameStatsStatsEntry : MonoBehaviour
 		"S++"
 	};
 
-	// Token: 0x0400286A RID: 10346
+	// Token: 0x040037D0 RID: 14288
 	private static string[] m_ratingArray = new string[]
 	{
 		"Amateur Adventurer",

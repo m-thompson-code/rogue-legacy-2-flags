@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004FF RID: 1279
+// Token: 0x02000866 RID: 2150
 public class ForestBossEntranceRoomController : BossEntranceRoomController
 {
-	// Token: 0x06002FDC RID: 12252 RVA: 0x000A3D09 File Offset: 0x000A1F09
+	// Token: 0x0600424A RID: 16970 RVA: 0x00024B3B File Offset: 0x00022D3B
 	protected override void Awake()
 	{
 		base.Awake();
@@ -13,7 +13,7 @@ public class ForestBossEntranceRoomController : BossEntranceRoomController
 		this.m_insightEventArgs = new InsightObjectiveCompleteHUDEventArgs(InsightType.None, false, 5f, null, null, null);
 	}
 
-	// Token: 0x06002FDD RID: 12253 RVA: 0x000A3D38 File Offset: 0x000A1F38
+	// Token: 0x0600424B RID: 16971 RVA: 0x0010A4CC File Offset: 0x001086CC
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -37,7 +37,7 @@ public class ForestBossEntranceRoomController : BossEntranceRoomController
 		}
 	}
 
-	// Token: 0x06002FDE RID: 12254 RVA: 0x000A3DD1 File Offset: 0x000A1FD1
+	// Token: 0x0600424C RID: 16972 RVA: 0x00024B69 File Offset: 0x00022D69
 	private IEnumerator OpenDoorCoroutine()
 	{
 		this.m_openDoorCutsceneRunning = true;
@@ -86,7 +86,7 @@ public class ForestBossEntranceRoomController : BossEntranceRoomController
 		yield break;
 	}
 
-	// Token: 0x06002FDF RID: 12255 RVA: 0x000A3DE0 File Offset: 0x000A1FE0
+	// Token: 0x0600424D RID: 16973 RVA: 0x00024B78 File Offset: 0x00022D78
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -99,16 +99,16 @@ public class ForestBossEntranceRoomController : BossEntranceRoomController
 		}
 	}
 
-	// Token: 0x0400262D RID: 9773
+	// Token: 0x040033E7 RID: 13287
 	[SerializeField]
 	private Transform m_cameraMovementObj;
 
-	// Token: 0x0400262E RID: 9774
+	// Token: 0x040033E8 RID: 13288
 	private InsightObjectiveCompleteHUDEventArgs m_insightEventArgs;
 
-	// Token: 0x0400262F RID: 9775
+	// Token: 0x040033E9 RID: 13289
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002630 RID: 9776
+	// Token: 0x040033EA RID: 13290
 	private bool m_openDoorCutsceneRunning;
 }

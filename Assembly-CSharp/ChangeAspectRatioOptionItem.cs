@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000277 RID: 631
+// Token: 0x02000441 RID: 1089
 public class ChangeAspectRatioOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001923 RID: 6435 RVA: 0x0004ED0B File Offset: 0x0004CF0B
+	// Token: 0x06002312 RID: 8978 RVA: 0x00012CF1 File Offset: 0x00010EF1
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class ChangeAspectRatioOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001924 RID: 6436 RVA: 0x0004ED43 File Offset: 0x0004CF43
+	// Token: 0x06002313 RID: 8979 RVA: 0x00012D29 File Offset: 0x00010F29
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class ChangeAspectRatioOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001925 RID: 6437 RVA: 0x0004ED7D File Offset: 0x0004CF7D
+	// Token: 0x06002314 RID: 8980 RVA: 0x00012D63 File Offset: 0x00010F63
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed Lock Aspect Ratio to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001926 RID: 6438 RVA: 0x0004ED94 File Offset: 0x0004CF94
+	// Token: 0x06002315 RID: 8981 RVA: 0x000AC56C File Offset: 0x000AA76C
 	public override void ConfirmOptionChange()
 	{
 		bool disable_16_9_Aspect = AspectRatioManager.Disable_16_9_Aspect;

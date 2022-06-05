@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020003C5 RID: 965
+// Token: 0x0200065D RID: 1629
 public interface ISoulShopOmniUIButton
 {
-	// Token: 0x17000EAB RID: 3755
-	// (get) Token: 0x06002397 RID: 9111
-	// (set) Token: 0x06002398 RID: 9112
+	// Token: 0x17001340 RID: 4928
+	// (get) Token: 0x060031B5 RID: 12725
+	// (set) Token: 0x060031B6 RID: 12726
 	SoulShopType SoulShopType { get; set; }
 
-	// Token: 0x17000EAC RID: 3756
-	// (get) Token: 0x06002399 RID: 9113
-	// (set) Token: 0x0600239A RID: 9114
+	// Token: 0x17001341 RID: 4929
+	// (get) Token: 0x060031B7 RID: 12727
+	// (set) Token: 0x060031B8 RID: 12728
 	SoulShopOmniUIEntry ParentEntry { get; set; }
 }

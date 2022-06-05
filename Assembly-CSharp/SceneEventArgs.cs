@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x020007C1 RID: 1985
+// Token: 0x02000C87 RID: 3207
 public class SceneEventArgs : EventArgs
 {
-	// Token: 0x0600429F RID: 17055 RVA: 0x000EBECC File Offset: 0x000EA0CC
+	// Token: 0x06005C28 RID: 23592 RVA: 0x000328E2 File Offset: 0x00030AE2
 	public SceneEventArgs(string sceneName)
 	{
 		this.SceneName = sceneName;
 	}
 
-	// Token: 0x1700168D RID: 5773
-	// (get) Token: 0x060042A0 RID: 17056 RVA: 0x000EBEDB File Offset: 0x000EA0DB
-	// (set) Token: 0x060042A1 RID: 17057 RVA: 0x000EBEE3 File Offset: 0x000EA0E3
+	// Token: 0x17001E8B RID: 7819
+	// (get) Token: 0x06005C29 RID: 23593 RVA: 0x000328F1 File Offset: 0x00030AF1
+	// (set) Token: 0x06005C2A RID: 23594 RVA: 0x000328F9 File Offset: 0x00030AF9
 	public string SceneName { get; private set; }
 }

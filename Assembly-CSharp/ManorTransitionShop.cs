@@ -4,16 +4,16 @@ using RLAudio;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x02000557 RID: 1367
+// Token: 0x02000912 RID: 2322
 public class ManorTransitionShop : MonoBehaviour, IRootObj
 {
-	// Token: 0x06003233 RID: 12851 RVA: 0x000AA406 File Offset: 0x000A8606
+	// Token: 0x0600468A RID: 18058 RVA: 0x00026C31 File Offset: 0x00024E31
 	public void TransitionToManor()
 	{
 		base.StartCoroutine(this.TransitionToManorCoroutine());
 	}
 
-	// Token: 0x06003234 RID: 12852 RVA: 0x000AA415 File Offset: 0x000A8615
+	// Token: 0x0600468B RID: 18059 RVA: 0x00026C40 File Offset: 0x00024E40
 	private IEnumerator TransitionToManorCoroutine()
 	{
 		yield return this.MovePlayerToPosition(this.m_playerEnterPositionObj.transform.position);
@@ -22,7 +22,7 @@ public class ManorTransitionShop : MonoBehaviour, IRootObj
 		yield break;
 	}
 
-	// Token: 0x06003235 RID: 12853 RVA: 0x000AA424 File Offset: 0x000A8624
+	// Token: 0x0600468C RID: 18060 RVA: 0x00026C4F File Offset: 0x00024E4F
 	private IEnumerator MovePlayerToPosition(Vector3 playerPos)
 	{
 		PlayerMovementHelper.StopAllMovementInput();
@@ -31,7 +31,7 @@ public class ManorTransitionShop : MonoBehaviour, IRootObj
 		yield break;
 	}
 
-	// Token: 0x06003236 RID: 12854 RVA: 0x000AA433 File Offset: 0x000A8633
+	// Token: 0x0600468D RID: 18061 RVA: 0x00026C5E File Offset: 0x00024E5E
 	private IEnumerator EnterManorCoroutine()
 	{
 		PlayerManager.GetCurrentPlayerRoom().gameObject.FindObjectReference("ManorTunnel", false, false).Tunnel.ForceEnterTunnel(false, null);
@@ -39,13 +39,13 @@ public class ManorTransitionShop : MonoBehaviour, IRootObj
 		yield break;
 	}
 
-	// Token: 0x06003238 RID: 12856 RVA: 0x000AA443 File Offset: 0x000A8643
+	// Token: 0x0600468F RID: 18063 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400277A RID: 10106
+	// Token: 0x04003664 RID: 13924
 	[SerializeField]
 	private GameObject m_playerEnterPositionObj;
 }

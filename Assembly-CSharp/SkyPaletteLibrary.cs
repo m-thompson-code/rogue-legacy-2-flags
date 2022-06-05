@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200024C RID: 588
+// Token: 0x02000409 RID: 1033
 [CreateAssetMenu(menuName = "Custom/Libraries/Sky Palette Library")]
 public class SkyPaletteLibrary : ScriptableObject
 {
-	// Token: 0x17000B60 RID: 2912
-	// (get) Token: 0x0600176D RID: 5997 RVA: 0x00048FC6 File Offset: 0x000471C6
+	// Token: 0x17000E8D RID: 3725
+	// (get) Token: 0x06002120 RID: 8480 RVA: 0x00011A00 File Offset: 0x0000FC00
 	private static SkyPaletteLibrary Instance
 	{
 		get
@@ -21,7 +21,7 @@ public class SkyPaletteLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x0600176E RID: 5998 RVA: 0x00048FFC File Offset: 0x000471FC
+	// Token: 0x06002121 RID: 8481 RVA: 0x000A692C File Offset: 0x000A4B2C
 	public static SkyPaletteEntry GetPalette(SkyPaletteType type)
 	{
 		SkyPaletteEntry result = null;
@@ -32,7 +32,7 @@ public class SkyPaletteLibrary : ScriptableObject
 		throw new Exception("SkyPaletteType: " + type.ToString() + " not found in SkyPalette Library.");
 	}
 
-	// Token: 0x0600176F RID: 5999 RVA: 0x00049044 File Offset: 0x00047244
+	// Token: 0x06002122 RID: 8482 RVA: 0x000A6974 File Offset: 0x000A4B74
 	private void Initialize()
 	{
 		this.m_skyPaletteDict = new Dictionary<SkyPaletteType, SkyPaletteEntry>();
@@ -46,16 +46,16 @@ public class SkyPaletteLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x040016E1 RID: 5857
+	// Token: 0x04001DF9 RID: 7673
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/SkyPaletteLibrary";
 
-	// Token: 0x040016E2 RID: 5858
+	// Token: 0x04001DFA RID: 7674
 	[SerializeField]
 	private SkyPaletteEntry[] m_skyPaletteArray;
 
-	// Token: 0x040016E3 RID: 5859
+	// Token: 0x04001DFB RID: 7675
 	private Dictionary<SkyPaletteType, SkyPaletteEntry> m_skyPaletteDict;
 
-	// Token: 0x040016E4 RID: 5860
+	// Token: 0x04001DFC RID: 7676
 	private static SkyPaletteLibrary m_instance;
 }

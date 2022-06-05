@@ -4,11 +4,11 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000584 RID: 1412
+// Token: 0x0200097C RID: 2428
 public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<BlacksmithOmniUICategoryEntry, BlacksmithOmniUIEntry>
 {
-	// Token: 0x170012BF RID: 4799
-	// (get) Token: 0x060034A5 RID: 13477 RVA: 0x000B456B File Offset: 0x000B276B
+	// Token: 0x170019D0 RID: 6608
+	// (get) Token: 0x06004A62 RID: 19042 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool CanReset
 	{
 		get
@@ -17,8 +17,8 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x170012C0 RID: 4800
-	// (get) Token: 0x060034A6 RID: 13478 RVA: 0x000B456E File Offset: 0x000B276E
+	// Token: 0x170019D1 RID: 6609
+	// (get) Token: 0x06004A63 RID: 19043 RVA: 0x00028B4A File Offset: 0x00026D4A
 	public Vector3 UnityDownTextPosition
 	{
 		get
@@ -31,8 +31,8 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x170012C1 RID: 4801
-	// (get) Token: 0x060034A7 RID: 13479 RVA: 0x000B4594 File Offset: 0x000B2794
+	// Token: 0x170019D2 RID: 6610
+	// (get) Token: 0x06004A64 RID: 19044 RVA: 0x0012144C File Offset: 0x0011F64C
 	public override bool CanExit
 	{
 		get
@@ -46,8 +46,8 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x170012C2 RID: 4802
-	// (get) Token: 0x060034A8 RID: 13480 RVA: 0x000B45C6 File Offset: 0x000B27C6
+	// Token: 0x170019D3 RID: 6611
+	// (get) Token: 0x06004A65 RID: 19045 RVA: 0x00028B6F File Offset: 0x00026D6F
 	public EquipmentCategoryType HighlightedCategory
 	{
 		get
@@ -60,8 +60,8 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x170012C3 RID: 4803
-	// (get) Token: 0x060034A9 RID: 13481 RVA: 0x000B45ED File Offset: 0x000B27ED
+	// Token: 0x170019D4 RID: 6612
+	// (get) Token: 0x06004A66 RID: 19046 RVA: 0x00028B96 File Offset: 0x00026D96
 	public EquipmentType SelectedEquipmentType
 	{
 		get
@@ -74,8 +74,8 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x170012C4 RID: 4804
-	// (get) Token: 0x060034AA RID: 13482 RVA: 0x000B4614 File Offset: 0x000B2814
+	// Token: 0x170019D5 RID: 6613
+	// (get) Token: 0x06004A67 RID: 19047 RVA: 0x00004762 File Offset: 0x00002962
 	public override WindowID ID
 	{
 		get
@@ -84,7 +84,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x060034AB RID: 13483 RVA: 0x000B4618 File Offset: 0x000B2818
+	// Token: 0x06004A68 RID: 19048 RVA: 0x00121480 File Offset: 0x0011F680
 	protected override void Awake()
 	{
 		base.Awake();
@@ -94,7 +94,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		this.m_cancelToggleLoadouts = new Action(this.CancelToggleLoadouts);
 	}
 
-	// Token: 0x060034AC RID: 13484 RVA: 0x000B4674 File Offset: 0x000B2874
+	// Token: 0x06004A69 RID: 19049 RVA: 0x001214DC File Offset: 0x0011F6DC
 	protected override void CreateCategoryEntries()
 	{
 		if (base.CategoryEntryArray != null)
@@ -119,7 +119,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x060034AD RID: 13485 RVA: 0x000B4760 File Offset: 0x000B2960
+	// Token: 0x06004A6A RID: 19050 RVA: 0x001215C8 File Offset: 0x0011F7C8
 	protected override void CreateEntries()
 	{
 		if (base.EntryArray != null)
@@ -145,7 +145,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x060034AE RID: 13486 RVA: 0x000B485C File Offset: 0x000B2A5C
+	// Token: 0x06004A6B RID: 19051 RVA: 0x001216C4 File Offset: 0x0011F8C4
 	protected override void UpdateScrollArrows(float scrollAmount)
 	{
 		base.UpdateScrollArrows(scrollAmount);
@@ -270,7 +270,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x060034AF RID: 13487 RVA: 0x000B4BA4 File Offset: 0x000B2DA4
+	// Token: 0x06004A6C RID: 19052 RVA: 0x00121A0C File Offset: 0x0011FC0C
 	protected override void OnConfirmButtonJustPressed()
 	{
 		base.OnConfirmButtonJustPressed();
@@ -280,7 +280,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x060034B0 RID: 13488 RVA: 0x000B4BF5 File Offset: 0x000B2DF5
+	// Token: 0x06004A6D RID: 19053 RVA: 0x00028BBD File Offset: 0x00026DBD
 	protected override void OnCancelButtonJustPressed()
 	{
 		base.OnCancelButtonJustPressed();
@@ -290,7 +290,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		}
 	}
 
-	// Token: 0x060034B1 RID: 13489 RVA: 0x000B4C24 File Offset: 0x000B2E24
+	// Token: 0x06004A6E RID: 19054 RVA: 0x00121A60 File Offset: 0x0011FC60
 	protected override void OnOpen()
 	{
 		base.ChooseCategoryText.text = LocalizationManager.GetString("LOC_ID_BLACKSMITH_SELECT_CATEGORY_1", false, false);
@@ -321,7 +321,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		base.OnOpen();
 	}
 
-	// Token: 0x060034B2 RID: 13490 RVA: 0x000B4D04 File Offset: 0x000B2F04
+	// Token: 0x06004A6F RID: 19055 RVA: 0x00121B40 File Offset: 0x0011FD40
 	public bool HasAllEquipment()
 	{
 		EquipmentManager.GetTotalAvailableBlueprints(BlacksmithOmniUIWindowController.m_achievementHelper_STATIC);
@@ -337,7 +337,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		return result;
 	}
 
-	// Token: 0x060034B3 RID: 13491 RVA: 0x000B4D78 File Offset: 0x000B2F78
+	// Token: 0x06004A70 RID: 19056 RVA: 0x00121BB4 File Offset: 0x0011FDB4
 	protected override void OnClose()
 	{
 		base.OnClose();
@@ -361,7 +361,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		SaveManager.PlayerSaveData.UpdateCachedData();
 	}
 
-	// Token: 0x060034B4 RID: 13492 RVA: 0x000B4DFC File Offset: 0x000B2FFC
+	// Token: 0x06004A71 RID: 19057 RVA: 0x00121C38 File Offset: 0x0011FE38
 	protected override int GetEquippedIndex()
 	{
 		EquipmentObj equipped = EquipmentManager.GetEquipped(this.HighlightedCategory);
@@ -378,7 +378,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		return base.GetEquippedIndex();
 	}
 
-	// Token: 0x060034B5 RID: 13493 RVA: 0x000B4E48 File Offset: 0x000B3048
+	// Token: 0x06004A72 RID: 19058 RVA: 0x00028BEC File Offset: 0x00026DEC
 	protected override void OnYButtonJustPressed()
 	{
 		this.InitializeResetMenu();
@@ -387,7 +387,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		base.OnYButtonJustPressed();
 	}
 
-	// Token: 0x060034B6 RID: 13494 RVA: 0x000B4E68 File Offset: 0x000B3068
+	// Token: 0x06004A73 RID: 19059 RVA: 0x00121C84 File Offset: 0x0011FE84
 	private void InitializeResetMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -407,7 +407,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		buttonAtIndex2.SetOnClickAction(this.m_cancelUnequipAllGear);
 	}
 
-	// Token: 0x060034B7 RID: 13495 RVA: 0x000B4EF8 File Offset: 0x000B30F8
+	// Token: 0x06004A74 RID: 19060 RVA: 0x00121D14 File Offset: 0x0011FF14
 	private void ConfirmUnequipAllGear()
 	{
 		BlacksmithOmniUIEquipButton.SetEquipped(EquipmentCategoryType.Head, EquipmentType.None);
@@ -432,14 +432,14 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		this.CancelUnequipAllGear();
 	}
 
-	// Token: 0x060034B8 RID: 13496 RVA: 0x000B4FA9 File Offset: 0x000B31A9
+	// Token: 0x06004A75 RID: 19061 RVA: 0x00028C09 File Offset: 0x00026E09
 	private void CancelUnequipAllGear()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 		base.SetKeyboardEnabled(true);
 	}
 
-	// Token: 0x060034B9 RID: 13497 RVA: 0x000B4FBA File Offset: 0x000B31BA
+	// Token: 0x06004A76 RID: 19062 RVA: 0x00028C1A File Offset: 0x00026E1A
 	protected override void OnXButtonJustPressed()
 	{
 		this.InitializeLoadoutMenu();
@@ -448,7 +448,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		base.OnYButtonJustPressed();
 	}
 
-	// Token: 0x060034BA RID: 13498 RVA: 0x000B4FD8 File Offset: 0x000B31D8
+	// Token: 0x06004A77 RID: 19063 RVA: 0x00121DC8 File Offset: 0x0011FFC8
 	private void InitializeLoadoutMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenuBig))
@@ -476,7 +476,7 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		buttonAtIndex2.SetOnClickAction(this.m_cancelToggleLoadouts);
 	}
 
-	// Token: 0x060034BB RID: 13499 RVA: 0x000B5090 File Offset: 0x000B3290
+	// Token: 0x06004A78 RID: 19064 RVA: 0x00121E80 File Offset: 0x00120080
 	private void ConfirmToggleLoadouts()
 	{
 		if (!SaveManager.EquipmentSaveData.EquipmentLoadoutEnabled)
@@ -491,14 +491,14 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		this.CancelToggleLoadouts();
 	}
 
-	// Token: 0x060034BC RID: 13500 RVA: 0x000B5112 File Offset: 0x000B3312
+	// Token: 0x06004A79 RID: 19065 RVA: 0x00028C37 File Offset: 0x00026E37
 	private void CancelToggleLoadouts()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, false);
 		base.SetKeyboardEnabled(true);
 	}
 
-	// Token: 0x060034BD RID: 13501 RVA: 0x000B5124 File Offset: 0x000B3324
+	// Token: 0x06004A7A RID: 19066 RVA: 0x00121F04 File Offset: 0x00120104
 	protected override void RefreshText(object sender, EventArgs args)
 	{
 		base.RefreshText(sender, args);
@@ -510,29 +510,29 @@ public class BlacksmithOmniUIWindowController : BaseOmniUIWindowController<Black
 		this.m_loadoutText.text = LocalizationManager.GetString("LOC_ID_SHOP_MENU_CLASS_GEAR_OFF_1", SaveManager.PlayerSaveData.CurrentCharacter.IsFemale, false);
 	}
 
-	// Token: 0x04002934 RID: 10548
+	// Token: 0x040038EF RID: 14575
 	[SerializeField]
 	private GameObject m_unityDownTextPosition;
 
-	// Token: 0x04002935 RID: 10549
+	// Token: 0x040038F0 RID: 14576
 	[SerializeField]
 	private TMP_Text m_loadoutText;
 
-	// Token: 0x04002936 RID: 10550
+	// Token: 0x040038F1 RID: 14577
 	private Action m_cancelUnequipAllGear;
 
-	// Token: 0x04002937 RID: 10551
+	// Token: 0x040038F2 RID: 14578
 	private Action m_confirmUnequipAllGear;
 
-	// Token: 0x04002938 RID: 10552
+	// Token: 0x040038F3 RID: 14579
 	private Action m_confirmToggleLoadouts;
 
-	// Token: 0x04002939 RID: 10553
+	// Token: 0x040038F4 RID: 14580
 	private Action m_cancelToggleLoadouts;
 
-	// Token: 0x0400293A RID: 10554
+	// Token: 0x040038F5 RID: 14581
 	private static List<EquipmentObj> m_achievementHelper_STATIC = new List<EquipmentObj>();
 
-	// Token: 0x0400293B RID: 10555
+	// Token: 0x040038F6 RID: 14582
 	private BlacksmithOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020001C2 RID: 450
+// Token: 0x02000335 RID: 821
 public static class BiomeUtility
 {
-	// Token: 0x06001223 RID: 4643 RVA: 0x000346C8 File Offset: 0x000328C8
+	// Token: 0x06001A81 RID: 6785 RVA: 0x00092034 File Offset: 0x00090234
 	public static bool IsBiomeInBiomeLayerMask(BiomeType biome, BiomeLayer biomeLayerMask)
 	{
 		if (BiomeUtility.m_biomeTypeToLayerTable.ContainsKey(biome))
@@ -20,7 +20,7 @@ public static class BiomeUtility
 		return false;
 	}
 
-	// Token: 0x06001224 RID: 4644 RVA: 0x0003471C File Offset: 0x0003291C
+	// Token: 0x06001A82 RID: 6786 RVA: 0x0000D9F5 File Offset: 0x0000BBF5
 	public static BiomeType GetBiomeType(BiomeLayer biomeLayer)
 	{
 		if (BiomeUtility.m_biomeLayerToTypeTable.ContainsKey(biomeLayer))
@@ -30,7 +30,7 @@ public static class BiomeUtility
 		throw new ArgumentException("biomeLayer", string.Format("Table doesn't contain an entry with Key ({0})", biomeLayer));
 	}
 
-	// Token: 0x06001225 RID: 4645 RVA: 0x00034751 File Offset: 0x00032951
+	// Token: 0x06001A83 RID: 6787 RVA: 0x0000DA2A File Offset: 0x0000BC2A
 	public static BiomeLayer GetBiomeLayer(BiomeType biomeType)
 	{
 		if (BiomeUtility.m_biomeTypeToLayerTable.ContainsKey(biomeType))
@@ -40,7 +40,7 @@ public static class BiomeUtility
 		throw new ArgumentException("biomeType", string.Format("Table doesn't contain an entry with Key ({0})", biomeType));
 	}
 
-	// Token: 0x06001226 RID: 4646 RVA: 0x00034788 File Offset: 0x00032988
+	// Token: 0x06001A84 RID: 6788 RVA: 0x00092088 File Offset: 0x00090288
 	public static List<BiomeType> GetAllBiomesThatConnectToBiome(BiomeType biome)
 	{
 		if (BiomeUtility.m_biomeToBiomesThatConnectTable == null)
@@ -62,7 +62,7 @@ public static class BiomeUtility
 		return BiomeUtility.m_biomeToBiomesThatConnectTable[biome];
 	}
 
-	// Token: 0x06001227 RID: 4647 RVA: 0x00034838 File Offset: 0x00032A38
+	// Token: 0x06001A85 RID: 6789 RVA: 0x00092138 File Offset: 0x00090338
 	public static bool IsConnectsToBiome(BiomeType biome, BiomeType connectsTo)
 	{
 		if (biome == BiomeType.None || biome == BiomeType.Any)
@@ -84,7 +84,7 @@ public static class BiomeUtility
 		return false;
 	}
 
-	// Token: 0x06001228 RID: 4648 RVA: 0x00034890 File Offset: 0x00032A90
+	// Token: 0x06001A86 RID: 6790 RVA: 0x00092190 File Offset: 0x00090390
 	public static BiomeType GetConnectsToBiome(BiomeType biome)
 	{
 		if (biome == BiomeType.None || biome == BiomeType.Any)
@@ -103,7 +103,7 @@ public static class BiomeUtility
 		return BiomeType.None;
 	}
 
-	// Token: 0x06001229 RID: 4649 RVA: 0x000348E4 File Offset: 0x00032AE4
+	// Token: 0x06001A87 RID: 6791 RVA: 0x000921E4 File Offset: 0x000903E4
 	public static RoomSide GetConnectDirection(BiomeType biome)
 	{
 		if (biome == BiomeType.None || biome == BiomeType.Any)
@@ -118,7 +118,7 @@ public static class BiomeUtility
 		throw new ArgumentException(string.Format("Failed to find BiomeData for Biome ({0})", biome));
 	}
 
-	// Token: 0x0600122A RID: 4650 RVA: 0x00034934 File Offset: 0x00032B34
+	// Token: 0x06001A88 RID: 6792 RVA: 0x00092234 File Offset: 0x00090434
 	public static List<SpecialRoomType> GetPotentialSpecialRoomTypesInBiome(BiomeType biome)
 	{
 		List<SpecialRoomType> list = new List<SpecialRoomType>();
@@ -147,7 +147,7 @@ public static class BiomeUtility
 		return BiomeUtility.m_biomeToPotentialSpecialRoomTypesTable[biome];
 	}
 
-	// Token: 0x0400129D RID: 4765
+	// Token: 0x040018B3 RID: 6323
 	private static Dictionary<BiomeType, BiomeLayer> m_biomeTypeToLayerTable = new Dictionary<BiomeType, BiomeLayer>
 	{
 		{
@@ -220,7 +220,7 @@ public static class BiomeUtility
 		}
 	};
 
-	// Token: 0x0400129E RID: 4766
+	// Token: 0x040018B4 RID: 6324
 	private static Dictionary<BiomeLayer, BiomeType> m_biomeLayerToTypeTable = new Dictionary<BiomeLayer, BiomeType>
 	{
 		{
@@ -289,9 +289,9 @@ public static class BiomeUtility
 		}
 	};
 
-	// Token: 0x0400129F RID: 4767
+	// Token: 0x040018B5 RID: 6325
 	private static Dictionary<BiomeType, List<BiomeType>> m_biomeToBiomesThatConnectTable = null;
 
-	// Token: 0x040012A0 RID: 4768
+	// Token: 0x040018B6 RID: 6326
 	private static Dictionary<BiomeType, List<SpecialRoomType>> m_biomeToPotentialSpecialRoomTypesTable = new Dictionary<BiomeType, List<SpecialRoomType>>();
 }

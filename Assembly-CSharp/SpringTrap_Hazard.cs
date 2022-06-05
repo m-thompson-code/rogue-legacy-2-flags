@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200045D RID: 1117
+// Token: 0x0200074E RID: 1870
 public class SpringTrap_Hazard : Hazard
 {
-	// Token: 0x06002938 RID: 10552 RVA: 0x00088523 File Offset: 0x00086723
+	// Token: 0x0600392A RID: 14634 RVA: 0x0001F621 File Offset: 0x0001D821
 	public void BouncePlayer()
 	{
 		if (!this.m_trapTriggered && PlayerManager.IsInstantiated)
@@ -16,7 +16,7 @@ public class SpringTrap_Hazard : Hazard
 		}
 	}
 
-	// Token: 0x06002939 RID: 10553 RVA: 0x0008854E File Offset: 0x0008674E
+	// Token: 0x0600392B RID: 14635 RVA: 0x0001F64C File Offset: 0x0001D84C
 	private IEnumerator SpringTrapCoroutine()
 	{
 		base.Animator.SetBool("SpikesOut", true);
@@ -34,7 +34,7 @@ public class SpringTrap_Hazard : Hazard
 		yield break;
 	}
 
-	// Token: 0x0600293A RID: 10554 RVA: 0x0008855D File Offset: 0x0008675D
+	// Token: 0x0600392C RID: 14636 RVA: 0x0001F65B File Offset: 0x0001D85B
 	public override void ResetHazard()
 	{
 		base.Animator.SetBool("SpikesOut", false);
@@ -42,6 +42,6 @@ public class SpringTrap_Hazard : Hazard
 		this.m_trapTriggered = false;
 	}
 
-	// Token: 0x040021FB RID: 8699
+	// Token: 0x04002DC5 RID: 11717
 	private bool m_trapTriggered;
 }

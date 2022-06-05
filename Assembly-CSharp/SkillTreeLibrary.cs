@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000249 RID: 585
+// Token: 0x02000406 RID: 1030
 [CreateAssetMenu(menuName = "Custom/Libraries/Skill Tree Library")]
 public class SkillTreeLibrary : ScriptableObject
 {
-	// Token: 0x17000B5E RID: 2910
-	// (get) Token: 0x06001764 RID: 5988 RVA: 0x00048EDE File Offset: 0x000470DE
+	// Token: 0x17000E8B RID: 3723
+	// (get) Token: 0x06002117 RID: 8471 RVA: 0x000119AE File Offset: 0x0000FBAE
 	private static SkillTreeLibrary Instance
 	{
 		get
@@ -19,7 +19,7 @@ public class SkillTreeLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001765 RID: 5989 RVA: 0x00048F08 File Offset: 0x00047108
+	// Token: 0x06002118 RID: 8472 RVA: 0x000A68B4 File Offset: 0x000A4AB4
 	public static SkillTreeData GetSkillTreeData(SkillTreeType skillType)
 	{
 		SkillTreeData result = null;
@@ -31,14 +31,14 @@ public class SkillTreeLibrary : ScriptableObject
 		throw new Exception("SkillTree Library is null.");
 	}
 
-	// Token: 0x040016D7 RID: 5847
+	// Token: 0x04001DEF RID: 7663
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/SkillTreeLibrary";
 
-	// Token: 0x040016D8 RID: 5848
+	// Token: 0x04001DF0 RID: 7664
 	[Space(10f)]
 	[SerializeField]
 	private SkillTreeTypeSkillTreeDataDictionary m_skillTreeLibrary;
 
-	// Token: 0x040016D9 RID: 5849
+	// Token: 0x04001DF1 RID: 7665
 	private static SkillTreeLibrary m_instance;
 }

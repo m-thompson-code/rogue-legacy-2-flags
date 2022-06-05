@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200078E RID: 1934
+// Token: 0x02000C51 RID: 3153
 public static class AnimatorUtility
 {
-	// Token: 0x0600416E RID: 16750 RVA: 0x000E9678 File Offset: 0x000E7878
+	// Token: 0x06005AEB RID: 23275 RVA: 0x00158A28 File Offset: 0x00156C28
 	private static bool AddAnimatorInfo(Animator animator)
 	{
 		if (!animator || !animator.isInitialized)
@@ -25,7 +25,7 @@ public static class AnimatorUtility
 		return true;
 	}
 
-	// Token: 0x0600416F RID: 16751 RVA: 0x000E96CC File Offset: 0x000E78CC
+	// Token: 0x06005AEC RID: 23276 RVA: 0x00158A7C File Offset: 0x00156C7C
 	public static AnimatorInfo GetAnimatorInfo(Animator animator)
 	{
 		if (!animator)
@@ -44,7 +44,7 @@ public static class AnimatorUtility
 		return null;
 	}
 
-	// Token: 0x06004170 RID: 16752 RVA: 0x000E970C File Offset: 0x000E790C
+	// Token: 0x06005AED RID: 23277 RVA: 0x00158ABC File Offset: 0x00156CBC
 	public static bool HasParameter(Animator animator, int paramHash)
 	{
 		if (!animator)
@@ -55,14 +55,14 @@ public static class AnimatorUtility
 		return animatorInfo != null && animatorInfo.HasParameter(paramHash);
 	}
 
-	// Token: 0x06004171 RID: 16753 RVA: 0x000E9738 File Offset: 0x000E7938
+	// Token: 0x06005AEE RID: 23278 RVA: 0x00158AE8 File Offset: 0x00156CE8
 	public static bool HasParameter(Animator animator, string parameterName)
 	{
 		int paramHash = Animator.StringToHash(parameterName);
 		return global::AnimatorUtility.HasParameter(animator, paramHash);
 	}
 
-	// Token: 0x06004172 RID: 16754 RVA: 0x000E9754 File Offset: 0x000E7954
+	// Token: 0x06005AEF RID: 23279 RVA: 0x00158B04 File Offset: 0x00156D04
 	public static bool HasState(Animator animator, int stateHash)
 	{
 		if (!animator)
@@ -73,14 +73,14 @@ public static class AnimatorUtility
 		return animatorInfo != null && animatorInfo.HasState(animator, stateHash);
 	}
 
-	// Token: 0x06004173 RID: 16755 RVA: 0x000E9780 File Offset: 0x000E7980
+	// Token: 0x06005AF0 RID: 23280 RVA: 0x00158B30 File Offset: 0x00156D30
 	public static bool HasState(Animator animator, string stateName)
 	{
 		int stateHash = Animator.StringToHash(stateName);
 		return global::AnimatorUtility.HasState(animator, stateHash);
 	}
 
-	// Token: 0x06004174 RID: 16756 RVA: 0x000E979C File Offset: 0x000E799C
+	// Token: 0x06005AF1 RID: 23281 RVA: 0x00158B4C File Offset: 0x00156D4C
 	public static int GetLayerIndex(Animator animator, int stateHash)
 	{
 		if (!animator)
@@ -95,14 +95,14 @@ public static class AnimatorUtility
 		return animatorInfo.GetStateLayerIndex(animator, stateHash);
 	}
 
-	// Token: 0x06004175 RID: 16757 RVA: 0x000E97C8 File Offset: 0x000E79C8
+	// Token: 0x06005AF2 RID: 23282 RVA: 0x00158B78 File Offset: 0x00156D78
 	public static int GetLayerIndex(Animator animator, string stateName)
 	{
 		int stateHash = Animator.StringToHash(stateName);
 		return global::AnimatorUtility.GetLayerIndex(animator, stateHash);
 	}
 
-	// Token: 0x06004176 RID: 16758 RVA: 0x000E97E4 File Offset: 0x000E79E4
+	// Token: 0x06005AF3 RID: 23283 RVA: 0x00158B94 File Offset: 0x00156D94
 	public static void ResetAnimator(Animator animator)
 	{
 		if (!animator)
@@ -155,7 +155,7 @@ public static class AnimatorUtility
 		animator.Play(animatorInfo.StartingStateHash, 0, 0f);
 	}
 
-	// Token: 0x06004177 RID: 16759 RVA: 0x000E98AC File Offset: 0x000E7AAC
+	// Token: 0x06005AF4 RID: 23284 RVA: 0x00158C5C File Offset: 0x00156E5C
 	public static string GetCachedAnimatorName(this Animator animator)
 	{
 		if (!animator.runtimeAnimatorController)
@@ -172,16 +172,16 @@ public static class AnimatorUtility
 		return name;
 	}
 
-	// Token: 0x06004178 RID: 16760 RVA: 0x000E98FC File Offset: 0x000E7AFC
+	// Token: 0x06005AF5 RID: 23285 RVA: 0x00031E52 File Offset: 0x00030052
 	public static void ClearAnimatorTables()
 	{
 		global::AnimatorUtility.m_animatorNameTable.Clear();
 		global::AnimatorUtility.m_animatorInfoDict.Clear();
 	}
 
-	// Token: 0x04003929 RID: 14633
+	// Token: 0x04004BE0 RID: 19424
 	private static Dictionary<RuntimeAnimatorController, string> m_animatorNameTable = new Dictionary<RuntimeAnimatorController, string>();
 
-	// Token: 0x0400392A RID: 14634
+	// Token: 0x04004BE1 RID: 19425
 	private static Dictionary<string, AnimatorInfo> m_animatorInfoDict = new Dictionary<string, AnimatorInfo>();
 }

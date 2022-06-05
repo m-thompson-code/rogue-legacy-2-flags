@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020001D0 RID: 464
+// Token: 0x0200034B RID: 843
 [RequireComponent(typeof(PlayerController))]
 public class CharacterClass : MonoBehaviour
 {
-	// Token: 0x17000A10 RID: 2576
-	// (get) Token: 0x060012A3 RID: 4771 RVA: 0x00036D87 File Offset: 0x00034F87
-	// (set) Token: 0x060012A4 RID: 4772 RVA: 0x00036D8F File Offset: 0x00034F8F
+	// Token: 0x17000CE0 RID: 3296
+	// (get) Token: 0x06001B21 RID: 6945 RVA: 0x0000E154 File Offset: 0x0000C354
+	// (set) Token: 0x06001B22 RID: 6946 RVA: 0x0000E15C File Offset: 0x0000C35C
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x17000A11 RID: 2577
-	// (get) Token: 0x060012A5 RID: 4773 RVA: 0x00036D98 File Offset: 0x00034F98
+	// Token: 0x17000CE1 RID: 3297
+	// (get) Token: 0x06001B23 RID: 6947 RVA: 0x0000E165 File Offset: 0x0000C365
 	public bool OverrideSaveFileValues
 	{
 		get
@@ -21,8 +21,8 @@ public class CharacterClass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A12 RID: 2578
-	// (get) Token: 0x060012A6 RID: 4774 RVA: 0x00036DAD File Offset: 0x00034FAD
+	// Token: 0x17000CE2 RID: 3298
+	// (get) Token: 0x06001B24 RID: 6948 RVA: 0x0000E17A File Offset: 0x0000C37A
 	public ClassData ClassData
 	{
 		get
@@ -31,9 +31,9 @@ public class CharacterClass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A13 RID: 2579
-	// (get) Token: 0x060012A7 RID: 4775 RVA: 0x00036DB5 File Offset: 0x00034FB5
-	// (set) Token: 0x060012A8 RID: 4776 RVA: 0x00036DC0 File Offset: 0x00034FC0
+	// Token: 0x17000CE3 RID: 3299
+	// (get) Token: 0x06001B25 RID: 6949 RVA: 0x0000E182 File Offset: 0x0000C382
+	// (set) Token: 0x06001B26 RID: 6950 RVA: 0x00094418 File Offset: 0x00092618
 	public ClassType ClassType
 	{
 		get
@@ -52,9 +52,9 @@ public class CharacterClass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A14 RID: 2580
-	// (get) Token: 0x060012A9 RID: 4777 RVA: 0x00036E0F File Offset: 0x0003500F
-	// (set) Token: 0x060012AA RID: 4778 RVA: 0x00036E17 File Offset: 0x00035017
+	// Token: 0x17000CE4 RID: 3300
+	// (get) Token: 0x06001B27 RID: 6951 RVA: 0x0000E18A File Offset: 0x0000C38A
+	// (set) Token: 0x06001B28 RID: 6952 RVA: 0x0000E192 File Offset: 0x0000C392
 	public AbilityType WeaponAbilityType
 	{
 		get
@@ -71,9 +71,9 @@ public class CharacterClass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A15 RID: 2581
-	// (get) Token: 0x060012AB RID: 4779 RVA: 0x00036E30 File Offset: 0x00035030
-	// (set) Token: 0x060012AC RID: 4780 RVA: 0x00036E38 File Offset: 0x00035038
+	// Token: 0x17000CE5 RID: 3301
+	// (get) Token: 0x06001B29 RID: 6953 RVA: 0x0000E1AB File Offset: 0x0000C3AB
+	// (set) Token: 0x06001B2A RID: 6954 RVA: 0x0000E1B3 File Offset: 0x0000C3B3
 	public AbilityType SpellAbilityType
 	{
 		get
@@ -90,9 +90,9 @@ public class CharacterClass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A16 RID: 2582
-	// (get) Token: 0x060012AD RID: 4781 RVA: 0x00036E51 File Offset: 0x00035051
-	// (set) Token: 0x060012AE RID: 4782 RVA: 0x00036E59 File Offset: 0x00035059
+	// Token: 0x17000CE6 RID: 3302
+	// (get) Token: 0x06001B2B RID: 6955 RVA: 0x0000E1CC File Offset: 0x0000C3CC
+	// (set) Token: 0x06001B2C RID: 6956 RVA: 0x0000E1D4 File Offset: 0x0000C3D4
 	public AbilityType TalentAbilityType
 	{
 		get
@@ -109,7 +109,7 @@ public class CharacterClass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060012AF RID: 4783 RVA: 0x00036E72 File Offset: 0x00035072
+	// Token: 0x06001B2D RID: 6957 RVA: 0x0000E1ED File Offset: 0x0000C3ED
 	protected virtual void Awake()
 	{
 		if (Application.isPlaying)
@@ -124,7 +124,7 @@ public class CharacterClass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060012B0 RID: 4784 RVA: 0x00036EB0 File Offset: 0x000350B0
+	// Token: 0x06001B2E RID: 6958 RVA: 0x00094468 File Offset: 0x00092668
 	private void LoadPlayerSaveData()
 	{
 		CharacterData currentCharacter = SaveManager.PlayerSaveData.CurrentCharacter;
@@ -134,7 +134,7 @@ public class CharacterClass : MonoBehaviour
 		this.m_talentAbilityType = currentCharacter.Talent;
 	}
 
-	// Token: 0x060012B1 RID: 4785 RVA: 0x00036EF8 File Offset: 0x000350F8
+	// Token: 0x06001B2F RID: 6959 RVA: 0x0000E228 File Offset: 0x0000C428
 	private IEnumerator Start()
 	{
 		while (!this.m_playerController.IsInitialized)
@@ -148,7 +148,7 @@ public class CharacterClass : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060012B2 RID: 4786 RVA: 0x00036F07 File Offset: 0x00035107
+	// Token: 0x06001B30 RID: 6960 RVA: 0x0000E237 File Offset: 0x0000C437
 	private void InitializeAbilities()
 	{
 		this.SetAbility(CastAbilityType.Weapon, this.WeaponAbilityType, true);
@@ -156,7 +156,7 @@ public class CharacterClass : MonoBehaviour
 		this.SetAbility(CastAbilityType.Talent, this.TalentAbilityType, true);
 	}
 
-	// Token: 0x060012B3 RID: 4787 RVA: 0x00036F34 File Offset: 0x00035134
+	// Token: 0x06001B31 RID: 6961 RVA: 0x000944B0 File Offset: 0x000926B0
 	private AbilityType ChooseRandomAbility(CastAbilityType castAbilityType)
 	{
 		AbilityType[] array = null;
@@ -176,7 +176,7 @@ public class CharacterClass : MonoBehaviour
 		return array[randomNumber];
 	}
 
-	// Token: 0x060012B4 RID: 4788 RVA: 0x00036FA4 File Offset: 0x000351A4
+	// Token: 0x06001B32 RID: 6962 RVA: 0x00094520 File Offset: 0x00092720
 	public void SetAbility(CastAbilityType castAbilityType, AbilityType abilityType, bool destroyOldAbility = true)
 	{
 		if (abilityType == AbilityType.Random)
@@ -202,7 +202,7 @@ public class CharacterClass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060012B5 RID: 4789 RVA: 0x0003702C File Offset: 0x0003522C
+	// Token: 0x06001B33 RID: 6963 RVA: 0x000945A8 File Offset: 0x000927A8
 	public void SetAbility(CastAbilityType castAbilityType, BaseAbility_RL ability, bool destroyOldAbility = false)
 	{
 		AbilityType abilityType = AbilityType.None;
@@ -229,33 +229,33 @@ public class CharacterClass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001309 RID: 4873
+	// Token: 0x0400193F RID: 6463
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	protected ClassType m_classType = ClassType.SwordClass;
 
-	// Token: 0x0400130A RID: 4874
+	// Token: 0x04001940 RID: 6464
 	[Space(10f)]
 	[SerializeField]
 	[ReadOnly]
 	protected AbilityType m_weaponAbilityType;
 
-	// Token: 0x0400130B RID: 4875
+	// Token: 0x04001941 RID: 6465
 	[SerializeField]
 	[ReadOnly]
 	protected AbilityType m_spellAbilityType;
 
-	// Token: 0x0400130C RID: 4876
+	// Token: 0x04001942 RID: 6466
 	[SerializeField]
 	[ReadOnly]
 	protected AbilityType m_talentAbilityType;
 
-	// Token: 0x0400130D RID: 4877
+	// Token: 0x04001943 RID: 6467
 	[Space(10f)]
 	[SerializeField]
 	[ReadOnly]
 	protected ClassData m_classData;
 
-	// Token: 0x0400130E RID: 4878
+	// Token: 0x04001944 RID: 6468
 	private PlayerController m_playerController;
 }

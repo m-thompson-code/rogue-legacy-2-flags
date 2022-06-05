@@ -2,21 +2,21 @@
 
 namespace Unity.Cloud.UserReporting
 {
-	// Token: 0x0200083A RID: 2106
+	// Token: 0x02000D20 RID: 3360
 	public struct UserReportEvent
 	{
-		// Token: 0x17001736 RID: 5942
-		// (get) Token: 0x06004599 RID: 17817 RVA: 0x000F83CA File Offset: 0x000F65CA
-		// (set) Token: 0x0600459A RID: 17818 RVA: 0x000F83D2 File Offset: 0x000F65D2
+		// Token: 0x17001F64 RID: 8036
+		// (get) Token: 0x06005FD1 RID: 24529 RVA: 0x00034D61 File Offset: 0x00032F61
+		// (set) Token: 0x06005FD2 RID: 24530 RVA: 0x00034D69 File Offset: 0x00032F69
 		public SerializableException Exception { readonly get; set; }
 
-		// Token: 0x17001737 RID: 5943
-		// (get) Token: 0x0600459B RID: 17819 RVA: 0x000F83DB File Offset: 0x000F65DB
-		// (set) Token: 0x0600459C RID: 17820 RVA: 0x000F83E3 File Offset: 0x000F65E3
+		// Token: 0x17001F65 RID: 8037
+		// (get) Token: 0x06005FD3 RID: 24531 RVA: 0x00034D72 File Offset: 0x00032F72
+		// (set) Token: 0x06005FD4 RID: 24532 RVA: 0x00034D7A File Offset: 0x00032F7A
 		public int FrameNumber { readonly get; set; }
 
-		// Token: 0x17001738 RID: 5944
-		// (get) Token: 0x0600459D RID: 17821 RVA: 0x000F83EC File Offset: 0x000F65EC
+		// Token: 0x17001F66 RID: 8038
+		// (get) Token: 0x06005FD5 RID: 24533 RVA: 0x00034D83 File Offset: 0x00032F83
 		public string FullMessage
 		{
 			get
@@ -25,24 +25,24 @@ namespace Unity.Cloud.UserReporting
 			}
 		}
 
-		// Token: 0x17001739 RID: 5945
-		// (get) Token: 0x0600459E RID: 17822 RVA: 0x000F8409 File Offset: 0x000F6609
-		// (set) Token: 0x0600459F RID: 17823 RVA: 0x000F8411 File Offset: 0x000F6611
+		// Token: 0x17001F67 RID: 8039
+		// (get) Token: 0x06005FD6 RID: 24534 RVA: 0x00034DA0 File Offset: 0x00032FA0
+		// (set) Token: 0x06005FD7 RID: 24535 RVA: 0x00034DA8 File Offset: 0x00032FA8
 		public UserReportEventLevel Level { readonly get; set; }
 
-		// Token: 0x1700173A RID: 5946
-		// (get) Token: 0x060045A0 RID: 17824 RVA: 0x000F841A File Offset: 0x000F661A
-		// (set) Token: 0x060045A1 RID: 17825 RVA: 0x000F8422 File Offset: 0x000F6622
+		// Token: 0x17001F68 RID: 8040
+		// (get) Token: 0x06005FD8 RID: 24536 RVA: 0x00034DB1 File Offset: 0x00032FB1
+		// (set) Token: 0x06005FD9 RID: 24537 RVA: 0x00034DB9 File Offset: 0x00032FB9
 		public string Message { readonly get; set; }
 
-		// Token: 0x1700173B RID: 5947
-		// (get) Token: 0x060045A2 RID: 17826 RVA: 0x000F842B File Offset: 0x000F662B
-		// (set) Token: 0x060045A3 RID: 17827 RVA: 0x000F8433 File Offset: 0x000F6633
+		// Token: 0x17001F69 RID: 8041
+		// (get) Token: 0x06005FDA RID: 24538 RVA: 0x00034DC2 File Offset: 0x00032FC2
+		// (set) Token: 0x06005FDB RID: 24539 RVA: 0x00034DCA File Offset: 0x00032FCA
 		public string StackTrace { readonly get; set; }
 
-		// Token: 0x1700173C RID: 5948
-		// (get) Token: 0x060045A4 RID: 17828 RVA: 0x000F843C File Offset: 0x000F663C
-		// (set) Token: 0x060045A5 RID: 17829 RVA: 0x000F8444 File Offset: 0x000F6644
+		// Token: 0x17001F6A RID: 8042
+		// (get) Token: 0x06005FDC RID: 24540 RVA: 0x00034DD3 File Offset: 0x00032FD3
+		// (set) Token: 0x06005FDD RID: 24541 RVA: 0x00034DDB File Offset: 0x00032FDB
 		public DateTime Timestamp { readonly get; set; }
 	}
 }

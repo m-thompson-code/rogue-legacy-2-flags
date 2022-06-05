@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x020003B2 RID: 946
+// Token: 0x02000647 RID: 1607
 public interface IJukeboxOmniUIButton
 {
-	// Token: 0x17000E70 RID: 3696
-	// (get) Token: 0x06002300 RID: 8960
-	// (set) Token: 0x06002301 RID: 8961
+	// Token: 0x17001303 RID: 4867
+	// (get) Token: 0x06003118 RID: 12568
+	// (set) Token: 0x06003119 RID: 12569
 	SongID SongType { get; set; }
 
-	// Token: 0x17000E71 RID: 3697
-	// (get) Token: 0x06002302 RID: 8962
+	// Token: 0x17001304 RID: 4868
+	// (get) Token: 0x0600311A RID: 12570
 	bool IsPlayingSong { get; }
 
-	// Token: 0x17000E72 RID: 3698
-	// (get) Token: 0x06002303 RID: 8963
-	// (set) Token: 0x06002304 RID: 8964
+	// Token: 0x17001305 RID: 4869
+	// (get) Token: 0x0600311B RID: 12571
+	// (set) Token: 0x0600311C RID: 12572
 	JukeboxOmniUIWindowController JukeboxWindowController { get; set; }
 
-	// Token: 0x17000E73 RID: 3699
-	// (get) Token: 0x06002305 RID: 8965
-	// (set) Token: 0x06002306 RID: 8966
+	// Token: 0x17001306 RID: 4870
+	// (get) Token: 0x0600311D RID: 12573
+	// (set) Token: 0x0600311E RID: 12574
 	JukeboxOmniUIEntry JukeboxEntry { get; set; }
 }

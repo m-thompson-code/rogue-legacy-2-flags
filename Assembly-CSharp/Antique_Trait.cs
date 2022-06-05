@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200031E RID: 798
+// Token: 0x02000565 RID: 1381
 public class Antique_Trait : BaseTrait
 {
-	// Token: 0x17000D9C RID: 3484
-	// (get) Token: 0x06001F7F RID: 8063 RVA: 0x00064E37 File Offset: 0x00063037
+	// Token: 0x170011C3 RID: 4547
+	// (get) Token: 0x06002C26 RID: 11302 RVA: 0x0001887D File Offset: 0x00016A7D
 	public override TraitType TraitType
 	{
 		get
@@ -13,13 +13,13 @@ public class Antique_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001F80 RID: 8064 RVA: 0x00064E3E File Offset: 0x0006303E
+	// Token: 0x06002C27 RID: 11303 RVA: 0x00018884 File Offset: 0x00016A84
 	private void Start()
 	{
 		this.GiveAntique();
 	}
 
-	// Token: 0x06001F81 RID: 8065 RVA: 0x00064E48 File Offset: 0x00063048
+	// Token: 0x06002C28 RID: 11304 RVA: 0x000C5328 File Offset: 0x000C3528
 	private void GiveAntique()
 	{
 		RelicType relicType = base.IsFirstTrait ? SaveManager.PlayerSaveData.CurrentCharacter.AntiqueOneOwned : SaveManager.PlayerSaveData.CurrentCharacter.AntiqueTwoOwned;
@@ -43,7 +43,7 @@ public class Antique_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x04001C2C RID: 7212
+	// Token: 0x04002550 RID: 9552
 	public static RelicType[] RelicExceptionArray = new RelicType[]
 	{
 		RelicType.None,

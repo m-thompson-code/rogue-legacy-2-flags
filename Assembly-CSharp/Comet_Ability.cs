@@ -4,11 +4,11 @@ using FMOD.Studio;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x0200017E RID: 382
+// Token: 0x020002C4 RID: 708
 public class Comet_Ability : BaseAbility_RL, ITalent, IAbility, IPersistentAbility
 {
-	// Token: 0x17000747 RID: 1863
-	// (get) Token: 0x06000D77 RID: 3447 RVA: 0x000291A7 File Offset: 0x000273A7
+	// Token: 0x170009BF RID: 2495
+	// (get) Token: 0x060014E6 RID: 5350 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool IgnoreStuckCheck
 	{
 		get
@@ -17,8 +17,8 @@ public class Comet_Ability : BaseAbility_RL, ITalent, IAbility, IPersistentAbili
 		}
 	}
 
-	// Token: 0x17000748 RID: 1864
-	// (get) Token: 0x06000D78 RID: 3448 RVA: 0x000291AA File Offset: 0x000273AA
+	// Token: 0x170009C0 RID: 2496
+	// (get) Token: 0x060014E7 RID: 5351 RVA: 0x0000A726 File Offset: 0x00008926
 	public bool IsPersistentActive
 	{
 		get
@@ -27,7 +27,7 @@ public class Comet_Ability : BaseAbility_RL, ITalent, IAbility, IPersistentAbili
 		}
 	}
 
-	// Token: 0x06000D79 RID: 3449 RVA: 0x000291B2 File Offset: 0x000273B2
+	// Token: 0x060014E8 RID: 5352 RVA: 0x0000A72E File Offset: 0x0000892E
 	protected override void Awake()
 	{
 		this.m_onPlayerJump = new Action<MonoBehaviour, EventArgs>(this.OnPlayerJump);
@@ -35,7 +35,7 @@ public class Comet_Ability : BaseAbility_RL, ITalent, IAbility, IPersistentAbili
 		base.Awake();
 	}
 
-	// Token: 0x06000D7A RID: 3450 RVA: 0x000291DD File Offset: 0x000273DD
+	// Token: 0x060014E9 RID: 5353 RVA: 0x0000A759 File Offset: 0x00008959
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		base.Initialize(abilityController, castAbilityType);
@@ -46,14 +46,14 @@ public class Comet_Ability : BaseAbility_RL, ITalent, IAbility, IPersistentAbili
 		}
 	}
 
-	// Token: 0x06000D7B RID: 3451 RVA: 0x00029215 File Offset: 0x00027415
+	// Token: 0x060014EA RID: 5354 RVA: 0x0000A689 File Offset: 0x00008889
 	public override void PreCastAbility()
 	{
 		this.m_abilityController.StopAllQueueCoroutines();
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000D7C RID: 3452 RVA: 0x00029228 File Offset: 0x00027428
+	// Token: 0x060014EB RID: 5355 RVA: 0x0000A791 File Offset: 0x00008991
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
@@ -64,7 +64,7 @@ public class Comet_Ability : BaseAbility_RL, ITalent, IAbility, IPersistentAbili
 		}
 	}
 
-	// Token: 0x06000D7D RID: 3453 RVA: 0x00029256 File Offset: 0x00027456
+	// Token: 0x060014EC RID: 5356 RVA: 0x0000A7BF File Offset: 0x000089BF
 	public override IEnumerator CastAbility()
 	{
 		this.m_beginCastingRelay.Dispatch();
@@ -100,13 +100,13 @@ public class Comet_Ability : BaseAbility_RL, ITalent, IAbility, IPersistentAbili
 		yield break;
 	}
 
-	// Token: 0x06000D7E RID: 3454 RVA: 0x00029265 File Offset: 0x00027465
+	// Token: 0x060014ED RID: 5357 RVA: 0x0000A63F File Offset: 0x0000883F
 	private void OnPlayerJump(MonoBehaviour sender, EventArgs args)
 	{
 		this.StopAbility(true);
 	}
 
-	// Token: 0x06000D7F RID: 3455 RVA: 0x00029270 File Offset: 0x00027470
+	// Token: 0x060014EE RID: 5358 RVA: 0x000884C4 File Offset: 0x000866C4
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_isComet)
@@ -133,7 +133,7 @@ public class Comet_Ability : BaseAbility_RL, ITalent, IAbility, IPersistentAbili
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x06000D80 RID: 3456 RVA: 0x00029340 File Offset: 0x00027540
+	// Token: 0x060014EF RID: 5359 RVA: 0x00088594 File Offset: 0x00086794
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -155,7 +155,7 @@ public class Comet_Ability : BaseAbility_RL, ITalent, IAbility, IPersistentAbili
 		}
 	}
 
-	// Token: 0x06000D81 RID: 3457 RVA: 0x000293E4 File Offset: 0x000275E4
+	// Token: 0x060014F0 RID: 5360 RVA: 0x00088638 File Offset: 0x00086838
 	protected override void Update()
 	{
 		base.Update();
@@ -180,40 +180,40 @@ public class Comet_Ability : BaseAbility_RL, ITalent, IAbility, IPersistentAbili
 		}
 	}
 
-	// Token: 0x06000D82 RID: 3458 RVA: 0x000294E3 File Offset: 0x000276E3
+	// Token: 0x060014F1 RID: 5361 RVA: 0x0000A63F File Offset: 0x0000883F
 	public void StopPersistentAbility()
 	{
 		this.StopAbility(true);
 	}
 
-	// Token: 0x06000D83 RID: 3459 RVA: 0x000294EC File Offset: 0x000276EC
+	// Token: 0x060014F2 RID: 5362 RVA: 0x0000A7CE File Offset: 0x000089CE
 	private void ResumeCooldown(Projectile_RL proj, GameObject obj)
 	{
 		base.DecreaseCooldownOverTime = true;
 		base.DisplayPausedAbilityCooldown = false;
 	}
 
-	// Token: 0x040010DA RID: 4314
+	// Token: 0x04001646 RID: 5702
 	private const string SFX_COMET_LOOP_NAME = "event:/SFX/Spells/sfx_spell_astromancer_cometForm_loop";
 
-	// Token: 0x040010DB RID: 4315
+	// Token: 0x04001647 RID: 5703
 	private bool m_isComet;
 
-	// Token: 0x040010DC RID: 4316
+	// Token: 0x04001648 RID: 5704
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040010DD RID: 4317
+	// Token: 0x04001649 RID: 5705
 	private Action<MonoBehaviour, EventArgs> m_onPlayerJump;
 
-	// Token: 0x040010DE RID: 4318
+	// Token: 0x0400164A RID: 5706
 	private Action<MonoBehaviour, EventArgs> m_onPlayerManaChange;
 
-	// Token: 0x040010DF RID: 4319
+	// Token: 0x0400164B RID: 5707
 	private float m_manaRequiredForNextCharge;
 
-	// Token: 0x040010E0 RID: 4320
+	// Token: 0x0400164C RID: 5708
 	private EventInstance m_cometSFXInstance;
 
-	// Token: 0x040010E1 RID: 4321
+	// Token: 0x0400164D RID: 5709
 	private bool m_cometSFXParamIsMoving;
 }

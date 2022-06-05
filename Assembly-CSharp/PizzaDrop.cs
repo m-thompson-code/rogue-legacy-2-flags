@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000477 RID: 1143
+// Token: 0x0200076D RID: 1901
 public class PizzaDrop : HealthDrop
 {
-	// Token: 0x17001046 RID: 4166
-	// (get) Token: 0x060029DE RID: 10718 RVA: 0x0008A7E5 File Offset: 0x000889E5
+	// Token: 0x1700157B RID: 5499
+	// (get) Token: 0x060039E8 RID: 14824 RVA: 0x0001FD3D File Offset: 0x0001DF3D
 	public override ItemDropType ItemDropType
 	{
 		get
@@ -13,7 +13,7 @@ public class PizzaDrop : HealthDrop
 		}
 	}
 
-	// Token: 0x060029DF RID: 10719 RVA: 0x0008A7EC File Offset: 0x000889EC
+	// Token: 0x060039E9 RID: 14825 RVA: 0x000EC464 File Offset: 0x000EA664
 	protected override void GainHealth(float hpGain = 0f)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();

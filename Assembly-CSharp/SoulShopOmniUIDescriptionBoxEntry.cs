@@ -2,10 +2,10 @@
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020003C9 RID: 969
+// Token: 0x02000661 RID: 1633
 public class SoulShopOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<SoulShopOmniUIDescriptionEventArgs, SoulShopOmniUIDescriptionBoxEntry.SoulShopOmniUIDescriptionBoxType>
 {
-	// Token: 0x060023BC RID: 9148 RVA: 0x00074484 File Offset: 0x00072684
+	// Token: 0x060031DA RID: 12762 RVA: 0x000D45F4 File Offset: 0x000D27F4
 	protected override void DisplayNullDescriptionBox(MonoBehaviour sender)
 	{
 		base.DisplayNullDescriptionBox(sender);
@@ -34,7 +34,7 @@ public class SoulShopOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<S
 		}
 	}
 
-	// Token: 0x060023BD RID: 9149 RVA: 0x00074548 File Offset: 0x00072748
+	// Token: 0x060031DB RID: 12763 RVA: 0x000D46B8 File Offset: 0x000D28B8
 	protected override void DisplayDescriptionBox(SoulShopOmniUIDescriptionEventArgs args)
 	{
 		SoulShopType soulShopType = args.SoulShopType;
@@ -117,16 +117,16 @@ public class SoulShopOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<S
 		}
 	}
 
-	// Token: 0x02000C11 RID: 3089
+	// Token: 0x02000662 RID: 1634
 	public enum SoulShopOmniUIDescriptionBoxType
 	{
-		// Token: 0x04004ECE RID: 20174
+		// Token: 0x0400289C RID: 10396
 		None,
-		// Token: 0x04004ECF RID: 20175
+		// Token: 0x0400289D RID: 10397
 		Title,
-		// Token: 0x04004ED0 RID: 20176
+		// Token: 0x0400289E RID: 10398
 		Description,
-		// Token: 0x04004ED1 RID: 20177
+		// Token: 0x0400289F RID: 10399
 		Stats
 	}
 }

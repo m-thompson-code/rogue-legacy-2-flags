@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200073D RID: 1853
+// Token: 0x02000BFB RID: 3067
 public enum HitboxType
 {
-	// Token: 0x04003477 RID: 13431
+	// Token: 0x040046F3 RID: 18163
 	Platform,
-	// Token: 0x04003478 RID: 13432
+	// Token: 0x040046F4 RID: 18164
 	Terrain,
-	// Token: 0x04003479 RID: 13433
+	// Token: 0x040046F5 RID: 18165
 	Body,
-	// Token: 0x0400347A RID: 13434
+	// Token: 0x040046F6 RID: 18166
 	Weapon
 }

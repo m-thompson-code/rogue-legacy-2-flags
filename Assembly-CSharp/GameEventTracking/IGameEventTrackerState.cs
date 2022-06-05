@@ -2,7 +2,7 @@
 
 namespace GameEventTracking
 {
-	// Token: 0x0200089C RID: 2204
+	// Token: 0x02000DC9 RID: 3529
 	public interface IGameEventTrackerState
 	{
 	}

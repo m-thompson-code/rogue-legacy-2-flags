@@ -4,16 +4,16 @@ using System.Linq;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000679 RID: 1657
+// Token: 0x02000AF0 RID: 2800
 public static class GridPointOperationsUtility
 {
-	// Token: 0x06003BDC RID: 15324 RVA: 0x000CDD91 File Offset: 0x000CBF91
+	// Token: 0x06005419 RID: 21529 RVA: 0x0002DA39 File Offset: 0x0002BC39
 	public static IEnumerable<GridPoint> GetGridPointsWithAvailableDoorsOnSide(BiomeController biomeController, RoomSide side)
 	{
 		return GridPointOperationsUtility.GetGridPointsWithAvailableDoorsOnSide(biomeController, side, biomeController.GridPointManager.GridPoints);
 	}
 
-	// Token: 0x06003BDD RID: 15325 RVA: 0x000CDDA8 File Offset: 0x000CBFA8
+	// Token: 0x0600541A RID: 21530 RVA: 0x0013D9E0 File Offset: 0x0013BBE0
 	public static IEnumerable<GridPoint> GetGridPointsWithAvailableDoorsOnSide(BiomeController biomeController, RoomSide side, IEnumerable<GridPoint> gridPoints)
 	{
 		GridPoint[] array = (from gridPoint in gridPoints
@@ -31,7 +31,7 @@ public static class GridPointOperationsUtility
 		return list;
 	}
 
-	// Token: 0x06003BDE RID: 15326 RVA: 0x000CDE20 File Offset: 0x000CC020
+	// Token: 0x0600541B RID: 21531 RVA: 0x0013DA58 File Offset: 0x0013BC58
 	public static IEnumerable<GridPoint> GetGridPointsOnBorder(BiomeController biomeController, RoomSide side)
 	{
 		List<GridPoint> list = new List<GridPoint>();
@@ -72,7 +72,7 @@ public static class GridPointOperationsUtility
 		return list;
 	}
 
-	// Token: 0x06003BDF RID: 15327 RVA: 0x000CDF0C File Offset: 0x000CC10C
+	// Token: 0x0600541C RID: 21532 RVA: 0x0013DB44 File Offset: 0x0013BD44
 	public static IEnumerable<GridPoint> GetGridPointsOnSideOfBiomeTransitionRoom(BiomeController biomeController, RoomSide side)
 	{
 		Vector2Int transitionRoomSize = RoomLibrary.GetSetCollection(biomeController.Biome).TransitionRoom.Size;
@@ -96,7 +96,7 @@ public static class GridPointOperationsUtility
 		return biomeController.GridPointManager.GridPoints.Where(predicate);
 	}
 
-	// Token: 0x06003BE0 RID: 15328 RVA: 0x000CDFA3 File Offset: 0x000CC1A3
+	// Token: 0x0600541D RID: 21533 RVA: 0x0002DA4D File Offset: 0x0002BC4D
 	public static IEnumerable<GridPoint> GetGridPointsWithSpaceOnSide(BiomeController biomeController, RoomSide side, IEnumerable<GridPoint> gridPoints)
 	{
 		int maxExtents = GridController.Extents[side];
@@ -130,19 +130,19 @@ public static class GridPointOperationsUtility
 		yield break;
 	}
 
-	// Token: 0x06003BE1 RID: 15329 RVA: 0x000CDFBA File Offset: 0x000CC1BA
+	// Token: 0x0600541E RID: 21534 RVA: 0x0002DA64 File Offset: 0x0002BC64
 	public static IEnumerable<GridPoint> GetGridPointsWithSpaceOnSide(BiomeController biomeController, RoomSide side)
 	{
 		return GridPointOperationsUtility.GetGridPointsWithSpaceOnSide(biomeController, side, biomeController.GridPointManager.GridPoints);
 	}
 
-	// Token: 0x06003BE2 RID: 15330 RVA: 0x000CDFCE File Offset: 0x000CC1CE
+	// Token: 0x0600541F RID: 21535 RVA: 0x0002DA78 File Offset: 0x0002BC78
 	public static IEnumerable<GridPoint> GetGridPointsGivenDistanceFromBorder(BiomeController biomeController, RoomSide side, int distance)
 	{
 		return GridPointOperationsUtility.GetGridPointsGivenDistanceFromBorder(biomeController, side, distance, biomeController.GridPointManager.GridPoints);
 	}
 
-	// Token: 0x06003BE3 RID: 15331 RVA: 0x000CDFE4 File Offset: 0x000CC1E4
+	// Token: 0x06005420 RID: 21536 RVA: 0x0013DBDC File Offset: 0x0013BDDC
 	public static IEnumerable<GridPoint> GetGridPointsGivenDistanceFromBorder(BiomeController biomeController, RoomSide side, int distance, IEnumerable<GridPoint> gridPoints)
 	{
 		List<GridPoint> list = new List<GridPoint>();
@@ -183,7 +183,7 @@ public static class GridPointOperationsUtility
 		return list;
 	}
 
-	// Token: 0x06003BE4 RID: 15332 RVA: 0x000CE0C8 File Offset: 0x000CC2C8
+	// Token: 0x06005421 RID: 21537 RVA: 0x0013DCC0 File Offset: 0x0013BEC0
 	public static IEnumerable<GridPoint> GetGridPointsWhereRoomFits(BiomeController biomeController, DoorLocation doorLocationToCheck, RoomMetaData room, bool isMirrored, bool checkForWayOut, IEnumerable<GridPoint> gridPoints)
 	{
 		List<GridPoint> list = new List<GridPoint>();
@@ -214,13 +214,13 @@ public static class GridPointOperationsUtility
 		return list;
 	}
 
-	// Token: 0x06003BE5 RID: 15333 RVA: 0x000CE180 File Offset: 0x000CC380
+	// Token: 0x06005422 RID: 21538 RVA: 0x0002DA8D File Offset: 0x0002BC8D
 	public static IEnumerable<GridPoint> GetGridPointsWhereRoomFits(BiomeController biomeController, DoorLocation doorLocationToCheck, RoomMetaData room, bool isMirrored, bool checkForWayOut)
 	{
 		return GridPointOperationsUtility.GetGridPointsWhereRoomFits(biomeController, doorLocationToCheck, room, isMirrored, checkForWayOut, biomeController.GridPointManager.GridPoints);
 	}
 
-	// Token: 0x06003BE6 RID: 15334 RVA: 0x000CE198 File Offset: 0x000CC398
+	// Token: 0x06005423 RID: 21539 RVA: 0x0013DD78 File Offset: 0x0013BF78
 	public static bool GetIsWayOutOfRoom(Vector2Int potentialGridCoordinates, Vector2Int roomSize, IEnumerable<DoorLocation> doorLocationsInRoom)
 	{
 		bool result = false;
@@ -235,7 +235,7 @@ public static class GridPointOperationsUtility
 		return result;
 	}
 
-	// Token: 0x06003BE7 RID: 15335 RVA: 0x000CE1F0 File Offset: 0x000CC3F0
+	// Token: 0x06005424 RID: 21540 RVA: 0x0013DDD0 File Offset: 0x0013BFD0
 	public static GridPoint GetCentermostGridPoint(BiomeController biomeController, RoomSide side, IEnumerable<GridPoint> gridPoints)
 	{
 		RoomSide key = RoomSide.Top;

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200035C RID: 860
+// Token: 0x020005CD RID: 1485
 public class PlayerKnockedFar_Trait : BaseTrait
 {
-	// Token: 0x17000DED RID: 3565
-	// (get) Token: 0x06002088 RID: 8328 RVA: 0x00066ACA File Offset: 0x00064CCA
+	// Token: 0x17001252 RID: 4690
+	// (get) Token: 0x06002E09 RID: 11785 RVA: 0x000193B9 File Offset: 0x000175B9
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class PlayerKnockedFar_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002089 RID: 8329 RVA: 0x00066ACE File Offset: 0x00064CCE
+	// Token: 0x06002E0A RID: 11786 RVA: 0x000193BD File Offset: 0x000175BD
 	private IEnumerator Start()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -26,7 +26,7 @@ public class PlayerKnockedFar_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x0600208A RID: 8330 RVA: 0x00066AD6 File Offset: 0x00064CD6
+	// Token: 0x06002E0B RID: 11787 RVA: 0x000193C5 File Offset: 0x000175C5
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

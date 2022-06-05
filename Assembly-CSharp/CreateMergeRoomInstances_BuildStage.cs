@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-// Token: 0x02000662 RID: 1634
+// Token: 0x02000ABE RID: 2750
 public class CreateMergeRoomInstances_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B2E RID: 15150 RVA: 0x000CB74B File Offset: 0x000C994B
+	// Token: 0x060052D5 RID: 21205 RVA: 0x0002D15A File Offset: 0x0002B35A
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		List<int> list = new List<int>();

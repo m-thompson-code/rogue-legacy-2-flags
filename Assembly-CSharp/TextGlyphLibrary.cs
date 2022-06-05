@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000253 RID: 595
+// Token: 0x02000411 RID: 1041
 [CreateAssetMenu(menuName = "Custom/Libraries/Text Glyph Library")]
 public class TextGlyphLibrary : ScriptableObject
 {
-	// Token: 0x17000B65 RID: 2917
-	// (get) Token: 0x06001782 RID: 6018 RVA: 0x00049333 File Offset: 0x00047533
+	// Token: 0x17000E92 RID: 3730
+	// (get) Token: 0x06002136 RID: 8502 RVA: 0x00011A9C File Offset: 0x0000FC9C
 	public static Dictionary<string, string> TextGlyphDict
 	{
 		get
@@ -17,9 +17,9 @@ public class TextGlyphLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B66 RID: 2918
-	// (get) Token: 0x06001783 RID: 6019 RVA: 0x0004933F File Offset: 0x0004753F
-	// (set) Token: 0x06001784 RID: 6020 RVA: 0x0004934B File Offset: 0x0004754B
+	// Token: 0x17000E93 RID: 3731
+	// (get) Token: 0x06002137 RID: 8503 RVA: 0x00011AA8 File Offset: 0x0000FCA8
+	// (set) Token: 0x06002138 RID: 8504 RVA: 0x00011AB4 File Offset: 0x0000FCB4
 	public static TMP_SpriteAsset[] SpriteAssetArray
 	{
 		get
@@ -32,8 +32,8 @@ public class TextGlyphLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B67 RID: 2919
-	// (get) Token: 0x06001785 RID: 6021 RVA: 0x00049358 File Offset: 0x00047558
+	// Token: 0x17000E94 RID: 3732
+	// (get) Token: 0x06002139 RID: 8505 RVA: 0x000A6BD8 File Offset: 0x000A4DD8
 	public static TextGlyphLibrary Instance
 	{
 		get
@@ -50,7 +50,7 @@ public class TextGlyphLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001786 RID: 6022 RVA: 0x000493A4 File Offset: 0x000475A4
+	// Token: 0x0600213A RID: 8506 RVA: 0x000A6C24 File Offset: 0x000A4E24
 	private void Initialize()
 	{
 		this.m_textGlyphDict = new Dictionary<string, string>();
@@ -74,7 +74,7 @@ public class TextGlyphLibrary : ScriptableObject
 		TextGlyphLibrary.m_isInitialized = true;
 	}
 
-	// Token: 0x06001787 RID: 6023 RVA: 0x00049480 File Offset: 0x00047680
+	// Token: 0x0600213B RID: 8507 RVA: 0x00011AC1 File Offset: 0x0000FCC1
 	public static string GetTextGlyphSpritesheet(string entryName)
 	{
 		if (TextGlyphLibrary.Instance.m_textGlyphDict.ContainsKey(entryName))
@@ -84,7 +84,7 @@ public class TextGlyphLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x06001788 RID: 6024 RVA: 0x000494A6 File Offset: 0x000476A6
+	// Token: 0x0600213C RID: 8508 RVA: 0x00011AE7 File Offset: 0x0000FCE7
 	public static string GetTextGlyphRichTextString(string entryName)
 	{
 		if (TextGlyphLibrary.Instance.m_textGlyphDict.ContainsKey(entryName))
@@ -94,29 +94,29 @@ public class TextGlyphLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x06001789 RID: 6025 RVA: 0x000494D7 File Offset: 0x000476D7
+	// Token: 0x0600213D RID: 8509 RVA: 0x00011B18 File Offset: 0x0000FD18
 	public static bool ContainsTextGlyph(string entryName)
 	{
 		return TextGlyphLibrary.Instance.m_textGlyphDict.ContainsKey(entryName);
 	}
 
-	// Token: 0x04001710 RID: 5904
+	// Token: 0x04001E2A RID: 7722
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/TextGlyphLibrary";
 
-	// Token: 0x04001711 RID: 5905
+	// Token: 0x04001E2B RID: 7723
 	private const string TMP_SPRITE_RICHTEXT_STRING_FORMAT = "<sprite=\"{0}\" name=\"{1}\">";
 
-	// Token: 0x04001712 RID: 5906
+	// Token: 0x04001E2C RID: 7724
 	[SerializeField]
 	[HideInInspector]
 	private TMP_SpriteAsset[] m_spriteAssetArray;
 
-	// Token: 0x04001713 RID: 5907
+	// Token: 0x04001E2D RID: 7725
 	private Dictionary<string, string> m_textGlyphDict;
 
-	// Token: 0x04001714 RID: 5908
+	// Token: 0x04001E2E RID: 7726
 	private static bool m_isInitialized;
 
-	// Token: 0x04001715 RID: 5909
+	// Token: 0x04001E2F RID: 7727
 	private static TextGlyphLibrary m_instance;
 }

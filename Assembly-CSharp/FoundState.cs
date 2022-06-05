@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000735 RID: 1845
+// Token: 0x02000BF3 RID: 3059
 public enum FoundState
 {
-	// Token: 0x0400343C RID: 13372
+	// Token: 0x040046B8 RID: 18104
 	NotFound = -3,
-	// Token: 0x0400343D RID: 13373
+	// Token: 0x040046B9 RID: 18105
 	FoundButNotViewed,
-	// Token: 0x0400343E RID: 13374
+	// Token: 0x040046BA RID: 18106
 	FoundAndViewed,
-	// Token: 0x0400343F RID: 13375
+	// Token: 0x040046BB RID: 18107
 	Purchased
 }

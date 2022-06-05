@@ -2,10 +2,10 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000804 RID: 2052
+// Token: 0x02000CCC RID: 3276
 public class OnTriggerEventController : MonoBehaviour
 {
-	// Token: 0x060043FB RID: 17403 RVA: 0x000F09C0 File Offset: 0x000EEBC0
+	// Token: 0x06005D84 RID: 23940 RVA: 0x0015E67C File Offset: 0x0015C87C
 	private bool GetDoesCollisionTriggerEvent(Collider2D collision)
 	{
 		bool result = true;
@@ -24,7 +24,7 @@ public class OnTriggerEventController : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x060043FC RID: 17404 RVA: 0x000F0A19 File Offset: 0x000EEC19
+	// Token: 0x06005D85 RID: 23941 RVA: 0x0003373F File Offset: 0x0003193F
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (this.GetDoesCollisionTriggerEvent(collision) && this.m_triggerEnterEvent != null)
@@ -33,7 +33,7 @@ public class OnTriggerEventController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060043FD RID: 17405 RVA: 0x000F0A37 File Offset: 0x000EEC37
+	// Token: 0x06005D86 RID: 23942 RVA: 0x0003375D File Offset: 0x0003195D
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		if (this.GetDoesCollisionTriggerEvent(collision) && this.m_triggerExitEvent != null)
@@ -42,15 +42,15 @@ public class OnTriggerEventController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003A17 RID: 14871
+	// Token: 0x04004CE3 RID: 19683
 	[SerializeField]
 	private UnityEvent m_triggerEnterEvent;
 
-	// Token: 0x04003A18 RID: 14872
+	// Token: 0x04004CE4 RID: 19684
 	[SerializeField]
 	private UnityEvent m_triggerExitEvent;
 
-	// Token: 0x04003A19 RID: 14873
+	// Token: 0x04004CE5 RID: 19685
 	[SerializeField]
 	private bool m_triggerByCharacterOnly = true;
 }

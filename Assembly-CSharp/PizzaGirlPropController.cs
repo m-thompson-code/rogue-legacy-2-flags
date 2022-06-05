@@ -7,11 +7,11 @@ using RL_Windows;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020004DC RID: 1244
+// Token: 0x0200081C RID: 2076
 public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeechBubble, IAudioEventEmitter
 {
-	// Token: 0x17001180 RID: 4480
-	// (get) Token: 0x06002E73 RID: 11891 RVA: 0x0009D850 File Offset: 0x0009BA50
+	// Token: 0x17001733 RID: 5939
+	// (get) Token: 0x06004003 RID: 16387 RVA: 0x00023579 File Offset: 0x00021779
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -24,8 +24,8 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		}
 	}
 
-	// Token: 0x17001181 RID: 4481
-	// (get) Token: 0x06002E74 RID: 11892 RVA: 0x0009D86C File Offset: 0x0009BA6C
+	// Token: 0x17001734 RID: 5940
+	// (get) Token: 0x06004004 RID: 16388 RVA: 0x00023595 File Offset: 0x00021795
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -34,7 +34,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		}
 	}
 
-	// Token: 0x06002E75 RID: 11893 RVA: 0x0009D874 File Offset: 0x0009BA74
+	// Token: 0x06004005 RID: 16389 RVA: 0x001009A0 File Offset: 0x000FEBA0
 	private bool HasEventDialogue()
 	{
 		switch (this.m_currentState)
@@ -76,8 +76,8 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		return false;
 	}
 
-	// Token: 0x17001182 RID: 4482
-	// (get) Token: 0x06002E76 RID: 11894 RVA: 0x0009D945 File Offset: 0x0009BB45
+	// Token: 0x17001735 RID: 5941
+	// (get) Token: 0x06004006 RID: 16390 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -86,7 +86,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		}
 	}
 
-	// Token: 0x06002E77 RID: 11895 RVA: 0x0009D950 File Offset: 0x0009BB50
+	// Token: 0x06004007 RID: 16391 RVA: 0x00100A74 File Offset: 0x000FEC74
 	protected override void Awake()
 	{
 		base.Awake();
@@ -106,7 +106,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		this.m_teleportToManor = new Action(this.TeleportToManor);
 	}
 
-	// Token: 0x06002E78 RID: 11896 RVA: 0x0009DA50 File Offset: 0x0009BC50
+	// Token: 0x06004008 RID: 16392 RVA: 0x00100B74 File Offset: 0x000FED74
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -121,7 +121,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		}
 	}
 
-	// Token: 0x06002E79 RID: 11897 RVA: 0x0009DAA9 File Offset: 0x0009BCA9
+	// Token: 0x06004009 RID: 16393 RVA: 0x0002359D File Offset: 0x0002179D
 	private void OnDestroy()
 	{
 		if (this.m_elevatorSFXInstance.isValid())
@@ -130,7 +130,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		}
 	}
 
-	// Token: 0x06002E7A RID: 11898 RVA: 0x0009DAC4 File Offset: 0x0009BCC4
+	// Token: 0x0600400A RID: 16394 RVA: 0x00100BD0 File Offset: 0x000FEDD0
 	protected override void InitializePooledPropOnEnter()
 	{
 		if (!this.m_elevatorSFXInstance.isValid())
@@ -195,19 +195,19 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		}
 	}
 
-	// Token: 0x06002E7B RID: 11899 RVA: 0x0009DC29 File Offset: 0x0009BE29
+	// Token: 0x0600400B RID: 16395 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 	}
 
-	// Token: 0x06002E7C RID: 11900 RVA: 0x0009DC2B File Offset: 0x0009BE2B
+	// Token: 0x0600400C RID: 16396 RVA: 0x000235B8 File Offset: 0x000217B8
 	public void TalkToPizzaGirl()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
 		base.StartCoroutine(this.TalkToPizzaGirlCoroutine());
 	}
 
-	// Token: 0x06002E7D RID: 11901 RVA: 0x0009DC46 File Offset: 0x0009BE46
+	// Token: 0x0600400D RID: 16397 RVA: 0x000235D3 File Offset: 0x000217D3
 	private IEnumerator TalkToPizzaGirlCoroutine()
 	{
 		this.m_npcController.SetNPCState(NPCState.AtAttention, false);
@@ -249,7 +249,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		yield break;
 	}
 
-	// Token: 0x06002E7E RID: 11902 RVA: 0x0009DC58 File Offset: 0x0009BE58
+	// Token: 0x0600400E RID: 16398 RVA: 0x00100D38 File Offset: 0x000FEF38
 	private void PlayPizzaGirlUnlockDialogue()
 	{
 		DialogueManager.StartNewDialogue(this.m_npcController, NPCState.Idle);
@@ -267,7 +267,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_endInteraction);
 	}
 
-	// Token: 0x06002E7F RID: 11903 RVA: 0x0009DD09 File Offset: 0x0009BF09
+	// Token: 0x0600400F RID: 16399 RVA: 0x000235E2 File Offset: 0x000217E2
 	private void PizzaGirlUnlockedSkillTreePopup()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.SkillTreePopUp))
@@ -279,7 +279,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		this.EndInteraction();
 	}
 
-	// Token: 0x06002E80 RID: 11904 RVA: 0x0009DD3C File Offset: 0x0009BF3C
+	// Token: 0x06004010 RID: 16400 RVA: 0x00100DEC File Offset: 0x000FEFEC
 	private void PlayUnlockTeleporterDialogue()
 	{
 		if (!SaveManager.PlayerSaveData.GetTeleporterIsUnlocked(base.Room.BiomeType))
@@ -322,14 +322,14 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_endInteraction);
 	}
 
-	// Token: 0x06002E81 RID: 11905 RVA: 0x0009DED1 File Offset: 0x0009C0D1
+	// Token: 0x06004011 RID: 16401 RVA: 0x00023614 File Offset: 0x00021814
 	private void DisplayUnlockTeleporterConfirmMenu()
 	{
 		this.InitializeUnlockTeleporterConfirmMenu();
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x06002E82 RID: 11906 RVA: 0x0009DEE4 File Offset: 0x0009C0E4
+	// Token: 0x06004012 RID: 16402 RVA: 0x00100F84 File Offset: 0x000FF184
 	private void InitializeUnlockTeleporterConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -364,7 +364,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x06002E83 RID: 11907 RVA: 0x0009E010 File Offset: 0x0009C210
+	// Token: 0x06004013 RID: 16403 RVA: 0x001010B0 File Offset: 0x000FF2B0
 	private void UnlockTeleporter()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
@@ -404,13 +404,13 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_endInteraction);
 	}
 
-	// Token: 0x06002E84 RID: 11908 RVA: 0x0009E1A7 File Offset: 0x0009C3A7
+	// Token: 0x06004014 RID: 16404 RVA: 0x00023624 File Offset: 0x00021824
 	private void DisplayUnlockTeleporterObjectiveCompleteHUD()
 	{
 		Messenger<UIMessenger, UIEvent>.Broadcast(UIEvent.DisplayObjectiveCompleteHUD, this, this.m_objectiveCompleteArgs);
 	}
 
-	// Token: 0x06002E85 RID: 11909 RVA: 0x0009E1B8 File Offset: 0x0009C3B8
+	// Token: 0x06004015 RID: 16405 RVA: 0x00101248 File Offset: 0x000FF448
 	private void CancelConfirmMenuSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
@@ -420,7 +420,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_endInteraction);
 	}
 
-	// Token: 0x06002E86 RID: 11910 RVA: 0x0009E214 File Offset: 0x0009C414
+	// Token: 0x06004016 RID: 16406 RVA: 0x001012A4 File Offset: 0x000FF4A4
 	private void PlayLoreDialogue()
 	{
 		if (NPCDialogueManager.CanSpeak(NPCType.PizzaGirl))
@@ -440,7 +440,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		}
 	}
 
-	// Token: 0x06002E87 RID: 11911 RVA: 0x0009E2B0 File Offset: 0x0009C4B0
+	// Token: 0x06004017 RID: 16407 RVA: 0x00101340 File Offset: 0x000FF540
 	private void PlayDockIntroDialogue()
 	{
 		DialogueManager.StartNewDialogue(this.m_npcController, NPCState.Idle);
@@ -449,7 +449,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_endInteraction);
 	}
 
-	// Token: 0x06002E88 RID: 11912 RVA: 0x0009E304 File Offset: 0x0009C504
+	// Token: 0x06004018 RID: 16408 RVA: 0x00101394 File Offset: 0x000FF594
 	private void PlayClosetDialogue()
 	{
 		if (!this.m_oneTimeSpeechBubblePlayed)
@@ -464,7 +464,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_endInteraction);
 	}
 
-	// Token: 0x06002E89 RID: 11913 RVA: 0x0009E373 File Offset: 0x0009C573
+	// Token: 0x06004019 RID: 16409 RVA: 0x00023634 File Offset: 0x00021834
 	private IEnumerator ClosetCoroutine()
 	{
 		DialogueManager.StartNewDialogue(this.m_npcController, NPCState.Idle);
@@ -518,7 +518,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		yield break;
 	}
 
-	// Token: 0x06002E8A RID: 11914 RVA: 0x0009E384 File Offset: 0x0009C584
+	// Token: 0x0600401A RID: 16410 RVA: 0x00101404 File Offset: 0x000FF604
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -560,7 +560,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_endInteraction);
 	}
 
-	// Token: 0x06002E8B RID: 11915 RVA: 0x0009E44C File Offset: 0x0009C64C
+	// Token: 0x0600401B RID: 16411 RVA: 0x001014CC File Offset: 0x000FF6CC
 	private void PlayTeleportToManorDialogue()
 	{
 		DialogueManager.StartNewDialogue(this.m_npcController, NPCState.Idle);
@@ -569,7 +569,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_initializeTeleportToManorConfirmMenu);
 	}
 
-	// Token: 0x06002E8C RID: 11916 RVA: 0x0009E4A0 File Offset: 0x0009C6A0
+	// Token: 0x0600401C RID: 16412 RVA: 0x00101520 File Offset: 0x000FF720
 	private void InitializeTeleportToManorConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -590,7 +590,7 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x06002E8D RID: 11917 RVA: 0x0009E537 File Offset: 0x0009C737
+	// Token: 0x0600401D RID: 16413 RVA: 0x00023643 File Offset: 0x00021843
 	private void TeleportToManor()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
@@ -599,14 +599,14 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		SceneLoader_RL.LoadScene(SceneID.World, TransitionID.FadeToBlackWithLoading);
 	}
 
-	// Token: 0x06002E8E RID: 11918 RVA: 0x0009E555 File Offset: 0x0009C755
+	// Token: 0x0600401E RID: 16414 RVA: 0x00023661 File Offset: 0x00021861
 	private void CancelTeleportToManor()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 		this.EndInteraction();
 	}
 
-	// Token: 0x06002E8F RID: 11919 RVA: 0x0009E565 File Offset: 0x0009C765
+	// Token: 0x0600401F RID: 16415 RVA: 0x00023671 File Offset: 0x00021871
 	private IEnumerator MovePlayerToPizzaGirl()
 	{
 		PlayerManager.GetPlayerController().SetVelocity(0f, 0f, false);
@@ -625,101 +625,101 @@ public class PizzaGirlPropController : BaseSpecialPropController, IDisplaySpeech
 		yield break;
 	}
 
-	// Token: 0x06002E90 RID: 11920 RVA: 0x0009E574 File Offset: 0x0009C774
+	// Token: 0x06004020 RID: 16416 RVA: 0x00023680 File Offset: 0x00021880
 	private void EndInteraction()
 	{
 		this.m_interactable.SetIsInteractableActive(true);
 		AudioManager.PlayOneShotAttached(this, this.m_farewellAudioEvent, base.gameObject);
 	}
 
-	// Token: 0x04002510 RID: 9488
+	// Token: 0x04003215 RID: 12821
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x04002511 RID: 9489
+	// Token: 0x04003216 RID: 12822
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x04002512 RID: 9490
+	// Token: 0x04003217 RID: 12823
 	[SerializeField]
 	[EventRef]
 	private string m_farewellAudioEvent;
 
-	// Token: 0x04002513 RID: 9491
+	// Token: 0x04003218 RID: 12824
 	private PizzaGirlPropController.PizzaGirlState m_currentState;
 
-	// Token: 0x04002514 RID: 9492
+	// Token: 0x04003219 RID: 12825
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002515 RID: 9493
+	// Token: 0x0400321A RID: 12826
 	private byte m_genericDialogueIndex;
 
-	// Token: 0x04002516 RID: 9494
+	// Token: 0x0400321B RID: 12827
 	private Prop m_prop;
 
-	// Token: 0x04002517 RID: 9495
+	// Token: 0x0400321C RID: 12828
 	private EventInstance m_elevatorSFXInstance;
 
-	// Token: 0x04002518 RID: 9496
+	// Token: 0x0400321D RID: 12829
 	private bool m_oneTimeSpeechBubblePlayed;
 
-	// Token: 0x04002519 RID: 9497
+	// Token: 0x0400321E RID: 12830
 	private bool m_finalJonahSpeechPlayed;
 
-	// Token: 0x0400251A RID: 9498
+	// Token: 0x0400321F RID: 12831
 	private GoldChangedEventArgs m_goldChangedEventArgs;
 
-	// Token: 0x0400251B RID: 9499
+	// Token: 0x04003220 RID: 12832
 	private ObjectiveCompleteHUDEventArgs m_objectiveCompleteArgs;
 
-	// Token: 0x0400251C RID: 9500
+	// Token: 0x04003221 RID: 12833
 	private Action m_endInteraction;
 
-	// Token: 0x0400251D RID: 9501
+	// Token: 0x04003222 RID: 12834
 	private Action m_pizzaGirlUnlockedSkillTreePopup;
 
-	// Token: 0x0400251E RID: 9502
+	// Token: 0x04003223 RID: 12835
 	private Action m_displayUnlockTeleporterConfirmMenu;
 
-	// Token: 0x0400251F RID: 9503
+	// Token: 0x04003224 RID: 12836
 	private Action m_displayUnlockTeleporterObjectiveCompleteHUD;
 
-	// Token: 0x04002520 RID: 9504
+	// Token: 0x04003225 RID: 12837
 	private Action m_initializeTeleportToManorConfirmMenu;
 
-	// Token: 0x04002521 RID: 9505
+	// Token: 0x04003226 RID: 12838
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x04002522 RID: 9506
+	// Token: 0x04003227 RID: 12839
 	private Action m_unlockTeleporter;
 
-	// Token: 0x04002523 RID: 9507
+	// Token: 0x04003228 RID: 12840
 	private Action m_cancelTeleportToManor;
 
-	// Token: 0x04002524 RID: 9508
+	// Token: 0x04003229 RID: 12841
 	private Action m_teleportToManor;
 
-	// Token: 0x04002525 RID: 9509
+	// Token: 0x0400322A RID: 12842
 	private NPCController m_npcController;
 
-	// Token: 0x04002526 RID: 9510
+	// Token: 0x0400322B RID: 12843
 	private BaseEffect m_shakeEffect;
 
-	// Token: 0x02000CB9 RID: 3257
+	// Token: 0x0200081D RID: 2077
 	private enum PizzaGirlState
 	{
-		// Token: 0x0400519A RID: 20890
+		// Token: 0x0400322D RID: 12845
 		None,
-		// Token: 0x0400519B RID: 20891
+		// Token: 0x0400322E RID: 12846
 		InTransitionRoom,
-		// Token: 0x0400519C RID: 20892
+		// Token: 0x0400322F RID: 12847
 		InUnlockRoom,
-		// Token: 0x0400519D RID: 20893
+		// Token: 0x04003230 RID: 12848
 		InHubTown,
-		// Token: 0x0400519E RID: 20894
+		// Token: 0x04003231 RID: 12849
 		InCloset,
-		// Token: 0x0400519F RID: 20895
+		// Token: 0x04003232 RID: 12850
 		InAboveGround
 	}
 }

@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020007CD RID: 1997
+// Token: 0x02000C93 RID: 3219
 public class RuneEquippedLevelChangeEventArgs : EventArgs
 {
-	// Token: 0x060042E0 RID: 17120 RVA: 0x000EC1B2 File Offset: 0x000EA3B2
+	// Token: 0x06005C69 RID: 23657 RVA: 0x00032BC8 File Offset: 0x00030DC8
 	public RuneEquippedLevelChangeEventArgs(RuneType runeType, int newLevel)
 	{
 		this.Initialize(runeType, newLevel);
 	}
 
-	// Token: 0x060042E1 RID: 17121 RVA: 0x000EC1C2 File Offset: 0x000EA3C2
+	// Token: 0x06005C6A RID: 23658 RVA: 0x00032BD8 File Offset: 0x00030DD8
 	public void Initialize(RuneType runeType, int newLevel)
 	{
 		this.RuneType = runeType;
 		this.NewLevel = newLevel;
 	}
 
-	// Token: 0x170016A5 RID: 5797
-	// (get) Token: 0x060042E2 RID: 17122 RVA: 0x000EC1D2 File Offset: 0x000EA3D2
-	// (set) Token: 0x060042E3 RID: 17123 RVA: 0x000EC1DA File Offset: 0x000EA3DA
+	// Token: 0x17001EA3 RID: 7843
+	// (get) Token: 0x06005C6B RID: 23659 RVA: 0x00032BE8 File Offset: 0x00030DE8
+	// (set) Token: 0x06005C6C RID: 23660 RVA: 0x00032BF0 File Offset: 0x00030DF0
 	public int NewLevel { get; private set; }
 
-	// Token: 0x170016A6 RID: 5798
-	// (get) Token: 0x060042E4 RID: 17124 RVA: 0x000EC1E3 File Offset: 0x000EA3E3
-	// (set) Token: 0x060042E5 RID: 17125 RVA: 0x000EC1EB File Offset: 0x000EA3EB
+	// Token: 0x17001EA4 RID: 7844
+	// (get) Token: 0x06005C6D RID: 23661 RVA: 0x00032BF9 File Offset: 0x00030DF9
+	// (set) Token: 0x06005C6E RID: 23662 RVA: 0x00032C01 File Offset: 0x00030E01
 	public RuneType RuneType { get; private set; }
 }

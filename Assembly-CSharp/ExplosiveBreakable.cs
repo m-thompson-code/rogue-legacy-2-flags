@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200042E RID: 1070
+// Token: 0x020006F4 RID: 1780
 public class ExplosiveBreakable : Breakable
 {
-	// Token: 0x17000F93 RID: 3987
-	// (get) Token: 0x0600275C RID: 10076 RVA: 0x00083044 File Offset: 0x00081244
+	// Token: 0x17001472 RID: 5234
+	// (get) Token: 0x0600365F RID: 13919 RVA: 0x0001DE6E File Offset: 0x0001C06E
 	public override bool IsBroken
 	{
 		get
@@ -15,14 +15,14 @@ public class ExplosiveBreakable : Breakable
 		}
 	}
 
-	// Token: 0x0600275D RID: 10077 RVA: 0x00083059 File Offset: 0x00081259
+	// Token: 0x06003660 RID: 13920 RVA: 0x0001DE83 File Offset: 0x0001C083
 	private void OnEnable()
 	{
 		ProjectileManager.Instance.AddProjectileToPool(this.m_explosionProjectileName);
 		ProjectileManager.Instance.AddProjectileToPool(this.m_warningProjectileName);
 	}
 
-	// Token: 0x0600275E RID: 10078 RVA: 0x0008307C File Offset: 0x0008127C
+	// Token: 0x06003661 RID: 13921 RVA: 0x000E3D34 File Offset: 0x000E1F34
 	private void OnDisable()
 	{
 		this.m_isExploding = false;
@@ -33,7 +33,7 @@ public class ExplosiveBreakable : Breakable
 		this.m_warningProjectile = null;
 	}
 
-	// Token: 0x0600275F RID: 10079 RVA: 0x000830D5 File Offset: 0x000812D5
+	// Token: 0x06003662 RID: 13922 RVA: 0x0001DEA5 File Offset: 0x0001C0A5
 	protected override void TriggerCollision(IDamageObj damageObj)
 	{
 		if (!this.m_isExploding)
@@ -42,13 +42,13 @@ public class ExplosiveBreakable : Breakable
 		}
 	}
 
-	// Token: 0x06002760 RID: 10080 RVA: 0x000830E6 File Offset: 0x000812E6
+	// Token: 0x06003663 RID: 13923 RVA: 0x0001DEB6 File Offset: 0x0001C0B6
 	protected override void Break(IDamageObj damageObj)
 	{
 		base.StartCoroutine(this.ExplosionCoroutine(damageObj));
 	}
 
-	// Token: 0x06002761 RID: 10081 RVA: 0x000830F6 File Offset: 0x000812F6
+	// Token: 0x06003664 RID: 13924 RVA: 0x0001DEC6 File Offset: 0x0001C0C6
 	private IEnumerator ExplosionCoroutine(IDamageObj damageObj)
 	{
 		this.m_isExploding = true;
@@ -83,21 +83,21 @@ public class ExplosiveBreakable : Breakable
 		yield break;
 	}
 
-	// Token: 0x040020FE RID: 8446
+	// Token: 0x04002C21 RID: 11297
 	[SerializeField]
 	private string m_explosionProjectileName;
 
-	// Token: 0x040020FF RID: 8447
+	// Token: 0x04002C22 RID: 11298
 	[SerializeField]
 	private string m_warningProjectileName;
 
-	// Token: 0x04002100 RID: 8448
+	// Token: 0x04002C23 RID: 11299
 	[SerializeField]
 	private float m_explosionWarningDuration = 1f;
 
-	// Token: 0x04002101 RID: 8449
+	// Token: 0x04002C24 RID: 11300
 	private bool m_isExploding;
 
-	// Token: 0x04002102 RID: 8450
+	// Token: 0x04002C25 RID: 11301
 	private Projectile_RL m_warningProjectile;
 }

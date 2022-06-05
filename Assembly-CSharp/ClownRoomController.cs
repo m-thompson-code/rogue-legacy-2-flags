@@ -3,11 +3,11 @@ using System.Collections;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004FB RID: 1275
+// Token: 0x02000858 RID: 2136
 public class ClownRoomController : MonoBehaviour
 {
-	// Token: 0x170011B6 RID: 4534
-	// (get) Token: 0x06002F98 RID: 12184 RVA: 0x000A2F27 File Offset: 0x000A1127
+	// Token: 0x1700179F RID: 6047
+	// (get) Token: 0x060041CB RID: 16843 RVA: 0x000246D2 File Offset: 0x000228D2
 	public int BronzeGoal
 	{
 		get
@@ -16,8 +16,8 @@ public class ClownRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170011B7 RID: 4535
-	// (get) Token: 0x06002F99 RID: 12185 RVA: 0x000A2F2F File Offset: 0x000A112F
+	// Token: 0x170017A0 RID: 6048
+	// (get) Token: 0x060041CC RID: 16844 RVA: 0x000246DA File Offset: 0x000228DA
 	public int SilverGoal
 	{
 		get
@@ -26,8 +26,8 @@ public class ClownRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170011B8 RID: 4536
-	// (get) Token: 0x06002F9A RID: 12186 RVA: 0x000A2F37 File Offset: 0x000A1137
+	// Token: 0x170017A1 RID: 6049
+	// (get) Token: 0x060041CD RID: 16845 RVA: 0x000246E2 File Offset: 0x000228E2
 	public int GoldGoal
 	{
 		get
@@ -36,7 +36,7 @@ public class ClownRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002F9B RID: 12187 RVA: 0x000A2F3F File Offset: 0x000A113F
+	// Token: 0x060041CE RID: 16846 RVA: 0x000246EA File Offset: 0x000228EA
 	public ClownGoalType GetClownRewardType()
 	{
 		if (this.CurrentGoalAmount >= this.GoldGoal)
@@ -54,13 +54,13 @@ public class ClownRoomController : MonoBehaviour
 		return ClownGoalType.None;
 	}
 
-	// Token: 0x170011B9 RID: 4537
-	// (get) Token: 0x06002F9C RID: 12188 RVA: 0x000A2F72 File Offset: 0x000A1172
-	// (set) Token: 0x06002F9D RID: 12189 RVA: 0x000A2F7A File Offset: 0x000A117A
+	// Token: 0x170017A2 RID: 6050
+	// (get) Token: 0x060041CF RID: 16847 RVA: 0x0002471D File Offset: 0x0002291D
+	// (set) Token: 0x060041D0 RID: 16848 RVA: 0x00024725 File Offset: 0x00022925
 	public int CurrentGoalAmount { get; protected set; }
 
-	// Token: 0x170011BA RID: 4538
-	// (get) Token: 0x06002F9E RID: 12190 RVA: 0x000A2F83 File Offset: 0x000A1183
+	// Token: 0x170017A3 RID: 6051
+	// (get) Token: 0x060041D1 RID: 16849 RVA: 0x0002472E File Offset: 0x0002292E
 	public int StartingAmmo
 	{
 		get
@@ -69,42 +69,42 @@ public class ClownRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170011BB RID: 4539
-	// (get) Token: 0x06002F9F RID: 12191 RVA: 0x000A2F8B File Offset: 0x000A118B
-	// (set) Token: 0x06002FA0 RID: 12192 RVA: 0x000A2F93 File Offset: 0x000A1193
+	// Token: 0x170017A4 RID: 6052
+	// (get) Token: 0x060041D2 RID: 16850 RVA: 0x00024736 File Offset: 0x00022936
+	// (set) Token: 0x060041D3 RID: 16851 RVA: 0x0002473E File Offset: 0x0002293E
 	public int CurrentAmmo { get; protected set; }
 
-	// Token: 0x170011BC RID: 4540
-	// (get) Token: 0x06002FA1 RID: 12193 RVA: 0x000A2F9C File Offset: 0x000A119C
-	// (set) Token: 0x06002FA2 RID: 12194 RVA: 0x000A2FA4 File Offset: 0x000A11A4
+	// Token: 0x170017A5 RID: 6053
+	// (get) Token: 0x060041D4 RID: 16852 RVA: 0x00024747 File Offset: 0x00022947
+	// (set) Token: 0x060041D5 RID: 16853 RVA: 0x0002474F File Offset: 0x0002294F
 	public ClownRoomEventHandler BronzeGoalReachedEvent { get; set; }
 
-	// Token: 0x170011BD RID: 4541
-	// (get) Token: 0x06002FA3 RID: 12195 RVA: 0x000A2FAD File Offset: 0x000A11AD
-	// (set) Token: 0x06002FA4 RID: 12196 RVA: 0x000A2FB5 File Offset: 0x000A11B5
+	// Token: 0x170017A6 RID: 6054
+	// (get) Token: 0x060041D6 RID: 16854 RVA: 0x00024758 File Offset: 0x00022958
+	// (set) Token: 0x060041D7 RID: 16855 RVA: 0x00024760 File Offset: 0x00022960
 	public ClownRoomEventHandler SilverGoalReachedEvent { get; set; }
 
-	// Token: 0x170011BE RID: 4542
-	// (get) Token: 0x06002FA5 RID: 12197 RVA: 0x000A2FBE File Offset: 0x000A11BE
-	// (set) Token: 0x06002FA6 RID: 12198 RVA: 0x000A2FC6 File Offset: 0x000A11C6
+	// Token: 0x170017A7 RID: 6055
+	// (get) Token: 0x060041D8 RID: 16856 RVA: 0x00024769 File Offset: 0x00022969
+	// (set) Token: 0x060041D9 RID: 16857 RVA: 0x00024771 File Offset: 0x00022971
 	public ClownRoomEventHandler GoldGoalReachedEvent { get; set; }
 
-	// Token: 0x170011BF RID: 4543
-	// (get) Token: 0x06002FA7 RID: 12199 RVA: 0x000A2FCF File Offset: 0x000A11CF
-	// (set) Token: 0x06002FA8 RID: 12200 RVA: 0x000A2FD7 File Offset: 0x000A11D7
+	// Token: 0x170017A8 RID: 6056
+	// (get) Token: 0x060041DA RID: 16858 RVA: 0x0002477A File Offset: 0x0002297A
+	// (set) Token: 0x060041DB RID: 16859 RVA: 0x00024782 File Offset: 0x00022982
 	public ClownRoomEventHandler CurrentAmmoChangedEvent { get; set; }
 
-	// Token: 0x170011C0 RID: 4544
-	// (get) Token: 0x06002FA9 RID: 12201 RVA: 0x000A2FE0 File Offset: 0x000A11E0
-	// (set) Token: 0x06002FAA RID: 12202 RVA: 0x000A2FE8 File Offset: 0x000A11E8
+	// Token: 0x170017A9 RID: 6057
+	// (get) Token: 0x060041DC RID: 16860 RVA: 0x0002478B File Offset: 0x0002298B
+	// (set) Token: 0x060041DD RID: 16861 RVA: 0x00024793 File Offset: 0x00022993
 	public ClownRoomEventHandler CurrentGoalAmountChangedEvent { get; set; }
 
-	// Token: 0x170011C1 RID: 4545
-	// (get) Token: 0x06002FAB RID: 12203 RVA: 0x000A2FF1 File Offset: 0x000A11F1
-	// (set) Token: 0x06002FAC RID: 12204 RVA: 0x000A2FF9 File Offset: 0x000A11F9
+	// Token: 0x170017AA RID: 6058
+	// (get) Token: 0x060041DE RID: 16862 RVA: 0x0002479C File Offset: 0x0002299C
+	// (set) Token: 0x060041DF RID: 16863 RVA: 0x000247A4 File Offset: 0x000229A4
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x06002FAD RID: 12205 RVA: 0x000A3004 File Offset: 0x000A1204
+	// Token: 0x060041E0 RID: 16864 RVA: 0x00108B28 File Offset: 0x00106D28
 	private void Awake()
 	{
 		this.Room = base.GetComponent<Room>();
@@ -116,7 +116,7 @@ public class ClownRoomController : MonoBehaviour
 		this.m_tunnelSpawnController = this.Room.gameObject.GetComponentInChildren<TunnelSpawnController>();
 	}
 
-	// Token: 0x06002FAE RID: 12206 RVA: 0x000A30A3 File Offset: 0x000A12A3
+	// Token: 0x060041E1 RID: 16865 RVA: 0x000247AD File Offset: 0x000229AD
 	private IEnumerator Start()
 	{
 		yield return new WaitUntil(() => PlayerManager.IsInstantiated);
@@ -126,13 +126,13 @@ public class ClownRoomController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002FAF RID: 12207 RVA: 0x000A30B2 File Offset: 0x000A12B2
+	// Token: 0x060041E2 RID: 16866 RVA: 0x000247BC File Offset: 0x000229BC
 	private void InitializeChallengeAbility()
 	{
 		this.m_challengeAbility = PlayerManager.GetPlayerController().CastAbility.CreateAbilityInstance(CastAbilityType.Weapon, this.m_challengeAbilityType);
 	}
 
-	// Token: 0x06002FB0 RID: 12208 RVA: 0x000A30D0 File Offset: 0x000A12D0
+	// Token: 0x060041E3 RID: 16867 RVA: 0x000247DA File Offset: 0x000229DA
 	protected virtual void OnPlayerEnter(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		this.ResetClownRoom();
@@ -142,7 +142,7 @@ public class ClownRoomController : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerWeaponAbilityCast, this.m_onCastAbility);
 	}
 
-	// Token: 0x06002FB1 RID: 12209 RVA: 0x000A3106 File Offset: 0x000A1306
+	// Token: 0x060041E4 RID: 16868 RVA: 0x00024810 File Offset: 0x00022A10
 	protected virtual void OnPlayerExit(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		this.RevertAbilities();
@@ -151,7 +151,7 @@ public class ClownRoomController : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerWeaponAbilityCast, this.m_onCastAbility);
 	}
 
-	// Token: 0x06002FB2 RID: 12210 RVA: 0x000A3138 File Offset: 0x000A1338
+	// Token: 0x060041E5 RID: 16869 RVA: 0x00108BC8 File Offset: 0x00106DC8
 	protected virtual void OnEnemyDeath(object sender, EventArgs args)
 	{
 		EnemyRank enemyRank = (args as EnemyDeathEventArgs).Victim.EnemyRank;
@@ -183,13 +183,13 @@ public class ClownRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002FB3 RID: 12211 RVA: 0x000A31F5 File Offset: 0x000A13F5
+	// Token: 0x060041E6 RID: 16870 RVA: 0x00024840 File Offset: 0x00022A40
 	protected virtual void OnCastAbility(object sender, EventArgs args)
 	{
 		base.StartCoroutine(this.OnCastAbilityCoroutine());
 	}
 
-	// Token: 0x06002FB4 RID: 12212 RVA: 0x000A3204 File Offset: 0x000A1404
+	// Token: 0x060041E7 RID: 16871 RVA: 0x0002484F File Offset: 0x00022A4F
 	private IEnumerator OnCastAbilityCoroutine()
 	{
 		yield return this.m_waitUntilAttackReleasedYield;
@@ -206,13 +206,13 @@ public class ClownRoomController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002FB5 RID: 12213 RVA: 0x000A3213 File Offset: 0x000A1413
+	// Token: 0x060041E8 RID: 16872 RVA: 0x0002485E File Offset: 0x00022A5E
 	protected virtual void EndClownRoom()
 	{
 		base.StartCoroutine(this.EndClownRoomCoroutine());
 	}
 
-	// Token: 0x06002FB6 RID: 12214 RVA: 0x000A3222 File Offset: 0x000A1422
+	// Token: 0x060041E9 RID: 16873 RVA: 0x0002486D File Offset: 0x00022A6D
 	protected virtual IEnumerator EndClownRoomCoroutine()
 	{
 		RewiredMapController.SetMapEnabled(GameInputMode.Game, false);
@@ -231,7 +231,7 @@ public class ClownRoomController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002FB7 RID: 12215 RVA: 0x000A3234 File Offset: 0x000A1434
+	// Token: 0x060041EA RID: 16874 RVA: 0x00108C88 File Offset: 0x00106E88
 	protected virtual void SetEndingDialogue()
 	{
 		DialogueManager.StartNewDialogue(null, NPCState.Idle);
@@ -257,7 +257,7 @@ public class ClownRoomController : MonoBehaviour
 		DialogueManager.AddNonLocDialogue("Clown", "Well, you might as well come back for your reward.", false, DialogueWindowStyle.HorizontalUpper, DialoguePortraitType.None, NPCState.None, 0.015f);
 	}
 
-	// Token: 0x06002FB8 RID: 12216 RVA: 0x000A335E File Offset: 0x000A155E
+	// Token: 0x060041EB RID: 16875 RVA: 0x0002487C File Offset: 0x00022A7C
 	private void ExitClownRoom()
 	{
 		if (this.m_tunnelSpawnController.Tunnel != null)
@@ -266,7 +266,7 @@ public class ClownRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002FB9 RID: 12217 RVA: 0x000A3388 File Offset: 0x000A1588
+	// Token: 0x060041EC RID: 16876 RVA: 0x00108DB4 File Offset: 0x00106FB4
 	protected void AssignRoomAbilities()
 	{
 		if (this.m_challengeAbility == null)
@@ -290,7 +290,7 @@ public class ClownRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002FBA RID: 12218 RVA: 0x000A345C File Offset: 0x000A165C
+	// Token: 0x060041ED RID: 16877 RVA: 0x00108E88 File Offset: 0x00107088
 	protected void RevertAbilities()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -303,14 +303,14 @@ public class ClownRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002FBB RID: 12219 RVA: 0x000A34CB File Offset: 0x000A16CB
+	// Token: 0x060041EE RID: 16878 RVA: 0x000248A3 File Offset: 0x00022AA3
 	public virtual void ResetClownRoom()
 	{
 		this.CurrentAmmo = this.StartingAmmo;
 		this.CurrentGoalAmount = 0;
 	}
 
-	// Token: 0x06002FBC RID: 12220 RVA: 0x000A34E0 File Offset: 0x000A16E0
+	// Token: 0x060041EF RID: 16879 RVA: 0x00108EF8 File Offset: 0x001070F8
 	private void OnDestroy()
 	{
 		if (this.Room != null)
@@ -320,53 +320,53 @@ public class ClownRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040025EF RID: 9711
+	// Token: 0x04003381 RID: 13185
 	[SerializeField]
 	private AbilityType m_challengeAbilityType;
 
-	// Token: 0x040025F0 RID: 9712
+	// Token: 0x04003382 RID: 13186
 	[SerializeField]
 	private int m_bronzeGoal;
 
-	// Token: 0x040025F1 RID: 9713
+	// Token: 0x04003383 RID: 13187
 	[SerializeField]
 	private int m_silverGoal;
 
-	// Token: 0x040025F2 RID: 9714
+	// Token: 0x04003384 RID: 13188
 	[SerializeField]
 	private int m_goldGoal;
 
-	// Token: 0x040025F3 RID: 9715
+	// Token: 0x04003385 RID: 13189
 	[SerializeField]
 	private int m_startingAmmo;
 
-	// Token: 0x040025F4 RID: 9716
+	// Token: 0x04003386 RID: 13190
 	private ClownRoomEnteredEventArgs m_clownRoomArgs;
 
-	// Token: 0x040025F5 RID: 9717
+	// Token: 0x04003387 RID: 13191
 	private BaseAbility_RL m_challengeAbility;
 
-	// Token: 0x040025F6 RID: 9718
+	// Token: 0x04003388 RID: 13192
 	private BaseAbility_RL m_storedWeaponAbility;
 
-	// Token: 0x040025F7 RID: 9719
+	// Token: 0x04003389 RID: 13193
 	private BaseAbility_RL m_storedTalentAbility;
 
-	// Token: 0x040025F8 RID: 9720
+	// Token: 0x0400338A RID: 13194
 	private BaseAbility_RL m_storedSpellAbility;
 
-	// Token: 0x040025F9 RID: 9721
+	// Token: 0x0400338B RID: 13195
 	private TunnelSpawnController m_tunnelSpawnController;
 
-	// Token: 0x040025FA RID: 9722
+	// Token: 0x0400338C RID: 13196
 	private WaitUntil m_waitUntilAttackReleasedYield;
 
-	// Token: 0x040025FB RID: 9723
+	// Token: 0x0400338D RID: 13197
 	private WaitUntil m_clownRoomEndedYield;
 
-	// Token: 0x040025FC RID: 9724
+	// Token: 0x0400338E RID: 13198
 	private Action<MonoBehaviour, EventArgs> m_onEnemyDeath;
 
-	// Token: 0x040025FD RID: 9725
+	// Token: 0x0400338F RID: 13199
 	private Action<MonoBehaviour, EventArgs> m_onCastAbility;
 }

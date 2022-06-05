@@ -5,19 +5,19 @@ using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x02000965 RID: 2405
+	// Token: 0x02000F0D RID: 3853
 	[AddComponentMenu("Corgi Engine/Character/Abilities/Character Dash")]
 	public class CharacterDash : CharacterAbility
 	{
-		// Token: 0x0600512D RID: 20781 RVA: 0x0011EB60 File Offset: 0x0011CD60
+		// Token: 0x06006F21 RID: 28449 RVA: 0x0003D390 File Offset: 0x0003B590
 		public override string HelpBoxText()
 		{
 			return "This component allows your character to dash. Here you can define the distance the dash should cover, how much force to apply, and the cooldown between the end of a dash and the start of the next one.";
 		}
 
-		// Token: 0x17001AE8 RID: 6888
-		// (get) Token: 0x0600512E RID: 20782 RVA: 0x0011EB67 File Offset: 0x0011CD67
-		// (set) Token: 0x0600512F RID: 20783 RVA: 0x0011EB6F File Offset: 0x0011CD6F
+		// Token: 0x1700242B RID: 9259
+		// (get) Token: 0x06006F22 RID: 28450 RVA: 0x0003D397 File Offset: 0x0003B597
+		// (set) Token: 0x06006F23 RID: 28451 RVA: 0x0003D39F File Offset: 0x0003B59F
 		public virtual float DashDistance
 		{
 			get
@@ -30,19 +30,19 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005130 RID: 20784 RVA: 0x0011EB78 File Offset: 0x0011CD78
+		// Token: 0x06006F24 RID: 28452 RVA: 0x0003D3A8 File Offset: 0x0003B5A8
 		protected override void Initialization()
 		{
 			base.Initialization();
 			this._characterHorizontalMovement = base.GetComponent<CharacterHorizontalMovement>();
 		}
 
-		// Token: 0x06005131 RID: 20785 RVA: 0x0011EB8C File Offset: 0x0011CD8C
+		// Token: 0x06006F25 RID: 28453 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected override void HandleInput()
 		{
 		}
 
-		// Token: 0x06005132 RID: 20786 RVA: 0x0011EB90 File Offset: 0x0011CD90
+		// Token: 0x06006F26 RID: 28454 RVA: 0x0018CD90 File Offset: 0x0018AF90
 		public override void ProcessAbility()
 		{
 			base.ProcessAbility();
@@ -58,12 +58,12 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005133 RID: 20787 RVA: 0x0011EC00 File Offset: 0x0011CE00
+		// Token: 0x06006F27 RID: 28455 RVA: 0x00002FCA File Offset: 0x000011CA
 		public virtual void StartDash()
 		{
 		}
 
-		// Token: 0x06005134 RID: 20788 RVA: 0x0011EC02 File Offset: 0x0011CE02
+		// Token: 0x06006F28 RID: 28456 RVA: 0x0003D3BC File Offset: 0x0003B5BC
 		public virtual void InitiateDash()
 		{
 			this._movement.ChangeState(CharacterStates.MovementStates.Dashing);
@@ -72,7 +72,7 @@ namespace MoreMountains.CorgiEngine
 			base.StartCoroutine(this._dashCoroutine);
 		}
 
-		// Token: 0x06005135 RID: 20789 RVA: 0x0011EC3B File Offset: 0x0011CE3B
+		// Token: 0x06006F29 RID: 28457 RVA: 0x0003D3F5 File Offset: 0x0003B5F5
 		protected virtual IEnumerator Dash()
 		{
 			if (!this.AbilityPermitted || this._condition.CurrentState != CharacterStates.CharacterConditions.Normal)
@@ -108,7 +108,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x06005136 RID: 20790 RVA: 0x0011EC4C File Offset: 0x0011CE4C
+		// Token: 0x06006F2A RID: 28458 RVA: 0x0018CE00 File Offset: 0x0018B000
 		public virtual void StopDash()
 		{
 			base.StopCoroutine(this._dashCoroutine);
@@ -122,60 +122,60 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005137 RID: 20791 RVA: 0x0011ECBD File Offset: 0x0011CEBD
+		// Token: 0x06006F2B RID: 28459 RVA: 0x0003D404 File Offset: 0x0003B604
 		protected override void InitializeAnimatorParameters()
 		{
 			this.RegisterAnimatorParameter("Dashing", AnimatorControllerParameterType.Bool);
 		}
 
-		// Token: 0x06005138 RID: 20792 RVA: 0x0011ECCB File Offset: 0x0011CECB
+		// Token: 0x06006F2C RID: 28460 RVA: 0x0003D412 File Offset: 0x0003B612
 		public override void UpdateAnimator()
 		{
 			MMAnimator.UpdateAnimatorBool(this._animator, "Dashing", this._movement.CurrentState == CharacterStates.MovementStates.Dashing, this._character._animatorParameters);
 		}
 
-		// Token: 0x0400434D RID: 17229
+		// Token: 0x04005954 RID: 22868
 		[Header("Dash")]
 		[SerializeField]
 		protected float m_dashDistance = 3f;
 
-		// Token: 0x0400434E RID: 17230
+		// Token: 0x04005955 RID: 22869
 		public float DashForce = 40f;
 
-		// Token: 0x0400434F RID: 17231
+		// Token: 0x04005956 RID: 22870
 		public float DashCooldown = 1f;
 
-		// Token: 0x04004350 RID: 17232
+		// Token: 0x04005957 RID: 22871
 		protected float _cooldownTimeStamp;
 
-		// Token: 0x04004351 RID: 17233
+		// Token: 0x04005958 RID: 22872
 		protected CharacterHorizontalMovement _characterHorizontalMovement;
 
-		// Token: 0x04004352 RID: 17234
+		// Token: 0x04005959 RID: 22873
 		protected float _startTime;
 
-		// Token: 0x04004353 RID: 17235
+		// Token: 0x0400595A RID: 22874
 		protected Vector3 _initialPosition;
 
-		// Token: 0x04004354 RID: 17236
+		// Token: 0x0400595B RID: 22875
 		protected float _dashDirection;
 
-		// Token: 0x04004355 RID: 17237
+		// Token: 0x0400595C RID: 22876
 		protected float _distanceTraveled;
 
-		// Token: 0x04004356 RID: 17238
+		// Token: 0x0400595D RID: 22877
 		protected bool _shouldKeepDashing = true;
 
-		// Token: 0x04004357 RID: 17239
+		// Token: 0x0400595E RID: 22878
 		protected float _computedDashForce;
 
-		// Token: 0x04004358 RID: 17240
+		// Token: 0x0400595F RID: 22879
 		protected float _slopeAngleSave;
 
-		// Token: 0x04004359 RID: 17241
+		// Token: 0x04005960 RID: 22880
 		protected bool _dashEndedNaturally = true;
 
-		// Token: 0x0400435A RID: 17242
+		// Token: 0x04005961 RID: 22881
 		protected IEnumerator _dashCoroutine;
 	}
 }

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000336 RID: 822
+// Token: 0x02000591 RID: 1425
 public class EnemyKnockedFar_Trait : BaseTrait
 {
-	// Token: 0x17000DB9 RID: 3513
-	// (get) Token: 0x06001FFB RID: 8187 RVA: 0x0006607C File Offset: 0x0006427C
+	// Token: 0x17001200 RID: 4608
+	// (get) Token: 0x06002D0D RID: 11533 RVA: 0x00018E60 File Offset: 0x00017060
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class EnemyKnockedFar_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FFC RID: 8188 RVA: 0x00066083 File Offset: 0x00064283
+	// Token: 0x06002D0E RID: 11534 RVA: 0x00018E67 File Offset: 0x00017067
 	private IEnumerator Start()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -26,7 +26,7 @@ public class EnemyKnockedFar_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FFD RID: 8189 RVA: 0x0006608B File Offset: 0x0006428B
+	// Token: 0x06002D0F RID: 11535 RVA: 0x00018E6F File Offset: 0x0001706F
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

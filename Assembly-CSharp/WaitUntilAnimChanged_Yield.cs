@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200081F RID: 2079
+// Token: 0x02000CF6 RID: 3318
 public class WaitUntilAnimChanged_Yield : IEnumerator
 {
-	// Token: 0x060044E2 RID: 17634 RVA: 0x000F4F2B File Offset: 0x000F312B
+	// Token: 0x06005EAE RID: 24238 RVA: 0x00034325 File Offset: 0x00032525
 	public WaitUntilAnimChanged_Yield(Animator animator, string animatorBoolName, AnimationLayer layer = AnimationLayer.Base)
 	{
 		this.CreateNew(animator, animatorBoolName, layer);
 	}
 
-	// Token: 0x17001712 RID: 5906
-	// (get) Token: 0x060044E3 RID: 17635 RVA: 0x000F4F3C File Offset: 0x000F313C
+	// Token: 0x17001F20 RID: 7968
+	// (get) Token: 0x06005EAF RID: 24239 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public object Current
 	{
 		get
@@ -21,7 +21,7 @@ public class WaitUntilAnimChanged_Yield : IEnumerator
 		}
 	}
 
-	// Token: 0x060044E4 RID: 17636 RVA: 0x000F4F40 File Offset: 0x000F3140
+	// Token: 0x06005EB0 RID: 24240 RVA: 0x00162B20 File Offset: 0x00160D20
 	public bool MoveNext()
 	{
 		if (this.m_needsReset)
@@ -36,7 +36,7 @@ public class WaitUntilAnimChanged_Yield : IEnumerator
 		return true;
 	}
 
-	// Token: 0x060044E5 RID: 17637 RVA: 0x000F4F98 File Offset: 0x000F3198
+	// Token: 0x06005EB1 RID: 24241 RVA: 0x00034336 File Offset: 0x00032536
 	public void CreateNew(Animator animator, string animatorBoolName, AnimationLayer layer)
 	{
 		this.m_needsReset = false;
@@ -45,21 +45,21 @@ public class WaitUntilAnimChanged_Yield : IEnumerator
 		this.m_animationLayer = (int)layer;
 	}
 
-	// Token: 0x060044E6 RID: 17638 RVA: 0x000F4FB6 File Offset: 0x000F31B6
+	// Token: 0x06005EB2 RID: 24242 RVA: 0x00034354 File Offset: 0x00032554
 	public void Reset()
 	{
 		this.CreateNew(this.m_animator, this.m_animatorBoolName, (AnimationLayer)this.m_animationLayer);
 	}
 
-	// Token: 0x04003ABD RID: 15037
+	// Token: 0x04004DC1 RID: 19905
 	private Animator m_animator;
 
-	// Token: 0x04003ABE RID: 15038
+	// Token: 0x04004DC2 RID: 19906
 	private string m_animatorBoolName;
 
-	// Token: 0x04003ABF RID: 15039
+	// Token: 0x04004DC3 RID: 19907
 	private int m_animationLayer;
 
-	// Token: 0x04003AC0 RID: 15040
+	// Token: 0x04004DC4 RID: 19908
 	private bool m_needsReset;
 }

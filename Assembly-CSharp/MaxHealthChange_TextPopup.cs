@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200053E RID: 1342
+// Token: 0x020008D7 RID: 2263
 public class MaxHealthChange_TextPopup : TextPopupObj
 {
-	// Token: 0x06003120 RID: 12576 RVA: 0x000A6960 File Offset: 0x000A4B60
+	// Token: 0x060044B0 RID: 17584 RVA: 0x00025C64 File Offset: 0x00023E64
 	protected override IEnumerator SpawnEffectCoroutine()
 	{
 		float speed = 0.35f;

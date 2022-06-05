@@ -2,7 +2,7 @@
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x02000974 RID: 2420
-	// (Invoke) Token: 0x06005227 RID: 21031
+	// Token: 0x02000F2A RID: 3882
+	// (Invoke) Token: 0x06007040 RID: 28736
 	public delegate void OnDownStrikeDelegate();
 }

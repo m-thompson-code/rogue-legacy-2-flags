@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x020007E1 RID: 2017
+// Token: 0x02000CA7 RID: 3239
 public class AbilityUsedEventArgs : EventArgs
 {
-	// Token: 0x06004358 RID: 17240 RVA: 0x000EC6DC File Offset: 0x000EA8DC
+	// Token: 0x06005CE1 RID: 23777 RVA: 0x000330F2 File Offset: 0x000312F2
 	public AbilityUsedEventArgs(IAbility ability)
 	{
 		this.Initialise(ability);
 	}
 
-	// Token: 0x06004359 RID: 17241 RVA: 0x000EC6EB File Offset: 0x000EA8EB
+	// Token: 0x06005CE2 RID: 23778 RVA: 0x00033101 File Offset: 0x00031301
 	public void Initialise(IAbility ability)
 	{
 		this.Ability = ability;
 	}
 
-	// Token: 0x170016CD RID: 5837
-	// (get) Token: 0x0600435A RID: 17242 RVA: 0x000EC6F4 File Offset: 0x000EA8F4
-	// (set) Token: 0x0600435B RID: 17243 RVA: 0x000EC6FC File Offset: 0x000EA8FC
+	// Token: 0x17001ECB RID: 7883
+	// (get) Token: 0x06005CE3 RID: 23779 RVA: 0x0003310A File Offset: 0x0003130A
+	// (set) Token: 0x06005CE4 RID: 23780 RVA: 0x00033112 File Offset: 0x00031312
 	public IAbility Ability { get; private set; }
 }

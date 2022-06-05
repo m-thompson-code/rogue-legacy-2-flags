@@ -1,20 +1,20 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000320 RID: 800
+// Token: 0x02000567 RID: 1383
 public abstract class BaseTrait : MonoBehaviour
 {
-	// Token: 0x17000D9E RID: 3486
-	// (get) Token: 0x06001F86 RID: 8070 RVA: 0x00064F0F File Offset: 0x0006310F
-	// (set) Token: 0x06001F87 RID: 8071 RVA: 0x00064F17 File Offset: 0x00063117
+	// Token: 0x170011C5 RID: 4549
+	// (get) Token: 0x06002C2D RID: 11309 RVA: 0x000188A5 File Offset: 0x00016AA5
+	// (set) Token: 0x06002C2E RID: 11310 RVA: 0x000188AD File Offset: 0x00016AAD
 	public bool IsFirstTrait { get; set; }
 
-	// Token: 0x17000D9F RID: 3487
-	// (get) Token: 0x06001F88 RID: 8072
+	// Token: 0x170011C6 RID: 4550
+	// (get) Token: 0x06002C2F RID: 11311
 	public abstract TraitType TraitType { get; }
 
-	// Token: 0x17000DA0 RID: 3488
-	// (get) Token: 0x06001F89 RID: 8073 RVA: 0x00064F20 File Offset: 0x00063120
+	// Token: 0x170011C7 RID: 4551
+	// (get) Token: 0x06002C30 RID: 11312 RVA: 0x000188B6 File Offset: 0x00016AB6
 	public SpriteRenderer TraitMask
 	{
 		get
@@ -23,8 +23,8 @@ public abstract class BaseTrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000DA1 RID: 3489
-	// (get) Token: 0x06001F8A RID: 8074 RVA: 0x00064F28 File Offset: 0x00063128
+	// Token: 0x170011C8 RID: 4552
+	// (get) Token: 0x06002C31 RID: 11313 RVA: 0x000188BE File Offset: 0x00016ABE
 	public TraitType[] IncompatibleTraits
 	{
 		get
@@ -33,8 +33,8 @@ public abstract class BaseTrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000DA2 RID: 3490
-	// (get) Token: 0x06001F8B RID: 8075 RVA: 0x00064F30 File Offset: 0x00063130
+	// Token: 0x170011C9 RID: 4553
+	// (get) Token: 0x06002C32 RID: 11314 RVA: 0x000188C6 File Offset: 0x00016AC6
 	public TraitData TraitData
 	{
 		get
@@ -43,8 +43,8 @@ public abstract class BaseTrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000DA3 RID: 3491
-	// (get) Token: 0x06001F8C RID: 8076 RVA: 0x00064F38 File Offset: 0x00063138
+	// Token: 0x170011CA RID: 4554
+	// (get) Token: 0x06002C33 RID: 11315 RVA: 0x000188CE File Offset: 0x00016ACE
 	public MobilePostProcessOverrideController PostProcessOverrideController
 	{
 		get
@@ -53,27 +53,27 @@ public abstract class BaseTrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000DA4 RID: 3492
-	// (get) Token: 0x06001F8D RID: 8077 RVA: 0x00064F40 File Offset: 0x00063140
-	// (set) Token: 0x06001F8E RID: 8078 RVA: 0x00064F48 File Offset: 0x00063148
+	// Token: 0x170011CB RID: 4555
+	// (get) Token: 0x06002C34 RID: 11316 RVA: 0x000188D6 File Offset: 0x00016AD6
+	// (set) Token: 0x06002C35 RID: 11317 RVA: 0x000188DE File Offset: 0x00016ADE
 	public bool IsPaused { get; private set; }
 
-	// Token: 0x06001F8F RID: 8079 RVA: 0x00064F51 File Offset: 0x00063151
+	// Token: 0x06002C36 RID: 11318 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void Awake()
 	{
 	}
 
-	// Token: 0x06001F90 RID: 8080 RVA: 0x00064F53 File Offset: 0x00063153
+	// Token: 0x06002C37 RID: 11319 RVA: 0x00002FCA File Offset: 0x000011CA
 	public virtual void DisableOnDeath()
 	{
 	}
 
-	// Token: 0x06001F91 RID: 8081 RVA: 0x00064F55 File Offset: 0x00063155
+	// Token: 0x06002C38 RID: 11320 RVA: 0x00002FCA File Offset: 0x000011CA
 	public virtual void DisableOnCutscene()
 	{
 	}
 
-	// Token: 0x06001F92 RID: 8082 RVA: 0x00064F57 File Offset: 0x00063157
+	// Token: 0x06002C39 RID: 11321 RVA: 0x000188E7 File Offset: 0x00016AE7
 	public virtual void AssignGreenMask()
 	{
 		if (this.m_traitMask)
@@ -82,25 +82,25 @@ public abstract class BaseTrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F93 RID: 8083 RVA: 0x00064F76 File Offset: 0x00063176
+	// Token: 0x06002C3A RID: 11322 RVA: 0x00018906 File Offset: 0x00016B06
 	public virtual void SetPaused(bool paused)
 	{
 		this.IsPaused = paused;
 	}
 
-	// Token: 0x04001C2D RID: 7213
+	// Token: 0x04002551 RID: 9553
 	[SerializeField]
 	private TraitData m_traitData;
 
-	// Token: 0x04001C2E RID: 7214
+	// Token: 0x04002552 RID: 9554
 	[SerializeField]
 	private TraitType[] m_incompatibleTraits;
 
-	// Token: 0x04001C2F RID: 7215
+	// Token: 0x04002553 RID: 9555
 	[SerializeField]
 	protected MobilePostProcessOverrideController m_postProcessOverrideController;
 
-	// Token: 0x04001C30 RID: 7216
+	// Token: 0x04002554 RID: 9556
 	[SerializeField]
 	protected SpriteRenderer m_traitMask;
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000564 RID: 1380
+// Token: 0x02000934 RID: 2356
 public class CastleToGardenTunnel : BossTunnel
 {
-	// Token: 0x060032AD RID: 12973 RVA: 0x000AB725 File Offset: 0x000A9925
+	// Token: 0x06004782 RID: 18306 RVA: 0x00027346 File Offset: 0x00025546
 	protected override PlayerSaveFlag GetBossFreeHealUsedFlag()
 	{
 		if (!SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.GardenBoss_Defeated))

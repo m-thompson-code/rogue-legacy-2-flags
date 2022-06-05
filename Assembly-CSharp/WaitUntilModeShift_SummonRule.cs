@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000537 RID: 1335
+// Token: 0x020008C9 RID: 2249
 public class WaitUntilModeShift_SummonRule : BaseSummonRule
 {
-	// Token: 0x17001220 RID: 4640
-	// (get) Token: 0x0600310B RID: 12555 RVA: 0x000A67DB File Offset: 0x000A49DB
+	// Token: 0x1700186B RID: 6251
+	// (get) Token: 0x06004471 RID: 17521 RVA: 0x00025B2B File Offset: 0x00023D2B
 	public override SummonRuleType RuleType
 	{
 		get
@@ -14,8 +14,8 @@ public class WaitUntilModeShift_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001221 RID: 4641
-	// (get) Token: 0x0600310C RID: 12556 RVA: 0x000A67E2 File Offset: 0x000A49E2
+	// Token: 0x1700186C RID: 6252
+	// (get) Token: 0x06004472 RID: 17522 RVA: 0x00025B32 File Offset: 0x00023D32
 	public override string RuleLabel
 	{
 		get
@@ -24,7 +24,7 @@ public class WaitUntilModeShift_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x0600310D RID: 12557 RVA: 0x000A67E9 File Offset: 0x000A49E9
+	// Token: 0x06004473 RID: 17523 RVA: 0x00025B39 File Offset: 0x00023D39
 	public override IEnumerator RunSummonRule()
 	{
 		bool inModeShift = false;

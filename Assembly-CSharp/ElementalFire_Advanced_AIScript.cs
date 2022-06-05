@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000B3 RID: 179
+// Token: 0x02000101 RID: 257
 public class ElementalFire_Advanced_AIScript : ElementalFire_Basic_AIScript
 {
-	// Token: 0x170001BB RID: 443
-	// (get) Token: 0x0600042F RID: 1071 RVA: 0x00015961 File Offset: 0x00013B61
+	// Token: 0x1700024B RID: 587
+	// (get) Token: 0x060005E4 RID: 1508 RVA: 0x00004792 File Offset: 0x00002992
 	protected override int m_shoot_TotalShots
 	{
 		get
@@ -13,8 +13,8 @@ public class ElementalFire_Advanced_AIScript : ElementalFire_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170001BC RID: 444
-	// (get) Token: 0x06000430 RID: 1072 RVA: 0x00015964 File Offset: 0x00013B64
+	// Token: 0x1700024C RID: 588
+	// (get) Token: 0x060005E5 RID: 1509 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float m_shoot_TotalShotDuration
 	{
 		get
@@ -23,8 +23,8 @@ public class ElementalFire_Advanced_AIScript : ElementalFire_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170001BD RID: 445
-	// (get) Token: 0x06000431 RID: 1073 RVA: 0x0001596B File Offset: 0x00013B6B
+	// Token: 0x1700024D RID: 589
+	// (get) Token: 0x060005E6 RID: 1510 RVA: 0x0000521E File Offset: 0x0000341E
 	protected override float m_shoot_RandAngleOffset
 	{
 		get

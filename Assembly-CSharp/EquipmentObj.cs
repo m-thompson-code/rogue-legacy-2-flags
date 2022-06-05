@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001F6 RID: 502
+// Token: 0x02000396 RID: 918
 [Serializable]
 public class EquipmentObj
 {
-	// Token: 0x17000ADF RID: 2783
-	// (get) Token: 0x06001554 RID: 5460 RVA: 0x000420F3 File Offset: 0x000402F3
+	// Token: 0x17000DED RID: 3565
+	// (get) Token: 0x06001E99 RID: 7833 RVA: 0x0000FFB2 File Offset: 0x0000E1B2
 	public FoundState FoundState
 	{
 		get
@@ -27,8 +27,8 @@ public class EquipmentObj
 		}
 	}
 
-	// Token: 0x17000AE0 RID: 2784
-	// (get) Token: 0x06001555 RID: 5461 RVA: 0x00042123 File Offset: 0x00040323
+	// Token: 0x17000DEE RID: 3566
+	// (get) Token: 0x06001E9A RID: 7834 RVA: 0x0000FFE2 File Offset: 0x0000E1E2
 	public int ClampedUpgradeLevel
 	{
 		get
@@ -37,8 +37,8 @@ public class EquipmentObj
 		}
 	}
 
-	// Token: 0x17000AE1 RID: 2785
-	// (get) Token: 0x06001556 RID: 5462 RVA: 0x00042137 File Offset: 0x00040337
+	// Token: 0x17000DEF RID: 3567
+	// (get) Token: 0x06001E9B RID: 7835 RVA: 0x0000FFF6 File Offset: 0x0000E1F6
 	public bool IsMaxUpgradeLevel
 	{
 		get
@@ -47,8 +47,8 @@ public class EquipmentObj
 		}
 	}
 
-	// Token: 0x17000AE2 RID: 2786
-	// (get) Token: 0x06001557 RID: 5463 RVA: 0x00042147 File Offset: 0x00040347
+	// Token: 0x17000DF0 RID: 3568
+	// (get) Token: 0x06001E9C RID: 7836 RVA: 0x00010006 File Offset: 0x0000E206
 	public bool HasMaxBlueprints
 	{
 		get
@@ -61,7 +61,7 @@ public class EquipmentObj
 		}
 	}
 
-	// Token: 0x06001558 RID: 5464 RVA: 0x00042170 File Offset: 0x00040370
+	// Token: 0x06001E9D RID: 7837 RVA: 0x000A0704 File Offset: 0x0009E904
 	public float GetStatValueAtLevel(EquipmentStatType statType, int level)
 	{
 		if (this.EquipmentData.Disabled)
@@ -102,7 +102,7 @@ public class EquipmentObj
 		}
 	}
 
-	// Token: 0x06001559 RID: 5465 RVA: 0x000422FB File Offset: 0x000404FB
+	// Token: 0x06001E9E RID: 7838 RVA: 0x0001002C File Offset: 0x0000E22C
 	public float GetCurrentStatValue(EquipmentStatType statType)
 	{
 		if (this.EquipmentData.Disabled)
@@ -112,8 +112,8 @@ public class EquipmentObj
 		return this.GetStatValueAtLevel(statType, this.ClampedUpgradeLevel);
 	}
 
-	// Token: 0x17000AE3 RID: 2787
-	// (get) Token: 0x0600155A RID: 5466 RVA: 0x00042320 File Offset: 0x00040520
+	// Token: 0x17000DF1 RID: 3569
+	// (get) Token: 0x06001E9F RID: 7839 RVA: 0x000A0890 File Offset: 0x0009EA90
 	public int MaxLevel
 	{
 		get
@@ -132,8 +132,8 @@ public class EquipmentObj
 		}
 	}
 
-	// Token: 0x17000AE4 RID: 2788
-	// (get) Token: 0x0600155B RID: 5467 RVA: 0x00042378 File Offset: 0x00040578
+	// Token: 0x17000DF2 RID: 3570
+	// (get) Token: 0x06001EA0 RID: 7840 RVA: 0x000A08E8 File Offset: 0x0009EAE8
 	public int GoldCostToUpgrade
 	{
 		get
@@ -158,8 +158,8 @@ public class EquipmentObj
 		}
 	}
 
-	// Token: 0x17000AE5 RID: 2789
-	// (get) Token: 0x0600155C RID: 5468 RVA: 0x000423E4 File Offset: 0x000405E4
+	// Token: 0x17000DF3 RID: 3571
+	// (get) Token: 0x06001EA1 RID: 7841 RVA: 0x000A0954 File Offset: 0x0009EB54
 	public int OreCostToUpgrade
 	{
 		get
@@ -179,8 +179,8 @@ public class EquipmentObj
 		}
 	}
 
-	// Token: 0x17000AE6 RID: 2790
-	// (get) Token: 0x0600155D RID: 5469 RVA: 0x00042433 File Offset: 0x00040633
+	// Token: 0x17000DF4 RID: 3572
+	// (get) Token: 0x06001EA2 RID: 7842 RVA: 0x0001004E File Offset: 0x0000E24E
 	public int EquipmentSetLevel
 	{
 		get
@@ -193,8 +193,8 @@ public class EquipmentObj
 		}
 	}
 
-	// Token: 0x17000AE7 RID: 2791
-	// (get) Token: 0x0600155E RID: 5470 RVA: 0x00042462 File Offset: 0x00040662
+	// Token: 0x17000DF5 RID: 3573
+	// (get) Token: 0x06001EA3 RID: 7843 RVA: 0x0001007D File Offset: 0x0000E27D
 	public EquipmentData EquipmentData
 	{
 		get
@@ -203,22 +203,22 @@ public class EquipmentObj
 		}
 	}
 
-	// Token: 0x0600155F RID: 5471 RVA: 0x00042475 File Offset: 0x00040675
+	// Token: 0x06001EA4 RID: 7844 RVA: 0x00010090 File Offset: 0x0000E290
 	public EquipmentObj(EquipmentCategoryType category, EquipmentType equipType)
 	{
 		this.CategoryType = category;
 		this.EquipmentType = equipType;
 	}
 
-	// Token: 0x0400149E RID: 5278
+	// Token: 0x04001B5B RID: 7003
 	public EquipmentCategoryType CategoryType;
 
-	// Token: 0x0400149F RID: 5279
+	// Token: 0x04001B5C RID: 7004
 	public EquipmentType EquipmentType;
 
-	// Token: 0x040014A0 RID: 5280
+	// Token: 0x04001B5D RID: 7005
 	public int UpgradeLevel = -3;
 
-	// Token: 0x040014A1 RID: 5281
+	// Token: 0x04001B5E RID: 7006
 	public int UpgradeBlueprintsFound;
 }

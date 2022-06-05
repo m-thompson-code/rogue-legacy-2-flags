@@ -4,20 +4,20 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-// Token: 0x0200056E RID: 1390
+// Token: 0x02000940 RID: 2368
 public class Weather : MonoBehaviour
 {
-	// Token: 0x17001271 RID: 4721
-	// (get) Token: 0x060032FC RID: 13052 RVA: 0x000AC405 File Offset: 0x000AA605
-	// (set) Token: 0x060032FD RID: 13053 RVA: 0x000AC40D File Offset: 0x000AA60D
+	// Token: 0x1700193A RID: 6458
+	// (get) Token: 0x060047DD RID: 18397 RVA: 0x00027661 File Offset: 0x00025861
+	// (set) Token: 0x060047DE RID: 18398 RVA: 0x00027669 File Offset: 0x00025869
 	public List<BaseRoom> RoomList { get; private set; } = new List<BaseRoom>();
 
-	// Token: 0x17001272 RID: 4722
-	// (get) Token: 0x060032FE RID: 13054 RVA: 0x000AC416 File Offset: 0x000AA616
-	// (set) Token: 0x060032FF RID: 13055 RVA: 0x000AC41E File Offset: 0x000AA61E
+	// Token: 0x1700193B RID: 6459
+	// (get) Token: 0x060047DF RID: 18399 RVA: 0x00027672 File Offset: 0x00025872
+	// (set) Token: 0x060047E0 RID: 18400 RVA: 0x0002767A File Offset: 0x0002587A
 	public bool IsHeirloomWeather { get; set; }
 
-	// Token: 0x06003300 RID: 13056 RVA: 0x000AC428 File Offset: 0x000AA628
+	// Token: 0x060047E1 RID: 18401 RVA: 0x00116ADC File Offset: 0x00114CDC
 	private void Awake()
 	{
 		this.m_particleSystems = base.GetComponentsInChildren<ParticleSystem>();
@@ -32,13 +32,13 @@ public class Weather : MonoBehaviour
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06003301 RID: 13057 RVA: 0x000AC4B0 File Offset: 0x000AA6B0
+	// Token: 0x060047E2 RID: 18402 RVA: 0x00027683 File Offset: 0x00025883
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x06003302 RID: 13058 RVA: 0x000AC4C0 File Offset: 0x000AA6C0
+	// Token: 0x060047E3 RID: 18403 RVA: 0x00116B64 File Offset: 0x00114D64
 	private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		RoomViaDoorEventArgs roomViaDoorEventArgs = eventArgs as RoomViaDoorEventArgs;
@@ -73,7 +73,7 @@ public class Weather : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003303 RID: 13059 RVA: 0x000AC594 File Offset: 0x000AA794
+	// Token: 0x060047E4 RID: 18404 RVA: 0x00116C38 File Offset: 0x00114E38
 	private bool GetWeatherShouldBeActive(BaseRoom room)
 	{
 		bool result = false;
@@ -84,7 +84,7 @@ public class Weather : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x06003304 RID: 13060 RVA: 0x000AC5B4 File Offset: 0x000AA7B4
+	// Token: 0x060047E5 RID: 18405 RVA: 0x00116C58 File Offset: 0x00114E58
 	private void OnCameraActivated(ICinemachineCamera cinemachineCameraA, ICinemachineCamera cinemachineCameraB)
 	{
 		if (!base.gameObject.activeInHierarchy)
@@ -103,7 +103,7 @@ public class Weather : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003305 RID: 13061 RVA: 0x000AC61E File Offset: 0x000AA81E
+	// Token: 0x060047E6 RID: 18406 RVA: 0x00027691 File Offset: 0x00025891
 	private IEnumerator InitializeParticleSystems(Vector2 position)
 	{
 		this.m_followCamera = false;
@@ -122,7 +122,7 @@ public class Weather : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003306 RID: 13062 RVA: 0x000AC634 File Offset: 0x000AA834
+	// Token: 0x060047E7 RID: 18407 RVA: 0x000276A7 File Offset: 0x000258A7
 	private void Update()
 	{
 		if (!this.m_followCamera)
@@ -132,18 +132,18 @@ public class Weather : MonoBehaviour
 		base.gameObject.transform.localPosition = CameraController.GameCamera.transform.localPosition;
 	}
 
-	// Token: 0x040027C5 RID: 10181
+	// Token: 0x040036F9 RID: 14073
 	private const int MAX_PARTICLE_SYSTEM_SEED_VALUE = 1000;
 
-	// Token: 0x040027C6 RID: 10182
+	// Token: 0x040036FA RID: 14074
 	private ParticleSystem[] m_particleSystems;
 
-	// Token: 0x040027C7 RID: 10183
+	// Token: 0x040036FB RID: 14075
 	private Coroutine m_initializationCoroutine;
 
-	// Token: 0x040027C8 RID: 10184
+	// Token: 0x040036FC RID: 14076
 	private bool m_followCamera = true;
 
-	// Token: 0x040027C9 RID: 10185
+	// Token: 0x040036FD RID: 14077
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 }

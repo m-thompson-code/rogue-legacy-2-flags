@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020003B4 RID: 948
+// Token: 0x02000649 RID: 1609
 public class JukeboxOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<JukeboxOmniUIDescriptionEventArgs, JukeboxOmniUIDescriptionBoxEntry.JukeboxOmniUIDescriptionBoxType>
 {
-	// Token: 0x06002315 RID: 8981 RVA: 0x0007225C File Offset: 0x0007045C
+	// Token: 0x0600312D RID: 12589 RVA: 0x0001AFCB File Offset: 0x000191CB
 	protected override void DisplayNullDescriptionBox(MonoBehaviour sender)
 	{
 		base.DisplayNullDescriptionBox(sender);
@@ -14,7 +14,7 @@ public class JukeboxOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<Ju
 		}
 	}
 
-	// Token: 0x06002316 RID: 8982 RVA: 0x00072280 File Offset: 0x00070480
+	// Token: 0x0600312E RID: 12590 RVA: 0x000D28FC File Offset: 0x000D0AFC
 	protected override void DisplayDescriptionBox(JukeboxOmniUIDescriptionEventArgs args)
 	{
 		SongID songType = args.SongType;
@@ -72,14 +72,14 @@ public class JukeboxOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<Ju
 		}
 	}
 
-	// Token: 0x02000C0E RID: 3086
+	// Token: 0x0200064A RID: 1610
 	public enum JukeboxOmniUIDescriptionBoxType
 	{
-		// Token: 0x04004EBE RID: 20158
+		// Token: 0x04002828 RID: 10280
 		None,
-		// Token: 0x04004EBF RID: 20159
+		// Token: 0x04002829 RID: 10281
 		Title,
-		// Token: 0x04004EC0 RID: 20160
+		// Token: 0x0400282A RID: 10282
 		Description
 	}
 }

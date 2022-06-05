@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200060B RID: 1547
+// Token: 0x02000A2C RID: 2604
 public class ForceSelection : MonoBehaviour
 {
-	// Token: 0x170013E5 RID: 5093
-	// (get) Token: 0x0600383B RID: 14395 RVA: 0x000C01A8 File Offset: 0x000BE3A8
+	// Token: 0x17001B3C RID: 6972
+	// (get) Token: 0x06004ED8 RID: 20184 RVA: 0x0002B002 File Offset: 0x00029202
 	public ForceSelection.ForceSelectionType SelectionType
 	{
 		get
@@ -14,18 +14,18 @@ public class ForceSelection : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002AEE RID: 10990
+	// Token: 0x04003B51 RID: 15185
 	[SerializeField]
 	private ForceSelection.ForceSelectionType m_selectionType;
 
-	// Token: 0x02000D97 RID: 3479
+	// Token: 0x02000A2D RID: 2605
 	public enum ForceSelectionType
 	{
-		// Token: 0x040054EC RID: 21740
+		// Token: 0x04003B53 RID: 15187
 		SelectBase,
-		// Token: 0x040054ED RID: 21741
+		// Token: 0x04003B54 RID: 15188
 		Lock,
-		// Token: 0x040054EE RID: 21742
+		// Token: 0x04003B55 RID: 15189
 		None
 	}
 }

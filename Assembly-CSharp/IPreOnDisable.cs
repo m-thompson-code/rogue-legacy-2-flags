@@ -2,14 +2,14 @@
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020005C6 RID: 1478
+// Token: 0x020009CE RID: 2510
 public interface IPreOnDisable
 {
-	// Token: 0x17001344 RID: 4932
-	// (get) Token: 0x06003670 RID: 13936
+	// Token: 0x17001A71 RID: 6769
+	// (get) Token: 0x06004C82 RID: 19586
 	GameObject gameObject { get; }
 
-	// Token: 0x17001345 RID: 4933
-	// (get) Token: 0x06003671 RID: 13937
+	// Token: 0x17001A72 RID: 6770
+	// (get) Token: 0x06004C83 RID: 19587
 	IRelayLink<IPreOnDisable> PreOnDisableRelay { get; }
 }

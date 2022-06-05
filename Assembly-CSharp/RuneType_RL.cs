@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200076A RID: 1898
+// Token: 0x02000C2B RID: 3115
 public class RuneType_RL
 {
-	// Token: 0x17001646 RID: 5702
-	// (get) Token: 0x06004147 RID: 16711 RVA: 0x000E819A File Offset: 0x000E639A
+	// Token: 0x17001E42 RID: 7746
+	// (get) Token: 0x06005AC4 RID: 23236 RVA: 0x00031CC5 File Offset: 0x0002FEC5
 	public static RuneType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class RuneType_RL
 		}
 	}
 
-	// Token: 0x04003671 RID: 13937
+	// Token: 0x04004921 RID: 18721
 	private static RuneType[] m_typeArray;
 }

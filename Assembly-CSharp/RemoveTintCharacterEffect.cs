@@ -1,17 +1,17 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000425 RID: 1061
+// Token: 0x020006E7 RID: 1767
 public class RemoveTintCharacterEffect : BaseEffect
 {
-	// Token: 0x0600272A RID: 10026 RVA: 0x00082929 File Offset: 0x00080B29
+	// Token: 0x06003615 RID: 13845 RVA: 0x0001DA9A File Offset: 0x0001BC9A
 	protected override void Awake()
 	{
 		this.m_matPropertyBlock = new MaterialPropertyBlock();
 		base.Awake();
 	}
 
-	// Token: 0x0600272B RID: 10027 RVA: 0x0008293C File Offset: 0x00080B3C
+	// Token: 0x06003616 RID: 13846 RVA: 0x000E3540 File Offset: 0x000E1740
 	public override void Play(float duration, EffectStopType stopType)
 	{
 		base.Play(duration, stopType);
@@ -25,22 +25,22 @@ public class RemoveTintCharacterEffect : BaseEffect
 		this.PlayComplete();
 	}
 
-	// Token: 0x0600272C RID: 10028 RVA: 0x0008298E File Offset: 0x00080B8E
+	// Token: 0x06003617 RID: 13847 RVA: 0x0001DAAD File Offset: 0x0001BCAD
 	public override void Stop(EffectStopType stopType)
 	{
 		this.PlayComplete();
 	}
 
-	// Token: 0x0600272D RID: 10029 RVA: 0x00082996 File Offset: 0x00080B96
+	// Token: 0x06003618 RID: 13848 RVA: 0x0001DAB5 File Offset: 0x0001BCB5
 	public override void ResetValues()
 	{
 		this.m_useUnscaledTime = false;
 		base.ResetValues();
 	}
 
-	// Token: 0x040020DD RID: 8413
+	// Token: 0x04002BEE RID: 11246
 	private MaterialPropertyBlock m_matPropertyBlock;
 
-	// Token: 0x040020DE RID: 8414
+	// Token: 0x04002BEF RID: 11247
 	private bool m_useUnscaledTime;
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000103 RID: 259
+// Token: 0x020001A4 RID: 420
 public class PaintingEnemy_Expert_AIScript : PaintingEnemy_Basic_AIScript
 {
-	// Token: 0x1700044F RID: 1103
-	// (get) Token: 0x06000807 RID: 2055 RVA: 0x0001BD0D File Offset: 0x00019F0D
+	// Token: 0x17000581 RID: 1409
+	// (get) Token: 0x06000BA2 RID: 2978 RVA: 0x0000611B File Offset: 0x0000431B
 	protected override float ProjectileFireInterval
 	{
 		get

@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Rewired.Demos
 {
-	// Token: 0x02000942 RID: 2370
+	// Token: 0x02000EE0 RID: 3808
 	[AddComponentMenu("")]
 	public class FallbackJoystickIdentificationDemo : MonoBehaviour
 	{
-		// Token: 0x06005058 RID: 20568 RVA: 0x0011B63C File Offset: 0x0011983C
+		// Token: 0x06006E32 RID: 28210 RVA: 0x0003C94E File Offset: 0x0003AB4E
 		private void Awake()
 		{
 			if (!ReInput.unityJoystickIdentificationRequired)
@@ -20,19 +20,19 @@ namespace Rewired.Demos
 			this.IdentifyAllJoysticks();
 		}
 
-		// Token: 0x06005059 RID: 20569 RVA: 0x0011B66E File Offset: 0x0011986E
+		// Token: 0x06006E33 RID: 28211 RVA: 0x0003C980 File Offset: 0x0003AB80
 		private void JoystickConnected(ControllerStatusChangedEventArgs args)
 		{
 			this.IdentifyAllJoysticks();
 		}
 
-		// Token: 0x0600505A RID: 20570 RVA: 0x0011B676 File Offset: 0x00119876
+		// Token: 0x06006E34 RID: 28212 RVA: 0x0003C980 File Offset: 0x0003AB80
 		private void JoystickDisconnected(ControllerStatusChangedEventArgs args)
 		{
 			this.IdentifyAllJoysticks();
 		}
 
-		// Token: 0x0600505B RID: 20571 RVA: 0x0011B680 File Offset: 0x00119880
+		// Token: 0x06006E35 RID: 28213 RVA: 0x00189EEC File Offset: 0x001880EC
 		public void IdentifyAllJoysticks()
 		{
 			this.Reset();
@@ -50,13 +50,13 @@ namespace Rewired.Demos
 			this.SetInputDelay();
 		}
 
-		// Token: 0x0600505C RID: 20572 RVA: 0x0011B6C8 File Offset: 0x001198C8
+		// Token: 0x06006E36 RID: 28214 RVA: 0x0003C988 File Offset: 0x0003AB88
 		private void SetInputDelay()
 		{
 			this.nextInputAllowedTime = Time.time + 1f;
 		}
 
-		// Token: 0x0600505D RID: 20573 RVA: 0x0011B6DC File Offset: 0x001198DC
+		// Token: 0x06006E37 RID: 28215 RVA: 0x00189F34 File Offset: 0x00188134
 		private void OnGUI()
 		{
 			if (!this.identifyRequired)
@@ -87,7 +87,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x0600505E RID: 20574 RVA: 0x0011B7C0 File Offset: 0x001199C0
+		// Token: 0x06006E38 RID: 28216 RVA: 0x0018A018 File Offset: 0x00188218
 		private void DrawDialogWindow(int windowId)
 		{
 			if (!this.identifyRequired)
@@ -111,32 +111,32 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x0600505F RID: 20575 RVA: 0x0011B872 File Offset: 0x00119A72
+		// Token: 0x06006E39 RID: 28217 RVA: 0x0003C99B File Offset: 0x0003AB9B
 		private void Reset()
 		{
 			this.joysticksToIdentify = null;
 			this.identifyRequired = false;
 		}
 
-		// Token: 0x040042B3 RID: 17075
+		// Token: 0x04005896 RID: 22678
 		private const float windowWidth = 250f;
 
-		// Token: 0x040042B4 RID: 17076
+		// Token: 0x04005897 RID: 22679
 		private const float windowHeight = 250f;
 
-		// Token: 0x040042B5 RID: 17077
+		// Token: 0x04005898 RID: 22680
 		private const float inputDelay = 1f;
 
-		// Token: 0x040042B6 RID: 17078
+		// Token: 0x04005899 RID: 22681
 		private bool identifyRequired;
 
-		// Token: 0x040042B7 RID: 17079
+		// Token: 0x0400589A RID: 22682
 		private Queue<Joystick> joysticksToIdentify;
 
-		// Token: 0x040042B8 RID: 17080
+		// Token: 0x0400589B RID: 22683
 		private float nextInputAllowedTime;
 
-		// Token: 0x040042B9 RID: 17081
+		// Token: 0x0400589C RID: 22684
 		private GUIStyle style;
 	}
 }

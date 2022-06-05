@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x0200061D RID: 1565
+// Token: 0x02000A40 RID: 2624
 public class Messenger<BaseClassName, EventIDs> : MonoBehaviour where BaseClassName : MonoBehaviour
 {
-	// Token: 0x170013EF RID: 5103
-	// (get) Token: 0x06003879 RID: 14457 RVA: 0x000C0F60 File Offset: 0x000BF160
-	// (set) Token: 0x0600387A RID: 14458 RVA: 0x000C0F67 File Offset: 0x000BF167
+	// Token: 0x17001B46 RID: 6982
+	// (get) Token: 0x06004F1D RID: 20253 RVA: 0x0002B202 File Offset: 0x00029402
+	// (set) Token: 0x06004F1E RID: 20254 RVA: 0x0002B209 File Offset: 0x00029409
 	protected static BaseClassName Instance { get; set; }
 
-	// Token: 0x170013F0 RID: 5104
-	// (get) Token: 0x0600387B RID: 14459 RVA: 0x000C0F6F File Offset: 0x000BF16F
-	// (set) Token: 0x0600387C RID: 14460 RVA: 0x000C0F76 File Offset: 0x000BF176
+	// Token: 0x17001B47 RID: 6983
+	// (get) Token: 0x06004F1F RID: 20255 RVA: 0x0002B211 File Offset: 0x00029411
+	// (set) Token: 0x06004F20 RID: 20256 RVA: 0x0002B218 File Offset: 0x00029418
 	public static Dictionary<EventIDs, Relay<MonoBehaviour, EventArgs>> EventTable
 	{
 		get
@@ -26,7 +26,7 @@ public class Messenger<BaseClassName, EventIDs> : MonoBehaviour where BaseClassN
 		}
 	}
 
-	// Token: 0x0600387D RID: 14461 RVA: 0x000C0F7E File Offset: 0x000BF17E
+	// Token: 0x06004F21 RID: 20257 RVA: 0x0002B220 File Offset: 0x00029420
 	protected static BaseClassName CreateInstance()
 	{
 		BaseClassName baseClassName = CDGHelper.FindStaticInstance<BaseClassName>(true);
@@ -34,7 +34,7 @@ public class Messenger<BaseClassName, EventIDs> : MonoBehaviour where BaseClassN
 		return baseClassName;
 	}
 
-	// Token: 0x0600387E RID: 14462 RVA: 0x000C0F94 File Offset: 0x000BF194
+	// Token: 0x06004F22 RID: 20258 RVA: 0x0012F1E8 File Offset: 0x0012D3E8
 	public static void AddListener(EventIDs eventID, Action<MonoBehaviour, EventArgs> listener)
 	{
 		if (GameManager.IsApplicationClosing)
@@ -62,7 +62,7 @@ public class Messenger<BaseClassName, EventIDs> : MonoBehaviour where BaseClassN
 		Messenger<BaseClassName, EventIDs>.EventTable[eventID].AddListener(listener, false);
 	}
 
-	// Token: 0x0600387F RID: 14463 RVA: 0x000C101F File Offset: 0x000BF21F
+	// Token: 0x06004F23 RID: 20259 RVA: 0x0002B233 File Offset: 0x00029433
 	public static void RemoveListener(EventIDs eventID, Action<MonoBehaviour, EventArgs> listener)
 	{
 		if (GameManager.IsApplicationClosing)
@@ -79,7 +79,7 @@ public class Messenger<BaseClassName, EventIDs> : MonoBehaviour where BaseClassN
 		}
 	}
 
-	// Token: 0x06003880 RID: 14464 RVA: 0x000C104C File Offset: 0x000BF24C
+	// Token: 0x06004F24 RID: 20260 RVA: 0x0012F274 File Offset: 0x0012D474
 	public static void Broadcast(EventIDs eventID, MonoBehaviour sender, EventArgs eventArgs)
 	{
 		if (GameManager.IsApplicationClosing)
@@ -104,9 +104,9 @@ public class Messenger<BaseClassName, EventIDs> : MonoBehaviour where BaseClassN
 		}
 	}
 
-	// Token: 0x04002BAE RID: 11182
+	// Token: 0x04003C1B RID: 15387
 	protected static Dictionary<EventIDs, Relay<MonoBehaviour, EventArgs>> m_eventTable = new Dictionary<EventIDs, Relay<MonoBehaviour, EventArgs>>();
 
-	// Token: 0x04002BAF RID: 11183
+	// Token: 0x04003C1C RID: 15388
 	private static BaseClassName m_instance;
 }

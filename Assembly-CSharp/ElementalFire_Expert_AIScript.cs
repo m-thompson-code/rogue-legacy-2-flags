@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000B5 RID: 181
+// Token: 0x02000105 RID: 261
 public class ElementalFire_Expert_AIScript : ElementalFire_Basic_AIScript
 {
-	// Token: 0x170001E1 RID: 481
-	// (get) Token: 0x0600045C RID: 1116 RVA: 0x00015B37 File Offset: 0x00013D37
+	// Token: 0x17000275 RID: 629
+	// (get) Token: 0x0600061D RID: 1565 RVA: 0x00005303 File Offset: 0x00003503
 	protected override int m_shoot_TotalShots
 	{
 		get
@@ -13,8 +13,8 @@ public class ElementalFire_Expert_AIScript : ElementalFire_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170001E2 RID: 482
-	// (get) Token: 0x0600045D RID: 1117 RVA: 0x00015B3B File Offset: 0x00013D3B
+	// Token: 0x17000276 RID: 630
+	// (get) Token: 0x0600061E RID: 1566 RVA: 0x00005307 File Offset: 0x00003507
 	protected override float m_shoot_TotalShotDuration
 	{
 		get
@@ -23,8 +23,8 @@ public class ElementalFire_Expert_AIScript : ElementalFire_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170001E3 RID: 483
-	// (get) Token: 0x0600045E RID: 1118 RVA: 0x00015B42 File Offset: 0x00013D42
+	// Token: 0x17000277 RID: 631
+	// (get) Token: 0x0600061F RID: 1567 RVA: 0x0000530E File Offset: 0x0000350E
 	protected override float m_shoot_RandAngleOffset
 	{
 		get
@@ -33,8 +33,8 @@ public class ElementalFire_Expert_AIScript : ElementalFire_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170001E4 RID: 484
-	// (get) Token: 0x0600045F RID: 1119 RVA: 0x00015B49 File Offset: 0x00013D49
+	// Token: 0x17000278 RID: 632
+	// (get) Token: 0x06000620 RID: 1568 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected override float m_spinAttack_TimesShotDelay
 	{
 		get
@@ -43,8 +43,8 @@ public class ElementalFire_Expert_AIScript : ElementalFire_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170001E5 RID: 485
-	// (get) Token: 0x06000460 RID: 1120 RVA: 0x00015B50 File Offset: 0x00013D50
+	// Token: 0x17000279 RID: 633
+	// (get) Token: 0x06000621 RID: 1569 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override int m_spinAttack_TotalShots
 	{
 		get
@@ -53,8 +53,8 @@ public class ElementalFire_Expert_AIScript : ElementalFire_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170001E6 RID: 486
-	// (get) Token: 0x06000461 RID: 1121 RVA: 0x00015B53 File Offset: 0x00013D53
+	// Token: 0x1700027A RID: 634
+	// (get) Token: 0x06000622 RID: 1570 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override int m_spinAttack_ShotPatternLoops
 	{
 		get
@@ -63,8 +63,8 @@ public class ElementalFire_Expert_AIScript : ElementalFire_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170001E7 RID: 487
-	// (get) Token: 0x06000462 RID: 1122 RVA: 0x00015B56 File Offset: 0x00013D56
+	// Token: 0x1700027B RID: 635
+	// (get) Token: 0x06000623 RID: 1571 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float m_spinAttack_projectile_RandomSpread
 	{
 		get

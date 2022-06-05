@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000234 RID: 564
+// Token: 0x020003F1 RID: 1009
 [CreateAssetMenu(menuName = "Custom/Libraries/Hazard Library")]
 public class HazardLibrary : ScriptableObject
 {
-	// Token: 0x17000B33 RID: 2867
-	// (get) Token: 0x060016BF RID: 5823 RVA: 0x00046F20 File Offset: 0x00045120
+	// Token: 0x17000E60 RID: 3680
+	// (get) Token: 0x06002072 RID: 8306 RVA: 0x00011335 File Offset: 0x0000F535
 	public static HazardLibrary Instance
 	{
 		get
@@ -20,9 +20,9 @@ public class HazardLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B34 RID: 2868
-	// (get) Token: 0x060016C0 RID: 5824 RVA: 0x00046F49 File Offset: 0x00045149
-	// (set) Token: 0x060016C1 RID: 5825 RVA: 0x00046F55 File Offset: 0x00045155
+	// Token: 0x17000E61 RID: 3681
+	// (get) Token: 0x06002073 RID: 8307 RVA: 0x0001135E File Offset: 0x0000F55E
+	// (set) Token: 0x06002074 RID: 8308 RVA: 0x0001136A File Offset: 0x0000F56A
 	public static HazardLibraryEntry[] HazardPrefabs
 	{
 		get
@@ -35,7 +35,7 @@ public class HazardLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x060016C2 RID: 5826 RVA: 0x00046F64 File Offset: 0x00045164
+	// Token: 0x06002075 RID: 8309 RVA: 0x000A4FF0 File Offset: 0x000A31F0
 	public static Hazards GetHazards(HazardCategory hazardCategory)
 	{
 		if (hazardCategory <= HazardCategory.Line)
@@ -67,7 +67,7 @@ public class HazardLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x060016C3 RID: 5827 RVA: 0x00046FD4 File Offset: 0x000451D4
+	// Token: 0x06002076 RID: 8310 RVA: 0x000A5060 File Offset: 0x000A3260
 	public static Dictionary<BiomeType, HazardType[]> GetHazardsInBiomeTable(HazardCategory hazardCategory)
 	{
 		if (hazardCategory <= HazardCategory.Line)
@@ -99,7 +99,7 @@ public class HazardLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x060016C4 RID: 5828 RVA: 0x00047058 File Offset: 0x00045258
+	// Token: 0x06002077 RID: 8311 RVA: 0x000A50E4 File Offset: 0x000A32E4
 	public static HazardType[] GetDefaultHazardTypes(HazardCategory hazardCategory)
 	{
 		if (hazardCategory <= HazardCategory.Line)
@@ -131,7 +131,7 @@ public class HazardLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x060016C5 RID: 5829 RVA: 0x000470DC File Offset: 0x000452DC
+	// Token: 0x06002078 RID: 8312 RVA: 0x000A5168 File Offset: 0x000A3368
 	public static int GetHazardTypeIndexInHazardCategory(HazardType hazardType, HazardCategory hazardCategory)
 	{
 		HazardType[] hazardTypesInHazardCategory = HazardLibrary.GetHazardTypesInHazardCategory(hazardCategory);
@@ -145,7 +145,7 @@ public class HazardLibrary : ScriptableObject
 		return -1;
 	}
 
-	// Token: 0x060016C6 RID: 5830 RVA: 0x00047108 File Offset: 0x00045308
+	// Token: 0x06002079 RID: 8313 RVA: 0x000A5194 File Offset: 0x000A3394
 	public static HazardType[] GetHazardTypesInHazardCategory(HazardCategory hazardCategory)
 	{
 		if (hazardCategory <= HazardCategory.Line)
@@ -177,7 +177,7 @@ public class HazardLibrary : ScriptableObject
 		return new HazardType[0];
 	}
 
-	// Token: 0x060016C7 RID: 5831 RVA: 0x0004716C File Offset: 0x0004536C
+	// Token: 0x0600207A RID: 8314 RVA: 0x000A51F8 File Offset: 0x000A33F8
 	public static Hazard GetPrefab(HazardType hazardType)
 	{
 		if (HazardLibrary.m_hazardTable == null)
@@ -199,43 +199,43 @@ public class HazardLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x04001633 RID: 5683
+	// Token: 0x04001D4B RID: 7499
 	[SerializeField]
 	private HazardLibraryEntry[] m_hazardPrefabs;
 
-	// Token: 0x04001634 RID: 5684
+	// Token: 0x04001D4C RID: 7500
 	[Header("Point Hazards")]
 	[SerializeField]
 	private Hazards m_pointHazards;
 
-	// Token: 0x04001635 RID: 5685
+	// Token: 0x04001D4D RID: 7501
 	[Header("Line Hazards")]
 	[SerializeField]
 	private Hazards m_lineHazards;
 
-	// Token: 0x04001636 RID: 5686
+	// Token: 0x04001D4E RID: 7502
 	[Header("Turret Hazards")]
 	[SerializeField]
 	private Hazards m_turretHazards;
 
-	// Token: 0x04001637 RID: 5687
+	// Token: 0x04001D4F RID: 7503
 	[Header("Turret Hazards")]
 	[SerializeField]
 	private Hazards m_spikeHazards;
 
-	// Token: 0x04001638 RID: 5688
+	// Token: 0x04001D50 RID: 7504
 	private static HazardLibrary m_instance = null;
 
-	// Token: 0x04001639 RID: 5689
+	// Token: 0x04001D51 RID: 7505
 	private static Dictionary<HazardType, Hazard> m_hazardTable = null;
 
-	// Token: 0x0400163A RID: 5690
+	// Token: 0x04001D52 RID: 7506
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/HazardLibrary";
 
-	// Token: 0x0400163B RID: 5691
+	// Token: 0x04001D53 RID: 7507
 	public const string ASSET_PATH = "Assets/Content/Scriptable Objects/Libraries/HazardLibrary.asset";
 
-	// Token: 0x0400163C RID: 5692
+	// Token: 0x04001D54 RID: 7508
 	private static HazardType[] LINE_HAZARDS = new HazardType[]
 	{
 		HazardType.None,
@@ -251,7 +251,7 @@ public class HazardLibrary : ScriptableObject
 		HazardType.BreakableSpikeTall
 	};
 
-	// Token: 0x0400163D RID: 5693
+	// Token: 0x04001D55 RID: 7509
 	private static HazardType[] TURRET_HAZARDS = new HazardType[]
 	{
 		HazardType.None,
@@ -262,7 +262,7 @@ public class HazardLibrary : ScriptableObject
 		HazardType.RaycastTurret_Curse
 	};
 
-	// Token: 0x0400163E RID: 5694
+	// Token: 0x04001D56 RID: 7510
 	private static HazardType[] POINT_HAZARDS = new HazardType[]
 	{
 		HazardType.None,
@@ -282,7 +282,7 @@ public class HazardLibrary : ScriptableObject
 		HazardType.RisingWater
 	};
 
-	// Token: 0x0400163F RID: 5695
+	// Token: 0x04001D57 RID: 7511
 	private static HazardType[] FERR2D_HAZARDS = new HazardType[]
 	{
 		HazardType.None,

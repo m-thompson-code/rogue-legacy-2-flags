@@ -3,11 +3,11 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020004EF RID: 1263
+// Token: 0x02000847 RID: 2119
 public class BridgeBossRoomController : BossRoomController
 {
-	// Token: 0x170011B2 RID: 4530
-	// (get) Token: 0x06002F68 RID: 12136 RVA: 0x000A222F File Offset: 0x000A042F
+	// Token: 0x17001791 RID: 6033
+	// (get) Token: 0x0600417D RID: 16765 RVA: 0x00024445 File Offset: 0x00022645
 	public override float BossHealthAsPercentage
 	{
 		get
@@ -24,12 +24,12 @@ public class BridgeBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x170011B3 RID: 4531
-	// (get) Token: 0x06002F69 RID: 12137 RVA: 0x000A2254 File Offset: 0x000A0454
-	// (set) Token: 0x06002F6A RID: 12138 RVA: 0x000A225C File Offset: 0x000A045C
+	// Token: 0x17001792 RID: 6034
+	// (get) Token: 0x0600417E RID: 16766 RVA: 0x0002446A File Offset: 0x0002266A
+	// (set) Token: 0x0600417F RID: 16767 RVA: 0x00024472 File Offset: 0x00022672
 	public EnemyController Boss2 { get; private set; }
 
-	// Token: 0x06002F6B RID: 12139 RVA: 0x000A2268 File Offset: 0x000A0468
+	// Token: 0x06004180 RID: 16768 RVA: 0x00107A14 File Offset: 0x00105C14
 	protected override void InitializeObjectiveCompleteArgs(float bossDefeatedDisplayDuration)
 	{
 		string @string = LocalizationManager.GetString("LOC_ID_BIG_TEXT_UI_STYGIAN_BOSS_DEFEATED_TITLE_1", false, false);
@@ -40,7 +40,7 @@ public class BridgeBossRoomController : BossRoomController
 		this.m_bossDefeatedArgs.Initialize(base.Boss.EnemyType, EnemyRank.Basic, bossDefeatedDisplayDuration, @string, null, null);
 	}
 
-	// Token: 0x06002F6C RID: 12140 RVA: 0x000A22B2 File Offset: 0x000A04B2
+	// Token: 0x06004181 RID: 16769 RVA: 0x0002447B File Offset: 0x0002267B
 	protected override IEnumerator StartIntro()
 	{
 		if (PlayerManager.GetPlayerController().IsFacingRight)
@@ -55,7 +55,7 @@ public class BridgeBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x06002F6D RID: 12141 RVA: 0x000A22C1 File Offset: 0x000A04C1
+	// Token: 0x06004182 RID: 16770 RVA: 0x0002448A File Offset: 0x0002268A
 	protected override void OnModeShift(object sender, EventArgs args)
 	{
 		base.OnModeShift(sender, args);
@@ -66,7 +66,7 @@ public class BridgeBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x06002F6E RID: 12142 RVA: 0x000A22E7 File Offset: 0x000A04E7
+	// Token: 0x06004183 RID: 16771 RVA: 0x000244B0 File Offset: 0x000226B0
 	private IEnumerator SpawnSecondBossCoroutine()
 	{
 		SkeletonBoss_Basic_AIScript aiScript = base.Boss.LogicController.LogicScript as SkeletonBoss_Basic_AIScript;
@@ -88,26 +88,26 @@ public class BridgeBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x040025CD RID: 9677
+	// Token: 0x04003348 RID: 13128
 	private const string ON_ENTER_AUDIO = "event:/SFX/Enemies/vo_skellyBoss_agro";
 
-	// Token: 0x040025CE RID: 9678
+	// Token: 0x04003349 RID: 13129
 	private const string SECOND_BOSS_SUMMON_AUDIO = "event:/SFX/Enemies/vo_skellyBoss_laugh";
 
-	// Token: 0x040025CF RID: 9679
+	// Token: 0x0400334A RID: 13130
 	[SerializeField]
 	private GameObject m_secondBossSpawnPosition;
 
-	// Token: 0x040025D0 RID: 9680
+	// Token: 0x0400334B RID: 13131
 	[SerializeField]
 	private bool m_isPrimeVariant;
 
-	// Token: 0x040025D1 RID: 9681
+	// Token: 0x0400334C RID: 13132
 	private int m_bossesSpawned;
 
-	// Token: 0x040025D2 RID: 9682
+	// Token: 0x0400334D RID: 13133
 	private bool m_secondBossSpawned;
 
-	// Token: 0x040025D3 RID: 9683
+	// Token: 0x0400334E RID: 13134
 	private bool m_outroPlaying;
 }

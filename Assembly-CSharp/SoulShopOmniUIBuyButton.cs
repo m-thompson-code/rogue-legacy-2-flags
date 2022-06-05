@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003C6 RID: 966
+// Token: 0x0200065E RID: 1630
 public class SoulShopOmniUIBuyButton : OmniUIButton, ISoulShopOmniUIButton
 {
-	// Token: 0x17000EAD RID: 3757
-	// (get) Token: 0x0600239B RID: 9115 RVA: 0x00073C8C File Offset: 0x00071E8C
+	// Token: 0x17001342 RID: 4930
+	// (get) Token: 0x060031B9 RID: 12729 RVA: 0x0001B4B2 File Offset: 0x000196B2
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -15,17 +15,17 @@ public class SoulShopOmniUIBuyButton : OmniUIButton, ISoulShopOmniUIButton
 		}
 	}
 
-	// Token: 0x17000EAE RID: 3758
-	// (get) Token: 0x0600239C RID: 9116 RVA: 0x00073C94 File Offset: 0x00071E94
-	// (set) Token: 0x0600239D RID: 9117 RVA: 0x00073C9C File Offset: 0x00071E9C
+	// Token: 0x17001343 RID: 4931
+	// (get) Token: 0x060031BA RID: 12730 RVA: 0x0001B4BA File Offset: 0x000196BA
+	// (set) Token: 0x060031BB RID: 12731 RVA: 0x0001B4C2 File Offset: 0x000196C2
 	public SoulShopType SoulShopType { get; set; }
 
-	// Token: 0x17000EAF RID: 3759
-	// (get) Token: 0x0600239E RID: 9118 RVA: 0x00073CA5 File Offset: 0x00071EA5
-	// (set) Token: 0x0600239F RID: 9119 RVA: 0x00073CAD File Offset: 0x00071EAD
+	// Token: 0x17001344 RID: 4932
+	// (get) Token: 0x060031BC RID: 12732 RVA: 0x0001B4CB File Offset: 0x000196CB
+	// (set) Token: 0x060031BD RID: 12733 RVA: 0x0001B4D3 File Offset: 0x000196D3
 	public SoulShopOmniUIEntry ParentEntry { get; set; }
 
-	// Token: 0x060023A0 RID: 9120 RVA: 0x00073CB6 File Offset: 0x00071EB6
+	// Token: 0x060031BE RID: 12734 RVA: 0x0001B4DC File Offset: 0x000196DC
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -36,7 +36,7 @@ public class SoulShopOmniUIBuyButton : OmniUIButton, ISoulShopOmniUIButton
 		this.m_descriptionEventArgs.Initialize(this.SoulShopType, OmniUIButtonType.Purchasing);
 	}
 
-	// Token: 0x060023A1 RID: 9121 RVA: 0x00073CE8 File Offset: 0x00071EE8
+	// Token: 0x060031BF RID: 12735 RVA: 0x000D3F44 File Offset: 0x000D2144
 	public override void OnConfirmButtonPressed()
 	{
 		if (!this.IsButtonActive)
@@ -97,7 +97,7 @@ public class SoulShopOmniUIBuyButton : OmniUIButton, ISoulShopOmniUIButton
 		this.RunOnConfirmPressedAnimation();
 	}
 
-	// Token: 0x060023A2 RID: 9122 RVA: 0x00073EF8 File Offset: 0x000720F8
+	// Token: 0x060031C0 RID: 12736 RVA: 0x000D4154 File Offset: 0x000D2354
 	public override void UpdateState()
 	{
 		SoulShopObj soulShopObj = SaveManager.ModeSaveData.GetSoulShopObj(this.SoulShopType);
@@ -135,13 +135,13 @@ public class SoulShopOmniUIBuyButton : OmniUIButton, ISoulShopOmniUIButton
 		this.IsButtonActive = true;
 	}
 
-	// Token: 0x04001E57 RID: 7767
+	// Token: 0x04002890 RID: 10384
 	[SerializeField]
 	protected TMP_Text m_titleText;
 
-	// Token: 0x04001E58 RID: 7768
+	// Token: 0x04002891 RID: 10385
 	private SoulShopOmniUIDescriptionEventArgs m_descriptionEventArgs;
 
-	// Token: 0x04001E59 RID: 7769
+	// Token: 0x04002892 RID: 10386
 	protected PurchaseBoxDialogueEventArgs m_purchaseDialogueArgs = new PurchaseBoxDialogueEventArgs(PurchaseBoxDialogueType.Welcome);
 }

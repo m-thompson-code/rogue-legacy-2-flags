@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003CB RID: 971
+// Token: 0x02000664 RID: 1636
 public class SoulShopOmniUIEquipButton : OmniUIButton, ISoulShopOmniUIButton
 {
-	// Token: 0x17000EBB RID: 3771
-	// (get) Token: 0x060023C9 RID: 9161 RVA: 0x00074BCC File Offset: 0x00072DCC
+	// Token: 0x17001350 RID: 4944
+	// (get) Token: 0x060031E7 RID: 12775 RVA: 0x0001B645 File Offset: 0x00019845
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -15,17 +15,17 @@ public class SoulShopOmniUIEquipButton : OmniUIButton, ISoulShopOmniUIButton
 		}
 	}
 
-	// Token: 0x17000EBC RID: 3772
-	// (get) Token: 0x060023CA RID: 9162 RVA: 0x00074BD4 File Offset: 0x00072DD4
-	// (set) Token: 0x060023CB RID: 9163 RVA: 0x00074BDC File Offset: 0x00072DDC
+	// Token: 0x17001351 RID: 4945
+	// (get) Token: 0x060031E8 RID: 12776 RVA: 0x0001B64D File Offset: 0x0001984D
+	// (set) Token: 0x060031E9 RID: 12777 RVA: 0x0001B655 File Offset: 0x00019855
 	public SoulShopType SoulShopType { get; set; }
 
-	// Token: 0x17000EBD RID: 3773
-	// (get) Token: 0x060023CC RID: 9164 RVA: 0x00074BE5 File Offset: 0x00072DE5
-	// (set) Token: 0x060023CD RID: 9165 RVA: 0x00074BED File Offset: 0x00072DED
+	// Token: 0x17001352 RID: 4946
+	// (get) Token: 0x060031EA RID: 12778 RVA: 0x0001B65E File Offset: 0x0001985E
+	// (set) Token: 0x060031EB RID: 12779 RVA: 0x0001B666 File Offset: 0x00019866
 	public SoulShopOmniUIEntry ParentEntry { get; set; }
 
-	// Token: 0x060023CE RID: 9166 RVA: 0x00074BF8 File Offset: 0x00072DF8
+	// Token: 0x060031EC RID: 12780 RVA: 0x000D4CE8 File Offset: 0x000D2EE8
 	protected override void InitializeButtonEventArgs()
 	{
 		OmniUIButtonType buttonType = this.m_isRightArrow ? OmniUIButtonType.Equipping : OmniUIButtonType.Unequipping;
@@ -37,7 +37,7 @@ public class SoulShopOmniUIEquipButton : OmniUIButton, ISoulShopOmniUIButton
 		this.m_descriptionEventArgs.Initialize(this.SoulShopType, buttonType);
 	}
 
-	// Token: 0x060023CF RID: 9167 RVA: 0x00074C40 File Offset: 0x00072E40
+	// Token: 0x060031ED RID: 12781 RVA: 0x000D4D30 File Offset: 0x000D2F30
 	public override void UpdateState()
 	{
 		SoulShopObj soulShopObj = SaveManager.ModeSaveData.GetSoulShopObj(this.SoulShopType);
@@ -51,7 +51,7 @@ public class SoulShopOmniUIEquipButton : OmniUIButton, ISoulShopOmniUIButton
 		this.m_levelText.text = currentEquippedLevel.ToString() + "/" + currentOwnedLevel.ToString();
 	}
 
-	// Token: 0x060023D0 RID: 9168 RVA: 0x00074CA0 File Offset: 0x00072EA0
+	// Token: 0x060031EE RID: 12782 RVA: 0x000D4D90 File Offset: 0x000D2F90
 	public override void OnConfirmButtonPressed()
 	{
 		SoulShopObj soulShopObj = SaveManager.ModeSaveData.GetSoulShopObj(this.SoulShopType);
@@ -88,18 +88,18 @@ public class SoulShopOmniUIEquipButton : OmniUIButton, ISoulShopOmniUIButton
 		base.OnConfirmButtonPressed();
 	}
 
-	// Token: 0x04001E67 RID: 7783
+	// Token: 0x040028A5 RID: 10405
 	[SerializeField]
 	private bool m_isRightArrow;
 
-	// Token: 0x04001E68 RID: 7784
+	// Token: 0x040028A6 RID: 10406
 	[SerializeField]
 	private GameObject m_buttonGO;
 
-	// Token: 0x04001E69 RID: 7785
+	// Token: 0x040028A7 RID: 10407
 	[SerializeField]
 	private TMP_Text m_levelText;
 
-	// Token: 0x04001E6A RID: 7786
+	// Token: 0x040028A8 RID: 10408
 	private SoulShopOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

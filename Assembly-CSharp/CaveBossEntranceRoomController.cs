@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004F2 RID: 1266
+// Token: 0x0200084D RID: 2125
 public class CaveBossEntranceRoomController : BossEntranceRoomController
 {
-	// Token: 0x06002F7A RID: 12154 RVA: 0x000A266C File Offset: 0x000A086C
+	// Token: 0x060041A1 RID: 16801 RVA: 0x001080FC File Offset: 0x001062FC
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -45,7 +45,7 @@ public class CaveBossEntranceRoomController : BossEntranceRoomController
 		this.m_bossUpTunnel.Tunnel.SetIsVisible(false);
 	}
 
-	// Token: 0x06002F7B RID: 12155 RVA: 0x000A2748 File Offset: 0x000A0948
+	// Token: 0x060041A2 RID: 16802 RVA: 0x001081D8 File Offset: 0x001063D8
 	public override void SetBossTunnelState(BossTunnelState state, bool skipToIdleState)
 	{
 		Animator component = this.m_dragonPropSpawner.PropInstance.GetComponent<Animator>();
@@ -103,10 +103,10 @@ public class CaveBossEntranceRoomController : BossEntranceRoomController
 		}
 	}
 
-	// Token: 0x040025E0 RID: 9696
+	// Token: 0x04003367 RID: 13159
 	[SerializeField]
 	private PropSpawnController m_dragonPropSpawner;
 
-	// Token: 0x040025E1 RID: 9697
+	// Token: 0x04003368 RID: 13160
 	private InsightObjectiveCompleteHUDEventArgs m_insightArgs = new InsightObjectiveCompleteHUDEventArgs(InsightType.None, false, 5f, null, null, null);
 }

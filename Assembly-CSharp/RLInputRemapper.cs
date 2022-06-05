@@ -3,11 +3,11 @@ using System.Collections;
 using Rewired;
 using UnityEngine;
 
-// Token: 0x020002B5 RID: 693
+// Token: 0x020004A2 RID: 1186
 public class RLInputRemapper : MonoBehaviour
 {
-	// Token: 0x17000C81 RID: 3201
-	// (get) Token: 0x06001B8B RID: 7051 RVA: 0x000585BA File Offset: 0x000567BA
+	// Token: 0x17001000 RID: 4096
+	// (get) Token: 0x06002633 RID: 9779 RVA: 0x00015363 File Offset: 0x00013563
 	public static bool IsInitialized
 	{
 		get
@@ -16,9 +16,9 @@ public class RLInputRemapper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000C82 RID: 3202
-	// (get) Token: 0x06001B8C RID: 7052 RVA: 0x000585C6 File Offset: 0x000567C6
-	// (set) Token: 0x06001B8D RID: 7053 RVA: 0x000585D2 File Offset: 0x000567D2
+	// Token: 0x17001001 RID: 4097
+	// (get) Token: 0x06002634 RID: 9780 RVA: 0x0001536F File Offset: 0x0001356F
+	// (set) Token: 0x06002635 RID: 9781 RVA: 0x0001537B File Offset: 0x0001357B
 	public static Action<bool> OnRemapComplete
 	{
 		get
@@ -31,7 +31,7 @@ public class RLInputRemapper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B8E RID: 7054 RVA: 0x000585DF File Offset: 0x000567DF
+	// Token: 0x06002636 RID: 9782 RVA: 0x00015388 File Offset: 0x00013588
 	private string GetWindowActionName(string actionName)
 	{
 		if (actionName != null)
@@ -48,7 +48,7 @@ public class RLInputRemapper : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06001B8F RID: 7055 RVA: 0x0005860D File Offset: 0x0005680D
+	// Token: 0x06002637 RID: 9783 RVA: 0x000153B6 File Offset: 0x000135B6
 	public static void SetRemappingFlagDirty(bool flagGamepad)
 	{
 		if (!flagGamepad)
@@ -59,8 +59,8 @@ public class RLInputRemapper : MonoBehaviour
 		RLInputRemapper.Instance.m_gamepadWasRemapped = true;
 	}
 
-	// Token: 0x17000C83 RID: 3203
-	// (get) Token: 0x06001B90 RID: 7056 RVA: 0x00058629 File Offset: 0x00056829
+	// Token: 0x17001002 RID: 4098
+	// (get) Token: 0x06002638 RID: 9784 RVA: 0x000153D2 File Offset: 0x000135D2
 	private bool RemappingSucceeded
 	{
 		get
@@ -69,7 +69,7 @@ public class RLInputRemapper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B91 RID: 7057 RVA: 0x00058634 File Offset: 0x00056834
+	// Token: 0x06002639 RID: 9785 RVA: 0x000153DD File Offset: 0x000135DD
 	private void Awake()
 	{
 		if (RLInputRemapper.Instance == null)
@@ -80,7 +80,7 @@ public class RLInputRemapper : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06001B92 RID: 7058 RVA: 0x00058655 File Offset: 0x00056855
+	// Token: 0x0600263A RID: 9786 RVA: 0x000153FE File Offset: 0x000135FE
 	private void Start()
 	{
 		if (!RLInputRemapper.IsInitialized)
@@ -89,7 +89,7 @@ public class RLInputRemapper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B93 RID: 7059 RVA: 0x00058664 File Offset: 0x00056864
+	// Token: 0x0600263B RID: 9787 RVA: 0x000B54A0 File Offset: 0x000B36A0
 	private void OnEnable()
 	{
 		this.m_gamepadWasRemapped = false;
@@ -106,7 +106,7 @@ public class RLInputRemapper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B94 RID: 7060 RVA: 0x000586D7 File Offset: 0x000568D7
+	// Token: 0x0600263C RID: 9788 RVA: 0x0001540D File Offset: 0x0001360D
 	private void OnDisable()
 	{
 		if (this.m_gamepadWasRemapped)
@@ -122,7 +122,7 @@ public class RLInputRemapper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B95 RID: 7061 RVA: 0x00058708 File Offset: 0x00056908
+	// Token: 0x0600263D RID: 9789 RVA: 0x0001543E File Offset: 0x0001363E
 	private void OnDestroy()
 	{
 		this.m_inputMapper.Stop();
@@ -131,7 +131,7 @@ public class RLInputRemapper : MonoBehaviour
 		this.m_mouseInputMapper.RemoveAllEventListeners();
 	}
 
-	// Token: 0x06001B96 RID: 7062 RVA: 0x00058736 File Offset: 0x00056936
+	// Token: 0x0600263E RID: 9790 RVA: 0x0001546C File Offset: 0x0001366C
 	private void Initialize()
 	{
 		this.InitializeMapperOptions(this.m_inputMapper);
@@ -140,7 +140,7 @@ public class RLInputRemapper : MonoBehaviour
 		this.m_isInitialized = true;
 	}
 
-	// Token: 0x06001B97 RID: 7063 RVA: 0x00058768 File Offset: 0x00056968
+	// Token: 0x0600263F RID: 9791 RVA: 0x000B5514 File Offset: 0x000B3714
 	private void InitializeControllerMap(ControllerType controllerType)
 	{
 		Player player = ReInput.players.GetPlayer(0);
@@ -169,7 +169,7 @@ public class RLInputRemapper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B98 RID: 7064 RVA: 0x00058898 File Offset: 0x00056A98
+	// Token: 0x06002640 RID: 9792 RVA: 0x000B5644 File Offset: 0x000B3844
 	private void InitializeMapperOptions(InputMapper inputMapper)
 	{
 		inputMapper.options.allowButtonsOnFullAxisAssignment = true;
@@ -185,7 +185,7 @@ public class RLInputRemapper : MonoBehaviour
 		inputMapper.ConflictFoundEvent += this.OnConflictFound;
 	}
 
-	// Token: 0x06001B99 RID: 7065 RVA: 0x0005894E File Offset: 0x00056B4E
+	// Token: 0x06002641 RID: 9793 RVA: 0x0001549D File Offset: 0x0001369D
 	public static void ChangeInputRequested(Rewired_RL.InputActionType actionInputType, bool useGamepad, Pole axis = Pole.Positive)
 	{
 		if (!RLInputRemapper.IsInitialized)
@@ -200,7 +200,7 @@ public class RLInputRemapper : MonoBehaviour
 		RLInputRemapper.Instance.Internal_ChangeInputRequested(actionInputType, ControllerType.Joystick, axis);
 	}
 
-	// Token: 0x06001B9A RID: 7066 RVA: 0x0005897F File Offset: 0x00056B7F
+	// Token: 0x06002642 RID: 9794 RVA: 0x000154CE File Offset: 0x000136CE
 	public static void ChangeInputRequested(Rewired_RL.WindowInputActionType windowInputType, bool useGamepad, Pole axis = Pole.Positive)
 	{
 		if (!RLInputRemapper.IsInitialized)
@@ -215,7 +215,7 @@ public class RLInputRemapper : MonoBehaviour
 		RLInputRemapper.Instance.Internal_ChangeInputRequested(windowInputType, ControllerType.Joystick, axis);
 	}
 
-	// Token: 0x06001B9B RID: 7067 RVA: 0x000589B0 File Offset: 0x00056BB0
+	// Token: 0x06002643 RID: 9795 RVA: 0x000B56FC File Offset: 0x000B38FC
 	private void Internal_ChangeInputRequested(Rewired_RL.WindowInputActionType windowInputActionType, ControllerType controllerType, Pole axis)
 	{
 		this.m_inputActionToRemap = ReInput.mapping.GetAction(Rewired_RL.GetString(windowInputActionType));
@@ -277,7 +277,7 @@ public class RLInputRemapper : MonoBehaviour
 		base.StartCoroutine(this.StartListeningCoroutine(controllerType == ControllerType.Keyboard));
 	}
 
-	// Token: 0x06001B9C RID: 7068 RVA: 0x00058B90 File Offset: 0x00056D90
+	// Token: 0x06002644 RID: 9796 RVA: 0x000B58DC File Offset: 0x000B3ADC
 	private void Internal_ChangeInputRequested(Rewired_RL.InputActionType inputActionType, ControllerType controllerType, Pole axis)
 	{
 		this.m_inputActionToRemap = ReInput.mapping.GetAction(Rewired_RL.GetString(inputActionType));
@@ -339,7 +339,7 @@ public class RLInputRemapper : MonoBehaviour
 		base.StartCoroutine(this.StartListeningCoroutine(controllerType == ControllerType.Keyboard));
 	}
 
-	// Token: 0x06001B9D RID: 7069 RVA: 0x00058D6F File Offset: 0x00056F6F
+	// Token: 0x06002645 RID: 9797 RVA: 0x000154FF File Offset: 0x000136FF
 	private IEnumerator StartListeningCoroutine(bool startMouseInputMapper)
 	{
 		this.m_onCompletePlayed = false;
@@ -353,7 +353,7 @@ public class RLInputRemapper : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001B9E RID: 7070 RVA: 0x00058D88 File Offset: 0x00056F88
+	// Token: 0x06002646 RID: 9798 RVA: 0x000B5ABC File Offset: 0x000B3CBC
 	private void OnInputDetected(InputMapper.InputMappedEventData data)
 	{
 		this.m_inputMapperUsed = data.inputMapper;
@@ -366,7 +366,7 @@ public class RLInputRemapper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B9F RID: 7071 RVA: 0x00058DEC File Offset: 0x00056FEC
+	// Token: 0x06002647 RID: 9799 RVA: 0x000B5B20 File Offset: 0x000B3D20
 	private void OnMappingComplete(InputMapper.StoppedEventData data)
 	{
 		if (this.RemappingSucceeded && this.m_inputMapperUsed != data.inputMapper)
@@ -386,7 +386,7 @@ public class RLInputRemapper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BA0 RID: 7072 RVA: 0x00058E60 File Offset: 0x00057060
+	// Token: 0x06002648 RID: 9800 RVA: 0x00015515 File Offset: 0x00013715
 	private void OnFailedMapping()
 	{
 		Debug.Log("Remapping failed or cancelled by user.");
@@ -396,7 +396,7 @@ public class RLInputRemapper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BA1 RID: 7073 RVA: 0x00058E80 File Offset: 0x00057080
+	// Token: 0x06002649 RID: 9801 RVA: 0x00015535 File Offset: 0x00013735
 	private IEnumerator OnSuccessfulMappingCoroutine()
 	{
 		yield return this.m_waitYield;
@@ -446,7 +446,7 @@ public class RLInputRemapper : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001BA2 RID: 7074 RVA: 0x00058E8F File Offset: 0x0005708F
+	// Token: 0x0600264A RID: 9802 RVA: 0x00015544 File Offset: 0x00013744
 	private void ReassignAllWindowMappableActions()
 	{
 		Debug.Log("Reassigning all WindowRemappable entries...");
@@ -456,7 +456,7 @@ public class RLInputRemapper : MonoBehaviour
 		this.ReassignWindowMappableAction("MoveVertical", Pole.Negative);
 	}
 
-	// Token: 0x06001BA3 RID: 7075 RVA: 0x00058ECC File Offset: 0x000570CC
+	// Token: 0x0600264B RID: 9803 RVA: 0x000B5B94 File Offset: 0x000B3D94
 	private void ReassignWindowMappableAction(string movementActionName, Pole axis)
 	{
 		string windowActionName = this.GetWindowActionName(movementActionName);
@@ -479,7 +479,7 @@ public class RLInputRemapper : MonoBehaviour
 		controllerMap.CreateElementMap(elementAssignment);
 	}
 
-	// Token: 0x06001BA4 RID: 7076 RVA: 0x00058FA0 File Offset: 0x000571A0
+	// Token: 0x0600264C RID: 9804 RVA: 0x000B5C68 File Offset: 0x000B3E68
 	private bool OnIsElementAllowed(ControllerPollingInfo info)
 	{
 		if (info.keyboardKey == KeyCode.Escape)
@@ -506,7 +506,7 @@ public class RLInputRemapper : MonoBehaviour
 		return (info.controllerType != ControllerType.Keyboard || !this.m_illegalKBControllerMap.ContainsElementIdentifier(info.elementIdentifierId)) && (info.controllerType != ControllerType.Mouse || !this.m_illegalMouseControllerMap.ContainsElementIdentifier(info.elementIdentifierId));
 	}
 
-	// Token: 0x06001BA5 RID: 7077 RVA: 0x00059060 File Offset: 0x00057260
+	// Token: 0x0600264D RID: 9805 RVA: 0x000B5D28 File Offset: 0x000B3F28
 	private void OnConflictFound(InputMapper.ConflictFoundEventData data)
 	{
 		bool flag = false;
@@ -528,7 +528,7 @@ public class RLInputRemapper : MonoBehaviour
 		data.responseCallback(InputMapper.ConflictResponse.Ignore);
 	}
 
-	// Token: 0x06001BA6 RID: 7078 RVA: 0x00059180 File Offset: 0x00057380
+	// Token: 0x0600264E RID: 9806 RVA: 0x000B5E48 File Offset: 0x000B4048
 	private void CreateDefaultElementMap(Rewired_RL.InputActionType actionInputType, ControllerType controllerType)
 	{
 		Controller controller = ReInput.controllers.GetController(controllerType, 0);
@@ -540,81 +540,81 @@ public class RLInputRemapper : MonoBehaviour
 		controllerMap.CreateElementMap(elementAssignment);
 	}
 
-	// Token: 0x04001936 RID: 6454
+	// Token: 0x0400211C RID: 8476
 	private static RLInputRemapper Instance;
 
-	// Token: 0x04001937 RID: 6455
+	// Token: 0x0400211D RID: 8477
 	private Action<bool> m_onCompleteAction;
 
-	// Token: 0x04001938 RID: 6456
+	// Token: 0x0400211E RID: 8478
 	private InputMapper m_inputMapper = new InputMapper();
 
-	// Token: 0x04001939 RID: 6457
+	// Token: 0x0400211F RID: 8479
 	private InputMapper m_mouseInputMapper = new InputMapper();
 
-	// Token: 0x0400193A RID: 6458
+	// Token: 0x04002120 RID: 8480
 	private InputMapper.Context m_context = new InputMapper.Context();
 
-	// Token: 0x0400193B RID: 6459
+	// Token: 0x04002121 RID: 8481
 	private InputMapper.Context m_mouseContext = new InputMapper.Context();
 
-	// Token: 0x0400193C RID: 6460
+	// Token: 0x04002122 RID: 8482
 	private ControllerMap m_mouseControllerMap;
 
-	// Token: 0x0400193D RID: 6461
+	// Token: 0x04002123 RID: 8483
 	private ControllerMap m_keyboardControllerMap;
 
-	// Token: 0x0400193E RID: 6462
+	// Token: 0x04002124 RID: 8484
 	private ControllerMap m_gamepadControllerMap;
 
-	// Token: 0x0400193F RID: 6463
+	// Token: 0x04002125 RID: 8485
 	private bool m_isInitialized;
 
-	// Token: 0x04001940 RID: 6464
+	// Token: 0x04002126 RID: 8486
 	private ControllerMap m_windowKBControllerMap;
 
-	// Token: 0x04001941 RID: 6465
+	// Token: 0x04002127 RID: 8487
 	private ControllerMap m_windowMouseControllerMap;
 
-	// Token: 0x04001942 RID: 6466
+	// Token: 0x04002128 RID: 8488
 	private ControllerMap m_illegalMouseControllerMap;
 
-	// Token: 0x04001943 RID: 6467
+	// Token: 0x04002129 RID: 8489
 	private ControllerMap m_illegalKBControllerMap;
 
-	// Token: 0x04001944 RID: 6468
+	// Token: 0x0400212A RID: 8490
 	private ControllerMap m_illegalGamepadControllerMap;
 
-	// Token: 0x04001945 RID: 6469
+	// Token: 0x0400212B RID: 8491
 	private ControllerType m_controllerTypeToRemap;
 
-	// Token: 0x04001946 RID: 6470
+	// Token: 0x0400212C RID: 8492
 	private ActionElementMap m_aemToRemap;
 
-	// Token: 0x04001947 RID: 6471
+	// Token: 0x0400212D RID: 8493
 	private InputAction m_inputActionToRemap;
 
-	// Token: 0x04001948 RID: 6472
+	// Token: 0x0400212E RID: 8494
 	private ControllerMap m_controllerMapToRemap;
 
-	// Token: 0x04001949 RID: 6473
+	// Token: 0x0400212F RID: 8495
 	private Pole m_axisContributionToRemap;
 
-	// Token: 0x0400194A RID: 6474
+	// Token: 0x04002130 RID: 8496
 	private WaitForSecondsRealtime m_waitYield;
 
-	// Token: 0x0400194B RID: 6475
+	// Token: 0x04002131 RID: 8497
 	private GamepadType m_currentlyUsedGamepadType;
 
-	// Token: 0x0400194C RID: 6476
+	// Token: 0x04002132 RID: 8498
 	private InputMapper m_inputMapperUsed;
 
-	// Token: 0x0400194D RID: 6477
+	// Token: 0x04002133 RID: 8499
 	private bool m_onCompletePlayed;
 
-	// Token: 0x0400194E RID: 6478
+	// Token: 0x04002134 RID: 8500
 	private bool m_gamepadWasRemapped;
 
-	// Token: 0x0400194F RID: 6479
+	// Token: 0x04002135 RID: 8501
 	private bool m_keyboardWasRemapped;
 }

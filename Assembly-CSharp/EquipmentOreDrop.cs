@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000470 RID: 1136
+// Token: 0x02000766 RID: 1894
 public class EquipmentOreDrop : BaseItemDrop
 {
-	// Token: 0x1700103E RID: 4158
-	// (get) Token: 0x060029C5 RID: 10693 RVA: 0x00089EC6 File Offset: 0x000880C6
+	// Token: 0x17001573 RID: 5491
+	// (get) Token: 0x060039CF RID: 14799 RVA: 0x0000452B File Offset: 0x0000272B
 	public override ItemDropType ItemDropType
 	{
 		get
@@ -15,7 +15,7 @@ public class EquipmentOreDrop : BaseItemDrop
 		}
 	}
 
-	// Token: 0x060029C6 RID: 10694 RVA: 0x00089ECC File Offset: 0x000880CC
+	// Token: 0x060039D0 RID: 14800 RVA: 0x000EBC24 File Offset: 0x000E9E24
 	protected override void Collect(GameObject collector)
 	{
 		int num = Economy_EV.GetItemDropValue(this.ItemDropType, false);

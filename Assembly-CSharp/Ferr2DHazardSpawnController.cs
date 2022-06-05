@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000609 RID: 1545
+// Token: 0x02000A2A RID: 2602
 public class Ferr2DHazardSpawnController : HazardSpawnControllerBase
 {
-	// Token: 0x170013E4 RID: 5092
-	// (get) Token: 0x06003832 RID: 14386 RVA: 0x000BFF37 File Offset: 0x000BE137
+	// Token: 0x17001B3B RID: 6971
+	// (get) Token: 0x06004ECF RID: 20175 RVA: 0x00017640 File Offset: 0x00015840
 	public override HazardCategory Category
 	{
 		get
@@ -14,7 +14,7 @@ public class Ferr2DHazardSpawnController : HazardSpawnControllerBase
 		}
 	}
 
-	// Token: 0x06003833 RID: 14387 RVA: 0x000BFF3B File Offset: 0x000BE13B
+	// Token: 0x06004ED0 RID: 20176 RVA: 0x0002AFB1 File Offset: 0x000291B1
 	protected override void Awake()
 	{
 		base.Awake();
@@ -22,18 +22,18 @@ public class Ferr2DHazardSpawnController : HazardSpawnControllerBase
 		base.gameObject.GetComponent<MeshRenderer>().enabled = false;
 	}
 
-	// Token: 0x06003834 RID: 14388 RVA: 0x000BFF65 File Offset: 0x000BE165
+	// Token: 0x06004ED1 RID: 20177 RVA: 0x0002AFDB File Offset: 0x000291DB
 	protected override IHazard GetHazard(HazardType hazardType)
 	{
 		return base.GetHazard(hazardType);
 	}
 
-	// Token: 0x06003835 RID: 14389 RVA: 0x000BFF6E File Offset: 0x000BE16E
+	// Token: 0x06004ED2 RID: 20178 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void Reset()
 	{
 	}
 
-	// Token: 0x06003836 RID: 14390 RVA: 0x000BFF70 File Offset: 0x000BE170
+	// Token: 0x06004ED3 RID: 20179 RVA: 0x0012E40C File Offset: 0x0012C60C
 	protected override void Spawn()
 	{
 		if (base.Type == HazardType.None)
@@ -62,6 +62,6 @@ public class Ferr2DHazardSpawnController : HazardSpawnControllerBase
 		}
 	}
 
-	// Token: 0x04002AEB RID: 10987
+	// Token: 0x04003B4E RID: 15182
 	private Ferr2DT_PathTerrain m_ferr2D;
 }

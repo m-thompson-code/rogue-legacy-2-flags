@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006D0 RID: 1744
+// Token: 0x02000B7B RID: 2939
 [CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Enemy Class Data")]
 public class EnemyClassData : ScriptableObject
 {
-	// Token: 0x06003FC4 RID: 16324 RVA: 0x000E2611 File Offset: 0x000E0811
+	// Token: 0x060058FB RID: 22779 RVA: 0x00030668 File Offset: 0x0002E868
 	public EnemyData GetEnemyData(EnemyRank enemyRank)
 	{
 		switch (enemyRank)
@@ -21,7 +21,7 @@ public class EnemyClassData : ScriptableObject
 		}
 	}
 
-	// Token: 0x06003FC5 RID: 16325 RVA: 0x000E2644 File Offset: 0x000E0844
+	// Token: 0x060058FC RID: 22780 RVA: 0x0003069B File Offset: 0x0002E89B
 	public BaseAIScript GetAIScript(EnemyRank enemyRank)
 	{
 		switch (enemyRank)
@@ -37,52 +37,52 @@ public class EnemyClassData : ScriptableObject
 		}
 	}
 
-	// Token: 0x06003FC6 RID: 16326 RVA: 0x000E2677 File Offset: 0x000E0877
+	// Token: 0x060058FD RID: 22781 RVA: 0x000306CE File Offset: 0x0002E8CE
 	public LogicController_SO GetLogicController()
 	{
 		return this.m_enemyLogicController;
 	}
 
-	// Token: 0x04002FBA RID: 12218
+	// Token: 0x04004209 RID: 16905
 	[Header("Basic")]
 	[SerializeField]
 	private EnemyData m_basicEnemyData;
 
-	// Token: 0x04002FBB RID: 12219
+	// Token: 0x0400420A RID: 16906
 	[SerializeField]
 	private BaseAIScript m_basicAIScript;
 
-	// Token: 0x04002FBC RID: 12220
+	// Token: 0x0400420B RID: 16907
 	[Space(10f)]
 	[Header("Advanced")]
 	[SerializeField]
 	private EnemyData m_advancedEnemyData;
 
-	// Token: 0x04002FBD RID: 12221
+	// Token: 0x0400420C RID: 16908
 	[SerializeField]
 	private BaseAIScript m_advancedAIScript;
 
-	// Token: 0x04002FBE RID: 12222
+	// Token: 0x0400420D RID: 16909
 	[Space(10f)]
 	[Header("Expert")]
 	[SerializeField]
 	private EnemyData m_expertEnemyData;
 
-	// Token: 0x04002FBF RID: 12223
+	// Token: 0x0400420E RID: 16910
 	[SerializeField]
 	private BaseAIScript m_expertAIScript;
 
-	// Token: 0x04002FC0 RID: 12224
+	// Token: 0x0400420F RID: 16911
 	[Space(10f)]
 	[Header("Miniboss")]
 	[SerializeField]
 	private EnemyData m_minibossEnemyData;
 
-	// Token: 0x04002FC1 RID: 12225
+	// Token: 0x04004210 RID: 16912
 	[SerializeField]
 	private BaseAIScript m_minibossAIScript;
 
-	// Token: 0x04002FC2 RID: 12226
+	// Token: 0x04004211 RID: 16913
 	[Space(10f)]
 	[SerializeField]
 	private LogicController_SO m_enemyLogicController;

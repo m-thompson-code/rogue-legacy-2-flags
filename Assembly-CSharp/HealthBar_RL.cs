@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000205 RID: 517
+// Token: 0x020003B6 RID: 950
 public class HealthBar_RL : MonoBehaviour
 {
-	// Token: 0x060015DA RID: 5594 RVA: 0x000440C5 File Offset: 0x000422C5
+	// Token: 0x06001F6A RID: 8042 RVA: 0x00010784 File Offset: 0x0000E984
 	public float GetCurrentHP()
 	{
 		return this.m_currentHP;
 	}
 
-	// Token: 0x060015DB RID: 5595 RVA: 0x000440CD File Offset: 0x000422CD
+	// Token: 0x06001F6B RID: 8043 RVA: 0x0001078C File Offset: 0x0000E98C
 	public void SetCurrentHP(float amount, bool additive)
 	{
 		if (additive)
@@ -21,25 +21,25 @@ public class HealthBar_RL : MonoBehaviour
 		this.m_currentHP = amount;
 	}
 
-	// Token: 0x060015DC RID: 5596 RVA: 0x000440E8 File Offset: 0x000422E8
+	// Token: 0x06001F6C RID: 8044 RVA: 0x000107A7 File Offset: 0x0000E9A7
 	public float GetMaxHP()
 	{
 		return this.m_maxHP;
 	}
 
-	// Token: 0x060015DD RID: 5597 RVA: 0x000440F0 File Offset: 0x000422F0
+	// Token: 0x06001F6D RID: 8045 RVA: 0x000107AF File Offset: 0x0000E9AF
 	public void SetMaxHP(float amount)
 	{
 		this.m_maxHP = amount;
 	}
 
-	// Token: 0x060015DE RID: 5598 RVA: 0x000440F9 File Offset: 0x000422F9
+	// Token: 0x06001F6E RID: 8046 RVA: 0x000107B8 File Offset: 0x0000E9B8
 	private void Awake()
 	{
 		this.GenerateDebugUI();
 	}
 
-	// Token: 0x060015DF RID: 5599 RVA: 0x00044104 File Offset: 0x00042304
+	// Token: 0x06001F6F RID: 8047 RVA: 0x000A2B60 File Offset: 0x000A0D60
 	private void GenerateDebugUI()
 	{
 		this.m_healthBarUI = new GameObject();
@@ -79,7 +79,7 @@ public class HealthBar_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015E0 RID: 5600 RVA: 0x00044344 File Offset: 0x00042544
+	// Token: 0x06001F70 RID: 8048 RVA: 0x000A2DA0 File Offset: 0x000A0FA0
 	private void Update()
 	{
 		if (Application.isPlaying)
@@ -110,39 +110,39 @@ public class HealthBar_RL : MonoBehaviour
 		this.m_healthBarScaler.transform.localScale = new Vector3(this.m_currentHP / this.m_maxHP, 1f, 1f);
 	}
 
-	// Token: 0x04001509 RID: 5385
+	// Token: 0x04001C06 RID: 7174
 	private const float DEBUG_BAR_WIDTH = 2.5f;
 
-	// Token: 0x0400150A RID: 5386
+	// Token: 0x04001C07 RID: 7175
 	[Space(10f)]
 	[SerializeField]
 	private float m_currentHP;
 
-	// Token: 0x0400150B RID: 5387
+	// Token: 0x04001C08 RID: 7176
 	[SerializeField]
 	private float m_maxHP = 1f;
 
-	// Token: 0x0400150C RID: 5388
+	// Token: 0x04001C09 RID: 7177
 	[Space(10f)]
 	[SerializeField]
 	private bool m_displayDebugUI = true;
 
-	// Token: 0x0400150D RID: 5389
+	// Token: 0x04001C0A RID: 7178
 	[SerializeField]
 	private Vector2 m_UIOffset;
 
-	// Token: 0x0400150E RID: 5390
+	// Token: 0x04001C0B RID: 7179
 	private bool m_previousDisplayUI;
 
-	// Token: 0x0400150F RID: 5391
+	// Token: 0x04001C0C RID: 7180
 	private GameObject m_healthBarUI;
 
-	// Token: 0x04001510 RID: 5392
+	// Token: 0x04001C0D RID: 7181
 	private GameObject m_healthBarMaxHPUI;
 
-	// Token: 0x04001511 RID: 5393
+	// Token: 0x04001C0E RID: 7182
 	private GameObject m_healthBarCurrentHPUI;
 
-	// Token: 0x04001512 RID: 5394
+	// Token: 0x04001C0F RID: 7183
 	private GameObject m_healthBarScaler;
 }

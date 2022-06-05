@@ -6,11 +6,11 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000553 RID: 1363
+// Token: 0x02000909 RID: 2313
 public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEventEmitter
 {
-	// Token: 0x1700124A RID: 4682
-	// (get) Token: 0x060031FF RID: 12799 RVA: 0x000A980E File Offset: 0x000A7A0E
+	// Token: 0x170018DB RID: 6363
+	// (get) Token: 0x06004638 RID: 17976 RVA: 0x0002698D File Offset: 0x00024B8D
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -23,8 +23,8 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		}
 	}
 
-	// Token: 0x1700124B RID: 4683
-	// (get) Token: 0x06003200 RID: 12800 RVA: 0x000A981B File Offset: 0x000A7A1B
+	// Token: 0x170018DC RID: 6364
+	// (get) Token: 0x06004639 RID: 17977 RVA: 0x0002699A File Offset: 0x00024B9A
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -33,7 +33,7 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		}
 	}
 
-	// Token: 0x06003201 RID: 12801 RVA: 0x000A9830 File Offset: 0x000A7A30
+	// Token: 0x0600463A RID: 17978 RVA: 0x001135F0 File Offset: 0x001117F0
 	private bool HasEventDialogue()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround && !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.SeenParade))
@@ -63,7 +63,7 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		return false;
 	}
 
-	// Token: 0x06003202 RID: 12802 RVA: 0x000A98BC File Offset: 0x000A7ABC
+	// Token: 0x0600463B RID: 17979 RVA: 0x0011367C File Offset: 0x0011187C
 	private bool HasUnseenRunes()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround)
@@ -84,8 +84,8 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		return false;
 	}
 
-	// Token: 0x1700124C RID: 4684
-	// (get) Token: 0x06003203 RID: 12803 RVA: 0x000A9918 File Offset: 0x000A7B18
+	// Token: 0x170018DD RID: 6365
+	// (get) Token: 0x0600463C RID: 17980 RVA: 0x000269AC File Offset: 0x00024BAC
 	public bool IsEnchantressOpen
 	{
 		get
@@ -94,13 +94,13 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		}
 	}
 
-	// Token: 0x1700124D RID: 4685
-	// (get) Token: 0x06003204 RID: 12804 RVA: 0x000A9920 File Offset: 0x000A7B20
-	// (set) Token: 0x06003205 RID: 12805 RVA: 0x000A9928 File Offset: 0x000A7B28
+	// Token: 0x170018DE RID: 6366
+	// (get) Token: 0x0600463D RID: 17981 RVA: 0x000269B4 File Offset: 0x00024BB4
+	// (set) Token: 0x0600463E RID: 17982 RVA: 0x000269BC File Offset: 0x00024BBC
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x1700124E RID: 4686
-	// (get) Token: 0x06003206 RID: 12806 RVA: 0x000A9931 File Offset: 0x000A7B31
+	// Token: 0x170018DF RID: 6367
+	// (get) Token: 0x0600463F RID: 17983 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -109,7 +109,7 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		}
 	}
 
-	// Token: 0x06003207 RID: 12807 RVA: 0x000A993C File Offset: 0x000A7B3C
+	// Token: 0x06004640 RID: 17984 RVA: 0x001136D8 File Offset: 0x001118D8
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -119,7 +119,7 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		this.m_enchantressWindowClosedUnityEvent = new UnityAction(this.EnchantressWindowClosed);
 	}
 
-	// Token: 0x06003208 RID: 12808 RVA: 0x000A999C File Offset: 0x000A7B9C
+	// Token: 0x06004641 RID: 17985 RVA: 0x000269C5 File Offset: 0x00024BC5
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -128,20 +128,20 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		}
 	}
 
-	// Token: 0x06003209 RID: 12809 RVA: 0x000A99C8 File Offset: 0x000A7BC8
+	// Token: 0x06004642 RID: 17986 RVA: 0x000269F1 File Offset: 0x00024BF1
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		this.m_endingSpeechBubblePlayed = false;
 	}
 
-	// Token: 0x0600320A RID: 12810 RVA: 0x000A99D1 File Offset: 0x000A7BD1
+	// Token: 0x06004643 RID: 17987 RVA: 0x000269FA File Offset: 0x00024BFA
 	private void Start()
 	{
 		this.m_playerPositionObj.SetActive(false);
 		this.OnPlayerEnterRoom(null, null);
 	}
 
-	// Token: 0x0600320B RID: 12811 RVA: 0x000A99E7 File Offset: 0x000A7BE7
+	// Token: 0x06004644 RID: 17988 RVA: 0x00026A10 File Offset: 0x00024C10
 	public void OpenEnchantress()
 	{
 		this.m_isEnchantressOpen = true;
@@ -149,7 +149,7 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		base.StartCoroutine(this.OpenEnchantressCoroutine());
 	}
 
-	// Token: 0x0600320C RID: 12812 RVA: 0x000A9A09 File Offset: 0x000A7C09
+	// Token: 0x06004645 RID: 17989 RVA: 0x00026A32 File Offset: 0x00024C32
 	private IEnumerator OpenEnchantressCoroutine()
 	{
 		this.m_enchantress.SetNPCState(NPCState.AtAttention, false);
@@ -208,7 +208,7 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		yield break;
 	}
 
-	// Token: 0x0600320D RID: 12813 RVA: 0x000A9A18 File Offset: 0x000A7C18
+	// Token: 0x06004646 RID: 17990 RVA: 0x00113738 File Offset: 0x00111938
 	private void RunEnchantressIntroDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.EnchantressDialogue_Intro, true);
@@ -225,7 +225,7 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_displayEnchantressWindow);
 	}
 
-	// Token: 0x0600320E RID: 12814 RVA: 0x000A9AB0 File Offset: 0x000A7CB0
+	// Token: 0x06004647 RID: 17991 RVA: 0x001137D0 File Offset: 0x001119D0
 	private void RunEnchantressStackingDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.EnchantressDialogue_Stacking, true);
@@ -235,7 +235,7 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_displayEnchantressWindow);
 	}
 
-	// Token: 0x0600320F RID: 12815 RVA: 0x000A9B14 File Offset: 0x000A7D14
+	// Token: 0x06004648 RID: 17992 RVA: 0x00113834 File Offset: 0x00111A34
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -265,13 +265,13 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_enchantressWindowClosed);
 	}
 
-	// Token: 0x06003210 RID: 12816 RVA: 0x000A9BB3 File Offset: 0x000A7DB3
+	// Token: 0x06004649 RID: 17993 RVA: 0x00026A41 File Offset: 0x00024C41
 	private void DisplayEnchantressWindow()
 	{
 		base.StartCoroutine(this.DisplayEnchantressWindowCoroutine());
 	}
 
-	// Token: 0x06003211 RID: 12817 RVA: 0x000A9BC2 File Offset: 0x000A7DC2
+	// Token: 0x0600464A RID: 17994 RVA: 0x00026A50 File Offset: 0x00024C50
 	private IEnumerator DisplayEnchantressWindowCoroutine()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.Enchantress))
@@ -284,7 +284,7 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		yield break;
 	}
 
-	// Token: 0x06003212 RID: 12818 RVA: 0x000A9BD1 File Offset: 0x000A7DD1
+	// Token: 0x0600464B RID: 17995 RVA: 0x00026A5F File Offset: 0x00024C5F
 	private IEnumerator MovePlayerToEnchantress()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -304,7 +304,7 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		yield break;
 	}
 
-	// Token: 0x06003213 RID: 12819 RVA: 0x000A9BE0 File Offset: 0x000A7DE0
+	// Token: 0x0600464C RID: 17996 RVA: 0x001138D4 File Offset: 0x00111AD4
 	private void EnchantressWindowClosed()
 	{
 		if (WindowManager.GetIsWindowLoaded(WindowID.Enchantress))
@@ -316,43 +316,43 @@ public class EnchantressShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IA
 		this.m_enchantress.SetNPCState(NPCState.Idle, false);
 	}
 
-	// Token: 0x06003215 RID: 12821 RVA: 0x000A9C35 File Offset: 0x000A7E35
+	// Token: 0x0600464E RID: 17998 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400275B RID: 10075
+	// Token: 0x04003635 RID: 13877
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x0400275C RID: 10076
+	// Token: 0x04003636 RID: 13878
 	[SerializeField]
 	private NPCController m_enchantress;
 
-	// Token: 0x0400275D RID: 10077
+	// Token: 0x04003637 RID: 13879
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x0400275E RID: 10078
+	// Token: 0x04003638 RID: 13880
 	private bool m_isEnchantressOpen;
 
-	// Token: 0x0400275F RID: 10079
+	// Token: 0x04003639 RID: 13881
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002760 RID: 10080
+	// Token: 0x0400363A RID: 13882
 	private Interactable m_interactable;
 
-	// Token: 0x04002761 RID: 10081
+	// Token: 0x0400363B RID: 13883
 	private bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x04002762 RID: 10082
+	// Token: 0x0400363C RID: 13884
 	private Action m_displayEnchantressWindow;
 
-	// Token: 0x04002763 RID: 10083
+	// Token: 0x0400363D RID: 13885
 	private Action m_enchantressWindowClosed;
 
-	// Token: 0x04002764 RID: 10084
+	// Token: 0x0400363E RID: 13886
 	private UnityAction m_enchantressWindowClosedUnityEvent;
 }

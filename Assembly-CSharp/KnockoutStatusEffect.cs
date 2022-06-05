@@ -3,11 +3,11 @@ using System.Collections;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x0200030A RID: 778
+// Token: 0x02000538 RID: 1336
 public class KnockoutStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D5C RID: 3420
-	// (get) Token: 0x06001ED5 RID: 7893 RVA: 0x000639B3 File Offset: 0x00061BB3
+	// Token: 0x17001153 RID: 4435
+	// (get) Token: 0x06002AEC RID: 10988 RVA: 0x00017F99 File Offset: 0x00016199
 	public override string[] ProjectileNameArray
 	{
 		get
@@ -16,8 +16,8 @@ public class KnockoutStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D5D RID: 3421
-	// (get) Token: 0x06001ED6 RID: 7894 RVA: 0x000639BA File Offset: 0x00061BBA
+	// Token: 0x17001154 RID: 4436
+	// (get) Token: 0x06002AED RID: 10989 RVA: 0x00017FA0 File Offset: 0x000161A0
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -26,8 +26,8 @@ public class KnockoutStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D5E RID: 3422
-	// (get) Token: 0x06001ED7 RID: 7895 RVA: 0x000639BE File Offset: 0x00061BBE
+	// Token: 0x17001155 RID: 4437
+	// (get) Token: 0x06002AEE RID: 10990 RVA: 0x00005FB8 File Offset: 0x000041B8
 	public override float StartingDurationOverride
 	{
 		get
@@ -36,7 +36,7 @@ public class KnockoutStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001ED8 RID: 7896 RVA: 0x000639C5 File Offset: 0x00061BC5
+	// Token: 0x06002AEF RID: 10991 RVA: 0x00017FA4 File Offset: 0x000161A4
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_statusEffectController.StartStatusEffect(StatusEffectType.Enemy_DeathDelay, base.Duration, caster);
@@ -125,13 +125,13 @@ public class KnockoutStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001ED9 RID: 7897 RVA: 0x000639DB File Offset: 0x00061BDB
+	// Token: 0x06002AF0 RID: 10992 RVA: 0x00017FBA File Offset: 0x000161BA
 	private void RemovePlayerCombo()
 	{
 		PlayerManager.GetPlayerController().StatusEffectController.StopStatusEffect(StatusEffectType.Player_Combo, true);
 	}
 
-	// Token: 0x06001EDA RID: 7898 RVA: 0x000639F4 File Offset: 0x00061BF4
+	// Token: 0x06002AF1 RID: 10993 RVA: 0x000C2CD8 File Offset: 0x000C0ED8
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -168,18 +168,18 @@ public class KnockoutStatusEffect : BaseStatusEffect
 		this.m_statusEffectController.StopStatusEffect(StatusEffectType.Enemy_DeathDelay, interrupted);
 	}
 
-	// Token: 0x04001BDE RID: 7134
+	// Token: 0x040024A8 RID: 9384
 	private static string[] m_projectileNameArray = new string[]
 	{
 		"KnockoutStatusEffectProjectile"
 	};
 
-	// Token: 0x04001BDF RID: 7135
+	// Token: 0x040024A9 RID: 9385
 	private Projectile_RL m_knockbackProjectile;
 
-	// Token: 0x04001BE0 RID: 7136
+	// Token: 0x040024AA RID: 9386
 	private bool m_isKnockedBack;
 
-	// Token: 0x04001BE1 RID: 7137
+	// Token: 0x040024AB RID: 9387
 	private bool m_oneWayCollisionDisabled;
 }

@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x0200091D RID: 2333
+	// Token: 0x02000E9B RID: 3739
 	public class TouchAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x1700188E RID: 6286
-		// (get) Token: 0x06004C64 RID: 19556 RVA: 0x00112711 File Offset: 0x00110911
+		// Token: 0x17002189 RID: 8585
+		// (get) Token: 0x06006965 RID: 26981 RVA: 0x0003A753 File Offset: 0x00038953
 		public string Description
 		{
 			get
@@ -22,7 +22,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C65 RID: 19557 RVA: 0x00112738 File Offset: 0x00110938
+		// Token: 0x06006966 RID: 26982 RVA: 0x00182464 File Offset: 0x00180664
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
 			if (CollisionType_RL.IsProjectile(collision.gameObject))
@@ -44,7 +44,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C66 RID: 19558 RVA: 0x001127CC File Offset: 0x001109CC
+		// Token: 0x06006967 RID: 26983 RVA: 0x001824F8 File Offset: 0x001806F8
 		private void OnTriggerExit2D(Collider2D collision)
 		{
 			if (CollisionType_RL.IsProjectile(collision.gameObject))
@@ -62,7 +62,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C67 RID: 19559 RVA: 0x00112833 File Offset: 0x00110A33
+		// Token: 0x06006968 RID: 26984 RVA: 0x0003A779 File Offset: 0x00038979
 		private void OnDestroy()
 		{
 			if (this.m_snapshotEventInstance.isValid())
@@ -71,25 +71,25 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04004060 RID: 16480
+		// Token: 0x040055C8 RID: 21960
 		[SerializeField]
 		[EventRef]
 		private string m_touchEnterAudioPath = string.Empty;
 
-		// Token: 0x04004061 RID: 16481
+		// Token: 0x040055C9 RID: 21961
 		[SerializeField]
 		[EventRef]
 		private string m_touchExitAudioPath = string.Empty;
 
-		// Token: 0x04004062 RID: 16482
+		// Token: 0x040055CA RID: 21962
 		[SerializeField]
 		[EventRef]
 		private string m_touchStaySnapshotPath = string.Empty;
 
-		// Token: 0x04004063 RID: 16483
+		// Token: 0x040055CB RID: 21963
 		private string m_description = string.Empty;
 
-		// Token: 0x04004064 RID: 16484
+		// Token: 0x040055CC RID: 21964
 		private EventInstance m_snapshotEventInstance;
 	}
 }

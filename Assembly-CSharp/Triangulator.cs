@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200081B RID: 2075
+// Token: 0x02000CF1 RID: 3313
 public class Triangulator
 {
-	// Token: 0x0600449A RID: 17562 RVA: 0x000F3801 File Offset: 0x000F1A01
+	// Token: 0x06005E60 RID: 24160 RVA: 0x00034054 File Offset: 0x00032254
 	public Triangulator(Vector2[] points)
 	{
 		this.m_points = new List<Vector2>(points);
 	}
 
-	// Token: 0x0600449B RID: 17563 RVA: 0x000F3820 File Offset: 0x000F1A20
+	// Token: 0x06005E61 RID: 24161 RVA: 0x0016121C File Offset: 0x0015F41C
 	public int[] Triangulate()
 	{
 		List<int> list = new List<int>();
@@ -83,7 +83,7 @@ public class Triangulator
 		return list.ToArray();
 	}
 
-	// Token: 0x0600449C RID: 17564 RVA: 0x000F3960 File Offset: 0x000F1B60
+	// Token: 0x06005E62 RID: 24162 RVA: 0x0016135C File Offset: 0x0015F55C
 	private float Area()
 	{
 		int count = this.m_points.Count;
@@ -100,7 +100,7 @@ public class Triangulator
 		return num * 0.5f;
 	}
 
-	// Token: 0x0600449D RID: 17565 RVA: 0x000F39D8 File Offset: 0x000F1BD8
+	// Token: 0x06005E63 RID: 24163 RVA: 0x001613D4 File Offset: 0x0015F5D4
 	private bool Snip(int u, int v, int w, int n, int[] V)
 	{
 		Vector2 vector = this.m_points[V[u]];
@@ -124,7 +124,7 @@ public class Triangulator
 		return true;
 	}
 
-	// Token: 0x0600449E RID: 17566 RVA: 0x000F3A90 File Offset: 0x000F1C90
+	// Token: 0x06005E64 RID: 24164 RVA: 0x0016148C File Offset: 0x0015F68C
 	private bool InsideTriangle(Vector2 A, Vector2 B, Vector2 C, Vector2 P)
 	{
 		float num = C.x - B.x;
@@ -145,6 +145,6 @@ public class Triangulator
 		return num13 >= 0f && num15 >= 0f && num14 >= 0f;
 	}
 
-	// Token: 0x04003A8D RID: 14989
+	// Token: 0x04004D8D RID: 19853
 	private List<Vector2> m_points = new List<Vector2>();
 }

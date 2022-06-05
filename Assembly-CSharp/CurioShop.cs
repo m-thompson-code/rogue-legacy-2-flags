@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200054E RID: 1358
+// Token: 0x02000902 RID: 2306
 public class CurioShop : MonoBehaviour, IRootObj
 {
-	// Token: 0x060031E1 RID: 12769 RVA: 0x000A8AAB File Offset: 0x000A6CAB
+	// Token: 0x06004613 RID: 17939 RVA: 0x0002682C File Offset: 0x00024A2C
 	private void OnEnable()
 	{
 		this.UpdateFlip();
 	}
 
-	// Token: 0x060031E2 RID: 12770 RVA: 0x000A8AB3 File Offset: 0x000A6CB3
+	// Token: 0x06004614 RID: 17940 RVA: 0x00026834 File Offset: 0x00024A34
 	private void Update()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -19,7 +19,7 @@ public class CurioShop : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x060031E3 RID: 12771 RVA: 0x000A8AC4 File Offset: 0x000A6CC4
+	// Token: 0x06004615 RID: 17941 RVA: 0x0011298C File Offset: 0x00110B8C
 	private void UpdateFlip()
 	{
 		Component playerController = PlayerManager.GetPlayerController();
@@ -31,7 +31,7 @@ public class CurioShop : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x060031E5 RID: 12773 RVA: 0x000A8B45 File Offset: 0x000A6D45
+	// Token: 0x06004617 RID: 17943 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;

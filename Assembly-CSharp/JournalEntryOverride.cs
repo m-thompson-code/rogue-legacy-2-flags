@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004D9 RID: 1241
+// Token: 0x02000818 RID: 2072
 public class JournalEntryOverride : MonoBehaviour
 {
-	// Token: 0x17001171 RID: 4465
-	// (get) Token: 0x06002E4C RID: 11852 RVA: 0x0009C96D File Offset: 0x0009AB6D
+	// Token: 0x17001724 RID: 5924
+	// (get) Token: 0x06003FDC RID: 16348 RVA: 0x00023454 File Offset: 0x00021654
 	public string TitleLocIDOverride
 	{
 		get
@@ -14,8 +14,8 @@ public class JournalEntryOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001172 RID: 4466
-	// (get) Token: 0x06002E4D RID: 11853 RVA: 0x0009C975 File Offset: 0x0009AB75
+	// Token: 0x17001725 RID: 5925
+	// (get) Token: 0x06003FDD RID: 16349 RVA: 0x0002345C File Offset: 0x0002165C
 	public string EntryLocIDOverride
 	{
 		get
@@ -24,8 +24,8 @@ public class JournalEntryOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001173 RID: 4467
-	// (get) Token: 0x06002E4E RID: 11854 RVA: 0x0009C97D File Offset: 0x0009AB7D
+	// Token: 0x17001726 RID: 5926
+	// (get) Token: 0x06003FDE RID: 16350 RVA: 0x00023464 File Offset: 0x00021664
 	public JournalType JournalType
 	{
 		get
@@ -34,8 +34,8 @@ public class JournalEntryOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001174 RID: 4468
-	// (get) Token: 0x06002E4F RID: 11855 RVA: 0x0009C985 File Offset: 0x0009AB85
+	// Token: 0x17001727 RID: 5927
+	// (get) Token: 0x06003FDF RID: 16351 RVA: 0x0002346C File Offset: 0x0002166C
 	public JournalCategoryType JournalCategoryTypeOverride
 	{
 		get
@@ -44,8 +44,8 @@ public class JournalEntryOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001175 RID: 4469
-	// (get) Token: 0x06002E50 RID: 11856 RVA: 0x0009C98D File Offset: 0x0009AB8D
+	// Token: 0x17001728 RID: 5928
+	// (get) Token: 0x06003FE0 RID: 16352 RVA: 0x00023474 File Offset: 0x00021674
 	public DialogueWindowStyle DialogueWindowStyle
 	{
 		get
@@ -54,8 +54,8 @@ public class JournalEntryOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001176 RID: 4470
-	// (get) Token: 0x06002E51 RID: 11857 RVA: 0x0009C995 File Offset: 0x0009AB95
+	// Token: 0x17001729 RID: 5929
+	// (get) Token: 0x06003FE1 RID: 16353 RVA: 0x0002347C File Offset: 0x0002167C
 	public DialoguePortraitType PortraitType
 	{
 		get
@@ -64,27 +64,27 @@ public class JournalEntryOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040024EC RID: 9452
+	// Token: 0x040031EC RID: 12780
 	[SerializeField]
 	private string m_titleLocIDOverride;
 
-	// Token: 0x040024ED RID: 9453
+	// Token: 0x040031ED RID: 12781
 	[SerializeField]
 	private string m_entryLocIDOverride;
 
-	// Token: 0x040024EE RID: 9454
+	// Token: 0x040031EE RID: 12782
 	[SerializeField]
 	private JournalType m_journalType;
 
-	// Token: 0x040024EF RID: 9455
+	// Token: 0x040031EF RID: 12783
 	[SerializeField]
 	private JournalCategoryType m_journalCategoryTypeOverride;
 
-	// Token: 0x040024F0 RID: 9456
+	// Token: 0x040031F0 RID: 12784
 	[SerializeField]
 	private DialogueWindowStyle m_dialogueWindowStyle = DialogueWindowStyle.VerticalRight;
 
-	// Token: 0x040024F1 RID: 9457
+	// Token: 0x040031F1 RID: 12785
 	[SerializeField]
 	private DialoguePortraitType m_portraitType;
 }

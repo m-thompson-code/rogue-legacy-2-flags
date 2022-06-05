@@ -4,11 +4,11 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x0200080F RID: 2063
+// Token: 0x02000CDE RID: 3294
 public static class SceneLoadingUtility
 {
-	// Token: 0x170016F7 RID: 5879
-	// (get) Token: 0x0600443A RID: 17466 RVA: 0x000F15E2 File Offset: 0x000EF7E2
+	// Token: 0x17001EFD RID: 7933
+	// (get) Token: 0x06005DEC RID: 24044 RVA: 0x00033B4C File Offset: 0x00031D4C
 	public static Scene ActiveScene
 	{
 		get
@@ -17,13 +17,13 @@ public static class SceneLoadingUtility
 		}
 	}
 
-	// Token: 0x0600443B RID: 17467 RVA: 0x000F15E9 File Offset: 0x000EF7E9
+	// Token: 0x06005DED RID: 24045 RVA: 0x00033B53 File Offset: 0x00031D53
 	public static string GetSceneName(SceneID sceneID)
 	{
 		return SceneLoadingUtility.SCENE_ID_TO_SCENE_NAME_TABLE[sceneID];
 	}
 
-	// Token: 0x0600443C RID: 17468 RVA: 0x000F15F8 File Offset: 0x000EF7F8
+	// Token: 0x06005DEE RID: 24046 RVA: 0x0015F178 File Offset: 0x0015D378
 	public static SceneID GetSceneID(string sceneName)
 	{
 		SceneID result = SceneID.None;
@@ -34,7 +34,7 @@ public static class SceneLoadingUtility
 		return result;
 	}
 
-	// Token: 0x0600443D RID: 17469 RVA: 0x000F1648 File Offset: 0x000EF848
+	// Token: 0x06005DEF RID: 24047 RVA: 0x0015F1C8 File Offset: 0x0015D3C8
 	public static void LoadScene(SceneID sceneID)
 	{
 		if (SceneLoadingUtility.SCENE_ID_TO_SCENE_NAME_TABLE.ContainsKey(sceneID))
@@ -50,7 +50,7 @@ public static class SceneLoadingUtility
 		});
 	}
 
-	// Token: 0x04003A49 RID: 14921
+	// Token: 0x04004D2E RID: 19758
 	private static Dictionary<SceneID, string> SCENE_ID_TO_SCENE_NAME_TABLE = new Dictionary<SceneID, string>
 	{
 		{

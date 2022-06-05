@@ -4,12 +4,12 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020002D7 RID: 727
+// Token: 0x020004CC RID: 1228
 [Serializable]
 public class PlayerSaveData : IVersionUpdateable
 {
-	// Token: 0x17000CA7 RID: 3239
-	// (get) Token: 0x06001CAA RID: 7338 RVA: 0x0005D7CB File Offset: 0x0005B9CB
+	// Token: 0x17001030 RID: 4144
+	// (get) Token: 0x06002774 RID: 10100 RVA: 0x0001634D File Offset: 0x0001454D
 	public CachedPlayerData CachedData
 	{
 		get
@@ -18,8 +18,8 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x17000CA8 RID: 3240
-	// (get) Token: 0x06001CAB RID: 7339 RVA: 0x0005D7D4 File Offset: 0x0005B9D4
+	// Token: 0x17001031 RID: 4145
+	// (get) Token: 0x06002775 RID: 10101 RVA: 0x000B9B14 File Offset: 0x000B7D14
 	public bool IsInHeirloom
 	{
 		get
@@ -36,29 +36,29 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x17000CA9 RID: 3241
-	// (get) Token: 0x06001CAC RID: 7340 RVA: 0x0005D80C File Offset: 0x0005BA0C
-	// (set) Token: 0x06001CAD RID: 7341 RVA: 0x0005D814 File Offset: 0x0005BA14
+	// Token: 0x17001032 RID: 4146
+	// (get) Token: 0x06002776 RID: 10102 RVA: 0x00016355 File Offset: 0x00014555
+	// (set) Token: 0x06002777 RID: 10103 RVA: 0x0001635D File Offset: 0x0001455D
 	public List<HeirloomType> TemporaryHeirloomList { get; private set; } = new List<HeirloomType>();
 
-	// Token: 0x17000CAA RID: 3242
-	// (get) Token: 0x06001CAE RID: 7342 RVA: 0x0005D81D File Offset: 0x0005BA1D
-	// (set) Token: 0x06001CAF RID: 7343 RVA: 0x0005D825 File Offset: 0x0005BA25
+	// Token: 0x17001033 RID: 4147
+	// (get) Token: 0x06002778 RID: 10104 RVA: 0x00016366 File Offset: 0x00014566
+	// (set) Token: 0x06002779 RID: 10105 RVA: 0x0001636E File Offset: 0x0001456E
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x06001CB0 RID: 7344 RVA: 0x0005D82E File Offset: 0x0005BA2E
+	// Token: 0x0600277A RID: 10106 RVA: 0x00016377 File Offset: 0x00014577
 	public bool HasTrait(TraitType traitType)
 	{
 		return this.CurrentCharacter.TraitOne == traitType || this.CurrentCharacter.TraitTwo == traitType;
 	}
 
-	// Token: 0x06001CB1 RID: 7345 RVA: 0x0005D850 File Offset: 0x0005BA50
+	// Token: 0x0600277B RID: 10107 RVA: 0x000B9B4C File Offset: 0x000B7D4C
 	public PlayerSaveData()
 	{
 		this.Initialize();
 	}
 
-	// Token: 0x06001CB2 RID: 7346 RVA: 0x0005D8F4 File Offset: 0x0005BAF4
+	// Token: 0x0600277C RID: 10108 RVA: 0x000B9BF0 File Offset: 0x000B7DF0
 	public void Initialize()
 	{
 		if (this.TemporaryHeirloomList == null)
@@ -89,7 +89,7 @@ public class PlayerSaveData : IVersionUpdateable
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x06001CB3 RID: 7347 RVA: 0x0005D990 File Offset: 0x0005BB90
+	// Token: 0x0600277D RID: 10109 RVA: 0x000B9C8C File Offset: 0x000B7E8C
 	private void InitializeHeirloomTable()
 	{
 		if (this.HeirloomLevelTable == null)
@@ -106,7 +106,7 @@ public class PlayerSaveData : IVersionUpdateable
 		this.HeirloomLevelTable[HeirloomType.Contract] = 1;
 	}
 
-	// Token: 0x06001CB4 RID: 7348 RVA: 0x0005D9F4 File Offset: 0x0005BBF4
+	// Token: 0x0600277E RID: 10110 RVA: 0x000B9CF0 File Offset: 0x000B7EF0
 	private void InitializeRelicTable()
 	{
 		if (this.RelicObjTable == null)
@@ -122,7 +122,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CB5 RID: 7349 RVA: 0x0005DA50 File Offset: 0x0005BC50
+	// Token: 0x0600277F RID: 10111 RVA: 0x000B9D4C File Offset: 0x000B7F4C
 	private void InitializeBurdenTable()
 	{
 		if (this.BurdenObjTable == null)
@@ -138,7 +138,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CB6 RID: 7350 RVA: 0x0005DAAC File Offset: 0x0005BCAC
+	// Token: 0x06002780 RID: 10112 RVA: 0x000B9DA8 File Offset: 0x000B7FA8
 	private void InitializeFlagTable()
 	{
 		if (this.FlagTable == null)
@@ -155,7 +155,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CB7 RID: 7351 RVA: 0x0005DB38 File Offset: 0x0005BD38
+	// Token: 0x06002781 RID: 10113 RVA: 0x000B9E34 File Offset: 0x000B8034
 	private void InitializeTraitOddsTable()
 	{
 		if (this.TraitSpawnOddsTable == null)
@@ -171,7 +171,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CB8 RID: 7352 RVA: 0x0005DB9C File Offset: 0x0005BD9C
+	// Token: 0x06002782 RID: 10114 RVA: 0x000B9E98 File Offset: 0x000B8098
 	private void InitializeTraitSeenTable()
 	{
 		if (this.TraitSeenTable == null)
@@ -187,7 +187,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CB9 RID: 7353 RVA: 0x0005DBF4 File Offset: 0x0005BDF4
+	// Token: 0x06002783 RID: 10115 RVA: 0x000B9EF0 File Offset: 0x000B80F0
 	private void InitializeSpellSeenTable()
 	{
 		if (this.SpellSeenTable == null)
@@ -204,7 +204,7 @@ public class PlayerSaveData : IVersionUpdateable
 		this.SpellSeenTable[AbilityType.FireballSpell] = true;
 	}
 
-	// Token: 0x06001CBA RID: 7354 RVA: 0x0005DC58 File Offset: 0x0005BE58
+	// Token: 0x06002784 RID: 10116 RVA: 0x000B9F54 File Offset: 0x000B8154
 	private void InitializeSongTable()
 	{
 		if (this.SongsFoundTable == null)
@@ -221,7 +221,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CBB RID: 7355 RVA: 0x0005DCE8 File Offset: 0x0005BEE8
+	// Token: 0x06002785 RID: 10117 RVA: 0x000B9FE4 File Offset: 0x000B81E4
 	private void InitializeInsightTable()
 	{
 		if (this.InsightStateTable == null)
@@ -237,7 +237,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CBC RID: 7356 RVA: 0x0005DD40 File Offset: 0x0005BF40
+	// Token: 0x06002786 RID: 10118 RVA: 0x000BA03C File Offset: 0x000B823C
 	private void InitializeJournalsReadTable()
 	{
 		if (this.JournalsReadTable == null)
@@ -253,7 +253,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CBD RID: 7357 RVA: 0x0005DD9C File Offset: 0x0005BF9C
+	// Token: 0x06002787 RID: 10119 RVA: 0x000BA098 File Offset: 0x000B8298
 	private void InitializeNPCDialogueReadTable()
 	{
 		if (this.NPCDialogueTable == null)
@@ -269,7 +269,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CBE RID: 7358 RVA: 0x0005DDFC File Offset: 0x0005BFFC
+	// Token: 0x06002788 RID: 10120 RVA: 0x000BA0F8 File Offset: 0x000B82F8
 	private void InitializeMasteryXPTable()
 	{
 		if (this.MasteryXPTable == null)
@@ -285,7 +285,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CBF RID: 7359 RVA: 0x0005DE52 File Offset: 0x0005C052
+	// Token: 0x06002789 RID: 10121 RVA: 0x00016397 File Offset: 0x00014597
 	private void InitializeTeleporterUnlockTable()
 	{
 		if (this.TeleporterUnlockTable == null)
@@ -294,7 +294,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CC0 RID: 7360 RVA: 0x0005DE68 File Offset: 0x0005C068
+	// Token: 0x0600278A RID: 10122 RVA: 0x000BA150 File Offset: 0x000B8350
 	public bool GetFlag(PlayerSaveFlag flag)
 	{
 		bool result;
@@ -305,18 +305,82 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET Flag: " + flag.ToString() + " not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CC1 RID: 7361 RVA: 0x0005DEA8 File Offset: 0x0005C0A8
+	// Token: 0x0600278B RID: 10123 RVA: 0x000BA190 File Offset: 0x000B8390
 	public void SetFlag(PlayerSaveFlag flag, bool value)
 	{
 		if (this.FlagTable.ContainsKey(flag))
 		{
+			if (MainMenuWindowController.splitStep == 3 && this.FlagTable[PlayerSaveFlag.CastleBoss_FreeHeal_Used])
+			{
+				MainMenuWindowController.splitStep = 4;
+			}
+			else if (MainMenuWindowController.splitStep == 4 && this.FlagTable[PlayerSaveFlag.CastleBoss_Defeated_FirstTime])
+			{
+				MainMenuWindowController.splitStep = 5;
+			}
+			else if (MainMenuWindowController.splitStep == 7 && this.FlagTable[PlayerSaveFlag.ForestBoss_FreeHeal_Used])
+			{
+				MainMenuWindowController.splitStep = 8;
+			}
+			else if (MainMenuWindowController.splitStep == 8 && this.FlagTable[PlayerSaveFlag.ForestBoss_Defeated_FirstTime])
+			{
+				MainMenuWindowController.splitStep = 9;
+			}
+			else if (MainMenuWindowController.splitStep == 11 && this.FlagTable[PlayerSaveFlag.BridgeBoss_FreeHeal_Used])
+			{
+				MainMenuWindowController.splitStep = 12;
+			}
+			else if (MainMenuWindowController.splitStep == 12 && this.FlagTable[PlayerSaveFlag.BridgeBoss_Defeated_FirstTime])
+			{
+				MainMenuWindowController.splitStep = 13;
+			}
+			else if (MainMenuWindowController.splitStep == 15 && this.FlagTable[PlayerSaveFlag.StudyBoss_FreeHeal_Used])
+			{
+				MainMenuWindowController.splitStep = 16;
+			}
+			else if (MainMenuWindowController.splitStep == 16 && this.FlagTable[PlayerSaveFlag.StudyBoss_Defeated_FirstTime])
+			{
+				MainMenuWindowController.splitStep = 17;
+			}
+			else if (MainMenuWindowController.splitStep == 17 && this.FlagTable[PlayerSaveFlag.TowerBoss_FreeHeal_Used])
+			{
+				MainMenuWindowController.splitStep = 18;
+			}
+			else if (MainMenuWindowController.splitStep == 18 && this.FlagTable[PlayerSaveFlag.TowerBoss_Defeated_FirstTime])
+			{
+				MainMenuWindowController.splitStep = 19;
+			}
+			else if (MainMenuWindowController.splitStep == 19 && this.FlagTable[PlayerSaveFlag.CaveBoss_FreeHeal_Used])
+			{
+				MainMenuWindowController.splitStep = 20;
+			}
+			else if (MainMenuWindowController.splitStep == 20 && this.FlagTable[PlayerSaveFlag.CaveBoss_Defeated_FirstTime])
+			{
+				MainMenuWindowController.splitStep = 21;
+			}
+			else if (MainMenuWindowController.splitStep == 21 && this.FlagTable[PlayerSaveFlag.GardenBoss_FreeHeal_Used])
+			{
+				MainMenuWindowController.splitStep = 22;
+			}
+			else if (MainMenuWindowController.splitStep == 22 && this.FlagTable[PlayerSaveFlag.GardenBoss_Defeated_FirstTime])
+			{
+				MainMenuWindowController.splitStep = 23;
+			}
+			else if (MainMenuWindowController.splitStep == 23 && this.FlagTable[PlayerSaveFlag.FinalBoss_FreeHeal_Used])
+			{
+				MainMenuWindowController.splitStep = 24;
+			}
+			else if (MainMenuWindowController.splitStep == 24 && this.FlagTable[PlayerSaveFlag.FinalBoss_Defeated_FirstTime])
+			{
+				MainMenuWindowController.splitStep = 25;
+			}
 			this.FlagTable[flag] = value;
 			return;
 		}
 		throw new KeyNotFoundException("Cannot SET Flag: " + flag.ToString() + " not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CC2 RID: 7362 RVA: 0x0005DEE8 File Offset: 0x0005C0E8
+	// Token: 0x0600278C RID: 10124 RVA: 0x000BA438 File Offset: 0x000B8638
 	public void SetAllFlags(bool value)
 	{
 		foreach (KeyValuePair<PlayerSaveFlag, bool> keyValuePair in this.FlagTable.ToArray<KeyValuePair<PlayerSaveFlag, bool>>())
@@ -325,7 +389,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CC3 RID: 7363 RVA: 0x0005DF2C File Offset: 0x0005C12C
+	// Token: 0x0600278D RID: 10125 RVA: 0x000BA47C File Offset: 0x000B867C
 	public int GetHeirloomLevel(HeirloomType heirloomType)
 	{
 		if (heirloomType == HeirloomType.None)
@@ -344,12 +408,32 @@ public class PlayerSaveData : IVersionUpdateable
 		return num;
 	}
 
-	// Token: 0x06001CC4 RID: 7364 RVA: 0x0005DF94 File Offset: 0x0005C194
+	// Token: 0x0600278E RID: 10126 RVA: 0x000BA4E4 File Offset: 0x000B86E4
 	public void SetHeirloomLevel(HeirloomType heirloomType, int level, bool additive, bool broadcast)
 	{
 		if (!this.HeirloomLevelTable.ContainsKey(heirloomType))
 		{
 			throw new KeyNotFoundException("Cannot SET level of Heirloom Type: " + heirloomType.ToString() + " because entry not found in Player Save Data.");
+		}
+		if (MainMenuWindowController.splitStep <= 26 && heirloomType == HeirloomType.UnlockEarthShift)
+		{
+			MainMenuWindowController.splitStep = 27;
+		}
+		else if (MainMenuWindowController.splitStep <= 14 && heirloomType == HeirloomType.UnlockVoidDash)
+		{
+			MainMenuWindowController.splitStep = 15;
+		}
+		else if (MainMenuWindowController.splitStep <= 10 && heirloomType == HeirloomType.UnlockDoubleJump)
+		{
+			MainMenuWindowController.splitStep = 11;
+		}
+		else if (MainMenuWindowController.splitStep <= 6 && heirloomType == HeirloomType.UnlockBouncableDownstrike)
+		{
+			MainMenuWindowController.splitStep = 7;
+		}
+		else if (MainMenuWindowController.splitStep <= 2 && heirloomType == HeirloomType.UnlockAirDash)
+		{
+			MainMenuWindowController.splitStep = 3;
 		}
 		int num = this.HeirloomLevelTable[heirloomType];
 		int value = level;
@@ -373,7 +457,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CC5 RID: 7365 RVA: 0x0005E060 File Offset: 0x0005C260
+	// Token: 0x0600278F RID: 10127 RVA: 0x000BA61C File Offset: 0x000B881C
 	public void ResetAllHeirlooms()
 	{
 		foreach (HeirloomType key in HeirloomType_RL.TypeArray)
@@ -385,7 +469,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CC6 RID: 7366 RVA: 0x0005E0A0 File Offset: 0x0005C2A0
+	// Token: 0x06002790 RID: 10128 RVA: 0x000BA65C File Offset: 0x000B885C
 	public RelicObj GetRelic(RelicType relicType)
 	{
 		RelicObj result;
@@ -396,7 +480,7 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET Relic Type: " + relicType.ToString() + " because entry not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CC7 RID: 7367 RVA: 0x0005E0E0 File Offset: 0x0005C2E0
+	// Token: 0x06002791 RID: 10129 RVA: 0x000BA69C File Offset: 0x000B889C
 	public BurdenObj GetBurden(BurdenType burdenType)
 	{
 		BurdenObj result;
@@ -408,7 +492,7 @@ public class PlayerSaveData : IVersionUpdateable
 		return null;
 	}
 
-	// Token: 0x06001CC8 RID: 7368 RVA: 0x0005E124 File Offset: 0x0005C324
+	// Token: 0x06002792 RID: 10130 RVA: 0x000BA6E0 File Offset: 0x000B88E0
 	public bool GetSpellSeenState(AbilityType spellType)
 	{
 		bool result;
@@ -420,7 +504,7 @@ public class PlayerSaveData : IVersionUpdateable
 		return false;
 	}
 
-	// Token: 0x06001CC9 RID: 7369 RVA: 0x0005E165 File Offset: 0x0005C365
+	// Token: 0x06002793 RID: 10131 RVA: 0x000163AC File Offset: 0x000145AC
 	public void SetSpellSeenState(AbilityType spellType, bool seenState)
 	{
 		if (this.SpellSeenTable.ContainsKey(spellType))
@@ -431,7 +515,7 @@ public class PlayerSaveData : IVersionUpdateable
 		Debug.Log("Cannot SET SpellSeen state for spell type: " + spellType.ToString() + " because entry not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CCA RID: 7370 RVA: 0x0005E1A4 File Offset: 0x0005C3A4
+	// Token: 0x06002794 RID: 10132 RVA: 0x000BA724 File Offset: 0x000B8924
 	public int GetTotalUniqueRelics()
 	{
 		int num = 0;
@@ -445,7 +529,7 @@ public class PlayerSaveData : IVersionUpdateable
 		return num;
 	}
 
-	// Token: 0x06001CCB RID: 7371 RVA: 0x0005E1E4 File Offset: 0x0005C3E4
+	// Token: 0x06002795 RID: 10133 RVA: 0x000BA764 File Offset: 0x000B8964
 	public int GetTotalRelicLevel()
 	{
 		int num = 0;
@@ -459,7 +543,7 @@ public class PlayerSaveData : IVersionUpdateable
 		return num;
 	}
 
-	// Token: 0x06001CCC RID: 7372 RVA: 0x0005E220 File Offset: 0x0005C420
+	// Token: 0x06002796 RID: 10134 RVA: 0x000BA7A0 File Offset: 0x000B89A0
 	public float GetTotalRelicResolveCost()
 	{
 		float num = 0f;
@@ -480,7 +564,7 @@ public class PlayerSaveData : IVersionUpdateable
 		return num;
 	}
 
-	// Token: 0x06001CCD RID: 7373 RVA: 0x0005E28C File Offset: 0x0005C48C
+	// Token: 0x06002797 RID: 10135 RVA: 0x000BA80C File Offset: 0x000B8A0C
 	public void ResetAllRelics(bool broadcast)
 	{
 		foreach (KeyValuePair<RelicType, RelicObj> keyValuePair in this.RelicObjTable)
@@ -497,7 +581,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CCE RID: 7374 RVA: 0x0005E330 File Offset: 0x0005C530
+	// Token: 0x06002798 RID: 10136 RVA: 0x000BA8B0 File Offset: 0x000B8AB0
 	public FoundState GetSongFoundState(SongID songType)
 	{
 		FoundState result;
@@ -508,7 +592,7 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET foundState for song: " + songType.ToString() + " not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CCF RID: 7375 RVA: 0x0005E370 File Offset: 0x0005C570
+	// Token: 0x06002799 RID: 10137 RVA: 0x000163EB File Offset: 0x000145EB
 	public void SetSongFoundState(SongID songType, FoundState foundState)
 	{
 		if (this.SongsFoundTable.ContainsKey(songType))
@@ -519,7 +603,7 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot SET foundState for song: " + songType.ToString() + " not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CD0 RID: 7376 RVA: 0x0005E3B0 File Offset: 0x0005C5B0
+	// Token: 0x0600279A RID: 10138 RVA: 0x000BA8F0 File Offset: 0x000B8AF0
 	public InsightState GetInsightState(InsightType insightType)
 	{
 		InsightState insightState;
@@ -534,7 +618,7 @@ public class PlayerSaveData : IVersionUpdateable
 		return insightState;
 	}
 
-	// Token: 0x06001CD1 RID: 7377 RVA: 0x0005E3F8 File Offset: 0x0005C5F8
+	// Token: 0x0600279B RID: 10139 RVA: 0x000BA938 File Offset: 0x000B8B38
 	public void SetInsightState(InsightType insightType, InsightState insightState, bool forceOverride)
 	{
 		if (!forceOverride && insightState <= this.GetInsightState(insightType))
@@ -549,7 +633,7 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot SET InsightState for Insight: " + insightType.ToString() + " not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CD2 RID: 7378 RVA: 0x0005E450 File Offset: 0x0005C650
+	// Token: 0x0600279C RID: 10140 RVA: 0x000BA990 File Offset: 0x000B8B90
 	public int GetJournalsRead(JournalCategoryType journalCategoryType, JournalType journalType)
 	{
 		SerializableVector2Int serializableVector2Int;
@@ -569,7 +653,7 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET JournalsRead for Journal: " + journalCategoryType.ToString() + " not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CD3 RID: 7379 RVA: 0x0005E4B0 File Offset: 0x0005C6B0
+	// Token: 0x0600279D RID: 10141 RVA: 0x000BA9F0 File Offset: 0x000B8BF0
 	public void SetJournalsRead(JournalCategoryType journalCategoryType, JournalType journalType, int value, bool additive, bool forceOverride)
 	{
 		if (!this.JournalsReadTable.ContainsKey(journalCategoryType))
@@ -595,7 +679,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CD4 RID: 7380 RVA: 0x0005E548 File Offset: 0x0005C748
+	// Token: 0x0600279E RID: 10142 RVA: 0x000BAA88 File Offset: 0x000B8C88
 	public int GetNPCDialoguesRead(NPCType npcType)
 	{
 		SerializableVector2Int serializableVector2Int;
@@ -606,7 +690,7 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET NPCDialogueRead for type: " + npcType.ToString() + ". Not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CD5 RID: 7381 RVA: 0x0005E590 File Offset: 0x0005C790
+	// Token: 0x0600279F RID: 10143 RVA: 0x000BAAD0 File Offset: 0x000B8CD0
 	public void SetNPCDialoguesRead(NPCType npcType, int value, bool additive)
 	{
 		if (this.NPCDialogueTable.ContainsKey(npcType))
@@ -623,7 +707,7 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot SET NPCDialogueRead for type: " + npcType.ToString() + ". Not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CD6 RID: 7382 RVA: 0x0005E628 File Offset: 0x0005C828
+	// Token: 0x060027A0 RID: 10144 RVA: 0x000BAB68 File Offset: 0x000B8D68
 	public int GetNPCDialogueCooldown(NPCType npcType)
 	{
 		SerializableVector2Int serializableVector2Int;
@@ -634,7 +718,7 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET NPCDialogueCD for type: " + npcType.ToString() + ". Not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CD7 RID: 7383 RVA: 0x0005E670 File Offset: 0x0005C870
+	// Token: 0x060027A1 RID: 10145 RVA: 0x000BABB0 File Offset: 0x000B8DB0
 	public void SetNPCDialogueCooldown(NPCType npcType, int value, bool additive)
 	{
 		if (this.NPCDialogueTable.ContainsKey(npcType))
@@ -650,7 +734,7 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot SET NPCDialogueRead for type: " + npcType.ToString() + ". Not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CD8 RID: 7384 RVA: 0x0005E6F0 File Offset: 0x0005C8F0
+	// Token: 0x060027A2 RID: 10146 RVA: 0x000BAC30 File Offset: 0x000B8E30
 	public int GetClassXP(ClassType classType)
 	{
 		int b;
@@ -661,7 +745,7 @@ public class PlayerSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET ClassXP for Class: " + classType.ToString() + " not found in Player Save Data.");
 	}
 
-	// Token: 0x06001CD9 RID: 7385 RVA: 0x0005E738 File Offset: 0x0005C938
+	// Token: 0x060027A3 RID: 10147 RVA: 0x000BAC78 File Offset: 0x000B8E78
 	public void SetClassXP(ClassType classType, int value, bool additive, bool forceOverride, bool ignoreMaxLevelClamping)
 	{
 		if (!this.MasteryXPTable.ContainsKey(classType))
@@ -685,7 +769,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CDA RID: 7386 RVA: 0x0005E7D0 File Offset: 0x0005C9D0
+	// Token: 0x060027A4 RID: 10148 RVA: 0x000BAD10 File Offset: 0x000B8F10
 	public int GetClassMasteryRank(ClassType classType)
 	{
 		int num = Mastery_EV.CalculateRankV2(this.GetClassXP(classType));
@@ -696,7 +780,7 @@ public class PlayerSaveData : IVersionUpdateable
 		return Mathf.Clamp(num, 0, Mastery_EV.GetMaxMasteryRank() + 1);
 	}
 
-	// Token: 0x06001CDB RID: 7387 RVA: 0x0005E800 File Offset: 0x0005CA00
+	// Token: 0x060027A5 RID: 10149 RVA: 0x000BAD40 File Offset: 0x000B8F40
 	public int GetDriftingWorldsMasteryRank(ClassType classType)
 	{
 		int classXP = this.GetClassXP(classType);
@@ -712,7 +796,7 @@ public class PlayerSaveData : IVersionUpdateable
 		return result;
 	}
 
-	// Token: 0x06001CDC RID: 7388 RVA: 0x0005E838 File Offset: 0x0005CA38
+	// Token: 0x060027A6 RID: 10150 RVA: 0x0001642A File Offset: 0x0001462A
 	public bool GetTeleporterIsUnlocked(BiomeType biomeType)
 	{
 		if (!this.TeleporterUnlockTable.ContainsKey(biomeType))
@@ -722,7 +806,7 @@ public class PlayerSaveData : IVersionUpdateable
 		return this.TeleporterUnlockTable[biomeType];
 	}
 
-	// Token: 0x06001CDD RID: 7389 RVA: 0x0005E861 File Offset: 0x0005CA61
+	// Token: 0x060027A7 RID: 10151 RVA: 0x00016453 File Offset: 0x00014653
 	public void SetTeleporterIsUnlocked(BiomeType biomeType, bool state)
 	{
 		if (!this.TeleporterUnlockTable.ContainsKey(biomeType))
@@ -732,8 +816,8 @@ public class PlayerSaveData : IVersionUpdateable
 		this.TeleporterUnlockTable[biomeType] = state;
 	}
 
-	// Token: 0x17000CAB RID: 3243
-	// (get) Token: 0x06001CDE RID: 7390 RVA: 0x0005E88B File Offset: 0x0005CA8B
+	// Token: 0x17001034 RID: 4148
+	// (get) Token: 0x060027A8 RID: 10152 RVA: 0x0001647D File Offset: 0x0001467D
 	public int GoldCollectedIncludingBank
 	{
 		get
@@ -742,7 +826,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CDF RID: 7391 RVA: 0x0005E89C File Offset: 0x0005CA9C
+	// Token: 0x060027A9 RID: 10153 RVA: 0x000BAD78 File Offset: 0x000B8F78
 	public void SubtractFromGoldIncludingBank(int value)
 	{
 		if (value > this.GoldCollectedIncludingBank)
@@ -761,19 +845,19 @@ public class PlayerSaveData : IVersionUpdateable
 		this.GoldCollected -= value;
 	}
 
-	// Token: 0x06001CE0 RID: 7392 RVA: 0x0005E900 File Offset: 0x0005CB00
+	// Token: 0x060027AA RID: 10154 RVA: 0x000BADDC File Offset: 0x000B8FDC
 	public string GetActualAvailableGoldString()
 	{
 		return this.GoldCollectedIncludingBank.ToString();
 	}
 
-	// Token: 0x06001CE1 RID: 7393 RVA: 0x0005E91B File Offset: 0x0005CB1B
+	// Token: 0x060027AB RID: 10155 RVA: 0x0001648C File Offset: 0x0001468C
 	public void UpdateCachedData()
 	{
 		this.CachedData.UpdateData();
 	}
 
-	// Token: 0x06001CE2 RID: 7394 RVA: 0x0005E928 File Offset: 0x0005CB28
+	// Token: 0x060027AC RID: 10156 RVA: 0x000BADF8 File Offset: 0x000B8FF8
 	public void UpdateVersion()
 	{
 		this.Initialize();
@@ -942,7 +1026,7 @@ public class PlayerSaveData : IVersionUpdateable
 		this.REVISION_NUMBER = 13;
 	}
 
-	// Token: 0x06001CE3 RID: 7395 RVA: 0x0005EE68 File Offset: 0x0005D068
+	// Token: 0x060027AD RID: 10157 RVA: 0x00016499 File Offset: 0x00014699
 	private void UnequipAllGear()
 	{
 		this.CurrentCharacter.EdgeEquipmentType = EquipmentType.None;
@@ -952,7 +1036,7 @@ public class PlayerSaveData : IVersionUpdateable
 		this.CurrentCharacter.TrinketEquipmentType = EquipmentType.None;
 	}
 
-	// Token: 0x06001CE4 RID: 7396 RVA: 0x0005EEA8 File Offset: 0x0005D0A8
+	// Token: 0x060027AE RID: 10158 RVA: 0x000BB338 File Offset: 0x000B9538
 	public void ResetForNewGamePlus(bool resetRelics)
 	{
 		if (resetRelics)
@@ -1046,7 +1130,7 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CE5 RID: 7397 RVA: 0x0005F28C File Offset: 0x0005D48C
+	// Token: 0x060027AF RID: 10159 RVA: 0x000BB71C File Offset: 0x000B991C
 	public void GiveMoneyToCharon(MonoBehaviour caller)
 	{
 		if (this.GoldCollected > 0)
@@ -1103,246 +1187,246 @@ public class PlayerSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x04001A77 RID: 6775
+	// Token: 0x0400227E RID: 8830
 	public int REVISION_NUMBER = 13;
 
-	// Token: 0x04001A78 RID: 6776
+	// Token: 0x0400227F RID: 8831
 	public int FILE_NUMBER;
 
-	// Token: 0x04001A79 RID: 6777
+	// Token: 0x04002280 RID: 8832
 	public string DateTimeString;
 
-	// Token: 0x04001A7A RID: 6778
+	// Token: 0x04002281 RID: 8833
 	public GameModeType GameModeType;
 
-	// Token: 0x04001A7B RID: 6779
+	// Token: 0x04002282 RID: 8834
 	public CharacterData CurrentCharacter = new CharacterData();
 
-	// Token: 0x04001A7C RID: 6780
+	// Token: 0x04002283 RID: 8835
 	public int MasterSeed = -1;
 
-	// Token: 0x04001A7D RID: 6781
+	// Token: 0x04002284 RID: 8836
 	public int PreviousMasterSeed = -1;
 
-	// Token: 0x04001A7E RID: 6782
+	// Token: 0x04002285 RID: 8837
 	public int GoldCollected;
 
-	// Token: 0x04001A7F RID: 6783
+	// Token: 0x04002286 RID: 8838
 	public int GoldCollectedBackup;
 
-	// Token: 0x04001A80 RID: 6784
+	// Token: 0x04002287 RID: 8839
 	public int GoldSaved;
 
-	// Token: 0x04001A81 RID: 6785
+	// Token: 0x04002288 RID: 8840
 	public int GoldGivenToCharon;
 
-	// Token: 0x04001A82 RID: 6786
+	// Token: 0x04002289 RID: 8841
 	public int GoldAcceptedByCharon;
 
-	// Token: 0x04001A83 RID: 6787
+	// Token: 0x0400228A RID: 8842
 	public int EquipmentOreCollected = 1500;
 
-	// Token: 0x04001A84 RID: 6788
+	// Token: 0x0400228B RID: 8843
 	public int RuneOreCollected = 1500;
 
-	// Token: 0x04001A85 RID: 6789
+	// Token: 0x0400228C RID: 8844
 	public int GoldSpent;
 
-	// Token: 0x04001A86 RID: 6790
+	// Token: 0x0400228D RID: 8845
 	public int GoldSpentOnEquipment;
 
-	// Token: 0x04001A87 RID: 6791
+	// Token: 0x0400228E RID: 8846
 	public int GoldSpentOnRunes;
 
-	// Token: 0x04001A88 RID: 6792
+	// Token: 0x0400228F RID: 8847
 	public int GoldSpentOnSkills;
 
-	// Token: 0x04001A89 RID: 6793
+	// Token: 0x04002290 RID: 8848
 	public int EquipmentOreSpent;
 
-	// Token: 0x04001A8A RID: 6794
+	// Token: 0x04002291 RID: 8849
 	public int RuneOreSpent;
 
-	// Token: 0x04001A8B RID: 6795
+	// Token: 0x04002292 RID: 8850
 	public int NumAncestors;
 
-	// Token: 0x04001A8C RID: 6796
+	// Token: 0x04002293 RID: 8851
 	public int NewGamePlusLevel;
 
-	// Token: 0x04001A8D RID: 6797
+	// Token: 0x04002294 RID: 8852
 	public uint SecondsPlayed;
 
-	// Token: 0x04001A8E RID: 6798
+	// Token: 0x04002295 RID: 8853
 	public int TimesDied;
 
-	// Token: 0x04001A8F RID: 6799
+	// Token: 0x04002296 RID: 8854
 	public int EnemiesKilled;
 
-	// Token: 0x04001A90 RID: 6800
+	// Token: 0x04002297 RID: 8855
 	public byte TimesCastleLocked;
 
-	// Token: 0x04001A91 RID: 6801
+	// Token: 0x04002298 RID: 8856
 	public byte TimesRolledRelic;
 
-	// Token: 0x04001A92 RID: 6802
+	// Token: 0x04002299 RID: 8857
 	public int HighestNGPlusBeaten = -1;
 
-	// Token: 0x04001A93 RID: 6803
+	// Token: 0x0400229A RID: 8858
 	public bool SpokenToTraitor;
 
-	// Token: 0x04001A94 RID: 6804
+	// Token: 0x0400229B RID: 8859
 	public int TimesBeatenTraitor;
 
-	// Token: 0x04001A95 RID: 6805
+	// Token: 0x0400229C RID: 8860
 	public byte TraitorPreFightRepeatDialogueIndex;
 
-	// Token: 0x04001A96 RID: 6806
+	// Token: 0x0400229D RID: 8861
 	public byte TraitorPostFightRepeatDialogueIndex;
 
-	// Token: 0x04001A97 RID: 6807
+	// Token: 0x0400229E RID: 8862
 	public bool SpokenToFinalBoss;
 
-	// Token: 0x04001A98 RID: 6808
+	// Token: 0x0400229F RID: 8863
 	public bool IsDead;
 
-	// Token: 0x04001A99 RID: 6809
+	// Token: 0x040022A0 RID: 8864
 	public bool InHubTown;
 
-	// Token: 0x04001A9A RID: 6810
+	// Token: 0x040022A1 RID: 8865
 	public bool InCastle;
 
-	// Token: 0x04001A9B RID: 6811
+	// Token: 0x040022A2 RID: 8866
 	public bool FirstTimeGoldReceived;
 
-	// Token: 0x04001A9C RID: 6812
+	// Token: 0x040022A3 RID: 8867
 	public bool GoldilocksReceived;
 
-	// Token: 0x04001A9D RID: 6813
+	// Token: 0x040022A4 RID: 8868
 	public CastleLockState CastleLockState;
 
-	// Token: 0x04001A9E RID: 6814
+	// Token: 0x040022A5 RID: 8869
 	public bool HasStartedGame;
 
-	// Token: 0x04001A9F RID: 6815
+	// Token: 0x040022A6 RID: 8870
 	public bool UnlockAllTraitorMemories;
 
-	// Token: 0x04001AA0 RID: 6816
+	// Token: 0x040022A7 RID: 8871
 	public int TimesDiedSinceHestia;
 
-	// Token: 0x04001AA1 RID: 6817
+	// Token: 0x040022A8 RID: 8872
 	public byte HestiaCutsceneDisplayCount;
 
-	// Token: 0x04001AA2 RID: 6818
+	// Token: 0x040022A9 RID: 8873
 	public byte TreeCutsceneDisplayCount;
 
-	// Token: 0x04001AA3 RID: 6819
+	// Token: 0x040022AA RID: 8874
 	public EndingSpawnRoomType EndingSpawnRoom;
 
-	// Token: 0x04001AA4 RID: 6820
+	// Token: 0x040022AB RID: 8875
 	public float TemporaryMaxHealthMods;
 
-	// Token: 0x04001AA5 RID: 6821
+	// Token: 0x040022AC RID: 8876
 	public bool EnableHouseRules;
 
-	// Token: 0x04001AA6 RID: 6822
+	// Token: 0x040022AD RID: 8877
 	public float Assist_EnemyHealthMod = 1f;
 
-	// Token: 0x04001AA7 RID: 6823
+	// Token: 0x040022AE RID: 8878
 	public float Assist_EnemyDamageMod = 1f;
 
-	// Token: 0x04001AA8 RID: 6824
+	// Token: 0x040022AF RID: 8879
 	public float Assist_AimTimeSlow = 1f;
 
-	// Token: 0x04001AA9 RID: 6825
+	// Token: 0x040022B0 RID: 8880
 	public bool Assist_EnableFlightToggle;
 
-	// Token: 0x04001AAA RID: 6826
+	// Token: 0x040022B1 RID: 8881
 	public bool Assist_DisableEnemyContactDamage;
 
-	// Token: 0x04001AAB RID: 6827
+	// Token: 0x040022B2 RID: 8882
 	public bool Assist_DisableTraits;
 
-	// Token: 0x04001AAC RID: 6828
+	// Token: 0x040022B3 RID: 8883
 	public bool Assist_EnableDifficultyDisplay;
 
-	// Token: 0x04001AAD RID: 6829
+	// Token: 0x040022B4 RID: 8884
 	public float Assist_BurdenRequirementsMod = 1f;
 
-	// Token: 0x04001AAE RID: 6830
+	// Token: 0x040022B5 RID: 8885
 	public bool DisableAchievementUnlocks;
 
-	// Token: 0x04001AAF RID: 6831
+	// Token: 0x040022B6 RID: 8886
 	private CachedPlayerData m_cachedData;
 
-	// Token: 0x04001AB0 RID: 6832
+	// Token: 0x040022B7 RID: 8887
 	public int LineageSeed = -1;
 
-	// Token: 0x04001AB1 RID: 6833
+	// Token: 0x040022B8 RID: 8888
 	public int TimesRolledLineage;
 
-	// Token: 0x04001AB2 RID: 6834
+	// Token: 0x040022B9 RID: 8889
 	public Dictionary<PlayerSaveFlag, bool> FlagTable;
 
-	// Token: 0x04001AB3 RID: 6835
+	// Token: 0x040022BA RID: 8890
 	public Dictionary<RelicType, RelicObj> RelicObjTable;
 
-	// Token: 0x04001AB4 RID: 6836
+	// Token: 0x040022BB RID: 8891
 	public Dictionary<BurdenType, BurdenObj> BurdenObjTable;
 
-	// Token: 0x04001AB5 RID: 6837
+	// Token: 0x040022BC RID: 8892
 	public Dictionary<BiomeType, bool> TeleporterUnlockTable;
 
-	// Token: 0x04001AB6 RID: 6838
+	// Token: 0x040022BD RID: 8893
 	public SerializableVector2Int TeleporterUnlockDialogueIndex = new SerializableVector2Int(-1, -1);
 
-	// Token: 0x04001AB7 RID: 6839
+	// Token: 0x040022BE RID: 8894
 	public Dictionary<TraitType, SerializableVector3Int> TraitSpawnOddsTable;
 
-	// Token: 0x04001AB8 RID: 6840
+	// Token: 0x040022BF RID: 8895
 	public Dictionary<TraitType, TraitSeenState> TraitSeenTable;
 
-	// Token: 0x04001AB9 RID: 6841
+	// Token: 0x040022C0 RID: 8896
 	public Dictionary<AbilityType, bool> SpellSeenTable;
 
-	// Token: 0x04001ABA RID: 6842
+	// Token: 0x040022C1 RID: 8897
 	public Dictionary<HeirloomType, int> HeirloomLevelTable;
 
-	// Token: 0x04001ABB RID: 6843
+	// Token: 0x040022C2 RID: 8898
 	public Dictionary<SongID, FoundState> SongsFoundTable;
 
-	// Token: 0x04001ABC RID: 6844
+	// Token: 0x040022C3 RID: 8899
 	public Dictionary<InsightType, InsightState> InsightStateTable;
 
-	// Token: 0x04001ABD RID: 6845
+	// Token: 0x040022C4 RID: 8900
 	public Dictionary<JournalCategoryType, SerializableVector2Int> JournalsReadTable;
 
-	// Token: 0x04001ABE RID: 6846
+	// Token: 0x040022C5 RID: 8901
 	public Dictionary<NPCType, SerializableVector2Int> NPCDialogueTable;
 
-	// Token: 0x04001ABF RID: 6847
+	// Token: 0x040022C6 RID: 8902
 	public List<NPCType> PopulatedNPCDialoguesList;
 
-	// Token: 0x04001AC0 RID: 6848
+	// Token: 0x040022C7 RID: 8903
 	public int GlobalNPCDialogueCD;
 
-	// Token: 0x04001AC1 RID: 6849
+	// Token: 0x040022C8 RID: 8904
 	public bool TriggerGlobalNPCDialogueCD;
 
-	// Token: 0x04001AC2 RID: 6850
+	// Token: 0x040022C9 RID: 8905
 	public Dictionary<ClassType, int> MasteryXPTable;
 
-	// Token: 0x04001AC3 RID: 6851
+	// Token: 0x040022CA RID: 8906
 	public int RunAccumulatedXP;
 
-	// Token: 0x04001AC4 RID: 6852
+	// Token: 0x040022CB RID: 8907
 	[NonSerialized]
 	private HeirloomLevelChangedEventArgs m_heirloomChangedEventArgs;
 
-	// Token: 0x04001AC5 RID: 6853
+	// Token: 0x040022CC RID: 8908
 	[NonSerialized]
 	private GoldChangedEventArgs m_goldChangedEventArgs;
 
-	// Token: 0x04001AC6 RID: 6854
+	// Token: 0x040022CD RID: 8909
 	[NonSerialized]
 	private GoldChangedEventArgs m_goldSavedEventArgs;
 }

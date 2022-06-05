@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000677 RID: 1655
+// Token: 0x02000AEE RID: 2798
 public struct GridPointManagerContentEntry
 {
-	// Token: 0x06003B9F RID: 15263 RVA: 0x000CD56E File Offset: 0x000CB76E
+	// Token: 0x060053DC RID: 21468 RVA: 0x0002D808 File Offset: 0x0002BA08
 	public GridPointManagerContentEntry(RoomContentType contentType, Vector2 localPosition, Vector2 worldPosition, bool isSpawned)
 	{
 		this.ContentType = contentType;
@@ -13,19 +13,19 @@ public struct GridPointManagerContentEntry
 		this.IsSpawned = isSpawned;
 	}
 
-	// Token: 0x170014CC RID: 5324
-	// (get) Token: 0x06003BA0 RID: 15264 RVA: 0x000CD58D File Offset: 0x000CB78D
+	// Token: 0x17001C88 RID: 7304
+	// (get) Token: 0x060053DD RID: 21469 RVA: 0x0002D827 File Offset: 0x0002BA27
 	public readonly RoomContentType ContentType { get; }
 
-	// Token: 0x170014CD RID: 5325
-	// (get) Token: 0x06003BA1 RID: 15265 RVA: 0x000CD595 File Offset: 0x000CB795
+	// Token: 0x17001C89 RID: 7305
+	// (get) Token: 0x060053DE RID: 21470 RVA: 0x0002D82F File Offset: 0x0002BA2F
 	public readonly Vector2 LocalPosition { get; }
 
-	// Token: 0x170014CE RID: 5326
-	// (get) Token: 0x06003BA2 RID: 15266 RVA: 0x000CD59D File Offset: 0x000CB79D
+	// Token: 0x17001C8A RID: 7306
+	// (get) Token: 0x060053DF RID: 21471 RVA: 0x0002D837 File Offset: 0x0002BA37
 	public readonly Vector2 WorldPosition { get; }
 
-	// Token: 0x170014CF RID: 5327
-	// (get) Token: 0x06003BA3 RID: 15267 RVA: 0x000CD5A5 File Offset: 0x000CB7A5
+	// Token: 0x17001C8B RID: 7307
+	// (get) Token: 0x060053E0 RID: 21472 RVA: 0x0002D83F File Offset: 0x0002BA3F
 	public readonly bool IsSpawned { get; }
 }

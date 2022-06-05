@@ -2,11 +2,11 @@
 
 namespace RLAudio
 {
-	// Token: 0x020008FA RID: 2298
+	// Token: 0x02000E73 RID: 3699
 	public class MagicWandExplosionProjectileDamageAudioData : ProjectileDamageAudioData
 	{
-		// Token: 0x17001861 RID: 6241
-		// (get) Token: 0x06004B6C RID: 19308 RVA: 0x0010F2C4 File Offset: 0x0010D4C4
+		// Token: 0x17002152 RID: 8530
+		// (get) Token: 0x0600684F RID: 26703 RVA: 0x0017F508 File Offset: 0x0017D708
 		public override string CharacterDamageAudioPath
 		{
 			get

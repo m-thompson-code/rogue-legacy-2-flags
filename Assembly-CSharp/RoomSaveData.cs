@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x020002DB RID: 731
+// Token: 0x020004D0 RID: 1232
 [Serializable]
 public class RoomSaveData
 {
-	// Token: 0x17000CCF RID: 3279
-	// (get) Token: 0x06001D1E RID: 7454 RVA: 0x0005FF5F File Offset: 0x0005E15F
+	// Token: 0x17001058 RID: 4184
+	// (get) Token: 0x060027E8 RID: 10216 RVA: 0x000166D9 File Offset: 0x000148D9
 	public bool IsEmpty
 	{
 		get
@@ -14,7 +14,7 @@ public class RoomSaveData
 		}
 	}
 
-	// Token: 0x06001D1F RID: 7455 RVA: 0x0005FF84 File Offset: 0x0005E184
+	// Token: 0x060027E9 RID: 10217 RVA: 0x000BC1E0 File Offset: 0x000BA3E0
 	public void Clear()
 	{
 		this.RoomName = null;
@@ -40,66 +40,66 @@ public class RoomSaveData
 		this.BiomeControllerIndex = 0;
 	}
 
-	// Token: 0x04001B13 RID: 6931
+	// Token: 0x0400231A RID: 8986
 	public string RoomName;
 
-	// Token: 0x04001B14 RID: 6932
+	// Token: 0x0400231B RID: 8987
 	public BiomeType BiomeType;
 
-	// Token: 0x04001B15 RID: 6933
+	// Token: 0x0400231C RID: 8988
 	public bool RoomVisited;
 
-	// Token: 0x04001B16 RID: 6934
+	// Token: 0x0400231D RID: 8989
 	public bool IsRoomComplete;
 
-	// Token: 0x04001B17 RID: 6935
+	// Token: 0x0400231E RID: 8990
 	public int RoomSeed;
 
-	// Token: 0x04001B18 RID: 6936
+	// Token: 0x0400231F RID: 8991
 	public RoomID RoomID;
 
-	// Token: 0x04001B19 RID: 6937
+	// Token: 0x04002320 RID: 8992
 	public int GridCoordinatesX;
 
-	// Token: 0x04001B1A RID: 6938
+	// Token: 0x04002321 RID: 8993
 	public int GridCoordinatesY;
 
-	// Token: 0x04001B1B RID: 6939
+	// Token: 0x04002322 RID: 8994
 	public bool IsMerged;
 
-	// Token: 0x04001B1C RID: 6940
+	// Token: 0x04002323 RID: 8995
 	public int RoomNumber;
 
-	// Token: 0x04001B1D RID: 6941
+	// Token: 0x04002324 RID: 8996
 	public int[] MergedWithRoomNumbers;
 
-	// Token: 0x04001B1E RID: 6942
+	// Token: 0x04002325 RID: 8997
 	public int[] RoomCompleteBiomeControllerIndexOverrides;
 
-	// Token: 0x04001B1F RID: 6943
+	// Token: 0x04002326 RID: 8998
 	public string RoomMiscData;
 
-	// Token: 0x04001B20 RID: 6944
+	// Token: 0x04002327 RID: 8999
 	public RLBreakableSaveState[] BreakableStates;
 
-	// Token: 0x04001B21 RID: 6945
+	// Token: 0x04002328 RID: 9000
 	public RLBreakableSaveState[] DecoBreakableStates;
 
-	// Token: 0x04001B22 RID: 6946
+	// Token: 0x04002329 RID: 9001
 	public RLSaveState[] ChestStates;
 
-	// Token: 0x04001B23 RID: 6947
+	// Token: 0x0400232A RID: 9002
 	public RLSaveState[] EnemyStates;
 
-	// Token: 0x04001B24 RID: 6948
+	// Token: 0x0400232B RID: 9003
 	public RoomType RoomType;
 
-	// Token: 0x04001B25 RID: 6949
+	// Token: 0x0400232C RID: 9004
 	public bool IsMirrored;
 
-	// Token: 0x04001B26 RID: 6950
+	// Token: 0x0400232D RID: 9005
 	public bool IsTunnelDestination;
 
-	// Token: 0x04001B27 RID: 6951
+	// Token: 0x0400232E RID: 9006
 	public int BiomeControllerIndex;
 }

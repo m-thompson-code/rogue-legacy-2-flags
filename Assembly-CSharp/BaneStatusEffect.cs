@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020002F1 RID: 753
+// Token: 0x020004FD RID: 1277
 public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 {
-	// Token: 0x17000CE8 RID: 3304
-	// (get) Token: 0x06001DDB RID: 7643 RVA: 0x000621FE File Offset: 0x000603FE
+	// Token: 0x1700109B RID: 4251
+	// (get) Token: 0x06002926 RID: 10534 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public StatusEffectType[] StatusEffectTypes
 	{
 		get
@@ -16,8 +16,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CE9 RID: 3305
-	// (get) Token: 0x06001DDC RID: 7644 RVA: 0x00062201 File Offset: 0x00060401
+	// Token: 0x1700109C RID: 4252
+	// (get) Token: 0x06002927 RID: 10535 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public float[] StatusEffectDurations
 	{
 		get
@@ -26,8 +26,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CEA RID: 3306
-	// (get) Token: 0x06001DDD RID: 7645 RVA: 0x00062204 File Offset: 0x00060404
+	// Token: 0x1700109D RID: 4253
+	// (get) Token: 0x06002928 RID: 10536 RVA: 0x0001737E File Offset: 0x0001557E
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -36,8 +36,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CEB RID: 3307
-	// (get) Token: 0x06001DDE RID: 7646 RVA: 0x0006220B File Offset: 0x0006040B
+	// Token: 0x1700109E RID: 4254
+	// (get) Token: 0x06002929 RID: 10537 RVA: 0x00005D18 File Offset: 0x00003F18
 	public override float StartingDurationOverride
 	{
 		get
@@ -46,8 +46,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CEC RID: 3308
-	// (get) Token: 0x06001DDF RID: 7647 RVA: 0x00062212 File Offset: 0x00060412
+	// Token: 0x1700109F RID: 4255
+	// (get) Token: 0x0600292A RID: 10538 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool IsDotDamage
 	{
 		get
@@ -56,8 +56,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CED RID: 3309
-	// (get) Token: 0x06001DE0 RID: 7648 RVA: 0x00062218 File Offset: 0x00060418
+	// Token: 0x170010A0 RID: 4256
+	// (get) Token: 0x0600292B RID: 10539 RVA: 0x000BF930 File Offset: 0x000BDB30
 	public float BaseDamage
 	{
 		get
@@ -67,8 +67,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CEE RID: 3310
-	// (get) Token: 0x06001DE1 RID: 7649 RVA: 0x00062233 File Offset: 0x00060433
+	// Token: 0x170010A1 RID: 4257
+	// (get) Token: 0x0600292C RID: 10540 RVA: 0x00017385 File Offset: 0x00015585
 	public float ActualDamage
 	{
 		get
@@ -77,8 +77,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CEF RID: 3311
-	// (get) Token: 0x06001DE2 RID: 7650 RVA: 0x0006223B File Offset: 0x0006043B
+	// Token: 0x170010A2 RID: 4258
+	// (get) Token: 0x0600292D RID: 10541 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritChance
 	{
 		get
@@ -87,8 +87,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CF0 RID: 3312
-	// (get) Token: 0x06001DE3 RID: 7651 RVA: 0x00062242 File Offset: 0x00060442
+	// Token: 0x170010A3 RID: 4259
+	// (get) Token: 0x0600292E RID: 10542 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritDamage
 	{
 		get
@@ -97,8 +97,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CF1 RID: 3313
-	// (get) Token: 0x06001DE4 RID: 7652 RVA: 0x00062249 File Offset: 0x00060449
+	// Token: 0x170010A4 RID: 4260
+	// (get) Token: 0x0600292F RID: 10543 RVA: 0x00005FA3 File Offset: 0x000041A3
 	public Vector2 ExternalKnockbackMod
 	{
 		get
@@ -107,8 +107,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CF2 RID: 3314
-	// (get) Token: 0x06001DE5 RID: 7653 RVA: 0x00062250 File Offset: 0x00060450
+	// Token: 0x170010A5 RID: 4261
+	// (get) Token: 0x06002930 RID: 10544 RVA: 0x0001738D File Offset: 0x0001558D
 	public float ActualKnockbackStrength
 	{
 		get
@@ -117,8 +117,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CF3 RID: 3315
-	// (get) Token: 0x06001DE6 RID: 7654 RVA: 0x00062258 File Offset: 0x00060458
+	// Token: 0x170010A6 RID: 4262
+	// (get) Token: 0x06002931 RID: 10545 RVA: 0x00017395 File Offset: 0x00015595
 	public float ActualStunStrength
 	{
 		get
@@ -127,9 +127,9 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CF4 RID: 3316
-	// (get) Token: 0x06001DE7 RID: 7655 RVA: 0x00062260 File Offset: 0x00060460
-	// (set) Token: 0x06001DE8 RID: 7656 RVA: 0x00062267 File Offset: 0x00060467
+	// Token: 0x170010A7 RID: 4263
+	// (get) Token: 0x06002932 RID: 10546 RVA: 0x00003CCB File Offset: 0x00001ECB
+	// (set) Token: 0x06002933 RID: 10547 RVA: 0x00002FCA File Offset: 0x000011CA
 	public float BaseStunStrength
 	{
 		get
@@ -141,9 +141,9 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CF5 RID: 3317
-	// (get) Token: 0x06001DE9 RID: 7657 RVA: 0x00062269 File Offset: 0x00060469
-	// (set) Token: 0x06001DEA RID: 7658 RVA: 0x00062270 File Offset: 0x00060470
+	// Token: 0x170010A8 RID: 4264
+	// (get) Token: 0x06002934 RID: 10548 RVA: 0x00003CCB File Offset: 0x00001ECB
+	// (set) Token: 0x06002935 RID: 10549 RVA: 0x00002FCA File Offset: 0x000011CA
 	public float BaseKnockbackStrength
 	{
 		get
@@ -155,8 +155,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CF6 RID: 3318
-	// (get) Token: 0x06001DEB RID: 7659 RVA: 0x00062272 File Offset: 0x00060472
+	// Token: 0x170010A9 RID: 4265
+	// (get) Token: 0x06002936 RID: 10550 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float KnockbackStrength
 	{
 		get
@@ -165,8 +165,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CF7 RID: 3319
-	// (get) Token: 0x06001DEC RID: 7660 RVA: 0x00062279 File Offset: 0x00060479
+	// Token: 0x170010AA RID: 4266
+	// (get) Token: 0x06002937 RID: 10551 RVA: 0x000046FA File Offset: 0x000028FA
 	public StrikeType StrikeType
 	{
 		get
@@ -175,8 +175,8 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000CF8 RID: 3320
-	// (get) Token: 0x06001DED RID: 7661 RVA: 0x0006227D File Offset: 0x0006047D
+	// Token: 0x170010AB RID: 4267
+	// (get) Token: 0x06002938 RID: 10552 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float StatusEffectDuration
 	{
 		get
@@ -185,7 +185,7 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x06001DEE RID: 7662 RVA: 0x00062284 File Offset: 0x00060484
+	// Token: 0x06002939 RID: 10553 RVA: 0x000BF94C File Offset: 0x000BDB4C
 	public override void Initialize(StatusEffectController statusEffectController, BaseCharacterController charController)
 	{
 		base.Initialize(statusEffectController, charController);
@@ -195,7 +195,7 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		base.AppliesTint = true;
 	}
 
-	// Token: 0x06001DEF RID: 7663 RVA: 0x000622D3 File Offset: 0x000604D3
+	// Token: 0x0600293A RID: 10554 RVA: 0x0001739D File Offset: 0x0001559D
 	public override void StartEffect(float duration, IDamageObj caster)
 	{
 		if (!this.m_statusEffectController.HasStatusEffect(StatusEffectType.Enemy_Burn_Immunity))
@@ -204,7 +204,7 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x06001DF0 RID: 7664 RVA: 0x000622EC File Offset: 0x000604EC
+	// Token: 0x0600293B RID: 10555 RVA: 0x000173B6 File Offset: 0x000155B6
 	private IEnumerator PulseCoroutine()
 	{
 		for (;;)
@@ -242,7 +242,7 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		yield break;
 	}
 
-	// Token: 0x06001DF1 RID: 7665 RVA: 0x000622FB File Offset: 0x000604FB
+	// Token: 0x0600293C RID: 10556 RVA: 0x000173C5 File Offset: 0x000155C5
 	private IEnumerator DealDamageCoroutine()
 	{
 		base.Duration += 0.05f;
@@ -261,7 +261,7 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		yield break;
 	}
 
-	// Token: 0x06001DF2 RID: 7666 RVA: 0x0006230A File Offset: 0x0006050A
+	// Token: 0x0600293D RID: 10557 RVA: 0x000173D4 File Offset: 0x000155D4
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		Projectile_RL projectile_RL = caster as Projectile_RL;
@@ -300,7 +300,7 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		yield break;
 	}
 
-	// Token: 0x06001DF3 RID: 7667 RVA: 0x00062320 File Offset: 0x00060520
+	// Token: 0x0600293E RID: 10558 RVA: 0x000173EA File Offset: 0x000155EA
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -314,39 +314,39 @@ public class BaneStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x06001DF5 RID: 7669 RVA: 0x00062365 File Offset: 0x00060565
+	// Token: 0x06002940 RID: 10560 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IDamageObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04001B83 RID: 7043
+	// Token: 0x040023D3 RID: 9171
 	private const string MULTIPLY_COLOR = "#753B3B";
 
-	// Token: 0x04001B84 RID: 7044
+	// Token: 0x040023D4 RID: 9172
 	private const string PULSE_ON_COLOR = "#451200";
 
-	// Token: 0x04001B85 RID: 7045
+	// Token: 0x040023D5 RID: 9173
 	private const string PULSE_OFF_COLOR = "#000000";
 
-	// Token: 0x04001B86 RID: 7046
+	// Token: 0x040023D6 RID: 9174
 	private Color m_multiplyColor;
 
-	// Token: 0x04001B87 RID: 7047
+	// Token: 0x040023D7 RID: 9175
 	private Color m_addColorPulseOn;
 
-	// Token: 0x04001B88 RID: 7048
+	// Token: 0x040023D8 RID: 9176
 	private Color m_addColorPulseOff;
 
-	// Token: 0x04001B89 RID: 7049
+	// Token: 0x040023D9 RID: 9177
 	private bool m_pulseOn;
 
-	// Token: 0x04001B8A RID: 7050
+	// Token: 0x040023DA RID: 9178
 	private float m_baneFocusDmg;
 
-	// Token: 0x04001B8B RID: 7051
+	// Token: 0x040023DB RID: 9179
 	private BaseEffect m_baneEffect;
 
-	// Token: 0x04001B8C RID: 7052
+	// Token: 0x040023DC RID: 9180
 	private float m_burnTicRemaining;
 }

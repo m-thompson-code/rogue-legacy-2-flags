@@ -2,10 +2,10 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000596 RID: 1430
+// Token: 0x0200099B RID: 2459
 public class TotemWindowEntry : MonoBehaviour
 {
-	// Token: 0x060035D7 RID: 13783 RVA: 0x000BBAB4 File Offset: 0x000B9CB4
+	// Token: 0x06004BE3 RID: 19427 RVA: 0x00129BA0 File Offset: 0x00127DA0
 	public void OnEnable()
 	{
 		if (this.m_entryType == TotemWindowEntry.TotemEntryType.Stat && ClassLibrary.GetClassData(this.m_classType) != null)
@@ -22,7 +22,7 @@ public class TotemWindowEntry : MonoBehaviour
 		this.UpdateBonusValue();
 	}
 
-	// Token: 0x060035D8 RID: 13784 RVA: 0x000BBB10 File Offset: 0x000B9D10
+	// Token: 0x06004BE4 RID: 19428 RVA: 0x00129BFC File Offset: 0x00127DFC
 	private void UpdateClassTitle()
 	{
 		if (this.m_entryType == TotemWindowEntry.TotemEntryType.Stat)
@@ -38,7 +38,7 @@ public class TotemWindowEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060035D9 RID: 13785 RVA: 0x000BBB78 File Offset: 0x000B9D78
+	// Token: 0x06004BE5 RID: 19429 RVA: 0x00129C64 File Offset: 0x00127E64
 	private void UpdateClassValue()
 	{
 		if (this.m_entryType != TotemWindowEntry.TotemEntryType.Stat)
@@ -75,7 +75,7 @@ public class TotemWindowEntry : MonoBehaviour
 		this.m_valueText.text = key.ToString() + " NOT FOUND IN AMOUNT TABLE.";
 	}
 
-	// Token: 0x060035DA RID: 13786 RVA: 0x000BBC78 File Offset: 0x000B9E78
+	// Token: 0x06004BE6 RID: 19430 RVA: 0x00129D64 File Offset: 0x00127F64
 	private void UpdateBonusTitle()
 	{
 		if (this.m_entryType == TotemWindowEntry.TotemEntryType.Stat)
@@ -104,7 +104,7 @@ public class TotemWindowEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060035DB RID: 13787 RVA: 0x000BBD28 File Offset: 0x000B9F28
+	// Token: 0x06004BE7 RID: 19431 RVA: 0x00129E14 File Offset: 0x00128014
 	private void UpdateBonusValue()
 	{
 		if (this.m_entryType != TotemWindowEntry.TotemEntryType.Stat)
@@ -149,37 +149,37 @@ public class TotemWindowEntry : MonoBehaviour
 		this.m_valueText.text = "+" + num3.ToString();
 	}
 
-	// Token: 0x04002A00 RID: 10752
+	// Token: 0x040039F3 RID: 14835
 	[SerializeField]
 	private TotemWindowEntry.TotemEntryType m_entryType;
 
-	// Token: 0x04002A01 RID: 10753
+	// Token: 0x040039F4 RID: 14836
 	[SerializeField]
 	private ClassType m_classType;
 
-	// Token: 0x04002A02 RID: 10754
+	// Token: 0x040039F5 RID: 14837
 	[SerializeField]
 	private TMP_Text m_titleText;
 
-	// Token: 0x04002A03 RID: 10755
+	// Token: 0x040039F6 RID: 14838
 	[SerializeField]
 	private TMP_Text m_valueText;
 
-	// Token: 0x04002A04 RID: 10756
+	// Token: 0x040039F7 RID: 14839
 	[SerializeField]
 	private bool m_isBonusType;
 
-	// Token: 0x04002A05 RID: 10757
+	// Token: 0x040039F8 RID: 14840
 	private bool m_classUnlocked;
 
-	// Token: 0x02000D7B RID: 3451
+	// Token: 0x0200099C RID: 2460
 	private enum TotemEntryType
 	{
-		// Token: 0x0400547C RID: 21628
+		// Token: 0x040039FA RID: 14842
 		Stat,
-		// Token: 0x0400547D RID: 21629
+		// Token: 0x040039FB RID: 14843
 		Header,
-		// Token: 0x0400547E RID: 21630
+		// Token: 0x040039FC RID: 14844
 		Footer
 	}
 }

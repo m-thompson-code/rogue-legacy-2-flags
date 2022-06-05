@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000285 RID: 645
+// Token: 0x02000451 RID: 1105
 public class DisableCursorConfineOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001972 RID: 6514 RVA: 0x0004FD00 File Offset: 0x0004DF00
+	// Token: 0x06002361 RID: 9057 RVA: 0x00013217 File Offset: 0x00011417
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class DisableCursorConfineOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001973 RID: 6515 RVA: 0x0004FD38 File Offset: 0x0004DF38
+	// Token: 0x06002362 RID: 9058 RVA: 0x0001324F File Offset: 0x0001144F
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class DisableCursorConfineOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001974 RID: 6516 RVA: 0x0004FD72 File Offset: 0x0004DF72
+	// Token: 0x06002363 RID: 9059 RVA: 0x00013289 File Offset: 0x00011489
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed Cursor Lock to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001975 RID: 6517 RVA: 0x0004FD89 File Offset: 0x0004DF89
+	// Token: 0x06002364 RID: 9060 RVA: 0x000132A0 File Offset: 0x000114A0
 	public override void ConfirmOptionChange()
 	{
 		if (this.m_selectedIndex == 0)

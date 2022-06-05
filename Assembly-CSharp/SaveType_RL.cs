@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200076D RID: 1901
+// Token: 0x02000C2E RID: 3118
 public static class SaveType_RL
 {
 }

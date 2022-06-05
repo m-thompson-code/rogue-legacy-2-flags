@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020002D4 RID: 724
+// Token: 0x020004C9 RID: 1225
 [Serializable]
 public class HighestNGBossBeatenEntry
 {
-	// Token: 0x06001CA7 RID: 7335 RVA: 0x0005D66C File Offset: 0x0005B86C
+	// Token: 0x06002771 RID: 10097 RVA: 0x000B99F4 File Offset: 0x000B7BF4
 	public int GetHighestNGBossBeaten(BossID bossID)
 	{
 		if (bossID <= BossID.Study_Boss)
@@ -57,7 +57,7 @@ public class HighestNGBossBeatenEntry
 		return -1;
 	}
 
-	// Token: 0x06001CA8 RID: 7336 RVA: 0x0005D6F4 File Offset: 0x0005B8F4
+	// Token: 0x06002772 RID: 10098 RVA: 0x000B9A7C File Offset: 0x000B7C7C
 	public void SetHighestNGBossBeaten(BossID bossID, int value, bool forceOverride)
 	{
 		int highestNGBossBeaten = this.GetHighestNGBossBeaten(bossID);
@@ -126,27 +126,27 @@ public class HighestNGBossBeatenEntry
 		}
 	}
 
-	// Token: 0x04001A05 RID: 6661
+	// Token: 0x0400220C RID: 8716
 	public int HighestCastleBossBeaten = -1;
 
-	// Token: 0x04001A06 RID: 6662
+	// Token: 0x0400220D RID: 8717
 	public int HighestBridgeBossBeaten = -1;
 
-	// Token: 0x04001A07 RID: 6663
+	// Token: 0x0400220E RID: 8718
 	public int HighestForestBossBeaten = -1;
 
-	// Token: 0x04001A08 RID: 6664
+	// Token: 0x0400220F RID: 8719
 	public int HighestStudyBossBeaten = -1;
 
-	// Token: 0x04001A09 RID: 6665
+	// Token: 0x04002210 RID: 8720
 	public int HighestTowerBossBeaten = -1;
 
-	// Token: 0x04001A0A RID: 6666
+	// Token: 0x04002211 RID: 8721
 	public int HighestCaveBossBeaten = -1;
 
-	// Token: 0x04001A0B RID: 6667
+	// Token: 0x04002212 RID: 8722
 	public int HighestGardenBossBeaten = -1;
 
-	// Token: 0x04001A0C RID: 6668
+	// Token: 0x04002213 RID: 8723
 	public int HighestFinalBossBeaten = -1;
 }

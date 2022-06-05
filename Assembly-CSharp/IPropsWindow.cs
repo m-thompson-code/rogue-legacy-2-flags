@@ -1,23 +1,23 @@
 ﻿using System;
 
-// Token: 0x020005C7 RID: 1479
+// Token: 0x020009CF RID: 2511
 public interface IPropsWindow
 {
 	// Token: 0x14000007 RID: 7
-	// (add) Token: 0x06003672 RID: 13938
-	// (remove) Token: 0x06003673 RID: 13939
+	// (add) Token: 0x06004C84 RID: 19588
+	// (remove) Token: 0x06004C85 RID: 19589
 	event EventHandler<EventArgs> BiomeLayerChangeEvent;
 
 	// Token: 0x14000008 RID: 8
-	// (add) Token: 0x06003674 RID: 13940
-	// (remove) Token: 0x06003675 RID: 13941
+	// (add) Token: 0x06004C86 RID: 19590
+	// (remove) Token: 0x06004C87 RID: 19591
 	event EventHandler<EventArgs> CloseEvent;
 
-	// Token: 0x17001346 RID: 4934
-	// (get) Token: 0x06003676 RID: 13942
+	// Token: 0x17001A73 RID: 6771
+	// (get) Token: 0x06004C88 RID: 19592
 	BiomeLayer BiomeLayerMask { get; }
 
-	// Token: 0x17001347 RID: 4935
-	// (get) Token: 0x06003677 RID: 13943
+	// Token: 0x17001A74 RID: 6772
+	// (get) Token: 0x06004C89 RID: 19593
 	bool ShowPropTableIndicators { get; }
 }

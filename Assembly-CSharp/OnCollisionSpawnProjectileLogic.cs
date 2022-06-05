@@ -2,11 +2,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x020004A3 RID: 1187
+// Token: 0x020007AE RID: 1966
 public class OnCollisionSpawnProjectileLogic : BaseProjectileLogic, IHasProjectileNameArray
 {
-	// Token: 0x1700109C RID: 4252
-	// (get) Token: 0x06002B6B RID: 11115 RVA: 0x0009349D File Offset: 0x0009169D
+	// Token: 0x170015EF RID: 5615
+	// (get) Token: 0x06003BD8 RID: 15320 RVA: 0x00020FBA File Offset: 0x0001F1BA
 	public virtual string[] ProjectileNameArray
 	{
 		get
@@ -22,9 +22,9 @@ public class OnCollisionSpawnProjectileLogic : BaseProjectileLogic, IHasProjecti
 		}
 	}
 
-	// Token: 0x1700109D RID: 4253
-	// (get) Token: 0x06002B6C RID: 11116 RVA: 0x000934C2 File Offset: 0x000916C2
-	// (set) Token: 0x06002B6D RID: 11117 RVA: 0x000934CA File Offset: 0x000916CA
+	// Token: 0x170015F0 RID: 5616
+	// (get) Token: 0x06003BD9 RID: 15321 RVA: 0x00020FDF File Offset: 0x0001F1DF
+	// (set) Token: 0x06003BDA RID: 15322 RVA: 0x00020FE7 File Offset: 0x0001F1E7
 	public string ProjectileToSpawn
 	{
 		get
@@ -37,9 +37,9 @@ public class OnCollisionSpawnProjectileLogic : BaseProjectileLogic, IHasProjecti
 		}
 	}
 
-	// Token: 0x1700109E RID: 4254
-	// (get) Token: 0x06002B6E RID: 11118 RVA: 0x000934D3 File Offset: 0x000916D3
-	// (set) Token: 0x06002B6F RID: 11119 RVA: 0x000934DB File Offset: 0x000916DB
+	// Token: 0x170015F1 RID: 5617
+	// (get) Token: 0x06003BDB RID: 15323 RVA: 0x00020FF0 File Offset: 0x0001F1F0
+	// (set) Token: 0x06003BDC RID: 15324 RVA: 0x00020FF8 File Offset: 0x0001F1F8
 	public Vector2 Offset
 	{
 		get
@@ -52,9 +52,9 @@ public class OnCollisionSpawnProjectileLogic : BaseProjectileLogic, IHasProjecti
 		}
 	}
 
-	// Token: 0x1700109F RID: 4255
-	// (get) Token: 0x06002B70 RID: 11120 RVA: 0x000934E4 File Offset: 0x000916E4
-	// (set) Token: 0x06002B71 RID: 11121 RVA: 0x000934EC File Offset: 0x000916EC
+	// Token: 0x170015F2 RID: 5618
+	// (get) Token: 0x06003BDD RID: 15325 RVA: 0x00021001 File Offset: 0x0001F201
+	// (set) Token: 0x06003BDE RID: 15326 RVA: 0x00021009 File Offset: 0x0001F209
 	public bool MatchFacing
 	{
 		get
@@ -67,9 +67,9 @@ public class OnCollisionSpawnProjectileLogic : BaseProjectileLogic, IHasProjecti
 		}
 	}
 
-	// Token: 0x170010A0 RID: 4256
-	// (get) Token: 0x06002B72 RID: 11122 RVA: 0x000934F5 File Offset: 0x000916F5
-	// (set) Token: 0x06002B73 RID: 11123 RVA: 0x000934FD File Offset: 0x000916FD
+	// Token: 0x170015F3 RID: 5619
+	// (get) Token: 0x06003BDF RID: 15327 RVA: 0x00021012 File Offset: 0x0001F212
+	// (set) Token: 0x06003BE0 RID: 15328 RVA: 0x0002101A File Offset: 0x0001F21A
 	public float Angle
 	{
 		get
@@ -82,13 +82,13 @@ public class OnCollisionSpawnProjectileLogic : BaseProjectileLogic, IHasProjecti
 		}
 	}
 
-	// Token: 0x06002B74 RID: 11124 RVA: 0x00093506 File Offset: 0x00091706
+	// Token: 0x06003BE1 RID: 15329 RVA: 0x00021023 File Offset: 0x0001F223
 	private void Start()
 	{
 		base.SourceProjectile.OnCollisionRelay.AddListener(new Action<Projectile_RL, GameObject>(this.SpawnProjectile), false);
 	}
 
-	// Token: 0x06002B75 RID: 11125 RVA: 0x00093528 File Offset: 0x00091728
+	// Token: 0x06003BE2 RID: 15330 RVA: 0x000F4D74 File Offset: 0x000F2F74
 	protected virtual void SpawnProjectile(Projectile_RL projectile, GameObject colliderObj)
 	{
 		if (this.m_onlyCollideWithProjectiles && !CollisionType_RL.IsProjectile(colliderObj))
@@ -158,41 +158,41 @@ public class OnCollisionSpawnProjectileLogic : BaseProjectileLogic, IHasProjecti
 		projectile_RL.StopChangeCollisionPointCoroutine();
 	}
 
-	// Token: 0x06002B76 RID: 11126 RVA: 0x000937B2 File Offset: 0x000919B2
+	// Token: 0x06003BE3 RID: 15331 RVA: 0x00021044 File Offset: 0x0001F244
 	private void OnDestroy()
 	{
 		base.SourceProjectile.OnCollisionRelay.RemoveListener(new Action<Projectile_RL, GameObject>(this.SpawnProjectile));
 	}
 
-	// Token: 0x04002351 RID: 9041
+	// Token: 0x04002F83 RID: 12163
 	[SerializeField]
 	private string m_projectileToSpawn;
 
-	// Token: 0x04002352 RID: 9042
+	// Token: 0x04002F84 RID: 12164
 	[SerializeField]
 	private Vector2 m_offset;
 
-	// Token: 0x04002353 RID: 9043
+	// Token: 0x04002F85 RID: 12165
 	[SerializeField]
 	private bool m_matchFacing;
 
-	// Token: 0x04002354 RID: 9044
+	// Token: 0x04002F86 RID: 12166
 	[SerializeField]
 	private float m_angle;
 
-	// Token: 0x04002355 RID: 9045
+	// Token: 0x04002F87 RID: 12167
 	[SerializeField]
 	private bool m_spawnAtCollisionPoint;
 
-	// Token: 0x04002356 RID: 9046
+	// Token: 0x04002F88 RID: 12168
 	[SerializeField]
 	private bool m_onlyCollideWithProjectiles;
 
-	// Token: 0x04002357 RID: 9047
+	// Token: 0x04002F89 RID: 12169
 	[SerializeField]
 	private UnityEvent m_projectileSpawnedUnityEvent;
 
-	// Token: 0x04002358 RID: 9048
+	// Token: 0x04002F8A RID: 12170
 	[NonSerialized]
 	protected string[] m_projectileNameArray;
 }

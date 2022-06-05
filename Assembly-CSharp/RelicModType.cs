@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000761 RID: 1889
+// Token: 0x02000C1F RID: 3103
 public enum RelicModType
 {
-	// Token: 0x040035A6 RID: 13734
+	// Token: 0x04004822 RID: 18466
 	None,
-	// Token: 0x040035A7 RID: 13735
+	// Token: 0x04004823 RID: 18467
 	DoubleRelic = 10
 }

@@ -4,11 +4,11 @@ using FMODUnity;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x02000175 RID: 373
+// Token: 0x020002B2 RID: 690
 public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 {
-	// Token: 0x17000707 RID: 1799
-	// (get) Token: 0x06000D09 RID: 3337 RVA: 0x00027C0F File Offset: 0x00025E0F
+	// Token: 0x1700096D RID: 2413
+	// (get) Token: 0x06001442 RID: 5186 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -17,8 +17,8 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000708 RID: 1800
-	// (get) Token: 0x06000D0A RID: 3338 RVA: 0x00027C16 File Offset: 0x00025E16
+	// Token: 0x1700096E RID: 2414
+	// (get) Token: 0x06001443 RID: 5187 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -27,8 +27,8 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000709 RID: 1801
-	// (get) Token: 0x06000D0B RID: 3339 RVA: 0x00027C1D File Offset: 0x00025E1D
+	// Token: 0x1700096F RID: 2415
+	// (get) Token: 0x06001444 RID: 5188 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float TellAnimSpeed
 	{
 		get
@@ -37,8 +37,8 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700070A RID: 1802
-	// (get) Token: 0x06000D0C RID: 3340 RVA: 0x00027C24 File Offset: 0x00025E24
+	// Token: 0x17000970 RID: 2416
+	// (get) Token: 0x06001445 RID: 5189 RVA: 0x000050CB File Offset: 0x000032CB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -47,8 +47,8 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700070B RID: 1803
-	// (get) Token: 0x06000D0D RID: 3341 RVA: 0x00027C2B File Offset: 0x00025E2B
+	// Token: 0x17000971 RID: 2417
+	// (get) Token: 0x06001446 RID: 5190 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -57,8 +57,8 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700070C RID: 1804
-	// (get) Token: 0x06000D0E RID: 3342 RVA: 0x00027C32 File Offset: 0x00025E32
+	// Token: 0x17000972 RID: 2418
+	// (get) Token: 0x06001447 RID: 5191 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -67,8 +67,8 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700070D RID: 1805
-	// (get) Token: 0x06000D0F RID: 3343 RVA: 0x00027C39 File Offset: 0x00025E39
+	// Token: 0x17000973 RID: 2419
+	// (get) Token: 0x06001448 RID: 5192 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -77,8 +77,8 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700070E RID: 1806
-	// (get) Token: 0x06000D10 RID: 3344 RVA: 0x00027C40 File Offset: 0x00025E40
+	// Token: 0x17000974 RID: 2420
+	// (get) Token: 0x06001449 RID: 5193 RVA: 0x0000456C File Offset: 0x0000276C
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -87,8 +87,8 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700070F RID: 1807
-	// (get) Token: 0x06000D11 RID: 3345 RVA: 0x00027C47 File Offset: 0x00025E47
+	// Token: 0x17000975 RID: 2421
+	// (get) Token: 0x0600144A RID: 5194 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -97,8 +97,8 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000710 RID: 1808
-	// (get) Token: 0x06000D12 RID: 3346 RVA: 0x00027C4E File Offset: 0x00025E4E
+	// Token: 0x17000976 RID: 2422
+	// (get) Token: 0x0600144B RID: 5195 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -107,14 +107,14 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x06000D13 RID: 3347 RVA: 0x00027C55 File Offset: 0x00025E55
+	// Token: 0x0600144C RID: 5196 RVA: 0x0000A431 File Offset: 0x00008631
 	public override void PreCastAbility()
 	{
 		base.PreCastAbility();
 		this.m_chargeEmitter.Play();
 	}
 
-	// Token: 0x06000D14 RID: 3348 RVA: 0x00027C68 File Offset: 0x00025E68
+	// Token: 0x0600144D RID: 5197 RVA: 0x0000A444 File Offset: 0x00008644
 	public override IEnumerator CastAbility()
 	{
 		if (this.m_abilityController.PlayerController.ConditionState != CharacterStates.CharacterConditions.DisableHorizontalMovement)
@@ -129,7 +129,7 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000D15 RID: 3349 RVA: 0x00027C77 File Offset: 0x00025E77
+	// Token: 0x0600144E RID: 5198 RVA: 0x0000A453 File Offset: 0x00008653
 	protected override void FireProjectile()
 	{
 		this.m_chargeEmitter.Stop();
@@ -137,7 +137,7 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		this.m_castStartTime = Time.time;
 	}
 
-	// Token: 0x06000D16 RID: 3350 RVA: 0x00027C95 File Offset: 0x00025E95
+	// Token: 0x0600144F RID: 5199 RVA: 0x0000A471 File Offset: 0x00008671
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (base.CurrentAbilityAnimState == AbilityAnimState.Attack)
@@ -151,7 +151,7 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000D17 RID: 3351 RVA: 0x00027CAC File Offset: 0x00025EAC
+	// Token: 0x06001450 RID: 5200 RVA: 0x00086C2C File Offset: 0x00084E2C
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_firedProjectile)
@@ -168,13 +168,13 @@ public class GravityWell_Ability : BaseAbility_RL, ISpell, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x040010BC RID: 4284
+	// Token: 0x04001607 RID: 5639
 	[SerializeField]
 	private StudioEventEmitter m_chargeEmitter;
 
-	// Token: 0x040010BD RID: 4285
+	// Token: 0x04001608 RID: 5640
 	private float m_castDuration = 0.75f;
 
-	// Token: 0x040010BE RID: 4286
+	// Token: 0x04001609 RID: 5641
 	private float m_castStartTime;
 }

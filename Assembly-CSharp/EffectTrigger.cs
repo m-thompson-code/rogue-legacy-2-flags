@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200040D RID: 1037
+// Token: 0x020006C5 RID: 1733
 public static class EffectTrigger
 {
-	// Token: 0x060026B6 RID: 9910 RVA: 0x000801B4 File Offset: 0x0007E3B4
+	// Token: 0x0600356B RID: 13675 RVA: 0x000E08A8 File Offset: 0x000DEAA8
 	public static BaseEffect InvokeTrigger(EffectTriggerEntry entry, GameObject selfObj, GameObject otherObj, Vector3 selfObjMidpos, Vector3 otherObjMidpos, EffectTriggerDirection otherDirection, Animator animator = null)
 	{
 		if (!EffectManager.IsInitialized)
@@ -257,7 +257,7 @@ public static class EffectTrigger
 		return baseEffect;
 	}
 
-	// Token: 0x060026B7 RID: 9911 RVA: 0x00080938 File Offset: 0x0007EB38
+	// Token: 0x0600356C RID: 13676 RVA: 0x000E102C File Offset: 0x000DF22C
 	public static EffectTriggerDirection GetEffectDirectionFromObject(GameObject obj, EffectTriggerDirection directionsToCheck)
 	{
 		EffectTriggerDirection effectTriggerDirection = EffectTriggerDirection.None;

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000115 RID: 277
+// Token: 0x020001C4 RID: 452
 public class SkeletonBoss_Advanced_AIScript : SkeletonBoss_Basic_AIScript
 {
-	// Token: 0x17000496 RID: 1174
-	// (get) Token: 0x0600087D RID: 2173 RVA: 0x0001C5EA File Offset: 0x0001A7EA
+	// Token: 0x170005E4 RID: 1508
+	// (get) Token: 0x06000C6C RID: 3180 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_jump_Land_Spawn_Curse
 	{
 		get
@@ -15,7 +15,7 @@ public class SkeletonBoss_Advanced_AIScript : SkeletonBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x0600087E RID: 2174 RVA: 0x0001C5ED File Offset: 0x0001A7ED
+	// Token: 0x06000C6D RID: 3181 RVA: 0x0000763A File Offset: 0x0000583A
 	public override IEnumerator DeathAnim()
 	{
 		if (!this.m_modeShiftSummons_Appeared)

@@ -2,17 +2,17 @@
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x020004B0 RID: 1200
+// Token: 0x020007C2 RID: 1986
 public class UpdateSkillCritOnPersistentProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002BBC RID: 11196 RVA: 0x00094C4A File Offset: 0x00092E4A
+	// Token: 0x06003C4D RID: 15437 RVA: 0x00021540 File Offset: 0x0001F740
 	protected override void Awake()
 	{
 		base.Awake();
 		base.SourceProjectile.IsPersistentProjectile = true;
 	}
 
-	// Token: 0x06002BBD RID: 11197 RVA: 0x00094C60 File Offset: 0x00092E60
+	// Token: 0x06003C4E RID: 15438 RVA: 0x000F6434 File Offset: 0x000F4634
 	private void FixedUpdate()
 	{
 		bool flag = false;
@@ -47,7 +47,7 @@ public class UpdateSkillCritOnPersistentProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x04002388 RID: 9096
+	// Token: 0x04002FD5 RID: 12245
 	[SerializeField]
 	private bool m_critsWhenDashing;
 }

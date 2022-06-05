@@ -1,18 +1,18 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200019E RID: 414
+// Token: 0x020002FA RID: 762
 public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 {
-	// Token: 0x06000FCC RID: 4044 RVA: 0x0002DFF4 File Offset: 0x0002C1F4
+	// Token: 0x060017B9 RID: 6073 RVA: 0x0000BFF5 File Offset: 0x0000A1F5
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onProjectileCollision = new Action<Projectile_RL, GameObject>(this.OnProjectileCollision);
 	}
 
-	// Token: 0x170008C4 RID: 2244
-	// (get) Token: 0x06000FCD RID: 4045 RVA: 0x0002E00E File Offset: 0x0002C20E
+	// Token: 0x17000B66 RID: 2918
+	// (get) Token: 0x060017BA RID: 6074 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -21,8 +21,8 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008C5 RID: 2245
-	// (get) Token: 0x06000FCE RID: 4046 RVA: 0x0002E015 File Offset: 0x0002C215
+	// Token: 0x17000B67 RID: 2919
+	// (get) Token: 0x060017BB RID: 6075 RVA: 0x0000C00F File Offset: 0x0000A20F
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -31,8 +31,8 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008C6 RID: 2246
-	// (get) Token: 0x06000FCF RID: 4047 RVA: 0x0002E01C File Offset: 0x0002C21C
+	// Token: 0x17000B68 RID: 2920
+	// (get) Token: 0x060017BC RID: 6076 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float TellAnimSpeed
 	{
 		get
@@ -41,8 +41,8 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008C7 RID: 2247
-	// (get) Token: 0x06000FD0 RID: 4048 RVA: 0x0002E023 File Offset: 0x0002C223
+	// Token: 0x17000B69 RID: 2921
+	// (get) Token: 0x060017BD RID: 6077 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -51,8 +51,8 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008C8 RID: 2248
-	// (get) Token: 0x06000FD1 RID: 4049 RVA: 0x0002E02A File Offset: 0x0002C22A
+	// Token: 0x17000B6A RID: 2922
+	// (get) Token: 0x060017BE RID: 6078 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -61,8 +61,8 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008C9 RID: 2249
-	// (get) Token: 0x06000FD2 RID: 4050 RVA: 0x0002E031 File Offset: 0x0002C231
+	// Token: 0x17000B6B RID: 2923
+	// (get) Token: 0x060017BF RID: 6079 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -71,8 +71,8 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008CA RID: 2250
-	// (get) Token: 0x06000FD3 RID: 4051 RVA: 0x0002E038 File Offset: 0x0002C238
+	// Token: 0x17000B6C RID: 2924
+	// (get) Token: 0x060017C0 RID: 6080 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -81,8 +81,8 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008CB RID: 2251
-	// (get) Token: 0x06000FD4 RID: 4052 RVA: 0x0002E03F File Offset: 0x0002C23F
+	// Token: 0x17000B6D RID: 2925
+	// (get) Token: 0x060017C1 RID: 6081 RVA: 0x00003D8C File Offset: 0x00001F8C
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -91,8 +91,8 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008CC RID: 2252
-	// (get) Token: 0x06000FD5 RID: 4053 RVA: 0x0002E046 File Offset: 0x0002C246
+	// Token: 0x17000B6E RID: 2926
+	// (get) Token: 0x060017C2 RID: 6082 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -101,8 +101,8 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008CD RID: 2253
-	// (get) Token: 0x06000FD6 RID: 4054 RVA: 0x0002E04D File Offset: 0x0002C24D
+	// Token: 0x17000B6F RID: 2927
+	// (get) Token: 0x060017C3 RID: 6083 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -111,21 +111,21 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000FD7 RID: 4055 RVA: 0x0002E054 File Offset: 0x0002C254
+	// Token: 0x060017C4 RID: 6084 RVA: 0x0000C016 File Offset: 0x0000A216
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		base.Initialize(abilityController, castAbilityType);
 		abilityController.Animator.SetBool("FryingPan_UsePirateAudio", false);
 	}
 
-	// Token: 0x06000FD8 RID: 4056 RVA: 0x0002E06F File Offset: 0x0002C26F
+	// Token: 0x060017C5 RID: 6085 RVA: 0x0000C031 File Offset: 0x0000A231
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
 		this.m_firedProjectile.OnCollisionRelay.AddListener(this.m_onProjectileCollision, false);
 	}
 
-	// Token: 0x06000FD9 RID: 4057 RVA: 0x0002E090 File Offset: 0x0002C290
+	// Token: 0x060017C6 RID: 6086 RVA: 0x0008C4C8 File Offset: 0x0008A6C8
 	private void OnProjectileCollision(Projectile_RL proj, GameObject colliderObj)
 	{
 		if (CollisionType_RL.IsProjectile(colliderObj))
@@ -138,7 +138,7 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000FDA RID: 4058 RVA: 0x0002E0E9 File Offset: 0x0002C2E9
+	// Token: 0x060017C7 RID: 6087 RVA: 0x0000C051 File Offset: 0x0000A251
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_firedProjectile)
@@ -148,6 +148,6 @@ public class Ladle_Ability : BaseAbility_RL, IAttack, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x0400118C RID: 4492
+	// Token: 0x04001748 RID: 5960
 	private Action<Projectile_RL, GameObject> m_onProjectileCollision;
 }

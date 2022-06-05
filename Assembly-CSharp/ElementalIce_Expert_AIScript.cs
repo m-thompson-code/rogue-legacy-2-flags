@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000B9 RID: 185
+// Token: 0x0200010B RID: 267
 public class ElementalIce_Expert_AIScript : ElementalIce_Basic_AIScript
 {
-	// Token: 0x17000210 RID: 528
-	// (get) Token: 0x06000494 RID: 1172 RVA: 0x00015D2C File Offset: 0x00013F2C
+	// Token: 0x170002A8 RID: 680
+	// (get) Token: 0x06000661 RID: 1633 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_shoot_CentreShot
 	{
 		get
@@ -13,8 +13,8 @@ public class ElementalIce_Expert_AIScript : ElementalIce_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000211 RID: 529
-	// (get) Token: 0x06000495 RID: 1173 RVA: 0x00015D2F File Offset: 0x00013F2F
+	// Token: 0x170002A9 RID: 681
+	// (get) Token: 0x06000662 RID: 1634 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override int m_shoot_TotalSideShots
 	{
 		get
@@ -23,8 +23,8 @@ public class ElementalIce_Expert_AIScript : ElementalIce_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000212 RID: 530
-	// (get) Token: 0x06000496 RID: 1174 RVA: 0x00015D32 File Offset: 0x00013F32
+	// Token: 0x170002AA RID: 682
+	// (get) Token: 0x06000663 RID: 1635 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected override float m_spinAttack_TimesShotDelay
 	{
 		get
@@ -33,8 +33,8 @@ public class ElementalIce_Expert_AIScript : ElementalIce_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000213 RID: 531
-	// (get) Token: 0x06000497 RID: 1175 RVA: 0x00015D39 File Offset: 0x00013F39
+	// Token: 0x170002AB RID: 683
+	// (get) Token: 0x06000664 RID: 1636 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override int m_spinAttack_TotalShots
 	{
 		get
@@ -43,8 +43,8 @@ public class ElementalIce_Expert_AIScript : ElementalIce_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000214 RID: 532
-	// (get) Token: 0x06000498 RID: 1176 RVA: 0x00015D3C File Offset: 0x00013F3C
+	// Token: 0x170002AC RID: 684
+	// (get) Token: 0x06000665 RID: 1637 RVA: 0x00003E42 File Offset: 0x00002042
 	protected override int m_spinAttack_ShotPatternLoops
 	{
 		get
@@ -53,8 +53,8 @@ public class ElementalIce_Expert_AIScript : ElementalIce_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000215 RID: 533
-	// (get) Token: 0x06000499 RID: 1177 RVA: 0x00015D3F File Offset: 0x00013F3F
+	// Token: 0x170002AD RID: 685
+	// (get) Token: 0x06000666 RID: 1638 RVA: 0x000053A7 File Offset: 0x000035A7
 	protected override float m_spinAttack_projectile_RandomSpread
 	{
 		get

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020006EB RID: 1771
+// Token: 0x02000B99 RID: 2969
 public enum SkillUnlockState
 {
-	// Token: 0x04003153 RID: 12627
+	// Token: 0x040043A5 RID: 17317
 	Unlocked,
-	// Token: 0x04003154 RID: 12628
+	// Token: 0x040043A6 RID: 17318
 	Locked,
-	// Token: 0x04003155 RID: 12629
+	// Token: 0x040043A7 RID: 17319
 	Hidden
 }

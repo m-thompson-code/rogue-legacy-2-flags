@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020001B5 RID: 437
+// Token: 0x02000324 RID: 804
 [SharedBetweenAnimators]
 public class EffectTriggerAnimBehaviour : StateMachineBehaviour
 {
-	// Token: 0x0600112F RID: 4399 RVA: 0x00031AE0 File Offset: 0x0002FCE0
+	// Token: 0x06001978 RID: 6520 RVA: 0x0000CD72 File Offset: 0x0000AF72
 	public static void ClearNormalizedStartCounters()
 	{
 		EffectTriggerAnimBehaviour.m_normalizedStartCounterDict.Clear();
 	}
 
-	// Token: 0x1700098C RID: 2444
-	// (get) Token: 0x06001130 RID: 4400 RVA: 0x00031AEC File Offset: 0x0002FCEC
-	// (set) Token: 0x06001131 RID: 4401 RVA: 0x00031AF3 File Offset: 0x0002FCF3
+	// Token: 0x17000C4C RID: 3148
+	// (get) Token: 0x06001979 RID: 6521 RVA: 0x0000CD7E File Offset: 0x0000AF7E
+	// (set) Token: 0x0600197A RID: 6522 RVA: 0x0000CD85 File Offset: 0x0000AF85
 	public static bool DISABLE_GLOBALLY { get; set; } = false;
 
-	// Token: 0x1700098D RID: 2445
-	// (get) Token: 0x06001132 RID: 4402 RVA: 0x00031AFB File Offset: 0x0002FCFB
-	// (set) Token: 0x06001133 RID: 4403 RVA: 0x00031B03 File Offset: 0x0002FD03
+	// Token: 0x17000C4D RID: 3149
+	// (get) Token: 0x0600197B RID: 6523 RVA: 0x0000CD8D File Offset: 0x0000AF8D
+	// (set) Token: 0x0600197C RID: 6524 RVA: 0x0000CD95 File Offset: 0x0000AF95
 	public EffectTriggerEntry[] TriggerArray
 	{
 		get
@@ -32,9 +32,9 @@ public class EffectTriggerAnimBehaviour : StateMachineBehaviour
 		}
 	}
 
-	// Token: 0x1700098E RID: 2446
-	// (get) Token: 0x06001134 RID: 4404 RVA: 0x00031B0C File Offset: 0x0002FD0C
-	// (set) Token: 0x06001135 RID: 4405 RVA: 0x00031B14 File Offset: 0x0002FD14
+	// Token: 0x17000C4E RID: 3150
+	// (get) Token: 0x0600197D RID: 6525 RVA: 0x0000CD9E File Offset: 0x0000AF9E
+	// (set) Token: 0x0600197E RID: 6526 RVA: 0x0000CDA6 File Offset: 0x0000AFA6
 	public AnimBehaviourCondition[] ConditionArray
 	{
 		get
@@ -47,7 +47,7 @@ public class EffectTriggerAnimBehaviour : StateMachineBehaviour
 		}
 	}
 
-	// Token: 0x06001136 RID: 4406 RVA: 0x00031B20 File Offset: 0x0002FD20
+	// Token: 0x0600197F RID: 6527 RVA: 0x0008FF10 File Offset: 0x0008E110
 	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		if (EffectTriggerAnimBehaviour.DISABLE_GLOBALLY)
@@ -102,7 +102,7 @@ public class EffectTriggerAnimBehaviour : StateMachineBehaviour
 		}
 	}
 
-	// Token: 0x06001137 RID: 4407 RVA: 0x00031C74 File Offset: 0x0002FE74
+	// Token: 0x06001980 RID: 6528 RVA: 0x00090064 File Offset: 0x0008E264
 	public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		if (EffectTriggerAnimBehaviour.DISABLE_GLOBALLY)
@@ -176,7 +176,7 @@ public class EffectTriggerAnimBehaviour : StateMachineBehaviour
 		}
 	}
 
-	// Token: 0x06001138 RID: 4408 RVA: 0x00031E60 File Offset: 0x00030060
+	// Token: 0x06001981 RID: 6529 RVA: 0x00090250 File Offset: 0x0008E450
 	private void InvokeTrigger(GameObject parentObj, Animator animator, EffectTriggerEntry entry, int layerIndex)
 	{
 		Vector3 vector = parentObj.transform.position;
@@ -189,14 +189,14 @@ public class EffectTriggerAnimBehaviour : StateMachineBehaviour
 		EffectTrigger.InvokeTrigger(entry, parentObj, parentObj, vector, vector, effectDirectionFromObject, animator);
 	}
 
-	// Token: 0x04001220 RID: 4640
+	// Token: 0x04001829 RID: 6185
 	private static Dictionary<int, int> m_normalizedStartCounterDict = new Dictionary<int, int>();
 
-	// Token: 0x04001221 RID: 4641
+	// Token: 0x0400182A RID: 6186
 	[SerializeField]
 	private EffectTriggerEntry[] m_effectTriggerEntryList = new EffectTriggerEntry[0];
 
-	// Token: 0x04001222 RID: 4642
+	// Token: 0x0400182B RID: 6187
 	[SerializeField]
 	private AnimBehaviourCondition[] m_animBehaviourConditionArray = new AnimBehaviourCondition[0];
 }

@@ -4,10 +4,10 @@ using FMOD.Studio;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020004BD RID: 1213
+// Token: 0x020007D5 RID: 2005
 public class ShakeRoomController : MonoBehaviour
 {
-	// Token: 0x06002D1F RID: 11551 RVA: 0x00098F10 File Offset: 0x00097110
+	// Token: 0x06003DCB RID: 15819 RVA: 0x000F9D00 File Offset: 0x000F7F00
 	private void OnEnable()
 	{
 		if (!this.m_debrisSFXEventInstance.isValid())
@@ -22,7 +22,7 @@ public class ShakeRoomController : MonoBehaviour
 		base.StartCoroutine(this.StartRumbleSFX());
 	}
 
-	// Token: 0x06002D20 RID: 11552 RVA: 0x00098F7D File Offset: 0x0009717D
+	// Token: 0x06003DCC RID: 15820 RVA: 0x00022347 File Offset: 0x00020547
 	private IEnumerator StartRumbleSFX()
 	{
 		float delay = 0.1f + Time.time;
@@ -37,7 +37,7 @@ public class ShakeRoomController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002D21 RID: 11553 RVA: 0x00098F8C File Offset: 0x0009718C
+	// Token: 0x06003DCD RID: 15821 RVA: 0x00022356 File Offset: 0x00020556
 	private void OnDestroy()
 	{
 		if (this.m_debrisSFXEventInstance.isValid())
@@ -50,7 +50,7 @@ public class ShakeRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D22 RID: 11554 RVA: 0x00098FC0 File Offset: 0x000971C0
+	// Token: 0x06003DCE RID: 15822 RVA: 0x0002238A File Offset: 0x0002058A
 	private IEnumerator ShakeRoomCoroutine()
 	{
 		float delay = UnityEngine.Random.Range(this.m_shakeInterval.x, this.m_shakeInterval.y);
@@ -77,7 +77,7 @@ public class ShakeRoomController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002D23 RID: 11555 RVA: 0x00098FCF File Offset: 0x000971CF
+	// Token: 0x06003DCF RID: 15823 RVA: 0x00022399 File Offset: 0x00020599
 	private IEnumerator PlayDebrisSFX(float duration)
 	{
 		if (this.m_debrisSFXEventInstance.isValid())
@@ -98,7 +98,7 @@ public class ShakeRoomController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002D24 RID: 11556 RVA: 0x00098FE8 File Offset: 0x000971E8
+	// Token: 0x06003DD0 RID: 15824 RVA: 0x000F9D70 File Offset: 0x000F7F70
 	private void OnDisable()
 	{
 		if (this.m_shakeEffect && !this.m_shakeEffect.IsFreePoolObj)
@@ -116,20 +116,20 @@ public class ShakeRoomController : MonoBehaviour
 		this.m_shakeEffect = null;
 	}
 
-	// Token: 0x0400243A RID: 9274
+	// Token: 0x0400309D RID: 12445
 	[SerializeField]
 	private Vector2 m_shakeDuration = new Vector2(0.5f, 1f);
 
-	// Token: 0x0400243B RID: 9275
+	// Token: 0x0400309E RID: 12446
 	[SerializeField]
 	private Vector2 m_shakeInterval = new Vector2(1f, 2f);
 
-	// Token: 0x0400243C RID: 9276
+	// Token: 0x0400309F RID: 12447
 	private EventInstance m_debrisSFXEventInstance;
 
-	// Token: 0x0400243D RID: 9277
+	// Token: 0x040030A0 RID: 12448
 	private EventInstance m_rumbleEventInstance;
 
-	// Token: 0x0400243E RID: 9278
+	// Token: 0x040030A1 RID: 12449
 	private BaseEffect m_shakeEffect;
 }

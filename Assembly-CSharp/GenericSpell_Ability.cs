@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000174 RID: 372
+// Token: 0x020002B1 RID: 689
 public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 {
-	// Token: 0x170006FD RID: 1789
-	// (get) Token: 0x06000CFD RID: 3325 RVA: 0x00027AF7 File Offset: 0x00025CF7
+	// Token: 0x17000963 RID: 2403
+	// (get) Token: 0x06001436 RID: 5174 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -14,8 +14,8 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006FE RID: 1790
-	// (get) Token: 0x06000CFE RID: 3326 RVA: 0x00027AFE File Offset: 0x00025CFE
+	// Token: 0x17000964 RID: 2404
+	// (get) Token: 0x06001437 RID: 5175 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -24,8 +24,8 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006FF RID: 1791
-	// (get) Token: 0x06000CFF RID: 3327 RVA: 0x00027B05 File Offset: 0x00025D05
+	// Token: 0x17000965 RID: 2405
+	// (get) Token: 0x06001438 RID: 5176 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float TellAnimSpeed
 	{
 		get
@@ -34,8 +34,8 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000700 RID: 1792
-	// (get) Token: 0x06000D00 RID: 3328 RVA: 0x00027B0C File Offset: 0x00025D0C
+	// Token: 0x17000966 RID: 2406
+	// (get) Token: 0x06001439 RID: 5177 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -44,8 +44,8 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000701 RID: 1793
-	// (get) Token: 0x06000D01 RID: 3329 RVA: 0x00027B13 File Offset: 0x00025D13
+	// Token: 0x17000967 RID: 2407
+	// (get) Token: 0x0600143A RID: 5178 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -54,8 +54,8 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000702 RID: 1794
-	// (get) Token: 0x06000D02 RID: 3330 RVA: 0x00027B1A File Offset: 0x00025D1A
+	// Token: 0x17000968 RID: 2408
+	// (get) Token: 0x0600143B RID: 5179 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -64,8 +64,8 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000703 RID: 1795
-	// (get) Token: 0x06000D03 RID: 3331 RVA: 0x00027B21 File Offset: 0x00025D21
+	// Token: 0x17000969 RID: 2409
+	// (get) Token: 0x0600143C RID: 5180 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -74,8 +74,8 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000704 RID: 1796
-	// (get) Token: 0x06000D04 RID: 3332 RVA: 0x00027B28 File Offset: 0x00025D28
+	// Token: 0x1700096A RID: 2410
+	// (get) Token: 0x0600143D RID: 5181 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -84,8 +84,8 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000705 RID: 1797
-	// (get) Token: 0x06000D05 RID: 3333 RVA: 0x00027B2F File Offset: 0x00025D2F
+	// Token: 0x1700096B RID: 2411
+	// (get) Token: 0x0600143E RID: 5182 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -94,8 +94,8 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000706 RID: 1798
-	// (get) Token: 0x06000D06 RID: 3334 RVA: 0x00027B36 File Offset: 0x00025D36
+	// Token: 0x1700096C RID: 2412
+	// (get) Token: 0x0600143F RID: 5183 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -104,7 +104,7 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x06000D07 RID: 3335 RVA: 0x00027B40 File Offset: 0x00025D40
+	// Token: 0x06001440 RID: 5184 RVA: 0x00086B6C File Offset: 0x00084D6C
 	protected override void FireProjectile()
 	{
 		if (!string.IsNullOrEmpty(this.ProjectileName))
@@ -119,11 +119,11 @@ public class GenericSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x040010BA RID: 4282
+	// Token: 0x04001605 RID: 5637
 	[SerializeField]
 	private bool m_projectileMatchFacing = true;
 
-	// Token: 0x040010BB RID: 4283
+	// Token: 0x04001606 RID: 5638
 	[SerializeField]
 	private float m_fireAngle;
 }

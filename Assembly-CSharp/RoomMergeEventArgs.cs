@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000790 RID: 1936
+// Token: 0x02000C53 RID: 3155
 public class RoomMergeEventArgs : EventArgs
 {
-	// Token: 0x0600417B RID: 16763 RVA: 0x000E99A8 File Offset: 0x000E7BA8
+	// Token: 0x06005AF8 RID: 23288 RVA: 0x00031E7E File Offset: 0x0003007E
 	public RoomMergeEventArgs(Room newRoom, Room roomA, Room roomB, RoomSide atSideOfRoomA)
 	{
 		this.NewRoom = newRoom;
@@ -12,23 +12,23 @@ public class RoomMergeEventArgs : EventArgs
 		this.AtSideOfA = atSideOfRoomA;
 	}
 
-	// Token: 0x1700164F RID: 5711
-	// (get) Token: 0x0600417C RID: 16764 RVA: 0x000E99CD File Offset: 0x000E7BCD
-	// (set) Token: 0x0600417D RID: 16765 RVA: 0x000E99D5 File Offset: 0x000E7BD5
+	// Token: 0x17001E4B RID: 7755
+	// (get) Token: 0x06005AF9 RID: 23289 RVA: 0x00031EA3 File Offset: 0x000300A3
+	// (set) Token: 0x06005AFA RID: 23290 RVA: 0x00031EAB File Offset: 0x000300AB
 	public Room NewRoom { get; private set; }
 
-	// Token: 0x17001650 RID: 5712
-	// (get) Token: 0x0600417E RID: 16766 RVA: 0x000E99DE File Offset: 0x000E7BDE
-	// (set) Token: 0x0600417F RID: 16767 RVA: 0x000E99E6 File Offset: 0x000E7BE6
+	// Token: 0x17001E4C RID: 7756
+	// (get) Token: 0x06005AFB RID: 23291 RVA: 0x00031EB4 File Offset: 0x000300B4
+	// (set) Token: 0x06005AFC RID: 23292 RVA: 0x00031EBC File Offset: 0x000300BC
 	public Room RoomA { get; private set; }
 
-	// Token: 0x17001651 RID: 5713
-	// (get) Token: 0x06004180 RID: 16768 RVA: 0x000E99EF File Offset: 0x000E7BEF
-	// (set) Token: 0x06004181 RID: 16769 RVA: 0x000E99F7 File Offset: 0x000E7BF7
+	// Token: 0x17001E4D RID: 7757
+	// (get) Token: 0x06005AFD RID: 23293 RVA: 0x00031EC5 File Offset: 0x000300C5
+	// (set) Token: 0x06005AFE RID: 23294 RVA: 0x00031ECD File Offset: 0x000300CD
 	public Room RoomB { get; private set; }
 
-	// Token: 0x17001652 RID: 5714
-	// (get) Token: 0x06004182 RID: 16770 RVA: 0x000E9A00 File Offset: 0x000E7C00
-	// (set) Token: 0x06004183 RID: 16771 RVA: 0x000E9A08 File Offset: 0x000E7C08
+	// Token: 0x17001E4E RID: 7758
+	// (get) Token: 0x06005AFF RID: 23295 RVA: 0x00031ED6 File Offset: 0x000300D6
+	// (set) Token: 0x06005B00 RID: 23296 RVA: 0x00031EDE File Offset: 0x000300DE
 	public RoomSide AtSideOfA { get; private set; }
 }

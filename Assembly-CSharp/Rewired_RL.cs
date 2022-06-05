@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using Rewired;
 using UnityEngine;
 
-// Token: 0x02000765 RID: 1893
+// Token: 0x02000C23 RID: 3107
 public class Rewired_RL
 {
-	// Token: 0x17001640 RID: 5696
-	// (get) Token: 0x0600412D RID: 16685 RVA: 0x000E72B9 File Offset: 0x000E54B9
+	// Token: 0x17001E3C RID: 7740
+	// (get) Token: 0x06005AAA RID: 23210 RVA: 0x00031B49 File Offset: 0x0002FD49
 	public static Player Player
 	{
 		get
@@ -20,8 +20,8 @@ public class Rewired_RL
 		}
 	}
 
-	// Token: 0x17001641 RID: 5697
-	// (get) Token: 0x0600412E RID: 16686 RVA: 0x000E72CF File Offset: 0x000E54CF
+	// Token: 0x17001E3D RID: 7741
+	// (get) Token: 0x06005AAB RID: 23211 RVA: 0x00031B5F File Offset: 0x0002FD5F
 	public static bool IsGamepadConnected
 	{
 		get
@@ -30,14 +30,14 @@ public class Rewired_RL
 		}
 	}
 
-	// Token: 0x0600412F RID: 16687 RVA: 0x000E72EC File Offset: 0x000E54EC
+	// Token: 0x06005AAC RID: 23212 RVA: 0x00031B7C File Offset: 0x0002FD7C
 	public static int GetMapCategoryID(Rewired_RL.MapCategoryType categoryType)
 	{
 		return ReInput.mapping.GetMapCategoryId(Rewired_RL.GetMapCategoryName(categoryType));
 	}
 
-	// Token: 0x17001642 RID: 5698
-	// (get) Token: 0x06004130 RID: 16688 RVA: 0x000E72FE File Offset: 0x000E54FE
+	// Token: 0x17001E3E RID: 7742
+	// (get) Token: 0x06005AAD RID: 23213 RVA: 0x00031B8E File Offset: 0x0002FD8E
 	public static Rewired_RL.InputActionType[] InputActionTypeArray
 	{
 		get
@@ -50,8 +50,8 @@ public class Rewired_RL
 		}
 	}
 
-	// Token: 0x17001643 RID: 5699
-	// (get) Token: 0x06004131 RID: 16689 RVA: 0x000E7325 File Offset: 0x000E5525
+	// Token: 0x17001E3F RID: 7743
+	// (get) Token: 0x06005AAE RID: 23214 RVA: 0x00031BB5 File Offset: 0x0002FDB5
 	public static Rewired_RL.WindowInputActionType[] WindowInputActionTypeArray
 	{
 		get
@@ -64,7 +64,7 @@ public class Rewired_RL
 		}
 	}
 
-	// Token: 0x06004132 RID: 16690 RVA: 0x000E734C File Offset: 0x000E554C
+	// Token: 0x06005AAF RID: 23215 RVA: 0x001569D0 File Offset: 0x00154BD0
 	public static Rewired_RL.InputActionType GetActionInputType(string actionInputName)
 	{
 		if (actionInputName != null)
@@ -249,7 +249,7 @@ public class Rewired_RL
 		return Rewired_RL.InputActionType.None;
 	}
 
-	// Token: 0x06004133 RID: 16691 RVA: 0x000E7694 File Offset: 0x000E5894
+	// Token: 0x06005AB0 RID: 23216 RVA: 0x00156D18 File Offset: 0x00154F18
 	public static Rewired_RL.WindowInputActionType GetWindowInputType(string windowInputName)
 	{
 		if (windowInputName != null)
@@ -406,7 +406,7 @@ public class Rewired_RL
 		return Rewired_RL.WindowInputActionType.None;
 	}
 
-	// Token: 0x06004134 RID: 16692 RVA: 0x000E7948 File Offset: 0x000E5B48
+	// Token: 0x06005AB1 RID: 23217 RVA: 0x00156FCC File Offset: 0x001551CC
 	public static string GetString(Rewired_RL.InputActionType actionInputType)
 	{
 		switch (actionInputType)
@@ -460,7 +460,7 @@ public class Rewired_RL
 		}
 	}
 
-	// Token: 0x06004135 RID: 16693 RVA: 0x000E7A40 File Offset: 0x000E5C40
+	// Token: 0x06005AB2 RID: 23218 RVA: 0x001570C4 File Offset: 0x001552C4
 	public static string GetString(Rewired_RL.WindowInputActionType windowInputType)
 	{
 		switch (windowInputType)
@@ -506,7 +506,7 @@ public class Rewired_RL
 		}
 	}
 
-	// Token: 0x06004136 RID: 16694 RVA: 0x000E7B10 File Offset: 0x000E5D10
+	// Token: 0x06005AB3 RID: 23219 RVA: 0x00157194 File Offset: 0x00155394
 	public static string GetMapCategoryName(Rewired_RL.MapCategoryType categoryType)
 	{
 		if (categoryType <= Rewired_RL.MapCategoryType.WindowRemappable)
@@ -543,7 +543,7 @@ public class Rewired_RL
 		return null;
 	}
 
-	// Token: 0x06004137 RID: 16695 RVA: 0x000E7B70 File Offset: 0x000E5D70
+	// Token: 0x06005AB4 RID: 23220 RVA: 0x001571F4 File Offset: 0x001553F4
 	public static bool HasPoleAxes(string actionName)
 	{
 		if (actionName != null)
@@ -623,7 +623,7 @@ public class Rewired_RL
 		return false;
 	}
 
-	// Token: 0x06004138 RID: 16696 RVA: 0x000E7C78 File Offset: 0x000E5E78
+	// Token: 0x06005AB5 RID: 23221 RVA: 0x001572FC File Offset: 0x001554FC
 	public static bool IgnoreNullAemOnKeyboard(string actionName)
 	{
 		if (actionName != null)
@@ -710,19 +710,19 @@ public class Rewired_RL
 		return false;
 	}
 
-	// Token: 0x06004139 RID: 16697 RVA: 0x000E7D97 File Offset: 0x000E5F97
+	// Token: 0x06005AB6 RID: 23222 RVA: 0x00031BDC File Offset: 0x0002FDDC
 	public static bool IgnoreNullAemOnGamepad(string actionName)
 	{
 		return actionName != null && (actionName == "UserReport" || actionName == "Window_UserReport");
 	}
 
-	// Token: 0x0600413A RID: 16698 RVA: 0x000E7DB9 File Offset: 0x000E5FB9
+	// Token: 0x06005AB7 RID: 23223 RVA: 0x00031BFE File Offset: 0x0002FDFE
 	public static bool IsStandardJoystick(Controller controller)
 	{
 		return ReInput.players.GetPlayer(0).controllers.maps.GetFirstElementMapWithAction(controller, 4, false) != null;
 	}
 
-	// Token: 0x0600413B RID: 16699 RVA: 0x000E7DDC File Offset: 0x000E5FDC
+	// Token: 0x06005AB8 RID: 23224 RVA: 0x0015741C File Offset: 0x0015561C
 	public static bool DoesActionExistInMapCategory(string actionName, Rewired_RL.MapCategoryType mapCategory, ControllerType controllerType, Pole axis = Pole.Positive)
 	{
 		int mapCategoryID = Rewired_RL.GetMapCategoryID(mapCategory);
@@ -738,7 +738,7 @@ public class Rewired_RL
 		return false;
 	}
 
-	// Token: 0x0600413C RID: 16700 RVA: 0x000E7E7C File Offset: 0x000E607C
+	// Token: 0x06005AB9 RID: 23225 RVA: 0x001574BC File Offset: 0x001556BC
 	public static Rewired_RL.MapCategoryType GetMapCategoryTypeFlags(ControllerType controllerType, string actionName, Pole axis = Pole.Positive)
 	{
 		Rewired_RL.MapCategoryType mapCategoryType = Rewired_RL.MapCategoryType.ActionRemappable;
@@ -762,7 +762,7 @@ public class Rewired_RL
 		return mapCategoryType3;
 	}
 
-	// Token: 0x0600413D RID: 16701 RVA: 0x000E7EBC File Offset: 0x000E60BC
+	// Token: 0x06005ABA RID: 23226 RVA: 0x001574FC File Offset: 0x001556FC
 	public static Rewired_RL.MapCategoryType GetMapCategoryTypeFromFlag(Rewired_RL.MapCategoryType flag, bool prioritizeNonMappable)
 	{
 		Rewired_RL.MapCategoryType mapCategoryType = Rewired_RL.MapCategoryType.None;
@@ -788,7 +788,7 @@ public class Rewired_RL
 		return mapCategoryType;
 	}
 
-	// Token: 0x0600413E RID: 16702 RVA: 0x000E7EF8 File Offset: 0x000E60F8
+	// Token: 0x06005ABB RID: 23227 RVA: 0x00157538 File Offset: 0x00155738
 	public static ActionElementMap GetActionElementMap(bool useGamepad, InputAction inputAction, Pole axis, bool prioritizeNonRemappable, int controllerID = 0)
 	{
 		ActionElementMap actionElementMap = null;
@@ -843,7 +843,7 @@ public class Rewired_RL
 		return actionElementMap;
 	}
 
-	// Token: 0x0600413F RID: 16703 RVA: 0x000E80AC File Offset: 0x000E62AC
+	// Token: 0x06005ABC RID: 23228 RVA: 0x001576EC File Offset: 0x001558EC
 	public static ActionElementMap GetActionElementMap(bool useGamepad, string actionName, Pole axis, bool prioritizeNonRemappable, int controllerID)
 	{
 		InputAction action = ReInput.mapping.GetAction(actionName);
@@ -855,7 +855,7 @@ public class Rewired_RL
 		return null;
 	}
 
-	// Token: 0x06004140 RID: 16704 RVA: 0x000E80E5 File Offset: 0x000E62E5
+	// Token: 0x06005ABD RID: 23229 RVA: 0x00031C20 File Offset: 0x0002FE20
 	public static void ResetControllerMapToDefault(bool resetGamepad)
 	{
 		ReInput.players.GetPlayer(0);
@@ -868,276 +868,276 @@ public class Rewired_RL
 		Rewired_RL.ResetControllerMap(ControllerType.Joystick);
 	}
 
-	// Token: 0x06004141 RID: 16705 RVA: 0x000E8109 File Offset: 0x000E6309
+	// Token: 0x06005ABE RID: 23230 RVA: 0x00031C44 File Offset: 0x0002FE44
 	private static void ResetControllerMap(ControllerType controllerType)
 	{
 		ReInput.players.GetPlayer(0).controllers.maps.LoadDefaultMaps(controllerType);
 	}
 
-	// Token: 0x040035FF RID: 13823
+	// Token: 0x0400487B RID: 18555
 	private static List<ActionElementMap> m_reusableAemList = new List<ActionElementMap>();
 
-	// Token: 0x04003600 RID: 13824
+	// Token: 0x0400487C RID: 18556
 	private static List<ControllerType> m_controllerTypeHelperList = new List<ControllerType>();
 
-	// Token: 0x04003601 RID: 13825
+	// Token: 0x0400487D RID: 18557
 	public const string ACTION_MAPCATEGORY_NAME = "Player";
 
-	// Token: 0x04003602 RID: 13826
+	// Token: 0x0400487E RID: 18558
 	public const string ACTION_REMAPPABLE_MAPCATEGORY_NAME = "PlayerRemappable";
 
-	// Token: 0x04003603 RID: 13827
+	// Token: 0x0400487F RID: 18559
 	public const string WINDOW_MAPCATEGORY_NAME = "Window";
 
-	// Token: 0x04003604 RID: 13828
+	// Token: 0x04004880 RID: 18560
 	public const string WINDOW_REMAPPABLE_MAPCATEGORY_NAME = "WindowRemappable";
 
-	// Token: 0x04003605 RID: 13829
+	// Token: 0x04004881 RID: 18561
 	public const string ILLEGAL_ASSIGNMENTS_MAPCATEGORY_NAME = "IllegalAssignments";
 
-	// Token: 0x04003606 RID: 13830
+	// Token: 0x04004882 RID: 18562
 	public const string GAMEPAD_GLYPHS_CATEGORY_NAME = "GamepadGlyphs";
 
-	// Token: 0x04003607 RID: 13831
+	// Token: 0x04004883 RID: 18563
 	public const string LAYOUT_NAME = "Default";
 
-	// Token: 0x04003608 RID: 13832
+	// Token: 0x04004884 RID: 18564
 	public const string Action_Jump = "Jump";
 
-	// Token: 0x04003609 RID: 13833
+	// Token: 0x04004885 RID: 18565
 	public const string Action_MoveHorizontal = "MoveHorizontal";
 
-	// Token: 0x0400360A RID: 13834
+	// Token: 0x04004886 RID: 18566
 	public const string Action_MoveVertical = "MoveVertical";
 
-	// Token: 0x0400360B RID: 13835
+	// Token: 0x04004887 RID: 18567
 	public const string Action_MoveHorizontalR = "MoveHorizontalR";
 
-	// Token: 0x0400360C RID: 13836
+	// Token: 0x04004888 RID: 18568
 	public const string Action_MoveVerticalR = "MoveVerticalR";
 
-	// Token: 0x0400360D RID: 13837
+	// Token: 0x04004889 RID: 18569
 	public const string Action_Attack = "Attack";
 
-	// Token: 0x0400360E RID: 13838
+	// Token: 0x0400488A RID: 18570
 	public const string Action_DashLeft = "DashLeft";
 
-	// Token: 0x0400360F RID: 13839
+	// Token: 0x0400488B RID: 18571
 	public const string Action_DashRight = "DashRight";
 
-	// Token: 0x04003610 RID: 13840
+	// Token: 0x0400488C RID: 18572
 	public const string Action_Spell = "Spell";
 
-	// Token: 0x04003611 RID: 13841
+	// Token: 0x0400488D RID: 18573
 	public const string Action_Talent = "Talent";
 
-	// Token: 0x04003612 RID: 13842
+	// Token: 0x0400488E RID: 18574
 	public const string Action_Interact = "Interact";
 
-	// Token: 0x04003613 RID: 13843
+	// Token: 0x0400488F RID: 18575
 	public const string Action_Downstrike = "Downstrike";
 
-	// Token: 0x04003614 RID: 13844
+	// Token: 0x04004890 RID: 18576
 	public const string Action_FreeLook = "FreeLook";
 
-	// Token: 0x04003615 RID: 13845
+	// Token: 0x04004891 RID: 18577
 	public const string Action_Flight = "Flight";
 
-	// Token: 0x04003616 RID: 13846
+	// Token: 0x04004892 RID: 18578
 	public const string Action_Start = "Start";
 
-	// Token: 0x04003617 RID: 13847
+	// Token: 0x04004893 RID: 18579
 	public const string Action_Select = "Select";
 
-	// Token: 0x04003618 RID: 13848
+	// Token: 0x04004894 RID: 18580
 	public const string Action_Pause = "Pause";
 
-	// Token: 0x04003619 RID: 13849
+	// Token: 0x04004895 RID: 18581
 	public const string Action_UserReport = "UserReport";
 
-	// Token: 0x0400361A RID: 13850
+	// Token: 0x04004896 RID: 18582
 	public const string Action_DebugLB = "DEBUG_LB";
 
-	// Token: 0x0400361B RID: 13851
+	// Token: 0x04004897 RID: 18583
 	public const string Action_DebugRB = "DEBUG_RB";
 
-	// Token: 0x0400361C RID: 13852
+	// Token: 0x04004898 RID: 18584
 	public const string Action_DebugL3 = "DEBUG_L3";
 
-	// Token: 0x0400361D RID: 13853
+	// Token: 0x04004899 RID: 18585
 	public const string Action_DebugR3 = "DEBUG_R3";
 
-	// Token: 0x0400361E RID: 13854
+	// Token: 0x0400489A RID: 18586
 	public const string Window_Horizontal = "Window_Horizontal";
 
-	// Token: 0x0400361F RID: 13855
+	// Token: 0x0400489B RID: 18587
 	public const string Window_Vertical = "Window_Vertical";
 
-	// Token: 0x04003620 RID: 13856
+	// Token: 0x0400489C RID: 18588
 	public const string Window_Start = "Window_Start";
 
-	// Token: 0x04003621 RID: 13857
+	// Token: 0x0400489D RID: 18589
 	public const string Window_Select = "Window_Select";
 
-	// Token: 0x04003622 RID: 13858
+	// Token: 0x0400489E RID: 18590
 	public const string Window_Confirm = "Window_Confirm";
 
-	// Token: 0x04003623 RID: 13859
+	// Token: 0x0400489F RID: 18591
 	public const string Window_Cancel = "Window_Cancel";
 
-	// Token: 0x04003624 RID: 13860
+	// Token: 0x040048A0 RID: 18592
 	public const string Window_X = "Window_X";
 
-	// Token: 0x04003625 RID: 13861
+	// Token: 0x040048A1 RID: 18593
 	public const string Window_Y = "Window_Y";
 
-	// Token: 0x04003626 RID: 13862
+	// Token: 0x040048A2 RID: 18594
 	public const string Window_LB = "Window_LB";
 
-	// Token: 0x04003627 RID: 13863
+	// Token: 0x040048A3 RID: 18595
 	public const string Window_RB = "Window_RB";
 
-	// Token: 0x04003628 RID: 13864
+	// Token: 0x040048A4 RID: 18596
 	public const string Window_LT = "Window_LT";
 
-	// Token: 0x04003629 RID: 13865
+	// Token: 0x040048A5 RID: 18597
 	public const string Window_RT = "Window_RT";
 
-	// Token: 0x0400362A RID: 13866
+	// Token: 0x040048A6 RID: 18598
 	public const string Window_Horizontal_RStick = "Window_Horizontal_RStick";
 
-	// Token: 0x0400362B RID: 13867
+	// Token: 0x040048A7 RID: 18599
 	public const string Window_Vertical_RStick = "Window_Vertical_RStick";
 
-	// Token: 0x0400362C RID: 13868
+	// Token: 0x040048A8 RID: 18600
 	public const string Window_UserReport = "Window_UserReport";
 
-	// Token: 0x0400362D RID: 13869
+	// Token: 0x040048A9 RID: 18601
 	public const string Window_R = "Window_R";
 
-	// Token: 0x0400362E RID: 13870
+	// Token: 0x040048AA RID: 18602
 	public const string Window_AllMovement_LStick = "Window_AllMovement_LStick";
 
-	// Token: 0x0400362F RID: 13871
+	// Token: 0x040048AB RID: 18603
 	public const string Window_AllMovement_RStick = "Window_AllMovement_RStick";
 
-	// Token: 0x04003630 RID: 13872
+	// Token: 0x040048AC RID: 18604
 	private static Rewired_RL.InputActionType[] m_inputActionTypeArray;
 
-	// Token: 0x04003631 RID: 13873
+	// Token: 0x040048AD RID: 18605
 	private static Rewired_RL.WindowInputActionType[] m_windowInputActionTypeArray;
 
-	// Token: 0x02000E32 RID: 3634
+	// Token: 0x02000C24 RID: 3108
 	[Flags]
 	public enum MapCategoryType
 	{
-		// Token: 0x040056FF RID: 22271
+		// Token: 0x040048AF RID: 18607
 		None = 0,
-		// Token: 0x04005700 RID: 22272
+		// Token: 0x040048B0 RID: 18608
 		Action = 1,
-		// Token: 0x04005701 RID: 22273
+		// Token: 0x040048B1 RID: 18609
 		ActionRemappable = 2,
-		// Token: 0x04005702 RID: 22274
+		// Token: 0x040048B2 RID: 18610
 		Window = 4,
-		// Token: 0x04005703 RID: 22275
+		// Token: 0x040048B3 RID: 18611
 		WindowRemappable = 8,
-		// Token: 0x04005704 RID: 22276
+		// Token: 0x040048B4 RID: 18612
 		IllegalAssignments = 16,
-		// Token: 0x04005705 RID: 22277
+		// Token: 0x040048B5 RID: 18613
 		GamepadGlyphs = 32
 	}
 
-	// Token: 0x02000E33 RID: 3635
+	// Token: 0x02000C25 RID: 3109
 	public enum InputActionType
 	{
-		// Token: 0x04005707 RID: 22279
+		// Token: 0x040048B7 RID: 18615
 		None,
-		// Token: 0x04005708 RID: 22280
+		// Token: 0x040048B8 RID: 18616
 		Action_Jump,
-		// Token: 0x04005709 RID: 22281
+		// Token: 0x040048B9 RID: 18617
 		Action_MoveHorizontal,
-		// Token: 0x0400570A RID: 22282
+		// Token: 0x040048BA RID: 18618
 		Action_MoveVertical,
-		// Token: 0x0400570B RID: 22283
+		// Token: 0x040048BB RID: 18619
 		Action_Attack,
-		// Token: 0x0400570C RID: 22284
+		// Token: 0x040048BC RID: 18620
 		Action_DashLeft,
-		// Token: 0x0400570D RID: 22285
+		// Token: 0x040048BD RID: 18621
 		Action_DashRight,
-		// Token: 0x0400570E RID: 22286
+		// Token: 0x040048BE RID: 18622
 		Action_Spell,
-		// Token: 0x0400570F RID: 22287
+		// Token: 0x040048BF RID: 18623
 		Action_Talent,
-		// Token: 0x04005710 RID: 22288
+		// Token: 0x040048C0 RID: 18624
 		Action_Interact,
-		// Token: 0x04005711 RID: 22289
+		// Token: 0x040048C1 RID: 18625
 		Action_Start,
-		// Token: 0x04005712 RID: 22290
+		// Token: 0x040048C2 RID: 18626
 		Action_Select,
-		// Token: 0x04005713 RID: 22291
+		// Token: 0x040048C3 RID: 18627
 		Action_Pause,
-		// Token: 0x04005714 RID: 22292
+		// Token: 0x040048C4 RID: 18628
 		Action_DebugLB,
-		// Token: 0x04005715 RID: 22293
+		// Token: 0x040048C5 RID: 18629
 		Action_DebugRB,
-		// Token: 0x04005716 RID: 22294
+		// Token: 0x040048C6 RID: 18630
 		Action_DebugL3,
-		// Token: 0x04005717 RID: 22295
+		// Token: 0x040048C7 RID: 18631
 		Action_DebugR3,
-		// Token: 0x04005718 RID: 22296
+		// Token: 0x040048C8 RID: 18632
 		Action_UserReport,
-		// Token: 0x04005719 RID: 22297
+		// Token: 0x040048C9 RID: 18633
 		Action_Downstrike,
-		// Token: 0x0400571A RID: 22298
+		// Token: 0x040048CA RID: 18634
 		Action_MoveHorizontalR,
-		// Token: 0x0400571B RID: 22299
+		// Token: 0x040048CB RID: 18635
 		Action_MoveVerticalR,
-		// Token: 0x0400571C RID: 22300
+		// Token: 0x040048CC RID: 18636
 		Action_FreeLook,
-		// Token: 0x0400571D RID: 22301
+		// Token: 0x040048CD RID: 18637
 		Action_Flight
 	}
 
-	// Token: 0x02000E34 RID: 3636
+	// Token: 0x02000C26 RID: 3110
 	public enum WindowInputActionType
 	{
-		// Token: 0x0400571F RID: 22303
+		// Token: 0x040048CF RID: 18639
 		None,
-		// Token: 0x04005720 RID: 22304
+		// Token: 0x040048D0 RID: 18640
 		Window_Horizontal,
-		// Token: 0x04005721 RID: 22305
+		// Token: 0x040048D1 RID: 18641
 		Window_Vertical,
-		// Token: 0x04005722 RID: 22306
+		// Token: 0x040048D2 RID: 18642
 		Window_Start,
-		// Token: 0x04005723 RID: 22307
+		// Token: 0x040048D3 RID: 18643
 		Window_Select,
-		// Token: 0x04005724 RID: 22308
+		// Token: 0x040048D4 RID: 18644
 		Window_Confirm,
-		// Token: 0x04005725 RID: 22309
+		// Token: 0x040048D5 RID: 18645
 		Window_Cancel,
-		// Token: 0x04005726 RID: 22310
+		// Token: 0x040048D6 RID: 18646
 		Window_X,
-		// Token: 0x04005727 RID: 22311
+		// Token: 0x040048D7 RID: 18647
 		Window_Y,
-		// Token: 0x04005728 RID: 22312
+		// Token: 0x040048D8 RID: 18648
 		Window_LB,
-		// Token: 0x04005729 RID: 22313
+		// Token: 0x040048D9 RID: 18649
 		Window_RB,
-		// Token: 0x0400572A RID: 22314
+		// Token: 0x040048DA RID: 18650
 		Window_LT,
-		// Token: 0x0400572B RID: 22315
+		// Token: 0x040048DB RID: 18651
 		Window_RT,
-		// Token: 0x0400572C RID: 22316
+		// Token: 0x040048DC RID: 18652
 		Window_Horizontal_RStick,
-		// Token: 0x0400572D RID: 22317
+		// Token: 0x040048DD RID: 18653
 		Window_Vertical_RStick,
-		// Token: 0x0400572E RID: 22318
+		// Token: 0x040048DE RID: 18654
 		Window_AllMovement_LStick,
-		// Token: 0x0400572F RID: 22319
+		// Token: 0x040048DF RID: 18655
 		Window_AllMovement_RStick,
-		// Token: 0x04005730 RID: 22320
+		// Token: 0x040048E0 RID: 18656
 		Window_UserReport,
-		// Token: 0x04005731 RID: 22321
+		// Token: 0x040048E1 RID: 18657
 		Window_R
 	}
 }

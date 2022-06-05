@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000342 RID: 834
+// Token: 0x020005A4 RID: 1444
 public enum DispositionIDType
 {
-	// Token: 0x04001C4E RID: 7246
+	// Token: 0x040025B9 RID: 9657
 	Gay,
-	// Token: 0x04001C4F RID: 7247
+	// Token: 0x040025BA RID: 9658
 	Trans,
-	// Token: 0x04001C50 RID: 7248
+	// Token: 0x040025BB RID: 9659
 	NonBinary,
-	// Token: 0x04001C51 RID: 7249
+	// Token: 0x040025BC RID: 9660
 	Bi
 }

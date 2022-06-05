@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 
-// Token: 0x02000493 RID: 1171
+// Token: 0x02000796 RID: 1942
 public class ApplySporeBurstOnPlatformProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B1B RID: 11035 RVA: 0x00092215 File Offset: 0x00090415
+	// Token: 0x06003B64 RID: 15204 RVA: 0x0002094C File Offset: 0x0001EB4C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -12,7 +12,7 @@ public class ApplySporeBurstOnPlatformProjectileLogic : BaseProjectileLogic
 		this.m_onEnterLanded = new Action<CorgiController_RL>(this.OnEnterLanded);
 	}
 
-	// Token: 0x06002B1C RID: 11036 RVA: 0x00092241 File Offset: 0x00090441
+	// Token: 0x06003B65 RID: 15205 RVA: 0x00020978 File Offset: 0x0001EB78
 	private void OnEnable()
 	{
 		if (base.SourceProjectile.IsPersistentProjectile)
@@ -22,7 +22,7 @@ public class ApplySporeBurstOnPlatformProjectileLogic : BaseProjectileLogic
 		this.PerformSporeBurstCheck();
 	}
 
-	// Token: 0x06002B1D RID: 11037 RVA: 0x00092272 File Offset: 0x00090472
+	// Token: 0x06003B66 RID: 15206 RVA: 0x000209A9 File Offset: 0x0001EBA9
 	private void OnDisable()
 	{
 		if (!GameManager.IsApplicationClosing && base.SourceProjectile.IsPersistentProjectile)
@@ -31,7 +31,7 @@ public class ApplySporeBurstOnPlatformProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002B1E RID: 11038 RVA: 0x000922A4 File Offset: 0x000904A4
+	// Token: 0x06003B67 RID: 15207 RVA: 0x000F3D78 File Offset: 0x000F1F78
 	private void PerformSporeBurstCheck()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -45,28 +45,28 @@ public class ApplySporeBurstOnPlatformProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002B1F RID: 11039 RVA: 0x00092344 File Offset: 0x00090544
+	// Token: 0x06003B68 RID: 15208 RVA: 0x000209DA File Offset: 0x0001EBDA
 	private void OnEnterLanded(CorgiController_RL corgi)
 	{
 		this.PerformSporeBurstCheck();
 	}
 
-	// Token: 0x06002B20 RID: 11040 RVA: 0x0009234C File Offset: 0x0009054C
+	// Token: 0x06003B69 RID: 15209 RVA: 0x000209E2 File Offset: 0x0001EBE2
 	private void OnExitLanded(CorgiController_RL corgi)
 	{
 		PlayerManager.GetPlayerController().ControllerCorgi.OnCorgiLandedExitRelay.RemoveListener(this.m_onExitLanded);
 		base.SourceProjectile.RemoveStatusEffect(StatusEffectType.Enemy_SporeBurst);
 	}
 
-	// Token: 0x0400231A RID: 8986
+	// Token: 0x04002F2E RID: 12078
 	private static string[] m_platformExclusionArray = new string[]
 	{
 		"CrowsNestPlatformTalentProjectile"
 	};
 
-	// Token: 0x0400231B RID: 8987
+	// Token: 0x04002F2F RID: 12079
 	private Action<CorgiController_RL> m_onExitLanded;
 
-	// Token: 0x0400231C RID: 8988
+	// Token: 0x04002F30 RID: 12080
 	private Action<CorgiController_RL> m_onEnterLanded;
 }

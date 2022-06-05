@@ -2,11 +2,11 @@
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000585 RID: 1413
+// Token: 0x0200097D RID: 2429
 public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOmniUICategoryEntry, ChallengeOmniUIEntry>
 {
-	// Token: 0x170012C5 RID: 4805
-	// (get) Token: 0x060034C0 RID: 13504 RVA: 0x000B51A4 File Offset: 0x000B33A4
+	// Token: 0x170019D6 RID: 6614
+	// (get) Token: 0x06004A7D RID: 19069 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool CanReset
 	{
 		get
@@ -15,8 +15,8 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		}
 	}
 
-	// Token: 0x170012C6 RID: 4806
-	// (get) Token: 0x060034C1 RID: 13505 RVA: 0x000B51A7 File Offset: 0x000B33A7
+	// Token: 0x170019D7 RID: 6615
+	// (get) Token: 0x06004A7E RID: 19070 RVA: 0x00028C5C File Offset: 0x00026E5C
 	public override WindowID ID
 	{
 		get
@@ -25,19 +25,19 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		}
 	}
 
-	// Token: 0x060034C2 RID: 13506 RVA: 0x000B51AB File Offset: 0x000B33AB
+	// Token: 0x06004A7F RID: 19071 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void CreateCategoryEntries()
 	{
 	}
 
-	// Token: 0x060034C3 RID: 13507 RVA: 0x000B51AD File Offset: 0x000B33AD
+	// Token: 0x06004A80 RID: 19072 RVA: 0x00028C60 File Offset: 0x00026E60
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onUpdateDescription = new Action<object, EventArgs>(this.OnUpdateDescription);
 	}
 
-	// Token: 0x060034C4 RID: 13508 RVA: 0x000B51C8 File Offset: 0x000B33C8
+	// Token: 0x06004A81 RID: 19073 RVA: 0x00121F70 File Offset: 0x00120170
 	protected override void CreateEntries()
 	{
 		if (base.EntryArray != null)
@@ -68,7 +68,7 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		base.ResetTextbox.SetActive(false);
 	}
 
-	// Token: 0x060034C5 RID: 13509 RVA: 0x000B530C File Offset: 0x000B350C
+	// Token: 0x06004A82 RID: 19074 RVA: 0x001220B4 File Offset: 0x001202B4
 	protected override void UpdateScrollArrows(float scrollAmount)
 	{
 		base.UpdateScrollArrows(scrollAmount);
@@ -131,7 +131,7 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		}
 	}
 
-	// Token: 0x060034C6 RID: 13510 RVA: 0x000B54DE File Offset: 0x000B36DE
+	// Token: 0x06004A83 RID: 19075 RVA: 0x00028C7A File Offset: 0x00026E7A
 	private void SetGameObjectActive(GameObject obj, bool active)
 	{
 		if (obj.activeSelf == !active)
@@ -140,7 +140,7 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		}
 	}
 
-	// Token: 0x060034C7 RID: 13511 RVA: 0x000B54F4 File Offset: 0x000B36F4
+	// Token: 0x06004A84 RID: 19076 RVA: 0x00122288 File Offset: 0x00120488
 	protected override void OnOpen()
 	{
 		base.OnOpen();
@@ -153,7 +153,7 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.OmniUI_UpdateDescription, this.m_onUpdateDescription);
 	}
 
-	// Token: 0x060034C8 RID: 13512 RVA: 0x000B5543 File Offset: 0x000B3743
+	// Token: 0x06004A85 RID: 19077 RVA: 0x00028C8F File Offset: 0x00026E8F
 	protected override void OnClose()
 	{
 		base.OnClose();
@@ -166,7 +166,7 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.OmniUI_UpdateDescription, this.m_onUpdateDescription);
 	}
 
-	// Token: 0x060034C9 RID: 13513 RVA: 0x000B557C File Offset: 0x000B377C
+	// Token: 0x06004A86 RID: 19078 RVA: 0x001222D8 File Offset: 0x001204D8
 	private void OnUpdateDescription(object sender, EventArgs args)
 	{
 		this.SetScoreboardActive(false, false);
@@ -186,7 +186,7 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		}
 	}
 
-	// Token: 0x060034CA RID: 13514 RVA: 0x000B55EC File Offset: 0x000B37EC
+	// Token: 0x06004A87 RID: 19079 RVA: 0x00122348 File Offset: 0x00120548
 	protected override void OnYButtonJustPressed()
 	{
 		base.OnYButtonJustPressed();
@@ -201,7 +201,7 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		}
 	}
 
-	// Token: 0x060034CB RID: 13515 RVA: 0x000B5644 File Offset: 0x000B3844
+	// Token: 0x06004A88 RID: 19080 RVA: 0x001223A0 File Offset: 0x001205A0
 	private void SetScoreboardActive(bool active, bool playAudio)
 	{
 		if (this.m_scoreboardActive != active)
@@ -226,7 +226,7 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		}
 	}
 
-	// Token: 0x060034CC RID: 13516 RVA: 0x000B56D9 File Offset: 0x000B38D9
+	// Token: 0x06004A89 RID: 19081 RVA: 0x00028CC8 File Offset: 0x00026EC8
 	public void ForceRefresh()
 	{
 		if (base.SelectedEntryIndex < base.ActiveEntryArray.Length)
@@ -235,34 +235,34 @@ public class ChallengeOmniUIWindowController : BaseOmniUIWindowController<BaseOm
 		}
 	}
 
-	// Token: 0x060034CD RID: 13517 RVA: 0x000B56FE File Offset: 0x000B38FE
+	// Token: 0x06004A8A RID: 19082 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnLBButtonJustPressed()
 	{
 	}
 
-	// Token: 0x060034CE RID: 13518 RVA: 0x000B5700 File Offset: 0x000B3900
+	// Token: 0x06004A8B RID: 19083 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnRBButtonJustPressed()
 	{
 	}
 
-	// Token: 0x0400293C RID: 10556
+	// Token: 0x040038F7 RID: 14583
 	[SerializeField]
 	private GameObject m_descriptionGO;
 
-	// Token: 0x0400293D RID: 10557
+	// Token: 0x040038F8 RID: 14584
 	[SerializeField]
 	private GameObject m_controlsGO;
 
-	// Token: 0x0400293E RID: 10558
+	// Token: 0x040038F9 RID: 14585
 	[SerializeField]
 	private GameObject m_scoreboardGO;
 
-	// Token: 0x0400293F RID: 10559
+	// Token: 0x040038FA RID: 14586
 	private bool m_scoreboardActive;
 
-	// Token: 0x04002940 RID: 10560
+	// Token: 0x040038FB RID: 14587
 	private ChallengeOmniUIScoreboardEntry[] m_scoreboardEntries;
 
-	// Token: 0x04002941 RID: 10561
+	// Token: 0x040038FC RID: 14588
 	private Action<object, EventArgs> m_onUpdateDescription;
 }

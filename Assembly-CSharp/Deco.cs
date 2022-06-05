@@ -1,22 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000600 RID: 1536
+// Token: 0x02000A1F RID: 2591
 public class Deco : MonoBehaviour, IGenericPoolObj
 {
-	// Token: 0x170013BE RID: 5054
-	// (get) Token: 0x060037BD RID: 14269 RVA: 0x000BEEA8 File Offset: 0x000BD0A8
-	// (set) Token: 0x060037BE RID: 14270 RVA: 0x000BEEB0 File Offset: 0x000BD0B0
+	// Token: 0x17001B11 RID: 6929
+	// (get) Token: 0x06004E4E RID: 20046 RVA: 0x0002A9C1 File Offset: 0x00028BC1
+	// (set) Token: 0x06004E4F RID: 20047 RVA: 0x0002A9C9 File Offset: 0x00028BC9
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x170013BF RID: 5055
-	// (get) Token: 0x060037BF RID: 14271 RVA: 0x000BEEB9 File Offset: 0x000BD0B9
-	// (set) Token: 0x060037C0 RID: 14272 RVA: 0x000BEEC1 File Offset: 0x000BD0C1
+	// Token: 0x17001B12 RID: 6930
+	// (get) Token: 0x06004E50 RID: 20048 RVA: 0x0002A9D2 File Offset: 0x00028BD2
+	// (set) Token: 0x06004E51 RID: 20049 RVA: 0x0002A9DA File Offset: 0x00028BDA
 	public bool IsAwakeCalled { get; protected set; }
 
-	// Token: 0x170013C0 RID: 5056
-	// (get) Token: 0x060037C1 RID: 14273 RVA: 0x000BEECA File Offset: 0x000BD0CA
-	// (set) Token: 0x060037C2 RID: 14274 RVA: 0x000BEEEB File Offset: 0x000BD0EB
+	// Token: 0x17001B13 RID: 6931
+	// (get) Token: 0x06004E52 RID: 20050 RVA: 0x0002A9E3 File Offset: 0x00028BE3
+	// (set) Token: 0x06004E53 RID: 20051 RVA: 0x0002AA04 File Offset: 0x00028C04
 	public int NameHash
 	{
 		get
@@ -33,8 +33,8 @@ public class Deco : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x170013C1 RID: 5057
-	// (get) Token: 0x060037C3 RID: 14275 RVA: 0x000BEEF4 File Offset: 0x000BD0F4
+	// Token: 0x17001B14 RID: 6932
+	// (get) Token: 0x06004E54 RID: 20052 RVA: 0x0012D764 File Offset: 0x0012B964
 	public CameraLayerController[] CameraLayerControllers
 	{
 		get
@@ -51,8 +51,8 @@ public class Deco : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x170013C2 RID: 5058
-	// (get) Token: 0x060037C4 RID: 14276 RVA: 0x000BEF42 File Offset: 0x000BD142
+	// Token: 0x17001B15 RID: 6933
+	// (get) Token: 0x06004E55 RID: 20053 RVA: 0x0002AA0D File Offset: 0x00028C0D
 	public int PropCount
 	{
 		get
@@ -61,9 +61,9 @@ public class Deco : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x170013C3 RID: 5059
-	// (get) Token: 0x060037C5 RID: 14277 RVA: 0x000BEF4C File Offset: 0x000BD14C
-	// (set) Token: 0x060037C6 RID: 14278 RVA: 0x000BEF68 File Offset: 0x000BD168
+	// Token: 0x17001B16 RID: 6934
+	// (get) Token: 0x06004E56 RID: 20054 RVA: 0x0002AA17 File Offset: 0x00028C17
+	// (set) Token: 0x06004E57 RID: 20055 RVA: 0x0002AA33 File Offset: 0x00028C33
 	public Prop[] Props
 	{
 		get
@@ -80,14 +80,14 @@ public class Deco : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x060037C7 RID: 14279 RVA: 0x000BEF71 File Offset: 0x000BD171
+	// Token: 0x06004E58 RID: 20056 RVA: 0x0002AA3C File Offset: 0x00028C3C
 	private void Awake()
 	{
 		this.m_initialScale = base.transform.localScale;
 		this.IsAwakeCalled = true;
 	}
 
-	// Token: 0x060037C8 RID: 14280 RVA: 0x000BEF8C File Offset: 0x000BD18C
+	// Token: 0x06004E59 RID: 20057 RVA: 0x0012D7B4 File Offset: 0x0012B9B4
 	public void ResetValues()
 	{
 		foreach (Prop prop in this.Props)
@@ -101,7 +101,7 @@ public class Deco : MonoBehaviour, IGenericPoolObj
 		base.transform.localScale = this.m_initialScale;
 	}
 
-	// Token: 0x060037C9 RID: 14281 RVA: 0x000BEFE4 File Offset: 0x000BD1E4
+	// Token: 0x06004E5A RID: 20058 RVA: 0x0012D80C File Offset: 0x0012BA0C
 	public void SetCameraLayerControllers(Prop ownerProp)
 	{
 		if (ownerProp)
@@ -114,27 +114,27 @@ public class Deco : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x060037CA RID: 14282 RVA: 0x000BF033 File Offset: 0x000BD233
+	// Token: 0x06004E5B RID: 20059 RVA: 0x0001BE85 File Offset: 0x0001A085
 	private void OnDisable()
 	{
 		DisablePooledObjectManager.DisablePooledObject(this, false);
 	}
 
-	// Token: 0x060037CC RID: 14284 RVA: 0x000BF044 File Offset: 0x000BD244
+	// Token: 0x06004E5D RID: 20061 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002ABB RID: 10939
+	// Token: 0x04003B13 RID: 15123
 	private Prop[] m_props;
 
-	// Token: 0x04002ABC RID: 10940
+	// Token: 0x04003B14 RID: 15124
 	private CameraLayerController[] m_cameraLayerControllers;
 
-	// Token: 0x04002ABD RID: 10941
+	// Token: 0x04003B15 RID: 15125
 	private Vector3 m_initialScale;
 
-	// Token: 0x04002ABE RID: 10942
+	// Token: 0x04003B16 RID: 15126
 	private int m_nameHash;
 }

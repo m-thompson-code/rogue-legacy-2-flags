@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000C8 RID: 200
+// Token: 0x0200013E RID: 318
 public class Fireball_Advanced_AIScript : Fireball_Basic_AIScript
 {
-	// Token: 0x170002AC RID: 684
-	// (get) Token: 0x06000599 RID: 1433 RVA: 0x0001825D File Offset: 0x0001645D
+	// Token: 0x1700038A RID: 906
+	// (get) Token: 0x06000838 RID: 2104 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_dropsFireballsWhileWalking
 	{
 		get
@@ -13,8 +13,8 @@ public class Fireball_Advanced_AIScript : Fireball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170002AD RID: 685
-	// (get) Token: 0x0600059A RID: 1434 RVA: 0x00018260 File Offset: 0x00016460
+	// Token: 0x1700038B RID: 907
+	// (get) Token: 0x06000839 RID: 2105 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected override float m_timeBetweenWalkTowardFireballDrops
 	{
 		get
@@ -23,8 +23,8 @@ public class Fireball_Advanced_AIScript : Fireball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170002AE RID: 686
-	// (get) Token: 0x0600059B RID: 1435 RVA: 0x00018267 File Offset: 0x00016467
+	// Token: 0x1700038C RID: 908
+	// (get) Token: 0x0600083A RID: 2106 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected override bool m_dropsFireballsDuringDashAttack
 	{
 		get

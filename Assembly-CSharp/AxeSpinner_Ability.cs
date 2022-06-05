@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000190 RID: 400
+// Token: 0x020002E2 RID: 738
 public class AxeSpinner_Ability : Sword_Ability
 {
-	// Token: 0x170007D3 RID: 2003
-	// (get) Token: 0x06000E85 RID: 3717 RVA: 0x0002C0C9 File Offset: 0x0002A2C9
+	// Token: 0x17000A63 RID: 2659
+	// (get) Token: 0x0600163C RID: 5692 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -14,8 +14,8 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007D4 RID: 2004
-	// (get) Token: 0x06000E86 RID: 3718 RVA: 0x0002C0D0 File Offset: 0x0002A2D0
+	// Token: 0x17000A64 RID: 2660
+	// (get) Token: 0x0600163D RID: 5693 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -24,8 +24,8 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007D5 RID: 2005
-	// (get) Token: 0x06000E87 RID: 3719 RVA: 0x0002C0D7 File Offset: 0x0002A2D7
+	// Token: 0x17000A65 RID: 2661
+	// (get) Token: 0x0600163E RID: 5694 RVA: 0x00004FDE File Offset: 0x000031DE
 	protected override float TellAnimSpeed
 	{
 		get
@@ -34,8 +34,8 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007D6 RID: 2006
-	// (get) Token: 0x06000E88 RID: 3720 RVA: 0x0002C0DE File Offset: 0x0002A2DE
+	// Token: 0x17000A66 RID: 2662
+	// (get) Token: 0x0600163F RID: 5695 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -44,8 +44,8 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007D7 RID: 2007
-	// (get) Token: 0x06000E89 RID: 3721 RVA: 0x0002C0E5 File Offset: 0x0002A2E5
+	// Token: 0x17000A67 RID: 2663
+	// (get) Token: 0x06001640 RID: 5696 RVA: 0x00004FDE File Offset: 0x000031DE
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -54,8 +54,8 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007D8 RID: 2008
-	// (get) Token: 0x06000E8A RID: 3722 RVA: 0x0002C0EC File Offset: 0x0002A2EC
+	// Token: 0x17000A68 RID: 2664
+	// (get) Token: 0x06001641 RID: 5697 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -64,8 +64,8 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007D9 RID: 2009
-	// (get) Token: 0x06000E8B RID: 3723 RVA: 0x0002C0F3 File Offset: 0x0002A2F3
+	// Token: 0x17000A69 RID: 2665
+	// (get) Token: 0x06001642 RID: 5698 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -74,8 +74,8 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007DA RID: 2010
-	// (get) Token: 0x06000E8C RID: 3724 RVA: 0x0002C0FA File Offset: 0x0002A2FA
+	// Token: 0x17000A6A RID: 2666
+	// (get) Token: 0x06001643 RID: 5699 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -84,8 +84,8 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007DB RID: 2011
-	// (get) Token: 0x06000E8D RID: 3725 RVA: 0x0002C101 File Offset: 0x0002A301
+	// Token: 0x17000A6B RID: 2667
+	// (get) Token: 0x06001644 RID: 5700 RVA: 0x00003DE8 File Offset: 0x00001FE8
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -94,8 +94,8 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007DC RID: 2012
-	// (get) Token: 0x06000E8E RID: 3726 RVA: 0x0002C108 File Offset: 0x0002A308
+	// Token: 0x17000A6C RID: 2668
+	// (get) Token: 0x06001645 RID: 5701 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -104,7 +104,7 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x06000E8F RID: 3727 RVA: 0x0002C10F File Offset: 0x0002A30F
+	// Token: 0x06001646 RID: 5702 RVA: 0x0000B168 File Offset: 0x00009368
 	protected override void OnEnterExitLogic()
 	{
 		if (this.m_firedProjectile)
@@ -114,7 +114,7 @@ public class AxeSpinner_Ability : Sword_Ability
 		base.OnEnterExitLogic();
 	}
 
-	// Token: 0x06000E90 RID: 3728 RVA: 0x0002C130 File Offset: 0x0002A330
+	// Token: 0x06001647 RID: 5703 RVA: 0x0000B189 File Offset: 0x00009389
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (base.CurrentAbilityAnimState == AbilityAnimState.Attack)
@@ -128,7 +128,7 @@ public class AxeSpinner_Ability : Sword_Ability
 		yield break;
 	}
 
-	// Token: 0x06000E91 RID: 3729 RVA: 0x0002C148 File Offset: 0x0002A348
+	// Token: 0x06001648 RID: 5704 RVA: 0x0008B20C File Offset: 0x0008940C
 	protected override void OnEnterAttackLogic()
 	{
 		this.m_isSpinning = true;
@@ -139,7 +139,7 @@ public class AxeSpinner_Ability : Sword_Ability
 		this.FireProjectile();
 	}
 
-	// Token: 0x06000E92 RID: 3730 RVA: 0x0002C1B0 File Offset: 0x0002A3B0
+	// Token: 0x06001649 RID: 5705 RVA: 0x0008B274 File Offset: 0x00089474
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		this.m_isSpinning = false;
@@ -153,7 +153,7 @@ public class AxeSpinner_Ability : Sword_Ability
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x06000E93 RID: 3731 RVA: 0x0002C214 File Offset: 0x0002A414
+	// Token: 0x0600164A RID: 5706 RVA: 0x0008B2D8 File Offset: 0x000894D8
 	protected override void Update()
 	{
 		base.Update();
@@ -169,9 +169,9 @@ public class AxeSpinner_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x0400112A RID: 4394
+	// Token: 0x040016BF RID: 5823
 	private bool m_isSpinning;
 
-	// Token: 0x0400112B RID: 4395
+	// Token: 0x040016C0 RID: 5824
 	private bool m_attackCooldownSpeedModApplied;
 }

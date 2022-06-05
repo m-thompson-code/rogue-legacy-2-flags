@@ -2,17 +2,17 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000214 RID: 532
+// Token: 0x020003C7 RID: 967
 public class KeyboardButtonTextAligner : MonoBehaviour
 {
-	// Token: 0x17000B13 RID: 2835
-	// (get) Token: 0x06001630 RID: 5680 RVA: 0x0004540A File Offset: 0x0004360A
-	// (set) Token: 0x06001631 RID: 5681 RVA: 0x00045412 File Offset: 0x00043612
+	// Token: 0x17000E3A RID: 3642
+	// (get) Token: 0x06001FCC RID: 8140 RVA: 0x00010C7C File Offset: 0x0000EE7C
+	// (set) Token: 0x06001FCD RID: 8141 RVA: 0x00010C84 File Offset: 0x0000EE84
 	public TMP_Text BaseTMPObject { get; set; }
 
-	// Token: 0x17000B14 RID: 2836
-	// (get) Token: 0x06001632 RID: 5682 RVA: 0x0004541B File Offset: 0x0004361B
-	// (set) Token: 0x06001633 RID: 5683 RVA: 0x00045423 File Offset: 0x00043623
+	// Token: 0x17000E3B RID: 3643
+	// (get) Token: 0x06001FCE RID: 8142 RVA: 0x00010C8D File Offset: 0x0000EE8D
+	// (set) Token: 0x06001FCF RID: 8143 RVA: 0x00010C95 File Offset: 0x0000EE95
 	public int SpriteIndex
 	{
 		get
@@ -25,9 +25,9 @@ public class KeyboardButtonTextAligner : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B15 RID: 2837
-	// (get) Token: 0x06001634 RID: 5684 RVA: 0x0004542C File Offset: 0x0004362C
-	// (set) Token: 0x06001635 RID: 5685 RVA: 0x00045434 File Offset: 0x00043634
+	// Token: 0x17000E3C RID: 3644
+	// (get) Token: 0x06001FD0 RID: 8144 RVA: 0x00010C9E File Offset: 0x0000EE9E
+	// (set) Token: 0x06001FD1 RID: 8145 RVA: 0x00010CA6 File Offset: 0x0000EEA6
 	public TMP_Text ParentTMPObject
 	{
 		get
@@ -40,9 +40,9 @@ public class KeyboardButtonTextAligner : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B16 RID: 2838
-	// (get) Token: 0x06001636 RID: 5686 RVA: 0x0004543D File Offset: 0x0004363D
-	// (set) Token: 0x06001637 RID: 5687 RVA: 0x00045445 File Offset: 0x00043645
+	// Token: 0x17000E3D RID: 3645
+	// (get) Token: 0x06001FD2 RID: 8146 RVA: 0x00010CAF File Offset: 0x0000EEAF
+	// (set) Token: 0x06001FD3 RID: 8147 RVA: 0x00010CB7 File Offset: 0x0000EEB7
 	public Vector2 PositionOffset
 	{
 		get
@@ -55,13 +55,13 @@ public class KeyboardButtonTextAligner : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001638 RID: 5688 RVA: 0x0004544E File Offset: 0x0004364E
+	// Token: 0x06001FD4 RID: 8148 RVA: 0x00010CC0 File Offset: 0x0000EEC0
 	private void Awake()
 	{
 		this.m_transformRect = base.GetComponent<RectTransform>();
 	}
 
-	// Token: 0x06001639 RID: 5689 RVA: 0x0004545C File Offset: 0x0004365C
+	// Token: 0x06001FD5 RID: 8149 RVA: 0x00010CCE File Offset: 0x0000EECE
 	private void LateUpdate()
 	{
 		if (this.ParentTMPObject != null)
@@ -71,7 +71,7 @@ public class KeyboardButtonTextAligner : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600163A RID: 5690 RVA: 0x00045478 File Offset: 0x00043678
+	// Token: 0x06001FD6 RID: 8150 RVA: 0x000A3B74 File Offset: 0x000A1D74
 	private void UpdateTypewriting()
 	{
 		if (this.ParentTMPObject.maxVisibleCharacters <= this.m_cachedCharIndex && this.BaseTMPObject.isActiveAndEnabled)
@@ -85,7 +85,7 @@ public class KeyboardButtonTextAligner : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600163B RID: 5691 RVA: 0x000454DE File Offset: 0x000436DE
+	// Token: 0x06001FD7 RID: 8151 RVA: 0x00010CEA File Offset: 0x0000EEEA
 	private void UpdateAlpha()
 	{
 		if (this.BaseTMPObject.isActiveAndEnabled && this.BaseTMPObject.alpha != this.ParentTMPObject.alpha)
@@ -94,7 +94,7 @@ public class KeyboardButtonTextAligner : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600163C RID: 5692 RVA: 0x0004551C File Offset: 0x0004371C
+	// Token: 0x06001FD8 RID: 8152 RVA: 0x000A3BDC File Offset: 0x000A1DDC
 	public void AlignText()
 	{
 		this.m_textAlignSuccessful = false;
@@ -147,7 +147,7 @@ public class KeyboardButtonTextAligner : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600163D RID: 5693 RVA: 0x000456EA File Offset: 0x000438EA
+	// Token: 0x06001FD9 RID: 8153 RVA: 0x00010D27 File Offset: 0x0000EF27
 	private void ForceUpdateBaseTMPObject()
 	{
 		if (this.BaseTMPObject)
@@ -157,27 +157,27 @@ public class KeyboardButtonTextAligner : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001577 RID: 5495
+	// Token: 0x04001C7A RID: 7290
 	[SerializeField]
 	private int m_spriteIndex;
 
-	// Token: 0x04001578 RID: 5496
+	// Token: 0x04001C7B RID: 7291
 	[SerializeField]
 	private TMP_Text m_parentTMPObject;
 
-	// Token: 0x04001579 RID: 5497
+	// Token: 0x04001C7C RID: 7292
 	[SerializeField]
 	private Vector2 m_positionOffset;
 
-	// Token: 0x0400157A RID: 5498
+	// Token: 0x04001C7D RID: 7293
 	private RectTransform m_transformRect;
 
-	// Token: 0x0400157B RID: 5499
+	// Token: 0x04001C7E RID: 7294
 	private int m_cachedCharIndex = -1;
 
-	// Token: 0x0400157C RID: 5500
+	// Token: 0x04001C7F RID: 7295
 	private string m_cachedString;
 
-	// Token: 0x0400157D RID: 5501
+	// Token: 0x04001C80 RID: 7296
 	private bool m_textAlignSuccessful;
 }

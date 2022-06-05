@@ -4,46 +4,46 @@ using System.Collections.Generic;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020003F9 RID: 1017
+// Token: 0x020006A2 RID: 1698
 public class ChallengeTunnelController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x17000F34 RID: 3892
-	// (get) Token: 0x060025C2 RID: 9666 RVA: 0x0007C94C File Offset: 0x0007AB4C
-	// (set) Token: 0x060025C3 RID: 9667 RVA: 0x0007C954 File Offset: 0x0007AB54
+	// Token: 0x170013E3 RID: 5091
+	// (get) Token: 0x06003430 RID: 13360 RVA: 0x0001CA94 File Offset: 0x0001AC94
+	// (set) Token: 0x06003431 RID: 13361 RVA: 0x0001CA9C File Offset: 0x0001AC9C
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x060025C4 RID: 9668 RVA: 0x0007C95D File Offset: 0x0007AB5D
+	// Token: 0x06003432 RID: 13362 RVA: 0x0001CAA5 File Offset: 0x0001ACA5
 	private void Awake()
 	{
 		this.m_onEnterChallenge = new Action<MonoBehaviour, EventArgs>(this.OnEnterChallenge);
 	}
 
-	// Token: 0x060025C5 RID: 9669 RVA: 0x0007C971 File Offset: 0x0007AB71
+	// Token: 0x06003433 RID: 13363 RVA: 0x0001CAB9 File Offset: 0x0001ACB9
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.ChallengeNPC_EnterChallenge, this.m_onEnterChallenge);
 	}
 
-	// Token: 0x060025C6 RID: 9670 RVA: 0x0007C980 File Offset: 0x0007AB80
+	// Token: 0x06003434 RID: 13364 RVA: 0x0001CAC8 File Offset: 0x0001ACC8
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.ChallengeNPC_EnterChallenge, this.m_onEnterChallenge);
 	}
 
-	// Token: 0x060025C7 RID: 9671 RVA: 0x0007C98F File Offset: 0x0007AB8F
+	// Token: 0x06003435 RID: 13365 RVA: 0x0001CAD7 File Offset: 0x0001ACD7
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 	}
 
-	// Token: 0x060025C8 RID: 9672 RVA: 0x0007C998 File Offset: 0x0007AB98
+	// Token: 0x06003436 RID: 13366 RVA: 0x000DC470 File Offset: 0x000DA670
 	private void OnEnterChallenge(MonoBehaviour sender, EventArgs args)
 	{
 		ChallengeType challengeType = (args as ChallengeOmniUIDescriptionEventArgs).ChallengeType;
 		this.EnterChallenge(challengeType, true);
 	}
 
-	// Token: 0x060025C9 RID: 9673 RVA: 0x0007C9BC File Offset: 0x0007ABBC
+	// Token: 0x06003437 RID: 13367 RVA: 0x000DC494 File Offset: 0x000DA694
 	private void EnterTunnel(TunnelSpawnController tunnelSpawnController, ChallengeType challengeType)
 	{
 		SaveManager.DisableSaving = true;
@@ -81,7 +81,7 @@ public class ChallengeTunnelController : MonoBehaviour, IRoomConsumer
 		tunnelSpawnController.Tunnel.ForceEnterTunnel(false, null);
 	}
 
-	// Token: 0x060025CA RID: 9674 RVA: 0x0007CB08 File Offset: 0x0007AD08
+	// Token: 0x06003438 RID: 13368 RVA: 0x000DC5E0 File Offset: 0x000DA7E0
 	public void EnterChallenge(ChallengeType challengeType, bool animateTransition)
 	{
 		if (challengeType == ChallengeType.Tutorial && ChallengeManager.GetTotalTrophiesEarned(true) >= ChallengeManager.GetTotalTrophyCount() - 1)
@@ -108,7 +108,7 @@ public class ChallengeTunnelController : MonoBehaviour, IRoomConsumer
 		this.EnterTunnel(tunnelSpawnController, challengeType);
 	}
 
-	// Token: 0x060025CB RID: 9675 RVA: 0x0007CBF8 File Offset: 0x0007ADF8
+	// Token: 0x06003439 RID: 13369 RVA: 0x000DC6D0 File Offset: 0x000DA8D0
 	public void ReturnToDriftHouse(bool broadcastExitEvent = true)
 	{
 		ChallengeType challengeType = ChallengeManager.ActiveChallenge.ChallengeType;
@@ -148,7 +148,7 @@ public class ChallengeTunnelController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x060025CC RID: 9676 RVA: 0x0007CCD7 File Offset: 0x0007AED7
+	// Token: 0x0600343A RID: 13370 RVA: 0x0001CAE0 File Offset: 0x0001ACE0
 	private IEnumerator SpawnSouls(int soulsGained)
 	{
 		SoulDrop.FakeSoulCounter_STATIC = soulsGained;
@@ -164,21 +164,21 @@ public class ChallengeTunnelController : MonoBehaviour, IRoomConsumer
 		yield break;
 	}
 
-	// Token: 0x04001FA0 RID: 8096
+	// Token: 0x04002A41 RID: 10817
 	[SerializeField]
 	private GameObject m_exitSpawnPoint;
 
-	// Token: 0x04001FA1 RID: 8097
+	// Token: 0x04002A42 RID: 10818
 	[SerializeField]
 	private ChallengeTypeTunnelSpawnControllerDictionary m_tunnelSpawnControllers;
 
-	// Token: 0x04001FA2 RID: 8098
+	// Token: 0x04002A43 RID: 10819
 	[SerializeField]
 	private PropSpawnController m_challengeNPCSpawner;
 
-	// Token: 0x04001FA3 RID: 8099
+	// Token: 0x04002A44 RID: 10820
 	private ChallengeTrophyRank m_prevTrophyRank;
 
-	// Token: 0x04001FA4 RID: 8100
+	// Token: 0x04002A45 RID: 10821
 	private Action<MonoBehaviour, EventArgs> m_onEnterChallenge;
 }

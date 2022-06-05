@@ -1,13 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006B7 RID: 1719
+// Token: 0x02000B62 RID: 2914
 [Serializable]
 public class WeatherBiomeArtData
 {
-	// Token: 0x17001599 RID: 5529
-	// (get) Token: 0x06003F62 RID: 16226 RVA: 0x000E211B File Offset: 0x000E031B
-	// (set) Token: 0x06003F63 RID: 16227 RVA: 0x000E2123 File Offset: 0x000E0323
+	// Token: 0x17001D91 RID: 7569
+	// (get) Token: 0x06005899 RID: 22681 RVA: 0x00030265 File Offset: 0x0002E465
+	// (set) Token: 0x0600589A RID: 22682 RVA: 0x0003026D File Offset: 0x0002E46D
 	public Weather[] WeatherPrefabArray
 	{
 		get
@@ -20,7 +20,7 @@ public class WeatherBiomeArtData
 		}
 	}
 
-	// Token: 0x04002F1C RID: 12060
+	// Token: 0x0400416B RID: 16747
 	[SerializeField]
 	private Weather[] m_weatherPrefabArray;
 }

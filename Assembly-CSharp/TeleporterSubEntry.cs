@@ -2,30 +2,30 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003E6 RID: 998
+// Token: 0x02000687 RID: 1671
 public class TeleporterSubEntry : MonoBehaviour
 {
-	// Token: 0x17000EDF RID: 3807
-	// (get) Token: 0x060024CE RID: 9422 RVA: 0x0007A6F5 File Offset: 0x000788F5
-	// (set) Token: 0x060024CF RID: 9423 RVA: 0x0007A6FD File Offset: 0x000788FD
+	// Token: 0x17001380 RID: 4992
+	// (get) Token: 0x06003310 RID: 13072 RVA: 0x0001BFCD File Offset: 0x0001A1CD
+	// (set) Token: 0x06003311 RID: 13073 RVA: 0x0001BFD5 File Offset: 0x0001A1D5
 	public int BiomeControllerIndex { get; private set; }
 
-	// Token: 0x17000EE0 RID: 3808
-	// (get) Token: 0x060024D0 RID: 9424 RVA: 0x0007A706 File Offset: 0x00078906
-	// (set) Token: 0x060024D1 RID: 9425 RVA: 0x0007A70E File Offset: 0x0007890E
+	// Token: 0x17001381 RID: 4993
+	// (get) Token: 0x06003312 RID: 13074 RVA: 0x0001BFDE File Offset: 0x0001A1DE
+	// (set) Token: 0x06003313 RID: 13075 RVA: 0x0001BFE6 File Offset: 0x0001A1E6
 	public GlobalTeleporterType SubEntryType { get; private set; }
 
-	// Token: 0x17000EE1 RID: 3809
-	// (get) Token: 0x060024D2 RID: 9426 RVA: 0x0007A717 File Offset: 0x00078917
-	// (set) Token: 0x060024D3 RID: 9427 RVA: 0x0007A71F File Offset: 0x0007891F
+	// Token: 0x17001382 RID: 4994
+	// (get) Token: 0x06003314 RID: 13076 RVA: 0x0001BFEF File Offset: 0x0001A1EF
+	// (set) Token: 0x06003315 RID: 13077 RVA: 0x0001BFF7 File Offset: 0x0001A1F7
 	public GridPointManager GridPointManager { get; private set; }
 
-	// Token: 0x17000EE2 RID: 3810
-	// (get) Token: 0x060024D4 RID: 9428 RVA: 0x0007A728 File Offset: 0x00078928
-	// (set) Token: 0x060024D5 RID: 9429 RVA: 0x0007A730 File Offset: 0x00078930
+	// Token: 0x17001383 RID: 4995
+	// (get) Token: 0x06003316 RID: 13078 RVA: 0x0001C000 File Offset: 0x0001A200
+	// (set) Token: 0x06003317 RID: 13079 RVA: 0x0001C008 File Offset: 0x0001A208
 	public BiomeType BiomeType { get; private set; }
 
-	// Token: 0x060024D6 RID: 9430 RVA: 0x0007A739 File Offset: 0x00078939
+	// Token: 0x06003318 RID: 13080 RVA: 0x0001C011 File Offset: 0x0001A211
 	private string GetLocID(GlobalTeleporterType subEntryType)
 	{
 		if (subEntryType <= GlobalTeleporterType.BossEntrance)
@@ -53,7 +53,7 @@ public class TeleporterSubEntry : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x060024D7 RID: 9431 RVA: 0x0007A774 File Offset: 0x00078974
+	// Token: 0x06003319 RID: 13081 RVA: 0x000DA748 File Offset: 0x000D8948
 	public void SetSubEntryType(GlobalTeleporterType subEntryType, int biomeControllerIndex, BiomeType biomeType, GridPointManager gridPointManager)
 	{
 		if (!this.m_locItem)
@@ -68,7 +68,7 @@ public class TeleporterSubEntry : MonoBehaviour
 		this.SetSelected(false);
 	}
 
-	// Token: 0x060024D8 RID: 9432 RVA: 0x0007A7D5 File Offset: 0x000789D5
+	// Token: 0x0600331A RID: 13082 RVA: 0x0001C049 File Offset: 0x0001A249
 	public void SetSelected(bool selected)
 	{
 		if (selected)
@@ -79,16 +79,16 @@ public class TeleporterSubEntry : MonoBehaviour
 		this.m_text.color = TeleporterSubEntry.NOT_SELECTED_COLOR;
 	}
 
-	// Token: 0x04001F32 RID: 7986
+	// Token: 0x040029B0 RID: 10672
 	private static Color NOT_SELECTED_COLOR = new Color(0.4627451f, 0.3882353f, 0.44705883f);
 
-	// Token: 0x04001F33 RID: 7987
+	// Token: 0x040029B1 RID: 10673
 	private static Color SELECTED_COLOR = Color.white;
 
-	// Token: 0x04001F34 RID: 7988
+	// Token: 0x040029B2 RID: 10674
 	[SerializeField]
 	private TMP_Text m_text;
 
-	// Token: 0x04001F35 RID: 7989
+	// Token: 0x040029B3 RID: 10675
 	private LocalizationItem m_locItem;
 }

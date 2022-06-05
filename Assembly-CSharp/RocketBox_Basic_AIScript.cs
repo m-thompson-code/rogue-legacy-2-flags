@@ -3,10 +3,10 @@ using System.Collections;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x0200010A RID: 266
+// Token: 0x020001AD RID: 429
 public class RocketBox_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x0600081B RID: 2075 RVA: 0x0001BEB0 File Offset: 0x0001A0B0
+	// Token: 0x06000BC2 RID: 3010 RVA: 0x0006B470 File Offset: 0x00069670
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -21,8 +21,8 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000458 RID: 1112
-	// (get) Token: 0x0600081C RID: 2076 RVA: 0x0001BF01 File Offset: 0x0001A101
+	// Token: 0x1700058E RID: 1422
+	// (get) Token: 0x06000BC3 RID: 3011 RVA: 0x00007326 File Offset: 0x00005526
 	public IRelayLink ShoutAttackWarningAppearedRelay
 	{
 		get
@@ -31,8 +31,8 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000459 RID: 1113
-	// (get) Token: 0x0600081D RID: 2077 RVA: 0x0001BF0E File Offset: 0x0001A10E
+	// Token: 0x1700058F RID: 1423
+	// (get) Token: 0x06000BC4 RID: 3012 RVA: 0x00007333 File Offset: 0x00005533
 	public IRelayLink ShoutAttackExplodedRelay
 	{
 		get
@@ -41,8 +41,8 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700045A RID: 1114
-	// (get) Token: 0x0600081E RID: 2078 RVA: 0x0001BF1B File Offset: 0x0001A11B
+	// Token: 0x17000590 RID: 1424
+	// (get) Token: 0x06000BC5 RID: 3013 RVA: 0x00007340 File Offset: 0x00005540
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -51,8 +51,8 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700045B RID: 1115
-	// (get) Token: 0x0600081F RID: 2079 RVA: 0x0001BF2C File Offset: 0x0001A12C
+	// Token: 0x17000591 RID: 1425
+	// (get) Token: 0x06000BC6 RID: 3014 RVA: 0x00007351 File Offset: 0x00005551
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -61,7 +61,7 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000820 RID: 2080 RVA: 0x0001BF40 File Offset: 0x0001A140
+	// Token: 0x06000BC7 RID: 3015 RVA: 0x0006B4C4 File Offset: 0x000696C4
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -69,8 +69,8 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		this.m_platformCollider = base.EnemyController.HitboxController.GetCollider(HitboxType.Platform);
 	}
 
-	// Token: 0x1700045C RID: 1116
-	// (get) Token: 0x06000821 RID: 2081 RVA: 0x0001BF8E File Offset: 0x0001A18E
+	// Token: 0x17000592 RID: 1426
+	// (get) Token: 0x06000BC8 RID: 3016 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_shoot_NumberOfBullets
 	{
 		get
@@ -79,8 +79,8 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700045D RID: 1117
-	// (get) Token: 0x06000822 RID: 2082 RVA: 0x0001BF91 File Offset: 0x0001A191
+	// Token: 0x17000593 RID: 1427
+	// (get) Token: 0x06000BC9 RID: 3017 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_shoot_VerticalBullets
 	{
 		get
@@ -89,8 +89,8 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700045E RID: 1118
-	// (get) Token: 0x06000823 RID: 2083 RVA: 0x0001BF94 File Offset: 0x0001A194
+	// Token: 0x17000594 RID: 1428
+	// (get) Token: 0x06000BCA RID: 3018 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_shoot_HomingBullets
 	{
 		get
@@ -99,13 +99,13 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000824 RID: 2084 RVA: 0x0001BF97 File Offset: 0x0001A197
+	// Token: 0x06000BCB RID: 3019 RVA: 0x00007362 File Offset: 0x00005562
 	public override void OnEnemyActivated()
 	{
 		this.TriggerRestState(true);
 	}
 
-	// Token: 0x06000825 RID: 2085 RVA: 0x0001BFA0 File Offset: 0x0001A1A0
+	// Token: 0x06000BCC RID: 3020 RVA: 0x0000736B File Offset: 0x0000556B
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.OnLBCompleteOrCancelled();
@@ -114,7 +114,7 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		base.StopProjectile(ref this.m_shoutWarningProjectile);
 	}
 
-	// Token: 0x06000826 RID: 2086 RVA: 0x0001BFCC File Offset: 0x0001A1CC
+	// Token: 0x06000BCD RID: 3021 RVA: 0x00007397 File Offset: 0x00005597
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -189,8 +189,8 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x1700045F RID: 1119
-	// (get) Token: 0x06000827 RID: 2087 RVA: 0x0001BFDB File Offset: 0x0001A1DB
+	// Token: 0x17000595 RID: 1429
+	// (get) Token: 0x06000BCE RID: 3022 RVA: 0x00005FAA File Offset: 0x000041AA
 	protected virtual float m_explosion_WarningDuration
 	{
 		get
@@ -199,8 +199,8 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000460 RID: 1120
-	// (get) Token: 0x06000828 RID: 2088 RVA: 0x0001BFE2 File Offset: 0x0001A1E2
+	// Token: 0x17000596 RID: 1430
+	// (get) Token: 0x06000BCF RID: 3023 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float m_explosion_AttackCD
 	{
 		get
@@ -209,7 +209,7 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000829 RID: 2089 RVA: 0x0001BFE9 File Offset: 0x0001A1E9
+	// Token: 0x06000BD0 RID: 3024 RVA: 0x000073A6 File Offset: 0x000055A6
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -259,7 +259,7 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600082A RID: 2090 RVA: 0x0001BFF8 File Offset: 0x0001A1F8
+	// Token: 0x06000BD1 RID: 3025 RVA: 0x0006B514 File Offset: 0x00069714
 	private void OnEnemyHit(object sender, EventArgs args)
 	{
 		if (this.m_platformCollider && base.EnemyController.CurrentHealth > 0f && (args as CharacterHitEventArgs).Attacker.ActualKnockbackStrength > base.EnemyController.ActualKnockbackDefense)
@@ -272,7 +272,7 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600082B RID: 2091 RVA: 0x0001C06C File Offset: 0x0001A26C
+	// Token: 0x06000BD2 RID: 3026 RVA: 0x000073B5 File Offset: 0x000055B5
 	private IEnumerator ReenablePlatformCoroutine()
 	{
 		float delay = 0.1f + Time.time;
@@ -291,7 +291,7 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600082C RID: 2092 RVA: 0x0001C07C File Offset: 0x0001A27C
+	// Token: 0x06000BD3 RID: 3027 RVA: 0x0006B588 File Offset: 0x00069788
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -305,7 +305,7 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600082D RID: 2093 RVA: 0x0001C0CD File Offset: 0x0001A2CD
+	// Token: 0x06000BD4 RID: 3028 RVA: 0x000073C4 File Offset: 0x000055C4
 	private void OnDestroy()
 	{
 		if (!GameManager.IsApplicationClosing && base.IsInitialized)
@@ -314,66 +314,66 @@ public class RocketBox_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x04000B7E RID: 2942
+	// Token: 0x04000E4E RID: 3662
 	private Relay m_shoutAttackWarningAppearedRelay = new Relay();
 
-	// Token: 0x04000B7F RID: 2943
+	// Token: 0x04000E4F RID: 3663
 	private Relay m_shoutAttackExplodedRelay = new Relay();
 
-	// Token: 0x04000B80 RID: 2944
+	// Token: 0x04000E50 RID: 3664
 	private Collider2D m_platformCollider;
 
-	// Token: 0x04000B81 RID: 2945
+	// Token: 0x04000E51 RID: 3665
 	private const string WARNING_PROJECTILE_NAME = "RocketBoxWarningProjectile";
 
-	// Token: 0x04000B82 RID: 2946
+	// Token: 0x04000E52 RID: 3666
 	private const string EXPLOSION_PROJECTILE_NAME = "RocketBoxExplosionProjectile";
 
-	// Token: 0x04000B83 RID: 2947
+	// Token: 0x04000E53 RID: 3667
 	private const string WARNING_MINIBOSS_PROJECTILE_NAME = "RocketBoxWarningMinibossProjectile";
 
-	// Token: 0x04000B84 RID: 2948
+	// Token: 0x04000E54 RID: 3668
 	private const string EXPLOSION_MINIBOSS_PROJECTILE_NAME = "RocketBoxExplosionMinibossProjectile";
 
-	// Token: 0x04000B85 RID: 2949
+	// Token: 0x04000E55 RID: 3669
 	private const string MINIBOSS_BASIC_PROJECTILE_NAME = "RocketBoxBoltMinibossBlueProjectile";
 
-	// Token: 0x04000B86 RID: 2950
+	// Token: 0x04000E56 RID: 3670
 	protected float m_shoot_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B87 RID: 2951
+	// Token: 0x04000E57 RID: 3671
 	protected float m_shoot_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000B88 RID: 2952
+	// Token: 0x04000E58 RID: 3672
 	protected float m_shoot_Tell_Delay;
 
-	// Token: 0x04000B89 RID: 2953
+	// Token: 0x04000E59 RID: 3673
 	protected float m_shoot_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B8A RID: 2954
+	// Token: 0x04000E5A RID: 3674
 	protected float m_shoot_AttackIntro_Delay;
 
-	// Token: 0x04000B8B RID: 2955
+	// Token: 0x04000E5B RID: 3675
 	protected float m_shoot_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000B8C RID: 2956
+	// Token: 0x04000E5C RID: 3676
 	protected float m_shoot_AttackHold_Delay;
 
-	// Token: 0x04000B8D RID: 2957
+	// Token: 0x04000E5D RID: 3677
 	protected float m_shoot_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000B8E RID: 2958
+	// Token: 0x04000E5E RID: 3678
 	protected float m_shoot_Exit_Delay;
 
-	// Token: 0x04000B8F RID: 2959
+	// Token: 0x04000E5F RID: 3679
 	protected float m_shoot_Exit_ForceIdle;
 
-	// Token: 0x04000B90 RID: 2960
+	// Token: 0x04000E60 RID: 3680
 	protected float m_shoot_Exit_AttackCD;
 
-	// Token: 0x04000B91 RID: 2961
+	// Token: 0x04000E61 RID: 3681
 	protected float m_shoot_ShotDelay = 0.1f;
 
-	// Token: 0x04000B92 RID: 2962
+	// Token: 0x04000E62 RID: 3682
 	private Projectile_RL m_shoutWarningProjectile;
 }

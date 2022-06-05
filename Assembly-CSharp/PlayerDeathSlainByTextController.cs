@@ -3,11 +3,11 @@ using GameEventTracking;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003D8 RID: 984
+// Token: 0x02000675 RID: 1653
 public class PlayerDeathSlainByTextController : MonoBehaviour
 {
-	// Token: 0x17000ECE RID: 3790
-	// (get) Token: 0x0600242F RID: 9263 RVA: 0x000778C0 File Offset: 0x00075AC0
+	// Token: 0x17001367 RID: 4967
+	// (get) Token: 0x06003259 RID: 12889 RVA: 0x0001BA11 File Offset: 0x00019C11
 	public TMP_Text Text
 	{
 		get
@@ -16,7 +16,7 @@ public class PlayerDeathSlainByTextController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002430 RID: 9264 RVA: 0x000778C8 File Offset: 0x00075AC8
+	// Token: 0x0600325A RID: 12890 RVA: 0x000D7970 File Offset: 0x000D5B70
 	public void UpdateMessage(bool isVictory)
 	{
 		string slainBy = GameEventTrackerManager.EnemyEventTracker.GetSlainBy();
@@ -32,7 +32,7 @@ public class PlayerDeathSlainByTextController : MonoBehaviour
 		this.m_slainByText.text = string.Format(@string, localizedPlayerName);
 	}
 
-	// Token: 0x04001EA7 RID: 7847
+	// Token: 0x04002916 RID: 10518
 	[SerializeField]
 	private TMP_Text m_slainByText;
 }

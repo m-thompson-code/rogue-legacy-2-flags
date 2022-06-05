@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000286 RID: 646
+// Token: 0x02000452 RID: 1106
 public class DisableEnemyContactDamageOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001977 RID: 6519 RVA: 0x0004FDC5 File Offset: 0x0004DFC5
+	// Token: 0x06002366 RID: 9062 RVA: 0x000132D4 File Offset: 0x000114D4
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class DisableEnemyContactDamageOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001978 RID: 6520 RVA: 0x0004FDFD File Offset: 0x0004DFFD
+	// Token: 0x06002367 RID: 9063 RVA: 0x0001330C File Offset: 0x0001150C
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class DisableEnemyContactDamageOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001979 RID: 6521 RVA: 0x0004FE37 File Offset: 0x0004E037
+	// Token: 0x06002368 RID: 9064 RVA: 0x00013346 File Offset: 0x00011546
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed Enemies Deal Contact Damage to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x0600197A RID: 6522 RVA: 0x0004FE50 File Offset: 0x0004E050
+	// Token: 0x06002369 RID: 9065 RVA: 0x000ACFB4 File Offset: 0x000AB1B4
 	public override void ConfirmOptionChange()
 	{
 		bool assist_DisableEnemyContactDamage = this.m_selectedIndex == 0;
@@ -41,7 +41,7 @@ public class DisableEnemyContactDamageOptionItem : SelectionListOptionItem
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.HouseRulesChanged, null, null);
 	}
 
-	// Token: 0x0600197B RID: 6523 RVA: 0x0004FE7C File Offset: 0x0004E07C
+	// Token: 0x0600236A RID: 9066 RVA: 0x000AC7CC File Offset: 0x000AA9CC
 	private void Update()
 	{
 		if (!SaveManager.PlayerSaveData.EnableHouseRules)
@@ -54,7 +54,7 @@ public class DisableEnemyContactDamageOptionItem : SelectionListOptionItem
 		this.m_incrementValueText.alpha = 1f;
 	}
 
-	// Token: 0x0600197C RID: 6524 RVA: 0x0004FED6 File Offset: 0x0004E0D6
+	// Token: 0x0600236B RID: 9067 RVA: 0x00012DF4 File Offset: 0x00010FF4
 	public override void ActivateOption()
 	{
 		if (SaveManager.PlayerSaveData.EnableHouseRules)

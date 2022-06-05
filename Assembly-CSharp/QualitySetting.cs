@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200027F RID: 639
+// Token: 0x0200044A RID: 1098
 public enum QualitySetting
 {
-	// Token: 0x04001841 RID: 6209
+	// Token: 0x04001F8E RID: 8078
 	Low,
-	// Token: 0x04001842 RID: 6210
+	// Token: 0x04001F8F RID: 8079
 	Medium,
-	// Token: 0x04001843 RID: 6211
+	// Token: 0x04001F90 RID: 8080
 	High,
-	// Token: 0x04001844 RID: 6212
+	// Token: 0x04001F91 RID: 8081
 	High_4k
 }

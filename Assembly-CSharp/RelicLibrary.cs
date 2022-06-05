@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000242 RID: 578
+// Token: 0x020003FF RID: 1023
 [CreateAssetMenu(menuName = "Custom/Libraries/RelicLibrary")]
 public class RelicLibrary : ScriptableObject
 {
-	// Token: 0x17000B4B RID: 2891
-	// (get) Token: 0x06001725 RID: 5925 RVA: 0x0004807E File Offset: 0x0004627E
+	// Token: 0x17000E78 RID: 3704
+	// (get) Token: 0x060020D8 RID: 8408 RVA: 0x000116BA File Offset: 0x0000F8BA
 	private static RelicLibrary Instance
 	{
 		get
@@ -21,7 +21,7 @@ public class RelicLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001726 RID: 5926 RVA: 0x000480A8 File Offset: 0x000462A8
+	// Token: 0x060020D9 RID: 8409 RVA: 0x000A5D78 File Offset: 0x000A3F78
 	public static RelicData GetRelicData(RelicType relicType)
 	{
 		RelicData result;
@@ -38,7 +38,7 @@ public class RelicLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x06001727 RID: 5927 RVA: 0x000480FC File Offset: 0x000462FC
+	// Token: 0x060020DA RID: 8410 RVA: 0x000A5DCC File Offset: 0x000A3FCC
 	public static RelicType GetRandomRelic(RngID rngIDToUse, bool limitMaxStacks, IEnumerable<RelicType> exceptionList = null)
 	{
 		RelicType relicType = RelicType.None;
@@ -129,7 +129,7 @@ public class RelicLibrary : ScriptableObject
 		return relicType;
 	}
 
-	// Token: 0x06001728 RID: 5928 RVA: 0x000482C4 File Offset: 0x000464C4
+	// Token: 0x060020DB RID: 8411 RVA: 0x000A5F94 File Offset: 0x000A4194
 	public static bool IsRelicAllowed(RelicType relicType)
 	{
 		if (relicType == RelicType.None)
@@ -140,22 +140,22 @@ public class RelicLibrary : ScriptableObject
 		return !(relicData == null) && relicData.Rarity <= 3;
 	}
 
-	// Token: 0x0400169D RID: 5789
+	// Token: 0x04001DB5 RID: 7605
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/RelicLibrary";
 
-	// Token: 0x0400169E RID: 5790
+	// Token: 0x04001DB6 RID: 7606
 	[SerializeField]
 	private RelicTypeRelicDataDictionary m_relicLibrary;
 
-	// Token: 0x0400169F RID: 5791
+	// Token: 0x04001DB7 RID: 7607
 	private static RelicLibrary m_instance = null;
 
-	// Token: 0x040016A0 RID: 5792
+	// Token: 0x04001DB8 RID: 7608
 	private static List<RelicType> m_rarityOneRelicHelper = new List<RelicType>();
 
-	// Token: 0x040016A1 RID: 5793
+	// Token: 0x04001DB9 RID: 7609
 	private static List<RelicType> m_rarityTwoRelicHelper = new List<RelicType>();
 
-	// Token: 0x040016A2 RID: 5794
+	// Token: 0x04001DBA RID: 7610
 	private static List<RelicType> m_rarityThreeRelicHelper = new List<RelicType>();
 }

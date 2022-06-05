@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001A2 RID: 418
+// Token: 0x02000306 RID: 774
 public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 {
-	// Token: 0x06001022 RID: 4130 RVA: 0x0002EE94 File Offset: 0x0002D094
+	// Token: 0x06001833 RID: 6195 RVA: 0x0000C2BE File Offset: 0x0000A4BE
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -14,8 +14,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		};
 	}
 
-	// Token: 0x170008F2 RID: 2290
-	// (get) Token: 0x06001023 RID: 4131 RVA: 0x0002EEB4 File Offset: 0x0002D0B4
+	// Token: 0x17000BA0 RID: 2976
+	// (get) Token: 0x06001834 RID: 6196 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -24,8 +24,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008F3 RID: 2291
-	// (get) Token: 0x06001024 RID: 4132 RVA: 0x0002EEBB File Offset: 0x0002D0BB
+	// Token: 0x17000BA1 RID: 2977
+	// (get) Token: 0x06001835 RID: 6197 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -34,8 +34,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008F4 RID: 2292
-	// (get) Token: 0x06001025 RID: 4133 RVA: 0x0002EEC2 File Offset: 0x0002D0C2
+	// Token: 0x17000BA2 RID: 2978
+	// (get) Token: 0x06001836 RID: 6198 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected override float TellAnimSpeed
 	{
 		get
@@ -44,8 +44,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008F5 RID: 2293
-	// (get) Token: 0x06001026 RID: 4134 RVA: 0x0002EEC9 File Offset: 0x0002D0C9
+	// Token: 0x17000BA3 RID: 2979
+	// (get) Token: 0x06001837 RID: 6199 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -54,8 +54,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008F6 RID: 2294
-	// (get) Token: 0x06001027 RID: 4135 RVA: 0x0002EED0 File Offset: 0x0002D0D0
+	// Token: 0x17000BA4 RID: 2980
+	// (get) Token: 0x06001838 RID: 6200 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -64,8 +64,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008F7 RID: 2295
-	// (get) Token: 0x06001028 RID: 4136 RVA: 0x0002EED7 File Offset: 0x0002D0D7
+	// Token: 0x17000BA5 RID: 2981
+	// (get) Token: 0x06001839 RID: 6201 RVA: 0x0000452F File Offset: 0x0000272F
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -74,8 +74,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008F8 RID: 2296
-	// (get) Token: 0x06001029 RID: 4137 RVA: 0x0002EEDE File Offset: 0x0002D0DE
+	// Token: 0x17000BA6 RID: 2982
+	// (get) Token: 0x0600183A RID: 6202 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -84,8 +84,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008F9 RID: 2297
-	// (get) Token: 0x0600102A RID: 4138 RVA: 0x0002EEE5 File Offset: 0x0002D0E5
+	// Token: 0x17000BA7 RID: 2983
+	// (get) Token: 0x0600183B RID: 6203 RVA: 0x00003FB0 File Offset: 0x000021B0
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -94,8 +94,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008FA RID: 2298
-	// (get) Token: 0x0600102B RID: 4139 RVA: 0x0002EEEC File Offset: 0x0002D0EC
+	// Token: 0x17000BA8 RID: 2984
+	// (get) Token: 0x0600183C RID: 6204 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -104,8 +104,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008FB RID: 2299
-	// (get) Token: 0x0600102C RID: 4140 RVA: 0x0002EEF3 File Offset: 0x0002D0F3
+	// Token: 0x17000BA9 RID: 2985
+	// (get) Token: 0x0600183D RID: 6205 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -114,8 +114,8 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008FC RID: 2300
-	// (get) Token: 0x0600102D RID: 4141 RVA: 0x0002EEFA File Offset: 0x0002D0FA
+	// Token: 0x17000BAA RID: 2986
+	// (get) Token: 0x0600183E RID: 6206 RVA: 0x0000C2DE File Offset: 0x0000A4DE
 	protected virtual Vector2 ProjectileIndicatorPosition
 	{
 		get
@@ -124,7 +124,7 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x0600102E RID: 4142 RVA: 0x0002EF0C File Offset: 0x0002D10C
+	// Token: 0x0600183F RID: 6207 RVA: 0x0008D878 File Offset: 0x0008BA78
 	protected override void Awake()
 	{
 		this.m_onPlayerScaleChanged = new Action<MonoBehaviour, EventArgs>(this.OnPlayerScaleChanged);
@@ -136,20 +136,20 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		base.Awake();
 	}
 
-	// Token: 0x0600102F RID: 4143 RVA: 0x0002EF7C File Offset: 0x0002D17C
+	// Token: 0x06001840 RID: 6208 RVA: 0x0000C2EF File Offset: 0x0000A4EF
 	public override void OnPreDestroy()
 	{
 		this.m_aimIndicator.transform.SetParent(null);
 		base.OnPreDestroy();
 	}
 
-	// Token: 0x06001030 RID: 4144 RVA: 0x0002EF95 File Offset: 0x0002D195
+	// Token: 0x06001841 RID: 6209 RVA: 0x0000C308 File Offset: 0x0000A508
 	private void OnPlayerDeath(object sender, EventArgs args)
 	{
 		this.m_aimIndicator.SetActive(false);
 	}
 
-	// Token: 0x06001031 RID: 4145 RVA: 0x0002EFA4 File Offset: 0x0002D1A4
+	// Token: 0x06001842 RID: 6210 RVA: 0x0008D8E8 File Offset: 0x0008BAE8
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
@@ -160,13 +160,13 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		this.m_aimIndicator = null;
 	}
 
-	// Token: 0x06001032 RID: 4146 RVA: 0x0002EFF0 File Offset: 0x0002D1F0
+	// Token: 0x06001843 RID: 6211 RVA: 0x0000C316 File Offset: 0x0000A516
 	private void OnPlayerScaleChanged(object sender, EventArgs args)
 	{
 		this.InitializeAimIndicator();
 	}
 
-	// Token: 0x06001033 RID: 4147 RVA: 0x0002EFF8 File Offset: 0x0002D1F8
+	// Token: 0x06001844 RID: 6212 RVA: 0x0008D934 File Offset: 0x0008BB34
 	private void OnPlayerManaChange(object sender, EventArgs args)
 	{
 		ManaChangeEventArgs manaChangeEventArgs = args as ManaChangeEventArgs;
@@ -184,7 +184,7 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06001034 RID: 4148 RVA: 0x0002F0B8 File Offset: 0x0002D2B8
+	// Token: 0x06001845 RID: 6213 RVA: 0x0008D9F4 File Offset: 0x0008BBF4
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		base.Initialize(abilityController, castAbilityType);
@@ -194,7 +194,7 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		this.InitializeAimIndicator();
 	}
 
-	// Token: 0x06001035 RID: 4149 RVA: 0x0002F11F File Offset: 0x0002D31F
+	// Token: 0x06001846 RID: 6214 RVA: 0x0000C31E File Offset: 0x0000A51E
 	public override void Reinitialize()
 	{
 		base.Reinitialize();
@@ -204,7 +204,7 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06001036 RID: 4150 RVA: 0x0002F140 File Offset: 0x0002D340
+	// Token: 0x06001847 RID: 6215 RVA: 0x0008DA5C File Offset: 0x0008BC5C
 	private void InitializeAimIndicator()
 	{
 		float num = this.m_abilityController.PlayerController.BaseScaleToOffsetWith / this.m_abilityController.PlayerController.transform.lossyScale.x;
@@ -218,7 +218,7 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		this.m_aimIndicator.transform.localScale = new Vector3(num, num, num);
 	}
 
-	// Token: 0x06001037 RID: 4151 RVA: 0x0002F1FA File Offset: 0x0002D3FA
+	// Token: 0x06001848 RID: 6216 RVA: 0x0000C33F File Offset: 0x0000A53F
 	public override void PreCastAbility()
 	{
 		this.InitializeAimIndicator();
@@ -229,7 +229,7 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06001038 RID: 4152 RVA: 0x0002F238 File Offset: 0x0002D438
+	// Token: 0x06001849 RID: 6217 RVA: 0x0008DB18 File Offset: 0x0008BD18
 	protected override void FireProjectile()
 	{
 		if (!string.IsNullOrEmpty(this.ProjectileName))
@@ -248,7 +248,7 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		this.m_abilityController.InitializeProjectile(this.m_strikeProjectile);
 	}
 
-	// Token: 0x06001039 RID: 4153 RVA: 0x0002F322 File Offset: 0x0002D522
+	// Token: 0x0600184A RID: 6218 RVA: 0x0000C37A File Offset: 0x0000A57A
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		base.StopAbility(abilityInterrupted);
@@ -260,39 +260,39 @@ public class MagicWand_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x0600103A RID: 4154 RVA: 0x0002F35C File Offset: 0x0002D55C
+	// Token: 0x0600184B RID: 6219 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void PlayFreeCritReleaseAudio()
 	{
 	}
 
-	// Token: 0x040011A8 RID: 4520
+	// Token: 0x04001785 RID: 6021
 	[SerializeField]
 	private GameObject m_aimIndicator;
 
-	// Token: 0x040011A9 RID: 4521
+	// Token: 0x04001786 RID: 6022
 	[Header("Strike Projectile")]
 	[SerializeField]
 	private string m_strikeProjectileName;
 
-	// Token: 0x040011AA RID: 4522
+	// Token: 0x04001787 RID: 6023
 	[SerializeField]
 	private Vector2 m_strikeProjectileOffset;
 
-	// Token: 0x040011AB RID: 4523
+	// Token: 0x04001788 RID: 6024
 	private Projectile_RL m_strikeProjectile;
 
-	// Token: 0x040011AC RID: 4524
+	// Token: 0x04001789 RID: 6025
 	private float m_aimIndicatorStartingScale;
 
-	// Token: 0x040011AD RID: 4525
+	// Token: 0x0400178A RID: 6026
 	private float m_manaSpentForCrit;
 
-	// Token: 0x040011AE RID: 4526
+	// Token: 0x0400178B RID: 6027
 	private Action<MonoBehaviour, EventArgs> m_onPlayerScaleChanged;
 
-	// Token: 0x040011AF RID: 4527
+	// Token: 0x0400178C RID: 6028
 	private Action<MonoBehaviour, EventArgs> m_onPlayerManaChange;
 
-	// Token: 0x040011B0 RID: 4528
+	// Token: 0x0400178D RID: 6029
 	private Action<MonoBehaviour, EventArgs> m_onPlayerDeath;
 }

@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000F2 RID: 242
+// Token: 0x02000188 RID: 392
 public class JumpWallStick_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x06000769 RID: 1897 RVA: 0x0001A676 File Offset: 0x00018876
+	// Token: 0x06000AC2 RID: 2754 RVA: 0x000046A7 File Offset: 0x000028A7
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[0];
 	}
 
-	// Token: 0x170003FA RID: 1018
-	// (get) Token: 0x0600076A RID: 1898 RVA: 0x0001A684 File Offset: 0x00018884
+	// Token: 0x17000516 RID: 1302
+	// (get) Token: 0x06000AC3 RID: 2755 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -21,8 +21,8 @@ public class JumpWallStick_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003FB RID: 1019
-	// (get) Token: 0x0600076B RID: 1899 RVA: 0x0001A695 File Offset: 0x00018895
+	// Token: 0x17000517 RID: 1303
+	// (get) Token: 0x06000AC4 RID: 2756 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -31,8 +31,8 @@ public class JumpWallStick_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003FC RID: 1020
-	// (get) Token: 0x0600076C RID: 1900 RVA: 0x0001A6A6 File Offset: 0x000188A6
+	// Token: 0x17000518 RID: 1304
+	// (get) Token: 0x06000AC5 RID: 2757 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -41,7 +41,7 @@ public class JumpWallStick_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600076D RID: 1901 RVA: 0x0001A6B8 File Offset: 0x000188B8
+	// Token: 0x06000AC6 RID: 2758 RVA: 0x00069098 File Offset: 0x00067298
 	private void OnEnable()
 	{
 		if (base.IsInitialized)
@@ -52,7 +52,7 @@ public class JumpWallStick_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600076E RID: 1902 RVA: 0x0001A708 File Offset: 0x00018908
+	// Token: 0x06000AC7 RID: 2759 RVA: 0x000690E8 File Offset: 0x000672E8
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -62,8 +62,8 @@ public class JumpWallStick_Basic_AIScript : BaseAIScript
 		base.LogicController.ExecuteLogicInAir = true;
 	}
 
-	// Token: 0x170003FD RID: 1021
-	// (get) Token: 0x0600076F RID: 1903 RVA: 0x0001A75F File Offset: 0x0001895F
+	// Token: 0x17000519 RID: 1305
+	// (get) Token: 0x06000AC8 RID: 2760 RVA: 0x00003CEB File Offset: 0x00001EEB
 	protected virtual float Jump_Power
 	{
 		get
@@ -72,8 +72,8 @@ public class JumpWallStick_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003FE RID: 1022
-	// (get) Token: 0x06000770 RID: 1904 RVA: 0x0001A766 File Offset: 0x00018966
+	// Token: 0x1700051A RID: 1306
+	// (get) Token: 0x06000AC9 RID: 2761 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool Jump_SpawnProjectiles
 	{
 		get
@@ -82,7 +82,7 @@ public class JumpWallStick_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000771 RID: 1905 RVA: 0x0001A769 File Offset: 0x00018969
+	// Token: 0x06000ACA RID: 2762 RVA: 0x00006C3F File Offset: 0x00004E3F
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -123,35 +123,35 @@ public class JumpWallStick_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000772 RID: 1906 RVA: 0x0001A778 File Offset: 0x00018978
+	// Token: 0x06000ACB RID: 2763 RVA: 0x00069140 File Offset: 0x00067340
 	private bool AllowJumpAttack(Vector2 jumpVector)
 	{
 		RaycastHit2D hit = Physics2D.Raycast(base.EnemyController.Midpoint, jumpVector, 20f, base.EnemyController.ControllerCorgi.PlatformMask);
 		return !hit || !this.m_wallStickCollision.LastHitRaycast || (hit && this.m_wallStickCollision.LastHitRaycast && hit.collider != this.m_wallStickCollision.LastHitRaycast.collider);
 	}
 
-	// Token: 0x06000773 RID: 1907 RVA: 0x0001A80E File Offset: 0x00018A0E
+	// Token: 0x06000ACC RID: 2764 RVA: 0x00006C4E File Offset: 0x00004E4E
 	public override void OnLBCompleteOrCancelled()
 	{
 		this.m_wallStickCollision.enabled = false;
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x04000B1D RID: 2845
+	// Token: 0x04000DC1 RID: 3521
 	private WallStickCollision m_wallStickCollision;
 
-	// Token: 0x04000B1E RID: 2846
+	// Token: 0x04000DC2 RID: 3522
 	protected float m_jump_Tell_Delay = 0.4f;
 
-	// Token: 0x04000B1F RID: 2847
+	// Token: 0x04000DC3 RID: 3523
 	protected float m_jump_Tell_AnimationSpeed = 0.75f;
 
-	// Token: 0x04000B20 RID: 2848
+	// Token: 0x04000DC4 RID: 3524
 	protected float m_jump_Exit_Delay;
 
-	// Token: 0x04000B21 RID: 2849
+	// Token: 0x04000DC5 RID: 3525
 	protected float m_jump_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000B22 RID: 2850
+	// Token: 0x04000DC6 RID: 3526
 	protected float m_jump_Exit_AttackCD;
 }

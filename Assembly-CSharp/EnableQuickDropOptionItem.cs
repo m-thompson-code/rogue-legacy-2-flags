@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000291 RID: 657
+// Token: 0x0200045D RID: 1117
 public class EnableQuickDropOptionItem : SelectionListOptionItem
 {
-	// Token: 0x060019B6 RID: 6582 RVA: 0x000507FF File Offset: 0x0004E9FF
+	// Token: 0x060023A5 RID: 9125 RVA: 0x00013966 File Offset: 0x00011B66
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class EnableQuickDropOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x060019B7 RID: 6583 RVA: 0x00050837 File Offset: 0x0004EA37
+	// Token: 0x060023A6 RID: 9126 RVA: 0x0001399E File Offset: 0x00011B9E
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class EnableQuickDropOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x060019B8 RID: 6584 RVA: 0x00050871 File Offset: 0x0004EA71
+	// Token: 0x060023A7 RID: 9127 RVA: 0x000139D8 File Offset: 0x00011BD8
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed enable quick drop to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x060019B9 RID: 6585 RVA: 0x00050888 File Offset: 0x0004EA88
+	// Token: 0x060023A8 RID: 9128 RVA: 0x000139EF File Offset: 0x00011BEF
 	public override void ConfirmOptionChange()
 	{
 		if (this.m_selectedIndex == 0)

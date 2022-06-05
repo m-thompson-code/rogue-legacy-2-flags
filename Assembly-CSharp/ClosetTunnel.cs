@@ -2,17 +2,17 @@
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000566 RID: 1382
+// Token: 0x02000936 RID: 2358
 public class ClosetTunnel : Tunnel
 {
-	// Token: 0x060032B4 RID: 12980 RVA: 0x000AB958 File Offset: 0x000A9B58
+	// Token: 0x06004789 RID: 18313 RVA: 0x0002737D File Offset: 0x0002557D
 	protected override void OnEnable()
 	{
 		base.OnEnable();
 		this.IsClosetUnlocked = false;
 	}
 
-	// Token: 0x060032B5 RID: 12981 RVA: 0x000AB968 File Offset: 0x000A9B68
+	// Token: 0x0600478A RID: 18314 RVA: 0x001161E4 File Offset: 0x001143E4
 	protected override void OnPlayerInteractedWithTunnel(GameObject otherObj)
 	{
 		if (this.IsClosetUnlocked)
@@ -25,7 +25,7 @@ public class ClosetTunnel : Tunnel
 		WindowManager.SetWindowIsOpen(WindowID.Dialogue, true);
 	}
 
-	// Token: 0x040027B0 RID: 10160
+	// Token: 0x040036DE RID: 14046
 	[NonSerialized]
 	public bool IsClosetUnlocked;
 }

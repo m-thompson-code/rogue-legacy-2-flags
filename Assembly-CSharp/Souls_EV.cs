@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200007C RID: 124
+// Token: 0x02000084 RID: 132
 public class Souls_EV
 {
-	// Token: 0x060001BE RID: 446 RVA: 0x00011464 File Offset: 0x0000F664
+	// Token: 0x060001D2 RID: 466 RVA: 0x00003BA0 File Offset: 0x00001DA0
 	public static int GetSoulSwapCost(int soulLevel)
 	{
 		soulLevel = Mathf.Clamp(soulLevel, 0, Souls_EV.ORE_AETHER_TO_SOUL_COST_LEVELS.Length - 1);
 		return Souls_EV.ORE_AETHER_TO_SOUL_COST_LEVELS[soulLevel];
 	}
 
-	// Token: 0x060001BF RID: 447 RVA: 0x00011480 File Offset: 0x0000F680
+	// Token: 0x060001D3 RID: 467 RVA: 0x0004D8F4 File Offset: 0x0004BAF4
 	public static int GetBossSoulsDropAmount(BossID bossID, int bossBeatenLevel)
 	{
 		int x = Souls_EV.BOSS_SOUL_DROP_TABLE[bossID].x;
@@ -24,14 +24,14 @@ public class Souls_EV
 		return x + y * bossBeatenLevel;
 	}
 
-	// Token: 0x060001C0 RID: 448 RVA: 0x000114C0 File Offset: 0x0000F6C0
+	// Token: 0x060001D4 RID: 468 RVA: 0x0004D934 File Offset: 0x0004BB34
 	public static int GetBossSoulsCollected(GameModeType gameMode, BossID bossID)
 	{
 		int highestNGBossBeaten = SaveManager.ModeSaveData.GetHighestNGBossBeaten(gameMode, bossID);
 		return Souls_EV.GetBossSoulsDropAmount(bossID, highestNGBossBeaten);
 	}
 
-	// Token: 0x060001C1 RID: 449 RVA: 0x000114E4 File Offset: 0x0000F6E4
+	// Token: 0x060001D5 RID: 469 RVA: 0x0004D958 File Offset: 0x0004BB58
 	public static int GetTotalBossSoulsCollected(GameModeType gameMode)
 	{
 		int num = 0;
@@ -45,13 +45,13 @@ public class Souls_EV
 		return num;
 	}
 
-	// Token: 0x060001C2 RID: 450 RVA: 0x00011519 File Offset: 0x0000F719
+	// Token: 0x060001D6 RID: 470 RVA: 0x00003BBB File Offset: 0x00001DBB
 	public static int GetBlackChestSoulsDropAmount(int ngLevel)
 	{
 		return (ngLevel + 1) * 50;
 	}
 
-	// Token: 0x060001C3 RID: 451 RVA: 0x00011524 File Offset: 0x0000F724
+	// Token: 0x060001D7 RID: 471 RVA: 0x0004D990 File Offset: 0x0004BB90
 	public static int GetBlackChestSoulsCollected(EquipmentCategoryType categoryType)
 	{
 		int highestNGBlackChestOpened = SaveManager.ModeSaveData.GetHighestNGBlackChestOpened(categoryType);
@@ -62,7 +62,7 @@ public class Souls_EV
 		return 0;
 	}
 
-	// Token: 0x060001C4 RID: 452 RVA: 0x0001154C File Offset: 0x0000F74C
+	// Token: 0x060001D8 RID: 472 RVA: 0x0004D9B8 File Offset: 0x0004BBB8
 	public static int GetTotalBlackChestSoulsCollected()
 	{
 		int num = 0;
@@ -76,7 +76,7 @@ public class Souls_EV
 		return num;
 	}
 
-	// Token: 0x060001C5 RID: 453 RVA: 0x00011580 File Offset: 0x0000F780
+	// Token: 0x060001D9 RID: 473 RVA: 0x0004D9EC File Offset: 0x0004BBEC
 	public static int GetChallengeSoulsRewarded(ChallengeType challengeType, ChallengeTrophyRank trophyRank)
 	{
 		int num = 0;
@@ -100,13 +100,13 @@ public class Souls_EV
 		return 0;
 	}
 
-	// Token: 0x060001C6 RID: 454 RVA: 0x000115C8 File Offset: 0x0000F7C8
+	// Token: 0x060001DA RID: 474 RVA: 0x00003BC3 File Offset: 0x00001DC3
 	public static int GetChallengeSoulsCollected(ChallengeType challengeType)
 	{
 		return Souls_EV.GetChallengeSoulsRewarded(challengeType, ChallengeManager.GetChallengeTrophyRank(challengeType, true));
 	}
 
-	// Token: 0x060001C7 RID: 455 RVA: 0x000115D8 File Offset: 0x0000F7D8
+	// Token: 0x060001DB RID: 475 RVA: 0x0004DA34 File Offset: 0x0004BC34
 	public static int GetTotalChallengeSoulsCollected()
 	{
 		int num = 0;
@@ -120,13 +120,13 @@ public class Souls_EV
 		return num;
 	}
 
-	// Token: 0x060001C8 RID: 456 RVA: 0x0001160C File Offset: 0x0000F80C
+	// Token: 0x060001DC RID: 476 RVA: 0x00003BD2 File Offset: 0x00001DD2
 	public static int GetTotalNPCDialogueSoulsCollected()
 	{
 		return NPCDialogueManager.GetTotalCompleteDialogues() * 500;
 	}
 
-	// Token: 0x060001C9 RID: 457 RVA: 0x0001161C File Offset: 0x0000F81C
+	// Token: 0x060001DD RID: 477 RVA: 0x0004DA68 File Offset: 0x0004BC68
 	public static int GetTotalSoulsCollected(GameModeType gameMode, bool deductSpentSouls)
 	{
 		int totalBossSoulsCollected = Souls_EV.GetTotalBossSoulsCollected(gameMode);
@@ -161,7 +161,7 @@ public class Souls_EV
 		return totalBossSoulsCollected + totalChallengeSoulsCollected + totalNPCDialogueSoulsCollected + totalBlackChestSoulsCollected + miscSoulCollected - num;
 	}
 
-	// Token: 0x040004DD RID: 1245
+	// Token: 0x040004FE RID: 1278
 	public static Dictionary<BossID, Vector2Int> BOSS_SOUL_DROP_TABLE = new Dictionary<BossID, Vector2Int>
 	{
 		{
@@ -198,25 +198,25 @@ public class Souls_EV
 		}
 	};
 
-	// Token: 0x040004DE RID: 1246
+	// Token: 0x040004FF RID: 1279
 	public const int BLACK_CHEST_SOUL_DROP_AMOUNT = 50;
 
-	// Token: 0x040004DF RID: 1247
+	// Token: 0x04000500 RID: 1280
 	public const int CHALLENGE_BRONZE_REWARD_MULT = 1;
 
-	// Token: 0x040004E0 RID: 1248
+	// Token: 0x04000501 RID: 1281
 	public const int CHALLENGE_SILVER_REWARD_MULT = 2;
 
-	// Token: 0x040004E1 RID: 1249
+	// Token: 0x04000502 RID: 1282
 	public const int CHALLENGE_GOLD_REWARD_MULT = 3;
 
-	// Token: 0x040004E2 RID: 1250
+	// Token: 0x04000503 RID: 1283
 	public const int ORE_AETHER_EXCHANGE_RATE = 2;
 
-	// Token: 0x040004E3 RID: 1251
+	// Token: 0x04000504 RID: 1284
 	public const int ORE_AETHER_EXCHANGE_FLOOR = 500;
 
-	// Token: 0x040004E4 RID: 1252
+	// Token: 0x04000505 RID: 1285
 	public static readonly int[] ORE_AETHER_TO_SOUL_COST_LEVELS = new int[]
 	{
 		2500,
@@ -332,9 +332,9 @@ public class Souls_EV
 		5000000
 	};
 
-	// Token: 0x040004E5 RID: 1253
+	// Token: 0x04000506 RID: 1286
 	public const int SOULS_PER_LEVEL = 150;
 
-	// Token: 0x040004E6 RID: 1254
+	// Token: 0x04000507 RID: 1287
 	public const int NPC_DIALOGUE_SOUL_DROP_AMOUNT = 500;
 }

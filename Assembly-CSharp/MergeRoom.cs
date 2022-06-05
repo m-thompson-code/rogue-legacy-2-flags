@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000486 RID: 1158
+// Token: 0x02000783 RID: 1923
 public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 {
-	// Token: 0x17001077 RID: 4215
-	// (get) Token: 0x06002AAA RID: 10922 RVA: 0x000907DC File Offset: 0x0008E9DC
+	// Token: 0x170015B6 RID: 5558
+	// (get) Token: 0x06003AD5 RID: 15061 RVA: 0x000F22BC File Offset: 0x000F04BC
 	public override bool SpawnedAsEasyRoom
 	{
 		get
@@ -23,8 +23,8 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001078 RID: 4216
-	// (get) Token: 0x06002AAB RID: 10923 RVA: 0x0009084C File Offset: 0x0008EA4C
+	// Token: 0x170015B7 RID: 5559
+	// (get) Token: 0x06003AD6 RID: 15062 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public override BiomeArtData BiomeArtDataOverride
 	{
 		get
@@ -33,8 +33,8 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001079 RID: 4217
-	// (get) Token: 0x06002AAC RID: 10924 RVA: 0x0009084F File Offset: 0x0008EA4F
+	// Token: 0x170015B8 RID: 5560
+	// (get) Token: 0x06003AD7 RID: 15063 RVA: 0x0002047C File Offset: 0x0001E67C
 	public override Bounds Bounds
 	{
 		get
@@ -43,8 +43,8 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700107A RID: 4218
-	// (get) Token: 0x06002AAD RID: 10925 RVA: 0x00090857 File Offset: 0x0008EA57
+	// Token: 0x170015B9 RID: 5561
+	// (get) Token: 0x06003AD8 RID: 15064 RVA: 0x00020484 File Offset: 0x0001E684
 	public override List<Door> Doors
 	{
 		get
@@ -57,9 +57,9 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700107B RID: 4219
-	// (get) Token: 0x06002AAE RID: 10926 RVA: 0x00090872 File Offset: 0x0008EA72
-	// (set) Token: 0x06002AAF RID: 10927 RVA: 0x0009087A File Offset: 0x0008EA7A
+	// Token: 0x170015BA RID: 5562
+	// (get) Token: 0x06003AD9 RID: 15065 RVA: 0x0002049F File Offset: 0x0001E69F
+	// (set) Token: 0x06003ADA RID: 15066 RVA: 0x000204A7 File Offset: 0x0001E6A7
 	public Dictionary<GridPointManager, GlobalTeleporterController> GlobalTeleporters
 	{
 		get
@@ -72,8 +72,8 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700107C RID: 4220
-	// (get) Token: 0x06002AB0 RID: 10928 RVA: 0x00090883 File Offset: 0x0008EA83
+	// Token: 0x170015BB RID: 5563
+	// (get) Token: 0x06003ADB RID: 15067 RVA: 0x000204B0 File Offset: 0x0001E6B0
 	public override int Level
 	{
 		get
@@ -86,8 +86,8 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700107D RID: 4221
-	// (get) Token: 0x06002AB1 RID: 10929 RVA: 0x0009089D File Offset: 0x0008EA9D
+	// Token: 0x170015BC RID: 5564
+	// (get) Token: 0x06003ADC RID: 15068 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override RoomType RoomType
 	{
 		get
@@ -96,8 +96,8 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700107E RID: 4222
-	// (get) Token: 0x06002AB2 RID: 10930 RVA: 0x000908A0 File Offset: 0x0008EAA0
+	// Token: 0x170015BD RID: 5565
+	// (get) Token: 0x06003ADD RID: 15069 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override SpecialRoomType SpecialRoomType
 	{
 		get
@@ -106,29 +106,29 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700107F RID: 4223
-	// (get) Token: 0x06002AB3 RID: 10931 RVA: 0x000908A3 File Offset: 0x0008EAA3
-	// (set) Token: 0x06002AB4 RID: 10932 RVA: 0x000908AB File Offset: 0x0008EAAB
+	// Token: 0x170015BE RID: 5566
+	// (get) Token: 0x06003ADE RID: 15070 RVA: 0x000204CA File Offset: 0x0001E6CA
+	// (set) Token: 0x06003ADF RID: 15071 RVA: 0x000204D2 File Offset: 0x0001E6D2
 	public RoomEnemyManager[] StandaloneRoomEnemyManagers { get; private set; }
 
-	// Token: 0x17001080 RID: 4224
-	// (get) Token: 0x06002AB5 RID: 10933 RVA: 0x000908B4 File Offset: 0x0008EAB4
-	// (set) Token: 0x06002AB6 RID: 10934 RVA: 0x000908BC File Offset: 0x0008EABC
+	// Token: 0x170015BF RID: 5567
+	// (get) Token: 0x06003AE0 RID: 15072 RVA: 0x000204DB File Offset: 0x0001E6DB
+	// (set) Token: 0x06003AE1 RID: 15073 RVA: 0x000204E3 File Offset: 0x0001E6E3
 	public Bounds[] StandaloneRoomBounds { get; private set; }
 
-	// Token: 0x17001081 RID: 4225
-	// (get) Token: 0x06002AB7 RID: 10935 RVA: 0x000908C5 File Offset: 0x0008EAC5
-	// (set) Token: 0x06002AB8 RID: 10936 RVA: 0x000908CD File Offset: 0x0008EACD
+	// Token: 0x170015C0 RID: 5568
+	// (get) Token: 0x06003AE2 RID: 15074 RVA: 0x000204EC File Offset: 0x0001E6EC
+	// (set) Token: 0x06003AE3 RID: 15075 RVA: 0x000204F4 File Offset: 0x0001E6F4
 	public GridPointManager[] StandaloneGridPointManagers { get; private set; }
 
-	// Token: 0x17001082 RID: 4226
-	// (get) Token: 0x06002AB9 RID: 10937 RVA: 0x000908D6 File Offset: 0x0008EAD6
-	// (set) Token: 0x06002ABA RID: 10938 RVA: 0x000908DE File Offset: 0x0008EADE
+	// Token: 0x170015C1 RID: 5569
+	// (get) Token: 0x06003AE4 RID: 15076 RVA: 0x000204FD File Offset: 0x0001E6FD
+	// (set) Token: 0x06003AE5 RID: 15077 RVA: 0x00020505 File Offset: 0x0001E705
 	public int[] StandaloneRoomLevels { get; private set; }
 
-	// Token: 0x17001083 RID: 4227
-	// (get) Token: 0x06002ABB RID: 10939 RVA: 0x000908E7 File Offset: 0x0008EAE7
-	// (set) Token: 0x06002ABC RID: 10940 RVA: 0x000908EF File Offset: 0x0008EAEF
+	// Token: 0x170015C2 RID: 5570
+	// (get) Token: 0x06003AE6 RID: 15078 RVA: 0x0002050E File Offset: 0x0001E70E
+	// (set) Token: 0x06003AE7 RID: 15079 RVA: 0x00020516 File Offset: 0x0001E716
 	public Dictionary<Transform, List<Ferr2DT_PathTerrain>> StandaloneRoomToTerrainTable
 	{
 		get
@@ -141,8 +141,8 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001084 RID: 4228
-	// (get) Token: 0x06002ABD RID: 10941 RVA: 0x000908F8 File Offset: 0x0008EAF8
+	// Token: 0x170015C3 RID: 5571
+	// (get) Token: 0x06003AE8 RID: 15080 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool AllowItemDrops
 	{
 		get
@@ -151,13 +151,13 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002ABE RID: 10942 RVA: 0x000908FB File Offset: 0x0008EAFB
+	// Token: 0x06003AE9 RID: 15081 RVA: 0x0002051F File Offset: 0x0001E71F
 	public void AddRooms(List<Room> rooms)
 	{
 		base.StartCoroutine(this.AddRoomsCoroutine(rooms));
 	}
 
-	// Token: 0x06002ABF RID: 10943 RVA: 0x0009090B File Offset: 0x0008EB0B
+	// Token: 0x06003AEA RID: 15082 RVA: 0x0002052F File Offset: 0x0001E72F
 	private IEnumerator AddRoomsCoroutine(List<Room> rooms)
 	{
 		if (rooms == null)
@@ -210,7 +210,7 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		yield break;
 	}
 
-	// Token: 0x06002AC0 RID: 10944 RVA: 0x00090924 File Offset: 0x0008EB24
+	// Token: 0x06003AEB RID: 15083 RVA: 0x000F232C File Offset: 0x000F052C
 	private void CopyRoom(Room room)
 	{
 		room.OnMerge();
@@ -226,7 +226,7 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002AC1 RID: 10945 RVA: 0x0009098C File Offset: 0x0008EB8C
+	// Token: 0x06003AEC RID: 15084 RVA: 0x00020545 File Offset: 0x0001E745
 	private void CreateBridgeBiomeChunkColliders(List<Room> rooms)
 	{
 		GameObject gameObject = new GameObject("Merge Room Chunks");
@@ -235,7 +235,7 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		gameObject.AddComponent<MergeRoomChunkManager>().Initialize(this, rooms);
 	}
 
-	// Token: 0x06002AC2 RID: 10946 RVA: 0x000909C8 File Offset: 0x0008EBC8
+	// Token: 0x06003AED RID: 15085 RVA: 0x000F2394 File Offset: 0x000F0594
 	protected override int GetDecoSeed()
 	{
 		int result = -1;
@@ -246,7 +246,7 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		return result;
 	}
 
-	// Token: 0x06002AC3 RID: 10947 RVA: 0x000909F8 File Offset: 0x0008EBF8
+	// Token: 0x06003AEE RID: 15086 RVA: 0x000F23C4 File Offset: 0x000F05C4
 	private bool GetIsInternalDoor(List<Room> rooms, Door door)
 	{
 		bool flag = false;
@@ -269,7 +269,7 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		return !flag;
 	}
 
-	// Token: 0x06002AC4 RID: 10948 RVA: 0x00090AE8 File Offset: 0x0008ECE8
+	// Token: 0x06003AEF RID: 15087 RVA: 0x000F24B4 File Offset: 0x000F06B4
 	protected override int GetSpecialPropSeed()
 	{
 		int result = -1;
@@ -280,7 +280,7 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		return result;
 	}
 
-	// Token: 0x06002AC5 RID: 10949 RVA: 0x00090B18 File Offset: 0x0008ED18
+	// Token: 0x06003AF0 RID: 15088 RVA: 0x000F24E4 File Offset: 0x000F06E4
 	private void GrowBounds(Room room)
 	{
 		Bounds bounds = default(Bounds);
@@ -292,7 +292,7 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		base.BoundsRect = new Rect(new Vector2(x, y), this.m_bounds.size);
 	}
 
-	// Token: 0x06002AC6 RID: 10950 RVA: 0x00090BB0 File Offset: 0x0008EDB0
+	// Token: 0x06003AF1 RID: 15089 RVA: 0x000F257C File Offset: 0x000F077C
 	private void InitializeProperties(List<Room> rooms)
 	{
 		this.StandaloneGridPointManagers = new GridPointManager[rooms.Count];
@@ -319,7 +319,7 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002AC7 RID: 10951 RVA: 0x00090D80 File Offset: 0x0008EF80
+	// Token: 0x06003AF2 RID: 15090 RVA: 0x000F274C File Offset: 0x000F094C
 	private void PerformOperationsOnInternalDoors(List<Room> rooms)
 	{
 		foreach (Room room in rooms)
@@ -344,27 +344,27 @@ public class MergeRoom : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002AC8 RID: 10952 RVA: 0x00090E40 File Offset: 0x0008F040
+	// Token: 0x06003AF3 RID: 15091 RVA: 0x0002057E File Offset: 0x0001E77E
 	public override void SetLevel(int value)
 	{
 		this.m_levelOverride = value;
 	}
 
-	// Token: 0x06002ACA RID: 10954 RVA: 0x00090E6E File Offset: 0x0008F06E
+	// Token: 0x06003AF5 RID: 15093 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISummoner.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040022EB RID: 8939
+	// Token: 0x04002EEB RID: 12011
 	private Bounds m_bounds;
 
-	// Token: 0x040022EC RID: 8940
+	// Token: 0x04002EEC RID: 12012
 	private Dictionary<GridPointManager, GlobalTeleporterController> m_globalTeleporters = new Dictionary<GridPointManager, GlobalTeleporterController>();
 
-	// Token: 0x040022ED RID: 8941
+	// Token: 0x04002EED RID: 12013
 	private Dictionary<Transform, List<Ferr2DT_PathTerrain>> m_standaloneRoomToTerrainTable = new Dictionary<Transform, List<Ferr2DT_PathTerrain>>();
 
-	// Token: 0x040022EE RID: 8942
+	// Token: 0x04002EEE RID: 12014
 	private int m_levelOverride = -1;
 }

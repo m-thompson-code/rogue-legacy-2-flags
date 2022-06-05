@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000E2 RID: 226
+// Token: 0x0200016C RID: 364
 public class FlyingShield_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x060006AA RID: 1706 RVA: 0x00019B2E File Offset: 0x00017D2E
+	// Token: 0x060009BB RID: 2491 RVA: 0x0000673E File Offset: 0x0000493E
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -16,8 +16,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000368 RID: 872
-	// (get) Token: 0x060006AB RID: 1707 RVA: 0x00019B54 File Offset: 0x00017D54
+	// Token: 0x1700046C RID: 1132
+	// (get) Token: 0x060009BC RID: 2492 RVA: 0x0000645C File Offset: 0x0000465C
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -26,8 +26,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000369 RID: 873
-	// (get) Token: 0x060006AC RID: 1708 RVA: 0x00019B65 File Offset: 0x00017D65
+	// Token: 0x1700046D RID: 1133
+	// (get) Token: 0x060009BD RID: 2493 RVA: 0x00006275 File Offset: 0x00004475
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -36,8 +36,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700036A RID: 874
-	// (get) Token: 0x060006AD RID: 1709 RVA: 0x00019B76 File Offset: 0x00017D76
+	// Token: 0x1700046E RID: 1134
+	// (get) Token: 0x060009BE RID: 2494 RVA: 0x00006275 File Offset: 0x00004475
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -46,8 +46,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700036B RID: 875
-	// (get) Token: 0x060006AE RID: 1710 RVA: 0x00019B87 File Offset: 0x00017D87
+	// Token: 0x1700046F RID: 1135
+	// (get) Token: 0x060009BF RID: 2495 RVA: 0x00005FAA File Offset: 0x000041AA
 	protected virtual float m_spinMove_TellIntro_AnimationSpeed
 	{
 		get
@@ -56,8 +56,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700036C RID: 876
-	// (get) Token: 0x060006AF RID: 1711 RVA: 0x00019B8E File Offset: 0x00017D8E
+	// Token: 0x17000470 RID: 1136
+	// (get) Token: 0x060009C0 RID: 2496 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float m_spinMove_TellIntro_EndDelay
 	{
 		get
@@ -66,8 +66,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700036D RID: 877
-	// (get) Token: 0x060006B0 RID: 1712 RVA: 0x00019B95 File Offset: 0x00017D95
+	// Token: 0x17000471 RID: 1137
+	// (get) Token: 0x060009C1 RID: 2497 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_spinMove_TellHold_AnimationSpeed
 	{
 		get
@@ -76,8 +76,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700036E RID: 878
-	// (get) Token: 0x060006B1 RID: 1713 RVA: 0x00019B9C File Offset: 0x00017D9C
+	// Token: 0x17000472 RID: 1138
+	// (get) Token: 0x060009C2 RID: 2498 RVA: 0x00006764 File Offset: 0x00004964
 	protected virtual float m_spinMove_TellHold_Duration
 	{
 		get
@@ -86,8 +86,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700036F RID: 879
-	// (get) Token: 0x060006B2 RID: 1714 RVA: 0x00019BA3 File Offset: 0x00017DA3
+	// Token: 0x17000473 RID: 1139
+	// (get) Token: 0x060009C3 RID: 2499 RVA: 0x00005FAA File Offset: 0x000041AA
 	protected virtual float m_spinMove_AttackIntro_AnimationSpeed
 	{
 		get
@@ -96,8 +96,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000370 RID: 880
-	// (get) Token: 0x060006B3 RID: 1715 RVA: 0x00019BAA File Offset: 0x00017DAA
+	// Token: 0x17000474 RID: 1140
+	// (get) Token: 0x060009C4 RID: 2500 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_spinMove_AttackIntro_EndDelay
 	{
 		get
@@ -106,8 +106,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000371 RID: 881
-	// (get) Token: 0x060006B4 RID: 1716 RVA: 0x00019BB1 File Offset: 0x00017DB1
+	// Token: 0x17000475 RID: 1141
+	// (get) Token: 0x060009C5 RID: 2501 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_spinMove_Attack_FlameDrops
 	{
 		get
@@ -116,8 +116,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000372 RID: 882
-	// (get) Token: 0x060006B5 RID: 1717 RVA: 0x00019BB8 File Offset: 0x00017DB8
+	// Token: 0x17000476 RID: 1142
+	// (get) Token: 0x060009C6 RID: 2502 RVA: 0x0000676B File Offset: 0x0000496B
 	protected virtual float m_spinMove_Attack_Duration
 	{
 		get
@@ -126,8 +126,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000373 RID: 883
-	// (get) Token: 0x060006B6 RID: 1718 RVA: 0x00019BBF File Offset: 0x00017DBF
+	// Token: 0x17000477 RID: 1143
+	// (get) Token: 0x060009C7 RID: 2503 RVA: 0x0000521E File Offset: 0x0000341E
 	protected virtual float m_spinMove_Attack_MoveSpeed
 	{
 		get
@@ -136,8 +136,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000374 RID: 884
-	// (get) Token: 0x060006B7 RID: 1719 RVA: 0x00019BC6 File Offset: 0x00017DC6
+	// Token: 0x17000478 RID: 1144
+	// (get) Token: 0x060009C8 RID: 2504 RVA: 0x00005FAA File Offset: 0x000041AA
 	protected virtual float m_spinMove_ExitIntro_AnimationSpeed
 	{
 		get
@@ -146,8 +146,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000375 RID: 885
-	// (get) Token: 0x060006B8 RID: 1720 RVA: 0x00019BCD File Offset: 0x00017DCD
+	// Token: 0x17000479 RID: 1145
+	// (get) Token: 0x060009C9 RID: 2505 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected virtual float m_spinMove_ExitIntro_EndDelay
 	{
 		get
@@ -156,8 +156,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000376 RID: 886
-	// (get) Token: 0x060006B9 RID: 1721 RVA: 0x00019BD4 File Offset: 0x00017DD4
+	// Token: 0x1700047A RID: 1146
+	// (get) Token: 0x060009CA RID: 2506 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_hasTailSpin
 	{
 		get
@@ -166,8 +166,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000377 RID: 887
-	// (get) Token: 0x060006BA RID: 1722 RVA: 0x00019BD7 File Offset: 0x00017DD7
+	// Token: 0x1700047B RID: 1147
+	// (get) Token: 0x060009CB RID: 2507 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_hasTailRam
 	{
 		get
@@ -176,8 +176,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000378 RID: 888
-	// (get) Token: 0x060006BB RID: 1723 RVA: 0x00019BDA File Offset: 0x00017DDA
+	// Token: 0x1700047C RID: 1148
+	// (get) Token: 0x060009CC RID: 2508 RVA: 0x00006772 File Offset: 0x00004972
 	protected virtual float m_fireball_TailSpawnDelay
 	{
 		get
@@ -186,8 +186,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000379 RID: 889
-	// (get) Token: 0x060006BC RID: 1724 RVA: 0x00019BE1 File Offset: 0x00017DE1
+	// Token: 0x1700047D RID: 1149
+	// (get) Token: 0x060009CD RID: 2509 RVA: 0x00006779 File Offset: 0x00004979
 	protected virtual float m_fireball_TailRamSpawnDelay
 	{
 		get
@@ -196,8 +196,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700037A RID: 890
-	// (get) Token: 0x060006BD RID: 1725 RVA: 0x00019BE8 File Offset: 0x00017DE8
+	// Token: 0x1700047E RID: 1150
+	// (get) Token: 0x060009CE RID: 2510 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float m_spinMove_Exit_ForceIdle
 	{
 		get
@@ -206,8 +206,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700037B RID: 891
-	// (get) Token: 0x060006BE RID: 1726 RVA: 0x00019BEF File Offset: 0x00017DEF
+	// Token: 0x1700047F RID: 1151
+	// (get) Token: 0x060009CF RID: 2511 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_spinMove_Exit_AttackCD
 	{
 		get
@@ -216,8 +216,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700037C RID: 892
-	// (get) Token: 0x060006BF RID: 1727 RVA: 0x00019BF6 File Offset: 0x00017DF6
+	// Token: 0x17000480 RID: 1152
+	// (get) Token: 0x060009D0 RID: 2512 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_raiseKnockbackDefenseWhileAttacking
 	{
 		get
@@ -226,8 +226,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700037D RID: 893
-	// (get) Token: 0x060006C0 RID: 1728 RVA: 0x00019BF9 File Offset: 0x00017DF9
+	// Token: 0x17000481 RID: 1153
+	// (get) Token: 0x060009D1 RID: 2513 RVA: 0x00004762 File Offset: 0x00002962
 	protected virtual int m_knockbackDefenseBoostOverride
 	{
 		get
@@ -236,8 +236,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700037E RID: 894
-	// (get) Token: 0x060006C1 RID: 1729 RVA: 0x00019BFC File Offset: 0x00017DFC
+	// Token: 0x17000482 RID: 1154
+	// (get) Token: 0x060009D2 RID: 2514 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_ramMove_ChaseDuration
 	{
 		get
@@ -246,8 +246,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700037F RID: 895
-	// (get) Token: 0x060006C2 RID: 1730 RVA: 0x00019C03 File Offset: 0x00017E03
+	// Token: 0x17000483 RID: 1155
+	// (get) Token: 0x060009D3 RID: 2515 RVA: 0x000052A9 File Offset: 0x000034A9
 	protected virtual float m_ramMove_TellIntro_AnimationSpeed
 	{
 		get
@@ -256,8 +256,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000380 RID: 896
-	// (get) Token: 0x060006C3 RID: 1731 RVA: 0x00019C0A File Offset: 0x00017E0A
+	// Token: 0x17000484 RID: 1156
+	// (get) Token: 0x060009D4 RID: 2516 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_ramMove_TellHold_AnimationSpeed
 	{
 		get
@@ -266,8 +266,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000381 RID: 897
-	// (get) Token: 0x060006C4 RID: 1732 RVA: 0x00019C11 File Offset: 0x00017E11
+	// Token: 0x17000485 RID: 1157
+	// (get) Token: 0x060009D5 RID: 2517 RVA: 0x00006780 File Offset: 0x00004980
 	protected virtual float m_ramMove_TellIntroAndHold_Delay
 	{
 		get
@@ -276,8 +276,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000382 RID: 898
-	// (get) Token: 0x060006C5 RID: 1733 RVA: 0x00019C18 File Offset: 0x00017E18
+	// Token: 0x17000486 RID: 1158
+	// (get) Token: 0x060009D6 RID: 2518 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_ramMove_AttackIntro_AnimationSpeed
 	{
 		get
@@ -286,8 +286,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000383 RID: 899
-	// (get) Token: 0x060006C6 RID: 1734 RVA: 0x00019C1F File Offset: 0x00017E1F
+	// Token: 0x17000487 RID: 1159
+	// (get) Token: 0x060009D7 RID: 2519 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_ramMove_AttackIntro_Delay
 	{
 		get
@@ -296,8 +296,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000384 RID: 900
-	// (get) Token: 0x060006C7 RID: 1735 RVA: 0x00019C26 File Offset: 0x00017E26
+	// Token: 0x17000488 RID: 1160
+	// (get) Token: 0x060009D8 RID: 2520 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_ramMove_AttackHold_AnimationSpeed
 	{
 		get
@@ -306,8 +306,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000385 RID: 901
-	// (get) Token: 0x060006C8 RID: 1736 RVA: 0x00019C2D File Offset: 0x00017E2D
+	// Token: 0x17000489 RID: 1161
+	// (get) Token: 0x060009D9 RID: 2521 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_ramMove_AttackHold_Duration
 	{
 		get
@@ -316,8 +316,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000386 RID: 902
-	// (get) Token: 0x060006C9 RID: 1737 RVA: 0x00019C34 File Offset: 0x00017E34
+	// Token: 0x1700048A RID: 1162
+	// (get) Token: 0x060009DA RID: 2522 RVA: 0x00004520 File Offset: 0x00002720
 	protected virtual float m_ramMove_Attack_Duration
 	{
 		get
@@ -326,8 +326,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000387 RID: 903
-	// (get) Token: 0x060006CA RID: 1738 RVA: 0x00019C3B File Offset: 0x00017E3B
+	// Token: 0x1700048B RID: 1163
+	// (get) Token: 0x060009DB RID: 2523 RVA: 0x00006787 File Offset: 0x00004987
 	protected virtual float m_ramMove_Attack_Speed
 	{
 		get
@@ -336,8 +336,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000388 RID: 904
-	// (get) Token: 0x060006CB RID: 1739 RVA: 0x00019C42 File Offset: 0x00017E42
+	// Token: 0x1700048C RID: 1164
+	// (get) Token: 0x060009DC RID: 2524 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_ramMove_ExitIntro_AnimationSpeed
 	{
 		get
@@ -346,8 +346,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000389 RID: 905
-	// (get) Token: 0x060006CC RID: 1740 RVA: 0x00019C49 File Offset: 0x00017E49
+	// Token: 0x1700048D RID: 1165
+	// (get) Token: 0x060009DD RID: 2525 RVA: 0x000050CB File Offset: 0x000032CB
 	protected virtual float m_ramMove_ExitIntro_EndDelay
 	{
 		get
@@ -356,8 +356,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700038A RID: 906
-	// (get) Token: 0x060006CD RID: 1741 RVA: 0x00019C50 File Offset: 0x00017E50
+	// Token: 0x1700048E RID: 1166
+	// (get) Token: 0x060009DE RID: 2526 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected virtual float m_ramMove_ExitIntro_ForceIdle
 	{
 		get
@@ -366,8 +366,8 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700038B RID: 907
-	// (get) Token: 0x060006CE RID: 1742 RVA: 0x00019C57 File Offset: 0x00017E57
+	// Token: 0x1700048F RID: 1167
+	// (get) Token: 0x060009DF RID: 2527 RVA: 0x00003D93 File Offset: 0x00001F93
 	protected virtual float m_ramMove_Attack_CD
 	{
 		get
@@ -376,7 +376,7 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060006CF RID: 1743 RVA: 0x00019C5E File Offset: 0x00017E5E
+	// Token: 0x060009E0 RID: 2528 RVA: 0x0000678E File Offset: 0x0000498E
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -386,7 +386,7 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		this.m_bounceLogic.enabled = false;
 	}
 
-	// Token: 0x060006D0 RID: 1744 RVA: 0x00019C9C File Offset: 0x00017E9C
+	// Token: 0x060009E1 RID: 2529 RVA: 0x000067CC File Offset: 0x000049CC
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -434,7 +434,7 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060006D1 RID: 1745 RVA: 0x00019CAB File Offset: 0x00017EAB
+	// Token: 0x060009E2 RID: 2530 RVA: 0x000067DB File Offset: 0x000049DB
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -508,7 +508,7 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060006D2 RID: 1746 RVA: 0x00019CBA File Offset: 0x00017EBA
+	// Token: 0x060009E3 RID: 2531 RVA: 0x000067EA File Offset: 0x000049EA
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.OnLBCompleteOrCancelled();
@@ -518,7 +518,7 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		base.EnemyController.HitboxController.CollisionType = CollisionType.Enemy;
 	}
 
-	// Token: 0x060006D3 RID: 1747 RVA: 0x00019CED File Offset: 0x00017EED
+	// Token: 0x060009E4 RID: 2532 RVA: 0x0000681D File Offset: 0x00004A1D
 	public override void ResetScript()
 	{
 		base.ResetScript();
@@ -529,7 +529,7 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		this.m_aimSprite.SetActive(false);
 	}
 
-	// Token: 0x060006D4 RID: 1748 RVA: 0x00019D28 File Offset: 0x00017F28
+	// Token: 0x060009E5 RID: 2533 RVA: 0x00067210 File Offset: 0x00065410
 	protected void Update()
 	{
 		if (!base.IsInitialized)
@@ -578,7 +578,7 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060006D5 RID: 1749 RVA: 0x00019E69 File Offset: 0x00018069
+	// Token: 0x060009E6 RID: 2534 RVA: 0x00006857 File Offset: 0x00004A57
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -588,28 +588,28 @@ public class FlyingShield_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x04000AD5 RID: 2773
+	// Token: 0x04000D4A RID: 3402
 	[SerializeField]
 	private GameObject m_aimSprite;
 
-	// Token: 0x04000AD6 RID: 2774
+	// Token: 0x04000D4B RID: 3403
 	private float m_fireball_TailCounter;
 
-	// Token: 0x04000AD7 RID: 2775
+	// Token: 0x04000D4C RID: 3404
 	private bool m_enableTail;
 
-	// Token: 0x04000AD8 RID: 2776
+	// Token: 0x04000D4D RID: 3405
 	private bool m_isRamAttack;
 
-	// Token: 0x04000AD9 RID: 2777
+	// Token: 0x04000D4E RID: 3406
 	private bool m_aim;
 
-	// Token: 0x04000ADA RID: 2778
+	// Token: 0x04000D4F RID: 3407
 	private BounceCollision m_bounceLogic;
 
-	// Token: 0x04000ADB RID: 2779
+	// Token: 0x04000D50 RID: 3408
 	protected Vector3 m_ramMove_SetRamPosition = new Vector3(-1f, 0f, 0f);
 
-	// Token: 0x04000ADC RID: 2780
+	// Token: 0x04000D51 RID: 3409
 	private float m_spinAttackTurnSpeedOverride = 175f;
 }

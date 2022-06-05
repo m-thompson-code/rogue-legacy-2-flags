@@ -1,40 +1,40 @@
 ﻿using System;
 
-// Token: 0x0200073B RID: 1851
+// Token: 0x02000BF9 RID: 3065
 public enum HeirloomType
 {
-	// Token: 0x04003464 RID: 13412
+	// Token: 0x040046E0 RID: 18144
 	None,
-	// Token: 0x04003465 RID: 13413
+	// Token: 0x040046E1 RID: 18145
 	Reliquary = 5,
-	// Token: 0x04003466 RID: 13414
+	// Token: 0x040046E2 RID: 18146
 	Contract,
-	// Token: 0x04003467 RID: 13415
+	// Token: 0x040046E3 RID: 18147
 	UnlockAirDash = 20,
-	// Token: 0x04003468 RID: 13416
+	// Token: 0x040046E4 RID: 18148
 	UnlockMemory = 50,
-	// Token: 0x04003469 RID: 13417
+	// Token: 0x040046E5 RID: 18149
 	UnlockDoubleJump = 10,
-	// Token: 0x0400346A RID: 13418
+	// Token: 0x040046E6 RID: 18150
 	UnlockBouncableDownstrike = 30,
-	// Token: 0x0400346B RID: 13419
+	// Token: 0x040046E7 RID: 18151
 	ManorUpgrade_HP_Magic_Mana_1 = 40,
-	// Token: 0x0400346C RID: 13420
+	// Token: 0x040046E8 RID: 18152
 	UnlockHitCurseProjectiles = 60,
-	// Token: 0x0400346D RID: 13421
+	// Token: 0x040046E9 RID: 18153
 	UnlockVoidDash = 70,
-	// Token: 0x0400346E RID: 13422
+	// Token: 0x040046EA RID: 18154
 	BossAnchorVisible = 80,
-	// Token: 0x0400346F RID: 13423
+	// Token: 0x040046EB RID: 18155
 	UnlockSecretBosses = 90,
-	// Token: 0x04003470 RID: 13424
+	// Token: 0x040046EC RID: 18156
 	CaveLantern = 100,
-	// Token: 0x04003471 RID: 13425
+	// Token: 0x040046ED RID: 18157
 	UnlockEarthShift = 110,
-	// Token: 0x04003472 RID: 13426
+	// Token: 0x040046EE RID: 18158
 	RebelKey = 120,
-	// Token: 0x04003473 RID: 13427
+	// Token: 0x040046EF RID: 18159
 	EggplantFood = 130,
-	// Token: 0x04003474 RID: 13428
+	// Token: 0x040046F0 RID: 18160
 	Fruit = 140
 }

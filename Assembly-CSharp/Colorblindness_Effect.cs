@@ -1,37 +1,37 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200059A RID: 1434
+// Token: 0x020009A1 RID: 2465
 public class Colorblindness_Effect : MonoBehaviour
 {
-	// Token: 0x060035F5 RID: 13813 RVA: 0x000BC0DB File Offset: 0x000BA2DB
+	// Token: 0x06004C07 RID: 19463 RVA: 0x00029A74 File Offset: 0x00027C74
 	private void Awake()
 	{
 		this.m_material = new Material(Shader.Find("RL2/Colorblindness"));
 	}
 
-	// Token: 0x060035F6 RID: 13814 RVA: 0x000BC0F2 File Offset: 0x000BA2F2
+	// Token: 0x06004C08 RID: 19464 RVA: 0x00029A8B File Offset: 0x00027C8B
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		this.m_material.SetInt("_CBType", (int)this.m_colorblindType);
 		Graphics.Blit(source, destination, this.m_material);
 	}
 
-	// Token: 0x04002A0F RID: 10767
+	// Token: 0x04003A09 RID: 14857
 	[SerializeField]
 	private Colorblindness_Effect.ColorblindType m_colorblindType;
 
-	// Token: 0x04002A10 RID: 10768
+	// Token: 0x04003A0A RID: 14858
 	private Material m_material;
 
-	// Token: 0x02000D7D RID: 3453
+	// Token: 0x020009A2 RID: 2466
 	private enum ColorblindType
 	{
-		// Token: 0x04005483 RID: 21635
+		// Token: 0x04003A0C RID: 14860
 		Protanopia,
-		// Token: 0x04005484 RID: 21636
+		// Token: 0x04003A0D RID: 14861
 		Deuteranopia,
-		// Token: 0x04005485 RID: 21637
+		// Token: 0x04003A0E RID: 14862
 		Tritanopia
 	}
 }

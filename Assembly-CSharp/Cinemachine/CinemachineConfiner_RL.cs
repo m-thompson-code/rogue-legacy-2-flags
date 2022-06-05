@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Cinemachine
 {
-	// Token: 0x0200087D RID: 2173
+	// Token: 0x02000D97 RID: 3479
 	[DocumentationSorting(DocumentationSortingAttribute.Level.UserRef)]
 	[AddComponentMenu("")]
 	[SaveDuringPlay]
@@ -13,32 +13,32 @@ namespace Cinemachine
 	[DisallowMultipleComponent]
 	public class CinemachineConfiner_RL : CinemachineExtension
 	{
-		// Token: 0x0600479C RID: 18332 RVA: 0x0010187C File Offset: 0x000FFA7C
+		// Token: 0x06006299 RID: 25241 RVA: 0x000364F3 File Offset: 0x000346F3
 		public bool CameraWasDisplaced(CinemachineVirtualCameraBase vcam)
 		{
 			return this.GetCameraDisplacementDistance(vcam) > 0f;
 		}
 
-		// Token: 0x0600479D RID: 18333 RVA: 0x0010188C File Offset: 0x000FFA8C
+		// Token: 0x0600629A RID: 25242 RVA: 0x00036503 File Offset: 0x00034703
 		public float GetCameraDisplacementDistance(CinemachineVirtualCameraBase vcam)
 		{
 			return base.GetExtraState<CinemachineConfiner_RL.VcamExtraState>(vcam).confinerDisplacement;
 		}
 
-		// Token: 0x0600479E RID: 18334 RVA: 0x0010189A File Offset: 0x000FFA9A
+		// Token: 0x0600629B RID: 25243 RVA: 0x00036511 File Offset: 0x00034711
 		private void OnValidate()
 		{
 			this.m_Damping = Mathf.Max(0f, this.m_Damping);
 		}
 
-		// Token: 0x0600479F RID: 18335 RVA: 0x001018B2 File Offset: 0x000FFAB2
+		// Token: 0x0600629C RID: 25244 RVA: 0x00036529 File Offset: 0x00034729
 		protected override void ConnectToVcam(bool connect)
 		{
 			base.ConnectToVcam(connect);
 		}
 
-		// Token: 0x1700177D RID: 6013
-		// (get) Token: 0x060047A0 RID: 18336 RVA: 0x001018BC File Offset: 0x000FFABC
+		// Token: 0x17001FDF RID: 8159
+		// (get) Token: 0x0600629D RID: 25245 RVA: 0x001702D0 File Offset: 0x0016E4D0
 		public bool IsValid
 		{
 			get
@@ -47,13 +47,13 @@ namespace Cinemachine
 			}
 		}
 
-		// Token: 0x060047A1 RID: 18337 RVA: 0x00101936 File Offset: 0x000FFB36
+		// Token: 0x0600629E RID: 25246 RVA: 0x00036532 File Offset: 0x00034732
 		public override float GetMaxDampTime()
 		{
 			return this.m_Damping;
 		}
 
-		// Token: 0x060047A2 RID: 18338 RVA: 0x00101940 File Offset: 0x000FFB40
+		// Token: 0x0600629F RID: 25247 RVA: 0x0017034C File Offset: 0x0016E54C
 		protected override void PostPipelineStageCallback(CinemachineVirtualCameraBase vcam, CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
 		{
 			if (this.IsValid && stage == CinemachineCore.Stage.Body)
@@ -80,14 +80,14 @@ namespace Cinemachine
 			}
 		}
 
-		// Token: 0x060047A3 RID: 18339 RVA: 0x00101A08 File Offset: 0x000FFC08
+		// Token: 0x060062A0 RID: 25248 RVA: 0x0003653A File Offset: 0x0003473A
 		public void InvalidatePathCache()
 		{
 			this.m_pathCache = null;
 			this.m_BoundingShape2DCache = null;
 		}
 
-		// Token: 0x060047A4 RID: 18340 RVA: 0x00101A18 File Offset: 0x000FFC18
+		// Token: 0x060062A1 RID: 25249 RVA: 0x00170414 File Offset: 0x0016E614
 		private bool ValidatePathCache()
 		{
 			if (this.m_BoundingShape2DCache != this.m_BoundingShape2D)
@@ -143,7 +143,7 @@ namespace Cinemachine
 			return false;
 		}
 
-		// Token: 0x060047A5 RID: 18341 RVA: 0x00101C2C File Offset: 0x000FFE2C
+		// Token: 0x060062A2 RID: 25250 RVA: 0x00170628 File Offset: 0x0016E828
 		private Vector3 ConfinePoint(Vector3 camPos)
 		{
 			if (this.m_ConfineMode == CinemachineConfiner_RL.Mode.Confine3D)
@@ -184,13 +184,13 @@ namespace Cinemachine
 			return a - vector;
 		}
 
-		// Token: 0x060047A6 RID: 18342 RVA: 0x00101D92 File Offset: 0x000FFF92
+		// Token: 0x060062A3 RID: 25251 RVA: 0x0003654A File Offset: 0x0003474A
 		private bool AlmostZero(Vector3 v)
 		{
 			return v.sqrMagnitude < 0.0001f;
 		}
 
-		// Token: 0x060047A7 RID: 18343 RVA: 0x00101DA4 File Offset: 0x000FFFA4
+		// Token: 0x060062A4 RID: 25252 RVA: 0x00170790 File Offset: 0x0016E990
 		private Vector3 ConfineScreenEdges(CinemachineVirtualCameraBase vcam, ref CameraState state)
 		{
 			Quaternion rotation = Quaternion.Inverse(state.CorrectedOrientation);
@@ -232,52 +232,52 @@ namespace Cinemachine
 			return vector;
 		}
 
-		// Token: 0x04003C6C RID: 15468
+		// Token: 0x04005062 RID: 20578
 		[Tooltip("The confiner can operate using a 2D bounding shape or a 3D bounding volume")]
 		public CinemachineConfiner_RL.Mode m_ConfineMode;
 
-		// Token: 0x04003C6D RID: 15469
+		// Token: 0x04005063 RID: 20579
 		[Tooltip("The volume within which the camera is to be contained")]
 		public Collider m_BoundingVolume;
 
-		// Token: 0x04003C6E RID: 15470
+		// Token: 0x04005064 RID: 20580
 		[Tooltip("The 2D shape within which the camera is to be contained")]
 		public Collider2D m_BoundingShape2D;
 
-		// Token: 0x04003C6F RID: 15471
+		// Token: 0x04005065 RID: 20581
 		private Collider2D m_BoundingShape2DCache;
 
-		// Token: 0x04003C70 RID: 15472
+		// Token: 0x04005066 RID: 20582
 		[Tooltip("If camera is orthographic, screen edges will be confined to the volume.  If not checked, then only the camera center will be confined")]
 		public bool m_ConfineScreenEdges = true;
 
-		// Token: 0x04003C71 RID: 15473
+		// Token: 0x04005067 RID: 20583
 		[Tooltip("How gradually to return the camera to the bounding volume if it goes beyond the borders.  Higher numbers are more gradual.")]
 		[Range(0f, 10f)]
 		public float m_Damping;
 
-		// Token: 0x04003C72 RID: 15474
+		// Token: 0x04005068 RID: 20584
 		private List<List<Vector2>> m_pathCache;
 
-		// Token: 0x04003C73 RID: 15475
+		// Token: 0x04005069 RID: 20585
 		private int m_pathTotalPointCount;
 
-		// Token: 0x02000E8B RID: 3723
+		// Token: 0x02000D98 RID: 3480
 		public enum Mode
 		{
-			// Token: 0x0400586B RID: 22635
+			// Token: 0x0400506B RID: 20587
 			Confine2D,
-			// Token: 0x0400586C RID: 22636
+			// Token: 0x0400506C RID: 20588
 			Confine3D
 		}
 
-		// Token: 0x02000E8C RID: 3724
+		// Token: 0x02000D99 RID: 3481
 		private class VcamExtraState
 		{
-			// Token: 0x0400586D RID: 22637
+			// Token: 0x0400506D RID: 20589
 			public Vector3 m_previousDisplacement;
 
-			// Token: 0x0400586E RID: 22638
+			// Token: 0x0400506E RID: 20590
 			public float confinerDisplacement;
 		}
 	}

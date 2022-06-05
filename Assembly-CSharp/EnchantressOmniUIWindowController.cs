@@ -3,11 +3,11 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000586 RID: 1414
+// Token: 0x0200097E RID: 2430
 public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<BaseOmniUICategoryEntry, EnchantressOmniUIEntry>
 {
-	// Token: 0x170012C7 RID: 4807
-	// (get) Token: 0x060034D0 RID: 13520 RVA: 0x000B570A File Offset: 0x000B390A
+	// Token: 0x170019D8 RID: 6616
+	// (get) Token: 0x06004A8D RID: 19085 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool CanReset
 	{
 		get
@@ -16,8 +16,8 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		}
 	}
 
-	// Token: 0x170012C8 RID: 4808
-	// (get) Token: 0x060034D1 RID: 13521 RVA: 0x000B5710 File Offset: 0x000B3910
+	// Token: 0x170019D9 RID: 6617
+	// (get) Token: 0x06004A8E RID: 19086 RVA: 0x00122438 File Offset: 0x00120638
 	public override bool CanExit
 	{
 		get
@@ -31,8 +31,8 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		}
 	}
 
-	// Token: 0x170012C9 RID: 4809
-	// (get) Token: 0x060034D2 RID: 13522 RVA: 0x000B5740 File Offset: 0x000B3940
+	// Token: 0x170019DA RID: 6618
+	// (get) Token: 0x06004A8F RID: 19087 RVA: 0x00028CF5 File Offset: 0x00026EF5
 	public RuneType SelectedRuneType
 	{
 		get
@@ -45,8 +45,8 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		}
 	}
 
-	// Token: 0x170012CA RID: 4810
-	// (get) Token: 0x060034D3 RID: 13523 RVA: 0x000B575E File Offset: 0x000B395E
+	// Token: 0x170019DB RID: 6619
+	// (get) Token: 0x06004A90 RID: 19088 RVA: 0x000046FA File Offset: 0x000028FA
 	public override WindowID ID
 	{
 		get
@@ -55,7 +55,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		}
 	}
 
-	// Token: 0x060034D4 RID: 13524 RVA: 0x000B5764 File Offset: 0x000B3964
+	// Token: 0x06004A91 RID: 19089 RVA: 0x00122468 File Offset: 0x00120668
 	protected override void Awake()
 	{
 		base.Awake();
@@ -65,12 +65,12 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		this.m_cancelToggleLoadouts = new Action(this.CancelToggleLoadouts);
 	}
 
-	// Token: 0x060034D5 RID: 13525 RVA: 0x000B57BF File Offset: 0x000B39BF
+	// Token: 0x06004A92 RID: 19090 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void CreateCategoryEntries()
 	{
 	}
 
-	// Token: 0x060034D6 RID: 13526 RVA: 0x000B57C4 File Offset: 0x000B39C4
+	// Token: 0x06004A93 RID: 19091 RVA: 0x001224C4 File Offset: 0x001206C4
 	protected override void CreateEntries()
 	{
 		if (base.EntryArray != null)
@@ -95,7 +95,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		}
 	}
 
-	// Token: 0x060034D7 RID: 13527 RVA: 0x000B5890 File Offset: 0x000B3A90
+	// Token: 0x06004A94 RID: 19092 RVA: 0x00122590 File Offset: 0x00120790
 	protected override void UpdateScrollArrows(float scrollAmount)
 	{
 		base.UpdateScrollArrows(scrollAmount);
@@ -181,7 +181,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		}
 	}
 
-	// Token: 0x060034D8 RID: 13528 RVA: 0x000B5AEA File Offset: 0x000B3CEA
+	// Token: 0x06004A95 RID: 19093 RVA: 0x00028C7A File Offset: 0x00026E7A
 	private void SetGameObjectActive(GameObject obj, bool active)
 	{
 		if (obj.activeSelf == !active)
@@ -190,7 +190,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		}
 	}
 
-	// Token: 0x060034D9 RID: 13529 RVA: 0x000B5B00 File Offset: 0x000B3D00
+	// Token: 0x06004A96 RID: 19094 RVA: 0x001227EC File Offset: 0x001209EC
 	protected override void OnOpen()
 	{
 		base.OnOpen();
@@ -208,7 +208,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		}
 	}
 
-	// Token: 0x060034DA RID: 13530 RVA: 0x000B5B80 File Offset: 0x000B3D80
+	// Token: 0x06004A97 RID: 19095 RVA: 0x0012286C File Offset: 0x00120A6C
 	public bool HasAllRunes()
 	{
 		bool result = true;
@@ -224,7 +224,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		return result;
 	}
 
-	// Token: 0x060034DB RID: 13531 RVA: 0x000B5BBC File Offset: 0x000B3DBC
+	// Token: 0x06004A98 RID: 19096 RVA: 0x001228A8 File Offset: 0x00120AA8
 	protected override void OnClose()
 	{
 		base.OnClose();
@@ -245,7 +245,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		SaveManager.PlayerSaveData.UpdateCachedData();
 	}
 
-	// Token: 0x060034DC RID: 13532 RVA: 0x000B5C20 File Offset: 0x000B3E20
+	// Token: 0x06004A99 RID: 19097 RVA: 0x00028D13 File Offset: 0x00026F13
 	protected override void OnYButtonJustPressed()
 	{
 		this.InitializeResetMenu();
@@ -254,7 +254,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		base.OnYButtonJustPressed();
 	}
 
-	// Token: 0x060034DD RID: 13533 RVA: 0x000B5C40 File Offset: 0x000B3E40
+	// Token: 0x06004A9A RID: 19098 RVA: 0x0012290C File Offset: 0x00120B0C
 	private void InitializeResetMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -274,7 +274,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		buttonAtIndex2.SetOnClickAction(this.m_cancelUnequipAllRunes);
 	}
 
-	// Token: 0x060034DE RID: 13534 RVA: 0x000B5CD0 File Offset: 0x000B3ED0
+	// Token: 0x06004A9B RID: 19099 RVA: 0x0012299C File Offset: 0x00120B9C
 	private void ConfirmUnequipAllRunes()
 	{
 		foreach (RuneType runeType in RuneType_RL.TypeArray)
@@ -301,14 +301,14 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		this.CancelUnequipAllRunes();
 	}
 
-	// Token: 0x060034DF RID: 13535 RVA: 0x000B5D72 File Offset: 0x000B3F72
+	// Token: 0x06004A9C RID: 19100 RVA: 0x00028D30 File Offset: 0x00026F30
 	private void CancelUnequipAllRunes()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 		base.SetKeyboardEnabled(true);
 	}
 
-	// Token: 0x060034E0 RID: 13536 RVA: 0x000B5D83 File Offset: 0x000B3F83
+	// Token: 0x06004A9D RID: 19101 RVA: 0x00028D41 File Offset: 0x00026F41
 	protected override void OnXButtonJustPressed()
 	{
 		this.InitializeLoadoutMenu();
@@ -317,7 +317,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		base.OnYButtonJustPressed();
 	}
 
-	// Token: 0x060034E1 RID: 13537 RVA: 0x000B5DA0 File Offset: 0x000B3FA0
+	// Token: 0x06004A9E RID: 19102 RVA: 0x00122A40 File Offset: 0x00120C40
 	private void InitializeLoadoutMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenuBig))
@@ -345,7 +345,7 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		buttonAtIndex2.SetOnClickAction(this.m_cancelToggleLoadouts);
 	}
 
-	// Token: 0x060034E2 RID: 13538 RVA: 0x000B5E58 File Offset: 0x000B4058
+	// Token: 0x06004A9F RID: 19103 RVA: 0x00122AF8 File Offset: 0x00120CF8
 	private void ConfirmToggleLoadouts()
 	{
 		if (!SaveManager.EquipmentSaveData.RuneLoadoutEnabled)
@@ -360,14 +360,14 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		this.CancelToggleLoadouts();
 	}
 
-	// Token: 0x060034E3 RID: 13539 RVA: 0x000B5EDA File Offset: 0x000B40DA
+	// Token: 0x06004AA0 RID: 19104 RVA: 0x00028D5E File Offset: 0x00026F5E
 	private void CancelToggleLoadouts()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, false);
 		base.SetKeyboardEnabled(true);
 	}
 
-	// Token: 0x060034E4 RID: 13540 RVA: 0x000B5EEC File Offset: 0x000B40EC
+	// Token: 0x06004AA1 RID: 19105 RVA: 0x00122B7C File Offset: 0x00120D7C
 	protected override void RefreshText(object sender, EventArgs args)
 	{
 		base.RefreshText(sender, args);
@@ -379,22 +379,22 @@ public class EnchantressOmniUIWindowController : BaseOmniUIWindowController<Base
 		this.m_loadoutText.text = LocalizationManager.GetString("LOC_ID_SHOP_MENU_CLASS_RUNES_OFF_1", SaveManager.PlayerSaveData.CurrentCharacter.IsFemale, false);
 	}
 
-	// Token: 0x04002942 RID: 10562
+	// Token: 0x040038FD RID: 14589
 	[SerializeField]
 	private TMP_Text m_loadoutText;
 
-	// Token: 0x04002943 RID: 10563
+	// Token: 0x040038FE RID: 14590
 	private Action m_confirmUnequipAllRunes;
 
-	// Token: 0x04002944 RID: 10564
+	// Token: 0x040038FF RID: 14591
 	private Action m_cancelUnequipAllRunes;
 
-	// Token: 0x04002945 RID: 10565
+	// Token: 0x04003900 RID: 14592
 	private Action m_confirmToggleLoadouts;
 
-	// Token: 0x04002946 RID: 10566
+	// Token: 0x04003901 RID: 14593
 	private Action m_cancelToggleLoadouts;
 
-	// Token: 0x04002947 RID: 10567
+	// Token: 0x04003902 RID: 14594
 	private EnchantressOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

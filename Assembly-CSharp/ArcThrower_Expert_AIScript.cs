@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200008D RID: 141
+// Token: 0x02000099 RID: 153
 public class ArcThrower_Expert_AIScript : ArcThrower_Basic_AIScript
 {
-	// Token: 0x1700004F RID: 79
-	// (get) Token: 0x060001F4 RID: 500 RVA: 0x000120B9 File Offset: 0x000102B9
+	// Token: 0x1700005D RID: 93
+	// (get) Token: 0x06000220 RID: 544 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float m_shoot_NumberMediumShots
 	{
 		get
@@ -13,8 +13,8 @@ public class ArcThrower_Expert_AIScript : ArcThrower_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000050 RID: 80
-	// (get) Token: 0x060001F5 RID: 501 RVA: 0x000120C0 File Offset: 0x000102C0
+	// Token: 0x1700005E RID: 94
+	// (get) Token: 0x06000221 RID: 545 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float m_shoot_NumberHighShots
 	{
 		get
@@ -23,8 +23,8 @@ public class ArcThrower_Expert_AIScript : ArcThrower_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000051 RID: 81
-	// (get) Token: 0x060001F6 RID: 502 RVA: 0x000120C7 File Offset: 0x000102C7
+	// Token: 0x1700005F RID: 95
+	// (get) Token: 0x06000222 RID: 546 RVA: 0x00003D8C File Offset: 0x00001F8C
 	protected override float m_spray_ProjectileDelay
 	{
 		get
@@ -33,8 +33,8 @@ public class ArcThrower_Expert_AIScript : ArcThrower_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000052 RID: 82
-	// (get) Token: 0x060001F7 RID: 503 RVA: 0x000120CE File Offset: 0x000102CE
+	// Token: 0x17000060 RID: 96
+	// (get) Token: 0x06000223 RID: 547 RVA: 0x00003D93 File Offset: 0x00001F93
 	protected override float m_spray_ProjectileAmount
 	{
 		get
@@ -43,8 +43,8 @@ public class ArcThrower_Expert_AIScript : ArcThrower_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000053 RID: 83
-	// (get) Token: 0x060001F8 RID: 504 RVA: 0x000120D5 File Offset: 0x000102D5
+	// Token: 0x17000061 RID: 97
+	// (get) Token: 0x06000224 RID: 548 RVA: 0x00003D9A File Offset: 0x00001F9A
 	protected override float m_spray_TiltSpeed
 	{
 		get
@@ -53,8 +53,8 @@ public class ArcThrower_Expert_AIScript : ArcThrower_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000054 RID: 84
-	// (get) Token: 0x060001F9 RID: 505 RVA: 0x000120DC File Offset: 0x000102DC
+	// Token: 0x17000062 RID: 98
+	// (get) Token: 0x06000225 RID: 549 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float m_spray_LowAngle
 	{
 		get

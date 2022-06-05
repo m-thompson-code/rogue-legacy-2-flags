@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020005F5 RID: 1525
+// Token: 0x02000A0A RID: 2570
 public enum SpawnConditionOverrideID
 {
-	// Token: 0x04002A5E RID: 10846
+	// Token: 0x04003A8D RID: 14989
 	Dash = 10,
-	// Token: 0x04002A5F RID: 10847
+	// Token: 0x04003A8E RID: 14990
 	DoubleJump = 20
 }

@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace RLWorldCreation
 {
-	// Token: 0x02000893 RID: 2195
+	// Token: 0x02000DC0 RID: 3520
 	public class RoomRequirementsController
 	{
-		// Token: 0x060047F8 RID: 18424 RVA: 0x00102C0C File Offset: 0x00100E0C
+		// Token: 0x06006333 RID: 25395 RVA: 0x0017184C File Offset: 0x0016FA4C
 		public RoomRequirementsController(BiomeController biomeController)
 		{
 			this.CreateSpecialRoomPool(biomeController);
@@ -38,7 +38,7 @@ namespace RLWorldCreation
 			this.m_biomeController = biomeController;
 		}
 
-		// Token: 0x060047F9 RID: 18425 RVA: 0x00102D08 File Offset: 0x00100F08
+		// Token: 0x06006334 RID: 25396 RVA: 0x00036A3D File Offset: 0x00034C3D
 		public void AddToBacklog(RoomTypeEntry entry)
 		{
 			if (this.m_lastEntryRemovedFromBacklog == entry)
@@ -49,7 +49,7 @@ namespace RLWorldCreation
 			this.m_backlog.Add(entry);
 		}
 
-		// Token: 0x060047FA RID: 18426 RVA: 0x00102D30 File Offset: 0x00100F30
+		// Token: 0x06006335 RID: 25397 RVA: 0x00171948 File Offset: 0x0016FB48
 		private void CreateSpecialRoomPool(BiomeController biomeController)
 		{
 			int num = biomeController.TargetRoomCountsByRoomType[RoomType.Bonus];
@@ -125,7 +125,7 @@ namespace RLWorldCreation
 			}
 		}
 
-		// Token: 0x060047FB RID: 18427 RVA: 0x00102FA0 File Offset: 0x001011A0
+		// Token: 0x06006336 RID: 25398 RVA: 0x00171BB8 File Offset: 0x0016FDB8
 		public RoomTypeEntry GetRequirements(int roomNumber)
 		{
 			RoomTypeEntry roomTypeEntry;
@@ -173,25 +173,25 @@ namespace RLWorldCreation
 			return roomTypeEntry;
 		}
 
-		// Token: 0x04003CC4 RID: 15556
+		// Token: 0x040050F2 RID: 20722
 		protected RoomTypeEntry m_lastEntryRemovedFromBacklog;
 
-		// Token: 0x04003CC5 RID: 15557
+		// Token: 0x040050F3 RID: 20723
 		protected List<RoomTypeEntry> m_backlog = new List<RoomTypeEntry>();
 
-		// Token: 0x04003CC6 RID: 15558
+		// Token: 0x040050F4 RID: 20724
 		protected List<RoomTypeEntry> m_specialRoomPool = new List<RoomTypeEntry>();
 
-		// Token: 0x04003CC7 RID: 15559
+		// Token: 0x040050F5 RID: 20725
 		private BiomeController m_biomeController;
 
-		// Token: 0x04003CC8 RID: 15560
+		// Token: 0x040050F6 RID: 20726
 		private int m_interval = -1;
 
-		// Token: 0x04003CC9 RID: 15561
+		// Token: 0x040050F7 RID: 20727
 		private int m_requiredEasyRoomCount = -1;
 
-		// Token: 0x04003CCA RID: 15562
+		// Token: 0x040050F8 RID: 20728
 		private int m_easyRoomsPlaced;
 	}
 }

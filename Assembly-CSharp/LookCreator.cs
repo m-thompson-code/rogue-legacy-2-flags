@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000262 RID: 610
+// Token: 0x02000426 RID: 1062
 public static class LookCreator
 {
-	// Token: 0x06001862 RID: 6242 RVA: 0x0004B4C0 File Offset: 0x000496C0
+	// Token: 0x06002239 RID: 8761 RVA: 0x000A9258 File Offset: 0x000A7458
 	public static void InitializeClassLook(ClassType classType, LookController lookObj)
 	{
 		LookCreator.DisableAllClassOutfitGeo(lookObj);
@@ -118,7 +118,7 @@ public static class LookCreator
 		lookObj.CurrentClassOutfit = gameObject;
 	}
 
-	// Token: 0x06001863 RID: 6243 RVA: 0x0004B65F File Offset: 0x0004985F
+	// Token: 0x0600223A RID: 8762 RVA: 0x000124B1 File Offset: 0x000106B1
 	private static void SetGeoColor(SkinnedMeshRenderer renderer, int shaderID, MaterialPropertyBlock matPropBlock, Color color)
 	{
 		renderer.GetPropertyBlock(matPropBlock);
@@ -126,7 +126,7 @@ public static class LookCreator
 		renderer.SetPropertyBlock(matPropBlock);
 	}
 
-	// Token: 0x06001864 RID: 6244 RVA: 0x0004B678 File Offset: 0x00049878
+	// Token: 0x0600223B RID: 8763 RVA: 0x000A93F8 File Offset: 0x000A75F8
 	public static void InitializeCharacterLook(CharacterData charData, LookController lookObj, bool generateRandomLook)
 	{
 		if (generateRandomLook)
@@ -168,7 +168,7 @@ public static class LookCreator
 		lookObj.HeadGeo.SetBlendShapeWeight(0, (float)bodyWeightObject.BlendShapeWeight);
 	}
 
-	// Token: 0x06001865 RID: 6245 RVA: 0x0004B8BC File Offset: 0x00049ABC
+	// Token: 0x0600223C RID: 8764 RVA: 0x000A963C File Offset: 0x000A783C
 	public static void InitializeHelmetLook(EquipmentType equipType, LookController lookObj)
 	{
 		MaterialGeoObject materialGeoObject = EquipmentLookLibrary.GetHelmetEquipmentLookData(equipType) ?? EquipmentLookLibrary.GetHelmetEquipmentLookData(EquipmentType.None);
@@ -228,7 +228,7 @@ public static class LookCreator
 		Debug.Log("Could not find Helmet Equipment Look Library entry for " + equipType.ToString());
 	}
 
-	// Token: 0x06001866 RID: 6246 RVA: 0x0004BB0C File Offset: 0x00049D0C
+	// Token: 0x0600223D RID: 8765 RVA: 0x000A988C File Offset: 0x000A7A8C
 	public static void InitializeArmorLook(EquipmentType equipType, LookController lookObj)
 	{
 		MaterialGeoObject materialGeoObject = EquipmentLookLibrary.GetArmorEquipmentLookData(equipType) ?? EquipmentLookLibrary.GetArmorEquipmentLookData(EquipmentType.None);
@@ -297,7 +297,7 @@ public static class LookCreator
 		Debug.Log("Could not find Armor Equipment Look Library entry for " + equipType.ToString());
 	}
 
-	// Token: 0x06001867 RID: 6247 RVA: 0x0004BDE8 File Offset: 0x00049FE8
+	// Token: 0x0600223E RID: 8766 RVA: 0x000A9B68 File Offset: 0x000A7D68
 	public static void InitializeCapeLook(EquipmentType equipType, LookController lookObj)
 	{
 		MaterialBlendWeightObject materialBlendWeightObject = EquipmentLookLibrary.GetCapeEquipmentLookData(equipType) ?? EquipmentLookLibrary.GetCapeEquipmentLookData(EquipmentType.None);
@@ -316,7 +316,7 @@ public static class LookCreator
 		Debug.Log("Could not find Cape Equipment Look Library entry for " + equipType.ToString());
 	}
 
-	// Token: 0x06001868 RID: 6248 RVA: 0x0004BE94 File Offset: 0x0004A094
+	// Token: 0x0600223F RID: 8767 RVA: 0x000A9C14 File Offset: 0x000A7E14
 	public static void InitializeWeaponLook(EquipmentType equipType, LookController lookObj, AbilityType weaponType, bool hasCantAttackTrait)
 	{
 		PlayerLookController playerLookController = lookObj as PlayerLookController;
@@ -514,7 +514,7 @@ public static class LookCreator
 		}
 	}
 
-	// Token: 0x06001869 RID: 6249 RVA: 0x0004C218 File Offset: 0x0004A418
+	// Token: 0x06002240 RID: 8768 RVA: 0x000A9F98 File Offset: 0x000A8198
 	public static void DisableAllWeaponGeo(LookController lookObj)
 	{
 		lookObj.SwordGeo.gameObject.SetActive(false);
@@ -547,7 +547,7 @@ public static class LookCreator
 		lookObj.SecondaryWeaponGeo = null;
 	}
 
-	// Token: 0x0600186A RID: 6250 RVA: 0x0004C3F0 File Offset: 0x0004A5F0
+	// Token: 0x06002241 RID: 8769 RVA: 0x000AA170 File Offset: 0x000A8370
 	public static void DisableAllClassOutfitGeo(LookController lookObj)
 	{
 		lookObj.BarbarianGeo.SetActive(false);
@@ -567,7 +567,7 @@ public static class LookCreator
 		lookObj.AstroGeo.SetActive(false);
 	}
 
-	// Token: 0x0600186B RID: 6251 RVA: 0x0004C4B4 File Offset: 0x0004A6B4
+	// Token: 0x06002242 RID: 8770 RVA: 0x000AA234 File Offset: 0x000A8434
 	public static void RebindSkinnedMeshRenderers(SkinnedMeshRenderer rebindFromRenderer, SkinnedMeshRenderer rebindToRenderer)
 	{
 		LookCreator.m_boneMapDict.Clear();
@@ -589,6 +589,6 @@ public static class LookCreator
 		rebindToRenderer.bones = array;
 	}
 
-	// Token: 0x040017B9 RID: 6073
+	// Token: 0x04001EEB RID: 7915
 	private static Dictionary<string, Transform> m_boneMapDict = new Dictionary<string, Transform>();
 }

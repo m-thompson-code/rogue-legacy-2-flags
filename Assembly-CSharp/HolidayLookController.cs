@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200020B RID: 523
+// Token: 0x020003BC RID: 956
 public class HolidayLookController : MonoBehaviour
 {
-	// Token: 0x060015F4 RID: 5620 RVA: 0x000446C1 File Offset: 0x000428C1
+	// Token: 0x06001F84 RID: 8068 RVA: 0x000108DD File Offset: 0x0000EADD
 	private void Awake()
 	{
 		this.m_storedMat = this.m_rendererToChange.sharedMaterial;
 	}
 
-	// Token: 0x060015F5 RID: 5621 RVA: 0x000446D4 File Offset: 0x000428D4
+	// Token: 0x06001F85 RID: 8069 RVA: 0x000108F0 File Offset: 0x0000EAF0
 	private void OnEnable()
 	{
 		if (HolidayLookController.IsHoliday(this.m_holidayType))
@@ -20,7 +20,7 @@ public class HolidayLookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015F6 RID: 5622 RVA: 0x000446FB File Offset: 0x000428FB
+	// Token: 0x06001F86 RID: 8070 RVA: 0x00010917 File Offset: 0x0000EB17
 	private void OnDisable()
 	{
 		if (this.m_holidayLookApplied)
@@ -30,7 +30,7 @@ public class HolidayLookController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015F7 RID: 5623 RVA: 0x0004471D File Offset: 0x0004291D
+	// Token: 0x06001F87 RID: 8071 RVA: 0x00010939 File Offset: 0x0000EB39
 	public static bool IsHoliday(HolidayType holidayType)
 	{
 		if (holidayType != HolidayType.Halloween)
@@ -50,7 +50,7 @@ public class HolidayLookController : MonoBehaviour
 		return holidayType == HolidayLookController.GetHolidayType();
 	}
 
-	// Token: 0x060015F8 RID: 5624 RVA: 0x0004475C File Offset: 0x0004295C
+	// Token: 0x06001F88 RID: 8072 RVA: 0x000A2FE4 File Offset: 0x000A11E4
 	private static HolidayType GetHolidayType()
 	{
 		if (!HolidayLookController.m_holidayTypeIsCached)
@@ -105,30 +105,30 @@ public class HolidayLookController : MonoBehaviour
 		return HolidayLookController.m_cachedHolidayType;
 	}
 
-	// Token: 0x04001524 RID: 5412
+	// Token: 0x04001C21 RID: 7201
 	[SerializeField]
 	private HolidayType m_holidayType;
 
-	// Token: 0x04001525 RID: 5413
+	// Token: 0x04001C22 RID: 7202
 	[SerializeField]
 	private Material m_materialToApply;
 
-	// Token: 0x04001526 RID: 5414
+	// Token: 0x04001C23 RID: 7203
 	[SerializeField]
 	private Renderer m_rendererToChange;
 
-	// Token: 0x04001527 RID: 5415
+	// Token: 0x04001C24 RID: 7204
 	private static bool m_holidayTypeIsCached;
 
-	// Token: 0x04001528 RID: 5416
+	// Token: 0x04001C25 RID: 7205
 	private static HolidayType m_cachedHolidayType;
 
-	// Token: 0x04001529 RID: 5417
+	// Token: 0x04001C26 RID: 7206
 	private Material m_storedMat;
 
-	// Token: 0x0400152A RID: 5418
+	// Token: 0x04001C27 RID: 7207
 	private bool m_holidayLookApplied;
 
-	// Token: 0x0400152B RID: 5419
+	// Token: 0x04001C28 RID: 7208
 	private const int LEAP_YEAR_DAY = 58;
 }

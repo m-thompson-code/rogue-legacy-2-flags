@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020005B5 RID: 1461
+// Token: 0x020009BD RID: 2493
 public class PointHazardArgs : HazardArgs
 {
-	// Token: 0x06003644 RID: 13892 RVA: 0x000BC255 File Offset: 0x000BA455
+	// Token: 0x06004C56 RID: 19542 RVA: 0x00029B32 File Offset: 0x00027D32
 	public PointHazardArgs(StateID initialState, float radius, float rotationSpeed, float expansionDuration) : base(initialState)
 	{
 		this.Radius = radius;
@@ -11,15 +11,15 @@ public class PointHazardArgs : HazardArgs
 		this.ExpansionDuration = expansionDuration;
 	}
 
-	// Token: 0x17001328 RID: 4904
-	// (get) Token: 0x06003645 RID: 13893 RVA: 0x000BC274 File Offset: 0x000BA474
+	// Token: 0x17001A55 RID: 6741
+	// (get) Token: 0x06004C57 RID: 19543 RVA: 0x00029B51 File Offset: 0x00027D51
 	public float Radius { get; }
 
-	// Token: 0x17001329 RID: 4905
-	// (get) Token: 0x06003646 RID: 13894 RVA: 0x000BC27C File Offset: 0x000BA47C
+	// Token: 0x17001A56 RID: 6742
+	// (get) Token: 0x06004C58 RID: 19544 RVA: 0x00029B59 File Offset: 0x00027D59
 	public float RotationSpeed { get; }
 
-	// Token: 0x1700132A RID: 4906
-	// (get) Token: 0x06003647 RID: 13895 RVA: 0x000BC284 File Offset: 0x000BA484
+	// Token: 0x17001A57 RID: 6743
+	// (get) Token: 0x06004C59 RID: 19545 RVA: 0x00029B61 File Offset: 0x00027D61
 	public float ExpansionDuration { get; }
 }

@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200046C RID: 1132
+// Token: 0x02000762 RID: 1890
 public class CoinDrop : BaseItemDrop
 {
-	// Token: 0x1700103A RID: 4154
-	// (get) Token: 0x060029BC RID: 10684 RVA: 0x00089D0E File Offset: 0x00087F0E
+	// Token: 0x1700156F RID: 5487
+	// (get) Token: 0x060039C6 RID: 14790 RVA: 0x00017640 File Offset: 0x00015840
 	public override ItemDropType ItemDropType
 	{
 		get
@@ -15,7 +15,7 @@ public class CoinDrop : BaseItemDrop
 		}
 	}
 
-	// Token: 0x060029BD RID: 10685 RVA: 0x00089D14 File Offset: 0x00087F14
+	// Token: 0x060039C7 RID: 14791 RVA: 0x000EBA9C File Offset: 0x000E9C9C
 	protected override void Collect(GameObject collector)
 	{
 		int num = Economy_EV.GetItemDropValue(this.ItemDropType, false);
@@ -57,6 +57,6 @@ public class CoinDrop : BaseItemDrop
 		throw new Exception("Gold Drop of type " + this.ItemDropType.ToString() + " is worth 0 gold.");
 	}
 
-	// Token: 0x04002246 RID: 8774
+	// Token: 0x04002E22 RID: 11810
 	private GoldChangedEventArgs m_goldChangedEventArgs;
 }

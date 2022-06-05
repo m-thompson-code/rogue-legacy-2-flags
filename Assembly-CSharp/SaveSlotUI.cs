@@ -2,16 +2,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020003DF RID: 991
+// Token: 0x0200067F RID: 1663
 public class SaveSlotUI : MonoBehaviour
 {
-	// Token: 0x17000ED3 RID: 3795
-	// (get) Token: 0x06002488 RID: 9352 RVA: 0x00079C5C File Offset: 0x00077E5C
-	// (set) Token: 0x06002489 RID: 9353 RVA: 0x00079C64 File Offset: 0x00077E64
+	// Token: 0x17001372 RID: 4978
+	// (get) Token: 0x060032C4 RID: 12996 RVA: 0x0001BC22 File Offset: 0x00019E22
+	// (set) Token: 0x060032C5 RID: 12997 RVA: 0x0001BC2A File Offset: 0x00019E2A
 	public byte SlotIndex { get; set; }
 
-	// Token: 0x17000ED4 RID: 3796
-	// (get) Token: 0x0600248A RID: 9354 RVA: 0x00079C6D File Offset: 0x00077E6D
+	// Token: 0x17001373 RID: 4979
+	// (get) Token: 0x060032C6 RID: 12998 RVA: 0x0001BC33 File Offset: 0x00019E33
 	public Button Button
 	{
 		get
@@ -20,17 +20,17 @@ public class SaveSlotUI : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000ED5 RID: 3797
-	// (get) Token: 0x0600248B RID: 9355 RVA: 0x00079C75 File Offset: 0x00077E75
-	// (set) Token: 0x0600248C RID: 9356 RVA: 0x00079C7D File Offset: 0x00077E7D
+	// Token: 0x17001374 RID: 4980
+	// (get) Token: 0x060032C7 RID: 12999 RVA: 0x0001BC3B File Offset: 0x00019E3B
+	// (set) Token: 0x060032C8 RID: 13000 RVA: 0x0001BC43 File Offset: 0x00019E43
 	public string PlayerData_FullFilePath { get; set; }
 
-	// Token: 0x0600248D RID: 9357 RVA: 0x00079C86 File Offset: 0x00077E86
+	// Token: 0x060032C9 RID: 13001 RVA: 0x0001BC4C File Offset: 0x00019E4C
 	protected virtual void Awake()
 	{
 		this.m_button = base.GetComponent<Button>();
 	}
 
-	// Token: 0x04001F13 RID: 7955
+	// Token: 0x0400298B RID: 10635
 	private Button m_button;
 }

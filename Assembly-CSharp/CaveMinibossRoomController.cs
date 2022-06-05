@@ -2,17 +2,17 @@
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020004F6 RID: 1270
+// Token: 0x02000851 RID: 2129
 public class CaveMinibossRoomController : MinibossRoomController
 {
-	// Token: 0x06002F87 RID: 12167 RVA: 0x000A2B9C File Offset: 0x000A0D9C
+	// Token: 0x060041AE RID: 16814 RVA: 0x0010858C File Offset: 0x0010678C
 	protected override void InitializeObjectiveCompleteArgs(float bossDefeatedDisplayDuration)
 	{
 		string @string = LocalizationManager.GetString("LOC_ID_BIG_TEXT_UI_STYGIAN_BOSS_DEFEATED_TITLE_1", false, false);
 		this.m_bossDefeatedArgs.Initialize(base.Boss.EnemyType, EnemyRank.Miniboss, bossDefeatedDisplayDuration, @string, null, null);
 	}
 
-	// Token: 0x06002F88 RID: 12168 RVA: 0x000A2BD4 File Offset: 0x000A0DD4
+	// Token: 0x060041AF RID: 16815 RVA: 0x001085C4 File Offset: 0x001067C4
 	protected override void TeleportOut()
 	{
 		BiomeController biomeController = GameUtility.IsInLevelEditor ? OnPlayManager.BiomeController : WorldBuilder.GetBiomeController(BiomeType.Cave);
@@ -50,7 +50,7 @@ public class CaveMinibossRoomController : MinibossRoomController
 		}
 	}
 
-	// Token: 0x06002F89 RID: 12169 RVA: 0x000A2D10 File Offset: 0x000A0F10
+	// Token: 0x060041B0 RID: 16816 RVA: 0x0002460C File Offset: 0x0002280C
 	protected override void OnBossDeath(object sender, EventArgs args)
 	{
 		base.OnBossDeath(sender, args);

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000806 RID: 2054
+// Token: 0x02000CCE RID: 3278
 public class PrefabInstantiator : MonoBehaviour
 {
-	// Token: 0x06004402 RID: 17410 RVA: 0x000F0AC8 File Offset: 0x000EECC8
+	// Token: 0x06005D8B RID: 23947 RVA: 0x0015E724 File Offset: 0x0015C924
 	private void Awake()
 	{
 		foreach (GameObject original in this.m_prefabs)
@@ -19,11 +19,11 @@ public class PrefabInstantiator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003A1B RID: 14875
+	// Token: 0x04004CE7 RID: 19687
 	[SerializeField]
 	private List<GameObject> m_prefabs;
 
-	// Token: 0x04003A1C RID: 14876
+	// Token: 0x04004CE8 RID: 19688
 	[SerializeField]
 	private bool m_parentToThisGameObject = true;
 }

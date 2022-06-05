@@ -3,16 +3,16 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x020004AD RID: 1197
+// Token: 0x020007BC RID: 1980
 public class TerrainRicochetProjectile_Logic : BaseProjectileLogic
 {
 	// Token: 0x14000003 RID: 3
-	// (add) Token: 0x06002BA7 RID: 11175 RVA: 0x00094750 File Offset: 0x00092950
-	// (remove) Token: 0x06002BA8 RID: 11176 RVA: 0x00094788 File Offset: 0x00092988
+	// (add) Token: 0x06003C26 RID: 15398 RVA: 0x000F5E90 File Offset: 0x000F4090
+	// (remove) Token: 0x06003C27 RID: 15399 RVA: 0x000F5EC8 File Offset: 0x000F40C8
 	public event EventHandler OnRicochet;
 
-	// Token: 0x170010A9 RID: 4265
-	// (get) Token: 0x06002BA9 RID: 11177 RVA: 0x000947BD File Offset: 0x000929BD
+	// Token: 0x17001602 RID: 5634
+	// (get) Token: 0x06003C28 RID: 15400 RVA: 0x00021385 File Offset: 0x0001F585
 	public bool JustBounced
 	{
 		get
@@ -21,7 +21,7 @@ public class TerrainRicochetProjectile_Logic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002BAA RID: 11178 RVA: 0x000947CC File Offset: 0x000929CC
+	// Token: 0x06003C29 RID: 15401 RVA: 0x000F5F00 File Offset: 0x000F4100
 	protected override void Awake()
 	{
 		base.Awake();
@@ -30,7 +30,7 @@ public class TerrainRicochetProjectile_Logic : BaseProjectileLogic
 		this.m_hbController = root.GetComponentInChildren<IHitboxController>();
 	}
 
-	// Token: 0x06002BAB RID: 11179 RVA: 0x000947FF File Offset: 0x000929FF
+	// Token: 0x06003C2A RID: 15402 RVA: 0x00021394 File Offset: 0x0001F594
 	private IEnumerator Start()
 	{
 		while (!this.m_controller.IsInitialized)
@@ -42,13 +42,13 @@ public class TerrainRicochetProjectile_Logic : BaseProjectileLogic
 		yield break;
 	}
 
-	// Token: 0x06002BAC RID: 11180 RVA: 0x0009480E File Offset: 0x00092A0E
+	// Token: 0x06003C2B RID: 15403 RVA: 0x000213A3 File Offset: 0x0001F5A3
 	private void OnDestroy()
 	{
 		this.m_controller.OnCorgiCollisionRelay.RemoveListener(new Action<CorgiController_RL>(this.Bounce));
 	}
 
-	// Token: 0x06002BAD RID: 11181 RVA: 0x00094830 File Offset: 0x00092A30
+	// Token: 0x06003C2C RID: 15404 RVA: 0x000F5F34 File Offset: 0x000F4134
 	private void Bounce(CorgiController_RL corgiController)
 	{
 		if (this.JustBounced)
@@ -75,13 +75,13 @@ public class TerrainRicochetProjectile_Logic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002BAE RID: 11182 RVA: 0x0009494C File Offset: 0x00092B4C
+	// Token: 0x06003C2D RID: 15405 RVA: 0x000213C2 File Offset: 0x0001F5C2
 	private void LateUpdate()
 	{
 		this.ConstrainEnemyMovementToRoom();
 	}
 
-	// Token: 0x06002BAF RID: 11183 RVA: 0x00094954 File Offset: 0x00092B54
+	// Token: 0x06003C2E RID: 15406 RVA: 0x000F6050 File Offset: 0x000F4250
 	private void ConstrainEnemyMovementToRoom()
 	{
 		Bounds bounds = this.m_hbController.GetCollider(HitboxType.Terrain).bounds;
@@ -119,19 +119,19 @@ public class TerrainRicochetProjectile_Logic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x0400237A RID: 9082
+	// Token: 0x04002FBB RID: 12219
 	[SerializeField]
 	private UnityEvent m_bounceUnityEvent;
 
-	// Token: 0x0400237B RID: 9083
+	// Token: 0x04002FBC RID: 12220
 	private const float BOUNCE_CHECK_TIMER = 0.05f;
 
-	// Token: 0x0400237C RID: 9084
+	// Token: 0x04002FBD RID: 12221
 	private CorgiController_RL m_controller;
 
-	// Token: 0x0400237D RID: 9085
+	// Token: 0x04002FBE RID: 12222
 	private IHitboxController m_hbController;
 
-	// Token: 0x0400237E RID: 9086
+	// Token: 0x04002FBF RID: 12223
 	private float m_bounceTimer;
 }

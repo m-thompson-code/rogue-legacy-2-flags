@@ -3,16 +3,16 @@ using RLAudio;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200047D RID: 1149
+// Token: 0x02000773 RID: 1907
 public class LineagePortrait : MonoBehaviour
 {
-	// Token: 0x17001050 RID: 4176
-	// (get) Token: 0x060029F6 RID: 10742 RVA: 0x0008AAC9 File Offset: 0x00088CC9
-	// (set) Token: 0x060029F7 RID: 10743 RVA: 0x0008AAD1 File Offset: 0x00088CD1
+	// Token: 0x17001585 RID: 5509
+	// (get) Token: 0x06003A00 RID: 14848 RVA: 0x0001FDA7 File Offset: 0x0001DFA7
+	// (set) Token: 0x06003A01 RID: 14849 RVA: 0x0001FDAF File Offset: 0x0001DFAF
 	public int Index { get; set; }
 
-	// Token: 0x17001051 RID: 4177
-	// (get) Token: 0x060029F8 RID: 10744 RVA: 0x0008AADA File Offset: 0x00088CDA
+	// Token: 0x17001586 RID: 5510
+	// (get) Token: 0x06003A02 RID: 14850 RVA: 0x0001FDB8 File Offset: 0x0001DFB8
 	public PlayerLookController Model
 	{
 		get
@@ -21,12 +21,12 @@ public class LineagePortrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001052 RID: 4178
-	// (get) Token: 0x060029F9 RID: 10745 RVA: 0x0008AAE2 File Offset: 0x00088CE2
-	// (set) Token: 0x060029FA RID: 10746 RVA: 0x0008AAEA File Offset: 0x00088CEA
+	// Token: 0x17001587 RID: 5511
+	// (get) Token: 0x06003A03 RID: 14851 RVA: 0x0001FDC0 File Offset: 0x0001DFC0
+	// (set) Token: 0x06003A04 RID: 14852 RVA: 0x0001FDC8 File Offset: 0x0001DFC8
 	public CharacterData PortraitCharData { get; private set; }
 
-	// Token: 0x060029FB RID: 10747 RVA: 0x0008AAF3 File Offset: 0x00088CF3
+	// Token: 0x06003A05 RID: 14853 RVA: 0x0001FDD1 File Offset: 0x0001DFD1
 	private void Awake()
 	{
 		if (this.m_isLineageRoomPortrait && this.Model.VisualsGameObject != null)
@@ -35,7 +35,7 @@ public class LineagePortrait : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060029FC RID: 10748 RVA: 0x0008AB28 File Offset: 0x00088D28
+	// Token: 0x06003A06 RID: 14854 RVA: 0x000EC6B0 File Offset: 0x000EA8B0
 	public void SetPortraitLook(CharacterData charData)
 	{
 		AnimBehaviourEventEmitter.DisableEmitter_STATIC = true;
@@ -78,15 +78,15 @@ public class LineagePortrait : MonoBehaviour
 		AnimBehaviourEventEmitter.DisableEmitter_STATIC = false;
 	}
 
-	// Token: 0x04002254 RID: 8788
+	// Token: 0x04002E30 RID: 11824
 	[SerializeField]
 	private PlayerLookController m_model;
 
-	// Token: 0x04002255 RID: 8789
+	// Token: 0x04002E31 RID: 11825
 	[SerializeField]
 	private TMP_Text m_nameText;
 
-	// Token: 0x04002256 RID: 8790
+	// Token: 0x04002E32 RID: 11826
 	[SerializeField]
 	private bool m_isLineageRoomPortrait;
 }

@@ -1,40 +1,40 @@
 ﻿using System;
 
-// Token: 0x020006A8 RID: 1704
+// Token: 0x02000B45 RID: 2885
 public enum RngID
 {
-	// Token: 0x04002E74 RID: 11892
+	// Token: 0x04004096 RID: 16534
 	None,
-	// Token: 0x04002E75 RID: 11893
+	// Token: 0x04004097 RID: 16535
 	BiomeCreation = 10,
-	// Token: 0x04002E76 RID: 11894
+	// Token: 0x04004098 RID: 16536
 	Chest = 20,
-	// Token: 0x04002E77 RID: 11895
+	// Token: 0x04004099 RID: 16537
 	Enemy = 30,
-	// Token: 0x04002E78 RID: 11896
+	// Token: 0x0400409A RID: 16538
 	Lineage = 40,
-	// Token: 0x04002E79 RID: 11897
+	// Token: 0x0400409B RID: 16539
 	Prop = 50,
-	// Token: 0x04002E7A RID: 11898
+	// Token: 0x0400409C RID: 16540
 	SpecialRoomProps = 60,
-	// Token: 0x04002E7B RID: 11899
+	// Token: 0x0400409D RID: 16541
 	MergeRooms = 70,
-	// Token: 0x04002E7C RID: 11900
+	// Token: 0x0400409E RID: 16542
 	Room_RNGSeed = 80,
-	// Token: 0x04002E7D RID: 11901
+	// Token: 0x0400409F RID: 16543
 	Room_RNGSeed_Generator,
-	// Token: 0x04002E7E RID: 11902
+	// Token: 0x040040A0 RID: 16544
 	Prop_RoomSeed = 90,
-	// Token: 0x04002E7F RID: 11903
+	// Token: 0x040040A1 RID: 16545
 	Deco_RoomSeed = 100,
-	// Token: 0x04002E80 RID: 11904
+	// Token: 0x040040A2 RID: 16546
 	Enemy_RoomSeed = 110,
-	// Token: 0x04002E81 RID: 11905
+	// Token: 0x040040A3 RID: 16547
 	Chest_RoomSeed = 120,
-	// Token: 0x04002E82 RID: 11906
+	// Token: 0x040040A4 RID: 16548
 	SpecialProps_RoomSeed = 130,
-	// Token: 0x04002E83 RID: 11907
+	// Token: 0x040040A5 RID: 16549
 	Hazards_RoomSeed = 140,
-	// Token: 0x04002E84 RID: 11908
+	// Token: 0x040040A6 RID: 16550
 	Tunnel_RoomSeed = 150
 }

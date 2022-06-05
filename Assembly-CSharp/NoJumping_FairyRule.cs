@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200043F RID: 1087
+// Token: 0x02000708 RID: 1800
 public class NoJumping_FairyRule : FairyRule
 {
-	// Token: 0x17000FB9 RID: 4025
-	// (get) Token: 0x060027E5 RID: 10213 RVA: 0x000846A0 File Offset: 0x000828A0
+	// Token: 0x1700149C RID: 5276
+	// (get) Token: 0x060036F7 RID: 14071 RVA: 0x0001E3E6 File Offset: 0x0001C5E6
 	public override string Description
 	{
 		get
@@ -14,8 +14,8 @@ public class NoJumping_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FBA RID: 4026
-	// (get) Token: 0x060027E6 RID: 10214 RVA: 0x000846A7 File Offset: 0x000828A7
+	// Token: 0x1700149D RID: 5277
+	// (get) Token: 0x060036F8 RID: 14072 RVA: 0x000054AD File Offset: 0x000036AD
 	public override FairyRuleID ID
 	{
 		get
@@ -24,8 +24,8 @@ public class NoJumping_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FBB RID: 4027
-	// (get) Token: 0x060027E7 RID: 10215 RVA: 0x000846AB File Offset: 0x000828AB
+	// Token: 0x1700149E RID: 5278
+	// (get) Token: 0x060036F9 RID: 14073 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool LockChestAtStart
 	{
 		get
@@ -34,13 +34,13 @@ public class NoJumping_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027E8 RID: 10216 RVA: 0x000846AE File Offset: 0x000828AE
+	// Token: 0x060036FA RID: 14074 RVA: 0x0001E3ED File Offset: 0x0001C5ED
 	private void Awake()
 	{
 		this.m_onPlayerJump = new Action<MonoBehaviour, EventArgs>(this.OnPlayerJump);
 	}
 
-	// Token: 0x060027E9 RID: 10217 RVA: 0x000846C2 File Offset: 0x000828C2
+	// Token: 0x060036FB RID: 14075 RVA: 0x0001E401 File Offset: 0x0001C601
 	public override void RunRule(FairyRoomController fairyRoomController)
 	{
 		if (base.State != FairyRoomState.Failed)
@@ -50,19 +50,19 @@ public class NoJumping_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027EA RID: 10218 RVA: 0x000846E3 File Offset: 0x000828E3
+	// Token: 0x060036FC RID: 14076 RVA: 0x0001E422 File Offset: 0x0001C622
 	public override void StopRule()
 	{
 		base.StopRule();
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerJump, this.m_onPlayerJump);
 	}
 
-	// Token: 0x060027EB RID: 10219 RVA: 0x000846F8 File Offset: 0x000828F8
+	// Token: 0x060036FD RID: 14077 RVA: 0x0001DFA6 File Offset: 0x0001C1A6
 	private void OnPlayerJump(object sender, EventArgs eventArgs)
 	{
 		base.SetIsFailed();
 	}
 
-	// Token: 0x0400213C RID: 8508
+	// Token: 0x04002C6D RID: 11373
 	private Action<MonoBehaviour, EventArgs> m_onPlayerJump;
 }

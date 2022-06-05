@@ -4,49 +4,49 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-// Token: 0x020001FF RID: 511
+// Token: 0x020003A4 RID: 932
 public static class GameResolutionManager
 {
-	// Token: 0x0600158E RID: 5518
+	// Token: 0x06001EE8 RID: 7912
 	[DllImport("user32.dll", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Auto, ExactSpelling = true, SetLastError = true)]
 	internal static extern void MoveWindow(IntPtr hwnd, int X, int Y, int nWidth, int nHeight, bool bRepaint);
 
-	// Token: 0x0600158F RID: 5519
+	// Token: 0x06001EE9 RID: 7913
 	[DllImport("user32.dll")]
 	private static extern IntPtr GetActiveWindow();
 
-	// Token: 0x06001590 RID: 5520
+	// Token: 0x06001EEA RID: 7914
 	[DllImport("user32.dll", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Auto, ExactSpelling = true, SetLastError = true)]
 	internal static extern bool GetWindowRect(IntPtr hWnd, ref GameResolutionManager.RECT rect);
 
-	// Token: 0x06001591 RID: 5521
+	// Token: 0x06001EEB RID: 7915
 	[DllImport("user32.dll")]
 	private static extern bool EnumDisplayMonitors(IntPtr hdc, IntPtr lprcClip, GameResolutionManager.MonitorEnumDelegate lpfnEnum, IntPtr dwData);
 
-	// Token: 0x06001592 RID: 5522
+	// Token: 0x06001EEC RID: 7916
 	[DllImport("User32.dll", CharSet = CharSet.Unicode)]
 	public static extern bool GetMonitorInfo(IntPtr hmonitor, [In] [Out] GameResolutionManager.MONITORINFOEX info);
 
-	// Token: 0x06001593 RID: 5523
+	// Token: 0x06001EED RID: 7917
 	[DllImport("User32.dll", ExactSpelling = true)]
 	public static extern IntPtr MonitorFromPoint(GameResolutionManager.POINTSTRUCT pt, int flags);
 
-	// Token: 0x17000AED RID: 2797
-	// (get) Token: 0x06001594 RID: 5524 RVA: 0x00043240 File Offset: 0x00041440
-	// (set) Token: 0x06001595 RID: 5525 RVA: 0x00043247 File Offset: 0x00041447
+	// Token: 0x17000E01 RID: 3585
+	// (get) Token: 0x06001EEE RID: 7918 RVA: 0x00010379 File Offset: 0x0000E579
+	// (set) Token: 0x06001EEF RID: 7919 RVA: 0x00010380 File Offset: 0x0000E580
 	public static int ActiveDisplayIndex { get; private set; } = -1;
 
-	// Token: 0x17000AEE RID: 2798
-	// (get) Token: 0x06001596 RID: 5526 RVA: 0x0004324F File Offset: 0x0004144F
-	// (set) Token: 0x06001597 RID: 5527 RVA: 0x00043256 File Offset: 0x00041456
+	// Token: 0x17000E02 RID: 3586
+	// (get) Token: 0x06001EF0 RID: 7920 RVA: 0x00010388 File Offset: 0x0000E588
+	// (set) Token: 0x06001EF1 RID: 7921 RVA: 0x0001038F File Offset: 0x0000E58F
 	public static Vector2Int Resolution { get; private set; }
 
-	// Token: 0x17000AEF RID: 2799
-	// (get) Token: 0x06001598 RID: 5528 RVA: 0x0004325E File Offset: 0x0004145E
-	// (set) Token: 0x06001599 RID: 5529 RVA: 0x00043265 File Offset: 0x00041465
+	// Token: 0x17000E03 RID: 3587
+	// (get) Token: 0x06001EF2 RID: 7922 RVA: 0x00010397 File Offset: 0x0000E597
+	// (set) Token: 0x06001EF3 RID: 7923 RVA: 0x0001039E File Offset: 0x0000E59E
 	public static FullScreenMode FullscreenMode { get; private set; }
 
-	// Token: 0x0600159A RID: 5530 RVA: 0x00043270 File Offset: 0x00041470
+	// Token: 0x06001EF4 RID: 7924 RVA: 0x000A17F4 File Offset: 0x0009F9F4
 	public static void SetResolution(int xResolution, int yResolution, FullScreenMode fullScreenMode, bool saveConfig = true)
 	{
 		Screen.SetResolution(xResolution, yResolution, fullScreenMode, 0);
@@ -62,7 +62,7 @@ public static class GameResolutionManager
 		Messenger<SceneMessenger, SceneEvent>.Broadcast(SceneEvent.ResolutionChanged, null, null);
 	}
 
-	// Token: 0x0600159B RID: 5531 RVA: 0x000432CD File Offset: 0x000414CD
+	// Token: 0x06001EF5 RID: 7925 RVA: 0x000103A6 File Offset: 0x0000E5A6
 	public static void SetVsyncEnable(bool enable)
 	{
 		if (enable)
@@ -84,7 +84,7 @@ public static class GameResolutionManager
 		}
 	}
 
-	// Token: 0x0600159C RID: 5532 RVA: 0x00043304 File Offset: 0x00041504
+	// Token: 0x06001EF6 RID: 7926 RVA: 0x000A1854 File Offset: 0x0009FA54
 	public static void SetPrimaryDisplay(int displayIndex)
 	{
 		List<GameResolutionManager.DisplayInfo> displays = GameResolutionManager.GetDisplays();
@@ -150,7 +150,7 @@ public static class GameResolutionManager
 		}
 	}
 
-	// Token: 0x0600159D RID: 5533 RVA: 0x000434AC File Offset: 0x000416AC
+	// Token: 0x06001EF7 RID: 7927 RVA: 0x000103DB File Offset: 0x0000E5DB
 	private static IEnumerator MoveWindowFullscreenCoroutine(int displayIndex)
 	{
 		int screenWidth = SaveManager.ConfigData.ScreenWidth;
@@ -179,7 +179,7 @@ public static class GameResolutionManager
 		yield break;
 	}
 
-	// Token: 0x0600159E RID: 5534 RVA: 0x000434BC File Offset: 0x000416BC
+	// Token: 0x06001EF8 RID: 7928 RVA: 0x000A19FC File Offset: 0x0009FBFC
 	public static List<GameResolutionManager.DisplayInfo> GetDisplays()
 	{
 		GameResolutionManager.m_displayInfoList.Clear();
@@ -202,99 +202,99 @@ public static class GameResolutionManager
 		return GameResolutionManager.m_displayInfoList;
 	}
 
-	// Token: 0x0600159F RID: 5535 RVA: 0x0004350C File Offset: 0x0004170C
+	// Token: 0x06001EF9 RID: 7929 RVA: 0x000103EA File Offset: 0x0000E5EA
 	private static void MoveToDisplay(int newWidth, int newHeight, int targetX, int targetY)
 	{
 		GameResolutionManager.MoveWindow(GameResolutionManager.GetActiveWindow(), targetX, targetY, newWidth, newHeight, true);
 	}
 
-	// Token: 0x040014D3 RID: 5331
+	// Token: 0x04001BA2 RID: 7074
 	private static List<GameResolutionManager.DisplayInfo> m_displayInfoList = new List<GameResolutionManager.DisplayInfo>();
 
-	// Token: 0x02000B1E RID: 2846
-	// (Invoke) Token: 0x06005BC8 RID: 23496
+	// Token: 0x020003A5 RID: 933
+	// (Invoke) Token: 0x06001EFC RID: 7932
 	private delegate bool MonitorEnumDelegate(IntPtr hMonitor, IntPtr hdcMonitor, ref GameResolutionManager.RECT lprcMonitor, IntPtr dwData);
 
-	// Token: 0x02000B1F RID: 2847
+	// Token: 0x020003A6 RID: 934
 	public struct RECT
 	{
-		// Token: 0x04004B64 RID: 19300
+		// Token: 0x04001BA3 RID: 7075
 		public int left;
 
-		// Token: 0x04004B65 RID: 19301
+		// Token: 0x04001BA4 RID: 7076
 		public int top;
 
-		// Token: 0x04004B66 RID: 19302
+		// Token: 0x04001BA5 RID: 7077
 		public int right;
 
-		// Token: 0x04004B67 RID: 19303
+		// Token: 0x04001BA6 RID: 7078
 		public int bottom;
 	}
 
-	// Token: 0x02000B20 RID: 2848
+	// Token: 0x020003A7 RID: 935
 	[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode, Pack = 4)]
 	public class MONITORINFOEX
 	{
-		// Token: 0x04004B68 RID: 19304
+		// Token: 0x04001BA7 RID: 7079
 		public int cbSize = Marshal.SizeOf(typeof(GameResolutionManager.MONITORINFOEX));
 
-		// Token: 0x04004B69 RID: 19305
+		// Token: 0x04001BA8 RID: 7080
 		public GameResolutionManager.RECT rcMonitor;
 
-		// Token: 0x04004B6A RID: 19306
+		// Token: 0x04001BA9 RID: 7081
 		public GameResolutionManager.RECT rcWork;
 
-		// Token: 0x04004B6B RID: 19307
+		// Token: 0x04001BAA RID: 7082
 		public int dwFlags;
 
-		// Token: 0x04004B6C RID: 19308
+		// Token: 0x04001BAB RID: 7083
 		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 32, ArraySubType = UnmanagedType.U2)]
 		public char[] szDevice = new char[32];
 	}
 
-	// Token: 0x02000B21 RID: 2849
+	// Token: 0x020003A8 RID: 936
 	public struct POINTSTRUCT
 	{
-		// Token: 0x06005BCC RID: 23500 RVA: 0x0015B1CE File Offset: 0x001593CE
+		// Token: 0x06001F00 RID: 7936 RVA: 0x00010437 File Offset: 0x0000E637
 		public POINTSTRUCT(int x, int y)
 		{
 			this.x = x;
 			this.y = y;
 		}
 
-		// Token: 0x04004B6D RID: 19309
+		// Token: 0x04001BAC RID: 7084
 		public int x;
 
-		// Token: 0x04004B6E RID: 19310
+		// Token: 0x04001BAD RID: 7085
 		public int y;
 	}
 
-	// Token: 0x02000B22 RID: 2850
+	// Token: 0x020003A9 RID: 937
 	public class DisplayInfo
 	{
-		// Token: 0x17001E4B RID: 7755
-		// (get) Token: 0x06005BCD RID: 23501 RVA: 0x0015B1DE File Offset: 0x001593DE
-		// (set) Token: 0x06005BCE RID: 23502 RVA: 0x0015B1E6 File Offset: 0x001593E6
+		// Token: 0x17000E04 RID: 3588
+		// (get) Token: 0x06001F01 RID: 7937 RVA: 0x00010447 File Offset: 0x0000E647
+		// (set) Token: 0x06001F02 RID: 7938 RVA: 0x0001044F File Offset: 0x0000E64F
 		public string Availability { get; set; }
 
-		// Token: 0x17001E4C RID: 7756
-		// (get) Token: 0x06005BCF RID: 23503 RVA: 0x0015B1EF File Offset: 0x001593EF
-		// (set) Token: 0x06005BD0 RID: 23504 RVA: 0x0015B1F7 File Offset: 0x001593F7
+		// Token: 0x17000E05 RID: 3589
+		// (get) Token: 0x06001F03 RID: 7939 RVA: 0x00010458 File Offset: 0x0000E658
+		// (set) Token: 0x06001F04 RID: 7940 RVA: 0x00010460 File Offset: 0x0000E660
 		public int ScreenHeight { get; set; }
 
-		// Token: 0x17001E4D RID: 7757
-		// (get) Token: 0x06005BD1 RID: 23505 RVA: 0x0015B200 File Offset: 0x00159400
-		// (set) Token: 0x06005BD2 RID: 23506 RVA: 0x0015B208 File Offset: 0x00159408
+		// Token: 0x17000E06 RID: 3590
+		// (get) Token: 0x06001F05 RID: 7941 RVA: 0x00010469 File Offset: 0x0000E669
+		// (set) Token: 0x06001F06 RID: 7942 RVA: 0x00010471 File Offset: 0x0000E671
 		public int ScreenWidth { get; set; }
 
-		// Token: 0x17001E4E RID: 7758
-		// (get) Token: 0x06005BD3 RID: 23507 RVA: 0x0015B211 File Offset: 0x00159411
-		// (set) Token: 0x06005BD4 RID: 23508 RVA: 0x0015B219 File Offset: 0x00159419
+		// Token: 0x17000E07 RID: 3591
+		// (get) Token: 0x06001F07 RID: 7943 RVA: 0x0001047A File Offset: 0x0000E67A
+		// (set) Token: 0x06001F08 RID: 7944 RVA: 0x00010482 File Offset: 0x0000E682
 		public GameResolutionManager.RECT MonitorArea { get; set; }
 
-		// Token: 0x17001E4F RID: 7759
-		// (get) Token: 0x06005BD5 RID: 23509 RVA: 0x0015B222 File Offset: 0x00159422
-		// (set) Token: 0x06005BD6 RID: 23510 RVA: 0x0015B22A File Offset: 0x0015942A
+		// Token: 0x17000E08 RID: 3592
+		// (get) Token: 0x06001F09 RID: 7945 RVA: 0x0001048B File Offset: 0x0000E68B
+		// (set) Token: 0x06001F0A RID: 7946 RVA: 0x00010493 File Offset: 0x0000E693
 		public GameResolutionManager.RECT WorkArea { get; set; }
 	}
 }

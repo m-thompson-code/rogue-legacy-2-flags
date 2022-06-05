@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x0200072E RID: 1838
+// Token: 0x02000BEC RID: 3052
 public enum EnemyRank
 {
-	// Token: 0x04003414 RID: 13332
+	// Token: 0x04004690 RID: 18064
 	Basic,
-	// Token: 0x04003415 RID: 13333
+	// Token: 0x04004691 RID: 18065
 	Advanced,
-	// Token: 0x04003416 RID: 13334
+	// Token: 0x04004692 RID: 18066
 	Expert,
-	// Token: 0x04003417 RID: 13335
+	// Token: 0x04004693 RID: 18067
 	Miniboss,
-	// Token: 0x04003418 RID: 13336
+	// Token: 0x04004694 RID: 18068
 	None,
-	// Token: 0x04003419 RID: 13337
+	// Token: 0x04004695 RID: 18069
 	Any
 }

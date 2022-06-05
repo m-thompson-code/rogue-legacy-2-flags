@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000744 RID: 1860
+// Token: 0x02000C02 RID: 3074
 public class InsightType_RL
 {
-	// Token: 0x17001634 RID: 5684
-	// (get) Token: 0x06004109 RID: 16649 RVA: 0x000E64E7 File Offset: 0x000E46E7
+	// Token: 0x17001E30 RID: 7728
+	// (get) Token: 0x06005A86 RID: 23174 RVA: 0x00031939 File Offset: 0x0002FB39
 	public static InsightType[] TypeArray
 	{
 		get
@@ -17,7 +17,7 @@ public class InsightType_RL
 		}
 	}
 
-	// Token: 0x0600410A RID: 16650 RVA: 0x000E6510 File Offset: 0x000E4710
+	// Token: 0x06005A87 RID: 23175 RVA: 0x00155E6C File Offset: 0x0015406C
 	public static InsightType GetInsightFromHeirloomType(HeirloomType heirloomType)
 	{
 		if (heirloomType <= HeirloomType.UnlockBouncableDownstrike)
@@ -53,6 +53,6 @@ public class InsightType_RL
 		return InsightType.None;
 	}
 
-	// Token: 0x040034B2 RID: 13490
+	// Token: 0x0400472E RID: 18222
 	private static InsightType[] m_insightTypeArray;
 }

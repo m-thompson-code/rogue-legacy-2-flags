@@ -2,16 +2,16 @@
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004E4 RID: 1252
+// Token: 0x0200082F RID: 2095
 public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisplaySpeechBubble
 {
-	// Token: 0x17001191 RID: 4497
-	// (get) Token: 0x06002EDC RID: 11996 RVA: 0x0009FAB2 File Offset: 0x0009DCB2
-	// (set) Token: 0x06002EDD RID: 11997 RVA: 0x0009FABA File Offset: 0x0009DCBA
+	// Token: 0x17001758 RID: 5976
+	// (get) Token: 0x060040A8 RID: 16552 RVA: 0x00023B71 File Offset: 0x00021D71
+	// (set) Token: 0x060040A9 RID: 16553 RVA: 0x00023B79 File Offset: 0x00021D79
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17001192 RID: 4498
-	// (get) Token: 0x06002EDE RID: 11998 RVA: 0x0009FAC3 File Offset: 0x0009DCC3
+	// Token: 0x17001759 RID: 5977
+	// (get) Token: 0x060040AA RID: 16554 RVA: 0x00023B82 File Offset: 0x00021D82
 	private bool NGPlusMismatchExists
 	{
 		get
@@ -20,8 +20,8 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		}
 	}
 
-	// Token: 0x17001193 RID: 4499
-	// (get) Token: 0x06002EDF RID: 11999 RVA: 0x0009FAF4 File Offset: 0x0009DCF4
+	// Token: 0x1700175A RID: 5978
+	// (get) Token: 0x060040AB RID: 16555 RVA: 0x00023BB3 File Offset: 0x00021DB3
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -30,8 +30,8 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		}
 	}
 
-	// Token: 0x17001194 RID: 4500
-	// (get) Token: 0x06002EE0 RID: 12000 RVA: 0x0009FAFF File Offset: 0x0009DCFF
+	// Token: 0x1700175B RID: 5979
+	// (get) Token: 0x060040AC RID: 16556 RVA: 0x00004A8D File Offset: 0x00002C8D
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -40,7 +40,7 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		}
 	}
 
-	// Token: 0x06002EE1 RID: 12001 RVA: 0x0009FB04 File Offset: 0x0009DD04
+	// Token: 0x060040AD RID: 16557 RVA: 0x001037FC File Offset: 0x001019FC
 	private void Awake()
 	{
 		this.m_onPlayerEnterRoom = new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom);
@@ -52,7 +52,7 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		this.m_interactable = base.GetComponent<Interactable>();
 	}
 
-	// Token: 0x06002EE2 RID: 12002 RVA: 0x0009FB89 File Offset: 0x0009DD89
+	// Token: 0x060040AE RID: 16558 RVA: 0x00023BBE File Offset: 0x00021DBE
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
@@ -62,7 +62,7 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		}
 	}
 
-	// Token: 0x06002EE3 RID: 12003 RVA: 0x0009FBB7 File Offset: 0x0009DDB7
+	// Token: 0x060040AF RID: 16559 RVA: 0x00023BEC File Offset: 0x00021DEC
 	private void OnDisable()
 	{
 		if (this.Room)
@@ -71,7 +71,7 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		}
 	}
 
-	// Token: 0x06002EE4 RID: 12004 RVA: 0x0009FBE0 File Offset: 0x0009DDE0
+	// Token: 0x060040B0 RID: 16560 RVA: 0x00103884 File Offset: 0x00101A84
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs args)
 	{
 		TraitorMemoryUnlockIndexOverride component = base.GetComponent<Prop>().PropSpawnController.GetComponent<TraitorMemoryUnlockIndexOverride>();
@@ -98,7 +98,7 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		}
 	}
 
-	// Token: 0x06002EE5 RID: 12005 RVA: 0x0009FCB9 File Offset: 0x0009DEB9
+	// Token: 0x060040B1 RID: 16561 RVA: 0x00023C12 File Offset: 0x00021E12
 	public void TriggerMemory()
 	{
 		if (this.m_traitorMemoryIndex == -1)
@@ -109,7 +109,7 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		this.RunMemory();
 	}
 
-	// Token: 0x06002EE6 RID: 12006 RVA: 0x0009FCD4 File Offset: 0x0009DED4
+	// Token: 0x060040B2 RID: 16562 RVA: 0x00103960 File Offset: 0x00101B60
 	private void RunUnlockDialogue()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
@@ -125,7 +125,7 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		WindowManager.SetWindowIsOpen(WindowID.Dialogue, true);
 	}
 
-	// Token: 0x06002EE7 RID: 12007 RVA: 0x0009FD50 File Offset: 0x0009DF50
+	// Token: 0x060040B3 RID: 16563 RVA: 0x001039DC File Offset: 0x00101BDC
 	private void RunConfirmMenu1()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenuBig))
@@ -149,7 +149,7 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, true);
 	}
 
-	// Token: 0x06002EE8 RID: 12008 RVA: 0x0009FE38 File Offset: 0x0009E038
+	// Token: 0x060040B4 RID: 16564 RVA: 0x00103AC4 File Offset: 0x00101CC4
 	private void RunConfirmMenu2()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, false);
@@ -169,7 +169,7 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, true);
 	}
 
-	// Token: 0x06002EE9 RID: 12009 RVA: 0x0009FF10 File Offset: 0x0009E110
+	// Token: 0x060040B5 RID: 16565 RVA: 0x00103B9C File Offset: 0x00101D9C
 	private void UnlockAllTraitorMemories()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, false);
@@ -186,14 +186,14 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		}
 	}
 
-	// Token: 0x06002EEA RID: 12010 RVA: 0x0009FFB5 File Offset: 0x0009E1B5
+	// Token: 0x060040B6 RID: 16566 RVA: 0x00023C2A File Offset: 0x00021E2A
 	private void CancelConfirmMenu()
 	{
 		this.m_interactable.SetIsInteractableActive(true);
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, false);
 	}
 
-	// Token: 0x06002EEB RID: 12011 RVA: 0x0009FFCC File Offset: 0x0009E1CC
+	// Token: 0x060040B7 RID: 16567 RVA: 0x00103C44 File Offset: 0x00101E44
 	public void UnlockMemory()
 	{
 		if (this.m_traitorMemoryIndex > -1 && SaveManager.PlayerSaveData.UnlockAllTraitorMemories && this.m_traitorMemoryIndex < Ending_EV.GARDEN_PREFIGHT_DIALOGUE_LOCIDS.Length - 1 && this.m_traitorMemoryIndex < SaveManager.PlayerSaveData.TimesBeatenTraitor)
@@ -202,7 +202,7 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		}
 	}
 
-	// Token: 0x06002EEC RID: 12012 RVA: 0x000A0020 File Offset: 0x0009E220
+	// Token: 0x060040B8 RID: 16568 RVA: 0x00103C98 File Offset: 0x00101E98
 	private void RunMemory()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
@@ -216,38 +216,38 @@ public class TraitorMemoryUnlockController : MonoBehaviour, IRoomConsumer, IDisp
 		}
 	}
 
-	// Token: 0x06002EED RID: 12013 RVA: 0x000A0092 File Offset: 0x0009E292
+	// Token: 0x060040B9 RID: 16569 RVA: 0x00023C40 File Offset: 0x00021E40
 	private void CloseMemory()
 	{
 		this.m_interactable.SetIsInteractableActive(true);
 	}
 
-	// Token: 0x04002553 RID: 9555
+	// Token: 0x04003291 RID: 12945
 	[SerializeField]
 	private int m_traitorMemoryIndex = -1;
 
-	// Token: 0x04002554 RID: 9556
+	// Token: 0x04003292 RID: 12946
 	[SerializeField]
 	private ParticleSystem m_glowParticles;
 
-	// Token: 0x04002555 RID: 9557
+	// Token: 0x04003293 RID: 12947
 	private Interactable m_interactable;
 
-	// Token: 0x04002556 RID: 9558
+	// Token: 0x04003294 RID: 12948
 	private Action<object, RoomViaDoorEventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04002557 RID: 9559
+	// Token: 0x04003295 RID: 12949
 	private Action m_runConfirmMenu1;
 
-	// Token: 0x04002558 RID: 9560
+	// Token: 0x04003296 RID: 12950
 	private Action m_runConfirmMenu2;
 
-	// Token: 0x04002559 RID: 9561
+	// Token: 0x04003297 RID: 12951
 	private Action m_closeMemory;
 
-	// Token: 0x0400255A RID: 9562
+	// Token: 0x04003298 RID: 12952
 	private Action m_cancelConfirmMenu;
 
-	// Token: 0x0400255B RID: 9563
+	// Token: 0x04003299 RID: 12953
 	private Action m_unlockAllTraitorMemories;
 }

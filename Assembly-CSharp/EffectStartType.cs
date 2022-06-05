@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000411 RID: 1041
+// Token: 0x020006C9 RID: 1737
 public enum EffectStartType
 {
-	// Token: 0x04002091 RID: 8337
+	// Token: 0x04002B74 RID: 11124
 	None,
-	// Token: 0x04002092 RID: 8338
+	// Token: 0x04002B75 RID: 11125
 	FirstLoopOnly = 10,
-	// Token: 0x04002093 RID: 8339
+	// Token: 0x04002B76 RID: 11126
 	OnceEveryLoop = 20
 }

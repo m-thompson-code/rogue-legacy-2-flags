@@ -4,11 +4,11 @@ using Sigtrap.Relays;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000445 RID: 1093
+// Token: 0x02000713 RID: 1811
 public class BreakableSpike_Hazard : Hazard, IBodyOnEnterHitResponse, IHitResponse, IBodyOnStayHitResponse, IEffectTriggerEvent_OnDeath
 {
-	// Token: 0x17000FC9 RID: 4041
-	// (get) Token: 0x06002815 RID: 10261 RVA: 0x00084C14 File Offset: 0x00082E14
+	// Token: 0x170014B6 RID: 5302
+	// (get) Token: 0x06003745 RID: 14149 RVA: 0x0001E65E File Offset: 0x0001C85E
 	public IRelayLink<GameObject> OnDeathEffectTriggerRelay
 	{
 		get
@@ -17,8 +17,8 @@ public class BreakableSpike_Hazard : Hazard, IBodyOnEnterHitResponse, IHitRespon
 		}
 	}
 
-	// Token: 0x17000FCA RID: 4042
-	// (get) Token: 0x06002816 RID: 10262 RVA: 0x00084C21 File Offset: 0x00082E21
+	// Token: 0x170014B7 RID: 5303
+	// (get) Token: 0x06003746 RID: 14150 RVA: 0x00005391 File Offset: 0x00003591
 	public override float BaseDamage
 	{
 		get
@@ -27,7 +27,7 @@ public class BreakableSpike_Hazard : Hazard, IBodyOnEnterHitResponse, IHitRespon
 		}
 	}
 
-	// Token: 0x06002817 RID: 10263 RVA: 0x00084C28 File Offset: 0x00082E28
+	// Token: 0x06003747 RID: 14151 RVA: 0x0001E66B File Offset: 0x0001C86B
 	protected override void Awake()
 	{
 		base.Awake();
@@ -35,7 +35,7 @@ public class BreakableSpike_Hazard : Hazard, IBodyOnEnterHitResponse, IHitRespon
 		this.m_blinkPulseEffect = base.GetComponent<BlinkPulseEffect>();
 	}
 
-	// Token: 0x06002818 RID: 10264 RVA: 0x00084C48 File Offset: 0x00082E48
+	// Token: 0x06003748 RID: 14152 RVA: 0x0001E68B File Offset: 0x0001C88B
 	private void OnEnable()
 	{
 		if (this.m_isTallSpike)
@@ -49,7 +49,7 @@ public class BreakableSpike_Hazard : Hazard, IBodyOnEnterHitResponse, IHitRespon
 		this.m_hudCollider.enabled = true;
 	}
 
-	// Token: 0x06002819 RID: 10265 RVA: 0x00084C84 File Offset: 0x00082E84
+	// Token: 0x06003749 RID: 14153 RVA: 0x0001E6C7 File Offset: 0x0001C8C7
 	private IEnumerator ExtendCoroutine(float extendDelay)
 	{
 		float startTime = Time.time;
@@ -88,7 +88,7 @@ public class BreakableSpike_Hazard : Hazard, IBodyOnEnterHitResponse, IHitRespon
 		yield break;
 	}
 
-	// Token: 0x0600281A RID: 10266 RVA: 0x00084C9C File Offset: 0x00082E9C
+	// Token: 0x0600374A RID: 14154 RVA: 0x000E559C File Offset: 0x000E379C
 	public void BodyOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (!this.m_destroyed)
@@ -114,13 +114,13 @@ public class BreakableSpike_Hazard : Hazard, IBodyOnEnterHitResponse, IHitRespon
 		}
 	}
 
-	// Token: 0x0600281B RID: 10267 RVA: 0x00084D75 File Offset: 0x00082F75
+	// Token: 0x0600374B RID: 14155 RVA: 0x0001E6DD File Offset: 0x0001C8DD
 	public void BodyOnStayHitResponse(IHitboxController otherHBController)
 	{
 		this.BodyOnEnterHitResponse(otherHBController);
 	}
 
-	// Token: 0x0600281C RID: 10268 RVA: 0x00084D80 File Offset: 0x00082F80
+	// Token: 0x0600374C RID: 14156 RVA: 0x000E5678 File Offset: 0x000E3878
 	public override void ResetHazard()
 	{
 		this.m_destroyed = false;
@@ -134,35 +134,35 @@ public class BreakableSpike_Hazard : Hazard, IBodyOnEnterHitResponse, IHitRespon
 		}
 	}
 
-	// Token: 0x04002146 RID: 8518
+	// Token: 0x04002C89 RID: 11401
 	[SerializeField]
 	private bool m_isTallSpike;
 
-	// Token: 0x04002147 RID: 8519
+	// Token: 0x04002C8A RID: 11402
 	[SerializeField]
 	private UnityEvent ExtendEvent;
 
-	// Token: 0x04002148 RID: 8520
+	// Token: 0x04002C8B RID: 11403
 	[SerializeField]
 	private UnityEvent CollisionActivatedEvent;
 
-	// Token: 0x04002149 RID: 8521
+	// Token: 0x04002C8C RID: 11404
 	[SerializeField]
 	private UnityEvent DestroyedEvent;
 
-	// Token: 0x0400214A RID: 8522
+	// Token: 0x04002C8D RID: 11405
 	[SerializeField]
 	private BoxCollider2D m_hudCollider;
 
-	// Token: 0x0400214B RID: 8523
+	// Token: 0x04002C8E RID: 11406
 	private bool m_destroyed;
 
-	// Token: 0x0400214C RID: 8524
+	// Token: 0x04002C8F RID: 11407
 	private IHitboxController m_hbController;
 
-	// Token: 0x0400214D RID: 8525
+	// Token: 0x04002C90 RID: 11408
 	private BlinkPulseEffect m_blinkPulseEffect;
 
-	// Token: 0x0400214E RID: 8526
+	// Token: 0x04002C91 RID: 11409
 	private Relay<GameObject> m_onDeathEffectTriggerEventRelay = new Relay<GameObject>();
 }

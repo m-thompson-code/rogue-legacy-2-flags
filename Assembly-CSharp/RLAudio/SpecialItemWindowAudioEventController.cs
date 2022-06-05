@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000916 RID: 2326
+	// Token: 0x02000E93 RID: 3731
 	public class SpecialItemWindowAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001887 RID: 6279
-		// (get) Token: 0x06004C43 RID: 19523 RVA: 0x00111E34 File Offset: 0x00110034
+		// Token: 0x17002180 RID: 8576
+		// (get) Token: 0x0600693E RID: 26942 RVA: 0x0003A657 File Offset: 0x00038857
 		public string Description
 		{
 			get
@@ -22,7 +22,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C44 RID: 19524 RVA: 0x00111E58 File Offset: 0x00110058
+		// Token: 0x0600693F RID: 26943 RVA: 0x00181B34 File Offset: 0x0017FD34
 		private void Awake()
 		{
 			SpecialItemDropWindowController component = base.gameObject.GetComponent<SpecialItemDropWindowController>();
@@ -31,7 +31,7 @@ namespace RLAudio
 			component.ItemRevealedRelay.AddListener(new Action<SpecialItemType>(this.OnItemRevealed), false);
 		}
 
-		// Token: 0x06004C45 RID: 19525 RVA: 0x00111EBC File Offset: 0x001100BC
+		// Token: 0x06006940 RID: 26944 RVA: 0x00181B98 File Offset: 0x0017FD98
 		private void OnWindowOpened(SpecialItemType itemID)
 		{
 			string path = string.Empty;
@@ -70,7 +70,7 @@ namespace RLAudio
 			AudioManager.PlayOneShot(this, path, default(Vector3));
 		}
 
-		// Token: 0x06004C46 RID: 19526 RVA: 0x00111F3C File Offset: 0x0011013C
+		// Token: 0x06006941 RID: 26945 RVA: 0x00181C18 File Offset: 0x0017FE18
 		private void OnItemRevealed(SpecialItemType itemID)
 		{
 			string path = string.Empty;
@@ -109,7 +109,7 @@ namespace RLAudio
 			AudioManager.PlayOneShot(this, path, default(Vector3));
 		}
 
-		// Token: 0x06004C47 RID: 19527 RVA: 0x00111FBC File Offset: 0x001101BC
+		// Token: 0x06006942 RID: 26946 RVA: 0x00181C98 File Offset: 0x0017FE98
 		private void OnWindowClosed(SpecialItemType itemID)
 		{
 			string path = string.Empty;
@@ -148,37 +148,37 @@ namespace RLAudio
 			AudioManager.PlayOneShot(this, path, default(Vector3));
 		}
 
-		// Token: 0x04004035 RID: 16437
+		// Token: 0x04005595 RID: 21909
 		[SerializeField]
 		[EventRef]
 		private string m_runeWindowOpenedPath;
 
-		// Token: 0x04004036 RID: 16438
+		// Token: 0x04005596 RID: 21910
 		[SerializeField]
 		[EventRef]
 		private string m_runeWindowClosedPath;
 
-		// Token: 0x04004037 RID: 16439
+		// Token: 0x04005597 RID: 21911
 		[SerializeField]
 		[EventRef]
 		private string m_runeRevealedPath;
 
-		// Token: 0x04004038 RID: 16440
+		// Token: 0x04005598 RID: 21912
 		[SerializeField]
 		[EventRef]
 		private string m_blueprintWindowOpenedPath;
 
-		// Token: 0x04004039 RID: 16441
+		// Token: 0x04005599 RID: 21913
 		[SerializeField]
 		[EventRef]
 		private string m_blueprintWindowClosedPath;
 
-		// Token: 0x0400403A RID: 16442
+		// Token: 0x0400559A RID: 21914
 		[SerializeField]
 		[EventRef]
 		private string m_blueprintRevealedPath;
 
-		// Token: 0x0400403B RID: 16443
+		// Token: 0x0400559B RID: 21915
 		private string m_description;
 	}
 }

@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000395 RID: 917
+// Token: 0x02000624 RID: 1572
 public class BlacksmithOmniUICategoryEntry : BaseOmniUICategoryEntry
 {
-	// Token: 0x17000E40 RID: 3648
-	// (get) Token: 0x06002248 RID: 8776 RVA: 0x0006DCF5 File Offset: 0x0006BEF5
-	// (set) Token: 0x06002249 RID: 8777 RVA: 0x0006DCFD File Offset: 0x0006BEFD
+	// Token: 0x170012D1 RID: 4817
+	// (get) Token: 0x0600305A RID: 12378 RVA: 0x0001A838 File Offset: 0x00018A38
+	// (set) Token: 0x0600305B RID: 12379 RVA: 0x0001A840 File Offset: 0x00018A40
 	public EquipmentCategoryType CategoryType { get; protected set; }
 
-	// Token: 0x0600224A RID: 8778 RVA: 0x0006DD06 File Offset: 0x0006BF06
+	// Token: 0x0600305C RID: 12380 RVA: 0x0001A849 File Offset: 0x00018A49
 	public void Initialize(EquipmentCategoryType categoryType, int entryIndex, BlacksmithOmniUIWindowController windowController)
 	{
 		this.CategoryType = categoryType;
@@ -16,7 +16,7 @@ public class BlacksmithOmniUICategoryEntry : BaseOmniUICategoryEntry
 		this.m_iconSprite.sprite = IconLibrary.GetEquipmentCategoryIcon(categoryType);
 	}
 
-	// Token: 0x0600224B RID: 8779 RVA: 0x0006DD28 File Offset: 0x0006BF28
+	// Token: 0x0600305D RID: 12381 RVA: 0x000CEA74 File Offset: 0x000CCC74
 	public override void UpdateState()
 	{
 		bool flag = false;

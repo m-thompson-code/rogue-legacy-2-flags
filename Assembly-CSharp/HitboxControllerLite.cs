@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x020001D6 RID: 470
+// Token: 0x02000356 RID: 854
 [RequireComponent(typeof(Rigidbody2D))]
 public class HitboxControllerLite : MonoBehaviour, IHitboxController
 {
-	// Token: 0x17000A38 RID: 2616
-	// (get) Token: 0x0600132F RID: 4911 RVA: 0x00039E7B File Offset: 0x0003807B
+	// Token: 0x17000D0E RID: 3342
+	// (get) Token: 0x06001BC2 RID: 7106 RVA: 0x0000E68A File Offset: 0x0000C88A
 	public bool ResponseMethodsInitialized
 	{
 		get
@@ -18,14 +18,14 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A39 RID: 2617
-	// (get) Token: 0x06001330 RID: 4912 RVA: 0x00039E83 File Offset: 0x00038083
-	// (set) Token: 0x06001331 RID: 4913 RVA: 0x00039E8B File Offset: 0x0003808B
+	// Token: 0x17000D0F RID: 3343
+	// (get) Token: 0x06001BC3 RID: 7107 RVA: 0x0000E692 File Offset: 0x0000C892
+	// (set) Token: 0x06001BC4 RID: 7108 RVA: 0x0000E69A File Offset: 0x0000C89A
 	public Collider2D LastCollidedWith { get; set; }
 
-	// Token: 0x17000A3A RID: 2618
-	// (get) Token: 0x06001332 RID: 4914 RVA: 0x00039E94 File Offset: 0x00038094
-	// (set) Token: 0x06001333 RID: 4915 RVA: 0x00039E9C File Offset: 0x0003809C
+	// Token: 0x17000D10 RID: 3344
+	// (get) Token: 0x06001BC5 RID: 7109 RVA: 0x0000E6A3 File Offset: 0x0000C8A3
+	// (set) Token: 0x06001BC6 RID: 7110 RVA: 0x0000E6AB File Offset: 0x0000C8AB
 	public bool DisableAllCollisions
 	{
 		get
@@ -47,8 +47,8 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A3B RID: 2619
-	// (get) Token: 0x06001334 RID: 4916 RVA: 0x00039ED3 File Offset: 0x000380D3
+	// Token: 0x17000D11 RID: 3345
+	// (get) Token: 0x06001BC7 RID: 7111 RVA: 0x0000E6E2 File Offset: 0x0000C8E2
 	public IBodyOnEnterHitResponse[] BodyOnEnterHitResponseArray
 	{
 		get
@@ -57,8 +57,8 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A3C RID: 2620
-	// (get) Token: 0x06001335 RID: 4917 RVA: 0x00039EDB File Offset: 0x000380DB
+	// Token: 0x17000D12 RID: 3346
+	// (get) Token: 0x06001BC8 RID: 7112 RVA: 0x0000E6EA File Offset: 0x0000C8EA
 	public IWeaponOnEnterHitResponse[] WeaponOnEnterHitResponseArray
 	{
 		get
@@ -67,8 +67,8 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A3D RID: 2621
-	// (get) Token: 0x06001336 RID: 4918 RVA: 0x00039EE3 File Offset: 0x000380E3
+	// Token: 0x17000D13 RID: 3347
+	// (get) Token: 0x06001BC9 RID: 7113 RVA: 0x0000E6F2 File Offset: 0x0000C8F2
 	public ITerrainOnEnterHitResponse[] TerrainOnEnterHitResponseArray
 	{
 		get
@@ -77,8 +77,8 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A3E RID: 2622
-	// (get) Token: 0x06001337 RID: 4919 RVA: 0x00039EEB File Offset: 0x000380EB
+	// Token: 0x17000D14 RID: 3348
+	// (get) Token: 0x06001BCA RID: 7114 RVA: 0x0000E6FA File Offset: 0x0000C8FA
 	public IBodyOnStayHitResponse[] BodyOnStayHitResponseArray
 	{
 		get
@@ -87,8 +87,8 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A3F RID: 2623
-	// (get) Token: 0x06001338 RID: 4920 RVA: 0x00039EF3 File Offset: 0x000380F3
+	// Token: 0x17000D15 RID: 3349
+	// (get) Token: 0x06001BCB RID: 7115 RVA: 0x0000E702 File Offset: 0x0000C902
 	public IWeaponOnStayHitResponse[] WeaponOnStayHitResponseArray
 	{
 		get
@@ -97,8 +97,8 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A40 RID: 2624
-	// (get) Token: 0x06001339 RID: 4921 RVA: 0x00039EFB File Offset: 0x000380FB
+	// Token: 0x17000D16 RID: 3350
+	// (get) Token: 0x06001BCC RID: 7116 RVA: 0x0000E70A File Offset: 0x0000C90A
 	public ITerrainOnStayHitResponse[] TerrainOnStayHitResponseArray
 	{
 		get
@@ -107,8 +107,8 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A41 RID: 2625
-	// (get) Token: 0x0600133A RID: 4922 RVA: 0x00039F03 File Offset: 0x00038103
+	// Token: 0x17000D17 RID: 3351
+	// (get) Token: 0x06001BCD RID: 7117 RVA: 0x0000E712 File Offset: 0x0000C912
 	public IBodyOnExitHitResponse[] BodyOnExitHitResponseList
 	{
 		get
@@ -117,8 +117,8 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A42 RID: 2626
-	// (get) Token: 0x0600133B RID: 4923 RVA: 0x00039F0B File Offset: 0x0003810B
+	// Token: 0x17000D18 RID: 3352
+	// (get) Token: 0x06001BCE RID: 7118 RVA: 0x0000E71A File Offset: 0x0000C91A
 	public IWeaponOnExitHitResponse[] WeaponOnExitHitResponseArray
 	{
 		get
@@ -127,8 +127,8 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A43 RID: 2627
-	// (get) Token: 0x0600133C RID: 4924 RVA: 0x00039F13 File Offset: 0x00038113
+	// Token: 0x17000D19 RID: 3353
+	// (get) Token: 0x06001BCF RID: 7119 RVA: 0x0000E722 File Offset: 0x0000C922
 	public ITerrainOnExitHitResponse[] TerrainOnExitHitResponseArray
 	{
 		get
@@ -137,9 +137,9 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A44 RID: 2628
-	// (get) Token: 0x0600133D RID: 4925 RVA: 0x00039F1B File Offset: 0x0003811B
-	// (set) Token: 0x0600133E RID: 4926 RVA: 0x00039F23 File Offset: 0x00038123
+	// Token: 0x17000D1A RID: 3354
+	// (get) Token: 0x06001BD0 RID: 7120 RVA: 0x0000E72A File Offset: 0x0000C92A
+	// (set) Token: 0x06001BD1 RID: 7121 RVA: 0x0000E732 File Offset: 0x0000C932
 	public float RepeatHitDuration
 	{
 		get
@@ -152,13 +152,13 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A45 RID: 2629
-	// (get) Token: 0x0600133F RID: 4927 RVA: 0x00039F2C File Offset: 0x0003812C
-	// (set) Token: 0x06001340 RID: 4928 RVA: 0x00039F34 File Offset: 0x00038134
+	// Token: 0x17000D1B RID: 3355
+	// (get) Token: 0x06001BD2 RID: 7122 RVA: 0x0000E73B File Offset: 0x0000C93B
+	// (set) Token: 0x06001BD3 RID: 7123 RVA: 0x0000E743 File Offset: 0x0000C943
 	public GameObject RootGameObject { get; private set; }
 
-	// Token: 0x17000A46 RID: 2630
-	// (get) Token: 0x06001341 RID: 4929 RVA: 0x00039F3D File Offset: 0x0003813D
+	// Token: 0x17000D1C RID: 3356
+	// (get) Token: 0x06001BD4 RID: 7124 RVA: 0x0000E74C File Offset: 0x0000C94C
 	public IDamageObj DamageObj
 	{
 		get
@@ -167,9 +167,9 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A47 RID: 2631
-	// (get) Token: 0x06001342 RID: 4930 RVA: 0x00039F45 File Offset: 0x00038145
-	// (set) Token: 0x06001343 RID: 4931 RVA: 0x00039F4D File Offset: 0x0003814D
+	// Token: 0x17000D1D RID: 3357
+	// (get) Token: 0x06001BD5 RID: 7125 RVA: 0x0000E754 File Offset: 0x0000C954
+	// (set) Token: 0x06001BD6 RID: 7126 RVA: 0x0000E75C File Offset: 0x0000C95C
 	public GameObject BodyHitbox
 	{
 		get
@@ -182,9 +182,9 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A48 RID: 2632
-	// (get) Token: 0x06001344 RID: 4932 RVA: 0x00039F56 File Offset: 0x00038156
-	// (set) Token: 0x06001345 RID: 4933 RVA: 0x00039F5E File Offset: 0x0003815E
+	// Token: 0x17000D1E RID: 3358
+	// (get) Token: 0x06001BD7 RID: 7127 RVA: 0x0000E765 File Offset: 0x0000C965
+	// (set) Token: 0x06001BD8 RID: 7128 RVA: 0x0000E76D File Offset: 0x0000C96D
 	public GameObject WeaponHitbox
 	{
 		get
@@ -197,9 +197,9 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A49 RID: 2633
-	// (get) Token: 0x06001346 RID: 4934 RVA: 0x00039F67 File Offset: 0x00038167
-	// (set) Token: 0x06001347 RID: 4935 RVA: 0x00039F6F File Offset: 0x0003816F
+	// Token: 0x17000D1F RID: 3359
+	// (get) Token: 0x06001BD9 RID: 7129 RVA: 0x0000E776 File Offset: 0x0000C976
+	// (set) Token: 0x06001BDA RID: 7130 RVA: 0x0000E77E File Offset: 0x0000C97E
 	public GameObject TerrainHitbox
 	{
 		get
@@ -212,9 +212,9 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A4A RID: 2634
-	// (get) Token: 0x06001348 RID: 4936 RVA: 0x00039F78 File Offset: 0x00038178
-	// (set) Token: 0x06001349 RID: 4937 RVA: 0x00039F80 File Offset: 0x00038180
+	// Token: 0x17000D20 RID: 3360
+	// (get) Token: 0x06001BDB RID: 7131 RVA: 0x0000E787 File Offset: 0x0000C987
+	// (set) Token: 0x06001BDC RID: 7132 RVA: 0x0000E78F File Offset: 0x0000C98F
 	public GameObject PlatformHitbox
 	{
 		get
@@ -227,8 +227,8 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A4B RID: 2635
-	// (get) Token: 0x0600134A RID: 4938 RVA: 0x00039F89 File Offset: 0x00038189
+	// Token: 0x17000D21 RID: 3361
+	// (get) Token: 0x06001BDD RID: 7133 RVA: 0x0000E798 File Offset: 0x0000C998
 	public Collider2D PlatformCollider
 	{
 		get
@@ -237,9 +237,9 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A4C RID: 2636
-	// (get) Token: 0x0600134B RID: 4939 RVA: 0x00039F91 File Offset: 0x00038191
-	// (set) Token: 0x0600134C RID: 4940 RVA: 0x00039F99 File Offset: 0x00038199
+	// Token: 0x17000D22 RID: 3362
+	// (get) Token: 0x06001BDE RID: 7134 RVA: 0x0000E7A0 File Offset: 0x0000C9A0
+	// (set) Token: 0x06001BDF RID: 7135 RVA: 0x0000E7A8 File Offset: 0x0000C9A8
 	public PlatformCollisionType PlatformCollisionType
 	{
 		get
@@ -252,9 +252,9 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A4D RID: 2637
-	// (get) Token: 0x0600134D RID: 4941 RVA: 0x00039FA2 File Offset: 0x000381A2
-	// (set) Token: 0x0600134E RID: 4942 RVA: 0x00039FAC File Offset: 0x000381AC
+	// Token: 0x17000D23 RID: 3363
+	// (get) Token: 0x06001BE0 RID: 7136 RVA: 0x0000E7B1 File Offset: 0x0000C9B1
+	// (set) Token: 0x06001BE1 RID: 7137 RVA: 0x0009719C File Offset: 0x0009539C
 	public CollisionType CollisionType
 	{
 		get
@@ -279,9 +279,9 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A4E RID: 2638
-	// (get) Token: 0x0600134F RID: 4943 RVA: 0x0003A00D File Offset: 0x0003820D
-	// (set) Token: 0x06001350 RID: 4944 RVA: 0x0003A015 File Offset: 0x00038215
+	// Token: 0x17000D24 RID: 3364
+	// (get) Token: 0x06001BE2 RID: 7138 RVA: 0x0000E7B9 File Offset: 0x0000C9B9
+	// (set) Token: 0x06001BE3 RID: 7139 RVA: 0x0000E7C1 File Offset: 0x0000C9C1
 	public CollisionType WeaponCollidesWithType
 	{
 		get
@@ -294,9 +294,9 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A4F RID: 2639
-	// (get) Token: 0x06001351 RID: 4945 RVA: 0x0003A01E File Offset: 0x0003821E
-	// (set) Token: 0x06001352 RID: 4946 RVA: 0x0003A026 File Offset: 0x00038226
+	// Token: 0x17000D25 RID: 3365
+	// (get) Token: 0x06001BE4 RID: 7140 RVA: 0x0000E7CA File Offset: 0x0000C9CA
+	// (set) Token: 0x06001BE5 RID: 7141 RVA: 0x0000E7D2 File Offset: 0x0000C9D2
 	public CollisionType TerrainCollidesWithType
 	{
 		get
@@ -309,7 +309,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001353 RID: 4947 RVA: 0x0003A030 File Offset: 0x00038230
+	// Token: 0x06001BE6 RID: 7142 RVA: 0x00097200 File Offset: 0x00095400
 	public GameObject ContainsHitbox(HitboxType hitboxType, string hitboxName)
 	{
 		int length = hitboxName.Length;
@@ -333,7 +333,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		return null;
 	}
 
-	// Token: 0x06001354 RID: 4948 RVA: 0x0003A098 File Offset: 0x00038298
+	// Token: 0x06001BE7 RID: 7143 RVA: 0x00097268 File Offset: 0x00095468
 	public void ChangeCollisionType(HitboxType hitboxType, CollisionType collisionType)
 	{
 		string tag = TagType_RL.ToString(CollisionType_RL.GetEquivalentTag(collisionType));
@@ -363,7 +363,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001355 RID: 4949 RVA: 0x0003A11B File Offset: 0x0003831B
+	// Token: 0x06001BE8 RID: 7144 RVA: 0x0000E7DB File Offset: 0x0000C9DB
 	public Collider2D GetCollider(HitboxType hitboxType)
 	{
 		switch (hitboxType)
@@ -381,7 +381,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001356 RID: 4950 RVA: 0x0003A152 File Offset: 0x00038352
+	// Token: 0x06001BE9 RID: 7145 RVA: 0x0000E812 File Offset: 0x0000CA12
 	private GameObject GetHitboxGO(HitboxType hbType)
 	{
 		switch (hbType)
@@ -399,7 +399,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001357 RID: 4951 RVA: 0x0003A18C File Offset: 0x0003838C
+	// Token: 0x06001BEA RID: 7146 RVA: 0x000972EC File Offset: 0x000954EC
 	public void ChangeCanCollideWith(HitboxType hitboxType, CollisionType newCollisionType)
 	{
 		if (hitboxType != HitboxType.Terrain)
@@ -421,12 +421,12 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x17000A50 RID: 2640
-	// (get) Token: 0x06001358 RID: 4952 RVA: 0x0003A1EC File Offset: 0x000383EC
-	// (set) Token: 0x06001359 RID: 4953 RVA: 0x0003A1F4 File Offset: 0x000383F4
+	// Token: 0x17000D26 RID: 3366
+	// (get) Token: 0x06001BEB RID: 7147 RVA: 0x0000E849 File Offset: 0x0000CA49
+	// (set) Token: 0x06001BEC RID: 7148 RVA: 0x0000E851 File Offset: 0x0000CA51
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x0600135A RID: 4954 RVA: 0x0003A1FD File Offset: 0x000383FD
+	// Token: 0x06001BED RID: 7149 RVA: 0x0000E85A File Offset: 0x0000CA5A
 	private void OnEnable()
 	{
 		if (!Application.isPlaying)
@@ -443,13 +443,13 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x0600135B RID: 4955 RVA: 0x0003A239 File Offset: 0x00038439
+	// Token: 0x06001BEE RID: 7150 RVA: 0x0000E896 File Offset: 0x0000CA96
 	private void OnDisable()
 	{
 		this.ResetRepeatHitChecks();
 	}
 
-	// Token: 0x0600135C RID: 4956 RVA: 0x0003A241 File Offset: 0x00038441
+	// Token: 0x06001BEF RID: 7151 RVA: 0x0000E89E File Offset: 0x0000CA9E
 	private void Awake()
 	{
 		if (this.m_initializeOnAwake && !this.IsInitialized)
@@ -458,7 +458,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x0600135D RID: 4957 RVA: 0x0003A259 File Offset: 0x00038459
+	// Token: 0x06001BF0 RID: 7152 RVA: 0x0000E8B6 File Offset: 0x0000CAB6
 	private IEnumerator Start()
 	{
 		this.m_startExecuted = true;
@@ -473,7 +473,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		yield break;
 	}
 
-	// Token: 0x0600135E RID: 4958 RVA: 0x0003A268 File Offset: 0x00038468
+	// Token: 0x06001BF1 RID: 7153 RVA: 0x0009734C File Offset: 0x0009554C
 	public void Initialize()
 	{
 		this.RootGameObject = this.GetRoot(false);
@@ -488,7 +488,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x0600135F RID: 4959 RVA: 0x0003A2CC File Offset: 0x000384CC
+	// Token: 0x06001BF2 RID: 7154 RVA: 0x000973B0 File Offset: 0x000955B0
 	private void InitializeHitboxes()
 	{
 		if (!this.m_hitboxesInitialized)
@@ -571,7 +571,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		this.RepopulateColliders(HitboxType.Platform);
 	}
 
-	// Token: 0x06001360 RID: 4960 RVA: 0x0003A468 File Offset: 0x00038668
+	// Token: 0x06001BF3 RID: 7155 RVA: 0x0009754C File Offset: 0x0009574C
 	private void SetupIgnoreCollisions()
 	{
 		Collider2D[] componentsInChildren = this.RootGameObject.GetComponentsInChildren<Collider2D>();
@@ -589,7 +589,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001361 RID: 4961 RVA: 0x0003A4CC File Offset: 0x000386CC
+	// Token: 0x06001BF4 RID: 7156 RVA: 0x000975B0 File Offset: 0x000957B0
 	public void RealignHitboxColliders()
 	{
 		PolygonCollider2D component;
@@ -611,7 +611,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001362 RID: 4962 RVA: 0x0003A540 File Offset: 0x00038740
+	// Token: 0x06001BF5 RID: 7157 RVA: 0x00097624 File Offset: 0x00095824
 	private void RealignBox2DColliderToPolyCollider(Collider2D oldCollider, PolygonCollider2D polyCollider)
 	{
 		if (!oldCollider || !polyCollider)
@@ -626,7 +626,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001363 RID: 4963 RVA: 0x0003A5C4 File Offset: 0x000387C4
+	// Token: 0x06001BF6 RID: 7158 RVA: 0x000976A8 File Offset: 0x000958A8
 	private void RepopulateColliders(HitboxType hbType)
 	{
 		if (GameUtility.IsInGame)
@@ -671,7 +671,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001364 RID: 4964 RVA: 0x0003A6EC File Offset: 0x000388EC
+	// Token: 0x06001BF7 RID: 7159 RVA: 0x000977D0 File Offset: 0x000959D0
 	private void InitializeResponseMethods()
 	{
 		if (this.m_bodyHitbox != null)
@@ -689,7 +689,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		this.m_responseMethodsInitialized = true;
 	}
 
-	// Token: 0x06001365 RID: 4965 RVA: 0x0003A754 File Offset: 0x00038954
+	// Token: 0x06001BF8 RID: 7160 RVA: 0x00097838 File Offset: 0x00095A38
 	public IHitResponse[] GetHitResponseArray(HitboxType hbType, HitResponseType hbResponseType)
 	{
 		switch (hbType)
@@ -731,7 +731,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		return null;
 	}
 
-	// Token: 0x06001366 RID: 4966 RVA: 0x0003A808 File Offset: 0x00038A08
+	// Token: 0x06001BF9 RID: 7161 RVA: 0x000978EC File Offset: 0x00095AEC
 	public void AddHitboxResponseMethod(IHitResponse hitResponse)
 	{
 		if (this.m_responseMethodsInitialized)
@@ -784,7 +784,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001367 RID: 4967 RVA: 0x0003A9B0 File Offset: 0x00038BB0
+	// Token: 0x06001BFA RID: 7162 RVA: 0x00097A94 File Offset: 0x00095C94
 	public void RemoveHitboxResponseMethod(IHitResponse hitResponse)
 	{
 		if (this.m_responseMethodsInitialized)
@@ -837,7 +837,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001368 RID: 4968 RVA: 0x0003AAD4 File Offset: 0x00038CD4
+	// Token: 0x06001BFB RID: 7163 RVA: 0x00097BB8 File Offset: 0x00095DB8
 	private void CreateHitbox(HitboxType hitboxType, List<GameObject> gameObjsToDisable)
 	{
 		if (hitboxType == HitboxType.Platform && !this.m_platformHitbox)
@@ -1032,7 +1032,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001369 RID: 4969 RVA: 0x0003AF34 File Offset: 0x00039134
+	// Token: 0x06001BFC RID: 7164 RVA: 0x00098018 File Offset: 0x00096218
 	private void CreateHitResponseMethods(HitboxType hitboxType, GameObject rootGameObj)
 	{
 		switch (hitboxType)
@@ -1081,7 +1081,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x0600136A RID: 4970 RVA: 0x0003B078 File Offset: 0x00039278
+	// Token: 0x06001BFD RID: 7165 RVA: 0x0009815C File Offset: 0x0009635C
 	public void HandleCollision(HitResponseType hitResponseType, HitboxInfo hbInfo, Collider2D otherCollider)
 	{
 		if (!this.ResponseMethodsInitialized)
@@ -1152,7 +1152,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		this.InvokeAllTerrainHitResponseMethods(hitResponseType, otherHBController);
 	}
 
-	// Token: 0x0600136B RID: 4971 RVA: 0x0003B1A0 File Offset: 0x000393A0
+	// Token: 0x06001BFE RID: 7166 RVA: 0x00098284 File Offset: 0x00096484
 	public void InvokeAllBodyHitResponseMethods(HitResponseType hitResponseType, IHitboxController otherHBController)
 	{
 		switch (hitResponseType)
@@ -1194,7 +1194,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x0600136C RID: 4972 RVA: 0x0003B234 File Offset: 0x00039434
+	// Token: 0x06001BFF RID: 7167 RVA: 0x00098318 File Offset: 0x00096518
 	public void InvokeAllWeaponHitResponseMethods(HitResponseType hitResponseType, IHitboxController otherHBController)
 	{
 		switch (hitResponseType)
@@ -1236,7 +1236,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x0600136D RID: 4973 RVA: 0x0003B2C8 File Offset: 0x000394C8
+	// Token: 0x06001C00 RID: 7168 RVA: 0x000983AC File Offset: 0x000965AC
 	public void InvokeAllTerrainHitResponseMethods(HitResponseType hitResponseType, IHitboxController otherHBController)
 	{
 		switch (hitResponseType)
@@ -1278,7 +1278,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x0600136E RID: 4974 RVA: 0x0003B35C File Offset: 0x0003955C
+	// Token: 0x06001C01 RID: 7169 RVA: 0x00098440 File Offset: 0x00096640
 	public void SetHitboxActiveState(HitboxType hitboxType, bool active)
 	{
 		Collider2D collider2D = null;
@@ -1303,7 +1303,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x0600136F RID: 4975 RVA: 0x0003B3B4 File Offset: 0x000395B4
+	// Token: 0x06001C02 RID: 7170 RVA: 0x00098498 File Offset: 0x00096698
 	public bool GetHitboxActiveState(HitboxType hitboxType)
 	{
 		switch (hitboxType)
@@ -1336,7 +1336,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		return false;
 	}
 
-	// Token: 0x06001370 RID: 4976 RVA: 0x0003B43E File Offset: 0x0003963E
+	// Token: 0x06001C03 RID: 7171 RVA: 0x0000E8C5 File Offset: 0x0000CAC5
 	public void ResetAllHitboxStates()
 	{
 		this.SetHitboxActiveState(HitboxType.Weapon, true);
@@ -1345,7 +1345,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		this.SetHitboxActiveState(HitboxType.Platform, true);
 	}
 
-	// Token: 0x06001371 RID: 4977 RVA: 0x0003B460 File Offset: 0x00039660
+	// Token: 0x06001C04 RID: 7172 RVA: 0x00098524 File Offset: 0x00096724
 	public void SetCulledState(bool culled, bool includeRigidbody)
 	{
 		if (culled == this.m_culled)
@@ -1389,7 +1389,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001372 RID: 4978 RVA: 0x0003B58D File Offset: 0x0003978D
+	// Token: 0x06001C05 RID: 7173 RVA: 0x0000E8E7 File Offset: 0x0000CAE7
 	private void InitializeRepeatHitCheck()
 	{
 		if (this.m_repeatHitArraySizeOverride == -1)
@@ -1399,7 +1399,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		this.m_repeatHitCheckList = new List<HitboxControllerLite.RepeatHitEntry>(this.m_repeatHitArraySizeOverride);
 	}
 
-	// Token: 0x06001373 RID: 4979 RVA: 0x0003B5B0 File Offset: 0x000397B0
+	// Token: 0x06001C06 RID: 7174 RVA: 0x00098654 File Offset: 0x00096854
 	private bool AllowRepeatHitCheckCollision(GameObject obj, LayerType layer)
 	{
 		if (this.RepeatHitDuration <= 0f)
@@ -1435,7 +1435,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		return true;
 	}
 
-	// Token: 0x06001374 RID: 4980 RVA: 0x0003B688 File Offset: 0x00039888
+	// Token: 0x06001C07 RID: 7175 RVA: 0x0009872C File Offset: 0x0009692C
 	public void RemoveFromRepeatHitChecks(GameObject obj)
 	{
 		if (this.m_repeatHitCheckList != null)
@@ -1455,7 +1455,7 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001375 RID: 4981 RVA: 0x0003B6FC File Offset: 0x000398FC
+	// Token: 0x06001C08 RID: 7176 RVA: 0x000987A0 File Offset: 0x000969A0
 	public void ResetRepeatHitChecks()
 	{
 		if (this.m_repeatHitCheckList != null)
@@ -1472,152 +1472,152 @@ public class HitboxControllerLite : MonoBehaviour, IHitboxController
 		}
 	}
 
-	// Token: 0x06001378 RID: 4984 RVA: 0x0003B78C File Offset: 0x0003998C
+	// Token: 0x06001C0B RID: 7179 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IHitboxController.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400135A RID: 4954
+	// Token: 0x040019A0 RID: 6560
 	[SerializeField]
 	private CollisionType m_collisionType;
 
-	// Token: 0x0400135B RID: 4955
+	// Token: 0x040019A1 RID: 6561
 	[Space(5f)]
 	[SerializeField]
 	private GameObject m_bodyHitbox;
 
-	// Token: 0x0400135C RID: 4956
+	// Token: 0x040019A2 RID: 6562
 	[SerializeField]
 	private GameObject m_weaponHitbox;
 
-	// Token: 0x0400135D RID: 4957
+	// Token: 0x040019A3 RID: 6563
 	[SerializeField]
 	private GameObject m_terrainHitbox;
 
-	// Token: 0x0400135E RID: 4958
+	// Token: 0x040019A4 RID: 6564
 	[SerializeField]
 	private GameObject m_platformHitbox;
 
-	// Token: 0x0400135F RID: 4959
+	// Token: 0x040019A5 RID: 6565
 	[SerializeField]
 	[EnumFlag]
 	private CollisionType m_weaponCollidesWithType;
 
-	// Token: 0x04001360 RID: 4960
+	// Token: 0x040019A6 RID: 6566
 	[SerializeField]
 	[EnumFlag]
 	private CollisionType m_terrainCollidesWithType;
 
-	// Token: 0x04001361 RID: 4961
+	// Token: 0x040019A7 RID: 6567
 	[Space(5f)]
 	[SerializeField]
 	private PlatformCollisionType m_platformCollisionType;
 
-	// Token: 0x04001362 RID: 4962
+	// Token: 0x040019A8 RID: 6568
 	[SerializeField]
 	[HideInInspector]
 	private bool m_hitboxesInitialized;
 
-	// Token: 0x04001363 RID: 4963
+	// Token: 0x040019A9 RID: 6569
 	[SerializeField]
 	private bool m_initializeOnAwake = true;
 
-	// Token: 0x04001364 RID: 4964
+	// Token: 0x040019AA RID: 6570
 	[SerializeField]
 	private int m_repeatHitArraySizeOverride = -1;
 
-	// Token: 0x04001365 RID: 4965
+	// Token: 0x040019AB RID: 6571
 	private Collider2D m_bodyHitboxCollider;
 
-	// Token: 0x04001366 RID: 4966
+	// Token: 0x040019AC RID: 6572
 	private Collider2D m_weaponHitboxCollider;
 
-	// Token: 0x04001367 RID: 4967
+	// Token: 0x040019AD RID: 6573
 	private Collider2D m_terrainHitboxCollider;
 
-	// Token: 0x04001368 RID: 4968
+	// Token: 0x040019AE RID: 6574
 	private Collider2D m_platformCollider;
 
-	// Token: 0x04001369 RID: 4969
+	// Token: 0x040019AF RID: 6575
 	private float m_repeatHitDuration = 0.5f;
 
-	// Token: 0x0400136A RID: 4970
+	// Token: 0x040019B0 RID: 6576
 	private Rigidbody2D m_rigidBody;
 
-	// Token: 0x0400136B RID: 4971
+	// Token: 0x040019B1 RID: 6577
 	private IDamageObj m_damageObj;
 
-	// Token: 0x0400136C RID: 4972
+	// Token: 0x040019B2 RID: 6578
 	private bool m_responseMethodsInitialized;
 
-	// Token: 0x0400136D RID: 4973
+	// Token: 0x040019B3 RID: 6579
 	private bool m_startExecuted;
 
-	// Token: 0x0400136E RID: 4974
+	// Token: 0x040019B4 RID: 6580
 	private int m_responseMethodCount;
 
-	// Token: 0x0400136F RID: 4975
+	// Token: 0x040019B5 RID: 6581
 	private IBodyOnEnterHitResponse[] m_bodyOnEnterHitResponse;
 
-	// Token: 0x04001370 RID: 4976
+	// Token: 0x040019B6 RID: 6582
 	private IBodyOnStayHitResponse[] m_bodyOnStayHitResponse;
 
-	// Token: 0x04001371 RID: 4977
+	// Token: 0x040019B7 RID: 6583
 	private IBodyOnExitHitResponse[] m_bodyOnExitHitResponse;
 
-	// Token: 0x04001372 RID: 4978
+	// Token: 0x040019B8 RID: 6584
 	private IWeaponOnEnterHitResponse[] m_weaponOnEnterHitResponse;
 
-	// Token: 0x04001373 RID: 4979
+	// Token: 0x040019B9 RID: 6585
 	private IWeaponOnStayHitResponse[] m_weaponOnStayHitResponse;
 
-	// Token: 0x04001374 RID: 4980
+	// Token: 0x040019BA RID: 6586
 	private IWeaponOnExitHitResponse[] m_weaponOnExitHitResponse;
 
-	// Token: 0x04001375 RID: 4981
+	// Token: 0x040019BB RID: 6587
 	private ITerrainOnEnterHitResponse[] m_terrainOnEnterHitResponse;
 
-	// Token: 0x04001376 RID: 4982
+	// Token: 0x040019BC RID: 6588
 	private ITerrainOnStayHitResponse[] m_terrainOnStayHitResponse;
 
-	// Token: 0x04001377 RID: 4983
+	// Token: 0x040019BD RID: 6589
 	private ITerrainOnExitHitResponse[] m_terrainOnExitHitResponse;
 
-	// Token: 0x04001379 RID: 4985
+	// Token: 0x040019BF RID: 6591
 	private bool m_disableAllCollisions;
 
-	// Token: 0x0400137C RID: 4988
+	// Token: 0x040019C2 RID: 6594
 	private static List<GameObject> m_gameObjDisableList_STATIC = new List<GameObject>();
 
-	// Token: 0x0400137D RID: 4989
+	// Token: 0x040019C3 RID: 6595
 	private bool m_culled;
 
-	// Token: 0x0400137E RID: 4990
+	// Token: 0x040019C4 RID: 6596
 	private bool m_bodyCullState;
 
-	// Token: 0x0400137F RID: 4991
+	// Token: 0x040019C5 RID: 6597
 	private bool m_weaponCullState;
 
-	// Token: 0x04001380 RID: 4992
+	// Token: 0x040019C6 RID: 6598
 	private bool m_terrainCullState;
 
-	// Token: 0x04001381 RID: 4993
+	// Token: 0x040019C7 RID: 6599
 	private bool m_rigidBodyCullState;
 
-	// Token: 0x04001382 RID: 4994
+	// Token: 0x040019C8 RID: 6600
 	protected List<HitboxControllerLite.RepeatHitEntry> m_repeatHitCheckList;
 
-	// Token: 0x02000AF9 RID: 2809
+	// Token: 0x02000357 RID: 855
 	protected struct RepeatHitEntry
 	{
-		// Token: 0x04004ADB RID: 19163
+		// Token: 0x040019C9 RID: 6601
 		public int ObjHashCode;
 
-		// Token: 0x04004ADC RID: 19164
+		// Token: 0x040019CA RID: 6602
 		public float HitDuration;
 
-		// Token: 0x04004ADD RID: 19165
+		// Token: 0x040019CB RID: 6603
 		public LayerType Layer;
 	}
 }

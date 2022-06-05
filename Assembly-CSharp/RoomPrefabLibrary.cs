@@ -2,12 +2,12 @@
 using Cinemachine;
 using UnityEngine;
 
-// Token: 0x02000635 RID: 1589
+// Token: 0x02000A62 RID: 2658
 [CreateAssetMenu(menuName = "Custom/Room Prefab Library")]
 public class RoomPrefabLibrary : ScriptableObject
 {
-	// Token: 0x17001442 RID: 5186
-	// (get) Token: 0x06003974 RID: 14708 RVA: 0x000C4114 File Offset: 0x000C2314
+	// Token: 0x17001BA9 RID: 7081
+	// (get) Token: 0x06005053 RID: 20563 RVA: 0x0002BD54 File Offset: 0x00029F54
 	private static RoomPrefabLibrary Instance
 	{
 		get
@@ -20,8 +20,8 @@ public class RoomPrefabLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17001443 RID: 5187
-	// (get) Token: 0x06003975 RID: 14709 RVA: 0x000C413D File Offset: 0x000C233D
+	// Token: 0x17001BAA RID: 7082
+	// (get) Token: 0x06005054 RID: 20564 RVA: 0x0002BD7D File Offset: 0x00029F7D
 	public static Ferr2DT_PathTerrain BottomDoorOneWayPrefab
 	{
 		get
@@ -30,8 +30,8 @@ public class RoomPrefabLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17001444 RID: 5188
-	// (get) Token: 0x06003976 RID: 14710 RVA: 0x000C4149 File Offset: 0x000C2349
+	// Token: 0x17001BAB RID: 7083
+	// (get) Token: 0x06005055 RID: 20565 RVA: 0x0002BD89 File Offset: 0x00029F89
 	public static Ferr2DT_PathTerrain DoorSealPrefab
 	{
 		get
@@ -40,8 +40,8 @@ public class RoomPrefabLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17001445 RID: 5189
-	// (get) Token: 0x06003977 RID: 14711 RVA: 0x000C4155 File Offset: 0x000C2355
+	// Token: 0x17001BAC RID: 7084
+	// (get) Token: 0x06005056 RID: 20566 RVA: 0x0002BD95 File Offset: 0x00029F95
 	public static Ferr2DT_PathTerrain DecoTerrainPrefab
 	{
 		get
@@ -50,8 +50,8 @@ public class RoomPrefabLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17001446 RID: 5190
-	// (get) Token: 0x06003978 RID: 14712 RVA: 0x000C4161 File Offset: 0x000C2361
+	// Token: 0x17001BAD RID: 7085
+	// (get) Token: 0x06005057 RID: 20567 RVA: 0x0002BDA1 File Offset: 0x00029FA1
 	public static CinemachineVirtualCamera CinemachineVirtualCameraPrefab
 	{
 		get
@@ -60,8 +60,8 @@ public class RoomPrefabLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17001447 RID: 5191
-	// (get) Token: 0x06003979 RID: 14713 RVA: 0x000C416D File Offset: 0x000C236D
+	// Token: 0x17001BAE RID: 7086
+	// (get) Token: 0x06005058 RID: 20568 RVA: 0x0002BDAD File Offset: 0x00029FAD
 	public static Room_DebugUI Room_DebugUI_Prefab
 	{
 		get
@@ -70,8 +70,8 @@ public class RoomPrefabLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17001448 RID: 5192
-	// (get) Token: 0x0600397A RID: 14714 RVA: 0x000C4179 File Offset: 0x000C2379
+	// Token: 0x17001BAF RID: 7087
+	// (get) Token: 0x06005059 RID: 20569 RVA: 0x0002BDB9 File Offset: 0x00029FB9
 	public static Ferr2DT_Material DefaultDontMergeFerr2DMaterial
 	{
 		get
@@ -80,8 +80,8 @@ public class RoomPrefabLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17001449 RID: 5193
-	// (get) Token: 0x0600397B RID: 14715 RVA: 0x000C4185 File Offset: 0x000C2385
+	// Token: 0x17001BB0 RID: 7088
+	// (get) Token: 0x0600505A RID: 20570 RVA: 0x0002BDC5 File Offset: 0x00029FC5
 	public static Ferr2DT_Material StudyDontMergeFerr2DMaterial
 	{
 		get
@@ -90,37 +90,37 @@ public class RoomPrefabLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x04002C45 RID: 11333
+	// Token: 0x04003CD7 RID: 15575
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/RoomPrefabLibrary";
 
-	// Token: 0x04002C46 RID: 11334
+	// Token: 0x04003CD8 RID: 15576
 	[SerializeField]
 	private Ferr2DT_PathTerrain m_bottomDoorOneWayPrefab;
 
-	// Token: 0x04002C47 RID: 11335
+	// Token: 0x04003CD9 RID: 15577
 	[SerializeField]
 	private Ferr2DT_PathTerrain m_doorSealPrefab;
 
-	// Token: 0x04002C48 RID: 11336
+	// Token: 0x04003CDA RID: 15578
 	[SerializeField]
 	private Ferr2DT_PathTerrain m_decoTerrainPrefab;
 
-	// Token: 0x04002C49 RID: 11337
+	// Token: 0x04003CDB RID: 15579
 	[SerializeField]
 	private CinemachineVirtualCamera m_cinemachineVirtualCameraPrefab;
 
-	// Token: 0x04002C4A RID: 11338
+	// Token: 0x04003CDC RID: 15580
 	[SerializeField]
 	private Room_DebugUI m_room_DebugUI_Prefab;
 
-	// Token: 0x04002C4B RID: 11339
+	// Token: 0x04003CDD RID: 15581
 	[SerializeField]
 	private Ferr2DT_Material m_defaultDontMergeFerr2DMaterial;
 
-	// Token: 0x04002C4C RID: 11340
+	// Token: 0x04003CDE RID: 15582
 	[SerializeField]
 	private Ferr2DT_Material m_studyDontMergeFerr2DMaterial;
 
-	// Token: 0x04002C4D RID: 11341
+	// Token: 0x04003CDF RID: 15583
 	private static RoomPrefabLibrary m_instance;
 }

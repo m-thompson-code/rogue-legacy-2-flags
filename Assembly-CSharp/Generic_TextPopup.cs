@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x0200053C RID: 1340
+// Token: 0x020008D3 RID: 2259
 public class Generic_TextPopup : TextPopupObj
 {
-	// Token: 0x0600311C RID: 12572 RVA: 0x000A6932 File Offset: 0x000A4B32
+	// Token: 0x060044A0 RID: 17568 RVA: 0x00025C18 File Offset: 0x00023E18
 	protected override IEnumerator SpawnEffectCoroutine()
 	{
 		float speed = 0.35f;

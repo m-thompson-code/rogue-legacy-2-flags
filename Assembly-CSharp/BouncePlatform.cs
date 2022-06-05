@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004C1 RID: 1217
+// Token: 0x020007DD RID: 2013
 public class BouncePlatform : SpecialPlatform, IRootObj
 {
-	// Token: 0x17001146 RID: 4422
-	// (get) Token: 0x06002D3B RID: 11579 RVA: 0x000994B2 File Offset: 0x000976B2
+	// Token: 0x170016B5 RID: 5813
+	// (get) Token: 0x06003DFF RID: 15871 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool PlayDirectionalHitEffect
 	{
 		get
@@ -14,12 +14,12 @@ public class BouncePlatform : SpecialPlatform, IRootObj
 		}
 	}
 
-	// Token: 0x06002D3C RID: 11580 RVA: 0x000994B5 File Offset: 0x000976B5
+	// Token: 0x06003E00 RID: 15872 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void SetState(StateID state)
 	{
 	}
 
-	// Token: 0x06002D3E RID: 11582 RVA: 0x000994BF File Offset: 0x000976BF
+	// Token: 0x06003E02 RID: 15874 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;

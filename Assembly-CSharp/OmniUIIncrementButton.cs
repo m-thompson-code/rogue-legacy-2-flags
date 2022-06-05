@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003C2 RID: 962
+// Token: 0x0200065A RID: 1626
 public abstract class OmniUIIncrementButton<T> : OmniUIButton, IOmniUIIncrementButton
 {
-	// Token: 0x0600238D RID: 9101
+	// Token: 0x060031AB RID: 12715
 	public abstract void InitializeIncrementList();
 
-	// Token: 0x0600238E RID: 9102 RVA: 0x00073820 File Offset: 0x00071A20
+	// Token: 0x060031AC RID: 12716 RVA: 0x000D3B24 File Offset: 0x000D1D24
 	public override void OnConfirmButtonPressed()
 	{
 		if (this.m_incrementList == null || this.m_incrementList.Count <= 0)
@@ -40,20 +40,20 @@ public abstract class OmniUIIncrementButton<T> : OmniUIButton, IOmniUIIncrementB
 		}
 	}
 
-	// Token: 0x0600238F RID: 9103
+	// Token: 0x060031AD RID: 12717
 	protected abstract void UpdateIncrementText();
 
-	// Token: 0x04001E3C RID: 7740
+	// Token: 0x04002875 RID: 10357
 	[SerializeField]
 	protected bool m_isDecrementButton;
 
-	// Token: 0x04001E3D RID: 7741
+	// Token: 0x04002876 RID: 10358
 	[SerializeField]
 	protected TMP_Text m_levelText;
 
-	// Token: 0x04001E3E RID: 7742
+	// Token: 0x04002877 RID: 10359
 	protected List<T> m_incrementList;
 
-	// Token: 0x04001E3F RID: 7743
+	// Token: 0x04002878 RID: 10360
 	protected int m_selectedIndex;
 }

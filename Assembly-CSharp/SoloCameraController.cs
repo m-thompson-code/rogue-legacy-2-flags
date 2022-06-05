@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006AF RID: 1711
+// Token: 0x02000B50 RID: 2896
 public class SoloCameraController : MonoBehaviour
 {
-	// Token: 0x1700158B RID: 5515
-	// (get) Token: 0x06003F06 RID: 16134 RVA: 0x000E03ED File Offset: 0x000DE5ED
+	// Token: 0x17001D77 RID: 7543
+	// (get) Token: 0x0600580E RID: 22542 RVA: 0x0002FDFB File Offset: 0x0002DFFB
 	public Camera Camera
 	{
 		get
@@ -14,14 +14,14 @@ public class SoloCameraController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F07 RID: 16135 RVA: 0x000E03F5 File Offset: 0x000DE5F5
+	// Token: 0x0600580F RID: 22543 RVA: 0x0002FE03 File Offset: 0x0002E003
 	private void Awake()
 	{
 		this.Initialize();
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06003F08 RID: 16136 RVA: 0x000E040C File Offset: 0x000DE60C
+	// Token: 0x06005810 RID: 22544 RVA: 0x0015072C File Offset: 0x0014E92C
 	public void AddToCameraLayer(GameObject obj)
 	{
 		obj.SetLayerRecursively(28, false);
@@ -34,14 +34,14 @@ public class SoloCameraController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F09 RID: 16137 RVA: 0x000E048C File Offset: 0x000DE68C
+	// Token: 0x06005811 RID: 22545 RVA: 0x0002FE17 File Offset: 0x0002E017
 	private void Initialize()
 	{
 		this.m_defaultDepth = this.m_camera.depth;
 		this.m_isInitialized = true;
 	}
 
-	// Token: 0x06003F0A RID: 16138 RVA: 0x000E04A6 File Offset: 0x000DE6A6
+	// Token: 0x06005812 RID: 22546 RVA: 0x0002FE31 File Offset: 0x0002E031
 	public void ResetController()
 	{
 		if (!this.m_isInitialized)
@@ -51,7 +51,7 @@ public class SoloCameraController : MonoBehaviour
 		this.SetCameraDepth(this.m_defaultDepth);
 	}
 
-	// Token: 0x06003F0B RID: 16139 RVA: 0x000E04BD File Offset: 0x000DE6BD
+	// Token: 0x06005813 RID: 22547 RVA: 0x0002FE48 File Offset: 0x0002E048
 	public void SetCameraDepth(float depth)
 	{
 		if (!this.m_isInitialized)
@@ -61,13 +61,13 @@ public class SoloCameraController : MonoBehaviour
 		this.m_camera.depth = depth;
 	}
 
-	// Token: 0x04002ED8 RID: 11992
+	// Token: 0x04004111 RID: 16657
 	[SerializeField]
 	private Camera m_camera;
 
-	// Token: 0x04002ED9 RID: 11993
+	// Token: 0x04004112 RID: 16658
 	private bool m_isInitialized;
 
-	// Token: 0x04002EDA RID: 11994
+	// Token: 0x04004113 RID: 16659
 	private float m_defaultDepth;
 }

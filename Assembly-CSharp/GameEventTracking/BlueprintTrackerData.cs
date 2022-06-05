@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace GameEventTracking
 {
-	// Token: 0x020008AC RID: 2220
+	// Token: 0x02000DDF RID: 3551
 	[Serializable]
 	public struct BlueprintTrackerData : ISpecialItemData, IGameEventData
 	{
-		// Token: 0x0600486A RID: 18538 RVA: 0x0010414E File Offset: 0x0010234E
+		// Token: 0x060063CA RID: 25546 RVA: 0x00037036 File Offset: 0x00035236
 		public BlueprintTrackerData(EquipmentCategoryType equipmentCategory, EquipmentType equipmentType)
 		{
 			this.m_equipmentCategory = equipmentCategory;
@@ -16,8 +16,8 @@ namespace GameEventTracking
 			this.m_timesLoaded = SaveManager.StageSaveData.TimesTrackerWasLoaded;
 		}
 
-		// Token: 0x170017BF RID: 6079
-		// (get) Token: 0x0600486B RID: 18539 RVA: 0x0010417A File Offset: 0x0010237A
+		// Token: 0x17002039 RID: 8249
+		// (get) Token: 0x060063CB RID: 25547 RVA: 0x00037062 File Offset: 0x00035262
 		public EquipmentCategoryType EquipmentCategory
 		{
 			get
@@ -26,8 +26,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017C0 RID: 6080
-		// (get) Token: 0x0600486C RID: 18540 RVA: 0x00104182 File Offset: 0x00102382
+		// Token: 0x1700203A RID: 8250
+		// (get) Token: 0x060063CC RID: 25548 RVA: 0x0003706A File Offset: 0x0003526A
 		public EquipmentType EquipmentType
 		{
 			get
@@ -36,8 +36,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017C1 RID: 6081
-		// (get) Token: 0x0600486D RID: 18541 RVA: 0x0010418A File Offset: 0x0010238A
+		// Token: 0x1700203B RID: 8251
+		// (get) Token: 0x060063CD RID: 25549 RVA: 0x00037072 File Offset: 0x00035272
 		public float TimeStamp
 		{
 			get
@@ -46,8 +46,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017C2 RID: 6082
-		// (get) Token: 0x0600486E RID: 18542 RVA: 0x00104192 File Offset: 0x00102392
+		// Token: 0x1700203C RID: 8252
+		// (get) Token: 0x060063CE RID: 25550 RVA: 0x0003707A File Offset: 0x0003527A
 		public int TimesLoaded
 		{
 			get
@@ -56,16 +56,16 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x04003D23 RID: 15651
+		// Token: 0x0400516A RID: 20842
 		private EquipmentCategoryType m_equipmentCategory;
 
-		// Token: 0x04003D24 RID: 15652
+		// Token: 0x0400516B RID: 20843
 		private EquipmentType m_equipmentType;
 
-		// Token: 0x04003D25 RID: 15653
+		// Token: 0x0400516C RID: 20844
 		private float m_timeStamp;
 
-		// Token: 0x04003D26 RID: 15654
+		// Token: 0x0400516D RID: 20845
 		private int m_timesLoaded;
 	}
 }

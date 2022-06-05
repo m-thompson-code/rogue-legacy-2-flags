@@ -7,11 +7,11 @@ using Sigtrap.Relays;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000570 RID: 1392
+// Token: 0x02000943 RID: 2371
 public class BossIntroWindowController : WindowController, IAudioEventEmitter, ILocalizable
 {
-	// Token: 0x17001274 RID: 4724
-	// (get) Token: 0x06003316 RID: 13078 RVA: 0x000ACB6B File Offset: 0x000AAD6B
+	// Token: 0x1700193F RID: 6463
+	// (get) Token: 0x060047FD RID: 18429 RVA: 0x00027776 File Offset: 0x00025976
 	public IRelayLink StartSpeedUpRelay
 	{
 		get
@@ -20,8 +20,8 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		}
 	}
 
-	// Token: 0x17001275 RID: 4725
-	// (get) Token: 0x06003317 RID: 13079 RVA: 0x000ACB78 File Offset: 0x000AAD78
+	// Token: 0x17001940 RID: 6464
+	// (get) Token: 0x060047FE RID: 18430 RVA: 0x00027783 File Offset: 0x00025983
 	public IRelayLink StopSpeedUpRelay
 	{
 		get
@@ -30,23 +30,23 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		}
 	}
 
-	// Token: 0x17001276 RID: 4726
-	// (get) Token: 0x06003318 RID: 13080 RVA: 0x000ACB85 File Offset: 0x000AAD85
-	// (set) Token: 0x06003319 RID: 13081 RVA: 0x000ACB8D File Offset: 0x000AAD8D
+	// Token: 0x17001941 RID: 6465
+	// (get) Token: 0x060047FF RID: 18431 RVA: 0x00027790 File Offset: 0x00025990
+	// (set) Token: 0x06004800 RID: 18432 RVA: 0x00027798 File Offset: 0x00025998
 	public bool WindowFadingIn { get; private set; }
 
-	// Token: 0x17001277 RID: 4727
-	// (get) Token: 0x0600331A RID: 13082 RVA: 0x000ACB96 File Offset: 0x000AAD96
-	// (set) Token: 0x0600331B RID: 13083 RVA: 0x000ACB9E File Offset: 0x000AAD9E
+	// Token: 0x17001942 RID: 6466
+	// (get) Token: 0x06004801 RID: 18433 RVA: 0x000277A1 File Offset: 0x000259A1
+	// (set) Token: 0x06004802 RID: 18434 RVA: 0x000277A9 File Offset: 0x000259A9
 	public bool FadeInBarsAtStart { get; set; }
 
-	// Token: 0x17001278 RID: 4728
-	// (get) Token: 0x0600331C RID: 13084 RVA: 0x000ACBA7 File Offset: 0x000AADA7
-	// (set) Token: 0x0600331D RID: 13085 RVA: 0x000ACBAF File Offset: 0x000AADAF
+	// Token: 0x17001943 RID: 6467
+	// (get) Token: 0x06004803 RID: 18435 RVA: 0x000277B2 File Offset: 0x000259B2
+	// (set) Token: 0x06004804 RID: 18436 RVA: 0x000277BA File Offset: 0x000259BA
 	public bool DisplayBossName { get; set; }
 
-	// Token: 0x17001279 RID: 4729
-	// (get) Token: 0x0600331E RID: 13086 RVA: 0x000ACBB8 File Offset: 0x000AADB8
+	// Token: 0x17001944 RID: 6468
+	// (get) Token: 0x06004805 RID: 18437 RVA: 0x000277C3 File Offset: 0x000259C3
 	public string Description
 	{
 		get
@@ -59,8 +59,8 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		}
 	}
 
-	// Token: 0x1700127A RID: 4730
-	// (get) Token: 0x0600331F RID: 13087 RVA: 0x000ACBD9 File Offset: 0x000AADD9
+	// Token: 0x17001945 RID: 6469
+	// (get) Token: 0x06004806 RID: 18438 RVA: 0x000277E4 File Offset: 0x000259E4
 	public override WindowID ID
 	{
 		get
@@ -69,21 +69,21 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		}
 	}
 
-	// Token: 0x06003320 RID: 13088 RVA: 0x000ACBDD File Offset: 0x000AADDD
+	// Token: 0x06004807 RID: 18439 RVA: 0x000277E8 File Offset: 0x000259E8
 	private void Awake()
 	{
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 		this.m_toggleSpeedUp = new Action<InputActionEventData>(this.ToggleSpeedUp);
 	}
 
-	// Token: 0x06003321 RID: 13089 RVA: 0x000ACC04 File Offset: 0x000AAE04
+	// Token: 0x06004808 RID: 18440 RVA: 0x0002780F File Offset: 0x00025A0F
 	public override void Initialize()
 	{
 		base.Initialize();
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x06003322 RID: 13090 RVA: 0x000ACC20 File Offset: 0x000AAE20
+	// Token: 0x06004809 RID: 18441 RVA: 0x001171E0 File Offset: 0x001153E0
 	protected override void OnOpen()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -95,7 +95,7 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		base.StartCoroutine(this.OnOpenCoroutine());
 	}
 
-	// Token: 0x06003323 RID: 13091 RVA: 0x000ACC74 File Offset: 0x000AAE74
+	// Token: 0x0600480A RID: 18442 RVA: 0x00117234 File Offset: 0x00115434
 	private void InitializeOnOpen()
 	{
 		this.m_fastForwardObj.SetActive(false);
@@ -117,7 +117,7 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		this.m_bottomFrillMask.sizeDelta = sizeDelta;
 	}
 
-	// Token: 0x06003324 RID: 13092 RVA: 0x000ACD2B File Offset: 0x000AAF2B
+	// Token: 0x0600480B RID: 18443 RVA: 0x00027828 File Offset: 0x00025A28
 	private IEnumerator OnOpenCoroutine()
 	{
 		this.PlayAudio("event:/SFX/Enemies/sfx_dancingBoss_intro_enter");
@@ -182,7 +182,7 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		yield break;
 	}
 
-	// Token: 0x06003325 RID: 13093 RVA: 0x000ACD3A File Offset: 0x000AAF3A
+	// Token: 0x0600480C RID: 18444 RVA: 0x00027837 File Offset: 0x00025A37
 	protected override void OnClose()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -190,21 +190,21 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		this.FadeInBarsAtStart = false;
 	}
 
-	// Token: 0x06003326 RID: 13094 RVA: 0x000ACD61 File Offset: 0x000AAF61
+	// Token: 0x0600480D RID: 18445 RVA: 0x0002785E File Offset: 0x00025A5E
 	protected override void OnFocus()
 	{
 		base.RewiredPlayer.AddInputEventDelegate(this.m_toggleSpeedUp, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
 		base.RewiredPlayer.AddInputEventDelegate(this.m_toggleSpeedUp, UpdateLoopType.Update, InputActionEventType.ButtonJustReleased, "Window_Confirm");
 	}
 
-	// Token: 0x06003327 RID: 13095 RVA: 0x000ACD93 File Offset: 0x000AAF93
+	// Token: 0x0600480E RID: 18446 RVA: 0x00027890 File Offset: 0x00025A90
 	protected override void OnLostFocus()
 	{
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_toggleSpeedUp, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_toggleSpeedUp, UpdateLoopType.Update, InputActionEventType.ButtonJustReleased, "Window_Confirm");
 	}
 
-	// Token: 0x06003328 RID: 13096 RVA: 0x000ACDC8 File Offset: 0x000AAFC8
+	// Token: 0x0600480F RID: 18447 RVA: 0x001172EC File Offset: 0x001154EC
 	private void ToggleSpeedUp(InputActionEventData eventData)
 	{
 		if (this.m_disableInput)
@@ -223,7 +223,7 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		this.m_stopSpeedUpRelay.Dispatch();
 	}
 
-	// Token: 0x06003329 RID: 13097 RVA: 0x000ACE2C File Offset: 0x000AB02C
+	// Token: 0x06004810 RID: 18448 RVA: 0x000278C2 File Offset: 0x00025AC2
 	public void StopSpeedUp()
 	{
 		RLTimeScale.SetTimeScale(TimeScaleType.Cutscene, 1f);
@@ -231,7 +231,7 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		this.m_stopSpeedUpRelay.Dispatch();
 	}
 
-	// Token: 0x0600332A RID: 13098 RVA: 0x000ACE50 File Offset: 0x000AB050
+	// Token: 0x06004811 RID: 18449 RVA: 0x00117350 File Offset: 0x00115550
 	public void SetEnemyType(EnemyType type, EnemyRank rank)
 	{
 		this.m_typeAndRank = new EnemyTypeAndRank(type, rank);
@@ -240,7 +240,7 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		this.m_titleText.text = LocalizationManager.GetString(enemyData.Title, false, false);
 	}
 
-	// Token: 0x0600332B RID: 13099 RVA: 0x000ACEA8 File Offset: 0x000AB0A8
+	// Token: 0x06004812 RID: 18450 RVA: 0x00106DD4 File Offset: 0x00104FD4
 	private void PlayAudio(string audioPath)
 	{
 		if (!string.IsNullOrEmpty(audioPath))
@@ -249,75 +249,75 @@ public class BossIntroWindowController : WindowController, IAudioEventEmitter, I
 		}
 	}
 
-	// Token: 0x0600332C RID: 13100 RVA: 0x000ACECD File Offset: 0x000AB0CD
+	// Token: 0x06004813 RID: 18451 RVA: 0x000278E6 File Offset: 0x00025AE6
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.SetEnemyType(this.m_typeAndRank.Type, this.m_typeAndRank.Rank);
 	}
 
-	// Token: 0x040027D2 RID: 10194
+	// Token: 0x0400370A RID: 14090
 	private const string ON_ENTER_AUDIO = "event:/SFX/Enemies/sfx_dancingBoss_intro_enter";
 
-	// Token: 0x040027D3 RID: 10195
+	// Token: 0x0400370B RID: 14091
 	private const string DISPLAY_NAME_AUDIO = "event:/SFX/Enemies/sfx_dancingBoss_intro_title";
 
-	// Token: 0x040027D4 RID: 10196
+	// Token: 0x0400370C RID: 14092
 	[SerializeField]
 	private CanvasGroup m_topCanvasGroup;
 
-	// Token: 0x040027D5 RID: 10197
+	// Token: 0x0400370D RID: 14093
 	[SerializeField]
 	private CanvasGroup m_bottomCanvasGroup;
 
-	// Token: 0x040027D6 RID: 10198
+	// Token: 0x0400370E RID: 14094
 	[SerializeField]
 	private CanvasGroup m_topContentCanvasGroup;
 
-	// Token: 0x040027D7 RID: 10199
+	// Token: 0x0400370F RID: 14095
 	[SerializeField]
 	private CanvasGroup m_bottomContentCanvasGroup;
 
-	// Token: 0x040027D8 RID: 10200
+	// Token: 0x04003710 RID: 14096
 	[SerializeField]
 	private TMP_Text m_subTitleText;
 
-	// Token: 0x040027D9 RID: 10201
+	// Token: 0x04003711 RID: 14097
 	[SerializeField]
 	private TMP_Text m_titleText;
 
-	// Token: 0x040027DA RID: 10202
+	// Token: 0x04003712 RID: 14098
 	[SerializeField]
 	private RectTransform m_bottomFrillMask;
 
-	// Token: 0x040027DB RID: 10203
+	// Token: 0x04003713 RID: 14099
 	[SerializeField]
 	private CanvasGroup m_bottomFrillCanvasGroup;
 
-	// Token: 0x040027DC RID: 10204
+	// Token: 0x04003714 RID: 14100
 	[SerializeField]
 	private GameObject m_fastForwardObj;
 
-	// Token: 0x040027DD RID: 10205
+	// Token: 0x04003715 RID: 14101
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040027DE RID: 10206
+	// Token: 0x04003716 RID: 14102
 	private bool m_disableInput;
 
-	// Token: 0x040027DF RID: 10207
+	// Token: 0x04003717 RID: 14103
 	private string m_description;
 
-	// Token: 0x040027E0 RID: 10208
+	// Token: 0x04003718 RID: 14104
 	private EnemyTypeAndRank m_typeAndRank;
 
-	// Token: 0x040027E1 RID: 10209
+	// Token: 0x04003719 RID: 14105
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x040027E2 RID: 10210
+	// Token: 0x0400371A RID: 14106
 	private Action<InputActionEventData> m_toggleSpeedUp;
 
-	// Token: 0x040027E3 RID: 10211
+	// Token: 0x0400371B RID: 14107
 	private Relay m_speedUpRelay = new Relay();
 
-	// Token: 0x040027E4 RID: 10212
+	// Token: 0x0400371C RID: 14108
 	private Relay m_stopSpeedUpRelay = new Relay();
 }

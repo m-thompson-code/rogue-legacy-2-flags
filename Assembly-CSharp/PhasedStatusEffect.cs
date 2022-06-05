@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200030D RID: 781
+// Token: 0x02000540 RID: 1344
 public class PhasedStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D63 RID: 3427
-	// (get) Token: 0x06001EEA RID: 7914 RVA: 0x00063C61 File Offset: 0x00061E61
+	// Token: 0x17001164 RID: 4452
+	// (get) Token: 0x06002B1F RID: 11039 RVA: 0x000180F5 File Offset: 0x000162F5
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class PhasedStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D64 RID: 3428
-	// (get) Token: 0x06001EEB RID: 7915 RVA: 0x00063C65 File Offset: 0x00061E65
+	// Token: 0x17001165 RID: 4453
+	// (get) Token: 0x06002B20 RID: 11040 RVA: 0x00003C54 File Offset: 0x00001E54
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class PhasedStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EEC RID: 7916 RVA: 0x00063C6C File Offset: 0x00061E6C
+	// Token: 0x06002B21 RID: 11041 RVA: 0x000180F9 File Offset: 0x000162F9
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.HitboxController.SetHitboxActiveState(HitboxType.Weapon, false);
@@ -38,7 +38,7 @@ public class PhasedStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001EED RID: 7917 RVA: 0x00063C7B File Offset: 0x00061E7B
+	// Token: 0x06002B22 RID: 11042 RVA: 0x00018108 File Offset: 0x00016308
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);

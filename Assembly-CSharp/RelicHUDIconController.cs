@@ -3,15 +3,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020003DE RID: 990
+// Token: 0x0200067E RID: 1662
 public class RelicHUDIconController : MonoBehaviour
 {
-	// Token: 0x17000ED2 RID: 3794
-	// (get) Token: 0x06002482 RID: 9346 RVA: 0x00079A69 File Offset: 0x00077C69
-	// (set) Token: 0x06002483 RID: 9347 RVA: 0x00079A71 File Offset: 0x00077C71
+	// Token: 0x17001371 RID: 4977
+	// (get) Token: 0x060032BE RID: 12990 RVA: 0x0001BC11 File Offset: 0x00019E11
+	// (set) Token: 0x060032BF RID: 12991 RVA: 0x0001BC19 File Offset: 0x00019E19
 	public RelicType RelicType { get; private set; }
 
-	// Token: 0x06002484 RID: 9348 RVA: 0x00079A7C File Offset: 0x00077C7C
+	// Token: 0x060032C0 RID: 12992 RVA: 0x000D9DC8 File Offset: 0x000D7FC8
 	public void SetRelicType(RelicType relicType)
 	{
 		if (relicType != RelicType.None)
@@ -26,7 +26,7 @@ public class RelicHUDIconController : MonoBehaviour
 		this.RelicType = relicType;
 	}
 
-	// Token: 0x06002485 RID: 9349 RVA: 0x00079AB8 File Offset: 0x00077CB8
+	// Token: 0x060032C1 RID: 12993 RVA: 0x000D9E04 File Offset: 0x000D8004
 	public void UpdateRelic()
 	{
 		if (this.RelicType == RelicType.None)
@@ -77,7 +77,7 @@ public class RelicHUDIconController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002486 RID: 9350 RVA: 0x00079BC8 File Offset: 0x00077DC8
+	// Token: 0x060032C2 RID: 12994 RVA: 0x000D9F14 File Offset: 0x000D8114
 	public void PlayPurifyEffect()
 	{
 		EffectManager.PlayEffect(base.gameObject, null, "RelicPurifiedUI_Effect", Vector3.zero, 0f, EffectStopType.Gracefully, EffectTriggerDirection.None).transform.SetParent(base.transform, false);
@@ -86,15 +86,15 @@ public class RelicHUDIconController : MonoBehaviour
 		TextPopupManager.DisplayTextDefaultPos(TextPopupType.DownstrikeAmmoGain, LocalizationManager.GetString("LOC_ID_RELIC_UI_RELIC_PURIFIED_1", false, false), playerController, true, true);
 	}
 
-	// Token: 0x04001F0F RID: 7951
+	// Token: 0x04002987 RID: 10631
 	[SerializeField]
 	private TMP_Text m_levelText;
 
-	// Token: 0x04001F10 RID: 7952
+	// Token: 0x04002988 RID: 10632
 	[SerializeField]
 	private TMP_Text m_intValueText;
 
-	// Token: 0x04001F11 RID: 7953
+	// Token: 0x04002989 RID: 10633
 	[SerializeField]
 	private Image m_sprite;
 }

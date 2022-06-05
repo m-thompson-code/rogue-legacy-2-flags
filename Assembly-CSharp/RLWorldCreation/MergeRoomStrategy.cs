@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace RLWorldCreation
 {
-	// Token: 0x0200088E RID: 2190
+	// Token: 0x02000DB0 RID: 3504
 	public class MergeRoomStrategy
 	{
-		// Token: 0x060047DE RID: 18398 RVA: 0x00102386 File Offset: 0x00100586
+		// Token: 0x060062E8 RID: 25320 RVA: 0x00036847 File Offset: 0x00034A47
 		public virtual IEnumerator Run(CreateMergeRooms_BuildStage buildStage, BiomeController biomeController)
 		{
 			this.m_buildStage = buildStage;
@@ -23,7 +23,7 @@ namespace RLWorldCreation
 			yield break;
 		}
 
-		// Token: 0x060047DF RID: 18399 RVA: 0x001023A4 File Offset: 0x001005A4
+		// Token: 0x060062E9 RID: 25321 RVA: 0x00170D28 File Offset: 0x0016EF28
 		protected virtual List<GridPointManager> GetPotentialMergeTargets_V2(BiomeController biomeController, BiomeType biome, params RoomType[] exludeRoomTypes)
 		{
 			return (from room in biomeController.GridPointManager.GridPointManagers
@@ -31,7 +31,7 @@ namespace RLWorldCreation
 			select room).ToList<GridPointManager>();
 		}
 
-		// Token: 0x060047E0 RID: 18400 RVA: 0x001023E6 File Offset: 0x001005E6
+		// Token: 0x060062EA RID: 25322 RVA: 0x00036864 File Offset: 0x00034A64
 		protected IEnumerator MergeRooms_V2(BiomeController biomeController, BiomeType biome, List<GridPointManager> rooms, bool shuffle = true)
 		{
 			if (shuffle)
@@ -62,7 +62,7 @@ namespace RLWorldCreation
 			yield break;
 		}
 
-		// Token: 0x060047E1 RID: 18401 RVA: 0x0010240C File Offset: 0x0010060C
+		// Token: 0x060062EB RID: 25323 RVA: 0x00170D6C File Offset: 0x0016EF6C
 		protected static void UpdateBiomeControllerIndices(BiomeController biomeController)
 		{
 			List<GridPointManager> list = new List<GridPointManager>();
@@ -109,7 +109,7 @@ namespace RLWorldCreation
 			biomeController.GridPointManager.SetMergeRoomCount(list3.Count);
 		}
 
-		// Token: 0x060047E2 RID: 18402 RVA: 0x00102584 File Offset: 0x00100784
+		// Token: 0x060062EC RID: 25324 RVA: 0x00170EE4 File Offset: 0x0016F0E4
 		private List<GridPointManager> RecursiveMerge_V2(BiomeController biomeController, List<GridPointManager> rooms, GridPointManager baseRoom, GridPointManager roomToCheck, RoomSide side)
 		{
 			List<GridPointManager> list = new List<GridPointManager>();
@@ -147,7 +147,7 @@ namespace RLWorldCreation
 			return list;
 		}
 
-		// Token: 0x060047E3 RID: 18403 RVA: 0x0010268C File Offset: 0x0010088C
+		// Token: 0x060062ED RID: 25325 RVA: 0x00170FEC File Offset: 0x0016F1EC
 		private static bool AreTargetOfMergeBoundsEqual_V2(GridPointManager baseRoom, GridPointManager target, RoomSide side)
 		{
 			bool result = false;
@@ -165,7 +165,7 @@ namespace RLWorldCreation
 			return result;
 		}
 
-		// Token: 0x060047E4 RID: 18404 RVA: 0x0010274C File Offset: 0x0010094C
+		// Token: 0x060062EE RID: 25326 RVA: 0x001710AC File Offset: 0x0016F2AC
 		private static bool AreTargetOfMergeBoundsValid_V2(GridPointManager baseRoom, GridPointManager target, RoomSide side)
 		{
 			bool result;
@@ -184,14 +184,14 @@ namespace RLWorldCreation
 			return result;
 		}
 
-		// Token: 0x060047E5 RID: 18405 RVA: 0x00102828 File Offset: 0x00100A28
+		// Token: 0x060062EF RID: 25327 RVA: 0x00171188 File Offset: 0x0016F388
 		protected virtual bool AttemptMerge(BiomeController biomeController, RoomSide side, GridPointManager connectedRoom)
 		{
 			int mergeOdds = this.GetMergeOdds(biomeController, side);
 			return mergeOdds > 0 && RNGManager.GetRandomNumber(RngID.MergeRooms, "Attempt Merge?", 0, 99) <= mergeOdds;
 		}
 
-		// Token: 0x060047E6 RID: 18406 RVA: 0x0010285C File Offset: 0x00100A5C
+		// Token: 0x060062F0 RID: 25328 RVA: 0x001711BC File Offset: 0x0016F3BC
 		private int GetMergeOdds(BiomeController biomeController, RoomSide side)
 		{
 			switch (side)
@@ -209,7 +209,7 @@ namespace RLWorldCreation
 			}
 		}
 
-		// Token: 0x060047E7 RID: 18407 RVA: 0x001028B8 File Offset: 0x00100AB8
+		// Token: 0x060062F1 RID: 25329 RVA: 0x00171218 File Offset: 0x0016F418
 		private static RoomSide[] GetSidesToCheckForMerge_V2(GridPointManager baseRoom)
 		{
 			RoomSide[] array = (from door in baseRoom.DoorLocations
@@ -235,7 +235,7 @@ namespace RLWorldCreation
 			return result;
 		}
 
-		// Token: 0x060047E8 RID: 18408 RVA: 0x00102944 File Offset: 0x00100B44
+		// Token: 0x060062F2 RID: 25330 RVA: 0x001712A4 File Offset: 0x0016F4A4
 		private static bool IsDoorLayoutOfConnectedRoomValid_V2(GridPointManager baseRoom, GridPointManager currentRoom, GridPointManager target, RoomSide side)
 		{
 			List<RoomSide> invalidSides = new List<RoomSide>();
@@ -283,19 +283,19 @@ namespace RLWorldCreation
 			return flag;
 		}
 
-		// Token: 0x060047E9 RID: 18409 RVA: 0x00102AAF File Offset: 0x00100CAF
+		// Token: 0x060062F3 RID: 25331 RVA: 0x00036889 File Offset: 0x00034A89
 		private static bool IsRoomInBiome_V2(BiomeType biome, GridPointManager room)
 		{
 			return room.Biome == biome;
 		}
 
-		// Token: 0x060047EA RID: 18410 RVA: 0x00102ABA File Offset: 0x00100CBA
+		// Token: 0x060062F4 RID: 25332 RVA: 0x00036894 File Offset: 0x00034A94
 		private static bool IsRoomInRoomPool_V2(List<GridPointManager> roomPool, GridPointManager room)
 		{
 			return roomPool.Contains(room);
 		}
 
-		// Token: 0x04003CC3 RID: 15555
+		// Token: 0x040050CC RID: 20684
 		protected CreateMergeRooms_BuildStage m_buildStage;
 	}
 }

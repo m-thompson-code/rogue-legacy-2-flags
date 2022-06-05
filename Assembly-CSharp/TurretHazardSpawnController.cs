@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200064E RID: 1614
+// Token: 0x02000A7D RID: 2685
 public class TurretHazardSpawnController : LineHazardSpawnController, IHazardSpawnController, IComplexSpawnController, ISpawnController, IRoomConsumer, IIDConsumer, IStateConsumer, ISetSpawnType, IHasProjectileNameArray, IWidthConsumer, IMirror, IPivotConsumer, ITurretSettingsConsumer
 {
-	// Token: 0x17001495 RID: 5269
-	// (get) Token: 0x06003A48 RID: 14920 RVA: 0x000C5C9D File Offset: 0x000C3E9D
+	// Token: 0x17001BFC RID: 7164
+	// (get) Token: 0x0600512D RID: 20781 RVA: 0x000054AD File Offset: 0x000036AD
 	public override HazardCategory Category
 	{
 		get
@@ -14,8 +14,8 @@ public class TurretHazardSpawnController : LineHazardSpawnController, IHazardSpa
 		}
 	}
 
-	// Token: 0x17001496 RID: 5270
-	// (get) Token: 0x06003A49 RID: 14921 RVA: 0x000C5CA1 File Offset: 0x000C3EA1
+	// Token: 0x17001BFD RID: 7165
+	// (get) Token: 0x0600512E RID: 20782 RVA: 0x0002C565 File Offset: 0x0002A765
 	public float InitialFireDelay
 	{
 		get
@@ -24,8 +24,8 @@ public class TurretHazardSpawnController : LineHazardSpawnController, IHazardSpa
 		}
 	}
 
-	// Token: 0x17001497 RID: 5271
-	// (get) Token: 0x06003A4A RID: 14922 RVA: 0x000C5CA9 File Offset: 0x000C3EA9
+	// Token: 0x17001BFE RID: 7166
+	// (get) Token: 0x0600512F RID: 20783 RVA: 0x0002C56D File Offset: 0x0002A76D
 	public TurretLogicType LogicType
 	{
 		get
@@ -34,8 +34,8 @@ public class TurretHazardSpawnController : LineHazardSpawnController, IHazardSpa
 		}
 	}
 
-	// Token: 0x17001498 RID: 5272
-	// (get) Token: 0x06003A4B RID: 14923 RVA: 0x000C5CB1 File Offset: 0x000C3EB1
+	// Token: 0x17001BFF RID: 7167
+	// (get) Token: 0x06005130 RID: 20784 RVA: 0x0002C575 File Offset: 0x0002A775
 	public float LoopFireDelay
 	{
 		get
@@ -44,8 +44,8 @@ public class TurretHazardSpawnController : LineHazardSpawnController, IHazardSpa
 		}
 	}
 
-	// Token: 0x17001499 RID: 5273
-	// (get) Token: 0x06003A4C RID: 14924 RVA: 0x000C5CB9 File Offset: 0x000C3EB9
+	// Token: 0x17001C00 RID: 7168
+	// (get) Token: 0x06005131 RID: 20785 RVA: 0x0002C57D File Offset: 0x0002A77D
 	public float ProjectileSpeedMod
 	{
 		get
@@ -54,8 +54,8 @@ public class TurretHazardSpawnController : LineHazardSpawnController, IHazardSpa
 		}
 	}
 
-	// Token: 0x1700149A RID: 5274
-	// (get) Token: 0x06003A4D RID: 14925 RVA: 0x000C5CC1 File Offset: 0x000C3EC1
+	// Token: 0x17001C01 RID: 7169
+	// (get) Token: 0x06005132 RID: 20786 RVA: 0x0002C585 File Offset: 0x0002A785
 	public override string SpriteSheetPath
 	{
 		get
@@ -64,8 +64,8 @@ public class TurretHazardSpawnController : LineHazardSpawnController, IHazardSpa
 		}
 	}
 
-	// Token: 0x1700149B RID: 5275
-	// (get) Token: 0x06003A4E RID: 14926 RVA: 0x000C5CC8 File Offset: 0x000C3EC8
+	// Token: 0x17001C02 RID: 7170
+	// (get) Token: 0x06005133 RID: 20787 RVA: 0x0002C58C File Offset: 0x0002A78C
 	public bool UseHalfLoopDelay
 	{
 		get
@@ -74,32 +74,32 @@ public class TurretHazardSpawnController : LineHazardSpawnController, IHazardSpa
 		}
 	}
 
-	// Token: 0x06003A4F RID: 14927 RVA: 0x000C5CD0 File Offset: 0x000C3ED0
+	// Token: 0x06005134 RID: 20788 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void SetInitialFireDelay(float value)
 	{
 	}
 
-	// Token: 0x06003A50 RID: 14928 RVA: 0x000C5CD2 File Offset: 0x000C3ED2
+	// Token: 0x06005135 RID: 20789 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void SetLogic(TurretLogicType value)
 	{
 	}
 
-	// Token: 0x06003A51 RID: 14929 RVA: 0x000C5CD4 File Offset: 0x000C3ED4
+	// Token: 0x06005136 RID: 20790 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void SetLoopFireDelay(float value)
 	{
 	}
 
-	// Token: 0x06003A52 RID: 14930 RVA: 0x000C5CD6 File Offset: 0x000C3ED6
+	// Token: 0x06005137 RID: 20791 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void SetProjectileSpeedMod(float value)
 	{
 	}
 
-	// Token: 0x06003A53 RID: 14931 RVA: 0x000C5CD8 File Offset: 0x000C3ED8
+	// Token: 0x06005138 RID: 20792 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void SetUseHalfLoopDelay(bool value)
 	{
 	}
 
-	// Token: 0x06003A54 RID: 14932 RVA: 0x000C5CDC File Offset: 0x000C3EDC
+	// Token: 0x06005139 RID: 20793 RVA: 0x001339D0 File Offset: 0x00131BD0
 	protected override void Spawn()
 	{
 		if (base.Type == HazardType.None)
@@ -114,29 +114,29 @@ public class TurretHazardSpawnController : LineHazardSpawnController, IHazardSpa
 		(base.Hazard as Multi_Hazard).Initialize(base.PivotPoint, base.Width, this.m_hazardArgs);
 	}
 
-	// Token: 0x06003A56 RID: 14934 RVA: 0x000C5D74 File Offset: 0x000C3F74
+	// Token: 0x0600513B RID: 20795 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISpawnController.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002CBC RID: 11452
+	// Token: 0x04003D52 RID: 15698
 	[SerializeField]
 	private bool m_useHalfLoopDelay;
 
-	// Token: 0x04002CBD RID: 11453
+	// Token: 0x04003D53 RID: 15699
 	[SerializeField]
 	private TurretLogicType m_logicType;
 
-	// Token: 0x04002CBE RID: 11454
+	// Token: 0x04003D54 RID: 15700
 	[SerializeField]
 	private float m_initialFireDelay;
 
-	// Token: 0x04002CBF RID: 11455
+	// Token: 0x04003D55 RID: 15701
 	[SerializeField]
 	private float m_loopFireDelay = 1f;
 
-	// Token: 0x04002CC0 RID: 11456
+	// Token: 0x04003D56 RID: 15702
 	[SerializeField]
 	private float m_projectileSpeedMod = 1f;
 }

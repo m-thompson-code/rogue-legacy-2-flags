@@ -2,11 +2,11 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Token: 0x020003CA RID: 970
+// Token: 0x02000663 RID: 1635
 public class SoulShopOmniUIEntry : BaseOmniUIEntry
 {
-	// Token: 0x17000EB6 RID: 3766
-	// (get) Token: 0x060023BF RID: 9151 RVA: 0x0007480D File Offset: 0x00072A0D
+	// Token: 0x1700134B RID: 4939
+	// (get) Token: 0x060031DD RID: 12765 RVA: 0x0001B5FF File Offset: 0x000197FF
 	public SoulShopType SoulShopType
 	{
 		get
@@ -15,8 +15,8 @@ public class SoulShopOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000EB7 RID: 3767
-	// (get) Token: 0x060023C0 RID: 9152 RVA: 0x00074815 File Offset: 0x00072A15
+	// Token: 0x1700134C RID: 4940
+	// (get) Token: 0x060031DE RID: 12766 RVA: 0x0001B607 File Offset: 0x00019807
 	public bool IsToggle
 	{
 		get
@@ -25,8 +25,8 @@ public class SoulShopOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000EB8 RID: 3768
-	// (get) Token: 0x060023C1 RID: 9153 RVA: 0x00074820 File Offset: 0x00072A20
+	// Token: 0x1700134D RID: 4941
+	// (get) Token: 0x060031DF RID: 12767 RVA: 0x000D4978 File Offset: 0x000D2B78
 	public bool IsUnlocked
 	{
 		get
@@ -47,8 +47,8 @@ public class SoulShopOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000EB9 RID: 3769
-	// (get) Token: 0x060023C2 RID: 9154 RVA: 0x00074879 File Offset: 0x00072A79
+	// Token: 0x1700134E RID: 4942
+	// (get) Token: 0x060031E0 RID: 12768 RVA: 0x0001B60F File Offset: 0x0001980F
 	public override EventArgs EntryEventArgs
 	{
 		get
@@ -65,8 +65,8 @@ public class SoulShopOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000EBA RID: 3770
-	// (get) Token: 0x060023C3 RID: 9155 RVA: 0x000748B0 File Offset: 0x00072AB0
+	// Token: 0x1700134F RID: 4943
+	// (get) Token: 0x060031E1 RID: 12769 RVA: 0x000D49D4 File Offset: 0x000D2BD4
 	public override bool IsEntryActive
 	{
 		get
@@ -80,7 +80,7 @@ public class SoulShopOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x060023C4 RID: 9156 RVA: 0x000748F0 File Offset: 0x00072AF0
+	// Token: 0x060031E2 RID: 12770 RVA: 0x000D4A14 File Offset: 0x000D2C14
 	public override void Initialize(IOmniUIWindowController windowController)
 	{
 		base.Initialize(windowController);
@@ -97,7 +97,7 @@ public class SoulShopOmniUIEntry : BaseOmniUIEntry
 		this.m_toggleButton.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060023C5 RID: 9157 RVA: 0x00074954 File Offset: 0x00072B54
+	// Token: 0x060031E3 RID: 12771 RVA: 0x000D4A78 File Offset: 0x000D2C78
 	public override void OnSelect(BaseEventData eventData)
 	{
 		if (!base.Interactable)
@@ -113,7 +113,7 @@ public class SoulShopOmniUIEntry : BaseOmniUIEntry
 		base.OnSelect(eventData);
 	}
 
-	// Token: 0x060023C6 RID: 9158 RVA: 0x000749A0 File Offset: 0x00072BA0
+	// Token: 0x060031E4 RID: 12772 RVA: 0x000D4AC4 File Offset: 0x000D2CC4
 	public override void UpdateActive()
 	{
 		SoulShopData soulShopData = SoulShopLibrary.GetSoulShopData(this.SoulShopType);
@@ -131,7 +131,7 @@ public class SoulShopOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x060023C7 RID: 9159 RVA: 0x000749FC File Offset: 0x00072BFC
+	// Token: 0x060031E5 RID: 12773 RVA: 0x000D4B20 File Offset: 0x000D2D20
 	public override void UpdateState()
 	{
 		base.UpdateState();
@@ -190,23 +190,23 @@ public class SoulShopOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x04001E62 RID: 7778
+	// Token: 0x040028A0 RID: 10400
 	[SerializeField]
 	private bool m_isToggle;
 
-	// Token: 0x04001E63 RID: 7779
+	// Token: 0x040028A1 RID: 10401
 	[SerializeField]
 	private SoulShopOmniUIToggleButton m_toggleButton;
 
-	// Token: 0x04001E64 RID: 7780
+	// Token: 0x040028A2 RID: 10402
 	[SerializeField]
 	private SoulShopType m_soulShopType;
 
-	// Token: 0x04001E65 RID: 7781
+	// Token: 0x040028A3 RID: 10403
 	[SerializeField]
 	[Tooltip("Used for Soul Shop Entries with that titles that don't use the full width.  Tells the entry how much to move the TMP right margin if you want to use the full width of the entry.")]
 	private int m_rightMarginOffset;
 
-	// Token: 0x04001E66 RID: 7782
+	// Token: 0x040028A4 RID: 10404
 	private SoulShopOmniUIDescriptionEventArgs m_eventArgs;
 }

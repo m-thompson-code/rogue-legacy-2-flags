@@ -4,11 +4,11 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000386 RID: 902
+// Token: 0x02000612 RID: 1554
 public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 {
-	// Token: 0x17000E25 RID: 3621
-	// (get) Token: 0x060021BC RID: 8636 RVA: 0x0006B2D9 File Offset: 0x000694D9
+	// Token: 0x170012B2 RID: 4786
+	// (get) Token: 0x06002FC2 RID: 12226 RVA: 0x0001A238 File Offset: 0x00018438
 	public static int CurrentRiskLevel
 	{
 		get
@@ -17,8 +17,8 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x17000E26 RID: 3622
-	// (get) Token: 0x060021BD RID: 8637 RVA: 0x0006B2E0 File Offset: 0x000694E0
+	// Token: 0x170012B3 RID: 4787
+	// (get) Token: 0x06002FC3 RID: 12227 RVA: 0x0001A23F File Offset: 0x0001843F
 	public static string CurrentLocID
 	{
 		get
@@ -27,9 +27,9 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x17000E27 RID: 3623
-	// (get) Token: 0x060021BE RID: 8638 RVA: 0x0006B2E7 File Offset: 0x000694E7
-	// (set) Token: 0x060021BF RID: 8639 RVA: 0x0006B2EF File Offset: 0x000694EF
+	// Token: 0x170012B4 RID: 4788
+	// (get) Token: 0x06002FC4 RID: 12228 RVA: 0x0001A246 File Offset: 0x00018446
+	// (set) Token: 0x06002FC5 RID: 12229 RVA: 0x0001A24E File Offset: 0x0001844E
 	public float TextMaskRectWidth
 	{
 		get
@@ -47,7 +47,7 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x060021C0 RID: 8640 RVA: 0x0006B324 File Offset: 0x00069524
+	// Token: 0x06002FC6 RID: 12230 RVA: 0x000CC2C4 File Offset: 0x000CA4C4
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -59,7 +59,7 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 	}
 
-	// Token: 0x060021C1 RID: 8641 RVA: 0x0006B3B0 File Offset: 0x000695B0
+	// Token: 0x06002FC7 RID: 12231 RVA: 0x000CC350 File Offset: 0x000CA550
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.BiomeEnter, this.m_onPlayerEnterBiome);
@@ -69,7 +69,7 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x060021C2 RID: 8642 RVA: 0x0006B400 File Offset: 0x00069600
+	// Token: 0x06002FC8 RID: 12232 RVA: 0x000CC3A0 File Offset: 0x000CA5A0
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.BiomeEnter, this.m_onPlayerEnterBiome);
@@ -79,13 +79,13 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x060021C3 RID: 8643 RVA: 0x0006B44E File Offset: 0x0006964E
+	// Token: 0x06002FC9 RID: 12233 RVA: 0x0001A282 File Offset: 0x00018482
 	private void OnPlayerDeath(object sender, EventArgs args)
 	{
 		this.ClearNowEnteringText();
 	}
 
-	// Token: 0x060021C4 RID: 8644 RVA: 0x0006B458 File Offset: 0x00069658
+	// Token: 0x06002FCA RID: 12234 RVA: 0x000CC3F0 File Offset: 0x000CA5F0
 	private void OnForceNowEntering(object sender, EventArgs args)
 	{
 		ForceNowEnteringEventArgs forceNowEnteringEventArgs = args as ForceNowEnteringEventArgs;
@@ -95,7 +95,7 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x060021C5 RID: 8645 RVA: 0x0006B484 File Offset: 0x00069684
+	// Token: 0x06002FCB RID: 12235 RVA: 0x000CC41C File Offset: 0x000CA61C
 	private void OnPlayerEnterBiome(object sender, EventArgs args)
 	{
 		this.ClearNowEnteringText();
@@ -114,7 +114,7 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		this.TriggerNowEnteringText(biomeNameLocID, biomeLevel);
 	}
 
-	// Token: 0x060021C6 RID: 8646 RVA: 0x0006B504 File Offset: 0x00069704
+	// Token: 0x06002FCC RID: 12236 RVA: 0x000CC49C File Offset: 0x000CA69C
 	private void TriggerNowEnteringText(string locID, int riskLevel)
 	{
 		if (CutsceneManager.IsCutsceneActive)
@@ -183,7 +183,7 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		base.StartCoroutine(this.DisplayBiomeTitleCoroutine());
 	}
 
-	// Token: 0x060021C7 RID: 8647 RVA: 0x0006B710 File Offset: 0x00069910
+	// Token: 0x06002FCD RID: 12237 RVA: 0x000CC6A8 File Offset: 0x000CA8A8
 	private void ClearNowEnteringText()
 	{
 		base.StopAllCoroutines();
@@ -207,7 +207,7 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x060021C8 RID: 8648 RVA: 0x0006B7CE File Offset: 0x000699CE
+	// Token: 0x06002FCE RID: 12238 RVA: 0x0001A28A File Offset: 0x0001848A
 	private IEnumerator DisplayBiomeTitleCoroutine()
 	{
 		float fadeSpeed = 0.5f;
@@ -249,79 +249,79 @@ public class NowEnteringHUDController : MonoBehaviour, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x060021C9 RID: 8649 RVA: 0x0006B7DD File Offset: 0x000699DD
+	// Token: 0x06002FCF RID: 12239 RVA: 0x0001A299 File Offset: 0x00018499
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.m_biomeTitleText.text = LocalizationManager.GetString(NowEnteringHUDController.m_currentLocID, false, false);
 	}
 
-	// Token: 0x04001D44 RID: 7492
+	// Token: 0x04002736 RID: 10038
 	[SerializeField]
 	private float m_displayDuration = 3f;
 
-	// Token: 0x04001D45 RID: 7493
+	// Token: 0x04002737 RID: 10039
 	[SerializeField]
 	private CanvasGroup m_bgCanvasGroup;
 
-	// Token: 0x04001D46 RID: 7494
+	// Token: 0x04002738 RID: 10040
 	[SerializeField]
 	private TMP_Text m_biomeTitleText;
 
-	// Token: 0x04001D47 RID: 7495
+	// Token: 0x04002739 RID: 10041
 	[SerializeField]
 	private RectTransform m_textMaskRectTransform;
 
-	// Token: 0x04001D48 RID: 7496
+	// Token: 0x0400273A RID: 10042
 	[SerializeField]
 	private GameObject m_dangerGO;
 
-	// Token: 0x04001D49 RID: 7497
+	// Token: 0x0400273B RID: 10043
 	[SerializeField]
 	private GameObject m_grayStarsGO;
 
-	// Token: 0x04001D4A RID: 7498
+	// Token: 0x0400273C RID: 10044
 	[SerializeField]
 	private GameObject m_yellowStarsGO;
 
-	// Token: 0x04001D4B RID: 7499
+	// Token: 0x0400273D RID: 10045
 	[SerializeField]
 	private GameObject m_unknownStarsGO;
 
-	// Token: 0x04001D4C RID: 7500
+	// Token: 0x0400273E RID: 10046
 	[SerializeField]
 	private CanvasGroup m_biomeTextCanvasGroup;
 
-	// Token: 0x04001D4D RID: 7501
+	// Token: 0x0400273F RID: 10047
 	[SerializeField]
 	private BiomeType[] m_allowedBiomes;
 
-	// Token: 0x04001D4E RID: 7502
+	// Token: 0x04002740 RID: 10048
 	private Tween m_bgTween;
 
-	// Token: 0x04001D4F RID: 7503
+	// Token: 0x04002741 RID: 10049
 	private Tween m_biomeTitleTween;
 
-	// Token: 0x04001D50 RID: 7504
+	// Token: 0x04002742 RID: 10050
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04001D51 RID: 7505
+	// Token: 0x04002743 RID: 10051
 	private float m_textMaskRectWidth;
 
-	// Token: 0x04001D52 RID: 7506
+	// Token: 0x04002744 RID: 10052
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterBiome;
 
-	// Token: 0x04001D53 RID: 7507
+	// Token: 0x04002745 RID: 10053
 	private Action<MonoBehaviour, EventArgs> m_onPlayerDeath;
 
-	// Token: 0x04001D54 RID: 7508
+	// Token: 0x04002746 RID: 10054
 	private Action<MonoBehaviour, EventArgs> m_onForceNowEntering;
 
-	// Token: 0x04001D55 RID: 7509
+	// Token: 0x04002747 RID: 10055
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x04001D56 RID: 7510
+	// Token: 0x04002748 RID: 10056
 	private static int m_currentRiskLevel;
 
-	// Token: 0x04001D57 RID: 7511
+	// Token: 0x04002749 RID: 10057
 	private static string m_currentLocID;
 }

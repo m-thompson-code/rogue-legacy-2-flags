@@ -2,7 +2,7 @@
 
 namespace Sigtrap.Relays
 {
-	// Token: 0x02000958 RID: 2392
+	// Token: 0x02000F00 RID: 3840
 	public interface IRelayLink : IRelayLinkBase<Action>
 	{
 	}

@@ -3,17 +3,17 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x0200091A RID: 2330
+	// Token: 0x02000E98 RID: 3736
 	public class SurfaceAudioController : MonoBehaviour
 	{
-		// Token: 0x1700188A RID: 6282
-		// (get) Token: 0x06004C53 RID: 19539 RVA: 0x00112365 File Offset: 0x00110565
-		// (set) Token: 0x06004C54 RID: 19540 RVA: 0x0011236D File Offset: 0x0011056D
+		// Token: 0x17002185 RID: 8581
+		// (get) Token: 0x06006954 RID: 26964 RVA: 0x0003A6F1 File Offset: 0x000388F1
+		// (set) Token: 0x06006955 RID: 26965 RVA: 0x0003A6F9 File Offset: 0x000388F9
 		public EventHandler<float> StandingOnParameterChangeEvent { get; set; }
 
-		// Token: 0x1700188B RID: 6283
-		// (get) Token: 0x06004C55 RID: 19541 RVA: 0x00112376 File Offset: 0x00110576
-		// (set) Token: 0x06004C56 RID: 19542 RVA: 0x0011237E File Offset: 0x0011057E
+		// Token: 0x17002186 RID: 8582
+		// (get) Token: 0x06006956 RID: 26966 RVA: 0x0003A702 File Offset: 0x00038902
+		// (set) Token: 0x06006957 RID: 26967 RVA: 0x0003A70A File Offset: 0x0003890A
 		public float SurfaceTypeParameter
 		{
 			get
@@ -26,9 +26,9 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700188C RID: 6284
-		// (get) Token: 0x06004C57 RID: 19543 RVA: 0x00112387 File Offset: 0x00110587
-		// (set) Token: 0x06004C58 RID: 19544 RVA: 0x0011238F File Offset: 0x0011058F
+		// Token: 0x17002187 RID: 8583
+		// (get) Token: 0x06006958 RID: 26968 RVA: 0x0003A713 File Offset: 0x00038913
+		// (set) Token: 0x06006959 RID: 26969 RVA: 0x0003A71B File Offset: 0x0003891B
 		public SurfaceType StandingOnSurfaceType
 		{
 			get
@@ -41,9 +41,9 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700188D RID: 6285
-		// (get) Token: 0x06004C59 RID: 19545 RVA: 0x00112398 File Offset: 0x00110598
-		// (set) Token: 0x06004C5A RID: 19546 RVA: 0x001123A0 File Offset: 0x001105A0
+		// Token: 0x17002188 RID: 8584
+		// (get) Token: 0x0600695A RID: 26970 RVA: 0x0003A724 File Offset: 0x00038924
+		// (set) Token: 0x0600695B RID: 26971 RVA: 0x0003A72C File Offset: 0x0003892C
 		public SurfaceType SurfaceOverride
 		{
 			get
@@ -56,7 +56,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C5B RID: 19547 RVA: 0x001123AC File Offset: 0x001105AC
+		// Token: 0x0600695C RID: 26972 RVA: 0x00182124 File Offset: 0x00180324
 		private void Awake()
 		{
 			this.m_corgiController = base.GetComponent<CorgiController_RL>();
@@ -71,7 +71,7 @@ namespace RLAudio
 			});
 		}
 
-		// Token: 0x06004C5C RID: 19548 RVA: 0x00112408 File Offset: 0x00110608
+		// Token: 0x0600695D RID: 26973 RVA: 0x00182180 File Offset: 0x00180380
 		private void OnStandingOnChange(object sender, GameObject standingOn)
 		{
 			if (this.SurfaceOverride == SurfaceType.None)
@@ -90,7 +90,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C5D RID: 19549 RVA: 0x00112470 File Offset: 0x00110670
+		// Token: 0x0600695E RID: 26974 RVA: 0x001821E8 File Offset: 0x001803E8
 		public void SetSurfaceOverride(SurfaceType surfaceType)
 		{
 			if (this.SurfaceOverride != surfaceType)
@@ -111,16 +111,16 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04004059 RID: 16473
+		// Token: 0x040055C1 RID: 21953
 		private CorgiController_RL m_corgiController;
 
-		// Token: 0x0400405A RID: 16474
+		// Token: 0x040055C2 RID: 21954
 		private SurfaceType m_standingOnSurfaceType = SurfaceType.None;
 
-		// Token: 0x0400405B RID: 16475
+		// Token: 0x040055C3 RID: 21955
 		private SurfaceType m_surfaceOverride = SurfaceType.None;
 
-		// Token: 0x0400405C RID: 16476
+		// Token: 0x040055C4 RID: 21956
 		private float m_surfaceTypeParameter;
 	}
 }

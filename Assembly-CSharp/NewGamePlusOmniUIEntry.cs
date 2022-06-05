@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine.EventSystems;
 
-// Token: 0x020003BA RID: 954
+// Token: 0x02000651 RID: 1617
 public class NewGamePlusOmniUIEntry : BaseOmniUIEntry
 {
-	// Token: 0x17000E81 RID: 3713
-	// (get) Token: 0x06002339 RID: 9017 RVA: 0x00072CEA File Offset: 0x00070EEA
-	// (set) Token: 0x0600233A RID: 9018 RVA: 0x00072CF2 File Offset: 0x00070EF2
+	// Token: 0x17001314 RID: 4884
+	// (get) Token: 0x06003151 RID: 12625 RVA: 0x0001B14B File Offset: 0x0001934B
+	// (set) Token: 0x06003152 RID: 12626 RVA: 0x0001B153 File Offset: 0x00019353
 	public BurdenType BurdenType { get; protected set; }
 
-	// Token: 0x17000E82 RID: 3714
-	// (get) Token: 0x0600233B RID: 9019 RVA: 0x00072CFB File Offset: 0x00070EFB
+	// Token: 0x17001315 RID: 4885
+	// (get) Token: 0x06003153 RID: 12627 RVA: 0x0001B15C File Offset: 0x0001935C
 	public bool IsNGPlusButton
 	{
 		get
@@ -19,8 +19,8 @@ public class NewGamePlusOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000E83 RID: 3715
-	// (get) Token: 0x0600233C RID: 9020 RVA: 0x00072D06 File Offset: 0x00070F06
+	// Token: 0x17001316 RID: 4886
+	// (get) Token: 0x06003154 RID: 12628 RVA: 0x0001B167 File Offset: 0x00019367
 	public override EventArgs EntryEventArgs
 	{
 		get
@@ -37,8 +37,8 @@ public class NewGamePlusOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000E84 RID: 3716
-	// (get) Token: 0x0600233D RID: 9021 RVA: 0x00072D3C File Offset: 0x00070F3C
+	// Token: 0x17001317 RID: 4887
+	// (get) Token: 0x06003155 RID: 12629 RVA: 0x0001B19D File Offset: 0x0001939D
 	public override bool IsEntryActive
 	{
 		get
@@ -47,7 +47,7 @@ public class NewGamePlusOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x0600233E RID: 9022 RVA: 0x00072D54 File Offset: 0x00070F54
+	// Token: 0x06003156 RID: 12630 RVA: 0x000D31F8 File Offset: 0x000D13F8
 	public void Initialize(BurdenType burdenType, NewGamePlusOmniUIWindowController windowController)
 	{
 		this.BurdenType = burdenType;
@@ -66,7 +66,7 @@ public class NewGamePlusOmniUIEntry : BaseOmniUIEntry
 		this.m_titleText.text = @string;
 	}
 
-	// Token: 0x0600233F RID: 9023 RVA: 0x00072DEC File Offset: 0x00070FEC
+	// Token: 0x06003157 RID: 12631 RVA: 0x000D3290 File Offset: 0x000D1490
 	public override void UpdateActive()
 	{
 		BurdenData burdenData = BurdenLibrary.GetBurdenData(this.BurdenType);
@@ -84,7 +84,7 @@ public class NewGamePlusOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x06002340 RID: 9024 RVA: 0x00072E50 File Offset: 0x00071050
+	// Token: 0x06003158 RID: 12632 RVA: 0x000D32F4 File Offset: 0x000D14F4
 	public override void UpdateState()
 	{
 		bool isNGPlusButton = this.IsNGPlusButton;
@@ -136,7 +136,7 @@ public class NewGamePlusOmniUIEntry : BaseOmniUIEntry
 		this.m_titleText.text = @string;
 	}
 
-	// Token: 0x06002341 RID: 9025 RVA: 0x00072FA4 File Offset: 0x000711A4
+	// Token: 0x06003159 RID: 12633 RVA: 0x000D3448 File Offset: 0x000D1648
 	public override void OnSelect(BaseEventData eventData)
 	{
 		if (!base.Interactable)
@@ -156,7 +156,7 @@ public class NewGamePlusOmniUIEntry : BaseOmniUIEntry
 		base.OnSelect(eventData);
 	}
 
-	// Token: 0x06002342 RID: 9026 RVA: 0x00073000 File Offset: 0x00071200
+	// Token: 0x0600315A RID: 12634 RVA: 0x000D34A4 File Offset: 0x000D16A4
 	public override void OnPointerEnter(PointerEventData eventData)
 	{
 		NewGamePlusOmniUIWindowController newGamePlusOmniUIWindowController = this.m_windowController as NewGamePlusOmniUIWindowController;
@@ -174,6 +174,6 @@ public class NewGamePlusOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x04001E0B RID: 7691
+	// Token: 0x0400283D RID: 10301
 	private NewGamePlusOmniUIDescriptionEventArgs m_eventArgs;
 }

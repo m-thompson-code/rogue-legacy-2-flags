@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000248 RID: 584
+// Token: 0x02000405 RID: 1029
 [CreateAssetMenu(menuName = "Custom/Libraries/Rune Library")]
 public class RuneLibrary : ScriptableObject
 {
-	// Token: 0x17000B5D RID: 2909
-	// (get) Token: 0x06001760 RID: 5984 RVA: 0x00048E6D File Offset: 0x0004706D
+	// Token: 0x17000E8A RID: 3722
+	// (get) Token: 0x06002113 RID: 8467 RVA: 0x00011985 File Offset: 0x0000FB85
 	private static RuneLibrary Instance
 	{
 		get
@@ -19,7 +19,7 @@ public class RuneLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001761 RID: 5985 RVA: 0x00048E98 File Offset: 0x00047098
+	// Token: 0x06002114 RID: 8468 RVA: 0x000A6878 File Offset: 0x000A4A78
 	public static RuneData GetRuneData(RuneType runeType)
 	{
 		RuneData result = null;
@@ -31,14 +31,14 @@ public class RuneLibrary : ScriptableObject
 		throw new Exception("Rune Library is null.");
 	}
 
-	// Token: 0x040016D4 RID: 5844
+	// Token: 0x04001DEC RID: 7660
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/RuneLibrary";
 
-	// Token: 0x040016D5 RID: 5845
+	// Token: 0x04001DED RID: 7661
 	[Space(10f)]
 	[SerializeField]
 	private RuneTypeRuneDataDictionary m_runeLibrary;
 
-	// Token: 0x040016D6 RID: 5846
+	// Token: 0x04001DEE RID: 7662
 	private static RuneLibrary m_instance;
 }

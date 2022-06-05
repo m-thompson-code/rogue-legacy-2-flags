@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000300 RID: 768
+// Token: 0x02000521 RID: 1313
 public class EnemyFlamerStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D42 RID: 3394
-	// (get) Token: 0x06001E8D RID: 7821 RVA: 0x00063083 File Offset: 0x00061283
+	// Token: 0x1700111F RID: 4383
+	// (get) Token: 0x06002A56 RID: 10838 RVA: 0x00017B2B File Offset: 0x00015D2B
 	public override string[] ProjectileNameArray
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyFlamerStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D43 RID: 3395
-	// (get) Token: 0x06001E8E RID: 7822 RVA: 0x0006308A File Offset: 0x0006128A
+	// Token: 0x17001120 RID: 4384
+	// (get) Token: 0x06002A57 RID: 10839 RVA: 0x00017B32 File Offset: 0x00015D32
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -25,8 +25,8 @@ public class EnemyFlamerStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D44 RID: 3396
-	// (get) Token: 0x06001E8F RID: 7823 RVA: 0x00063091 File Offset: 0x00061291
+	// Token: 0x17001121 RID: 4385
+	// (get) Token: 0x06002A58 RID: 10840 RVA: 0x00017B39 File Offset: 0x00015D39
 	public override float StartingDurationOverride
 	{
 		get
@@ -35,7 +35,7 @@ public class EnemyFlamerStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E90 RID: 7824 RVA: 0x00063098 File Offset: 0x00061298
+	// Token: 0x06002A59 RID: 10841 RVA: 0x00017B40 File Offset: 0x00015D40
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_intervalTimer = Time.time + 2.25f;
@@ -58,7 +58,7 @@ public class EnemyFlamerStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001E91 RID: 7825 RVA: 0x000630A7 File Offset: 0x000612A7
+	// Token: 0x06002A5A RID: 10842 RVA: 0x00017B4F File Offset: 0x00015D4F
 	private IEnumerator FireProjectileCoroutine()
 	{
 		int num3;
@@ -78,12 +78,12 @@ public class EnemyFlamerStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x04001BBF RID: 7103
+	// Token: 0x0400245B RID: 9307
 	private static string[] m_projectileNameArray = new string[]
 	{
 		"StatusEffectFireballProjectile"
 	};
 
-	// Token: 0x04001BC0 RID: 7104
+	// Token: 0x0400245C RID: 9308
 	private float m_intervalTimer;
 }

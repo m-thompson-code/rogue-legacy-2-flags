@@ -12,10 +12,10 @@ using UnityEngine.SceneManagement;
 
 namespace Unity.Cloud.UserReporting.Plugin
 {
-	// Token: 0x02000844 RID: 2116
+	// Token: 0x02000D2A RID: 3370
 	public class UnityUserReportingPlatform : IUserReportingPlatform
 	{
-		// Token: 0x06004601 RID: 17921 RVA: 0x000F88BC File Offset: 0x000F6ABC
+		// Token: 0x06006039 RID: 24633 RVA: 0x00165DC0 File Offset: 0x00163FC0
 		public UnityUserReportingPlatform()
 		{
 			this.logMessages = new List<UnityUserReportingPlatform.LogMessage>();
@@ -50,13 +50,13 @@ namespace Unity.Cloud.UserReporting.Plugin
 			};
 		}
 
-		// Token: 0x06004602 RID: 17922 RVA: 0x000F89A4 File Offset: 0x000F6BA4
+		// Token: 0x0600603A RID: 24634 RVA: 0x0003517C File Offset: 0x0003337C
 		public T DeserializeJson<T>(string json)
 		{
 			return SimpleJson.DeserializeObject<T>(json);
 		}
 
-		// Token: 0x06004603 RID: 17923 RVA: 0x000F89AC File Offset: 0x000F6BAC
+		// Token: 0x0600603B RID: 24635 RVA: 0x00165EA8 File Offset: 0x001640A8
 		public void OnEndOfFrame(UserReportingClient client)
 		{
 			int i = 0;
@@ -161,7 +161,7 @@ namespace Unity.Cloud.UserReporting.Plugin
 			}
 		}
 
-		// Token: 0x06004604 RID: 17924 RVA: 0x000F8D94 File Offset: 0x000F6F94
+		// Token: 0x0600603C RID: 24636 RVA: 0x00166290 File Offset: 0x00164490
 		public void Post(string endpoint, string contentType, byte[] content, Action<float, float> progressCallback, Action<bool, byte[]> callback)
 		{
 			UnityWebRequest unityWebRequest = new UnityWebRequest(endpoint, "POST");
@@ -176,25 +176,25 @@ namespace Unity.Cloud.UserReporting.Plugin
 			this.postOperations.Add(postOperation);
 		}
 
-		// Token: 0x06004605 RID: 17925 RVA: 0x000F8E00 File Offset: 0x000F7000
+		// Token: 0x0600603D RID: 24637 RVA: 0x00035184 File Offset: 0x00033384
 		public void RunTask(Func<object> task, Action<object> callback)
 		{
 			callback(task());
 		}
 
-		// Token: 0x06004606 RID: 17926 RVA: 0x000F8E0E File Offset: 0x000F700E
+		// Token: 0x0600603E RID: 24638 RVA: 0x00035192 File Offset: 0x00033392
 		public void SendAnalyticsEvent(string eventName, Dictionary<string, object> eventData)
 		{
 			Analytics.CustomEvent(eventName, eventData);
 		}
 
-		// Token: 0x06004607 RID: 17927 RVA: 0x000F8E18 File Offset: 0x000F7018
+		// Token: 0x0600603F RID: 24639 RVA: 0x0003519C File Offset: 0x0003339C
 		public string SerializeJson(object instance)
 		{
 			return SimpleJson.SerializeObject(instance);
 		}
 
-		// Token: 0x06004608 RID: 17928 RVA: 0x000F8E20 File Offset: 0x000F7020
+		// Token: 0x06006040 RID: 24640 RVA: 0x001662FC File Offset: 0x001644FC
 		public void TakeScreenshot(int frameNumber, int maximumWidth, int maximumHeight, object source, Action<int, byte[]> callback)
 		{
 			UnityUserReportingPlatform.ScreenshotOperation screenshotOperation = new UnityUserReportingPlatform.ScreenshotOperation();
@@ -207,7 +207,7 @@ namespace Unity.Cloud.UserReporting.Plugin
 			this.screenshotOperations.Add(screenshotOperation);
 		}
 
-		// Token: 0x06004609 RID: 17929 RVA: 0x000F8E70 File Offset: 0x000F7070
+		// Token: 0x06006041 RID: 24641 RVA: 0x0016634C File Offset: 0x0016454C
 		public void Update(UserReportingClient client)
 		{
 			List<UnityUserReportingPlatform.LogMessage> obj = this.logMessages;
@@ -272,7 +272,7 @@ namespace Unity.Cloud.UserReporting.Plugin
 			}
 		}
 
-		// Token: 0x0600460A RID: 17930 RVA: 0x000F90C0 File Offset: 0x000F72C0
+		// Token: 0x06006042 RID: 24642 RVA: 0x0016659C File Offset: 0x0016479C
 		public virtual IDictionary<string, string> GetDeviceMetadata()
 		{
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -315,7 +315,7 @@ namespace Unity.Cloud.UserReporting.Plugin
 			return dictionary;
 		}
 
-		// Token: 0x0600460B RID: 17931 RVA: 0x000F93A0 File Offset: 0x000F75A0
+		// Token: 0x06006043 RID: 24643 RVA: 0x0016687C File Offset: 0x00164A7C
 		public virtual Dictionary<string, string> GetSamplerNames()
 		{
 			return new Dictionary<string, string>
@@ -403,7 +403,7 @@ namespace Unity.Cloud.UserReporting.Plugin
 			};
 		}
 
-		// Token: 0x0600460C RID: 17932 RVA: 0x000F94F4 File Offset: 0x000F76F4
+		// Token: 0x06006044 RID: 24644 RVA: 0x001669D0 File Offset: 0x00164BD0
 		public virtual void ModifyUserReport(UserReport userReport)
 		{
 			Scene activeScene = SceneManager.GetActiveScene();
@@ -425,7 +425,7 @@ namespace Unity.Cloud.UserReporting.Plugin
 			}
 		}
 
-		// Token: 0x0600460D RID: 17933 RVA: 0x000F9654 File Offset: 0x000F7854
+		// Token: 0x06006045 RID: 24645 RVA: 0x00166B30 File Offset: 0x00164D30
 		public virtual void SampleAutomaticMetrics(UserReportingClient client)
 		{
 			client.SampleMetric("Graphics.FramesPerSecond", (double)(1f / Time.deltaTime));
@@ -436,60 +436,60 @@ namespace Unity.Cloud.UserReporting.Plugin
 			client.SampleMetric("Battery.BatteryLevelInPercent", (double)SystemInfo.batteryLevel);
 		}
 
-		// Token: 0x04003B6B RID: 15211
+		// Token: 0x04004EAC RID: 20140
 		private List<UnityUserReportingPlatform.LogMessage> logMessages;
 
-		// Token: 0x04003B6C RID: 15212
+		// Token: 0x04004EAD RID: 20141
 		private List<UnityUserReportingPlatform.PostOperation> postOperations;
 
-		// Token: 0x04003B6D RID: 15213
+		// Token: 0x04004EAE RID: 20142
 		private List<UnityUserReportingPlatform.ProfilerSampler> profilerSamplers;
 
-		// Token: 0x04003B6E RID: 15214
+		// Token: 0x04004EAF RID: 20143
 		private List<UnityUserReportingPlatform.ScreenshotOperation> screenshotOperations;
 
-		// Token: 0x04003B6F RID: 15215
+		// Token: 0x04004EB0 RID: 20144
 		private Stopwatch screenshotStopwatch;
 
-		// Token: 0x04003B70 RID: 15216
+		// Token: 0x04004EB1 RID: 20145
 		private List<UnityUserReportingPlatform.PostOperation> taskOperations;
 
-		// Token: 0x02000E57 RID: 3671
+		// Token: 0x02000D2B RID: 3371
 		private struct LogMessage
 		{
-			// Token: 0x040057B5 RID: 22453
+			// Token: 0x04004EB2 RID: 20146
 			public string LogString;
 
-			// Token: 0x040057B6 RID: 22454
+			// Token: 0x04004EB3 RID: 20147
 			public LogType LogType;
 
-			// Token: 0x040057B7 RID: 22455
+			// Token: 0x04004EB4 RID: 20148
 			public string StackTrace;
 		}
 
-		// Token: 0x02000E58 RID: 3672
+		// Token: 0x02000D2C RID: 3372
 		private class PostOperation
 		{
-			// Token: 0x17002359 RID: 9049
-			// (get) Token: 0x06006C79 RID: 27769 RVA: 0x00194019 File Offset: 0x00192219
-			// (set) Token: 0x06006C7A RID: 27770 RVA: 0x00194021 File Offset: 0x00192221
+			// Token: 0x17001F91 RID: 8081
+			// (get) Token: 0x06006047 RID: 24647 RVA: 0x000351A4 File Offset: 0x000333A4
+			// (set) Token: 0x06006048 RID: 24648 RVA: 0x000351AC File Offset: 0x000333AC
 			public Action<bool, byte[]> Callback { get; set; }
 
-			// Token: 0x1700235A RID: 9050
-			// (get) Token: 0x06006C7B RID: 27771 RVA: 0x0019402A File Offset: 0x0019222A
-			// (set) Token: 0x06006C7C RID: 27772 RVA: 0x00194032 File Offset: 0x00192232
+			// Token: 0x17001F92 RID: 8082
+			// (get) Token: 0x06006049 RID: 24649 RVA: 0x000351B5 File Offset: 0x000333B5
+			// (set) Token: 0x0600604A RID: 24650 RVA: 0x000351BD File Offset: 0x000333BD
 			public Action<float, float> ProgressCallback { get; set; }
 
-			// Token: 0x1700235B RID: 9051
-			// (get) Token: 0x06006C7D RID: 27773 RVA: 0x0019403B File Offset: 0x0019223B
-			// (set) Token: 0x06006C7E RID: 27774 RVA: 0x00194043 File Offset: 0x00192243
+			// Token: 0x17001F93 RID: 8083
+			// (get) Token: 0x0600604B RID: 24651 RVA: 0x000351C6 File Offset: 0x000333C6
+			// (set) Token: 0x0600604C RID: 24652 RVA: 0x000351CE File Offset: 0x000333CE
 			public UnityWebRequest WebRequest { get; set; }
 		}
 
-		// Token: 0x02000E59 RID: 3673
+		// Token: 0x02000D2D RID: 3373
 		private struct ProfilerSampler
 		{
-			// Token: 0x06006C80 RID: 27776 RVA: 0x00194054 File Offset: 0x00192254
+			// Token: 0x0600604E RID: 24654 RVA: 0x000351D7 File Offset: 0x000333D7
 			public double GetValue()
 			{
 				if (this.Recorder == null)
@@ -499,84 +499,84 @@ namespace Unity.Cloud.UserReporting.Plugin
 				return (double)this.Recorder.elapsedNanoseconds / 1000000.0;
 			}
 
-			// Token: 0x040057BB RID: 22459
+			// Token: 0x04004EB8 RID: 20152
 			public string Name;
 
-			// Token: 0x040057BC RID: 22460
+			// Token: 0x04004EB9 RID: 20153
 			public Recorder Recorder;
 		}
 
-		// Token: 0x02000E5A RID: 3674
+		// Token: 0x02000D2E RID: 3374
 		private class ScreenshotOperation
 		{
-			// Token: 0x1700235C RID: 9052
-			// (get) Token: 0x06006C81 RID: 27777 RVA: 0x0019407E File Offset: 0x0019227E
-			// (set) Token: 0x06006C82 RID: 27778 RVA: 0x00194086 File Offset: 0x00192286
+			// Token: 0x17001F94 RID: 8084
+			// (get) Token: 0x0600604F RID: 24655 RVA: 0x00035201 File Offset: 0x00033401
+			// (set) Token: 0x06006050 RID: 24656 RVA: 0x00035209 File Offset: 0x00033409
 			public Action<int, byte[]> Callback { get; set; }
 
-			// Token: 0x1700235D RID: 9053
-			// (get) Token: 0x06006C83 RID: 27779 RVA: 0x0019408F File Offset: 0x0019228F
-			// (set) Token: 0x06006C84 RID: 27780 RVA: 0x00194097 File Offset: 0x00192297
+			// Token: 0x17001F95 RID: 8085
+			// (get) Token: 0x06006051 RID: 24657 RVA: 0x00035212 File Offset: 0x00033412
+			// (set) Token: 0x06006052 RID: 24658 RVA: 0x0003521A File Offset: 0x0003341A
 			public int FrameNumber { get; set; }
 
-			// Token: 0x1700235E RID: 9054
-			// (get) Token: 0x06006C85 RID: 27781 RVA: 0x001940A0 File Offset: 0x001922A0
-			// (set) Token: 0x06006C86 RID: 27782 RVA: 0x001940A8 File Offset: 0x001922A8
+			// Token: 0x17001F96 RID: 8086
+			// (get) Token: 0x06006053 RID: 24659 RVA: 0x00035223 File Offset: 0x00033423
+			// (set) Token: 0x06006054 RID: 24660 RVA: 0x0003522B File Offset: 0x0003342B
 			public int MaximumHeight { get; set; }
 
-			// Token: 0x1700235F RID: 9055
-			// (get) Token: 0x06006C87 RID: 27783 RVA: 0x001940B1 File Offset: 0x001922B1
-			// (set) Token: 0x06006C88 RID: 27784 RVA: 0x001940B9 File Offset: 0x001922B9
+			// Token: 0x17001F97 RID: 8087
+			// (get) Token: 0x06006055 RID: 24661 RVA: 0x00035234 File Offset: 0x00033434
+			// (set) Token: 0x06006056 RID: 24662 RVA: 0x0003523C File Offset: 0x0003343C
 			public int MaximumWidth { get; set; }
 
-			// Token: 0x17002360 RID: 9056
-			// (get) Token: 0x06006C89 RID: 27785 RVA: 0x001940C2 File Offset: 0x001922C2
-			// (set) Token: 0x06006C8A RID: 27786 RVA: 0x001940CA File Offset: 0x001922CA
+			// Token: 0x17001F98 RID: 8088
+			// (get) Token: 0x06006057 RID: 24663 RVA: 0x00035245 File Offset: 0x00033445
+			// (set) Token: 0x06006058 RID: 24664 RVA: 0x0003524D File Offset: 0x0003344D
 			public byte[] PngData { get; set; }
 
-			// Token: 0x17002361 RID: 9057
-			// (get) Token: 0x06006C8B RID: 27787 RVA: 0x001940D3 File Offset: 0x001922D3
-			// (set) Token: 0x06006C8C RID: 27788 RVA: 0x001940DB File Offset: 0x001922DB
+			// Token: 0x17001F99 RID: 8089
+			// (get) Token: 0x06006059 RID: 24665 RVA: 0x00035256 File Offset: 0x00033456
+			// (set) Token: 0x0600605A RID: 24666 RVA: 0x0003525E File Offset: 0x0003345E
 			public object Source { get; set; }
 
-			// Token: 0x17002362 RID: 9058
-			// (get) Token: 0x06006C8D RID: 27789 RVA: 0x001940E4 File Offset: 0x001922E4
-			// (set) Token: 0x06006C8E RID: 27790 RVA: 0x001940EC File Offset: 0x001922EC
+			// Token: 0x17001F9A RID: 8090
+			// (get) Token: 0x0600605B RID: 24667 RVA: 0x00035267 File Offset: 0x00033467
+			// (set) Token: 0x0600605C RID: 24668 RVA: 0x0003526F File Offset: 0x0003346F
 			public UnityUserReportingPlatform.ScreenshotStage Stage { get; set; }
 
-			// Token: 0x17002363 RID: 9059
-			// (get) Token: 0x06006C8F RID: 27791 RVA: 0x001940F5 File Offset: 0x001922F5
-			// (set) Token: 0x06006C90 RID: 27792 RVA: 0x001940FD File Offset: 0x001922FD
+			// Token: 0x17001F9B RID: 8091
+			// (get) Token: 0x0600605D RID: 24669 RVA: 0x00035278 File Offset: 0x00033478
+			// (set) Token: 0x0600605E RID: 24670 RVA: 0x00035280 File Offset: 0x00033480
 			public Texture2D Texture { get; set; }
 
-			// Token: 0x17002364 RID: 9060
-			// (get) Token: 0x06006C91 RID: 27793 RVA: 0x00194106 File Offset: 0x00192306
-			// (set) Token: 0x06006C92 RID: 27794 RVA: 0x0019410E File Offset: 0x0019230E
+			// Token: 0x17001F9C RID: 8092
+			// (get) Token: 0x0600605F RID: 24671 RVA: 0x00035289 File Offset: 0x00033489
+			// (set) Token: 0x06006060 RID: 24672 RVA: 0x00035291 File Offset: 0x00033491
 			public Texture2D TextureResized { get; set; }
 
-			// Token: 0x17002365 RID: 9061
-			// (get) Token: 0x06006C93 RID: 27795 RVA: 0x00194117 File Offset: 0x00192317
-			// (set) Token: 0x06006C94 RID: 27796 RVA: 0x0019411F File Offset: 0x0019231F
+			// Token: 0x17001F9D RID: 8093
+			// (get) Token: 0x06006061 RID: 24673 RVA: 0x0003529A File Offset: 0x0003349A
+			// (set) Token: 0x06006062 RID: 24674 RVA: 0x000352A2 File Offset: 0x000334A2
 			public int UnityFrame { get; set; }
 
-			// Token: 0x17002366 RID: 9062
-			// (get) Token: 0x06006C95 RID: 27797 RVA: 0x00194128 File Offset: 0x00192328
-			// (set) Token: 0x06006C96 RID: 27798 RVA: 0x00194130 File Offset: 0x00192330
+			// Token: 0x17001F9E RID: 8094
+			// (get) Token: 0x06006063 RID: 24675 RVA: 0x000352AB File Offset: 0x000334AB
+			// (set) Token: 0x06006064 RID: 24676 RVA: 0x000352B3 File Offset: 0x000334B3
 			public int WaitFrames { get; set; }
 		}
 
-		// Token: 0x02000E5B RID: 3675
+		// Token: 0x02000D2F RID: 3375
 		private enum ScreenshotStage
 		{
-			// Token: 0x040057C9 RID: 22473
+			// Token: 0x04004EC6 RID: 20166
 			Render,
-			// Token: 0x040057CA RID: 22474
+			// Token: 0x04004EC7 RID: 20167
 			ReadPixels,
-			// Token: 0x040057CB RID: 22475
+			// Token: 0x04004EC8 RID: 20168
 			GetPixels,
-			// Token: 0x040057CC RID: 22476
+			// Token: 0x04004EC9 RID: 20169
 			EncodeToJPG,
-			// Token: 0x040057CD RID: 22477
+			// Token: 0x04004ECA RID: 20170
 			Done
 		}
 	}

@@ -4,16 +4,16 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000590 RID: 1424
+// Token: 0x0200098D RID: 2445
 public class ProfileSelectWindowController : WindowController
 {
-	// Token: 0x170012DF RID: 4831
-	// (get) Token: 0x06003554 RID: 13652 RVA: 0x000B8C05 File Offset: 0x000B6E05
-	// (set) Token: 0x06003555 RID: 13653 RVA: 0x000B8C0D File Offset: 0x000B6E0D
+	// Token: 0x170019FA RID: 6650
+	// (get) Token: 0x06004B30 RID: 19248 RVA: 0x00029298 File Offset: 0x00027498
+	// (set) Token: 0x06004B31 RID: 19249 RVA: 0x000292A0 File Offset: 0x000274A0
 	public int OnEnter_PreviousHighestNGPlusBeaten { get; private set; } = -1;
 
-	// Token: 0x170012E0 RID: 4832
-	// (get) Token: 0x06003556 RID: 13654 RVA: 0x000B8C16 File Offset: 0x000B6E16
+	// Token: 0x170019FB RID: 6651
+	// (get) Token: 0x06004B32 RID: 19250 RVA: 0x00004A59 File Offset: 0x00002C59
 	public override WindowID ID
 	{
 		get
@@ -22,7 +22,7 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003557 RID: 13655 RVA: 0x000B8C1C File Offset: 0x000B6E1C
+	// Token: 0x06004B33 RID: 19251 RVA: 0x00126708 File Offset: 0x00124908
 	private void Awake()
 	{
 		this.m_cancelConfirmMenuSelection = new Action(this.CancelConfirmMenuSelection);
@@ -33,7 +33,7 @@ public class ProfileSelectWindowController : WindowController
 		this.m_onCancelButtonDown = new Action<InputActionEventData>(this.OnCancelButtonDown);
 	}
 
-	// Token: 0x06003558 RID: 13656 RVA: 0x000B8C98 File Offset: 0x000B6E98
+	// Token: 0x06004B34 RID: 19252 RVA: 0x00126784 File Offset: 0x00124984
 	public override void Initialize()
 	{
 		base.Initialize();
@@ -65,7 +65,7 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003559 RID: 13657 RVA: 0x000B8E00 File Offset: 0x000B7000
+	// Token: 0x06004B35 RID: 19253 RVA: 0x001268EC File Offset: 0x00124AEC
 	protected override void OnOpen()
 	{
 		this.m_windowCanvas.gameObject.SetActive(true);
@@ -85,26 +85,26 @@ public class ProfileSelectWindowController : WindowController
 		this.OnEnter_PreviousHighestNGPlusBeaten = SaveManager.PlayerSaveData.HighestNGPlusBeaten;
 	}
 
-	// Token: 0x0600355A RID: 13658 RVA: 0x000B8EC4 File Offset: 0x000B70C4
+	// Token: 0x06004B36 RID: 19254 RVA: 0x000292A9 File Offset: 0x000274A9
 	protected override void OnClose()
 	{
 		this.m_windowCanvas.gameObject.SetActive(false);
 		this.PlaySelectedSFX(null);
 	}
 
-	// Token: 0x0600355B RID: 13659 RVA: 0x000B8EDE File Offset: 0x000B70DE
+	// Token: 0x06004B37 RID: 19255 RVA: 0x000292C3 File Offset: 0x000274C3
 	protected override void OnFocus()
 	{
 		this.AddInputListeners();
 	}
 
-	// Token: 0x0600355C RID: 13660 RVA: 0x000B8EE6 File Offset: 0x000B70E6
+	// Token: 0x06004B38 RID: 19256 RVA: 0x000292CB File Offset: 0x000274CB
 	protected override void OnLostFocus()
 	{
 		this.RemoveInputListeners();
 	}
 
-	// Token: 0x0600355D RID: 13661 RVA: 0x000B8EF0 File Offset: 0x000B70F0
+	// Token: 0x06004B39 RID: 19257 RVA: 0x001269B0 File Offset: 0x00124BB0
 	protected void AddInputListeners()
 	{
 		if (ReInput.isReady && base.RewiredPlayer != null)
@@ -117,7 +117,7 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600355E RID: 13662 RVA: 0x000B8F8C File Offset: 0x000B718C
+	// Token: 0x06004B3A RID: 19258 RVA: 0x00126A4C File Offset: 0x00124C4C
 	protected void RemoveInputListeners()
 	{
 		if (ReInput.isReady)
@@ -130,7 +130,7 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600355F RID: 13663 RVA: 0x000B901C File Offset: 0x000B721C
+	// Token: 0x06004B3B RID: 19259 RVA: 0x00126ADC File Offset: 0x00124CDC
 	private void OnVerticalInputHandler(InputActionEventData eventData)
 	{
 		int currentSelectedIndex = this.m_currentSelectedIndex;
@@ -154,7 +154,7 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003560 RID: 13664 RVA: 0x000B90A3 File Offset: 0x000B72A3
+	// Token: 0x06004B3C RID: 19260 RVA: 0x000292D3 File Offset: 0x000274D3
 	private void OnConfirmInputHandler(InputActionEventData eventData)
 	{
 		if (eventData.IsCurrentInputSource(ControllerType.Mouse))
@@ -168,7 +168,7 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003561 RID: 13665 RVA: 0x000B90D4 File Offset: 0x000B72D4
+	// Token: 0x06004B3D RID: 19261 RVA: 0x00126B64 File Offset: 0x00124D64
 	protected virtual void UpdateSelectedOptionItem(ProfileSlotButton profileSlotItem)
 	{
 		if ((int)profileSlotItem.SlotNumber == this.m_currentSelectedIndex)
@@ -186,14 +186,14 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003562 RID: 13666 RVA: 0x000B9137 File Offset: 0x000B7337
+	// Token: 0x06004B3E RID: 19262 RVA: 0x00029302 File Offset: 0x00027502
 	protected virtual void OnCancelButtonDown(InputActionEventData eventData)
 	{
 		WindowManager.SetWindowIsOpen(this.ID, false);
 		WindowManager.SetWindowIsOpen(WindowID.MainMenu, true);
 	}
 
-	// Token: 0x06003563 RID: 13667 RVA: 0x000B914D File Offset: 0x000B734D
+	// Token: 0x06004B3F RID: 19263 RVA: 0x00029318 File Offset: 0x00027518
 	protected virtual void OnDeleteProfileInputHandler(InputActionEventData eventData)
 	{
 		if (SaveManager.DoesSaveExist((int)this.m_profileSlotArray[this.m_currentSelectedIndex].SlotNumber, SaveDataType.Player, false))
@@ -203,7 +203,7 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003564 RID: 13668 RVA: 0x000B9178 File Offset: 0x000B7378
+	// Token: 0x06004B40 RID: 19264 RVA: 0x00126BC8 File Offset: 0x00124DC8
 	public void SetPlayerCardActive(bool active)
 	{
 		this.m_playerCard.SetActive(active);
@@ -232,13 +232,13 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003565 RID: 13669 RVA: 0x000B92AD File Offset: 0x000B74AD
+	// Token: 0x06004B41 RID: 19265 RVA: 0x00029343 File Offset: 0x00027543
 	public void SetPlayerCardCharData(CharacterData charData)
 	{
 		this.m_playerCardLookController.InitializeLook(charData);
 	}
 
-	// Token: 0x06003566 RID: 13670 RVA: 0x000B92BC File Offset: 0x000B74BC
+	// Token: 0x06004B42 RID: 19266 RVA: 0x00126D00 File Offset: 0x00124F00
 	private void InitializeDeleteProfileConfirmMenu()
 	{
 		ConfirmMenuWindowController confirmMenuWindowController = WindowManager.GetWindowController(WindowID.ConfirmMenu) as ConfirmMenuWindowController;
@@ -256,7 +256,7 @@ public class ProfileSelectWindowController : WindowController
 		confirmMenuWindowController.SetStartingSelectedButton(1);
 	}
 
-	// Token: 0x06003567 RID: 13671 RVA: 0x000B9348 File Offset: 0x000B7548
+	// Token: 0x06004B43 RID: 19267 RVA: 0x00126D8C File Offset: 0x00124F8C
 	private void ConfirmDeleteProfile()
 	{
 		SaveFileSystem.SaveBatch saveBatch = SaveFileSystem.BeginSaveBatch(this.m_currentSelectedIndex);
@@ -271,13 +271,13 @@ public class ProfileSelectWindowController : WindowController
 		this.m_profileSlotArray[this.m_currentSelectedIndex].OnSelect(null);
 	}
 
-	// Token: 0x06003568 RID: 13672 RVA: 0x000B93D3 File Offset: 0x000B75D3
+	// Token: 0x06004B44 RID: 19268 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenuSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x06003569 RID: 13673 RVA: 0x000B93DD File Offset: 0x000B75DD
+	// Token: 0x06004B45 RID: 19269 RVA: 0x00029351 File Offset: 0x00027551
 	public void ForceUpdateProfileSlot(int index)
 	{
 		if (index >= 0 && index < this.m_profileSlotArray.Length)
@@ -286,7 +286,7 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600356A RID: 13674 RVA: 0x000B93FB File Offset: 0x000B75FB
+	// Token: 0x06004B46 RID: 19270 RVA: 0x0002936F File Offset: 0x0002756F
 	protected virtual void PlaySelectedSFX(BaseOptionItem menuItem)
 	{
 		if (this.m_selectEvent != null)
@@ -295,7 +295,7 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600356B RID: 13675 RVA: 0x000B9410 File Offset: 0x000B7610
+	// Token: 0x06004B47 RID: 19271 RVA: 0x00126E18 File Offset: 0x00125018
 	public void SetAllSlotsInteractable(bool interactable)
 	{
 		ProfileSlotButton[] profileSlotArray = this.m_profileSlotArray;
@@ -305,69 +305,69 @@ public class ProfileSelectWindowController : WindowController
 		}
 	}
 
-	// Token: 0x04002993 RID: 10643
+	// Token: 0x04003969 RID: 14697
 	[SerializeField]
 	private ProfileSlotButton m_profileSlotPrefab;
 
-	// Token: 0x04002994 RID: 10644
+	// Token: 0x0400396A RID: 14698
 	[SerializeField]
 	private CanvasGroup m_profileSlotCanvasGroup;
 
-	// Token: 0x04002995 RID: 10645
+	// Token: 0x0400396B RID: 14699
 	[SerializeField]
 	private CanvasGroup m_fadeBGCanvasGroup;
 
-	// Token: 0x04002996 RID: 10646
+	// Token: 0x0400396C RID: 14700
 	[SerializeField]
 	private GameObject m_playerCard;
 
-	// Token: 0x04002997 RID: 10647
+	// Token: 0x0400396D RID: 14701
 	[SerializeField]
 	private CanvasGroup m_playerCardCanvasGroup;
 
-	// Token: 0x04002998 RID: 10648
+	// Token: 0x0400396E RID: 14702
 	[SerializeField]
 	private Animator m_playerCardAnimator;
 
-	// Token: 0x04002999 RID: 10649
+	// Token: 0x0400396F RID: 14703
 	[SerializeField]
 	private PlayerLookController m_playerCardLookController;
 
-	// Token: 0x0400299A RID: 10650
+	// Token: 0x04003970 RID: 14704
 	[SerializeField]
 	private UnityEvent m_selectionChangeEvent;
 
-	// Token: 0x0400299B RID: 10651
+	// Token: 0x04003971 RID: 14705
 	[SerializeField]
 	private UnityEvent m_selectEvent;
 
-	// Token: 0x0400299C RID: 10652
+	// Token: 0x04003972 RID: 14706
 	private float m_storedPlayerCardYPos;
 
-	// Token: 0x0400299D RID: 10653
+	// Token: 0x04003973 RID: 14707
 	private int m_currentSelectedIndex;
 
-	// Token: 0x0400299E RID: 10654
+	// Token: 0x04003974 RID: 14708
 	private ProfileSlotButton[] m_profileSlotArray;
 
-	// Token: 0x0400299F RID: 10655
+	// Token: 0x04003975 RID: 14709
 	private PlayerCardOpenedEventArgs m_playerCardEventArgs;
 
-	// Token: 0x040029A0 RID: 10656
+	// Token: 0x04003976 RID: 14710
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x040029A1 RID: 10657
+	// Token: 0x04003977 RID: 14711
 	private Action m_confirmDeleteProfile;
 
-	// Token: 0x040029A2 RID: 10658
+	// Token: 0x04003978 RID: 14712
 	private Action<InputActionEventData> m_onConfirmInputHandler;
 
-	// Token: 0x040029A3 RID: 10659
+	// Token: 0x04003979 RID: 14713
 	private Action<InputActionEventData> m_onDeleteProfileInputHandler;
 
-	// Token: 0x040029A4 RID: 10660
+	// Token: 0x0400397A RID: 14714
 	private Action<InputActionEventData> m_onVerticalInputHandler;
 
-	// Token: 0x040029A5 RID: 10661
+	// Token: 0x0400397B RID: 14715
 	private Action<InputActionEventData> m_onCancelButtonDown;
 }

@@ -1,104 +1,104 @@
 ﻿using System;
 
-// Token: 0x0200077B RID: 1915
+// Token: 0x02000C3C RID: 3132
 public enum StatusBarEntryType
 {
-	// Token: 0x040037AF RID: 14255
+	// Token: 0x04004A5F RID: 19039
 	None,
-	// Token: 0x040037B0 RID: 14256
+	// Token: 0x04004A60 RID: 19040
 	Cloak,
-	// Token: 0x040037B1 RID: 14257
+	// Token: 0x04004A61 RID: 19041
 	WeaponAmmo,
-	// Token: 0x040037B2 RID: 14258
+	// Token: 0x04004A62 RID: 19042
 	SpellAmmo,
-	// Token: 0x040037B3 RID: 14259
+	// Token: 0x04004A63 RID: 19043
 	TalentAmmo,
-	// Token: 0x040037B4 RID: 14260
+	// Token: 0x04004A64 RID: 19044
 	Freeze,
-	// Token: 0x040037B5 RID: 14261
+	// Token: 0x04004A65 RID: 19045
 	FreezeImmunity,
-	// Token: 0x040037B6 RID: 14262
+	// Token: 0x04004A66 RID: 19046
 	Burn,
-	// Token: 0x040037B7 RID: 14263
+	// Token: 0x04004A67 RID: 19047
 	BurnImmunity,
-	// Token: 0x040037B8 RID: 14264
+	// Token: 0x04004A68 RID: 19048
 	GodMode,
-	// Token: 0x040037B9 RID: 14265
+	// Token: 0x04004A69 RID: 19049
 	ManaBurn,
-	// Token: 0x040037BA RID: 14266
+	// Token: 0x04004A6A RID: 19050
 	SporeBurst,
-	// Token: 0x040037BB RID: 14267
+	// Token: 0x04004A6B RID: 19051
 	ArmorBreak,
-	// Token: 0x040037BC RID: 14268
+	// Token: 0x04004A6C RID: 19052
 	MagicBreak,
-	// Token: 0x040037BD RID: 14269
+	// Token: 0x04004A6D RID: 19053
 	Suave,
-	// Token: 0x040037BE RID: 14270
+	// Token: 0x04004A6E RID: 19054
 	Phased,
-	// Token: 0x040037BF RID: 14271
+	// Token: 0x04004A6F RID: 19055
 	Knockout,
-	// Token: 0x040037C0 RID: 14272
+	// Token: 0x04004A70 RID: 19056
 	Dizzy,
-	// Token: 0x040037C1 RID: 14273
+	// Token: 0x04004A71 RID: 19057
 	DeathDelay,
-	// Token: 0x040037C2 RID: 14274
+	// Token: 0x04004A72 RID: 19058
 	Combo,
-	// Token: 0x040037C3 RID: 14275
+	// Token: 0x04004A73 RID: 19059
 	Size,
-	// Token: 0x040037C4 RID: 14276
+	// Token: 0x04004A74 RID: 19060
 	Speed,
-	// Token: 0x040037C5 RID: 14277
+	// Token: 0x04004A75 RID: 19061
 	AppliesInvuln,
-	// Token: 0x040037C6 RID: 14278
+	// Token: 0x04004A76 RID: 19062
 	Invuln,
-	// Token: 0x040037C7 RID: 14279
+	// Token: 0x04004A77 RID: 19063
 	FreeHit,
-	// Token: 0x040037C8 RID: 14280
+	// Token: 0x04004A78 RID: 19064
 	Disarm,
-	// Token: 0x040037C9 RID: 14281
+	// Token: 0x04004A79 RID: 19065
 	Disarmed,
-	// Token: 0x040037CA RID: 14282
+	// Token: 0x04004A7A RID: 19066
 	CurseProjectile,
-	// Token: 0x040037CB RID: 14283
+	// Token: 0x04004A7B RID: 19067
 	Explode,
-	// Token: 0x040037CC RID: 14284
+	// Token: 0x04004A7C RID: 19068
 	ArmorShred,
-	// Token: 0x040037CD RID: 14285
+	// Token: 0x04004A7D RID: 19069
 	Exhaust,
-	// Token: 0x040037CE RID: 14286
+	// Token: 0x04004A7E RID: 19070
 	Poison,
-	// Token: 0x040037CF RID: 14287
+	// Token: 0x04004A7F RID: 19071
 	Bleed,
-	// Token: 0x040037D0 RID: 14288
+	// Token: 0x04004A80 RID: 19072
 	Bane,
-	// Token: 0x040037D1 RID: 14289
+	// Token: 0x04004A81 RID: 19073
 	Dance,
-	// Token: 0x040037D2 RID: 14290
+	// Token: 0x04004A82 RID: 19074
 	Vulnerable,
-	// Token: 0x040037D3 RID: 14291
+	// Token: 0x04004A83 RID: 19075
 	FreeCrit,
-	// Token: 0x040037D4 RID: 14292
+	// Token: 0x04004A84 RID: 19076
 	NoContactDamage,
-	// Token: 0x040037D5 RID: 14293
+	// Token: 0x04004A85 RID: 19077
 	InvulnWindow,
-	// Token: 0x040037D6 RID: 14294
+	// Token: 0x04004A86 RID: 19078
 	Aggro,
-	// Token: 0x040037D7 RID: 14295
+	// Token: 0x04004A87 RID: 19079
 	Flamer,
-	// Token: 0x040037D8 RID: 14296
+	// Token: 0x04004A88 RID: 19080
 	InvulnTimer,
-	// Token: 0x040037D9 RID: 14297
+	// Token: 0x04004A89 RID: 19081
 	TraitorRelic_DamageZone = 500,
-	// Token: 0x040037DA RID: 14298
+	// Token: 0x04004A8A RID: 19082
 	TraitorRelic_Jump = 510,
-	// Token: 0x040037DB RID: 14299
+	// Token: 0x04004A8B RID: 19083
 	TraitorRelic_Dash = 520,
-	// Token: 0x040037DC RID: 14300
+	// Token: 0x04004A8C RID: 19084
 	TraitorRelic_Block = 530,
-	// Token: 0x040037DD RID: 14301
+	// Token: 0x04004A8D RID: 19085
 	Commander = 1000,
-	// Token: 0x040037DE RID: 14302
+	// Token: 0x04004A8E RID: 19086
 	Flight = 1010,
-	// Token: 0x040037DF RID: 14303
+	// Token: 0x04004A8F RID: 19087
 	Guaranteed_Crit = 1020
 }

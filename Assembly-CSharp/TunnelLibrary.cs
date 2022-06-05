@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000257 RID: 599
+// Token: 0x02000416 RID: 1046
 [CreateAssetMenu(menuName = "Custom/Libraries/Tunnel Library")]
 public class TunnelLibrary : ScriptableObject
 {
-	// Token: 0x17000B6C RID: 2924
-	// (get) Token: 0x06001799 RID: 6041 RVA: 0x0004968F File Offset: 0x0004788F
-	// (set) Token: 0x0600179A RID: 6042 RVA: 0x00049697 File Offset: 0x00047897
+	// Token: 0x17000E9B RID: 3739
+	// (get) Token: 0x06002152 RID: 8530 RVA: 0x00011BEA File Offset: 0x0000FDEA
+	// (set) Token: 0x06002153 RID: 8531 RVA: 0x00011BF2 File Offset: 0x0000FDF2
 	public TunnelLibraryEntry[] Entries
 	{
 		get
@@ -24,8 +24,8 @@ public class TunnelLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B6D RID: 2925
-	// (get) Token: 0x0600179B RID: 6043 RVA: 0x000496A7 File Offset: 0x000478A7
+	// Token: 0x17000E9C RID: 3740
+	// (get) Token: 0x06002154 RID: 8532 RVA: 0x00011C02 File Offset: 0x0000FE02
 	public static TunnelLibrary Instance
 	{
 		get
@@ -38,7 +38,7 @@ public class TunnelLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x0600179C RID: 6044 RVA: 0x000496D0 File Offset: 0x000478D0
+	// Token: 0x06002155 RID: 8533 RVA: 0x000A6DF8 File Offset: 0x000A4FF8
 	public static Tunnel GetPrefab(TunnelCategory category)
 	{
 		if (TunnelLibrary.m_prefabTable == null)
@@ -61,19 +61,19 @@ public class TunnelLibrary : ScriptableObject
 		return TunnelLibrary.m_prefabTable[TunnelCategory.Default];
 	}
 
-	// Token: 0x0400171F RID: 5919
+	// Token: 0x04001E3B RID: 7739
 	[SerializeField]
 	private TunnelLibraryEntry[] m_entries;
 
-	// Token: 0x04001720 RID: 5920
+	// Token: 0x04001E3C RID: 7740
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/TunnelLibrary";
 
-	// Token: 0x04001721 RID: 5921
+	// Token: 0x04001E3D RID: 7741
 	public static string ASSET_PATH = "Assets/Content/Scriptable Objects/Libraries/TunnelLibrary.asset";
 
-	// Token: 0x04001722 RID: 5922
+	// Token: 0x04001E3E RID: 7742
 	private static TunnelLibrary m_instance = null;
 
-	// Token: 0x04001723 RID: 5923
+	// Token: 0x04001E3F RID: 7743
 	private static Dictionary<TunnelCategory, Tunnel> m_prefabTable = null;
 }

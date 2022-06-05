@@ -6,11 +6,11 @@ using RLAudio;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x02000167 RID: 359
+// Token: 0x02000298 RID: 664
 public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasProjectileNameArray, IAudioEventEmitter
 {
-	// Token: 0x17000688 RID: 1672
-	// (get) Token: 0x06000BFC RID: 3068 RVA: 0x00024D97 File Offset: 0x00022F97
+	// Token: 0x170008D8 RID: 2264
+	// (get) Token: 0x060012F1 RID: 4849 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public virtual bool IgnoreStuckCheck
 	{
 		get
@@ -19,8 +19,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x17000689 RID: 1673
-	// (get) Token: 0x06000BFD RID: 3069 RVA: 0x00024D9A File Offset: 0x00022F9A
+	// Token: 0x170008D9 RID: 2265
+	// (get) Token: 0x060012F2 RID: 4850 RVA: 0x00009A22 File Offset: 0x00007C22
 	public IRelayLink BeginCastingRelay
 	{
 		get
@@ -29,8 +29,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700068A RID: 1674
-	// (get) Token: 0x06000BFE RID: 3070 RVA: 0x00024DA7 File Offset: 0x00022FA7
+	// Token: 0x170008DA RID: 2266
+	// (get) Token: 0x060012F3 RID: 4851 RVA: 0x00009A2F File Offset: 0x00007C2F
 	public IRelayLink StopCastingRelay
 	{
 		get
@@ -39,8 +39,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700068B RID: 1675
-	// (get) Token: 0x06000BFF RID: 3071 RVA: 0x00024DB4 File Offset: 0x00022FB4
+	// Token: 0x170008DB RID: 2267
+	// (get) Token: 0x060012F4 RID: 4852 RVA: 0x00009A3C File Offset: 0x00007C3C
 	public bool DisableAbilityQueuing
 	{
 		get
@@ -49,8 +49,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700068C RID: 1676
-	// (get) Token: 0x06000C00 RID: 3072 RVA: 0x00024DBC File Offset: 0x00022FBC
+	// Token: 0x170008DC RID: 2268
+	// (get) Token: 0x060012F5 RID: 4853 RVA: 0x00009A44 File Offset: 0x00007C44
 	public bool CritsWhenDashing
 	{
 		get
@@ -59,13 +59,13 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700068D RID: 1677
-	// (get) Token: 0x06000C01 RID: 3073 RVA: 0x00024DC4 File Offset: 0x00022FC4
-	// (set) Token: 0x06000C02 RID: 3074 RVA: 0x00024DCC File Offset: 0x00022FCC
+	// Token: 0x170008DD RID: 2269
+	// (get) Token: 0x060012F6 RID: 4854 RVA: 0x00009A4C File Offset: 0x00007C4C
+	// (set) Token: 0x060012F7 RID: 4855 RVA: 0x00009A54 File Offset: 0x00007C54
 	public bool ForceTriggerCrit { get; set; }
 
-	// Token: 0x1700068E RID: 1678
-	// (get) Token: 0x06000C03 RID: 3075 RVA: 0x00024DD5 File Offset: 0x00022FD5
+	// Token: 0x170008DE RID: 2270
+	// (get) Token: 0x060012F8 RID: 4856 RVA: 0x00009A5D File Offset: 0x00007C5D
 	public IRelayLink<object, CooldownEventArgs> OnBeginCooldownRelay
 	{
 		get
@@ -74,13 +74,13 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700068F RID: 1679
-	// (get) Token: 0x06000C04 RID: 3076 RVA: 0x00024DE2 File Offset: 0x00022FE2
-	// (set) Token: 0x06000C05 RID: 3077 RVA: 0x00024DEA File Offset: 0x00022FEA
+	// Token: 0x170008DF RID: 2271
+	// (get) Token: 0x060012F9 RID: 4857 RVA: 0x00009A6A File Offset: 0x00007C6A
+	// (set) Token: 0x060012FA RID: 4858 RVA: 0x00009A72 File Offset: 0x00007C72
 	public CooldownRegenType CooldownRegenType { get; protected set; }
 
-	// Token: 0x17000690 RID: 1680
-	// (get) Token: 0x06000C06 RID: 3078 RVA: 0x00024DF3 File Offset: 0x00022FF3
+	// Token: 0x170008E0 RID: 2272
+	// (get) Token: 0x060012FB RID: 4859 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public virtual bool IsAiming
 	{
 		get
@@ -89,8 +89,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x17000691 RID: 1681
-	// (get) Token: 0x06000C07 RID: 3079 RVA: 0x00024DF6 File Offset: 0x00022FF6
+	// Token: 0x170008E1 RID: 2273
+	// (get) Token: 0x060012FC RID: 4860 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -99,8 +99,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x17000692 RID: 1682
-	// (get) Token: 0x06000C08 RID: 3080 RVA: 0x00024DFE File Offset: 0x00022FFE
+	// Token: 0x170008E2 RID: 2274
+	// (get) Token: 0x060012FD RID: 4861 RVA: 0x00009A83 File Offset: 0x00007C83
 	public virtual string[] ProjectileNameArray
 	{
 		get
@@ -113,7 +113,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C09 RID: 3081 RVA: 0x00024E14 File Offset: 0x00023014
+	// Token: 0x060012FE RID: 4862 RVA: 0x00009A99 File Offset: 0x00007C99
 	protected virtual void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -122,8 +122,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		};
 	}
 
-	// Token: 0x17000693 RID: 1683
-	// (get) Token: 0x06000C0A RID: 3082 RVA: 0x00024E2C File Offset: 0x0002302C
+	// Token: 0x170008E3 RID: 2275
+	// (get) Token: 0x060012FF RID: 4863 RVA: 0x00083F20 File Offset: 0x00082120
 	protected virtual bool IsInCritWindow
 	{
 		get
@@ -132,8 +132,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x17000694 RID: 1684
-	// (get) Token: 0x06000C0B RID: 3083 RVA: 0x00024E96 File Offset: 0x00023096
+	// Token: 0x170008E4 RID: 2276
+	// (get) Token: 0x06001300 RID: 4864 RVA: 0x00009AB0 File Offset: 0x00007CB0
 	public bool DealsNoDamage
 	{
 		get
@@ -142,8 +142,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x17000695 RID: 1685
-	// (get) Token: 0x06000C0C RID: 3084 RVA: 0x00024E9E File Offset: 0x0002309E
+	// Token: 0x170008E5 RID: 2277
+	// (get) Token: 0x06001301 RID: 4865 RVA: 0x00009AB8 File Offset: 0x00007CB8
 	public AbilityType AbilityType
 	{
 		get
@@ -152,8 +152,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x17000696 RID: 1686
-	// (get) Token: 0x06000C0D RID: 3085 RVA: 0x00024EA6 File Offset: 0x000230A6
+	// Token: 0x170008E6 RID: 2278
+	// (get) Token: 0x06001302 RID: 4866 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float AttackBounceHeight
 	{
 		get
@@ -162,8 +162,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x17000697 RID: 1687
-	// (get) Token: 0x06000C0E RID: 3086 RVA: 0x00024EAD File Offset: 0x000230AD
+	// Token: 0x170008E7 RID: 2279
+	// (get) Token: 0x06001303 RID: 4867 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float TellIntroAnimSpeed
 	{
 		get
@@ -172,8 +172,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x17000698 RID: 1688
-	// (get) Token: 0x06000C0F RID: 3087 RVA: 0x00024EB4 File Offset: 0x000230B4
+	// Token: 0x170008E8 RID: 2280
+	// (get) Token: 0x06001304 RID: 4868 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float TellAnimSpeed
 	{
 		get
@@ -182,8 +182,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x17000699 RID: 1689
-	// (get) Token: 0x06000C10 RID: 3088 RVA: 0x00024EBB File Offset: 0x000230BB
+	// Token: 0x170008E9 RID: 2281
+	// (get) Token: 0x06001305 RID: 4869 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float AttackIntroAnimSpeed
 	{
 		get
@@ -192,8 +192,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700069A RID: 1690
-	// (get) Token: 0x06000C11 RID: 3089 RVA: 0x00024EC2 File Offset: 0x000230C2
+	// Token: 0x170008EA RID: 2282
+	// (get) Token: 0x06001306 RID: 4870 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float AttackAnimSpeed
 	{
 		get
@@ -202,8 +202,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700069B RID: 1691
-	// (get) Token: 0x06000C12 RID: 3090 RVA: 0x00024EC9 File Offset: 0x000230C9
+	// Token: 0x170008EB RID: 2283
+	// (get) Token: 0x06001307 RID: 4871 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ExitAnimSpeed
 	{
 		get
@@ -212,8 +212,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700069C RID: 1692
-	// (get) Token: 0x06000C13 RID: 3091 RVA: 0x00024ED0 File Offset: 0x000230D0
+	// Token: 0x170008EC RID: 2284
+	// (get) Token: 0x06001308 RID: 4872 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float TellIntroAnimExitDelay
 	{
 		get
@@ -222,8 +222,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700069D RID: 1693
-	// (get) Token: 0x06000C14 RID: 3092 RVA: 0x00024ED7 File Offset: 0x000230D7
+	// Token: 0x170008ED RID: 2285
+	// (get) Token: 0x06001309 RID: 4873 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float TellAnimExitDelay
 	{
 		get
@@ -232,8 +232,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700069E RID: 1694
-	// (get) Token: 0x06000C15 RID: 3093 RVA: 0x00024EDE File Offset: 0x000230DE
+	// Token: 0x170008EE RID: 2286
+	// (get) Token: 0x0600130A RID: 4874 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float AttackIntroAnimExitDelay
 	{
 		get
@@ -242,8 +242,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x1700069F RID: 1695
-	// (get) Token: 0x06000C16 RID: 3094 RVA: 0x00024EE5 File Offset: 0x000230E5
+	// Token: 0x170008EF RID: 2287
+	// (get) Token: 0x0600130B RID: 4875 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float AttackAnimExitDelay
 	{
 		get
@@ -252,8 +252,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006A0 RID: 1696
-	// (get) Token: 0x06000C17 RID: 3095 RVA: 0x00024EEC File Offset: 0x000230EC
+	// Token: 0x170008F0 RID: 2288
+	// (get) Token: 0x0600130C RID: 4876 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float ExitAnimExitDelay
 	{
 		get
@@ -262,8 +262,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006A1 RID: 1697
-	// (get) Token: 0x06000C18 RID: 3096 RVA: 0x00024EF3 File Offset: 0x000230F3
+	// Token: 0x170008F1 RID: 2289
+	// (get) Token: 0x0600130D RID: 4877 RVA: 0x00009AC0 File Offset: 0x00007CC0
 	public virtual Vector2 ProjectileOffset
 	{
 		get
@@ -272,8 +272,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006A2 RID: 1698
-	// (get) Token: 0x06000C19 RID: 3097 RVA: 0x00024EFB File Offset: 0x000230FB
+	// Token: 0x170008F2 RID: 2290
+	// (get) Token: 0x0600130E RID: 4878 RVA: 0x00009AC8 File Offset: 0x00007CC8
 	public virtual bool HasAttackFlipCheck
 	{
 		get
@@ -282,8 +282,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006A3 RID: 1699
-	// (get) Token: 0x06000C1A RID: 3098 RVA: 0x00024F03 File Offset: 0x00023103
+	// Token: 0x170008F3 RID: 2291
+	// (get) Token: 0x0600130F RID: 4879 RVA: 0x00009AD0 File Offset: 0x00007CD0
 	public virtual string ProjectileName
 	{
 		get
@@ -292,8 +292,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006A4 RID: 1700
-	// (get) Token: 0x06000C1B RID: 3099 RVA: 0x00024F0B File Offset: 0x0002310B
+	// Token: 0x170008F4 RID: 2292
+	// (get) Token: 0x06001310 RID: 4880 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int CurrentAnimationLayer
 	{
 		get
@@ -302,8 +302,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006A5 RID: 1701
-	// (get) Token: 0x06000C1C RID: 3100 RVA: 0x00024F0E File Offset: 0x0002310E
+	// Token: 0x170008F5 RID: 2293
+	// (get) Token: 0x06001311 RID: 4881 RVA: 0x00009AD8 File Offset: 0x00007CD8
 	public bool HasAnimation
 	{
 		get
@@ -312,8 +312,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006A6 RID: 1702
-	// (get) Token: 0x06000C1D RID: 3101 RVA: 0x00024F16 File Offset: 0x00023116
+	// Token: 0x170008F6 RID: 2294
+	// (get) Token: 0x06001312 RID: 4882 RVA: 0x00009AE0 File Offset: 0x00007CE0
 	public virtual string AbilityTellIntroName
 	{
 		get
@@ -322,9 +322,9 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006A7 RID: 1703
-	// (get) Token: 0x06000C1E RID: 3102 RVA: 0x00024F1E File Offset: 0x0002311E
-	// (set) Token: 0x06000C1F RID: 3103 RVA: 0x00024F26 File Offset: 0x00023126
+	// Token: 0x170008F7 RID: 2295
+	// (get) Token: 0x06001313 RID: 4883 RVA: 0x00009AE8 File Offset: 0x00007CE8
+	// (set) Token: 0x06001314 RID: 4884 RVA: 0x00009AF0 File Offset: 0x00007CF0
 	public bool IsAnimationComplete
 	{
 		get
@@ -337,13 +337,13 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006A8 RID: 1704
-	// (get) Token: 0x06000C20 RID: 3104 RVA: 0x00024F2F File Offset: 0x0002312F
-	// (set) Token: 0x06000C21 RID: 3105 RVA: 0x00024F37 File Offset: 0x00023137
+	// Token: 0x170008F8 RID: 2296
+	// (get) Token: 0x06001315 RID: 4885 RVA: 0x00009AF9 File Offset: 0x00007CF9
+	// (set) Token: 0x06001316 RID: 4886 RVA: 0x00009B01 File Offset: 0x00007D01
 	public bool AbilityActive { get; protected set; }
 
-	// Token: 0x170006A9 RID: 1705
-	// (get) Token: 0x06000C22 RID: 3106 RVA: 0x00024F40 File Offset: 0x00023140
+	// Token: 0x170008F9 RID: 2297
+	// (get) Token: 0x06001317 RID: 4887 RVA: 0x00009B0A File Offset: 0x00007D0A
 	public CastAbilityType EVAssignedCastAbilityType
 	{
 		get
@@ -352,13 +352,13 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006AA RID: 1706
-	// (get) Token: 0x06000C23 RID: 3107 RVA: 0x00024F4D File Offset: 0x0002314D
-	// (set) Token: 0x06000C24 RID: 3108 RVA: 0x00024F55 File Offset: 0x00023155
+	// Token: 0x170008FA RID: 2298
+	// (get) Token: 0x06001318 RID: 4888 RVA: 0x00009B17 File Offset: 0x00007D17
+	// (set) Token: 0x06001319 RID: 4889 RVA: 0x00009B1F File Offset: 0x00007D1F
 	public CastAbilityType CastAbilityType { get; private set; }
 
-	// Token: 0x170006AB RID: 1707
-	// (get) Token: 0x06000C25 RID: 3109 RVA: 0x00024F5E File Offset: 0x0002315E
+	// Token: 0x170008FB RID: 2299
+	// (get) Token: 0x0600131A RID: 4890 RVA: 0x00009B28 File Offset: 0x00007D28
 	public int BaseCost
 	{
 		get
@@ -367,8 +367,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006AC RID: 1708
-	// (get) Token: 0x06000C26 RID: 3110 RVA: 0x00024F6C File Offset: 0x0002316C
+	// Token: 0x170008FC RID: 2300
+	// (get) Token: 0x0600131B RID: 4891 RVA: 0x00083F8C File Offset: 0x0008218C
 	public int ActualCost
 	{
 		get
@@ -382,8 +382,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006AD RID: 1709
-	// (get) Token: 0x06000C27 RID: 3111 RVA: 0x00024F97 File Offset: 0x00023197
+	// Token: 0x170008FD RID: 2301
+	// (get) Token: 0x0600131C RID: 4892 RVA: 0x00009B35 File Offset: 0x00007D35
 	public int MaxAmmo
 	{
 		get
@@ -392,8 +392,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006AE RID: 1710
-	// (get) Token: 0x06000C28 RID: 3112 RVA: 0x00024FA4 File Offset: 0x000231A4
+	// Token: 0x170008FE RID: 2302
+	// (get) Token: 0x0600131D RID: 4893 RVA: 0x00009B42 File Offset: 0x00007D42
 	public float BaseCooldownTime
 	{
 		get
@@ -402,8 +402,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006AF RID: 1711
-	// (get) Token: 0x06000C29 RID: 3113 RVA: 0x00024FB4 File Offset: 0x000231B4
+	// Token: 0x170008FF RID: 2303
+	// (get) Token: 0x0600131E RID: 4894 RVA: 0x00083FB8 File Offset: 0x000821B8
 	public float ActualCooldownTime
 	{
 		get
@@ -442,13 +442,13 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006B0 RID: 1712
-	// (get) Token: 0x06000C2A RID: 3114 RVA: 0x000250C2 File Offset: 0x000232C2
-	// (set) Token: 0x06000C2B RID: 3115 RVA: 0x000250CA File Offset: 0x000232CA
+	// Token: 0x17000900 RID: 2304
+	// (get) Token: 0x0600131F RID: 4895 RVA: 0x00009B4F File Offset: 0x00007D4F
+	// (set) Token: 0x06001320 RID: 4896 RVA: 0x00009B57 File Offset: 0x00007D57
 	public bool DisplayPausedAbilityCooldown { get; set; }
 
-	// Token: 0x170006B1 RID: 1713
-	// (get) Token: 0x06000C2C RID: 3116 RVA: 0x000250D3 File Offset: 0x000232D3
+	// Token: 0x17000901 RID: 2305
+	// (get) Token: 0x06001321 RID: 4897 RVA: 0x00009B60 File Offset: 0x00007D60
 	public float LockoutTime
 	{
 		get
@@ -457,9 +457,9 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006B2 RID: 1714
-	// (get) Token: 0x06000C2D RID: 3117 RVA: 0x000250E0 File Offset: 0x000232E0
-	// (set) Token: 0x06000C2E RID: 3118 RVA: 0x000250ED File Offset: 0x000232ED
+	// Token: 0x17000902 RID: 2306
+	// (get) Token: 0x06001322 RID: 4898 RVA: 0x00009B6D File Offset: 0x00007D6D
+	// (set) Token: 0x06001323 RID: 4899 RVA: 0x00009B7A File Offset: 0x00007D7A
 	public bool DecreaseCooldownWhenHit
 	{
 		get
@@ -472,9 +472,9 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006B3 RID: 1715
-	// (get) Token: 0x06000C2F RID: 3119 RVA: 0x000250FB File Offset: 0x000232FB
-	// (set) Token: 0x06000C30 RID: 3120 RVA: 0x00025108 File Offset: 0x00023308
+	// Token: 0x17000903 RID: 2307
+	// (get) Token: 0x06001324 RID: 4900 RVA: 0x00009B88 File Offset: 0x00007D88
+	// (set) Token: 0x06001325 RID: 4901 RVA: 0x00009B95 File Offset: 0x00007D95
 	public bool DecreaseCooldownOverTime
 	{
 		get
@@ -487,8 +487,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006B4 RID: 1716
-	// (get) Token: 0x06000C31 RID: 3121 RVA: 0x00025116 File Offset: 0x00023316
+	// Token: 0x17000904 RID: 2308
+	// (get) Token: 0x06001326 RID: 4902 RVA: 0x00009BA3 File Offset: 0x00007DA3
 	public bool GainManaWhenHit
 	{
 		get
@@ -497,8 +497,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006B5 RID: 1717
-	// (get) Token: 0x06000C32 RID: 3122 RVA: 0x00025123 File Offset: 0x00023323
+	// Token: 0x17000905 RID: 2309
+	// (get) Token: 0x06001327 RID: 4903 RVA: 0x00009BB0 File Offset: 0x00007DB0
 	public bool CooldownRefreshesAllAmmo
 	{
 		get
@@ -507,8 +507,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006B6 RID: 1718
-	// (get) Token: 0x06000C33 RID: 3123 RVA: 0x00025130 File Offset: 0x00023330
+	// Token: 0x17000906 RID: 2310
+	// (get) Token: 0x06001328 RID: 4904 RVA: 0x00009BBD File Offset: 0x00007DBD
 	public virtual bool LockDirectionWhenCasting
 	{
 		get
@@ -517,8 +517,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006B7 RID: 1719
-	// (get) Token: 0x06000C34 RID: 3124 RVA: 0x0002514B File Offset: 0x0002334B
+	// Token: 0x17000907 RID: 2311
+	// (get) Token: 0x06001329 RID: 4905 RVA: 0x00009BD8 File Offset: 0x00007DD8
 	public virtual float AirMovementMod
 	{
 		get
@@ -527,8 +527,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006B8 RID: 1720
-	// (get) Token: 0x06000C35 RID: 3125 RVA: 0x00025158 File Offset: 0x00023358
+	// Token: 0x17000908 RID: 2312
+	// (get) Token: 0x0600132A RID: 4906 RVA: 0x00009BE5 File Offset: 0x00007DE5
 	public virtual float MovementMod
 	{
 		get
@@ -537,8 +537,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006B9 RID: 1721
-	// (get) Token: 0x06000C36 RID: 3126 RVA: 0x00025165 File Offset: 0x00023365
+	// Token: 0x17000909 RID: 2313
+	// (get) Token: 0x0600132B RID: 4907 RVA: 0x00009BF2 File Offset: 0x00007DF2
 	public bool CanCastWhileDashing
 	{
 		get
@@ -547,8 +547,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006BA RID: 1722
-	// (get) Token: 0x06000C37 RID: 3127 RVA: 0x00025172 File Offset: 0x00023372
+	// Token: 0x1700090A RID: 2314
+	// (get) Token: 0x0600132C RID: 4908 RVA: 0x00009BFF File Offset: 0x00007DFF
 	public bool WeaponInterruptable
 	{
 		get
@@ -557,8 +557,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006BB RID: 1723
-	// (get) Token: 0x06000C38 RID: 3128 RVA: 0x0002517F File Offset: 0x0002337F
+	// Token: 0x1700090B RID: 2315
+	// (get) Token: 0x0600132D RID: 4909 RVA: 0x00009C0C File Offset: 0x00007E0C
 	public bool SpellInterruptable
 	{
 		get
@@ -567,8 +567,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006BC RID: 1724
-	// (get) Token: 0x06000C39 RID: 3129 RVA: 0x0002518C File Offset: 0x0002338C
+	// Token: 0x1700090C RID: 2316
+	// (get) Token: 0x0600132E RID: 4910 RVA: 0x00009C19 File Offset: 0x00007E19
 	public bool TalentInterruptable
 	{
 		get
@@ -577,8 +577,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006BD RID: 1725
-	// (get) Token: 0x06000C3A RID: 3130 RVA: 0x00025199 File Offset: 0x00023399
+	// Token: 0x1700090D RID: 2317
+	// (get) Token: 0x0600132F RID: 4911 RVA: 0x00009C26 File Offset: 0x00007E26
 	public bool DashInterruptable
 	{
 		get
@@ -587,8 +587,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006BE RID: 1726
-	// (get) Token: 0x06000C3B RID: 3131 RVA: 0x000251A6 File Offset: 0x000233A6
+	// Token: 0x1700090E RID: 2318
+	// (get) Token: 0x06001330 RID: 4912 RVA: 0x00009C33 File Offset: 0x00007E33
 	public virtual bool JumpInterruptable
 	{
 		get
@@ -597,8 +597,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006BF RID: 1727
-	// (get) Token: 0x06000C3C RID: 3132 RVA: 0x000251B3 File Offset: 0x000233B3
+	// Token: 0x1700090F RID: 2319
+	// (get) Token: 0x06001331 RID: 4913 RVA: 0x00009C40 File Offset: 0x00007E40
 	public float CooldownTimer
 	{
 		get
@@ -607,9 +607,9 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006C0 RID: 1728
-	// (get) Token: 0x06000C3D RID: 3133 RVA: 0x000251BB File Offset: 0x000233BB
-	// (set) Token: 0x06000C3E RID: 3134 RVA: 0x000251C3 File Offset: 0x000233C3
+	// Token: 0x17000910 RID: 2320
+	// (get) Token: 0x06001332 RID: 4914 RVA: 0x00009C48 File Offset: 0x00007E48
+	// (set) Token: 0x06001333 RID: 4915 RVA: 0x00009C50 File Offset: 0x00007E50
 	public float LockoutTimer
 	{
 		get
@@ -622,9 +622,9 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006C1 RID: 1729
-	// (get) Token: 0x06000C3F RID: 3135 RVA: 0x000251CC File Offset: 0x000233CC
-	// (set) Token: 0x06000C40 RID: 3136 RVA: 0x000251D4 File Offset: 0x000233D4
+	// Token: 0x17000911 RID: 2321
+	// (get) Token: 0x06001334 RID: 4916 RVA: 0x00009C59 File Offset: 0x00007E59
+	// (set) Token: 0x06001335 RID: 4917 RVA: 0x000840C8 File Offset: 0x000822C8
 	public int CurrentAmmo
 	{
 		get
@@ -655,8 +655,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006C2 RID: 1730
-	// (get) Token: 0x06000C41 RID: 3137 RVA: 0x00025261 File Offset: 0x00023461
+	// Token: 0x17000912 RID: 2322
+	// (get) Token: 0x06001336 RID: 4918 RVA: 0x00009C61 File Offset: 0x00007E61
 	public bool IsOnCooldown
 	{
 		get
@@ -665,8 +665,8 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006C3 RID: 1731
-	// (get) Token: 0x06000C42 RID: 3138 RVA: 0x00025270 File Offset: 0x00023470
+	// Token: 0x17000913 RID: 2323
+	// (get) Token: 0x06001337 RID: 4919 RVA: 0x00009C70 File Offset: 0x00007E70
 	public virtual AbilityData AbilityData
 	{
 		get
@@ -675,12 +675,12 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x170006C4 RID: 1732
-	// (get) Token: 0x06000C43 RID: 3139 RVA: 0x00025278 File Offset: 0x00023478
-	// (set) Token: 0x06000C44 RID: 3140 RVA: 0x00025280 File Offset: 0x00023480
+	// Token: 0x17000914 RID: 2324
+	// (get) Token: 0x06001338 RID: 4920 RVA: 0x00009C78 File Offset: 0x00007E78
+	// (set) Token: 0x06001339 RID: 4921 RVA: 0x00009C80 File Offset: 0x00007E80
 	public AbilityAnimState CurrentAbilityAnimState { get; protected set; }
 
-	// Token: 0x06000C45 RID: 3141 RVA: 0x0002528C File Offset: 0x0002348C
+	// Token: 0x0600133A RID: 4922 RVA: 0x00084158 File Offset: 0x00082358
 	protected virtual void Awake()
 	{
 		this.m_hasAnimation = !string.IsNullOrEmpty(this.m_abilityTellIntroName);
@@ -702,7 +702,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C46 RID: 3142 RVA: 0x00025370 File Offset: 0x00023570
+	// Token: 0x0600133B RID: 4923 RVA: 0x0008423C File Offset: 0x0008243C
 	public virtual void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		this.m_abilityController = abilityController;
@@ -723,12 +723,12 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C47 RID: 3143 RVA: 0x0002546A File Offset: 0x0002366A
+	// Token: 0x0600133C RID: 4924 RVA: 0x00002FCA File Offset: 0x000011CA
 	public virtual void Reinitialize()
 	{
 	}
 
-	// Token: 0x06000C48 RID: 3144 RVA: 0x0002546C File Offset: 0x0002366C
+	// Token: 0x0600133D RID: 4925 RVA: 0x00084338 File Offset: 0x00082538
 	private void SetCooldownRegenType()
 	{
 		if (this.DecreaseCooldownOverTime)
@@ -762,7 +762,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C49 RID: 3145 RVA: 0x000254F4 File Offset: 0x000236F4
+	// Token: 0x0600133E RID: 4926 RVA: 0x000843C0 File Offset: 0x000825C0
 	public virtual void PreCastAbility()
 	{
 		this.AbilityActive = true;
@@ -801,7 +801,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C4A RID: 3146 RVA: 0x00025630 File Offset: 0x00023830
+	// Token: 0x0600133F RID: 4927 RVA: 0x00009C89 File Offset: 0x00007E89
 	public void PerformAttackFlipCheck()
 	{
 		if (this.m_attackFlipCheckCoroutine != null)
@@ -811,7 +811,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		this.m_attackFlipCheckCoroutine = base.StartCoroutine(this.UpdateAttackFlipCheck());
 	}
 
-	// Token: 0x06000C4B RID: 3147 RVA: 0x00025658 File Offset: 0x00023858
+	// Token: 0x06001340 RID: 4928 RVA: 0x000844FC File Offset: 0x000826FC
 	private void OnEnemyHitCancelAttackFlip(object sender, EventArgs args)
 	{
 		CharacterHitEventArgs characterHitEventArgs = args as CharacterHitEventArgs;
@@ -821,7 +821,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C4C RID: 3148 RVA: 0x00025694 File Offset: 0x00023894
+	// Token: 0x06001341 RID: 4929 RVA: 0x00084538 File Offset: 0x00082738
 	protected virtual void EnterAnimationState(AbilityAnimState animState)
 	{
 		this.CurrentAbilityAnimState = animState;
@@ -858,7 +858,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		this.m_changeAnimCoroutine = base.StartCoroutine(this.ChangeAnim(duration));
 	}
 
-	// Token: 0x06000C4D RID: 3149 RVA: 0x00025777 File Offset: 0x00023977
+	// Token: 0x06001342 RID: 4930 RVA: 0x00009CB1 File Offset: 0x00007EB1
 	protected void CancelChangeAnimCoroutine()
 	{
 		this.m_animator.ResetTrigger("Change_Ability_Anim");
@@ -868,7 +868,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C4E RID: 3150 RVA: 0x000257A0 File Offset: 0x000239A0
+	// Token: 0x06001343 RID: 4931 RVA: 0x0008461C File Offset: 0x0008281C
 	protected virtual float CalculateTotalAnimationDelay()
 	{
 		float num = 0f;
@@ -901,7 +901,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		return num3 + num4 + num2 - Time.deltaTime;
 	}
 
-	// Token: 0x06000C4F RID: 3151 RVA: 0x00025856 File Offset: 0x00023A56
+	// Token: 0x06001344 RID: 4932 RVA: 0x00009CD7 File Offset: 0x00007ED7
 	protected virtual void ExitAnimationState(AbilityAnimState animState)
 	{
 		switch (animState)
@@ -926,22 +926,22 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C50 RID: 3152 RVA: 0x00025895 File Offset: 0x00023A95
+	// Token: 0x06001345 RID: 4933 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnEnterTellIntroLogic()
 	{
 	}
 
-	// Token: 0x06000C51 RID: 3153 RVA: 0x00025897 File Offset: 0x00023A97
+	// Token: 0x06001346 RID: 4934 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnEnterTellLogic()
 	{
 	}
 
-	// Token: 0x06000C52 RID: 3154 RVA: 0x00025899 File Offset: 0x00023A99
+	// Token: 0x06001347 RID: 4935 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnEnterAttackIntroLogic()
 	{
 	}
 
-	// Token: 0x06000C53 RID: 3155 RVA: 0x0002589B File Offset: 0x00023A9B
+	// Token: 0x06001348 RID: 4936 RVA: 0x00009D16 File Offset: 0x00007F16
 	protected virtual void OnEnterAttackLogic()
 	{
 		this.m_abilityController.BroadcastAbilityCastEvents(this.CastAbilityType);
@@ -949,27 +949,27 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		this.StartCooldownTimer();
 	}
 
-	// Token: 0x06000C54 RID: 3156 RVA: 0x000258BA File Offset: 0x00023ABA
+	// Token: 0x06001349 RID: 4937 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnEnterExitLogic()
 	{
 	}
 
-	// Token: 0x06000C55 RID: 3157 RVA: 0x000258BC File Offset: 0x00023ABC
+	// Token: 0x0600134A RID: 4938 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnExitTellIntroLogic()
 	{
 	}
 
-	// Token: 0x06000C56 RID: 3158 RVA: 0x000258BE File Offset: 0x00023ABE
+	// Token: 0x0600134B RID: 4939 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnExitTellLogic()
 	{
 	}
 
-	// Token: 0x06000C57 RID: 3159 RVA: 0x000258C0 File Offset: 0x00023AC0
+	// Token: 0x0600134C RID: 4940 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnExitAttackIntroLogic()
 	{
 	}
 
-	// Token: 0x06000C58 RID: 3160 RVA: 0x000258C4 File Offset: 0x00023AC4
+	// Token: 0x0600134D RID: 4941 RVA: 0x000846D4 File Offset: 0x000828D4
 	protected virtual void OnExitAttackLogic()
 	{
 		if (!this.m_animator)
@@ -979,13 +979,13 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		this.m_animator.SetFloat("NaturalWalk", 0f);
 	}
 
-	// Token: 0x06000C59 RID: 3161 RVA: 0x0002591F File Offset: 0x00023B1F
+	// Token: 0x0600134E RID: 4942 RVA: 0x00009D35 File Offset: 0x00007F35
 	protected virtual void OnExitExitLogic()
 	{
 		this.IsAnimationComplete = true;
 	}
 
-	// Token: 0x06000C5A RID: 3162 RVA: 0x00025928 File Offset: 0x00023B28
+	// Token: 0x0600134F RID: 4943 RVA: 0x00009D3E File Offset: 0x00007F3E
 	protected virtual IEnumerator ChangeAnim(float duration)
 	{
 		if (duration <= 0f)
@@ -1002,7 +1002,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		yield break;
 	}
 
-	// Token: 0x06000C5B RID: 3163 RVA: 0x00025940 File Offset: 0x00023B40
+	// Token: 0x06001350 RID: 4944 RVA: 0x00084730 File Offset: 0x00082930
 	protected void PerformTurnAnimCheck()
 	{
 		if (this.CurrentAbilityAnimState == AbilityAnimState.Exit && this.LockDirectionWhenCasting && this.MovementMod > 0f)
@@ -1025,7 +1025,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C5C RID: 3164 RVA: 0x000259C6 File Offset: 0x00023BC6
+	// Token: 0x06001351 RID: 4945 RVA: 0x00009D54 File Offset: 0x00007F54
 	public virtual IEnumerator CastAbility()
 	{
 		this.m_beginCastingRelay.Dispatch();
@@ -1043,7 +1043,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		yield break;
 	}
 
-	// Token: 0x06000C5D RID: 3165 RVA: 0x000259D8 File Offset: 0x00023BD8
+	// Token: 0x06001352 RID: 4946 RVA: 0x000847B8 File Offset: 0x000829B8
 	public virtual void StopAbility(bool abilityInterrupted)
 	{
 		this.m_stopCastingRelay.Dispatch();
@@ -1082,7 +1082,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		this.AbilityActive = false;
 	}
 
-	// Token: 0x06000C5E RID: 3166 RVA: 0x00025AF8 File Offset: 0x00023CF8
+	// Token: 0x06001353 RID: 4947 RVA: 0x000848D8 File Offset: 0x00082AD8
 	protected virtual void Update()
 	{
 		if (this.DecreaseCooldownOverTime && this.CooldownTimer > 0f)
@@ -1103,7 +1103,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C5F RID: 3167 RVA: 0x00025B6D File Offset: 0x00023D6D
+	// Token: 0x06001354 RID: 4948 RVA: 0x00009D63 File Offset: 0x00007F63
 	protected void CriticalHitTimingDisplay()
 	{
 		if (this.IsInCritWindow && !this.m_critDisplayOn && this.m_critEffectGO)
@@ -1112,7 +1112,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C60 RID: 3168 RVA: 0x00025B99 File Offset: 0x00023D99
+	// Token: 0x06001355 RID: 4949 RVA: 0x00009D8F File Offset: 0x00007F8F
 	private IEnumerator CritWindowCoroutine()
 	{
 		this.m_critDisplayOn = true;
@@ -1135,23 +1135,23 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		yield break;
 	}
 
-	// Token: 0x06000C61 RID: 3169 RVA: 0x00025BA8 File Offset: 0x00023DA8
+	// Token: 0x06001356 RID: 4950 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void PlayCritWindowAudio()
 	{
 	}
 
-	// Token: 0x06000C62 RID: 3170 RVA: 0x00025BAA File Offset: 0x00023DAA
+	// Token: 0x06001357 RID: 4951 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void PlayDashCritAudio()
 	{
 	}
 
-	// Token: 0x06000C63 RID: 3171 RVA: 0x00025BAC File Offset: 0x00023DAC
+	// Token: 0x06001358 RID: 4952 RVA: 0x00009D9E File Offset: 0x00007F9E
 	protected virtual void PlayFreeCritReleaseAudio()
 	{
 		AudioManager.PlayOneShotAttached(this, "event:/SFX/Weapons/sfx_weapon_crit_charged_release", this.m_abilityController.gameObject);
 	}
 
-	// Token: 0x06000C64 RID: 3172 RVA: 0x00025BC4 File Offset: 0x00023DC4
+	// Token: 0x06001359 RID: 4953 RVA: 0x00084950 File Offset: 0x00082B50
 	protected virtual void FireProjectile()
 	{
 		if (!string.IsNullOrEmpty(this.ProjectileName))
@@ -1162,7 +1162,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C65 RID: 3173 RVA: 0x00025C28 File Offset: 0x00023E28
+	// Token: 0x0600135A RID: 4954 RVA: 0x000849B4 File Offset: 0x00082BB4
 	protected virtual void ApplyAbilityCosts()
 	{
 		if (this.m_abilityController.PlayerController.SpellOrbs > 0)
@@ -1194,7 +1194,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C66 RID: 3174 RVA: 0x00025D08 File Offset: 0x00023F08
+	// Token: 0x0600135B RID: 4955 RVA: 0x00084A94 File Offset: 0x00082C94
 	public virtual void StartCooldownTimer()
 	{
 		if (this.m_consumedSpellOrb)
@@ -1220,7 +1220,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C67 RID: 3175 RVA: 0x00025DA4 File Offset: 0x00023FA4
+	// Token: 0x0600135C RID: 4956 RVA: 0x00084B30 File Offset: 0x00082D30
 	public void EndCooldownTimer(bool displayCooldownResetText = true)
 	{
 		if (!this)
@@ -1243,7 +1243,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C68 RID: 3176 RVA: 0x00025E60 File Offset: 0x00024060
+	// Token: 0x0600135D RID: 4957 RVA: 0x00084BEC File Offset: 0x00082DEC
 	public virtual void RegenerateAmmo()
 	{
 		if (this.CooldownRefreshesAllAmmo)
@@ -1255,13 +1255,13 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		this.CurrentAmmo = currentAmmo + 1;
 	}
 
-	// Token: 0x06000C69 RID: 3177 RVA: 0x00025E92 File Offset: 0x00024092
+	// Token: 0x0600135E RID: 4958 RVA: 0x00009DB6 File Offset: 0x00007FB6
 	protected void StartLockoutTimer()
 	{
 		this.m_lockoutTimer = this.LockoutTime;
 	}
 
-	// Token: 0x06000C6A RID: 3178 RVA: 0x00025EA0 File Offset: 0x000240A0
+	// Token: 0x0600135F RID: 4959 RVA: 0x00084C20 File Offset: 0x00082E20
 	public void InitializeProjectile(Projectile_RL projectile)
 	{
 		projectile.OnCollisionRelay.AddOnce(this.m_onProjectileHitDisableAttackFlip, false);
@@ -1350,13 +1350,13 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C6B RID: 3179 RVA: 0x00026165 File Offset: 0x00024365
+	// Token: 0x06001360 RID: 4960 RVA: 0x00009DC4 File Offset: 0x00007FC4
 	protected void OnProjectileHitDisableAttackFlip(Projectile_RL projectile, GameObject colliderObj)
 	{
 		this.m_enemyHit = true;
 	}
 
-	// Token: 0x06000C6C RID: 3180 RVA: 0x00026170 File Offset: 0x00024370
+	// Token: 0x06001361 RID: 4961 RVA: 0x00084EE8 File Offset: 0x000830E8
 	protected void ReduceCooldownEvent(Projectile_RL projectile, GameObject colliderObj)
 	{
 		if (!projectile.isActiveAndEnabled)
@@ -1390,7 +1390,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C6D RID: 3181 RVA: 0x0002622D File Offset: 0x0002442D
+	// Token: 0x06001362 RID: 4962 RVA: 0x00009DCD File Offset: 0x00007FCD
 	public void ReduceCooldown(float amount)
 	{
 		if (this.CooldownTimer > 0f)
@@ -1403,7 +1403,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C6E RID: 3182 RVA: 0x00026260 File Offset: 0x00024460
+	// Token: 0x06001363 RID: 4963 RVA: 0x00084FA8 File Offset: 0x000831A8
 	public void ReduceFlatCooldown(int flatAmount)
 	{
 		for (int i = 0; i < flatAmount; i++)
@@ -1412,13 +1412,13 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C6F RID: 3183 RVA: 0x00026280 File Offset: 0x00024480
+	// Token: 0x06001364 RID: 4964 RVA: 0x00009DFE File Offset: 0x00007FFE
 	protected void IncreaseManaEvent(Projectile_RL projectile, GameObject colliderObj)
 	{
 		bool isActiveAndEnabled = projectile.isActiveAndEnabled;
 	}
 
-	// Token: 0x06000C70 RID: 3184 RVA: 0x00026289 File Offset: 0x00024489
+	// Token: 0x06001365 RID: 4965 RVA: 0x00009E07 File Offset: 0x00008007
 	protected IEnumerator UpdateAttackFlipCheck()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.EnemyHit, this.m_onEnemyHitCancelAttackFlip);
@@ -1475,7 +1475,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		yield break;
 	}
 
-	// Token: 0x06000C71 RID: 3185 RVA: 0x00026298 File Offset: 0x00024498
+	// Token: 0x06001366 RID: 4966 RVA: 0x00084FC8 File Offset: 0x000831C8
 	protected bool CheckAttackFlip(Vector2 boxOrigin, Vector2 boxSize, sbyte direction)
 	{
 		Vector2 direction2 = Vector2.right;
@@ -1503,14 +1503,14 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		return false;
 	}
 
-	// Token: 0x06000C72 RID: 3186 RVA: 0x00026344 File Offset: 0x00024544
+	// Token: 0x06001367 RID: 4967 RVA: 0x00085074 File Offset: 0x00083274
 	protected bool IsAttackFlipValid(global::PlayerController playerController, bool collidingBack, bool collidingFront)
 	{
 		float axis = Rewired_RL.Player.GetAxis("MoveHorizontal");
 		return (axis < 0f && playerController.IsFacingRight && collidingBack && !collidingFront) || (axis > 0f && !playerController.IsFacingRight && !collidingBack && collidingFront);
 	}
 
-	// Token: 0x06000C73 RID: 3187 RVA: 0x00026394 File Offset: 0x00024594
+	// Token: 0x06001368 RID: 4968 RVA: 0x000850C4 File Offset: 0x000832C4
 	protected void Bounce(Projectile_RL projectile, GameObject colliderObj)
 	{
 		CharacterStates.CharacterConditions conditionState = this.m_abilityController.PlayerController.ConditionState;
@@ -1539,7 +1539,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C74 RID: 3188 RVA: 0x00026458 File Offset: 0x00024658
+	// Token: 0x06001369 RID: 4969 RVA: 0x00085188 File Offset: 0x00083388
 	private void TriggerBounce()
 	{
 		this.m_triggerBounce = false;
@@ -1563,7 +1563,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C75 RID: 3189 RVA: 0x00026526 File Offset: 0x00024726
+	// Token: 0x0600136A RID: 4970 RVA: 0x00009E16 File Offset: 0x00008016
 	private void LateUpdate()
 	{
 		if (this.m_triggerBounce)
@@ -1572,7 +1572,7 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		}
 	}
 
-	// Token: 0x06000C76 RID: 3190 RVA: 0x00026538 File Offset: 0x00024738
+	// Token: 0x0600136B RID: 4971 RVA: 0x00085258 File Offset: 0x00083458
 	protected virtual void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.EnemyHit, this.m_onEnemyHitCancelAttackFlip);
@@ -1585,164 +1585,164 @@ public abstract class BaseAbility_RL : MonoBehaviour, ICooldown, IAbility, IHasP
 		this.m_persistentCollListenerProj = null;
 	}
 
-	// Token: 0x06000C77 RID: 3191 RVA: 0x0002659E File Offset: 0x0002479E
+	// Token: 0x0600136C RID: 4972 RVA: 0x00002FCA File Offset: 0x000011CA
 	public virtual void OnPreDestroy()
 	{
 	}
 
-	// Token: 0x0400104C RID: 4172
+	// Token: 0x0400156B RID: 5483
 	protected const string CHANGE_ABILITY_ANIM_PARAM = "Change_Ability_Anim";
 
-	// Token: 0x0400104D RID: 4173
+	// Token: 0x0400156C RID: 5484
 	[SerializeField]
 	private AbilityType m_abilityType = AbilityType.FireballSpell;
 
-	// Token: 0x0400104E RID: 4174
+	// Token: 0x0400156D RID: 5485
 	[Header("Ability Data")]
 	[SerializeField]
 	protected AbilityData m_abilityData;
 
-	// Token: 0x0400104F RID: 4175
+	// Token: 0x0400156E RID: 5486
 	[SerializeField]
 	[Tooltip("This field does not affect the actual damage of the ability. It's just used to know if it can be cast with the Pacifist trait active.")]
 	protected bool m_dealsNoDamage;
 
-	// Token: 0x04001050 RID: 4176
+	// Token: 0x0400156F RID: 5487
 	[SerializeField]
 	protected string m_abilityTellIntroName;
 
-	// Token: 0x04001051 RID: 4177
+	// Token: 0x04001570 RID: 5488
 	[SerializeField]
 	protected Vector2 m_critHitTimingWindow;
 
-	// Token: 0x04001052 RID: 4178
+	// Token: 0x04001571 RID: 5489
 	[SerializeField]
 	protected Vector2 m_critEffectOffset;
 
-	// Token: 0x04001053 RID: 4179
+	// Token: 0x04001572 RID: 5490
 	[SerializeField]
 	protected bool m_critsWhenDashing;
 
-	// Token: 0x04001054 RID: 4180
+	// Token: 0x04001573 RID: 5491
 	[SerializeField]
 	protected bool m_disableAbilityQueuing;
 
-	// Token: 0x04001055 RID: 4181
+	// Token: 0x04001574 RID: 5492
 	[Header("Projectile Data")]
 	[SerializeField]
 	protected string m_projectileName;
 
-	// Token: 0x04001056 RID: 4182
+	// Token: 0x04001575 RID: 5493
 	[SerializeField]
 	protected Vector2 m_projectileOffset;
 
-	// Token: 0x04001057 RID: 4183
+	// Token: 0x04001576 RID: 5494
 	[SerializeField]
 	protected bool m_hasAttackFlipCheck;
 
-	// Token: 0x04001058 RID: 4184
+	// Token: 0x04001577 RID: 5495
 	protected bool m_consumedSpellOrb;
 
-	// Token: 0x04001059 RID: 4185
+	// Token: 0x04001578 RID: 5496
 	protected CastAbility_RL m_abilityController;
 
-	// Token: 0x0400105A RID: 4186
+	// Token: 0x04001579 RID: 5497
 	protected float m_cooldownTimer;
 
-	// Token: 0x0400105B RID: 4187
+	// Token: 0x0400157A RID: 5498
 	protected float m_lockoutTimer;
 
-	// Token: 0x0400105C RID: 4188
+	// Token: 0x0400157B RID: 5499
 	protected int m_currentAmmo;
 
-	// Token: 0x0400105D RID: 4189
+	// Token: 0x0400157C RID: 5500
 	protected Projectile_RL m_firedProjectile;
 
-	// Token: 0x0400105E RID: 4190
+	// Token: 0x0400157D RID: 5501
 	protected bool m_hasAnimation;
 
-	// Token: 0x0400105F RID: 4191
+	// Token: 0x0400157E RID: 5502
 	protected Animator m_animator;
 
-	// Token: 0x04001060 RID: 4192
+	// Token: 0x0400157F RID: 5503
 	private CooldownEventArgs m_cooldownEventArgs;
 
-	// Token: 0x04001061 RID: 4193
+	// Token: 0x04001580 RID: 5504
 	private AbilityCooldownOverEventArgs m_cooldownOverEventArgs;
 
-	// Token: 0x04001062 RID: 4194
+	// Token: 0x04001581 RID: 5505
 	private Coroutine m_attackFlipCheckCoroutine;
 
-	// Token: 0x04001063 RID: 4195
+	// Token: 0x04001582 RID: 5506
 	private float m_attackFlipCheckTimer;
 
-	// Token: 0x04001064 RID: 4196
+	// Token: 0x04001583 RID: 5507
 	private bool m_enemyHit;
 
-	// Token: 0x04001065 RID: 4197
+	// Token: 0x04001584 RID: 5508
 	private bool m_isAnimationComplete;
 
-	// Token: 0x04001066 RID: 4198
+	// Token: 0x04001585 RID: 5509
 	protected Coroutine m_changeAnimCoroutine;
 
-	// Token: 0x04001067 RID: 4199
+	// Token: 0x04001586 RID: 5510
 	private PlayerAmmoChangeEventArgs m_ammoChangeEventArgs;
 
-	// Token: 0x04001068 RID: 4200
+	// Token: 0x04001587 RID: 5511
 	private RaycastHit2D[] m_attackFlipRaycastArray;
 
-	// Token: 0x04001069 RID: 4201
+	// Token: 0x04001588 RID: 5512
 	protected float m_highestBounceAmount;
 
-	// Token: 0x0400106A RID: 4202
+	// Token: 0x04001589 RID: 5513
 	protected bool m_triggerBounce;
 
-	// Token: 0x0400106B RID: 4203
+	// Token: 0x0400158A RID: 5514
 	private string m_abilityNameCasted;
 
-	// Token: 0x0400106C RID: 4204
+	// Token: 0x0400158B RID: 5515
 	protected float m_abilityCastStartTime;
 
-	// Token: 0x0400106D RID: 4205
+	// Token: 0x0400158C RID: 5516
 	private Projectile_RL m_persistentCollListenerProj;
 
-	// Token: 0x0400106E RID: 4206
+	// Token: 0x0400158D RID: 5517
 	protected GameObject m_critEffectGO;
 
-	// Token: 0x0400106F RID: 4207
+	// Token: 0x0400158E RID: 5518
 	private Action<Projectile_RL, GameObject> m_reduceCooldownEvent;
 
-	// Token: 0x04001070 RID: 4208
+	// Token: 0x0400158F RID: 5519
 	private Action<Projectile_RL, GameObject> m_increaseManaEvent;
 
-	// Token: 0x04001071 RID: 4209
+	// Token: 0x04001590 RID: 5520
 	private Action<Projectile_RL, GameObject> m_onProjectileHitDisableAttackFlip;
 
-	// Token: 0x04001072 RID: 4210
+	// Token: 0x04001591 RID: 5521
 	protected Action<Projectile_RL, GameObject> m_bounce;
 
-	// Token: 0x04001073 RID: 4211
+	// Token: 0x04001592 RID: 5522
 	private Action<AbilityAnimState> m_exitAnimationState;
 
-	// Token: 0x04001074 RID: 4212
+	// Token: 0x04001593 RID: 5523
 	private Action<AbilityAnimState> m_enterAnimationState;
 
-	// Token: 0x04001075 RID: 4213
+	// Token: 0x04001594 RID: 5524
 	private Action<object, EventArgs> m_onEnemyHitCancelAttackFlip;
 
-	// Token: 0x04001076 RID: 4214
+	// Token: 0x04001595 RID: 5525
 	protected Relay m_beginCastingRelay = new Relay();
 
-	// Token: 0x04001077 RID: 4215
+	// Token: 0x04001596 RID: 5526
 	protected Relay m_stopCastingRelay = new Relay();
 
-	// Token: 0x04001079 RID: 4217
+	// Token: 0x04001598 RID: 5528
 	private Relay<object, CooldownEventArgs> m_onCooldownRelay = new Relay<object, CooldownEventArgs>();
 
-	// Token: 0x0400107B RID: 4219
+	// Token: 0x0400159A RID: 5530
 	[NonSerialized]
 	protected string[] m_projectileNameArray;
 
-	// Token: 0x04001080 RID: 4224
+	// Token: 0x0400159F RID: 5535
 	private bool m_critDisplayOn;
 }

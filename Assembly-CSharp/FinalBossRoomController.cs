@@ -6,11 +6,11 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004FE RID: 1278
+// Token: 0x0200085F RID: 2143
 public class FinalBossRoomController : BossRoomController
 {
-	// Token: 0x170011C4 RID: 4548
-	// (get) Token: 0x06002FC5 RID: 12229 RVA: 0x000A3608 File Offset: 0x000A1808
+	// Token: 0x170017B3 RID: 6067
+	// (get) Token: 0x0600420F RID: 16911 RVA: 0x000249A8 File Offset: 0x00022BA8
 	public override EnemySpawnController BossSpawnController
 	{
 		get
@@ -23,7 +23,7 @@ public class FinalBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x06002FC6 RID: 12230 RVA: 0x000A3624 File Offset: 0x000A1824
+	// Token: 0x06004210 RID: 16912 RVA: 0x001091CC File Offset: 0x001073CC
 	protected override void Awake()
 	{
 		base.Awake();
@@ -33,7 +33,7 @@ public class FinalBossRoomController : BossRoomController
 		this.m_rootsArray = this.m_rootsGO.GetComponentsInChildren<Animator>();
 	}
 
-	// Token: 0x06002FC7 RID: 12231 RVA: 0x000A367E File Offset: 0x000A187E
+	// Token: 0x06004211 RID: 16913 RVA: 0x000249C3 File Offset: 0x00022BC3
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
@@ -47,14 +47,14 @@ public class FinalBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x06002FC8 RID: 12232 RVA: 0x000A36B8 File Offset: 0x000A18B8
+	// Token: 0x06004212 RID: 16914 RVA: 0x00109228 File Offset: 0x00107428
 	protected override void InitializeObjectiveCompleteArgs(float bossDefeatedDisplayDuration)
 	{
 		string @string = LocalizationManager.GetString("LOC_ID_BIG_TEXT_UI_FINAL_BOSS_DEFEATED_TITLE_1", false, false);
 		this.m_bossDefeatedArgs.Initialize(base.Boss.EnemyType, EnemyRank.Basic, bossDefeatedDisplayDuration, @string, null, null);
 	}
 
-	// Token: 0x06002FC9 RID: 12233 RVA: 0x000A36F0 File Offset: 0x000A18F0
+	// Token: 0x06004213 RID: 16915 RVA: 0x00109260 File Offset: 0x00107460
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -102,7 +102,7 @@ public class FinalBossRoomController : BossRoomController
 		base.StartCoroutine(this.SetupColourShiftRelayCoroutine());
 	}
 
-	// Token: 0x06002FCA RID: 12234 RVA: 0x000A38C8 File Offset: 0x000A1AC8
+	// Token: 0x06004214 RID: 16916 RVA: 0x000249FD File Offset: 0x00022BFD
 	private IEnumerator DisableBoss()
 	{
 		while (!base.Boss.IsInitialized)
@@ -114,7 +114,7 @@ public class FinalBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x06002FCB RID: 12235 RVA: 0x000A38D7 File Offset: 0x000A1AD7
+	// Token: 0x06004215 RID: 16917 RVA: 0x00024A0C File Offset: 0x00022C0C
 	private IEnumerator SetupColourShiftRelayCoroutine()
 	{
 		while (!base.Boss.IsInitialized)
@@ -129,7 +129,7 @@ public class FinalBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x06002FCC RID: 12236 RVA: 0x000A38E8 File Offset: 0x000A1AE8
+	// Token: 0x06004216 RID: 16918 RVA: 0x00109438 File Offset: 0x00107638
 	protected override void OnDisable()
 	{
 		if (this.m_bossIntroStopSpeedUpRelayAdded)
@@ -154,7 +154,7 @@ public class FinalBossRoomController : BossRoomController
 		base.OnDisable();
 	}
 
-	// Token: 0x06002FCD RID: 12237 RVA: 0x000A39BC File Offset: 0x000A1BBC
+	// Token: 0x06004217 RID: 16919 RVA: 0x0010950C File Offset: 0x0010770C
 	private void ColourShiftRoom(bool shiftToWhite, float lerpSpeed)
 	{
 		if (base.Boss && !base.Boss.IsDead)
@@ -198,7 +198,7 @@ public class FinalBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x06002FCE RID: 12238 RVA: 0x000A3B0A File Offset: 0x000A1D0A
+	// Token: 0x06004218 RID: 16920 RVA: 0x00024A1B File Offset: 0x00022C1B
 	protected override IEnumerator StartIntro()
 	{
 		if (!SaveManager.PlayerSaveData.SpokenToFinalBoss)
@@ -241,13 +241,13 @@ public class FinalBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x06002FCF RID: 12239 RVA: 0x000A3B19 File Offset: 0x000A1D19
+	// Token: 0x06004219 RID: 16921 RVA: 0x00024A2A File Offset: 0x00022C2A
 	public void StartIntroManually()
 	{
 		base.StartCoroutine(this.StartIntro2());
 	}
 
-	// Token: 0x06002FD0 RID: 12240 RVA: 0x000A3B28 File Offset: 0x000A1D28
+	// Token: 0x0600421A RID: 16922 RVA: 0x00024A39 File Offset: 0x00022C39
 	private IEnumerator StartIntro2()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -395,7 +395,7 @@ public class FinalBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x06002FD1 RID: 12241 RVA: 0x000A3B37 File Offset: 0x000A1D37
+	// Token: 0x0600421B RID: 16923 RVA: 0x00024A48 File Offset: 0x00022C48
 	private IEnumerator MovePlayerToEndPos()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -408,7 +408,7 @@ public class FinalBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x06002FD2 RID: 12242 RVA: 0x000A3B46 File Offset: 0x000A1D46
+	// Token: 0x0600421C RID: 16924 RVA: 0x00024A57 File Offset: 0x00022C57
 	private void OnBossIntroStartSpeedUp()
 	{
 		if (this.m_currentActiveEventInstance.isValid())
@@ -417,7 +417,7 @@ public class FinalBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x06002FD3 RID: 12243 RVA: 0x000A3B64 File Offset: 0x000A1D64
+	// Token: 0x0600421D RID: 16925 RVA: 0x0010965C File Offset: 0x0010785C
 	private void OnBossIntroStopSpeedUp()
 	{
 		if (this.m_currentActiveEventInstance.isValid())
@@ -428,7 +428,7 @@ public class FinalBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x06002FD4 RID: 12244 RVA: 0x000A3BAC File Offset: 0x000A1DAC
+	// Token: 0x0600421E RID: 16926 RVA: 0x001096A4 File Offset: 0x001078A4
 	public void SmashWindows()
 	{
 		foreach (PropSpawnController propSpawnController in this.m_windowsToSmashArray)
@@ -442,7 +442,7 @@ public class FinalBossRoomController : BossRoomController
 		AudioManager.PlayOneShot(null, "event:/SFX/Enemies/Cain/sfx_cain_death_windowsShatter", CameraController.GameCamera.transform.position);
 	}
 
-	// Token: 0x06002FD5 RID: 12245 RVA: 0x000A3C30 File Offset: 0x000A1E30
+	// Token: 0x0600421F RID: 16927 RVA: 0x00109728 File Offset: 0x00107928
 	public void ColourShiftToDefault()
 	{
 		CameraController.LerpBGPostProcessToProfile(this.m_defaultBGProfile, 2f);
@@ -463,7 +463,7 @@ public class FinalBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x06002FD6 RID: 12246 RVA: 0x000A3CC1 File Offset: 0x000A1EC1
+	// Token: 0x06004220 RID: 16928 RVA: 0x00024A73 File Offset: 0x00022C73
 	protected override IEnumerator StartOutro()
 	{
 		yield return base.StartOutro();
@@ -497,110 +497,110 @@ public class FinalBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x06002FD7 RID: 12247 RVA: 0x000A3CD0 File Offset: 0x000A1ED0
+	// Token: 0x06004221 RID: 16929 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void TeleportOut()
 	{
 	}
 
-	// Token: 0x06002FD8 RID: 12248 RVA: 0x000A3CD2 File Offset: 0x000A1ED2
+	// Token: 0x06004222 RID: 16930 RVA: 0x00024A82 File Offset: 0x00022C82
 	protected override void SetBossFlagDefeated()
 	{
 		base.SetBossFlagDefeated();
 		SaveManager.PlayerSaveData.EndingSpawnRoom = EndingSpawnRoomType.Hallway;
 	}
 
-	// Token: 0x04002612 RID: 9746
+	// Token: 0x040033B1 RID: 13233
 	private const string TRANSITION_TO_LIGHT_SFX_NAME = "event:/SFX/Enemies/Cain/sfx_cain_arena_shift_darkToLight";
 
-	// Token: 0x04002613 RID: 9747
+	// Token: 0x040033B2 RID: 13234
 	private const string TRANSITION_TO_DARK_SFX_NAME = "event:/SFX/Enemies/Cain/sfx_cain_arena_shift_lightToDark";
 
-	// Token: 0x04002614 RID: 9748
+	// Token: 0x040033B3 RID: 13235
 	[SerializeField]
 	private TunnelSpawnController m_earthShiftTunnelSpawner;
 
-	// Token: 0x04002615 RID: 9749
+	// Token: 0x040033B4 RID: 13236
 	[SerializeField]
 	private MobilePostProcessingProfile m_defaultBGProfile;
 
-	// Token: 0x04002616 RID: 9750
+	// Token: 0x040033B5 RID: 13237
 	[SerializeField]
 	private MobilePostProcessingProfile m_lightBGProfile;
 
-	// Token: 0x04002617 RID: 9751
+	// Token: 0x040033B6 RID: 13238
 	[SerializeField]
 	private MobilePostProcessingProfile m_darkBGProfile;
 
-	// Token: 0x04002618 RID: 9752
+	// Token: 0x040033B7 RID: 13239
 	[SerializeField]
 	private MobilePostProcessingProfile m_lightBGAdvancedProfile;
 
-	// Token: 0x04002619 RID: 9753
+	// Token: 0x040033B8 RID: 13240
 	[SerializeField]
 	private MobilePostProcessingProfile m_darkBGAdvancedProfile;
 
-	// Token: 0x0400261A RID: 9754
+	// Token: 0x040033B9 RID: 13241
 	[SerializeField]
 	private MobilePostProcessingProfile m_defaultFGProfile;
 
-	// Token: 0x0400261B RID: 9755
+	// Token: 0x040033BA RID: 13242
 	[SerializeField]
 	private MobilePostProcessingProfile m_lightFGProfile;
 
-	// Token: 0x0400261C RID: 9756
+	// Token: 0x040033BB RID: 13243
 	[SerializeField]
 	private MobilePostProcessingProfile m_darkFGProfile;
 
-	// Token: 0x0400261D RID: 9757
+	// Token: 0x040033BC RID: 13244
 	[SerializeField]
 	private MobilePostProcessingProfile m_lightFGAdvancedProfile;
 
-	// Token: 0x0400261E RID: 9758
+	// Token: 0x040033BD RID: 13245
 	[SerializeField]
 	private MobilePostProcessingProfile m_darkFGAdvancedProfile;
 
-	// Token: 0x0400261F RID: 9759
+	// Token: 0x040033BE RID: 13246
 	[SerializeField]
 	private GameObject m_rootsGO;
 
-	// Token: 0x04002620 RID: 9760
+	// Token: 0x040033BF RID: 13247
 	[SerializeField]
 	private PropSpawnController[] m_windowsToSmashArray;
 
-	// Token: 0x04002621 RID: 9761
+	// Token: 0x040033C0 RID: 13248
 	[SerializeField]
 	private EnemySpawnController m_bossUpSpawnController;
 
-	// Token: 0x04002622 RID: 9762
+	// Token: 0x040033C1 RID: 13249
 	private Vector3 m_storedStartingCamPos = Vector3.zero;
 
-	// Token: 0x04002623 RID: 9763
+	// Token: 0x040033C2 RID: 13250
 	private Action<bool, float> m_colourShiftRoom;
 
-	// Token: 0x04002624 RID: 9764
+	// Token: 0x040033C3 RID: 13251
 	private BaseEffect m_flameEffect;
 
-	// Token: 0x04002625 RID: 9765
+	// Token: 0x040033C4 RID: 13252
 	private Animator[] m_rootsArray;
 
-	// Token: 0x04002626 RID: 9766
+	// Token: 0x040033C5 RID: 13253
 	private EventInstance m_introSFXEventInstance_01;
 
-	// Token: 0x04002627 RID: 9767
+	// Token: 0x040033C6 RID: 13254
 	private EventInstance m_introSFXEventInstance_02;
 
-	// Token: 0x04002628 RID: 9768
+	// Token: 0x040033C7 RID: 13255
 	private EventInstance m_currentActiveEventInstance;
 
-	// Token: 0x04002629 RID: 9769
+	// Token: 0x040033C8 RID: 13256
 	private float m_introSFXStartTime;
 
-	// Token: 0x0400262A RID: 9770
+	// Token: 0x040033C9 RID: 13257
 	private bool m_bossIntroStopSpeedUpRelayAdded;
 
-	// Token: 0x0400262B RID: 9771
+	// Token: 0x040033CA RID: 13258
 	private Action m_onBossIntroStopSpeedUp;
 
-	// Token: 0x0400262C RID: 9772
+	// Token: 0x040033CB RID: 13259
 	private Action m_onBossIntroStartSpeedUp;
 }

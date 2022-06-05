@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x020007D6 RID: 2006
+// Token: 0x02000C9C RID: 3228
 public class PlayerCardOpenedEventArgs : EventArgs
 {
-	// Token: 0x06004314 RID: 17172 RVA: 0x000EC3EB File Offset: 0x000EA5EB
+	// Token: 0x06005C9D RID: 23709 RVA: 0x00032E01 File Offset: 0x00031001
 	public PlayerCardOpenedEventArgs(PlayerSaveData playerData)
 	{
 		this.Initialize(playerData);
 	}
 
-	// Token: 0x06004315 RID: 17173 RVA: 0x000EC3FA File Offset: 0x000EA5FA
+	// Token: 0x06005C9E RID: 23710 RVA: 0x00032E10 File Offset: 0x00031010
 	public void Initialize(PlayerSaveData playerData)
 	{
 		this.PlayerData = playerData;
 	}
 
-	// Token: 0x170016B6 RID: 5814
-	// (get) Token: 0x06004316 RID: 17174 RVA: 0x000EC403 File Offset: 0x000EA603
-	// (set) Token: 0x06004317 RID: 17175 RVA: 0x000EC40B File Offset: 0x000EA60B
+	// Token: 0x17001EB4 RID: 7860
+	// (get) Token: 0x06005C9F RID: 23711 RVA: 0x00032E19 File Offset: 0x00031019
+	// (set) Token: 0x06005CA0 RID: 23712 RVA: 0x00032E21 File Offset: 0x00031021
 	public PlayerSaveData PlayerData { get; private set; }
 }

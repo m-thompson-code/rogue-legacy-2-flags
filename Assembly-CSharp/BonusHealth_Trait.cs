@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000325 RID: 805
+// Token: 0x02000570 RID: 1392
 public class BonusHealth_Trait : BaseTrait
 {
-	// Token: 0x17000DA9 RID: 3497
-	// (get) Token: 0x06001FAC RID: 8108 RVA: 0x00065331 File Offset: 0x00063531
+	// Token: 0x170011D8 RID: 4568
+	// (get) Token: 0x06002C6B RID: 11371 RVA: 0x00018A0F File Offset: 0x00016C0F
 	public override TraitType TraitType
 	{
 		get
@@ -14,7 +14,7 @@ public class BonusHealth_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FAD RID: 8109 RVA: 0x00065338 File Offset: 0x00063538
+	// Token: 0x06002C6C RID: 11372 RVA: 0x00018A16 File Offset: 0x00016C16
 	public IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -27,7 +27,7 @@ public class BonusHealth_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FAE RID: 8110 RVA: 0x00065340 File Offset: 0x00063540
+	// Token: 0x06002C6D RID: 11373 RVA: 0x00018A1E File Offset: 0x00016C1E
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

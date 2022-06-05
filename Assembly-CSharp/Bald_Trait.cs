@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200031F RID: 799
+// Token: 0x02000566 RID: 1382
 public class Bald_Trait : BaseTrait
 {
-	// Token: 0x17000D9D RID: 3485
-	// (get) Token: 0x06001F84 RID: 8068 RVA: 0x00064F03 File Offset: 0x00063103
+	// Token: 0x170011C4 RID: 4548
+	// (get) Token: 0x06002C2B RID: 11307 RVA: 0x00005315 File Offset: 0x00003515
 	public override TraitType TraitType
 	{
 		get

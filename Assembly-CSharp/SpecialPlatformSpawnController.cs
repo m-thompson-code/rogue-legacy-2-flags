@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000648 RID: 1608
+// Token: 0x02000A77 RID: 2679
 public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawnController, IRoomConsumer
 {
-	// Token: 0x17001479 RID: 5241
-	// (get) Token: 0x06003A04 RID: 14852 RVA: 0x000C53FC File Offset: 0x000C35FC
-	// (set) Token: 0x06003A05 RID: 14853 RVA: 0x000C5404 File Offset: 0x000C3604
+	// Token: 0x17001BE0 RID: 7136
+	// (get) Token: 0x060050E9 RID: 20713 RVA: 0x0002C25E File Offset: 0x0002A45E
+	// (set) Token: 0x060050EA RID: 20714 RVA: 0x0002C266 File Offset: 0x0002A466
 	public SpecialPlatform SpecialPlatformInstance { get; private set; }
 
-	// Token: 0x1700147A RID: 5242
-	// (get) Token: 0x06003A06 RID: 14854 RVA: 0x000C540D File Offset: 0x000C360D
+	// Token: 0x17001BE1 RID: 7137
+	// (get) Token: 0x060050EB RID: 20715 RVA: 0x00003713 File Offset: 0x00001913
 	public GameObject GameObject
 	{
 		get
@@ -20,9 +20,9 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x1700147B RID: 5243
-	// (get) Token: 0x06003A07 RID: 14855 RVA: 0x000C5415 File Offset: 0x000C3615
-	// (set) Token: 0x06003A08 RID: 14856 RVA: 0x000C541D File Offset: 0x000C361D
+	// Token: 0x17001BE2 RID: 7138
+	// (get) Token: 0x060050EC RID: 20716 RVA: 0x0002C26F File Offset: 0x0002A46F
+	// (set) Token: 0x060050ED RID: 20717 RVA: 0x0002C277 File Offset: 0x0002A477
 	public int ID
 	{
 		get
@@ -35,9 +35,9 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x1700147C RID: 5244
-	// (get) Token: 0x06003A09 RID: 14857 RVA: 0x000C5426 File Offset: 0x000C3626
-	// (set) Token: 0x06003A0A RID: 14858 RVA: 0x000C542E File Offset: 0x000C362E
+	// Token: 0x17001BE3 RID: 7139
+	// (get) Token: 0x060050EE RID: 20718 RVA: 0x0002C280 File Offset: 0x0002A480
+	// (set) Token: 0x060050EF RID: 20719 RVA: 0x0002C288 File Offset: 0x0002A488
 	public StateID InitialState
 	{
 		get
@@ -50,8 +50,8 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x1700147D RID: 5245
-	// (get) Token: 0x06003A0B RID: 14859 RVA: 0x000C5437 File Offset: 0x000C3637
+	// Token: 0x17001BE4 RID: 7140
+	// (get) Token: 0x060050F0 RID: 20720 RVA: 0x0002C291 File Offset: 0x0002A491
 	public bool ShouldSpawn
 	{
 		get
@@ -60,9 +60,9 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x1700147E RID: 5246
-	// (get) Token: 0x06003A0C RID: 14860 RVA: 0x000C5454 File Offset: 0x000C3654
-	// (set) Token: 0x06003A0D RID: 14861 RVA: 0x000C545C File Offset: 0x000C365C
+	// Token: 0x17001BE5 RID: 7141
+	// (get) Token: 0x060050F1 RID: 20721 RVA: 0x0002C2AE File Offset: 0x0002A4AE
+	// (set) Token: 0x060050F2 RID: 20722 RVA: 0x0002C2B6 File Offset: 0x0002A4B6
 	public BaseRoom Room
 	{
 		get
@@ -75,8 +75,8 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x1700147F RID: 5247
-	// (get) Token: 0x06003A0E RID: 14862 RVA: 0x000C5465 File Offset: 0x000C3665
+	// Token: 0x17001BE6 RID: 7142
+	// (get) Token: 0x060050F3 RID: 20723 RVA: 0x0002C2BF File Offset: 0x0002A4BF
 	public SpawnLogicController SpawnLogicController
 	{
 		get
@@ -90,9 +90,9 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x17001480 RID: 5248
-	// (get) Token: 0x06003A0F RID: 14863 RVA: 0x000C5488 File Offset: 0x000C3688
-	// (set) Token: 0x06003A10 RID: 14864 RVA: 0x000C5490 File Offset: 0x000C3690
+	// Token: 0x17001BE7 RID: 7143
+	// (get) Token: 0x060050F4 RID: 20724 RVA: 0x0002C2E2 File Offset: 0x0002A4E2
+	// (set) Token: 0x060050F5 RID: 20725 RVA: 0x0002C2EA File Offset: 0x0002A4EA
 	public SpecialPlatformType Type
 	{
 		get
@@ -105,9 +105,9 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x17001481 RID: 5249
-	// (get) Token: 0x06003A11 RID: 14865 RVA: 0x000C5499 File Offset: 0x000C3699
-	// (set) Token: 0x06003A12 RID: 14866 RVA: 0x000C54A1 File Offset: 0x000C36A1
+	// Token: 0x17001BE8 RID: 7144
+	// (get) Token: 0x060050F6 RID: 20726 RVA: 0x0002C2F3 File Offset: 0x0002A4F3
+	// (set) Token: 0x060050F7 RID: 20727 RVA: 0x0002C2FB File Offset: 0x0002A4FB
 	public int Width
 	{
 		get
@@ -120,7 +120,7 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x06003A13 RID: 14867 RVA: 0x000C54AC File Offset: 0x000C36AC
+	// Token: 0x060050F8 RID: 20728 RVA: 0x0012D1D4 File Offset: 0x0012B3D4
 	private void Start()
 	{
 		SpriteRenderer component = base.gameObject.GetComponent<SpriteRenderer>();
@@ -135,12 +135,12 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		});
 	}
 
-	// Token: 0x06003A14 RID: 14868 RVA: 0x000C54EA File Offset: 0x000C36EA
+	// Token: 0x060050F9 RID: 20729 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void OnDrawGizmos()
 	{
 	}
 
-	// Token: 0x06003A15 RID: 14869 RVA: 0x000C54EC File Offset: 0x000C36EC
+	// Token: 0x060050FA RID: 20730 RVA: 0x0002C304 File Offset: 0x0002A504
 	public void SetColor(Color color)
 	{
 		if (!Application.isPlaying)
@@ -150,14 +150,14 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x06003A16 RID: 14870 RVA: 0x000C5512 File Offset: 0x000C3712
+	// Token: 0x060050FB RID: 20731 RVA: 0x0002C32A File Offset: 0x0002A52A
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x06003A17 RID: 14871 RVA: 0x000C553A File Offset: 0x000C373A
+	// Token: 0x060050FC RID: 20732 RVA: 0x0002C352 File Offset: 0x0002A552
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -166,7 +166,7 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x06003A18 RID: 14872 RVA: 0x000C5567 File Offset: 0x000C3767
+	// Token: 0x060050FD RID: 20733 RVA: 0x0002C37F File Offset: 0x0002A57F
 	protected virtual void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs roomArgs)
 	{
 		if (this.SpecialPlatformInstance)
@@ -175,7 +175,7 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x06003A19 RID: 14873 RVA: 0x000C5588 File Offset: 0x000C3788
+	// Token: 0x060050FE RID: 20734 RVA: 0x001334A8 File Offset: 0x001316A8
 	public void SetWidth(int width)
 	{
 		if (!Application.isPlaying)
@@ -188,7 +188,7 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		}
 	}
 
-	// Token: 0x06003A1A RID: 14874 RVA: 0x000C55F4 File Offset: 0x000C37F4
+	// Token: 0x060050FF RID: 20735 RVA: 0x00133514 File Offset: 0x00131714
 	public bool Spawn()
 	{
 		if (this.ShouldSpawn)
@@ -234,47 +234,47 @@ public class SpecialPlatformSpawnController : MonoBehaviour, ISimpleSpawnControl
 		return false;
 	}
 
-	// Token: 0x06003A1D RID: 14877 RVA: 0x000C57B1 File Offset: 0x000C39B1
+	// Token: 0x06005102 RID: 20738 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISpawnController.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002C8A RID: 11402
+	// Token: 0x04003D20 RID: 15648
 	[SerializeField]
 	[HideInInspector]
 	private SpecialPlatformType m_platformType;
 
-	// Token: 0x04002C8B RID: 11403
+	// Token: 0x04003D21 RID: 15649
 	[SerializeField]
 	[HideInInspector]
 	private StateID m_initialState;
 
-	// Token: 0x04002C8C RID: 11404
+	// Token: 0x04003D22 RID: 15650
 	[SerializeField]
 	[ReadOnly]
 	private int m_id;
 
-	// Token: 0x04002C8D RID: 11405
+	// Token: 0x04003D23 RID: 15651
 	[SerializeField]
 	[ReadOnly]
 	private int m_width = 4;
 
-	// Token: 0x04002C8E RID: 11406
+	// Token: 0x04003D24 RID: 15652
 	private SpawnLogicController m_spawnLogicController;
 
-	// Token: 0x04002C8F RID: 11407
+	// Token: 0x04003D25 RID: 15653
 	private BaseRoom m_room;
 
-	// Token: 0x04002C90 RID: 11408
+	// Token: 0x04003D26 RID: 15654
 	public const int MIN_WIDTH = 1;
 
-	// Token: 0x04002C91 RID: 11409
+	// Token: 0x04003D27 RID: 15655
 	public const int MAX_WIDTH = 32;
 
-	// Token: 0x04002C92 RID: 11410
+	// Token: 0x04003D28 RID: 15656
 	private static StateID[] m_potentialStates_STATIC;
 
-	// Token: 0x04002C94 RID: 11412
+	// Token: 0x04003D2A RID: 15658
 	private bool m_hasCheckedForSpawnController;
 }

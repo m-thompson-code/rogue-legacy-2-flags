@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000254 RID: 596
+// Token: 0x02000412 RID: 1042
 [CreateAssetMenu(menuName = "Custom/Libraries/Text Popup Library")]
 public class TextPopupLibrary : ScriptableObject
 {
-	// Token: 0x17000B68 RID: 2920
-	// (get) Token: 0x0600178C RID: 6028 RVA: 0x000494F3 File Offset: 0x000476F3
+	// Token: 0x17000E95 RID: 3733
+	// (get) Token: 0x06002140 RID: 8512 RVA: 0x00011B2A File Offset: 0x0000FD2A
 	public static TextPopupTypeTextPopupObjDictionary TextPopupDict
 	{
 		get
@@ -15,8 +15,8 @@ public class TextPopupLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B69 RID: 2921
-	// (get) Token: 0x0600178D RID: 6029 RVA: 0x000494FF File Offset: 0x000476FF
+	// Token: 0x17000E96 RID: 3734
+	// (get) Token: 0x06002141 RID: 8513 RVA: 0x00011B36 File Offset: 0x0000FD36
 	public static TextPopupLibrary Instance
 	{
 		get
@@ -29,23 +29,23 @@ public class TextPopupLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x04001716 RID: 5910
+	// Token: 0x04001E30 RID: 7728
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/TextPopupLibrary";
 
-	// Token: 0x04001717 RID: 5911
+	// Token: 0x04001E31 RID: 7729
 	[SerializeField]
 	private TextPopupTypeTextPopupObjDictionary m_textPopupDict;
 
-	// Token: 0x04001718 RID: 5912
+	// Token: 0x04001E32 RID: 7730
 	private static TextPopupLibrary m_instance;
 
-	// Token: 0x02000B37 RID: 2871
+	// Token: 0x02000413 RID: 1043
 	[Serializable]
 	public class TextPopupEntry
 	{
-		// Token: 0x17001E64 RID: 7780
-		// (get) Token: 0x06005C21 RID: 23585 RVA: 0x0015BEB7 File Offset: 0x0015A0B7
-		// (set) Token: 0x06005C22 RID: 23586 RVA: 0x0015BEBF File Offset: 0x0015A0BF
+		// Token: 0x17000E97 RID: 3735
+		// (get) Token: 0x06002144 RID: 8516 RVA: 0x00011B5F File Offset: 0x0000FD5F
+		// (set) Token: 0x06002145 RID: 8517 RVA: 0x00011B67 File Offset: 0x0000FD67
 		public TextPopupObj TextPopupPrefab
 		{
 			get
@@ -58,9 +58,9 @@ public class TextPopupLibrary : ScriptableObject
 			}
 		}
 
-		// Token: 0x17001E65 RID: 7781
-		// (get) Token: 0x06005C23 RID: 23587 RVA: 0x0015BEC8 File Offset: 0x0015A0C8
-		// (set) Token: 0x06005C24 RID: 23588 RVA: 0x0015BED0 File Offset: 0x0015A0D0
+		// Token: 0x17000E98 RID: 3736
+		// (get) Token: 0x06002146 RID: 8518 RVA: 0x00011B70 File Offset: 0x0000FD70
+		// (set) Token: 0x06002147 RID: 8519 RVA: 0x00011B78 File Offset: 0x0000FD78
 		public int PoolSize
 		{
 			get
@@ -73,11 +73,11 @@ public class TextPopupLibrary : ScriptableObject
 			}
 		}
 
-		// Token: 0x04004BAF RID: 19375
+		// Token: 0x04001E33 RID: 7731
 		[SerializeField]
 		private TextPopupObj m_textPopupPrefab;
 
-		// Token: 0x04004BB0 RID: 19376
+		// Token: 0x04001E34 RID: 7732
 		[SerializeField]
 		private int m_poolSize = 5;
 	}

@@ -1,37 +1,37 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000436 RID: 1078
+// Token: 0x020006FE RID: 1790
 public class FairyRoomTrigger : BaseSpecialPropController
 {
-	// Token: 0x060027A1 RID: 10145 RVA: 0x00083E77 File Offset: 0x00082077
+	// Token: 0x060036AD RID: 13997 RVA: 0x0001E10D File Offset: 0x0001C30D
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onStateChange = new Action<MonoBehaviour, EventArgs>(this.OnStateChange);
 	}
 
-	// Token: 0x060027A2 RID: 10146 RVA: 0x00083E91 File Offset: 0x00082091
+	// Token: 0x060036AE RID: 13998 RVA: 0x0001E127 File Offset: 0x0001C327
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.FairyRoomStateChange, this.m_onStateChange);
 	}
 
-	// Token: 0x060027A3 RID: 10147 RVA: 0x00083EA0 File Offset: 0x000820A0
+	// Token: 0x060036AF RID: 13999 RVA: 0x0001E136 File Offset: 0x0001C336
 	protected override void OnDisable()
 	{
 		base.OnDisable();
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.FairyRoomStateChange, this.m_onStateChange);
 	}
 
-	// Token: 0x060027A4 RID: 10148 RVA: 0x00083EB5 File Offset: 0x000820B5
+	// Token: 0x060036B0 RID: 14000 RVA: 0x0001E14B File Offset: 0x0001C34B
 	public override void SetRoom(BaseRoom room)
 	{
 		base.SetRoom(room);
 		this.m_fairyRoomController = base.Room.gameObject.GetComponent<FairyRoomController>();
 	}
 
-	// Token: 0x060027A5 RID: 10149 RVA: 0x00083ED4 File Offset: 0x000820D4
+	// Token: 0x060036B1 RID: 14001 RVA: 0x0001E16A File Offset: 0x0001C36A
 	protected override void InitializePooledPropOnEnter()
 	{
 		this.InitializeTrigger();
@@ -41,7 +41,7 @@ public class FairyRoomTrigger : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x060027A6 RID: 10150 RVA: 0x00083EEC File Offset: 0x000820EC
+	// Token: 0x060036B2 RID: 14002 RVA: 0x000E4A88 File Offset: 0x000E2C88
 	public void InitializeTrigger()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -57,14 +57,14 @@ public class FairyRoomTrigger : BaseSpecialPropController
 		this.SetTriggerState(this.m_fairyRoomController.State);
 	}
 
-	// Token: 0x060027A7 RID: 10151 RVA: 0x00083F90 File Offset: 0x00082190
+	// Token: 0x060036B3 RID: 14003 RVA: 0x000E4B2C File Offset: 0x000E2D2C
 	private void OnStateChange(object sender, EventArgs args)
 	{
 		FairyRoomEnteredEventArgs fairyRoomEnteredEventArgs = args as FairyRoomEnteredEventArgs;
 		this.SetTriggerState(fairyRoomEnteredEventArgs.FairyRoomController.State);
 	}
 
-	// Token: 0x060027A8 RID: 10152 RVA: 0x00083FB8 File Offset: 0x000821B8
+	// Token: 0x060036B4 RID: 14004 RVA: 0x000E4B54 File Offset: 0x000E2D54
 	private void SetTriggerState(FairyRoomState state)
 	{
 		base.Animator.SetBool("On", false);
@@ -116,7 +116,7 @@ public class FairyRoomTrigger : BaseSpecialPropController
 		this.m_lightSprite.color = color;
 	}
 
-	// Token: 0x060027A9 RID: 10153 RVA: 0x00084085 File Offset: 0x00082285
+	// Token: 0x060036B5 RID: 14005 RVA: 0x0001E181 File Offset: 0x0001C381
 	public void ActivateTrigger()
 	{
 		if (this.m_fairyRoomController)
@@ -125,29 +125,29 @@ public class FairyRoomTrigger : BaseSpecialPropController
 		}
 	}
 
-	// Token: 0x0400211D RID: 8477
+	// Token: 0x04002C4A RID: 11338
 	public const string OFF_COLOR = "#000000";
 
-	// Token: 0x0400211E RID: 8478
+	// Token: 0x04002C4B RID: 11339
 	public const string ON_COLOR = "#E7BF51";
 
-	// Token: 0x0400211F RID: 8479
+	// Token: 0x04002C4C RID: 11340
 	public const string PASSED_COLOR = "#3ACF00";
 
-	// Token: 0x04002120 RID: 8480
+	// Token: 0x04002C4D RID: 11341
 	public const string FAILED_COLOR = "#CA000B";
 
-	// Token: 0x04002121 RID: 8481
+	// Token: 0x04002C4E RID: 11342
 	[SerializeField]
 	private SpriteRenderer m_bottomSprite;
 
-	// Token: 0x04002122 RID: 8482
+	// Token: 0x04002C4F RID: 11343
 	[SerializeField]
 	private SpriteRenderer m_lightSprite;
 
-	// Token: 0x04002123 RID: 8483
+	// Token: 0x04002C50 RID: 11344
 	private FairyRoomController m_fairyRoomController;
 
-	// Token: 0x04002124 RID: 8484
+	// Token: 0x04002C51 RID: 11345
 	private Action<MonoBehaviour, EventArgs> m_onStateChange;
 }

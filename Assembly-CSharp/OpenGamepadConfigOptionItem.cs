@@ -1,11 +1,11 @@
 ﻿using System;
 using Rewired;
 
-// Token: 0x02000294 RID: 660
+// Token: 0x02000460 RID: 1120
 public class OpenGamepadConfigOptionItem : OpenSuboptionOptionItem
 {
-	// Token: 0x17000BFD RID: 3069
-	// (get) Token: 0x060019D0 RID: 6608 RVA: 0x00051105 File Offset: 0x0004F305
+	// Token: 0x17000F3E RID: 3902
+	// (get) Token: 0x060023BF RID: 9151 RVA: 0x00013A88 File Offset: 0x00011C88
 	public bool IsAvailable
 	{
 		get
@@ -14,7 +14,7 @@ public class OpenGamepadConfigOptionItem : OpenSuboptionOptionItem
 		}
 	}
 
-	// Token: 0x060019D1 RID: 6609 RVA: 0x0005110C File Offset: 0x0004F30C
+	// Token: 0x060023C0 RID: 9152 RVA: 0x00013A8F File Offset: 0x00011C8F
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -23,7 +23,7 @@ public class OpenGamepadConfigOptionItem : OpenSuboptionOptionItem
 		ReInput.ControllerDisconnectedEvent += this.OnControllerConnnectionChanged;
 	}
 
-	// Token: 0x060019D2 RID: 6610 RVA: 0x0005113C File Offset: 0x0004F33C
+	// Token: 0x060023C1 RID: 9153 RVA: 0x00013ABF File Offset: 0x00011CBF
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -31,13 +31,13 @@ public class OpenGamepadConfigOptionItem : OpenSuboptionOptionItem
 		ReInput.ControllerDisconnectedEvent -= this.OnControllerConnnectionChanged;
 	}
 
-	// Token: 0x060019D3 RID: 6611 RVA: 0x00051166 File Offset: 0x0004F366
+	// Token: 0x060023C2 RID: 9154 RVA: 0x00013AE9 File Offset: 0x00011CE9
 	private void OnControllerConnnectionChanged(ControllerStatusChangedEventArgs args)
 	{
 		this.UpdateTextAlpha();
 	}
 
-	// Token: 0x060019D4 RID: 6612 RVA: 0x0005116E File Offset: 0x0004F36E
+	// Token: 0x060023C3 RID: 9155 RVA: 0x00013AF1 File Offset: 0x00011CF1
 	private void UpdateTextAlpha()
 	{
 		if (!this.IsAvailable)
@@ -48,7 +48,7 @@ public class OpenGamepadConfigOptionItem : OpenSuboptionOptionItem
 		this.m_incrementValueText.alpha = 1f;
 	}
 
-	// Token: 0x060019D5 RID: 6613 RVA: 0x00051199 File Offset: 0x0004F399
+	// Token: 0x060023C4 RID: 9156 RVA: 0x00013B1C File Offset: 0x00011D1C
 	public override void ActivateOption()
 	{
 		if (this.IsAvailable)

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000332 RID: 818
+// Token: 0x02000589 RID: 1417
 public class DisableSpikeTraps_Trait : BaseTrait
 {
-	// Token: 0x17000DB5 RID: 3509
-	// (get) Token: 0x06001FE8 RID: 8168 RVA: 0x00065C31 File Offset: 0x00063E31
+	// Token: 0x170011F8 RID: 4600
+	// (get) Token: 0x06002CE9 RID: 11497 RVA: 0x00018D77 File Offset: 0x00016F77
 	public override TraitType TraitType
 	{
 		get

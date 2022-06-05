@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x020005BF RID: 1471
+// Token: 0x020009C7 RID: 2503
 public interface ILoadable
 {
-	// Token: 0x06003660 RID: 13920
+	// Token: 0x06004C72 RID: 19570
 	void LoadSync();
 
-	// Token: 0x06003661 RID: 13921
+	// Token: 0x06004C73 RID: 19571
 	IEnumerator LoadAsync();
 }

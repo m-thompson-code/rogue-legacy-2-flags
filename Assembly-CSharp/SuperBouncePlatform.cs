@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004CB RID: 1227
+// Token: 0x020007F3 RID: 2035
 public class SuperBouncePlatform : SpecialPlatform, IRootObj
 {
-	// Token: 0x17001152 RID: 4434
-	// (get) Token: 0x06002DA2 RID: 11682 RVA: 0x0009A228 File Offset: 0x00098428
+	// Token: 0x170016D9 RID: 5849
+	// (get) Token: 0x06003EAE RID: 16046 RVA: 0x00022A63 File Offset: 0x00020C63
 	public override string EffectNameOverride
 	{
 		get
@@ -14,8 +14,8 @@ public class SuperBouncePlatform : SpecialPlatform, IRootObj
 		}
 	}
 
-	// Token: 0x17001153 RID: 4435
-	// (get) Token: 0x06002DA3 RID: 11683 RVA: 0x0009A230 File Offset: 0x00098430
+	// Token: 0x170016DA RID: 5850
+	// (get) Token: 0x06003EAF RID: 16047 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool PlayDirectionalHitEffect
 	{
 		get
@@ -24,17 +24,17 @@ public class SuperBouncePlatform : SpecialPlatform, IRootObj
 		}
 	}
 
-	// Token: 0x06002DA4 RID: 11684 RVA: 0x0009A233 File Offset: 0x00098433
+	// Token: 0x06003EB0 RID: 16048 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void SetState(StateID state)
 	{
 	}
 
-	// Token: 0x06002DA6 RID: 11686 RVA: 0x0009A248 File Offset: 0x00098448
+	// Token: 0x06003EB2 RID: 16050 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400248D RID: 9357
+	// Token: 0x0400312A RID: 12586
 	private string m_bounceEffectName = "BounceProjectileIndicatorBounced_Effect";
 }

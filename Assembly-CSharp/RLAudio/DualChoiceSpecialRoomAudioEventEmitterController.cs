@@ -5,11 +5,11 @@ using UnityEngine.Events;
 
 namespace RLAudio
 {
-	// Token: 0x020008EE RID: 2286
+	// Token: 0x02000E63 RID: 3683
 	public class DualChoiceSpecialRoomAudioEventEmitterController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001854 RID: 6228
-		// (get) Token: 0x06004B21 RID: 19233 RVA: 0x0010E38E File Offset: 0x0010C58E
+		// Token: 0x1700213D RID: 8509
+		// (get) Token: 0x060067EC RID: 26604 RVA: 0x0003974F File Offset: 0x0003794F
 		public string Description
 		{
 			get
@@ -22,7 +22,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B22 RID: 19234 RVA: 0x0010E3B4 File Offset: 0x0010C5B4
+		// Token: 0x060067ED RID: 26605 RVA: 0x0017E654 File Offset: 0x0017C854
 		private void Awake()
 		{
 			this.m_room = base.GetComponent<Room>();
@@ -33,7 +33,7 @@ namespace RLAudio
 			this.m_onRightChoiceHover = new Action<GameObject>(this.OnRightChoiceHover);
 		}
 
-		// Token: 0x06004B23 RID: 19235 RVA: 0x0010E43C File Offset: 0x0010C63C
+		// Token: 0x060067EE RID: 26606 RVA: 0x0017E6DC File Offset: 0x0017C8DC
 		protected virtual void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 		{
 			if (!this.m_dualChoiceController)
@@ -70,7 +70,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B24 RID: 19236 RVA: 0x0010E55E File Offset: 0x0010C75E
+		// Token: 0x060067EF RID: 26607 RVA: 0x00039775 File Offset: 0x00037975
 		private void OnDisable()
 		{
 			if (this.m_dualChoiceController)
@@ -80,7 +80,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B25 RID: 19237 RVA: 0x0010E59C File Offset: 0x0010C79C
+		// Token: 0x060067F0 RID: 26608 RVA: 0x0017E800 File Offset: 0x0017CA00
 		private void OnChoiceMade(GameObject gameObj)
 		{
 			if (this.m_choiceMadeUnityEvent != null)
@@ -95,7 +95,7 @@ namespace RLAudio
 			this.PlayChoiceAudio(path, gameObj.transform.position);
 		}
 
-		// Token: 0x06004B26 RID: 19238 RVA: 0x0010E5E5 File Offset: 0x0010C7E5
+		// Token: 0x060067F1 RID: 26609 RVA: 0x000397B2 File Offset: 0x000379B2
 		private void OnLeftChoiceHover(GameObject gameObj)
 		{
 			this.m_currentChoice = RoomSide.Left;
@@ -103,7 +103,7 @@ namespace RLAudio
 			this.PlayChoiceAudio(this.m_rightHoverAudioEventPath, gameObj.transform.position);
 		}
 
-		// Token: 0x06004B27 RID: 19239 RVA: 0x0010E60C File Offset: 0x0010C80C
+		// Token: 0x060067F2 RID: 26610 RVA: 0x000397D9 File Offset: 0x000379D9
 		private void OnRightChoiceHover(GameObject gameObj)
 		{
 			this.m_currentChoice = RoomSide.Right;
@@ -111,78 +111,78 @@ namespace RLAudio
 			this.PlayChoiceAudio(this.m_rightHoverAudioEventPath, gameObj.transform.position);
 		}
 
-		// Token: 0x06004B28 RID: 19240 RVA: 0x0010E633 File Offset: 0x0010C833
+		// Token: 0x060067F3 RID: 26611 RVA: 0x00039800 File Offset: 0x00037A00
 		private void PlayChoiceAudio(string path, Vector3 position)
 		{
 			AudioManager.PlayOneShot(this, path, position);
 		}
 
-		// Token: 0x06004B29 RID: 19241 RVA: 0x0010E640 File Offset: 0x0010C840
+		// Token: 0x060067F4 RID: 26612 RVA: 0x0017E84C File Offset: 0x0017CA4C
 		protected virtual void OnRoomComplete()
 		{
 			AudioManager.PlayOneShot(this, this.m_roomCompleteAudioEventPath, default(Vector3));
 			this.m_isRoomComplete = true;
 		}
 
-		// Token: 0x04003F22 RID: 16162
+		// Token: 0x0400545C RID: 21596
 		[SerializeField]
 		[EventRef]
 		private string m_leftHoverAudioEventPath;
 
-		// Token: 0x04003F23 RID: 16163
+		// Token: 0x0400545D RID: 21597
 		[SerializeField]
 		[EventRef]
 		private string m_rightHoverAudioEventPath;
 
-		// Token: 0x04003F24 RID: 16164
+		// Token: 0x0400545E RID: 21598
 		[SerializeField]
 		[EventRef]
 		private string m_leftChosenAudioEventPath;
 
-		// Token: 0x04003F25 RID: 16165
+		// Token: 0x0400545F RID: 21599
 		[SerializeField]
 		[EventRef]
 		private string m_rightChosenAudioEventPath;
 
-		// Token: 0x04003F26 RID: 16166
+		// Token: 0x04005460 RID: 21600
 		[SerializeField]
 		[EventRef]
 		private string m_roomDiscoveredAudioEventPath;
 
-		// Token: 0x04003F27 RID: 16167
+		// Token: 0x04005461 RID: 21601
 		[SerializeField]
 		[EventRef]
 		private string m_roomCompleteAudioEventPath;
 
-		// Token: 0x04003F28 RID: 16168
+		// Token: 0x04005462 RID: 21602
 		[SerializeField]
 		private UnityEvent m_choiceMadeUnityEvent;
 
-		// Token: 0x04003F29 RID: 16169
+		// Token: 0x04005463 RID: 21603
 		private string m_description = string.Empty;
 
-		// Token: 0x04003F2A RID: 16170
+		// Token: 0x04005464 RID: 21604
 		private RoomSide m_currentChoice = RoomSide.None;
 
-		// Token: 0x04003F2B RID: 16171
+		// Token: 0x04005465 RID: 21605
 		private GameObject m_currentChoiceGameObject;
 
-		// Token: 0x04003F2C RID: 16172
+		// Token: 0x04005466 RID: 21606
 		protected bool m_isRoomComplete;
 
-		// Token: 0x04003F2D RID: 16173
+		// Token: 0x04005467 RID: 21607
 		private DualChoicePropController m_dualChoiceController;
 
-		// Token: 0x04003F2E RID: 16174
+		// Token: 0x04005468 RID: 21608
 		private BaseSpecialRoomController m_specialRoomController;
 
-		// Token: 0x04003F2F RID: 16175
+		// Token: 0x04005469 RID: 21609
 		private Room m_room;
 
-		// Token: 0x04003F30 RID: 16176
+		// Token: 0x0400546A RID: 21610
 		private Action<GameObject> m_onLeftChoiceHover;
 
-		// Token: 0x04003F31 RID: 16177
+		// Token: 0x0400546B RID: 21611
 		private Action<GameObject> m_onRightChoiceHover;
 	}
 }

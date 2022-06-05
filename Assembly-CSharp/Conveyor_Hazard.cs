@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000448 RID: 1096
+// Token: 0x0200071B RID: 1819
 public class Conveyor_Hazard : SingleLine_Multi_Hazard, ITerrainOnStayHitResponse, IHitResponse
 {
-	// Token: 0x06002850 RID: 10320 RVA: 0x0008597C File Offset: 0x00083B7C
+	// Token: 0x0600379E RID: 14238 RVA: 0x0001E91F File Offset: 0x0001CB1F
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_hbController = base.GetComponentInChildren<IHitboxController>();
 	}
 
-	// Token: 0x06002851 RID: 10321 RVA: 0x00085990 File Offset: 0x00083B90
+	// Token: 0x0600379F RID: 14239 RVA: 0x000E6868 File Offset: 0x000E4A68
 	public override void Initialize(PivotPoint pivot, int width, HazardArgs hazardArgs)
 	{
 		base.Initialize(pivot, width, hazardArgs);
@@ -45,7 +45,7 @@ public class Conveyor_Hazard : SingleLine_Multi_Hazard, ITerrainOnStayHitRespons
 		base.StartCoroutine(this.SetConveyorWidth(width));
 	}
 
-	// Token: 0x06002852 RID: 10322 RVA: 0x000859F7 File Offset: 0x00083BF7
+	// Token: 0x060037A0 RID: 14240 RVA: 0x0001E933 File Offset: 0x0001CB33
 	private IEnumerator SetConveyorWidth(int width)
 	{
 		while (!this.m_hbController.IsInitialized)
@@ -61,7 +61,7 @@ public class Conveyor_Hazard : SingleLine_Multi_Hazard, ITerrainOnStayHitRespons
 		yield break;
 	}
 
-	// Token: 0x06002853 RID: 10323 RVA: 0x00085A10 File Offset: 0x00083C10
+	// Token: 0x060037A1 RID: 14241 RVA: 0x000E68D0 File Offset: 0x000E4AD0
 	public void TerrainOnStayHitResponse(IHitboxController otherHBController)
 	{
 		if (otherHBController == null)
@@ -88,18 +88,18 @@ public class Conveyor_Hazard : SingleLine_Multi_Hazard, ITerrainOnStayHitRespons
 		}
 	}
 
-	// Token: 0x06002854 RID: 10324 RVA: 0x00085AAE File Offset: 0x00083CAE
+	// Token: 0x060037A2 RID: 14242 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void ResetHazard()
 	{
 	}
 
-	// Token: 0x0400216E RID: 8558
+	// Token: 0x04002CCA RID: 11466
 	[SerializeField]
 	private SpriteRenderer m_lineSprite;
 
-	// Token: 0x0400216F RID: 8559
+	// Token: 0x04002CCB RID: 11467
 	private bool m_moveRight = true;
 
-	// Token: 0x04002170 RID: 8560
+	// Token: 0x04002CCC RID: 11468
 	private IHitboxController m_hbController;
 }

@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020007B4 RID: 1972
+// Token: 0x02000C7A RID: 3194
 public class MaxHealthChangeEventArgs : EventArgs
 {
-	// Token: 0x06004259 RID: 16985 RVA: 0x000EBBD6 File Offset: 0x000E9DD6
+	// Token: 0x06005BE2 RID: 23522 RVA: 0x000325EC File Offset: 0x000307EC
 	public MaxHealthChangeEventArgs(float newMaxHealth, float prevMaxHealth)
 	{
 		this.Initialise(newMaxHealth, prevMaxHealth);
 	}
 
-	// Token: 0x0600425A RID: 16986 RVA: 0x000EBBE6 File Offset: 0x000E9DE6
+	// Token: 0x06005BE3 RID: 23523 RVA: 0x000325FC File Offset: 0x000307FC
 	public void Initialise(float newMaxHealth, float prevMaxHealth)
 	{
 		this.NewMaxHealthValue = newMaxHealth;
 		this.PrevMaxHealthValue = prevMaxHealth;
 	}
 
-	// Token: 0x17001677 RID: 5751
-	// (get) Token: 0x0600425B RID: 16987 RVA: 0x000EBBF6 File Offset: 0x000E9DF6
-	// (set) Token: 0x0600425C RID: 16988 RVA: 0x000EBBFE File Offset: 0x000E9DFE
+	// Token: 0x17001E75 RID: 7797
+	// (get) Token: 0x06005BE4 RID: 23524 RVA: 0x0003260C File Offset: 0x0003080C
+	// (set) Token: 0x06005BE5 RID: 23525 RVA: 0x00032614 File Offset: 0x00030814
 	public float NewMaxHealthValue { get; private set; }
 
-	// Token: 0x17001678 RID: 5752
-	// (get) Token: 0x0600425D RID: 16989 RVA: 0x000EBC07 File Offset: 0x000E9E07
-	// (set) Token: 0x0600425E RID: 16990 RVA: 0x000EBC0F File Offset: 0x000E9E0F
+	// Token: 0x17001E76 RID: 7798
+	// (get) Token: 0x06005BE6 RID: 23526 RVA: 0x0003261D File Offset: 0x0003081D
+	// (set) Token: 0x06005BE7 RID: 23527 RVA: 0x00032625 File Offset: 0x00030825
 	public float PrevMaxHealthValue { get; private set; }
 }

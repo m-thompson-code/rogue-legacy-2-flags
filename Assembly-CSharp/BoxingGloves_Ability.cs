@@ -3,10 +3,10 @@ using System.Collections;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x02000193 RID: 403
+// Token: 0x020002E8 RID: 744
 public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 {
-	// Token: 0x06000EDF RID: 3807 RVA: 0x0002C843 File Offset: 0x0002AA43
+	// Token: 0x060016A8 RID: 5800 RVA: 0x0000B59D File Offset: 0x0000979D
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -19,8 +19,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		};
 	}
 
-	// Token: 0x17000813 RID: 2067
-	// (get) Token: 0x06000EE0 RID: 3808 RVA: 0x0002C87E File Offset: 0x0002AA7E
+	// Token: 0x17000AA9 RID: 2729
+	// (get) Token: 0x060016A9 RID: 5801 RVA: 0x0000B5D8 File Offset: 0x000097D8
 	protected virtual int NumComboAttacks
 	{
 		get
@@ -29,8 +29,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000814 RID: 2068
-	// (get) Token: 0x06000EE1 RID: 3809 RVA: 0x0002C885 File Offset: 0x0002AA85
+	// Token: 0x17000AAA RID: 2730
+	// (get) Token: 0x060016AA RID: 5802 RVA: 0x00004536 File Offset: 0x00002736
 	protected float TellIntroAnimSpeedNormalAttack
 	{
 		get
@@ -39,8 +39,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000815 RID: 2069
-	// (get) Token: 0x06000EE2 RID: 3810 RVA: 0x0002C88C File Offset: 0x0002AA8C
+	// Token: 0x17000AAB RID: 2731
+	// (get) Token: 0x060016AB RID: 5803 RVA: 0x000052A9 File Offset: 0x000034A9
 	protected float TellIntroAnimSpeedDownAttack
 	{
 		get
@@ -49,8 +49,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000816 RID: 2070
-	// (get) Token: 0x06000EE3 RID: 3811 RVA: 0x0002C893 File Offset: 0x0002AA93
+	// Token: 0x17000AAC RID: 2732
+	// (get) Token: 0x060016AC RID: 5804 RVA: 0x000052A9 File Offset: 0x000034A9
 	protected float TellIntroAnimSpeedUpAttack
 	{
 		get
@@ -59,8 +59,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000817 RID: 2071
-	// (get) Token: 0x06000EE4 RID: 3812 RVA: 0x0002C89A File Offset: 0x0002AA9A
+	// Token: 0x17000AAD RID: 2733
+	// (get) Token: 0x060016AD RID: 5805 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellIntroAnimExitDelayNormalAttack
 	{
 		get
@@ -69,8 +69,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000818 RID: 2072
-	// (get) Token: 0x06000EE5 RID: 3813 RVA: 0x0002C8A1 File Offset: 0x0002AAA1
+	// Token: 0x17000AAE RID: 2734
+	// (get) Token: 0x060016AE RID: 5806 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellIntroAnimExitDelayDownAttack
 	{
 		get
@@ -79,8 +79,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000819 RID: 2073
-	// (get) Token: 0x06000EE6 RID: 3814 RVA: 0x0002C8A8 File Offset: 0x0002AAA8
+	// Token: 0x17000AAF RID: 2735
+	// (get) Token: 0x060016AF RID: 5807 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellIntroAnimExitDelayUpAttack
 	{
 		get
@@ -89,8 +89,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700081A RID: 2074
-	// (get) Token: 0x06000EE7 RID: 3815 RVA: 0x0002C8AF File Offset: 0x0002AAAF
+	// Token: 0x17000AB0 RID: 2736
+	// (get) Token: 0x060016B0 RID: 5808 RVA: 0x00004536 File Offset: 0x00002736
 	protected float TellAnimSpeedNormalAttack
 	{
 		get
@@ -99,8 +99,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700081B RID: 2075
-	// (get) Token: 0x06000EE8 RID: 3816 RVA: 0x0002C8B6 File Offset: 0x0002AAB6
+	// Token: 0x17000AB1 RID: 2737
+	// (get) Token: 0x060016B1 RID: 5809 RVA: 0x0000B5DF File Offset: 0x000097DF
 	protected float TellAnimSpeedDownAttack
 	{
 		get
@@ -109,8 +109,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700081C RID: 2076
-	// (get) Token: 0x06000EE9 RID: 3817 RVA: 0x0002C8BE File Offset: 0x0002AABE
+	// Token: 0x17000AB2 RID: 2738
+	// (get) Token: 0x060016B2 RID: 5810 RVA: 0x0000B5DF File Offset: 0x000097DF
 	protected float TellAnimSpeedUpAttack
 	{
 		get
@@ -119,8 +119,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700081D RID: 2077
-	// (get) Token: 0x06000EEA RID: 3818 RVA: 0x0002C8C6 File Offset: 0x0002AAC6
+	// Token: 0x17000AB3 RID: 2739
+	// (get) Token: 0x060016B3 RID: 5811 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellAnimExitDelayNormalAttack
 	{
 		get
@@ -129,8 +129,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700081E RID: 2078
-	// (get) Token: 0x06000EEB RID: 3819 RVA: 0x0002C8CD File Offset: 0x0002AACD
+	// Token: 0x17000AB4 RID: 2740
+	// (get) Token: 0x060016B4 RID: 5812 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellAnimExitDelayDownAttack
 	{
 		get
@@ -139,8 +139,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700081F RID: 2079
-	// (get) Token: 0x06000EEC RID: 3820 RVA: 0x0002C8D4 File Offset: 0x0002AAD4
+	// Token: 0x17000AB5 RID: 2741
+	// (get) Token: 0x060016B5 RID: 5813 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellAnimExitDelayUpAttack
 	{
 		get
@@ -149,8 +149,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000820 RID: 2080
-	// (get) Token: 0x06000EED RID: 3821 RVA: 0x0002C8DB File Offset: 0x0002AADB
+	// Token: 0x17000AB6 RID: 2742
+	// (get) Token: 0x060016B6 RID: 5814 RVA: 0x00004536 File Offset: 0x00002736
 	protected float AttackIntroAnimSpeedNormalAttack
 	{
 		get
@@ -159,8 +159,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000821 RID: 2081
-	// (get) Token: 0x06000EEE RID: 3822 RVA: 0x0002C8E2 File Offset: 0x0002AAE2
+	// Token: 0x17000AB7 RID: 2743
+	// (get) Token: 0x060016B7 RID: 5815 RVA: 0x0000B5E7 File Offset: 0x000097E7
 	protected float AttackIntroAnimSpeedDownAttack
 	{
 		get
@@ -169,8 +169,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000822 RID: 2082
-	// (get) Token: 0x06000EEF RID: 3823 RVA: 0x0002C8EA File Offset: 0x0002AAEA
+	// Token: 0x17000AB8 RID: 2744
+	// (get) Token: 0x060016B8 RID: 5816 RVA: 0x0000B5E7 File Offset: 0x000097E7
 	protected float AttackIntroAnimSpeedUpAttack
 	{
 		get
@@ -179,8 +179,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000823 RID: 2083
-	// (get) Token: 0x06000EF0 RID: 3824 RVA: 0x0002C8F2 File Offset: 0x0002AAF2
+	// Token: 0x17000AB9 RID: 2745
+	// (get) Token: 0x060016B9 RID: 5817 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackIntroAnimExitDelayNormalAttack
 	{
 		get
@@ -189,8 +189,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000824 RID: 2084
-	// (get) Token: 0x06000EF1 RID: 3825 RVA: 0x0002C8F9 File Offset: 0x0002AAF9
+	// Token: 0x17000ABA RID: 2746
+	// (get) Token: 0x060016BA RID: 5818 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackIntroAnimExitDelayDownAttack
 	{
 		get
@@ -199,8 +199,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000825 RID: 2085
-	// (get) Token: 0x06000EF2 RID: 3826 RVA: 0x0002C900 File Offset: 0x0002AB00
+	// Token: 0x17000ABB RID: 2747
+	// (get) Token: 0x060016BB RID: 5819 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackIntroAnimExitDelayUpAttack
 	{
 		get
@@ -209,8 +209,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000826 RID: 2086
-	// (get) Token: 0x06000EF3 RID: 3827 RVA: 0x0002C907 File Offset: 0x0002AB07
+	// Token: 0x17000ABC RID: 2748
+	// (get) Token: 0x060016BC RID: 5820 RVA: 0x00004536 File Offset: 0x00002736
 	protected float AttackAnimSpeedNormalAttack
 	{
 		get
@@ -219,8 +219,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000827 RID: 2087
-	// (get) Token: 0x06000EF4 RID: 3828 RVA: 0x0002C90E File Offset: 0x0002AB0E
+	// Token: 0x17000ABD RID: 2749
+	// (get) Token: 0x060016BD RID: 5821 RVA: 0x0000B5EF File Offset: 0x000097EF
 	protected float AttackAnimSpeedDownAttack
 	{
 		get
@@ -229,8 +229,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000828 RID: 2088
-	// (get) Token: 0x06000EF5 RID: 3829 RVA: 0x0002C916 File Offset: 0x0002AB16
+	// Token: 0x17000ABE RID: 2750
+	// (get) Token: 0x060016BE RID: 5822 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected float AttackAnimSpeedUpAttack
 	{
 		get
@@ -239,8 +239,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000829 RID: 2089
-	// (get) Token: 0x06000EF6 RID: 3830 RVA: 0x0002C91D File Offset: 0x0002AB1D
+	// Token: 0x17000ABF RID: 2751
+	// (get) Token: 0x060016BF RID: 5823 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackAnimExitDelayNormalAttack
 	{
 		get
@@ -249,8 +249,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700082A RID: 2090
-	// (get) Token: 0x06000EF7 RID: 3831 RVA: 0x0002C924 File Offset: 0x0002AB24
+	// Token: 0x17000AC0 RID: 2752
+	// (get) Token: 0x060016C0 RID: 5824 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackAnimExitDelayDownAttack
 	{
 		get
@@ -259,8 +259,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700082B RID: 2091
-	// (get) Token: 0x06000EF8 RID: 3832 RVA: 0x0002C92B File Offset: 0x0002AB2B
+	// Token: 0x17000AC1 RID: 2753
+	// (get) Token: 0x060016C1 RID: 5825 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackAnimExitDelayUpAttack
 	{
 		get
@@ -269,8 +269,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700082C RID: 2092
-	// (get) Token: 0x06000EF9 RID: 3833 RVA: 0x0002C932 File Offset: 0x0002AB32
+	// Token: 0x17000AC2 RID: 2754
+	// (get) Token: 0x060016C2 RID: 5826 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected float ExitAnimSpeedNormalAttack
 	{
 		get
@@ -279,8 +279,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700082D RID: 2093
-	// (get) Token: 0x06000EFA RID: 3834 RVA: 0x0002C939 File Offset: 0x0002AB39
+	// Token: 0x17000AC3 RID: 2755
+	// (get) Token: 0x060016C3 RID: 5827 RVA: 0x0000B5F7 File Offset: 0x000097F7
 	protected float ExitAnimSpeedDownAttack
 	{
 		get
@@ -289,8 +289,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700082E RID: 2094
-	// (get) Token: 0x06000EFB RID: 3835 RVA: 0x0002C941 File Offset: 0x0002AB41
+	// Token: 0x17000AC4 RID: 2756
+	// (get) Token: 0x060016C4 RID: 5828 RVA: 0x00004C67 File Offset: 0x00002E67
 	protected float ExitAnimSpeedUpAttack
 	{
 		get
@@ -299,8 +299,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700082F RID: 2095
-	// (get) Token: 0x06000EFC RID: 3836 RVA: 0x0002C948 File Offset: 0x0002AB48
+	// Token: 0x17000AC5 RID: 2757
+	// (get) Token: 0x060016C5 RID: 5829 RVA: 0x00006772 File Offset: 0x00004972
 	protected float ExitAnimExitDelayNormalAttack
 	{
 		get
@@ -309,8 +309,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000830 RID: 2096
-	// (get) Token: 0x06000EFD RID: 3837 RVA: 0x0002C94F File Offset: 0x0002AB4F
+	// Token: 0x17000AC6 RID: 2758
+	// (get) Token: 0x060016C6 RID: 5830 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float ExitAnimExitDelayDownAttack
 	{
 		get
@@ -319,8 +319,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000831 RID: 2097
-	// (get) Token: 0x06000EFE RID: 3838 RVA: 0x0002C956 File Offset: 0x0002AB56
+	// Token: 0x17000AC7 RID: 2759
+	// (get) Token: 0x060016C7 RID: 5831 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float ExitAnimExitDelayUpAttack
 	{
 		get
@@ -329,8 +329,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000832 RID: 2098
-	// (get) Token: 0x06000EFF RID: 3839 RVA: 0x0002C95D File Offset: 0x0002AB5D
+	// Token: 0x17000AC8 RID: 2760
+	// (get) Token: 0x060016C8 RID: 5832 RVA: 0x0000B5FF File Offset: 0x000097FF
 	public override Vector2 ProjectileOffset
 	{
 		get
@@ -347,8 +347,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000833 RID: 2099
-	// (get) Token: 0x06000F00 RID: 3840 RVA: 0x0002C983 File Offset: 0x0002AB83
+	// Token: 0x17000AC9 RID: 2761
+	// (get) Token: 0x060016C9 RID: 5833 RVA: 0x0000B625 File Offset: 0x00009825
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -365,8 +365,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000834 RID: 2100
-	// (get) Token: 0x06000F01 RID: 3841 RVA: 0x0002C9A9 File Offset: 0x0002ABA9
+	// Token: 0x17000ACA RID: 2762
+	// (get) Token: 0x060016CA RID: 5834 RVA: 0x0000B64B File Offset: 0x0000984B
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -383,8 +383,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000835 RID: 2101
-	// (get) Token: 0x06000F02 RID: 3842 RVA: 0x0002C9CF File Offset: 0x0002ABCF
+	// Token: 0x17000ACB RID: 2763
+	// (get) Token: 0x060016CB RID: 5835 RVA: 0x0000B671 File Offset: 0x00009871
 	protected override float TellAnimSpeed
 	{
 		get
@@ -401,8 +401,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000836 RID: 2102
-	// (get) Token: 0x06000F03 RID: 3843 RVA: 0x0002C9F5 File Offset: 0x0002ABF5
+	// Token: 0x17000ACC RID: 2764
+	// (get) Token: 0x060016CC RID: 5836 RVA: 0x0000B697 File Offset: 0x00009897
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -419,8 +419,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000837 RID: 2103
-	// (get) Token: 0x06000F04 RID: 3844 RVA: 0x0002CA1B File Offset: 0x0002AC1B
+	// Token: 0x17000ACD RID: 2765
+	// (get) Token: 0x060016CD RID: 5837 RVA: 0x0000B6BD File Offset: 0x000098BD
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -437,8 +437,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000838 RID: 2104
-	// (get) Token: 0x06000F05 RID: 3845 RVA: 0x0002CA41 File Offset: 0x0002AC41
+	// Token: 0x17000ACE RID: 2766
+	// (get) Token: 0x060016CE RID: 5838 RVA: 0x0000B6E3 File Offset: 0x000098E3
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -455,8 +455,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000839 RID: 2105
-	// (get) Token: 0x06000F06 RID: 3846 RVA: 0x0002CA67 File Offset: 0x0002AC67
+	// Token: 0x17000ACF RID: 2767
+	// (get) Token: 0x060016CF RID: 5839 RVA: 0x0000B709 File Offset: 0x00009909
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -473,8 +473,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700083A RID: 2106
-	// (get) Token: 0x06000F07 RID: 3847 RVA: 0x0002CA8D File Offset: 0x0002AC8D
+	// Token: 0x17000AD0 RID: 2768
+	// (get) Token: 0x060016D0 RID: 5840 RVA: 0x0000B72F File Offset: 0x0000992F
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -491,8 +491,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700083B RID: 2107
-	// (get) Token: 0x06000F08 RID: 3848 RVA: 0x0002CAB3 File Offset: 0x0002ACB3
+	// Token: 0x17000AD1 RID: 2769
+	// (get) Token: 0x060016D1 RID: 5841 RVA: 0x0000B755 File Offset: 0x00009955
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -509,8 +509,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700083C RID: 2108
-	// (get) Token: 0x06000F09 RID: 3849 RVA: 0x0002CAD9 File Offset: 0x0002ACD9
+	// Token: 0x17000AD2 RID: 2770
+	// (get) Token: 0x060016D2 RID: 5842 RVA: 0x0000B77B File Offset: 0x0000997B
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -527,8 +527,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700083D RID: 2109
-	// (get) Token: 0x06000F0A RID: 3850 RVA: 0x0002CB00 File Offset: 0x0002AD00
+	// Token: 0x17000AD3 RID: 2771
+	// (get) Token: 0x060016D3 RID: 5843 RVA: 0x0008B654 File Offset: 0x00089854
 	public override string ProjectileName
 	{
 		get
@@ -555,8 +555,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700083E RID: 2110
-	// (get) Token: 0x06000F0B RID: 3851 RVA: 0x0002CB63 File Offset: 0x0002AD63
+	// Token: 0x17000AD4 RID: 2772
+	// (get) Token: 0x060016D4 RID: 5844 RVA: 0x0000B7A1 File Offset: 0x000099A1
 	public override AbilityData AbilityData
 	{
 		get
@@ -573,8 +573,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700083F RID: 2111
-	// (get) Token: 0x06000F0C RID: 3852 RVA: 0x0002CB89 File Offset: 0x0002AD89
+	// Token: 0x17000AD5 RID: 2773
+	// (get) Token: 0x060016D5 RID: 5845 RVA: 0x0000B7C7 File Offset: 0x000099C7
 	public override string AbilityTellIntroName
 	{
 		get
@@ -591,8 +591,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000840 RID: 2112
-	// (get) Token: 0x06000F0D RID: 3853 RVA: 0x0002CBC7 File Offset: 0x0002ADC7
+	// Token: 0x17000AD6 RID: 2774
+	// (get) Token: 0x060016D6 RID: 5846 RVA: 0x0000B805 File Offset: 0x00009A05
 	protected bool PerformUpAttack
 	{
 		get
@@ -601,8 +601,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000841 RID: 2113
-	// (get) Token: 0x06000F0E RID: 3854 RVA: 0x0002CBCF File Offset: 0x0002ADCF
+	// Token: 0x17000AD7 RID: 2775
+	// (get) Token: 0x060016D7 RID: 5847 RVA: 0x0000B80D File Offset: 0x00009A0D
 	protected bool PerformDownAttack
 	{
 		get
@@ -611,8 +611,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000842 RID: 2114
-	// (get) Token: 0x06000F0F RID: 3855 RVA: 0x0002CBD7 File Offset: 0x0002ADD7
+	// Token: 0x17000AD8 RID: 2776
+	// (get) Token: 0x060016D8 RID: 5848 RVA: 0x0000B815 File Offset: 0x00009A15
 	protected bool IsGrounded
 	{
 		get
@@ -621,8 +621,8 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000843 RID: 2115
-	// (get) Token: 0x06000F10 RID: 3856 RVA: 0x0002CBFB File Offset: 0x0002ADFB
+	// Token: 0x17000AD9 RID: 2777
+	// (get) Token: 0x060016D9 RID: 5849 RVA: 0x0000B839 File Offset: 0x00009A39
 	public override float MovementMod
 	{
 		get
@@ -635,14 +635,14 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F11 RID: 3857 RVA: 0x0002CC1B File Offset: 0x0002AE1B
+	// Token: 0x060016DA RID: 5850 RVA: 0x0000B859 File Offset: 0x00009A59
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_continueComboEvent = new Action<Projectile_RL, GameObject>(this.ContinueComboEvent);
 	}
 
-	// Token: 0x06000F12 RID: 3858 RVA: 0x0002CC38 File Offset: 0x0002AE38
+	// Token: 0x060016DB RID: 5851 RVA: 0x0008B6B8 File Offset: 0x000898B8
 	public override void PreCastAbility()
 	{
 		this.m_isUpAttacking = false;
@@ -657,7 +657,7 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000F13 RID: 3859 RVA: 0x0002CC8A File Offset: 0x0002AE8A
+	// Token: 0x060016DC RID: 5852 RVA: 0x0000B873 File Offset: 0x00009A73
 	protected override void OnEnterTellLogic()
 	{
 		this.m_hasAttacked = false;
@@ -665,14 +665,14 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		base.OnEnterTellLogic();
 	}
 
-	// Token: 0x06000F14 RID: 3860 RVA: 0x0002CCA7 File Offset: 0x0002AEA7
+	// Token: 0x060016DD RID: 5853 RVA: 0x0000B890 File Offset: 0x00009A90
 	protected override void OnEnterAttackLogic()
 	{
 		base.OnEnterAttackLogic();
 		this.m_canAttackAgainCounter = 0f;
 	}
 
-	// Token: 0x06000F15 RID: 3861 RVA: 0x0002CCBA File Offset: 0x0002AEBA
+	// Token: 0x060016DE RID: 5854 RVA: 0x0000B8A3 File Offset: 0x00009AA3
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -682,7 +682,7 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F16 RID: 3862 RVA: 0x0002CCE8 File Offset: 0x0002AEE8
+	// Token: 0x060016DF RID: 5855 RVA: 0x0008B70C File Offset: 0x0008990C
 	private void ContinueComboEvent(Projectile_RL projectile, GameObject colliderObj)
 	{
 		if (projectile)
@@ -716,7 +716,7 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		this.m_reenableGravityCoroutine = base.StartCoroutine(this.ReenableGravityCoroutine());
 	}
 
-	// Token: 0x06000F17 RID: 3863 RVA: 0x0002CDE6 File Offset: 0x0002AFE6
+	// Token: 0x060016E0 RID: 5856 RVA: 0x0000B8D0 File Offset: 0x00009AD0
 	private IEnumerator ReenableGravityCoroutine()
 	{
 		float delay = Time.time + 0.25f;
@@ -732,7 +732,7 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000F18 RID: 3864 RVA: 0x0002CDF8 File Offset: 0x0002AFF8
+	// Token: 0x060016E1 RID: 5857 RVA: 0x0008B80C File Offset: 0x00089A0C
 	protected void LateUpdate()
 	{
 		if (!base.AbilityActive)
@@ -785,7 +785,7 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F19 RID: 3865 RVA: 0x0002CF2C File Offset: 0x0002B12C
+	// Token: 0x060016E2 RID: 5858 RVA: 0x0000B8DF File Offset: 0x00009ADF
 	protected override void OnExitExitLogic()
 	{
 		if (this.m_hasAttacked)
@@ -795,7 +795,7 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		base.OnExitExitLogic();
 	}
 
-	// Token: 0x06000F1A RID: 3866 RVA: 0x0002CF40 File Offset: 0x0002B140
+	// Token: 0x060016E3 RID: 5859 RVA: 0x0008B940 File Offset: 0x00089B40
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_firedProjectile)
@@ -814,78 +814,78 @@ public class BoxingGloves_Ability : BaseAbility_RL, IAttack, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x04001138 RID: 4408
+	// Token: 0x040016D9 RID: 5849
 	[SerializeField]
 	protected string m_projectileName2;
 
-	// Token: 0x04001139 RID: 4409
+	// Token: 0x040016DA RID: 5850
 	[SerializeField]
 	protected string m_projectileName3;
 
-	// Token: 0x0400113A RID: 4410
+	// Token: 0x040016DB RID: 5851
 	[Header("Downward Attack Values")]
 	[SerializeField]
 	protected string m_downAttackTellIntroName;
 
-	// Token: 0x0400113B RID: 4411
+	// Token: 0x040016DC RID: 5852
 	[SerializeField]
 	protected AbilityData m_downAttackAbilityData;
 
-	// Token: 0x0400113C RID: 4412
+	// Token: 0x040016DD RID: 5853
 	[SerializeField]
 	protected string m_downAttackProjectileName;
 
-	// Token: 0x0400113D RID: 4413
+	// Token: 0x040016DE RID: 5854
 	[SerializeField]
 	protected Vector2 m_downAttackProjectileOffset;
 
-	// Token: 0x0400113E RID: 4414
+	// Token: 0x040016DF RID: 5855
 	[Header("Upward Attack Values")]
 	[SerializeField]
 	protected string m_upAttackTellIntroName;
 
-	// Token: 0x0400113F RID: 4415
+	// Token: 0x040016E0 RID: 5856
 	[SerializeField]
 	protected AbilityData m_upAttackAbilityData;
 
-	// Token: 0x04001140 RID: 4416
+	// Token: 0x040016E1 RID: 5857
 	[SerializeField]
 	protected string m_upAttackProjectileName;
 
-	// Token: 0x04001141 RID: 4417
+	// Token: 0x040016E2 RID: 5858
 	[SerializeField]
 	protected Vector2 m_upAttackProjectileOffset;
 
-	// Token: 0x04001142 RID: 4418
+	// Token: 0x040016E3 RID: 5859
 	private bool m_isUpAttacking;
 
-	// Token: 0x04001143 RID: 4419
+	// Token: 0x040016E4 RID: 5860
 	private bool m_isDownAttacking;
 
-	// Token: 0x04001144 RID: 4420
+	// Token: 0x040016E5 RID: 5861
 	private int m_comboNumber = 1;
 
-	// Token: 0x04001145 RID: 4421
+	// Token: 0x040016E6 RID: 5862
 	private float m_canAttackAgainCounter;
 
-	// Token: 0x04001146 RID: 4422
+	// Token: 0x040016E7 RID: 5863
 	private Coroutine m_pushForwardCoroutine;
 
-	// Token: 0x04001147 RID: 4423
+	// Token: 0x040016E8 RID: 5864
 	private int m_punchIndex;
 
-	// Token: 0x04001148 RID: 4424
+	// Token: 0x040016E9 RID: 5865
 	private Coroutine m_reenableGravityCoroutine;
 
-	// Token: 0x04001149 RID: 4425
+	// Token: 0x040016EA RID: 5866
 	private bool m_hasAttacked;
 
-	// Token: 0x0400114A RID: 4426
+	// Token: 0x040016EB RID: 5867
 	private Action<Projectile_RL, GameObject> m_continueComboEvent;
 
-	// Token: 0x0400114B RID: 4427
+	// Token: 0x040016EC RID: 5868
 	private const float CanAttackAgainDelay = 0.085f;
 
-	// Token: 0x0400114C RID: 4428
+	// Token: 0x040016ED RID: 5869
 	private const float GRAVITY_DISABLE_DURATION = 0.25f;
 }

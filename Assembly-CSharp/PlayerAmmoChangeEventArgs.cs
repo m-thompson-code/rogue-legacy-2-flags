@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020007B7 RID: 1975
+// Token: 0x02000C7D RID: 3197
 public class PlayerAmmoChangeEventArgs : EventArgs
 {
-	// Token: 0x0600426B RID: 17003 RVA: 0x000EBC9C File Offset: 0x000E9E9C
+	// Token: 0x06005BF4 RID: 23540 RVA: 0x000326B2 File Offset: 0x000308B2
 	public PlayerAmmoChangeEventArgs(IAbility ability, float newAmmo, float prevAmmo)
 	{
 		this.Initialize(ability, newAmmo, prevAmmo);
 	}
 
-	// Token: 0x0600426C RID: 17004 RVA: 0x000EBCAD File Offset: 0x000E9EAD
+	// Token: 0x06005BF5 RID: 23541 RVA: 0x000326C3 File Offset: 0x000308C3
 	public void Initialize(IAbility ability, float newAmmo, float prevAmmo)
 	{
 		this.AbilityObj = ability;
@@ -17,18 +17,18 @@ public class PlayerAmmoChangeEventArgs : EventArgs
 		this.PrevAmmoValue = prevAmmo;
 	}
 
-	// Token: 0x1700167D RID: 5757
-	// (get) Token: 0x0600426D RID: 17005 RVA: 0x000EBCC4 File Offset: 0x000E9EC4
-	// (set) Token: 0x0600426E RID: 17006 RVA: 0x000EBCCC File Offset: 0x000E9ECC
+	// Token: 0x17001E7B RID: 7803
+	// (get) Token: 0x06005BF6 RID: 23542 RVA: 0x000326DA File Offset: 0x000308DA
+	// (set) Token: 0x06005BF7 RID: 23543 RVA: 0x000326E2 File Offset: 0x000308E2
 	public IAbility AbilityObj { get; private set; }
 
-	// Token: 0x1700167E RID: 5758
-	// (get) Token: 0x0600426F RID: 17007 RVA: 0x000EBCD5 File Offset: 0x000E9ED5
-	// (set) Token: 0x06004270 RID: 17008 RVA: 0x000EBCDD File Offset: 0x000E9EDD
+	// Token: 0x17001E7C RID: 7804
+	// (get) Token: 0x06005BF8 RID: 23544 RVA: 0x000326EB File Offset: 0x000308EB
+	// (set) Token: 0x06005BF9 RID: 23545 RVA: 0x000326F3 File Offset: 0x000308F3
 	public float NewAmmoValue { get; private set; }
 
-	// Token: 0x1700167F RID: 5759
-	// (get) Token: 0x06004271 RID: 17009 RVA: 0x000EBCE6 File Offset: 0x000E9EE6
-	// (set) Token: 0x06004272 RID: 17010 RVA: 0x000EBCEE File Offset: 0x000E9EEE
+	// Token: 0x17001E7D RID: 7805
+	// (get) Token: 0x06005BFA RID: 23546 RVA: 0x000326FC File Offset: 0x000308FC
+	// (set) Token: 0x06005BFB RID: 23547 RVA: 0x00032704 File Offset: 0x00030904
 	public float PrevAmmoValue { get; private set; }
 }

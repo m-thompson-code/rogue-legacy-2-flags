@@ -6,41 +6,41 @@ using Sigtrap.Relays;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x020004DA RID: 1242
+// Token: 0x02000819 RID: 2073
 public class JournalSpecialPropController : BaseSpecialPropController, IDisplaySpeechBubble
 {
-	// Token: 0x17001177 RID: 4471
-	// (get) Token: 0x06002E53 RID: 11859 RVA: 0x0009C9AC File Offset: 0x0009ABAC
-	// (set) Token: 0x06002E54 RID: 11860 RVA: 0x0009C9B4 File Offset: 0x0009ABB4
+	// Token: 0x1700172A RID: 5930
+	// (get) Token: 0x06003FE3 RID: 16355 RVA: 0x00023493 File Offset: 0x00021693
+	// (set) Token: 0x06003FE4 RID: 16356 RVA: 0x0002349B File Offset: 0x0002169B
 	public string TitleOverrideLocID { get; private set; }
 
-	// Token: 0x17001178 RID: 4472
-	// (get) Token: 0x06002E55 RID: 11861 RVA: 0x0009C9BD File Offset: 0x0009ABBD
-	// (set) Token: 0x06002E56 RID: 11862 RVA: 0x0009C9C5 File Offset: 0x0009ABC5
+	// Token: 0x1700172B RID: 5931
+	// (get) Token: 0x06003FE5 RID: 16357 RVA: 0x000234A4 File Offset: 0x000216A4
+	// (set) Token: 0x06003FE6 RID: 16358 RVA: 0x000234AC File Offset: 0x000216AC
 	public string EntryOverrideLocID { get; private set; }
 
-	// Token: 0x17001179 RID: 4473
-	// (get) Token: 0x06002E57 RID: 11863 RVA: 0x0009C9CE File Offset: 0x0009ABCE
-	// (set) Token: 0x06002E58 RID: 11864 RVA: 0x0009C9D6 File Offset: 0x0009ABD6
+	// Token: 0x1700172C RID: 5932
+	// (get) Token: 0x06003FE7 RID: 16359 RVA: 0x000234B5 File Offset: 0x000216B5
+	// (set) Token: 0x06003FE8 RID: 16360 RVA: 0x000234BD File Offset: 0x000216BD
 	public JournalCategoryType JournalCategoryTypeOverride { get; private set; }
 
-	// Token: 0x1700117A RID: 4474
-	// (get) Token: 0x06002E59 RID: 11865 RVA: 0x0009C9DF File Offset: 0x0009ABDF
-	// (set) Token: 0x06002E5A RID: 11866 RVA: 0x0009C9E7 File Offset: 0x0009ABE7
+	// Token: 0x1700172D RID: 5933
+	// (get) Token: 0x06003FE9 RID: 16361 RVA: 0x000234C6 File Offset: 0x000216C6
+	// (set) Token: 0x06003FEA RID: 16362 RVA: 0x000234CE File Offset: 0x000216CE
 	public JournalType JournalType { get; private set; }
 
-	// Token: 0x1700117B RID: 4475
-	// (get) Token: 0x06002E5B RID: 11867 RVA: 0x0009C9F0 File Offset: 0x0009ABF0
-	// (set) Token: 0x06002E5C RID: 11868 RVA: 0x0009C9F8 File Offset: 0x0009ABF8
+	// Token: 0x1700172E RID: 5934
+	// (get) Token: 0x06003FEB RID: 16363 RVA: 0x000234D7 File Offset: 0x000216D7
+	// (set) Token: 0x06003FEC RID: 16364 RVA: 0x000234DF File Offset: 0x000216DF
 	public DialogueWindowStyle DialogueWindowStyle { get; private set; }
 
-	// Token: 0x1700117C RID: 4476
-	// (get) Token: 0x06002E5D RID: 11869 RVA: 0x0009CA01 File Offset: 0x0009AC01
-	// (set) Token: 0x06002E5E RID: 11870 RVA: 0x0009CA09 File Offset: 0x0009AC09
+	// Token: 0x1700172F RID: 5935
+	// (get) Token: 0x06003FED RID: 16365 RVA: 0x000234E8 File Offset: 0x000216E8
+	// (set) Token: 0x06003FEE RID: 16366 RVA: 0x000234F0 File Offset: 0x000216F0
 	public DialoguePortraitType PortraitType { get; private set; }
 
-	// Token: 0x1700117D RID: 4477
-	// (get) Token: 0x06002E5F RID: 11871 RVA: 0x0009CA12 File Offset: 0x0009AC12
+	// Token: 0x17001730 RID: 5936
+	// (get) Token: 0x06003FEF RID: 16367 RVA: 0x000234F9 File Offset: 0x000216F9
 	public IRelayLink FinishedReadingRelay
 	{
 		get
@@ -49,8 +49,8 @@ public class JournalSpecialPropController : BaseSpecialPropController, IDisplayS
 		}
 	}
 
-	// Token: 0x1700117E RID: 4478
-	// (get) Token: 0x06002E60 RID: 11872 RVA: 0x0009CA20 File Offset: 0x0009AC20
+	// Token: 0x17001731 RID: 5937
+	// (get) Token: 0x06003FF0 RID: 16368 RVA: 0x000FFBF8 File Offset: 0x000FDDF8
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -74,8 +74,8 @@ public class JournalSpecialPropController : BaseSpecialPropController, IDisplayS
 		}
 	}
 
-	// Token: 0x1700117F RID: 4479
-	// (get) Token: 0x06002E61 RID: 11873 RVA: 0x0009CAC5 File Offset: 0x0009ACC5
+	// Token: 0x17001732 RID: 5938
+	// (get) Token: 0x06003FF1 RID: 16369 RVA: 0x00004A8D File Offset: 0x00002C8D
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -84,7 +84,7 @@ public class JournalSpecialPropController : BaseSpecialPropController, IDisplayS
 		}
 	}
 
-	// Token: 0x06002E62 RID: 11874 RVA: 0x0009CAC8 File Offset: 0x0009ACC8
+	// Token: 0x06003FF2 RID: 16370 RVA: 0x00023506 File Offset: 0x00021706
 	protected override void Awake()
 	{
 		base.Awake();
@@ -92,7 +92,7 @@ public class JournalSpecialPropController : BaseSpecialPropController, IDisplayS
 		this.m_onTransitionStart = new Action(this.OnTransitionStart);
 	}
 
-	// Token: 0x06002E63 RID: 11875 RVA: 0x0009CAF4 File Offset: 0x0009ACF4
+	// Token: 0x06003FF3 RID: 16371 RVA: 0x000FFCA0 File Offset: 0x000FDEA0
 	protected override void InitializePooledPropOnEnter()
 	{
 		Prop component = base.GetComponent<Prop>();
@@ -130,7 +130,7 @@ public class JournalSpecialPropController : BaseSpecialPropController, IDisplayS
 		}
 	}
 
-	// Token: 0x06002E64 RID: 11876 RVA: 0x0009CC10 File Offset: 0x0009AE10
+	// Token: 0x06003FF4 RID: 16372 RVA: 0x000FFDBC File Offset: 0x000FDFBC
 	public void TriggerJournal()
 	{
 		if (base.IsPropComplete && string.IsNullOrEmpty(this.EntryOverrideLocID) && string.IsNullOrEmpty(this.TitleOverrideLocID))
@@ -231,7 +231,7 @@ public class JournalSpecialPropController : BaseSpecialPropController, IDisplayS
 		}
 	}
 
-	// Token: 0x06002E65 RID: 11877 RVA: 0x0009CF0C File Offset: 0x0009B10C
+	// Token: 0x06003FF5 RID: 16373 RVA: 0x001000B8 File Offset: 0x000FE2B8
 	private void OnJournalWindowClosed()
 	{
 		WindowManager.GetWindowController(this.m_openWindow).WindowClosedEvent.RemoveListener(this.m_onJournalWindowClosed);
@@ -250,7 +250,7 @@ public class JournalSpecialPropController : BaseSpecialPropController, IDisplayS
 		this.m_finishedReadingRelay.Dispatch();
 	}
 
-	// Token: 0x06002E66 RID: 11878 RVA: 0x0009CF78 File Offset: 0x0009B178
+	// Token: 0x06003FF6 RID: 16374 RVA: 0x00100124 File Offset: 0x000FE324
 	private void HandleAchievements()
 	{
 		if (this.JournalType == JournalType.MemoryFragment && SaveManager.PlayerSaveData.GetHeirloomLevel(HeirloomType.UnlockMemory) <= 0)
@@ -317,18 +317,18 @@ public class JournalSpecialPropController : BaseSpecialPropController, IDisplayS
 		}
 	}
 
-	// Token: 0x06002E67 RID: 11879 RVA: 0x0009D086 File Offset: 0x0009B286
+	// Token: 0x06003FF7 RID: 16375 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 	}
 
-	// Token: 0x06002E68 RID: 11880 RVA: 0x0009D088 File Offset: 0x0009B288
+	// Token: 0x06003FF8 RID: 16376 RVA: 0x00023532 File Offset: 0x00021732
 	private void OnEnable()
 	{
 		SceneLoader_RL.TransitionStartRelay.AddListener(this.m_onTransitionStart, false);
 	}
 
-	// Token: 0x06002E69 RID: 11881 RVA: 0x0009D09C File Offset: 0x0009B29C
+	// Token: 0x06003FF9 RID: 16377 RVA: 0x00100234 File Offset: 0x000FE434
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -345,7 +345,7 @@ public class JournalSpecialPropController : BaseSpecialPropController, IDisplayS
 		SceneLoader_RL.TransitionStartRelay.RemoveListener(this.m_onTransitionStart);
 	}
 
-	// Token: 0x06002E6A RID: 11882 RVA: 0x0009D124 File Offset: 0x0009B324
+	// Token: 0x06003FFA RID: 16378 RVA: 0x001002BC File Offset: 0x000FE4BC
 	private void OnTransitionStart()
 	{
 		StudioEventEmitter component = base.GetComponent<StudioEventEmitter>();
@@ -355,27 +355,27 @@ public class JournalSpecialPropController : BaseSpecialPropController, IDisplayS
 		}
 	}
 
-	// Token: 0x040024F2 RID: 9458
+	// Token: 0x040031F2 RID: 12786
 	[SerializeField]
 	private int m_journalIndexOverride = -1;
 
-	// Token: 0x040024F3 RID: 9459
+	// Token: 0x040031F3 RID: 12787
 	[SerializeField]
 	private UnityEvent m_journalWindowOpenedUnityEvent;
 
-	// Token: 0x040024F4 RID: 9460
+	// Token: 0x040031F4 RID: 12788
 	[SerializeField]
 	private UnityEvent m_journalWindowClosedUnityEvent;
 
-	// Token: 0x040024F5 RID: 9461
+	// Token: 0x040031F5 RID: 12789
 	private WindowID m_openWindow;
 
-	// Token: 0x040024FC RID: 9468
+	// Token: 0x040031FC RID: 12796
 	private Relay m_finishedReadingRelay = new Relay();
 
-	// Token: 0x040024FD RID: 9469
+	// Token: 0x040031FD RID: 12797
 	private Action m_onTransitionStart;
 
-	// Token: 0x040024FE RID: 9470
+	// Token: 0x040031FE RID: 12798
 	private UnityAction m_onJournalWindowClosed;
 }

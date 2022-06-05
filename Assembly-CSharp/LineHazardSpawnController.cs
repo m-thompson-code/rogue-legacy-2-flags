@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200061B RID: 1563
+// Token: 0x02000A3E RID: 2622
 public class LineHazardSpawnController : HazardSpawnControllerBase, IHazardSpawnController, IComplexSpawnController, ISpawnController, IRoomConsumer, IIDConsumer, IStateConsumer, ISetSpawnType, IHasProjectileNameArray, IWidthConsumer, IMirror, IPivotConsumer
 {
-	// Token: 0x170013EB RID: 5099
-	// (get) Token: 0x06003868 RID: 14440 RVA: 0x000C0BF9 File Offset: 0x000BEDF9
+	// Token: 0x17001B42 RID: 6978
+	// (get) Token: 0x06004F0C RID: 20236 RVA: 0x00005315 File Offset: 0x00003515
 	public override HazardCategory Category
 	{
 		get
@@ -14,9 +14,9 @@ public class LineHazardSpawnController : HazardSpawnControllerBase, IHazardSpawn
 		}
 	}
 
-	// Token: 0x170013EC RID: 5100
-	// (get) Token: 0x06003869 RID: 14441 RVA: 0x000C0BFD File Offset: 0x000BEDFD
-	// (set) Token: 0x0600386A RID: 14442 RVA: 0x000C0C05 File Offset: 0x000BEE05
+	// Token: 0x17001B43 RID: 6979
+	// (get) Token: 0x06004F0D RID: 20237 RVA: 0x0002B1B0 File Offset: 0x000293B0
+	// (set) Token: 0x06004F0E RID: 20238 RVA: 0x0002B1B8 File Offset: 0x000293B8
 	public int Width
 	{
 		get
@@ -29,9 +29,9 @@ public class LineHazardSpawnController : HazardSpawnControllerBase, IHazardSpawn
 		}
 	}
 
-	// Token: 0x170013ED RID: 5101
-	// (get) Token: 0x0600386B RID: 14443 RVA: 0x000C0C0E File Offset: 0x000BEE0E
-	// (set) Token: 0x0600386C RID: 14444 RVA: 0x000C0C16 File Offset: 0x000BEE16
+	// Token: 0x17001B44 RID: 6980
+	// (get) Token: 0x06004F0F RID: 20239 RVA: 0x0002B1C1 File Offset: 0x000293C1
+	// (set) Token: 0x06004F10 RID: 20240 RVA: 0x0002B1C9 File Offset: 0x000293C9
 	public PivotPoint PivotPoint
 	{
 		get
@@ -44,8 +44,8 @@ public class LineHazardSpawnController : HazardSpawnControllerBase, IHazardSpawn
 		}
 	}
 
-	// Token: 0x170013EE RID: 5102
-	// (get) Token: 0x0600386D RID: 14445 RVA: 0x000C0C1F File Offset: 0x000BEE1F
+	// Token: 0x17001B45 RID: 6981
+	// (get) Token: 0x06004F11 RID: 20241 RVA: 0x0002B1D2 File Offset: 0x000293D2
 	public virtual string SpriteSheetPath
 	{
 		get
@@ -54,7 +54,7 @@ public class LineHazardSpawnController : HazardSpawnControllerBase, IHazardSpawn
 		}
 	}
 
-	// Token: 0x0600386E RID: 14446 RVA: 0x000C0C28 File Offset: 0x000BEE28
+	// Token: 0x06004F12 RID: 20242 RVA: 0x0012EEEC File Offset: 0x0012D0EC
 	public HazardType GetLineHazardType(HazardType hazardType)
 	{
 		if (hazardType <= HazardType.BreakableSpikeTall)
@@ -127,14 +127,14 @@ public class LineHazardSpawnController : HazardSpawnControllerBase, IHazardSpawn
 		return hazardType;
 	}
 
-	// Token: 0x0600386F RID: 14447 RVA: 0x000C0CDA File Offset: 0x000BEEDA
+	// Token: 0x06004F13 RID: 20243 RVA: 0x0002B1D9 File Offset: 0x000293D9
 	protected override IHazard GetHazard(HazardType hazardType)
 	{
 		hazardType = this.GetLineHazardType(hazardType);
 		return HazardManager.GetHazard(hazardType);
 	}
 
-	// Token: 0x06003870 RID: 14448 RVA: 0x000C0CEC File Offset: 0x000BEEEC
+	// Token: 0x06004F14 RID: 20244 RVA: 0x0012EFA0 File Offset: 0x0012D1A0
 	public void Mirror()
 	{
 		if (this.PivotPoint == PivotPoint.Left)
@@ -148,7 +148,7 @@ public class LineHazardSpawnController : HazardSpawnControllerBase, IHazardSpawn
 		base.transform.rotation = Quaternion.Euler(0f, 0f, -1f * base.transform.rotation.eulerAngles.z);
 	}
 
-	// Token: 0x06003871 RID: 14449 RVA: 0x000C0D58 File Offset: 0x000BEF58
+	// Token: 0x06004F15 RID: 20245 RVA: 0x0012F00C File Offset: 0x0012D20C
 	protected override void Reset()
 	{
 		if (base.Hazard != null && base.Hazard.gameObject != null)
@@ -163,18 +163,18 @@ public class LineHazardSpawnController : HazardSpawnControllerBase, IHazardSpawn
 		base.Hazard = null;
 	}
 
-	// Token: 0x06003872 RID: 14450 RVA: 0x000C0DB3 File Offset: 0x000BEFB3
+	// Token: 0x06004F16 RID: 20246 RVA: 0x0002B1EA File Offset: 0x000293EA
 	public void SetPivot(PivotPoint pivotPoint)
 	{
 		this.PivotPoint = pivotPoint;
 	}
 
-	// Token: 0x06003873 RID: 14451 RVA: 0x000C0DBC File Offset: 0x000BEFBC
+	// Token: 0x06004F17 RID: 20247 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void SetWidth(int width)
 	{
 	}
 
-	// Token: 0x06003874 RID: 14452 RVA: 0x000C0DC0 File Offset: 0x000BEFC0
+	// Token: 0x06004F18 RID: 20248 RVA: 0x0012F068 File Offset: 0x0012D268
 	protected override void Spawn()
 	{
 		if (base.Type == HazardType.None)
@@ -220,25 +220,25 @@ public class LineHazardSpawnController : HazardSpawnControllerBase, IHazardSpawn
 		}
 	}
 
-	// Token: 0x06003876 RID: 14454 RVA: 0x000C0EB1 File Offset: 0x000BF0B1
+	// Token: 0x06004F1A RID: 20250 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISpawnController.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002BA8 RID: 11176
+	// Token: 0x04003C15 RID: 15381
 	[SerializeField]
 	[ReadOnly]
 	private int m_width = 1;
 
-	// Token: 0x04002BA9 RID: 11177
+	// Token: 0x04003C16 RID: 15382
 	[SerializeField]
 	[ReadOnly]
 	private PivotPoint m_pivot;
 
-	// Token: 0x04002BAA RID: 11178
+	// Token: 0x04003C17 RID: 15383
 	public const int MIN_WIDTH = 1;
 
-	// Token: 0x04002BAB RID: 11179
+	// Token: 0x04003C18 RID: 15384
 	public const int MAX_WIDTH = 32;
 }

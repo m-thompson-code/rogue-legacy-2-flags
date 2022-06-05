@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020004F0 RID: 1264
+// Token: 0x0200084A RID: 2122
 public class BridgeTransitionRoomController : BaseSpecialRoomController
 {
-	// Token: 0x06002F71 RID: 12145 RVA: 0x000A2308 File Offset: 0x000A0508
+	// Token: 0x06004192 RID: 16786 RVA: 0x00107C24 File Offset: 0x00105E24
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);

@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x020001E7 RID: 487
+// Token: 0x0200037F RID: 895
 public enum DebugID
 {
-	// Token: 0x040013ED RID: 5101
+	// Token: 0x04001A8D RID: 6797
 	WeaponHitBox,
-	// Token: 0x040013EE RID: 5102
+	// Token: 0x04001A8E RID: 6798
 	PlatformHitBox,
-	// Token: 0x040013EF RID: 5103
+	// Token: 0x04001A8F RID: 6799
 	BodyHitBox,
-	// Token: 0x040013F0 RID: 5104
+	// Token: 0x04001A90 RID: 6800
 	HazardHitBox,
-	// Token: 0x040013F1 RID: 5105
+	// Token: 0x04001A91 RID: 6801
 	WorldInfo,
-	// Token: 0x040013F2 RID: 5106
+	// Token: 0x04001A92 RID: 6802
 	RoomInfo,
-	// Token: 0x040013F3 RID: 5107
+	// Token: 0x04001A93 RID: 6803
 	Dwarf,
-	// Token: 0x040013F4 RID: 5108
+	// Token: 0x04001A94 RID: 6804
 	Enlarge,
-	// Token: 0x040013F5 RID: 5109
+	// Token: 0x04001A95 RID: 6805
 	Invincible,
-	// Token: 0x040013F6 RID: 5110
+	// Token: 0x04001A96 RID: 6806
 	FPS
 }

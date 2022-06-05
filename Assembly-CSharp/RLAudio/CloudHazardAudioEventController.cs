@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008E7 RID: 2279
+	// Token: 0x02000E57 RID: 3671
 	public class CloudHazardAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x1700184C RID: 6220
-		// (get) Token: 0x06004AD8 RID: 19160 RVA: 0x0010CEDA File Offset: 0x0010B0DA
+		// Token: 0x1700212F RID: 8495
+		// (get) Token: 0x06006791 RID: 26513 RVA: 0x00039221 File Offset: 0x00037421
 		public string Description
 		{
 			get
@@ -21,7 +21,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AD9 RID: 19161 RVA: 0x0010CF00 File Offset: 0x0010B100
+		// Token: 0x06006792 RID: 26514 RVA: 0x0017D26C File Offset: 0x0017B46C
 		private void Awake()
 		{
 			this.m_cloud = base.transform.GetComponent<Cloud>();
@@ -33,36 +33,36 @@ namespace RLAudio
 			this.m_cloud.TeleportStartRelay.AddListener(new Action(this.OnTeleportStart), false);
 		}
 
-		// Token: 0x06004ADA RID: 19162 RVA: 0x0010CF73 File Offset: 0x0010B173
+		// Token: 0x06006793 RID: 26515 RVA: 0x00039247 File Offset: 0x00037447
 		private void OnPlayerHit(Vector2 position)
 		{
 			this.m_playerHitPosition = position;
 			AudioManager.PlayOneShot(this, this.m_playerHitAudioEventPath, position);
 		}
 
-		// Token: 0x06004ADB RID: 19163 RVA: 0x0010CF8E File Offset: 0x0010B18E
+		// Token: 0x06006794 RID: 26516 RVA: 0x00039262 File Offset: 0x00037462
 		private void OnTeleportStart()
 		{
 			AudioManager.PlayOneShot(this, this.m_teleportStartAudioEventPath, this.m_playerHitPosition);
 		}
 
-		// Token: 0x04003EC6 RID: 16070
+		// Token: 0x040053E4 RID: 21476
 		[SerializeField]
 		[EventRef]
 		private string m_playerHitAudioEventPath;
 
-		// Token: 0x04003EC7 RID: 16071
+		// Token: 0x040053E5 RID: 21477
 		[SerializeField]
 		[EventRef]
 		private string m_teleportStartAudioEventPath;
 
-		// Token: 0x04003EC8 RID: 16072
+		// Token: 0x040053E6 RID: 21478
 		private Cloud m_cloud;
 
-		// Token: 0x04003EC9 RID: 16073
+		// Token: 0x040053E7 RID: 21479
 		private string m_description = string.Empty;
 
-		// Token: 0x04003ECA RID: 16074
+		// Token: 0x040053E8 RID: 21480
 		private Vector2 m_playerHitPosition;
 	}
 }

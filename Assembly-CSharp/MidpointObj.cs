@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000489 RID: 1161
+// Token: 0x02000788 RID: 1928
 public class MidpointObj : MonoBehaviour, IMidpointObj
 {
-	// Token: 0x17001089 RID: 4233
-	// (get) Token: 0x06002ADC RID: 10972 RVA: 0x000912B8 File Offset: 0x0008F4B8
+	// Token: 0x170015CA RID: 5578
+	// (get) Token: 0x06003B10 RID: 15120 RVA: 0x000F2DE8 File Offset: 0x000F0FE8
 	public Vector3 Midpoint
 	{
 		get
@@ -30,7 +30,7 @@ public class MidpointObj : MonoBehaviour, IMidpointObj
 		}
 	}
 
-	// Token: 0x06002ADD RID: 10973 RVA: 0x00091360 File Offset: 0x0008F560
+	// Token: 0x06003B11 RID: 15121 RVA: 0x000F2E90 File Offset: 0x000F1090
 	private void Awake()
 	{
 		GameObject root = this.GetRoot(false);
@@ -45,20 +45,20 @@ public class MidpointObj : MonoBehaviour, IMidpointObj
 		}
 	}
 
-	// Token: 0x040022FD RID: 8957
+	// Token: 0x04002F03 RID: 12035
 	[SerializeField]
 	private bool m_usePositionOffset;
 
-	// Token: 0x040022FE RID: 8958
+	// Token: 0x04002F04 RID: 12036
 	[SerializeField]
 	private Vector3 m_positionOffset;
 
-	// Token: 0x040022FF RID: 8959
+	// Token: 0x04002F05 RID: 12037
 	private Renderer m_renderer;
 
-	// Token: 0x04002300 RID: 8960
+	// Token: 0x04002F06 RID: 12038
 	private Collider2D m_collider;
 
-	// Token: 0x04002301 RID: 8961
+	// Token: 0x04002F07 RID: 12039
 	private BaseCharacterController m_charController;
 }

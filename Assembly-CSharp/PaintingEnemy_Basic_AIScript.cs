@@ -5,10 +5,10 @@ using MoreMountains.CorgiEngine;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000102 RID: 258
+// Token: 0x020001A2 RID: 418
 public class PaintingEnemy_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x060007F0 RID: 2032 RVA: 0x0001B58B File Offset: 0x0001978B
+	// Token: 0x06000B85 RID: 2949 RVA: 0x00007170 File Offset: 0x00005370
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -17,8 +17,8 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000449 RID: 1097
-	// (get) Token: 0x060007F1 RID: 2033 RVA: 0x0001B5A1 File Offset: 0x000197A1
+	// Token: 0x17000579 RID: 1401
+	// (get) Token: 0x06000B86 RID: 2950 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -27,8 +27,8 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700044A RID: 1098
-	// (get) Token: 0x060007F2 RID: 2034 RVA: 0x0001B5B2 File Offset: 0x000197B2
+	// Token: 0x1700057A RID: 1402
+	// (get) Token: 0x06000B87 RID: 2951 RVA: 0x00004F67 File Offset: 0x00003167
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -37,8 +37,8 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700044B RID: 1099
-	// (get) Token: 0x060007F3 RID: 2035 RVA: 0x0001B5C3 File Offset: 0x000197C3
+	// Token: 0x1700057B RID: 1403
+	// (get) Token: 0x06000B88 RID: 2952 RVA: 0x00004F67 File Offset: 0x00003167
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -47,8 +47,8 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700044C RID: 1100
-	// (get) Token: 0x060007F4 RID: 2036 RVA: 0x0001B5D4 File Offset: 0x000197D4
+	// Token: 0x1700057C RID: 1404
+	// (get) Token: 0x06000B89 RID: 2953 RVA: 0x00005FA3 File Offset: 0x000041A3
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -57,8 +57,8 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700044D RID: 1101
-	// (get) Token: 0x060007F5 RID: 2037 RVA: 0x0001B5DB File Offset: 0x000197DB
+	// Token: 0x1700057D RID: 1405
+	// (get) Token: 0x06000B8A RID: 2954 RVA: 0x00005FA3 File Offset: 0x000041A3
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -67,8 +67,8 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700044E RID: 1102
-	// (get) Token: 0x060007F6 RID: 2038 RVA: 0x0001B5E2 File Offset: 0x000197E2
+	// Token: 0x1700057E RID: 1406
+	// (get) Token: 0x06000B8B RID: 2955 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float ProjectileFireInterval
 	{
 		get
@@ -77,7 +77,7 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007F7 RID: 2039 RVA: 0x0001B5E9 File Offset: 0x000197E9
+	// Token: 0x06000B8C RID: 2956 RVA: 0x00007186 File Offset: 0x00005386
 	private void Awake()
 	{
 		this.m_onPlayerHit = new Action<object, CharacterHitEventArgs>(this.OnPlayerHit);
@@ -85,7 +85,7 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		this.m_onEnemyControllerDisable = new Action(this.OnEnemyControllerDisable);
 	}
 
-	// Token: 0x060007F8 RID: 2040 RVA: 0x0001B624 File Offset: 0x00019824
+	// Token: 0x06000B8D RID: 2957 RVA: 0x0006AA00 File Offset: 0x00068C00
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -102,21 +102,21 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		this.OnEnemyControllerDisable();
 	}
 
-	// Token: 0x060007F9 RID: 2041 RVA: 0x0001B702 File Offset: 0x00019902
+	// Token: 0x06000B8E RID: 2958 RVA: 0x000071BE File Offset: 0x000053BE
 	public override void OnEnemyActivated()
 	{
 		this.m_projectileCDDuration = Time.time + this.ProjectileFireInterval;
 		base.OnEnemyActivated();
 	}
 
-	// Token: 0x060007FA RID: 2042 RVA: 0x0001B71C File Offset: 0x0001991C
+	// Token: 0x06000B8F RID: 2959 RVA: 0x000071D8 File Offset: 0x000053D8
 	public override IEnumerator Idle()
 	{
 		yield return base.WalkTowards();
 		yield break;
 	}
 
-	// Token: 0x060007FB RID: 2043 RVA: 0x0001B72C File Offset: 0x0001992C
+	// Token: 0x06000B90 RID: 2960 RVA: 0x0006AAE0 File Offset: 0x00068CE0
 	private void Shoot()
 	{
 		float num = CDGHelper.AngleBetweenPts(base.EnemyController.TargetController.Midpoint, base.EnemyController.Midpoint);
@@ -134,7 +134,7 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		this.m_projectileCDDuration = Time.time + this.ProjectileFireInterval;
 	}
 
-	// Token: 0x060007FC RID: 2044 RVA: 0x0001B7DB File Offset: 0x000199DB
+	// Token: 0x06000B91 RID: 2961 RVA: 0x000071E7 File Offset: 0x000053E7
 	private void OnEnable()
 	{
 		if (PlayerManager.IsInstantiated && !PlayerManager.IsDisposed)
@@ -143,7 +143,7 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007FD RID: 2045 RVA: 0x0001B808 File Offset: 0x00019A08
+	// Token: 0x06000B92 RID: 2962 RVA: 0x0006AB90 File Offset: 0x00068D90
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -161,7 +161,7 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007FE RID: 2046 RVA: 0x0001B878 File Offset: 0x00019A78
+	// Token: 0x06000B93 RID: 2963 RVA: 0x0006AC00 File Offset: 0x00068E00
 	private void OnDestroy()
 	{
 		if (base.EnemyController)
@@ -175,7 +175,7 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007FF RID: 2047 RVA: 0x0001B8E4 File Offset: 0x00019AE4
+	// Token: 0x06000B94 RID: 2964 RVA: 0x0006AC6C File Offset: 0x00068E6C
 	private void OnPlayerHit(object sender, CharacterHitEventArgs args)
 	{
 		if (args.Attacker == base.EnemyController)
@@ -196,14 +196,14 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000800 RID: 2048 RVA: 0x0001B9A8 File Offset: 0x00019BA8
+	// Token: 0x06000B95 RID: 2965 RVA: 0x00006FBE File Offset: 0x000051BE
 	private void OnEnemyHit(object sender, CharacterHitEventArgs args)
 	{
 		base.EnemyController.StatusEffectController.SetAllStatusEffectsHidden(false);
 		base.EnemyController.DisableOffscreenWarnings = false;
 	}
 
-	// Token: 0x06000801 RID: 2049 RVA: 0x0001B9C8 File Offset: 0x00019BC8
+	// Token: 0x06000B96 RID: 2966 RVA: 0x0006AD30 File Offset: 0x00068F30
 	private void OnEnemyControllerDisable()
 	{
 		if (!base.IsInitialized)
@@ -225,7 +225,7 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		base.EnemyController.DisableOffscreenWarnings = true;
 	}
 
-	// Token: 0x06000802 RID: 2050 RVA: 0x0001BA98 File Offset: 0x00019C98
+	// Token: 0x06000B97 RID: 2967 RVA: 0x0006AE00 File Offset: 0x00069000
 	private void Awaken(object sender, EventArgs args)
 	{
 		if (this.m_enemyFaceTween != null)
@@ -259,7 +259,7 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		AudioManager.PlayAttached(this, this.m_flyLoopEventInstance, base.gameObject);
 	}
 
-	// Token: 0x06000803 RID: 2051 RVA: 0x0001BBDF File Offset: 0x00019DDF
+	// Token: 0x06000B98 RID: 2968 RVA: 0x00007213 File Offset: 0x00005413
 	public override void ResetScript()
 	{
 		base.ResetScript();
@@ -267,7 +267,7 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		base.EnemyController.Pivot.transform.localEulerAngles = Vector3.zero;
 	}
 
-	// Token: 0x06000804 RID: 2052 RVA: 0x0001BC10 File Offset: 0x00019E10
+	// Token: 0x06000B99 RID: 2969 RVA: 0x0006AF48 File Offset: 0x00069148
 	protected void Update()
 	{
 		if (!base.IsInitialized)
@@ -312,50 +312,50 @@ public class PaintingEnemy_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x04000B58 RID: 2904
+	// Token: 0x04000E1F RID: 3615
 	private const float ROTATION_SPEED = 720f;
 
-	// Token: 0x04000B59 RID: 2905
+	// Token: 0x04000E20 RID: 3616
 	private const string GENERIC_PROJECTILE_NAME = "PaintingEnemyProjectile";
 
-	// Token: 0x04000B5A RID: 2906
+	// Token: 0x04000E21 RID: 3617
 	private const string FLY_LOOP_AUDIO_PATH = "event:/SFX/Enemies/sfx_enemy_painting_fly_start_loop";
 
-	// Token: 0x04000B5B RID: 2907
+	// Token: 0x04000E22 RID: 3618
 	[SerializeField]
 	private Sprite[] m_paintingSprites;
 
-	// Token: 0x04000B5C RID: 2908
+	// Token: 0x04000E23 RID: 3619
 	[SerializeField]
 	private Sprite[] m_enemyFaceSprites;
 
-	// Token: 0x04000B5D RID: 2909
+	// Token: 0x04000E24 RID: 3620
 	private SpriteRenderer m_paintingRenderer;
 
-	// Token: 0x04000B5E RID: 2910
+	// Token: 0x04000E25 RID: 3621
 	private SpriteRenderer m_enemyFaceRenderer;
 
-	// Token: 0x04000B5F RID: 2911
+	// Token: 0x04000E26 RID: 3622
 	private bool m_isChasing;
 
-	// Token: 0x04000B60 RID: 2912
+	// Token: 0x04000E27 RID: 3623
 	private bool m_rotateClockwise;
 
-	// Token: 0x04000B61 RID: 2913
+	// Token: 0x04000E28 RID: 3624
 	private float m_projectileCDDuration;
 
-	// Token: 0x04000B62 RID: 2914
+	// Token: 0x04000E29 RID: 3625
 	private Tween m_enemyFaceTween;
 
-	// Token: 0x04000B63 RID: 2915
+	// Token: 0x04000E2A RID: 3626
 	private EventInstance m_flyLoopEventInstance;
 
-	// Token: 0x04000B64 RID: 2916
+	// Token: 0x04000E2B RID: 3627
 	private Action<object, CharacterHitEventArgs> m_onPlayerHit;
 
-	// Token: 0x04000B65 RID: 2917
+	// Token: 0x04000E2C RID: 3628
 	private Action<object, CharacterHitEventArgs> m_onEnemyHit;
 
-	// Token: 0x04000B66 RID: 2918
+	// Token: 0x04000E2D RID: 3629
 	private Action m_onEnemyControllerDisable;
 }

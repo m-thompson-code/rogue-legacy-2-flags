@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006DF RID: 1759
+// Token: 0x02000B8A RID: 2954
 [Serializable]
 public class MaterialWeightObject : ILookWeight
 {
-	// Token: 0x170015D4 RID: 5588
-	// (get) Token: 0x06003FE8 RID: 16360 RVA: 0x000E29B4 File Offset: 0x000E0BB4
+	// Token: 0x17001DCC RID: 7628
+	// (get) Token: 0x0600591F RID: 22815 RVA: 0x000307CC File Offset: 0x0002E9CC
 	public Material Material
 	{
 		get
@@ -15,8 +15,8 @@ public class MaterialWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x170015D5 RID: 5589
-	// (get) Token: 0x06003FE9 RID: 16361 RVA: 0x000E29BC File Offset: 0x000E0BBC
+	// Token: 0x17001DCD RID: 7629
+	// (get) Token: 0x06005920 RID: 22816 RVA: 0x000307D4 File Offset: 0x0002E9D4
 	public float MaleWeight
 	{
 		get
@@ -25,8 +25,8 @@ public class MaterialWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x170015D6 RID: 5590
-	// (get) Token: 0x06003FEA RID: 16362 RVA: 0x000E29C4 File Offset: 0x000E0BC4
+	// Token: 0x17001DCE RID: 7630
+	// (get) Token: 0x06005921 RID: 22817 RVA: 0x000307DC File Offset: 0x0002E9DC
 	public float FemaleWeight
 	{
 		get
@@ -35,8 +35,8 @@ public class MaterialWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x170015D7 RID: 5591
-	// (get) Token: 0x06003FEB RID: 16363 RVA: 0x000E29CC File Offset: 0x000E0BCC
+	// Token: 0x17001DCF RID: 7631
+	// (get) Token: 0x06005922 RID: 22818 RVA: 0x000307E4 File Offset: 0x0002E9E4
 	public string[] Tags
 	{
 		get
@@ -45,8 +45,8 @@ public class MaterialWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x170015D8 RID: 5592
-	// (get) Token: 0x06003FEC RID: 16364 RVA: 0x000E29D4 File Offset: 0x000E0BD4
+	// Token: 0x17001DD0 RID: 7632
+	// (get) Token: 0x06005923 RID: 22819 RVA: 0x000307EC File Offset: 0x0002E9EC
 	public bool ExcludeFromWeighing
 	{
 		get
@@ -55,23 +55,23 @@ public class MaterialWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x04003066 RID: 12390
+	// Token: 0x040042B5 RID: 17077
 	[SerializeField]
 	private Material m_material;
 
-	// Token: 0x04003067 RID: 12391
+	// Token: 0x040042B6 RID: 17078
 	[SerializeField]
 	private bool m_excludeFromWeighing;
 
-	// Token: 0x04003068 RID: 12392
+	// Token: 0x040042B7 RID: 17079
 	[SerializeField]
 	private float m_maleWeight = 1f;
 
-	// Token: 0x04003069 RID: 12393
+	// Token: 0x040042B8 RID: 17080
 	[SerializeField]
 	private float m_femaleWeight = 1f;
 
-	// Token: 0x0400306A RID: 12394
+	// Token: 0x040042B9 RID: 17081
 	[SerializeField]
 	private string[] m_tags;
 }

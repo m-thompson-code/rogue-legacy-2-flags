@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000C4 RID: 196
+// Token: 0x0200012B RID: 299
 public class FinalBoss_Advanced_AIScript : FinalBoss_Basic_AIScript
 {
-	// Token: 0x1700027A RID: 634
-	// (get) Token: 0x06000545 RID: 1349 RVA: 0x00016FBD File Offset: 0x000151BD
+	// Token: 0x1700033A RID: 826
+	// (get) Token: 0x0600078A RID: 1930 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_isPrime_Version
 	{
 		get

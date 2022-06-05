@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000241 RID: 577
+// Token: 0x020003FE RID: 1022
 [Serializable]
 public class ProjectileBuffColourEntry
 {
-	// Token: 0x0400169A RID: 5786
+	// Token: 0x04001DB2 RID: 7602
 	public ProjectileBuffType ProjectileBuffType;
 
-	// Token: 0x0400169B RID: 5787
+	// Token: 0x04001DB3 RID: 7603
 	public Color Color = Color.white;
 
-	// Token: 0x0400169C RID: 5788
+	// Token: 0x04001DB4 RID: 7604
 	public byte Priority;
 }

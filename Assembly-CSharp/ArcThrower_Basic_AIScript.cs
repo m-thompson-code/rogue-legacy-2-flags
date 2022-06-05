@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200008C RID: 140
+// Token: 0x02000094 RID: 148
 public class ArcThrower_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x060001E2 RID: 482 RVA: 0x00011E49 File Offset: 0x00010049
+	// Token: 0x060001F6 RID: 502 RVA: 0x00003C7F File Offset: 0x00001E7F
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -19,8 +19,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000043 RID: 67
-	// (get) Token: 0x060001E3 RID: 483 RVA: 0x00011E87 File Offset: 0x00010087
+	// Token: 0x17000049 RID: 73
+	// (get) Token: 0x060001F7 RID: 503 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float m_shoot_ProjectileDelay
 	{
 		get
@@ -29,8 +29,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000044 RID: 68
-	// (get) Token: 0x060001E4 RID: 484 RVA: 0x00011E8E File Offset: 0x0001008E
+	// Token: 0x1700004A RID: 74
+	// (get) Token: 0x060001F8 RID: 504 RVA: 0x00003CC4 File Offset: 0x00001EC4
 	protected virtual float m_shoot_ProjectileAmount
 	{
 		get
@@ -39,8 +39,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000045 RID: 69
-	// (get) Token: 0x060001E5 RID: 485 RVA: 0x00011E95 File Offset: 0x00010095
+	// Token: 0x1700004B RID: 75
+	// (get) Token: 0x060001F9 RID: 505 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_NumberMediumShots
 	{
 		get
@@ -49,8 +49,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000046 RID: 70
-	// (get) Token: 0x060001E6 RID: 486 RVA: 0x00011E9C File Offset: 0x0001009C
+	// Token: 0x1700004C RID: 76
+	// (get) Token: 0x060001FA RID: 506 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_NumberHighShots
 	{
 		get
@@ -59,8 +59,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000047 RID: 71
-	// (get) Token: 0x060001E7 RID: 487 RVA: 0x00011EA3 File Offset: 0x000100A3
+	// Token: 0x1700004D RID: 77
+	// (get) Token: 0x060001FB RID: 507 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_shoot_Explosive_Bullets
 	{
 		get
@@ -69,7 +69,7 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060001E8 RID: 488 RVA: 0x00011EA6 File Offset: 0x000100A6
+	// Token: 0x060001FC RID: 508 RVA: 0x00003CD5 File Offset: 0x00001ED5
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -109,8 +109,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x17000048 RID: 72
-	// (get) Token: 0x060001E9 RID: 489 RVA: 0x00011EB5 File Offset: 0x000100B5
+	// Token: 0x1700004E RID: 78
+	// (get) Token: 0x060001FD RID: 509 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float m_spray_ProjectileDelay
 	{
 		get
@@ -119,8 +119,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000049 RID: 73
-	// (get) Token: 0x060001EA RID: 490 RVA: 0x00011EBC File Offset: 0x000100BC
+	// Token: 0x1700004F RID: 79
+	// (get) Token: 0x060001FE RID: 510 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected virtual float m_spray_ProjectileAmount
 	{
 		get
@@ -129,8 +129,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700004A RID: 74
-	// (get) Token: 0x060001EB RID: 491 RVA: 0x00011EC3 File Offset: 0x000100C3
+	// Token: 0x17000050 RID: 80
+	// (get) Token: 0x060001FF RID: 511 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_sprayProjectilesPerLoop
 	{
 		get
@@ -139,8 +139,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700004B RID: 75
-	// (get) Token: 0x060001EC RID: 492 RVA: 0x00011ECA File Offset: 0x000100CA
+	// Token: 0x17000051 RID: 81
+	// (get) Token: 0x06000200 RID: 512 RVA: 0x00003CEB File Offset: 0x00001EEB
 	protected virtual float m_spray_LowAngle
 	{
 		get
@@ -149,8 +149,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700004C RID: 76
-	// (get) Token: 0x060001ED RID: 493 RVA: 0x00011ED1 File Offset: 0x000100D1
+	// Token: 0x17000052 RID: 82
+	// (get) Token: 0x06000201 RID: 513 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_spray_SpeedMod
 	{
 		get
@@ -159,8 +159,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700004D RID: 77
-	// (get) Token: 0x060001EE RID: 494 RVA: 0x00011ED8 File Offset: 0x000100D8
+	// Token: 0x17000053 RID: 83
+	// (get) Token: 0x06000202 RID: 514 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_spray_TiltSpeed
 	{
 		get
@@ -169,7 +169,7 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060001EF RID: 495 RVA: 0x00011EDF File Offset: 0x000100DF
+	// Token: 0x06000203 RID: 515 RVA: 0x00003CF2 File Offset: 0x00001EF2
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -215,8 +215,8 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x1700004E RID: 78
-	// (get) Token: 0x060001F0 RID: 496 RVA: 0x00011EEE File Offset: 0x000100EE
+	// Token: 0x17000054 RID: 84
+	// (get) Token: 0x06000204 RID: 516 RVA: 0x00003D01 File Offset: 0x00001F01
 	protected virtual Vector2 m_jumpPower
 	{
 		get
@@ -225,7 +225,7 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060001F1 RID: 497 RVA: 0x00011EFF File Offset: 0x000100FF
+	// Token: 0x06000205 RID: 517 RVA: 0x00003D12 File Offset: 0x00001F12
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -266,7 +266,7 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060001F2 RID: 498 RVA: 0x00011F0E File Offset: 0x0001010E
+	// Token: 0x06000206 RID: 518 RVA: 0x00003D21 File Offset: 0x00001F21
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -293,153 +293,153 @@ public class ArcThrower_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x040005EB RID: 1515
+	// Token: 0x0400060C RID: 1548
 	protected float m_shoot_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x040005EC RID: 1516
+	// Token: 0x0400060D RID: 1549
 	protected float m_shoot_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x040005ED RID: 1517
+	// Token: 0x0400060E RID: 1550
 	protected float m_shoot_TellIntroAndHold_Delay = 1.4f;
 
-	// Token: 0x040005EE RID: 1518
+	// Token: 0x0400060F RID: 1551
 	protected float m_shoot_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x040005EF RID: 1519
+	// Token: 0x04000610 RID: 1552
 	protected float m_shoot_AttackIntro_Delay;
 
-	// Token: 0x040005F0 RID: 1520
+	// Token: 0x04000611 RID: 1553
 	protected float m_shoot_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x040005F1 RID: 1521
+	// Token: 0x04000612 RID: 1554
 	protected float m_shoot_AttackHold_Delay = 1f;
 
-	// Token: 0x040005F2 RID: 1522
+	// Token: 0x04000613 RID: 1555
 	protected float m_shoot_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x040005F3 RID: 1523
+	// Token: 0x04000614 RID: 1556
 	protected float m_shoot_Exit_Delay;
 
-	// Token: 0x040005F4 RID: 1524
+	// Token: 0x04000615 RID: 1557
 	protected float m_shoot_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x040005F5 RID: 1525
+	// Token: 0x04000616 RID: 1558
 	protected float m_shoot_AttackCD = 2.5f;
 
-	// Token: 0x040005F6 RID: 1526
+	// Token: 0x04000617 RID: 1559
 	protected float m_LowShotAngle = 22f;
 
-	// Token: 0x040005F7 RID: 1527
+	// Token: 0x04000618 RID: 1560
 	protected float m_MediumShotAngle = 60f;
 
-	// Token: 0x040005F8 RID: 1528
+	// Token: 0x04000619 RID: 1561
 	protected float m_HighShotAngle = 80f;
 
-	// Token: 0x040005F9 RID: 1529
+	// Token: 0x0400061A RID: 1562
 	protected float m_spray_TellIntro_AnimationSpeed = 1.1f;
 
-	// Token: 0x040005FA RID: 1530
+	// Token: 0x0400061B RID: 1563
 	protected float m_spray_TellHold_AnimationSpeed = 1.1f;
 
-	// Token: 0x040005FB RID: 1531
+	// Token: 0x0400061C RID: 1564
 	protected float m_spray_TellIntroAndHold_Delay = 0.675f;
 
-	// Token: 0x040005FC RID: 1532
+	// Token: 0x0400061D RID: 1565
 	protected float m_spray_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x040005FD RID: 1533
+	// Token: 0x0400061E RID: 1566
 	protected float m_spray_AttackIntro_Delay;
 
-	// Token: 0x040005FE RID: 1534
+	// Token: 0x0400061F RID: 1567
 	protected float m_spray_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x040005FF RID: 1535
+	// Token: 0x04000620 RID: 1568
 	protected float m_spray_AttackHold_Delay;
 
-	// Token: 0x04000600 RID: 1536
+	// Token: 0x04000621 RID: 1569
 	protected float m_spray_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000601 RID: 1537
+	// Token: 0x04000622 RID: 1570
 	protected float m_spray_Exit_Delay;
 
-	// Token: 0x04000602 RID: 1538
+	// Token: 0x04000623 RID: 1571
 	protected float m_spray_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000603 RID: 1539
+	// Token: 0x04000624 RID: 1572
 	protected float m_spray_AttackCD;
 
-	// Token: 0x04000604 RID: 1540
+	// Token: 0x04000625 RID: 1573
 	protected float m_spray_MediumAngle = 50f;
 
-	// Token: 0x04000605 RID: 1541
+	// Token: 0x04000626 RID: 1574
 	protected float m_spray_HighAngle = 78f;
 
-	// Token: 0x04000606 RID: 1542
+	// Token: 0x04000627 RID: 1575
 	protected float m_jump_Tell_AnimationSpeed = 1f;
 
-	// Token: 0x04000607 RID: 1543
+	// Token: 0x04000628 RID: 1576
 	protected float m_jump_Tell_Delay = 0.55f;
 
-	// Token: 0x04000608 RID: 1544
+	// Token: 0x04000629 RID: 1577
 	protected float m_jump_AttackIntro_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000609 RID: 1545
+	// Token: 0x0400062A RID: 1578
 	protected float m_jump_AttackIntro_Delay;
 
-	// Token: 0x0400060A RID: 1546
+	// Token: 0x0400062B RID: 1579
 	protected float m_jump_AttackHold_AnimationSpeed = 1.25f;
 
-	// Token: 0x0400060B RID: 1547
+	// Token: 0x0400062C RID: 1580
 	protected float m_jump_AttackHold_Delay;
 
-	// Token: 0x0400060C RID: 1548
+	// Token: 0x0400062D RID: 1581
 	protected float m_jump_Exit_AnimationSpeed = 1.25f;
 
-	// Token: 0x0400060D RID: 1549
+	// Token: 0x0400062E RID: 1582
 	protected float m_jump_Exit_Delay;
 
-	// Token: 0x0400060E RID: 1550
+	// Token: 0x0400062F RID: 1583
 	protected float m_jump_Exit_ForceIdle;
 
-	// Token: 0x0400060F RID: 1551
+	// Token: 0x04000630 RID: 1584
 	protected float m_jump_Exit_AttackCD = 10f;
 
-	// Token: 0x04000610 RID: 1552
+	// Token: 0x04000631 RID: 1585
 	protected float m_throwBone_TellIntro_AnimationSpeed = 0.85f;
 
-	// Token: 0x04000611 RID: 1553
+	// Token: 0x04000632 RID: 1586
 	protected float m_throwBone_TellHold_AnimationSpeed = 1.3f;
 
-	// Token: 0x04000612 RID: 1554
+	// Token: 0x04000633 RID: 1587
 	protected const float m_throwBone_TellIntroAndHold_Delay = 1.2f;
 
-	// Token: 0x04000613 RID: 1555
+	// Token: 0x04000634 RID: 1588
 	protected float m_throwBone_AttackIntro_AnimationSpeed = 0.8f;
 
-	// Token: 0x04000614 RID: 1556
+	// Token: 0x04000635 RID: 1589
 	protected float m_throwBone_AttackIntro_Delay;
 
-	// Token: 0x04000615 RID: 1557
+	// Token: 0x04000636 RID: 1590
 	protected float m_throwBone_AttackHold_AnimationSpeed = 0.8f;
 
-	// Token: 0x04000616 RID: 1558
+	// Token: 0x04000637 RID: 1591
 	protected const float m_throwBone_AttackHold_Delay = 0.6f;
 
-	// Token: 0x04000617 RID: 1559
+	// Token: 0x04000638 RID: 1592
 	protected float m_throwBone_Exit_AnimationSpeed = 0.65f;
 
-	// Token: 0x04000618 RID: 1560
+	// Token: 0x04000639 RID: 1593
 	protected float m_throwBone_Exit_Delay = 0.15f;
 
-	// Token: 0x04000619 RID: 1561
+	// Token: 0x0400063A RID: 1594
 	protected int m_BoneNear_Angle = 83;
 
-	// Token: 0x0400061A RID: 1562
+	// Token: 0x0400063B RID: 1595
 	protected int m_FarBoneAngle = 70;
 
-	// Token: 0x0400061B RID: 1563
+	// Token: 0x0400063C RID: 1596
 	protected float m_throwBone_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x0400061C RID: 1564
+	// Token: 0x0400063D RID: 1597
 	protected float m_throwBone_AttackCD;
 }

@@ -6,15 +6,15 @@ using UnityEngine;
 
 namespace RLWorldCreation
 {
-	// Token: 0x0200088D RID: 2189
+	// Token: 0x02000DAD RID: 3501
 	public class BiomeTransitionController : MonoBehaviour
 	{
-		// Token: 0x17001792 RID: 6034
-		// (get) Token: 0x060047D3 RID: 18387 RVA: 0x00102258 File Offset: 0x00100458
-		// (set) Token: 0x060047D4 RID: 18388 RVA: 0x0010225F File Offset: 0x0010045F
+		// Token: 0x17001FF4 RID: 8180
+		// (get) Token: 0x060062D1 RID: 25297 RVA: 0x0003677F File Offset: 0x0003497F
+		// (set) Token: 0x060062D2 RID: 25298 RVA: 0x00036786 File Offset: 0x00034986
 		private static BiomeTransitionController Instance { get; set; }
 
-		// Token: 0x060047D5 RID: 18389 RVA: 0x00102267 File Offset: 0x00100467
+		// Token: 0x060062D3 RID: 25299 RVA: 0x0003678E File Offset: 0x0003498E
 		private void Awake()
 		{
 			if (BiomeTransitionController.Instance == null)
@@ -23,7 +23,7 @@ namespace RLWorldCreation
 			}
 		}
 
-		// Token: 0x060047D6 RID: 18390 RVA: 0x0010227C File Offset: 0x0010047C
+		// Token: 0x060062D4 RID: 25300 RVA: 0x000367A3 File Offset: 0x000349A3
 		private IEnumerator TransitionCoroutine(Door door)
 		{
 			if (!door)
@@ -61,13 +61,13 @@ namespace RLWorldCreation
 			yield break;
 		}
 
-		// Token: 0x060047D7 RID: 18391 RVA: 0x0010228B File Offset: 0x0010048B
+		// Token: 0x060062D5 RID: 25301 RVA: 0x000367B2 File Offset: 0x000349B2
 		public static void DestroyBiomeRoomInstances(BiomeType prevBiome)
 		{
 			WorldBuilder.GetBiomeController(prevBiome).Reset();
 		}
 
-		// Token: 0x060047D8 RID: 18392 RVA: 0x00102298 File Offset: 0x00100498
+		// Token: 0x060062D6 RID: 25302 RVA: 0x000367BF File Offset: 0x000349BF
 		public static void DestroyOldCastleTransitionRoom(BiomeType nextBiome)
 		{
 			if (nextBiome == BiomeType.Castle && WorldBuilder.OldCastleTransitionRoom != null && !WorldBuilder.OldCastleTransitionRoom.Equals(null))
@@ -76,7 +76,7 @@ namespace RLWorldCreation
 			}
 		}
 
-		// Token: 0x060047D9 RID: 18393 RVA: 0x001022C8 File Offset: 0x001004C8
+		// Token: 0x060062D7 RID: 25303 RVA: 0x000367EF File Offset: 0x000349EF
 		public static IEnumerator BiomeTransitionCoroutine(BiomeType originBiome, BiomeType destinationBiome)
 		{
 			originBiome = BiomeType_RL.GetGroupedBiomeType(originBiome);
@@ -98,13 +98,13 @@ namespace RLWorldCreation
 			yield break;
 		}
 
-		// Token: 0x060047DA RID: 18394 RVA: 0x001022DE File Offset: 0x001004DE
+		// Token: 0x060062D8 RID: 25304 RVA: 0x00036805 File Offset: 0x00034A05
 		public static void UpdateObjectPools(BiomeType previousBiome, BiomeType newBiome)
 		{
 			SharedWorldObjectPoolManager.CreateBiomePools(newBiome);
 		}
 
-		// Token: 0x060047DB RID: 18395 RVA: 0x001022E8 File Offset: 0x001004E8
+		// Token: 0x060062D9 RID: 25305 RVA: 0x00170A10 File Offset: 0x0016EC10
 		public static void Run(Door door)
 		{
 			if (BiomeTransitionController.Instance != null)
@@ -119,7 +119,7 @@ namespace RLWorldCreation
 			Debug.LogFormat("<color=red>| BiomeTransitionController | No instance of <b>BiomeTransitionController</b> exists in Scene</color>", Array.Empty<object>());
 		}
 
-		// Token: 0x04003CC2 RID: 15554
+		// Token: 0x040050C4 RID: 20676
 		public static Relay<BiomeType, BiomeType> TransitionStartRelay = new Relay<BiomeType, BiomeType>();
 	}
 }

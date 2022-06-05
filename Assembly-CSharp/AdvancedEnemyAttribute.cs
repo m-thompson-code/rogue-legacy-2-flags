@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000082 RID: 130
+// Token: 0x0200008A RID: 138
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
 public class AdvancedEnemyAttribute : Attribute
 {

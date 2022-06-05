@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Unity.Cloud.UserReporting
 {
-	// Token: 0x02000837 RID: 2103
+	// Token: 0x02000D1C RID: 3356
 	public class UserReport : UserReportPreview
 	{
-		// Token: 0x06004579 RID: 17785 RVA: 0x000F7D10 File Offset: 0x000F5F10
+		// Token: 0x06005FAF RID: 24495 RVA: 0x00165724 File Offset: 0x00163924
 		public UserReport()
 		{
 			base.AggregateMetrics = new List<UserReportMetric>();
@@ -21,42 +21,42 @@ namespace Unity.Cloud.UserReporting
 			this.Screenshots = new List<UserReportScreenshot>();
 		}
 
-		// Token: 0x1700172A RID: 5930
-		// (get) Token: 0x0600457A RID: 17786 RVA: 0x000F7D7B File Offset: 0x000F5F7B
-		// (set) Token: 0x0600457B RID: 17787 RVA: 0x000F7D83 File Offset: 0x000F5F83
+		// Token: 0x17001F58 RID: 8024
+		// (get) Token: 0x06005FB0 RID: 24496 RVA: 0x00034C54 File Offset: 0x00032E54
+		// (set) Token: 0x06005FB1 RID: 24497 RVA: 0x00034C5C File Offset: 0x00032E5C
 		public List<UserReportAttachment> Attachments { get; set; }
 
-		// Token: 0x1700172B RID: 5931
-		// (get) Token: 0x0600457C RID: 17788 RVA: 0x000F7D8C File Offset: 0x000F5F8C
-		// (set) Token: 0x0600457D RID: 17789 RVA: 0x000F7D94 File Offset: 0x000F5F94
+		// Token: 0x17001F59 RID: 8025
+		// (get) Token: 0x06005FB2 RID: 24498 RVA: 0x00034C65 File Offset: 0x00032E65
+		// (set) Token: 0x06005FB3 RID: 24499 RVA: 0x00034C6D File Offset: 0x00032E6D
 		public List<UserReportMetric> ClientMetrics { get; set; }
 
-		// Token: 0x1700172C RID: 5932
-		// (get) Token: 0x0600457E RID: 17790 RVA: 0x000F7D9D File Offset: 0x000F5F9D
-		// (set) Token: 0x0600457F RID: 17791 RVA: 0x000F7DA5 File Offset: 0x000F5FA5
+		// Token: 0x17001F5A RID: 8026
+		// (get) Token: 0x06005FB4 RID: 24500 RVA: 0x00034C76 File Offset: 0x00032E76
+		// (set) Token: 0x06005FB5 RID: 24501 RVA: 0x00034C7E File Offset: 0x00032E7E
 		public List<UserReportNamedValue> DeviceMetadata { get; set; }
 
-		// Token: 0x1700172D RID: 5933
-		// (get) Token: 0x06004580 RID: 17792 RVA: 0x000F7DAE File Offset: 0x000F5FAE
-		// (set) Token: 0x06004581 RID: 17793 RVA: 0x000F7DB6 File Offset: 0x000F5FB6
+		// Token: 0x17001F5B RID: 8027
+		// (get) Token: 0x06005FB6 RID: 24502 RVA: 0x00034C87 File Offset: 0x00032E87
+		// (set) Token: 0x06005FB7 RID: 24503 RVA: 0x00034C8F File Offset: 0x00032E8F
 		public List<UserReportEvent> Events { get; set; }
 
-		// Token: 0x1700172E RID: 5934
-		// (get) Token: 0x06004582 RID: 17794 RVA: 0x000F7DBF File Offset: 0x000F5FBF
-		// (set) Token: 0x06004583 RID: 17795 RVA: 0x000F7DC7 File Offset: 0x000F5FC7
+		// Token: 0x17001F5C RID: 8028
+		// (get) Token: 0x06005FB8 RID: 24504 RVA: 0x00034C98 File Offset: 0x00032E98
+		// (set) Token: 0x06005FB9 RID: 24505 RVA: 0x00034CA0 File Offset: 0x00032EA0
 		public List<UserReportNamedValue> Fields { get; set; }
 
-		// Token: 0x1700172F RID: 5935
-		// (get) Token: 0x06004584 RID: 17796 RVA: 0x000F7DD0 File Offset: 0x000F5FD0
-		// (set) Token: 0x06004585 RID: 17797 RVA: 0x000F7DD8 File Offset: 0x000F5FD8
+		// Token: 0x17001F5D RID: 8029
+		// (get) Token: 0x06005FBA RID: 24506 RVA: 0x00034CA9 File Offset: 0x00032EA9
+		// (set) Token: 0x06005FBB RID: 24507 RVA: 0x00034CB1 File Offset: 0x00032EB1
 		public List<UserReportMeasure> Measures { get; set; }
 
-		// Token: 0x17001730 RID: 5936
-		// (get) Token: 0x06004586 RID: 17798 RVA: 0x000F7DE1 File Offset: 0x000F5FE1
-		// (set) Token: 0x06004587 RID: 17799 RVA: 0x000F7DE9 File Offset: 0x000F5FE9
+		// Token: 0x17001F5E RID: 8030
+		// (get) Token: 0x06005FBC RID: 24508 RVA: 0x00034CBA File Offset: 0x00032EBA
+		// (set) Token: 0x06005FBD RID: 24509 RVA: 0x00034CC2 File Offset: 0x00032EC2
 		public List<UserReportScreenshot> Screenshots { get; set; }
 
-		// Token: 0x06004588 RID: 17800 RVA: 0x000F7DF4 File Offset: 0x000F5FF4
+		// Token: 0x06005FBE RID: 24510 RVA: 0x00165790 File Offset: 0x00163990
 		public UserReport Clone()
 		{
 			return new UserReport
@@ -81,7 +81,7 @@ namespace Unity.Cloud.UserReporting
 			};
 		}
 
-		// Token: 0x06004589 RID: 17801 RVA: 0x000F7F58 File Offset: 0x000F6158
+		// Token: 0x06005FBF RID: 24511 RVA: 0x001658F4 File Offset: 0x00163AF4
 		public void Complete()
 		{
 			if (this.Screenshots.Count > 0)
@@ -115,7 +115,7 @@ namespace Unity.Cloud.UserReporting
 			base.AggregateMetrics.Sort(new UserReport.UserReportMetricSorter());
 		}
 
-		// Token: 0x0600458A RID: 17802 RVA: 0x000F80E8 File Offset: 0x000F62E8
+		// Token: 0x06005FC0 RID: 24512 RVA: 0x00165A84 File Offset: 0x00163C84
 		public void Fix()
 		{
 			base.AggregateMetrics = (base.AggregateMetrics ?? new List<UserReportMetric>());
@@ -129,7 +129,7 @@ namespace Unity.Cloud.UserReporting
 			this.Screenshots = (this.Screenshots ?? new List<UserReportScreenshot>());
 		}
 
-		// Token: 0x0600458B RID: 17803 RVA: 0x000F81B4 File Offset: 0x000F63B4
+		// Token: 0x06005FC1 RID: 24513 RVA: 0x00165B50 File Offset: 0x00163D50
 		public string GetDimensionsString()
 		{
 			StringBuilder stringBuilder = new StringBuilder();
@@ -147,7 +147,7 @@ namespace Unity.Cloud.UserReporting
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x0600458C RID: 17804 RVA: 0x000F8234 File Offset: 0x000F6434
+		// Token: 0x06005FC2 RID: 24514 RVA: 0x00165BD0 File Offset: 0x00163DD0
 		public void RemoveScreenshots(int maximumWidth, int maximumHeight, int totalBytes, int ignoreCount)
 		{
 			int num = 0;
@@ -169,7 +169,7 @@ namespace Unity.Cloud.UserReporting
 			}
 		}
 
-		// Token: 0x0600458D RID: 17805 RVA: 0x000F82A0 File Offset: 0x000F64A0
+		// Token: 0x06005FC3 RID: 24515 RVA: 0x00165C3C File Offset: 0x00163E3C
 		public UserReportPreview ToPreview()
 		{
 			return new UserReportPreview
@@ -187,10 +187,10 @@ namespace Unity.Cloud.UserReporting
 			};
 		}
 
-		// Token: 0x02000E56 RID: 3670
+		// Token: 0x02000D1D RID: 3357
 		private class UserReportMetricSorter : IComparer<UserReportMetric>
 		{
-			// Token: 0x06006C77 RID: 27767 RVA: 0x00193FFB File Offset: 0x001921FB
+			// Token: 0x06005FC4 RID: 24516 RVA: 0x00034CCB File Offset: 0x00032ECB
 			public int Compare(UserReportMetric x, UserReportMetric y)
 			{
 				return string.Compare(x.Name, y.Name, StringComparison.Ordinal);

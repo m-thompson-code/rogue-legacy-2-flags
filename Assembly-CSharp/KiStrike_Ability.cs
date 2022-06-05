@@ -3,11 +3,11 @@ using System.Collections;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x02000182 RID: 386
+// Token: 0x020002CA RID: 714
 public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 {
-	// Token: 0x1700075E RID: 1886
-	// (get) Token: 0x06000DBE RID: 3518 RVA: 0x0002A90B File Offset: 0x00028B0B
+	// Token: 0x170009DA RID: 2522
+	// (get) Token: 0x06001539 RID: 5433 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -16,8 +16,8 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700075F RID: 1887
-	// (get) Token: 0x06000DBF RID: 3519 RVA: 0x0002A912 File Offset: 0x00028B12
+	// Token: 0x170009DB RID: 2523
+	// (get) Token: 0x0600153A RID: 5434 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -26,8 +26,8 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000760 RID: 1888
-	// (get) Token: 0x06000DC0 RID: 3520 RVA: 0x0002A919 File Offset: 0x00028B19
+	// Token: 0x170009DC RID: 2524
+	// (get) Token: 0x0600153B RID: 5435 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellAnimSpeed
 	{
 		get
@@ -36,8 +36,8 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000761 RID: 1889
-	// (get) Token: 0x06000DC1 RID: 3521 RVA: 0x0002A920 File Offset: 0x00028B20
+	// Token: 0x170009DD RID: 2525
+	// (get) Token: 0x0600153C RID: 5436 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -46,8 +46,8 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000762 RID: 1890
-	// (get) Token: 0x06000DC2 RID: 3522 RVA: 0x0002A927 File Offset: 0x00028B27
+	// Token: 0x170009DE RID: 2526
+	// (get) Token: 0x0600153D RID: 5437 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -56,8 +56,8 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000763 RID: 1891
-	// (get) Token: 0x06000DC3 RID: 3523 RVA: 0x0002A92E File Offset: 0x00028B2E
+	// Token: 0x170009DF RID: 2527
+	// (get) Token: 0x0600153E RID: 5438 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -66,8 +66,8 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000764 RID: 1892
-	// (get) Token: 0x06000DC4 RID: 3524 RVA: 0x0002A935 File Offset: 0x00028B35
+	// Token: 0x170009E0 RID: 2528
+	// (get) Token: 0x0600153F RID: 5439 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -76,8 +76,8 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000765 RID: 1893
-	// (get) Token: 0x06000DC5 RID: 3525 RVA: 0x0002A93C File Offset: 0x00028B3C
+	// Token: 0x170009E1 RID: 2529
+	// (get) Token: 0x06001540 RID: 5440 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -86,8 +86,8 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000766 RID: 1894
-	// (get) Token: 0x06000DC6 RID: 3526 RVA: 0x0002A943 File Offset: 0x00028B43
+	// Token: 0x170009E2 RID: 2530
+	// (get) Token: 0x06001541 RID: 5441 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -96,8 +96,8 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000767 RID: 1895
-	// (get) Token: 0x06000DC7 RID: 3527 RVA: 0x0002A94A File Offset: 0x00028B4A
+	// Token: 0x170009E3 RID: 2531
+	// (get) Token: 0x06001542 RID: 5442 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -106,7 +106,7 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000DC8 RID: 3528 RVA: 0x0002A951 File Offset: 0x00028B51
+	// Token: 0x06001543 RID: 5443 RVA: 0x0000A99D File Offset: 0x00008B9D
 	public override IEnumerator CastAbility()
 	{
 		if (this.m_disableGravity && this.m_abilityController.PlayerController.ConditionState != CharacterStates.CharacterConditions.DisableHorizontalMovement)
@@ -120,7 +120,7 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000DC9 RID: 3529 RVA: 0x0002A960 File Offset: 0x00028B60
+	// Token: 0x06001544 RID: 5444 RVA: 0x00089AE0 File Offset: 0x00087CE0
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_firedProjectile)
@@ -139,7 +139,7 @@ public class KiStrike_Ability : BaseAbility_RL, ITalent, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x040010FF RID: 4351
+	// Token: 0x04001671 RID: 5745
 	[SerializeField]
 	private bool m_disableGravity;
 }

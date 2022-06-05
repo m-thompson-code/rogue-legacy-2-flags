@@ -1,13 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006DD RID: 1757
+// Token: 0x02000B88 RID: 2952
 [Serializable]
 public class MaterialGeoObject
 {
-	// Token: 0x170015D1 RID: 5585
-	// (get) Token: 0x06003FE0 RID: 16352 RVA: 0x000E2971 File Offset: 0x000E0B71
-	// (set) Token: 0x06003FE1 RID: 16353 RVA: 0x000E2979 File Offset: 0x000E0B79
+	// Token: 0x17001DC9 RID: 7625
+	// (get) Token: 0x06005917 RID: 22807 RVA: 0x00030799 File Offset: 0x0002E999
+	// (set) Token: 0x06005918 RID: 22808 RVA: 0x000307A1 File Offset: 0x0002E9A1
 	public EquipmentType EquipmentType
 	{
 		get
@@ -20,9 +20,9 @@ public class MaterialGeoObject
 		}
 	}
 
-	// Token: 0x170015D2 RID: 5586
-	// (get) Token: 0x06003FE2 RID: 16354 RVA: 0x000E2982 File Offset: 0x000E0B82
-	// (set) Token: 0x06003FE3 RID: 16355 RVA: 0x000E298A File Offset: 0x000E0B8A
+	// Token: 0x17001DCA RID: 7626
+	// (get) Token: 0x06005919 RID: 22809 RVA: 0x000307AA File Offset: 0x0002E9AA
+	// (set) Token: 0x0600591A RID: 22810 RVA: 0x000307B2 File Offset: 0x0002E9B2
 	public Material Material
 	{
 		get
@@ -35,9 +35,9 @@ public class MaterialGeoObject
 		}
 	}
 
-	// Token: 0x170015D3 RID: 5587
-	// (get) Token: 0x06003FE4 RID: 16356 RVA: 0x000E2993 File Offset: 0x000E0B93
-	// (set) Token: 0x06003FE5 RID: 16357 RVA: 0x000E299B File Offset: 0x000E0B9B
+	// Token: 0x17001DCB RID: 7627
+	// (get) Token: 0x0600591B RID: 22811 RVA: 0x000307BB File Offset: 0x0002E9BB
+	// (set) Token: 0x0600591C RID: 22812 RVA: 0x000307C3 File Offset: 0x0002E9C3
 	public GameObject CustomGeo
 	{
 		get
@@ -50,15 +50,15 @@ public class MaterialGeoObject
 		}
 	}
 
-	// Token: 0x04003062 RID: 12386
+	// Token: 0x040042B1 RID: 17073
 	[SerializeField]
 	private EquipmentType m_equipmentType;
 
-	// Token: 0x04003063 RID: 12387
+	// Token: 0x040042B2 RID: 17074
 	[SerializeField]
 	private Material m_material;
 
-	// Token: 0x04003064 RID: 12388
+	// Token: 0x040042B3 RID: 17075
 	[SerializeField]
 	private GameObject m_customGeo;
 }

@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using Rewired.Integration.UnityUI;
 using UnityEngine;
 
-// Token: 0x02000268 RID: 616
+// Token: 0x0200042F RID: 1071
 public class MouseInputManager : MonoBehaviour
 {
-	// Token: 0x0600188C RID: 6284 RVA: 0x0004CE6F File Offset: 0x0004B06F
+	// Token: 0x06002275 RID: 8821 RVA: 0x000126DD File Offset: 0x000108DD
 	private void Awake()
 	{
 		this.m_onWindowOpenOrClose = new Action<MonoBehaviour, EventArgs>(this.OnWindowOpenOrClose);
 	}
 
-	// Token: 0x0600188D RID: 6285 RVA: 0x0004CE84 File Offset: 0x0004B084
+	// Token: 0x06002276 RID: 8822 RVA: 0x000AAC10 File Offset: 0x000A8E10
 	private void OnWindowOpenOrClose(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		if (this.m_openWindows == null)
@@ -53,13 +53,13 @@ public class MouseInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040017DA RID: 6106
+	// Token: 0x04001F19 RID: 7961
 	[SerializeField]
 	private RewiredStandaloneInputModule m_inputModule;
 
-	// Token: 0x040017DB RID: 6107
+	// Token: 0x04001F1A RID: 7962
 	private List<WindowID> m_openWindows;
 
-	// Token: 0x040017DC RID: 6108
+	// Token: 0x04001F1B RID: 7963
 	private Action<MonoBehaviour, EventArgs> m_onWindowOpenOrClose;
 }

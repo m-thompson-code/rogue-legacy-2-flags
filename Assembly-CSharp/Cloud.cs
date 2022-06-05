@@ -3,11 +3,11 @@ using System.Collections;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x02000447 RID: 1095
+// Token: 0x02000718 RID: 1816
 public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHitResponse, IHitResponse, ITerrainOnStayHitResponse
 {
-	// Token: 0x17000FCC RID: 4044
-	// (get) Token: 0x0600282B RID: 10283 RVA: 0x0008530A File Offset: 0x0008350A
+	// Token: 0x170014BF RID: 5311
+	// (get) Token: 0x0600376D RID: 14189 RVA: 0x0001E7C5 File Offset: 0x0001C9C5
 	public static bool HittingCloud
 	{
 		get
@@ -16,8 +16,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FCD RID: 4045
-	// (get) Token: 0x0600282C RID: 10284 RVA: 0x00085311 File Offset: 0x00083511
+	// Token: 0x170014C0 RID: 5312
+	// (get) Token: 0x0600376E RID: 14190 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string RelicDamageTypeString
 	{
 		get
@@ -26,8 +26,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FCE RID: 4046
-	// (get) Token: 0x0600282D RID: 10285 RVA: 0x00085314 File Offset: 0x00083514
+	// Token: 0x170014C1 RID: 5313
+	// (get) Token: 0x0600376F RID: 14191 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public StatusEffectType[] StatusEffectTypes
 	{
 		get
@@ -36,8 +36,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FCF RID: 4047
-	// (get) Token: 0x0600282E RID: 10286 RVA: 0x00085317 File Offset: 0x00083517
+	// Token: 0x170014C2 RID: 5314
+	// (get) Token: 0x06003770 RID: 14192 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public float[] StatusEffectDurations
 	{
 		get
@@ -46,8 +46,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FD0 RID: 4048
-	// (get) Token: 0x0600282F RID: 10287 RVA: 0x0008531A File Offset: 0x0008351A
+	// Token: 0x170014C3 RID: 5315
+	// (get) Token: 0x06003771 RID: 14193 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public bool IsDotDamage
 	{
 		get
@@ -56,8 +56,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FD1 RID: 4049
-	// (get) Token: 0x06002830 RID: 10288 RVA: 0x0008531D File Offset: 0x0008351D
+	// Token: 0x170014C4 RID: 5316
+	// (get) Token: 0x06003772 RID: 14194 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritChance
 	{
 		get
@@ -66,8 +66,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FD2 RID: 4050
-	// (get) Token: 0x06002831 RID: 10289 RVA: 0x00085324 File Offset: 0x00083524
+	// Token: 0x170014C5 RID: 5317
+	// (get) Token: 0x06003773 RID: 14195 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritDamage
 	{
 		get
@@ -76,8 +76,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FD3 RID: 4051
-	// (get) Token: 0x06002832 RID: 10290 RVA: 0x0008532C File Offset: 0x0008352C
+	// Token: 0x170014C6 RID: 5318
+	// (get) Token: 0x06003774 RID: 14196 RVA: 0x000E5DD4 File Offset: 0x000E3FD4
 	public virtual float ActualDamage
 	{
 		get
@@ -101,8 +101,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FD4 RID: 4052
-	// (get) Token: 0x06002833 RID: 10291 RVA: 0x000853A4 File Offset: 0x000835A4
+	// Token: 0x170014C7 RID: 5319
+	// (get) Token: 0x06003775 RID: 14197 RVA: 0x0001E7CC File Offset: 0x0001C9CC
 	public float ActualKnockbackStrength
 	{
 		get
@@ -111,8 +111,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FD5 RID: 4053
-	// (get) Token: 0x06002834 RID: 10292 RVA: 0x000853AC File Offset: 0x000835AC
+	// Token: 0x170014C8 RID: 5320
+	// (get) Token: 0x06003776 RID: 14198 RVA: 0x0001E7D4 File Offset: 0x0001C9D4
 	public float ActualStunStrength
 	{
 		get
@@ -121,8 +121,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FD6 RID: 4054
-	// (get) Token: 0x06002835 RID: 10293 RVA: 0x000853B4 File Offset: 0x000835B4
+	// Token: 0x170014C9 RID: 5321
+	// (get) Token: 0x06003777 RID: 14199 RVA: 0x0001E7DC File Offset: 0x0001C9DC
 	public virtual float BaseDamage
 	{
 		get
@@ -131,9 +131,9 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FD7 RID: 4055
-	// (get) Token: 0x06002836 RID: 10294 RVA: 0x000853BC File Offset: 0x000835BC
-	// (set) Token: 0x06002837 RID: 10295 RVA: 0x000853C4 File Offset: 0x000835C4
+	// Token: 0x170014CA RID: 5322
+	// (get) Token: 0x06003778 RID: 14200 RVA: 0x0001E7E4 File Offset: 0x0001C9E4
+	// (set) Token: 0x06003779 RID: 14201 RVA: 0x0001E7EC File Offset: 0x0001C9EC
 	public float BaseStunStrength
 	{
 		get
@@ -146,9 +146,9 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FD8 RID: 4056
-	// (get) Token: 0x06002838 RID: 10296 RVA: 0x000853CD File Offset: 0x000835CD
-	// (set) Token: 0x06002839 RID: 10297 RVA: 0x000853D5 File Offset: 0x000835D5
+	// Token: 0x170014CB RID: 5323
+	// (get) Token: 0x0600377A RID: 14202 RVA: 0x0001E7F5 File Offset: 0x0001C9F5
+	// (set) Token: 0x0600377B RID: 14203 RVA: 0x0001E7FD File Offset: 0x0001C9FD
 	public float BaseKnockbackStrength
 	{
 		get
@@ -161,8 +161,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FD9 RID: 4057
-	// (get) Token: 0x0600283A RID: 10298 RVA: 0x000853DE File Offset: 0x000835DE
+	// Token: 0x170014CC RID: 5324
+	// (get) Token: 0x0600377C RID: 14204 RVA: 0x0001E806 File Offset: 0x0001CA06
 	public Vector2 ExternalKnockbackMod
 	{
 		get
@@ -171,8 +171,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FDA RID: 4058
-	// (get) Token: 0x0600283B RID: 10299 RVA: 0x000853E6 File Offset: 0x000835E6
+	// Token: 0x170014CD RID: 5325
+	// (get) Token: 0x0600377D RID: 14205 RVA: 0x0001E7F5 File Offset: 0x0001C9F5
 	public float KnockbackStrength
 	{
 		get
@@ -181,8 +181,8 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FDB RID: 4059
-	// (get) Token: 0x0600283C RID: 10300 RVA: 0x000853EE File Offset: 0x000835EE
+	// Token: 0x170014CE RID: 5326
+	// (get) Token: 0x0600377E RID: 14206 RVA: 0x000046FA File Offset: 0x000028FA
 	public StrikeType StrikeType
 	{
 		get
@@ -191,12 +191,12 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x17000FDC RID: 4060
-	// (get) Token: 0x0600283D RID: 10301 RVA: 0x000853F2 File Offset: 0x000835F2
-	// (set) Token: 0x0600283E RID: 10302 RVA: 0x000853FA File Offset: 0x000835FA
+	// Token: 0x170014CF RID: 5327
+	// (get) Token: 0x0600377F RID: 14207 RVA: 0x0001E80E File Offset: 0x0001CA0E
+	// (set) Token: 0x06003780 RID: 14208 RVA: 0x0001E816 File Offset: 0x0001CA16
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x0600283F RID: 10303 RVA: 0x00085404 File Offset: 0x00083604
+	// Token: 0x06003781 RID: 14209 RVA: 0x000E5E4C File Offset: 0x000E404C
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -205,7 +205,7 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		this.m_onPlayerJustHit = new Action<object, CharacterHitEventArgs>(this.OnPlayerJustHit);
 	}
 
-	// Token: 0x06002840 RID: 10304 RVA: 0x00085451 File Offset: 0x00083651
+	// Token: 0x06003782 RID: 14210 RVA: 0x0001E81F File Offset: 0x0001CA1F
 	private void OnEnable()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -214,7 +214,7 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x06002841 RID: 10305 RVA: 0x00085478 File Offset: 0x00083678
+	// Token: 0x06003783 RID: 14211 RVA: 0x000E5E9C File Offset: 0x000E409C
 	private void OnDisable()
 	{
 		if (PlayerManager.IsInstantiated && !PlayerManager.IsDisposed)
@@ -245,13 +245,13 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		Cloud.m_alreadyHitCloud = false;
 	}
 
-	// Token: 0x06002842 RID: 10306 RVA: 0x0008554A File Offset: 0x0008374A
+	// Token: 0x06003784 RID: 14212 RVA: 0x0001E844 File Offset: 0x0001CA44
 	private void OnPlayerJustHit(object sender, EventArgs args)
 	{
 		this.m_charHitFrameCount = Time.frameCount;
 	}
 
-	// Token: 0x06002843 RID: 10307 RVA: 0x00085558 File Offset: 0x00083758
+	// Token: 0x06003785 RID: 14213 RVA: 0x000E5F70 File Offset: 0x000E4170
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		this.m_playerPositionOnEnterRoom = PlayerManager.GetPlayer().transform.position;
@@ -261,7 +261,7 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x06002844 RID: 10308 RVA: 0x000855A4 File Offset: 0x000837A4
+	// Token: 0x06003786 RID: 14214 RVA: 0x0001E851 File Offset: 0x0001CA51
 	private void OnPlayerHitCloud()
 	{
 		if (Cloud.m_alreadyHitCloud)
@@ -277,7 +277,7 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		base.StartCoroutine(this.HitCloudCoroutine());
 	}
 
-	// Token: 0x06002845 RID: 10309 RVA: 0x000855D4 File Offset: 0x000837D4
+	// Token: 0x06003787 RID: 14215 RVA: 0x0001E881 File Offset: 0x0001CA81
 	private IEnumerator HitCloudCoroutine()
 	{
 		Vector3 position = PlayerManager.GetPlayerController().transform.position;
@@ -356,7 +356,7 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		yield break;
 	}
 
-	// Token: 0x06002846 RID: 10310 RVA: 0x000855E4 File Offset: 0x000837E4
+	// Token: 0x06003788 RID: 14216 RVA: 0x000E5FBC File Offset: 0x000E41BC
 	private Vector3 FindSaferPosition(Vector3 currentPos)
 	{
 		Collider2D collider = this.m_hbController.GetCollider(HitboxType.Terrain);
@@ -412,7 +412,7 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		return currentPos;
 	}
 
-	// Token: 0x06002847 RID: 10311 RVA: 0x0008580C File Offset: 0x00083A0C
+	// Token: 0x06003789 RID: 14217 RVA: 0x0001E890 File Offset: 0x0001CA90
 	private IEnumerator TrailAnimCurveCoroutine(float duration, float intensity, Transform transform)
 	{
 		float startTime = Time.time;
@@ -427,13 +427,13 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		yield break;
 	}
 
-	// Token: 0x06002848 RID: 10312 RVA: 0x00085830 File Offset: 0x00083A30
+	// Token: 0x0600378A RID: 14218 RVA: 0x0001E8B4 File Offset: 0x0001CAB4
 	private void OnRoomDestroyed(object sender, EventArgs eventArgs)
 	{
 		this.ClearEventHandlers();
 	}
 
-	// Token: 0x06002849 RID: 10313 RVA: 0x00085838 File Offset: 0x00083A38
+	// Token: 0x0600378B RID: 14219 RVA: 0x000E61E4 File Offset: 0x000E43E4
 	private void ClearEventHandlers()
 	{
 		if (this.Room)
@@ -443,13 +443,13 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x0600284A RID: 10314 RVA: 0x0008588C File Offset: 0x00083A8C
+	// Token: 0x0600378C RID: 14220 RVA: 0x0001E8B4 File Offset: 0x0001CAB4
 	private void OnDestroy()
 	{
 		this.ClearEventHandlers();
 	}
 
-	// Token: 0x0600284B RID: 10315 RVA: 0x00085894 File Offset: 0x00083A94
+	// Token: 0x0600378D RID: 14221 RVA: 0x000E6238 File Offset: 0x000E4438
 	public void SetRoom(BaseRoom room)
 	{
 		this.ClearEventHandlers();
@@ -458,7 +458,7 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		this.Room.RoomDestroyedRelay.AddListener(new Action<object, EventArgs>(this.OnRoomDestroyed), false);
 	}
 
-	// Token: 0x0600284C RID: 10316 RVA: 0x000858EA File Offset: 0x00083AEA
+	// Token: 0x0600378E RID: 14222 RVA: 0x0001E8BC File Offset: 0x0001CABC
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (otherHBController.RootGameObject.CompareTag("Player") || otherHBController.RootGameObject.CompareTag("Player_Dodging"))
@@ -467,67 +467,67 @@ public class Cloud : MonoBehaviour, IDamageObj, IRoomConsumer, ITerrainOnEnterHi
 		}
 	}
 
-	// Token: 0x0600284D RID: 10317 RVA: 0x00085916 File Offset: 0x00083B16
+	// Token: 0x0600378F RID: 14223 RVA: 0x0001E8E8 File Offset: 0x0001CAE8
 	public void TerrainOnStayHitResponse(IHitboxController otherHBController)
 	{
 		this.TerrainOnEnterHitResponse(otherHBController);
 	}
 
-	// Token: 0x0600284F RID: 10319 RVA: 0x00085974 File Offset: 0x00083B74
+	// Token: 0x06003791 RID: 14225 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IDamageObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400215C RID: 8540
+	// Token: 0x04002CAA RID: 11434
 	private static bool m_alreadyHitCloud;
 
-	// Token: 0x0400215D RID: 8541
+	// Token: 0x04002CAB RID: 11435
 	[SerializeField]
 	private AnimationCurve m_animCurve;
 
-	// Token: 0x0400215E RID: 8542
+	// Token: 0x04002CAC RID: 11436
 	private Vector2 m_knockbackMod = new Vector2(1f, 1.8f);
 
-	// Token: 0x0400215F RID: 8543
+	// Token: 0x04002CAD RID: 11437
 	private float m_knockbackStrength = 99f;
 
-	// Token: 0x04002160 RID: 8544
+	// Token: 0x04002CAE RID: 11438
 	private float m_baseStunStrength;
 
-	// Token: 0x04002161 RID: 8545
+	// Token: 0x04002CAF RID: 11439
 	private Vector2 m_playerPositionOnEnterRoom;
 
-	// Token: 0x04002162 RID: 8546
+	// Token: 0x04002CB0 RID: 11440
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002163 RID: 8547
+	// Token: 0x04002CB1 RID: 11441
 	private IHitboxController m_hbController;
 
-	// Token: 0x04002164 RID: 8548
+	// Token: 0x04002CB2 RID: 11442
 	private int m_charHitFrameCount;
 
-	// Token: 0x04002165 RID: 8549
+	// Token: 0x04002CB3 RID: 11443
 	private int m_cloudHitFrameCount;
 
-	// Token: 0x04002166 RID: 8550
+	// Token: 0x04002CB4 RID: 11444
 	private bool m_disableDamage;
 
-	// Token: 0x04002167 RID: 8551
+	// Token: 0x04002CB5 RID: 11445
 	private Tween m_teleportTween;
 
-	// Token: 0x04002168 RID: 8552
+	// Token: 0x04002CB6 RID: 11446
 	private bool m_playerInputDisabled;
 
-	// Token: 0x04002169 RID: 8553
+	// Token: 0x04002CB7 RID: 11447
 	private Action<object, CharacterHitEventArgs> m_onPlayerJustHit;
 
-	// Token: 0x0400216A RID: 8554
+	// Token: 0x04002CB8 RID: 11448
 	public Relay<Vector2> PlayerHitRelay = new Relay<Vector2>();
 
-	// Token: 0x0400216B RID: 8555
+	// Token: 0x04002CB9 RID: 11449
 	public Relay TeleportStartRelay = new Relay();
 
-	// Token: 0x0400216C RID: 8556
+	// Token: 0x04002CBA RID: 11450
 	public Relay<Vector2> TeleportCompleteRelay = new Relay<Vector2>();
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200028C RID: 652
+// Token: 0x02000458 RID: 1112
 public class EnableDifficultyDisplayOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001999 RID: 6553 RVA: 0x000502E6 File Offset: 0x0004E4E6
+	// Token: 0x06002388 RID: 9096 RVA: 0x0001368E File Offset: 0x0001188E
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class EnableDifficultyDisplayOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x0600199A RID: 6554 RVA: 0x0005031E File Offset: 0x0004E51E
+	// Token: 0x06002389 RID: 9097 RVA: 0x000136C6 File Offset: 0x000118C6
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class EnableDifficultyDisplayOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x0600199B RID: 6555 RVA: 0x00050358 File Offset: 0x0004E558
+	// Token: 0x0600238A RID: 9098 RVA: 0x00013700 File Offset: 0x00011900
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed Display Difficulty to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x0600199C RID: 6556 RVA: 0x00050370 File Offset: 0x0004E570
+	// Token: 0x0600238B RID: 9099 RVA: 0x000AD00C File Offset: 0x000AB20C
 	public override void ConfirmOptionChange()
 	{
 		bool assist_EnableDifficultyDisplay = this.m_selectedIndex == 1;
@@ -41,7 +41,7 @@ public class EnableDifficultyDisplayOptionItem : SelectionListOptionItem
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.HouseRulesChanged, null, null);
 	}
 
-	// Token: 0x0600199D RID: 6557 RVA: 0x0005039C File Offset: 0x0004E59C
+	// Token: 0x0600238C RID: 9100 RVA: 0x000AC7CC File Offset: 0x000AA9CC
 	private void Update()
 	{
 		if (!SaveManager.PlayerSaveData.EnableHouseRules)
@@ -54,7 +54,7 @@ public class EnableDifficultyDisplayOptionItem : SelectionListOptionItem
 		this.m_incrementValueText.alpha = 1f;
 	}
 
-	// Token: 0x0600199E RID: 6558 RVA: 0x000503F6 File Offset: 0x0004E5F6
+	// Token: 0x0600238D RID: 9101 RVA: 0x00012DF4 File Offset: 0x00010FF4
 	public override void ActivateOption()
 	{
 		if (SaveManager.PlayerSaveData.EnableHouseRules)

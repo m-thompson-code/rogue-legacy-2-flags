@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008FE RID: 2302
+	// Token: 0x02000E78 RID: 3704
 	public class OnExitEventEmitter : AnimBehaviourEventEmitter
 	{
-		// Token: 0x06004B9A RID: 19354 RVA: 0x0010FC1E File Offset: 0x0010DE1E
+		// Token: 0x06006883 RID: 26755 RVA: 0x00039D87 File Offset: 0x00037F87
 		public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
 			base.Play(animator);

@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200023F RID: 575
+// Token: 0x020003FC RID: 1020
 [CreateAssetMenu(menuName = "Custom/Libraries/Projectile Library")]
 public class ProjectileLibrary : ScriptableObject
 {
-	// Token: 0x17000B42 RID: 2882
-	// (get) Token: 0x06001710 RID: 5904 RVA: 0x00047E51 File Offset: 0x00046051
+	// Token: 0x17000E6F RID: 3695
+	// (get) Token: 0x060020C3 RID: 8387 RVA: 0x00011613 File Offset: 0x0000F813
 	public static Sprite DefaultOffscreenSprite
 	{
 		get
@@ -15,8 +15,8 @@ public class ProjectileLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B43 RID: 2883
-	// (get) Token: 0x06001711 RID: 5905 RVA: 0x00047E5D File Offset: 0x0004605D
+	// Token: 0x17000E70 RID: 3696
+	// (get) Token: 0x060020C4 RID: 8388 RVA: 0x0001161F File Offset: 0x0000F81F
 	public static Sprite VoidOffscreenSprite
 	{
 		get
@@ -25,8 +25,8 @@ public class ProjectileLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B44 RID: 2884
-	// (get) Token: 0x06001712 RID: 5906 RVA: 0x00047E69 File Offset: 0x00046069
+	// Token: 0x17000E71 RID: 3697
+	// (get) Token: 0x060020C5 RID: 8389 RVA: 0x0001162B File Offset: 0x0000F82B
 	public static Sprite EnergyOffscreenSprite
 	{
 		get
@@ -35,8 +35,8 @@ public class ProjectileLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B45 RID: 2885
-	// (get) Token: 0x06001713 RID: 5907 RVA: 0x00047E75 File Offset: 0x00046075
+	// Token: 0x17000E72 RID: 3698
+	// (get) Token: 0x060020C6 RID: 8390 RVA: 0x00011637 File Offset: 0x0000F837
 	public static Sprite CurseOffscreenSprite
 	{
 		get
@@ -45,9 +45,9 @@ public class ProjectileLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B46 RID: 2886
-	// (get) Token: 0x06001714 RID: 5908 RVA: 0x00047E81 File Offset: 0x00046081
-	// (set) Token: 0x06001715 RID: 5909 RVA: 0x00047E8D File Offset: 0x0004608D
+	// Token: 0x17000E73 RID: 3699
+	// (get) Token: 0x060020C7 RID: 8391 RVA: 0x00011643 File Offset: 0x0000F843
+	// (set) Token: 0x060020C8 RID: 8392 RVA: 0x0001164F File Offset: 0x0000F84F
 	public static ProjectileEntry[] ProjectileEntryArray
 	{
 		get
@@ -60,9 +60,9 @@ public class ProjectileLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B47 RID: 2887
-	// (get) Token: 0x06001716 RID: 5910 RVA: 0x00047E9A File Offset: 0x0004609A
-	// (set) Token: 0x06001717 RID: 5911 RVA: 0x00047EA6 File Offset: 0x000460A6
+	// Token: 0x17000E74 RID: 3700
+	// (get) Token: 0x060020C9 RID: 8393 RVA: 0x0001165C File Offset: 0x0000F85C
+	// (set) Token: 0x060020CA RID: 8394 RVA: 0x00011668 File Offset: 0x0000F868
 	public static ProjectileBuffColourEntry[] ProjectileBuffColourArray
 	{
 		get
@@ -75,8 +75,8 @@ public class ProjectileLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B48 RID: 2888
-	// (get) Token: 0x06001718 RID: 5912 RVA: 0x00047EB4 File Offset: 0x000460B4
+	// Token: 0x17000E75 RID: 3701
+	// (get) Token: 0x060020CB RID: 8395 RVA: 0x000A5BFC File Offset: 0x000A3DFC
 	public static ProjectileLibrary Instance
 	{
 		get
@@ -100,7 +100,7 @@ public class ProjectileLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001719 RID: 5913 RVA: 0x00047F24 File Offset: 0x00046124
+	// Token: 0x060020CC RID: 8396 RVA: 0x000A5C6C File Offset: 0x000A3E6C
 	public static Projectile_RL GetProjectile(string projectileName)
 	{
 		foreach (ProjectileEntry projectileEntry in ProjectileLibrary.ProjectileEntryArray)
@@ -113,7 +113,7 @@ public class ProjectileLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x0600171A RID: 5914 RVA: 0x00047F68 File Offset: 0x00046168
+	// Token: 0x060020CD RID: 8397 RVA: 0x000A5CB0 File Offset: 0x000A3EB0
 	public static ProjectileEntry GetProjectileEntry(string projectileName)
 	{
 		foreach (ProjectileEntry projectileEntry in ProjectileLibrary.ProjectileEntryArray)
@@ -126,7 +126,7 @@ public class ProjectileLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x0600171B RID: 5915 RVA: 0x00047FA4 File Offset: 0x000461A4
+	// Token: 0x060020CE RID: 8398 RVA: 0x000A5CEC File Offset: 0x000A3EEC
 	public static Color GetBuffColor(ProjectileBuffType buffType)
 	{
 		for (int i = 0; i < ProjectileLibrary.m_instance.m_buffColorArray.Length; i++)
@@ -139,7 +139,7 @@ public class ProjectileLibrary : ScriptableObject
 		return Color.white;
 	}
 
-	// Token: 0x0600171C RID: 5916 RVA: 0x00047FF4 File Offset: 0x000461F4
+	// Token: 0x060020CF RID: 8399 RVA: 0x000A5D3C File Offset: 0x000A3F3C
 	public static byte GetBuffPriority(ProjectileBuffType buffType)
 	{
 		foreach (ProjectileBuffColourEntry projectileBuffColourEntry in ProjectileLibrary.m_instance.m_buffColorArray)
@@ -152,33 +152,33 @@ public class ProjectileLibrary : ScriptableObject
 		return 0;
 	}
 
-	// Token: 0x04001690 RID: 5776
+	// Token: 0x04001DA8 RID: 7592
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/ProjectileLibrary";
 
-	// Token: 0x04001691 RID: 5777
+	// Token: 0x04001DA9 RID: 7593
 	[SerializeField]
 	private Sprite m_defaultOffscreenSprite;
 
-	// Token: 0x04001692 RID: 5778
+	// Token: 0x04001DAA RID: 7594
 	[SerializeField]
 	private Sprite m_voidOffscreenSprite;
 
-	// Token: 0x04001693 RID: 5779
+	// Token: 0x04001DAB RID: 7595
 	[SerializeField]
 	private Sprite m_curseOffscreenSprite;
 
-	// Token: 0x04001694 RID: 5780
+	// Token: 0x04001DAC RID: 7596
 	[SerializeField]
 	private Sprite m_energyOffscreenSprite;
 
-	// Token: 0x04001695 RID: 5781
+	// Token: 0x04001DAD RID: 7597
 	[SerializeField]
 	private ProjectileBuffColourEntry[] m_buffColorArray;
 
-	// Token: 0x04001696 RID: 5782
+	// Token: 0x04001DAE RID: 7598
 	[SerializeField]
 	private ProjectileEntry[] m_projectileEntryArray;
 
-	// Token: 0x04001697 RID: 5783
+	// Token: 0x04001DAF RID: 7599
 	private static ProjectileLibrary m_instance;
 }

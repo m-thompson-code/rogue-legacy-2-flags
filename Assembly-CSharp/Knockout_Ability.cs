@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000184 RID: 388
+// Token: 0x020002CD RID: 717
 public class Knockout_Ability : AimedAbility_RL, ITalent, IAbility
 {
-	// Token: 0x17000772 RID: 1906
-	// (get) Token: 0x06000DD9 RID: 3545 RVA: 0x0002AAE5 File Offset: 0x00028CE5
+	// Token: 0x170009F0 RID: 2544
+	// (get) Token: 0x0600155A RID: 5466 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override AbilityAnimState StateToHoldAttackOn
 	{
 		get
@@ -14,8 +14,8 @@ public class Knockout_Ability : AimedAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000773 RID: 1907
-	// (get) Token: 0x06000DDA RID: 3546 RVA: 0x0002AAE8 File Offset: 0x00028CE8
+	// Token: 0x170009F1 RID: 2545
+	// (get) Token: 0x0600155B RID: 5467 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellAnimSpeed
 	{
 		get
@@ -24,8 +24,8 @@ public class Knockout_Ability : AimedAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000774 RID: 1908
-	// (get) Token: 0x06000DDB RID: 3547 RVA: 0x0002AAEF File Offset: 0x00028CEF
+	// Token: 0x170009F2 RID: 2546
+	// (get) Token: 0x0600155C RID: 5468 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -34,14 +34,14 @@ public class Knockout_Ability : AimedAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000DDC RID: 3548 RVA: 0x0002AAF6 File Offset: 0x00028CF6
+	// Token: 0x0600155D RID: 5469 RVA: 0x0000A9EB File Offset: 0x00008BEB
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onCollision = new Action<Projectile_RL, GameObject>(this.OnCollision);
 	}
 
-	// Token: 0x06000DDD RID: 3549 RVA: 0x0002AB10 File Offset: 0x00028D10
+	// Token: 0x0600155E RID: 5470 RVA: 0x00089CA4 File Offset: 0x00087EA4
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -52,7 +52,7 @@ public class Knockout_Ability : AimedAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000DDE RID: 3550 RVA: 0x0002AB60 File Offset: 0x00028D60
+	// Token: 0x0600155F RID: 5471 RVA: 0x00089CF4 File Offset: 0x00087EF4
 	protected override void UpdateArrowAim(bool doNotUpdatePlayerAnims = false)
 	{
 		base.UpdateArrowAim(doNotUpdatePlayerAnims);
@@ -73,7 +73,7 @@ public class Knockout_Ability : AimedAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000DDF RID: 3551 RVA: 0x0002AC63 File Offset: 0x00028E63
+	// Token: 0x06001560 RID: 5472 RVA: 0x0000AA05 File Offset: 0x00008C05
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_firedProjectile)
@@ -83,7 +83,7 @@ public class Knockout_Ability : AimedAbility_RL, ITalent, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x06000DE0 RID: 3552 RVA: 0x0002AC90 File Offset: 0x00028E90
+	// Token: 0x06001561 RID: 5473 RVA: 0x00089DF8 File Offset: 0x00087FF8
 	protected void OnCollision(Projectile_RL projectile, GameObject colliderObj)
 	{
 		if (colliderObj.CompareTag("Enemy"))
@@ -97,9 +97,9 @@ public class Knockout_Ability : AimedAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x04001100 RID: 4352
+	// Token: 0x04001675 RID: 5749
 	protected float gravityMod;
 
-	// Token: 0x04001101 RID: 4353
+	// Token: 0x04001676 RID: 5750
 	private Action<Projectile_RL, GameObject> m_onCollision;
 }

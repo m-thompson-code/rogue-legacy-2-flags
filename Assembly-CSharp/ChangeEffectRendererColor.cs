@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001CF RID: 463
+// Token: 0x0200034A RID: 842
 public class ChangeEffectRendererColor : MonoBehaviour
 {
-	// Token: 0x060012A1 RID: 4769 RVA: 0x00036D54 File Offset: 0x00034F54
+	// Token: 0x06001B1F RID: 6943 RVA: 0x000943EC File Offset: 0x000925EC
 	public void ChangeColor(Color color)
 	{
 		SpriteRenderer[] renderersToChange = this.m_renderersToChange;
@@ -14,7 +14,7 @@ public class ChangeEffectRendererColor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001308 RID: 4872
+	// Token: 0x0400193E RID: 6462
 	[SerializeField]
 	private SpriteRenderer[] m_renderersToChange;
 }

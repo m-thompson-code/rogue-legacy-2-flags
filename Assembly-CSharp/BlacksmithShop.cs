@@ -6,11 +6,11 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000548 RID: 1352
+// Token: 0x020008EF RID: 2287
 public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEventEmitter, IRoomConsumer
 {
-	// Token: 0x17001235 RID: 4661
-	// (get) Token: 0x0600317F RID: 12671 RVA: 0x000A76AC File Offset: 0x000A58AC
+	// Token: 0x170018AA RID: 6314
+	// (get) Token: 0x06004563 RID: 17763 RVA: 0x0002615C File Offset: 0x0002435C
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -23,8 +23,8 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		}
 	}
 
-	// Token: 0x17001236 RID: 4662
-	// (get) Token: 0x06003180 RID: 12672 RVA: 0x000A76B9 File Offset: 0x000A58B9
+	// Token: 0x170018AB RID: 6315
+	// (get) Token: 0x06004564 RID: 17764 RVA: 0x00026169 File Offset: 0x00024369
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -33,7 +33,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		}
 	}
 
-	// Token: 0x06003181 RID: 12673 RVA: 0x000A76CC File Offset: 0x000A58CC
+	// Token: 0x06004565 RID: 17765 RVA: 0x00110BB0 File Offset: 0x0010EDB0
 	private bool HasEventDialogue()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround && !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.SeenParade))
@@ -89,7 +89,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		return false;
 	}
 
-	// Token: 0x06003182 RID: 12674 RVA: 0x000A77C4 File Offset: 0x000A59C4
+	// Token: 0x06004566 RID: 17766 RVA: 0x00110CA8 File Offset: 0x0010EEA8
 	private bool HasUnseenGear()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround)
@@ -116,8 +116,8 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		return false;
 	}
 
-	// Token: 0x17001237 RID: 4663
-	// (get) Token: 0x06003183 RID: 12675 RVA: 0x000A7849 File Offset: 0x000A5A49
+	// Token: 0x170018AC RID: 6316
+	// (get) Token: 0x06004567 RID: 17767 RVA: 0x0002617B File Offset: 0x0002437B
 	public bool IsBlacksmithOpen
 	{
 		get
@@ -126,20 +126,20 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		}
 	}
 
-	// Token: 0x17001238 RID: 4664
-	// (get) Token: 0x06003184 RID: 12676 RVA: 0x000A7851 File Offset: 0x000A5A51
-	// (set) Token: 0x06003185 RID: 12677 RVA: 0x000A7859 File Offset: 0x000A5A59
+	// Token: 0x170018AD RID: 6317
+	// (get) Token: 0x06004568 RID: 17768 RVA: 0x00026183 File Offset: 0x00024383
+	// (set) Token: 0x06004569 RID: 17769 RVA: 0x0002618B File Offset: 0x0002438B
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x06003186 RID: 12678 RVA: 0x000A7862 File Offset: 0x000A5A62
+	// Token: 0x0600456A RID: 17770 RVA: 0x00026194 File Offset: 0x00024394
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x17001239 RID: 4665
-	// (get) Token: 0x06003187 RID: 12679 RVA: 0x000A7889 File Offset: 0x000A5A89
+	// Token: 0x170018AE RID: 6318
+	// (get) Token: 0x0600456B RID: 17771 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -148,7 +148,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		}
 	}
 
-	// Token: 0x06003188 RID: 12680 RVA: 0x000A7894 File Offset: 0x000A5A94
+	// Token: 0x0600456C RID: 17772 RVA: 0x00110D30 File Offset: 0x0010EF30
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -158,7 +158,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		this.m_blacksmithWindowClosedUnityEvent = new UnityAction(this.BlacksmithWindowClosed);
 	}
 
-	// Token: 0x06003189 RID: 12681 RVA: 0x000A78F4 File Offset: 0x000A5AF4
+	// Token: 0x0600456D RID: 17773 RVA: 0x000261BB File Offset: 0x000243BB
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -167,7 +167,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		}
 	}
 
-	// Token: 0x0600318A RID: 12682 RVA: 0x000A7920 File Offset: 0x000A5B20
+	// Token: 0x0600456E RID: 17774 RVA: 0x00110D90 File Offset: 0x0010EF90
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		this.m_endingSpeechBubblePlayed = false;
@@ -178,14 +178,14 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		}
 	}
 
-	// Token: 0x0600318B RID: 12683 RVA: 0x000A7964 File Offset: 0x000A5B64
+	// Token: 0x0600456F RID: 17775 RVA: 0x000261E7 File Offset: 0x000243E7
 	private void Start()
 	{
 		this.m_playerPositionObj.SetActive(false);
 		this.OnPlayerEnterRoom(null, null);
 	}
 
-	// Token: 0x0600318C RID: 12684 RVA: 0x000A797A File Offset: 0x000A5B7A
+	// Token: 0x06004570 RID: 17776 RVA: 0x000261FD File Offset: 0x000243FD
 	public void OpenBlacksmith()
 	{
 		this.m_isBlacksmithOpen = true;
@@ -193,7 +193,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		base.StartCoroutine(this.OpenBlacksmithCoroutine());
 	}
 
-	// Token: 0x0600318D RID: 12685 RVA: 0x000A799C File Offset: 0x000A5B9C
+	// Token: 0x06004571 RID: 17777 RVA: 0x0002621F File Offset: 0x0002441F
 	private IEnumerator OpenBlacksmithCoroutine()
 	{
 		this.m_blacksmith.SetNPCState(NPCState.AtAttention, false);
@@ -282,7 +282,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		yield break;
 	}
 
-	// Token: 0x0600318E RID: 12686 RVA: 0x000A79AC File Offset: 0x000A5BAC
+	// Token: 0x06004572 RID: 17778 RVA: 0x00110DD4 File Offset: 0x0010EFD4
 	private void RunBlacksmithIntroDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.BlacksmithDialogue_Intro, true);
@@ -299,7 +299,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_displayBlacksmithWindow);
 	}
 
-	// Token: 0x0600318F RID: 12687 RVA: 0x000A7A40 File Offset: 0x000A5C40
+	// Token: 0x06004573 RID: 17779 RVA: 0x00110E68 File Offset: 0x0010F068
 	private void RunBlacksmithUpgradingDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.BlacksmithDialogue_Upgrades, true);
@@ -309,7 +309,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_displayBlacksmithWindow);
 	}
 
-	// Token: 0x06003190 RID: 12688 RVA: 0x000A7AA0 File Offset: 0x000A5CA0
+	// Token: 0x06004574 RID: 17780 RVA: 0x00110EC8 File Offset: 0x0010F0C8
 	private void RunBlacksmithEquipmentSetsDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.BlacksmithDialogue_EquipmentSets, true);
@@ -319,7 +319,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_displayBlacksmithWindow);
 	}
 
-	// Token: 0x06003191 RID: 12689 RVA: 0x000A7B04 File Offset: 0x000A5D04
+	// Token: 0x06004575 RID: 17781 RVA: 0x00110F2C File Offset: 0x0010F12C
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -349,13 +349,13 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_blacksmithWindowClosed);
 	}
 
-	// Token: 0x06003192 RID: 12690 RVA: 0x000A7BA3 File Offset: 0x000A5DA3
+	// Token: 0x06004576 RID: 17782 RVA: 0x0002622E File Offset: 0x0002442E
 	private void DisplayBlacksmithWindow()
 	{
 		base.StartCoroutine(this.DisplayBlacksmithCoroutine());
 	}
 
-	// Token: 0x06003193 RID: 12691 RVA: 0x000A7BB2 File Offset: 0x000A5DB2
+	// Token: 0x06004577 RID: 17783 RVA: 0x0002623D File Offset: 0x0002443D
 	private IEnumerator DisplayBlacksmithCoroutine()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.Blacksmith))
@@ -368,7 +368,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		yield break;
 	}
 
-	// Token: 0x06003194 RID: 12692 RVA: 0x000A7BC1 File Offset: 0x000A5DC1
+	// Token: 0x06004578 RID: 17784 RVA: 0x0002624C File Offset: 0x0002444C
 	private IEnumerator MovePlayerToBlacksmith()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -388,7 +388,7 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		yield break;
 	}
 
-	// Token: 0x06003195 RID: 12693 RVA: 0x000A7BD0 File Offset: 0x000A5DD0
+	// Token: 0x06004579 RID: 17785 RVA: 0x00110FCC File Offset: 0x0010F1CC
 	private void BlacksmithWindowClosed()
 	{
 		if (WindowManager.GetIsWindowLoaded(WindowID.Blacksmith))
@@ -405,43 +405,43 @@ public class BlacksmithShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAu
 		this.m_blacksmith.SetNPCState(NPCState.Idle, false);
 	}
 
-	// Token: 0x06003197 RID: 12695 RVA: 0x000A7C3F File Offset: 0x000A5E3F
+	// Token: 0x0600457B RID: 17787 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002701 RID: 9985
+	// Token: 0x040035A7 RID: 13735
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x04002702 RID: 9986
+	// Token: 0x040035A8 RID: 13736
 	[SerializeField]
 	private NPCController m_blacksmith;
 
-	// Token: 0x04002703 RID: 9987
+	// Token: 0x040035A9 RID: 13737
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x04002704 RID: 9988
+	// Token: 0x040035AA RID: 13738
 	private bool m_isBlacksmithOpen;
 
-	// Token: 0x04002705 RID: 9989
+	// Token: 0x040035AB RID: 13739
 	private Interactable m_interactable;
 
-	// Token: 0x04002706 RID: 9990
+	// Token: 0x040035AC RID: 13740
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002707 RID: 9991
+	// Token: 0x040035AD RID: 13741
 	private bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x04002708 RID: 9992
+	// Token: 0x040035AE RID: 13742
 	private Action m_displayBlacksmithWindow;
 
-	// Token: 0x04002709 RID: 9993
+	// Token: 0x040035AF RID: 13743
 	private Action m_blacksmithWindowClosed;
 
-	// Token: 0x0400270A RID: 9994
+	// Token: 0x040035B0 RID: 13744
 	private UnityAction m_blacksmithWindowClosedUnityEvent;
 }

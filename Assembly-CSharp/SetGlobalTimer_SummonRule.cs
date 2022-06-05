@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000525 RID: 1317
+// Token: 0x020008A3 RID: 2211
 public class SetGlobalTimer_SummonRule : BaseSummonRule
 {
-	// Token: 0x170011F0 RID: 4592
-	// (get) Token: 0x06003099 RID: 12441 RVA: 0x000A5DF1 File Offset: 0x000A3FF1
+	// Token: 0x17001819 RID: 6169
+	// (get) Token: 0x06004391 RID: 17297 RVA: 0x000252B5 File Offset: 0x000234B5
 	public override Color BoxColor
 	{
 		get
@@ -15,8 +15,8 @@ public class SetGlobalTimer_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011F1 RID: 4593
-	// (get) Token: 0x0600309A RID: 12442 RVA: 0x000A5DF8 File Offset: 0x000A3FF8
+	// Token: 0x1700181A RID: 6170
+	// (get) Token: 0x06004392 RID: 17298 RVA: 0x000254F6 File Offset: 0x000236F6
 	public override SummonRuleType RuleType
 	{
 		get
@@ -25,8 +25,8 @@ public class SetGlobalTimer_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011F2 RID: 4594
-	// (get) Token: 0x0600309B RID: 12443 RVA: 0x000A5DFF File Offset: 0x000A3FFF
+	// Token: 0x1700181B RID: 6171
+	// (get) Token: 0x06004393 RID: 17299 RVA: 0x000254FD File Offset: 0x000236FD
 	public override string RuleLabel
 	{
 		get
@@ -35,7 +35,7 @@ public class SetGlobalTimer_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x0600309C RID: 12444 RVA: 0x000A5E06 File Offset: 0x000A4006
+	// Token: 0x06004394 RID: 17300 RVA: 0x00025504 File Offset: 0x00023704
 	public override IEnumerator RunSummonRule()
 	{
 		if (this.m_resetTimer)
@@ -62,27 +62,27 @@ public class SetGlobalTimer_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x04002692 RID: 9874
+	// Token: 0x04003499 RID: 13465
 	[SerializeField]
 	private bool m_startTimer;
 
-	// Token: 0x04002693 RID: 9875
+	// Token: 0x0400349A RID: 13466
 	[SerializeField]
 	private bool m_stopTimer;
 
-	// Token: 0x04002694 RID: 9876
+	// Token: 0x0400349B RID: 13467
 	[SerializeField]
 	private bool m_displayTimer;
 
-	// Token: 0x04002695 RID: 9877
+	// Token: 0x0400349C RID: 13468
 	[SerializeField]
 	private bool m_hideTimer;
 
-	// Token: 0x04002696 RID: 9878
+	// Token: 0x0400349D RID: 13469
 	[SerializeField]
 	private bool m_resetTimer;
 
-	// Token: 0x04002697 RID: 9879
+	// Token: 0x0400349E RID: 13470
 	[SerializeField]
 	private float m_slowDuration;
 }

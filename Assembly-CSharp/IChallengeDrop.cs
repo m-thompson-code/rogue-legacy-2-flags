@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020005DF RID: 1503
+// Token: 0x020009E7 RID: 2535
 public interface IChallengeDrop : ISpecialItemDrop
 {
-	// Token: 0x17001367 RID: 4967
-	// (get) Token: 0x060036AE RID: 13998
+	// Token: 0x17001A94 RID: 6804
+	// (get) Token: 0x06004CC0 RID: 19648
 	ChallengeType ChallengeType { get; }
 }

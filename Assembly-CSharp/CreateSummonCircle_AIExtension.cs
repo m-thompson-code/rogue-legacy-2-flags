@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000159 RID: 345
+// Token: 0x02000285 RID: 645
 public static class CreateSummonCircle_AIExtension
 {
-	// Token: 0x06000BC6 RID: 3014 RVA: 0x0002352C File Offset: 0x0002172C
+	// Token: 0x0600129D RID: 4765 RVA: 0x00082144 File Offset: 0x00080344
 	public static void CreateSummonCircle(this BaseAIScript aiScript, Vector2 position, Vector2 scale, float duration, bool scaleWithOwner = true, bool muteAudio = false)
 	{
 		if (scaleWithOwner)
@@ -23,7 +23,7 @@ public static class CreateSummonCircle_AIExtension
 		baseEffect.transform.localScale = new Vector3(scale.x, scale.y, 1f);
 	}
 
-	// Token: 0x06000BC7 RID: 3015 RVA: 0x000235B8 File Offset: 0x000217B8
+	// Token: 0x0600129E RID: 4766 RVA: 0x000821D0 File Offset: 0x000803D0
 	public static void CreateSummonCircle(this BaseAIScript aiScript, int spawnPosIndex, Vector2 scale, float duration, bool scaleWithOwner = true, bool matchFacing = true)
 	{
 		if (scaleWithOwner)

@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000161 RID: 353
+// Token: 0x0200028D RID: 653
 public static class SummonEnemy_AIExtension
 {
-	// Token: 0x06000BD3 RID: 3027 RVA: 0x00023A34 File Offset: 0x00021C34
+	// Token: 0x060012AA RID: 4778 RVA: 0x0008261C File Offset: 0x0008081C
 	public static EnemyController SummonEnemy_NoYield(this BaseAIScript aiScript, EnemyType enemyType, EnemyRank rank, Vector2 spawnOffset, bool usesAbsPos, bool runSummonAnim)
 	{
 		SummonEnemyController component = aiScript.EnemyController.gameObject.GetComponent<SummonEnemyController>();
@@ -43,7 +43,7 @@ public static class SummonEnemy_AIExtension
 		return null;
 	}
 
-	// Token: 0x06000BD4 RID: 3028 RVA: 0x00023B29 File Offset: 0x00021D29
+	// Token: 0x060012AB RID: 4779 RVA: 0x000097BD File Offset: 0x000079BD
 	public static IEnumerator SummonEnemy(this BaseAIScript aiScript, EnemyType enemyType, EnemyRank rank, Vector2 spawnOffset, bool usesAbsPos)
 	{
 		SummonEnemyController component = aiScript.EnemyController.gameObject.GetComponent<SummonEnemyController>();
@@ -80,7 +80,7 @@ public static class SummonEnemy_AIExtension
 		yield break;
 	}
 
-	// Token: 0x06000BD5 RID: 3029 RVA: 0x00023B58 File Offset: 0x00021D58
+	// Token: 0x060012AC RID: 4780 RVA: 0x00082714 File Offset: 0x00080914
 	public static EnemyController SummonEnemy_NoYield(this BaseAIScript aiScript, EnemyType enemyType, EnemyRank rank, int roomSpawnPosIndex, bool runSummonAnim)
 	{
 		SpawnPositionController componentInChildren = aiScript.EnemyController.Room.gameObject.GetComponentInChildren<SpawnPositionController>();
@@ -97,7 +97,7 @@ public static class SummonEnemy_AIExtension
 		return null;
 	}
 
-	// Token: 0x06000BD6 RID: 3030 RVA: 0x00023BBC File Offset: 0x00021DBC
+	// Token: 0x060012AD RID: 4781 RVA: 0x000097E9 File Offset: 0x000079E9
 	public static IEnumerator SummonEnemy(this BaseAIScript aiScript, EnemyType enemyType, EnemyRank rank, int roomSpawnPosIndex)
 	{
 		SpawnPositionController componentInChildren = aiScript.EnemyController.Room.gameObject.GetComponentInChildren<SpawnPositionController>();

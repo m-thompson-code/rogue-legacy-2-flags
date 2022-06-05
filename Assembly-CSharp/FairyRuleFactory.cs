@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000439 RID: 1081
+// Token: 0x02000701 RID: 1793
 public static class FairyRuleFactory
 {
-	// Token: 0x060027B9 RID: 10169 RVA: 0x00084150 File Offset: 0x00082350
+	// Token: 0x060036C5 RID: 14021 RVA: 0x000E4C24 File Offset: 0x000E2E24
 	public static FairyRule AddFairyRule(FairyRuleID fairyRuleID, GameObject gameObject)
 	{
 		FairyRule result = null;

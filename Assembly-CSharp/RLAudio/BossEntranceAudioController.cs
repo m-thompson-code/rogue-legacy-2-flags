@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008E1 RID: 2273
+	// Token: 0x02000E51 RID: 3665
 	public class BossEntranceAudioController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001848 RID: 6216
-		// (get) Token: 0x06004ABC RID: 19132 RVA: 0x0010CA65 File Offset: 0x0010AC65
+		// Token: 0x1700212B RID: 8491
+		// (get) Token: 0x06006775 RID: 26485 RVA: 0x0003907A File Offset: 0x0003727A
 		public string Description
 		{
 			get
@@ -21,7 +21,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004ABD RID: 19133 RVA: 0x0010CA8C File Offset: 0x0010AC8C
+		// Token: 0x06006776 RID: 26486 RVA: 0x0017CFAC File Offset: 0x0017B1AC
 		protected virtual void Awake()
 		{
 			this.m_bossEntranceRoomController = base.GetComponent<BossEntranceRoomController>();
@@ -29,7 +29,7 @@ namespace RLAudio
 			this.m_bossEntranceRoomController.DoorDestroyedRelay.AddListener(new Action<bool>(this.OnDoorDestroyed), false);
 		}
 
-		// Token: 0x06004ABE RID: 19134 RVA: 0x0010CAE4 File Offset: 0x0010ACE4
+		// Token: 0x06006777 RID: 26487 RVA: 0x0017D004 File Offset: 0x0017B204
 		protected virtual void OnDoorOpened(bool setOnEnter)
 		{
 			if (!setOnEnter)
@@ -38,7 +38,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004ABF RID: 19135 RVA: 0x0010CB0C File Offset: 0x0010AD0C
+		// Token: 0x06006778 RID: 26488 RVA: 0x0017D02C File Offset: 0x0017B22C
 		protected virtual void OnDoorDestroyed(bool setOnEnter)
 		{
 			if (!setOnEnter)
@@ -47,20 +47,20 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003EB3 RID: 16051
+		// Token: 0x040053D1 RID: 21457
 		[SerializeField]
 		[EventRef]
 		protected string m_doorOpenedAudioPath;
 
-		// Token: 0x04003EB4 RID: 16052
+		// Token: 0x040053D2 RID: 21458
 		[SerializeField]
 		[EventRef]
 		protected string m_doorDestroyedAudioPath;
 
-		// Token: 0x04003EB5 RID: 16053
+		// Token: 0x040053D3 RID: 21459
 		private string m_description = string.Empty;
 
-		// Token: 0x04003EB6 RID: 16054
+		// Token: 0x040053D4 RID: 21460
 		protected BossEntranceRoomController m_bossEntranceRoomController;
 	}
 }

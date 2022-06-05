@@ -2,23 +2,23 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000818 RID: 2072
+// Token: 0x02000CEB RID: 3307
 [ExecuteAlways]
 public class TMPWarpTextEffect : MonoBehaviour
 {
-	// Token: 0x0600446A RID: 17514 RVA: 0x000F22BE File Offset: 0x000F04BE
+	// Token: 0x06005E2A RID: 24106 RVA: 0x00033DA2 File Offset: 0x00031FA2
 	private void OnEnable()
 	{
 		TMPro_EventManager.TEXT_CHANGED_EVENT.Add(new Action<UnityEngine.Object>(this.OnTextChanged));
 	}
 
-	// Token: 0x0600446B RID: 17515 RVA: 0x000F22D6 File Offset: 0x000F04D6
+	// Token: 0x06005E2B RID: 24107 RVA: 0x00033DBA File Offset: 0x00031FBA
 	private void OnDisable()
 	{
 		TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(new Action<UnityEngine.Object>(this.OnTextChanged));
 	}
 
-	// Token: 0x0600446C RID: 17516 RVA: 0x000F22EE File Offset: 0x000F04EE
+	// Token: 0x06005E2C RID: 24108 RVA: 0x00033DD2 File Offset: 0x00031FD2
 	private void OnTextChanged(UnityEngine.Object obj)
 	{
 		if (obj == this.m_text)
@@ -27,7 +27,7 @@ public class TMPWarpTextEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600446D RID: 17517 RVA: 0x000F2305 File Offset: 0x000F0505
+	// Token: 0x06005E2D RID: 24109 RVA: 0x00033DE9 File Offset: 0x00031FE9
 	private void Awake()
 	{
 		this.m_text = base.gameObject.GetComponent<TMP_Text>();
@@ -35,13 +35,13 @@ public class TMPWarpTextEffect : MonoBehaviour
 		this.VertexCurve.postWrapMode = WrapMode.Once;
 	}
 
-	// Token: 0x0600446E RID: 17518 RVA: 0x000F2330 File Offset: 0x000F0530
+	// Token: 0x06005E2E RID: 24110 RVA: 0x00033E14 File Offset: 0x00032014
 	private void Start()
 	{
 		this.WarpText();
 	}
 
-	// Token: 0x0600446F RID: 17519 RVA: 0x000F2338 File Offset: 0x000F0538
+	// Token: 0x06005E2F RID: 24111 RVA: 0x00033E1C File Offset: 0x0003201C
 	private void Update()
 	{
 		if (!Application.isPlaying || this.m_hasTextChanged)
@@ -50,7 +50,7 @@ public class TMPWarpTextEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06004470 RID: 17520 RVA: 0x000F234F File Offset: 0x000F054F
+	// Token: 0x06005E30 RID: 24112 RVA: 0x00033E33 File Offset: 0x00032033
 	private AnimationCurve CopyAnimationCurve(AnimationCurve curve)
 	{
 		return new AnimationCurve
@@ -59,7 +59,7 @@ public class TMPWarpTextEffect : MonoBehaviour
 		};
 	}
 
-	// Token: 0x06004471 RID: 17521 RVA: 0x000F2364 File Offset: 0x000F0564
+	// Token: 0x06005E31 RID: 24113 RVA: 0x0015FEC8 File Offset: 0x0015E0C8
 	private void WarpText()
 	{
 		float curveScale = this.CurveScale;
@@ -112,10 +112,10 @@ public class TMPWarpTextEffect : MonoBehaviour
 		this.m_hasTextChanged = false;
 	}
 
-	// Token: 0x04003A60 RID: 14944
+	// Token: 0x04004D55 RID: 19797
 	private TMP_Text m_text;
 
-	// Token: 0x04003A61 RID: 14945
+	// Token: 0x04004D56 RID: 19798
 	public AnimationCurve VertexCurve = new AnimationCurve(new Keyframe[]
 	{
 		new Keyframe(0f, 0f),
@@ -125,15 +125,15 @@ public class TMPWarpTextEffect : MonoBehaviour
 		new Keyframe(1f, 0f)
 	});
 
-	// Token: 0x04003A62 RID: 14946
+	// Token: 0x04004D57 RID: 19799
 	public float AngleMultiplier = 1f;
 
-	// Token: 0x04003A63 RID: 14947
+	// Token: 0x04004D58 RID: 19800
 	public float SpeedMultiplier = 1f;
 
-	// Token: 0x04003A64 RID: 14948
+	// Token: 0x04004D59 RID: 19801
 	public float CurveScale = 1f;
 
-	// Token: 0x04003A65 RID: 14949
+	// Token: 0x04004D5A RID: 19802
 	private bool m_hasTextChanged;
 }

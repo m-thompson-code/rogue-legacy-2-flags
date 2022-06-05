@@ -3,11 +3,11 @@ using System.Collections;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004D4 RID: 1236
+// Token: 0x02000809 RID: 2057
 public class EggplantFoodPropController : MonoBehaviour, IDisplaySpeechBubble
 {
-	// Token: 0x17001169 RID: 4457
-	// (get) Token: 0x06002E0C RID: 11788 RVA: 0x0009B5E7 File Offset: 0x000997E7
+	// Token: 0x1700170A RID: 5898
+	// (get) Token: 0x06003F66 RID: 16230 RVA: 0x000230A4 File Offset: 0x000212A4
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -16,8 +16,8 @@ public class EggplantFoodPropController : MonoBehaviour, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x1700116A RID: 4458
-	// (get) Token: 0x06002E0D RID: 11789 RVA: 0x0009B5FE File Offset: 0x000997FE
+	// Token: 0x1700170B RID: 5899
+	// (get) Token: 0x06003F67 RID: 16231 RVA: 0x00004A8D File Offset: 0x00002C8D
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -26,7 +26,7 @@ public class EggplantFoodPropController : MonoBehaviour, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x06002E0E RID: 11790 RVA: 0x0009B604 File Offset: 0x00099804
+	// Token: 0x06003F68 RID: 16232 RVA: 0x000FD9F8 File Offset: 0x000FBBF8
 	public void TriggerEggplantFoodDialogue()
 	{
 		DialogueManager.StartNewDialogue(null, NPCState.Idle);
@@ -38,13 +38,13 @@ public class EggplantFoodPropController : MonoBehaviour, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x06002E0F RID: 11791 RVA: 0x0009B668 File Offset: 0x00099868
+	// Token: 0x06003F69 RID: 16233 RVA: 0x000230BB File Offset: 0x000212BB
 	private void GiveFood()
 	{
 		base.StartCoroutine(this.GiveFoodCoroutine());
 	}
 
-	// Token: 0x06002E10 RID: 11792 RVA: 0x0009B677 File Offset: 0x00099877
+	// Token: 0x06003F6A RID: 16234 RVA: 0x000230CA File Offset: 0x000212CA
 	private IEnumerator GiveFoodCoroutine()
 	{
 		RewiredMapController.SetIsInCutscene(true);

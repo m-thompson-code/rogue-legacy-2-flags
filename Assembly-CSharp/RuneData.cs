@@ -1,72 +1,72 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006EA RID: 1770
+// Token: 0x02000B98 RID: 2968
 public class RuneData : ScriptableObject
 {
-	// Token: 0x0400313D RID: 12605
+	// Token: 0x0400438F RID: 17295
 	public RuneType RuneType;
 
-	// Token: 0x0400313E RID: 12606
+	// Token: 0x04004390 RID: 17296
 	public int Location;
 
-	// Token: 0x0400313F RID: 12607
+	// Token: 0x04004391 RID: 17297
 	public int BaseItemLevel;
 
-	// Token: 0x04003140 RID: 12608
+	// Token: 0x04004392 RID: 17298
 	public int GoldCost;
 
-	// Token: 0x04003141 RID: 12609
+	// Token: 0x04004393 RID: 17299
 	public int BlackStoneCost;
 
-	// Token: 0x04003142 RID: 12610
+	// Token: 0x04004394 RID: 17300
 	public bool Disabled;
 
-	// Token: 0x04003143 RID: 12611
+	// Token: 0x04004395 RID: 17301
 	public int BaseWeight;
 
-	// Token: 0x04003144 RID: 12612
+	// Token: 0x04004396 RID: 17302
 	public float StatMod01;
 
-	// Token: 0x04003145 RID: 12613
+	// Token: 0x04004397 RID: 17303
 	public float StatMod02;
 
-	// Token: 0x04003146 RID: 12614
+	// Token: 0x04004398 RID: 17304
 	public float StatMod03;
 
-	// Token: 0x04003147 RID: 12615
+	// Token: 0x04004399 RID: 17305
 	public int MaximumLevel;
 
-	// Token: 0x04003148 RID: 12616
+	// Token: 0x0400439A RID: 17306
 	public int ScalingItemLevel;
 
-	// Token: 0x04003149 RID: 12617
+	// Token: 0x0400439B RID: 17307
 	public int ScalingGoldCost;
 
-	// Token: 0x0400314A RID: 12618
+	// Token: 0x0400439C RID: 17308
 	public int ScalingBlackStoneCost;
 
-	// Token: 0x0400314B RID: 12619
+	// Token: 0x0400439D RID: 17309
 	public int ScalingWeight;
 
-	// Token: 0x0400314C RID: 12620
+	// Token: 0x0400439E RID: 17310
 	public float ScalingStatMod01;
 
-	// Token: 0x0400314D RID: 12621
+	// Token: 0x0400439F RID: 17311
 	public float ScalingStatMod02;
 
-	// Token: 0x0400314E RID: 12622
+	// Token: 0x040043A0 RID: 17312
 	public float ScalingStatMod03;
 
-	// Token: 0x0400314F RID: 12623
+	// Token: 0x040043A1 RID: 17313
 	[Space]
 	[Header("Text Fields")]
 	[Space]
 	public string Title;
 
-	// Token: 0x04003150 RID: 12624
+	// Token: 0x040043A2 RID: 17314
 	public string Description;
 
-	// Token: 0x04003151 RID: 12625
+	// Token: 0x040043A3 RID: 17315
 	public string Controls;
 }

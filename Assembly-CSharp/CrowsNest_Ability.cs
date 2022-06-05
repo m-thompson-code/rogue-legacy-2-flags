@@ -6,10 +6,10 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000181 RID: 385
+// Token: 0x020002C8 RID: 712
 public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 {
-	// Token: 0x06000D9D RID: 3485 RVA: 0x000299C4 File Offset: 0x00027BC4
+	// Token: 0x06001512 RID: 5394 RVA: 0x0000A885 File Offset: 0x00008A85
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -20,8 +20,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		};
 	}
 
-	// Token: 0x17000753 RID: 1875
-	// (get) Token: 0x06000D9E RID: 3486 RVA: 0x000299ED File Offset: 0x00027BED
+	// Token: 0x170009CD RID: 2509
+	// (get) Token: 0x06001513 RID: 5395 RVA: 0x00004A6C File Offset: 0x00002C6C
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -30,8 +30,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000754 RID: 1876
-	// (get) Token: 0x06000D9F RID: 3487 RVA: 0x000299F4 File Offset: 0x00027BF4
+	// Token: 0x170009CE RID: 2510
+	// (get) Token: 0x06001514 RID: 5396 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -40,8 +40,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000755 RID: 1877
-	// (get) Token: 0x06000DA0 RID: 3488 RVA: 0x000299FB File Offset: 0x00027BFB
+	// Token: 0x170009CF RID: 2511
+	// (get) Token: 0x06001515 RID: 5397 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float TellAnimSpeed
 	{
 		get
@@ -50,8 +50,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000756 RID: 1878
-	// (get) Token: 0x06000DA1 RID: 3489 RVA: 0x00029A02 File Offset: 0x00027C02
+	// Token: 0x170009D0 RID: 2512
+	// (get) Token: 0x06001516 RID: 5398 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -60,8 +60,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000757 RID: 1879
-	// (get) Token: 0x06000DA2 RID: 3490 RVA: 0x00029A09 File Offset: 0x00027C09
+	// Token: 0x170009D1 RID: 2513
+	// (get) Token: 0x06001517 RID: 5399 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -70,8 +70,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000758 RID: 1880
-	// (get) Token: 0x06000DA3 RID: 3491 RVA: 0x00029A10 File Offset: 0x00027C10
+	// Token: 0x170009D2 RID: 2514
+	// (get) Token: 0x06001518 RID: 5400 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -80,8 +80,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000759 RID: 1881
-	// (get) Token: 0x06000DA4 RID: 3492 RVA: 0x00029A17 File Offset: 0x00027C17
+	// Token: 0x170009D3 RID: 2515
+	// (get) Token: 0x06001519 RID: 5401 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -90,8 +90,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700075A RID: 1882
-	// (get) Token: 0x06000DA5 RID: 3493 RVA: 0x00029A1E File Offset: 0x00027C1E
+	// Token: 0x170009D4 RID: 2516
+	// (get) Token: 0x0600151A RID: 5402 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -100,8 +100,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700075B RID: 1883
-	// (get) Token: 0x06000DA6 RID: 3494 RVA: 0x00029A25 File Offset: 0x00027C25
+	// Token: 0x170009D5 RID: 2517
+	// (get) Token: 0x0600151B RID: 5403 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -110,8 +110,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700075C RID: 1884
-	// (get) Token: 0x06000DA7 RID: 3495 RVA: 0x00029A2C File Offset: 0x00027C2C
+	// Token: 0x170009D6 RID: 2518
+	// (get) Token: 0x0600151C RID: 5404 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -120,8 +120,8 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700075D RID: 1885
-	// (get) Token: 0x06000DA8 RID: 3496 RVA: 0x00029A33 File Offset: 0x00027C33
+	// Token: 0x170009D7 RID: 2519
+	// (get) Token: 0x0600151D RID: 5405 RVA: 0x0000A8AE File Offset: 0x00008AAE
 	public bool CrowsNestActive
 	{
 		get
@@ -130,7 +130,7 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000DA9 RID: 3497 RVA: 0x00029A3C File Offset: 0x00027C3C
+	// Token: 0x0600151E RID: 5406 RVA: 0x00088C34 File Offset: 0x00086E34
 	protected override void Awake()
 	{
 		base.Awake();
@@ -147,7 +147,7 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		this.m_spawnLoopInstance = AudioUtility.GetEventInstance("event:/SFX/Weapons/sfx_weapon_pirateShip_spawn_loop", base.transform);
 	}
 
-	// Token: 0x06000DAA RID: 3498 RVA: 0x00029B11 File Offset: 0x00027D11
+	// Token: 0x0600151F RID: 5407 RVA: 0x0000A8B6 File Offset: 0x00008AB6
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerExitRoom, this.m_onPlayerExitRoom);
@@ -156,7 +156,7 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_resumeCooldownIfPlayerExitsRoom);
 	}
 
-	// Token: 0x06000DAB RID: 3499 RVA: 0x00029B46 File Offset: 0x00027D46
+	// Token: 0x06001520 RID: 5408 RVA: 0x0000A8EB File Offset: 0x00008AEB
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerExitRoom, this.m_onPlayerExitRoom);
@@ -165,14 +165,14 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_resumeCooldownIfPlayerExitsRoom);
 	}
 
-	// Token: 0x06000DAC RID: 3500 RVA: 0x00029B7B File Offset: 0x00027D7B
+	// Token: 0x06001521 RID: 5409 RVA: 0x0000A920 File Offset: 0x00008B20
 	public override void PreCastAbility()
 	{
 		this.DestroyCrowsNest(true);
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000DAD RID: 3501 RVA: 0x00029B8C File Offset: 0x00027D8C
+	// Token: 0x06001522 RID: 5410 RVA: 0x00088D0C File Offset: 0x00086F0C
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -236,7 +236,7 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		this.m_movedThisFrame = false;
 	}
 
-	// Token: 0x06000DAE RID: 3502 RVA: 0x00029E00 File Offset: 0x00028000
+	// Token: 0x06001523 RID: 5411 RVA: 0x00088F80 File Offset: 0x00087180
 	private void FireProjectileOnRepeat()
 	{
 		float num = this.m_crowsNestProjectile.Lifespan * 0.19999999f;
@@ -255,7 +255,7 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		this.m_abilityController.InitializeProjectile(projectile, CastAbilityType.Talent);
 	}
 
-	// Token: 0x06000DAF RID: 3503 RVA: 0x00029EF5 File Offset: 0x000280F5
+	// Token: 0x06001524 RID: 5412 RVA: 0x0000A92F File Offset: 0x00008B2F
 	private void ResumeCooldownIfPlayerExitsRoom(object sender, EventArgs args)
 	{
 		if (this.m_decreasesCDOverTime)
@@ -269,7 +269,7 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		base.DisplayPausedAbilityCooldown = false;
 	}
 
-	// Token: 0x06000DB0 RID: 3504 RVA: 0x00029F1C File Offset: 0x0002811C
+	// Token: 0x06001525 RID: 5413 RVA: 0x0000A92F File Offset: 0x00008B2F
 	private void ResumeCooldown(Projectile_RL proj, GameObject obj)
 	{
 		if (this.m_decreasesCDOverTime)
@@ -283,7 +283,7 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		base.DisplayPausedAbilityCooldown = false;
 	}
 
-	// Token: 0x06000DB1 RID: 3505 RVA: 0x00029F44 File Offset: 0x00028144
+	// Token: 0x06001526 RID: 5414 RVA: 0x00089078 File Offset: 0x00087278
 	private void LateUpdate()
 	{
 		if (this.m_crowsNestActive)
@@ -343,7 +343,7 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000DB2 RID: 3506 RVA: 0x0002A178 File Offset: 0x00028378
+	// Token: 0x06001527 RID: 5415 RVA: 0x000892AC File Offset: 0x000874AC
 	private void ActivatePlatform()
 	{
 		this.m_crowsNestCollider.gameObject.layer = 9;
@@ -360,7 +360,7 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		this.m_abilityController.PlayerController.ControllerCorgi.DisableOneWayCollision = true;
 	}
 
-	// Token: 0x06000DB3 RID: 3507 RVA: 0x0002A238 File Offset: 0x00028438
+	// Token: 0x06001528 RID: 5416 RVA: 0x0008936C File Offset: 0x0008756C
 	private void DeactivatePlatform()
 	{
 		this.m_crowsNestCollider.gameObject.layer = 11;
@@ -373,12 +373,12 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		this.m_abilityController.PlayerController.ControllerCorgi.DisableOneWayCollision = false;
 	}
 
-	// Token: 0x06000DB4 RID: 3508 RVA: 0x0002A29A File Offset: 0x0002849A
+	// Token: 0x06001529 RID: 5417 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void OnPlayerDash(object sender, EventArgs args)
 	{
 	}
 
-	// Token: 0x06000DB5 RID: 3509 RVA: 0x0002A29C File Offset: 0x0002849C
+	// Token: 0x0600152A RID: 5418 RVA: 0x000893D0 File Offset: 0x000875D0
 	private void HandlePlatformControls()
 	{
 		global::PlayerController playerController = this.m_abilityController.PlayerController;
@@ -453,25 +453,25 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000DB6 RID: 3510 RVA: 0x0002A6CC File Offset: 0x000288CC
+	// Token: 0x0600152B RID: 5419 RVA: 0x0000A956 File Offset: 0x00008B56
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		this.DestroyCrowsNest(false);
 	}
 
-	// Token: 0x06000DB7 RID: 3511 RVA: 0x0002A6D5 File Offset: 0x000288D5
+	// Token: 0x0600152C RID: 5420 RVA: 0x0000A956 File Offset: 0x00008B56
 	private void OnPlayerDeath(object sender, EventArgs args)
 	{
 		this.DestroyCrowsNest(false);
 	}
 
-	// Token: 0x06000DB8 RID: 3512 RVA: 0x0002A6DE File Offset: 0x000288DE
+	// Token: 0x0600152D RID: 5421 RVA: 0x0000A95F File Offset: 0x00008B5F
 	private void OnPlayerFakeDeath(object sender, EventArgs args)
 	{
 		base.StartCoroutine(this.OnPlayerFakeDeathCoroutine());
 	}
 
-	// Token: 0x06000DB9 RID: 3513 RVA: 0x0002A6ED File Offset: 0x000288ED
+	// Token: 0x0600152E RID: 5422 RVA: 0x0000A96E File Offset: 0x00008B6E
 	private IEnumerator OnPlayerFakeDeathCoroutine()
 	{
 		if (this.m_stingerInstance.isValid())
@@ -496,13 +496,13 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000DBA RID: 3514 RVA: 0x0002A6FC File Offset: 0x000288FC
+	// Token: 0x0600152F RID: 5423 RVA: 0x0000A97D File Offset: 0x00008B7D
 	private void OnTimeout(GameObject obj)
 	{
 		this.DestroyCrowsNest(true);
 	}
 
-	// Token: 0x06000DBB RID: 3515 RVA: 0x0002A708 File Offset: 0x00028908
+	// Token: 0x06001530 RID: 5424 RVA: 0x00089800 File Offset: 0x00087A00
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
@@ -520,7 +520,7 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000DBC RID: 3516 RVA: 0x0002A75C File Offset: 0x0002895C
+	// Token: 0x06001531 RID: 5425 RVA: 0x00089854 File Offset: 0x00087A54
 	private void DestroyCrowsNest(bool fireDestroyProjectile)
 	{
 		if (this.m_crowsNestProjectile && this.m_crowsNestProjectile.gameObject.activeSelf && !this.m_crowsNestProjectile.IsFreePoolObj)
@@ -566,83 +566,83 @@ public class CrowsNest_Ability : BaseAbility_RL, ITalent, IAbility
 		this.m_crowsNestActive = false;
 	}
 
-	// Token: 0x040010E5 RID: 4325
+	// Token: 0x04001654 RID: 5716
 	private const string CROWS_NEST_STINGER = "event:/Stingers/sting_pirateShip_loop";
 
-	// Token: 0x040010E6 RID: 4326
+	// Token: 0x04001655 RID: 5717
 	private const string CROWS_NEST_MOVE_START = "event:/SFX/Weapons/sfx_weapon_pirateShip_move_start";
 
-	// Token: 0x040010E7 RID: 4327
+	// Token: 0x04001656 RID: 5718
 	private const string CROWS_NEST_MOVE_STOP = "event:/SFX/Weapons/sfx_weapon_pirateShip_move_stop";
 
-	// Token: 0x040010E8 RID: 4328
+	// Token: 0x04001657 RID: 5719
 	private const string CROWS_NEST_SPAWN_LOOP = "event:/SFX/Weapons/sfx_weapon_pirateShip_spawn_loop";
 
-	// Token: 0x040010E9 RID: 4329
+	// Token: 0x04001658 RID: 5720
 	[SerializeField]
 	private string m_crowsNestDestroyProjectile;
 
-	// Token: 0x040010EA RID: 4330
+	// Token: 0x04001659 RID: 5721
 	[SerializeField]
 	private string m_fireRepeatProjectileName;
 
-	// Token: 0x040010EB RID: 4331
+	// Token: 0x0400165A RID: 5722
 	private bool m_crowsNestActive;
 
-	// Token: 0x040010EC RID: 4332
+	// Token: 0x0400165B RID: 5723
 	private bool m_platformActivated;
 
-	// Token: 0x040010ED RID: 4333
+	// Token: 0x0400165C RID: 5724
 	private Projectile_RL m_crowsNestProjectile;
 
-	// Token: 0x040010EE RID: 4334
+	// Token: 0x0400165D RID: 5725
 	private BoxCollider2D m_crowsNestCollider;
 
-	// Token: 0x040010EF RID: 4335
+	// Token: 0x0400165E RID: 5726
 	private float m_crowsNextMoveAmount;
 
-	// Token: 0x040010F0 RID: 4336
+	// Token: 0x0400165F RID: 5727
 	private GameObject m_crowsNextSideColliderGO;
 
-	// Token: 0x040010F1 RID: 4337
+	// Token: 0x04001660 RID: 5728
 	private bool m_wasMoving;
 
-	// Token: 0x040010F2 RID: 4338
+	// Token: 0x04001661 RID: 5729
 	private bool m_movedThisFrame;
 
-	// Token: 0x040010F3 RID: 4339
+	// Token: 0x04001662 RID: 5730
 	private Action<MonoBehaviour, EventArgs> m_onPlayerExitRoom;
 
-	// Token: 0x040010F4 RID: 4340
+	// Token: 0x04001663 RID: 5731
 	private Action<MonoBehaviour, EventArgs> m_resumeCooldownIfPlayerExitsRoom;
 
-	// Token: 0x040010F5 RID: 4341
+	// Token: 0x04001664 RID: 5732
 	private Action<MonoBehaviour, EventArgs> m_onPlayerDash;
 
-	// Token: 0x040010F6 RID: 4342
+	// Token: 0x04001665 RID: 5733
 	private Action<MonoBehaviour, EventArgs> m_onPlayerDeath;
 
-	// Token: 0x040010F7 RID: 4343
+	// Token: 0x04001666 RID: 5734
 	private Action<MonoBehaviour, EventArgs> m_onPlayerFakeDeath;
 
-	// Token: 0x040010F8 RID: 4344
+	// Token: 0x04001667 RID: 5735
 	private Action<Projectile_RL, GameObject> m_resumeCooldown;
 
-	// Token: 0x040010F9 RID: 4345
+	// Token: 0x04001668 RID: 5736
 	private bool m_decreasesCDOverTime;
 
-	// Token: 0x040010FA RID: 4346
+	// Token: 0x04001669 RID: 5737
 	private bool m_decreasesCDOnHit;
 
-	// Token: 0x040010FB RID: 4347
+	// Token: 0x0400166A RID: 5738
 	private Action<GameObject> m_onTimeout;
 
-	// Token: 0x040010FC RID: 4348
+	// Token: 0x0400166B RID: 5739
 	private EventInstance m_stingerInstance;
 
-	// Token: 0x040010FD RID: 4349
+	// Token: 0x0400166C RID: 5740
 	private EventInstance m_spawnLoopInstance;
 
-	// Token: 0x040010FE RID: 4350
+	// Token: 0x0400166D RID: 5741
 	private float m_fireRepeatTimer;
 }

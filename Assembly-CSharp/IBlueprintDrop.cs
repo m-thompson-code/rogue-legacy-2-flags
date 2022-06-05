@@ -1,13 +1,13 @@
 ﻿using System;
 
-// Token: 0x020005DA RID: 1498
+// Token: 0x020009E2 RID: 2530
 public interface IBlueprintDrop : ISpecialItemDrop
 {
-	// Token: 0x1700135F RID: 4959
-	// (get) Token: 0x060036A6 RID: 13990
+	// Token: 0x17001A8C RID: 6796
+	// (get) Token: 0x06004CB8 RID: 19640
 	EquipmentCategoryType CategoryType { get; }
 
-	// Token: 0x17001360 RID: 4960
-	// (get) Token: 0x060036A7 RID: 13991
+	// Token: 0x17001A8D RID: 6797
+	// (get) Token: 0x06004CB9 RID: 19641
 	EquipmentType EquipmentType { get; }
 }

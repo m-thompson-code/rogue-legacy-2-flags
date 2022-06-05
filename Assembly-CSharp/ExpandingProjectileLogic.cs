@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200049D RID: 1181
+// Token: 0x020007A3 RID: 1955
 public class ExpandingProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B49 RID: 11081 RVA: 0x00092CB4 File Offset: 0x00090EB4
+	// Token: 0x06003B9E RID: 15262 RVA: 0x000F463C File Offset: 0x000F283C
 	private void OnEnable()
 	{
 		Vector3 vector = (base.SourceProjectile.transform.parent != null) ? base.SourceProjectile.transform.parent.lossyScale : Vector3.one;
@@ -30,7 +30,7 @@ public class ExpandingProjectileLogic : BaseProjectileLogic
 		});
 	}
 
-	// Token: 0x06002B4A RID: 11082 RVA: 0x00092DCF File Offset: 0x00090FCF
+	// Token: 0x06003B9F RID: 15263 RVA: 0x00020C60 File Offset: 0x0001EE60
 	private void OnDisable()
 	{
 		if (this.m_scaleTween)
@@ -39,14 +39,14 @@ public class ExpandingProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x0400233B RID: 9019
+	// Token: 0x04002F59 RID: 12121
 	[SerializeField]
 	private float m_shoutScale = 10f;
 
-	// Token: 0x0400233C RID: 9020
+	// Token: 0x04002F5A RID: 12122
 	[SerializeField]
 	private bool m_scaleRelative;
 
-	// Token: 0x0400233D RID: 9021
+	// Token: 0x04002F5B RID: 12123
 	private Tween m_scaleTween;
 }

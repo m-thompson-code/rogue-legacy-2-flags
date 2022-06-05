@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000514 RID: 1300
+// Token: 0x02000885 RID: 2181
 public class TowerBossRoomController : BossRoomController
 {
-	// Token: 0x06003033 RID: 12339 RVA: 0x000A50E8 File Offset: 0x000A32E8
+	// Token: 0x060042DD RID: 17117 RVA: 0x00024FE2 File Offset: 0x000231E2
 	protected override void Awake()
 	{
 		base.Awake();
@@ -13,7 +13,7 @@ public class TowerBossRoomController : BossRoomController
 		this.m_runIntroComplete = new Action(this.RunIntroComplete);
 	}
 
-	// Token: 0x06003034 RID: 12340 RVA: 0x000A5114 File Offset: 0x000A3314
+	// Token: 0x060042DE RID: 17118 RVA: 0x0010BFC4 File Offset: 0x0010A1C4
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -43,7 +43,7 @@ public class TowerBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x06003035 RID: 12341 RVA: 0x000A51D8 File Offset: 0x000A33D8
+	// Token: 0x060042DF RID: 17119 RVA: 0x0002500E File Offset: 0x0002320E
 	protected override IEnumerator StartIntro()
 	{
 		base.Boss.LockFlip = true;
@@ -78,7 +78,7 @@ public class TowerBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x06003036 RID: 12342 RVA: 0x000A51E8 File Offset: 0x000A33E8
+	// Token: 0x060042E0 RID: 17120 RVA: 0x0010C088 File Offset: 0x0010A288
 	private bool DisableSpawner(EnemySpawnController bossSpawner)
 	{
 		foreach (EnemySpawnController y in this.m_bossSpawnersToStartDisabled)
@@ -91,7 +91,7 @@ public class TowerBossRoomController : BossRoomController
 		return false;
 	}
 
-	// Token: 0x06003037 RID: 12343 RVA: 0x000A521C File Offset: 0x000A341C
+	// Token: 0x060042E1 RID: 17121 RVA: 0x0010C0BC File Offset: 0x0010A2BC
 	private void RunBossSpawnAnim()
 	{
 		foreach (EnemySpawnController enemySpawnController in this.m_bossSpawnControllers)
@@ -107,7 +107,7 @@ public class TowerBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x06003038 RID: 12344 RVA: 0x000A5280 File Offset: 0x000A3480
+	// Token: 0x060042E2 RID: 17122 RVA: 0x0010C120 File Offset: 0x0010A320
 	private void RunIntroComplete()
 	{
 		foreach (EnemySpawnController enemySpawnController in this.m_bossSpawnControllers)
@@ -123,33 +123,33 @@ public class TowerBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x04002654 RID: 9812
+	// Token: 0x04003431 RID: 13361
 	[SerializeField]
 	private EnemySpawnController[] m_bossSpawnControllers;
 
-	// Token: 0x04002655 RID: 9813
+	// Token: 0x04003432 RID: 13362
 	[SerializeField]
 	private EnemySpawnController[] m_bossSpawnersToStartDisabled;
 
-	// Token: 0x04002656 RID: 9814
+	// Token: 0x04003433 RID: 13363
 	[SerializeField]
 	private bool m_disableBossIntro;
 
-	// Token: 0x04002657 RID: 9815
+	// Token: 0x04003434 RID: 13364
 	[SerializeField]
 	private bool m_disableActiveEyeballModeshift;
 
-	// Token: 0x04002658 RID: 9816
+	// Token: 0x04003435 RID: 13365
 	[SerializeField]
 	private bool m_disableInactiveEyeballModeshift;
 
-	// Token: 0x04002659 RID: 9817
+	// Token: 0x04003436 RID: 13366
 	[SerializeField]
 	private bool m_disableDeath;
 
-	// Token: 0x0400265A RID: 9818
+	// Token: 0x04003437 RID: 13367
 	private Action m_runBossSpawnAnim;
 
-	// Token: 0x0400265B RID: 9819
+	// Token: 0x04003438 RID: 13368
 	private Action m_runIntroComplete;
 }

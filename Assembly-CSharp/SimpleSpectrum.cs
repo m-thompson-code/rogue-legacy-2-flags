@@ -5,12 +5,12 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-// Token: 0x02000040 RID: 64
+// Token: 0x02000045 RID: 69
 public class SimpleSpectrum : MonoBehaviour
 {
-	// Token: 0x17000004 RID: 4
-	// (get) Token: 0x060000AB RID: 171 RVA: 0x000066A1 File Offset: 0x000048A1
-	// (set) Token: 0x060000AC RID: 172 RVA: 0x000066A9 File Offset: 0x000048A9
+	// Token: 0x17000006 RID: 6
+	// (get) Token: 0x060000B3 RID: 179 RVA: 0x00003226 File Offset: 0x00001426
+	// (set) Token: 0x060000B4 RID: 180 RVA: 0x0000322E File Offset: 0x0000142E
 	public float[] spectrumInputData
 	{
 		get
@@ -28,8 +28,8 @@ public class SimpleSpectrum : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000005 RID: 5
-	// (get) Token: 0x060000AD RID: 173 RVA: 0x000066C6 File Offset: 0x000048C6
+	// Token: 0x17000007 RID: 7
+	// (get) Token: 0x060000B5 RID: 181 RVA: 0x0000324B File Offset: 0x0000144B
 	public float[] spectrumOutputData
 	{
 		get
@@ -38,7 +38,7 @@ public class SimpleSpectrum : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000AE RID: 174 RVA: 0x000066CE File Offset: 0x000048CE
+	// Token: 0x060000B6 RID: 182 RVA: 0x00003253 File Offset: 0x00001453
 	private void Start()
 	{
 		if (this.audioSource == null && this.sourceType == SimpleSpectrum.SourceType.AudioSource)
@@ -48,7 +48,7 @@ public class SimpleSpectrum : MonoBehaviour
 		this.RebuildSpectrum();
 	}
 
-	// Token: 0x060000AF RID: 175 RVA: 0x000066F8 File Offset: 0x000048F8
+	// Token: 0x060000B7 RID: 183 RVA: 0x000432FC File Offset: 0x000414FC
 	public void RebuildSpectrum()
 	{
 		this.isEnabled = false;
@@ -155,7 +155,7 @@ public class SimpleSpectrum : MonoBehaviour
 		this.isEnabled = true;
 	}
 
-	// Token: 0x060000B0 RID: 176 RVA: 0x00006B3C File Offset: 0x00004D3C
+	// Token: 0x060000B8 RID: 184 RVA: 0x00043740 File Offset: 0x00041940
 	public void RestartMicrophone()
 	{
 		Microphone.End(this.microphoneName);
@@ -199,7 +199,7 @@ public class SimpleSpectrum : MonoBehaviour
 		UnityEngine.Object.Destroy(base.GetComponent<AudioSource>());
 	}
 
-	// Token: 0x060000B1 RID: 177 RVA: 0x00006C70 File Offset: 0x00004E70
+	// Token: 0x060000B9 RID: 185 RVA: 0x00043874 File Offset: 0x00041A74
 	private void Update()
 	{
 		if (this.isEnabled)
@@ -275,7 +275,7 @@ public class SimpleSpectrum : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000B2 RID: 178 RVA: 0x00006F04 File Offset: 0x00005104
+	// Token: 0x060000BA RID: 186 RVA: 0x00043B08 File Offset: 0x00041D08
 	public static float[] GetLogarithmicSpectrumData(AudioSource source, int spectrumSize, int sampleSize, FFTWindow windowUsed = FFTWindow.BlackmanHarris, int channelUsed = 0)
 	{
 		float[] array = new float[spectrumSize];
@@ -297,7 +297,7 @@ public class SimpleSpectrum : MonoBehaviour
 		return array;
 	}
 
-	// Token: 0x060000B3 RID: 179 RVA: 0x00006FC0 File Offset: 0x000051C0
+	// Token: 0x060000BB RID: 187 RVA: 0x00043BC4 File Offset: 0x00041DC4
 	public static float[] GetLogarithmicSpectrumData(int spectrumSize, int sampleSize, FFTWindow windowUsed = FFTWindow.BlackmanHarris, int channelUsed = 0)
 	{
 		float[] array = new float[spectrumSize];
@@ -319,110 +319,110 @@ public class SimpleSpectrum : MonoBehaviour
 		return array;
 	}
 
-	// Token: 0x04000111 RID: 273
+	// Token: 0x04000123 RID: 291
 	[SerializeField]
 	public AudioMixerGroup muteGroup;
 
-	// Token: 0x04000112 RID: 274
+	// Token: 0x04000124 RID: 292
 	[Tooltip("Enables or disables the processing and display of spectrum data. ")]
 	public bool isEnabled = true;
 
-	// Token: 0x04000113 RID: 275
+	// Token: 0x04000125 RID: 293
 	[Tooltip("The type of source for spectrum data.")]
 	public SimpleSpectrum.SourceType sourceType;
 
-	// Token: 0x04000114 RID: 276
+	// Token: 0x04000126 RID: 294
 	[Tooltip("The AudioSource to take data from.")]
 	public AudioSource audioSource;
 
-	// Token: 0x04000115 RID: 277
+	// Token: 0x04000127 RID: 295
 	[Tooltip("The audio channel to use when sampling.")]
 	public int sampleChannel;
 
-	// Token: 0x04000116 RID: 278
+	// Token: 0x04000128 RID: 296
 	[Tooltip("The number of samples to use when sampling. Must be a power of two.")]
 	public int numSamples = 256;
 
-	// Token: 0x04000117 RID: 279
+	// Token: 0x04000129 RID: 297
 	[Tooltip("The FFTWindow to use when sampling.")]
 	public FFTWindow windowUsed = FFTWindow.BlackmanHarris;
 
-	// Token: 0x04000118 RID: 280
+	// Token: 0x0400012A RID: 298
 	[Tooltip("If true, audio data is scaled logarithmically.")]
 	public bool useLogarithmicFrequency = true;
 
-	// Token: 0x04000119 RID: 281
+	// Token: 0x0400012B RID: 299
 	[Tooltip("If true, the values of the spectrum are multiplied based on their frequency, to keep the values proportionate.")]
 	public bool multiplyByFrequency = true;
 
-	// Token: 0x0400011A RID: 282
+	// Token: 0x0400012C RID: 300
 	[Tooltip("The lower bound of the freuqnecy range to sample from. Leave at 0 when unused.")]
 	public float frequencyLimitLow;
 
-	// Token: 0x0400011B RID: 283
+	// Token: 0x0400012D RID: 301
 	[Tooltip("The upper bound of the freuqnecy range to sample from. Leave at 22050 (44100/2) when unused.")]
 	public float frequencyLimitHigh = 22050f;
 
-	// Token: 0x0400011C RID: 284
+	// Token: 0x0400012E RID: 302
 	[Tooltip("The amount of bars to use. Does not have to be equal to Num Samples, but probably should be lower.")]
 	public int barAmount = 32;
 
-	// Token: 0x0400011D RID: 285
+	// Token: 0x0400012F RID: 303
 	[Tooltip("Stretches the values of the bars.")]
 	public float barYScale = 50f;
 
-	// Token: 0x0400011E RID: 286
+	// Token: 0x04000130 RID: 304
 	[Tooltip("Sets a minimum scale for the bars.")]
 	public float barMinYScale = 0.1f;
 
-	// Token: 0x0400011F RID: 287
+	// Token: 0x04000131 RID: 305
 	[Tooltip("The prefab of bar to use when building. Choose one from SimpleSpectrum/Bar Prefabs, or refer to the documentation to use a custom prefab.")]
 	public GameObject barPrefab;
 
-	// Token: 0x04000120 RID: 288
+	// Token: 0x04000132 RID: 306
 	[Tooltip("Stretches the bars sideways.")]
 	public float barXScale = 1f;
 
-	// Token: 0x04000121 RID: 289
+	// Token: 0x04000133 RID: 307
 	[Tooltip("Increases the spacing between bars.")]
 	public float barXSpacing;
 
-	// Token: 0x04000122 RID: 290
+	// Token: 0x04000134 RID: 308
 	[Range(0f, 360f)]
 	[Tooltip("Bends the Spectrum using a given angle. Set to 360 for a circle.")]
 	public float barCurveAngle;
 
-	// Token: 0x04000123 RID: 291
+	// Token: 0x04000135 RID: 309
 	[Tooltip("Rotates the Spectrum inwards or outwards. Especially useful when using barCurveAngle.")]
 	public float barXRotation;
 
-	// Token: 0x04000124 RID: 292
+	// Token: 0x04000136 RID: 310
 	[Range(0f, 1f)]
 	[Tooltip("The amount of dampening used when the new scale is higher than the bar's existing scale.")]
 	public float attackDamp = 0.3f;
 
-	// Token: 0x04000125 RID: 293
+	// Token: 0x04000137 RID: 311
 	[Range(0f, 1f)]
 	[Tooltip("The amount of dampening used when the new scale is lower than the bar's existing scale.")]
 	public float decayDamp = 0.15f;
 
-	// Token: 0x04000126 RID: 294
+	// Token: 0x04000138 RID: 312
 	[Tooltip("Determines whether to apply a color gradient on the bars, or just use a solid color.")]
 	public bool useColorGradient;
 
-	// Token: 0x04000127 RID: 295
+	// Token: 0x04000139 RID: 313
 	[Tooltip("Special colour gradient added for RL2.")]
 	public bool useRainbowGradient;
 
-	// Token: 0x04000128 RID: 296
+	// Token: 0x0400013A RID: 314
 	[Tooltip("The minimum (low value) color if useColorGradient is true, else the solid color to use.")]
 	public Color colorMin = Color.black;
 
-	// Token: 0x04000129 RID: 297
+	// Token: 0x0400013B RID: 315
 	[Tooltip("The maximum (high value) color.")]
 	public Color colorMax = Color.white;
 
-	// Token: 0x0400012A RID: 298
+	// Token: 0x0400013C RID: 316
 	[Tooltip("The curve that determines the interpolation between colorMin and colorMax.")]
 	public AnimationCurve colorValueCurve = new AnimationCurve(new Keyframe[]
 	{
@@ -430,64 +430,64 @@ public class SimpleSpectrum : MonoBehaviour
 		new Keyframe(1f, 1f)
 	});
 
-	// Token: 0x0400012B RID: 299
+	// Token: 0x0400013D RID: 317
 	[Range(0f, 1f)]
 	[Tooltip("The amount of dampening used when the new color value is higher than the existing color value.")]
 	public float colorAttackDamp = 1f;
 
-	// Token: 0x0400012C RID: 300
+	// Token: 0x0400013E RID: 318
 	[Range(0f, 1f)]
 	[Tooltip("The amount of dampening used when the new color value is lower than the existing color value.")]
 	public float colorDecayDamp = 1f;
 
-	// Token: 0x0400012D RID: 301
+	// Token: 0x0400013F RID: 319
 	private float[] spectrum;
 
-	// Token: 0x0400012E RID: 302
+	// Token: 0x04000140 RID: 320
 	private Transform[] bars;
 
-	// Token: 0x0400012F RID: 303
+	// Token: 0x04000141 RID: 321
 	private Material[] barMaterials;
 
-	// Token: 0x04000130 RID: 304
+	// Token: 0x04000142 RID: 322
 	private float[] oldYScales;
 
-	// Token: 0x04000131 RID: 305
+	// Token: 0x04000143 RID: 323
 	private float[] oldColorValues;
 
-	// Token: 0x04000132 RID: 306
+	// Token: 0x04000144 RID: 324
 	private int materialValId;
 
-	// Token: 0x04000133 RID: 307
+	// Token: 0x04000145 RID: 325
 	private bool materialColourCanBeUsed = true;
 
-	// Token: 0x04000134 RID: 308
+	// Token: 0x04000146 RID: 326
 	private float highestLogFreq;
 
-	// Token: 0x04000135 RID: 309
+	// Token: 0x04000147 RID: 327
 	private float frequencyScaleFactor;
 
-	// Token: 0x04000136 RID: 310
+	// Token: 0x04000148 RID: 328
 	private string microphoneName;
 
-	// Token: 0x04000137 RID: 311
+	// Token: 0x04000149 RID: 329
 	private float lastMicRestartTime;
 
-	// Token: 0x04000138 RID: 312
+	// Token: 0x0400014A RID: 330
 	private float micRestartWait = 20f;
 
-	// Token: 0x0200097E RID: 2430
+	// Token: 0x02000046 RID: 70
 	public enum SourceType
 	{
-		// Token: 0x040044A8 RID: 17576
+		// Token: 0x0400014C RID: 332
 		AudioSource,
-		// Token: 0x040044A9 RID: 17577
+		// Token: 0x0400014D RID: 333
 		AudioListener,
-		// Token: 0x040044AA RID: 17578
+		// Token: 0x0400014E RID: 334
 		MicrophoneInput,
-		// Token: 0x040044AB RID: 17579
+		// Token: 0x0400014F RID: 335
 		StereoMix,
-		// Token: 0x040044AC RID: 17580
+		// Token: 0x04000150 RID: 336
 		Custom
 	}
 }

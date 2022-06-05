@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000333 RID: 819
+// Token: 0x0200058A RID: 1418
 public class EasyBreakables_Trait : BaseTrait
 {
-	// Token: 0x17000DB6 RID: 3510
-	// (get) Token: 0x06001FEA RID: 8170 RVA: 0x00065C40 File Offset: 0x00063E40
+	// Token: 0x170011F9 RID: 4601
+	// (get) Token: 0x06002CEB RID: 11499 RVA: 0x00017640 File Offset: 0x00015840
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class EasyBreakables_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FEB RID: 8171 RVA: 0x00065C44 File Offset: 0x00063E44
+	// Token: 0x06002CEC RID: 11500 RVA: 0x00018D7E File Offset: 0x00016F7E
 	public IEnumerator Start()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -32,7 +32,7 @@ public class EasyBreakables_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FEC RID: 8172 RVA: 0x00065C54 File Offset: 0x00063E54
+	// Token: 0x06002CED RID: 11501 RVA: 0x000C666C File Offset: 0x000C486C
 	private void AddBreakablesHitbox(Collider2D hbCollider, HitboxController hbController)
 	{
 		CollisionType collisionType = CollisionType.None;
@@ -60,12 +60,12 @@ public class EasyBreakables_Trait : BaseTrait
 		this.m_breakablesHitbox = gameObject;
 	}
 
-	// Token: 0x06001FED RID: 8173 RVA: 0x00065D3F File Offset: 0x00063F3F
+	// Token: 0x06002CEE RID: 11502 RVA: 0x00018D8D File Offset: 0x00016F8D
 	private void OnDestroy()
 	{
 		UnityEngine.Object.Destroy(this.m_breakablesHitbox);
 	}
 
-	// Token: 0x04001C44 RID: 7236
+	// Token: 0x04002595 RID: 9621
 	private GameObject m_breakablesHitbox;
 }

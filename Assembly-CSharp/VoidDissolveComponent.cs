@@ -2,15 +2,15 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020003EA RID: 1002
+// Token: 0x0200068C RID: 1676
 public class VoidDissolveComponent : MonoBehaviour
 {
-	// Token: 0x17000EE7 RID: 3815
-	// (get) Token: 0x060024F3 RID: 9459 RVA: 0x0007AC6A File Offset: 0x00078E6A
-	// (set) Token: 0x060024F4 RID: 9460 RVA: 0x0007AC72 File Offset: 0x00078E72
+	// Token: 0x1700138A RID: 5002
+	// (get) Token: 0x0600333B RID: 13115 RVA: 0x0001C185 File Offset: 0x0001A385
+	// (set) Token: 0x0600333C RID: 13116 RVA: 0x0001C18D File Offset: 0x0001A38D
 	public bool IsDissolving { get; private set; }
 
-	// Token: 0x060024F5 RID: 9461 RVA: 0x0007AC7C File Offset: 0x00078E7C
+	// Token: 0x0600333D RID: 13117 RVA: 0x000DABF8 File Offset: 0x000D8DF8
 	private void Awake()
 	{
 		this.m_initialValues = new float[this.m_renderers.Length];
@@ -21,14 +21,14 @@ public class VoidDissolveComponent : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060024F6 RID: 9462 RVA: 0x0007ACC9 File Offset: 0x00078EC9
+	// Token: 0x0600333E RID: 13118 RVA: 0x0001C196 File Offset: 0x0001A396
 	public void StartDissolve(bool playSparkle)
 	{
 		base.StopAllCoroutines();
 		base.StartCoroutine(this.DissolveCoroutine(playSparkle));
 	}
 
-	// Token: 0x060024F7 RID: 9463 RVA: 0x0007ACDF File Offset: 0x00078EDF
+	// Token: 0x0600333F RID: 13119 RVA: 0x0001C1AC File Offset: 0x0001A3AC
 	public IEnumerator DissolveCoroutine(bool playSparkle)
 	{
 		if (this.m_renderers == null)
@@ -73,7 +73,7 @@ public class VoidDissolveComponent : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060024F8 RID: 9464 RVA: 0x0007ACF8 File Offset: 0x00078EF8
+	// Token: 0x06003340 RID: 13120 RVA: 0x000DAC48 File Offset: 0x000D8E48
 	public void ForceDissolved()
 	{
 		this.m_hasDissolved = true;
@@ -84,7 +84,7 @@ public class VoidDissolveComponent : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060024F9 RID: 9465 RVA: 0x0007AD38 File Offset: 0x00078F38
+	// Token: 0x06003341 RID: 13121 RVA: 0x0001C1C2 File Offset: 0x0001A3C2
 	private void OnDisable()
 	{
 		if (this.m_hasDissolved)
@@ -93,7 +93,7 @@ public class VoidDissolveComponent : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060024FA RID: 9466 RVA: 0x0007AD48 File Offset: 0x00078F48
+	// Token: 0x06003342 RID: 13122 RVA: 0x000DAC88 File Offset: 0x000D8E88
 	public void Reset()
 	{
 		this.IsDissolving = false;
@@ -107,21 +107,21 @@ public class VoidDissolveComponent : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001F4B RID: 8011
+	// Token: 0x040029CD RID: 10701
 	[SerializeField]
 	private float m_duration = 1f;
 
-	// Token: 0x04001F4C RID: 8012
+	// Token: 0x040029CE RID: 10702
 	[SerializeField]
 	private Renderer[] m_renderers;
 
-	// Token: 0x04001F4D RID: 8013
+	// Token: 0x040029CF RID: 10703
 	[SerializeField]
 	private ParticleSystem[] m_particleSystemsToStop;
 
-	// Token: 0x04001F4E RID: 8014
+	// Token: 0x040029D0 RID: 10704
 	private float[] m_initialValues;
 
-	// Token: 0x04001F4F RID: 8015
+	// Token: 0x040029D1 RID: 10705
 	private bool m_hasDissolved;
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200060F RID: 1551
+// Token: 0x02000A31 RID: 2609
 public enum SceneEvent
 {
-	// Token: 0x04002B4A RID: 11082
+	// Token: 0x04003BB1 RID: 15281
 	EnterLineageScreen,
-	// Token: 0x04002B4B RID: 11083
+	// Token: 0x04003BB2 RID: 15282
 	EnterMainMenu,
-	// Token: 0x04002B4C RID: 11084
+	// Token: 0x04003BB3 RID: 15283
 	ExitMainMenu,
-	// Token: 0x04002B4D RID: 11085
+	// Token: 0x04003BB4 RID: 15284
 	QualitySettingsChanged,
-	// Token: 0x04002B4E RID: 11086
+	// Token: 0x04003BB5 RID: 15285
 	ResolutionChanged,
-	// Token: 0x04002B4F RID: 11087
+	// Token: 0x04003BB6 RID: 15286
 	AspectRatioChanged,
-	// Token: 0x04002B50 RID: 11088
+	// Token: 0x04003BB7 RID: 15287
 	PrimaryDisplayChanged
 }

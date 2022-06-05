@@ -5,10 +5,10 @@ using RLAudio;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x02000136 RID: 310
+// Token: 0x02000216 RID: 534
 public class StudyBoss_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x0600098F RID: 2447 RVA: 0x0001EDA0 File Offset: 0x0001CFA0
+	// Token: 0x06000EA4 RID: 3748 RVA: 0x0007534C File Offset: 0x0007354C
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -32,8 +32,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000528 RID: 1320
-	// (get) Token: 0x06000990 RID: 2448 RVA: 0x0001EE48 File Offset: 0x0001D048
+	// Token: 0x170006D8 RID: 1752
+	// (get) Token: 0x06000EA5 RID: 3749 RVA: 0x000080F2 File Offset: 0x000062F2
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -42,8 +42,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000529 RID: 1321
-	// (get) Token: 0x06000991 RID: 2449 RVA: 0x0001EE59 File Offset: 0x0001D059
+	// Token: 0x170006D9 RID: 1753
+	// (get) Token: 0x06000EA6 RID: 3750 RVA: 0x000080F2 File Offset: 0x000062F2
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -52,8 +52,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700052A RID: 1322
-	// (get) Token: 0x06000992 RID: 2450 RVA: 0x0001EE6A File Offset: 0x0001D06A
+	// Token: 0x170006DA RID: 1754
+	// (get) Token: 0x06000EA7 RID: 3751 RVA: 0x000080F2 File Offset: 0x000062F2
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -62,8 +62,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700052B RID: 1323
-	// (get) Token: 0x06000993 RID: 2451 RVA: 0x0001EE7B File Offset: 0x0001D07B
+	// Token: 0x170006DB RID: 1755
+	// (get) Token: 0x06000EA8 RID: 3752 RVA: 0x00008103 File Offset: 0x00006303
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -72,8 +72,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700052C RID: 1324
-	// (get) Token: 0x06000994 RID: 2452 RVA: 0x0001EE8C File Offset: 0x0001D08C
+	// Token: 0x170006DC RID: 1756
+	// (get) Token: 0x06000EA9 RID: 3753 RVA: 0x00008114 File Offset: 0x00006314
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -82,8 +82,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700052D RID: 1325
-	// (get) Token: 0x06000995 RID: 2453 RVA: 0x0001EE9D File Offset: 0x0001D09D
+	// Token: 0x170006DD RID: 1757
+	// (get) Token: 0x06000EAA RID: 3754 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_advancedAttack
 	{
 		get
@@ -92,8 +92,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700052E RID: 1326
-	// (get) Token: 0x06000996 RID: 2454 RVA: 0x0001EEA0 File Offset: 0x0001D0A0
+	// Token: 0x170006DE RID: 1758
+	// (get) Token: 0x06000EAB RID: 3755 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool is_Variant
 	{
 		get
@@ -102,8 +102,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700052F RID: 1327
-	// (get) Token: 0x06000997 RID: 2455 RVA: 0x0001EEA3 File Offset: 0x0001D0A3
+	// Token: 0x170006DF RID: 1759
+	// (get) Token: 0x06000EAC RID: 3756 RVA: 0x00008125 File Offset: 0x00006325
 	protected virtual string CURSE_ATTACK_PROJECTILE_NAME
 	{
 		get
@@ -112,8 +112,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000530 RID: 1328
-	// (get) Token: 0x06000998 RID: 2456 RVA: 0x0001EEAA File Offset: 0x0001D0AA
+	// Token: 0x170006E0 RID: 1760
+	// (get) Token: 0x06000EAD RID: 3757 RVA: 0x0000812C File Offset: 0x0000632C
 	protected virtual string CURSE_ATTACK_ADVANCED_PROJECTILE_NAME
 	{
 		get
@@ -122,13 +122,13 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000999 RID: 2457 RVA: 0x0001EEB1 File Offset: 0x0001D0B1
+	// Token: 0x06000EAE RID: 3758 RVA: 0x00008133 File Offset: 0x00006333
 	private void Awake()
 	{
 		this.m_onBossHit = new Action<object, HealthChangeEventArgs>(this.OnBossHit);
 	}
 
-	// Token: 0x0600099A RID: 2458 RVA: 0x0001EEC5 File Offset: 0x0001D0C5
+	// Token: 0x06000EAF RID: 3759 RVA: 0x00008147 File Offset: 0x00006347
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -138,15 +138,15 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		this.InitializeAudio();
 	}
 
-	// Token: 0x0600099B RID: 2459 RVA: 0x0001EF02 File Offset: 0x0001D102
+	// Token: 0x06000EB0 RID: 3760 RVA: 0x00008184 File Offset: 0x00006384
 	public override void OnEnemyActivated()
 	{
 		base.OnEnemyActivated();
 		base.EnemyController.HealthChangeRelay.AddListener(this.m_onBossHit, false);
 	}
 
-	// Token: 0x17000531 RID: 1329
-	// (get) Token: 0x0600099C RID: 2460 RVA: 0x0001EF22 File Offset: 0x0001D122
+	// Token: 0x170006E1 RID: 1761
+	// (get) Token: 0x06000EB1 RID: 3761 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_verticalBeamAttackCount
 	{
 		get
@@ -155,8 +155,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000532 RID: 1330
-	// (get) Token: 0x0600099D RID: 2461 RVA: 0x0001EF25 File Offset: 0x0001D125
+	// Token: 0x170006E2 RID: 1762
+	// (get) Token: 0x06000EB2 RID: 3762 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected virtual float m_timeBetweenVerticalBeamAttacks
 	{
 		get
@@ -165,8 +165,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000533 RID: 1331
-	// (get) Token: 0x0600099E RID: 2462 RVA: 0x0001EF2C File Offset: 0x0001D12C
+	// Token: 0x170006E3 RID: 1763
+	// (get) Token: 0x06000EB3 RID: 3763 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected virtual float m_verticalBeamWarningLifetime
 	{
 		get
@@ -175,8 +175,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000534 RID: 1332
-	// (get) Token: 0x0600099F RID: 2463 RVA: 0x0001EF33 File Offset: 0x0001D133
+	// Token: 0x170006E4 RID: 1764
+	// (get) Token: 0x06000EB4 RID: 3764 RVA: 0x000081A4 File Offset: 0x000063A4
 	protected virtual float m_verticalBeamLifetime
 	{
 		get
@@ -185,7 +185,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009A0 RID: 2464 RVA: 0x0001EF3A File Offset: 0x0001D13A
+	// Token: 0x06000EB5 RID: 3765 RVA: 0x000081AB File Offset: 0x000063AB
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -225,7 +225,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060009A1 RID: 2465 RVA: 0x0001EF49 File Offset: 0x0001D149
+	// Token: 0x06000EB6 RID: 3766 RVA: 0x000081BA File Offset: 0x000063BA
 	private IEnumerator FireVerticalBeamWarningAndAttack(int index)
 	{
 		if (this.m_warningWaitTime == null)
@@ -247,14 +247,14 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060009A2 RID: 2466 RVA: 0x0001EF5F File Offset: 0x0001D15F
+	// Token: 0x06000EB7 RID: 3767 RVA: 0x000081D0 File Offset: 0x000063D0
 	private Vector2 GetVerticalBeamProjectileOffset()
 	{
 		Vector2 zero = Vector2.zero;
 		return this.GetVerticalBeamOrigin();
 	}
 
-	// Token: 0x060009A3 RID: 2467 RVA: 0x0001EF70 File Offset: 0x0001D170
+	// Token: 0x06000EB8 RID: 3768 RVA: 0x000753F4 File Offset: 0x000735F4
 	private Vector2 GetVerticalBeamOrigin()
 	{
 		Vector2 vector = PlayerManager.GetPlayerController().Midpoint;
@@ -262,8 +262,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		return new Vector2(vector.x, y);
 	}
 
-	// Token: 0x17000535 RID: 1333
-	// (get) Token: 0x060009A4 RID: 2468 RVA: 0x0001EFC2 File Offset: 0x0001D1C2
+	// Token: 0x170006E5 RID: 1765
+	// (get) Token: 0x06000EB9 RID: 3769 RVA: 0x000081DE File Offset: 0x000063DE
 	protected virtual int m_rapidFireShotCount
 	{
 		get
@@ -272,8 +272,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000536 RID: 1334
-	// (get) Token: 0x060009A5 RID: 2469 RVA: 0x0001EFC6 File Offset: 0x0001D1C6
+	// Token: 0x170006E6 RID: 1766
+	// (get) Token: 0x06000EBA RID: 3770 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_rapidFire_ShootVoidBulletAtEnd
 	{
 		get
@@ -282,7 +282,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009A6 RID: 2470 RVA: 0x0001EFC9 File Offset: 0x0001D1C9
+	// Token: 0x06000EBB RID: 3771 RVA: 0x000081E2 File Offset: 0x000063E2
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -356,7 +356,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060009A7 RID: 2471 RVA: 0x0001EFD8 File Offset: 0x0001D1D8
+	// Token: 0x06000EBC RID: 3772 RVA: 0x00075448 File Offset: 0x00073648
 	private float GetRandomRapidFireAngle(bool disableRandom = false)
 	{
 		int num = UnityEngine.Random.Range(0, 2);
@@ -374,8 +374,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		return num4;
 	}
 
-	// Token: 0x17000537 RID: 1335
-	// (get) Token: 0x060009A8 RID: 2472 RVA: 0x0001F034 File Offset: 0x0001D234
+	// Token: 0x170006E7 RID: 1767
+	// (get) Token: 0x06000EBD RID: 3773 RVA: 0x00003E42 File Offset: 0x00002042
 	protected virtual int m_circleAttackProjectileCount
 	{
 		get
@@ -384,8 +384,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000538 RID: 1336
-	// (get) Token: 0x060009A9 RID: 2473 RVA: 0x0001F037 File Offset: 0x0001D237
+	// Token: 0x170006E8 RID: 1768
+	// (get) Token: 0x06000EBE RID: 3774 RVA: 0x000081A4 File Offset: 0x000063A4
 	protected virtual float m_circleAttackInitialRadius
 	{
 		get
@@ -394,8 +394,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000539 RID: 1337
-	// (get) Token: 0x060009AA RID: 2474 RVA: 0x0001F03E File Offset: 0x0001D23E
+	// Token: 0x170006E9 RID: 1769
+	// (get) Token: 0x06000EBF RID: 3775 RVA: 0x00005319 File Offset: 0x00003519
 	protected virtual float m_circleAttackInnerRadius
 	{
 		get
@@ -404,8 +404,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700053A RID: 1338
-	// (get) Token: 0x060009AB RID: 2475 RVA: 0x0001F045 File Offset: 0x0001D245
+	// Token: 0x170006EA RID: 1770
+	// (get) Token: 0x06000EC0 RID: 3776 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float m_circleAttackTimeBeforeCircleBeginsToClose
 	{
 		get
@@ -414,8 +414,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700053B RID: 1339
-	// (get) Token: 0x060009AC RID: 2476 RVA: 0x0001F04C File Offset: 0x0001D24C
+	// Token: 0x170006EB RID: 1771
+	// (get) Token: 0x06000EC1 RID: 3777 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_circleAttackTimeToClose
 	{
 		get
@@ -424,8 +424,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700053C RID: 1340
-	// (get) Token: 0x060009AD RID: 2477 RVA: 0x0001F053 File Offset: 0x0001D253
+	// Token: 0x170006EC RID: 1772
+	// (get) Token: 0x06000EC2 RID: 3778 RVA: 0x000081F1 File Offset: 0x000063F1
 	protected virtual float m_circleAttackOrbitSpeed
 	{
 		get
@@ -434,7 +434,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009AE RID: 2478 RVA: 0x0001F05A File Offset: 0x0001D25A
+	// Token: 0x06000EC3 RID: 3779 RVA: 0x000081F8 File Offset: 0x000063F8
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -475,7 +475,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060009AF RID: 2479 RVA: 0x0001F06C File Offset: 0x0001D26C
+	// Token: 0x06000EC4 RID: 3780 RVA: 0x000754A4 File Offset: 0x000736A4
 	private void SpawnOrbitingAttackProjectiles(int projectileCount, Func<float, IEnumerator> orbitCoroutine)
 	{
 		float num = 360f / (float)projectileCount;
@@ -488,7 +488,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		this.m_hasVoidCircleClosedIn = false;
 	}
 
-	// Token: 0x060009B0 RID: 2480 RVA: 0x0001F0B0 File Offset: 0x0001D2B0
+	// Token: 0x06000EC5 RID: 3781 RVA: 0x00008207 File Offset: 0x00006407
 	private IEnumerator OrbitProjectileAroundPlayer(float initialAngle)
 	{
 		float num = 0f;
@@ -523,7 +523,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060009B1 RID: 2481 RVA: 0x0001F0C8 File Offset: 0x0001D2C8
+	// Token: 0x06000EC6 RID: 3782 RVA: 0x000754E8 File Offset: 0x000736E8
 	private Vector2 GetCircleAttackProjectileOffset(Vector3 pivot, float angle, float currentRadius)
 	{
 		float f = 0.017453292f * angle;
@@ -537,8 +537,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		return a + b;
 	}
 
-	// Token: 0x1700053D RID: 1341
-	// (get) Token: 0x060009B2 RID: 2482 RVA: 0x0001F141 File Offset: 0x0001D341
+	// Token: 0x170006ED RID: 1773
+	// (get) Token: 0x06000EC7 RID: 3783 RVA: 0x0000821D File Offset: 0x0000641D
 	protected virtual string BOMB_ATTACK_EXPLOSION_PROJECTILE_NAME
 	{
 		get
@@ -547,8 +547,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700053E RID: 1342
-	// (get) Token: 0x060009B3 RID: 2483 RVA: 0x0001F148 File Offset: 0x0001D348
+	// Token: 0x170006EE RID: 1774
+	// (get) Token: 0x06000EC8 RID: 3784 RVA: 0x00008224 File Offset: 0x00006424
 	protected virtual string BOMB_ATTACK_EXPLOSION_ADVANCED_PROJECTILE_NAME
 	{
 		get
@@ -557,8 +557,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700053F RID: 1343
-	// (get) Token: 0x060009B4 RID: 2484 RVA: 0x0001F14F File Offset: 0x0001D34F
+	// Token: 0x170006EF RID: 1775
+	// (get) Token: 0x06000EC9 RID: 3785 RVA: 0x0000822B File Offset: 0x0000642B
 	protected virtual string BOMB_ATTACK_WARNING_PROJECTILE_NAME
 	{
 		get
@@ -567,8 +567,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000540 RID: 1344
-	// (get) Token: 0x060009B5 RID: 2485 RVA: 0x0001F156 File Offset: 0x0001D356
+	// Token: 0x170006F0 RID: 1776
+	// (get) Token: 0x06000ECA RID: 3786 RVA: 0x00008232 File Offset: 0x00006432
 	protected virtual string BOMB_ATTACK_WARNING_ADVANCED_PROJECTILE_NAME
 	{
 		get
@@ -577,8 +577,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000541 RID: 1345
-	// (get) Token: 0x060009B6 RID: 2486 RVA: 0x0001F15D File Offset: 0x0001D35D
+	// Token: 0x170006F1 RID: 1777
+	// (get) Token: 0x06000ECB RID: 3787 RVA: 0x00008239 File Offset: 0x00006439
 	protected virtual string BOMB_ATTACK_FIREBALL_PROJECTILE_NAME
 	{
 		get
@@ -587,8 +587,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000542 RID: 1346
-	// (get) Token: 0x060009B7 RID: 2487 RVA: 0x0001F164 File Offset: 0x0001D364
+	// Token: 0x170006F2 RID: 1778
+	// (get) Token: 0x06000ECC RID: 3788 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_bombAttack_FireballCountAtEnd
 	{
 		get
@@ -597,8 +597,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000543 RID: 1347
-	// (get) Token: 0x060009B8 RID: 2488 RVA: 0x0001F167 File Offset: 0x0001D367
+	// Token: 0x170006F3 RID: 1779
+	// (get) Token: 0x06000ECD RID: 3789 RVA: 0x00008240 File Offset: 0x00006440
 	public IRelayLink BombAttackWarningAppearedRelay
 	{
 		get
@@ -607,8 +607,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000544 RID: 1348
-	// (get) Token: 0x060009B9 RID: 2489 RVA: 0x0001F174 File Offset: 0x0001D374
+	// Token: 0x170006F4 RID: 1780
+	// (get) Token: 0x06000ECE RID: 3790 RVA: 0x0000824D File Offset: 0x0000644D
 	public IRelayLink BombAttackExplodedRelay
 	{
 		get
@@ -617,7 +617,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009BA RID: 2490 RVA: 0x0001F181 File Offset: 0x0001D381
+	// Token: 0x06000ECF RID: 3791 RVA: 0x0000825A File Offset: 0x0000645A
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -707,8 +707,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x17000545 RID: 1349
-	// (get) Token: 0x060009BB RID: 2491 RVA: 0x0001F190 File Offset: 0x0001D390
+	// Token: 0x170006F5 RID: 1781
+	// (get) Token: 0x06000ED0 RID: 3792 RVA: 0x00008269 File Offset: 0x00006469
 	protected virtual int m_shout_fireballsAtEnd
 	{
 		get
@@ -717,8 +717,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000546 RID: 1350
-	// (get) Token: 0x060009BC RID: 2492 RVA: 0x0001F194 File Offset: 0x0001D394
+	// Token: 0x170006F6 RID: 1782
+	// (get) Token: 0x06000ED1 RID: 3793 RVA: 0x0000826D File Offset: 0x0000646D
 	public IRelayLink ShoutAttackWarningAppearedRelay
 	{
 		get
@@ -727,8 +727,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000547 RID: 1351
-	// (get) Token: 0x060009BD RID: 2493 RVA: 0x0001F1A1 File Offset: 0x0001D3A1
+	// Token: 0x170006F7 RID: 1783
+	// (get) Token: 0x06000ED2 RID: 3794 RVA: 0x0000827A File Offset: 0x0000647A
 	public IRelayLink ShoutAttackExplodedRelay
 	{
 		get
@@ -737,7 +737,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009BE RID: 2494 RVA: 0x0001F1AE File Offset: 0x0001D3AE
+	// Token: 0x06000ED3 RID: 3795 RVA: 0x00008287 File Offset: 0x00006487
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -805,8 +805,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x17000548 RID: 1352
-	// (get) Token: 0x060009BF RID: 2495 RVA: 0x0001F1BD File Offset: 0x0001D3BD
+	// Token: 0x170006F8 RID: 1784
+	// (get) Token: 0x06000ED4 RID: 3796 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual int m_dashAttackFireballCountAtEnd
 	{
 		get
@@ -815,7 +815,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009C0 RID: 2496 RVA: 0x0001F1C0 File Offset: 0x0001D3C0
+	// Token: 0x06000ED5 RID: 3797 RVA: 0x00008296 File Offset: 0x00006496
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -866,8 +866,8 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x17000549 RID: 1353
-	// (get) Token: 0x060009C1 RID: 2497 RVA: 0x0001F1CF File Offset: 0x0001D3CF
+	// Token: 0x170006F9 RID: 1785
+	// (get) Token: 0x06000ED6 RID: 3798 RVA: 0x000047A7 File Offset: 0x000029A7
 	protected virtual int m_shieldAttackProjectileCount
 	{
 		get
@@ -876,7 +876,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009C2 RID: 2498 RVA: 0x0001F1D2 File Offset: 0x0001D3D2
+	// Token: 0x06000ED7 RID: 3799 RVA: 0x000082A5 File Offset: 0x000064A5
 	private void ShieldAttack()
 	{
 		if (!this.m_isShieldAttackRunning)
@@ -888,7 +888,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009C3 RID: 2499 RVA: 0x0001F20C File Offset: 0x0001D40C
+	// Token: 0x06000ED8 RID: 3800 RVA: 0x000082DF File Offset: 0x000064DF
 	private IEnumerator OrbitShieldProjectileAroundBoss(float initialAngle)
 	{
 		Vector3 midpoint = base.EnemyController.Midpoint;
@@ -924,7 +924,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060009C4 RID: 2500 RVA: 0x0001F222 File Offset: 0x0001D422
+	// Token: 0x06000ED9 RID: 3801 RVA: 0x000082F5 File Offset: 0x000064F5
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -963,7 +963,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060009C5 RID: 2501 RVA: 0x0001F231 File Offset: 0x0001D431
+	// Token: 0x06000EDA RID: 3802 RVA: 0x00008304 File Offset: 0x00006504
 	public override IEnumerator SpawnAnim()
 	{
 		yield return this.Default_Animation("Intro_Idle", this.m_spawn_Idle_AnimSpeed, this.m_spawn_Idle_Delay, true);
@@ -973,7 +973,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060009C6 RID: 2502 RVA: 0x0001F240 File Offset: 0x0001D440
+	// Token: 0x06000EDB RID: 3803 RVA: 0x00008313 File Offset: 0x00006513
 	public override IEnumerator DeathAnim()
 	{
 		yield return base.DeathAnim();
@@ -985,7 +985,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060009C7 RID: 2503 RVA: 0x0001F250 File Offset: 0x0001D450
+	// Token: 0x06000EDC RID: 3804 RVA: 0x00075564 File Offset: 0x00073764
 	private void OnBossHit(object sender, HealthChangeEventArgs args)
 	{
 		if (base.EnemyController.IsDead || args.PrevHealthValue <= args.NewHealthValue)
@@ -1006,7 +1006,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009C8 RID: 2504 RVA: 0x0001F2F5 File Offset: 0x0001D4F5
+	// Token: 0x06000EDD RID: 3805 RVA: 0x00008322 File Offset: 0x00006522
 	public override void OnLBCompleteOrCancelled()
 	{
 		this.DisableWarningProjectiles();
@@ -1015,7 +1015,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x060009C9 RID: 2505 RVA: 0x0001F315 File Offset: 0x0001D515
+	// Token: 0x06000EDE RID: 3806 RVA: 0x00008342 File Offset: 0x00006542
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -1027,7 +1027,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009CA RID: 2506 RVA: 0x0001F338 File Offset: 0x0001D538
+	// Token: 0x06000EDF RID: 3807 RVA: 0x0007560C File Offset: 0x0007380C
 	private void DisableWarningProjectiles()
 	{
 		base.StopProjectile(ref this.m_shoutWarningProjectile);
@@ -1038,7 +1038,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		base.StopProjectile(ref this.m_bombWarningProjectile5);
 	}
 
-	// Token: 0x060009CB RID: 2507 RVA: 0x0001F390 File Offset: 0x0001D590
+	// Token: 0x06000EE0 RID: 3808 RVA: 0x00075664 File Offset: 0x00073864
 	private void DisablePersistentLogicProjectiles()
 	{
 		for (int i = 0; i < this.m_verticalBeamAttackCount; i++)
@@ -1054,7 +1054,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009CC RID: 2508 RVA: 0x0001F3E0 File Offset: 0x0001D5E0
+	// Token: 0x06000EE1 RID: 3809 RVA: 0x000756B4 File Offset: 0x000738B4
 	private float Die3Roll()
 	{
 		float num = (float)UnityEngine.Random.Range(0, 5);
@@ -1081,7 +1081,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		return num;
 	}
 
-	// Token: 0x060009CD RID: 2509 RVA: 0x0001F44F File Offset: 0x0001D64F
+	// Token: 0x06000EE2 RID: 3810 RVA: 0x00008364 File Offset: 0x00006564
 	public override void ResetScript()
 	{
 		this.m_isShieldAttackRunning = false;
@@ -1089,7 +1089,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		base.ResetScript();
 	}
 
-	// Token: 0x060009CE RID: 2510 RVA: 0x0001F470 File Offset: 0x0001D670
+	// Token: 0x06000EE3 RID: 3811 RVA: 0x00075724 File Offset: 0x00073924
 	private void InitializeAudio()
 	{
 		this.m_flyingAudioEventInstance = AudioUtility.GetEventInstance("event:/SFX/Enemies/sfx_studyBoss_fly_loop", base.transform);
@@ -1101,7 +1101,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		this.m_shieldAttackLoopAudioEventInstance = AudioUtility.GetEventInstance("event:/SFX/Enemies/sfx_studyBoss_phase2_voidProjectiles_loop", base.transform);
 	}
 
-	// Token: 0x060009CF RID: 2511 RVA: 0x0001F517 File Offset: 0x0001D717
+	// Token: 0x06000EE4 RID: 3812 RVA: 0x00008384 File Offset: 0x00006584
 	private void DisableAudio()
 	{
 		AudioManager.Stop(this.m_flyingAudioEventInstance, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
@@ -1111,7 +1111,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		AudioManager.Stop(this.m_shieldAttackLoopAudioEventInstance, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 	}
 
-	// Token: 0x060009D0 RID: 2512 RVA: 0x0001F558 File Offset: 0x0001D758
+	// Token: 0x06000EE5 RID: 3813 RVA: 0x000757CC File Offset: 0x000739CC
 	private void OnDestroy()
 	{
 		if (this.m_flyingAudioEventInstance.isValid())
@@ -1144,7 +1144,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009D1 RID: 2513 RVA: 0x0001F614 File Offset: 0x0001D814
+	// Token: 0x06000EE6 RID: 3814 RVA: 0x000083C2 File Offset: 0x000065C2
 	protected override void PlayDeathAnimAudio()
 	{
 		if (base.EnemyController.CurrentHealth > 0f)
@@ -1155,7 +1155,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		base.PlayDeathAnimAudio();
 	}
 
-	// Token: 0x060009D2 RID: 2514 RVA: 0x0001F64C File Offset: 0x0001D84C
+	// Token: 0x06000EE7 RID: 3815 RVA: 0x00075888 File Offset: 0x00073A88
 	private void Update()
 	{
 		bool flag = base.EnemyController.Velocity.sqrMagnitude > 0f;
@@ -1164,7 +1164,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		this.m_wasFlying = flag;
 	}
 
-	// Token: 0x060009D3 RID: 2515 RVA: 0x0001F68C File Offset: 0x0001D88C
+	// Token: 0x06000EE8 RID: 3816 RVA: 0x000758C8 File Offset: 0x00073AC8
 	private void UpdateFlyingAudio(bool isFlying)
 	{
 		if (isFlying && !this.m_wasFlying)
@@ -1197,7 +1197,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009D4 RID: 2516 RVA: 0x0001F740 File Offset: 0x0001D940
+	// Token: 0x06000EE9 RID: 3817 RVA: 0x0007597C File Offset: 0x00073B7C
 	private void UpdateIdleAudio(bool isFlying)
 	{
 		if (isFlying && !this.m_wasFlying)
@@ -1216,14 +1216,14 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009D5 RID: 2517 RVA: 0x0001F78C File Offset: 0x0001D98C
+	// Token: 0x06000EEA RID: 3818 RVA: 0x000083F8 File Offset: 0x000065F8
 	private void BeginVerticalBeamAudio()
 	{
 		AudioManager.Play(this, this.m_verticalBeamLoopAudioEventInstance);
 		this.m_verticalBeamAudioPlaying = true;
 	}
 
-	// Token: 0x060009D6 RID: 2518 RVA: 0x0001F7A1 File Offset: 0x0001D9A1
+	// Token: 0x06000EEB RID: 3819 RVA: 0x0000840D File Offset: 0x0000660D
 	private void EndVerticalBeamAudio()
 	{
 		AudioManager.Stop(this.m_verticalBeamLoopAudioEventInstance, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
@@ -1231,7 +1231,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		this.m_verticalBeamAudioPlaying = false;
 	}
 
-	// Token: 0x060009D7 RID: 2519 RVA: 0x0001F7C2 File Offset: 0x0001D9C2
+	// Token: 0x06000EEC RID: 3820 RVA: 0x0000842E File Offset: 0x0000662E
 	private void BeginRapidFireAttackAudio()
 	{
 		if (!this.m_rapidFireAudioPlaying)
@@ -1241,7 +1241,7 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009D8 RID: 2520 RVA: 0x0001F7E5 File Offset: 0x0001D9E5
+	// Token: 0x06000EED RID: 3821 RVA: 0x00008451 File Offset: 0x00006651
 	private void EndRapidFireAttackAudio()
 	{
 		if (this.m_rapidFireAudioPlaying)
@@ -1251,597 +1251,597 @@ public class StudyBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060009D9 RID: 2521 RVA: 0x0001F802 File Offset: 0x0001DA02
+	// Token: 0x06000EEE RID: 3822 RVA: 0x0000846E File Offset: 0x0000666E
 	private void PlayCircleClosingAudio()
 	{
 		AudioManager.PlayAttached(this, this.m_voidCircleClosingAudioEventInstance, base.Target);
 	}
 
-	// Token: 0x060009DA RID: 2522 RVA: 0x0001F816 File Offset: 0x0001DA16
+	// Token: 0x06000EEF RID: 3823 RVA: 0x00008482 File Offset: 0x00006682
 	private void PlayShieldAttackAudio()
 	{
 		AudioManager.PlayAttached(this, this.m_shieldAttackLoopAudioEventInstance, base.gameObject);
 	}
 
-	// Token: 0x04000DC5 RID: 3525
+	// Token: 0x04001179 RID: 4473
 	private EnemyModeShiftEventArgs m_modeShiftEventArgs;
 
-	// Token: 0x04000DC6 RID: 3526
+	// Token: 0x0400117A RID: 4474
 	private Action<object, HealthChangeEventArgs> m_onBossHit;
 
-	// Token: 0x04000DC7 RID: 3527
+	// Token: 0x0400117B RID: 4475
 	private const float m_global_AnimationOverride = 1f;
 
-	// Token: 0x04000DC8 RID: 3528
+	// Token: 0x0400117C RID: 4476
 	private bool m_hasVoidCircleClosedIn;
 
-	// Token: 0x04000DC9 RID: 3529
+	// Token: 0x0400117D RID: 4477
 	private const string VERTICAL_BEAM_TELL_INTRO = "SummonVerticalBeam_Tell_Intro";
 
-	// Token: 0x04000DCA RID: 3530
+	// Token: 0x0400117E RID: 4478
 	private const string VERTICAL_BEAM_TELL_HOLD = "SummonVerticalBeam_Tell_Hold";
 
-	// Token: 0x04000DCB RID: 3531
+	// Token: 0x0400117F RID: 4479
 	private const string VERTICAL_BEAM_ATTACK_INTRO = "SummonVerticalBeam_Attack_Intro";
 
-	// Token: 0x04000DCC RID: 3532
+	// Token: 0x04001180 RID: 4480
 	private const string VERTICAL_BEAM_ATTACK_HOLD = "SummonVerticalBeam_Attack_Hold";
 
-	// Token: 0x04000DCD RID: 3533
+	// Token: 0x04001181 RID: 4481
 	private const string VERTICAL_BEAM_EXIT = "SummonVerticalBeam_Exit";
 
-	// Token: 0x04000DCE RID: 3534
+	// Token: 0x04001182 RID: 4482
 	private const string VERTICAL_BEAM_PROJECTILE_NAME = "StudyBossVerticalBeamProjectile";
 
-	// Token: 0x04000DCF RID: 3535
+	// Token: 0x04001183 RID: 4483
 	private const float VERTICAL_BEAM_OFFSET = 1f;
 
-	// Token: 0x04000DD0 RID: 3536
+	// Token: 0x04001184 RID: 4484
 	private const string VERTICAL_BEAM_WARNING_PROJECTILE_NAME = "StudyBossVerticalBeamWarningProjectile";
 
-	// Token: 0x04000DD1 RID: 3537
+	// Token: 0x04001185 RID: 4485
 	private float m_verticalBeam_TellIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000DD2 RID: 3538
+	// Token: 0x04001186 RID: 4486
 	private float m_verticalBeam_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000DD3 RID: 3539
+	// Token: 0x04001187 RID: 4487
 	private float m_verticalBeam_TellIntroAndHold_Delay = 1.75f;
 
-	// Token: 0x04000DD4 RID: 3540
+	// Token: 0x04001188 RID: 4488
 	private float m_verticalBeam_AttackIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000DD5 RID: 3541
+	// Token: 0x04001189 RID: 4489
 	private float m_verticalBeam_AttackIntro_Delay;
 
-	// Token: 0x04000DD6 RID: 3542
+	// Token: 0x0400118A RID: 4490
 	private float m_verticalBeam_AttackHold_AnimSpeed = 1f;
 
-	// Token: 0x04000DD7 RID: 3543
+	// Token: 0x0400118B RID: 4491
 	private float m_verticalBeam_AttackHold_Delay = 1f;
 
-	// Token: 0x04000DD8 RID: 3544
+	// Token: 0x0400118C RID: 4492
 	private float m_verticalBeam_Exit_AnimSpeed = 1f;
 
-	// Token: 0x04000DD9 RID: 3545
+	// Token: 0x0400118D RID: 4493
 	private float m_verticalBeam_Exit_Delay = 0.45f;
 
-	// Token: 0x04000DDA RID: 3546
+	// Token: 0x0400118E RID: 4494
 	private float m_verticalBeam_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000DDB RID: 3547
+	// Token: 0x0400118F RID: 4495
 	private float m_verticalBeam_AttackCD = 18f;
 
-	// Token: 0x04000DDC RID: 3548
+	// Token: 0x04001190 RID: 4496
 	private bool m_verticalBeam_stopMovingWhileAttacking = true;
 
-	// Token: 0x04000DDD RID: 3549
+	// Token: 0x04001191 RID: 4497
 	private Projectile_RL[] m_verticalBeamWarningProjectiles;
 
-	// Token: 0x04000DDE RID: 3550
+	// Token: 0x04001192 RID: 4498
 	private Projectile_RL[] m_verticalBeamProjectiles;
 
-	// Token: 0x04000DDF RID: 3551
+	// Token: 0x04001193 RID: 4499
 	private bool m_verticalBeamAudioPlaying;
 
-	// Token: 0x04000DE0 RID: 3552
+	// Token: 0x04001194 RID: 4500
 	private WaitForSeconds m_warningWaitTime;
 
-	// Token: 0x04000DE1 RID: 3553
+	// Token: 0x04001195 RID: 4501
 	private WaitForSeconds m_beamWaitTime;
 
-	// Token: 0x04000DE2 RID: 3554
+	// Token: 0x04001196 RID: 4502
 	private const string RAPID_FIRE_TELL_INTRO = "EyeballShot_Tell_Intro";
 
-	// Token: 0x04000DE3 RID: 3555
+	// Token: 0x04001197 RID: 4503
 	private const string RAPID_FIRE_TELL_HOLD = "EyeballShot_Tell_Hold";
 
-	// Token: 0x04000DE4 RID: 3556
+	// Token: 0x04001198 RID: 4504
 	private const string RAPID_FIRE_ATTACK_INTRO = "EyeballShot_Attack_Intro";
 
-	// Token: 0x04000DE5 RID: 3557
+	// Token: 0x04001199 RID: 4505
 	private const string RAPID_FIRE_ATTACK_HOLD = "EyeballShot_Attack_Hold";
 
-	// Token: 0x04000DE6 RID: 3558
+	// Token: 0x0400119A RID: 4506
 	private const string RAPID_FIRE_EXIT = "EyeballShot_Exit";
 
-	// Token: 0x04000DE7 RID: 3559
+	// Token: 0x0400119B RID: 4507
 	private const string RAPID_FIRE_PROJECTILE_NAME = "StudyBossRapidFireProjectile";
 
-	// Token: 0x04000DE8 RID: 3560
+	// Token: 0x0400119C RID: 4508
 	private const string RAPID_FIRE_VOID_PROJECTILE_NAME = "StudyBossRapidFireVoidProjectile";
 
-	// Token: 0x04000DE9 RID: 3561
+	// Token: 0x0400119D RID: 4509
 	private float m_rapidFire_TellIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000DEA RID: 3562
+	// Token: 0x0400119E RID: 4510
 	private float m_rapidFire_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000DEB RID: 3563
+	// Token: 0x0400119F RID: 4511
 	private float m_rapidFire_TellIntroAndHold_Delay = 1.5f;
 
-	// Token: 0x04000DEC RID: 3564
+	// Token: 0x040011A0 RID: 4512
 	private float m_rapidFire_AttackIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000DED RID: 3565
+	// Token: 0x040011A1 RID: 4513
 	private float m_rapidFire_AttackIntro_Delay;
 
-	// Token: 0x04000DEE RID: 3566
+	// Token: 0x040011A2 RID: 4514
 	private float m_rapidFire_AttackHold_AnimSpeed = 1f;
 
-	// Token: 0x04000DEF RID: 3567
+	// Token: 0x040011A3 RID: 4515
 	private float m_rapidFire_AttackHold_Delay = 3.25f;
 
-	// Token: 0x04000DF0 RID: 3568
+	// Token: 0x040011A4 RID: 4516
 	private float m_rapidFire_Exit_AnimSpeed = 1f;
 
-	// Token: 0x04000DF1 RID: 3569
+	// Token: 0x040011A5 RID: 4517
 	private float m_rapidFire_Exit_Delay = 0.45f;
 
-	// Token: 0x04000DF2 RID: 3570
+	// Token: 0x040011A6 RID: 4518
 	private float m_rapidFire_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000DF3 RID: 3571
+	// Token: 0x040011A7 RID: 4519
 	private float m_rapidFire_AttackCD = 15f;
 
-	// Token: 0x04000DF4 RID: 3572
+	// Token: 0x040011A8 RID: 4520
 	private float m_rapidFire_MaxRandomAngleDeviation = 60f;
 
-	// Token: 0x04000DF5 RID: 3573
+	// Token: 0x040011A9 RID: 4521
 	private float m_rapidFire_SpeedMod = 1f;
 
-	// Token: 0x04000DF6 RID: 3574
+	// Token: 0x040011AA RID: 4522
 	private float m_rapidFire_VoidProjectileSpeedMod = 1f;
 
-	// Token: 0x04000DF7 RID: 3575
+	// Token: 0x040011AB RID: 4523
 	private float m_rapidFire_VoidShotDelay = 0.15f;
 
-	// Token: 0x04000DF8 RID: 3576
+	// Token: 0x040011AC RID: 4524
 	private float m_rapidFire_VoidShotAdvancedDelay = 0.25f;
 
-	// Token: 0x04000DF9 RID: 3577
+	// Token: 0x040011AD RID: 4525
 	private bool m_rapidFire_stopMovingWhileAttacking = true;
 
-	// Token: 0x04000DFA RID: 3578
+	// Token: 0x040011AE RID: 4526
 	private const string CIRCLE_ATTACK_TELL_INTRO = "SummonCircularBullets_Tell_Intro";
 
-	// Token: 0x04000DFB RID: 3579
+	// Token: 0x040011AF RID: 4527
 	private const string CIRCLE_ATTACK_TELL_HOLD = "SummonCircularBullets_Tell_Hold";
 
-	// Token: 0x04000DFC RID: 3580
+	// Token: 0x040011B0 RID: 4528
 	private const string CIRCLE_ATTACK_ATTACK_INTRO = "SummonCircularBullets_Attack_Intro";
 
-	// Token: 0x04000DFD RID: 3581
+	// Token: 0x040011B1 RID: 4529
 	private const string CIRCLE_ATTACK_ATTACK_HOLD = "SummonCircularBullets_Attack_Hold";
 
-	// Token: 0x04000DFE RID: 3582
+	// Token: 0x040011B2 RID: 4530
 	private const string CIRCLE_ATTACK_EXIT = "SummonCircularBullets_Exit";
 
-	// Token: 0x04000DFF RID: 3583
+	// Token: 0x040011B3 RID: 4531
 	private const string CIRCLE_ATTACK_PROJECTILE_NAME = "StudyBossCircleProjectile";
 
-	// Token: 0x04000E00 RID: 3584
+	// Token: 0x040011B4 RID: 4532
 	private float m_circleAttack_TellIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000E01 RID: 3585
+	// Token: 0x040011B5 RID: 4533
 	private float m_circleAttack_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000E02 RID: 3586
+	// Token: 0x040011B6 RID: 4534
 	private float m_circleAttack_TellIntroAndHold_Delay = 1.5f;
 
-	// Token: 0x04000E03 RID: 3587
+	// Token: 0x040011B7 RID: 4535
 	private float m_circleAttack_AttackIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000E04 RID: 3588
+	// Token: 0x040011B8 RID: 4536
 	private float m_circleAttack_AttackIntro_Delay;
 
-	// Token: 0x04000E05 RID: 3589
+	// Token: 0x040011B9 RID: 4537
 	private float m_circleAttack_AttackHold_AnimSpeed = 1f;
 
-	// Token: 0x04000E06 RID: 3590
+	// Token: 0x040011BA RID: 4538
 	private float m_circleAttack_AttackHold_Delay = 1.25f;
 
-	// Token: 0x04000E07 RID: 3591
+	// Token: 0x040011BB RID: 4539
 	private float m_circleAttack_Exit_AnimSpeed = 1f;
 
-	// Token: 0x04000E08 RID: 3592
+	// Token: 0x040011BC RID: 4540
 	private float m_circleAttack_Exit_Delay = 0.45f;
 
-	// Token: 0x04000E09 RID: 3593
+	// Token: 0x040011BD RID: 4541
 	private float m_circleAttack_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000E0A RID: 3594
+	// Token: 0x040011BE RID: 4542
 	private float m_circleAttack_AttackCD = 12f;
 
-	// Token: 0x04000E0B RID: 3595
+	// Token: 0x040011BF RID: 4543
 	private bool m_circleAttack_stopMovingWhileAttacking;
 
-	// Token: 0x04000E0C RID: 3596
+	// Token: 0x040011C0 RID: 4544
 	private const string BOMB_ATTACK_TELL_INTRO = "SummonBomb_Tell_Intro";
 
-	// Token: 0x04000E0D RID: 3597
+	// Token: 0x040011C1 RID: 4545
 	private const string BOMB_ATTACK_TELL_HOLD = "SummonBomb_Tell_Hold";
 
-	// Token: 0x04000E0E RID: 3598
+	// Token: 0x040011C2 RID: 4546
 	private const string BOMB_ATTACK_ATTACK_INTRO = "SummonBomb_Attack_Intro";
 
-	// Token: 0x04000E0F RID: 3599
+	// Token: 0x040011C3 RID: 4547
 	private const string BOMB_ATTACK_ATTACK_HOLD = "SummonBomb_Attack_Hold";
 
-	// Token: 0x04000E10 RID: 3600
+	// Token: 0x040011C4 RID: 4548
 	private const string BOMB_ATTACK_EXIT = "SummonBomb_Exit";
 
-	// Token: 0x04000E11 RID: 3601
+	// Token: 0x040011C5 RID: 4549
 	private float m_bombAttack_TellIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000E12 RID: 3602
+	// Token: 0x040011C6 RID: 4550
 	private float m_bombAttack_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000E13 RID: 3603
+	// Token: 0x040011C7 RID: 4551
 	private float m_bombAttack_TellIntroAndHold_Delay = 2.25f;
 
-	// Token: 0x04000E14 RID: 3604
+	// Token: 0x040011C8 RID: 4552
 	private float m_bombAttack_AttackIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000E15 RID: 3605
+	// Token: 0x040011C9 RID: 4553
 	private float m_bombAttack_AttackIntro_Delay;
 
-	// Token: 0x04000E16 RID: 3606
+	// Token: 0x040011CA RID: 4554
 	private float m_bombAttack_AttackHold_AnimSpeed = 1f;
 
-	// Token: 0x04000E17 RID: 3607
+	// Token: 0x040011CB RID: 4555
 	private float m_bombAttack_AttackHold_Delay;
 
-	// Token: 0x04000E18 RID: 3608
+	// Token: 0x040011CC RID: 4556
 	private float m_bombAttack_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x04000E19 RID: 3609
+	// Token: 0x040011CD RID: 4557
 	private float m_bombAttack_Exit_Delay = 0.45f;
 
-	// Token: 0x04000E1A RID: 3610
+	// Token: 0x040011CE RID: 4558
 	private float m_bombAttack_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000E1B RID: 3611
+	// Token: 0x040011CF RID: 4559
 	private float m_bombAttack_AttackCD = 12f;
 
-	// Token: 0x04000E1C RID: 3612
+	// Token: 0x040011D0 RID: 4560
 	private float m_bombAttack_TimeToExplosion;
 
-	// Token: 0x04000E1D RID: 3613
+	// Token: 0x040011D1 RID: 4561
 	private bool m_bombAttack_stopMovingWhileAttacking = true;
 
-	// Token: 0x04000E1E RID: 3614
+	// Token: 0x040011D2 RID: 4562
 	private float m_bombAttack_Displace_X = 10f;
 
-	// Token: 0x04000E1F RID: 3615
+	// Token: 0x040011D3 RID: 4563
 	private float m_bombAttack_Displace_Y = 3.75f;
 
-	// Token: 0x04000E20 RID: 3616
+	// Token: 0x040011D4 RID: 4564
 	private Projectile_RL m_bombWarningProjectile;
 
-	// Token: 0x04000E21 RID: 3617
+	// Token: 0x040011D5 RID: 4565
 	private Projectile_RL m_bombWarningProjectile2;
 
-	// Token: 0x04000E22 RID: 3618
+	// Token: 0x040011D6 RID: 4566
 	private Projectile_RL m_bombWarningProjectile3;
 
-	// Token: 0x04000E23 RID: 3619
+	// Token: 0x040011D7 RID: 4567
 	private Projectile_RL m_bombWarningProjectile4;
 
-	// Token: 0x04000E24 RID: 3620
+	// Token: 0x040011D8 RID: 4568
 	private Projectile_RL m_bombWarningProjectile5;
 
-	// Token: 0x04000E25 RID: 3621
+	// Token: 0x040011D9 RID: 4569
 	private Relay m_bombAttackWarningAppearedRelay = new Relay();
 
-	// Token: 0x04000E26 RID: 3622
+	// Token: 0x040011DA RID: 4570
 	private Relay m_bombAttackExplodedRelay = new Relay();
 
-	// Token: 0x04000E27 RID: 3623
+	// Token: 0x040011DB RID: 4571
 	private const string SHOUT_TELL_INTRO = "Shout_Tell_Intro";
 
-	// Token: 0x04000E28 RID: 3624
+	// Token: 0x040011DC RID: 4572
 	private const string SHOUT_TELL_HOLD = "Shout_Tell_Hold";
 
-	// Token: 0x04000E29 RID: 3625
+	// Token: 0x040011DD RID: 4573
 	private const string SHOUT_ATTACK_INTRO = "Shout_Attack_Intro";
 
-	// Token: 0x04000E2A RID: 3626
+	// Token: 0x040011DE RID: 4574
 	private const string SHOUT_ATTACK_HOLD = "Shout_Attack_Hold";
 
-	// Token: 0x04000E2B RID: 3627
+	// Token: 0x040011DF RID: 4575
 	private const string SHOUT_EXIT = "Shout_Exit";
 
-	// Token: 0x04000E2C RID: 3628
+	// Token: 0x040011E0 RID: 4576
 	private const string SHOUT_ATTACK_EXPLOSION_PROJECTILE_NAME = "StudyBossShoutExplosionProjectile";
 
-	// Token: 0x04000E2D RID: 3629
+	// Token: 0x040011E1 RID: 4577
 	private const string SHOUT_ATTACK_WARNING_PROJECTILE_NAME = "StudyBossShoutWarningProjectile";
 
-	// Token: 0x04000E2E RID: 3630
+	// Token: 0x040011E2 RID: 4578
 	private float m_shout_TellIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000E2F RID: 3631
+	// Token: 0x040011E3 RID: 4579
 	private float m_shout_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000E30 RID: 3632
+	// Token: 0x040011E4 RID: 4580
 	private float m_shout_TellIntroAndHold_Delay = 1.5f;
 
-	// Token: 0x04000E31 RID: 3633
+	// Token: 0x040011E5 RID: 4581
 	private float m_shout_AttackIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000E32 RID: 3634
+	// Token: 0x040011E6 RID: 4582
 	private float m_shout_AttackIntro_Delay;
 
-	// Token: 0x04000E33 RID: 3635
+	// Token: 0x040011E7 RID: 4583
 	private float m_shout_AttackHold_AnimSpeed = 1f;
 
-	// Token: 0x04000E34 RID: 3636
+	// Token: 0x040011E8 RID: 4584
 	private float m_shout_AttackHold_Delay;
 
-	// Token: 0x04000E35 RID: 3637
+	// Token: 0x040011E9 RID: 4585
 	private float m_shout_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x04000E36 RID: 3638
+	// Token: 0x040011EA RID: 4586
 	private float m_shout_Exit_Delay;
 
-	// Token: 0x04000E37 RID: 3639
+	// Token: 0x040011EB RID: 4587
 	private float m_shout_Exit_IdleDuration = 0.35f;
 
-	// Token: 0x04000E38 RID: 3640
+	// Token: 0x040011EC RID: 4588
 	private float m_shout_AttackCD = 12f;
 
-	// Token: 0x04000E39 RID: 3641
+	// Token: 0x040011ED RID: 4589
 	private float m_shoutAttackTimeToExplosion;
 
-	// Token: 0x04000E3A RID: 3642
+	// Token: 0x040011EE RID: 4590
 	private bool m_shout_stopMovingWhileAttacking = true;
 
-	// Token: 0x04000E3B RID: 3643
+	// Token: 0x040011EF RID: 4591
 	private float m_shoutAttackDelaySecondExplosion = 0.65f;
 
-	// Token: 0x04000E3C RID: 3644
+	// Token: 0x040011F0 RID: 4592
 	private int m_shoutAttackDelaySecondExplosionAngleAdd = 10;
 
-	// Token: 0x04000E3D RID: 3645
+	// Token: 0x040011F1 RID: 4593
 	private Projectile_RL m_shoutWarningProjectile;
 
-	// Token: 0x04000E3E RID: 3646
+	// Token: 0x040011F2 RID: 4594
 	private Relay m_shoutAttackWarningAppearedRelay = new Relay();
 
-	// Token: 0x04000E3F RID: 3647
+	// Token: 0x040011F3 RID: 4595
 	private Relay m_shoutAttackExplodedRelay = new Relay();
 
-	// Token: 0x04000E40 RID: 3648
+	// Token: 0x040011F4 RID: 4596
 	private const string DASH_ATTACK_TELL_INTRO = "Dash_Tell_Intro";
 
-	// Token: 0x04000E41 RID: 3649
+	// Token: 0x040011F5 RID: 4597
 	private const string DASH_ATTACK_TELL_HOLD = "Dash_Tell_Hold";
 
-	// Token: 0x04000E42 RID: 3650
+	// Token: 0x040011F6 RID: 4598
 	private const string DASH_ATTACK_ATTACK_INTRO = "Dash_Attack_Intro";
 
-	// Token: 0x04000E43 RID: 3651
+	// Token: 0x040011F7 RID: 4599
 	private const string DASH_ATTACK_ATTACK_HOLD = "Dash_Attack_Hold";
 
-	// Token: 0x04000E44 RID: 3652
+	// Token: 0x040011F8 RID: 4600
 	private const string DASH_ATTACK_EXIT = "Dash_Exit";
 
-	// Token: 0x04000E45 RID: 3653
+	// Token: 0x040011F9 RID: 4601
 	private const string CURSE_ATTACK_RED_PROJECTILE_NAME = "StudyBossFlowerProjectile";
 
-	// Token: 0x04000E46 RID: 3654
+	// Token: 0x040011FA RID: 4602
 	private float m_dashAttack_TellIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000E47 RID: 3655
+	// Token: 0x040011FB RID: 4603
 	private float m_dashAttack_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000E48 RID: 3656
+	// Token: 0x040011FC RID: 4604
 	private float m_dashAttack_TellIntroAndHold_Delay = 0.9f;
 
-	// Token: 0x04000E49 RID: 3657
+	// Token: 0x040011FD RID: 4605
 	private float m_dashAttack_AttackIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000E4A RID: 3658
+	// Token: 0x040011FE RID: 4606
 	private float m_dashAttack_AttackIntro_Delay;
 
-	// Token: 0x04000E4B RID: 3659
+	// Token: 0x040011FF RID: 4607
 	private float m_dashAttack_AttackHold_AnimSpeed = 1f;
 
-	// Token: 0x04000E4C RID: 3660
+	// Token: 0x04001200 RID: 4608
 	private float m_dashAttack_AttackHold_Delay = 1f;
 
-	// Token: 0x04000E4D RID: 3661
+	// Token: 0x04001201 RID: 4609
 	private float m_dashAttack_Exit_AnimSpeed = 1f;
 
-	// Token: 0x04000E4E RID: 3662
+	// Token: 0x04001202 RID: 4610
 	private float m_dashAttack_Exit_Delay = 0.45f;
 
-	// Token: 0x04000E4F RID: 3663
+	// Token: 0x04001203 RID: 4611
 	private float m_dashAttack_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000E50 RID: 3664
+	// Token: 0x04001204 RID: 4612
 	private float m_dashAttack_AttackCD = 12f;
 
-	// Token: 0x04000E51 RID: 3665
+	// Token: 0x04001205 RID: 4613
 	private float m_dashAttackSpeed = 16.5f;
 
-	// Token: 0x04000E52 RID: 3666
+	// Token: 0x04001206 RID: 4614
 	private float m_dashAttackFireballSpeedMod = 1f;
 
-	// Token: 0x04000E53 RID: 3667
+	// Token: 0x04001207 RID: 4615
 	private const string SHIELD_ATTACK_PROJECTILE_NAME = "StudyBossShieldProjectile";
 
-	// Token: 0x04000E54 RID: 3668
+	// Token: 0x04001208 RID: 4616
 	private float m_shieldAttackRadius = 13.5f;
 
-	// Token: 0x04000E55 RID: 3669
+	// Token: 0x04001209 RID: 4617
 	private float m_shieldAttackOrbitSpeed = 25f;
 
-	// Token: 0x04000E56 RID: 3670
+	// Token: 0x0400120A RID: 4618
 	private float m_shieldAttackTimeBetweenProjectileRespawn = 5f;
 
-	// Token: 0x04000E57 RID: 3671
+	// Token: 0x0400120B RID: 4619
 	private bool m_isShieldAttackRunning;
 
-	// Token: 0x04000E58 RID: 3672
+	// Token: 0x0400120C RID: 4620
 	private const string MODE_SHIFT_INTRO = "ModeShift_Intro";
 
-	// Token: 0x04000E59 RID: 3673
+	// Token: 0x0400120D RID: 4621
 	private const string MODE_SHIFT_SCREAM_INTRO = "ModeShift_Scream_Intro";
 
-	// Token: 0x04000E5A RID: 3674
+	// Token: 0x0400120E RID: 4622
 	private const string MODE_SHIFT_SCREAM_HOLD = "ModeShift_Scream_Hold";
 
-	// Token: 0x04000E5B RID: 3675
+	// Token: 0x0400120F RID: 4623
 	private const string MODE_SHIFT_EXIT = "ModeShift_Scream_Exit";
 
-	// Token: 0x04000E5C RID: 3676
+	// Token: 0x04001210 RID: 4624
 	private float m_modeShift_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000E5D RID: 3677
+	// Token: 0x04001211 RID: 4625
 	private float m_modeShift_Intro_Delay = 1.5f;
 
-	// Token: 0x04000E5E RID: 3678
+	// Token: 0x04001212 RID: 4626
 	private float m_modeShift_Scream_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000E5F RID: 3679
+	// Token: 0x04001213 RID: 4627
 	private float m_modeShift_Scream_Intro_Delay;
 
-	// Token: 0x04000E60 RID: 3680
+	// Token: 0x04001214 RID: 4628
 	private float m_modeShift_Scream_Hold_AnimSpeed = 1f;
 
-	// Token: 0x04000E61 RID: 3681
+	// Token: 0x04001215 RID: 4629
 	private float m_modeShift_Scream_Hold_Delay = 1.25f;
 
-	// Token: 0x04000E62 RID: 3682
+	// Token: 0x04001216 RID: 4630
 	private float m_modeShift_Exit_AnimSpeed = 1f;
 
-	// Token: 0x04000E63 RID: 3683
+	// Token: 0x04001217 RID: 4631
 	private float m_modeShift_Exit_Delay = 0.5f;
 
-	// Token: 0x04000E64 RID: 3684
+	// Token: 0x04001218 RID: 4632
 	private float m_modeShift_IdleDuration = 1f;
 
-	// Token: 0x04000E65 RID: 3685
+	// Token: 0x04001219 RID: 4633
 	private float m_modeShift_AttackCD = 99999f;
 
-	// Token: 0x04000E66 RID: 3686
+	// Token: 0x0400121A RID: 4634
 	private float m_modeShift_HealthMod = 0.5f;
 
-	// Token: 0x04000E67 RID: 3687
+	// Token: 0x0400121B RID: 4635
 	private float m_modeShift_DamageMod = 0.1f;
 
-	// Token: 0x04000E68 RID: 3688
+	// Token: 0x0400121C RID: 4636
 	protected const string SPAWN_IDLE = "Intro_Idle";
 
-	// Token: 0x04000E69 RID: 3689
+	// Token: 0x0400121D RID: 4637
 	protected const string SPAWN_INTRO = "Intro";
 
-	// Token: 0x04000E6A RID: 3690
+	// Token: 0x0400121E RID: 4638
 	protected float m_spawn_Idle_AnimSpeed = 1f;
 
-	// Token: 0x04000E6B RID: 3691
+	// Token: 0x0400121F RID: 4639
 	protected float m_spawn_Idle_Delay = 2f;
 
-	// Token: 0x04000E6C RID: 3692
+	// Token: 0x04001220 RID: 4640
 	protected float m_spawn_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000E6D RID: 3693
+	// Token: 0x04001221 RID: 4641
 	protected float m_spawn_Intro_Delay;
 
-	// Token: 0x04000E6E RID: 3694
+	// Token: 0x04001222 RID: 4642
 	protected const string DEATH_INTRO = "Death_Intro";
 
-	// Token: 0x04000E6F RID: 3695
+	// Token: 0x04001223 RID: 4643
 	protected const string DEATH_HOLD = "Death_Loop";
 
-	// Token: 0x04000E70 RID: 3696
+	// Token: 0x04001224 RID: 4644
 	protected float m_death_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000E71 RID: 3697
+	// Token: 0x04001225 RID: 4645
 	protected float m_death_Intro_Delay;
 
-	// Token: 0x04000E72 RID: 3698
+	// Token: 0x04001226 RID: 4646
 	protected float m_death_Hold_AnimSpeed = 1f;
 
-	// Token: 0x04000E73 RID: 3699
+	// Token: 0x04001227 RID: 4647
 	protected float m_death_Hold_Delay = 4.5f;
 
-	// Token: 0x04000E74 RID: 3700
+	// Token: 0x04001228 RID: 4648
 	private const string PHASE2_HIT_AUDIO_PATH = "event:/SFX/Enemies/sfx_studyBoss_phase2_hit_start";
 
-	// Token: 0x04000E75 RID: 3701
+	// Token: 0x04001229 RID: 4649
 	private const string FLYING_AUDIO_PATH = "event:/SFX/Enemies/sfx_studyBoss_fly_loop";
 
-	// Token: 0x04000E76 RID: 3702
+	// Token: 0x0400122A RID: 4650
 	private const string FLYING_SPEED_PARAMETER = "dancingBoss_flySpeed";
 
-	// Token: 0x04000E77 RID: 3703
+	// Token: 0x0400122B RID: 4651
 	private const string IDLE_AUDIO_PATH = "event:/SFX/Enemies/sfx_studyBoss_idle_loop";
 
-	// Token: 0x04000E78 RID: 3704
+	// Token: 0x0400122C RID: 4652
 	private const string VERTICAL_BEAM_LOOP_AUDIO_PATH = "event:/SFX/Enemies/sfx_studyBoss_attack_skyBeam_spawn_start_loop";
 
-	// Token: 0x04000E79 RID: 3705
+	// Token: 0x0400122D RID: 4653
 	private const string VERTICAL_BEAM_DESPAWN_AUDIO_PATH = "event:/SFX/Enemies/sfx_studyBoss_attack_skyBeam_despawn";
 
-	// Token: 0x04000E7A RID: 3706
+	// Token: 0x0400122E RID: 4654
 	private const string VOID_CIRCLE_CLOSING_AUDIO_PATH = "event:/SFX/Enemies/sfx_studyBoss_attack_voidCircle_closeIn";
 
-	// Token: 0x04000E7B RID: 3707
+	// Token: 0x0400122F RID: 4655
 	private const string EYEBALL_SHOT_LOOP_AUDIO_PATH = "event:/SFX/Enemies/sfx_studyBoss_attack_eye_shoot_start_loop";
 
-	// Token: 0x04000E7C RID: 3708
+	// Token: 0x04001230 RID: 4656
 	private const string SHIELD_ATTACK_LOOP_AUDIO_PATH = "event:/SFX/Enemies/sfx_studyBoss_phase2_voidProjectiles_loop";
 
-	// Token: 0x04000E7D RID: 3709
+	// Token: 0x04001231 RID: 4657
 	private const float MAX_FLYING_SPEED = 5f;
 
-	// Token: 0x04000E7E RID: 3710
+	// Token: 0x04001232 RID: 4658
 	private bool m_wasFlying;
 
-	// Token: 0x04000E7F RID: 3711
+	// Token: 0x04001233 RID: 4659
 	private EventInstance m_flyingAudioEventInstance;
 
-	// Token: 0x04000E80 RID: 3712
+	// Token: 0x04001234 RID: 4660
 	private EventInstance m_idleAudioEventInstance;
 
-	// Token: 0x04000E81 RID: 3713
+	// Token: 0x04001235 RID: 4661
 	private EventInstance m_verticalBeamLoopAudioEventInstance;
 
-	// Token: 0x04000E82 RID: 3714
+	// Token: 0x04001236 RID: 4662
 	private EventInstance m_verticalBeamDespawnAudioEventInstance;
 
-	// Token: 0x04000E83 RID: 3715
+	// Token: 0x04001237 RID: 4663
 	private EventInstance m_voidCircleClosingAudioEventInstance;
 
-	// Token: 0x04000E84 RID: 3716
+	// Token: 0x04001238 RID: 4664
 	private EventInstance m_eyeballShotLoopAudioEventInstance;
 
-	// Token: 0x04000E85 RID: 3717
+	// Token: 0x04001239 RID: 4665
 	private EventInstance m_shieldAttackLoopAudioEventInstance;
 
-	// Token: 0x04000E86 RID: 3718
+	// Token: 0x0400123A RID: 4666
 	private bool m_rapidFireAudioPlaying;
 }

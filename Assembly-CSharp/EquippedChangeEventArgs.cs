@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020007C8 RID: 1992
+// Token: 0x02000C8E RID: 3214
 public class EquippedChangeEventArgs : EventArgs
 {
-	// Token: 0x060042BC RID: 17084 RVA: 0x000EC013 File Offset: 0x000EA213
+	// Token: 0x06005C45 RID: 23621 RVA: 0x00032A29 File Offset: 0x00030C29
 	public EquippedChangeEventArgs(EquipmentCategoryType equipCat, EquipmentType newEquipType)
 	{
 		this.Initialize(equipCat, newEquipType);
 	}
 
-	// Token: 0x060042BD RID: 17085 RVA: 0x000EC023 File Offset: 0x000EA223
+	// Token: 0x06005C46 RID: 23622 RVA: 0x00032A39 File Offset: 0x00030C39
 	public void Initialize(EquipmentCategoryType equipCat, EquipmentType newEquipType)
 	{
 		this.EquipmentCategoryType = equipCat;
 		this.EquippedType = newEquipType;
 	}
 
-	// Token: 0x17001698 RID: 5784
-	// (get) Token: 0x060042BE RID: 17086 RVA: 0x000EC033 File Offset: 0x000EA233
-	// (set) Token: 0x060042BF RID: 17087 RVA: 0x000EC03B File Offset: 0x000EA23B
+	// Token: 0x17001E96 RID: 7830
+	// (get) Token: 0x06005C47 RID: 23623 RVA: 0x00032A49 File Offset: 0x00030C49
+	// (set) Token: 0x06005C48 RID: 23624 RVA: 0x00032A51 File Offset: 0x00030C51
 	public EquipmentCategoryType EquipmentCategoryType { get; private set; }
 
-	// Token: 0x17001699 RID: 5785
-	// (get) Token: 0x060042C0 RID: 17088 RVA: 0x000EC044 File Offset: 0x000EA244
-	// (set) Token: 0x060042C1 RID: 17089 RVA: 0x000EC04C File Offset: 0x000EA24C
+	// Token: 0x17001E97 RID: 7831
+	// (get) Token: 0x06005C49 RID: 23625 RVA: 0x00032A5A File Offset: 0x00030C5A
+	// (set) Token: 0x06005C4A RID: 23626 RVA: 0x00032A62 File Offset: 0x00030C62
 	public EquipmentType EquippedType { get; private set; }
 }

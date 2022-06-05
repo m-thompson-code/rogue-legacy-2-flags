@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020001F7 RID: 503
+// Token: 0x02000397 RID: 919
 public class ExtendHitbox : MonoBehaviour
 {
-	// Token: 0x06001560 RID: 5472 RVA: 0x00042493 File Offset: 0x00040693
+	// Token: 0x06001EA5 RID: 7845 RVA: 0x000100AE File Offset: 0x0000E2AE
 	private IEnumerator Start()
 	{
 		IHitboxController hbController = this.GetRoot(false).GetComponentInChildren<IHitboxController>();
@@ -27,15 +27,15 @@ public class ExtendHitbox : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x040014A2 RID: 5282
+	// Token: 0x04001B5F RID: 7007
 	[SerializeField]
 	private HitboxType m_hitboxTypeToAlter;
 
-	// Token: 0x040014A3 RID: 5283
+	// Token: 0x04001B60 RID: 7008
 	[SerializeField]
 	private float m_deltaWidth;
 
-	// Token: 0x040014A4 RID: 5284
+	// Token: 0x04001B61 RID: 7009
 	[SerializeField]
 	private float m_deltaHeight;
 }

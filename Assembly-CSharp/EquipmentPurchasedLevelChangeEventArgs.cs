@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020007C9 RID: 1993
+// Token: 0x02000C8F RID: 3215
 public class EquipmentPurchasedLevelChangeEventArgs : EventArgs
 {
-	// Token: 0x060042C2 RID: 17090 RVA: 0x000EC055 File Offset: 0x000EA255
+	// Token: 0x06005C4B RID: 23627 RVA: 0x00032A6B File Offset: 0x00030C6B
 	public EquipmentPurchasedLevelChangeEventArgs(EquipmentCategoryType equipCat, EquipmentType equipType, int newLevel)
 	{
 		this.Initialize(equipCat, equipType, newLevel);
 	}
 
-	// Token: 0x060042C3 RID: 17091 RVA: 0x000EC066 File Offset: 0x000EA266
+	// Token: 0x06005C4C RID: 23628 RVA: 0x00032A7C File Offset: 0x00030C7C
 	public void Initialize(EquipmentCategoryType equipCat, EquipmentType equipType, int newLevel)
 	{
 		this.EquipmentCategoryType = equipCat;
@@ -17,18 +17,18 @@ public class EquipmentPurchasedLevelChangeEventArgs : EventArgs
 		this.NewLevel = this.NewLevel;
 	}
 
-	// Token: 0x1700169A RID: 5786
-	// (get) Token: 0x060042C4 RID: 17092 RVA: 0x000EC082 File Offset: 0x000EA282
-	// (set) Token: 0x060042C5 RID: 17093 RVA: 0x000EC08A File Offset: 0x000EA28A
+	// Token: 0x17001E98 RID: 7832
+	// (get) Token: 0x06005C4D RID: 23629 RVA: 0x00032A98 File Offset: 0x00030C98
+	// (set) Token: 0x06005C4E RID: 23630 RVA: 0x00032AA0 File Offset: 0x00030CA0
 	public EquipmentCategoryType EquipmentCategoryType { get; private set; }
 
-	// Token: 0x1700169B RID: 5787
-	// (get) Token: 0x060042C6 RID: 17094 RVA: 0x000EC093 File Offset: 0x000EA293
-	// (set) Token: 0x060042C7 RID: 17095 RVA: 0x000EC09B File Offset: 0x000EA29B
+	// Token: 0x17001E99 RID: 7833
+	// (get) Token: 0x06005C4F RID: 23631 RVA: 0x00032AA9 File Offset: 0x00030CA9
+	// (set) Token: 0x06005C50 RID: 23632 RVA: 0x00032AB1 File Offset: 0x00030CB1
 	public EquipmentType EquipmentType { get; private set; }
 
-	// Token: 0x1700169C RID: 5788
-	// (get) Token: 0x060042C8 RID: 17096 RVA: 0x000EC0A4 File Offset: 0x000EA2A4
-	// (set) Token: 0x060042C9 RID: 17097 RVA: 0x000EC0AC File Offset: 0x000EA2AC
+	// Token: 0x17001E9A RID: 7834
+	// (get) Token: 0x06005C51 RID: 23633 RVA: 0x00032ABA File Offset: 0x00030CBA
+	// (set) Token: 0x06005C52 RID: 23634 RVA: 0x00032AC2 File Offset: 0x00030CC2
 	public int NewLevel { get; private set; }
 }

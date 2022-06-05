@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020006E9 RID: 1769
+// Token: 0x02000B97 RID: 2967
 [CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Room Usage Tracker")]
 public class RoomUsageTracker : ScriptableObject
 {
-	// Token: 0x170015E8 RID: 5608
-	// (get) Token: 0x0600401D RID: 16413 RVA: 0x000E3228 File Offset: 0x000E1428
+	// Token: 0x17001DE0 RID: 7648
+	// (get) Token: 0x0600595A RID: 22874 RVA: 0x00152AFC File Offset: 0x00150CFC
 	private static RoomUsageTracker Instance
 	{
 		get
@@ -30,9 +30,9 @@ public class RoomUsageTracker : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015E9 RID: 5609
-	// (get) Token: 0x0600401E RID: 16414 RVA: 0x000E3288 File Offset: 0x000E1488
-	// (set) Token: 0x0600401F RID: 16415 RVA: 0x000E3290 File Offset: 0x000E1490
+	// Token: 0x17001DE1 RID: 7649
+	// (get) Token: 0x0600595B RID: 22875 RVA: 0x00030AE7 File Offset: 0x0002ECE7
+	// (set) Token: 0x0600595C RID: 22876 RVA: 0x00030AEF File Offset: 0x0002ECEF
 	public List<RoomUsageEntry> Entries
 	{
 		get
@@ -45,7 +45,7 @@ public class RoomUsageTracker : ScriptableObject
 		}
 	}
 
-	// Token: 0x06004020 RID: 16416 RVA: 0x000E3299 File Offset: 0x000E1499
+	// Token: 0x0600595D RID: 22877 RVA: 0x00030AF8 File Offset: 0x0002ECF8
 	public void Reset()
 	{
 		if (RoomUsageTracker.Instance.Entries != null)
@@ -54,7 +54,7 @@ public class RoomUsageTracker : ScriptableObject
 		}
 	}
 
-	// Token: 0x06004021 RID: 16417 RVA: 0x000E32B8 File Offset: 0x000E14B8
+	// Token: 0x0600595E RID: 22878 RVA: 0x00152B5C File Offset: 0x00150D5C
 	public static void TrackRoomPrefab(Room roomPrefab)
 	{
 		if (RoomUsageTracker.m_entryTable == null)
@@ -74,19 +74,19 @@ public class RoomUsageTracker : ScriptableObject
 		RoomUsageTracker.m_entryTable[roomPrefab].Count++;
 	}
 
-	// Token: 0x04003138 RID: 12600
+	// Token: 0x0400438A RID: 17290
 	[SerializeField]
 	private List<RoomUsageEntry> m_roomUsageTable;
 
-	// Token: 0x04003139 RID: 12601
+	// Token: 0x0400438B RID: 17291
 	private static RoomUsageTracker m_instance;
 
-	// Token: 0x0400313A RID: 12602
+	// Token: 0x0400438C RID: 17292
 	private static Dictionary<Room, RoomUsageEntry> m_entryTable;
 
-	// Token: 0x0400313B RID: 12603
+	// Token: 0x0400438D RID: 17293
 	private const string RESOURCES_PATH = "Scriptable Objects/RoomUsageTracker";
 
-	// Token: 0x0400313C RID: 12604
+	// Token: 0x0400438E RID: 17294
 	private const string EDITOR_PATH = "Assets/Content/Scriptable Objects/RoomUsageTracker.asset";
 }

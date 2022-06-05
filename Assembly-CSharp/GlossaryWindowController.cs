@@ -5,11 +5,11 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x0200057E RID: 1406
+// Token: 0x02000961 RID: 2401
 public class GlossaryWindowController : WindowController, ILocalizable
 {
-	// Token: 0x1700128B RID: 4747
-	// (get) Token: 0x060033C6 RID: 13254 RVA: 0x000AFE04 File Offset: 0x000AE004
+	// Token: 0x17001974 RID: 6516
+	// (get) Token: 0x06004907 RID: 18695 RVA: 0x00028194 File Offset: 0x00026394
 	public override WindowID ID
 	{
 		get
@@ -18,7 +18,7 @@ public class GlossaryWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060033C7 RID: 13255 RVA: 0x000AFE08 File Offset: 0x000AE008
+	// Token: 0x06004908 RID: 18696 RVA: 0x00028198 File Offset: 0x00026398
 	private void Awake()
 	{
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
@@ -26,7 +26,7 @@ public class GlossaryWindowController : WindowController, ILocalizable
 		this.m_onHorizontalInputHandler = new Action<InputActionEventData>(this.OnHorizontalInputHandler);
 	}
 
-	// Token: 0x060033C8 RID: 13256 RVA: 0x000AFE44 File Offset: 0x000AE044
+	// Token: 0x06004909 RID: 18697 RVA: 0x0011B57C File Offset: 0x0011977C
 	public override void Initialize()
 	{
 		this.m_leftGlossaryEntryArray = this.m_leftCardCanvasGroup.GetComponentsInChildren<GlossaryEntry>();
@@ -46,7 +46,7 @@ public class GlossaryWindowController : WindowController, ILocalizable
 		base.Initialize();
 	}
 
-	// Token: 0x060033C9 RID: 13257 RVA: 0x000AFECC File Offset: 0x000AE0CC
+	// Token: 0x0600490A RID: 18698 RVA: 0x0011B604 File Offset: 0x00119804
 	protected void SelectScrollBar(bool selectLeft)
 	{
 		if (selectLeft)
@@ -65,7 +65,7 @@ public class GlossaryWindowController : WindowController, ILocalizable
 		this.m_rightScrollBarInput.AssignButtonToScroll(Rewired_RL.WindowInputActionType.Window_Vertical);
 	}
 
-	// Token: 0x060033CA RID: 13258 RVA: 0x000AFF69 File Offset: 0x000AE169
+	// Token: 0x0600490B RID: 18699 RVA: 0x000281D2 File Offset: 0x000263D2
 	protected override void OnOpen()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -75,7 +75,7 @@ public class GlossaryWindowController : WindowController, ILocalizable
 		base.StartCoroutine(this.RunOpenAnimation());
 	}
 
-	// Token: 0x060033CB RID: 13259 RVA: 0x000AFFA5 File Offset: 0x000AE1A5
+	// Token: 0x0600490C RID: 18700 RVA: 0x0002820E File Offset: 0x0002640E
 	private IEnumerator RunOpenAnimation()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -115,26 +115,26 @@ public class GlossaryWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x060033CC RID: 13260 RVA: 0x000AFFB4 File Offset: 0x000AE1B4
+	// Token: 0x0600490D RID: 18701 RVA: 0x0002821D File Offset: 0x0002641D
 	protected override void OnClose()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 		this.m_windowCanvas.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060033CD RID: 13261 RVA: 0x000AFFD4 File Offset: 0x000AE1D4
+	// Token: 0x0600490E RID: 18702 RVA: 0x0002823D File Offset: 0x0002643D
 	protected override void OnFocus()
 	{
 		this.AddInputListeners();
 	}
 
-	// Token: 0x060033CE RID: 13262 RVA: 0x000AFFDC File Offset: 0x000AE1DC
+	// Token: 0x0600490F RID: 18703 RVA: 0x00028245 File Offset: 0x00026445
 	protected override void OnLostFocus()
 	{
 		this.RemoveInputListeners();
 	}
 
-	// Token: 0x060033CF RID: 13263 RVA: 0x000AFFE4 File Offset: 0x000AE1E4
+	// Token: 0x06004910 RID: 18704 RVA: 0x0011B6A4 File Offset: 0x001198A4
 	protected void AddInputListeners()
 	{
 		if (ReInput.isReady && base.RewiredPlayer != null)
@@ -145,7 +145,7 @@ public class GlossaryWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060033D0 RID: 13264 RVA: 0x000B004C File Offset: 0x000AE24C
+	// Token: 0x06004911 RID: 18705 RVA: 0x0011B70C File Offset: 0x0011990C
 	protected void RemoveInputListeners()
 	{
 		if (ReInput.isReady && base.RewiredPlayer != null)
@@ -156,7 +156,7 @@ public class GlossaryWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x060033D1 RID: 13265 RVA: 0x000B00B1 File Offset: 0x000AE2B1
+	// Token: 0x06004912 RID: 18706 RVA: 0x00028116 File Offset: 0x00026316
 	protected virtual void OnCancelButtonDown(InputActionEventData obj)
 	{
 		if (WindowManager.GetIsWindowOpen(WindowID.Pause))
@@ -167,13 +167,13 @@ public class GlossaryWindowController : WindowController, ILocalizable
 		WindowManager.SetWindowIsOpen(this.ID, false);
 	}
 
-	// Token: 0x060033D2 RID: 13266 RVA: 0x000B00CD File Offset: 0x000AE2CD
+	// Token: 0x06004913 RID: 18707 RVA: 0x0002824D File Offset: 0x0002644D
 	private void OnHorizontalInputHandler(InputActionEventData eventData)
 	{
 		this.SelectScrollBar(this.m_selectedScrollBarInput != this.m_leftScrollBarInput);
 	}
 
-	// Token: 0x060033D3 RID: 13267 RVA: 0x000B00E8 File Offset: 0x000AE2E8
+	// Token: 0x06004914 RID: 18708 RVA: 0x0011B774 File Offset: 0x00119974
 	public void RefreshText(object sender, EventArgs args)
 	{
 		GlossaryEntry[] array = this.m_leftGlossaryEntryArray;
@@ -188,53 +188,53 @@ public class GlossaryWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0400289A RID: 10394
+	// Token: 0x04003806 RID: 14342
 	[SerializeField]
 	private CanvasGroup m_leftCardCanvasGroup;
 
-	// Token: 0x0400289B RID: 10395
+	// Token: 0x04003807 RID: 14343
 	[SerializeField]
 	private CanvasGroup m_rightCardCanvasGroup;
 
-	// Token: 0x0400289C RID: 10396
+	// Token: 0x04003808 RID: 14344
 	[SerializeField]
 	private Image m_leftScrollArrow;
 
-	// Token: 0x0400289D RID: 10397
+	// Token: 0x04003809 RID: 14345
 	[SerializeField]
 	private Image m_rightScrollArrow;
 
-	// Token: 0x0400289E RID: 10398
+	// Token: 0x0400380A RID: 14346
 	[SerializeField]
 	private ScrollBarInput_RL m_leftScrollBarInput;
 
-	// Token: 0x0400289F RID: 10399
+	// Token: 0x0400380B RID: 14347
 	[SerializeField]
 	private ScrollBarInput_RL m_rightScrollBarInput;
 
-	// Token: 0x040028A0 RID: 10400
+	// Token: 0x0400380C RID: 14348
 	[SerializeField]
 	private RectTransform m_leftScrollViewRectTransform;
 
-	// Token: 0x040028A1 RID: 10401
+	// Token: 0x0400380D RID: 14349
 	[SerializeField]
 	private RectTransform m_rightScrollViewRectTransform;
 
-	// Token: 0x040028A2 RID: 10402
+	// Token: 0x0400380E RID: 14350
 	private GlossaryEntry[] m_leftGlossaryEntryArray;
 
-	// Token: 0x040028A3 RID: 10403
+	// Token: 0x0400380F RID: 14351
 	private GlossaryEntry[] m_rightGlossaryEntryArray;
 
-	// Token: 0x040028A4 RID: 10404
+	// Token: 0x04003810 RID: 14352
 	private ScrollBarInput_RL m_selectedScrollBarInput;
 
-	// Token: 0x040028A5 RID: 10405
+	// Token: 0x04003811 RID: 14353
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x040028A6 RID: 10406
+	// Token: 0x04003812 RID: 14354
 	private Action<InputActionEventData> m_onCancelButtonDown;
 
-	// Token: 0x040028A7 RID: 10407
+	// Token: 0x04003813 RID: 14355
 	private Action<InputActionEventData> m_onHorizontalInputHandler;
 }

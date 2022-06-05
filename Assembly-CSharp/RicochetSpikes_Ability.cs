@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000176 RID: 374
+// Token: 0x020002B5 RID: 693
 public class RicochetSpikes_Ability : BaseAbility_RL, ISpell, IAbility
 {
-	// Token: 0x06000D1B RID: 3355 RVA: 0x00027D4C File Offset: 0x00025F4C
+	// Token: 0x06001460 RID: 5216 RVA: 0x00086DF8 File Offset: 0x00084FF8
 	protected override void FireProjectile()
 	{
 		if (this.ProjectileName != null)
@@ -16,9 +16,9 @@ public class RicochetSpikes_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x040010BF RID: 4287
+	// Token: 0x04001611 RID: 5649
 	private Projectile_RL m_spike1;
 
-	// Token: 0x040010C0 RID: 4288
+	// Token: 0x04001612 RID: 5650
 	private Projectile_RL m_spike2;
 }

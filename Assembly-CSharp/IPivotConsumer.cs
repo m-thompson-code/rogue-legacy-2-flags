@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020005D4 RID: 1492
+// Token: 0x020009DC RID: 2524
 public interface IPivotConsumer
 {
-	// Token: 0x17001355 RID: 4949
-	// (get) Token: 0x06003694 RID: 13972
+	// Token: 0x17001A82 RID: 6786
+	// (get) Token: 0x06004CA6 RID: 19622
 	PivotPoint PivotPoint { get; }
 
-	// Token: 0x06003695 RID: 13973
+	// Token: 0x06004CA7 RID: 19623
 	void SetPivot(PivotPoint pivotPoint);
 }

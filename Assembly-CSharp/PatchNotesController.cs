@@ -5,10 +5,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
-// Token: 0x020003D1 RID: 977
+// Token: 0x0200066A RID: 1642
 public class PatchNotesController : MonoBehaviour
 {
-	// Token: 0x060023FE RID: 9214 RVA: 0x00075E44 File Offset: 0x00074044
+	// Token: 0x0600321C RID: 12828 RVA: 0x0001B82F File Offset: 0x00019A2F
 	private void Awake()
 	{
 		this.m_scrollArrow.SetActive(false);
@@ -16,12 +16,12 @@ public class PatchNotesController : MonoBehaviour
 		this.m_onCancelButtonPressed = new Action<InputActionEventData>(this.OnCancelButtonPressed);
 	}
 
-	// Token: 0x060023FF RID: 9215 RVA: 0x00075E70 File Offset: 0x00074070
+	// Token: 0x0600321D RID: 12829 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Start()
 	{
 	}
 
-	// Token: 0x06002400 RID: 9216 RVA: 0x00075E74 File Offset: 0x00074074
+	// Token: 0x0600321E RID: 12830 RVA: 0x000D5D4C File Offset: 0x000D3F4C
 	public void SetEnablePatchNotes(bool enable)
 	{
 		this.m_scrollArrow.SetActive(enable);
@@ -38,13 +38,13 @@ public class PatchNotesController : MonoBehaviour
 		this.m_scrollInput.RemoveButtonToScroll(Rewired_RL.WindowInputActionType.Window_Vertical);
 	}
 
-	// Token: 0x06002401 RID: 9217 RVA: 0x00075F11 File Offset: 0x00074111
+	// Token: 0x0600321F RID: 12831 RVA: 0x0001B85B File Offset: 0x00019A5B
 	private void OnCancelButtonPressed(InputActionEventData eventData)
 	{
 		this.m_mainWindow.SetEnablePatchNotes(false);
 	}
 
-	// Token: 0x06002402 RID: 9218 RVA: 0x00075F1F File Offset: 0x0007411F
+	// Token: 0x06003220 RID: 12832 RVA: 0x0001B869 File Offset: 0x00019A69
 	private IEnumerator WWWRequestPatchNotes()
 	{
 		UnityWebRequest webRequest = UnityWebRequest.Get("URL");
@@ -62,7 +62,7 @@ public class PatchNotesController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002403 RID: 9219 RVA: 0x00075F30 File Offset: 0x00074130
+	// Token: 0x06003221 RID: 12833 RVA: 0x000D5DEC File Offset: 0x000D3FEC
 	private void ParsePatchNoteText(string textToParse)
 	{
 		string text = "";
@@ -104,30 +104,30 @@ public class PatchNotesController : MonoBehaviour
 		this.m_text.text = text;
 	}
 
-	// Token: 0x04001E88 RID: 7816
+	// Token: 0x040028C6 RID: 10438
 	[SerializeField]
 	private TMP_Text m_text;
 
-	// Token: 0x04001E89 RID: 7817
+	// Token: 0x040028C7 RID: 10439
 	[SerializeField]
 	private GameObject m_scrollArrow;
 
-	// Token: 0x04001E8A RID: 7818
+	// Token: 0x040028C8 RID: 10440
 	[SerializeField]
 	private GameObject m_raycastBlocker;
 
-	// Token: 0x04001E8B RID: 7819
+	// Token: 0x040028C9 RID: 10441
 	[SerializeField]
 	private ScrollBarInput_RL m_scrollInput;
 
-	// Token: 0x04001E8C RID: 7820
+	// Token: 0x040028CA RID: 10442
 	[SerializeField]
 	private MainMenuWindowController m_mainWindow;
 
-	// Token: 0x04001E8D RID: 7821
+	// Token: 0x040028CB RID: 10443
 	[SerializeField]
 	private TextAsset m_testTextFile;
 
-	// Token: 0x04001E8E RID: 7822
+	// Token: 0x040028CC RID: 10444
 	private Action<InputActionEventData> m_onCancelButtonPressed;
 }

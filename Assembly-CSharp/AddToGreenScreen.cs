@@ -1,21 +1,21 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200078C RID: 1932
+// Token: 0x02000C4D RID: 3149
 public class AddToGreenScreen : MonoBehaviour
 {
-	// Token: 0x0600415F RID: 16735 RVA: 0x000E93B0 File Offset: 0x000E75B0
+	// Token: 0x06005ADC RID: 23260 RVA: 0x00031DD6 File Offset: 0x0002FFD6
 	private void Awake()
 	{
 		this.m_storedLayer = base.gameObject.layer;
 	}
 
-	// Token: 0x06004160 RID: 16736 RVA: 0x000E93C3 File Offset: 0x000E75C3
+	// Token: 0x06005ADD RID: 23261 RVA: 0x00031DE9 File Offset: 0x0002FFE9
 	public void ResetLayers()
 	{
 		base.gameObject.SetLayerRecursively(this.m_storedLayer, false);
 	}
 
-	// Token: 0x04003923 RID: 14627
+	// Token: 0x04004BD3 RID: 19411
 	private int m_storedLayer;
 }

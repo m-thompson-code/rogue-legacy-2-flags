@@ -5,12 +5,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x020006A4 RID: 1700
+// Token: 0x02000B3F RID: 2879
 public class PropManager : MonoBehaviour
 {
-	// Token: 0x17001564 RID: 5476
-	// (get) Token: 0x06003E40 RID: 15936 RVA: 0x000DAFE6 File Offset: 0x000D91E6
-	// (set) Token: 0x06003E41 RID: 15937 RVA: 0x000DAFED File Offset: 0x000D91ED
+	// Token: 0x17001D4C RID: 7500
+	// (get) Token: 0x06005732 RID: 22322 RVA: 0x0002F757 File Offset: 0x0002D957
+	// (set) Token: 0x06005733 RID: 22323 RVA: 0x0002F75E File Offset: 0x0002D95E
 	private static PropManager Instance
 	{
 		get
@@ -23,12 +23,12 @@ public class PropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001565 RID: 5477
-	// (get) Token: 0x06003E42 RID: 15938 RVA: 0x000DAFF5 File Offset: 0x000D91F5
-	// (set) Token: 0x06003E43 RID: 15939 RVA: 0x000DAFFC File Offset: 0x000D91FC
+	// Token: 0x17001D4D RID: 7501
+	// (get) Token: 0x06005734 RID: 22324 RVA: 0x0002F766 File Offset: 0x0002D966
+	// (set) Token: 0x06005735 RID: 22325 RVA: 0x0002F76D File Offset: 0x0002D96D
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06003E44 RID: 15940 RVA: 0x000DB004 File Offset: 0x000D9204
+	// Token: 0x06005736 RID: 22326 RVA: 0x0002F775 File Offset: 0x0002D975
 	private void Awake()
 	{
 		if (!PropManager.Instance)
@@ -41,7 +41,7 @@ public class PropManager : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06003E45 RID: 15941 RVA: 0x000DB03B File Offset: 0x000D923B
+	// Token: 0x06005737 RID: 22327 RVA: 0x0002F7AC File Offset: 0x0002D9AC
 	private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
 		if (PropManager.IsInitialized)
@@ -50,7 +50,7 @@ public class PropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E46 RID: 15942 RVA: 0x000DB04C File Offset: 0x000D924C
+	// Token: 0x06005738 RID: 22328 RVA: 0x0014B64C File Offset: 0x0014984C
 	private void OnDestroy()
 	{
 		PropManager.DestroyPools();
@@ -81,7 +81,7 @@ public class PropManager : MonoBehaviour
 		this.m_cullingGroupsInitialized = false;
 	}
 
-	// Token: 0x06003E47 RID: 15943 RVA: 0x000DB0FE File Offset: 0x000D92FE
+	// Token: 0x06005739 RID: 22329 RVA: 0x0002F7BA File Offset: 0x0002D9BA
 	private GenericPool_RL<Prop> CreatePool(Prop prefab, int poolSize)
 	{
 		GenericPool_RL<Prop> genericPool_RL = new GenericPool_RL<Prop>();
@@ -89,7 +89,7 @@ public class PropManager : MonoBehaviour
 		return genericPool_RL;
 	}
 
-	// Token: 0x06003E48 RID: 15944 RVA: 0x000DB110 File Offset: 0x000D9310
+	// Token: 0x0600573A RID: 22330 RVA: 0x0014B700 File Offset: 0x00149900
 	public static void AddPropToPool(Prop propPrefab, int poolSize)
 	{
 		if (propPrefab)
@@ -102,7 +102,7 @@ public class PropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E49 RID: 15945 RVA: 0x000DB155 File Offset: 0x000D9355
+	// Token: 0x0600573B RID: 22331 RVA: 0x0002F7CB File Offset: 0x0002D9CB
 	public static Prop GetProp(Prop prop, int propNameHash)
 	{
 		if (PropManager.m_propTable.ContainsKey(propNameHash))
@@ -116,7 +116,7 @@ public class PropManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003E4A RID: 15946 RVA: 0x000DB18F File Offset: 0x000D938F
+	// Token: 0x0600573C RID: 22332 RVA: 0x0002F805 File Offset: 0x0002DA05
 	private void Initialize()
 	{
 		PropManager.m_propTable = new Dictionary<int, GenericPool_RL<Prop>>();
@@ -124,7 +124,7 @@ public class PropManager : MonoBehaviour
 		PropManager.IsInitialized = true;
 	}
 
-	// Token: 0x06003E4B RID: 15947 RVA: 0x000DB1B4 File Offset: 0x000D93B4
+	// Token: 0x0600573D RID: 22333 RVA: 0x0014B748 File Offset: 0x00149948
 	private void InitializeCullingGroup(int groupSize)
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_refreshCullingGroup);
@@ -158,7 +158,7 @@ public class PropManager : MonoBehaviour
 		this.m_cullingGroupsInitialized = true;
 	}
 
-	// Token: 0x06003E4C RID: 15948 RVA: 0x000DB2D4 File Offset: 0x000D94D4
+	// Token: 0x0600573E RID: 22334 RVA: 0x0014B868 File Offset: 0x00149A68
 	private void RefreshCullingGroup(object sender, EventArgs args)
 	{
 		BaseRoom currentPlayerRoom = PlayerManager.GetCurrentPlayerRoom();
@@ -189,7 +189,7 @@ public class PropManager : MonoBehaviour
 		base.StartCoroutine(this.UpdateStartingCullStatesCoroutine());
 	}
 
-	// Token: 0x06003E4D RID: 15949 RVA: 0x000DB43E File Offset: 0x000D963E
+	// Token: 0x0600573F RID: 22335 RVA: 0x0002F829 File Offset: 0x0002DA29
 	private IEnumerator UpdateStartingCullStatesCoroutine()
 	{
 		yield return null;
@@ -203,7 +203,7 @@ public class PropManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003E4E RID: 15950 RVA: 0x000DB450 File Offset: 0x000D9650
+	// Token: 0x06005740 RID: 22336 RVA: 0x0014B9D4 File Offset: 0x00149BD4
 	private void CullingSphereStateChanged(CullingGroupEvent evt)
 	{
 		if (this.m_cullingPropList.Count > evt.index)
@@ -225,7 +225,7 @@ public class PropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E4F RID: 15951 RVA: 0x000DB4B0 File Offset: 0x000D96B0
+	// Token: 0x06005741 RID: 22337 RVA: 0x0014BA34 File Offset: 0x00149C34
 	private void SetDecoCullStates(Prop prop, bool cull)
 	{
 		DecoController[] decoControllers = prop.DecoControllers;
@@ -282,7 +282,7 @@ public class PropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E50 RID: 15952 RVA: 0x000DB61C File Offset: 0x000D981C
+	// Token: 0x06005742 RID: 22338 RVA: 0x0014BBA0 File Offset: 0x00149DA0
 	private void SetPropCullState(Prop prop, bool cull)
 	{
 		if (prop.CameraLayerController.CameraLayer == CameraLayer.Game && prop.HitboxController != null)
@@ -355,7 +355,7 @@ public class PropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E51 RID: 15953 RVA: 0x000DB76C File Offset: 0x000D996C
+	// Token: 0x06005743 RID: 22339 RVA: 0x0014BCF0 File Offset: 0x00149EF0
 	private void SetPropCorgiControllerCullState(Prop prop, bool cull)
 	{
 		prop.HitboxController.SetCulledState(cull, true);
@@ -377,7 +377,7 @@ public class PropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E52 RID: 15954 RVA: 0x000DB7CC File Offset: 0x000D99CC
+	// Token: 0x06005744 RID: 22340 RVA: 0x0014BD50 File Offset: 0x00149F50
 	private void FixedUpdate()
 	{
 		if (this.m_cullingGroupsInitialized)
@@ -395,7 +395,7 @@ public class PropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E53 RID: 15955 RVA: 0x000DB8A8 File Offset: 0x000D9AA8
+	// Token: 0x06005745 RID: 22341 RVA: 0x0014BE2C File Offset: 0x0014A02C
 	private void Internal_CreateBiomePools(BiomeType biomeType)
 	{
 		this.m_highestPropCount = 0;
@@ -498,7 +498,7 @@ public class PropManager : MonoBehaviour
 		this.InitializeCullingGroup(this.m_highestPropCount);
 	}
 
-	// Token: 0x06003E54 RID: 15956 RVA: 0x000DBC20 File Offset: 0x000D9E20
+	// Token: 0x06005746 RID: 22342 RVA: 0x0014C1A4 File Offset: 0x0014A3A4
 	public static void DestroyPools()
 	{
 		if (PropManager.Instance.m_cullingGroupsInitialized)
@@ -513,13 +513,13 @@ public class PropManager : MonoBehaviour
 		PropManager.m_propTable.Clear();
 	}
 
-	// Token: 0x06003E55 RID: 15957 RVA: 0x000DBCAC File Offset: 0x000D9EAC
+	// Token: 0x06005747 RID: 22343 RVA: 0x0002F838 File Offset: 0x0002DA38
 	public static void CreateBiomePools(BiomeType biome)
 	{
 		PropManager.Instance.Internal_CreateBiomePools(biome);
 	}
 
-	// Token: 0x06003E56 RID: 15958 RVA: 0x000DBCBC File Offset: 0x000D9EBC
+	// Token: 0x06005748 RID: 22344 RVA: 0x0014C230 File Offset: 0x0014A430
 	public static void DisableAllProps()
 	{
 		foreach (KeyValuePair<int, GenericPool_RL<Prop>> keyValuePair in PropManager.m_propTable)
@@ -528,43 +528,43 @@ public class PropManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002E55 RID: 11861
+	// Token: 0x04004072 RID: 16498
 	private const int DEFAULT_CULLING_GROUP_SIZE = 3000;
 
-	// Token: 0x04002E56 RID: 11862
+	// Token: 0x04004073 RID: 16499
 	private const float CULLING_DEACTIVATION_RADIUS = 16f;
 
-	// Token: 0x04002E57 RID: 11863
+	// Token: 0x04004074 RID: 16500
 	[SerializeField]
 	private int m_poolSize = 5;
 
-	// Token: 0x04002E58 RID: 11864
+	// Token: 0x04004075 RID: 16501
 	private CullingGroup m_cullingGroup;
 
-	// Token: 0x04002E59 RID: 11865
+	// Token: 0x04004076 RID: 16502
 	private BoundingSphere[] m_cullingSpheres;
 
-	// Token: 0x04002E5A RID: 11866
+	// Token: 0x04004077 RID: 16503
 	private static PropManager m_instance;
 
-	// Token: 0x04002E5B RID: 11867
+	// Token: 0x04004078 RID: 16504
 	private static Dictionary<int, GenericPool_RL<Prop>> m_propTable;
 
-	// Token: 0x04002E5C RID: 11868
+	// Token: 0x04004079 RID: 16505
 	private List<Prop> m_cullingPropList = new List<Prop>();
 
-	// Token: 0x04002E5D RID: 11869
+	// Token: 0x0400407A RID: 16506
 	private Dictionary<Prop, int> m_cullingGravityPropTable = new Dictionary<Prop, int>();
 
-	// Token: 0x04002E5E RID: 11870
+	// Token: 0x0400407B RID: 16507
 	private int m_highestPropCount;
 
-	// Token: 0x04002E5F RID: 11871
+	// Token: 0x0400407C RID: 16508
 	private int m_cullingGroupSize;
 
-	// Token: 0x04002E60 RID: 11872
+	// Token: 0x0400407D RID: 16509
 	private bool m_cullingGroupsInitialized;
 
-	// Token: 0x04002E61 RID: 11873
+	// Token: 0x0400407E RID: 16510
 	private Action<MonoBehaviour, EventArgs> m_refreshCullingGroup;
 }

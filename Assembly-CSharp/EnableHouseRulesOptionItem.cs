@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200028F RID: 655
+// Token: 0x0200045B RID: 1115
 public class EnableHouseRulesOptionItem : SelectionListOptionItem
 {
-	// Token: 0x060019AC RID: 6572 RVA: 0x00050622 File Offset: 0x0004E822
+	// Token: 0x0600239B RID: 9115 RVA: 0x0001384A File Offset: 0x00011A4A
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class EnableHouseRulesOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x060019AD RID: 6573 RVA: 0x0005065A File Offset: 0x0004E85A
+	// Token: 0x0600239C RID: 9116 RVA: 0x00013882 File Offset: 0x00011A82
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class EnableHouseRulesOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x060019AE RID: 6574 RVA: 0x00050694 File Offset: 0x0004E894
+	// Token: 0x0600239D RID: 9117 RVA: 0x000138BC File Offset: 0x00011ABC
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed House Rules to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x060019AF RID: 6575 RVA: 0x000506AC File Offset: 0x0004E8AC
+	// Token: 0x0600239E RID: 9118 RVA: 0x000AD094 File Offset: 0x000AB294
 	public override void ConfirmOptionChange()
 	{
 		bool flag = this.m_selectedIndex == 1;

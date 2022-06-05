@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x0200050C RID: 1292
+// Token: 0x0200087B RID: 2171
 public class PortraitRoomController : BaseSpecialRoomController
 {
-	// Token: 0x06003017 RID: 12311 RVA: 0x000A48C8 File Offset: 0x000A2AC8
+	// Token: 0x060042B5 RID: 17077 RVA: 0x0010B508 File Offset: 0x00109708
 	public void TriggerPortrait()
 	{
 		if (this.m_portraitType == PortraitType.Random)
@@ -38,7 +38,7 @@ public class PortraitRoomController : BaseSpecialRoomController
 		this.RoomCompleted();
 	}
 
-	// Token: 0x0400264B RID: 9803
+	// Token: 0x0400341D RID: 13341
 	[SerializeField]
 	private PortraitType m_portraitType;
 }

@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000072 RID: 114
+// Token: 0x0200007A RID: 122
 public class Mastery_EV
 {
-	// Token: 0x0600019C RID: 412 RVA: 0x0000ED10 File Offset: 0x0000CF10
+	// Token: 0x060001B0 RID: 432 RVA: 0x0004B264 File Offset: 0x00049464
 	public static int GetMaxBaseXP(int rank)
 	{
 		int newGamePlusLevel = SaveManager.PlayerSaveData.NewGamePlusLevel;
 		return 80 + 30 * rank + 30 * newGamePlusLevel;
 	}
 
-	// Token: 0x0600019D RID: 413 RVA: 0x0000ED34 File Offset: 0x0000CF34
+	// Token: 0x060001B1 RID: 433 RVA: 0x0004B288 File Offset: 0x00049488
 	public static float GetTotalMasteryBonus(MasteryBonusType bonusType)
 	{
 		float num;
@@ -36,7 +36,7 @@ public class Mastery_EV
 		return num * (float)num2;
 	}
 
-	// Token: 0x0600019E RID: 414 RVA: 0x0000EDC8 File Offset: 0x0000CFC8
+	// Token: 0x060001B2 RID: 434 RVA: 0x0004B31C File Offset: 0x0004951C
 	public static int GetTotalMasteryRank()
 	{
 		int num = 0;
@@ -50,7 +50,7 @@ public class Mastery_EV
 		return num;
 	}
 
-	// Token: 0x0600019F RID: 415 RVA: 0x0000EE04 File Offset: 0x0000D004
+	// Token: 0x060001B3 RID: 435 RVA: 0x0004B358 File Offset: 0x00049558
 	public static int GetTotalXPRequired(int rank)
 	{
 		int num = 0;
@@ -61,7 +61,7 @@ public class Mastery_EV
 		return num;
 	}
 
-	// Token: 0x060001A0 RID: 416 RVA: 0x0000EE2C File Offset: 0x0000D02C
+	// Token: 0x060001B4 RID: 436 RVA: 0x0004B380 File Offset: 0x00049580
 	public static int CalculateRankV2(int xpAmount)
 	{
 		for (int i = 0; i < Mastery_EV.XP_REQUIRED.Length; i++)
@@ -74,7 +74,7 @@ public class Mastery_EV
 		return Mastery_EV.XP_REQUIRED[Mastery_EV.XP_REQUIRED.Length - 1];
 	}
 
-	// Token: 0x060001A1 RID: 417 RVA: 0x0000EE68 File Offset: 0x0000D068
+	// Token: 0x060001B5 RID: 437 RVA: 0x0004B3BC File Offset: 0x000495BC
 	public static bool IsMaxMasteryRank(ClassType classType, int addedXP, bool includeRunXP)
 	{
 		int num = SaveManager.PlayerSaveData.GetClassXP(classType);
@@ -88,7 +88,7 @@ public class Mastery_EV
 		return num >= num2;
 	}
 
-	// Token: 0x060001A2 RID: 418 RVA: 0x0000EEAC File Offset: 0x0000D0AC
+	// Token: 0x060001B6 RID: 438 RVA: 0x0004B400 File Offset: 0x00049600
 	public static int GetMaxMasteryRank()
 	{
 		int num = 14;
@@ -100,10 +100,10 @@ public class Mastery_EV
 		return Mathf.Clamp(num, 0, Mastery_EV.XP_REQUIRED.Length);
 	}
 
-	// Token: 0x040003AE RID: 942
+	// Token: 0x040003CF RID: 975
 	private const int STARTING_MAX_MASTERY_RANK = 15;
 
-	// Token: 0x040003AF RID: 943
+	// Token: 0x040003D0 RID: 976
 	public static int[] XP_REQUIRED = new int[]
 	{
 		2500,
@@ -209,7 +209,7 @@ public class Mastery_EV
 		124987500
 	};
 
-	// Token: 0x040003B0 RID: 944
+	// Token: 0x040003D1 RID: 977
 	public static int[] DRIFTING_WORLDS_XP_REQUIRED = new int[]
 	{
 		1750,
@@ -315,10 +315,10 @@ public class Mastery_EV
 		25931750
 	};
 
-	// Token: 0x040003B1 RID: 945
+	// Token: 0x040003D2 RID: 978
 	public const float XP_ON_LEVEL_CUT = 0.25f;
 
-	// Token: 0x040003B2 RID: 946
+	// Token: 0x040003D3 RID: 979
 	public static Dictionary<ClassType, MasteryBonusType> MasteryBonusTypeTable = new Dictionary<ClassType, MasteryBonusType>
 	{
 		{
@@ -383,7 +383,7 @@ public class Mastery_EV
 		}
 	};
 
-	// Token: 0x040003B3 RID: 947
+	// Token: 0x040003D4 RID: 980
 	public static Dictionary<MasteryBonusType, float> MasteryBonusAmountTable = new Dictionary<MasteryBonusType, float>
 	{
 		{
@@ -452,7 +452,7 @@ public class Mastery_EV
 		}
 	};
 
-	// Token: 0x040003B4 RID: 948
+	// Token: 0x040003D5 RID: 981
 	public static Dictionary<MasteryBonusType, string> MasteryBonusLocIDTable = new Dictionary<MasteryBonusType, string>
 	{
 		{
@@ -529,10 +529,10 @@ public class Mastery_EV
 		}
 	};
 
-	// Token: 0x040003B5 RID: 949
+	// Token: 0x040003D6 RID: 982
 	public const MasteryBonusType TOTAL_MASTERY_BONUS_TYPE = MasteryBonusType.RuneWeight_Up;
 
-	// Token: 0x040003B6 RID: 950
+	// Token: 0x040003D7 RID: 983
 	public static int[] SPECIAL_LEVEL_UP_MILESTONES = new int[]
 	{
 		5,
@@ -543,33 +543,33 @@ public class Mastery_EV
 		30
 	};
 
-	// Token: 0x040003B7 RID: 951
+	// Token: 0x040003D8 RID: 984
 	public const int MASTERY_XP_BASE = 1200;
 
-	// Token: 0x040003B8 RID: 952
+	// Token: 0x040003D9 RID: 985
 	public const int MASTERY_XP_SCALE = 600;
 
-	// Token: 0x040003B9 RID: 953
+	// Token: 0x040003DA RID: 986
 	public const int MASTERY_XP_BONUS_PER_LEVEL_DIFFERENCE = 2;
 
-	// Token: 0x040003BA RID: 954
+	// Token: 0x040003DB RID: 987
 	public static Vector2Int MASTERY_XP_BONUS_LEVEL_DIFFERENCE_MINMAX = new Vector2Int(-35, 50);
 
-	// Token: 0x040003BB RID: 955
+	// Token: 0x040003DC RID: 988
 	public const int MASTERY_XP_GAIN_PER_KILL = 50;
 
-	// Token: 0x040003BC RID: 956
+	// Token: 0x040003DD RID: 989
 	public const int MASTERY_XP_ENEMY_SCALE_FLAT = 2;
 
-	// Token: 0x040003BD RID: 957
+	// Token: 0x040003DE RID: 990
 	public const float ADVANCED_XP_MOD_ADD = 0.25f;
 
-	// Token: 0x040003BE RID: 958
+	// Token: 0x040003DF RID: 991
 	public const float EXPERT_XP_MOD_ADD = 1.5f;
 
-	// Token: 0x040003BF RID: 959
+	// Token: 0x040003E0 RID: 992
 	public const float MINIBOSS_XP_MOD_ADD = 4f;
 
-	// Token: 0x040003C0 RID: 960
+	// Token: 0x040003E1 RID: 993
 	public const float BOSS_XP_MOD_ADD = 14f;
 }

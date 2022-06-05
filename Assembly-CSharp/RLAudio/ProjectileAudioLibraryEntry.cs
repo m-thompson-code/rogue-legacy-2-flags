@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x0200090A RID: 2314
+	// Token: 0x02000E87 RID: 3719
 	[Serializable]
 	public class ProjectileAudioLibraryEntry : AudioLibraryEntry
 	{
-		// Token: 0x06004BE2 RID: 19426 RVA: 0x00110CC0 File Offset: 0x0010EEC0
+		// Token: 0x060068DD RID: 26845 RVA: 0x00180EC4 File Offset: 0x0017F0C4
 		public ProjectileAudioLibraryEntry(string key, string spawnSinglePath, string spawnManyPath, string lifeTimeEventPath, string hitSurfaceEventPath, string hitItemEventPath, string hitCharacterEventPath, string deathEventPath)
 		{
 			if (!Application.isPlaying)
@@ -26,13 +26,13 @@ namespace RLAudio
 			throw new Exception("This should never be called during runtime");
 		}
 
-		// Token: 0x06004BE3 RID: 19427 RVA: 0x00110D22 File Offset: 0x0010EF22
+		// Token: 0x060068DE RID: 26846 RVA: 0x00038BA2 File Offset: 0x00036DA2
 		public ProjectileAudioLibraryEntry()
 		{
 		}
 
-		// Token: 0x1700186C RID: 6252
-		// (get) Token: 0x06004BE4 RID: 19428 RVA: 0x00110D2A File Offset: 0x0010EF2A
+		// Token: 0x17002165 RID: 8549
+		// (get) Token: 0x060068DF RID: 26847 RVA: 0x0003A173 File Offset: 0x00038373
 		public string SpawnSingleEventPath
 		{
 			get
@@ -41,8 +41,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700186D RID: 6253
-		// (get) Token: 0x06004BE5 RID: 19429 RVA: 0x00110D32 File Offset: 0x0010EF32
+		// Token: 0x17002166 RID: 8550
+		// (get) Token: 0x060068E0 RID: 26848 RVA: 0x0003A17B File Offset: 0x0003837B
 		public bool UseSpawnManyAudioWhenAppropriate
 		{
 			get
@@ -51,8 +51,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700186E RID: 6254
-		// (get) Token: 0x06004BE6 RID: 19430 RVA: 0x00110D3A File Offset: 0x0010EF3A
+		// Token: 0x17002167 RID: 8551
+		// (get) Token: 0x060068E1 RID: 26849 RVA: 0x0003A183 File Offset: 0x00038383
 		public string SpawnManyEventPath
 		{
 			get
@@ -61,8 +61,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700186F RID: 6255
-		// (get) Token: 0x06004BE7 RID: 19431 RVA: 0x00110D42 File Offset: 0x0010EF42
+		// Token: 0x17002168 RID: 8552
+		// (get) Token: 0x060068E2 RID: 26850 RVA: 0x0003A18B File Offset: 0x0003838B
 		public string HitSurfaceEventPath
 		{
 			get
@@ -71,8 +71,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001870 RID: 6256
-		// (get) Token: 0x06004BE8 RID: 19432 RVA: 0x00110D4A File Offset: 0x0010EF4A
+		// Token: 0x17002169 RID: 8553
+		// (get) Token: 0x060068E3 RID: 26851 RVA: 0x0003A193 File Offset: 0x00038393
 		public string HitItemEventPath
 		{
 			get
@@ -81,8 +81,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001871 RID: 6257
-		// (get) Token: 0x06004BE9 RID: 19433 RVA: 0x00110D52 File Offset: 0x0010EF52
+		// Token: 0x1700216A RID: 8554
+		// (get) Token: 0x060068E4 RID: 26852 RVA: 0x0003A19B File Offset: 0x0003839B
 		public string HitCharacterEventPath
 		{
 			get
@@ -91,8 +91,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001872 RID: 6258
-		// (get) Token: 0x06004BEA RID: 19434 RVA: 0x00110D5A File Offset: 0x0010EF5A
+		// Token: 0x1700216B RID: 8555
+		// (get) Token: 0x060068E5 RID: 26853 RVA: 0x0003A1A3 File Offset: 0x000383A3
 		public string DeathEventPath
 		{
 			get
@@ -101,8 +101,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001873 RID: 6259
-		// (get) Token: 0x06004BEB RID: 19435 RVA: 0x00110D62 File Offset: 0x0010EF62
+		// Token: 0x1700216C RID: 8556
+		// (get) Token: 0x060068E6 RID: 26854 RVA: 0x0003A1AB File Offset: 0x000383AB
 		public string LifetimeEventPath
 		{
 			get
@@ -111,41 +111,41 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003FEA RID: 16362
+		// Token: 0x0400554A RID: 21834
 		[SerializeField]
 		[EventRef]
 		private string m_spawnSingleEventPath;
 
-		// Token: 0x04003FEB RID: 16363
+		// Token: 0x0400554B RID: 21835
 		[SerializeField]
 		private bool m_useSpawnManyAudioWhenAppropriate;
 
-		// Token: 0x04003FEC RID: 16364
+		// Token: 0x0400554C RID: 21836
 		[SerializeField]
 		[EventRef]
 		private string m_spawnManyEventPath;
 
-		// Token: 0x04003FED RID: 16365
+		// Token: 0x0400554D RID: 21837
 		[SerializeField]
 		[EventRef]
 		private string m_lifetimeEventPath;
 
-		// Token: 0x04003FEE RID: 16366
+		// Token: 0x0400554E RID: 21838
 		[SerializeField]
 		[EventRef]
 		private string m_hitSurfaceEventPath;
 
-		// Token: 0x04003FEF RID: 16367
+		// Token: 0x0400554F RID: 21839
 		[SerializeField]
 		[EventRef]
 		private string m_hitItemEventPath;
 
-		// Token: 0x04003FF0 RID: 16368
+		// Token: 0x04005550 RID: 21840
 		[SerializeField]
 		[EventRef]
 		private string m_hitCharacterEventPath;
 
-		// Token: 0x04003FF1 RID: 16369
+		// Token: 0x04005551 RID: 21841
 		[SerializeField]
 		[EventRef]
 		private string m_deathEventPath;

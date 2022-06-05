@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200031A RID: 794
+// Token: 0x0200055D RID: 1373
 public class TallSpikesHitboxExtender : MonoBehaviour
 {
-	// Token: 0x06001F5E RID: 8030 RVA: 0x000648F3 File Offset: 0x00062AF3
+	// Token: 0x06002BED RID: 11245 RVA: 0x000186BF File Offset: 0x000168BF
 	private IEnumerator Start()
 	{
 		IHitboxController hbController = base.GetComponentInChildren<IHitboxController>();
@@ -58,7 +58,7 @@ public class TallSpikesHitboxExtender : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001F5F RID: 8031 RVA: 0x00064904 File Offset: 0x00062B04
+	// Token: 0x06002BEE RID: 11246 RVA: 0x000C4B34 File Offset: 0x000C2D34
 	private void ChangePolyColliderSize(PolygonCollider2D polyCollider, Vector2 deltaSize, float angle, Vector2 offsetVector)
 	{
 		Vector2 theOrigin = polyCollider.bounds.center - polyCollider.transform.position;
@@ -91,7 +91,7 @@ public class TallSpikesHitboxExtender : MonoBehaviour
 		polyCollider.SetPath(0, TallSpikesHitboxExtender.m_pointArrayHelper_STATIC);
 	}
 
-	// Token: 0x06001F60 RID: 8032 RVA: 0x00064A0C File Offset: 0x00062C0C
+	// Token: 0x06002BEF RID: 11247 RVA: 0x000C4C3C File Offset: 0x000C2E3C
 	private void ChangeBoxColliderSize(BoxCollider2D boxCollider, Vector2 deltaSize, float yOffset, float angle)
 	{
 		if (Mathf.Approximately(angle, 90f) || Mathf.Approximately(angle, -90f))
@@ -132,22 +132,22 @@ public class TallSpikesHitboxExtender : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001C0F RID: 7183
+	// Token: 0x04002525 RID: 9509
 	private static Vector2[] m_pointArrayHelper_STATIC = new Vector2[4];
 
-	// Token: 0x04001C10 RID: 7184
+	// Token: 0x04002526 RID: 9510
 	[SerializeField]
 	private Vector2 m_platformDeltaSize;
 
-	// Token: 0x04001C11 RID: 7185
+	// Token: 0x04002527 RID: 9511
 	[SerializeField]
 	private Vector2 m_hazardDeltaSize;
 
-	// Token: 0x04001C12 RID: 7186
+	// Token: 0x04002528 RID: 9512
 	[SerializeField]
 	private float m_platformYOffset;
 
-	// Token: 0x04001C13 RID: 7187
+	// Token: 0x04002529 RID: 9513
 	[SerializeField]
 	private float m_hazardYOffset;
 }

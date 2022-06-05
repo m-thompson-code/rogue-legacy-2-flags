@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000923 RID: 2339
+	// Token: 0x02000EA2 RID: 3746
 	[Serializable]
 	public class MusicLookupEntry
 	{
-		// Token: 0x17001898 RID: 6296
-		// (get) Token: 0x06004C93 RID: 19603 RVA: 0x00112E5C File Offset: 0x0011105C
+		// Token: 0x17002195 RID: 8597
+		// (get) Token: 0x0600699A RID: 27034 RVA: 0x0003AA28 File Offset: 0x00038C28
 		public SongID ID
 		{
 			get
@@ -18,8 +18,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001899 RID: 6297
-		// (get) Token: 0x06004C94 RID: 19604 RVA: 0x00112E64 File Offset: 0x00111064
+		// Token: 0x17002196 RID: 8598
+		// (get) Token: 0x0600699B RID: 27035 RVA: 0x0003AA30 File Offset: 0x00038C30
 		public string EventRef
 		{
 			get
@@ -28,11 +28,11 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x0400407D RID: 16509
+		// Token: 0x040055E9 RID: 21993
 		[SerializeField]
 		private SongID m_id;
 
-		// Token: 0x0400407E RID: 16510
+		// Token: 0x040055EA RID: 21994
 		[SerializeField]
 		[EventRef]
 		private string m_eventRef;

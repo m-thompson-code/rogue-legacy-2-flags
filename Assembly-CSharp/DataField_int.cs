@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200004F RID: 79
+// Token: 0x02000057 RID: 87
 [Serializable]
 public class DataField_int : DataField<int>
 {

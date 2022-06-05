@@ -3,10 +3,10 @@ using FMODUnity;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x0200019B RID: 411
+// Token: 0x020002F4 RID: 756
 public class Katana_Ability : Sword_Ability
 {
-	// Token: 0x06000F8A RID: 3978 RVA: 0x0002DA66 File Offset: 0x0002BC66
+	// Token: 0x0600176B RID: 5995 RVA: 0x0000BD5E File Offset: 0x00009F5E
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -16,8 +16,8 @@ public class Katana_Ability : Sword_Ability
 		};
 	}
 
-	// Token: 0x17000891 RID: 2193
-	// (get) Token: 0x06000F8B RID: 3979 RVA: 0x0002DA86 File Offset: 0x0002BC86
+	// Token: 0x17000B2F RID: 2863
+	// (get) Token: 0x0600176C RID: 5996 RVA: 0x00003DE8 File Offset: 0x00001FE8
 	protected float TellIntroAnimSpeedGround
 	{
 		get
@@ -26,8 +26,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000892 RID: 2194
-	// (get) Token: 0x06000F8C RID: 3980 RVA: 0x0002DA8D File Offset: 0x0002BC8D
+	// Token: 0x17000B30 RID: 2864
+	// (get) Token: 0x0600176D RID: 5997 RVA: 0x00003DE8 File Offset: 0x00001FE8
 	protected float TellIntroAnimSpeedAir
 	{
 		get
@@ -36,8 +36,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000893 RID: 2195
-	// (get) Token: 0x06000F8D RID: 3981 RVA: 0x0002DA94 File Offset: 0x0002BC94
+	// Token: 0x17000B31 RID: 2865
+	// (get) Token: 0x0600176E RID: 5998 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellIntroAnimExitDelayGround
 	{
 		get
@@ -46,8 +46,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000894 RID: 2196
-	// (get) Token: 0x06000F8E RID: 3982 RVA: 0x0002DA9B File Offset: 0x0002BC9B
+	// Token: 0x17000B32 RID: 2866
+	// (get) Token: 0x0600176F RID: 5999 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellIntroAnimExitDelayAir
 	{
 		get
@@ -56,8 +56,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000895 RID: 2197
-	// (get) Token: 0x06000F8F RID: 3983 RVA: 0x0002DAA2 File Offset: 0x0002BCA2
+	// Token: 0x17000B33 RID: 2867
+	// (get) Token: 0x06001770 RID: 6000 RVA: 0x0000BD7E File Offset: 0x00009F7E
 	protected float TellHoldAnimSpeedGround
 	{
 		get
@@ -66,8 +66,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000896 RID: 2198
-	// (get) Token: 0x06000F90 RID: 3984 RVA: 0x0002DAA9 File Offset: 0x0002BCA9
+	// Token: 0x17000B34 RID: 2868
+	// (get) Token: 0x06001771 RID: 6001 RVA: 0x0000BD7E File Offset: 0x00009F7E
 	protected float TellHoldAnimSpeedAir
 	{
 		get
@@ -76,8 +76,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000897 RID: 2199
-	// (get) Token: 0x06000F91 RID: 3985 RVA: 0x0002DAB0 File Offset: 0x0002BCB0
+	// Token: 0x17000B35 RID: 2869
+	// (get) Token: 0x06001772 RID: 6002 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellHoldAnimDelayGround
 	{
 		get
@@ -86,8 +86,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000898 RID: 2200
-	// (get) Token: 0x06000F92 RID: 3986 RVA: 0x0002DAB7 File Offset: 0x0002BCB7
+	// Token: 0x17000B36 RID: 2870
+	// (get) Token: 0x06001773 RID: 6003 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellHoldAnimDelayAir
 	{
 		get
@@ -96,8 +96,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000899 RID: 2201
-	// (get) Token: 0x06000F93 RID: 3987 RVA: 0x0002DABE File Offset: 0x0002BCBE
+	// Token: 0x17000B37 RID: 2871
+	// (get) Token: 0x06001774 RID: 6004 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected float AttackIntroAnimSpeedGround
 	{
 		get
@@ -106,8 +106,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x1700089A RID: 2202
-	// (get) Token: 0x06000F94 RID: 3988 RVA: 0x0002DAC5 File Offset: 0x0002BCC5
+	// Token: 0x17000B38 RID: 2872
+	// (get) Token: 0x06001775 RID: 6005 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected float AttackIntroAnimSpeedAir
 	{
 		get
@@ -116,8 +116,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x1700089B RID: 2203
-	// (get) Token: 0x06000F95 RID: 3989 RVA: 0x0002DACC File Offset: 0x0002BCCC
+	// Token: 0x17000B39 RID: 2873
+	// (get) Token: 0x06001776 RID: 6006 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackIntroAnimExitDelayGround
 	{
 		get
@@ -126,8 +126,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x1700089C RID: 2204
-	// (get) Token: 0x06000F96 RID: 3990 RVA: 0x0002DAD3 File Offset: 0x0002BCD3
+	// Token: 0x17000B3A RID: 2874
+	// (get) Token: 0x06001777 RID: 6007 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackIntroAnimExitDelayAir
 	{
 		get
@@ -136,8 +136,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x1700089D RID: 2205
-	// (get) Token: 0x06000F97 RID: 3991 RVA: 0x0002DADA File Offset: 0x0002BCDA
+	// Token: 0x17000B3B RID: 2875
+	// (get) Token: 0x06001778 RID: 6008 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected float AttackHoldAnimSpeedGround
 	{
 		get
@@ -146,8 +146,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x1700089E RID: 2206
-	// (get) Token: 0x06000F98 RID: 3992 RVA: 0x0002DAE1 File Offset: 0x0002BCE1
+	// Token: 0x17000B3C RID: 2876
+	// (get) Token: 0x06001779 RID: 6009 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected float AttackHoldAnimSpeedAir
 	{
 		get
@@ -156,8 +156,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x1700089F RID: 2207
-	// (get) Token: 0x06000F99 RID: 3993 RVA: 0x0002DAE8 File Offset: 0x0002BCE8
+	// Token: 0x17000B3D RID: 2877
+	// (get) Token: 0x0600177A RID: 6010 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected float AttackHoldAnimDelayGround
 	{
 		get
@@ -166,8 +166,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008A0 RID: 2208
-	// (get) Token: 0x06000F9A RID: 3994 RVA: 0x0002DAEF File Offset: 0x0002BCEF
+	// Token: 0x17000B3E RID: 2878
+	// (get) Token: 0x0600177B RID: 6011 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected float AttackHoldAnimDelayAir
 	{
 		get
@@ -176,8 +176,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008A1 RID: 2209
-	// (get) Token: 0x06000F9B RID: 3995 RVA: 0x0002DAF6 File Offset: 0x0002BCF6
+	// Token: 0x17000B3F RID: 2879
+	// (get) Token: 0x0600177C RID: 6012 RVA: 0x0000BD85 File Offset: 0x00009F85
 	protected float ExitIntroAnimSpeedGround
 	{
 		get
@@ -186,8 +186,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008A2 RID: 2210
-	// (get) Token: 0x06000F9C RID: 3996 RVA: 0x0002DAFD File Offset: 0x0002BCFD
+	// Token: 0x17000B40 RID: 2880
+	// (get) Token: 0x0600177D RID: 6013 RVA: 0x00003DE8 File Offset: 0x00001FE8
 	protected float ExitIntroAnimSpeedAir
 	{
 		get
@@ -196,8 +196,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008A3 RID: 2211
-	// (get) Token: 0x06000F9D RID: 3997 RVA: 0x0002DB04 File Offset: 0x0002BD04
+	// Token: 0x17000B41 RID: 2881
+	// (get) Token: 0x0600177E RID: 6014 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float ExitHoldAnimDelayGround
 	{
 		get
@@ -206,8 +206,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008A4 RID: 2212
-	// (get) Token: 0x06000F9E RID: 3998 RVA: 0x0002DB0B File Offset: 0x0002BD0B
+	// Token: 0x17000B42 RID: 2882
+	// (get) Token: 0x0600177F RID: 6015 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float ExitHoldAnimDelayAir
 	{
 		get
@@ -216,8 +216,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008A5 RID: 2213
-	// (get) Token: 0x06000F9F RID: 3999 RVA: 0x0002DB12 File Offset: 0x0002BD12
+	// Token: 0x17000B43 RID: 2883
+	// (get) Token: 0x06001780 RID: 6016 RVA: 0x0000BD8C File Offset: 0x00009F8C
 	public override Vector2 ProjectileOffset
 	{
 		get
@@ -230,8 +230,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008A6 RID: 2214
-	// (get) Token: 0x06000FA0 RID: 4000 RVA: 0x0002DB29 File Offset: 0x0002BD29
+	// Token: 0x17000B44 RID: 2884
+	// (get) Token: 0x06001781 RID: 6017 RVA: 0x0000BDA3 File Offset: 0x00009FA3
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -244,8 +244,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008A7 RID: 2215
-	// (get) Token: 0x06000FA1 RID: 4001 RVA: 0x0002DB40 File Offset: 0x0002BD40
+	// Token: 0x17000B45 RID: 2885
+	// (get) Token: 0x06001782 RID: 6018 RVA: 0x0000BDBA File Offset: 0x00009FBA
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -258,8 +258,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008A8 RID: 2216
-	// (get) Token: 0x06000FA2 RID: 4002 RVA: 0x0002DB57 File Offset: 0x0002BD57
+	// Token: 0x17000B46 RID: 2886
+	// (get) Token: 0x06001783 RID: 6019 RVA: 0x0000BDD1 File Offset: 0x00009FD1
 	protected override float TellAnimSpeed
 	{
 		get
@@ -272,8 +272,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008A9 RID: 2217
-	// (get) Token: 0x06000FA3 RID: 4003 RVA: 0x0002DB6E File Offset: 0x0002BD6E
+	// Token: 0x17000B47 RID: 2887
+	// (get) Token: 0x06001784 RID: 6020 RVA: 0x0000BDE8 File Offset: 0x00009FE8
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -286,8 +286,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008AA RID: 2218
-	// (get) Token: 0x06000FA4 RID: 4004 RVA: 0x0002DB85 File Offset: 0x0002BD85
+	// Token: 0x17000B48 RID: 2888
+	// (get) Token: 0x06001785 RID: 6021 RVA: 0x0000BDFF File Offset: 0x00009FFF
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -300,8 +300,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008AB RID: 2219
-	// (get) Token: 0x06000FA5 RID: 4005 RVA: 0x0002DB9C File Offset: 0x0002BD9C
+	// Token: 0x17000B49 RID: 2889
+	// (get) Token: 0x06001786 RID: 6022 RVA: 0x0000BE16 File Offset: 0x0000A016
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -314,8 +314,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008AC RID: 2220
-	// (get) Token: 0x06000FA6 RID: 4006 RVA: 0x0002DBB3 File Offset: 0x0002BDB3
+	// Token: 0x17000B4A RID: 2890
+	// (get) Token: 0x06001787 RID: 6023 RVA: 0x0000BE2D File Offset: 0x0000A02D
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -328,8 +328,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008AD RID: 2221
-	// (get) Token: 0x06000FA7 RID: 4007 RVA: 0x0002DBCA File Offset: 0x0002BDCA
+	// Token: 0x17000B4B RID: 2891
+	// (get) Token: 0x06001788 RID: 6024 RVA: 0x0000BE44 File Offset: 0x0000A044
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -342,8 +342,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008AE RID: 2222
-	// (get) Token: 0x06000FA8 RID: 4008 RVA: 0x0002DBE1 File Offset: 0x0002BDE1
+	// Token: 0x17000B4C RID: 2892
+	// (get) Token: 0x06001789 RID: 6025 RVA: 0x0000BE5B File Offset: 0x0000A05B
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -356,8 +356,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008AF RID: 2223
-	// (get) Token: 0x06000FA9 RID: 4009 RVA: 0x0002DBF8 File Offset: 0x0002BDF8
+	// Token: 0x17000B4D RID: 2893
+	// (get) Token: 0x0600178A RID: 6026 RVA: 0x0000BE72 File Offset: 0x0000A072
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -370,8 +370,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008B0 RID: 2224
-	// (get) Token: 0x06000FAA RID: 4010 RVA: 0x0002DC0F File Offset: 0x0002BE0F
+	// Token: 0x17000B4E RID: 2894
+	// (get) Token: 0x0600178B RID: 6027 RVA: 0x0000BE89 File Offset: 0x0000A089
 	public override bool HasAttackFlipCheck
 	{
 		get
@@ -384,8 +384,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008B1 RID: 2225
-	// (get) Token: 0x06000FAB RID: 4011 RVA: 0x0002DC26 File Offset: 0x0002BE26
+	// Token: 0x17000B4F RID: 2895
+	// (get) Token: 0x0600178C RID: 6028 RVA: 0x0000BEA0 File Offset: 0x0000A0A0
 	public override string ProjectileName
 	{
 		get
@@ -398,8 +398,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008B2 RID: 2226
-	// (get) Token: 0x06000FAC RID: 4012 RVA: 0x0002DC3D File Offset: 0x0002BE3D
+	// Token: 0x17000B50 RID: 2896
+	// (get) Token: 0x0600178D RID: 6029 RVA: 0x0000BEB7 File Offset: 0x0000A0B7
 	public override AbilityData AbilityData
 	{
 		get
@@ -412,8 +412,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008B3 RID: 2227
-	// (get) Token: 0x06000FAD RID: 4013 RVA: 0x0002DC54 File Offset: 0x0002BE54
+	// Token: 0x17000B51 RID: 2897
+	// (get) Token: 0x0600178E RID: 6030 RVA: 0x0000BECE File Offset: 0x0000A0CE
 	public override string AbilityTellIntroName
 	{
 		get
@@ -426,8 +426,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008B4 RID: 2228
-	// (get) Token: 0x06000FAE RID: 4014 RVA: 0x0002DC6B File Offset: 0x0002BE6B
+	// Token: 0x17000B52 RID: 2898
+	// (get) Token: 0x0600178F RID: 6031 RVA: 0x0000BEE5 File Offset: 0x0000A0E5
 	protected bool PerformGroundAttack
 	{
 		get
@@ -436,8 +436,8 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170008B5 RID: 2229
-	// (get) Token: 0x06000FAF RID: 4015 RVA: 0x0002DC85 File Offset: 0x0002BE85
+	// Token: 0x17000B53 RID: 2899
+	// (get) Token: 0x06001790 RID: 6032 RVA: 0x0000B815 File Offset: 0x00009A15
 	protected bool IsGrounded
 	{
 		get
@@ -446,7 +446,7 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x06000FB0 RID: 4016 RVA: 0x0002DCAC File Offset: 0x0002BEAC
+	// Token: 0x06001791 RID: 6033 RVA: 0x0008C118 File Offset: 0x0008A318
 	public override void PreCastAbility()
 	{
 		this.m_isGroundAttacking = false;
@@ -476,7 +476,7 @@ public class Katana_Ability : Sword_Ability
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000FB1 RID: 4017 RVA: 0x0002DD44 File Offset: 0x0002BF44
+	// Token: 0x06001792 RID: 6034 RVA: 0x0008C1B0 File Offset: 0x0008A3B0
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -498,14 +498,14 @@ public class Katana_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x06000FB2 RID: 4018 RVA: 0x0002DDD6 File Offset: 0x0002BFD6
+	// Token: 0x06001793 RID: 6035 RVA: 0x0000BEFF File Offset: 0x0000A0FF
 	protected override void OnEnterExitLogic()
 	{
 		this.m_retractBladeEventEmitter.Play();
 		base.OnEnterExitLogic();
 	}
 
-	// Token: 0x06000FB3 RID: 4019 RVA: 0x0002DDEC File Offset: 0x0002BFEC
+	// Token: 0x06001794 RID: 6036 RVA: 0x0008C244 File Offset: 0x0008A444
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		this.m_isAirAttacking = false;
@@ -524,74 +524,74 @@ public class Katana_Ability : Sword_Ability
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x04001178 RID: 4472
+	// Token: 0x04001728 RID: 5928
 	[Header("Airborne Values")]
 	[SerializeField]
 	protected string m_abilityAirTellIntroName;
 
-	// Token: 0x04001179 RID: 4473
+	// Token: 0x04001729 RID: 5929
 	[SerializeField]
 	protected AbilityData m_airborneAbilityData;
 
-	// Token: 0x0400117A RID: 4474
+	// Token: 0x0400172A RID: 5930
 	[SerializeField]
 	protected string m_airborneProjectileName;
 
-	// Token: 0x0400117B RID: 4475
+	// Token: 0x0400172B RID: 5931
 	[SerializeField]
 	protected Vector2 m_airBorneProjectileOffset;
 
-	// Token: 0x0400117C RID: 4476
+	// Token: 0x0400172C RID: 5932
 	[SerializeField]
 	protected bool m_hasAirborneAttackFlipCheck;
 
-	// Token: 0x0400117D RID: 4477
+	// Token: 0x0400172D RID: 5933
 	[Header("Audio Event Emitters")]
 	[SerializeField]
 	private StudioEventEmitter m_prepEventEmitter;
 
-	// Token: 0x0400117E RID: 4478
+	// Token: 0x0400172E RID: 5934
 	[SerializeField]
 	private StudioEventEmitter m_retractBladeEventEmitter;
 
-	// Token: 0x0400117F RID: 4479
+	// Token: 0x0400172F RID: 5935
 	private bool m_isAirAttacking;
 
-	// Token: 0x04001180 RID: 4480
+	// Token: 0x04001730 RID: 5936
 	private bool m_isGroundAttacking;
 
-	// Token: 0x04001181 RID: 4481
+	// Token: 0x04001731 RID: 5937
 	private float TellIntroAnim = 1f;
 
-	// Token: 0x04001182 RID: 4482
+	// Token: 0x04001732 RID: 5938
 	private float TellHoldAnim = 2f;
 
-	// Token: 0x04001183 RID: 4483
+	// Token: 0x04001733 RID: 5939
 	private float AttackIntroAnim = 1f;
 
-	// Token: 0x04001184 RID: 4484
+	// Token: 0x04001734 RID: 5940
 	private float AttackHoldAnim = 1f;
 
-	// Token: 0x04001185 RID: 4485
+	// Token: 0x04001735 RID: 5941
 	private float ExitIntroAnim = 1f;
 
-	// Token: 0x04001186 RID: 4486
+	// Token: 0x04001736 RID: 5942
 	private float Attack_Ground_HoldDelay = 0.1f;
 
-	// Token: 0x04001187 RID: 4487
+	// Token: 0x04001737 RID: 5943
 	private float Attack_Air_HoldDelay = 0.1f;
 
-	// Token: 0x04001188 RID: 4488
+	// Token: 0x04001738 RID: 5944
 	private Katana_Ability.KatanaAttackDirection m_attackDirection;
 
-	// Token: 0x02000AD2 RID: 2770
+	// Token: 0x020002F5 RID: 757
 	private enum KatanaAttackDirection
 	{
-		// Token: 0x04004A46 RID: 19014
+		// Token: 0x0400173A RID: 5946
 		Up = 1,
-		// Token: 0x04004A47 RID: 19015
+		// Token: 0x0400173B RID: 5947
 		None,
-		// Token: 0x04004A48 RID: 19016
+		// Token: 0x0400173C RID: 5948
 		Down
 	}
 }

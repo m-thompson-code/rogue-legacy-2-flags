@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020007DE RID: 2014
+// Token: 0x02000CA4 RID: 3236
 public class ChallengeOmniUIDescriptionEventArgs : EventArgs
 {
-	// Token: 0x06004346 RID: 17222 RVA: 0x000EC616 File Offset: 0x000EA816
+	// Token: 0x06005CCF RID: 23759 RVA: 0x0003302C File Offset: 0x0003122C
 	public ChallengeOmniUIDescriptionEventArgs(ChallengeType challengeType, OmniUIButtonType buttonType)
 	{
 		this.Initialize(challengeType, buttonType);
 	}
 
-	// Token: 0x06004347 RID: 17223 RVA: 0x000EC626 File Offset: 0x000EA826
+	// Token: 0x06005CD0 RID: 23760 RVA: 0x0003303C File Offset: 0x0003123C
 	public void Initialize(ChallengeType challengeType, OmniUIButtonType buttonType)
 	{
 		this.ChallengeType = challengeType;
 		this.ButtonType = buttonType;
 	}
 
-	// Token: 0x170016C7 RID: 5831
-	// (get) Token: 0x06004348 RID: 17224 RVA: 0x000EC636 File Offset: 0x000EA836
-	// (set) Token: 0x06004349 RID: 17225 RVA: 0x000EC63E File Offset: 0x000EA83E
+	// Token: 0x17001EC5 RID: 7877
+	// (get) Token: 0x06005CD1 RID: 23761 RVA: 0x0003304C File Offset: 0x0003124C
+	// (set) Token: 0x06005CD2 RID: 23762 RVA: 0x00033054 File Offset: 0x00031254
 	public ChallengeType ChallengeType { get; private set; }
 
-	// Token: 0x170016C8 RID: 5832
-	// (get) Token: 0x0600434A RID: 17226 RVA: 0x000EC647 File Offset: 0x000EA847
-	// (set) Token: 0x0600434B RID: 17227 RVA: 0x000EC64F File Offset: 0x000EA84F
+	// Token: 0x17001EC6 RID: 7878
+	// (get) Token: 0x06005CD3 RID: 23763 RVA: 0x0003305D File Offset: 0x0003125D
+	// (set) Token: 0x06005CD4 RID: 23764 RVA: 0x00033065 File Offset: 0x00031265
 	public OmniUIButtonType ButtonType { get; private set; }
 }

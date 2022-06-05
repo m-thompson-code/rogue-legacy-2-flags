@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000338 RID: 824
+// Token: 0x02000597 RID: 1431
 public class ExplosiveChests_Trait : BaseTrait
 {
-	// Token: 0x17000DBB RID: 3515
-	// (get) Token: 0x06002003 RID: 8195 RVA: 0x000660EE File Offset: 0x000642EE
+	// Token: 0x17001206 RID: 4614
+	// (get) Token: 0x06002D27 RID: 11559 RVA: 0x00018EDF File Offset: 0x000170DF
 	public override TraitType TraitType
 	{
 		get
@@ -13,7 +13,7 @@ public class ExplosiveChests_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002004 RID: 8196 RVA: 0x000660F5 File Offset: 0x000642F5
+	// Token: 0x06002D28 RID: 11560 RVA: 0x00018EE6 File Offset: 0x000170E6
 	private void Start()
 	{
 		ProjectileManager.Instance.AddProjectileToPool("ExplosiveChestsPotionProjectile");

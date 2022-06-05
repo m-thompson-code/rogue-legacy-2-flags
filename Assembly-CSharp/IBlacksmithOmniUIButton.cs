@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02000398 RID: 920
+// Token: 0x02000629 RID: 1577
 public interface IBlacksmithOmniUIButton
 {
-	// Token: 0x17000E44 RID: 3652
-	// (get) Token: 0x0600225D RID: 8797
-	// (set) Token: 0x0600225E RID: 8798
+	// Token: 0x170012D7 RID: 4823
+	// (get) Token: 0x06003075 RID: 12405
+	// (set) Token: 0x06003076 RID: 12406
 	EquipmentCategoryType CategoryType { get; set; }
 
-	// Token: 0x17000E45 RID: 3653
-	// (get) Token: 0x0600225F RID: 8799
-	// (set) Token: 0x06002260 RID: 8800
+	// Token: 0x170012D8 RID: 4824
+	// (get) Token: 0x06003077 RID: 12407
+	// (set) Token: 0x06003078 RID: 12408
 	EquipmentType EquipmentType { get; set; }
 }

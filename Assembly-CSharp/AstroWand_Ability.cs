@@ -2,11 +2,11 @@
 using System.Collections;
 using MoreMountains.CorgiEngine;
 
-// Token: 0x0200018E RID: 398
+// Token: 0x020002DD RID: 733
 public class AstroWand_Ability : BaseAbility_RL
 {
-	// Token: 0x1700079F RID: 1951
-	// (get) Token: 0x06000E3F RID: 3647 RVA: 0x0002BB25 File Offset: 0x00029D25
+	// Token: 0x17000A29 RID: 2601
+	// (get) Token: 0x060015E4 RID: 5604 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -15,8 +15,8 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170007A0 RID: 1952
-	// (get) Token: 0x06000E40 RID: 3648 RVA: 0x0002BB2C File Offset: 0x00029D2C
+	// Token: 0x17000A2A RID: 2602
+	// (get) Token: 0x060015E5 RID: 5605 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -25,8 +25,8 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170007A1 RID: 1953
-	// (get) Token: 0x06000E41 RID: 3649 RVA: 0x0002BB33 File Offset: 0x00029D33
+	// Token: 0x17000A2B RID: 2603
+	// (get) Token: 0x060015E6 RID: 5606 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float TellAnimSpeed
 	{
 		get
@@ -35,8 +35,8 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170007A2 RID: 1954
-	// (get) Token: 0x06000E42 RID: 3650 RVA: 0x0002BB3A File Offset: 0x00029D3A
+	// Token: 0x17000A2C RID: 2604
+	// (get) Token: 0x060015E7 RID: 5607 RVA: 0x0000AD83 File Offset: 0x00008F83
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -45,8 +45,8 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170007A3 RID: 1955
-	// (get) Token: 0x06000E43 RID: 3651 RVA: 0x0002BB41 File Offset: 0x00029D41
+	// Token: 0x17000A2D RID: 2605
+	// (get) Token: 0x060015E8 RID: 5608 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -55,8 +55,8 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170007A4 RID: 1956
-	// (get) Token: 0x06000E44 RID: 3652 RVA: 0x0002BB48 File Offset: 0x00029D48
+	// Token: 0x17000A2E RID: 2606
+	// (get) Token: 0x060015E9 RID: 5609 RVA: 0x0000452F File Offset: 0x0000272F
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -65,8 +65,8 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170007A5 RID: 1957
-	// (get) Token: 0x06000E45 RID: 3653 RVA: 0x0002BB4F File Offset: 0x00029D4F
+	// Token: 0x17000A2F RID: 2607
+	// (get) Token: 0x060015EA RID: 5610 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -75,8 +75,8 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170007A6 RID: 1958
-	// (get) Token: 0x06000E46 RID: 3654 RVA: 0x0002BB56 File Offset: 0x00029D56
+	// Token: 0x17000A30 RID: 2608
+	// (get) Token: 0x060015EB RID: 5611 RVA: 0x00003FB0 File Offset: 0x000021B0
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -85,8 +85,8 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170007A7 RID: 1959
-	// (get) Token: 0x06000E47 RID: 3655 RVA: 0x0002BB5D File Offset: 0x00029D5D
+	// Token: 0x17000A31 RID: 2609
+	// (get) Token: 0x060015EC RID: 5612 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -95,8 +95,8 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170007A8 RID: 1960
-	// (get) Token: 0x06000E48 RID: 3656 RVA: 0x0002BB64 File Offset: 0x00029D64
+	// Token: 0x17000A32 RID: 2610
+	// (get) Token: 0x060015ED RID: 5613 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -105,8 +105,8 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x170007A9 RID: 1961
-	// (get) Token: 0x06000E49 RID: 3657 RVA: 0x0002BB6B File Offset: 0x00029D6B
+	// Token: 0x17000A33 RID: 2611
+	// (get) Token: 0x060015EE RID: 5614 RVA: 0x00003CC4 File Offset: 0x00001EC4
 	private float PushbackAmountY
 	{
 		get
@@ -115,7 +115,7 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000E4A RID: 3658 RVA: 0x0002BB72 File Offset: 0x00029D72
+	// Token: 0x060015EF RID: 5615 RVA: 0x0000AD8A File Offset: 0x00008F8A
 	public override IEnumerator CastAbility()
 	{
 		if (this.m_stopVelocityWhenAiming)
@@ -131,7 +131,7 @@ public class AstroWand_Ability : BaseAbility_RL
 		yield break;
 	}
 
-	// Token: 0x06000E4B RID: 3659 RVA: 0x0002BB81 File Offset: 0x00029D81
+	// Token: 0x060015F0 RID: 5616 RVA: 0x0000AD99 File Offset: 0x00008F99
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		yield return base.ChangeAnim(duration);
@@ -158,7 +158,7 @@ public class AstroWand_Ability : BaseAbility_RL
 		yield break;
 	}
 
-	// Token: 0x06000E4C RID: 3660 RVA: 0x0002BB98 File Offset: 0x00029D98
+	// Token: 0x060015F1 RID: 5617 RVA: 0x0008ACDC File Offset: 0x00088EDC
 	protected override void FireProjectile()
 	{
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.PlayerCastingAstroWand, this, null);
@@ -174,7 +174,7 @@ public class AstroWand_Ability : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000E4D RID: 3661 RVA: 0x0002BC0D File Offset: 0x00029E0D
+	// Token: 0x060015F2 RID: 5618 RVA: 0x0000ADAF File Offset: 0x00008FAF
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_gravityReductionModWhenAiming < 1f)
@@ -185,12 +185,12 @@ public class AstroWand_Ability : BaseAbility_RL
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x0400111B RID: 4379
+	// Token: 0x040016A5 RID: 5797
 	private bool m_stopVelocityWhenAiming = true;
 
-	// Token: 0x0400111C RID: 4380
+	// Token: 0x040016A6 RID: 5798
 	private float m_gravityReductionModWhenAiming = 0.25f;
 
-	// Token: 0x0400111D RID: 4381
+	// Token: 0x040016A7 RID: 5799
 	private float m_storedFallMultiplier;
 }

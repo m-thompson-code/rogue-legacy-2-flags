@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000922 RID: 2338
+	// Token: 0x02000EA1 RID: 3745
 	[Serializable]
 	public class MusicLibraryEntry : AudioLibraryEntry
 	{
-		// Token: 0x17001897 RID: 6295
-		// (get) Token: 0x06004C91 RID: 19601 RVA: 0x00112E4C File Offset: 0x0011104C
+		// Token: 0x17002194 RID: 8596
+		// (get) Token: 0x06006998 RID: 27032 RVA: 0x0003AA20 File Offset: 0x00038C20
 		public SongID[] MusicTracks
 		{
 			get
@@ -17,7 +17,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x0400407C RID: 16508
+		// Token: 0x040055E8 RID: 21992
 		[SerializeField]
 		private SongID[] m_musicTracks;
 	}

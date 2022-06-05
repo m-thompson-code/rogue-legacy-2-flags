@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02000567 RID: 1383
+// Token: 0x02000937 RID: 2359
 public class DwarfTunnel : Tunnel
 {
-	// Token: 0x060032B7 RID: 12983 RVA: 0x000AB9C1 File Offset: 0x000A9BC1
+	// Token: 0x0600478C RID: 18316 RVA: 0x0002738C File Offset: 0x0002558C
 	protected override void OnEnable()
 	{
 		base.OnEnable();
 	}
 
-	// Token: 0x060032B8 RID: 12984 RVA: 0x000AB9C9 File Offset: 0x000A9BC9
+	// Token: 0x0600478D RID: 18317 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Start()
 	{
 	}

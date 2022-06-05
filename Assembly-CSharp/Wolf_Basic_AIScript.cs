@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000150 RID: 336
+// Token: 0x02000263 RID: 611
 public class Wolf_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x06000B46 RID: 2886 RVA: 0x00022868 File Offset: 0x00020A68
+	// Token: 0x06001187 RID: 4487 RVA: 0x0007F978 File Offset: 0x0007DB78
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -21,8 +21,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000634 RID: 1588
-	// (get) Token: 0x06000B47 RID: 2887 RVA: 0x000228C1 File Offset: 0x00020AC1
+	// Token: 0x17000848 RID: 2120
+	// (get) Token: 0x06001188 RID: 4488 RVA: 0x000091AA File Offset: 0x000073AA
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -31,8 +31,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000635 RID: 1589
-	// (get) Token: 0x06000B48 RID: 2888 RVA: 0x000228D2 File Offset: 0x00020AD2
+	// Token: 0x17000849 RID: 2121
+	// (get) Token: 0x06001189 RID: 4489 RVA: 0x00004A26 File Offset: 0x00002C26
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -41,8 +41,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000636 RID: 1590
-	// (get) Token: 0x06000B49 RID: 2889 RVA: 0x000228E3 File Offset: 0x00020AE3
+	// Token: 0x1700084A RID: 2122
+	// (get) Token: 0x0600118A RID: 4490 RVA: 0x00004A26 File Offset: 0x00002C26
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -51,15 +51,15 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000B4A RID: 2890 RVA: 0x000228F4 File Offset: 0x00020AF4
+	// Token: 0x0600118B RID: 4491 RVA: 0x000091BB File Offset: 0x000073BB
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
 		base.EnemyController.LogicController.OverrideLogicDelay(0.7f);
 	}
 
-	// Token: 0x17000637 RID: 1591
-	// (get) Token: 0x06000B4B RID: 2891 RVA: 0x00022912 File Offset: 0x00020B12
+	// Token: 0x1700084B RID: 2123
+	// (get) Token: 0x0600118C RID: 4492 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_howl_TellIntro_AnimationSpeed
 	{
 		get
@@ -68,8 +68,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000638 RID: 1592
-	// (get) Token: 0x06000B4C RID: 2892 RVA: 0x00022919 File Offset: 0x00020B19
+	// Token: 0x1700084C RID: 2124
+	// (get) Token: 0x0600118D RID: 4493 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_howl_TellHold_AnimationSpeed
 	{
 		get
@@ -78,8 +78,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000639 RID: 1593
-	// (get) Token: 0x06000B4D RID: 2893 RVA: 0x00022920 File Offset: 0x00020B20
+	// Token: 0x1700084D RID: 2125
+	// (get) Token: 0x0600118E RID: 4494 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_howl_TellIntroAndHold_Delay
 	{
 		get
@@ -88,8 +88,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700063A RID: 1594
-	// (get) Token: 0x06000B4E RID: 2894 RVA: 0x00022927 File Offset: 0x00020B27
+	// Token: 0x1700084E RID: 2126
+	// (get) Token: 0x0600118F RID: 4495 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_howl_AttackIntro_AnimationSpeed
 	{
 		get
@@ -98,8 +98,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700063B RID: 1595
-	// (get) Token: 0x06000B4F RID: 2895 RVA: 0x0002292E File Offset: 0x00020B2E
+	// Token: 0x1700084F RID: 2127
+	// (get) Token: 0x06001190 RID: 4496 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_howl_AttackIntro_Delay
 	{
 		get
@@ -108,8 +108,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700063C RID: 1596
-	// (get) Token: 0x06000B50 RID: 2896 RVA: 0x00022935 File Offset: 0x00020B35
+	// Token: 0x17000850 RID: 2128
+	// (get) Token: 0x06001191 RID: 4497 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_howl_AttackHold_AnimationSpeed
 	{
 		get
@@ -118,8 +118,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700063D RID: 1597
-	// (get) Token: 0x06000B51 RID: 2897 RVA: 0x0002293C File Offset: 0x00020B3C
+	// Token: 0x17000851 RID: 2129
+	// (get) Token: 0x06001192 RID: 4498 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_howl_AttackHold_Delay
 	{
 		get
@@ -128,8 +128,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700063E RID: 1598
-	// (get) Token: 0x06000B52 RID: 2898 RVA: 0x00022943 File Offset: 0x00020B43
+	// Token: 0x17000852 RID: 2130
+	// (get) Token: 0x06001193 RID: 4499 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_howl_Exit_ForceIdle
 	{
 		get
@@ -138,8 +138,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700063F RID: 1599
-	// (get) Token: 0x06000B53 RID: 2899 RVA: 0x0002294A File Offset: 0x00020B4A
+	// Token: 0x17000853 RID: 2131
+	// (get) Token: 0x06001194 RID: 4500 RVA: 0x00003D9A File Offset: 0x00001F9A
 	protected virtual float m_howl_Exit_AttackCD
 	{
 		get
@@ -148,8 +148,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000640 RID: 1600
-	// (get) Token: 0x06000B54 RID: 2900 RVA: 0x00022951 File Offset: 0x00020B51
+	// Token: 0x17000854 RID: 2132
+	// (get) Token: 0x06001195 RID: 4501 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_howl_Randomize_Howl
 	{
 		get
@@ -158,8 +158,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000641 RID: 1601
-	// (get) Token: 0x06000B55 RID: 2901 RVA: 0x00022954 File Offset: 0x00020B54
+	// Token: 0x17000855 RID: 2133
+	// (get) Token: 0x06001196 RID: 4502 RVA: 0x000091D9 File Offset: 0x000073D9
 	protected virtual Vector2 m_howl_Randomize_Howl_Timer
 	{
 		get
@@ -168,8 +168,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000642 RID: 1602
-	// (get) Token: 0x06000B56 RID: 2902 RVA: 0x00022965 File Offset: 0x00020B65
+	// Token: 0x17000856 RID: 2134
+	// (get) Token: 0x06001197 RID: 4503 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_howl_Spawn_Projectile
 	{
 		get
@@ -178,8 +178,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000643 RID: 1603
-	// (get) Token: 0x06000B57 RID: 2903 RVA: 0x00022968 File Offset: 0x00020B68
+	// Token: 0x17000857 RID: 2135
+	// (get) Token: 0x06001198 RID: 4504 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_howl_At_Start
 	{
 		get
@@ -188,8 +188,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000644 RID: 1604
-	// (get) Token: 0x06000B58 RID: 2904 RVA: 0x0002296B File Offset: 0x00020B6B
+	// Token: 0x17000858 RID: 2136
+	// (get) Token: 0x06001199 RID: 4505 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected virtual int m_howlMaxSummons
 	{
 		get
@@ -198,7 +198,7 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000B59 RID: 2905 RVA: 0x0002296E File Offset: 0x00020B6E
+	// Token: 0x0600119A RID: 4506 RVA: 0x000091EA File Offset: 0x000073EA
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -261,8 +261,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x17000645 RID: 1605
-	// (get) Token: 0x06000B5A RID: 2906 RVA: 0x0002297D File Offset: 0x00020B7D
+	// Token: 0x17000859 RID: 2137
+	// (get) Token: 0x0600119B RID: 4507 RVA: 0x000091F9 File Offset: 0x000073F9
 	protected virtual Vector2 m_jumpPower
 	{
 		get
@@ -271,7 +271,7 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000B5B RID: 2907 RVA: 0x0002298E File Offset: 0x00020B8E
+	// Token: 0x0600119C RID: 4508 RVA: 0x0000920A File Offset: 0x0000740A
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -291,7 +291,7 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000B5C RID: 2908 RVA: 0x0002299D File Offset: 0x00020B9D
+	// Token: 0x0600119D RID: 4509 RVA: 0x00009219 File Offset: 0x00007419
 	private IEnumerator Jump()
 	{
 		this.StopAndFaceTarget();
@@ -314,8 +314,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x17000646 RID: 1606
-	// (get) Token: 0x06000B5D RID: 2909 RVA: 0x000229AC File Offset: 0x00020BAC
+	// Token: 0x1700085A RID: 2138
+	// (get) Token: 0x0600119E RID: 4510 RVA: 0x00004A48 File Offset: 0x00002C48
 	protected virtual Vector2 m_dash_TellHold_BackPower
 	{
 		get
@@ -324,8 +324,8 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000647 RID: 1607
-	// (get) Token: 0x06000B5E RID: 2910 RVA: 0x000229BD File Offset: 0x00020BBD
+	// Token: 0x1700085B RID: 2139
+	// (get) Token: 0x0600119F RID: 4511 RVA: 0x00009228 File Offset: 0x00007428
 	protected virtual Vector2 m_dash_AttackHold_ForwardPower
 	{
 		get
@@ -334,7 +334,7 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000B5F RID: 2911 RVA: 0x000229CE File Offset: 0x00020BCE
+	// Token: 0x060011A0 RID: 4512 RVA: 0x00009239 File Offset: 0x00007439
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -354,7 +354,7 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000B60 RID: 2912 RVA: 0x000229DD File Offset: 0x00020BDD
+	// Token: 0x060011A1 RID: 4513 RVA: 0x00009248 File Offset: 0x00007448
 	private IEnumerator Dash()
 	{
 		this.StopAndFaceTarget();
@@ -382,7 +382,7 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000B61 RID: 2913 RVA: 0x000229EC File Offset: 0x00020BEC
+	// Token: 0x060011A2 RID: 4514 RVA: 0x00009257 File Offset: 0x00007457
 	public IEnumerator Single_Action_Jump(float jumpX, float jumpY)
 	{
 		if (base.EnemyController.IsFacingRight)
@@ -406,7 +406,7 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000B62 RID: 2914 RVA: 0x00022A09 File Offset: 0x00020C09
+	// Token: 0x060011A3 RID: 4515 RVA: 0x00009274 File Offset: 0x00007474
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.OnLBCompleteOrCancelled();
@@ -414,78 +414,78 @@ public class Wolf_Basic_AIScript : BaseAIScript
 		base.StopProjectile(ref this.m_howlProjectile);
 	}
 
-	// Token: 0x04000FD1 RID: 4049
+	// Token: 0x04001476 RID: 5238
 	protected Projectile_RL m_warningProjectile;
 
-	// Token: 0x04000FD2 RID: 4050
+	// Token: 0x04001477 RID: 5239
 	protected Projectile_RL m_howlProjectile;
 
-	// Token: 0x04000FD3 RID: 4051
+	// Token: 0x04001478 RID: 5240
 	protected float m_jump_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000FD4 RID: 4052
+	// Token: 0x04001479 RID: 5241
 	protected float m_jump_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000FD5 RID: 4053
+	// Token: 0x0400147A RID: 5242
 	protected float m_jump_TellIntroAndHold_Delay = 0.55f;
 
-	// Token: 0x04000FD6 RID: 4054
+	// Token: 0x0400147B RID: 5243
 	protected float m_jump_AttackIntro_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000FD7 RID: 4055
+	// Token: 0x0400147C RID: 5244
 	protected float m_jump_AttackIntro_Delay;
 
-	// Token: 0x04000FD8 RID: 4056
+	// Token: 0x0400147D RID: 5245
 	protected float m_jump_AttackHold_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000FD9 RID: 4057
+	// Token: 0x0400147E RID: 5246
 	protected float m_jump_AttackHold_Delay;
 
-	// Token: 0x04000FDA RID: 4058
+	// Token: 0x0400147F RID: 5247
 	protected float m_jump_Exit_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000FDB RID: 4059
+	// Token: 0x04001480 RID: 5248
 	protected float m_jump_Exit_Delay;
 
-	// Token: 0x04000FDC RID: 4060
+	// Token: 0x04001481 RID: 5249
 	protected float m_jump_Exit_ForceIdle;
 
-	// Token: 0x04000FDD RID: 4061
+	// Token: 0x04001482 RID: 5250
 	protected float m_jump_Exit_AttackCD = 10f;
 
-	// Token: 0x04000FDE RID: 4062
+	// Token: 0x04001483 RID: 5251
 	protected float m_dash_TellIntro_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000FDF RID: 4063
+	// Token: 0x04001484 RID: 5252
 	protected float m_dash_TellHold_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000FE0 RID: 4064
+	// Token: 0x04001485 RID: 5253
 	protected float m_dash_TellIntroAndHold_Delay;
 
-	// Token: 0x04000FE1 RID: 4065
+	// Token: 0x04001486 RID: 5254
 	protected float m_dash_TellHold_BackwardsDelay = 0.425f;
 
-	// Token: 0x04000FE2 RID: 4066
+	// Token: 0x04001487 RID: 5255
 	protected float m_dash_AttackIntro_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000FE3 RID: 4067
+	// Token: 0x04001488 RID: 5256
 	protected float m_dash_AttackIntro_Delay;
 
-	// Token: 0x04000FE4 RID: 4068
+	// Token: 0x04001489 RID: 5257
 	protected float m_dash_AttackHold_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000FE5 RID: 4069
+	// Token: 0x0400148A RID: 5258
 	protected float m_dash_AttackHold_Delay;
 
-	// Token: 0x04000FE6 RID: 4070
+	// Token: 0x0400148B RID: 5259
 	protected float m_dash_Exit_AnimationSpeed = 0.65f;
 
-	// Token: 0x04000FE7 RID: 4071
+	// Token: 0x0400148C RID: 5260
 	protected float m_dash_Exit_Delay;
 
-	// Token: 0x04000FE8 RID: 4072
+	// Token: 0x0400148D RID: 5261
 	protected float m_dash_Exit_ForceIdle;
 
-	// Token: 0x04000FE9 RID: 4073
+	// Token: 0x0400148E RID: 5262
 	protected float m_dash_Exit_AttackCD = 10f;
 }

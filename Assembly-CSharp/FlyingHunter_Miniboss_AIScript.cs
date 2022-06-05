@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x020000E0 RID: 224
+// Token: 0x0200016A RID: 362
 public class FlyingHunter_Miniboss_AIScript : FlyingHunter_Basic_AIScript
 {
 }

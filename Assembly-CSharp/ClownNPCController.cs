@@ -2,11 +2,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200048A RID: 1162
+// Token: 0x02000789 RID: 1929
 public class ClownNPCController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x1700108A RID: 4234
-	// (get) Token: 0x06002ADF RID: 10975 RVA: 0x000913BD File Offset: 0x0008F5BD
+	// Token: 0x170015CB RID: 5579
+	// (get) Token: 0x06003B13 RID: 15123 RVA: 0x0002070A File Offset: 0x0001E90A
 	public BaseRoom Room
 	{
 		get
@@ -15,7 +15,7 @@ public class ClownNPCController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002AE0 RID: 10976 RVA: 0x000913C8 File Offset: 0x0008F5C8
+	// Token: 0x06003B14 RID: 15124 RVA: 0x000F2EE8 File Offset: 0x000F10E8
 	public void SetRoom(BaseRoom room)
 	{
 		this.m_room = room;
@@ -26,13 +26,13 @@ public class ClownNPCController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002AE1 RID: 10977 RVA: 0x00091412 File Offset: 0x0008F612
+	// Token: 0x06003B15 RID: 15125 RVA: 0x00020712 File Offset: 0x0001E912
 	private void Awake()
 	{
 		this.m_interact = base.GetComponent<Interactable>();
 	}
 
-	// Token: 0x06002AE2 RID: 10978 RVA: 0x00091420 File Offset: 0x0008F620
+	// Token: 0x06003B16 RID: 15126 RVA: 0x000F2F34 File Offset: 0x000F1134
 	private void OnDestroy()
 	{
 		if (this.m_room != null)
@@ -45,9 +45,9 @@ public class ClownNPCController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x04002302 RID: 8962
+	// Token: 0x04002F08 RID: 12040
 	private Interactable m_interact;
 
-	// Token: 0x04002303 RID: 8963
+	// Token: 0x04002F09 RID: 12041
 	private BaseRoom m_room;
 }

@@ -1,27 +1,27 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001D7 RID: 471
+// Token: 0x02000359 RID: 857
 [Serializable]
 public class HitboxInfo : MonoBehaviour
 {
-	// Token: 0x17000A51 RID: 2641
-	// (get) Token: 0x06001379 RID: 4985 RVA: 0x0003B794 File Offset: 0x00039994
-	// (set) Token: 0x0600137A RID: 4986 RVA: 0x0003B79C File Offset: 0x0003999C
+	// Token: 0x17000D29 RID: 3369
+	// (get) Token: 0x06001C12 RID: 7186 RVA: 0x0000E94E File Offset: 0x0000CB4E
+	// (set) Token: 0x06001C13 RID: 7187 RVA: 0x0000E956 File Offset: 0x0000CB56
 	public Collider2D Collider { get; private set; }
 
-	// Token: 0x17000A52 RID: 2642
-	// (get) Token: 0x0600137B RID: 4987 RVA: 0x0003B7A5 File Offset: 0x000399A5
-	// (set) Token: 0x0600137C RID: 4988 RVA: 0x0003B7AD File Offset: 0x000399AD
+	// Token: 0x17000D2A RID: 3370
+	// (get) Token: 0x06001C14 RID: 7188 RVA: 0x0000E95F File Offset: 0x0000CB5F
+	// (set) Token: 0x06001C15 RID: 7189 RVA: 0x0000E967 File Offset: 0x0000CB67
 	public CollisionType CollidesWithType { get; set; }
 
-	// Token: 0x17000A53 RID: 2643
-	// (get) Token: 0x0600137D RID: 4989 RVA: 0x0003B7B6 File Offset: 0x000399B6
-	// (set) Token: 0x0600137E RID: 4990 RVA: 0x0003B7BE File Offset: 0x000399BE
+	// Token: 0x17000D2B RID: 3371
+	// (get) Token: 0x06001C16 RID: 7190 RVA: 0x0000E970 File Offset: 0x0000CB70
+	// (set) Token: 0x06001C17 RID: 7191 RVA: 0x0000E978 File Offset: 0x0000CB78
 	public IHitboxController HitboxController { get; set; }
 
-	// Token: 0x17000A54 RID: 2644
-	// (get) Token: 0x0600137F RID: 4991 RVA: 0x0003B7C7 File Offset: 0x000399C7
+	// Token: 0x17000D2C RID: 3372
+	// (get) Token: 0x06001C18 RID: 7192 RVA: 0x0000E981 File Offset: 0x0000CB81
 	public GameObject RootGameObj
 	{
 		get
@@ -30,31 +30,31 @@ public class HitboxInfo : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001380 RID: 4992 RVA: 0x0003B7D4 File Offset: 0x000399D4
+	// Token: 0x06001C19 RID: 7193 RVA: 0x0000E98E File Offset: 0x0000CB8E
 	public void SetCollider(Collider2D collider)
 	{
 		this.Collider = collider;
 	}
 
-	// Token: 0x06001381 RID: 4993 RVA: 0x0003B7DD File Offset: 0x000399DD
+	// Token: 0x06001C1A RID: 7194 RVA: 0x0000E997 File Offset: 0x0000CB97
 	private void OnTriggerEnter2D(Collider2D otherCollider)
 	{
 		this.OnTriggerHandler(HitResponseType.OnEnter, otherCollider);
 	}
 
-	// Token: 0x06001382 RID: 4994 RVA: 0x0003B7E7 File Offset: 0x000399E7
+	// Token: 0x06001C1B RID: 7195 RVA: 0x0000E9A1 File Offset: 0x0000CBA1
 	private void OnTriggerStay2D(Collider2D otherCollider)
 	{
 		this.OnTriggerHandler(HitResponseType.OnStay, otherCollider);
 	}
 
-	// Token: 0x06001383 RID: 4995 RVA: 0x0003B7F1 File Offset: 0x000399F1
+	// Token: 0x06001C1C RID: 7196 RVA: 0x0000E9AB File Offset: 0x0000CBAB
 	private void OnTriggerExit2D(Collider2D otherCollider)
 	{
 		this.OnTriggerHandler(HitResponseType.OnExit, otherCollider);
 	}
 
-	// Token: 0x06001384 RID: 4996 RVA: 0x0003B7FC File Offset: 0x000399FC
+	// Token: 0x06001C1D RID: 7197 RVA: 0x00098868 File Offset: 0x00096A68
 	private void OnTriggerHandler(HitResponseType hitResponseType, Collider2D otherCollider)
 	{
 		IHitboxController hitboxController = this.HitboxController;

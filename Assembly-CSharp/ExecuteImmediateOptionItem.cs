@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000271 RID: 625
+// Token: 0x0200043A RID: 1082
 public abstract class ExecuteImmediateOptionItem : BaseOptionItem
 {
-	// Token: 0x17000BEB RID: 3051
-	// (get) Token: 0x060018E8 RID: 6376 RVA: 0x0004E3BC File Offset: 0x0004C5BC
+	// Token: 0x17000F2C RID: 3884
+	// (get) Token: 0x060022D7 RID: 8919 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override OptionsControlType OptionsControlType
 	{
 		get
@@ -13,27 +13,27 @@ public abstract class ExecuteImmediateOptionItem : BaseOptionItem
 		}
 	}
 
-	// Token: 0x060018E9 RID: 6377 RVA: 0x0004E3BF File Offset: 0x0004C5BF
+	// Token: 0x060022D8 RID: 8920 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void ConfirmOptionChange()
 	{
 	}
 
-	// Token: 0x060018EA RID: 6378 RVA: 0x0004E3C1 File Offset: 0x0004C5C1
+	// Token: 0x060022D9 RID: 8921 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void CancelOptionChange()
 	{
 	}
 
-	// Token: 0x060018EB RID: 6379 RVA: 0x0004E3C3 File Offset: 0x0004C5C3
+	// Token: 0x060022DA RID: 8922 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void InvokeDecrement()
 	{
 	}
 
-	// Token: 0x060018EC RID: 6380 RVA: 0x0004E3C5 File Offset: 0x0004C5C5
+	// Token: 0x060022DB RID: 8923 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void InvokeIncrement()
 	{
 	}
 
-	// Token: 0x060018ED RID: 6381 RVA: 0x0004E3C7 File Offset: 0x0004C5C7
+	// Token: 0x060022DC RID: 8924 RVA: 0x00012A46 File Offset: 0x00010C46
 	public override void ActivateOption()
 	{
 		if (base.OptionItemActivated != null)
@@ -42,13 +42,13 @@ public abstract class ExecuteImmediateOptionItem : BaseOptionItem
 		}
 	}
 
-	// Token: 0x060018EE RID: 6382 RVA: 0x0004E3DD File Offset: 0x0004C5DD
+	// Token: 0x060022DD RID: 8925 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void DeactivateOption(bool confirmOptionChange)
 	{
 	}
 
-	// Token: 0x17000BEC RID: 3052
-	// (get) Token: 0x060018EF RID: 6383 RVA: 0x0004E3DF File Offset: 0x0004C5DF
+	// Token: 0x17000F2D RID: 3885
+	// (get) Token: 0x060022DE RID: 8926 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool PressAndHoldEnabled
 	{
 		get

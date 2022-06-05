@@ -2,52 +2,52 @@
 
 namespace TweenRL
 {
-	// Token: 0x02000872 RID: 2162
+	// Token: 0x02000D8C RID: 3468
 	public class Back
 	{
-		// Token: 0x06004769 RID: 18281 RVA: 0x00100DC0 File Offset: 0x000FEFC0
+		// Token: 0x06006266 RID: 25190 RVA: 0x001555BC File Offset: 0x001537BC
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			float num = 1.70158f;
 			return c * (t /= d) * t * ((num + 1f) * t - num) + b;
 		}
 
-		// Token: 0x0600476A RID: 18282 RVA: 0x00100DEC File Offset: 0x000FEFEC
+		// Token: 0x06006267 RID: 25191 RVA: 0x001555E8 File Offset: 0x001537E8
 		public static float EaseInSmall(float t, float b, float c, float d)
 		{
 			float num = 0.85079f;
 			return c * (t /= d) * t * ((num + 1f) * t - num) + b;
 		}
 
-		// Token: 0x0600476B RID: 18283 RVA: 0x00100E18 File Offset: 0x000FF018
+		// Token: 0x06006268 RID: 25192 RVA: 0x00155614 File Offset: 0x00153814
 		public static float EaseInLarge(float t, float b, float c, float d)
 		{
 			float num = 5.10474f;
 			return c * (t /= d) * t * ((num + 1f) * t - num) + b;
 		}
 
-		// Token: 0x0600476C RID: 18284 RVA: 0x00100E44 File Offset: 0x000FF044
+		// Token: 0x06006269 RID: 25193 RVA: 0x00155640 File Offset: 0x00153840
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			float num = 1.70158f;
 			return c * ((t = t / d - 1f) * t * ((num + 1f) * t + num) + 1f) + b;
 		}
 
-		// Token: 0x0600476D RID: 18285 RVA: 0x00100E7C File Offset: 0x000FF07C
+		// Token: 0x0600626A RID: 25194 RVA: 0x00155678 File Offset: 0x00153878
 		public static float EaseOutSmall(float t, float b, float c, float d)
 		{
 			float num = 0.85079f;
 			return c * ((t = t / d - 1f) * t * ((num + 1f) * t + num) + 1f) + b;
 		}
 
-		// Token: 0x0600476E RID: 18286 RVA: 0x00100EB4 File Offset: 0x000FF0B4
+		// Token: 0x0600626B RID: 25195 RVA: 0x001556B0 File Offset: 0x001538B0
 		public static float EaseOutLarge(float t, float b, float c, float d)
 		{
 			float num = 5.10474f;
 			return c * ((t = t / d - 1f) * t * ((num + 1f) * t + num) + 1f) + b;
 		}
 
-		// Token: 0x0600476F RID: 18287 RVA: 0x00100EEC File Offset: 0x000FF0EC
+		// Token: 0x0600626C RID: 25196 RVA: 0x001556E8 File Offset: 0x001538E8
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			float num = 1.70158f;
@@ -58,7 +58,7 @@ namespace TweenRL
 			return c / 2f * ((t -= 2f) * t * (((num *= 1.525f) + 1f) * t + num) + 2f) + b;
 		}
 
-		// Token: 0x06004770 RID: 18288 RVA: 0x00100F64 File Offset: 0x000FF164
+		// Token: 0x0600626D RID: 25197 RVA: 0x00155760 File Offset: 0x00153960
 		public static float EaseInOutLarge(float t, float b, float c, float d)
 		{
 			float num = 5.10474f;
@@ -69,7 +69,7 @@ namespace TweenRL
 			return c / 2f * ((t -= 2f) * t * (((num *= 1.525f) + 1f) * t + num) + 2f) + b;
 		}
 
-		// Token: 0x06004771 RID: 18289 RVA: 0x00100FDC File Offset: 0x000FF1DC
+		// Token: 0x0600626E RID: 25198 RVA: 0x001557D8 File Offset: 0x001539D8
 		public static float EaseInOutSmall(float t, float b, float c, float d)
 		{
 			float num = 0.85079f;

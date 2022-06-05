@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200082A RID: 2090
+// Token: 0x02000D09 RID: 3337
 public enum UserReportingState
 {
-	// Token: 0x04003B0A RID: 15114
+	// Token: 0x04004E2C RID: 20012
 	Idle,
-	// Token: 0x04003B0B RID: 15115
+	// Token: 0x04004E2D RID: 20013
 	CreatingUserReport,
-	// Token: 0x04003B0C RID: 15116
+	// Token: 0x04004E2E RID: 20014
 	ShowingForm,
-	// Token: 0x04003B0D RID: 15117
+	// Token: 0x04004E2F RID: 20015
 	SubmittingForm
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004C4 RID: 1220
+// Token: 0x020007E3 RID: 2019
 public class ElevatorPlatform : SpecialPlatform
 {
-	// Token: 0x06002D56 RID: 11606 RVA: 0x00099778 File Offset: 0x00097978
+	// Token: 0x06003E2C RID: 15916 RVA: 0x000FA904 File Offset: 0x000F8B04
 	public override void SetState(StateID state)
 	{
 		if (state != StateID.One)
@@ -35,7 +35,7 @@ public class ElevatorPlatform : SpecialPlatform
 		this.m_startingPosY = base.transform.localPosition.y;
 	}
 
-	// Token: 0x06002D57 RID: 11607 RVA: 0x000997D8 File Offset: 0x000979D8
+	// Token: 0x06003E2D RID: 15917 RVA: 0x000FA964 File Offset: 0x000F8B64
 	private void Update()
 	{
 		Vector3 localPosition = base.transform.localPosition;
@@ -51,9 +51,9 @@ public class ElevatorPlatform : SpecialPlatform
 		base.transform.localPosition = localPosition;
 	}
 
-	// Token: 0x0400245D RID: 9309
+	// Token: 0x040030DB RID: 12507
 	private float m_startingPosY;
 
-	// Token: 0x0400245E RID: 9310
+	// Token: 0x040030DC RID: 12508
 	private bool m_startMovingDown;
 }

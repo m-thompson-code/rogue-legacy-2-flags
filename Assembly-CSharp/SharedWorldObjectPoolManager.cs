@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020002E9 RID: 745
+// Token: 0x020004F3 RID: 1267
 public static class SharedWorldObjectPoolManager
 {
-	// Token: 0x06001D85 RID: 7557 RVA: 0x00061292 File Offset: 0x0005F492
+	// Token: 0x060028CA RID: 10442 RVA: 0x00016E3F File Offset: 0x0001503F
 	public static void DestroyBiomePools()
 	{
 		ProjectileManager.DestroyBiomePools();
@@ -16,7 +16,7 @@ public static class SharedWorldObjectPoolManager
 		EffectTriggerAnimBehaviour.ClearNormalizedStartCounters();
 	}
 
-	// Token: 0x06001D86 RID: 7558 RVA: 0x000612BC File Offset: 0x0005F4BC
+	// Token: 0x060028CB RID: 10443 RVA: 0x00016E69 File Offset: 0x00015069
 	public static void DestroyAllPools()
 	{
 		SharedWorldObjectPoolManager.DestroyBiomePools();
@@ -25,7 +25,7 @@ public static class SharedWorldObjectPoolManager
 		ProjectileManager.DestroyOffscreenIconPool();
 	}
 
-	// Token: 0x06001D87 RID: 7559 RVA: 0x000612D2 File Offset: 0x0005F4D2
+	// Token: 0x060028CC RID: 10444 RVA: 0x00016E7F File Offset: 0x0001507F
 	public static void CreateBiomePools(BiomeType newBiome)
 	{
 		ProjectileManager.ClearProjectileQueue();

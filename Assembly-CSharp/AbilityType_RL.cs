@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 
-// Token: 0x020006FB RID: 1787
+// Token: 0x02000BAE RID: 2990
 public static class AbilityType_RL
 {
-	// Token: 0x17001613 RID: 5651
-	// (get) Token: 0x060040B2 RID: 16562 RVA: 0x000E52EC File Offset: 0x000E34EC
+	// Token: 0x17001E0F RID: 7695
+	// (get) Token: 0x060059FB RID: 23035 RVA: 0x00031233 File Offset: 0x0002F433
 	public static AbilityType[] TypeArray
 	{
 		get
@@ -19,8 +19,8 @@ public static class AbilityType_RL
 		}
 	}
 
-	// Token: 0x17001614 RID: 5652
-	// (get) Token: 0x060040B3 RID: 16563 RVA: 0x000E5314 File Offset: 0x000E3514
+	// Token: 0x17001E10 RID: 7696
+	// (get) Token: 0x060059FC RID: 23036 RVA: 0x001549FC File Offset: 0x00152BFC
 	public static AbilityType[] WeaponAbilityArray
 	{
 		get
@@ -45,8 +45,8 @@ public static class AbilityType_RL
 		}
 	}
 
-	// Token: 0x17001615 RID: 5653
-	// (get) Token: 0x060040B4 RID: 16564 RVA: 0x000E538C File Offset: 0x000E358C
+	// Token: 0x17001E11 RID: 7697
+	// (get) Token: 0x060059FD RID: 23037 RVA: 0x00154A74 File Offset: 0x00152C74
 	public static AbilityType[] ValidWeaponTypeArray
 	{
 		get
@@ -61,8 +61,8 @@ public static class AbilityType_RL
 		}
 	}
 
-	// Token: 0x17001616 RID: 5654
-	// (get) Token: 0x060040B5 RID: 16565 RVA: 0x000E53D8 File Offset: 0x000E35D8
+	// Token: 0x17001E12 RID: 7698
+	// (get) Token: 0x060059FE RID: 23038 RVA: 0x00154AC0 File Offset: 0x00152CC0
 	public static AbilityType[] SpellAbilityArray
 	{
 		get
@@ -87,8 +87,8 @@ public static class AbilityType_RL
 		}
 	}
 
-	// Token: 0x17001617 RID: 5655
-	// (get) Token: 0x060040B6 RID: 16566 RVA: 0x000E5454 File Offset: 0x000E3654
+	// Token: 0x17001E13 RID: 7699
+	// (get) Token: 0x060059FF RID: 23039 RVA: 0x00154B3C File Offset: 0x00152D3C
 	public static AbilityType[] ValidSpellTypeArray
 	{
 		get
@@ -103,8 +103,8 @@ public static class AbilityType_RL
 		}
 	}
 
-	// Token: 0x17001618 RID: 5656
-	// (get) Token: 0x060040B7 RID: 16567 RVA: 0x000E54A0 File Offset: 0x000E36A0
+	// Token: 0x17001E14 RID: 7700
+	// (get) Token: 0x06005A00 RID: 23040 RVA: 0x00154B88 File Offset: 0x00152D88
 	public static AbilityType[] TalentAbilityArray
 	{
 		get
@@ -129,8 +129,8 @@ public static class AbilityType_RL
 		}
 	}
 
-	// Token: 0x17001619 RID: 5657
-	// (get) Token: 0x060040B8 RID: 16568 RVA: 0x000E551C File Offset: 0x000E371C
+	// Token: 0x17001E15 RID: 7701
+	// (get) Token: 0x06005A01 RID: 23041 RVA: 0x00154C04 File Offset: 0x00152E04
 	public static AbilityType[] ValidTalentTypeArray
 	{
 		get
@@ -145,7 +145,7 @@ public static class AbilityType_RL
 		}
 	}
 
-	// Token: 0x060040B9 RID: 16569 RVA: 0x000E5568 File Offset: 0x000E3768
+	// Token: 0x06005A02 RID: 23042 RVA: 0x00154C50 File Offset: 0x00152E50
 	public static List<AbilityType> GetWeaponAbilityList()
 	{
 		List<AbilityType> list = ((AbilityType[])Enum.GetValues(typeof(AbilityType))).ToList<AbilityType>();
@@ -159,7 +159,7 @@ public static class AbilityType_RL
 		return list2;
 	}
 
-	// Token: 0x060040BA RID: 16570 RVA: 0x000E55C4 File Offset: 0x000E37C4
+	// Token: 0x06005A03 RID: 23043 RVA: 0x00154CAC File Offset: 0x00152EAC
 	public static List<AbilityType> GetSpellAbilityList()
 	{
 		List<AbilityType> list = ((AbilityType[])Enum.GetValues(typeof(AbilityType))).ToList<AbilityType>();
@@ -173,7 +173,7 @@ public static class AbilityType_RL
 		return list2;
 	}
 
-	// Token: 0x060040BB RID: 16571 RVA: 0x000E5624 File Offset: 0x000E3824
+	// Token: 0x06005A04 RID: 23044 RVA: 0x00154D0C File Offset: 0x00152F0C
 	public static List<AbilityType> GetTalentAbilityList()
 	{
 		List<AbilityType> list = ((AbilityType[])Enum.GetValues(typeof(AbilityType))).ToList<AbilityType>();
@@ -187,31 +187,31 @@ public static class AbilityType_RL
 		return list2;
 	}
 
-	// Token: 0x060040BC RID: 16572 RVA: 0x000E5684 File Offset: 0x000E3884
+	// Token: 0x06005A05 RID: 23045 RVA: 0x00154D6C File Offset: 0x00152F6C
 	public static bool IsMageSpellOrTalent(AbilityType abilityType)
 	{
 		ClassData classData = ClassLibrary.GetClassData(ClassType.MagicWandClass);
 		return classData.SpellData.SpellAbilityArray.Contains(abilityType) || classData.TalentData.TalentAbilityArray.Contains(abilityType);
 	}
 
-	// Token: 0x04003239 RID: 12857
+	// Token: 0x040044B4 RID: 17588
 	private static AbilityType[] m_typeArray;
 
-	// Token: 0x0400323A RID: 12858
+	// Token: 0x040044B5 RID: 17589
 	private static AbilityType[] m_weaponTypeArray;
 
-	// Token: 0x0400323B RID: 12859
+	// Token: 0x040044B6 RID: 17590
 	private static AbilityType[] m_spellTypeArray;
 
-	// Token: 0x0400323C RID: 12860
+	// Token: 0x040044B7 RID: 17591
 	private static AbilityType[] m_talentTypeArray;
 
-	// Token: 0x0400323D RID: 12861
+	// Token: 0x040044B8 RID: 17592
 	private static AbilityType[] m_validWeaponTypeArray;
 
-	// Token: 0x0400323E RID: 12862
+	// Token: 0x040044B9 RID: 17593
 	private static AbilityType[] m_validSpellTypeArray;
 
-	// Token: 0x0400323F RID: 12863
+	// Token: 0x040044BA RID: 17594
 	private static AbilityType[] m_validTalentTypeArray;
 }

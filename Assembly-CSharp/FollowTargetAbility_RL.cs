@@ -4,11 +4,11 @@ using MoreMountains.CorgiEngine;
 using Rewired;
 using UnityEngine;
 
-// Token: 0x02000168 RID: 360
+// Token: 0x0200029D RID: 669
 public class FollowTargetAbility_RL : BaseAbility_RL
 {
-	// Token: 0x170006C5 RID: 1733
-	// (get) Token: 0x06000C79 RID: 3193 RVA: 0x000265D4 File Offset: 0x000247D4
+	// Token: 0x1700091D RID: 2333
+	// (get) Token: 0x06001386 RID: 4998 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected virtual AbilityAnimState StateToHoldAttackOn
 	{
 		get
@@ -17,7 +17,7 @@ public class FollowTargetAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000C7A RID: 3194 RVA: 0x000265D7 File Offset: 0x000247D7
+	// Token: 0x06001387 RID: 4999 RVA: 0x00009EB6 File Offset: 0x000080B6
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		base.Initialize(abilityController, castAbilityType);
@@ -29,7 +29,7 @@ public class FollowTargetAbility_RL : BaseAbility_RL
 		this.m_targetGO.SetActive(false);
 	}
 
-	// Token: 0x06000C7B RID: 3195 RVA: 0x00026604 File Offset: 0x00024804
+	// Token: 0x06001388 RID: 5000 RVA: 0x000857C0 File Offset: 0x000839C0
 	public override void PreCastAbility()
 	{
 		base.PreCastAbility();
@@ -63,7 +63,7 @@ public class FollowTargetAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000C7C RID: 3196 RVA: 0x0002673C File Offset: 0x0002493C
+	// Token: 0x06001389 RID: 5001 RVA: 0x00009EE1 File Offset: 0x000080E1
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (duration <= 0f)
@@ -84,7 +84,7 @@ public class FollowTargetAbility_RL : BaseAbility_RL
 		yield break;
 	}
 
-	// Token: 0x06000C7D RID: 3197 RVA: 0x00026752 File Offset: 0x00024952
+	// Token: 0x0600138A RID: 5002 RVA: 0x00009EF7 File Offset: 0x000080F7
 	protected override void FireProjectile()
 	{
 		this.m_abilityController.PlayerController.FallMultiplierOverride = this.m_storedFallMultiplier;
@@ -92,7 +92,7 @@ public class FollowTargetAbility_RL : BaseAbility_RL
 		base.FireProjectile();
 	}
 
-	// Token: 0x06000C7E RID: 3198 RVA: 0x00026784 File Offset: 0x00024984
+	// Token: 0x0600138B RID: 5003 RVA: 0x000858F8 File Offset: 0x00083AF8
 	protected override void Update()
 	{
 		base.Update();
@@ -124,7 +124,7 @@ public class FollowTargetAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000C7F RID: 3199 RVA: 0x000268D4 File Offset: 0x00024AD4
+	// Token: 0x0600138C RID: 5004 RVA: 0x00085A48 File Offset: 0x00083C48
 	protected virtual void UpdateFollow()
 	{
 		ControllerType lastActiveControllerType = ReInput.controllers.GetLastActiveControllerType();
@@ -159,7 +159,7 @@ public class FollowTargetAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000C80 RID: 3200 RVA: 0x00026A50 File Offset: 0x00024C50
+	// Token: 0x0600138D RID: 5005 RVA: 0x00085BC4 File Offset: 0x00083DC4
 	public void ConstrainTargetToRoom()
 	{
 		BaseRoom currentPlayerRoom = PlayerManager.GetCurrentPlayerRoom();
@@ -187,7 +187,7 @@ public class FollowTargetAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000C81 RID: 3201 RVA: 0x00026B1C File Offset: 0x00024D1C
+	// Token: 0x0600138E RID: 5006 RVA: 0x00085C90 File Offset: 0x00083E90
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		base.StopAbility(abilityInterrupted);
@@ -206,33 +206,33 @@ public class FollowTargetAbility_RL : BaseAbility_RL
 		this.m_animator.SetBool("Hover", false);
 	}
 
-	// Token: 0x04001081 RID: 4225
+	// Token: 0x040015B1 RID: 5553
 	[SerializeField]
 	protected float m_gravityReductionModWhenAiming = 1f;
 
-	// Token: 0x04001082 RID: 4226
+	// Token: 0x040015B2 RID: 5554
 	[SerializeField]
 	protected GameObject m_targetGO;
 
-	// Token: 0x04001083 RID: 4227
+	// Token: 0x040015B3 RID: 5555
 	[SerializeField]
 	protected bool m_targetAlwaysVisible;
 
-	// Token: 0x04001084 RID: 4228
+	// Token: 0x040015B4 RID: 5556
 	protected float m_targetMoveSpeed = 20f;
 
-	// Token: 0x04001085 RID: 4229
+	// Token: 0x040015B5 RID: 5557
 	protected float m_targetTurnSpeed = 9999f;
 
-	// Token: 0x04001086 RID: 4230
+	// Token: 0x040015B6 RID: 5558
 	protected bool m_isFollowing;
 
-	// Token: 0x04001087 RID: 4231
+	// Token: 0x040015B7 RID: 5559
 	protected bool m_isHovering;
 
-	// Token: 0x04001088 RID: 4232
+	// Token: 0x040015B8 RID: 5560
 	protected float m_storedFallMultiplier;
 
-	// Token: 0x04001089 RID: 4233
+	// Token: 0x040015B9 RID: 5561
 	protected float m_orientation;
 }

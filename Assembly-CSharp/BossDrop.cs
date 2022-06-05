@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000469 RID: 1129
+// Token: 0x0200075F RID: 1887
 public class BossDrop
 {
-	// Token: 0x060029AC RID: 10668 RVA: 0x00089C53 File Offset: 0x00087E53
+	// Token: 0x060039B6 RID: 14774 RVA: 0x0001FBC5 File Offset: 0x0001DDC5
 	public BossDrop(int goldAmount, int blueprintCount, int runeOreCount, int oreCount)
 	{
 		this.GoldAmount = goldAmount;
@@ -12,23 +12,23 @@ public class BossDrop
 		this.OreCount = oreCount;
 	}
 
-	// Token: 0x17001033 RID: 4147
-	// (get) Token: 0x060029AD RID: 10669 RVA: 0x00089C78 File Offset: 0x00087E78
-	// (set) Token: 0x060029AE RID: 10670 RVA: 0x00089C80 File Offset: 0x00087E80
+	// Token: 0x17001568 RID: 5480
+	// (get) Token: 0x060039B7 RID: 14775 RVA: 0x0001FBEA File Offset: 0x0001DDEA
+	// (set) Token: 0x060039B8 RID: 14776 RVA: 0x0001FBF2 File Offset: 0x0001DDF2
 	public int BlueprintCount { get; private set; }
 
-	// Token: 0x17001034 RID: 4148
-	// (get) Token: 0x060029AF RID: 10671 RVA: 0x00089C89 File Offset: 0x00087E89
-	// (set) Token: 0x060029B0 RID: 10672 RVA: 0x00089C91 File Offset: 0x00087E91
+	// Token: 0x17001569 RID: 5481
+	// (get) Token: 0x060039B9 RID: 14777 RVA: 0x0001FBFB File Offset: 0x0001DDFB
+	// (set) Token: 0x060039BA RID: 14778 RVA: 0x0001FC03 File Offset: 0x0001DE03
 	public int GoldAmount { get; private set; }
 
-	// Token: 0x17001035 RID: 4149
-	// (get) Token: 0x060029B1 RID: 10673 RVA: 0x00089C9A File Offset: 0x00087E9A
-	// (set) Token: 0x060029B2 RID: 10674 RVA: 0x00089CA2 File Offset: 0x00087EA2
+	// Token: 0x1700156A RID: 5482
+	// (get) Token: 0x060039BB RID: 14779 RVA: 0x0001FC0C File Offset: 0x0001DE0C
+	// (set) Token: 0x060039BC RID: 14780 RVA: 0x0001FC14 File Offset: 0x0001DE14
 	public int OreCount { get; private set; }
 
-	// Token: 0x17001036 RID: 4150
-	// (get) Token: 0x060029B3 RID: 10675 RVA: 0x00089CAB File Offset: 0x00087EAB
-	// (set) Token: 0x060029B4 RID: 10676 RVA: 0x00089CB3 File Offset: 0x00087EB3
+	// Token: 0x1700156B RID: 5483
+	// (get) Token: 0x060039BD RID: 14781 RVA: 0x0001FC1D File Offset: 0x0001DE1D
+	// (set) Token: 0x060039BE RID: 14782 RVA: 0x0001FC25 File Offset: 0x0001DE25
 	public int RuneOreCount { get; private set; }
 }

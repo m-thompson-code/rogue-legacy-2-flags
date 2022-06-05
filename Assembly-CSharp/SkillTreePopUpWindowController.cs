@@ -6,16 +6,16 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000592 RID: 1426
+// Token: 0x02000990 RID: 2448
 public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitter
 {
-	// Token: 0x170012E2 RID: 4834
-	// (get) Token: 0x06003581 RID: 13697 RVA: 0x000B9D75 File Offset: 0x000B7F75
-	// (set) Token: 0x06003582 RID: 13698 RVA: 0x000B9D7D File Offset: 0x000B7F7D
+	// Token: 0x170019FF RID: 6655
+	// (get) Token: 0x06004B63 RID: 19299 RVA: 0x000294A1 File Offset: 0x000276A1
+	// (set) Token: 0x06004B64 RID: 19300 RVA: 0x000294A9 File Offset: 0x000276A9
 	public SkillTreeType PopupType { get; private set; }
 
-	// Token: 0x170012E3 RID: 4835
-	// (get) Token: 0x06003583 RID: 13699 RVA: 0x000B9D86 File Offset: 0x000B7F86
+	// Token: 0x17001A00 RID: 6656
+	// (get) Token: 0x06004B65 RID: 19301 RVA: 0x000047A7 File Offset: 0x000029A7
 	public override WindowID ID
 	{
 		get
@@ -24,8 +24,8 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		}
 	}
 
-	// Token: 0x170012E4 RID: 4836
-	// (get) Token: 0x06003584 RID: 13700 RVA: 0x000B9D89 File Offset: 0x000B7F89
+	// Token: 0x17001A01 RID: 6657
+	// (get) Token: 0x06004B66 RID: 19302 RVA: 0x000294B2 File Offset: 0x000276B2
 	public string Description
 	{
 		get
@@ -38,7 +38,7 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		}
 	}
 
-	// Token: 0x06003585 RID: 13701 RVA: 0x000B9DAF File Offset: 0x000B7FAF
+	// Token: 0x06004B67 RID: 19303 RVA: 0x000294D8 File Offset: 0x000276D8
 	private void Awake()
 	{
 		this.m_cancelClassChange = new Action(this.CancelClassChange);
@@ -46,19 +46,19 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		this.m_onConfirmButtonPressed = new Action<InputActionEventData>(this.OnConfirmButtonPressed);
 	}
 
-	// Token: 0x06003586 RID: 13702 RVA: 0x000B9DE7 File Offset: 0x000B7FE7
+	// Token: 0x06004B68 RID: 19304 RVA: 0x00029510 File Offset: 0x00027710
 	protected override void OnFocus()
 	{
 		this.AddListeners();
 	}
 
-	// Token: 0x06003587 RID: 13703 RVA: 0x000B9DEF File Offset: 0x000B7FEF
+	// Token: 0x06004B69 RID: 19305 RVA: 0x00029518 File Offset: 0x00027718
 	protected override void OnLostFocus()
 	{
 		this.RemoveListeners();
 	}
 
-	// Token: 0x06003588 RID: 13704 RVA: 0x000B9DF8 File Offset: 0x000B7FF8
+	// Token: 0x06004B6A RID: 19306 RVA: 0x001277F0 File Offset: 0x001259F0
 	public void SetPopupType(SkillTreeType popupType)
 	{
 		this.PopupType = popupType;
@@ -72,7 +72,7 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		}
 	}
 
-	// Token: 0x06003589 RID: 13705 RVA: 0x000B9E5A File Offset: 0x000B805A
+	// Token: 0x06004B6B RID: 19307 RVA: 0x00029520 File Offset: 0x00027720
 	protected override void OnOpen()
 	{
 		this.PlayOpenAndCloseAudioSFX(true);
@@ -80,7 +80,7 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		base.StartCoroutine(this.OnOpenAnimCoroutine());
 	}
 
-	// Token: 0x0600358A RID: 13706 RVA: 0x000B9E78 File Offset: 0x000B8078
+	// Token: 0x06004B6C RID: 19308 RVA: 0x00127854 File Offset: 0x00125A54
 	private void PlayOpenAndCloseAudioSFX(bool isOpen)
 	{
 		string text = string.Empty;
@@ -102,7 +102,7 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		}
 	}
 
-	// Token: 0x0600358B RID: 13707 RVA: 0x000B9F09 File Offset: 0x000B8109
+	// Token: 0x06004B6D RID: 19309 RVA: 0x0002953D File Offset: 0x0002773D
 	private IEnumerator OnOpenAnimCoroutine()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -156,28 +156,28 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		yield break;
 	}
 
-	// Token: 0x0600358C RID: 13708 RVA: 0x000B9F18 File Offset: 0x000B8118
+	// Token: 0x06004B6E RID: 19310 RVA: 0x0002954C File Offset: 0x0002774C
 	protected override void OnClose()
 	{
 		this.PlayOpenAndCloseAudioSFX(false);
 		this.m_windowCanvas.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600358D RID: 13709 RVA: 0x000B9F32 File Offset: 0x000B8132
+	// Token: 0x06004B6F RID: 19311 RVA: 0x00029566 File Offset: 0x00027766
 	private void AddListeners()
 	{
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onConfirmButtonPressed, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onConfirmButtonPressed, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Cancel");
 	}
 
-	// Token: 0x0600358E RID: 13710 RVA: 0x000B9F64 File Offset: 0x000B8164
+	// Token: 0x06004B70 RID: 19312 RVA: 0x00029598 File Offset: 0x00027798
 	private void RemoveListeners()
 	{
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onConfirmButtonPressed, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onConfirmButtonPressed, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Cancel");
 	}
 
-	// Token: 0x0600358F RID: 13711 RVA: 0x000B9F98 File Offset: 0x000B8198
+	// Token: 0x06004B71 RID: 19313 RVA: 0x001278E8 File Offset: 0x00125AE8
 	private void OnConfirmButtonPressed(InputActionEventData eventData)
 	{
 		this.m_classToChangeTo = SkillTreeLogicHelper.GetClassTypeFromSkill(this.PopupType);
@@ -192,7 +192,7 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		WindowManager.SetWindowIsOpen(WindowID.SkillTreePopUp, false);
 	}
 
-	// Token: 0x06003590 RID: 13712 RVA: 0x000B9FF8 File Offset: 0x000B81F8
+	// Token: 0x06004B72 RID: 19314 RVA: 0x00127948 File Offset: 0x00125B48
 	private void InitializeConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -213,7 +213,7 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		buttonAtIndex2.SetOnClickAction(this.m_cancelClassChange);
 	}
 
-	// Token: 0x06003591 RID: 13713 RVA: 0x000BA0D0 File Offset: 0x000B82D0
+	// Token: 0x06004B73 RID: 19315 RVA: 0x00127A20 File Offset: 0x00125C20
 	private void ConfirmClassChange()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
@@ -255,14 +255,14 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		LineageWindowController.CharacterLoadedFromLineage = false;
 	}
 
-	// Token: 0x06003592 RID: 13714 RVA: 0x000BA22E File Offset: 0x000B842E
+	// Token: 0x06004B74 RID: 19316 RVA: 0x000295CA File Offset: 0x000277CA
 	private void CancelClassChange()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 		WindowManager.SetWindowIsOpen(WindowID.SkillTreePopUp, false);
 	}
 
-	// Token: 0x06003593 RID: 13715 RVA: 0x000BA240 File Offset: 0x000B8440
+	// Token: 0x06004B75 RID: 19317 RVA: 0x00127B80 File Offset: 0x00125D80
 	private void Update()
 	{
 		Vector3 localEulerAngles = this.m_ray.transform.localEulerAngles;
@@ -270,58 +270,58 @@ public class SkillTreePopUpWindowController : WindowController, IAudioEventEmitt
 		this.m_ray.transform.localEulerAngles = localEulerAngles;
 	}
 
-	// Token: 0x040029C4 RID: 10692
+	// Token: 0x0400399D RID: 14749
 	[SerializeField]
 	private Image m_ray;
 
-	// Token: 0x040029C5 RID: 10693
+	// Token: 0x0400399E RID: 14750
 	[SerializeField]
 	private Image m_popupSprite;
 
-	// Token: 0x040029C6 RID: 10694
+	// Token: 0x0400399F RID: 14751
 	[SerializeField]
 	private LocalizationItem m_titleTextLocItem;
 
-	// Token: 0x040029C7 RID: 10695
+	// Token: 0x040039A0 RID: 14752
 	[SerializeField]
 	private LocalizationItem m_subTitleTextLocItem;
 
-	// Token: 0x040029C8 RID: 10696
+	// Token: 0x040039A1 RID: 14753
 	[SerializeField]
 	private LocalizationItem m_descriptionTextLocItem;
 
-	// Token: 0x040029C9 RID: 10697
+	// Token: 0x040039A2 RID: 14754
 	[SerializeField]
 	private CanvasGroup m_popupCanvasGroup;
 
-	// Token: 0x040029CA RID: 10698
+	// Token: 0x040039A3 RID: 14755
 	[SerializeField]
 	private CanvasGroup m_rayCanvasGroup;
 
-	// Token: 0x040029CB RID: 10699
+	// Token: 0x040039A4 RID: 14756
 	private string m_description = string.Empty;
 
-	// Token: 0x040029CC RID: 10700
+	// Token: 0x040039A5 RID: 14757
 	private bool m_displayedClassChange;
 
-	// Token: 0x040029CD RID: 10701
+	// Token: 0x040039A6 RID: 14758
 	private ClassType m_classToChangeTo;
 
-	// Token: 0x040029CE RID: 10702
+	// Token: 0x040039A7 RID: 14759
 	private Action m_cancelClassChange;
 
-	// Token: 0x040029CF RID: 10703
+	// Token: 0x040039A8 RID: 14760
 	private Action m_confirmClassChange;
 
-	// Token: 0x040029D0 RID: 10704
+	// Token: 0x040039A9 RID: 14761
 	private Action<InputActionEventData> m_onConfirmButtonPressed;
 
-	// Token: 0x040029D1 RID: 10705
+	// Token: 0x040039AA RID: 14762
 	private const string GENERIC_OPEN_AUDIO_PATH = "event:/UI/FrontEnd/ui_fe_generic_popUp";
 
-	// Token: 0x040029D2 RID: 10706
+	// Token: 0x040039AB RID: 14763
 	private const string CLASS_UNLOCK_OPEN_AUDIO_PATH = "event:/UI/FrontEnd/ui_fe_castle_upgrade_popup_open";
 
-	// Token: 0x040029D3 RID: 10707
+	// Token: 0x040039AC RID: 14764
 	private const string CLASS_UNLOCK_CLOSE_AUDIO_PATH = "event:/UI/FrontEnd/ui_fe_castle_upgrade_popup_close";
 }

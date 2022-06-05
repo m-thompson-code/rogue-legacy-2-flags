@@ -4,32 +4,32 @@ using MoreMountains.Tools;
 using Rewired;
 using UnityEngine;
 
-// Token: 0x02000042 RID: 66
+// Token: 0x0200004A RID: 74
 public class CharacterFlight_RL : CharacterAbility
 {
-	// Token: 0x060000E7 RID: 231 RVA: 0x0000833A File Offset: 0x0000653A
+	// Token: 0x060000FB RID: 251 RVA: 0x0000341B File Offset: 0x0000161B
 	public override string HelpBoxText()
 	{
 		return "This component handles basic left/right movement, friction, and ground hit detection. Here you can define standard movement speed, walk speed, and what effects to use when the character hits the ground after a jump/fall.";
 	}
 
-	// Token: 0x17000012 RID: 18
-	// (get) Token: 0x060000E8 RID: 232 RVA: 0x00008341 File Offset: 0x00006541
-	// (set) Token: 0x060000E9 RID: 233 RVA: 0x00008349 File Offset: 0x00006549
+	// Token: 0x17000018 RID: 24
+	// (get) Token: 0x060000FC RID: 252 RVA: 0x00003422 File Offset: 0x00001622
+	// (set) Token: 0x060000FD RID: 253 RVA: 0x0000342A File Offset: 0x0000162A
 	public float MovementSpeedMultiplier { get; set; }
 
-	// Token: 0x17000013 RID: 19
-	// (get) Token: 0x060000EA RID: 234 RVA: 0x00008352 File Offset: 0x00006552
-	// (set) Token: 0x060000EB RID: 235 RVA: 0x0000835A File Offset: 0x0000655A
+	// Token: 0x17000019 RID: 25
+	// (get) Token: 0x060000FE RID: 254 RVA: 0x00003433 File Offset: 0x00001633
+	// (set) Token: 0x060000FF RID: 255 RVA: 0x0000343B File Offset: 0x0000163B
 	public bool MovementForbidden { get; set; }
 
-	// Token: 0x17000014 RID: 20
-	// (get) Token: 0x060000EC RID: 236 RVA: 0x00008363 File Offset: 0x00006563
-	// (set) Token: 0x060000ED RID: 237 RVA: 0x0000836B File Offset: 0x0000656B
+	// Token: 0x1700001A RID: 26
+	// (get) Token: 0x06000100 RID: 256 RVA: 0x00003444 File Offset: 0x00001644
+	// (set) Token: 0x06000101 RID: 257 RVA: 0x0000344C File Offset: 0x0000164C
 	public bool IsAssistFlying { get; private set; }
 
-	// Token: 0x17000015 RID: 21
-	// (get) Token: 0x060000EE RID: 238 RVA: 0x00008374 File Offset: 0x00006574
+	// Token: 0x1700001B RID: 27
+	// (get) Token: 0x06000102 RID: 258 RVA: 0x00003455 File Offset: 0x00001655
 	public bool IsFlying
 	{
 		get
@@ -38,8 +38,8 @@ public class CharacterFlight_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x17000016 RID: 22
-	// (get) Token: 0x060000EF RID: 239 RVA: 0x0000838F File Offset: 0x0000658F
+	// Token: 0x1700001C RID: 28
+	// (get) Token: 0x06000103 RID: 259 RVA: 0x00003470 File Offset: 0x00001670
 	public bool FlightTimeAuthorized
 	{
 		get
@@ -48,7 +48,7 @@ public class CharacterFlight_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000F0 RID: 240 RVA: 0x0000839E File Offset: 0x0000659E
+	// Token: 0x06000104 RID: 260 RVA: 0x0000347F File Offset: 0x0000167F
 	protected override void Initialization()
 	{
 		base.Initialization();
@@ -56,7 +56,7 @@ public class CharacterFlight_RL : CharacterAbility
 		this.MovementForbidden = false;
 	}
 
-	// Token: 0x060000F1 RID: 241 RVA: 0x000083B8 File Offset: 0x000065B8
+	// Token: 0x06000105 RID: 261 RVA: 0x00044FF8 File Offset: 0x000431F8
 	protected override void HandleInput()
 	{
 		if (!ReInput.isReady)
@@ -86,26 +86,26 @@ public class CharacterFlight_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000F2 RID: 242 RVA: 0x00008440 File Offset: 0x00006640
+	// Token: 0x06000106 RID: 262 RVA: 0x00003499 File Offset: 0x00001699
 	public void ResetIsAssistFlying()
 	{
 		this.IsAssistFlying = false;
 	}
 
-	// Token: 0x060000F3 RID: 243 RVA: 0x00008449 File Offset: 0x00006649
+	// Token: 0x06000107 RID: 263 RVA: 0x000034A2 File Offset: 0x000016A2
 	public override void ProcessAbility()
 	{
 		base.ProcessAbility();
 		this.HandleFlightMovement();
 	}
 
-	// Token: 0x060000F4 RID: 244 RVA: 0x00008457 File Offset: 0x00006657
+	// Token: 0x06000108 RID: 264 RVA: 0x000034B0 File Offset: 0x000016B0
 	protected bool EvaluateFlightConditions()
 	{
 		return this.AbilityPermitted && this.FlightTimeAuthorized && this.IsFlying;
 	}
 
-	// Token: 0x060000F5 RID: 245 RVA: 0x00008474 File Offset: 0x00006674
+	// Token: 0x06000109 RID: 265 RVA: 0x00045080 File Offset: 0x00043280
 	public void StartFlight(float duration = 5f, float speedMod = 0f)
 	{
 		this.IsAssistFlying = false;
@@ -121,7 +121,7 @@ public class CharacterFlight_RL : CharacterAbility
 		this._animator.SetLayerWeight(10, 1f);
 	}
 
-	// Token: 0x060000F6 RID: 246 RVA: 0x0000855C File Offset: 0x0000675C
+	// Token: 0x0600010A RID: 266 RVA: 0x00045168 File Offset: 0x00043368
 	public void StopFlight()
 	{
 		if (this._abilityInitialized)
@@ -136,7 +136,7 @@ public class CharacterFlight_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000F7 RID: 247 RVA: 0x000085AC File Offset: 0x000067AC
+	// Token: 0x0600010B RID: 267 RVA: 0x000451B8 File Offset: 0x000433B8
 	protected void HandleFlightMovement()
 	{
 		if (!this.EvaluateFlightConditions())
@@ -206,7 +206,7 @@ public class CharacterFlight_RL : CharacterAbility
 		this._controller.SetVerticalForce(num8);
 	}
 
-	// Token: 0x060000F8 RID: 248 RVA: 0x0000883A File Offset: 0x00006A3A
+	// Token: 0x0600010C RID: 268 RVA: 0x000034CD File Offset: 0x000016CD
 	protected override void InitializeAnimatorParameters()
 	{
 		this.RegisterAnimatorParameter("Speed", AnimatorControllerParameterType.Float);
@@ -214,7 +214,7 @@ public class CharacterFlight_RL : CharacterAbility
 		this.RegisterAnimatorParameter("IsFlying", AnimatorControllerParameterType.Bool);
 	}
 
-	// Token: 0x060000F9 RID: 249 RVA: 0x00008860 File Offset: 0x00006A60
+	// Token: 0x0600010D RID: 269 RVA: 0x00045448 File Offset: 0x00043648
 	public override void UpdateAnimator()
 	{
 		float magnitude = new Vector2(this._horizontalMovement, this._verticalMovement).magnitude;
@@ -226,12 +226,12 @@ public class CharacterFlight_RL : CharacterAbility
 		MMAnimator.UpdateAnimatorBool(this._animator, "IsFlying", this.IsFlying, this._character._animatorParameters);
 	}
 
-	// Token: 0x0400015A RID: 346
+	// Token: 0x0400017B RID: 379
 	private float _horizontalMovement;
 
-	// Token: 0x0400015B RID: 347
+	// Token: 0x0400017C RID: 380
 	private float _verticalMovement;
 
-	// Token: 0x0400015C RID: 348
+	// Token: 0x0400017D RID: 381
 	private float m_flightTime;
 }

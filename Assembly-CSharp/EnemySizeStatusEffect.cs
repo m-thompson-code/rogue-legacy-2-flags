@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000305 RID: 773
+// Token: 0x0200052D RID: 1325
 public class EnemySizeStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D52 RID: 3410
-	// (get) Token: 0x06001EB8 RID: 7864 RVA: 0x0006362E File Offset: 0x0006182E
+	// Token: 0x1700113D RID: 4413
+	// (get) Token: 0x06002AAB RID: 10923 RVA: 0x00017DE0 File Offset: 0x00015FE0
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemySizeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D53 RID: 3411
-	// (get) Token: 0x06001EB9 RID: 7865 RVA: 0x00063635 File Offset: 0x00061835
+	// Token: 0x1700113E RID: 4414
+	// (get) Token: 0x06002AAC RID: 10924 RVA: 0x00017838 File Offset: 0x00015A38
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class EnemySizeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EBA RID: 7866 RVA: 0x0006363C File Offset: 0x0006183C
+	// Token: 0x06002AAD RID: 10925 RVA: 0x00017DE7 File Offset: 0x00015FE7
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.Size);
@@ -45,7 +45,7 @@ public class EnemySizeStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001EBB RID: 7867 RVA: 0x0006364C File Offset: 0x0006184C
+	// Token: 0x06002AAE RID: 10926 RVA: 0x000C24F0 File Offset: 0x000C06F0
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);

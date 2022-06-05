@@ -8,12 +8,12 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008DD RID: 2269
+	// Token: 0x02000E4B RID: 3659
 	public class AudioManager : MonoBehaviour
 	{
-		// Token: 0x17001838 RID: 6200
-		// (get) Token: 0x06004A77 RID: 19063 RVA: 0x0010C0EF File Offset: 0x0010A2EF
-		// (set) Token: 0x06004A78 RID: 19064 RVA: 0x0010C0F6 File Offset: 0x0010A2F6
+		// Token: 0x17002117 RID: 8471
+		// (get) Token: 0x06006727 RID: 26407 RVA: 0x00038CE0 File Offset: 0x00036EE0
+		// (set) Token: 0x06006728 RID: 26408 RVA: 0x00038CE7 File Offset: 0x00036EE7
 		private static AudioManager Instance
 		{
 			get
@@ -26,8 +26,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001839 RID: 6201
-		// (get) Token: 0x06004A79 RID: 19065 RVA: 0x0010C100 File Offset: 0x0010A300
+		// Token: 0x17002118 RID: 8472
+		// (get) Token: 0x06006729 RID: 26409 RVA: 0x0017C8FC File Offset: 0x0017AAFC
 		public static bool IsMusicPaused
 		{
 			get
@@ -45,8 +45,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700183A RID: 6202
-		// (get) Token: 0x06004A7A RID: 19066 RVA: 0x0010C134 File Offset: 0x0010A334
+		// Token: 0x17002119 RID: 8473
+		// (get) Token: 0x0600672A RID: 26410 RVA: 0x0017C930 File Offset: 0x0017AB30
 		public static bool IsSFXPaused
 		{
 			get
@@ -64,8 +64,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700183B RID: 6203
-		// (get) Token: 0x06004A7B RID: 19067 RVA: 0x0010C168 File Offset: 0x0010A368
+		// Token: 0x1700211A RID: 8474
+		// (get) Token: 0x0600672B RID: 26411 RVA: 0x0017C964 File Offset: 0x0017AB64
 		public static bool IsMasterPaused
 		{
 			get
@@ -79,8 +79,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700183C RID: 6204
-		// (get) Token: 0x06004A7C RID: 19068 RVA: 0x0010C191 File Offset: 0x0010A391
+		// Token: 0x1700211B RID: 8475
+		// (get) Token: 0x0600672C RID: 26412 RVA: 0x00038CEF File Offset: 0x00036EEF
 		public static bool IsInitialized
 		{
 			get
@@ -89,8 +89,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700183D RID: 6205
-		// (get) Token: 0x06004A7D RID: 19069 RVA: 0x0010C1B6 File Offset: 0x0010A3B6
+		// Token: 0x1700211C RID: 8476
+		// (get) Token: 0x0600672D RID: 26413 RVA: 0x00038D14 File Offset: 0x00036F14
 		public static bool IsMasterBusLoaded
 		{
 			get
@@ -99,8 +99,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700183E RID: 6206
-		// (get) Token: 0x06004A7E RID: 19070 RVA: 0x0010C1C2 File Offset: 0x0010A3C2
+		// Token: 0x1700211D RID: 8477
+		// (get) Token: 0x0600672E RID: 26414 RVA: 0x00038D20 File Offset: 0x00036F20
 		public static bool IsMusicBusLoaded
 		{
 			get
@@ -109,8 +109,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700183F RID: 6207
-		// (get) Token: 0x06004A7F RID: 19071 RVA: 0x0010C1CE File Offset: 0x0010A3CE
+		// Token: 0x1700211E RID: 8478
+		// (get) Token: 0x0600672F RID: 26415 RVA: 0x00038D2C File Offset: 0x00036F2C
 		public static bool IsSFXBusLoaded
 		{
 			get
@@ -119,8 +119,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001840 RID: 6208
-		// (get) Token: 0x06004A80 RID: 19072 RVA: 0x0010C1E8 File Offset: 0x0010A3E8
+		// Token: 0x1700211F RID: 8479
+		// (get) Token: 0x06006730 RID: 26416 RVA: 0x00038D46 File Offset: 0x00036F46
 		public static bool IsEnemySFXBusLoaded
 		{
 			get
@@ -129,8 +129,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001841 RID: 6209
-		// (get) Token: 0x06004A81 RID: 19073 RVA: 0x0010C202 File Offset: 0x0010A402
+		// Token: 0x17002120 RID: 8480
+		// (get) Token: 0x06006731 RID: 26417 RVA: 0x00038D60 File Offset: 0x00036F60
 		public static bool IsPlayerSFXBusLoaded
 		{
 			get
@@ -139,7 +139,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A82 RID: 19074 RVA: 0x0010C21C File Offset: 0x0010A41C
+		// Token: 0x06006732 RID: 26418 RVA: 0x00038D7A File Offset: 0x00036F7A
 		private void Awake()
 		{
 			if (AudioManager.Instance == null)
@@ -149,7 +149,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A83 RID: 19075 RVA: 0x0010C238 File Offset: 0x0010A438
+		// Token: 0x06006733 RID: 26419 RVA: 0x0017C990 File Offset: 0x0017AB90
 		private static void CheckAudioBuses()
 		{
 			if (!AudioManager.m_masterBus.isValid())
@@ -178,7 +178,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A84 RID: 19076 RVA: 0x0010C2E8 File Offset: 0x0010A4E8
+		// Token: 0x06006734 RID: 26420 RVA: 0x0017CA40 File Offset: 0x0017AC40
 		public static Guid GetEventID(string audioEvent)
 		{
 			if (!AudioManager.m_audioEventIDTable.ContainsKey(audioEvent))
@@ -190,7 +190,7 @@ namespace RLAudio
 			return AudioManager.m_audioEventIDTable[audioEvent];
 		}
 
-		// Token: 0x06004A85 RID: 19077 RVA: 0x0010C32C File Offset: 0x0010A52C
+		// Token: 0x06006735 RID: 26421 RVA: 0x0017CA84 File Offset: 0x0017AC84
 		public static PARAMETER_ID GetParameterID(Guid audioEvent, string parameter)
 		{
 			AudioManager.EventParameterPair key = new AudioManager.EventParameterPair(audioEvent, parameter);
@@ -203,31 +203,31 @@ namespace RLAudio
 			return AudioManager.m_parameterIDTable[key];
 		}
 
-		// Token: 0x06004A86 RID: 19078 RVA: 0x0010C37D File Offset: 0x0010A57D
+		// Token: 0x06006736 RID: 26422 RVA: 0x00038D94 File Offset: 0x00036F94
 		private static void Initialize()
 		{
 			AudioManager.CheckAudioBuses();
 		}
 
-		// Token: 0x06004A87 RID: 19079 RVA: 0x0010C384 File Offset: 0x0010A584
+		// Token: 0x06006737 RID: 26423 RVA: 0x00038D9B File Offset: 0x00036F9B
 		public static float GetMasterVolume()
 		{
 			return AudioManager.GetVolume(AudioManager.m_masterBus);
 		}
 
-		// Token: 0x06004A88 RID: 19080 RVA: 0x0010C390 File Offset: 0x0010A590
+		// Token: 0x06006738 RID: 26424 RVA: 0x00038DA7 File Offset: 0x00036FA7
 		public static float GetMusicVolume()
 		{
 			return AudioManager.GetVolume(AudioManager.m_musicBus);
 		}
 
-		// Token: 0x06004A89 RID: 19081 RVA: 0x0010C39C File Offset: 0x0010A59C
+		// Token: 0x06006739 RID: 26425 RVA: 0x00038DB3 File Offset: 0x00036FB3
 		public static float GetSFXVolume()
 		{
 			return AudioManager.GetVolume(AudioManager.m_sfxBus);
 		}
 
-		// Token: 0x06004A8A RID: 19082 RVA: 0x0010C3A8 File Offset: 0x0010A5A8
+		// Token: 0x0600673A RID: 26426 RVA: 0x0017CAD8 File Offset: 0x0017ACD8
 		private static float GetVolume(Bus bus)
 		{
 			AudioManager.CheckAudioBuses();
@@ -246,7 +246,7 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004A8B RID: 19083 RVA: 0x0010C3F8 File Offset: 0x0010A5F8
+		// Token: 0x0600673B RID: 26427 RVA: 0x0017CB28 File Offset: 0x0017AD28
 		public static void Play(IAudioEventEmitter caller, EventInstance eventInstance)
 		{
 			if (AudioManager.Instance.m_logCallerDescriptionsToConsole)
@@ -260,7 +260,7 @@ namespace RLAudio
 			eventInstance.start();
 		}
 
-		// Token: 0x06004A8C RID: 19084 RVA: 0x0010C434 File Offset: 0x0010A634
+		// Token: 0x0600673C RID: 26428 RVA: 0x00038DBF File Offset: 0x00036FBF
 		public static void Play(IAudioEventEmitter caller, StudioEventEmitter studioEventEmitter)
 		{
 			if (AudioManager.Instance.m_logCallerDescriptionsToConsole)
@@ -270,12 +270,12 @@ namespace RLAudio
 			studioEventEmitter.Play();
 		}
 
-		// Token: 0x06004A8D RID: 19085 RVA: 0x0010C454 File Offset: 0x0010A654
+		// Token: 0x0600673D RID: 26429 RVA: 0x00002FCA File Offset: 0x000011CA
 		private static void LogAudioEventToConsole(IAudioEventEmitter caller, string eventPath)
 		{
 		}
 
-		// Token: 0x06004A8E RID: 19086 RVA: 0x0010C458 File Offset: 0x0010A658
+		// Token: 0x0600673E RID: 26430 RVA: 0x0017CB64 File Offset: 0x0017AD64
 		public static void PlayAttached(IAudioEventEmitter caller, EventInstance eventInstance, GameObject gameObject)
 		{
 			Rigidbody2D rigidBody2D = null;
@@ -283,7 +283,7 @@ namespace RLAudio
 			AudioManager.Play(caller, eventInstance);
 		}
 
-		// Token: 0x06004A8F RID: 19087 RVA: 0x0010C47B File Offset: 0x0010A67B
+		// Token: 0x0600673F RID: 26431 RVA: 0x00038DDF File Offset: 0x00036FDF
 		public static void PlayOneShotAttached(IAudioEventEmitter caller, string path, GameObject gameObject)
 		{
 			if (!string.IsNullOrEmpty(path))
@@ -296,7 +296,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A90 RID: 19088 RVA: 0x0010C49F File Offset: 0x0010A69F
+		// Token: 0x06006740 RID: 26432 RVA: 0x00038E03 File Offset: 0x00037003
 		public static void PlayOneShot(IAudioEventEmitter caller, string path, Vector3 position = default(Vector3))
 		{
 			if (!string.IsNullOrEmpty(path))
@@ -309,13 +309,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A91 RID: 19089 RVA: 0x0010C4C3 File Offset: 0x0010A6C3
+		// Token: 0x06006741 RID: 26433 RVA: 0x00038E27 File Offset: 0x00037027
 		public static void PlayDelayedOneShot(IAudioEventEmitter caller, string path, Vector2 position, float delayTime = -1f)
 		{
 			AudioManager.Instance.StartCoroutine(AudioManager.Instance.PlayDelayedOneShotCoroutine(caller, path, position, delayTime));
 		}
 
-		// Token: 0x06004A92 RID: 19090 RVA: 0x0010C4DE File Offset: 0x0010A6DE
+		// Token: 0x06006742 RID: 26434 RVA: 0x00038E42 File Offset: 0x00037042
 		private IEnumerator PlayDelayedOneShotCoroutine(IAudioEventEmitter caller, string path, Vector2 position, float time)
 		{
 			float waitTime = (time >= 0f) ? time : UnityEngine.Random.Range(0f, this.m_maxRandomDelay);
@@ -332,38 +332,38 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004A93 RID: 19091 RVA: 0x0010C50A File Offset: 0x0010A70A
+		// Token: 0x06006743 RID: 26435 RVA: 0x00038E6E File Offset: 0x0003706E
 		public static void Play(IAudioEventEmitter caller, EventInstance eventInstance, Vector3 worldPosition)
 		{
 			eventInstance.set3DAttributes(worldPosition.To3DAttributes());
 			AudioManager.Play(caller, eventInstance);
 		}
 
-		// Token: 0x06004A94 RID: 19092 RVA: 0x0010C521 File Offset: 0x0010A721
+		// Token: 0x06006744 RID: 26436 RVA: 0x00038E85 File Offset: 0x00037085
 		public static void Play(IAudioEventEmitter caller, string eventPath, Vector3 worldPosition = default(Vector3))
 		{
 			RuntimeManager.PlayOneShot(eventPath, worldPosition);
 		}
 
-		// Token: 0x06004A95 RID: 19093 RVA: 0x0010C52A File Offset: 0x0010A72A
+		// Token: 0x06006745 RID: 26437 RVA: 0x00038E8E File Offset: 0x0003708E
 		public static void SetMasterVolume(float volume)
 		{
 			AudioManager.SetVolume(AudioManager.m_masterBus, volume);
 		}
 
-		// Token: 0x06004A96 RID: 19094 RVA: 0x0010C537 File Offset: 0x0010A737
+		// Token: 0x06006746 RID: 26438 RVA: 0x00038E9B File Offset: 0x0003709B
 		public static void SetMusicVolume(float volume)
 		{
 			AudioManager.SetVolume(AudioManager.m_musicBus, volume);
 		}
 
-		// Token: 0x06004A97 RID: 19095 RVA: 0x0010C544 File Offset: 0x0010A744
+		// Token: 0x06006747 RID: 26439 RVA: 0x00038EA8 File Offset: 0x000370A8
 		public static void SetSFXVolume(float volume)
 		{
 			AudioManager.SetVolume(AudioManager.m_sfxBus, volume);
 		}
 
-		// Token: 0x06004A98 RID: 19096 RVA: 0x0010C554 File Offset: 0x0010A754
+		// Token: 0x06006748 RID: 26440 RVA: 0x0017CB88 File Offset: 0x0017AD88
 		private static void SetVolume(Bus bus, float volume)
 		{
 			AudioManager.CheckAudioBuses();
@@ -380,7 +380,7 @@ namespace RLAudio
 			});
 		}
 
-		// Token: 0x06004A99 RID: 19097 RVA: 0x0010C5A0 File Offset: 0x0010A7A0
+		// Token: 0x06006749 RID: 26441 RVA: 0x0017CBD4 File Offset: 0x0017ADD4
 		public static void SetMasterPaused(bool pause)
 		{
 			if (AudioManager.IsMasterBusLoaded)
@@ -393,7 +393,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A9A RID: 19098 RVA: 0x0010C5E0 File Offset: 0x0010A7E0
+		// Token: 0x0600674A RID: 26442 RVA: 0x0017CC14 File Offset: 0x0017AE14
 		public static void SetMusicPaused(bool pause)
 		{
 			if (AudioManager.IsMusicBusLoaded)
@@ -406,7 +406,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A9B RID: 19099 RVA: 0x0010C620 File Offset: 0x0010A820
+		// Token: 0x0600674B RID: 26443 RVA: 0x0017CC54 File Offset: 0x0017AE54
 		public static void SetSFXPaused(bool pause)
 		{
 			if (AudioManager.IsSFXBusLoaded)
@@ -419,7 +419,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A9C RID: 19100 RVA: 0x0010C660 File Offset: 0x0010A860
+		// Token: 0x0600674C RID: 26444 RVA: 0x0017CC94 File Offset: 0x0017AE94
 		public static void SetEnemySFXPaused(bool pause)
 		{
 			if (AudioManager.IsEnemySFXBusLoaded)
@@ -432,7 +432,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A9D RID: 19101 RVA: 0x0010C6A0 File Offset: 0x0010A8A0
+		// Token: 0x0600674D RID: 26445 RVA: 0x0017CCD4 File Offset: 0x0017AED4
 		public static void SetPlayerSFXPaused(bool pause)
 		{
 			if (AudioManager.IsPlayerSFXBusLoaded)
@@ -445,13 +445,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A9E RID: 19102 RVA: 0x0010C6DF File Offset: 0x0010A8DF
+		// Token: 0x0600674E RID: 26446 RVA: 0x00038EB5 File Offset: 0x000370B5
 		public static void Stop(EventInstance eventInstance, FMOD.Studio.STOP_MODE stopMode = FMOD.Studio.STOP_MODE.ALLOWFADEOUT)
 		{
 			eventInstance.stop(stopMode);
 		}
 
-		// Token: 0x06004A9F RID: 19103 RVA: 0x0010C6EA File Offset: 0x0010A8EA
+		// Token: 0x0600674F RID: 26447 RVA: 0x00038EC0 File Offset: 0x000370C0
 		public static void StopAllAudio(FMOD.Studio.STOP_MODE stopMode)
 		{
 			if (AudioManager.m_masterBus.isValid())
@@ -460,83 +460,83 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003E97 RID: 16023
+		// Token: 0x040053AC RID: 21420
 		[SerializeField]
 		private float m_maxRandomDelay = 0.25f;
 
-		// Token: 0x04003E98 RID: 16024
+		// Token: 0x040053AD RID: 21421
 		[SerializeField]
 		private bool m_logCallerDescriptionsToConsole;
 
-		// Token: 0x04003E99 RID: 16025
+		// Token: 0x040053AE RID: 21422
 		[SerializeField]
 		[Tooltip("Only display Audio Events whose paths contain the following string.")]
 		private string m_eventPathFilter = string.Empty;
 
-		// Token: 0x04003E9A RID: 16026
+		// Token: 0x040053AF RID: 21423
 		private const string SFX_BUS_PATH = "bus:/Master/User_Sfx";
 
-		// Token: 0x04003E9B RID: 16027
+		// Token: 0x040053B0 RID: 21424
 		private const string SFX_GAMEPLAY_BUS_PATH = "bus:/Master/User_Sfx/Sfx_Master/Gameplay";
 
-		// Token: 0x04003E9C RID: 16028
+		// Token: 0x040053B1 RID: 21425
 		private const string SFX_ENEMY_BUS_PATH = "bus:/Master/User_Sfx/Sfx_Master/Gameplay/Enemies";
 
-		// Token: 0x04003E9D RID: 16029
+		// Token: 0x040053B2 RID: 21426
 		private const string SFX_PLAYER_BUS_PATH = "bus:/Master/User_Sfx/Sfx_Master/Gameplay/PlayerCharacter";
 
-		// Token: 0x04003E9E RID: 16030
+		// Token: 0x040053B3 RID: 21427
 		private const string MUSIC_BUS_PATH = "bus:/Master/User_Music";
 
-		// Token: 0x04003E9F RID: 16031
+		// Token: 0x040053B4 RID: 21428
 		private const string MASTER_BUS_PATH = "Bus:/";
 
-		// Token: 0x04003EA0 RID: 16032
+		// Token: 0x040053B5 RID: 21429
 		private static Dictionary<string, Guid> m_audioEventIDTable = new Dictionary<string, Guid>();
 
-		// Token: 0x04003EA1 RID: 16033
+		// Token: 0x040053B6 RID: 21430
 		private static Dictionary<AudioManager.EventParameterPair, PARAMETER_ID> m_parameterIDTable = new Dictionary<AudioManager.EventParameterPair, PARAMETER_ID>();
 
-		// Token: 0x04003EA2 RID: 16034
+		// Token: 0x040053B7 RID: 21431
 		private static Bus m_masterBus;
 
-		// Token: 0x04003EA3 RID: 16035
+		// Token: 0x040053B8 RID: 21432
 		private static Bus m_musicBus;
 
-		// Token: 0x04003EA4 RID: 16036
+		// Token: 0x040053B9 RID: 21433
 		private static Bus m_sfxBus;
 
-		// Token: 0x04003EA5 RID: 16037
+		// Token: 0x040053BA RID: 21434
 		private static Bus m_sfxGameplayBus;
 
-		// Token: 0x04003EA6 RID: 16038
+		// Token: 0x040053BB RID: 21435
 		private static Bus m_sfxEnemyBus;
 
-		// Token: 0x04003EA7 RID: 16039
+		// Token: 0x040053BC RID: 21436
 		private static Bus m_sfxPlayerBus;
 
-		// Token: 0x04003EA8 RID: 16040
+		// Token: 0x040053BD RID: 21437
 		private static AudioManager m_instance;
 
-		// Token: 0x04003EA9 RID: 16041
+		// Token: 0x040053BE RID: 21438
 		private WaitRL_Yield m_waitDelay;
 
-		// Token: 0x02000EDF RID: 3807
+		// Token: 0x02000E4C RID: 3660
 		private struct EventParameterPair
 		{
-			// Token: 0x06006EF1 RID: 28401 RVA: 0x0019C821 File Offset: 0x0019AA21
+			// Token: 0x06006752 RID: 26450 RVA: 0x00038F0E File Offset: 0x0003710E
 			public EventParameterPair(Guid audioEvent, string parameter)
 			{
 				this.AudioEvent = audioEvent;
 				this.Parameter = parameter;
 			}
 
-			// Token: 0x1700240A RID: 9226
-			// (get) Token: 0x06006EF2 RID: 28402 RVA: 0x0019C831 File Offset: 0x0019AA31
+			// Token: 0x17002121 RID: 8481
+			// (get) Token: 0x06006753 RID: 26451 RVA: 0x00038F1E File Offset: 0x0003711E
 			public readonly Guid AudioEvent { get; }
 
-			// Token: 0x1700240B RID: 9227
-			// (get) Token: 0x06006EF3 RID: 28403 RVA: 0x0019C839 File Offset: 0x0019AA39
+			// Token: 0x17002122 RID: 8482
+			// (get) Token: 0x06006754 RID: 26452 RVA: 0x00038F26 File Offset: 0x00037126
 			public readonly string Parameter { get; }
 		}
 	}

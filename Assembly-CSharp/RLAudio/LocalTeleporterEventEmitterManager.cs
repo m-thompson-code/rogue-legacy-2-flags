@@ -7,11 +7,11 @@ using UnityEngine.Events;
 
 namespace RLAudio
 {
-	// Token: 0x020008F9 RID: 2297
+	// Token: 0x02000E70 RID: 3696
 	public class LocalTeleporterEventEmitterManager : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001860 RID: 6240
-		// (get) Token: 0x06004B63 RID: 19299 RVA: 0x0010F174 File Offset: 0x0010D374
+		// Token: 0x1700214D RID: 8525
+		// (get) Token: 0x0600683A RID: 26682 RVA: 0x00009A7B File Offset: 0x00007C7B
 		public string Description
 		{
 			get
@@ -20,7 +20,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B64 RID: 19300 RVA: 0x0010F17C File Offset: 0x0010D37C
+		// Token: 0x0600683B RID: 26683 RVA: 0x0017F220 File Offset: 0x0017D420
 		private void Awake()
 		{
 			this.m_teleporter.OnEnterEvent.AddListener(new UnityAction(this.OnPlayerEnter));
@@ -29,7 +29,7 @@ namespace RLAudio
 			this.m_travelEventInstance = AudioUtility.GetEventInstance(this.m_travelAudioPath, base.transform);
 		}
 
-		// Token: 0x06004B65 RID: 19301 RVA: 0x0010F1F4 File Offset: 0x0010D3F4
+		// Token: 0x0600683C RID: 26684 RVA: 0x00039AD8 File Offset: 0x00037CD8
 		private void OnDestroy()
 		{
 			if (this.m_travelEventInstance.isValid())
@@ -38,14 +38,14 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B66 RID: 19302 RVA: 0x0010F20F File Offset: 0x0010D40F
+		// Token: 0x0600683D RID: 26685 RVA: 0x00039AF3 File Offset: 0x00037CF3
 		private void OnPlayerEnter()
 		{
 			AudioManager.PlayOneShot(this, this.m_enterAudioPath, this.m_teleporter.transform.position);
 			base.StartCoroutine(this.UpdateTravelAudioParameters());
 		}
 
-		// Token: 0x06004B67 RID: 19303 RVA: 0x0010F23A File Offset: 0x0010D43A
+		// Token: 0x0600683E RID: 26686 RVA: 0x00039B1E File Offset: 0x00037D1E
 		private IEnumerator CalculateTeletubeLength()
 		{
 			while (LocalTeleporterController.LeylinePoints == null || LocalTeleporterController.LeylinePoints.Count == 0)
@@ -60,7 +60,7 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004B68 RID: 19304 RVA: 0x0010F249 File Offset: 0x0010D449
+		// Token: 0x0600683F RID: 26687 RVA: 0x00039B2D File Offset: 0x00037D2D
 		private IEnumerator UpdateTravelAudioParameters()
 		{
 			if (this.m_teletubeLength == -1f)
@@ -91,7 +91,7 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004B69 RID: 19305 RVA: 0x0010F258 File Offset: 0x0010D458
+		// Token: 0x06006840 RID: 26688 RVA: 0x00039B3C File Offset: 0x00037D3C
 		private void OnPlayerExit()
 		{
 			base.StopAllCoroutines();
@@ -99,52 +99,52 @@ namespace RLAudio
 			AudioManager.Stop(this.m_travelEventInstance, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 		}
 
-		// Token: 0x06004B6A RID: 19306 RVA: 0x0010F28D File Offset: 0x0010D48D
+		// Token: 0x06006841 RID: 26689 RVA: 0x00039B71 File Offset: 0x00037D71
 		private void OnPlayerHitCorner(Vector2 coordinates)
 		{
 			AudioManager.PlayOneShot(this, this.m_cornerHitAudioPath, coordinates);
 		}
 
-		// Token: 0x04003F66 RID: 16230
+		// Token: 0x040054AA RID: 21674
 		[SerializeField]
 		private LocalTeleporterController m_teleporter;
 
-		// Token: 0x04003F67 RID: 16231
+		// Token: 0x040054AB RID: 21675
 		[SerializeField]
 		[EventRef]
 		private string m_enterAudioPath;
 
-		// Token: 0x04003F68 RID: 16232
+		// Token: 0x040054AC RID: 21676
 		[SerializeField]
 		[EventRef]
 		private string m_exitAudioPath;
 
-		// Token: 0x04003F69 RID: 16233
+		// Token: 0x040054AD RID: 21677
 		[SerializeField]
 		[EventRef]
 		private string m_cornerHitAudioPath;
 
-		// Token: 0x04003F6A RID: 16234
+		// Token: 0x040054AE RID: 21678
 		[SerializeField]
 		[EventRef]
 		private string m_travelAudioPath;
 
-		// Token: 0x04003F6B RID: 16235
+		// Token: 0x040054AF RID: 21679
 		private EventInstance m_travelEventInstance;
 
-		// Token: 0x04003F6C RID: 16236
+		// Token: 0x040054B0 RID: 21680
 		private float m_teletubeLength = -1f;
 
-		// Token: 0x04003F6D RID: 16237
+		// Token: 0x040054B1 RID: 21681
 		private WaitForSeconds m_delayBeforeSettingParameters = new WaitForSeconds(0.25f);
 
-		// Token: 0x04003F6E RID: 16238
+		// Token: 0x040054B2 RID: 21682
 		private const string TELETUBE_PROGRESS_PARAMETER = "teletube_progress";
 
-		// Token: 0x04003F6F RID: 16239
+		// Token: 0x040054B3 RID: 21683
 		private const string TELETUBE_SPEED_PARAMETER = "teletube_speed";
 
-		// Token: 0x04003F70 RID: 16240
+		// Token: 0x040054B4 RID: 21684
 		private const float TELETUBE_END_POINT_SQUARE_MAGNITUDE = 10f;
 	}
 }

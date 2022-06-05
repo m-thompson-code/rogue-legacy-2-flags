@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001B6 RID: 438
+// Token: 0x02000325 RID: 805
 public class RandomizeParamAnimBehaviour : StateMachineBehaviour
 {
-	// Token: 0x0600113B RID: 4411 RVA: 0x00031ED8 File Offset: 0x000300D8
+	// Token: 0x06001984 RID: 6532 RVA: 0x00090294 File Offset: 0x0008E494
 	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		this.m_currentLoop = 0;
@@ -20,7 +20,7 @@ public class RandomizeParamAnimBehaviour : StateMachineBehaviour
 		animator.SetFloat(this.m_paramName, this.m_randomNum);
 	}
 
-	// Token: 0x0600113C RID: 4412 RVA: 0x00031F45 File Offset: 0x00030145
+	// Token: 0x06001985 RID: 6533 RVA: 0x0000CDE1 File Offset: 0x0000AFE1
 	public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		if (this.m_randomizeEveryAnimLoop && this.m_currentLoop < (int)stateInfo.normalizedTime)
@@ -30,32 +30,32 @@ public class RandomizeParamAnimBehaviour : StateMachineBehaviour
 		}
 	}
 
-	// Token: 0x04001224 RID: 4644
+	// Token: 0x0400182D RID: 6189
 	[SerializeField]
 	private string m_paramName;
 
-	// Token: 0x04001225 RID: 4645
+	// Token: 0x0400182E RID: 6190
 	[SerializeField]
 	private float m_randomMin;
 
-	// Token: 0x04001226 RID: 4646
+	// Token: 0x0400182F RID: 6191
 	[SerializeField]
 	private float m_randomMax = 1f;
 
-	// Token: 0x04001227 RID: 4647
+	// Token: 0x04001830 RID: 6192
 	[SerializeField]
 	private bool m_randomizeEveryOnEnter = true;
 
-	// Token: 0x04001228 RID: 4648
+	// Token: 0x04001831 RID: 6193
 	[SerializeField]
 	private bool m_randomizeEveryAnimLoop;
 
-	// Token: 0x04001229 RID: 4649
+	// Token: 0x04001832 RID: 6194
 	private bool m_randomNumCached;
 
-	// Token: 0x0400122A RID: 4650
+	// Token: 0x04001833 RID: 6195
 	private float m_randomNum;
 
-	// Token: 0x0400122B RID: 4651
+	// Token: 0x04001834 RID: 6196
 	private int m_currentLoop;
 }

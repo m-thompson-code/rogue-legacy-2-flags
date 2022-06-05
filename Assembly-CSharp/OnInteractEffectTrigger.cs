@@ -2,11 +2,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200041B RID: 1051
+// Token: 0x020006D3 RID: 1747
 public class OnInteractEffectTrigger : BaseEffectTrigger
 {
-	// Token: 0x17000F80 RID: 3968
-	// (get) Token: 0x060026E0 RID: 9952 RVA: 0x0008150D File Offset: 0x0007F70D
+	// Token: 0x17001445 RID: 5189
+	// (get) Token: 0x06003595 RID: 13717 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool RequiresCollider
 	{
 		get
@@ -15,8 +15,8 @@ public class OnInteractEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x17000F81 RID: 3969
-	// (get) Token: 0x060026E1 RID: 9953 RVA: 0x00081510 File Offset: 0x0007F710
+	// Token: 0x17001446 RID: 5190
+	// (get) Token: 0x06003596 RID: 13718 RVA: 0x000E19E0 File Offset: 0x000DFBE0
 	public override Vector3 Midpoint
 	{
 		get
@@ -33,7 +33,7 @@ public class OnInteractEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026E2 RID: 9954 RVA: 0x00081569 File Offset: 0x0007F769
+	// Token: 0x06003597 RID: 13719 RVA: 0x0001D6C2 File Offset: 0x0001B8C2
 	protected override void Awake()
 	{
 		base.Awake();
@@ -45,19 +45,19 @@ public class OnInteractEffectTrigger : BaseEffectTrigger
 		this.m_interactableComponent = base.GetComponentInParent<Interactable>();
 	}
 
-	// Token: 0x060026E3 RID: 9955 RVA: 0x000815A8 File Offset: 0x0007F7A8
+	// Token: 0x06003598 RID: 13720 RVA: 0x0001D701 File Offset: 0x0001B901
 	private void OnEnable()
 	{
 		this.m_interactableComponent.TriggerOnEnterEvent.AddListener(new UnityAction<GameObject>(this.TriggerInteractEvent));
 	}
 
-	// Token: 0x060026E4 RID: 9956 RVA: 0x000815C6 File Offset: 0x0007F7C6
+	// Token: 0x06003599 RID: 13721 RVA: 0x0001D71F File Offset: 0x0001B91F
 	private void OnDisable()
 	{
 		this.m_interactableComponent.TriggerOnEnterEvent.RemoveListener(new UnityAction<GameObject>(this.TriggerInteractEvent));
 	}
 
-	// Token: 0x060026E5 RID: 9957 RVA: 0x000815E4 File Offset: 0x0007F7E4
+	// Token: 0x0600359A RID: 13722 RVA: 0x000E115C File Offset: 0x000DF35C
 	private void TriggerInteractEvent(GameObject otherObj)
 	{
 		GameObject root = otherObj.GetRoot(false);
@@ -90,12 +90,12 @@ public class OnInteractEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x040020B4 RID: 8372
+	// Token: 0x04002B97 RID: 11159
 	private Interactable m_interactableComponent;
 
-	// Token: 0x040020B5 RID: 8373
+	// Token: 0x04002B98 RID: 11160
 	private Collider2D m_collider;
 
-	// Token: 0x040020B6 RID: 8374
+	// Token: 0x04002B99 RID: 11161
 	private BaseCharacterController m_charController;
 }

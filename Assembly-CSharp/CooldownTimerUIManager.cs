@@ -2,16 +2,16 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020001DC RID: 476
+// Token: 0x02000360 RID: 864
 public class CooldownTimerUIManager : MonoBehaviour
 {
-	// Token: 0x060013B3 RID: 5043 RVA: 0x0003BDFE File Offset: 0x00039FFE
+	// Token: 0x06001C54 RID: 7252 RVA: 0x0000EA8D File Offset: 0x0000CC8D
 	private void Awake()
 	{
 		this.m_onChangeAbility = new Action<MonoBehaviour, EventArgs>(this.OnChangeAbility);
 	}
 
-	// Token: 0x060013B4 RID: 5044 RVA: 0x0003BE12 File Offset: 0x0003A012
+	// Token: 0x06001C55 RID: 7253 RVA: 0x0000EAA1 File Offset: 0x0000CCA1
 	private IEnumerator Start()
 	{
 		Debug.LogWarningFormat("<color=blue>{0}: [{1}] is waiting for Player to be instantiated and for Character Class Component to be initialised...</color>", new object[]
@@ -29,25 +29,25 @@ public class CooldownTimerUIManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013B5 RID: 5045 RVA: 0x0003BE21 File Offset: 0x0003A021
+	// Token: 0x06001C56 RID: 7254 RVA: 0x0000EAB0 File Offset: 0x0000CCB0
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.ChangeAbility, this.m_onChangeAbility);
 	}
 
-	// Token: 0x060013B6 RID: 5046 RVA: 0x0003BE30 File Offset: 0x0003A030
+	// Token: 0x06001C57 RID: 7255 RVA: 0x0000EABF File Offset: 0x0000CCBF
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.ChangeAbility, this.m_onChangeAbility);
 	}
 
-	// Token: 0x060013B7 RID: 5047 RVA: 0x0003BE3F File Offset: 0x0003A03F
+	// Token: 0x06001C58 RID: 7256 RVA: 0x0000EACE File Offset: 0x0000CCCE
 	private void OnChangeAbility(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		this.InjectCooldown();
 	}
 
-	// Token: 0x060013B8 RID: 5048 RVA: 0x0003BE48 File Offset: 0x0003A048
+	// Token: 0x06001C59 RID: 7257 RVA: 0x00098EC8 File Offset: 0x000970C8
 	public void InjectCooldown()
 	{
 		CastAbility_RL component = PlayerManager.GetPlayer().GetComponent<CastAbility_RL>();
@@ -85,18 +85,18 @@ public class CooldownTimerUIManager : MonoBehaviour
 		this.m_talentTimer.Cooldown = ability;
 	}
 
-	// Token: 0x04001390 RID: 5008
+	// Token: 0x040019E4 RID: 6628
 	[SerializeField]
 	private CooldownTimerUI m_attackTimer;
 
-	// Token: 0x04001391 RID: 5009
+	// Token: 0x040019E5 RID: 6629
 	[SerializeField]
 	private CooldownTimerUI m_spellTimer;
 
-	// Token: 0x04001392 RID: 5010
+	// Token: 0x040019E6 RID: 6630
 	[SerializeField]
 	private CooldownTimerUI m_talentTimer;
 
-	// Token: 0x04001393 RID: 5011
+	// Token: 0x040019E7 RID: 6631
 	private Action<MonoBehaviour, EventArgs> m_onChangeAbility;
 }

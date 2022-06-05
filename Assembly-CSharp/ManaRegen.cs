@@ -2,16 +2,16 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000264 RID: 612
+// Token: 0x02000428 RID: 1064
 public class ManaRegen : MonoBehaviour
 {
-	// Token: 0x17000BD5 RID: 3029
-	// (get) Token: 0x0600186D RID: 6253 RVA: 0x0004C586 File Offset: 0x0004A786
-	// (set) Token: 0x0600186E RID: 6254 RVA: 0x0004C58E File Offset: 0x0004A78E
+	// Token: 0x17000F0E RID: 3854
+	// (get) Token: 0x06002244 RID: 8772 RVA: 0x000124D5 File Offset: 0x000106D5
+	// (set) Token: 0x06002245 RID: 8773 RVA: 0x000124DD File Offset: 0x000106DD
 	public bool IsManaRegenDelayed { get; private set; }
 
-	// Token: 0x17000BD6 RID: 3030
-	// (get) Token: 0x0600186F RID: 6255 RVA: 0x0004C597 File Offset: 0x0004A797
+	// Token: 0x17000F0F RID: 3855
+	// (get) Token: 0x06002246 RID: 8774 RVA: 0x000124E6 File Offset: 0x000106E6
 	private ManaRegenType RegenType
 	{
 		get
@@ -20,7 +20,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001870 RID: 6256 RVA: 0x0004C5B4 File Offset: 0x0004A7B4
+	// Token: 0x06002247 RID: 8775 RVA: 0x000AA2FC File Offset: 0x000A84FC
 	private void Awake()
 	{
 		this.m_playerController = base.GetComponent<PlayerController>();
@@ -36,7 +36,7 @@ public class ManaRegen : MonoBehaviour
 		this.m_onManaChange = new Action<ManaChangeEventArgs>(this.OnManaChange);
 	}
 
-	// Token: 0x06001871 RID: 6257 RVA: 0x0004C680 File Offset: 0x0004A880
+	// Token: 0x06002248 RID: 8776 RVA: 0x000AA3C8 File Offset: 0x000A85C8
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerForceManaRegen, this.m_onForceRegen);
@@ -53,7 +53,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001872 RID: 6258 RVA: 0x0004C724 File Offset: 0x0004A924
+	// Token: 0x06002249 RID: 8777 RVA: 0x000AA46C File Offset: 0x000A866C
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerForceManaRegen, this.m_onForceRegen);
@@ -70,14 +70,14 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001873 RID: 6259 RVA: 0x0004C7C8 File Offset: 0x0004A9C8
+	// Token: 0x0600224A RID: 8778 RVA: 0x000AA510 File Offset: 0x000A8710
 	private void OnForceRegen(object sender, EventArgs args)
 	{
 		ForceManaRegenEventArgs forceManaRegenEventArgs = args as ForceManaRegenEventArgs;
 		this.RegenPlayerManaFlat((int)forceManaRegenEventArgs.RegenAmount, forceManaRegenEventArgs.UsePlayerRegenMods);
 	}
 
-	// Token: 0x06001874 RID: 6260 RVA: 0x0004C7F0 File Offset: 0x0004A9F0
+	// Token: 0x0600224B RID: 8779 RVA: 0x00012502 File Offset: 0x00010702
 	private void OnManaChange(ManaChangeEventArgs args)
 	{
 		if (args.NewManaValue < args.PrevManaValue)
@@ -86,7 +86,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001875 RID: 6261 RVA: 0x0004C80D File Offset: 0x0004AA0D
+	// Token: 0x0600224C RID: 8780 RVA: 0x0001251F File Offset: 0x0001071F
 	private IEnumerator DelayManaRegen()
 	{
 		this.IsManaRegenDelayed = true;
@@ -96,7 +96,7 @@ public class ManaRegen : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001876 RID: 6262 RVA: 0x0004C81C File Offset: 0x0004AA1C
+	// Token: 0x0600224D RID: 8781 RVA: 0x000AA538 File Offset: 0x000A8738
 	private void OnPlayerHealthChange(MonoBehaviour sender, EventArgs args)
 	{
 		if (this.RegenType == ManaRegenType.OnPlayerHit)
@@ -110,7 +110,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001877 RID: 6263 RVA: 0x0004C860 File Offset: 0x0004AA60
+	// Token: 0x0600224E RID: 8782 RVA: 0x000AA57C File Offset: 0x000A877C
 	private void OnPlayerHit(MonoBehaviour sender, EventArgs args)
 	{
 		if (TraitManager.IsTraitActive(TraitType.ManaFromHurt))
@@ -121,7 +121,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001878 RID: 6264 RVA: 0x0004C8BB File Offset: 0x0004AABB
+	// Token: 0x0600224F RID: 8783 RVA: 0x0001252E File Offset: 0x0001072E
 	private void OnPlayerBlocked(MonoBehaviour sender, EventArgs args)
 	{
 		if (this.RegenType == ManaRegenType.OnPlayerBlock)
@@ -130,7 +130,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001879 RID: 6265 RVA: 0x0004C8D4 File Offset: 0x0004AAD4
+	// Token: 0x06002250 RID: 8784 RVA: 0x000AA5D8 File Offset: 0x000A87D8
 	private void OnEnemyHit(MonoBehaviour sender, EventArgs args)
 	{
 		if (this.RegenType != ManaRegenType.OnEnemyHit)
@@ -179,7 +179,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600187A RID: 6266 RVA: 0x0004CA14 File Offset: 0x0004AC14
+	// Token: 0x06002251 RID: 8785 RVA: 0x000AA718 File Offset: 0x000A8918
 	private void OnEnemyKilled(MonoBehaviour sender, EventArgs args)
 	{
 		if (this.RegenType == ManaRegenType.OnEnemyKilled)
@@ -196,7 +196,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600187B RID: 6267 RVA: 0x0004CA51 File Offset: 0x0004AC51
+	// Token: 0x06002252 RID: 8786 RVA: 0x00012545 File Offset: 0x00010745
 	private void OnItemCollected(MonoBehaviour sender, EventArgs args)
 	{
 		if (this.RegenType == ManaRegenType.OnGoldCollected && Economy_EV.GetItemDropValue((args as ItemCollectedEventArgs).Item.ItemDropType, false) > 0)
@@ -205,7 +205,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600187C RID: 6268 RVA: 0x0004CA81 File Offset: 0x0004AC81
+	// Token: 0x06002253 RID: 8787 RVA: 0x00012575 File Offset: 0x00010775
 	private void OnBreakableDestroyed(MonoBehaviour sender, EventArgs args)
 	{
 		if (TraitManager.IsTraitActive(TraitType.BreakPropsForMana))
@@ -214,7 +214,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600187D RID: 6269 RVA: 0x0004CA9C File Offset: 0x0004AC9C
+	// Token: 0x06002254 RID: 8788 RVA: 0x000AA758 File Offset: 0x000A8958
 	private void Update()
 	{
 		if (!TraitManager.IsTraitActive(TraitType.BonusMagicStrength))
@@ -236,7 +236,7 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600187E RID: 6270 RVA: 0x0004CB24 File Offset: 0x0004AD24
+	// Token: 0x06002255 RID: 8789 RVA: 0x000AA7E0 File Offset: 0x000A89E0
 	private void RegenPlayerMana(float regenPercent, bool applyManaRegenMods)
 	{
 		float num = regenPercent * (float)this.m_playerController.ActualMaxMana;
@@ -247,7 +247,7 @@ public class ManaRegen : MonoBehaviour
 		this.m_manaToAddThisUpdate += num;
 	}
 
-	// Token: 0x0600187F RID: 6271 RVA: 0x0004CB65 File Offset: 0x0004AD65
+	// Token: 0x06002256 RID: 8790 RVA: 0x0001258F File Offset: 0x0001078F
 	private int RegenPlayerManaFlat(int regenFlat, bool applyManaRegenMods)
 	{
 		if (applyManaRegenMods)
@@ -258,7 +258,7 @@ public class ManaRegen : MonoBehaviour
 		return regenFlat;
 	}
 
-	// Token: 0x06001880 RID: 6272 RVA: 0x0004CB98 File Offset: 0x0004AD98
+	// Token: 0x06002257 RID: 8791 RVA: 0x000AA824 File Offset: 0x000A8A24
 	private void LateUpdate()
 	{
 		if (this.m_playerController)
@@ -287,42 +287,42 @@ public class ManaRegen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040017C2 RID: 6082
+	// Token: 0x04001EF4 RID: 7924
 	private PlayerController m_playerController;
 
-	// Token: 0x040017C3 RID: 6083
+	// Token: 0x04001EF5 RID: 7925
 	private WaitRL_Yield m_regenDelayWaitYield;
 
-	// Token: 0x040017C4 RID: 6084
+	// Token: 0x04001EF6 RID: 7926
 	private float m_manaToAddThisUpdate;
 
-	// Token: 0x040017C5 RID: 6085
+	// Token: 0x04001EF7 RID: 7927
 	private bool m_enemyOnHitManaWasAdded;
 
-	// Token: 0x040017C6 RID: 6086
+	// Token: 0x04001EF8 RID: 7928
 	private Action<MonoBehaviour, EventArgs> m_onForceRegen;
 
-	// Token: 0x040017C7 RID: 6087
+	// Token: 0x04001EF9 RID: 7929
 	private Action<MonoBehaviour, EventArgs> m_onPlayerHealthChange;
 
-	// Token: 0x040017C8 RID: 6088
+	// Token: 0x04001EFA RID: 7930
 	private Action<MonoBehaviour, EventArgs> m_onPlayerBlocked;
 
-	// Token: 0x040017C9 RID: 6089
+	// Token: 0x04001EFB RID: 7931
 	private Action<MonoBehaviour, EventArgs> m_onPlayerHit;
 
-	// Token: 0x040017CA RID: 6090
+	// Token: 0x04001EFC RID: 7932
 	private Action<MonoBehaviour, EventArgs> m_onEnemyHit;
 
-	// Token: 0x040017CB RID: 6091
+	// Token: 0x04001EFD RID: 7933
 	private Action<MonoBehaviour, EventArgs> m_onEnemyKilled;
 
-	// Token: 0x040017CC RID: 6092
+	// Token: 0x04001EFE RID: 7934
 	private Action<MonoBehaviour, EventArgs> m_onItemCollected;
 
-	// Token: 0x040017CD RID: 6093
+	// Token: 0x04001EFF RID: 7935
 	private Action<MonoBehaviour, EventArgs> m_onBreakableDestroyed;
 
-	// Token: 0x040017CE RID: 6094
+	// Token: 0x04001F00 RID: 7936
 	private Action<ManaChangeEventArgs> m_onManaChange;
 }

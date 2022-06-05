@@ -2,42 +2,42 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020001E6 RID: 486
+// Token: 0x0200037E RID: 894
 public class World_DebugUI : MonoBehaviour
 {
-	// Token: 0x040013E3 RID: 5091
+	// Token: 0x04001A83 RID: 6787
 	[SerializeField]
 	private GameObject m_panel;
 
-	// Token: 0x040013E4 RID: 5092
+	// Token: 0x04001A84 RID: 6788
 	[SerializeField]
 	private TextMeshProUGUI m_seed;
 
-	// Token: 0x040013E5 RID: 5093
+	// Token: 0x04001A85 RID: 6789
 	[SerializeField]
 	private TextMeshProUGUI m_bossEntranceRoomCount;
 
-	// Token: 0x040013E6 RID: 5094
+	// Token: 0x04001A86 RID: 6790
 	[SerializeField]
 	private TextMeshProUGUI m_fairyRoomCount;
 
-	// Token: 0x040013E7 RID: 5095
+	// Token: 0x04001A87 RID: 6791
 	[SerializeField]
 	private TextMeshProUGUI m_mergeRoomCount;
 
-	// Token: 0x040013E8 RID: 5096
+	// Token: 0x04001A88 RID: 6792
 	[SerializeField]
 	private TextMeshProUGUI m_standaloneRoomCount;
 
-	// Token: 0x040013E9 RID: 5097
+	// Token: 0x04001A89 RID: 6793
 	[SerializeField]
 	private TextMeshProUGUI m_totalRoomCount;
 
-	// Token: 0x040013EA RID: 5098
+	// Token: 0x04001A8A RID: 6794
 	[SerializeField]
 	private TextMeshProUGUI m_trapRoomCount;
 
-	// Token: 0x040013EB RID: 5099
+	// Token: 0x04001A8B RID: 6795
 	[SerializeField]
 	private TextMeshProUGUI m_totalChestCount;
 }

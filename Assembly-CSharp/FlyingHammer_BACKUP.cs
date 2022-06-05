@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020000D9 RID: 217
+// Token: 0x0200015D RID: 349
 public class FlyingHammer_BACKUP : BaseAIScript
 {
-	// Token: 0x0600064F RID: 1615 RVA: 0x0001916C File Offset: 0x0001736C
+	// Token: 0x0600093C RID: 2364 RVA: 0x000046A7 File Offset: 0x000028A7
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[0];

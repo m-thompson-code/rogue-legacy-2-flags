@@ -3,12 +3,12 @@ using System.Collections;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x02000530 RID: 1328
+// Token: 0x020008B9 RID: 2233
 [Serializable]
 public class TeleportPlayer_SummonRule : BaseSummonRule
 {
-	// Token: 0x1700120F RID: 4623
-	// (get) Token: 0x060030E7 RID: 12519 RVA: 0x000A65CB File Offset: 0x000A47CB
+	// Token: 0x1700184C RID: 6220
+	// (get) Token: 0x0600441E RID: 17438 RVA: 0x00019212 File Offset: 0x00017412
 	public override SummonRuleType RuleType
 	{
 		get
@@ -17,8 +17,8 @@ public class TeleportPlayer_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001210 RID: 4624
-	// (get) Token: 0x060030E8 RID: 12520 RVA: 0x000A65D2 File Offset: 0x000A47D2
+	// Token: 0x1700184D RID: 6221
+	// (get) Token: 0x0600441F RID: 17439 RVA: 0x00025383 File Offset: 0x00023583
 	public override Color BoxColor
 	{
 		get
@@ -27,8 +27,8 @@ public class TeleportPlayer_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001211 RID: 4625
-	// (get) Token: 0x060030E9 RID: 12521 RVA: 0x000A65D9 File Offset: 0x000A47D9
+	// Token: 0x1700184E RID: 6222
+	// (get) Token: 0x06004420 RID: 17440 RVA: 0x0002590B File Offset: 0x00023B0B
 	public override string RuleLabel
 	{
 		get
@@ -37,14 +37,14 @@ public class TeleportPlayer_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x060030EA RID: 12522 RVA: 0x000A65E0 File Offset: 0x000A47E0
+	// Token: 0x06004421 RID: 17441 RVA: 0x00025912 File Offset: 0x00023B12
 	public override void Initialize(SummonRuleController summonController)
 	{
 		base.Initialize(summonController);
 		this.m_waitUntilPlayerEnterRoomYield = new WaitUntil(() => PlayerManager.IsInstantiated && PlayerManager.GetCurrentPlayerRoom());
 	}
 
-	// Token: 0x060030EB RID: 12523 RVA: 0x000A6613 File Offset: 0x000A4813
+	// Token: 0x06004422 RID: 17442 RVA: 0x00025945 File Offset: 0x00023B45
 	public override IEnumerator RunSummonRule()
 	{
 		yield return this.m_waitUntilPlayerEnterRoomYield;
@@ -89,17 +89,17 @@ public class TeleportPlayer_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x060030EC RID: 12524 RVA: 0x000A6622 File Offset: 0x000A4822
+	// Token: 0x06004423 RID: 17443 RVA: 0x00025954 File Offset: 0x00023B54
 	private void TeleportPlayer(Tunnel tunnelToUse)
 	{
 		PlayerManager.GetPlayerController().CharacterHitResponse.StopInvincibleTime();
 		tunnelToUse.ForceEnterTunnel(false, null);
 	}
 
-	// Token: 0x040026BE RID: 9918
+	// Token: 0x040034F2 RID: 13554
 	[SerializeField]
 	private TransitionID m_transitionID = TransitionID.QuickSwipe;
 
-	// Token: 0x040026BF RID: 9919
+	// Token: 0x040034F3 RID: 13555
 	private WaitUntil m_waitUntilPlayerEnterRoomYield;
 }

@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020006FF RID: 1791
+// Token: 0x02000BB2 RID: 2994
 public enum AnimationLayer
 {
-	// Token: 0x04003283 RID: 12931
+	// Token: 0x040044FE RID: 17662
 	Base,
-	// Token: 0x04003284 RID: 12932
+	// Token: 0x040044FF RID: 17663
 	UpperBody,
-	// Token: 0x04003285 RID: 12933
+	// Token: 0x04004500 RID: 17664
 	Legs,
-	// Token: 0x04003286 RID: 12934
+	// Token: 0x04004501 RID: 17665
 	Flying = 10
 }

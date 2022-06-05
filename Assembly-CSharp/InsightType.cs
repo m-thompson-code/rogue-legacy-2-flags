@@ -1,70 +1,70 @@
 ﻿using System;
 
-// Token: 0x02000742 RID: 1858
+// Token: 0x02000C00 RID: 3072
 public enum InsightType
 {
-	// Token: 0x0400348C RID: 13452
+	// Token: 0x04004708 RID: 18184
 	None,
-	// Token: 0x0400348D RID: 13453
+	// Token: 0x04004709 RID: 18185
 	HeirloomDash = 100,
-	// Token: 0x0400348E RID: 13454
+	// Token: 0x0400470A RID: 18186
 	HeirloomMemory = 110,
-	// Token: 0x0400348F RID: 13455
+	// Token: 0x0400470B RID: 18187
 	HeirloomSpinKick_Projectiles = 120,
-	// Token: 0x04003490 RID: 13456
+	// Token: 0x0400470C RID: 18188
 	HeirloomSpinKick_Hidden = 125,
-	// Token: 0x04003491 RID: 13457
+	// Token: 0x0400470D RID: 18189
 	HeirloomDoubleJump = 130,
-	// Token: 0x04003492 RID: 13458
+	// Token: 0x0400470E RID: 18190
 	HeirloomDoubleJump_Hidden = 135,
-	// Token: 0x04003493 RID: 13459
+	// Token: 0x0400470F RID: 18191
 	HeirloomVoidDash = 140,
-	// Token: 0x04003494 RID: 13460
+	// Token: 0x04004710 RID: 18192
 	HeirloomLantern = 150,
-	// Token: 0x04003495 RID: 13461
+	// Token: 0x04004711 RID: 18193
 	HeirloomEarthShift = 160,
-	// Token: 0x04003496 RID: 13462
+	// Token: 0x04004712 RID: 18194
 	SpellSwordBossCombatBonus = 500,
-	// Token: 0x04003497 RID: 13463
+	// Token: 0x04004713 RID: 18195
 	DancingBossCombatBonus = 510,
-	// Token: 0x04003498 RID: 13464
+	// Token: 0x04004714 RID: 18196
 	SkeletonBossCombatBonus = 520,
-	// Token: 0x04003499 RID: 13465
+	// Token: 0x04004715 RID: 18197
 	StudyBossCombatBonus = 530,
-	// Token: 0x0400349A RID: 13466
+	// Token: 0x04004716 RID: 18198
 	TowerBossCombatBonus = 540,
-	// Token: 0x0400349B RID: 13467
+	// Token: 0x04004717 RID: 18199
 	CaveBossCombatBonus = 550,
-	// Token: 0x0400349C RID: 13468
+	// Token: 0x04004718 RID: 18200
 	TraitorBoss_HPReduce_SpellSwordBoss = 700,
-	// Token: 0x0400349D RID: 13469
+	// Token: 0x04004719 RID: 18201
 	TraitorBoss_HPReduce_DancingBoss = 710,
-	// Token: 0x0400349E RID: 13470
+	// Token: 0x0400471A RID: 18202
 	FinalBoss_HPReduce_SkeletonBoss = 720,
-	// Token: 0x0400349F RID: 13471
+	// Token: 0x0400471B RID: 18203
 	TraitorBoss_HPReduce_StudyBoss = 730,
-	// Token: 0x040034A0 RID: 13472
+	// Token: 0x0400471C RID: 18204
 	FinalBoss_HPReduce_TowerBoss = 740,
-	// Token: 0x040034A1 RID: 13473
+	// Token: 0x0400471D RID: 18205
 	FinalBoss_HPReduce_CaveBoss = 750,
-	// Token: 0x040034A2 RID: 13474
+	// Token: 0x0400471E RID: 18206
 	StoryOrMiscElements = 1000,
-	// Token: 0x040034A3 RID: 13475
+	// Token: 0x0400471F RID: 18207
 	CastleBoss_DoorOpened = 1100,
-	// Token: 0x040034A4 RID: 13476
+	// Token: 0x04004720 RID: 18208
 	ForestBoss_DoorOpened = 1110,
-	// Token: 0x040034A5 RID: 13477
+	// Token: 0x04004721 RID: 18209
 	BridgeBoss_GateRaised = 1120,
-	// Token: 0x040034A6 RID: 13478
+	// Token: 0x04004722 RID: 18210
 	StudyBoss_DoorOpened = 1130,
-	// Token: 0x040034A7 RID: 13479
+	// Token: 0x04004723 RID: 18211
 	CaveBoss_DoorOpened = 1140,
-	// Token: 0x040034A8 RID: 13480
+	// Token: 0x04004724 RID: 18212
 	FinalDoorEntranceObjective = 5000,
-	// Token: 0x040034A9 RID: 13481
+	// Token: 0x04004725 RID: 18213
 	TutorialEntranceObjective = 5100,
-	// Token: 0x040034AA RID: 13482
+	// Token: 0x04004726 RID: 18214
 	Ending_RebelsHidout = 5200,
-	// Token: 0x040034AB RID: 13483
+	// Token: 0x04004727 RID: 18215
 	ScarChallenges_Complete = 5300
 }

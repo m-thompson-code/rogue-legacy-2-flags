@@ -4,11 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000399 RID: 921
+// Token: 0x0200062A RID: 1578
 public class BlacksmithOmniUIEquipButton : OmniUIButton, IBlacksmithOmniUIButton
 {
-	// Token: 0x17000E46 RID: 3654
-	// (get) Token: 0x06002261 RID: 8801 RVA: 0x0006F0C3 File Offset: 0x0006D2C3
+	// Token: 0x170012D9 RID: 4825
+	// (get) Token: 0x06003079 RID: 12409 RVA: 0x0001A941 File Offset: 0x00018B41
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -17,17 +17,17 @@ public class BlacksmithOmniUIEquipButton : OmniUIButton, IBlacksmithOmniUIButton
 		}
 	}
 
-	// Token: 0x17000E47 RID: 3655
-	// (get) Token: 0x06002262 RID: 8802 RVA: 0x0006F0CB File Offset: 0x0006D2CB
-	// (set) Token: 0x06002263 RID: 8803 RVA: 0x0006F0D3 File Offset: 0x0006D2D3
+	// Token: 0x170012DA RID: 4826
+	// (get) Token: 0x0600307A RID: 12410 RVA: 0x0001A949 File Offset: 0x00018B49
+	// (set) Token: 0x0600307B RID: 12411 RVA: 0x0001A951 File Offset: 0x00018B51
 	public EquipmentCategoryType CategoryType { get; set; }
 
-	// Token: 0x17000E48 RID: 3656
-	// (get) Token: 0x06002264 RID: 8804 RVA: 0x0006F0DC File Offset: 0x0006D2DC
-	// (set) Token: 0x06002265 RID: 8805 RVA: 0x0006F0E4 File Offset: 0x0006D2E4
+	// Token: 0x170012DB RID: 4827
+	// (get) Token: 0x0600307C RID: 12412 RVA: 0x0001A95A File Offset: 0x00018B5A
+	// (set) Token: 0x0600307D RID: 12413 RVA: 0x0001A962 File Offset: 0x00018B62
 	public EquipmentType EquipmentType { get; set; }
 
-	// Token: 0x06002266 RID: 8806 RVA: 0x0006F0F0 File Offset: 0x0006D2F0
+	// Token: 0x0600307E RID: 12414 RVA: 0x000CFE48 File Offset: 0x000CE048
 	protected override void InitializeButtonEventArgs()
 	{
 		OmniUIButtonType buttonType = OmniUIButtonType.Equipping;
@@ -43,7 +43,7 @@ public class BlacksmithOmniUIEquipButton : OmniUIButton, IBlacksmithOmniUIButton
 		this.m_descriptionEventArgs.Initialize(this.CategoryType, this.EquipmentType, buttonType);
 	}
 
-	// Token: 0x06002267 RID: 8807 RVA: 0x0006F150 File Offset: 0x0006D350
+	// Token: 0x0600307F RID: 12415 RVA: 0x000CFEA8 File Offset: 0x000CE0A8
 	public override void OnConfirmButtonPressed()
 	{
 		base.OnConfirmButtonPressed();
@@ -74,7 +74,7 @@ public class BlacksmithOmniUIEquipButton : OmniUIButton, IBlacksmithOmniUIButton
 		}
 	}
 
-	// Token: 0x06002268 RID: 8808 RVA: 0x0006F214 File Offset: 0x0006D414
+	// Token: 0x06003080 RID: 12416 RVA: 0x000CFF6C File Offset: 0x000CE16C
 	public static bool SetEquipped(EquipmentCategoryType category, EquipmentType equipType)
 	{
 		EquipmentObj equipped = EquipmentManager.GetEquipped(category);
@@ -116,7 +116,7 @@ public class BlacksmithOmniUIEquipButton : OmniUIButton, IBlacksmithOmniUIButton
 		return result;
 	}
 
-	// Token: 0x06002269 RID: 8809 RVA: 0x0006F3E8 File Offset: 0x0006D5E8
+	// Token: 0x06003081 RID: 12417 RVA: 0x000D0140 File Offset: 0x000CE340
 	public override void UpdateState()
 	{
 		if (EquipmentManager.GetFoundState(this.CategoryType, this.EquipmentType) != FoundState.Purchased)
@@ -144,7 +144,7 @@ public class BlacksmithOmniUIEquipButton : OmniUIButton, IBlacksmithOmniUIButton
 		this.SetIconEquippedState(false);
 	}
 
-	// Token: 0x0600226A RID: 8810 RVA: 0x0006F480 File Offset: 0x0006D680
+	// Token: 0x06003082 RID: 12418 RVA: 0x000D01D8 File Offset: 0x000CE3D8
 	private void SetIconEquippedState(bool equipped)
 	{
 		if (equipped)
@@ -175,25 +175,25 @@ public class BlacksmithOmniUIEquipButton : OmniUIButton, IBlacksmithOmniUIButton
 		this.m_notchGameObj.transform.localPosition = localPosition2;
 	}
 
-	// Token: 0x04001DB5 RID: 7605
+	// Token: 0x040027C9 RID: 10185
 	public const float NOTCH_SHIFT_AMOUNT = 45f;
 
-	// Token: 0x04001DB6 RID: 7606
+	// Token: 0x040027CA RID: 10186
 	[SerializeField]
 	private Image m_sliderOnSprite;
 
-	// Token: 0x04001DB7 RID: 7607
+	// Token: 0x040027CB RID: 10187
 	[SerializeField]
 	private Image m_sliderOffSprite;
 
-	// Token: 0x04001DB8 RID: 7608
+	// Token: 0x040027CC RID: 10188
 	[SerializeField]
 	private GameObject m_notchGameObj;
 
-	// Token: 0x04001DB9 RID: 7609
+	// Token: 0x040027CD RID: 10189
 	[SerializeField]
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x04001DBA RID: 7610
+	// Token: 0x040027CE RID: 10190
 	private BlacksmithOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

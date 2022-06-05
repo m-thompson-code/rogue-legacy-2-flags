@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000908 RID: 2312
+	// Token: 0x02000E85 RID: 3717
 	public class PoolballProjectileAudioEventEmitter : ProjectileEventEmitter
 	{
-		// Token: 0x06004BD5 RID: 19413 RVA: 0x00110AD8 File Offset: 0x0010ECD8
+		// Token: 0x060068D0 RID: 26832 RVA: 0x00180D80 File Offset: 0x0017EF80
 		protected override void Awake()
 		{
 			base.Awake();
@@ -17,7 +17,7 @@ namespace RLAudio
 			this.m_damageAudioData = base.GetComponent<ProjectileDamageAudioData>();
 		}
 
-		// Token: 0x06004BD6 RID: 19414 RVA: 0x00110B31 File Offset: 0x0010ED31
+		// Token: 0x060068D1 RID: 26833 RVA: 0x0003A0D5 File Offset: 0x000382D5
 		protected override void OnDisable()
 		{
 			if (this.m_lifeTimeEventInstance.isValid())
@@ -26,7 +26,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BD7 RID: 19415 RVA: 0x00110B57 File Offset: 0x0010ED57
+		// Token: 0x060068D2 RID: 26834 RVA: 0x0003A0FB File Offset: 0x000382FB
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
@@ -36,7 +36,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BD8 RID: 19416 RVA: 0x00110B78 File Offset: 0x0010ED78
+		// Token: 0x060068D3 RID: 26835 RVA: 0x00180DDC File Offset: 0x0017EFDC
 		private void OnRicochet(int bounceCount)
 		{
 			if (!this.m_bounceEventInstance.isValid())
@@ -54,18 +54,18 @@ namespace RLAudio
 			AudioManager.PlayAttached(this, this.m_bounceEventInstance, base.gameObject);
 		}
 
-		// Token: 0x04003FE3 RID: 16355
+		// Token: 0x04005543 RID: 21827
 		[SerializeField]
 		[EventRef]
 		private string m_bounceEventPath;
 
-		// Token: 0x04003FE4 RID: 16356
+		// Token: 0x04005544 RID: 21828
 		private EventInstance m_bounceEventInstance;
 
-		// Token: 0x04003FE5 RID: 16357
+		// Token: 0x04005545 RID: 21829
 		private ProjectileDamageAudioData m_damageAudioData;
 
-		// Token: 0x04003FE6 RID: 16358
+		// Token: 0x04005546 RID: 21830
 		private const string POOL_BALL_PARAMETER = "poolBallSpeed";
 	}
 }

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000307 RID: 775
+// Token: 0x02000531 RID: 1329
 public class FreezeImmunityStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D56 RID: 3414
-	// (get) Token: 0x06001EC2 RID: 7874 RVA: 0x000636BB File Offset: 0x000618BB
+	// Token: 0x17001145 RID: 4421
+	// (get) Token: 0x06002AC1 RID: 10945 RVA: 0x00005315 File Offset: 0x00003515
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class FreezeImmunityStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D57 RID: 3415
-	// (get) Token: 0x06001EC3 RID: 7875 RVA: 0x000636BF File Offset: 0x000618BF
+	// Token: 0x17001146 RID: 4422
+	// (get) Token: 0x06002AC2 RID: 10946 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class FreezeImmunityStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EC4 RID: 7876 RVA: 0x000636C6 File Offset: 0x000618C6
+	// Token: 0x06002AC3 RID: 10947 RVA: 0x00017E4E File Offset: 0x0001604E
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.FreezeImmunity, base.Duration);

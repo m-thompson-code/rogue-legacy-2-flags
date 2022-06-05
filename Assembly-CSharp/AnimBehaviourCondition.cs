@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001B2 RID: 434
+// Token: 0x02000321 RID: 801
 [Serializable]
 public struct AnimBehaviourCondition
 {
-	// Token: 0x06001128 RID: 4392 RVA: 0x00031720 File Offset: 0x0002F920
+	// Token: 0x06001971 RID: 6513 RVA: 0x0008FB6C File Offset: 0x0008DD6C
 	public bool IsTrue(Animator animator)
 	{
 		if (!this.m_isInitialized)
@@ -75,30 +75,30 @@ public struct AnimBehaviourCondition
 		return false;
 	}
 
-	// Token: 0x04001212 RID: 4626
+	// Token: 0x0400181B RID: 6171
 	public string ParamName;
 
-	// Token: 0x04001213 RID: 4627
+	// Token: 0x0400181C RID: 6172
 	public AnimatorControllerParameterType ParamType;
 
-	// Token: 0x04001214 RID: 4628
+	// Token: 0x0400181D RID: 6173
 	public ParamBoolType BoolType;
 
-	// Token: 0x04001215 RID: 4629
+	// Token: 0x0400181E RID: 6174
 	public int IntValue;
 
-	// Token: 0x04001216 RID: 4630
+	// Token: 0x0400181F RID: 6175
 	public float FloatValue;
 
-	// Token: 0x04001217 RID: 4631
+	// Token: 0x04001820 RID: 6176
 	public ParamEqualityType EqualityType;
 
-	// Token: 0x04001218 RID: 4632
+	// Token: 0x04001821 RID: 6177
 	private bool m_isInitialized;
 
-	// Token: 0x04001219 RID: 4633
+	// Token: 0x04001822 RID: 6178
 	private bool m_hasParameter;
 
-	// Token: 0x0400121A RID: 4634
+	// Token: 0x04001823 RID: 6179
 	private int m_id;
 }

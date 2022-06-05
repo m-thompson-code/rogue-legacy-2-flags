@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000035 RID: 53
+// Token: 0x02000038 RID: 56
 [Serializable]
 public class StringGameObjectDictionary : SerializableDictionary<string, GameObject>
 {

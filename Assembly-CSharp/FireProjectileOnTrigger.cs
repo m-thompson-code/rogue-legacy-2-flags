@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001FD RID: 509
+// Token: 0x020003A2 RID: 930
 public class FireProjectileOnTrigger : MonoBehaviour, IHasProjectileNameArray
 {
-	// Token: 0x17000AEB RID: 2795
-	// (get) Token: 0x06001583 RID: 5507 RVA: 0x00042EA4 File Offset: 0x000410A4
+	// Token: 0x17000DFF RID: 3583
+	// (get) Token: 0x06001EDD RID: 7901 RVA: 0x00010323 File Offset: 0x0000E523
 	public virtual string[] ProjectileNameArray
 	{
 		get
@@ -21,9 +21,9 @@ public class FireProjectileOnTrigger : MonoBehaviour, IHasProjectileNameArray
 		}
 	}
 
-	// Token: 0x17000AEC RID: 2796
-	// (get) Token: 0x06001584 RID: 5508 RVA: 0x00042EC9 File Offset: 0x000410C9
-	// (set) Token: 0x06001585 RID: 5509 RVA: 0x00042ED1 File Offset: 0x000410D1
+	// Token: 0x17000E00 RID: 3584
+	// (get) Token: 0x06001EDE RID: 7902 RVA: 0x00010348 File Offset: 0x0000E548
+	// (set) Token: 0x06001EDF RID: 7903 RVA: 0x00010350 File Offset: 0x0000E550
 	public string ProjectileToSpawn
 	{
 		get
@@ -36,17 +36,17 @@ public class FireProjectileOnTrigger : MonoBehaviour, IHasProjectileNameArray
 		}
 	}
 
-	// Token: 0x06001586 RID: 5510 RVA: 0x00042EDC File Offset: 0x000410DC
+	// Token: 0x06001EE0 RID: 7904 RVA: 0x000A14C0 File Offset: 0x0009F6C0
 	public void FireProjectile()
 	{
 		ProjectileManager.FireProjectile(base.gameObject, this.m_projectileToSpawn, Vector2.zero, false, 0f, 1f, false, true, true, true);
 	}
 
-	// Token: 0x040014C9 RID: 5321
+	// Token: 0x04001B98 RID: 7064
 	[SerializeField]
 	private string m_projectileToSpawn;
 
-	// Token: 0x040014CA RID: 5322
+	// Token: 0x04001B99 RID: 7065
 	[NonSerialized]
 	protected string[] m_projectileNameArray;
 }

@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000314 RID: 788
+// Token: 0x02000550 RID: 1360
 public class SporeBurstStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D83 RID: 3459
-	// (get) Token: 0x06001F2B RID: 7979 RVA: 0x000640D2 File Offset: 0x000622D2
+	// Token: 0x17001196 RID: 4502
+	// (get) Token: 0x06002B96 RID: 11158 RVA: 0x0000452B File Offset: 0x0000272B
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -16,8 +16,8 @@ public class SporeBurstStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D84 RID: 3460
-	// (get) Token: 0x06001F2C RID: 7980 RVA: 0x000640D6 File Offset: 0x000622D6
+	// Token: 0x17001197 RID: 4503
+	// (get) Token: 0x06002B97 RID: 11159 RVA: 0x00003DAB File Offset: 0x00001FAB
 	public override float StartingDurationOverride
 	{
 		get
@@ -26,7 +26,7 @@ public class SporeBurstStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001F2D RID: 7981 RVA: 0x000640E0 File Offset: 0x000622E0
+	// Token: 0x06002B98 RID: 11160 RVA: 0x000C3FD4 File Offset: 0x000C21D4
 	public override void Initialize(StatusEffectController statusEffectController, BaseCharacterController charController)
 	{
 		base.Initialize(statusEffectController, charController);
@@ -36,7 +36,7 @@ public class SporeBurstStatusEffect : BaseStatusEffect
 		base.AppliesTint = true;
 	}
 
-	// Token: 0x06001F2E RID: 7982 RVA: 0x0006412F File Offset: 0x0006232F
+	// Token: 0x06002B99 RID: 11161 RVA: 0x00018473 File Offset: 0x00016673
 	public override void StartEffect(float duration, IDamageObj caster)
 	{
 		this.m_sporeEffectFired = false;
@@ -46,7 +46,7 @@ public class SporeBurstStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001F2F RID: 7983 RVA: 0x0006414F File Offset: 0x0006234F
+	// Token: 0x06002B9A RID: 11162 RVA: 0x00018493 File Offset: 0x00016693
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.SporeBurst, base.Duration);
@@ -79,7 +79,7 @@ public class SporeBurstStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001F30 RID: 7984 RVA: 0x00064165 File Offset: 0x00062365
+	// Token: 0x06002B9B RID: 11163 RVA: 0x000184A9 File Offset: 0x000166A9
 	private IEnumerator SporeEffectCoroutine()
 	{
 		float startTime = Time.time;
@@ -98,7 +98,7 @@ public class SporeBurstStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001F31 RID: 7985 RVA: 0x00064174 File Offset: 0x00062374
+	// Token: 0x06002B9C RID: 11164 RVA: 0x000184B8 File Offset: 0x000166B8
 	private IEnumerator PulseCoroutine()
 	{
 		for (;;)
@@ -136,7 +136,7 @@ public class SporeBurstStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001F32 RID: 7986 RVA: 0x00064184 File Offset: 0x00062384
+	// Token: 0x06002B9D RID: 11165 RVA: 0x000C4024 File Offset: 0x000C2224
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -158,33 +158,33 @@ public class SporeBurstStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x04001BF9 RID: 7161
+	// Token: 0x040024F8 RID: 9464
 	private const string MULTIPLY_COLOR = "#9AA633";
 
-	// Token: 0x04001BFA RID: 7162
+	// Token: 0x040024F9 RID: 9465
 	private const string PULSE_ON_COLOR = "#3E4500";
 
-	// Token: 0x04001BFB RID: 7163
+	// Token: 0x040024FA RID: 9466
 	private const string PULSE_OFF_COLOR = "#000000";
 
-	// Token: 0x04001BFC RID: 7164
+	// Token: 0x040024FB RID: 9467
 	private bool m_sporeEffectFired;
 
-	// Token: 0x04001BFD RID: 7165
+	// Token: 0x040024FC RID: 9468
 	private GenericEffect m_sporeEffect;
 
-	// Token: 0x04001BFE RID: 7166
+	// Token: 0x040024FD RID: 9469
 	private Color m_multiplyColor;
 
-	// Token: 0x04001BFF RID: 7167
+	// Token: 0x040024FE RID: 9470
 	private Color m_addColorPulseOn;
 
-	// Token: 0x04001C00 RID: 7168
+	// Token: 0x040024FF RID: 9471
 	private Color m_addColorPulseOff;
 
-	// Token: 0x04001C01 RID: 7169
+	// Token: 0x04002500 RID: 9472
 	private bool m_pulseOn;
 
-	// Token: 0x04001C02 RID: 7170
+	// Token: 0x04002501 RID: 9473
 	private float m_burnPulseRate = 0.1f;
 }

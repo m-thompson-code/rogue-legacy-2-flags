@@ -2,10 +2,10 @@
 
 namespace Unity.Screenshots
 {
-	// Token: 0x0200082B RID: 2091
+	// Token: 0x02000D0A RID: 3338
 	public static class Downsampler
 	{
-		// Token: 0x06004529 RID: 17705 RVA: 0x000F6A6C File Offset: 0x000F4C6C
+		// Token: 0x06005F22 RID: 24354 RVA: 0x00164590 File Offset: 0x00162790
 		public static byte[] Downsample(byte[] dataRgba, int stride, int maximumWidth, int maximumHeight, out int downsampledStride)
 		{
 			if (stride == 0)

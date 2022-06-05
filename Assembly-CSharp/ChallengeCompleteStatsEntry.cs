@@ -2,10 +2,10 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000572 RID: 1394
+// Token: 0x02000946 RID: 2374
 public class ChallengeCompleteStatsEntry : MonoBehaviour
 {
-	// Token: 0x0600332E RID: 13102 RVA: 0x000ACF0C File Offset: 0x000AB10C
+	// Token: 0x0600481B RID: 18459 RVA: 0x0011767C File Offset: 0x0011587C
 	public void UpdateStat(ChallengeTrophyRank goalRank)
 	{
 		string text = null;
@@ -74,13 +74,13 @@ public class ChallengeCompleteStatsEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600332F RID: 13103 RVA: 0x000AD107 File Offset: 0x000AB307
+	// Token: 0x0600481C RID: 18460 RVA: 0x00027939 File Offset: 0x00025B39
 	private string CalculateLetterGrade()
 	{
 		return ChallengeManager.GetChallengeLetterGrade(ChallengeManager.ActiveChallenge.ChallengeType, ChallengeManager.CalculateActiveChallengeScore(ChallengeCompleteStatsEntryType.FinalScore));
 	}
 
-	// Token: 0x06003330 RID: 13104 RVA: 0x000AD120 File Offset: 0x000AB320
+	// Token: 0x0600481D RID: 18461 RVA: 0x00117878 File Offset: 0x00115A78
 	private string CalculateRating()
 	{
 		float num = ChallengeManager.CalculateActiveChallengeScore(ChallengeCompleteStatsEntryType.FinalScore);
@@ -89,19 +89,19 @@ public class ChallengeCompleteStatsEntry : MonoBehaviour
 		return ChallengeCompleteStatsEntry.m_ratingArray[num3];
 	}
 
-	// Token: 0x040027F1 RID: 10225
+	// Token: 0x0400372C RID: 14124
 	[SerializeField]
 	private ChallengeCompleteStatsEntryType m_statsEntryType;
 
-	// Token: 0x040027F2 RID: 10226
+	// Token: 0x0400372D RID: 14125
 	[SerializeField]
 	private TMP_Text m_amount;
 
-	// Token: 0x040027F3 RID: 10227
+	// Token: 0x0400372E RID: 14126
 	[SerializeField]
 	private TMP_Text m_score;
 
-	// Token: 0x040027F4 RID: 10228
+	// Token: 0x0400372F RID: 14127
 	private static string[] m_ratingArray = new string[]
 	{
 		"Amateur Adventurer",

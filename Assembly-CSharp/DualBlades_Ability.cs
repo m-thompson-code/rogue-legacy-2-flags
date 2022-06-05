@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000197 RID: 407
+// Token: 0x020002EE RID: 750
 public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 {
-	// Token: 0x06000F4C RID: 3916 RVA: 0x0002D67D File Offset: 0x0002B87D
+	// Token: 0x06001721 RID: 5921 RVA: 0x0000BBC4 File Offset: 0x00009DC4
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -17,8 +17,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		};
 	}
 
-	// Token: 0x17000862 RID: 2146
-	// (get) Token: 0x06000F4D RID: 3917 RVA: 0x0002D6AF File Offset: 0x0002B8AF
+	// Token: 0x17000AFC RID: 2812
+	// (get) Token: 0x06001722 RID: 5922 RVA: 0x0000A305 File Offset: 0x00008505
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -27,8 +27,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000863 RID: 2147
-	// (get) Token: 0x06000F4E RID: 3918 RVA: 0x0002D6B6 File Offset: 0x0002B8B6
+	// Token: 0x17000AFD RID: 2813
+	// (get) Token: 0x06001723 RID: 5923 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -37,8 +37,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000864 RID: 2148
-	// (get) Token: 0x06000F4F RID: 3919 RVA: 0x0002D6BD File Offset: 0x0002B8BD
+	// Token: 0x17000AFE RID: 2814
+	// (get) Token: 0x06001724 RID: 5924 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float TellAnimSpeed
 	{
 		get
@@ -47,8 +47,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000865 RID: 2149
-	// (get) Token: 0x06000F50 RID: 3920 RVA: 0x0002D6C4 File Offset: 0x0002B8C4
+	// Token: 0x17000AFF RID: 2815
+	// (get) Token: 0x06001725 RID: 5925 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -57,8 +57,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000866 RID: 2150
-	// (get) Token: 0x06000F51 RID: 3921 RVA: 0x0002D6CB File Offset: 0x0002B8CB
+	// Token: 0x17000B00 RID: 2816
+	// (get) Token: 0x06001726 RID: 5926 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -67,8 +67,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000867 RID: 2151
-	// (get) Token: 0x06000F52 RID: 3922 RVA: 0x0002D6D2 File Offset: 0x0002B8D2
+	// Token: 0x17000B01 RID: 2817
+	// (get) Token: 0x06001727 RID: 5927 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -77,8 +77,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000868 RID: 2152
-	// (get) Token: 0x06000F53 RID: 3923 RVA: 0x0002D6D9 File Offset: 0x0002B8D9
+	// Token: 0x17000B02 RID: 2818
+	// (get) Token: 0x06001728 RID: 5928 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -87,8 +87,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000869 RID: 2153
-	// (get) Token: 0x06000F54 RID: 3924 RVA: 0x0002D6E0 File Offset: 0x0002B8E0
+	// Token: 0x17000B03 RID: 2819
+	// (get) Token: 0x06001729 RID: 5929 RVA: 0x00006772 File Offset: 0x00004972
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -97,8 +97,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700086A RID: 2154
-	// (get) Token: 0x06000F55 RID: 3925 RVA: 0x0002D6E7 File Offset: 0x0002B8E7
+	// Token: 0x17000B04 RID: 2820
+	// (get) Token: 0x0600172A RID: 5930 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -107,8 +107,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700086B RID: 2155
-	// (get) Token: 0x06000F56 RID: 3926 RVA: 0x0002D6EE File Offset: 0x0002B8EE
+	// Token: 0x17000B05 RID: 2821
+	// (get) Token: 0x0600172B RID: 5931 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -117,8 +117,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700086C RID: 2156
-	// (get) Token: 0x06000F57 RID: 3927 RVA: 0x0002D6F8 File Offset: 0x0002B8F8
+	// Token: 0x17000B06 RID: 2822
+	// (get) Token: 0x0600172C RID: 5932 RVA: 0x0008BEE0 File Offset: 0x0008A0E0
 	public override string ProjectileName
 	{
 		get
@@ -135,8 +135,8 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700086D RID: 2157
-	// (get) Token: 0x06000F58 RID: 3928 RVA: 0x0002D734 File Offset: 0x0002B934
+	// Token: 0x17000B07 RID: 2823
+	// (get) Token: 0x0600172D RID: 5933 RVA: 0x0008BF1C File Offset: 0x0008A11C
 	public override Vector2 ProjectileOffset
 	{
 		get
@@ -153,7 +153,7 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F59 RID: 3929 RVA: 0x0002D76E File Offset: 0x0002B96E
+	// Token: 0x0600172E RID: 5934 RVA: 0x0000BBF6 File Offset: 0x00009DF6
 	protected override void Awake()
 	{
 		base.Awake();
@@ -163,14 +163,14 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F5A RID: 3930 RVA: 0x0002D799 File Offset: 0x0002B999
+	// Token: 0x0600172F RID: 5935 RVA: 0x0000BC21 File Offset: 0x00009E21
 	public override void PreCastAbility()
 	{
 		this.m_attackCount = 0;
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000F5B RID: 3931 RVA: 0x0002D7A8 File Offset: 0x0002B9A8
+	// Token: 0x06001730 RID: 5936 RVA: 0x0000BC30 File Offset: 0x00009E30
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		while (duration > 0f)
@@ -197,7 +197,7 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000F5C RID: 3932 RVA: 0x0002D7C0 File Offset: 0x0002B9C0
+	// Token: 0x06001731 RID: 5937 RVA: 0x0008BF58 File Offset: 0x0008A158
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -208,7 +208,7 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F5D RID: 3933 RVA: 0x0002D813 File Offset: 0x0002BA13
+	// Token: 0x06001732 RID: 5938 RVA: 0x0000BC46 File Offset: 0x00009E46
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_firedProjectile)
@@ -219,36 +219,36 @@ public class DualBlades_Ability : BaseAbility_RL, IAttack, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x04001169 RID: 4457
+	// Token: 0x04001712 RID: 5906
 	[SerializeField]
 	private string m_projectileNameRight;
 
-	// Token: 0x0400116A RID: 4458
+	// Token: 0x04001713 RID: 5907
 	[Space(10f)]
 	[SerializeField]
 	private string m_secondProjectileName;
 
-	// Token: 0x0400116B RID: 4459
+	// Token: 0x04001714 RID: 5908
 	[SerializeField]
 	private Vector2 m_secondProjectileOffset;
 
-	// Token: 0x0400116C RID: 4460
+	// Token: 0x04001715 RID: 5909
 	[SerializeField]
 	private string m_thirdProjectileName;
 
-	// Token: 0x0400116D RID: 4461
+	// Token: 0x04001716 RID: 5910
 	[SerializeField]
 	private Vector2 m_thirdProjectileOffset;
 
-	// Token: 0x0400116E RID: 4462
+	// Token: 0x04001717 RID: 5911
 	private const int NUM_ATTACKS = 3;
 
-	// Token: 0x0400116F RID: 4463
+	// Token: 0x04001718 RID: 5912
 	private string m_abilityTellIntroRight;
 
-	// Token: 0x04001170 RID: 4464
+	// Token: 0x04001719 RID: 5913
 	private float m_canAttackAgainCounter;
 
-	// Token: 0x04001171 RID: 4465
+	// Token: 0x0400171A RID: 5914
 	private int m_attackCount;
 }

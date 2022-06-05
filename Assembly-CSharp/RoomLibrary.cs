@@ -4,12 +4,12 @@ using Rooms;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x02000243 RID: 579
+// Token: 0x02000400 RID: 1024
 public class RoomLibrary : MonoBehaviour
 {
-	// Token: 0x17000B4C RID: 2892
-	// (get) Token: 0x0600172B RID: 5931 RVA: 0x00048322 File Offset: 0x00046522
-	// (set) Token: 0x0600172C RID: 5932 RVA: 0x00048329 File Offset: 0x00046529
+	// Token: 0x17000E79 RID: 3705
+	// (get) Token: 0x060020DE RID: 8414 RVA: 0x00011709 File Offset: 0x0000F909
+	// (set) Token: 0x060020DF RID: 8415 RVA: 0x00011710 File Offset: 0x0000F910
 	public static Dictionary<BiomeType, RoomSetCollection> BiomeToSetCollectionTable
 	{
 		get
@@ -22,13 +22,13 @@ public class RoomLibrary : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B4D RID: 2893
-	// (get) Token: 0x0600172D RID: 5933 RVA: 0x00048331 File Offset: 0x00046531
-	// (set) Token: 0x0600172E RID: 5934 RVA: 0x00048338 File Offset: 0x00046538
+	// Token: 0x17000E7A RID: 3706
+	// (get) Token: 0x060020E0 RID: 8416 RVA: 0x00011718 File Offset: 0x0000F918
+	// (set) Token: 0x060020E1 RID: 8417 RVA: 0x0001171F File Offset: 0x0000F91F
 	private static RoomLibrary Instance { get; set; }
 
-	// Token: 0x17000B4E RID: 2894
-	// (get) Token: 0x0600172F RID: 5935 RVA: 0x00048340 File Offset: 0x00046540
+	// Token: 0x17000E7B RID: 3707
+	// (get) Token: 0x060020E2 RID: 8418 RVA: 0x00011727 File Offset: 0x0000F927
 	public static bool IsInstantiated
 	{
 		get
@@ -37,19 +37,19 @@ public class RoomLibrary : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B4F RID: 2895
-	// (get) Token: 0x06001730 RID: 5936 RVA: 0x0004834D File Offset: 0x0004654D
-	// (set) Token: 0x06001731 RID: 5937 RVA: 0x00048354 File Offset: 0x00046554
+	// Token: 0x17000E7C RID: 3708
+	// (get) Token: 0x060020E3 RID: 8419 RVA: 0x00011734 File Offset: 0x0000F934
+	// (set) Token: 0x060020E4 RID: 8420 RVA: 0x0001173B File Offset: 0x0000F93B
 	public static bool IsLoaded { get; private set; }
 
-	// Token: 0x17000B50 RID: 2896
-	// (get) Token: 0x06001732 RID: 5938 RVA: 0x0004835C File Offset: 0x0004655C
-	// (set) Token: 0x06001733 RID: 5939 RVA: 0x00048363 File Offset: 0x00046563
+	// Token: 0x17000E7D RID: 3709
+	// (get) Token: 0x060020E5 RID: 8421 RVA: 0x00011743 File Offset: 0x0000F943
+	// (set) Token: 0x060020E6 RID: 8422 RVA: 0x0001174A File Offset: 0x0000F94A
 	public static Vector2Int MaxRoomSize { get; private set; }
 
-	// Token: 0x17000B51 RID: 2897
-	// (get) Token: 0x06001734 RID: 5940 RVA: 0x0004836B File Offset: 0x0004656B
-	// (set) Token: 0x06001735 RID: 5941 RVA: 0x00048372 File Offset: 0x00046572
+	// Token: 0x17000E7E RID: 3710
+	// (get) Token: 0x060020E7 RID: 8423 RVA: 0x00011752 File Offset: 0x0000F952
+	// (set) Token: 0x060020E8 RID: 8424 RVA: 0x00011759 File Offset: 0x0000F959
 	public static Dictionary<string, CompiledScene_ScriptableObject> CompiledSceneTable
 	{
 		get
@@ -62,7 +62,7 @@ public class RoomLibrary : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001736 RID: 5942 RVA: 0x0004837A File Offset: 0x0004657A
+	// Token: 0x060020E9 RID: 8425 RVA: 0x00011761 File Offset: 0x0000F961
 	private void Awake()
 	{
 		if (!(RoomLibrary.Instance == null))
@@ -79,7 +79,7 @@ public class RoomLibrary : MonoBehaviour
 		this.LoadCompiledRooms();
 	}
 
-	// Token: 0x06001737 RID: 5943 RVA: 0x000483BA File Offset: 0x000465BA
+	// Token: 0x060020EA RID: 8426 RVA: 0x000117A1 File Offset: 0x0000F9A1
 	private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
 	{
 		if (!scene.name.StartsWith("Level"))
@@ -89,7 +89,7 @@ public class RoomLibrary : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001738 RID: 5944 RVA: 0x000483E6 File Offset: 0x000465E6
+	// Token: 0x060020EB RID: 8427 RVA: 0x000117CD File Offset: 0x0000F9CD
 	private void OnDestroy()
 	{
 		if (RoomLibrary.Instance != null)
@@ -105,7 +105,7 @@ public class RoomLibrary : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001739 RID: 5945 RVA: 0x00048424 File Offset: 0x00046624
+	// Token: 0x060020EC RID: 8428 RVA: 0x000A5FC4 File Offset: 0x000A41C4
 	private void LoadCompiledRooms()
 	{
 		if (!Application.isPlaying)
@@ -126,7 +126,7 @@ public class RoomLibrary : MonoBehaviour
 		RoomLibrary.IsLoaded = true;
 	}
 
-	// Token: 0x0600173A RID: 5946 RVA: 0x00048491 File Offset: 0x00046691
+	// Token: 0x060020ED RID: 8429 RVA: 0x00011809 File Offset: 0x0000FA09
 	public static void LoadCompiledRoomsFromLevelEditor()
 	{
 		if (!GameUtility.IsInLevelEditor)
@@ -139,7 +139,7 @@ public class RoomLibrary : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600173B RID: 5947 RVA: 0x000484B4 File Offset: 0x000466B4
+	// Token: 0x060020EE RID: 8430 RVA: 0x000A6034 File Offset: 0x000A4234
 	private void LoadCompiledRooms(BiomeType biome, RoomPool roomPool)
 	{
 		if (RoomLibrary.BiomeToSetCollectionTable == null)
@@ -197,7 +197,7 @@ public class RoomLibrary : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600173C RID: 5948 RVA: 0x000486A8 File Offset: 0x000468A8
+	// Token: 0x060020EF RID: 8431 RVA: 0x0001182A File Offset: 0x0000FA2A
 	public static RoomSetCollection GetSetCollection(BiomeType biome)
 	{
 		if (!RoomLibrary.IsLoaded)
@@ -207,7 +207,7 @@ public class RoomLibrary : MonoBehaviour
 		return RoomLibrary.BiomeToSetCollectionTable[biome];
 	}
 
-	// Token: 0x0600173D RID: 5949 RVA: 0x000486C8 File Offset: 0x000468C8
+	// Token: 0x060020F0 RID: 8432 RVA: 0x000A6228 File Offset: 0x000A4428
 	public static RoomMetaData GetRoomMetaDataFromID(RoomID roomID)
 	{
 		string sceneName = roomID.SceneName;
@@ -233,29 +233,29 @@ public class RoomLibrary : MonoBehaviour
 		return roomMetaData2;
 	}
 
-	// Token: 0x040016A3 RID: 5795
+	// Token: 0x04001DBB RID: 7611
 	[SerializeField]
 	private string m_biomeRoomLibraryPath = "Scriptable Objects/RoomPool";
 
-	// Token: 0x040016A4 RID: 5796
+	// Token: 0x04001DBC RID: 7612
 	private RoomPool m_biomeRoomLibrary;
 
-	// Token: 0x040016A5 RID: 5797
+	// Token: 0x04001DBD RID: 7613
 	[SerializeField]
 	private bool m_releaseRoomPoolAfterLoad = true;
 
-	// Token: 0x040016A6 RID: 5798
+	// Token: 0x04001DBE RID: 7614
 	public const string COMPILED_ROOMS_SUB_DIRECTORY = "Prefabs/Compiled Rooms";
 
-	// Token: 0x040016A7 RID: 5799
+	// Token: 0x04001DBF RID: 7615
 	public const string STORAGE_PATH = "Assets/Content/Prefabs/Compiled Rooms";
 
-	// Token: 0x040016A8 RID: 5800
+	// Token: 0x04001DC0 RID: 7616
 	public const string PREFAB_RESOURCES_PATH = "Prefabs/Managers/RoomLibrary";
 
-	// Token: 0x040016A9 RID: 5801
+	// Token: 0x04001DC1 RID: 7617
 	private static Dictionary<BiomeType, RoomSetCollection> m_biomeToSetCollectionTable = null;
 
-	// Token: 0x040016AA RID: 5802
+	// Token: 0x04001DC2 RID: 7618
 	private static Dictionary<string, CompiledScene_ScriptableObject> m_compiledSceneTable = new Dictionary<string, CompiledScene_ScriptableObject>();
 }

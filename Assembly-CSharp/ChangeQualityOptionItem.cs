@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000280 RID: 640
+// Token: 0x0200044B RID: 1099
 public class ChangeQualityOptionItem : SelectionListOptionItem
 {
-	// Token: 0x0600194D RID: 6477 RVA: 0x0004F5D5 File Offset: 0x0004D7D5
+	// Token: 0x0600233C RID: 9020 RVA: 0x00012F67 File Offset: 0x00011167
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class ChangeQualityOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x0600194E RID: 6478 RVA: 0x0004F602 File Offset: 0x0004D802
+	// Token: 0x0600233D RID: 9021 RVA: 0x00012F94 File Offset: 0x00011194
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -29,13 +29,13 @@ public class ChangeQualityOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x0600194F RID: 6479 RVA: 0x0004F641 File Offset: 0x0004D841
+	// Token: 0x0600233E RID: 9022 RVA: 0x00012FD3 File Offset: 0x000111D3
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed quality to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001950 RID: 6480 RVA: 0x0004F658 File Offset: 0x0004D858
+	// Token: 0x0600233F RID: 9023 RVA: 0x00012FEA File Offset: 0x000111EA
 	public override void ConfirmOptionChange()
 	{
 		QualitySettings.SetQualityLevel(this.m_selectedIndex, true);

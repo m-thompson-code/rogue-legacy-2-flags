@@ -3,11 +3,11 @@ using System.Collections;
 using FMODUnity;
 using UnityEngine;
 
-// Token: 0x02000547 RID: 1351
+// Token: 0x020008EC RID: 2284
 public abstract class BaseShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj
 {
-	// Token: 0x17001233 RID: 4659
-	// (get) Token: 0x06003172 RID: 12658 RVA: 0x000A75DE File Offset: 0x000A57DE
+	// Token: 0x170018A4 RID: 6308
+	// (get) Token: 0x0600454A RID: 17738 RVA: 0x000260C6 File Offset: 0x000242C6
 	public virtual bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -16,8 +16,8 @@ public abstract class BaseShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj
 		}
 	}
 
-	// Token: 0x17001234 RID: 4660
-	// (get) Token: 0x06003173 RID: 12659 RVA: 0x000A75E6 File Offset: 0x000A57E6
+	// Token: 0x170018A5 RID: 6309
+	// (get) Token: 0x0600454B RID: 17739 RVA: 0x000047A7 File Offset: 0x000029A7
 	public virtual SpeechBubbleType BubbleType
 	{
 		get
@@ -26,27 +26,27 @@ public abstract class BaseShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj
 		}
 	}
 
-	// Token: 0x06003174 RID: 12660
+	// Token: 0x0600454C RID: 17740
 	protected abstract bool HasEventDialogue();
 
-	// Token: 0x06003175 RID: 12661 RVA: 0x000A75E9 File Offset: 0x000A57E9
+	// Token: 0x0600454D RID: 17741 RVA: 0x000260CE File Offset: 0x000242CE
 	protected virtual void Awake()
 	{
 		this.m_interactable = base.GetComponent<Interactable>();
 		this.m_npcController = base.GetComponentInChildren<NPCController>();
 	}
 
-	// Token: 0x06003176 RID: 12662 RVA: 0x000A7603 File Offset: 0x000A5803
+	// Token: 0x0600454E RID: 17742 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnEnable()
 	{
 	}
 
-	// Token: 0x06003177 RID: 12663 RVA: 0x000A7605 File Offset: 0x000A5805
+	// Token: 0x0600454F RID: 17743 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnDisable()
 	{
 	}
 
-	// Token: 0x06003178 RID: 12664 RVA: 0x000A7607 File Offset: 0x000A5807
+	// Token: 0x06004550 RID: 17744 RVA: 0x000260E8 File Offset: 0x000242E8
 	public virtual void OpenShop()
 	{
 		if (this.m_interactable)
@@ -56,10 +56,10 @@ public abstract class BaseShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj
 		base.StartCoroutine(this.OpenShopCoroutine());
 	}
 
-	// Token: 0x06003179 RID: 12665
+	// Token: 0x06004551 RID: 17745
 	protected abstract void OpenShop_Internal();
 
-	// Token: 0x0600317A RID: 12666 RVA: 0x000A7630 File Offset: 0x000A5830
+	// Token: 0x06004552 RID: 17746 RVA: 0x001109DC File Offset: 0x0010EBDC
 	public virtual void CloseShop()
 	{
 		if (this.m_interactable)
@@ -72,7 +72,7 @@ public abstract class BaseShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj
 		}
 	}
 
-	// Token: 0x0600317B RID: 12667 RVA: 0x000A767E File Offset: 0x000A587E
+	// Token: 0x06004553 RID: 17747 RVA: 0x00026110 File Offset: 0x00024310
 	protected virtual IEnumerator OpenShopCoroutine()
 	{
 		if (this.m_greetingAudioEmitter)
@@ -91,7 +91,7 @@ public abstract class BaseShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj
 		yield break;
 	}
 
-	// Token: 0x0600317C RID: 12668 RVA: 0x000A768D File Offset: 0x000A588D
+	// Token: 0x06004554 RID: 17748 RVA: 0x0002611F File Offset: 0x0002431F
 	protected virtual IEnumerator MovePlayerToPos()
 	{
 		PlayerManager.GetPlayerController().SetVelocity(0f, 0f, false);
@@ -115,23 +115,23 @@ public abstract class BaseShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj
 		yield break;
 	}
 
-	// Token: 0x0600317E RID: 12670 RVA: 0x000A76A4 File Offset: 0x000A58A4
+	// Token: 0x06004556 RID: 17750 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040026FD RID: 9981
+	// Token: 0x0400359C RID: 13724
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x040026FE RID: 9982
+	// Token: 0x0400359D RID: 13725
 	[SerializeField]
 	private StudioEventEmitter m_greetingAudioEmitter;
 
-	// Token: 0x040026FF RID: 9983
+	// Token: 0x0400359E RID: 13726
 	protected Interactable m_interactable;
 
-	// Token: 0x04002700 RID: 9984
+	// Token: 0x0400359F RID: 13727
 	protected NPCController m_npcController;
 }

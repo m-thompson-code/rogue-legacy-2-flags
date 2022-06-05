@@ -5,11 +5,11 @@ using Rewired;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200020E RID: 526
+// Token: 0x020003BF RID: 959
 public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitResponse, ITerrainOnStayHitResponse, ITerrainOnExitHitResponse, IInteractable
 {
-	// Token: 0x17000B04 RID: 2820
-	// (get) Token: 0x06001601 RID: 5633 RVA: 0x00044A33 File Offset: 0x00042C33
+	// Token: 0x17000E27 RID: 3623
+	// (get) Token: 0x06001F91 RID: 8081 RVA: 0x00010A04 File Offset: 0x0000EC04
 	public static bool PlayerIsInteracting
 	{
 		get
@@ -18,8 +18,8 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B05 RID: 2821
-	// (get) Token: 0x06001602 RID: 5634 RVA: 0x00044A40 File Offset: 0x00042C40
+	// Token: 0x17000E28 RID: 3624
+	// (get) Token: 0x06001F92 RID: 8082 RVA: 0x00010A11 File Offset: 0x0000EC11
 	public GameObject InteractIconPositionGO
 	{
 		get
@@ -28,14 +28,14 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B06 RID: 2822
-	// (get) Token: 0x06001603 RID: 5635 RVA: 0x00044A48 File Offset: 0x00042C48
-	// (set) Token: 0x06001604 RID: 5636 RVA: 0x00044A50 File Offset: 0x00042C50
+	// Token: 0x17000E29 RID: 3625
+	// (get) Token: 0x06001F93 RID: 8083 RVA: 0x00010A19 File Offset: 0x0000EC19
+	// (set) Token: 0x06001F94 RID: 8084 RVA: 0x00010A21 File Offset: 0x0000EC21
 	public bool UseParentScaleForInteractIcon { get; set; }
 
-	// Token: 0x17000B07 RID: 2823
-	// (get) Token: 0x06001605 RID: 5637 RVA: 0x00044A59 File Offset: 0x00042C59
-	// (set) Token: 0x06001606 RID: 5638 RVA: 0x00044A61 File Offset: 0x00042C61
+	// Token: 0x17000E2A RID: 3626
+	// (get) Token: 0x06001F95 RID: 8085 RVA: 0x00010A2A File Offset: 0x0000EC2A
+	// (set) Token: 0x06001F96 RID: 8086 RVA: 0x00010A32 File Offset: 0x0000EC32
 	public SpeechBubbleController SpeechBubble
 	{
 		get
@@ -48,8 +48,8 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B08 RID: 2824
-	// (get) Token: 0x06001607 RID: 5639 RVA: 0x00044A6A File Offset: 0x00042C6A
+	// Token: 0x17000E2B RID: 3627
+	// (get) Token: 0x06001F97 RID: 8087 RVA: 0x00010A3B File Offset: 0x0000EC3B
 	public bool IsInteractableActive
 	{
 		get
@@ -58,8 +58,8 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B09 RID: 2825
-	// (get) Token: 0x06001608 RID: 5640 RVA: 0x00044A72 File Offset: 0x00042C72
+	// Token: 0x17000E2C RID: 3628
+	// (get) Token: 0x06001F98 RID: 8088 RVA: 0x00010A43 File Offset: 0x0000EC43
 	public global::PlayerController PlayerController
 	{
 		get
@@ -72,8 +72,8 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B0A RID: 2826
-	// (get) Token: 0x06001609 RID: 5641 RVA: 0x00044A82 File Offset: 0x00042C82
+	// Token: 0x17000E2D RID: 3629
+	// (get) Token: 0x06001F99 RID: 8089 RVA: 0x00010A53 File Offset: 0x0000EC53
 	public bool IsPlayerGrounded
 	{
 		get
@@ -82,9 +82,9 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B0B RID: 2827
-	// (get) Token: 0x0600160A RID: 5642 RVA: 0x00044A9E File Offset: 0x00042C9E
-	// (set) Token: 0x0600160B RID: 5643 RVA: 0x00044AA6 File Offset: 0x00042CA6
+	// Token: 0x17000E2E RID: 3630
+	// (get) Token: 0x06001F9A RID: 8090 RVA: 0x00010A6F File Offset: 0x0000EC6F
+	// (set) Token: 0x06001F9B RID: 8091 RVA: 0x00010A77 File Offset: 0x0000EC77
 	public bool IsPlayerInTrigger
 	{
 		get
@@ -97,8 +97,8 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B0C RID: 2828
-	// (get) Token: 0x0600160C RID: 5644 RVA: 0x00044AB0 File Offset: 0x00042CB0
+	// Token: 0x17000E2F RID: 3631
+	// (get) Token: 0x06001F9C RID: 8092 RVA: 0x000A3218 File Offset: 0x000A1418
 	public bool IsPlayerFacing
 	{
 		get
@@ -107,13 +107,13 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B0D RID: 2829
-	// (get) Token: 0x0600160D RID: 5645 RVA: 0x00044B42 File Offset: 0x00042D42
-	// (set) Token: 0x0600160E RID: 5646 RVA: 0x00044B4A File Offset: 0x00042D4A
+	// Token: 0x17000E30 RID: 3632
+	// (get) Token: 0x06001F9D RID: 8093 RVA: 0x00010A80 File Offset: 0x0000EC80
+	// (set) Token: 0x06001F9E RID: 8094 RVA: 0x00010A88 File Offset: 0x0000EC88
 	public bool IsInteractable { get; private set; }
 
-	// Token: 0x17000B0E RID: 2830
-	// (get) Token: 0x0600160F RID: 5647 RVA: 0x00044B53 File Offset: 0x00042D53
+	// Token: 0x17000E31 RID: 3633
+	// (get) Token: 0x06001F9F RID: 8095 RVA: 0x00010A91 File Offset: 0x0000EC91
 	public UnityEvent_GameObject TriggerOnEnterEvent
 	{
 		get
@@ -122,8 +122,8 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B0F RID: 2831
-	// (get) Token: 0x06001610 RID: 5648 RVA: 0x00044B5B File Offset: 0x00042D5B
+	// Token: 0x17000E32 RID: 3634
+	// (get) Token: 0x06001FA0 RID: 8096 RVA: 0x00010A99 File Offset: 0x0000EC99
 	public UnityEvent_GameObject TriggerOnExitEvent
 	{
 		get
@@ -132,8 +132,8 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B10 RID: 2832
-	// (get) Token: 0x06001611 RID: 5649 RVA: 0x00044B63 File Offset: 0x00042D63
+	// Token: 0x17000E33 RID: 3635
+	// (get) Token: 0x06001FA1 RID: 8097 RVA: 0x00010AA1 File Offset: 0x0000ECA1
 	public bool TriggerOnTouch
 	{
 		get
@@ -142,8 +142,8 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x17000B11 RID: 2833
-	// (get) Token: 0x06001612 RID: 5650 RVA: 0x00044B6B File Offset: 0x00042D6B
+	// Token: 0x17000E34 RID: 3636
+	// (get) Token: 0x06001FA2 RID: 8098 RVA: 0x00010AA9 File Offset: 0x0000ECA9
 	public TextPopupObj InteractIcon
 	{
 		get
@@ -152,13 +152,13 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x06001613 RID: 5651 RVA: 0x00044B73 File Offset: 0x00042D73
+	// Token: 0x06001FA3 RID: 8099 RVA: 0x00010AB1 File Offset: 0x0000ECB1
 	private void Awake()
 	{
 		this.m_onInteractButtonPressed = new Action<InputActionEventData>(this.OnInteractButtonPressed);
 	}
 
-	// Token: 0x06001614 RID: 5652 RVA: 0x00044B88 File Offset: 0x00042D88
+	// Token: 0x06001FA4 RID: 8100 RVA: 0x000A32AC File Offset: 0x000A14AC
 	private void Start()
 	{
 		IHitboxController componentInChildren = base.GetComponentInChildren<IHitboxController>();
@@ -172,7 +172,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x06001615 RID: 5653 RVA: 0x00044BC8 File Offset: 0x00042DC8
+	// Token: 0x06001FA5 RID: 8101 RVA: 0x000A32EC File Offset: 0x000A14EC
 	private void OnInteractButtonPressed(InputActionEventData obj)
 	{
 		if (this.IsInteractable)
@@ -192,7 +192,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x06001616 RID: 5654 RVA: 0x00044C5B File Offset: 0x00042E5B
+	// Token: 0x06001FA6 RID: 8102 RVA: 0x00010AC5 File Offset: 0x0000ECC5
 	private void OnInteractBoundsTouched()
 	{
 		if (this.IsInteractable)
@@ -202,7 +202,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x06001617 RID: 5655 RVA: 0x00044C80 File Offset: 0x00042E80
+	// Token: 0x06001FA7 RID: 8103 RVA: 0x000A3380 File Offset: 0x000A1580
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (base.enabled && this.m_isInteractableActive)
@@ -220,7 +220,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x06001618 RID: 5656 RVA: 0x00044CEE File Offset: 0x00042EEE
+	// Token: 0x06001FA8 RID: 8104 RVA: 0x00010AE7 File Offset: 0x0000ECE7
 	public void TerrainOnStayHitResponse(IHitboxController otherHBController)
 	{
 		if (this.m_isInteractableActive && !this.IsPlayerInTrigger)
@@ -229,7 +229,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x06001619 RID: 5657 RVA: 0x00044D07 File Offset: 0x00042F07
+	// Token: 0x06001FA9 RID: 8105 RVA: 0x00010B00 File Offset: 0x0000ED00
 	private IEnumerator OnPlayerInTriggerCoroutine()
 	{
 		global::PlayerController playerController = PlayerManager.GetPlayerController();
@@ -291,7 +291,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		yield break;
 	}
 
-	// Token: 0x0600161A RID: 5658 RVA: 0x00044D18 File Offset: 0x00042F18
+	// Token: 0x06001FAA RID: 8106 RVA: 0x000A33F0 File Offset: 0x000A15F0
 	private void SetInteractIconIsEnabled(bool isEnabled)
 	{
 		if (this.m_interactPromptDisplayed != isEnabled)
@@ -347,7 +347,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x0600161B RID: 5659 RVA: 0x00044EF5 File Offset: 0x000430F5
+	// Token: 0x06001FAB RID: 8107 RVA: 0x00010B0F File Offset: 0x0000ED0F
 	public void TerrainOnExitHitResponse(IHitboxController otherHBController)
 	{
 		if (!base.gameObject.activeInHierarchy)
@@ -364,7 +364,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x0600161C RID: 5660 RVA: 0x00044F34 File Offset: 0x00043134
+	// Token: 0x06001FAC RID: 8108 RVA: 0x00010B4E File Offset: 0x0000ED4E
 	private IEnumerator StartInteractAtEndOfFrameCoroutine()
 	{
 		if (Interactable.m_closestInteractable_STATIC)
@@ -376,7 +376,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		yield break;
 	}
 
-	// Token: 0x0600161D RID: 5661 RVA: 0x00044F3C File Offset: 0x0004313C
+	// Token: 0x06001FAD RID: 8109 RVA: 0x000A35D0 File Offset: 0x000A17D0
 	public void TriggerInteractable()
 	{
 		if (!this.IsInteractable)
@@ -393,7 +393,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		this.m_triggerOnEnterEvent.Invoke(base.gameObject);
 	}
 
-	// Token: 0x0600161E RID: 5662 RVA: 0x00044F90 File Offset: 0x00043190
+	// Token: 0x06001FAE RID: 8110 RVA: 0x000A3624 File Offset: 0x000A1824
 	private void Disable()
 	{
 		this.IsPlayerInTrigger = false;
@@ -413,7 +413,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x0600161F RID: 5663 RVA: 0x00044FE7 File Offset: 0x000431E7
+	// Token: 0x06001FAF RID: 8111 RVA: 0x00010B56 File Offset: 0x0000ED56
 	public void SetIsInteractableActive(bool isActive)
 	{
 		this.m_isInteractableActive = isActive;
@@ -428,7 +428,7 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x06001620 RID: 5664 RVA: 0x00045018 File Offset: 0x00043218
+	// Token: 0x06001FB0 RID: 8112 RVA: 0x00010B87 File Offset: 0x0000ED87
 	public void ForceUpdateSpeechBubbleState()
 	{
 		if (this.m_speechBubble)
@@ -437,19 +437,19 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		}
 	}
 
-	// Token: 0x06001621 RID: 5665 RVA: 0x00045033 File Offset: 0x00043233
+	// Token: 0x06001FB1 RID: 8113 RVA: 0x00010BA2 File Offset: 0x0000EDA2
 	public void ForceDisableInteractPrompt(bool forceDisable)
 	{
 		this.m_forceDisableInteractPrompt = forceDisable;
 	}
 
-	// Token: 0x06001622 RID: 5666 RVA: 0x0004503C File Offset: 0x0004323C
+	// Token: 0x06001FB2 RID: 8114 RVA: 0x00010BAB File Offset: 0x0000EDAB
 	public void ForceResetInteractedState()
 	{
 		this.m_hasPlayerInteractedWith = false;
 	}
 
-	// Token: 0x06001623 RID: 5667 RVA: 0x00045045 File Offset: 0x00043245
+	// Token: 0x06001FB3 RID: 8115 RVA: 0x00010BB4 File Offset: 0x0000EDB4
 	private void OnDisable()
 	{
 		if (Interactable.m_closestInteractable_STATIC == this)
@@ -459,81 +459,81 @@ public class Interactable : MonoBehaviour, ITerrainOnEnterHitResponse, IHitRespo
 		this.Disable();
 	}
 
-	// Token: 0x04001533 RID: 5427
+	// Token: 0x04001C30 RID: 7216
 	private const string m_interactString_STATIC = "[Interact]";
 
-	// Token: 0x04001534 RID: 5428
+	// Token: 0x04001C31 RID: 7217
 	private static Interactable m_closestInteractable_STATIC;
 
-	// Token: 0x04001535 RID: 5429
+	// Token: 0x04001C32 RID: 7218
 	private static WaitForEndOfFrame m_endOfFrameYield_STATIC = new WaitForEndOfFrame();
 
-	// Token: 0x04001536 RID: 5430
+	// Token: 0x04001C33 RID: 7219
 	[SerializeField]
 	private GameObject m_interactIconPositionGO;
 
-	// Token: 0x04001537 RID: 5431
+	// Token: 0x04001C34 RID: 7220
 	[SerializeField]
 	private SpeechBubbleController m_speechBubble;
 
-	// Token: 0x04001538 RID: 5432
+	// Token: 0x04001C35 RID: 7221
 	[SerializeField]
 	private bool m_triggerOnTouch;
 
-	// Token: 0x04001539 RID: 5433
+	// Token: 0x04001C36 RID: 7222
 	[SerializeField]
 	private bool m_onlyTriggerWhenPlayerIsGrounded;
 
-	// Token: 0x0400153A RID: 5434
+	// Token: 0x04001C37 RID: 7223
 	[SerializeField]
 	private bool m_canOnlyInteractOnce = true;
 
-	// Token: 0x0400153B RID: 5435
+	// Token: 0x04001C38 RID: 7224
 	[Tooltip("If false, will reset the trigger state of the interactable only once the player has exited the trigger box. If true, will reset even the player has not yet exited first. Useful for things like spring traps that always need to check for triggers in case the player is standing on it while it is disabled.")]
 	[SerializeField]
 	[ConditionalHide("m_canOnlyInteractOnce", true, Inverse = true)]
 	private bool m_resetInteractionImmediately;
 
-	// Token: 0x0400153C RID: 5436
+	// Token: 0x04001C39 RID: 7225
 	[SerializeField]
 	private bool m_playerMustBeFacing;
 
-	// Token: 0x0400153D RID: 5437
+	// Token: 0x04001C3A RID: 7226
 	[SerializeField]
 	private bool m_disableAbilitiesOnInteract = true;
 
-	// Token: 0x0400153E RID: 5438
+	// Token: 0x04001C3B RID: 7227
 	[Space(10f)]
 	public UnityEvent_GameObject m_triggerOnEnterEvent;
 
-	// Token: 0x0400153F RID: 5439
+	// Token: 0x04001C3C RID: 7228
 	public UnityEvent_GameObject m_triggerOnExitEvent;
 
-	// Token: 0x04001540 RID: 5440
+	// Token: 0x04001C3D RID: 7229
 	[Header("Debug")]
 	[SerializeField]
 	[ReadOnly]
 	private bool m_isPlayerInTrigger;
 
-	// Token: 0x04001541 RID: 5441
+	// Token: 0x04001C3E RID: 7230
 	[SerializeField]
 	[ReadOnly]
 	private bool m_hasPlayerInteractedWith;
 
-	// Token: 0x04001542 RID: 5442
+	// Token: 0x04001C3F RID: 7231
 	[SerializeField]
 	[ReadOnly]
 	private bool m_isInteractableActive = true;
 
-	// Token: 0x04001543 RID: 5443
+	// Token: 0x04001C40 RID: 7232
 	private TextPopupObj m_pooledInteractIcon;
 
-	// Token: 0x04001544 RID: 5444
+	// Token: 0x04001C41 RID: 7233
 	private bool m_interactPromptDisplayed;
 
-	// Token: 0x04001545 RID: 5445
+	// Token: 0x04001C42 RID: 7234
 	private bool m_forceDisableInteractPrompt;
 
-	// Token: 0x04001546 RID: 5446
+	// Token: 0x04001C43 RID: 7235
 	private Action<InputActionEventData> m_onInteractButtonPressed;
 }

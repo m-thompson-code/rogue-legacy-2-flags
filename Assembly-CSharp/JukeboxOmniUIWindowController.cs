@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000589 RID: 1417
+// Token: 0x02000981 RID: 2433
 public class JukeboxOmniUIWindowController : BaseOmniUIWindowController<BaseOmniUICategoryEntry, JukeboxOmniUIEntry>
 {
-	// Token: 0x170012D0 RID: 4816
-	// (get) Token: 0x060034F8 RID: 13560 RVA: 0x000B66ED File Offset: 0x000B48ED
+	// Token: 0x170019E1 RID: 6625
+	// (get) Token: 0x06004AB5 RID: 19125 RVA: 0x00028DD7 File Offset: 0x00026FD7
 	public JukeboxSpectrumAnalyzer JukeboxSpectrum
 	{
 		get
@@ -15,8 +15,8 @@ public class JukeboxOmniUIWindowController : BaseOmniUIWindowController<BaseOmni
 		}
 	}
 
-	// Token: 0x170012D1 RID: 4817
-	// (get) Token: 0x060034F9 RID: 13561 RVA: 0x000B66F5 File Offset: 0x000B48F5
+	// Token: 0x170019E2 RID: 6626
+	// (get) Token: 0x06004AB6 RID: 19126 RVA: 0x00005315 File Offset: 0x00003515
 	public override WindowID ID
 	{
 		get
@@ -25,12 +25,12 @@ public class JukeboxOmniUIWindowController : BaseOmniUIWindowController<BaseOmni
 		}
 	}
 
-	// Token: 0x060034FA RID: 13562 RVA: 0x000B66F9 File Offset: 0x000B48F9
+	// Token: 0x06004AB7 RID: 19127 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void CreateCategoryEntries()
 	{
 	}
 
-	// Token: 0x060034FB RID: 13563 RVA: 0x000B66FC File Offset: 0x000B48FC
+	// Token: 0x06004AB8 RID: 19128 RVA: 0x001232FC File Offset: 0x001214FC
 	protected override void CreateEntries()
 	{
 		if (base.EntryArray != null)
@@ -53,7 +53,7 @@ public class JukeboxOmniUIWindowController : BaseOmniUIWindowController<BaseOmni
 		}
 	}
 
-	// Token: 0x060034FC RID: 13564 RVA: 0x000B67EC File Offset: 0x000B49EC
+	// Token: 0x06004AB9 RID: 19129 RVA: 0x001233EC File Offset: 0x001215EC
 	protected override void UpdateScrollArrows(float scrollAmount)
 	{
 		base.UpdateScrollArrows(scrollAmount);
@@ -131,7 +131,7 @@ public class JukeboxOmniUIWindowController : BaseOmniUIWindowController<BaseOmni
 		}
 	}
 
-	// Token: 0x060034FD RID: 13565 RVA: 0x000B6A2C File Offset: 0x000B4C2C
+	// Token: 0x06004ABA RID: 19130 RVA: 0x00028C7A File Offset: 0x00026E7A
 	private void SetGameObjectActive(GameObject obj, bool active)
 	{
 		if (obj.activeSelf == !active)
@@ -140,7 +140,7 @@ public class JukeboxOmniUIWindowController : BaseOmniUIWindowController<BaseOmni
 		}
 	}
 
-	// Token: 0x0400294B RID: 10571
+	// Token: 0x04003906 RID: 14598
 	[SerializeField]
 	private JukeboxSpectrumAnalyzer m_jukeboxSpectrum;
 }

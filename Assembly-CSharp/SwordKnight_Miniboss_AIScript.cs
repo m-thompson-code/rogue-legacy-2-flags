@@ -1,11 +1,11 @@
 ﻿using System;
 using RLAudio;
 
-// Token: 0x0200013C RID: 316
+// Token: 0x0200022B RID: 555
 public class SwordKnight_Miniboss_AIScript : SwordKnight_Basic_AIScript
 {
-	// Token: 0x1700055A RID: 1370
-	// (get) Token: 0x060009FB RID: 2555 RVA: 0x0001FEDB File Offset: 0x0001E0DB
+	// Token: 0x17000728 RID: 1832
+	// (get) Token: 0x06000F6A RID: 3946 RVA: 0x00004565 File Offset: 0x00002765
 	protected override float m_slash_TellIntroAndHold_Delay
 	{
 		get
@@ -14,8 +14,8 @@ public class SwordKnight_Miniboss_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700055B RID: 1371
-	// (get) Token: 0x060009FC RID: 2556 RVA: 0x0001FEE2 File Offset: 0x0001E0E2
+	// Token: 0x17000729 RID: 1833
+	// (get) Token: 0x06000F6B RID: 3947 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float m_slash_Attack_Speed
 	{
 		get
@@ -24,8 +24,8 @@ public class SwordKnight_Miniboss_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700055C RID: 1372
-	// (get) Token: 0x060009FD RID: 2557 RVA: 0x0001FEE9 File Offset: 0x0001E0E9
+	// Token: 0x1700072A RID: 1834
+	// (get) Token: 0x06000F6C RID: 3948 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected override float m_slash_Attack_Duration
 	{
 		get
@@ -34,8 +34,8 @@ public class SwordKnight_Miniboss_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700055D RID: 1373
-	// (get) Token: 0x060009FE RID: 2558 RVA: 0x0001FEF0 File Offset: 0x0001E0F0
+	// Token: 0x1700072B RID: 1835
+	// (get) Token: 0x06000F6D RID: 3949 RVA: 0x00006780 File Offset: 0x00004980
 	protected override float m_cricket_Exit_ForceIdle
 	{
 		get
@@ -44,8 +44,8 @@ public class SwordKnight_Miniboss_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700055E RID: 1374
-	// (get) Token: 0x060009FF RID: 2559 RVA: 0x0001FEF7 File Offset: 0x0001E0F7
+	// Token: 0x1700072C RID: 1836
+	// (get) Token: 0x06000F6E RID: 3950 RVA: 0x000086B1 File Offset: 0x000068B1
 	protected override float m_cricket_AttackCD
 	{
 		get
@@ -54,8 +54,8 @@ public class SwordKnight_Miniboss_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700055F RID: 1375
-	// (get) Token: 0x06000A00 RID: 2560 RVA: 0x0001FEFE File Offset: 0x0001E0FE
+	// Token: 0x1700072D RID: 1837
+	// (get) Token: 0x06000F6F RID: 3951 RVA: 0x000086B8 File Offset: 0x000068B8
 	protected override int m_cricket_Attack_ProjectileAmount
 	{
 		get
@@ -64,8 +64,8 @@ public class SwordKnight_Miniboss_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000560 RID: 1376
-	// (get) Token: 0x06000A01 RID: 2561 RVA: 0x0001FF05 File Offset: 0x0001E105
+	// Token: 0x1700072E RID: 1838
+	// (get) Token: 0x06000F70 RID: 3952 RVA: 0x000086BF File Offset: 0x000068BF
 	protected override float m_cricket_Attack_ProjectileDelay
 	{
 		get
@@ -74,19 +74,19 @@ public class SwordKnight_Miniboss_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000A02 RID: 2562 RVA: 0x0001FF0C File Offset: 0x0001E10C
+	// Token: 0x06000F71 RID: 3953 RVA: 0x000086C6 File Offset: 0x000068C6
 	protected override void PlayDeathAnimAudio()
 	{
 		AudioManager.PlayOneShot(this, "event:/SFX/Enemies/sfx_statueBoss_death_flash", base.gameObject.transform.position);
 	}
 
-	// Token: 0x06000A03 RID: 2563 RVA: 0x0001FF29 File Offset: 0x0001E129
+	// Token: 0x06000F72 RID: 3954 RVA: 0x000086E3 File Offset: 0x000068E3
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
 		base.EnemyController.StatusEffectController.AddStatusEffectImmunity(StatusEffectType.Enemy_Freeze);
 	}
 
-	// Token: 0x04000E9F RID: 3743
+	// Token: 0x0400129D RID: 4765
 	private const string MURMUR_DEATH_SCREEN_FLASH_AUDIO_PATH = "event:/SFX/Enemies/sfx_statueBoss_death_flash";
 }

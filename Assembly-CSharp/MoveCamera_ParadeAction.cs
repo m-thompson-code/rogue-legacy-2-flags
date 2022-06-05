@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002A3 RID: 675
+// Token: 0x02000473 RID: 1139
 public class MoveCamera_ParadeAction : MonoBehaviour, IParadeAction
 {
-	// Token: 0x06001A1F RID: 6687 RVA: 0x00052338 File Offset: 0x00050538
+	// Token: 0x06002423 RID: 9251 RVA: 0x000140AA File Offset: 0x000122AA
 	public IEnumerator TriggerAction(ParadeController controller)
 	{
 		float num = this.m_duration;
@@ -33,15 +33,15 @@ public class MoveCamera_ParadeAction : MonoBehaviour, IParadeAction
 		yield break;
 	}
 
-	// Token: 0x04001887 RID: 6279
+	// Token: 0x04001FE8 RID: 8168
 	[SerializeField]
 	private Transform m_camPos;
 
-	// Token: 0x04001888 RID: 6280
+	// Token: 0x04001FE9 RID: 8169
 	[SerializeField]
 	private float m_duration = 1f;
 
-	// Token: 0x04001889 RID: 6281
+	// Token: 0x04001FEA RID: 8170
 	[SerializeField]
 	private bool m_waitTillMovementComplete;
 }

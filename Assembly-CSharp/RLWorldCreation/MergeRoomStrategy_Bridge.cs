@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 namespace RLWorldCreation
 {
-	// Token: 0x0200088F RID: 2191
+	// Token: 0x02000DB6 RID: 3510
 	public class MergeRoomStrategy_Bridge : MergeRoomStrategy
 	{
-		// Token: 0x060047EC RID: 18412 RVA: 0x00102ACB File Offset: 0x00100CCB
+		// Token: 0x06006309 RID: 25353 RVA: 0x00036927 File Offset: 0x00034B27
 		public override IEnumerator Run(CreateMergeRooms_BuildStage buildStage, BiomeController biomeController)
 		{
 			this.m_buildStage = buildStage;
@@ -22,7 +22,7 @@ namespace RLWorldCreation
 			yield break;
 		}
 
-		// Token: 0x060047ED RID: 18413 RVA: 0x00102AE8 File Offset: 0x00100CE8
+		// Token: 0x0600630A RID: 25354 RVA: 0x001715C4 File Offset: 0x0016F7C4
 		protected override bool AttemptMerge(BiomeController biomeController, RoomSide side, GridPointManager connectedRoom)
 		{
 			bool result = base.AttemptMerge(biomeController, side, connectedRoom);

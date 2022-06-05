@@ -3,16 +3,16 @@ using System.Collections;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x020001AB RID: 427
+// Token: 0x02000317 RID: 791
 public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 {
-	// Token: 0x17000975 RID: 2421
-	// (get) Token: 0x060010EA RID: 4330 RVA: 0x00030C16 File Offset: 0x0002EE16
-	// (set) Token: 0x060010EB RID: 4331 RVA: 0x00030C1E File Offset: 0x0002EE1E
+	// Token: 0x17000C31 RID: 3121
+	// (get) Token: 0x06001925 RID: 6437 RVA: 0x0000CA3F File Offset: 0x0000AC3F
+	// (set) Token: 0x06001926 RID: 6438 RVA: 0x0000CA47 File Offset: 0x0000AC47
 	public bool InCombo { get; set; }
 
-	// Token: 0x17000976 RID: 2422
-	// (get) Token: 0x060010EC RID: 4332 RVA: 0x00030C27 File Offset: 0x0002EE27
+	// Token: 0x17000C32 RID: 3122
+	// (get) Token: 0x06001927 RID: 6439 RVA: 0x00008A92 File Offset: 0x00006C92
 	protected virtual int NumComboAttacks
 	{
 		get
@@ -21,8 +21,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000977 RID: 2423
-	// (get) Token: 0x060010ED RID: 4333 RVA: 0x00030C2B File Offset: 0x0002EE2B
+	// Token: 0x17000C33 RID: 3123
+	// (get) Token: 0x06001928 RID: 6440 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -31,8 +31,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000978 RID: 2424
-	// (get) Token: 0x060010EE RID: 4334 RVA: 0x00030C32 File Offset: 0x0002EE32
+	// Token: 0x17000C34 RID: 3124
+	// (get) Token: 0x06001929 RID: 6441 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -41,8 +41,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000979 RID: 2425
-	// (get) Token: 0x060010EF RID: 4335 RVA: 0x00030C39 File Offset: 0x0002EE39
+	// Token: 0x17000C35 RID: 3125
+	// (get) Token: 0x0600192A RID: 6442 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float TellAnimSpeed
 	{
 		get
@@ -51,8 +51,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700097A RID: 2426
-	// (get) Token: 0x060010F0 RID: 4336 RVA: 0x00030C40 File Offset: 0x0002EE40
+	// Token: 0x17000C36 RID: 3126
+	// (get) Token: 0x0600192B RID: 6443 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -61,8 +61,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700097B RID: 2427
-	// (get) Token: 0x060010F1 RID: 4337 RVA: 0x00030C47 File Offset: 0x0002EE47
+	// Token: 0x17000C37 RID: 3127
+	// (get) Token: 0x0600192C RID: 6444 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -71,8 +71,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700097C RID: 2428
-	// (get) Token: 0x060010F2 RID: 4338 RVA: 0x00030C4E File Offset: 0x0002EE4E
+	// Token: 0x17000C38 RID: 3128
+	// (get) Token: 0x0600192D RID: 6445 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -81,8 +81,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700097D RID: 2429
-	// (get) Token: 0x060010F3 RID: 4339 RVA: 0x00030C55 File Offset: 0x0002EE55
+	// Token: 0x17000C39 RID: 3129
+	// (get) Token: 0x0600192E RID: 6446 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -91,8 +91,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700097E RID: 2430
-	// (get) Token: 0x060010F4 RID: 4340 RVA: 0x00030C5C File Offset: 0x0002EE5C
+	// Token: 0x17000C3A RID: 3130
+	// (get) Token: 0x0600192F RID: 6447 RVA: 0x0000CA50 File Offset: 0x0000AC50
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -101,8 +101,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700097F RID: 2431
-	// (get) Token: 0x060010F5 RID: 4341 RVA: 0x00030C63 File Offset: 0x0002EE63
+	// Token: 0x17000C3B RID: 3131
+	// (get) Token: 0x06001930 RID: 6448 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -111,8 +111,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000980 RID: 2432
-	// (get) Token: 0x060010F6 RID: 4342 RVA: 0x00030C6A File Offset: 0x0002EE6A
+	// Token: 0x17000C3C RID: 3132
+	// (get) Token: 0x06001931 RID: 6449 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -121,8 +121,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000981 RID: 2433
-	// (get) Token: 0x060010F7 RID: 4343 RVA: 0x00030C71 File Offset: 0x0002EE71
+	// Token: 0x17000C3D RID: 3133
+	// (get) Token: 0x06001932 RID: 6450 RVA: 0x0000B839 File Offset: 0x00009A39
 	public override float MovementMod
 	{
 		get
@@ -135,8 +135,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000982 RID: 2434
-	// (get) Token: 0x060010F8 RID: 4344 RVA: 0x00030C91 File Offset: 0x0002EE91
+	// Token: 0x17000C3E RID: 3134
+	// (get) Token: 0x06001933 RID: 6451 RVA: 0x0000CA57 File Offset: 0x0000AC57
 	public string AbilityComboName
 	{
 		get
@@ -145,8 +145,8 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000983 RID: 2435
-	// (get) Token: 0x060010F9 RID: 4345 RVA: 0x00030CAE File Offset: 0x0002EEAE
+	// Token: 0x17000C3F RID: 3135
+	// (get) Token: 0x06001934 RID: 6452 RVA: 0x0000CA74 File Offset: 0x0000AC74
 	public override string AbilityTellIntroName
 	{
 		get
@@ -159,7 +159,7 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x060010FA RID: 4346 RVA: 0x00030CC5 File Offset: 0x0002EEC5
+	// Token: 0x06001935 RID: 6453 RVA: 0x0000CA8B File Offset: 0x0000AC8B
 	protected override void Awake()
 	{
 		base.Awake();
@@ -169,7 +169,7 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x060010FB RID: 4347 RVA: 0x00030CF0 File Offset: 0x0002EEF0
+	// Token: 0x06001936 RID: 6454 RVA: 0x0000CAB6 File Offset: 0x0000ACB6
 	public override void PreCastAbility()
 	{
 		this.m_attackStartLeft = !this.m_attackStartLeft;
@@ -179,7 +179,7 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		base.PreCastAbility();
 	}
 
-	// Token: 0x060010FC RID: 4348 RVA: 0x00030D1C File Offset: 0x0002EF1C
+	// Token: 0x06001937 RID: 6455 RVA: 0x0000CAE2 File Offset: 0x0000ACE2
 	protected override void OnEnterTellLogic()
 	{
 		this.m_hasAttacked = false;
@@ -187,14 +187,14 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		base.OnEnterTellLogic();
 	}
 
-	// Token: 0x060010FD RID: 4349 RVA: 0x00030D39 File Offset: 0x0002EF39
+	// Token: 0x06001938 RID: 6456 RVA: 0x0000CAFF File Offset: 0x0000ACFF
 	protected override void OnEnterAttackLogic()
 	{
 		base.OnEnterAttackLogic();
 		this.m_canAttackAgainCounter = 0f;
 	}
 
-	// Token: 0x060010FE RID: 4350 RVA: 0x00030D4C File Offset: 0x0002EF4C
+	// Token: 0x06001939 RID: 6457 RVA: 0x0008F174 File Offset: 0x0008D374
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -209,7 +209,7 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x060010FF RID: 4351 RVA: 0x00030DBE File Offset: 0x0002EFBE
+	// Token: 0x0600193A RID: 6458 RVA: 0x0000CB12 File Offset: 0x0000AD12
 	private IEnumerator PushForwardCoroutine()
 	{
 		float num = 0.15f;
@@ -246,7 +246,7 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		yield break;
 	}
 
-	// Token: 0x06001100 RID: 4352 RVA: 0x00030DCD File Offset: 0x0002EFCD
+	// Token: 0x0600193B RID: 6459 RVA: 0x0000CB21 File Offset: 0x0000AD21
 	private void StopPushForwardCoroutine()
 	{
 		if (this.m_pushForwardCoroutine != null)
@@ -256,7 +256,7 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		this.m_abilityController.PlayerController.DisableFriction = false;
 	}
 
-	// Token: 0x06001101 RID: 4353 RVA: 0x00030DF4 File Offset: 0x0002EFF4
+	// Token: 0x0600193C RID: 6460 RVA: 0x0008F1E8 File Offset: 0x0008D3E8
 	private void ContinueComboEvent(Projectile_RL projectile, GameObject colliderObj)
 	{
 		if (projectile != null)
@@ -278,7 +278,7 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06001102 RID: 4354 RVA: 0x00030EB0 File Offset: 0x0002F0B0
+	// Token: 0x0600193D RID: 6461 RVA: 0x0008F2A4 File Offset: 0x0008D4A4
 	protected void LateUpdate()
 	{
 		if (!base.AbilityActive)
@@ -313,7 +313,7 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06001103 RID: 4355 RVA: 0x00030F97 File Offset: 0x0002F197
+	// Token: 0x0600193E RID: 6462 RVA: 0x0000CB48 File Offset: 0x0000AD48
 	protected override void OnExitExitLogic()
 	{
 		if (this.m_hasAttacked)
@@ -323,13 +323,13 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		base.OnExitExitLogic();
 	}
 
-	// Token: 0x06001104 RID: 4356 RVA: 0x00030FA8 File Offset: 0x0002F1A8
+	// Token: 0x0600193F RID: 6463 RVA: 0x0000CB59 File Offset: 0x0000AD59
 	private void RecastAbility()
 	{
 		this.m_abilityController.StartAbility(base.CastAbilityType, false, false);
 	}
 
-	// Token: 0x06001105 RID: 4357 RVA: 0x00030FC0 File Offset: 0x0002F1C0
+	// Token: 0x06001940 RID: 6464 RVA: 0x0008F38C File Offset: 0x0008D58C
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_firedProjectile != null)
@@ -346,7 +346,7 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x06001106 RID: 4358 RVA: 0x00031050 File Offset: 0x0002F250
+	// Token: 0x06001941 RID: 6465 RVA: 0x0008E00C File Offset: 0x0008C20C
 	private void PreventPlatformDrop()
 	{
 		CorgiController_RL controllerCorgi = this.m_abilityController.PlayerController.ControllerCorgi;
@@ -367,33 +367,33 @@ public class Tonfa_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x040011F0 RID: 4592
+	// Token: 0x040017F1 RID: 6129
 	private int m_comboNumber = 1;
 
-	// Token: 0x040011F1 RID: 4593
+	// Token: 0x040017F2 RID: 6130
 	private int m_animComboNumber = 1;
 
-	// Token: 0x040011F2 RID: 4594
+	// Token: 0x040017F3 RID: 6131
 	private bool m_attackStartLeft;
 
-	// Token: 0x040011F3 RID: 4595
+	// Token: 0x040017F4 RID: 6132
 	private string m_abilityTellIntroRight;
 
-	// Token: 0x040011F4 RID: 4596
+	// Token: 0x040017F5 RID: 6133
 	private float m_canAttackAgainCounter;
 
-	// Token: 0x040011F5 RID: 4597
+	// Token: 0x040017F6 RID: 6134
 	private Coroutine m_pushForwardCoroutine;
 
-	// Token: 0x040011F6 RID: 4598
+	// Token: 0x040017F7 RID: 6135
 	private bool m_hasAttacked;
 
-	// Token: 0x040011F8 RID: 4600
+	// Token: 0x040017F9 RID: 6137
 	private const float CanAttackAgainDelay = 0.035f;
 
-	// Token: 0x040011F9 RID: 4601
+	// Token: 0x040017FA RID: 6138
 	private const float TonfaDashDistance = 1.5f;
 
-	// Token: 0x040011FA RID: 4602
+	// Token: 0x040017FB RID: 6139
 	private const float TonfaDashDuration = 0.15f;
 }

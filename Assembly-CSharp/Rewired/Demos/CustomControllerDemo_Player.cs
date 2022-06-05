@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Rewired.Demos
 {
-	// Token: 0x0200093D RID: 2365
+	// Token: 0x02000ED9 RID: 3801
 	[AddComponentMenu("")]
 	[RequireComponent(typeof(CharacterController))]
 	public class CustomControllerDemo_Player : MonoBehaviour
 	{
-		// Token: 0x17001AC7 RID: 6855
-		// (get) Token: 0x0600502E RID: 20526 RVA: 0x0011A9A6 File Offset: 0x00118BA6
+		// Token: 0x17002405 RID: 9221
+		// (get) Token: 0x06006E05 RID: 28165 RVA: 0x0003C700 File Offset: 0x0003A900
 		private Player player
 		{
 			get
@@ -22,13 +22,13 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x0600502F RID: 20527 RVA: 0x0011A9CC File Offset: 0x00118BCC
+		// Token: 0x06006E06 RID: 28166 RVA: 0x0003C726 File Offset: 0x0003A926
 		private void Awake()
 		{
 			this.cc = base.GetComponent<CharacterController>();
 		}
 
-		// Token: 0x06005030 RID: 20528 RVA: 0x0011A9DC File Offset: 0x00118BDC
+		// Token: 0x06006E07 RID: 28167 RVA: 0x001894A0 File Offset: 0x001876A0
 		private void Update()
 		{
 			if (!ReInput.isReady)
@@ -51,22 +51,22 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x04004290 RID: 17040
+		// Token: 0x04005870 RID: 22640
 		public int playerId;
 
-		// Token: 0x04004291 RID: 17041
+		// Token: 0x04005871 RID: 22641
 		public float speed = 1f;
 
-		// Token: 0x04004292 RID: 17042
+		// Token: 0x04005872 RID: 22642
 		public float bulletSpeed = 20f;
 
-		// Token: 0x04004293 RID: 17043
+		// Token: 0x04005873 RID: 22643
 		public GameObject bulletPrefab;
 
-		// Token: 0x04004294 RID: 17044
+		// Token: 0x04005874 RID: 22644
 		private Player _player;
 
-		// Token: 0x04004295 RID: 17045
+		// Token: 0x04005875 RID: 22645
 		private CharacterController cc;
 	}
 }

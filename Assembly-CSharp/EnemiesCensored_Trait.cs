@@ -3,11 +3,11 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000335 RID: 821
+// Token: 0x0200058F RID: 1423
 public class EnemiesCensored_Trait : BaseTrait
 {
-	// Token: 0x17000DB8 RID: 3512
-	// (get) Token: 0x06001FF1 RID: 8177 RVA: 0x00065D63 File Offset: 0x00063F63
+	// Token: 0x170011FD RID: 4605
+	// (get) Token: 0x06002CFD RID: 11517 RVA: 0x00018DD1 File Offset: 0x00016FD1
 	public override TraitType TraitType
 	{
 		get
@@ -16,7 +16,7 @@ public class EnemiesCensored_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FF2 RID: 8178 RVA: 0x00065D6A File Offset: 0x00063F6A
+	// Token: 0x06002CFE RID: 11518 RVA: 0x00018DD8 File Offset: 0x00016FD8
 	protected override void Awake()
 	{
 		base.Awake();
@@ -24,21 +24,21 @@ public class EnemiesCensored_Trait : BaseTrait
 		this.m_onEnemySummoned = new Action<MonoBehaviour, EventArgs>(this.OnEnemySummoned);
 	}
 
-	// Token: 0x06001FF3 RID: 8179 RVA: 0x00065D96 File Offset: 0x00063F96
+	// Token: 0x06002CFF RID: 11519 RVA: 0x00018E04 File Offset: 0x00017004
 	private void Start()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.EnemySummoned, this.m_onEnemySummoned);
 	}
 
-	// Token: 0x06001FF4 RID: 8180 RVA: 0x00065DB1 File Offset: 0x00063FB1
+	// Token: 0x06002D00 RID: 11520 RVA: 0x00018E1F File Offset: 0x0001701F
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.EnemySummoned, this.m_onEnemySummoned);
 	}
 
-	// Token: 0x06001FF5 RID: 8181 RVA: 0x00065DCC File Offset: 0x00063FCC
+	// Token: 0x06002D01 RID: 11521 RVA: 0x000C6858 File Offset: 0x000C4A58
 	public override void AssignGreenMask()
 	{
 		base.AssignGreenMask();
@@ -48,7 +48,7 @@ public class EnemiesCensored_Trait : BaseTrait
 		this.m_postProcessOverrideController.Profile.OverridePixelRedChannel = false;
 	}
 
-	// Token: 0x06001FF6 RID: 8182 RVA: 0x00065E38 File Offset: 0x00064038
+	// Token: 0x06002D02 RID: 11522 RVA: 0x000C68C4 File Offset: 0x000C4AC4
 	private void OnEnemySummoned(MonoBehaviour sender, EventArgs args)
 	{
 		EnemySummonedEventArgs enemySummonedEventArgs = args as EnemySummonedEventArgs;
@@ -62,7 +62,7 @@ public class EnemiesCensored_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FF7 RID: 8183 RVA: 0x00065E6C File Offset: 0x0006406C
+	// Token: 0x06002D03 RID: 11523 RVA: 0x000C68F8 File Offset: 0x000C4AF8
 	private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs args)
 	{
 		base.StopAllCoroutines();
@@ -79,7 +79,7 @@ public class EnemiesCensored_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FF8 RID: 8184 RVA: 0x00065EC6 File Offset: 0x000640C6
+	// Token: 0x06002D04 RID: 11524 RVA: 0x00018E3A File Offset: 0x0001703A
 	private IEnumerator EnableTraitCoroutine(EnemyController enemyInstance)
 	{
 		if (Trait_EV.TRAIT_EFFECT_EXCEPTION_ARRAY.Contains(enemyInstance.EnemyType))
@@ -114,7 +114,7 @@ public class EnemiesCensored_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FF9 RID: 8185 RVA: 0x00065ED8 File Offset: 0x000640D8
+	// Token: 0x06002D05 RID: 11525 RVA: 0x000C6954 File Offset: 0x000C4B54
 	public static BaseEffect ApplyCensoredEffect(BaseCharacterController charController)
 	{
 		BaseEffect baseEffect = EffectManager.PlayEffect(charController.gameObject, charController.Animator, "EnemiesCensored_Trait_Effect", charController.Midpoint, 0f, EffectStopType.Gracefully, EffectTriggerDirection.None);
@@ -145,12 +145,12 @@ public class EnemiesCensored_Trait : BaseTrait
 		return baseEffect;
 	}
 
-	// Token: 0x04001C45 RID: 7237
+	// Token: 0x0400259D RID: 9629
 	public const string TRAIT_EFFECT_NAME = "EnemiesCensored_Trait_Effect";
 
-	// Token: 0x04001C46 RID: 7238
+	// Token: 0x0400259E RID: 9630
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04001C47 RID: 7239
+	// Token: 0x0400259F RID: 9631
 	private Action<MonoBehaviour, EventArgs> m_onEnemySummoned;
 }

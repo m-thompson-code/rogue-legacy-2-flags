@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000632 RID: 1586
+// Token: 0x02000A5F RID: 2655
 [ExecuteInEditMode]
 public class Room_LevelEditor : MonoBehaviour
 {

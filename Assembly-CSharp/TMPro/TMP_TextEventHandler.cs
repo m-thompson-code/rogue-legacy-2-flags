@@ -5,12 +5,12 @@ using UnityEngine.EventSystems;
 
 namespace TMPro
 {
-	// Token: 0x02000854 RID: 2132
+	// Token: 0x02000D52 RID: 3410
 	public class TMP_TextEventHandler : MonoBehaviour, IPointerEnterHandler, IEventSystemHandler, IPointerExitHandler
 	{
-		// Token: 0x17001778 RID: 6008
-		// (get) Token: 0x060046CD RID: 18125 RVA: 0x000FCF8C File Offset: 0x000FB18C
-		// (set) Token: 0x060046CE RID: 18126 RVA: 0x000FCF94 File Offset: 0x000FB194
+		// Token: 0x17001FBC RID: 8124
+		// (get) Token: 0x06006169 RID: 24937 RVA: 0x00035AC3 File Offset: 0x00033CC3
+		// (set) Token: 0x0600616A RID: 24938 RVA: 0x00035ACB File Offset: 0x00033CCB
 		public TMP_TextEventHandler.CharacterSelectionEvent onCharacterSelection
 		{
 			get
@@ -23,9 +23,9 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x17001779 RID: 6009
-		// (get) Token: 0x060046CF RID: 18127 RVA: 0x000FCF9D File Offset: 0x000FB19D
-		// (set) Token: 0x060046D0 RID: 18128 RVA: 0x000FCFA5 File Offset: 0x000FB1A5
+		// Token: 0x17001FBD RID: 8125
+		// (get) Token: 0x0600616B RID: 24939 RVA: 0x00035AD4 File Offset: 0x00033CD4
+		// (set) Token: 0x0600616C RID: 24940 RVA: 0x00035ADC File Offset: 0x00033CDC
 		public TMP_TextEventHandler.SpriteSelectionEvent onSpriteSelection
 		{
 			get
@@ -38,9 +38,9 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x1700177A RID: 6010
-		// (get) Token: 0x060046D1 RID: 18129 RVA: 0x000FCFAE File Offset: 0x000FB1AE
-		// (set) Token: 0x060046D2 RID: 18130 RVA: 0x000FCFB6 File Offset: 0x000FB1B6
+		// Token: 0x17001FBE RID: 8126
+		// (get) Token: 0x0600616D RID: 24941 RVA: 0x00035AE5 File Offset: 0x00033CE5
+		// (set) Token: 0x0600616E RID: 24942 RVA: 0x00035AED File Offset: 0x00033CED
 		public TMP_TextEventHandler.WordSelectionEvent onWordSelection
 		{
 			get
@@ -53,9 +53,9 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x1700177B RID: 6011
-		// (get) Token: 0x060046D3 RID: 18131 RVA: 0x000FCFBF File Offset: 0x000FB1BF
-		// (set) Token: 0x060046D4 RID: 18132 RVA: 0x000FCFC7 File Offset: 0x000FB1C7
+		// Token: 0x17001FBF RID: 8127
+		// (get) Token: 0x0600616F RID: 24943 RVA: 0x00035AF6 File Offset: 0x00033CF6
+		// (set) Token: 0x06006170 RID: 24944 RVA: 0x00035AFE File Offset: 0x00033CFE
 		public TMP_TextEventHandler.LineSelectionEvent onLineSelection
 		{
 			get
@@ -68,9 +68,9 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x1700177C RID: 6012
-		// (get) Token: 0x060046D5 RID: 18133 RVA: 0x000FCFD0 File Offset: 0x000FB1D0
-		// (set) Token: 0x060046D6 RID: 18134 RVA: 0x000FCFD8 File Offset: 0x000FB1D8
+		// Token: 0x17001FC0 RID: 8128
+		// (get) Token: 0x06006171 RID: 24945 RVA: 0x00035B07 File Offset: 0x00033D07
+		// (set) Token: 0x06006172 RID: 24946 RVA: 0x00035B0F File Offset: 0x00033D0F
 		public TMP_TextEventHandler.LinkSelectionEvent onLinkSelection
 		{
 			get
@@ -83,7 +83,7 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x060046D7 RID: 18135 RVA: 0x000FCFE4 File Offset: 0x000FB1E4
+		// Token: 0x06006173 RID: 24947 RVA: 0x00169CBC File Offset: 0x00167EBC
 		private void Awake()
 		{
 			this.m_TextComponent = base.gameObject.GetComponent<TMP_Text>();
@@ -107,7 +107,7 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x060046D8 RID: 18136 RVA: 0x000FD070 File Offset: 0x000FB270
+		// Token: 0x06006174 RID: 24948 RVA: 0x00169D48 File Offset: 0x00167F48
 		private void LateUpdate()
 		{
 			if (TMP_TextUtilities.IsIntersectingRectTransform(this.m_TextComponent.rectTransform, Input.mousePosition, this.m_Camera))
@@ -158,17 +158,17 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x060046D9 RID: 18137 RVA: 0x000FD2B6 File Offset: 0x000FB4B6
+		// Token: 0x06006175 RID: 24949 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void OnPointerEnter(PointerEventData eventData)
 		{
 		}
 
-		// Token: 0x060046DA RID: 18138 RVA: 0x000FD2B8 File Offset: 0x000FB4B8
+		// Token: 0x06006176 RID: 24950 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void OnPointerExit(PointerEventData eventData)
 		{
 		}
 
-		// Token: 0x060046DB RID: 18139 RVA: 0x000FD2BA File Offset: 0x000FB4BA
+		// Token: 0x06006177 RID: 24951 RVA: 0x00035B18 File Offset: 0x00033D18
 		private void SendOnCharacterSelection(char character, int characterIndex)
 		{
 			if (this.onCharacterSelection != null)
@@ -177,7 +177,7 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x060046DC RID: 18140 RVA: 0x000FD2D1 File Offset: 0x000FB4D1
+		// Token: 0x06006178 RID: 24952 RVA: 0x00035B2F File Offset: 0x00033D2F
 		private void SendOnSpriteSelection(char character, int characterIndex)
 		{
 			if (this.onSpriteSelection != null)
@@ -186,7 +186,7 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x060046DD RID: 18141 RVA: 0x000FD2E8 File Offset: 0x000FB4E8
+		// Token: 0x06006179 RID: 24953 RVA: 0x00035B46 File Offset: 0x00033D46
 		private void SendOnWordSelection(string word, int charIndex, int length)
 		{
 			if (this.onWordSelection != null)
@@ -195,7 +195,7 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x060046DE RID: 18142 RVA: 0x000FD300 File Offset: 0x000FB500
+		// Token: 0x0600617A RID: 24954 RVA: 0x00035B5E File Offset: 0x00033D5E
 		private void SendOnLineSelection(string line, int charIndex, int length)
 		{
 			if (this.onLineSelection != null)
@@ -204,7 +204,7 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x060046DF RID: 18143 RVA: 0x000FD318 File Offset: 0x000FB518
+		// Token: 0x0600617B RID: 24955 RVA: 0x00035B76 File Offset: 0x00033D76
 		private void SendOnLinkSelection(string linkID, string linkText, int linkIndex)
 		{
 			if (this.onLinkSelection != null)
@@ -213,72 +213,72 @@ namespace TMPro
 			}
 		}
 
-		// Token: 0x04003BB1 RID: 15281
+		// Token: 0x04004F2E RID: 20270
 		[SerializeField]
 		private TMP_TextEventHandler.CharacterSelectionEvent m_OnCharacterSelection = new TMP_TextEventHandler.CharacterSelectionEvent();
 
-		// Token: 0x04003BB2 RID: 15282
+		// Token: 0x04004F2F RID: 20271
 		[SerializeField]
 		private TMP_TextEventHandler.SpriteSelectionEvent m_OnSpriteSelection = new TMP_TextEventHandler.SpriteSelectionEvent();
 
-		// Token: 0x04003BB3 RID: 15283
+		// Token: 0x04004F30 RID: 20272
 		[SerializeField]
 		private TMP_TextEventHandler.WordSelectionEvent m_OnWordSelection = new TMP_TextEventHandler.WordSelectionEvent();
 
-		// Token: 0x04003BB4 RID: 15284
+		// Token: 0x04004F31 RID: 20273
 		[SerializeField]
 		private TMP_TextEventHandler.LineSelectionEvent m_OnLineSelection = new TMP_TextEventHandler.LineSelectionEvent();
 
-		// Token: 0x04003BB5 RID: 15285
+		// Token: 0x04004F32 RID: 20274
 		[SerializeField]
 		private TMP_TextEventHandler.LinkSelectionEvent m_OnLinkSelection = new TMP_TextEventHandler.LinkSelectionEvent();
 
-		// Token: 0x04003BB6 RID: 15286
+		// Token: 0x04004F33 RID: 20275
 		private TMP_Text m_TextComponent;
 
-		// Token: 0x04003BB7 RID: 15287
+		// Token: 0x04004F34 RID: 20276
 		private Camera m_Camera;
 
-		// Token: 0x04003BB8 RID: 15288
+		// Token: 0x04004F35 RID: 20277
 		private Canvas m_Canvas;
 
-		// Token: 0x04003BB9 RID: 15289
+		// Token: 0x04004F36 RID: 20278
 		private int m_selectedLink = -1;
 
-		// Token: 0x04003BBA RID: 15290
+		// Token: 0x04004F37 RID: 20279
 		private int m_lastCharIndex = -1;
 
-		// Token: 0x04003BBB RID: 15291
+		// Token: 0x04004F38 RID: 20280
 		private int m_lastWordIndex = -1;
 
-		// Token: 0x04003BBC RID: 15292
+		// Token: 0x04004F39 RID: 20281
 		private int m_lastLineIndex = -1;
 
-		// Token: 0x02000E6F RID: 3695
+		// Token: 0x02000D53 RID: 3411
 		[Serializable]
 		public class CharacterSelectionEvent : UnityEvent<char, int>
 		{
 		}
 
-		// Token: 0x02000E70 RID: 3696
+		// Token: 0x02000D54 RID: 3412
 		[Serializable]
 		public class SpriteSelectionEvent : UnityEvent<char, int>
 		{
 		}
 
-		// Token: 0x02000E71 RID: 3697
+		// Token: 0x02000D55 RID: 3413
 		[Serializable]
 		public class WordSelectionEvent : UnityEvent<string, int, int>
 		{
 		}
 
-		// Token: 0x02000E72 RID: 3698
+		// Token: 0x02000D56 RID: 3414
 		[Serializable]
 		public class LineSelectionEvent : UnityEvent<string, int, int>
 		{
 		}
 
-		// Token: 0x02000E73 RID: 3699
+		// Token: 0x02000D57 RID: 3415
 		[Serializable]
 		public class LinkSelectionEvent : UnityEvent<string, string, int>
 		{

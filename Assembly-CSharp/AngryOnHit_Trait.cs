@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200031D RID: 797
+// Token: 0x02000562 RID: 1378
 public class AngryOnHit_Trait : BaseTrait
 {
-	// Token: 0x17000D9A RID: 3482
-	// (get) Token: 0x06001F74 RID: 8052 RVA: 0x00064C83 File Offset: 0x00062E83
+	// Token: 0x170011BD RID: 4541
+	// (get) Token: 0x06002C0F RID: 11279 RVA: 0x000187B8 File Offset: 0x000169B8
 	public float StrengthMultiplier
 	{
 		get
@@ -19,8 +19,8 @@ public class AngryOnHit_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x17000D9B RID: 3483
-	// (get) Token: 0x06001F75 RID: 8053 RVA: 0x00064C98 File Offset: 0x00062E98
+	// Token: 0x170011BE RID: 4542
+	// (get) Token: 0x06002C10 RID: 11280 RVA: 0x00017BA1 File Offset: 0x00015DA1
 	public override TraitType TraitType
 	{
 		get
@@ -29,7 +29,7 @@ public class AngryOnHit_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001F76 RID: 8054 RVA: 0x00064C9F File Offset: 0x00062E9F
+	// Token: 0x06002C11 RID: 11281 RVA: 0x000187CD File Offset: 0x000169CD
 	protected override void Awake()
 	{
 		base.Awake();
@@ -37,7 +37,7 @@ public class AngryOnHit_Trait : BaseTrait
 		this.m_onPlayerEnterRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerEnterRoom);
 	}
 
-	// Token: 0x06001F77 RID: 8055 RVA: 0x00064CCB File Offset: 0x00062ECB
+	// Token: 0x06002C12 RID: 11282 RVA: 0x000187F9 File Offset: 0x000169F9
 	private IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -53,7 +53,7 @@ public class AngryOnHit_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001F78 RID: 8056 RVA: 0x00064CDC File Offset: 0x00062EDC
+	// Token: 0x06002C13 RID: 11283 RVA: 0x000C5118 File Offset: 0x000C3318
 	private void OnPlayerHealthChange(MonoBehaviour sender, EventArgs args)
 	{
 		if (!this.m_gameStarted)
@@ -71,13 +71,13 @@ public class AngryOnHit_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001F79 RID: 8057 RVA: 0x00064D2D File Offset: 0x00062F2D
+	// Token: 0x06002C14 RID: 11284 RVA: 0x00018808 File Offset: 0x00016A08
 	private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs args)
 	{
 		this.m_gameStarted = true;
 	}
 
-	// Token: 0x06001F7A RID: 8058 RVA: 0x00064D36 File Offset: 0x00062F36
+	// Token: 0x06002C15 RID: 11285 RVA: 0x00018811 File Offset: 0x00016A11
 	private IEnumerator AngryCoroutine()
 	{
 		this.m_waitYield.CreateNew(7.5f, false);
@@ -87,7 +87,7 @@ public class AngryOnHit_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001F7B RID: 8059 RVA: 0x00064D48 File Offset: 0x00062F48
+	// Token: 0x06002C16 RID: 11286 RVA: 0x000C516C File Offset: 0x000C336C
 	private void StartAnger()
 	{
 		if (!this.m_isAngry)
@@ -101,7 +101,7 @@ public class AngryOnHit_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001F7C RID: 8060 RVA: 0x00064D9C File Offset: 0x00062F9C
+	// Token: 0x06002C17 RID: 11287 RVA: 0x000C51C0 File Offset: 0x000C33C0
 	private void StopAnger()
 	{
 		if (this.m_isAngry)
@@ -118,7 +118,7 @@ public class AngryOnHit_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001F7D RID: 8061 RVA: 0x00064E08 File Offset: 0x00063008
+	// Token: 0x06002C18 RID: 11288 RVA: 0x00018820 File Offset: 0x00016A20
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerHealthChange, this.m_onPlayerHealthChange);
@@ -129,24 +129,24 @@ public class AngryOnHit_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x04001C25 RID: 7205
+	// Token: 0x04002543 RID: 9539
 	private bool m_isAngry;
 
-	// Token: 0x04001C26 RID: 7206
+	// Token: 0x04002544 RID: 9540
 	private Coroutine m_angryCoroutine;
 
-	// Token: 0x04001C27 RID: 7207
+	// Token: 0x04002545 RID: 9541
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04001C28 RID: 7208
+	// Token: 0x04002546 RID: 9542
 	private bool m_gameStarted;
 
-	// Token: 0x04001C29 RID: 7209
+	// Token: 0x04002547 RID: 9543
 	private AngryOnHit_Effect m_effect;
 
-	// Token: 0x04001C2A RID: 7210
+	// Token: 0x04002548 RID: 9544
 	private Action<MonoBehaviour, EventArgs> m_onPlayerHealthChange;
 
-	// Token: 0x04001C2B RID: 7211
+	// Token: 0x04002549 RID: 9545
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 }

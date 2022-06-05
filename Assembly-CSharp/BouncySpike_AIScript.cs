@@ -2,16 +2,16 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000099 RID: 153
+// Token: 0x020000BF RID: 191
 public class BouncySpike_AIScript : BaseAIScript
 {
-	// Token: 0x06000290 RID: 656 RVA: 0x00013086 File Offset: 0x00011286
+	// Token: 0x06000358 RID: 856 RVA: 0x000046A7 File Offset: 0x000028A7
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[0];
 	}
 
-	// Token: 0x06000291 RID: 657 RVA: 0x00013094 File Offset: 0x00011294
+	// Token: 0x06000359 RID: 857 RVA: 0x00051610 File Offset: 0x0004F810
 	private void PerformAwayFromPlayerCheck()
 	{
 		float num = (float)this.m_startingAngle;
@@ -46,7 +46,7 @@ public class BouncySpike_AIScript : BaseAIScript
 		base.SetVelocity(base.EnemyController.HeadingX * base.EnemyController.ActualSpeed, base.EnemyController.HeadingY * base.EnemyController.ActualSpeed, false);
 	}
 
-	// Token: 0x06000292 RID: 658 RVA: 0x00013198 File Offset: 0x00011398
+	// Token: 0x0600035A RID: 858 RVA: 0x00051714 File Offset: 0x0004F914
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -60,7 +60,7 @@ public class BouncySpike_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000293 RID: 659 RVA: 0x0001320A File Offset: 0x0001140A
+	// Token: 0x0600035B RID: 859 RVA: 0x000046B5 File Offset: 0x000028B5
 	private void OnResetPosition(object sender, EventArgs args)
 	{
 		if (base.IsInitialized && PlayerManager.IsInstantiated)
@@ -69,7 +69,7 @@ public class BouncySpike_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000294 RID: 660 RVA: 0x00013221 File Offset: 0x00011421
+	// Token: 0x0600035C RID: 860 RVA: 0x000046B5 File Offset: 0x000028B5
 	private void OnPositionedForSummoning(object sender, EventArgs args)
 	{
 		if (base.IsInitialized && PlayerManager.IsInstantiated)
@@ -78,7 +78,7 @@ public class BouncySpike_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000295 RID: 661 RVA: 0x00013238 File Offset: 0x00011438
+	// Token: 0x0600035D RID: 861 RVA: 0x000046CC File Offset: 0x000028CC
 	public override IEnumerator Idle()
 	{
 		base.EnemyController.FlyingMovementType = FlyingMovementType.Override;
@@ -89,7 +89,7 @@ public class BouncySpike_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000296 RID: 662 RVA: 0x00013248 File Offset: 0x00011448
+	// Token: 0x0600035E RID: 862 RVA: 0x00051788 File Offset: 0x0004F988
 	private void Update()
 	{
 		if (!base.IsInitialized)
@@ -121,7 +121,7 @@ public class BouncySpike_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000297 RID: 663 RVA: 0x0001335C File Offset: 0x0001155C
+	// Token: 0x0600035F RID: 863 RVA: 0x0005189C File Offset: 0x0004FA9C
 	private void OnDestroy()
 	{
 		if (base.EnemyController)
@@ -131,6 +131,6 @@ public class BouncySpike_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0400068E RID: 1678
+	// Token: 0x04000731 RID: 1841
 	private int m_startingAngle;
 }

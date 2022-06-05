@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000092 RID: 146
+// Token: 0x020000A3 RID: 163
 public class AxeKnight_Miniboss_AIScript : AxeKnight_Basic_AIScript
 {
-	// Token: 0x17000066 RID: 102
-	// (get) Token: 0x0600021C RID: 540 RVA: 0x00012527 File Offset: 0x00010727
+	// Token: 0x1700007E RID: 126
+	// (get) Token: 0x06000266 RID: 614 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_throwSecondAxe
 	{
 		get
@@ -13,8 +13,8 @@ public class AxeKnight_Miniboss_AIScript : AxeKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000067 RID: 103
-	// (get) Token: 0x0600021D RID: 541 RVA: 0x0001252A File Offset: 0x0001072A
+	// Token: 0x1700007F RID: 127
+	// (get) Token: 0x06000267 RID: 615 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_jump_spawnAxeOnLand
 	{
 		get

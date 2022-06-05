@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020004EA RID: 1258
+// Token: 0x0200083F RID: 2111
 public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x17001199 RID: 4505
-	// (get) Token: 0x06002F19 RID: 12057 RVA: 0x000A0BA1 File Offset: 0x0009EDA1
+	// Token: 0x17001772 RID: 6002
+	// (get) Token: 0x0600411B RID: 16667 RVA: 0x00023F64 File Offset: 0x00022164
 	public IRelayLink RoomCompletedRelay
 	{
 		get
@@ -16,8 +16,8 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x1700119A RID: 4506
-	// (get) Token: 0x06002F1A RID: 12058 RVA: 0x000A0BAE File Offset: 0x0009EDAE
+	// Token: 0x17001773 RID: 6003
+	// (get) Token: 0x0600411C RID: 16668 RVA: 0x00023F71 File Offset: 0x00022171
 	public IRelayLink SpecialRoomInitializedRelay
 	{
 		get
@@ -26,8 +26,8 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x1700119B RID: 4507
-	// (get) Token: 0x06002F1B RID: 12059 RVA: 0x000A0BBB File Offset: 0x0009EDBB
+	// Token: 0x17001774 RID: 6004
+	// (get) Token: 0x0600411D RID: 16669 RVA: 0x00023F7E File Offset: 0x0002217E
 	public virtual SpecialRoomType SpecialRoomType
 	{
 		get
@@ -36,22 +36,22 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x1700119C RID: 4508
-	// (get) Token: 0x06002F1C RID: 12060 RVA: 0x000A0BC3 File Offset: 0x0009EDC3
-	// (set) Token: 0x06002F1D RID: 12061 RVA: 0x000A0BCB File Offset: 0x0009EDCB
+	// Token: 0x17001775 RID: 6005
+	// (get) Token: 0x0600411E RID: 16670 RVA: 0x00023F86 File Offset: 0x00022186
+	// (set) Token: 0x0600411F RID: 16671 RVA: 0x00023F8E File Offset: 0x0002218E
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x1700119D RID: 4509
-	// (get) Token: 0x06002F1E RID: 12062 RVA: 0x000A0BD4 File Offset: 0x0009EDD4
-	// (set) Token: 0x06002F1F RID: 12063 RVA: 0x000A0BDC File Offset: 0x0009EDDC
+	// Token: 0x17001776 RID: 6006
+	// (get) Token: 0x06004120 RID: 16672 RVA: 0x00023F97 File Offset: 0x00022197
+	// (set) Token: 0x06004121 RID: 16673 RVA: 0x00023F9F File Offset: 0x0002219F
 	public bool IsRoomComplete { get; protected set; }
 
-	// Token: 0x1700119E RID: 4510
-	// (get) Token: 0x06002F20 RID: 12064 RVA: 0x000A0BE5 File Offset: 0x0009EDE5
-	// (set) Token: 0x06002F21 RID: 12065 RVA: 0x000A0BED File Offset: 0x0009EDED
+	// Token: 0x17001777 RID: 6007
+	// (get) Token: 0x06004122 RID: 16674 RVA: 0x00023FA8 File Offset: 0x000221A8
+	// (set) Token: 0x06004123 RID: 16675 RVA: 0x00023FB0 File Offset: 0x000221B0
 	public RoomSaveData RoomSaveData { get; private set; }
 
-	// Token: 0x06002F22 RID: 12066 RVA: 0x000A0BF8 File Offset: 0x0009EDF8
+	// Token: 0x06004124 RID: 16676 RVA: 0x00105AFC File Offset: 0x00103CFC
 	protected virtual void Awake()
 	{
 		this.m_roomCompletedEventArgs = new SpecialRoomCompletedEventArgs(this);
@@ -61,7 +61,7 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		this.m_playerEnterRoomInitialization = new Action<object, RoomViaDoorEventArgs>(this.PlayerEnterRoomInitialization);
 	}
 
-	// Token: 0x06002F23 RID: 12067 RVA: 0x000A0C5C File Offset: 0x0009EE5C
+	// Token: 0x06004125 RID: 16677 RVA: 0x00105B60 File Offset: 0x00103D60
 	private void SaveRoomMiscData()
 	{
 		if (this.m_roomMiscDataTable != null)
@@ -75,7 +75,7 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002F24 RID: 12068 RVA: 0x000A0CE4 File Offset: 0x0009EEE4
+	// Token: 0x06004126 RID: 16678 RVA: 0x00105BE8 File Offset: 0x00103DE8
 	private void LoadRoomMiscData()
 	{
 		if (!string.IsNullOrEmpty(this.RoomSaveData.RoomMiscData) && this.m_roomMiscDataTable == null)
@@ -115,7 +115,7 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002F25 RID: 12069 RVA: 0x000A0DD8 File Offset: 0x0009EFD8
+	// Token: 0x06004127 RID: 16679 RVA: 0x00105CDC File Offset: 0x00103EDC
 	public string GetRoomMiscData(string id)
 	{
 		string result;
@@ -126,7 +126,7 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		return null;
 	}
 
-	// Token: 0x06002F26 RID: 12070 RVA: 0x000A0E00 File Offset: 0x0009F000
+	// Token: 0x06004128 RID: 16680 RVA: 0x00023FB9 File Offset: 0x000221B9
 	public void SetRoomMiscData(string id, string value)
 	{
 		if (this.m_roomMiscDataTable == null)
@@ -141,7 +141,7 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		this.m_roomMiscDataTable.Add(id, value);
 	}
 
-	// Token: 0x06002F27 RID: 12071 RVA: 0x000A0E3E File Offset: 0x0009F03E
+	// Token: 0x06004129 RID: 16681 RVA: 0x00023FF7 File Offset: 0x000221F7
 	public virtual void RoomCompleted()
 	{
 		if (this.Room != null)
@@ -152,7 +152,7 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002F28 RID: 12072 RVA: 0x000A0E6E File Offset: 0x0009F06E
+	// Token: 0x0600412A RID: 16682 RVA: 0x00024027 File Offset: 0x00022227
 	protected void ForceRoomCompleted()
 	{
 		if (this.Room != null)
@@ -161,7 +161,7 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002F29 RID: 12073 RVA: 0x000A0E88 File Offset: 0x0009F088
+	// Token: 0x0600412B RID: 16683 RVA: 0x00105D04 File Offset: 0x00103F04
 	public virtual void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
@@ -184,7 +184,7 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		});
 	}
 
-	// Token: 0x06002F2A RID: 12074 RVA: 0x000A0F44 File Offset: 0x0009F144
+	// Token: 0x0600412C RID: 16684 RVA: 0x00105DC0 File Offset: 0x00103FC0
 	protected virtual void OnDestroy()
 	{
 		if (this.Room)
@@ -196,14 +196,14 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002F2B RID: 12075 RVA: 0x000A0FC4 File Offset: 0x0009F1C4
+	// Token: 0x0600412D RID: 16685 RVA: 0x0002403E File Offset: 0x0002223E
 	private void PlayerEnterRoomInitialization(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		this.OnPlayerEnterRoom(sender, eventArgs);
 		this.m_roomInitializedRelay.Dispatch();
 	}
 
-	// Token: 0x06002F2C RID: 12076 RVA: 0x000A0FDC File Offset: 0x0009F1DC
+	// Token: 0x0600412E RID: 16686 RVA: 0x00105E40 File Offset: 0x00104040
 	protected virtual void OnRoomDataLoaded()
 	{
 		if (this.Room == null)
@@ -222,7 +222,7 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002F2D RID: 12077 RVA: 0x000A1051 File Offset: 0x0009F251
+	// Token: 0x0600412F RID: 16687 RVA: 0x00024053 File Offset: 0x00022253
 	protected virtual void OnRoomDataSaved(bool exitingToMainMenu)
 	{
 		if (!this.RoomSaveData.IsNativeNull())
@@ -232,41 +232,41 @@ public class BaseSpecialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002F2E RID: 12078 RVA: 0x000A1077 File Offset: 0x0009F277
+	// Token: 0x06004130 RID: 16688 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 	}
 
-	// Token: 0x06002F2F RID: 12079 RVA: 0x000A1079 File Offset: 0x0009F279
+	// Token: 0x06004131 RID: 16689 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnPlayerExitRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 	}
 
-	// Token: 0x0400258B RID: 9611
+	// Token: 0x040032F5 RID: 13045
 	private SpecialRoomCompletedEventArgs m_roomCompletedEventArgs;
 
-	// Token: 0x0400258C RID: 9612
+	// Token: 0x040032F6 RID: 13046
 	private Relay m_roomCompletedRelay = new Relay();
 
-	// Token: 0x0400258D RID: 9613
+	// Token: 0x040032F7 RID: 13047
 	private Relay m_roomInitializedRelay = new Relay();
 
-	// Token: 0x0400258E RID: 9614
+	// Token: 0x040032F8 RID: 13048
 	private Action m_onRoomDataLoaded;
 
-	// Token: 0x0400258F RID: 9615
+	// Token: 0x040032F9 RID: 13049
 	private Action<bool> m_onRoomDataSaved;
 
-	// Token: 0x04002590 RID: 9616
+	// Token: 0x040032FA RID: 13050
 	private Action<object, RoomViaDoorEventArgs> m_onPlayerExitRoom;
 
-	// Token: 0x04002591 RID: 9617
+	// Token: 0x040032FB RID: 13051
 	private Action<object, RoomViaDoorEventArgs> m_playerEnterRoomInitialization;
 
-	// Token: 0x04002592 RID: 9618
+	// Token: 0x040032FC RID: 13052
 	protected Dictionary<string, string> m_roomMiscDataTable;
 
-	// Token: 0x04002593 RID: 9619
+	// Token: 0x040032FD RID: 13053
 	[SerializeField]
 	private SpecialRoomType m_specialRoomType;
 }

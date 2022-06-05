@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x020007E8 RID: 2024
+// Token: 0x02000CAE RID: 3246
 public class FairyRoomEnteredEventArgs : EventArgs
 {
-	// Token: 0x0600437C RID: 17276 RVA: 0x000EC85F File Offset: 0x000EAA5F
+	// Token: 0x06005D05 RID: 23813 RVA: 0x00033275 File Offset: 0x00031475
 	public FairyRoomEnteredEventArgs(FairyRoomController fairyRoom)
 	{
 		this.Initialise(fairyRoom);
 	}
 
-	// Token: 0x0600437D RID: 17277 RVA: 0x000EC86E File Offset: 0x000EAA6E
+	// Token: 0x06005D06 RID: 23814 RVA: 0x00033284 File Offset: 0x00031484
 	public void Initialise(FairyRoomController fairyRoom)
 	{
 		this.FairyRoomController = fairyRoom;
 	}
 
-	// Token: 0x170016D8 RID: 5848
-	// (get) Token: 0x0600437E RID: 17278 RVA: 0x000EC877 File Offset: 0x000EAA77
-	// (set) Token: 0x0600437F RID: 17279 RVA: 0x000EC87F File Offset: 0x000EAA7F
+	// Token: 0x17001ED6 RID: 7894
+	// (get) Token: 0x06005D07 RID: 23815 RVA: 0x0003328D File Offset: 0x0003148D
+	// (set) Token: 0x06005D08 RID: 23816 RVA: 0x00033295 File Offset: 0x00031495
 	public FairyRoomController FairyRoomController { get; private set; }
 }

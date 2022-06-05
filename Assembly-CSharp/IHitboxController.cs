@@ -1,108 +1,108 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001D8 RID: 472
+// Token: 0x0200035A RID: 858
 public interface IHitboxController
 {
-	// Token: 0x17000A55 RID: 2645
-	// (get) Token: 0x06001386 RID: 4998
+	// Token: 0x17000D2D RID: 3373
+	// (get) Token: 0x06001C1F RID: 7199
 	GameObject gameObject { get; }
 
-	// Token: 0x17000A56 RID: 2646
-	// (get) Token: 0x06001387 RID: 4999
+	// Token: 0x17000D2E RID: 3374
+	// (get) Token: 0x06001C20 RID: 7200
 	GameObject RootGameObject { get; }
 
-	// Token: 0x17000A57 RID: 2647
-	// (get) Token: 0x06001388 RID: 5000
+	// Token: 0x17000D2F RID: 3375
+	// (get) Token: 0x06001C21 RID: 7201
 	bool IsInitialized { get; }
 
-	// Token: 0x17000A58 RID: 2648
-	// (get) Token: 0x06001389 RID: 5001
+	// Token: 0x17000D30 RID: 3376
+	// (get) Token: 0x06001C22 RID: 7202
 	IDamageObj DamageObj { get; }
 
-	// Token: 0x17000A59 RID: 2649
-	// (get) Token: 0x0600138A RID: 5002
-	// (set) Token: 0x0600138B RID: 5003
+	// Token: 0x17000D31 RID: 3377
+	// (get) Token: 0x06001C23 RID: 7203
+	// (set) Token: 0x06001C24 RID: 7204
 	CollisionType CollisionType { get; set; }
 
-	// Token: 0x17000A5A RID: 2650
-	// (get) Token: 0x0600138C RID: 5004
+	// Token: 0x17000D32 RID: 3378
+	// (get) Token: 0x06001C25 RID: 7205
 	CollisionType WeaponCollidesWithType { get; }
 
-	// Token: 0x17000A5B RID: 2651
-	// (get) Token: 0x0600138D RID: 5005
+	// Token: 0x17000D33 RID: 3379
+	// (get) Token: 0x06001C26 RID: 7206
 	CollisionType TerrainCollidesWithType { get; }
 
-	// Token: 0x17000A5C RID: 2652
-	// (get) Token: 0x0600138E RID: 5006
-	// (set) Token: 0x0600138F RID: 5007
+	// Token: 0x17000D34 RID: 3380
+	// (get) Token: 0x06001C27 RID: 7207
+	// (set) Token: 0x06001C28 RID: 7208
 	float RepeatHitDuration { get; set; }
 
-	// Token: 0x17000A5D RID: 2653
-	// (get) Token: 0x06001390 RID: 5008
-	// (set) Token: 0x06001391 RID: 5009
+	// Token: 0x17000D35 RID: 3381
+	// (get) Token: 0x06001C29 RID: 7209
+	// (set) Token: 0x06001C2A RID: 7210
 	bool DisableAllCollisions { get; set; }
 
-	// Token: 0x17000A5E RID: 2654
-	// (get) Token: 0x06001392 RID: 5010
-	// (set) Token: 0x06001393 RID: 5011
+	// Token: 0x17000D36 RID: 3382
+	// (get) Token: 0x06001C2B RID: 7211
+	// (set) Token: 0x06001C2C RID: 7212
 	Collider2D LastCollidedWith { get; set; }
 
-	// Token: 0x17000A5F RID: 2655
-	// (get) Token: 0x06001394 RID: 5012
+	// Token: 0x17000D37 RID: 3383
+	// (get) Token: 0x06001C2D RID: 7213
 	bool ResponseMethodsInitialized { get; }
 
-	// Token: 0x06001395 RID: 5013
+	// Token: 0x06001C2E RID: 7214
 	void HandleCollision(HitResponseType hitResponseType, HitboxInfo hbInfo, Collider2D otherCollider);
 
-	// Token: 0x06001396 RID: 5014
+	// Token: 0x06001C2F RID: 7215
 	void InvokeAllBodyHitResponseMethods(HitResponseType hitResponseType, IHitboxController otherHBController);
 
-	// Token: 0x06001397 RID: 5015
+	// Token: 0x06001C30 RID: 7216
 	void InvokeAllWeaponHitResponseMethods(HitResponseType hitResponseType, IHitboxController otherHBController);
 
-	// Token: 0x06001398 RID: 5016
+	// Token: 0x06001C31 RID: 7217
 	void InvokeAllTerrainHitResponseMethods(HitResponseType hitResponseType, IHitboxController otherHBController);
 
-	// Token: 0x06001399 RID: 5017
+	// Token: 0x06001C32 RID: 7218
 	void AddHitboxResponseMethod(IHitResponse hitResponse);
 
-	// Token: 0x0600139A RID: 5018
+	// Token: 0x06001C33 RID: 7219
 	void RemoveHitboxResponseMethod(IHitResponse hitResponse);
 
-	// Token: 0x0600139B RID: 5019
+	// Token: 0x06001C34 RID: 7220
 	GameObject ContainsHitbox(HitboxType hitboxType, string hitboxName);
 
-	// Token: 0x0600139C RID: 5020
+	// Token: 0x06001C35 RID: 7221
 	void SetHitboxActiveState(HitboxType hitboxType, bool active);
 
-	// Token: 0x0600139D RID: 5021
+	// Token: 0x06001C36 RID: 7222
 	bool GetHitboxActiveState(HitboxType hitboxType);
 
-	// Token: 0x0600139E RID: 5022
+	// Token: 0x06001C37 RID: 7223
 	Collider2D GetCollider(HitboxType hitboxType);
 
-	// Token: 0x0600139F RID: 5023
+	// Token: 0x06001C38 RID: 7224
 	void ChangeCollisionType(HitboxType hitboxType, CollisionType collisionType);
 
-	// Token: 0x060013A0 RID: 5024
+	// Token: 0x06001C39 RID: 7225
 	void ChangeCanCollideWith(HitboxType hitboxType, CollisionType collisionType);
 
-	// Token: 0x060013A1 RID: 5025
+	// Token: 0x06001C3A RID: 7226
 	void RealignHitboxColliders();
 
-	// Token: 0x060013A2 RID: 5026
+	// Token: 0x06001C3B RID: 7227
 	void Initialize();
 
-	// Token: 0x060013A3 RID: 5027
+	// Token: 0x06001C3C RID: 7228
 	void ResetRepeatHitChecks();
 
-	// Token: 0x060013A4 RID: 5028
+	// Token: 0x06001C3D RID: 7229
 	void RemoveFromRepeatHitChecks(GameObject obj);
 
-	// Token: 0x060013A5 RID: 5029
+	// Token: 0x06001C3E RID: 7230
 	void ResetAllHitboxStates();
 
-	// Token: 0x060013A6 RID: 5030
+	// Token: 0x06001C3F RID: 7231
 	void SetCulledState(bool cull, bool includeRigidbody);
 }

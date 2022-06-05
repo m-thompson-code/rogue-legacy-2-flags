@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x02000212 RID: 530
+// Token: 0x020003C5 RID: 965
 public enum PatchType
 {
-	// Token: 0x0400156A RID: 5482
+	// Token: 0x04001C6D RID: 7277
 	Default,
-	// Token: 0x0400156B RID: 5483
+	// Token: 0x04001C6E RID: 7278
 	FarShores,
-	// Token: 0x0400156C RID: 5484
+	// Token: 0x04001C6F RID: 7279
 	ArcaneHallows,
-	// Token: 0x0400156D RID: 5485
+	// Token: 0x04001C70 RID: 7280
 	DriftingWorlds,
-	// Token: 0x0400156E RID: 5486
+	// Token: 0x04001C71 RID: 7281
 	PizzaMundi,
-	// Token: 0x0400156F RID: 5487
+	// Token: 0x04001C72 RID: 7282
 	DragonsVow,
-	// Token: 0x04001570 RID: 5488
+	// Token: 0x04001C73 RID: 7283
 	HallowsEve,
-	// Token: 0x04001571 RID: 5489
+	// Token: 0x04001C74 RID: 7284
 	WinterWonderland,
-	// Token: 0x04001572 RID: 5490
+	// Token: 0x04001C75 RID: 7285
 	NewGamePlus_BlueSky
 }

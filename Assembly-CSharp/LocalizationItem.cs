@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000480 RID: 1152
+// Token: 0x02000779 RID: 1913
 public class LocalizationItem : MonoBehaviour, ILocalizable
 {
-	// Token: 0x1700105B RID: 4187
-	// (get) Token: 0x06002A1A RID: 10778 RVA: 0x0008BAFA File Offset: 0x00089CFA
+	// Token: 0x17001594 RID: 5524
+	// (get) Token: 0x06003A30 RID: 14896 RVA: 0x0001FF56 File Offset: 0x0001E156
 	public string LocID
 	{
 		get
@@ -15,8 +15,8 @@ public class LocalizationItem : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x1700105C RID: 4188
-	// (get) Token: 0x06002A1B RID: 10779 RVA: 0x0008BB02 File Offset: 0x00089D02
+	// Token: 0x17001595 RID: 5525
+	// (get) Token: 0x06003A31 RID: 14897 RVA: 0x0001FF5E File Offset: 0x0001E15E
 	public TMP_Text TextObj
 	{
 		get
@@ -25,15 +25,15 @@ public class LocalizationItem : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002A1C RID: 10780 RVA: 0x0008BB0A File Offset: 0x00089D0A
+	// Token: 0x06003A32 RID: 14898 RVA: 0x0001FF66 File Offset: 0x0001E166
 	protected virtual string GetLocString(string locID, bool isFemale)
 	{
 		return LocalizationManager.GetString(locID, isFemale, false);
 	}
 
-	// Token: 0x1700105D RID: 4189
-	// (get) Token: 0x06002A1D RID: 10781 RVA: 0x0008BB14 File Offset: 0x00089D14
-	// (set) Token: 0x06002A1E RID: 10782 RVA: 0x0008BB1C File Offset: 0x00089D1C
+	// Token: 0x17001596 RID: 5526
+	// (get) Token: 0x06003A33 RID: 14899 RVA: 0x0001FF70 File Offset: 0x0001E170
+	// (set) Token: 0x06003A34 RID: 14900 RVA: 0x0001FF78 File Offset: 0x0001E178
 	public StringGenderType StringGenderType
 	{
 		get
@@ -46,7 +46,7 @@ public class LocalizationItem : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002A1F RID: 10783 RVA: 0x0008BB28 File Offset: 0x00089D28
+	// Token: 0x06003A35 RID: 14901 RVA: 0x000ED760 File Offset: 0x000EB960
 	private void OnEnable()
 	{
 		if (!this.m_isInitialized)
@@ -63,7 +63,7 @@ public class LocalizationItem : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002A20 RID: 10784 RVA: 0x0008BB75 File Offset: 0x00089D75
+	// Token: 0x06003A36 RID: 14902 RVA: 0x0001FF81 File Offset: 0x0001E181
 	private void OnDisable()
 	{
 		if (!this.m_alwaysRefreshText)
@@ -72,7 +72,7 @@ public class LocalizationItem : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002A21 RID: 10785 RVA: 0x0008BB8C File Offset: 0x00089D8C
+	// Token: 0x06003A37 RID: 14903 RVA: 0x0001FF98 File Offset: 0x0001E198
 	private void Awake()
 	{
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
@@ -83,7 +83,7 @@ public class LocalizationItem : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002A22 RID: 10786 RVA: 0x0008BBBC File Offset: 0x00089DBC
+	// Token: 0x06003A38 RID: 14904 RVA: 0x0001FFC8 File Offset: 0x0001E1C8
 	private void OnDestroy()
 	{
 		if (this.m_alwaysRefreshText)
@@ -92,7 +92,7 @@ public class LocalizationItem : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002A23 RID: 10787 RVA: 0x0008BBD3 File Offset: 0x00089DD3
+	// Token: 0x06003A39 RID: 14905 RVA: 0x0001FFDF File Offset: 0x0001E1DF
 	private void Initialize()
 	{
 		this.m_textObj = base.GetComponent<TMP_Text>();
@@ -105,14 +105,14 @@ public class LocalizationItem : MonoBehaviour, ILocalizable
 		Debug.Log("Could not find TMP_Text object on LocalizationItem GameObject.");
 	}
 
-	// Token: 0x06002A24 RID: 10788 RVA: 0x0008BC08 File Offset: 0x00089E08
+	// Token: 0x06003A3A RID: 14906 RVA: 0x00020014 File Offset: 0x0001E214
 	public void SetString(string locID)
 	{
 		this.m_locID = locID;
 		this.RefreshText(null, null);
 	}
 
-	// Token: 0x06002A25 RID: 10789 RVA: 0x0008BC1C File Offset: 0x00089E1C
+	// Token: 0x06003A3B RID: 14907 RVA: 0x000ED7B0 File Offset: 0x000EB9B0
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.m_textLoaded = false;
@@ -142,31 +142,31 @@ public class LocalizationItem : MonoBehaviour, ILocalizable
 		this.m_textLoaded = true;
 	}
 
-	// Token: 0x04002277 RID: 8823
+	// Token: 0x04002E61 RID: 11873
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	private string m_locID;
 
-	// Token: 0x04002278 RID: 8824
+	// Token: 0x04002E62 RID: 11874
 	[SerializeField]
 	private StringGenderType m_stringGenderType;
 
-	// Token: 0x04002279 RID: 8825
+	// Token: 0x04002E63 RID: 11875
 	[SerializeField]
 	private bool m_alwaysRefreshText;
 
-	// Token: 0x0400227A RID: 8826
+	// Token: 0x04002E64 RID: 11876
 	protected TMP_Text m_textObj;
 
-	// Token: 0x0400227B RID: 8827
+	// Token: 0x04002E65 RID: 11877
 	private bool m_isInitialized;
 
-	// Token: 0x0400227C RID: 8828
+	// Token: 0x04002E66 RID: 11878
 	private bool m_textLoaded;
 
-	// Token: 0x0400227D RID: 8829
+	// Token: 0x04002E67 RID: 11879
 	private LanguageType m_currentLanguageType;
 
-	// Token: 0x0400227E RID: 8830
+	// Token: 0x04002E68 RID: 11880
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 }

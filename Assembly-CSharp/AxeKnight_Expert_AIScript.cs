@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000091 RID: 145
+// Token: 0x020000A2 RID: 162
 public class AxeKnight_Expert_AIScript : AxeKnight_Basic_AIScript
 {
-	// Token: 0x17000065 RID: 101
-	// (get) Token: 0x0600021A RID: 538 RVA: 0x0001251C File Offset: 0x0001071C
+	// Token: 0x1700007D RID: 125
+	// (get) Token: 0x06000264 RID: 612 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_throwSecondAxe
 	{
 		get

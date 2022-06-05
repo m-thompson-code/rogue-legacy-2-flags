@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x0200025E RID: 606
+// Token: 0x0200041F RID: 1055
 public enum LogicState
 {
-	// Token: 0x04001744 RID: 5956
+	// Token: 0x04001E6B RID: 7787
 	None,
-	// Token: 0x04001745 RID: 5957
+	// Token: 0x04001E6C RID: 7788
 	Close,
-	// Token: 0x04001746 RID: 5958
+	// Token: 0x04001E6D RID: 7789
 	Medium,
-	// Token: 0x04001747 RID: 5959
+	// Token: 0x04001E6E RID: 7790
 	Far,
-	// Token: 0x04001748 RID: 5960
+	// Token: 0x04001E6F RID: 7791
 	Resting,
-	// Token: 0x04001749 RID: 5961
+	// Token: 0x04001E70 RID: 7792
 	Wander
 }

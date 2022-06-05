@@ -1,30 +1,30 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200049F RID: 1183
+// Token: 0x020007A6 RID: 1958
 public class HPAmountCheckSkillCritProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B4F RID: 11087 RVA: 0x00092E2E File Offset: 0x0009102E
+	// Token: 0x06003BAA RID: 15274 RVA: 0x00020CCE File Offset: 0x0001EECE
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onProjectileCollision = new Action<Projectile_RL, GameObject>(this.OnProjectileCollision);
 	}
 
-	// Token: 0x06002B50 RID: 11088 RVA: 0x00092E48 File Offset: 0x00091048
+	// Token: 0x06003BAB RID: 15275 RVA: 0x00020CE8 File Offset: 0x0001EEE8
 	private void OnEnable()
 	{
 		base.SourceProjectile.OnCollisionRelay.AddListener(this.m_onProjectileCollision, false);
 		this.m_critWasApplied = false;
 	}
 
-	// Token: 0x06002B51 RID: 11089 RVA: 0x00092E69 File Offset: 0x00091069
+	// Token: 0x06003BAC RID: 15276 RVA: 0x00020D09 File Offset: 0x0001EF09
 	private void OnDisable()
 	{
 		base.SourceProjectile.OnCollisionRelay.RemoveListener(this.m_onProjectileCollision);
 	}
 
-	// Token: 0x06002B52 RID: 11090 RVA: 0x00092E84 File Offset: 0x00091084
+	// Token: 0x06003BAD RID: 15277 RVA: 0x000F47AC File Offset: 0x000F29AC
 	private void OnProjectileCollision(Projectile_RL projectile, GameObject obj)
 	{
 		if (!obj.CompareTag("Enemy"))
@@ -52,7 +52,7 @@ public class HPAmountCheckSkillCritProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002B53 RID: 11091 RVA: 0x00092F24 File Offset: 0x00091124
+	// Token: 0x06003BAE RID: 15278 RVA: 0x000F484C File Offset: 0x000F2A4C
 	private bool HPConditionMet(BaseCharacterController character)
 	{
 		switch (this.m_amountCheckType)
@@ -70,32 +70,32 @@ public class HPAmountCheckSkillCritProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x0400233F RID: 9023
+	// Token: 0x04002F60 RID: 12128
 	[SerializeField]
 	private HPAmountCheckSkillCritProjectileLogic.AmountCheckType m_amountCheckType;
 
-	// Token: 0x04002340 RID: 9024
+	// Token: 0x04002F61 RID: 12129
 	[SerializeField]
 	private float m_hpAmount;
 
-	// Token: 0x04002341 RID: 9025
+	// Token: 0x04002F62 RID: 12130
 	private bool m_critWasApplied;
 
-	// Token: 0x04002342 RID: 9026
+	// Token: 0x04002F63 RID: 12131
 	private Action<Projectile_RL, GameObject> m_onProjectileCollision;
 
-	// Token: 0x02000C80 RID: 3200
+	// Token: 0x020007A7 RID: 1959
 	private enum AmountCheckType
 	{
-		// Token: 0x040050B6 RID: 20662
+		// Token: 0x04002F65 RID: 12133
 		None,
-		// Token: 0x040050B7 RID: 20663
+		// Token: 0x04002F66 RID: 12134
 		Greater,
-		// Token: 0x040050B8 RID: 20664
+		// Token: 0x04002F67 RID: 12135
 		GreaterOrEqual,
-		// Token: 0x040050B9 RID: 20665
+		// Token: 0x04002F68 RID: 12136
 		Less,
-		// Token: 0x040050BA RID: 20666
+		// Token: 0x04002F69 RID: 12137
 		LessOrEqual
 	}
 }

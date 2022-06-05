@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using Rewired;
 using UnityEngine;
 
-// Token: 0x020006B1 RID: 1713
+// Token: 0x02000B59 RID: 2905
 public class TextGlyphManager
 {
-	// Token: 0x1700158E RID: 5518
-	// (get) Token: 0x06003F1B RID: 16155 RVA: 0x000E063B File Offset: 0x000DE83B
-	// (set) Token: 0x06003F1C RID: 16156 RVA: 0x000E0642 File Offset: 0x000DE842
+	// Token: 0x17001D86 RID: 7558
+	// (get) Token: 0x0600584F RID: 22607 RVA: 0x0002FFD6 File Offset: 0x0002E1D6
+	// (set) Token: 0x06005850 RID: 22608 RVA: 0x0002FFDD File Offset: 0x0002E1DD
 	public static bool GamepadGlyphTableInitialized { get; private set; }
 
-	// Token: 0x1700158F RID: 5519
-	// (get) Token: 0x06003F1D RID: 16157 RVA: 0x000E064A File Offset: 0x000DE84A
-	// (set) Token: 0x06003F1E RID: 16158 RVA: 0x000E0651 File Offset: 0x000DE851
+	// Token: 0x17001D87 RID: 7559
+	// (get) Token: 0x06005851 RID: 22609 RVA: 0x0002FFE5 File Offset: 0x0002E1E5
+	// (set) Token: 0x06005852 RID: 22610 RVA: 0x0002FFEC File Offset: 0x0002E1EC
 	public static bool KBMGlyphTableInitialized { get; private set; }
 
-	// Token: 0x17001590 RID: 5520
-	// (get) Token: 0x06003F1F RID: 16159 RVA: 0x000E065C File Offset: 0x000DE85C
+	// Token: 0x17001D88 RID: 7560
+	// (get) Token: 0x06005853 RID: 22611 RVA: 0x00150A90 File Offset: 0x0014EC90
 	private static string[] KBMActionNameArray
 	{
 		get
@@ -45,7 +45,7 @@ public class TextGlyphManager
 		}
 	}
 
-	// Token: 0x06003F20 RID: 16160 RVA: 0x000E06DC File Offset: 0x000DE8DC
+	// Token: 0x06005854 RID: 22612 RVA: 0x00150B10 File Offset: 0x0014ED10
 	public static string GetGamepadTextGlyph(string actionName, GamepadType gamepadTypeOverride = GamepadType.None)
 	{
 		if (TextGlyphManager.GamepadGlyphTableInitialized)
@@ -98,7 +98,7 @@ public class TextGlyphManager
 		return null;
 	}
 
-	// Token: 0x06003F21 RID: 16161 RVA: 0x000E07E8 File Offset: 0x000DE9E8
+	// Token: 0x06005855 RID: 22613 RVA: 0x00150C1C File Offset: 0x0014EE1C
 	public static int GetKeyboardTextGlyph(string actionName, out bool isKeyCode)
 	{
 		if (!TextGlyphManager.KBMGlyphTableInitialized)
@@ -132,7 +132,7 @@ public class TextGlyphManager
 		return -1;
 	}
 
-	// Token: 0x06003F22 RID: 16162 RVA: 0x000E0870 File Offset: 0x000DEA70
+	// Token: 0x06005856 RID: 22614 RVA: 0x00150CA4 File Offset: 0x0014EEA4
 	public static string GetFullTMPTextGlyph(string actionName, bool getGamepad, GamepadType gamepadTypeOverride = GamepadType.None)
 	{
 		bool flag = actionName == "Window_AllMovement_LStick";
@@ -230,7 +230,7 @@ public class TextGlyphManager
 		return null;
 	}
 
-	// Token: 0x06003F23 RID: 16163 RVA: 0x000E0AE8 File Offset: 0x000DECE8
+	// Token: 0x06005857 RID: 22615 RVA: 0x00150F1C File Offset: 0x0014F11C
 	public static void CreateAllGlyphTables(ControllerType controllerType)
 	{
 		if (controllerType == ControllerType.Joystick)
@@ -269,7 +269,7 @@ public class TextGlyphManager
 		}
 	}
 
-	// Token: 0x06003F24 RID: 16164 RVA: 0x000E0C44 File Offset: 0x000DEE44
+	// Token: 0x06005858 RID: 22616 RVA: 0x00151078 File Offset: 0x0014F278
 	public static void CreateOrReplaceGamepadGlyphTable(GamepadType gamepadType)
 	{
 		ControllerGlyphData glyphData = ControllerGlyphLibrary.GetGlyphData(gamepadType, true);
@@ -289,7 +289,7 @@ public class TextGlyphManager
 		TextGlyphManager.AddOrReplaceGamepadGlyph("FreeLook", glyphData.GetGlyphName(24, AxisRange.Full), gamepadType);
 	}
 
-	// Token: 0x06003F25 RID: 16165 RVA: 0x000E0D40 File Offset: 0x000DEF40
+	// Token: 0x06005859 RID: 22617 RVA: 0x00151174 File Offset: 0x0014F374
 	public static void CreateOrReplaceKBMGlyphTable()
 	{
 		foreach (string text in TextGlyphManager.KBMActionNameArray)
@@ -364,7 +364,7 @@ public class TextGlyphManager
 		}
 	}
 
-	// Token: 0x06003F26 RID: 16166 RVA: 0x000E0EF4 File Offset: 0x000DF0F4
+	// Token: 0x0600585A RID: 22618 RVA: 0x00151328 File Offset: 0x0014F528
 	private static void AddOrReplaceGamepadGlyph(string actionName, string textGlyph, GamepadType gamepadType)
 	{
 		Dictionary<string, string> dictionary;
@@ -385,7 +385,7 @@ public class TextGlyphManager
 		dictionary.Add(actionName, textGlyph);
 	}
 
-	// Token: 0x06003F27 RID: 16167 RVA: 0x000E0F48 File Offset: 0x000DF148
+	// Token: 0x0600585B RID: 22619 RVA: 0x0002FFF4 File Offset: 0x0002E1F4
 	private static void AddOrReplaceKeyboardGlyph(string actionName, KeyboardKeyCode keyCode)
 	{
 		if (TextGlyphManager.m_keyboardGlyphTable.ContainsKey(actionName))
@@ -396,7 +396,7 @@ public class TextGlyphManager
 		TextGlyphManager.m_keyboardGlyphTable.Add(actionName, keyCode);
 	}
 
-	// Token: 0x06003F28 RID: 16168 RVA: 0x000E0F70 File Offset: 0x000DF170
+	// Token: 0x0600585C RID: 22620 RVA: 0x0003001C File Offset: 0x0002E21C
 	private static void AddOrReplaceMouseGlyph(string actionName, int elementIdentifier)
 	{
 		if (TextGlyphManager.m_mouseGlyphTable.ContainsKey(actionName))
@@ -407,27 +407,27 @@ public class TextGlyphManager
 		TextGlyphManager.m_mouseGlyphTable.Add(actionName, elementIdentifier);
 	}
 
-	// Token: 0x04002EDE RID: 11998
+	// Token: 0x04004127 RID: 16679
 	private static bool DISABLE_WARNINGS = true;
 
-	// Token: 0x04002EDF RID: 11999
+	// Token: 0x04004128 RID: 16680
 	private const string KEYBOARD_SPRITEASSET_NAME = "keyboard_glyphs_texture";
 
-	// Token: 0x04002EE0 RID: 12000
+	// Token: 0x04004129 RID: 16681
 	private const string TMP_SPRITE_RICHTEXT_STRING_FORMAT = "<sprite=\"{0}\" name=\"{1}\">";
 
-	// Token: 0x04002EE1 RID: 12001
+	// Token: 0x0400412A RID: 16682
 	private static Dictionary<string, KeyboardKeyCode> m_keyboardGlyphTable = new Dictionary<string, KeyboardKeyCode>();
 
-	// Token: 0x04002EE2 RID: 12002
+	// Token: 0x0400412B RID: 16683
 	private static Dictionary<string, int> m_mouseGlyphTable = new Dictionary<string, int>();
 
-	// Token: 0x04002EE3 RID: 12003
+	// Token: 0x0400412C RID: 16684
 	private static Dictionary<GamepadType, Dictionary<string, string>> m_gamepadGlyphTable = new Dictionary<GamepadType, Dictionary<string, string>>();
 
-	// Token: 0x04002EE6 RID: 12006
+	// Token: 0x0400412F RID: 16687
 	private static List<ControllerTemplateActionElementMap> m_gamepadElementMapList = new List<ControllerTemplateActionElementMap>();
 
-	// Token: 0x04002EE7 RID: 12007
+	// Token: 0x04004130 RID: 16688
 	private static string[] m_kbmActionNameArray;
 }

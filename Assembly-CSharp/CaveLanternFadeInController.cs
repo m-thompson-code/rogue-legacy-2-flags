@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001CB RID: 459
+// Token: 0x02000345 RID: 837
 public class CaveLanternFadeInController : MonoBehaviour
 {
-	// Token: 0x06001284 RID: 4740 RVA: 0x00036761 File Offset: 0x00034961
+	// Token: 0x06001B02 RID: 6914 RVA: 0x0000DFC8 File Offset: 0x0000C1C8
 	private void Awake()
 	{
 		this.m_collider = base.GetComponent<BoxCollider2D>();
 	}
 
-	// Token: 0x06001285 RID: 4741 RVA: 0x00036770 File Offset: 0x00034970
+	// Token: 0x06001B03 RID: 6915 RVA: 0x00093F9C File Offset: 0x0009219C
 	private void OnTriggerStay2D(Collider2D collision)
 	{
 		if (!CaveLanternPostProcessingController.Instance)
@@ -31,7 +31,7 @@ public class CaveLanternFadeInController : MonoBehaviour
 		CaveLanternPostProcessingController.SetDimnessPercent(Mathf.Abs(PlayerManager.GetPlayerController().Midpoint.y - y) / y2);
 	}
 
-	// Token: 0x06001286 RID: 4742 RVA: 0x000367F3 File Offset: 0x000349F3
+	// Token: 0x06001B04 RID: 6916 RVA: 0x0000DFD6 File Offset: 0x0000C1D6
 	private void OnDisable()
 	{
 		if (this.m_effectEnabled && CaveLanternPostProcessingController.Instance)
@@ -41,9 +41,9 @@ public class CaveLanternFadeInController : MonoBehaviour
 		this.m_effectEnabled = false;
 	}
 
-	// Token: 0x040012F4 RID: 4852
+	// Token: 0x04001927 RID: 6439
 	private BoxCollider2D m_collider;
 
-	// Token: 0x040012F5 RID: 4853
+	// Token: 0x04001928 RID: 6440
 	private bool m_effectEnabled;
 }

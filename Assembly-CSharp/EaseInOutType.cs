@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000726 RID: 1830
+// Token: 0x02000BD9 RID: 3033
 public enum EaseInOutType
 {
-	// Token: 0x040033A7 RID: 13223
+	// Token: 0x04004623 RID: 17955
 	EaseIn,
-	// Token: 0x040033A8 RID: 13224
+	// Token: 0x04004624 RID: 17956
 	EaseOut,
-	// Token: 0x040033A9 RID: 13225
+	// Token: 0x04004625 RID: 17957
 	EaseInOut
 }

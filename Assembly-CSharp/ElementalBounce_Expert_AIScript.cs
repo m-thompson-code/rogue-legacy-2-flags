@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000A9 RID: 169
+// Token: 0x020000F3 RID: 243
 public class ElementalBounce_Expert_AIScript : ElementalBounce_Basic_AIScript
 {
-	// Token: 0x17000167 RID: 359
-	// (get) Token: 0x060003C5 RID: 965 RVA: 0x000154E8 File Offset: 0x000136E8
+	// Token: 0x170001EF RID: 495
+	// (get) Token: 0x06000562 RID: 1378 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_fireSpire_Hard_Version
 	{
 		get
@@ -13,8 +13,8 @@ public class ElementalBounce_Expert_AIScript : ElementalBounce_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000168 RID: 360
-	// (get) Token: 0x060003C6 RID: 966 RVA: 0x000154EB File Offset: 0x000136EB
+	// Token: 0x170001F0 RID: 496
+	// (get) Token: 0x06000563 RID: 1379 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_shoot_Hard_Version
 	{
 		get

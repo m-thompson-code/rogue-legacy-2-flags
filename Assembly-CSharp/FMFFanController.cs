@@ -1,15 +1,15 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200032E RID: 814
+// Token: 0x02000583 RID: 1411
 public class FMFFanController : MonoBehaviour
 {
-	// Token: 0x06001FD9 RID: 8153 RVA: 0x00065B1B File Offset: 0x00063D1B
+	// Token: 0x06002CCE RID: 11470 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Start()
 	{
 	}
 
-	// Token: 0x06001FDA RID: 8154 RVA: 0x00065B1D File Offset: 0x00063D1D
+	// Token: 0x06002CCF RID: 11471 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Update()
 	{
 	}

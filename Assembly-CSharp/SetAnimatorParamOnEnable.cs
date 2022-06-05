@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002E7 RID: 743
+// Token: 0x020004F1 RID: 1265
 public class SetAnimatorParamOnEnable : MonoBehaviour
 {
-	// Token: 0x06001D81 RID: 7553 RVA: 0x000611D0 File Offset: 0x0005F3D0
+	// Token: 0x060028C6 RID: 10438 RVA: 0x000BEE20 File Offset: 0x000BD020
 	private void OnEnable()
 	{
 		if (this.m_animator)
@@ -34,19 +34,19 @@ public class SetAnimatorParamOnEnable : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001B6F RID: 7023
+	// Token: 0x040023BA RID: 9146
 	[SerializeField]
 	private Animator m_animator;
 
-	// Token: 0x04001B70 RID: 7024
+	// Token: 0x040023BB RID: 9147
 	[SerializeField]
 	private AnimatorControllerParameterType m_paramType;
 
-	// Token: 0x04001B71 RID: 7025
+	// Token: 0x040023BC RID: 9148
 	[SerializeField]
 	private string m_paramName;
 
-	// Token: 0x04001B72 RID: 7026
+	// Token: 0x040023BD RID: 9149
 	[SerializeField]
 	private float m_numberValue;
 }

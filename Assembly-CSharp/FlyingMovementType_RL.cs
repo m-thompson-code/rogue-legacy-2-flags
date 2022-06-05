@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000734 RID: 1844
+// Token: 0x02000BF2 RID: 3058
 public class FlyingMovementType_RL
 {
 }

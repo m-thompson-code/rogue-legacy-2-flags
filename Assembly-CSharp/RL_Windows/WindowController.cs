@@ -7,11 +7,11 @@ using UnityEngine.UI;
 
 namespace RL_Windows
 {
-	// Token: 0x020008BE RID: 2238
+	// Token: 0x02000E02 RID: 3586
 	public abstract class WindowController : MonoBehaviour
 	{
-		// Token: 0x170017E2 RID: 6114
-		// (get) Token: 0x06004942 RID: 18754 RVA: 0x00108759 File Offset: 0x00106959
+		// Token: 0x1700207C RID: 8316
+		// (get) Token: 0x0600650C RID: 25868 RVA: 0x00037B9A File Offset: 0x00035D9A
 		public virtual int SortOrderOverride
 		{
 			get
@@ -20,8 +20,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017E3 RID: 6115
-		// (get) Token: 0x06004943 RID: 18755 RVA: 0x0010875C File Offset: 0x0010695C
+		// Token: 0x1700207D RID: 8317
+		// (get) Token: 0x0600650D RID: 25869 RVA: 0x00037B9D File Offset: 0x00035D9D
 		public Canvas WindowCanvas
 		{
 			get
@@ -30,12 +30,12 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017E4 RID: 6116
-		// (get) Token: 0x06004944 RID: 18756
+		// Token: 0x1700207E RID: 8318
+		// (get) Token: 0x0600650E RID: 25870
 		public abstract WindowID ID { get; }
 
-		// Token: 0x170017E5 RID: 6117
-		// (get) Token: 0x06004945 RID: 18757 RVA: 0x00108764 File Offset: 0x00106964
+		// Token: 0x1700207F RID: 8319
+		// (get) Token: 0x0600650F RID: 25871 RVA: 0x00037BA5 File Offset: 0x00035DA5
 		public Player RewiredPlayer
 		{
 			get
@@ -44,9 +44,9 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017E6 RID: 6118
-		// (get) Token: 0x06004946 RID: 18758 RVA: 0x0010876B File Offset: 0x0010696B
-		// (set) Token: 0x06004947 RID: 18759 RVA: 0x00108773 File Offset: 0x00106973
+		// Token: 0x17002080 RID: 8320
+		// (get) Token: 0x06006510 RID: 25872 RVA: 0x00037BAC File Offset: 0x00035DAC
+		// (set) Token: 0x06006511 RID: 25873 RVA: 0x00037BB4 File Offset: 0x00035DB4
 		public bool PauseGameWhenOpen
 		{
 			get
@@ -59,9 +59,9 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017E7 RID: 6119
-		// (get) Token: 0x06004948 RID: 18760 RVA: 0x0010877C File Offset: 0x0010697C
-		// (set) Token: 0x06004949 RID: 18761 RVA: 0x00108784 File Offset: 0x00106984
+		// Token: 0x17002081 RID: 8321
+		// (get) Token: 0x06006512 RID: 25874 RVA: 0x00037BBD File Offset: 0x00035DBD
+		// (set) Token: 0x06006513 RID: 25875 RVA: 0x00037BC5 File Offset: 0x00035DC5
 		public bool OpenOnSceneLoad
 		{
 			get
@@ -74,12 +74,12 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017E8 RID: 6120
-		// (get) Token: 0x0600494A RID: 18762 RVA: 0x0010878D File Offset: 0x0010698D
-		// (set) Token: 0x0600494B RID: 18763 RVA: 0x00108795 File Offset: 0x00106995
+		// Token: 0x17002082 RID: 8322
+		// (get) Token: 0x06006514 RID: 25876 RVA: 0x00037BCE File Offset: 0x00035DCE
+		// (set) Token: 0x06006515 RID: 25877 RVA: 0x00037BD6 File Offset: 0x00035DD6
 		public bool IsInitialized { get; protected set; }
 
-		// Token: 0x0600494C RID: 18764 RVA: 0x001087A0 File Offset: 0x001069A0
+		// Token: 0x06006516 RID: 25878 RVA: 0x00177D50 File Offset: 0x00175F50
 		public virtual void Initialize()
 		{
 			if (this.m_windowCanvas)
@@ -94,7 +94,7 @@ namespace RL_Windows
 			this.IsInitialized = true;
 		}
 
-		// Token: 0x0600494D RID: 18765 RVA: 0x001087FC File Offset: 0x001069FC
+		// Token: 0x06006517 RID: 25879 RVA: 0x00177DAC File Offset: 0x00175FAC
 		public virtual void SetIsOpen(bool isOpen)
 		{
 			if (isOpen)
@@ -123,7 +123,7 @@ namespace RL_Windows
 			this.OnClose();
 		}
 
-		// Token: 0x0600494E RID: 18766 RVA: 0x00108875 File Offset: 0x00106A75
+		// Token: 0x06006518 RID: 25880 RVA: 0x00037BDF File Offset: 0x00035DDF
 		public virtual void SetHasFocus(bool hasFocus)
 		{
 			if (hasFocus)
@@ -134,46 +134,46 @@ namespace RL_Windows
 			this.OnLostFocus();
 		}
 
-		// Token: 0x0600494F RID: 18767
+		// Token: 0x06006519 RID: 25881
 		protected abstract void OnOpen();
 
-		// Token: 0x06004950 RID: 18768
+		// Token: 0x0600651A RID: 25882
 		protected abstract void OnClose();
 
-		// Token: 0x06004951 RID: 18769
+		// Token: 0x0600651B RID: 25883
 		protected abstract void OnFocus();
 
-		// Token: 0x06004952 RID: 18770
+		// Token: 0x0600651C RID: 25884
 		protected abstract void OnLostFocus();
 
-		// Token: 0x06004953 RID: 18771 RVA: 0x00108887 File Offset: 0x00106A87
+		// Token: 0x0600651D RID: 25885 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnPause()
 		{
 		}
 
-		// Token: 0x06004954 RID: 18772 RVA: 0x00108889 File Offset: 0x00106A89
+		// Token: 0x0600651E RID: 25886 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnUnpause()
 		{
 		}
 
-		// Token: 0x04003DC8 RID: 15816
+		// Token: 0x0400524B RID: 21067
 		[SerializeField]
 		private bool m_pauseGameWhenOpen = true;
 
-		// Token: 0x04003DC9 RID: 15817
+		// Token: 0x0400524C RID: 21068
 		[SerializeField]
 		private bool m_openOnSceneLoad;
 
-		// Token: 0x04003DCA RID: 15818
+		// Token: 0x0400524D RID: 21069
 		[SerializeField]
 		protected Canvas m_windowCanvas;
 
-		// Token: 0x04003DCB RID: 15819
+		// Token: 0x0400524E RID: 21070
 		[SerializeField]
 		[FormerlySerializedAs("m_windowOpenedUnityEvent")]
 		public UnityEvent WindowOpenedEvent;
 
-		// Token: 0x04003DCC RID: 15820
+		// Token: 0x0400524F RID: 21071
 		[SerializeField]
 		[FormerlySerializedAs("m_windowOpenedUnityEvent")]
 		public UnityEvent WindowClosedEvent;

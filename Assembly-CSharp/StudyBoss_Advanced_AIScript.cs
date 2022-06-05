@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000135 RID: 309
+// Token: 0x02000215 RID: 533
 public class StudyBoss_Advanced_AIScript : StudyBoss_Basic_AIScript
 {
-	// Token: 0x17000523 RID: 1315
-	// (get) Token: 0x06000989 RID: 2441 RVA: 0x0001ED83 File Offset: 0x0001CF83
+	// Token: 0x170006D3 RID: 1747
+	// (get) Token: 0x06000E9E RID: 3742 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_advancedAttack
 	{
 		get
@@ -13,8 +13,8 @@ public class StudyBoss_Advanced_AIScript : StudyBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000524 RID: 1316
-	// (get) Token: 0x0600098A RID: 2442 RVA: 0x0001ED86 File Offset: 0x0001CF86
+	// Token: 0x170006D4 RID: 1748
+	// (get) Token: 0x06000E9F RID: 3743 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected override int m_verticalBeamAttackCount
 	{
 		get
@@ -23,8 +23,8 @@ public class StudyBoss_Advanced_AIScript : StudyBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000525 RID: 1317
-	// (get) Token: 0x0600098B RID: 2443 RVA: 0x0001ED89 File Offset: 0x0001CF89
+	// Token: 0x170006D5 RID: 1749
+	// (get) Token: 0x06000EA0 RID: 3744 RVA: 0x00003E63 File Offset: 0x00002063
 	protected override float m_verticalBeamLifetime
 	{
 		get
@@ -33,8 +33,8 @@ public class StudyBoss_Advanced_AIScript : StudyBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000526 RID: 1318
-	// (get) Token: 0x0600098C RID: 2444 RVA: 0x0001ED90 File Offset: 0x0001CF90
+	// Token: 0x170006D6 RID: 1750
+	// (get) Token: 0x06000EA1 RID: 3745 RVA: 0x000047A7 File Offset: 0x000029A7
 	protected override int m_dashAttackFireballCountAtEnd
 	{
 		get
@@ -43,8 +43,8 @@ public class StudyBoss_Advanced_AIScript : StudyBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000527 RID: 1319
-	// (get) Token: 0x0600098D RID: 2445 RVA: 0x0001ED93 File Offset: 0x0001CF93
+	// Token: 0x170006D7 RID: 1751
+	// (get) Token: 0x06000EA2 RID: 3746 RVA: 0x000046FA File Offset: 0x000028FA
 	protected override int m_shieldAttackProjectileCount
 	{
 		get

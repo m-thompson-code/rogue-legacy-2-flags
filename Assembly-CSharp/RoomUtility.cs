@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x020002C3 RID: 707
+// Token: 0x020004B7 RID: 1207
 public static class RoomUtility
 {
-	// Token: 0x06001C13 RID: 7187 RVA: 0x0005A9F8 File Offset: 0x00058BF8
+	// Token: 0x060026D5 RID: 9941 RVA: 0x000B7398 File Offset: 0x000B5598
 	public static Vector2 GetDoorCenterPoint(Vector2 roomCoordinates, Vector2Int roomDimensions, DoorLocation doorLocation)
 	{
 		Vector2 vector = roomDimensions * new Vector2(32f, 18f);
@@ -38,7 +38,7 @@ public static class RoomUtility
 		return zero;
 	}
 
-	// Token: 0x06001C14 RID: 7188 RVA: 0x0005AB04 File Offset: 0x00058D04
+	// Token: 0x060026D6 RID: 9942 RVA: 0x000B74A4 File Offset: 0x000B56A4
 	public static Room CreateMirrorVersionOfRoom(Room room)
 	{
 		Room room2 = UnityEngine.Object.Instantiate<Room>(room);
@@ -105,7 +105,7 @@ public static class RoomUtility
 		return room2;
 	}
 
-	// Token: 0x06001C15 RID: 7189 RVA: 0x0005AD8C File Offset: 0x00058F8C
+	// Token: 0x060026D7 RID: 9943 RVA: 0x000B772C File Offset: 0x000B592C
 	public static Vector2 GetDoorCoordinates(Room room, Door door)
 	{
 		if (door.Side == RoomSide.Left || door.Side == RoomSide.Right)
@@ -129,7 +129,7 @@ public static class RoomUtility
 		throw new ArgumentException("Side", string.Format("Side must be Left, Right, Top or Bottom", Array.Empty<object>()));
 	}
 
-	// Token: 0x06001C16 RID: 7190 RVA: 0x0005AE81 File Offset: 0x00059081
+	// Token: 0x060026D8 RID: 9944 RVA: 0x00015BE1 File Offset: 0x00013DE1
 	public static IEnumerable<DoorLocation> GetDoorLocations(GridPoint gridPoint)
 	{
 		DoorLocation[] doors = gridPoint.RoomMetaData.DoorLocations;
@@ -147,19 +147,19 @@ public static class RoomUtility
 		yield break;
 	}
 
-	// Token: 0x06001C17 RID: 7191 RVA: 0x0005AE91 File Offset: 0x00059091
+	// Token: 0x060026D9 RID: 9945 RVA: 0x00015BF1 File Offset: 0x00013DF1
 	public static Vector3 GetMirrorPosition(Transform transform)
 	{
 		return new Vector3(-1f * transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
 	}
 
-	// Token: 0x06001C18 RID: 7192 RVA: 0x0005AEBF File Offset: 0x000590BF
+	// Token: 0x060026DA RID: 9946 RVA: 0x00015C1F File Offset: 0x00013E1F
 	public static DoorLocation GetMirrorDoorLocation(Room room, DoorLocation doorLocation)
 	{
 		return RoomUtility.GetMirrorDoorLocation(room.Size, doorLocation);
 	}
 
-	// Token: 0x06001C19 RID: 7193 RVA: 0x0005AED0 File Offset: 0x000590D0
+	// Token: 0x060026DB RID: 9947 RVA: 0x000B7824 File Offset: 0x000B5A24
 	public static DoorLocation GetMirrorDoorLocation(Vector2Int roomSize, DoorLocation doorLocation)
 	{
 		RoomSide roomSide = doorLocation.RoomSide;
@@ -171,7 +171,7 @@ public static class RoomUtility
 		return new DoorLocation(roomSide, mirrorDoorNumber);
 	}
 
-	// Token: 0x06001C1A RID: 7194 RVA: 0x0005AF18 File Offset: 0x00059118
+	// Token: 0x060026DC RID: 9948 RVA: 0x000B786C File Offset: 0x000B5A6C
 	public static List<DoorLocation> GetMirroredDoorLocations(RoomMetaData roomMetaData)
 	{
 		List<DoorLocation> list = new List<DoorLocation>();
@@ -182,7 +182,7 @@ public static class RoomUtility
 		return list;
 	}
 
-	// Token: 0x06001C1B RID: 7195 RVA: 0x0005AF5C File Offset: 0x0005915C
+	// Token: 0x060026DD RID: 9949 RVA: 0x00015C2D File Offset: 0x00013E2D
 	public static RoomSide GetMirrorSide(RoomSide side)
 	{
 		if (side == RoomSide.Top || side == RoomSide.Bottom)
@@ -192,7 +192,7 @@ public static class RoomUtility
 		return RoomUtility.GetOppositeSide(side);
 	}
 
-	// Token: 0x06001C1C RID: 7196 RVA: 0x0005AF6D File Offset: 0x0005916D
+	// Token: 0x060026DE RID: 9950 RVA: 0x00015C3E File Offset: 0x00013E3E
 	public static int GetMirrorDoorNumber(DoorLocation doorLocation, Vector2Int roomSize)
 	{
 		if (doorLocation.RoomSide == RoomSide.Top || doorLocation.RoomSide == RoomSide.Bottom)
@@ -202,13 +202,13 @@ public static class RoomUtility
 		return doorLocation.DoorNumber;
 	}
 
-	// Token: 0x06001C1D RID: 7197 RVA: 0x0005AF9B File Offset: 0x0005919B
+	// Token: 0x060026DF RID: 9951 RVA: 0x00015C6C File Offset: 0x00013E6C
 	public static int GetMirrorDoorNumber(RoomSide side, int doorNumber, Vector2Int roomSize)
 	{
 		return RoomUtility.GetMirrorDoorNumber(new DoorLocation(side, doorNumber), roomSize);
 	}
 
-	// Token: 0x06001C1E RID: 7198 RVA: 0x0005AFAA File Offset: 0x000591AA
+	// Token: 0x060026E0 RID: 9952 RVA: 0x00015C7B File Offset: 0x00013E7B
 	public static RoomSide GetOppositeSide(RoomSide roomSide)
 	{
 		switch (roomSide)
@@ -226,7 +226,7 @@ public static class RoomUtility
 		}
 	}
 
-	// Token: 0x06001C1F RID: 7199 RVA: 0x0005AFD0 File Offset: 0x000591D0
+	// Token: 0x060026E1 RID: 9953 RVA: 0x000B78B0 File Offset: 0x000B5AB0
 	public static int GetRoomLevel(BiomeType biome, int roomNumber)
 	{
 		biome = BiomeType_RL.GetGroupedBiomeType(biome);
@@ -247,7 +247,7 @@ public static class RoomUtility
 		return 1;
 	}
 
-	// Token: 0x06001C20 RID: 7200 RVA: 0x0005B055 File Offset: 0x00059255
+	// Token: 0x060026E2 RID: 9954 RVA: 0x00015C9E File Offset: 0x00013E9E
 	public static RoomType GetRoomType(Room room)
 	{
 		if (!(room != null))
@@ -265,7 +265,7 @@ public static class RoomUtility
 		return RoomType.Standard;
 	}
 
-	// Token: 0x06001C21 RID: 7201 RVA: 0x0005B094 File Offset: 0x00059294
+	// Token: 0x060026E3 RID: 9955 RVA: 0x000B7938 File Offset: 0x000B5B38
 	public static void InjectRoomReferenceIntoChildrenOfGameObject(BaseRoom room, GameObject rootGameObject)
 	{
 		IRoomConsumer[] componentsInChildren = rootGameObject.GetComponentsInChildren<IRoomConsumer>();
@@ -275,7 +275,7 @@ public static class RoomUtility
 		}
 	}
 
-	// Token: 0x06001C22 RID: 7202 RVA: 0x0005B0C0 File Offset: 0x000592C0
+	// Token: 0x060026E4 RID: 9956 RVA: 0x000B7964 File Offset: 0x000B5B64
 	public static void MirrorFerr2D(Ferr2DT_PathTerrain ferr2D)
 	{
 		Ferr2DUtilities.Flip(ferr2D, true, false, false);
@@ -287,7 +287,7 @@ public static class RoomUtility
 		}
 	}
 
-	// Token: 0x06001C23 RID: 7203 RVA: 0x0005B124 File Offset: 0x00059324
+	// Token: 0x060026E5 RID: 9957 RVA: 0x000B79C8 File Offset: 0x000B5BC8
 	public static void BuildAllFerr2DTerrains(BaseRoom room)
 	{
 		MergeRoomTools.MergeTerrain(room);
@@ -304,7 +304,7 @@ public static class RoomUtility
 		}
 	}
 
-	// Token: 0x06001C24 RID: 7204 RVA: 0x0005B190 File Offset: 0x00059390
+	// Token: 0x060026E6 RID: 9958 RVA: 0x000B7A34 File Offset: 0x000B5C34
 	public static void ShuffleList<T>(List<T> list)
 	{
 		if (list.Count <= 1)
@@ -331,7 +331,7 @@ public static class RoomUtility
 		}
 	}
 
-	// Token: 0x06001C25 RID: 7205 RVA: 0x0005B244 File Offset: 0x00059444
+	// Token: 0x060026E7 RID: 9959 RVA: 0x000B7AE8 File Offset: 0x000B5CE8
 	public static bool GetIsRoomLarge(Vector2Int roomSize)
 	{
 		bool result = false;
@@ -342,7 +342,7 @@ public static class RoomUtility
 		return result;
 	}
 
-	// Token: 0x06001C26 RID: 7206 RVA: 0x0005B27C File Offset: 0x0005947C
+	// Token: 0x060026E8 RID: 9960 RVA: 0x00015CDA File Offset: 0x00013EDA
 	public static bool GetIsRoomLarge(BaseRoom room)
 	{
 		if (room == null)
@@ -352,13 +352,13 @@ public static class RoomUtility
 		return !(room is Room) || RoomUtility.GetIsRoomLarge((room as Room).Size);
 	}
 
-	// Token: 0x06001C27 RID: 7207 RVA: 0x0005B2AC File Offset: 0x000594AC
+	// Token: 0x060026E9 RID: 9961 RVA: 0x00015D0A File Offset: 0x00013F0A
 	public static int GetHashedRoomID(RoomID id, bool isMirrored)
 	{
 		return ((13 * 397 ^ id.SceneName.GetHashCode()) * 397 ^ id.Number) * 397 ^ ((!isMirrored) ? 0 : 1);
 	}
 
-	// Token: 0x06001C28 RID: 7208 RVA: 0x0005B2E0 File Offset: 0x000594E0
+	// Token: 0x060026EA RID: 9962 RVA: 0x000B7B20 File Offset: 0x000B5D20
 	public static int GetDoorLocationMask(RoomSide side, List<DoorLocation> locations)
 	{
 		int num = 0;
@@ -369,9 +369,9 @@ public static class RoomUtility
 		return num;
 	}
 
-	// Token: 0x0400198C RID: 6540
+	// Token: 0x0400218C RID: 8588
 	private static List<Transform> m_mirrorRoomHelper = new List<Transform>();
 
-	// Token: 0x0400198D RID: 6541
+	// Token: 0x0400218D RID: 8589
 	private static Vector2Int MINIMUM_LARGE_ROOM_SIZE = 2 * Vector2Int.one;
 }

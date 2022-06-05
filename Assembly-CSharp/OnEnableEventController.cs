@@ -2,10 +2,10 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000802 RID: 2050
+// Token: 0x02000CCA RID: 3274
 public class OnEnableEventController : MonoBehaviour
 {
-	// Token: 0x060043F2 RID: 17394 RVA: 0x000F0617 File Offset: 0x000EE817
+	// Token: 0x06005D7B RID: 23931 RVA: 0x000336D4 File Offset: 0x000318D4
 	private void OnEnable()
 	{
 		if (this.m_onEnableEvent != null)
@@ -14,7 +14,7 @@ public class OnEnableEventController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060043F3 RID: 17395 RVA: 0x000F062C File Offset: 0x000EE82C
+	// Token: 0x06005D7C RID: 23932 RVA: 0x000336E9 File Offset: 0x000318E9
 	private void OnDisable()
 	{
 		if (this.m_onDisableEvent != null)
@@ -23,11 +23,11 @@ public class OnEnableEventController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003A15 RID: 14869
+	// Token: 0x04004CE1 RID: 19681
 	[SerializeField]
 	private UnityEvent m_onEnableEvent;
 
-	// Token: 0x04003A16 RID: 14870
+	// Token: 0x04004CE2 RID: 19682
 	[SerializeField]
 	private UnityEvent m_onDisableEvent;
 }

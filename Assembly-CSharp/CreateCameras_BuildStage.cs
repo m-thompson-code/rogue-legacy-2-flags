@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000661 RID: 1633
+// Token: 0x02000ABC RID: 2748
 public class CreateCameras_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B2C RID: 15148 RVA: 0x000CB72D File Offset: 0x000C992D
+	// Token: 0x060052CD RID: 21197 RVA: 0x0002D12D File Offset: 0x0002B32D
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		if (biomeController.Rooms != null && biomeController.Rooms.Count > 0)

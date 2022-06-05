@@ -6,10 +6,10 @@ using UnityEngine;
 
 namespace RLWorldCreation
 {
-	// Token: 0x02000892 RID: 2194
+	// Token: 0x02000DBD RID: 3517
 	public class MergeRoomStrategy_Tower : MergeRoomStrategy
 	{
-		// Token: 0x060047F4 RID: 18420 RVA: 0x00102B60 File Offset: 0x00100D60
+		// Token: 0x06006326 RID: 25382 RVA: 0x000369D9 File Offset: 0x00034BD9
 		public override IEnumerator Run(CreateMergeRooms_BuildStage buildStage, BiomeController biomeController)
 		{
 			this.m_buildStage = buildStage;
@@ -34,14 +34,14 @@ namespace RLWorldCreation
 			yield break;
 		}
 
-		// Token: 0x060047F5 RID: 18421 RVA: 0x00102B7D File Offset: 0x00100D7D
+		// Token: 0x06006327 RID: 25383 RVA: 0x000369F6 File Offset: 0x00034BF6
 		private void OriginalTowerMergeLogic(BiomeController biomeController)
 		{
 			MergeRoomTools.MergeConnectedGridPointManagers(biomeController, BiomeType.Tower);
 			MergeRoomTools.MergeConnectedGridPointManagers(biomeController, BiomeType.TowerExterior);
 		}
 
-		// Token: 0x060047F6 RID: 18422 RVA: 0x00102B98 File Offset: 0x00100D98
+		// Token: 0x06006328 RID: 25384 RVA: 0x00171718 File Offset: 0x0016F918
 		private void MergeTopOfTower(BiomeController biomeController)
 		{
 			List<GridPointManager> list = (from room in biomeController.GridPointManager.GridPointManagers

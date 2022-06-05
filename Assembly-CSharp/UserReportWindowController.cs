@@ -5,11 +5,11 @@ using Rewired.Integration.UnityUI;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000597 RID: 1431
+// Token: 0x0200099D RID: 2461
 public class UserReportWindowController : WindowController
 {
-	// Token: 0x170012EC RID: 4844
-	// (get) Token: 0x060035DD RID: 13789 RVA: 0x000BBEC0 File Offset: 0x000BA0C0
+	// Token: 0x17001A17 RID: 6679
+	// (get) Token: 0x06004BE9 RID: 19433 RVA: 0x00017F3C File Offset: 0x0001613C
 	public override int SortOrderOverride
 	{
 		get
@@ -18,8 +18,8 @@ public class UserReportWindowController : WindowController
 		}
 	}
 
-	// Token: 0x170012ED RID: 4845
-	// (get) Token: 0x060035DE RID: 13790 RVA: 0x000BBEC7 File Offset: 0x000BA0C7
+	// Token: 0x17001A18 RID: 6680
+	// (get) Token: 0x06004BEA RID: 19434 RVA: 0x0002990B File Offset: 0x00027B0B
 	public override WindowID ID
 	{
 		get
@@ -28,13 +28,13 @@ public class UserReportWindowController : WindowController
 		}
 	}
 
-	// Token: 0x060035DF RID: 13791 RVA: 0x000BBECB File Offset: 0x000BA0CB
+	// Token: 0x06004BEB RID: 19435 RVA: 0x0002990F File Offset: 0x00027B0F
 	private void Awake()
 	{
 		this.m_onCancelInputHandler = new Action<InputActionEventData>(this.OnCancelInputHandler);
 	}
 
-	// Token: 0x060035E0 RID: 13792 RVA: 0x000BBEDF File Offset: 0x000BA0DF
+	// Token: 0x06004BEC RID: 19436 RVA: 0x00029923 File Offset: 0x00027B23
 	public override void Initialize()
 	{
 		base.Initialize();
@@ -42,7 +42,7 @@ public class UserReportWindowController : WindowController
 		this.m_windowCanvas.planeDistance = 99f;
 	}
 
-	// Token: 0x060035E1 RID: 13793 RVA: 0x000BBF02 File Offset: 0x000BA102
+	// Token: 0x06004BED RID: 19437 RVA: 0x00029946 File Offset: 0x00027B46
 	protected override void OnOpen()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -50,7 +50,7 @@ public class UserReportWindowController : WindowController
 		base.StartCoroutine(this.OnOpenCoroutine());
 	}
 
-	// Token: 0x060035E2 RID: 13794 RVA: 0x000BBF28 File Offset: 0x000BA128
+	// Token: 0x06004BEE RID: 19438 RVA: 0x0002996C File Offset: 0x00027B6C
 	private IEnumerator OnOpenCoroutine()
 	{
 		this.m_userReportCanvasGroup.alpha = 0f;
@@ -82,7 +82,7 @@ public class UserReportWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x060035E3 RID: 13795 RVA: 0x000BBF37 File Offset: 0x000BA137
+	// Token: 0x06004BEF RID: 19439 RVA: 0x0002997B File Offset: 0x00027B7B
 	protected override void OnClose()
 	{
 		this.m_userReportScript.CancelUserReport();
@@ -90,31 +90,31 @@ public class UserReportWindowController : WindowController
 		RewiredMapController.SetCurrentMapEnabled(true);
 	}
 
-	// Token: 0x060035E4 RID: 13796 RVA: 0x000BBF5B File Offset: 0x000BA15B
+	// Token: 0x06004BF0 RID: 19440 RVA: 0x0002999F File Offset: 0x00027B9F
 	protected override void OnFocus()
 	{
 		this.AddInputListeners();
 	}
 
-	// Token: 0x060035E5 RID: 13797 RVA: 0x000BBF63 File Offset: 0x000BA163
+	// Token: 0x06004BF1 RID: 19441 RVA: 0x000299A7 File Offset: 0x00027BA7
 	protected override void OnLostFocus()
 	{
 		this.RemoveInputListeners();
 	}
 
-	// Token: 0x060035E6 RID: 13798 RVA: 0x000BBF6B File Offset: 0x000BA16B
+	// Token: 0x06004BF2 RID: 19442 RVA: 0x000299AF File Offset: 0x00027BAF
 	private void OnCancelInputHandler(InputActionEventData eventData)
 	{
 		this.CancelUserReport();
 	}
 
-	// Token: 0x060035E7 RID: 13799 RVA: 0x000BBF73 File Offset: 0x000BA173
+	// Token: 0x06004BF3 RID: 19443 RVA: 0x000299B7 File Offset: 0x00027BB7
 	public void CompleteUserReport()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.UserReport, false);
 	}
 
-	// Token: 0x060035E8 RID: 13800 RVA: 0x000BBF7D File Offset: 0x000BA17D
+	// Token: 0x06004BF4 RID: 19444 RVA: 0x000299C1 File Offset: 0x00027BC1
 	public void CancelUserReport()
 	{
 		if (this.m_userReportScript.State == UserReportingState.CreatingUserReport || this.m_userReportScript.State == UserReportingState.SubmittingForm)
@@ -124,34 +124,34 @@ public class UserReportWindowController : WindowController
 		WindowManager.SetWindowIsOpen(WindowID.UserReport, false);
 	}
 
-	// Token: 0x060035E9 RID: 13801 RVA: 0x000BBFA4 File Offset: 0x000BA1A4
+	// Token: 0x06004BF5 RID: 19445 RVA: 0x000299E8 File Offset: 0x00027BE8
 	private void AddInputListeners()
 	{
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onCancelInputHandler, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Cancel");
 		this.m_standaloneInputModule.submitButton = null;
 	}
 
-	// Token: 0x060035EA RID: 13802 RVA: 0x000BBFCA File Offset: 0x000BA1CA
+	// Token: 0x06004BF6 RID: 19446 RVA: 0x00029A0E File Offset: 0x00027C0E
 	private void RemoveInputListeners()
 	{
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onCancelInputHandler, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Cancel");
 		this.m_standaloneInputModule.submitButton = "Window_Confirm";
 	}
 
-	// Token: 0x04002A06 RID: 10758
+	// Token: 0x040039FD RID: 14845
 	[SerializeField]
 	private UserReportingScript_TMP m_userReportScript;
 
-	// Token: 0x04002A07 RID: 10759
+	// Token: 0x040039FE RID: 14846
 	[SerializeField]
 	private CanvasGroup m_userReportCanvasGroup;
 
-	// Token: 0x04002A08 RID: 10760
+	// Token: 0x040039FF RID: 14847
 	private RewiredStandaloneInputModule m_standaloneInputModule;
 
-	// Token: 0x04002A09 RID: 10761
+	// Token: 0x04003A00 RID: 14848
 	private bool m_isLoading;
 
-	// Token: 0x04002A0A RID: 10762
+	// Token: 0x04003A01 RID: 14849
 	private Action<InputActionEventData> m_onCancelInputHandler;
 }

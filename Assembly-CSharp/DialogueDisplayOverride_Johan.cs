@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001EF RID: 495
+// Token: 0x02000389 RID: 905
 public class DialogueDisplayOverride_Johan : DialogueDisplayOverride
 {
-	// Token: 0x17000A7F RID: 2687
-	// (get) Token: 0x0600145F RID: 5215 RVA: 0x0003DE15 File Offset: 0x0003C015
+	// Token: 0x17000D81 RID: 3457
+	// (get) Token: 0x06001D80 RID: 7552 RVA: 0x0000F399 File Offset: 0x0000D599
 	public bool SpawnIfFalse
 	{
 		get
@@ -14,8 +14,8 @@ public class DialogueDisplayOverride_Johan : DialogueDisplayOverride
 		}
 	}
 
-	// Token: 0x17000A80 RID: 2688
-	// (get) Token: 0x06001460 RID: 5216 RVA: 0x0003DE1D File Offset: 0x0003C01D
+	// Token: 0x17000D82 RID: 3458
+	// (get) Token: 0x06001D81 RID: 7553 RVA: 0x0000F3A1 File Offset: 0x0000D5A1
 	public JohanPropController.Johan_SpawnCondition SpawnCondition
 	{
 		get
@@ -24,11 +24,11 @@ public class DialogueDisplayOverride_Johan : DialogueDisplayOverride
 		}
 	}
 
-	// Token: 0x04001426 RID: 5158
+	// Token: 0x04001ACD RID: 6861
 	[SerializeField]
 	private JohanPropController.Johan_SpawnCondition m_spawnCondition;
 
-	// Token: 0x04001427 RID: 5159
+	// Token: 0x04001ACE RID: 6862
 	[SerializeField]
 	private bool m_spawnIfFalse;
 }

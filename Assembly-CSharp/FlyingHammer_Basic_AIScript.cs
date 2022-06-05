@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000DA RID: 218
+// Token: 0x0200015E RID: 350
 public class FlyingHammer_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x06000651 RID: 1617 RVA: 0x00019184 File Offset: 0x00017384
+	// Token: 0x0600093E RID: 2366 RVA: 0x000657BC File Offset: 0x000639BC
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -24,8 +24,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x1700032F RID: 815
-	// (get) Token: 0x06000652 RID: 1618 RVA: 0x000191F8 File Offset: 0x000173F8
+	// Token: 0x17000427 RID: 1063
+	// (get) Token: 0x0600093F RID: 2367 RVA: 0x0000645C File Offset: 0x0000465C
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -34,8 +34,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000330 RID: 816
-	// (get) Token: 0x06000653 RID: 1619 RVA: 0x00019209 File Offset: 0x00017409
+	// Token: 0x17000428 RID: 1064
+	// (get) Token: 0x06000940 RID: 2368 RVA: 0x00006275 File Offset: 0x00004475
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -44,8 +44,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000331 RID: 817
-	// (get) Token: 0x06000654 RID: 1620 RVA: 0x0001921A File Offset: 0x0001741A
+	// Token: 0x17000429 RID: 1065
+	// (get) Token: 0x06000941 RID: 2369 RVA: 0x00006275 File Offset: 0x00004475
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -54,8 +54,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000332 RID: 818
-	// (get) Token: 0x06000655 RID: 1621 RVA: 0x0001922B File Offset: 0x0001742B
+	// Token: 0x1700042A RID: 1066
+	// (get) Token: 0x06000942 RID: 2370 RVA: 0x00004A48 File Offset: 0x00002C48
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -64,8 +64,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000333 RID: 819
-	// (get) Token: 0x06000656 RID: 1622 RVA: 0x0001923C File Offset: 0x0001743C
+	// Token: 0x1700042B RID: 1067
+	// (get) Token: 0x06000943 RID: 2371 RVA: 0x00004A48 File Offset: 0x00002C48
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -74,8 +74,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000334 RID: 820
-	// (get) Token: 0x06000657 RID: 1623 RVA: 0x0001924D File Offset: 0x0001744D
+	// Token: 0x1700042C RID: 1068
+	// (get) Token: 0x06000944 RID: 2372 RVA: 0x00003DA4 File Offset: 0x00001FA4
 	protected virtual float m_vertSpin_Attack_MovementSpeed
 	{
 		get
@@ -84,8 +84,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000335 RID: 821
-	// (get) Token: 0x06000658 RID: 1624 RVA: 0x00019254 File Offset: 0x00017454
+	// Token: 0x1700042D RID: 1069
+	// (get) Token: 0x06000945 RID: 2373 RVA: 0x00004A26 File Offset: 0x00002C26
 	protected virtual Vector2 m_fireballSpeedMod
 	{
 		get
@@ -94,8 +94,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000336 RID: 822
-	// (get) Token: 0x06000659 RID: 1625 RVA: 0x00019265 File Offset: 0x00017465
+	// Token: 0x1700042E RID: 1070
+	// (get) Token: 0x06000946 RID: 2374 RVA: 0x0000646D File Offset: 0x0000466D
 	protected virtual Vector2 m_fireballAngle
 	{
 		get
@@ -104,8 +104,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000337 RID: 823
-	// (get) Token: 0x0600065A RID: 1626 RVA: 0x00019276 File Offset: 0x00017476
+	// Token: 0x1700042F RID: 1071
+	// (get) Token: 0x06000947 RID: 2375 RVA: 0x000050CB File Offset: 0x000032CB
 	protected virtual float m_initialProjectileDelay
 	{
 		get
@@ -114,8 +114,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000338 RID: 824
-	// (get) Token: 0x0600065B RID: 1627 RVA: 0x0001927D File Offset: 0x0001747D
+	// Token: 0x17000430 RID: 1072
+	// (get) Token: 0x06000948 RID: 2376 RVA: 0x0000647E File Offset: 0x0000467E
 	protected virtual float m_exitProjectileDelay
 	{
 		get
@@ -124,8 +124,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000339 RID: 825
-	// (get) Token: 0x0600065C RID: 1628 RVA: 0x00019284 File Offset: 0x00017484
+	// Token: 0x17000431 RID: 1073
+	// (get) Token: 0x06000949 RID: 2377 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_projectileSpawnAmount
 	{
 		get
@@ -134,8 +134,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700033A RID: 826
-	// (get) Token: 0x0600065D RID: 1629 RVA: 0x00019287 File Offset: 0x00017487
+	// Token: 0x17000432 RID: 1074
+	// (get) Token: 0x0600094A RID: 2378 RVA: 0x00005303 File Offset: 0x00003503
 	protected virtual int m_projectileSpawnLoopCount
 	{
 		get
@@ -144,8 +144,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700033B RID: 827
-	// (get) Token: 0x0600065E RID: 1630 RVA: 0x0001928B File Offset: 0x0001748B
+	// Token: 0x17000433 RID: 1075
+	// (get) Token: 0x0600094B RID: 2379 RVA: 0x00003C5B File Offset: 0x00001E5B
 	protected virtual float m_projectileRateOfFire
 	{
 		get
@@ -154,8 +154,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700033C RID: 828
-	// (get) Token: 0x0600065F RID: 1631 RVA: 0x00019292 File Offset: 0x00017492
+	// Token: 0x17000434 RID: 1076
+	// (get) Token: 0x0600094C RID: 2380 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_shockwave_IsLarge
 	{
 		get
@@ -164,8 +164,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700033D RID: 829
-	// (get) Token: 0x06000660 RID: 1632 RVA: 0x00019295 File Offset: 0x00017495
+	// Token: 0x17000435 RID: 1077
+	// (get) Token: 0x0600094D RID: 2381 RVA: 0x00006220 File Offset: 0x00004420
 	protected virtual float m_shockwave_Attack_TurnSpeed
 	{
 		get
@@ -174,8 +174,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700033E RID: 830
-	// (get) Token: 0x06000661 RID: 1633 RVA: 0x0001929C File Offset: 0x0001749C
+	// Token: 0x17000436 RID: 1078
+	// (get) Token: 0x0600094E RID: 2382 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shockwave_Attack_MovementSpeed
 	{
 		get
@@ -184,8 +184,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700033F RID: 831
-	// (get) Token: 0x06000662 RID: 1634 RVA: 0x000192A3 File Offset: 0x000174A3
+	// Token: 0x17000437 RID: 1079
+	// (get) Token: 0x0600094F RID: 2383 RVA: 0x00006485 File Offset: 0x00004685
 	protected virtual Vector2 m_shockwave_fireballSpeedMod
 	{
 		get
@@ -194,8 +194,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000340 RID: 832
-	// (get) Token: 0x06000663 RID: 1635 RVA: 0x000192B4 File Offset: 0x000174B4
+	// Token: 0x17000438 RID: 1080
+	// (get) Token: 0x06000950 RID: 2384 RVA: 0x00006496 File Offset: 0x00004696
 	protected virtual Vector2 m_shockwave_fireballAngle
 	{
 		get
@@ -204,8 +204,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000341 RID: 833
-	// (get) Token: 0x06000664 RID: 1636 RVA: 0x000192C5 File Offset: 0x000174C5
+	// Token: 0x17000439 RID: 1081
+	// (get) Token: 0x06000951 RID: 2385 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shockwave_initialProjectileDelay
 	{
 		get
@@ -214,8 +214,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000342 RID: 834
-	// (get) Token: 0x06000665 RID: 1637 RVA: 0x000192CC File Offset: 0x000174CC
+	// Token: 0x1700043A RID: 1082
+	// (get) Token: 0x06000952 RID: 2386 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shockwave_exitProjectileDelay
 	{
 		get
@@ -224,8 +224,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000343 RID: 835
-	// (get) Token: 0x06000666 RID: 1638 RVA: 0x000192D3 File Offset: 0x000174D3
+	// Token: 0x1700043B RID: 1083
+	// (get) Token: 0x06000953 RID: 2387 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual int m_shockwave_projectileSpawnAmount
 	{
 		get
@@ -234,8 +234,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000344 RID: 836
-	// (get) Token: 0x06000667 RID: 1639 RVA: 0x000192D6 File Offset: 0x000174D6
+	// Token: 0x1700043C RID: 1084
+	// (get) Token: 0x06000954 RID: 2388 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual int m_shockwave_projectileSpawnLoopCount
 	{
 		get
@@ -244,8 +244,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000345 RID: 837
-	// (get) Token: 0x06000668 RID: 1640 RVA: 0x000192D9 File Offset: 0x000174D9
+	// Token: 0x1700043D RID: 1085
+	// (get) Token: 0x06000955 RID: 2389 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_causesRicochet
 	{
 		get
@@ -254,8 +254,8 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000346 RID: 838
-	// (get) Token: 0x06000669 RID: 1641 RVA: 0x000192DC File Offset: 0x000174DC
+	// Token: 0x1700043E RID: 1086
+	// (get) Token: 0x06000956 RID: 2390 RVA: 0x000064A7 File Offset: 0x000046A7
 	protected virtual Vector2 m_ricochetKnockbackMod
 	{
 		get
@@ -264,7 +264,7 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600066A RID: 1642 RVA: 0x000192ED File Offset: 0x000174ED
+	// Token: 0x06000957 RID: 2391 RVA: 0x000064B8 File Offset: 0x000046B8
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -311,7 +311,7 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600066B RID: 1643 RVA: 0x000192FC File Offset: 0x000174FC
+	// Token: 0x06000958 RID: 2392 RVA: 0x000064C7 File Offset: 0x000046C7
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -392,7 +392,7 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600066C RID: 1644 RVA: 0x0001930B File Offset: 0x0001750B
+	// Token: 0x06000959 RID: 2393 RVA: 0x000064D6 File Offset: 0x000046D6
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -488,7 +488,7 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600066D RID: 1645 RVA: 0x0001931C File Offset: 0x0001751C
+	// Token: 0x0600095A RID: 2394 RVA: 0x00065830 File Offset: 0x00063A30
 	public override void Pause()
 	{
 		base.Pause();
@@ -528,7 +528,7 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600066E RID: 1646 RVA: 0x000194BC File Offset: 0x000176BC
+	// Token: 0x0600095B RID: 2395 RVA: 0x000659D0 File Offset: 0x00063BD0
 	public override void Unpause()
 	{
 		base.Unpause();
@@ -566,7 +566,7 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600066F RID: 1647 RVA: 0x00019633 File Offset: 0x00017833
+	// Token: 0x0600095C RID: 2396 RVA: 0x000064E5 File Offset: 0x000046E5
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.StopProjectile(ref this.m_warningProjectile);
@@ -575,7 +575,7 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x06000670 RID: 1648 RVA: 0x0001965A File Offset: 0x0001785A
+	// Token: 0x0600095D RID: 2397 RVA: 0x0000650C File Offset: 0x0000470C
 	public override void ResetScript()
 	{
 		this.m_frozenWhileHammering = false;
@@ -583,153 +583,153 @@ public class FlyingHammer_Basic_AIScript : BaseAIScript
 		base.ResetScript();
 	}
 
-	// Token: 0x04000A89 RID: 2697
+	// Token: 0x04000CE8 RID: 3304
 	private const string GENERIC_PROJECTILE_NAME = "FlyingHammerMagmaProjectile";
 
-	// Token: 0x04000A8A RID: 2698
+	// Token: 0x04000CE9 RID: 3305
 	private const string WARNING_MINIBOSS_PROJECTILE_NAME = "FlyingHammerWarningMinibossProjectile";
 
-	// Token: 0x04000A8B RID: 2699
+	// Token: 0x04000CEA RID: 3306
 	private const string WARNING_LARGE_PROJECTILE_NAME = "FlyingHammerWarningLargeProjectile";
 
-	// Token: 0x04000A8C RID: 2700
+	// Token: 0x04000CEB RID: 3307
 	private const string WARNING_PROJECTILE_NAME = "FlyingHammerWarningProjectile";
 
-	// Token: 0x04000A8D RID: 2701
+	// Token: 0x04000CEC RID: 3308
 	private const string QUAKE_MINIBOSS_PROJECTILE_NAME = "FlyingHammerQuakeMinibossProjectile";
 
-	// Token: 0x04000A8E RID: 2702
+	// Token: 0x04000CED RID: 3309
 	private const string QUAKE_LARGE_PROJECTILE_NAME = "FlyingHammerQuakeLargeProjectile";
 
-	// Token: 0x04000A8F RID: 2703
+	// Token: 0x04000CEE RID: 3310
 	private const string QUAKE_PROJECTILE_NAME = "FlyingHammerQuakeProjectile";
 
-	// Token: 0x04000A90 RID: 2704
+	// Token: 0x04000CEF RID: 3311
 	private const string FIREBALL_MINIBOSS_PROJECTILE_NAME = "FlyingHammerFireballMinibossProjectile";
 
-	// Token: 0x04000A91 RID: 2705
+	// Token: 0x04000CF0 RID: 3312
 	private const string CURSEBOLT_PROJECTILE_NAME = "FlyingHammerCurseBoltProjectile";
 
-	// Token: 0x04000A92 RID: 2706
+	// Token: 0x04000CF1 RID: 3313
 	private bool m_frozenWhileHammering;
 
-	// Token: 0x04000A93 RID: 2707
+	// Token: 0x04000CF2 RID: 3314
 	private bool m_isHammeringAtPlayer;
 
-	// Token: 0x04000A94 RID: 2708
+	// Token: 0x04000CF3 RID: 3315
 	protected Projectile_RL m_warningProjectile;
 
-	// Token: 0x04000A95 RID: 2709
+	// Token: 0x04000CF4 RID: 3316
 	protected Projectile_RL m_shockwaveProjectile;
 
-	// Token: 0x04000A96 RID: 2710
+	// Token: 0x04000CF5 RID: 3317
 	protected Vector3 m_shockwaveProjectileSpawnPos;
 
-	// Token: 0x04000A97 RID: 2711
+	// Token: 0x04000CF6 RID: 3318
 	protected float m_vertSpin_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000A98 RID: 2712
+	// Token: 0x04000CF7 RID: 3319
 	protected float m_vertSpin_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000A99 RID: 2713
+	// Token: 0x04000CF8 RID: 3320
 	protected float m_vertSpin_TellIntroAndHold_Delay = 0.75f;
 
-	// Token: 0x04000A9A RID: 2714
+	// Token: 0x04000CF9 RID: 3321
 	protected float m_vertSpin_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000A9B RID: 2715
+	// Token: 0x04000CFA RID: 3322
 	protected float m_vertSpin_AttackIntro_Delay;
 
-	// Token: 0x04000A9C RID: 2716
+	// Token: 0x04000CFB RID: 3323
 	protected const float m_vertSpin_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000A9D RID: 2717
+	// Token: 0x04000CFC RID: 3324
 	protected const float m_vertSpin_AttackHold_Delay = 0f;
 
-	// Token: 0x04000A9E RID: 2718
+	// Token: 0x04000CFD RID: 3325
 	protected float m_vertSpin_ExitIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000A9F RID: 2719
+	// Token: 0x04000CFE RID: 3326
 	protected const float m_vertSpin_ExitIntro_EndDelay = 0.15f;
 
-	// Token: 0x04000AA0 RID: 2720
+	// Token: 0x04000CFF RID: 3327
 	protected const float m_vertSpin_Exit_ForceIdle = 0.5f;
 
-	// Token: 0x04000AA1 RID: 2721
+	// Token: 0x04000D00 RID: 3328
 	protected float m_vertSpin_Exit_AttackCD = 3f;
 
-	// Token: 0x04000AA2 RID: 2722
+	// Token: 0x04000D01 RID: 3329
 	protected float m_vertSpin_Attack_TurnSpeed;
 
-	// Token: 0x04000AA3 RID: 2723
+	// Token: 0x04000D02 RID: 3330
 	protected float m_shockwave_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000AA4 RID: 2724
+	// Token: 0x04000D03 RID: 3331
 	protected float m_shockwave_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000AA5 RID: 2725
+	// Token: 0x04000D04 RID: 3332
 	protected float m_shockwave_TellIntroAndHold_Delay = 1f;
 
-	// Token: 0x04000AA6 RID: 2726
+	// Token: 0x04000D05 RID: 3333
 	protected float m_shockwave_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000AA7 RID: 2727
+	// Token: 0x04000D06 RID: 3334
 	protected float m_shockwave_AttackIntro_Delay;
 
-	// Token: 0x04000AA8 RID: 2728
+	// Token: 0x04000D07 RID: 3335
 	protected const float m_shockwave_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000AA9 RID: 2729
+	// Token: 0x04000D08 RID: 3336
 	protected const float m_shockwave_AttackHold_Delay = 1f;
 
-	// Token: 0x04000AAA RID: 2730
+	// Token: 0x04000D09 RID: 3337
 	protected float m_shockwave_ExitIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000AAB RID: 2731
+	// Token: 0x04000D0A RID: 3338
 	protected const float m_shockwave_ExitIntro_EndDelay = 0.15f;
 
-	// Token: 0x04000AAC RID: 2732
+	// Token: 0x04000D0B RID: 3339
 	protected const float m_shockwave_Exit_ForceIdle = 1.25f;
 
-	// Token: 0x04000AAD RID: 2733
+	// Token: 0x04000D0C RID: 3340
 	protected float m_shockwave_Exit_AttackCD;
 
-	// Token: 0x04000AAE RID: 2734
+	// Token: 0x04000D0D RID: 3341
 	protected float m_shockwaveAtPlayer_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000AAF RID: 2735
+	// Token: 0x04000D0E RID: 3342
 	protected float m_shockwaveAtPlayer_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000AB0 RID: 2736
+	// Token: 0x04000D0F RID: 3343
 	protected float m_shockwaveAtPlayer_TellIntroAndHold_Delay = 1.45f;
 
-	// Token: 0x04000AB1 RID: 2737
+	// Token: 0x04000D10 RID: 3344
 	protected float m_shockwaveAtPlayer_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000AB2 RID: 2738
+	// Token: 0x04000D11 RID: 3345
 	protected float m_shockwaveAtPlayer_AttackIntro_Delay;
 
-	// Token: 0x04000AB3 RID: 2739
+	// Token: 0x04000D12 RID: 3346
 	protected const float m_shockwaveAtPlayer_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000AB4 RID: 2740
+	// Token: 0x04000D13 RID: 3347
 	protected const float m_shockwaveAtPlayer_AttackHold_Delay = 1.55f;
 
-	// Token: 0x04000AB5 RID: 2741
+	// Token: 0x04000D14 RID: 3348
 	protected float m_shockwaveAtPlayer_ExitIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000AB6 RID: 2742
+	// Token: 0x04000D15 RID: 3349
 	protected const float m_shockwaveAtPlayer_ExitIntro_EndDelay = 0.15f;
 
-	// Token: 0x04000AB7 RID: 2743
+	// Token: 0x04000D16 RID: 3350
 	protected const float m_shockwaveAtPlayer_Exit_ForceIdle = 1.25f;
 
-	// Token: 0x04000AB8 RID: 2744
+	// Token: 0x04000D17 RID: 3351
 	protected float m_shockwaveAtPlayer_Exit_AttackCD = 4f;
 
-	// Token: 0x04000AB9 RID: 2745
+	// Token: 0x04000D18 RID: 3352
 	protected const string SHOCKWAVE_AT_PLAYER_PROJECTILE = "FlyingHammerWhirlwindProjectile";
 
-	// Token: 0x04000ABA RID: 2746
+	// Token: 0x04000D19 RID: 3353
 	protected const string SHOCKWAVE_WARNING_AT_PLAYER_PROJECTILE = "FlyingHammerWarningWhirlwindProjectile";
 }

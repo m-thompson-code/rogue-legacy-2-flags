@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000317 RID: 791
+// Token: 0x02000557 RID: 1367
 public class SuaveStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D88 RID: 3464
-	// (get) Token: 0x06001F4F RID: 8015 RVA: 0x00064807 File Offset: 0x00062A07
+	// Token: 0x170011A3 RID: 4515
+	// (get) Token: 0x06002BD2 RID: 11218 RVA: 0x0001860A File Offset: 0x0001680A
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class SuaveStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D89 RID: 3465
-	// (get) Token: 0x06001F50 RID: 8016 RVA: 0x0006480E File Offset: 0x00062A0E
+	// Token: 0x170011A4 RID: 4516
+	// (get) Token: 0x06002BD3 RID: 11219 RVA: 0x0001832B File Offset: 0x0001652B
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class SuaveStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001F51 RID: 8017 RVA: 0x00064815 File Offset: 0x00062A15
+	// Token: 0x06002BD4 RID: 11220 RVA: 0x00018611 File Offset: 0x00016811
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		(this.m_charController as PlayerController).InitializeStrengthMods();
@@ -37,7 +37,7 @@ public class SuaveStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001F52 RID: 8018 RVA: 0x00064824 File Offset: 0x00062A24
+	// Token: 0x06002BD5 RID: 11221 RVA: 0x00018620 File Offset: 0x00016820
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);

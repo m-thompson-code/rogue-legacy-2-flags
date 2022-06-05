@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200060C RID: 1548
+// Token: 0x02000A2E RID: 2606
 public class ForegroundPropMeshSpriteSwapper : MonoBehaviour
 {
-	// Token: 0x04002AEF RID: 10991
+	// Token: 0x04003B56 RID: 15190
 	public MeshRenderer MeshRenderer;
 
-	// Token: 0x04002AF0 RID: 10992
+	// Token: 0x04003B57 RID: 15191
 	public SpriteRenderer SpriteRenderer;
 }

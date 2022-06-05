@@ -2,22 +2,22 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002AC RID: 684
+// Token: 0x0200048F RID: 1167
 public class PlayerLookController : LookController
 {
-	// Token: 0x17000C77 RID: 3191
-	// (get) Token: 0x06001B4E RID: 6990 RVA: 0x0005720D File Offset: 0x0005540D
-	// (set) Token: 0x06001B4F RID: 6991 RVA: 0x00057215 File Offset: 0x00055415
+	// Token: 0x17000FE2 RID: 4066
+	// (get) Token: 0x060025BA RID: 9658 RVA: 0x00014F86 File Offset: 0x00013186
+	// (set) Token: 0x060025BB RID: 9659 RVA: 0x00014F8E File Offset: 0x0001318E
 	public bool IsClassLookInitialized { get; private set; }
 
-	// Token: 0x06001B50 RID: 6992 RVA: 0x0005721E File Offset: 0x0005541E
+	// Token: 0x060025BC RID: 9660 RVA: 0x00014F97 File Offset: 0x00013197
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onEquippedChanged = new Action<MonoBehaviour, EventArgs>(this.OnEquippedChanged);
 	}
 
-	// Token: 0x06001B51 RID: 6993 RVA: 0x00057238 File Offset: 0x00055438
+	// Token: 0x060025BD RID: 9661 RVA: 0x000B3888 File Offset: 0x000B1A88
 	public override void Initialize()
 	{
 		base.Initialize();
@@ -31,19 +31,19 @@ public class PlayerLookController : LookController
 		}
 	}
 
-	// Token: 0x06001B52 RID: 6994 RVA: 0x0005729E File Offset: 0x0005549E
+	// Token: 0x060025BE RID: 9662 RVA: 0x00014FB1 File Offset: 0x000131B1
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.EquippedChanged, this.m_onEquippedChanged);
 	}
 
-	// Token: 0x06001B53 RID: 6995 RVA: 0x000572AC File Offset: 0x000554AC
+	// Token: 0x060025BF RID: 9663 RVA: 0x00014FBF File Offset: 0x000131BF
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.EquippedChanged, this.m_onEquippedChanged);
 	}
 
-	// Token: 0x06001B54 RID: 6996 RVA: 0x000572BA File Offset: 0x000554BA
+	// Token: 0x060025C0 RID: 9664 RVA: 0x00014FCD File Offset: 0x000131CD
 	protected virtual IEnumerator Start()
 	{
 		if (this.m_loadFromSaveFile)
@@ -68,7 +68,7 @@ public class PlayerLookController : LookController
 		yield break;
 	}
 
-	// Token: 0x06001B55 RID: 6997 RVA: 0x000572C9 File Offset: 0x000554C9
+	// Token: 0x060025C1 RID: 9665 RVA: 0x00014FDC File Offset: 0x000131DC
 	public override void InitializeLook(CharacterData charData)
 	{
 		base.InitializeLook(charData);
@@ -80,7 +80,7 @@ public class PlayerLookController : LookController
 		this.IsClassLookInitialized = true;
 	}
 
-	// Token: 0x06001B56 RID: 6998 RVA: 0x000572FC File Offset: 0x000554FC
+	// Token: 0x060025C2 RID: 9666 RVA: 0x000B38F0 File Offset: 0x000B1AF0
 	public void InitializeScale(CharacterData charData)
 	{
 		Vector3 storedBaseScale = new Vector3(1.4f, 1.4f, 1f);
@@ -109,7 +109,7 @@ public class PlayerLookController : LookController
 		base.transform.localScale = storedBaseScale;
 	}
 
-	// Token: 0x06001B57 RID: 6999 RVA: 0x000573EC File Offset: 0x000555EC
+	// Token: 0x060025C3 RID: 9667 RVA: 0x0001500D File Offset: 0x0001320D
 	private void SetMainColor(SkinnedMeshRenderer renderer, Color color)
 	{
 		renderer.GetPropertyBlock(base.PropertyBlock);
@@ -117,7 +117,7 @@ public class PlayerLookController : LookController
 		renderer.SetPropertyBlock(base.PropertyBlock);
 	}
 
-	// Token: 0x06001B58 RID: 7000 RVA: 0x00057418 File Offset: 0x00055618
+	// Token: 0x060025C4 RID: 9668 RVA: 0x000B39E0 File Offset: 0x000B1BE0
 	public void InitializeTraitLook(CharacterData charData)
 	{
 		base.Animator.SetFloat("BoneStructureType", 0f);
@@ -180,7 +180,7 @@ public class PlayerLookController : LookController
 		}
 	}
 
-	// Token: 0x06001B59 RID: 7001 RVA: 0x00057710 File Offset: 0x00055910
+	// Token: 0x060025C5 RID: 9669 RVA: 0x000B3CD8 File Offset: 0x000B1ED8
 	public void InitializeEquipmentLook(CharacterData charData)
 	{
 		LookCreator.InitializeHelmetLook(charData.HeadEquipmentType, this);
@@ -198,7 +198,7 @@ public class PlayerLookController : LookController
 		}
 	}
 
-	// Token: 0x06001B5A RID: 7002 RVA: 0x000577B4 File Offset: 0x000559B4
+	// Token: 0x060025C6 RID: 9670 RVA: 0x000B3D7C File Offset: 0x000B1F7C
 	private void OnEquippedChanged(MonoBehaviour sender, EventArgs args)
 	{
 		if (this.m_playerController == null)
@@ -247,7 +247,7 @@ public class PlayerLookController : LookController
 		}
 	}
 
-	// Token: 0x06001B5B RID: 7003 RVA: 0x000578C8 File Offset: 0x00055AC8
+	// Token: 0x060025C7 RID: 9671 RVA: 0x000B3E90 File Offset: 0x000B2090
 	public void SetCritBlinkEffectEnabled(bool enable, CritBlinkEffectTriggerType effectTriggerType)
 	{
 		if (enable)
@@ -294,7 +294,7 @@ public class PlayerLookController : LookController
 		}
 	}
 
-	// Token: 0x06001B5C RID: 7004 RVA: 0x000579F8 File Offset: 0x00055BF8
+	// Token: 0x060025C8 RID: 9672 RVA: 0x000B3FC0 File Offset: 0x000B21C0
 	public void ForceDisableCritBlinkEffect()
 	{
 		this.m_critEffectTriggerBitMask = 0;
@@ -323,7 +323,7 @@ public class PlayerLookController : LookController
 		}
 	}
 
-	// Token: 0x06001B5D RID: 7005 RVA: 0x00057AC1 File Offset: 0x00055CC1
+	// Token: 0x060025C9 RID: 9673 RVA: 0x00015038 File Offset: 0x00013238
 	private IEnumerator CritBlinkEffectCoroutine()
 	{
 		SkinnedMeshRenderer weapon1Renderer = this.m_playerController.LookController.CurrentWeaponGeo;
@@ -374,55 +374,55 @@ public class PlayerLookController : LookController
 		yield break;
 	}
 
-	// Token: 0x04001906 RID: 6406
+	// Token: 0x040020BB RID: 8379
 	[SerializeField]
 	private bool m_clampPlayerScale;
 
-	// Token: 0x04001907 RID: 6407
+	// Token: 0x040020BC RID: 8380
 	[SerializeField]
 	private bool m_useCurrentScaleAsBase;
 
-	// Token: 0x04001908 RID: 6408
+	// Token: 0x040020BD RID: 8381
 	[SerializeField]
 	private bool m_ignoreScaleTraits;
 
-	// Token: 0x04001909 RID: 6409
+	// Token: 0x040020BE RID: 8382
 	[SerializeField]
 	private bool m_loadFromSaveFile;
 
-	// Token: 0x0400190A RID: 6410
+	// Token: 0x040020BF RID: 8383
 	private Vector3 m_storedBaseScale;
 
-	// Token: 0x0400190B RID: 6411
+	// Token: 0x040020C0 RID: 8384
 	private PlayerController m_playerController;
 
-	// Token: 0x0400190C RID: 6412
+	// Token: 0x040020C1 RID: 8385
 	private Action<MonoBehaviour, EventArgs> m_onEquippedChanged;
 
-	// Token: 0x0400190E RID: 6414
+	// Token: 0x040020C3 RID: 8387
 	private static MaterialPropertyBlock m_critMatPropertyBlock;
 
-	// Token: 0x0400190F RID: 6415
+	// Token: 0x040020C4 RID: 8388
 	private const float CRIT_PULSE_INTERVAL = 0.2f;
 
-	// Token: 0x04001910 RID: 6416
+	// Token: 0x040020C5 RID: 8389
 	private static Color m_critStartColor;
 
-	// Token: 0x04001911 RID: 6417
+	// Token: 0x040020C6 RID: 8390
 	private static Color m_critEndColor;
 
-	// Token: 0x04001912 RID: 6418
+	// Token: 0x040020C7 RID: 8391
 	private Coroutine m_critBlinkCoroutine;
 
-	// Token: 0x04001913 RID: 6419
+	// Token: 0x040020C8 RID: 8392
 	private bool m_critBlinkEnabled;
 
-	// Token: 0x04001914 RID: 6420
+	// Token: 0x040020C9 RID: 8393
 	private Color m_storedWeapon1Color;
 
-	// Token: 0x04001915 RID: 6421
+	// Token: 0x040020CA RID: 8394
 	private Color m_storedWeapon2Color;
 
-	// Token: 0x04001916 RID: 6422
+	// Token: 0x040020CB RID: 8395
 	private int m_critEffectTriggerBitMask;
 }

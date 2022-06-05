@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000078 RID: 120
+// Token: 0x02000080 RID: 128
 public class Relic_EV
 {
-	// Token: 0x060001B3 RID: 435 RVA: 0x00010950 File Offset: 0x0000EB50
+	// Token: 0x060001C7 RID: 455 RVA: 0x0004CE28 File Offset: 0x0004B028
 	public static float GetRelicFormatString(RelicType relicType, int numRelics, out float altValue)
 	{
 		altValue = -1f;
@@ -404,7 +404,7 @@ public class Relic_EV
 		return 0f;
 	}
 
-	// Token: 0x060001B4 RID: 436 RVA: 0x00011214 File Offset: 0x0000F414
+	// Token: 0x060001C8 RID: 456 RVA: 0x0004D6EC File Offset: 0x0004B8EC
 	public static int GetRelicMaxStack(RelicType relicType, int numRelics)
 	{
 		if (relicType <= RelicType.ManaDamageReduction)
@@ -487,345 +487,345 @@ public class Relic_EV
 		return -1;
 	}
 
-	// Token: 0x04000452 RID: 1106
+	// Token: 0x04000473 RID: 1139
 	public const float RELIC_RARITY_ONE_ODDS = 1f;
 
-	// Token: 0x04000453 RID: 1107
+	// Token: 0x04000474 RID: 1140
 	public const float RELIC_RARITY_TWO_ODDS = 0f;
 
-	// Token: 0x04000454 RID: 1108
+	// Token: 0x04000475 RID: 1141
 	public const float RELIC_RARITY_THREE_ODDS = 0f;
 
-	// Token: 0x04000455 RID: 1109
+	// Token: 0x04000476 RID: 1142
 	public const float RELIC_MOD_CHANCE = 0.2f;
 
-	// Token: 0x04000456 RID: 1110
+	// Token: 0x04000477 RID: 1143
 	public const float EXTRALIFE_RESTORE_HP_MOD = 0.5f;
 
-	// Token: 0x04000457 RID: 1111
+	// Token: 0x04000478 RID: 1144
 	public const float EXTRALIFE_RESTORE_HP_MAGIC_DAMAGE_FLAT = 0f;
 
-	// Token: 0x04000458 RID: 1112
+	// Token: 0x04000479 RID: 1145
 	public const float EXTRALIFE_UNITY_RESTORE_HP_MOD = 0.5f;
 
-	// Token: 0x04000459 RID: 1113
+	// Token: 0x0400047A RID: 1146
 	public const int TAKE_NO_DAMAGE_FREE_HITS = 3;
 
-	// Token: 0x0400045A RID: 1114
+	// Token: 0x0400047B RID: 1147
 	public const int BONUS_DMG_ON_HIT_COUNT = 6;
 
-	// Token: 0x0400045B RID: 1115
+	// Token: 0x0400047C RID: 1148
 	public const float BONUS_DMG_ON_HIT_DAMAGE_MOD = 1.75f;
 
-	// Token: 0x0400045C RID: 1116
+	// Token: 0x0400047D RID: 1149
 	public const float GOD_MODE_DURATION = 25f;
 
-	// Token: 0x0400045D RID: 1117
+	// Token: 0x0400047E RID: 1150
 	public const float EXTEND_INVULN_DURATION_FLAT_ADD = 1.25f;
 
-	// Token: 0x0400045E RID: 1118
+	// Token: 0x0400047F RID: 1151
 	public const int LOW_MULTI_JUMP_EXTRA_JUMPS = 3;
 
-	// Token: 0x0400045F RID: 1119
+	// Token: 0x04000480 RID: 1152
 	public const float FREE_ENEMY_KILL_CHANCE = 0.05f;
 
-	// Token: 0x04000460 RID: 1120
+	// Token: 0x04000481 RID: 1153
 	public const int FREE_ENEMY_KILL_CHANCE_CHARGE = 6;
 
-	// Token: 0x04000461 RID: 1121
+	// Token: 0x04000482 RID: 1154
 	public const float GOLD_DEATH_CURSE_GOLD_GAIN = 1.35f;
 
-	// Token: 0x04000462 RID: 1122
+	// Token: 0x04000483 RID: 1155
 	public const float CHESTS_HEALTH_RESTORE_MAGIC_SCALE = 1f;
 
-	// Token: 0x04000463 RID: 1123
+	// Token: 0x04000484 RID: 1156
 	public const float MEAT_MAX_HEALTH_UP_MOD = 0.1f;
 
-	// Token: 0x04000464 RID: 1124
+	// Token: 0x04000485 RID: 1157
 	public const int MEAT_MAX_HEALTH_UP_STACK = 3;
 
-	// Token: 0x04000465 RID: 1125
+	// Token: 0x04000486 RID: 1158
 	public const float INVULN_DAMAGE_BUFF_MOD = 2f;
 
-	// Token: 0x04000466 RID: 1126
+	// Token: 0x04000487 RID: 1159
 	public const float RELIC_AMOUNT_DAMAGE_UP = 0.06f;
 
-	// Token: 0x04000467 RID: 1127
+	// Token: 0x04000488 RID: 1160
 	public const float WEAPONS_BURN_ADD_DURATION = 2f;
 
-	// Token: 0x04000468 RID: 1128
+	// Token: 0x04000489 RID: 1161
 	public const float WEAPONS_BURN_ADD_DAMAGE_REDUCTION = 0f;
 
-	// Token: 0x04000469 RID: 1129
+	// Token: 0x0400048A RID: 1162
 	public const float WEAPONS_POISON_ADD_DURATION = 2f;
 
-	// Token: 0x0400046A RID: 1130
+	// Token: 0x0400048B RID: 1163
 	public const float ENEMIES_DROP_MEAT_CHANCE = 0.08f;
 
-	// Token: 0x0400046B RID: 1131
+	// Token: 0x0400048C RID: 1164
 	public const float DAMAGE_BUFF_STATUS_EFFECT = 0.2f;
 
-	// Token: 0x0400046C RID: 1132
+	// Token: 0x0400048D RID: 1165
 	public const float ATTACK_COOLDOWN_DURATION = 2f;
 
-	// Token: 0x0400046D RID: 1133
+	// Token: 0x0400048E RID: 1166
 	public const float ATTACK_COOLDOWN_DAMAGE_MOD = 2f;
 
-	// Token: 0x0400046E RID: 1134
+	// Token: 0x0400048F RID: 1167
 	public const float ATTACK_COOLDOWN_GUN_PROJECTILE_LIFESPAN_ADD = 0f;
 
-	// Token: 0x0400046F RID: 1135
+	// Token: 0x04000490 RID: 1168
 	public const float ATTACK_COOLDOWN_RELOAD_ADD = 0f;
 
-	// Token: 0x04000470 RID: 1136
+	// Token: 0x04000491 RID: 1169
 	public const float ATTACK_COOLDOWN_PISTOL_EXIT_DELAY_ADD = 0.125f;
 
-	// Token: 0x04000471 RID: 1137
+	// Token: 0x04000492 RID: 1170
 	public const float ATTACK_COOLDOWN_AXE_SPINNER_MOD = -0.3f;
 
-	// Token: 0x04000472 RID: 1138
+	// Token: 0x04000493 RID: 1171
 	public const int ATTACK_COOLDOWN_ELECTRIC_LUTE_ADD = 1;
 
-	// Token: 0x04000473 RID: 1139
+	// Token: 0x04000494 RID: 1172
 	public const int KILLS_TO_LEVEL_LILIES = 21;
 
-	// Token: 0x04000474 RID: 1140
+	// Token: 0x04000495 RID: 1173
 	public const float BONUS_DAMAGE_CURSE_DAMAGE_MOD = 1f;
 
-	// Token: 0x04000475 RID: 1141
+	// Token: 0x04000496 RID: 1174
 	public const float SPINKICK_ARMOR_BREAK_DURATION_OVERRIDE = 3.5f;
 
-	// Token: 0x04000476 RID: 1142
+	// Token: 0x04000497 RID: 1175
 	public const float MAGIC_DAMAGE_ENEMY_COUNT_INCREASE_PERCENT = 0.1f;
 
-	// Token: 0x04000477 RID: 1143
+	// Token: 0x04000498 RID: 1176
 	public const float MAGIC_DAMAGE_ENEMY_COUNT_MAX_PERCENT = 0.5f;
 
-	// Token: 0x04000478 RID: 1144
+	// Token: 0x04000499 RID: 1177
 	public const int MANA_RESTORE_ON_HURT_FLAT_ADD = 100;
 
-	// Token: 0x04000479 RID: 1145
+	// Token: 0x0400049A RID: 1178
 	public const int BONUS_MANA_FLAT_ADD = 50;
 
-	// Token: 0x0400047A RID: 1146
+	// Token: 0x0400049B RID: 1179
 	public const float BONUS_MANA_MAGIC_DAMAGE_MOD = 1.08f;
 
-	// Token: 0x0400047B RID: 1147
+	// Token: 0x0400049C RID: 1180
 	public const float SPELL_SWAP_MAGIC_DAMAGE_MOD = 1.07f;
 
-	// Token: 0x0400047C RID: 1148
+	// Token: 0x0400049D RID: 1181
 	public const float WEAPON_SWAP_WEAPON_DAMAGE_MOD = 1.07f;
 
-	// Token: 0x0400047D RID: 1149
+	// Token: 0x0400049E RID: 1182
 	public const float TALENT_SWAP_WEAPON_DAMAGE_MOD = 1f;
 
-	// Token: 0x0400047E RID: 1150
+	// Token: 0x0400049F RID: 1183
 	public const float TALENT_SWAP_MAGIC_DAMAGE_MOD = 1f;
 
-	// Token: 0x0400047F RID: 1151
+	// Token: 0x040004A0 RID: 1184
 	public const int RESOLVE_COMBAT_CHALLENGE_NUM_KILLS_REQUIRED = 10;
 
-	// Token: 0x04000480 RID: 1152
+	// Token: 0x040004A1 RID: 1185
 	public const bool RESOLVE_COMBAT_CHALLENGE_KILL_PLAYER_ON_HIT = true;
 
-	// Token: 0x04000481 RID: 1153
+	// Token: 0x040004A2 RID: 1186
 	public const float RESOLVE_COMBAT_CHALLENGE_DAMAGE_MOD = 10f;
 
-	// Token: 0x04000482 RID: 1154
+	// Token: 0x040004A3 RID: 1187
 	public const float NO_GOLD_XP_BONUS_CAP = 3f;
 
-	// Token: 0x04000483 RID: 1155
+	// Token: 0x040004A4 RID: 1188
 	public const float CRIT_KILLS_HEAL_AMOUNT = 0.06f;
 
-	// Token: 0x04000484 RID: 1156
+	// Token: 0x040004A5 RID: 1189
 	public const float CRIT_DMG_UP_AMOUNT = 0.2f;
 
-	// Token: 0x04000485 RID: 1157
+	// Token: 0x040004A6 RID: 1190
 	public const float CRIT_CHANCE_UP_AMOUNT = 0.1f;
 
-	// Token: 0x04000486 RID: 1158
+	// Token: 0x040004A7 RID: 1191
 	public const float MAX_MANA_DAMAGE_MOD = 0.25f;
 
-	// Token: 0x04000487 RID: 1159
+	// Token: 0x040004A8 RID: 1192
 	public const int FREE_HIT_REGENERATE_CHARGE = 6;
 
-	// Token: 0x04000488 RID: 1160
+	// Token: 0x040004A9 RID: 1193
 	public const float MAX_HEALTH_STAT_BONUS_MOD = 0.1f;
 
-	// Token: 0x04000489 RID: 1161
+	// Token: 0x040004AA RID: 1194
 	public const float MAX_HEALTH_STAT_BONUS_MAX_HP_AMOUNT = 0.5f;
 
-	// Token: 0x0400048A RID: 1162
+	// Token: 0x040004AB RID: 1195
 	public const float LOW_HEALTH_STAT_BONUS_MAX_HP_AMOUNT = 0.5f;
 
-	// Token: 0x0400048B RID: 1163
+	// Token: 0x040004AC RID: 1196
 	public const float LOW_HEALTH_STAT_BONUS_MOD = 0.2f;
 
-	// Token: 0x0400048C RID: 1164
+	// Token: 0x040004AD RID: 1197
 	public const float AIM_SLOW_TIME_AMOUNT = 0.425f;
 
-	// Token: 0x0400048D RID: 1165
+	// Token: 0x040004AE RID: 1198
 	public const float REPLACEMENT_RELIC_MAX_HEALTH_MOD = 0.1f;
 
-	// Token: 0x0400048E RID: 1166
+	// Token: 0x040004AF RID: 1199
 	public const float REPLACEMENT_RELIC_STRENGTH_MOD = 0.1f;
 
-	// Token: 0x0400048F RID: 1167
+	// Token: 0x040004B0 RID: 1200
 	public const float REPLACEMENT_RELIC_MAGIC_MOD = 0.1f;
 
-	// Token: 0x04000490 RID: 1168
+	// Token: 0x040004B1 RID: 1201
 	public const float DASH_STRIKE_DAMAGE_UP_MOD = 0.15f;
 
-	// Token: 0x04000491 RID: 1169
+	// Token: 0x040004B2 RID: 1202
 	public const float DASH_STRIKE_DISTANCE_ADD = 0.2f;
 
-	// Token: 0x04000492 RID: 1170
+	// Token: 0x040004B3 RID: 1203
 	public const float FATAL_BLOW_DODGE_CHANCE = 0.25f;
 
-	// Token: 0x04000493 RID: 1171
+	// Token: 0x040004B4 RID: 1204
 	public const int GOLD_COMBAT_CHALLENGE_NUM_KILLS_REQUIRED = 15;
 
-	// Token: 0x04000494 RID: 1172
+	// Token: 0x040004B5 RID: 1205
 	public const float GOLD_COMBAT_CHALLENGE_GOLD_MOD = 0.2f;
 
-	// Token: 0x04000495 RID: 1173
+	// Token: 0x040004B6 RID: 1206
 	public const float SUPER_CRIT_CHANCE_UP_MOD_AMOUNT = 0.2f;
 
-	// Token: 0x04000496 RID: 1174
+	// Token: 0x040004B7 RID: 1207
 	public const float FOOD_HEALS_MORE_MOD_AMOUNT = 0.08f;
 
-	// Token: 0x04000497 RID: 1175
+	// Token: 0x040004B8 RID: 1208
 	public const float SPELL_KILL_MAX_MANA_HP_REQUIREMENT = 0.5f;
 
-	// Token: 0x04000498 RID: 1176
+	// Token: 0x040004B9 RID: 1209
 	public const int SPELL_KILL_MAX_MANA_MP_CAP = 200;
 
-	// Token: 0x04000499 RID: 1177
+	// Token: 0x040004BA RID: 1210
 	public const int SPELL_KILL_MAX_MANA_ADD_AMOUNT = 5;
 
-	// Token: 0x0400049A RID: 1178
+	// Token: 0x040004BB RID: 1211
 	public const float ATTACK_EXHAUST_BONUS_DAMAGE_MOD = 1.5f;
 
-	// Token: 0x0400049B RID: 1179
+	// Token: 0x040004BC RID: 1212
 	public const int ATTACK_EXHAUST_EXHAUST_ADD_AMOUNT = 25;
 
-	// Token: 0x0400049C RID: 1180
+	// Token: 0x040004BD RID: 1213
 	public const float LOW_RESOLVE_WEAPON_DAMAGE_MOD = 1.01f;
 
-	// Token: 0x0400049D RID: 1181
+	// Token: 0x040004BE RID: 1214
 	public const float LOW_RESOLVE_MAGIC_DAMAGE_MOD = 1.01f;
 
-	// Token: 0x0400049E RID: 1182
+	// Token: 0x040004BF RID: 1215
 	public const float GROUND_DAMAGE_BONUS_DAMAGE_MOD = 0.125f;
 
-	// Token: 0x0400049F RID: 1183
+	// Token: 0x040004C0 RID: 1216
 	public const float FLIGHT_BONUS_CURSE_DAMAGE_MOD = 0.75f;
 
-	// Token: 0x040004A0 RID: 1184
+	// Token: 0x040004C1 RID: 1217
 	public const float FLIGHT_BONUS_MOVE_SPEED_MOD = 0.1f;
 
-	// Token: 0x040004A1 RID: 1185
+	// Token: 0x040004C2 RID: 1218
 	public const float RANGE_DAMAGE_BONUS_CURSE_FAR_DISTANCE = 8.5f;
 
-	// Token: 0x040004A2 RID: 1186
+	// Token: 0x040004C3 RID: 1219
 	public const float RANGE_DAMAGE_BONUS_CURSE_FAR_DAMAGE_MOD = 0.125f;
 
-	// Token: 0x040004A3 RID: 1187
+	// Token: 0x040004C4 RID: 1220
 	public const float RANGE_DAMAGE_BONUS_CURSE_NEAR_DAMAGE_MOD = 0f;
 
-	// Token: 0x040004A4 RID: 1188
+	// Token: 0x040004C5 RID: 1221
 	public const int PROJECTILE_DASH_START_NUM_REQUIRED_DASHES = 0;
 
-	// Token: 0x040004A5 RID: 1189
+	// Token: 0x040004C6 RID: 1222
 	public const float PROJECTILE_DASH_START_BASE_LIFESPAWN = 1f;
 
-	// Token: 0x040004A6 RID: 1190
+	// Token: 0x040004C7 RID: 1223
 	public const float PROJECTILE_DASH_START_LIFESPAN_ADD = 1f;
 
-	// Token: 0x040004A7 RID: 1191
+	// Token: 0x040004C8 RID: 1224
 	public const float DAMAGE_AURA_ON_HIT_LIFESPAN_BASE = 1.5f;
 
-	// Token: 0x040004A8 RID: 1192
+	// Token: 0x040004C9 RID: 1225
 	public const float DAMAGE_AURA_ON_HIT_LIFESPAN_ADD = 1.5f;
 
-	// Token: 0x040004A9 RID: 1193
+	// Token: 0x040004CA RID: 1226
 	public const float LAND_SHOCKWAVE_DAMAGE_BASE = 0.75f;
 
-	// Token: 0x040004AA RID: 1194
+	// Token: 0x040004CB RID: 1227
 	public const float LAND_SHOCKWAVE_DAMAGE_MOD_PER_STACK = 0.75f;
 
-	// Token: 0x040004AB RID: 1195
+	// Token: 0x040004CC RID: 1228
 	public const int FOOD_CHALLENGE_NUM_ITEMS_REQUIRED = 1;
 
-	// Token: 0x040004AC RID: 1196
+	// Token: 0x040004CD RID: 1229
 	public const int FOOD_CHALLENGE_BONUS_MANA_FLAT_ADD = 50;
 
-	// Token: 0x040004AD RID: 1197
+	// Token: 0x040004CE RID: 1230
 	public const float FOOD_CHALLENGE_MAX_HEALTH_MOD = 0.3f;
 
-	// Token: 0x040004AE RID: 1198
+	// Token: 0x040004CF RID: 1231
 	public const float DAMAGE_NO_HIT_CHALLENGE_BONUS_DAMAGE_MOD = 1.5f;
 
-	// Token: 0x040004AF RID: 1199
+	// Token: 0x040004D0 RID: 1232
 	public const float ON_HIT_AREA_BASE_DAMAGE = 1.5f;
 
-	// Token: 0x040004B0 RID: 1200
+	// Token: 0x040004D1 RID: 1233
 	public const float ON_HIT_AREA_DAMAGE_ADD_PER_STACK = 0.75f;
 
-	// Token: 0x040004B1 RID: 1201
+	// Token: 0x040004D2 RID: 1234
 	public const int ON_HIT_AREA_DAMAGE_RECHARGE_TIME = 5;
 
-	// Token: 0x040004B2 RID: 1202
+	// Token: 0x040004D3 RID: 1235
 	public const int ON_HIT_AREA_DAMAGE_RECHARGE_TIME_REDUCTION_PER_STACK = 1;
 
-	// Token: 0x040004B3 RID: 1203
+	// Token: 0x040004D4 RID: 1236
 	public const float MANA_DAMAGE_REDUCTION_MANA_AMOUNT = 150f;
 
-	// Token: 0x040004B4 RID: 1204
+	// Token: 0x040004D5 RID: 1237
 	public const float MANA_DAMAGE_REDUCTION_DAMAGE_MOD = 1f;
 
-	// Token: 0x040004B5 RID: 1205
+	// Token: 0x040004D6 RID: 1238
 	public const int MANA_DAMAGE_REDUCTION_STARTING_CHARGES = 2;
 
-	// Token: 0x040004B6 RID: 1206
+	// Token: 0x040004D7 RID: 1239
 	public const int FREE_CAST_SPELL_REQUIRED_CASTS = 3;
 
-	// Token: 0x040004B7 RID: 1207
+	// Token: 0x040004D8 RID: 1240
 	public const int FREE_CAST_SPELL_CAST_REDUCTION_PER_STACK = 1;
 
-	// Token: 0x040004B8 RID: 1208
+	// Token: 0x040004D9 RID: 1241
 	public const int SPINKICK_LEAVES_CALTROPS_NUM_KICKS_REQUIRED = 4;
 
-	// Token: 0x040004B9 RID: 1209
+	// Token: 0x040004DA RID: 1242
 	public const int SPINKICK_LEAVES_CALTROPS_KICK_REDUCTION_PER_STACK = 1;
 
-	// Token: 0x040004BA RID: 1210
+	// Token: 0x040004DB RID: 1243
 	public const int NO_ATTACK_DAMAGE_BONUS_RECHARGE_TIME = 5;
 
-	// Token: 0x040004BB RID: 1211
+	// Token: 0x040004DC RID: 1244
 	public const int NO_ATTACK_DAMAGE_BONUS_TIME_REDUCTION_PER_STACK = 1;
 
-	// Token: 0x040004BC RID: 1212
+	// Token: 0x040004DD RID: 1245
 	public const float NO_ATTACK_DAMAGE_BONUS_DAMAGE_MOD = 0.75f;
 
-	// Token: 0x040004BD RID: 1213
+	// Token: 0x040004DE RID: 1246
 	public const float SPINKICK_DAMAGE_BONUS_MOD = 0.4f;
 
-	// Token: 0x040004BE RID: 1214
+	// Token: 0x040004DF RID: 1247
 	public const float SKILL_CRIT_BONUS_BASE_DURATION = 2.5f;
 
-	// Token: 0x040004BF RID: 1215
+	// Token: 0x040004E0 RID: 1248
 	public const float SKILL_CRIT_BONUS_DURATION_ADD_PER_STACK = 2.5f;
 
-	// Token: 0x040004C0 RID: 1216
+	// Token: 0x040004E1 RID: 1249
 	public const float MEAT_DROP_CHANCE_UP_MOD_ADD = 0.01f;
 
-	// Token: 0x040004C1 RID: 1217
+	// Token: 0x040004E2 RID: 1250
 	public const float DAMAGE_REDUCTION_STATUS_EFFECT_AMOUNT = 0.15f;
 
-	// Token: 0x040004C2 RID: 1218
+	// Token: 0x040004E3 RID: 1251
 	public const float WEAPON_CRIT_DAMAGE_ADD_AMOUNT = 0.1f;
 
-	// Token: 0x040004C3 RID: 1219
+	// Token: 0x040004E4 RID: 1252
 	public const float MAGIC_CRIT_DAMAGE_ADD_AMOUNT = 0.1f;
 }

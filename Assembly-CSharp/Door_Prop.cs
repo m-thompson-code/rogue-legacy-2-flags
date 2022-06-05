@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000606 RID: 1542
+// Token: 0x02000A27 RID: 2599
 public class Door_Prop : Prop, IMirror
 {
-	// Token: 0x060037FD RID: 14333 RVA: 0x000BF688 File Offset: 0x000BD888
+	// Token: 0x06004E9A RID: 20122 RVA: 0x0012DE44 File Offset: 0x0012C044
 	public override void Mirror()
 	{
 		float num = base.transform.rotation.eulerAngles.z;

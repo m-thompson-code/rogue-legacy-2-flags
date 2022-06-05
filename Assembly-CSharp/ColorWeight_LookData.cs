@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020006CE RID: 1742
+// Token: 0x02000B79 RID: 2937
 [CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Look Data/Color Weight")]
 public class ColorWeight_LookData : ScriptableObject
 {
-	// Token: 0x04002FB4 RID: 12212
+	// Token: 0x04004203 RID: 16899
 	public List<ColorWeightObject> WeightList;
 }

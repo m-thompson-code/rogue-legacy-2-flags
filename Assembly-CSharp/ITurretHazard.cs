@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x020005BC RID: 1468
+// Token: 0x020009C4 RID: 2500
 public interface ITurretHazard : IHazard, IRootObj
 {
 }

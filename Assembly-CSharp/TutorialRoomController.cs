@@ -1,22 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000516 RID: 1302
+// Token: 0x0200088A RID: 2186
 public class TutorialRoomController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x170011D0 RID: 4560
-	// (get) Token: 0x06003042 RID: 12354 RVA: 0x000A5386 File Offset: 0x000A3586
-	// (set) Token: 0x06003043 RID: 12355 RVA: 0x000A538E File Offset: 0x000A358E
+	// Token: 0x170017E5 RID: 6117
+	// (get) Token: 0x060042FE RID: 17150 RVA: 0x000250B3 File Offset: 0x000232B3
+	// (set) Token: 0x060042FF RID: 17151 RVA: 0x000250BB File Offset: 0x000232BB
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x06003044 RID: 12356 RVA: 0x000A5397 File Offset: 0x000A3597
+	// Token: 0x06004300 RID: 17152 RVA: 0x000250C4 File Offset: 0x000232C4
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x06003045 RID: 12357 RVA: 0x000A53BE File Offset: 0x000A35BE
+	// Token: 0x06004301 RID: 17153 RVA: 0x000250EB File Offset: 0x000232EB
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -25,7 +25,7 @@ public class TutorialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06003046 RID: 12358 RVA: 0x000A53EA File Offset: 0x000A35EA
+	// Token: 0x06004302 RID: 17154 RVA: 0x00025117 File Offset: 0x00023317
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs args)
 	{
 		if (TutorialRoomController.InitializeTutorialPlayer)
@@ -40,7 +40,7 @@ public class TutorialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06003047 RID: 12359 RVA: 0x000A541C File Offset: 0x000A361C
+	// Token: 0x06004303 RID: 17155 RVA: 0x0010C720 File Offset: 0x0010A920
 	private void CreateStartingCharacter()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -62,7 +62,7 @@ public class TutorialRoomController : MonoBehaviour, IRoomConsumer
 		playerController.SetMana(0f, false, true, false);
 	}
 
-	// Token: 0x06003048 RID: 12360 RVA: 0x000A551C File Offset: 0x000A371C
+	// Token: 0x06004304 RID: 17156 RVA: 0x00025146 File Offset: 0x00023346
 	private void OnDisable()
 	{
 		if (!PlayerManager.IsDisposed)
@@ -72,9 +72,9 @@ public class TutorialRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x0400265C RID: 9820
+	// Token: 0x04003444 RID: 13380
 	public static bool InitializeTutorialPlayer;
 
-	// Token: 0x0400265D RID: 9821
+	// Token: 0x04003445 RID: 13381
 	private bool m_playerIsInvincible;
 }

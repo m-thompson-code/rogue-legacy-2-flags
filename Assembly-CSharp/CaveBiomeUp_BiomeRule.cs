@@ -4,12 +4,12 @@ using FMOD.Studio;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020005F1 RID: 1521
+// Token: 0x02000A00 RID: 2560
 [CreateAssetMenu(menuName = "Custom/Biome Rules/Cave Biome Up")]
 public class CaveBiomeUp_BiomeRule : BiomeRule
 {
-	// Token: 0x17001370 RID: 4976
-	// (get) Token: 0x060036E5 RID: 14053 RVA: 0x000BCB26 File Offset: 0x000BAD26
+	// Token: 0x17001AA7 RID: 6823
+	// (get) Token: 0x06004D1A RID: 19738 RVA: 0x000046FA File Offset: 0x000028FA
 	public override BiomeRuleExecutionTime ExecutionTime
 	{
 		get
@@ -18,7 +18,7 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x060036E6 RID: 14054 RVA: 0x000BCB2A File Offset: 0x000BAD2A
+	// Token: 0x06004D1B RID: 19739 RVA: 0x00029E4A File Offset: 0x0002804A
 	public override IEnumerator RunRule(BiomeType biome)
 	{
 		if (!this.m_actionsInitialized)
@@ -54,7 +54,7 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x060036E7 RID: 14055 RVA: 0x000BCB3C File Offset: 0x000BAD3C
+	// Token: 0x06004D1C RID: 19740 RVA: 0x0012AF1C File Offset: 0x0012911C
 	public override void UndoRule(BiomeType biome)
 	{
 		if (this.m_prepLeftEventInstance.isValid())
@@ -80,7 +80,7 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x060036E8 RID: 14056 RVA: 0x000BCBCE File Offset: 0x000BADCE
+	// Token: 0x06004D1D RID: 19741 RVA: 0x00029E59 File Offset: 0x00028059
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -90,7 +90,7 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x060036E9 RID: 14057 RVA: 0x000BCBE8 File Offset: 0x000BADE8
+	// Token: 0x06004D1E RID: 19742 RVA: 0x0012AFB0 File Offset: 0x001291B0
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		RoomViaDoorEventArgs roomViaDoorEventArgs = args as RoomViaDoorEventArgs;
@@ -107,7 +107,7 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x060036EA RID: 14058 RVA: 0x000BCC70 File Offset: 0x000BAE70
+	// Token: 0x06004D1F RID: 19743 RVA: 0x0012B038 File Offset: 0x00129238
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		this.StopWaveAttackCoroutine();
@@ -130,8 +130,8 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x17001371 RID: 4977
-	// (get) Token: 0x060036EB RID: 14059 RVA: 0x000BCCEE File Offset: 0x000BAEEE
+	// Token: 0x17001AA8 RID: 6824
+	// (get) Token: 0x06004D20 RID: 19744 RVA: 0x00029E70 File Offset: 0x00028070
 	private Vector2 m_waveAttack_Initial_Delay
 	{
 		get
@@ -140,8 +140,8 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x17001372 RID: 4978
-	// (get) Token: 0x060036EC RID: 14060 RVA: 0x000BCCF5 File Offset: 0x000BAEF5
+	// Token: 0x17001AA9 RID: 6825
+	// (get) Token: 0x06004D21 RID: 19745 RVA: 0x00029E77 File Offset: 0x00028077
 	private Vector2 m_waveAttackRandomDelay
 	{
 		get
@@ -150,8 +150,8 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x17001373 RID: 4979
-	// (get) Token: 0x060036ED RID: 14061 RVA: 0x000BCCFC File Offset: 0x000BAEFC
+	// Token: 0x17001AAA RID: 6826
+	// (get) Token: 0x06004D22 RID: 19746 RVA: 0x00029E7E File Offset: 0x0002807E
 	private Vector2 m_waveAttackRandomPosOffset
 	{
 		get
@@ -160,8 +160,8 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x17001374 RID: 4980
-	// (get) Token: 0x060036EE RID: 14062 RVA: 0x000BCD03 File Offset: 0x000BAF03
+	// Token: 0x17001AAB RID: 6827
+	// (get) Token: 0x06004D23 RID: 19747 RVA: 0x00029E85 File Offset: 0x00028085
 	private Vector2 m_waveAttackRandomAngle
 	{
 		get
@@ -170,7 +170,7 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x060036EF RID: 14063 RVA: 0x000BCD0A File Offset: 0x000BAF0A
+	// Token: 0x06004D24 RID: 19748 RVA: 0x00029E8C File Offset: 0x0002808C
 	public IEnumerator Wave_Attack_Coroutine()
 	{
 		float delay = Time.time + UnityEngine.Random.Range(this.m_waveAttack_Initial_Delay.x, this.m_waveAttack_Initial_Delay.y);
@@ -189,7 +189,7 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x060036F0 RID: 14064 RVA: 0x000BCD19 File Offset: 0x000BAF19
+	// Token: 0x06004D25 RID: 19749 RVA: 0x00029E9B File Offset: 0x0002809B
 	private IEnumerator FireWaveProjectile()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -302,7 +302,7 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x060036F1 RID: 14065 RVA: 0x000BCD28 File Offset: 0x000BAF28
+	// Token: 0x06004D26 RID: 19750 RVA: 0x0012B0B8 File Offset: 0x001292B8
 	private void StopWaveAttackCoroutine()
 	{
 		this.StopProjectile(ref this.m_waveAttack_Projectile);
@@ -314,7 +314,7 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x060036F2 RID: 14066 RVA: 0x000BCD7F File Offset: 0x000BAF7F
+	// Token: 0x06004D27 RID: 19751 RVA: 0x00029EAA File Offset: 0x000280AA
 	protected void StopProjectile(ref Projectile_RL projectile)
 	{
 		if (projectile && projectile.isActiveAndEnabled)
@@ -324,72 +324,72 @@ public class CaveBiomeUp_BiomeRule : BiomeRule
 		projectile = null;
 	}
 
-	// Token: 0x04002A3F RID: 10815
+	// Token: 0x04003A56 RID: 14934
 	private const string WAVE_ATTACK_WARNING_PROJECTILE = "CaveBossWaveWarningProjectile";
 
-	// Token: 0x04002A40 RID: 10816
+	// Token: 0x04003A57 RID: 14935
 	private const string WAVE_ATTACK_WARNING_LOCKED_PROJECTILE = "CaveBossWaveWarningLockedProjectile";
 
-	// Token: 0x04002A41 RID: 10817
+	// Token: 0x04003A58 RID: 14936
 	private const string WAVE_ATTACK_PROJECTILE = "CaveBossWaveProjectile";
 
-	// Token: 0x04002A42 RID: 10818
+	// Token: 0x04003A59 RID: 14937
 	private const string WAVE_ATTACK_SFX_PREP_LEFT_NAME = "event:/SFX/Enemies/sfx_hazard_bladeStamped_prep_start_loop_left";
 
-	// Token: 0x04002A43 RID: 10819
+	// Token: 0x04003A5A RID: 14938
 	private const string WAVE_ATTACK_SFX_PREP_RIGHT_NAME = "event:/SFX/Enemies/sfx_hazard_bladeStamped_prep_start_loop_right";
 
-	// Token: 0x04002A44 RID: 10820
+	// Token: 0x04003A5B RID: 14939
 	private const string WAVE_ATTACK_SFX_LOCKED_LEFT_NAME = "event:/SFX/Enemies/sfx_hazard_bladeStamped_prep_telegraph_left";
 
-	// Token: 0x04002A45 RID: 10821
+	// Token: 0x04003A5C RID: 14940
 	private const string WAVE_ATTACK_SFX_LOCKED_RIGHT_NAME = "event:/SFX/Enemies/sfx_hazard_bladeStamped_prep_telegraph_right";
 
-	// Token: 0x04002A46 RID: 10822
+	// Token: 0x04003A5D RID: 14941
 	private const string WAVE_ATTACK_SFX_LAUNCH_LEFT_NAME = "event:/SFX/Enemies/sfx_hazard_bladeStamped_launch_left";
 
-	// Token: 0x04002A47 RID: 10823
+	// Token: 0x04003A5E RID: 14942
 	private const string WAVE_ATTACK_SFX_LAUNCH_RIGHT_NAME = "event:/SFX/Enemies/sfx_hazard_bladeStamped_launch_right";
 
-	// Token: 0x04002A48 RID: 10824
+	// Token: 0x04003A5F RID: 14943
 	private BaseRoom m_currentRoom;
 
-	// Token: 0x04002A49 RID: 10825
+	// Token: 0x04003A60 RID: 14944
 	private Action<object, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04002A4A RID: 10826
+	// Token: 0x04003A61 RID: 14945
 	private Action<object, EventArgs> m_onPlayerExitRoom;
 
-	// Token: 0x04002A4B RID: 10827
+	// Token: 0x04003A62 RID: 14946
 	private bool m_actionsInitialized;
 
-	// Token: 0x04002A4C RID: 10828
+	// Token: 0x04003A63 RID: 14947
 	private EventInstance m_prepLeftEventInstance;
 
-	// Token: 0x04002A4D RID: 10829
+	// Token: 0x04003A64 RID: 14948
 	private EventInstance m_prepRightEventInstance;
 
-	// Token: 0x04002A4E RID: 10830
+	// Token: 0x04003A65 RID: 14949
 	private EventInstance m_lockedLeftEventInstance;
 
-	// Token: 0x04002A4F RID: 10831
+	// Token: 0x04003A66 RID: 14950
 	private EventInstance m_lockedRightEventInstance;
 
-	// Token: 0x04002A50 RID: 10832
+	// Token: 0x04003A67 RID: 14951
 	private float m_waveAttackWarningDuration = 1.5f;
 
-	// Token: 0x04002A51 RID: 10833
+	// Token: 0x04003A68 RID: 14952
 	private float m_waveAttackWarningLockedDuration = 0.35f;
 
-	// Token: 0x04002A52 RID: 10834
+	// Token: 0x04003A69 RID: 14953
 	private Projectile_RL m_waveAttack_WarningProjectile;
 
-	// Token: 0x04002A53 RID: 10835
+	// Token: 0x04003A6A RID: 14954
 	private Projectile_RL m_waveAttack_WarningLockedProjectile;
 
-	// Token: 0x04002A54 RID: 10836
+	// Token: 0x04003A6B RID: 14955
 	private Projectile_RL m_waveAttack_Projectile;
 
-	// Token: 0x04002A55 RID: 10837
+	// Token: 0x04003A6C RID: 14956
 	private Coroutine m_waveAttackCoroutine;
 }

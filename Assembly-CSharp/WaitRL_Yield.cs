@@ -2,22 +2,22 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200081E RID: 2078
+// Token: 0x02000CF5 RID: 3317
 public class WaitRL_Yield : IEnumerator
 {
-	// Token: 0x17001710 RID: 5904
-	// (get) Token: 0x060044D9 RID: 17625 RVA: 0x000F4DBE File Offset: 0x000F2FBE
-	// (set) Token: 0x060044DA RID: 17626 RVA: 0x000F4DC6 File Offset: 0x000F2FC6
+	// Token: 0x17001F1E RID: 7966
+	// (get) Token: 0x06005EA5 RID: 24229 RVA: 0x00034290 File Offset: 0x00032490
+	// (set) Token: 0x06005EA6 RID: 24230 RVA: 0x00034298 File Offset: 0x00032498
 	public float WaitTime { get; private set; }
 
-	// Token: 0x060044DB RID: 17627 RVA: 0x000F4DCF File Offset: 0x000F2FCF
+	// Token: 0x06005EA7 RID: 24231 RVA: 0x000342A1 File Offset: 0x000324A1
 	public WaitRL_Yield(float waitTime, bool useUnscaledTime = false)
 	{
 		this.CreateNew(waitTime, useUnscaledTime);
 		this.m_needsReset = true;
 	}
 
-	// Token: 0x060044DC RID: 17628 RVA: 0x000F4DE6 File Offset: 0x000F2FE6
+	// Token: 0x06005EA8 RID: 24232 RVA: 0x000342B8 File Offset: 0x000324B8
 	public void Pause()
 	{
 		this.m_isPaused = true;
@@ -29,7 +29,7 @@ public class WaitRL_Yield : IEnumerator
 		this.m_pauseTime = Time.time;
 	}
 
-	// Token: 0x060044DD RID: 17629 RVA: 0x000F4E0E File Offset: 0x000F300E
+	// Token: 0x06005EA9 RID: 24233 RVA: 0x000342E0 File Offset: 0x000324E0
 	public void Unpause()
 	{
 		this.m_isPaused = false;
@@ -41,8 +41,8 @@ public class WaitRL_Yield : IEnumerator
 		this.m_pauseTime = Time.time - this.m_pauseTime;
 	}
 
-	// Token: 0x17001711 RID: 5905
-	// (get) Token: 0x060044DE RID: 17630 RVA: 0x000F4E44 File Offset: 0x000F3044
+	// Token: 0x17001F1F RID: 7967
+	// (get) Token: 0x06005EAA RID: 24234 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public object Current
 	{
 		get
@@ -51,7 +51,7 @@ public class WaitRL_Yield : IEnumerator
 		}
 	}
 
-	// Token: 0x060044DF RID: 17631 RVA: 0x000F4E48 File Offset: 0x000F3048
+	// Token: 0x06005EAB RID: 24235 RVA: 0x00162A4C File Offset: 0x00160C4C
 	public bool MoveNext()
 	{
 		if (this.m_needsReset)
@@ -78,7 +78,7 @@ public class WaitRL_Yield : IEnumerator
 		return flag;
 	}
 
-	// Token: 0x060044E0 RID: 17632 RVA: 0x000F4EC8 File Offset: 0x000F30C8
+	// Token: 0x06005EAC RID: 24236 RVA: 0x00162ACC File Offset: 0x00160CCC
 	public void CreateNew(float waitTime, bool useUnscaledTime = false)
 	{
 		this.m_isPaused = false;
@@ -96,24 +96,24 @@ public class WaitRL_Yield : IEnumerator
 		this.WaitTime = waitTime;
 	}
 
-	// Token: 0x060044E1 RID: 17633 RVA: 0x000F4F1C File Offset: 0x000F311C
+	// Token: 0x06005EAD RID: 24237 RVA: 0x00034316 File Offset: 0x00032516
 	public void Reset()
 	{
 		this.CreateNew(this.WaitTime, false);
 	}
 
-	// Token: 0x04003AB7 RID: 15031
+	// Token: 0x04004DBB RID: 19899
 	private float m_startingTime;
 
-	// Token: 0x04003AB8 RID: 15032
+	// Token: 0x04004DBC RID: 19900
 	private bool m_needsReset;
 
-	// Token: 0x04003AB9 RID: 15033
+	// Token: 0x04004DBD RID: 19901
 	private bool m_useUnscaledTime;
 
-	// Token: 0x04003ABA RID: 15034
+	// Token: 0x04004DBE RID: 19902
 	private bool m_isPaused;
 
-	// Token: 0x04003ABB RID: 15035
+	// Token: 0x04004DBF RID: 19903
 	private float m_pauseTime;
 }

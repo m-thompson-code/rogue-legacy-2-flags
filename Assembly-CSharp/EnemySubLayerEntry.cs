@@ -1,19 +1,19 @@
 ﻿using System;
 
-// Token: 0x020007F7 RID: 2039
+// Token: 0x02000CBD RID: 3261
 [Serializable]
 public class EnemySubLayerEntry
 {
-	// Token: 0x060043C2 RID: 17346 RVA: 0x000ECEE6 File Offset: 0x000EB0E6
+	// Token: 0x06005D4B RID: 23883 RVA: 0x00033565 File Offset: 0x00031765
 	public EnemySubLayerEntry(EnemyTypeAndRank enemyTypeAndRank, int subLayer)
 	{
 		this.Enemy = enemyTypeAndRank;
 		this.SubLayer = subLayer;
 	}
 
-	// Token: 0x040039EF RID: 14831
+	// Token: 0x04004CB4 RID: 19636
 	public EnemyTypeAndRank Enemy;
 
-	// Token: 0x040039F0 RID: 14832
+	// Token: 0x04004CB5 RID: 19637
 	public int SubLayer;
 }

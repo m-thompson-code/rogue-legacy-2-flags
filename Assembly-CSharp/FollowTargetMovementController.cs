@@ -2,22 +2,22 @@
 using Rewired;
 using UnityEngine;
 
-// Token: 0x020001FE RID: 510
+// Token: 0x020003A3 RID: 931
 public class FollowTargetMovementController : MonoBehaviour
 {
-	// Token: 0x06001588 RID: 5512 RVA: 0x00042F17 File Offset: 0x00041117
+	// Token: 0x06001EE2 RID: 7906 RVA: 0x00010359 File Offset: 0x0000E559
 	private void Awake()
 	{
 		this.m_playerController = base.GetComponentInParent<global::PlayerController>();
 	}
 
-	// Token: 0x06001589 RID: 5513 RVA: 0x00042F25 File Offset: 0x00041125
+	// Token: 0x06001EE3 RID: 7907 RVA: 0x00010367 File Offset: 0x0000E567
 	public void Reset()
 	{
 		base.transform.localPosition = Vector3.zero;
 	}
 
-	// Token: 0x0600158A RID: 5514 RVA: 0x00042F38 File Offset: 0x00041138
+	// Token: 0x06001EE4 RID: 7908 RVA: 0x000A14F4 File Offset: 0x0009F6F4
 	private void Update()
 	{
 		if (this.m_playerController && !this.m_playerController.IsInitialized)
@@ -57,7 +57,7 @@ public class FollowTargetMovementController : MonoBehaviour
 		base.transform.localPosition = this.m_localPosition;
 	}
 
-	// Token: 0x0600158B RID: 5515 RVA: 0x00043074 File Offset: 0x00041274
+	// Token: 0x06001EE5 RID: 7909 RVA: 0x000A1630 File Offset: 0x0009F830
 	private void HandleHorizontal(float horizontalInput, float maxMove)
 	{
 		float num = horizontalInput * 21f * Time.deltaTime;
@@ -78,7 +78,7 @@ public class FollowTargetMovementController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600158C RID: 5516 RVA: 0x0004314C File Offset: 0x0004134C
+	// Token: 0x06001EE6 RID: 7910 RVA: 0x000A1708 File Offset: 0x0009F908
 	private void HandleVertical(float verticalInput, float maxMove)
 	{
 		float num = verticalInput * 21f * Time.deltaTime;
@@ -100,18 +100,18 @@ public class FollowTargetMovementController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040014CB RID: 5323
+	// Token: 0x04001B9A RID: 7066
 	private const float MAX_MOVEMENT = 5.25f;
 
-	// Token: 0x040014CC RID: 5324
+	// Token: 0x04001B9B RID: 7067
 	private const float MOVEMENT_SPEED = 0.25f;
 
-	// Token: 0x040014CD RID: 5325
+	// Token: 0x04001B9C RID: 7068
 	private global::PlayerController m_playerController;
 
-	// Token: 0x040014CE RID: 5326
+	// Token: 0x04001B9D RID: 7069
 	private Vector2 m_normalizedInput;
 
-	// Token: 0x040014CF RID: 5327
+	// Token: 0x04001B9E RID: 7070
 	private Vector2 m_localPosition;
 }

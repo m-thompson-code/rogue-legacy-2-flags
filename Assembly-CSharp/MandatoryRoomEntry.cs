@@ -1,22 +1,22 @@
 ﻿using System;
 using Rooms;
 
-// Token: 0x020006E7 RID: 1767
+// Token: 0x02000B95 RID: 2965
 [Serializable]
 public class MandatoryRoomEntry
 {
-	// Token: 0x04003131 RID: 12593
+	// Token: 0x04004383 RID: 17283
 	public string Description = string.Empty;
 
-	// Token: 0x04003132 RID: 12594
+	// Token: 0x04004384 RID: 17284
 	public RoomType RoomType = RoomType.None;
 
-	// Token: 0x04003133 RID: 12595
+	// Token: 0x04004385 RID: 17285
 	public RoomMetaData RoomMetaData;
 
-	// Token: 0x04003134 RID: 12596
+	// Token: 0x04004386 RID: 17286
 	public ConditionFlag ReplacementCriteria;
 
-	// Token: 0x04003135 RID: 12597
+	// Token: 0x04004387 RID: 17287
 	public RoomMetaData ReplacementRoom;
 }

@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000538 RID: 1336
+// Token: 0x020008CB RID: 2251
 [Serializable]
 public class WaitUntilXRemaining_SummonRule : BaseSummonRule
 {
-	// Token: 0x17001222 RID: 4642
-	// (get) Token: 0x0600310F RID: 12559 RVA: 0x000A6800 File Offset: 0x000A4A00
+	// Token: 0x1700186F RID: 6255
+	// (get) Token: 0x0600447B RID: 17531 RVA: 0x00025B5F File Offset: 0x00023D5F
 	public override SummonRuleType RuleType
 	{
 		get
@@ -16,8 +16,8 @@ public class WaitUntilXRemaining_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001223 RID: 4643
-	// (get) Token: 0x06003110 RID: 12560 RVA: 0x000A6807 File Offset: 0x000A4A07
+	// Token: 0x17001870 RID: 6256
+	// (get) Token: 0x0600447C RID: 17532 RVA: 0x00025B66 File Offset: 0x00023D66
 	public override string RuleLabel
 	{
 		get
@@ -26,7 +26,7 @@ public class WaitUntilXRemaining_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x06003111 RID: 12561 RVA: 0x000A680E File Offset: 0x000A4A0E
+	// Token: 0x0600447D RID: 17533 RVA: 0x00025B6D File Offset: 0x00023D6D
 	public override IEnumerator RunSummonRule()
 	{
 		if (this.m_waitYield == null)
@@ -38,10 +38,10 @@ public class WaitUntilXRemaining_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x040026CA RID: 9930
+	// Token: 0x04003521 RID: 13601
 	[SerializeField]
 	private int m_numEnemiesRemaining;
 
-	// Token: 0x040026CB RID: 9931
+	// Token: 0x04003522 RID: 13602
 	private WaitUntil m_waitYield;
 }

@@ -7,16 +7,16 @@ using SceneManagement_RL;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000558 RID: 1368
+// Token: 0x02000916 RID: 2326
 public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer, IAudioEventEmitter, IRootObj
 {
-	// Token: 0x17001253 RID: 4691
-	// (get) Token: 0x06003239 RID: 12857 RVA: 0x000AA44B File Offset: 0x000A864B
-	// (set) Token: 0x0600323A RID: 12858 RVA: 0x000AA453 File Offset: 0x000A8653
+	// Token: 0x170018F4 RID: 6388
+	// (get) Token: 0x060046A2 RID: 18082 RVA: 0x00026CAB File Offset: 0x00024EAB
+	// (set) Token: 0x060046A3 RID: 18083 RVA: 0x00026CB3 File Offset: 0x00024EB3
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17001254 RID: 4692
-	// (get) Token: 0x0600323B RID: 12859 RVA: 0x000AA45C File Offset: 0x000A865C
+	// Token: 0x170018F5 RID: 6389
+	// (get) Token: 0x060046A4 RID: 18084 RVA: 0x00026CBC File Offset: 0x00024EBC
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -25,8 +25,8 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		}
 	}
 
-	// Token: 0x17001255 RID: 4693
-	// (get) Token: 0x0600323C RID: 12860 RVA: 0x000AA463 File Offset: 0x000A8663
+	// Token: 0x170018F6 RID: 6390
+	// (get) Token: 0x060046A5 RID: 18085 RVA: 0x00026CC3 File Offset: 0x00024EC3
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -39,8 +39,8 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		}
 	}
 
-	// Token: 0x17001256 RID: 4694
-	// (get) Token: 0x0600323D RID: 12861 RVA: 0x000AA46F File Offset: 0x000A866F
+	// Token: 0x170018F7 RID: 6391
+	// (get) Token: 0x060046A6 RID: 18086 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -49,7 +49,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		}
 	}
 
-	// Token: 0x0600323E RID: 12862 RVA: 0x000AA478 File Offset: 0x000A8678
+	// Token: 0x060046A7 RID: 18087 RVA: 0x00114558 File Offset: 0x00112758
 	public static bool HasEventDialogue()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround && !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.SeenParade))
@@ -60,7 +60,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		return !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.TimelineDialogue_Intro) && flag;
 	}
 
-	// Token: 0x0600323F RID: 12863 RVA: 0x000AA4D8 File Offset: 0x000A86D8
+	// Token: 0x060046A8 RID: 18088 RVA: 0x001145B8 File Offset: 0x001127B8
 	private void Awake()
 	{
 		this.m_interactable = base.GetComponent<Interactable>();
@@ -70,14 +70,14 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		this.m_closeNGPlusShopUnityEvent = new UnityAction(this.CloseNGPlusShop);
 	}
 
-	// Token: 0x06003240 RID: 12864 RVA: 0x000AA539 File Offset: 0x000A8739
+	// Token: 0x060046A9 RID: 18089 RVA: 0x00026CCF File Offset: 0x00024ECF
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnter), false);
 	}
 
-	// Token: 0x06003241 RID: 12865 RVA: 0x000AA560 File Offset: 0x000A8760
+	// Token: 0x060046AA RID: 18090 RVA: 0x00026CF6 File Offset: 0x00024EF6
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -86,7 +86,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		}
 	}
 
-	// Token: 0x06003242 RID: 12866 RVA: 0x000AA58C File Offset: 0x000A878C
+	// Token: 0x060046AB RID: 18091 RVA: 0x0011461C File Offset: 0x0011281C
 	private void OnPlayerEnter(object sender, EventArgs args)
 	{
 		NewGamePlusShop.m_endingSpeechBubblePlayed = false;
@@ -111,7 +111,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		}
 	}
 
-	// Token: 0x06003243 RID: 12867 RVA: 0x000AA648 File Offset: 0x000A8848
+	// Token: 0x060046AC RID: 18092 RVA: 0x001146D8 File Offset: 0x001128D8
 	public void OpenNGPlusShop()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
@@ -124,7 +124,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		base.StartCoroutine(this.OpenNGPlusShopCoroutine());
 	}
 
-	// Token: 0x06003244 RID: 12868 RVA: 0x000AA69B File Offset: 0x000A889B
+	// Token: 0x060046AD RID: 18093 RVA: 0x00026D22 File Offset: 0x00024F22
 	private IEnumerator OpenNGPlusShopCoroutine()
 	{
 		AudioManager.PlayOneShotAttached(this, this.m_greetingAudioPath, base.gameObject);
@@ -160,7 +160,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		yield break;
 	}
 
-	// Token: 0x06003245 RID: 12869 RVA: 0x000AA6AC File Offset: 0x000A88AC
+	// Token: 0x060046AE RID: 18094 RVA: 0x0011472C File Offset: 0x0011292C
 	private void RunNPCIntroDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.TimelineDialogue_Intro, true);
@@ -170,7 +170,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_displayShopWindow);
 	}
 
-	// Token: 0x06003246 RID: 12870 RVA: 0x000AA710 File Offset: 0x000A8910
+	// Token: 0x060046AF RID: 18095 RVA: 0x00114790 File Offset: 0x00112990
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -200,13 +200,13 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeNGPlusShop);
 	}
 
-	// Token: 0x06003247 RID: 12871 RVA: 0x000AA7AD File Offset: 0x000A89AD
+	// Token: 0x060046B0 RID: 18096 RVA: 0x00026D31 File Offset: 0x00024F31
 	private void DisplayShopWindow()
 	{
 		base.StartCoroutine(this.DisplayShopWindowCoroutine());
 	}
 
-	// Token: 0x06003248 RID: 12872 RVA: 0x000AA7BC File Offset: 0x000A89BC
+	// Token: 0x060046B1 RID: 18097 RVA: 0x00026D40 File Offset: 0x00024F40
 	private IEnumerator DisplayShopWindowCoroutine()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.NewGamePlusNPC))
@@ -219,7 +219,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		yield break;
 	}
 
-	// Token: 0x06003249 RID: 12873 RVA: 0x000AA7CC File Offset: 0x000A89CC
+	// Token: 0x060046B2 RID: 18098 RVA: 0x00114830 File Offset: 0x00112A30
 	public void CloseNGPlusShop()
 	{
 		if (WindowManager.GetIsWindowLoaded(WindowID.NewGamePlusNPC))
@@ -236,7 +236,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		this.m_interactable.SetIsInteractableActive(true);
 	}
 
-	// Token: 0x0600324A RID: 12874 RVA: 0x000AA839 File Offset: 0x000A8A39
+	// Token: 0x060046B3 RID: 18099 RVA: 0x00026D4F File Offset: 0x00024F4F
 	private void OnDisable()
 	{
 		if (this.m_interactable)
@@ -245,7 +245,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		}
 	}
 
-	// Token: 0x0600324B RID: 12875 RVA: 0x000AA854 File Offset: 0x000A8A54
+	// Token: 0x060046B4 RID: 18100 RVA: 0x00026D6A File Offset: 0x00024F6A
 	private IEnumerator StartNewGamePlusCoroutine()
 	{
 		SaveManager.PlayerSaveData.ResetForNewGamePlus(SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround);
@@ -272,13 +272,13 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		yield break;
 	}
 
-	// Token: 0x0600324C RID: 12876 RVA: 0x000AA863 File Offset: 0x000A8A63
+	// Token: 0x060046B5 RID: 18101 RVA: 0x00026D79 File Offset: 0x00024F79
 	private void StartNewGamePlusTransition()
 	{
 		SceneLoader_RL.LoadScene(SceneID.Tutorial, TransitionID.NewGamePlus);
 	}
 
-	// Token: 0x0600324D RID: 12877 RVA: 0x000AA86E File Offset: 0x000A8A6E
+	// Token: 0x060046B6 RID: 18102 RVA: 0x00026D84 File Offset: 0x00024F84
 	private IEnumerator TeleportPlayerToHubTown()
 	{
 		float delay = Time.time + 1f;
@@ -294,7 +294,7 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		yield break;
 	}
 
-	// Token: 0x0600324E RID: 12878 RVA: 0x000AA876 File Offset: 0x000A8A76
+	// Token: 0x060046B7 RID: 18103 RVA: 0x00026D8C File Offset: 0x00024F8C
 	private IEnumerator MovePlayerToRedHood()
 	{
 		PlayerManager.GetPlayerController().SetVelocity(0f, 0f, false);
@@ -318,48 +318,48 @@ public class NewGamePlusShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsume
 		yield break;
 	}
 
-	// Token: 0x06003250 RID: 12880 RVA: 0x000AA88D File Offset: 0x000A8A8D
+	// Token: 0x060046B9 RID: 18105 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400277B RID: 10107
+	// Token: 0x0400366D RID: 13933
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x0400277C RID: 10108
+	// Token: 0x0400366E RID: 13934
 	[SerializeField]
 	private NPCController m_npcController;
 
-	// Token: 0x0400277D RID: 10109
+	// Token: 0x0400366F RID: 13935
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioPath;
 
-	// Token: 0x0400277E RID: 10110
+	// Token: 0x04003670 RID: 13936
 	[SerializeField]
 	[EventRef]
 	private string m_farewellAudioPath;
 
-	// Token: 0x0400277F RID: 10111
+	// Token: 0x04003671 RID: 13937
 	private Interactable m_interactable;
 
-	// Token: 0x04002780 RID: 10112
+	// Token: 0x04003672 RID: 13938
 	private static bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x04002781 RID: 10113
+	// Token: 0x04003673 RID: 13939
 	private Action m_displayShopWindow;
 
-	// Token: 0x04002782 RID: 10114
+	// Token: 0x04003674 RID: 13940
 	private Action m_closeNGPlusShop;
 
-	// Token: 0x04002783 RID: 10115
+	// Token: 0x04003675 RID: 13941
 	private Action m_startNewGamePlusTransition;
 
-	// Token: 0x04002784 RID: 10116
+	// Token: 0x04003676 RID: 13942
 	private UnityAction m_closeNGPlusShopUnityEvent;
 
-	// Token: 0x04002785 RID: 10117
+	// Token: 0x04003677 RID: 13943
 	private bool m_isAboveGround;
 }

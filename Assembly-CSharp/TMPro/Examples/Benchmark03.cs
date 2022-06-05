@@ -3,15 +3,15 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000858 RID: 2136
+	// Token: 0x02000D5D RID: 3421
 	public class Benchmark03 : MonoBehaviour
 	{
-		// Token: 0x060046E7 RID: 18151 RVA: 0x000FD67E File Offset: 0x000FB87E
+		// Token: 0x06006194 RID: 24980 RVA: 0x00002FCA File Offset: 0x000011CA
 		private void Awake()
 		{
 		}
 
-		// Token: 0x060046E8 RID: 18152 RVA: 0x000FD680 File Offset: 0x000FB880
+		// Token: 0x06006195 RID: 24981 RVA: 0x0016A79C File Offset: 0x0016899C
 		private void Start()
 		{
 			for (int i = 0; i < this.NumberOfNPC; i++)
@@ -49,13 +49,13 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x04003BD4 RID: 15316
+		// Token: 0x04004F59 RID: 20313
 		public int SpawnType;
 
-		// Token: 0x04003BD5 RID: 15317
+		// Token: 0x04004F5A RID: 20314
 		public int NumberOfNPC = 12;
 
-		// Token: 0x04003BD6 RID: 15318
+		// Token: 0x04004F5B RID: 20315
 		public Font TheFont;
 	}
 }

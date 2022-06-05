@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02000728 RID: 1832
+// Token: 0x02000BDB RID: 3035
 public class Ease
 {
-	// Token: 0x060040F6 RID: 16630 RVA: 0x000E5FDC File Offset: 0x000E41DC
+	// Token: 0x06005A40 RID: 23104 RVA: 0x00031640 File Offset: 0x0002F840
 	public static float None(float t, float b, float c, float d)
 	{
 		return c * t / d + b;
 	}
 
-	// Token: 0x060040F7 RID: 16631 RVA: 0x000E5FE8 File Offset: 0x000E41E8
+	// Token: 0x06005A41 RID: 23105 RVA: 0x0015525C File Offset: 0x0015345C
 	public static EaseDelegate GetEase(EaseType easeType, EaseInOutType inOutType)
 	{
 		if (easeType == EaseType.None)
@@ -137,52 +137,52 @@ public class Ease
 		return new EaseDelegate(Ease.Linear.EaseInOut);
 	}
 
-	// Token: 0x02000E27 RID: 3623
+	// Token: 0x02000BDC RID: 3036
 	public class Back
 	{
-		// Token: 0x06006B96 RID: 27542 RVA: 0x00192044 File Offset: 0x00190244
+		// Token: 0x06005A43 RID: 23107 RVA: 0x001555BC File Offset: 0x001537BC
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			float num = 1.70158f;
 			return c * (t /= d) * t * ((num + 1f) * t - num) + b;
 		}
 
-		// Token: 0x06006B97 RID: 27543 RVA: 0x00192070 File Offset: 0x00190270
+		// Token: 0x06005A44 RID: 23108 RVA: 0x001555E8 File Offset: 0x001537E8
 		public static float EaseInSmall(float t, float b, float c, float d)
 		{
 			float num = 0.85079f;
 			return c * (t /= d) * t * ((num + 1f) * t - num) + b;
 		}
 
-		// Token: 0x06006B98 RID: 27544 RVA: 0x0019209C File Offset: 0x0019029C
+		// Token: 0x06005A45 RID: 23109 RVA: 0x00155614 File Offset: 0x00153814
 		public static float EaseInLarge(float t, float b, float c, float d)
 		{
 			float num = 5.10474f;
 			return c * (t /= d) * t * ((num + 1f) * t - num) + b;
 		}
 
-		// Token: 0x06006B99 RID: 27545 RVA: 0x001920C8 File Offset: 0x001902C8
+		// Token: 0x06005A46 RID: 23110 RVA: 0x00155640 File Offset: 0x00153840
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			float num = 1.70158f;
 			return c * ((t = t / d - 1f) * t * ((num + 1f) * t + num) + 1f) + b;
 		}
 
-		// Token: 0x06006B9A RID: 27546 RVA: 0x00192100 File Offset: 0x00190300
+		// Token: 0x06005A47 RID: 23111 RVA: 0x00155678 File Offset: 0x00153878
 		public static float EaseOutSmall(float t, float b, float c, float d)
 		{
 			float num = 0.85079f;
 			return c * ((t = t / d - 1f) * t * ((num + 1f) * t + num) + 1f) + b;
 		}
 
-		// Token: 0x06006B9B RID: 27547 RVA: 0x00192138 File Offset: 0x00190338
+		// Token: 0x06005A48 RID: 23112 RVA: 0x001556B0 File Offset: 0x001538B0
 		public static float EaseOutLarge(float t, float b, float c, float d)
 		{
 			float num = 5.10474f;
 			return c * ((t = t / d - 1f) * t * ((num + 1f) * t + num) + 1f) + b;
 		}
 
-		// Token: 0x06006B9C RID: 27548 RVA: 0x00192170 File Offset: 0x00190370
+		// Token: 0x06005A49 RID: 23113 RVA: 0x001556E8 File Offset: 0x001538E8
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			float num = 1.70158f;
@@ -193,7 +193,7 @@ public class Ease
 			return c / 2f * ((t -= 2f) * t * (((num *= 1.525f) + 1f) * t + num) + 2f) + b;
 		}
 
-		// Token: 0x06006B9D RID: 27549 RVA: 0x001921E8 File Offset: 0x001903E8
+		// Token: 0x06005A4A RID: 23114 RVA: 0x00155760 File Offset: 0x00153960
 		public static float EaseInOutLarge(float t, float b, float c, float d)
 		{
 			float num = 5.10474f;
@@ -204,7 +204,7 @@ public class Ease
 			return c / 2f * ((t -= 2f) * t * (((num *= 1.525f) + 1f) * t + num) + 2f) + b;
 		}
 
-		// Token: 0x06006B9E RID: 27550 RVA: 0x00192260 File Offset: 0x00190460
+		// Token: 0x06005A4B RID: 23115 RVA: 0x001557D8 File Offset: 0x001539D8
 		public static float EaseInOutSmall(float t, float b, float c, float d)
 		{
 			float num = 0.85079f;
@@ -216,10 +216,10 @@ public class Ease
 		}
 	}
 
-	// Token: 0x02000E28 RID: 3624
+	// Token: 0x02000BDD RID: 3037
 	public class Bounce
 	{
-		// Token: 0x06006BA0 RID: 27552 RVA: 0x001922E0 File Offset: 0x001904E0
+		// Token: 0x06005A4D RID: 23117 RVA: 0x00155850 File Offset: 0x00153A50
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			if ((t /= d) < 0.36363637f)
@@ -237,13 +237,13 @@ public class Ease
 			return c * (7.5625f * (t -= 0.95454544f) * t + 0.984375f) + b;
 		}
 
-		// Token: 0x06006BA1 RID: 27553 RVA: 0x0019236E File Offset: 0x0019056E
+		// Token: 0x06005A4E RID: 23118 RVA: 0x00031649 File Offset: 0x0002F849
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			return c - Ease.Bounce.EaseOut(d - t, 0f, c, d) + b;
 		}
 
-		// Token: 0x06006BA2 RID: 27554 RVA: 0x00192384 File Offset: 0x00190584
+		// Token: 0x06005A4F RID: 23119 RVA: 0x001558E0 File Offset: 0x00153AE0
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			if (t < d / 2f)
@@ -254,22 +254,22 @@ public class Ease
 		}
 	}
 
-	// Token: 0x02000E29 RID: 3625
+	// Token: 0x02000BDE RID: 3038
 	public class Circ
 	{
-		// Token: 0x06006BA4 RID: 27556 RVA: 0x001923E4 File Offset: 0x001905E4
+		// Token: 0x06005A51 RID: 23121 RVA: 0x0003165E File Offset: 0x0002F85E
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			return -c * (float)(Math.Sqrt((double)(1f - (t /= d) * t)) - 1.0) + b;
 		}
 
-		// Token: 0x06006BA5 RID: 27557 RVA: 0x0019240A File Offset: 0x0019060A
+		// Token: 0x06005A52 RID: 23122 RVA: 0x00031684 File Offset: 0x0002F884
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			return c * (float)Math.Sqrt((double)(1f - (t = t / d - 1f) * t)) + b;
 		}
 
-		// Token: 0x06006BA6 RID: 27558 RVA: 0x0019242C File Offset: 0x0019062C
+		// Token: 0x06005A53 RID: 23123 RVA: 0x00155938 File Offset: 0x00153B38
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			if ((t /= d / 2f) < 1f)
@@ -280,22 +280,22 @@ public class Ease
 		}
 	}
 
-	// Token: 0x02000E2A RID: 3626
+	// Token: 0x02000BDF RID: 3039
 	public class Cubic
 	{
-		// Token: 0x06006BA8 RID: 27560 RVA: 0x001924A7 File Offset: 0x001906A7
+		// Token: 0x06005A55 RID: 23125 RVA: 0x000316A5 File Offset: 0x0002F8A5
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			return c * (t /= d) * t * t + b;
 		}
 
-		// Token: 0x06006BA9 RID: 27561 RVA: 0x001924B7 File Offset: 0x001906B7
+		// Token: 0x06005A56 RID: 23126 RVA: 0x000316B5 File Offset: 0x0002F8B5
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			return c * ((t = t / d - 1f) * t * t + 1f) + b;
 		}
 
-		// Token: 0x06006BAA RID: 27562 RVA: 0x001924D4 File Offset: 0x001906D4
+		// Token: 0x06005A57 RID: 23127 RVA: 0x001559AC File Offset: 0x00153BAC
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			if ((t /= d / 2f) < 1f)
@@ -306,10 +306,10 @@ public class Ease
 		}
 	}
 
-	// Token: 0x02000E2B RID: 3627
+	// Token: 0x02000BE0 RID: 3040
 	public class Elastic
 	{
-		// Token: 0x06006BAC RID: 27564 RVA: 0x0019252C File Offset: 0x0019072C
+		// Token: 0x06005A59 RID: 23129 RVA: 0x001559FC File Offset: 0x00153BFC
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			float num = 0f;
@@ -339,7 +339,7 @@ public class Ease
 			return (float)(-(float)((double)num * Math.Pow(2.0, (double)(10f * (t -= 1f))) * Math.Sin((double)(t * d - num3) * 6.283185307179586 / (double)num2)) + (double)b);
 		}
 
-		// Token: 0x06006BAD RID: 27565 RVA: 0x001925E8 File Offset: 0x001907E8
+		// Token: 0x06005A5A RID: 23130 RVA: 0x00155AB8 File Offset: 0x00153CB8
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			float num = 0f;
@@ -369,7 +369,7 @@ public class Ease
 			return (float)((double)num * Math.Pow(2.0, (double)(-10f * t)) * Math.Sin((double)(t * d - num3) * 6.283185307179586 / (double)num2) + (double)c + (double)b);
 		}
 
-		// Token: 0x06006BAE RID: 27566 RVA: 0x0019269C File Offset: 0x0019089C
+		// Token: 0x06005A5B RID: 23131 RVA: 0x00155B6C File Offset: 0x00153D6C
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			float num = 0f;
@@ -404,10 +404,10 @@ public class Ease
 		}
 	}
 
-	// Token: 0x02000E2C RID: 3628
+	// Token: 0x02000BE1 RID: 3041
 	public class Expo
 	{
-		// Token: 0x06006BB0 RID: 27568 RVA: 0x001927C1 File Offset: 0x001909C1
+		// Token: 0x06005A5D RID: 23133 RVA: 0x000316D1 File Offset: 0x0002F8D1
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			if (t != 0f)
@@ -417,7 +417,7 @@ public class Ease
 			return b;
 		}
 
-		// Token: 0x06006BB1 RID: 27569 RVA: 0x001927F2 File Offset: 0x001909F2
+		// Token: 0x06005A5E RID: 23134 RVA: 0x00031702 File Offset: 0x0002F902
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			if (t != d)
@@ -427,7 +427,7 @@ public class Ease
 			return b + c;
 		}
 
-		// Token: 0x06006BB2 RID: 27570 RVA: 0x00192828 File Offset: 0x00190A28
+		// Token: 0x06005A5F RID: 23135 RVA: 0x00155C8C File Offset: 0x00153E8C
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			if (t == 0f)
@@ -446,50 +446,50 @@ public class Ease
 		}
 	}
 
-	// Token: 0x02000E2D RID: 3629
+	// Token: 0x02000BE2 RID: 3042
 	public class Linear
 	{
-		// Token: 0x06006BB4 RID: 27572 RVA: 0x001928C3 File Offset: 0x00190AC3
+		// Token: 0x06005A61 RID: 23137 RVA: 0x00031640 File Offset: 0x0002F840
 		public static float EaseNone(float t, float b, float c, float d)
 		{
 			return c * t / d + b;
 		}
 
-		// Token: 0x06006BB5 RID: 27573 RVA: 0x001928CC File Offset: 0x00190ACC
+		// Token: 0x06005A62 RID: 23138 RVA: 0x00031640 File Offset: 0x0002F840
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			return c * t / d + b;
 		}
 
-		// Token: 0x06006BB6 RID: 27574 RVA: 0x001928D5 File Offset: 0x00190AD5
+		// Token: 0x06005A63 RID: 23139 RVA: 0x00031640 File Offset: 0x0002F840
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			return c * t / d + b;
 		}
 
-		// Token: 0x06006BB7 RID: 27575 RVA: 0x001928DE File Offset: 0x00190ADE
+		// Token: 0x06005A64 RID: 23140 RVA: 0x00031640 File Offset: 0x0002F840
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			return c * t / d + b;
 		}
 	}
 
-	// Token: 0x02000E2E RID: 3630
+	// Token: 0x02000BE3 RID: 3043
 	public class Quad
 	{
-		// Token: 0x06006BB9 RID: 27577 RVA: 0x001928EF File Offset: 0x00190AEF
+		// Token: 0x06005A66 RID: 23142 RVA: 0x00031736 File Offset: 0x0002F936
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			return c * (t /= d) * t + b;
 		}
 
-		// Token: 0x06006BBA RID: 27578 RVA: 0x001928FD File Offset: 0x00190AFD
+		// Token: 0x06005A67 RID: 23143 RVA: 0x00031744 File Offset: 0x0002F944
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			return -c * (t /= d) * (t - 2f) + b;
 		}
 
-		// Token: 0x06006BBB RID: 27579 RVA: 0x00192914 File Offset: 0x00190B14
+		// Token: 0x06005A68 RID: 23144 RVA: 0x00155D20 File Offset: 0x00153F20
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			if ((t /= d / 2f) < 1f)
@@ -500,22 +500,22 @@ public class Ease
 		}
 	}
 
-	// Token: 0x02000E2F RID: 3631
+	// Token: 0x02000BE4 RID: 3044
 	public class Quart
 	{
-		// Token: 0x06006BBD RID: 27581 RVA: 0x0019296D File Offset: 0x00190B6D
+		// Token: 0x06005A6A RID: 23146 RVA: 0x00031759 File Offset: 0x0002F959
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			return c * (t /= d) * t * t * t + b;
 		}
 
-		// Token: 0x06006BBE RID: 27582 RVA: 0x0019297F File Offset: 0x00190B7F
+		// Token: 0x06005A6B RID: 23147 RVA: 0x0003176B File Offset: 0x0002F96B
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			return -c * ((t = t / d - 1f) * t * t * t - 1f) + b;
 		}
 
-		// Token: 0x06006BBF RID: 27583 RVA: 0x001929A0 File Offset: 0x00190BA0
+		// Token: 0x06005A6C RID: 23148 RVA: 0x00155D74 File Offset: 0x00153F74
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			if ((t /= d / 2f) < 1f)
@@ -526,22 +526,22 @@ public class Ease
 		}
 	}
 
-	// Token: 0x02000E30 RID: 3632
+	// Token: 0x02000BE5 RID: 3045
 	public class Quint
 	{
-		// Token: 0x06006BC1 RID: 27585 RVA: 0x001929FB File Offset: 0x00190BFB
+		// Token: 0x06005A6E RID: 23150 RVA: 0x0003178A File Offset: 0x0002F98A
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			return c * (t /= d) * t * t * t * t + b;
 		}
 
-		// Token: 0x06006BC2 RID: 27586 RVA: 0x00192A0F File Offset: 0x00190C0F
+		// Token: 0x06005A6F RID: 23151 RVA: 0x0003179E File Offset: 0x0002F99E
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			return c * ((t = t / d - 1f) * t * t * t * t + 1f) + b;
 		}
 
-		// Token: 0x06006BC3 RID: 27587 RVA: 0x00192A30 File Offset: 0x00190C30
+		// Token: 0x06005A70 RID: 23152 RVA: 0x00155DC8 File Offset: 0x00153FC8
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			if ((t /= d / 2f) < 1f)
@@ -552,22 +552,22 @@ public class Ease
 		}
 	}
 
-	// Token: 0x02000E31 RID: 3633
+	// Token: 0x02000BE6 RID: 3046
 	public class Sine
 	{
-		// Token: 0x06006BC5 RID: 27589 RVA: 0x00192A8E File Offset: 0x00190C8E
+		// Token: 0x06005A72 RID: 23154 RVA: 0x000317BE File Offset: 0x0002F9BE
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			return (float)((double)(-(double)c) * Math.Cos((double)(t / d) * 1.5707963267948966) + (double)c + (double)b);
 		}
 
-		// Token: 0x06006BC6 RID: 27590 RVA: 0x00192AAE File Offset: 0x00190CAE
+		// Token: 0x06005A73 RID: 23155 RVA: 0x000317DE File Offset: 0x0002F9DE
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			return (float)((double)c * Math.Sin((double)(t / d) * 1.5707963267948966) + (double)b);
 		}
 
-		// Token: 0x06006BC7 RID: 27591 RVA: 0x00192ACA File Offset: 0x00190CCA
+		// Token: 0x06005A74 RID: 23156 RVA: 0x000317FA File Offset: 0x0002F9FA
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			return (float)((double)(-(double)c / 2f) * (Math.Cos(3.141592653589793 * (double)t / (double)d) - 1.0) + (double)b);

@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x02000976 RID: 2422
+	// Token: 0x02000F2E RID: 3886
 	[AddComponentMenu("Corgi Engine/Character/Abilities/Character Horizontal Movement RL")]
 	public class CharacterHorizontalMovement_RL : CharacterHorizontalMovement
 	{
-		// Token: 0x17001B33 RID: 6963
-		// (get) Token: 0x06005247 RID: 21063 RVA: 0x001244B0 File Offset: 0x001226B0
+		// Token: 0x17002486 RID: 9350
+		// (get) Token: 0x0600706C RID: 28780 RVA: 0x0003E03A File Offset: 0x0003C23A
 		public bool MovementDisabled
 		{
 			get
@@ -19,8 +19,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B34 RID: 6964
-		// (get) Token: 0x06005248 RID: 21064 RVA: 0x001244BF File Offset: 0x001226BF
+		// Token: 0x17002487 RID: 9351
+		// (get) Token: 0x0600706D RID: 28781 RVA: 0x0003E049 File Offset: 0x0003C249
 		public float TopSpeed
 		{
 			get
@@ -29,13 +29,13 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005249 RID: 21065 RVA: 0x001244DF File Offset: 0x001226DF
+		// Token: 0x0600706E RID: 28782 RVA: 0x0003E069 File Offset: 0x0003C269
 		public void DisableMovement(float duration)
 		{
 			this.m_disableMovementTimer = Time.time + duration;
 		}
 
-		// Token: 0x0600524A RID: 21066 RVA: 0x001244EE File Offset: 0x001226EE
+		// Token: 0x0600706F RID: 28783 RVA: 0x0003E078 File Offset: 0x0003C278
 		public void ResetHorizontalMovement()
 		{
 			this._horizontalInput = 0f;
@@ -43,7 +43,7 @@ namespace MoreMountains.CorgiEngine
 			this._normalizedHorizontalSpeed = 0f;
 		}
 
-		// Token: 0x0600524B RID: 21067 RVA: 0x00124511 File Offset: 0x00122711
+		// Token: 0x06007070 RID: 28784 RVA: 0x0003E09B File Offset: 0x0003C29B
 		protected override void HandleInput()
 		{
 			if (!ReInput.isReady)
@@ -57,7 +57,7 @@ namespace MoreMountains.CorgiEngine
 			base.HandleInput();
 		}
 
-		// Token: 0x0600524C RID: 21068 RVA: 0x0012454C File Offset: 0x0012274C
+		// Token: 0x06007071 RID: 28785 RVA: 0x001929FC File Offset: 0x00190BFC
 		protected override void HandleHorizontalMovement()
 		{
 			this.CheckJustGotGrounded();
@@ -190,7 +190,7 @@ namespace MoreMountains.CorgiEngine
 			this._controller.SetHorizontalForce(this._horizontalMovementForce);
 		}
 
-		// Token: 0x0600524D RID: 21069 RVA: 0x00124AEC File Offset: 0x00122CEC
+		// Token: 0x06007072 RID: 28786 RVA: 0x00192F9C File Offset: 0x0019119C
 		protected override void CheckJustGotGrounded()
 		{
 			if (this._controller.State.JustGotGrounded && !this._controller.State.JustStartedJump)
@@ -203,7 +203,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600524E RID: 21070 RVA: 0x00124B5C File Offset: 0x00122D5C
+		// Token: 0x06007073 RID: 28787 RVA: 0x0019300C File Offset: 0x0019120C
 		protected virtual bool LockFlip()
 		{
 			if (this.m_playerController && this.m_playerController.IsInitialized)
@@ -224,14 +224,14 @@ namespace MoreMountains.CorgiEngine
 			return false;
 		}
 
-		// Token: 0x0600524F RID: 21071 RVA: 0x00124C14 File Offset: 0x00122E14
+		// Token: 0x06007074 RID: 28788 RVA: 0x0003E0D6 File Offset: 0x0003C2D6
 		public override void SetHorizontalMove(float value)
 		{
 			base.SetHorizontalMove(value);
 			this._normalizedHorizontalSpeed = value;
 		}
 
-		// Token: 0x06005250 RID: 21072 RVA: 0x00124C24 File Offset: 0x00122E24
+		// Token: 0x06007075 RID: 28789 RVA: 0x0003E0E6 File Offset: 0x0003C2E6
 		protected override void InitializeAnimatorParameters()
 		{
 			this.RegisterAnimatorParameter("Speed", AnimatorControllerParameterType.Float);
@@ -239,7 +239,7 @@ namespace MoreMountains.CorgiEngine
 			this.RegisterAnimatorParameter("Walk_Anim_Speed", AnimatorControllerParameterType.Float);
 		}
 
-		// Token: 0x06005251 RID: 21073 RVA: 0x00124C4C File Offset: 0x00122E4C
+		// Token: 0x06007076 RID: 28790 RVA: 0x001930C4 File Offset: 0x001912C4
 		public override void UpdateAnimator()
 		{
 			float num = 1f;
@@ -277,19 +277,19 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0400445C RID: 17500
+		// Token: 0x04005AB4 RID: 23220
 		[SerializeField]
 		private bool m_analogMovement = true;
 
-		// Token: 0x0400445D RID: 17501
+		// Token: 0x04005AB5 RID: 23221
 		[SerializeField]
 		private float m_baseAnimWalkSpeed = 10f;
 
-		// Token: 0x0400445E RID: 17502
+		// Token: 0x04005AB6 RID: 23222
 		[SerializeField]
 		private float m_baseScaleAnimWalkSpeed = 1f;
 
-		// Token: 0x0400445F RID: 17503
+		// Token: 0x04005AB7 RID: 23223
 		private float m_disableMovementTimer;
 	}
 }

@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200044A RID: 1098
+// Token: 0x0200071E RID: 1822
 public class ExhaustPoint_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 {
-	// Token: 0x0600285D RID: 10333 RVA: 0x00085AF8 File Offset: 0x00083CF8
+	// Token: 0x060037B1 RID: 14257 RVA: 0x000E6A28 File Offset: 0x000E4C28
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		base.Initialize(hazardArgs);
@@ -27,7 +27,7 @@ public class ExhaustPoint_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		this.ResetHazard();
 	}
 
-	// Token: 0x0600285E RID: 10334 RVA: 0x00085BA4 File Offset: 0x00083DA4
+	// Token: 0x060037B2 RID: 14258 RVA: 0x000E6AD4 File Offset: 0x000E4CD4
 	private void FixedUpdate()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -67,7 +67,7 @@ public class ExhaustPoint_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x0600285F RID: 10335 RVA: 0x00085CA2 File Offset: 0x00083EA2
+	// Token: 0x060037B3 RID: 14259 RVA: 0x0001E988 File Offset: 0x0001CB88
 	private IEnumerator IncreaseExhaustCoroutine()
 	{
 		float intervalDuration = 0.01f;
@@ -87,7 +87,7 @@ public class ExhaustPoint_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		yield break;
 	}
 
-	// Token: 0x06002860 RID: 10336 RVA: 0x00085CAA File Offset: 0x00083EAA
+	// Token: 0x060037B4 RID: 14260 RVA: 0x0001E990 File Offset: 0x0001CB90
 	private IEnumerator DecreaseExhaustCoroutine()
 	{
 		float intervalDuration = 0.01f;
@@ -107,7 +107,7 @@ public class ExhaustPoint_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		yield break;
 	}
 
-	// Token: 0x06002861 RID: 10337 RVA: 0x00085CB4 File Offset: 0x00083EB4
+	// Token: 0x060037B5 RID: 14261 RVA: 0x000E6BD4 File Offset: 0x000E4DD4
 	public override void ResetHazard()
 	{
 		this.m_inRange = false;
@@ -115,32 +115,32 @@ public class ExhaustPoint_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		this.m_exhaustPointWarningSprite.gameObject.transform.localScale = localScale;
 	}
 
-	// Token: 0x06002863 RID: 10339 RVA: 0x00085CFF File Offset: 0x00083EFF
+	// Token: 0x060037B7 RID: 14263 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002171 RID: 8561
+	// Token: 0x04002CD1 RID: 11473
 	[SerializeField]
 	private SpriteRenderer m_exhaustPointWarningSprite;
 
-	// Token: 0x04002172 RID: 8562
+	// Token: 0x04002CD2 RID: 11474
 	[SerializeField]
 	private Animator m_exhaustPointWarningAnimator;
 
-	// Token: 0x04002173 RID: 8563
+	// Token: 0x04002CD3 RID: 11475
 	private float m_radius;
 
-	// Token: 0x04002174 RID: 8564
+	// Token: 0x04002CD4 RID: 11476
 	private float m_storedWarningScaleAmount;
 
-	// Token: 0x04002175 RID: 8565
+	// Token: 0x04002CD5 RID: 11477
 	private bool m_inRange;
 
-	// Token: 0x04002176 RID: 8566
+	// Token: 0x04002CD6 RID: 11478
 	private Coroutine m_increaseExhaustCoroutine;
 
-	// Token: 0x04002177 RID: 8567
+	// Token: 0x04002CD7 RID: 11479
 	private Coroutine m_decreaseExhaustCoroutine;
 }

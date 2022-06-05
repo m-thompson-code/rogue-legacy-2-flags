@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000613 RID: 1555
+// Token: 0x02000A35 RID: 2613
 public class UIMessenger : Messenger<UIMessenger, UIEvent>
 {
 }

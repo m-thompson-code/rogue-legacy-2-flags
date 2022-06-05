@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002FC RID: 764
+// Token: 0x02000518 RID: 1304
 public class EnemyComboStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D37 RID: 3383
-	// (get) Token: 0x06001E72 RID: 7794 RVA: 0x00062E34 File Offset: 0x00061034
+	// Token: 0x1700110A RID: 4362
+	// (get) Token: 0x06002A1D RID: 10781 RVA: 0x0001799D File Offset: 0x00015B9D
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyComboStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D38 RID: 3384
-	// (get) Token: 0x06001E73 RID: 7795 RVA: 0x00062E3B File Offset: 0x0006103B
+	// Token: 0x1700110B RID: 4363
+	// (get) Token: 0x06002A1E RID: 10782 RVA: 0x00004536 File Offset: 0x00002736
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,8 +25,8 @@ public class EnemyComboStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D39 RID: 3385
-	// (get) Token: 0x06001E74 RID: 7796 RVA: 0x00062E44 File Offset: 0x00061044
+	// Token: 0x1700110C RID: 4364
+	// (get) Token: 0x06002A1F RID: 10783 RVA: 0x000C11B8 File Offset: 0x000BF3B8
 	public override int StacksPerHit
 	{
 		get
@@ -48,7 +48,7 @@ public class EnemyComboStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E75 RID: 7797 RVA: 0x00062E84 File Offset: 0x00061084
+	// Token: 0x06002A20 RID: 10784 RVA: 0x000C11F8 File Offset: 0x000BF3F8
 	public override void StartEffect(float duration, IDamageObj caster)
 	{
 		float duration2 = duration;
@@ -60,7 +60,7 @@ public class EnemyComboStatusEffect : BaseStatusEffect
 		base.StartEffect(duration2, caster);
 	}
 
-	// Token: 0x06001E76 RID: 7798 RVA: 0x00062EB1 File Offset: 0x000610B1
+	// Token: 0x06002A21 RID: 10785 RVA: 0x000179A4 File Offset: 0x00015BA4
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		base.TimesStacked = Mathf.Clamp(base.TimesStacked, 0, 30);
@@ -73,9 +73,9 @@ public class EnemyComboStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x04001BB4 RID: 7092
+	// Token: 0x04002440 RID: 9280
 	public const float ADD_RELIC_STACKS_HACK = 3.4028235E+38f;
 
-	// Token: 0x04001BB5 RID: 7093
+	// Token: 0x04002441 RID: 9281
 	private bool m_addRelicStacks;
 }

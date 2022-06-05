@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020006C2 RID: 1730
+// Token: 0x02000B6D RID: 2925
 [Serializable]
 public class BonusRoomWeightEntry
 {
-	// Token: 0x04002F41 RID: 12097
+	// Token: 0x04004190 RID: 16784
 	public SpecialRoomType Type;
 
-	// Token: 0x04002F42 RID: 12098
+	// Token: 0x04004191 RID: 16785
 	public int Weight;
 }

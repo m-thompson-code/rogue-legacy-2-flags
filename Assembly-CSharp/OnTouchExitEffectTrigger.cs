@@ -2,11 +2,11 @@
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x02000420 RID: 1056
+// Token: 0x020006D9 RID: 1753
 public class OnTouchExitEffectTrigger : BaseEffectTrigger, IStandingOnExit
 {
-	// Token: 0x17000F8A RID: 3978
-	// (get) Token: 0x06002704 RID: 9988 RVA: 0x00082166 File Offset: 0x00080366
+	// Token: 0x17001451 RID: 5201
+	// (get) Token: 0x060035BF RID: 13759 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool RequiresCollider
 	{
 		get
@@ -15,8 +15,8 @@ public class OnTouchExitEffectTrigger : BaseEffectTrigger, IStandingOnExit
 		}
 	}
 
-	// Token: 0x17000F8B RID: 3979
-	// (get) Token: 0x06002705 RID: 9989 RVA: 0x0008216C File Offset: 0x0008036C
+	// Token: 0x17001452 RID: 5202
+	// (get) Token: 0x060035C0 RID: 13760 RVA: 0x000E24E4 File Offset: 0x000E06E4
 	public override Vector3 Midpoint
 	{
 		get
@@ -29,7 +29,7 @@ public class OnTouchExitEffectTrigger : BaseEffectTrigger, IStandingOnExit
 		}
 	}
 
-	// Token: 0x06002706 RID: 9990 RVA: 0x000821A8 File Offset: 0x000803A8
+	// Token: 0x060035C1 RID: 13761 RVA: 0x000E2520 File Offset: 0x000E0720
 	protected override void Awake()
 	{
 		base.Awake();
@@ -50,7 +50,7 @@ public class OnTouchExitEffectTrigger : BaseEffectTrigger, IStandingOnExit
 		base.gameObject.layer = LayerMask.NameToLayer("Prop_Hitbox");
 	}
 
-	// Token: 0x06002707 RID: 9991 RVA: 0x00082216 File Offset: 0x00080416
+	// Token: 0x060035C2 RID: 13762 RVA: 0x0001D781 File Offset: 0x0001B981
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		base.StopAllCoroutines();
@@ -60,7 +60,7 @@ public class OnTouchExitEffectTrigger : BaseEffectTrigger, IStandingOnExit
 		}
 	}
 
-	// Token: 0x06002708 RID: 9992 RVA: 0x0008222C File Offset: 0x0008042C
+	// Token: 0x060035C3 RID: 13763 RVA: 0x000E2590 File Offset: 0x000E0790
 	private void HandleCollision(Collider2D collision)
 	{
 		if (CollisionType_RL.IsProjectile(collision.gameObject))
@@ -108,7 +108,7 @@ public class OnTouchExitEffectTrigger : BaseEffectTrigger, IStandingOnExit
 		}
 	}
 
-	// Token: 0x06002709 RID: 9993 RVA: 0x00082360 File Offset: 0x00080560
+	// Token: 0x060035C4 RID: 13764 RVA: 0x000E2458 File Offset: 0x000E0658
 	public void OnStandingExit(GameObject otherRootObj)
 	{
 		if (!CDGHelper.DoCollisionTypesCollide_V2(base.CanCollideWith, otherRootObj))
@@ -127,6 +127,6 @@ public class OnTouchExitEffectTrigger : BaseEffectTrigger, IStandingOnExit
 		}
 	}
 
-	// Token: 0x040020C5 RID: 8389
+	// Token: 0x04002BAB RID: 11179
 	protected Collider2D m_collider;
 }

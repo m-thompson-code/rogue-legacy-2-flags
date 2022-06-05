@@ -6,11 +6,11 @@ using ClipperLibFerr;
 using Ferr;
 using UnityEngine;
 
-// Token: 0x02000651 RID: 1617
+// Token: 0x02000A98 RID: 2712
 public static class BiomeCreatorTools
 {
-	// Token: 0x170014A5 RID: 5285
-	// (get) Token: 0x06003A90 RID: 14992 RVA: 0x000C7A2C File Offset: 0x000C5C2C
+	// Token: 0x17001C18 RID: 7192
+	// (get) Token: 0x060051D8 RID: 20952 RVA: 0x001361F8 File Offset: 0x001343F8
 	public static BiomeCreator BiomeCreator
 	{
 		get
@@ -35,7 +35,7 @@ public static class BiomeCreatorTools
 		}
 	}
 
-	// Token: 0x06003A91 RID: 14993 RVA: 0x000C7A8C File Offset: 0x000C5C8C
+	// Token: 0x060051D9 RID: 20953 RVA: 0x00136258 File Offset: 0x00134458
 	public static void PositionRoom(Room destinationRoom, RoomSide atSide, int atDoorIndex, Room room, int doorIndex)
 	{
 		if (destinationRoom == null)
@@ -81,7 +81,7 @@ public static class BiomeCreatorTools
 		}
 	}
 
-	// Token: 0x06003A92 RID: 14994 RVA: 0x000C7BC8 File Offset: 0x000C5DC8
+	// Token: 0x060051DA RID: 20954 RVA: 0x00136394 File Offset: 0x00134594
 	public static void MergeTerrain(BaseRoom room)
 	{
 		if (room == null)
@@ -95,7 +95,7 @@ public static class BiomeCreatorTools
 		}
 	}
 
-	// Token: 0x06003A93 RID: 14995 RVA: 0x000C7C18 File Offset: 0x000C5E18
+	// Token: 0x060051DB RID: 20955 RVA: 0x001363E4 File Offset: 0x001345E4
 	public static void CopyToRoom<T>(List<T> data, Room toRoom, string intoChildNamed = "")
 	{
 		if (toRoom == null)
@@ -130,7 +130,7 @@ public static class BiomeCreatorTools
 		}
 	}
 
-	// Token: 0x06003A94 RID: 14996 RVA: 0x000C7D18 File Offset: 0x000C5F18
+	// Token: 0x060051DC RID: 20956 RVA: 0x001364E4 File Offset: 0x001346E4
 	public static OneWay PlaceOneWayAtDoor(Door door)
 	{
 		if (door == null)
@@ -168,7 +168,7 @@ public static class BiomeCreatorTools
 		return component;
 	}
 
-	// Token: 0x06003A95 RID: 14997 RVA: 0x000C7E68 File Offset: 0x000C6068
+	// Token: 0x060051DD RID: 20957 RVA: 0x00136634 File Offset: 0x00134834
 	public static Sky CreateSkyInstance(BiomeArtData biomeArtData)
 	{
 		if (biomeArtData.SkyData.SkyPrefab)
@@ -184,7 +184,7 @@ public static class BiomeCreatorTools
 		return null;
 	}
 
-	// Token: 0x06003A96 RID: 14998 RVA: 0x000C7EC4 File Offset: 0x000C60C4
+	// Token: 0x060051DE RID: 20958 RVA: 0x00136690 File Offset: 0x00134890
 	public static Weather[] CreateWeatherInstances(BiomeArtData biomeArtData)
 	{
 		BiomeCreatorTools.m_weatherList_STATIC.Clear();
@@ -205,7 +205,7 @@ public static class BiomeCreatorTools
 		return null;
 	}
 
-	// Token: 0x06003A97 RID: 14999 RVA: 0x000C7F44 File Offset: 0x000C6144
+	// Token: 0x060051DF RID: 20959 RVA: 0x00136710 File Offset: 0x00134910
 	public static void CreateBackground(BaseRoom targetRoom)
 	{
 		if (targetRoom is Room)
@@ -305,7 +305,7 @@ public static class BiomeCreatorTools
 		}
 	}
 
-	// Token: 0x06003A98 RID: 15000 RVA: 0x000C82D0 File Offset: 0x000C64D0
+	// Token: 0x060051E0 RID: 20960 RVA: 0x00136A9C File Offset: 0x00134C9C
 	private static Background GetBackgroundPrefab(BackgroundBiomeArtData backgroundData)
 	{
 		if (backgroundData != null && backgroundData.Backgrounds != null && backgroundData.Backgrounds.Count > 0)
@@ -319,7 +319,7 @@ public static class BiomeCreatorTools
 		return null;
 	}
 
-	// Token: 0x06003A99 RID: 15001 RVA: 0x000C834D File Offset: 0x000C654D
+	// Token: 0x060051E1 RID: 20961 RVA: 0x0002CA83 File Offset: 0x0002AC83
 	public static CinemachineVirtualCamera CreateCinemachineVirtualCamera(BaseRoom room)
 	{
 		if (room == null)
@@ -329,7 +329,7 @@ public static class BiomeCreatorTools
 		return UnityEngine.Object.Instantiate<CinemachineVirtualCamera>(RoomPrefabLibrary.CinemachineVirtualCameraPrefab, room.gameObject.transform, false);
 	}
 
-	// Token: 0x06003A9A RID: 15002 RVA: 0x000C837C File Offset: 0x000C657C
+	// Token: 0x060051E2 RID: 20962 RVA: 0x00136B1C File Offset: 0x00134D1C
 	public static void SetOuterEdges(IEnumerable<Ferr2DT_PathTerrain> terrainToSet, Bounds bounds)
 	{
 		foreach (Ferr2DT_PathTerrain terrain in terrainToSet)
@@ -338,7 +338,7 @@ public static class BiomeCreatorTools
 		}
 	}
 
-	// Token: 0x06003A9B RID: 15003 RVA: 0x000C83C4 File Offset: 0x000C65C4
+	// Token: 0x060051E3 RID: 20963 RVA: 0x00136B64 File Offset: 0x00134D64
 	public static void SetOuterEdges(Ferr2DT_PathTerrain terrain, Bounds bounds)
 	{
 		int count = terrain.PathData.Count;
@@ -365,7 +365,7 @@ public static class BiomeCreatorTools
 		}
 	}
 
-	// Token: 0x06003A9C RID: 15004 RVA: 0x000C847C File Offset: 0x000C667C
+	// Token: 0x060051E4 RID: 20964 RVA: 0x00136C1C File Offset: 0x00134E1C
 	public static bool AreBothPointsOnSameEdge(Bounds bounds, Vector2 pointA, Vector2 pointB)
 	{
 		bool result = false;
@@ -376,7 +376,7 @@ public static class BiomeCreatorTools
 		return result;
 	}
 
-	// Token: 0x06003A9D RID: 15005 RVA: 0x000C8530 File Offset: 0x000C6730
+	// Token: 0x060051E5 RID: 20965 RVA: 0x00136CD0 File Offset: 0x00134ED0
 	private static bool GetIsPointInRoom(BaseRoom room, Vector2 point)
 	{
 		bool result = false;
@@ -398,7 +398,7 @@ public static class BiomeCreatorTools
 		return result;
 	}
 
-	// Token: 0x06003A9E RID: 15006 RVA: 0x000C8594 File Offset: 0x000C6794
+	// Token: 0x060051E6 RID: 20966 RVA: 0x00136D34 File Offset: 0x00134F34
 	public static List<Door> GetDoorsInRoomThatFit(Door door, Room room)
 	{
 		List<Door> doorsOnSide = room.GetDoorsOnSide(RoomUtility.GetOppositeSide(door.Side));
@@ -437,7 +437,7 @@ public static class BiomeCreatorTools
 		return doorsOnSide;
 	}
 
-	// Token: 0x06003A9F RID: 15007 RVA: 0x000C8704 File Offset: 0x000C6904
+	// Token: 0x060051E7 RID: 20967 RVA: 0x00136EA4 File Offset: 0x001350A4
 	public static Vector2 GetCoordinatesOfRoomConnectedToDoor(Door door, Vector2Int roomSize, int doorNumber)
 	{
 		float x = 0f;
@@ -462,20 +462,20 @@ public static class BiomeCreatorTools
 		return door.Coordinates - new Vector2(x, y);
 	}
 
-	// Token: 0x06003AA0 RID: 15008 RVA: 0x000C8780 File Offset: 0x000C6980
+	// Token: 0x060051E8 RID: 20968 RVA: 0x00136F20 File Offset: 0x00135120
 	public static bool CanRoomFit(Vector2 coordinates, Vector2 roomSize)
 	{
 		Vector2 a = new Vector2(roomSize.x * 32f, roomSize.y * 18f);
 		return !Physics2D.OverlapBox(coordinates + 0.5f * a, BiomeCreatorTools.ROOM_COLLIDER_SCALE * a, 0f, BiomeCreatorTools.ROOM_COLLISION_CHECK_LAYER_MASK);
 	}
 
-	// Token: 0x06003AA1 RID: 15009 RVA: 0x000C87E4 File Offset: 0x000C69E4
+	// Token: 0x060051E9 RID: 20969 RVA: 0x0002CAAF File Offset: 0x0002ACAF
 	public static bool CanRoomFit(Vector2 coordinates, Room room)
 	{
 		return BiomeCreatorTools.CanRoomFit(coordinates, room.Size);
 	}
 
-	// Token: 0x06003AA2 RID: 15010 RVA: 0x000C87F8 File Offset: 0x000C69F8
+	// Token: 0x060051EA RID: 20970 RVA: 0x00136F84 File Offset: 0x00135184
 	public static void GrowTerrainAlongEdge(BaseRoom room)
 	{
 		float num = 2f;
@@ -545,7 +545,7 @@ public static class BiomeCreatorTools
 		}
 	}
 
-	// Token: 0x06003AA3 RID: 15011 RVA: 0x000C8AB8 File Offset: 0x000C6CB8
+	// Token: 0x060051EB RID: 20971 RVA: 0x00137244 File Offset: 0x00135444
 	public static void SimplifyAllFerr2DColliders(BaseRoom room, bool rebuild, bool applyBoxConversion)
 	{
 		if (room.TerrainManager == null)
@@ -598,7 +598,7 @@ public static class BiomeCreatorTools
 		}
 	}
 
-	// Token: 0x06003AA4 RID: 15012 RVA: 0x000C8C34 File Offset: 0x000C6E34
+	// Token: 0x060051EC RID: 20972 RVA: 0x001373C0 File Offset: 0x001355C0
 	public static void CloseUnconnectedDoorsInRoom(Room room)
 	{
 		if (room == null)
@@ -640,48 +640,48 @@ public static class BiomeCreatorTools
 		}
 	}
 
-	// Token: 0x04002CD2 RID: 11474
+	// Token: 0x04003DB4 RID: 15796
 	private static float ROOM_COLLIDER_SCALE = 0.9f;
 
-	// Token: 0x04002CD3 RID: 11475
+	// Token: 0x04003DB5 RID: 15797
 	private static LayerMask ROOM_COLLISION_CHECK_LAYER_MASK = LayerMask.NameToLayer("LevelBounds");
 
-	// Token: 0x04002CD4 RID: 11476
+	// Token: 0x04003DB6 RID: 15798
 	private const float OUTER_EDGE_MULTIPLIER = 0.5f;
 
-	// Token: 0x04002CD5 RID: 11477
+	// Token: 0x04003DB7 RID: 15799
 	private const string LEVEL_MANAGER_NAME = "LevelManager";
 
-	// Token: 0x04002CD6 RID: 11478
+	// Token: 0x04003DB8 RID: 15800
 	private const string LEVEL_EDITOR_NAME = "LevelEditor";
 
-	// Token: 0x04002CD7 RID: 11479
+	// Token: 0x04003DB9 RID: 15801
 	private const string DOORS_CHILD_NAME = "Doors";
 
-	// Token: 0x04002CD8 RID: 11480
+	// Token: 0x04003DBA RID: 15802
 	private const string WALLS_CHILD_NAME = "Walls";
 
-	// Token: 0x04002CD9 RID: 11481
+	// Token: 0x04003DBB RID: 15803
 	private const string ONE_WAYS_CHILD_NAME = "One Ways";
 
-	// Token: 0x04002CDA RID: 11482
+	// Token: 0x04003DBC RID: 15804
 	private const string ENEMIES_CHILD_NAME = "Enemies";
 
-	// Token: 0x04002CDB RID: 11483
+	// Token: 0x04003DBD RID: 15805
 	private const string ITEMS_CHILD_NAME = "Items";
 
-	// Token: 0x04002CDC RID: 11484
+	// Token: 0x04003DBE RID: 15806
 	private const string CHESTS_CHILD_NAME = "Chests";
 
-	// Token: 0x04002CDD RID: 11485
+	// Token: 0x04003DBF RID: 15807
 	private const string CINEMACHINE_VIRTUAL_CAMERA_PREFAB_PATH = "Prefabs/Camera/Cinemachine Virtual Camera";
 
-	// Token: 0x04002CDE RID: 11486
+	// Token: 0x04003DC0 RID: 15808
 	private static BiomeCreator m_biomeCreator = null;
 
-	// Token: 0x04002CDF RID: 11487
+	// Token: 0x04003DC1 RID: 15809
 	private static List<Weather> m_weatherList_STATIC = new List<Weather>();
 
-	// Token: 0x04002CE0 RID: 11488
+	// Token: 0x04003DC2 RID: 15810
 	private static List<BackgroundPoolEntry> m_backgroundPoolEntryHelper = new List<BackgroundPoolEntry>();
 }

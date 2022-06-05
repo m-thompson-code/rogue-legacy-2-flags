@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000228 RID: 552
+// Token: 0x020003DF RID: 991
 [CreateAssetMenu(menuName = "Custom/Libraries/Enemy Class Library")]
 public class EnemyClassLibrary : ScriptableObject
 {
-	// Token: 0x17000B2A RID: 2858
-	// (get) Token: 0x0600168E RID: 5774 RVA: 0x000464C8 File Offset: 0x000446C8
+	// Token: 0x17000E53 RID: 3667
+	// (get) Token: 0x06002033 RID: 8243 RVA: 0x00011136 File Offset: 0x0000F336
 	private static EnemyClassLibrary Instance
 	{
 		get
@@ -19,7 +19,7 @@ public class EnemyClassLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x0600168F RID: 5775 RVA: 0x000464F4 File Offset: 0x000446F4
+	// Token: 0x06002034 RID: 8244 RVA: 0x000A4784 File Offset: 0x000A2984
 	public static EnemyClassData GetEnemyClassData(EnemyType enemyType)
 	{
 		EnemyClassData enemyClassData = null;
@@ -35,7 +35,7 @@ public class EnemyClassLibrary : ScriptableObject
 		throw new Exception("Enemy Class Library is null.");
 	}
 
-	// Token: 0x06001690 RID: 5776 RVA: 0x00046560 File Offset: 0x00044760
+	// Token: 0x06002035 RID: 8245 RVA: 0x000A47F0 File Offset: 0x000A29F0
 	public static EnemyData GetEnemyData(EnemyType enemyType, EnemyRank enemyRank)
 	{
 		EnemyClassData enemyClassData = null;
@@ -52,13 +52,13 @@ public class EnemyClassLibrary : ScriptableObject
 		return enemyClassData.GetEnemyData(enemyRank);
 	}
 
-	// Token: 0x040015C5 RID: 5573
+	// Token: 0x04001CD5 RID: 7381
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/EnemyClassLibrary";
 
-	// Token: 0x040015C6 RID: 5574
+	// Token: 0x04001CD6 RID: 7382
 	[SerializeField]
 	private EnemyTypeEnemyClassDataDictionary m_enemyClassLibrary;
 
-	// Token: 0x040015C7 RID: 5575
+	// Token: 0x04001CD7 RID: 7383
 	private static EnemyClassLibrary m_instance;
 }

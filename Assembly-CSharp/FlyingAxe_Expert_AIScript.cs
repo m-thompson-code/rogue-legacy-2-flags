@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000D2 RID: 210
+// Token: 0x02000152 RID: 338
 public class FlyingAxe_Expert_AIScript : FlyingAxe_Basic_AIScript
 {
-	// Token: 0x170002FF RID: 767
-	// (get) Token: 0x06000613 RID: 1555 RVA: 0x00018E04 File Offset: 0x00017004
+	// Token: 0x170003EF RID: 1007
+	// (get) Token: 0x060008E8 RID: 2280 RVA: 0x00006308 File Offset: 0x00004508
 	protected override float m_sideSpin_Attack_TurnSpeed
 	{
 		get
@@ -13,8 +13,8 @@ public class FlyingAxe_Expert_AIScript : FlyingAxe_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000300 RID: 768
-	// (get) Token: 0x06000614 RID: 1556 RVA: 0x00018E0B File Offset: 0x0001700B
+	// Token: 0x170003F0 RID: 1008
+	// (get) Token: 0x060008E9 RID: 2281 RVA: 0x00003CC4 File Offset: 0x00001EC4
 	protected override float m_sideSpin_Attack_MovementSpeed
 	{
 		get
@@ -23,8 +23,8 @@ public class FlyingAxe_Expert_AIScript : FlyingAxe_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000301 RID: 769
-	// (get) Token: 0x06000615 RID: 1557 RVA: 0x00018E12 File Offset: 0x00017012
+	// Token: 0x170003F1 RID: 1009
+	// (get) Token: 0x060008EA RID: 2282 RVA: 0x00005319 File Offset: 0x00003519
 	protected override float m_vertSpin_Attack_MovementSpeed
 	{
 		get

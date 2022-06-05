@@ -3,10 +3,10 @@ using System.Collections;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000554 RID: 1364
+// Token: 0x0200090D RID: 2317
 public class GardenHubTownController : BaseSpecialRoomController
 {
-	// Token: 0x06003216 RID: 12822 RVA: 0x000A9C40 File Offset: 0x000A7E40
+	// Token: 0x06004661 RID: 18017 RVA: 0x00113BBC File Offset: 0x00111DBC
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -32,7 +32,7 @@ public class GardenHubTownController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06003217 RID: 12823 RVA: 0x000A9D34 File Offset: 0x000A7F34
+	// Token: 0x06004662 RID: 18018 RVA: 0x00113CB0 File Offset: 0x00111EB0
 	protected override void OnPlayerExitRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerExitRoom(sender, eventArgs);
@@ -47,7 +47,7 @@ public class GardenHubTownController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06003218 RID: 12824 RVA: 0x000A9DC7 File Offset: 0x000A7FC7
+	// Token: 0x06004663 RID: 18019 RVA: 0x00026AB3 File Offset: 0x00024CB3
 	private IEnumerator FlipPlayer()
 	{
 		yield return null;
@@ -59,7 +59,7 @@ public class GardenHubTownController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x04002766 RID: 10086
+	// Token: 0x0400364A RID: 13898
 	[SerializeField]
 	private GameObject m_castleParentObj;
 }

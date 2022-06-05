@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000F5 RID: 245
+// Token: 0x0200018C RID: 396
 public class MimicChestBoss_Advanced_AIScript : MimicChestBoss_Basic_AIScript
 {
-	// Token: 0x170003FF RID: 1023
-	// (get) Token: 0x06000777 RID: 1911 RVA: 0x0001A85B File Offset: 0x00018A5B
+	// Token: 0x1700051D RID: 1309
+	// (get) Token: 0x06000AD6 RID: 2774 RVA: 0x00006CA2 File Offset: 0x00004EA2
 	protected override Vector2 JumpHeight
 	{
 		get
@@ -14,8 +14,8 @@ public class MimicChestBoss_Advanced_AIScript : MimicChestBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000400 RID: 1024
-	// (get) Token: 0x06000778 RID: 1912 RVA: 0x0001A86C File Offset: 0x00018A6C
+	// Token: 0x1700051E RID: 1310
+	// (get) Token: 0x06000AD7 RID: 2775 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override int NumCoinsFiredOnLanding
 	{
 		get
@@ -24,8 +24,8 @@ public class MimicChestBoss_Advanced_AIScript : MimicChestBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000401 RID: 1025
-	// (get) Token: 0x06000779 RID: 1913 RVA: 0x0001A86F File Offset: 0x00018A6F
+	// Token: 0x1700051F RID: 1311
+	// (get) Token: 0x06000AD8 RID: 2776 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_advancedBoss
 	{
 		get
@@ -34,8 +34,8 @@ public class MimicChestBoss_Advanced_AIScript : MimicChestBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000402 RID: 1026
-	// (get) Token: 0x0600077A RID: 1914 RVA: 0x0001A872 File Offset: 0x00018A72
+	// Token: 0x17000520 RID: 1312
+	// (get) Token: 0x06000AD9 RID: 2777 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected override int m_verticalShot_TotalShotSpread
 	{
 		get
@@ -44,8 +44,8 @@ public class MimicChestBoss_Advanced_AIScript : MimicChestBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000403 RID: 1027
-	// (get) Token: 0x0600077B RID: 1915 RVA: 0x0001A875 File Offset: 0x00018A75
+	// Token: 0x17000521 RID: 1313
+	// (get) Token: 0x06000ADA RID: 2778 RVA: 0x00004A07 File Offset: 0x00002C07
 	protected override int m_verticalShot_TotalLoops
 	{
 		get
@@ -54,8 +54,8 @@ public class MimicChestBoss_Advanced_AIScript : MimicChestBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000404 RID: 1028
-	// (get) Token: 0x0600077C RID: 1916 RVA: 0x0001A878 File Offset: 0x00018A78
+	// Token: 0x17000522 RID: 1314
+	// (get) Token: 0x06000ADB RID: 2779 RVA: 0x00006CB3 File Offset: 0x00004EB3
 	protected override int m_verticalShot_InitialAngle
 	{
 		get
@@ -64,8 +64,8 @@ public class MimicChestBoss_Advanced_AIScript : MimicChestBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000405 RID: 1029
-	// (get) Token: 0x0600077D RID: 1917 RVA: 0x0001A87C File Offset: 0x00018A7C
+	// Token: 0x17000523 RID: 1315
+	// (get) Token: 0x06000ADC RID: 2780 RVA: 0x00006CB7 File Offset: 0x00004EB7
 	protected override Vector2 m_verticalShot_RandomAngleAngleOffset
 	{
 		get
@@ -74,8 +74,8 @@ public class MimicChestBoss_Advanced_AIScript : MimicChestBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000406 RID: 1030
-	// (get) Token: 0x0600077E RID: 1918 RVA: 0x0001A88D File Offset: 0x00018A8D
+	// Token: 0x17000524 RID: 1316
+	// (get) Token: 0x06000ADD RID: 2781 RVA: 0x00006CC8 File Offset: 0x00004EC8
 	protected override float m_verticalShot_LoopDelay
 	{
 		get
@@ -84,8 +84,8 @@ public class MimicChestBoss_Advanced_AIScript : MimicChestBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000407 RID: 1031
-	// (get) Token: 0x0600077F RID: 1919 RVA: 0x0001A894 File Offset: 0x00018A94
+	// Token: 0x17000525 RID: 1317
+	// (get) Token: 0x06000ADE RID: 2782 RVA: 0x00004FDE File Offset: 0x000031DE
 	protected override float m_verticalShot_SpeedMod
 	{
 		get

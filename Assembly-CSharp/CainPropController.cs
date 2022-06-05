@@ -4,11 +4,11 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004CF RID: 1231
+// Token: 0x020007FA RID: 2042
 public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubble, IAudioEventEmitter
 {
-	// Token: 0x1700115B RID: 4443
-	// (get) Token: 0x06002DCB RID: 11723 RVA: 0x0009A68A File Offset: 0x0009888A
+	// Token: 0x170016E8 RID: 5864
+	// (get) Token: 0x06003EE9 RID: 16105 RVA: 0x00022CED File Offset: 0x00020EED
 	public GameObject Cape
 	{
 		get
@@ -17,8 +17,8 @@ public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubbl
 		}
 	}
 
-	// Token: 0x1700115C RID: 4444
-	// (get) Token: 0x06002DCC RID: 11724 RVA: 0x0009A692 File Offset: 0x00098892
+	// Token: 0x170016E9 RID: 5865
+	// (get) Token: 0x06003EEA RID: 16106 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -27,8 +27,8 @@ public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubbl
 		}
 	}
 
-	// Token: 0x1700115D RID: 4445
-	// (get) Token: 0x06002DCD RID: 11725 RVA: 0x0009A695 File Offset: 0x00098895
+	// Token: 0x170016EA RID: 5866
+	// (get) Token: 0x06003EEB RID: 16107 RVA: 0x000047A7 File Offset: 0x000029A7
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -37,8 +37,8 @@ public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubbl
 		}
 	}
 
-	// Token: 0x1700115E RID: 4446
-	// (get) Token: 0x06002DCE RID: 11726 RVA: 0x0009A698 File Offset: 0x00098898
+	// Token: 0x170016EB RID: 5867
+	// (get) Token: 0x06003EEC RID: 16108 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -47,7 +47,7 @@ public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubbl
 		}
 	}
 
-	// Token: 0x06002DCF RID: 11727 RVA: 0x0009A6A0 File Offset: 0x000988A0
+	// Token: 0x06003EED RID: 16109 RVA: 0x00022CF5 File Offset: 0x00020EF5
 	protected override void Awake()
 	{
 		base.Awake();
@@ -55,7 +55,7 @@ public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubbl
 		this.m_startRoomIntro = new Action(this.StartRoomIntro);
 	}
 
-	// Token: 0x06002DD0 RID: 11728 RVA: 0x0009A6C6 File Offset: 0x000988C6
+	// Token: 0x06003EEE RID: 16110 RVA: 0x00022D1B File Offset: 0x00020F1B
 	protected override void InitializePooledPropOnEnter()
 	{
 		this.m_interactable.SetIsInteractableActive(true);
@@ -65,14 +65,14 @@ public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubbl
 		}
 	}
 
-	// Token: 0x06002DD1 RID: 11729 RVA: 0x0009A6EC File Offset: 0x000988EC
+	// Token: 0x06003EEF RID: 16111 RVA: 0x00022D41 File Offset: 0x00020F41
 	public void TalkToCain()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
 		base.StartCoroutine(this.TalkToCainCoroutine());
 	}
 
-	// Token: 0x06002DD2 RID: 11730 RVA: 0x0009A707 File Offset: 0x00098907
+	// Token: 0x06003EF0 RID: 16112 RVA: 0x00022D5C File Offset: 0x00020F5C
 	private IEnumerator TalkToCainCoroutine()
 	{
 		AudioManager.PlayOneShot(this, "event:/SFX/Enemies/Cain/vo_cain_greeting", base.transform.position);
@@ -87,7 +87,7 @@ public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubbl
 		yield break;
 	}
 
-	// Token: 0x06002DD3 RID: 11731 RVA: 0x0009A718 File Offset: 0x00098918
+	// Token: 0x06003EF1 RID: 16113 RVA: 0x000FBD94 File Offset: 0x000F9F94
 	private void RunDialogue()
 	{
 		DialogueManager.StartNewDialogue(null, NPCState.Idle);
@@ -96,7 +96,7 @@ public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubbl
 		WindowManager.SetWindowIsOpen(WindowID.Dialogue, true);
 	}
 
-	// Token: 0x06002DD4 RID: 11732 RVA: 0x0009A764 File Offset: 0x00098964
+	// Token: 0x06003EF2 RID: 16114 RVA: 0x000FBDE0 File Offset: 0x000F9FE0
 	private void StartRoomIntro()
 	{
 		FinalBossRoomController component = base.Room.GetComponent<FinalBossRoomController>();
@@ -109,7 +109,7 @@ public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubbl
 		Debug.Log("Could not trigger boss intro.  FinalBossRoomController not found in room.");
 	}
 
-	// Token: 0x06002DD5 RID: 11733 RVA: 0x0009A79C File Offset: 0x0009899C
+	// Token: 0x06003EF3 RID: 16115 RVA: 0x00022D6B File Offset: 0x00020F6B
 	private IEnumerator MovePlayerToCain()
 	{
 		PlayerManager.GetPlayerController().SetVelocity(0f, 0f, false);
@@ -128,22 +128,22 @@ public class CainPropController : BaseSpecialPropController, IDisplaySpeechBubbl
 		yield break;
 	}
 
-	// Token: 0x06002DD6 RID: 11734 RVA: 0x0009A7AB File Offset: 0x000989AB
+	// Token: 0x06003EF4 RID: 16116 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 	}
 
-	// Token: 0x0400249F RID: 9375
+	// Token: 0x04003147 RID: 12615
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x040024A0 RID: 9376
+	// Token: 0x04003148 RID: 12616
 	[SerializeField]
 	private GameObject m_cainCape;
 
-	// Token: 0x040024A1 RID: 9377
+	// Token: 0x04003149 RID: 12617
 	private Prop m_prop;
 
-	// Token: 0x040024A2 RID: 9378
+	// Token: 0x0400314A RID: 12618
 	private Action m_startRoomIntro;
 }

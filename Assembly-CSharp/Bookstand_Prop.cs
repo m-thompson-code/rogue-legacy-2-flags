@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020005FB RID: 1531
+// Token: 0x02000A18 RID: 2584
 public class Bookstand_Prop : Prop
 {
-	// Token: 0x0600376A RID: 14186 RVA: 0x000BDE04 File Offset: 0x000BC004
+	// Token: 0x06004DF3 RID: 19955 RVA: 0x0012C9E0 File Offset: 0x0012ABE0
 	public override void Initialize(BaseRoom room, PropSpawnController propSpawnController)
 	{
 		base.Initialize(room, propSpawnController);
@@ -41,13 +41,13 @@ public class Bookstand_Prop : Prop
 		}
 	}
 
-	// Token: 0x04002A93 RID: 10899
+	// Token: 0x04003AE5 RID: 15077
 	[SerializeField]
 	private SpriteRenderer m_legs;
 
-	// Token: 0x04002A94 RID: 10900
+	// Token: 0x04003AE6 RID: 15078
 	private const int MAX_RAYCAST_DISTANCE = 18;
 
-	// Token: 0x04002A95 RID: 10901
+	// Token: 0x04003AE7 RID: 15079
 	private List<RaycastHit2D> m_hitInfo = new List<RaycastHit2D>(2);
 }

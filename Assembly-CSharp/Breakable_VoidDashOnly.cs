@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020003F6 RID: 1014
+// Token: 0x0200069F RID: 1695
 public class Breakable_VoidDashOnly : Breakable, IDamageObj
 {
-	// Token: 0x17000F24 RID: 3876
-	// (get) Token: 0x060025A2 RID: 9634 RVA: 0x0007C6CE File Offset: 0x0007A8CE
+	// Token: 0x170013D3 RID: 5075
+	// (get) Token: 0x06003410 RID: 13328 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string RelicDamageTypeString
 	{
 		get
@@ -14,8 +14,8 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F25 RID: 3877
-	// (get) Token: 0x060025A3 RID: 9635 RVA: 0x0007C6D1 File Offset: 0x0007A8D1
+	// Token: 0x170013D4 RID: 5076
+	// (get) Token: 0x06003411 RID: 13329 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float BaseDamage
 	{
 		get
@@ -24,8 +24,8 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F26 RID: 3878
-	// (get) Token: 0x060025A4 RID: 9636 RVA: 0x0007C6D8 File Offset: 0x0007A8D8
+	// Token: 0x170013D5 RID: 5077
+	// (get) Token: 0x06003412 RID: 13330 RVA: 0x0001C925 File Offset: 0x0001AB25
 	public float ActualDamage
 	{
 		get
@@ -34,8 +34,8 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F27 RID: 3879
-	// (get) Token: 0x060025A5 RID: 9637 RVA: 0x0007C6E4 File Offset: 0x0007A8E4
+	// Token: 0x170013D6 RID: 5078
+	// (get) Token: 0x06003413 RID: 13331 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritChance
 	{
 		get
@@ -44,8 +44,8 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F28 RID: 3880
-	// (get) Token: 0x060025A6 RID: 9638 RVA: 0x0007C6EB File Offset: 0x0007A8EB
+	// Token: 0x170013D7 RID: 5079
+	// (get) Token: 0x06003414 RID: 13332 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritDamage
 	{
 		get
@@ -54,8 +54,8 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F29 RID: 3881
-	// (get) Token: 0x060025A7 RID: 9639 RVA: 0x0007C6F2 File Offset: 0x0007A8F2
+	// Token: 0x170013D8 RID: 5080
+	// (get) Token: 0x06003415 RID: 13333 RVA: 0x0001484F File Offset: 0x00012A4F
 	public Vector2 ExternalKnockbackMod
 	{
 		get
@@ -64,13 +64,13 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F2A RID: 3882
-	// (get) Token: 0x060025A8 RID: 9640 RVA: 0x0007C6F9 File Offset: 0x0007A8F9
-	// (set) Token: 0x060025A9 RID: 9641 RVA: 0x0007C701 File Offset: 0x0007A901
+	// Token: 0x170013D9 RID: 5081
+	// (get) Token: 0x06003416 RID: 13334 RVA: 0x0001C931 File Offset: 0x0001AB31
+	// (set) Token: 0x06003417 RID: 13335 RVA: 0x0001C939 File Offset: 0x0001AB39
 	public float BaseKnockbackStrength { get; set; }
 
-	// Token: 0x17000F2B RID: 3883
-	// (get) Token: 0x060025AA RID: 9642 RVA: 0x0007C70A File Offset: 0x0007A90A
+	// Token: 0x170013DA RID: 5082
+	// (get) Token: 0x06003418 RID: 13336 RVA: 0x00003C70 File Offset: 0x00001E70
 	public float ActualKnockbackStrength
 	{
 		get
@@ -79,13 +79,13 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F2C RID: 3884
-	// (get) Token: 0x060025AB RID: 9643 RVA: 0x0007C711 File Offset: 0x0007A911
-	// (set) Token: 0x060025AC RID: 9644 RVA: 0x0007C719 File Offset: 0x0007A919
+	// Token: 0x170013DB RID: 5083
+	// (get) Token: 0x06003419 RID: 13337 RVA: 0x0001C942 File Offset: 0x0001AB42
+	// (set) Token: 0x0600341A RID: 13338 RVA: 0x0001C94A File Offset: 0x0001AB4A
 	public float BaseStunStrength { get; set; }
 
-	// Token: 0x17000F2D RID: 3885
-	// (get) Token: 0x060025AD RID: 9645 RVA: 0x0007C722 File Offset: 0x0007A922
+	// Token: 0x170013DC RID: 5084
+	// (get) Token: 0x0600341B RID: 13339 RVA: 0x00003C70 File Offset: 0x00001E70
 	public float ActualStunStrength
 	{
 		get
@@ -94,8 +94,8 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F2E RID: 3886
-	// (get) Token: 0x060025AE RID: 9646 RVA: 0x0007C729 File Offset: 0x0007A929
+	// Token: 0x170013DD RID: 5085
+	// (get) Token: 0x0600341C RID: 13340 RVA: 0x000046FA File Offset: 0x000028FA
 	public StrikeType StrikeType
 	{
 		get
@@ -104,8 +104,8 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F2F RID: 3887
-	// (get) Token: 0x060025AF RID: 9647 RVA: 0x0007C72D File Offset: 0x0007A92D
+	// Token: 0x170013DE RID: 5086
+	// (get) Token: 0x0600341D RID: 13341 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public bool IsDotDamage
 	{
 		get
@@ -114,8 +114,8 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F30 RID: 3888
-	// (get) Token: 0x060025B0 RID: 9648 RVA: 0x0007C730 File Offset: 0x0007A930
+	// Token: 0x170013DF RID: 5087
+	// (get) Token: 0x0600341E RID: 13342 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public StatusEffectType[] StatusEffectTypes
 	{
 		get
@@ -124,8 +124,8 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x17000F31 RID: 3889
-	// (get) Token: 0x060025B1 RID: 9649 RVA: 0x0007C733 File Offset: 0x0007A933
+	// Token: 0x170013E0 RID: 5088
+	// (get) Token: 0x0600341F RID: 13343 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public float[] StatusEffectDurations
 	{
 		get
@@ -134,7 +134,7 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x060025B2 RID: 9650 RVA: 0x0007C736 File Offset: 0x0007A936
+	// Token: 0x06003420 RID: 13344 RVA: 0x0001C953 File Offset: 0x0001AB53
 	protected override void Awake()
 	{
 		base.Awake();
@@ -142,7 +142,7 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		this.m_voidDissolve = base.GetComponent<VoidDissolveComponent>();
 	}
 
-	// Token: 0x060025B3 RID: 9651 RVA: 0x0007C75A File Offset: 0x0007A95A
+	// Token: 0x06003421 RID: 13345 RVA: 0x0001C977 File Offset: 0x0001AB77
 	protected override void TriggerCollision(IDamageObj damageObj)
 	{
 		if (PlayerManager.GetPlayerController().CharacterDash.IsDashing && SaveManager.PlayerSaveData.GetHeirloomLevel(HeirloomType.UnlockVoidDash) > 0)
@@ -151,7 +151,7 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x060025B4 RID: 9652 RVA: 0x0007C783 File Offset: 0x0007A983
+	// Token: 0x06003422 RID: 13346 RVA: 0x0001C9A0 File Offset: 0x0001ABA0
 	protected override void Break(IDamageObj damageObj)
 	{
 		base.Break(damageObj);
@@ -161,7 +161,7 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		}
 	}
 
-	// Token: 0x060025B5 RID: 9653 RVA: 0x0007C7A5 File Offset: 0x0007A9A5
+	// Token: 0x06003423 RID: 13347 RVA: 0x0001C9C2 File Offset: 0x0001ABC2
 	public override void ForceBrokenState(bool isBroken)
 	{
 		if (isBroken)
@@ -171,12 +171,12 @@ public class Breakable_VoidDashOnly : Breakable, IDamageObj
 		base.ForceBrokenState(isBroken);
 	}
 
-	// Token: 0x060025B7 RID: 9655 RVA: 0x0007C7C4 File Offset: 0x0007A9C4
+	// Token: 0x06003425 RID: 13349 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IDamageObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04001F97 RID: 8087
+	// Token: 0x04002A38 RID: 10808
 	private VoidDissolveComponent m_voidDissolve;
 }

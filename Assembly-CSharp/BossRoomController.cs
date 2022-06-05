@@ -7,11 +7,11 @@ using RL_Windows;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020004ED RID: 1261
+// Token: 0x02000842 RID: 2114
 public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 {
-	// Token: 0x170011A4 RID: 4516
-	// (get) Token: 0x06002F42 RID: 12098 RVA: 0x000A17AD File Offset: 0x0009F9AD
+	// Token: 0x1700177D RID: 6013
+	// (get) Token: 0x06004144 RID: 16708 RVA: 0x00024177 File Offset: 0x00022377
 	public int NumBossesDeadOrDying
 	{
 		get
@@ -20,8 +20,8 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011A5 RID: 4517
-	// (get) Token: 0x06002F43 RID: 12099 RVA: 0x000A17B5 File Offset: 0x0009F9B5
+	// Token: 0x1700177E RID: 6014
+	// (get) Token: 0x06004145 RID: 16709 RVA: 0x0002417F File Offset: 0x0002237F
 	public int NumBossesDead
 	{
 		get
@@ -30,8 +30,8 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011A6 RID: 4518
-	// (get) Token: 0x06002F44 RID: 12100 RVA: 0x000A17BD File Offset: 0x0009F9BD
+	// Token: 0x1700177F RID: 6015
+	// (get) Token: 0x06004146 RID: 16710 RVA: 0x00024187 File Offset: 0x00022387
 	public int NumBosses
 	{
 		get
@@ -40,8 +40,8 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011A7 RID: 4519
-	// (get) Token: 0x06002F45 RID: 12101 RVA: 0x000A17C5 File Offset: 0x0009F9C5
+	// Token: 0x17001780 RID: 6016
+	// (get) Token: 0x06004147 RID: 16711 RVA: 0x0002418F File Offset: 0x0002238F
 	public bool AllBossesDeadOrDying
 	{
 		get
@@ -50,8 +50,8 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011A8 RID: 4520
-	// (get) Token: 0x06002F46 RID: 12102 RVA: 0x000A17D8 File Offset: 0x0009F9D8
+	// Token: 0x17001781 RID: 6017
+	// (get) Token: 0x06004148 RID: 16712 RVA: 0x000241A2 File Offset: 0x000223A2
 	public bool AllBossesDead
 	{
 		get
@@ -60,8 +60,8 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011A9 RID: 4521
-	// (get) Token: 0x06002F47 RID: 12103 RVA: 0x000A17EB File Offset: 0x0009F9EB
+	// Token: 0x17001782 RID: 6018
+	// (get) Token: 0x06004149 RID: 16713 RVA: 0x000241B5 File Offset: 0x000223B5
 	public TunnelSpawnController TunnelSpawnController
 	{
 		get
@@ -70,8 +70,8 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011AA RID: 4522
-	// (get) Token: 0x06002F48 RID: 12104 RVA: 0x000A17F3 File Offset: 0x0009F9F3
+	// Token: 0x17001783 RID: 6019
+	// (get) Token: 0x0600414A RID: 16714 RVA: 0x000241BD File Offset: 0x000223BD
 	public virtual EnemySpawnController BossSpawnController
 	{
 		get
@@ -80,8 +80,8 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011AB RID: 4523
-	// (get) Token: 0x06002F49 RID: 12105 RVA: 0x000A17FB File Offset: 0x0009F9FB
+	// Token: 0x17001784 RID: 6020
+	// (get) Token: 0x0600414B RID: 16715 RVA: 0x000241C5 File Offset: 0x000223C5
 	public EnemyController Boss
 	{
 		get
@@ -94,8 +94,8 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011AC RID: 4524
-	// (get) Token: 0x06002F4A RID: 12106 RVA: 0x000A1817 File Offset: 0x0009FA17
+	// Token: 0x17001785 RID: 6021
+	// (get) Token: 0x0600414C RID: 16716 RVA: 0x000241E1 File Offset: 0x000223E1
 	public ChestObj Chest
 	{
 		get
@@ -108,8 +108,8 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011AD RID: 4525
-	// (get) Token: 0x06002F4B RID: 12107 RVA: 0x000A1833 File Offset: 0x0009FA33
+	// Token: 0x17001786 RID: 6022
+	// (get) Token: 0x0600414D RID: 16717 RVA: 0x000241FD File Offset: 0x000223FD
 	public CinemachineVirtualCameraManager VCamManager
 	{
 		get
@@ -118,13 +118,13 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011AE RID: 4526
-	// (get) Token: 0x06002F4C RID: 12108 RVA: 0x000A183B File Offset: 0x0009FA3B
-	// (set) Token: 0x06002F4D RID: 12109 RVA: 0x000A1843 File Offset: 0x0009FA43
+	// Token: 0x17001787 RID: 6023
+	// (get) Token: 0x0600414E RID: 16718 RVA: 0x00024205 File Offset: 0x00022405
+	// (set) Token: 0x0600414F RID: 16719 RVA: 0x0002420D File Offset: 0x0002240D
 	public bool IsInitialized { get; protected set; }
 
-	// Token: 0x170011AF RID: 4527
-	// (get) Token: 0x06002F4E RID: 12110 RVA: 0x000A184C File Offset: 0x0009FA4C
+	// Token: 0x17001788 RID: 6024
+	// (get) Token: 0x06004150 RID: 16720 RVA: 0x00024216 File Offset: 0x00022416
 	public virtual float BossHealthAsPercentage
 	{
 		get
@@ -137,8 +137,8 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170011B0 RID: 4528
-	// (get) Token: 0x06002F4F RID: 12111 RVA: 0x000A1879 File Offset: 0x0009FA79
+	// Token: 0x17001789 RID: 6025
+	// (get) Token: 0x06004151 RID: 16721 RVA: 0x00024243 File Offset: 0x00022443
 	public string Description
 	{
 		get
@@ -151,7 +151,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06002F50 RID: 12112 RVA: 0x000A189C File Offset: 0x0009FA9C
+	// Token: 0x06004152 RID: 16722 RVA: 0x001064E4 File Offset: 0x001046E4
 	protected override void Awake()
 	{
 		base.Awake();
@@ -165,7 +165,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		this.m_onModeShift = new Action<MonoBehaviour, EventArgs>(this.OnModeShift);
 	}
 
-	// Token: 0x06002F51 RID: 12113 RVA: 0x000A1938 File Offset: 0x0009FB38
+	// Token: 0x06004153 RID: 16723 RVA: 0x00106580 File Offset: 0x00104780
 	protected virtual void Initialize()
 	{
 		if (!this.BossSpawnController)
@@ -181,9 +181,42 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		this.Chest.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06002F52 RID: 12114 RVA: 0x000A198E File Offset: 0x0009FB8E
+	// Token: 0x06004154 RID: 16724 RVA: 0x001065D8 File Offset: 0x001047D8
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
+		BossRoomController.bossSaveId = (int)this.m_bossSaveFlag;
+		if (MainMenuWindowController.splitStep <= 23 && this.m_bossSaveFlag == PlayerSaveFlag.FinalBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 24;
+		}
+		else if (MainMenuWindowController.splitStep <= 21 && this.m_bossSaveFlag == PlayerSaveFlag.GardenBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 22;
+		}
+		else if (MainMenuWindowController.splitStep <= 19 && this.m_bossSaveFlag == PlayerSaveFlag.CaveBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 20;
+		}
+		else if (MainMenuWindowController.splitStep <= 17 && this.m_bossSaveFlag == PlayerSaveFlag.TowerBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 18;
+		}
+		else if (MainMenuWindowController.splitStep <= 15 && this.m_bossSaveFlag == PlayerSaveFlag.StudyBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 16;
+		}
+		else if (MainMenuWindowController.splitStep <= 11 && this.m_bossSaveFlag == PlayerSaveFlag.ForestBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 12;
+		}
+		else if (MainMenuWindowController.splitStep <= 7 && this.m_bossSaveFlag == PlayerSaveFlag.BridgeBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 8;
+		}
+		else if (MainMenuWindowController.splitStep <= 3 && this.m_bossSaveFlag == PlayerSaveFlag.CastleBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 4;
+		}
 		base.OnPlayerEnterRoom(sender, eventArgs);
 		if (!this.IsInitialized)
 		{
@@ -194,7 +227,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		base.StartCoroutine(this.StartIntro());
 	}
 
-	// Token: 0x06002F53 RID: 12115 RVA: 0x000A19BF File Offset: 0x0009FBBF
+	// Token: 0x06004155 RID: 16725 RVA: 0x00024264 File Offset: 0x00022464
 	protected override void OnPlayerExitRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerExitRoom(sender, eventArgs);
@@ -203,7 +236,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		this.RemoveListeners();
 	}
 
-	// Token: 0x06002F54 RID: 12116 RVA: 0x000A19DD File Offset: 0x0009FBDD
+	// Token: 0x06004156 RID: 16726 RVA: 0x00024282 File Offset: 0x00022482
 	protected virtual void OnDisable()
 	{
 		if (this.m_chestAudioEventInstance.isValid())
@@ -215,7 +248,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		this.RemoveListeners();
 	}
 
-	// Token: 0x06002F55 RID: 12117 RVA: 0x000A1A0C File Offset: 0x0009FC0C
+	// Token: 0x06004157 RID: 16727 RVA: 0x000242B1 File Offset: 0x000224B1
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
@@ -225,7 +258,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06002F56 RID: 12118 RVA: 0x000A1A2D File Offset: 0x0009FC2D
+	// Token: 0x06004158 RID: 16728 RVA: 0x000242D2 File Offset: 0x000224D2
 	protected virtual void AddListeners()
 	{
 		if (!this.m_listenersAssigned)
@@ -237,7 +270,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06002F57 RID: 12119 RVA: 0x000A1A64 File Offset: 0x0009FC64
+	// Token: 0x06004159 RID: 16729 RVA: 0x00024309 File Offset: 0x00022509
 	protected virtual void RemoveListeners()
 	{
 		if (this.m_listenersAssigned)
@@ -249,7 +282,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06002F58 RID: 12120 RVA: 0x000A1A9C File Offset: 0x0009FC9C
+	// Token: 0x0600415A RID: 16730 RVA: 0x0010671C File Offset: 0x0010491C
 	protected virtual void OnBossDeath(object sender, EventArgs args)
 	{
 		EnemyDeathEventArgs enemyDeathEventArgs = args as EnemyDeathEventArgs;
@@ -264,7 +297,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06002F59 RID: 12121 RVA: 0x000A1AF8 File Offset: 0x0009FCF8
+	// Token: 0x0600415B RID: 16731 RVA: 0x00106778 File Offset: 0x00104978
 	protected virtual void OnBossHealthChange(object sender, EventArgs args)
 	{
 		HealthChangeEventArgs healthChangeEventArgs = args as HealthChangeEventArgs;
@@ -283,13 +316,13 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		this.BossTookDamageRelay.Dispatch(this.BossHealthAsPercentage);
 	}
 
-	// Token: 0x06002F5A RID: 12122 RVA: 0x000A1B6C File Offset: 0x0009FD6C
+	// Token: 0x0600415C RID: 16732 RVA: 0x00024340 File Offset: 0x00022540
 	protected virtual void OnModeShift(object sender, EventArgs args)
 	{
 		this.PhaseChangedRelay.Dispatch(1);
 	}
 
-	// Token: 0x06002F5B RID: 12123 RVA: 0x000A1B7A File Offset: 0x0009FD7A
+	// Token: 0x0600415D RID: 16733 RVA: 0x0002434E File Offset: 0x0002254E
 	protected virtual IEnumerator StartIntro()
 	{
 		RewiredMapController.SetIsInCutscene(true);
@@ -367,7 +400,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x06002F5C RID: 12124 RVA: 0x000A1B89 File Offset: 0x0009FD89
+	// Token: 0x0600415E RID: 16734 RVA: 0x0002435D File Offset: 0x0002255D
 	protected virtual IEnumerator StartOutro()
 	{
 		this.OutroStartRelay.Dispatch();
@@ -421,7 +454,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x06002F5D RID: 12125 RVA: 0x000A1B98 File Offset: 0x0009FD98
+	// Token: 0x0600415F RID: 16735 RVA: 0x001067EC File Offset: 0x001049EC
 	protected virtual void TeleportOut()
 	{
 		BiomeController biomeController = GameUtility.IsInLevelEditor ? OnPlayManager.BiomeController : WorldBuilder.GetBiomeController(BiomeType.Castle);
@@ -451,15 +484,48 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06002F5E RID: 12126 RVA: 0x000A1C85 File Offset: 0x0009FE85
+	// Token: 0x06004160 RID: 16736 RVA: 0x0002436C File Offset: 0x0002256C
 	protected virtual void InitializeObjectiveCompleteArgs(float bossDefeatedDisplayDuration)
 	{
 		this.m_bossDefeatedArgs.Initialize(this.Boss.EnemyType, EnemyRank.Basic, bossDefeatedDisplayDuration, null, null, null);
 	}
 
-	// Token: 0x06002F5F RID: 12127 RVA: 0x000A1CA4 File Offset: 0x0009FEA4
+	// Token: 0x06004161 RID: 16737 RVA: 0x001068DC File Offset: 0x00104ADC
 	protected virtual void SetBossFlagDefeated()
 	{
+		BossRoomController.bossSaveId_finish = (int)this.m_bossSaveFlag;
+		if (MainMenuWindowController.splitStep <= 24 && this.m_bossSaveFlag == PlayerSaveFlag.FinalBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 25;
+		}
+		else if (MainMenuWindowController.splitStep <= 22 && this.m_bossSaveFlag == PlayerSaveFlag.GardenBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 23;
+		}
+		else if (MainMenuWindowController.splitStep <= 20 && this.m_bossSaveFlag == PlayerSaveFlag.CaveBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 21;
+		}
+		else if (MainMenuWindowController.splitStep <= 18 && this.m_bossSaveFlag == PlayerSaveFlag.TowerBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 19;
+		}
+		else if (MainMenuWindowController.splitStep <= 16 && this.m_bossSaveFlag == PlayerSaveFlag.StudyBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 17;
+		}
+		else if (MainMenuWindowController.splitStep <= 12 && this.m_bossSaveFlag == PlayerSaveFlag.ForestBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 13;
+		}
+		else if (MainMenuWindowController.splitStep <= 8 && this.m_bossSaveFlag == PlayerSaveFlag.BridgeBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 9;
+		}
+		else if (MainMenuWindowController.splitStep <= 4 && this.m_bossSaveFlag == PlayerSaveFlag.CastleBoss_Defeated)
+		{
+			MainMenuWindowController.splitStep = 5;
+		}
 		this.BossDefeatedRelay.Dispatch();
 		SaveManager.PlayerSaveData.SetFlag(this.m_bossSaveFlag, true);
 		this.SetHighestBossNGBeaten(this.m_bossSaveFlag);
@@ -470,7 +536,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		BossEntranceRoomController.RunDoorCrumbleAnimation = true;
 	}
 
-	// Token: 0x06002F60 RID: 12128 RVA: 0x000A1D04 File Offset: 0x0009FF04
+	// Token: 0x06004162 RID: 16738 RVA: 0x00106A44 File Offset: 0x00104C44
 	private void SetHighestBossNGBeaten(PlayerSaveFlag saveFlag)
 	{
 		if (saveFlag <= PlayerSaveFlag.StudyBoss_Defeated)
@@ -595,7 +661,7 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06002F61 RID: 12129 RVA: 0x000A20A0 File Offset: 0x000A02A0
+	// Token: 0x06004163 RID: 16739 RVA: 0x00106DD4 File Offset: 0x00104FD4
 	protected void PlayAudio(string audioPath)
 	{
 		if (!string.IsNullOrEmpty(audioPath))
@@ -604,106 +670,112 @@ public class BossRoomController : BaseSpecialRoomController, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x040025A6 RID: 9638
+	// Token: 0x04003310 RID: 13072
 	protected const string CHEST_SPAWN_LOOP_AUDIO = "event:/SFX/Interactables/sfx_env_prop_bossChest_spawn_loop";
 
-	// Token: 0x040025A7 RID: 9639
+	// Token: 0x04003311 RID: 13073
 	protected const string CAMERA_PAN_TO_BOSS_AUDIO = "event:/SFX/Enemies/sfx_dancingBoss_intro_zoomIn";
 
-	// Token: 0x040025A8 RID: 9640
+	// Token: 0x04003312 RID: 13074
 	protected const string CAMERA_PAN_TO_PLAYER_AUDIO = "event:/SFX/Enemies/sfx_dancingBoss_intro_zoomOut";
 
-	// Token: 0x040025A9 RID: 9641
+	// Token: 0x04003313 RID: 13075
 	[SerializeField]
 	protected PlayerSaveFlag m_bossSaveFlag;
 
-	// Token: 0x040025AA RID: 9642
+	// Token: 0x04003314 RID: 13076
 	[SerializeField]
 	protected int m_numBosses;
 
-	// Token: 0x040025AB RID: 9643
+	// Token: 0x04003315 RID: 13077
 	[SerializeField]
 	protected EnemySpawnController m_bossSpawnController;
 
-	// Token: 0x040025AC RID: 9644
+	// Token: 0x04003316 RID: 13078
 	[SerializeField]
 	protected ChestSpawnController m_chestSpawnController;
 
-	// Token: 0x040025AD RID: 9645
+	// Token: 0x04003317 RID: 13079
 	[SerializeField]
 	protected TunnelSpawnController m_tunnelSpawnController;
 
-	// Token: 0x040025AE RID: 9646
+	// Token: 0x04003318 RID: 13080
 	[Header("Intro Cutscene Variables")]
 	[SerializeField]
 	protected CinemachineVirtualCameraManager m_vcamManager;
 
-	// Token: 0x040025AF RID: 9647
+	// Token: 0x04003319 RID: 13081
 	[SerializeField]
 	protected AnimationCurve m_cameraBlendCurve;
 
-	// Token: 0x040025B0 RID: 9648
+	// Token: 0x0400331A RID: 13082
 	[SerializeField]
 	protected GameObject m_bossStartCamPos;
 
-	// Token: 0x040025B1 RID: 9649
+	// Token: 0x0400331B RID: 13083
 	[SerializeField]
 	protected GameObject m_bossEndCamPos;
 
-	// Token: 0x040025B2 RID: 9650
+	// Token: 0x0400331C RID: 13084
 	protected int m_numBossesKilled;
 
-	// Token: 0x040025B3 RID: 9651
+	// Token: 0x0400331D RID: 13085
 	protected int m_numBossesDeadOrDying;
 
-	// Token: 0x040025B4 RID: 9652
+	// Token: 0x0400331E RID: 13086
 	protected bool m_listenersAssigned;
 
-	// Token: 0x040025B5 RID: 9653
+	// Token: 0x0400331F RID: 13087
 	protected static CinemachineBlendDefinition m_followBlend;
 
-	// Token: 0x040025B6 RID: 9654
+	// Token: 0x04003320 RID: 13088
 	protected BossObjectiveCompleteHUDEventArgs m_bossDefeatedArgs;
 
-	// Token: 0x040025B7 RID: 9655
+	// Token: 0x04003321 RID: 13089
 	protected WaitRL_Yield m_waitYield;
 
-	// Token: 0x040025B8 RID: 9656
+	// Token: 0x04003322 RID: 13090
 	public Relay IntroStartRelay = new Relay();
 
-	// Token: 0x040025B9 RID: 9657
+	// Token: 0x04003323 RID: 13091
 	public Relay IntroCompleteRelay = new Relay();
 
-	// Token: 0x040025BA RID: 9658
+	// Token: 0x04003324 RID: 13092
 	public Relay OutroStartRelay = new Relay();
 
-	// Token: 0x040025BB RID: 9659
+	// Token: 0x04003325 RID: 13093
 	public Relay OutroCompleteRelay = new Relay();
 
-	// Token: 0x040025BC RID: 9660
+	// Token: 0x04003326 RID: 13094
 	public Relay<float> BossTookDamageRelay = new Relay<float>();
 
-	// Token: 0x040025BD RID: 9661
+	// Token: 0x04003327 RID: 13095
 	public Relay BossDefeatedRelay = new Relay();
 
-	// Token: 0x040025BE RID: 9662
+	// Token: 0x04003328 RID: 13096
 	public Relay<int> PhaseChangedRelay = new Relay<int>();
 
-	// Token: 0x040025BF RID: 9663
+	// Token: 0x04003329 RID: 13097
 	public Relay BossSpawnAnimRelay = new Relay();
 
-	// Token: 0x040025C0 RID: 9664
+	// Token: 0x0400332A RID: 13098
 	private string m_description;
 
-	// Token: 0x040025C1 RID: 9665
+	// Token: 0x0400332B RID: 13099
 	protected EventInstance m_chestAudioEventInstance;
 
-	// Token: 0x040025C2 RID: 9666
+	// Token: 0x0400332C RID: 13100
 	private Action<MonoBehaviour, EventArgs> m_onBossDeath;
 
-	// Token: 0x040025C3 RID: 9667
+	// Token: 0x0400332D RID: 13101
 	private Action<MonoBehaviour, EventArgs> m_onBossHealthChange;
 
-	// Token: 0x040025C4 RID: 9668
+	// Token: 0x0400332E RID: 13102
 	private Action<MonoBehaviour, EventArgs> m_onModeShift;
+
+	// Token: 0x04003330 RID: 13104
+	public static int bossSaveId = 456456456;
+
+	// Token: 0x04003331 RID: 13105
+	public static int bossSaveId_finish = 567567567;
 }

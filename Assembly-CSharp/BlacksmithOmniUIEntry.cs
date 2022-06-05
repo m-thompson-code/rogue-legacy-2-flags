@@ -3,16 +3,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Token: 0x02000397 RID: 919
+// Token: 0x02000628 RID: 1576
 public class BlacksmithOmniUIEntry : BaseOmniUIEntry
 {
-	// Token: 0x17000E41 RID: 3649
-	// (get) Token: 0x06002253 RID: 8787 RVA: 0x0006ED5C File Offset: 0x0006CF5C
-	// (set) Token: 0x06002254 RID: 8788 RVA: 0x0006ED64 File Offset: 0x0006CF64
+	// Token: 0x170012D4 RID: 4820
+	// (get) Token: 0x0600306B RID: 12395 RVA: 0x0001A8EC File Offset: 0x00018AEC
+	// (set) Token: 0x0600306C RID: 12396 RVA: 0x0001A8F4 File Offset: 0x00018AF4
 	public EquipmentType EquipmentType { get; protected set; }
 
-	// Token: 0x17000E42 RID: 3650
-	// (get) Token: 0x06002255 RID: 8789 RVA: 0x0006ED70 File Offset: 0x0006CF70
+	// Token: 0x170012D5 RID: 4821
+	// (get) Token: 0x0600306D RID: 12397 RVA: 0x000CFB34 File Offset: 0x000CDD34
 	public override EventArgs EntryEventArgs
 	{
 		get
@@ -24,8 +24,8 @@ public class BlacksmithOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000E43 RID: 3651
-	// (get) Token: 0x06002256 RID: 8790 RVA: 0x0006EDA9 File Offset: 0x0006CFA9
+	// Token: 0x170012D6 RID: 4822
+	// (get) Token: 0x0600306E RID: 12398 RVA: 0x0001A8FD File Offset: 0x00018AFD
 	public override bool IsEntryActive
 	{
 		get
@@ -34,7 +34,7 @@ public class BlacksmithOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x06002257 RID: 8791 RVA: 0x0006EDD8 File Offset: 0x0006CFD8
+	// Token: 0x0600306F RID: 12399 RVA: 0x000CFB70 File Offset: 0x000CDD70
 	public void Initialize(EquipmentType equipType, BlacksmithOmniUIWindowController windowController)
 	{
 		this.EquipmentType = equipType;
@@ -46,7 +46,7 @@ public class BlacksmithOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x06002258 RID: 8792 RVA: 0x0006EE1C File Offset: 0x0006D01C
+	// Token: 0x06003070 RID: 12400 RVA: 0x000CFBB4 File Offset: 0x000CDDB4
 	public override void UpdateActive()
 	{
 		EquipmentData equipmentData = EquipmentLibrary.GetEquipmentData((base.WindowController as BlacksmithOmniUIWindowController).HighlightedCategory, this.EquipmentType);
@@ -64,7 +64,7 @@ public class BlacksmithOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x06002259 RID: 8793 RVA: 0x0006EE8C File Offset: 0x0006D08C
+	// Token: 0x06003071 RID: 12401 RVA: 0x000CFC24 File Offset: 0x000CDE24
 	public override void UpdateState()
 	{
 		EquipmentCategoryType highlightedCategory = (this.m_windowController as BlacksmithOmniUIWindowController).HighlightedCategory;
@@ -111,7 +111,7 @@ public class BlacksmithOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x0600225A RID: 8794 RVA: 0x0006EFFC File Offset: 0x0006D1FC
+	// Token: 0x06003072 RID: 12402 RVA: 0x000CFD94 File Offset: 0x000CDF94
 	public override void OnSelect(BaseEventData eventData)
 	{
 		if (!base.Interactable)
@@ -127,7 +127,7 @@ public class BlacksmithOmniUIEntry : BaseOmniUIEntry
 		base.OnSelect(eventData);
 	}
 
-	// Token: 0x0600225B RID: 8795 RVA: 0x0006F054 File Offset: 0x0006D254
+	// Token: 0x06003073 RID: 12403 RVA: 0x000CFDEC File Offset: 0x000CDFEC
 	public override void DeselectAllButtons()
 	{
 		base.DeselectAllButtons();
@@ -142,10 +142,10 @@ public class BlacksmithOmniUIEntry : BaseOmniUIEntry
 		Messenger<UIMessenger, UIEvent>.Broadcast(UIEvent.OmniUI_UpdateDescription, this, null);
 	}
 
-	// Token: 0x04001DB2 RID: 7602
+	// Token: 0x040027C6 RID: 10182
 	[SerializeField]
 	private TMP_Text m_maxText;
 
-	// Token: 0x04001DB4 RID: 7604
+	// Token: 0x040027C8 RID: 10184
 	private BlacksmithOmniUIDescriptionEventArgs m_eventArgs = new BlacksmithOmniUIDescriptionEventArgs(EquipmentCategoryType.None, EquipmentType.None, OmniUIButtonType.None);
 }

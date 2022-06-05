@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002F4 RID: 756
+// Token: 0x02000506 RID: 1286
 public class BurnImmunityStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D17 RID: 3351
-	// (get) Token: 0x06001E2E RID: 7726 RVA: 0x000627BD File Offset: 0x000609BD
+	// Token: 0x170010D6 RID: 4310
+	// (get) Token: 0x0600299D RID: 10653 RVA: 0x00017640 File Offset: 0x00015840
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class BurnImmunityStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D18 RID: 3352
-	// (get) Token: 0x06001E2F RID: 7727 RVA: 0x000627C1 File Offset: 0x000609C1
+	// Token: 0x170010D7 RID: 4311
+	// (get) Token: 0x0600299E RID: 10654 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class BurnImmunityStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E30 RID: 7728 RVA: 0x000627C8 File Offset: 0x000609C8
+	// Token: 0x0600299F RID: 10655 RVA: 0x00017644 File Offset: 0x00015844
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.BurnImmunity, base.Duration);

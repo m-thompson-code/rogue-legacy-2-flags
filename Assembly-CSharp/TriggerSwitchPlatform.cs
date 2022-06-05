@@ -3,10 +3,10 @@ using System.Collections;
 using Rewired;
 using UnityEngine;
 
-// Token: 0x020004CD RID: 1229
+// Token: 0x020007F7 RID: 2039
 public class TriggerSwitchPlatform : SpecialPlatform
 {
-	// Token: 0x06002DAC RID: 11692 RVA: 0x0009A2B4 File Offset: 0x000984B4
+	// Token: 0x06003EC4 RID: 16068 RVA: 0x000FBAA4 File Offset: 0x000F9CA4
 	private void OnEnable()
 	{
 		Player player = Rewired_RL.Player;
@@ -16,7 +16,7 @@ public class TriggerSwitchPlatform : SpecialPlatform
 		}
 	}
 
-	// Token: 0x06002DAD RID: 11693 RVA: 0x0009A2E8 File Offset: 0x000984E8
+	// Token: 0x06003EC5 RID: 16069 RVA: 0x000FBAD8 File Offset: 0x000F9CD8
 	private void OnDisable()
 	{
 		Player player = Rewired_RL.Player;
@@ -26,7 +26,7 @@ public class TriggerSwitchPlatform : SpecialPlatform
 		}
 	}
 
-	// Token: 0x06002DAE RID: 11694 RVA: 0x0009A31C File Offset: 0x0009851C
+	// Token: 0x06003EC6 RID: 16070 RVA: 0x00022B0E File Offset: 0x00020D0E
 	protected override void Awake()
 	{
 		this.m_onSwitch = new Action<InputActionEventData>(this.OnSwitch);
@@ -34,7 +34,7 @@ public class TriggerSwitchPlatform : SpecialPlatform
 		this.m_animator = base.GetComponent<Animator>();
 	}
 
-	// Token: 0x06002DAF RID: 11695 RVA: 0x0009A342 File Offset: 0x00098542
+	// Token: 0x06003EC7 RID: 16071 RVA: 0x00022B34 File Offset: 0x00020D34
 	protected override IEnumerator Start()
 	{
 		yield return base.Start();
@@ -52,14 +52,14 @@ public class TriggerSwitchPlatform : SpecialPlatform
 		yield break;
 	}
 
-	// Token: 0x06002DB0 RID: 11696 RVA: 0x0009A351 File Offset: 0x00098551
+	// Token: 0x06003EC8 RID: 16072 RVA: 0x00022B43 File Offset: 0x00020D43
 	private void OnSwitch(InputActionEventData data)
 	{
 		this.m_platformVisible = !this.m_platformVisible;
 		this.SetPlatformState();
 	}
 
-	// Token: 0x06002DB1 RID: 11697 RVA: 0x0009A368 File Offset: 0x00098568
+	// Token: 0x06003EC9 RID: 16073 RVA: 0x000FBB0C File Offset: 0x000F9D0C
 	private void SetPlatformState()
 	{
 		if (this.m_platformVisible)
@@ -72,7 +72,7 @@ public class TriggerSwitchPlatform : SpecialPlatform
 		this.m_platformCollider.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
 	}
 
-	// Token: 0x06002DB2 RID: 11698 RVA: 0x0009A3D0 File Offset: 0x000985D0
+	// Token: 0x06003ECA RID: 16074 RVA: 0x000FBB74 File Offset: 0x000F9D74
 	public override void SetState(StateID state)
 	{
 		if (state != StateID.One)
@@ -106,24 +106,24 @@ public class TriggerSwitchPlatform : SpecialPlatform
 		}
 	}
 
-	// Token: 0x04002490 RID: 9360
+	// Token: 0x04003135 RID: 12597
 	private bool m_platformVisible = true;
 
-	// Token: 0x04002491 RID: 9361
+	// Token: 0x04003136 RID: 12598
 	private BoxCollider2D m_platformCollider;
 
-	// Token: 0x04002492 RID: 9362
+	// Token: 0x04003137 RID: 12599
 	private int m_storedTerrainLayer;
 
-	// Token: 0x04002493 RID: 9363
+	// Token: 0x04003138 RID: 12600
 	private int m_storedPlatformLayer;
 
-	// Token: 0x04002494 RID: 9364
+	// Token: 0x04003139 RID: 12601
 	private bool m_isInitialized;
 
-	// Token: 0x04002495 RID: 9365
+	// Token: 0x0400313A RID: 12602
 	private Animator m_animator;
 
-	// Token: 0x04002496 RID: 9366
+	// Token: 0x0400313B RID: 12603
 	private Action<InputActionEventData> m_onSwitch;
 }

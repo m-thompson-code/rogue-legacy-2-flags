@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000155 RID: 341
+// Token: 0x0200027D RID: 637
 public class Zombie_Expert_AIScript : Zombie_Basic_AIScript
 {
-	// Token: 0x17000670 RID: 1648
-	// (get) Token: 0x06000BB1 RID: 2993 RVA: 0x000233CC File Offset: 0x000215CC
+	// Token: 0x170008AE RID: 2222
+	// (get) Token: 0x06001270 RID: 4720 RVA: 0x00003D93 File Offset: 0x00001F93
 	protected override float m_tunnel_moveSpeed
 	{
 		get
@@ -14,8 +14,8 @@ public class Zombie_Expert_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000671 RID: 1649
-	// (get) Token: 0x06000BB2 RID: 2994 RVA: 0x000233D3 File Offset: 0x000215D3
+	// Token: 0x170008AF RID: 2223
+	// (get) Token: 0x06001271 RID: 4721 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float Lunge_Count
 	{
 		get
@@ -24,8 +24,8 @@ public class Zombie_Expert_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000672 RID: 1650
-	// (get) Token: 0x06000BB3 RID: 2995 RVA: 0x000233DA File Offset: 0x000215DA
+	// Token: 0x170008B0 RID: 2224
+	// (get) Token: 0x06001272 RID: 4722 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected override float Delay_Between_Lunges
 	{
 		get
@@ -34,8 +34,8 @@ public class Zombie_Expert_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000673 RID: 1651
-	// (get) Token: 0x06000BB4 RID: 2996 RVA: 0x000233E1 File Offset: 0x000215E1
+	// Token: 0x170008B1 RID: 2225
+	// (get) Token: 0x06001273 RID: 4723 RVA: 0x000096A5 File Offset: 0x000078A5
 	protected override Vector2 swing_Dash_AttackSpeed
 	{
 		get

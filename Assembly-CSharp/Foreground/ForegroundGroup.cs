@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Foreground
 {
-	// Token: 0x02000897 RID: 2199
+	// Token: 0x02000DC4 RID: 3524
 	public class ForegroundGroup : MonoBehaviour
 	{
-		// Token: 0x17001795 RID: 6037
-		// (get) Token: 0x0600480A RID: 18442 RVA: 0x0010375A File Offset: 0x0010195A
+		// Token: 0x17002007 RID: 8199
+		// (get) Token: 0x06006345 RID: 25413 RVA: 0x00036AE4 File Offset: 0x00034CE4
 		public PropSpawnController[] PropSpawnControllers
 		{
 			get
@@ -16,9 +16,9 @@ namespace Foreground
 			}
 		}
 
-		// Token: 0x17001796 RID: 6038
-		// (get) Token: 0x0600480B RID: 18443 RVA: 0x00103762 File Offset: 0x00101962
-		// (set) Token: 0x0600480C RID: 18444 RVA: 0x0010376A File Offset: 0x0010196A
+		// Token: 0x17002008 RID: 8200
+		// (get) Token: 0x06006346 RID: 25414 RVA: 0x00036AEC File Offset: 0x00034CEC
+		// (set) Token: 0x06006347 RID: 25415 RVA: 0x00036AF4 File Offset: 0x00034CF4
 		public float ZoomLevel
 		{
 			get
@@ -34,18 +34,18 @@ namespace Foreground
 			}
 		}
 
-		// Token: 0x0600480D RID: 18445 RVA: 0x0010377A File Offset: 0x0010197A
+		// Token: 0x06006348 RID: 25416 RVA: 0x00036B04 File Offset: 0x00034D04
 		private void Awake()
 		{
 			this.m_propSpawnControllers = base.GetComponentsInChildren<PropSpawnController>();
 		}
 
-		// Token: 0x04003CE5 RID: 15589
+		// Token: 0x04005113 RID: 20755
 		[SerializeField]
 		[Range(1f, 2f)]
 		private float m_zoomLevel = 1f;
 
-		// Token: 0x04003CE6 RID: 15590
+		// Token: 0x04005114 RID: 20756
 		private PropSpawnController[] m_propSpawnControllers;
 	}
 }

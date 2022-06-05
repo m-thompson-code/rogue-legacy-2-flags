@@ -2,11 +2,11 @@
 using Rewired;
 using UnityEngine;
 
-// Token: 0x02000355 RID: 853
+// Token: 0x020005C1 RID: 1473
 public class NoManaCap_Trait : BaseTrait, IDamageObj
 {
-	// Token: 0x17000DD8 RID: 3544
-	// (get) Token: 0x06002060 RID: 8288 RVA: 0x000667B7 File Offset: 0x000649B7
+	// Token: 0x17001237 RID: 4663
+	// (get) Token: 0x06002DC9 RID: 11721 RVA: 0x0001926C File Offset: 0x0001746C
 	public override TraitType TraitType
 	{
 		get
@@ -15,8 +15,8 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DD9 RID: 3545
-	// (get) Token: 0x06002061 RID: 8289 RVA: 0x000667BE File Offset: 0x000649BE
+	// Token: 0x17001238 RID: 4664
+	// (get) Token: 0x06002DCA RID: 11722 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string RelicDamageTypeString
 	{
 		get
@@ -25,8 +25,8 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DDA RID: 3546
-	// (get) Token: 0x06002062 RID: 8290 RVA: 0x000667C1 File Offset: 0x000649C1
+	// Token: 0x17001239 RID: 4665
+	// (get) Token: 0x06002DCB RID: 11723 RVA: 0x00019273 File Offset: 0x00017473
 	public float BaseDamage
 	{
 		get
@@ -35,8 +35,8 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DDB RID: 3547
-	// (get) Token: 0x06002063 RID: 8291 RVA: 0x000667D5 File Offset: 0x000649D5
+	// Token: 0x1700123A RID: 4666
+	// (get) Token: 0x06002DCC RID: 11724 RVA: 0x00019287 File Offset: 0x00017487
 	public float ActualDamage
 	{
 		get
@@ -45,8 +45,8 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DDC RID: 3548
-	// (get) Token: 0x06002064 RID: 8292 RVA: 0x000667DD File Offset: 0x000649DD
+	// Token: 0x1700123B RID: 4667
+	// (get) Token: 0x06002DCD RID: 11725 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritChance
 	{
 		get
@@ -55,8 +55,8 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DDD RID: 3549
-	// (get) Token: 0x06002065 RID: 8293 RVA: 0x000667E4 File Offset: 0x000649E4
+	// Token: 0x1700123C RID: 4668
+	// (get) Token: 0x06002DCE RID: 11726 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritDamage
 	{
 		get
@@ -65,8 +65,8 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DDE RID: 3550
-	// (get) Token: 0x06002066 RID: 8294 RVA: 0x000667EB File Offset: 0x000649EB
+	// Token: 0x1700123D RID: 4669
+	// (get) Token: 0x06002DCF RID: 11727 RVA: 0x00005FA3 File Offset: 0x000041A3
 	public Vector2 ExternalKnockbackMod
 	{
 		get
@@ -75,13 +75,13 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DDF RID: 3551
-	// (get) Token: 0x06002067 RID: 8295 RVA: 0x000667F2 File Offset: 0x000649F2
-	// (set) Token: 0x06002068 RID: 8296 RVA: 0x000667FA File Offset: 0x000649FA
+	// Token: 0x1700123E RID: 4670
+	// (get) Token: 0x06002DD0 RID: 11728 RVA: 0x0001928F File Offset: 0x0001748F
+	// (set) Token: 0x06002DD1 RID: 11729 RVA: 0x00019297 File Offset: 0x00017497
 	public float BaseKnockbackStrength { get; set; }
 
-	// Token: 0x17000DE0 RID: 3552
-	// (get) Token: 0x06002069 RID: 8297 RVA: 0x00066803 File Offset: 0x00064A03
+	// Token: 0x1700123F RID: 4671
+	// (get) Token: 0x06002DD2 RID: 11730 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualKnockbackStrength
 	{
 		get
@@ -90,13 +90,13 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DE1 RID: 3553
-	// (get) Token: 0x0600206A RID: 8298 RVA: 0x0006680A File Offset: 0x00064A0A
-	// (set) Token: 0x0600206B RID: 8299 RVA: 0x00066812 File Offset: 0x00064A12
+	// Token: 0x17001240 RID: 4672
+	// (get) Token: 0x06002DD3 RID: 11731 RVA: 0x000192A0 File Offset: 0x000174A0
+	// (set) Token: 0x06002DD4 RID: 11732 RVA: 0x000192A8 File Offset: 0x000174A8
 	public float BaseStunStrength { get; set; }
 
-	// Token: 0x17000DE2 RID: 3554
-	// (get) Token: 0x0600206C RID: 8300 RVA: 0x0006681B File Offset: 0x00064A1B
+	// Token: 0x17001241 RID: 4673
+	// (get) Token: 0x06002DD5 RID: 11733 RVA: 0x000192B1 File Offset: 0x000174B1
 	public float ActualStunStrength
 	{
 		get
@@ -105,8 +105,8 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DE3 RID: 3555
-	// (get) Token: 0x0600206D RID: 8301 RVA: 0x00066823 File Offset: 0x00064A23
+	// Token: 0x17001242 RID: 4674
+	// (get) Token: 0x06002DD6 RID: 11734 RVA: 0x000046FA File Offset: 0x000028FA
 	public StrikeType StrikeType
 	{
 		get
@@ -115,8 +115,8 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DE4 RID: 3556
-	// (get) Token: 0x0600206E RID: 8302 RVA: 0x00066827 File Offset: 0x00064A27
+	// Token: 0x17001243 RID: 4675
+	// (get) Token: 0x06002DD7 RID: 11735 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool IsDotDamage
 	{
 		get
@@ -125,8 +125,8 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DE5 RID: 3557
-	// (get) Token: 0x0600206F RID: 8303 RVA: 0x0006682A File Offset: 0x00064A2A
+	// Token: 0x17001244 RID: 4676
+	// (get) Token: 0x06002DD8 RID: 11736 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public StatusEffectType[] StatusEffectTypes
 	{
 		get
@@ -135,8 +135,8 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x17000DE6 RID: 3558
-	// (get) Token: 0x06002070 RID: 8304 RVA: 0x0006682D File Offset: 0x00064A2D
+	// Token: 0x17001245 RID: 4677
+	// (get) Token: 0x06002DD9 RID: 11737 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public float[] StatusEffectDurations
 	{
 		get
@@ -145,14 +145,14 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x06002071 RID: 8305 RVA: 0x00066830 File Offset: 0x00064A30
+	// Token: 0x06002DDA RID: 11738 RVA: 0x000192B9 File Offset: 0x000174B9
 	private void Start()
 	{
 		this.m_playerController = PlayerManager.GetPlayerController();
 		this.m_damageTickStartTime = Time.time;
 	}
 
-	// Token: 0x06002072 RID: 8306 RVA: 0x00066848 File Offset: 0x00064A48
+	// Token: 0x06002DDB RID: 11739 RVA: 0x000C74E4 File Offset: 0x000C56E4
 	private void Update()
 	{
 		if (this.m_playerController != null && this.m_playerController.CurrentMana > (float)this.m_playerController.ActualMaxMana && ReInput.isReady)
@@ -175,15 +175,15 @@ public class NoManaCap_Trait : BaseTrait, IDamageObj
 		}
 	}
 
-	// Token: 0x06002074 RID: 8308 RVA: 0x00066903 File Offset: 0x00064B03
+	// Token: 0x06002DDD RID: 11741 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IDamageObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04001C55 RID: 7253
+	// Token: 0x040025D9 RID: 9689
 	private global::PlayerController m_playerController;
 
-	// Token: 0x04001C56 RID: 7254
+	// Token: 0x040025DA RID: 9690
 	private float m_damageTickStartTime;
 }

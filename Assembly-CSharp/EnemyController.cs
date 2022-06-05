@@ -7,16 +7,16 @@ using SceneManagement_RL;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020001F2 RID: 498
+// Token: 0x0200038C RID: 908
 public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelConsumer, ISummoner, IHealth, IDamageObj, IGenericPoolObj, IOffscreenObj
 {
-	// Token: 0x17000A82 RID: 2690
-	// (get) Token: 0x0600146C RID: 5228 RVA: 0x0003DF1E File Offset: 0x0003C11E
-	// (set) Token: 0x0600146D RID: 5229 RVA: 0x0003DF26 File Offset: 0x0003C126
+	// Token: 0x17000D84 RID: 3460
+	// (get) Token: 0x06001D8D RID: 7565 RVA: 0x0000F48A File Offset: 0x0000D68A
+	// (set) Token: 0x06001D8E RID: 7566 RVA: 0x0000F492 File Offset: 0x0000D692
 	public bool DisableOffscreenWarnings { get; set; } = true;
 
-	// Token: 0x17000A83 RID: 2691
-	// (get) Token: 0x0600146E RID: 5230 RVA: 0x0003DF2F File Offset: 0x0003C12F
+	// Token: 0x17000D85 RID: 3461
+	// (get) Token: 0x06001D8F RID: 7567 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string RelicDamageTypeString
 	{
 		get
@@ -25,39 +25,39 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A84 RID: 2692
-	// (get) Token: 0x0600146F RID: 5231 RVA: 0x0003DF32 File Offset: 0x0003C132
-	// (set) Token: 0x06001470 RID: 5232 RVA: 0x0003DF3A File Offset: 0x0003C13A
+	// Token: 0x17000D86 RID: 3462
+	// (get) Token: 0x06001D90 RID: 7568 RVA: 0x0000F49E File Offset: 0x0000D69E
+	// (set) Token: 0x06001D91 RID: 7569 RVA: 0x0000F4A6 File Offset: 0x0000D6A6
 	public EnemyManager.EnemyPreSummonedState PreSummonedState { get; set; }
 
-	// Token: 0x17000A85 RID: 2693
-	// (get) Token: 0x06001471 RID: 5233 RVA: 0x0003DF43 File Offset: 0x0003C143
-	// (set) Token: 0x06001472 RID: 5234 RVA: 0x0003DF4B File Offset: 0x0003C14B
+	// Token: 0x17000D87 RID: 3463
+	// (get) Token: 0x06001D92 RID: 7570 RVA: 0x0000F4AF File Offset: 0x0000D6AF
+	// (set) Token: 0x06001D93 RID: 7571 RVA: 0x0000F4B7 File Offset: 0x0000D6B7
 	public bool IsCulled { get; set; }
 
-	// Token: 0x17000A86 RID: 2694
-	// (get) Token: 0x06001473 RID: 5235 RVA: 0x0003DF54 File Offset: 0x0003C154
-	// (set) Token: 0x06001474 RID: 5236 RVA: 0x0003DF5C File Offset: 0x0003C15C
+	// Token: 0x17000D88 RID: 3464
+	// (get) Token: 0x06001D94 RID: 7572 RVA: 0x0000F4C0 File Offset: 0x0000D6C0
+	// (set) Token: 0x06001D95 RID: 7573 RVA: 0x0000F4C8 File Offset: 0x0000D6C8
 	public bool KilledByKnockout { get; set; }
 
-	// Token: 0x17000A87 RID: 2695
-	// (get) Token: 0x06001475 RID: 5237 RVA: 0x0003DF65 File Offset: 0x0003C165
-	// (set) Token: 0x06001476 RID: 5238 RVA: 0x0003DF6D File Offset: 0x0003C16D
+	// Token: 0x17000D89 RID: 3465
+	// (get) Token: 0x06001D96 RID: 7574 RVA: 0x0000F4D1 File Offset: 0x0000D6D1
+	// (set) Token: 0x06001D97 RID: 7575 RVA: 0x0000F4D9 File Offset: 0x0000D6D9
 	public bool DisableDistanceThresholdCheck { get; set; }
 
-	// Token: 0x17000A88 RID: 2696
-	// (get) Token: 0x06001477 RID: 5239 RVA: 0x0003DF76 File Offset: 0x0003C176
-	// (set) Token: 0x06001478 RID: 5240 RVA: 0x0003DF7E File Offset: 0x0003C17E
+	// Token: 0x17000D8A RID: 3466
+	// (get) Token: 0x06001D98 RID: 7576 RVA: 0x0000F4E2 File Offset: 0x0000D6E2
+	// (set) Token: 0x06001D99 RID: 7577 RVA: 0x0000F4EA File Offset: 0x0000D6EA
 	public bool IsCommander { get; set; }
 
-	// Token: 0x17000A89 RID: 2697
-	// (get) Token: 0x06001479 RID: 5241 RVA: 0x0003DF87 File Offset: 0x0003C187
-	// (set) Token: 0x0600147A RID: 5242 RVA: 0x0003DF8F File Offset: 0x0003C18F
+	// Token: 0x17000D8B RID: 3467
+	// (get) Token: 0x06001D9A RID: 7578 RVA: 0x0000F4F3 File Offset: 0x0000D6F3
+	// (set) Token: 0x06001D9B RID: 7579 RVA: 0x0000F4FB File Offset: 0x0000D6FB
 	public int LastDamageHitCount { get; set; }
 
-	// Token: 0x17000A8A RID: 2698
-	// (get) Token: 0x0600147B RID: 5243 RVA: 0x0003DF98 File Offset: 0x0003C198
-	// (set) Token: 0x0600147C RID: 5244 RVA: 0x0003DFA0 File Offset: 0x0003C1A0
+	// Token: 0x17000D8C RID: 3468
+	// (get) Token: 0x06001D9C RID: 7580 RVA: 0x0000F504 File Offset: 0x0000D704
+	// (set) Token: 0x06001D9D RID: 7581 RVA: 0x0000F50C File Offset: 0x0000D70C
 	public DamageType LastDamageTakenType
 	{
 		get
@@ -74,8 +74,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A8B RID: 2699
-	// (get) Token: 0x0600147D RID: 5245 RVA: 0x0003DFB9 File Offset: 0x0003C1B9
+	// Token: 0x17000D8D RID: 3469
+	// (get) Token: 0x06001D9E RID: 7582 RVA: 0x0000F525 File Offset: 0x0000D725
 	public PreventPlatformDrop PreventPlatformDropObj
 	{
 		get
@@ -84,9 +84,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A8C RID: 2700
-	// (get) Token: 0x0600147E RID: 5246 RVA: 0x0003DFC1 File Offset: 0x0003C1C1
-	// (set) Token: 0x0600147F RID: 5247 RVA: 0x0003DFD4 File Offset: 0x0003C1D4
+	// Token: 0x17000D8E RID: 3470
+	// (get) Token: 0x06001D9F RID: 7583 RVA: 0x0000F52D File Offset: 0x0000D72D
+	// (set) Token: 0x06001DA0 RID: 7584 RVA: 0x0009CA88 File Offset: 0x0009AC88
 	public bool FallLedge
 	{
 		get
@@ -110,24 +110,24 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A8D RID: 2701
-	// (get) Token: 0x06001480 RID: 5248 RVA: 0x0003E020 File Offset: 0x0003C220
-	// (set) Token: 0x06001481 RID: 5249 RVA: 0x0003E028 File Offset: 0x0003C228
+	// Token: 0x17000D8F RID: 3471
+	// (get) Token: 0x06001DA1 RID: 7585 RVA: 0x0000F53F File Offset: 0x0000D73F
+	// (set) Token: 0x06001DA2 RID: 7586 RVA: 0x0000F547 File Offset: 0x0000D747
 	public bool IsBeingSummoned { get; set; }
 
-	// Token: 0x17000A8E RID: 2702
-	// (get) Token: 0x06001482 RID: 5250 RVA: 0x0003E031 File Offset: 0x0003C231
-	// (set) Token: 0x06001483 RID: 5251 RVA: 0x0003E039 File Offset: 0x0003C239
+	// Token: 0x17000D90 RID: 3472
+	// (get) Token: 0x06001DA3 RID: 7587 RVA: 0x0000F550 File Offset: 0x0000D750
+	// (set) Token: 0x06001DA4 RID: 7588 RVA: 0x0000F558 File Offset: 0x0000D758
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x17000A8F RID: 2703
-	// (get) Token: 0x06001484 RID: 5252 RVA: 0x0003E042 File Offset: 0x0003C242
-	// (set) Token: 0x06001485 RID: 5253 RVA: 0x0003E04A File Offset: 0x0003C24A
+	// Token: 0x17000D91 RID: 3473
+	// (get) Token: 0x06001DA5 RID: 7589 RVA: 0x0000F561 File Offset: 0x0000D761
+	// (set) Token: 0x06001DA6 RID: 7590 RVA: 0x0000F569 File Offset: 0x0000D769
 	public bool IsAwakeCalled { get; protected set; }
 
-	// Token: 0x17000A90 RID: 2704
-	// (get) Token: 0x06001486 RID: 5254 RVA: 0x0003E053 File Offset: 0x0003C253
-	// (set) Token: 0x06001487 RID: 5255 RVA: 0x0003E05B File Offset: 0x0003C25B
+	// Token: 0x17000D92 RID: 3474
+	// (get) Token: 0x06001DA7 RID: 7591 RVA: 0x0000F572 File Offset: 0x0000D772
+	// (set) Token: 0x06001DA8 RID: 7592 RVA: 0x0000F57A File Offset: 0x0000D77A
 	public bool DisableXPBonuses
 	{
 		get
@@ -140,9 +140,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A91 RID: 2705
-	// (get) Token: 0x06001488 RID: 5256 RVA: 0x0003E064 File Offset: 0x0003C264
-	// (set) Token: 0x06001489 RID: 5257 RVA: 0x0003E06C File Offset: 0x0003C26C
+	// Token: 0x17000D93 RID: 3475
+	// (get) Token: 0x06001DA9 RID: 7593 RVA: 0x0000F583 File Offset: 0x0000D783
+	// (set) Token: 0x06001DAA RID: 7594 RVA: 0x0000F58B File Offset: 0x0000D78B
 	public bool DisableHPMPBonuses
 	{
 		get
@@ -155,8 +155,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A92 RID: 2706
-	// (get) Token: 0x0600148A RID: 5258 RVA: 0x0003E075 File Offset: 0x0003C275
+	// Token: 0x17000D94 RID: 3476
+	// (get) Token: 0x06001DAB RID: 7595 RVA: 0x0000F594 File Offset: 0x0000D794
 	public bool IsVulnerableToLifeSteal
 	{
 		get
@@ -165,18 +165,18 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A93 RID: 2707
-	// (get) Token: 0x0600148B RID: 5259 RVA: 0x0003E080 File Offset: 0x0003C280
-	// (set) Token: 0x0600148C RID: 5260 RVA: 0x0003E088 File Offset: 0x0003C288
+	// Token: 0x17000D95 RID: 3477
+	// (get) Token: 0x06001DAC RID: 7596 RVA: 0x0000F59F File Offset: 0x0000D79F
+	// (set) Token: 0x06001DAD RID: 7597 RVA: 0x0000F5A7 File Offset: 0x0000D7A7
 	public bool ResetToNeutralWhenUnculling { get; set; } = true;
 
-	// Token: 0x17000A94 RID: 2708
-	// (get) Token: 0x0600148D RID: 5261 RVA: 0x0003E091 File Offset: 0x0003C291
-	// (set) Token: 0x0600148E RID: 5262 RVA: 0x0003E099 File Offset: 0x0003C299
+	// Token: 0x17000D96 RID: 3478
+	// (get) Token: 0x06001DAE RID: 7598 RVA: 0x0000F5B0 File Offset: 0x0000D7B0
+	// (set) Token: 0x06001DAF RID: 7599 RVA: 0x0000F5B8 File Offset: 0x0000D7B8
 	public bool DisableCulling { get; set; }
 
-	// Token: 0x17000A95 RID: 2709
-	// (get) Token: 0x0600148F RID: 5263 RVA: 0x0003E0A2 File Offset: 0x0003C2A2
+	// Token: 0x17000D97 RID: 3479
+	// (get) Token: 0x06001DB0 RID: 7600 RVA: 0x0000F5C1 File Offset: 0x0000D7C1
 	public GameObject[] CulledObjectsArray
 	{
 		get
@@ -185,18 +185,18 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A96 RID: 2710
-	// (get) Token: 0x06001490 RID: 5264 RVA: 0x0003E0AA File Offset: 0x0003C2AA
-	// (set) Token: 0x06001491 RID: 5265 RVA: 0x0003E0B2 File Offset: 0x0003C2B2
+	// Token: 0x17000D98 RID: 3480
+	// (get) Token: 0x06001DB1 RID: 7601 RVA: 0x0000F5C9 File Offset: 0x0000D7C9
+	// (set) Token: 0x06001DB2 RID: 7602 RVA: 0x0000F5D1 File Offset: 0x0000D7D1
 	public bool LeftSidePlatformDropPrevented { get; set; }
 
-	// Token: 0x17000A97 RID: 2711
-	// (get) Token: 0x06001492 RID: 5266 RVA: 0x0003E0BB File Offset: 0x0003C2BB
-	// (set) Token: 0x06001493 RID: 5267 RVA: 0x0003E0C3 File Offset: 0x0003C2C3
+	// Token: 0x17000D99 RID: 3481
+	// (get) Token: 0x06001DB3 RID: 7603 RVA: 0x0000F5DA File Offset: 0x0000D7DA
+	// (set) Token: 0x06001DB4 RID: 7604 RVA: 0x0000F5E2 File Offset: 0x0000D7E2
 	public bool RightSidePlatformDropPrevented { get; set; }
 
-	// Token: 0x17000A98 RID: 2712
-	// (get) Token: 0x06001494 RID: 5268 RVA: 0x0003E0CC File Offset: 0x0003C2CC
+	// Token: 0x17000D9A RID: 3482
+	// (get) Token: 0x06001DB5 RID: 7605 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public StatusEffectType[] StatusEffectTypes
 	{
 		get
@@ -205,8 +205,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A99 RID: 2713
-	// (get) Token: 0x06001495 RID: 5269 RVA: 0x0003E0CF File Offset: 0x0003C2CF
+	// Token: 0x17000D9B RID: 3483
+	// (get) Token: 0x06001DB6 RID: 7606 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public float[] StatusEffectDurations
 	{
 		get
@@ -215,13 +215,13 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A9A RID: 2714
-	// (get) Token: 0x06001496 RID: 5270 RVA: 0x0003E0D2 File Offset: 0x0003C2D2
-	// (set) Token: 0x06001497 RID: 5271 RVA: 0x0003E0DA File Offset: 0x0003C2DA
+	// Token: 0x17000D9C RID: 3484
+	// (get) Token: 0x06001DB7 RID: 7607 RVA: 0x0000F5EB File Offset: 0x0000D7EB
+	// (set) Token: 0x06001DB8 RID: 7608 RVA: 0x0000F5F3 File Offset: 0x0000D7F3
 	public float ModeshiftDamageMod { get; set; } = 1f;
 
-	// Token: 0x17000A9B RID: 2715
-	// (get) Token: 0x06001498 RID: 5272 RVA: 0x0003E0E3 File Offset: 0x0003C2E3
+	// Token: 0x17000D9D RID: 3485
+	// (get) Token: 0x06001DB9 RID: 7609 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public bool IsDotDamage
 	{
 		get
@@ -230,8 +230,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A9C RID: 2716
-	// (get) Token: 0x06001499 RID: 5273 RVA: 0x0003E0E8 File Offset: 0x0003C2E8
+	// Token: 0x17000D9E RID: 3486
+	// (get) Token: 0x06001DBA RID: 7610 RVA: 0x0009CAD4 File Offset: 0x0009ACD4
 	public override float ActualStrength
 	{
 		get
@@ -262,8 +262,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A9D RID: 2717
-	// (get) Token: 0x0600149A RID: 5274 RVA: 0x0003E1BC File Offset: 0x0003C3BC
+	// Token: 0x17000D9F RID: 3487
+	// (get) Token: 0x06001DBB RID: 7611 RVA: 0x0009CBA8 File Offset: 0x0009ADA8
 	public override int ActualMaxHealth
 	{
 		get
@@ -281,18 +281,18 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000A9E RID: 2718
-	// (get) Token: 0x0600149B RID: 5275 RVA: 0x0003E22C File Offset: 0x0003C42C
-	// (set) Token: 0x0600149C RID: 5276 RVA: 0x0003E234 File Offset: 0x0003C434
+	// Token: 0x17000DA0 RID: 3488
+	// (get) Token: 0x06001DBC RID: 7612 RVA: 0x0000F5FC File Offset: 0x0000D7FC
+	// (set) Token: 0x06001DBD RID: 7613 RVA: 0x0000F604 File Offset: 0x0000D804
 	public EnemySpawnController EnemySpawnController { get; set; }
 
-	// Token: 0x17000A9F RID: 2719
-	// (get) Token: 0x0600149D RID: 5277 RVA: 0x0003E23D File Offset: 0x0003C43D
-	// (set) Token: 0x0600149E RID: 5278 RVA: 0x0003E245 File Offset: 0x0003C445
+	// Token: 0x17000DA1 RID: 3489
+	// (get) Token: 0x06001DBE RID: 7614 RVA: 0x0000F60D File Offset: 0x0000D80D
+	// (set) Token: 0x06001DBF RID: 7615 RVA: 0x0000F615 File Offset: 0x0000D815
 	public ISummoner Summoner { get; set; }
 
-	// Token: 0x17000AA0 RID: 2720
-	// (get) Token: 0x0600149F RID: 5279 RVA: 0x0003E24E File Offset: 0x0003C44E
+	// Token: 0x17000DA2 RID: 3490
+	// (get) Token: 0x06001DC0 RID: 7616 RVA: 0x0000F61E File Offset: 0x0000D81E
 	public bool IsSummoned
 	{
 		get
@@ -301,19 +301,19 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AA1 RID: 2721
-	// (get) Token: 0x060014A0 RID: 5280 RVA: 0x0003E259 File Offset: 0x0003C459
-	// (set) Token: 0x060014A1 RID: 5281 RVA: 0x0003E261 File Offset: 0x0003C461
+	// Token: 0x17000DA3 RID: 3491
+	// (get) Token: 0x06001DC1 RID: 7617 RVA: 0x0000F629 File Offset: 0x0000D829
+	// (set) Token: 0x06001DC2 RID: 7618 RVA: 0x0000F631 File Offset: 0x0000D831
 	public float GroundHorizontalVelocity { get; set; }
 
-	// Token: 0x17000AA2 RID: 2722
-	// (get) Token: 0x060014A2 RID: 5282 RVA: 0x0003E26A File Offset: 0x0003C46A
-	// (set) Token: 0x060014A3 RID: 5283 RVA: 0x0003E272 File Offset: 0x0003C472
+	// Token: 0x17000DA4 RID: 3492
+	// (get) Token: 0x06001DC3 RID: 7619 RVA: 0x0000F63A File Offset: 0x0000D83A
+	// (set) Token: 0x06001DC4 RID: 7620 RVA: 0x0000F642 File Offset: 0x0000D842
 	public float JumpHorizontalVelocity { get; set; }
 
-	// Token: 0x17000AA3 RID: 2723
-	// (get) Token: 0x060014A4 RID: 5284 RVA: 0x0003E27B File Offset: 0x0003C47B
-	// (set) Token: 0x060014A5 RID: 5285 RVA: 0x0003E283 File Offset: 0x0003C483
+	// Token: 0x17000DA5 RID: 3493
+	// (get) Token: 0x06001DC5 RID: 7621 RVA: 0x0000F64B File Offset: 0x0000D84B
+	// (set) Token: 0x06001DC6 RID: 7622 RVA: 0x0000F653 File Offset: 0x0000D853
 	public bool IsBoss
 	{
 		get
@@ -326,8 +326,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AA4 RID: 2724
-	// (get) Token: 0x060014A6 RID: 5286 RVA: 0x0003E28C File Offset: 0x0003C48C
+	// Token: 0x17000DA6 RID: 3494
+	// (get) Token: 0x06001DC7 RID: 7623 RVA: 0x0000F65C File Offset: 0x0000D85C
 	public override float BaseScaleToOffsetWith
 	{
 		get
@@ -336,8 +336,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AA5 RID: 2725
-	// (get) Token: 0x060014A7 RID: 5287 RVA: 0x0003E294 File Offset: 0x0003C494
+	// Token: 0x17000DA7 RID: 3495
+	// (get) Token: 0x06001DC8 RID: 7624 RVA: 0x0000F664 File Offset: 0x0000D864
 	public IRelayLink<object, EnemyActivationStateChangedEventArgs> OnActivatedRelay
 	{
 		get
@@ -346,8 +346,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AA6 RID: 2726
-	// (get) Token: 0x060014A8 RID: 5288 RVA: 0x0003E2A1 File Offset: 0x0003C4A1
+	// Token: 0x17000DA8 RID: 3496
+	// (get) Token: 0x06001DC9 RID: 7625 RVA: 0x0000F671 File Offset: 0x0000D871
 	public IRelayLink<object, EnemyActivationStateChangedEventArgs> OnDeactivatedRelay
 	{
 		get
@@ -356,8 +356,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AA7 RID: 2727
-	// (get) Token: 0x060014A9 RID: 5289 RVA: 0x0003E2AE File Offset: 0x0003C4AE
+	// Token: 0x17000DA9 RID: 3497
+	// (get) Token: 0x06001DCA RID: 7626 RVA: 0x0000F67E File Offset: 0x0000D87E
 	public IRelayLink<object, EnemyActivationStateChangedEventArgs> OnReactivationTimedOutRelay
 	{
 		get
@@ -366,8 +366,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AA8 RID: 2728
-	// (get) Token: 0x060014AA RID: 5290 RVA: 0x0003E2BB File Offset: 0x0003C4BB
+	// Token: 0x17000DAA RID: 3498
+	// (get) Token: 0x06001DCB RID: 7627 RVA: 0x0000F68B File Offset: 0x0000D88B
 	public IRelayLink<object, EnemyDeathEventArgs> OnEnemyDeathRelay
 	{
 		get
@@ -376,8 +376,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AA9 RID: 2729
-	// (get) Token: 0x060014AB RID: 5291 RVA: 0x0003E2C8 File Offset: 0x0003C4C8
+	// Token: 0x17000DAB RID: 3499
+	// (get) Token: 0x06001DCC RID: 7628 RVA: 0x0000F698 File Offset: 0x0000D898
 	public IRelayLink<object, EventArgs> OnResetPositionRelay
 	{
 		get
@@ -386,8 +386,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AAA RID: 2730
-	// (get) Token: 0x060014AC RID: 5292 RVA: 0x0003E2D5 File Offset: 0x0003C4D5
+	// Token: 0x17000DAC RID: 3500
+	// (get) Token: 0x06001DCD RID: 7629 RVA: 0x0000F6A5 File Offset: 0x0000D8A5
 	public IRelayLink OnDisableRelay
 	{
 		get
@@ -396,8 +396,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AAB RID: 2731
-	// (get) Token: 0x060014AD RID: 5293 RVA: 0x0003E2E2 File Offset: 0x0003C4E2
+	// Token: 0x17000DAD RID: 3501
+	// (get) Token: 0x06001DCE RID: 7630 RVA: 0x0000F6B2 File Offset: 0x0000D8B2
 	public Relay<object, EventArgs> OnPositionedForSummoningRelay
 	{
 		get
@@ -406,9 +406,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AAC RID: 2732
-	// (get) Token: 0x060014AE RID: 5294 RVA: 0x0003E2EA File Offset: 0x0003C4EA
-	// (set) Token: 0x060014AF RID: 5295 RVA: 0x0003E2FC File Offset: 0x0003C4FC
+	// Token: 0x17000DAE RID: 3502
+	// (get) Token: 0x06001DCF RID: 7631 RVA: 0x0000F6BA File Offset: 0x0000D8BA
+	// (set) Token: 0x06001DD0 RID: 7632 RVA: 0x0000F6CC File Offset: 0x0000D8CC
 	public override bool DisableFriction
 	{
 		get
@@ -421,9 +421,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AAD RID: 2733
-	// (get) Token: 0x060014B0 RID: 5296 RVA: 0x0003E305 File Offset: 0x0003C505
-	// (set) Token: 0x060014B1 RID: 5297 RVA: 0x0003E30D File Offset: 0x0003C50D
+	// Token: 0x17000DAF RID: 3503
+	// (get) Token: 0x06001DD1 RID: 7633 RVA: 0x0000F6D5 File Offset: 0x0000D8D5
+	// (set) Token: 0x06001DD2 RID: 7634 RVA: 0x0000F6DD File Offset: 0x0000D8DD
 	public bool ForceActivate
 	{
 		get
@@ -436,9 +436,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AAE RID: 2734
-	// (get) Token: 0x060014B2 RID: 5298 RVA: 0x0003E316 File Offset: 0x0003C516
-	// (set) Token: 0x060014B3 RID: 5299 RVA: 0x0003E31E File Offset: 0x0003C51E
+	// Token: 0x17000DB0 RID: 3504
+	// (get) Token: 0x06001DD3 RID: 7635 RVA: 0x0000F6E6 File Offset: 0x0000D8E6
+	// (set) Token: 0x06001DD4 RID: 7636 RVA: 0x0000F6EE File Offset: 0x0000D8EE
 	public StrikeType StrikeType
 	{
 		get
@@ -451,9 +451,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AAF RID: 2735
-	// (get) Token: 0x060014B4 RID: 5300 RVA: 0x0003E327 File Offset: 0x0003C527
-	// (set) Token: 0x060014B5 RID: 5301 RVA: 0x0003E32F File Offset: 0x0003C52F
+	// Token: 0x17000DB1 RID: 3505
+	// (get) Token: 0x06001DD5 RID: 7637 RVA: 0x0000F6F7 File Offset: 0x0000D8F7
+	// (set) Token: 0x06001DD6 RID: 7638 RVA: 0x0000F6FF File Offset: 0x0000D8FF
 	public bool AlwaysDealsContactDamage
 	{
 		get
@@ -466,23 +466,23 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x060014B6 RID: 5302 RVA: 0x0003E338 File Offset: 0x0003C538
+	// Token: 0x06001DD7 RID: 7639 RVA: 0x0000F708 File Offset: 0x0000D908
 	public override void SetVelocity(float velocityX, float velocityY, bool additive)
 	{
 		this.m_previousAirVelocityX = velocityX;
 		base.SetVelocity(velocityX, velocityY, additive);
 	}
 
-	// Token: 0x060014B7 RID: 5303 RVA: 0x0003E34A File Offset: 0x0003C54A
+	// Token: 0x06001DD8 RID: 7640 RVA: 0x0000F71A File Offset: 0x0000D91A
 	public override void SetVelocityX(float velocity, bool additive)
 	{
 		this.m_previousAirVelocityX = velocity;
 		base.SetVelocityX(velocity, additive);
 	}
 
-	// Token: 0x17000AB0 RID: 2736
-	// (get) Token: 0x060014B8 RID: 5304 RVA: 0x0003E35B File Offset: 0x0003C55B
-	// (set) Token: 0x060014B9 RID: 5305 RVA: 0x0003E363 File Offset: 0x0003C563
+	// Token: 0x17000DB2 RID: 3506
+	// (get) Token: 0x06001DD9 RID: 7641 RVA: 0x0000F72B File Offset: 0x0000D92B
+	// (set) Token: 0x06001DDA RID: 7642 RVA: 0x0000F733 File Offset: 0x0000D933
 	public float FlightKnockbackDecelerationMod
 	{
 		get
@@ -495,9 +495,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AB1 RID: 2737
-	// (get) Token: 0x060014BA RID: 5306 RVA: 0x0003E36C File Offset: 0x0003C56C
-	// (set) Token: 0x060014BB RID: 5307 RVA: 0x0003E374 File Offset: 0x0003C574
+	// Token: 0x17000DB3 RID: 3507
+	// (get) Token: 0x06001DDB RID: 7643 RVA: 0x0000F73C File Offset: 0x0000D93C
+	// (set) Token: 0x06001DDC RID: 7644 RVA: 0x0000F744 File Offset: 0x0000D944
 	public bool RicochetsAttackerOnHit
 	{
 		get
@@ -510,9 +510,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AB2 RID: 2738
-	// (get) Token: 0x060014BC RID: 5308 RVA: 0x0003E37D File Offset: 0x0003C57D
-	// (set) Token: 0x060014BD RID: 5309 RVA: 0x0003E385 File Offset: 0x0003C585
+	// Token: 0x17000DB4 RID: 3508
+	// (get) Token: 0x06001DDD RID: 7645 RVA: 0x0000F74D File Offset: 0x0000D94D
+	// (set) Token: 0x06001DDE RID: 7646 RVA: 0x0000F755 File Offset: 0x0000D955
 	public EnemyData EnemyData
 	{
 		get
@@ -529,9 +529,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AB3 RID: 2739
-	// (get) Token: 0x060014BE RID: 5310 RVA: 0x0003E39B File Offset: 0x0003C59B
-	// (set) Token: 0x060014BF RID: 5311 RVA: 0x0003E3A3 File Offset: 0x0003C5A3
+	// Token: 0x17000DB5 RID: 3509
+	// (get) Token: 0x06001DDF RID: 7647 RVA: 0x0000F76B File Offset: 0x0000D96B
+	// (set) Token: 0x06001DE0 RID: 7648 RVA: 0x0000F773 File Offset: 0x0000D973
 	public bool ConstrainToRoom
 	{
 		get
@@ -544,9 +544,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AB4 RID: 2740
-	// (get) Token: 0x060014C0 RID: 5312 RVA: 0x0003E3AC File Offset: 0x0003C5AC
-	// (set) Token: 0x060014C1 RID: 5313 RVA: 0x0003E3B4 File Offset: 0x0003C5B4
+	// Token: 0x17000DB6 RID: 3510
+	// (get) Token: 0x06001DE1 RID: 7649 RVA: 0x0000F77C File Offset: 0x0000D97C
+	// (set) Token: 0x06001DE2 RID: 7650 RVA: 0x0000F784 File Offset: 0x0000D984
 	public LogicController LogicController
 	{
 		get
@@ -559,8 +559,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AB5 RID: 2741
-	// (get) Token: 0x060014C2 RID: 5314 RVA: 0x0003E3BD File Offset: 0x0003C5BD
+	// Token: 0x17000DB7 RID: 3511
+	// (get) Token: 0x06001DE3 RID: 7651 RVA: 0x00003713 File Offset: 0x00001913
 	public GameObject GameObject
 	{
 		get
@@ -569,8 +569,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AB6 RID: 2742
-	// (get) Token: 0x060014C3 RID: 5315 RVA: 0x0003E3C5 File Offset: 0x0003C5C5
+	// Token: 0x17000DB8 RID: 3512
+	// (get) Token: 0x06001DE4 RID: 7652 RVA: 0x0000F78D File Offset: 0x0000D98D
 	public bool IsTargetToMyRight
 	{
 		get
@@ -579,14 +579,14 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AB7 RID: 2743
-	// (get) Token: 0x060014C4 RID: 5316 RVA: 0x0003E3FE File Offset: 0x0003C5FE
-	// (set) Token: 0x060014C5 RID: 5317 RVA: 0x0003E406 File Offset: 0x0003C606
+	// Token: 0x17000DB9 RID: 3513
+	// (get) Token: 0x06001DE5 RID: 7653 RVA: 0x0000F7C6 File Offset: 0x0000D9C6
+	// (set) Token: 0x06001DE6 RID: 7654 RVA: 0x0000F7CE File Offset: 0x0000D9CE
 	public bool FollowTarget { get; set; }
 
-	// Token: 0x17000AB8 RID: 2744
-	// (get) Token: 0x060014C6 RID: 5318 RVA: 0x0003E40F File Offset: 0x0003C60F
-	// (set) Token: 0x060014C7 RID: 5319 RVA: 0x0003E417 File Offset: 0x0003C617
+	// Token: 0x17000DBA RID: 3514
+	// (get) Token: 0x06001DE7 RID: 7655 RVA: 0x0000F7D7 File Offset: 0x0000D9D7
+	// (set) Token: 0x06001DE8 RID: 7656 RVA: 0x0000F7DF File Offset: 0x0000D9DF
 	public Vector3 FollowOffset
 	{
 		get
@@ -599,14 +599,14 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AB9 RID: 2745
-	// (get) Token: 0x060014C8 RID: 5320 RVA: 0x0003E420 File Offset: 0x0003C620
-	// (set) Token: 0x060014C9 RID: 5321 RVA: 0x0003E428 File Offset: 0x0003C628
+	// Token: 0x17000DBB RID: 3515
+	// (get) Token: 0x06001DE9 RID: 7657 RVA: 0x0000F7E8 File Offset: 0x0000D9E8
+	// (set) Token: 0x06001DEA RID: 7658 RVA: 0x0000F7F0 File Offset: 0x0000D9F0
 	public FlyingMovementType FlyingMovementType { get; set; }
 
-	// Token: 0x17000ABA RID: 2746
-	// (get) Token: 0x060014CA RID: 5322 RVA: 0x0003E431 File Offset: 0x0003C631
-	// (set) Token: 0x060014CB RID: 5323 RVA: 0x0003E439 File Offset: 0x0003C639
+	// Token: 0x17000DBC RID: 3516
+	// (get) Token: 0x06001DEB RID: 7659 RVA: 0x0000F7F9 File Offset: 0x0000D9F9
+	// (set) Token: 0x06001DEC RID: 7660 RVA: 0x0000F801 File Offset: 0x0000DA01
 	public bool PivotFollowsOrientation
 	{
 		get
@@ -623,9 +623,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ABB RID: 2747
-	// (get) Token: 0x060014CC RID: 5324 RVA: 0x0003E46F File Offset: 0x0003C66F
-	// (set) Token: 0x060014CD RID: 5325 RVA: 0x0003E477 File Offset: 0x0003C677
+	// Token: 0x17000DBD RID: 3517
+	// (get) Token: 0x06001DED RID: 7661 RVA: 0x0000F837 File Offset: 0x0000DA37
+	// (set) Token: 0x06001DEE RID: 7662 RVA: 0x0000F83F File Offset: 0x0000DA3F
 	public virtual bool AlwaysFacing
 	{
 		get
@@ -638,9 +638,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ABC RID: 2748
-	// (get) Token: 0x060014CE RID: 5326 RVA: 0x0003E480 File Offset: 0x0003C680
-	// (set) Token: 0x060014CF RID: 5327 RVA: 0x0003E488 File Offset: 0x0003C688
+	// Token: 0x17000DBE RID: 3518
+	// (get) Token: 0x06001DEF RID: 7663 RVA: 0x0000F848 File Offset: 0x0000DA48
+	// (set) Token: 0x06001DF0 RID: 7664 RVA: 0x0000F850 File Offset: 0x0000DA50
 	public GameObject Target
 	{
 		get
@@ -654,8 +654,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ABD RID: 2749
-	// (get) Token: 0x060014D0 RID: 5328 RVA: 0x0003E4A2 File Offset: 0x0003C6A2
+	// Token: 0x17000DBF RID: 3519
+	// (get) Token: 0x06001DF1 RID: 7665 RVA: 0x0000F86A File Offset: 0x0000DA6A
 	public BaseCharacterController TargetController
 	{
 		get
@@ -664,8 +664,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ABE RID: 2750
-	// (get) Token: 0x060014D1 RID: 5329 RVA: 0x0003E4AA File Offset: 0x0003C6AA
+	// Token: 0x17000DC0 RID: 3520
+	// (get) Token: 0x06001DF2 RID: 7666 RVA: 0x0000F872 File Offset: 0x0000DA72
 	public virtual float ActualSummonValue
 	{
 		get
@@ -674,9 +674,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ABF RID: 2751
-	// (get) Token: 0x060014D2 RID: 5330 RVA: 0x0003E4B7 File Offset: 0x0003C6B7
-	// (set) Token: 0x060014D3 RID: 5331 RVA: 0x0003E4BF File Offset: 0x0003C6BF
+	// Token: 0x17000DC1 RID: 3521
+	// (get) Token: 0x06001DF3 RID: 7667 RVA: 0x0000F87F File Offset: 0x0000DA7F
+	// (set) Token: 0x06001DF4 RID: 7668 RVA: 0x0000F887 File Offset: 0x0000DA87
 	public float BaseSpeed
 	{
 		get
@@ -689,18 +689,18 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AC0 RID: 2752
-	// (get) Token: 0x060014D4 RID: 5332 RVA: 0x0003E4C8 File Offset: 0x0003C6C8
-	// (set) Token: 0x060014D5 RID: 5333 RVA: 0x0003E4D0 File Offset: 0x0003C6D0
+	// Token: 0x17000DC2 RID: 3522
+	// (get) Token: 0x06001DF5 RID: 7669 RVA: 0x0000F890 File Offset: 0x0000DA90
+	// (set) Token: 0x06001DF6 RID: 7670 RVA: 0x0000F898 File Offset: 0x0000DA98
 	public float SpeedMod { get; protected set; }
 
-	// Token: 0x17000AC1 RID: 2753
-	// (get) Token: 0x060014D6 RID: 5334 RVA: 0x0003E4D9 File Offset: 0x0003C6D9
-	// (set) Token: 0x060014D7 RID: 5335 RVA: 0x0003E4E1 File Offset: 0x0003C6E1
+	// Token: 0x17000DC3 RID: 3523
+	// (get) Token: 0x06001DF7 RID: 7671 RVA: 0x0000F8A1 File Offset: 0x0000DAA1
+	// (set) Token: 0x06001DF8 RID: 7672 RVA: 0x0000F8A9 File Offset: 0x0000DAA9
 	public float SpeedAdd { get; protected set; }
 
-	// Token: 0x17000AC2 RID: 2754
-	// (get) Token: 0x060014D8 RID: 5336 RVA: 0x0003E4EA File Offset: 0x0003C6EA
+	// Token: 0x17000DC4 RID: 3524
+	// (get) Token: 0x06001DF9 RID: 7673 RVA: 0x0000F8B2 File Offset: 0x0000DAB2
 	public virtual float ActualSpeed
 	{
 		get
@@ -709,9 +709,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AC3 RID: 2755
-	// (get) Token: 0x060014D9 RID: 5337 RVA: 0x0003E506 File Offset: 0x0003C706
-	// (set) Token: 0x060014DA RID: 5338 RVA: 0x0003E50E File Offset: 0x0003C70E
+	// Token: 0x17000DC5 RID: 3525
+	// (get) Token: 0x06001DFA RID: 7674 RVA: 0x0000F8CE File Offset: 0x0000DACE
+	// (set) Token: 0x06001DFB RID: 7675 RVA: 0x0000F8D6 File Offset: 0x0000DAD6
 	public float BaseTurnSpeed
 	{
 		get
@@ -724,8 +724,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AC4 RID: 2756
-	// (get) Token: 0x060014DB RID: 5339 RVA: 0x0003E517 File Offset: 0x0003C717
+	// Token: 0x17000DC6 RID: 3526
+	// (get) Token: 0x06001DFC RID: 7676 RVA: 0x0000F8DF File Offset: 0x0000DADF
 	public virtual float ActualTurnSpeed
 	{
 		get
@@ -734,9 +734,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AC5 RID: 2757
-	// (get) Token: 0x060014DC RID: 5340 RVA: 0x0003E51F File Offset: 0x0003C71F
-	// (set) Token: 0x060014DD RID: 5341 RVA: 0x0003E527 File Offset: 0x0003C727
+	// Token: 0x17000DC7 RID: 3527
+	// (get) Token: 0x06001DFD RID: 7677 RVA: 0x0000F8E7 File Offset: 0x0000DAE7
+	// (set) Token: 0x06001DFE RID: 7678 RVA: 0x0000F8EF File Offset: 0x0000DAEF
 	public Vector2 BaseRestCooldown
 	{
 		get
@@ -749,8 +749,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AC6 RID: 2758
-	// (get) Token: 0x060014DE RID: 5342 RVA: 0x0003E530 File Offset: 0x0003C730
+	// Token: 0x17000DC8 RID: 3528
+	// (get) Token: 0x06001DFF RID: 7679 RVA: 0x0000F8F8 File Offset: 0x0000DAF8
 	public virtual Vector2 ActualRestCooldown
 	{
 		get
@@ -759,9 +759,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AC7 RID: 2759
-	// (get) Token: 0x060014DF RID: 5343 RVA: 0x0003E538 File Offset: 0x0003C738
-	// (set) Token: 0x060014E0 RID: 5344 RVA: 0x0003E540 File Offset: 0x0003C740
+	// Token: 0x17000DC9 RID: 3529
+	// (get) Token: 0x06001E00 RID: 7680 RVA: 0x0000F900 File Offset: 0x0000DB00
+	// (set) Token: 0x06001E01 RID: 7681 RVA: 0x0009CC18 File Offset: 0x0009AE18
 	public virtual bool IsFlying
 	{
 		get
@@ -784,9 +784,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AC8 RID: 2760
-	// (get) Token: 0x060014E1 RID: 5345 RVA: 0x0003E5C1 File Offset: 0x0003C7C1
-	// (set) Token: 0x060014E2 RID: 5346 RVA: 0x0003E5C9 File Offset: 0x0003C7C9
+	// Token: 0x17000DCA RID: 3530
+	// (get) Token: 0x06001E02 RID: 7682 RVA: 0x0000F908 File Offset: 0x0000DB08
+	// (set) Token: 0x06001E03 RID: 7683 RVA: 0x0000F910 File Offset: 0x0000DB10
 	public virtual bool CollidesWithPlatforms
 	{
 		get
@@ -803,9 +803,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AC9 RID: 2761
-	// (get) Token: 0x060014E3 RID: 5347 RVA: 0x0003E5EE File Offset: 0x0003C7EE
-	// (set) Token: 0x060014E4 RID: 5348 RVA: 0x0003E5F6 File Offset: 0x0003C7F6
+	// Token: 0x17000DCB RID: 3531
+	// (get) Token: 0x06001E04 RID: 7684 RVA: 0x0000F935 File Offset: 0x0000DB35
+	// (set) Token: 0x06001E05 RID: 7685 RVA: 0x0000F93D File Offset: 0x0000DB3D
 	public float BaseStunStrength
 	{
 		get
@@ -818,8 +818,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ACA RID: 2762
-	// (get) Token: 0x060014E5 RID: 5349 RVA: 0x0003E5FF File Offset: 0x0003C7FF
+	// Token: 0x17000DCC RID: 3532
+	// (get) Token: 0x06001E06 RID: 7686 RVA: 0x0000F946 File Offset: 0x0000DB46
 	public float ActualStunStrength
 	{
 		get
@@ -828,9 +828,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ACB RID: 2763
-	// (get) Token: 0x060014E6 RID: 5350 RVA: 0x0003E607 File Offset: 0x0003C807
-	// (set) Token: 0x060014E7 RID: 5351 RVA: 0x0003E60F File Offset: 0x0003C80F
+	// Token: 0x17000DCD RID: 3533
+	// (get) Token: 0x06001E07 RID: 7687 RVA: 0x0000F94E File Offset: 0x0000DB4E
+	// (set) Token: 0x06001E08 RID: 7688 RVA: 0x0000F956 File Offset: 0x0000DB56
 	public float BaseKnockbackStrength
 	{
 		get
@@ -843,8 +843,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ACC RID: 2764
-	// (get) Token: 0x060014E8 RID: 5352 RVA: 0x0003E618 File Offset: 0x0003C818
+	// Token: 0x17000DCE RID: 3534
+	// (get) Token: 0x06001E09 RID: 7689 RVA: 0x0000F95F File Offset: 0x0000DB5F
 	public float ActualKnockbackStrength
 	{
 		get
@@ -853,9 +853,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ACD RID: 2765
-	// (get) Token: 0x060014E9 RID: 5353 RVA: 0x0003E620 File Offset: 0x0003C820
-	// (set) Token: 0x060014EA RID: 5354 RVA: 0x0003E628 File Offset: 0x0003C828
+	// Token: 0x17000DCF RID: 3535
+	// (get) Token: 0x06001E0A RID: 7690 RVA: 0x0000F967 File Offset: 0x0000DB67
+	// (set) Token: 0x06001E0B RID: 7691 RVA: 0x0000F96F File Offset: 0x0000DB6F
 	public float BaseDropOdds
 	{
 		get
@@ -868,8 +868,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ACE RID: 2766
-	// (get) Token: 0x060014EB RID: 5355 RVA: 0x0003E631 File Offset: 0x0003C831
+	// Token: 0x17000DD0 RID: 3536
+	// (get) Token: 0x06001E0C RID: 7692 RVA: 0x0000F978 File Offset: 0x0000DB78
 	public virtual float ActualDropOdds
 	{
 		get
@@ -878,9 +878,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ACF RID: 2767
-	// (get) Token: 0x060014EC RID: 5356 RVA: 0x0003E639 File Offset: 0x0003C839
-	// (set) Token: 0x060014ED RID: 5357 RVA: 0x0003E641 File Offset: 0x0003C841
+	// Token: 0x17000DD1 RID: 3537
+	// (get) Token: 0x06001E0D RID: 7693 RVA: 0x0000F980 File Offset: 0x0000DB80
+	// (set) Token: 0x06001E0E RID: 7694 RVA: 0x0000F988 File Offset: 0x0000DB88
 	public virtual float CloseRangeRadius
 	{
 		get
@@ -894,9 +894,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AD0 RID: 2768
-	// (get) Token: 0x060014EE RID: 5358 RVA: 0x0003E666 File Offset: 0x0003C866
-	// (set) Token: 0x060014EF RID: 5359 RVA: 0x0003E66E File Offset: 0x0003C86E
+	// Token: 0x17000DD2 RID: 3538
+	// (get) Token: 0x06001E0F RID: 7695 RVA: 0x0000F9AD File Offset: 0x0000DBAD
+	// (set) Token: 0x06001E10 RID: 7696 RVA: 0x0000F9B5 File Offset: 0x0000DBB5
 	public virtual float MediumRangeRadius
 	{
 		get
@@ -910,9 +910,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AD1 RID: 2769
-	// (get) Token: 0x060014F0 RID: 5360 RVA: 0x0003E694 File Offset: 0x0003C894
-	// (set) Token: 0x060014F1 RID: 5361 RVA: 0x0003E6E2 File Offset: 0x0003C8E2
+	// Token: 0x17000DD3 RID: 3539
+	// (get) Token: 0x06001E11 RID: 7697 RVA: 0x0009CC9C File Offset: 0x0009AE9C
+	// (set) Token: 0x06001E12 RID: 7698 RVA: 0x0000F9DB File Offset: 0x0000DBDB
 	public virtual float FarRangeRadius
 	{
 		get
@@ -935,7 +935,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x060014F2 RID: 5362 RVA: 0x0003E707 File Offset: 0x0003C907
+	// Token: 0x06001E13 RID: 7699 RVA: 0x0000FA00 File Offset: 0x0000DC00
 	public override void SetHealth(float value, bool additive, bool runEvents)
 	{
 		base.SetHealth(value, additive, runEvents);
@@ -945,8 +945,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AD2 RID: 2770
-	// (get) Token: 0x060014F3 RID: 5363 RVA: 0x0003E722 File Offset: 0x0003C922
+	// Token: 0x17000DD4 RID: 3540
+	// (get) Token: 0x06001E14 RID: 7700 RVA: 0x0000FA1B File Offset: 0x0000DC1B
 	public int Level
 	{
 		get
@@ -955,7 +955,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x060014F4 RID: 5364 RVA: 0x0003E72A File Offset: 0x0003C92A
+	// Token: 0x06001E15 RID: 7701 RVA: 0x0000FA23 File Offset: 0x0000DC23
 	public void SetLevel(int value)
 	{
 		this.m_level = value;
@@ -968,9 +968,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.m_level = Mathf.Clamp(this.m_level, 1, int.MaxValue);
 	}
 
-	// Token: 0x17000AD3 RID: 2771
-	// (get) Token: 0x060014F5 RID: 5365 RVA: 0x0003E764 File Offset: 0x0003C964
-	// (set) Token: 0x060014F6 RID: 5366 RVA: 0x0003E76C File Offset: 0x0003C96C
+	// Token: 0x17000DD5 RID: 3541
+	// (get) Token: 0x06001E16 RID: 7702 RVA: 0x0000FA5D File Offset: 0x0000DC5D
+	// (set) Token: 0x06001E17 RID: 7703 RVA: 0x0009CCEC File Offset: 0x0009AEEC
 	public EnemyType EnemyType
 	{
 		get
@@ -989,9 +989,9 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AD4 RID: 2772
-	// (get) Token: 0x060014F7 RID: 5367 RVA: 0x0003E79B File Offset: 0x0003C99B
-	// (set) Token: 0x060014F8 RID: 5368 RVA: 0x0003E7A4 File Offset: 0x0003C9A4
+	// Token: 0x17000DD6 RID: 3542
+	// (get) Token: 0x06001E18 RID: 7704 RVA: 0x0000FA65 File Offset: 0x0000DC65
+	// (set) Token: 0x06001E19 RID: 7705 RVA: 0x0009CD1C File Offset: 0x0009AF1C
 	public EnemyRank EnemyRank
 	{
 		get
@@ -1010,14 +1010,14 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AD5 RID: 2773
-	// (get) Token: 0x060014F9 RID: 5369 RVA: 0x0003E7D3 File Offset: 0x0003C9D3
-	// (set) Token: 0x060014FA RID: 5370 RVA: 0x0003E7DB File Offset: 0x0003C9DB
+	// Token: 0x17000DD7 RID: 3543
+	// (get) Token: 0x06001E1A RID: 7706 RVA: 0x0000FA6D File Offset: 0x0000DC6D
+	// (set) Token: 0x06001E1B RID: 7707 RVA: 0x0000FA75 File Offset: 0x0000DC75
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17000AD6 RID: 2774
-	// (get) Token: 0x060014FB RID: 5371 RVA: 0x0003E7E4 File Offset: 0x0003C9E4
-	// (set) Token: 0x060014FC RID: 5372 RVA: 0x0003E7EC File Offset: 0x0003C9EC
+	// Token: 0x17000DD8 RID: 3544
+	// (get) Token: 0x06001E1C RID: 7708 RVA: 0x0000FA7E File Offset: 0x0000DC7E
+	// (set) Token: 0x06001E1D RID: 7709 RVA: 0x0000FA86 File Offset: 0x0000DC86
 	public int EnemyIndex
 	{
 		get
@@ -1030,8 +1030,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AD7 RID: 2775
-	// (get) Token: 0x060014FD RID: 5373 RVA: 0x0003E7F5 File Offset: 0x0003C9F5
+	// Token: 0x17000DD9 RID: 3545
+	// (get) Token: 0x06001E1E RID: 7710 RVA: 0x0000FA8F File Offset: 0x0000DC8F
 	public bool TouchingLeftRoomEdge
 	{
 		get
@@ -1040,8 +1040,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AD8 RID: 2776
-	// (get) Token: 0x060014FE RID: 5374 RVA: 0x0003E7FD File Offset: 0x0003C9FD
+	// Token: 0x17000DDA RID: 3546
+	// (get) Token: 0x06001E1F RID: 7711 RVA: 0x0000FA97 File Offset: 0x0000DC97
 	public bool TouchingRightRoomEdge
 	{
 		get
@@ -1050,8 +1050,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000AD9 RID: 2777
-	// (get) Token: 0x060014FF RID: 5375 RVA: 0x0003E805 File Offset: 0x0003CA05
+	// Token: 0x17000DDB RID: 3547
+	// (get) Token: 0x06001E20 RID: 7712 RVA: 0x0000FA9F File Offset: 0x0000DC9F
 	public bool TouchingTopRoomEdge
 	{
 		get
@@ -1060,8 +1060,8 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ADA RID: 2778
-	// (get) Token: 0x06001500 RID: 5376 RVA: 0x0003E80D File Offset: 0x0003CA0D
+	// Token: 0x17000DDC RID: 3548
+	// (get) Token: 0x06001E21 RID: 7713 RVA: 0x0000FAA7 File Offset: 0x0000DCA7
 	public bool TouchingBottomRoomEdge
 	{
 		get
@@ -1070,27 +1070,27 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x17000ADB RID: 2779
-	// (get) Token: 0x06001501 RID: 5377 RVA: 0x0003E815 File Offset: 0x0003CA15
-	// (set) Token: 0x06001502 RID: 5378 RVA: 0x0003E81D File Offset: 0x0003CA1D
+	// Token: 0x17000DDD RID: 3549
+	// (get) Token: 0x06001E22 RID: 7714 RVA: 0x0000FAAF File Offset: 0x0000DCAF
+	// (set) Token: 0x06001E23 RID: 7715 RVA: 0x0000FAB7 File Offset: 0x0000DCB7
 	public bool ActivatedByFairyRoomTrigger { get; set; }
 
-	// Token: 0x17000ADC RID: 2780
-	// (get) Token: 0x06001503 RID: 5379 RVA: 0x0003E826 File Offset: 0x0003CA26
-	// (set) Token: 0x06001504 RID: 5380 RVA: 0x0003E82E File Offset: 0x0003CA2E
+	// Token: 0x17000DDE RID: 3550
+	// (get) Token: 0x06001E24 RID: 7716 RVA: 0x0000FAC0 File Offset: 0x0000DCC0
+	// (set) Token: 0x06001E25 RID: 7717 RVA: 0x0000FAC8 File Offset: 0x0000DCC8
 	public bool PreserveRotationWhenDeactivated { get; set; }
 
-	// Token: 0x17000ADD RID: 2781
-	// (get) Token: 0x06001505 RID: 5381 RVA: 0x0003E837 File Offset: 0x0003CA37
-	// (set) Token: 0x06001506 RID: 5382 RVA: 0x0003E83F File Offset: 0x0003CA3F
+	// Token: 0x17000DDF RID: 3551
+	// (get) Token: 0x06001E26 RID: 7718 RVA: 0x0000FAD1 File Offset: 0x0000DCD1
+	// (set) Token: 0x06001E27 RID: 7719 RVA: 0x0000FAD9 File Offset: 0x0000DCD9
 	public bool ForceDisableSummonOffset { get; set; }
 
-	// Token: 0x17000ADE RID: 2782
-	// (get) Token: 0x06001507 RID: 5383 RVA: 0x0003E848 File Offset: 0x0003CA48
-	// (set) Token: 0x06001508 RID: 5384 RVA: 0x0003E850 File Offset: 0x0003CA50
+	// Token: 0x17000DE0 RID: 3552
+	// (get) Token: 0x06001E28 RID: 7720 RVA: 0x0000FAE2 File Offset: 0x0000DCE2
+	// (set) Token: 0x06001E29 RID: 7721 RVA: 0x0000FAEA File Offset: 0x0000DCEA
 	public bool InvisibleDuringSummonAnim { get; set; }
 
-	// Token: 0x06001509 RID: 5385 RVA: 0x0003E85C File Offset: 0x0003CA5C
+	// Token: 0x06001E2A RID: 7722 RVA: 0x0009CD4C File Offset: 0x0009AF4C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -1118,7 +1118,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.IsAwakeCalled = true;
 	}
 
-	// Token: 0x0600150A RID: 5386 RVA: 0x0003E944 File Offset: 0x0003CB44
+	// Token: 0x06001E2B RID: 7723 RVA: 0x0000FAF3 File Offset: 0x0000DCF3
 	protected override IEnumerator Start()
 	{
 		this.m_enemyInitializing = true;
@@ -1153,7 +1153,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		yield break;
 	}
 
-	// Token: 0x0600150B RID: 5387 RVA: 0x0003E953 File Offset: 0x0003CB53
+	// Token: 0x06001E2C RID: 7724 RVA: 0x0000FB02 File Offset: 0x0000DD02
 	public void ForceFaceTarget()
 	{
 		if (this.Target)
@@ -1162,7 +1162,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x0600150C RID: 5388 RVA: 0x0003E984 File Offset: 0x0003CB84
+	// Token: 0x06001E2D RID: 7725 RVA: 0x0009CE34 File Offset: 0x0009B034
 	public void InitializeEnemyData()
 	{
 		if (this.EnemyType == EnemyType.None)
@@ -1192,7 +1192,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x0600150D RID: 5389 RVA: 0x0003EA1A File Offset: 0x0003CC1A
+	// Token: 0x06001E2E RID: 7726 RVA: 0x0000FB32 File Offset: 0x0000DD32
 	private void OnEnable()
 	{
 		if (!base.IsInitialized && this.m_enemyInitializing)
@@ -1202,7 +1202,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.DisableEffectsOnSpawn();
 	}
 
-	// Token: 0x0600150E RID: 5390 RVA: 0x0003EA3F File Offset: 0x0003CC3F
+	// Token: 0x06001E2F RID: 7727 RVA: 0x0000FB57 File Offset: 0x0000DD57
 	private void OnDisable()
 	{
 		DisablePooledObjectManager.DisablePooledObject(this, false);
@@ -1213,7 +1213,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x0600150F RID: 5391 RVA: 0x0003EA68 File Offset: 0x0003CC68
+	// Token: 0x06001E30 RID: 7728 RVA: 0x0009CECC File Offset: 0x0009B0CC
 	public void UpdateEnemyDataScale()
 	{
 		if (this.m_enemyData)
@@ -1243,7 +1243,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001510 RID: 5392 RVA: 0x0003EB64 File Offset: 0x0003CD64
+	// Token: 0x06001E31 RID: 7729 RVA: 0x0000FB7D File Offset: 0x0000DD7D
 	public void ForceStandingOn(Collider2D collider)
 	{
 		if (this.m_controllerCorgi)
@@ -1252,13 +1252,13 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001511 RID: 5393 RVA: 0x0003EB7F File Offset: 0x0003CD7F
+	// Token: 0x06001E32 RID: 7730 RVA: 0x0000FB98 File Offset: 0x0000DD98
 	public void DisableEffectsOnSpawn()
 	{
 		base.StartCoroutine(this.DisableEffectsOnSpawnCoroutine(0.1f));
 	}
 
-	// Token: 0x06001512 RID: 5394 RVA: 0x0003EB93 File Offset: 0x0003CD93
+	// Token: 0x06001E33 RID: 7731 RVA: 0x0000FBAC File Offset: 0x0000DDAC
 	private IEnumerator DisableEffectsOnSpawnCoroutine(float duration)
 	{
 		if (this.m_animator)
@@ -1283,7 +1283,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		yield break;
 	}
 
-	// Token: 0x06001513 RID: 5395 RVA: 0x0003EBA9 File Offset: 0x0003CDA9
+	// Token: 0x06001E34 RID: 7732 RVA: 0x0000FBC2 File Offset: 0x0000DDC2
 	public void ResetCollisionState()
 	{
 		if (this.m_controllerCorgi)
@@ -1292,7 +1292,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001514 RID: 5396 RVA: 0x0003EBC3 File Offset: 0x0003CDC3
+	// Token: 0x06001E35 RID: 7733 RVA: 0x0000FBDC File Offset: 0x0000DDDC
 	public void UpdateBounds()
 	{
 		if (this.m_controllerCorgi)
@@ -1301,7 +1301,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001515 RID: 5397 RVA: 0x0003EBE0 File Offset: 0x0003CDE0
+	// Token: 0x06001E36 RID: 7734 RVA: 0x0009CFC8 File Offset: 0x0009B1C8
 	public override void ResetBaseValues()
 	{
 		if (GameManager.IsApplicationClosing)
@@ -1353,7 +1353,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.BaseTurnSpeed *= num;
 	}
 
-	// Token: 0x06001516 RID: 5398 RVA: 0x0003EE44 File Offset: 0x0003D044
+	// Token: 0x06001E37 RID: 7735 RVA: 0x0009D22C File Offset: 0x0009B42C
 	public void InitializeLevelMods()
 	{
 		int num = this.Level;
@@ -1402,7 +1402,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001517 RID: 5399 RVA: 0x0003F014 File Offset: 0x0003D214
+	// Token: 0x06001E38 RID: 7736 RVA: 0x0009D3FC File Offset: 0x0009B5FC
 	public void AddCommanderStatusEffect(StatusEffectType statusEffect)
 	{
 		int num = StatusEffect_EV.COMMANDER_STATUS_EFFECT_ARRAY.IndexOf(statusEffect);
@@ -1412,7 +1412,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001518 RID: 5400 RVA: 0x0003F044 File Offset: 0x0003D244
+	// Token: 0x06001E39 RID: 7737 RVA: 0x0009D42C File Offset: 0x0009B62C
 	public void RemoveCommanderStatusEffect(StatusEffectType statusEffect)
 	{
 		int num = StatusEffect_EV.COMMANDER_STATUS_EFFECT_ARRAY.IndexOf(statusEffect);
@@ -1422,20 +1422,20 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001519 RID: 5401 RVA: 0x0003F078 File Offset: 0x0003D278
+	// Token: 0x06001E3A RID: 7738 RVA: 0x0009D460 File Offset: 0x0009B660
 	public bool HasCommanderStatusEffect(StatusEffectType statusEffect)
 	{
 		int num = StatusEffect_EV.COMMANDER_STATUS_EFFECT_ARRAY.IndexOf(statusEffect);
 		return num != -1 && (this.m_commanderStatusEffectFlags & 1 << num) != 0;
 	}
 
-	// Token: 0x0600151A RID: 5402 RVA: 0x0003F0A7 File Offset: 0x0003D2A7
+	// Token: 0x06001E3B RID: 7739 RVA: 0x0000FBF6 File Offset: 0x0000DDF6
 	public void RemoveAllCommanderStatusEffects()
 	{
 		this.m_commanderStatusEffectFlags = 0;
 	}
 
-	// Token: 0x0600151B RID: 5403 RVA: 0x0003F0B0 File Offset: 0x0003D2B0
+	// Token: 0x06001E3C RID: 7740 RVA: 0x0009D490 File Offset: 0x0009B690
 	public void AddRandomCommanderStatusEffect()
 	{
 		int num = RNGManager.GetRandomNumber(RngID.SpecialProps_RoomSeed, "EnemyController.CreateRandomCommanderStatusEffect", 0, StatusEffect_EV.COMMANDER_STATUS_EFFECT_ARRAY.Length);
@@ -1455,7 +1455,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x0600151C RID: 5404 RVA: 0x0003F120 File Offset: 0x0003D320
+	// Token: 0x06001E3D RID: 7741 RVA: 0x0009D500 File Offset: 0x0009B700
 	public void InitializeCommanderStatusEffects()
 	{
 		this.RemoveAllCommanderStatusEffects();
@@ -1494,7 +1494,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.ResetHealth();
 	}
 
-	// Token: 0x0600151D RID: 5405 RVA: 0x0003F261 File Offset: 0x0003D461
+	// Token: 0x06001E3E RID: 7742 RVA: 0x0000FBFF File Offset: 0x0000DDFF
 	private IEnumerator ApplyCommanderStatusEffects()
 	{
 		while (!base.IsInitialized)
@@ -1525,7 +1525,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		yield break;
 	}
 
-	// Token: 0x0600151E RID: 5406 RVA: 0x0003F270 File Offset: 0x0003D470
+	// Token: 0x06001E3F RID: 7743 RVA: 0x0009D644 File Offset: 0x0009B844
 	protected override void FixedUpdate()
 	{
 		if (!base.IsInitialized)
@@ -1577,7 +1577,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x0600151F RID: 5407 RVA: 0x0003F41C File Offset: 0x0003D61C
+	// Token: 0x06001E40 RID: 7744 RVA: 0x0009D7F0 File Offset: 0x0009B9F0
 	protected void UpdateFacing()
 	{
 		if (this.AlwaysFacing && this.Target && !base.LockFlip && ((base.IsFacingRight && base.transform.localPosition.x > this.Target.transform.localPosition.x) || (!base.IsFacingRight && base.transform.localPosition.x < this.Target.transform.localPosition.x)))
@@ -1591,7 +1591,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001520 RID: 5408 RVA: 0x0003F4D0 File Offset: 0x0003D6D0
+	// Token: 0x06001E41 RID: 7745 RVA: 0x0009D8A4 File Offset: 0x0009BAA4
 	protected void UpdateJumpAcceleration()
 	{
 		if (!base.IsGrounded && this.m_previousAirVelocityX != 0f)
@@ -1605,7 +1605,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001521 RID: 5409 RVA: 0x0003F524 File Offset: 0x0003D724
+	// Token: 0x06001E42 RID: 7746 RVA: 0x0009D8F8 File Offset: 0x0009BAF8
 	protected void UpdateFlightMovement()
 	{
 		if (base.StatusEffectController.HasStatusEffect(StatusEffectType.Enemy_Freeze))
@@ -1700,7 +1700,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001522 RID: 5410 RVA: 0x0003F848 File Offset: 0x0003DA48
+	// Token: 0x06001E43 RID: 7747 RVA: 0x0009DC1C File Offset: 0x0009BE1C
 	protected void UpdateFlightAcceleration()
 	{
 		float num = 15f * Time.fixedDeltaTime * this.FlightKnockbackDecelerationMod;
@@ -1735,7 +1735,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.SetVelocity(this.FlightKnockbackAcceleration.x, this.FlightKnockbackAcceleration.y, true);
 	}
 
-	// Token: 0x06001523 RID: 5411 RVA: 0x0003F970 File Offset: 0x0003DB70
+	// Token: 0x06001E44 RID: 7748 RVA: 0x0009DD44 File Offset: 0x0009BF44
 	public void OrientToTarget()
 	{
 		float x = this.Target.transform.position.x - base.Midpoint.x;
@@ -1748,7 +1748,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		base.Heading = new Vector2(x, y);
 	}
 
-	// Token: 0x06001524 RID: 5412 RVA: 0x0003FA18 File Offset: 0x0003DC18
+	// Token: 0x06001E45 RID: 7749 RVA: 0x0009DDEC File Offset: 0x0009BFEC
 	public void GenerateRandomFollowOffset(Vector2 randomXOffsets, Vector2 randomYOffsets)
 	{
 		float x = UnityEngine.Random.Range(randomXOffsets.x, randomXOffsets.y);
@@ -1768,7 +1768,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001525 RID: 5413 RVA: 0x0003FAC0 File Offset: 0x0003DCC0
+	// Token: 0x06001E46 RID: 7750 RVA: 0x0009DE94 File Offset: 0x0009C094
 	public void ConstrainEnemyMovementToRoom()
 	{
 		if (this.ConstrainToRoom)
@@ -1818,7 +1818,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001526 RID: 5414 RVA: 0x0003FC24 File Offset: 0x0003DE24
+	// Token: 0x06001E47 RID: 7751 RVA: 0x0009DFF8 File Offset: 0x0009C1F8
 	public override float CalculateDamageTaken(IDamageObj damageObj, out CriticalStrikeType critType, out float damageBlocked, float damageOverride = -1f, bool trueDamage = false, bool pureCalculation = true)
 	{
 		critType = CriticalStrikeType.None;
@@ -2037,7 +2037,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		return 0f;
 	}
 
-	// Token: 0x06001527 RID: 5415 RVA: 0x0004034C File Offset: 0x0003E54C
+	// Token: 0x06001E48 RID: 7752 RVA: 0x0009E720 File Offset: 0x0009C920
 	protected float GetInsightPlayerDamageMod()
 	{
 		EnemyType enemyType = this.EnemyType;
@@ -2132,7 +2132,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		return 1f;
 	}
 
-	// Token: 0x06001528 RID: 5416 RVA: 0x00040590 File Offset: 0x0003E790
+	// Token: 0x06001E49 RID: 7753 RVA: 0x0009E964 File Offset: 0x0009CB64
 	protected float GetInsightBossDamageMod()
 	{
 		EnemyType enemyType = this.EnemyType;
@@ -2192,7 +2192,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		return 1f;
 	}
 
-	// Token: 0x06001529 RID: 5417 RVA: 0x000406CC File Offset: 0x0003E8CC
+	// Token: 0x06001E4A RID: 7754 RVA: 0x0009EAA0 File Offset: 0x0009CCA0
 	public override void KillCharacter(GameObject killer, bool broadcastEvent)
 	{
 		if (base.IsDead)
@@ -2305,7 +2305,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x0600152A RID: 5418 RVA: 0x00040A52 File Offset: 0x0003EC52
+	// Token: 0x06001E4B RID: 7755 RVA: 0x0000FC0E File Offset: 0x0000DE0E
 	private IEnumerator DeathCoroutine(GameObject killer, bool broadcastEvent)
 	{
 		this.LogicController.TriggerDeath();
@@ -2331,7 +2331,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		yield break;
 	}
 
-	// Token: 0x0600152B RID: 5419 RVA: 0x00040A70 File Offset: 0x0003EC70
+	// Token: 0x06001E4C RID: 7756 RVA: 0x0009EE28 File Offset: 0x0009D028
 	private void DropReward()
 	{
 		if (this.IsBoss)
@@ -2393,7 +2393,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x0600152C RID: 5420 RVA: 0x00040C48 File Offset: 0x0003EE48
+	// Token: 0x06001E4D RID: 7757 RVA: 0x0009F000 File Offset: 0x0009D200
 	public void InjectLevel()
 	{
 		foreach (ILevelConsumer levelConsumer in base.GetComponentsInChildren<ILevelConsumer>())
@@ -2405,7 +2405,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x0600152D RID: 5421 RVA: 0x00040C7E File Offset: 0x0003EE7E
+	// Token: 0x06001E4E RID: 7758 RVA: 0x0000FC2B File Offset: 0x0000DE2B
 	public override void ResetStates()
 	{
 		base.ResetStates();
@@ -2416,7 +2416,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.RightSidePlatformDropPrevented = false;
 	}
 
-	// Token: 0x0600152E RID: 5422 RVA: 0x00040CBA File Offset: 0x0003EEBA
+	// Token: 0x06001E4F RID: 7759 RVA: 0x0000FC67 File Offset: 0x0000DE67
 	public void ResetPivotRotation()
 	{
 		if (base.Pivot)
@@ -2425,7 +2425,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x0600152F RID: 5423 RVA: 0x00040CDE File Offset: 0x0003EEDE
+	// Token: 0x06001E50 RID: 7760 RVA: 0x0000FC8B File Offset: 0x0000DE8B
 	public void ResetTurnTrigger()
 	{
 		if (base.Animator && global::AnimatorUtility.HasParameter(base.Animator, EnemyController.TURN_ANIMATION_TRIGGER_NAME))
@@ -2434,7 +2434,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x06001530 RID: 5424 RVA: 0x00040D0F File Offset: 0x0003EF0F
+	// Token: 0x06001E51 RID: 7761 RVA: 0x0000FCBC File Offset: 0x0000DEBC
 	public override void ResetMods()
 	{
 		base.ResetMods();
@@ -2442,7 +2442,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.SpeedAdd = 0f;
 	}
 
-	// Token: 0x06001531 RID: 5425 RVA: 0x00040D30 File Offset: 0x0003EF30
+	// Token: 0x06001E52 RID: 7762 RVA: 0x0009F038 File Offset: 0x0009D238
 	public void ResetPositionForSpawnController(Vector3 spawnPoint, Collider2D spawnCollider)
 	{
 		base.transform.localPosition = spawnPoint;
@@ -2459,7 +2459,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.m_onResetPositionRelay.Dispatch(null, null);
 	}
 
-	// Token: 0x06001532 RID: 5426 RVA: 0x00040D7F File Offset: 0x0003EF7F
+	// Token: 0x06001E53 RID: 7763 RVA: 0x0000FCDA File Offset: 0x0000DEDA
 	public void ActivateEnemy()
 	{
 		this.LogicController.ResetLogic();
@@ -2467,7 +2467,7 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.m_onActivatedRelay.Dispatch(this, EnemyController.m_enemyActivationStateChangedEventArgs_STATIC);
 	}
 
-	// Token: 0x06001533 RID: 5427 RVA: 0x00040DA8 File Offset: 0x0003EFA8
+	// Token: 0x06001E54 RID: 7764 RVA: 0x0000FD03 File Offset: 0x0000DF03
 	public void DeactivateEnemy()
 	{
 		this.ResetStates();
@@ -2480,38 +2480,38 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		this.m_onDeactivatedRelay.Dispatch(this, EnemyController.m_enemyActivationStateChangedEventArgs_STATIC);
 	}
 
-	// Token: 0x06001534 RID: 5428 RVA: 0x00040DE0 File Offset: 0x0003EFE0
+	// Token: 0x06001E55 RID: 7765 RVA: 0x0000FD3B File Offset: 0x0000DF3B
 	public void EnemyTimedOut()
 	{
 		EnemyController.m_enemyActivationStateChangedEventArgs_STATIC.Initialize(this);
 		this.m_onReactivationTimedOutRelay.Dispatch(this, EnemyController.m_enemyActivationStateChangedEventArgs_STATIC);
 	}
 
-	// Token: 0x06001535 RID: 5429 RVA: 0x00040DFE File Offset: 0x0003EFFE
+	// Token: 0x06001E56 RID: 7766 RVA: 0x0000FD59 File Offset: 0x0000DF59
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 	}
 
-	// Token: 0x06001536 RID: 5430 RVA: 0x00040E07 File Offset: 0x0003F007
+	// Token: 0x06001E57 RID: 7767 RVA: 0x0000FD62 File Offset: 0x0000DF62
 	public void SetEnemyIndex(int index)
 	{
 		this.EnemyIndex = index;
 	}
 
-	// Token: 0x06001537 RID: 5431 RVA: 0x00040E10 File Offset: 0x0003F010
+	// Token: 0x06001E58 RID: 7768 RVA: 0x0000FD6B File Offset: 0x0000DF6B
 	public void ResetValues()
 	{
 		this.ResetCharacter();
 	}
 
-	// Token: 0x06001538 RID: 5432 RVA: 0x00040E18 File Offset: 0x0003F018
+	// Token: 0x06001E59 RID: 7769 RVA: 0x0000FD73 File Offset: 0x0000DF73
 	public override void ResetHealth()
 	{
 		this.SetHealth((float)this.ActualMaxHealth, false, false);
 	}
 
-	// Token: 0x06001539 RID: 5433 RVA: 0x00040E2C File Offset: 0x0003F02C
+	// Token: 0x06001E5A RID: 7770 RVA: 0x0009F088 File Offset: 0x0009D288
 	public override void ResetCharacter()
 	{
 		base.ResetCharacter();
@@ -2541,230 +2541,230 @@ public class EnemyController : BaseCharacterController, IRoomConsumer, ILevelCon
 		}
 	}
 
-	// Token: 0x0600153C RID: 5436 RVA: 0x00040FE4 File Offset: 0x0003F1E4
+	// Token: 0x06001E5D RID: 7773 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISummoner.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0600153D RID: 5437 RVA: 0x00040FEC File Offset: 0x0003F1EC
+	// Token: 0x06001E5E RID: 7774 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IDamageObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0600153E RID: 5438 RVA: 0x00040FF4 File Offset: 0x0003F1F4
+	// Token: 0x06001E5F RID: 7775 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0600153F RID: 5439 RVA: 0x00040FFC File Offset: 0x0003F1FC
+	// Token: 0x06001E60 RID: 7776 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IOffscreenObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400142C RID: 5164
+	// Token: 0x04001AD3 RID: 6867
 	private const float CHASE_DISTANCE_THRESHOLD = 0.1f;
 
-	// Token: 0x0400142D RID: 5165
+	// Token: 0x04001AD4 RID: 6868
 	private static int LAND_ANIMATION_STATE_NAME = Animator.StringToHash("Land");
 
-	// Token: 0x0400142E RID: 5166
+	// Token: 0x04001AD5 RID: 6869
 	private static int TURN_ANIMATION_TRIGGER_NAME = Animator.StringToHash("Turn");
 
-	// Token: 0x0400142F RID: 5167
+	// Token: 0x04001AD6 RID: 6870
 	private static RelicChangedEventArgs m_relicChangedEventArgs_STATIC = new RelicChangedEventArgs(RelicType.None);
 
-	// Token: 0x04001430 RID: 5168
+	// Token: 0x04001AD7 RID: 6871
 	[Header("Enemy Values")]
 	[SerializeField]
 	[HideInInspector]
 	private EnemyType m_enemyType = EnemyType.Skeleton;
 
-	// Token: 0x04001431 RID: 5169
+	// Token: 0x04001AD8 RID: 6872
 	[SerializeField]
 	[HideInInspector]
 	private EnemyRank m_enemyRank;
 
-	// Token: 0x04001432 RID: 5170
+	// Token: 0x04001AD9 RID: 6873
 	[Space(10f)]
 	[SerializeField]
 	private float m_flightKnockbackDecelerationMod = 1f;
 
-	// Token: 0x04001433 RID: 5171
+	// Token: 0x04001ADA RID: 6874
 	[SerializeField]
 	private bool m_constrainToRoom = true;
 
-	// Token: 0x04001434 RID: 5172
+	// Token: 0x04001ADB RID: 6875
 	[SerializeField]
 	private bool m_knocksBackOnHit;
 
-	// Token: 0x04001435 RID: 5173
+	// Token: 0x04001ADC RID: 6876
 	[SerializeField]
 	private StrikeType m_strikeType = StrikeType.Blunt;
 
-	// Token: 0x04001436 RID: 5174
+	// Token: 0x04001ADD RID: 6877
 	[SerializeField]
 	private bool m_isBoss;
 
-	// Token: 0x04001437 RID: 5175
+	// Token: 0x04001ADE RID: 6878
 	[SerializeField]
 	private bool m_forceActivate;
 
-	// Token: 0x04001438 RID: 5176
+	// Token: 0x04001ADF RID: 6879
 	[SerializeField]
 	private bool m_disableXPBonuses;
 
-	// Token: 0x04001439 RID: 5177
+	// Token: 0x04001AE0 RID: 6880
 	[SerializeField]
 	private bool m_disableHPMPBonuses;
 
-	// Token: 0x0400143A RID: 5178
+	// Token: 0x04001AE1 RID: 6881
 	[SerializeField]
 	private bool m_alwaysDealsContactDamage;
 
-	// Token: 0x0400143B RID: 5179
+	// Token: 0x04001AE2 RID: 6882
 	[SerializeField]
 	private GameObject[] m_culledObjectsArray;
 
-	// Token: 0x0400143C RID: 5180
+	// Token: 0x04001AE3 RID: 6883
 	private static Dictionary<EnemyTypeAndRank, EnemyData> EnemyData_StaticInstanceDict = new Dictionary<EnemyTypeAndRank, EnemyData>();
 
-	// Token: 0x0400143D RID: 5181
+	// Token: 0x04001AE4 RID: 6884
 	private float m_baseSpeed;
 
-	// Token: 0x0400143E RID: 5182
+	// Token: 0x04001AE5 RID: 6885
 	private float m_baseTurnSpeed;
 
-	// Token: 0x0400143F RID: 5183
+	// Token: 0x04001AE6 RID: 6886
 	private Vector2 m_baseRestCooldown;
 
-	// Token: 0x04001440 RID: 5184
+	// Token: 0x04001AE7 RID: 6887
 	private bool m_isFlying;
 
-	// Token: 0x04001441 RID: 5185
+	// Token: 0x04001AE8 RID: 6888
 	private bool m_alwaysFace;
 
-	// Token: 0x04001442 RID: 5186
+	// Token: 0x04001AE9 RID: 6889
 	private bool m_collidesWithPlatforms;
 
-	// Token: 0x04001443 RID: 5187
+	// Token: 0x04001AEA RID: 6890
 	private float m_baseKnockbackStrength;
 
-	// Token: 0x04001444 RID: 5188
+	// Token: 0x04001AEB RID: 6891
 	private float m_baseStunStrength;
 
-	// Token: 0x04001445 RID: 5189
+	// Token: 0x04001AEC RID: 6892
 	private float m_baseDropOdds;
 
-	// Token: 0x04001446 RID: 5190
+	// Token: 0x04001AED RID: 6893
 	private float m_closeRadius;
 
-	// Token: 0x04001447 RID: 5191
+	// Token: 0x04001AEE RID: 6894
 	private float m_mediumRadius;
 
-	// Token: 0x04001448 RID: 5192
+	// Token: 0x04001AEF RID: 6895
 	private float m_farRadius;
 
-	// Token: 0x04001449 RID: 5193
+	// Token: 0x04001AF0 RID: 6896
 	protected GameObject m_target;
 
-	// Token: 0x0400144A RID: 5194
+	// Token: 0x04001AF1 RID: 6897
 	protected BaseCharacterController m_targetController;
 
-	// Token: 0x0400144B RID: 5195
+	// Token: 0x04001AF2 RID: 6898
 	private Vector3 m_followOffset;
 
-	// Token: 0x0400144C RID: 5196
+	// Token: 0x04001AF3 RID: 6899
 	private float m_baseScaleToOffsetWith = 1f;
 
-	// Token: 0x0400144D RID: 5197
+	// Token: 0x04001AF4 RID: 6900
 	private LogicController m_logicController;
 
-	// Token: 0x0400144E RID: 5198
+	// Token: 0x04001AF5 RID: 6901
 	private bool m_pivotFollowsOrientation;
 
-	// Token: 0x0400144F RID: 5199
+	// Token: 0x04001AF6 RID: 6902
 	private EnemyData m_enemyData;
 
-	// Token: 0x04001450 RID: 5200
+	// Token: 0x04001AF7 RID: 6903
 	private int m_level = 1;
 
-	// Token: 0x04001451 RID: 5201
+	// Token: 0x04001AF8 RID: 6904
 	private float m_previousAirVelocityX;
 
-	// Token: 0x04001452 RID: 5202
+	// Token: 0x04001AF9 RID: 6905
 	private PreventPlatformDrop m_preventPlatformDropObj;
 
-	// Token: 0x04001453 RID: 5203
+	// Token: 0x04001AFA RID: 6906
 	private bool m_fallLedge;
 
-	// Token: 0x04001454 RID: 5204
+	// Token: 0x04001AFB RID: 6907
 	[NonSerialized]
 	public Vector2 FlightKnockbackAcceleration;
 
-	// Token: 0x04001455 RID: 5205
+	// Token: 0x04001AFC RID: 6908
 	[NonSerialized]
 	public bool CanIncrementRelicHitCounter = true;
 
-	// Token: 0x04001456 RID: 5206
+	// Token: 0x04001AFD RID: 6909
 	[NonSerialized]
 	public bool AttackingWithContactDamage;
 
-	// Token: 0x04001457 RID: 5207
+	// Token: 0x04001AFE RID: 6910
 	[NonSerialized]
 	public bool DisableDeath;
 
-	// Token: 0x04001458 RID: 5208
+	// Token: 0x04001AFF RID: 6911
 	private static EnemyDeathEventArgs m_enemyDeathEventArgs_STATIC;
 
-	// Token: 0x04001459 RID: 5209
+	// Token: 0x04001B00 RID: 6912
 	private static EnemyActivationStateChangedEventArgs m_enemyActivationStateChangedEventArgs_STATIC;
 
-	// Token: 0x0400145A RID: 5210
+	// Token: 0x04001B01 RID: 6913
 	private int m_enemyIndex = -1;
 
-	// Token: 0x0400145B RID: 5211
+	// Token: 0x04001B02 RID: 6914
 	private bool m_enemyInitializing;
 
-	// Token: 0x0400145C RID: 5212
+	// Token: 0x04001B03 RID: 6915
 	private bool m_touchingLeftRoomEdge;
 
-	// Token: 0x0400145D RID: 5213
+	// Token: 0x04001B04 RID: 6916
 	private bool m_touchingRightRoomEdge;
 
-	// Token: 0x0400145E RID: 5214
+	// Token: 0x04001B05 RID: 6917
 	private bool m_touchingTopRoomEdge;
 
-	// Token: 0x0400145F RID: 5215
+	// Token: 0x04001B06 RID: 6918
 	private bool m_touchingBottomRoomEdge;
 
-	// Token: 0x04001460 RID: 5216
+	// Token: 0x04001B07 RID: 6919
 	private int m_commanderStatusEffectFlags;
 
-	// Token: 0x04001468 RID: 5224
+	// Token: 0x04001B0F RID: 6927
 	private DamageType m_lastDamageTypeTaken;
 
-	// Token: 0x04001475 RID: 5237
+	// Token: 0x04001B1C RID: 6940
 	private Relay<object, EnemyActivationStateChangedEventArgs> m_onActivatedRelay = new Relay<object, EnemyActivationStateChangedEventArgs>();
 
-	// Token: 0x04001476 RID: 5238
+	// Token: 0x04001B1D RID: 6941
 	private Relay<object, EnemyActivationStateChangedEventArgs> m_onDeactivatedRelay = new Relay<object, EnemyActivationStateChangedEventArgs>();
 
-	// Token: 0x04001477 RID: 5239
+	// Token: 0x04001B1E RID: 6942
 	private Relay<object, EnemyActivationStateChangedEventArgs> m_onReactivationTimedOutRelay = new Relay<object, EnemyActivationStateChangedEventArgs>();
 
-	// Token: 0x04001478 RID: 5240
+	// Token: 0x04001B1F RID: 6943
 	private Relay<object, EnemyDeathEventArgs> m_onEnemyDeathRelay = new Relay<object, EnemyDeathEventArgs>();
 
-	// Token: 0x04001479 RID: 5241
+	// Token: 0x04001B20 RID: 6944
 	private Relay<object, EventArgs> m_onResetPositionRelay = new Relay<object, EventArgs>();
 
-	// Token: 0x0400147A RID: 5242
+	// Token: 0x04001B21 RID: 6945
 	private Relay<object, EventArgs> m_onPositionedForSummoningRelay = new Relay<object, EventArgs>();
 
-	// Token: 0x0400147B RID: 5243
+	// Token: 0x04001B22 RID: 6946
 	private Relay m_onDisableRelay = new Relay();
 }

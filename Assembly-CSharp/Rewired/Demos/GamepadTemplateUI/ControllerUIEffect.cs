@@ -4,11 +4,11 @@ using UnityEngine.UI;
 
 namespace Rewired.Demos.GamepadTemplateUI
 {
-	// Token: 0x0200094D RID: 2381
+	// Token: 0x02000EF3 RID: 3827
 	[RequireComponent(typeof(Image))]
 	public class ControllerUIEffect : MonoBehaviour
 	{
-		// Token: 0x060050B4 RID: 20660 RVA: 0x0011D633 File Offset: 0x0011B833
+		// Token: 0x06006EA1 RID: 28321 RVA: 0x0003CE48 File Offset: 0x0003B048
 		private void Awake()
 		{
 			this._image = base.GetComponent<Image>();
@@ -16,7 +16,7 @@ namespace Rewired.Demos.GamepadTemplateUI
 			this._color = this._origColor;
 		}
 
-		// Token: 0x060050B5 RID: 20661 RVA: 0x0011D660 File Offset: 0x0011B860
+		// Token: 0x06006EA2 RID: 28322 RVA: 0x0018BC84 File Offset: 0x00189E84
 		public void Activate(float amount)
 		{
 			amount = Mathf.Clamp01(amount);
@@ -30,7 +30,7 @@ namespace Rewired.Demos.GamepadTemplateUI
 			this.RedrawImage();
 		}
 
-		// Token: 0x060050B6 RID: 20662 RVA: 0x0011D6B8 File Offset: 0x0011B8B8
+		// Token: 0x06006EA3 RID: 28323 RVA: 0x0003CE73 File Offset: 0x0003B073
 		public void Deactivate()
 		{
 			if (!this._isActive)
@@ -43,30 +43,30 @@ namespace Rewired.Demos.GamepadTemplateUI
 			this.RedrawImage();
 		}
 
-		// Token: 0x060050B7 RID: 20663 RVA: 0x0011D6E7 File Offset: 0x0011B8E7
+		// Token: 0x06006EA4 RID: 28324 RVA: 0x0003CEA2 File Offset: 0x0003B0A2
 		private void RedrawImage()
 		{
 			this._image.color = this._color;
 			this._image.enabled = this._isActive;
 		}
 
-		// Token: 0x040042FD RID: 17149
+		// Token: 0x040058FE RID: 22782
 		[SerializeField]
 		private Color _highlightColor = Color.white;
 
-		// Token: 0x040042FE RID: 17150
+		// Token: 0x040058FF RID: 22783
 		private Image _image;
 
-		// Token: 0x040042FF RID: 17151
+		// Token: 0x04005900 RID: 22784
 		private Color _color;
 
-		// Token: 0x04004300 RID: 17152
+		// Token: 0x04005901 RID: 22785
 		private Color _origColor;
 
-		// Token: 0x04004301 RID: 17153
+		// Token: 0x04005902 RID: 22786
 		private bool _isActive;
 
-		// Token: 0x04004302 RID: 17154
+		// Token: 0x04005903 RID: 22787
 		private float _highlightAmount;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000208 RID: 520
+// Token: 0x020003B9 RID: 953
 public class HolidayBiomeArtDataOverrideController : MonoBehaviour
 {
-	// Token: 0x060015E8 RID: 5608 RVA: 0x00044528 File Offset: 0x00042728
+	// Token: 0x06001F78 RID: 8056 RVA: 0x000A2F20 File Offset: 0x000A1120
 	private void Awake()
 	{
 		Room component = base.GetComponent<Room>();
@@ -22,11 +22,11 @@ public class HolidayBiomeArtDataOverrideController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001518 RID: 5400
+	// Token: 0x04001C15 RID: 7189
 	[SerializeField]
 	private HolidayType m_holidayType;
 
-	// Token: 0x04001519 RID: 5401
+	// Token: 0x04001C16 RID: 7190
 	[SerializeField]
 	private BiomeArtData m_biomeArtData;
 }

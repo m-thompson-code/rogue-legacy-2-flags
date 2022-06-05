@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200032D RID: 813
+// Token: 0x02000580 RID: 1408
 public class ColorTrails_Trait : BaseTrait
 {
-	// Token: 0x17000DB1 RID: 3505
-	// (get) Token: 0x06001FCF RID: 8143 RVA: 0x0006574D File Offset: 0x0006394D
+	// Token: 0x170011EC RID: 4588
+	// (get) Token: 0x06002CB8 RID: 11448 RVA: 0x00018C49 File Offset: 0x00016E49
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class ColorTrails_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FD0 RID: 8144 RVA: 0x00065754 File Offset: 0x00063954
+	// Token: 0x06002CB9 RID: 11449 RVA: 0x00018C50 File Offset: 0x00016E50
 	protected override void Awake()
 	{
 		base.Awake();
@@ -23,7 +23,7 @@ public class ColorTrails_Trait : BaseTrait
 		this.m_onPlayerEnterRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerEnterRoom);
 	}
 
-	// Token: 0x06001FD1 RID: 8145 RVA: 0x00065780 File Offset: 0x00063980
+	// Token: 0x06002CBA RID: 11450 RVA: 0x00018C7C File Offset: 0x00016E7C
 	private IEnumerator Start()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
@@ -41,7 +41,7 @@ public class ColorTrails_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FD2 RID: 8146 RVA: 0x00065790 File Offset: 0x00063990
+	// Token: 0x06002CBB RID: 11451 RVA: 0x000C6038 File Offset: 0x000C4238
 	private void CreatePlayerColorTrails()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -62,7 +62,7 @@ public class ColorTrails_Trait : BaseTrait
 		this.m_playerTrailEffect = baseEffect;
 	}
 
-	// Token: 0x06001FD3 RID: 8147 RVA: 0x00065899 File Offset: 0x00063A99
+	// Token: 0x06002CBC RID: 11452 RVA: 0x00018C8B File Offset: 0x00016E8B
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
@@ -70,7 +70,7 @@ public class ColorTrails_Trait : BaseTrait
 		EffectManager.DisableAllEffectWithName("ColorTrails_Trait_Effect");
 	}
 
-	// Token: 0x06001FD4 RID: 8148 RVA: 0x000658C0 File Offset: 0x00063AC0
+	// Token: 0x06002CBD RID: 11453 RVA: 0x000C6144 File Offset: 0x000C4344
 	private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs args)
 	{
 		if (!this.m_playerTrailEffect || (this.m_playerTrailEffect && (!this.m_playerTrailEffect.gameObject.activeSelf || !this.m_playerTrailEffect.Source.CompareTag("Player"))))
@@ -100,7 +100,7 @@ public class ColorTrails_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FD5 RID: 8149 RVA: 0x00065994 File Offset: 0x00063B94
+	// Token: 0x06002CBE RID: 11454 RVA: 0x000C6218 File Offset: 0x000C4418
 	private void EnableTraitOnPizzaGirl()
 	{
 		PropSpawnController propSpawnController = PlayerManager.GetCurrentPlayerRoom().gameObject.FindObjectReference("PizzaGirl", false, false);
@@ -124,7 +124,7 @@ public class ColorTrails_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FD6 RID: 8150 RVA: 0x00065AD0 File Offset: 0x00063CD0
+	// Token: 0x06002CBF RID: 11455 RVA: 0x000C6354 File Offset: 0x000C4554
 	private void OnEnemySummoned(MonoBehaviour sender, EventArgs args)
 	{
 		EnemySummonedEventArgs enemySummonedEventArgs = args as EnemySummonedEventArgs;
@@ -138,7 +138,7 @@ public class ColorTrails_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FD7 RID: 8151 RVA: 0x00065B04 File Offset: 0x00063D04
+	// Token: 0x06002CC0 RID: 11456 RVA: 0x00018CB0 File Offset: 0x00016EB0
 	private IEnumerator EnableTraitCoroutine(EnemyController enemyInstance)
 	{
 		while (!enemyInstance.IsInitialized)
@@ -160,15 +160,15 @@ public class ColorTrails_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x04001C40 RID: 7232
+	// Token: 0x04002585 RID: 9605
 	private BaseEffect m_playerTrailEffect;
 
-	// Token: 0x04001C41 RID: 7233
+	// Token: 0x04002586 RID: 9606
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04001C42 RID: 7234
+	// Token: 0x04002587 RID: 9607
 	private Action<MonoBehaviour, EventArgs> m_onEnemySummoned;
 
-	// Token: 0x04001C43 RID: 7235
+	// Token: 0x04002588 RID: 9608
 	public const string TRAIT_EFFECT_NAME = "ColorTrails_Trait_Effect";
 }

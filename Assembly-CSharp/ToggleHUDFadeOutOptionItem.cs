@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200029D RID: 669
+// Token: 0x0200046B RID: 1131
 public class ToggleHUDFadeOutOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001A03 RID: 6659 RVA: 0x00051F6B File Offset: 0x0005016B
+	// Token: 0x060023FE RID: 9214 RVA: 0x00013D20 File Offset: 0x00011F20
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class ToggleHUDFadeOutOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001A04 RID: 6660 RVA: 0x00051FA3 File Offset: 0x000501A3
+	// Token: 0x060023FF RID: 9215 RVA: 0x00013593 File Offset: 0x00011793
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class ToggleHUDFadeOutOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001A05 RID: 6661 RVA: 0x00051FDD File Offset: 0x000501DD
+	// Token: 0x06002400 RID: 9216 RVA: 0x00013D58 File Offset: 0x00011F58
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed Toggle HUD Fade Out: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001A06 RID: 6662 RVA: 0x00051FF4 File Offset: 0x000501F4
+	// Token: 0x06002401 RID: 9217 RVA: 0x00013D6F File Offset: 0x00011F6F
 	public override void ConfirmOptionChange()
 	{
 		if (this.m_selectedIndex == 0)

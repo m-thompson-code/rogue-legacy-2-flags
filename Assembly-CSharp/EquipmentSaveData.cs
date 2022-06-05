@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x020002CC RID: 716
+// Token: 0x020004C1 RID: 1217
 [Serializable]
 public class EquipmentSaveData : IVersionUpdateable
 {
-	// Token: 0x17000CA4 RID: 3236
-	// (get) Token: 0x06001C6C RID: 7276 RVA: 0x0005BDFD File Offset: 0x00059FFD
-	// (set) Token: 0x06001C6D RID: 7277 RVA: 0x0005BE05 File Offset: 0x0005A005
+	// Token: 0x1700102D RID: 4141
+	// (get) Token: 0x06002736 RID: 10038 RVA: 0x00016139 File Offset: 0x00014339
+	// (set) Token: 0x06002737 RID: 10039 RVA: 0x00016141 File Offset: 0x00014341
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x06001C6E RID: 7278 RVA: 0x0005BE0E File Offset: 0x0005A00E
+	// Token: 0x06002738 RID: 10040 RVA: 0x0001614A File Offset: 0x0001434A
 	public EquipmentSaveData()
 	{
 		this.Initialize();
 	}
 
-	// Token: 0x06001C6F RID: 7279 RVA: 0x0005BE23 File Offset: 0x0005A023
+	// Token: 0x06002739 RID: 10041 RVA: 0x0001615F File Offset: 0x0001435F
 	public void Initialize()
 	{
 		this.InitializeSkills();
@@ -27,7 +27,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x06001C70 RID: 7280 RVA: 0x0005BE4C File Offset: 0x0005A04C
+	// Token: 0x0600273A RID: 10042 RVA: 0x000B8370 File Offset: 0x000B6570
 	private void InitializeSkills()
 	{
 		if (this.SkillTreeDict == null)
@@ -44,7 +44,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C71 RID: 7281 RVA: 0x0005BEE0 File Offset: 0x0005A0E0
+	// Token: 0x0600273B RID: 10043 RVA: 0x000B8404 File Offset: 0x000B6604
 	private void InitializeRunes()
 	{
 		if (this.RuneDict == null)
@@ -60,7 +60,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C72 RID: 7282 RVA: 0x0005BF3C File Offset: 0x0005A13C
+	// Token: 0x0600273C RID: 10044 RVA: 0x000B8460 File Offset: 0x000B6660
 	private void InitializeEquipment()
 	{
 		if (this.WeaponEquipmentDict == null)
@@ -119,7 +119,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C73 RID: 7283 RVA: 0x0005C0A8 File Offset: 0x0005A2A8
+	// Token: 0x0600273D RID: 10045 RVA: 0x000B85CC File Offset: 0x000B67CC
 	private void InitializeLoadouts()
 	{
 		if (this.EquipmentLoadoutDict == null)
@@ -146,7 +146,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C74 RID: 7284 RVA: 0x0005C134 File Offset: 0x0005A334
+	// Token: 0x0600273E RID: 10046 RVA: 0x000B8658 File Offset: 0x000B6858
 	private void SetStartingEquipmentSaveData()
 	{
 		if (this.SkillTreeDict[SkillTreeType.Sword_Class_Unlock].Level < 1)
@@ -175,7 +175,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C75 RID: 7285 RVA: 0x0005C23C File Offset: 0x0005A43C
+	// Token: 0x0600273F RID: 10047 RVA: 0x000B8760 File Offset: 0x000B6960
 	public Dictionary<EquipmentType, EquipmentObj> GetEquipmentDict(EquipmentCategoryType category)
 	{
 		switch (category)
@@ -195,7 +195,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C76 RID: 7286 RVA: 0x0005C28C File Offset: 0x0005A48C
+	// Token: 0x06002740 RID: 10048 RVA: 0x000B87B0 File Offset: 0x000B69B0
 	public EquipmentLoadout GetEquipmentLoadout(ClassType classType)
 	{
 		EquipmentLoadout result;
@@ -206,7 +206,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		return null;
 	}
 
-	// Token: 0x06001C77 RID: 7287 RVA: 0x0005C2AC File Offset: 0x0005A4AC
+	// Token: 0x06002741 RID: 10049 RVA: 0x000B87D0 File Offset: 0x000B69D0
 	public RuneLoadout GetRuneLoadout(ClassType classType)
 	{
 		RuneLoadout result;
@@ -217,7 +217,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		return null;
 	}
 
-	// Token: 0x06001C78 RID: 7288 RVA: 0x0005C2CC File Offset: 0x0005A4CC
+	// Token: 0x06002742 RID: 10050 RVA: 0x000B87F0 File Offset: 0x000B69F0
 	public void UpdateVersion()
 	{
 		this.Initialize();
@@ -285,7 +285,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		this.REVISION_NUMBER = 8;
 	}
 
-	// Token: 0x06001C79 RID: 7289 RVA: 0x0005C454 File Offset: 0x0005A654
+	// Token: 0x06002743 RID: 10051 RVA: 0x000B8978 File Offset: 0x000B6B78
 	private void UnequipAllRunes()
 	{
 		foreach (KeyValuePair<RuneType, RuneObj> keyValuePair in this.RuneDict)
@@ -298,7 +298,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C7A RID: 7290 RVA: 0x0005C4B4 File Offset: 0x0005A6B4
+	// Token: 0x06002744 RID: 10052 RVA: 0x000B89D8 File Offset: 0x000B6BD8
 	private void ResetEquipment(EquipmentCategoryType categoryType)
 	{
 		int num = -1;
@@ -316,7 +316,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C7B RID: 7291 RVA: 0x0005C528 File Offset: 0x0005A728
+	// Token: 0x06002745 RID: 10053 RVA: 0x000B8A4C File Offset: 0x000B6C4C
 	private void ResetEquipmentSetLevels()
 	{
 		foreach (EquipmentType equipmentType in EquipmentType_RL.TypeArray)
@@ -330,7 +330,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C7C RID: 7292 RVA: 0x0005C580 File Offset: 0x0005A780
+	// Token: 0x06002746 RID: 10054 RVA: 0x000B8AA4 File Offset: 0x000B6CA4
 	private void ResetSkillTree()
 	{
 		foreach (KeyValuePair<SkillTreeType, SkillTreeObj> keyValuePair in this.SkillTreeDict)
@@ -343,7 +343,7 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C7D RID: 7293 RVA: 0x0005C5E0 File Offset: 0x0005A7E0
+	// Token: 0x06002747 RID: 10055 RVA: 0x000B8B04 File Offset: 0x000B6D04
 	private void ResetRunes()
 	{
 		int num = -1;
@@ -361,48 +361,48 @@ public class EquipmentSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x040019CE RID: 6606
+	// Token: 0x040021D5 RID: 8661
 	public int REVISION_NUMBER = 8;
 
-	// Token: 0x040019CF RID: 6607
+	// Token: 0x040021D6 RID: 8662
 	public int FILE_NUMBER;
 
-	// Token: 0x040019D0 RID: 6608
+	// Token: 0x040021D7 RID: 8663
 	public Dictionary<RuneType, RuneObj> RuneDict;
 
-	// Token: 0x040019D1 RID: 6609
+	// Token: 0x040021D8 RID: 8664
 	public Dictionary<SkillTreeType, SkillTreeObj> SkillTreeDict;
 
-	// Token: 0x040019D2 RID: 6610
+	// Token: 0x040021D9 RID: 8665
 	public Dictionary<EquipmentType, EquipmentObj> WeaponEquipmentDict;
 
-	// Token: 0x040019D3 RID: 6611
+	// Token: 0x040021DA RID: 8666
 	public Dictionary<EquipmentType, EquipmentObj> HeadEquipmentDict;
 
-	// Token: 0x040019D4 RID: 6612
+	// Token: 0x040021DB RID: 8667
 	public Dictionary<EquipmentType, EquipmentObj> ChestEquipmentDict;
 
-	// Token: 0x040019D5 RID: 6613
+	// Token: 0x040021DC RID: 8668
 	public Dictionary<EquipmentType, EquipmentObj> CapeEquipmentDict;
 
-	// Token: 0x040019D6 RID: 6614
+	// Token: 0x040021DD RID: 8669
 	public Dictionary<EquipmentType, EquipmentObj> TrinketEquipmentDict;
 
-	// Token: 0x040019D7 RID: 6615
+	// Token: 0x040021DE RID: 8670
 	public Dictionary<ClassType, EquipmentLoadout> EquipmentLoadoutDict;
 
-	// Token: 0x040019D8 RID: 6616
+	// Token: 0x040021DF RID: 8671
 	public Dictionary<ClassType, RuneLoadout> RuneLoadoutDict;
 
-	// Token: 0x040019D9 RID: 6617
+	// Token: 0x040021E0 RID: 8672
 	public bool EquipmentLoadoutEnabled;
 
-	// Token: 0x040019DA RID: 6618
+	// Token: 0x040021E1 RID: 8673
 	public bool RuneLoadoutEnabled;
 
-	// Token: 0x040019DB RID: 6619
+	// Token: 0x040021E2 RID: 8674
 	public bool DisableAchievementUnlocks;
 
-	// Token: 0x040019DC RID: 6620
+	// Token: 0x040021E3 RID: 8675
 	public Dictionary<EquipmentType, SerializableVector2Int> EquipmentSetStateDict;
 }

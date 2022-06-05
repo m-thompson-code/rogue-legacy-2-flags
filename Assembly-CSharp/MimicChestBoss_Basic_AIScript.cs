@@ -3,11 +3,11 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020000F6 RID: 246
+// Token: 0x0200018D RID: 397
 public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEventEmitter
 {
-	// Token: 0x17000408 RID: 1032
-	// (get) Token: 0x06000781 RID: 1921 RVA: 0x0001A8A3 File Offset: 0x00018AA3
+	// Token: 0x17000526 RID: 1318
+	// (get) Token: 0x06000AE0 RID: 2784 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -16,8 +16,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x17000409 RID: 1033
-	// (get) Token: 0x06000782 RID: 1922 RVA: 0x0001A8B4 File Offset: 0x00018AB4
+	// Token: 0x17000527 RID: 1319
+	// (get) Token: 0x06000AE1 RID: 2785 RVA: 0x00006CD7 File Offset: 0x00004ED7
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -26,8 +26,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x1700040A RID: 1034
-	// (get) Token: 0x06000783 RID: 1923 RVA: 0x0001A8C5 File Offset: 0x00018AC5
+	// Token: 0x17000528 RID: 1320
+	// (get) Token: 0x06000AE2 RID: 2786 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -36,8 +36,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x1700040B RID: 1035
-	// (get) Token: 0x06000784 RID: 1924 RVA: 0x0001A8D6 File Offset: 0x00018AD6
+	// Token: 0x17000529 RID: 1321
+	// (get) Token: 0x06000AE3 RID: 2787 RVA: 0x00006CE8 File Offset: 0x00004EE8
 	protected override string JumpAudioEventPath
 	{
 		get
@@ -46,8 +46,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x1700040C RID: 1036
-	// (get) Token: 0x06000785 RID: 1925 RVA: 0x0001A8DD File Offset: 0x00018ADD
+	// Token: 0x1700052A RID: 1322
+	// (get) Token: 0x06000AE4 RID: 2788 RVA: 0x00006CEF File Offset: 0x00004EEF
 	protected override string LandAudioEventPath
 	{
 		get
@@ -56,8 +56,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x1700040D RID: 1037
-	// (get) Token: 0x06000786 RID: 1926 RVA: 0x0001A8E4 File Offset: 0x00018AE4
+	// Token: 0x1700052B RID: 1323
+	// (get) Token: 0x06000AE5 RID: 2789 RVA: 0x00006CF6 File Offset: 0x00004EF6
 	protected override string DeathHitAudioEventPath
 	{
 		get
@@ -66,8 +66,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x1700040E RID: 1038
-	// (get) Token: 0x06000787 RID: 1927 RVA: 0x0001A8EB File Offset: 0x00018AEB
+	// Token: 0x1700052C RID: 1324
+	// (get) Token: 0x06000AE6 RID: 2790 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected override float m_airborneKO_AnimationDelay
 	{
 		get
@@ -76,8 +76,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x1700040F RID: 1039
-	// (get) Token: 0x06000788 RID: 1928 RVA: 0x0001A8F2 File Offset: 0x00018AF2
+	// Token: 0x1700052D RID: 1325
+	// (get) Token: 0x06000AE7 RID: 2791 RVA: 0x00003CEB File Offset: 0x00001EEB
 	protected override float m_dashAttackSpeed
 	{
 		get
@@ -86,8 +86,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x17000410 RID: 1040
-	// (get) Token: 0x06000789 RID: 1929 RVA: 0x0001A8F9 File Offset: 0x00018AF9
+	// Token: 0x1700052E RID: 1326
+	// (get) Token: 0x06000AE8 RID: 2792 RVA: 0x00006CFD File Offset: 0x00004EFD
 	protected override Vector2 m_dashAttackDuration
 	{
 		get
@@ -96,8 +96,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x17000411 RID: 1041
-	// (get) Token: 0x0600078A RID: 1930 RVA: 0x0001A90A File Offset: 0x00018B0A
+	// Token: 0x1700052F RID: 1327
+	// (get) Token: 0x06000AE9 RID: 2793 RVA: 0x00006D0E File Offset: 0x00004F0E
 	protected override Vector2 JumpHeight
 	{
 		get
@@ -106,7 +106,7 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x0600078B RID: 1931 RVA: 0x0001A91B File Offset: 0x00018B1B
+	// Token: 0x06000AEA RID: 2794 RVA: 0x00006D1F File Offset: 0x00004F1F
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -119,7 +119,7 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		};
 	}
 
-	// Token: 0x0600078C RID: 1932 RVA: 0x0001A951 File Offset: 0x00018B51
+	// Token: 0x06000AEB RID: 2795 RVA: 0x00006D55 File Offset: 0x00004F55
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -128,7 +128,7 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		base.EnemyController.LockFlip = true;
 	}
 
-	// Token: 0x0600078D RID: 1933 RVA: 0x0001A98C File Offset: 0x00018B8C
+	// Token: 0x06000AEC RID: 2796 RVA: 0x00006D90 File Offset: 0x00004F90
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -153,7 +153,7 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		yield break;
 	}
 
-	// Token: 0x0600078E RID: 1934 RVA: 0x0001A99B File Offset: 0x00018B9B
+	// Token: 0x06000AED RID: 2797 RVA: 0x00006D9F File Offset: 0x00004F9F
 	public override IEnumerator SpawnAnim()
 	{
 		yield return this.Default_Animation("BossIntro_Open", 1f, 2f, true);
@@ -165,8 +165,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		yield break;
 	}
 
-	// Token: 0x17000412 RID: 1042
-	// (get) Token: 0x0600078F RID: 1935 RVA: 0x0001A9AA File Offset: 0x00018BAA
+	// Token: 0x17000530 RID: 1328
+	// (get) Token: 0x06000AEE RID: 2798 RVA: 0x00006DAE File Offset: 0x00004FAE
 	protected override string m_verticalShotProjectileName
 	{
 		get
@@ -175,8 +175,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x17000413 RID: 1043
-	// (get) Token: 0x06000790 RID: 1936 RVA: 0x0001A9B1 File Offset: 0x00018BB1
+	// Token: 0x17000531 RID: 1329
+	// (get) Token: 0x06000AEF RID: 2799 RVA: 0x00006DB5 File Offset: 0x00004FB5
 	protected override float m_dashAttack_Exit_AttackCD
 	{
 		get
@@ -185,8 +185,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x17000414 RID: 1044
-	// (get) Token: 0x06000791 RID: 1937 RVA: 0x0001A9B8 File Offset: 0x00018BB8
+	// Token: 0x17000532 RID: 1330
+	// (get) Token: 0x06000AF0 RID: 2800 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_spawnDashTrailProjectiles
 	{
 		get
@@ -195,8 +195,8 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x17000415 RID: 1045
-	// (get) Token: 0x06000792 RID: 1938 RVA: 0x0001A9BB File Offset: 0x00018BBB
+	// Token: 0x17000533 RID: 1331
+	// (get) Token: 0x06000AF1 RID: 2801 RVA: 0x0000452F File Offset: 0x0000272F
 	protected virtual float m_timeBetweenDashTrailProjectiles
 	{
 		get
@@ -205,7 +205,7 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x06000793 RID: 1939 RVA: 0x0001A9C2 File Offset: 0x00018BC2
+	// Token: 0x06000AF2 RID: 2802 RVA: 0x00006DBC File Offset: 0x00004FBC
 	protected override void OnStartDashing()
 	{
 		if (!this.m_spawnDashTrailProjectiles)
@@ -215,7 +215,7 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		base.StartCoroutine(this.SpawnDashTrailProjectiles());
 	}
 
-	// Token: 0x06000794 RID: 1940 RVA: 0x0001A9DA File Offset: 0x00018BDA
+	// Token: 0x06000AF3 RID: 2803 RVA: 0x00006DD4 File Offset: 0x00004FD4
 	private IEnumerator SpawnDashTrailProjectiles()
 	{
 		float timeStart = Time.time;
@@ -246,13 +246,13 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		yield break;
 	}
 
-	// Token: 0x06000795 RID: 1941 RVA: 0x0001A9E9 File Offset: 0x00018BE9
+	// Token: 0x06000AF4 RID: 2804 RVA: 0x00006DE3 File Offset: 0x00004FE3
 	protected override void OnStopDashing()
 	{
 		bool spawnDashTrailProjectiles = this.m_spawnDashTrailProjectiles;
 	}
 
-	// Token: 0x06000796 RID: 1942 RVA: 0x0001A9F2 File Offset: 0x00018BF2
+	// Token: 0x06000AF5 RID: 2805 RVA: 0x00006DEC File Offset: 0x00004FEC
 	protected override void OnDisable()
 	{
 		if (base.IsInitialized)
@@ -262,34 +262,34 @@ public class MimicChestBoss_Basic_AIScript : MimicChest_Basic_AIScript, IAudioEv
 		}
 	}
 
-	// Token: 0x06000797 RID: 1943 RVA: 0x0001AA1E File Offset: 0x00018C1E
+	// Token: 0x06000AF6 RID: 2806 RVA: 0x00006E18 File Offset: 0x00005018
 	public override void OnEnemyActivated()
 	{
 		base.OnEnemyActivated();
 		base.EnemyController.GetComponent<Interactable>().SetIsInteractableActive(false);
 	}
 
-	// Token: 0x04000B23 RID: 2851
+	// Token: 0x04000DCB RID: 3531
 	private const string COIN_PROJECTILE_NAME = "MimicCoinProjectile";
 
-	// Token: 0x04000B24 RID: 2852
+	// Token: 0x04000DCC RID: 3532
 	private const string POTION_PROJECTILE_NAME = "MimicBossPotionProjectile";
 
-	// Token: 0x04000B25 RID: 2853
+	// Token: 0x04000DCD RID: 3533
 	private const string DASH_TRAIL_PROJECTILE_NAME = "MimicBossDashTrailProjectile";
 
-	// Token: 0x04000B26 RID: 2854
+	// Token: 0x04000DCE RID: 3534
 	private const string GALLOP_AUDIO_EVENT_PATH = "event:/SFX/Enemies/sfx_mimicBoss_charge_gallop";
 
-	// Token: 0x04000B27 RID: 2855
+	// Token: 0x04000DCF RID: 3535
 	protected const string INTRO_OPEN = "BossIntro_Open";
 
-	// Token: 0x04000B28 RID: 2856
+	// Token: 0x04000DD0 RID: 3536
 	protected const string INTRO_CLOSE = "BossIntro_ShakeAndClose";
 
-	// Token: 0x04000B29 RID: 2857
+	// Token: 0x04000DD1 RID: 3537
 	protected const string INTRO_GROWL = "BossIntro_GrowlLoop";
 
-	// Token: 0x04000B2A RID: 2858
+	// Token: 0x04000DD2 RID: 3538
 	private bool m_shouldPlayGallop = true;
 }

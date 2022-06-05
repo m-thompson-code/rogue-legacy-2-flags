@@ -7,11 +7,11 @@ using SceneManagement_RL;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020002E1 RID: 737
+// Token: 0x020004DD RID: 1245
 public class NewGamePlus_SceneTransition : Transition_V2, ISceneLoadingTransition, ITransition, IAudioEventEmitter
 {
-	// Token: 0x17000CD7 RID: 3287
-	// (get) Token: 0x06001D4F RID: 7503 RVA: 0x00060968 File Offset: 0x0005EB68
+	// Token: 0x1700106C RID: 4204
+	// (get) Token: 0x06002840 RID: 10304 RVA: 0x000046FA File Offset: 0x000028FA
 	public override TransitionID ID
 	{
 		get
@@ -20,8 +20,8 @@ public class NewGamePlus_SceneTransition : Transition_V2, ISceneLoadingTransitio
 		}
 	}
 
-	// Token: 0x17000CD8 RID: 3288
-	// (get) Token: 0x06001D50 RID: 7504 RVA: 0x0006096C File Offset: 0x0005EB6C
+	// Token: 0x1700106D RID: 4205
+	// (get) Token: 0x06002841 RID: 10305 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -30,13 +30,13 @@ public class NewGamePlus_SceneTransition : Transition_V2, ISceneLoadingTransitio
 		}
 	}
 
-	// Token: 0x06001D51 RID: 7505 RVA: 0x00060974 File Offset: 0x0005EB74
+	// Token: 0x06002842 RID: 10306 RVA: 0x000169F1 File Offset: 0x00014BF1
 	public override IEnumerator Run()
 	{
 		yield break;
 	}
 
-	// Token: 0x06001D52 RID: 7506 RVA: 0x0006097C File Offset: 0x0005EB7C
+	// Token: 0x06002843 RID: 10307 RVA: 0x000169F9 File Offset: 0x00014BF9
 	public IEnumerator TransitionIn()
 	{
 		this.m_canvas.renderMode = RenderMode.WorldSpace;
@@ -140,7 +140,7 @@ public class NewGamePlus_SceneTransition : Transition_V2, ISceneLoadingTransitio
 		yield break;
 	}
 
-	// Token: 0x06001D53 RID: 7507 RVA: 0x0006098B File Offset: 0x0005EB8B
+	// Token: 0x06002844 RID: 10308 RVA: 0x00016A08 File Offset: 0x00014C08
 	public IEnumerator TransitionOut()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -236,22 +236,22 @@ public class NewGamePlus_SceneTransition : Transition_V2, ISceneLoadingTransitio
 		yield break;
 	}
 
-	// Token: 0x04001B4A RID: 6986
+	// Token: 0x04002368 RID: 9064
 	[SerializeField]
 	private Canvas m_canvas;
 
-	// Token: 0x04001B4B RID: 6987
+	// Token: 0x04002369 RID: 9065
 	[SerializeField]
 	private CanvasGroup m_bgCanvasGroup;
 
-	// Token: 0x04001B4C RID: 6988
+	// Token: 0x0400236A RID: 9066
 	[SerializeField]
 	private Image m_bgImage;
 
-	// Token: 0x04001B4D RID: 6989
+	// Token: 0x0400236B RID: 9067
 	[SerializeField]
 	private StudioEventEmitter m_loopEventEmitter;
 
-	// Token: 0x04001B4E RID: 6990
+	// Token: 0x0400236C RID: 9068
 	private Vector2 m_storedPixelResolution;
 }

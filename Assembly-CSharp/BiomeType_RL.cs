@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000704 RID: 1796
+// Token: 0x02000BB7 RID: 2999
 public class BiomeType_RL
 {
-	// Token: 0x17001621 RID: 5665
-	// (get) Token: 0x060040CE RID: 16590 RVA: 0x000E579E File Offset: 0x000E399E
+	// Token: 0x17001E1D RID: 7709
+	// (get) Token: 0x06005A17 RID: 23063 RVA: 0x00031331 File Offset: 0x0002F531
 	public static BiomeType[] TypeArray
 	{
 		get
@@ -17,7 +17,7 @@ public class BiomeType_RL
 		}
 	}
 
-	// Token: 0x060040CF RID: 16591 RVA: 0x000E57C5 File Offset: 0x000E39C5
+	// Token: 0x06005A18 RID: 23064 RVA: 0x00031358 File Offset: 0x0002F558
 	public static BiomeType GetGroupedBiomeType(BiomeType biomeType)
 	{
 		if (biomeType <= BiomeType.CaveBottom)
@@ -41,7 +41,7 @@ public class BiomeType_RL
 		return biomeType;
 	}
 
-	// Token: 0x060040D0 RID: 16592 RVA: 0x000E57F9 File Offset: 0x000E39F9
+	// Token: 0x06005A19 RID: 23065 RVA: 0x0003138C File Offset: 0x0002F58C
 	public static bool IsValidBiome(BiomeType biomeType)
 	{
 		if (biomeType <= BiomeType.Lineage)
@@ -58,6 +58,6 @@ public class BiomeType_RL
 		return false;
 	}
 
-	// Token: 0x040032BB RID: 12987
+	// Token: 0x04004536 RID: 17718
 	private static BiomeType[] m_typeArray;
 }

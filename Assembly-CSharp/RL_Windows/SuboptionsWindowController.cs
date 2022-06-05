@@ -7,11 +7,11 @@ using UnityEngine;
 
 namespace RL_Windows
 {
-	// Token: 0x020008BC RID: 2236
+	// Token: 0x02000DFB RID: 3579
 	public class SuboptionsWindowController : OptionsWindowController
 	{
-		// Token: 0x170017E0 RID: 6112
-		// (get) Token: 0x0600491C RID: 18716 RVA: 0x001073A0 File Offset: 0x001055A0
+		// Token: 0x17002072 RID: 8306
+		// (get) Token: 0x060064CC RID: 25804 RVA: 0x00016A64 File Offset: 0x00014C64
 		public override WindowID ID
 		{
 			get
@@ -20,7 +20,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600491D RID: 18717 RVA: 0x001073A4 File Offset: 0x001055A4
+		// Token: 0x060064CD RID: 25805 RVA: 0x001766BC File Offset: 0x001748BC
 		public override void Initialize()
 		{
 			this.m_windowCanvas.sortingOrder = 495;
@@ -37,7 +37,7 @@ namespace RL_Windows
 			base.Initialize();
 		}
 
-		// Token: 0x0600491E RID: 18718 RVA: 0x00107468 File Offset: 0x00105668
+		// Token: 0x060064CE RID: 25806 RVA: 0x00176780 File Offset: 0x00174980
 		private void InitializeSuboptionPrefab(GameObject suboptionPrefab)
 		{
 			if (suboptionPrefab == null)
@@ -55,7 +55,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600491F RID: 18719 RVA: 0x00107550 File Offset: 0x00105750
+		// Token: 0x060064CF RID: 25807 RVA: 0x00176868 File Offset: 0x00174A68
 		public void ChangeSuboptionDisplayed(SuboptionType suboptionType)
 		{
 			if (this.m_optionItemList != null)
@@ -111,7 +111,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004920 RID: 18720 RVA: 0x00107864 File Offset: 0x00105A64
+		// Token: 0x060064D0 RID: 25808 RVA: 0x00176B7C File Offset: 0x00174D7C
 		private void DisableButtons(BaseOptionItem optionItem)
 		{
 			if (optionItem is ExecuteImmediateOptionItem)
@@ -127,7 +127,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004921 RID: 18721 RVA: 0x001078CC File Offset: 0x00105ACC
+		// Token: 0x060064D1 RID: 25809 RVA: 0x00176BE4 File Offset: 0x00174DE4
 		private void EnableButtons(BaseOptionItem optionItem)
 		{
 			foreach (BaseOptionItem baseOptionItem in this.m_optionItemList)
@@ -136,7 +136,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004922 RID: 18722 RVA: 0x00107920 File Offset: 0x00105B20
+		// Token: 0x060064D2 RID: 25810 RVA: 0x00176C38 File Offset: 0x00174E38
 		protected override void OnOpen()
 		{
 			WindowController windowController = WindowManager.GetWindowController(WindowID.Pause);
@@ -148,7 +148,7 @@ namespace RL_Windows
 			base.StartCoroutine(this.RunOnOpenAnimation());
 		}
 
-		// Token: 0x06004923 RID: 18723 RVA: 0x00107962 File Offset: 0x00105B62
+		// Token: 0x060064D3 RID: 25811 RVA: 0x00037A12 File Offset: 0x00035C12
 		private IEnumerator RunOnOpenAnimation()
 		{
 			this.m_windowCanvas.gameObject.SetActive(true);
@@ -177,7 +177,7 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x06004924 RID: 18724 RVA: 0x00107974 File Offset: 0x00105B74
+		// Token: 0x060064D4 RID: 25812 RVA: 0x00176C7C File Offset: 0x00174E7C
 		protected override void OnClose()
 		{
 			if (this.m_currentSuboptionType == SuboptionType.Audio && !SaveManager.ConfigData.EnableMusicOnPause)
@@ -193,7 +193,7 @@ namespace RL_Windows
 			base.StartCoroutine(this.RunOnCloseAnimation());
 		}
 
-		// Token: 0x06004925 RID: 18725 RVA: 0x001079CB File Offset: 0x00105BCB
+		// Token: 0x060064D5 RID: 25813 RVA: 0x00037A21 File Offset: 0x00035C21
 		private IEnumerator RunOnCloseAnimation()
 		{
 			RewiredMapController.SetCurrentMapEnabled(false);
@@ -227,13 +227,13 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x06004926 RID: 18726 RVA: 0x001079DA File Offset: 0x00105BDA
+		// Token: 0x060064D6 RID: 25814 RVA: 0x00037A30 File Offset: 0x00035C30
 		public void ForceCancelButtonDown(InputActionEventData eventData)
 		{
 			this.OnCancelButtonDown(eventData);
 		}
 
-		// Token: 0x06004927 RID: 18727 RVA: 0x001079E3 File Offset: 0x00105BE3
+		// Token: 0x060064D7 RID: 25815 RVA: 0x00037A39 File Offset: 0x00035C39
 		protected override void OnCancelButtonDown(InputActionEventData eventData)
 		{
 			if (this.m_currentSelectedOptionItem && this.m_currentSelectedOptionItem.IsActivated)
@@ -244,7 +244,7 @@ namespace RL_Windows
 			WindowManager.SetWindowIsOpen(this.ID, false);
 		}
 
-		// Token: 0x06004928 RID: 18728 RVA: 0x00107A18 File Offset: 0x00105C18
+		// Token: 0x060064D8 RID: 25816 RVA: 0x00037A6E File Offset: 0x00035C6E
 		protected override void UpdateSelectedOptionItem(BaseOptionItem menuItem)
 		{
 			if (menuItem == this.m_currentSelectedOptionItem)
@@ -258,27 +258,27 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x04003DB4 RID: 15796
+		// Token: 0x0400522A RID: 21034
 		[Header("Suboption Window Fields")]
 		[SerializeField]
 		private CanvasGroup m_optionItemsCanvasGroup;
 
-		// Token: 0x04003DB5 RID: 15797
+		// Token: 0x0400522B RID: 21035
 		[SerializeField]
 		private RectTransform m_optionItemsRectTransform;
 
-		// Token: 0x04003DB6 RID: 15798
+		// Token: 0x0400522C RID: 21036
 		[SerializeField]
 		private SuboptionTypePrefabDictionary m_suboptionPrefabDict;
 
-		// Token: 0x04003DB7 RID: 15799
+		// Token: 0x0400522D RID: 21037
 		[SerializeField]
 		private CanvasGroup m_suboptionFadeBG;
 
-		// Token: 0x04003DB8 RID: 15800
+		// Token: 0x0400522E RID: 21038
 		private SuboptionType m_currentSuboptionType;
 
-		// Token: 0x04003DB9 RID: 15801
+		// Token: 0x0400522F RID: 21039
 		private ScrollRectAutoScroller m_scrollRectController;
 	}
 }

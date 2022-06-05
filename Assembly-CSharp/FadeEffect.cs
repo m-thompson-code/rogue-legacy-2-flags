@@ -3,17 +3,17 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000422 RID: 1058
+// Token: 0x020006DB RID: 1755
 public class FadeEffect : BaseEffect
 {
-	// Token: 0x06002710 RID: 10000 RVA: 0x00082550 File Offset: 0x00080750
+	// Token: 0x060035CB RID: 13771 RVA: 0x0001D7FE File Offset: 0x0001B9FE
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x06002711 RID: 10001 RVA: 0x0008256C File Offset: 0x0008076C
+	// Token: 0x060035CC RID: 13772 RVA: 0x000E27B4 File Offset: 0x000E09B4
 	public override void Play(float duration = 0f, EffectStopType stopType = EffectStopType.Gracefully)
 	{
 		base.Play(duration, stopType);
@@ -54,7 +54,7 @@ public class FadeEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x06002712 RID: 10002 RVA: 0x0008260C File Offset: 0x0008080C
+	// Token: 0x060035CD RID: 13773 RVA: 0x0001D817 File Offset: 0x0001BA17
 	private IEnumerator FadeTween(object fadeObj, string property)
 	{
 		this.m_fadeObj = fadeObj;
@@ -117,7 +117,7 @@ public class FadeEffect : BaseEffect
 		yield break;
 	}
 
-	// Token: 0x06002713 RID: 10003 RVA: 0x00082629 File Offset: 0x00080829
+	// Token: 0x060035CE RID: 13774 RVA: 0x0001D834 File Offset: 0x0001BA34
 	public override void Stop(EffectStopType stopType)
 	{
 		if (this.m_fadeTween != null)
@@ -127,47 +127,47 @@ public class FadeEffect : BaseEffect
 		this.PlayComplete();
 	}
 
-	// Token: 0x040020C8 RID: 8392
+	// Token: 0x04002BAE RID: 11182
 	[SerializeField]
 	private FadeEffect.FadeObjectType m_fadeObjType;
 
-	// Token: 0x040020C9 RID: 8393
+	// Token: 0x04002BAF RID: 11183
 	[SerializeField]
 	private float m_fadeInDuration;
 
-	// Token: 0x040020CA RID: 8394
+	// Token: 0x04002BB0 RID: 11184
 	[SerializeField]
 	private float m_stayDuration;
 
-	// Token: 0x040020CB RID: 8395
+	// Token: 0x04002BB1 RID: 11185
 	[SerializeField]
 	private float m_fadeOutDuration;
 
-	// Token: 0x040020CC RID: 8396
+	// Token: 0x04002BB2 RID: 11186
 	[SerializeField]
 	private bool m_fadeOutThenFadeIn;
 
-	// Token: 0x040020CD RID: 8397
+	// Token: 0x04002BB3 RID: 11187
 	[SerializeField]
 	private bool m_useUnscaledTime;
 
-	// Token: 0x040020CE RID: 8398
+	// Token: 0x04002BB4 RID: 11188
 	private Tween m_fadeTween;
 
-	// Token: 0x040020CF RID: 8399
+	// Token: 0x04002BB5 RID: 11189
 	private object m_fadeObj;
 
-	// Token: 0x040020D0 RID: 8400
+	// Token: 0x04002BB6 RID: 11190
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x02000C32 RID: 3122
+	// Token: 0x020006DC RID: 1756
 	private enum FadeObjectType
 	{
-		// Token: 0x04004F7B RID: 20347
+		// Token: 0x04002BB8 RID: 11192
 		CanvasGroup,
-		// Token: 0x04004F7C RID: 20348
+		// Token: 0x04002BB9 RID: 11193
 		Image,
-		// Token: 0x04004F7D RID: 20349
+		// Token: 0x04002BBA RID: 11194
 		SpriteRenderer
 	}
 }

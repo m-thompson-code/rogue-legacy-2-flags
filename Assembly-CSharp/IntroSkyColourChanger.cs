@@ -2,11 +2,11 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-// Token: 0x02000210 RID: 528
+// Token: 0x020003C3 RID: 963
 public class IntroSkyColourChanger : MonoBehaviour
 {
-	// Token: 0x17000B12 RID: 2834
-	// (get) Token: 0x0600162A RID: 5674 RVA: 0x000451D7 File Offset: 0x000433D7
+	// Token: 0x17000E39 RID: 3641
+	// (get) Token: 0x06001FC6 RID: 8134 RVA: 0x00010C47 File Offset: 0x0000EE47
 	public PatchType PatchTypeToUse
 	{
 		get
@@ -23,14 +23,14 @@ public class IntroSkyColourChanger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600162B RID: 5675 RVA: 0x000451F3 File Offset: 0x000433F3
+	// Token: 0x06001FC7 RID: 8135 RVA: 0x00010C63 File Offset: 0x0000EE63
 	private void Awake()
 	{
 		this.m_matBlock = new MaterialPropertyBlock();
 		this.SetSkyColor(this.PatchTypeToUse);
 	}
 
-	// Token: 0x0600162C RID: 5676 RVA: 0x0004520C File Offset: 0x0004340C
+	// Token: 0x06001FC8 RID: 8136 RVA: 0x000A398C File Offset: 0x000A1B8C
 	public void SetSkyColor(PatchType patchTypeToUse)
 	{
 		IntroSkyColorEntry introSkyColorEntry;
@@ -64,48 +64,48 @@ public class IntroSkyColourChanger : MonoBehaviour
 		Debug.Log("<color=yellow>WARNING: Failed to change intro sky colour. Patch Type: " + patchTypeToUse.ToString() + " not defined in sky color table.</color>");
 	}
 
-	// Token: 0x0400154E RID: 5454
+	// Token: 0x04001C51 RID: 7249
 	[SerializeField]
 	private PatchType m_patchTypeToUse;
 
-	// Token: 0x0400154F RID: 5455
+	// Token: 0x04001C52 RID: 7250
 	[SerializeField]
 	private PatchTypeSkyColorEntryDictionary m_skyColorTable;
 
-	// Token: 0x04001550 RID: 5456
+	// Token: 0x04001C53 RID: 7251
 	[Space(10f)]
 	[SerializeField]
 	private Renderer m_skyRenderer;
 
-	// Token: 0x04001551 RID: 5457
+	// Token: 0x04001C54 RID: 7252
 	[SerializeField]
 	[FormerlySerializedAs("m_fogRenderer")]
 	private Renderer m_mistRenderer;
 
-	// Token: 0x04001552 RID: 5458
+	// Token: 0x04001C55 RID: 7253
 	[SerializeField]
 	private ParticleSystem m_beam1ParticleSystem;
 
-	// Token: 0x04001553 RID: 5459
+	// Token: 0x04001C56 RID: 7254
 	[SerializeField]
 	private ParticleSystem m_beam2ParticleSystem;
 
-	// Token: 0x04001554 RID: 5460
+	// Token: 0x04001C57 RID: 7255
 	[SerializeField]
 	private ParticleSystem m_rubbleParticleSystem;
 
-	// Token: 0x04001555 RID: 5461
+	// Token: 0x04001C58 RID: 7256
 	[SerializeField]
 	private SpriteRenderer m_glowRenderer;
 
-	// Token: 0x04001556 RID: 5462
+	// Token: 0x04001C59 RID: 7257
 	[SerializeField]
 	private MobilePostProcessing m_postProcessing;
 
-	// Token: 0x04001557 RID: 5463
+	// Token: 0x04001C5A RID: 7258
 	[SerializeField]
 	private SpriteRenderer m_logoBannerRenderer;
 
-	// Token: 0x04001558 RID: 5464
+	// Token: 0x04001C5B RID: 7259
 	private MaterialPropertyBlock m_matBlock;
 }

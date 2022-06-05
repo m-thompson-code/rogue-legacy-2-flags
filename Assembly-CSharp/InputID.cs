@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000741 RID: 1857
+// Token: 0x02000BFF RID: 3071
 public enum InputID
 {
-	// Token: 0x04003488 RID: 13448
+	// Token: 0x04004704 RID: 18180
 	Upgrade,
-	// Token: 0x04003489 RID: 13449
+	// Token: 0x04004705 RID: 18181
 	Confirm,
-	// Token: 0x0400348A RID: 13450
+	// Token: 0x04004706 RID: 18182
 	Cancel
 }

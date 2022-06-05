@@ -4,21 +4,21 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-// Token: 0x020006A7 RID: 1703
+// Token: 0x02000B43 RID: 2883
 public class RNGManager : MonoBehaviour
 {
 	// Token: 0x1400000D RID: 13
-	// (add) Token: 0x06003E70 RID: 15984 RVA: 0x000DBF4C File Offset: 0x000DA14C
-	// (remove) Token: 0x06003E71 RID: 15985 RVA: 0x000DBF80 File Offset: 0x000DA180
+	// (add) Token: 0x06005768 RID: 22376 RVA: 0x0014C41C File Offset: 0x0014A61C
+	// (remove) Token: 0x06005769 RID: 22377 RVA: 0x0014C450 File Offset: 0x0014A650
 	public static event EventHandler<EventArgs> InitialisedEvent;
 
-	// Token: 0x1700156F RID: 5487
-	// (get) Token: 0x06003E72 RID: 15986 RVA: 0x000DBFB3 File Offset: 0x000DA1B3
-	// (set) Token: 0x06003E73 RID: 15987 RVA: 0x000DBFBA File Offset: 0x000DA1BA
+	// Token: 0x17001D59 RID: 7513
+	// (get) Token: 0x0600576A RID: 22378 RVA: 0x0002F97B File Offset: 0x0002DB7B
+	// (set) Token: 0x0600576B RID: 22379 RVA: 0x0002F982 File Offset: 0x0002DB82
 	private static RNGManager Instance { get; set; }
 
-	// Token: 0x17001570 RID: 5488
-	// (get) Token: 0x06003E74 RID: 15988 RVA: 0x000DBFC2 File Offset: 0x000DA1C2
+	// Token: 0x17001D5A RID: 7514
+	// (get) Token: 0x0600576C RID: 22380 RVA: 0x0002F98A File Offset: 0x0002DB8A
 	public static bool IsInstantiated
 	{
 		get
@@ -27,8 +27,8 @@ public class RNGManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001571 RID: 5489
-	// (get) Token: 0x06003E75 RID: 15989 RVA: 0x000DBFD0 File Offset: 0x000DA1D0
+	// Token: 0x17001D5B RID: 7515
+	// (get) Token: 0x0600576D RID: 22381 RVA: 0x0014C484 File Offset: 0x0014A684
 	public static List<RNGController> RNGControllers
 	{
 		get
@@ -42,7 +42,7 @@ public class RNGManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E76 RID: 15990 RVA: 0x000DC028 File Offset: 0x000DA228
+	// Token: 0x0600576E RID: 22382 RVA: 0x0014C4DC File Offset: 0x0014A6DC
 	private void Awake()
 	{
 		if (RNGManager.Instance == null)
@@ -68,7 +68,7 @@ public class RNGManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E77 RID: 15991 RVA: 0x000DC0A1 File Offset: 0x000DA2A1
+	// Token: 0x0600576F RID: 22383 RVA: 0x0002F997 File Offset: 0x0002DB97
 	public static int GetRandomNumber(RngID randomNumberGenerator, string callerDescription, int minInclusive, int maxExclusive)
 	{
 		if (!RNGManager.m_rngControllerTable[randomNumberGenerator].IsInitialized)
@@ -78,7 +78,7 @@ public class RNGManager : MonoBehaviour
 		return RNGManager.m_rngControllerTable[randomNumberGenerator].GetRandomNumber(callerDescription, minInclusive, maxExclusive);
 	}
 
-	// Token: 0x06003E78 RID: 15992 RVA: 0x000DC0CD File Offset: 0x000DA2CD
+	// Token: 0x06005770 RID: 22384 RVA: 0x0002F9C3 File Offset: 0x0002DBC3
 	public static float GetRandomNumber(RngID randomNumberGenerator, string callerDescription, float min, float max)
 	{
 		if (!RNGManager.m_rngControllerTable[randomNumberGenerator].IsInitialized)
@@ -88,7 +88,7 @@ public class RNGManager : MonoBehaviour
 		return RNGManager.m_rngControllerTable[randomNumberGenerator].GetRandomNumber(callerDescription, min, max);
 	}
 
-	// Token: 0x06003E79 RID: 15993 RVA: 0x000DC0F9 File Offset: 0x000DA2F9
+	// Token: 0x06005771 RID: 22385 RVA: 0x0002F9EF File Offset: 0x0002DBEF
 	public static int GetSeed(RngID id)
 	{
 		if (RNGManager.m_rngControllerTable.ContainsKey(id))
@@ -98,7 +98,7 @@ public class RNGManager : MonoBehaviour
 		return -1;
 	}
 
-	// Token: 0x06003E7A RID: 15994 RVA: 0x000DC11C File Offset: 0x000DA31C
+	// Token: 0x06005772 RID: 22386 RVA: 0x0014C558 File Offset: 0x0014A758
 	public static void InitializeRandomNumberGenerators()
 	{
 		int currentSeed = RNGSeedManager.GetCurrentSeed(SceneLoadingUtility.ActiveScene.name);
@@ -110,7 +110,7 @@ public class RNGManager : MonoBehaviour
 		RNGManager.InitializeRandomNumberGenerators(currentSeed);
 	}
 
-	// Token: 0x06003E7B RID: 15995 RVA: 0x000DC16C File Offset: 0x000DA36C
+	// Token: 0x06005773 RID: 22387 RVA: 0x0014C5A8 File Offset: 0x0014A7A8
 	public static void InitializeRandomNumberGenerators(int masterSeed)
 	{
 		System.Random random = new System.Random(masterSeed);
@@ -120,7 +120,7 @@ public class RNGManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E7C RID: 15996 RVA: 0x000DC1DC File Offset: 0x000DA3DC
+	// Token: 0x06005774 RID: 22388 RVA: 0x0014C618 File Offset: 0x0014A818
 	public static void SetSeed(RngID id, int seed)
 	{
 		RNGController rngcontroller;
@@ -132,13 +132,13 @@ public class RNGManager : MonoBehaviour
 		string.Format("<color=red>| RNGManager | The RNGController table does not contain an entry for RngID (<b>{0}</b>). If you see this message, please add a bug report to Pivotal.</color>", id);
 	}
 
-	// Token: 0x06003E7D RID: 15997 RVA: 0x000DC211 File Offset: 0x000DA411
+	// Token: 0x06005775 RID: 22389 RVA: 0x0002FA10 File Offset: 0x0002DC10
 	private void OnDestroy()
 	{
 		RNGManager.m_rngControllerTable = null;
 	}
 
-	// Token: 0x06003E7E RID: 15998 RVA: 0x000DC21C File Offset: 0x000DA41C
+	// Token: 0x06005776 RID: 22390 RVA: 0x0014C650 File Offset: 0x0014A850
 	public static void PrintSeedsToConsole()
 	{
 		string text = string.Format("<color=blue>| {0} |: Master Seed = (HEX = {1}, INT = {2}) ", RNGManager.Instance, RNGSeedManager.GetCurrentSeed(SceneLoadingUtility.ActiveScene.name).ToString("X") + "-" + BurdenManager.GetBurdenLevel(BurdenType.RoomCount).ToString(), RNGSeedManager.GetCurrentSeed(SceneLoadingUtility.ActiveScene.name));
@@ -154,29 +154,29 @@ public class RNGManager : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06003E7F RID: 15999 RVA: 0x000DC31C File Offset: 0x000DA51C
+	// Token: 0x06005777 RID: 22391 RVA: 0x0014C750 File Offset: 0x0014A950
 	public static void Reset()
 	{
 		RNGSeedManager.GenerateNewSeed(SceneLoadingUtility.ActiveScene.name);
 		RNGManager.InitializeRandomNumberGenerators();
 	}
 
-	// Token: 0x06003E80 RID: 16000 RVA: 0x000DC340 File Offset: 0x000DA540
+	// Token: 0x06005778 RID: 22392 RVA: 0x0002FA18 File Offset: 0x0002DC18
 	public static void Reset(int seedOverride)
 	{
 		RNGSeedManager.SetTempSeed(seedOverride.ToString("X"));
 		RNGManager.Reset();
 	}
 
-	// Token: 0x04002E6E RID: 11886
+	// Token: 0x0400408E RID: 16526
 	[SerializeField]
 	[FormerlySerializedAs("m_maxRandomNumber")]
 	private int m_maxRngControllerSeed = 1000;
 
-	// Token: 0x04002E6F RID: 11887
+	// Token: 0x0400408F RID: 16527
 	private static List<RNGController> m_rngControllers = null;
 
-	// Token: 0x04002E70 RID: 11888
+	// Token: 0x04004090 RID: 16528
 	private static Dictionary<RngID, RNGController> m_rngControllerTable = new Dictionary<RngID, RNGController>
 	{
 		{

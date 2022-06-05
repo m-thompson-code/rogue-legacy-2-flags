@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000718 RID: 1816
+// Token: 0x02000BCB RID: 3019
 public static class ClassType_RL
 {
-	// Token: 0x1700162A RID: 5674
-	// (get) Token: 0x060040E6 RID: 16614 RVA: 0x000E5AF8 File Offset: 0x000E3CF8
+	// Token: 0x17001E26 RID: 7718
+	// (get) Token: 0x06005A2F RID: 23087 RVA: 0x00031571 File Offset: 0x0002F771
 	public static ClassType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public static class ClassType_RL
 		}
 	}
 
-	// Token: 0x04003342 RID: 13122
+	// Token: 0x040045BD RID: 17853
 	private static ClassType[] m_typeArray;
 }

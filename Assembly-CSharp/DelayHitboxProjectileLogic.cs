@@ -2,16 +2,16 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200049A RID: 1178
+// Token: 0x0200079E RID: 1950
 public class DelayHitboxProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B3D RID: 11069 RVA: 0x000929EC File Offset: 0x00090BEC
+	// Token: 0x06003B8C RID: 15244 RVA: 0x00020B89 File Offset: 0x0001ED89
 	private void OnEnable()
 	{
 		base.StartCoroutine(this.DelayCoroutine());
 	}
 
-	// Token: 0x06002B3E RID: 11070 RVA: 0x000929FB File Offset: 0x00090BFB
+	// Token: 0x06003B8D RID: 15245 RVA: 0x00020B98 File Offset: 0x0001ED98
 	private IEnumerator DelayCoroutine()
 	{
 		this.m_hitboxDisabled = true;
@@ -26,7 +26,7 @@ public class DelayHitboxProjectileLogic : BaseProjectileLogic
 		yield break;
 	}
 
-	// Token: 0x06002B3F RID: 11071 RVA: 0x00092A0A File Offset: 0x00090C0A
+	// Token: 0x06003B8E RID: 15246 RVA: 0x00020BA7 File Offset: 0x0001EDA7
 	private void OnDisable()
 	{
 		if (this.m_hitboxDisabled && base.SourceProjectile)
@@ -36,14 +36,14 @@ public class DelayHitboxProjectileLogic : BaseProjectileLogic
 		this.m_hitboxDisabled = false;
 	}
 
-	// Token: 0x04002332 RID: 9010
+	// Token: 0x04002F49 RID: 12105
 	[SerializeField]
 	private HitboxType m_hitboxToDelay;
 
-	// Token: 0x04002333 RID: 9011
+	// Token: 0x04002F4A RID: 12106
 	[SerializeField]
 	private float m_duration;
 
-	// Token: 0x04002334 RID: 9012
+	// Token: 0x04002F4B RID: 12107
 	private bool m_hitboxDisabled;
 }

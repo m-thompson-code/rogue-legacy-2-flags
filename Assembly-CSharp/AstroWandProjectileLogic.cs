@@ -1,36 +1,36 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000494 RID: 1172
+// Token: 0x02000797 RID: 1943
 public class AstroWandProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B23 RID: 11043 RVA: 0x00092393 File Offset: 0x00090593
+	// Token: 0x06003B6C RID: 15212 RVA: 0x00020A29 File Offset: 0x0001EC29
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onPlayerCastingAstroWand = new Action<MonoBehaviour, EventArgs>(this.OnPlayerCastingAstroWand);
 	}
 
-	// Token: 0x06002B24 RID: 11044 RVA: 0x000923AD File Offset: 0x000905AD
+	// Token: 0x06003B6D RID: 15213 RVA: 0x00020A43 File Offset: 0x0001EC43
 	private void OnEnable()
 	{
 		base.SourceProjectile.DontFireDeathRelay = false;
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerCastingAstroWand, this.m_onPlayerCastingAstroWand);
 	}
 
-	// Token: 0x06002B25 RID: 11045 RVA: 0x000923C8 File Offset: 0x000905C8
+	// Token: 0x06003B6E RID: 15214 RVA: 0x00020A5E File Offset: 0x0001EC5E
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerCastingAstroWand, this.m_onPlayerCastingAstroWand);
 	}
 
-	// Token: 0x06002B26 RID: 11046 RVA: 0x000923D7 File Offset: 0x000905D7
+	// Token: 0x06003B6F RID: 15215 RVA: 0x00020A6D File Offset: 0x0001EC6D
 	private void OnPlayerCastingAstroWand(MonoBehaviour sender, EventArgs args)
 	{
 		base.SourceProjectile.DontFireDeathRelay = true;
 		base.SourceProjectile.FlagForDestruction(null);
 	}
 
-	// Token: 0x0400231D RID: 8989
+	// Token: 0x04002F31 RID: 12081
 	private Action<MonoBehaviour, EventArgs> m_onPlayerCastingAstroWand;
 }

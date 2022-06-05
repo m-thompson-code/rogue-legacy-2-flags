@@ -15,23 +15,23 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Token: 0x02000829 RID: 2089
+// Token: 0x02000D05 RID: 3333
 public class UserReportingScript_TMP : MonoBehaviour
 {
-	// Token: 0x06004513 RID: 17683 RVA: 0x000F5C77 File Offset: 0x000F3E77
+	// Token: 0x06005EFB RID: 24315 RVA: 0x00034579 File Offset: 0x00032779
 	public UserReportingScript_TMP()
 	{
 		this.UserReportSubmitting = new UnityEvent();
 		this.unityUserReportingUpdater = new UnityUserReportingUpdater();
 	}
 
-	// Token: 0x17001716 RID: 5910
-	// (get) Token: 0x06004514 RID: 17684 RVA: 0x000F5C95 File Offset: 0x000F3E95
-	// (set) Token: 0x06004515 RID: 17685 RVA: 0x000F5C9D File Offset: 0x000F3E9D
+	// Token: 0x17001F2A RID: 7978
+	// (get) Token: 0x06005EFC RID: 24316 RVA: 0x00034597 File Offset: 0x00032797
+	// (set) Token: 0x06005EFD RID: 24317 RVA: 0x0003459F File Offset: 0x0003279F
 	public UserReport CurrentUserReport { get; private set; }
 
-	// Token: 0x17001717 RID: 5911
-	// (get) Token: 0x06004516 RID: 17686 RVA: 0x000F5CA6 File Offset: 0x000F3EA6
+	// Token: 0x17001F2B RID: 7979
+	// (get) Token: 0x06005EFE RID: 24318 RVA: 0x000345A8 File Offset: 0x000327A8
 	public UserReportingState State
 	{
 		get
@@ -59,7 +59,7 @@ public class UserReportingScript_TMP : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06004517 RID: 17687 RVA: 0x000F5CD4 File Offset: 0x000F3ED4
+	// Token: 0x06005EFF RID: 24319 RVA: 0x001637C4 File Offset: 0x001619C4
 	public void CancelUserReport()
 	{
 		if (this.UserNameInput != null)
@@ -78,7 +78,7 @@ public class UserReportingScript_TMP : MonoBehaviour
 		this.ClearForm();
 	}
 
-	// Token: 0x06004518 RID: 17688 RVA: 0x000F5D4E File Offset: 0x000F3F4E
+	// Token: 0x06005F00 RID: 24320 RVA: 0x000345D3 File Offset: 0x000327D3
 	private IEnumerator ClearError()
 	{
 		yield return new WaitForSeconds(5f);
@@ -86,7 +86,7 @@ public class UserReportingScript_TMP : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06004519 RID: 17689 RVA: 0x000F5D5D File Offset: 0x000F3F5D
+	// Token: 0x06005F01 RID: 24321 RVA: 0x000345E2 File Offset: 0x000327E2
 	private void ClearForm()
 	{
 		UnityUserReporting.CurrentClient.ClearScreenshots();
@@ -96,7 +96,7 @@ public class UserReportingScript_TMP : MonoBehaviour
 		this.EmailInput.text = null;
 	}
 
-	// Token: 0x0600451A RID: 17690 RVA: 0x000F5D9C File Offset: 0x000F3F9C
+	// Token: 0x06005F02 RID: 24322 RVA: 0x00163840 File Offset: 0x00161A40
 	public void CreateUserReport()
 	{
 		if (this.isCreatingUserReport)
@@ -147,19 +147,19 @@ public class UserReportingScript_TMP : MonoBehaviour
 		});
 	}
 
-	// Token: 0x0600451B RID: 17691 RVA: 0x000F5E24 File Offset: 0x000F4024
+	// Token: 0x06005F03 RID: 24323 RVA: 0x0003461E File Offset: 0x0003281E
 	private UserReportingClientConfiguration GetConfiguration()
 	{
 		return new UserReportingClientConfiguration(0, MetricsGatheringMode.Disabled, 0, 0, 2);
 	}
 
-	// Token: 0x0600451C RID: 17692 RVA: 0x000F5E30 File Offset: 0x000F4030
+	// Token: 0x06005F04 RID: 24324 RVA: 0x0003462A File Offset: 0x0003282A
 	public bool IsSubmitting()
 	{
 		return this.isSubmitting;
 	}
 
-	// Token: 0x0600451D RID: 17693 RVA: 0x000F5E38 File Offset: 0x000F4038
+	// Token: 0x06005F05 RID: 24325 RVA: 0x001638C8 File Offset: 0x00161AC8
 	private void SetThumbnail(UserReport userReport)
 	{
 		if (userReport != null && this.ThumbnailViewer != null)
@@ -172,12 +172,12 @@ public class UserReportingScript_TMP : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001718 RID: 5912
-	// (get) Token: 0x0600451E RID: 17694 RVA: 0x000F5EC3 File Offset: 0x000F40C3
-	// (set) Token: 0x0600451F RID: 17695 RVA: 0x000F5ECB File Offset: 0x000F40CB
+	// Token: 0x17001F2C RID: 7980
+	// (get) Token: 0x06005F06 RID: 24326 RVA: 0x00034632 File Offset: 0x00032832
+	// (set) Token: 0x06005F07 RID: 24327 RVA: 0x0003463A File Offset: 0x0003283A
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x06004520 RID: 17696 RVA: 0x000F5ED4 File Offset: 0x000F40D4
+	// Token: 0x06005F08 RID: 24328 RVA: 0x00163954 File Offset: 0x00161B54
 	private void Start()
 	{
 		bool flag = false;
@@ -207,7 +207,7 @@ public class UserReportingScript_TMP : MonoBehaviour
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x06004521 RID: 17697 RVA: 0x000F5FB0 File Offset: 0x000F41B0
+	// Token: 0x06005F09 RID: 24329 RVA: 0x00163A30 File Offset: 0x00161C30
 	public void SubmitUserReport()
 	{
 		if (this.isSubmitting || this.CurrentUserReport == null)
@@ -402,7 +402,7 @@ public class UserReportingScript_TMP : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06004522 RID: 17698 RVA: 0x000F6798 File Offset: 0x000F4998
+	// Token: 0x06005F0A RID: 24330 RVA: 0x00034643 File Offset: 0x00032843
 	private void OnDisable()
 	{
 		if (this.m_errorMessageWaitCoroutine != null)
@@ -412,7 +412,7 @@ public class UserReportingScript_TMP : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06004523 RID: 17699 RVA: 0x000F67B5 File Offset: 0x000F49B5
+	// Token: 0x06005F0B RID: 24331 RVA: 0x00034660 File Offset: 0x00032860
 	private IEnumerator ErrorMessageTimeout()
 	{
 		float timeStart = Time.unscaledTime;
@@ -429,7 +429,7 @@ public class UserReportingScript_TMP : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06004524 RID: 17700 RVA: 0x000F67C4 File Offset: 0x000F49C4
+	// Token: 0x06005F0C RID: 24332 RVA: 0x00164218 File Offset: 0x00162418
 	private void Update()
 	{
 		UnityUserReporting.CurrentClient.IsSelfReporting = this.IsSelfReporting;
@@ -454,7 +454,7 @@ public class UserReportingScript_TMP : MonoBehaviour
 		base.StartCoroutine(this.unityUserReportingUpdater);
 	}
 
-	// Token: 0x06004525 RID: 17701 RVA: 0x000F688E File Offset: 0x000F4A8E
+	// Token: 0x06005F0D RID: 24333 RVA: 0x0003466F File Offset: 0x0003286F
 	protected virtual void RaiseUserReportSubmitting()
 	{
 		if (this.UserReportSubmitting != null)
@@ -463,100 +463,100 @@ public class UserReportingScript_TMP : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003AEC RID: 15084
+	// Token: 0x04004E03 RID: 19971
 	[Tooltip("The username input on the user report form.")]
 	public TMP_InputField UserNameInput;
 
-	// Token: 0x04003AED RID: 15085
+	// Token: 0x04004E04 RID: 19972
 	[Tooltip("The email input on the user report form.")]
 	public TMP_InputField EmailInput;
 
-	// Token: 0x04003AEE RID: 15086
+	// Token: 0x04004E05 RID: 19973
 	[Tooltip("The description input on the user report form.")]
 	public TMP_InputField DescriptionInput;
 
-	// Token: 0x04003AEF RID: 15087
+	// Token: 0x04004E06 RID: 19974
 	[Tooltip("The UI shown when there's an error.")]
 	public Canvas ErrorPopup;
 
-	// Token: 0x04003AF0 RID: 15088
+	// Token: 0x04004E07 RID: 19975
 	private bool isCreatingUserReport;
 
-	// Token: 0x04003AF1 RID: 15089
+	// Token: 0x04004E08 RID: 19976
 	[Tooltip("A value indicating whether the hotkey is enabled (Left Alt + Left Shift + B).")]
 	public bool IsHotkeyEnabled;
 
-	// Token: 0x04003AF2 RID: 15090
+	// Token: 0x04004E09 RID: 19977
 	[Tooltip("A value indicating whether the prefab is in silent mode. Silent mode does not show the user report form.")]
 	public bool IsInSilentMode;
 
-	// Token: 0x04003AF3 RID: 15091
+	// Token: 0x04004E0A RID: 19978
 	[Tooltip("A value indicating whether the user report client reports metrics about itself.")]
 	public bool IsSelfReporting;
 
-	// Token: 0x04003AF4 RID: 15092
+	// Token: 0x04004E0B RID: 19979
 	private bool isShowingError;
 
-	// Token: 0x04003AF5 RID: 15093
+	// Token: 0x04004E0C RID: 19980
 	private bool isSubmitting;
 
-	// Token: 0x04003AF6 RID: 15094
+	// Token: 0x04004E0D RID: 19981
 	[Tooltip("The display text for the progress text.")]
 	public TMP_Text ProgressText;
 
-	// Token: 0x04003AF7 RID: 15095
+	// Token: 0x04004E0E RID: 19982
 	[Tooltip("A value indicating whether the user report client send events to analytics.")]
 	public bool SendEventsToAnalytics;
 
-	// Token: 0x04003AF8 RID: 15096
+	// Token: 0x04004E0F RID: 19983
 	[Tooltip("The UI shown while submitting.")]
 	public Canvas SubmittingPopup;
 
-	// Token: 0x04003AF9 RID: 15097
+	// Token: 0x04004E10 RID: 19984
 	public Button SubmissionCompleteButton;
 
-	// Token: 0x04003AFA RID: 15098
+	// Token: 0x04004E11 RID: 19985
 	[Tooltip("The summary input on the user report form.")]
 	public TMP_InputField SummaryInput;
 
-	// Token: 0x04003AFB RID: 15099
+	// Token: 0x04004E12 RID: 19986
 	public Toggle BugReportToggle;
 
-	// Token: 0x04003AFC RID: 15100
+	// Token: 0x04004E13 RID: 19987
 	public Toggle FeatureToggle;
 
-	// Token: 0x04003AFD RID: 15101
+	// Token: 0x04004E14 RID: 19988
 	public Toggle ScreenshotToggle;
 
-	// Token: 0x04003AFE RID: 15102
+	// Token: 0x04004E15 RID: 19989
 	public Toggle SaveFileToggle;
 
-	// Token: 0x04003AFF RID: 15103
+	// Token: 0x04004E16 RID: 19990
 	[Tooltip("The thumbnail viewer on the user report form.")]
 	public Image ThumbnailViewer;
 
-	// Token: 0x04003B00 RID: 15104
+	// Token: 0x04004E17 RID: 19991
 	private UnityUserReportingUpdater unityUserReportingUpdater;
 
-	// Token: 0x04003B01 RID: 15105
+	// Token: 0x04004E18 RID: 19992
 	[Tooltip("The user report button used to create a user report.")]
 	public Button UserReportButton;
 
-	// Token: 0x04003B02 RID: 15106
+	// Token: 0x04004E19 RID: 19993
 	[Tooltip("The UI for the user report form. Shown after a user report is created.")]
 	public Canvas UserReportForm;
 
-	// Token: 0x04003B03 RID: 15107
+	// Token: 0x04004E1A RID: 19994
 	[Tooltip("The User Reporting platform. Different platforms have different features but may require certain Unity versions or target platforms. The Async platform adds async screenshotting and report creation, but requires Unity 2018.3 and above, the package manager version of Unity User Reporting, and a target platform that supports asynchronous GPU readback such as DirectX.")]
 	public UserReportingPlatformType UserReportingPlatform;
 
-	// Token: 0x04003B04 RID: 15108
+	// Token: 0x04004E1B RID: 19995
 	[Tooltip("The event raised when a user report is submitting.")]
 	public UnityEvent UserReportSubmitting;
 
-	// Token: 0x04003B05 RID: 15109
+	// Token: 0x04004E1C RID: 19996
 	private UserReportWindowController m_windowController;
 
-	// Token: 0x04003B06 RID: 15110
+	// Token: 0x04004E1D RID: 19997
 	private Coroutine m_errorMessageWaitCoroutine;
 }

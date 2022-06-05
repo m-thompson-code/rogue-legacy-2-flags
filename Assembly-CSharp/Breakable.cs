@@ -5,22 +5,22 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x020003F2 RID: 1010
+// Token: 0x0200069B RID: 1691
 public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, IBodyOnStayHitResponse, ITerrainOnEnterHitResponse, ITerrainOnStayHitResponse, IEffectTriggerEvent_OnDeath, IEffectTriggerEvent_OnDamage, IRootObj, IPreOnDisable, IPlayHitEffect
 {
-	// Token: 0x17000F11 RID: 3857
-	// (get) Token: 0x06002566 RID: 9574 RVA: 0x0007BB37 File Offset: 0x00079D37
-	// (set) Token: 0x06002567 RID: 9575 RVA: 0x0007BB3F File Offset: 0x00079D3F
+	// Token: 0x170013C0 RID: 5056
+	// (get) Token: 0x060033D4 RID: 13268 RVA: 0x0001C666 File Offset: 0x0001A866
+	// (set) Token: 0x060033D5 RID: 13269 RVA: 0x0001C66E File Offset: 0x0001A86E
 	public ItemDropType ItemDropTypeOverride { get; set; }
 
-	// Token: 0x17000F12 RID: 3858
-	// (get) Token: 0x06002568 RID: 9576 RVA: 0x0007BB48 File Offset: 0x00079D48
-	// (set) Token: 0x06002569 RID: 9577 RVA: 0x0007BB50 File Offset: 0x00079D50
+	// Token: 0x170013C1 RID: 5057
+	// (get) Token: 0x060033D6 RID: 13270 RVA: 0x0001C677 File Offset: 0x0001A877
+	// (set) Token: 0x060033D7 RID: 13271 RVA: 0x0001C67F File Offset: 0x0001A87F
 	public bool IsDirectionalBreak { get; private set; }
 
-	// Token: 0x17000F13 RID: 3859
-	// (get) Token: 0x0600256A RID: 9578 RVA: 0x0007BB59 File Offset: 0x00079D59
-	// (set) Token: 0x0600256B RID: 9579 RVA: 0x0007BB61 File Offset: 0x00079D61
+	// Token: 0x170013C2 RID: 5058
+	// (get) Token: 0x060033D8 RID: 13272 RVA: 0x0001C688 File Offset: 0x0001A888
+	// (set) Token: 0x060033D9 RID: 13273 RVA: 0x0001C690 File Offset: 0x0001A890
 	public bool AttackerIsOnRight
 	{
 		get
@@ -33,8 +33,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F14 RID: 3860
-	// (get) Token: 0x0600256C RID: 9580 RVA: 0x0007BB6A File Offset: 0x00079D6A
+	// Token: 0x170013C3 RID: 5059
+	// (get) Token: 0x060033DA RID: 13274 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool PlayHitEffect
 	{
 		get
@@ -43,8 +43,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F15 RID: 3861
-	// (get) Token: 0x0600256D RID: 9581 RVA: 0x0007BB6D File Offset: 0x00079D6D
+	// Token: 0x170013C4 RID: 5060
+	// (get) Token: 0x060033DB RID: 13275 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public bool PlayDirectionalHitEffect
 	{
 		get
@@ -53,8 +53,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F16 RID: 3862
-	// (get) Token: 0x0600256E RID: 9582 RVA: 0x0007BB70 File Offset: 0x00079D70
+	// Token: 0x170013C5 RID: 5061
+	// (get) Token: 0x060033DC RID: 13276 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string EffectNameOverride
 	{
 		get
@@ -63,8 +63,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F17 RID: 3863
-	// (get) Token: 0x0600256F RID: 9583 RVA: 0x0007BB73 File Offset: 0x00079D73
+	// Token: 0x170013C6 RID: 5062
+	// (get) Token: 0x060033DD RID: 13277 RVA: 0x0001C699 File Offset: 0x0001A899
 	public SpriteRenderer SpriteRenderer
 	{
 		get
@@ -73,8 +73,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F18 RID: 3864
-	// (get) Token: 0x06002570 RID: 9584 RVA: 0x0007BB7C File Offset: 0x00079D7C
+	// Token: 0x170013C7 RID: 5063
+	// (get) Token: 0x060033DE RID: 13278 RVA: 0x000DBB00 File Offset: 0x000D9D00
 	public Vector3 Midpoint
 	{
 		get
@@ -87,9 +87,9 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F19 RID: 3865
-	// (get) Token: 0x06002571 RID: 9585 RVA: 0x0007BBB5 File Offset: 0x00079DB5
-	// (set) Token: 0x06002572 RID: 9586 RVA: 0x0007BBBD File Offset: 0x00079DBD
+	// Token: 0x170013C8 RID: 5064
+	// (get) Token: 0x060033DF RID: 13279 RVA: 0x0001C6A1 File Offset: 0x0001A8A1
+	// (set) Token: 0x060033E0 RID: 13280 RVA: 0x0001C6A9 File Offset: 0x0001A8A9
 	public Animator AnimatorComponent
 	{
 		get
@@ -102,8 +102,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F1A RID: 3866
-	// (get) Token: 0x06002573 RID: 9587 RVA: 0x0007BBC8 File Offset: 0x00079DC8
+	// Token: 0x170013C9 RID: 5065
+	// (get) Token: 0x060033E1 RID: 13281 RVA: 0x000DBB3C File Offset: 0x000D9D3C
 	public int CurrentAnimatorHashState
 	{
 		get
@@ -116,8 +116,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F1B RID: 3867
-	// (get) Token: 0x06002574 RID: 9588 RVA: 0x0007BBF9 File Offset: 0x00079DF9
+	// Token: 0x170013CA RID: 5066
+	// (get) Token: 0x060033E2 RID: 13282 RVA: 0x0001C6B2 File Offset: 0x0001A8B2
 	public IRelayLink<IPreOnDisable> PreOnDisableRelay
 	{
 		get
@@ -126,8 +126,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F1C RID: 3868
-	// (get) Token: 0x06002575 RID: 9589 RVA: 0x0007BC06 File Offset: 0x00079E06
+	// Token: 0x170013CB RID: 5067
+	// (get) Token: 0x060033E3 RID: 13283 RVA: 0x0001C6BF File Offset: 0x0001A8BF
 	public IRelayLink<GameObject, float, bool> OnDamageEffectTriggerRelay
 	{
 		get
@@ -136,8 +136,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F1D RID: 3869
-	// (get) Token: 0x06002576 RID: 9590 RVA: 0x0007BC13 File Offset: 0x00079E13
+	// Token: 0x170013CC RID: 5068
+	// (get) Token: 0x060033E4 RID: 13284 RVA: 0x0001C6CC File Offset: 0x0001A8CC
 	public IRelayLink<GameObject> OnDeathEffectTriggerRelay
 	{
 		get
@@ -146,8 +146,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F1E RID: 3870
-	// (get) Token: 0x06002577 RID: 9591 RVA: 0x0007BC20 File Offset: 0x00079E20
+	// Token: 0x170013CD RID: 5069
+	// (get) Token: 0x060033E5 RID: 13285 RVA: 0x0001C6D9 File Offset: 0x0001A8D9
 	public UnityEvent DestroyedEvent
 	{
 		get
@@ -156,8 +156,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F1F RID: 3871
-	// (get) Token: 0x06002578 RID: 9592 RVA: 0x0007BC28 File Offset: 0x00079E28
+	// Token: 0x170013CE RID: 5070
+	// (get) Token: 0x060033E6 RID: 13286 RVA: 0x0001C6E1 File Offset: 0x0001A8E1
 	public virtual bool IsBroken
 	{
 		get
@@ -166,9 +166,9 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F20 RID: 3872
-	// (get) Token: 0x06002579 RID: 9593 RVA: 0x0007BC36 File Offset: 0x00079E36
-	// (set) Token: 0x0600257A RID: 9594 RVA: 0x0007BC3E File Offset: 0x00079E3E
+	// Token: 0x170013CF RID: 5071
+	// (get) Token: 0x060033E7 RID: 13287 RVA: 0x0001C6EF File Offset: 0x0001A8EF
+	// (set) Token: 0x060033E8 RID: 13288 RVA: 0x0001C6F7 File Offset: 0x0001A8F7
 	public bool DoNotDisableOnDeath
 	{
 		get
@@ -181,9 +181,9 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F21 RID: 3873
-	// (get) Token: 0x0600257B RID: 9595 RVA: 0x0007BC47 File Offset: 0x00079E47
-	// (set) Token: 0x0600257C RID: 9596 RVA: 0x0007BC4F File Offset: 0x00079E4F
+	// Token: 0x170013D0 RID: 5072
+	// (get) Token: 0x060033E9 RID: 13289 RVA: 0x0001C700 File Offset: 0x0001A900
+	// (set) Token: 0x060033EA RID: 13290 RVA: 0x0001C708 File Offset: 0x0001A908
 	public int CurrentHP
 	{
 		get
@@ -196,8 +196,8 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x17000F22 RID: 3874
-	// (get) Token: 0x0600257D RID: 9597 RVA: 0x0007BC5E File Offset: 0x00079E5E
+	// Token: 0x170013D1 RID: 5073
+	// (get) Token: 0x060033EB RID: 13291 RVA: 0x0001C717 File Offset: 0x0001A917
 	public int DefaultHP
 	{
 		get
@@ -206,7 +206,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x0600257E RID: 9598 RVA: 0x0007BC68 File Offset: 0x00079E68
+	// Token: 0x060033EC RID: 13292 RVA: 0x000DBB70 File Offset: 0x000D9D70
 	protected virtual void Awake()
 	{
 		this.AnimatorComponent = base.GetComponent<Animator>();
@@ -227,25 +227,25 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		this.ForceBrokenState(false);
 	}
 
-	// Token: 0x0600257F RID: 9599 RVA: 0x0007BD10 File Offset: 0x00079F10
+	// Token: 0x060033ED RID: 13293 RVA: 0x0001C71F File Offset: 0x0001A91F
 	private void OnDisable()
 	{
 		this.ItemDropTypeOverride = ItemDropType.None;
 	}
 
-	// Token: 0x06002580 RID: 9600 RVA: 0x0007BD19 File Offset: 0x00079F19
+	// Token: 0x060033EE RID: 13294 RVA: 0x0001C728 File Offset: 0x0001A928
 	public void BodyOnEnterHitResponse(IHitboxController hbController)
 	{
 		this.TriggerCollision(hbController.DamageObj);
 	}
 
-	// Token: 0x06002581 RID: 9601 RVA: 0x0007BD27 File Offset: 0x00079F27
+	// Token: 0x060033EF RID: 13295 RVA: 0x0001C736 File Offset: 0x0001A936
 	public void BodyOnStayHitResponse(IHitboxController hbController)
 	{
 		this.BodyOnEnterHitResponse(hbController);
 	}
 
-	// Token: 0x06002582 RID: 9602 RVA: 0x0007BD30 File Offset: 0x00079F30
+	// Token: 0x060033F0 RID: 13296 RVA: 0x0001C73F File Offset: 0x0001A93F
 	protected virtual void Break(IDamageObj damageObj)
 	{
 		this.BroadcastDestroyedEvents(damageObj);
@@ -259,7 +259,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		this.SetHitBoxControllerIsActive(false);
 	}
 
-	// Token: 0x06002583 RID: 9603 RVA: 0x0007BD70 File Offset: 0x00079F70
+	// Token: 0x060033F1 RID: 13297 RVA: 0x000DBC18 File Offset: 0x000D9E18
 	private void BreakDecos(IDamageObj damageObj)
 	{
 		if (this.m_prop)
@@ -283,7 +283,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x06002584 RID: 9604 RVA: 0x0007BE04 File Offset: 0x0007A004
+	// Token: 0x060033F2 RID: 13298 RVA: 0x000DBCAC File Offset: 0x000D9EAC
 	private void SetBrokenVisuals(bool isBroken)
 	{
 		bool flag = this.m_spriteRenderer;
@@ -314,7 +314,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x06002585 RID: 9605 RVA: 0x0007BE98 File Offset: 0x0007A098
+	// Token: 0x060033F3 RID: 13299 RVA: 0x000DBD40 File Offset: 0x000D9F40
 	private void DisableDecos()
 	{
 		if (this.m_prop)
@@ -334,7 +334,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x06002586 RID: 9606 RVA: 0x0007BF14 File Offset: 0x0007A114
+	// Token: 0x060033F4 RID: 13300 RVA: 0x000DBDBC File Offset: 0x000D9FBC
 	public virtual void ForceBrokenState(bool isBroken)
 	{
 		if (isBroken)
@@ -364,7 +364,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		this.SetHitBoxControllerIsActive(!isBroken);
 	}
 
-	// Token: 0x06002587 RID: 9607 RVA: 0x0007BFBC File Offset: 0x0007A1BC
+	// Token: 0x060033F5 RID: 13301 RVA: 0x000DBE64 File Offset: 0x000DA064
 	public void SetAnimatorState(int stateHash)
 	{
 		if (this.AnimatorComponent == null || stateHash == -1)
@@ -379,7 +379,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		this.AnimatorComponent.Play("Idle", 0, 0f);
 	}
 
-	// Token: 0x06002588 RID: 9608 RVA: 0x0007C009 File Offset: 0x0007A209
+	// Token: 0x060033F6 RID: 13302 RVA: 0x0001C77F File Offset: 0x0001A97F
 	private void SetHitBoxControllerIsActive(bool isActive)
 	{
 		if (this.m_hitboxController == null)
@@ -389,7 +389,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		this.m_hitboxController.DisableAllCollisions = !isActive;
 	}
 
-	// Token: 0x06002589 RID: 9609 RVA: 0x0007C030 File Offset: 0x0007A230
+	// Token: 0x060033F7 RID: 13303 RVA: 0x000DBEB4 File Offset: 0x000DA0B4
 	private void DropReward()
 	{
 		ItemDropType itemDropType;
@@ -442,7 +442,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x0600258A RID: 9610 RVA: 0x0007C1EC File Offset: 0x0007A3EC
+	// Token: 0x060033F8 RID: 13304 RVA: 0x000DC070 File Offset: 0x000DA270
 	private List<float> GetDropOdds(List<Vector2> dropTypeList)
 	{
 		Breakable.m_dropOddsHelper_STATIC.Clear();
@@ -454,7 +454,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		return Breakable.m_dropOddsHelper_STATIC;
 	}
 
-	// Token: 0x0600258B RID: 9611 RVA: 0x0007C231 File Offset: 0x0007A431
+	// Token: 0x060033F9 RID: 13305 RVA: 0x0001C7A4 File Offset: 0x0001A9A4
 	public void TerrainOnEnterHitResponse(IHitboxController hbController)
 	{
 		if (!this.m_collideWithWeaponHitboxOnly)
@@ -463,13 +463,13 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		}
 	}
 
-	// Token: 0x0600258C RID: 9612 RVA: 0x0007C247 File Offset: 0x0007A447
+	// Token: 0x060033FA RID: 13306 RVA: 0x0001C7BA File Offset: 0x0001A9BA
 	public void TerrainOnStayHitResponse(IHitboxController hbController)
 	{
 		this.TerrainOnEnterHitResponse(hbController);
 	}
 
-	// Token: 0x0600258D RID: 9613 RVA: 0x0007C250 File Offset: 0x0007A450
+	// Token: 0x060033FB RID: 13307 RVA: 0x000DC0B8 File Offset: 0x000DA2B8
 	protected virtual void TriggerCollision(IDamageObj damageObj)
 	{
 		if (this.IsBroken)
@@ -514,7 +514,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		this.BroadcastHitEvents(damageObj);
 	}
 
-	// Token: 0x0600258E RID: 9614 RVA: 0x0007C38B File Offset: 0x0007A58B
+	// Token: 0x060033FC RID: 13308 RVA: 0x0001C7C3 File Offset: 0x0001A9C3
 	private void BroadcastDestroyedEvents(IDamageObj damageObj)
 	{
 		if (this.m_destroyedEvent != null)
@@ -526,7 +526,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.BreakableDestroyed, this, this.m_hitEventArgs);
 	}
 
-	// Token: 0x0600258F RID: 9615 RVA: 0x0007C3C6 File Offset: 0x0007A5C6
+	// Token: 0x060033FD RID: 13309 RVA: 0x0001C7FE File Offset: 0x0001A9FE
 	private void InitializeHitEventArgs(IDamageObj damageObj)
 	{
 		if (this.m_hitEventArgs == null)
@@ -537,7 +537,7 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		this.m_hitEventArgs.Initialize(this, damageObj);
 	}
 
-	// Token: 0x06002590 RID: 9616 RVA: 0x0007C3EC File Offset: 0x0007A5EC
+	// Token: 0x060033FE RID: 13310 RVA: 0x000DC1F4 File Offset: 0x000DA3F4
 	protected void BroadcastHitEvents(IDamageObj damageObj)
 	{
 		this.m_onDamageEffectTriggerRelay.Dispatch(damageObj.gameObject, damageObj.ActualDamage, false);
@@ -549,97 +549,97 @@ public class Breakable : MonoBehaviour, IBodyOnEnterHitResponse, IHitResponse, I
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.BreakableHit, this, this.m_hitEventArgs);
 	}
 
-	// Token: 0x06002593 RID: 9619 RVA: 0x0007C48D File Offset: 0x0007A68D
+	// Token: 0x06003401 RID: 13313 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x06002594 RID: 9620 RVA: 0x0007C495 File Offset: 0x0007A695
+	// Token: 0x06003402 RID: 13314 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IPreOnDisable.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04001F76 RID: 8054
+	// Token: 0x04002A17 RID: 10775
 	[SerializeField]
 	private bool m_collideWithWeaponHitboxOnly;
 
-	// Token: 0x04001F77 RID: 8055
+	// Token: 0x04002A18 RID: 10776
 	[SerializeField]
 	private bool m_doNotDisableOnDeath;
 
-	// Token: 0x04001F78 RID: 8056
+	// Token: 0x04002A19 RID: 10777
 	[SerializeField]
 	private bool m_spawnItemOnDestroy = true;
 
-	// Token: 0x04001F79 RID: 8057
+	// Token: 0x04002A1A RID: 10778
 	[SerializeField]
 	private Sprite m_brokenStateSprite;
 
-	// Token: 0x04001F7A RID: 8058
+	// Token: 0x04002A1B RID: 10779
 	[SerializeField]
 	private int m_baseScaledHP = 1;
 
-	// Token: 0x04001F7B RID: 8059
+	// Token: 0x04002A1C RID: 10780
 	[SerializeField]
 	private bool m_displayDamageText;
 
-	// Token: 0x04001F7C RID: 8060
+	// Token: 0x04002A1D RID: 10781
 	[SerializeField]
 	private UnityEvent m_destroyedEvent;
 
-	// Token: 0x04001F7D RID: 8061
+	// Token: 0x04002A1E RID: 10782
 	[SerializeField]
 	private UnityEvent m_hitEvent;
 
-	// Token: 0x04001F7E RID: 8062
+	// Token: 0x04002A1F RID: 10783
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	private int m_currentHP = -1;
 
-	// Token: 0x04001F7F RID: 8063
+	// Token: 0x04002A20 RID: 10784
 	private const string DEFAULT_STATE_NAME = "Idle";
 
-	// Token: 0x04001F80 RID: 8064
+	// Token: 0x04002A21 RID: 10785
 	private SpriteRenderer m_spriteRenderer;
 
-	// Token: 0x04001F81 RID: 8065
+	// Token: 0x04002A22 RID: 10786
 	private Sprite m_initialSprite;
 
-	// Token: 0x04001F82 RID: 8066
+	// Token: 0x04002A23 RID: 10787
 	protected BlinkPulseEffect m_hitEffect;
 
-	// Token: 0x04001F83 RID: 8067
+	// Token: 0x04002A24 RID: 10788
 	protected IHitboxController m_hitboxController;
 
-	// Token: 0x04001F84 RID: 8068
+	// Token: 0x04002A25 RID: 10789
 	private Animator m_animator;
 
-	// Token: 0x04001F85 RID: 8069
+	// Token: 0x04002A26 RID: 10790
 	private bool m_attackerIsOnRight;
 
-	// Token: 0x04001F86 RID: 8070
+	// Token: 0x04002A27 RID: 10791
 	private BreakableHitEventArgs m_hitEventArgs;
 
-	// Token: 0x04001F87 RID: 8071
+	// Token: 0x04002A28 RID: 10792
 	private Prop m_prop;
 
-	// Token: 0x04001F88 RID: 8072
+	// Token: 0x04002A29 RID: 10793
 	private BreakableEventArgs m_breakableDestroyedEventArgs;
 
-	// Token: 0x04001F8B RID: 8075
+	// Token: 0x04002A2C RID: 10796
 	private Relay<IPreOnDisable> m_onDisableRelay = new Relay<IPreOnDisable>();
 
-	// Token: 0x04001F8C RID: 8076
+	// Token: 0x04002A2D RID: 10797
 	private Relay<GameObject> m_onDeathEffectTriggerEventRelay = new Relay<GameObject>();
 
-	// Token: 0x04001F8D RID: 8077
+	// Token: 0x04002A2E RID: 10798
 	private Relay<GameObject, float, bool> m_onDamageEffectTriggerRelay = new Relay<GameObject, float, bool>();
 
-	// Token: 0x04001F8E RID: 8078
+	// Token: 0x04002A2F RID: 10799
 	private static List<Vector2> m_dropTypeHelper_STATIC = new List<Vector2>();
 
-	// Token: 0x04001F8F RID: 8079
+	// Token: 0x04002A30 RID: 10800
 	private static List<float> m_dropOddsHelper_STATIC = new List<float>();
 }

@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000EE RID: 238
+// Token: 0x02000183 RID: 387
 public class Ghost_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x06000748 RID: 1864 RVA: 0x0001A40D File Offset: 0x0001860D
+	// Token: 0x06000A9B RID: 2715 RVA: 0x00006B36 File Offset: 0x00004D36
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -19,8 +19,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x170003E2 RID: 994
-	// (get) Token: 0x06000749 RID: 1865 RVA: 0x0001A44B File Offset: 0x0001864B
+	// Token: 0x170004FC RID: 1276
+	// (get) Token: 0x06000A9C RID: 2716 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -29,8 +29,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003E3 RID: 995
-	// (get) Token: 0x0600074A RID: 1866 RVA: 0x0001A45C File Offset: 0x0001865C
+	// Token: 0x170004FD RID: 1277
+	// (get) Token: 0x06000A9D RID: 2717 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -39,8 +39,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003E4 RID: 996
-	// (get) Token: 0x0600074B RID: 1867 RVA: 0x0001A46D File Offset: 0x0001866D
+	// Token: 0x170004FE RID: 1278
+	// (get) Token: 0x06000A9E RID: 2718 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -49,8 +49,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003E5 RID: 997
-	// (get) Token: 0x0600074C RID: 1868 RVA: 0x0001A47E File Offset: 0x0001867E
+	// Token: 0x170004FF RID: 1279
+	// (get) Token: 0x06000A9F RID: 2719 RVA: 0x000047FD File Offset: 0x000029FD
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -59,8 +59,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003E6 RID: 998
-	// (get) Token: 0x0600074D RID: 1869 RVA: 0x0001A48F File Offset: 0x0001868F
+	// Token: 0x17000500 RID: 1280
+	// (get) Token: 0x06000AA0 RID: 2720 RVA: 0x000047FD File Offset: 0x000029FD
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -69,8 +69,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003E7 RID: 999
-	// (get) Token: 0x0600074E RID: 1870 RVA: 0x0001A4A0 File Offset: 0x000186A0
+	// Token: 0x17000501 RID: 1281
+	// (get) Token: 0x06000AA1 RID: 2721 RVA: 0x000052A9 File Offset: 0x000034A9
 	protected virtual float m_scare_TellIntroAndHold_Delay
 	{
 		get
@@ -79,8 +79,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003E8 RID: 1000
-	// (get) Token: 0x0600074F RID: 1871 RVA: 0x0001A4A7 File Offset: 0x000186A7
+	// Token: 0x17000502 RID: 1282
+	// (get) Token: 0x06000AA2 RID: 2722 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float m_scare_Exit_ForceIdle
 	{
 		get
@@ -89,8 +89,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003E9 RID: 1001
-	// (get) Token: 0x06000750 RID: 1872 RVA: 0x0001A4AE File Offset: 0x000186AE
+	// Token: 0x17000503 RID: 1283
+	// (get) Token: 0x06000AA3 RID: 2723 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_scare_initialProjectileDelay
 	{
 		get
@@ -99,8 +99,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003EA RID: 1002
-	// (get) Token: 0x06000751 RID: 1873 RVA: 0x0001A4B5 File Offset: 0x000186B5
+	// Token: 0x17000504 RID: 1284
+	// (get) Token: 0x06000AA4 RID: 2724 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_scare_exitProjectileDelay
 	{
 		get
@@ -109,8 +109,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003EB RID: 1003
-	// (get) Token: 0x06000752 RID: 1874 RVA: 0x0001A4BC File Offset: 0x000186BC
+	// Token: 0x17000505 RID: 1285
+	// (get) Token: 0x06000AA5 RID: 2725 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_scare_isMiniboss
 	{
 		get
@@ -119,8 +119,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003EC RID: 1004
-	// (get) Token: 0x06000753 RID: 1875 RVA: 0x0001A4BF File Offset: 0x000186BF
+	// Token: 0x17000506 RID: 1286
+	// (get) Token: 0x06000AA6 RID: 2726 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_scare_fireCardinalProjectiles
 	{
 		get
@@ -129,8 +129,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003ED RID: 1005
-	// (get) Token: 0x06000754 RID: 1876 RVA: 0x0001A4C2 File Offset: 0x000186C2
+	// Token: 0x17000507 RID: 1287
+	// (get) Token: 0x06000AA7 RID: 2727 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_scare_fireDiagonalProjectiles
 	{
 		get
@@ -139,8 +139,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003EE RID: 1006
-	// (get) Token: 0x06000755 RID: 1877 RVA: 0x0001A4C5 File Offset: 0x000186C5
+	// Token: 0x17000508 RID: 1288
+	// (get) Token: 0x06000AA8 RID: 2728 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_scare_fireMinibossProjectiles
 	{
 		get
@@ -149,8 +149,8 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170003EF RID: 1007
-	// (get) Token: 0x06000756 RID: 1878 RVA: 0x0001A4C8 File Offset: 0x000186C8
+	// Token: 0x17000509 RID: 1289
+	// (get) Token: 0x06000AA9 RID: 2729 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected virtual float VulnerableDuration
 	{
 		get
@@ -159,7 +159,7 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000757 RID: 1879 RVA: 0x0001A4CF File Offset: 0x000186CF
+	// Token: 0x06000AAA RID: 2730 RVA: 0x00006B74 File Offset: 0x00004D74
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -167,7 +167,7 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		this.SetInvulnerable(true, 0f);
 	}
 
-	// Token: 0x06000758 RID: 1880 RVA: 0x0001A4F0 File Offset: 0x000186F0
+	// Token: 0x06000AAB RID: 2731 RVA: 0x00068CE0 File Offset: 0x00066EE0
 	private void SetInvulnerable(bool invulnerable, float duration = 0f)
 	{
 		this.m_isInvulnerable = invulnerable;
@@ -194,7 +194,7 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		this.m_toggleStartTime = Time.time;
 	}
 
-	// Token: 0x06000759 RID: 1881 RVA: 0x0001A5A2 File Offset: 0x000187A2
+	// Token: 0x06000AAC RID: 2732 RVA: 0x00006B95 File Offset: 0x00004D95
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -254,7 +254,7 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600075A RID: 1882 RVA: 0x0001A5B1 File Offset: 0x000187B1
+	// Token: 0x06000AAD RID: 2733 RVA: 0x00006BA4 File Offset: 0x00004DA4
 	private void FixedUpdate()
 	{
 		if (this.m_toggleDuration > 0f && Time.time > this.m_toggleDuration + this.m_toggleStartTime)
@@ -263,48 +263,48 @@ public class Ghost_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x04000B0E RID: 2830
+	// Token: 0x04000DAF RID: 3503
 	protected float m_scare_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B0F RID: 2831
+	// Token: 0x04000DB0 RID: 3504
 	protected float m_scare_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000B10 RID: 2832
+	// Token: 0x04000DB1 RID: 3505
 	protected float m_scare_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B11 RID: 2833
+	// Token: 0x04000DB2 RID: 3506
 	protected float m_scare_AttackIntro_Delay;
 
-	// Token: 0x04000B12 RID: 2834
+	// Token: 0x04000DB3 RID: 3507
 	protected const float m_scare_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000B13 RID: 2835
+	// Token: 0x04000DB4 RID: 3508
 	protected const float m_scare_AttackHold_Delay = 0.2f;
 
-	// Token: 0x04000B14 RID: 2836
+	// Token: 0x04000DB5 RID: 3509
 	protected float m_scare_ExitIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B15 RID: 2837
+	// Token: 0x04000DB6 RID: 3510
 	protected const float m_scare_ExitIntro_EndDelay = 0.15f;
 
-	// Token: 0x04000B16 RID: 2838
+	// Token: 0x04000DB7 RID: 3511
 	protected float m_scare_Exit_AttackCD;
 
-	// Token: 0x04000B17 RID: 2839
+	// Token: 0x04000DB8 RID: 3512
 	private Projectile_RL m_warningProjectile;
 
-	// Token: 0x04000B18 RID: 2840
+	// Token: 0x04000DB9 RID: 3513
 	private Projectile_RL m_attackProjectile;
 
-	// Token: 0x04000B19 RID: 2841
+	// Token: 0x04000DBA RID: 3514
 	private SpriteRenderer[] m_tempTransparencyArray;
 
-	// Token: 0x04000B1A RID: 2842
+	// Token: 0x04000DBB RID: 3515
 	private bool m_isInvulnerable;
 
-	// Token: 0x04000B1B RID: 2843
+	// Token: 0x04000DBC RID: 3516
 	private float m_toggleDuration;
 
-	// Token: 0x04000B1C RID: 2844
+	// Token: 0x04000DBD RID: 3517
 	private float m_toggleStartTime;
 }

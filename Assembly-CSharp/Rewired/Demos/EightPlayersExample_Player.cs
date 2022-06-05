@@ -3,25 +3,25 @@ using UnityEngine;
 
 namespace Rewired.Demos
 {
-	// Token: 0x02000941 RID: 2369
+	// Token: 0x02000EDF RID: 3807
 	[AddComponentMenu("")]
 	[RequireComponent(typeof(CharacterController))]
 	public class EightPlayersExample_Player : MonoBehaviour
 	{
-		// Token: 0x06005052 RID: 20562 RVA: 0x0011B4BF File Offset: 0x001196BF
+		// Token: 0x06006E2C RID: 28204 RVA: 0x0003C8DF File Offset: 0x0003AADF
 		private void Awake()
 		{
 			this.cc = base.GetComponent<CharacterController>();
 		}
 
-		// Token: 0x06005053 RID: 20563 RVA: 0x0011B4CD File Offset: 0x001196CD
+		// Token: 0x06006E2D RID: 28205 RVA: 0x0003C8ED File Offset: 0x0003AAED
 		private void Initialize()
 		{
 			this.player = ReInput.players.GetPlayer(this.playerId);
 			this.initialized = true;
 		}
 
-		// Token: 0x06005054 RID: 20564 RVA: 0x0011B4EC File Offset: 0x001196EC
+		// Token: 0x06006E2E RID: 28206 RVA: 0x0003C90C File Offset: 0x0003AB0C
 		private void Update()
 		{
 			if (!ReInput.isReady)
@@ -36,7 +36,7 @@ namespace Rewired.Demos
 			this.ProcessInput();
 		}
 
-		// Token: 0x06005055 RID: 20565 RVA: 0x0011B510 File Offset: 0x00119710
+		// Token: 0x06006E2F RID: 28207 RVA: 0x00189DDC File Offset: 0x00187FDC
 		private void GetInput()
 		{
 			this.moveVector.x = this.player.GetAxis("Move Horizontal");
@@ -44,7 +44,7 @@ namespace Rewired.Demos
 			this.fire = this.player.GetButtonDown("Fire");
 		}
 
-		// Token: 0x06005056 RID: 20566 RVA: 0x0011B56C File Offset: 0x0011976C
+		// Token: 0x06006E30 RID: 28208 RVA: 0x00189E38 File Offset: 0x00188038
 		private void ProcessInput()
 		{
 			if (this.moveVector.x != 0f || this.moveVector.y != 0f)
@@ -57,31 +57,31 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x040042AA RID: 17066
+		// Token: 0x0400588D RID: 22669
 		public int playerId;
 
-		// Token: 0x040042AB RID: 17067
+		// Token: 0x0400588E RID: 22670
 		public float moveSpeed = 3f;
 
-		// Token: 0x040042AC RID: 17068
+		// Token: 0x0400588F RID: 22671
 		public float bulletSpeed = 15f;
 
-		// Token: 0x040042AD RID: 17069
+		// Token: 0x04005890 RID: 22672
 		public GameObject bulletPrefab;
 
-		// Token: 0x040042AE RID: 17070
+		// Token: 0x04005891 RID: 22673
 		private Player player;
 
-		// Token: 0x040042AF RID: 17071
+		// Token: 0x04005892 RID: 22674
 		private CharacterController cc;
 
-		// Token: 0x040042B0 RID: 17072
+		// Token: 0x04005893 RID: 22675
 		private Vector3 moveVector;
 
-		// Token: 0x040042B1 RID: 17073
+		// Token: 0x04005894 RID: 22676
 		private bool fire;
 
-		// Token: 0x040042B2 RID: 17074
+		// Token: 0x04005895 RID: 22677
 		[NonSerialized]
 		private bool initialized;
 	}

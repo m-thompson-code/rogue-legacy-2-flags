@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020002B0 RID: 688
+// Token: 0x0200049B RID: 1179
 public enum PointLightLocation
 {
-	// Token: 0x04001922 RID: 6434
+	// Token: 0x040020FE RID: 8446
 	Front,
-	// Token: 0x04001923 RID: 6435
+	// Token: 0x040020FF RID: 8447
 	Back
 }

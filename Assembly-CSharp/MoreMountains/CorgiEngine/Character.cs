@@ -7,33 +7,33 @@ using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x02000968 RID: 2408
+	// Token: 0x02000F12 RID: 3858
 	[SelectionBase]
 	[AddComponentMenu("Corgi Engine/Character/Core/Character")]
 	public class Character : MonoBehaviour
 	{
-		// Token: 0x17001AF1 RID: 6897
-		// (get) Token: 0x06005168 RID: 20840 RVA: 0x0011F7D7 File Offset: 0x0011D9D7
-		// (set) Token: 0x06005169 RID: 20841 RVA: 0x0011F7DF File Offset: 0x0011D9DF
+		// Token: 0x17002436 RID: 9270
+		// (get) Token: 0x06006F63 RID: 28515 RVA: 0x0003D63E File Offset: 0x0003B83E
+		// (set) Token: 0x06006F64 RID: 28516 RVA: 0x0003D646 File Offset: 0x0003B846
 		public CharacterStates CharacterState { get; protected set; }
 
-		// Token: 0x17001AF2 RID: 6898
-		// (get) Token: 0x0600516A RID: 20842 RVA: 0x0011F7E8 File Offset: 0x0011D9E8
-		// (set) Token: 0x0600516B RID: 20843 RVA: 0x0011F7F0 File Offset: 0x0011D9F0
+		// Token: 0x17002437 RID: 9271
+		// (get) Token: 0x06006F65 RID: 28517 RVA: 0x0003D64F File Offset: 0x0003B84F
+		// (set) Token: 0x06006F66 RID: 28518 RVA: 0x0003D657 File Offset: 0x0003B857
 		public bool IsFacingRight { get; set; }
 
-		// Token: 0x17001AF3 RID: 6899
-		// (get) Token: 0x0600516C RID: 20844 RVA: 0x0011F7F9 File Offset: 0x0011D9F9
-		// (set) Token: 0x0600516D RID: 20845 RVA: 0x0011F801 File Offset: 0x0011DA01
+		// Token: 0x17002438 RID: 9272
+		// (get) Token: 0x06006F67 RID: 28519 RVA: 0x0003D660 File Offset: 0x0003B860
+		// (set) Token: 0x06006F68 RID: 28520 RVA: 0x0003D668 File Offset: 0x0003B868
 		public Animator _animator { get; protected set; }
 
-		// Token: 0x17001AF4 RID: 6900
-		// (get) Token: 0x0600516E RID: 20846 RVA: 0x0011F80A File Offset: 0x0011DA0A
-		// (set) Token: 0x0600516F RID: 20847 RVA: 0x0011F812 File Offset: 0x0011DA12
+		// Token: 0x17002439 RID: 9273
+		// (get) Token: 0x06006F69 RID: 28521 RVA: 0x0003D671 File Offset: 0x0003B871
+		// (set) Token: 0x06006F6A RID: 28522 RVA: 0x0003D679 File Offset: 0x0003B879
 		public List<string> _animatorParameters { get; set; }
 
-		// Token: 0x17001AF5 RID: 6901
-		// (get) Token: 0x06005170 RID: 20848 RVA: 0x0011F81B File Offset: 0x0011DA1B
+		// Token: 0x1700243A RID: 9274
+		// (get) Token: 0x06006F6B RID: 28523 RVA: 0x0003D682 File Offset: 0x0003B882
 		public Player REPlayer
 		{
 			get
@@ -42,19 +42,19 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001AF6 RID: 6902
-		// (get) Token: 0x06005171 RID: 20849 RVA: 0x0011F823 File Offset: 0x0011DA23
-		// (set) Token: 0x06005172 RID: 20850 RVA: 0x0011F82B File Offset: 0x0011DA2B
+		// Token: 0x1700243B RID: 9275
+		// (get) Token: 0x06006F6C RID: 28524 RVA: 0x0003D68A File Offset: 0x0003B88A
+		// (set) Token: 0x06006F6D RID: 28525 RVA: 0x0003D692 File Offset: 0x0003B892
 		public bool HasTurnAnimParam { get; protected set; }
 
-		// Token: 0x17001AF7 RID: 6903
-		// (get) Token: 0x06005173 RID: 20851 RVA: 0x0011F834 File Offset: 0x0011DA34
-		// (set) Token: 0x06005174 RID: 20852 RVA: 0x0011F83C File Offset: 0x0011DA3C
+		// Token: 0x1700243C RID: 9276
+		// (get) Token: 0x06006F6E RID: 28526 RVA: 0x0003D69B File Offset: 0x0003B89B
+		// (set) Token: 0x06006F6F RID: 28527 RVA: 0x0003D6A3 File Offset: 0x0003B8A3
 		public bool IsInitialized { get; protected set; }
 
-		// Token: 0x17001AF8 RID: 6904
-		// (get) Token: 0x06005175 RID: 20853 RVA: 0x0011F845 File Offset: 0x0011DA45
-		// (set) Token: 0x06005176 RID: 20854 RVA: 0x0011F84D File Offset: 0x0011DA4D
+		// Token: 0x1700243D RID: 9277
+		// (get) Token: 0x06006F70 RID: 28528 RVA: 0x0003D6AC File Offset: 0x0003B8AC
+		// (set) Token: 0x06006F71 RID: 28529 RVA: 0x0003D6B4 File Offset: 0x0003B8B4
 		public bool LockFlip
 		{
 			get
@@ -67,8 +67,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001AF9 RID: 6905
-		// (get) Token: 0x06005177 RID: 20855 RVA: 0x0011F856 File Offset: 0x0011DA56
+		// Token: 0x1700243E RID: 9278
+		// (get) Token: 0x06006F72 RID: 28530 RVA: 0x0003D6BD File Offset: 0x0003B8BD
 		public bool IsFrozen
 		{
 			get
@@ -77,19 +77,19 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005178 RID: 20856 RVA: 0x0011F866 File Offset: 0x0011DA66
+		// Token: 0x06006F73 RID: 28531 RVA: 0x0003D6CD File Offset: 0x0003B8CD
 		protected virtual void Awake()
 		{
 			this.Initialization();
 		}
 
-		// Token: 0x06005179 RID: 20857 RVA: 0x0011F86E File Offset: 0x0011DA6E
+		// Token: 0x06006F74 RID: 28532 RVA: 0x0003D6D5 File Offset: 0x0003B8D5
 		protected virtual void Start()
 		{
 			base.StartCoroutine(this.InitializeInput());
 		}
 
-		// Token: 0x0600517A RID: 20858 RVA: 0x0011F87D File Offset: 0x0011DA7D
+		// Token: 0x06006F75 RID: 28533 RVA: 0x0003D6E4 File Offset: 0x0003B8E4
 		protected virtual IEnumerator InitializeInput()
 		{
 			while (!ReInput.isReady)
@@ -100,7 +100,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x0600517B RID: 20859 RVA: 0x0011F88C File Offset: 0x0011DA8C
+		// Token: 0x06006F76 RID: 28534 RVA: 0x0018D930 File Offset: 0x0018BB30
 		protected virtual void Initialization()
 		{
 			this.MovementState = new MMStateMachine<CharacterStates.MovementStates>();
@@ -134,13 +134,13 @@ namespace MoreMountains.CorgiEngine
 			this.IsInitialized = true;
 		}
 
-		// Token: 0x0600517C RID: 20860 RVA: 0x0011F953 File Offset: 0x0011DB53
+		// Token: 0x06006F77 RID: 28535 RVA: 0x0003D6F3 File Offset: 0x0003B8F3
 		public virtual void SetPlayerID(string newPlayerID)
 		{
 			this.PlayerID = newPlayerID;
 		}
 
-		// Token: 0x0600517D RID: 20861 RVA: 0x0011F95C File Offset: 0x0011DB5C
+		// Token: 0x06006F78 RID: 28536 RVA: 0x0003D6FC File Offset: 0x0003B8FC
 		protected virtual void FixedUpdate()
 		{
 			if (!this.UseRegularUpdate)
@@ -149,7 +149,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600517E RID: 20862 RVA: 0x0011F96C File Offset: 0x0011DB6C
+		// Token: 0x06006F79 RID: 28537 RVA: 0x0018D9F8 File Offset: 0x0018BBF8
 		protected virtual void Update()
 		{
 			if (this.UseRegularUpdate)
@@ -165,7 +165,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600517F RID: 20863 RVA: 0x0011F9B6 File Offset: 0x0011DBB6
+		// Token: 0x06006F7A RID: 28538 RVA: 0x0003D70C File Offset: 0x0003B90C
 		protected virtual void EveryFrame()
 		{
 			this.HandleCharacterStatus();
@@ -175,7 +175,7 @@ namespace MoreMountains.CorgiEngine
 			this.UpdateAnimators();
 		}
 
-		// Token: 0x06005180 RID: 20864 RVA: 0x0011F9D8 File Offset: 0x0011DBD8
+		// Token: 0x06006F7B RID: 28539 RVA: 0x0018DA44 File Offset: 0x0018BC44
 		protected virtual void EarlyProcessAbilities()
 		{
 			foreach (CharacterAbility characterAbility in this._characterAbilities)
@@ -187,7 +187,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005181 RID: 20865 RVA: 0x0011FA14 File Offset: 0x0011DC14
+		// Token: 0x06006F7C RID: 28540 RVA: 0x0018DA80 File Offset: 0x0018BC80
 		protected virtual void ProcessAbilities()
 		{
 			foreach (CharacterAbility characterAbility in this._characterAbilities)
@@ -199,7 +199,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005182 RID: 20866 RVA: 0x0011FA50 File Offset: 0x0011DC50
+		// Token: 0x06006F7D RID: 28541 RVA: 0x0018DABC File Offset: 0x0018BCBC
 		protected virtual void LateProcessAbilities()
 		{
 			foreach (CharacterAbility characterAbility in this._characterAbilities)
@@ -211,7 +211,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005183 RID: 20867 RVA: 0x0011FA8C File Offset: 0x0011DC8C
+		// Token: 0x06006F7E RID: 28542 RVA: 0x0018DAF8 File Offset: 0x0018BCF8
 		protected virtual void InitializeAnimatorParameters()
 		{
 			if (this._animator == null)
@@ -232,7 +232,7 @@ namespace MoreMountains.CorgiEngine
 			this.HasTurnAnimParam = global::AnimatorUtility.HasParameter(this._animator, "Turn");
 		}
 
-		// Token: 0x06005184 RID: 20868 RVA: 0x0011FBB0 File Offset: 0x0011DDB0
+		// Token: 0x06006F7F RID: 28543 RVA: 0x0018DC1C File Offset: 0x0018BE1C
 		protected virtual void UpdateAnimators()
 		{
 			if (this.UseDefaultMecanim && this._animator && this._controller.IsInitialized)
@@ -261,7 +261,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005185 RID: 20869 RVA: 0x0011FD75 File Offset: 0x0011DF75
+		// Token: 0x06006F80 RID: 28544 RVA: 0x0003D72C File Offset: 0x0003B92C
 		protected virtual void HandleCharacterStatus()
 		{
 			if (this.ConditionState.CurrentState == CharacterStates.CharacterConditions.Frozen)
@@ -271,7 +271,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005186 RID: 20870 RVA: 0x0011FDA1 File Offset: 0x0011DFA1
+		// Token: 0x06006F81 RID: 28545 RVA: 0x0003D758 File Offset: 0x0003B958
 		public virtual void Freeze()
 		{
 			this._controller.GravityActive(false);
@@ -280,7 +280,7 @@ namespace MoreMountains.CorgiEngine
 			this.ConditionState.ChangeState(CharacterStates.CharacterConditions.Frozen);
 		}
 
-		// Token: 0x06005187 RID: 20871 RVA: 0x0011FDDC File Offset: 0x0011DFDC
+		// Token: 0x06006F82 RID: 28546 RVA: 0x0003D793 File Offset: 0x0003B993
 		public virtual void UnFreeze()
 		{
 			this._controller.SetForce(this.m_frozenVelocity);
@@ -288,13 +288,13 @@ namespace MoreMountains.CorgiEngine
 			this.ConditionState.ChangeState(CharacterStates.CharacterConditions.Normal);
 		}
 
-		// Token: 0x06005188 RID: 20872 RVA: 0x0011FE07 File Offset: 0x0011E007
+		// Token: 0x06006F83 RID: 28547 RVA: 0x0003D7BE File Offset: 0x0003B9BE
 		public virtual void RecalculateRays()
 		{
 			this._controller.SetRaysParameters();
 		}
 
-		// Token: 0x06005189 RID: 20873 RVA: 0x0011FE14 File Offset: 0x0011E014
+		// Token: 0x06006F84 RID: 28548 RVA: 0x0003D7CB File Offset: 0x0003B9CB
 		public virtual void Disable()
 		{
 			base.enabled = false;
@@ -302,7 +302,7 @@ namespace MoreMountains.CorgiEngine
 			base.GetComponent<Collider2D>().enabled = false;
 		}
 
-		// Token: 0x0600518A RID: 20874 RVA: 0x0011FE38 File Offset: 0x0011E038
+		// Token: 0x06006F85 RID: 28549 RVA: 0x0018DDE4 File Offset: 0x0018BFE4
 		public virtual void RespawnAt(Transform spawnPoint, Character.FacingDirections facingDirection)
 		{
 			if (!base.gameObject.activeInHierarchy)
@@ -316,7 +316,7 @@ namespace MoreMountains.CorgiEngine
 			base.transform.position = spawnPoint.position;
 		}
 
-		// Token: 0x0600518B RID: 20875 RVA: 0x0011FE90 File Offset: 0x0011E090
+		// Token: 0x06006F86 RID: 28550 RVA: 0x0018DE3C File Offset: 0x0018C03C
 		public virtual void Flip(bool IgnoreFlipOnDirectionChange = false, bool ignoreTurnParam = false)
 		{
 			if (this.LockFlip)
@@ -382,7 +382,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600518C RID: 20876 RVA: 0x00120031 File Offset: 0x0011E231
+		// Token: 0x06006F87 RID: 28551 RVA: 0x0003D7EC File Offset: 0x0003B9EC
 		protected virtual void ForceSpawnDirection()
 		{
 			if (this.DirectionOnSpawn == Character.SpawnFacingDirections.Default || this._spawnDirectionForced)
@@ -400,7 +400,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600518D RID: 20877 RVA: 0x0012006B File Offset: 0x0011E26B
+		// Token: 0x06006F88 RID: 28552 RVA: 0x0003D826 File Offset: 0x0003BA26
 		public virtual void Face(Character.FacingDirections facingDirection)
 		{
 			if (facingDirection == Character.FacingDirections.Right)
@@ -417,7 +417,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600518E RID: 20878 RVA: 0x00120094 File Offset: 0x0011E294
+		// Token: 0x06006F89 RID: 28553 RVA: 0x0018DFE0 File Offset: 0x0018C1E0
 		public virtual void Reset()
 		{
 			this._spawnDirectionForced = false;
@@ -438,125 +438,125 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600518F RID: 20879 RVA: 0x001200E2 File Offset: 0x0011E2E2
+		// Token: 0x06006F8A RID: 28554 RVA: 0x0003D84D File Offset: 0x0003BA4D
 		protected virtual void OnRevive()
 		{
 			this.ForceSpawnDirection();
 		}
 
-		// Token: 0x06005190 RID: 20880 RVA: 0x001200EA File Offset: 0x0011E2EA
+		// Token: 0x06006F8B RID: 28555 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnDeath()
 		{
 		}
 
-		// Token: 0x06005191 RID: 20881 RVA: 0x001200EC File Offset: 0x0011E2EC
+		// Token: 0x06006F8C RID: 28556 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnEnable()
 		{
 		}
 
-		// Token: 0x06005192 RID: 20882 RVA: 0x001200EE File Offset: 0x0011E2EE
+		// Token: 0x06006F8D RID: 28557 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnDisable()
 		{
 		}
 
-		// Token: 0x0400437C RID: 17276
+		// Token: 0x0400598C RID: 22924
 		[Information("The Character script is the mandatory basis for all Character abilities. Your character can either be a Non Player Character, controlled by an AI, or a Player character, controlled by the player. In this case, you'll need to specify a PlayerID, which must match the one specified in your InputManager. Usually 'Player1', 'Player2', etc.", InformationAttribute.InformationType.Info, false)]
 		public Character.CharacterTypes CharacterType = Character.CharacterTypes.AI;
 
-		// Token: 0x0400437D RID: 17277
+		// Token: 0x0400598D RID: 22925
 		public string PlayerID = "";
 
-		// Token: 0x0400437F RID: 17279
+		// Token: 0x0400598F RID: 22927
 		[Header("Direction")]
 		[Information("It's usually good practice to build all your characters facing right. If that's not the case of this character, select Left instead.", InformationAttribute.InformationType.Info, false)]
 		public Character.FacingDirections InitialFacingDirection = Character.FacingDirections.Right;
 
-		// Token: 0x04004380 RID: 17280
+		// Token: 0x04005990 RID: 22928
 		[Information("Here you can force a direction the character should face when spawning. If set to default, it'll match your model's initial facing direction.", InformationAttribute.InformationType.Info, false)]
 		public Character.SpawnFacingDirections DirectionOnSpawn;
 
-		// Token: 0x04004382 RID: 17282
+		// Token: 0x04005992 RID: 22930
 		[Header("Animator")]
 		[Information("The engine will try and find an animator for this character. If it's on the same gameobject it should have found it. If it's nested somewhere, you'll need to bind it below. You can also decide to get rid of it altogether, in that case, just uncheck 'use mecanim'.", InformationAttribute.InformationType.Info, false)]
 		public Animator CharacterAnimator;
 
-		// Token: 0x04004383 RID: 17283
+		// Token: 0x04005993 RID: 22931
 		public bool UseDefaultMecanim = true;
 
-		// Token: 0x04004384 RID: 17284
+		// Token: 0x04005994 RID: 22932
 		[Header("Model")]
 		[Information("Leave this unbound if this is a regular, sprite-based character, and if the SpriteRenderer and the Character are on the same GameObject. If not, you'll want to parent the actual model to the Character object, and bind it below. See the 3D demo characters for an example of that. The idea behind that is that the model may move, flip, but the collider will remain unchanged.", InformationAttribute.InformationType.Info, false)]
 		public GameObject CharacterModel;
 
-		// Token: 0x04004385 RID: 17285
+		// Token: 0x04005995 RID: 22933
 		[Information("You can also decide if the character must automatically flip when going backwards or not. Additionnally, if you're not using sprites, you can define here how the character's model's localscale will be affected by flipping. By default it flips on the x axis, but you can change that to fit your model.", InformationAttribute.InformationType.Info, false)]
 		public bool FlipOnDirectionChange = true;
 
-		// Token: 0x04004386 RID: 17286
+		// Token: 0x04005996 RID: 22934
 		public Vector3 FlipValue = new Vector3(-1f, 1f, 1f);
 
-		// Token: 0x04004387 RID: 17287
+		// Token: 0x04005997 RID: 22935
 		public bool UseRegularUpdate;
 
-		// Token: 0x04004388 RID: 17288
+		// Token: 0x04005998 RID: 22936
 		public MMStateMachine<CharacterStates.MovementStates> MovementState;
 
-		// Token: 0x04004389 RID: 17289
+		// Token: 0x04005999 RID: 22937
 		public MMStateMachine<CharacterStates.CharacterConditions> ConditionState;
 
-		// Token: 0x0400438C RID: 17292
+		// Token: 0x0400599C RID: 22940
 		protected Player m_rePlayer;
 
-		// Token: 0x0400438D RID: 17293
+		// Token: 0x0400599D RID: 22941
 		protected CorgiController _controller;
 
-		// Token: 0x0400438E RID: 17294
+		// Token: 0x0400599E RID: 22942
 		protected SpriteRenderer _spriteRenderer;
 
-		// Token: 0x0400438F RID: 17295
+		// Token: 0x0400599F RID: 22943
 		protected Color _initialColor;
 
-		// Token: 0x04004390 RID: 17296
+		// Token: 0x040059A0 RID: 22944
 		protected CharacterAbility[] _characterAbilities;
 
-		// Token: 0x04004391 RID: 17297
+		// Token: 0x040059A1 RID: 22945
 		protected float _originalGravity;
 
-		// Token: 0x04004392 RID: 17298
+		// Token: 0x040059A2 RID: 22946
 		protected bool _spawnDirectionForced;
 
-		// Token: 0x04004393 RID: 17299
+		// Token: 0x040059A3 RID: 22947
 		private bool m_lockflip;
 
-		// Token: 0x04004396 RID: 17302
+		// Token: 0x040059A6 RID: 22950
 		private Vector2 m_frozenVelocity;
 
-		// Token: 0x02000F17 RID: 3863
+		// Token: 0x02000F13 RID: 3859
 		public enum CharacterTypes
 		{
-			// Token: 0x04005A72 RID: 23154
+			// Token: 0x040059A8 RID: 22952
 			Player,
-			// Token: 0x04005A73 RID: 23155
+			// Token: 0x040059A9 RID: 22953
 			AI
 		}
 
-		// Token: 0x02000F18 RID: 3864
+		// Token: 0x02000F14 RID: 3860
 		public enum FacingDirections
 		{
-			// Token: 0x04005A75 RID: 23157
+			// Token: 0x040059AB RID: 22955
 			Left,
-			// Token: 0x04005A76 RID: 23158
+			// Token: 0x040059AC RID: 22956
 			Right
 		}
 
-		// Token: 0x02000F19 RID: 3865
+		// Token: 0x02000F15 RID: 3861
 		public enum SpawnFacingDirections
 		{
-			// Token: 0x04005A78 RID: 23160
+			// Token: 0x040059AE RID: 22958
 			Default,
-			// Token: 0x04005A79 RID: 23161
+			// Token: 0x040059AF RID: 22959
 			Left,
-			// Token: 0x04005A7A RID: 23162
+			// Token: 0x040059B0 RID: 22960
 			Right
 		}
 	}

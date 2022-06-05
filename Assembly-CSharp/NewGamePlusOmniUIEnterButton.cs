@@ -3,11 +3,11 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003B9 RID: 953
+// Token: 0x02000650 RID: 1616
 public class NewGamePlusOmniUIEnterButton : OmniUIButton, INewGamePlusOmniUIButton
 {
-	// Token: 0x17000E7E RID: 3710
-	// (get) Token: 0x0600232D RID: 9005 RVA: 0x00072A82 File Offset: 0x00070C82
+	// Token: 0x17001311 RID: 4881
+	// (get) Token: 0x06003145 RID: 12613 RVA: 0x0001B070 File Offset: 0x00019270
 	public int CurrentNewGamePlusLevel
 	{
 		get
@@ -16,8 +16,8 @@ public class NewGamePlusOmniUIEnterButton : OmniUIButton, INewGamePlusOmniUIButt
 		}
 	}
 
-	// Token: 0x17000E7F RID: 3711
-	// (get) Token: 0x0600232E RID: 9006 RVA: 0x00072A89 File Offset: 0x00070C89
+	// Token: 0x17001312 RID: 4882
+	// (get) Token: 0x06003146 RID: 12614 RVA: 0x0001B077 File Offset: 0x00019277
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -26,12 +26,12 @@ public class NewGamePlusOmniUIEnterButton : OmniUIButton, INewGamePlusOmniUIButt
 		}
 	}
 
-	// Token: 0x17000E80 RID: 3712
-	// (get) Token: 0x0600232F RID: 9007 RVA: 0x00072A91 File Offset: 0x00070C91
-	// (set) Token: 0x06002330 RID: 9008 RVA: 0x00072A99 File Offset: 0x00070C99
+	// Token: 0x17001313 RID: 4883
+	// (get) Token: 0x06003147 RID: 12615 RVA: 0x0001B07F File Offset: 0x0001927F
+	// (set) Token: 0x06003148 RID: 12616 RVA: 0x0001B087 File Offset: 0x00019287
 	public BurdenType BurdenType { get; set; }
 
-	// Token: 0x06002331 RID: 9009 RVA: 0x00072AA2 File Offset: 0x00070CA2
+	// Token: 0x06003149 RID: 12617 RVA: 0x0001B090 File Offset: 0x00019290
 	protected override void Awake()
 	{
 		base.Awake();
@@ -39,7 +39,7 @@ public class NewGamePlusOmniUIEnterButton : OmniUIButton, INewGamePlusOmniUIButt
 		this.m_confirmEnterNewGamePlus = new Action(this.ConfirmEnterNewGamePlus);
 	}
 
-	// Token: 0x06002332 RID: 9010 RVA: 0x00072ACE File Offset: 0x00070CCE
+	// Token: 0x0600314A RID: 12618 RVA: 0x0001B0BC File Offset: 0x000192BC
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -50,7 +50,7 @@ public class NewGamePlusOmniUIEnterButton : OmniUIButton, INewGamePlusOmniUIButt
 		this.m_descriptionEventArgs.Initialize(this.BurdenType, OmniUIButtonType.Purchasing);
 	}
 
-	// Token: 0x06002333 RID: 9011 RVA: 0x00072AFD File Offset: 0x00070CFD
+	// Token: 0x0600314B RID: 12619 RVA: 0x0001B0EB File Offset: 0x000192EB
 	public override void OnConfirmButtonPressed()
 	{
 		if (!this.IsButtonActive)
@@ -63,7 +63,7 @@ public class NewGamePlusOmniUIEnterButton : OmniUIButton, INewGamePlusOmniUIButt
 		this.RunOnConfirmPressedAnimation();
 	}
 
-	// Token: 0x06002334 RID: 9012 RVA: 0x00072B24 File Offset: 0x00070D24
+	// Token: 0x0600314C RID: 12620 RVA: 0x000D306C File Offset: 0x000D126C
 	public override void UpdateState()
 	{
 		if (this.BurdenType != BurdenType.None)
@@ -91,7 +91,7 @@ public class NewGamePlusOmniUIEnterButton : OmniUIButton, INewGamePlusOmniUIButt
 		this.m_deselectedSprite.SetAlpha(0.25f);
 	}
 
-	// Token: 0x06002335 RID: 9013 RVA: 0x00072BC8 File Offset: 0x00070DC8
+	// Token: 0x0600314D RID: 12621 RVA: 0x000D3110 File Offset: 0x000D1310
 	private void InitializeConfirmEnterNGPlus()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenuBig))
@@ -124,7 +124,7 @@ public class NewGamePlusOmniUIEnterButton : OmniUIButton, INewGamePlusOmniUIButt
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x06002336 RID: 9014 RVA: 0x00072CAF File Offset: 0x00070EAF
+	// Token: 0x0600314E RID: 12622 RVA: 0x0001B110 File Offset: 0x00019310
 	private void ConfirmEnterNewGamePlus()
 	{
 		NewGamePlusOmniUIWindowController.EnteringNGPlus = true;
@@ -132,25 +132,25 @@ public class NewGamePlusOmniUIEnterButton : OmniUIButton, INewGamePlusOmniUIButt
 		WindowManager.CloseAllOpenWindows();
 	}
 
-	// Token: 0x06002337 RID: 9015 RVA: 0x00072CCC File Offset: 0x00070ECC
+	// Token: 0x0600314F RID: 12623 RVA: 0x0001B12D File Offset: 0x0001932D
 	private void CancelConfirmMenuSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, false);
 	}
 
-	// Token: 0x04001E04 RID: 7684
+	// Token: 0x04002836 RID: 10294
 	[SerializeField]
 	private TMP_Text m_enterText;
 
-	// Token: 0x04001E05 RID: 7685
+	// Token: 0x04002837 RID: 10295
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x04001E06 RID: 7686
+	// Token: 0x04002838 RID: 10296
 	private Action m_confirmEnterNewGamePlus;
 
-	// Token: 0x04001E07 RID: 7687
+	// Token: 0x04002839 RID: 10297
 	private NewGamePlusOmniUIDescriptionEventArgs m_descriptionEventArgs;
 
-	// Token: 0x04001E08 RID: 7688
+	// Token: 0x0400283A RID: 10298
 	private PurchaseBoxDialogueEventArgs m_purchaseDialogueArgs = new PurchaseBoxDialogueEventArgs(PurchaseBoxDialogueType.Welcome);
 }

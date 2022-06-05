@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200027A RID: 634
+// Token: 0x02000445 RID: 1093
 public class ChangeDisplayModeOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001939 RID: 6457 RVA: 0x0004F168 File Offset: 0x0004D368
+	// Token: 0x06002328 RID: 9000 RVA: 0x000AC828 File Offset: 0x000AAA28
 	public override void Initialize()
 	{
 		FullScreenMode[] array = Enum.GetValues(typeof(FullScreenMode)) as FullScreenMode[];
@@ -36,7 +36,7 @@ public class ChangeDisplayModeOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x0600193A RID: 6458 RVA: 0x0004F214 File Offset: 0x0004D414
+	// Token: 0x06002329 RID: 9001 RVA: 0x000AC8D4 File Offset: 0x000AAAD4
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -51,18 +51,18 @@ public class ChangeDisplayModeOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x0600193B RID: 6459 RVA: 0x0004F267 File Offset: 0x0004D467
+	// Token: 0x0600232A RID: 9002 RVA: 0x00012E7B File Offset: 0x0001107B
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Change screen mod to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x0600193C RID: 6460 RVA: 0x0004F280 File Offset: 0x0004D480
+	// Token: 0x0600232B RID: 9003 RVA: 0x000AC928 File Offset: 0x000AAB28
 	public override void ConfirmOptionChange()
 	{
 		GameResolutionManager.SetResolution(GameResolutionManager.Resolution.x, GameResolutionManager.Resolution.y, this.m_screenModeArray[this.m_selectedIndex], true);
 	}
 
-	// Token: 0x04001839 RID: 6201
+	// Token: 0x04001F86 RID: 8070
 	private FullScreenMode[] m_screenModeArray;
 }

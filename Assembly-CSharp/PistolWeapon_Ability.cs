@@ -3,11 +3,11 @@ using FMODUnity;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020001A4 RID: 420
+// Token: 0x02000308 RID: 776
 public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 {
-	// Token: 0x170008FD RID: 2301
-	// (get) Token: 0x0600103D RID: 4157 RVA: 0x0002F36E File Offset: 0x0002D56E
+	// Token: 0x17000BAB RID: 2987
+	// (get) Token: 0x0600184E RID: 6222 RVA: 0x0000C3B4 File Offset: 0x0000A5B4
 	public BaseAbility_RL ReloadAbility
 	{
 		get
@@ -16,8 +16,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008FE RID: 2302
-	// (get) Token: 0x0600103E RID: 4158 RVA: 0x0002F376 File Offset: 0x0002D576
+	// Token: 0x17000BAC RID: 2988
+	// (get) Token: 0x0600184F RID: 6223 RVA: 0x0000C3BC File Offset: 0x0000A5BC
 	public override Vector2 PushbackAmount
 	{
 		get
@@ -26,8 +26,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x170008FF RID: 2303
-	// (get) Token: 0x0600103F RID: 4159 RVA: 0x0002F37E File Offset: 0x0002D57E
+	// Token: 0x17000BAD RID: 2989
+	// (get) Token: 0x06001850 RID: 6224 RVA: 0x0000C3C4 File Offset: 0x0000A5C4
 	protected virtual Vector2 BowPushbackAmount
 	{
 		get
@@ -40,8 +40,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000900 RID: 2304
-	// (get) Token: 0x06001040 RID: 4160 RVA: 0x0002F396 File Offset: 0x0002D596
+	// Token: 0x17000BAE RID: 2990
+	// (get) Token: 0x06001851 RID: 6225 RVA: 0x0000C3DC File Offset: 0x0000A5DC
 	public override string ProjectileName
 	{
 		get
@@ -58,8 +58,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000901 RID: 2305
-	// (get) Token: 0x06001041 RID: 4161 RVA: 0x0002F3BF File Offset: 0x0002D5BF
+	// Token: 0x17000BAF RID: 2991
+	// (get) Token: 0x06001852 RID: 6226 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected override bool CancelTimeSlowOnFire
 	{
 		get
@@ -68,7 +68,7 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06001042 RID: 4162 RVA: 0x0002F3C2 File Offset: 0x0002D5C2
+	// Token: 0x06001853 RID: 6227 RVA: 0x0000C405 File Offset: 0x0000A605
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -79,8 +79,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		};
 	}
 
-	// Token: 0x17000902 RID: 2306
-	// (get) Token: 0x06001043 RID: 4163 RVA: 0x0002F3EB File Offset: 0x0002D5EB
+	// Token: 0x17000BB0 RID: 2992
+	// (get) Token: 0x06001854 RID: 6228 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool CanManuallyReload
 	{
 		get
@@ -89,7 +89,7 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06001044 RID: 4164 RVA: 0x0002F3F0 File Offset: 0x0002D5F0
+	// Token: 0x06001855 RID: 6229 RVA: 0x0008DC04 File Offset: 0x0008BE04
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		base.Initialize(abilityController, castAbilityType);
@@ -102,8 +102,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000903 RID: 2307
-	// (get) Token: 0x06001045 RID: 4165 RVA: 0x0002F451 File Offset: 0x0002D651
+	// Token: 0x17000BB1 RID: 2993
+	// (get) Token: 0x06001856 RID: 6230 RVA: 0x0000676B File Offset: 0x0000496B
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -112,8 +112,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000904 RID: 2308
-	// (get) Token: 0x06001046 RID: 4166 RVA: 0x0002F458 File Offset: 0x0002D658
+	// Token: 0x17000BB2 RID: 2994
+	// (get) Token: 0x06001857 RID: 6231 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -122,8 +122,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000905 RID: 2309
-	// (get) Token: 0x06001047 RID: 4167 RVA: 0x0002F45F File Offset: 0x0002D65F
+	// Token: 0x17000BB3 RID: 2995
+	// (get) Token: 0x06001858 RID: 6232 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected override float TellAnimSpeed
 	{
 		get
@@ -132,8 +132,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000906 RID: 2310
-	// (get) Token: 0x06001048 RID: 4168 RVA: 0x0002F466 File Offset: 0x0002D666
+	// Token: 0x17000BB4 RID: 2996
+	// (get) Token: 0x06001859 RID: 6233 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -142,8 +142,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000907 RID: 2311
-	// (get) Token: 0x06001049 RID: 4169 RVA: 0x0002F46D File Offset: 0x0002D66D
+	// Token: 0x17000BB5 RID: 2997
+	// (get) Token: 0x0600185A RID: 6234 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -152,8 +152,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000908 RID: 2312
-	// (get) Token: 0x0600104A RID: 4170 RVA: 0x0002F474 File Offset: 0x0002D674
+	// Token: 0x17000BB6 RID: 2998
+	// (get) Token: 0x0600185B RID: 6235 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -162,8 +162,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000909 RID: 2313
-	// (get) Token: 0x0600104B RID: 4171 RVA: 0x0002F47B File Offset: 0x0002D67B
+	// Token: 0x17000BB7 RID: 2999
+	// (get) Token: 0x0600185C RID: 6236 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -172,8 +172,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700090A RID: 2314
-	// (get) Token: 0x0600104C RID: 4172 RVA: 0x0002F482 File Offset: 0x0002D682
+	// Token: 0x17000BB8 RID: 3000
+	// (get) Token: 0x0600185D RID: 6237 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -182,8 +182,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700090B RID: 2315
-	// (get) Token: 0x0600104D RID: 4173 RVA: 0x0002F489 File Offset: 0x0002D689
+	// Token: 0x17000BB9 RID: 3001
+	// (get) Token: 0x0600185E RID: 6238 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -192,8 +192,8 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700090C RID: 2316
-	// (get) Token: 0x0600104E RID: 4174 RVA: 0x0002F490 File Offset: 0x0002D690
+	// Token: 0x17000BBA RID: 3002
+	// (get) Token: 0x0600185F RID: 6239 RVA: 0x0000C42E File Offset: 0x0000A62E
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -206,7 +206,7 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x0600104F RID: 4175 RVA: 0x0002F4CC File Offset: 0x0002D6CC
+	// Token: 0x06001860 RID: 6240 RVA: 0x0008DC68 File Offset: 0x0008BE68
 	protected override void UpdateAimLine()
 	{
 		Vector3 localEulerAngles = this.m_aimSprite.transform.localEulerAngles;
@@ -214,7 +214,7 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		this.m_aimSprite.transform.localEulerAngles = localEulerAngles;
 	}
 
-	// Token: 0x06001050 RID: 4176 RVA: 0x0002F508 File Offset: 0x0002D708
+	// Token: 0x06001861 RID: 6241 RVA: 0x0008DCA4 File Offset: 0x0008BEA4
 	protected override void Update()
 	{
 		if (!base.AbilityActive && Rewired_RL.Player.GetButton(this.m_abilityController.GetAbilityInputString(base.CastAbilityType)))
@@ -255,13 +255,13 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06001051 RID: 4177 RVA: 0x0002F729 File Offset: 0x0002D929
+	// Token: 0x06001862 RID: 6242 RVA: 0x0000C468 File Offset: 0x0000A668
 	protected void Base_FireProjectile()
 	{
 		base.FireProjectile();
 	}
 
-	// Token: 0x06001052 RID: 4178 RVA: 0x0002F734 File Offset: 0x0002D934
+	// Token: 0x06001863 RID: 6243 RVA: 0x0008DEC8 File Offset: 0x0008C0C8
 	protected override void FireProjectile()
 	{
 		if (base.CurrentAmmo > 0)
@@ -292,38 +292,38 @@ public class PistolWeapon_Ability : AimedAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x040011B1 RID: 4529
+	// Token: 0x0400178E RID: 6030
 	[SerializeField]
 	private GameObject m_aimSprite;
 
-	// Token: 0x040011B2 RID: 4530
+	// Token: 0x0400178F RID: 6031
 	[SerializeField]
 	protected StudioEventEmitter m_shootAudioEmitter;
 
-	// Token: 0x040011B3 RID: 4531
+	// Token: 0x04001790 RID: 6032
 	[SerializeField]
 	protected StudioEventEmitter m_emptyClipAudioEmitter;
 
-	// Token: 0x040011B4 RID: 4532
+	// Token: 0x04001791 RID: 6033
 	[SerializeField]
 	protected string m_emptyClipProjectileName;
 
-	// Token: 0x040011B5 RID: 4533
+	// Token: 0x04001792 RID: 6034
 	[SerializeField]
 	private string m_critHitProjectileName;
 
-	// Token: 0x040011B6 RID: 4534
+	// Token: 0x04001793 RID: 6035
 	private BaseAbility_RL m_reloadAbility;
 
-	// Token: 0x040011B7 RID: 4535
+	// Token: 0x04001794 RID: 6036
 	private const float LOW_AMMO_AUDIO_PARAMETER_VALUE = 0.1f;
 
-	// Token: 0x040011B8 RID: 4536
+	// Token: 0x04001795 RID: 6037
 	private bool m_aimSpriteInitialized;
 
-	// Token: 0x040011B9 RID: 4537
+	// Token: 0x04001796 RID: 6038
 	private Vector2 m_bowPushbackAmount = new Vector2(0f, 3.25f);
 
-	// Token: 0x040011BA RID: 4538
+	// Token: 0x04001797 RID: 6039
 	private Vector2 m_bowPushbackAmountNoAmmo = new Vector2(0f, 2.4f);
 }

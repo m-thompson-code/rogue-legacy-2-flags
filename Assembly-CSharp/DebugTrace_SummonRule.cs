@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200051C RID: 1308
+// Token: 0x02000891 RID: 2193
 [Serializable]
 public class DebugTrace_SummonRule : BaseSummonRule
 {
-	// Token: 0x170011DB RID: 4571
-	// (get) Token: 0x06003072 RID: 12402 RVA: 0x000A5C42 File Offset: 0x000A3E42
+	// Token: 0x170017F2 RID: 6130
+	// (get) Token: 0x06004334 RID: 17204 RVA: 0x000252B5 File Offset: 0x000234B5
 	public override Color BoxColor
 	{
 		get
@@ -16,8 +16,8 @@ public class DebugTrace_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011DC RID: 4572
-	// (get) Token: 0x06003073 RID: 12403 RVA: 0x000A5C49 File Offset: 0x000A3E49
+	// Token: 0x170017F3 RID: 6131
+	// (get) Token: 0x06004335 RID: 17205 RVA: 0x0000B5D8 File Offset: 0x000097D8
 	public override SummonRuleType RuleType
 	{
 		get
@@ -26,8 +26,8 @@ public class DebugTrace_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011DD RID: 4573
-	// (get) Token: 0x06003074 RID: 12404 RVA: 0x000A5C50 File Offset: 0x000A3E50
+	// Token: 0x170017F4 RID: 6132
+	// (get) Token: 0x06004336 RID: 17206 RVA: 0x000252BC File Offset: 0x000234BC
 	public override string RuleLabel
 	{
 		get
@@ -36,14 +36,14 @@ public class DebugTrace_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x06003075 RID: 12405 RVA: 0x000A5C57 File Offset: 0x000A3E57
+	// Token: 0x06004337 RID: 17207 RVA: 0x000252C3 File Offset: 0x000234C3
 	public override IEnumerator RunSummonRule()
 	{
 		base.IsRuleComplete = true;
 		yield break;
 	}
 
-	// Token: 0x0400267F RID: 9855
+	// Token: 0x0400346A RID: 13418
 	[SerializeField]
 	private string m_debugString;
 }

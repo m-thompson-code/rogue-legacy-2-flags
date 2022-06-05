@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-// Token: 0x02000673 RID: 1651
+// Token: 0x02000AE7 RID: 2791
 public class SpawnConditionalObjects_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B6E RID: 15214 RVA: 0x000CC63E File Offset: 0x000CA83E
+	// Token: 0x0600539D RID: 21405 RVA: 0x0002D665 File Offset: 0x0002B865
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		using (List<BaseRoom>.Enumerator enumerator = biomeController.Rooms.GetEnumerator())

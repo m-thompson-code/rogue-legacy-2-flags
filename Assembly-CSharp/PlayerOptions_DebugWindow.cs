@@ -4,11 +4,11 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020001E3 RID: 483
+// Token: 0x0200037A RID: 890
 public class PlayerOptions_DebugWindow : MonoBehaviour
 {
-	// Token: 0x17000A69 RID: 2665
-	// (get) Token: 0x0600140E RID: 5134 RVA: 0x0003CD00 File Offset: 0x0003AF00
+	// Token: 0x17000D67 RID: 3431
+	// (get) Token: 0x06001D1F RID: 7455 RVA: 0x0000F063 File Offset: 0x0000D263
 	public AbilityType[] Weapons
 	{
 		get
@@ -17,8 +17,8 @@ public class PlayerOptions_DebugWindow : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A6A RID: 2666
-	// (get) Token: 0x0600140F RID: 5135 RVA: 0x0003CD08 File Offset: 0x0003AF08
+	// Token: 0x17000D68 RID: 3432
+	// (get) Token: 0x06001D20 RID: 7456 RVA: 0x0000F06B File Offset: 0x0000D26B
 	public ClassType[] Classes
 	{
 		get
@@ -27,7 +27,7 @@ public class PlayerOptions_DebugWindow : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001410 RID: 5136 RVA: 0x0003CD10 File Offset: 0x0003AF10
+	// Token: 0x06001D21 RID: 7457 RVA: 0x0009BB38 File Offset: 0x00099D38
 	private void Awake()
 	{
 		this.InitializeIndexToClassTable();
@@ -49,7 +49,7 @@ public class PlayerOptions_DebugWindow : MonoBehaviour
 		select classType.ToString()).ToList<string>());
 	}
 
-	// Token: 0x06001411 RID: 5137 RVA: 0x0003CE08 File Offset: 0x0003B008
+	// Token: 0x06001D22 RID: 7458 RVA: 0x0009BC30 File Offset: 0x00099E30
 	private void InitializeIndexToClassTable()
 	{
 		this.m_indexToClassTable = new Dictionary<int, ClassType>();
@@ -72,7 +72,7 @@ public class PlayerOptions_DebugWindow : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001412 RID: 5138 RVA: 0x0003CEEC File Offset: 0x0003B0EC
+	// Token: 0x06001D23 RID: 7459 RVA: 0x0009BD14 File Offset: 0x00099F14
 	private void InitializeIndexToWeaponTable()
 	{
 		this.m_indexToWeaponTable = new Dictionary<int, AbilityType>();
@@ -94,7 +94,7 @@ public class PlayerOptions_DebugWindow : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001413 RID: 5139 RVA: 0x0003CFC0 File Offset: 0x0003B1C0
+	// Token: 0x06001D24 RID: 7460 RVA: 0x0009BDE8 File Offset: 0x00099FE8
 	public void SetPlayerClass(int classIndex)
 	{
 		ClassType classType = this.m_classes[classIndex];
@@ -104,7 +104,7 @@ public class PlayerOptions_DebugWindow : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06001414 RID: 5140 RVA: 0x0003CFF0 File Offset: 0x0003B1F0
+	// Token: 0x06001D25 RID: 7461 RVA: 0x0009BE18 File Offset: 0x0009A018
 	public void SetPlayerWeapon(int weaponIndex)
 	{
 		AbilityType abilityType = this.m_weapons[weaponIndex];
@@ -114,23 +114,23 @@ public class PlayerOptions_DebugWindow : MonoBehaviour
 		});
 	}
 
-	// Token: 0x040013D8 RID: 5080
+	// Token: 0x04001A75 RID: 6773
 	[SerializeField]
 	private TMP_Dropdown m_weaponDropdown;
 
-	// Token: 0x040013D9 RID: 5081
+	// Token: 0x04001A76 RID: 6774
 	[SerializeField]
 	private TMP_Dropdown m_classDropdown;
 
-	// Token: 0x040013DA RID: 5082
+	// Token: 0x04001A77 RID: 6775
 	private Dictionary<int, ClassType> m_indexToClassTable;
 
-	// Token: 0x040013DB RID: 5083
+	// Token: 0x04001A78 RID: 6776
 	private ClassType[] m_classes;
 
-	// Token: 0x040013DC RID: 5084
+	// Token: 0x04001A79 RID: 6777
 	private Dictionary<int, AbilityType> m_indexToWeaponTable;
 
-	// Token: 0x040013DD RID: 5085
+	// Token: 0x04001A7A RID: 6778
 	private AbilityType[] m_weapons;
 }

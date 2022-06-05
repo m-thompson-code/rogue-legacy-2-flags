@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200041D RID: 1053
+// Token: 0x020006D6 RID: 1750
 public class OnSpawnEffectTrigger : BaseEffectTrigger
 {
-	// Token: 0x17000F84 RID: 3972
-	// (get) Token: 0x060026EF RID: 9967 RVA: 0x0008197E File Offset: 0x0007FB7E
+	// Token: 0x1700144B RID: 5195
+	// (get) Token: 0x060035AA RID: 13738 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool RequiresCollider
 	{
 		get
@@ -14,8 +14,8 @@ public class OnSpawnEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x17000F85 RID: 3973
-	// (get) Token: 0x060026F0 RID: 9968 RVA: 0x00081984 File Offset: 0x0007FB84
+	// Token: 0x1700144C RID: 5196
+	// (get) Token: 0x060035AB RID: 13739 RVA: 0x000E1D30 File Offset: 0x000DFF30
 	public override Vector3 Midpoint
 	{
 		get
@@ -32,7 +32,7 @@ public class OnSpawnEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026F1 RID: 9969 RVA: 0x000819DC File Offset: 0x0007FBDC
+	// Token: 0x060035AC RID: 13740 RVA: 0x000E1D88 File Offset: 0x000DFF88
 	protected override void Awake()
 	{
 		base.Awake();
@@ -45,7 +45,7 @@ public class OnSpawnEffectTrigger : BaseEffectTrigger
 		this.m_invokeSpawnTrigger = new Action<GameObject>(this.InvokeSpawnTrigger);
 	}
 
-	// Token: 0x060026F2 RID: 9970 RVA: 0x00081A3C File Offset: 0x0007FC3C
+	// Token: 0x060035AD RID: 13741 RVA: 0x000E1DE8 File Offset: 0x000DFFE8
 	private void OnEnable()
 	{
 		IEffectTriggerEvent_OnSpawn[] effectTriggerEventArray = this.m_effectTriggerEventArray;
@@ -55,7 +55,7 @@ public class OnSpawnEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026F3 RID: 9971 RVA: 0x00081A74 File Offset: 0x0007FC74
+	// Token: 0x060035AE RID: 13742 RVA: 0x000E1E20 File Offset: 0x000E0020
 	private void OnDisable()
 	{
 		IEffectTriggerEvent_OnSpawn[] effectTriggerEventArray = this.m_effectTriggerEventArray;
@@ -65,7 +65,7 @@ public class OnSpawnEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026F4 RID: 9972 RVA: 0x00081AAC File Offset: 0x0007FCAC
+	// Token: 0x060035AF RID: 13743 RVA: 0x000E1E58 File Offset: 0x000E0058
 	private void InvokeSpawnTrigger(GameObject otherObj)
 	{
 		GameObject root = otherObj.GetRoot(false);
@@ -111,15 +111,15 @@ public class OnSpawnEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x040020BC RID: 8380
+	// Token: 0x04002BA2 RID: 11170
 	private IEffectTriggerEvent_OnSpawn[] m_effectTriggerEventArray;
 
-	// Token: 0x040020BD RID: 8381
+	// Token: 0x04002BA3 RID: 11171
 	private Collider2D m_collider;
 
-	// Token: 0x040020BE RID: 8382
+	// Token: 0x04002BA4 RID: 11172
 	private BaseCharacterController m_charController;
 
-	// Token: 0x040020BF RID: 8383
+	// Token: 0x04002BA5 RID: 11173
 	private Action<GameObject> m_invokeSpawnTrigger;
 }

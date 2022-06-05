@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200070A RID: 1802
+// Token: 0x02000BBD RID: 3005
 public class BossID_RL
 {
-	// Token: 0x060040D5 RID: 16597 RVA: 0x000E5864 File Offset: 0x000E3A64
+	// Token: 0x06005A1E RID: 23070 RVA: 0x00154DA8 File Offset: 0x00152FA8
 	public static bool IsBossBeaten(BossID bossID)
 	{
 		if (bossID <= BossID.Study_Boss)
@@ -56,7 +56,7 @@ public class BossID_RL
 		return false;
 	}
 
-	// Token: 0x060040D6 RID: 16598 RVA: 0x000E593D File Offset: 0x000E3B3D
+	// Token: 0x06005A1F RID: 23071 RVA: 0x000313DE File Offset: 0x0002F5DE
 	public static BiomeType GetBossIDToBiome(BossID bossID)
 	{
 		if (bossID <= BossID.Forest_Boss)
@@ -92,7 +92,7 @@ public class BossID_RL
 		return BiomeType.None;
 	}
 
-	// Token: 0x060040D7 RID: 16599 RVA: 0x000E597C File Offset: 0x000E3B7C
+	// Token: 0x06005A20 RID: 23072 RVA: 0x0003141D File Offset: 0x0002F61D
 	public static BossID GetBiomeToBossID(BiomeType biomeType)
 	{
 		if (biomeType <= BiomeType.Forest)
@@ -128,8 +128,8 @@ public class BossID_RL
 		return BossID.None;
 	}
 
-	// Token: 0x17001623 RID: 5667
-	// (get) Token: 0x060040D8 RID: 16600 RVA: 0x000E59BB File Offset: 0x000E3BBB
+	// Token: 0x17001E1F RID: 7711
+	// (get) Token: 0x06005A21 RID: 23073 RVA: 0x0003145C File Offset: 0x0002F65C
 	public static BossID[] TypeArray
 	{
 		get
@@ -142,6 +142,6 @@ public class BossID_RL
 		}
 	}
 
-	// Token: 0x040032D3 RID: 13011
+	// Token: 0x0400454E RID: 17742
 	private static BossID[] m_typeArray;
 }

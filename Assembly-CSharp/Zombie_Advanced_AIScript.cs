@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000153 RID: 339
+// Token: 0x0200026D RID: 621
 public class Zombie_Advanced_AIScript : Zombie_Basic_AIScript
 {
-	// Token: 0x17000652 RID: 1618
-	// (get) Token: 0x06000B71 RID: 2929 RVA: 0x00022C07 File Offset: 0x00020E07
+	// Token: 0x17000874 RID: 2164
+	// (get) Token: 0x060011DC RID: 4572 RVA: 0x0000611B File Offset: 0x0000431B
 	protected override float m_tunnel_moveSpeed
 	{
 		get
@@ -13,8 +13,8 @@ public class Zombie_Advanced_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000653 RID: 1619
-	// (get) Token: 0x06000B72 RID: 2930 RVA: 0x00022C0E File Offset: 0x00020E0E
+	// Token: 0x17000875 RID: 2165
+	// (get) Token: 0x060011DD RID: 4573 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float Lunge_Count
 	{
 		get
@@ -23,8 +23,8 @@ public class Zombie_Advanced_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000654 RID: 1620
-	// (get) Token: 0x06000B73 RID: 2931 RVA: 0x00022C15 File Offset: 0x00020E15
+	// Token: 0x17000876 RID: 2166
+	// (get) Token: 0x060011DE RID: 4574 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected override float Delay_Between_Lunges
 	{
 		get

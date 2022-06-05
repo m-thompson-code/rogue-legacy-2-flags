@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x0200006D RID: 109
+// Token: 0x02000075 RID: 117
 public class Journal_EV
 {
-	// Token: 0x0600018A RID: 394 RVA: 0x0000E1A8 File Offset: 0x0000C3A8
+	// Token: 0x0600019E RID: 414 RVA: 0x00003A82 File Offset: 0x00001C82
 	public static JournalEntry[] GetJournalEntries(BiomeType biome, JournalType journalType)
 	{
 		return Journal_EV.GetJournalEntries(JournalType_RL.ConvertBiomeToJournalCategoryType(biome), journalType);
 	}
 
-	// Token: 0x0600018B RID: 395 RVA: 0x0000E1B8 File Offset: 0x0000C3B8
+	// Token: 0x0600019F RID: 415 RVA: 0x0004A7A4 File Offset: 0x000489A4
 	public static JournalEntry[] GetJournalEntries(JournalCategoryType journal, JournalType journalType)
 	{
 		JournalEntry[][] array;
@@ -21,13 +21,13 @@ public class Journal_EV
 		return null;
 	}
 
-	// Token: 0x0600018C RID: 396 RVA: 0x0000E1E5 File Offset: 0x0000C3E5
+	// Token: 0x060001A0 RID: 416 RVA: 0x00003A90 File Offset: 0x00001C90
 	public static JournalEntry GetJournalEntry(BiomeType biome, JournalType journalType, int index)
 	{
 		return Journal_EV.GetJournalEntry(JournalType_RL.ConvertBiomeToJournalCategoryType(biome), journalType, index);
 	}
 
-	// Token: 0x0600018D RID: 397 RVA: 0x0000E1F4 File Offset: 0x0000C3F4
+	// Token: 0x060001A1 RID: 417 RVA: 0x0004A7D4 File Offset: 0x000489D4
 	public static JournalEntry GetJournalEntry(JournalCategoryType journal, JournalType journalType, int index)
 	{
 		JournalEntry[] journalEntries = Journal_EV.GetJournalEntries(journal, journalType);
@@ -38,13 +38,13 @@ public class Journal_EV
 		return default(JournalEntry);
 	}
 
-	// Token: 0x0600018E RID: 398 RVA: 0x0000E21D File Offset: 0x0000C41D
+	// Token: 0x060001A2 RID: 418 RVA: 0x00003A9F File Offset: 0x00001C9F
 	public static int GetNumJournals(BiomeType biome, JournalType journalType)
 	{
 		return Journal_EV.GetNumJournals(JournalType_RL.ConvertBiomeToJournalCategoryType(biome), journalType);
 	}
 
-	// Token: 0x0600018F RID: 399 RVA: 0x0000E22C File Offset: 0x0000C42C
+	// Token: 0x060001A3 RID: 419 RVA: 0x0004A800 File Offset: 0x00048A00
 	public static int GetNumJournals(JournalCategoryType journal, JournalType journalType)
 	{
 		JournalEntry[] journalEntries = Journal_EV.GetJournalEntries(journal, journalType);
@@ -55,10 +55,10 @@ public class Journal_EV
 		return 0;
 	}
 
-	// Token: 0x0400039B RID: 923
+	// Token: 0x040003BC RID: 956
 	public const int HIGHEST_NUMBER_OF_ENTRIES = 20;
 
-	// Token: 0x0400039C RID: 924
+	// Token: 0x040003BD RID: 957
 	private static Dictionary<JournalCategoryType, JournalEntry[][]> m_journalEntryTable = new Dictionary<JournalCategoryType, JournalEntry[][]>
 	{
 		{

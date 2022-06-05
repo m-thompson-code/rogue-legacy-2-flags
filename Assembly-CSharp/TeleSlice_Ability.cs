@@ -5,11 +5,11 @@ using Cinemachine;
 using FMODUnity;
 using UnityEngine;
 
-// Token: 0x02000179 RID: 377
+// Token: 0x020002B8 RID: 696
 public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 {
-	// Token: 0x17000725 RID: 1829
-	// (get) Token: 0x06000D34 RID: 3380 RVA: 0x00028076 File Offset: 0x00026276
+	// Token: 0x1700098F RID: 2447
+	// (get) Token: 0x06001479 RID: 5241 RVA: 0x0000611B File Offset: 0x0000431B
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -18,8 +18,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000726 RID: 1830
-	// (get) Token: 0x06000D35 RID: 3381 RVA: 0x0002807D File Offset: 0x0002627D
+	// Token: 0x17000990 RID: 2448
+	// (get) Token: 0x0600147A RID: 5242 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -28,8 +28,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000727 RID: 1831
-	// (get) Token: 0x06000D36 RID: 3382 RVA: 0x00028084 File Offset: 0x00026284
+	// Token: 0x17000991 RID: 2449
+	// (get) Token: 0x0600147B RID: 5243 RVA: 0x0000611B File Offset: 0x0000431B
 	protected override float TellAnimSpeed
 	{
 		get
@@ -38,8 +38,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000728 RID: 1832
-	// (get) Token: 0x06000D37 RID: 3383 RVA: 0x0002808B File Offset: 0x0002628B
+	// Token: 0x17000992 RID: 2450
+	// (get) Token: 0x0600147C RID: 5244 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -48,8 +48,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000729 RID: 1833
-	// (get) Token: 0x06000D38 RID: 3384 RVA: 0x00028092 File Offset: 0x00026292
+	// Token: 0x17000993 RID: 2451
+	// (get) Token: 0x0600147D RID: 5245 RVA: 0x0000611B File Offset: 0x0000431B
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -58,8 +58,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700072A RID: 1834
-	// (get) Token: 0x06000D39 RID: 3385 RVA: 0x00028099 File Offset: 0x00026299
+	// Token: 0x17000994 RID: 2452
+	// (get) Token: 0x0600147E RID: 5246 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -68,8 +68,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700072B RID: 1835
-	// (get) Token: 0x06000D3A RID: 3386 RVA: 0x000280A0 File Offset: 0x000262A0
+	// Token: 0x17000995 RID: 2453
+	// (get) Token: 0x0600147F RID: 5247 RVA: 0x0000611B File Offset: 0x0000431B
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -78,8 +78,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700072C RID: 1836
-	// (get) Token: 0x06000D3B RID: 3387 RVA: 0x000280A7 File Offset: 0x000262A7
+	// Token: 0x17000996 RID: 2454
+	// (get) Token: 0x06001480 RID: 5248 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -88,8 +88,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700072D RID: 1837
-	// (get) Token: 0x06000D3C RID: 3388 RVA: 0x000280AE File Offset: 0x000262AE
+	// Token: 0x17000997 RID: 2455
+	// (get) Token: 0x06001481 RID: 5249 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -98,8 +98,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700072E RID: 1838
-	// (get) Token: 0x06000D3D RID: 3389 RVA: 0x000280B5 File Offset: 0x000262B5
+	// Token: 0x17000998 RID: 2456
+	// (get) Token: 0x06001482 RID: 5250 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -108,8 +108,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700072F RID: 1839
-	// (get) Token: 0x06000D3E RID: 3390 RVA: 0x000280BC File Offset: 0x000262BC
+	// Token: 0x17000999 RID: 2457
+	// (get) Token: 0x06001483 RID: 5251 RVA: 0x00006764 File Offset: 0x00004964
 	protected override float GravityReduction
 	{
 		get
@@ -118,8 +118,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000730 RID: 1840
-	// (get) Token: 0x06000D3F RID: 3391 RVA: 0x000280C3 File Offset: 0x000262C3
+	// Token: 0x1700099A RID: 2458
+	// (get) Token: 0x06001484 RID: 5252 RVA: 0x0000A4EF File Offset: 0x000086EF
 	protected override Vector2 BowPushbackAmount
 	{
 		get
@@ -128,8 +128,8 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000731 RID: 1841
-	// (get) Token: 0x06000D40 RID: 3392 RVA: 0x000280D4 File Offset: 0x000262D4
+	// Token: 0x1700099B RID: 2459
+	// (get) Token: 0x06001485 RID: 5253 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override AbilityAnimState StateToHoldAttackOn
 	{
 		get
@@ -138,14 +138,14 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000D41 RID: 3393 RVA: 0x000280D7 File Offset: 0x000262D7
+	// Token: 0x06001486 RID: 5254 RVA: 0x0000A500 File Offset: 0x00008700
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onEnemyHit = new Action<MonoBehaviour, EventArgs>(this.OnEnemyHit);
 	}
 
-	// Token: 0x06000D42 RID: 3394 RVA: 0x000280F4 File Offset: 0x000262F4
+	// Token: 0x06001487 RID: 5255 RVA: 0x00087068 File Offset: 0x00085268
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		float num = 12f / (float)this.m_aimLine.positionCount;
@@ -158,14 +158,14 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		base.Initialize(abilityController, castAbilityType);
 	}
 
-	// Token: 0x06000D43 RID: 3395 RVA: 0x00028181 File Offset: 0x00026381
+	// Token: 0x06001488 RID: 5256 RVA: 0x0000A51A File Offset: 0x0000871A
 	protected override void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.EnemyHit, this.m_onEnemyHit);
 		base.OnDestroy();
 	}
 
-	// Token: 0x06000D44 RID: 3396 RVA: 0x00028198 File Offset: 0x00026398
+	// Token: 0x06001489 RID: 5257 RVA: 0x000870F8 File Offset: 0x000852F8
 	private void OnEnemyHit(object sender, EventArgs args)
 	{
 		CharacterHitEventArgs characterHitEventArgs = args as CharacterHitEventArgs;
@@ -175,14 +175,14 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000D45 RID: 3397 RVA: 0x000281E0 File Offset: 0x000263E0
+	// Token: 0x0600148A RID: 5258 RVA: 0x0000A52E File Offset: 0x0000872E
 	public override void PreCastAbility()
 	{
 		base.PreCastAbility();
 		this.m_chargeEmitter.Play();
 	}
 
-	// Token: 0x06000D46 RID: 3398 RVA: 0x000281F3 File Offset: 0x000263F3
+	// Token: 0x0600148B RID: 5259 RVA: 0x0000A541 File Offset: 0x00008741
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (base.CurrentAbilityAnimState < this.StateToHoldAttackOn)
@@ -211,7 +211,7 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000D47 RID: 3399 RVA: 0x0002820C File Offset: 0x0002640C
+	// Token: 0x0600148C RID: 5260 RVA: 0x00087140 File Offset: 0x00085340
 	protected override void FireProjectile()
 	{
 		Vector2 vector = CDGHelper.AngleToVector(this.m_unmoddedAngle);
@@ -349,7 +349,7 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		base.FireProjectile();
 	}
 
-	// Token: 0x06000D48 RID: 3400 RVA: 0x00028980 File Offset: 0x00026B80
+	// Token: 0x0600148D RID: 5261 RVA: 0x0000A557 File Offset: 0x00008757
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		this.m_chargeEmitter.Stop();
@@ -360,7 +360,7 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x06000D49 RID: 3401 RVA: 0x000289A2 File Offset: 0x00026BA2
+	// Token: 0x0600148E RID: 5262 RVA: 0x0000A579 File Offset: 0x00008779
 	private IEnumerator DisableSlopeCheckCoroutine(PlayerController playerController)
 	{
 		playerController.ControllerCorgi.StickWhenWalkingDownSlopes = false;
@@ -369,7 +369,7 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000D4A RID: 3402 RVA: 0x000289B1 File Offset: 0x00026BB1
+	// Token: 0x0600148F RID: 5263 RVA: 0x0000A588 File Offset: 0x00008788
 	private IEnumerator PushbackGroundCheck()
 	{
 		yield return null;
@@ -380,13 +380,13 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000D4B RID: 3403 RVA: 0x000289C0 File Offset: 0x00026BC0
+	// Token: 0x06001490 RID: 5264 RVA: 0x0000A597 File Offset: 0x00008797
 	protected override void UpdateArrowAim(bool doNotUpdatePlayerAnims = false)
 	{
 		base.UpdateArrowAim(true);
 	}
 
-	// Token: 0x06000D4C RID: 3404 RVA: 0x000289CC File Offset: 0x00026BCC
+	// Token: 0x06001491 RID: 5265 RVA: 0x000878B4 File Offset: 0x00085AB4
 	protected override void UpdateAimLine()
 	{
 		Vector3 localEulerAngles = this.m_aimLine.transform.localEulerAngles;
@@ -394,25 +394,25 @@ public class TeleSlice_Ability : AimedAbilityFast_RL, ITalent, IAbility
 		this.m_aimLine.transform.localEulerAngles = localEulerAngles;
 	}
 
-	// Token: 0x040010C4 RID: 4292
+	// Token: 0x04001616 RID: 5654
 	[SerializeField]
 	private GameObject m_endAimIndicator;
 
-	// Token: 0x040010C5 RID: 4293
+	// Token: 0x04001617 RID: 5655
 	[Header("Audio Event Emitters")]
 	[SerializeField]
 	private StudioEventEmitter m_chargeEmitter;
 
-	// Token: 0x040010C6 RID: 4294
+	// Token: 0x04001618 RID: 5656
 	[SerializeField]
 	private StudioEventEmitter m_cancelChargeEmitter;
 
-	// Token: 0x040010C7 RID: 4295
+	// Token: 0x04001619 RID: 5657
 	private Vector2 m_storedSoftZone;
 
-	// Token: 0x040010C8 RID: 4296
+	// Token: 0x0400161A RID: 5658
 	private Action<MonoBehaviour, EventArgs> m_onEnemyHit;
 
-	// Token: 0x040010C9 RID: 4297
+	// Token: 0x0400161B RID: 5659
 	private List<RaycastHit2D> m_platformHitList = new List<RaycastHit2D>(5);
 }

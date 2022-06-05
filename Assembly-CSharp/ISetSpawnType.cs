@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020005CF RID: 1487
+// Token: 0x020009D7 RID: 2519
 public interface ISetSpawnType
 {
-	// Token: 0x0600368C RID: 13964
+	// Token: 0x06004C9E RID: 19614
 	void SetSpawnType();
 }

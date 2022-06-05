@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000529 RID: 1321
+// Token: 0x020008AB RID: 2219
 [Serializable]
 public class SetSummonPool_SummonRule : BaseSummonRule
 {
-	// Token: 0x170011FB RID: 4603
-	// (get) Token: 0x060030AC RID: 12460 RVA: 0x000A5EA7 File Offset: 0x000A40A7
+	// Token: 0x1700182C RID: 6188
+	// (get) Token: 0x060043BC RID: 17340 RVA: 0x000255E2 File Offset: 0x000237E2
 	public override SummonRuleType RuleType
 	{
 		get
@@ -18,8 +18,8 @@ public class SetSummonPool_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011FC RID: 4604
-	// (get) Token: 0x060030AD RID: 12461 RVA: 0x000A5EAE File Offset: 0x000A40AE
+	// Token: 0x1700182D RID: 6189
+	// (get) Token: 0x060043BD RID: 17341 RVA: 0x000255E9 File Offset: 0x000237E9
 	public EnemyTypeAndRank[] EnemiesToSummonArray
 	{
 		get
@@ -28,8 +28,8 @@ public class SetSummonPool_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011FD RID: 4605
-	// (get) Token: 0x060030AE RID: 12462 RVA: 0x000A5EB6 File Offset: 0x000A40B6
+	// Token: 0x1700182E RID: 6190
+	// (get) Token: 0x060043BE RID: 17342 RVA: 0x000255F1 File Offset: 0x000237F1
 	public bool PoolIsBiomeSpecific
 	{
 		get
@@ -38,8 +38,8 @@ public class SetSummonPool_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011FE RID: 4606
-	// (get) Token: 0x060030AF RID: 12463 RVA: 0x000A5EBE File Offset: 0x000A40BE
+	// Token: 0x1700182F RID: 6191
+	// (get) Token: 0x060043BF RID: 17343 RVA: 0x0002552A File Offset: 0x0002372A
 	public override Color BoxColor
 	{
 		get
@@ -48,8 +48,8 @@ public class SetSummonPool_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011FF RID: 4607
-	// (get) Token: 0x060030B0 RID: 12464 RVA: 0x000A5EC5 File Offset: 0x000A40C5
+	// Token: 0x17001830 RID: 6192
+	// (get) Token: 0x060043C0 RID: 17344 RVA: 0x000255F9 File Offset: 0x000237F9
 	public override string RuleLabel
 	{
 		get
@@ -58,7 +58,7 @@ public class SetSummonPool_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x060030B1 RID: 12465 RVA: 0x000A5ECC File Offset: 0x000A40CC
+	// Token: 0x060043C1 RID: 17345 RVA: 0x00025600 File Offset: 0x00023800
 	public override IEnumerator RunSummonRule()
 	{
 		base.SummonController.SummonPool.Clear();
@@ -88,22 +88,22 @@ public class SetSummonPool_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x0400269C RID: 9884
+	// Token: 0x040034AF RID: 13487
 	public static EnemyType[] SummonExceptionArray = new EnemyType[]
 	{
 		EnemyType.BouncySpike,
 		EnemyType.Eggplant
 	};
 
-	// Token: 0x0400269D RID: 9885
+	// Token: 0x040034B0 RID: 13488
 	[SerializeField]
 	private bool m_poolIsBiomeSpecific;
 
-	// Token: 0x0400269E RID: 9886
+	// Token: 0x040034B1 RID: 13489
 	[SerializeField]
 	private bool m_spawnFlyingOnly;
 
-	// Token: 0x0400269F RID: 9887
+	// Token: 0x040034B2 RID: 13490
 	[SerializeField]
 	private EnemyTypeAndRank[] m_enemiesToSummonArray = new EnemyTypeAndRank[0];
 }

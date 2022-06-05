@@ -5,17 +5,17 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-// Token: 0x020001BD RID: 445
+// Token: 0x0200032C RID: 812
 public class IsSkillTreeCastleSectionBuiltEventController : MonoBehaviour
 {
-	// Token: 0x06001151 RID: 4433 RVA: 0x00032343 File Offset: 0x00030543
+	// Token: 0x0600199A RID: 6554 RVA: 0x0000CEF5 File Offset: 0x0000B0F5
 	private void Awake()
 	{
 		this.m_onWindowOpened = new UnityAction(this.OnWindowOpened);
 		this.m_onWindowClosed = new UnityAction(this.OnWindowClosed);
 	}
 
-	// Token: 0x06001152 RID: 4434 RVA: 0x0003236C File Offset: 0x0003056C
+	// Token: 0x0600199B RID: 6555 RVA: 0x000905D8 File Offset: 0x0008E7D8
 	private void Start()
 	{
 		this.m_skillTreeWindow = (WindowManager.GetWindowController(WindowID.SkillTree) as SkillTreeWindowController);
@@ -26,7 +26,7 @@ public class IsSkillTreeCastleSectionBuiltEventController : MonoBehaviour
 		this.m_checkCoroutine = base.StartCoroutine(this.Check());
 	}
 
-	// Token: 0x06001153 RID: 4435 RVA: 0x000323F4 File Offset: 0x000305F4
+	// Token: 0x0600199C RID: 6556 RVA: 0x0000CF1B File Offset: 0x0000B11B
 	private IEnumerator Check()
 	{
 		if (this.m_waitForSkillTreeToOpen == null)
@@ -45,7 +45,7 @@ public class IsSkillTreeCastleSectionBuiltEventController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001154 RID: 4436 RVA: 0x00032403 File Offset: 0x00030603
+	// Token: 0x0600199D RID: 6557 RVA: 0x0000CF2A File Offset: 0x0000B12A
 	private void OnWindowOpened()
 	{
 		if (this.m_checkCoroutine == null)
@@ -54,7 +54,7 @@ public class IsSkillTreeCastleSectionBuiltEventController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001155 RID: 4437 RVA: 0x0003241F File Offset: 0x0003061F
+	// Token: 0x0600199E RID: 6558 RVA: 0x0000CF46 File Offset: 0x0000B146
 	private void OnSectionBuilt()
 	{
 		if (this.m_sectionBuiltEvent != null)
@@ -63,7 +63,7 @@ public class IsSkillTreeCastleSectionBuiltEventController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001156 RID: 4438 RVA: 0x00032434 File Offset: 0x00030634
+	// Token: 0x0600199F RID: 6559 RVA: 0x0000CF5B File Offset: 0x0000B15B
 	private void OnWindowClosed()
 	{
 		base.StopAllCoroutines();
@@ -74,37 +74,37 @@ public class IsSkillTreeCastleSectionBuiltEventController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400123E RID: 4670
+	// Token: 0x04001847 RID: 6215
 	[SerializeField]
 	private string m_parameter;
 
-	// Token: 0x0400123F RID: 4671
+	// Token: 0x04001848 RID: 6216
 	[SerializeField]
 	[FormerlySerializedAs("m_windowOpenedEvent")]
 	private UnityEvent m_sectionBuiltEvent;
 
-	// Token: 0x04001240 RID: 4672
+	// Token: 0x04001849 RID: 6217
 	[SerializeField]
 	private UnityEvent m_windowClosedEvent;
 
-	// Token: 0x04001241 RID: 4673
+	// Token: 0x0400184A RID: 6218
 	private WaitUntil m_waitForSkillTreeToOpen;
 
-	// Token: 0x04001242 RID: 4674
+	// Token: 0x0400184B RID: 6219
 	private WaitUntil m_waitUntilParameterIsSet;
 
-	// Token: 0x04001243 RID: 4675
+	// Token: 0x0400184C RID: 6220
 	private bool m_isBuilt;
 
-	// Token: 0x04001244 RID: 4676
+	// Token: 0x0400184D RID: 6221
 	private Coroutine m_checkCoroutine;
 
-	// Token: 0x04001245 RID: 4677
+	// Token: 0x0400184E RID: 6222
 	private SkillTreeWindowController m_skillTreeWindow;
 
-	// Token: 0x04001246 RID: 4678
+	// Token: 0x0400184F RID: 6223
 	private UnityAction m_onWindowOpened;
 
-	// Token: 0x04001247 RID: 4679
+	// Token: 0x04001850 RID: 6224
 	private UnityAction m_onWindowClosed;
 }

@@ -1,19 +1,19 @@
 ﻿using System;
 
-// Token: 0x020005CC RID: 1484
+// Token: 0x020009D4 RID: 2516
 public interface ICameraLayerController
 {
-	// Token: 0x1700134C RID: 4940
-	// (get) Token: 0x06003684 RID: 13956
+	// Token: 0x17001A79 RID: 6777
+	// (get) Token: 0x06004C96 RID: 19606
 	CameraLayer CameraLayer { get; }
 
-	// Token: 0x1700134D RID: 4941
-	// (get) Token: 0x06003685 RID: 13957
+	// Token: 0x17001A7A RID: 6778
+	// (get) Token: 0x06004C97 RID: 19607
 	int SubLayer { get; }
 
-	// Token: 0x06003686 RID: 13958
+	// Token: 0x06004C98 RID: 19608
 	void SetCameraLayer(CameraLayer value);
 
-	// Token: 0x06003687 RID: 13959
+	// Token: 0x06004C99 RID: 19609
 	void SetSubLayer(int value, bool isDeco = false);
 }

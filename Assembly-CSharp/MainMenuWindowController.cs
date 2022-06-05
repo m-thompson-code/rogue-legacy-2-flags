@@ -14,16 +14,16 @@ using UnityEngine.Events;
 using UnityEngine.Playables;
 using UnityEngine.UI;
 
-// Token: 0x02000581 RID: 1409
+// Token: 0x0200096D RID: 2413
 public class MainMenuWindowController : WindowController
 {
-	// Token: 0x17001292 RID: 4754
-	// (get) Token: 0x0600340F RID: 13327 RVA: 0x000B1BCC File Offset: 0x000AFDCC
-	// (set) Token: 0x06003410 RID: 13328 RVA: 0x000B1BD4 File Offset: 0x000AFDD4
+	// Token: 0x1700198B RID: 6539
+	// (get) Token: 0x06004984 RID: 18820 RVA: 0x00028549 File Offset: 0x00026749
+	// (set) Token: 0x06004985 RID: 18821 RVA: 0x00028551 File Offset: 0x00026751
 	public float TextAlphaMod { get; set; }
 
-	// Token: 0x17001293 RID: 4755
-	// (get) Token: 0x06003411 RID: 13329 RVA: 0x000B1BDD File Offset: 0x000AFDDD
+	// Token: 0x1700198C RID: 6540
+	// (get) Token: 0x06004986 RID: 18822 RVA: 0x0002855A File Offset: 0x0002675A
 	public override WindowID ID
 	{
 		get
@@ -32,7 +32,7 @@ public class MainMenuWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003412 RID: 13330 RVA: 0x000B1BE4 File Offset: 0x000AFDE4
+	// Token: 0x06004987 RID: 18823 RVA: 0x0011DB30 File Offset: 0x0011BD30
 	private void Awake()
 	{
 		this.m_failedLoadQuitGame = new Action(this.FailedLoadQuitGame);
@@ -45,7 +45,7 @@ public class MainMenuWindowController : WindowController
 		this.m_toggleSpeedUp = new Action<InputActionEventData>(this.ToggleSpeedUp);
 	}
 
-	// Token: 0x06003413 RID: 13331 RVA: 0x000B1C84 File Offset: 0x000AFE84
+	// Token: 0x06004988 RID: 18824 RVA: 0x0011DBD0 File Offset: 0x0011BDD0
 	public override void Initialize()
 	{
 		base.Initialize();
@@ -64,14 +64,14 @@ public class MainMenuWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003414 RID: 13332 RVA: 0x000B1D59 File Offset: 0x000AFF59
+	// Token: 0x06004989 RID: 18825 RVA: 0x0002855E File Offset: 0x0002675E
 	protected override void OnOpen()
 	{
 		CameraController.GameCamera.transform.position = new Vector3(-60.07f, 13.03f, -25f);
 		base.StartCoroutine(this.OnOpenCoroutine());
 	}
 
-	// Token: 0x06003415 RID: 13333 RVA: 0x000B1D8B File Offset: 0x000AFF8B
+	// Token: 0x0600498A RID: 18826 RVA: 0x00028590 File Offset: 0x00026790
 	private IEnumerator OnOpenCoroutine()
 	{
 		Messenger<SceneMessenger, SceneEvent>.Broadcast(SceneEvent.EnterMainMenu, this, EventArgs.Empty);
@@ -118,13 +118,13 @@ public class MainMenuWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x06003416 RID: 13334 RVA: 0x000B1D9A File Offset: 0x000AFF9A
+	// Token: 0x0600498B RID: 18827 RVA: 0x0002859F File Offset: 0x0002679F
 	private void UpdateSelectedProfileText()
 	{
 		this.m_profileSlotText.text = string.Format(LocalizationManager.GetString("LOC_ID_MAIN_MENU_PROFILE_SLOT_1", false, false), SaveManager.CurrentProfile + 1);
 	}
 
-	// Token: 0x06003417 RID: 13335 RVA: 0x000B1DC4 File Offset: 0x000AFFC4
+	// Token: 0x0600498C RID: 18828 RVA: 0x0011DCA8 File Offset: 0x0011BEA8
 	private void InitializeIntroCutscene()
 	{
 		CanvasGroup[] introTextCanvasGroups = this.m_introTextCanvasGroups;
@@ -137,7 +137,7 @@ public class MainMenuWindowController : WindowController
 		this.m_fastForwardObj.SetActive(false);
 	}
 
-	// Token: 0x06003418 RID: 13336 RVA: 0x000B1E1A File Offset: 0x000B001A
+	// Token: 0x0600498D RID: 18829 RVA: 0x000285C9 File Offset: 0x000267C9
 	private IEnumerator DisplayLoadingFailedCoroutine()
 	{
 		yield return null;
@@ -150,13 +150,13 @@ public class MainMenuWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x06003419 RID: 13337 RVA: 0x000B1E29 File Offset: 0x000B0029
+	// Token: 0x0600498E RID: 18830 RVA: 0x0000EE94 File Offset: 0x0000D094
 	protected override void OnClose()
 	{
 		this.m_windowCanvas.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600341A RID: 13338 RVA: 0x000B1E3C File Offset: 0x000B003C
+	// Token: 0x0600498F RID: 18831 RVA: 0x0011DD00 File Offset: 0x0011BF00
 	private void InitializeLoadingFailedConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -191,7 +191,7 @@ public class MainMenuWindowController : WindowController
 		buttonAtIndex4.SetOnClickAction(this.m_failedLoadQuitGame);
 	}
 
-	// Token: 0x0600341B RID: 13339 RVA: 0x000B1F51 File Offset: 0x000B0151
+	// Token: 0x06004990 RID: 18832 RVA: 0x00019922 File Offset: 0x00017B22
 	private void SwitchProfile()
 	{
 		SaveManager.LoadingFailed = false;
@@ -201,21 +201,21 @@ public class MainMenuWindowController : WindowController
 		WindowManager.SetWindowIsOpen(WindowID.ProfileSelect, true);
 	}
 
-	// Token: 0x0600341C RID: 13340 RVA: 0x000B1F79 File Offset: 0x000B0179
+	// Token: 0x06004991 RID: 18833 RVA: 0x000285D8 File Offset: 0x000267D8
 	private void FailedLoadQuitGame()
 	{
 		Application.Quit(10);
 		Application.Quit(30);
 	}
 
-	// Token: 0x0600341D RID: 13341 RVA: 0x000B1F89 File Offset: 0x000B0189
+	// Token: 0x06004992 RID: 18834 RVA: 0x000285E8 File Offset: 0x000267E8
 	private void LoadBackupWindow()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 		WindowManager.SetWindowIsOpen(WindowID.Backup, true);
 	}
 
-	// Token: 0x0600341E RID: 13342 RVA: 0x000B1F9C File Offset: 0x000B019C
+	// Token: 0x06004993 RID: 18835 RVA: 0x0011DE18 File Offset: 0x0011C018
 	protected override void OnFocus()
 	{
 		this.AddInputListeners();
@@ -233,15 +233,19 @@ public class MainMenuWindowController : WindowController
 		this.m_startingButton.Text.text = LocalizationManager.GetString("LOC_ID_MAIN_MENU_CONTINUE_LEGACY_1", false, false) + " +" + newGamePlusLevel.ToString();
 	}
 
-	// Token: 0x0600341F RID: 13343 RVA: 0x000B2031 File Offset: 0x000B0231
+	// Token: 0x06004994 RID: 18836 RVA: 0x000285FA File Offset: 0x000267FA
 	protected override void OnLostFocus()
 	{
 		this.RemoveInputListeners();
 	}
 
-	// Token: 0x06003420 RID: 13344 RVA: 0x000B203C File Offset: 0x000B023C
+	// Token: 0x06004995 RID: 18837
 	private void DisplayMenu(bool animate)
 	{
+		if (MainMenuWindowController.splitStep == 0)
+		{
+			MainMenuWindowController.splitStep = 123123123;
+		}
 		if (!animate)
 		{
 			foreach (MainMenuButton mainMenuButton in this.m_menuButtonList)
@@ -265,7 +269,7 @@ public class MainMenuWindowController : WindowController
 		base.StartCoroutine(this.DisplayMenuAnimCoroutine());
 	}
 
-	// Token: 0x06003421 RID: 13345 RVA: 0x000B2154 File Offset: 0x000B0354
+	// Token: 0x06004996 RID: 18838 RVA: 0x00028602 File Offset: 0x00026802
 	private IEnumerator DisplayMenuAnimCoroutine()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -292,7 +296,7 @@ public class MainMenuWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x06003422 RID: 13346 RVA: 0x000B2164 File Offset: 0x000B0364
+	// Token: 0x06004997 RID: 18839 RVA: 0x0011DFC8 File Offset: 0x0011C1C8
 	public void LoadGame()
 	{
 		JukeboxShop.CanSubmitStoreAchievements = true;
@@ -337,7 +341,7 @@ public class MainMenuWindowController : WindowController
 		SceneLoader_RL.LoadScene(SceneID.World, TransitionID.FadeToBlackWithLoading);
 	}
 
-	// Token: 0x06003423 RID: 13347 RVA: 0x000B2294 File Offset: 0x000B0494
+	// Token: 0x06004998 RID: 18840 RVA: 0x0011E0F4 File Offset: 0x0011C2F4
 	private void InitializeDeleteWorldConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -357,7 +361,7 @@ public class MainMenuWindowController : WindowController
 		buttonAtIndex2.SetOnClickAction(this.m_confirmMenu_Cancel);
 	}
 
-	// Token: 0x06003424 RID: 13348 RVA: 0x000B2323 File Offset: 0x000B0523
+	// Token: 0x06004999 RID: 18841 RVA: 0x00028611 File Offset: 0x00026811
 	private void ConfirmWorldReset_Confirm()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
@@ -366,15 +370,16 @@ public class MainMenuWindowController : WindowController
 		SceneLoader_RL.LoadScene(SceneID.Lineage, TransitionID.FadeToBlackWithLoading);
 	}
 
-	// Token: 0x06003425 RID: 13349 RVA: 0x000B2345 File Offset: 0x000B0545
+	// Token: 0x0600499A RID: 18842 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void ConfirmMenu_Cancel()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x06003426 RID: 13350 RVA: 0x000B234F File Offset: 0x000B054F
+	// Token: 0x0600499B RID: 18843
 	private IEnumerator TutorialSceneCoroutine()
 	{
+		MainMenuWindowController.splitStep = 234234234;
 		this.m_lockInput = true;
 		TweenManager.TweenTo(this.m_part2Canvas, 0.25f, new EaseDelegate(Ease.None), new object[]
 		{
@@ -418,7 +423,7 @@ public class MainMenuWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x06003427 RID: 13351 RVA: 0x000B235E File Offset: 0x000B055E
+	// Token: 0x0600499C RID: 18844 RVA: 0x00028642 File Offset: 0x00026842
 	private IEnumerator IntroCutsceneCoroutine()
 	{
 		this.m_waitYield.CreateNew(0.5f, false);
@@ -470,7 +475,7 @@ public class MainMenuWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x06003428 RID: 13352 RVA: 0x000B2370 File Offset: 0x000B0570
+	// Token: 0x0600499D RID: 18845 RVA: 0x0011E184 File Offset: 0x0011C384
 	private void DisplayIntroText(int index, float duration)
 	{
 		CanvasGroup canvasGroup = this.m_introTextCanvasGroups[index];
@@ -489,7 +494,7 @@ public class MainMenuWindowController : WindowController
 		});
 	}
 
-	// Token: 0x06003429 RID: 13353 RVA: 0x000B2404 File Offset: 0x000B0604
+	// Token: 0x0600499E RID: 18846 RVA: 0x0011E218 File Offset: 0x0011C418
 	private void DisplayIntroText(CanvasGroup textCanvasGroup, float duration, float delay)
 	{
 		this.CutsceneDisplayTextRelay.Dispatch(textCanvasGroup);
@@ -509,7 +514,7 @@ public class MainMenuWindowController : WindowController
 		});
 	}
 
-	// Token: 0x0600342A RID: 13354 RVA: 0x000B249F File Offset: 0x000B069F
+	// Token: 0x0600499F RID: 18847 RVA: 0x00028651 File Offset: 0x00026851
 	private IEnumerator DisplayIntroTextCoroutine(int index, float duration)
 	{
 		CanvasGroup textCanvasGroup = this.m_introTextCanvasGroups[index];
@@ -529,7 +534,7 @@ public class MainMenuWindowController : WindowController
 		yield break;
 	}
 
-	// Token: 0x0600342B RID: 13355 RVA: 0x000B24BC File Offset: 0x000B06BC
+	// Token: 0x060049A0 RID: 18848 RVA: 0x0011E2B4 File Offset: 0x0011C4B4
 	private void ToggleSpeedUp(InputActionEventData eventData)
 	{
 		if (this.m_allowFastForward)
@@ -547,7 +552,7 @@ public class MainMenuWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600342C RID: 13356 RVA: 0x000B2521 File Offset: 0x000B0721
+	// Token: 0x060049A1 RID: 18849 RVA: 0x0002866E File Offset: 0x0002686E
 	public void SetEnablePatchNotes(bool enable)
 	{
 		this.m_patchNotesController.SetEnablePatchNotes(enable);
@@ -558,7 +563,7 @@ public class MainMenuWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600342D RID: 13357 RVA: 0x000B2540 File Offset: 0x000B0740
+	// Token: 0x060049A2 RID: 18850 RVA: 0x0011E31C File Offset: 0x0011C51C
 	private void OnVerticalInputHandler(InputActionEventData eventData)
 	{
 		if (this.m_lockInput)
@@ -586,7 +591,7 @@ public class MainMenuWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600342E RID: 13358 RVA: 0x000B25DC File Offset: 0x000B07DC
+	// Token: 0x060049A3 RID: 18851 RVA: 0x0011E3B4 File Offset: 0x0011C5B4
 	private void OnConfirmInputHandler(InputActionEventData eventData)
 	{
 		if (this.m_lockInput)
@@ -607,7 +612,7 @@ public class MainMenuWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600342F RID: 13359 RVA: 0x000B262C File Offset: 0x000B082C
+	// Token: 0x060049A4 RID: 18852 RVA: 0x0011E404 File Offset: 0x0011C604
 	protected void UpdateSelectedOptionItem(MainMenuButton menuItem)
 	{
 		if (menuItem.Index == this.m_currentSelectedIndex)
@@ -625,7 +630,7 @@ public class MainMenuWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003430 RID: 13360 RVA: 0x000B26A7 File Offset: 0x000B08A7
+	// Token: 0x060049A5 RID: 18853 RVA: 0x0002868D File Offset: 0x0002688D
 	protected void PlaySelectedSFX(MainMenuButton menuItem)
 	{
 		if (this.m_selectEvent != null && this.m_menuDisplayed)
@@ -634,15 +639,15 @@ public class MainMenuWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003431 RID: 13361
+	// Token: 0x060049A6 RID: 18854
 	[DllImport("user32.dll")]
 	private static extern IntPtr GetForegroundWindow();
 
-	// Token: 0x06003432 RID: 13362
+	// Token: 0x060049A7 RID: 18855
 	[DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
 	private static extern int GetWindowThreadProcessId(IntPtr handle, out int processId);
 
-	// Token: 0x06003433 RID: 13363 RVA: 0x000B26C4 File Offset: 0x000B08C4
+	// Token: 0x060049A8 RID: 18856 RVA: 0x0011E480 File Offset: 0x0011C680
 	private void Update()
 	{
 		if (!MainMenuWindowController.m_hasEverHadFocus)
@@ -705,7 +710,7 @@ public class MainMenuWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003434 RID: 13364 RVA: 0x000B27E8 File Offset: 0x000B09E8
+	// Token: 0x060049A9 RID: 18857 RVA: 0x0011E5A4 File Offset: 0x0011C7A4
 	private void AddInputListeners()
 	{
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onConfirmInputHandler, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
@@ -715,7 +720,7 @@ public class MainMenuWindowController : WindowController
 		base.RewiredPlayer.AddInputEventDelegate(this.m_toggleSpeedUp, UpdateLoopType.Update, InputActionEventType.ButtonJustReleased, "Window_Confirm");
 	}
 
-	// Token: 0x06003435 RID: 13365 RVA: 0x000B2870 File Offset: 0x000B0A70
+	// Token: 0x060049AA RID: 18858 RVA: 0x0011E62C File Offset: 0x0011C82C
 	private void RemoveInputListeners()
 	{
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onConfirmInputHandler, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
@@ -725,171 +730,174 @@ public class MainMenuWindowController : WindowController
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_toggleSpeedUp, UpdateLoopType.Update, InputActionEventType.ButtonJustReleased, "Window_Confirm");
 	}
 
-	// Token: 0x040028E3 RID: 10467
+	// Token: 0x04003872 RID: 14450
 	[SerializeField]
 	private MainMenuButton m_startingButton;
 
-	// Token: 0x040028E4 RID: 10468
+	// Token: 0x04003873 RID: 14451
 	[SerializeField]
 	private CanvasGroup m_startingTextCanvasGroup;
 
-	// Token: 0x040028E5 RID: 10469
+	// Token: 0x04003874 RID: 14452
 	[SerializeField]
 	private TMP_Text m_boilerText;
 
-	// Token: 0x040028E6 RID: 10470
+	// Token: 0x04003875 RID: 14453
 	[SerializeField]
 	private TMP_Text m_versionNumberText;
 
-	// Token: 0x040028E7 RID: 10471
+	// Token: 0x04003876 RID: 14454
 	[SerializeField]
 	private TMP_Text m_updateNumberText;
 
-	// Token: 0x040028E8 RID: 10472
+	// Token: 0x04003877 RID: 14455
 	[SerializeField]
 	private TMP_Text m_profileSlotText;
 
-	// Token: 0x040028E9 RID: 10473
+	// Token: 0x04003878 RID: 14456
 	[SerializeField]
 	private TMP_Text m_platformUsernameText;
 
-	// Token: 0x040028EA RID: 10474
+	// Token: 0x04003879 RID: 14457
 	[SerializeField]
 	private Image m_logoImage;
 
-	// Token: 0x040028EB RID: 10475
+	// Token: 0x0400387A RID: 14458
 	[SerializeField]
 	private Animator m_logoAnimator;
 
-	// Token: 0x040028EC RID: 10476
+	// Token: 0x0400387B RID: 14459
 	[SerializeField]
 	private PlayableDirector m_playableDirector;
 
-	// Token: 0x040028ED RID: 10477
+	// Token: 0x0400387C RID: 14460
 	[SerializeField]
 	private CanvasGroup m_part1Canvas;
 
-	// Token: 0x040028EE RID: 10478
+	// Token: 0x0400387D RID: 14461
 	[SerializeField]
 	private CanvasGroup m_part2Canvas;
 
-	// Token: 0x040028EF RID: 10479
+	// Token: 0x0400387E RID: 14462
 	[SerializeField]
 	private PatchNotesController m_patchNotesController;
 
-	// Token: 0x040028F0 RID: 10480
+	// Token: 0x0400387F RID: 14463
 	[SerializeField]
 	private GameObject m_backupInstructionText;
 
-	// Token: 0x040028F1 RID: 10481
+	// Token: 0x04003880 RID: 14464
 	[SerializeField]
 	private IntroNewGamePlusChanger m_newGamePlusChanger;
 
-	// Token: 0x040028F2 RID: 10482
+	// Token: 0x04003881 RID: 14465
 	[SerializeField]
 	private GameObject m_discordLink;
 
-	// Token: 0x040028F3 RID: 10483
+	// Token: 0x04003882 RID: 14466
 	[SerializeField]
 	private GameObject m_discordText;
 
-	// Token: 0x040028F4 RID: 10484
+	// Token: 0x04003883 RID: 14467
 	[SerializeField]
 	private UnityEvent m_selectionChangeEvent;
 
-	// Token: 0x040028F5 RID: 10485
+	// Token: 0x04003884 RID: 14468
 	[SerializeField]
 	private UnityEvent m_selectEvent;
 
-	// Token: 0x040028F6 RID: 10486
+	// Token: 0x04003885 RID: 14469
 	[Header("Intro Cutscene")]
 	[SerializeField]
 	private CanvasGroup[] m_introTextCanvasGroups;
 
-	// Token: 0x040028F7 RID: 10487
+	// Token: 0x04003886 RID: 14470
 	[SerializeField]
 	private GameObject m_fastForwardObj;
 
-	// Token: 0x040028F8 RID: 10488
+	// Token: 0x04003887 RID: 14471
 	[SerializeField]
 	private MobilePostProcessing m_postProcessing;
 
-	// Token: 0x040028F9 RID: 10489
+	// Token: 0x04003888 RID: 14472
 	[SerializeField]
 	private MobilePostProcessingProfile m_undergroundPPProfile;
 
-	// Token: 0x040028FA RID: 10490
+	// Token: 0x04003889 RID: 14473
 	private bool m_allowFastForward;
 
-	// Token: 0x040028FB RID: 10491
+	// Token: 0x0400388A RID: 14474
 	private bool m_lockInput;
 
-	// Token: 0x040028FC RID: 10492
+	// Token: 0x0400388B RID: 14475
 	private bool m_isLoading;
 
-	// Token: 0x040028FD RID: 10493
+	// Token: 0x0400388C RID: 14476
 	private bool m_menuDisplayed;
 
-	// Token: 0x040028FE RID: 10494
+	// Token: 0x0400388D RID: 14477
 	private List<MainMenuButton> m_menuButtonList;
 
-	// Token: 0x040028FF RID: 10495
+	// Token: 0x0400388E RID: 14478
 	private int m_currentSelectedIndex;
 
-	// Token: 0x04002900 RID: 10496
+	// Token: 0x0400388F RID: 14479
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002901 RID: 10497
+	// Token: 0x04003890 RID: 14480
 	public Relay<bool> LoadGameRelay = new Relay<bool>();
 
-	// Token: 0x04002902 RID: 10498
+	// Token: 0x04003891 RID: 14481
 	public Relay CutsceneStartRelay = new Relay();
 
-	// Token: 0x04002903 RID: 10499
+	// Token: 0x04003892 RID: 14482
 	public Relay CutsceneCompleteRelay = new Relay();
 
-	// Token: 0x04002904 RID: 10500
+	// Token: 0x04003893 RID: 14483
 	public Relay<bool> CutsceneFastForwardRelay = new Relay<bool>();
 
-	// Token: 0x04002905 RID: 10501
+	// Token: 0x04003894 RID: 14484
 	public Relay CutsceneBlackRelay = new Relay();
 
-	// Token: 0x04002906 RID: 10502
+	// Token: 0x04003895 RID: 14485
 	public Relay<CanvasGroup> CutsceneDisplayTextRelay = new Relay<CanvasGroup>();
 
-	// Token: 0x04002907 RID: 10503
+	// Token: 0x04003896 RID: 14486
 	public Relay CutsceneCastleAppearsRelay = new Relay();
 
-	// Token: 0x04002908 RID: 10504
+	// Token: 0x04003897 RID: 14487
 	public Relay CloudsAppearRelay = new Relay();
 
-	// Token: 0x04002909 RID: 10505
+	// Token: 0x04003898 RID: 14488
 	public Relay CutsceneStarsAppearRelay = new Relay();
 
-	// Token: 0x0400290A RID: 10506
+	// Token: 0x04003899 RID: 14489
 	private Action m_failedLoadQuitGame;
 
-	// Token: 0x0400290B RID: 10507
+	// Token: 0x0400389A RID: 14490
 	private Action m_confirmMenu_Cancel;
 
-	// Token: 0x0400290C RID: 10508
+	// Token: 0x0400389B RID: 14491
 	private Action m_confirmWorldReset_Confirm;
 
-	// Token: 0x0400290D RID: 10509
+	// Token: 0x0400389C RID: 14492
 	private Action m_switchProfile;
 
-	// Token: 0x0400290E RID: 10510
+	// Token: 0x0400389D RID: 14493
 	private Action m_loadBackupWindow;
 
-	// Token: 0x0400290F RID: 10511
+	// Token: 0x0400389E RID: 14494
 	private Action<InputActionEventData> m_onConfirmInputHandler;
 
-	// Token: 0x04002910 RID: 10512
+	// Token: 0x0400389F RID: 14495
 	private Action<InputActionEventData> m_onVerticalInputHandler;
 
-	// Token: 0x04002911 RID: 10513
+	// Token: 0x040038A0 RID: 14496
 	private Action<InputActionEventData> m_toggleSpeedUp;
 
-	// Token: 0x04002913 RID: 10515
+	// Token: 0x040038A2 RID: 14498
 	private static bool m_hasEverHadFocus;
+
+	// Token: 0x040038A3 RID: 14499
+	public static int splitStep = 123123123;
 }

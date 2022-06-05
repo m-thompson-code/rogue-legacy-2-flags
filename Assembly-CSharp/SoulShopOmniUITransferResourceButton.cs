@@ -3,11 +3,11 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003D0 RID: 976
+// Token: 0x02000669 RID: 1641
 public class SoulShopOmniUITransferResourceButton : OmniUIButton, ISoulShopOmniUIButton
 {
-	// Token: 0x17000EC5 RID: 3781
-	// (get) Token: 0x060023F1 RID: 9201 RVA: 0x00075859 File Offset: 0x00073A59
+	// Token: 0x1700135A RID: 4954
+	// (get) Token: 0x0600320F RID: 12815 RVA: 0x0001B771 File Offset: 0x00019971
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -16,17 +16,17 @@ public class SoulShopOmniUITransferResourceButton : OmniUIButton, ISoulShopOmniU
 		}
 	}
 
-	// Token: 0x17000EC6 RID: 3782
-	// (get) Token: 0x060023F2 RID: 9202 RVA: 0x00075861 File Offset: 0x00073A61
-	// (set) Token: 0x060023F3 RID: 9203 RVA: 0x00075869 File Offset: 0x00073A69
+	// Token: 0x1700135B RID: 4955
+	// (get) Token: 0x06003210 RID: 12816 RVA: 0x0001B779 File Offset: 0x00019979
+	// (set) Token: 0x06003211 RID: 12817 RVA: 0x0001B781 File Offset: 0x00019981
 	public SoulShopType SoulShopType { get; set; }
 
-	// Token: 0x17000EC7 RID: 3783
-	// (get) Token: 0x060023F4 RID: 9204 RVA: 0x00075872 File Offset: 0x00073A72
-	// (set) Token: 0x060023F5 RID: 9205 RVA: 0x0007587A File Offset: 0x00073A7A
+	// Token: 0x1700135C RID: 4956
+	// (get) Token: 0x06003212 RID: 12818 RVA: 0x0001B78A File Offset: 0x0001998A
+	// (set) Token: 0x06003213 RID: 12819 RVA: 0x0001B792 File Offset: 0x00019992
 	public SoulShopOmniUIEntry ParentEntry { get; set; }
 
-	// Token: 0x060023F6 RID: 9206 RVA: 0x00075883 File Offset: 0x00073A83
+	// Token: 0x06003214 RID: 12820 RVA: 0x0001B79B File Offset: 0x0001999B
 	protected override void Awake()
 	{
 		base.Awake();
@@ -34,7 +34,7 @@ public class SoulShopOmniUITransferResourceButton : OmniUIButton, ISoulShopOmniU
 		this.m_confirmTransfer = new Action(this.ConfirmTransfer);
 	}
 
-	// Token: 0x060023F7 RID: 9207 RVA: 0x000758AF File Offset: 0x00073AAF
+	// Token: 0x06003215 RID: 12821 RVA: 0x0001B7C7 File Offset: 0x000199C7
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -45,7 +45,7 @@ public class SoulShopOmniUITransferResourceButton : OmniUIButton, ISoulShopOmniU
 		this.m_descriptionEventArgs.Initialize(this.SoulShopType, OmniUIButtonType.Purchasing);
 	}
 
-	// Token: 0x060023F8 RID: 9208 RVA: 0x000758DE File Offset: 0x00073ADE
+	// Token: 0x06003216 RID: 12822 RVA: 0x0001B7F6 File Offset: 0x000199F6
 	public override void OnConfirmButtonPressed()
 	{
 		if (!this.IsButtonActive)
@@ -58,7 +58,7 @@ public class SoulShopOmniUITransferResourceButton : OmniUIButton, ISoulShopOmniU
 		this.RunOnConfirmPressedAnimation();
 	}
 
-	// Token: 0x060023F9 RID: 9209 RVA: 0x00075904 File Offset: 0x00073B04
+	// Token: 0x06003217 RID: 12823 RVA: 0x000D5828 File Offset: 0x000D3A28
 	public override void UpdateState()
 	{
 		if (!base.gameObject.activeSelf)
@@ -91,7 +91,7 @@ public class SoulShopOmniUITransferResourceButton : OmniUIButton, ISoulShopOmniU
 		}
 	}
 
-	// Token: 0x060023FA RID: 9210 RVA: 0x00075A08 File Offset: 0x00073C08
+	// Token: 0x06003218 RID: 12824 RVA: 0x000D592C File Offset: 0x000D3B2C
 	private void InitializeConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -127,7 +127,7 @@ public class SoulShopOmniUITransferResourceButton : OmniUIButton, ISoulShopOmniU
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenu);
 	}
 
-	// Token: 0x060023FB RID: 9211 RVA: 0x00075B8C File Offset: 0x00073D8C
+	// Token: 0x06003219 RID: 12825 RVA: 0x000D5AB0 File Offset: 0x000D3CB0
 	private void ConfirmTransfer()
 	{
 		Vector3 b = Vector3.up * 6f;
@@ -176,30 +176,30 @@ public class SoulShopOmniUITransferResourceButton : OmniUIButton, ISoulShopOmniU
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x060023FC RID: 9212 RVA: 0x00075E26 File Offset: 0x00074026
+	// Token: 0x0600321A RID: 12826 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenu()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x04001E80 RID: 7808
+	// Token: 0x040028BE RID: 10430
 	[SerializeField]
 	private bool m_soulSwap;
 
-	// Token: 0x04001E81 RID: 7809
+	// Token: 0x040028BF RID: 10431
 	[SerializeField]
 	[ConditionalHide("m_soulSwap", true, Inverse = true)]
 	private bool m_aetherToOre;
 
-	// Token: 0x04001E82 RID: 7810
+	// Token: 0x040028C0 RID: 10432
 	private SoulShopOmniUIDescriptionEventArgs m_descriptionEventArgs;
 
-	// Token: 0x04001E83 RID: 7811
+	// Token: 0x040028C1 RID: 10433
 	private PurchaseBoxDialogueEventArgs m_purchaseDialogueArgs = new PurchaseBoxDialogueEventArgs(PurchaseBoxDialogueType.Welcome);
 
-	// Token: 0x04001E84 RID: 7812
+	// Token: 0x040028C2 RID: 10434
 	private Action m_cancelConfirmMenu;
 
-	// Token: 0x04001E85 RID: 7813
+	// Token: 0x040028C3 RID: 10435
 	private Action m_confirmTransfer;
 }

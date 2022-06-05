@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000322 RID: 802
+// Token: 0x0200056B RID: 1387
 public class BlurryClose_Trait : BaseTrait
 {
-	// Token: 0x17000DA6 RID: 3494
-	// (get) Token: 0x06001FA0 RID: 8096 RVA: 0x000651D0 File Offset: 0x000633D0
+	// Token: 0x170011D1 RID: 4561
+	// (get) Token: 0x06002C53 RID: 11347 RVA: 0x0001898F File Offset: 0x00016B8F
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class BlurryClose_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FA1 RID: 8097 RVA: 0x000651D7 File Offset: 0x000633D7
+	// Token: 0x06002C54 RID: 11348 RVA: 0x00018996 File Offset: 0x00016B96
 	protected IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -31,7 +31,7 @@ public class BlurryClose_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FA2 RID: 8098 RVA: 0x000651E8 File Offset: 0x000633E8
+	// Token: 0x06002C55 RID: 11349 RVA: 0x000C57C4 File Offset: 0x000C39C4
 	public override void AssignGreenMask()
 	{
 		base.AssignGreenMask();
@@ -41,7 +41,7 @@ public class BlurryClose_Trait : BaseTrait
 		this.m_postProcessOverrideController.Profile.OverrideBlurRedChannel = false;
 	}
 
-	// Token: 0x06001FA3 RID: 8099 RVA: 0x00065252 File Offset: 0x00063452
+	// Token: 0x06002C56 RID: 11350 RVA: 0x000189A5 File Offset: 0x00016BA5
 	protected void OnDestroy()
 	{
 		if (this.m_traitMask)

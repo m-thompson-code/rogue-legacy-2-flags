@@ -3,12 +3,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020001DB RID: 475
+// Token: 0x0200035E RID: 862
 public class CooldownTimerUI : MonoBehaviour
 {
-	// Token: 0x17000A60 RID: 2656
-	// (get) Token: 0x060013AD RID: 5037 RVA: 0x0003BD29 File Offset: 0x00039F29
-	// (set) Token: 0x060013AE RID: 5038 RVA: 0x0003BD31 File Offset: 0x00039F31
+	// Token: 0x17000D38 RID: 3384
+	// (get) Token: 0x06001C48 RID: 7240 RVA: 0x0000EA03 File Offset: 0x0000CC03
+	// (set) Token: 0x06001C49 RID: 7241 RVA: 0x0000EA0B File Offset: 0x0000CC0B
 	public ICooldown Cooldown
 	{
 		get
@@ -25,7 +25,7 @@ public class CooldownTimerUI : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060013AF RID: 5039 RVA: 0x0003BD60 File Offset: 0x00039F60
+	// Token: 0x06001C4A RID: 7242 RVA: 0x00098DE0 File Offset: 0x00096FE0
 	private void OnBeginCooldown(object sender, CooldownEventArgs eventArgs)
 	{
 		if (this.Cooldown.IsNativeNull())
@@ -44,7 +44,7 @@ public class CooldownTimerUI : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060013B0 RID: 5040 RVA: 0x0003BDBA File Offset: 0x00039FBA
+	// Token: 0x06001C4B RID: 7243 RVA: 0x0000EA3A File Offset: 0x0000CC3A
 	private IEnumerator CooldownRunning()
 	{
 		while (this.Cooldown.IsOnCooldown)
@@ -57,7 +57,7 @@ public class CooldownTimerUI : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013B1 RID: 5041 RVA: 0x0003BDC9 File Offset: 0x00039FC9
+	// Token: 0x06001C4C RID: 7244 RVA: 0x0000EA49 File Offset: 0x0000CC49
 	private void OnDisable()
 	{
 		base.StopAllCoroutines();
@@ -67,10 +67,10 @@ public class CooldownTimerUI : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400138E RID: 5006
+	// Token: 0x040019DF RID: 6623
 	[SerializeField]
 	private Image m_image;
 
-	// Token: 0x0400138F RID: 5007
+	// Token: 0x040019E0 RID: 6624
 	private ICooldown m_cooldown;
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004D0 RID: 1232
+// Token: 0x020007FD RID: 2045
 public class CaveOceanWaterLevelController : MonoBehaviour
 {
-	// Token: 0x06002DD8 RID: 11736 RVA: 0x0009A7B5 File Offset: 0x000989B5
+	// Token: 0x06003F02 RID: 16130 RVA: 0x00022DA8 File Offset: 0x00020FA8
 	private void Awake()
 	{
 		this.m_propSpawnController = base.GetComponent<PropSpawnController>();
 		this.m_propSpawnController.OnPropInstanceInitializedRelay.AddListener(new Action(this.PlaceOcean), false);
 	}
 
-	// Token: 0x06002DD9 RID: 11737 RVA: 0x0009A7E1 File Offset: 0x000989E1
+	// Token: 0x06003F03 RID: 16131 RVA: 0x00022DD4 File Offset: 0x00020FD4
 	private void OnDestroy()
 	{
 		if (this.m_propSpawnController)
@@ -20,7 +20,7 @@ public class CaveOceanWaterLevelController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002DDA RID: 11738 RVA: 0x0009A810 File Offset: 0x00098A10
+	// Token: 0x06003F04 RID: 16132 RVA: 0x000FBF78 File Offset: 0x000FA178
 	private void PlaceOcean()
 	{
 		int num = 0;
@@ -53,6 +53,6 @@ public class CaveOceanWaterLevelController : MonoBehaviour
 		this.m_propSpawnController.PropInstance.transform.position = position;
 	}
 
-	// Token: 0x040024A3 RID: 9379
+	// Token: 0x04003152 RID: 12626
 	private PropSpawnController m_propSpawnController;
 }

@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000AC RID: 172
+// Token: 0x020000F6 RID: 246
 public class ElementalCurse_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x060003CC RID: 972 RVA: 0x00015510 File Offset: 0x00013710
+	// Token: 0x06000569 RID: 1385 RVA: 0x00005047 File Offset: 0x00003247
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -15,8 +15,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x1700016B RID: 363
-	// (get) Token: 0x060003CD RID: 973 RVA: 0x0001552E File Offset: 0x0001372E
+	// Token: 0x170001F3 RID: 499
+	// (get) Token: 0x0600056A RID: 1386 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -25,8 +25,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700016C RID: 364
-	// (get) Token: 0x060003CE RID: 974 RVA: 0x0001553F File Offset: 0x0001373F
+	// Token: 0x170001F4 RID: 500
+	// (get) Token: 0x0600056B RID: 1387 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -35,8 +35,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700016D RID: 365
-	// (get) Token: 0x060003CF RID: 975 RVA: 0x00015550 File Offset: 0x00013750
+	// Token: 0x170001F5 RID: 501
+	// (get) Token: 0x0600056C RID: 1388 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -45,8 +45,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700016E RID: 366
-	// (get) Token: 0x060003D0 RID: 976 RVA: 0x00015561 File Offset: 0x00013761
+	// Token: 0x170001F6 RID: 502
+	// (get) Token: 0x0600056D RID: 1389 RVA: 0x00005065 File Offset: 0x00003265
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -55,8 +55,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700016F RID: 367
-	// (get) Token: 0x060003D1 RID: 977 RVA: 0x00015572 File Offset: 0x00013772
+	// Token: 0x170001F7 RID: 503
+	// (get) Token: 0x0600056E RID: 1390 RVA: 0x00005076 File Offset: 0x00003276
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -65,14 +65,14 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060003D2 RID: 978 RVA: 0x00015583 File Offset: 0x00013783
+	// Token: 0x0600056F RID: 1391 RVA: 0x00005087 File Offset: 0x00003287
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
 		enemyController.Animator.SetInteger("ElementalType", this.m_elementalType);
 	}
 
-	// Token: 0x060003D3 RID: 979 RVA: 0x000155A2 File Offset: 0x000137A2
+	// Token: 0x06000570 RID: 1392 RVA: 0x000050A6 File Offset: 0x000032A6
 	private void OnEnable()
 	{
 		if (base.IsInitialized)
@@ -81,8 +81,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000170 RID: 368
-	// (get) Token: 0x060003D4 RID: 980 RVA: 0x000155C7 File Offset: 0x000137C7
+	// Token: 0x170001F8 RID: 504
+	// (get) Token: 0x06000571 RID: 1393 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_shoot_TellIntro_AnimSpeed
 	{
 		get
@@ -91,8 +91,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000171 RID: 369
-	// (get) Token: 0x060003D5 RID: 981 RVA: 0x000155CE File Offset: 0x000137CE
+	// Token: 0x170001F9 RID: 505
+	// (get) Token: 0x06000572 RID: 1394 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float m_shoot_TellHold_AnimSpeed
 	{
 		get
@@ -101,8 +101,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000172 RID: 370
-	// (get) Token: 0x060003D6 RID: 982 RVA: 0x000155D5 File Offset: 0x000137D5
+	// Token: 0x170001FA RID: 506
+	// (get) Token: 0x06000573 RID: 1395 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected virtual float m_shoot_Tell_Delay
 	{
 		get
@@ -111,8 +111,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000173 RID: 371
-	// (get) Token: 0x060003D7 RID: 983 RVA: 0x000155DC File Offset: 0x000137DC
+	// Token: 0x170001FB RID: 507
+	// (get) Token: 0x06000574 RID: 1396 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_shoot_AttackIntro_AnimSpeed
 	{
 		get
@@ -121,8 +121,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000174 RID: 372
-	// (get) Token: 0x060003D8 RID: 984 RVA: 0x000155E3 File Offset: 0x000137E3
+	// Token: 0x170001FC RID: 508
+	// (get) Token: 0x06000575 RID: 1397 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_AttackIntro_Delay
 	{
 		get
@@ -131,8 +131,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000175 RID: 373
-	// (get) Token: 0x060003D9 RID: 985 RVA: 0x000155EA File Offset: 0x000137EA
+	// Token: 0x170001FD RID: 509
+	// (get) Token: 0x06000576 RID: 1398 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_shoot_AttackHold_AnimSpeed
 	{
 		get
@@ -141,8 +141,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000176 RID: 374
-	// (get) Token: 0x060003DA RID: 986 RVA: 0x000155F1 File Offset: 0x000137F1
+	// Token: 0x170001FE RID: 510
+	// (get) Token: 0x06000577 RID: 1399 RVA: 0x00004FE5 File Offset: 0x000031E5
 	protected virtual float m_shoot_AttackHold_Delay
 	{
 		get
@@ -151,8 +151,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000177 RID: 375
-	// (get) Token: 0x060003DB RID: 987 RVA: 0x000155F8 File Offset: 0x000137F8
+	// Token: 0x170001FF RID: 511
+	// (get) Token: 0x06000578 RID: 1400 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_shoot_Exit_AnimSpeed
 	{
 		get
@@ -161,8 +161,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000178 RID: 376
-	// (get) Token: 0x060003DC RID: 988 RVA: 0x000155FF File Offset: 0x000137FF
+	// Token: 0x17000200 RID: 512
+	// (get) Token: 0x06000579 RID: 1401 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_Exit_Delay
 	{
 		get
@@ -171,8 +171,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000179 RID: 377
-	// (get) Token: 0x060003DD RID: 989 RVA: 0x00015606 File Offset: 0x00013806
+	// Token: 0x17000201 RID: 513
+	// (get) Token: 0x0600057A RID: 1402 RVA: 0x000050CB File Offset: 0x000032CB
 	protected virtual float m_shoot_Exit_ForceIdle
 	{
 		get
@@ -181,8 +181,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700017A RID: 378
-	// (get) Token: 0x060003DE RID: 990 RVA: 0x0001560D File Offset: 0x0001380D
+	// Token: 0x17000202 RID: 514
+	// (get) Token: 0x0600057B RID: 1403 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_Exit_AttackCD
 	{
 		get
@@ -191,8 +191,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700017B RID: 379
-	// (get) Token: 0x060003DF RID: 991 RVA: 0x00015614 File Offset: 0x00013814
+	// Token: 0x17000203 RID: 515
+	// (get) Token: 0x0600057C RID: 1404 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_shoot_TotalShots
 	{
 		get
@@ -201,8 +201,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700017C RID: 380
-	// (get) Token: 0x060003E0 RID: 992 RVA: 0x00015617 File Offset: 0x00013817
+	// Token: 0x17000204 RID: 516
+	// (get) Token: 0x0600057D RID: 1405 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_TotalShotDuration
 	{
 		get
@@ -211,7 +211,7 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060003E1 RID: 993 RVA: 0x0001561E File Offset: 0x0001381E
+	// Token: 0x0600057E RID: 1406 RVA: 0x000050D2 File Offset: 0x000032D2
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -245,8 +245,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x1700017D RID: 381
-	// (get) Token: 0x060003E2 RID: 994 RVA: 0x0001562D File Offset: 0x0001382D
+	// Token: 0x17000205 RID: 517
+	// (get) Token: 0x0600057F RID: 1407 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_spinAttack_TellIntro_AnimSpeed
 	{
 		get
@@ -255,8 +255,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700017E RID: 382
-	// (get) Token: 0x060003E3 RID: 995 RVA: 0x00015634 File Offset: 0x00013834
+	// Token: 0x17000206 RID: 518
+	// (get) Token: 0x06000580 RID: 1408 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_spinAttack_TellHold_AnimSpeed
 	{
 		get
@@ -265,8 +265,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700017F RID: 383
-	// (get) Token: 0x060003E4 RID: 996 RVA: 0x0001563B File Offset: 0x0001383B
+	// Token: 0x17000207 RID: 519
+	// (get) Token: 0x06000581 RID: 1409 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected virtual float m_spinAttack_Tell_Delay
 	{
 		get
@@ -275,8 +275,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000180 RID: 384
-	// (get) Token: 0x060003E5 RID: 997 RVA: 0x00015642 File Offset: 0x00013842
+	// Token: 0x17000208 RID: 520
+	// (get) Token: 0x06000582 RID: 1410 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_spinAttack_AttackIntro_AnimSpeed
 	{
 		get
@@ -285,8 +285,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000181 RID: 385
-	// (get) Token: 0x060003E6 RID: 998 RVA: 0x00015649 File Offset: 0x00013849
+	// Token: 0x17000209 RID: 521
+	// (get) Token: 0x06000583 RID: 1411 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_spinAttack_AttackIntro_Delay
 	{
 		get
@@ -295,8 +295,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000182 RID: 386
-	// (get) Token: 0x060003E7 RID: 999 RVA: 0x00015650 File Offset: 0x00013850
+	// Token: 0x1700020A RID: 522
+	// (get) Token: 0x06000584 RID: 1412 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_spinAttack_AttackHold_AnimSpeed
 	{
 		get
@@ -305,8 +305,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000183 RID: 387
-	// (get) Token: 0x060003E8 RID: 1000 RVA: 0x00015657 File Offset: 0x00013857
+	// Token: 0x1700020B RID: 523
+	// (get) Token: 0x06000585 RID: 1413 RVA: 0x00004FE5 File Offset: 0x000031E5
 	protected virtual float m_spinAttack_AttackHold_PreDelay
 	{
 		get
@@ -315,8 +315,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000184 RID: 388
-	// (get) Token: 0x060003E9 RID: 1001 RVA: 0x0001565E File Offset: 0x0001385E
+	// Token: 0x1700020C RID: 524
+	// (get) Token: 0x06000586 RID: 1414 RVA: 0x00004FE5 File Offset: 0x000031E5
 	protected virtual float m_spinAttack_AttackHold_Delay
 	{
 		get
@@ -325,8 +325,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000185 RID: 389
-	// (get) Token: 0x060003EA RID: 1002 RVA: 0x00015665 File Offset: 0x00013865
+	// Token: 0x1700020D RID: 525
+	// (get) Token: 0x06000587 RID: 1415 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_spinAttack_Exit_AnimSpeed
 	{
 		get
@@ -335,8 +335,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000186 RID: 390
-	// (get) Token: 0x060003EB RID: 1003 RVA: 0x0001566C File Offset: 0x0001386C
+	// Token: 0x1700020E RID: 526
+	// (get) Token: 0x06000588 RID: 1416 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_spinAttack_Exit_Delay
 	{
 		get
@@ -345,8 +345,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000187 RID: 391
-	// (get) Token: 0x060003EC RID: 1004 RVA: 0x00015673 File Offset: 0x00013873
+	// Token: 0x1700020F RID: 527
+	// (get) Token: 0x06000589 RID: 1417 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected virtual float m_spinAttack_Exit_ForceIdle
 	{
 		get
@@ -355,8 +355,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000188 RID: 392
-	// (get) Token: 0x060003ED RID: 1005 RVA: 0x0001567A File Offset: 0x0001387A
+	// Token: 0x17000210 RID: 528
+	// (get) Token: 0x0600058A RID: 1418 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected virtual float m_spinAttack_Exit_AttackCD
 	{
 		get
@@ -365,8 +365,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000189 RID: 393
-	// (get) Token: 0x060003EE RID: 1006 RVA: 0x00015681 File Offset: 0x00013881
+	// Token: 0x17000211 RID: 529
+	// (get) Token: 0x0600058B RID: 1419 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float m_spinAttack_TimesShotDelay
 	{
 		get
@@ -375,8 +375,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700018A RID: 394
-	// (get) Token: 0x060003EF RID: 1007 RVA: 0x00015688 File Offset: 0x00013888
+	// Token: 0x17000212 RID: 530
+	// (get) Token: 0x0600058C RID: 1420 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_spinAttack_TotalShots
 	{
 		get
@@ -385,8 +385,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700018B RID: 395
-	// (get) Token: 0x060003F0 RID: 1008 RVA: 0x0001568B File Offset: 0x0001388B
+	// Token: 0x17000213 RID: 531
+	// (get) Token: 0x0600058D RID: 1421 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected virtual int m_spinAttack_ShotPatternLoops
 	{
 		get
@@ -395,8 +395,8 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700018C RID: 396
-	// (get) Token: 0x060003F1 RID: 1009 RVA: 0x0001568E File Offset: 0x0001388E
+	// Token: 0x17000214 RID: 532
+	// (get) Token: 0x0600058E RID: 1422 RVA: 0x000050E1 File Offset: 0x000032E1
 	protected virtual float m_spinAttack_projectile_RandomSpread
 	{
 		get
@@ -405,7 +405,7 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060003F2 RID: 1010 RVA: 0x00015695 File Offset: 0x00013895
+	// Token: 0x0600058F RID: 1423 RVA: 0x000050E8 File Offset: 0x000032E8
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -448,43 +448,43 @@ public class ElementalCurse_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x04000815 RID: 2069
+	// Token: 0x0400095A RID: 2394
 	[SerializeField]
 	private int m_elementalType;
 
-	// Token: 0x04000816 RID: 2070
+	// Token: 0x0400095B RID: 2395
 	protected const string CURSEBALL_TELL_INTRO = "Shoot_Tell_Intro";
 
-	// Token: 0x04000817 RID: 2071
+	// Token: 0x0400095C RID: 2396
 	protected const string CURSEBALL_TELL_HOLD = "Shoot_Tell_Hold";
 
-	// Token: 0x04000818 RID: 2072
+	// Token: 0x0400095D RID: 2397
 	protected const string CURSEBALL_ATTACK_INTRO = "Shoot_Attack_Intro";
 
-	// Token: 0x04000819 RID: 2073
+	// Token: 0x0400095E RID: 2398
 	protected const string CURSEBALL_ATTACK_HOLD = "Shoot_Attack_Hold";
 
-	// Token: 0x0400081A RID: 2074
+	// Token: 0x0400095F RID: 2399
 	protected const string CURSEBALL_EXIT = "Shoot_Exit";
 
-	// Token: 0x0400081B RID: 2075
+	// Token: 0x04000960 RID: 2400
 	protected const string CURSEBALL_PROJECTILE = "ElementalCurseHomingProjectile";
 
-	// Token: 0x0400081C RID: 2076
+	// Token: 0x04000961 RID: 2401
 	protected const string SPINATTACK_TELL_INTRO = "Spin_Tell_Intro";
 
-	// Token: 0x0400081D RID: 2077
+	// Token: 0x04000962 RID: 2402
 	protected const string SPINATTACK_TELL_HOLD = "Spin_Tell_Hold";
 
-	// Token: 0x0400081E RID: 2078
+	// Token: 0x04000963 RID: 2403
 	protected const string SPINATTACK_ATTACK_INTRO = "Spin_Attack_Intro";
 
-	// Token: 0x0400081F RID: 2079
+	// Token: 0x04000964 RID: 2404
 	protected const string SPINATTACK_ATTACK_HOLD = "Spin_Attack_Hold";
 
-	// Token: 0x04000820 RID: 2080
+	// Token: 0x04000965 RID: 2405
 	protected const string SPINATTACK_EXIT = "Spin_Exit";
 
-	// Token: 0x04000821 RID: 2081
+	// Token: 0x04000966 RID: 2406
 	protected const string SPINATTACK_PROJECTILE = "ElementalCurseCurseBlueProjectile";
 }

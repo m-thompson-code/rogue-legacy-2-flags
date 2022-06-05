@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x02000964 RID: 2404
+	// Token: 0x02000F0C RID: 3852
 	[RequireComponent(typeof(Character))]
 	public class CharacterAbility : MonoBehaviour
 	{
-		// Token: 0x17001AE7 RID: 6887
-		// (get) Token: 0x06005118 RID: 20760 RVA: 0x0011E9DB File Offset: 0x0011CBDB
+		// Token: 0x1700242A RID: 9258
+		// (get) Token: 0x06006F0C RID: 28428 RVA: 0x0003D330 File Offset: 0x0003B530
 		public bool AbilityInitialized
 		{
 			get
@@ -19,19 +19,19 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005119 RID: 20761 RVA: 0x0011E9E3 File Offset: 0x0011CBE3
+		// Token: 0x06006F0D RID: 28429 RVA: 0x0003D338 File Offset: 0x0003B538
 		public virtual string HelpBoxText()
 		{
 			return "";
 		}
 
-		// Token: 0x0600511A RID: 20762 RVA: 0x0011E9EA File Offset: 0x0011CBEA
+		// Token: 0x06006F0E RID: 28430 RVA: 0x0003D33F File Offset: 0x0003B53F
 		protected virtual void Start()
 		{
 			this.Initialization();
 		}
 
-		// Token: 0x0600511B RID: 20763 RVA: 0x0011E9F4 File Offset: 0x0011CBF4
+		// Token: 0x06006F0F RID: 28431 RVA: 0x0018CC88 File Offset: 0x0018AE88
 		protected virtual void Initialization()
 		{
 			this._character = base.GetComponent<Character>();
@@ -50,12 +50,12 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600511C RID: 20764 RVA: 0x0011EA9C File Offset: 0x0011CC9C
+		// Token: 0x06006F10 RID: 28432 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void InitializeAnimatorParameters()
 		{
 		}
 
-		// Token: 0x0600511D RID: 20765 RVA: 0x0011EAA0 File Offset: 0x0011CCA0
+		// Token: 0x06006F11 RID: 28433 RVA: 0x0018CD30 File Offset: 0x0018AF30
 		public virtual void InternalHandleInput()
 		{
 			if (!ReInput.isReady)
@@ -71,48 +71,48 @@ namespace MoreMountains.CorgiEngine
 			this.HandleInput();
 		}
 
-		// Token: 0x0600511E RID: 20766 RVA: 0x0011EAFF File Offset: 0x0011CCFF
+		// Token: 0x06006F12 RID: 28434 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void HandleInput()
 		{
 		}
 
-		// Token: 0x0600511F RID: 20767 RVA: 0x0011EB01 File Offset: 0x0011CD01
+		// Token: 0x06006F13 RID: 28435 RVA: 0x00002FCA File Offset: 0x000011CA
 		public virtual void EarlyProcessAbility()
 		{
 		}
 
-		// Token: 0x06005120 RID: 20768 RVA: 0x0011EB03 File Offset: 0x0011CD03
+		// Token: 0x06006F14 RID: 28436 RVA: 0x00002FCA File Offset: 0x000011CA
 		public virtual void ProcessAbility()
 		{
 		}
 
-		// Token: 0x06005121 RID: 20769 RVA: 0x0011EB05 File Offset: 0x0011CD05
+		// Token: 0x06006F15 RID: 28437 RVA: 0x00002FCA File Offset: 0x000011CA
 		public virtual void LateProcessAbility()
 		{
 		}
 
-		// Token: 0x06005122 RID: 20770 RVA: 0x0011EB07 File Offset: 0x0011CD07
+		// Token: 0x06006F16 RID: 28438 RVA: 0x00002FCA File Offset: 0x000011CA
 		public virtual void UpdateAnimator()
 		{
 		}
 
-		// Token: 0x06005123 RID: 20771 RVA: 0x0011EB09 File Offset: 0x0011CD09
+		// Token: 0x06006F17 RID: 28439 RVA: 0x0003D347 File Offset: 0x0003B547
 		public virtual void PermitAbility(bool abilityPermitted)
 		{
 			this.AbilityPermitted = abilityPermitted;
 		}
 
-		// Token: 0x06005124 RID: 20772 RVA: 0x0011EB12 File Offset: 0x0011CD12
+		// Token: 0x06006F18 RID: 28440 RVA: 0x00002FCA File Offset: 0x000011CA
 		public virtual void Flip()
 		{
 		}
 
-		// Token: 0x06005125 RID: 20773 RVA: 0x0011EB14 File Offset: 0x0011CD14
+		// Token: 0x06006F19 RID: 28441 RVA: 0x00002FCA File Offset: 0x000011CA
 		public virtual void Reset()
 		{
 		}
 
-		// Token: 0x06005126 RID: 20774 RVA: 0x0011EB16 File Offset: 0x0011CD16
+		// Token: 0x06006F1A RID: 28442 RVA: 0x0003D350 File Offset: 0x0003B550
 		protected virtual void RegisterAnimatorParameter(string parameterName, AnimatorControllerParameterType parameterType)
 		{
 			if (this._animator == null)
@@ -125,68 +125,68 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005127 RID: 20775 RVA: 0x0011EB47 File Offset: 0x0011CD47
+		// Token: 0x06006F1B RID: 28443 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnRespawn()
 		{
 		}
 
-		// Token: 0x06005128 RID: 20776 RVA: 0x0011EB49 File Offset: 0x0011CD49
+		// Token: 0x06006F1C RID: 28444 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnDeath()
 		{
 		}
 
-		// Token: 0x06005129 RID: 20777 RVA: 0x0011EB4B File Offset: 0x0011CD4B
+		// Token: 0x06006F1D RID: 28445 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnHit()
 		{
 		}
 
-		// Token: 0x0600512A RID: 20778 RVA: 0x0011EB4D File Offset: 0x0011CD4D
+		// Token: 0x06006F1E RID: 28446 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnEnable()
 		{
 		}
 
-		// Token: 0x0600512B RID: 20779 RVA: 0x0011EB4F File Offset: 0x0011CD4F
+		// Token: 0x06006F1F RID: 28447 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnDisable()
 		{
 		}
 
-		// Token: 0x04004340 RID: 17216
+		// Token: 0x04005947 RID: 22855
 		public bool AbilityPermitted = true;
 
-		// Token: 0x04004341 RID: 17217
+		// Token: 0x04005948 RID: 22856
 		protected Character _character;
 
-		// Token: 0x04004342 RID: 17218
+		// Token: 0x04005949 RID: 22857
 		protected CharacterHorizontalMovement _characterBasicMovement;
 
-		// Token: 0x04004343 RID: 17219
+		// Token: 0x0400594A RID: 22858
 		protected CorgiController _controller;
 
-		// Token: 0x04004344 RID: 17220
+		// Token: 0x0400594B RID: 22859
 		protected Animator _animator;
 
-		// Token: 0x04004345 RID: 17221
+		// Token: 0x0400594C RID: 22860
 		protected CharacterStates _state;
 
-		// Token: 0x04004346 RID: 17222
+		// Token: 0x0400594D RID: 22861
 		protected SpriteRenderer _spriteRenderer;
 
-		// Token: 0x04004347 RID: 17223
+		// Token: 0x0400594E RID: 22862
 		protected MMStateMachine<CharacterStates.MovementStates> _movement;
 
-		// Token: 0x04004348 RID: 17224
+		// Token: 0x0400594F RID: 22863
 		protected MMStateMachine<CharacterStates.CharacterConditions> _condition;
 
-		// Token: 0x04004349 RID: 17225
+		// Token: 0x04005950 RID: 22864
 		protected bool _abilityInitialized;
 
-		// Token: 0x0400434A RID: 17226
+		// Token: 0x04005951 RID: 22865
 		protected float _verticalInput;
 
-		// Token: 0x0400434B RID: 17227
+		// Token: 0x04005952 RID: 22866
 		protected float _horizontalInput;
 
-		// Token: 0x0400434C RID: 17228
+		// Token: 0x04005953 RID: 22867
 		protected global::PlayerController m_playerController;
 	}
 }

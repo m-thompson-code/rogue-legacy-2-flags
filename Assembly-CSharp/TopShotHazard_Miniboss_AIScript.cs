@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000142 RID: 322
+// Token: 0x02000235 RID: 565
 public class TopShotHazard_Miniboss_AIScript : TopShotHazard_Basic_AIScript
 {
-	// Token: 0x170005A6 RID: 1446
-	// (get) Token: 0x06000A62 RID: 2658 RVA: 0x000208AE File Offset: 0x0001EAAE
+	// Token: 0x1700077C RID: 1916
+	// (get) Token: 0x06000FE9 RID: 4073 RVA: 0x00003CEB File Offset: 0x00001EEB
 	protected override float SHOT_TRIGGER_WIDTH
 	{
 		get
@@ -13,8 +13,8 @@ public class TopShotHazard_Miniboss_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005A7 RID: 1447
-	// (get) Token: 0x06000A63 RID: 2659 RVA: 0x000208B5 File Offset: 0x0001EAB5
+	// Token: 0x1700077D RID: 1917
+	// (get) Token: 0x06000FEA RID: 4074 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_snapToFloor
 	{
 		get
@@ -23,8 +23,8 @@ public class TopShotHazard_Miniboss_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005A8 RID: 1448
-	// (get) Token: 0x06000A64 RID: 2660 RVA: 0x000208B8 File Offset: 0x0001EAB8
+	// Token: 0x1700077E RID: 1918
+	// (get) Token: 0x06000FEB RID: 4075 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_fireBullet_TargetPlayer
 	{
 		get
@@ -33,8 +33,8 @@ public class TopShotHazard_Miniboss_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005A9 RID: 1449
-	// (get) Token: 0x06000A65 RID: 2661 RVA: 0x000208BB File Offset: 0x0001EABB
+	// Token: 0x1700077F RID: 1919
+	// (get) Token: 0x06000FEC RID: 4076 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float m_fireBullet_AdditionalSpreadBullets
 	{
 		get
@@ -43,8 +43,8 @@ public class TopShotHazard_Miniboss_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005AA RID: 1450
-	// (get) Token: 0x06000A66 RID: 2662 RVA: 0x000208C2 File Offset: 0x0001EAC2
+	// Token: 0x17000780 RID: 1920
+	// (get) Token: 0x06000FED RID: 4077 RVA: 0x0000569A File Offset: 0x0000389A
 	protected override float m_fireBullet_ShotLoop
 	{
 		get
@@ -53,8 +53,8 @@ public class TopShotHazard_Miniboss_AIScript : TopShotHazard_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170005AB RID: 1451
-	// (get) Token: 0x06000A67 RID: 2663 RVA: 0x000208C9 File Offset: 0x0001EAC9
+	// Token: 0x17000781 RID: 1921
+	// (get) Token: 0x06000FEE RID: 4078 RVA: 0x00006A26 File Offset: 0x00004C26
 	protected override float m_fireBullet_ShotLoopDelay
 	{
 		get

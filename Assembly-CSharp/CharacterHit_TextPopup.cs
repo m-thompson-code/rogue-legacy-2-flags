@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200053A RID: 1338
+// Token: 0x020008CF RID: 2255
 public class CharacterHit_TextPopup : TextPopupObj
 {
-	// Token: 0x06003118 RID: 12568 RVA: 0x000A690B File Offset: 0x000A4B0B
+	// Token: 0x06004490 RID: 17552 RVA: 0x00025BD3 File Offset: 0x00023DD3
 	protected override IEnumerator SpawnEffectCoroutine()
 	{
 		float globalDelay = this.m_animationClipDuration + Time.time;
@@ -33,6 +33,6 @@ public class CharacterHit_TextPopup : TextPopupObj
 		yield break;
 	}
 
-	// Token: 0x040026D0 RID: 9936
+	// Token: 0x0400352E RID: 13614
 	private static bool m_goRight_STATIC;
 }

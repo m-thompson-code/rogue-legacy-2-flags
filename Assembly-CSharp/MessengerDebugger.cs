@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200061F RID: 1567
+// Token: 0x02000A42 RID: 2626
 public class MessengerDebugger : MonoBehaviour
 {
-	// Token: 0x170013F1 RID: 5105
-	// (get) Token: 0x06003884 RID: 14468 RVA: 0x000C111F File Offset: 0x000BF31F
-	// (set) Token: 0x06003885 RID: 14469 RVA: 0x000C1127 File Offset: 0x000BF327
+	// Token: 0x17001B48 RID: 6984
+	// (get) Token: 0x06004F28 RID: 20264 RVA: 0x0002B2A0 File Offset: 0x000294A0
+	// (set) Token: 0x06004F29 RID: 20265 RVA: 0x0002B2A8 File Offset: 0x000294A8
 	public List<ListenerEntry> Listeners
 	{
 		get
@@ -20,11 +20,11 @@ public class MessengerDebugger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002BB6 RID: 11190
+	// Token: 0x04003C23 RID: 15395
 	[SerializeField]
 	protected bool m_printDebugStatements;
 
-	// Token: 0x04002BB7 RID: 11191
+	// Token: 0x04003C24 RID: 15396
 	[SerializeField]
 	private List<ListenerEntry> m_listeners;
 }

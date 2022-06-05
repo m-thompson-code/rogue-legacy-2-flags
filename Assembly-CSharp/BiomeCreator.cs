@@ -6,12 +6,12 @@ using RLWorldCreation;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000650 RID: 1616
+// Token: 0x02000A7F RID: 2687
 public class BiomeCreator : MonoBehaviour
 {
-	// Token: 0x1700149C RID: 5276
-	// (get) Token: 0x06003A58 RID: 14936 RVA: 0x000C5D84 File Offset: 0x000C3F84
-	// (set) Token: 0x06003A59 RID: 14937 RVA: 0x000C5D8C File Offset: 0x000C3F8C
+	// Token: 0x17001C03 RID: 7171
+	// (get) Token: 0x0600513D RID: 20797 RVA: 0x0002C5B2 File Offset: 0x0002A7B2
+	// (set) Token: 0x0600513E RID: 20798 RVA: 0x0002C5BA File Offset: 0x0002A7BA
 	public Queue<GridPointManager> BuildQueue
 	{
 		get
@@ -24,9 +24,9 @@ public class BiomeCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700149D RID: 5277
-	// (get) Token: 0x06003A5A RID: 14938 RVA: 0x000C5D95 File Offset: 0x000C3F95
-	// (set) Token: 0x06003A5B RID: 14939 RVA: 0x000C5D9D File Offset: 0x000C3F9D
+	// Token: 0x17001C04 RID: 7172
+	// (get) Token: 0x0600513F RID: 20799 RVA: 0x0002C5C3 File Offset: 0x0002A7C3
+	// (set) Token: 0x06005140 RID: 20800 RVA: 0x0002C5CB File Offset: 0x0002A7CB
 	public GridController GridController
 	{
 		get
@@ -39,19 +39,19 @@ public class BiomeCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700149E RID: 5278
-	// (get) Token: 0x06003A5C RID: 14940 RVA: 0x000C5DA6 File Offset: 0x000C3FA6
-	// (set) Token: 0x06003A5D RID: 14941 RVA: 0x000C5DAE File Offset: 0x000C3FAE
+	// Token: 0x17001C05 RID: 7173
+	// (get) Token: 0x06005141 RID: 20801 RVA: 0x0002C5D4 File Offset: 0x0002A7D4
+	// (set) Token: 0x06005142 RID: 20802 RVA: 0x0002C5DC File Offset: 0x0002A7DC
 	public bool IsComplete { get; private set; }
 
-	// Token: 0x1700149F RID: 5279
-	// (get) Token: 0x06003A5E RID: 14942 RVA: 0x000C5DB7 File Offset: 0x000C3FB7
-	// (set) Token: 0x06003A5F RID: 14943 RVA: 0x000C5DBF File Offset: 0x000C3FBF
+	// Token: 0x17001C06 RID: 7174
+	// (get) Token: 0x06005143 RID: 20803 RVA: 0x0002C5E5 File Offset: 0x0002A7E5
+	// (set) Token: 0x06005144 RID: 20804 RVA: 0x0002C5ED File Offset: 0x0002A7ED
 	public bool IsPaused { get; set; }
 
-	// Token: 0x170014A0 RID: 5280
-	// (get) Token: 0x06003A60 RID: 14944 RVA: 0x000C5DC8 File Offset: 0x000C3FC8
-	// (set) Token: 0x06003A61 RID: 14945 RVA: 0x000C5DD0 File Offset: 0x000C3FD0
+	// Token: 0x17001C07 RID: 7175
+	// (get) Token: 0x06005145 RID: 20805 RVA: 0x0002C5F6 File Offset: 0x0002A7F6
+	// (set) Token: 0x06005146 RID: 20806 RVA: 0x0002C5FE File Offset: 0x0002A7FE
 	public int RoomNumber
 	{
 		get
@@ -64,7 +64,7 @@ public class BiomeCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003A62 RID: 14946 RVA: 0x000C5DD9 File Offset: 0x000C3FD9
+	// Token: 0x06005147 RID: 20807 RVA: 0x0002C607 File Offset: 0x0002A807
 	public void SetState(BiomeController biomeController, BiomeBuildStateID stateID, string failureDescription = "")
 	{
 		if (this.State != stateID)
@@ -81,9 +81,9 @@ public class BiomeCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170014A1 RID: 5281
-	// (get) Token: 0x06003A63 RID: 14947 RVA: 0x000C5E00 File Offset: 0x000C4000
-	// (set) Token: 0x06003A64 RID: 14948 RVA: 0x000C5E08 File Offset: 0x000C4008
+	// Token: 0x17001C08 RID: 7176
+	// (get) Token: 0x06005148 RID: 20808 RVA: 0x0002C62E File Offset: 0x0002A82E
+	// (set) Token: 0x06005149 RID: 20809 RVA: 0x0002C636 File Offset: 0x0002A836
 	public int SpecialRoomPlacementInterval
 	{
 		get
@@ -96,9 +96,9 @@ public class BiomeCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170014A2 RID: 5282
-	// (get) Token: 0x06003A65 RID: 14949 RVA: 0x000C5E11 File Offset: 0x000C4011
-	// (set) Token: 0x06003A66 RID: 14950 RVA: 0x000C5E19 File Offset: 0x000C4019
+	// Token: 0x17001C09 RID: 7177
+	// (get) Token: 0x0600514A RID: 20810 RVA: 0x0002C63F File Offset: 0x0002A83F
+	// (set) Token: 0x0600514B RID: 20811 RVA: 0x0002C647 File Offset: 0x0002A847
 	public List<RoomTypeEntry> SpecialRoomPool
 	{
 		get
@@ -111,9 +111,9 @@ public class BiomeCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170014A3 RID: 5283
-	// (get) Token: 0x06003A67 RID: 14951 RVA: 0x000C5E22 File Offset: 0x000C4022
-	// (set) Token: 0x06003A68 RID: 14952 RVA: 0x000C5E2A File Offset: 0x000C402A
+	// Token: 0x17001C0A RID: 7178
+	// (get) Token: 0x0600514C RID: 20812 RVA: 0x0002C650 File Offset: 0x0002A850
+	// (set) Token: 0x0600514D RID: 20813 RVA: 0x0002C658 File Offset: 0x0002A858
 	public BiomeBuildStateID State
 	{
 		get
@@ -126,18 +126,18 @@ public class BiomeCreator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170014A4 RID: 5284
-	// (get) Token: 0x06003A69 RID: 14953 RVA: 0x000C5E33 File Offset: 0x000C4033
-	// (set) Token: 0x06003A6A RID: 14954 RVA: 0x000C5E3B File Offset: 0x000C403B
+	// Token: 0x17001C0B RID: 7179
+	// (get) Token: 0x0600514E RID: 20814 RVA: 0x0002C661 File Offset: 0x0002A861
+	// (set) Token: 0x0600514F RID: 20815 RVA: 0x0002C669 File Offset: 0x0002A869
 	public string BiomeBuildFailureDescription { get; private set; }
 
-	// Token: 0x06003A6B RID: 14955 RVA: 0x000C5E44 File Offset: 0x000C4044
+	// Token: 0x06005150 RID: 20816 RVA: 0x0002C672 File Offset: 0x0002A872
 	private void BuildComplete(BiomeController biomeController)
 	{
 		this.SetState(biomeController, BiomeBuildStateID.Complete, "");
 	}
 
-	// Token: 0x06003A6C RID: 14956 RVA: 0x000C5E54 File Offset: 0x000C4054
+	// Token: 0x06005151 RID: 20817 RVA: 0x00133A4C File Offset: 0x00131C4C
 	public GridPointManager BuildRoom(BiomeController biomeController, RoomType roomType, RoomSetEntry roomSetEntry, Vector2Int buildCoordinates, DoorLocation doorLocation, BiomeType overrideBiome = BiomeType.None, bool incrementRoomCount = true)
 	{
 		BiomeType biome = biomeController.Biome;
@@ -157,7 +157,7 @@ public class BiomeCreator : MonoBehaviour
 		return gridPointManager;
 	}
 
-	// Token: 0x06003A6D RID: 14957 RVA: 0x000C5EED File Offset: 0x000C40ED
+	// Token: 0x06005152 RID: 20818 RVA: 0x0002C681 File Offset: 0x0002A881
 	public IEnumerator CreateBiome(BiomeController biomeController)
 	{
 		if (RoomLibrary.IsLoaded)
@@ -190,7 +190,7 @@ public class BiomeCreator : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003A6E RID: 14958 RVA: 0x000C5F03 File Offset: 0x000C4103
+	// Token: 0x06005153 RID: 20819 RVA: 0x0002C697 File Offset: 0x0002A897
 	private IEnumerator CreateRooms(BiomeController biomeController)
 	{
 		this.m_createRoomsBuildRule = null;
@@ -222,7 +222,7 @@ public class BiomeCreator : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003A6F RID: 14959 RVA: 0x000C5F19 File Offset: 0x000C4119
+	// Token: 0x06005154 RID: 20820 RVA: 0x0002C6AD File Offset: 0x0002A8AD
 	private IEnumerator SetConnectionRoom(BiomeController biomeController)
 	{
 		CheckConnectionRoomsBuildRule checkConnectionRoomsBuildRule = new CheckConnectionRoomsBuildRule_Default();
@@ -230,7 +230,7 @@ public class BiomeCreator : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003A70 RID: 14960 RVA: 0x000C5F30 File Offset: 0x000C4130
+	// Token: 0x06005155 RID: 20821 RVA: 0x00133AE8 File Offset: 0x00131CE8
 	private void CreateTransitionRoom(BiomeController biomeController)
 	{
 		BiomeType connectsToBiome = BiomeUtility.GetConnectsToBiome(biomeController.Biome);
@@ -286,7 +286,7 @@ public class BiomeCreator : MonoBehaviour
 		this.BuildRoom(biomeController, RoomType.Transition, new RoomSetEntry(transitionRoom2, false), zero, DoorLocation.Empty, BiomeType.None, true);
 	}
 
-	// Token: 0x06003A71 RID: 14961 RVA: 0x000C613C File Offset: 0x000C433C
+	// Token: 0x06005156 RID: 20822 RVA: 0x00133CF4 File Offset: 0x00131EF4
 	public void CreateBiomeFromSaveData(BiomeController biomeController, List<RoomSaveData> roomSaveDataCollection)
 	{
 		this.Initialise(biomeController);
@@ -377,7 +377,7 @@ public class BiomeCreator : MonoBehaviour
 		this.SetState(biomeController, BiomeBuildStateID.Complete, "");
 	}
 
-	// Token: 0x06003A72 RID: 14962 RVA: 0x000C6420 File Offset: 0x000C4620
+	// Token: 0x06005157 RID: 20823 RVA: 0x00133FD8 File Offset: 0x001321D8
 	private bool GetBuildRoomAtDoorLocation(BiomeController biomeController, GridPointManager gridPointManager, DoorLocation doorLocation)
 	{
 		int num = -1;
@@ -405,7 +405,7 @@ public class BiomeCreator : MonoBehaviour
 		}), 0, 100) < num);
 	}
 
-	// Token: 0x06003A73 RID: 14963 RVA: 0x000C64E8 File Offset: 0x000C46E8
+	// Token: 0x06005158 RID: 20824 RVA: 0x001340A0 File Offset: 0x001322A0
 	public List<DoorLocation> GetBuildRoomAtDoorLocations(BiomeController biomeController, GridPointManager gridPointManager)
 	{
 		List<DoorLocation> list = new List<DoorLocation>();
@@ -461,14 +461,14 @@ public class BiomeCreator : MonoBehaviour
 		return list;
 	}
 
-	// Token: 0x06003A74 RID: 14964 RVA: 0x000C66BC File Offset: 0x000C48BC
+	// Token: 0x06005159 RID: 20825 RVA: 0x00134274 File Offset: 0x00132474
 	public bool GetIsDoorLocationValid(BiomeController biomeController, GridPointManager gridPointManager, DoorLocation doorLocation)
 	{
 		Vector2Int doorLeadsToGridCoordinates = gridPointManager.GetDoorLeadsToGridCoordinates(doorLocation);
 		return biomeController.GridPointManager.GetAreCoordinatesWithinBorder(doorLeadsToGridCoordinates, gridPointManager.RoomType == RoomType.Standard) && GridController.GetIsGridSpaceAvailable(doorLeadsToGridCoordinates);
 	}
 
-	// Token: 0x06003A75 RID: 14965 RVA: 0x000C66F0 File Offset: 0x000C48F0
+	// Token: 0x0600515A RID: 20826 RVA: 0x001342A8 File Offset: 0x001324A8
 	public GridPointManager GetNextOriginRoom(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		if (biomeCreator.BuildQueue.Count > 0)
@@ -535,7 +535,7 @@ public class BiomeCreator : MonoBehaviour
 		return this.ReplaceOriginRoom(biomeCreator, biomeController);
 	}
 
-	// Token: 0x06003A76 RID: 14966 RVA: 0x000C68F0 File Offset: 0x000C4AF0
+	// Token: 0x0600515B RID: 20827 RVA: 0x001344A8 File Offset: 0x001326A8
 	private bool CheckDoorLocation_GetNextOriginRoom(BiomeController biomeController, GridPointManager originRoom, DoorLocation doorLocation)
 	{
 		bool result = true;
@@ -562,7 +562,7 @@ public class BiomeCreator : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x06003A77 RID: 14967 RVA: 0x000C69B4 File Offset: 0x000C4BB4
+	// Token: 0x0600515C RID: 20828 RVA: 0x0013456C File Offset: 0x0013276C
 	private GridPointManager ReplaceOriginRoom(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		List<RoomSide> sidesToReplace = BiomeCreation_EV.GetSidesToReplace(biomeController.Biome);
@@ -606,13 +606,13 @@ public class BiomeCreator : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003A78 RID: 14968 RVA: 0x000C6BB8 File Offset: 0x000C4DB8
+	// Token: 0x0600515D RID: 20829 RVA: 0x0002C6C3 File Offset: 0x0002A8C3
 	private static List<DoorLocation> GetDoorsInRoom(GridPointManager gridPointManager)
 	{
 		return gridPointManager.DoorLocations;
 	}
 
-	// Token: 0x06003A79 RID: 14969 RVA: 0x000C6BC0 File Offset: 0x000C4DC0
+	// Token: 0x0600515E RID: 20830 RVA: 0x00134770 File Offset: 0x00132970
 	public IEnumerable<GridPoint> GetGridPointsWithAvailableDoorsOnSide(BiomeController biomeController, RoomSide side)
 	{
 		Func<GridPoint, bool> predicate;
@@ -635,7 +635,7 @@ public class BiomeCreator : MonoBehaviour
 		return biomeController.GridPointManager.GridPoints.Where(predicate);
 	}
 
-	// Token: 0x06003A7A RID: 14970 RVA: 0x000C6C40 File Offset: 0x000C4E40
+	// Token: 0x0600515F RID: 20831 RVA: 0x001347F0 File Offset: 0x001329F0
 	public IEnumerable<GridPoint> GetGridPointsAtExtent(BiomeController biomeController, RoomSide side, int extentOffset)
 	{
 		if (extentOffset < 0)
@@ -662,7 +662,7 @@ public class BiomeCreator : MonoBehaviour
 		return biomeController.GridPointManager.GridPoints.Where(predicate);
 	}
 
-	// Token: 0x06003A7B RID: 14971 RVA: 0x000C6CD0 File Offset: 0x000C4ED0
+	// Token: 0x06005160 RID: 20832 RVA: 0x00134880 File Offset: 0x00132A80
 	public IEnumerable<GridPoint> GetGridPointsOfRoomType(BiomeController biomeController, RoomType roomType)
 	{
 		return from gridPoint in biomeController.GridPointManager.GridPoints
@@ -670,7 +670,7 @@ public class BiomeCreator : MonoBehaviour
 		select gridPoint;
 	}
 
-	// Token: 0x06003A7C RID: 14972 RVA: 0x000C6D06 File Offset: 0x000C4F06
+	// Token: 0x06005161 RID: 20833 RVA: 0x0002C6CB File Offset: 0x0002A8CB
 	public IEnumerable<GridPoint> GetGridPointsWithSpaceOnSide(BiomeController biomeController, RoomSide side, IEnumerable<GridPoint> filteredGridPoints)
 	{
 		int maxExtents = GridController.Extents[side];
@@ -704,7 +704,7 @@ public class BiomeCreator : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003A7D RID: 14973 RVA: 0x000C6D20 File Offset: 0x000C4F20
+	// Token: 0x06005162 RID: 20834 RVA: 0x001348B8 File Offset: 0x00132AB8
 	public List<GridPoint> GetGridPointsWhereTransitionRoomFits(BiomeController biomeController, IEnumerable<GridPoint> filteredGridPoints)
 	{
 		List<GridPoint> list = new List<GridPoint>();
@@ -781,7 +781,7 @@ public class BiomeCreator : MonoBehaviour
 		return list;
 	}
 
-	// Token: 0x06003A7E RID: 14974 RVA: 0x000C7074 File Offset: 0x000C5274
+	// Token: 0x06005163 RID: 20835 RVA: 0x00134C0C File Offset: 0x00132E0C
 	private bool GetIsWayOutOfTransitionRoom(Vector2Int potentialGridCoordinates, Vector2Int transitionRoomSize, IEnumerable<DoorLocation> doorLocationsInTransitionRoom)
 	{
 		bool result = false;
@@ -796,7 +796,7 @@ public class BiomeCreator : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x06003A7F RID: 14975 RVA: 0x000C70CC File Offset: 0x000C52CC
+	// Token: 0x06005164 RID: 20836 RVA: 0x00134C64 File Offset: 0x00132E64
 	public IEnumerable<GridPoint> GetGridPointsOnSideOfBiomeTransitionRoom(BiomeController biomeController, RoomSide side)
 	{
 		Vector2Int transitionRoomSize = RoomLibrary.GetSetCollection(biomeController.Biome).TransitionRoom.Size;
@@ -820,7 +820,7 @@ public class BiomeCreator : MonoBehaviour
 		return biomeController.GridPointManager.GridPoints.Where(predicate);
 	}
 
-	// Token: 0x06003A80 RID: 14976 RVA: 0x000C7163 File Offset: 0x000C5363
+	// Token: 0x06005165 RID: 20837 RVA: 0x0002C6E2 File Offset: 0x0002A8E2
 	public IEnumerable<GridPoint> GetGridPointsWhereTransitionRoomFitsAtDoorNumber(Room transitionRoomPrefab, RoomSide attachmentSide, DoorLocation transitionRoomDoorLocation, IEnumerable<GridPoint> potentialGridPoints)
 	{
 		IEnumerable<DoorLocation> doorLocationsInTransitionRoom = from door in transitionRoomPrefab.Doors
@@ -842,7 +842,7 @@ public class BiomeCreator : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003A81 RID: 14977 RVA: 0x000C718C File Offset: 0x000C538C
+	// Token: 0x06005166 RID: 20838 RVA: 0x00134CFC File Offset: 0x00132EFC
 	public IEnumerable<GridPoint> GetGridPointsWhereTransitionRoomCouldAttachOnSideAtDoorNumber(BiomeController biomeController, Room transitionRoomPrefab, RoomSide side, int doorNumber)
 	{
 		Func<GridPoint, bool> predicate;
@@ -879,7 +879,7 @@ public class BiomeCreator : MonoBehaviour
 		return list2;
 	}
 
-	// Token: 0x06003A82 RID: 14978 RVA: 0x000C730C File Offset: 0x000C550C
+	// Token: 0x06005167 RID: 20839 RVA: 0x00134E7C File Offset: 0x0013307C
 	public IEnumerable<GridPoint> GetPotentialConnectionPoints(BiomeController biomeController, RoomSide side)
 	{
 		Func<GridPoint, bool> predicate;
@@ -904,7 +904,7 @@ public class BiomeCreator : MonoBehaviour
 		select entry;
 	}
 
-	// Token: 0x06003A83 RID: 14979 RVA: 0x000C73A8 File Offset: 0x000C55A8
+	// Token: 0x06005168 RID: 20840 RVA: 0x00134F18 File Offset: 0x00133118
 	public DoorLocation GetRandomDoorLocation(List<DoorLocation> doorLocations, RoomSetEntry roomEntry, BiomeType biome, int roomNumber)
 	{
 		RoomSide roomSide = doorLocations.First<DoorLocation>().RoomSide;
@@ -951,7 +951,7 @@ public class BiomeCreator : MonoBehaviour
 		}));
 	}
 
-	// Token: 0x06003A84 RID: 14980 RVA: 0x000C7588 File Offset: 0x000C5788
+	// Token: 0x06005169 RID: 20841 RVA: 0x001350F8 File Offset: 0x001332F8
 	public RoomSetEntry GetRandomRoomPrefab(BiomeController biomeController, RoomSetEntry[] potentialRooms, int rngWeightSum)
 	{
 		bool flag = false;
@@ -987,7 +987,7 @@ public class BiomeCreator : MonoBehaviour
 		return default(RoomSetEntry);
 	}
 
-	// Token: 0x06003A85 RID: 14981 RVA: 0x000C7674 File Offset: 0x000C5874
+	// Token: 0x0600516A RID: 20842 RVA: 0x001351E4 File Offset: 0x001333E4
 	private int GetIndexOfWeightedRoomEntry(int randomNumber, RoomSetEntry[] rooms)
 	{
 		int num = 0;
@@ -1007,7 +1007,7 @@ public class BiomeCreator : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003A86 RID: 14982 RVA: 0x000C76B0 File Offset: 0x000C58B0
+	// Token: 0x0600516B RID: 20843 RVA: 0x00135220 File Offset: 0x00133420
 	public Dictionary<Vector2Int, List<DoorLocation>> GetRoomSizesAndWhatDoorLocationsTheyFitAt(Bounds border, Vector2Int maxRoomSize, GridPointManager originRoom, DoorLocation doorLocation)
 	{
 		Dictionary<Vector2Int, List<DoorLocation>> dictionary = new Dictionary<Vector2Int, List<DoorLocation>>();
@@ -1027,19 +1027,19 @@ public class BiomeCreator : MonoBehaviour
 		return dictionary;
 	}
 
-	// Token: 0x06003A87 RID: 14983 RVA: 0x000C7726 File Offset: 0x000C5926
+	// Token: 0x0600516C RID: 20844 RVA: 0x0002C708 File Offset: 0x0002A908
 	public void AddRoomTypeToBacklog(RoomTypeEntry entry)
 	{
 		this.m_roomRequirementsController.AddToBacklog(entry);
 	}
 
-	// Token: 0x06003A88 RID: 14984 RVA: 0x000C7734 File Offset: 0x000C5934
+	// Token: 0x0600516D RID: 20845 RVA: 0x0002C716 File Offset: 0x0002A916
 	public RoomTypeEntry GetTargetRoomRequirements()
 	{
 		return this.m_roomRequirementsController.GetRequirements(this.RoomNumber);
 	}
 
-	// Token: 0x06003A89 RID: 14985 RVA: 0x000C7748 File Offset: 0x000C5948
+	// Token: 0x0600516E RID: 20846 RVA: 0x00135298 File Offset: 0x00133498
 	private void Initialise(BiomeController biomeController)
 	{
 		this.SetState(biomeController, BiomeBuildStateID.Running, "");
@@ -1059,7 +1059,7 @@ public class BiomeCreator : MonoBehaviour
 		this.SetBiomeRoomCounts(biomeController);
 	}
 
-	// Token: 0x06003A8A RID: 14986 RVA: 0x000C77A3 File Offset: 0x000C59A3
+	// Token: 0x0600516F RID: 20847 RVA: 0x0002C729 File Offset: 0x0002A929
 	public void Reset()
 	{
 		this.m_buildQueue = new Queue<GridPointManager>();
@@ -1069,7 +1069,7 @@ public class BiomeCreator : MonoBehaviour
 		this.m_state = BiomeBuildStateID.None;
 	}
 
-	// Token: 0x06003A8B RID: 14987 RVA: 0x000C77CC File Offset: 0x000C59CC
+	// Token: 0x06005170 RID: 20848 RVA: 0x001352F4 File Offset: 0x001334F4
 	private void SetBiomeRoomCounts(BiomeController biomeController)
 	{
 		biomeController.TargetRoomCountsByRoomType = new Dictionary<RoomType, int>();
@@ -1094,7 +1094,7 @@ public class BiomeCreator : MonoBehaviour
 		biomeController.TargetRoomCountsByRoomType[RoomType.Mandatory] = value;
 	}
 
-	// Token: 0x06003A8C RID: 14988 RVA: 0x000C7984 File Offset: 0x000C5B84
+	// Token: 0x06005171 RID: 20849 RVA: 0x001354AC File Offset: 0x001336AC
 	private void SetPremadeBiomeRoomCounts(BiomeController biomeController, List<Room> roomList)
 	{
 		biomeController.TargetRoomCountsByRoomType = new Dictionary<RoomType, int>();
@@ -1105,53 +1105,53 @@ public class BiomeCreator : MonoBehaviour
 		biomeController.TargetRoomCountsByRoomType[RoomType.Mandatory] = 0;
 	}
 
-	// Token: 0x06003A8D RID: 14989 RVA: 0x000C79E6 File Offset: 0x000C5BE6
+	// Token: 0x06005172 RID: 20850 RVA: 0x0002C752 File Offset: 0x0002A952
 	private IEnumerator BuildForcedRooms(List<Room> roomList)
 	{
 		yield break;
 	}
 
-	// Token: 0x04002CC1 RID: 11457
+	// Token: 0x04003D57 RID: 15703
 	[SerializeField]
 	private bool m_displayDeadEndWarnings;
 
-	// Token: 0x04002CC2 RID: 11458
+	// Token: 0x04003D58 RID: 15704
 	[SerializeField]
 	private bool m_drawGridGizmos;
 
-	// Token: 0x04002CC3 RID: 11459
+	// Token: 0x04003D59 RID: 15705
 	private static int FORCE_BUILD_ROOM_IF_TRANSITION_ROOM_DOOR_COUNT_IS_LESS_THAN = 2;
 
-	// Token: 0x04002CC4 RID: 11460
+	// Token: 0x04003D5A RID: 15706
 	private Queue<GridPointManager> m_buildQueue = new Queue<GridPointManager>();
 
-	// Token: 0x04002CC5 RID: 11461
+	// Token: 0x04003D5B RID: 15707
 	private GridController m_gridController;
 
-	// Token: 0x04002CC6 RID: 11462
+	// Token: 0x04003D5C RID: 15708
 	private int m_roomNumber;
 
-	// Token: 0x04002CC7 RID: 11463
+	// Token: 0x04003D5D RID: 15709
 	private int m_specialRoomPlacementInterval;
 
-	// Token: 0x04002CC8 RID: 11464
+	// Token: 0x04003D5E RID: 15710
 	private List<RoomTypeEntry> m_specialRoomPool;
 
-	// Token: 0x04002CC9 RID: 11465
+	// Token: 0x04003D5F RID: 15711
 	private BiomeBuildStateID m_state;
 
-	// Token: 0x04002CCA RID: 11466
+	// Token: 0x04003D60 RID: 15712
 	private static string m_deadEndSeeds = "";
 
-	// Token: 0x04002CCB RID: 11467
+	// Token: 0x04003D61 RID: 15713
 	private RoomRequirementsController m_roomRequirementsController;
 
-	// Token: 0x04002CCC RID: 11468
+	// Token: 0x04003D62 RID: 15714
 	private Dictionary<BiomeType, int> m_timesBiomeHasConnectedTooEarly = new Dictionary<BiomeType, int>();
 
-	// Token: 0x04002CD0 RID: 11472
+	// Token: 0x04003D66 RID: 15718
 	private CreateRoomsBuildRule m_createRoomsBuildRule;
 
-	// Token: 0x04002CD1 RID: 11473
+	// Token: 0x04003D67 RID: 15719
 	private Dictionary<GridPointManager, List<DoorLocation>> m_checkedDoors = new Dictionary<GridPointManager, List<DoorLocation>>();
 }

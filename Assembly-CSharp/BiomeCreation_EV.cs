@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200004A RID: 74
+// Token: 0x02000052 RID: 82
 public static class BiomeCreation_EV
 {
-	// Token: 0x06000139 RID: 313 RVA: 0x0000B7DC File Offset: 0x000099DC
+	// Token: 0x0600014D RID: 333 RVA: 0x00048184 File Offset: 0x00046384
 	public static int GetDefaultSpecialRoomWeight(SpecialRoomType specialRoomType)
 	{
 		if (specialRoomType <= SpecialRoomType.Relic)
@@ -58,7 +58,7 @@ public static class BiomeCreation_EV
 		return 0;
 	}
 
-	// Token: 0x0600013A RID: 314 RVA: 0x0000B840 File Offset: 0x00009A40
+	// Token: 0x0600014E RID: 334 RVA: 0x000481E8 File Offset: 0x000463E8
 	public static bool GetDuplicateRoomsAllowed(BiomeType biome)
 	{
 		bool result = false;
@@ -69,7 +69,7 @@ public static class BiomeCreation_EV
 		return result;
 	}
 
-	// Token: 0x0600013B RID: 315 RVA: 0x0000B86C File Offset: 0x00009A6C
+	// Token: 0x0600014F RID: 335 RVA: 0x00048214 File Offset: 0x00046414
 	public static int GetBiomeLevel(BiomeType biomeType)
 	{
 		if (biomeType <= BiomeType.Forest)
@@ -112,7 +112,7 @@ public static class BiomeCreation_EV
 		return 0;
 	}
 
-	// Token: 0x0600013C RID: 316 RVA: 0x0000B8C0 File Offset: 0x00009AC0
+	// Token: 0x06000150 RID: 336 RVA: 0x00048268 File Offset: 0x00046468
 	public static Dictionary<RoomSide, int> GetBiomeBorderOffsets(BiomeType biome)
 	{
 		if (biome <= BiomeType.Lake)
@@ -173,7 +173,7 @@ public static class BiomeCreation_EV
 		return BiomeCreation_EV.DEFAULT_BOUNDS;
 	}
 
-	// Token: 0x0600013D RID: 317 RVA: 0x0000B960 File Offset: 0x00009B60
+	// Token: 0x06000151 RID: 337 RVA: 0x0000371B File Offset: 0x0000191B
 	public static List<RoomSide> GetSidesToReplace(BiomeType biome)
 	{
 		if (BiomeCreation_EV.REPLACE_SIDES_TABLE.ContainsKey(biome))
@@ -189,7 +189,7 @@ public static class BiomeCreation_EV
 		};
 	}
 
-	// Token: 0x0600013E RID: 318 RVA: 0x0000B99C File Offset: 0x00009B9C
+	// Token: 0x06000152 RID: 338 RVA: 0x00003757 File Offset: 0x00001957
 	public static int GetNumberOfRoomsToLookBack(BiomeType biome, int currentRoomCount, int totalTargetRoomCount)
 	{
 		if (BiomeCreation_EV.TRACE_DEPTH_TABLE.ContainsKey(biome))
@@ -199,52 +199,52 @@ public static class BiomeCreation_EV
 		return currentRoomCount;
 	}
 
-	// Token: 0x04000213 RID: 531
+	// Token: 0x04000234 RID: 564
 	public static int DEFAULT_ROOM_RNG_WEIGHT = 100;
 
-	// Token: 0x04000214 RID: 532
+	// Token: 0x04000235 RID: 565
 	public const int DEFAULT_HEALING_ROOM_SPAWN_WEIGHT = 25;
 
-	// Token: 0x04000215 RID: 533
+	// Token: 0x04000236 RID: 566
 	public const int DEFAULT_RELIC_ROOM_SPAWN_WEIGHT = 30;
 
-	// Token: 0x04000216 RID: 534
+	// Token: 0x04000237 RID: 567
 	public const int DEFAULT_ARENA_ROOM_SPAWN_WEIGHT = 20;
 
-	// Token: 0x04000217 RID: 535
+	// Token: 0x04000238 RID: 568
 	public const int DEFAULT_CURIO_ROOM_SPAWN_WEIGHT = 25;
 
-	// Token: 0x04000218 RID: 536
+	// Token: 0x04000239 RID: 569
 	public const int DEFAULT_TELEPORTER_ROOM_SPAWN_WEIGHT = 0;
 
-	// Token: 0x04000219 RID: 537
+	// Token: 0x0400023A RID: 570
 	public const int DEFAULT_PORTRAIT_ROOM_SPAWN_WEIGHT = 0;
 
-	// Token: 0x0400021A RID: 538
+	// Token: 0x0400023B RID: 571
 	public const int DEFAULT_CLOWN_ROOM_SPAWN_WEIGHT = 0;
 
-	// Token: 0x0400021B RID: 539
+	// Token: 0x0400023C RID: 572
 	public const int DEFAULT_JOURNAL_ROOM_SPAWN_WEIGHT = 0;
 
-	// Token: 0x0400021C RID: 540
+	// Token: 0x0400023D RID: 573
 	public const bool USE_RANDOM_STANDARD_ROOM_POOL_CULLING = false;
 
-	// Token: 0x0400021D RID: 541
+	// Token: 0x0400023E RID: 574
 	public const int WORLD_BUILD_TIMESLICE_THRESHOLD = 30;
 
-	// Token: 0x0400021E RID: 542
+	// Token: 0x0400023F RID: 575
 	public const bool FORCE_ROOM_WEIGHTS_TO_DEFAULT = false;
 
-	// Token: 0x0400021F RID: 543
+	// Token: 0x04000240 RID: 576
 	public const bool VALIDATE_BIOME_AFTER_BUILD = false;
 
-	// Token: 0x04000220 RID: 544
+	// Token: 0x04000241 RID: 577
 	public const bool TEST_MEGA_BIOMES = false;
 
-	// Token: 0x04000221 RID: 545
+	// Token: 0x04000242 RID: 578
 	public const float MEGA_BIOME_SIZE_MULTIPLIER = 3f;
 
-	// Token: 0x04000222 RID: 546
+	// Token: 0x04000243 RID: 579
 	public static Dictionary<BiomeType, List<BiomeTag>> BIOME_TAGS = new Dictionary<BiomeType, List<BiomeTag>>
 	{
 		{
@@ -357,7 +357,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000223 RID: 547
+	// Token: 0x04000244 RID: 580
 	public static Dictionary<BiomeType, BiomeType> TUNNEL_DESTINATION_BIOME_TYPE_TABLE = new Dictionary<BiomeType, BiomeType>
 	{
 		{
@@ -366,7 +366,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000224 RID: 548
+	// Token: 0x04000245 RID: 581
 	public static Dictionary<BiomeType, bool> IS_IT_RAINING_IN_BIOME_TABLE = new Dictionary<BiomeType, bool>
 	{
 		{
@@ -375,10 +375,10 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000225 RID: 549
+	// Token: 0x04000246 RID: 582
 	private static Dictionary<BiomeType, bool> DUPLICATE_ROOMS_ALLOWED = new Dictionary<BiomeType, bool>();
 
-	// Token: 0x04000226 RID: 550
+	// Token: 0x04000247 RID: 583
 	public static Dictionary<BiomeType, int> FORCE_EASY_ROOMS_AT_BIOME_START = new Dictionary<BiomeType, int>
 	{
 		{
@@ -387,7 +387,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000227 RID: 551
+	// Token: 0x04000248 RID: 584
 	public static Dictionary<BiomeType, int> REQUEST_EASY_FAIRY_ROOMS_IN_BIOME = new Dictionary<BiomeType, int>
 	{
 		{
@@ -400,53 +400,53 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000228 RID: 552
+	// Token: 0x04000249 RID: 585
 	public const bool DONT_CREATE_MIRRORED_VERSION_OF_ROOMS_WITH_MAX_NUMBER_DOORS = false;
 
-	// Token: 0x04000229 RID: 553
+	// Token: 0x0400024A RID: 586
 	public const bool DONT_CREATE_MIRRORED_VERSION_OF_1X1_ROOMS_WITH_DOORS_ON_LEFT_AND_RIGHT = false;
 
-	// Token: 0x0400022A RID: 554
+	// Token: 0x0400024B RID: 587
 	public const bool DONT_CREATE_MIRRORED_VERSION_OF_1XN_ROOMS_WITH_THE_SAME_DOORS_ON_LEFT_AND_RIGHT = false;
 
-	// Token: 0x0400022B RID: 555
+	// Token: 0x0400024C RID: 588
 	public static bool USE_DEFAULT_MERGE_LOGIC_FOR_TOWER_INTERIOR = true;
 
-	// Token: 0x0400022C RID: 556
+	// Token: 0x0400024D RID: 589
 	public const bool MERGE_TOWER_INTERIOR = true;
 
-	// Token: 0x0400022D RID: 557
+	// Token: 0x0400024E RID: 590
 	public const bool MERGE_TOWER_EXTERIOR = true;
 
-	// Token: 0x0400022E RID: 558
+	// Token: 0x0400024F RID: 591
 	public const bool MERGE_TOWER_TOP = true;
 
-	// Token: 0x0400022F RID: 559
+	// Token: 0x04000250 RID: 592
 	public const bool MERGE_DRAGON = true;
 
-	// Token: 0x04000230 RID: 560
+	// Token: 0x04000251 RID: 593
 	public const float NIBIRU_DEEP_WATER_RAISE_PER_BOSS_KILLED = 2.5f;
 
-	// Token: 0x04000231 RID: 561
+	// Token: 0x04000252 RID: 594
 	public static List<BiomeType> DISABLE_HORIZONTAL_FILL_IN_BIOMES = new List<BiomeType>
 	{
 		BiomeType.Stone
 	};
 
-	// Token: 0x04000232 RID: 562
+	// Token: 0x04000253 RID: 595
 	public static List<BiomeType> DISABLE_VERTICAL_FILL_IN_BIOMES = new List<BiomeType>
 	{
 		BiomeType.TowerExterior
 	};
 
-	// Token: 0x04000233 RID: 563
+	// Token: 0x04000254 RID: 596
 	public static List<BiomeType> DO_NOT_ADD_ONE_WAYS_TO_BOTTOM_DOORS = new List<BiomeType>
 	{
 		BiomeType.TowerExterior,
 		BiomeType.Dragon
 	};
 
-	// Token: 0x04000234 RID: 564
+	// Token: 0x04000255 RID: 597
 	private static Dictionary<RoomSide, int> CASTLE_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -467,7 +467,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000235 RID: 565
+	// Token: 0x04000256 RID: 598
 	private static Dictionary<RoomSide, int> TOWN_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -488,7 +488,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000236 RID: 566
+	// Token: 0x04000257 RID: 599
 	private static Dictionary<RoomSide, int> DRAGON_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -509,7 +509,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000237 RID: 567
+	// Token: 0x04000258 RID: 600
 	private static Dictionary<RoomSide, int> FOREST_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -530,7 +530,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000238 RID: 568
+	// Token: 0x04000259 RID: 601
 	private static Dictionary<RoomSide, int> STONE_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -551,7 +551,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000239 RID: 569
+	// Token: 0x0400025A RID: 602
 	private static Dictionary<RoomSide, int> LAKE_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -572,7 +572,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x0400023A RID: 570
+	// Token: 0x0400025B RID: 603
 	private static Dictionary<RoomSide, int> STUDY_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -593,7 +593,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x0400023B RID: 571
+	// Token: 0x0400025C RID: 604
 	private static Dictionary<RoomSide, int> TOWER_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -614,7 +614,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x0400023C RID: 572
+	// Token: 0x0400025D RID: 605
 	private static Dictionary<RoomSide, int> CAVE_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -635,7 +635,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x0400023D RID: 573
+	// Token: 0x0400025E RID: 606
 	private static Dictionary<RoomSide, int> SUNKEN_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -656,7 +656,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x0400023E RID: 574
+	// Token: 0x0400025F RID: 607
 	private static Dictionary<RoomSide, int> DEFAULT_BOUNDS = new Dictionary<RoomSide, int>
 	{
 		{
@@ -677,7 +677,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x0400023F RID: 575
+	// Token: 0x04000260 RID: 608
 	private static Dictionary<BiomeType, float> TRACE_DEPTH_TABLE = new Dictionary<BiomeType, float>
 	{
 		{
@@ -690,7 +690,7 @@ public static class BiomeCreation_EV
 		}
 	};
 
-	// Token: 0x04000240 RID: 576
+	// Token: 0x04000261 RID: 609
 	private static Dictionary<BiomeType, List<RoomSide>> REPLACE_SIDES_TABLE = new Dictionary<BiomeType, List<RoomSide>>
 	{
 		{

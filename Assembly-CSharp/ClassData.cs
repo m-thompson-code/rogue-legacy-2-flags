@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006C8 RID: 1736
+// Token: 0x02000B73 RID: 2931
 [CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Class Data")]
 public class ClassData : ScriptableObject
 {
-	// Token: 0x170015C2 RID: 5570
-	// (get) Token: 0x06003FB3 RID: 16307 RVA: 0x000E2568 File Offset: 0x000E0768
+	// Token: 0x17001DBA RID: 7610
+	// (get) Token: 0x060058EA RID: 22762 RVA: 0x000305F7 File Offset: 0x0002E7F7
 	public ClassPassiveData PassiveData
 	{
 		get
@@ -15,8 +15,8 @@ public class ClassData : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015C3 RID: 5571
-	// (get) Token: 0x06003FB4 RID: 16308 RVA: 0x000E2570 File Offset: 0x000E0770
+	// Token: 0x17001DBB RID: 7611
+	// (get) Token: 0x060058EB RID: 22763 RVA: 0x000305FF File Offset: 0x0002E7FF
 	public ClassWeaponData WeaponData
 	{
 		get
@@ -25,8 +25,8 @@ public class ClassData : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015C4 RID: 5572
-	// (get) Token: 0x06003FB5 RID: 16309 RVA: 0x000E2578 File Offset: 0x000E0778
+	// Token: 0x17001DBC RID: 7612
+	// (get) Token: 0x060058EC RID: 22764 RVA: 0x00030607 File Offset: 0x0002E807
 	public ClassSpellData SpellData
 	{
 		get
@@ -35,8 +35,8 @@ public class ClassData : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015C5 RID: 5573
-	// (get) Token: 0x06003FB6 RID: 16310 RVA: 0x000E2580 File Offset: 0x000E0780
+	// Token: 0x17001DBD RID: 7613
+	// (get) Token: 0x060058ED RID: 22765 RVA: 0x0003060F File Offset: 0x0002E80F
 	public ClassTalentData TalentData
 	{
 		get
@@ -45,23 +45,23 @@ public class ClassData : ScriptableObject
 		}
 	}
 
-	// Token: 0x04002F7E RID: 12158
+	// Token: 0x040041CD RID: 16845
 	[SerializeField]
 	private ClassStatsData m_statsData;
 
-	// Token: 0x04002F7F RID: 12159
+	// Token: 0x040041CE RID: 16846
 	[SerializeField]
 	private ClassPassiveData m_passiveData;
 
-	// Token: 0x04002F80 RID: 12160
+	// Token: 0x040041CF RID: 16847
 	[SerializeField]
 	private ClassWeaponData m_weaponData;
 
-	// Token: 0x04002F81 RID: 12161
+	// Token: 0x040041D0 RID: 16848
 	[SerializeField]
 	private ClassSpellData m_spellData;
 
-	// Token: 0x04002F82 RID: 12162
+	// Token: 0x040041D1 RID: 16849
 	[SerializeField]
 	private ClassTalentData m_talentData;
 }

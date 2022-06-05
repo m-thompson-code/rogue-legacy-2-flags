@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020002EA RID: 746
+// Token: 0x020004F4 RID: 1268
 public class ShrinkCollider : MonoBehaviour
 {
-	// Token: 0x06001D88 RID: 7560 RVA: 0x00061308 File Offset: 0x0005F508
+	// Token: 0x060028CD RID: 10445 RVA: 0x00016EB5 File Offset: 0x000150B5
 	private void Start()
 	{
 		this.Shrink();
 	}
 
-	// Token: 0x06001D89 RID: 7561 RVA: 0x00061310 File Offset: 0x0005F510
+	// Token: 0x060028CE RID: 10446 RVA: 0x000BEEB4 File Offset: 0x000BD0B4
 	public void Shrink()
 	{
 		bool flag = false;
@@ -76,7 +76,7 @@ public class ShrinkCollider : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001D8A RID: 7562 RVA: 0x00061548 File Offset: 0x0005F748
+	// Token: 0x060028CF RID: 10447 RVA: 0x000BF0EC File Offset: 0x000BD2EC
 	private Vector2 GetInverseNormalVector(Vector2[] vertices, PolygonCollider2D collider, int index)
 	{
 		Vector2 b = vertices[index];
@@ -95,14 +95,14 @@ public class ShrinkCollider : MonoBehaviour
 		return -normalized;
 	}
 
-	// Token: 0x04001B75 RID: 7029
+	// Token: 0x040023C0 RID: 9152
 	private static List<Vector2> m_colliderPointsHelper_STATIC = new List<Vector2>();
 
-	// Token: 0x04001B76 RID: 7030
+	// Token: 0x040023C1 RID: 9153
 	[SerializeField]
 	private float m_shrinkAmount;
 
-	// Token: 0x04001B77 RID: 7031
+	// Token: 0x040023C2 RID: 9154
 	[SerializeField]
 	private bool m_shrinkByPercent;
 }

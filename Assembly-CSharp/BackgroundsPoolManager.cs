@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000689 RID: 1673
+// Token: 0x02000B0E RID: 2830
 public class BackgroundsPoolManager : MonoBehaviour
 {
-	// Token: 0x1700150F RID: 5391
-	// (get) Token: 0x06003C6D RID: 15469 RVA: 0x000D0B82 File Offset: 0x000CED82
-	// (set) Token: 0x06003C6E RID: 15470 RVA: 0x000D0B89 File Offset: 0x000CED89
+	// Token: 0x17001CD7 RID: 7383
+	// (get) Token: 0x060054EC RID: 21740 RVA: 0x0002E15D File Offset: 0x0002C35D
+	// (set) Token: 0x060054ED RID: 21741 RVA: 0x0002E164 File Offset: 0x0002C364
 	private static BackgroundsPoolManager Instance { get; set; }
 
-	// Token: 0x17001510 RID: 5392
-	// (get) Token: 0x06003C6F RID: 15471 RVA: 0x000D0B91 File Offset: 0x000CED91
-	// (set) Token: 0x06003C70 RID: 15472 RVA: 0x000D0B98 File Offset: 0x000CED98
+	// Token: 0x17001CD8 RID: 7384
+	// (get) Token: 0x060054EE RID: 21742 RVA: 0x0002E16C File Offset: 0x0002C36C
+	// (set) Token: 0x060054EF RID: 21743 RVA: 0x0002E173 File Offset: 0x0002C373
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06003C71 RID: 15473 RVA: 0x000D0BA0 File Offset: 0x000CEDA0
+	// Token: 0x060054F0 RID: 21744 RVA: 0x0002E17B File Offset: 0x0002C37B
 	private void Awake()
 	{
 		if (BackgroundsPoolManager.Instance == null)
@@ -28,14 +28,14 @@ public class BackgroundsPoolManager : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06003C72 RID: 15474 RVA: 0x000D0BC7 File Offset: 0x000CEDC7
+	// Token: 0x060054F1 RID: 21745 RVA: 0x0002E1A2 File Offset: 0x0002C3A2
 	private void Initialize()
 	{
 		this.m_backgroundsTable = new Dictionary<Background, GenericPool_RL<Background>>();
 		BackgroundsPoolManager.IsInitialized = true;
 	}
 
-	// Token: 0x06003C73 RID: 15475 RVA: 0x000D0BDA File Offset: 0x000CEDDA
+	// Token: 0x060054F2 RID: 21746 RVA: 0x0002E1B5 File Offset: 0x0002C3B5
 	private GenericPool_RL<Background> CreatePool(Background backgroundPrefab, int poolSize)
 	{
 		GenericPool_RL<Background> genericPool_RL = new GenericPool_RL<Background>();
@@ -43,7 +43,7 @@ public class BackgroundsPoolManager : MonoBehaviour
 		return genericPool_RL;
 	}
 
-	// Token: 0x06003C74 RID: 15476 RVA: 0x000D0BEC File Offset: 0x000CEDEC
+	// Token: 0x060054F3 RID: 21747 RVA: 0x001411C8 File Offset: 0x0013F3C8
 	private void CreateBackgroundPools_Internal(BiomeType biomeType)
 	{
 		Dictionary<Background, int> dictionary = new Dictionary<Background, int>();
@@ -138,19 +138,19 @@ public class BackgroundsPoolManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003C75 RID: 15477 RVA: 0x000D0F5C File Offset: 0x000CF15C
+	// Token: 0x060054F4 RID: 21748 RVA: 0x0002E1C6 File Offset: 0x0002C3C6
 	public static void CreateBackgroundPools(BiomeType biomeType)
 	{
 		BackgroundsPoolManager.Instance.CreateBackgroundPools_Internal(biomeType);
 	}
 
-	// Token: 0x06003C76 RID: 15478 RVA: 0x000D0F69 File Offset: 0x000CF169
+	// Token: 0x060054F5 RID: 21749 RVA: 0x0002E1D3 File Offset: 0x0002C3D3
 	public static Background GetBackground(Background bgPrefab)
 	{
 		return BackgroundsPoolManager.Instance.GetBackground_Internal(bgPrefab);
 	}
 
-	// Token: 0x06003C77 RID: 15479 RVA: 0x000D0F76 File Offset: 0x000CF176
+	// Token: 0x060054F6 RID: 21750 RVA: 0x0002E1E0 File Offset: 0x0002C3E0
 	private Background GetBackground_Internal(Background bgPrefab)
 	{
 		if (this.m_backgroundsTable.ContainsKey(bgPrefab))
@@ -164,7 +164,7 @@ public class BackgroundsPoolManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003C78 RID: 15480 RVA: 0x000D0FB4 File Offset: 0x000CF1B4
+	// Token: 0x060054F7 RID: 21751 RVA: 0x00141538 File Offset: 0x0013F738
 	public static void DestroyPools()
 	{
 		foreach (KeyValuePair<Background, GenericPool_RL<Background>> keyValuePair in BackgroundsPoolManager.Instance.m_backgroundsTable)
@@ -174,7 +174,7 @@ public class BackgroundsPoolManager : MonoBehaviour
 		BackgroundsPoolManager.Instance.m_backgroundsTable.Clear();
 	}
 
-	// Token: 0x06003C79 RID: 15481 RVA: 0x000D1020 File Offset: 0x000CF220
+	// Token: 0x060054F8 RID: 21752 RVA: 0x0002E21C File Offset: 0x0002C41C
 	private void OnDestroy()
 	{
 		BackgroundsPoolManager.DestroyPools();
@@ -182,6 +182,6 @@ public class BackgroundsPoolManager : MonoBehaviour
 		BackgroundsPoolManager.IsInitialized = false;
 	}
 
-	// Token: 0x04002D79 RID: 11641
+	// Token: 0x04003F37 RID: 16183
 	private Dictionary<Background, GenericPool_RL<Background>> m_backgroundsTable;
 }

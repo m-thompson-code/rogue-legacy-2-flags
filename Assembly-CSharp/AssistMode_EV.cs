@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000048 RID: 72
+// Token: 0x02000050 RID: 80
 public static class AssistMode_EV
 {
-	// Token: 0x06000138 RID: 312 RVA: 0x0000B714 File Offset: 0x00009914
+	// Token: 0x0600014C RID: 332 RVA: 0x000480BC File Offset: 0x000462BC
 	public static int GetDifficulty()
 	{
 		int num = 5000;
@@ -27,66 +27,66 @@ public static class AssistMode_EV
 		return num + BurdenManager.GetTotalBurdenLevel() * 100;
 	}
 
-	// Token: 0x040001F6 RID: 502
+	// Token: 0x04000217 RID: 535
 	public const int ENEMY_DAMAGE_SCALE_AMOUNT = 5;
 
-	// Token: 0x040001F7 RID: 503
+	// Token: 0x04000218 RID: 536
 	public const int ENEMY_DAMAGE_MIN_AMOUNT = 50;
 
-	// Token: 0x040001F8 RID: 504
+	// Token: 0x04000219 RID: 537
 	public const int ENEMY_DAMAGE_MAX_AMOUNT = 200;
 
-	// Token: 0x040001F9 RID: 505
+	// Token: 0x0400021A RID: 538
 	public const int ENEMY_HEALTH_SCALE_AMOUNT = 5;
 
-	// Token: 0x040001FA RID: 506
+	// Token: 0x0400021B RID: 539
 	public const int ENEMY_HEALTH_MIN_AMOUNT = 50;
 
-	// Token: 0x040001FB RID: 507
+	// Token: 0x0400021C RID: 540
 	public const int ENEMY_HEALTH_MAX_AMOUNT = 200;
 
-	// Token: 0x040001FC RID: 508
+	// Token: 0x0400021D RID: 541
 	public const int AIM_TIME_SLOW_SCALE_AMOUNT = 5;
 
-	// Token: 0x040001FD RID: 509
+	// Token: 0x0400021E RID: 542
 	public const int AIM_TIME_SLOW_MIN_AMOUNT = 25;
 
-	// Token: 0x040001FE RID: 510
+	// Token: 0x0400021F RID: 543
 	public const int AIM_TIME_SLOW_MAX_AMOUNT = 100;
 
-	// Token: 0x040001FF RID: 511
+	// Token: 0x04000220 RID: 544
 	public const int BURDEN_REQUIREMENT_SCALE_AMOUNT = 50;
 
-	// Token: 0x04000200 RID: 512
+	// Token: 0x04000221 RID: 545
 	public const int BURDEN_REQUIREMENT_MIN_AMOUNT = 50;
 
-	// Token: 0x04000201 RID: 513
+	// Token: 0x04000222 RID: 546
 	public const int BURDEN_REQUIREMENT_MAX_AMOUNT = 200;
 
-	// Token: 0x04000202 RID: 514
+	// Token: 0x04000223 RID: 547
 	public const bool BURDEN_REQUIREMENT_MODFIES_MAX_BURDENS = true;
 
-	// Token: 0x04000203 RID: 515
+	// Token: 0x04000224 RID: 548
 	public const int DIFFICULTY_INITIAL_VALUE = 5000;
 
-	// Token: 0x04000204 RID: 516
+	// Token: 0x04000225 RID: 549
 	public const int DIFFICULTY_ENEMY_DAMAGE_MOD = 10;
 
-	// Token: 0x04000205 RID: 517
+	// Token: 0x04000226 RID: 550
 	public const int DIFFICULTY_ENEMY_HEALTH_MOD = 10;
 
-	// Token: 0x04000206 RID: 518
+	// Token: 0x04000227 RID: 551
 	public const int DIFFICULTY_BURDEN_REQUIREMENT_MOD = 5;
 
-	// Token: 0x04000207 RID: 519
+	// Token: 0x04000228 RID: 552
 	public const int DIFFICULTY_AIM_TIME_SLOW_MOD = 50;
 
-	// Token: 0x04000208 RID: 520
+	// Token: 0x04000229 RID: 553
 	public const int DIFFICULTY_TOGGLE_FLIGHT_ADD = 400;
 
-	// Token: 0x04000209 RID: 521
+	// Token: 0x0400022A RID: 554
 	public const int DIFFICULTY_TOGGLE_NO_COLLISION_ADD = 1000;
 
-	// Token: 0x0400020A RID: 522
+	// Token: 0x0400022B RID: 555
 	public const int DIFFICULTY_PER_BURDEN_ADD = 100;
 }

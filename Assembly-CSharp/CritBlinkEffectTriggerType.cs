@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020002AD RID: 685
+// Token: 0x02000492 RID: 1170
 public enum CritBlinkEffectTriggerType
 {
-	// Token: 0x04001918 RID: 6424
+	// Token: 0x040020D7 RID: 8407
 	None,
-	// Token: 0x04001919 RID: 6425
+	// Token: 0x040020D8 RID: 8408
 	DashAttack,
-	// Token: 0x0400191A RID: 6426
+	// Token: 0x040020D9 RID: 8409
 	PlayerFreeCritStatusEffect,
-	// Token: 0x0400191B RID: 6427
+	// Token: 0x040020DA RID: 8410
 	PlayerComboStatusEffect
 }

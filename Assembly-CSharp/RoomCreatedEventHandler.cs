@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x0200079B RID: 1947
-// (Invoke) Token: 0x060041B2 RID: 16818
+// Token: 0x02000C5E RID: 3166
+// (Invoke) Token: 0x06005B2F RID: 23343
 public delegate void RoomCreatedEventHandler(object sender, RoomCreatedEventArgs eventArgs);

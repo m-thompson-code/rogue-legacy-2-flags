@@ -2,10 +2,10 @@
 
 namespace TweenRL
 {
-	// Token: 0x02000877 RID: 2167
+	// Token: 0x02000D91 RID: 3473
 	public class Expo
 	{
-		// Token: 0x06004783 RID: 18307 RVA: 0x0010153D File Offset: 0x000FF73D
+		// Token: 0x06006280 RID: 25216 RVA: 0x000316D1 File Offset: 0x0002F8D1
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			if (t != 0f)
@@ -15,7 +15,7 @@ namespace TweenRL
 			return b;
 		}
 
-		// Token: 0x06004784 RID: 18308 RVA: 0x0010156E File Offset: 0x000FF76E
+		// Token: 0x06006281 RID: 25217 RVA: 0x00031702 File Offset: 0x0002F902
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			if (t != d)
@@ -25,7 +25,7 @@ namespace TweenRL
 			return b + c;
 		}
 
-		// Token: 0x06004785 RID: 18309 RVA: 0x001015A4 File Offset: 0x000FF7A4
+		// Token: 0x06006282 RID: 25218 RVA: 0x00155C8C File Offset: 0x00153E8C
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			if (t == 0f)

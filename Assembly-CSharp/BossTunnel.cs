@@ -7,15 +7,15 @@ using SceneManagement_RL;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000563 RID: 1379
+// Token: 0x02000930 RID: 2352
 public class BossTunnel : Tunnel
 {
-	// Token: 0x17001263 RID: 4707
-	// (get) Token: 0x060032A2 RID: 12962 RVA: 0x000AB45E File Offset: 0x000A965E
-	// (set) Token: 0x060032A3 RID: 12963 RVA: 0x000AB466 File Offset: 0x000A9666
+	// Token: 0x17001922 RID: 6434
+	// (get) Token: 0x06004765 RID: 18277 RVA: 0x000272C2 File Offset: 0x000254C2
+	// (set) Token: 0x06004766 RID: 18278 RVA: 0x000272CA File Offset: 0x000254CA
 	public BossTunnelState TunnelState { get; set; }
 
-	// Token: 0x060032A4 RID: 12964 RVA: 0x000AB46F File Offset: 0x000A966F
+	// Token: 0x06004767 RID: 18279 RVA: 0x000272D3 File Offset: 0x000254D3
 	protected override IEnumerator EnterTunnelCoroutine()
 	{
 		if (!base.IsCutsceneTeleport)
@@ -48,7 +48,7 @@ public class BossTunnel : Tunnel
 		yield break;
 	}
 
-	// Token: 0x060032A5 RID: 12965 RVA: 0x000AB47E File Offset: 0x000A967E
+	// Token: 0x06004768 RID: 18280 RVA: 0x000272E2 File Offset: 0x000254E2
 	private IEnumerator TeleportPlayerToGarden()
 	{
 		yield return BiomeTransitionController.BiomeTransitionCoroutine(BiomeType.Castle, BiomeType.Garden);
@@ -60,7 +60,7 @@ public class BossTunnel : Tunnel
 		yield break;
 	}
 
-	// Token: 0x060032A6 RID: 12966 RVA: 0x000AB486 File Offset: 0x000A9686
+	// Token: 0x06004769 RID: 18281 RVA: 0x000272EA File Offset: 0x000254EA
 	private IEnumerator EnterTunnelAnimCoroutine()
 	{
 		float yieldTime = Time.time;
@@ -72,7 +72,7 @@ public class BossTunnel : Tunnel
 		yield break;
 	}
 
-	// Token: 0x060032A7 RID: 12967 RVA: 0x000AB498 File Offset: 0x000A9698
+	// Token: 0x0600476A RID: 18282 RVA: 0x00115B4C File Offset: 0x00113D4C
 	private void RegenHealthAndMana()
 	{
 		PlayerSaveFlag bossFreeHealUsedFlag = this.GetBossFreeHealUsedFlag();
@@ -102,7 +102,7 @@ public class BossTunnel : Tunnel
 		}
 	}
 
-	// Token: 0x060032A8 RID: 12968 RVA: 0x000AB5D4 File Offset: 0x000A97D4
+	// Token: 0x0600476B RID: 18283 RVA: 0x00115C88 File Offset: 0x00113E88
 	private void RegenAbilityCooldowns()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -114,7 +114,7 @@ public class BossTunnel : Tunnel
 		playerController.CastAbility.ResetAbilityCooldowns(CastAbilityType.Spell, false);
 	}
 
-	// Token: 0x060032A9 RID: 12969 RVA: 0x000AB634 File Offset: 0x000A9834
+	// Token: 0x0600476C RID: 18284 RVA: 0x00115CE8 File Offset: 0x00113EE8
 	protected override void OnPlayerInteractedWithTunnel(GameObject otherObj)
 	{
 		if (base.IsLocked && !base.IsCutsceneTeleport)
@@ -127,7 +127,7 @@ public class BossTunnel : Tunnel
 		base.OnPlayerInteractedWithTunnel(otherObj);
 	}
 
-	// Token: 0x060032AA RID: 12970 RVA: 0x000AB68C File Offset: 0x000A988C
+	// Token: 0x0600476D RID: 18285 RVA: 0x00115D40 File Offset: 0x00113F40
 	protected virtual PlayerSaveFlag GetBossFreeHealUsedFlag()
 	{
 		BiomeType biomeType = base.Room.BiomeType;

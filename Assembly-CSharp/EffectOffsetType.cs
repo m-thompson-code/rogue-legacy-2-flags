@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200040F RID: 1039
+// Token: 0x020006C7 RID: 1735
 public enum EffectOffsetType
 {
-	// Token: 0x0400208A RID: 8330
+	// Token: 0x04002B6D RID: 11117
 	Midpoint,
-	// Token: 0x0400208B RID: 8331
+	// Token: 0x04002B6E RID: 11118
 	Pivot,
-	// Token: 0x0400208C RID: 8332
+	// Token: 0x04002B6F RID: 11119
 	Visuals
 }

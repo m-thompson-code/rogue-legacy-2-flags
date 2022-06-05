@@ -4,40 +4,40 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000868 RID: 2152
+	// Token: 0x02000D76 RID: 3446
 	public class TextConsoleSimulator : MonoBehaviour
 	{
-		// Token: 0x0600472C RID: 18220 RVA: 0x001001BA File Offset: 0x000FE3BA
+		// Token: 0x060061EB RID: 25067 RVA: 0x00035FDD File Offset: 0x000341DD
 		private void Awake()
 		{
 			this.m_TextComponent = base.gameObject.GetComponent<TMP_Text>();
 		}
 
-		// Token: 0x0600472D RID: 18221 RVA: 0x001001CD File Offset: 0x000FE3CD
+		// Token: 0x060061EC RID: 25068 RVA: 0x00035FF0 File Offset: 0x000341F0
 		private void Start()
 		{
 			base.StartCoroutine(this.RevealCharacters(this.m_TextComponent));
 		}
 
-		// Token: 0x0600472E RID: 18222 RVA: 0x001001E2 File Offset: 0x000FE3E2
+		// Token: 0x060061ED RID: 25069 RVA: 0x00036005 File Offset: 0x00034205
 		private void OnEnable()
 		{
 			TMPro_EventManager.TEXT_CHANGED_EVENT.Add(new Action<UnityEngine.Object>(this.ON_TEXT_CHANGED));
 		}
 
-		// Token: 0x0600472F RID: 18223 RVA: 0x001001FA File Offset: 0x000FE3FA
+		// Token: 0x060061EE RID: 25070 RVA: 0x0003601D File Offset: 0x0003421D
 		private void OnDisable()
 		{
 			TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(new Action<UnityEngine.Object>(this.ON_TEXT_CHANGED));
 		}
 
-		// Token: 0x06004730 RID: 18224 RVA: 0x00100212 File Offset: 0x000FE412
+		// Token: 0x060061EF RID: 25071 RVA: 0x00036035 File Offset: 0x00034235
 		private void ON_TEXT_CHANGED(UnityEngine.Object obj)
 		{
 			this.hasTextChanged = true;
 		}
 
-		// Token: 0x06004731 RID: 18225 RVA: 0x0010021B File Offset: 0x000FE41B
+		// Token: 0x060061F0 RID: 25072 RVA: 0x0003603E File Offset: 0x0003423E
 		private IEnumerator RevealCharacters(TMP_Text textComponent)
 		{
 			textComponent.ForceMeshUpdate(false, false);
@@ -63,7 +63,7 @@ namespace TMPro.Examples
 			yield break;
 		}
 
-		// Token: 0x06004732 RID: 18226 RVA: 0x00100231 File Offset: 0x000FE431
+		// Token: 0x060061F1 RID: 25073 RVA: 0x00036054 File Offset: 0x00034254
 		private IEnumerator RevealWords(TMP_Text textComponent)
 		{
 			textComponent.ForceMeshUpdate(false, false);
@@ -97,10 +97,10 @@ namespace TMPro.Examples
 			yield break;
 		}
 
-		// Token: 0x04003C40 RID: 15424
+		// Token: 0x04004FED RID: 20461
 		private TMP_Text m_TextComponent;
 
-		// Token: 0x04003C41 RID: 15425
+		// Token: 0x04004FEE RID: 20462
 		private bool hasTextChanged;
 	}
 }

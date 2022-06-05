@@ -2,22 +2,22 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200080C RID: 2060
+// Token: 0x02000CD6 RID: 3286
 public class RewiredInputManager_Loader : MonoBehaviour, ILoadable
 {
-	// Token: 0x0600441B RID: 17435 RVA: 0x000F11E6 File Offset: 0x000EF3E6
+	// Token: 0x06005DA6 RID: 23974 RVA: 0x0003388E File Offset: 0x00031A8E
 	private string GetPath()
 	{
 		return this.m_retailRewiredInputManagerPath;
 	}
 
-	// Token: 0x0600441C RID: 17436 RVA: 0x000F11EE File Offset: 0x000EF3EE
+	// Token: 0x06005DA7 RID: 23975 RVA: 0x00033896 File Offset: 0x00031A96
 	public void LoadSync()
 	{
 		UnityEngine.Object.Instantiate<GameObject>(CDGResources.Load<GameObject>(this.GetPath(), "", true), null);
 	}
 
-	// Token: 0x0600441D RID: 17437 RVA: 0x000F1208 File Offset: 0x000EF408
+	// Token: 0x06005DA8 RID: 23976 RVA: 0x000338B0 File Offset: 0x00031AB0
 	public IEnumerator LoadAsync()
 	{
 		CDGAsyncLoadRequest<GameObject> req = CDGResources.LoadAsync<GameObject>(this.GetPath(), "");
@@ -29,15 +29,15 @@ public class RewiredInputManager_Loader : MonoBehaviour, ILoadable
 		yield break;
 	}
 
-	// Token: 0x04003A3E RID: 14910
+	// Token: 0x04004D16 RID: 19734
 	[SerializeField]
 	private string m_debugRewiredInputManagerPath;
 
-	// Token: 0x04003A3F RID: 14911
+	// Token: 0x04004D17 RID: 19735
 	[SerializeField]
 	private string m_retailRewiredInputManagerPath;
 
-	// Token: 0x04003A40 RID: 14912
+	// Token: 0x04004D18 RID: 19736
 	[SerializeField]
 	private string m_gameCoreRewiredInputManagerPath;
 }

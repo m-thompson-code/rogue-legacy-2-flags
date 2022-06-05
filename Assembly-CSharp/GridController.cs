@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000675 RID: 1653
+// Token: 0x02000AEB RID: 2795
 public class GridController
 {
-	// Token: 0x170014BF RID: 5311
-	// (get) Token: 0x06003B73 RID: 15219 RVA: 0x000CC77B File Offset: 0x000CA97B
-	// (set) Token: 0x06003B74 RID: 15220 RVA: 0x000CC782 File Offset: 0x000CA982
+	// Token: 0x17001C7B RID: 7291
+	// (get) Token: 0x060053AA RID: 21418 RVA: 0x0002D69B File Offset: 0x0002B89B
+	// (set) Token: 0x060053AB RID: 21419 RVA: 0x0002D6A2 File Offset: 0x0002B8A2
 	public static Dictionary<RoomSide, int> Extents
 	{
 		get
@@ -21,9 +21,9 @@ public class GridController
 		}
 	}
 
-	// Token: 0x170014C0 RID: 5312
-	// (get) Token: 0x06003B75 RID: 15221 RVA: 0x000CC78A File Offset: 0x000CA98A
-	// (set) Token: 0x06003B76 RID: 15222 RVA: 0x000CC791 File Offset: 0x000CA991
+	// Token: 0x17001C7C RID: 7292
+	// (get) Token: 0x060053AC RID: 21420 RVA: 0x0002D6AA File Offset: 0x0002B8AA
+	// (set) Token: 0x060053AD RID: 21421 RVA: 0x0002D6B1 File Offset: 0x0002B8B1
 	public static GridPoint[,] GridPoints
 	{
 		get
@@ -36,8 +36,8 @@ public class GridController
 		}
 	}
 
-	// Token: 0x170014C1 RID: 5313
-	// (get) Token: 0x06003B77 RID: 15223 RVA: 0x000CC799 File Offset: 0x000CA999
+	// Token: 0x17001C7D RID: 7293
+	// (get) Token: 0x060053AE RID: 21422 RVA: 0x0002D6B9 File Offset: 0x0002B8B9
 	public static bool IsInstantiated
 	{
 		get
@@ -46,7 +46,7 @@ public class GridController
 		}
 	}
 
-	// Token: 0x06003B78 RID: 15224 RVA: 0x000CC7A3 File Offset: 0x000CA9A3
+	// Token: 0x060053AF RID: 21423 RVA: 0x0002D6C3 File Offset: 0x0002B8C3
 	public GridController()
 	{
 		GridController.m_instance = this;
@@ -56,7 +56,7 @@ public class GridController
 		}
 	}
 
-	// Token: 0x06003B79 RID: 15225 RVA: 0x000CC7CC File Offset: 0x000CA9CC
+	// Token: 0x060053B0 RID: 21424 RVA: 0x0013C748 File Offset: 0x0013A948
 	public static void AddRoomToGrid(GridPoint gridPoint)
 	{
 		if (GridController.m_gridOffset == -1)
@@ -84,7 +84,7 @@ public class GridController
 		GridController.UpdateExtentAfterAdd(gridPoint);
 	}
 
-	// Token: 0x06003B7A RID: 15226 RVA: 0x000CC874 File Offset: 0x000CAA74
+	// Token: 0x060053B1 RID: 21425 RVA: 0x0013C7F0 File Offset: 0x0013A9F0
 	public void ClearGridPoint(GridPoint gridPoint)
 	{
 		if (GridController.m_gridOffset == -1)
@@ -101,7 +101,7 @@ public class GridController
 		GridController.m_occupiedGridPointCoords.Remove(gridPoint.GridCoordinates);
 	}
 
-	// Token: 0x06003B7B RID: 15227 RVA: 0x000CC918 File Offset: 0x000CAB18
+	// Token: 0x060053B2 RID: 21426 RVA: 0x0013C894 File Offset: 0x0013AA94
 	public static Vector2Int GetDoorLeadsToGridCoordinates(Vector2Int roomCoordinates, Vector2Int roomSize, DoorLocation location)
 	{
 		int x = -1;
@@ -130,7 +130,7 @@ public class GridController
 		return new Vector2Int(x, y);
 	}
 
-	// Token: 0x06003B7C RID: 15228 RVA: 0x000CC9D0 File Offset: 0x000CABD0
+	// Token: 0x060053B3 RID: 21427 RVA: 0x0013C94C File Offset: 0x0013AB4C
 	public List<DoorLocation> GetDoorLocationsThatFitAtCoordinates(Vector2Int coordinates, Bounds border, RoomSide side, Vector2Int roomSize)
 	{
 		List<DoorLocation> list = new List<DoorLocation>();
@@ -155,13 +155,13 @@ public class GridController
 		return list;
 	}
 
-	// Token: 0x06003B7D RID: 15229 RVA: 0x000CCA30 File Offset: 0x000CAC30
+	// Token: 0x060053B4 RID: 21428 RVA: 0x0002D6EC File Offset: 0x0002B8EC
 	public static Vector2 GetRoomCoordinatesFromGridCoordinates(Vector2Int gridCoordinates)
 	{
 		return new Vector2((float)(gridCoordinates.x * 32), (float)(gridCoordinates.y * 18));
 	}
 
-	// Token: 0x06003B7E RID: 15230 RVA: 0x000CCA50 File Offset: 0x000CAC50
+	// Token: 0x060053B5 RID: 21429 RVA: 0x0013C9AC File Offset: 0x0013ABAC
 	public static bool GetIsGridSpaceAvailable(Vector2Int coordinates)
 	{
 		int num = coordinates.x + GridController.m_gridOffset;
@@ -169,7 +169,7 @@ public class GridController
 		return GridController.GridPoints[num, num2] == null;
 	}
 
-	// Token: 0x06003B7F RID: 15231 RVA: 0x000CCA88 File Offset: 0x000CAC88
+	// Token: 0x060053B6 RID: 21430 RVA: 0x0013C9E4 File Offset: 0x0013ABE4
 	public static bool GetIsSpaceForRoomAtDoor(Vector2Int coordinates, Vector2Int roomSize, RoomSide side, int atDoorNumber)
 	{
 		int num = 1;
@@ -210,7 +210,7 @@ public class GridController
 		return true;
 	}
 
-	// Token: 0x06003B80 RID: 15232 RVA: 0x000CCB74 File Offset: 0x000CAD74
+	// Token: 0x060053B7 RID: 21431 RVA: 0x0013CAD0 File Offset: 0x0013ACD0
 	public static bool GetIsSpaceForRoomAtDoor(Vector2Int coordinates, RoomSide side, Vector2Int roomSize, int atDoorNumber, Bounds border)
 	{
 		int num = 1;
@@ -259,7 +259,7 @@ public class GridController
 		return true;
 	}
 
-	// Token: 0x06003B81 RID: 15233 RVA: 0x000CCD14 File Offset: 0x000CAF14
+	// Token: 0x060053B8 RID: 21432 RVA: 0x0013CC70 File Offset: 0x0013AE70
 	public static int GetDoorNumber(GridPoint gridPoint, RoomSide side)
 	{
 		int result = gridPoint.LocalCoords.x;
@@ -270,13 +270,13 @@ public class GridController
 		return result;
 	}
 
-	// Token: 0x06003B82 RID: 15234 RVA: 0x000CCD5E File Offset: 0x000CAF5E
+	// Token: 0x060053B9 RID: 21433 RVA: 0x0002D709 File Offset: 0x0002B909
 	public static Vector2Int GetGridCoordsOnGridPointSide(GridPoint gridPoint, RoomSide side)
 	{
 		return GridController.GetDoorLeadsToGridCoordinates(gridPoint.GridCoordinates, Vector2Int.one, new DoorLocation(side, 0));
 	}
 
-	// Token: 0x06003B83 RID: 15235 RVA: 0x000CCD78 File Offset: 0x000CAF78
+	// Token: 0x060053BA RID: 21434 RVA: 0x0013CCBC File Offset: 0x0013AEBC
 	public static Bounds GetGridPointBounds(Vector2Int gridCoordinates)
 	{
 		Bounds result = default(Bounds);
@@ -290,7 +290,7 @@ public class GridController
 		return result;
 	}
 
-	// Token: 0x06003B84 RID: 15236 RVA: 0x000CCE1C File Offset: 0x000CB01C
+	// Token: 0x060053BB RID: 21435 RVA: 0x0013CD60 File Offset: 0x0013AF60
 	public static Vector2 GetWorldPositionFromRoomCoordinates(Vector2 roomCoordinates, Vector2Int roomSize)
 	{
 		float x = 0.5f * (float)roomSize.x * 32f;
@@ -299,7 +299,7 @@ public class GridController
 		return roomCoordinates + b;
 	}
 
-	// Token: 0x06003B85 RID: 15237 RVA: 0x000CCE64 File Offset: 0x000CB064
+	// Token: 0x060053BC RID: 21436 RVA: 0x0013CDA8 File Offset: 0x0013AFA8
 	public static Vector2Int GetRoomGridCoordinates(Vector2Int buildCoordinates, Vector2Int roomSize, DoorLocation location)
 	{
 		int x = buildCoordinates.x;
@@ -330,7 +330,7 @@ public class GridController
 		return new Vector2Int(x, y);
 	}
 
-	// Token: 0x06003B86 RID: 15238 RVA: 0x000CCF38 File Offset: 0x000CB138
+	// Token: 0x060053BD RID: 21437 RVA: 0x0013CE7C File Offset: 0x0013B07C
 	public void OnBiomeControllerDestroyed(BiomeController biomeController)
 	{
 		foreach (GridPoint gridPoint in biomeController.GridPointManager.GridPoints)
@@ -343,7 +343,7 @@ public class GridController
 		GridController.Extents[RoomSide.Bottom] = GridController.m_occupiedGridPointCoords.Min((Vector2Int coords) => coords.y);
 	}
 
-	// Token: 0x06003B87 RID: 15239 RVA: 0x000CD060 File Offset: 0x000CB260
+	// Token: 0x060053BE RID: 21438 RVA: 0x0013CFA4 File Offset: 0x0013B1A4
 	private static void UpdateExtentAfterAdd(GridPoint gridPoint)
 	{
 		if (gridPoint.GridCoordinates.x >= GridController.Extents[RoomSide.Right])
@@ -365,7 +365,7 @@ public class GridController
 		}
 	}
 
-	// Token: 0x06003B88 RID: 15240 RVA: 0x000CD144 File Offset: 0x000CB344
+	// Token: 0x060053BF RID: 21439 RVA: 0x0013D088 File Offset: 0x0013B288
 	public static void Reset()
 	{
 		if (GridController.GridPoints != null)
@@ -387,7 +387,7 @@ public class GridController
 		}
 	}
 
-	// Token: 0x06003B89 RID: 15241 RVA: 0x000CD1C8 File Offset: 0x000CB3C8
+	// Token: 0x060053C0 RID: 21440 RVA: 0x0013D10C File Offset: 0x0013B30C
 	public static bool GetDoesDoorLeadToDifferentBiome(Door door)
 	{
 		BiomeType appearanceBiomeType = door.Room.AppearanceBiomeType;
@@ -395,7 +395,7 @@ public class GridController
 		return (appearanceBiomeType != BiomeType.Tower || doorLeadsToBiome != BiomeType.TowerExterior) && (appearanceBiomeType != BiomeType.TowerExterior || doorLeadsToBiome != BiomeType.Tower) && (appearanceBiomeType != BiomeType.Stone || doorLeadsToBiome != BiomeType.Town) && (appearanceBiomeType != BiomeType.Town || doorLeadsToBiome != BiomeType.Stone) && (appearanceBiomeType != BiomeType.TowerExterior || doorLeadsToBiome != BiomeType.Study) && (appearanceBiomeType != BiomeType.Study || doorLeadsToBiome != BiomeType.TowerExterior) && appearanceBiomeType != doorLeadsToBiome;
 	}
 
-	// Token: 0x06003B8A RID: 15242 RVA: 0x000CD248 File Offset: 0x000CB448
+	// Token: 0x060053C1 RID: 21441 RVA: 0x0013D18C File Offset: 0x0013B38C
 	public static GridPoint GetGridPoint(Vector2Int coords)
 	{
 		GridPoint result = null;
@@ -414,13 +414,13 @@ public class GridController
 		return result;
 	}
 
-	// Token: 0x06003B8B RID: 15243 RVA: 0x000CD2A0 File Offset: 0x000CB4A0
+	// Token: 0x060053C2 RID: 21442 RVA: 0x0002D722 File Offset: 0x0002B922
 	public static GridPoint GetGridPoint(Door door)
 	{
 		return (door.Room as Room).GridPointManager.GetGridPoint(new DoorLocation(door.Side, door.Number));
 	}
 
-	// Token: 0x06003B8C RID: 15244 RVA: 0x000CD2C8 File Offset: 0x000CB4C8
+	// Token: 0x060053C3 RID: 21443 RVA: 0x0013D1E4 File Offset: 0x0013B3E4
 	public static BiomeType GetDoorLeadsToBiome(Door door)
 	{
 		BiomeType result = door.Room.AppearanceBiomeType;
@@ -436,10 +436,10 @@ public class GridController
 		return result;
 	}
 
-	// Token: 0x04002D11 RID: 11537
+	// Token: 0x04003E9C RID: 16028
 	public const int GRID_SIZE = 1000;
 
-	// Token: 0x04002D12 RID: 11538
+	// Token: 0x04003E9D RID: 16029
 	private static Dictionary<RoomSide, int> m_extents = new Dictionary<RoomSide, int>
 	{
 		{
@@ -460,15 +460,15 @@ public class GridController
 		}
 	};
 
-	// Token: 0x04002D13 RID: 11539
+	// Token: 0x04003E9E RID: 16030
 	private static GridPoint[,] m_gridPoints = null;
 
-	// Token: 0x04002D14 RID: 11540
+	// Token: 0x04003E9F RID: 16031
 	private static int m_gridOffset = -1;
 
-	// Token: 0x04002D15 RID: 11541
+	// Token: 0x04003EA0 RID: 16032
 	private static GridController m_instance = null;
 
-	// Token: 0x04002D16 RID: 11542
+	// Token: 0x04003EA1 RID: 16033
 	private static HashSet<Vector2Int> m_occupiedGridPointCoords = new HashSet<Vector2Int>();
 }

@@ -2,16 +2,16 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000491 RID: 1169
+// Token: 0x02000793 RID: 1939
 public class DownstrikeProjectile_RL : Projectile_RL
 {
-	// Token: 0x17001096 RID: 4246
-	// (get) Token: 0x06002B13 RID: 11027 RVA: 0x00092009 File Offset: 0x00090209
-	// (set) Token: 0x06002B14 RID: 11028 RVA: 0x00092010 File Offset: 0x00090210
+	// Token: 0x170015DB RID: 5595
+	// (get) Token: 0x06003B56 RID: 15190 RVA: 0x000208FF File Offset: 0x0001EAFF
+	// (set) Token: 0x06003B57 RID: 15191 RVA: 0x00020906 File Offset: 0x0001EB06
 	public static int ConsecutiveStrikes { get; set; }
 
-	// Token: 0x17001097 RID: 4247
-	// (get) Token: 0x06002B15 RID: 11029 RVA: 0x00092018 File Offset: 0x00090218
+	// Token: 0x170015DC RID: 5596
+	// (get) Token: 0x06003B58 RID: 15192 RVA: 0x000F3AD4 File Offset: 0x000F1CD4
 	public override float ActualDamage
 	{
 		get
@@ -32,7 +32,7 @@ public class DownstrikeProjectile_RL : Projectile_RL
 		}
 	}
 
-	// Token: 0x06002B16 RID: 11030 RVA: 0x00092084 File Offset: 0x00090284
+	// Token: 0x06003B59 RID: 15193 RVA: 0x0002090E File Offset: 0x0001EB0E
 	protected override IEnumerator DestroyProjectileCoroutine(bool animate = false)
 	{
 		base.HitboxController.DisableAllCollisions = false;
@@ -49,6 +49,6 @@ public class DownstrikeProjectile_RL : Projectile_RL
 		yield break;
 	}
 
-	// Token: 0x04002318 RID: 8984
+	// Token: 0x04002F28 RID: 12072
 	private Action<Projectile_RL, GameObject> m_bounce;
 }

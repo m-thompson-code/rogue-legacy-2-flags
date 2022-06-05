@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000130 RID: 304
+// Token: 0x0200020E RID: 526
 public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 {
-	// Token: 0x17000510 RID: 1296
-	// (get) Token: 0x0600096E RID: 2414 RVA: 0x0001ECBA File Offset: 0x0001CEBA
+	// Token: 0x170006BC RID: 1724
+	// (get) Token: 0x06000E77 RID: 3703 RVA: 0x00004A07 File Offset: 0x00002C07
 	protected override int NumberOfShots
 	{
 		get
@@ -14,8 +14,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000511 RID: 1297
-	// (get) Token: 0x0600096F RID: 2415 RVA: 0x0001ECBD File Offset: 0x0001CEBD
+	// Token: 0x170006BD RID: 1725
+	// (get) Token: 0x06000E78 RID: 3704 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool AlternateShots
 	{
 		get
@@ -24,8 +24,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000512 RID: 1298
-	// (get) Token: 0x06000970 RID: 2416 RVA: 0x0001ECC0 File Offset: 0x0001CEC0
+	// Token: 0x170006BE RID: 1726
+	// (get) Token: 0x06000E79 RID: 3705 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected virtual int NumberOfCurse
 	{
 		get
@@ -34,7 +34,7 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000971 RID: 2417 RVA: 0x0001ECC3 File Offset: 0x0001CEC3
+	// Token: 0x06000E7A RID: 3706 RVA: 0x0000808F File Offset: 0x0000628F
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -80,8 +80,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x17000513 RID: 1299
-	// (get) Token: 0x06000972 RID: 2418 RVA: 0x0001ECD2 File Offset: 0x0001CED2
+	// Token: 0x170006BF RID: 1727
+	// (get) Token: 0x06000E7B RID: 3707 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_TellIntro_AnimSpeed
 	{
 		get
@@ -90,8 +90,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000514 RID: 1300
-	// (get) Token: 0x06000973 RID: 2419 RVA: 0x0001ECD9 File Offset: 0x0001CED9
+	// Token: 0x170006C0 RID: 1728
+	// (get) Token: 0x06000E7C RID: 3708 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_TellIntro_Delay
 	{
 		get
@@ -100,8 +100,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000515 RID: 1301
-	// (get) Token: 0x06000974 RID: 2420 RVA: 0x0001ECE0 File Offset: 0x0001CEE0
+	// Token: 0x170006C1 RID: 1729
+	// (get) Token: 0x06000E7D RID: 3709 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_TellHold_AnimSpeed
 	{
 		get
@@ -110,8 +110,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000516 RID: 1302
-	// (get) Token: 0x06000975 RID: 2421 RVA: 0x0001ECE7 File Offset: 0x0001CEE7
+	// Token: 0x170006C2 RID: 1730
+	// (get) Token: 0x06000E7E RID: 3710 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_dash_TellHold_Delay
 	{
 		get
@@ -120,8 +120,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000517 RID: 1303
-	// (get) Token: 0x06000976 RID: 2422 RVA: 0x0001ECEE File Offset: 0x0001CEEE
+	// Token: 0x170006C3 RID: 1731
+	// (get) Token: 0x06000E7F RID: 3711 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_AttackIntro_AnimSpeed
 	{
 		get
@@ -130,8 +130,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000518 RID: 1304
-	// (get) Token: 0x06000977 RID: 2423 RVA: 0x0001ECF5 File Offset: 0x0001CEF5
+	// Token: 0x170006C4 RID: 1732
+	// (get) Token: 0x06000E80 RID: 3712 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_AttackIntro_Delay
 	{
 		get
@@ -140,8 +140,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000519 RID: 1305
-	// (get) Token: 0x06000978 RID: 2424 RVA: 0x0001ECFC File Offset: 0x0001CEFC
+	// Token: 0x170006C5 RID: 1733
+	// (get) Token: 0x06000E81 RID: 3713 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_AttackHold_AnimSpeed
 	{
 		get
@@ -150,8 +150,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700051A RID: 1306
-	// (get) Token: 0x06000979 RID: 2425 RVA: 0x0001ED03 File Offset: 0x0001CF03
+	// Token: 0x170006C6 RID: 1734
+	// (get) Token: 0x06000E82 RID: 3714 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_AttackHold_Delay
 	{
 		get
@@ -160,8 +160,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700051B RID: 1307
-	// (get) Token: 0x0600097A RID: 2426 RVA: 0x0001ED0A File Offset: 0x0001CF0A
+	// Token: 0x170006C7 RID: 1735
+	// (get) Token: 0x06000E83 RID: 3715 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_Exit_AnimSpeed
 	{
 		get
@@ -170,8 +170,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700051C RID: 1308
-	// (get) Token: 0x0600097B RID: 2427 RVA: 0x0001ED11 File Offset: 0x0001CF11
+	// Token: 0x170006C8 RID: 1736
+	// (get) Token: 0x06000E84 RID: 3716 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_Exit_Delay
 	{
 		get
@@ -180,8 +180,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700051D RID: 1309
-	// (get) Token: 0x0600097C RID: 2428 RVA: 0x0001ED18 File Offset: 0x0001CF18
+	// Token: 0x170006C9 RID: 1737
+	// (get) Token: 0x06000E85 RID: 3717 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_Exit_ForceIdle
 	{
 		get
@@ -190,8 +190,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700051E RID: 1310
-	// (get) Token: 0x0600097D RID: 2429 RVA: 0x0001ED1F File Offset: 0x0001CF1F
+	// Token: 0x170006CA RID: 1738
+	// (get) Token: 0x06000E86 RID: 3718 RVA: 0x00005FB1 File Offset: 0x000041B1
 	protected virtual float m_dash_Exit_AttackCD
 	{
 		get
@@ -200,8 +200,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700051F RID: 1311
-	// (get) Token: 0x0600097E RID: 2430 RVA: 0x0001ED26 File Offset: 0x0001CF26
+	// Token: 0x170006CB RID: 1739
+	// (get) Token: 0x06000E87 RID: 3719 RVA: 0x0000809E File Offset: 0x0000629E
 	protected virtual float m_dash_Attack_ForwardSpeedMod
 	{
 		get
@@ -210,8 +210,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000520 RID: 1312
-	// (get) Token: 0x0600097F RID: 2431 RVA: 0x0001ED2D File Offset: 0x0001CF2D
+	// Token: 0x170006CC RID: 1740
+	// (get) Token: 0x06000E88 RID: 3720 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected virtual float m_dash_Attack_Duration
 	{
 		get
@@ -220,8 +220,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000521 RID: 1313
-	// (get) Token: 0x06000980 RID: 2432 RVA: 0x0001ED34 File Offset: 0x0001CF34
+	// Token: 0x170006CD RID: 1741
+	// (get) Token: 0x06000E89 RID: 3721 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_dropsFireballsDuringDashAttack
 	{
 		get
@@ -230,8 +230,8 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000522 RID: 1314
-	// (get) Token: 0x06000981 RID: 2433 RVA: 0x0001ED37 File Offset: 0x0001CF37
+	// Token: 0x170006CE RID: 1742
+	// (get) Token: 0x06000E8A RID: 3722 RVA: 0x00006772 File Offset: 0x00004972
 	protected virtual float m_fireballDropDuringDashInterval
 	{
 		get
@@ -240,7 +240,7 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000982 RID: 2434 RVA: 0x0001ED3E File Offset: 0x0001CF3E
+	// Token: 0x06000E8B RID: 3723 RVA: 0x000080A5 File Offset: 0x000062A5
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -272,18 +272,18 @@ public class Starburst_Miniboss_AIScript : Starburst_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x04000DC0 RID: 3520
+	// Token: 0x0400116E RID: 4462
 	protected const string DASH_TELL_INTRO = "Spin_Tell_Intro";
 
-	// Token: 0x04000DC1 RID: 3521
+	// Token: 0x0400116F RID: 4463
 	protected const string DASH_TELL_HOLD = "Spin_Tell_Hold";
 
-	// Token: 0x04000DC2 RID: 3522
+	// Token: 0x04001170 RID: 4464
 	protected const string DASH_ATTACK_INTRO = "Spin_Attack_Intro";
 
-	// Token: 0x04000DC3 RID: 3523
+	// Token: 0x04001171 RID: 4465
 	protected const string DASH_ATTACK_HOLD = "Spin_Attack_Hold";
 
-	// Token: 0x04000DC4 RID: 3524
+	// Token: 0x04001172 RID: 4466
 	protected const string DASH_EXIT = "Spin_Exit";
 }

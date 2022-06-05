@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000369 RID: 873
+// Token: 0x020005E3 RID: 1507
 public class YouAreBlue_Trait : BaseTrait
 {
-	// Token: 0x17000DFB RID: 3579
-	// (get) Token: 0x060020BC RID: 8380 RVA: 0x00066F78 File Offset: 0x00065178
+	// Token: 0x1700126E RID: 4718
+	// (get) Token: 0x06002E6D RID: 11885 RVA: 0x0001960C File Offset: 0x0001780C
 	public override TraitType TraitType
 	{
 		get
@@ -14,7 +14,7 @@ public class YouAreBlue_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x060020BD RID: 8381 RVA: 0x00066F7F File Offset: 0x0006517F
+	// Token: 0x06002E6E RID: 11886 RVA: 0x00019613 File Offset: 0x00017813
 	private IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)

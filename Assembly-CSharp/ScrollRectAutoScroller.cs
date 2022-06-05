@@ -2,10 +2,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020002E6 RID: 742
+// Token: 0x020004F0 RID: 1264
 public class ScrollRectAutoScroller : MonoBehaviour
 {
-	// Token: 0x06001D7C RID: 7548 RVA: 0x00060FBC File Offset: 0x0005F1BC
+	// Token: 0x060028C1 RID: 10433 RVA: 0x00016DD2 File Offset: 0x00014FD2
 	private void Awake()
 	{
 		this.m_scrollBar = this.m_scrollRect.verticalScrollbar;
@@ -13,19 +13,19 @@ public class ScrollRectAutoScroller : MonoBehaviour
 		this.m_viewportRectTransform = this.m_scrollRect.viewport;
 	}
 
-	// Token: 0x06001D7D RID: 7549 RVA: 0x00060FF1 File Offset: 0x0005F1F1
+	// Token: 0x060028C2 RID: 10434 RVA: 0x00016E07 File Offset: 0x00015007
 	public void ConfigureScrollBar(int arraySize)
 	{
 		this.m_arraySize = arraySize;
 	}
 
-	// Token: 0x06001D7E RID: 7550 RVA: 0x00060FFA File Offset: 0x0005F1FA
+	// Token: 0x060028C3 RID: 10435 RVA: 0x00016E10 File Offset: 0x00015010
 	public void SetSelectedIndex(int selectedEntryIndex)
 	{
 		this.AutoScroll(selectedEntryIndex);
 	}
 
-	// Token: 0x06001D7F RID: 7551 RVA: 0x00061004 File Offset: 0x0005F204
+	// Token: 0x060028C4 RID: 10436 RVA: 0x000BEC5C File Offset: 0x000BCE5C
 	protected virtual void AutoScroll(int selectedEntryIndex)
 	{
 		float height = this.m_contentRectTransform.rect.height;
@@ -78,19 +78,19 @@ public class ScrollRectAutoScroller : MonoBehaviour
 		});
 	}
 
-	// Token: 0x04001B6A RID: 7018
+	// Token: 0x040023B5 RID: 9141
 	[SerializeField]
 	private ScrollRect m_scrollRect;
 
-	// Token: 0x04001B6B RID: 7019
+	// Token: 0x040023B6 RID: 9142
 	private Scrollbar m_scrollBar;
 
-	// Token: 0x04001B6C RID: 7020
+	// Token: 0x040023B7 RID: 9143
 	private RectTransform m_viewportRectTransform;
 
-	// Token: 0x04001B6D RID: 7021
+	// Token: 0x040023B8 RID: 9144
 	private RectTransform m_contentRectTransform;
 
-	// Token: 0x04001B6E RID: 7022
+	// Token: 0x040023B9 RID: 9145
 	private int m_arraySize;
 }

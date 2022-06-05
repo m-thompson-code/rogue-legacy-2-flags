@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000376 RID: 886
+// Token: 0x020005FA RID: 1530
 public class FadeOutHUDCollider : MonoBehaviour
 {
-	// Token: 0x17000E0E RID: 3598
-	// (get) Token: 0x06002139 RID: 8505 RVA: 0x00068724 File Offset: 0x00066924
+	// Token: 0x17001291 RID: 4753
+	// (get) Token: 0x06002F20 RID: 12064 RVA: 0x00019CE7 File Offset: 0x00017EE7
 	public Collider2D Collider
 	{
 		get
@@ -14,7 +14,7 @@ public class FadeOutHUDCollider : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600213A RID: 8506 RVA: 0x0006872C File Offset: 0x0006692C
+	// Token: 0x06002F21 RID: 12065 RVA: 0x000C96E0 File Offset: 0x000C78E0
 	private void Awake()
 	{
 		RectTransform rectTransform = base.transform.parent.transform as RectTransform;
@@ -40,7 +40,7 @@ public class FadeOutHUDCollider : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600213B RID: 8507 RVA: 0x00068888 File Offset: 0x00066A88
+	// Token: 0x06002F22 RID: 12066 RVA: 0x000C983C File Offset: 0x000C7A3C
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
@@ -50,7 +50,7 @@ public class FadeOutHUDCollider : MonoBehaviour
 		Messenger<SceneMessenger, SceneEvent>.RemoveListener(SceneEvent.AspectRatioChanged, this.m_onAspectRatioChanged);
 	}
 
-	// Token: 0x0600213C RID: 8508 RVA: 0x000688D4 File Offset: 0x00066AD4
+	// Token: 0x06002F23 RID: 12067 RVA: 0x000C9888 File Offset: 0x000C7A88
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		float zoomLevel = CameraController.ZoomLevel;
@@ -70,7 +70,7 @@ public class FadeOutHUDCollider : MonoBehaviour
 		base.transform.localPosition = localPosition;
 	}
 
-	// Token: 0x0600213D RID: 8509 RVA: 0x00068974 File Offset: 0x00066B74
+	// Token: 0x06002F24 RID: 12068 RVA: 0x00019CEF File Offset: 0x00017EEF
 	private void OnPlayerEnterFairyRoom(object sender, EventArgs args)
 	{
 		this.m_inDeactivatedFairyRoom = true;
@@ -80,7 +80,7 @@ public class FadeOutHUDCollider : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600213E RID: 8510 RVA: 0x000689A0 File Offset: 0x00066BA0
+	// Token: 0x06002F25 RID: 12069 RVA: 0x000C9928 File Offset: 0x000C7B28
 	private void OnPlayerFairyRoomTriggered(object sender, EventArgs args)
 	{
 		FairyRoomEnteredEventArgs fairyRoomEnteredEventArgs = args as FairyRoomEnteredEventArgs;
@@ -90,7 +90,7 @@ public class FadeOutHUDCollider : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600213F RID: 8511 RVA: 0x000689CB File Offset: 0x00066BCB
+	// Token: 0x06002F26 RID: 12070 RVA: 0x00019D19 File Offset: 0x00017F19
 	private void OnPlayerExitFairyRoom(object sender, EventArgs args)
 	{
 		this.m_inDeactivatedFairyRoom = false;
@@ -100,19 +100,19 @@ public class FadeOutHUDCollider : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002140 RID: 8512 RVA: 0x000689F5 File Offset: 0x00066BF5
+	// Token: 0x06002F27 RID: 12071 RVA: 0x00019D43 File Offset: 0x00017F43
 	private void OnAspectRatioChanged(MonoBehaviour sender, EventArgs args)
 	{
 		this.OnPlayerEnterRoom(null, null);
 	}
 
-	// Token: 0x06002141 RID: 8513 RVA: 0x000689FF File Offset: 0x00066BFF
+	// Token: 0x06002F28 RID: 12072 RVA: 0x00019D4D File Offset: 0x00017F4D
 	public void SetCanvasGroup(CanvasGroup canvasGroup)
 	{
 		this.m_canvasGroup = canvasGroup;
 	}
 
-	// Token: 0x06002142 RID: 8514 RVA: 0x00068A08 File Offset: 0x00066C08
+	// Token: 0x06002F29 RID: 12073 RVA: 0x00019D56 File Offset: 0x00017F56
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (this.IsValidCollider(collision))
@@ -121,7 +121,7 @@ public class FadeOutHUDCollider : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002143 RID: 8515 RVA: 0x00068A1A File Offset: 0x00066C1A
+	// Token: 0x06002F2A RID: 12074 RVA: 0x00019D56 File Offset: 0x00017F56
 	private void OnTriggerStay2D(Collider2D collision)
 	{
 		if (this.IsValidCollider(collision))
@@ -130,13 +130,13 @@ public class FadeOutHUDCollider : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002144 RID: 8516 RVA: 0x00068A2C File Offset: 0x00066C2C
+	// Token: 0x06002F2B RID: 12075 RVA: 0x000C9954 File Offset: 0x000C7B54
 	private bool IsValidCollider(Collider2D collider)
 	{
 		return !SaveManager.ConfigData.DisableHUDFadeOut && (collider.CompareTag("EnemyProjectile") || (collider.CompareTag("Enemy") && !this.m_inDeactivatedFairyRoom) || collider.CompareTag("Player") || collider.CompareTag("Player_Dodging") || collider.CompareTag("Hazard") || collider.CompareTag("TriggerHazard") || collider.CompareTag("Chest") || collider.CompareTag("NPC"));
 	}
 
-	// Token: 0x06002145 RID: 8517 RVA: 0x00068AC8 File Offset: 0x00066CC8
+	// Token: 0x06002F2C RID: 12076 RVA: 0x000C99F0 File Offset: 0x000C7BF0
 	private void FixedUpdate()
 	{
 		if (!this.m_canvasGroup)
@@ -172,56 +172,56 @@ public class FadeOutHUDCollider : MonoBehaviour
 		this.m_collisionDetected = false;
 	}
 
-	// Token: 0x04001CC3 RID: 7363
+	// Token: 0x0400268D RID: 9869
 	[SerializeField]
 	private Collider2D m_collider;
 
-	// Token: 0x04001CC4 RID: 7364
+	// Token: 0x0400268E RID: 9870
 	[SerializeField]
 	private float m_fadeInAmount;
 
-	// Token: 0x04001CC5 RID: 7365
+	// Token: 0x0400268F RID: 9871
 	[SerializeField]
 	private float m_fadeOutAmount;
 
-	// Token: 0x04001CC6 RID: 7366
+	// Token: 0x04002690 RID: 9872
 	[SerializeField]
 	private bool m_isMinimapHUD;
 
-	// Token: 0x04001CC7 RID: 7367
+	// Token: 0x04002691 RID: 9873
 	[SerializeField]
 	private bool m_isFairyHUD;
 
-	// Token: 0x04001CC8 RID: 7368
+	// Token: 0x04002692 RID: 9874
 	private float m_screenToWorldScale;
 
-	// Token: 0x04001CC9 RID: 7369
+	// Token: 0x04002693 RID: 9875
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x04001CCA RID: 7370
+	// Token: 0x04002694 RID: 9876
 	private bool m_isFaded;
 
-	// Token: 0x04001CCB RID: 7371
+	// Token: 0x04002695 RID: 9877
 	private bool m_collisionDetected;
 
-	// Token: 0x04001CCC RID: 7372
+	// Token: 0x04002696 RID: 9878
 	private Vector3 m_storedPos;
 
-	// Token: 0x04001CCD RID: 7373
+	// Token: 0x04002697 RID: 9879
 	private bool m_inDeactivatedFairyRoom;
 
-	// Token: 0x04001CCE RID: 7374
+	// Token: 0x04002698 RID: 9880
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04001CCF RID: 7375
+	// Token: 0x04002699 RID: 9881
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterFairyRoom;
 
-	// Token: 0x04001CD0 RID: 7376
+	// Token: 0x0400269A RID: 9882
 	private Action<MonoBehaviour, EventArgs> m_onPlayerFairyRoomTriggered;
 
-	// Token: 0x04001CD1 RID: 7377
+	// Token: 0x0400269B RID: 9883
 	private Action<MonoBehaviour, EventArgs> m_onPlayerExitFairyRoom;
 
-	// Token: 0x04001CD2 RID: 7378
+	// Token: 0x0400269C RID: 9884
 	private Action<MonoBehaviour, EventArgs> m_onAspectRatioChanged;
 }

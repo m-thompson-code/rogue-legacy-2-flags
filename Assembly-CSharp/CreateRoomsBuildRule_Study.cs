@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x0200065B RID: 1627
+// Token: 0x02000AAE RID: 2734
 public class CreateRoomsBuildRule_Study : CreateRoomsBuildRule_PlaceRoomOnBiomeSide
 {
-	// Token: 0x06003AFB RID: 15099 RVA: 0x000CAC2A File Offset: 0x000C8E2A
+	// Token: 0x06005273 RID: 21107 RVA: 0x0002CDE8 File Offset: 0x0002AFE8
 	public override IEnumerator CreateRooms(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		yield return base.CreateRooms(biomeCreator, biomeController);

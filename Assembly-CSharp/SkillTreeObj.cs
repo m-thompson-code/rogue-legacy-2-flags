@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006F1 RID: 1777
+// Token: 0x02000BA0 RID: 2976
 [Serializable]
 public class SkillTreeObj
 {
-	// Token: 0x170015EC RID: 5612
-	// (get) Token: 0x0600403A RID: 16442 RVA: 0x000E3D5D File Offset: 0x000E1F5D
+	// Token: 0x17001DE4 RID: 7652
+	// (get) Token: 0x06005977 RID: 22903 RVA: 0x00030BC8 File Offset: 0x0002EDC8
 	public int ClampedLevel
 	{
 		get
@@ -15,8 +15,8 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x170015ED RID: 5613
-	// (get) Token: 0x0600403B RID: 16443 RVA: 0x000E3D71 File Offset: 0x000E1F71
+	// Token: 0x17001DE5 RID: 7653
+	// (get) Token: 0x06005978 RID: 22904 RVA: 0x00030BDC File Offset: 0x0002EDDC
 	public float FirstLevelStatGain
 	{
 		get
@@ -25,8 +25,8 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x170015EE RID: 5614
-	// (get) Token: 0x0600403C RID: 16444 RVA: 0x000E3D7E File Offset: 0x000E1F7E
+	// Token: 0x17001DE6 RID: 7654
+	// (get) Token: 0x06005979 RID: 22905 RVA: 0x00030BE9 File Offset: 0x0002EDE9
 	public float AdditionalLevelStatGain
 	{
 		get
@@ -35,7 +35,7 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x0600403D RID: 16445 RVA: 0x000E3D8B File Offset: 0x000E1F8B
+	// Token: 0x0600597A RID: 22906 RVA: 0x00030BF6 File Offset: 0x0002EDF6
 	public float GetStatGainAtLevel(int level)
 	{
 		if (level <= 0)
@@ -46,8 +46,8 @@ public class SkillTreeObj
 		return this.FirstLevelStatGain + this.AdditionalLevelStatGain * (float)(level - 1);
 	}
 
-	// Token: 0x170015EF RID: 5615
-	// (get) Token: 0x0600403E RID: 16446 RVA: 0x000E3DB8 File Offset: 0x000E1FB8
+	// Token: 0x17001DE7 RID: 7655
+	// (get) Token: 0x0600597B RID: 22907 RVA: 0x00030C23 File Offset: 0x0002EE23
 	public float CurrentStatGain
 	{
 		get
@@ -56,8 +56,8 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x170015F0 RID: 5616
-	// (get) Token: 0x0600403F RID: 16447 RVA: 0x000E3DC6 File Offset: 0x000E1FC6
+	// Token: 0x17001DE8 RID: 7656
+	// (get) Token: 0x0600597C RID: 22908 RVA: 0x00030C31 File Offset: 0x0002EE31
 	public int GoldCost
 	{
 		get
@@ -66,8 +66,8 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x170015F1 RID: 5617
-	// (get) Token: 0x06004040 RID: 16448 RVA: 0x000E3DE8 File Offset: 0x000E1FE8
+	// Token: 0x17001DE9 RID: 7657
+	// (get) Token: 0x0600597D RID: 22909 RVA: 0x00153498 File Offset: 0x00151698
 	public int GoldCostWithLevelAppreciation
 	{
 		get
@@ -77,7 +77,7 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x06004041 RID: 16449 RVA: 0x000E3E30 File Offset: 0x000E2030
+	// Token: 0x0600597E RID: 22910 RVA: 0x001534E0 File Offset: 0x001516E0
 	public int GetGoldCostWithAppreciationWhenAddingLevels(int levelsToAdd)
 	{
 		int level = this.Level;
@@ -95,7 +95,7 @@ public class SkillTreeObj
 		return num;
 	}
 
-	// Token: 0x06004042 RID: 16450 RVA: 0x000E3E80 File Offset: 0x000E2080
+	// Token: 0x0600597F RID: 22911 RVA: 0x00153530 File Offset: 0x00151730
 	public int GetNumLevelsPurchaseableWithGold(int levelsToAdd, int goldAmount)
 	{
 		int level = this.Level;
@@ -118,8 +118,8 @@ public class SkillTreeObj
 		return num2;
 	}
 
-	// Token: 0x170015F2 RID: 5618
-	// (get) Token: 0x06004043 RID: 16451 RVA: 0x000E3ED9 File Offset: 0x000E20D9
+	// Token: 0x17001DEA RID: 7658
+	// (get) Token: 0x06005980 RID: 22912 RVA: 0x00030C51 File Offset: 0x0002EE51
 	public bool IsLevelLocked
 	{
 		get
@@ -128,8 +128,8 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x170015F3 RID: 5619
-	// (get) Token: 0x06004044 RID: 16452 RVA: 0x000E3EF1 File Offset: 0x000E20F1
+	// Token: 0x17001DEB RID: 7659
+	// (get) Token: 0x06005981 RID: 22913 RVA: 0x00030C69 File Offset: 0x0002EE69
 	public int UnlockLevel
 	{
 		get
@@ -138,8 +138,8 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x170015F4 RID: 5620
-	// (get) Token: 0x06004045 RID: 16453 RVA: 0x000E3EFE File Offset: 0x000E20FE
+	// Token: 0x17001DEC RID: 7660
+	// (get) Token: 0x06005982 RID: 22914 RVA: 0x00030C76 File Offset: 0x0002EE76
 	public bool IsLocked
 	{
 		get
@@ -148,8 +148,8 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x170015F5 RID: 5621
-	// (get) Token: 0x06004046 RID: 16454 RVA: 0x000E3F0E File Offset: 0x000E210E
+	// Token: 0x17001DED RID: 7661
+	// (get) Token: 0x06005983 RID: 22915 RVA: 0x00030C86 File Offset: 0x0002EE86
 	public bool IsSoulLocked
 	{
 		get
@@ -158,8 +158,8 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x170015F6 RID: 5622
-	// (get) Token: 0x06004047 RID: 16455 RVA: 0x000E3F1C File Offset: 0x000E211C
+	// Token: 0x17001DEE RID: 7662
+	// (get) Token: 0x06005984 RID: 22916 RVA: 0x0015358C File Offset: 0x0015178C
 	public int MaxLevel
 	{
 		get
@@ -180,8 +180,8 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x170015F7 RID: 5623
-	// (get) Token: 0x06004048 RID: 16456 RVA: 0x000E3FB6 File Offset: 0x000E21B6
+	// Token: 0x17001DEF RID: 7663
+	// (get) Token: 0x06005985 RID: 22917 RVA: 0x00030C94 File Offset: 0x0002EE94
 	public SkillTreeData SkillTreeData
 	{
 		get
@@ -190,15 +190,15 @@ public class SkillTreeObj
 		}
 	}
 
-	// Token: 0x06004049 RID: 16457 RVA: 0x000E3FC3 File Offset: 0x000E21C3
+	// Token: 0x06005986 RID: 22918 RVA: 0x00030CA1 File Offset: 0x0002EEA1
 	public SkillTreeObj(SkillTreeType skillTreeType)
 	{
 		this.SkillTreeType = skillTreeType;
 	}
 
-	// Token: 0x0400318A RID: 12682
+	// Token: 0x040043E5 RID: 17381
 	public SkillTreeType SkillTreeType;
 
-	// Token: 0x0400318B RID: 12683
+	// Token: 0x040043E6 RID: 17382
 	public int Level;
 }

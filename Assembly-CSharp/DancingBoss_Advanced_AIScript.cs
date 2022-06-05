@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200009E RID: 158
+// Token: 0x020000D2 RID: 210
 public class DancingBoss_Advanced_AIScript : DancingBoss_Basic_AIScript
 {
-	// Token: 0x170000AD RID: 173
-	// (get) Token: 0x060002CB RID: 715 RVA: 0x00014046 File Offset: 0x00012246
+	// Token: 0x1700010B RID: 267
+	// (get) Token: 0x060003E7 RID: 999 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_advancedAttacks
 	{
 		get
@@ -13,8 +13,8 @@ public class DancingBoss_Advanced_AIScript : DancingBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170000AE RID: 174
-	// (get) Token: 0x060002CC RID: 716 RVA: 0x00014049 File Offset: 0x00012249
+	// Token: 0x1700010C RID: 268
+	// (get) Token: 0x060003E8 RID: 1000 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected override float m_bomb_projectileDelay
 	{
 		get
@@ -23,8 +23,8 @@ public class DancingBoss_Advanced_AIScript : DancingBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170000AF RID: 175
-	// (get) Token: 0x060002CD RID: 717 RVA: 0x00014050 File Offset: 0x00012250
+	// Token: 0x1700010D RID: 269
+	// (get) Token: 0x060003E9 RID: 1001 RVA: 0x00004762 File Offset: 0x00002962
 	protected override int m_bomb_projectileAmount
 	{
 		get
@@ -33,8 +33,8 @@ public class DancingBoss_Advanced_AIScript : DancingBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170000B0 RID: 176
-	// (get) Token: 0x060002CE RID: 718 RVA: 0x00014053 File Offset: 0x00012253
+	// Token: 0x1700010E RID: 270
+	// (get) Token: 0x060003EA RID: 1002 RVA: 0x00004A07 File Offset: 0x00002C07
 	protected override int m_verticalWave_BounceProjectileCount
 	{
 		get
@@ -43,8 +43,8 @@ public class DancingBoss_Advanced_AIScript : DancingBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170000B1 RID: 177
-	// (get) Token: 0x060002CF RID: 719 RVA: 0x00014056 File Offset: 0x00012256
+	// Token: 0x1700010F RID: 271
+	// (get) Token: 0x060003EB RID: 1003 RVA: 0x00004792 File Offset: 0x00002992
 	protected override int m_horizontalWave_BounceProjectileCount
 	{
 		get

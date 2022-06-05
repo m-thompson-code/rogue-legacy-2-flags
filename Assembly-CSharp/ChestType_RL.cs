@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000716 RID: 1814
+// Token: 0x02000BC9 RID: 3017
 public class ChestType_RL
 {
-	// Token: 0x17001629 RID: 5673
-	// (get) Token: 0x060040E3 RID: 16611 RVA: 0x000E5A97 File Offset: 0x000E3C97
+	// Token: 0x17001E25 RID: 7717
+	// (get) Token: 0x06005A2C RID: 23084 RVA: 0x00031518 File Offset: 0x0002F718
 	public static ChestType[] TypeArray
 	{
 		get
@@ -17,7 +17,7 @@ public class ChestType_RL
 		}
 	}
 
-	// Token: 0x060040E4 RID: 16612 RVA: 0x000E5ABE File Offset: 0x000E3CBE
+	// Token: 0x06005A2D RID: 23085 RVA: 0x0003153F File Offset: 0x0002F73F
 	public static int GetChestRarity(ChestType chestType)
 	{
 		if (chestType <= ChestType.Gold)
@@ -48,6 +48,6 @@ public class ChestType_RL
 		return 4;
 	}
 
-	// Token: 0x04003329 RID: 13097
+	// Token: 0x040045A4 RID: 17828
 	private static ChestType[] m_typeArray;
 }

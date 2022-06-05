@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000128 RID: 296
+// Token: 0x020001FB RID: 507
 public class SpearKnight_Miniboss_AIScript : SpearKnight_Basic_AIScript
 {
-	// Token: 0x170004EC RID: 1260
-	// (get) Token: 0x0600092A RID: 2346 RVA: 0x0001DF7B File Offset: 0x0001C17B
+	// Token: 0x17000682 RID: 1666
+	// (get) Token: 0x06000DF1 RID: 3569 RVA: 0x00007DD8 File Offset: 0x00005FD8
 	protected override float Dash_AttackSpeed
 	{
 		get
@@ -14,8 +14,8 @@ public class SpearKnight_Miniboss_AIScript : SpearKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004ED RID: 1261
-	// (get) Token: 0x0600092B RID: 2347 RVA: 0x0001DF82 File Offset: 0x0001C182
+	// Token: 0x17000683 RID: 1667
+	// (get) Token: 0x06000DF2 RID: 3570 RVA: 0x00006780 File Offset: 0x00004980
 	protected override float Dash_AttackDuration
 	{
 		get
@@ -24,8 +24,8 @@ public class SpearKnight_Miniboss_AIScript : SpearKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004EE RID: 1262
-	// (get) Token: 0x0600092C RID: 2348 RVA: 0x0001DF89 File Offset: 0x0001C189
+	// Token: 0x17000684 RID: 1668
+	// (get) Token: 0x06000DF3 RID: 3571 RVA: 0x00003E42 File Offset: 0x00002042
 	protected override int m_knockbackDefenseBoostOverride
 	{
 		get
@@ -34,8 +34,8 @@ public class SpearKnight_Miniboss_AIScript : SpearKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004EF RID: 1263
-	// (get) Token: 0x0600092D RID: 2349 RVA: 0x0001DF8C File Offset: 0x0001C18C
+	// Token: 0x17000685 RID: 1669
+	// (get) Token: 0x06000DF4 RID: 3572 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float DashUppercut_JumpSpeed
 	{
 		get
@@ -44,8 +44,8 @@ public class SpearKnight_Miniboss_AIScript : SpearKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004F0 RID: 1264
-	// (get) Token: 0x0600092E RID: 2350 RVA: 0x0001DF93 File Offset: 0x0001C193
+	// Token: 0x17000686 RID: 1670
+	// (get) Token: 0x06000DF5 RID: 3573 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_throw_Attack_TargetPlayer
 	{
 		get
@@ -54,8 +54,8 @@ public class SpearKnight_Miniboss_AIScript : SpearKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004F1 RID: 1265
-	// (get) Token: 0x0600092F RID: 2351 RVA: 0x0001DF96 File Offset: 0x0001C196
+	// Token: 0x17000687 RID: 1671
+	// (get) Token: 0x06000DF6 RID: 3574 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override int m_throw_Attack_ProjectileAmount
 	{
 		get
@@ -64,8 +64,8 @@ public class SpearKnight_Miniboss_AIScript : SpearKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004F2 RID: 1266
-	// (get) Token: 0x06000930 RID: 2352 RVA: 0x0001DF99 File Offset: 0x0001C199
+	// Token: 0x17000688 RID: 1672
+	// (get) Token: 0x06000DF7 RID: 3575 RVA: 0x00003C5B File Offset: 0x00001E5B
 	protected override float m_throw_Attack_ProjectileDelay
 	{
 		get
@@ -74,7 +74,7 @@ public class SpearKnight_Miniboss_AIScript : SpearKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000931 RID: 2353 RVA: 0x0001DFA0 File Offset: 0x0001C1A0
+	// Token: 0x06000DF8 RID: 3576 RVA: 0x00007DDF File Offset: 0x00005FDF
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -109,48 +109,48 @@ public class SpearKnight_Miniboss_AIScript : SpearKnight_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x06000932 RID: 2354 RVA: 0x0001DFAF File Offset: 0x0001C1AF
+	// Token: 0x06000DF9 RID: 3577 RVA: 0x00006578 File Offset: 0x00004778
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
 	}
 
-	// Token: 0x04000CC1 RID: 3265
+	// Token: 0x0400103D RID: 4157
 	protected float m_uppercutBullet_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000CC2 RID: 3266
+	// Token: 0x0400103E RID: 4158
 	protected float m_uppercutBullet_AttackIntro_Delay = 0.5f;
 
-	// Token: 0x04000CC3 RID: 3267
+	// Token: 0x0400103F RID: 4159
 	protected float m_uppercutBullet_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000CC4 RID: 3268
+	// Token: 0x04001040 RID: 4160
 	protected float m_uppercutBullet_AttackHold_Delay;
 
-	// Token: 0x04000CC5 RID: 3269
+	// Token: 0x04001041 RID: 4161
 	protected float m_uppercutBullet_Exit_AnimationSpeed = 0.65f;
 
-	// Token: 0x04000CC6 RID: 3270
+	// Token: 0x04001042 RID: 4162
 	protected float m_uppercutBullet_Exit_Delay;
 
-	// Token: 0x04000CC7 RID: 3271
+	// Token: 0x04001043 RID: 4163
 	protected float m_uppercutBullet_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000CC8 RID: 3272
+	// Token: 0x04001044 RID: 4164
 	protected float m_uppercutBullet_AttackCD;
 
-	// Token: 0x04000CC9 RID: 3273
+	// Token: 0x04001045 RID: 4165
 	protected float UppercutBullet_JumpPower = 31f;
 
-	// Token: 0x04000CCA RID: 3274
+	// Token: 0x04001046 RID: 4166
 	protected float UppercutBullet_JumpSpeed = 17f;
 
-	// Token: 0x04000CCB RID: 3275
+	// Token: 0x04001047 RID: 4167
 	protected float UppercutBullet_ProjectileAmount = 4f;
 
-	// Token: 0x04000CCC RID: 3276
+	// Token: 0x04001048 RID: 4168
 	protected float UppercutBullet_ProjectileAngle = 90f;
 
-	// Token: 0x04000CCD RID: 3277
+	// Token: 0x04001049 RID: 4169
 	protected float UppercutBullet_JumpToMaxHeightDuration = 1f;
 }

@@ -3,23 +3,23 @@ using Rewired;
 using Rewired.Integration.UnityUI;
 using UnityEngine;
 
-// Token: 0x020002BE RID: 702
+// Token: 0x020004AE RID: 1198
 public class RewiredInputModuleMouseController : MonoBehaviour
 {
-	// Token: 0x06001BEE RID: 7150 RVA: 0x0005A1AA File Offset: 0x000583AA
+	// Token: 0x060026A4 RID: 9892 RVA: 0x0001596B File Offset: 0x00013B6B
 	private void Awake()
 	{
 		this.m_reInputModule = base.GetComponent<RewiredStandaloneInputModule>();
 	}
 
-	// Token: 0x06001BEF RID: 7151 RVA: 0x0005A1B8 File Offset: 0x000583B8
+	// Token: 0x060026A5 RID: 9893 RVA: 0x00015979 File Offset: 0x00013B79
 	private void OnEnable()
 	{
 		ReInput.controllers.RemoveLastActiveControllerChangedDelegate(new ActiveControllerChangedDelegate(this.LastControllerChanged));
 		ReInput.controllers.AddLastActiveControllerChangedDelegate(new ActiveControllerChangedDelegate(this.LastControllerChanged));
 	}
 
-	// Token: 0x06001BF0 RID: 7152 RVA: 0x0005A1E6 File Offset: 0x000583E6
+	// Token: 0x060026A6 RID: 9894 RVA: 0x000159A7 File Offset: 0x00013BA7
 	private void LastControllerChanged(Controller controller)
 	{
 		if (controller.type == ControllerType.Joystick)
@@ -30,6 +30,6 @@ public class RewiredInputModuleMouseController : MonoBehaviour
 		this.m_reInputModule.allowMouseInput = true;
 	}
 
-	// Token: 0x0400197C RID: 6524
+	// Token: 0x0400216C RID: 8556
 	private RewiredStandaloneInputModule m_reInputModule;
 }

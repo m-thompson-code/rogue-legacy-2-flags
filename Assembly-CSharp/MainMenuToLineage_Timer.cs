@@ -2,15 +2,15 @@
 using System.Diagnostics;
 using UnityEngine;
 
-// Token: 0x020006F7 RID: 1783
+// Token: 0x02000BAA RID: 2986
 public class MainMenuToLineage_Timer : MonoBehaviour
 {
-	// Token: 0x17001612 RID: 5650
-	// (get) Token: 0x060040A8 RID: 16552 RVA: 0x000E51C0 File Offset: 0x000E33C0
-	// (set) Token: 0x060040A9 RID: 16553 RVA: 0x000E51C7 File Offset: 0x000E33C7
+	// Token: 0x17001E0E RID: 7694
+	// (get) Token: 0x060059F1 RID: 23025 RVA: 0x000311AC File Offset: 0x0002F3AC
+	// (set) Token: 0x060059F2 RID: 23026 RVA: 0x000311B3 File Offset: 0x0002F3B3
 	private static MainMenuToLineage_Timer Instance { get; set; }
 
-	// Token: 0x060040AA RID: 16554 RVA: 0x000E51D0 File Offset: 0x000E33D0
+	// Token: 0x060059F3 RID: 23027 RVA: 0x00154960 File Offset: 0x00152B60
 	private void Awake()
 	{
 		if (MainMenuToLineage_Timer.Instance == null)
@@ -23,26 +23,26 @@ public class MainMenuToLineage_Timer : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x060040AB RID: 16555 RVA: 0x000E5220 File Offset: 0x000E3420
+	// Token: 0x060059F4 RID: 23028 RVA: 0x000311BB File Offset: 0x0002F3BB
 	private void Start()
 	{
 		Messenger<SceneMessenger, SceneEvent>.AddListener(SceneEvent.ExitMainMenu, this.m_onExitMainMenu);
 		Messenger<SceneMessenger, SceneEvent>.AddListener(SceneEvent.EnterLineageScreen, this.m_onEnterLineageScreen);
 	}
 
-	// Token: 0x060040AC RID: 16556 RVA: 0x000E523A File Offset: 0x000E343A
+	// Token: 0x060059F5 RID: 23029 RVA: 0x000311D5 File Offset: 0x0002F3D5
 	private void OnEnterLineageScreen(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		MainMenuToLineage_Timer.StopTimer();
 	}
 
-	// Token: 0x060040AD RID: 16557 RVA: 0x000E5241 File Offset: 0x000E3441
+	// Token: 0x060059F6 RID: 23030 RVA: 0x000311DC File Offset: 0x0002F3DC
 	private void OnExitMainMenu(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		MainMenuToLineage_Timer.StartTimer();
 	}
 
-	// Token: 0x060040AE RID: 16558 RVA: 0x000E5248 File Offset: 0x000E3448
+	// Token: 0x060059F7 RID: 23031 RVA: 0x000311E3 File Offset: 0x0002F3E3
 	private void OnDestroy()
 	{
 		if (MainMenuToLineage_Timer.Instance == this)
@@ -54,7 +54,7 @@ public class MainMenuToLineage_Timer : MonoBehaviour
 		Messenger<SceneMessenger, SceneEvent>.RemoveListener(SceneEvent.EnterLineageScreen, this.m_onEnterLineageScreen);
 	}
 
-	// Token: 0x060040AF RID: 16559 RVA: 0x000E527B File Offset: 0x000E347B
+	// Token: 0x060059F8 RID: 23032 RVA: 0x00031216 File Offset: 0x0002F416
 	public static void StartTimer()
 	{
 		if (MainMenuToLineage_Timer.m_stopwatch == null)
@@ -64,7 +64,7 @@ public class MainMenuToLineage_Timer : MonoBehaviour
 		MainMenuToLineage_Timer.m_stopwatch.Restart();
 	}
 
-	// Token: 0x060040B0 RID: 16560 RVA: 0x000E5298 File Offset: 0x000E3498
+	// Token: 0x060059F9 RID: 23033 RVA: 0x001549B0 File Offset: 0x00152BB0
 	public static void StopTimer()
 	{
 		if (MainMenuToLineage_Timer.m_stopwatch != null && MainMenuToLineage_Timer.m_stopwatch.IsRunning)
@@ -77,12 +77,12 @@ public class MainMenuToLineage_Timer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040031D7 RID: 12759
+	// Token: 0x04004452 RID: 17490
 	private Action<MonoBehaviour, EventArgs> m_onExitMainMenu;
 
-	// Token: 0x040031D8 RID: 12760
+	// Token: 0x04004453 RID: 17491
 	private Action<MonoBehaviour, EventArgs> m_onEnterLineageScreen;
 
-	// Token: 0x040031D9 RID: 12761
+	// Token: 0x04004454 RID: 17492
 	private static Stopwatch m_stopwatch;
 }

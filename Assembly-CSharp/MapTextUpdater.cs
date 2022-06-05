@@ -2,29 +2,29 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000383 RID: 899
+// Token: 0x0200060C RID: 1548
 public class MapTextUpdater : MonoBehaviour, ILocalizable
 {
-	// Token: 0x060021A4 RID: 8612 RVA: 0x0006A46A File Offset: 0x0006866A
+	// Token: 0x06002F98 RID: 12184 RVA: 0x0001A0E7 File Offset: 0x000182E7
 	private void Awake()
 	{
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 	}
 
-	// Token: 0x060021A5 RID: 8613 RVA: 0x0006A47F File Offset: 0x0006867F
+	// Token: 0x06002F99 RID: 12185 RVA: 0x0001A0FC File Offset: 0x000182FC
 	private void OnEnable()
 	{
 		this.RefreshText(null, null);
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x060021A6 RID: 8614 RVA: 0x0006A496 File Offset: 0x00068696
+	// Token: 0x06002F9A RID: 12186 RVA: 0x0001A113 File Offset: 0x00018313
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x060021A7 RID: 8615 RVA: 0x0006A4A8 File Offset: 0x000686A8
+	// Token: 0x06002F9B RID: 12187 RVA: 0x000CB1CC File Offset: 0x000C93CC
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.m_text.text = LocalizationManager.GetString(NowEnteringHUDController.CurrentLocID, false, false);
@@ -109,26 +109,26 @@ public class MapTextUpdater : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x04001D17 RID: 7447
+	// Token: 0x04002700 RID: 9984
 	[SerializeField]
 	private TMP_Text m_text;
 
-	// Token: 0x04001D18 RID: 7448
+	// Token: 0x04002701 RID: 9985
 	[SerializeField]
 	private GameObject m_dangerGO;
 
-	// Token: 0x04001D19 RID: 7449
+	// Token: 0x04002702 RID: 9986
 	[SerializeField]
 	private GameObject m_grayStarsGO;
 
-	// Token: 0x04001D1A RID: 7450
+	// Token: 0x04002703 RID: 9987
 	[SerializeField]
 	private GameObject m_yellowStarsGO;
 
-	// Token: 0x04001D1B RID: 7451
+	// Token: 0x04002704 RID: 9988
 	[SerializeField]
 	private GameObject m_unknownStarsGO;
 
-	// Token: 0x04001D1C RID: 7452
+	// Token: 0x04002705 RID: 9989
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 }

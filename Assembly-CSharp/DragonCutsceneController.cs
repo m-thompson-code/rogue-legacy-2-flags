@@ -4,11 +4,11 @@ using RLAudio;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020004D1 RID: 1233
+// Token: 0x020007FE RID: 2046
 public class DragonCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEventEmitter
 {
-	// Token: 0x1700115F RID: 4447
-	// (get) Token: 0x06002DDC RID: 11740 RVA: 0x0009A8B4 File Offset: 0x00098AB4
+	// Token: 0x170016F0 RID: 5872
+	// (get) Token: 0x06003F06 RID: 16134 RVA: 0x00022E00 File Offset: 0x00021000
 	public TunnelSpawnController TunnelSpawner
 	{
 		get
@@ -17,13 +17,13 @@ public class DragonCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEven
 		}
 	}
 
-	// Token: 0x17001160 RID: 4448
-	// (get) Token: 0x06002DDD RID: 11741 RVA: 0x0009A8BC File Offset: 0x00098ABC
-	// (set) Token: 0x06002DDE RID: 11742 RVA: 0x0009A8C4 File Offset: 0x00098AC4
+	// Token: 0x170016F1 RID: 5873
+	// (get) Token: 0x06003F07 RID: 16135 RVA: 0x00022E08 File Offset: 0x00021008
+	// (set) Token: 0x06003F08 RID: 16136 RVA: 0x00022E10 File Offset: 0x00021010
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17001161 RID: 4449
-	// (get) Token: 0x06002DDF RID: 11743 RVA: 0x0009A8CD File Offset: 0x00098ACD
+	// Token: 0x170016F2 RID: 5874
+	// (get) Token: 0x06003F09 RID: 16137 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -32,20 +32,20 @@ public class DragonCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEven
 		}
 	}
 
-	// Token: 0x06002DE0 RID: 11744 RVA: 0x0009A8D5 File Offset: 0x00098AD5
+	// Token: 0x06003F0A RID: 16138 RVA: 0x00022E19 File Offset: 0x00021019
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x06002DE1 RID: 11745 RVA: 0x0009A8E8 File Offset: 0x00098AE8
+	// Token: 0x06003F0B RID: 16139 RVA: 0x00022E2C File Offset: 0x0002102C
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x06002DE2 RID: 11746 RVA: 0x0009A90F File Offset: 0x00098B0F
+	// Token: 0x06003F0C RID: 16140 RVA: 0x00022E53 File Offset: 0x00021053
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -54,7 +54,7 @@ public class DragonCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEven
 		}
 	}
 
-	// Token: 0x06002DE3 RID: 11747 RVA: 0x0009A93B File Offset: 0x00098B3B
+	// Token: 0x06003F0D RID: 16141 RVA: 0x00022E7F File Offset: 0x0002107F
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (CutsceneManager.IsCutsceneActive)
@@ -63,14 +63,14 @@ public class DragonCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEven
 		}
 	}
 
-	// Token: 0x06002DE4 RID: 11748 RVA: 0x0009A94A File Offset: 0x00098B4A
+	// Token: 0x06003F0E RID: 16142 RVA: 0x00022E8E File Offset: 0x0002108E
 	private void RunBossDoorAnimation()
 	{
 		base.StopAllCoroutines();
 		base.StartCoroutine(this.BossDoorAnimationCoroutine());
 	}
 
-	// Token: 0x06002DE5 RID: 11749 RVA: 0x0009A95F File Offset: 0x00098B5F
+	// Token: 0x06003F0F RID: 16143 RVA: 0x00022EA3 File Offset: 0x000210A3
 	private IEnumerator BossDoorAnimationCoroutine()
 	{
 		Animator dragonAnimator = this.m_dragonPropSpawner.PropInstance.GetComponent<Animator>();
@@ -129,18 +129,18 @@ public class DragonCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEven
 		yield break;
 	}
 
-	// Token: 0x040024A4 RID: 9380
+	// Token: 0x04003153 RID: 12627
 	[SerializeField]
 	private TunnelSpawnController m_tunnelSpawner;
 
-	// Token: 0x040024A5 RID: 9381
+	// Token: 0x04003154 RID: 12628
 	[SerializeField]
 	private PropSpawnController m_dragonPropSpawner;
 
-	// Token: 0x040024A6 RID: 9382
+	// Token: 0x04003155 RID: 12629
 	[SerializeField]
 	private GameObject m_cutsceneCameraGO;
 
-	// Token: 0x040024A7 RID: 9383
+	// Token: 0x04003156 RID: 12630
 	private WaitRL_Yield m_waitYield;
 }

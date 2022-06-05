@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020007CC RID: 1996
+// Token: 0x02000C92 RID: 3218
 public class RuneFoundStateChangeEventArgs : EventArgs
 {
-	// Token: 0x060042DA RID: 17114 RVA: 0x000EC170 File Offset: 0x000EA370
+	// Token: 0x06005C63 RID: 23651 RVA: 0x00032B86 File Offset: 0x00030D86
 	public RuneFoundStateChangeEventArgs(RuneType runeType, FoundState newFoundState)
 	{
 		this.Initialize(runeType, newFoundState);
 	}
 
-	// Token: 0x060042DB RID: 17115 RVA: 0x000EC180 File Offset: 0x000EA380
+	// Token: 0x06005C64 RID: 23652 RVA: 0x00032B96 File Offset: 0x00030D96
 	public void Initialize(RuneType runeType, FoundState newFoundState)
 	{
 		this.RuneType = runeType;
 		this.NewFoundState = newFoundState;
 	}
 
-	// Token: 0x170016A3 RID: 5795
-	// (get) Token: 0x060042DC RID: 17116 RVA: 0x000EC190 File Offset: 0x000EA390
-	// (set) Token: 0x060042DD RID: 17117 RVA: 0x000EC198 File Offset: 0x000EA398
+	// Token: 0x17001EA1 RID: 7841
+	// (get) Token: 0x06005C65 RID: 23653 RVA: 0x00032BA6 File Offset: 0x00030DA6
+	// (set) Token: 0x06005C66 RID: 23654 RVA: 0x00032BAE File Offset: 0x00030DAE
 	public RuneType RuneType { get; private set; }
 
-	// Token: 0x170016A4 RID: 5796
-	// (get) Token: 0x060042DE RID: 17118 RVA: 0x000EC1A1 File Offset: 0x000EA3A1
-	// (set) Token: 0x060042DF RID: 17119 RVA: 0x000EC1A9 File Offset: 0x000EA3A9
+	// Token: 0x17001EA2 RID: 7842
+	// (get) Token: 0x06005C67 RID: 23655 RVA: 0x00032BB7 File Offset: 0x00030DB7
+	// (set) Token: 0x06005C68 RID: 23656 RVA: 0x00032BBF File Offset: 0x00030DBF
 	public FoundState NewFoundState { get; private set; }
 }

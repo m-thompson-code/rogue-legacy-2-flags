@@ -3,11 +3,11 @@ using System.Collections;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020001EC RID: 492
+// Token: 0x02000384 RID: 900
 public class DialogueDisplayController : MonoBehaviour, IDisplaySpeechBubble
 {
-	// Token: 0x17000A77 RID: 2679
-	// (get) Token: 0x0600144A RID: 5194 RVA: 0x0003DB50 File Offset: 0x0003BD50
+	// Token: 0x17000D75 RID: 3445
+	// (get) Token: 0x06001D5F RID: 7519 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -16,8 +16,8 @@ public class DialogueDisplayController : MonoBehaviour, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x17000A78 RID: 2680
-	// (get) Token: 0x0600144B RID: 5195 RVA: 0x0003DB53 File Offset: 0x0003BD53
+	// Token: 0x17000D76 RID: 3446
+	// (get) Token: 0x06001D60 RID: 7520 RVA: 0x000047A7 File Offset: 0x000029A7
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -26,20 +26,20 @@ public class DialogueDisplayController : MonoBehaviour, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x0600144C RID: 5196 RVA: 0x0003DB56 File Offset: 0x0003BD56
+	// Token: 0x06001D61 RID: 7521 RVA: 0x0000F277 File Offset: 0x0000D477
 	protected virtual void Awake()
 	{
 		this.m_npcController = base.GetComponent<NPCController>();
 		this.m_stopDialogue = new Action(this.StopDialogue);
 	}
 
-	// Token: 0x0600144D RID: 5197 RVA: 0x0003DB77 File Offset: 0x0003BD77
+	// Token: 0x06001D62 RID: 7522 RVA: 0x0000F298 File Offset: 0x0000D498
 	public void DisplayDialogue()
 	{
 		base.StartCoroutine(this.DisplayDialogueCoroutine());
 	}
 
-	// Token: 0x0600144E RID: 5198 RVA: 0x0003DB86 File Offset: 0x0003BD86
+	// Token: 0x06001D63 RID: 7523 RVA: 0x0000F2A7 File Offset: 0x0000D4A7
 	protected virtual IEnumerator DisplayDialogueCoroutine()
 	{
 		if (this.m_npcController)
@@ -54,7 +54,7 @@ public class DialogueDisplayController : MonoBehaviour, IDisplaySpeechBubble
 		yield break;
 	}
 
-	// Token: 0x0600144F RID: 5199 RVA: 0x0003DB98 File Offset: 0x0003BD98
+	// Token: 0x06001D64 RID: 7524 RVA: 0x0009C75C File Offset: 0x0009A95C
 	protected virtual void StartDialogue()
 	{
 		bool flag = false;
@@ -107,7 +107,7 @@ public class DialogueDisplayController : MonoBehaviour, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x06001450 RID: 5200 RVA: 0x0003DD07 File Offset: 0x0003BF07
+	// Token: 0x06001D65 RID: 7525 RVA: 0x0000F2B6 File Offset: 0x0000D4B6
 	protected virtual void StopDialogue()
 	{
 		if (this.m_npcController)
@@ -116,7 +116,7 @@ public class DialogueDisplayController : MonoBehaviour, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x06001451 RID: 5201 RVA: 0x0003DD23 File Offset: 0x0003BF23
+	// Token: 0x06001D66 RID: 7526 RVA: 0x0000F2D2 File Offset: 0x0000D4D2
 	protected virtual IEnumerator MovePlayerToPos()
 	{
 		PlayerManager.GetPlayerController().SetVelocity(0f, 0f, false);
@@ -140,37 +140,37 @@ public class DialogueDisplayController : MonoBehaviour, IDisplaySpeechBubble
 		yield break;
 	}
 
-	// Token: 0x04001416 RID: 5142
+	// Token: 0x04001AB6 RID: 6838
 	[SerializeField]
 	protected bool m_useLocID = true;
 
-	// Token: 0x04001417 RID: 5143
+	// Token: 0x04001AB7 RID: 6839
 	[SerializeField]
 	protected string m_dialogue;
 
-	// Token: 0x04001418 RID: 5144
+	// Token: 0x04001AB8 RID: 6840
 	[SerializeField]
 	protected string m_repeatedDialogue;
 
-	// Token: 0x04001419 RID: 5145
+	// Token: 0x04001AB9 RID: 6841
 	[SerializeField]
 	protected string m_speaker;
 
-	// Token: 0x0400141A RID: 5146
+	// Token: 0x04001ABA RID: 6842
 	[SerializeField]
 	protected PlayerSaveFlag m_spokenFlag;
 
-	// Token: 0x0400141B RID: 5147
+	// Token: 0x04001ABB RID: 6843
 	[SerializeField]
 	protected DialogueWindowStyle m_dialogueWindowStyle;
 
-	// Token: 0x0400141C RID: 5148
+	// Token: 0x04001ABC RID: 6844
 	[SerializeField]
 	protected GameObject m_playerPositionObj;
 
-	// Token: 0x0400141D RID: 5149
+	// Token: 0x04001ABD RID: 6845
 	protected NPCController m_npcController;
 
-	// Token: 0x0400141E RID: 5150
+	// Token: 0x04001ABE RID: 6846
 	private Action m_stopDialogue;
 }

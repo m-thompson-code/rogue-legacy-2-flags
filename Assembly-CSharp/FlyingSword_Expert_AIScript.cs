@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000EB RID: 235
+// Token: 0x02000180 RID: 384
 public class FlyingSword_Expert_AIScript : FlyingSword_Basic_AIScript
 {
-	// Token: 0x170003D8 RID: 984
-	// (get) Token: 0x0600073B RID: 1851 RVA: 0x0001A3C7 File Offset: 0x000185C7
+	// Token: 0x170004F2 RID: 1266
+	// (get) Token: 0x06000A8E RID: 2702 RVA: 0x00006988 File Offset: 0x00004B88
 	protected override float m_thrust_Attack_TurnRate
 	{
 		get
@@ -13,8 +13,8 @@ public class FlyingSword_Expert_AIScript : FlyingSword_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003D9 RID: 985
-	// (get) Token: 0x0600073C RID: 1852 RVA: 0x0001A3CE File Offset: 0x000185CE
+	// Token: 0x170004F3 RID: 1267
+	// (get) Token: 0x06000A8F RID: 2703 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float m_thrustFast_DashAttackAmount
 	{
 		get
@@ -23,8 +23,8 @@ public class FlyingSword_Expert_AIScript : FlyingSword_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003DA RID: 986
-	// (get) Token: 0x0600073D RID: 1853 RVA: 0x0001A3D5 File Offset: 0x000185D5
+	// Token: 0x170004F4 RID: 1268
+	// (get) Token: 0x06000A90 RID: 2704 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_thrust_SpawnProjectilesAtEnd
 	{
 		get
@@ -33,8 +33,8 @@ public class FlyingSword_Expert_AIScript : FlyingSword_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003DB RID: 987
-	// (get) Token: 0x0600073E RID: 1854 RVA: 0x0001A3D8 File Offset: 0x000185D8
+	// Token: 0x170004F5 RID: 1269
+	// (get) Token: 0x06000A91 RID: 2705 RVA: 0x000047A7 File Offset: 0x000029A7
 	protected override int m_vertSpin_Attack_TotalLoops
 	{
 		get

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020003CD RID: 973
+// Token: 0x02000666 RID: 1638
 public class SoulShopOmniUIPurchaseBoxEntry : BaseOmniUIPurchaseBoxEntry<SoulShopOmniUIDescriptionEventArgs>
 {
-	// Token: 0x17000EC1 RID: 3777
-	// (get) Token: 0x060023DC RID: 9180 RVA: 0x000750DE File Offset: 0x000732DE
+	// Token: 0x17001356 RID: 4950
+	// (get) Token: 0x060031FA RID: 12794 RVA: 0x0001B070 File Offset: 0x00019270
 	public int CurrentNewGamePlusLevel
 	{
 		get
@@ -13,7 +13,7 @@ public class SoulShopOmniUIPurchaseBoxEntry : BaseOmniUIPurchaseBoxEntry<SoulSho
 		}
 	}
 
-	// Token: 0x060023DD RID: 9181 RVA: 0x000750E8 File Offset: 0x000732E8
+	// Token: 0x060031FB RID: 12795 RVA: 0x000D5164 File Offset: 0x000D3364
 	protected override void DisplayNullPurchaseBox()
 	{
 		if (this.m_descriptionType != BaseOmniUIPurchaseBoxEntry<SoulShopOmniUIDescriptionEventArgs>.OmniUIPurchaseBoxType.FlavourText)
@@ -38,7 +38,7 @@ public class SoulShopOmniUIPurchaseBoxEntry : BaseOmniUIPurchaseBoxEntry<SoulSho
 		}
 	}
 
-	// Token: 0x060023DE RID: 9182 RVA: 0x00075154 File Offset: 0x00073354
+	// Token: 0x060031FC RID: 12796 RVA: 0x000D51D0 File Offset: 0x000D33D0
 	protected override void DisplayPurchaseBox(SoulShopOmniUIDescriptionEventArgs args)
 	{
 		SoulShopType soulShopType = args.SoulShopType;

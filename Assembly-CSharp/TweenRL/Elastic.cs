@@ -2,10 +2,10 @@
 
 namespace TweenRL
 {
-	// Token: 0x02000876 RID: 2166
+	// Token: 0x02000D90 RID: 3472
 	public class Elastic
 	{
-		// Token: 0x0600477F RID: 18303 RVA: 0x001012A8 File Offset: 0x000FF4A8
+		// Token: 0x0600627C RID: 25212 RVA: 0x001559FC File Offset: 0x00153BFC
 		public static float EaseIn(float t, float b, float c, float d)
 		{
 			float num = 0f;
@@ -35,7 +35,7 @@ namespace TweenRL
 			return (float)(-(float)((double)num * Math.Pow(2.0, (double)(10f * (t -= 1f))) * Math.Sin((double)(t * d - num3) * 6.283185307179586 / (double)num2)) + (double)b);
 		}
 
-		// Token: 0x06004780 RID: 18304 RVA: 0x00101364 File Offset: 0x000FF564
+		// Token: 0x0600627D RID: 25213 RVA: 0x00155AB8 File Offset: 0x00153CB8
 		public static float EaseOut(float t, float b, float c, float d)
 		{
 			float num = 0f;
@@ -65,7 +65,7 @@ namespace TweenRL
 			return (float)((double)num * Math.Pow(2.0, (double)(-10f * t)) * Math.Sin((double)(t * d - num3) * 6.283185307179586 / (double)num2) + (double)c + (double)b);
 		}
 
-		// Token: 0x06004781 RID: 18305 RVA: 0x00101418 File Offset: 0x000FF618
+		// Token: 0x0600627E RID: 25214 RVA: 0x00155B6C File Offset: 0x00153D6C
 		public static float EaseInOut(float t, float b, float c, float d)
 		{
 			float num = 0f;

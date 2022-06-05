@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200030E RID: 782
+// Token: 0x02000542 RID: 1346
 public class PlayerComboStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D65 RID: 3429
-	// (get) Token: 0x06001EEF RID: 7919 RVA: 0x00063CB0 File Offset: 0x00061EB0
+	// Token: 0x17001168 RID: 4456
+	// (get) Token: 0x06002B2A RID: 11050 RVA: 0x0001814C File Offset: 0x0001634C
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class PlayerComboStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D66 RID: 3430
-	// (get) Token: 0x06001EF0 RID: 7920 RVA: 0x00063CB7 File Offset: 0x00061EB7
+	// Token: 0x17001169 RID: 4457
+	// (get) Token: 0x06002B2B RID: 11051 RVA: 0x00004536 File Offset: 0x00002736
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,8 +25,8 @@ public class PlayerComboStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D67 RID: 3431
-	// (get) Token: 0x06001EF1 RID: 7921 RVA: 0x00063CC0 File Offset: 0x00061EC0
+	// Token: 0x1700116A RID: 4458
+	// (get) Token: 0x06002B2C RID: 11052 RVA: 0x000C3754 File Offset: 0x000C1954
 	public override int StacksPerHit
 	{
 		get
@@ -48,7 +48,7 @@ public class PlayerComboStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EF2 RID: 7922 RVA: 0x00063D00 File Offset: 0x00061F00
+	// Token: 0x06002B2D RID: 11053 RVA: 0x000C3794 File Offset: 0x000C1994
 	public override void StartEffect(float duration, IDamageObj caster)
 	{
 		float duration2 = duration;
@@ -61,7 +61,7 @@ public class PlayerComboStatusEffect : BaseStatusEffect
 		base.StartEffect(duration2, caster);
 	}
 
-	// Token: 0x06001EF3 RID: 7923 RVA: 0x00063D34 File Offset: 0x00061F34
+	// Token: 0x06002B2E RID: 11054 RVA: 0x00018153 File Offset: 0x00016353
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		base.TimesStacked = Mathf.Clamp(base.TimesStacked, 0, 30);
@@ -78,7 +78,7 @@ public class PlayerComboStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001EF4 RID: 7924 RVA: 0x00063D43 File Offset: 0x00061F43
+	// Token: 0x06002B2F RID: 11055 RVA: 0x00018162 File Offset: 0x00016362
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -88,9 +88,9 @@ public class PlayerComboStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x04001BE8 RID: 7144
+	// Token: 0x040024CA RID: 9418
 	public const float ADD_RELIC_STACKS_HACK = 3.4028235E+38f;
 
-	// Token: 0x04001BE9 RID: 7145
+	// Token: 0x040024CB RID: 9419
 	private bool m_addRelicStacks;
 }

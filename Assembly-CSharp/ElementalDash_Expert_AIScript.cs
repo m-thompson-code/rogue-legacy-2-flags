@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000B1 RID: 177
+// Token: 0x020000FF RID: 255
 public class ElementalDash_Expert_AIScript : ElementalDash_Basic_AIScript
 {
-	// Token: 0x170001B8 RID: 440
-	// (get) Token: 0x0600042A RID: 1066 RVA: 0x00015944 File Offset: 0x00013B44
+	// Token: 0x17000248 RID: 584
+	// (get) Token: 0x060005DF RID: 1503 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected override int m_shoot_TotalShots
 	{
 		get
@@ -13,8 +13,8 @@ public class ElementalDash_Expert_AIScript : ElementalDash_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170001B9 RID: 441
-	// (get) Token: 0x0600042B RID: 1067 RVA: 0x00015947 File Offset: 0x00013B47
+	// Token: 0x17000249 RID: 585
+	// (get) Token: 0x060005E0 RID: 1504 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected override float m_shoot_TotalShotDuration
 	{
 		get
@@ -23,8 +23,8 @@ public class ElementalDash_Expert_AIScript : ElementalDash_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170001BA RID: 442
-	// (get) Token: 0x0600042C RID: 1068 RVA: 0x0001594E File Offset: 0x00013B4E
+	// Token: 0x1700024A RID: 586
+	// (get) Token: 0x060005E1 RID: 1505 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_voidWall_CreateSideWalls
 	{
 		get

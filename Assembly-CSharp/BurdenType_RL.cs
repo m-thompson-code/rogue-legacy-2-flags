@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200070C RID: 1804
+// Token: 0x02000BBF RID: 3007
 public class BurdenType_RL
 {
-	// Token: 0x17001624 RID: 5668
-	// (get) Token: 0x060040DA RID: 16602 RVA: 0x000E59EA File Offset: 0x000E3BEA
+	// Token: 0x17001E20 RID: 7712
+	// (get) Token: 0x06005A23 RID: 23075 RVA: 0x00031483 File Offset: 0x0002F683
 	public static BurdenType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class BurdenType_RL
 		}
 	}
 
-	// Token: 0x040032F1 RID: 13041
+	// Token: 0x0400456C RID: 17772
 	private static BurdenType[] m_typeArray;
 }

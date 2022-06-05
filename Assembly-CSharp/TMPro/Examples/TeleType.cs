@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000867 RID: 2151
+	// Token: 0x02000D74 RID: 3444
 	public class TeleType : MonoBehaviour
 	{
-		// Token: 0x06004729 RID: 18217 RVA: 0x00100152 File Offset: 0x000FE352
+		// Token: 0x060061E2 RID: 25058 RVA: 0x00035F5E File Offset: 0x0003415E
 		private void Awake()
 		{
 			this.m_textMeshPro = base.GetComponent<TMP_Text>();
@@ -16,7 +16,7 @@ namespace TMPro.Examples
 			this.m_textMeshPro.alignment = TextAlignmentOptions.Top;
 		}
 
-		// Token: 0x0600472A RID: 18218 RVA: 0x0010018D File Offset: 0x000FE38D
+		// Token: 0x060061E3 RID: 25059 RVA: 0x00035F99 File Offset: 0x00034199
 		private IEnumerator Start()
 		{
 			this.m_textMeshPro.ForceMeshUpdate(false, false);
@@ -40,13 +40,13 @@ namespace TMPro.Examples
 			yield break;
 		}
 
-		// Token: 0x04003C3D RID: 15421
+		// Token: 0x04004FE5 RID: 20453
 		private string label01 = "Example <sprite=2> of using <sprite=7> <#ffa000>Graphics Inline</color> <sprite=5> with Text in <font=\"Bangers SDF\" material=\"Bangers SDF - Drop Shadow\">TextMesh<#40a0ff>Pro</color></font><sprite=0> and Unity<sprite=1>";
 
-		// Token: 0x04003C3E RID: 15422
+		// Token: 0x04004FE6 RID: 20454
 		private string label02 = "Example <sprite=2> of using <sprite=7> <#ffa000>Graphics Inline</color> <sprite=5> with Text in <font=\"Bangers SDF\" material=\"Bangers SDF - Drop Shadow\">TextMesh<#40a0ff>Pro</color></font><sprite=0> and Unity<sprite=2>";
 
-		// Token: 0x04003C3F RID: 15423
+		// Token: 0x04004FE7 RID: 20455
 		private TMP_Text m_textMeshPro;
 	}
 }

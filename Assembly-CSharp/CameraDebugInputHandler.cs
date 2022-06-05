@@ -4,10 +4,10 @@ using Rewired;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020001E1 RID: 481
+// Token: 0x02000377 RID: 887
 public class CameraDebugInputHandler : MonoBehaviour
 {
-	// Token: 0x060013FD RID: 5117 RVA: 0x0003CAA3 File Offset: 0x0003ACA3
+	// Token: 0x06001D08 RID: 7432 RVA: 0x0000EFA5 File Offset: 0x0000D1A5
 	private IEnumerator Start()
 	{
 		while (Rewired_RL.Player == null)
@@ -21,9 +21,9 @@ public class CameraDebugInputHandler : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x17000A67 RID: 2663
-	// (get) Token: 0x060013FE RID: 5118 RVA: 0x0003CAB2 File Offset: 0x0003ACB2
-	// (set) Token: 0x060013FF RID: 5119 RVA: 0x0003CABA File Offset: 0x0003ACBA
+	// Token: 0x17000D63 RID: 3427
+	// (get) Token: 0x06001D09 RID: 7433 RVA: 0x0000EFB4 File Offset: 0x0000D1B4
+	// (set) Token: 0x06001D0A RID: 7434 RVA: 0x0000EFBC File Offset: 0x0000D1BC
 	public bool JumpPressed
 	{
 		get
@@ -36,9 +36,9 @@ public class CameraDebugInputHandler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A68 RID: 2664
-	// (get) Token: 0x06001400 RID: 5120 RVA: 0x0003CAC3 File Offset: 0x0003ACC3
-	// (set) Token: 0x06001401 RID: 5121 RVA: 0x0003CACB File Offset: 0x0003ACCB
+	// Token: 0x17000D64 RID: 3428
+	// (get) Token: 0x06001D0B RID: 7435 RVA: 0x0000EFC5 File Offset: 0x0000D1C5
+	// (set) Token: 0x06001D0C RID: 7436 RVA: 0x0000EFCD File Offset: 0x0000D1CD
 	public bool SpellPressed
 	{
 		get
@@ -51,7 +51,7 @@ public class CameraDebugInputHandler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001402 RID: 5122 RVA: 0x0003CAD4 File Offset: 0x0003ACD4
+	// Token: 0x06001D0D RID: 7437 RVA: 0x0009B8D8 File Offset: 0x00099AD8
 	private void OnJumpPressed(InputActionEventData obj)
 	{
 		if (WindowManager.GetIsWindowOpen(WindowID.CameraDebug))
@@ -76,7 +76,7 @@ public class CameraDebugInputHandler : MonoBehaviour
 		WindowManager.SetWindowIsOpen(WindowID.CameraDebug, false);
 	}
 
-	// Token: 0x06001403 RID: 5123 RVA: 0x0003CB34 File Offset: 0x0003AD34
+	// Token: 0x06001D0E RID: 7438 RVA: 0x0009B938 File Offset: 0x00099B38
 	private void OnSpellPressed(InputActionEventData obj)
 	{
 		if (WindowManager.GetIsWindowOpen(WindowID.CameraDebug))
@@ -101,9 +101,9 @@ public class CameraDebugInputHandler : MonoBehaviour
 		WindowManager.SetWindowIsOpen(WindowID.CameraDebug, false);
 	}
 
-	// Token: 0x040013C9 RID: 5065
+	// Token: 0x04001A63 RID: 6755
 	private bool m_jumpPressed;
 
-	// Token: 0x040013CA RID: 5066
+	// Token: 0x04001A64 RID: 6756
 	private bool m_spellPressed;
 }

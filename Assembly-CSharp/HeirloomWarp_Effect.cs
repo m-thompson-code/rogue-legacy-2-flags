@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200059B RID: 1435
+// Token: 0x020009A3 RID: 2467
 [ExecuteInEditMode]
 public class HeirloomWarp_Effect : MonoBehaviour
 {
-	// Token: 0x060035F8 RID: 13816 RVA: 0x000BC11F File Offset: 0x000BA31F
+	// Token: 0x06004C0A RID: 19466 RVA: 0x00029AB0 File Offset: 0x00027CB0
 	private void OnEnable()
 	{
 		if (this.m_material == null)
@@ -15,7 +15,7 @@ public class HeirloomWarp_Effect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060035F9 RID: 13817 RVA: 0x000BC15C File Offset: 0x000BA35C
+	// Token: 0x06004C0B RID: 19467 RVA: 0x0012A194 File Offset: 0x00128394
 	private void OnRenderImage(RenderTexture src, RenderTexture dst)
 	{
 		if (this.prevWarpCenterX != this.WarpCenterX)
@@ -36,27 +36,27 @@ public class HeirloomWarp_Effect : MonoBehaviour
 		Graphics.Blit(src, dst, this.m_material);
 	}
 
-	// Token: 0x04002A11 RID: 10769
+	// Token: 0x04003A0F RID: 14863
 	public Texture WarpDistortionMap;
 
-	// Token: 0x04002A12 RID: 10770
+	// Token: 0x04003A10 RID: 14864
 	public float WarpCenterX;
 
-	// Token: 0x04002A13 RID: 10771
+	// Token: 0x04003A11 RID: 14865
 	public float WarpCenterY;
 
-	// Token: 0x04002A14 RID: 10772
+	// Token: 0x04003A12 RID: 14866
 	public float DistortionAmount;
 
-	// Token: 0x04002A15 RID: 10773
+	// Token: 0x04003A13 RID: 14867
 	private Material m_material;
 
-	// Token: 0x04002A16 RID: 10774
+	// Token: 0x04003A14 RID: 14868
 	private float prevWarpCenterX;
 
-	// Token: 0x04002A17 RID: 10775
+	// Token: 0x04003A15 RID: 14869
 	private float prevWarpCenterY;
 
-	// Token: 0x04002A18 RID: 10776
+	// Token: 0x04003A16 RID: 14870
 	private float prevDistortionAmount;
 }

@@ -9,16 +9,16 @@ using RLWorldCreation;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000621 RID: 1569
+// Token: 0x02000A44 RID: 2628
 public class OnPlayManager : MonoBehaviour
 {
 	// Token: 0x1400000B RID: 11
-	// (add) Token: 0x06003888 RID: 14472 RVA: 0x000C1140 File Offset: 0x000BF340
-	// (remove) Token: 0x06003889 RID: 14473 RVA: 0x000C1174 File Offset: 0x000BF374
+	// (add) Token: 0x06004F2C RID: 20268 RVA: 0x0012F300 File Offset: 0x0012D500
+	// (remove) Token: 0x06004F2D RID: 20269 RVA: 0x0012F334 File Offset: 0x0012D534
 	public static event System.EventHandler WorldSetupEvent;
 
-	// Token: 0x170013F2 RID: 5106
-	// (get) Token: 0x0600388A RID: 14474 RVA: 0x000C11A8 File Offset: 0x000BF3A8
+	// Token: 0x17001B49 RID: 6985
+	// (get) Token: 0x06004F2E RID: 20270 RVA: 0x0012F368 File Offset: 0x0012D568
 	public List<BaseRoom> ActiveRooms
 	{
 		get
@@ -37,9 +37,9 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013F3 RID: 5107
-	// (get) Token: 0x0600388B RID: 14475 RVA: 0x000C121C File Offset: 0x000BF41C
-	// (set) Token: 0x0600388C RID: 14476 RVA: 0x000C1234 File Offset: 0x000BF434
+	// Token: 0x17001B4A RID: 6986
+	// (get) Token: 0x06004F2F RID: 20271 RVA: 0x0002B2B1 File Offset: 0x000294B1
+	// (set) Token: 0x06004F30 RID: 20272 RVA: 0x0002B2C9 File Offset: 0x000294C9
 	private static OnPlayManager Instance
 	{
 		get
@@ -56,9 +56,9 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013F4 RID: 5108
-	// (get) Token: 0x0600388D RID: 14477 RVA: 0x000C123C File Offset: 0x000BF43C
-	// (set) Token: 0x0600388E RID: 14478 RVA: 0x000C1248 File Offset: 0x000BF448
+	// Token: 0x17001B4B RID: 6987
+	// (get) Token: 0x06004F31 RID: 20273 RVA: 0x0002B2D1 File Offset: 0x000294D1
+	// (set) Token: 0x06004F32 RID: 20274 RVA: 0x0002B2DD File Offset: 0x000294DD
 	public static bool IsCameraConstrainerEnabled
 	{
 		get
@@ -71,8 +71,8 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013F5 RID: 5109
-	// (get) Token: 0x0600388F RID: 14479 RVA: 0x000C1255 File Offset: 0x000BF455
+	// Token: 0x17001B4C RID: 6988
+	// (get) Token: 0x06004F33 RID: 20275 RVA: 0x0002B2EA File Offset: 0x000294EA
 	public static bool IsInstantiated
 	{
 		get
@@ -81,8 +81,8 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013F6 RID: 5110
-	// (get) Token: 0x06003890 RID: 14480 RVA: 0x000C1262 File Offset: 0x000BF462
+	// Token: 0x17001B4D RID: 6989
+	// (get) Token: 0x06004F34 RID: 20276 RVA: 0x0002B2F7 File Offset: 0x000294F7
 	public static Room CurrentRoom
 	{
 		get
@@ -95,8 +95,8 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013F7 RID: 5111
-	// (get) Token: 0x06003891 RID: 14481 RVA: 0x000C1282 File Offset: 0x000BF482
+	// Token: 0x17001B4E RID: 6990
+	// (get) Token: 0x06004F35 RID: 20277 RVA: 0x0002B317 File Offset: 0x00029517
 	public static List<BaseRoom> RoomList
 	{
 		get
@@ -105,8 +105,8 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013F8 RID: 5112
-	// (get) Token: 0x06003892 RID: 14482 RVA: 0x000C128E File Offset: 0x000BF48E
+	// Token: 0x17001B4F RID: 6991
+	// (get) Token: 0x06004F36 RID: 20278 RVA: 0x0002B323 File Offset: 0x00029523
 	public static BiomeController BiomeController
 	{
 		get
@@ -115,9 +115,9 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013F9 RID: 5113
-	// (get) Token: 0x06003893 RID: 14483 RVA: 0x000C129A File Offset: 0x000BF49A
-	// (set) Token: 0x06003894 RID: 14484 RVA: 0x000C12A6 File Offset: 0x000BF4A6
+	// Token: 0x17001B50 RID: 6992
+	// (get) Token: 0x06004F37 RID: 20279 RVA: 0x0002B32F File Offset: 0x0002952F
+	// (set) Token: 0x06004F38 RID: 20280 RVA: 0x0002B33B File Offset: 0x0002953B
 	public static BiomeType StartingBiome
 	{
 		get
@@ -130,8 +130,8 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013FA RID: 5114
-	// (get) Token: 0x06003895 RID: 14485 RVA: 0x000C12B3 File Offset: 0x000BF4B3
+	// Token: 0x17001B51 RID: 6993
+	// (get) Token: 0x06004F39 RID: 20281 RVA: 0x0002B348 File Offset: 0x00029548
 	public static KeyCode CycleBiome
 	{
 		get
@@ -140,8 +140,8 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013FB RID: 5115
-	// (get) Token: 0x06003896 RID: 14486 RVA: 0x000C12BF File Offset: 0x000BF4BF
+	// Token: 0x17001B52 RID: 6994
+	// (get) Token: 0x06004F3A RID: 20282 RVA: 0x0002B354 File Offset: 0x00029554
 	public static KeyCode FlipRoom
 	{
 		get
@@ -150,8 +150,8 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013FC RID: 5116
-	// (get) Token: 0x06003897 RID: 14487 RVA: 0x000C12CB File Offset: 0x000BF4CB
+	// Token: 0x17001B53 RID: 6995
+	// (get) Token: 0x06004F3B RID: 20283 RVA: 0x0002B360 File Offset: 0x00029560
 	public static KeyCode ToggleCloseAllDoorsButOneKey
 	{
 		get
@@ -160,8 +160,8 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013FD RID: 5117
-	// (get) Token: 0x06003898 RID: 14488 RVA: 0x000C12D7 File Offset: 0x000BF4D7
+	// Token: 0x17001B54 RID: 6996
+	// (get) Token: 0x06004F3C RID: 20284 RVA: 0x0002B36C File Offset: 0x0002956C
 	public static KeyCode CycleClosedDoorKey
 	{
 		get
@@ -170,8 +170,8 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013FE RID: 5118
-	// (get) Token: 0x06003899 RID: 14489 RVA: 0x000C12E3 File Offset: 0x000BF4E3
+	// Token: 0x17001B55 RID: 6997
+	// (get) Token: 0x06004F3D RID: 20285 RVA: 0x0002B378 File Offset: 0x00029578
 	public static KeyCode CycleDifficulty
 	{
 		get
@@ -180,8 +180,8 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170013FF RID: 5119
-	// (get) Token: 0x0600389A RID: 14490 RVA: 0x000C12EF File Offset: 0x000BF4EF
+	// Token: 0x17001B56 RID: 6998
+	// (get) Token: 0x06004F3E RID: 20286 RVA: 0x0002B384 File Offset: 0x00029584
 	public static KeyCode RandomizeHazards
 	{
 		get
@@ -190,9 +190,9 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001400 RID: 5120
-	// (get) Token: 0x0600389B RID: 14491 RVA: 0x000C12FB File Offset: 0x000BF4FB
-	// (set) Token: 0x0600389C RID: 14492 RVA: 0x000C1303 File Offset: 0x000BF503
+	// Token: 0x17001B57 RID: 6999
+	// (get) Token: 0x06004F3F RID: 20287 RVA: 0x0002B390 File Offset: 0x00029590
+	// (set) Token: 0x06004F40 RID: 20288 RVA: 0x0002B398 File Offset: 0x00029598
 	public Room BaseRoom
 	{
 		get
@@ -205,9 +205,9 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001401 RID: 5121
-	// (get) Token: 0x0600389D RID: 14493 RVA: 0x000C130C File Offset: 0x000BF50C
-	// (set) Token: 0x0600389E RID: 14494 RVA: 0x000C1321 File Offset: 0x000BF521
+	// Token: 0x17001B58 RID: 7000
+	// (get) Token: 0x06004F41 RID: 20289 RVA: 0x0002B3A1 File Offset: 0x000295A1
+	// (set) Token: 0x06004F42 RID: 20290 RVA: 0x0002B3B6 File Offset: 0x000295B6
 	public static BiomeType CurrentBiome
 	{
 		get
@@ -227,9 +227,9 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001402 RID: 5122
-	// (get) Token: 0x0600389F RID: 14495 RVA: 0x000C1335 File Offset: 0x000BF535
-	// (set) Token: 0x060038A0 RID: 14496 RVA: 0x000C1338 File Offset: 0x000BF538
+	// Token: 0x17001B59 RID: 7001
+	// (get) Token: 0x06004F43 RID: 20291 RVA: 0x00003CD2 File Offset: 0x00001ED2
+	// (set) Token: 0x06004F44 RID: 20292 RVA: 0x00002FCA File Offset: 0x000011CA
 	public static BiomeType TransitionPointBiome
 	{
 		get
@@ -241,9 +241,9 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001403 RID: 5123
-	// (get) Token: 0x060038A1 RID: 14497 RVA: 0x000C133A File Offset: 0x000BF53A
-	// (set) Token: 0x060038A2 RID: 14498 RVA: 0x000C1342 File Offset: 0x000BF542
+	// Token: 0x17001B5A RID: 7002
+	// (get) Token: 0x06004F45 RID: 20293 RVA: 0x0002B3CA File Offset: 0x000295CA
+	// (set) Token: 0x06004F46 RID: 20294 RVA: 0x0002B3D2 File Offset: 0x000295D2
 	public KeyCode CycleTransitionPointBiome
 	{
 		get
@@ -256,7 +256,7 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060038A3 RID: 14499 RVA: 0x000C134C File Offset: 0x000BF54C
+	// Token: 0x06004F47 RID: 20295 RVA: 0x0012F3DC File Offset: 0x0012D5DC
 	private void Awake()
 	{
 		if (OnPlayManager.Instance == null)
@@ -271,7 +271,7 @@ public class OnPlayManager : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x060038A4 RID: 14500 RVA: 0x000C139E File Offset: 0x000BF59E
+	// Token: 0x06004F48 RID: 20296 RVA: 0x0002B3DB File Offset: 0x000295DB
 	private IEnumerator Start()
 	{
 		if (this.m_roomOverride == null)
@@ -294,12 +294,12 @@ public class OnPlayManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060038A5 RID: 14501 RVA: 0x000C13AD File Offset: 0x000BF5AD
+	// Token: 0x06004F49 RID: 20297 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void DeactivateOtherRooms()
 	{
 	}
 
-	// Token: 0x060038A6 RID: 14502 RVA: 0x000C13B0 File Offset: 0x000BF5B0
+	// Token: 0x06004F4A RID: 20298 RVA: 0x0012F430 File Offset: 0x0012D630
 	private void Update()
 	{
 		if (this.m_currentRoom == null)
@@ -340,7 +340,7 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060038A7 RID: 14503 RVA: 0x000C14D0 File Offset: 0x000BF6D0
+	// Token: 0x06004F4B RID: 20299 RVA: 0x0012F550 File Offset: 0x0012D750
 	private void CycleThroughTransitionPointBiome()
 	{
 		BiomeType[] array = Enum.GetValues(typeof(BiomeType)) as BiomeType[];
@@ -375,7 +375,7 @@ public class OnPlayManager : MonoBehaviour
 		OnPlayManager.SetTransitionPointBiome(list[num], false);
 	}
 
-	// Token: 0x060038A8 RID: 14504 RVA: 0x000C1574 File Offset: 0x000BF774
+	// Token: 0x06004F4C RID: 20300 RVA: 0x0002B3EA File Offset: 0x000295EA
 	private IEnumerator CloseDoors(bool closeAllButOne)
 	{
 		if (this.m_roomOverride == null)
@@ -432,7 +432,7 @@ public class OnPlayManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060038A9 RID: 14505 RVA: 0x000C158A File Offset: 0x000BF78A
+	// Token: 0x06004F4D RID: 20301 RVA: 0x0002B400 File Offset: 0x00029600
 	private IEnumerator CompleteWorldCreation()
 	{
 		yield return null;
@@ -442,7 +442,7 @@ public class OnPlayManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060038AA RID: 14506 RVA: 0x000C159C File Offset: 0x000BF79C
+	// Token: 0x06004F4E RID: 20302 RVA: 0x0012F5F4 File Offset: 0x0012D7F4
 	private void CreateRoomBackgrounds()
 	{
 		if (OnPlayManager.CurrentBiome != BiomeType.Forest)
@@ -459,7 +459,7 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060038AB RID: 14507 RVA: 0x000C161C File Offset: 0x000BF81C
+	// Token: 0x06004F4F RID: 20303 RVA: 0x0012F674 File Offset: 0x0012D874
 	private void BuildTerrain()
 	{
 		if (this.m_additionalRooms != null)
@@ -472,7 +472,7 @@ public class OnPlayManager : MonoBehaviour
 		RoomUtility.BuildAllFerr2DTerrains(this.m_currentRoom);
 	}
 
-	// Token: 0x060038AC RID: 14508 RVA: 0x000C1680 File Offset: 0x000BF880
+	// Token: 0x06004F50 RID: 20304 RVA: 0x0002B40F File Offset: 0x0002960F
 	private IEnumerator CreateInstanceOfBaseRoom()
 	{
 		if (this.m_roomOverride == null)
@@ -523,7 +523,7 @@ public class OnPlayManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060038AD RID: 14509 RVA: 0x000C1690 File Offset: 0x000BF890
+	// Token: 0x06004F51 RID: 20305 RVA: 0x0012F6D8 File Offset: 0x0012D8D8
 	private RoomType GetRoomType(Room room)
 	{
 		RoomType result = RoomType.Standard;
@@ -538,7 +538,7 @@ public class OnPlayManager : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x060038AE RID: 14510 RVA: 0x000C16C3 File Offset: 0x000BF8C3
+	// Token: 0x06004F52 RID: 20306 RVA: 0x0002B41E File Offset: 0x0002961E
 	private IEnumerator CreateRoomsConnectedToCurrentRoom()
 	{
 		if (this.m_roomCreator == null)
@@ -624,7 +624,7 @@ public class OnPlayManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060038AF RID: 14511 RVA: 0x000C16D4 File Offset: 0x000BF8D4
+	// Token: 0x06004F53 RID: 20307 RVA: 0x0012F70C File Offset: 0x0012D90C
 	private void CreateSky(BaseRoom room)
 	{
 		if (BiomeDataLibrary.GetData(OnPlayManager.CurrentBiome))
@@ -650,7 +650,7 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060038B0 RID: 14512 RVA: 0x000C1768 File Offset: 0x000BF968
+	// Token: 0x06004F54 RID: 20308 RVA: 0x0012F7A0 File Offset: 0x0012D9A0
 	private void CreateWeather(BaseRoom room)
 	{
 		BiomeType biome = OnPlayManager.CurrentBiome;
@@ -683,7 +683,7 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060038B1 RID: 14513 RVA: 0x000C1810 File Offset: 0x000BFA10
+	// Token: 0x06004F55 RID: 20309 RVA: 0x0012F848 File Offset: 0x0012DA48
 	private void CycleThroughBiomes()
 	{
 		this.m_currentBiomeIndexInArtDataLibrary++;
@@ -694,7 +694,7 @@ public class OnPlayManager : MonoBehaviour
 		OnPlayManager.SetCurrentBiome(BiomeArtDataLibrary.ArtDataTable[this.m_currentBiomeIndexInArtDataLibrary].BiomeType);
 	}
 
-	// Token: 0x060038B2 RID: 14514 RVA: 0x000C185E File Offset: 0x000BFA5E
+	// Token: 0x06004F56 RID: 20310 RVA: 0x0002B42D File Offset: 0x0002962D
 	private void CycleThroughDifficultyLevels()
 	{
 		GameUtility.Difficulty++;
@@ -704,7 +704,7 @@ public class OnPlayManager : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060038B3 RID: 14515 RVA: 0x000C188C File Offset: 0x000BFA8C
+	// Token: 0x06004F57 RID: 20311 RVA: 0x0012F898 File Offset: 0x0012DA98
 	private void CycleThroughDoors(bool closeAllButOneDoor)
 	{
 		this.m_closeAllDoorsButOneToggle = closeAllButOneDoor;
@@ -719,7 +719,7 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060038B4 RID: 14516 RVA: 0x000C18E4 File Offset: 0x000BFAE4
+	// Token: 0x06004F58 RID: 20312 RVA: 0x0012F8F0 File Offset: 0x0012DAF0
 	private void OnTunnelDestinationCreated(object sender, RoomEventArgs eventArgs)
 	{
 		Room room = eventArgs.Room as Room;
@@ -729,7 +729,7 @@ public class OnPlayManager : MonoBehaviour
 		BiomeCreatorTools.CreateCinemachineVirtualCamera(eventArgs.Room);
 	}
 
-	// Token: 0x060038B5 RID: 14517 RVA: 0x000C1923 File Offset: 0x000BFB23
+	// Token: 0x06004F59 RID: 20313 RVA: 0x0002B458 File Offset: 0x00029658
 	private IEnumerator PlaceOneWaysAlongBottomDoors()
 	{
 		if (OnPlayManager.CurrentBiome != BiomeType.TowerExterior)
@@ -755,14 +755,14 @@ public class OnPlayManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060038B6 RID: 14518 RVA: 0x000C1932 File Offset: 0x000BFB32
+	// Token: 0x06004F5A RID: 20314 RVA: 0x0002B467 File Offset: 0x00029667
 	private void RandomizeHazardsInRoom()
 	{
 		HazardRandomizer.RandomizeHazards(from entry in this.BaseRoom.SpawnControllerManager.SpawnControllers
 		select entry as IHazardSpawnController);
 	}
 
-	// Token: 0x060038B7 RID: 14519 RVA: 0x000C196D File Offset: 0x000BFB6D
+	// Token: 0x06004F5B RID: 20315 RVA: 0x0002B4A2 File Offset: 0x000296A2
 	private IEnumerator RecreateRoom()
 	{
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.UpdatePools, null, null);
@@ -818,7 +818,7 @@ public class OnPlayManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060038B8 RID: 14520 RVA: 0x000C197C File Offset: 0x000BFB7C
+	// Token: 0x06004F5C RID: 20316 RVA: 0x0002B4B1 File Offset: 0x000296B1
 	public static void Restart()
 	{
 		GameEventTrackerManager.Reset();
@@ -826,7 +826,7 @@ public class OnPlayManager : MonoBehaviour
 		OnPlayManager.Instance.SetupWorld();
 	}
 
-	// Token: 0x060038B9 RID: 14521 RVA: 0x000C1994 File Offset: 0x000BFB94
+	// Token: 0x06004F5D RID: 20317 RVA: 0x0012F930 File Offset: 0x0012DB30
 	public static void SetBiome(BiomeType biome)
 	{
 		if (biome == BiomeType.Any || biome == BiomeType.None || biome == BiomeType.Editor || biome == BiomeType.Spawn || biome == BiomeType.Special)
@@ -849,7 +849,7 @@ public class OnPlayManager : MonoBehaviour
 		OnPlayManager.Instance.m_buildRoomCoroutine = OnPlayManager.Instance.StartCoroutine(OnPlayManager.Instance.RecreateRoom());
 	}
 
-	// Token: 0x060038BA RID: 14522 RVA: 0x000C1A22 File Offset: 0x000BFC22
+	// Token: 0x06004F5E RID: 20318 RVA: 0x0002B4C7 File Offset: 0x000296C7
 	public static void SetTransitionPointBiome(BiomeType transitionPointBiome, bool rebuild = false)
 	{
 		if (transitionPointBiome != BiomeType.None && !BiomeType_RL.IsValidBiome(transitionPointBiome))
@@ -863,14 +863,14 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060038BB RID: 14523 RVA: 0x000C1A57 File Offset: 0x000BFC57
+	// Token: 0x06004F5F RID: 20319 RVA: 0x0002B4FC File Offset: 0x000296FC
 	public static void SetDifficulty(int difficulty)
 	{
 		GameUtility.Difficulty = difficulty;
 		OnPlayManager.Instance.m_buildRoomCoroutine = OnPlayManager.Instance.StartCoroutine(OnPlayManager.Instance.RecreateRoom());
 	}
 
-	// Token: 0x060038BC RID: 14524 RVA: 0x000C1A7D File Offset: 0x000BFC7D
+	// Token: 0x06004F60 RID: 20320 RVA: 0x0002B522 File Offset: 0x00029722
 	public static void SetCameraConstrainerIsEnabled(bool isEnabled)
 	{
 		OnPlayManager.IsCameraConstrainerEnabled = isEnabled;
@@ -881,7 +881,7 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060038BD RID: 14525 RVA: 0x000C1AB0 File Offset: 0x000BFCB0
+	// Token: 0x06004F61 RID: 20321 RVA: 0x0002B555 File Offset: 0x00029755
 	private static void SetCurrentBiome(BiomeType biome)
 	{
 		OnPlayManager.Instance.m_previousBiome = OnPlayManager.CurrentBiome;
@@ -889,7 +889,7 @@ public class OnPlayManager : MonoBehaviour
 		CameraController.SetCameraSettingsForBiome(OnPlayManager.CurrentBiome, null);
 	}
 
-	// Token: 0x060038BE RID: 14526 RVA: 0x000C1AD2 File Offset: 0x000BFCD2
+	// Token: 0x06004F62 RID: 20322 RVA: 0x0002B577 File Offset: 0x00029777
 	public static void SetStartingBiome(BiomeType biome)
 	{
 		if (!BiomeType_RL.IsValidBiome(biome))
@@ -899,14 +899,14 @@ public class OnPlayManager : MonoBehaviour
 		OnPlayManager.StartingBiome = biome;
 	}
 
-	// Token: 0x060038BF RID: 14527 RVA: 0x000C1AE3 File Offset: 0x000BFCE3
+	// Token: 0x06004F63 RID: 20323 RVA: 0x0002B588 File Offset: 0x00029788
 	public void SetupWorld()
 	{
 		PlayerManager.GetPlayerController().ResetCharacter();
 		this.m_buildRoomCoroutine = base.StartCoroutine(this.RecreateRoom());
 	}
 
-	// Token: 0x060038C0 RID: 14528 RVA: 0x000C1B04 File Offset: 0x000BFD04
+	// Token: 0x06004F64 RID: 20324 RVA: 0x0012F9C0 File Offset: 0x0012DBC0
 	private void SpawnSimpleSpawnControllers()
 	{
 		foreach (BaseRoom baseRoom in this.ActiveRooms)
@@ -921,7 +921,7 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060038C1 RID: 14529 RVA: 0x000C1B80 File Offset: 0x000BFD80
+	// Token: 0x06004F65 RID: 20325 RVA: 0x0012FA3C File Offset: 0x0012DC3C
 	private void SpawnPlayer()
 	{
 		if (this.m_currentRoom != null)
@@ -949,14 +949,14 @@ public class OnPlayManager : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060038C2 RID: 14530 RVA: 0x000C1C2D File Offset: 0x000BFE2D
+	// Token: 0x06004F66 RID: 20326 RVA: 0x0002B5A6 File Offset: 0x000297A6
 	public void ClearActiveRooms()
 	{
 		this.m_additionalRooms.Clear();
 		this.m_currentRoom = null;
 	}
 
-	// Token: 0x060038C3 RID: 14531 RVA: 0x000C1C41 File Offset: 0x000BFE41
+	// Token: 0x06004F67 RID: 20327 RVA: 0x0002B5BA File Offset: 0x000297BA
 	private void StoreReferenceToBaseRoom()
 	{
 		this.m_baseRoom = this.m_roomOverride;
@@ -964,7 +964,7 @@ public class OnPlayManager : MonoBehaviour
 		this.BaseRoom.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060038C4 RID: 14532 RVA: 0x000C1C6C File Offset: 0x000BFE6C
+	// Token: 0x06004F68 RID: 20328 RVA: 0x0012FAEC File Offset: 0x0012DCEC
 	private void UpdateSpawnLogicControllers(SpawnScenarioCheckStage checkStage = SpawnScenarioCheckStage.PreMerge)
 	{
 		foreach (BaseRoom baseRoom in this.ActiveRooms)
@@ -979,121 +979,121 @@ public class OnPlayManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060038C5 RID: 14533 RVA: 0x000C1CF4 File Offset: 0x000BFEF4
+	// Token: 0x06004F69 RID: 20329 RVA: 0x0002B5E5 File Offset: 0x000297E5
 	private void AddCurrentRoomToGrid(Room room)
 	{
 		new RoomMetaData(room);
 	}
 
-	// Token: 0x04002BBA RID: 11194
+	// Token: 0x04003C27 RID: 15399
 	private List<Room> m_additionalRooms;
 
-	// Token: 0x04002BBB RID: 11195
+	// Token: 0x04003C28 RID: 15400
 	private Room m_baseRoom;
 
-	// Token: 0x04002BBC RID: 11196
+	// Token: 0x04003C29 RID: 15401
 	private Coroutine m_buildRoomCoroutine;
 
-	// Token: 0x04002BBD RID: 11197
+	// Token: 0x04003C2A RID: 15402
 	private bool m_closeAllDoorsButOneToggle;
 
-	// Token: 0x04002BBE RID: 11198
+	// Token: 0x04003C2B RID: 15403
 	private int m_currentBiomeIndexInArtDataLibrary;
 
-	// Token: 0x04002BBF RID: 11199
+	// Token: 0x04003C2C RID: 15404
 	private int m_currentDoorIndex = -1;
 
-	// Token: 0x04002BC0 RID: 11200
+	// Token: 0x04003C2D RID: 15405
 	private BaseRoom m_currentRoom;
 
-	// Token: 0x04002BC1 RID: 11201
+	// Token: 0x04003C2E RID: 15406
 	private int m_cutoutCount = -1;
 
-	// Token: 0x04002BC2 RID: 11202
+	// Token: 0x04003C2F RID: 15407
 	private int m_doorCount = -1;
 
-	// Token: 0x04002BC3 RID: 11203
+	// Token: 0x04003C30 RID: 15408
 	private static OnPlayManager m_instance = null;
 
-	// Token: 0x04002BC4 RID: 11204
+	// Token: 0x04003C31 RID: 15409
 	private GameObject m_player;
 
-	// Token: 0x04002BC5 RID: 11205
+	// Token: 0x04003C32 RID: 15410
 	private RoomCreator m_roomCreator;
 
-	// Token: 0x04002BC6 RID: 11206
+	// Token: 0x04003C33 RID: 15411
 	private Dictionary<SkyBiomeArtData, Sky> m_skyTable = new Dictionary<SkyBiomeArtData, Sky>();
 
-	// Token: 0x04002BC7 RID: 11207
+	// Token: 0x04003C34 RID: 15412
 	private Dictionary<WeatherBiomeArtData, Weather[]> m_weatherTable = new Dictionary<WeatherBiomeArtData, Weather[]>();
 
-	// Token: 0x04002BC8 RID: 11208
+	// Token: 0x04003C35 RID: 15413
 	private static Vector2 ROOM_FOR_TUNNEL_TESTING_POSITION = new Vector2(1000f, 1000f);
 
-	// Token: 0x04002BC9 RID: 11209
+	// Token: 0x04003C36 RID: 15414
 	private const string CREATE_TRANSITION_POINTS_EDITOR_PREFS_KEY = "CreateTransitionPoints";
 
-	// Token: 0x04002BCA RID: 11210
+	// Token: 0x04003C37 RID: 15415
 	[SerializeField]
 	private Room m_roomOverride;
 
-	// Token: 0x04002BCB RID: 11211
+	// Token: 0x04003C38 RID: 15416
 	[SerializeField]
 	private KeyCode m_cycleClosedDoorKey = KeyCode.KeypadPlus;
 
-	// Token: 0x04002BCC RID: 11212
+	// Token: 0x04003C39 RID: 15417
 	[SerializeField]
 	private KeyCode m_toggleCloseAllDoorsButOneKey = KeyCode.KeypadMinus;
 
-	// Token: 0x04002BCD RID: 11213
+	// Token: 0x04003C3A RID: 15418
 	[SerializeField]
 	private KeyCode m_cycleBiome = KeyCode.End;
 
-	// Token: 0x04002BCE RID: 11214
+	// Token: 0x04003C3B RID: 15419
 	[SerializeField]
 	private KeyCode m_cycleTransitionPointBiome = KeyCode.PageDown;
 
-	// Token: 0x04002BCF RID: 11215
+	// Token: 0x04003C3C RID: 15420
 	[SerializeField]
 	private KeyCode m_flipRoom = KeyCode.Insert;
 
-	// Token: 0x04002BD0 RID: 11216
+	// Token: 0x04003C3D RID: 15421
 	[SerializeField]
 	private KeyCode m_cycleDifficulty = KeyCode.Period;
 
-	// Token: 0x04002BD1 RID: 11217
+	// Token: 0x04003C3E RID: 15422
 	[SerializeField]
 	private KeyCode m_randomizeHazards = KeyCode.Slash;
 
-	// Token: 0x04002BD2 RID: 11218
+	// Token: 0x04003C3F RID: 15423
 	[SerializeField]
 	[ReadOnly]
 	private BiomeType m_currentBiome;
 
-	// Token: 0x04002BD3 RID: 11219
+	// Token: 0x04003C40 RID: 15424
 	[SerializeField]
 	private bool m_attachRoomsToDoors = true;
 
-	// Token: 0x04002BD4 RID: 11220
+	// Token: 0x04003C41 RID: 15425
 	[SerializeField]
 	private bool m_flipCurrentRoomHorizontally;
 
-	// Token: 0x04002BD5 RID: 11221
+	// Token: 0x04003C42 RID: 15426
 	[SerializeField]
 	private BiomeType m_startingBiome = BiomeType.Castle;
 
-	// Token: 0x04002BD6 RID: 11222
+	// Token: 0x04003C43 RID: 15427
 	[SerializeField]
 	private bool m_isCameraConstrainerEnabled = true;
 
-	// Token: 0x04002BD7 RID: 11223
+	// Token: 0x04003C44 RID: 15428
 	[Header("Overrides")]
 	[SerializeField]
 	private int m_roomLevel = 1;
 
-	// Token: 0x04002BD9 RID: 11225
+	// Token: 0x04003C46 RID: 15430
 	private BiomeType m_previousBiome;
 
-	// Token: 0x04002BDA RID: 11226
+	// Token: 0x04003C47 RID: 15431
 	private BiomeController m_biomeController;
 }

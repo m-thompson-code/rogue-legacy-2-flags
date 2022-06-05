@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000721 RID: 1825
+// Token: 0x02000BD4 RID: 3028
 public enum DamageType
 {
-	// Token: 0x04003388 RID: 13192
+	// Token: 0x04004604 RID: 17924
 	Strength,
-	// Token: 0x04003389 RID: 13193
+	// Token: 0x04004605 RID: 17925
 	Magic
 }

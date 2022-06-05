@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000131 RID: 305
+// Token: 0x02000211 RID: 529
 public class StealthAssassin_Advanced_AIScript : StealthAssassin_Basic_AIScript
 {
 }

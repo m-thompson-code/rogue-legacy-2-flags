@@ -1,13 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002C7 RID: 711
+// Token: 0x020004BC RID: 1212
 [Serializable]
 public class RLBreakableSaveState : RLSaveState
 {
-	// Token: 0x17000CA1 RID: 3233
-	// (get) Token: 0x06001C5F RID: 7263 RVA: 0x0005BC07 File Offset: 0x00059E07
-	// (set) Token: 0x06001C60 RID: 7264 RVA: 0x0005BC0F File Offset: 0x00059E0F
+	// Token: 0x1700102A RID: 4138
+	// (get) Token: 0x06002729 RID: 10025 RVA: 0x000160BB File Offset: 0x000142BB
+	// (set) Token: 0x0600272A RID: 10026 RVA: 0x000160C3 File Offset: 0x000142C3
 	public bool AttackerIsOnRight
 	{
 		get
@@ -20,7 +20,7 @@ public class RLBreakableSaveState : RLSaveState
 		}
 	}
 
-	// Token: 0x040019A2 RID: 6562
+	// Token: 0x040021A9 RID: 8617
 	[SerializeField]
 	private bool m_attackedOnRight;
 }

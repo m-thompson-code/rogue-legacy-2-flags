@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000112 RID: 274
+// Token: 0x020001BC RID: 444
 public class SkeletonArcher_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x06000868 RID: 2152 RVA: 0x0001C426 File Offset: 0x0001A626
+	// Token: 0x06000C39 RID: 3129 RVA: 0x00004E17 File Offset: 0x00003017
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -14,8 +14,8 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x1700048C RID: 1164
-	// (get) Token: 0x06000869 RID: 2153 RVA: 0x0001C43C File Offset: 0x0001A63C
+	// Token: 0x170005D0 RID: 1488
+	// (get) Token: 0x06000C3A RID: 3130 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -24,8 +24,8 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700048D RID: 1165
-	// (get) Token: 0x0600086A RID: 2154 RVA: 0x0001C44D File Offset: 0x0001A64D
+	// Token: 0x170005D1 RID: 1489
+	// (get) Token: 0x06000C3B RID: 3131 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -34,8 +34,8 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700048E RID: 1166
-	// (get) Token: 0x0600086B RID: 2155 RVA: 0x0001C45E File Offset: 0x0001A65E
+	// Token: 0x170005D2 RID: 1490
+	// (get) Token: 0x06000C3C RID: 3132 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -44,8 +44,8 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700048F RID: 1167
-	// (get) Token: 0x0600086C RID: 2156 RVA: 0x0001C46F File Offset: 0x0001A66F
+	// Token: 0x170005D3 RID: 1491
+	// (get) Token: 0x06000C3D RID: 3133 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_shoot_ExtraArrowCount
 	{
 		get
@@ -54,8 +54,8 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000490 RID: 1168
-	// (get) Token: 0x0600086D RID: 2157 RVA: 0x0001C472 File Offset: 0x0001A672
+	// Token: 0x170005D4 RID: 1492
+	// (get) Token: 0x06000C3E RID: 3134 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_shootArrow_AimAtPlayer
 	{
 		get
@@ -64,7 +64,7 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600086E RID: 2158 RVA: 0x0001C475 File Offset: 0x0001A675
+	// Token: 0x06000C3F RID: 3135 RVA: 0x0000752A File Offset: 0x0000572A
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -82,7 +82,7 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600086F RID: 2159 RVA: 0x0001C484 File Offset: 0x0001A684
+	// Token: 0x06000C40 RID: 3136 RVA: 0x00007539 File Offset: 0x00005739
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -100,7 +100,7 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000870 RID: 2160 RVA: 0x0001C493 File Offset: 0x0001A693
+	// Token: 0x06000C41 RID: 3137 RVA: 0x00007548 File Offset: 0x00005748
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -118,7 +118,7 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000871 RID: 2161 RVA: 0x0001C4A2 File Offset: 0x0001A6A2
+	// Token: 0x06000C42 RID: 3138 RVA: 0x00007557 File Offset: 0x00005757
 	public IEnumerator ShootArrowCoroutine(float angle)
 	{
 		Vector2 posOffset = this.ARROW_POS_OFFSET;
@@ -153,8 +153,8 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x17000491 RID: 1169
-	// (get) Token: 0x06000872 RID: 2162 RVA: 0x0001C4B8 File Offset: 0x0001A6B8
+	// Token: 0x170005D5 RID: 1493
+	// (get) Token: 0x06000C43 RID: 3139 RVA: 0x0000756D File Offset: 0x0000576D
 	protected virtual Vector2 m_jump_Power
 	{
 		get
@@ -163,8 +163,8 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000492 RID: 1170
-	// (get) Token: 0x06000873 RID: 2163 RVA: 0x0001C4C9 File Offset: 0x0001A6C9
+	// Token: 0x170005D6 RID: 1494
+	// (get) Token: 0x06000C44 RID: 3140 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_jump_Amount
 	{
 		get
@@ -173,8 +173,8 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000493 RID: 1171
-	// (get) Token: 0x06000874 RID: 2164 RVA: 0x0001C4CC File Offset: 0x0001A6CC
+	// Token: 0x170005D7 RID: 1495
+	// (get) Token: 0x06000C45 RID: 3141 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float m_jump_AimDelay
 	{
 		get
@@ -183,7 +183,7 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000875 RID: 2165 RVA: 0x0001C4D3 File Offset: 0x0001A6D3
+	// Token: 0x06000C46 RID: 3142 RVA: 0x0000757E File Offset: 0x0000577E
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -225,90 +225,90 @@ public class SkeletonArcher_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000876 RID: 2166 RVA: 0x0001C4E2 File Offset: 0x0001A6E2
+	// Token: 0x06000C47 RID: 3143 RVA: 0x0000758D File Offset: 0x0000578D
 	private float GetAimAngle(float angle)
 	{
 		return Mathf.Lerp(2f, 0f, angle / 90f);
 	}
 
-	// Token: 0x04000B9E RID: 2974
+	// Token: 0x04000E8B RID: 3723
 	private static int m_attackDirectionStringHash = Animator.StringToHash("Attack_Direction");
 
-	// Token: 0x04000B9F RID: 2975
+	// Token: 0x04000E8C RID: 3724
 	protected float m_shootArrow_TellIntro_AnimationSpeed = 0.75f;
 
-	// Token: 0x04000BA0 RID: 2976
+	// Token: 0x04000E8D RID: 3725
 	protected float m_shootArrow_TellHold_AnimationSpeed = 0.75f;
 
-	// Token: 0x04000BA1 RID: 2977
+	// Token: 0x04000E8E RID: 3726
 	protected const float m_shootArrow_TellIntroAndHold_Delay = 0.5f;
 
-	// Token: 0x04000BA2 RID: 2978
+	// Token: 0x04000E8F RID: 3727
 	protected float m_shootArrow_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000BA3 RID: 2979
+	// Token: 0x04000E90 RID: 3728
 	protected float m_shootArrow_AttackIntro_Delay;
 
-	// Token: 0x04000BA4 RID: 2980
+	// Token: 0x04000E91 RID: 3729
 	protected float m_shootArrow_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000BA5 RID: 2981
+	// Token: 0x04000E92 RID: 3730
 	protected const float m_shootArrow_AttackHold_Delay = 0f;
 
-	// Token: 0x04000BA6 RID: 2982
+	// Token: 0x04000E93 RID: 3731
 	protected float m_shootArrow_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000BA7 RID: 2983
+	// Token: 0x04000E94 RID: 3732
 	protected float m_shootArrow_Exit_Delay = 0.15f;
 
-	// Token: 0x04000BA8 RID: 2984
+	// Token: 0x04000E95 RID: 3733
 	protected int m_arrowHighAngle = 82;
 
-	// Token: 0x04000BA9 RID: 2985
+	// Token: 0x04000E96 RID: 3734
 	protected int m_arrowMediumAngle = 35;
 
-	// Token: 0x04000BAA RID: 2986
+	// Token: 0x04000E97 RID: 3735
 	protected int m_arrowLowAngle = 12;
 
-	// Token: 0x04000BAB RID: 2987
+	// Token: 0x04000E98 RID: 3736
 	protected float m_shootArrow_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000BAC RID: 2988
+	// Token: 0x04000E99 RID: 3737
 	protected float m_shootArrow_AttackCD;
 
-	// Token: 0x04000BAD RID: 2989
+	// Token: 0x04000E9A RID: 3738
 	protected const string SHOOT_TELL_INTRO = "Shoot_Tell_Intro";
 
-	// Token: 0x04000BAE RID: 2990
+	// Token: 0x04000E9B RID: 3739
 	protected const string SHOOT_TELL_HOLD = "Shoot_Tell_Hold";
 
-	// Token: 0x04000BAF RID: 2991
+	// Token: 0x04000E9C RID: 3740
 	protected const string SHOOT_ATTACK_INTRO = "Shoot_Attack_Intro";
 
-	// Token: 0x04000BB0 RID: 2992
+	// Token: 0x04000E9D RID: 3741
 	protected const string SHOOT_ATTACK_HOLD = "Shoot_Attack_Hold";
 
-	// Token: 0x04000BB1 RID: 2993
+	// Token: 0x04000E9E RID: 3742
 	protected const string SHOOT_EXIT = "Shoot_Attack_Exit";
 
-	// Token: 0x04000BB2 RID: 2994
+	// Token: 0x04000E9F RID: 3743
 	protected const string ARROW_PROJECTILE = "SkeletonArcherBoltProjectile";
 
-	// Token: 0x04000BB3 RID: 2995
+	// Token: 0x04000EA0 RID: 3744
 	protected Vector2 ARROW_POS_OFFSET = new Vector2(1f, 0.25f);
 
-	// Token: 0x04000BB4 RID: 2996
+	// Token: 0x04000EA1 RID: 3745
 	protected float m_jump_Tell_Delay = 0.4f;
 
-	// Token: 0x04000BB5 RID: 2997
+	// Token: 0x04000EA2 RID: 3746
 	protected float m_jump_Tell_AnimationSpeed = 0.75f;
 
-	// Token: 0x04000BB6 RID: 2998
+	// Token: 0x04000EA3 RID: 3747
 	protected float m_jump_Exit_Delay;
 
-	// Token: 0x04000BB7 RID: 2999
+	// Token: 0x04000EA4 RID: 3748
 	protected float m_jump_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000BB8 RID: 3000
+	// Token: 0x04000EA5 RID: 3749
 	protected float m_jump_Exit_AttackCD = 3f;
 }

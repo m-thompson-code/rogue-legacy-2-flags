@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020003C1 RID: 961
+// Token: 0x02000659 RID: 1625
 public interface IOmniUIIncrementButton
 {
-	// Token: 0x0600238C RID: 9100
+	// Token: 0x060031AA RID: 12714
 	void InitializeIncrementList();
 }

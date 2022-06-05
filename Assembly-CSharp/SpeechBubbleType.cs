@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02000519 RID: 1305
+// Token: 0x0200088D RID: 2189
 public enum SpeechBubbleType
 {
-	// Token: 0x04002673 RID: 9843
+	// Token: 0x0400345B RID: 13403
 	None,
-	// Token: 0x04002674 RID: 9844
+	// Token: 0x0400345C RID: 13404
 	Sleeping,
-	// Token: 0x04002675 RID: 9845
+	// Token: 0x0400345D RID: 13405
 	PointOfInterest,
-	// Token: 0x04002676 RID: 9846
+	// Token: 0x0400345E RID: 13406
 	GearAvailable,
-	// Token: 0x04002677 RID: 9847
+	// Token: 0x0400345F RID: 13407
 	Dialogue,
-	// Token: 0x04002678 RID: 9848
+	// Token: 0x04003460 RID: 13408
 	TeleportToManor_PizzaGirlOnly,
-	// Token: 0x04002679 RID: 9849
+	// Token: 0x04003461 RID: 13409
 	OverrideText
 }

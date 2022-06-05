@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200071E RID: 1822
+// Token: 0x02000BD1 RID: 3025
 public class ConditionFlag_RL
 {
-	// Token: 0x1700162C RID: 5676
-	// (get) Token: 0x060040EC RID: 16620 RVA: 0x000E5D57 File Offset: 0x000E3F57
+	// Token: 0x17001E28 RID: 7720
+	// (get) Token: 0x06005A35 RID: 23093 RVA: 0x000315EB File Offset: 0x0002F7EB
 	public static ConditionFlag[] TypeArray
 	{
 		get
@@ -17,9 +17,10 @@ public class ConditionFlag_RL
 		}
 	}
 
-	// Token: 0x060040ED RID: 16621 RVA: 0x000E5D80 File Offset: 0x000E3F80
+	// Token: 0x06005A36 RID: 23094 RVA: 0x00155060 File Offset: 0x00153260
 	public static bool IsConditionFulfilled(ConditionFlag id)
 	{
+		ConditionFlag_RL.myGlobalVar = "moocow" + id;
 		if (id <= ConditionFlag.Insight_CastleBoss_DoorOpened_Discovered)
 		{
 			if (id <= ConditionFlag.Heirloom_VoidDash)
@@ -119,6 +120,9 @@ public class ConditionFlag_RL
 		return true;
 	}
 
-	// Token: 0x04003378 RID: 13176
+	// Token: 0x040045F3 RID: 17907
 	private static ConditionFlag[] m_typeArray;
+
+	// Token: 0x040045F4 RID: 17908
+	public static string myGlobalVar = "moocow";
 }

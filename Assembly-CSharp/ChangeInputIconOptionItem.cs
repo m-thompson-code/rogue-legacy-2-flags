@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200027D RID: 637
+// Token: 0x02000448 RID: 1096
 public class ChangeInputIconOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001943 RID: 6467 RVA: 0x0004F3F7 File Offset: 0x0004D5F7
+	// Token: 0x06002332 RID: 9010 RVA: 0x00012EA9 File Offset: 0x000110A9
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -16,7 +16,7 @@ public class ChangeInputIconOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001944 RID: 6468 RVA: 0x0004F438 File Offset: 0x0004D638
+	// Token: 0x06002333 RID: 9011 RVA: 0x000ACA7C File Offset: 0x000AAC7C
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -30,13 +30,13 @@ public class ChangeInputIconOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001945 RID: 6469 RVA: 0x0004F487 File Offset: 0x0004D687
+	// Token: 0x06002334 RID: 9012 RVA: 0x00012EE7 File Offset: 0x000110E7
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed Input Icon Setting: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001946 RID: 6470 RVA: 0x0004F49E File Offset: 0x0004D69E
+	// Token: 0x06002335 RID: 9013 RVA: 0x00012EFE File Offset: 0x000110FE
 	public override void ConfirmOptionChange()
 	{
 		if (this.m_startingIndex != this.m_selectedIndex)
@@ -47,6 +47,6 @@ public class ChangeInputIconOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x0400183F RID: 6207
+	// Token: 0x04001F8C RID: 8076
 	private int m_startingIndex;
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020003FA RID: 1018
+// Token: 0x020006A5 RID: 1701
 public enum ChestLockState
 {
-	// Token: 0x04001FA7 RID: 8103
+	// Token: 0x04002A50 RID: 10832
 	Unlocked,
-	// Token: 0x04001FA8 RID: 8104
+	// Token: 0x04002A51 RID: 10833
 	Locked,
-	// Token: 0x04001FA9 RID: 8105
+	// Token: 0x04002A52 RID: 10834
 	Failed
 }

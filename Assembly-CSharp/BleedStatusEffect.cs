@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020002F3 RID: 755
+// Token: 0x02000502 RID: 1282
 public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 {
-	// Token: 0x17000D06 RID: 3334
-	// (get) Token: 0x06001E13 RID: 7699 RVA: 0x00062651 File Offset: 0x00060851
+	// Token: 0x170010BF RID: 4287
+	// (get) Token: 0x06002970 RID: 10608 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public StatusEffectType[] StatusEffectTypes
 	{
 		get
@@ -16,8 +16,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D07 RID: 3335
-	// (get) Token: 0x06001E14 RID: 7700 RVA: 0x00062654 File Offset: 0x00060854
+	// Token: 0x170010C0 RID: 4288
+	// (get) Token: 0x06002971 RID: 10609 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public float[] StatusEffectDurations
 	{
 		get
@@ -26,8 +26,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D08 RID: 3336
-	// (get) Token: 0x06001E15 RID: 7701 RVA: 0x00062657 File Offset: 0x00060857
+	// Token: 0x170010C1 RID: 4289
+	// (get) Token: 0x06002972 RID: 10610 RVA: 0x000086B8 File Offset: 0x000068B8
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -36,8 +36,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D09 RID: 3337
-	// (get) Token: 0x06001E16 RID: 7702 RVA: 0x0006265E File Offset: 0x0006085E
+	// Token: 0x170010C2 RID: 4290
+	// (get) Token: 0x06002973 RID: 10611 RVA: 0x00005D18 File Offset: 0x00003F18
 	public override float StartingDurationOverride
 	{
 		get
@@ -46,8 +46,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D0A RID: 3338
-	// (get) Token: 0x06001E17 RID: 7703 RVA: 0x00062665 File Offset: 0x00060865
+	// Token: 0x170010C3 RID: 4291
+	// (get) Token: 0x06002974 RID: 10612 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool IsDotDamage
 	{
 		get
@@ -56,8 +56,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D0B RID: 3339
-	// (get) Token: 0x06001E18 RID: 7704 RVA: 0x00062668 File Offset: 0x00060868
+	// Token: 0x170010C4 RID: 4292
+	// (get) Token: 0x06002975 RID: 10613 RVA: 0x000BFF7C File Offset: 0x000BE17C
 	public float BaseDamage
 	{
 		get
@@ -67,8 +67,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D0C RID: 3340
-	// (get) Token: 0x06001E19 RID: 7705 RVA: 0x00062683 File Offset: 0x00060883
+	// Token: 0x170010C5 RID: 4293
+	// (get) Token: 0x06002976 RID: 10614 RVA: 0x00017572 File Offset: 0x00015772
 	public float ActualDamage
 	{
 		get
@@ -77,8 +77,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D0D RID: 3341
-	// (get) Token: 0x06001E1A RID: 7706 RVA: 0x0006268B File Offset: 0x0006088B
+	// Token: 0x170010C6 RID: 4294
+	// (get) Token: 0x06002977 RID: 10615 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritChance
 	{
 		get
@@ -87,8 +87,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D0E RID: 3342
-	// (get) Token: 0x06001E1B RID: 7707 RVA: 0x00062692 File Offset: 0x00060892
+	// Token: 0x170010C7 RID: 4295
+	// (get) Token: 0x06002978 RID: 10616 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritDamage
 	{
 		get
@@ -97,8 +97,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D0F RID: 3343
-	// (get) Token: 0x06001E1C RID: 7708 RVA: 0x00062699 File Offset: 0x00060899
+	// Token: 0x170010C8 RID: 4296
+	// (get) Token: 0x06002979 RID: 10617 RVA: 0x00005FA3 File Offset: 0x000041A3
 	public Vector2 ExternalKnockbackMod
 	{
 		get
@@ -107,8 +107,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D10 RID: 3344
-	// (get) Token: 0x06001E1D RID: 7709 RVA: 0x000626A0 File Offset: 0x000608A0
+	// Token: 0x170010C9 RID: 4297
+	// (get) Token: 0x0600297A RID: 10618 RVA: 0x0001757A File Offset: 0x0001577A
 	public float ActualKnockbackStrength
 	{
 		get
@@ -117,8 +117,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D11 RID: 3345
-	// (get) Token: 0x06001E1E RID: 7710 RVA: 0x000626A8 File Offset: 0x000608A8
+	// Token: 0x170010CA RID: 4298
+	// (get) Token: 0x0600297B RID: 10619 RVA: 0x00017582 File Offset: 0x00015782
 	public float ActualStunStrength
 	{
 		get
@@ -127,9 +127,9 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D12 RID: 3346
-	// (get) Token: 0x06001E1F RID: 7711 RVA: 0x000626B0 File Offset: 0x000608B0
-	// (set) Token: 0x06001E20 RID: 7712 RVA: 0x000626B7 File Offset: 0x000608B7
+	// Token: 0x170010CB RID: 4299
+	// (get) Token: 0x0600297C RID: 10620 RVA: 0x00003CCB File Offset: 0x00001ECB
+	// (set) Token: 0x0600297D RID: 10621 RVA: 0x00002FCA File Offset: 0x000011CA
 	public float BaseStunStrength
 	{
 		get
@@ -141,9 +141,9 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D13 RID: 3347
-	// (get) Token: 0x06001E21 RID: 7713 RVA: 0x000626B9 File Offset: 0x000608B9
-	// (set) Token: 0x06001E22 RID: 7714 RVA: 0x000626C0 File Offset: 0x000608C0
+	// Token: 0x170010CC RID: 4300
+	// (get) Token: 0x0600297E RID: 10622 RVA: 0x00003CCB File Offset: 0x00001ECB
+	// (set) Token: 0x0600297F RID: 10623 RVA: 0x00002FCA File Offset: 0x000011CA
 	public float BaseKnockbackStrength
 	{
 		get
@@ -155,8 +155,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D14 RID: 3348
-	// (get) Token: 0x06001E23 RID: 7715 RVA: 0x000626C2 File Offset: 0x000608C2
+	// Token: 0x170010CD RID: 4301
+	// (get) Token: 0x06002980 RID: 10624 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float KnockbackStrength
 	{
 		get
@@ -165,8 +165,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D15 RID: 3349
-	// (get) Token: 0x06001E24 RID: 7716 RVA: 0x000626C9 File Offset: 0x000608C9
+	// Token: 0x170010CE RID: 4302
+	// (get) Token: 0x06002981 RID: 10625 RVA: 0x000046FA File Offset: 0x000028FA
 	public StrikeType StrikeType
 	{
 		get
@@ -175,8 +175,8 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x17000D16 RID: 3350
-	// (get) Token: 0x06001E25 RID: 7717 RVA: 0x000626CD File Offset: 0x000608CD
+	// Token: 0x170010CF RID: 4303
+	// (get) Token: 0x06002982 RID: 10626 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float StatusEffectDuration
 	{
 		get
@@ -185,7 +185,7 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x06001E26 RID: 7718 RVA: 0x000626D4 File Offset: 0x000608D4
+	// Token: 0x06002983 RID: 10627 RVA: 0x000BFF98 File Offset: 0x000BE198
 	public override void Initialize(StatusEffectController statusEffectController, BaseCharacterController charController)
 	{
 		base.Initialize(statusEffectController, charController);
@@ -195,7 +195,7 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		base.AppliesTint = true;
 	}
 
-	// Token: 0x06001E27 RID: 7719 RVA: 0x00062723 File Offset: 0x00060923
+	// Token: 0x06002984 RID: 10628 RVA: 0x0001739D File Offset: 0x0001559D
 	public override void StartEffect(float duration, IDamageObj caster)
 	{
 		if (!this.m_statusEffectController.HasStatusEffect(StatusEffectType.Enemy_Burn_Immunity))
@@ -204,7 +204,7 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x06001E28 RID: 7720 RVA: 0x0006273C File Offset: 0x0006093C
+	// Token: 0x06002985 RID: 10629 RVA: 0x0001758A File Offset: 0x0001578A
 	private IEnumerator PulseCoroutine()
 	{
 		for (;;)
@@ -242,7 +242,7 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		yield break;
 	}
 
-	// Token: 0x06001E29 RID: 7721 RVA: 0x0006274B File Offset: 0x0006094B
+	// Token: 0x06002986 RID: 10630 RVA: 0x00017599 File Offset: 0x00015799
 	private IEnumerator DealDamageCoroutine()
 	{
 		base.Duration += 0.05f;
@@ -261,7 +261,7 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		yield break;
 	}
 
-	// Token: 0x06001E2A RID: 7722 RVA: 0x0006275A File Offset: 0x0006095A
+	// Token: 0x06002987 RID: 10631 RVA: 0x000175A8 File Offset: 0x000157A8
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		Projectile_RL projectile_RL = caster as Projectile_RL;
@@ -300,7 +300,7 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		yield break;
 	}
 
-	// Token: 0x06001E2B RID: 7723 RVA: 0x00062770 File Offset: 0x00060970
+	// Token: 0x06002988 RID: 10632 RVA: 0x000175BE File Offset: 0x000157BE
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -314,39 +314,39 @@ public class BleedStatusEffect : BaseStatusEffect, IDamageObj
 		}
 	}
 
-	// Token: 0x06001E2D RID: 7725 RVA: 0x000627B5 File Offset: 0x000609B5
+	// Token: 0x0600298A RID: 10634 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IDamageObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04001B9B RID: 7067
+	// Token: 0x040023F6 RID: 9206
 	private const string MULTIPLY_COLOR = "#753B3B";
 
-	// Token: 0x04001B9C RID: 7068
+	// Token: 0x040023F7 RID: 9207
 	private const string PULSE_ON_COLOR = "#451200";
 
-	// Token: 0x04001B9D RID: 7069
+	// Token: 0x040023F8 RID: 9208
 	private const string PULSE_OFF_COLOR = "#000000";
 
-	// Token: 0x04001B9E RID: 7070
+	// Token: 0x040023F9 RID: 9209
 	private Color m_multiplyColor;
 
-	// Token: 0x04001B9F RID: 7071
+	// Token: 0x040023FA RID: 9210
 	private Color m_addColorPulseOn;
 
-	// Token: 0x04001BA0 RID: 7072
+	// Token: 0x040023FB RID: 9211
 	private Color m_addColorPulseOff;
 
-	// Token: 0x04001BA1 RID: 7073
+	// Token: 0x040023FC RID: 9212
 	private bool m_pulseOn;
 
-	// Token: 0x04001BA2 RID: 7074
+	// Token: 0x040023FD RID: 9213
 	private float m_bleedDexDmg;
 
-	// Token: 0x04001BA3 RID: 7075
+	// Token: 0x040023FE RID: 9214
 	private BaseEffect m_bleedEffect;
 
-	// Token: 0x04001BA4 RID: 7076
+	// Token: 0x040023FF RID: 9215
 	private float m_bleedTicRemaining;
 }

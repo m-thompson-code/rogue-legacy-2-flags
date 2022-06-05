@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020007AF RID: 1967
+// Token: 0x02000C75 RID: 3189
 public class RoomConnectedEventArgs : EventArgs
 {
-	// Token: 0x06004239 RID: 16953 RVA: 0x000EBA73 File Offset: 0x000E9C73
+	// Token: 0x06005BC2 RID: 23490 RVA: 0x00032489 File Offset: 0x00030689
 	public RoomConnectedEventArgs(Room callingRoom, BaseRoom connectedRoom)
 	{
 		this.Initialize(callingRoom, connectedRoom);
 	}
 
-	// Token: 0x0600423A RID: 16954 RVA: 0x000EBA83 File Offset: 0x000E9C83
+	// Token: 0x06005BC3 RID: 23491 RVA: 0x00032499 File Offset: 0x00030699
 	public void Initialize(Room callingRoom, BaseRoom connectedRoom)
 	{
 		this.CallingRoom = callingRoom;
 		this.ConnectedRoom = connectedRoom;
 	}
 
-	// Token: 0x1700166C RID: 5740
-	// (get) Token: 0x0600423B RID: 16955 RVA: 0x000EBA93 File Offset: 0x000E9C93
-	// (set) Token: 0x0600423C RID: 16956 RVA: 0x000EBA9B File Offset: 0x000E9C9B
+	// Token: 0x17001E6A RID: 7786
+	// (get) Token: 0x06005BC4 RID: 23492 RVA: 0x000324A9 File Offset: 0x000306A9
+	// (set) Token: 0x06005BC5 RID: 23493 RVA: 0x000324B1 File Offset: 0x000306B1
 	public Room CallingRoom { get; private set; }
 
-	// Token: 0x1700166D RID: 5741
-	// (get) Token: 0x0600423D RID: 16957 RVA: 0x000EBAA4 File Offset: 0x000E9CA4
-	// (set) Token: 0x0600423E RID: 16958 RVA: 0x000EBAAC File Offset: 0x000E9CAC
+	// Token: 0x17001E6B RID: 7787
+	// (get) Token: 0x06005BC6 RID: 23494 RVA: 0x000324BA File Offset: 0x000306BA
+	// (set) Token: 0x06005BC7 RID: 23495 RVA: 0x000324C2 File Offset: 0x000306C2
 	public BaseRoom ConnectedRoom { get; private set; }
 }

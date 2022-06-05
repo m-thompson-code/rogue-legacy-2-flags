@@ -3,54 +3,54 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020001E8 RID: 488
+// Token: 0x02000380 RID: 896
 public class DebugUIController : MonoBehaviour
 {
-	// Token: 0x040013F7 RID: 5111
+	// Token: 0x04001A97 RID: 6807
 	[SerializeField]
 	private GameObject m_panel;
 
-	// Token: 0x040013F8 RID: 5112
+	// Token: 0x04001A98 RID: 6808
 	[SerializeField]
 	private Toggle m_weaponHitBox;
 
-	// Token: 0x040013F9 RID: 5113
+	// Token: 0x04001A99 RID: 6809
 	[SerializeField]
 	private Toggle m_platformHitBox;
 
-	// Token: 0x040013FA RID: 5114
+	// Token: 0x04001A9A RID: 6810
 	[SerializeField]
 	private Toggle m_bodyHitBox;
 
-	// Token: 0x040013FB RID: 5115
+	// Token: 0x04001A9B RID: 6811
 	[SerializeField]
 	private Toggle m_hazardHitBox;
 
-	// Token: 0x040013FC RID: 5116
+	// Token: 0x04001A9C RID: 6812
 	[SerializeField]
 	private Toggle m_worldInfo;
 
-	// Token: 0x040013FD RID: 5117
+	// Token: 0x04001A9D RID: 6813
 	[SerializeField]
 	private Toggle m_roomInfo;
 
-	// Token: 0x040013FE RID: 5118
+	// Token: 0x04001A9E RID: 6814
 	[SerializeField]
 	private Toggle m_dwarf;
 
-	// Token: 0x040013FF RID: 5119
+	// Token: 0x04001A9F RID: 6815
 	[SerializeField]
 	private Toggle m_enlarge;
 
-	// Token: 0x04001400 RID: 5120
+	// Token: 0x04001AA0 RID: 6816
 	[SerializeField]
 	private Toggle m_invincible;
 
-	// Token: 0x04001401 RID: 5121
+	// Token: 0x04001AA1 RID: 6817
 	[SerializeField]
 	private TMP_Dropdown m_traitOneDropdown;
 
-	// Token: 0x04001402 RID: 5122
+	// Token: 0x04001AA2 RID: 6818
 	[SerializeField]
 	private TMP_Dropdown m_traitTwoDropdown;
 }

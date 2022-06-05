@@ -1,31 +1,31 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001C1 RID: 449
+// Token: 0x02000334 RID: 820
 public class BiomeLightController : MonoBehaviour
 {
-	// Token: 0x0600121C RID: 4636 RVA: 0x0003447F File Offset: 0x0003267F
+	// Token: 0x06001A7A RID: 6778 RVA: 0x0000D999 File Offset: 0x0000BB99
 	private void Awake()
 	{
 		this.m_onBiomeChange = new Action<MonoBehaviour, EventArgs>(this.OnBiomeChange);
 		this.m_onPlayerEnterRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerEnterRoom);
 	}
 
-	// Token: 0x0600121D RID: 4637 RVA: 0x000344A5 File Offset: 0x000326A5
+	// Token: 0x06001A7B RID: 6779 RVA: 0x0000D9BF File Offset: 0x0000BBBF
 	private void Start()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.BiomeEnter, this.m_onBiomeChange);
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x0600121E RID: 4638 RVA: 0x000344C0 File Offset: 0x000326C0
+	// Token: 0x06001A7C RID: 6780 RVA: 0x0000D9DA File Offset: 0x0000BBDA
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.BiomeEnter, this.m_onBiomeChange);
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x0600121F RID: 4639 RVA: 0x000344DC File Offset: 0x000326DC
+	// Token: 0x06001A7D RID: 6781 RVA: 0x00091E50 File Offset: 0x00090050
 	private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		RoomViaDoorEventArgs roomViaDoorEventArgs = eventArgs as RoomViaDoorEventArgs;
@@ -46,7 +46,7 @@ public class BiomeLightController : MonoBehaviour
 		throw new InvalidCastException("Failed to cast eventArgs as RoomViaDoorEventArgs");
 	}
 
-	// Token: 0x06001220 RID: 4640 RVA: 0x0003454C File Offset: 0x0003274C
+	// Token: 0x06001A7E RID: 6782 RVA: 0x00091EC0 File Offset: 0x000900C0
 	private void OnBiomeChange(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		BiomeEventArgs biomeEventArgs = eventArgs as BiomeEventArgs;
@@ -61,7 +61,7 @@ public class BiomeLightController : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06001221 RID: 4641 RVA: 0x00034588 File Offset: 0x00032788
+	// Token: 0x06001A7F RID: 6783 RVA: 0x00091EFC File Offset: 0x000900FC
 	private void UpdateLights(BiomeType biome, BaseRoom room)
 	{
 		BiomeArtData biomeArtData = null;
@@ -110,18 +110,18 @@ public class BiomeLightController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001299 RID: 4761
+	// Token: 0x040018AF RID: 6319
 	[SerializeField]
 	private Light m_light;
 
-	// Token: 0x0400129A RID: 4762
+	// Token: 0x040018B0 RID: 6320
 	[SerializeField]
 	[ReadOnly]
 	private BiomeType m_currentBiome;
 
-	// Token: 0x0400129B RID: 4763
+	// Token: 0x040018B1 RID: 6321
 	private Action<MonoBehaviour, EventArgs> m_onBiomeChange;
 
-	// Token: 0x0400129C RID: 4764
+	// Token: 0x040018B2 RID: 6322
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 }

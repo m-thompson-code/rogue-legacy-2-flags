@@ -4,10 +4,10 @@ using FMOD.Studio;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x0200011E RID: 286
+// Token: 0x020001E8 RID: 488
 public class Slug_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x060008BD RID: 2237 RVA: 0x0001D1E0 File Offset: 0x0001B3E0
+	// Token: 0x06000D4E RID: 3406 RVA: 0x00007ADC File Offset: 0x00005CDC
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -17,8 +17,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x170004A4 RID: 1188
-	// (get) Token: 0x060008BE RID: 2238 RVA: 0x0001D1FE File Offset: 0x0001B3FE
+	// Token: 0x17000628 RID: 1576
+	// (get) Token: 0x06000D4F RID: 3407 RVA: 0x0000746B File Offset: 0x0000566B
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -27,8 +27,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004A5 RID: 1189
-	// (get) Token: 0x060008BF RID: 2239 RVA: 0x0001D20F File Offset: 0x0001B40F
+	// Token: 0x17000629 RID: 1577
+	// (get) Token: 0x06000D50 RID: 3408 RVA: 0x00007AFA File Offset: 0x00005CFA
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -37,8 +37,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004A6 RID: 1190
-	// (get) Token: 0x060008C0 RID: 2240 RVA: 0x0001D220 File Offset: 0x0001B420
+	// Token: 0x1700062A RID: 1578
+	// (get) Token: 0x06000D51 RID: 3409 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_WalkTowards_ForceIdle
 	{
 		get
@@ -47,8 +47,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004A7 RID: 1191
-	// (get) Token: 0x060008C1 RID: 2241 RVA: 0x0001D227 File Offset: 0x0001B427
+	// Token: 0x1700062B RID: 1579
+	// (get) Token: 0x06000D52 RID: 3410 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected virtual int m_trail_ProjectileAmount
 	{
 		get
@@ -57,7 +57,7 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060008C2 RID: 2242 RVA: 0x0001D22C File Offset: 0x0001B42C
+	// Token: 0x06000D53 RID: 3411 RVA: 0x0007038C File Offset: 0x0006E58C
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -68,14 +68,14 @@ public class Slug_Basic_AIScript : BaseAIScript
 		AudioManager.PlayAttached(this, this.m_slimeEventInstance, base.gameObject);
 	}
 
-	// Token: 0x060008C3 RID: 2243 RVA: 0x0001D2B1 File Offset: 0x0001B4B1
+	// Token: 0x06000D54 RID: 3412 RVA: 0x00007B0B File Offset: 0x00005D0B
 	public override void ResetScript()
 	{
 		this.m_moveRight = (CDGHelper.RandomPlusMinus() > 0);
 		base.ResetScript();
 	}
 
-	// Token: 0x060008C4 RID: 2244 RVA: 0x0001D2C7 File Offset: 0x0001B4C7
+	// Token: 0x06000D55 RID: 3413 RVA: 0x00007B21 File Offset: 0x00005D21
 	private void OnEnable()
 	{
 		if (base.IsInitialized)
@@ -84,7 +84,7 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060008C5 RID: 2245 RVA: 0x0001D2E4 File Offset: 0x0001B4E4
+	// Token: 0x06000D56 RID: 3414 RVA: 0x00070414 File Offset: 0x0006E614
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -98,7 +98,7 @@ public class Slug_Basic_AIScript : BaseAIScript
 		AudioManager.Stop(this.m_slimeEventInstance, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 	}
 
-	// Token: 0x060008C6 RID: 2246 RVA: 0x0001D33C File Offset: 0x0001B53C
+	// Token: 0x06000D57 RID: 3415 RVA: 0x0007046C File Offset: 0x0006E66C
 	private void OnDestroy()
 	{
 		if (base.EnemyController)
@@ -111,7 +111,7 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060008C7 RID: 2247 RVA: 0x0001D38C File Offset: 0x0001B58C
+	// Token: 0x06000D58 RID: 3416 RVA: 0x000704BC File Offset: 0x0006E6BC
 	private void OnSlugDeath(object sender, EnemyDeathEventArgs args)
 	{
 		ProjectileManager.DisableAllProjectiles(true, base.EnemyController.gameObject, "SlugBoltProjectile");
@@ -122,8 +122,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004A8 RID: 1192
-	// (get) Token: 0x060008C8 RID: 2248 RVA: 0x0001D3F2 File Offset: 0x0001B5F2
+	// Token: 0x1700062C RID: 1580
+	// (get) Token: 0x06000D59 RID: 3417 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_verticalShot_TellIntro_AnimationSpeed
 	{
 		get
@@ -132,8 +132,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004A9 RID: 1193
-	// (get) Token: 0x060008C9 RID: 2249 RVA: 0x0001D3F9 File Offset: 0x0001B5F9
+	// Token: 0x1700062D RID: 1581
+	// (get) Token: 0x06000D5A RID: 3418 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_verticalShot_TellHold_AnimationSpeed
 	{
 		get
@@ -142,8 +142,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004AA RID: 1194
-	// (get) Token: 0x060008CA RID: 2250 RVA: 0x0001D400 File Offset: 0x0001B600
+	// Token: 0x1700062E RID: 1582
+	// (get) Token: 0x06000D5B RID: 3419 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_verticalShot_TellIntroAndHold_Delay
 	{
 		get
@@ -152,8 +152,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004AB RID: 1195
-	// (get) Token: 0x060008CB RID: 2251 RVA: 0x0001D407 File Offset: 0x0001B607
+	// Token: 0x1700062F RID: 1583
+	// (get) Token: 0x06000D5C RID: 3420 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_verticalShot_AttackIntro_AnimationSpeed
 	{
 		get
@@ -162,8 +162,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004AC RID: 1196
-	// (get) Token: 0x060008CC RID: 2252 RVA: 0x0001D40E File Offset: 0x0001B60E
+	// Token: 0x17000630 RID: 1584
+	// (get) Token: 0x06000D5D RID: 3421 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_verticalShot_AttackIntro_Delay
 	{
 		get
@@ -172,8 +172,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004AD RID: 1197
-	// (get) Token: 0x060008CD RID: 2253 RVA: 0x0001D415 File Offset: 0x0001B615
+	// Token: 0x17000631 RID: 1585
+	// (get) Token: 0x06000D5E RID: 3422 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_verticalShot_AttackHold_AnimationSpeed
 	{
 		get
@@ -182,8 +182,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004AE RID: 1198
-	// (get) Token: 0x060008CE RID: 2254 RVA: 0x0001D41C File Offset: 0x0001B61C
+	// Token: 0x17000632 RID: 1586
+	// (get) Token: 0x06000D5F RID: 3423 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_verticalShot_AttackHold_Delay
 	{
 		get
@@ -192,8 +192,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004AF RID: 1199
-	// (get) Token: 0x060008CF RID: 2255 RVA: 0x0001D423 File Offset: 0x0001B623
+	// Token: 0x17000633 RID: 1587
+	// (get) Token: 0x06000D60 RID: 3424 RVA: 0x00006780 File Offset: 0x00004980
 	protected virtual float m_verticalShot_Exit_AnimationSpeed
 	{
 		get
@@ -202,8 +202,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004B0 RID: 1200
-	// (get) Token: 0x060008D0 RID: 2256 RVA: 0x0001D42A File Offset: 0x0001B62A
+	// Token: 0x17000634 RID: 1588
+	// (get) Token: 0x06000D61 RID: 3425 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_verticalShot_Exit_Delay
 	{
 		get
@@ -212,8 +212,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004B1 RID: 1201
-	// (get) Token: 0x060008D1 RID: 2257 RVA: 0x0001D431 File Offset: 0x0001B631
+	// Token: 0x17000635 RID: 1589
+	// (get) Token: 0x06000D62 RID: 3426 RVA: 0x000050CB File Offset: 0x000032CB
 	protected virtual float m_verticalShot_Exit_ForceIdle
 	{
 		get
@@ -222,8 +222,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004B2 RID: 1202
-	// (get) Token: 0x060008D2 RID: 2258 RVA: 0x0001D438 File Offset: 0x0001B638
+	// Token: 0x17000636 RID: 1590
+	// (get) Token: 0x06000D63 RID: 3427 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float m_verticalShot_Exit_AttackCD
 	{
 		get
@@ -232,8 +232,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004B3 RID: 1203
-	// (get) Token: 0x060008D3 RID: 2259 RVA: 0x0001D43F File Offset: 0x0001B63F
+	// Token: 0x17000637 RID: 1591
+	// (get) Token: 0x06000D64 RID: 3428 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual int m_verticalShot_TotalShotSpread
 	{
 		get
@@ -242,8 +242,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004B4 RID: 1204
-	// (get) Token: 0x060008D4 RID: 2260 RVA: 0x0001D442 File Offset: 0x0001B642
+	// Token: 0x17000638 RID: 1592
+	// (get) Token: 0x06000D65 RID: 3429 RVA: 0x00007B3D File Offset: 0x00005D3D
 	protected virtual int m_verticalShot_SideBulletAngleOffset
 	{
 		get
@@ -252,8 +252,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004B5 RID: 1205
-	// (get) Token: 0x060008D5 RID: 2261 RVA: 0x0001D446 File Offset: 0x0001B646
+	// Token: 0x17000639 RID: 1593
+	// (get) Token: 0x06000D66 RID: 3430 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_verticalShot_SpeedMod
 	{
 		get
@@ -262,8 +262,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004B6 RID: 1206
-	// (get) Token: 0x060008D6 RID: 2262 RVA: 0x0001D44D File Offset: 0x0001B64D
+	// Token: 0x1700063A RID: 1594
+	// (get) Token: 0x06000D67 RID: 3431 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual int m_verticalShot_RepeatAttackPattern
 	{
 		get
@@ -272,8 +272,8 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004B7 RID: 1207
-	// (get) Token: 0x060008D7 RID: 2263 RVA: 0x0001D450 File Offset: 0x0001B650
+	// Token: 0x1700063B RID: 1595
+	// (get) Token: 0x06000D68 RID: 3432 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_verticalShot_RepeatAttackPatternDelay
 	{
 		get
@@ -282,7 +282,7 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060008D8 RID: 2264 RVA: 0x0001D457 File Offset: 0x0001B657
+	// Token: 0x06000D69 RID: 3433 RVA: 0x00007B41 File Offset: 0x00005D41
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -324,7 +324,7 @@ public class Slug_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008D9 RID: 2265 RVA: 0x0001D466 File Offset: 0x0001B666
+	// Token: 0x06000D6A RID: 3434 RVA: 0x00007B50 File Offset: 0x00005D50
 	public override IEnumerator WalkTowards()
 	{
 		if (this.m_moveRight)
@@ -369,7 +369,7 @@ public class Slug_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008DA RID: 2266 RVA: 0x0001D478 File Offset: 0x0001B678
+	// Token: 0x06000D6B RID: 3435 RVA: 0x00070524 File Offset: 0x0006E724
 	private void Turn()
 	{
 		base.SetVelocityX(-base.EnemyController.Velocity.x, false);
@@ -380,7 +380,7 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060008DB RID: 2267 RVA: 0x0001D4C8 File Offset: 0x0001B6C8
+	// Token: 0x06000D6C RID: 3436 RVA: 0x00070574 File Offset: 0x0006E774
 	private void LateUpdate()
 	{
 		if (!base.IsInitialized || base.EnemyController.IsDead)
@@ -438,48 +438,48 @@ public class Slug_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x04000C57 RID: 3159
+	// Token: 0x04000FAB RID: 4011
 	private const float RAYCAST_LENGTH = 0.25f;
 
-	// Token: 0x04000C58 RID: 3160
+	// Token: 0x04000FAC RID: 4012
 	protected const string WALK_PROJECTILE = "SlugBoltProjectile";
 
-	// Token: 0x04000C59 RID: 3161
+	// Token: 0x04000FAD RID: 4013
 	private const string TRAIL_DESPAWN_AUDIO_PATH = "event:/SFX/Enemies/sfx_enemy_slug_trail_despawn";
 
-	// Token: 0x04000C5A RID: 3162
+	// Token: 0x04000FAE RID: 4014
 	private bool m_moveRight;
 
-	// Token: 0x04000C5B RID: 3163
+	// Token: 0x04000FAF RID: 4015
 	private Projectile_RL m_lastProjectileTrailSpawned;
 
-	// Token: 0x04000C5C RID: 3164
+	// Token: 0x04000FB0 RID: 4016
 	private ParticleSystem m_slimeTrail;
 
-	// Token: 0x04000C5D RID: 3165
+	// Token: 0x04000FB1 RID: 4017
 	private EventInstance m_slimeEventInstance;
 
-	// Token: 0x04000C5E RID: 3166
+	// Token: 0x04000FB2 RID: 4018
 	protected const string VERTICAL_SHOT_TELL_INTRO = "Shoot_Tell_Intro";
 
-	// Token: 0x04000C5F RID: 3167
+	// Token: 0x04000FB3 RID: 4019
 	protected const string VERTICAL_SHOT_TELL_HOLD = "Shoot_Tell_Hold";
 
-	// Token: 0x04000C60 RID: 3168
+	// Token: 0x04000FB4 RID: 4020
 	protected const string VERTICAL_SHOT_ATTACK_INTRO = "Shoot_Attack_Intro";
 
-	// Token: 0x04000C61 RID: 3169
+	// Token: 0x04000FB5 RID: 4021
 	protected const string VERTICAL_SHOT_ATTACK_HOLD = "Shoot_Attack_Hold";
 
-	// Token: 0x04000C62 RID: 3170
+	// Token: 0x04000FB6 RID: 4022
 	protected const string VERTICAL_SHOT_EXIT = "Shoot_Exit";
 
-	// Token: 0x04000C63 RID: 3171
+	// Token: 0x04000FB7 RID: 4023
 	protected const string VERTICAL_SHOT_PROJECTILE = "SlugGravityBoltProjectile";
 
-	// Token: 0x04000C64 RID: 3172
+	// Token: 0x04000FB8 RID: 4024
 	private bool m_slimeTrailDisplacedRight;
 
-	// Token: 0x04000C65 RID: 3173
+	// Token: 0x04000FB9 RID: 4025
 	private bool m_slimeTrailDisplacedLeft;
 }

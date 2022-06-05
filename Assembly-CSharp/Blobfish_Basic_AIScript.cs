@@ -3,10 +3,10 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000095 RID: 149
+// Token: 0x020000B6 RID: 182
 public class Blobfish_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x0600025A RID: 602 RVA: 0x00012B6C File Offset: 0x00010D6C
+	// Token: 0x06000304 RID: 772 RVA: 0x000044C1 File Offset: 0x000026C1
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -18,8 +18,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x1700007B RID: 123
-	// (get) Token: 0x0600025B RID: 603 RVA: 0x00012B9A File Offset: 0x00010D9A
+	// Token: 0x170000B3 RID: 179
+	// (get) Token: 0x06000305 RID: 773 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -28,8 +28,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700007C RID: 124
-	// (get) Token: 0x0600025C RID: 604 RVA: 0x00012BAB File Offset: 0x00010DAB
+	// Token: 0x170000B4 RID: 180
+	// (get) Token: 0x06000306 RID: 774 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -38,8 +38,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700007D RID: 125
-	// (get) Token: 0x0600025D RID: 605 RVA: 0x00012BBC File Offset: 0x00010DBC
+	// Token: 0x170000B5 RID: 181
+	// (get) Token: 0x06000307 RID: 775 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -48,8 +48,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700007E RID: 126
-	// (get) Token: 0x0600025E RID: 606 RVA: 0x00012BCD File Offset: 0x00010DCD
+	// Token: 0x170000B6 RID: 182
+	// (get) Token: 0x06000308 RID: 776 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool HasTail
 	{
 		get
@@ -58,28 +58,28 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600025F RID: 607 RVA: 0x00012BD0 File Offset: 0x00010DD0
+	// Token: 0x06000309 RID: 777 RVA: 0x000044EF File Offset: 0x000026EF
 	private void Awake()
 	{
 		this.m_onHitReenableGravity = new Action<object, CharacterHitEventArgs>(this.OnHitReenableGravity);
 	}
 
-	// Token: 0x06000260 RID: 608 RVA: 0x00012BE4 File Offset: 0x00010DE4
+	// Token: 0x0600030A RID: 778 RVA: 0x00004503 File Offset: 0x00002703
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
 		this.HideAimIndicator();
 	}
 
-	// Token: 0x06000261 RID: 609 RVA: 0x00012BF3 File Offset: 0x00010DF3
+	// Token: 0x0600030B RID: 779 RVA: 0x00004512 File Offset: 0x00002712
 	protected override void OnDisable()
 	{
 		base.OnDisable();
 		this.HideAimIndicator();
 	}
 
-	// Token: 0x1700007F RID: 127
-	// (get) Token: 0x06000262 RID: 610 RVA: 0x00012C01 File Offset: 0x00010E01
+	// Token: 0x170000B7 RID: 183
+	// (get) Token: 0x0600030C RID: 780 RVA: 0x00004520 File Offset: 0x00002720
 	protected virtual float m_jump_Tell_Delay
 	{
 		get
@@ -88,8 +88,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000080 RID: 128
-	// (get) Token: 0x06000263 RID: 611 RVA: 0x00012C08 File Offset: 0x00010E08
+	// Token: 0x170000B8 RID: 184
+	// (get) Token: 0x0600030D RID: 781 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_jump_Tell_AnimationSpeed
 	{
 		get
@@ -98,8 +98,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000081 RID: 129
-	// (get) Token: 0x06000264 RID: 612 RVA: 0x00012C0F File Offset: 0x00010E0F
+	// Token: 0x170000B9 RID: 185
+	// (get) Token: 0x0600030E RID: 782 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float m_jump_Exit_ForceIdle
 	{
 		get
@@ -108,8 +108,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000082 RID: 130
-	// (get) Token: 0x06000265 RID: 613 RVA: 0x00012C16 File Offset: 0x00010E16
+	// Token: 0x170000BA RID: 186
+	// (get) Token: 0x0600030F RID: 783 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_jumpLandingShootsProjectiles
 	{
 		get
@@ -118,8 +118,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000083 RID: 131
-	// (get) Token: 0x06000266 RID: 614 RVA: 0x00012C19 File Offset: 0x00010E19
+	// Token: 0x170000BB RID: 187
+	// (get) Token: 0x06000310 RID: 784 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_jumpLandingShootsManyProjectiles
 	{
 		get
@@ -128,8 +128,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000084 RID: 132
-	// (get) Token: 0x06000267 RID: 615 RVA: 0x00012C1C File Offset: 0x00010E1C
+	// Token: 0x170000BC RID: 188
+	// (get) Token: 0x06000311 RID: 785 RVA: 0x00004527 File Offset: 0x00002727
 	protected virtual int m_jumpLandingProjectileAngle
 	{
 		get
@@ -138,8 +138,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000085 RID: 133
-	// (get) Token: 0x06000268 RID: 616 RVA: 0x00012C20 File Offset: 0x00010E20
+	// Token: 0x170000BD RID: 189
+	// (get) Token: 0x06000312 RID: 786 RVA: 0x0000452B File Offset: 0x0000272B
 	protected virtual int m_jumpLandingProjectileAngleMany
 	{
 		get
@@ -148,8 +148,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000086 RID: 134
-	// (get) Token: 0x06000269 RID: 617 RVA: 0x00012C24 File Offset: 0x00010E24
+	// Token: 0x170000BE RID: 190
+	// (get) Token: 0x06000313 RID: 787 RVA: 0x0000452F File Offset: 0x0000272F
 	protected virtual float m_jumpProjectileFireDelay
 	{
 		get
@@ -158,8 +158,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000087 RID: 135
-	// (get) Token: 0x0600026A RID: 618 RVA: 0x00012C2B File Offset: 0x00010E2B
+	// Token: 0x170000BF RID: 191
+	// (get) Token: 0x06000314 RID: 788 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float m_aim_Indicator_Offset
 	{
 		get
@@ -168,8 +168,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000088 RID: 136
-	// (get) Token: 0x0600026B RID: 619 RVA: 0x00012C32 File Offset: 0x00010E32
+	// Token: 0x170000C0 RID: 192
+	// (get) Token: 0x06000315 RID: 789 RVA: 0x0000453D File Offset: 0x0000273D
 	protected virtual Vector2Int m_jump_Attack_Min_And_Max_Angle
 	{
 		get
@@ -178,8 +178,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000089 RID: 137
-	// (get) Token: 0x0600026C RID: 620 RVA: 0x00012C3D File Offset: 0x00010E3D
+	// Token: 0x170000C1 RID: 193
+	// (get) Token: 0x06000316 RID: 790 RVA: 0x00004548 File Offset: 0x00002748
 	protected virtual float m_jump_Power
 	{
 		get
@@ -188,7 +188,7 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600026D RID: 621 RVA: 0x00012C44 File Offset: 0x00010E44
+	// Token: 0x06000317 RID: 791 RVA: 0x0000454F File Offset: 0x0000274F
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -239,8 +239,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x1700008A RID: 138
-	// (get) Token: 0x0600026E RID: 622 RVA: 0x00012C53 File Offset: 0x00010E53
+	// Token: 0x170000C2 RID: 194
+	// (get) Token: 0x06000318 RID: 792 RVA: 0x00004548 File Offset: 0x00002748
 	protected virtual float GroundSlam_Jump_Power
 	{
 		get
@@ -249,8 +249,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700008B RID: 139
-	// (get) Token: 0x0600026F RID: 623 RVA: 0x00012C5A File Offset: 0x00010E5A
+	// Token: 0x170000C3 RID: 195
+	// (get) Token: 0x06000319 RID: 793 RVA: 0x0000455E File Offset: 0x0000275E
 	protected virtual float GroundSlam_Land_Power
 	{
 		get
@@ -259,8 +259,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700008C RID: 140
-	// (get) Token: 0x06000270 RID: 624 RVA: 0x00012C61 File Offset: 0x00010E61
+	// Token: 0x170000C4 RID: 196
+	// (get) Token: 0x0600031A RID: 794 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float GroundSlam_TellIntro_AnimSpeed
 	{
 		get
@@ -269,8 +269,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700008D RID: 141
-	// (get) Token: 0x06000271 RID: 625 RVA: 0x00012C68 File Offset: 0x00010E68
+	// Token: 0x170000C5 RID: 197
+	// (get) Token: 0x0600031B RID: 795 RVA: 0x00004565 File Offset: 0x00002765
 	protected virtual float GroundSlam_TellHold_AnimSpeed
 	{
 		get
@@ -279,8 +279,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700008E RID: 142
-	// (get) Token: 0x06000272 RID: 626 RVA: 0x00012C6F File Offset: 0x00010E6F
+	// Token: 0x170000C6 RID: 198
+	// (get) Token: 0x0600031C RID: 796 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float GroundSlam_TellHold_Duration
 	{
 		get
@@ -289,8 +289,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700008F RID: 143
-	// (get) Token: 0x06000273 RID: 627 RVA: 0x00012C76 File Offset: 0x00010E76
+	// Token: 0x170000C7 RID: 199
+	// (get) Token: 0x0600031D RID: 797 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float GroundSlam_AttackIntro_AnimSpeed
 	{
 		get
@@ -299,8 +299,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000090 RID: 144
-	// (get) Token: 0x06000274 RID: 628 RVA: 0x00012C7D File Offset: 0x00010E7D
+	// Token: 0x170000C8 RID: 200
+	// (get) Token: 0x0600031E RID: 798 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float GroundSlam_AttackIntro_Delay
 	{
 		get
@@ -309,8 +309,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000091 RID: 145
-	// (get) Token: 0x06000275 RID: 629 RVA: 0x00012C84 File Offset: 0x00010E84
+	// Token: 0x170000C9 RID: 201
+	// (get) Token: 0x0600031F RID: 799 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float GroundSlam_AttackHold_AnimSpeed
 	{
 		get
@@ -319,8 +319,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000092 RID: 146
-	// (get) Token: 0x06000276 RID: 630 RVA: 0x00012C8B File Offset: 0x00010E8B
+	// Token: 0x170000CA RID: 202
+	// (get) Token: 0x06000320 RID: 800 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float GroundSlam_AttackHold_Delay
 	{
 		get
@@ -329,8 +329,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000093 RID: 147
-	// (get) Token: 0x06000277 RID: 631 RVA: 0x00012C92 File Offset: 0x00010E92
+	// Token: 0x170000CB RID: 203
+	// (get) Token: 0x06000321 RID: 801 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float GroundSlam_Exit_AnimSpeed
 	{
 		get
@@ -339,8 +339,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000094 RID: 148
-	// (get) Token: 0x06000278 RID: 632 RVA: 0x00012C99 File Offset: 0x00010E99
+	// Token: 0x170000CC RID: 204
+	// (get) Token: 0x06000322 RID: 802 RVA: 0x0000456C File Offset: 0x0000276C
 	protected virtual float GroundSlam_Exit_Duration
 	{
 		get
@@ -349,8 +349,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000095 RID: 149
-	// (get) Token: 0x06000279 RID: 633 RVA: 0x00012CA0 File Offset: 0x00010EA0
+	// Token: 0x170000CD RID: 205
+	// (get) Token: 0x06000323 RID: 803 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float GroundSlam_Exit_ForceIdle
 	{
 		get
@@ -359,8 +359,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000096 RID: 150
-	// (get) Token: 0x0600027A RID: 634 RVA: 0x00012CA7 File Offset: 0x00010EA7
+	// Token: 0x170000CE RID: 206
+	// (get) Token: 0x06000324 RID: 804 RVA: 0x00004573 File Offset: 0x00002773
 	protected virtual float GroundSlam_Exit_AttackCD
 	{
 		get
@@ -369,8 +369,8 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000097 RID: 151
-	// (get) Token: 0x0600027B RID: 635 RVA: 0x00012CAE File Offset: 0x00010EAE
+	// Token: 0x170000CF RID: 207
+	// (get) Token: 0x06000325 RID: 805 RVA: 0x0000457A File Offset: 0x0000277A
 	protected float GroundSlam_Land_Delay
 	{
 		get
@@ -379,7 +379,7 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600027C RID: 636 RVA: 0x00012CB5 File Offset: 0x00010EB5
+	// Token: 0x06000326 RID: 806 RVA: 0x00004581 File Offset: 0x00002781
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -443,13 +443,13 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600027D RID: 637 RVA: 0x00012CC4 File Offset: 0x00010EC4
+	// Token: 0x06000327 RID: 807 RVA: 0x00004590 File Offset: 0x00002790
 	private void OnHitReenableGravity(object sender, EventArgs args)
 	{
 		base.EnemyController.ControllerCorgi.GravityActive(true);
 	}
 
-	// Token: 0x0600027E RID: 638 RVA: 0x00012CD7 File Offset: 0x00010ED7
+	// Token: 0x06000328 RID: 808 RVA: 0x000045A3 File Offset: 0x000027A3
 	private IEnumerator GroundSlamBlinkCoroutine(float duration, Color color)
 	{
 		for (;;)
@@ -464,7 +464,7 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600027F RID: 639 RVA: 0x00012CED File Offset: 0x00010EED
+	// Token: 0x06000329 RID: 809 RVA: 0x000045B9 File Offset: 0x000027B9
 	private void Jump(float x, float y)
 	{
 		base.SetVelocityX(x, true);
@@ -472,7 +472,7 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		base.SetVelocityY(y, false);
 	}
 
-	// Token: 0x06000280 RID: 640 RVA: 0x00012D0C File Offset: 0x00010F0C
+	// Token: 0x0600032A RID: 810 RVA: 0x000508BC File Offset: 0x0004EABC
 	private void SetRandomJumpDirection()
 	{
 		Vector2 vector = CDGHelper.AngleToVector((float)UnityEngine.Random.Range(this.m_jump_Attack_Min_And_Max_Angle.x, this.m_jump_Attack_Min_And_Max_Angle.y + 1));
@@ -480,7 +480,7 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		this.DrawAimIndicator(vector);
 	}
 
-	// Token: 0x06000281 RID: 641 RVA: 0x00012D5C File Offset: 0x00010F5C
+	// Token: 0x0600032B RID: 811 RVA: 0x000045D7 File Offset: 0x000027D7
 	private IEnumerator FireJumpProjectiles(float delayBetweenProjectiles)
 	{
 		float pitch = 0f;
@@ -506,7 +506,7 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000282 RID: 642 RVA: 0x00012D74 File Offset: 0x00010F74
+	// Token: 0x0600032C RID: 812 RVA: 0x0005090C File Offset: 0x0004EB0C
 	private void DrawAimIndicator(Vector2 direction)
 	{
 		this.m_aimIndicator.transform.rotation = Quaternion.LookRotation(Vector3.forward, this.m_jump_Direction);
@@ -517,13 +517,13 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		this.m_aimIndicator.gameObject.SetActive(true);
 	}
 
-	// Token: 0x06000283 RID: 643 RVA: 0x00012E0A File Offset: 0x0001100A
+	// Token: 0x0600032D RID: 813 RVA: 0x000045ED File Offset: 0x000027ED
 	private void HideAimIndicator()
 	{
 		this.m_aimIndicator.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06000284 RID: 644 RVA: 0x00012E20 File Offset: 0x00011020
+	// Token: 0x0600032E RID: 814 RVA: 0x000509A4 File Offset: 0x0004EBA4
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.EnemyController.CharacterHitResponse.OnCharacterHitRelay.RemoveListener(this.m_onHitReenableGravity);
@@ -532,85 +532,85 @@ public class Blobfish_Basic_AIScript : BaseAIScript
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x0400066C RID: 1644
+	// Token: 0x040006F8 RID: 1784
 	[SerializeField]
 	private SpriteRenderer m_aimIndicator;
 
-	// Token: 0x0400066D RID: 1645
+	// Token: 0x040006F9 RID: 1785
 	private Action<object, CharacterHitEventArgs> m_onHitReenableGravity;
 
-	// Token: 0x0400066E RID: 1646
+	// Token: 0x040006FA RID: 1786
 	protected const string JUMP_ATTACK_TELL_INTRO = "Jump_Tell_Intro";
 
-	// Token: 0x0400066F RID: 1647
+	// Token: 0x040006FB RID: 1787
 	protected const string JUMP_ATTACK_TELL_HOLD = "Jump_Tell_Hold";
 
-	// Token: 0x04000670 RID: 1648
+	// Token: 0x040006FC RID: 1788
 	protected const string JUMP_ATTACK_ATTACK_INTRO = "Jump_Attack_Intro";
 
-	// Token: 0x04000671 RID: 1649
+	// Token: 0x040006FD RID: 1789
 	protected const string JUMP_ATTACK_ATTACK_HOLD = "Jump_Attack_Hold";
 
-	// Token: 0x04000672 RID: 1650
+	// Token: 0x040006FE RID: 1790
 	protected const string JUMP_ATTACK_EXIT = "Jump_Exit";
 
-	// Token: 0x04000673 RID: 1651
+	// Token: 0x040006FF RID: 1791
 	protected const string WATER_PROJECTILE = "BlobFishWaterProjectile";
 
-	// Token: 0x04000674 RID: 1652
+	// Token: 0x04000700 RID: 1792
 	protected const string TAIL_PROJECTILE = "BlobFishTailProjectile";
 
-	// Token: 0x04000675 RID: 1653
+	// Token: 0x04000701 RID: 1793
 	protected const string TAIL_LONG_PROJECTILE = "BlobFishTailLongProjectile";
 
-	// Token: 0x04000676 RID: 1654
+	// Token: 0x04000702 RID: 1794
 	protected Vector2 m_jump_Direction;
 
-	// Token: 0x04000677 RID: 1655
+	// Token: 0x04000703 RID: 1795
 	protected float m_jump_Attack_Intro_AnimationSpeed = 1f;
 
-	// Token: 0x04000678 RID: 1656
+	// Token: 0x04000704 RID: 1796
 	protected float m_jump_Attack_Intro_Delay;
 
-	// Token: 0x04000679 RID: 1657
+	// Token: 0x04000705 RID: 1797
 	protected float m_jump_Attack_Hold_AnimationSpeed = 1f;
 
-	// Token: 0x0400067A RID: 1658
+	// Token: 0x04000706 RID: 1798
 	protected float m_jump_Attack_Hold_Delay;
 
-	// Token: 0x0400067B RID: 1659
+	// Token: 0x04000707 RID: 1799
 	protected float m_jump_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x0400067C RID: 1660
+	// Token: 0x04000708 RID: 1800
 	protected float m_jump_Exit_Delay;
 
-	// Token: 0x0400067D RID: 1661
+	// Token: 0x04000709 RID: 1801
 	protected float m_jump_Exit_AttackCD;
 
-	// Token: 0x0400067E RID: 1662
+	// Token: 0x0400070A RID: 1802
 	protected const string GROUND_SLAM_TELL_INTRO = "Flop_Tell_Intro";
 
-	// Token: 0x0400067F RID: 1663
+	// Token: 0x0400070B RID: 1803
 	protected const string GROUND_SLAM_TELL_HOLD = "Flop_Tell_Hold";
 
-	// Token: 0x04000680 RID: 1664
+	// Token: 0x0400070C RID: 1804
 	protected const string GROUND_SLAM_ATTACK_INTRO = "Flop_Attack_Intro";
 
-	// Token: 0x04000681 RID: 1665
+	// Token: 0x0400070D RID: 1805
 	protected const string GROUND_SLAM_ATTACK_HOLD = "Flop_Attack_Hold";
 
-	// Token: 0x04000682 RID: 1666
+	// Token: 0x0400070E RID: 1806
 	protected const string GROUND_SLAM_EXIT = "Flop_Exit";
 
-	// Token: 0x04000683 RID: 1667
+	// Token: 0x0400070F RID: 1807
 	protected const string SPLASH_PROJECTILE = "BlobFishWaterSlamProjectile";
 
-	// Token: 0x04000684 RID: 1668
+	// Token: 0x04000710 RID: 1808
 	protected Vector2 GroundSlam_Land_ThrowAngle = new Vector2(15f, 7f);
 
-	// Token: 0x04000685 RID: 1669
+	// Token: 0x04000711 RID: 1809
 	protected Vector2 GroundSlam_Land_ThrowPower = new Vector2(0.75f, 1f);
 
-	// Token: 0x04000686 RID: 1670
+	// Token: 0x04000712 RID: 1810
 	private Coroutine m_groundSlamBlinkCoroutine;
 }

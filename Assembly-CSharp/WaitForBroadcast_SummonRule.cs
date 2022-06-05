@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000532 RID: 1330
+// Token: 0x020008BF RID: 2239
 [Serializable]
 public class WaitForBroadcast_SummonRule : BaseSummonRule
 {
-	// Token: 0x17001214 RID: 4628
-	// (get) Token: 0x060030F2 RID: 12530 RVA: 0x000A666F File Offset: 0x000A486F
+	// Token: 0x17001855 RID: 6229
+	// (get) Token: 0x0600443A RID: 17466 RVA: 0x000259F4 File Offset: 0x00023BF4
 	public override SummonRuleType RuleType
 	{
 		get
@@ -16,8 +16,8 @@ public class WaitForBroadcast_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001215 RID: 4629
-	// (get) Token: 0x060030F3 RID: 12531 RVA: 0x000A6676 File Offset: 0x000A4876
+	// Token: 0x17001856 RID: 6230
+	// (get) Token: 0x0600443B RID: 17467 RVA: 0x000259FB File Offset: 0x00023BFB
 	public override string RuleLabel
 	{
 		get
@@ -26,14 +26,14 @@ public class WaitForBroadcast_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x060030F4 RID: 12532 RVA: 0x000A667D File Offset: 0x000A487D
+	// Token: 0x0600443C RID: 17468 RVA: 0x00025A02 File Offset: 0x00023C02
 	public override void Initialize(SummonRuleController summonController)
 	{
 		base.Initialize(summonController);
 		this.m_onSummonRuleBroadcast = new Action<MonoBehaviour, EventArgs>(this.OnSummonRuleBroadcast);
 	}
 
-	// Token: 0x060030F5 RID: 12533 RVA: 0x000A6698 File Offset: 0x000A4898
+	// Token: 0x0600443D RID: 17469 RVA: 0x00025A1D File Offset: 0x00023C1D
 	public override IEnumerator RunSummonRule()
 	{
 		this.m_continueRule = false;
@@ -46,15 +46,15 @@ public class WaitForBroadcast_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x060030F6 RID: 12534 RVA: 0x000A66A7 File Offset: 0x000A48A7
+	// Token: 0x0600443E RID: 17470 RVA: 0x00025A2C File Offset: 0x00023C2C
 	private void OnSummonRuleBroadcast(object sender, EventArgs args)
 	{
 		this.m_continueRule = true;
 	}
 
-	// Token: 0x040026C1 RID: 9921
+	// Token: 0x04003500 RID: 13568
 	private bool m_continueRule;
 
-	// Token: 0x040026C2 RID: 9922
+	// Token: 0x04003501 RID: 13569
 	private Action<MonoBehaviour, EventArgs> m_onSummonRuleBroadcast;
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006AE RID: 1710
+// Token: 0x02000B4F RID: 2895
 public class SkillTreeManager : MonoBehaviour
 {
-	// Token: 0x06003EF9 RID: 16121 RVA: 0x000E0231 File Offset: 0x000DE431
+	// Token: 0x06005801 RID: 22529 RVA: 0x0002FD73 File Offset: 0x0002DF73
 	private void Awake()
 	{
 		this.Initialize();
 		Debug.Log("<color=green>Creating SkillTreeManager...</color>");
 	}
 
-	// Token: 0x06003EFA RID: 16122 RVA: 0x000E0243 File Offset: 0x000DE443
+	// Token: 0x06005802 RID: 22530 RVA: 0x0002FD85 File Offset: 0x0002DF85
 	private void Initialize()
 	{
 		if (Application.isPlaying)
@@ -25,15 +25,15 @@ public class SkillTreeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003EFB RID: 16123 RVA: 0x000E0276 File Offset: 0x000DE476
+	// Token: 0x06005803 RID: 22531 RVA: 0x0002FDB8 File Offset: 0x0002DFB8
 	private void OnDestroy()
 	{
 		SkillTreeManager.m_skillTreeManager = null;
 		SkillTreeManager.IsInitialized = false;
 	}
 
-	// Token: 0x17001589 RID: 5513
-	// (get) Token: 0x06003EFC RID: 16124 RVA: 0x000E0284 File Offset: 0x000DE484
+	// Token: 0x17001D75 RID: 7541
+	// (get) Token: 0x06005804 RID: 22532 RVA: 0x0002FDC6 File Offset: 0x0002DFC6
 	public static SkillTreeManager Instance
 	{
 		get
@@ -46,18 +46,18 @@ public class SkillTreeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700158A RID: 5514
-	// (get) Token: 0x06003EFD RID: 16125 RVA: 0x000E02A2 File Offset: 0x000DE4A2
-	// (set) Token: 0x06003EFE RID: 16126 RVA: 0x000E02A9 File Offset: 0x000DE4A9
+	// Token: 0x17001D76 RID: 7542
+	// (get) Token: 0x06005805 RID: 22533 RVA: 0x0002FDE4 File Offset: 0x0002DFE4
+	// (set) Token: 0x06005806 RID: 22534 RVA: 0x0002FDEB File Offset: 0x0002DFEB
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06003EFF RID: 16127 RVA: 0x000E02B1 File Offset: 0x000DE4B1
+	// Token: 0x06005807 RID: 22535 RVA: 0x0002FDF3 File Offset: 0x0002DFF3
 	public static void ResetCachedTotalSkills()
 	{
 		SkillTreeManager.m_useCachedTotalSkillLevel = false;
 	}
 
-	// Token: 0x06003F00 RID: 16128 RVA: 0x000E02BC File Offset: 0x000DE4BC
+	// Token: 0x06005808 RID: 22536 RVA: 0x00150604 File Offset: 0x0014E804
 	public static int GetTotalSkillObjLevel()
 	{
 		if (!SkillTreeManager.m_useCachedTotalSkillLevel)
@@ -76,7 +76,7 @@ public class SkillTreeManager : MonoBehaviour
 		return SkillTreeManager.m_cachedTotalSkillLevel;
 	}
 
-	// Token: 0x06003F01 RID: 16129 RVA: 0x000E0308 File Offset: 0x000DE508
+	// Token: 0x06005809 RID: 22537 RVA: 0x00150650 File Offset: 0x0014E850
 	public static int GetSkillObjLevel(SkillTreeType skillTreeType)
 	{
 		SkillTreeObj skillTreeObj = SkillTreeManager.GetSkillTreeObj(skillTreeType);
@@ -87,7 +87,7 @@ public class SkillTreeManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003F02 RID: 16130 RVA: 0x000E0328 File Offset: 0x000DE528
+	// Token: 0x0600580A RID: 22538 RVA: 0x00150670 File Offset: 0x0014E870
 	public static bool SetSkillObjLevel(SkillTreeType skillTreeType, int level, bool additive, bool runEvents = true, bool ignoreMaxLevelClamping = false)
 	{
 		SkillTreeObj skillTreeObj = SkillTreeManager.GetSkillTreeObj(skillTreeType);
@@ -120,7 +120,7 @@ public class SkillTreeManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06003F03 RID: 16131 RVA: 0x000E03C0 File Offset: 0x000DE5C0
+	// Token: 0x0600580B RID: 22539 RVA: 0x00150708 File Offset: 0x0014E908
 	public static SkillTreeObj GetSkillTreeObj(SkillTreeType skillTreeType)
 	{
 		SkillTreeObj result = null;
@@ -128,18 +128,18 @@ public class SkillTreeManager : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x04002ED2 RID: 11986
+	// Token: 0x0400410B RID: 16651
 	private const string SKILLTREE_MANAGER = "SkillTreeManager";
 
-	// Token: 0x04002ED3 RID: 11987
+	// Token: 0x0400410C RID: 16652
 	private SkillLevelChangedEventArgs m_skillLevelChangedEventArgs;
 
-	// Token: 0x04002ED4 RID: 11988
+	// Token: 0x0400410D RID: 16653
 	private static SkillTreeManager m_skillTreeManager;
 
-	// Token: 0x04002ED5 RID: 11989
+	// Token: 0x0400410E RID: 16654
 	private static int m_cachedTotalSkillLevel;
 
-	// Token: 0x04002ED6 RID: 11990
+	// Token: 0x0400410F RID: 16655
 	private static bool m_useCachedTotalSkillLevel;
 }

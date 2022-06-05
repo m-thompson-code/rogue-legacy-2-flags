@@ -5,10 +5,10 @@ using SceneManagement_RL;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020002BD RID: 701
+// Token: 0x020004AD RID: 1197
 public class RerollRelicComponent : BaseSpecialPropController
 {
-	// Token: 0x06001BE5 RID: 7141 RVA: 0x00059F94 File Offset: 0x00058194
+	// Token: 0x0600269B RID: 9883 RVA: 0x000B6B88 File Offset: 0x000B4D88
 	protected override void Awake()
 	{
 		base.Awake();
@@ -17,19 +17,19 @@ public class RerollRelicComponent : BaseSpecialPropController
 		this.m_relicRoomProp.DisableSpecialPropRelay.AddListener(new Action<bool>(this.DisableProp), false);
 	}
 
-	// Token: 0x06001BE6 RID: 7142 RVA: 0x00059FED File Offset: 0x000581ED
+	// Token: 0x0600269C RID: 9884 RVA: 0x000158CE File Offset: 0x00013ACE
 	private void OnDestroy()
 	{
 		this.m_relicRoomProp.DisableSpecialPropRelay.RemoveListener(new Action<bool>(this.DisableProp));
 	}
 
-	// Token: 0x06001BE7 RID: 7143 RVA: 0x0005A00D File Offset: 0x0005820D
+	// Token: 0x0600269D RID: 9885 RVA: 0x000158EE File Offset: 0x00013AEE
 	protected override void InitializePooledPropOnEnter()
 	{
 		this.UpdateRolls();
 	}
 
-	// Token: 0x06001BE8 RID: 7144 RVA: 0x0005A015 File Offset: 0x00058215
+	// Token: 0x0600269E RID: 9886 RVA: 0x000158F6 File Offset: 0x00013AF6
 	public void RerollRelic()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -38,7 +38,7 @@ public class RerollRelicComponent : BaseSpecialPropController
 		AmbientSoundController.Instance.StopOnTransition = true;
 	}
 
-	// Token: 0x06001BE9 RID: 7145 RVA: 0x0005A046 File Offset: 0x00058246
+	// Token: 0x0600269F RID: 9887 RVA: 0x00015927 File Offset: 0x00013B27
 	private void RerollRelicTransitionOut()
 	{
 		this.m_relicRoomProp.RollRelics(1, true, true);
@@ -48,7 +48,7 @@ public class RerollRelicComponent : BaseSpecialPropController
 		RewiredMapController.SetCurrentMapEnabled(true);
 	}
 
-	// Token: 0x06001BEA RID: 7146 RVA: 0x0005A078 File Offset: 0x00058278
+	// Token: 0x060026A0 RID: 9888 RVA: 0x000B6BE4 File Offset: 0x000B4DE4
 	private void UpdateRolls()
 	{
 		int num = (int)SkillTreeManager.GetSkillTreeObj(SkillTreeType.Reroll_Relic).CurrentStatGain - (int)SaveManager.PlayerSaveData.TimesRolledRelic;
@@ -69,7 +69,7 @@ public class RerollRelicComponent : BaseSpecialPropController
 		this.m_interactable.SetIsInteractableActive(true);
 	}
 
-	// Token: 0x06001BEB RID: 7147 RVA: 0x0005A138 File Offset: 0x00058338
+	// Token: 0x060026A1 RID: 9889 RVA: 0x000B6CA4 File Offset: 0x000B4EA4
 	private void Update()
 	{
 		float y = this.m_startingY + Mathf.Sin(Time.timeSinceLevelLoad * 2f) / 8f;
@@ -78,25 +78,25 @@ public class RerollRelicComponent : BaseSpecialPropController
 		this.m_rerollIcon.transform.localPosition = localPosition;
 	}
 
-	// Token: 0x06001BEC RID: 7148 RVA: 0x0005A18D File Offset: 0x0005838D
+	// Token: 0x060026A2 RID: 9890 RVA: 0x00015956 File Offset: 0x00013B56
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 		base.DisableProp(firstTimeDisabled);
 		this.m_rerollIcon.SetActive(false);
 	}
 
-	// Token: 0x04001978 RID: 6520
+	// Token: 0x04002168 RID: 8552
 	[SerializeField]
 	private RelicRoomPropController m_relicRoomProp;
 
-	// Token: 0x04001979 RID: 6521
+	// Token: 0x04002169 RID: 8553
 	[SerializeField]
 	private GameObject m_rerollIcon;
 
-	// Token: 0x0400197A RID: 6522
+	// Token: 0x0400216A RID: 8554
 	[SerializeField]
 	private TMP_Text m_rerollText;
 
-	// Token: 0x0400197B RID: 6523
+	// Token: 0x0400216B RID: 8555
 	private float m_startingY;
 }

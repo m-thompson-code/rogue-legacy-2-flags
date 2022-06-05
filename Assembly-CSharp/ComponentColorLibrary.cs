@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000224 RID: 548
+// Token: 0x020003D9 RID: 985
 [CreateAssetMenu(menuName = "Custom/Libraries/Component Color Library")]
 public class ComponentColorLibrary : ScriptableObject
 {
-	// Token: 0x17000B21 RID: 2849
-	// (get) Token: 0x06001673 RID: 5747 RVA: 0x00046000 File Offset: 0x00044200
+	// Token: 0x17000E48 RID: 3656
+	// (get) Token: 0x06002010 RID: 8208 RVA: 0x000A43B4 File Offset: 0x000A25B4
 	private static ComponentColorLibrary Instance
 	{
 		get
@@ -32,8 +32,8 @@ public class ComponentColorLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B22 RID: 2850
-	// (get) Token: 0x06001674 RID: 5748 RVA: 0x0004606D File Offset: 0x0004426D
+	// Token: 0x17000E49 RID: 3657
+	// (get) Token: 0x06002011 RID: 8209 RVA: 0x00010FB7 File Offset: 0x0000F1B7
 	public static List<ComponentColorEntry> ComponentColorEntries
 	{
 		get
@@ -46,7 +46,7 @@ public class ComponentColorLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001675 RID: 5749 RVA: 0x0004608C File Offset: 0x0004428C
+	// Token: 0x06002012 RID: 8210 RVA: 0x000A4424 File Offset: 0x000A2624
 	public static Color GetColor(string component)
 	{
 		IEnumerable<ComponentColorEntry> source = from entry in ComponentColorLibrary.ComponentColorEntries
@@ -76,19 +76,19 @@ public class ComponentColorLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x040015AE RID: 5550
+	// Token: 0x04001CBA RID: 7354
 	[SerializeField]
 	private List<ComponentColorEntry> m_componentColorEntries;
 
-	// Token: 0x040015AF RID: 5551
+	// Token: 0x04001CBB RID: 7355
 	private static ComponentColorLibrary m_instance = null;
 
-	// Token: 0x040015B0 RID: 5552
+	// Token: 0x04001CBC RID: 7356
 	private const string RESOURCES_PATH = "Scriptable Objects/Libraries/ComponentColorLibrary";
 
-	// Token: 0x040015B1 RID: 5553
+	// Token: 0x04001CBD RID: 7357
 	public const string ASSET_PATH = "Assets/Content/Scriptable Objects/Libraries/ComponentColorLibrary.asset";
 
-	// Token: 0x040015B2 RID: 5554
+	// Token: 0x04001CBE RID: 7358
 	private static Color DEFAULT_COLOR = Color.grey;
 }

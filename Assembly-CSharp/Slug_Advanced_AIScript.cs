@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200011D RID: 285
+// Token: 0x020001E7 RID: 487
 public class Slug_Advanced_AIScript : Slug_Basic_AIScript
 {
-	// Token: 0x170004A3 RID: 1187
-	// (get) Token: 0x060008BB RID: 2235 RVA: 0x0001D1D5 File Offset: 0x0001B3D5
+	// Token: 0x17000627 RID: 1575
+	// (get) Token: 0x06000D4C RID: 3404 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override int m_verticalShot_RepeatAttackPattern
 	{
 		get

@@ -5,20 +5,20 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Token: 0x02000372 RID: 882
+// Token: 0x020005F2 RID: 1522
 public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHandler, IDeselectHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
-	// Token: 0x17000E0C RID: 3596
-	// (get) Token: 0x06002113 RID: 8467 RVA: 0x00067E7A File Offset: 0x0006607A
-	// (set) Token: 0x06002114 RID: 8468 RVA: 0x00067E82 File Offset: 0x00066082
+	// Token: 0x17001287 RID: 4743
+	// (get) Token: 0x06002EE2 RID: 12002 RVA: 0x000199DB File Offset: 0x00017BDB
+	// (set) Token: 0x06002EE3 RID: 12003 RVA: 0x000199E3 File Offset: 0x00017BE3
 	public bool DisableClick { get; set; }
 
-	// Token: 0x17000E0D RID: 3597
-	// (get) Token: 0x06002115 RID: 8469 RVA: 0x00067E8B File Offset: 0x0006608B
-	// (set) Token: 0x06002116 RID: 8470 RVA: 0x00067E93 File Offset: 0x00066093
+	// Token: 0x17001288 RID: 4744
+	// (get) Token: 0x06002EE4 RID: 12004 RVA: 0x000199EC File Offset: 0x00017BEC
+	// (set) Token: 0x06002EE5 RID: 12005 RVA: 0x000199F4 File Offset: 0x00017BF4
 	public int Index { get; private set; }
 
-	// Token: 0x06002117 RID: 8471 RVA: 0x00067E9C File Offset: 0x0006609C
+	// Token: 0x06002EE6 RID: 12006 RVA: 0x000C8D8C File Offset: 0x000C6F8C
 	public void Initialize(int index, Action<ConfirmMenu_Button> onPointerEnterAction, Action onPointerExitAction, Action<ConfirmMenu_Button> onPointerClickAction)
 	{
 		this.Index = index;
@@ -29,7 +29,7 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		this.m_storedScale = base.transform.localScale;
 	}
 
-	// Token: 0x06002118 RID: 8472 RVA: 0x00067EE8 File Offset: 0x000660E8
+	// Token: 0x06002EE7 RID: 12007 RVA: 0x000199FD File Offset: 0x00017BFD
 	public void OnPointerEnter(PointerEventData eventData)
 	{
 		if (RewiredOnStartupController.CurrentActiveControllerType == ControllerType.Joystick)
@@ -43,12 +43,12 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		}
 	}
 
-	// Token: 0x06002119 RID: 8473 RVA: 0x00067F0E File Offset: 0x0006610E
+	// Token: 0x06002EE8 RID: 12008 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void OnPointerExit(PointerEventData eventData)
 	{
 	}
 
-	// Token: 0x0600211A RID: 8474 RVA: 0x00067F10 File Offset: 0x00066110
+	// Token: 0x06002EE9 RID: 12009 RVA: 0x00019A23 File Offset: 0x00017C23
 	public void OnPointerClick(PointerEventData eventData)
 	{
 		if (RewiredOnStartupController.CurrentActiveControllerType == ControllerType.Joystick)
@@ -70,7 +70,7 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		this.ButtonPressed();
 	}
 
-	// Token: 0x0600211B RID: 8475 RVA: 0x00067F47 File Offset: 0x00066147
+	// Token: 0x06002EEA RID: 12010 RVA: 0x00019A5A File Offset: 0x00017C5A
 	public void OnSelect(BaseEventData eventData)
 	{
 		if (!this.m_selected)
@@ -81,14 +81,14 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		}
 	}
 
-	// Token: 0x0600211C RID: 8476 RVA: 0x00067F74 File Offset: 0x00066174
+	// Token: 0x06002EEB RID: 12011 RVA: 0x00019A87 File Offset: 0x00017C87
 	public void OnDeselect(BaseEventData eventData)
 	{
 		this.m_selected = false;
 		this.m_selectImageCanvasGroup.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600211D RID: 8477 RVA: 0x00067F8E File Offset: 0x0006618E
+	// Token: 0x06002EEC RID: 12012 RVA: 0x00019AA1 File Offset: 0x00017CA1
 	public void ButtonPressed()
 	{
 		this.OnDeselect(null);
@@ -96,7 +96,7 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		base.StartCoroutine(this.OnClickCoroutine());
 	}
 
-	// Token: 0x0600211E RID: 8478 RVA: 0x00067FAA File Offset: 0x000661AA
+	// Token: 0x06002EED RID: 12013 RVA: 0x00019ABD File Offset: 0x00017CBD
 	private IEnumerator OnClickCoroutine()
 	{
 		yield return null;
@@ -107,13 +107,13 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		yield break;
 	}
 
-	// Token: 0x0600211F RID: 8479 RVA: 0x00067FB9 File Offset: 0x000661B9
+	// Token: 0x06002EEE RID: 12014 RVA: 0x00019ACC File Offset: 0x00017CCC
 	public void SetOnClickAction(Action action)
 	{
 		this.m_onClickAction = action;
 	}
 
-	// Token: 0x06002120 RID: 8480 RVA: 0x00067FC2 File Offset: 0x000661C2
+	// Token: 0x06002EEF RID: 12015 RVA: 0x00019AD5 File Offset: 0x00017CD5
 	public void SetButtonText(string text, bool isLocID)
 	{
 		if (isLocID)
@@ -126,7 +126,7 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		this.m_refreshTextLocID = null;
 	}
 
-	// Token: 0x06002121 RID: 8481 RVA: 0x00067FF8 File Offset: 0x000661F8
+	// Token: 0x06002EF0 RID: 12016 RVA: 0x000C8DD8 File Offset: 0x000C6FD8
 	protected virtual void RunOnConfirmPressedAnimation()
 	{
 		Vector3 storedScale = this.m_storedScale;
@@ -142,7 +142,7 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		});
 	}
 
-	// Token: 0x06002122 RID: 8482 RVA: 0x000680BD File Offset: 0x000662BD
+	// Token: 0x06002EF1 RID: 12017 RVA: 0x00019B08 File Offset: 0x00017D08
 	private void Update()
 	{
 		if (this.m_selected)
@@ -151,7 +151,7 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		}
 	}
 
-	// Token: 0x06002123 RID: 8483 RVA: 0x000680F0 File Offset: 0x000662F0
+	// Token: 0x06002EF2 RID: 12018 RVA: 0x000C8EA0 File Offset: 0x000C70A0
 	public void ResetValues()
 	{
 		this.m_selectImageCanvasGroup.gameObject.SetActive(false);
@@ -165,7 +165,7 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		}
 	}
 
-	// Token: 0x06002124 RID: 8484 RVA: 0x0006815B File Offset: 0x0006635B
+	// Token: 0x06002EF3 RID: 12019 RVA: 0x00019B39 File Offset: 0x00017D39
 	public void ForceRefreshText()
 	{
 		if (!string.IsNullOrEmpty(this.m_refreshTextLocID))
@@ -174,35 +174,35 @@ public class ConfirmMenu_Button : MonoBehaviour, ISelectHandler, IEventSystemHan
 		}
 	}
 
-	// Token: 0x04001C9A RID: 7322
+	// Token: 0x04002652 RID: 9810
 	[SerializeField]
 	private TMP_Text m_text;
 
-	// Token: 0x04001C9B RID: 7323
+	// Token: 0x04002653 RID: 9811
 	[SerializeField]
 	private CanvasGroup m_selectImageCanvasGroup;
 
-	// Token: 0x04001C9C RID: 7324
+	// Token: 0x04002654 RID: 9812
 	private Action m_onClickAction;
 
-	// Token: 0x04001C9D RID: 7325
+	// Token: 0x04002655 RID: 9813
 	private Action m_onPointerExitAction;
 
-	// Token: 0x04001C9E RID: 7326
+	// Token: 0x04002656 RID: 9814
 	private Action<ConfirmMenu_Button> m_onPointerEnterAction;
 
-	// Token: 0x04001C9F RID: 7327
+	// Token: 0x04002657 RID: 9815
 	private Action<ConfirmMenu_Button> m_onPointerClickAction;
 
-	// Token: 0x04001CA0 RID: 7328
+	// Token: 0x04002658 RID: 9816
 	private Vector3 m_storedScale;
 
-	// Token: 0x04001CA1 RID: 7329
+	// Token: 0x04002659 RID: 9817
 	private bool m_selected;
 
-	// Token: 0x04001CA2 RID: 7330
+	// Token: 0x0400265A RID: 9818
 	private float m_selectStartTime;
 
-	// Token: 0x04001CA3 RID: 7331
+	// Token: 0x0400265B RID: 9819
 	private string m_refreshTextLocID;
 }

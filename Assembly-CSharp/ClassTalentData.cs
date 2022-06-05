@@ -1,24 +1,24 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006CC RID: 1740
+// Token: 0x02000B77 RID: 2935
 public class ClassTalentData : ScriptableObject
 {
-	// Token: 0x04002FAA RID: 12202
+	// Token: 0x040041F9 RID: 16889
 	public string ClassName;
 
-	// Token: 0x04002FAB RID: 12203
+	// Token: 0x040041FA RID: 16890
 	public AbilityType[] TalentAbilityArray;
 
-	// Token: 0x04002FAC RID: 12204
+	// Token: 0x040041FB RID: 16891
 	[Space]
 	[Header("Text Fields")]
 	[Space]
 	public string Title;
 
-	// Token: 0x04002FAD RID: 12205
+	// Token: 0x040041FC RID: 16892
 	public string Controls;
 
-	// Token: 0x04002FAE RID: 12206
+	// Token: 0x040041FD RID: 16893
 	public string Description;
 }

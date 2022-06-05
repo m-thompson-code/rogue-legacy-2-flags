@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002FF RID: 767
+// Token: 0x0200051E RID: 1310
 public class EnemyExplodeStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D3F RID: 3391
-	// (get) Token: 0x06001E82 RID: 7810 RVA: 0x00062F2E File Offset: 0x0006112E
+	// Token: 0x17001118 RID: 4376
+	// (get) Token: 0x06002A3F RID: 10815 RVA: 0x00017A40 File Offset: 0x00015C40
 	public override string[] ProjectileNameArray
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyExplodeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D40 RID: 3392
-	// (get) Token: 0x06001E83 RID: 7811 RVA: 0x00062F35 File Offset: 0x00061135
+	// Token: 0x17001119 RID: 4377
+	// (get) Token: 0x06002A40 RID: 10816 RVA: 0x00017A47 File Offset: 0x00015C47
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -25,8 +25,8 @@ public class EnemyExplodeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D41 RID: 3393
-	// (get) Token: 0x06001E84 RID: 7812 RVA: 0x00062F3C File Offset: 0x0006113C
+	// Token: 0x1700111A RID: 4378
+	// (get) Token: 0x06002A41 RID: 10817 RVA: 0x00017838 File Offset: 0x00015A38
 	public override float StartingDurationOverride
 	{
 		get
@@ -35,14 +35,14 @@ public class EnemyExplodeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E85 RID: 7813 RVA: 0x00062F43 File Offset: 0x00061143
+	// Token: 0x06002A42 RID: 10818 RVA: 0x00017A4E File Offset: 0x00015C4E
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onEnemyHit = new Action<object, CharacterHitEventArgs>(this.OnEnemyHit);
 	}
 
-	// Token: 0x06001E86 RID: 7814 RVA: 0x00062F5D File Offset: 0x0006115D
+	// Token: 0x06002A43 RID: 10819 RVA: 0x00017A68 File Offset: 0x00015C68
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_explodeCooldownTimer = 0f;
@@ -56,7 +56,7 @@ public class EnemyExplodeStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001E87 RID: 7815 RVA: 0x00062F6C File Offset: 0x0006116C
+	// Token: 0x06002A44 RID: 10820 RVA: 0x00017A77 File Offset: 0x00015C77
 	private void OnEnemyHit(object sender, CharacterHitEventArgs args)
 	{
 		if (!this.m_isExploding && this.m_explodeCooldownTimer < Time.time)
@@ -65,7 +65,7 @@ public class EnemyExplodeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E88 RID: 7816 RVA: 0x00062F95 File Offset: 0x00061195
+	// Token: 0x06002A45 RID: 10821 RVA: 0x00017AA0 File Offset: 0x00015CA0
 	private IEnumerator ExplodeCoroutine()
 	{
 		this.m_isExploding = true;
@@ -91,7 +91,7 @@ public class EnemyExplodeStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001E89 RID: 7817 RVA: 0x00062FA4 File Offset: 0x000611A4
+	// Token: 0x06002A46 RID: 10822 RVA: 0x000C1484 File Offset: 0x000BF684
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -107,7 +107,7 @@ public class EnemyExplodeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E8A RID: 7818 RVA: 0x0006302D File Offset: 0x0006122D
+	// Token: 0x06002A47 RID: 10823 RVA: 0x00017AAF File Offset: 0x00015CAF
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -117,28 +117,28 @@ public class EnemyExplodeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x04001BB8 RID: 7096
+	// Token: 0x0400244D RID: 9293
 	private static string[] m_projectileNameArray = new string[]
 	{
 		"StatusEffectExplosionProjectile",
 		"StatusEffectExplosionWarningProjectile"
 	};
 
-	// Token: 0x04001BB9 RID: 7097
+	// Token: 0x0400244E RID: 9294
 	private float m_explodeCooldownTimer;
 
-	// Token: 0x04001BBA RID: 7098
+	// Token: 0x0400244F RID: 9295
 	private bool m_warningExploded;
 
-	// Token: 0x04001BBB RID: 7099
+	// Token: 0x04002450 RID: 9296
 	private bool m_isExploding;
 
-	// Token: 0x04001BBC RID: 7100
+	// Token: 0x04002451 RID: 9297
 	private Projectile_RL m_warningProjectile;
 
-	// Token: 0x04001BBD RID: 7101
+	// Token: 0x04002452 RID: 9298
 	private Coroutine m_explodeCoroutine;
 
-	// Token: 0x04001BBE RID: 7102
+	// Token: 0x04002453 RID: 9299
 	private Action<object, CharacterHitEventArgs> m_onEnemyHit;
 }

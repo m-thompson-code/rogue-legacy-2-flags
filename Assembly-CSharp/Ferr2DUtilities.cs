@@ -4,17 +4,17 @@ using ClipperLibFerr;
 using Ferr;
 using UnityEngine;
 
-// Token: 0x020007FA RID: 2042
+// Token: 0x02000CC0 RID: 3264
 public static class Ferr2DUtilities
 {
-	// Token: 0x060043D2 RID: 17362 RVA: 0x000EE84F File Offset: 0x000ECA4F
+	// Token: 0x06005D5B RID: 23899 RVA: 0x00033623 File Offset: 0x00031823
 	public static void ChangeMaterial(Ferr2DT_PathTerrain obj1, Ferr2DT_PathTerrain obj2)
 	{
 		obj1.SetMaterial(obj2.TerrainMaterial);
 		obj1.Build(true);
 	}
 
-	// Token: 0x060043D3 RID: 17363 RVA: 0x000EE864 File Offset: 0x000ECA64
+	// Token: 0x06005D5C RID: 23900 RVA: 0x0015C660 File Offset: 0x0015A860
 	public static List<GameObject> Boolean(ClipType clipType, Ferr2DT_PathTerrain subject, List<Ferr2DT_PathTerrain> clipList, bool roundToInt = true)
 	{
 		Ferr2DUtilities.m_subjIPList.Clear();
@@ -180,7 +180,7 @@ public static class Ferr2DUtilities
 		return Ferr2DUtilities.m_newObjList;
 	}
 
-	// Token: 0x060043D4 RID: 17364 RVA: 0x000EF0E0 File Offset: 0x000ED2E0
+	// Token: 0x06005D5D RID: 23901 RVA: 0x0015CEDC File Offset: 0x0015B0DC
 	public static List<GameObject> EasyBoolean(ClipType clipType, List<Ferr2DT_PathTerrain> objsToCollide, Ferr2DUtilities.Ferr2DUndoType undoType, bool roundToInt = true)
 	{
 		Ferr2DUtilities.m_boolNewObjList.Clear();
@@ -289,7 +289,7 @@ public static class Ferr2DUtilities
 		return Ferr2DUtilities.m_boolNewObjList;
 	}
 
-	// Token: 0x060043D5 RID: 17365 RVA: 0x000EF444 File Offset: 0x000ED644
+	// Token: 0x06005D5E RID: 23902 RVA: 0x0015D240 File Offset: 0x0015B440
 	public static List<GameObject> FastEasyBoolean(ClipType clipType, List<Ferr2DT_PathTerrain> clipList, Ferr2DUtilities.Ferr2DUndoType undoType, bool roundToInt = true)
 	{
 		if (clipList != null && clipList.Count > 0)
@@ -300,7 +300,7 @@ public static class Ferr2DUtilities
 		throw new ArgumentNullException("<color=red>[Ferr2DUtilities] FastEasyBoolean was passed an emtpy clipList</color>");
 	}
 
-	// Token: 0x060043D6 RID: 17366 RVA: 0x000EF47C File Offset: 0x000ED67C
+	// Token: 0x06005D5F RID: 23903 RVA: 0x0015D278 File Offset: 0x0015B478
 	public static List<GameObject> FastEasyBoolean(ClipType clipType, Ferr2DT_PathTerrain subjectTerrain, List<Ferr2DT_PathTerrain> clipList, Ferr2DUtilities.Ferr2DUndoType undoType, bool roundToInt = true)
 	{
 		if (clipList == null)
@@ -392,7 +392,7 @@ public static class Ferr2DUtilities
 		return Ferr2DUtilities.m_boolNewObjList;
 	}
 
-	// Token: 0x060043D7 RID: 17367 RVA: 0x000EF678 File Offset: 0x000ED878
+	// Token: 0x06005D60 RID: 23904 RVA: 0x0015D474 File Offset: 0x0015B674
 	private static void DaisyChainOverlapColliderRecursionLoop(Collider2D subject, List<Collider2D> listToModify, ContactFilter2D contactFilter)
 	{
 		Collider2D[] array = new Collider2D[10];
@@ -407,7 +407,7 @@ public static class Ferr2DUtilities
 		}
 	}
 
-	// Token: 0x060043D8 RID: 17368 RVA: 0x000EF6CC File Offset: 0x000ED8CC
+	// Token: 0x06005D61 RID: 23905 RVA: 0x0015D4C8 File Offset: 0x0015B6C8
 	public static bool RecentreFerr2DTerrain(Ferr2DT_PathTerrain terrain, bool rebuild, bool roundToInt = true)
 	{
 		if (terrain == null)
@@ -464,7 +464,7 @@ public static class Ferr2DUtilities
 		return flag;
 	}
 
-	// Token: 0x060043D9 RID: 17369 RVA: 0x000EF868 File Offset: 0x000EDA68
+	// Token: 0x06005D62 RID: 23906 RVA: 0x0015D664 File Offset: 0x0015B864
 	public static void Flip(Ferr2DT_PathTerrain terrain, bool flipHorizontally, bool flipVertically, bool recentre = true)
 	{
 		if (!flipHorizontally && !flipVertically)
@@ -517,69 +517,69 @@ public static class Ferr2DUtilities
 		terrain.RecreateCollider();
 	}
 
-	// Token: 0x040039FF RID: 14847
+	// Token: 0x04004CC4 RID: 19652
 	private static List<IntPoint> m_subjIPList = new List<IntPoint>();
 
-	// Token: 0x04003A00 RID: 14848
+	// Token: 0x04004CC5 RID: 19653
 	private static List<IntPoint> m_clipIPList = new List<IntPoint>();
 
-	// Token: 0x04003A01 RID: 14849
+	// Token: 0x04004CC6 RID: 19654
 	private static List<Ferr2DUtilities.CDGFerr2D_EdgeData> m_edgeDataList = new List<Ferr2DUtilities.CDGFerr2D_EdgeData>();
 
-	// Token: 0x04003A02 RID: 14850
+	// Token: 0x04004CC7 RID: 19655
 	private static Clipper m_clipper = new Clipper(0);
 
-	// Token: 0x04003A03 RID: 14851
+	// Token: 0x04004CC8 RID: 19656
 	private static ClipperOffset m_clipperOffset = new ClipperOffset(2.0, 0.25);
 
-	// Token: 0x04003A04 RID: 14852
+	// Token: 0x04004CC9 RID: 19657
 	private static List<List<IntPoint>> m_ipResultList = new List<List<IntPoint>>();
 
-	// Token: 0x04003A05 RID: 14853
+	// Token: 0x04004CCA RID: 19658
 	private static List<Collider2D> m_daisyChainedColliderList = new List<Collider2D>();
 
-	// Token: 0x04003A06 RID: 14854
+	// Token: 0x04004CCB RID: 19659
 	private static List<Ferr2DT_PathTerrain> m_terrainCollList = new List<Ferr2DT_PathTerrain>();
 
-	// Token: 0x04003A07 RID: 14855
+	// Token: 0x04004CCC RID: 19660
 	private static ContactFilter2D m_colliderFilter = default(ContactFilter2D);
 
-	// Token: 0x04003A08 RID: 14856
+	// Token: 0x04004CCD RID: 19661
 	private static List<GameObject> m_boolNewObjList = new List<GameObject>();
 
-	// Token: 0x04003A09 RID: 14857
+	// Token: 0x04004CCE RID: 19662
 	private static List<GameObject> m_newObjList = new List<GameObject>();
 
-	// Token: 0x04003A0A RID: 14858
+	// Token: 0x04004CCF RID: 19663
 	private static List<Vector2> m_pointList = new List<Vector2>(10);
 
-	// Token: 0x04003A0B RID: 14859
+	// Token: 0x04004CD0 RID: 19664
 	private static List<Vector2> m_invertedPointList = new List<Vector2>(10);
 
-	// Token: 0x04003A0C RID: 14860
+	// Token: 0x04004CD1 RID: 19665
 	private static List<Ferr2D_PointData> m_pointDataList = new List<Ferr2D_PointData>(10);
 
-	// Token: 0x02000E38 RID: 3640
+	// Token: 0x02000CC1 RID: 3265
 	public struct CDGFerr2D_EdgeData
 	{
-		// Token: 0x0400573B RID: 22331
+		// Token: 0x04004CD2 RID: 19666
 		public Ferr2D_PointData pointData;
 
-		// Token: 0x0400573C RID: 22332
+		// Token: 0x04004CD3 RID: 19667
 		public IntPoint leftPoint;
 
-		// Token: 0x0400573D RID: 22333
+		// Token: 0x04004CD4 RID: 19668
 		public IntPoint rightPoint;
 	}
 
-	// Token: 0x02000E39 RID: 3641
+	// Token: 0x02000CC2 RID: 3266
 	public enum Ferr2DUndoType
 	{
-		// Token: 0x0400573F RID: 22335
+		// Token: 0x04004CD6 RID: 19670
 		None,
-		// Token: 0x04005740 RID: 22336
+		// Token: 0x04004CD7 RID: 19671
 		Destroy,
-		// Token: 0x04005741 RID: 22337
+		// Token: 0x04004CD8 RID: 19672
 		DestroyImmediate
 	}
 }

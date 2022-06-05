@@ -1,41 +1,41 @@
 ﻿using System;
 using Sigtrap.Relays;
 
-// Token: 0x0200059C RID: 1436
+// Token: 0x020009A4 RID: 2468
 public interface IHealth
 {
-	// Token: 0x170012EF RID: 4847
-	// (get) Token: 0x060035FB RID: 13819
+	// Token: 0x17001A1C RID: 6684
+	// (get) Token: 0x06004C0D RID: 19469
 	int CurrentHealthAsInt { get; }
 
-	// Token: 0x170012F0 RID: 4848
-	// (get) Token: 0x060035FC RID: 13820
+	// Token: 0x17001A1D RID: 6685
+	// (get) Token: 0x06004C0E RID: 19470
 	float CurrentHealth { get; }
 
-	// Token: 0x060035FD RID: 13821
+	// Token: 0x06004C0F RID: 19471
 	void SetHealth(float amount, bool additive, bool runEvents);
 
-	// Token: 0x170012F1 RID: 4849
-	// (get) Token: 0x060035FE RID: 13822
+	// Token: 0x17001A1E RID: 6686
+	// (get) Token: 0x06004C10 RID: 19472
 	int BaseMaxHealth { get; }
 
-	// Token: 0x170012F2 RID: 4850
-	// (get) Token: 0x060035FF RID: 13823
+	// Token: 0x17001A1F RID: 6687
+	// (get) Token: 0x06004C11 RID: 19473
 	int ActualMaxHealth { get; }
 
-	// Token: 0x170012F3 RID: 4851
-	// (get) Token: 0x06003600 RID: 13824
+	// Token: 0x17001A20 RID: 6688
+	// (get) Token: 0x06004C12 RID: 19474
 	float MaxHealthMod { get; }
 
-	// Token: 0x170012F4 RID: 4852
-	// (get) Token: 0x06003601 RID: 13825
+	// Token: 0x17001A21 RID: 6689
+	// (get) Token: 0x06004C13 RID: 19475
 	int MaxHealthAdd { get; }
 
-	// Token: 0x170012F5 RID: 4853
-	// (get) Token: 0x06003602 RID: 13826
+	// Token: 0x17001A22 RID: 6690
+	// (get) Token: 0x06004C14 RID: 19476
 	IRelayLink<object, HealthChangeEventArgs> HealthChangeRelay { get; }
 
-	// Token: 0x170012F6 RID: 4854
-	// (get) Token: 0x06003603 RID: 13827
+	// Token: 0x17001A23 RID: 6691
+	// (get) Token: 0x06004C15 RID: 19477
 	IRelayLink<object, HealthChangeEventArgs> MaxHealthChangeRelay { get; }
 }

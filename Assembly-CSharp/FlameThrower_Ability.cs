@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000173 RID: 371
+// Token: 0x020002AD RID: 685
 public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 {
-	// Token: 0x170006F3 RID: 1779
-	// (get) Token: 0x06000CEA RID: 3306 RVA: 0x00027984 File Offset: 0x00025B84
+	// Token: 0x17000955 RID: 2389
+	// (get) Token: 0x06001415 RID: 5141 RVA: 0x0000A305 File Offset: 0x00008505
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -15,8 +15,8 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006F4 RID: 1780
-	// (get) Token: 0x06000CEB RID: 3307 RVA: 0x0002798B File Offset: 0x00025B8B
+	// Token: 0x17000956 RID: 2390
+	// (get) Token: 0x06001416 RID: 5142 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -25,8 +25,8 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006F5 RID: 1781
-	// (get) Token: 0x06000CEC RID: 3308 RVA: 0x00027992 File Offset: 0x00025B92
+	// Token: 0x17000957 RID: 2391
+	// (get) Token: 0x06001417 RID: 5143 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float TellAnimSpeed
 	{
 		get
@@ -35,8 +35,8 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006F6 RID: 1782
-	// (get) Token: 0x06000CED RID: 3309 RVA: 0x00027999 File Offset: 0x00025B99
+	// Token: 0x17000958 RID: 2392
+	// (get) Token: 0x06001418 RID: 5144 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -45,8 +45,8 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006F7 RID: 1783
-	// (get) Token: 0x06000CEE RID: 3310 RVA: 0x000279A0 File Offset: 0x00025BA0
+	// Token: 0x17000959 RID: 2393
+	// (get) Token: 0x06001419 RID: 5145 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -55,8 +55,8 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006F8 RID: 1784
-	// (get) Token: 0x06000CEF RID: 3311 RVA: 0x000279A7 File Offset: 0x00025BA7
+	// Token: 0x1700095A RID: 2394
+	// (get) Token: 0x0600141A RID: 5146 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -65,8 +65,8 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006F9 RID: 1785
-	// (get) Token: 0x06000CF0 RID: 3312 RVA: 0x000279AE File Offset: 0x00025BAE
+	// Token: 0x1700095B RID: 2395
+	// (get) Token: 0x0600141B RID: 5147 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -75,8 +75,8 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006FA RID: 1786
-	// (get) Token: 0x06000CF1 RID: 3313 RVA: 0x000279B5 File Offset: 0x00025BB5
+	// Token: 0x1700095C RID: 2396
+	// (get) Token: 0x0600141C RID: 5148 RVA: 0x00003D8C File Offset: 0x00001F8C
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -85,8 +85,8 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006FB RID: 1787
-	// (get) Token: 0x06000CF2 RID: 3314 RVA: 0x000279BC File Offset: 0x00025BBC
+	// Token: 0x1700095D RID: 2397
+	// (get) Token: 0x0600141D RID: 5149 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -95,8 +95,8 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006FC RID: 1788
-	// (get) Token: 0x06000CF3 RID: 3315 RVA: 0x000279C3 File Offset: 0x00025BC3
+	// Token: 0x1700095E RID: 2398
+	// (get) Token: 0x0600141E RID: 5150 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -105,7 +105,7 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x06000CF4 RID: 3316 RVA: 0x000279CA File Offset: 0x00025BCA
+	// Token: 0x0600141F RID: 5151 RVA: 0x0000A30C File Offset: 0x0000850C
 	public override void PreCastAbility()
 	{
 		if (this.m_isCasting && this.m_frameStopped != Time.frameCount)
@@ -118,7 +118,7 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000CF5 RID: 3317 RVA: 0x00027A01 File Offset: 0x00025C01
+	// Token: 0x06001420 RID: 5152 RVA: 0x0000A343 File Offset: 0x00008543
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		while (duration > 0f)
@@ -145,20 +145,20 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000CF6 RID: 3318 RVA: 0x00027A17 File Offset: 0x00025C17
+	// Token: 0x06001421 RID: 5153 RVA: 0x0000A359 File Offset: 0x00008559
 	protected override void OnEnterAttackLogic()
 	{
 		this.FireProjectile();
 	}
 
-	// Token: 0x06000CF7 RID: 3319 RVA: 0x00027A1F File Offset: 0x00025C1F
+	// Token: 0x06001422 RID: 5154 RVA: 0x0000A361 File Offset: 0x00008561
 	protected override void ApplyAbilityCosts()
 	{
 		this.m_abilityController.BroadcastAbilityCastEvents(base.CastAbilityType);
 		base.ApplyAbilityCosts();
 	}
 
-	// Token: 0x06000CF8 RID: 3320 RVA: 0x00027A38 File Offset: 0x00025C38
+	// Token: 0x06001423 RID: 5155 RVA: 0x0000A37A File Offset: 0x0000857A
 	protected override void OnExitAttackLogic()
 	{
 		this.m_firedProjectile.transform.SetParent(null, true);
@@ -166,7 +166,7 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		base.OnExitAttackLogic();
 	}
 
-	// Token: 0x06000CF9 RID: 3321 RVA: 0x00027A58 File Offset: 0x00025C58
+	// Token: 0x06001424 RID: 5156 RVA: 0x0000A39A File Offset: 0x0000859A
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_firedProjectile)
@@ -179,7 +179,7 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x06000CFA RID: 3322 RVA: 0x00027A94 File Offset: 0x00025C94
+	// Token: 0x06001425 RID: 5157 RVA: 0x00086940 File Offset: 0x00084B40
 	protected override void Update()
 	{
 		if (this.m_isCasting && this.m_frameStarted != Time.frameCount && Rewired_RL.Player.GetButtonDown(this.m_abilityController.GetAbilityInputString(base.CastAbilityType)))
@@ -189,7 +189,7 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		base.Update();
 	}
 
-	// Token: 0x06000CFB RID: 3323 RVA: 0x00027AE0 File Offset: 0x00025CE0
+	// Token: 0x06001426 RID: 5158 RVA: 0x0000A3D5 File Offset: 0x000085D5
 	private IEnumerator StopProjectileParticleSystem(Projectile_RL projectile)
 	{
 		ParticleSystem partSys = projectile.GetComponentInChildren<ParticleSystem>();
@@ -209,12 +209,12 @@ public class FlameThrower_Ability : BaseAbility_RL, ISpell, IAbility
 		yield break;
 	}
 
-	// Token: 0x040010B7 RID: 4279
+	// Token: 0x040015F9 RID: 5625
 	private bool m_isCasting;
 
-	// Token: 0x040010B8 RID: 4280
+	// Token: 0x040015FA RID: 5626
 	private int m_frameStopped;
 
-	// Token: 0x040010B9 RID: 4281
+	// Token: 0x040015FB RID: 5627
 	private int m_frameStarted;
 }

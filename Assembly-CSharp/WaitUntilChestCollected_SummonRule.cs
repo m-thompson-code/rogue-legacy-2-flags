@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000535 RID: 1333
+// Token: 0x020008C5 RID: 2245
 public class WaitUntilChestCollected_SummonRule : BaseSummonRule
 {
-	// Token: 0x1700121B RID: 4635
-	// (get) Token: 0x06003101 RID: 12545 RVA: 0x000A6709 File Offset: 0x000A4909
+	// Token: 0x17001862 RID: 6242
+	// (get) Token: 0x0600445B RID: 17499 RVA: 0x00025AB4 File Offset: 0x00023CB4
 	public override SummonRuleType RuleType
 	{
 		get
@@ -15,8 +15,8 @@ public class WaitUntilChestCollected_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x1700121C RID: 4636
-	// (get) Token: 0x06003102 RID: 12546 RVA: 0x000A6710 File Offset: 0x000A4910
+	// Token: 0x17001863 RID: 6243
+	// (get) Token: 0x0600445C RID: 17500 RVA: 0x00025ABB File Offset: 0x00023CBB
 	public override string RuleLabel
 	{
 		get
@@ -25,7 +25,7 @@ public class WaitUntilChestCollected_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x06003103 RID: 12547 RVA: 0x000A6717 File Offset: 0x000A4917
+	// Token: 0x0600445D RID: 17501 RVA: 0x00025AC2 File Offset: 0x00023CC2
 	public override IEnumerator RunSummonRule()
 	{
 		ChestSpawnController chestSpawner = (base.SerializedObject != null) ? (base.SerializedObject as ChestSpawnController) : null;

@@ -1,36 +1,36 @@
 ﻿using System;
 
-// Token: 0x0200076F RID: 1903
+// Token: 0x02000C30 RID: 3120
 public enum ShaderID
 {
-	// Token: 0x04003692 RID: 13970
+	// Token: 0x04004942 RID: 18754
 	None,
-	// Token: 0x04003693 RID: 13971
+	// Token: 0x04004943 RID: 18755
 	AlphaBlendColor,
-	// Token: 0x04003694 RID: 13972
+	// Token: 0x04004944 RID: 18756
 	RimLightColor,
-	// Token: 0x04003695 RID: 13973
+	// Token: 0x04004945 RID: 18757
 	MultiplyColor,
-	// Token: 0x04003696 RID: 13974
+	// Token: 0x04004946 RID: 18758
 	AddColor,
-	// Token: 0x04003697 RID: 13975
+	// Token: 0x04004947 RID: 18759
 	MainColor,
-	// Token: 0x04003698 RID: 13976
+	// Token: 0x04004948 RID: 18760
 	ShieldToggle,
-	// Token: 0x04003699 RID: 13977
+	// Token: 0x04004949 RID: 18761
 	Dissolve,
-	// Token: 0x0400369A RID: 13978
+	// Token: 0x0400494A RID: 18762
 	Opacity,
-	// Token: 0x0400369B RID: 13979
+	// Token: 0x0400494B RID: 18763
 	RimBias,
-	// Token: 0x0400369C RID: 13980
+	// Token: 0x0400494C RID: 18764
 	RimScale,
-	// Token: 0x0400369D RID: 13981
+	// Token: 0x0400494D RID: 18765
 	ArmorColor,
-	// Token: 0x0400369E RID: 13982
+	// Token: 0x0400494E RID: 18766
 	CapeColor,
-	// Token: 0x0400369F RID: 13983
+	// Token: 0x0400494F RID: 18767
 	HelmetColor,
-	// Token: 0x040036A0 RID: 13984
+	// Token: 0x04004950 RID: 18768
 	OutlineScale
 }

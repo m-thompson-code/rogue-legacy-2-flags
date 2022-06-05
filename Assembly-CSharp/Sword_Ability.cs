@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001AA RID: 426
+// Token: 0x02000316 RID: 790
 public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 {
-	// Token: 0x1700096B RID: 2411
-	// (get) Token: 0x060010DC RID: 4316 RVA: 0x00030AF6 File Offset: 0x0002ECF6
+	// Token: 0x17000C27 RID: 3111
+	// (get) Token: 0x06001917 RID: 6423 RVA: 0x00004A6C File Offset: 0x00002C6C
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -14,8 +14,8 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700096C RID: 2412
-	// (get) Token: 0x060010DD RID: 4317 RVA: 0x00030AFD File Offset: 0x0002ECFD
+	// Token: 0x17000C28 RID: 3112
+	// (get) Token: 0x06001918 RID: 6424 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -24,8 +24,8 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700096D RID: 2413
-	// (get) Token: 0x060010DE RID: 4318 RVA: 0x00030B04 File Offset: 0x0002ED04
+	// Token: 0x17000C29 RID: 3113
+	// (get) Token: 0x06001919 RID: 6425 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float TellAnimSpeed
 	{
 		get
@@ -34,8 +34,8 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700096E RID: 2414
-	// (get) Token: 0x060010DF RID: 4319 RVA: 0x00030B0B File Offset: 0x0002ED0B
+	// Token: 0x17000C2A RID: 3114
+	// (get) Token: 0x0600191A RID: 6426 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -44,8 +44,8 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700096F RID: 2415
-	// (get) Token: 0x060010E0 RID: 4320 RVA: 0x00030B12 File Offset: 0x0002ED12
+	// Token: 0x17000C2B RID: 3115
+	// (get) Token: 0x0600191B RID: 6427 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -54,8 +54,8 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000970 RID: 2416
-	// (get) Token: 0x060010E1 RID: 4321 RVA: 0x00030B19 File Offset: 0x0002ED19
+	// Token: 0x17000C2C RID: 3116
+	// (get) Token: 0x0600191C RID: 6428 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -64,8 +64,8 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000971 RID: 2417
-	// (get) Token: 0x060010E2 RID: 4322 RVA: 0x00030B20 File Offset: 0x0002ED20
+	// Token: 0x17000C2D RID: 3117
+	// (get) Token: 0x0600191D RID: 6429 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -74,8 +74,8 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000972 RID: 2418
-	// (get) Token: 0x060010E3 RID: 4323 RVA: 0x00030B27 File Offset: 0x0002ED27
+	// Token: 0x17000C2E RID: 3118
+	// (get) Token: 0x0600191E RID: 6430 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -84,8 +84,8 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000973 RID: 2419
-	// (get) Token: 0x060010E4 RID: 4324 RVA: 0x00030B2E File Offset: 0x0002ED2E
+	// Token: 0x17000C2F RID: 3119
+	// (get) Token: 0x0600191F RID: 6431 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -94,8 +94,8 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000974 RID: 2420
-	// (get) Token: 0x060010E5 RID: 4325 RVA: 0x00030B35 File Offset: 0x0002ED35
+	// Token: 0x17000C30 RID: 3120
+	// (get) Token: 0x06001920 RID: 6432 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -104,7 +104,7 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x060010E6 RID: 4326 RVA: 0x00030B3C File Offset: 0x0002ED3C
+	// Token: 0x06001921 RID: 6433 RVA: 0x0000CA20 File Offset: 0x0000AC20
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -114,7 +114,7 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		};
 	}
 
-	// Token: 0x060010E7 RID: 4327 RVA: 0x00030B5C File Offset: 0x0002ED5C
+	// Token: 0x06001922 RID: 6434 RVA: 0x0008F0C0 File Offset: 0x0008D2C0
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -125,7 +125,7 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x060010E8 RID: 4328 RVA: 0x00030BB8 File Offset: 0x0002EDB8
+	// Token: 0x06001923 RID: 6435 RVA: 0x0008F11C File Offset: 0x0008D31C
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_firedProjectile != null)
@@ -141,13 +141,13 @@ public class Sword_Ability : BaseAbility_RL, IAttack, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x040011ED RID: 4589
+	// Token: 0x040017EE RID: 6126
 	protected const string BREAKABLES_PROJECTILE_NAME = "SwordWeaponBreakablesProjectile";
 
-	// Token: 0x040011EE RID: 4590
+	// Token: 0x040017EF RID: 6127
 	[SerializeField]
 	private bool m_spawnBreakablesProjectile;
 
-	// Token: 0x040011EF RID: 4591
+	// Token: 0x040017F0 RID: 6128
 	private Projectile_RL m_breakablesProjectile;
 }

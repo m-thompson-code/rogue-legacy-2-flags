@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x02000709 RID: 1801
+// Token: 0x02000BBC RID: 3004
 public enum BossID
 {
-	// Token: 0x040032CA RID: 13002
+	// Token: 0x04004545 RID: 17733
 	None,
-	// Token: 0x040032CB RID: 13003
+	// Token: 0x04004546 RID: 17734
 	Castle_Boss = 10,
-	// Token: 0x040032CC RID: 13004
+	// Token: 0x04004547 RID: 17735
 	Bridge_Boss = 20,
-	// Token: 0x040032CD RID: 13005
+	// Token: 0x04004548 RID: 17736
 	Forest_Boss = 30,
-	// Token: 0x040032CE RID: 13006
+	// Token: 0x04004549 RID: 17737
 	Study_Boss = 40,
-	// Token: 0x040032CF RID: 13007
+	// Token: 0x0400454A RID: 17738
 	Tower_Boss = 50,
-	// Token: 0x040032D0 RID: 13008
+	// Token: 0x0400454B RID: 17739
 	Cave_Boss = 60,
-	// Token: 0x040032D1 RID: 13009
+	// Token: 0x0400454C RID: 17740
 	Garden_Boss = 65,
-	// Token: 0x040032D2 RID: 13010
+	// Token: 0x0400454D RID: 17741
 	Final_Boss = 70
 }

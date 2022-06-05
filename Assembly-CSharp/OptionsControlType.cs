@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000759 RID: 1881
+// Token: 0x02000C17 RID: 3095
 public enum OptionsControlType
 {
-	// Token: 0x04003585 RID: 13701
+	// Token: 0x04004801 RID: 18433
 	ExecuteImmediate,
-	// Token: 0x04003586 RID: 13702
+	// Token: 0x04004802 RID: 18434
 	IncrementDecrement,
-	// Token: 0x04003587 RID: 13703
+	// Token: 0x04004803 RID: 18435
 	SelectionList
 }

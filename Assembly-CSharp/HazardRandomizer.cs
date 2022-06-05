@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000617 RID: 1559
+// Token: 0x02000A39 RID: 2617
 public static class HazardRandomizer
 {
-	// Token: 0x0600384C RID: 14412 RVA: 0x000C0434 File Offset: 0x000BE634
+	// Token: 0x06004EE9 RID: 20201 RVA: 0x0012E7F0 File Offset: 0x0012C9F0
 	private static HazardType GetRandomHazardType(HazardCategory category)
 	{
 		HazardType result = HazardType.None;
@@ -35,7 +35,7 @@ public static class HazardRandomizer
 		return result;
 	}
 
-	// Token: 0x0600384D RID: 14413 RVA: 0x000C0540 File Offset: 0x000BE740
+	// Token: 0x06004EEA RID: 20202 RVA: 0x0012E8FC File Offset: 0x0012CAFC
 	public static void RandomizeHazards(IEnumerable<IHazardSpawnController> spawnControllers)
 	{
 		IEnumerable<IHazardSpawnController> spawnControllers2 = from entry in spawnControllers
@@ -52,7 +52,7 @@ public static class HazardRandomizer
 		HazardRandomizer.SetRandomHazardType(HazardCategory.Turret, spawnControllers4);
 	}
 
-	// Token: 0x0600384E RID: 14414 RVA: 0x000C05D8 File Offset: 0x000BE7D8
+	// Token: 0x06004EEB RID: 20203 RVA: 0x0012E994 File Offset: 0x0012CB94
 	private static void SetRandomHazardType(HazardCategory category, IEnumerable<IHazardSpawnController> spawnControllers)
 	{
 		if (spawnControllers.Count<IHazardSpawnController>() == 0)
@@ -69,6 +69,6 @@ public static class HazardRandomizer
 		}
 	}
 
-	// Token: 0x04002B92 RID: 11154
+	// Token: 0x04003BF9 RID: 15353
 	private static Dictionary<HazardCategory, List<HazardType>> m_hazardTypeTable = new Dictionary<HazardCategory, List<HazardType>>();
 }

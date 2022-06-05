@@ -5,11 +5,11 @@ using UnityEngine.Serialization;
 
 namespace RLAudio
 {
-	// Token: 0x020008DC RID: 2268
+	// Token: 0x02000E4A RID: 3658
 	public abstract class AudioLibrary<T> : ScriptableObject where T : AudioLibraryEntry
 	{
-		// Token: 0x17001836 RID: 6198
-		// (get) Token: 0x06004A70 RID: 19056 RVA: 0x0010BFF2 File Offset: 0x0010A1F2
+		// Token: 0x17002115 RID: 8469
+		// (get) Token: 0x06006720 RID: 26400 RVA: 0x00038C8F File Offset: 0x00036E8F
 		protected T Default
 		{
 			get
@@ -18,9 +18,9 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001837 RID: 6199
-		// (get) Token: 0x06004A71 RID: 19057 RVA: 0x0010BFFA File Offset: 0x0010A1FA
-		// (set) Token: 0x06004A72 RID: 19058 RVA: 0x0010C002 File Offset: 0x0010A202
+		// Token: 0x17002116 RID: 8470
+		// (get) Token: 0x06006721 RID: 26401 RVA: 0x00038C97 File Offset: 0x00036E97
+		// (set) Token: 0x06006722 RID: 26402 RVA: 0x00038C9F File Offset: 0x00036E9F
 		public List<T> Entries
 		{
 			get
@@ -36,7 +36,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A73 RID: 19059 RVA: 0x0010C012 File Offset: 0x0010A212
+		// Token: 0x06006723 RID: 26403 RVA: 0x00038CAF File Offset: 0x00036EAF
 		protected T GetAudioLibraryEntry(string key)
 		{
 			if (this.m_entryTable == null)
@@ -50,7 +50,7 @@ namespace RLAudio
 			return this.Default;
 		}
 
-		// Token: 0x06004A74 RID: 19060 RVA: 0x0010C044 File Offset: 0x0010A244
+		// Token: 0x06006724 RID: 26404 RVA: 0x0017C858 File Offset: 0x0017AA58
 		private void InitializeTable()
 		{
 			this.m_entryTable = new Dictionary<string, T>();
@@ -60,7 +60,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A75 RID: 19061 RVA: 0x0010C0B4 File Offset: 0x0010A2B4
+		// Token: 0x06006725 RID: 26405 RVA: 0x0017C8C8 File Offset: 0x0017AAC8
 		public bool GetContainsEntry(string key)
 		{
 			if (this.m_entryTable == null)
@@ -75,16 +75,16 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x04003E94 RID: 16020
+		// Token: 0x040053A9 RID: 21417
 		[SerializeField]
 		[FormerlySerializedAs("entries")]
 		protected List<T> m_entries;
 
-		// Token: 0x04003E95 RID: 16021
+		// Token: 0x040053AA RID: 21418
 		[SerializeField]
 		protected T m_default;
 
-		// Token: 0x04003E96 RID: 16022
+		// Token: 0x040053AB RID: 21419
 		protected Dictionary<string, T> m_entryTable;
 	}
 }

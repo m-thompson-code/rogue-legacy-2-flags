@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace GameEventTracking
 {
-	// Token: 0x020008AF RID: 2223
+	// Token: 0x02000DE3 RID: 3555
 	public class ItemEventTrackerState : IItemEventTrackerState, IGameEventTrackerState
 	{
-		// Token: 0x170017C8 RID: 6088
-		// (get) Token: 0x06004881 RID: 18561 RVA: 0x001043E8 File Offset: 0x001025E8
-		// (set) Token: 0x06004882 RID: 18562 RVA: 0x001043F0 File Offset: 0x001025F0
+		// Token: 0x17002044 RID: 8260
+		// (get) Token: 0x060063EB RID: 25579 RVA: 0x0003724D File Offset: 0x0003544D
+		// (set) Token: 0x060063EC RID: 25580 RVA: 0x00037255 File Offset: 0x00035455
 		public List<ChestTrackerData> ChestsOpened
 		{
 			get
@@ -21,9 +21,9 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017C9 RID: 6089
-		// (get) Token: 0x06004883 RID: 18563 RVA: 0x001043F9 File Offset: 0x001025F9
-		// (set) Token: 0x06004884 RID: 18564 RVA: 0x00104401 File Offset: 0x00102601
+		// Token: 0x17002045 RID: 8261
+		// (get) Token: 0x060063ED RID: 25581 RVA: 0x0003725E File Offset: 0x0003545E
+		// (set) Token: 0x060063EE RID: 25582 RVA: 0x00037266 File Offset: 0x00035466
 		public List<ItemTrackerData> ItemsCollected
 		{
 			get
@@ -36,23 +36,23 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x06004885 RID: 18565 RVA: 0x0010440A File Offset: 0x0010260A
+		// Token: 0x060063EF RID: 25583 RVA: 0x0003726F File Offset: 0x0003546F
 		public ItemEventTrackerState(List<ChestTrackerData> chestsOpened, List<ItemTrackerData> goldCollected)
 		{
 			this.Initialise(chestsOpened, goldCollected);
 		}
 
-		// Token: 0x06004886 RID: 18566 RVA: 0x0010441A File Offset: 0x0010261A
+		// Token: 0x060063F0 RID: 25584 RVA: 0x0003727F File Offset: 0x0003547F
 		public void Initialise(List<ChestTrackerData> chestsOpened, List<ItemTrackerData> goldCollected)
 		{
 			this.ChestsOpened = chestsOpened;
 			this.ItemsCollected = goldCollected;
 		}
 
-		// Token: 0x04003D2F RID: 15663
+		// Token: 0x0400517C RID: 20860
 		private List<ChestTrackerData> m_chestsOpened;
 
-		// Token: 0x04003D30 RID: 15664
+		// Token: 0x0400517D RID: 20861
 		private List<ItemTrackerData> m_goldCollected;
 	}
 }

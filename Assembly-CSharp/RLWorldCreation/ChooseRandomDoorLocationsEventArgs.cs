@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace RLWorldCreation
 {
-	// Token: 0x0200088B RID: 2187
+	// Token: 0x02000DAB RID: 3499
 	public class ChooseRandomDoorLocationsEventArgs : BiomeCreationEventArgs
 	{
-		// Token: 0x060047CA RID: 18378 RVA: 0x001021AA File Offset: 0x001003AA
+		// Token: 0x060062C8 RID: 25288 RVA: 0x00036724 File Offset: 0x00034924
 		public ChooseRandomDoorLocationsEventArgs(GridPointManager room, IEnumerable<DoorLocation> potentialLocations, IEnumerable<DoorLocation> chosenLocations)
 		{
 			this.Initialize(room, potentialLocations, chosenLocations);
 		}
 
-		// Token: 0x060047CB RID: 18379 RVA: 0x001021BB File Offset: 0x001003BB
+		// Token: 0x060062C9 RID: 25289 RVA: 0x00036735 File Offset: 0x00034935
 		public void Initialize(GridPointManager room, IEnumerable<DoorLocation> potentialLocations, IEnumerable<DoorLocation> chosenLocations)
 		{
 			this.Room = room;
@@ -20,19 +20,19 @@ namespace RLWorldCreation
 			this.ChosenLocations = chosenLocations;
 		}
 
-		// Token: 0x1700178F RID: 6031
-		// (get) Token: 0x060047CC RID: 18380 RVA: 0x001021D2 File Offset: 0x001003D2
-		// (set) Token: 0x060047CD RID: 18381 RVA: 0x001021DA File Offset: 0x001003DA
+		// Token: 0x17001FF1 RID: 8177
+		// (get) Token: 0x060062CA RID: 25290 RVA: 0x0003674C File Offset: 0x0003494C
+		// (set) Token: 0x060062CB RID: 25291 RVA: 0x00036754 File Offset: 0x00034954
 		public GridPointManager Room { get; private set; }
 
-		// Token: 0x17001790 RID: 6032
-		// (get) Token: 0x060047CE RID: 18382 RVA: 0x001021E3 File Offset: 0x001003E3
-		// (set) Token: 0x060047CF RID: 18383 RVA: 0x001021EB File Offset: 0x001003EB
+		// Token: 0x17001FF2 RID: 8178
+		// (get) Token: 0x060062CC RID: 25292 RVA: 0x0003675D File Offset: 0x0003495D
+		// (set) Token: 0x060062CD RID: 25293 RVA: 0x00036765 File Offset: 0x00034965
 		public IEnumerable<DoorLocation> PotentialLocations { get; private set; }
 
-		// Token: 0x17001791 RID: 6033
-		// (get) Token: 0x060047D0 RID: 18384 RVA: 0x001021F4 File Offset: 0x001003F4
-		// (set) Token: 0x060047D1 RID: 18385 RVA: 0x001021FC File Offset: 0x001003FC
+		// Token: 0x17001FF3 RID: 8179
+		// (get) Token: 0x060062CE RID: 25294 RVA: 0x0003676E File Offset: 0x0003496E
+		// (set) Token: 0x060062CF RID: 25295 RVA: 0x00036776 File Offset: 0x00034976
 		public IEnumerable<DoorLocation> ChosenLocations { get; private set; }
 	}
 }

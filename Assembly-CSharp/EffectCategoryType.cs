@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x0200072A RID: 1834
+// Token: 0x02000BE8 RID: 3048
 public enum EffectCategoryType
 {
-	// Token: 0x040033AB RID: 13227
+	// Token: 0x04004627 RID: 17959
 	Generic,
-	// Token: 0x040033AC RID: 13228
+	// Token: 0x04004628 RID: 17960
 	Player = 10,
-	// Token: 0x040033AD RID: 13229
+	// Token: 0x04004629 RID: 17961
 	PlayerInteraction = 20,
-	// Token: 0x040033AE RID: 13230
+	// Token: 0x0400462A RID: 17962
 	Enemies = 30,
-	// Token: 0x040033AF RID: 13231
+	// Token: 0x0400462B RID: 17963
 	Props = 40,
-	// Token: 0x040033B0 RID: 13232
+	// Token: 0x0400462C RID: 17964
 	Projectiles = 50,
-	// Token: 0x040033B1 RID: 13233
+	// Token: 0x0400462D RID: 17965
 	SelfAnimation = 100,
-	// Token: 0x040033B2 RID: 13234
+	// Token: 0x0400462E RID: 17966
 	UI = 110
 }

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000456 RID: 1110
+// Token: 0x0200073B RID: 1851
 public class RisingWater_Hazard : Hazard, ITerrainOnEnterHitResponse, IHitResponse
 {
-	// Token: 0x17001011 RID: 4113
-	// (get) Token: 0x060028F8 RID: 10488 RVA: 0x0008771F File Offset: 0x0008591F
+	// Token: 0x17001526 RID: 5414
+	// (get) Token: 0x060038A2 RID: 14498 RVA: 0x00004ACB File Offset: 0x00002CCB
 	public override float BaseDamage
 	{
 		get
@@ -15,19 +15,19 @@ public class RisingWater_Hazard : Hazard, ITerrainOnEnterHitResponse, IHitRespon
 		}
 	}
 
-	// Token: 0x060028F9 RID: 10489 RVA: 0x00087726 File Offset: 0x00085926
+	// Token: 0x060038A3 RID: 14499 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void SetIsCulled(bool culled)
 	{
 	}
 
-	// Token: 0x060028FA RID: 10490 RVA: 0x00087728 File Offset: 0x00085928
+	// Token: 0x060038A4 RID: 14500 RVA: 0x0001F1B5 File Offset: 0x0001D3B5
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		base.Initialize(hazardArgs);
 		base.StartCoroutine(this.RiseWaterCoroutine());
 	}
 
-	// Token: 0x060028FB RID: 10491 RVA: 0x00087740 File Offset: 0x00085940
+	// Token: 0x060038A5 RID: 14501 RVA: 0x000E8C8C File Offset: 0x000E6E8C
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (otherHBController.RootGameObject.CompareTag("Player") || otherHBController.RootGameObject.CompareTag("Player_Dodging"))
@@ -36,7 +36,7 @@ public class RisingWater_Hazard : Hazard, ITerrainOnEnterHitResponse, IHitRespon
 		}
 	}
 
-	// Token: 0x060028FC RID: 10492 RVA: 0x0008778E File Offset: 0x0008598E
+	// Token: 0x060038A6 RID: 14502 RVA: 0x0001F1CB File Offset: 0x0001D3CB
 	private IEnumerator RiseWaterCoroutine()
 	{
 		float delay = 3f + Time.time;
@@ -54,7 +54,7 @@ public class RisingWater_Hazard : Hazard, ITerrainOnEnterHitResponse, IHitRespon
 		yield break;
 	}
 
-	// Token: 0x060028FD RID: 10493 RVA: 0x0008779D File Offset: 0x0008599D
+	// Token: 0x060038A7 RID: 14503 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void ResetHazard()
 	{
 	}

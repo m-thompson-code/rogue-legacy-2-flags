@@ -3,11 +3,11 @@ using System.Collections;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x02000357 RID: 855
+// Token: 0x020005C3 RID: 1475
 public class NotMovingSlowGame_Trait : BaseTrait
 {
-	// Token: 0x17000DE8 RID: 3560
-	// (get) Token: 0x06002077 RID: 8311 RVA: 0x0006691A File Offset: 0x00064B1A
+	// Token: 0x17001247 RID: 4679
+	// (get) Token: 0x06002DE0 RID: 11744 RVA: 0x000192D8 File Offset: 0x000174D8
 	public override TraitType TraitType
 	{
 		get
@@ -16,7 +16,7 @@ public class NotMovingSlowGame_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002078 RID: 8312 RVA: 0x00066921 File Offset: 0x00064B21
+	// Token: 0x06002DE1 RID: 11745 RVA: 0x000192DF File Offset: 0x000174DF
 	private IEnumerator Start()
 	{
 		yield return new WaitUntil(() => PlayerManager.IsInstantiated);
@@ -24,13 +24,13 @@ public class NotMovingSlowGame_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06002079 RID: 8313 RVA: 0x00066930 File Offset: 0x00064B30
+	// Token: 0x06002DE2 RID: 11746 RVA: 0x000192EE File Offset: 0x000174EE
 	private void OnDisable()
 	{
 		RLTimeScale.SetTimeScale(TimeScaleType.Game, 1f);
 	}
 
-	// Token: 0x0600207A RID: 8314 RVA: 0x00066940 File Offset: 0x00064B40
+	// Token: 0x06002DE3 RID: 11747 RVA: 0x000C7598 File Offset: 0x000C5798
 	private void Update()
 	{
 		if (this.m_playerController != null && !this.m_playerController.IsDead && !GameManager.IsGamePaused && this.m_playerController.ConditionState != CharacterStates.CharacterConditions.Stunned)
@@ -47,20 +47,20 @@ public class NotMovingSlowGame_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x04001C59 RID: 7257
+	// Token: 0x040025DD RID: 9693
 	[SerializeField]
 	private float m_timeScaleUpSpeed = 5f;
 
-	// Token: 0x04001C5A RID: 7258
+	// Token: 0x040025DE RID: 9694
 	[SerializeField]
 	private float m_timeScaleDownSpeed = 5f;
 
-	// Token: 0x04001C5B RID: 7259
+	// Token: 0x040025DF RID: 9695
 	private PlayerController m_playerController;
 
-	// Token: 0x04001C5C RID: 7260
+	// Token: 0x040025E0 RID: 9696
 	private bool m_isMoving;
 
-	// Token: 0x04001C5D RID: 7261
+	// Token: 0x040025E1 RID: 9697
 	private float m_slowDownDelayCounter;
 }

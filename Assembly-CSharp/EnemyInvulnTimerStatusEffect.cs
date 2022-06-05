@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000303 RID: 771
+// Token: 0x02000529 RID: 1321
 public class EnemyInvulnTimerStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D4D RID: 3405
-	// (get) Token: 0x06001EA9 RID: 7849 RVA: 0x00063330 File Offset: 0x00061530
+	// Token: 0x17001134 RID: 4404
+	// (get) Token: 0x06002A90 RID: 10896 RVA: 0x00017D05 File Offset: 0x00015F05
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyInvulnTimerStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D4E RID: 3406
-	// (get) Token: 0x06001EAA RID: 7850 RVA: 0x00063337 File Offset: 0x00061537
+	// Token: 0x17001135 RID: 4405
+	// (get) Token: 0x06002A91 RID: 10897 RVA: 0x00003C62 File Offset: 0x00001E62
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class EnemyInvulnTimerStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EAB RID: 7851 RVA: 0x0006333E File Offset: 0x0006153E
+	// Token: 0x06002A92 RID: 10898 RVA: 0x00017D0C File Offset: 0x00015F0C
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.InvulnTimer, base.Duration);
@@ -38,7 +38,7 @@ public class EnemyInvulnTimerStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001EAC RID: 7852 RVA: 0x0006334D File Offset: 0x0006154D
+	// Token: 0x06002A93 RID: 10899 RVA: 0x00017D1B File Offset: 0x00015F1B
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);

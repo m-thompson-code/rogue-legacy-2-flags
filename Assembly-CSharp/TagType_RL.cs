@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000784 RID: 1924
+// Token: 0x02000C45 RID: 3141
 public static class TagType_RL
 {
-	// Token: 0x0600415A RID: 16730 RVA: 0x000E8B14 File Offset: 0x000E6D14
+	// Token: 0x06005AD7 RID: 23255 RVA: 0x00157F9C File Offset: 0x0015619C
 	public static TagType ToEnum(string value)
 	{
 		if (value != null)
@@ -345,7 +345,7 @@ public static class TagType_RL
 		throw new Exception("Tag: " + value + " does not exist in Tag manager.");
 	}
 
-	// Token: 0x0600415B RID: 16731 RVA: 0x000E918C File Offset: 0x000E738C
+	// Token: 0x06005AD8 RID: 23256 RVA: 0x00158614 File Offset: 0x00156814
 	public static string ToString(TagType value)
 	{
 		switch (value)
@@ -437,126 +437,126 @@ public static class TagType_RL
 		}
 	}
 
-	// Token: 0x0400383D RID: 14397
+	// Token: 0x04004AED RID: 19181
 	public const string Untagged = "Untagged";
 
-	// Token: 0x0400383E RID: 14398
+	// Token: 0x04004AEE RID: 19182
 	public const string Respawn = "Respawn";
 
-	// Token: 0x0400383F RID: 14399
+	// Token: 0x04004AEF RID: 19183
 	public const string Finish = "Finish";
 
-	// Token: 0x04003840 RID: 14400
+	// Token: 0x04004AF0 RID: 19184
 	public const string EditorOnly = "EditorOnly";
 
-	// Token: 0x04003841 RID: 14401
+	// Token: 0x04004AF1 RID: 19185
 	public const string MainCamera = "MainCamera";
 
-	// Token: 0x04003842 RID: 14402
+	// Token: 0x04004AF2 RID: 19186
 	public const string Player = "Player";
 
-	// Token: 0x04003843 RID: 14403
+	// Token: 0x04004AF3 RID: 19187
 	public const string GameController = "GameController";
 
-	// Token: 0x04003844 RID: 14404
+	// Token: 0x04004AF4 RID: 19188
 	public const string LevelBounds = "LevelBounds";
 
-	// Token: 0x04003845 RID: 14405
+	// Token: 0x04004AF5 RID: 19189
 	public const string Music = "Music";
 
-	// Token: 0x04003846 RID: 14406
+	// Token: 0x04004AF6 RID: 19190
 	public const string Background = "Background";
 
-	// Token: 0x04003847 RID: 14407
+	// Token: 0x04004AF7 RID: 19191
 	public const string Platform = "Platform";
 
-	// Token: 0x04003848 RID: 14408
+	// Token: 0x04004AF8 RID: 19192
 	public const string Door = "Door";
 
-	// Token: 0x04003849 RID: 14409
+	// Token: 0x04004AF9 RID: 19193
 	public const string Room = "Room";
 
-	// Token: 0x0400384A RID: 14410
+	// Token: 0x04004AFA RID: 19194
 	public const string OneWay = "OneWay";
 
-	// Token: 0x0400384B RID: 14411
+	// Token: 0x04004AFB RID: 19195
 	public const string Enemy = "Enemy";
 
-	// Token: 0x0400384C RID: 14412
+	// Token: 0x04004AFC RID: 19196
 	public const string Breakable = "Breakable";
 
-	// Token: 0x0400384D RID: 14413
+	// Token: 0x04004AFD RID: 19197
 	public const string Projectile = "Projectile";
 
-	// Token: 0x0400384E RID: 14414
+	// Token: 0x04004AFE RID: 19198
 	public const string ItemDrop = "ItemDrop";
 
-	// Token: 0x0400384F RID: 14415
+	// Token: 0x04004AFF RID: 19199
 	public const string Hazard = "Hazard";
 
-	// Token: 0x04003850 RID: 14416
+	// Token: 0x04004B00 RID: 19200
 	public const string PlayerProjectile = "PlayerProjectile";
 
-	// Token: 0x04003851 RID: 14417
+	// Token: 0x04004B01 RID: 19201
 	public const string EnemyProjectile = "EnemyProjectile";
 
-	// Token: 0x04003852 RID: 14418
+	// Token: 0x04004B02 RID: 19202
 	public const string Chest = "Chest";
 
-	// Token: 0x04003853 RID: 14419
+	// Token: 0x04004B03 RID: 19203
 	public const string EquipmentButton = "EquipmentButton";
 
-	// Token: 0x04003854 RID: 14420
+	// Token: 0x04004B04 RID: 19204
 	public const string Prop = "Prop";
 
-	// Token: 0x04003855 RID: 14421
+	// Token: 0x04004B05 RID: 19205
 	public const string EditorProp = "EditorProp";
 
-	// Token: 0x04003856 RID: 14422
+	// Token: 0x04004B06 RID: 19206
 	public const string LevelEditor = "LevelEditor";
 
-	// Token: 0x04003857 RID: 14423
+	// Token: 0x04004B07 RID: 19207
 	public const string Cutout = "Cutout";
 
-	// Token: 0x04003858 RID: 14424
+	// Token: 0x04004B08 RID: 19208
 	public const string Tunnel = "Tunnel";
 
-	// Token: 0x04003859 RID: 14425
+	// Token: 0x04004B09 RID: 19209
 	public const string NPC = "NPC";
 
-	// Token: 0x0400385A RID: 14426
+	// Token: 0x04004B0A RID: 19210
 	public const string Barricade = "Barricade";
 
-	// Token: 0x0400385B RID: 14427
+	// Token: 0x04004B0B RID: 19211
 	public const string TriggerHazard = "TriggerHazard";
 
-	// Token: 0x0400385C RID: 14428
+	// Token: 0x04004B0C RID: 19212
 	public const string Effect = "Effect";
 
-	// Token: 0x0400385D RID: 14429
+	// Token: 0x04004B0D RID: 19213
 	public const string Player_Dodging = "Player_Dodging";
 
-	// Token: 0x0400385E RID: 14430
+	// Token: 0x04004B0E RID: 19214
 	public const string FlimsyBreakable = "FlimsyBreakable";
 
-	// Token: 0x0400385F RID: 14431
+	// Token: 0x04004B0F RID: 19215
 	public const string SpawnController = "SpawnController";
 
-	// Token: 0x04003860 RID: 14432
+	// Token: 0x04004B10 RID: 19216
 	public const string TeleporterTube = "TeleporterTube";
 
-	// Token: 0x04003861 RID: 14433
+	// Token: 0x04004B11 RID: 19217
 	public const string Generic_Bounceable = "Generic_Bounceable";
 
-	// Token: 0x04003862 RID: 14434
+	// Token: 0x04004B12 RID: 19218
 	public const string MagicPlatform = "MagicPlatform";
 
-	// Token: 0x04003863 RID: 14435
+	// Token: 0x04004B13 RID: 19219
 	public const string PlayerStatusEffect = "PlayerStatusEffect";
 
-	// Token: 0x04003864 RID: 14436
+	// Token: 0x04004B14 RID: 19220
 	public const string EnemyStatusEffect = "EnemyStatusEffect";
 
-	// Token: 0x04003865 RID: 14437
+	// Token: 0x04004B15 RID: 19221
 	public const string NonResonant_Bounceable = "NonResonant_Bounceable";
 }

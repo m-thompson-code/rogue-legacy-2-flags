@@ -1,88 +1,88 @@
 ﻿using System;
 
-// Token: 0x02000783 RID: 1923
+// Token: 0x02000C44 RID: 3140
 public enum TagType
 {
-	// Token: 0x04003814 RID: 14356
+	// Token: 0x04004AC4 RID: 19140
 	Untagged,
-	// Token: 0x04003815 RID: 14357
+	// Token: 0x04004AC5 RID: 19141
 	Respawn,
-	// Token: 0x04003816 RID: 14358
+	// Token: 0x04004AC6 RID: 19142
 	Finish,
-	// Token: 0x04003817 RID: 14359
+	// Token: 0x04004AC7 RID: 19143
 	EditorOnly,
-	// Token: 0x04003818 RID: 14360
+	// Token: 0x04004AC8 RID: 19144
 	MainCamera,
-	// Token: 0x04003819 RID: 14361
+	// Token: 0x04004AC9 RID: 19145
 	Player,
-	// Token: 0x0400381A RID: 14362
+	// Token: 0x04004ACA RID: 19146
 	GameController,
-	// Token: 0x0400381B RID: 14363
+	// Token: 0x04004ACB RID: 19147
 	LevelBounds,
-	// Token: 0x0400381C RID: 14364
+	// Token: 0x04004ACC RID: 19148
 	Music,
-	// Token: 0x0400381D RID: 14365
+	// Token: 0x04004ACD RID: 19149
 	Background,
-	// Token: 0x0400381E RID: 14366
+	// Token: 0x04004ACE RID: 19150
 	Platform,
-	// Token: 0x0400381F RID: 14367
+	// Token: 0x04004ACF RID: 19151
 	Door,
-	// Token: 0x04003820 RID: 14368
+	// Token: 0x04004AD0 RID: 19152
 	Room,
-	// Token: 0x04003821 RID: 14369
+	// Token: 0x04004AD1 RID: 19153
 	OneWay,
-	// Token: 0x04003822 RID: 14370
+	// Token: 0x04004AD2 RID: 19154
 	Enemy,
-	// Token: 0x04003823 RID: 14371
+	// Token: 0x04004AD3 RID: 19155
 	Breakable,
-	// Token: 0x04003824 RID: 14372
+	// Token: 0x04004AD4 RID: 19156
 	Projectile,
-	// Token: 0x04003825 RID: 14373
+	// Token: 0x04004AD5 RID: 19157
 	ItemDrop,
-	// Token: 0x04003826 RID: 14374
+	// Token: 0x04004AD6 RID: 19158
 	Hazard,
-	// Token: 0x04003827 RID: 14375
+	// Token: 0x04004AD7 RID: 19159
 	PlayerProjectile,
-	// Token: 0x04003828 RID: 14376
+	// Token: 0x04004AD8 RID: 19160
 	EnemyProjectile,
-	// Token: 0x04003829 RID: 14377
+	// Token: 0x04004AD9 RID: 19161
 	Chest,
-	// Token: 0x0400382A RID: 14378
+	// Token: 0x04004ADA RID: 19162
 	EquipmentButton,
-	// Token: 0x0400382B RID: 14379
+	// Token: 0x04004ADB RID: 19163
 	Prop,
-	// Token: 0x0400382C RID: 14380
+	// Token: 0x04004ADC RID: 19164
 	EditorProp,
-	// Token: 0x0400382D RID: 14381
+	// Token: 0x04004ADD RID: 19165
 	LevelEditor,
-	// Token: 0x0400382E RID: 14382
+	// Token: 0x04004ADE RID: 19166
 	Cutout,
-	// Token: 0x0400382F RID: 14383
+	// Token: 0x04004ADF RID: 19167
 	Tunnel,
-	// Token: 0x04003830 RID: 14384
+	// Token: 0x04004AE0 RID: 19168
 	NPC,
-	// Token: 0x04003831 RID: 14385
+	// Token: 0x04004AE1 RID: 19169
 	Barricade,
-	// Token: 0x04003832 RID: 14386
+	// Token: 0x04004AE2 RID: 19170
 	TriggerHazard,
-	// Token: 0x04003833 RID: 14387
+	// Token: 0x04004AE3 RID: 19171
 	Effect,
-	// Token: 0x04003834 RID: 14388
+	// Token: 0x04004AE4 RID: 19172
 	Player_Dodging,
-	// Token: 0x04003835 RID: 14389
+	// Token: 0x04004AE5 RID: 19173
 	FlimsyBreakable,
-	// Token: 0x04003836 RID: 14390
+	// Token: 0x04004AE6 RID: 19174
 	SpawnController,
-	// Token: 0x04003837 RID: 14391
+	// Token: 0x04004AE7 RID: 19175
 	TeleporterTube,
-	// Token: 0x04003838 RID: 14392
+	// Token: 0x04004AE8 RID: 19176
 	Generic_Bounceable,
-	// Token: 0x04003839 RID: 14393
+	// Token: 0x04004AE9 RID: 19177
 	MagicPlatform,
-	// Token: 0x0400383A RID: 14394
+	// Token: 0x04004AEA RID: 19178
 	PlayerStatusEffect,
-	// Token: 0x0400383B RID: 14395
+	// Token: 0x04004AEB RID: 19179
 	EnemyStatusEffect,
-	// Token: 0x0400383C RID: 14396
+	// Token: 0x04004AEC RID: 19180
 	NonResonant_Bounceable
 }

@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine.EventSystems;
 
-// Token: 0x020003B5 RID: 949
+// Token: 0x0200064B RID: 1611
 public class JukeboxOmniUIEntry : BaseOmniUIEntry
 {
-	// Token: 0x17000E79 RID: 3705
-	// (get) Token: 0x06002318 RID: 8984 RVA: 0x000723BA File Offset: 0x000705BA
-	// (set) Token: 0x06002319 RID: 8985 RVA: 0x000723C2 File Offset: 0x000705C2
+	// Token: 0x1700130C RID: 4876
+	// (get) Token: 0x06003130 RID: 12592 RVA: 0x0001AFF5 File Offset: 0x000191F5
+	// (set) Token: 0x06003131 RID: 12593 RVA: 0x0001AFFD File Offset: 0x000191FD
 	public SongID SongType { get; protected set; }
 
-	// Token: 0x17000E7A RID: 3706
-	// (get) Token: 0x0600231A RID: 8986 RVA: 0x000723CB File Offset: 0x000705CB
+	// Token: 0x1700130D RID: 4877
+	// (get) Token: 0x06003132 RID: 12594 RVA: 0x0001B006 File Offset: 0x00019206
 	private JukeboxData Data
 	{
 		get
@@ -19,8 +19,8 @@ public class JukeboxOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000E7B RID: 3707
-	// (get) Token: 0x0600231B RID: 8987 RVA: 0x000723DD File Offset: 0x000705DD
+	// Token: 0x1700130E RID: 4878
+	// (get) Token: 0x06003133 RID: 12595 RVA: 0x0001B018 File Offset: 0x00019218
 	public override EventArgs EntryEventArgs
 	{
 		get
@@ -37,8 +37,8 @@ public class JukeboxOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000E7C RID: 3708
-	// (get) Token: 0x0600231C RID: 8988 RVA: 0x00072413 File Offset: 0x00070613
+	// Token: 0x1700130F RID: 4879
+	// (get) Token: 0x06003134 RID: 12596 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool IsEntryActive
 	{
 		get
@@ -47,7 +47,7 @@ public class JukeboxOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x0600231D RID: 8989 RVA: 0x00072418 File Offset: 0x00070618
+	// Token: 0x06003135 RID: 12597 RVA: 0x000D2A30 File Offset: 0x000D0C30
 	public void Initialize(SongID songType, JukeboxOmniUIWindowController windowController)
 	{
 		this.SongType = songType;
@@ -61,12 +61,12 @@ public class JukeboxOmniUIEntry : BaseOmniUIEntry
 		this.m_titleText.text = LocalizationManager.GetString(this.Data.SongTitleLocID, false, false);
 	}
 
-	// Token: 0x0600231E RID: 8990 RVA: 0x00072486 File Offset: 0x00070686
+	// Token: 0x06003136 RID: 12598 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void UpdateActive()
 	{
 	}
 
-	// Token: 0x0600231F RID: 8991 RVA: 0x00072488 File Offset: 0x00070688
+	// Token: 0x06003137 RID: 12599 RVA: 0x000D2AA0 File Offset: 0x000D0CA0
 	public override void UpdateState()
 	{
 		bool flag = false;
@@ -100,7 +100,7 @@ public class JukeboxOmniUIEntry : BaseOmniUIEntry
 		base.UpdateState();
 	}
 
-	// Token: 0x06002320 RID: 8992 RVA: 0x00072578 File Offset: 0x00070778
+	// Token: 0x06003138 RID: 12600 RVA: 0x000D2B90 File Offset: 0x000D0D90
 	public override void OnSelect(BaseEventData eventData)
 	{
 		if (!base.Interactable)
@@ -113,6 +113,6 @@ public class JukeboxOmniUIEntry : BaseOmniUIEntry
 		base.OnSelect(eventData);
 	}
 
-	// Token: 0x04001DFF RID: 7679
+	// Token: 0x0400282C RID: 10284
 	private JukeboxOmniUIDescriptionEventArgs m_eventArgs;
 }

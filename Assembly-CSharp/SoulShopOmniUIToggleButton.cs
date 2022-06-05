@@ -2,21 +2,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020003CF RID: 975
+// Token: 0x02000668 RID: 1640
 public class SoulShopOmniUIToggleButton : OmniUIButton, ISoulShopOmniUIButton
 {
-	// Token: 0x17000EC2 RID: 3778
-	// (get) Token: 0x060023E7 RID: 9191 RVA: 0x000755E2 File Offset: 0x000737E2
-	// (set) Token: 0x060023E8 RID: 9192 RVA: 0x000755EA File Offset: 0x000737EA
+	// Token: 0x17001357 RID: 4951
+	// (get) Token: 0x06003205 RID: 12805 RVA: 0x0001B704 File Offset: 0x00019904
+	// (set) Token: 0x06003206 RID: 12806 RVA: 0x0001B70C File Offset: 0x0001990C
 	public SoulShopType SoulShopType { get; set; }
 
-	// Token: 0x17000EC3 RID: 3779
-	// (get) Token: 0x060023E9 RID: 9193 RVA: 0x000755F3 File Offset: 0x000737F3
-	// (set) Token: 0x060023EA RID: 9194 RVA: 0x000755FB File Offset: 0x000737FB
+	// Token: 0x17001358 RID: 4952
+	// (get) Token: 0x06003207 RID: 12807 RVA: 0x0001B715 File Offset: 0x00019915
+	// (set) Token: 0x06003208 RID: 12808 RVA: 0x0001B71D File Offset: 0x0001991D
 	public SoulShopOmniUIEntry ParentEntry { get; set; }
 
-	// Token: 0x17000EC4 RID: 3780
-	// (get) Token: 0x060023EB RID: 9195 RVA: 0x00075604 File Offset: 0x00073804
+	// Token: 0x17001359 RID: 4953
+	// (get) Token: 0x06003209 RID: 12809 RVA: 0x0001B726 File Offset: 0x00019926
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -25,7 +25,7 @@ public class SoulShopOmniUIToggleButton : OmniUIButton, ISoulShopOmniUIButton
 		}
 	}
 
-	// Token: 0x060023EC RID: 9196 RVA: 0x0007560C File Offset: 0x0007380C
+	// Token: 0x0600320A RID: 12810 RVA: 0x0001B72E File Offset: 0x0001992E
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -36,7 +36,7 @@ public class SoulShopOmniUIToggleButton : OmniUIButton, ISoulShopOmniUIButton
 		this.m_descriptionEventArgs.Initialize(this.SoulShopType, OmniUIButtonType.Equipping);
 	}
 
-	// Token: 0x060023ED RID: 9197 RVA: 0x0007563C File Offset: 0x0007383C
+	// Token: 0x0600320B RID: 12811 RVA: 0x000D561C File Offset: 0x000D381C
 	public override void OnConfirmButtonPressed()
 	{
 		if (!this.IsButtonActive)
@@ -64,7 +64,7 @@ public class SoulShopOmniUIToggleButton : OmniUIButton, ISoulShopOmniUIButton
 		this.RunOnConfirmPressedAnimation();
 	}
 
-	// Token: 0x060023EE RID: 9198 RVA: 0x000756B4 File Offset: 0x000738B4
+	// Token: 0x0600320C RID: 12812 RVA: 0x000D5694 File Offset: 0x000D3894
 	public override void UpdateState()
 	{
 		SoulShopObj soulShopObj = SaveManager.ModeSaveData.GetSoulShopObj(this.SoulShopType);
@@ -92,7 +92,7 @@ public class SoulShopOmniUIToggleButton : OmniUIButton, ISoulShopOmniUIButton
 		this.IsButtonActive = true;
 	}
 
-	// Token: 0x060023EF RID: 9199 RVA: 0x0007574C File Offset: 0x0007394C
+	// Token: 0x0600320D RID: 12813 RVA: 0x000D572C File Offset: 0x000D392C
 	private void SetToggleOn(bool toggleOn)
 	{
 		if (toggleOn)
@@ -123,21 +123,21 @@ public class SoulShopOmniUIToggleButton : OmniUIButton, ISoulShopOmniUIButton
 		this.m_notchGameObj.transform.localPosition = localPosition2;
 	}
 
-	// Token: 0x04001E79 RID: 7801
+	// Token: 0x040028B7 RID: 10423
 	[SerializeField]
 	private Image m_sliderOnSprite;
 
-	// Token: 0x04001E7A RID: 7802
+	// Token: 0x040028B8 RID: 10424
 	[SerializeField]
 	private Image m_sliderOffSprite;
 
-	// Token: 0x04001E7B RID: 7803
+	// Token: 0x040028B9 RID: 10425
 	[SerializeField]
 	private GameObject m_notchGameObj;
 
-	// Token: 0x04001E7E RID: 7806
+	// Token: 0x040028BC RID: 10428
 	private SoulShopOmniUIDescriptionEventArgs m_descriptionEventArgs;
 
-	// Token: 0x04001E7F RID: 7807
+	// Token: 0x040028BD RID: 10429
 	private PurchaseBoxDialogueEventArgs m_purchaseDialogueArgs = new PurchaseBoxDialogueEventArgs(PurchaseBoxDialogueType.Welcome);
 }

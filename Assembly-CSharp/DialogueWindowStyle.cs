@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000577 RID: 1399
+// Token: 0x02000950 RID: 2384
 public enum DialogueWindowStyle
 {
-	// Token: 0x04002832 RID: 10290
+	// Token: 0x0400377E RID: 14206
 	HorizontalUpper,
-	// Token: 0x04002833 RID: 10291
+	// Token: 0x0400377F RID: 14207
 	HorizontalLower,
-	// Token: 0x04002834 RID: 10292
+	// Token: 0x04003780 RID: 14208
 	VerticalLeft,
-	// Token: 0x04002835 RID: 10293
+	// Token: 0x04003781 RID: 14209
 	VerticalRight
 }

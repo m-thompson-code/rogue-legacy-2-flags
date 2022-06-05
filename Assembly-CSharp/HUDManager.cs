@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200037C RID: 892
+// Token: 0x02000602 RID: 1538
 public class HUDManager : MonoBehaviour
 {
-	// Token: 0x06002175 RID: 8565 RVA: 0x000694DD File Offset: 0x000676DD
+	// Token: 0x06002F62 RID: 12130 RVA: 0x00019ED3 File Offset: 0x000180D3
 	private IEnumerator Start()
 	{
 		while (!CameraController.IsInstantiated)
@@ -18,11 +18,11 @@ public class HUDManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04001CF2 RID: 7410
+	// Token: 0x040026C6 RID: 9926
 	[SerializeField]
 	private Canvas m_canvas;
 
-	// Token: 0x04001CF3 RID: 7411
+	// Token: 0x040026C7 RID: 9927
 	[SerializeField]
 	private float m_planeDistance = 150f;
 }

@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using Ferr;
 using UnityEngine;
 
-// Token: 0x02000483 RID: 1155
+// Token: 0x0200077F RID: 1919
 public class MapRoomEntry : MonoBehaviour
 {
-	// Token: 0x17001068 RID: 4200
-	// (get) Token: 0x06002A6D RID: 10861 RVA: 0x0008E740 File Offset: 0x0008C940
-	// (set) Token: 0x06002A6E RID: 10862 RVA: 0x0008E748 File Offset: 0x0008C948
+	// Token: 0x170015A7 RID: 5543
+	// (get) Token: 0x06003A95 RID: 14997 RVA: 0x000202BD File Offset: 0x0001E4BD
+	// (set) Token: 0x06003A96 RID: 14998 RVA: 0x000202C5 File Offset: 0x0001E4C5
 	public int BiomeControllerIndex { get; set; }
 
-	// Token: 0x17001069 RID: 4201
-	// (get) Token: 0x06002A6F RID: 10863 RVA: 0x0008E751 File Offset: 0x0008C951
-	// (set) Token: 0x06002A70 RID: 10864 RVA: 0x0008E759 File Offset: 0x0008C959
+	// Token: 0x170015A8 RID: 5544
+	// (get) Token: 0x06003A97 RID: 14999 RVA: 0x000202CE File Offset: 0x0001E4CE
+	// (set) Token: 0x06003A98 RID: 15000 RVA: 0x000202D6 File Offset: 0x0001E4D6
 	public int[] RoomCompleteBiomeControllerIndexOverrides { get; private set; }
 
-	// Token: 0x1700106A RID: 4202
-	// (get) Token: 0x06002A71 RID: 10865 RVA: 0x0008E762 File Offset: 0x0008C962
-	// (set) Token: 0x06002A72 RID: 10866 RVA: 0x0008E76A File Offset: 0x0008C96A
+	// Token: 0x170015A9 RID: 5545
+	// (get) Token: 0x06003A99 RID: 15001 RVA: 0x000202DF File Offset: 0x0001E4DF
+	// (set) Token: 0x06003A9A RID: 15002 RVA: 0x000202E7 File Offset: 0x0001E4E7
 	public RoomType RoomType { get; set; }
 
-	// Token: 0x1700106B RID: 4203
-	// (get) Token: 0x06002A73 RID: 10867 RVA: 0x0008E773 File Offset: 0x0008C973
-	// (set) Token: 0x06002A74 RID: 10868 RVA: 0x0008E77B File Offset: 0x0008C97B
+	// Token: 0x170015AA RID: 5546
+	// (get) Token: 0x06003A9B RID: 15003 RVA: 0x000202F0 File Offset: 0x0001E4F0
+	// (set) Token: 0x06003A9C RID: 15004 RVA: 0x000202F8 File Offset: 0x0001E4F8
 	public bool IsMergeRoomEntry { get; set; }
 
-	// Token: 0x1700106C RID: 4204
-	// (get) Token: 0x06002A75 RID: 10869 RVA: 0x0008E784 File Offset: 0x0008C984
-	// (set) Token: 0x06002A76 RID: 10870 RVA: 0x0008E78C File Offset: 0x0008C98C
+	// Token: 0x170015AB RID: 5547
+	// (get) Token: 0x06003A9D RID: 15005 RVA: 0x00020301 File Offset: 0x0001E501
+	// (set) Token: 0x06003A9E RID: 15006 RVA: 0x00020309 File Offset: 0x0001E509
 	public bool HasTeleporter { get; private set; }
 
-	// Token: 0x1700106D RID: 4205
-	// (get) Token: 0x06002A77 RID: 10871 RVA: 0x0008E795 File Offset: 0x0008C995
+	// Token: 0x170015AC RID: 5548
+	// (get) Token: 0x06003A9F RID: 15007 RVA: 0x00020312 File Offset: 0x0001E512
 	public bool HasSpecialRoomIcon
 	{
 		get
@@ -41,8 +41,8 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700106E RID: 4206
-	// (get) Token: 0x06002A78 RID: 10872 RVA: 0x0008E7B9 File Offset: 0x0008C9B9
+	// Token: 0x170015AD RID: 5549
+	// (get) Token: 0x06003AA0 RID: 15008 RVA: 0x00020336 File Offset: 0x0001E536
 	public bool HasTeleporterIcon
 	{
 		get
@@ -51,8 +51,8 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700106F RID: 4207
-	// (get) Token: 0x06002A79 RID: 10873 RVA: 0x0008E7DD File Offset: 0x0008C9DD
+	// Token: 0x170015AE RID: 5550
+	// (get) Token: 0x06003AA1 RID: 15009 RVA: 0x0002035A File Offset: 0x0001E55A
 	public Rect Bounds
 	{
 		get
@@ -61,8 +61,8 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001070 RID: 4208
-	// (get) Token: 0x06002A7A RID: 10874 RVA: 0x0008E7E5 File Offset: 0x0008C9E5
+	// Token: 0x170015AF RID: 5551
+	// (get) Token: 0x06003AA2 RID: 15010 RVA: 0x00020362 File Offset: 0x0001E562
 	public Rect AbsBounds
 	{
 		get
@@ -71,13 +71,13 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001071 RID: 4209
-	// (get) Token: 0x06002A7B RID: 10875 RVA: 0x0008E7ED File Offset: 0x0008C9ED
-	// (set) Token: 0x06002A7C RID: 10876 RVA: 0x0008E7F5 File Offset: 0x0008C9F5
+	// Token: 0x170015B0 RID: 5552
+	// (get) Token: 0x06003AA3 RID: 15011 RVA: 0x0002036A File Offset: 0x0001E56A
+	// (set) Token: 0x06003AA4 RID: 15012 RVA: 0x00020372 File Offset: 0x0001E572
 	public GlobalTeleporterController Teleporter { get; private set; }
 
-	// Token: 0x17001072 RID: 4210
-	// (get) Token: 0x06002A7D RID: 10877 RVA: 0x0008E7FE File Offset: 0x0008C9FE
+	// Token: 0x170015B1 RID: 5553
+	// (get) Token: 0x06003AA5 RID: 15013 RVA: 0x0002037B File Offset: 0x0001E57B
 	public GameObject TerrainGO
 	{
 		get
@@ -86,8 +86,8 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001073 RID: 4211
-	// (get) Token: 0x06002A7E RID: 10878 RVA: 0x0008E806 File Offset: 0x0008CA06
+	// Token: 0x170015B2 RID: 5554
+	// (get) Token: 0x06003AA6 RID: 15014 RVA: 0x00020383 File Offset: 0x0001E583
 	public Ferr2DT_PathTerrain Terrain
 	{
 		get
@@ -96,22 +96,22 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001074 RID: 4212
-	// (get) Token: 0x06002A7F RID: 10879 RVA: 0x0008E80E File Offset: 0x0008CA0E
-	// (set) Token: 0x06002A80 RID: 10880 RVA: 0x0008E816 File Offset: 0x0008CA16
+	// Token: 0x170015B3 RID: 5555
+	// (get) Token: 0x06003AA7 RID: 15015 RVA: 0x0002038B File Offset: 0x0001E58B
+	// (set) Token: 0x06003AA8 RID: 15016 RVA: 0x00020393 File Offset: 0x0001E593
 	public bool IsTunnelExit { get; set; }
 
-	// Token: 0x17001075 RID: 4213
-	// (get) Token: 0x06002A81 RID: 10881 RVA: 0x0008E81F File Offset: 0x0008CA1F
-	// (set) Token: 0x06002A82 RID: 10882 RVA: 0x0008E827 File Offset: 0x0008CA27
+	// Token: 0x170015B4 RID: 5556
+	// (get) Token: 0x06003AA9 RID: 15017 RVA: 0x0002039C File Offset: 0x0001E59C
+	// (set) Token: 0x06003AAA RID: 15018 RVA: 0x000203A4 File Offset: 0x0001E5A4
 	public bool WasVisited { get; set; }
 
-	// Token: 0x17001076 RID: 4214
-	// (get) Token: 0x06002A83 RID: 10883 RVA: 0x0008E830 File Offset: 0x0008CA30
-	// (set) Token: 0x06002A84 RID: 10884 RVA: 0x0008E838 File Offset: 0x0008CA38
+	// Token: 0x170015B5 RID: 5557
+	// (get) Token: 0x06003AAB RID: 15019 RVA: 0x000203AD File Offset: 0x0001E5AD
+	// (set) Token: 0x06003AAC RID: 15020 RVA: 0x000203B5 File Offset: 0x0001E5B5
 	public SpecialRoomType SpecialRoomType { get; set; }
 
-	// Token: 0x06002A85 RID: 10885 RVA: 0x0008E844 File Offset: 0x0008CA44
+	// Token: 0x06003AAD RID: 15021 RVA: 0x000F03D4 File Offset: 0x000EE5D4
 	public void ToggleIconVisibility(MapIconType iconType, int index, bool visible)
 	{
 		if (iconType <= MapIconType.Door)
@@ -293,7 +293,7 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A86 RID: 10886 RVA: 0x0008EB88 File Offset: 0x0008CD88
+	// Token: 0x06003AAE RID: 15022 RVA: 0x000F0718 File Offset: 0x000EE918
 	public void SetSpecialIconAlpha(float alpha)
 	{
 		if (this.m_specialRoomIconList != null)
@@ -310,7 +310,7 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A87 RID: 10887 RVA: 0x0008EBCC File Offset: 0x0008CDCC
+	// Token: 0x06003AAF RID: 15023 RVA: 0x000F075C File Offset: 0x000EE95C
 	public void ToggleAllIconVisibility(bool visible)
 	{
 		foreach (MapIconType iconType in MapIconType_RL.TypeArray)
@@ -319,19 +319,19 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A88 RID: 10888 RVA: 0x0008EBFA File Offset: 0x0008CDFA
+	// Token: 0x06003AB0 RID: 15024 RVA: 0x000203BE File Offset: 0x0001E5BE
 	public void ToggleTerrainVisibility(bool visible)
 	{
 		this.m_terrainGO.gameObject.SetActive(visible);
 	}
 
-	// Token: 0x06002A89 RID: 10889 RVA: 0x0008EC0D File Offset: 0x0008CE0D
+	// Token: 0x06003AB1 RID: 15025 RVA: 0x000203D1 File Offset: 0x0001E5D1
 	private Vector2 GetWorldAsLocalPoint(Vector2 center, Vector2 point)
 	{
 		return point - center;
 	}
 
-	// Token: 0x06002A8A RID: 10890 RVA: 0x0008EC18 File Offset: 0x0008CE18
+	// Token: 0x06003AB2 RID: 15026 RVA: 0x000F078C File Offset: 0x000EE98C
 	public void CreateRoomTerrainForRoom(BaseRoom room)
 	{
 		if (room is Room)
@@ -423,7 +423,7 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A8B RID: 10891 RVA: 0x0008EF38 File Offset: 0x0008D138
+	// Token: 0x06003AB3 RID: 15027 RVA: 0x000F0AAC File Offset: 0x000EECAC
 	public void CreateRoomTerrainForGridPoint(GridPointManager room)
 	{
 		if (room.MergeWithGridPointManagers.Count == 0)
@@ -485,7 +485,7 @@ public class MapRoomEntry : MonoBehaviour
 		this.SetAppearance(room.Biome);
 	}
 
-	// Token: 0x06002A8C RID: 10892 RVA: 0x0008F178 File Offset: 0x0008D378
+	// Token: 0x06003AB4 RID: 15028 RVA: 0x000F0CEC File Offset: 0x000EEEEC
 	private List<Vector2> GetFourCorners(GridPointManager gridPointManager)
 	{
 		Vector2 item = gridPointManager.Bounds.min;
@@ -501,7 +501,7 @@ public class MapRoomEntry : MonoBehaviour
 		};
 	}
 
-	// Token: 0x06002A8D RID: 10893 RVA: 0x0008F230 File Offset: 0x0008D430
+	// Token: 0x06003AB5 RID: 15029 RVA: 0x000F0DA4 File Offset: 0x000EEFA4
 	private List<Vector2> GetMeshPoints(GridPointManager gridPointManager)
 	{
 		float x = gridPointManager.Bounds.min.x;
@@ -520,7 +520,7 @@ public class MapRoomEntry : MonoBehaviour
 		return MapRoomEntry.m_meshPointsHelper;
 	}
 
-	// Token: 0x06002A8E RID: 10894 RVA: 0x0008F3F4 File Offset: 0x0008D5F4
+	// Token: 0x06003AB6 RID: 15030 RVA: 0x000F0F68 File Offset: 0x000EF168
 	private void CreateMapRoomEntryInstance(Ferr2DT_PathTerrain terrainPrefab, Vector2 center)
 	{
 		this.m_terrain = UnityEngine.Object.Instantiate<Ferr2DT_PathTerrain>(terrainPrefab, this.m_terrainGO.transform);
@@ -528,7 +528,7 @@ public class MapRoomEntry : MonoBehaviour
 		this.m_terrain.transform.position = mapPositionFromWorld;
 	}
 
-	// Token: 0x06002A8F RID: 10895 RVA: 0x0008F438 File Offset: 0x0008D638
+	// Token: 0x06003AB7 RID: 15031 RVA: 0x000F0FAC File Offset: 0x000EF1AC
 	private void SetBounds()
 	{
 		float num = float.MaxValue;
@@ -573,7 +573,7 @@ public class MapRoomEntry : MonoBehaviour
 		this.m_absBounds.y = this.m_absBounds.y + this.m_terrain.transform.position.y;
 	}
 
-	// Token: 0x06002A90 RID: 10896 RVA: 0x0008F674 File Offset: 0x0008D874
+	// Token: 0x06003AB8 RID: 15032 RVA: 0x000F11E8 File Offset: 0x000EF3E8
 	private void SetAppearance(BiomeType biome)
 	{
 		biome = BiomeType_RL.GetGroupedBiomeType(biome);
@@ -585,7 +585,7 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A91 RID: 10897 RVA: 0x0008F6BC File Offset: 0x0008D8BC
+	// Token: 0x06003AB9 RID: 15033 RVA: 0x000F1230 File Offset: 0x000EF430
 	private static List<Vector2> GetPointOffsets(List<Vector2> meshPoints)
 	{
 		float num = 0.06f;
@@ -640,7 +640,7 @@ public class MapRoomEntry : MonoBehaviour
 		return MapRoomEntry.m_pointOffsetHelper;
 	}
 
-	// Token: 0x06002A92 RID: 10898 RVA: 0x0008F8C0 File Offset: 0x0008DAC0
+	// Token: 0x06003ABA RID: 15034 RVA: 0x000F1434 File Offset: 0x000EF634
 	private static List<Vector2> GetMeshPoints(PolygonCollider2D collider)
 	{
 		Vector2[] path = collider.GetPath(0);
@@ -662,7 +662,7 @@ public class MapRoomEntry : MonoBehaviour
 		return MapRoomEntry.m_meshPointsHelper;
 	}
 
-	// Token: 0x06002A93 RID: 10899 RVA: 0x0008F9AC File Offset: 0x0008DBAC
+	// Token: 0x06003ABB RID: 15035 RVA: 0x000F1520 File Offset: 0x000EF720
 	public void CreateDoorIconsForRoom(GameObject horizontalDoorPrefab, GameObject verticalDoorPrefab, BaseRoom room)
 	{
 		foreach (Door door in room.Doors)
@@ -681,7 +681,7 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A94 RID: 10900 RVA: 0x0008FA50 File Offset: 0x0008DC50
+	// Token: 0x06003ABC RID: 15036 RVA: 0x000F15C4 File Offset: 0x000EF7C4
 	public void CreateDoorIconsForGridPoint(GameObject horizontalDoorPrefab, GameObject verticalDoorPrefab, GridPointManager room)
 	{
 		if (room.MergeWithGridPointManagers.Count > 0)
@@ -696,7 +696,7 @@ public class MapRoomEntry : MonoBehaviour
 		this.CreateDoorIconsForGridPoint_Internal(horizontalDoorPrefab, verticalDoorPrefab, room, false);
 	}
 
-	// Token: 0x06002A95 RID: 10901 RVA: 0x0008FAB0 File Offset: 0x0008DCB0
+	// Token: 0x06003ABD RID: 15037 RVA: 0x000F1624 File Offset: 0x000EF824
 	private void CreateDoorIconsForGridPoint_Internal(GameObject horizontalDoorPrefab, GameObject verticalDoorPrefab, GridPointManager gpRoom, bool isPartOfMergeRoom = false)
 	{
 		foreach (DoorLocation doorLocation in gpRoom.DoorLocations)
@@ -747,7 +747,7 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A96 RID: 10902 RVA: 0x0008FC94 File Offset: 0x0008DE94
+	// Token: 0x06003ABE RID: 15038 RVA: 0x000F1808 File Offset: 0x000EFA08
 	public void CreateEnemyIconsForRoom(GameObject enemyIconPrefab, GameObject enemyKilledIconPrefab, BaseRoom room)
 	{
 		EnemySpawnController[] enemySpawnControllers = room.SpawnControllerManager.EnemySpawnControllers;
@@ -764,7 +764,7 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A97 RID: 10903 RVA: 0x0008FD28 File Offset: 0x0008DF28
+	// Token: 0x06003ABF RID: 15039 RVA: 0x000F189C File Offset: 0x000EFA9C
 	public void CreateChestIconsForRoom(GameObject chestOpenIconPrefab, GameObject chestClosedIconPrefab, BaseRoom room)
 	{
 		ChestSpawnController[] chestSpawnControllers = room.SpawnControllerManager.ChestSpawnControllers;
@@ -789,7 +789,7 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A98 RID: 10904 RVA: 0x0008FE1C File Offset: 0x0008E01C
+	// Token: 0x06003AC0 RID: 15040 RVA: 0x000F1990 File Offset: 0x000EFB90
 	public void CreateChestIconsForGridPoint(GameObject chestOpenIconPrefab, GameObject chestClosedIconPrefab, GridPointManager room)
 	{
 		List<GridPointManagerContentEntry> roomContent = this.GetRoomContent(room, RoomContentType.Chest, false);
@@ -820,7 +820,7 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A99 RID: 10905 RVA: 0x0008FF44 File Offset: 0x0008E144
+	// Token: 0x06003AC1 RID: 15041 RVA: 0x000F1AB8 File Offset: 0x000EFCB8
 	public void CreateSpecialRoomIconsForRoom(GameObject specialRoomIconPrefab, GameObject specialRoomUsedIconPrefab, BaseRoom room)
 	{
 		MapRoomEntryIconOverrideController component = room.GetComponent<MapRoomEntryIconOverrideController>();
@@ -831,14 +831,14 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A9A RID: 10906 RVA: 0x0008FFCA File Offset: 0x0008E1CA
+	// Token: 0x06003AC2 RID: 15042 RVA: 0x000203DA File Offset: 0x0001E5DA
 	public void CreateSpecialIndicatorIconForRoom(GameObject specialIndicatorIcon, BaseRoom room)
 	{
 		this.m_specialIndicatorIcon = UnityEngine.Object.Instantiate<GameObject>(specialIndicatorIcon, this.m_specialIndicatorIconParentGO.transform);
 		this.m_specialIndicatorIcon.transform.position = MapController.GetMapPositionFromWorld(room.gameObject.transform.position, false);
 	}
 
-	// Token: 0x06002A9B RID: 10907 RVA: 0x0009000C File Offset: 0x0008E20C
+	// Token: 0x06003AC3 RID: 15043 RVA: 0x000F1B40 File Offset: 0x000EFD40
 	public void CreateEnemyIconsForGridPoint(GameObject enemyIconPrefab, GameObject enemyKilledIconPrefab, GridPointManager room)
 	{
 		List<GridPointManagerContentEntry> roomContent = this.GetRoomContent(room, RoomContentType.Enemy, false);
@@ -855,7 +855,7 @@ public class MapRoomEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A9C RID: 10908 RVA: 0x000900B8 File Offset: 0x0008E2B8
+	// Token: 0x06003AC4 RID: 15044 RVA: 0x000F1BEC File Offset: 0x000EFDEC
 	public void CreateSpecialRoomIconsForGridPoint(GridPointManager room, GameObject specialIndicatorIconPrefab)
 	{
 		this.RoomType = room.RoomType;
@@ -937,7 +937,7 @@ public class MapRoomEntry : MonoBehaviour
 		this.ToggleIconVisibility(MapIconType.SpecialRoomUsed, -1, false);
 	}
 
-	// Token: 0x06002A9D RID: 10909 RVA: 0x00090408 File Offset: 0x0008E608
+	// Token: 0x06003AC5 RID: 15045 RVA: 0x000F1F3C File Offset: 0x000F013C
 	private List<GridPointManagerContentEntry> GetRoomContent(GridPointManager room, RoomContentType contentType, bool excludeNotSpawned)
 	{
 		if (room != MapRoomEntry.m_lastGridPointChecked)
@@ -974,7 +974,7 @@ public class MapRoomEntry : MonoBehaviour
 		return MapRoomEntry.m_gridPointRoomContentList_STATIC;
 	}
 
-	// Token: 0x06002A9E RID: 10910 RVA: 0x00090558 File Offset: 0x0008E758
+	// Token: 0x06003AC6 RID: 15046 RVA: 0x000F208C File Offset: 0x000F028C
 	public void CreateSpecialIndicatorIconForGridPoint(GameObject specialIndicatorIcon, GridPointManager room)
 	{
 		this.m_specialIndicatorIcon = UnityEngine.Object.Instantiate<GameObject>(specialIndicatorIcon, this.m_specialIndicatorIconParentGO.transform);
@@ -982,7 +982,7 @@ public class MapRoomEntry : MonoBehaviour
 		this.m_specialIndicatorIcon.transform.position = mapPositionFromWorld;
 	}
 
-	// Token: 0x06002A9F RID: 10911 RVA: 0x000905A4 File Offset: 0x0008E7A4
+	// Token: 0x06003AC7 RID: 15047 RVA: 0x000F20D8 File Offset: 0x000F02D8
 	public bool CreateTeleporterIconForGridPoint(GameObject teleporterIconPrefab, GridPointManager room)
 	{
 		List<GridPointManagerContentEntry> roomContent = this.GetRoomContent(room, RoomContentType.Teleporter, false);
@@ -999,88 +999,88 @@ public class MapRoomEntry : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x040022C4 RID: 8900
+	// Token: 0x04002EC2 RID: 11970
 	private const float ROOM_ABS_SHRINK_AMOUNT = 0.06f;
 
-	// Token: 0x040022C5 RID: 8901
+	// Token: 0x04002EC3 RID: 11971
 	[SerializeField]
 	private GameObject m_enemyIconsParentGO;
 
-	// Token: 0x040022C6 RID: 8902
+	// Token: 0x04002EC4 RID: 11972
 	[SerializeField]
 	private GameObject m_teleporterIconParentGO;
 
-	// Token: 0x040022C7 RID: 8903
+	// Token: 0x04002EC5 RID: 11973
 	[SerializeField]
 	private GameObject m_chestIconsParentGO;
 
-	// Token: 0x040022C8 RID: 8904
+	// Token: 0x04002EC6 RID: 11974
 	[SerializeField]
 	private GameObject m_doorsParentGO;
 
-	// Token: 0x040022C9 RID: 8905
+	// Token: 0x04002EC7 RID: 11975
 	[SerializeField]
 	private GameObject m_specialRoomIconsParentGO;
 
-	// Token: 0x040022CA RID: 8906
+	// Token: 0x04002EC8 RID: 11976
 	[SerializeField]
 	private GameObject m_specialIndicatorIconParentGO;
 
-	// Token: 0x040022CB RID: 8907
+	// Token: 0x04002EC9 RID: 11977
 	[SerializeField]
 	private GameObject m_terrainGO;
 
-	// Token: 0x040022CC RID: 8908
+	// Token: 0x04002ECA RID: 11978
 	private Ferr2DT_PathTerrain m_terrain;
 
-	// Token: 0x040022CD RID: 8909
+	// Token: 0x04002ECB RID: 11979
 	private Rect m_bounds;
 
-	// Token: 0x040022CE RID: 8910
+	// Token: 0x04002ECC RID: 11980
 	private Rect m_absBounds;
 
-	// Token: 0x040022CF RID: 8911
+	// Token: 0x04002ECD RID: 11981
 	private GameObject[] m_chestOpenIconList;
 
-	// Token: 0x040022D0 RID: 8912
+	// Token: 0x04002ECE RID: 11982
 	private GameObject[] m_chestClosedIconList;
 
-	// Token: 0x040022D1 RID: 8913
+	// Token: 0x04002ECF RID: 11983
 	private GameObject[] m_enemyIconList;
 
-	// Token: 0x040022D2 RID: 8914
+	// Token: 0x04002ED0 RID: 11984
 	private GameObject[] m_enemyKilledIconList;
 
-	// Token: 0x040022D3 RID: 8915
+	// Token: 0x04002ED1 RID: 11985
 	private GameObject[] m_specialRoomIconList;
 
-	// Token: 0x040022D4 RID: 8916
+	// Token: 0x04002ED2 RID: 11986
 	private GameObject[] m_specialRoomUsedIconList;
 
-	// Token: 0x040022D5 RID: 8917
+	// Token: 0x04002ED3 RID: 11987
 	private GameObject m_specialIndicatorIcon;
 
-	// Token: 0x040022D6 RID: 8918
+	// Token: 0x04002ED4 RID: 11988
 	private int m_chestSpawnedFlag;
 
-	// Token: 0x040022E0 RID: 8928
+	// Token: 0x04002EDE RID: 11998
 	private static List<Vector2> m_meshPointsHelper = new List<Vector2>(12);
 
-	// Token: 0x040022E1 RID: 8929
+	// Token: 0x04002EDF RID: 11999
 	private static List<Vector2> m_pointOffsetHelper = new List<Vector2>(12);
 
-	// Token: 0x040022E2 RID: 8930
+	// Token: 0x04002EE0 RID: 12000
 	private static List<GameObject> m_specialIconsListHelper_STATIC = new List<GameObject>();
 
-	// Token: 0x040022E3 RID: 8931
+	// Token: 0x04002EE1 RID: 12001
 	private static List<GameObject> m_specialUsedIconsListHelper_STATIC = new List<GameObject>();
 
-	// Token: 0x040022E4 RID: 8932
+	// Token: 0x04002EE2 RID: 12002
 	private static SortedSet<GridPointManager> m_gridPointsToCheck_STATIC;
 
-	// Token: 0x040022E5 RID: 8933
+	// Token: 0x04002EE3 RID: 12003
 	private static List<GridPointManagerContentEntry> m_gridPointRoomContentList_STATIC = new List<GridPointManagerContentEntry>();
 
-	// Token: 0x040022E6 RID: 8934
+	// Token: 0x04002EE4 RID: 12004
 	private static GridPointManager m_lastGridPointChecked;
 }

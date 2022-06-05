@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004AE RID: 1198
+// Token: 0x020007BE RID: 1982
 public class TimedCritProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002BB1 RID: 11185 RVA: 0x00094B09 File Offset: 0x00092D09
+	// Token: 0x06003C36 RID: 15414 RVA: 0x000213E1 File Offset: 0x0001F5E1
 	private void OnEnable()
 	{
 		this.m_critApplied = false;
 		base.StartCoroutine(this.TimingWindowCoroutine());
 	}
 
-	// Token: 0x06002BB2 RID: 11186 RVA: 0x00094B1F File Offset: 0x00092D1F
+	// Token: 0x06003C37 RID: 15415 RVA: 0x000213F7 File Offset: 0x0001F5F7
 	private IEnumerator TimingWindowCoroutine()
 	{
 		float critWindow = Time.time + this.m_critTimingWindow.x;
@@ -39,10 +39,10 @@ public class TimedCritProjectileLogic : BaseProjectileLogic
 		yield break;
 	}
 
-	// Token: 0x04002380 RID: 9088
+	// Token: 0x04002FC4 RID: 12228
 	[SerializeField]
 	private Vector2 m_critTimingWindow;
 
-	// Token: 0x04002381 RID: 9089
+	// Token: 0x04002FC5 RID: 12229
 	private bool m_critApplied;
 }

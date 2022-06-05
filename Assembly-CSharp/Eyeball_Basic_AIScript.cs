@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000C0 RID: 192
+// Token: 0x0200011A RID: 282
 public class Eyeball_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x060004E6 RID: 1254 RVA: 0x000166AC File Offset: 0x000148AC
+	// Token: 0x060006DD RID: 1757 RVA: 0x00005640 File Offset: 0x00003840
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -17,8 +17,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000240 RID: 576
-	// (get) Token: 0x060004E7 RID: 1255 RVA: 0x000166DA File Offset: 0x000148DA
+	// Token: 0x170002E6 RID: 742
+	// (get) Token: 0x060006DE RID: 1758 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float SingleShot_TellIntro_AnimSpeed
 	{
 		get
@@ -27,8 +27,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000241 RID: 577
-	// (get) Token: 0x060004E8 RID: 1256 RVA: 0x000166E1 File Offset: 0x000148E1
+	// Token: 0x170002E7 RID: 743
+	// (get) Token: 0x060006DF RID: 1759 RVA: 0x00004565 File Offset: 0x00002765
 	protected virtual float SingleShot_TellHold_AnimSpeed
 	{
 		get
@@ -37,8 +37,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000242 RID: 578
-	// (get) Token: 0x060004E9 RID: 1257 RVA: 0x000166E8 File Offset: 0x000148E8
+	// Token: 0x170002E8 RID: 744
+	// (get) Token: 0x060006E0 RID: 1760 RVA: 0x0000566E File Offset: 0x0000386E
 	protected virtual float SingleShot_TellHold_Duration
 	{
 		get
@@ -47,8 +47,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000243 RID: 579
-	// (get) Token: 0x060004EA RID: 1258 RVA: 0x000166EF File Offset: 0x000148EF
+	// Token: 0x170002E9 RID: 745
+	// (get) Token: 0x060006E1 RID: 1761 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float SingleShot_AttackIntro_AnimSpeed
 	{
 		get
@@ -57,8 +57,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000244 RID: 580
-	// (get) Token: 0x060004EB RID: 1259 RVA: 0x000166F6 File Offset: 0x000148F6
+	// Token: 0x170002EA RID: 746
+	// (get) Token: 0x060006E2 RID: 1762 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float SingleShot_AttackIntro_Delay
 	{
 		get
@@ -67,8 +67,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000245 RID: 581
-	// (get) Token: 0x060004EC RID: 1260 RVA: 0x000166FD File Offset: 0x000148FD
+	// Token: 0x170002EB RID: 747
+	// (get) Token: 0x060006E3 RID: 1763 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float SingleShot_AttackHold_AnimSpeed
 	{
 		get
@@ -77,8 +77,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000246 RID: 582
-	// (get) Token: 0x060004ED RID: 1261 RVA: 0x00016704 File Offset: 0x00014904
+	// Token: 0x170002EC RID: 748
+	// (get) Token: 0x060006E4 RID: 1764 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float SingleShot_AttackHold_Delay
 	{
 		get
@@ -87,8 +87,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000247 RID: 583
-	// (get) Token: 0x060004EE RID: 1262 RVA: 0x0001670B File Offset: 0x0001490B
+	// Token: 0x170002ED RID: 749
+	// (get) Token: 0x060006E5 RID: 1765 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float SingleShot_Exit_AnimSpeed
 	{
 		get
@@ -97,8 +97,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000248 RID: 584
-	// (get) Token: 0x060004EF RID: 1263 RVA: 0x00016712 File Offset: 0x00014912
+	// Token: 0x170002EE RID: 750
+	// (get) Token: 0x060006E6 RID: 1766 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float SingleShot_Exit_Duration
 	{
 		get
@@ -107,8 +107,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000249 RID: 585
-	// (get) Token: 0x060004F0 RID: 1264 RVA: 0x00016719 File Offset: 0x00014919
+	// Token: 0x170002EF RID: 751
+	// (get) Token: 0x060006E7 RID: 1767 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float SingleShot_Exit_ForceIdle
 	{
 		get
@@ -117,8 +117,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700024A RID: 586
-	// (get) Token: 0x060004F1 RID: 1265 RVA: 0x00016720 File Offset: 0x00014920
+	// Token: 0x170002F0 RID: 752
+	// (get) Token: 0x060006E8 RID: 1768 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float SingleShot_Exit_AttackCD
 	{
 		get
@@ -127,8 +127,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700024B RID: 587
-	// (get) Token: 0x060004F2 RID: 1266 RVA: 0x00016727 File Offset: 0x00014927
+	// Token: 0x170002F1 RID: 753
+	// (get) Token: 0x060006E9 RID: 1769 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float MultiShot_TellIntro_AnimSpeed
 	{
 		get
@@ -137,8 +137,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700024C RID: 588
-	// (get) Token: 0x060004F3 RID: 1267 RVA: 0x0001672E File Offset: 0x0001492E
+	// Token: 0x170002F2 RID: 754
+	// (get) Token: 0x060006EA RID: 1770 RVA: 0x00004565 File Offset: 0x00002765
 	protected virtual float MultiShot_TellHold_AnimSpeed
 	{
 		get
@@ -147,8 +147,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700024D RID: 589
-	// (get) Token: 0x060004F4 RID: 1268 RVA: 0x00016735 File Offset: 0x00014935
+	// Token: 0x170002F3 RID: 755
+	// (get) Token: 0x060006EB RID: 1771 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float MultiShot_TellHold_Duration
 	{
 		get
@@ -157,8 +157,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700024E RID: 590
-	// (get) Token: 0x060004F5 RID: 1269 RVA: 0x0001673C File Offset: 0x0001493C
+	// Token: 0x170002F4 RID: 756
+	// (get) Token: 0x060006EC RID: 1772 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float MultiShot_AttackIntro_AnimSpeed
 	{
 		get
@@ -167,8 +167,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700024F RID: 591
-	// (get) Token: 0x060004F6 RID: 1270 RVA: 0x00016743 File Offset: 0x00014943
+	// Token: 0x170002F5 RID: 757
+	// (get) Token: 0x060006ED RID: 1773 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float MultiShot_AttackIntro_Delay
 	{
 		get
@@ -177,8 +177,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000250 RID: 592
-	// (get) Token: 0x060004F7 RID: 1271 RVA: 0x0001674A File Offset: 0x0001494A
+	// Token: 0x170002F6 RID: 758
+	// (get) Token: 0x060006EE RID: 1774 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float MultiShot_AttackHold_AnimSpeed
 	{
 		get
@@ -187,8 +187,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000251 RID: 593
-	// (get) Token: 0x060004F8 RID: 1272 RVA: 0x00016751 File Offset: 0x00014951
+	// Token: 0x170002F7 RID: 759
+	// (get) Token: 0x060006EF RID: 1775 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float MultiShot_AttackHold_Delay
 	{
 		get
@@ -197,8 +197,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000252 RID: 594
-	// (get) Token: 0x060004F9 RID: 1273 RVA: 0x00016758 File Offset: 0x00014958
+	// Token: 0x170002F8 RID: 760
+	// (get) Token: 0x060006F0 RID: 1776 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float MultiShot_Exit_AnimSpeed
 	{
 		get
@@ -207,8 +207,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000253 RID: 595
-	// (get) Token: 0x060004FA RID: 1274 RVA: 0x0001675F File Offset: 0x0001495F
+	// Token: 0x170002F9 RID: 761
+	// (get) Token: 0x060006F1 RID: 1777 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float MultiShot_Exit_Duration
 	{
 		get
@@ -217,8 +217,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000254 RID: 596
-	// (get) Token: 0x060004FB RID: 1275 RVA: 0x00016766 File Offset: 0x00014966
+	// Token: 0x170002FA RID: 762
+	// (get) Token: 0x060006F2 RID: 1778 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float MultiShot_Exit_ForceIdle
 	{
 		get
@@ -227,8 +227,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000255 RID: 597
-	// (get) Token: 0x060004FC RID: 1276 RVA: 0x0001676D File Offset: 0x0001496D
+	// Token: 0x170002FB RID: 763
+	// (get) Token: 0x060006F3 RID: 1779 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected virtual float MultiShot_Exit_AttackCD
 	{
 		get
@@ -237,8 +237,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000256 RID: 598
-	// (get) Token: 0x060004FD RID: 1277 RVA: 0x00016774 File Offset: 0x00014974
+	// Token: 0x170002FC RID: 764
+	// (get) Token: 0x060006F4 RID: 1780 RVA: 0x00004762 File Offset: 0x00002962
 	protected virtual int MultiShot_Attack_Amount
 	{
 		get
@@ -247,8 +247,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000257 RID: 599
-	// (get) Token: 0x060004FE RID: 1278 RVA: 0x00016777 File Offset: 0x00014977
+	// Token: 0x170002FD RID: 765
+	// (get) Token: 0x060006F5 RID: 1781 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float MultiShot_AttackHold_DelayBetweenShots
 	{
 		get
@@ -257,8 +257,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000258 RID: 600
-	// (get) Token: 0x060004FF RID: 1279 RVA: 0x0001677E File Offset: 0x0001497E
+	// Token: 0x170002FE RID: 766
+	// (get) Token: 0x060006F6 RID: 1782 RVA: 0x0000547D File Offset: 0x0000367D
 	protected virtual float MultiShot_Attack_AngleSpread
 	{
 		get
@@ -267,7 +267,7 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000500 RID: 1280 RVA: 0x00016788 File Offset: 0x00014988
+	// Token: 0x060006F7 RID: 1783 RVA: 0x0005BE80 File Offset: 0x0005A080
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -281,7 +281,7 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000501 RID: 1281 RVA: 0x000167DC File Offset: 0x000149DC
+	// Token: 0x060006F8 RID: 1784 RVA: 0x0005BED4 File Offset: 0x0005A0D4
 	public override void OnEnemyActivated()
 	{
 		base.OnEnemyActivated();
@@ -291,7 +291,7 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000502 RID: 1282 RVA: 0x0001683E File Offset: 0x00014A3E
+	// Token: 0x060006F9 RID: 1785 RVA: 0x00005675 File Offset: 0x00003875
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -320,7 +320,7 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000503 RID: 1283 RVA: 0x0001684D File Offset: 0x00014A4D
+	// Token: 0x060006FA RID: 1786 RVA: 0x00005684 File Offset: 0x00003884
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -361,8 +361,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x17000259 RID: 601
-	// (get) Token: 0x06000504 RID: 1284 RVA: 0x0001685C File Offset: 0x00014A5C
+	// Token: 0x170002FF RID: 767
+	// (get) Token: 0x060006FB RID: 1787 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ExplodingShot_TellIntro_AnimSpeed
 	{
 		get
@@ -371,8 +371,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700025A RID: 602
-	// (get) Token: 0x06000505 RID: 1285 RVA: 0x00016863 File Offset: 0x00014A63
+	// Token: 0x17000300 RID: 768
+	// (get) Token: 0x060006FC RID: 1788 RVA: 0x00004565 File Offset: 0x00002765
 	protected virtual float ExplodingShot_TellHold_AnimSpeed
 	{
 		get
@@ -381,8 +381,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700025B RID: 603
-	// (get) Token: 0x06000506 RID: 1286 RVA: 0x0001686A File Offset: 0x00014A6A
+	// Token: 0x17000301 RID: 769
+	// (get) Token: 0x060006FD RID: 1789 RVA: 0x00005693 File Offset: 0x00003893
 	protected virtual float ExplodingShot_TellHold_Duration
 	{
 		get
@@ -391,8 +391,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700025C RID: 604
-	// (get) Token: 0x06000507 RID: 1287 RVA: 0x00016871 File Offset: 0x00014A71
+	// Token: 0x17000302 RID: 770
+	// (get) Token: 0x060006FE RID: 1790 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ExplodingShot_AttackIntro_AnimSpeed
 	{
 		get
@@ -401,8 +401,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700025D RID: 605
-	// (get) Token: 0x06000508 RID: 1288 RVA: 0x00016878 File Offset: 0x00014A78
+	// Token: 0x17000303 RID: 771
+	// (get) Token: 0x060006FF RID: 1791 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float ExplodingShot_AttackIntro_Delay
 	{
 		get
@@ -411,8 +411,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700025E RID: 606
-	// (get) Token: 0x06000509 RID: 1289 RVA: 0x0001687F File Offset: 0x00014A7F
+	// Token: 0x17000304 RID: 772
+	// (get) Token: 0x06000700 RID: 1792 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ExplodingShot_AttackHold_AnimSpeed
 	{
 		get
@@ -421,8 +421,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700025F RID: 607
-	// (get) Token: 0x0600050A RID: 1290 RVA: 0x00016886 File Offset: 0x00014A86
+	// Token: 0x17000305 RID: 773
+	// (get) Token: 0x06000701 RID: 1793 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float ExplodingShot_AttackHold_Delay
 	{
 		get
@@ -431,8 +431,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000260 RID: 608
-	// (get) Token: 0x0600050B RID: 1291 RVA: 0x0001688D File Offset: 0x00014A8D
+	// Token: 0x17000306 RID: 774
+	// (get) Token: 0x06000702 RID: 1794 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ExplodingShot_Exit_AnimSpeed
 	{
 		get
@@ -441,8 +441,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000261 RID: 609
-	// (get) Token: 0x0600050C RID: 1292 RVA: 0x00016894 File Offset: 0x00014A94
+	// Token: 0x17000307 RID: 775
+	// (get) Token: 0x06000703 RID: 1795 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float ExplodingShot_Exit_Duration
 	{
 		get
@@ -451,8 +451,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000262 RID: 610
-	// (get) Token: 0x0600050D RID: 1293 RVA: 0x0001689B File Offset: 0x00014A9B
+	// Token: 0x17000308 RID: 776
+	// (get) Token: 0x06000704 RID: 1796 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float ExplodingShot_Exit_ForceIdle
 	{
 		get
@@ -461,8 +461,8 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000263 RID: 611
-	// (get) Token: 0x0600050E RID: 1294 RVA: 0x000168A2 File Offset: 0x00014AA2
+	// Token: 0x17000309 RID: 777
+	// (get) Token: 0x06000705 RID: 1797 RVA: 0x0000569A File Offset: 0x0000389A
 	protected virtual float ExplodingShot_Exit_AttackCD
 	{
 		get
@@ -471,7 +471,7 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600050F RID: 1295 RVA: 0x000168A9 File Offset: 0x00014AA9
+	// Token: 0x06000706 RID: 1798 RVA: 0x000056A1 File Offset: 0x000038A1
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -502,7 +502,7 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000510 RID: 1296 RVA: 0x000168B8 File Offset: 0x00014AB8
+	// Token: 0x06000707 RID: 1799 RVA: 0x000056B0 File Offset: 0x000038B0
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -513,7 +513,7 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000511 RID: 1297 RVA: 0x000168C0 File Offset: 0x00014AC0
+	// Token: 0x06000708 RID: 1800 RVA: 0x000056B8 File Offset: 0x000038B8
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -524,7 +524,7 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000512 RID: 1298 RVA: 0x000168C8 File Offset: 0x00014AC8
+	// Token: 0x06000709 RID: 1801 RVA: 0x000056C0 File Offset: 0x000038C0
 	private void FixedUpdate()
 	{
 		if (!base.IsInitialized)
@@ -537,7 +537,7 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000513 RID: 1299 RVA: 0x000168EC File Offset: 0x00014AEC
+	// Token: 0x0600070A RID: 1802 RVA: 0x0005BF38 File Offset: 0x0005A138
 	private void UpdateEyeball()
 	{
 		if (!this.m_faceForward)
@@ -550,27 +550,27 @@ public class Eyeball_Basic_AIScript : BaseAIScript
 		base.EnemyController.Animator.SetFloat("LookDirectionY", 0f);
 	}
 
-	// Token: 0x040008AB RID: 2219
+	// Token: 0x04000A4C RID: 2636
 	protected const string EXPLODING_SHOT_TELL_INTRO = "Explosion_Tell_Intro";
 
-	// Token: 0x040008AC RID: 2220
+	// Token: 0x04000A4D RID: 2637
 	protected const string EXPLODING_SHOT_TELL_HOLD = "Explosion_Tell_Hold";
 
-	// Token: 0x040008AD RID: 2221
+	// Token: 0x04000A4E RID: 2638
 	protected const string EXPLODING_SHOT_ATTACK_INTRO = "Explosion_Attack_Intro";
 
-	// Token: 0x040008AE RID: 2222
+	// Token: 0x04000A4F RID: 2639
 	protected const string EXPLODING_SHOT_ATTACK_HOLD = "Explosion_Attack_Hold";
 
-	// Token: 0x040008AF RID: 2223
+	// Token: 0x04000A50 RID: 2640
 	protected const string EXPLODING_SHOT_EXIT = "Explosion_Exit";
 
-	// Token: 0x040008B0 RID: 2224
+	// Token: 0x04000A51 RID: 2641
 	protected const string EXPLODING_SHOT_PROJECTILE = "EyeballBounceBoltProjectile";
 
-	// Token: 0x040008B1 RID: 2225
+	// Token: 0x04000A52 RID: 2642
 	protected const string EXPLODING_SHOT_EXPERT_PROJECTILE = "EyeballBounceBoltProjectile";
 
-	// Token: 0x040008B2 RID: 2226
+	// Token: 0x04000A53 RID: 2643
 	protected bool m_faceForward;
 }

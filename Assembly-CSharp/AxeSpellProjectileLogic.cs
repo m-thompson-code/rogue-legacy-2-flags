@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000495 RID: 1173
+// Token: 0x02000798 RID: 1944
 public class AxeSpellProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B28 RID: 11048 RVA: 0x000923F9 File Offset: 0x000905F9
+	// Token: 0x06003B71 RID: 15217 RVA: 0x00020A87 File Offset: 0x0001EC87
 	private void OnEnable()
 	{
 		if (base.SourceProjectile.CompareTag("PlayerProjectile"))
@@ -13,7 +13,7 @@ public class AxeSpellProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002B29 RID: 11049 RVA: 0x0009241A File Offset: 0x0009061A
+	// Token: 0x06003B72 RID: 15218 RVA: 0x00020AA8 File Offset: 0x0001ECA8
 	private IEnumerator TriggerSkillCritCoroutine()
 	{
 		yield return null;

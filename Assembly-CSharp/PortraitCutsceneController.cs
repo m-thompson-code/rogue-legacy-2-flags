@@ -4,11 +4,11 @@ using RLAudio;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020004DD RID: 1245
+// Token: 0x02000821 RID: 2081
 public class PortraitCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEventEmitter
 {
-	// Token: 0x17001183 RID: 4483
-	// (get) Token: 0x06002E92 RID: 11922 RVA: 0x0009E59C File Offset: 0x0009C79C
+	// Token: 0x1700173C RID: 5948
+	// (get) Token: 0x06004034 RID: 16436 RVA: 0x000236E5 File Offset: 0x000218E5
 	public TunnelSpawnController TunnelSpawner
 	{
 		get
@@ -17,13 +17,13 @@ public class PortraitCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEv
 		}
 	}
 
-	// Token: 0x17001184 RID: 4484
-	// (get) Token: 0x06002E93 RID: 11923 RVA: 0x0009E5A4 File Offset: 0x0009C7A4
-	// (set) Token: 0x06002E94 RID: 11924 RVA: 0x0009E5AC File Offset: 0x0009C7AC
+	// Token: 0x1700173D RID: 5949
+	// (get) Token: 0x06004035 RID: 16437 RVA: 0x000236ED File Offset: 0x000218ED
+	// (set) Token: 0x06004036 RID: 16438 RVA: 0x000236F5 File Offset: 0x000218F5
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17001185 RID: 4485
-	// (get) Token: 0x06002E95 RID: 11925 RVA: 0x0009E5B5 File Offset: 0x0009C7B5
+	// Token: 0x1700173E RID: 5950
+	// (get) Token: 0x06004037 RID: 16439 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -32,20 +32,20 @@ public class PortraitCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEv
 		}
 	}
 
-	// Token: 0x06002E96 RID: 11926 RVA: 0x0009E5BD File Offset: 0x0009C7BD
+	// Token: 0x06004038 RID: 16440 RVA: 0x000236FE File Offset: 0x000218FE
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x06002E97 RID: 11927 RVA: 0x0009E5D0 File Offset: 0x0009C7D0
+	// Token: 0x06004039 RID: 16441 RVA: 0x00023711 File Offset: 0x00021911
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x06002E98 RID: 11928 RVA: 0x0009E5F7 File Offset: 0x0009C7F7
+	// Token: 0x0600403A RID: 16442 RVA: 0x00023738 File Offset: 0x00021938
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -54,7 +54,7 @@ public class PortraitCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEv
 		}
 	}
 
-	// Token: 0x06002E99 RID: 11929 RVA: 0x0009E623 File Offset: 0x0009C823
+	// Token: 0x0600403B RID: 16443 RVA: 0x00023764 File Offset: 0x00021964
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (CutsceneManager.IsCutsceneActive)
@@ -63,14 +63,14 @@ public class PortraitCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEv
 		}
 	}
 
-	// Token: 0x06002E9A RID: 11930 RVA: 0x0009E632 File Offset: 0x0009C832
+	// Token: 0x0600403C RID: 16444 RVA: 0x00023773 File Offset: 0x00021973
 	private void RunBossDoorAnimation()
 	{
 		base.StopAllCoroutines();
 		base.StartCoroutine(this.BossDoorAnimationCoroutine());
 	}
 
-	// Token: 0x06002E9B RID: 11931 RVA: 0x0009E647 File Offset: 0x0009C847
+	// Token: 0x0600403D RID: 16445 RVA: 0x00023788 File Offset: 0x00021988
 	private IEnumerator BossDoorAnimationCoroutine()
 	{
 		CutsceneManager.SetTraitsEnabled(false);
@@ -173,26 +173,26 @@ public class PortraitCutsceneController : MonoBehaviour, IRoomConsumer, IAudioEv
 		goto IL_1FA;
 	}
 
-	// Token: 0x04002527 RID: 9511
+	// Token: 0x0400323D RID: 12861
 	private const string DOOR_UNLOCK_LEFT_AUDIO_PATH = "event:/Cut_Scenes/sfx_Cutscene_doorUnlock_left";
 
-	// Token: 0x04002528 RID: 9512
+	// Token: 0x0400323E RID: 12862
 	private const string DOOR_UNLOCK_CENTER_AUDIO_PATH = "event:/Cut_Scenes/sfx_Cutscene_doorUnlock_center";
 
-	// Token: 0x04002529 RID: 9513
+	// Token: 0x0400323F RID: 12863
 	private const string DOOR_UNLOCK_RIGHT_AUDIO_PATH = "event:/Cut_Scenes/sfx_Cutscene_doorUnlock_right";
 
-	// Token: 0x0400252A RID: 9514
+	// Token: 0x04003240 RID: 12864
 	private const string DOOR_OPEN_AUDIO_PATH = "event:/Cut_Scenes/sfx_Cutscene_doorUnlock_doorOpen";
 
-	// Token: 0x0400252B RID: 9515
+	// Token: 0x04003241 RID: 12865
 	[SerializeField]
 	private TunnelSpawnController m_tunnelSpawner;
 
-	// Token: 0x0400252C RID: 9516
+	// Token: 0x04003242 RID: 12866
 	[SerializeField]
 	private GameObject m_cutsceneCameraGO;
 
-	// Token: 0x0400252D RID: 9517
+	// Token: 0x04003243 RID: 12867
 	private WaitRL_Yield m_waitYield;
 }

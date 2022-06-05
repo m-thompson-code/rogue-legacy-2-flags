@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x0200058D RID: 1421
+// Token: 0x02000986 RID: 2438
 public enum DeathDefiedType
 {
-	// Token: 0x0400295B RID: 10587
+	// Token: 0x04003919 RID: 14617
 	None,
-	// Token: 0x0400295C RID: 10588
+	// Token: 0x0400391A RID: 14618
 	Death_Dodge,
-	// Token: 0x0400295D RID: 10589
+	// Token: 0x0400391B RID: 14619
 	ExtraLife,
-	// Token: 0x0400295E RID: 10590
+	// Token: 0x0400391C RID: 14620
 	FailedChallenge,
-	// Token: 0x0400295F RID: 10591
+	// Token: 0x0400391D RID: 14621
 	ExtraLife_Unity
 }

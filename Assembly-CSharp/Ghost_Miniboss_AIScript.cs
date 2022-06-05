@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000F0 RID: 240
+// Token: 0x02000186 RID: 390
 public class Ghost_Miniboss_AIScript : Ghost_Basic_AIScript
 {
-	// Token: 0x170003F2 RID: 1010
-	// (get) Token: 0x0600075F RID: 1887 RVA: 0x0001A62A File Offset: 0x0001882A
+	// Token: 0x1700050E RID: 1294
+	// (get) Token: 0x06000AB8 RID: 2744 RVA: 0x00005065 File Offset: 0x00003265
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -14,8 +14,8 @@ public class Ghost_Miniboss_AIScript : Ghost_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003F3 RID: 1011
-	// (get) Token: 0x06000760 RID: 1888 RVA: 0x0001A63B File Offset: 0x0001883B
+	// Token: 0x1700050F RID: 1295
+	// (get) Token: 0x06000AB9 RID: 2745 RVA: 0x00006C26 File Offset: 0x00004E26
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -24,8 +24,8 @@ public class Ghost_Miniboss_AIScript : Ghost_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003F4 RID: 1012
-	// (get) Token: 0x06000761 RID: 1889 RVA: 0x0001A64C File Offset: 0x0001884C
+	// Token: 0x17000510 RID: 1296
+	// (get) Token: 0x06000ABA RID: 2746 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float m_scare_TellIntroAndHold_Delay
 	{
 		get
@@ -34,8 +34,8 @@ public class Ghost_Miniboss_AIScript : Ghost_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003F5 RID: 1013
-	// (get) Token: 0x06000762 RID: 1890 RVA: 0x0001A653 File Offset: 0x00018853
+	// Token: 0x17000511 RID: 1297
+	// (get) Token: 0x06000ABB RID: 2747 RVA: 0x00005FB1 File Offset: 0x000041B1
 	protected override float m_scare_Exit_ForceIdle
 	{
 		get
@@ -44,8 +44,8 @@ public class Ghost_Miniboss_AIScript : Ghost_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003F6 RID: 1014
-	// (get) Token: 0x06000763 RID: 1891 RVA: 0x0001A65A File Offset: 0x0001885A
+	// Token: 0x17000512 RID: 1298
+	// (get) Token: 0x06000ABC RID: 2748 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected override bool m_scare_fireCardinalProjectiles
 	{
 		get
@@ -54,8 +54,8 @@ public class Ghost_Miniboss_AIScript : Ghost_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003F7 RID: 1015
-	// (get) Token: 0x06000764 RID: 1892 RVA: 0x0001A65D File Offset: 0x0001885D
+	// Token: 0x17000513 RID: 1299
+	// (get) Token: 0x06000ABD RID: 2749 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected override bool m_scare_fireDiagonalProjectiles
 	{
 		get
@@ -64,8 +64,8 @@ public class Ghost_Miniboss_AIScript : Ghost_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003F8 RID: 1016
-	// (get) Token: 0x06000765 RID: 1893 RVA: 0x0001A660 File Offset: 0x00018860
+	// Token: 0x17000514 RID: 1300
+	// (get) Token: 0x06000ABE RID: 2750 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_scare_fireMinibossProjectiles
 	{
 		get
@@ -74,8 +74,8 @@ public class Ghost_Miniboss_AIScript : Ghost_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003F9 RID: 1017
-	// (get) Token: 0x06000766 RID: 1894 RVA: 0x0001A663 File Offset: 0x00018863
+	// Token: 0x17000515 RID: 1301
+	// (get) Token: 0x06000ABF RID: 2751 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_scare_isMiniboss
 	{
 		get

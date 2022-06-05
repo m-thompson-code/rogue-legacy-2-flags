@@ -4,18 +4,18 @@ using UnityEngine;
 
 namespace SceneManagement_RL
 {
-	// Token: 0x020008CA RID: 2250
+	// Token: 0x02000E34 RID: 3636
 	public interface ITransition
 	{
-		// Token: 0x17001803 RID: 6147
-		// (get) Token: 0x060049D9 RID: 18905
+		// Token: 0x170020DD RID: 8413
+		// (get) Token: 0x06006674 RID: 26228
 		GameObject GameObject { get; }
 
-		// Token: 0x17001804 RID: 6148
-		// (get) Token: 0x060049DA RID: 18906
+		// Token: 0x170020DE RID: 8414
+		// (get) Token: 0x06006675 RID: 26229
 		TransitionID ID { get; }
 
-		// Token: 0x060049DB RID: 18907
+		// Token: 0x06006676 RID: 26230
 		IEnumerator Run();
 	}
 }

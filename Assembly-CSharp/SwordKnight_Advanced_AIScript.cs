@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000139 RID: 313
+// Token: 0x02000225 RID: 549
 public class SwordKnight_Advanced_AIScript : SwordKnight_Basic_AIScript
 {
-	// Token: 0x1700054A RID: 1354
-	// (get) Token: 0x060009DF RID: 2527 RVA: 0x0001FC64 File Offset: 0x0001DE64
+	// Token: 0x17000712 RID: 1810
+	// (get) Token: 0x06000F3C RID: 3900 RVA: 0x000052B0 File Offset: 0x000034B0
 	protected override float m_slash_Attack_Speed
 	{
 		get
@@ -13,8 +13,8 @@ public class SwordKnight_Advanced_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700054B RID: 1355
-	// (get) Token: 0x060009E0 RID: 2528 RVA: 0x0001FC6B File Offset: 0x0001DE6B
+	// Token: 0x17000713 RID: 1811
+	// (get) Token: 0x06000F3D RID: 3901 RVA: 0x00003FB0 File Offset: 0x000021B0
 	protected override float m_slash_Attack_Duration
 	{
 		get

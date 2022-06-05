@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000724 RID: 1828
+// Token: 0x02000BD7 RID: 3031
 public class DialoguePortraitType_RL
 {
 }

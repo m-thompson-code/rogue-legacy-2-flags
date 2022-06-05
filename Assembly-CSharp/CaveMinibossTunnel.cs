@@ -3,15 +3,15 @@ using FMODUnity;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000565 RID: 1381
+// Token: 0x02000935 RID: 2357
 public class CaveMinibossTunnel : Tunnel
 {
-	// Token: 0x17001264 RID: 4708
-	// (get) Token: 0x060032AF RID: 12975 RVA: 0x000AB74B File Offset: 0x000A994B
-	// (set) Token: 0x060032B0 RID: 12976 RVA: 0x000AB753 File Offset: 0x000A9953
+	// Token: 0x17001929 RID: 6441
+	// (get) Token: 0x06004784 RID: 18308 RVA: 0x0002736C File Offset: 0x0002556C
+	// (set) Token: 0x06004785 RID: 18309 RVA: 0x00027374 File Offset: 0x00025574
 	public bool IsWhiteTunnel { get; set; }
 
-	// Token: 0x060032B1 RID: 12977 RVA: 0x000AB75C File Offset: 0x000A995C
+	// Token: 0x06004786 RID: 18310 RVA: 0x00115FF0 File Offset: 0x001141F0
 	public override void SetIsLocked(bool isLocked)
 	{
 		if ((this.IsWhiteTunnel && SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.CaveMiniboss_White_Defeated)) || (!this.IsWhiteTunnel && SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.CaveMiniboss_Black_Defeated)))
@@ -26,7 +26,7 @@ public class CaveMinibossTunnel : Tunnel
 		}
 	}
 
-	// Token: 0x060032B2 RID: 12978 RVA: 0x000AB7C4 File Offset: 0x000A99C4
+	// Token: 0x06004787 RID: 18311 RVA: 0x00116058 File Offset: 0x00114258
 	protected override void OnPlayerInteractedWithTunnel(GameObject otherObj)
 	{
 		Vector2 position = base.transform.position;
@@ -66,7 +66,7 @@ public class CaveMinibossTunnel : Tunnel
 		base.OnPlayerInteractedWithTunnel(otherObj);
 	}
 
-	// Token: 0x040027AE RID: 10158
+	// Token: 0x040036DC RID: 14044
 	[SerializeField]
 	private StudioEventEmitter m_lockedEventEmitter;
 }

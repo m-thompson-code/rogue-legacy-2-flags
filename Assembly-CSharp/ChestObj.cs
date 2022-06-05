@@ -8,46 +8,46 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x020003FB RID: 1019
+// Token: 0x020006A6 RID: 1702
 public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj, ITerrainOnEnterHitResponse, IHitResponse
 {
-	// Token: 0x17000F35 RID: 3893
-	// (get) Token: 0x060025CE RID: 9678 RVA: 0x0007CCF5 File Offset: 0x0007AEF5
-	// (set) Token: 0x060025CF RID: 9679 RVA: 0x0007CCFD File Offset: 0x0007AEFD
+	// Token: 0x170013E6 RID: 5094
+	// (get) Token: 0x06003444 RID: 13380 RVA: 0x0001CB26 File Offset: 0x0001AD26
+	// (set) Token: 0x06003445 RID: 13381 RVA: 0x0001CB2E File Offset: 0x0001AD2E
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x17000F36 RID: 3894
-	// (get) Token: 0x060025D0 RID: 9680 RVA: 0x0007CD06 File Offset: 0x0007AF06
-	// (set) Token: 0x060025D1 RID: 9681 RVA: 0x0007CD0E File Offset: 0x0007AF0E
+	// Token: 0x170013E7 RID: 5095
+	// (get) Token: 0x06003446 RID: 13382 RVA: 0x0001CB37 File Offset: 0x0001AD37
+	// (set) Token: 0x06003447 RID: 13383 RVA: 0x0001CB3F File Offset: 0x0001AD3F
 	public bool IsAwakeCalled { get; protected set; }
 
-	// Token: 0x17000F37 RID: 3895
-	// (get) Token: 0x060025D2 RID: 9682 RVA: 0x0007CD17 File Offset: 0x0007AF17
-	// (set) Token: 0x060025D3 RID: 9683 RVA: 0x0007CD1F File Offset: 0x0007AF1F
+	// Token: 0x170013E8 RID: 5096
+	// (get) Token: 0x06003448 RID: 13384 RVA: 0x0001CB48 File Offset: 0x0001AD48
+	// (set) Token: 0x06003449 RID: 13385 RVA: 0x0001CB50 File Offset: 0x0001AD50
 	public SpecialItemType SpecialItemOverride { get; set; }
 
-	// Token: 0x17000F38 RID: 3896
-	// (get) Token: 0x060025D4 RID: 9684 RVA: 0x0007CD28 File Offset: 0x0007AF28
-	// (set) Token: 0x060025D5 RID: 9685 RVA: 0x0007CD30 File Offset: 0x0007AF30
+	// Token: 0x170013E9 RID: 5097
+	// (get) Token: 0x0600344A RID: 13386 RVA: 0x0001CB59 File Offset: 0x0001AD59
+	// (set) Token: 0x0600344B RID: 13387 RVA: 0x0001CB61 File Offset: 0x0001AD61
 	public BossID BossID { get; private set; }
 
-	// Token: 0x17000F39 RID: 3897
-	// (get) Token: 0x060025D6 RID: 9686 RVA: 0x0007CD39 File Offset: 0x0007AF39
-	// (set) Token: 0x060025D7 RID: 9687 RVA: 0x0007CD41 File Offset: 0x0007AF41
+	// Token: 0x170013EA RID: 5098
+	// (get) Token: 0x0600344C RID: 13388 RVA: 0x0001CB6A File Offset: 0x0001AD6A
+	// (set) Token: 0x0600344D RID: 13389 RVA: 0x0001CB72 File Offset: 0x0001AD72
 	public int Gold { get; private set; }
 
-	// Token: 0x17000F3A RID: 3898
-	// (get) Token: 0x060025D8 RID: 9688 RVA: 0x0007CD4A File Offset: 0x0007AF4A
-	// (set) Token: 0x060025D9 RID: 9689 RVA: 0x0007CD52 File Offset: 0x0007AF52
+	// Token: 0x170013EB RID: 5099
+	// (get) Token: 0x0600344E RID: 13390 RVA: 0x0001CB7B File Offset: 0x0001AD7B
+	// (set) Token: 0x0600344F RID: 13391 RVA: 0x0001CB83 File Offset: 0x0001AD83
 	public bool IsInitialised { get; private set; }
 
-	// Token: 0x17000F3B RID: 3899
-	// (get) Token: 0x060025DA RID: 9690 RVA: 0x0007CD5B File Offset: 0x0007AF5B
-	// (set) Token: 0x060025DB RID: 9691 RVA: 0x0007CD63 File Offset: 0x0007AF63
+	// Token: 0x170013EC RID: 5100
+	// (get) Token: 0x06003450 RID: 13392 RVA: 0x0001CB8C File Offset: 0x0001AD8C
+	// (set) Token: 0x06003451 RID: 13393 RVA: 0x0001CB94 File Offset: 0x0001AD94
 	public ChestLockState LockState { get; private set; }
 
-	// Token: 0x17000F3C RID: 3900
-	// (get) Token: 0x060025DC RID: 9692 RVA: 0x0007CD6C File Offset: 0x0007AF6C
+	// Token: 0x170013ED RID: 5101
+	// (get) Token: 0x06003452 RID: 13394 RVA: 0x0001CB9D File Offset: 0x0001AD9D
 	public bool IsLocked
 	{
 		get
@@ -56,38 +56,38 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		}
 	}
 
-	// Token: 0x17000F3D RID: 3901
-	// (get) Token: 0x060025DD RID: 9693 RVA: 0x0007CD82 File Offset: 0x0007AF82
-	// (set) Token: 0x060025DE RID: 9694 RVA: 0x0007CD8A File Offset: 0x0007AF8A
+	// Token: 0x170013EE RID: 5102
+	// (get) Token: 0x06003453 RID: 13395 RVA: 0x0001CBB3 File Offset: 0x0001ADB3
+	// (set) Token: 0x06003454 RID: 13396 RVA: 0x0001CBBB File Offset: 0x0001ADBB
 	public int Level { get; private set; }
 
-	// Token: 0x17000F3E RID: 3902
-	// (get) Token: 0x060025DF RID: 9695 RVA: 0x0007CD93 File Offset: 0x0007AF93
-	// (set) Token: 0x060025E0 RID: 9696 RVA: 0x0007CD9B File Offset: 0x0007AF9B
+	// Token: 0x170013EF RID: 5103
+	// (get) Token: 0x06003455 RID: 13397 RVA: 0x0001CBC4 File Offset: 0x0001ADC4
+	// (set) Token: 0x06003456 RID: 13398 RVA: 0x0001CBCC File Offset: 0x0001ADCC
 	public ChestType ChestType { get; private set; }
 
-	// Token: 0x17000F3F RID: 3903
-	// (get) Token: 0x060025E1 RID: 9697 RVA: 0x0007CDA4 File Offset: 0x0007AFA4
-	// (set) Token: 0x060025E2 RID: 9698 RVA: 0x0007CDAC File Offset: 0x0007AFAC
+	// Token: 0x170013F0 RID: 5104
+	// (get) Token: 0x06003457 RID: 13399 RVA: 0x0001CBD5 File Offset: 0x0001ADD5
+	// (set) Token: 0x06003458 RID: 13400 RVA: 0x0001CBDD File Offset: 0x0001ADDD
 	public bool IsOpen { get; private set; }
 
-	// Token: 0x17000F40 RID: 3904
-	// (get) Token: 0x060025E3 RID: 9699 RVA: 0x0007CDB5 File Offset: 0x0007AFB5
-	// (set) Token: 0x060025E4 RID: 9700 RVA: 0x0007CDBD File Offset: 0x0007AFBD
+	// Token: 0x170013F1 RID: 5105
+	// (get) Token: 0x06003459 RID: 13401 RVA: 0x0001CBE6 File Offset: 0x0001ADE6
+	// (set) Token: 0x0600345A RID: 13402 RVA: 0x0001CBEE File Offset: 0x0001ADEE
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17000F41 RID: 3905
-	// (get) Token: 0x060025E5 RID: 9701 RVA: 0x0007CDC6 File Offset: 0x0007AFC6
-	// (set) Token: 0x060025E6 RID: 9702 RVA: 0x0007CDCE File Offset: 0x0007AFCE
+	// Token: 0x170013F2 RID: 5106
+	// (get) Token: 0x0600345B RID: 13403 RVA: 0x0001CBF7 File Offset: 0x0001ADF7
+	// (set) Token: 0x0600345C RID: 13404 RVA: 0x0001CBFF File Offset: 0x0001ADFF
 	public Interactable Interactable { get; private set; }
 
-	// Token: 0x17000F42 RID: 3906
-	// (get) Token: 0x060025E7 RID: 9703 RVA: 0x0007CDD7 File Offset: 0x0007AFD7
-	// (set) Token: 0x060025E8 RID: 9704 RVA: 0x0007CDDF File Offset: 0x0007AFDF
+	// Token: 0x170013F3 RID: 5107
+	// (get) Token: 0x0600345D RID: 13405 RVA: 0x0001CC08 File Offset: 0x0001AE08
+	// (set) Token: 0x0600345E RID: 13406 RVA: 0x0001CC10 File Offset: 0x0001AE10
 	public int ChestIndex { get; private set; }
 
-	// Token: 0x17000F43 RID: 3907
-	// (get) Token: 0x060025E9 RID: 9705 RVA: 0x0007CDE8 File Offset: 0x0007AFE8
+	// Token: 0x170013F4 RID: 5108
+	// (get) Token: 0x0600345F RID: 13407 RVA: 0x0001CC19 File Offset: 0x0001AE19
 	public IRelayLink OnOpenedRelay
 	{
 		get
@@ -96,7 +96,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		}
 	}
 
-	// Token: 0x060025EA RID: 9706 RVA: 0x0007CDF8 File Offset: 0x0007AFF8
+	// Token: 0x06003460 RID: 13408 RVA: 0x000DC864 File Offset: 0x000DAA64
 	private void Awake()
 	{
 		this.m_animator = base.GetComponentInChildren<Animator>();
@@ -109,19 +109,19 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		this.IsAwakeCalled = true;
 	}
 
-	// Token: 0x060025EB RID: 9707 RVA: 0x0007CE85 File Offset: 0x0007B085
+	// Token: 0x06003461 RID: 13409 RVA: 0x0001CC26 File Offset: 0x0001AE26
 	public void SetChestIndex(int index)
 	{
 		this.ChestIndex = index;
 	}
 
-	// Token: 0x060025EC RID: 9708 RVA: 0x0007CE8E File Offset: 0x0007B08E
+	// Token: 0x06003462 RID: 13410 RVA: 0x0001CC2F File Offset: 0x0001AE2F
 	private void OnDestroy()
 	{
 		this.Interactable.TriggerOnEnterEvent.RemoveListener(new UnityAction<GameObject>(this.OnChestInteractedWith));
 	}
 
-	// Token: 0x060025ED RID: 9709 RVA: 0x0007CEAC File Offset: 0x0007B0AC
+	// Token: 0x06003463 RID: 13411 RVA: 0x0001CC4D File Offset: 0x0001AE4D
 	private void OnChestInteractedWith(GameObject otherObj)
 	{
 		if (!this.IsOpen)
@@ -130,7 +130,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		}
 	}
 
-	// Token: 0x060025EE RID: 9710 RVA: 0x0007CEBC File Offset: 0x0007B0BC
+	// Token: 0x06003464 RID: 13412 RVA: 0x000DC8F4 File Offset: 0x000DAAF4
 	public void ForceOpenChest()
 	{
 		this.m_ambientAudioEvent.Stop();
@@ -143,7 +143,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		this.IsOpen = true;
 	}
 
-	// Token: 0x060025EF RID: 9711 RVA: 0x0007CF3C File Offset: 0x0007B13C
+	// Token: 0x06003465 RID: 13413 RVA: 0x000DC974 File Offset: 0x000DAB74
 	private void OpenChest()
 	{
 		if (this.IsLocked)
@@ -177,7 +177,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		base.StartCoroutine(this.OpenChestAnimCoroutine());
 	}
 
-	// Token: 0x060025F0 RID: 9712 RVA: 0x0007D04C File Offset: 0x0007B24C
+	// Token: 0x06003466 RID: 13414 RVA: 0x000DCA84 File Offset: 0x000DAC84
 	public void SetSparkleParticleOpacity(float opacity)
 	{
 		opacity = Mathf.Clamp(1f - opacity, 0f, 1f);
@@ -217,7 +217,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		this.m_currentParticleSystemOpacity = opacity;
 	}
 
-	// Token: 0x060025F1 RID: 9713 RVA: 0x0007D12C File Offset: 0x0007B32C
+	// Token: 0x06003467 RID: 13415 RVA: 0x0001CC5D File Offset: 0x0001AE5D
 	private IEnumerator OpenChestAnimCoroutine()
 	{
 		SpecialItemType rewardType = this.GetSpecialItemTypeToDrop();
@@ -360,7 +360,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		yield break;
 	}
 
-	// Token: 0x060025F2 RID: 9714 RVA: 0x0007D13C File Offset: 0x0007B33C
+	// Token: 0x06003468 RID: 13416 RVA: 0x000DCB64 File Offset: 0x000DAD64
 	private void DropRewardFromRegularChest(SpecialItemType itemDropType, ISpecialItemDrop specialItemDrop, int chestLevel)
 	{
 		int num = 0;
@@ -407,7 +407,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.ChestOpened, this, this.m_chestArgs);
 	}
 
-	// Token: 0x060025F3 RID: 9715 RVA: 0x0007D280 File Offset: 0x0007B480
+	// Token: 0x06003469 RID: 13417 RVA: 0x000DCCA8 File Offset: 0x000DAEA8
 	private int GetOreDropAmount(ItemDropType oreDropType, int chestLevel)
 	{
 		float num = (float)((oreDropType == ItemDropType.RuneOre) ? 170 : 190);
@@ -415,7 +415,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		return (int)(num + (float)chestLevel * num2);
 	}
 
-	// Token: 0x060025F4 RID: 9716 RVA: 0x0007D2B8 File Offset: 0x0007B4B8
+	// Token: 0x0600346A RID: 13418 RVA: 0x000DCCE0 File Offset: 0x000DAEE0
 	private void DropRewardFromBossChest()
 	{
 		if (this.BossID != BossID.None)
@@ -451,7 +451,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		});
 	}
 
-	// Token: 0x060025F5 RID: 9717 RVA: 0x0007D428 File Offset: 0x0007B628
+	// Token: 0x0600346B RID: 13419 RVA: 0x000DCE50 File Offset: 0x000DB050
 	private bool IsVariantBossChest(BossID bossID)
 	{
 		if (bossID <= BossID.Forest_Boss)
@@ -487,7 +487,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		return false;
 	}
 
-	// Token: 0x060025F6 RID: 9718 RVA: 0x0007D4B4 File Offset: 0x0007B6B4
+	// Token: 0x0600346C RID: 13420 RVA: 0x000DCEDC File Offset: 0x000DB0DC
 	private void DropRegularRewardFromBlackChest(SpecialItemType itemDropType, ISpecialItemDrop specialItemDrop, int level)
 	{
 		int oreDropAmount = this.GetOreDropAmount(ItemDropType.EquipmentOre, level);
@@ -514,7 +514,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.ChestOpened, this, this.m_chestArgs);
 	}
 
-	// Token: 0x060025F7 RID: 9719 RVA: 0x0007D594 File Offset: 0x0007B794
+	// Token: 0x0600346D RID: 13421 RVA: 0x000DCFBC File Offset: 0x000DB1BC
 	private ISpecialItemDrop CalculateSpecialItemDropObj(SpecialItemType specialItemType)
 	{
 		bool flag = true;
@@ -571,7 +571,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		return specialItemDrop;
 	}
 
-	// Token: 0x060025F8 RID: 9720 RVA: 0x0007D670 File Offset: 0x0007B870
+	// Token: 0x0600346E RID: 13422 RVA: 0x000DD098 File Offset: 0x000DB298
 	private SpecialItemType GetSpecialItemTypeToDrop()
 	{
 		if (this.SpecialItemOverride != SpecialItemType.None)
@@ -591,7 +591,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		return (SpecialItemType)chestItemTypeOdds[randomOdds].x;
 	}
 
-	// Token: 0x060025F9 RID: 9721 RVA: 0x0007D6DC File Offset: 0x0007B8DC
+	// Token: 0x0600346F RID: 13423 RVA: 0x000DD104 File Offset: 0x000DB304
 	private List<float> GetDropOdds(Vector2[] dropTypeArray)
 	{
 		ChestObj.m_dropOddsHelper_STATIC.Clear();
@@ -603,7 +603,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		return ChestObj.m_dropOddsHelper_STATIC;
 	}
 
-	// Token: 0x060025FA RID: 9722 RVA: 0x0007D720 File Offset: 0x0007B920
+	// Token: 0x06003470 RID: 13424 RVA: 0x000DD148 File Offset: 0x000DB348
 	public void Initialise(ChestType chestType, int level, int gold, BossID bossID = BossID.None)
 	{
 		this.ChestType = chestType;
@@ -625,7 +625,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		this.IsInitialised = true;
 	}
 
-	// Token: 0x060025FB RID: 9723 RVA: 0x0007D7A4 File Offset: 0x0007B9A4
+	// Token: 0x06003471 RID: 13425 RVA: 0x000DD1CC File Offset: 0x000DB3CC
 	public void SetChestLockState(ChestLockState lockState)
 	{
 		this.LockState = lockState;
@@ -655,7 +655,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		}
 	}
 
-	// Token: 0x060025FC RID: 9724 RVA: 0x0007D870 File Offset: 0x0007BA70
+	// Token: 0x06003472 RID: 13426 RVA: 0x000DD298 File Offset: 0x000DB498
 	public void SetOpacity(float opacity)
 	{
 		if (opacity < 0f || opacity > 1f)
@@ -667,13 +667,13 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		this.m_mesh.SetPropertyBlock(this.m_matPropertyBlock);
 	}
 
-	// Token: 0x060025FD RID: 9725 RVA: 0x0007D8DA File Offset: 0x0007BADA
+	// Token: 0x06003473 RID: 13427 RVA: 0x0001CC6C File Offset: 0x0001AE6C
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 	}
 
-	// Token: 0x060025FE RID: 9726 RVA: 0x0007D8E3 File Offset: 0x0007BAE3
+	// Token: 0x06003474 RID: 13428 RVA: 0x0001CC75 File Offset: 0x0001AE75
 	private void OnDisable()
 	{
 		if (this.m_particleSystem && this.m_currentParticleSystemOpacity != 1f)
@@ -684,7 +684,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		DisablePooledObjectManager.DisablePooledObject(this, false);
 	}
 
-	// Token: 0x060025FF RID: 9727 RVA: 0x0007D918 File Offset: 0x0007BB18
+	// Token: 0x06003475 RID: 13429 RVA: 0x0001CCAA File Offset: 0x0001AEAA
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (otherHBController.RootGameObject.CompareTag("Player") && this.Interactable.IsInteractableActive)
@@ -693,7 +693,7 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		}
 	}
 
-	// Token: 0x06002600 RID: 9728 RVA: 0x0007D944 File Offset: 0x0007BB44
+	// Token: 0x06003476 RID: 13430 RVA: 0x000DD304 File Offset: 0x000DB504
 	public void ResetValues()
 	{
 		this.SetChestLockState(ChestLockState.Unlocked);
@@ -709,70 +709,70 @@ public class ChestObj : MonoBehaviour, IRoomConsumer, IRootObj, IGenericPoolObj,
 		this.IsOpen = false;
 	}
 
-	// Token: 0x06002603 RID: 9731 RVA: 0x0007DA2E File Offset: 0x0007BC2E
+	// Token: 0x06003479 RID: 13433 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x06002604 RID: 9732 RVA: 0x0007DA36 File Offset: 0x0007BC36
+	// Token: 0x0600347A RID: 13434 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04001FAA RID: 8106
+	// Token: 0x04002A53 RID: 10835
 	[SerializeField]
 	private StudioEventEmitter m_openedAudioEvent;
 
-	// Token: 0x04001FAB RID: 8107
+	// Token: 0x04002A54 RID: 10836
 	[SerializeField]
 	private StudioEventEmitter m_ambientAudioEvent;
 
-	// Token: 0x04001FAC RID: 8108
+	// Token: 0x04002A55 RID: 10837
 	[SerializeField]
 	private StudioEventEmitter m_proximityAudioEvent;
 
-	// Token: 0x04001FAD RID: 8109
+	// Token: 0x04002A56 RID: 10838
 	[SerializeField]
 	private HitboxControllerLite m_hitboxController;
 
-	// Token: 0x04001FAE RID: 8110
+	// Token: 0x04002A57 RID: 10839
 	private Animator m_animator;
 
-	// Token: 0x04001FAF RID: 8111
+	// Token: 0x04002A58 RID: 10840
 	private SkinnedMeshRenderer m_mesh;
 
-	// Token: 0x04001FB0 RID: 8112
+	// Token: 0x04002A59 RID: 10841
 	private List<ISpecialItemDrop> m_specialItemDropsList = new List<ISpecialItemDrop>();
 
-	// Token: 0x04001FB1 RID: 8113
+	// Token: 0x04002A5A RID: 10842
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04001FB2 RID: 8114
+	// Token: 0x04002A5B RID: 10843
 	private WaitUntil m_disableInputYield;
 
-	// Token: 0x04001FB3 RID: 8115
+	// Token: 0x04002A5C RID: 10844
 	private ChestOpenedEventArgs m_chestArgs;
 
-	// Token: 0x04001FB4 RID: 8116
+	// Token: 0x04002A5D RID: 10845
 	private MaterialPropertyBlock m_matPropertyBlock;
 
-	// Token: 0x04001FB5 RID: 8117
+	// Token: 0x04002A5E RID: 10846
 	private ParticleSystem m_particleSystem;
 
-	// Token: 0x04001FB6 RID: 8118
+	// Token: 0x04002A5F RID: 10847
 	private float m_currentParticleSystemOpacity = 1f;
 
-	// Token: 0x04001FB7 RID: 8119
+	// Token: 0x04002A60 RID: 10848
 	private int m_previousBossNGLevel = -1;
 
-	// Token: 0x04001FB8 RID: 8120
+	// Token: 0x04002A61 RID: 10849
 	private Vector3 m_dropPosition;
 
-	// Token: 0x04001FC6 RID: 8134
+	// Token: 0x04002A6F RID: 10863
 	private Relay m_onOpenedRelay = new Relay();
 
-	// Token: 0x04001FC7 RID: 8135
+	// Token: 0x04002A70 RID: 10864
 	private static List<float> m_dropOddsHelper_STATIC = new List<float>();
 }

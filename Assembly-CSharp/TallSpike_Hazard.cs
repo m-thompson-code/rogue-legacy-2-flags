@@ -3,22 +3,22 @@ using System.Collections;
 using Ferr;
 using UnityEngine;
 
-// Token: 0x0200045E RID: 1118
+// Token: 0x02000750 RID: 1872
 public class TallSpike_Hazard : Hazard, IFerr2DHazard, IHazard, IRootObj, IMirror
 {
-	// Token: 0x17001016 RID: 4118
-	// (get) Token: 0x0600293C RID: 10556 RVA: 0x0008858F File Offset: 0x0008678F
-	// (set) Token: 0x0600293D RID: 10557 RVA: 0x00088597 File Offset: 0x00086797
+	// Token: 0x17001545 RID: 5445
+	// (get) Token: 0x06003934 RID: 14644 RVA: 0x0001F69C File Offset: 0x0001D89C
+	// (set) Token: 0x06003935 RID: 14645 RVA: 0x0001F6A4 File Offset: 0x0001D8A4
 	public Ferr2DT_PathTerrain Ferr2D { get; private set; }
 
-	// Token: 0x0600293E RID: 10558 RVA: 0x000885A0 File Offset: 0x000867A0
+	// Token: 0x06003936 RID: 14646 RVA: 0x0001F6AD File Offset: 0x0001D8AD
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_hbController = base.GetComponentInChildren<IHitboxController>();
 	}
 
-	// Token: 0x0600293F RID: 10559 RVA: 0x000885B4 File Offset: 0x000867B4
+	// Token: 0x06003937 RID: 14647 RVA: 0x000EA660 File Offset: 0x000E8860
 	private void Start()
 	{
 		if (base.transform.localEulerAngles.z != 0f || base.transform.localScale.x != 1f || base.transform.localScale.y != 1f)
@@ -40,7 +40,7 @@ public class TallSpike_Hazard : Hazard, IFerr2DHazard, IHazard, IRootObj, IMirro
 		}
 	}
 
-	// Token: 0x06002940 RID: 10560 RVA: 0x0008868C File Offset: 0x0008688C
+	// Token: 0x06003938 RID: 14648 RVA: 0x000EA738 File Offset: 0x000E8938
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		Ferr2DHazardArgs ferr2DHazardArgs = hazardArgs as Ferr2DHazardArgs;
@@ -68,18 +68,18 @@ public class TallSpike_Hazard : Hazard, IFerr2DHazard, IHazard, IRootObj, IMirro
 		this.InitializeHitboxes();
 	}
 
-	// Token: 0x06002941 RID: 10561 RVA: 0x00088744 File Offset: 0x00086944
+	// Token: 0x06003939 RID: 14649 RVA: 0x0001F6C1 File Offset: 0x0001D8C1
 	private void InitializeHitboxes()
 	{
 		this.m_hbController.Initialize();
 	}
 
-	// Token: 0x06002942 RID: 10562 RVA: 0x00088751 File Offset: 0x00086951
+	// Token: 0x0600393A RID: 14650 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void ResetHazard()
 	{
 	}
 
-	// Token: 0x06002943 RID: 10563 RVA: 0x00088753 File Offset: 0x00086953
+	// Token: 0x0600393B RID: 14651 RVA: 0x0001F6CE File Offset: 0x0001D8CE
 	private void OnEnable()
 	{
 		if (this.m_flipColliders && !this.m_collidersFlipped)
@@ -88,7 +88,7 @@ public class TallSpike_Hazard : Hazard, IFerr2DHazard, IHazard, IRootObj, IMirro
 		}
 	}
 
-	// Token: 0x06002944 RID: 10564 RVA: 0x00088772 File Offset: 0x00086972
+	// Token: 0x0600393C RID: 14652 RVA: 0x0001F6ED File Offset: 0x0001D8ED
 	public void Mirror()
 	{
 		if (!this.m_hbController.IsInitialized)
@@ -97,7 +97,7 @@ public class TallSpike_Hazard : Hazard, IFerr2DHazard, IHazard, IRootObj, IMirro
 		}
 	}
 
-	// Token: 0x06002945 RID: 10565 RVA: 0x00088788 File Offset: 0x00086988
+	// Token: 0x0600393D RID: 14653 RVA: 0x0001F703 File Offset: 0x0001D903
 	private IEnumerator MirrorTerrain()
 	{
 		yield return new WaitUntil(() => this.m_hbController.IsInitialized);
@@ -120,18 +120,18 @@ public class TallSpike_Hazard : Hazard, IFerr2DHazard, IHazard, IRootObj, IMirro
 		yield break;
 	}
 
-	// Token: 0x06002947 RID: 10567 RVA: 0x0008879F File Offset: 0x0008699F
+	// Token: 0x0600393F RID: 14655 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040021FC RID: 8700
+	// Token: 0x04002DCA RID: 11722
 	private bool m_flipColliders;
 
-	// Token: 0x040021FD RID: 8701
+	// Token: 0x04002DCB RID: 11723
 	private bool m_collidersFlipped;
 
-	// Token: 0x040021FE RID: 8702
+	// Token: 0x04002DCC RID: 11724
 	private IHitboxController m_hbController;
 }

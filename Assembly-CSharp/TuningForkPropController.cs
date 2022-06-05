@@ -4,10 +4,10 @@ using FMODUnity;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020004E6 RID: 1254
+// Token: 0x02000831 RID: 2097
 public class TuningForkPropController : BaseSpecialPropController, ITerrainOnEnterHitResponse, IHitResponse
 {
-	// Token: 0x06002EF1 RID: 12017 RVA: 0x000A00C6 File Offset: 0x0009E2C6
+	// Token: 0x060040BD RID: 16573 RVA: 0x00023C74 File Offset: 0x00021E74
 	protected override void Awake()
 	{
 		base.Awake();
@@ -16,7 +16,7 @@ public class TuningForkPropController : BaseSpecialPropController, ITerrainOnEnt
 		this.m_hbController.DisableAllCollisions = false;
 	}
 
-	// Token: 0x06002EF2 RID: 12018 RVA: 0x000A00F4 File Offset: 0x0009E2F4
+	// Token: 0x060040BE RID: 16574 RVA: 0x00103D0C File Offset: 0x00101F0C
 	protected override void InitializePooledPropOnEnter()
 	{
 		if (!this.m_projectileAdded)
@@ -33,7 +33,7 @@ public class TuningForkPropController : BaseSpecialPropController, ITerrainOnEnt
 		this.m_hbController.SetHitboxActiveState(HitboxType.Terrain, true);
 	}
 
-	// Token: 0x06002EF3 RID: 12019 RVA: 0x000A0158 File Offset: 0x0009E358
+	// Token: 0x060040BF RID: 16575 RVA: 0x00103D70 File Offset: 0x00101F70
 	public void TuningForkHit()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.CaveTuningForkTriggered, true);
@@ -53,7 +53,7 @@ public class TuningForkPropController : BaseSpecialPropController, ITerrainOnEnt
 		}
 	}
 
-	// Token: 0x06002EF4 RID: 12020 RVA: 0x000A0213 File Offset: 0x0009E413
+	// Token: 0x060040C0 RID: 16576 RVA: 0x00023CA0 File Offset: 0x00021EA0
 	private IEnumerator MapUpdatedTextPopupCoroutine()
 	{
 		Vector2 position = base.transform.position;
@@ -84,7 +84,7 @@ public class TuningForkPropController : BaseSpecialPropController, ITerrainOnEnt
 		yield break;
 	}
 
-	// Token: 0x06002EF5 RID: 12021 RVA: 0x000A0222 File Offset: 0x0009E422
+	// Token: 0x060040C1 RID: 16577 RVA: 0x00023CAF File Offset: 0x00021EAF
 	private IEnumerator DisableHitbox(float secs)
 	{
 		this.m_hbController.DisableAllCollisions = true;
@@ -97,7 +97,7 @@ public class TuningForkPropController : BaseSpecialPropController, ITerrainOnEnt
 		yield break;
 	}
 
-	// Token: 0x06002EF6 RID: 12022 RVA: 0x000A0238 File Offset: 0x0009E438
+	// Token: 0x060040C2 RID: 16578 RVA: 0x00023CC5 File Offset: 0x00021EC5
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (!SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.CaveTuningForkTriggered))
@@ -107,7 +107,7 @@ public class TuningForkPropController : BaseSpecialPropController, ITerrainOnEnt
 		this.m_hbController.SetHitboxActiveState(HitboxType.Terrain, false);
 	}
 
-	// Token: 0x06002EF7 RID: 12023 RVA: 0x000A025E File Offset: 0x0009E45E
+	// Token: 0x060040C3 RID: 16579 RVA: 0x00023CEB File Offset: 0x00021EEB
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -118,33 +118,33 @@ public class TuningForkPropController : BaseSpecialPropController, ITerrainOnEnt
 		}
 	}
 
-	// Token: 0x0400255E RID: 9566
+	// Token: 0x0400329C RID: 12956
 	private const float HITBOX_DISABLE_DURATION = 2f;
 
-	// Token: 0x0400255F RID: 9567
+	// Token: 0x0400329D RID: 12957
 	[SerializeField]
 	private string m_projectileName;
 
-	// Token: 0x04002560 RID: 9568
+	// Token: 0x0400329E RID: 12958
 	[SerializeField]
 	private GameObject m_spawnPos;
 
-	// Token: 0x04002561 RID: 9569
+	// Token: 0x0400329F RID: 12959
 	[SerializeField]
 	private StudioEventEmitter m_onHitEventEmitter;
 
-	// Token: 0x04002562 RID: 9570
+	// Token: 0x040032A0 RID: 12960
 	private Animator m_animator;
 
-	// Token: 0x04002563 RID: 9571
+	// Token: 0x040032A1 RID: 12961
 	private IHitboxController m_hbController;
 
-	// Token: 0x04002564 RID: 9572
+	// Token: 0x040032A2 RID: 12962
 	private bool m_projectileAdded;
 
-	// Token: 0x04002565 RID: 9573
+	// Token: 0x040032A3 RID: 12963
 	private bool m_textPopupPlayed;
 
-	// Token: 0x04002566 RID: 9574
+	// Token: 0x040032A4 RID: 12964
 	private TextPopupObj m_textPopup;
 }

@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02000219 RID: 537
+// Token: 0x020003CC RID: 972
 [Serializable]
 public class AchievementData
 {
-	// Token: 0x0400158D RID: 5517
+	// Token: 0x04001C90 RID: 7312
 	public string TitleLocID;
 
-	// Token: 0x0400158E RID: 5518
+	// Token: 0x04001C91 RID: 7313
 	public string NotAchievedLocID;
 
-	// Token: 0x0400158F RID: 5519
+	// Token: 0x04001C92 RID: 7314
 	public string AchievedLocID;
 
-	// Token: 0x04001590 RID: 5520
+	// Token: 0x04001C93 RID: 7315
 	public string NotAchievedHiddenLocID;
 }

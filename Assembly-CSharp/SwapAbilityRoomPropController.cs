@@ -6,11 +6,11 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020004E2 RID: 1250
+// Token: 0x0200082A RID: 2090
 public class SwapAbilityRoomPropController : DualChoicePropController, ILocalizable
 {
-	// Token: 0x1700118C RID: 4492
-	// (get) Token: 0x06002EBB RID: 11963 RVA: 0x0009F398 File Offset: 0x0009D598
+	// Token: 0x1700174D RID: 5965
+	// (get) Token: 0x06004075 RID: 16501 RVA: 0x0002396A File Offset: 0x00021B6A
 	public AbilityType AbilityType
 	{
 		get
@@ -19,7 +19,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		}
 	}
 
-	// Token: 0x06002EBC RID: 11964 RVA: 0x0009F3A0 File Offset: 0x0009D5A0
+	// Token: 0x06004076 RID: 16502 RVA: 0x00023972 File Offset: 0x00021B72
 	protected override void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -27,7 +27,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		base.Awake();
 	}
 
-	// Token: 0x06002EBD RID: 11965 RVA: 0x0009F3CC File Offset: 0x0009D5CC
+	// Token: 0x06004077 RID: 16503 RVA: 0x00102EA8 File Offset: 0x001010A8
 	protected override void InitializePooledPropOnEnter()
 	{
 		base.InitializePooledPropOnEnter();
@@ -52,7 +52,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		this.RollAbilities(this.m_totalRoomRolls, false);
 	}
 
-	// Token: 0x06002EBE RID: 11966 RVA: 0x0009F494 File Offset: 0x0009D694
+	// Token: 0x06004078 RID: 16504 RVA: 0x00102F70 File Offset: 0x00101170
 	public void RollAbilities(int numRolls, bool addToTotalRoomRolls)
 	{
 		if (addToTotalRoomRolls)
@@ -92,7 +92,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		this.InitializeTextBox();
 	}
 
-	// Token: 0x06002EBF RID: 11967 RVA: 0x0009F5A4 File Offset: 0x0009D7A4
+	// Token: 0x06004079 RID: 16505 RVA: 0x00103080 File Offset: 0x00101280
 	public void InitializeTextBox()
 	{
 		PlayerManager.GetPlayerController();
@@ -124,7 +124,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		}
 	}
 
-	// Token: 0x06002EC0 RID: 11968 RVA: 0x0009F6EC File Offset: 0x0009D8EC
+	// Token: 0x0600407A RID: 16506 RVA: 0x001031C8 File Offset: 0x001013C8
 	private string GetCostString(CastAbilityType castAbilityType)
 	{
 		string locID = null;
@@ -146,7 +146,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		return string.Format(LocalizationManager.GetString(locID, SaveManager.PlayerSaveData.CurrentCharacter.IsFemale, false), num);
 	}
 
-	// Token: 0x06002EC1 RID: 11969 RVA: 0x0009F77A File Offset: 0x0009D97A
+	// Token: 0x0600407B RID: 16507 RVA: 0x000237FE File Offset: 0x000219FE
 	public static int CalculateHealthCost(float cost, PlayerController playerController, bool applySkillReduc)
 	{
 		if (applySkillReduc)
@@ -156,18 +156,18 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		return Mathf.RoundToInt((float)playerController.ClassModdedMaxHealth * (1f + playerController.TraitMaxHealthMod) * cost);
 	}
 
-	// Token: 0x06002EC2 RID: 11970 RVA: 0x0009F7B2 File Offset: 0x0009D9B2
+	// Token: 0x0600407C RID: 16508 RVA: 0x0002399E File Offset: 0x00021B9E
 	public void ChooseLeftAbility()
 	{
 		base.StartCoroutine(this.ChooseAbility(this.AbilityType));
 	}
 
-	// Token: 0x06002EC3 RID: 11971 RVA: 0x0009F7C7 File Offset: 0x0009D9C7
+	// Token: 0x0600407D RID: 16509 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void ChooseRightAbility()
 	{
 	}
 
-	// Token: 0x06002EC4 RID: 11972 RVA: 0x0009F7C9 File Offset: 0x0009D9C9
+	// Token: 0x0600407E RID: 16510 RVA: 0x000239B3 File Offset: 0x00021BB3
 	private IEnumerator ChooseAbility(AbilityType abilityType)
 	{
 		base.LeftIcon.gameObject.SetActive(false);
@@ -217,7 +217,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		yield break;
 	}
 
-	// Token: 0x06002EC5 RID: 11973 RVA: 0x0009F7DF File Offset: 0x0009D9DF
+	// Token: 0x0600407F RID: 16511 RVA: 0x000239C9 File Offset: 0x00021BC9
 	private AbilityType[] GetAbilityArray(CastAbilityType castAbilityType)
 	{
 		switch (castAbilityType)
@@ -230,7 +230,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		return AbilityType_RL.ValidWeaponTypeArray;
 	}
 
-	// Token: 0x06002EC6 RID: 11974 RVA: 0x0009F808 File Offset: 0x0009DA08
+	// Token: 0x06004080 RID: 16512 RVA: 0x00103258 File Offset: 0x00101458
 	private AbilityType GetCurrentPlayerAbility(CastAbilityType castAbilityType)
 	{
 		BaseAbility_RL ability = PlayerManager.GetPlayerController().CastAbility.GetAbility(castAbilityType, false);
@@ -241,7 +241,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		return AbilityType.None;
 	}
 
-	// Token: 0x06002EC7 RID: 11975 RVA: 0x0009F837 File Offset: 0x0009DA37
+	// Token: 0x06004081 RID: 16513 RVA: 0x000239F0 File Offset: 0x00021BF0
 	private RelicType GetSwapRelic(CastAbilityType castAbilityType)
 	{
 		switch (castAbilityType)
@@ -255,7 +255,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		}
 	}
 
-	// Token: 0x06002EC8 RID: 11976 RVA: 0x0009F85C File Offset: 0x0009DA5C
+	// Token: 0x06004082 RID: 16514 RVA: 0x00023A15 File Offset: 0x00021C15
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 		base.DisableProp(firstTimeDisabled);
@@ -266,7 +266,7 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		}
 	}
 
-	// Token: 0x06002EC9 RID: 11977 RVA: 0x0009F886 File Offset: 0x0009DA86
+	// Token: 0x06004083 RID: 16515 RVA: 0x00023A3F File Offset: 0x00021C3F
 	private IEnumerator ClosedSignPopupCoroutine()
 	{
 		Vector3 localPosition = this.m_closedSign.transform.localPosition;
@@ -286,45 +286,45 @@ public class SwapAbilityRoomPropController : DualChoicePropController, ILocaliza
 		yield break;
 	}
 
-	// Token: 0x06002ECA RID: 11978 RVA: 0x0009F895 File Offset: 0x0009DA95
+	// Token: 0x06004084 RID: 16516 RVA: 0x00023A4E File Offset: 0x00021C4E
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06002ECB RID: 11979 RVA: 0x0009F8A4 File Offset: 0x0009DAA4
+	// Token: 0x06004085 RID: 16517 RVA: 0x00023A5D File Offset: 0x00021C5D
 	protected override void OnDisable()
 	{
 		base.OnDisable();
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06002ECC RID: 11980 RVA: 0x0009F8B9 File Offset: 0x0009DAB9
+	// Token: 0x06004086 RID: 16518 RVA: 0x00023A72 File Offset: 0x00021C72
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.InitializeTextBox();
 	}
 
-	// Token: 0x04002546 RID: 9542
+	// Token: 0x04003276 RID: 12918
 	[SerializeField]
 	private CastAbilityType m_castAbilityTypeToSwap;
 
-	// Token: 0x04002547 RID: 9543
+	// Token: 0x04003277 RID: 12919
 	[SerializeField]
 	private GameObject m_closedSign;
 
-	// Token: 0x04002548 RID: 9544
+	// Token: 0x04003278 RID: 12920
 	private AbilityType m_abilityType;
 
-	// Token: 0x04002549 RID: 9545
+	// Token: 0x04003279 RID: 12921
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x0400254A RID: 9546
+	// Token: 0x0400327A RID: 12922
 	private int m_totalRoomRolls;
 
-	// Token: 0x0400254B RID: 9547
+	// Token: 0x0400327B RID: 12923
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x0400254C RID: 9548
+	// Token: 0x0400327C RID: 12924
 	private static List<AbilityType> m_potentialAbilityList = new List<AbilityType>();
 }

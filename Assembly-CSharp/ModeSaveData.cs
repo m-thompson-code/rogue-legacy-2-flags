@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020002D3 RID: 723
+// Token: 0x020004C8 RID: 1224
 [Serializable]
 public class ModeSaveData : IVersionUpdateable
 {
-	// Token: 0x17000CA6 RID: 3238
-	// (get) Token: 0x06001C8D RID: 7309 RVA: 0x0005CD2F File Offset: 0x0005AF2F
-	// (set) Token: 0x06001C8E RID: 7310 RVA: 0x0005CD37 File Offset: 0x0005AF37
+	// Token: 0x1700102F RID: 4143
+	// (get) Token: 0x06002757 RID: 10071 RVA: 0x00016258 File Offset: 0x00014458
+	// (set) Token: 0x06002758 RID: 10072 RVA: 0x00016260 File Offset: 0x00014460
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x06001C8F RID: 7311 RVA: 0x0005CD40 File Offset: 0x0005AF40
+	// Token: 0x06002759 RID: 10073 RVA: 0x00016269 File Offset: 0x00014469
 	public ModeSaveData()
 	{
 		this.Initialize();
 	}
 
-	// Token: 0x06001C90 RID: 7312 RVA: 0x0005CD55 File Offset: 0x0005AF55
+	// Token: 0x0600275A RID: 10074 RVA: 0x0001627E File Offset: 0x0001447E
 	public void Initialize()
 	{
 		this.InitializeChallengeDict();
@@ -29,7 +29,7 @@ public class ModeSaveData : IVersionUpdateable
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x06001C91 RID: 7313 RVA: 0x0005CD84 File Offset: 0x0005AF84
+	// Token: 0x0600275B RID: 10075 RVA: 0x000B9170 File Offset: 0x000B7370
 	private void InitializeChallengeDict()
 	{
 		if (this.ChallengeDict == null)
@@ -46,7 +46,7 @@ public class ModeSaveData : IVersionUpdateable
 		this.SetStartingModeSaveData();
 	}
 
-	// Token: 0x06001C92 RID: 7314 RVA: 0x0005CDE8 File Offset: 0x0005AFE8
+	// Token: 0x0600275C RID: 10076 RVA: 0x000B91D4 File Offset: 0x000B73D4
 	private void InitializeHighestNGBossBeatenDict()
 	{
 		if (this.HighestNGBossBeatenDict == null)
@@ -62,7 +62,7 @@ public class ModeSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C93 RID: 7315 RVA: 0x0005CE40 File Offset: 0x0005B040
+	// Token: 0x0600275D RID: 10077 RVA: 0x000B922C File Offset: 0x000B742C
 	private void InitializeSoulShopTable()
 	{
 		if (this.SoulShopTable == null)
@@ -78,7 +78,7 @@ public class ModeSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C94 RID: 7316 RVA: 0x0005CE9C File Offset: 0x0005B09C
+	// Token: 0x0600275E RID: 10078 RVA: 0x000B9288 File Offset: 0x000B7488
 	private void InitializeHighestNGBlackChestsOpenedArray()
 	{
 		if (this.HighestNGBlackChestOpenedArray == null)
@@ -91,7 +91,7 @@ public class ModeSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C95 RID: 7317 RVA: 0x0005CEDC File Offset: 0x0005B0DC
+	// Token: 0x0600275F RID: 10079 RVA: 0x000B92C8 File Offset: 0x000B74C8
 	private void InitializeEnemiesDefeatedDict()
 	{
 		if (this.EnemiesDefeatedDict == null)
@@ -141,7 +141,7 @@ public class ModeSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C96 RID: 7318 RVA: 0x0005D018 File Offset: 0x0005B218
+	// Token: 0x06002760 RID: 10080 RVA: 0x000B9404 File Offset: 0x000B7604
 	private void InitializeAchievementUnlockedDict()
 	{
 		if (this.AchievementUnlockedDict == null)
@@ -157,7 +157,7 @@ public class ModeSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001C97 RID: 7319 RVA: 0x0005D070 File Offset: 0x0005B270
+	// Token: 0x06002761 RID: 10081 RVA: 0x000B945C File Offset: 0x000B765C
 	public int GetHighestNGBossBeaten(GameModeType gameMode, BossID bossID)
 	{
 		HighestNGBossBeatenEntry highestNGBossBeatenEntry;
@@ -168,7 +168,7 @@ public class ModeSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET HighestBossBeaten value: " + gameMode.ToString() + " not found in Mode Save Data.");
 	}
 
-	// Token: 0x06001C98 RID: 7320 RVA: 0x0005D0B8 File Offset: 0x0005B2B8
+	// Token: 0x06002762 RID: 10082 RVA: 0x000B94A4 File Offset: 0x000B76A4
 	public void SetHighestNGBossBeaten(GameModeType gameMode, BossID bossID, int highestBossBeaten, bool forceOverride)
 	{
 		HighestNGBossBeatenEntry highestNGBossBeatenEntry;
@@ -180,7 +180,7 @@ public class ModeSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot SET HighestBossBeaten value: " + gameMode.ToString() + " not found in Mode Save Data.");
 	}
 
-	// Token: 0x06001C99 RID: 7321 RVA: 0x0005D104 File Offset: 0x0005B304
+	// Token: 0x06002763 RID: 10083 RVA: 0x000B94F0 File Offset: 0x000B76F0
 	public int GetHighestNGBlackChestOpened(EquipmentCategoryType categoryType)
 	{
 		int num = categoryType - EquipmentCategoryType.Weapon;
@@ -191,7 +191,7 @@ public class ModeSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET GetHighestNGBlackChestOpened value: " + categoryType.ToString() + " not found in Mode Save Data.");
 	}
 
-	// Token: 0x06001C9A RID: 7322 RVA: 0x0005D150 File Offset: 0x0005B350
+	// Token: 0x06002764 RID: 10084 RVA: 0x000B953C File Offset: 0x000B773C
 	public void SetHighestNGBlackChestOpened(EquipmentCategoryType categoryType, int value, bool additive, bool overrideEvenIfLower)
 	{
 		int num = categoryType - EquipmentCategoryType.Weapon;
@@ -208,7 +208,7 @@ public class ModeSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot SET GetHighestNGBlackChestOpened value: " + categoryType.ToString() + " not found in Mode Save Data.");
 	}
 
-	// Token: 0x06001C9B RID: 7323 RVA: 0x0005D1BC File Offset: 0x0005B3BC
+	// Token: 0x06002765 RID: 10085 RVA: 0x000B95A8 File Offset: 0x000B77A8
 	public SoulShopObj GetSoulShopObj(SoulShopType soulShopType)
 	{
 		SoulShopObj result;
@@ -220,7 +220,7 @@ public class ModeSaveData : IVersionUpdateable
 		return null;
 	}
 
-	// Token: 0x06001C9C RID: 7324 RVA: 0x0005D200 File Offset: 0x0005B400
+	// Token: 0x06002766 RID: 10086 RVA: 0x000B95EC File Offset: 0x000B77EC
 	public int GetTotalSoulShopObjOwnedLevel()
 	{
 		int num = 0;
@@ -235,7 +235,7 @@ public class ModeSaveData : IVersionUpdateable
 		return num;
 	}
 
-	// Token: 0x06001C9D RID: 7325 RVA: 0x0005D270 File Offset: 0x0005B470
+	// Token: 0x06002767 RID: 10087 RVA: 0x000B965C File Offset: 0x000B785C
 	public void SetEnemiesDefeated(GameModeType gameMode, EnemyType enemyType, EnemyRank enemyRank, int value, bool additive)
 	{
 		Dictionary<EnemyTypeAndRank, int> dictionary;
@@ -254,7 +254,7 @@ public class ModeSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot SET Enemies Defeated for EnemyTypeAndRank: " + key.ToString() + " not found in Mode Save Data.");
 	}
 
-	// Token: 0x06001C9E RID: 7326 RVA: 0x0005D300 File Offset: 0x0005B500
+	// Token: 0x06002768 RID: 10088 RVA: 0x000B96EC File Offset: 0x000B78EC
 	public int GetEnemiesDefeated(GameModeType gameMode, EnemyType enemyType, EnemyRank enemyRank)
 	{
 		Dictionary<EnemyTypeAndRank, int> dictionary;
@@ -271,7 +271,7 @@ public class ModeSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET Enemies Defeated for EnemyTypeAndRank: " + key.ToString() + " not found in Mode Save Data.");
 	}
 
-	// Token: 0x06001C9F RID: 7327 RVA: 0x0005D378 File Offset: 0x0005B578
+	// Token: 0x06002769 RID: 10089 RVA: 0x000B9764 File Offset: 0x000B7964
 	public void SetTimesDefeatedByEnemy(GameModeType gameMode, EnemyType enemyType, EnemyRank enemyRank, int value, bool additive)
 	{
 		Dictionary<EnemyTypeAndRank, int> dictionary;
@@ -290,7 +290,7 @@ public class ModeSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot SET Times Defeated By Enemy for EnemyTypeAndRank: " + key.ToString() + " not found in Mode Save Data.");
 	}
 
-	// Token: 0x06001CA0 RID: 7328 RVA: 0x0005D408 File Offset: 0x0005B608
+	// Token: 0x0600276A RID: 10090 RVA: 0x000B97F4 File Offset: 0x000B79F4
 	public int GetTimesDefeatedByEnemy(GameModeType gameMode, EnemyType enemyType, EnemyRank enemyRank)
 	{
 		Dictionary<EnemyTypeAndRank, int> dictionary;
@@ -307,14 +307,14 @@ public class ModeSaveData : IVersionUpdateable
 		throw new KeyNotFoundException("Cannot GET Times Defeated By Enemy for EnemyTypeAndRank: " + key.ToString() + " not found in Mode Save Data.");
 	}
 
-	// Token: 0x06001CA1 RID: 7329 RVA: 0x0005D480 File Offset: 0x0005B680
+	// Token: 0x0600276B RID: 10091 RVA: 0x000B986C File Offset: 0x000B7A6C
 	public bool GetAchievementUnlocked(AchievementType achievementType)
 	{
 		bool flag;
 		return this.AchievementUnlockedDict.TryGetValue(achievementType, out flag) && flag;
 	}
 
-	// Token: 0x06001CA2 RID: 7330 RVA: 0x0005D4A0 File Offset: 0x0005B6A0
+	// Token: 0x0600276C RID: 10092 RVA: 0x000162AB File Offset: 0x000144AB
 	public bool SetAchievementUnlocked(AchievementType achievementType, bool unlocked, bool forceOverride = false)
 	{
 		if (!this.AchievementUnlockedDict.ContainsKey(achievementType))
@@ -332,7 +332,7 @@ public class ModeSaveData : IVersionUpdateable
 		return true;
 	}
 
-	// Token: 0x06001CA3 RID: 7331 RVA: 0x0005D4D6 File Offset: 0x0005B6D6
+	// Token: 0x0600276D RID: 10093 RVA: 0x000162E1 File Offset: 0x000144E1
 	private void SetStartingModeSaveData()
 	{
 		if (this.ChallengeDict[ChallengeType.Tutorial].FoundLevel <= -3)
@@ -341,7 +341,7 @@ public class ModeSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x06001CA4 RID: 7332 RVA: 0x0005D504 File Offset: 0x0005B704
+	// Token: 0x0600276E RID: 10094 RVA: 0x000B988C File Offset: 0x000B7A8C
 	public void UpdateVersion()
 	{
 		this.Initialize();
@@ -368,7 +368,7 @@ public class ModeSaveData : IVersionUpdateable
 		this.REVISION_NUMBER = 2;
 	}
 
-	// Token: 0x06001CA5 RID: 7333 RVA: 0x0005D5B8 File Offset: 0x0005B7B8
+	// Token: 0x0600276F RID: 10095 RVA: 0x000B9940 File Offset: 0x000B7B40
 	public static ModSetting GetModSetting(GameModeType modeType)
 	{
 		if (modeType != GameModeType.Regular)
@@ -391,7 +391,7 @@ public class ModeSaveData : IVersionUpdateable
 		};
 	}
 
-	// Token: 0x06001CA6 RID: 7334 RVA: 0x0005D604 File Offset: 0x0005B804
+	// Token: 0x06002770 RID: 10096 RVA: 0x000B998C File Offset: 0x000B7B8C
 	public void ResetSoulShopEntries()
 	{
 		foreach (KeyValuePair<SoulShopType, SoulShopObj> keyValuePair in this.SoulShopTable)
@@ -402,60 +402,60 @@ public class ModeSaveData : IVersionUpdateable
 		}
 	}
 
-	// Token: 0x040019F1 RID: 6641
+	// Token: 0x040021F8 RID: 8696
 	public int REVISION_NUMBER = 2;
 
-	// Token: 0x040019F2 RID: 6642
+	// Token: 0x040021F9 RID: 8697
 	public int FILE_NUMBER;
 
-	// Token: 0x040019F3 RID: 6643
+	// Token: 0x040021FA RID: 8698
 	public ModSetting CustomModSetting;
 
-	// Token: 0x040019F4 RID: 6644
+	// Token: 0x040021FB RID: 8699
 	public int SoulSpent;
 
-	// Token: 0x040019F5 RID: 6645
+	// Token: 0x040021FC RID: 8700
 	public int MiscSoulCollected;
 
-	// Token: 0x040019F6 RID: 6646
+	// Token: 0x040021FD RID: 8701
 	public int SoulSwapResourcesSpent;
 
-	// Token: 0x040019F7 RID: 6647
+	// Token: 0x040021FE RID: 8702
 	public ClassType SoulShopClassChosen;
 
-	// Token: 0x040019F8 RID: 6648
+	// Token: 0x040021FF RID: 8703
 	public AbilityType SoulShopSpellChosen;
 
-	// Token: 0x040019F9 RID: 6649
+	// Token: 0x04002200 RID: 8704
 	public bool HasBronzeSisyphusTrophy;
 
-	// Token: 0x040019FA RID: 6650
+	// Token: 0x04002201 RID: 8705
 	public bool HasSilverSisyphusTrophy;
 
-	// Token: 0x040019FB RID: 6651
+	// Token: 0x04002202 RID: 8706
 	public bool HasGoldSisyphusTrophy;
 
-	// Token: 0x040019FC RID: 6652
+	// Token: 0x04002203 RID: 8707
 	public Dictionary<ChallengeType, ChallengeObj> ChallengeDict;
 
-	// Token: 0x040019FD RID: 6653
+	// Token: 0x04002204 RID: 8708
 	public Dictionary<GameModeType, HighestNGBossBeatenEntry> HighestNGBossBeatenDict;
 
-	// Token: 0x040019FE RID: 6654
+	// Token: 0x04002205 RID: 8709
 	public Dictionary<SoulShopType, SoulShopObj> SoulShopTable;
 
-	// Token: 0x040019FF RID: 6655
+	// Token: 0x04002206 RID: 8710
 	public int[] HighestNGBlackChestOpenedArray;
 
-	// Token: 0x04001A00 RID: 6656
+	// Token: 0x04002207 RID: 8711
 	public Dictionary<GameModeType, Dictionary<EnemyTypeAndRank, int>> EnemiesDefeatedDict;
 
-	// Token: 0x04001A01 RID: 6657
+	// Token: 0x04002208 RID: 8712
 	public Dictionary<GameModeType, Dictionary<EnemyTypeAndRank, int>> TimesDefeatedByEnemies;
 
-	// Token: 0x04001A02 RID: 6658
+	// Token: 0x04002209 RID: 8713
 	public Dictionary<AchievementType, bool> AchievementUnlockedDict;
 
-	// Token: 0x04001A03 RID: 6659
+	// Token: 0x0400220A RID: 8714
 	public bool DisableAchievementUnlocks;
 }

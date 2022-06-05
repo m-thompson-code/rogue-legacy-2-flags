@@ -3,11 +3,11 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200054F RID: 1359
+// Token: 0x02000903 RID: 2307
 public class DriftHouseExteriorController : BaseSpecialPropController, IDisplaySpeechBubble
 {
-	// Token: 0x17001245 RID: 4677
-	// (get) Token: 0x060031E6 RID: 12774 RVA: 0x000A8B50 File Offset: 0x000A6D50
+	// Token: 0x170018D4 RID: 6356
+	// (get) Token: 0x06004618 RID: 17944 RVA: 0x00112A08 File Offset: 0x00110C08
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -35,8 +35,8 @@ public class DriftHouseExteriorController : BaseSpecialPropController, IDisplayS
 		}
 	}
 
-	// Token: 0x17001246 RID: 4678
-	// (get) Token: 0x060031E7 RID: 12775 RVA: 0x000A8BB5 File Offset: 0x000A6DB5
+	// Token: 0x170018D5 RID: 6357
+	// (get) Token: 0x06004619 RID: 17945 RVA: 0x00026843 File Offset: 0x00024A43
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -49,7 +49,7 @@ public class DriftHouseExteriorController : BaseSpecialPropController, IDisplayS
 		}
 	}
 
-	// Token: 0x060031E8 RID: 12776 RVA: 0x000A8BCC File Offset: 0x000A6DCC
+	// Token: 0x0600461A RID: 17946 RVA: 0x00112A70 File Offset: 0x00110C70
 	protected override void InitializePooledPropOnEnter()
 	{
 		TunnelSpawnController tunnelSpawnController = base.Room.gameObject.FindObjectReference("DriftHouseTunnel", false, false);
@@ -94,7 +94,7 @@ public class DriftHouseExteriorController : BaseSpecialPropController, IDisplayS
 		}
 	}
 
-	// Token: 0x060031E9 RID: 12777 RVA: 0x000A8D41 File Offset: 0x000A6F41
+	// Token: 0x0600461B RID: 17947 RVA: 0x00026859 File Offset: 0x00024A59
 	private void EnterDriftHouse(GameObject gameObj)
 	{
 		if (!SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.EnteredDriftHouseOnce))
@@ -104,21 +104,21 @@ public class DriftHouseExteriorController : BaseSpecialPropController, IDisplayS
 		this.m_updateSkillTreeButtons = true;
 	}
 
-	// Token: 0x04002748 RID: 10056
+	// Token: 0x0400361D RID: 13853
 	[SerializeField]
 	private GameObject m_closedShack;
 
-	// Token: 0x04002749 RID: 10057
+	// Token: 0x0400361E RID: 13854
 	[SerializeField]
 	private GameObject m_openShack;
 
-	// Token: 0x0400274A RID: 10058
+	// Token: 0x0400361F RID: 13855
 	[SerializeField]
 	private SpeechBubbleController m_speechBubble;
 
-	// Token: 0x0400274B RID: 10059
+	// Token: 0x04003620 RID: 13856
 	private Tunnel m_driftHouseTunnel;
 
-	// Token: 0x0400274C RID: 10060
+	// Token: 0x04003621 RID: 13857
 	private bool m_updateSkillTreeButtons;
 }

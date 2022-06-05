@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200032B RID: 811
+// Token: 0x0200057C RID: 1404
 public class CantAttack_Trait : BaseTrait
 {
-	// Token: 0x17000DAF RID: 3503
-	// (get) Token: 0x06001FBF RID: 8127 RVA: 0x000653EA File Offset: 0x000635EA
+	// Token: 0x170011E6 RID: 4582
+	// (get) Token: 0x06002C9C RID: 11420 RVA: 0x00017A13 File Offset: 0x00015C13
 	public override TraitType TraitType
 	{
 		get
@@ -13,7 +13,7 @@ public class CantAttack_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FC0 RID: 8128 RVA: 0x000653F1 File Offset: 0x000635F1
+	// Token: 0x06002C9D RID: 11421 RVA: 0x00018B05 File Offset: 0x00016D05
 	private void Start()
 	{
 		if (SaveManager.PlayerSaveData.GetRelic(RelicType.WeaponSwap).Level <= 0)

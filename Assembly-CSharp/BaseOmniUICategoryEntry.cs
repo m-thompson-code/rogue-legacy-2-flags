@@ -3,11 +3,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Token: 0x02000390 RID: 912
+// Token: 0x0200061E RID: 1566
 public abstract class BaseOmniUICategoryEntry : MonoBehaviour, IPointerEnterHandler, IEventSystemHandler, ISelectHandler, IDeselectHandler, IPointerClickHandler
 {
-	// Token: 0x17000E34 RID: 3636
-	// (get) Token: 0x060021FD RID: 8701 RVA: 0x0006C5BE File Offset: 0x0006A7BE
+	// Token: 0x170012C5 RID: 4805
+	// (get) Token: 0x0600300F RID: 12303 RVA: 0x0001A57E File Offset: 0x0001877E
 	public IOmniUIWindowController WindowController
 	{
 		get
@@ -16,20 +16,20 @@ public abstract class BaseOmniUICategoryEntry : MonoBehaviour, IPointerEnterHand
 		}
 	}
 
-	// Token: 0x17000E35 RID: 3637
-	// (get) Token: 0x060021FE RID: 8702 RVA: 0x0006C5C6 File Offset: 0x0006A7C6
-	// (set) Token: 0x060021FF RID: 8703 RVA: 0x0006C5CE File Offset: 0x0006A7CE
+	// Token: 0x170012C6 RID: 4806
+	// (get) Token: 0x06003010 RID: 12304 RVA: 0x0001A586 File Offset: 0x00018786
+	// (set) Token: 0x06003011 RID: 12305 RVA: 0x0001A58E File Offset: 0x0001878E
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x17000E36 RID: 3638
-	// (get) Token: 0x06002200 RID: 8704 RVA: 0x0006C5D7 File Offset: 0x0006A7D7
-	// (set) Token: 0x06002201 RID: 8705 RVA: 0x0006C5DF File Offset: 0x0006A7DF
+	// Token: 0x170012C7 RID: 4807
+	// (get) Token: 0x06003012 RID: 12306 RVA: 0x0001A597 File Offset: 0x00018797
+	// (set) Token: 0x06003013 RID: 12307 RVA: 0x0001A59F File Offset: 0x0001879F
 	public int EntryIndex { get; private set; }
 
-	// Token: 0x06002202 RID: 8706
+	// Token: 0x06003014 RID: 12308
 	public abstract void UpdateState();
 
-	// Token: 0x06002203 RID: 8707 RVA: 0x0006C5E8 File Offset: 0x0006A7E8
+	// Token: 0x06003015 RID: 12309 RVA: 0x0001A5A8 File Offset: 0x000187A8
 	protected virtual void Initialize(int entryIndex, IOmniUIWindowController windowController)
 	{
 		this.EntryIndex = entryIndex;
@@ -37,7 +37,7 @@ public abstract class BaseOmniUICategoryEntry : MonoBehaviour, IPointerEnterHand
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x06002204 RID: 8708 RVA: 0x0006C5FF File Offset: 0x0006A7FF
+	// Token: 0x06003016 RID: 12310 RVA: 0x0001A5BF File Offset: 0x000187BF
 	public virtual void OnSelect(BaseEventData eventData)
 	{
 		if (!this.m_selectedSprite.gameObject.activeSelf)
@@ -46,7 +46,7 @@ public abstract class BaseOmniUICategoryEntry : MonoBehaviour, IPointerEnterHand
 		}
 	}
 
-	// Token: 0x06002205 RID: 8709 RVA: 0x0006C624 File Offset: 0x0006A824
+	// Token: 0x06003017 RID: 12311 RVA: 0x0001A5E4 File Offset: 0x000187E4
 	public virtual void OnDeselect(BaseEventData eventData)
 	{
 		if (this.m_selectedSprite.gameObject.activeSelf)
@@ -55,12 +55,12 @@ public abstract class BaseOmniUICategoryEntry : MonoBehaviour, IPointerEnterHand
 		}
 	}
 
-	// Token: 0x06002206 RID: 8710 RVA: 0x0006C649 File Offset: 0x0006A849
+	// Token: 0x06003018 RID: 12312 RVA: 0x00002FCA File Offset: 0x000011CA
 	public virtual void OnPointerEnter(PointerEventData eventData)
 	{
 	}
 
-	// Token: 0x06002207 RID: 8711 RVA: 0x0006C64B File Offset: 0x0006A84B
+	// Token: 0x06003019 RID: 12313 RVA: 0x0001A609 File Offset: 0x00018809
 	public virtual void OnPointerClick(PointerEventData eventData)
 	{
 		if (eventData.button != PointerEventData.InputButton.Left)
@@ -71,25 +71,25 @@ public abstract class BaseOmniUICategoryEntry : MonoBehaviour, IPointerEnterHand
 		this.m_windowController.SetSelectedCategoryIndex(this.m_windowController.HighlightedCategoryIndex, true);
 	}
 
-	// Token: 0x04001D80 RID: 7552
+	// Token: 0x0400277B RID: 10107
 	[SerializeField]
 	protected Image m_selectedSprite;
 
-	// Token: 0x04001D81 RID: 7553
+	// Token: 0x0400277C RID: 10108
 	[SerializeField]
 	protected Image m_newSymbol;
 
-	// Token: 0x04001D82 RID: 7554
+	// Token: 0x0400277D RID: 10109
 	[SerializeField]
 	protected Image m_upgradeSymbol;
 
-	// Token: 0x04001D83 RID: 7555
+	// Token: 0x0400277E RID: 10110
 	[SerializeField]
 	protected Image m_iconSprite;
 
-	// Token: 0x04001D84 RID: 7556
+	// Token: 0x0400277F RID: 10111
 	private bool m_inputEnabled;
 
-	// Token: 0x04001D85 RID: 7557
+	// Token: 0x04002780 RID: 10112
 	private IOmniUIWindowController m_windowController;
 }

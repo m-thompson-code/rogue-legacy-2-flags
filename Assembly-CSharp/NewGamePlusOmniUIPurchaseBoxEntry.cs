@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020003BC RID: 956
+// Token: 0x02000653 RID: 1619
 public class NewGamePlusOmniUIPurchaseBoxEntry : BaseOmniUIPurchaseBoxEntry<NewGamePlusOmniUIDescriptionEventArgs>
 {
-	// Token: 0x17000E88 RID: 3720
-	// (get) Token: 0x06002350 RID: 9040 RVA: 0x00073385 File Offset: 0x00071585
+	// Token: 0x1700131B RID: 4891
+	// (get) Token: 0x06003168 RID: 12648 RVA: 0x0001B070 File Offset: 0x00019270
 	public int CurrentNewGamePlusLevel
 	{
 		get
@@ -14,12 +14,12 @@ public class NewGamePlusOmniUIPurchaseBoxEntry : BaseOmniUIPurchaseBoxEntry<NewG
 		}
 	}
 
-	// Token: 0x06002351 RID: 9041 RVA: 0x0007338C File Offset: 0x0007158C
+	// Token: 0x06003169 RID: 12649 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void DisplayNullPurchaseBox()
 	{
 	}
 
-	// Token: 0x06002352 RID: 9042 RVA: 0x00073390 File Offset: 0x00071590
+	// Token: 0x0600316A RID: 12650 RVA: 0x000D37AC File Offset: 0x000D19AC
 	protected override void DisplayPurchaseBox(NewGamePlusOmniUIDescriptionEventArgs args)
 	{
 		BaseOmniUIPurchaseBoxEntry<NewGamePlusOmniUIDescriptionEventArgs>.OmniUIPurchaseBoxType descriptionType = this.m_descriptionType;

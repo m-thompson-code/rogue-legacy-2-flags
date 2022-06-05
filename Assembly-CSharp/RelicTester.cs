@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002BA RID: 698
+// Token: 0x020004A9 RID: 1193
 public class RelicTester : MonoBehaviour
 {
-	// Token: 0x17000C8D RID: 3213
-	// (get) Token: 0x06001BCC RID: 7116 RVA: 0x00059B42 File Offset: 0x00057D42
-	// (set) Token: 0x06001BCD RID: 7117 RVA: 0x00059B4A File Offset: 0x00057D4A
+	// Token: 0x17001010 RID: 4112
+	// (get) Token: 0x06002680 RID: 9856 RVA: 0x00015784 File Offset: 0x00013984
+	// (set) Token: 0x06002681 RID: 9857 RVA: 0x0001578C File Offset: 0x0001398C
 	public RelicType RelicToAdd
 	{
 		get
@@ -19,7 +19,7 @@ public class RelicTester : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BCE RID: 7118 RVA: 0x00059B53 File Offset: 0x00057D53
+	// Token: 0x06002682 RID: 9858 RVA: 0x00015795 File Offset: 0x00013995
 	private void OnEnable()
 	{
 		if (this.m_addOnStart)
@@ -28,7 +28,7 @@ public class RelicTester : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BCF RID: 7119 RVA: 0x00059B70 File Offset: 0x00057D70
+	// Token: 0x06002683 RID: 9859 RVA: 0x000157B2 File Offset: 0x000139B2
 	private void OnDisable()
 	{
 		if (this.m_addOnStart)
@@ -37,13 +37,13 @@ public class RelicTester : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BD0 RID: 7120 RVA: 0x00059B8D File Offset: 0x00057D8D
+	// Token: 0x06002684 RID: 9860 RVA: 0x000157CF File Offset: 0x000139CF
 	private void AddRelicHandler(MonoBehaviour sender, EventArgs args)
 	{
 		this.AddRelic();
 	}
 
-	// Token: 0x06001BD1 RID: 7121 RVA: 0x00059B98 File Offset: 0x00057D98
+	// Token: 0x06002685 RID: 9861 RVA: 0x000B6850 File Offset: 0x000B4A50
 	public void AddRelic()
 	{
 		if (this.m_relicToAdd == RelicType.None)
@@ -57,7 +57,7 @@ public class RelicTester : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BD2 RID: 7122 RVA: 0x00059BD0 File Offset: 0x00057DD0
+	// Token: 0x06002686 RID: 9862 RVA: 0x000B6888 File Offset: 0x000B4A88
 	public void RemoveRelic()
 	{
 		if (this.m_relicToAdd == RelicType.None)
@@ -71,15 +71,15 @@ public class RelicTester : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400196E RID: 6510
+	// Token: 0x0400215B RID: 8539
 	[SerializeField]
 	private RelicType m_relicToAdd;
 
-	// Token: 0x0400196F RID: 6511
+	// Token: 0x0400215C RID: 8540
 	[SerializeField]
 	private bool m_addOnStart = true;
 
-	// Token: 0x04001970 RID: 6512
+	// Token: 0x0400215D RID: 8541
 	[SerializeField]
 	private int m_relicLevel = 1;
 }

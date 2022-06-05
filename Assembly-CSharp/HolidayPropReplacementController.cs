@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200020C RID: 524
+// Token: 0x020003BD RID: 957
 public class HolidayPropReplacementController : MonoBehaviour
 {
-	// Token: 0x060015FA RID: 5626 RVA: 0x00044870 File Offset: 0x00042A70
+	// Token: 0x06001F8A RID: 8074 RVA: 0x000A30F0 File Offset: 0x000A12F0
 	private void Awake()
 	{
 		this.m_propSpawner = base.GetComponent<PropSpawnController>();
@@ -16,7 +16,7 @@ public class HolidayPropReplacementController : MonoBehaviour
 		this.m_propSpawner.BeforePropInstanceInitializedRelay.AddListener(new Action(this.BeforePropInitialized), false);
 	}
 
-	// Token: 0x060015FB RID: 5627 RVA: 0x000448BF File Offset: 0x00042ABF
+	// Token: 0x06001F8B RID: 8075 RVA: 0x00010977 File Offset: 0x0000EB77
 	private void OnDestroy()
 	{
 		if (this.m_propSpawner)
@@ -25,7 +25,7 @@ public class HolidayPropReplacementController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015FC RID: 5628 RVA: 0x000448EC File Offset: 0x00042AEC
+	// Token: 0x06001F8C RID: 8076 RVA: 0x000A3140 File Offset: 0x000A1340
 	private void BeforePropInitialized()
 	{
 		if (!this.m_propSpawner)
@@ -61,7 +61,7 @@ public class HolidayPropReplacementController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015FD RID: 5629 RVA: 0x000449C2 File Offset: 0x00042BC2
+	// Token: 0x06001F8D RID: 8077 RVA: 0x000109A3 File Offset: 0x0000EBA3
 	private void OnDisable()
 	{
 		if (!GameManager.IsApplicationClosing && this.m_propStored)
@@ -70,30 +70,30 @@ public class HolidayPropReplacementController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400152C RID: 5420
+	// Token: 0x04001C29 RID: 7209
 	[SerializeField]
 	private HolidayType m_holidayType;
 
-	// Token: 0x0400152D RID: 5421
+	// Token: 0x04001C2A RID: 7210
 	[SerializeField]
 	[EnumFlag]
 	private BiomeLayer m_biomesToReplace;
 
-	// Token: 0x0400152E RID: 5422
+	// Token: 0x04001C2B RID: 7211
 	[HelpBox("WARNING: The Breakable state of the replacement prop MUST MATCH (i.e. if the replaced prop is breakable then the replacement prop must be breakable as well). This system also DOES NOT support replacing props with Decos on them.", HelpBoxMessageType.Warning)]
 	[Space(10f)]
 	[SerializeField]
 	private Prop[] m_propPrefabReplacementArray;
 
-	// Token: 0x0400152F RID: 5423
+	// Token: 0x04001C2C RID: 7212
 	private PropSpawnController m_propSpawner;
 
-	// Token: 0x04001530 RID: 5424
+	// Token: 0x04001C2D RID: 7213
 	private bool m_propsPooled;
 
-	// Token: 0x04001531 RID: 5425
+	// Token: 0x04001C2E RID: 7214
 	private bool m_propStored;
 
-	// Token: 0x04001532 RID: 5426
+	// Token: 0x04001C2F RID: 7215
 	private Prop m_storedPropPrefab;
 }

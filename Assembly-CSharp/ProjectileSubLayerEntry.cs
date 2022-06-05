@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000809 RID: 2057
+// Token: 0x02000CD1 RID: 3281
 [Serializable]
 public class ProjectileSubLayerEntry
 {
-	// Token: 0x0600440E RID: 17422 RVA: 0x000F0CD8 File Offset: 0x000EEED8
+	// Token: 0x06005D97 RID: 23959 RVA: 0x0015E830 File Offset: 0x0015CA30
 	public ProjectileSubLayerEntry(Projectile_RL prefab, int subLayer)
 	{
 		string name = "";
@@ -31,9 +31,9 @@ public class ProjectileSubLayerEntry
 		this.SubLayer = subLayer;
 	}
 
-	// Token: 0x04003A26 RID: 14886
+	// Token: 0x04004CF2 RID: 19698
 	public string Name;
 
-	// Token: 0x04003A27 RID: 14887
+	// Token: 0x04004CF3 RID: 19699
 	public int SubLayer;
 }

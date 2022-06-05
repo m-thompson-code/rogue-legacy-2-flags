@@ -1,10 +1,10 @@
 ﻿using System;
 using RL_Windows;
 
-// Token: 0x0200026E RID: 622
+// Token: 0x02000437 RID: 1079
 public class BackOptionItem : ExecuteImmediateOptionItem
 {
-	// Token: 0x060018C1 RID: 6337 RVA: 0x0004DE6B File Offset: 0x0004C06B
+	// Token: 0x060022B0 RID: 8880 RVA: 0x000128EC File Offset: 0x00010AEC
 	public override void ActivateOption()
 	{
 		base.ActivateOption();

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020004A6 RID: 1190
+// Token: 0x020007B2 RID: 1970
 public class PersistentBuffsProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B87 RID: 11143 RVA: 0x00093C26 File Offset: 0x00091E26
+	// Token: 0x06003BF4 RID: 15348 RVA: 0x00021125 File Offset: 0x0001F325
 	private void OnEnable()
 	{
 		this.m_playerController = null;
@@ -14,7 +14,7 @@ public class PersistentBuffsProjectileLogic : BaseProjectileLogic
 		this.UpdatePersistentDamageBuffs();
 	}
 
-	// Token: 0x06002B88 RID: 11144 RVA: 0x00093C5D File Offset: 0x00091E5D
+	// Token: 0x06003BF5 RID: 15349 RVA: 0x0002115C File Offset: 0x0001F35C
 	private void OnDisable()
 	{
 		this.m_danceApplied = false;
@@ -24,7 +24,7 @@ public class PersistentBuffsProjectileLogic : BaseProjectileLogic
 		this.m_previousComboCount = 0;
 	}
 
-	// Token: 0x06002B89 RID: 11145 RVA: 0x00093C84 File Offset: 0x00091E84
+	// Token: 0x06003BF6 RID: 15350 RVA: 0x000F538C File Offset: 0x000F358C
 	private void UpdatePersistentDamageBuffs()
 	{
 		if (this.m_playerController)
@@ -101,27 +101,27 @@ public class PersistentBuffsProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002B8A RID: 11146 RVA: 0x00093E3F File Offset: 0x0009203F
+	// Token: 0x06003BF7 RID: 15351 RVA: 0x00021181 File Offset: 0x0001F381
 	private void FixedUpdate()
 	{
 		this.UpdatePersistentDamageBuffs();
 	}
 
-	// Token: 0x04002362 RID: 9058
+	// Token: 0x04002F98 RID: 12184
 	private PlayerController m_playerController;
 
-	// Token: 0x04002363 RID: 9059
+	// Token: 0x04002F99 RID: 12185
 	private bool m_danceApplied;
 
-	// Token: 0x04002364 RID: 9060
+	// Token: 0x04002F9A RID: 12186
 	private bool m_comboApplied;
 
-	// Token: 0x04002365 RID: 9061
+	// Token: 0x04002F9B RID: 12187
 	private bool m_invulnDamageBuffApplied;
 
-	// Token: 0x04002366 RID: 9062
+	// Token: 0x04002F9C RID: 12188
 	private bool m_groundDamageBonusApplied;
 
-	// Token: 0x04002367 RID: 9063
+	// Token: 0x04002F9D RID: 12189
 	private int m_previousComboCount;
 }

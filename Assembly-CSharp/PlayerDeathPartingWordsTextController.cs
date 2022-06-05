@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003D6 RID: 982
+// Token: 0x02000672 RID: 1650
 public class PlayerDeathPartingWordsTextController : MonoBehaviour
 {
-	// Token: 0x17000ECA RID: 3786
-	// (get) Token: 0x0600241E RID: 9246 RVA: 0x00076F15 File Offset: 0x00075115
+	// Token: 0x17001361 RID: 4961
+	// (get) Token: 0x06003242 RID: 12866 RVA: 0x0001B971 File Offset: 0x00019B71
 	public TMP_Text Text
 	{
 		get
@@ -15,7 +15,7 @@ public class PlayerDeathPartingWordsTextController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600241F RID: 9247 RVA: 0x00076F20 File Offset: 0x00075120
+	// Token: 0x06003243 RID: 12867 RVA: 0x000D6D84 File Offset: 0x000D4F84
 	public void UpdateMessage(bool isVictory)
 	{
 		if (!isVictory)
@@ -43,7 +43,7 @@ public class PlayerDeathPartingWordsTextController : MonoBehaviour
 		this.m_partingWordsText.text = LocalizationManager.GetString("LOC_ID_ENDING_VICTORY_DEATH_HINT_TEXT_OVERRIDE_1", SaveManager.PlayerSaveData.CurrentCharacter.IsFemale, false);
 	}
 
-	// Token: 0x06002420 RID: 9248 RVA: 0x00077038 File Offset: 0x00075238
+	// Token: 0x06003244 RID: 12868 RVA: 0x000D6E9C File Offset: 0x000D509C
 	public void CycleUpdateMessage(bool cycleUp)
 	{
 		if (cycleUp)
@@ -70,14 +70,14 @@ public class PlayerDeathPartingWordsTextController : MonoBehaviour
 		this.m_partingWordsText.text = LocalizationManager.GetString(this.m_partingWordsLocIDArray[this.m_partingWordsIndex], SaveManager.PlayerSaveData.CurrentCharacter.IsFemale, false);
 	}
 
-	// Token: 0x04001E9B RID: 7835
+	// Token: 0x04002900 RID: 10496
 	[SerializeField]
 	private TMP_Text m_partingWordsText;
 
-	// Token: 0x04001E9C RID: 7836
+	// Token: 0x04002901 RID: 10497
 	private int m_partingWordsIndex;
 
-	// Token: 0x04001E9D RID: 7837
+	// Token: 0x04002902 RID: 10498
 	private string[] m_partingWordsLocIDArray = new string[]
 	{
 		"LOC_ID_TUTORIAL_HINTS_BOSS_CD_1",

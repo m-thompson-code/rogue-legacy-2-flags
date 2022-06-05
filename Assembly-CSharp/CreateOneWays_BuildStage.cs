@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000664 RID: 1636
+// Token: 0x02000AC3 RID: 2755
 public class CreateOneWays_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B32 RID: 15154 RVA: 0x000CB780 File Offset: 0x000C9980
+	// Token: 0x060052E7 RID: 21223 RVA: 0x0002D1BD File Offset: 0x0002B3BD
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		using (List<Room>.Enumerator enumerator = biomeController.StandaloneRooms.GetEnumerator())

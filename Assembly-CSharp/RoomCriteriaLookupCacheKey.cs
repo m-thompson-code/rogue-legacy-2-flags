@@ -2,46 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200065F RID: 1631
+// Token: 0x02000AB8 RID: 2744
 public class RoomCriteriaLookupCacheKey
 {
-	// Token: 0x170014B9 RID: 5305
-	// (get) Token: 0x06003B19 RID: 15129 RVA: 0x000CB487 File Offset: 0x000C9687
-	// (set) Token: 0x06003B1A RID: 15130 RVA: 0x000CB48F File Offset: 0x000C968F
+	// Token: 0x17001C45 RID: 7237
+	// (get) Token: 0x060052B1 RID: 21169 RVA: 0x0002D07B File Offset: 0x0002B27B
+	// (set) Token: 0x060052B2 RID: 21170 RVA: 0x0002D083 File Offset: 0x0002B283
 	public BiomeType Biome { get; private set; }
 
-	// Token: 0x170014BA RID: 5306
-	// (get) Token: 0x06003B1B RID: 15131 RVA: 0x000CB498 File Offset: 0x000C9698
-	// (set) Token: 0x06003B1C RID: 15132 RVA: 0x000CB4A0 File Offset: 0x000C96A0
+	// Token: 0x17001C46 RID: 7238
+	// (get) Token: 0x060052B3 RID: 21171 RVA: 0x0002D08C File Offset: 0x0002B28C
+	// (set) Token: 0x060052B4 RID: 21172 RVA: 0x0002D094 File Offset: 0x0002B294
 	public RoomSide RoomSide { get; private set; }
 
-	// Token: 0x170014BB RID: 5307
-	// (get) Token: 0x06003B1D RID: 15133 RVA: 0x000CB4A9 File Offset: 0x000C96A9
-	// (set) Token: 0x06003B1E RID: 15134 RVA: 0x000CB4B1 File Offset: 0x000C96B1
+	// Token: 0x17001C47 RID: 7239
+	// (get) Token: 0x060052B5 RID: 21173 RVA: 0x0002D09D File Offset: 0x0002B29D
+	// (set) Token: 0x060052B6 RID: 21174 RVA: 0x0002D0A5 File Offset: 0x0002B2A5
 	public int[] RoomSizeToDoorLocationTable { get; set; }
 
-	// Token: 0x170014BC RID: 5308
-	// (get) Token: 0x06003B1F RID: 15135 RVA: 0x000CB4BA File Offset: 0x000C96BA
-	// (set) Token: 0x06003B20 RID: 15136 RVA: 0x000CB4C2 File Offset: 0x000C96C2
+	// Token: 0x17001C48 RID: 7240
+	// (get) Token: 0x060052B7 RID: 21175 RVA: 0x0002D0AE File Offset: 0x0002B2AE
+	// (set) Token: 0x060052B8 RID: 21176 RVA: 0x0002D0B6 File Offset: 0x0002B2B6
 	public RoomType RoomType { get; private set; }
 
-	// Token: 0x170014BD RID: 5309
-	// (get) Token: 0x06003B21 RID: 15137 RVA: 0x000CB4CB File Offset: 0x000C96CB
-	// (set) Token: 0x06003B22 RID: 15138 RVA: 0x000CB4D3 File Offset: 0x000C96D3
+	// Token: 0x17001C49 RID: 7241
+	// (get) Token: 0x060052B9 RID: 21177 RVA: 0x0002D0BF File Offset: 0x0002B2BF
+	// (set) Token: 0x060052BA RID: 21178 RVA: 0x0002D0C7 File Offset: 0x0002B2C7
 	public SpecialRoomType SpecialRoomType { get; private set; }
 
-	// Token: 0x170014BE RID: 5310
-	// (get) Token: 0x06003B23 RID: 15139 RVA: 0x000CB4DC File Offset: 0x000C96DC
-	// (set) Token: 0x06003B24 RID: 15140 RVA: 0x000CB4E4 File Offset: 0x000C96E4
+	// Token: 0x17001C4A RID: 7242
+	// (get) Token: 0x060052BB RID: 21179 RVA: 0x0002D0D0 File Offset: 0x0002B2D0
+	// (set) Token: 0x060052BC RID: 21180 RVA: 0x0002D0D8 File Offset: 0x0002B2D8
 	public bool MustBeEasy { get; private set; }
 
-	// Token: 0x06003B25 RID: 15141 RVA: 0x000CB4ED File Offset: 0x000C96ED
+	// Token: 0x060052BD RID: 21181 RVA: 0x0002D0E1 File Offset: 0x0002B2E1
 	public RoomCriteriaLookupCacheKey(BiomeType biome, RoomSide side, RoomType roomType, Dictionary<Vector2Int, List<DoorLocation>> roomSizeToDoorLocations, SpecialRoomType specialRoomType, bool mustBeEasy)
 	{
 		this.Initialise(biome, side, roomType, roomSizeToDoorLocations, specialRoomType, mustBeEasy);
 	}
 
-	// Token: 0x06003B26 RID: 15142 RVA: 0x000CB504 File Offset: 0x000C9704
+	// Token: 0x060052BE RID: 21182 RVA: 0x00139E88 File Offset: 0x00138088
 	public void Initialise(BiomeType biome, RoomSide side, RoomType roomType, Dictionary<Vector2Int, List<DoorLocation>> roomSizeToDoorLocations, SpecialRoomType specialRoomType, bool mustBeEasy)
 	{
 		this.Biome = biome;
@@ -63,7 +63,7 @@ public class RoomCriteriaLookupCacheKey
 		}
 	}
 
-	// Token: 0x06003B27 RID: 15143 RVA: 0x000CB588 File Offset: 0x000C9788
+	// Token: 0x060052BF RID: 21183 RVA: 0x00139F0C File Offset: 0x0013810C
 	public override bool Equals(object otherObject)
 	{
 		RoomCriteriaLookupCacheKey roomCriteriaLookupCacheKey = (RoomCriteriaLookupCacheKey)otherObject;
@@ -84,7 +84,7 @@ public class RoomCriteriaLookupCacheKey
 		return result;
 	}
 
-	// Token: 0x06003B28 RID: 15144 RVA: 0x000CB614 File Offset: 0x000C9814
+	// Token: 0x060052C0 RID: 21184 RVA: 0x00139F98 File Offset: 0x00138198
 	public override int GetHashCode()
 	{
 		int num = 13;
@@ -99,7 +99,7 @@ public class RoomCriteriaLookupCacheKey
 		return num * 397 ^ (this.MustBeEasy ? 1 : 0);
 	}
 
-	// Token: 0x06003B29 RID: 15145 RVA: 0x000CB69C File Offset: 0x000C989C
+	// Token: 0x060052C1 RID: 21185 RVA: 0x0013A020 File Offset: 0x00138220
 	public override string ToString()
 	{
 		return string.Format("RoomCriteriaLookupCacheKey - ({0}, {1}, {2}, {3}, {4}, {5})", new object[]
@@ -113,10 +113,10 @@ public class RoomCriteriaLookupCacheKey
 		});
 	}
 
-	// Token: 0x02000DCF RID: 3535
+	// Token: 0x02000AB9 RID: 2745
 	public class EqualityComparer : EqualityComparer<RoomCriteriaLookupCacheKey>
 	{
-		// Token: 0x060069F1 RID: 27121 RVA: 0x0018CA38 File Offset: 0x0018AC38
+		// Token: 0x060052C2 RID: 21186 RVA: 0x0013A094 File Offset: 0x00138294
 		public override bool Equals(RoomCriteriaLookupCacheKey x, RoomCriteriaLookupCacheKey y)
 		{
 			bool result = false;
@@ -136,7 +136,7 @@ public class RoomCriteriaLookupCacheKey
 			return result;
 		}
 
-		// Token: 0x060069F2 RID: 27122 RVA: 0x0018CABC File Offset: 0x0018ACBC
+		// Token: 0x060052C3 RID: 21187 RVA: 0x0013A118 File Offset: 0x00138318
 		public override int GetHashCode(RoomCriteriaLookupCacheKey key)
 		{
 			int num = 13;

@@ -3,12 +3,12 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000404 RID: 1028
+// Token: 0x020006B4 RID: 1716
 [RequireComponent(typeof(Rigidbody2D))]
 public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x17000F5C RID: 3932
-	// (get) Token: 0x06002650 RID: 9808 RVA: 0x0007EBCC File Offset: 0x0007CDCC
+	// Token: 0x17001415 RID: 5141
+	// (get) Token: 0x060034E1 RID: 13537 RVA: 0x0001CFDF File Offset: 0x0001B1DF
 	public string SFXNameLoopOverride
 	{
 		get
@@ -17,8 +17,8 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F5D RID: 3933
-	// (get) Token: 0x06002651 RID: 9809 RVA: 0x0007EBD4 File Offset: 0x0007CDD4
+	// Token: 0x17001416 RID: 5142
+	// (get) Token: 0x060034E2 RID: 13538 RVA: 0x0001CFE7 File Offset: 0x0001B1E7
 	public string SFXNameStopOverride
 	{
 		get
@@ -27,8 +27,8 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F5E RID: 3934
-	// (get) Token: 0x06002652 RID: 9810 RVA: 0x0007EBDC File Offset: 0x0007CDDC
+	// Token: 0x17001417 RID: 5143
+	// (get) Token: 0x060034E3 RID: 13539 RVA: 0x0001CFEF File Offset: 0x0001B1EF
 	public bool MovesThroughWater
 	{
 		get
@@ -37,8 +37,8 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F5F RID: 3935
-	// (get) Token: 0x06002653 RID: 9811 RVA: 0x0007EBE4 File Offset: 0x0007CDE4
+	// Token: 0x17001418 RID: 5144
+	// (get) Token: 0x060034E4 RID: 13540 RVA: 0x0001CFF7 File Offset: 0x0001B1F7
 	public EarthShiftPlatformController.EarthShiftPlatformSize PlatformSize
 	{
 		get
@@ -47,8 +47,8 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F60 RID: 3936
-	// (get) Token: 0x06002654 RID: 9812 RVA: 0x0007EBEC File Offset: 0x0007CDEC
+	// Token: 0x17001419 RID: 5145
+	// (get) Token: 0x060034E5 RID: 13541 RVA: 0x0001CFFF File Offset: 0x0001B1FF
 	public MeshRenderer Renderer
 	{
 		get
@@ -57,8 +57,8 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F61 RID: 3937
-	// (get) Token: 0x06002655 RID: 9813 RVA: 0x0007EBF4 File Offset: 0x0007CDF4
+	// Token: 0x1700141A RID: 5146
+	// (get) Token: 0x060034E6 RID: 13542 RVA: 0x0001D007 File Offset: 0x0001B207
 	public float Progress
 	{
 		get
@@ -67,19 +67,19 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F62 RID: 3938
-	// (get) Token: 0x06002656 RID: 9814 RVA: 0x0007EBFC File Offset: 0x0007CDFC
-	// (set) Token: 0x06002657 RID: 9815 RVA: 0x0007EC04 File Offset: 0x0007CE04
+	// Token: 0x1700141B RID: 5147
+	// (get) Token: 0x060034E7 RID: 13543 RVA: 0x0001D00F File Offset: 0x0001B20F
+	// (set) Token: 0x060034E8 RID: 13544 RVA: 0x0001D017 File Offset: 0x0001B217
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x06002658 RID: 9816 RVA: 0x0007EC0D File Offset: 0x0007CE0D
+	// Token: 0x060034E9 RID: 13545 RVA: 0x0001D020 File Offset: 0x0001B220
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.m_roomRelativeStartingPos = base.transform.position - room.transform.position;
 	}
 
-	// Token: 0x06002659 RID: 9817 RVA: 0x0007EC38 File Offset: 0x0007CE38
+	// Token: 0x060034EA RID: 13546 RVA: 0x000DEB50 File Offset: 0x000DCD50
 	private void Awake()
 	{
 		if (!this.m_triggerSpawnController)
@@ -101,13 +101,13 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x0600265A RID: 9818 RVA: 0x0007ECD4 File Offset: 0x0007CED4
+	// Token: 0x060034EB RID: 13547 RVA: 0x0001D04A File Offset: 0x0001B24A
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x0600265B RID: 9819 RVA: 0x0007ECE2 File Offset: 0x0007CEE2
+	// Token: 0x060034EC RID: 13548 RVA: 0x0001D058 File Offset: 0x0001B258
 	private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs args)
 	{
 		base.gameObject.tag = "MagicPlatform";
@@ -115,14 +115,14 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		this.m_triggerSpawnController.PropInstance.GetComponent<EarthShiftTriggerController>().SetPlatform(this);
 	}
 
-	// Token: 0x0600265C RID: 9820 RVA: 0x0007ED10 File Offset: 0x0007CF10
+	// Token: 0x060034ED RID: 13549 RVA: 0x0001D086 File Offset: 0x0001B286
 	private void OnDisable()
 	{
 		this.ResetToOrigin();
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x0600265D RID: 9821 RVA: 0x0007ED24 File Offset: 0x0007CF24
+	// Token: 0x060034EE RID: 13550 RVA: 0x0001D09A File Offset: 0x0001B29A
 	private void ResetToOrigin()
 	{
 		this.m_progress = 0f;
@@ -132,7 +132,7 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x0600265E RID: 9822 RVA: 0x0007ED64 File Offset: 0x0007CF64
+	// Token: 0x060034EF RID: 13551 RVA: 0x000DEBEC File Offset: 0x000DCDEC
 	public void Move()
 	{
 		this.m_progress += Time.deltaTime / this.m_timeToReachDestination;
@@ -140,7 +140,7 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		base.transform.position = Vector3.Lerp(this.Room.transform.position + this.m_roomRelativeStartingPos, this.m_destination.transform.position, this.m_progress);
 	}
 
-	// Token: 0x0600265F RID: 9823 RVA: 0x0007EDE8 File Offset: 0x0007CFE8
+	// Token: 0x060034F0 RID: 13552 RVA: 0x000DEC70 File Offset: 0x000DCE70
 	public void ResetPosition()
 	{
 		this.ResetToOrigin();
@@ -158,7 +158,7 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002660 RID: 9824 RVA: 0x0007EE6D File Offset: 0x0007D06D
+	// Token: 0x060034F1 RID: 13553 RVA: 0x0001D0DA File Offset: 0x0001B2DA
 	private IEnumerator TeleportPlayerCoroutine()
 	{
 		RewiredMapController.SetMapEnabled(GameInputMode.Game, false);
@@ -208,71 +208,71 @@ public class EarthShiftPlatformController : MonoBehaviour, IRoomConsumer
 		yield break;
 	}
 
-	// Token: 0x04001FF5 RID: 8181
+	// Token: 0x04002AB3 RID: 10931
 	private const string TELEPORT_HIT_SFX_NAME = "event:/SFX/Weapons/sfx_player_splash_return";
 
-	// Token: 0x04001FF6 RID: 8182
+	// Token: 0x04002AB4 RID: 10932
 	[SerializeField]
 	private GameObject m_destination;
 
-	// Token: 0x04001FF7 RID: 8183
+	// Token: 0x04002AB5 RID: 10933
 	[SerializeField]
 	private float m_timeToReachDestination;
 
-	// Token: 0x04001FF8 RID: 8184
+	// Token: 0x04002AB6 RID: 10934
 	[SerializeField]
 	private PropSpawnController m_triggerSpawnController;
 
-	// Token: 0x04001FF9 RID: 8185
+	// Token: 0x04002AB7 RID: 10935
 	[SerializeField]
 	private EarthShiftPlatformController.EarthShiftPlatformSize m_platformSize;
 
-	// Token: 0x04001FFA RID: 8186
+	// Token: 0x04002AB8 RID: 10936
 	[SerializeField]
 	private string m_sfxNameLoopOverride;
 
-	// Token: 0x04001FFB RID: 8187
+	// Token: 0x04002AB9 RID: 10937
 	[SerializeField]
 	private string m_sfxNameStopOverride;
 
-	// Token: 0x04001FFC RID: 8188
+	// Token: 0x04002ABA RID: 10938
 	[SerializeField]
 	private bool m_movesThroughWater;
 
-	// Token: 0x04001FFD RID: 8189
+	// Token: 0x04002ABB RID: 10939
 	private Vector3 m_roomRelativeStartingPos;
 
-	// Token: 0x04001FFE RID: 8190
+	// Token: 0x04002ABC RID: 10940
 	private float m_progress;
 
-	// Token: 0x04001FFF RID: 8191
+	// Token: 0x04002ABD RID: 10941
 	private Collider2D m_collider;
 
-	// Token: 0x04002000 RID: 8192
+	// Token: 0x04002ABE RID: 10942
 	private Collider2D[] m_overlappingColliders = new Collider2D[1];
 
-	// Token: 0x04002001 RID: 8193
+	// Token: 0x04002ABF RID: 10943
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002002 RID: 8194
+	// Token: 0x04002AC0 RID: 10944
 	private Tween m_teleportTween;
 
-	// Token: 0x04002003 RID: 8195
+	// Token: 0x04002AC1 RID: 10945
 	private MeshRenderer m_renderer;
 
-	// Token: 0x04002004 RID: 8196
+	// Token: 0x04002AC2 RID: 10946
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x02000C29 RID: 3113
+	// Token: 0x020006B5 RID: 1717
 	public enum EarthShiftPlatformSize
 	{
-		// Token: 0x04004F53 RID: 20307
+		// Token: 0x04002AC5 RID: 10949
 		Small,
-		// Token: 0x04004F54 RID: 20308
+		// Token: 0x04002AC6 RID: 10950
 		Medium,
-		// Token: 0x04004F55 RID: 20309
+		// Token: 0x04002AC7 RID: 10951
 		Large,
-		// Token: 0x04004F56 RID: 20310
+		// Token: 0x04002AC8 RID: 10952
 		Final
 	}
 }

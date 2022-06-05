@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x020003C8 RID: 968
+// Token: 0x02000660 RID: 1632
 public class SoulShopOmniUIChooseSpellButton : OmniUIIncrementButton<AbilityType>, ISoulShopOmniUIButton
 {
-	// Token: 0x17000EB3 RID: 3763
-	// (get) Token: 0x060023B0 RID: 9136 RVA: 0x00074253 File Offset: 0x00072453
+	// Token: 0x17001348 RID: 4936
+	// (get) Token: 0x060031CE RID: 12750 RVA: 0x0001B58B File Offset: 0x0001978B
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -14,23 +14,23 @@ public class SoulShopOmniUIChooseSpellButton : OmniUIIncrementButton<AbilityType
 		}
 	}
 
-	// Token: 0x17000EB4 RID: 3764
-	// (get) Token: 0x060023B1 RID: 9137 RVA: 0x0007425B File Offset: 0x0007245B
-	// (set) Token: 0x060023B2 RID: 9138 RVA: 0x00074263 File Offset: 0x00072463
+	// Token: 0x17001349 RID: 4937
+	// (get) Token: 0x060031CF RID: 12751 RVA: 0x0001B593 File Offset: 0x00019793
+	// (set) Token: 0x060031D0 RID: 12752 RVA: 0x0001B59B File Offset: 0x0001979B
 	public SoulShopType SoulShopType { get; set; }
 
-	// Token: 0x17000EB5 RID: 3765
-	// (get) Token: 0x060023B3 RID: 9139 RVA: 0x0007426C File Offset: 0x0007246C
-	// (set) Token: 0x060023B4 RID: 9140 RVA: 0x00074274 File Offset: 0x00072474
+	// Token: 0x1700134A RID: 4938
+	// (get) Token: 0x060031D1 RID: 12753 RVA: 0x0001B5A4 File Offset: 0x000197A4
+	// (set) Token: 0x060031D2 RID: 12754 RVA: 0x0001B5AC File Offset: 0x000197AC
 	public SoulShopOmniUIEntry ParentEntry { get; set; }
 
-	// Token: 0x060023B5 RID: 9141 RVA: 0x0007427D File Offset: 0x0007247D
+	// Token: 0x060031D3 RID: 12755 RVA: 0x0001B5B5 File Offset: 0x000197B5
 	private void OnEnable()
 	{
 		this.InitializeIncrementList();
 	}
 
-	// Token: 0x060023B6 RID: 9142 RVA: 0x00074285 File Offset: 0x00072485
+	// Token: 0x060031D4 RID: 12756 RVA: 0x0001B5BD File Offset: 0x000197BD
 	public override void InitializeIncrementList()
 	{
 		if (this.m_incrementList != null)
@@ -44,7 +44,7 @@ public class SoulShopOmniUIChooseSpellButton : OmniUIIncrementButton<AbilityType
 		this.m_incrementList.AddRange(AbilityType_RL.ValidSpellTypeArray);
 	}
 
-	// Token: 0x060023B7 RID: 9143 RVA: 0x000742B8 File Offset: 0x000724B8
+	// Token: 0x060031D5 RID: 12757 RVA: 0x000D4430 File Offset: 0x000D2630
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -60,7 +60,7 @@ public class SoulShopOmniUIChooseSpellButton : OmniUIIncrementButton<AbilityType
 		this.m_descriptionEventArgs.Initialize(this.SoulShopType, OmniUIButtonType.Equipping);
 	}
 
-	// Token: 0x060023B8 RID: 9144 RVA: 0x00074310 File Offset: 0x00072510
+	// Token: 0x060031D6 RID: 12758 RVA: 0x000D4488 File Offset: 0x000D2688
 	public override void UpdateState()
 	{
 		SoulShopObj soulShopObj = SaveManager.ModeSaveData.GetSoulShopObj(this.SoulShopType);
@@ -91,7 +91,7 @@ public class SoulShopOmniUIChooseSpellButton : OmniUIIncrementButton<AbilityType
 		}
 	}
 
-	// Token: 0x060023B9 RID: 9145 RVA: 0x000743EC File Offset: 0x000725EC
+	// Token: 0x060031D7 RID: 12759 RVA: 0x000D4564 File Offset: 0x000D2764
 	public override void OnConfirmButtonPressed()
 	{
 		if (!this.IsButtonActive)
@@ -105,13 +105,13 @@ public class SoulShopOmniUIChooseSpellButton : OmniUIIncrementButton<AbilityType
 		this.ParentEntry.UpdateState();
 	}
 
-	// Token: 0x060023BA RID: 9146 RVA: 0x00074438 File Offset: 0x00072638
+	// Token: 0x060031D8 RID: 12760 RVA: 0x000D45B0 File Offset: 0x000D27B0
 	protected override void UpdateIncrementText()
 	{
 		string @string = LocalizationManager.GetString(AbilityLibrary.GetAbility(this.m_incrementList[this.m_selectedIndex]).AbilityData.Title, false, false);
 		this.m_levelText.text = @string;
 	}
 
-	// Token: 0x04001E5F RID: 7775
+	// Token: 0x04002898 RID: 10392
 	protected SoulShopOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000E4 RID: 228
+// Token: 0x02000170 RID: 368
 public class FlyingShield_Miniboss_AIScript : FlyingShield_Basic_AIScript
 {
-	// Token: 0x17000390 RID: 912
-	// (get) Token: 0x060006DC RID: 1756 RVA: 0x00019ED3 File Offset: 0x000180D3
+	// Token: 0x17000498 RID: 1176
+	// (get) Token: 0x060009F9 RID: 2553 RVA: 0x000068DA File Offset: 0x00004ADA
 	protected override float m_spinMove_Attack_MoveSpeed
 	{
 		get
@@ -13,8 +13,8 @@ public class FlyingShield_Miniboss_AIScript : FlyingShield_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000391 RID: 913
-	// (get) Token: 0x060006DD RID: 1757 RVA: 0x00019EDA File Offset: 0x000180DA
+	// Token: 0x17000499 RID: 1177
+	// (get) Token: 0x060009FA RID: 2554 RVA: 0x0000611B File Offset: 0x0000431B
 	protected override float m_spinMove_Attack_Duration
 	{
 		get
@@ -23,8 +23,8 @@ public class FlyingShield_Miniboss_AIScript : FlyingShield_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000392 RID: 914
-	// (get) Token: 0x060006DE RID: 1758 RVA: 0x00019EE1 File Offset: 0x000180E1
+	// Token: 0x1700049A RID: 1178
+	// (get) Token: 0x060009FB RID: 2555 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_hasTailSpin
 	{
 		get
@@ -33,8 +33,8 @@ public class FlyingShield_Miniboss_AIScript : FlyingShield_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000393 RID: 915
-	// (get) Token: 0x060006DF RID: 1759 RVA: 0x00019EE4 File Offset: 0x000180E4
+	// Token: 0x1700049B RID: 1179
+	// (get) Token: 0x060009FC RID: 2556 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_hasTailRam
 	{
 		get

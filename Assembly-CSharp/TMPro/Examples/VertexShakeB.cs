@@ -4,34 +4,34 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x0200086E RID: 2158
+	// Token: 0x02000D84 RID: 3460
 	public class VertexShakeB : MonoBehaviour
 	{
-		// Token: 0x0600474E RID: 18254 RVA: 0x001007CF File Offset: 0x000FE9CF
+		// Token: 0x06006237 RID: 25143 RVA: 0x000362FA File Offset: 0x000344FA
 		private void Awake()
 		{
 			this.m_TextComponent = base.GetComponent<TMP_Text>();
 		}
 
-		// Token: 0x0600474F RID: 18255 RVA: 0x001007DD File Offset: 0x000FE9DD
+		// Token: 0x06006238 RID: 25144 RVA: 0x00036308 File Offset: 0x00034508
 		private void OnEnable()
 		{
 			TMPro_EventManager.TEXT_CHANGED_EVENT.Add(new Action<UnityEngine.Object>(this.ON_TEXT_CHANGED));
 		}
 
-		// Token: 0x06004750 RID: 18256 RVA: 0x001007F5 File Offset: 0x000FE9F5
+		// Token: 0x06006239 RID: 25145 RVA: 0x00036320 File Offset: 0x00034520
 		private void OnDisable()
 		{
 			TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(new Action<UnityEngine.Object>(this.ON_TEXT_CHANGED));
 		}
 
-		// Token: 0x06004751 RID: 18257 RVA: 0x0010080D File Offset: 0x000FEA0D
+		// Token: 0x0600623A RID: 25146 RVA: 0x00036338 File Offset: 0x00034538
 		private void Start()
 		{
 			base.StartCoroutine(this.AnimateVertexColors());
 		}
 
-		// Token: 0x06004752 RID: 18258 RVA: 0x0010081C File Offset: 0x000FEA1C
+		// Token: 0x0600623B RID: 25147 RVA: 0x00036347 File Offset: 0x00034547
 		private void ON_TEXT_CHANGED(UnityEngine.Object obj)
 		{
 			if (this.m_TextComponent)
@@ -40,7 +40,7 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x06004753 RID: 18259 RVA: 0x00100835 File Offset: 0x000FEA35
+		// Token: 0x0600623C RID: 25148 RVA: 0x00036360 File Offset: 0x00034560
 		private IEnumerator AnimateVertexColors()
 		{
 			this.m_TextComponent.ForceMeshUpdate(false, false);
@@ -124,19 +124,19 @@ namespace TMPro.Examples
 			yield break;
 		}
 
-		// Token: 0x04003C5C RID: 15452
+		// Token: 0x0400503F RID: 20543
 		public float AngleMultiplier = 1f;
 
-		// Token: 0x04003C5D RID: 15453
+		// Token: 0x04005040 RID: 20544
 		public float SpeedMultiplier = 1f;
 
-		// Token: 0x04003C5E RID: 15454
+		// Token: 0x04005041 RID: 20545
 		public float CurveScale = 1f;
 
-		// Token: 0x04003C5F RID: 15455
+		// Token: 0x04005042 RID: 20546
 		private TMP_Text m_TextComponent;
 
-		// Token: 0x04003C60 RID: 15456
+		// Token: 0x04005043 RID: 20547
 		private bool hasTextChanged;
 	}
 }

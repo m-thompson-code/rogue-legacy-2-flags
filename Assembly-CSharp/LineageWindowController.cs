@@ -10,11 +10,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x02000580 RID: 1408
+// Token: 0x02000966 RID: 2406
 public class LineageWindowController : WindowController, IAudioEventEmitter, ILocalizable
 {
-	// Token: 0x1700128D RID: 4749
-	// (get) Token: 0x060033E2 RID: 13282 RVA: 0x000B0458 File Offset: 0x000AE658
+	// Token: 0x1700197A RID: 6522
+	// (get) Token: 0x06004933 RID: 18739 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -23,8 +23,8 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x1700128E RID: 4750
-	// (get) Token: 0x060033E3 RID: 13283 RVA: 0x000B0460 File Offset: 0x000AE660
+	// Token: 0x1700197B RID: 6523
+	// (get) Token: 0x06004934 RID: 18740 RVA: 0x00028363 File Offset: 0x00026563
 	public int CurrentSelectedCharacterIndex
 	{
 		get
@@ -33,8 +33,8 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x1700128F RID: 4751
-	// (get) Token: 0x060033E4 RID: 13284 RVA: 0x000B0468 File Offset: 0x000AE668
+	// Token: 0x1700197C RID: 6524
+	// (get) Token: 0x06004935 RID: 18741 RVA: 0x0011BD30 File Offset: 0x00119F30
 	public int NumberOfSuccessors
 	{
 		get
@@ -44,8 +44,8 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x17001290 RID: 4752
-	// (get) Token: 0x060033E5 RID: 13285 RVA: 0x000B0489 File Offset: 0x000AE689
+	// Token: 0x1700197D RID: 6525
+	// (get) Token: 0x06004936 RID: 18742 RVA: 0x00003E42 File Offset: 0x00002042
 	public override WindowID ID
 	{
 		get
@@ -54,8 +54,8 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x17001291 RID: 4753
-	// (get) Token: 0x060033E6 RID: 13286 RVA: 0x000B048C File Offset: 0x000AE68C
+	// Token: 0x1700197E RID: 6526
+	// (get) Token: 0x06004937 RID: 18743 RVA: 0x0002836B File Offset: 0x0002656B
 	public Scene Scene
 	{
 		get
@@ -64,7 +64,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x060033E7 RID: 13287 RVA: 0x000B049C File Offset: 0x000AE69C
+	// Token: 0x06004938 RID: 18744 RVA: 0x0011BD54 File Offset: 0x00119F54
 	private void Awake()
 	{
 		this.m_refreshText = new Action<object, EventArgs>(this.RefreshText);
@@ -80,7 +80,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		this.m_onVerticalButtonPressed = new Action<InputActionEventData>(this.OnVerticalButtonPressed);
 	}
 
-	// Token: 0x060033E8 RID: 13288 RVA: 0x000B0570 File Offset: 0x000AE770
+	// Token: 0x06004939 RID: 18745 RVA: 0x0011BE28 File Offset: 0x0011A028
 	private void Start()
 	{
 		Camera camera = Camera.main;
@@ -95,7 +95,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		camera.transform.position = position;
 	}
 
-	// Token: 0x060033E9 RID: 13289 RVA: 0x000B05FC File Offset: 0x000AE7FC
+	// Token: 0x0600493A RID: 18746 RVA: 0x0011BEB4 File Offset: 0x0011A0B4
 	public override void Initialize()
 	{
 		this.m_characterDataArray = new CharacterData[this.NumberOfSuccessors];
@@ -105,7 +105,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		base.Initialize();
 	}
 
-	// Token: 0x060033EA RID: 13290 RVA: 0x000B0650 File Offset: 0x000AE850
+	// Token: 0x0600493B RID: 18747 RVA: 0x0011BF08 File Offset: 0x0011A108
 	private void CreateRandomCharacters()
 	{
 		LineageRoomController component = this.m_lineageRoomController.EndingRoom.GetComponent<LineageRoomController>();
@@ -225,7 +225,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		this.UpdateSelectedCharacter();
 	}
 
-	// Token: 0x060033EB RID: 13291 RVA: 0x000B0B8E File Offset: 0x000AED8E
+	// Token: 0x0600493C RID: 18748 RVA: 0x00028378 File Offset: 0x00026578
 	private IEnumerator RepositionGoldFlag(GameObject goldFlag)
 	{
 		yield return null;
@@ -237,13 +237,13 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		yield break;
 	}
 
-	// Token: 0x060033EC RID: 13292 RVA: 0x000B0BA4 File Offset: 0x000AEDA4
+	// Token: 0x0600493D RID: 18749 RVA: 0x0002838E File Offset: 0x0002658E
 	public void RunOpenTransition(float duration)
 	{
 		base.StartCoroutine(this.OnEnterTransitionCoroutine(duration));
 	}
 
-	// Token: 0x060033ED RID: 13293 RVA: 0x000B0BB4 File Offset: 0x000AEDB4
+	// Token: 0x0600493E RID: 18750 RVA: 0x0002839E File Offset: 0x0002659E
 	private IEnumerator OnEnterTransitionCoroutine(float duration)
 	{
 		if (!this.m_openTransitionRunning)
@@ -269,7 +269,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		yield break;
 	}
 
-	// Token: 0x060033EE RID: 13294 RVA: 0x000B0BCC File Offset: 0x000AEDCC
+	// Token: 0x0600493F RID: 18751 RVA: 0x0011C448 File Offset: 0x0011A648
 	protected override void OnOpen()
 	{
 		this.m_switchingWeapons = false;
@@ -319,7 +319,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		Messenger<SceneMessenger, SceneEvent>.Broadcast(SceneEvent.EnterLineageScreen, this, EventArgs.Empty);
 	}
 
-	// Token: 0x060033EF RID: 13295 RVA: 0x000B0D98 File Offset: 0x000AEF98
+	// Token: 0x06004940 RID: 18752 RVA: 0x0011C614 File Offset: 0x0011A814
 	protected override void OnClose()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -335,7 +335,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		this.m_windowCanvas.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060033F0 RID: 13296 RVA: 0x000B0DFC File Offset: 0x000AEFFC
+	// Token: 0x06004941 RID: 18753 RVA: 0x0011C678 File Offset: 0x0011A878
 	private void AddInputListeners()
 	{
 		if (ReInput.isReady)
@@ -354,7 +354,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x060033F1 RID: 13297 RVA: 0x000B0F10 File Offset: 0x000AF110
+	// Token: 0x06004942 RID: 18754 RVA: 0x0011C78C File Offset: 0x0011A98C
 	private void RemoveInputListeners()
 	{
 		if (ReInput.isReady)
@@ -373,7 +373,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x060033F2 RID: 13298 RVA: 0x000B1022 File Offset: 0x000AF222
+	// Token: 0x06004943 RID: 18755 RVA: 0x000283B4 File Offset: 0x000265B4
 	protected override void OnFocus()
 	{
 		if (this.m_openTransitionComplete && !this.m_inputListenersAdded)
@@ -382,7 +382,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x060033F3 RID: 13299 RVA: 0x000B103A File Offset: 0x000AF23A
+	// Token: 0x06004944 RID: 18756 RVA: 0x000283CC File Offset: 0x000265CC
 	protected override void OnLostFocus()
 	{
 		if (this.m_openTransitionComplete && this.m_inputListenersAdded)
@@ -391,7 +391,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x060033F4 RID: 13300 RVA: 0x000B1054 File Offset: 0x000AF254
+	// Token: 0x06004945 RID: 18757 RVA: 0x0011C8A0 File Offset: 0x0011AAA0
 	private void UpdateRerollHeirsNav()
 	{
 		if (this.m_numRerolls > 0)
@@ -409,7 +409,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x060033F5 RID: 13301 RVA: 0x000B10D8 File Offset: 0x000AF2D8
+	// Token: 0x06004946 RID: 18758 RVA: 0x0011C924 File Offset: 0x0011AB24
 	private void OnRandomizeChildrenPressed(InputActionEventData data)
 	{
 		if (!this.m_isViewingPortraits && this.m_numRerolls > 0)
@@ -428,7 +428,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x060033F6 RID: 13302 RVA: 0x000B1163 File Offset: 0x000AF363
+	// Token: 0x06004947 RID: 18759 RVA: 0x000283E4 File Offset: 0x000265E4
 	private void OnCancelButtonDown(InputActionEventData data)
 	{
 		if (this.m_isViewingPortraits)
@@ -446,7 +446,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x060033F7 RID: 13303 RVA: 0x000B118C File Offset: 0x000AF38C
+	// Token: 0x06004948 RID: 18760 RVA: 0x0011C9B0 File Offset: 0x0011ABB0
 	private void OnHorizontalDirectionPressed(InputActionEventData data)
 	{
 		bool flag = data.GetAxis() > 0f;
@@ -485,13 +485,13 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x060033F8 RID: 13304 RVA: 0x000B1252 File Offset: 0x000AF452
+	// Token: 0x06004949 RID: 18761 RVA: 0x0002840B File Offset: 0x0002660B
 	private void OnHorizontalButtonReleased(InputActionEventData data)
 	{
 		this.m_portraitsViewed = 0;
 	}
 
-	// Token: 0x060033F9 RID: 13305 RVA: 0x000B125C File Offset: 0x000AF45C
+	// Token: 0x0600494A RID: 18762 RVA: 0x0011CA78 File Offset: 0x0011AC78
 	private void OnVerticalButtonPressed(InputActionEventData data)
 	{
 		if (this.m_isViewingPortraits)
@@ -595,7 +595,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x060033FA RID: 13306 RVA: 0x000B1411 File Offset: 0x000AF611
+	// Token: 0x0600494B RID: 18763 RVA: 0x00028414 File Offset: 0x00026614
 	private IEnumerator SwitchWeaponAnimCoroutine(PlayerLookController lookController)
 	{
 		this.m_switchingWeapons = true;
@@ -629,7 +629,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		yield break;
 	}
 
-	// Token: 0x060033FB RID: 13307 RVA: 0x000B1428 File Offset: 0x000AF628
+	// Token: 0x0600494C RID: 18764 RVA: 0x0011CC30 File Offset: 0x0011AE30
 	private bool IsVariantAbilityUnlocked(CharacterData charData)
 	{
 		if (charData.TraitOne == TraitType.RandomizeKit || charData.TraitTwo == TraitType.RandomizeKit)
@@ -695,7 +695,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		return flag && !soulShopObj.IsNativeNull() && soulShopObj.CurrentEquippedLevel > 0;
 	}
 
-	// Token: 0x060033FC RID: 13308 RVA: 0x000B154C File Offset: 0x000AF74C
+	// Token: 0x0600494D RID: 18765 RVA: 0x0011CD54 File Offset: 0x0011AF54
 	private void OnConfirmHeirButtonPressed(InputActionEventData data)
 	{
 		if (this.m_isViewingPortraits)
@@ -708,7 +708,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		AudioManager.PlayOneShot(this, this.m_heirChosenAudioEvent, default(Vector3));
 	}
 
-	// Token: 0x060033FD RID: 13309 RVA: 0x000B158C File Offset: 0x000AF78C
+	// Token: 0x0600494E RID: 18766 RVA: 0x0011CD94 File Offset: 0x0011AF94
 	private void InitializeSelectHeirConfirmMenu()
 	{
 		ConfirmMenuWindowController confirmMenuWindowController = WindowManager.GetWindowController(WindowID.ConfirmMenu) as ConfirmMenuWindowController;
@@ -724,7 +724,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x060033FE RID: 13310 RVA: 0x000B160C File Offset: 0x000AF80C
+	// Token: 0x0600494F RID: 18767 RVA: 0x0011CE14 File Offset: 0x0011B014
 	private void InitializeExitConfirmMenu()
 	{
 		ConfirmMenuWindowController confirmMenuWindowController = WindowManager.GetWindowController(WindowID.ConfirmMenu) as ConfirmMenuWindowController;
@@ -740,7 +740,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x060033FF RID: 13311 RVA: 0x000B168C File Offset: 0x000AF88C
+	// Token: 0x06004950 RID: 18768 RVA: 0x0011CE94 File Offset: 0x0011B094
 	private void ConfirmHeirSelection()
 	{
 		AudioManager.PlayOneShot(this, this.m_transitionToTownAudioEvent, default(Vector3));
@@ -788,31 +788,31 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		SceneLoader_RL.LoadScene(SceneID.Town, TransitionID.FadeToBlackWithLoading);
 	}
 
-	// Token: 0x06003400 RID: 13312 RVA: 0x000B1805 File Offset: 0x000AFA05
+	// Token: 0x06004951 RID: 18769 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenuSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x06003401 RID: 13313 RVA: 0x000B180F File Offset: 0x000AFA0F
+	// Token: 0x06004952 RID: 18770 RVA: 0x0002842A File Offset: 0x0002662A
 	private void ConfirmQuitSelection()
 	{
 		SceneLoader_RL.LoadScene(SceneID.MainMenu, TransitionID.FadeToBlackWithLoading);
 	}
 
-	// Token: 0x06003402 RID: 13314 RVA: 0x000B1818 File Offset: 0x000AFA18
+	// Token: 0x06004953 RID: 18771 RVA: 0x00028433 File Offset: 0x00026633
 	private void OnViewLineageButtonPressed(InputActionEventData data)
 	{
 		this.TogglePortraitViewing();
 	}
 
-	// Token: 0x06003403 RID: 13315 RVA: 0x000B1820 File Offset: 0x000AFA20
+	// Token: 0x06004954 RID: 18772 RVA: 0x0002843B File Offset: 0x0002663B
 	public void TogglePortraitViewing()
 	{
 		base.StartCoroutine(this.TogglePortraitAnimCoroutine(!this.m_isViewingPortraits));
 	}
 
-	// Token: 0x06003404 RID: 13316 RVA: 0x000B1838 File Offset: 0x000AFA38
+	// Token: 0x06004955 RID: 18773 RVA: 0x00028453 File Offset: 0x00026653
 	private IEnumerator TogglePortraitAnimCoroutine(bool toggleIn)
 	{
 		this.m_isViewingPortraits = toggleIn;
@@ -857,7 +857,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		yield break;
 	}
 
-	// Token: 0x06003405 RID: 13317 RVA: 0x000B1850 File Offset: 0x000AFA50
+	// Token: 0x06004956 RID: 18774 RVA: 0x0011D010 File Offset: 0x0011B210
 	private void ShiftPortraits(bool moveRight)
 	{
 		int currentPortraitRoomIndex = this.m_currentPortraitRoomIndex;
@@ -889,7 +889,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x06003406 RID: 13318 RVA: 0x000B1900 File Offset: 0x000AFB00
+	// Token: 0x06004957 RID: 18775 RVA: 0x00028469 File Offset: 0x00026669
 	private IEnumerator ShiftToPortraitCoroutine(LineagePortrait portrait)
 	{
 		this.m_isShiftingPortraits = true;
@@ -907,7 +907,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		yield break;
 	}
 
-	// Token: 0x06003407 RID: 13319 RVA: 0x000B1918 File Offset: 0x000AFB18
+	// Token: 0x06004958 RID: 18776 RVA: 0x0011D0C0 File Offset: 0x0011B2C0
 	private void Update()
 	{
 		if (this.m_triggerObject.gameObject)
@@ -925,7 +925,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x06003408 RID: 13320 RVA: 0x000B196C File Offset: 0x000AFB6C
+	// Token: 0x06004959 RID: 18777 RVA: 0x0011D114 File Offset: 0x0011B314
 	private Vector2Int GetRoomIndexByCamPosition()
 	{
 		float num = Mathf.Abs(Camera.main.gameObject.transform.position.x);
@@ -940,7 +940,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		return new Vector2Int(x, y);
 	}
 
-	// Token: 0x06003409 RID: 13321 RVA: 0x000B19C4 File Offset: 0x000AFBC4
+	// Token: 0x0600495A RID: 18778 RVA: 0x0011D16C File Offset: 0x0011B36C
 	private void UpdateSelectedCharacter()
 	{
 		bool classLocked = this.m_selectedCharacterIndex == this.m_characterDataArray.Length - 1 && SaveManager.ModeSaveData.GetSoulShopObj(SoulShopType.ChooseYourClass).CurrentEquippedLevel > 0;
@@ -981,7 +981,7 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		}
 	}
 
-	// Token: 0x0600340A RID: 13322 RVA: 0x000B1B82 File Offset: 0x000AFD82
+	// Token: 0x0600495B RID: 18779 RVA: 0x0002847F File Offset: 0x0002667F
 	private IEnumerator AnimateUpArrowCoroutine()
 	{
 		float arrowYPos = this.m_pressUpGO.transform.localPosition.y;
@@ -997,195 +997,195 @@ public class LineageWindowController : WindowController, IAudioEventEmitter, ILo
 		yield break;
 	}
 
-	// Token: 0x0600340B RID: 13323 RVA: 0x000B1B91 File Offset: 0x000AFD91
+	// Token: 0x0600495C RID: 18780 RVA: 0x0002848E File Offset: 0x0002668E
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.m_rerollHeirsText.text = string.Format(LocalizationManager.GetString("LOC_ID_LINEAGE_REROLL_HEIRS_1", false, false), this.m_numRerolls);
 	}
 
-	// Token: 0x040028AF RID: 10415
+	// Token: 0x04003824 RID: 14372
 	private const int STARTING_NUMBER_OF_SUCCESSORS = 3;
 
-	// Token: 0x040028B0 RID: 10416
+	// Token: 0x04003825 RID: 14373
 	private const float PLAYER_PLATFORM_WIDTH = 7.5f;
 
-	// Token: 0x040028B1 RID: 10417
+	// Token: 0x04003826 RID: 14374
 	[SerializeField]
 	private CanvasGroup m_windowCanvasGroup;
 
-	// Token: 0x040028B2 RID: 10418
+	// Token: 0x04003827 RID: 14375
 	[SerializeField]
 	private CanvasGroup m_bannerAndDescripCanvasGroup;
 
-	// Token: 0x040028B3 RID: 10419
+	// Token: 0x04003828 RID: 14376
 	[SerializeField]
 	private PlayerLookController m_playerModelPrefab;
 
-	// Token: 0x040028B4 RID: 10420
+	// Token: 0x04003829 RID: 14377
 	[SerializeField]
 	private LineageGoldFlagController m_goldFlagPrefab;
 
-	// Token: 0x040028B5 RID: 10421
+	// Token: 0x0400382A RID: 14378
 	[SerializeField]
 	private GameObject m_goldFlagsGO;
 
-	// Token: 0x040028B6 RID: 10422
+	// Token: 0x0400382B RID: 14379
 	[SerializeField]
 	private LineageRoomController m_lineageRoomController;
 
-	// Token: 0x040028B7 RID: 10423
+	// Token: 0x0400382C RID: 14380
 	[SerializeField]
 	private GameObject m_triggerObject;
 
-	// Token: 0x040028B8 RID: 10424
+	// Token: 0x0400382D RID: 14381
 	[SerializeField]
 	private float m_portraitXOffset;
 
-	// Token: 0x040028B9 RID: 10425
+	// Token: 0x0400382E RID: 14382
 	[SerializeField]
 	private GameObject m_rerollHeirsNavObj;
 
-	// Token: 0x040028BA RID: 10426
+	// Token: 0x0400382F RID: 14383
 	[SerializeField]
 	private TMP_Text m_rerollHeirsText;
 
-	// Token: 0x040028BB RID: 10427
+	// Token: 0x04003830 RID: 14384
 	[SerializeField]
 	private GameObject m_lockClassGO;
 
-	// Token: 0x040028BC RID: 10428
+	// Token: 0x04003831 RID: 14385
 	[SerializeField]
 	private GameObject m_pressUpGO;
 
-	// Token: 0x040028BD RID: 10429
+	// Token: 0x04003832 RID: 14386
 	[SerializeField]
 	[EventRef]
 	private string m_enterSceneTransitionAudioEvent;
 
-	// Token: 0x040028BE RID: 10430
+	// Token: 0x04003833 RID: 14387
 	[SerializeField]
 	[EventRef]
 	private string m_heirSelectionChangeAudioEvent;
 
-	// Token: 0x040028BF RID: 10431
+	// Token: 0x04003834 RID: 14388
 	[SerializeField]
 	[EventRef]
 	private string m_heirChosenAudioEvent;
 
-	// Token: 0x040028C0 RID: 10432
+	// Token: 0x04003835 RID: 14389
 	[SerializeField]
 	[EventRef]
 	private string m_transitionToTownAudioEvent;
 
-	// Token: 0x040028C1 RID: 10433
+	// Token: 0x04003836 RID: 14390
 	[SerializeField]
 	[EventRef]
 	private string m_viewPortraitsAudioEvent;
 
-	// Token: 0x040028C2 RID: 10434
+	// Token: 0x04003837 RID: 14391
 	[SerializeField]
 	[EventRef]
 	private string m_scrollPortraitAudioEvent;
 
-	// Token: 0x040028C3 RID: 10435
+	// Token: 0x04003838 RID: 14392
 	[SerializeField]
 	[EventRef]
 	private string m_portraitEndAudioEvent;
 
-	// Token: 0x040028C4 RID: 10436
+	// Token: 0x04003839 RID: 14393
 	[SerializeField]
 	[EventRef]
 	private string m_rerollAudioEvent;
 
-	// Token: 0x040028C5 RID: 10437
+	// Token: 0x0400383A RID: 14394
 	[SerializeField]
 	[EventRef]
 	private string m_weaponChangeAudioEvent;
 
-	// Token: 0x040028C6 RID: 10438
+	// Token: 0x0400383B RID: 14395
 	public static bool CharacterLoadedFromLineage;
 
-	// Token: 0x040028C7 RID: 10439
+	// Token: 0x0400383C RID: 14396
 	private CharacterData[] m_characterDataArray;
 
-	// Token: 0x040028C8 RID: 10440
+	// Token: 0x0400383D RID: 14397
 	private PlayerLookController[] m_playerModels;
 
-	// Token: 0x040028C9 RID: 10441
+	// Token: 0x0400383E RID: 14398
 	private LineageGoldFlagController[] m_goldFlags;
 
-	// Token: 0x040028CA RID: 10442
+	// Token: 0x0400383F RID: 14399
 	private LineageHeirChangedEventArgs m_lineageEventArgs;
 
-	// Token: 0x040028CB RID: 10443
+	// Token: 0x04003840 RID: 14400
 	private bool m_isViewingPortraits;
 
-	// Token: 0x040028CC RID: 10444
+	// Token: 0x04003841 RID: 14401
 	private int m_selectedCharacterIndex;
 
-	// Token: 0x040028CD RID: 10445
+	// Token: 0x04003842 RID: 14402
 	private int m_currentPortraitRoomIndex;
 
-	// Token: 0x040028CE RID: 10446
+	// Token: 0x04003843 RID: 14403
 	private bool m_openTransitionRunning;
 
-	// Token: 0x040028CF RID: 10447
+	// Token: 0x04003844 RID: 14404
 	private bool m_openTransitionComplete;
 
-	// Token: 0x040028D0 RID: 10448
+	// Token: 0x04003845 RID: 14405
 	private bool m_isShiftingPortraits;
 
-	// Token: 0x040028D1 RID: 10449
+	// Token: 0x04003846 RID: 14406
 	private bool m_inputListenersAdded;
 
-	// Token: 0x040028D2 RID: 10450
+	// Token: 0x04003847 RID: 14407
 	private int m_numRerolls;
 
-	// Token: 0x040028D3 RID: 10451
+	// Token: 0x04003848 RID: 14408
 	private int m_storedSeed;
 
-	// Token: 0x040028D4 RID: 10452
+	// Token: 0x04003849 RID: 14409
 	private int m_portraitsViewed;
 
-	// Token: 0x040028D5 RID: 10453
+	// Token: 0x0400384A RID: 14410
 	private bool m_upArrowAnimating;
 
-	// Token: 0x040028D6 RID: 10454
+	// Token: 0x0400384B RID: 14411
 	private bool m_switchingWeapons;
 
-	// Token: 0x040028D7 RID: 10455
+	// Token: 0x0400384C RID: 14412
 	private Action<object, EventArgs> m_refreshText;
 
-	// Token: 0x040028D8 RID: 10456
+	// Token: 0x0400384D RID: 14413
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x040028D9 RID: 10457
+	// Token: 0x0400384E RID: 14414
 	private Action m_confirmHeirSelection;
 
-	// Token: 0x040028DA RID: 10458
+	// Token: 0x0400384F RID: 14415
 	private Action m_confirmQuitSelection;
 
-	// Token: 0x040028DB RID: 10459
+	// Token: 0x04003850 RID: 14416
 	private Action<InputActionEventData> m_onConfirmHeirButtonPressed;
 
-	// Token: 0x040028DC RID: 10460
+	// Token: 0x04003851 RID: 14417
 	private Action<InputActionEventData> m_onViewLineageButtonPressed;
 
-	// Token: 0x040028DD RID: 10461
+	// Token: 0x04003852 RID: 14418
 	private Action<InputActionEventData> m_onRandomizeChildrenPressed;
 
-	// Token: 0x040028DE RID: 10462
+	// Token: 0x04003853 RID: 14419
 	private Action<InputActionEventData> m_onCancelButtonDown;
 
-	// Token: 0x040028DF RID: 10463
+	// Token: 0x04003854 RID: 14420
 	private Action<InputActionEventData> m_onHorizontalDirectionPressed;
 
-	// Token: 0x040028E0 RID: 10464
+	// Token: 0x04003855 RID: 14421
 	private Action<InputActionEventData> m_onHorizontalButtonReleased;
 
-	// Token: 0x040028E1 RID: 10465
+	// Token: 0x04003856 RID: 14422
 	private Action<InputActionEventData> m_onVerticalButtonPressed;
 
-	// Token: 0x040028E2 RID: 10466
+	// Token: 0x04003857 RID: 14423
 	private static MaterialPropertyBlock m_matBlock;
 }

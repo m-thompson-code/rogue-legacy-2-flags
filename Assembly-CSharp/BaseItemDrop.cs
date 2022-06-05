@@ -3,46 +3,46 @@ using System.Collections;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x02000467 RID: 1127
+// Token: 0x0200075C RID: 1884
 public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, IHitResponse, ITerrainOnStayHitResponse, IEffectTriggerEvent_OnTimeout, IEffectTriggerEvent_OnDeath, IGenericPoolObj, IEffectTriggerEvent_OnLanded
 {
-	// Token: 0x17001023 RID: 4131
-	// (get) Token: 0x0600297F RID: 10623 RVA: 0x00089317 File Offset: 0x00087517
-	// (set) Token: 0x06002980 RID: 10624 RVA: 0x0008931F File Offset: 0x0008751F
+	// Token: 0x17001556 RID: 5462
+	// (get) Token: 0x06003983 RID: 14723 RVA: 0x0001FA18 File Offset: 0x0001DC18
+	// (set) Token: 0x06003984 RID: 14724 RVA: 0x0001FA20 File Offset: 0x0001DC20
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x17001024 RID: 4132
-	// (get) Token: 0x06002981 RID: 10625 RVA: 0x00089328 File Offset: 0x00087528
-	// (set) Token: 0x06002982 RID: 10626 RVA: 0x00089330 File Offset: 0x00087530
+	// Token: 0x17001557 RID: 5463
+	// (get) Token: 0x06003985 RID: 14725 RVA: 0x0001FA29 File Offset: 0x0001DC29
+	// (set) Token: 0x06003986 RID: 14726 RVA: 0x0001FA31 File Offset: 0x0001DC31
 	public int ValueOverride { get; set; } = -1;
 
-	// Token: 0x17001025 RID: 4133
-	// (get) Token: 0x06002983 RID: 10627 RVA: 0x00089339 File Offset: 0x00087539
-	// (set) Token: 0x06002984 RID: 10628 RVA: 0x00089341 File Offset: 0x00087541
+	// Token: 0x17001558 RID: 5464
+	// (get) Token: 0x06003987 RID: 14727 RVA: 0x0001FA3A File Offset: 0x0001DC3A
+	// (set) Token: 0x06003988 RID: 14728 RVA: 0x0001FA42 File Offset: 0x0001DC42
 	public bool IsAwakeCalled { get; protected set; }
 
-	// Token: 0x17001026 RID: 4134
-	// (get) Token: 0x06002985 RID: 10629 RVA: 0x0008934A File Offset: 0x0008754A
-	// (set) Token: 0x06002986 RID: 10630 RVA: 0x00089352 File Offset: 0x00087552
+	// Token: 0x17001559 RID: 5465
+	// (get) Token: 0x06003989 RID: 14729 RVA: 0x0001FA4B File Offset: 0x0001DC4B
+	// (set) Token: 0x0600398A RID: 14730 RVA: 0x0001FA53 File Offset: 0x0001DC53
 	public BaseItemDrop ItemDropPrefab { get; set; }
 
-	// Token: 0x17001027 RID: 4135
-	// (get) Token: 0x06002987 RID: 10631 RVA: 0x0008935B File Offset: 0x0008755B
-	// (set) Token: 0x06002988 RID: 10632 RVA: 0x00089363 File Offset: 0x00087563
+	// Token: 0x1700155A RID: 5466
+	// (get) Token: 0x0600398B RID: 14731 RVA: 0x0001FA5C File Offset: 0x0001DC5C
+	// (set) Token: 0x0600398C RID: 14732 RVA: 0x0001FA64 File Offset: 0x0001DC64
 	public bool Magnetized { get; private set; }
 
-	// Token: 0x17001028 RID: 4136
-	// (get) Token: 0x06002989 RID: 10633 RVA: 0x0008936C File Offset: 0x0008756C
-	// (set) Token: 0x0600298A RID: 10634 RVA: 0x00089374 File Offset: 0x00087574
+	// Token: 0x1700155B RID: 5467
+	// (get) Token: 0x0600398D RID: 14733 RVA: 0x0001FA6D File Offset: 0x0001DC6D
+	// (set) Token: 0x0600398E RID: 14734 RVA: 0x0001FA75 File Offset: 0x0001DC75
 	public bool ForceMagnetizedAlways { get; private set; }
 
-	// Token: 0x17001029 RID: 4137
-	// (get) Token: 0x0600298B RID: 10635 RVA: 0x0008937D File Offset: 0x0008757D
-	// (set) Token: 0x0600298C RID: 10636 RVA: 0x00089385 File Offset: 0x00087585
+	// Token: 0x1700155C RID: 5468
+	// (get) Token: 0x0600398F RID: 14735 RVA: 0x0001FA7E File Offset: 0x0001DC7E
+	// (set) Token: 0x06003990 RID: 14736 RVA: 0x0001FA86 File Offset: 0x0001DC86
 	public bool ForceMagnetized { get; private set; }
 
-	// Token: 0x1700102A RID: 4138
-	// (get) Token: 0x0600298D RID: 10637 RVA: 0x0008938E File Offset: 0x0008758E
+	// Token: 0x1700155D RID: 5469
+	// (get) Token: 0x06003991 RID: 14737 RVA: 0x0001FA8F File Offset: 0x0001DC8F
 	public IRelayLink<GameObject> OnDeathEffectTriggerRelay
 	{
 		get
@@ -51,8 +51,8 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x1700102B RID: 4139
-	// (get) Token: 0x0600298E RID: 10638 RVA: 0x0008939B File Offset: 0x0008759B
+	// Token: 0x1700155E RID: 5470
+	// (get) Token: 0x06003992 RID: 14738 RVA: 0x0001FA9C File Offset: 0x0001DC9C
 	public IRelayLink<GameObject> OnTimeoutEffectTriggerRelay
 	{
 		get
@@ -61,8 +61,8 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x1700102C RID: 4140
-	// (get) Token: 0x0600298F RID: 10639 RVA: 0x000893A8 File Offset: 0x000875A8
+	// Token: 0x1700155F RID: 5471
+	// (get) Token: 0x06003993 RID: 14739 RVA: 0x0001FAA9 File Offset: 0x0001DCA9
 	public IRelayLink<CorgiController_RL> OnLandedEffectTriggerRelay
 	{
 		get
@@ -71,12 +71,12 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x1700102D RID: 4141
-	// (get) Token: 0x06002990 RID: 10640
+	// Token: 0x17001560 RID: 5472
+	// (get) Token: 0x06003994 RID: 14740
 	public abstract ItemDropType ItemDropType { get; }
 
-	// Token: 0x1700102E RID: 4142
-	// (get) Token: 0x06002991 RID: 10641 RVA: 0x000893B5 File Offset: 0x000875B5
+	// Token: 0x17001561 RID: 5473
+	// (get) Token: 0x06003995 RID: 14741 RVA: 0x0001FAB6 File Offset: 0x0001DCB6
 	public Vector2 Speed
 	{
 		get
@@ -85,8 +85,8 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x1700102F RID: 4143
-	// (get) Token: 0x06002992 RID: 10642 RVA: 0x000893C2 File Offset: 0x000875C2
+	// Token: 0x17001562 RID: 5474
+	// (get) Token: 0x06003996 RID: 14742 RVA: 0x0001FAC3 File Offset: 0x0001DCC3
 	public CorgiController_RL CorgiController
 	{
 		get
@@ -95,7 +95,7 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x06002993 RID: 10643 RVA: 0x000893CC File Offset: 0x000875CC
+	// Token: 0x06003997 RID: 14743 RVA: 0x000EB2C0 File Offset: 0x000E94C0
 	protected void Awake()
 	{
 		this.m_corgiController = base.GetComponent<CorgiController_RL>();
@@ -110,7 +110,7 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		this.ResetValues();
 	}
 
-	// Token: 0x06002994 RID: 10644 RVA: 0x00089434 File Offset: 0x00087634
+	// Token: 0x06003998 RID: 14744 RVA: 0x000EB328 File Offset: 0x000E9528
 	protected virtual void Update()
 	{
 		if (!this.m_hasTouchedGroundOnce && this.m_corgiController.State.IsGrounded)
@@ -129,7 +129,7 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		this.ConstrainItemDropToRoom();
 	}
 
-	// Token: 0x06002995 RID: 10645 RVA: 0x000894D0 File Offset: 0x000876D0
+	// Token: 0x06003999 RID: 14745 RVA: 0x000EB3C4 File Offset: 0x000E95C4
 	private void UpdateMagnetism()
 	{
 		bool flag = this.ItemDropType == ItemDropType.HealthDrop || this.ItemDropType == ItemDropType.PizzaDrop;
@@ -164,7 +164,7 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x06002996 RID: 10646 RVA: 0x000895D4 File Offset: 0x000877D4
+	// Token: 0x0600399A RID: 14746 RVA: 0x000EB4C8 File Offset: 0x000E96C8
 	private void MagnetizeTowardsPosition(Vector2 pos)
 	{
 		if (this.m_corgiController)
@@ -200,13 +200,13 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x06002997 RID: 10647 RVA: 0x0008975B File Offset: 0x0008795B
+	// Token: 0x0600399B RID: 14747 RVA: 0x0001C0A5 File Offset: 0x0001A2A5
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06002998 RID: 10648 RVA: 0x0008976C File Offset: 0x0008796C
+	// Token: 0x0600399C RID: 14748 RVA: 0x000EB650 File Offset: 0x000E9850
 	protected virtual void ConstrainItemDropToRoom()
 	{
 		Rect absBounds = this.CorgiController.AbsBounds;
@@ -246,7 +246,7 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x06002999 RID: 10649 RVA: 0x00089898 File Offset: 0x00087A98
+	// Token: 0x0600399D RID: 14749 RVA: 0x0001FACB File Offset: 0x0001DCCB
 	public void UpdateBounds()
 	{
 		if (this.CorgiController && this.CorgiController.IsInitialized)
@@ -255,7 +255,7 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x0600299A RID: 10650 RVA: 0x000898C0 File Offset: 0x00087AC0
+	// Token: 0x0600399E RID: 14750 RVA: 0x000EB77C File Offset: 0x000E997C
 	protected virtual void Collect(GameObject collector)
 	{
 		BaseItemDrop.m_itemArgs_STATIC.Initialize(this);
@@ -266,7 +266,7 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600299B RID: 10651 RVA: 0x00089910 File Offset: 0x00087B10
+	// Token: 0x0600399F RID: 14751 RVA: 0x000EB7CC File Offset: 0x000E99CC
 	public virtual void OnSpawnCollectCollisionCheck()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -291,7 +291,7 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x0600299C RID: 10652 RVA: 0x00089A43 File Offset: 0x00087C43
+	// Token: 0x060039A0 RID: 14752 RVA: 0x0001FAF2 File Offset: 0x0001DCF2
 	public void ForceMagnetize(bool forceMagnetizeAlways)
 	{
 		if (!this.ForceMagnetized && !this.ForceMagnetizedAlways)
@@ -308,13 +308,13 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x0600299D RID: 10653 RVA: 0x00089A76 File Offset: 0x00087C76
+	// Token: 0x060039A1 RID: 14753 RVA: 0x0001FB25 File Offset: 0x0001DD25
 	public void ForceMagnetizeOnGrounded()
 	{
 		base.StartCoroutine(this.ForceMagnetizeOnGroundCoroutine());
 	}
 
-	// Token: 0x0600299E RID: 10654 RVA: 0x00089A85 File Offset: 0x00087C85
+	// Token: 0x060039A2 RID: 14754 RVA: 0x0001FB34 File Offset: 0x0001DD34
 	private IEnumerator ForceMagnetizeOnGroundCoroutine()
 	{
 		while (!this.m_hasTouchedGroundOnce)
@@ -325,7 +325,7 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		yield break;
 	}
 
-	// Token: 0x0600299F RID: 10655 RVA: 0x00089A94 File Offset: 0x00087C94
+	// Token: 0x060039A3 RID: 14755 RVA: 0x000EB900 File Offset: 0x000E9B00
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (this.m_collected)
@@ -347,13 +347,13 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x060029A0 RID: 10656 RVA: 0x00089B0C File Offset: 0x00087D0C
+	// Token: 0x060039A4 RID: 14756 RVA: 0x0001FB43 File Offset: 0x0001DD43
 	public void TerrainOnStayHitResponse(IHitboxController otherHBController)
 	{
 		this.TerrainOnEnterHitResponse(otherHBController);
 	}
 
-	// Token: 0x060029A1 RID: 10657 RVA: 0x00089B18 File Offset: 0x00087D18
+	// Token: 0x060039A5 RID: 14757 RVA: 0x000EB978 File Offset: 0x000E9B78
 	public void ResetValues()
 	{
 		this.m_collected = false;
@@ -372,72 +372,72 @@ public abstract class BaseItemDrop : MonoBehaviour, ITerrainOnEnterHitResponse, 
 		base.StopAllCoroutines();
 	}
 
-	// Token: 0x060029A2 RID: 10658 RVA: 0x00089B91 File Offset: 0x00087D91
+	// Token: 0x060039A6 RID: 14758 RVA: 0x0001FB4C File Offset: 0x0001DD4C
 	protected virtual void OnEnable()
 	{
 		this.m_spawnTime = Time.time;
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerExitRoom, this.m_onPlayerExitRoom);
 	}
 
-	// Token: 0x060029A3 RID: 10659 RVA: 0x00089BAB File Offset: 0x00087DAB
+	// Token: 0x060039A7 RID: 14759 RVA: 0x0001FB66 File Offset: 0x0001DD66
 	protected virtual void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerExitRoom, this.m_onPlayerExitRoom);
 		DisablePooledObjectManager.DisablePooledObject(this, false);
 	}
 
-	// Token: 0x060029A5 RID: 10661 RVA: 0x00089C15 File Offset: 0x00087E15
+	// Token: 0x060039A9 RID: 14761 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002228 RID: 8744
+	// Token: 0x04002E01 RID: 11777
 	private static ItemCollectedEventArgs m_itemArgs_STATIC;
 
-	// Token: 0x04002229 RID: 8745
+	// Token: 0x04002E02 RID: 11778
 	private const float MAGNETISM_DELAY_TIMER = 1f;
 
-	// Token: 0x0400222A RID: 8746
+	// Token: 0x04002E03 RID: 11779
 	[SerializeField]
 	private float m_lifetime = 30f;
 
-	// Token: 0x0400222B RID: 8747
+	// Token: 0x04002E04 RID: 11780
 	protected float m_collectLockDuration = 0.1f;
 
-	// Token: 0x0400222C RID: 8748
+	// Token: 0x04002E05 RID: 11781
 	private float m_collectLockTimer;
 
-	// Token: 0x0400222D RID: 8749
+	// Token: 0x04002E06 RID: 11782
 	protected bool m_collected;
 
-	// Token: 0x0400222E RID: 8750
+	// Token: 0x04002E07 RID: 11783
 	protected CorgiController_RL m_corgiController;
 
-	// Token: 0x0400222F RID: 8751
+	// Token: 0x04002E08 RID: 11784
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002230 RID: 8752
+	// Token: 0x04002E09 RID: 11785
 	protected bool m_hasTouchedGroundOnce;
 
-	// Token: 0x04002231 RID: 8753
+	// Token: 0x04002E0A RID: 11786
 	private float m_spawnTime;
 
-	// Token: 0x04002232 RID: 8754
+	// Token: 0x04002E0B RID: 11787
 	private IHitboxController m_hbController;
 
-	// Token: 0x04002233 RID: 8755
+	// Token: 0x04002E0C RID: 11788
 	private Action<MonoBehaviour, EventArgs> m_onPlayerExitRoom;
 
-	// Token: 0x0400223B RID: 8763
+	// Token: 0x04002E14 RID: 11796
 	private Relay<GameObject> m_onDeathEffectTriggerRelay = new Relay<GameObject>();
 
-	// Token: 0x0400223C RID: 8764
+	// Token: 0x04002E15 RID: 11797
 	private Relay<GameObject> m_onTimeoutEffectTriggerRelay = new Relay<GameObject>();
 
-	// Token: 0x0400223D RID: 8765
+	// Token: 0x04002E16 RID: 11798
 	public Relay CollectedRelay = new Relay();
 
-	// Token: 0x0400223E RID: 8766
+	// Token: 0x04002E17 RID: 11799
 	private float m_magnetizeStartTime;
 }

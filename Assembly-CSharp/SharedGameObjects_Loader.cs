@@ -3,10 +3,10 @@ using System.Collections;
 using FMODUnity;
 using UnityEngine;
 
-// Token: 0x02000813 RID: 2067
+// Token: 0x02000CE3 RID: 3299
 public class SharedGameObjects_Loader : MonoBehaviour
 {
-	// Token: 0x0600444A RID: 17482 RVA: 0x000F1880 File Offset: 0x000EFA80
+	// Token: 0x06005DFE RID: 24062 RVA: 0x0015F318 File Offset: 0x0015D518
 	private void Awake()
 	{
 		if (SharedGameObjects_Loader.m_instance == null)
@@ -41,7 +41,7 @@ public class SharedGameObjects_Loader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600444B RID: 17483 RVA: 0x000F1976 File Offset: 0x000EFB76
+	// Token: 0x06005DFF RID: 24063 RVA: 0x00033C53 File Offset: 0x00031E53
 	public IEnumerator Initialize()
 	{
 		CDGAsyncLoadRequest<GameObject> sharedGameObjectsReq = CDGResources.LoadAsync<GameObject>(this.m_sharedGameObjectsPath, "");
@@ -66,10 +66,10 @@ public class SharedGameObjects_Loader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04003A51 RID: 14929
+	// Token: 0x04004D37 RID: 19767
 	[SerializeField]
 	private string m_sharedGameObjectsPath;
 
-	// Token: 0x04003A52 RID: 14930
+	// Token: 0x04004D38 RID: 19768
 	private static SharedGameObjects_Loader m_instance;
 }

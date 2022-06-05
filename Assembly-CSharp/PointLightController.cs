@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002AF RID: 687
+// Token: 0x0200049A RID: 1178
 public class PointLightController : MonoBehaviour
 {
-	// Token: 0x17000C78 RID: 3192
-	// (get) Token: 0x06001B69 RID: 7017 RVA: 0x00057BB4 File Offset: 0x00055DB4
-	// (set) Token: 0x06001B6A RID: 7018 RVA: 0x00057BBC File Offset: 0x00055DBC
+	// Token: 0x17000FF3 RID: 4083
+	// (get) Token: 0x06002605 RID: 9733 RVA: 0x000151DB File Offset: 0x000133DB
+	// (set) Token: 0x06002606 RID: 9734 RVA: 0x000151E3 File Offset: 0x000133E3
 	public PointLightLocation Location
 	{
 		get
@@ -19,7 +19,7 @@ public class PointLightController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B6B RID: 7019 RVA: 0x00057BC8 File Offset: 0x00055DC8
+	// Token: 0x06002607 RID: 9735 RVA: 0x000B4964 File Offset: 0x000B2B64
 	private void Awake()
 	{
 		this.m_light = base.GetComponent<Light>();
@@ -33,20 +33,20 @@ public class PointLightController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B6C RID: 7020 RVA: 0x00057C22 File Offset: 0x00055E22
+	// Token: 0x06002608 RID: 9736 RVA: 0x000151EC File Offset: 0x000133EC
 	private void OnEnable()
 	{
 		Messenger<SceneMessenger, SceneEvent>.AddListener(SceneEvent.QualitySettingsChanged, this.m_onQualitySettingsChanged);
 		this.OnQualitySettingsChanged(null, null);
 	}
 
-	// Token: 0x06001B6D RID: 7021 RVA: 0x00057C38 File Offset: 0x00055E38
+	// Token: 0x06002609 RID: 9737 RVA: 0x00015202 File Offset: 0x00013402
 	private void OnDisable()
 	{
 		Messenger<SceneMessenger, SceneEvent>.RemoveListener(SceneEvent.QualitySettingsChanged, this.m_onQualitySettingsChanged);
 	}
 
-	// Token: 0x06001B6E RID: 7022 RVA: 0x00057C46 File Offset: 0x00055E46
+	// Token: 0x0600260A RID: 9738 RVA: 0x00015210 File Offset: 0x00013410
 	private void OnQualitySettingsChanged(object sender, EventArgs args)
 	{
 		if (this.m_light)
@@ -60,7 +60,7 @@ public class PointLightController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B6F RID: 7023 RVA: 0x00057C7C File Offset: 0x00055E7C
+	// Token: 0x0600260B RID: 9739 RVA: 0x000B49C0 File Offset: 0x000B2BC0
 	public void UpdateLocation(CameraLayer cameraLayer)
 	{
 		if (this.m_light)
@@ -76,25 +76,25 @@ public class PointLightController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B70 RID: 7024 RVA: 0x00057CD5 File Offset: 0x00055ED5
+	// Token: 0x0600260C RID: 9740 RVA: 0x00015244 File Offset: 0x00013444
 	public void SetLocation(PointLightLocation location)
 	{
 		this.Location = location;
 	}
 
-	// Token: 0x0400191C RID: 6428
+	// Token: 0x040020F8 RID: 8440
 	[SerializeField]
 	private PointLightLocation m_location;
 
-	// Token: 0x0400191D RID: 6429
+	// Token: 0x040020F9 RID: 8441
 	public const float DEFAULT_FOREGROUND_Z_POSITION = 0f;
 
-	// Token: 0x0400191E RID: 6430
+	// Token: 0x040020FA RID: 8442
 	public const float DEFAULT_BACKGROUND_Z_POSITION = 1f;
 
-	// Token: 0x0400191F RID: 6431
+	// Token: 0x040020FB RID: 8443
 	private Light m_light;
 
-	// Token: 0x04001920 RID: 6432
+	// Token: 0x040020FC RID: 8444
 	private Action<MonoBehaviour, EventArgs> m_onQualitySettingsChanged;
 }

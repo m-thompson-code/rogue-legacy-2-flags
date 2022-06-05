@@ -7,10 +7,10 @@ using System.Text;
 
 namespace Unity.Cloud.UserReporting.Client
 {
-	// Token: 0x02000850 RID: 2128
+	// Token: 0x02000D48 RID: 3400
 	public class UserReportingClient
 	{
-		// Token: 0x0600469A RID: 18074 RVA: 0x000FC160 File Offset: 0x000FA360
+		// Token: 0x06006127 RID: 24871 RVA: 0x00168BE4 File Offset: 0x00166DE4
 		public UserReportingClient(string endpoint, string projectIdentifier, IUserReportingPlatform platform, UserReportingClientConfiguration configuration)
 		{
 			this.Endpoint = endpoint;
@@ -39,42 +39,42 @@ namespace Unity.Cloud.UserReporting.Client
 			this.IsConnectedToLogger = true;
 		}
 
-		// Token: 0x1700176C RID: 5996
-		// (get) Token: 0x0600469B RID: 18075 RVA: 0x000FC318 File Offset: 0x000FA518
-		// (set) Token: 0x0600469C RID: 18076 RVA: 0x000FC320 File Offset: 0x000FA520
+		// Token: 0x17001FB0 RID: 8112
+		// (get) Token: 0x06006128 RID: 24872 RVA: 0x00035899 File Offset: 0x00033A99
+		// (set) Token: 0x06006129 RID: 24873 RVA: 0x000358A1 File Offset: 0x00033AA1
 		public UserReportingClientConfiguration Configuration { get; private set; }
 
-		// Token: 0x1700176D RID: 5997
-		// (get) Token: 0x0600469D RID: 18077 RVA: 0x000FC329 File Offset: 0x000FA529
-		// (set) Token: 0x0600469E RID: 18078 RVA: 0x000FC331 File Offset: 0x000FA531
+		// Token: 0x17001FB1 RID: 8113
+		// (get) Token: 0x0600612A RID: 24874 RVA: 0x000358AA File Offset: 0x00033AAA
+		// (set) Token: 0x0600612B RID: 24875 RVA: 0x000358B2 File Offset: 0x00033AB2
 		public string Endpoint { get; private set; }
 
-		// Token: 0x1700176E RID: 5998
-		// (get) Token: 0x0600469F RID: 18079 RVA: 0x000FC33A File Offset: 0x000FA53A
-		// (set) Token: 0x060046A0 RID: 18080 RVA: 0x000FC342 File Offset: 0x000FA542
+		// Token: 0x17001FB2 RID: 8114
+		// (get) Token: 0x0600612C RID: 24876 RVA: 0x000358BB File Offset: 0x00033ABB
+		// (set) Token: 0x0600612D RID: 24877 RVA: 0x000358C3 File Offset: 0x00033AC3
 		public bool IsConnectedToLogger { get; set; }
 
-		// Token: 0x1700176F RID: 5999
-		// (get) Token: 0x060046A1 RID: 18081 RVA: 0x000FC34B File Offset: 0x000FA54B
-		// (set) Token: 0x060046A2 RID: 18082 RVA: 0x000FC353 File Offset: 0x000FA553
+		// Token: 0x17001FB3 RID: 8115
+		// (get) Token: 0x0600612E RID: 24878 RVA: 0x000358CC File Offset: 0x00033ACC
+		// (set) Token: 0x0600612F RID: 24879 RVA: 0x000358D4 File Offset: 0x00033AD4
 		public bool IsSelfReporting { get; set; }
 
-		// Token: 0x17001770 RID: 6000
-		// (get) Token: 0x060046A3 RID: 18083 RVA: 0x000FC35C File Offset: 0x000FA55C
-		// (set) Token: 0x060046A4 RID: 18084 RVA: 0x000FC364 File Offset: 0x000FA564
+		// Token: 0x17001FB4 RID: 8116
+		// (get) Token: 0x06006130 RID: 24880 RVA: 0x000358DD File Offset: 0x00033ADD
+		// (set) Token: 0x06006131 RID: 24881 RVA: 0x000358E5 File Offset: 0x00033AE5
 		public IUserReportingPlatform Platform { get; private set; }
 
-		// Token: 0x17001771 RID: 6001
-		// (get) Token: 0x060046A5 RID: 18085 RVA: 0x000FC36D File Offset: 0x000FA56D
-		// (set) Token: 0x060046A6 RID: 18086 RVA: 0x000FC375 File Offset: 0x000FA575
+		// Token: 0x17001FB5 RID: 8117
+		// (get) Token: 0x06006132 RID: 24882 RVA: 0x000358EE File Offset: 0x00033AEE
+		// (set) Token: 0x06006133 RID: 24883 RVA: 0x000358F6 File Offset: 0x00033AF6
 		public string ProjectIdentifier { get; private set; }
 
-		// Token: 0x17001772 RID: 6002
-		// (get) Token: 0x060046A7 RID: 18087 RVA: 0x000FC37E File Offset: 0x000FA57E
-		// (set) Token: 0x060046A8 RID: 18088 RVA: 0x000FC386 File Offset: 0x000FA586
+		// Token: 0x17001FB6 RID: 8118
+		// (get) Token: 0x06006134 RID: 24884 RVA: 0x000358FF File Offset: 0x00033AFF
+		// (set) Token: 0x06006135 RID: 24885 RVA: 0x00035907 File Offset: 0x00033B07
 		public bool SendEventsToAnalytics { get; set; }
 
-		// Token: 0x060046A9 RID: 18089 RVA: 0x000FC390 File Offset: 0x000FA590
+		// Token: 0x06006136 RID: 24886 RVA: 0x00168D9C File Offset: 0x00166F9C
 		public void AddDeviceMetadata(string name, string value)
 		{
 			List<UserReportNamedValue> obj = this.deviceMetadata;
@@ -87,7 +87,7 @@ namespace Unity.Cloud.UserReporting.Client
 			}
 		}
 
-		// Token: 0x060046AA RID: 18090 RVA: 0x000FC3F0 File Offset: 0x000FA5F0
+		// Token: 0x06006137 RID: 24887 RVA: 0x00035910 File Offset: 0x00033B10
 		public void AddMeasureMetadata(string name, string value)
 		{
 			if (this.currentMeasureMetadata.ContainsKey(name))
@@ -98,7 +98,7 @@ namespace Unity.Cloud.UserReporting.Client
 			this.currentMeasureMetadata.Add(name, value);
 		}
 
-		// Token: 0x060046AB RID: 18091 RVA: 0x000FC41C File Offset: 0x000FA61C
+		// Token: 0x06006138 RID: 24888 RVA: 0x00168DFC File Offset: 0x00166FFC
 		public void ClearScreenshots()
 		{
 			CyclicalList<UserReportScreenshot> obj = this.screenshots;
@@ -108,7 +108,7 @@ namespace Unity.Cloud.UserReporting.Client
 			}
 		}
 
-		// Token: 0x060046AC RID: 18092 RVA: 0x000FC464 File Offset: 0x000FA664
+		// Token: 0x06006139 RID: 24889 RVA: 0x00168E44 File Offset: 0x00167044
 		public void CreateUserReport(Action<UserReport> callback)
 		{
 			this.LogEvent(UserReportEventLevel.Info, "Creating user report.");
@@ -168,7 +168,7 @@ namespace Unity.Cloud.UserReporting.Client
 			});
 		}
 
-		// Token: 0x060046AD RID: 18093 RVA: 0x000FC4A9 File Offset: 0x000FA6A9
+		// Token: 0x0600613A RID: 24890 RVA: 0x0003593B File Offset: 0x00033B3B
 		public string GetEndpoint()
 		{
 			if (this.Endpoint == null)
@@ -178,19 +178,19 @@ namespace Unity.Cloud.UserReporting.Client
 			return this.Endpoint.Trim();
 		}
 
-		// Token: 0x060046AE RID: 18094 RVA: 0x000FC4C4 File Offset: 0x000FA6C4
+		// Token: 0x0600613B RID: 24891 RVA: 0x00035956 File Offset: 0x00033B56
 		public void LogEvent(UserReportEventLevel level, string message)
 		{
 			this.LogEvent(level, message, null, null);
 		}
 
-		// Token: 0x060046AF RID: 18095 RVA: 0x000FC4D0 File Offset: 0x000FA6D0
+		// Token: 0x0600613C RID: 24892 RVA: 0x00035962 File Offset: 0x00033B62
 		public void LogEvent(UserReportEventLevel level, string message, string stackTrace)
 		{
 			this.LogEvent(level, message, stackTrace, null);
 		}
 
-		// Token: 0x060046B0 RID: 18096 RVA: 0x000FC4DC File Offset: 0x000FA6DC
+		// Token: 0x0600613D RID: 24893 RVA: 0x00168E8C File Offset: 0x0016708C
 		private void LogEvent(UserReportEventLevel level, string message, string stackTrace, Exception exception)
 		{
 			CyclicalList<UserReportEvent> obj = this.events;
@@ -210,13 +210,13 @@ namespace Unity.Cloud.UserReporting.Client
 			}
 		}
 
-		// Token: 0x060046B1 RID: 18097 RVA: 0x000FC570 File Offset: 0x000FA770
+		// Token: 0x0600613E RID: 24894 RVA: 0x0003596E File Offset: 0x00033B6E
 		public void LogException(Exception exception)
 		{
 			this.LogEvent(UserReportEventLevel.Error, null, null, exception);
 		}
 
-		// Token: 0x060046B2 RID: 18098 RVA: 0x000FC57C File Offset: 0x000FA77C
+		// Token: 0x0600613F RID: 24895 RVA: 0x00168F20 File Offset: 0x00167120
 		public void SampleClientMetric(string name, double value)
 		{
 			if (double.IsInfinity(value) || double.IsNaN(value))
@@ -238,7 +238,7 @@ namespace Unity.Cloud.UserReporting.Client
 			}
 		}
 
-		// Token: 0x060046B3 RID: 18099 RVA: 0x000FC5F8 File Offset: 0x000FA7F8
+		// Token: 0x06006140 RID: 24896 RVA: 0x00168F9C File Offset: 0x0016719C
 		public void SampleMetric(string name, double value)
 		{
 			if (this.Configuration.MetricsGatheringMode == MetricsGatheringMode.Disabled)
@@ -260,7 +260,7 @@ namespace Unity.Cloud.UserReporting.Client
 			this.currentMetrics[name] = value3;
 		}
 
-		// Token: 0x060046B4 RID: 18100 RVA: 0x000FC674 File Offset: 0x000FA874
+		// Token: 0x06006141 RID: 24897 RVA: 0x00169018 File Offset: 0x00167218
 		public void SaveUserReportToDisk(UserReport userReport)
 		{
 			this.LogEvent(UserReportEventLevel.Info, "Saving user report to disk.");
@@ -268,13 +268,13 @@ namespace Unity.Cloud.UserReporting.Client
 			File.WriteAllText("UserReport.json", contents);
 		}
 
-		// Token: 0x060046B5 RID: 18101 RVA: 0x000FC6A5 File Offset: 0x000FA8A5
+		// Token: 0x06006142 RID: 24898 RVA: 0x0003597A File Offset: 0x00033B7A
 		public void SendUserReport(UserReport userReport, Action<bool, UserReport> callback)
 		{
 			this.SendUserReport(userReport, null, callback);
 		}
 
-		// Token: 0x060046B6 RID: 18102 RVA: 0x000FC6B0 File Offset: 0x000FA8B0
+		// Token: 0x06006143 RID: 24899 RVA: 0x0016904C File Offset: 0x0016724C
 		public void SendUserReport(UserReport userReport, Action<float, float> progressCallback, Action<bool, UserReport> callback)
 		{
 			try
@@ -357,13 +357,13 @@ namespace Unity.Cloud.UserReporting.Client
 			}
 		}
 
-		// Token: 0x060046B7 RID: 18103 RVA: 0x000FC83C File Offset: 0x000FAA3C
+		// Token: 0x06006144 RID: 24900 RVA: 0x00035985 File Offset: 0x00033B85
 		public void TakeScreenshot(int maximumWidth, int maximumHeight, Action<UserReportScreenshot> callback)
 		{
 			this.TakeScreenshotFromSource(maximumWidth, maximumHeight, null, callback);
 		}
 
-		// Token: 0x060046B8 RID: 18104 RVA: 0x000FC848 File Offset: 0x000FAA48
+		// Token: 0x06006145 RID: 24901 RVA: 0x001691D8 File Offset: 0x001673D8
 		public void TakeScreenshotFromSource(int maximumWidth, int maximumHeight, object source, Action<UserReportScreenshot> callback)
 		{
 			this.LogEvent(UserReportEventLevel.Info, "Taking screenshot.");
@@ -386,7 +386,7 @@ namespace Unity.Cloud.UserReporting.Client
 			});
 		}
 
-		// Token: 0x060046B9 RID: 18105 RVA: 0x000FC8A4 File Offset: 0x000FAAA4
+		// Token: 0x06006146 RID: 24902 RVA: 0x00169234 File Offset: 0x00167434
 		public void Update()
 		{
 			this.updateStopwatch.Reset();
@@ -455,7 +455,7 @@ namespace Unity.Cloud.UserReporting.Client
 			this.SampleClientMetric("UserReportingClient.Update", (double)this.updateStopwatch.ElapsedMilliseconds);
 		}
 
-		// Token: 0x060046BA RID: 18106 RVA: 0x000FCBC4 File Offset: 0x000FADC4
+		// Token: 0x06006147 RID: 24903 RVA: 0x00169554 File Offset: 0x00167754
 		public void UpdateOnEndOfFrame()
 		{
 			this.updateStopwatch.Reset();
@@ -465,7 +465,7 @@ namespace Unity.Cloud.UserReporting.Client
 			this.SampleClientMetric("UserReportingClient.UpdateOnEndOfFrame", (double)this.updateStopwatch.ElapsedMilliseconds);
 		}
 
-		// Token: 0x060046BB RID: 18107 RVA: 0x000FCC18 File Offset: 0x000FAE18
+		// Token: 0x06006148 RID: 24904 RVA: 0x001695A8 File Offset: 0x001677A8
 		private void WaitForPerforation(int currentScreenshotsTaken, Action callback)
 		{
 			if (this.screenshotsSaved >= currentScreenshotsTaken && this.isMeasureBoundary)
@@ -479,49 +479,49 @@ namespace Unity.Cloud.UserReporting.Client
 			});
 		}
 
-		// Token: 0x04003B96 RID: 15254
+		// Token: 0x04004F00 RID: 20224
 		private Dictionary<string, UserReportMetric> clientMetrics;
 
-		// Token: 0x04003B97 RID: 15255
+		// Token: 0x04004F01 RID: 20225
 		private Dictionary<string, string> currentMeasureMetadata;
 
-		// Token: 0x04003B98 RID: 15256
+		// Token: 0x04004F02 RID: 20226
 		private Dictionary<string, UserReportMetric> currentMetrics;
 
-		// Token: 0x04003B99 RID: 15257
+		// Token: 0x04004F03 RID: 20227
 		private List<Action> currentSynchronizedActions;
 
-		// Token: 0x04003B9A RID: 15258
+		// Token: 0x04004F04 RID: 20228
 		private List<UserReportNamedValue> deviceMetadata;
 
-		// Token: 0x04003B9B RID: 15259
+		// Token: 0x04004F05 RID: 20229
 		private CyclicalList<UserReportEvent> events;
 
-		// Token: 0x04003B9C RID: 15260
+		// Token: 0x04004F06 RID: 20230
 		private int frameNumber;
 
-		// Token: 0x04003B9D RID: 15261
+		// Token: 0x04004F07 RID: 20231
 		private bool isMeasureBoundary;
 
-		// Token: 0x04003B9E RID: 15262
+		// Token: 0x04004F08 RID: 20232
 		private int measureFrames;
 
-		// Token: 0x04003B9F RID: 15263
+		// Token: 0x04004F09 RID: 20233
 		private CyclicalList<UserReportMeasure> measures;
 
-		// Token: 0x04003BA0 RID: 15264
+		// Token: 0x04004F0A RID: 20234
 		private CyclicalList<UserReportScreenshot> screenshots;
 
-		// Token: 0x04003BA1 RID: 15265
+		// Token: 0x04004F0B RID: 20235
 		private int screenshotsSaved;
 
-		// Token: 0x04003BA2 RID: 15266
+		// Token: 0x04004F0C RID: 20236
 		private int screenshotsTaken;
 
-		// Token: 0x04003BA3 RID: 15267
+		// Token: 0x04004F0D RID: 20237
 		private List<Action> synchronizedActions;
 
-		// Token: 0x04003BA4 RID: 15268
+		// Token: 0x04004F0E RID: 20238
 		private Stopwatch updateStopwatch;
 	}
 }

@@ -1,39 +1,39 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006D6 RID: 1750
+// Token: 0x02000B81 RID: 2945
 public class EquipmentSetData : ScriptableObject
 {
-	// Token: 0x0400303B RID: 12347
+	// Token: 0x0400428A RID: 17034
 	public string Name;
 
-	// Token: 0x0400303C RID: 12348
+	// Token: 0x0400428B RID: 17035
 	[Space]
 	[Header("Bonus(es)")]
 	[Space]
 	public EquipmentSetBonus SetBonus01;
 
-	// Token: 0x0400303D RID: 12349
+	// Token: 0x0400428C RID: 17036
 	public int SetRequirement01;
 
-	// Token: 0x0400303E RID: 12350
+	// Token: 0x0400428D RID: 17037
 	public EquipmentSetBonus SetBonus02;
 
-	// Token: 0x0400303F RID: 12351
+	// Token: 0x0400428E RID: 17038
 	public int SetRequirement02;
 
-	// Token: 0x04003040 RID: 12352
+	// Token: 0x0400428F RID: 17039
 	public EquipmentSetBonus SetBonus03;
 
-	// Token: 0x04003041 RID: 12353
+	// Token: 0x04004290 RID: 17040
 	public int SetRequirement03;
 
-	// Token: 0x04003042 RID: 12354
+	// Token: 0x04004291 RID: 17041
 	[Space]
 	[Header("Text Fields")]
 	[Space]
 	public string Title;
 
-	// Token: 0x04003043 RID: 12355
+	// Token: 0x04004292 RID: 17042
 	public string Description;
 }

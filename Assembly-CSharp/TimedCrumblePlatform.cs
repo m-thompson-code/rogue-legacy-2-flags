@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004CC RID: 1228
+// Token: 0x020007F4 RID: 2036
 public class TimedCrumblePlatform : CrumblePlatform
 {
-	// Token: 0x06002DA7 RID: 11687 RVA: 0x0009A250 File Offset: 0x00098450
+	// Token: 0x06003EB3 RID: 16051 RVA: 0x00022A7E File Offset: 0x00020C7E
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_crumbleDelayYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x06002DA8 RID: 11688 RVA: 0x0009A269 File Offset: 0x00098469
+	// Token: 0x06003EB4 RID: 16052 RVA: 0x00022A97 File Offset: 0x00020C97
 	protected override IEnumerator StartCrumbleCoroutine()
 	{
 		if (this.m_crackedAnimCoroutine != null)
@@ -38,7 +38,7 @@ public class TimedCrumblePlatform : CrumblePlatform
 		yield break;
 	}
 
-	// Token: 0x06002DA9 RID: 11689 RVA: 0x0009A278 File Offset: 0x00098478
+	// Token: 0x06003EB5 RID: 16053 RVA: 0x00022AA6 File Offset: 0x00020CA6
 	private IEnumerator CrackedAnimCoroutine(float animInterval)
 	{
 		float startTime = Time.time;
@@ -55,7 +55,7 @@ public class TimedCrumblePlatform : CrumblePlatform
 		yield break;
 	}
 
-	// Token: 0x06002DAA RID: 11690 RVA: 0x0009A28E File Offset: 0x0009848E
+	// Token: 0x06003EB6 RID: 16054 RVA: 0x00022ABC File Offset: 0x00020CBC
 	public override void ResetCrumble()
 	{
 		base.ResetCrumble();
@@ -65,9 +65,9 @@ public class TimedCrumblePlatform : CrumblePlatform
 		}
 	}
 
-	// Token: 0x0400248E RID: 9358
+	// Token: 0x0400312B RID: 12587
 	private WaitRL_Yield m_crumbleDelayYield;
 
-	// Token: 0x0400248F RID: 9359
+	// Token: 0x0400312C RID: 12588
 	private Coroutine m_crackedAnimCoroutine;
 }

@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000126 RID: 294
+// Token: 0x020001F3 RID: 499
 public class SpearKnight_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x06000909 RID: 2313 RVA: 0x0001DBF6 File Offset: 0x0001BDF6
+	// Token: 0x06000DAC RID: 3500 RVA: 0x00007C7A File Offset: 0x00005E7A
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -19,8 +19,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x170004D5 RID: 1237
-	// (get) Token: 0x0600090A RID: 2314 RVA: 0x0001DC34 File Offset: 0x0001BE34
+	// Token: 0x1700065F RID: 1631
+	// (get) Token: 0x06000DAD RID: 3501 RVA: 0x00003F6C File Offset: 0x0000216C
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -29,8 +29,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004D6 RID: 1238
-	// (get) Token: 0x0600090B RID: 2315 RVA: 0x0001DC45 File Offset: 0x0001BE45
+	// Token: 0x17000660 RID: 1632
+	// (get) Token: 0x06000DAE RID: 3502 RVA: 0x0000745A File Offset: 0x0000565A
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -39,8 +39,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004D7 RID: 1239
-	// (get) Token: 0x0600090C RID: 2316 RVA: 0x0001DC56 File Offset: 0x0001BE56
+	// Token: 0x17000661 RID: 1633
+	// (get) Token: 0x06000DAF RID: 3503 RVA: 0x0000746B File Offset: 0x0000566B
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -49,8 +49,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004D8 RID: 1240
-	// (get) Token: 0x0600090D RID: 2317 RVA: 0x0001DC67 File Offset: 0x0001BE67
+	// Token: 0x17000662 RID: 1634
+	// (get) Token: 0x06000DB0 RID: 3504 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_raiseKnockbackDefenseWhileAttacking
 	{
 		get
@@ -59,8 +59,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004D9 RID: 1241
-	// (get) Token: 0x0600090E RID: 2318 RVA: 0x0001DC6A File Offset: 0x0001BE6A
+	// Token: 0x17000663 RID: 1635
+	// (get) Token: 0x06000DB1 RID: 3505 RVA: 0x00003E42 File Offset: 0x00002042
 	protected virtual int m_knockbackDefenseBoostOverride
 	{
 		get
@@ -69,8 +69,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004DA RID: 1242
-	// (get) Token: 0x0600090F RID: 2319 RVA: 0x0001DC6D File Offset: 0x0001BE6D
+	// Token: 0x17000664 RID: 1636
+	// (get) Token: 0x06000DB2 RID: 3506 RVA: 0x0000530E File Offset: 0x0000350E
 	protected virtual float Dash_AttackSpeed
 	{
 		get
@@ -79,8 +79,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004DB RID: 1243
-	// (get) Token: 0x06000910 RID: 2320 RVA: 0x0001DC74 File Offset: 0x0001BE74
+	// Token: 0x17000665 RID: 1637
+	// (get) Token: 0x06000DB3 RID: 3507 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float Dash_AttackDuration
 	{
 		get
@@ -89,8 +89,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004DC RID: 1244
-	// (get) Token: 0x06000911 RID: 2321 RVA: 0x0001DC7B File Offset: 0x0001BE7B
+	// Token: 0x17000666 RID: 1638
+	// (get) Token: 0x06000DB4 RID: 3508 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_dashAttack_DashOffLedges
 	{
 		get
@@ -99,8 +99,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004DD RID: 1245
-	// (get) Token: 0x06000912 RID: 2322 RVA: 0x0001DC7E File Offset: 0x0001BE7E
+	// Token: 0x17000667 RID: 1639
+	// (get) Token: 0x06000DB5 RID: 3509 RVA: 0x00007CB8 File Offset: 0x00005EB8
 	protected virtual float DashUppercut_AttackSpeed
 	{
 		get
@@ -109,8 +109,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004DE RID: 1246
-	// (get) Token: 0x06000913 RID: 2323 RVA: 0x0001DC85 File Offset: 0x0001BE85
+	// Token: 0x17000668 RID: 1640
+	// (get) Token: 0x06000DB6 RID: 3510 RVA: 0x0000452F File Offset: 0x0000272F
 	protected virtual float DashUppercut_AttackDuration
 	{
 		get
@@ -119,8 +119,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004DF RID: 1247
-	// (get) Token: 0x06000914 RID: 2324 RVA: 0x0001DC8C File Offset: 0x0001BE8C
+	// Token: 0x17000669 RID: 1641
+	// (get) Token: 0x06000DB7 RID: 3511 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float DashUppercut_JumpSpeed
 	{
 		get
@@ -129,8 +129,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004E0 RID: 1248
-	// (get) Token: 0x06000915 RID: 2325 RVA: 0x0001DC93 File Offset: 0x0001BE93
+	// Token: 0x1700066A RID: 1642
+	// (get) Token: 0x06000DB8 RID: 3512 RVA: 0x000068DA File Offset: 0x00004ADA
 	protected virtual float Uppercut_JumpPower
 	{
 		get
@@ -139,8 +139,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004E1 RID: 1249
-	// (get) Token: 0x06000916 RID: 2326 RVA: 0x0001DC9A File Offset: 0x0001BE9A
+	// Token: 0x1700066B RID: 1643
+	// (get) Token: 0x06000DB9 RID: 3513 RVA: 0x0000530E File Offset: 0x0000350E
 	protected virtual float m_thrust_AttackSpeed
 	{
 		get
@@ -149,8 +149,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004E2 RID: 1250
-	// (get) Token: 0x06000917 RID: 2327 RVA: 0x0001DCA1 File Offset: 0x0001BEA1
+	// Token: 0x1700066C RID: 1644
+	// (get) Token: 0x06000DBA RID: 3514 RVA: 0x0000747C File Offset: 0x0000567C
 	protected virtual float m_thrust_AttackDuration
 	{
 		get
@@ -159,8 +159,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004E3 RID: 1251
-	// (get) Token: 0x06000918 RID: 2328 RVA: 0x0001DCA8 File Offset: 0x0001BEA8
+	// Token: 0x1700066D RID: 1645
+	// (get) Token: 0x06000DBB RID: 3515 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float m_thrust_AttackAmount
 	{
 		get
@@ -169,8 +169,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004E4 RID: 1252
-	// (get) Token: 0x06000919 RID: 2329 RVA: 0x0001DCAF File Offset: 0x0001BEAF
+	// Token: 0x1700066E RID: 1646
+	// (get) Token: 0x06000DBC RID: 3516 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float m_thrust_AttackLoopDelay
 	{
 		get
@@ -179,8 +179,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004E5 RID: 1253
-	// (get) Token: 0x0600091A RID: 2330 RVA: 0x0001DCB6 File Offset: 0x0001BEB6
+	// Token: 0x1700066F RID: 1647
+	// (get) Token: 0x06000DBD RID: 3517 RVA: 0x00004FE5 File Offset: 0x000031E5
 	protected virtual float m_throw_Exit_ForceIdle
 	{
 		get
@@ -189,8 +189,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004E6 RID: 1254
-	// (get) Token: 0x0600091B RID: 2331 RVA: 0x0001DCBD File Offset: 0x0001BEBD
+	// Token: 0x17000670 RID: 1648
+	// (get) Token: 0x06000DBE RID: 3518 RVA: 0x00007483 File Offset: 0x00005683
 	protected virtual float m_throw_AttackCD
 	{
 		get
@@ -199,8 +199,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004E7 RID: 1255
-	// (get) Token: 0x0600091C RID: 2332 RVA: 0x0001DCC4 File Offset: 0x0001BEC4
+	// Token: 0x17000671 RID: 1649
+	// (get) Token: 0x06000DBF RID: 3519 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_throw_Attack_TargetPlayer
 	{
 		get
@@ -209,8 +209,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004E8 RID: 1256
-	// (get) Token: 0x0600091D RID: 2333 RVA: 0x0001DCC7 File Offset: 0x0001BEC7
+	// Token: 0x17000672 RID: 1650
+	// (get) Token: 0x06000DC0 RID: 3520 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_throw_Attack_ProjectileAmount
 	{
 		get
@@ -219,8 +219,8 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004E9 RID: 1257
-	// (get) Token: 0x0600091E RID: 2334 RVA: 0x0001DCCA File Offset: 0x0001BECA
+	// Token: 0x17000673 RID: 1651
+	// (get) Token: 0x06000DC1 RID: 3521 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float m_throw_Attack_ProjectileDelay
 	{
 		get
@@ -229,7 +229,7 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600091F RID: 2335 RVA: 0x0001DCD1 File Offset: 0x0001BED1
+	// Token: 0x06000DC2 RID: 3522 RVA: 0x00007CBF File Offset: 0x00005EBF
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -278,7 +278,7 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000920 RID: 2336 RVA: 0x0001DCE0 File Offset: 0x0001BEE0
+	// Token: 0x06000DC3 RID: 3523 RVA: 0x00007CCE File Offset: 0x00005ECE
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -329,7 +329,7 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000921 RID: 2337 RVA: 0x0001DCEF File Offset: 0x0001BEEF
+	// Token: 0x06000DC4 RID: 3524 RVA: 0x00007CDD File Offset: 0x00005EDD
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -388,7 +388,7 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000922 RID: 2338 RVA: 0x0001DCFE File Offset: 0x0001BEFE
+	// Token: 0x06000DC5 RID: 3525 RVA: 0x00007CEC File Offset: 0x00005EEC
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -442,7 +442,7 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000923 RID: 2339 RVA: 0x0001DD0D File Offset: 0x0001BF0D
+	// Token: 0x06000DC6 RID: 3526 RVA: 0x00007CFB File Offset: 0x00005EFB
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -452,7 +452,7 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000924 RID: 2340 RVA: 0x0001DD15 File Offset: 0x0001BF15
+	// Token: 0x06000DC7 RID: 3527 RVA: 0x00007D03 File Offset: 0x00005F03
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -484,7 +484,7 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000925 RID: 2341 RVA: 0x0001DD24 File Offset: 0x0001BF24
+	// Token: 0x06000DC8 RID: 3528 RVA: 0x00007D12 File Offset: 0x00005F12
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.OnLBCompleteOrCancelled();
@@ -494,216 +494,216 @@ public class SpearKnight_Basic_AIScript : BaseAIScript
 		base.EnemyController.LockFlip = false;
 	}
 
-	// Token: 0x04000C7A RID: 3194
+	// Token: 0x04000FDD RID: 4061
 	private const string MINIBOSS_BOLT_PROJECTILE = "SpearKnightBoltMinibossProjectile";
 
-	// Token: 0x04000C7B RID: 3195
+	// Token: 0x04000FDE RID: 4062
 	private const string HEAD_BOBBLE_PROJECTILE = "SpearKnightCurseProjectile";
 
-	// Token: 0x04000C7C RID: 3196
+	// Token: 0x04000FDF RID: 4063
 	private const string CURSE_PROJECTILE = "SpearKnightCurseProjectile";
 
-	// Token: 0x04000C7D RID: 3197
+	// Token: 0x04000FE0 RID: 4064
 	private const string DAGGER_BOLT_PROJECTILE = "SpearKnightDaggerBoltRedProjectile";
 
-	// Token: 0x04000C7E RID: 3198
+	// Token: 0x04000FE1 RID: 4065
 	private const string EXPERT_DAGGER_BOLT_PROJECTILE = "SpearKnightDaggerBoltRedExpertProjectile";
 
-	// Token: 0x04000C7F RID: 3199
+	// Token: 0x04000FE2 RID: 4066
 	private const string MINIBOSS_DAGGER_BOLT_PROJECTILE = "SpearKnightDaggerBoltRedMinibossProjectile";
 
-	// Token: 0x04000C80 RID: 3200
+	// Token: 0x04000FE3 RID: 4067
 	protected float m_dash_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000C81 RID: 3201
+	// Token: 0x04000FE4 RID: 4068
 	protected float m_dash_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000C82 RID: 3202
+	// Token: 0x04000FE5 RID: 4069
 	protected float m_dash_TellIntroAndHold_Delay = 0.75f;
 
-	// Token: 0x04000C83 RID: 3203
+	// Token: 0x04000FE6 RID: 4070
 	protected float m_dash_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000C84 RID: 3204
+	// Token: 0x04000FE7 RID: 4071
 	protected float m_dash_AttackIntro_Delay;
 
-	// Token: 0x04000C85 RID: 3205
+	// Token: 0x04000FE8 RID: 4072
 	protected float m_dash_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000C86 RID: 3206
+	// Token: 0x04000FE9 RID: 4073
 	protected float m_dash_AttackHold_Delay;
 
-	// Token: 0x04000C87 RID: 3207
+	// Token: 0x04000FEA RID: 4074
 	protected float m_dash_Exit_AnimationSpeed = 0.65f;
 
-	// Token: 0x04000C88 RID: 3208
+	// Token: 0x04000FEB RID: 4075
 	protected float m_dash_Exit_Delay;
 
-	// Token: 0x04000C89 RID: 3209
+	// Token: 0x04000FEC RID: 4076
 	protected float m_dash_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000C8A RID: 3210
+	// Token: 0x04000FED RID: 4077
 	protected float m_dash_AttackCD = 2.5f;
 
-	// Token: 0x04000C8B RID: 3211
+	// Token: 0x04000FEE RID: 4078
 	protected float m_dashUppercut_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000C8C RID: 3212
+	// Token: 0x04000FEF RID: 4079
 	protected float m_dashUppercut_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000C8D RID: 3213
+	// Token: 0x04000FF0 RID: 4080
 	protected float m_dashUppercut_TellIntroAndHold_Delay = 0.9f;
 
-	// Token: 0x04000C8E RID: 3214
+	// Token: 0x04000FF1 RID: 4081
 	protected float m_dashUppercut_DashOnly_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000C8F RID: 3215
+	// Token: 0x04000FF2 RID: 4082
 	protected float m_dashUppercut_DashOnly_AttackIntro_Delay;
 
-	// Token: 0x04000C90 RID: 3216
+	// Token: 0x04000FF3 RID: 4083
 	protected float m_dashUppercut_DashOnly_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000C91 RID: 3217
+	// Token: 0x04000FF4 RID: 4084
 	protected float m_dashUppercut_DashOnly_AttackHold_Delay;
 
-	// Token: 0x04000C92 RID: 3218
+	// Token: 0x04000FF5 RID: 4085
 	protected float m_dashUppercut_UppercutOnly_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000C93 RID: 3219
+	// Token: 0x04000FF6 RID: 4086
 	protected float m_dashUppercut_UppercutOnly_AttackIntro_Delay;
 
-	// Token: 0x04000C94 RID: 3220
+	// Token: 0x04000FF7 RID: 4087
 	protected float m_dashUppercut_UppercutOnly_AttackHold_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000C95 RID: 3221
+	// Token: 0x04000FF8 RID: 4088
 	protected float m_dashUppercut_UppercutOnly_AttackHold_Delay;
 
-	// Token: 0x04000C96 RID: 3222
+	// Token: 0x04000FF9 RID: 4089
 	protected float m_dashUppercut_Exit_AnimationSpeed = 0.65f;
 
-	// Token: 0x04000C97 RID: 3223
+	// Token: 0x04000FFA RID: 4090
 	protected float m_dashUppercut_Exit_Delay;
 
-	// Token: 0x04000C98 RID: 3224
+	// Token: 0x04000FFB RID: 4091
 	protected float m_dashUppercut_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000C99 RID: 3225
+	// Token: 0x04000FFC RID: 4092
 	protected float m_dashUppercut_AttackCD;
 
-	// Token: 0x04000C9A RID: 3226
+	// Token: 0x04000FFD RID: 4093
 	protected float m_thrust_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000C9B RID: 3227
+	// Token: 0x04000FFE RID: 4094
 	protected float m_thrust_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000C9C RID: 3228
+	// Token: 0x04000FFF RID: 4095
 	protected float m_thrust_TellIntroAndHold_Delay = 0.75f;
 
-	// Token: 0x04000C9D RID: 3229
+	// Token: 0x04001000 RID: 4096
 	protected float m_thrust_TellIntroAndHoldRepeat_Delay = 0.15f;
 
-	// Token: 0x04000C9E RID: 3230
+	// Token: 0x04001001 RID: 4097
 	protected float m_thrust_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000C9F RID: 3231
+	// Token: 0x04001002 RID: 4098
 	protected float m_thrust_AttackIntro_Delay;
 
-	// Token: 0x04000CA0 RID: 3232
+	// Token: 0x04001003 RID: 4099
 	protected float m_thrust_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000CA1 RID: 3233
+	// Token: 0x04001004 RID: 4100
 	protected float m_thrust_AttackHold_Delay;
 
-	// Token: 0x04000CA2 RID: 3234
+	// Token: 0x04001005 RID: 4101
 	protected float m_thrust_Exit_AnimationSpeed = 0.65f;
 
-	// Token: 0x04000CA3 RID: 3235
+	// Token: 0x04001006 RID: 4102
 	protected float m_thrust_Exit_Delay;
 
-	// Token: 0x04000CA4 RID: 3236
+	// Token: 0x04001007 RID: 4103
 	protected float m_thrust_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000CA5 RID: 3237
+	// Token: 0x04001008 RID: 4104
 	protected float m_thrust_AttackCD = 2.5f;
 
-	// Token: 0x04000CA6 RID: 3238
+	// Token: 0x04001009 RID: 4105
 	protected float m_throw_TellIntro_AnimationSpeed = 0.75f;
 
-	// Token: 0x04000CA7 RID: 3239
+	// Token: 0x0400100A RID: 4106
 	protected float m_throw_TellHold_AnimationSpeed = 0.65f;
 
-	// Token: 0x04000CA8 RID: 3240
+	// Token: 0x0400100B RID: 4107
 	protected float m_throw_TellIntroAndHold_Delay = 0.9f;
 
-	// Token: 0x04000CA9 RID: 3241
+	// Token: 0x0400100C RID: 4108
 	protected float m_throw_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000CAA RID: 3242
+	// Token: 0x0400100D RID: 4109
 	protected float m_throw_AttackIntro_Delay;
 
-	// Token: 0x04000CAB RID: 3243
+	// Token: 0x0400100E RID: 4110
 	protected float m_throw_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000CAC RID: 3244
+	// Token: 0x0400100F RID: 4111
 	protected float m_throw_AttackHold_Delay = 0.25f;
 
-	// Token: 0x04000CAD RID: 3245
+	// Token: 0x04001010 RID: 4112
 	protected float m_throw_Exit_AnimationSpeed = 0.45f;
 
-	// Token: 0x04000CAE RID: 3246
+	// Token: 0x04001011 RID: 4113
 	protected float m_throw_Exit_Delay = 0.15f;
 
-	// Token: 0x04000CAF RID: 3247
+	// Token: 0x04001012 RID: 4114
 	protected const string HEAD_BOBBLE_TELL_INTRO = "SpearKnight_HeadShake_Tell_Intro";
 
-	// Token: 0x04000CB0 RID: 3248
+	// Token: 0x04001013 RID: 4115
 	protected const string HEAD_BOBBLE_TELL_HOLD = "SpearKnight_HeadShake_Tell_Hold";
 
-	// Token: 0x04000CB1 RID: 3249
+	// Token: 0x04001014 RID: 4116
 	protected const string HEAD_BOBBLE_ATTACK_INTRO = "SpearKnight_HeadShake_Attack_Intro";
 
-	// Token: 0x04000CB2 RID: 3250
+	// Token: 0x04001015 RID: 4117
 	protected const string HEAD_BOBBLE_ATTACK_HOLD = "SpearKnight_HeadShake_Attack_Hold";
 
-	// Token: 0x04000CB3 RID: 3251
+	// Token: 0x04001016 RID: 4118
 	protected const string HEAD_BOBBLE_EXIT = "SpearKnight_HeadShake_Exit";
 
-	// Token: 0x04000CB4 RID: 3252
+	// Token: 0x04001017 RID: 4119
 	protected float m_headBobble_TellIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000CB5 RID: 3253
+	// Token: 0x04001018 RID: 4120
 	protected float m_headBobble_TellHold_AnimSpeed = 1f;
 
-	// Token: 0x04000CB6 RID: 3254
+	// Token: 0x04001019 RID: 4121
 	protected float m_headBobble_TellIntroAndHold_Delay = 0.9f;
 
-	// Token: 0x04000CB7 RID: 3255
+	// Token: 0x0400101A RID: 4122
 	protected float m_headBobble_AttackIntro_AnimSpeed = 1f;
 
-	// Token: 0x04000CB8 RID: 3256
+	// Token: 0x0400101B RID: 4123
 	protected float m_headBobble_AttackIntro_Delay;
 
-	// Token: 0x04000CB9 RID: 3257
+	// Token: 0x0400101C RID: 4124
 	protected float m_headBobble_AttackHold_AnimSpeed = 1f;
 
-	// Token: 0x04000CBA RID: 3258
+	// Token: 0x0400101D RID: 4125
 	protected float m_headBobble_AttackHold_Delay = 1f;
 
-	// Token: 0x04000CBB RID: 3259
+	// Token: 0x0400101E RID: 4126
 	protected float m_headBobble_AttackHold_Exit_Delay = 0.5f;
 
-	// Token: 0x04000CBC RID: 3260
+	// Token: 0x0400101F RID: 4127
 	protected float m_headBobble_Exit_AnimSpeed = 1f;
 
-	// Token: 0x04000CBD RID: 3261
+	// Token: 0x04001020 RID: 4128
 	protected float m_headBobble_Exit_Delay = 0.45f;
 
-	// Token: 0x04000CBE RID: 3262
+	// Token: 0x04001021 RID: 4129
 	protected float m_headBobble_Exit_IdleDuration = 0.15f;
 
-	// Token: 0x04000CBF RID: 3263
+	// Token: 0x04001022 RID: 4130
 	protected float m_headBobble_AttackCD = 15f;
 
-	// Token: 0x04000CC0 RID: 3264
+	// Token: 0x04001023 RID: 4131
 	protected int m_numHeadBobbleProjectiles = 3;
 }

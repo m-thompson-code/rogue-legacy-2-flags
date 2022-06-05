@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000531 RID: 1329
+// Token: 0x020008BD RID: 2237
 public class TogglePlayerInvincibility_SummonRule : BaseSummonRule
 {
-	// Token: 0x17001212 RID: 4626
-	// (get) Token: 0x060030EE RID: 12526 RVA: 0x000A664A File Offset: 0x000A484A
+	// Token: 0x17001851 RID: 6225
+	// (get) Token: 0x06004430 RID: 17456 RVA: 0x00019204 File Offset: 0x00017404
 	public override SummonRuleType RuleType
 	{
 		get
@@ -15,8 +15,8 @@ public class TogglePlayerInvincibility_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001213 RID: 4627
-	// (get) Token: 0x060030EF RID: 12527 RVA: 0x000A6651 File Offset: 0x000A4851
+	// Token: 0x17001852 RID: 6226
+	// (get) Token: 0x06004431 RID: 17457 RVA: 0x000259C7 File Offset: 0x00023BC7
 	public override string RuleLabel
 	{
 		get
@@ -25,7 +25,7 @@ public class TogglePlayerInvincibility_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x060030F0 RID: 12528 RVA: 0x000A6658 File Offset: 0x000A4858
+	// Token: 0x06004432 RID: 17458 RVA: 0x000259CE File Offset: 0x00023BCE
 	public override IEnumerator RunSummonRule()
 	{
 		PlayerManager.GetPlayerController().TakesNoDamage = this.m_setPlayerInvincible;
@@ -34,7 +34,7 @@ public class TogglePlayerInvincibility_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x040026C0 RID: 9920
+	// Token: 0x040034FC RID: 13564
 	[SerializeField]
 	private bool m_setPlayerInvincible;
 }

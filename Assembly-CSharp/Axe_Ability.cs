@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000191 RID: 401
+// Token: 0x020002E4 RID: 740
 public class Axe_Ability : Sword_Ability
 {
-	// Token: 0x06000E96 RID: 3734 RVA: 0x0002C283 File Offset: 0x0002A483
+	// Token: 0x06001653 RID: 5715 RVA: 0x0000B1B6 File Offset: 0x000093B6
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -16,8 +16,8 @@ public class Axe_Ability : Sword_Ability
 		};
 	}
 
-	// Token: 0x170007DD RID: 2013
-	// (get) Token: 0x06000E97 RID: 3735 RVA: 0x0002C2AC File Offset: 0x0002A4AC
+	// Token: 0x17000A6F RID: 2671
+	// (get) Token: 0x06001654 RID: 5716 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected float TellIntroAnimSpeedGround
 	{
 		get
@@ -26,8 +26,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007DE RID: 2014
-	// (get) Token: 0x06000E98 RID: 3736 RVA: 0x0002C2B3 File Offset: 0x0002A4B3
+	// Token: 0x17000A70 RID: 2672
+	// (get) Token: 0x06001655 RID: 5717 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected float TellIntroAnimSpeedAir
 	{
 		get
@@ -36,8 +36,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007DF RID: 2015
-	// (get) Token: 0x06000E99 RID: 3737 RVA: 0x0002C2BA File Offset: 0x0002A4BA
+	// Token: 0x17000A71 RID: 2673
+	// (get) Token: 0x06001656 RID: 5718 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellIntroAnimExitDelayGround
 	{
 		get
@@ -46,8 +46,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007E0 RID: 2016
-	// (get) Token: 0x06000E9A RID: 3738 RVA: 0x0002C2C1 File Offset: 0x0002A4C1
+	// Token: 0x17000A72 RID: 2674
+	// (get) Token: 0x06001657 RID: 5719 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellIntroAnimExitDelayAir
 	{
 		get
@@ -56,8 +56,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007E1 RID: 2017
-	// (get) Token: 0x06000E9B RID: 3739 RVA: 0x0002C2C8 File Offset: 0x0002A4C8
+	// Token: 0x17000A73 RID: 2675
+	// (get) Token: 0x06001658 RID: 5720 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected float TellHoldAnimSpeedGround
 	{
 		get
@@ -66,8 +66,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007E2 RID: 2018
-	// (get) Token: 0x06000E9C RID: 3740 RVA: 0x0002C2CF File Offset: 0x0002A4CF
+	// Token: 0x17000A74 RID: 2676
+	// (get) Token: 0x06001659 RID: 5721 RVA: 0x00004FDE File Offset: 0x000031DE
 	protected float TellHoldAnimSpeedAir
 	{
 		get
@@ -76,8 +76,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007E3 RID: 2019
-	// (get) Token: 0x06000E9D RID: 3741 RVA: 0x0002C2D6 File Offset: 0x0002A4D6
+	// Token: 0x17000A75 RID: 2677
+	// (get) Token: 0x0600165A RID: 5722 RVA: 0x0000AE5D File Offset: 0x0000905D
 	protected float TellHoldAnimDelayGround
 	{
 		get
@@ -86,8 +86,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007E4 RID: 2020
-	// (get) Token: 0x06000E9E RID: 3742 RVA: 0x0002C2DD File Offset: 0x0002A4DD
+	// Token: 0x17000A76 RID: 2678
+	// (get) Token: 0x0600165B RID: 5723 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float TellHoldAnimDelayAir
 	{
 		get
@@ -96,8 +96,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007E5 RID: 2021
-	// (get) Token: 0x06000E9F RID: 3743 RVA: 0x0002C2E4 File Offset: 0x0002A4E4
+	// Token: 0x17000A77 RID: 2679
+	// (get) Token: 0x0600165C RID: 5724 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected float AttackIntroAnimSpeedGround
 	{
 		get
@@ -106,8 +106,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007E6 RID: 2022
-	// (get) Token: 0x06000EA0 RID: 3744 RVA: 0x0002C2EB File Offset: 0x0002A4EB
+	// Token: 0x17000A78 RID: 2680
+	// (get) Token: 0x0600165D RID: 5725 RVA: 0x00004FDE File Offset: 0x000031DE
 	protected float AttackIntroAnimSpeedAir
 	{
 		get
@@ -116,8 +116,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007E7 RID: 2023
-	// (get) Token: 0x06000EA1 RID: 3745 RVA: 0x0002C2F2 File Offset: 0x0002A4F2
+	// Token: 0x17000A79 RID: 2681
+	// (get) Token: 0x0600165E RID: 5726 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackIntroAnimExitDelayGround
 	{
 		get
@@ -126,8 +126,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007E8 RID: 2024
-	// (get) Token: 0x06000EA2 RID: 3746 RVA: 0x0002C2F9 File Offset: 0x0002A4F9
+	// Token: 0x17000A7A RID: 2682
+	// (get) Token: 0x0600165F RID: 5727 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackIntroAnimExitDelayAir
 	{
 		get
@@ -136,8 +136,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007E9 RID: 2025
-	// (get) Token: 0x06000EA3 RID: 3747 RVA: 0x0002C300 File Offset: 0x0002A500
+	// Token: 0x17000A7B RID: 2683
+	// (get) Token: 0x06001660 RID: 5728 RVA: 0x00005FAA File Offset: 0x000041AA
 	protected float AttackHoldAnimSpeedGround
 	{
 		get
@@ -146,8 +146,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007EA RID: 2026
-	// (get) Token: 0x06000EA4 RID: 3748 RVA: 0x0002C307 File Offset: 0x0002A507
+	// Token: 0x17000A7C RID: 2684
+	// (get) Token: 0x06001661 RID: 5729 RVA: 0x00005FAA File Offset: 0x000041AA
 	protected float AttackHoldAnimSpeedAir
 	{
 		get
@@ -156,8 +156,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007EB RID: 2027
-	// (get) Token: 0x06000EA5 RID: 3749 RVA: 0x0002C30E File Offset: 0x0002A50E
+	// Token: 0x17000A7D RID: 2685
+	// (get) Token: 0x06001662 RID: 5730 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackHoldAnimDelayGround
 	{
 		get
@@ -166,8 +166,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007EC RID: 2028
-	// (get) Token: 0x06000EA6 RID: 3750 RVA: 0x0002C315 File Offset: 0x0002A515
+	// Token: 0x17000A7E RID: 2686
+	// (get) Token: 0x06001663 RID: 5731 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float AttackHoldAnimDelayAir
 	{
 		get
@@ -176,8 +176,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007ED RID: 2029
-	// (get) Token: 0x06000EA7 RID: 3751 RVA: 0x0002C31C File Offset: 0x0002A51C
+	// Token: 0x17000A7F RID: 2687
+	// (get) Token: 0x06001664 RID: 5732 RVA: 0x00005307 File Offset: 0x00003507
 	protected float ExitIntroAnimSpeedGround
 	{
 		get
@@ -186,8 +186,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007EE RID: 2030
-	// (get) Token: 0x06000EA8 RID: 3752 RVA: 0x0002C323 File Offset: 0x0002A523
+	// Token: 0x17000A80 RID: 2688
+	// (get) Token: 0x06001665 RID: 5733 RVA: 0x00003DE8 File Offset: 0x00001FE8
 	protected float ExitIntroAnimSpeedAir
 	{
 		get
@@ -196,8 +196,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007EF RID: 2031
-	// (get) Token: 0x06000EA9 RID: 3753 RVA: 0x0002C32A File Offset: 0x0002A52A
+	// Token: 0x17000A81 RID: 2689
+	// (get) Token: 0x06001666 RID: 5734 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float ExitHoldAnimDelayGround
 	{
 		get
@@ -206,8 +206,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007F0 RID: 2032
-	// (get) Token: 0x06000EAA RID: 3754 RVA: 0x0002C331 File Offset: 0x0002A531
+	// Token: 0x17000A82 RID: 2690
+	// (get) Token: 0x06001667 RID: 5735 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected float ExitHoldAnimDelayAir
 	{
 		get
@@ -216,8 +216,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007F1 RID: 2033
-	// (get) Token: 0x06000EAB RID: 3755 RVA: 0x0002C338 File Offset: 0x0002A538
+	// Token: 0x17000A83 RID: 2691
+	// (get) Token: 0x06001668 RID: 5736 RVA: 0x0000B1DF File Offset: 0x000093DF
 	public override Vector2 ProjectileOffset
 	{
 		get
@@ -234,8 +234,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007F2 RID: 2034
-	// (get) Token: 0x06000EAC RID: 3756 RVA: 0x0002C35E File Offset: 0x0002A55E
+	// Token: 0x17000A84 RID: 2692
+	// (get) Token: 0x06001669 RID: 5737 RVA: 0x0000B205 File Offset: 0x00009405
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -248,8 +248,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007F3 RID: 2035
-	// (get) Token: 0x06000EAD RID: 3757 RVA: 0x0002C375 File Offset: 0x0002A575
+	// Token: 0x17000A85 RID: 2693
+	// (get) Token: 0x0600166A RID: 5738 RVA: 0x0000B21C File Offset: 0x0000941C
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -262,8 +262,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007F4 RID: 2036
-	// (get) Token: 0x06000EAE RID: 3758 RVA: 0x0002C38C File Offset: 0x0002A58C
+	// Token: 0x17000A86 RID: 2694
+	// (get) Token: 0x0600166B RID: 5739 RVA: 0x0000B233 File Offset: 0x00009433
 	protected override float TellAnimSpeed
 	{
 		get
@@ -276,8 +276,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007F5 RID: 2037
-	// (get) Token: 0x06000EAF RID: 3759 RVA: 0x0002C3A3 File Offset: 0x0002A5A3
+	// Token: 0x17000A87 RID: 2695
+	// (get) Token: 0x0600166C RID: 5740 RVA: 0x0000B24A File Offset: 0x0000944A
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -290,8 +290,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007F6 RID: 2038
-	// (get) Token: 0x06000EB0 RID: 3760 RVA: 0x0002C3BA File Offset: 0x0002A5BA
+	// Token: 0x17000A88 RID: 2696
+	// (get) Token: 0x0600166D RID: 5741 RVA: 0x0000B261 File Offset: 0x00009461
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -304,8 +304,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007F7 RID: 2039
-	// (get) Token: 0x06000EB1 RID: 3761 RVA: 0x0002C3D1 File Offset: 0x0002A5D1
+	// Token: 0x17000A89 RID: 2697
+	// (get) Token: 0x0600166E RID: 5742 RVA: 0x0000B278 File Offset: 0x00009478
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -318,8 +318,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007F8 RID: 2040
-	// (get) Token: 0x06000EB2 RID: 3762 RVA: 0x0002C3E8 File Offset: 0x0002A5E8
+	// Token: 0x17000A8A RID: 2698
+	// (get) Token: 0x0600166F RID: 5743 RVA: 0x0000B28F File Offset: 0x0000948F
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -332,8 +332,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007F9 RID: 2041
-	// (get) Token: 0x06000EB3 RID: 3763 RVA: 0x0002C3FF File Offset: 0x0002A5FF
+	// Token: 0x17000A8B RID: 2699
+	// (get) Token: 0x06001670 RID: 5744 RVA: 0x0000B2A6 File Offset: 0x000094A6
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -346,8 +346,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007FA RID: 2042
-	// (get) Token: 0x06000EB4 RID: 3764 RVA: 0x0002C416 File Offset: 0x0002A616
+	// Token: 0x17000A8C RID: 2700
+	// (get) Token: 0x06001671 RID: 5745 RVA: 0x0000B2BD File Offset: 0x000094BD
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -360,8 +360,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007FB RID: 2043
-	// (get) Token: 0x06000EB5 RID: 3765 RVA: 0x0002C42D File Offset: 0x0002A62D
+	// Token: 0x17000A8D RID: 2701
+	// (get) Token: 0x06001672 RID: 5746 RVA: 0x0000B2D4 File Offset: 0x000094D4
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -374,8 +374,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007FC RID: 2044
-	// (get) Token: 0x06000EB6 RID: 3766 RVA: 0x0002C444 File Offset: 0x0002A644
+	// Token: 0x17000A8E RID: 2702
+	// (get) Token: 0x06001673 RID: 5747 RVA: 0x0000B2EB File Offset: 0x000094EB
 	public override bool HasAttackFlipCheck
 	{
 		get
@@ -388,8 +388,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007FD RID: 2045
-	// (get) Token: 0x06000EB7 RID: 3767 RVA: 0x0002C45B File Offset: 0x0002A65B
+	// Token: 0x17000A8F RID: 2703
+	// (get) Token: 0x06001674 RID: 5748 RVA: 0x0000B302 File Offset: 0x00009502
 	public override string ProjectileName
 	{
 		get
@@ -406,8 +406,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007FE RID: 2046
-	// (get) Token: 0x06000EB8 RID: 3768 RVA: 0x0002C484 File Offset: 0x0002A684
+	// Token: 0x17000A90 RID: 2704
+	// (get) Token: 0x06001675 RID: 5749 RVA: 0x0008B3BC File Offset: 0x000895BC
 	public override AbilityData AbilityData
 	{
 		get
@@ -435,8 +435,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x170007FF RID: 2047
-	// (get) Token: 0x06000EB9 RID: 3769 RVA: 0x0002C4D3 File Offset: 0x0002A6D3
+	// Token: 0x17000A91 RID: 2705
+	// (get) Token: 0x06001676 RID: 5750 RVA: 0x0000B328 File Offset: 0x00009528
 	public override string AbilityTellIntroName
 	{
 		get
@@ -449,13 +449,13 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000800 RID: 2048
-	// (get) Token: 0x06000EBA RID: 3770 RVA: 0x0002C4EA File Offset: 0x0002A6EA
-	// (set) Token: 0x06000EBB RID: 3771 RVA: 0x0002C4F2 File Offset: 0x0002A6F2
+	// Token: 0x17000A92 RID: 2706
+	// (get) Token: 0x06001677 RID: 5751 RVA: 0x0000B33F File Offset: 0x0000953F
+	// (set) Token: 0x06001678 RID: 5752 RVA: 0x0000B347 File Offset: 0x00009547
 	private protected bool PerformGroundAttack { protected get; private set; }
 
-	// Token: 0x17000801 RID: 2049
-	// (get) Token: 0x06000EBC RID: 3772 RVA: 0x0002C4FB File Offset: 0x0002A6FB
+	// Token: 0x17000A93 RID: 2707
+	// (get) Token: 0x06001679 RID: 5753 RVA: 0x0000B350 File Offset: 0x00009550
 	protected bool PerformLandingAttack
 	{
 		get
@@ -464,8 +464,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000802 RID: 2050
-	// (get) Token: 0x06000EBD RID: 3773 RVA: 0x0002C520 File Offset: 0x0002A720
+	// Token: 0x17000A94 RID: 2708
+	// (get) Token: 0x0600167A RID: 5754 RVA: 0x0008B40C File Offset: 0x0008960C
 	protected bool IsGrounded
 	{
 		get
@@ -474,8 +474,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000803 RID: 2051
-	// (get) Token: 0x06000EBE RID: 3774 RVA: 0x0002C58F File Offset: 0x0002A78F
+	// Token: 0x17000A95 RID: 2709
+	// (get) Token: 0x0600167B RID: 5755 RVA: 0x0000B375 File Offset: 0x00009575
 	public override float MovementMod
 	{
 		get
@@ -488,8 +488,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000804 RID: 2052
-	// (get) Token: 0x06000EBF RID: 3775 RVA: 0x0002C5AE File Offset: 0x0002A7AE
+	// Token: 0x17000A96 RID: 2710
+	// (get) Token: 0x0600167C RID: 5756 RVA: 0x0000B394 File Offset: 0x00009594
 	public override bool JumpInterruptable
 	{
 		get
@@ -498,8 +498,8 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000805 RID: 2053
-	// (get) Token: 0x06000EC0 RID: 3776 RVA: 0x0002C5DF File Offset: 0x0002A7DF
+	// Token: 0x17000A97 RID: 2711
+	// (get) Token: 0x0600167D RID: 5757 RVA: 0x0000B3C5 File Offset: 0x000095C5
 	protected override bool IsInCritWindow
 	{
 		get
@@ -508,14 +508,14 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x06000EC1 RID: 3777 RVA: 0x0002C5F1 File Offset: 0x0002A7F1
+	// Token: 0x0600167E RID: 5758 RVA: 0x0000B3D7 File Offset: 0x000095D7
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_waitUntilLandedYield = new WaitUntil(() => this.IsGrounded);
 	}
 
-	// Token: 0x06000EC2 RID: 3778 RVA: 0x0002C610 File Offset: 0x0002A810
+	// Token: 0x0600167F RID: 5759 RVA: 0x0000B3F6 File Offset: 0x000095F6
 	public override void PreCastAbility()
 	{
 		if (this.IsGrounded)
@@ -530,7 +530,7 @@ public class Axe_Ability : Sword_Ability
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000EC3 RID: 3779 RVA: 0x0002C64A File Offset: 0x0002A84A
+	// Token: 0x06001680 RID: 5760 RVA: 0x0000B430 File Offset: 0x00009630
 	protected override void OnEnterExitLogic()
 	{
 		if (!this.PerformGroundAttack && this.m_firedProjectile)
@@ -545,7 +545,7 @@ public class Axe_Ability : Sword_Ability
 		base.OnEnterExitLogic();
 	}
 
-	// Token: 0x06000EC4 RID: 3780 RVA: 0x0002C687 File Offset: 0x0002A887
+	// Token: 0x06001681 RID: 5761 RVA: 0x0000B46D File Offset: 0x0000966D
 	protected override void FireProjectile()
 	{
 		if ((!this.PerformGroundAttack && !this.IsGrounded) || this.PerformGroundAttack || this.PerformLandingAttack)
@@ -558,7 +558,7 @@ public class Axe_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x06000EC5 RID: 3781 RVA: 0x0002C6BE File Offset: 0x0002A8BE
+	// Token: 0x06001682 RID: 5762 RVA: 0x0000B4A4 File Offset: 0x000096A4
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (base.CurrentAbilityAnimState != AbilityAnimState.Exit && !this.PerformGroundAttack && this.IsGrounded)
@@ -581,53 +581,53 @@ public class Axe_Ability : Sword_Ability
 		yield break;
 	}
 
-	// Token: 0x06000EC6 RID: 3782 RVA: 0x0002C6D4 File Offset: 0x0002A8D4
+	// Token: 0x06001683 RID: 5763 RVA: 0x0000B4BA File Offset: 0x000096BA
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		this.m_isAirAttacking = false;
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x0400112C RID: 4396
+	// Token: 0x040016C5 RID: 5829
 	[Header("Airborne Values")]
 	[SerializeField]
 	protected string m_abilityAirTellIntroName;
 
-	// Token: 0x0400112D RID: 4397
+	// Token: 0x040016C6 RID: 5830
 	[SerializeField]
 	protected AbilityData m_airborneAbilityData;
 
-	// Token: 0x0400112E RID: 4398
+	// Token: 0x040016C7 RID: 5831
 	[SerializeField]
 	protected string m_airborneProjectileName;
 
-	// Token: 0x0400112F RID: 4399
+	// Token: 0x040016C8 RID: 5832
 	[SerializeField]
 	protected Vector2 m_airBorneProjectileOffset;
 
-	// Token: 0x04001130 RID: 4400
+	// Token: 0x040016C9 RID: 5833
 	[SerializeField]
 	protected bool m_hasAirborneAttackFlipCheck;
 
-	// Token: 0x04001131 RID: 4401
+	// Token: 0x040016CA RID: 5834
 	[Header("Attack Landing Values")]
 	[SerializeField]
 	protected AbilityData m_landingAbilityData;
 
-	// Token: 0x04001132 RID: 4402
+	// Token: 0x040016CB RID: 5835
 	[SerializeField]
 	protected string m_landingProjectileName;
 
-	// Token: 0x04001133 RID: 4403
+	// Token: 0x040016CC RID: 5836
 	[SerializeField]
 	protected Vector2 m_landingProjectileOffset;
 
-	// Token: 0x04001134 RID: 4404
+	// Token: 0x040016CD RID: 5837
 	private bool m_isAirAttacking;
 
-	// Token: 0x04001135 RID: 4405
+	// Token: 0x040016CE RID: 5838
 	private WaitUntil m_waitUntilLandedYield;
 
-	// Token: 0x04001136 RID: 4406
+	// Token: 0x040016CF RID: 5839
 	protected float AttackMovementModAfterSpinLand;
 }

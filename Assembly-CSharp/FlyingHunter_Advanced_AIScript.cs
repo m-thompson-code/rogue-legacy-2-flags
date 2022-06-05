@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000DD RID: 221
+// Token: 0x02000164 RID: 356
 public class FlyingHunter_Advanced_AIScript : FlyingHunter_Basic_AIScript
 {
-	// Token: 0x17000355 RID: 853
-	// (get) Token: 0x06000683 RID: 1667 RVA: 0x000197A8 File Offset: 0x000179A8
+	// Token: 0x17000453 RID: 1107
+	// (get) Token: 0x06000982 RID: 2434 RVA: 0x00006581 File Offset: 0x00004781
 	protected override int TeleportOddsToFlipSideOnHit
 	{
 		get
@@ -13,8 +13,8 @@ public class FlyingHunter_Advanced_AIScript : FlyingHunter_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000356 RID: 854
-	// (get) Token: 0x06000684 RID: 1668 RVA: 0x000197AC File Offset: 0x000179AC
+	// Token: 0x17000454 RID: 1108
+	// (get) Token: 0x06000983 RID: 2435 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool TeleportSpawnProjectilesOnHit
 	{
 		get
@@ -23,8 +23,8 @@ public class FlyingHunter_Advanced_AIScript : FlyingHunter_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000357 RID: 855
-	// (get) Token: 0x06000685 RID: 1669 RVA: 0x000197AF File Offset: 0x000179AF
+	// Token: 0x17000455 RID: 1109
+	// (get) Token: 0x06000984 RID: 2436 RVA: 0x0000456C File Offset: 0x0000276C
 	protected override float TeleportHealthLossTrigger
 	{
 		get

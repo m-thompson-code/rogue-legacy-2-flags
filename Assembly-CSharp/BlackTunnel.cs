@@ -2,10 +2,10 @@
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000561 RID: 1377
+// Token: 0x0200092E RID: 2350
 public class BlackTunnel : Tunnel
 {
-	// Token: 0x0600329C RID: 12956 RVA: 0x000AB36E File Offset: 0x000A956E
+	// Token: 0x0600475F RID: 18271 RVA: 0x00027286 File Offset: 0x00025486
 	protected override void Awake()
 	{
 		base.Awake();
@@ -13,14 +13,14 @@ public class BlackTunnel : Tunnel
 		this.m_confirmEnterTunnel = new Action(this.ConfirmEnterTunnel);
 	}
 
-	// Token: 0x0600329D RID: 12957 RVA: 0x000AB39A File Offset: 0x000A959A
+	// Token: 0x06004760 RID: 18272 RVA: 0x000272B2 File Offset: 0x000254B2
 	protected override void OnPlayerInteractedWithTunnel(GameObject otherObj)
 	{
 		this.InitializeConfirmMenu();
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x0600329E RID: 12958 RVA: 0x000AB3AC File Offset: 0x000A95AC
+	// Token: 0x06004761 RID: 18273 RVA: 0x00115ABC File Offset: 0x00113CBC
 	private void InitializeConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -40,22 +40,22 @@ public class BlackTunnel : Tunnel
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenu);
 	}
 
-	// Token: 0x0600329F RID: 12959 RVA: 0x000AB43B File Offset: 0x000A963B
+	// Token: 0x06004762 RID: 18274 RVA: 0x0002726D File Offset: 0x0002546D
 	private void ConfirmEnterTunnel()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 		base.OnPlayerInteractedWithTunnel(null);
 	}
 
-	// Token: 0x060032A0 RID: 12960 RVA: 0x000AB44C File Offset: 0x000A964C
+	// Token: 0x06004763 RID: 18275 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenu()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x040027A6 RID: 10150
+	// Token: 0x040036CA RID: 14026
 	private Action m_cancelConfirmMenu;
 
-	// Token: 0x040027A7 RID: 10151
+	// Token: 0x040036CB RID: 14027
 	private Action m_confirmEnterTunnel;
 }

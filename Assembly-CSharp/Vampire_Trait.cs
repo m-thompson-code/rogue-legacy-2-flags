@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000367 RID: 871
+// Token: 0x020005DF RID: 1503
 public class Vampire_Trait : BaseTrait
 {
-	// Token: 0x17000DF9 RID: 3577
-	// (get) Token: 0x060020B6 RID: 8374 RVA: 0x00066F2A File Offset: 0x0006512A
+	// Token: 0x17001268 RID: 4712
+	// (get) Token: 0x06002E5B RID: 11867 RVA: 0x00019598 File Offset: 0x00017798
 	public override TraitType TraitType
 	{
 		get
@@ -14,7 +14,7 @@ public class Vampire_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x060020B7 RID: 8375 RVA: 0x00066F31 File Offset: 0x00065131
+	// Token: 0x06002E5C RID: 11868 RVA: 0x0001959F File Offset: 0x0001779F
 	private IEnumerator Start()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -26,7 +26,7 @@ public class Vampire_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x060020B8 RID: 8376 RVA: 0x00066F40 File Offset: 0x00065140
+	// Token: 0x06002E5D RID: 11869 RVA: 0x000195AE File Offset: 0x000177AE
 	private IEnumerator VampirismCoroutine(PlayerController playerController)
 	{
 		for (;;)
@@ -42,9 +42,9 @@ public class Vampire_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x04001C6B RID: 7275
+	// Token: 0x0400260D RID: 9741
 	private float m_healthDropTick = 1f;
 
-	// Token: 0x04001C6C RID: 7276
+	// Token: 0x0400260E RID: 9742
 	private WaitRL_Yield m_waitYield;
 }

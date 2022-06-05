@@ -5,10 +5,10 @@ using System.Linq;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000668 RID: 1640
+// Token: 0x02000ACC RID: 2764
 public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B3F RID: 15167 RVA: 0x000CBB21 File Offset: 0x000C9D21
+	// Token: 0x06005312 RID: 21266 RVA: 0x0002D2B3 File Offset: 0x0002B4B3
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		TunnelSpawnController[] tunnelSpawnControllers = biomeController.TunnelSpawnControllers;
@@ -38,7 +38,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		yield break;
 	}
 
-	// Token: 0x06003B40 RID: 15168 RVA: 0x000CBB30 File Offset: 0x000C9D30
+	// Token: 0x06005313 RID: 21267 RVA: 0x0002D2C2 File Offset: 0x0002B4C2
 	public static IEnumerator RunFromLevelEditor(BiomeController biomeController, Room room)
 	{
 		if (!GameUtility.IsInLevelEditor)
@@ -63,13 +63,13 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		yield break;
 	}
 
-	// Token: 0x06003B41 RID: 15169 RVA: 0x000CBB46 File Offset: 0x000C9D46
+	// Token: 0x06005314 RID: 21268 RVA: 0x0002D2D8 File Offset: 0x0002B4D8
 	private static Tunnel GetTunnelPrefab(TunnelCategory category)
 	{
 		return TunnelLibrary.GetPrefab(category);
 	}
 
-	// Token: 0x06003B42 RID: 15170 RVA: 0x000CBB4E File Offset: 0x000C9D4E
+	// Token: 0x06005315 RID: 21269 RVA: 0x0002D2E0 File Offset: 0x0002B4E0
 	private static IEnumerator CreateDestination(BiomeController biomeController, TunnelSpawnController tunnelSpawnController, Tunnel entrance)
 	{
 		Tunnel tunnel = CreateTunnelRooms_BuildStage.CreateTunnelInstance(tunnelSpawnController, entrance);
@@ -112,7 +112,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		yield break;
 	}
 
-	// Token: 0x06003B43 RID: 15171 RVA: 0x000CBB6B File Offset: 0x000C9D6B
+	// Token: 0x06005316 RID: 21270 RVA: 0x0002D2FD File Offset: 0x0002B4FD
 	private static IEnumerator DestinationDoesNotExist(BiomeController biomeController, Tunnel tunnelInstance, TunnelSpawnController tunnelSpawnController)
 	{
 		Room room = CreateTunnelRooms_BuildStage.CreateRoomInstance(biomeController, tunnelSpawnController.DestinationRoomPrefab, tunnelSpawnController.LeadsToRoomType);
@@ -137,7 +137,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		yield break;
 	}
 
-	// Token: 0x06003B44 RID: 15172 RVA: 0x000CBB88 File Offset: 0x000C9D88
+	// Token: 0x06005317 RID: 21271 RVA: 0x0013AB54 File Offset: 0x00138D54
 	private static void DestinationAlreadyExists(Tunnel tunnelInstance, Room roomInstance)
 	{
 		ISpawnController[] spawnControllers = roomInstance.SpawnControllerManager.SpawnControllers;
@@ -168,7 +168,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		}
 	}
 
-	// Token: 0x06003B45 RID: 15173 RVA: 0x000CBC24 File Offset: 0x000C9E24
+	// Token: 0x06005318 RID: 21272 RVA: 0x0013ABF0 File Offset: 0x00138DF0
 	private static Tunnel CreateTunnelInstance(TunnelSpawnController tunnelSpawnController, Tunnel entrance)
 	{
 		if (!tunnelSpawnController.IsDestinationRoot || !(entrance == null))
@@ -195,7 +195,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		return null;
 	}
 
-	// Token: 0x06003B46 RID: 15174 RVA: 0x000CBCC0 File Offset: 0x000C9EC0
+	// Token: 0x06005319 RID: 21273 RVA: 0x0013AC8C File Offset: 0x00138E8C
 	private static bool GetHasRoomInChainBeenInstantiated(TunnelSpawnController spawnController, out Room room)
 	{
 		room = null;
@@ -215,7 +215,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		return result;
 	}
 
-	// Token: 0x06003B47 RID: 15175 RVA: 0x000CBD30 File Offset: 0x000C9F30
+	// Token: 0x0600531A RID: 21274 RVA: 0x0013ACFC File Offset: 0x00138EFC
 	private static GridPointManager CreateSpecialRoomGridPointManager(BiomeController biomeController, GridPointManager lobby, RoomType roomType)
 	{
 		if (RoomLibrary.IsInstantiated && !RoomLibrary.IsLoaded)
@@ -257,7 +257,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		return CreateTunnelRooms_BuildStage.CreateGridPointManager(biomeController, roomSetEntry.RoomMetaData, roomType, roomGridCoordinates, roomSetEntry.IsMirrored, tunnelDestinationBiome);
 	}
 
-	// Token: 0x06003B48 RID: 15176 RVA: 0x000CBE98 File Offset: 0x000CA098
+	// Token: 0x0600531B RID: 21275 RVA: 0x0013AE64 File Offset: 0x00139064
 	private static BiomeType GetTunnelDestinationBiome(BiomeController biomeController)
 	{
 		BiomeType result = biomeController.Biome;
@@ -268,7 +268,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		return result;
 	}
 
-	// Token: 0x06003B49 RID: 15177 RVA: 0x000CBED0 File Offset: 0x000CA0D0
+	// Token: 0x0600531C RID: 21276 RVA: 0x0013AE9C File Offset: 0x0013909C
 	private static GridPointManager CreateLobbyGridPointManager(BiomeController biomeController, RoomType roomType)
 	{
 		if (CreateTunnelRooms_BuildStage.m_lobbyMetaData == null)
@@ -279,7 +279,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		return CreateTunnelRooms_BuildStage.CreateGridPointManager(biomeController, CreateTunnelRooms_BuildStage.m_lobbyMetaData, RoomType.Standard, CreateTunnelRooms_BuildStage.DESTINATION_GRID_COORDINATES, false, tunnelDestinationBiome);
 	}
 
-	// Token: 0x06003B4A RID: 15178 RVA: 0x000CBF1C File Offset: 0x000CA11C
+	// Token: 0x0600531D RID: 21277 RVA: 0x0013AEE8 File Offset: 0x001390E8
 	private static bool GetIsTunnelToSpecialRoom(TunnelSpawnController tunnelSpawnController, out RoomType specialRoomType)
 	{
 		bool flag = tunnelSpawnController.LeadsToRoomType == RoomType.Fairy || tunnelSpawnController.LeadsToRoomType == RoomType.Bonus;
@@ -293,7 +293,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		return false;
 	}
 
-	// Token: 0x06003B4B RID: 15179 RVA: 0x000CBF6C File Offset: 0x000CA16C
+	// Token: 0x0600531E RID: 21278 RVA: 0x0002D31A File Offset: 0x0002B51A
 	private static void ConnectTunnels(Tunnel entrance, Tunnel exit)
 	{
 		entrance.SetDestination(exit);
@@ -301,7 +301,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		exit.SetRoot(entrance.Root);
 	}
 
-	// Token: 0x06003B4C RID: 15180 RVA: 0x000CBF88 File Offset: 0x000CA188
+	// Token: 0x0600531F RID: 21279 RVA: 0x0013AF38 File Offset: 0x00139138
 	private static Tunnel CreateTunnelInstance(TunnelSpawnController tunnelSpawnController)
 	{
 		Tunnel tunnel = null;
@@ -323,7 +323,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		return tunnel2;
 	}
 
-	// Token: 0x06003B4D RID: 15181 RVA: 0x000CC034 File Offset: 0x000CA234
+	// Token: 0x06005320 RID: 21280 RVA: 0x0013AFE4 File Offset: 0x001391E4
 	private static Room CreateRoomInstance(BiomeController biomeController, Room roomPrefab, RoomType roomType)
 	{
 		Transform parent = null;
@@ -341,7 +341,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		return room;
 	}
 
-	// Token: 0x06003B4E RID: 15182 RVA: 0x000CC077 File Offset: 0x000CA277
+	// Token: 0x06005321 RID: 21281 RVA: 0x0002D336 File Offset: 0x0002B536
 	private static void InvokeRoomCreatedEvent(Room room)
 	{
 		if (CreateTunnelRooms_BuildStage.m_roomCreatedEventArgs == null)
@@ -358,19 +358,19 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		}
 	}
 
-	// Token: 0x06003B4F RID: 15183 RVA: 0x000CC0AF File Offset: 0x000CA2AF
+	// Token: 0x06005322 RID: 21282 RVA: 0x0002D36E File Offset: 0x0002B56E
 	private static int GetNextRoomNumber(BiomeController biomeController)
 	{
 		return biomeController.GridPointManager.TunnelDestinationGridPointManagers.Count;
 	}
 
-	// Token: 0x06003B50 RID: 15184 RVA: 0x000CC0C1 File Offset: 0x000CA2C1
+	// Token: 0x06005323 RID: 21283 RVA: 0x0002D380 File Offset: 0x0002B580
 	private static int GetNextBiomeControllerIndex(BiomeController biomeController)
 	{
 		return biomeController.GridPointManager.StandaloneRoomCount + biomeController.GridPointManager.MergeRoomCount + biomeController.GridPointManager.TunnelDestinationCount - 1;
 	}
 
-	// Token: 0x06003B51 RID: 15185 RVA: 0x000CC0E8 File Offset: 0x000CA2E8
+	// Token: 0x06005324 RID: 21284 RVA: 0x0013B028 File Offset: 0x00139228
 	private static GridPointManager CreateGridPointManager(BiomeController biomeController, RoomMetaData roomMetaData, RoomType roomType, Vector2Int gridCoords, bool isRoomMirrored = false, BiomeType biomeOverride = BiomeType.None)
 	{
 		GridPointManager gridPointManager = new GridPointManager(CreateTunnelRooms_BuildStage.GetNextRoomNumber(biomeController), gridCoords, biomeController.Biome, roomType, roomMetaData, isRoomMirrored, true);
@@ -384,7 +384,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		return gridPointManager;
 	}
 
-	// Token: 0x06003B52 RID: 15186 RVA: 0x000CC13C File Offset: 0x000CA33C
+	// Token: 0x06005325 RID: 21285 RVA: 0x0002D3A7 File Offset: 0x0002B5A7
 	private static IEnumerator CreateSpecialRoomDestination(BiomeController biomeController, Tunnel tunnelToLobby, GridPointManager lobby, GridPointManager room, int roomSeed)
 	{
 		Room lobbyInstance = InstantiateRooms_BuildStage.CreateRoomInstance(biomeController, lobby);
@@ -444,7 +444,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		yield break;
 	}
 
-	// Token: 0x06003B53 RID: 15187 RVA: 0x000CC160 File Offset: 0x000CA360
+	// Token: 0x06005326 RID: 21286 RVA: 0x0013B07C File Offset: 0x0013927C
 	private static void InitializeDestinationRoom(BiomeController biomeController, TunnelSpawnController tunnelSpawnController, Room destination, Vector2Int gridCoords)
 	{
 		GridPointManager gridPointManager = CreateTunnelRooms_BuildStage.CreateGridPointManager(biomeController, tunnelSpawnController.RoomMetaData, tunnelSpawnController.LeadsToRoomType, gridCoords, false, BiomeType.None);
@@ -471,7 +471,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		}
 	}
 
-	// Token: 0x06003B54 RID: 15188 RVA: 0x000CC220 File Offset: 0x000CA420
+	// Token: 0x06005327 RID: 21287 RVA: 0x0013B13C File Offset: 0x0013933C
 	private static int GetRoomSeed(BaseRoom room)
 	{
 		int roomSeed;
@@ -486,7 +486,7 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		return roomSeed;
 	}
 
-	// Token: 0x06003B55 RID: 15189 RVA: 0x000CC260 File Offset: 0x000CA460
+	// Token: 0x06005328 RID: 21288 RVA: 0x0013B17C File Offset: 0x0013937C
 	private static void RunSpawnLogicOnRoom(Room room)
 	{
 		for (int i = room.Doors.Count - 1; i >= 0; i--)
@@ -509,24 +509,24 @@ public class CreateTunnelRooms_BuildStage : IBiomeBuildStage
 		}
 	}
 
-	// Token: 0x04002D0A RID: 11530
+	// Token: 0x04003E4A RID: 15946
 	private static Vector2Int DESTINATION_GRID_COORDINATES = new Vector2Int(-50, 50);
 
-	// Token: 0x04002D0B RID: 11531
+	// Token: 0x04003E4B RID: 15947
 	private const string SPECIAL_ROOM_LOBBY_PATH = "Scriptable Objects/Room Meta Data/Levels Linker/Levels Linker_28_RoomMetaData";
 
-	// Token: 0x04002D0C RID: 11532
+	// Token: 0x04003E4C RID: 15948
 	public static EventHandler<RoomEventArgs> RoomCreatedEvent;
 
-	// Token: 0x04002D0D RID: 11533
+	// Token: 0x04003E4D RID: 15949
 	private static RoomEventArgs m_roomCreatedEventArgs;
 
-	// Token: 0x04002D0E RID: 11534
+	// Token: 0x04003E4E RID: 15950
 	private static List<RoomID> m_destinationRooms = new List<RoomID>();
 
-	// Token: 0x04002D0F RID: 11535
+	// Token: 0x04003E4F RID: 15951
 	private static Dictionary<Tunnel, List<Room>> m_rootToRoomsTable = new Dictionary<Tunnel, List<Room>>();
 
-	// Token: 0x04002D10 RID: 11536
+	// Token: 0x04003E50 RID: 15952
 	private static RoomMetaData m_lobbyMetaData = null;
 }

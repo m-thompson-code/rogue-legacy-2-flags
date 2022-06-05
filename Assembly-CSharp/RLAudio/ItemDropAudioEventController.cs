@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008F2 RID: 2290
+	// Token: 0x02000E69 RID: 3689
 	public class ItemDropAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001857 RID: 6231
-		// (get) Token: 0x06004B42 RID: 19266 RVA: 0x0010EBCD File Offset: 0x0010CDCD
+		// Token: 0x17002144 RID: 8516
+		// (get) Token: 0x06006819 RID: 26649 RVA: 0x0003992E File Offset: 0x00037B2E
 		public string Description
 		{
 			get
@@ -21,7 +21,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B43 RID: 19267 RVA: 0x0010EBF0 File Offset: 0x0010CDF0
+		// Token: 0x0600681A RID: 26650 RVA: 0x0017EE34 File Offset: 0x0017D034
 		private void Awake()
 		{
 			this.m_itemDrop = base.GetComponent<BaseItemDrop>();
@@ -36,7 +36,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B44 RID: 19268 RVA: 0x0010EC70 File Offset: 0x0010CE70
+		// Token: 0x0600681B RID: 26651 RVA: 0x0017EEB4 File Offset: 0x0017D0B4
 		private void OnDestroy()
 		{
 			if (this.m_itemDrop != null)
@@ -49,7 +49,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B45 RID: 19269 RVA: 0x0010ECD4 File Offset: 0x0010CED4
+		// Token: 0x0600681C RID: 26652 RVA: 0x0017EF18 File Offset: 0x0017D118
 		private void OnItemLanded(CorgiController_RL controller)
 		{
 			if (this.m_itemDrop != null)
@@ -59,7 +59,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B46 RID: 19270 RVA: 0x0010ED0C File Offset: 0x0010CF0C
+		// Token: 0x0600681D RID: 26653 RVA: 0x0017EF50 File Offset: 0x0017D150
 		private void OnItemCollected()
 		{
 			if (this.m_itemDrop != null)
@@ -69,7 +69,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B47 RID: 19271 RVA: 0x0010ED44 File Offset: 0x0010CF44
+		// Token: 0x0600681E RID: 26654 RVA: 0x0017EF88 File Offset: 0x0017D188
 		private void PlayAudio(string audioPath)
 		{
 			try
@@ -87,13 +87,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003F4B RID: 16203
+		// Token: 0x0400548F RID: 21647
 		private BaseItemDrop m_itemDrop;
 
-		// Token: 0x04003F4C RID: 16204
+		// Token: 0x04005490 RID: 21648
 		private CorgiController_RL m_corgiController;
 
-		// Token: 0x04003F4D RID: 16205
+		// Token: 0x04005491 RID: 21649
 		private string m_description = string.Empty;
 	}
 }

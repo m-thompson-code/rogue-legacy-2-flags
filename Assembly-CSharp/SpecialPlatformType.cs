@@ -1,32 +1,32 @@
 ﻿using System;
 
-// Token: 0x02000250 RID: 592
+// Token: 0x0200040D RID: 1037
 public enum SpecialPlatformType
 {
-	// Token: 0x040016F7 RID: 5879
+	// Token: 0x04001E0F RID: 7695
 	BiomeSpecific,
-	// Token: 0x040016F8 RID: 5880
+	// Token: 0x04001E10 RID: 7696
 	AlternateJump = 10,
-	// Token: 0x040016F9 RID: 5881
+	// Token: 0x04001E11 RID: 7697
 	Bounce = 30,
-	// Token: 0x040016FA RID: 5882
+	// Token: 0x04001E12 RID: 7698
 	Crumble = 50,
-	// Token: 0x040016FB RID: 5883
+	// Token: 0x04001E13 RID: 7699
 	SuperBounce = 70,
-	// Token: 0x040016FC RID: 5884
+	// Token: 0x04001E14 RID: 7700
 	OnHitExtend = 90,
-	// Token: 0x040016FD RID: 5885
+	// Token: 0x04001E15 RID: 7701
 	TimedCrumble = 110,
-	// Token: 0x040016FE RID: 5886
+	// Token: 0x04001E16 RID: 7702
 	Elevator = 130,
-	// Token: 0x040016FF RID: 5887
+	// Token: 0x04001E17 RID: 7703
 	Ice = 150,
-	// Token: 0x04001700 RID: 5888
+	// Token: 0x04001E18 RID: 7704
 	TriggerSwitch = 170,
-	// Token: 0x04001701 RID: 5889
+	// Token: 0x04001E19 RID: 7705
 	Magic = 190,
-	// Token: 0x04001702 RID: 5890
+	// Token: 0x04001E1A RID: 7706
 	DashBounce = 200,
-	// Token: 0x04001703 RID: 5891
+	// Token: 0x04001E1B RID: 7707
 	SegmentedBreakable = 210
 }

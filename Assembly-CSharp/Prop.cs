@@ -2,41 +2,41 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000629 RID: 1577
+// Token: 0x02000A55 RID: 2645
 public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 {
-	// Token: 0x1700140A RID: 5130
-	// (get) Token: 0x060038DD RID: 14557 RVA: 0x000C2018 File Offset: 0x000C0218
-	// (set) Token: 0x060038DE RID: 14558 RVA: 0x000C2020 File Offset: 0x000C0220
+	// Token: 0x17001B6F RID: 7023
+	// (get) Token: 0x06004FB6 RID: 20406 RVA: 0x0002B815 File Offset: 0x00029A15
+	// (set) Token: 0x06004FB7 RID: 20407 RVA: 0x0002B81D File Offset: 0x00029A1D
 	public bool HitboxesDisabled { get; set; }
 
-	// Token: 0x1700140B RID: 5131
-	// (get) Token: 0x060038DF RID: 14559 RVA: 0x000C2029 File Offset: 0x000C0229
-	// (set) Token: 0x060038E0 RID: 14560 RVA: 0x000C2031 File Offset: 0x000C0231
+	// Token: 0x17001B70 RID: 7024
+	// (get) Token: 0x06004FB8 RID: 20408 RVA: 0x0002B826 File Offset: 0x00029A26
+	// (set) Token: 0x06004FB9 RID: 20409 RVA: 0x0002B82E File Offset: 0x00029A2E
 	public bool IsCulled { get; set; }
 
-	// Token: 0x1700140C RID: 5132
-	// (get) Token: 0x060038E1 RID: 14561 RVA: 0x000C203A File Offset: 0x000C023A
-	// (set) Token: 0x060038E2 RID: 14562 RVA: 0x000C2042 File Offset: 0x000C0242
+	// Token: 0x17001B71 RID: 7025
+	// (get) Token: 0x06004FBA RID: 20410 RVA: 0x0002B837 File Offset: 0x00029A37
+	// (set) Token: 0x06004FBB RID: 20411 RVA: 0x0002B83F File Offset: 0x00029A3F
 	public IRoomConsumer[] RoomConsumers { get; private set; }
 
-	// Token: 0x1700140D RID: 5133
-	// (get) Token: 0x060038E3 RID: 14563 RVA: 0x000C204B File Offset: 0x000C024B
-	// (set) Token: 0x060038E4 RID: 14564 RVA: 0x000C2053 File Offset: 0x000C0253
+	// Token: 0x17001B72 RID: 7026
+	// (get) Token: 0x06004FBC RID: 20412 RVA: 0x0002B848 File Offset: 0x00029A48
+	// (set) Token: 0x06004FBD RID: 20413 RVA: 0x0002B850 File Offset: 0x00029A50
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x1700140E RID: 5134
-	// (get) Token: 0x060038E5 RID: 14565 RVA: 0x000C205C File Offset: 0x000C025C
-	// (set) Token: 0x060038E6 RID: 14566 RVA: 0x000C2064 File Offset: 0x000C0264
+	// Token: 0x17001B73 RID: 7027
+	// (get) Token: 0x06004FBE RID: 20414 RVA: 0x0002B859 File Offset: 0x00029A59
+	// (set) Token: 0x06004FBF RID: 20415 RVA: 0x0002B861 File Offset: 0x00029A61
 	public bool IsAwakeCalled { get; protected set; }
 
-	// Token: 0x1700140F RID: 5135
-	// (get) Token: 0x060038E7 RID: 14567 RVA: 0x000C206D File Offset: 0x000C026D
-	// (set) Token: 0x060038E8 RID: 14568 RVA: 0x000C2075 File Offset: 0x000C0275
+	// Token: 0x17001B74 RID: 7028
+	// (get) Token: 0x06004FC0 RID: 20416 RVA: 0x0002B86A File Offset: 0x00029A6A
+	// (set) Token: 0x06004FC1 RID: 20417 RVA: 0x0002B872 File Offset: 0x00029A72
 	public Light[] Lights { get; private set; }
 
-	// Token: 0x17001410 RID: 5136
-	// (get) Token: 0x060038E9 RID: 14569 RVA: 0x000C207E File Offset: 0x000C027E
+	// Token: 0x17001B75 RID: 7029
+	// (get) Token: 0x06004FC2 RID: 20418 RVA: 0x0002B87B File Offset: 0x00029A7B
 	public CorgiController_RL CorgiController
 	{
 		get
@@ -45,38 +45,38 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		}
 	}
 
-	// Token: 0x17001411 RID: 5137
-	// (get) Token: 0x060038EA RID: 14570 RVA: 0x000C2086 File Offset: 0x000C0286
-	// (set) Token: 0x060038EB RID: 14571 RVA: 0x000C208E File Offset: 0x000C028E
+	// Token: 0x17001B76 RID: 7030
+	// (get) Token: 0x06004FC3 RID: 20419 RVA: 0x0002B883 File Offset: 0x00029A83
+	// (set) Token: 0x06004FC4 RID: 20420 RVA: 0x0002B88B File Offset: 0x00029A8B
 	public Breakable Breakable { get; private set; }
 
-	// Token: 0x17001412 RID: 5138
-	// (get) Token: 0x060038EC RID: 14572 RVA: 0x000C2097 File Offset: 0x000C0297
-	// (set) Token: 0x060038ED RID: 14573 RVA: 0x000C209F File Offset: 0x000C029F
+	// Token: 0x17001B77 RID: 7031
+	// (get) Token: 0x06004FC5 RID: 20421 RVA: 0x0002B894 File Offset: 0x00029A94
+	// (set) Token: 0x06004FC6 RID: 20422 RVA: 0x0002B89C File Offset: 0x00029A9C
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17001413 RID: 5139
-	// (get) Token: 0x060038EE RID: 14574 RVA: 0x000C20A8 File Offset: 0x000C02A8
-	// (set) Token: 0x060038EF RID: 14575 RVA: 0x000C20B0 File Offset: 0x000C02B0
+	// Token: 0x17001B78 RID: 7032
+	// (get) Token: 0x06004FC7 RID: 20423 RVA: 0x0002B8A5 File Offset: 0x00029AA5
+	// (set) Token: 0x06004FC8 RID: 20424 RVA: 0x0002B8AD File Offset: 0x00029AAD
 	public DecoController[] DecoControllers { get; private set; }
 
-	// Token: 0x17001414 RID: 5140
-	// (get) Token: 0x060038F0 RID: 14576 RVA: 0x000C20B9 File Offset: 0x000C02B9
-	// (set) Token: 0x060038F1 RID: 14577 RVA: 0x000C20C1 File Offset: 0x000C02C1
+	// Token: 0x17001B79 RID: 7033
+	// (get) Token: 0x06004FC9 RID: 20425 RVA: 0x0002B8B6 File Offset: 0x00029AB6
+	// (set) Token: 0x06004FCA RID: 20426 RVA: 0x0002B8BE File Offset: 0x00029ABE
 	public PropSpawnController PropSpawnController { get; private set; }
 
-	// Token: 0x17001415 RID: 5141
-	// (get) Token: 0x060038F2 RID: 14578 RVA: 0x000C20CA File Offset: 0x000C02CA
-	// (set) Token: 0x060038F3 RID: 14579 RVA: 0x000C20D2 File Offset: 0x000C02D2
+	// Token: 0x17001B7A RID: 7034
+	// (get) Token: 0x06004FCB RID: 20427 RVA: 0x0002B8C7 File Offset: 0x00029AC7
+	// (set) Token: 0x06004FCC RID: 20428 RVA: 0x0002B8CF File Offset: 0x00029ACF
 	public ICameraLayerController CameraLayerController { get; private set; }
 
-	// Token: 0x17001416 RID: 5142
-	// (get) Token: 0x060038F4 RID: 14580 RVA: 0x000C20DB File Offset: 0x000C02DB
-	// (set) Token: 0x060038F5 RID: 14581 RVA: 0x000C20E3 File Offset: 0x000C02E3
+	// Token: 0x17001B7B RID: 7035
+	// (get) Token: 0x06004FCD RID: 20429 RVA: 0x0002B8D8 File Offset: 0x00029AD8
+	// (set) Token: 0x06004FCE RID: 20430 RVA: 0x0002B8E0 File Offset: 0x00029AE0
 	public IHitboxController HitboxController { get; private set; }
 
-	// Token: 0x17001417 RID: 5143
-	// (get) Token: 0x060038F6 RID: 14582 RVA: 0x000C20EC File Offset: 0x000C02EC
+	// Token: 0x17001B7C RID: 7036
+	// (get) Token: 0x06004FCF RID: 20431 RVA: 0x0002B8E9 File Offset: 0x00029AE9
 	public GameObject Pivot
 	{
 		get
@@ -85,17 +85,17 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		}
 	}
 
-	// Token: 0x17001418 RID: 5144
-	// (get) Token: 0x060038F7 RID: 14583 RVA: 0x000C20F4 File Offset: 0x000C02F4
-	// (set) Token: 0x060038F8 RID: 14584 RVA: 0x000C20FC File Offset: 0x000C02FC
+	// Token: 0x17001B7D RID: 7037
+	// (get) Token: 0x06004FD0 RID: 20432 RVA: 0x0002B8F1 File Offset: 0x00029AF1
+	// (set) Token: 0x06004FD1 RID: 20433 RVA: 0x0002B8F9 File Offset: 0x00029AF9
 	public Animator[] Animators { get; private set; }
 
-	// Token: 0x17001419 RID: 5145
-	// (get) Token: 0x060038F9 RID: 14585 RVA: 0x000C2105 File Offset: 0x000C0305
-	// (set) Token: 0x060038FA RID: 14586 RVA: 0x000C210D File Offset: 0x000C030D
+	// Token: 0x17001B7E RID: 7038
+	// (get) Token: 0x06004FD2 RID: 20434 RVA: 0x0002B902 File Offset: 0x00029B02
+	// (set) Token: 0x06004FD3 RID: 20435 RVA: 0x0002B90A File Offset: 0x00029B0A
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x060038FB RID: 14587 RVA: 0x000C2118 File Offset: 0x000C0318
+	// Token: 0x06004FD4 RID: 20436 RVA: 0x00130B74 File Offset: 0x0012ED74
 	private void Awake()
 	{
 		this.m_renderers = base.GetComponentsInChildren<Renderer>(true);
@@ -126,7 +126,7 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		this.IsAwakeCalled = true;
 	}
 
-	// Token: 0x060038FC RID: 14588 RVA: 0x000C224B File Offset: 0x000C044B
+	// Token: 0x06004FD5 RID: 20437 RVA: 0x0002B913 File Offset: 0x00029B13
 	private void OnValidate()
 	{
 		if (base.gameObject.tag != "Prop")
@@ -135,7 +135,7 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		}
 	}
 
-	// Token: 0x060038FD RID: 14589 RVA: 0x000C2274 File Offset: 0x000C0474
+	// Token: 0x06004FD6 RID: 20438 RVA: 0x00130CA8 File Offset: 0x0012EEA8
 	public virtual void Initialize(BaseRoom room, PropSpawnController propSpawnController)
 	{
 		this.SetRoom(room);
@@ -242,13 +242,13 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x060038FE RID: 14590 RVA: 0x000C25E7 File Offset: 0x000C07E7
+	// Token: 0x06004FD7 RID: 20439 RVA: 0x0002B93C File Offset: 0x00029B3C
 	protected virtual void ResizeSlicedOrTiledSpriteRenderer(SpriteRenderer spriteRenderer, Vector2 newSize)
 	{
 		spriteRenderer.size = newSize;
 	}
 
-	// Token: 0x060038FF RID: 14591 RVA: 0x000C25F0 File Offset: 0x000C07F0
+	// Token: 0x06004FD8 RID: 20440 RVA: 0x0013101C File Offset: 0x0012F21C
 	private void MaintainUniformScale(Transform propTransform)
 	{
 		Vector3 localScale = propTransform.localScale;
@@ -275,7 +275,7 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		propTransform.localScale = localScale;
 	}
 
-	// Token: 0x06003900 RID: 14592 RVA: 0x000C2694 File Offset: 0x000C0894
+	// Token: 0x06004FD9 RID: 20441 RVA: 0x001310C0 File Offset: 0x0012F2C0
 	private void PerformRaycastReposition(Vector3 spawnPos)
 	{
 		Vector2 vector = spawnPos;
@@ -297,7 +297,7 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		}
 	}
 
-	// Token: 0x06003901 RID: 14593 RVA: 0x000C2798 File Offset: 0x000C0998
+	// Token: 0x06004FDA RID: 20442 RVA: 0x0002B945 File Offset: 0x00029B45
 	private IEnumerator ResetCorgiControllerRayParameters(Vector3 spawnPos)
 	{
 		while (!this.m_corgiController.IsInitialized)
@@ -310,7 +310,7 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		yield break;
 	}
 
-	// Token: 0x06003902 RID: 14594 RVA: 0x000C27A8 File Offset: 0x000C09A8
+	// Token: 0x06004FDB RID: 20443 RVA: 0x001311C4 File Offset: 0x0012F3C4
 	public virtual void Mirror()
 	{
 		this.m_isMirrored = true;
@@ -329,13 +329,13 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		}
 	}
 
-	// Token: 0x06003903 RID: 14595 RVA: 0x000C283A File Offset: 0x000C0A3A
+	// Token: 0x06004FDC RID: 20444 RVA: 0x0002B954 File Offset: 0x00029B54
 	public void SetRoom(BaseRoom value)
 	{
 		this.Room = value;
 	}
 
-	// Token: 0x06003904 RID: 14596 RVA: 0x000C2844 File Offset: 0x000C0A44
+	// Token: 0x06004FDD RID: 20445 RVA: 0x00131258 File Offset: 0x0012F458
 	public void ResetValues()
 	{
 		if (this.m_corgiController)
@@ -363,13 +363,13 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		}
 	}
 
-	// Token: 0x06003905 RID: 14597 RVA: 0x000C2930 File Offset: 0x000C0B30
+	// Token: 0x06004FDE RID: 20446 RVA: 0x0002B95D File Offset: 0x00029B5D
 	public void ResetInitialization()
 	{
 		this.IsInitialized = false;
 	}
 
-	// Token: 0x06003906 RID: 14598 RVA: 0x000C2939 File Offset: 0x000C0B39
+	// Token: 0x06004FDF RID: 20447 RVA: 0x0002B966 File Offset: 0x00029B66
 	private void OnDisable()
 	{
 		if (this.m_animator)
@@ -379,52 +379,52 @@ public class Prop : MonoBehaviour, IGenericPoolObj, IMirror, IPivotObj
 		this.IsFreePoolObj = true;
 	}
 
-	// Token: 0x06003908 RID: 14600 RVA: 0x000C2969 File Offset: 0x000C0B69
+	// Token: 0x06004FE1 RID: 20449 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002BE1 RID: 11233
+	// Token: 0x04003C70 RID: 15472
 	[SerializeField]
 	private bool m_verticalTuck;
 
-	// Token: 0x04002BE2 RID: 11234
+	// Token: 0x04003C71 RID: 15473
 	[SerializeField]
 	private bool m_flipWhenMirrored = true;
 
-	// Token: 0x04002BE3 RID: 11235
+	// Token: 0x04003C72 RID: 15474
 	[SerializeField]
 	private bool m_maintainUniformScale;
 
-	// Token: 0x04002BE4 RID: 11236
+	// Token: 0x04003C73 RID: 15475
 	[SerializeField]
 	private GameObject m_pivot;
 
-	// Token: 0x04002BE5 RID: 11237
+	// Token: 0x04003C74 RID: 15476
 	private CorgiController_RL m_corgiController;
 
-	// Token: 0x04002BE6 RID: 11238
+	// Token: 0x04003C75 RID: 15477
 	private Renderer[] m_renderers;
 
-	// Token: 0x04002BE7 RID: 11239
+	// Token: 0x04003C76 RID: 15478
 	private PointLightController[] m_lightControllers;
 
-	// Token: 0x04002BE8 RID: 11240
+	// Token: 0x04003C77 RID: 15479
 	private bool m_isMirrored;
 
-	// Token: 0x04002BE9 RID: 11241
+	// Token: 0x04003C78 RID: 15480
 	private Animator m_animator;
 
-	// Token: 0x04002BEA RID: 11242
+	// Token: 0x04003C79 RID: 15481
 	private Material[] m_materials;
 
-	// Token: 0x04002BEB RID: 11243
+	// Token: 0x04003C7A RID: 15482
 	private bool m_hasNPCController;
 
-	// Token: 0x04002BEC RID: 11244
+	// Token: 0x04003C7B RID: 15483
 	private bool m_hasForegroundSwapper;
 
-	// Token: 0x04002BED RID: 11245
+	// Token: 0x04003C7C RID: 15484
 	private bool m_isOnForeground;
 }

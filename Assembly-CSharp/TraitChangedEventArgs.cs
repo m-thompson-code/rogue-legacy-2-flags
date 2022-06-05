@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020007D3 RID: 2003
+// Token: 0x02000C99 RID: 3225
 public class TraitChangedEventArgs : EventArgs
 {
-	// Token: 0x06004306 RID: 17158 RVA: 0x000EC357 File Offset: 0x000EA557
+	// Token: 0x06005C8F RID: 23695 RVA: 0x00032D6D File Offset: 0x00030F6D
 	public TraitChangedEventArgs(TraitType traitOne, TraitType traitTwo)
 	{
 		this.Initialize(traitOne, traitTwo);
 	}
 
-	// Token: 0x06004307 RID: 17159 RVA: 0x000EC367 File Offset: 0x000EA567
+	// Token: 0x06005C90 RID: 23696 RVA: 0x00032D7D File Offset: 0x00030F7D
 	public void Initialize(TraitType traitOne, TraitType traitTwo)
 	{
 		this.TraitOne = traitOne;
 		this.TraitTwo = traitTwo;
 	}
 
-	// Token: 0x170016B2 RID: 5810
-	// (get) Token: 0x06004308 RID: 17160 RVA: 0x000EC377 File Offset: 0x000EA577
-	// (set) Token: 0x06004309 RID: 17161 RVA: 0x000EC37F File Offset: 0x000EA57F
+	// Token: 0x17001EB0 RID: 7856
+	// (get) Token: 0x06005C91 RID: 23697 RVA: 0x00032D8D File Offset: 0x00030F8D
+	// (set) Token: 0x06005C92 RID: 23698 RVA: 0x00032D95 File Offset: 0x00030F95
 	public TraitType TraitOne { get; private set; }
 
-	// Token: 0x170016B3 RID: 5811
-	// (get) Token: 0x0600430A RID: 17162 RVA: 0x000EC388 File Offset: 0x000EA588
-	// (set) Token: 0x0600430B RID: 17163 RVA: 0x000EC390 File Offset: 0x000EA590
+	// Token: 0x17001EB1 RID: 7857
+	// (get) Token: 0x06005C93 RID: 23699 RVA: 0x00032D9E File Offset: 0x00030F9E
+	// (set) Token: 0x06005C94 RID: 23700 RVA: 0x00032DA6 File Offset: 0x00030FA6
 	public TraitType TraitTwo { get; private set; }
 }

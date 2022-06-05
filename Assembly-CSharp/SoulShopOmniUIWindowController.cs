@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200058B RID: 1419
+// Token: 0x02000983 RID: 2435
 public class SoulShopOmniUIWindowController : BaseOmniUIWindowController<BaseOmniUICategoryEntry, SoulShopOmniUIEntry>
 {
-	// Token: 0x170012D9 RID: 4825
-	// (get) Token: 0x06003521 RID: 13601 RVA: 0x000B733D File Offset: 0x000B553D
+	// Token: 0x170019EA RID: 6634
+	// (get) Token: 0x06004ADE RID: 19166 RVA: 0x00028FEC File Offset: 0x000271EC
 	public SoulShopType SelectedSoulShopType
 	{
 		get
@@ -13,8 +13,8 @@ public class SoulShopOmniUIWindowController : BaseOmniUIWindowController<BaseOmn
 		}
 	}
 
-	// Token: 0x170012DA RID: 4826
-	// (get) Token: 0x06003522 RID: 13602 RVA: 0x000B7351 File Offset: 0x000B5551
+	// Token: 0x170019EB RID: 6635
+	// (get) Token: 0x06004ADF RID: 19167 RVA: 0x00029000 File Offset: 0x00027200
 	public override WindowID ID
 	{
 		get
@@ -23,12 +23,12 @@ public class SoulShopOmniUIWindowController : BaseOmniUIWindowController<BaseOmn
 		}
 	}
 
-	// Token: 0x06003523 RID: 13603 RVA: 0x000B7355 File Offset: 0x000B5555
+	// Token: 0x06004AE0 RID: 19168 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void CreateCategoryEntries()
 	{
 	}
 
-	// Token: 0x06003524 RID: 13604 RVA: 0x000B7358 File Offset: 0x000B5558
+	// Token: 0x06004AE1 RID: 19169 RVA: 0x00123CFC File Offset: 0x00121EFC
 	protected override void CreateEntries()
 	{
 		if (base.EntryArray != null)
@@ -46,7 +46,7 @@ public class SoulShopOmniUIWindowController : BaseOmniUIWindowController<BaseOmn
 		}
 	}
 
-	// Token: 0x06003525 RID: 13605 RVA: 0x000B73CC File Offset: 0x000B55CC
+	// Token: 0x06004AE2 RID: 19170 RVA: 0x00123D70 File Offset: 0x00121F70
 	protected override void OnOpen()
 	{
 		if (SoulShopOmniUIIncrementResourceButton.OreTransferAmount > SaveManager.PlayerSaveData.EquipmentOreCollected)
@@ -67,7 +67,7 @@ public class SoulShopOmniUIWindowController : BaseOmniUIWindowController<BaseOmn
 		base.OnOpen();
 	}
 
-	// Token: 0x06003526 RID: 13606 RVA: 0x000B7444 File Offset: 0x000B5644
+	// Token: 0x06004AE3 RID: 19171 RVA: 0x00029004 File Offset: 0x00027204
 	protected override void OnClose()
 	{
 		base.OnClose();

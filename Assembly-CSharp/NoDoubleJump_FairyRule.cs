@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200043E RID: 1086
+// Token: 0x02000707 RID: 1799
 public class NoDoubleJump_FairyRule : FairyRule
 {
-	// Token: 0x17000FB6 RID: 4022
-	// (get) Token: 0x060027DD RID: 10205 RVA: 0x00084634 File Offset: 0x00082834
+	// Token: 0x17001499 RID: 5273
+	// (get) Token: 0x060036EF RID: 14063 RVA: 0x0001E391 File Offset: 0x0001C591
 	public override string Description
 	{
 		get
@@ -14,8 +14,8 @@ public class NoDoubleJump_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FB7 RID: 4023
-	// (get) Token: 0x060027DE RID: 10206 RVA: 0x0008463B File Offset: 0x0008283B
+	// Token: 0x1700149A RID: 5274
+	// (get) Token: 0x060036F0 RID: 14064 RVA: 0x000081DE File Offset: 0x000063DE
 	public override FairyRuleID ID
 	{
 		get
@@ -24,8 +24,8 @@ public class NoDoubleJump_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FB8 RID: 4024
-	// (get) Token: 0x060027DF RID: 10207 RVA: 0x0008463F File Offset: 0x0008283F
+	// Token: 0x1700149B RID: 5275
+	// (get) Token: 0x060036F1 RID: 14065 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool LockChestAtStart
 	{
 		get
@@ -34,26 +34,26 @@ public class NoDoubleJump_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027E0 RID: 10208 RVA: 0x00084642 File Offset: 0x00082842
+	// Token: 0x060036F2 RID: 14066 RVA: 0x0001E398 File Offset: 0x0001C598
 	private void Awake()
 	{
 		this.m_onPlayerDoubleJump = new Action<MonoBehaviour, EventArgs>(this.OnPlayerDoubleJump);
 	}
 
-	// Token: 0x060027E1 RID: 10209 RVA: 0x00084656 File Offset: 0x00082856
+	// Token: 0x060036F3 RID: 14067 RVA: 0x0001DFA6 File Offset: 0x0001C1A6
 	private void OnPlayerDoubleJump(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		base.SetIsFailed();
 	}
 
-	// Token: 0x060027E2 RID: 10210 RVA: 0x0008465E File Offset: 0x0008285E
+	// Token: 0x060036F4 RID: 14068 RVA: 0x0001E3AC File Offset: 0x0001C5AC
 	public override void RunRule(FairyRoomController fairyRoomController)
 	{
 		this.m_isListeningForDoubleJumpEvent = true;
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerDoubleJump, this.m_onPlayerDoubleJump);
 	}
 
-	// Token: 0x060027E3 RID: 10211 RVA: 0x00084674 File Offset: 0x00082874
+	// Token: 0x060036F5 RID: 14069 RVA: 0x0001E3C2 File Offset: 0x0001C5C2
 	public override void StopRule()
 	{
 		base.StopRule();
@@ -64,9 +64,9 @@ public class NoDoubleJump_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x0400213A RID: 8506
+	// Token: 0x04002C6B RID: 11371
 	private Action<MonoBehaviour, EventArgs> m_onPlayerDoubleJump;
 
-	// Token: 0x0400213B RID: 8507
+	// Token: 0x04002C6C RID: 11372
 	private bool m_isListeningForDoubleJumpEvent;
 }

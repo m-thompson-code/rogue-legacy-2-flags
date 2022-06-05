@@ -4,11 +4,11 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020002AB RID: 683
+// Token: 0x0200048C RID: 1164
 public class PlayerHitResponse : BaseCharacterHitResponse
 {
-	// Token: 0x17000C73 RID: 3187
-	// (get) Token: 0x06001B40 RID: 6976 RVA: 0x0005643A File Offset: 0x0005463A
+	// Token: 0x17000FDA RID: 4058
+	// (get) Token: 0x060025A0 RID: 9632 RVA: 0x00014E73 File Offset: 0x00013073
 	public override bool TakesDamageWhileStunned
 	{
 		get
@@ -17,8 +17,8 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		}
 	}
 
-	// Token: 0x17000C74 RID: 3188
-	// (get) Token: 0x06001B41 RID: 6977 RVA: 0x00056450 File Offset: 0x00054650
+	// Token: 0x17000FDB RID: 4059
+	// (get) Token: 0x060025A1 RID: 9633 RVA: 0x00014E89 File Offset: 0x00013089
 	public override bool TriggerInvincibilityAfterStun
 	{
 		get
@@ -27,8 +27,8 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		}
 	}
 
-	// Token: 0x17000C75 RID: 3189
-	// (get) Token: 0x06001B42 RID: 6978 RVA: 0x00056466 File Offset: 0x00054666
+	// Token: 0x17000FDC RID: 4060
+	// (get) Token: 0x060025A2 RID: 9634 RVA: 0x00014E9F File Offset: 0x0001309F
 	public override bool IsInvincible
 	{
 		get
@@ -37,8 +37,8 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		}
 	}
 
-	// Token: 0x17000C76 RID: 3190
-	// (get) Token: 0x06001B43 RID: 6979 RVA: 0x0005647C File Offset: 0x0005467C
+	// Token: 0x17000FDD RID: 4061
+	// (get) Token: 0x060025A3 RID: 9635 RVA: 0x00014EB5 File Offset: 0x000130B5
 	public bool CanRecoverFromStun
 	{
 		get
@@ -47,7 +47,7 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		}
 	}
 
-	// Token: 0x06001B44 RID: 6980 RVA: 0x00056491 File Offset: 0x00054691
+	// Token: 0x060025A4 RID: 9636 RVA: 0x00014ECA File Offset: 0x000130CA
 	protected override void Awake()
 	{
 		base.Awake();
@@ -56,7 +56,7 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		this.m_challengeDeathYield = new WaitRL_Yield(1.5f, true);
 	}
 
-	// Token: 0x06001B45 RID: 6981 RVA: 0x000564C8 File Offset: 0x000546C8
+	// Token: 0x060025A5 RID: 9637 RVA: 0x000B2A58 File Offset: 0x000B0C58
 	public override void StartHitResponse(GameObject otherRootGameObj, IDamageObj damageObj, float damageOverride = -1f, bool trueDamage = false, bool fireEvents = true)
 	{
 		if (this.m_playerController.IsSpearSpinning)
@@ -70,7 +70,7 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		base.StartHitResponse(otherRootGameObj, damageObj, damageOverride, trueDamage, fireEvents);
 	}
 
-	// Token: 0x06001B46 RID: 6982 RVA: 0x00056518 File Offset: 0x00054718
+	// Token: 0x060025A6 RID: 9638 RVA: 0x000B2AA8 File Offset: 0x000B0CA8
 	protected override void HandleHitResponse(IHitboxController otherHBController)
 	{
 		if (this.m_playerController.CharacterDownStrike.IsTriggeringBounce)
@@ -115,7 +115,7 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		base.HandleHitResponse(otherHBController);
 	}
 
-	// Token: 0x06001B47 RID: 6983 RVA: 0x0005668C File Offset: 0x0005488C
+	// Token: 0x060025A7 RID: 9639 RVA: 0x000B2C1C File Offset: 0x000B0E1C
 	protected override float CharacterDamaged(IDamageObj damageObj, GameObject otherRootObj, out CriticalStrikeType critType, out float damageBlocked, float damageOverride = -1f, bool trueDamage = false)
 	{
 		this.m_blinkOnHit = true;
@@ -344,7 +344,7 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		return num;
 	}
 
-	// Token: 0x06001B48 RID: 6984 RVA: 0x00056E58 File Offset: 0x00055058
+	// Token: 0x060025A8 RID: 9640 RVA: 0x00014F00 File Offset: 0x00013100
 	protected override void CharacterStunned(IDamageObj damageObj, GameObject otherRootObj)
 	{
 		this.m_playerController.StopActiveAbilities(false);
@@ -356,7 +356,7 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		}
 	}
 
-	// Token: 0x06001B49 RID: 6985 RVA: 0x00056E94 File Offset: 0x00055094
+	// Token: 0x060025A9 RID: 9641 RVA: 0x000B33E8 File Offset: 0x000B15E8
 	protected override void CharacterKnockedBack(IDamageObj damageObj, GameObject otherRootObj)
 	{
 		if (this.m_playerController.CurrentlyInRoom != null)
@@ -406,7 +406,7 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		}
 	}
 
-	// Token: 0x06001B4A RID: 6986 RVA: 0x00056FF4 File Offset: 0x000551F4
+	// Token: 0x060025AA RID: 9642 RVA: 0x000B3548 File Offset: 0x000B1748
 	protected override void CharacterKilled(IDamageObj damageObj, GameObject otherRootObj)
 	{
 		DeathDefiedType deathDefiedType = SkillTreeLogicHelper.IsDeathDefied();
@@ -465,7 +465,7 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		}
 	}
 
-	// Token: 0x06001B4B RID: 6987 RVA: 0x000571E7 File Offset: 0x000553E7
+	// Token: 0x060025AB RID: 9643 RVA: 0x00014F3A File Offset: 0x0001313A
 	private IEnumerator FakeDeathTintCoroutine()
 	{
 		EffectManager.SetEffectParams("RemoveTint_Effect", new object[]
@@ -487,7 +487,7 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		yield break;
 	}
 
-	// Token: 0x06001B4C RID: 6988 RVA: 0x000571F6 File Offset: 0x000553F6
+	// Token: 0x060025AC RID: 9644 RVA: 0x00014F49 File Offset: 0x00013149
 	private IEnumerator ChallengeDeathSlowdownCoroutine()
 	{
 		RLTimeScale.SetTimeScale(TimeScaleType.Game, 0.25f);
@@ -497,15 +497,15 @@ public class PlayerHitResponse : BaseCharacterHitResponse
 		yield break;
 	}
 
-	// Token: 0x04001902 RID: 6402
+	// Token: 0x040020B1 RID: 8369
 	private PlayerController m_playerController;
 
-	// Token: 0x04001903 RID: 6403
+	// Token: 0x040020B2 RID: 8370
 	private PlayerBlockedEventArgs m_playerBlockedEventArgs;
 
-	// Token: 0x04001904 RID: 6404
+	// Token: 0x040020B3 RID: 8371
 	private float m_stunStartTime;
 
-	// Token: 0x04001905 RID: 6405
+	// Token: 0x040020B4 RID: 8372
 	private WaitRL_Yield m_challengeDeathYield;
 }

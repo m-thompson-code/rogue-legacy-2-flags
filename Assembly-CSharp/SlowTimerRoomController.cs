@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200050E RID: 1294
+// Token: 0x0200087D RID: 2173
 public class SlowTimerRoomController : BaseSpecialRoomController
 {
-	// Token: 0x0600301B RID: 12315 RVA: 0x000A49E5 File Offset: 0x000A2BE5
+	// Token: 0x060042B9 RID: 17081 RVA: 0x00024EA3 File Offset: 0x000230A3
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		GlobalTimerHUDController.SlowTime = true;
 	}
 
-	// Token: 0x0600301C RID: 12316 RVA: 0x000A49ED File Offset: 0x000A2BED
+	// Token: 0x060042BA RID: 17082 RVA: 0x00024EAB File Offset: 0x000230AB
 	protected override void OnPlayerExitRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		GlobalTimerHUDController.SlowTime = false;

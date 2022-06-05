@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200078F RID: 1935
+// Token: 0x02000C52 RID: 3154
 public static class ArtUtility
 {
-	// Token: 0x0600417A RID: 16762 RVA: 0x000E9928 File Offset: 0x000E7B28
+	// Token: 0x06005AF7 RID: 23287 RVA: 0x00158CAC File Offset: 0x00156EAC
 	public static BiomeType GetTerrainBiomeType(BaseRoom room)
 	{
 		BiomeType biomeType = room.AppearanceBiomeType;

@@ -4,17 +4,17 @@ using System.Text;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004DB RID: 1243
+// Token: 0x0200081A RID: 2074
 public class LQAEntryOverride : MonoBehaviour
 {
-	// Token: 0x06002E6C RID: 11884 RVA: 0x0009D160 File Offset: 0x0009B360
+	// Token: 0x06003FFC RID: 16380 RVA: 0x00023560 File Offset: 0x00021760
 	private void Awake()
 	{
 		LQAEntryOverride.InitializeDirectoryAndFile();
 		this.m_closeConfirmWindow = new Action(this.CloseConfirmWindow);
 	}
 
-	// Token: 0x06002E6D RID: 11885 RVA: 0x0009D17C File Offset: 0x0009B37C
+	// Token: 0x06003FFD RID: 16381 RVA: 0x001002E0 File Offset: 0x000FE4E0
 	public static void InitializeDirectoryAndFile()
 	{
 		string text = Path.Combine(Application.persistentDataPath, "CustomData");
@@ -62,7 +62,7 @@ public class LQAEntryOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002E6E RID: 11886 RVA: 0x0009D294 File Offset: 0x0009B494
+	// Token: 0x06003FFE RID: 16382 RVA: 0x001003F8 File Offset: 0x000FE5F8
 	private void LoadCustomFile()
 	{
 		this.m_dataLoadedSuccessfully = true;
@@ -189,7 +189,7 @@ public class LQAEntryOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002E6F RID: 11887 RVA: 0x0009D648 File Offset: 0x0009B848
+	// Token: 0x06003FFF RID: 16383 RVA: 0x001007AC File Offset: 0x000FE9AC
 	public void DisplayCustomData()
 	{
 		this.m_dataLoadedSuccessfully = false;
@@ -235,16 +235,16 @@ public class LQAEntryOverride : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002E70 RID: 11888 RVA: 0x0009D777 File Offset: 0x0009B977
+	// Token: 0x06004000 RID: 16384 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CloseConfirmWindow()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x040024FF RID: 9471
+	// Token: 0x040031FF RID: 12799
 	private const string FILE_NAME = "LocIDTester_V2.txt";
 
-	// Token: 0x04002500 RID: 9472
+	// Token: 0x04003200 RID: 12800
 	private static readonly string[] TESTER_INSTRUCTIONS = new string[]
 	{
 		"// Change the lines below to test custom LocIDs.",
@@ -269,62 +269,62 @@ public class LQAEntryOverride : MonoBehaviour
 		"ObjComplete_DisplayPlayer=false"
 	};
 
-	// Token: 0x04002501 RID: 9473
+	// Token: 0x04003201 RID: 12801
 	[SerializeField]
 	private LQAEntryOverride.LQADisplayType m_displayType;
 
-	// Token: 0x04002502 RID: 9474
+	// Token: 0x04003202 RID: 12802
 	private string m_dialogueTitleLocID;
 
-	// Token: 0x04002503 RID: 9475
+	// Token: 0x04003203 RID: 12803
 	private string m_dialogueBodyLocID;
 
-	// Token: 0x04002504 RID: 9476
+	// Token: 0x04003204 RID: 12804
 	private bool m_dialogueIsFemale;
 
-	// Token: 0x04002505 RID: 9477
+	// Token: 0x04003205 RID: 12805
 	private DialogueWindowStyle m_dialogueWindowStyle;
 
-	// Token: 0x04002506 RID: 9478
+	// Token: 0x04003206 RID: 12806
 	private string m_confirmTitleLocID;
 
-	// Token: 0x04002507 RID: 9479
+	// Token: 0x04003207 RID: 12807
 	private string m_confirmBodyLocID;
 
-	// Token: 0x04002508 RID: 9480
+	// Token: 0x04003208 RID: 12808
 	private string m_button1LocID;
 
-	// Token: 0x04002509 RID: 9481
+	// Token: 0x04003209 RID: 12809
 	private string m_button2LocID;
 
-	// Token: 0x0400250A RID: 9482
+	// Token: 0x0400320A RID: 12810
 	private string m_objCompleteTitleLocID;
 
-	// Token: 0x0400250B RID: 9483
+	// Token: 0x0400320B RID: 12811
 	private string m_objCompleteSubTitleLocID;
 
-	// Token: 0x0400250C RID: 9484
+	// Token: 0x0400320C RID: 12812
 	private string m_objCompleteBodyLocID;
 
-	// Token: 0x0400250D RID: 9485
+	// Token: 0x0400320D RID: 12813
 	private bool m_objCompleteDisplayPlayer;
 
-	// Token: 0x0400250E RID: 9486
+	// Token: 0x0400320E RID: 12814
 	private Action m_closeConfirmWindow;
 
-	// Token: 0x0400250F RID: 9487
+	// Token: 0x0400320F RID: 12815
 	private bool m_dataLoadedSuccessfully;
 
-	// Token: 0x02000CB8 RID: 3256
+	// Token: 0x0200081B RID: 2075
 	private enum LQADisplayType
 	{
-		// Token: 0x04005195 RID: 20885
+		// Token: 0x04003211 RID: 12817
 		None,
-		// Token: 0x04005196 RID: 20886
+		// Token: 0x04003212 RID: 12818
 		DialogueWindow,
-		// Token: 0x04005197 RID: 20887
+		// Token: 0x04003213 RID: 12819
 		ConfirmWindow,
-		// Token: 0x04005198 RID: 20888
+		// Token: 0x04003214 RID: 12820
 		ObjectiveComplete
 	}
 }

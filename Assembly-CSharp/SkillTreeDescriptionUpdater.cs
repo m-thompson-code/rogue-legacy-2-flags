@@ -2,10 +2,10 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020006F0 RID: 1776
+// Token: 0x02000B9E RID: 2974
 public class SkillTreeDescriptionUpdater : MonoBehaviour
 {
-	// Token: 0x0600402F RID: 16431 RVA: 0x000E3504 File Offset: 0x000E1704
+	// Token: 0x0600596C RID: 22892 RVA: 0x00152D10 File Offset: 0x00150F10
 	private void Awake()
 	{
 		this.m_onHighlightedSkillChanged = new Action<MonoBehaviour, EventArgs>(this.OnHighlightedSkillChanged);
@@ -16,7 +16,7 @@ public class SkillTreeDescriptionUpdater : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.GoldChanged, this.m_onGoldChanged);
 	}
 
-	// Token: 0x06004030 RID: 16432 RVA: 0x000E356E File Offset: 0x000E176E
+	// Token: 0x0600596D RID: 22893 RVA: 0x00030B7F File Offset: 0x0002ED7F
 	private void OnDestroy()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.SkillTree_HighlightedSkillChanged, this.m_onHighlightedSkillChanged);
@@ -24,14 +24,14 @@ public class SkillTreeDescriptionUpdater : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.GoldChanged, this.m_onGoldChanged);
 	}
 
-	// Token: 0x06004031 RID: 16433 RVA: 0x000E3598 File Offset: 0x000E1798
+	// Token: 0x0600596E RID: 22894 RVA: 0x00152D7C File Offset: 0x00150F7C
 	private void OnHighlightedSkillChanged(MonoBehaviour sender, EventArgs args)
 	{
 		HighlightedSkillChangedEventArgs highlightedSkillChangedEventArgs = args as HighlightedSkillChangedEventArgs;
 		this.UpdateText(highlightedSkillChangedEventArgs.SkillTreeType);
 	}
 
-	// Token: 0x06004032 RID: 16434 RVA: 0x000E35B8 File Offset: 0x000E17B8
+	// Token: 0x0600596F RID: 22895 RVA: 0x00152D9C File Offset: 0x00150F9C
 	private void OnSkillLevelChanged(MonoBehaviour sender, EventArgs args)
 	{
 		if (args == null)
@@ -42,7 +42,7 @@ public class SkillTreeDescriptionUpdater : MonoBehaviour
 		this.UpdateText(skillLevelChangedEventArgs.SkillTreeType);
 	}
 
-	// Token: 0x06004033 RID: 16435 RVA: 0x000E35DC File Offset: 0x000E17DC
+	// Token: 0x06005970 RID: 22896 RVA: 0x00152DC0 File Offset: 0x00150FC0
 	private void UpdateText(SkillTreeType skillType)
 	{
 		SkillTreeObj skillTreeObj = SkillTreeManager.GetSkillTreeObj(skillType);
@@ -229,7 +229,7 @@ public class SkillTreeDescriptionUpdater : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06004034 RID: 16436 RVA: 0x000E3B65 File Offset: 0x000E1D65
+	// Token: 0x06005971 RID: 22897 RVA: 0x00030BA8 File Offset: 0x0002EDA8
 	private void OnGoldChanged(MonoBehaviour sender, EventArgs args)
 	{
 		if (this.DescriptionType == SkillTreeDescriptionUpdater.SkillTreeDescriptionType.GoldOwned)
@@ -238,7 +238,7 @@ public class SkillTreeDescriptionUpdater : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06004035 RID: 16437 RVA: 0x000E3B85 File Offset: 0x000E1D85
+	// Token: 0x06005972 RID: 22898 RVA: 0x0001A669 File Offset: 0x00018869
 	protected string ColoredString(string text, Color color)
 	{
 		return string.Concat(new string[]
@@ -251,7 +251,7 @@ public class SkillTreeDescriptionUpdater : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06004036 RID: 16438 RVA: 0x000E3BB8 File Offset: 0x000E1DB8
+	// Token: 0x06005973 RID: 22899 RVA: 0x000CD794 File Offset: 0x000CB994
 	protected string PercentString(float value)
 	{
 		value *= 100f;
@@ -263,7 +263,7 @@ public class SkillTreeDescriptionUpdater : MonoBehaviour
 		return string.Format(LocalizationManager.GetString("LOC_ID_GENERAL_UI_PERCENT_1", false, false), text);
 	}
 
-	// Token: 0x06004037 RID: 16439 RVA: 0x000E3C14 File Offset: 0x000E1E14
+	// Token: 0x06005974 RID: 22900 RVA: 0x0015334C File Offset: 0x0015154C
 	protected string PlusSymbolString(float value, bool isPercent, bool addSymbolToZero = true)
 	{
 		string text = isPercent ? this.PercentString(value) : value.ToString();
@@ -285,7 +285,7 @@ public class SkillTreeDescriptionUpdater : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06004038 RID: 16440 RVA: 0x000E3C64 File Offset: 0x000E1E64
+	// Token: 0x06005975 RID: 22901 RVA: 0x0015339C File Offset: 0x0015159C
 	protected string ColoredValueString(float value, bool addBrackets, bool isPercent, bool lowerIsBetter, bool hideZero = true)
 	{
 		if (hideZero && value == 0f)
@@ -316,51 +316,51 @@ public class SkillTreeDescriptionUpdater : MonoBehaviour
 		return this.ColoredString(text, color);
 	}
 
-	// Token: 0x04003181 RID: 12673
+	// Token: 0x040043D3 RID: 17363
 	protected Color BenefitColor = new Color(0.05882353f, 0.50980395f, 0f);
 
-	// Token: 0x04003182 RID: 12674
+	// Token: 0x040043D4 RID: 17364
 	protected Color DeficitColor = new Color(0.8392157f, 0f, 0f);
 
-	// Token: 0x04003183 RID: 12675
+	// Token: 0x040043D5 RID: 17365
 	protected Color OriginalColor = new Color(0.3254902f, 0.24705882f, 0.27450982f);
 
-	// Token: 0x04003184 RID: 12676
+	// Token: 0x040043D6 RID: 17366
 	public SkillTreeDescriptionUpdater.SkillTreeDescriptionType DescriptionType;
 
-	// Token: 0x04003185 RID: 12677
+	// Token: 0x040043D7 RID: 17367
 	public LocalizationItem DescriptionLocItem;
 
-	// Token: 0x04003186 RID: 12678
+	// Token: 0x040043D8 RID: 17368
 	public TMP_Text CurrentValue;
 
-	// Token: 0x04003187 RID: 12679
+	// Token: 0x040043D9 RID: 17369
 	private Action<MonoBehaviour, EventArgs> m_onHighlightedSkillChanged;
 
-	// Token: 0x04003188 RID: 12680
+	// Token: 0x040043DA RID: 17370
 	private Action<MonoBehaviour, EventArgs> m_onSkillLevelChanged;
 
-	// Token: 0x04003189 RID: 12681
+	// Token: 0x040043DB RID: 17371
 	private Action<MonoBehaviour, EventArgs> m_onGoldChanged;
 
-	// Token: 0x02000E22 RID: 3618
+	// Token: 0x02000B9F RID: 2975
 	public enum SkillTreeDescriptionType
 	{
-		// Token: 0x040056D6 RID: 22230
+		// Token: 0x040043DD RID: 17373
 		Title,
-		// Token: 0x040056D7 RID: 22231
+		// Token: 0x040043DE RID: 17374
 		Description,
-		// Token: 0x040056D8 RID: 22232
+		// Token: 0x040043DF RID: 17375
 		Stat,
-		// Token: 0x040056D9 RID: 22233
+		// Token: 0x040043E0 RID: 17376
 		Level,
-		// Token: 0x040056DA RID: 22234
+		// Token: 0x040043E1 RID: 17377
 		Cost,
-		// Token: 0x040056DB RID: 22235
+		// Token: 0x040043E2 RID: 17378
 		GoldOwned,
-		// Token: 0x040056DC RID: 22236
+		// Token: 0x040043E3 RID: 17379
 		CostMultiple,
-		// Token: 0x040056DD RID: 22237
+		// Token: 0x040043E4 RID: 17380
 		Purchase
 	}
 }

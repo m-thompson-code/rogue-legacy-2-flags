@@ -3,10 +3,10 @@ using System.Collections;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004E1 RID: 1249
+// Token: 0x02000828 RID: 2088
 public class SkillTreeAboveGroundController : MonoBehaviour
 {
-	// Token: 0x06002EB7 RID: 11959 RVA: 0x0009F244 File Offset: 0x0009D444
+	// Token: 0x0600406B RID: 16491 RVA: 0x00102CCC File Offset: 0x00100ECC
 	private void OnEnable()
 	{
 		bool flag = false;
@@ -45,7 +45,7 @@ public class SkillTreeAboveGroundController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002EB8 RID: 11960 RVA: 0x0009F316 File Offset: 0x0009D516
+	// Token: 0x0600406C RID: 16492 RVA: 0x00023944 File Offset: 0x00021B44
 	private IEnumerator SetWeatherCoroutine()
 	{
 		float delay = 0.1f + Time.time;
@@ -64,7 +64,7 @@ public class SkillTreeAboveGroundController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002EB9 RID: 11961 RVA: 0x0009F328 File Offset: 0x0009D528
+	// Token: 0x0600406D RID: 16493 RVA: 0x00102DA0 File Offset: 0x00100FA0
 	private void OnDisable()
 	{
 		bool flag = false;
@@ -82,14 +82,14 @@ public class SkillTreeAboveGroundController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002543 RID: 9539
+	// Token: 0x0400326F RID: 12911
 	[SerializeField]
 	private GameObject m_skillTreeCastle_SurfaceGrass;
 
-	// Token: 0x04002544 RID: 9540
+	// Token: 0x04003270 RID: 12912
 	[SerializeField]
 	private GameObject m_skillTreeCastle_SurfaceRock;
 
-	// Token: 0x04002545 RID: 9541
+	// Token: 0x04003271 RID: 12913
 	private Weather m_weather;
 }

@@ -3,16 +3,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Token: 0x02000805 RID: 2053
+// Token: 0x02000CCD RID: 3277
 public class OpenHyperlink : MonoBehaviour, IPointerClickHandler, IEventSystemHandler
 {
-	// Token: 0x060043FF RID: 17407 RVA: 0x000F0A64 File Offset: 0x000EEC64
+	// Token: 0x06005D88 RID: 23944 RVA: 0x0003378A File Offset: 0x0003198A
 	private void Awake()
 	{
 		this.m_text = base.GetComponent<TMP_Text>();
 	}
 
-	// Token: 0x06004400 RID: 17408 RVA: 0x000F0A74 File Offset: 0x000EEC74
+	// Token: 0x06005D89 RID: 23945 RVA: 0x0015E6D8 File Offset: 0x0015C8D8
 	public void OnPointerClick(PointerEventData eventData)
 	{
 		int num = TMP_TextUtilities.FindIntersectingLink(this.m_text, Input.mousePosition, CameraController.UICamera);
@@ -23,6 +23,6 @@ public class OpenHyperlink : MonoBehaviour, IPointerClickHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x04003A1A RID: 14874
+	// Token: 0x04004CE6 RID: 19686
 	private TMP_Text m_text;
 }

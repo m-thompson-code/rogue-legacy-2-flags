@@ -6,11 +6,11 @@ using RL_Windows;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020000C5 RID: 197
+// Token: 0x0200012C RID: 300
 public class FinalBoss_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x1700027B RID: 635
-	// (get) Token: 0x06000547 RID: 1351 RVA: 0x00016FC8 File Offset: 0x000151C8
+	// Token: 0x1700033B RID: 827
+	// (get) Token: 0x0600078C RID: 1932 RVA: 0x00005A03 File Offset: 0x00003C03
 	public IRelayLink<bool, float> ColourShiftRelay
 	{
 		get
@@ -19,8 +19,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700027C RID: 636
-	// (get) Token: 0x06000548 RID: 1352 RVA: 0x00016FD5 File Offset: 0x000151D5
+	// Token: 0x1700033C RID: 828
+	// (get) Token: 0x0600078D RID: 1933 RVA: 0x00005A10 File Offset: 0x00003C10
 	public bool IsInWhiteMode
 	{
 		get
@@ -29,8 +29,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700027D RID: 637
-	// (get) Token: 0x06000549 RID: 1353 RVA: 0x00016FDD File Offset: 0x000151DD
+	// Token: 0x1700033D RID: 829
+	// (get) Token: 0x0600078E RID: 1934 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_isPrime_Version
 	{
 		get
@@ -39,8 +39,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700027E RID: 638
-	// (get) Token: 0x0600054A RID: 1354 RVA: 0x00016FE0 File Offset: 0x000151E0
+	// Token: 0x1700033E RID: 830
+	// (get) Token: 0x0600078F RID: 1935 RVA: 0x00005693 File Offset: 0x00003893
 	protected virtual float m_Prime_Version_Final_Mode_Delay_Force_Idle_Add
 	{
 		get
@@ -49,8 +49,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700027F RID: 639
-	// (get) Token: 0x0600054B RID: 1355 RVA: 0x00016FE7 File Offset: 0x000151E7
+	// Token: 0x1700033F RID: 831
+	// (get) Token: 0x06000790 RID: 1936 RVA: 0x00004706 File Offset: 0x00002906
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -59,8 +59,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000280 RID: 640
-	// (get) Token: 0x0600054C RID: 1356 RVA: 0x00016FF8 File Offset: 0x000151F8
+	// Token: 0x17000340 RID: 832
+	// (get) Token: 0x06000791 RID: 1937 RVA: 0x00004717 File Offset: 0x00002917
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -69,8 +69,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000281 RID: 641
-	// (get) Token: 0x0600054D RID: 1357 RVA: 0x00017009 File Offset: 0x00015209
+	// Token: 0x17000341 RID: 833
+	// (get) Token: 0x06000792 RID: 1938 RVA: 0x00004717 File Offset: 0x00002917
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -79,8 +79,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000282 RID: 642
-	// (get) Token: 0x0600054E RID: 1358 RVA: 0x0001701A File Offset: 0x0001521A
+	// Token: 0x17000342 RID: 834
+	// (get) Token: 0x06000793 RID: 1939 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float WalkAnimSpeedMod
 	{
 		get
@@ -89,7 +89,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600054F RID: 1359 RVA: 0x00017024 File Offset: 0x00015224
+	// Token: 0x06000794 RID: 1940 RVA: 0x0005DACC File Offset: 0x0005BCCC
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -136,7 +136,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x06000550 RID: 1360 RVA: 0x00017198 File Offset: 0x00015398
+	// Token: 0x06000795 RID: 1941 RVA: 0x0005DC40 File Offset: 0x0005BE40
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -197,7 +197,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000551 RID: 1361 RVA: 0x000173AC File Offset: 0x000155AC
+	// Token: 0x06000796 RID: 1942 RVA: 0x0005DE54 File Offset: 0x0005C054
 	private void OnBossHit(object sender, HealthChangeEventArgs args)
 	{
 		if (this.m_isModeShifting)
@@ -225,7 +225,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000552 RID: 1362 RVA: 0x00017444 File Offset: 0x00015644
+	// Token: 0x06000797 RID: 1943 RVA: 0x0005DEEC File Offset: 0x0005C0EC
 	public override void ResetScript()
 	{
 		this.m_isInWhiteMode = true;
@@ -252,7 +252,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		base.ResetScript();
 	}
 
-	// Token: 0x06000553 RID: 1363 RVA: 0x000174EC File Offset: 0x000156EC
+	// Token: 0x06000798 RID: 1944 RVA: 0x0005DF94 File Offset: 0x0005C194
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.OnLBCompleteOrCancelled();
@@ -288,7 +288,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		this.m_prayingBodyHitbox.SetActive(false);
 	}
 
-	// Token: 0x06000554 RID: 1364 RVA: 0x000175FC File Offset: 0x000157FC
+	// Token: 0x06000799 RID: 1945 RVA: 0x0005E0A4 File Offset: 0x0005C2A4
 	private void PerformColourShiftCheck()
 	{
 		if (this.m_modeShiftIndex >= FinalBoss_Basic_AIScript.MODESHIFT_ARRAY.Length)
@@ -303,12 +303,12 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000555 RID: 1365 RVA: 0x00017671 File Offset: 0x00015871
+	// Token: 0x0600079A RID: 1946 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void PerformForcedColourShift()
 	{
 	}
 
-	// Token: 0x06000556 RID: 1366 RVA: 0x00017674 File Offset: 0x00015874
+	// Token: 0x0600079B RID: 1947 RVA: 0x0005E11C File Offset: 0x0005C31C
 	private void PerformColourShiftCheckRandomChance()
 	{
 		if (this.m_modeShiftIndex >= FinalBoss_Basic_AIScript.MODESHIFT_ARRAY.Length && CDGHelper.RandomPlusMinus() > 0)
@@ -323,7 +323,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000557 RID: 1367 RVA: 0x000176F1 File Offset: 0x000158F1
+	// Token: 0x0600079C RID: 1948 RVA: 0x00005A18 File Offset: 0x00003C18
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -371,7 +371,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000558 RID: 1368 RVA: 0x00017700 File Offset: 0x00015900
+	// Token: 0x0600079D RID: 1949 RVA: 0x00005A27 File Offset: 0x00003C27
 	private IEnumerator ModeShiftFireProjectilesCoroutine()
 	{
 		int num3;
@@ -394,7 +394,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000559 RID: 1369 RVA: 0x00017710 File Offset: 0x00015910
+	// Token: 0x0600079E RID: 1950 RVA: 0x0005E19C File Offset: 0x0005C39C
 	private void ColourShift(bool shiftToWhite, float lerpSpeed, bool runEvents)
 	{
 		this.ToDo("Colour Shift");
@@ -414,8 +414,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		this.m_isInWhiteMode = shiftToWhite;
 	}
 
-	// Token: 0x17000283 RID: 643
-	// (get) Token: 0x0600055A RID: 1370 RVA: 0x000177F2 File Offset: 0x000159F2
+	// Token: 0x17000343 RID: 835
+	// (get) Token: 0x0600079F RID: 1951 RVA: 0x00005A36 File Offset: 0x00003C36
 	protected string SUMMON_TREE_TELL_INTRO
 	{
 		get
@@ -428,8 +428,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000284 RID: 644
-	// (get) Token: 0x0600055B RID: 1371 RVA: 0x00017807 File Offset: 0x00015A07
+	// Token: 0x17000344 RID: 836
+	// (get) Token: 0x060007A0 RID: 1952 RVA: 0x00005A4B File Offset: 0x00003C4B
 	protected string SUMMON_TREE_TELL_HOLD
 	{
 		get
@@ -442,8 +442,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000285 RID: 645
-	// (get) Token: 0x0600055C RID: 1372 RVA: 0x0001781C File Offset: 0x00015A1C
+	// Token: 0x17000345 RID: 837
+	// (get) Token: 0x060007A1 RID: 1953 RVA: 0x00005A60 File Offset: 0x00003C60
 	protected string SUMMON_TREE_ATTACK_INTRO
 	{
 		get
@@ -456,8 +456,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000286 RID: 646
-	// (get) Token: 0x0600055D RID: 1373 RVA: 0x00017831 File Offset: 0x00015A31
+	// Token: 0x17000346 RID: 838
+	// (get) Token: 0x060007A2 RID: 1954 RVA: 0x00005A75 File Offset: 0x00003C75
 	protected string SUMMON_TREE_ATTACK_HOLD
 	{
 		get
@@ -470,8 +470,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000287 RID: 647
-	// (get) Token: 0x0600055E RID: 1374 RVA: 0x00017846 File Offset: 0x00015A46
+	// Token: 0x17000347 RID: 839
+	// (get) Token: 0x060007A3 RID: 1955 RVA: 0x00005A8A File Offset: 0x00003C8A
 	protected string SUMMON_TREE_EXIT
 	{
 		get
@@ -484,7 +484,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600055F RID: 1375 RVA: 0x0001785B File Offset: 0x00015A5B
+	// Token: 0x060007A4 RID: 1956 RVA: 0x00005A9F File Offset: 0x00003C9F
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -526,7 +526,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000560 RID: 1376 RVA: 0x0001786A File Offset: 0x00015A6A
+	// Token: 0x060007A5 RID: 1957 RVA: 0x00005AAE File Offset: 0x00003CAE
 	private IEnumerator TreePersistentCoroutine(bool summonWhiteTree, Vector2 treeSpawnPos)
 	{
 		this.m_summonedWhiteTree = summonWhiteTree;
@@ -603,15 +603,15 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000561 RID: 1377 RVA: 0x00017887 File Offset: 0x00015A87
+	// Token: 0x060007A6 RID: 1958 RVA: 0x00005ACB File Offset: 0x00003CCB
 	private void StopTreePersistentCoroutine()
 	{
 		this.StopPersistentCoroutine(this.m_treePersistentCoroutine);
 		base.StopProjectile(ref this.m_summonTreeProjectile);
 	}
 
-	// Token: 0x17000288 RID: 648
-	// (get) Token: 0x06000562 RID: 1378 RVA: 0x000178A1 File Offset: 0x00015AA1
+	// Token: 0x17000348 RID: 840
+	// (get) Token: 0x060007A7 RID: 1959 RVA: 0x00005A36 File Offset: 0x00003C36
 	protected string PRAYER_TELL_INTRO
 	{
 		get
@@ -624,8 +624,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000289 RID: 649
-	// (get) Token: 0x06000563 RID: 1379 RVA: 0x000178B6 File Offset: 0x00015AB6
+	// Token: 0x17000349 RID: 841
+	// (get) Token: 0x060007A8 RID: 1960 RVA: 0x00005A4B File Offset: 0x00003C4B
 	protected string PRAYER_TELL_HOLD
 	{
 		get
@@ -638,8 +638,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700028A RID: 650
-	// (get) Token: 0x06000564 RID: 1380 RVA: 0x000178CB File Offset: 0x00015ACB
+	// Token: 0x1700034A RID: 842
+	// (get) Token: 0x060007A9 RID: 1961 RVA: 0x00005A60 File Offset: 0x00003C60
 	protected string PRAYER_ATTACK_INTRO
 	{
 		get
@@ -652,8 +652,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700028B RID: 651
-	// (get) Token: 0x06000565 RID: 1381 RVA: 0x000178E0 File Offset: 0x00015AE0
+	// Token: 0x1700034B RID: 843
+	// (get) Token: 0x060007AA RID: 1962 RVA: 0x00005A75 File Offset: 0x00003C75
 	protected string PRAYER_ATTACK_HOLD
 	{
 		get
@@ -666,8 +666,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700028C RID: 652
-	// (get) Token: 0x06000566 RID: 1382 RVA: 0x000178F5 File Offset: 0x00015AF5
+	// Token: 0x1700034C RID: 844
+	// (get) Token: 0x060007AB RID: 1963 RVA: 0x00005AE5 File Offset: 0x00003CE5
 	protected string PRAYER_EXIT
 	{
 		get
@@ -680,7 +680,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000567 RID: 1383 RVA: 0x0001790A File Offset: 0x00015B0A
+	// Token: 0x060007AC RID: 1964 RVA: 0x00005AFA File Offset: 0x00003CFA
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -880,8 +880,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x1700028D RID: 653
-	// (get) Token: 0x06000568 RID: 1384 RVA: 0x00017919 File Offset: 0x00015B19
+	// Token: 0x1700034D RID: 845
+	// (get) Token: 0x060007AD RID: 1965 RVA: 0x00005B09 File Offset: 0x00003D09
 	protected string VERTICAL_BEAM_TELL_INTRO
 	{
 		get
@@ -894,8 +894,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700028E RID: 654
-	// (get) Token: 0x06000569 RID: 1385 RVA: 0x0001792E File Offset: 0x00015B2E
+	// Token: 0x1700034E RID: 846
+	// (get) Token: 0x060007AE RID: 1966 RVA: 0x00005B1E File Offset: 0x00003D1E
 	protected string VERTICAL_BEAM_TELL_HOLD
 	{
 		get
@@ -908,8 +908,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700028F RID: 655
-	// (get) Token: 0x0600056A RID: 1386 RVA: 0x00017943 File Offset: 0x00015B43
+	// Token: 0x1700034F RID: 847
+	// (get) Token: 0x060007AF RID: 1967 RVA: 0x00005B33 File Offset: 0x00003D33
 	protected string VERTICAL_BEAM_ATTACK_INTRO
 	{
 		get
@@ -922,8 +922,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000290 RID: 656
-	// (get) Token: 0x0600056B RID: 1387 RVA: 0x00017958 File Offset: 0x00015B58
+	// Token: 0x17000350 RID: 848
+	// (get) Token: 0x060007B0 RID: 1968 RVA: 0x00005B48 File Offset: 0x00003D48
 	protected string VERTICAL_BEAM_ATTACK_HOLD
 	{
 		get
@@ -936,8 +936,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000291 RID: 657
-	// (get) Token: 0x0600056C RID: 1388 RVA: 0x0001796D File Offset: 0x00015B6D
+	// Token: 0x17000351 RID: 849
+	// (get) Token: 0x060007B1 RID: 1969 RVA: 0x00005B5D File Offset: 0x00003D5D
 	protected string VERTICAL_BEAM_EXIT
 	{
 		get
@@ -950,8 +950,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000292 RID: 658
-	// (get) Token: 0x0600056D RID: 1389 RVA: 0x00017982 File Offset: 0x00015B82
+	// Token: 0x17000352 RID: 850
+	// (get) Token: 0x060007B2 RID: 1970 RVA: 0x00005315 File Offset: 0x00003515
 	protected virtual int m_numVerticalBeamProjectiles
 	{
 		get
@@ -960,8 +960,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000293 RID: 659
-	// (get) Token: 0x0600056E RID: 1390 RVA: 0x00017986 File Offset: 0x00015B86
+	// Token: 0x17000353 RID: 851
+	// (get) Token: 0x060007B3 RID: 1971 RVA: 0x000050CB File Offset: 0x000032CB
 	protected virtual float m_numVerticalBeamAdvancedFollowUpDelay
 	{
 		get
@@ -970,8 +970,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000294 RID: 660
-	// (get) Token: 0x0600056F RID: 1391 RVA: 0x0001798D File Offset: 0x00015B8D
+	// Token: 0x17000354 RID: 852
+	// (get) Token: 0x060007B4 RID: 1972 RVA: 0x00004762 File Offset: 0x00002962
 	protected virtual int m_numVerticalBeamAdvancedFollowUpProjectiles
 	{
 		get
@@ -980,7 +980,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000570 RID: 1392 RVA: 0x00017990 File Offset: 0x00015B90
+	// Token: 0x060007B5 RID: 1973 RVA: 0x00005B72 File Offset: 0x00003D72
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -1156,7 +1156,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000571 RID: 1393 RVA: 0x0001799F File Offset: 0x00015B9F
+	// Token: 0x060007B6 RID: 1974 RVA: 0x00005B81 File Offset: 0x00003D81
 	private IEnumerator PlayDelayedVerticalBeamBlackSFX(float delay)
 	{
 		delay += Time.time;
@@ -1176,8 +1176,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x17000295 RID: 661
-	// (get) Token: 0x06000572 RID: 1394 RVA: 0x000179B5 File Offset: 0x00015BB5
+	// Token: 0x17000355 RID: 853
+	// (get) Token: 0x060007B7 RID: 1975 RVA: 0x00005B97 File Offset: 0x00003D97
 	protected string SPINNING_JUMP_TELL_INTRO
 	{
 		get
@@ -1190,8 +1190,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000296 RID: 662
-	// (get) Token: 0x06000573 RID: 1395 RVA: 0x000179CA File Offset: 0x00015BCA
+	// Token: 0x17000356 RID: 854
+	// (get) Token: 0x060007B8 RID: 1976 RVA: 0x00005BAC File Offset: 0x00003DAC
 	protected string SPINNING_JUMP_TELL_HOLD
 	{
 		get
@@ -1204,8 +1204,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000297 RID: 663
-	// (get) Token: 0x06000574 RID: 1396 RVA: 0x000179DF File Offset: 0x00015BDF
+	// Token: 0x17000357 RID: 855
+	// (get) Token: 0x060007B9 RID: 1977 RVA: 0x00005BC1 File Offset: 0x00003DC1
 	protected string SPINNING_JUMP_ATTACK_INTRO
 	{
 		get
@@ -1218,8 +1218,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000298 RID: 664
-	// (get) Token: 0x06000575 RID: 1397 RVA: 0x000179F4 File Offset: 0x00015BF4
+	// Token: 0x17000358 RID: 856
+	// (get) Token: 0x060007BA RID: 1978 RVA: 0x00005BD6 File Offset: 0x00003DD6
 	protected string SPINNING_JUMP_ATTACK_HOLD
 	{
 		get
@@ -1232,8 +1232,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000299 RID: 665
-	// (get) Token: 0x06000576 RID: 1398 RVA: 0x00017A09 File Offset: 0x00015C09
+	// Token: 0x17000359 RID: 857
+	// (get) Token: 0x060007BB RID: 1979 RVA: 0x00005BEB File Offset: 0x00003DEB
 	protected string SPINNING_JUMP_LAND
 	{
 		get
@@ -1246,8 +1246,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700029A RID: 666
-	// (get) Token: 0x06000577 RID: 1399 RVA: 0x00017A1E File Offset: 0x00015C1E
+	// Token: 0x1700035A RID: 858
+	// (get) Token: 0x060007BC RID: 1980 RVA: 0x00005C00 File Offset: 0x00003E00
 	protected string SPINNING_JUMP_EXIT
 	{
 		get
@@ -1260,7 +1260,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000578 RID: 1400 RVA: 0x00017A33 File Offset: 0x00015C33
+	// Token: 0x060007BD RID: 1981 RVA: 0x00005C15 File Offset: 0x00003E15
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -1411,8 +1411,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x1700029B RID: 667
-	// (get) Token: 0x06000579 RID: 1401 RVA: 0x00017A42 File Offset: 0x00015C42
+	// Token: 0x1700035B RID: 859
+	// (get) Token: 0x060007BE RID: 1982 RVA: 0x00005C24 File Offset: 0x00003E24
 	protected string SWORD_TELL_INTRO
 	{
 		get
@@ -1425,8 +1425,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700029C RID: 668
-	// (get) Token: 0x0600057A RID: 1402 RVA: 0x00017A57 File Offset: 0x00015C57
+	// Token: 0x1700035C RID: 860
+	// (get) Token: 0x060007BF RID: 1983 RVA: 0x00005C39 File Offset: 0x00003E39
 	protected string SWORD_TELL_HOLD
 	{
 		get
@@ -1439,8 +1439,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700029D RID: 669
-	// (get) Token: 0x0600057B RID: 1403 RVA: 0x00017A6C File Offset: 0x00015C6C
+	// Token: 0x1700035D RID: 861
+	// (get) Token: 0x060007C0 RID: 1984 RVA: 0x00005C4E File Offset: 0x00003E4E
 	protected string SWORD_ATTACK_INTRO
 	{
 		get
@@ -1453,8 +1453,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700029E RID: 670
-	// (get) Token: 0x0600057C RID: 1404 RVA: 0x00017A81 File Offset: 0x00015C81
+	// Token: 0x1700035E RID: 862
+	// (get) Token: 0x060007C1 RID: 1985 RVA: 0x00005C63 File Offset: 0x00003E63
 	protected string SWORD_ATTACK_HOLD
 	{
 		get
@@ -1467,8 +1467,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700029F RID: 671
-	// (get) Token: 0x0600057D RID: 1405 RVA: 0x00017A96 File Offset: 0x00015C96
+	// Token: 0x1700035F RID: 863
+	// (get) Token: 0x060007C2 RID: 1986 RVA: 0x00005C78 File Offset: 0x00003E78
 	protected string SWORD_EXIT
 	{
 		get
@@ -1481,7 +1481,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600057E RID: 1406 RVA: 0x00017AAB File Offset: 0x00015CAB
+	// Token: 0x060007C3 RID: 1987 RVA: 0x00005C8D File Offset: 0x00003E8D
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -1565,7 +1565,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600057F RID: 1407 RVA: 0x00017ABA File Offset: 0x00015CBA
+	// Token: 0x060007C4 RID: 1988 RVA: 0x00005C9C File Offset: 0x00003E9C
 	private IEnumerator SwordAttackBlackSecondProjectileCoroutine()
 	{
 		float delay = Time.time + this.m_sword_BlackProjectile_Delay;
@@ -1577,8 +1577,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x170002A0 RID: 672
-	// (get) Token: 0x06000580 RID: 1408 RVA: 0x00017AC9 File Offset: 0x00015CC9
+	// Token: 0x17000360 RID: 864
+	// (get) Token: 0x060007C5 RID: 1989 RVA: 0x00005CAB File Offset: 0x00003EAB
 	protected string PORTAL_TELL_INTRO
 	{
 		get
@@ -1591,8 +1591,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002A1 RID: 673
-	// (get) Token: 0x06000581 RID: 1409 RVA: 0x00017ADE File Offset: 0x00015CDE
+	// Token: 0x17000361 RID: 865
+	// (get) Token: 0x060007C6 RID: 1990 RVA: 0x00005CC0 File Offset: 0x00003EC0
 	protected string PORTAL_TELL_HOLD
 	{
 		get
@@ -1605,8 +1605,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002A2 RID: 674
-	// (get) Token: 0x06000582 RID: 1410 RVA: 0x00017AF3 File Offset: 0x00015CF3
+	// Token: 0x17000362 RID: 866
+	// (get) Token: 0x060007C7 RID: 1991 RVA: 0x00005CD5 File Offset: 0x00003ED5
 	protected string PORTAL_ATTACK_INTRO
 	{
 		get
@@ -1619,8 +1619,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002A3 RID: 675
-	// (get) Token: 0x06000583 RID: 1411 RVA: 0x00017B08 File Offset: 0x00015D08
+	// Token: 0x17000363 RID: 867
+	// (get) Token: 0x060007C8 RID: 1992 RVA: 0x00005CEA File Offset: 0x00003EEA
 	protected string PORTAL_ATTACK_HOLD
 	{
 		get
@@ -1633,8 +1633,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002A4 RID: 676
-	// (get) Token: 0x06000584 RID: 1412 RVA: 0x00017B1D File Offset: 0x00015D1D
+	// Token: 0x17000364 RID: 868
+	// (get) Token: 0x060007C9 RID: 1993 RVA: 0x00005CFF File Offset: 0x00003EFF
 	protected string PORTAL_EXIT
 	{
 		get
@@ -1647,8 +1647,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002A5 RID: 677
-	// (get) Token: 0x06000585 RID: 1413 RVA: 0x00017B32 File Offset: 0x00015D32
+	// Token: 0x17000365 RID: 869
+	// (get) Token: 0x060007CA RID: 1994 RVA: 0x00005303 File Offset: 0x00003503
 	protected virtual int Portal_Outward_Explosion_Amount
 	{
 		get
@@ -1657,8 +1657,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002A6 RID: 678
-	// (get) Token: 0x06000586 RID: 1414 RVA: 0x00017B36 File Offset: 0x00015D36
+	// Token: 0x17000366 RID: 870
+	// (get) Token: 0x060007CB RID: 1995 RVA: 0x000054AD File Offset: 0x000036AD
 	protected virtual int Portal_Outward_Explosion_Angle
 	{
 		get
@@ -1667,8 +1667,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002A7 RID: 679
-	// (get) Token: 0x06000587 RID: 1415 RVA: 0x00017B3A File Offset: 0x00015D3A
+	// Token: 0x17000367 RID: 871
+	// (get) Token: 0x060007CC RID: 1996 RVA: 0x000054B1 File Offset: 0x000036B1
 	protected virtual int Portal_Explosion_Bolt_Amount
 	{
 		get
@@ -1677,8 +1677,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002A8 RID: 680
-	// (get) Token: 0x06000588 RID: 1416 RVA: 0x00017B3E File Offset: 0x00015D3E
+	// Token: 0x17000368 RID: 872
+	// (get) Token: 0x060007CD RID: 1997 RVA: 0x00005D14 File Offset: 0x00003F14
 	protected virtual int Portal_Explosion_Bolt_Angle
 	{
 		get
@@ -1687,8 +1687,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002A9 RID: 681
-	// (get) Token: 0x06000589 RID: 1417 RVA: 0x00017B42 File Offset: 0x00015D42
+	// Token: 0x17000369 RID: 873
+	// (get) Token: 0x060007CE RID: 1998 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float Portal_Explosion_Bolt_Delay
 	{
 		get
@@ -1697,8 +1697,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002AA RID: 682
-	// (get) Token: 0x0600058A RID: 1418 RVA: 0x00017B49 File Offset: 0x00015D49
+	// Token: 0x1700036A RID: 874
+	// (get) Token: 0x060007CF RID: 1999 RVA: 0x00005D18 File Offset: 0x00003F18
 	protected virtual float Portal_Advanced_Black_To_White_FollowUp_Delay
 	{
 		get
@@ -1707,8 +1707,8 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170002AB RID: 683
-	// (get) Token: 0x0600058B RID: 1419 RVA: 0x00017B50 File Offset: 0x00015D50
+	// Token: 0x1700036B RID: 875
+	// (get) Token: 0x060007D0 RID: 2000 RVA: 0x00005D18 File Offset: 0x00003F18
 	protected virtual float Portal_Advanced_White_To_Black_FollowUp_Delay
 	{
 		get
@@ -1717,7 +1717,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600058C RID: 1420 RVA: 0x00017B57 File Offset: 0x00015D57
+	// Token: 0x060007D1 RID: 2001 RVA: 0x00005D1F File Offset: 0x00003F1F
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -1840,7 +1840,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600058D RID: 1421 RVA: 0x00017B66 File Offset: 0x00015D66
+	// Token: 0x060007D2 RID: 2002 RVA: 0x00005D2E File Offset: 0x00003F2E
 	private IEnumerator PortalWhiteAttackPersistentCoroutine(Vector2 spawnPos)
 	{
 		int flipper = CDGHelper.RandomPlusMinus();
@@ -1854,14 +1854,14 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600058E RID: 1422 RVA: 0x00017B7C File Offset: 0x00015D7C
+	// Token: 0x060007D3 RID: 2003 RVA: 0x00005D44 File Offset: 0x00003F44
 	private void StopPortalWhitePersistentCoroutine()
 	{
 		base.StopProjectile(ref this.m_portalProjectile);
 		this.StopPersistentCoroutine(this.m_portalWhiteAttackPersistentCoroutine);
 	}
 
-	// Token: 0x0600058F RID: 1423 RVA: 0x00017B96 File Offset: 0x00015D96
+	// Token: 0x060007D4 RID: 2004 RVA: 0x00005D5E File Offset: 0x00003F5E
 	public override IEnumerator DeathAnim()
 	{
 		FinalBossRoomController finalRoom = base.EnemyController.Room.GetComponent<FinalBossRoomController>();
@@ -1932,7 +1932,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000590 RID: 1424 RVA: 0x00017BA5 File Offset: 0x00015DA5
+	// Token: 0x060007D5 RID: 2005 RVA: 0x00005D6D File Offset: 0x00003F6D
 	private IEnumerator SoulsEscapeSFXCoroutine()
 	{
 		if (this.m_collapseSpiritsEventInstance.isValid())
@@ -1952,7 +1952,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000591 RID: 1425 RVA: 0x00017BB4 File Offset: 0x00015DB4
+	// Token: 0x060007D6 RID: 2006 RVA: 0x00005D7C File Offset: 0x00003F7C
 	public override IEnumerator SpawnAnim()
 	{
 		if (!SaveManager.PlayerSaveData.SpokenToFinalBoss)
@@ -1970,7 +1970,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000592 RID: 1426 RVA: 0x00017BC4 File Offset: 0x00015DC4
+	// Token: 0x060007D7 RID: 2007 RVA: 0x0005E280 File Offset: 0x0005C480
 	protected override void OnDisable()
 	{
 		if (this.m_rumbleEventInstance.isValid())
@@ -1992,7 +1992,7 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		base.OnDisable();
 	}
 
-	// Token: 0x06000593 RID: 1427 RVA: 0x00017C3C File Offset: 0x00015E3C
+	// Token: 0x060007D8 RID: 2008 RVA: 0x0005E2F8 File Offset: 0x0005C4F8
 	private void OnDestroy()
 	{
 		if (base.EnemyController)
@@ -2017,730 +2017,730 @@ public class FinalBoss_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x04000908 RID: 2312
+	// Token: 0x04000AE3 RID: 2787
 	public const bool START_IN_WHITE_MODE = true;
 
-	// Token: 0x04000909 RID: 2313
+	// Token: 0x04000AE4 RID: 2788
 	protected const string VERTICAL_BEAM_BLACK_STOP_SFX_NAME = "event:/SFX/Enemies/Cain/sfx_cain_dark_staff_attack_lightning_end";
 
-	// Token: 0x0400090A RID: 2314
+	// Token: 0x04000AE5 RID: 2789
 	protected const string VERTICAL_BEAM_BLACK_LOOP_SFX_NAME = "event:/SFX/Enemies/Cain/sfx_cain_dark_staff_attack_lightning_loop";
 
-	// Token: 0x0400090B RID: 2315
+	// Token: 0x04000AE6 RID: 2790
 	protected const string VERTICAL_BEAM_BLACK_FLOOR_LOOP_SFX_NAME = "event:/SFX/Enemies/Cain/sfx_cain_dark_staff_attack_floor_loop";
 
-	// Token: 0x0400090C RID: 2316
+	// Token: 0x04000AE7 RID: 2791
 	private Relay<bool, float> m_colourShiftRelay = new Relay<bool, float>();
 
-	// Token: 0x0400090D RID: 2317
+	// Token: 0x04000AE8 RID: 2792
 	private static float[] MODESHIFT_ARRAY = new float[]
 	{
 		0.75f,
 		0.5f
 	};
 
-	// Token: 0x0400090E RID: 2318
+	// Token: 0x04000AE9 RID: 2793
 	private static Vector2Int COLOURSHIFT_MINMAX_COUNT = new Vector2Int(1, 2);
 
-	// Token: 0x0400090F RID: 2319
+	// Token: 0x04000AEA RID: 2794
 	private EventInstance m_rumbleEventInstance;
 
-	// Token: 0x04000910 RID: 2320
+	// Token: 0x04000AEB RID: 2795
 	private EventInstance m_collapseSpiritsEventInstance;
 
-	// Token: 0x04000911 RID: 2321
+	// Token: 0x04000AEC RID: 2796
 	private EventInstance m_verticalBeamBlackEventInstance;
 
-	// Token: 0x04000912 RID: 2322
+	// Token: 0x04000AED RID: 2797
 	private EventInstance m_verticalBeamBlackFloorLoopEventInstance;
 
-	// Token: 0x04000913 RID: 2323
+	// Token: 0x04000AEE RID: 2798
 	private bool m_isInWhiteMode;
 
-	// Token: 0x04000914 RID: 2324
+	// Token: 0x04000AEF RID: 2799
 	private bool m_isModeShifting;
 
-	// Token: 0x04000915 RID: 2325
+	// Token: 0x04000AF0 RID: 2800
 	protected int m_modeShiftIndex;
 
-	// Token: 0x04000916 RID: 2326
+	// Token: 0x04000AF1 RID: 2801
 	private int m_currentColourShiftCount;
 
-	// Token: 0x04000917 RID: 2327
+	// Token: 0x04000AF2 RID: 2802
 	private int m_requiredColourShiftCount;
 
-	// Token: 0x04000918 RID: 2328
+	// Token: 0x04000AF3 RID: 2803
 	private GameObject m_regularWeaponHitbox;
 
-	// Token: 0x04000919 RID: 2329
+	// Token: 0x04000AF4 RID: 2804
 	private GameObject m_jumpingWeaponHitbox;
 
-	// Token: 0x0400091A RID: 2330
+	// Token: 0x04000AF5 RID: 2805
 	private GameObject m_regularBodyHitbox;
 
-	// Token: 0x0400091B RID: 2331
+	// Token: 0x04000AF6 RID: 2806
 	private GameObject m_jumpingBodyHitbox;
 
-	// Token: 0x0400091C RID: 2332
+	// Token: 0x04000AF7 RID: 2807
 	private GameObject m_prayingBodyHitbox;
 
-	// Token: 0x0400091D RID: 2333
+	// Token: 0x04000AF8 RID: 2808
 	private FinalBossColourShiftController m_colourShiftController;
 
-	// Token: 0x0400091E RID: 2334
+	// Token: 0x04000AF9 RID: 2809
 	private GameObject m_statue;
 
-	// Token: 0x0400091F RID: 2335
+	// Token: 0x04000AFA RID: 2810
 	private GameObject m_model;
 
-	// Token: 0x04000920 RID: 2336
+	// Token: 0x04000AFB RID: 2811
 	protected const string MODESHIFT_DOWNED = "ModeShift_Intro";
 
-	// Token: 0x04000921 RID: 2337
+	// Token: 0x04000AFC RID: 2812
 	protected const string MODESHIFT_GETUP = "ModeShift_GetUp";
 
-	// Token: 0x04000922 RID: 2338
+	// Token: 0x04000AFD RID: 2813
 	protected const string MODESHIFT_TELL_INTRO = "ModeShift_Scream_Intro";
 
-	// Token: 0x04000923 RID: 2339
+	// Token: 0x04000AFE RID: 2814
 	protected const string MODESHIFT_TELL_HOLD = "ModeShift_Tell_Loop";
 
-	// Token: 0x04000924 RID: 2340
+	// Token: 0x04000AFF RID: 2815
 	protected const string MODESHIFT_ATTACK_INTRO = "ModeShift_Scream_Hold";
 
-	// Token: 0x04000925 RID: 2341
+	// Token: 0x04000B00 RID: 2816
 	protected const string MODESHIFT_ATTACK_HOLD = "ModeShift_Action_Loop";
 
-	// Token: 0x04000926 RID: 2342
+	// Token: 0x04000B01 RID: 2817
 	protected const string MODESHIFT_EXIT = "ModeShift_Scream_Exit";
 
-	// Token: 0x04000927 RID: 2343
+	// Token: 0x04000B02 RID: 2818
 	protected float m_modeShift_Damage_Mod = 0.1f;
 
-	// Token: 0x04000928 RID: 2344
+	// Token: 0x04000B03 RID: 2819
 	protected float m_modeShift_Downed_AnimSpeed = 1f;
 
-	// Token: 0x04000929 RID: 2345
+	// Token: 0x04000B04 RID: 2820
 	protected float m_modeShift_Downed_Delay;
 
-	// Token: 0x0400092A RID: 2346
+	// Token: 0x04000B05 RID: 2821
 	protected float m_modeShift_GetUp_AnimSpeed = 1f;
 
-	// Token: 0x0400092B RID: 2347
+	// Token: 0x04000B06 RID: 2822
 	protected float m_modeShift_TellIntro_AnimSpeed = 1.25f;
 
-	// Token: 0x0400092C RID: 2348
+	// Token: 0x04000B07 RID: 2823
 	protected float m_modeShift_TellHold_AnimSpeed = 1.25f;
 
-	// Token: 0x0400092D RID: 2349
+	// Token: 0x04000B08 RID: 2824
 	protected float m_modeShift_TellIntroAndHold_Delay = 2.5f;
 
-	// Token: 0x0400092E RID: 2350
+	// Token: 0x04000B09 RID: 2825
 	protected float m_modeShift_AttackIntro_AnimSpeed = 1.25f;
 
-	// Token: 0x0400092F RID: 2351
+	// Token: 0x04000B0A RID: 2826
 	protected float m_modeShift_AttackHold_AnimSpeed = 1.25f;
 
-	// Token: 0x04000930 RID: 2352
+	// Token: 0x04000B0B RID: 2827
 	protected float m_modeShift_AttackHold_Delay = 1.5f;
 
-	// Token: 0x04000931 RID: 2353
+	// Token: 0x04000B0C RID: 2828
 	protected float m_modeShift_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x04000932 RID: 2354
+	// Token: 0x04000B0D RID: 2829
 	protected float m_modeShift_Exit_Delay;
 
-	// Token: 0x04000933 RID: 2355
+	// Token: 0x04000B0E RID: 2830
 	protected float m_modeShift_Exit_IdleDuration = 0.1f;
 
-	// Token: 0x04000934 RID: 2356
+	// Token: 0x04000B0F RID: 2831
 	protected float m_modeShift_AttackCD = 99f;
 
-	// Token: 0x04000935 RID: 2357
+	// Token: 0x04000B10 RID: 2832
 	protected string MODESHIFT_BOLT_PROJECTILE = "FinalBossModeShiftBoltProjectile";
 
-	// Token: 0x04000936 RID: 2358
+	// Token: 0x04000B11 RID: 2833
 	protected string MODESHIFT_SHOUT_PROJECTILE = "FinalBossModeShiftShoutProjectile";
 
-	// Token: 0x04000937 RID: 2359
+	// Token: 0x04000B12 RID: 2834
 	protected string MODESHIFT_SHOUT_WARNING_PROJECTILE = "FinalBossModeShiftShoutWarningProjectile";
 
-	// Token: 0x04000938 RID: 2360
+	// Token: 0x04000B13 RID: 2835
 	protected int MODESHIFT_SHOUT_POSITION_INDEX = 1;
 
-	// Token: 0x04000939 RID: 2361
+	// Token: 0x04000B14 RID: 2836
 	protected int MODESHIFT_POSITION_INDEX = 14;
 
-	// Token: 0x0400093A RID: 2362
+	// Token: 0x04000B15 RID: 2837
 	protected Vector2 m_modeShift_ThrowAngle = new Vector2(30f, 85f);
 
-	// Token: 0x0400093B RID: 2363
+	// Token: 0x04000B16 RID: 2838
 	protected Vector2 m_modeShift_ThrowPower = new Vector2(1f, 2.65f);
 
-	// Token: 0x0400093C RID: 2364
+	// Token: 0x04000B17 RID: 2839
 	protected float m_modeShift_LoopDelay = 0.225f;
 
-	// Token: 0x0400093D RID: 2365
+	// Token: 0x04000B18 RID: 2840
 	protected int m_modeShift_Loops = 15;
 
-	// Token: 0x0400093E RID: 2366
+	// Token: 0x04000B19 RID: 2841
 	private Projectile_RL m_modeShiftShoutWarningProj;
 
-	// Token: 0x0400093F RID: 2367
+	// Token: 0x04000B1A RID: 2842
 	private Projectile_RL m_modeShiftShoutProj;
 
-	// Token: 0x04000940 RID: 2368
+	// Token: 0x04000B1B RID: 2843
 	private Coroutine m_modeShiftProjectileCoroutine;
 
-	// Token: 0x04000941 RID: 2369
+	// Token: 0x04000B1C RID: 2844
 	protected const string SUMMON_TREE_EXPLOSION_PROJECTILE = "FinalBossTreeExplosionProjectile";
 
-	// Token: 0x04000942 RID: 2370
+	// Token: 0x04000B1D RID: 2845
 	protected const string SUMMON_TREE_WARNING_PROJECTILE = "FinalBossTreeWarningProjectile";
 
-	// Token: 0x04000943 RID: 2371
+	// Token: 0x04000B1E RID: 2846
 	protected const string SUMMON_TREE_PROJECTILE_WHITE = "FinalBossWhiteTreeProjectile";
 
-	// Token: 0x04000944 RID: 2372
+	// Token: 0x04000B1F RID: 2847
 	protected const string SUMMON_TREE_PROJECTILE_BLACK = "FinalBossBlackTreeProjectile";
 
-	// Token: 0x04000945 RID: 2373
+	// Token: 0x04000B20 RID: 2848
 	protected const string TREE_CHASE_PROJECTILE = "FinalBossWhiteTreeBoltProjectile";
 
-	// Token: 0x04000946 RID: 2374
+	// Token: 0x04000B21 RID: 2849
 	protected const string TREE_VOID_PROJECTILE = "FinalBossBlackTreeBoltProjectile";
 
-	// Token: 0x04000947 RID: 2375
+	// Token: 0x04000B22 RID: 2850
 	protected float m_summonTree_AttackDuration = 2f;
 
-	// Token: 0x04000948 RID: 2376
+	// Token: 0x04000B23 RID: 2851
 	protected float m_summonTree_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000949 RID: 2377
+	// Token: 0x04000B24 RID: 2852
 	protected float m_summonTree_TellHold_AnimSpeed = 1.2f;
 
-	// Token: 0x0400094A RID: 2378
+	// Token: 0x04000B25 RID: 2853
 	protected float m_summonTree_TellIntroAndHold_Delay = 0.95f;
 
-	// Token: 0x0400094B RID: 2379
+	// Token: 0x04000B26 RID: 2854
 	protected float m_summonTree_Warning_Delay = 1f;
 
-	// Token: 0x0400094C RID: 2380
+	// Token: 0x04000B27 RID: 2855
 	protected float m_summonTree_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x0400094D RID: 2381
+	// Token: 0x04000B28 RID: 2856
 	protected float m_summonTree_AttackIntro_Delay;
 
-	// Token: 0x0400094E RID: 2382
+	// Token: 0x04000B29 RID: 2857
 	protected float m_summonTree_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x0400094F RID: 2383
+	// Token: 0x04000B2A RID: 2858
 	protected float m_summonTree_AttackHold_Delay;
 
-	// Token: 0x04000950 RID: 2384
+	// Token: 0x04000B2B RID: 2859
 	protected float m_summonTree_AttackHold_ExitDelay = 0.75f;
 
-	// Token: 0x04000951 RID: 2385
+	// Token: 0x04000B2C RID: 2860
 	protected float m_summonTree_Exit_AnimSpeed = 1.2f;
 
-	// Token: 0x04000952 RID: 2386
+	// Token: 0x04000B2D RID: 2861
 	protected float m_summonTree_Exit_Delay;
 
-	// Token: 0x04000953 RID: 2387
+	// Token: 0x04000B2E RID: 2862
 	protected float m_summonTree_Exit_IdleDuration = 0.1f;
 
-	// Token: 0x04000954 RID: 2388
+	// Token: 0x04000B2F RID: 2863
 	protected float m_summonTree_AttackCD = 12f;
 
-	// Token: 0x04000955 RID: 2389
+	// Token: 0x04000B30 RID: 2864
 	protected float m_treeProjectile_InitialDelay = 2.5f;
 
-	// Token: 0x04000956 RID: 2390
+	// Token: 0x04000B31 RID: 2865
 	protected float m_whiteTreeProjectile_Delay = 8f;
 
-	// Token: 0x04000957 RID: 2391
+	// Token: 0x04000B32 RID: 2866
 	protected float m_blackTreeProjectile_Delay = 8f;
 
-	// Token: 0x04000958 RID: 2392
+	// Token: 0x04000B33 RID: 2867
 	protected int m_numTreeVoidProjectiles = 8;
 
-	// Token: 0x04000959 RID: 2393
+	// Token: 0x04000B34 RID: 2868
 	protected float m_treeVoidSpeedMod = 0.65f;
 
-	// Token: 0x0400095A RID: 2394
+	// Token: 0x04000B35 RID: 2869
 	private Projectile_RL m_summonTreeProjectile;
 
-	// Token: 0x0400095B RID: 2395
+	// Token: 0x04000B36 RID: 2870
 	private Projectile_RL m_summonTreeWarningProjectile;
 
-	// Token: 0x0400095C RID: 2396
+	// Token: 0x04000B37 RID: 2871
 	private Coroutine m_treePersistentCoroutine;
 
-	// Token: 0x0400095D RID: 2397
+	// Token: 0x04000B38 RID: 2872
 	private bool m_summonedWhiteTree;
 
-	// Token: 0x0400095E RID: 2398
+	// Token: 0x04000B39 RID: 2873
 	protected const string PRAYER_EXPLOSION_PROJECTILE = "FinalBossTreeExplosionProjectile";
 
-	// Token: 0x0400095F RID: 2399
+	// Token: 0x04000B3A RID: 2874
 	protected const string PRAYER_WARNING_PROJECTILE = "FinalBossTreeWarningProjectile";
 
-	// Token: 0x04000960 RID: 2400
+	// Token: 0x04000B3B RID: 2875
 	protected const string PRAYER_VOID_PROJECTILE = "FinalBossPrayerVoidProjectile";
 
-	// Token: 0x04000961 RID: 2401
+	// Token: 0x04000B3C RID: 2876
 	protected const string PRAYER_BOUNCE_PROJECTILE = "FinalBossPrayerBounceProjectile";
 
-	// Token: 0x04000962 RID: 2402
+	// Token: 0x04000B3D RID: 2877
 	protected const int PRAYER_VOID_POS = 0;
 
-	// Token: 0x04000963 RID: 2403
+	// Token: 0x04000B3E RID: 2878
 	protected const int PRAYER_BOUNCE_POS_1 = 9;
 
-	// Token: 0x04000964 RID: 2404
+	// Token: 0x04000B3F RID: 2879
 	protected const int PRAYER_BOUNCE_POS_2 = 10;
 
-	// Token: 0x04000965 RID: 2405
+	// Token: 0x04000B40 RID: 2880
 	protected const int PRAYER_BOUNCE_POS_3 = 11;
 
-	// Token: 0x04000966 RID: 2406
+	// Token: 0x04000B41 RID: 2881
 	protected const int PRAYER_BOUNCE_POS_4 = 12;
 
-	// Token: 0x04000967 RID: 2407
+	// Token: 0x04000B42 RID: 2882
 	protected const int PRAYER_BOUNCE_POS_5 = 13;
 
-	// Token: 0x04000968 RID: 2408
+	// Token: 0x04000B43 RID: 2883
 	protected float m_prayer_AttackDuration = 2f;
 
-	// Token: 0x04000969 RID: 2409
+	// Token: 0x04000B44 RID: 2884
 	protected float m_prayer_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x0400096A RID: 2410
+	// Token: 0x04000B45 RID: 2885
 	protected float m_prayer_TellHold_AnimSpeed = 1.2f;
 
-	// Token: 0x0400096B RID: 2411
+	// Token: 0x04000B46 RID: 2886
 	protected float m_prayer_TellIntroAndHold_Delay = 1.25f;
 
-	// Token: 0x0400096C RID: 2412
+	// Token: 0x04000B47 RID: 2887
 	protected float m_prayer_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x0400096D RID: 2413
+	// Token: 0x04000B48 RID: 2888
 	protected float m_prayer_AttackIntro_Delay;
 
-	// Token: 0x0400096E RID: 2414
+	// Token: 0x04000B49 RID: 2889
 	protected float m_prayer_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x0400096F RID: 2415
+	// Token: 0x04000B4A RID: 2890
 	protected float m_prayer_AttackHold_Delay;
 
-	// Token: 0x04000970 RID: 2416
+	// Token: 0x04000B4B RID: 2891
 	protected float m_prayer_AttackHold_ExitDelay;
 
-	// Token: 0x04000971 RID: 2417
+	// Token: 0x04000B4C RID: 2892
 	protected float m_prayer_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x04000972 RID: 2418
+	// Token: 0x04000B4D RID: 2893
 	protected float m_prayer_Exit_Delay;
 
-	// Token: 0x04000973 RID: 2419
+	// Token: 0x04000B4E RID: 2894
 	protected float m_prayer_Exit_IdleDuration = 0.1f;
 
-	// Token: 0x04000974 RID: 2420
+	// Token: 0x04000B4F RID: 2895
 	protected float m_prayer_AttackCD = 12f;
 
-	// Token: 0x04000975 RID: 2421
+	// Token: 0x04000B50 RID: 2896
 	protected float m_prayer_VoidLoopDelay = 0.75f;
 
-	// Token: 0x04000976 RID: 2422
+	// Token: 0x04000B51 RID: 2897
 	protected float m_prayer_VoidLoopAdvancedFollowUpDelay = 0.25f;
 
-	// Token: 0x04000977 RID: 2423
+	// Token: 0x04000B52 RID: 2898
 	protected float m_prayer_BounceLoopDelay = 1f;
 
-	// Token: 0x04000978 RID: 2424
+	// Token: 0x04000B53 RID: 2899
 	protected float m_prayer_BounceLoopAdvancedDelay = 0.35f;
 
-	// Token: 0x04000979 RID: 2425
+	// Token: 0x04000B54 RID: 2900
 	protected float m_prayer_BounceAdvancedVoidInitialDelay = 0.85f;
 
-	// Token: 0x0400097A RID: 2426
+	// Token: 0x04000B55 RID: 2901
 	protected const string VERTICAL_BEAM_PROJECTILE_WHITE = "FinalBossWhiteVerticalProjectile";
 
-	// Token: 0x0400097B RID: 2427
+	// Token: 0x04000B56 RID: 2902
 	protected const string VERTICAL_BEAM_PROJECTILE_BLACK = "FinalBossBlackVerticalProjectile";
 
-	// Token: 0x0400097C RID: 2428
+	// Token: 0x04000B57 RID: 2903
 	protected const string VERTICAL_BEAM_VERTICAL_BOLT_PROJECTILE_BLACK = "FinalBossBlackVerticalBoltProjectile";
 
-	// Token: 0x0400097D RID: 2429
+	// Token: 0x04000B58 RID: 2904
 	protected const string VERTICAL_BEAM_BLACK_WARNING_PROJECTILE = "FinalBossBlackVerticalWarningProjectile";
 
-	// Token: 0x0400097E RID: 2430
+	// Token: 0x04000B59 RID: 2905
 	protected const string VERTICAL_BEAM_BLACK_BOUNCE = "FinalBossBounceOrbVerticalProjectile";
 
-	// Token: 0x0400097F RID: 2431
+	// Token: 0x04000B5A RID: 2906
 	protected const string VERTICAL_BEAM_BLACK_VOID = "FinalBossVerticalVoidSmallProjectile";
 
-	// Token: 0x04000980 RID: 2432
+	// Token: 0x04000B5B RID: 2907
 	protected const string VERTICAL_CURSE_PROJECTILE = "FinalBossVerticalCurseProjectile";
 
-	// Token: 0x04000981 RID: 2433
+	// Token: 0x04000B5C RID: 2908
 	protected const string VERTICAL_CURSE_BLUE_PROJECTILE = "FinalBossVerticalCurseBlueProjectile";
 
-	// Token: 0x04000982 RID: 2434
+	// Token: 0x04000B5D RID: 2909
 	protected const int VERTICAL_BEAM_WHITE_POS_INDEX = 2;
 
-	// Token: 0x04000983 RID: 2435
+	// Token: 0x04000B5E RID: 2910
 	protected float m_verticalBeam_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000984 RID: 2436
+	// Token: 0x04000B5F RID: 2911
 	protected float m_verticalBeam_TellHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000985 RID: 2437
+	// Token: 0x04000B60 RID: 2912
 	protected float m_verticalBeam_TellIntroAndHold_Delay = 1.1f;
 
-	// Token: 0x04000986 RID: 2438
+	// Token: 0x04000B61 RID: 2913
 	protected float m_verticalBeam_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x04000987 RID: 2439
+	// Token: 0x04000B62 RID: 2914
 	protected float m_verticalBeam_AttackIntro_Delay;
 
-	// Token: 0x04000988 RID: 2440
+	// Token: 0x04000B63 RID: 2915
 	protected float m_verticalBeam_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x04000989 RID: 2441
+	// Token: 0x04000B64 RID: 2916
 	protected float m_verticalBeam_AttackHold_Delay;
 
-	// Token: 0x0400098A RID: 2442
+	// Token: 0x04000B65 RID: 2917
 	protected float m_verticalBeam_AttackHold_ExitDelay = 0.45f;
 
-	// Token: 0x0400098B RID: 2443
+	// Token: 0x04000B66 RID: 2918
 	protected float m_verticalBeam_Exit_AnimSpeed = 1.2f;
 
-	// Token: 0x0400098C RID: 2444
+	// Token: 0x04000B67 RID: 2919
 	protected float m_verticalBeam_Exit_Delay;
 
-	// Token: 0x0400098D RID: 2445
+	// Token: 0x04000B68 RID: 2920
 	protected float m_verticalBeam_Exit_IdleDuration = 0.1f;
 
-	// Token: 0x0400098E RID: 2446
+	// Token: 0x04000B69 RID: 2921
 	protected float m_verticalBeam_AttackCD = 12f;
 
-	// Token: 0x0400098F RID: 2447
+	// Token: 0x04000B6A RID: 2922
 	protected float m_verticalBeam_AttackDuration = 2f;
 
-	// Token: 0x04000990 RID: 2448
+	// Token: 0x04000B6B RID: 2923
 	protected int m_verticalBeamFireballSpread = 720;
 
-	// Token: 0x04000991 RID: 2449
+	// Token: 0x04000B6C RID: 2924
 	protected float m_verticalBeamBlackInitialDelay = 1.35f;
 
-	// Token: 0x04000992 RID: 2450
+	// Token: 0x04000B6D RID: 2925
 	protected float m_verticalBeamBlackLoopDelay = 0.6f;
 
-	// Token: 0x04000993 RID: 2451
+	// Token: 0x04000B6E RID: 2926
 	protected Projectile_RL m_verticalBeamBlackWarningProjectile;
 
-	// Token: 0x04000994 RID: 2452
+	// Token: 0x04000B6F RID: 2927
 	protected Projectile_RL m_verticalBeamBlackProjectile;
 
-	// Token: 0x04000995 RID: 2453
+	// Token: 0x04000B70 RID: 2928
 	protected Projectile_RL m_verticalBeamBoltBlackProjectile;
 
-	// Token: 0x04000996 RID: 2454
+	// Token: 0x04000B71 RID: 2929
 	private Coroutine m_delayVerticalBeamBlackCoroutine;
 
-	// Token: 0x04000997 RID: 2455
+	// Token: 0x04000B72 RID: 2930
 	protected const string SPINNING_JUMP_AXE_SPIN_PROJECTILE = "SpellSwordAxeSpinProjectile";
 
-	// Token: 0x04000998 RID: 2456
+	// Token: 0x04000B73 RID: 2931
 	protected const string SPINNING_JUMP_SWORD_SLASH_PROJECTILE = "FinalBossSwordSlashProjectile";
 
-	// Token: 0x04000999 RID: 2457
+	// Token: 0x04000B74 RID: 2932
 	protected const string SPINNING_JUMP_LAND_PROJECTILE_MAGMA = "FinalBossMagmaProjectile";
 
-	// Token: 0x0400099A RID: 2458
+	// Token: 0x04000B75 RID: 2933
 	protected const string SPINNING_JUMP_LAND_PROJECTILE_ROLLING = "FinalBossRollingProjectile";
 
-	// Token: 0x0400099B RID: 2459
+	// Token: 0x04000B76 RID: 2934
 	protected const int SPINNING_JUMP_SPIN_PROJ_INDEX = 3;
 
-	// Token: 0x0400099C RID: 2460
+	// Token: 0x04000B77 RID: 2935
 	protected const int SPINNING_JUMP_LAND_SWORD_PROJ_INDEX = 4;
 
-	// Token: 0x0400099D RID: 2461
+	// Token: 0x04000B78 RID: 2936
 	protected const int SPINNING_JUMP_LAND_CENTRE_PROJ_INDEX = 0;
 
-	// Token: 0x0400099E RID: 2462
+	// Token: 0x04000B79 RID: 2937
 	protected const int SPINNING_JUMP_LAND_BACK_PROJ_INDEX = 5;
 
-	// Token: 0x0400099F RID: 2463
+	// Token: 0x04000B7A RID: 2938
 	protected const int SPINNING_JUMP_LAND_FRONT_PROJ_INDEX = 6;
 
-	// Token: 0x040009A0 RID: 2464
+	// Token: 0x04000B7B RID: 2939
 	protected float m_jump_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x040009A1 RID: 2465
+	// Token: 0x04000B7C RID: 2940
 	protected float m_jump_TellIntroAndHold_Delay = 0.65f;
 
-	// Token: 0x040009A2 RID: 2466
+	// Token: 0x04000B7D RID: 2941
 	protected float m_spinningJump_TellIntro_AnimSpeed = 1.5f;
 
-	// Token: 0x040009A3 RID: 2467
+	// Token: 0x04000B7E RID: 2942
 	protected float m_spinningJump_TellHold_AnimSpeed = 1.5f;
 
-	// Token: 0x040009A4 RID: 2468
+	// Token: 0x04000B7F RID: 2943
 	protected float m_spinningJump_TellIntroAndHold_Delay = 0.85f;
 
-	// Token: 0x040009A5 RID: 2469
+	// Token: 0x04000B80 RID: 2944
 	protected float m_spinningJump_AttackIntro_AnimSpeed = 1.5f;
 
-	// Token: 0x040009A6 RID: 2470
+	// Token: 0x04000B81 RID: 2945
 	protected float m_spinningJump_AttackIntro_Delay;
 
-	// Token: 0x040009A7 RID: 2471
+	// Token: 0x04000B82 RID: 2946
 	protected float m_spinningJump_AttackHold_AnimSpeed = 1.5f;
 
-	// Token: 0x040009A8 RID: 2472
+	// Token: 0x04000B83 RID: 2947
 	protected float m_spinningJump_AttackHold_Delay;
 
-	// Token: 0x040009A9 RID: 2473
+	// Token: 0x04000B84 RID: 2948
 	protected float m_spinningJump_AttackHold_ExitDelay;
 
-	// Token: 0x040009AA RID: 2474
+	// Token: 0x04000B85 RID: 2949
 	protected float m_spinningJump_ExitHold_Delay = 0.375f;
 
-	// Token: 0x040009AB RID: 2475
+	// Token: 0x04000B86 RID: 2950
 	protected float m_spinningJump_ExitHold_AnimSpeed = 1.2f;
 
-	// Token: 0x040009AC RID: 2476
+	// Token: 0x04000B87 RID: 2951
 	protected float m_spinningJump_Exit_AnimSpeed = 1.2f;
 
-	// Token: 0x040009AD RID: 2477
+	// Token: 0x04000B88 RID: 2952
 	protected float m_spinningJump_Exit_Delay;
 
-	// Token: 0x040009AE RID: 2478
+	// Token: 0x04000B89 RID: 2953
 	protected float m_spinningJump_Exit_IdleDuration = 0.1f;
 
-	// Token: 0x040009AF RID: 2479
+	// Token: 0x04000B8A RID: 2954
 	protected float m_spinningJump_AttackCD = 12f;
 
-	// Token: 0x040009B0 RID: 2480
+	// Token: 0x04000B8B RID: 2955
 	protected Vector2 m_spinningJump_Land_ThrowAngle = new Vector2(85f, 85f);
 
-	// Token: 0x040009B1 RID: 2481
+	// Token: 0x04000B8C RID: 2956
 	protected Vector2 m_spinningJump_Land_ThrowAngle2 = new Vector2(76f, 76f);
 
-	// Token: 0x040009B2 RID: 2482
+	// Token: 0x04000B8D RID: 2957
 	protected Vector2 m_spinningJump_Land_ThrowAngle3 = new Vector2(71f, 71f);
 
-	// Token: 0x040009B3 RID: 2483
+	// Token: 0x04000B8E RID: 2958
 	protected Vector2 m_spinningJump_Land_ThrowAngle4 = new Vector2(55f, 55f);
 
-	// Token: 0x040009B4 RID: 2484
+	// Token: 0x04000B8F RID: 2959
 	protected Vector2 m_spinningJump_Land_ThrowAngle5 = new Vector2(82f, 82f);
 
-	// Token: 0x040009B5 RID: 2485
+	// Token: 0x04000B90 RID: 2960
 	protected Vector2 m_spinningJump_Land_ThrowAngle6 = new Vector2(74f, 74f);
 
-	// Token: 0x040009B6 RID: 2486
+	// Token: 0x04000B91 RID: 2961
 	protected Vector2 m_spinningJump_Land_ThrowPower = new Vector2(1f, 1f);
 
-	// Token: 0x040009B7 RID: 2487
+	// Token: 0x04000B92 RID: 2962
 	protected float m_spinningJump_Land_ThrowPowerHighMod = 1.2f;
 
-	// Token: 0x040009B8 RID: 2488
+	// Token: 0x04000B93 RID: 2963
 	protected float m_spinningJump_Land_ThrowPowerHighModAdvanced = 1.4f;
 
-	// Token: 0x040009B9 RID: 2489
+	// Token: 0x04000B94 RID: 2964
 	protected float m_spinningJump_Land_RollingPowerMod = 0.3f;
 
-	// Token: 0x040009BA RID: 2490
+	// Token: 0x04000B95 RID: 2965
 	protected float m_spinningJump_Land_RollingPowerModAdvanced = 0.15f;
 
-	// Token: 0x040009BB RID: 2491
+	// Token: 0x04000B96 RID: 2966
 	protected bool m_spinningJump_Spawn_AxeSpin;
 
-	// Token: 0x040009BC RID: 2492
+	// Token: 0x04000B97 RID: 2967
 	protected Projectile_RL m_spinningJumpProjectile;
 
-	// Token: 0x040009BD RID: 2493
+	// Token: 0x04000B98 RID: 2968
 	protected Vector2 m_spinningJump_AttackVelocity = new Vector2(11f, 36f);
 
-	// Token: 0x040009BE RID: 2494
+	// Token: 0x04000B99 RID: 2969
 	protected const string SWORD_PROJECTILE = "SpellSwordSlashDownProjectile";
 
-	// Token: 0x040009BF RID: 2495
+	// Token: 0x04000B9A RID: 2970
 	protected const string SWORD_BONE_BIG_PROJECTILE = "FinalBossBoneBigProjectile";
 
-	// Token: 0x040009C0 RID: 2496
+	// Token: 0x04000B9B RID: 2971
 	protected const string SWORD_BONE_BIG_HORIZONTAL_PROJECTILE = "FinalBossBoneBigHorizontalProjectile";
 
-	// Token: 0x040009C1 RID: 2497
+	// Token: 0x04000B9C RID: 2972
 	protected const string SWORD_BONE_BIG_DIAGONAL_PROJECTILE = "FinalBossBoneBigDiagonalProjectile";
 
-	// Token: 0x040009C2 RID: 2498
+	// Token: 0x04000B9D RID: 2973
 	protected const string SWORD_BONE_SMALL_PROJECTILE = "FinalBossBoneSmallProjectile";
 
-	// Token: 0x040009C3 RID: 2499
+	// Token: 0x04000B9E RID: 2974
 	protected const string SWORD_WRAPPED_BOUNCE_SMALL_PROJECTILE = "FinalBossWrappedBounceSmallProjectile";
 
-	// Token: 0x040009C4 RID: 2500
+	// Token: 0x04000B9F RID: 2975
 	protected const string SWORD_WRAPPED_VOID_SMALL_PROJECTILE = "FinalBossWrappedVoidSmallProjectile";
 
-	// Token: 0x040009C5 RID: 2501
+	// Token: 0x04000BA0 RID: 2976
 	protected const string SWORD_WRAPPED_BOUNCE_BIG_PROJECTILE = "FinalBossWrappedBounceBigProjectile";
 
-	// Token: 0x040009C6 RID: 2502
+	// Token: 0x04000BA1 RID: 2977
 	protected const string SWORD_WRAPPED_VOID_BIG_PROJECTILE = "FinalBossWrappedVoidBigProjectile";
 
-	// Token: 0x040009C7 RID: 2503
+	// Token: 0x04000BA2 RID: 2978
 	protected const string SWORD_POTION_PROJECTILE = "FinalBossPotionProjectile";
 
-	// Token: 0x040009C8 RID: 2504
+	// Token: 0x04000BA3 RID: 2979
 	protected const string SWORD_POTION_EXPLOSION_PROJECTILE = "FinalBossPotionExplosionProjectile";
 
-	// Token: 0x040009C9 RID: 2505
+	// Token: 0x04000BA4 RID: 2980
 	protected const int SWORD_WRAPPED_POS_INDEX = 15;
 
-	// Token: 0x040009CA RID: 2506
+	// Token: 0x04000BA5 RID: 2981
 	protected const int SWORD_WRAPPED_POS_INDEX2 = 16;
 
-	// Token: 0x040009CB RID: 2507
+	// Token: 0x04000BA6 RID: 2982
 	protected const int SWORD_BIG_ROTATING_POS_INDEX = 7;
 
-	// Token: 0x040009CC RID: 2508
+	// Token: 0x04000BA7 RID: 2983
 	protected const int SWORD_SMALL_ROTATING_POS_INDEX = 8;
 
-	// Token: 0x040009CD RID: 2509
+	// Token: 0x04000BA8 RID: 2984
 	protected const int SWORD_SWING_POS_INDEX = 17;
 
-	// Token: 0x040009CE RID: 2510
+	// Token: 0x04000BA9 RID: 2985
 	protected float m_sword_AttackSpeed = 16f;
 
-	// Token: 0x040009CF RID: 2511
+	// Token: 0x04000BAA RID: 2986
 	protected float m_sword_AttackDuration = 0.185f;
 
-	// Token: 0x040009D0 RID: 2512
+	// Token: 0x04000BAB RID: 2987
 	protected float m_sword_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x040009D1 RID: 2513
+	// Token: 0x04000BAC RID: 2988
 	protected float m_sword_TellHold_AnimSpeed = 1.2f;
 
-	// Token: 0x040009D2 RID: 2514
+	// Token: 0x04000BAD RID: 2989
 	protected float m_sword_TellIntroAndHold_Delay = 0.95f;
 
-	// Token: 0x040009D3 RID: 2515
+	// Token: 0x04000BAE RID: 2990
 	protected float m_sword_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x040009D4 RID: 2516
+	// Token: 0x04000BAF RID: 2991
 	protected float m_sword_AttackIntro_Delay;
 
-	// Token: 0x040009D5 RID: 2517
+	// Token: 0x04000BB0 RID: 2992
 	protected float m_sword_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x040009D6 RID: 2518
+	// Token: 0x04000BB1 RID: 2993
 	protected float m_sword_AttackHold_Delay;
 
-	// Token: 0x040009D7 RID: 2519
+	// Token: 0x04000BB2 RID: 2994
 	protected float m_sword_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x040009D8 RID: 2520
+	// Token: 0x04000BB3 RID: 2995
 	protected float m_sword_Exit_Delay;
 
-	// Token: 0x040009D9 RID: 2521
+	// Token: 0x04000BB4 RID: 2996
 	protected float m_sword_Exit_IdleDuration = 0.1f;
 
-	// Token: 0x040009DA RID: 2522
+	// Token: 0x04000BB5 RID: 2997
 	protected float m_sword_AttackCD = 12f;
 
-	// Token: 0x040009DB RID: 2523
+	// Token: 0x04000BB6 RID: 2998
 	protected float m_sword_BlackProjectile_Delay = 0.65f;
 
-	// Token: 0x040009DC RID: 2524
+	// Token: 0x04000BB7 RID: 2999
 	private Coroutine m_swordAttackBlackSecondProjectileCoroutine;
 
-	// Token: 0x040009DD RID: 2525
+	// Token: 0x04000BB8 RID: 3000
 	protected const string PORTAL_PROJECTILE_LINE = "FinalBossPortalLineProjectile";
 
-	// Token: 0x040009DE RID: 2526
+	// Token: 0x04000BB9 RID: 3001
 	protected const string PORTAL_PROJECTILE_BOLT = "FinalBossPortalBoltProjectile";
 
-	// Token: 0x040009DF RID: 2527
+	// Token: 0x04000BBA RID: 3002
 	protected const string PORTAL_PROJECTILE_EXPLOSION = "FinalBossPortalExplosionProjectile";
 
-	// Token: 0x040009E0 RID: 2528
+	// Token: 0x04000BBB RID: 3003
 	protected const string PORTAL_WARNING_PROJECTILE = "FinalBossPortalWarningProjectile";
 
-	// Token: 0x040009E1 RID: 2529
+	// Token: 0x04000BBC RID: 3004
 	protected const string PORTAL_WARNING_INVERSE_PROJECTILE = "FinalBossPortalInverseWarningProjectile";
 
-	// Token: 0x040009E2 RID: 2530
+	// Token: 0x04000BBD RID: 3005
 	protected float m_portal_AttackSpeed = 16f;
 
-	// Token: 0x040009E3 RID: 2531
+	// Token: 0x04000BBE RID: 3006
 	protected float m_portal_AttackDuration = 0.185f;
 
-	// Token: 0x040009E4 RID: 2532
+	// Token: 0x04000BBF RID: 3007
 	protected float m_portal_TellIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x040009E5 RID: 2533
+	// Token: 0x04000BC0 RID: 3008
 	protected float m_portal_TellHold_AnimSpeed = 1.2f;
 
-	// Token: 0x040009E6 RID: 2534
+	// Token: 0x04000BC1 RID: 3009
 	protected float m_portal_TellIntroAndHold_Delay = 1.25f;
 
-	// Token: 0x040009E7 RID: 2535
+	// Token: 0x04000BC2 RID: 3010
 	protected float m_portal_AttackIntro_AnimSpeed = 1.2f;
 
-	// Token: 0x040009E8 RID: 2536
+	// Token: 0x04000BC3 RID: 3011
 	protected float m_portal_AttackIntro_Delay;
 
-	// Token: 0x040009E9 RID: 2537
+	// Token: 0x04000BC4 RID: 3012
 	protected float m_portal_AttackHold_AnimSpeed = 1.2f;
 
-	// Token: 0x040009EA RID: 2538
+	// Token: 0x04000BC5 RID: 3013
 	protected float m_portal_AttackHold_Delay;
 
-	// Token: 0x040009EB RID: 2539
+	// Token: 0x04000BC6 RID: 3014
 	protected float m_portal_Exit_AnimSpeed = 0.65f;
 
-	// Token: 0x040009EC RID: 2540
+	// Token: 0x04000BC7 RID: 3015
 	protected float m_portal_Exit_Delay;
 
-	// Token: 0x040009ED RID: 2541
+	// Token: 0x04000BC8 RID: 3016
 	protected float m_portal_Exit_IdleDuration = 0.1f;
 
-	// Token: 0x040009EE RID: 2542
+	// Token: 0x04000BC9 RID: 3017
 	protected float m_portal_AttackCD = 12f;
 
-	// Token: 0x040009EF RID: 2543
+	// Token: 0x04000BCA RID: 3018
 	protected Projectile_RL m_portalWarningProj;
 
-	// Token: 0x040009F0 RID: 2544
+	// Token: 0x04000BCB RID: 3019
 	protected Projectile_RL m_portalProjectile;
 
-	// Token: 0x040009F1 RID: 2545
+	// Token: 0x04000BCC RID: 3020
 	protected Coroutine m_portalWhiteAttackPersistentCoroutine;
 
-	// Token: 0x040009F2 RID: 2546
+	// Token: 0x04000BCD RID: 3021
 	protected const string DEATH_INTRO = "Death_Intro";
 
-	// Token: 0x040009F3 RID: 2547
+	// Token: 0x04000BCE RID: 3022
 	protected const string DEATH_HOLD = "Death";
 
-	// Token: 0x040009F4 RID: 2548
+	// Token: 0x04000BCF RID: 3023
 	protected float m_death_Intro_AnimSpeed = 1f;
 
-	// Token: 0x040009F5 RID: 2549
+	// Token: 0x04000BD0 RID: 3024
 	protected float m_death_Intro_Delay;
 
-	// Token: 0x040009F6 RID: 2550
+	// Token: 0x04000BD1 RID: 3025
 	protected float m_death_Hold_AnimSpeed = 1f;
 
-	// Token: 0x040009F7 RID: 2551
+	// Token: 0x04000BD2 RID: 3026
 	protected float m_death_Hold_Delay = 5.5f;
 
-	// Token: 0x040009F8 RID: 2552
+	// Token: 0x04000BD3 RID: 3027
 	protected const string SPAWN_INTRO = "Transform";
 }

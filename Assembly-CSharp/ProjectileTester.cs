@@ -2,16 +2,16 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002B3 RID: 691
+// Token: 0x0200049F RID: 1183
 public class ProjectileTester : MonoBehaviour
 {
-	// Token: 0x06001B80 RID: 7040 RVA: 0x000584BF File Offset: 0x000566BF
+	// Token: 0x06002622 RID: 9762 RVA: 0x000152D6 File Offset: 0x000134D6
 	private void OnEnable()
 	{
 		base.StartCoroutine(this.FireCoroutine());
 	}
 
-	// Token: 0x06001B81 RID: 7041 RVA: 0x000584CE File Offset: 0x000566CE
+	// Token: 0x06002623 RID: 9763 RVA: 0x000152E5 File Offset: 0x000134E5
 	private IEnumerator FireCoroutine()
 	{
 		float delay = this.m_initialDelay + Time.time;
@@ -71,15 +71,15 @@ public class ProjectileTester : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0400192D RID: 6445
+	// Token: 0x0400210C RID: 8460
 	[SerializeField]
 	private string m_projectilePrefabName;
 
-	// Token: 0x0400192E RID: 6446
+	// Token: 0x0400210D RID: 8461
 	[SerializeField]
 	private float m_initialDelay = 1f;
 
-	// Token: 0x0400192F RID: 6447
+	// Token: 0x0400210E RID: 8462
 	[SerializeField]
 	private float m_fireInterval = 0.25f;
 }

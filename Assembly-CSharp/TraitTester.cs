@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000365 RID: 869
+// Token: 0x020005DC RID: 1500
 public class TraitTester : MonoBehaviour
 {
-	// Token: 0x17000DF6 RID: 3574
-	// (get) Token: 0x060020AA RID: 8362 RVA: 0x00066DDE File Offset: 0x00064FDE
-	// (set) Token: 0x060020AB RID: 8363 RVA: 0x00066DE6 File Offset: 0x00064FE6
+	// Token: 0x17001263 RID: 4707
+	// (get) Token: 0x06002E49 RID: 11849 RVA: 0x00019539 File Offset: 0x00017739
+	// (set) Token: 0x06002E4A RID: 11850 RVA: 0x00019541 File Offset: 0x00017741
 	public TraitType Trait1
 	{
 		get
@@ -20,9 +20,9 @@ public class TraitTester : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000DF7 RID: 3575
-	// (get) Token: 0x060020AC RID: 8364 RVA: 0x00066DEF File Offset: 0x00064FEF
-	// (set) Token: 0x060020AD RID: 8365 RVA: 0x00066DF7 File Offset: 0x00064FF7
+	// Token: 0x17001264 RID: 4708
+	// (get) Token: 0x06002E4B RID: 11851 RVA: 0x0001954A File Offset: 0x0001774A
+	// (set) Token: 0x06002E4C RID: 11852 RVA: 0x00019552 File Offset: 0x00017752
 	public TraitType Trait2
 	{
 		get
@@ -35,7 +35,7 @@ public class TraitTester : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060020AE RID: 8366 RVA: 0x00066E00 File Offset: 0x00065000
+	// Token: 0x06002E4D RID: 11853 RVA: 0x0001955B File Offset: 0x0001775B
 	private void OnEnable()
 	{
 		if (!this.m_traitsTriggered)
@@ -44,7 +44,7 @@ public class TraitTester : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060020AF RID: 8367 RVA: 0x00066E17 File Offset: 0x00065017
+	// Token: 0x06002E4E RID: 11854 RVA: 0x0001955B File Offset: 0x0001775B
 	private void Start()
 	{
 		if (!this.m_traitsTriggered)
@@ -53,7 +53,7 @@ public class TraitTester : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060020B0 RID: 8368 RVA: 0x00066E2E File Offset: 0x0006502E
+	// Token: 0x06002E4F RID: 11855 RVA: 0x00019572 File Offset: 0x00017772
 	private IEnumerator TestCoroutine()
 	{
 		this.m_traitsTriggered = true;
@@ -64,14 +64,14 @@ public class TraitTester : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04001C67 RID: 7271
+	// Token: 0x04002606 RID: 9734
 	[SerializeField]
 	private TraitType m_trait1Test;
 
-	// Token: 0x04001C68 RID: 7272
+	// Token: 0x04002607 RID: 9735
 	[SerializeField]
 	private TraitType m_trait2Test;
 
-	// Token: 0x04001C69 RID: 7273
+	// Token: 0x04002608 RID: 9736
 	private bool m_traitsTriggered;
 }

@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004A9 RID: 1193
+// Token: 0x020007B6 RID: 1974
 public class ReduceXVelocityProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B94 RID: 11156 RVA: 0x0009411C File Offset: 0x0009231C
+	// Token: 0x06003C07 RID: 15367 RVA: 0x00021223 File Offset: 0x0001F423
 	private void OnEnable()
 	{
 		this.m_movingRight = (base.SourceProjectile.Velocity.x > 0f);
 	}
 
-	// Token: 0x06002B95 RID: 11157 RVA: 0x0009413C File Offset: 0x0009233C
+	// Token: 0x06003C08 RID: 15368 RVA: 0x000F5810 File Offset: 0x000F3A10
 	private void LateUpdate()
 	{
 		if (this.m_movingRight)
@@ -39,10 +39,10 @@ public class ReduceXVelocityProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x04002370 RID: 9072
+	// Token: 0x04002FAA RID: 12202
 	[SerializeField]
 	private float m_xAccelerationReductionSpeed = 1f;
 
-	// Token: 0x04002371 RID: 9073
+	// Token: 0x04002FAB RID: 12203
 	private bool m_movingRight;
 }

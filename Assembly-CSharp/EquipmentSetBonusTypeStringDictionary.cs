@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200001F RID: 31
+// Token: 0x02000022 RID: 34
 [Serializable]
 public class EquipmentSetBonusTypeStringDictionary : SerializableDictionary<EquipmentSetBonusType, string>
 {

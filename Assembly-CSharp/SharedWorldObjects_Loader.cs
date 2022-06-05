@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x02000815 RID: 2069
+// Token: 0x02000CE6 RID: 3302
 public class SharedWorldObjects_Loader : MonoBehaviour
 {
-	// Token: 0x170016F8 RID: 5880
-	// (get) Token: 0x0600444F RID: 17487 RVA: 0x000F1997 File Offset: 0x000EFB97
-	// (set) Token: 0x06004450 RID: 17488 RVA: 0x000F199E File Offset: 0x000EFB9E
+	// Token: 0x17001F00 RID: 7936
+	// (get) Token: 0x06005E09 RID: 24073 RVA: 0x00033C79 File Offset: 0x00031E79
+	// (set) Token: 0x06005E0A RID: 24074 RVA: 0x00033C80 File Offset: 0x00031E80
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06004451 RID: 17489 RVA: 0x000F19A8 File Offset: 0x000EFBA8
+	// Token: 0x06005E0B RID: 24075 RVA: 0x0015F550 File Offset: 0x0015D750
 	private void Awake()
 	{
 		if (SharedWorldObjects_Loader.m_instance == null)
@@ -30,7 +30,7 @@ public class SharedWorldObjects_Loader : MonoBehaviour
 		UnityEngine.Object.DestroyImmediate(base.gameObject);
 	}
 
-	// Token: 0x06004452 RID: 17490 RVA: 0x000F1A3C File Offset: 0x000EFC3C
+	// Token: 0x06005E0C RID: 24076 RVA: 0x0015F5E4 File Offset: 0x0015D7E4
 	private void LoadSync()
 	{
 		this.m_rootGameObject = new GameObject("SharedWorldObjects", new Type[]
@@ -50,7 +50,7 @@ public class SharedWorldObjects_Loader : MonoBehaviour
 		SharedWorldObjects_Loader.IsInitialized = true;
 	}
 
-	// Token: 0x06004453 RID: 17491 RVA: 0x000F1AD5 File Offset: 0x000EFCD5
+	// Token: 0x06005E0D RID: 24077 RVA: 0x00033C88 File Offset: 0x00031E88
 	private IEnumerator LoadAsync()
 	{
 		this.m_rootGameObject = new GameObject("SharedWorldObjects", new Type[]
@@ -80,7 +80,7 @@ public class SharedWorldObjects_Loader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06004454 RID: 17492 RVA: 0x000F1AE4 File Offset: 0x000EFCE4
+	// Token: 0x06005E0E RID: 24078 RVA: 0x00033C97 File Offset: 0x00031E97
 	private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
 	{
 		if (this.m_destroyImmediatelyOnLoadScenes.Contains(scene.name))
@@ -90,7 +90,7 @@ public class SharedWorldObjects_Loader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06004455 RID: 17493 RVA: 0x000F1B0A File Offset: 0x000EFD0A
+	// Token: 0x06005E0F RID: 24079 RVA: 0x00033CBD File Offset: 0x00031EBD
 	private void OnSceneUnloaded(Scene scene)
 	{
 		if (this.m_destroyOnUnloadScenes.Contains(scene.name))
@@ -100,7 +100,7 @@ public class SharedWorldObjects_Loader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06004456 RID: 17494 RVA: 0x000F1B30 File Offset: 0x000EFD30
+	// Token: 0x06005E10 RID: 24080 RVA: 0x0015F680 File Offset: 0x0015D880
 	private void OnDestroy()
 	{
 		if (SharedWorldObjects_Loader.m_instance == this)
@@ -113,21 +113,21 @@ public class SharedWorldObjects_Loader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003A53 RID: 14931
+	// Token: 0x04004D40 RID: 19776
 	[SerializeField]
 	private string m_sharedWorldObjects;
 
-	// Token: 0x04003A54 RID: 14932
+	// Token: 0x04004D41 RID: 19777
 	[SerializeField]
 	private List<string> m_destroyImmediatelyOnLoadScenes;
 
-	// Token: 0x04003A55 RID: 14933
+	// Token: 0x04004D42 RID: 19778
 	[SerializeField]
 	private List<string> m_destroyOnUnloadScenes;
 
-	// Token: 0x04003A56 RID: 14934
+	// Token: 0x04004D43 RID: 19779
 	private static SharedWorldObjects_Loader m_instance;
 
-	// Token: 0x04003A57 RID: 14935
+	// Token: 0x04004D44 RID: 19780
 	private GameObject m_rootGameObject;
 }

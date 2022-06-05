@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020004BE RID: 1214
+// Token: 0x020007D9 RID: 2009
 public class Sky : MonoBehaviour
 {
-	// Token: 0x17001143 RID: 4419
-	// (get) Token: 0x06002D26 RID: 11558 RVA: 0x00099086 File Offset: 0x00097286
-	// (set) Token: 0x06002D27 RID: 11559 RVA: 0x0009908E File Offset: 0x0009728E
+	// Token: 0x170016B0 RID: 5808
+	// (get) Token: 0x06003DE4 RID: 15844 RVA: 0x00022426 File Offset: 0x00020626
+	// (set) Token: 0x06003DE5 RID: 15845 RVA: 0x0002242E File Offset: 0x0002062E
 	public List<BaseRoom> RoomList { get; private set; } = new List<BaseRoom>();
 
-	// Token: 0x17001144 RID: 4420
-	// (get) Token: 0x06002D28 RID: 11560 RVA: 0x00099097 File Offset: 0x00097297
+	// Token: 0x170016B1 RID: 5809
+	// (get) Token: 0x06003DE6 RID: 15846 RVA: 0x00022437 File Offset: 0x00020637
 	public Renderer SkyRenderer
 	{
 		get
@@ -20,12 +20,12 @@ public class Sky : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001145 RID: 4421
-	// (get) Token: 0x06002D29 RID: 11561 RVA: 0x0009909F File Offset: 0x0009729F
-	// (set) Token: 0x06002D2A RID: 11562 RVA: 0x000990A7 File Offset: 0x000972A7
+	// Token: 0x170016B2 RID: 5810
+	// (get) Token: 0x06003DE7 RID: 15847 RVA: 0x0002243F File Offset: 0x0002063F
+	// (set) Token: 0x06003DE8 RID: 15848 RVA: 0x00022447 File Offset: 0x00020647
 	public bool IsHeirloomSky { get; set; }
 
-	// Token: 0x06002D2B RID: 11563 RVA: 0x000990B0 File Offset: 0x000972B0
+	// Token: 0x06003DE9 RID: 15849 RVA: 0x000FA0B0 File Offset: 0x000F82B0
 	private void Awake()
 	{
 		this.m_onEnterLineage = new Action<MonoBehaviour, EventArgs>(this.OnEnterLineage);
@@ -39,14 +39,14 @@ public class Sky : MonoBehaviour
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06002D2C RID: 11564 RVA: 0x00099128 File Offset: 0x00097328
+	// Token: 0x06003DEA RID: 15850 RVA: 0x00022450 File Offset: 0x00020650
 	private void OnDestroy()
 	{
 		Messenger<SceneMessenger, SceneEvent>.RemoveListener(SceneEvent.EnterLineageScreen, this.m_onEnterLineage);
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x06002D2D RID: 11565 RVA: 0x00099142 File Offset: 0x00097342
+	// Token: 0x06003DEB RID: 15851 RVA: 0x0001AF26 File Offset: 0x00019126
 	private void OnEnterLineage(object sender, EventArgs args)
 	{
 		if (!base.gameObject.activeSelf)
@@ -55,7 +55,7 @@ public class Sky : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D2E RID: 11566 RVA: 0x00099160 File Offset: 0x00097360
+	// Token: 0x06003DEC RID: 15852 RVA: 0x000FA128 File Offset: 0x000F8328
 	private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		RoomViaDoorEventArgs roomViaDoorEventArgs = eventArgs as RoomViaDoorEventArgs;
@@ -103,7 +103,7 @@ public class Sky : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D2F RID: 11567 RVA: 0x00099334 File Offset: 0x00097534
+	// Token: 0x06003DED RID: 15853 RVA: 0x000FA2FC File Offset: 0x000F84FC
 	private bool GetShouldSkyBeActive(BaseRoom room)
 	{
 		bool result = false;
@@ -114,26 +114,26 @@ public class Sky : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x0400243F RID: 9279
+	// Token: 0x040030AF RID: 12463
 	private const float BG_PERSP_SCALE_OFFSET = 1.5f;
 
-	// Token: 0x04002440 RID: 9280
+	// Token: 0x040030B0 RID: 12464
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	private Renderer m_skyRenderer;
 
-	// Token: 0x04002441 RID: 9281
+	// Token: 0x040030B1 RID: 12465
 	private Vector3 m_storedScale = Vector3.one;
 
-	// Token: 0x04002442 RID: 9282
+	// Token: 0x040030B2 RID: 12466
 	private static SkyLightChangedEventArgs m_skylightEventArgs;
 
-	// Token: 0x04002443 RID: 9283
+	// Token: 0x040030B3 RID: 12467
 	private static Sky m_currentSky;
 
-	// Token: 0x04002444 RID: 9284
+	// Token: 0x040030B4 RID: 12468
 	private Action<MonoBehaviour, EventArgs> m_onEnterLineage;
 
-	// Token: 0x04002445 RID: 9285
+	// Token: 0x040030B5 RID: 12469
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 }

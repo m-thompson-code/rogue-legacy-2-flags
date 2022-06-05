@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200052D RID: 1325
+// Token: 0x020008B4 RID: 2228
 [Serializable]
 public class SummonEnemy_SummonRule : BaseSummonRule
 {
-	// Token: 0x17001207 RID: 4615
-	// (get) Token: 0x060030C6 RID: 12486 RVA: 0x000A6052 File Offset: 0x000A4252
+	// Token: 0x17001840 RID: 6208
+	// (get) Token: 0x060043F1 RID: 17393 RVA: 0x00006581 File Offset: 0x00004781
 	public override SummonRuleType RuleType
 	{
 		get
@@ -17,8 +17,8 @@ public class SummonEnemy_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001208 RID: 4616
-	// (get) Token: 0x060030C7 RID: 12487 RVA: 0x000A6056 File Offset: 0x000A4256
+	// Token: 0x17001841 RID: 6209
+	// (get) Token: 0x060043F2 RID: 17394 RVA: 0x00025785 File Offset: 0x00023985
 	public override Color BoxColor
 	{
 		get
@@ -27,8 +27,8 @@ public class SummonEnemy_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001209 RID: 4617
-	// (get) Token: 0x060030C8 RID: 12488 RVA: 0x000A605D File Offset: 0x000A425D
+	// Token: 0x17001842 RID: 6210
+	// (get) Token: 0x060043F3 RID: 17395 RVA: 0x0002578C File Offset: 0x0002398C
 	public override string RuleLabel
 	{
 		get
@@ -37,7 +37,7 @@ public class SummonEnemy_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x060030C9 RID: 12489 RVA: 0x000A6064 File Offset: 0x000A4264
+	// Token: 0x060043F4 RID: 17396 RVA: 0x00025793 File Offset: 0x00023993
 	public override void Initialize(SummonRuleController summonController)
 	{
 		base.Initialize(summonController);
@@ -45,7 +45,7 @@ public class SummonEnemy_SummonRule : BaseSummonRule
 		this.m_possibleEnemiesList = new List<EnemyTypeAndRank>();
 	}
 
-	// Token: 0x060030CA RID: 12490 RVA: 0x000A6089 File Offset: 0x000A4289
+	// Token: 0x060043F5 RID: 17397 RVA: 0x000257B8 File Offset: 0x000239B8
 	public override IEnumerator RunSummonRule()
 	{
 		if (!base.SummonController.HasArenaStarted)
@@ -128,29 +128,29 @@ public class SummonEnemy_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x040026A5 RID: 9893
+	// Token: 0x040034CC RID: 13516
 	[SerializeField]
 	private float m_summonValue;
 
-	// Token: 0x040026A6 RID: 9894
+	// Token: 0x040034CD RID: 13517
 	[SerializeField]
 	private float m_summonDelay;
 
-	// Token: 0x040026A7 RID: 9895
+	// Token: 0x040034CE RID: 13518
 	[SerializeField]
 	private bool m_randomizeEnemiesOnce;
 
-	// Token: 0x040026A8 RID: 9896
+	// Token: 0x040034CF RID: 13519
 	[SerializeField]
 	private bool m_spawnFast;
 
-	// Token: 0x040026A9 RID: 9897
+	// Token: 0x040034D0 RID: 13520
 	[SerializeField]
 	private bool m_summonAsCommander;
 
-	// Token: 0x040026AA RID: 9898
+	// Token: 0x040034D1 RID: 13521
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040026AB RID: 9899
+	// Token: 0x040034D2 RID: 13522
 	private List<EnemyTypeAndRank> m_possibleEnemiesList;
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200001A RID: 26
+// Token: 0x0200001D RID: 29
 [Serializable]
 public class HeirloomTypeSpriteDictionary : SerializableDictionary<HeirloomType, Sprite>
 {

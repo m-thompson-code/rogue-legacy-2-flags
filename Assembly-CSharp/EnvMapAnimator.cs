@@ -3,17 +3,17 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000823 RID: 2083
+// Token: 0x02000CFB RID: 3323
 public class EnvMapAnimator : MonoBehaviour
 {
-	// Token: 0x060044F4 RID: 17652 RVA: 0x000F531A File Offset: 0x000F351A
+	// Token: 0x06005EC6 RID: 24262 RVA: 0x000343F4 File Offset: 0x000325F4
 	private void Awake()
 	{
 		this.m_textMeshPro = base.GetComponent<TMP_Text>();
 		this.m_material = this.m_textMeshPro.fontSharedMaterial;
 	}
 
-	// Token: 0x060044F5 RID: 17653 RVA: 0x000F5339 File Offset: 0x000F3539
+	// Token: 0x06005EC7 RID: 24263 RVA: 0x00034413 File Offset: 0x00032613
 	private IEnumerator Start()
 	{
 		Matrix4x4 matrix = default(Matrix4x4);
@@ -26,12 +26,12 @@ public class EnvMapAnimator : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04003ACA RID: 15050
+	// Token: 0x04004DD2 RID: 19922
 	public Vector3 RotationSpeeds;
 
-	// Token: 0x04003ACB RID: 15051
+	// Token: 0x04004DD3 RID: 19923
 	private TMP_Text m_textMeshPro;
 
-	// Token: 0x04003ACC RID: 15052
+	// Token: 0x04004DD4 RID: 19924
 	private Material m_material;
 }

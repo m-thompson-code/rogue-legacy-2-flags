@@ -5,11 +5,11 @@ using UnityEngine.Serialization;
 
 namespace RLAudio
 {
-	// Token: 0x0200090D RID: 2317
+	// Token: 0x02000E8A RID: 3722
 	public class RLFMODEventEmitter : BaseFMODEventEmitter, IAudioEventEmitter
 	{
-		// Token: 0x1700187D RID: 6269
-		// (get) Token: 0x06004C09 RID: 19465 RVA: 0x001112B3 File Offset: 0x0010F4B3
+		// Token: 0x17002176 RID: 8566
+		// (get) Token: 0x06006904 RID: 26884 RVA: 0x0003A2D0 File Offset: 0x000384D0
 		public bool AttachToGameObject
 		{
 			get
@@ -18,8 +18,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700187E RID: 6270
-		// (get) Token: 0x06004C0A RID: 19466 RVA: 0x001112C5 File Offset: 0x0010F4C5
+		// Token: 0x17002177 RID: 8567
+		// (get) Token: 0x06006905 RID: 26885 RVA: 0x0003A2E2 File Offset: 0x000384E2
 		public string EventPath
 		{
 			get
@@ -28,8 +28,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700187F RID: 6271
-		// (get) Token: 0x06004C0B RID: 19467 RVA: 0x001112CD File Offset: 0x0010F4CD
+		// Token: 0x17002178 RID: 8568
+		// (get) Token: 0x06006906 RID: 26886 RVA: 0x0003A2EA File Offset: 0x000384EA
 		public bool IsOneShot
 		{
 			get
@@ -38,7 +38,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C0C RID: 19468 RVA: 0x001112D8 File Offset: 0x0010F4D8
+		// Token: 0x06006907 RID: 26887 RVA: 0x0018134C File Offset: 0x0017F54C
 		protected override void Initialize()
 		{
 			base.Initialize();
@@ -62,7 +62,7 @@ namespace RLAudio
 			base.IsInitialized = true;
 		}
 
-		// Token: 0x06004C0D RID: 19469 RVA: 0x00111364 File Offset: 0x0010F564
+		// Token: 0x06006908 RID: 26888 RVA: 0x0003A2F2 File Offset: 0x000384F2
 		public override void Play()
 		{
 			if (base.Is3D)
@@ -73,7 +73,7 @@ namespace RLAudio
 			this.Play2DAudio();
 		}
 
-		// Token: 0x06004C0E RID: 19470 RVA: 0x0011137C File Offset: 0x0010F57C
+		// Token: 0x06006909 RID: 26889 RVA: 0x001813D8 File Offset: 0x0017F5D8
 		private void Play3DAudio()
 		{
 			if (base.Is3D)
@@ -108,7 +108,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C0F RID: 19471 RVA: 0x00111420 File Offset: 0x0010F620
+		// Token: 0x0600690A RID: 26890 RVA: 0x0018147C File Offset: 0x0017F67C
 		private void Play2DAudio()
 		{
 			if (!base.Is3D)
@@ -133,7 +133,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C10 RID: 19472 RVA: 0x00111484 File Offset: 0x0010F684
+		// Token: 0x0600690B RID: 26891 RVA: 0x001814E0 File Offset: 0x0017F6E0
 		public void Play(Vector3 worldPosition)
 		{
 			if (base.Is3D)
@@ -158,7 +158,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C11 RID: 19473 RVA: 0x001114DE File Offset: 0x0010F6DE
+		// Token: 0x0600690C RID: 26892 RVA: 0x0003A309 File Offset: 0x00038509
 		public void SetParameter(string parameterName, float value)
 		{
 			if (!this.IsOneShot)
@@ -178,12 +178,12 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x0400400A RID: 16394
+		// Token: 0x0400556A RID: 21866
 		[SerializeField]
 		[FormerlySerializedAs("m_stopImmediatelyOnGameObjectDestroyed")]
 		private bool m_isOneShot = true;
 
-		// Token: 0x0400400B RID: 16395
+		// Token: 0x0400556B RID: 21867
 		[SerializeField]
 		private bool m_attachToGameObject = true;
 	}

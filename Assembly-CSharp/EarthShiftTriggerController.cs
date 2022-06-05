@@ -5,10 +5,10 @@ using Rewired;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000405 RID: 1029
+// Token: 0x020006B7 RID: 1719
 public class EarthShiftTriggerController : MonoBehaviour
 {
-	// Token: 0x06002662 RID: 9826 RVA: 0x0007EE90 File Offset: 0x0007D090
+	// Token: 0x060034F9 RID: 13561 RVA: 0x000DF068 File Offset: 0x000DD268
 	private void Awake()
 	{
 		this.m_interactable = base.GetComponent<Interactable>();
@@ -21,13 +21,13 @@ public class EarthShiftTriggerController : MonoBehaviour
 		this.m_onInteractReleased = new Action<InputActionEventData>(this.OnInteractReleased);
 	}
 
-	// Token: 0x06002663 RID: 9827 RVA: 0x0007EF18 File Offset: 0x0007D118
+	// Token: 0x060034FA RID: 13562 RVA: 0x0001D114 File Offset: 0x0001B314
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x06002664 RID: 9828 RVA: 0x0007EF28 File Offset: 0x0007D128
+	// Token: 0x060034FB RID: 13563 RVA: 0x000DF0F0 File Offset: 0x000DD2F0
 	private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs args)
 	{
 		this.m_largeHasPlayed = false;
@@ -41,7 +41,7 @@ public class EarthShiftTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002665 RID: 9829 RVA: 0x0007EFBC File Offset: 0x0007D1BC
+	// Token: 0x060034FC RID: 13564
 	public void OnInteract()
 	{
 		this.m_state = EarthShiftTriggerController.ShiftState.Prep;
@@ -59,7 +59,7 @@ public class EarthShiftTriggerController : MonoBehaviour
 		this.m_prepCoroutine = base.StartCoroutine(this.PrepCoroutine());
 	}
 
-	// Token: 0x06002666 RID: 9830 RVA: 0x0007F054 File Offset: 0x0007D254
+	// Token: 0x060034FD RID: 13565 RVA: 0x000DF224 File Offset: 0x000DD424
 	private void StopInteraction()
 	{
 		EarthShiftTriggerController.ShiftState state = this.m_state;
@@ -117,7 +117,7 @@ public class EarthShiftTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002667 RID: 9831 RVA: 0x0007F1C4 File Offset: 0x0007D3C4
+	// Token: 0x060034FE RID: 13566 RVA: 0x0001D122 File Offset: 0x0001B322
 	private void OnInteractReleased(InputActionEventData data)
 	{
 		if (!this.m_isLarge)
@@ -126,13 +126,13 @@ public class EarthShiftTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002668 RID: 9832 RVA: 0x0007F1D4 File Offset: 0x0007D3D4
+	// Token: 0x060034FF RID: 13567 RVA: 0x0001D132 File Offset: 0x0001B332
 	private void OnPlayerHit(MonoBehaviour sender, EventArgs args)
 	{
 		this.StopInteraction();
 	}
 
-	// Token: 0x06002669 RID: 9833 RVA: 0x0007F1DC File Offset: 0x0007D3DC
+	// Token: 0x06003500 RID: 13568 RVA: 0x0001D13A File Offset: 0x0001B33A
 	private IEnumerator PrepCoroutine()
 	{
 		if (this.m_chargeSFXInstance.isValid())
@@ -187,7 +187,7 @@ public class EarthShiftTriggerController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600266A RID: 9834 RVA: 0x0007F1EC File Offset: 0x0007D3EC
+	// Token: 0x06003501 RID: 13569 RVA: 0x000DF394 File Offset: 0x000DD594
 	private void Update()
 	{
 		global::PlayerController playerController = PlayerManager.GetPlayerController();
@@ -277,9 +277,13 @@ public class EarthShiftTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600266B RID: 9835 RVA: 0x0007F540 File Offset: 0x0007D740
+	// Token: 0x06003502 RID: 13570
 	private IEnumerator BlinkCoroutine()
 	{
+		if (this.m_platform.PlatformSize == EarthShiftPlatformController.EarthShiftPlatformSize.Final)
+		{
+			MainMenuWindowController.splitStep = 28;
+		}
 		string path = null;
 		switch (this.m_platform.PlatformSize)
 		{
@@ -313,7 +317,7 @@ public class EarthShiftTriggerController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600266C RID: 9836 RVA: 0x0007F54F File Offset: 0x0007D74F
+	// Token: 0x06003503 RID: 13571 RVA: 0x0001D158 File Offset: 0x0001B358
 	private void StopBlinking()
 	{
 		if (this.m_blinkingCoroutine != null)
@@ -324,7 +328,7 @@ public class EarthShiftTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600266D RID: 9837 RVA: 0x0007F572 File Offset: 0x0007D772
+	// Token: 0x06003504 RID: 13572 RVA: 0x0001D17B File Offset: 0x0001B37B
 	private IEnumerator ResetPositionCoroutine()
 	{
 		this.m_resetTimer = -1f;
@@ -384,7 +388,7 @@ public class EarthShiftTriggerController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600266E RID: 9838 RVA: 0x0007F584 File Offset: 0x0007D784
+	// Token: 0x06003505 RID: 13573 RVA: 0x000DF6E8 File Offset: 0x000DD8E8
 	public void SetPlatform(EarthShiftPlatformController platform)
 	{
 		this.m_platform = platform;
@@ -445,7 +449,7 @@ public class EarthShiftTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600266F RID: 9839 RVA: 0x0007F6D0 File Offset: 0x0007D8D0
+	// Token: 0x06003506 RID: 13574 RVA: 0x000DF834 File Offset: 0x000DDA34
 	private void ResetColor()
 	{
 		this.m_renderer.color = Color.white;
@@ -454,7 +458,7 @@ public class EarthShiftTriggerController : MonoBehaviour
 		this.m_platform.Renderer.SetPropertyBlock(this.m_matPropBlock);
 	}
 
-	// Token: 0x06002670 RID: 9840 RVA: 0x0007F730 File Offset: 0x0007D930
+	// Token: 0x06003507 RID: 13575 RVA: 0x000DF894 File Offset: 0x000DDA94
 	private void OnDisable()
 	{
 		this.m_state = EarthShiftTriggerController.ShiftState.Inactive;
@@ -497,7 +501,7 @@ public class EarthShiftTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002671 RID: 9841 RVA: 0x0007F824 File Offset: 0x0007DA24
+	// Token: 0x06003508 RID: 13576 RVA: 0x000DF988 File Offset: 0x000DDB88
 	private void OnDestroy()
 	{
 		if (this.m_movePlatformSFXInstance.isValid())
@@ -518,201 +522,201 @@ public class EarthShiftTriggerController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002006 RID: 8198
+	// Token: 0x04002ACE RID: 10958
 	private const string EARTHSHIFT_PLATFORM_MOVE_SMALL_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveSmall_loop";
 
-	// Token: 0x04002007 RID: 8199
+	// Token: 0x04002ACF RID: 10959
 	private const string EARTHSHIFT_PLATFORM_MOVE_MEDIUM_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveMed_loop";
 
-	// Token: 0x04002008 RID: 8200
+	// Token: 0x04002AD0 RID: 10960
 	private const string EARTHSHIFT_PLATFORM_MOVE_LARGE_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveLarge_loop";
 
-	// Token: 0x04002009 RID: 8201
+	// Token: 0x04002AD1 RID: 10961
 	private const string EARTHSHIFT_PLATFORM_STOP_SMALL_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveSmall_stop";
 
-	// Token: 0x0400200A RID: 8202
+	// Token: 0x04002AD2 RID: 10962
 	private const string EARTHSHIFT_PLATFORM_STOP_MEDIUM_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveMed_stop";
 
-	// Token: 0x0400200B RID: 8203
+	// Token: 0x04002AD3 RID: 10963
 	private const string EARTHSHIFT_PLATFORM_STOP_LARGE_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveLarge_stop";
 
-	// Token: 0x0400200C RID: 8204
+	// Token: 0x04002AD4 RID: 10964
 	private const string EARTHSHIFT_PLATFORM_VANISH_SMALL_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveSmall_reset_vanish";
 
-	// Token: 0x0400200D RID: 8205
+	// Token: 0x04002AD5 RID: 10965
 	private const string EARTHSHIFT_PLATFORM_VANISH_MEDIUM_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveMed_reset_vanish";
 
-	// Token: 0x0400200E RID: 8206
+	// Token: 0x04002AD6 RID: 10966
 	private const string EARTHSHIFT_PLATFORM_VANISH_LARGE_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveLarge_reset_vanish";
 
-	// Token: 0x0400200F RID: 8207
+	// Token: 0x04002AD7 RID: 10967
 	private const string EARTHSHIFT_PLATFORM_DEACTIVATE_SMALL_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_small_deactivate";
 
-	// Token: 0x04002010 RID: 8208
+	// Token: 0x04002AD8 RID: 10968
 	private const string EARTHSHIFT_PLATFORM_DEACTIVATE_MEDIUM_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_med_deactivate";
 
-	// Token: 0x04002011 RID: 8209
+	// Token: 0x04002AD9 RID: 10969
 	private const string EARTHSHIFT_PLATFORM_DEACTIVATE_LARGE_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_large_deactivate";
 
-	// Token: 0x04002012 RID: 8210
+	// Token: 0x04002ADA RID: 10970
 	private const string EARTHSHIFT_PLATFORM_APPEAR_SMALL_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveSmall_reset_appear";
 
-	// Token: 0x04002013 RID: 8211
+	// Token: 0x04002ADB RID: 10971
 	private const string EARTHSHIFT_PLATFORM_APPEAR_MEDIUM_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveMed_reset_appear";
 
-	// Token: 0x04002014 RID: 8212
+	// Token: 0x04002ADC RID: 10972
 	private const string EARTHSHIFT_PLATFORM_APPEAR_LARGE_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveLarge_reset_appear";
 
-	// Token: 0x04002015 RID: 8213
+	// Token: 0x04002ADD RID: 10973
 	private const string EARTHSHIFT_STONE_CHARGE_SMALL_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_small_charging_loop";
 
-	// Token: 0x04002016 RID: 8214
+	// Token: 0x04002ADE RID: 10974
 	private const string EARTHSHIFT_STONE_CHARGE_MEDIUM_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_med_charging_loop";
 
-	// Token: 0x04002017 RID: 8215
+	// Token: 0x04002ADF RID: 10975
 	private const string EARTHSHIFT_STONE_CHARGE_LARGE_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_large_charging_loop";
 
-	// Token: 0x04002018 RID: 8216
+	// Token: 0x04002AE0 RID: 10976
 	private const string EARTHSHIFT_STONE_CHARGE_FINAL_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_final_charging_loop";
 
-	// Token: 0x04002019 RID: 8217
+	// Token: 0x04002AE1 RID: 10977
 	private const string EARTHSHIFT_STONE_PLAYER_RELEASE_SMALL_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_small_player_release";
 
-	// Token: 0x0400201A RID: 8218
+	// Token: 0x04002AE2 RID: 10978
 	private const string EARTHSHIFT_STONE_PLAYER_RELEASE_MEDIUM_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_med_player_release";
 
-	// Token: 0x0400201B RID: 8219
+	// Token: 0x04002AE3 RID: 10979
 	private const string EARTHSHIFT_STONE_PLAYER_RELEASE_LARGE_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_large_player_release";
 
-	// Token: 0x0400201C RID: 8220
+	// Token: 0x04002AE4 RID: 10980
 	private const string EARTHSHIFT_RESET_TELEGRAPH_SMALL_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveSmall_reset_telegraph";
 
-	// Token: 0x0400201D RID: 8221
+	// Token: 0x04002AE5 RID: 10981
 	private const string EARTHSHIFT_RESET_TELEGRAPH_MEDIUM_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveMed_reset_telegraph";
 
-	// Token: 0x0400201E RID: 8222
+	// Token: 0x04002AE6 RID: 10982
 	private const string EARTHSHIFT_RESET_TELEGRAPH_LARGE_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveLarge_reset_telegraph";
 
-	// Token: 0x0400201F RID: 8223
+	// Token: 0x04002AE7 RID: 10983
 	private const string EARTHSHIFT_IDLE_PROXIMITY_LOOP_SMALL_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_small_inactive_loop";
 
-	// Token: 0x04002020 RID: 8224
+	// Token: 0x04002AE8 RID: 10984
 	private const string EARTHSHIFT_IDLE_PROXIMITY_LOOP_MEDIUM_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_med_inactive_loop";
 
-	// Token: 0x04002021 RID: 8225
+	// Token: 0x04002AE9 RID: 10985
 	private const string EARTHSHIFT_IDLE_PROXIMITY_LOOP_LARGE_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_large_inactive_loop";
 
-	// Token: 0x04002022 RID: 8226
+	// Token: 0x04002AEA RID: 10986
 	private const string EARTHSHIFT_IDLE_PROXIMITY_LOOP_FINAL_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_final_inactive_loop";
 
-	// Token: 0x04002023 RID: 8227
+	// Token: 0x04002AEB RID: 10987
 	private const string EARTHSHIFT_ACTIVE_LOOP_SMALL_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_small_active_loop";
 
-	// Token: 0x04002024 RID: 8228
+	// Token: 0x04002AEC RID: 10988
 	private const string EARTHSHIFT_ACTIVE_LOOP_MEDIUM_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_med_active_loop";
 
-	// Token: 0x04002025 RID: 8229
+	// Token: 0x04002AED RID: 10989
 	private const string EARTHSHIFT_ACTIVE_LOOP_LARGE_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_large_active_loop";
 
-	// Token: 0x04002026 RID: 8230
+	// Token: 0x04002AEE RID: 10990
 	private const string EARTHSHIFT_ACTIVE_LOOP_FINAL_SFX_NAME = "event:/SFX/Interactables/sfx_bindingStone_final_active_loop";
 
-	// Token: 0x04002027 RID: 8231
+	// Token: 0x04002AEF RID: 10991
 	private const string EARTHSHIFT_WATER_LOOP_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveThroughWater_fast_loop";
 
-	// Token: 0x04002028 RID: 8232
+	// Token: 0x04002AF0 RID: 10992
 	private const string EARTHSHIFT_WATER_STOP_SFX_NAME = "event:/SFX/Interactables/sfx_stonePlatform_moveThroughWater_fast_stop";
 
-	// Token: 0x04002029 RID: 8233
+	// Token: 0x04002AF1 RID: 10993
 	[SerializeField]
 	private SpriteRenderer m_renderer;
 
-	// Token: 0x0400202A RID: 8234
+	// Token: 0x04002AF2 RID: 10994
 	[SerializeField]
 	private bool m_isLarge;
 
-	// Token: 0x0400202B RID: 8235
+	// Token: 0x04002AF3 RID: 10995
 	[SerializeField]
 	private float m_glowDistance = 4f;
 
-	// Token: 0x0400202C RID: 8236
+	// Token: 0x04002AF4 RID: 10996
 	[SerializeField]
 	private Color m_flickerColor = new Color(0.6f, 0.6f, 0.6f);
 
-	// Token: 0x0400202D RID: 8237
+	// Token: 0x04002AF5 RID: 10997
 	private Interactable m_interactable;
 
-	// Token: 0x0400202E RID: 8238
+	// Token: 0x04002AF6 RID: 10998
 	private Animator m_animator;
 
-	// Token: 0x0400202F RID: 8239
+	// Token: 0x04002AF7 RID: 10999
 	private Coroutine m_prepCoroutine;
 
-	// Token: 0x04002030 RID: 8240
+	// Token: 0x04002AF8 RID: 11000
 	private WaitRL_Yield m_prepWaitYield;
 
-	// Token: 0x04002031 RID: 8241
+	// Token: 0x04002AF9 RID: 11001
 	private Coroutine m_blinkingCoroutine;
 
-	// Token: 0x04002032 RID: 8242
+	// Token: 0x04002AFA RID: 11002
 	private WaitRL_Yield m_blinkWaitYield;
 
-	// Token: 0x04002033 RID: 8243
+	// Token: 0x04002AFB RID: 11003
 	private Coroutine m_resetPositionCoroutine;
 
-	// Token: 0x04002034 RID: 8244
+	// Token: 0x04002AFC RID: 11004
 	private bool m_hasEarthShiftHeirloom;
 
-	// Token: 0x04002035 RID: 8245
+	// Token: 0x04002AFD RID: 11005
 	private EarthShiftTriggerController.ShiftState m_state;
 
-	// Token: 0x04002036 RID: 8246
+	// Token: 0x04002AFE RID: 11006
 	private EarthShiftPlatformController m_platform;
 
-	// Token: 0x04002037 RID: 8247
+	// Token: 0x04002AFF RID: 11007
 	private float m_initialDelayOverride = -1f;
 
-	// Token: 0x04002038 RID: 8248
+	// Token: 0x04002B00 RID: 11008
 	private float m_resetTimer = -1f;
 
-	// Token: 0x04002039 RID: 8249
+	// Token: 0x04002B01 RID: 11009
 	private MaterialPropertyBlock m_matPropBlock;
 
-	// Token: 0x0400203A RID: 8250
+	// Token: 0x04002B02 RID: 11010
 	private bool m_playingIdleProximityLoop;
 
-	// Token: 0x0400203B RID: 8251
+	// Token: 0x04002B03 RID: 11011
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x0400203C RID: 8252
+	// Token: 0x04002B04 RID: 11012
 	private Action<MonoBehaviour, EventArgs> m_onPlayerHit;
 
-	// Token: 0x0400203D RID: 8253
+	// Token: 0x04002B05 RID: 11013
 	private Action<InputActionEventData> m_onInteractReleased;
 
-	// Token: 0x0400203E RID: 8254
+	// Token: 0x04002B06 RID: 11014
 	private EventInstance m_movePlatformSFXInstance;
 
-	// Token: 0x0400203F RID: 8255
+	// Token: 0x04002B07 RID: 11015
 	private EventInstance m_chargeSFXInstance;
 
-	// Token: 0x04002040 RID: 8256
+	// Token: 0x04002B08 RID: 11016
 	private EventInstance m_idleProximitySFXEvent;
 
-	// Token: 0x04002041 RID: 8257
+	// Token: 0x04002B09 RID: 11017
 	private EventInstance m_activeLoopSFXInstance;
 
-	// Token: 0x04002042 RID: 8258
+	// Token: 0x04002B0A RID: 11018
 	private bool m_largeHasPlayed;
 
-	// Token: 0x02000C2B RID: 3115
+	// Token: 0x020006B8 RID: 1720
 	private enum ShiftState
 	{
-		// Token: 0x04004F5D RID: 20317
+		// Token: 0x04002B0C RID: 11020
 		Inactive,
-		// Token: 0x04004F5E RID: 20318
+		// Token: 0x04002B0D RID: 11021
 		Prep,
-		// Token: 0x04004F5F RID: 20319
+		// Token: 0x04002B0E RID: 11022
 		Active
 	}
 }

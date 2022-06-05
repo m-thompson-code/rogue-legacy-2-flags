@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020006B5 RID: 1717
+// Token: 0x02000B5D RID: 2909
 [CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Asset Preview Manager V2")]
 public class AssetPreviewManager_V2 : ScriptableObject
 {
-	// Token: 0x17001598 RID: 5528
-	// (get) Token: 0x06003F5A RID: 16218 RVA: 0x000E1EF8 File Offset: 0x000E00F8
+	// Token: 0x17001D90 RID: 7568
+	// (get) Token: 0x0600588E RID: 22670 RVA: 0x000301ED File Offset: 0x0002E3ED
 	private static AssetPreviewManager_V2 Instance
 	{
 		get
@@ -20,7 +20,7 @@ public class AssetPreviewManager_V2 : ScriptableObject
 		}
 	}
 
-	// Token: 0x06003F5B RID: 16219 RVA: 0x000E1F20 File Offset: 0x000E0120
+	// Token: 0x0600588F RID: 22671 RVA: 0x00152120 File Offset: 0x00150320
 	public static GameObject GetEnemyPreviewEntry(EnemyType enemyType, EnemyRank enemyRank)
 	{
 		if (AssetPreviewManager_V2.m_enemyPreviewTable == null)
@@ -54,7 +54,7 @@ public class AssetPreviewManager_V2 : ScriptableObject
 		return AssetPreviewManager_V2.Instance.m_defaultPreviewEntry;
 	}
 
-	// Token: 0x06003F5C RID: 16220 RVA: 0x000E1FD4 File Offset: 0x000E01D4
+	// Token: 0x06005890 RID: 22672 RVA: 0x001521D4 File Offset: 0x001503D4
 	private static void CreateEnemyPreviewTable()
 	{
 		AssetPreviewManager_V2.m_enemyPreviewTable = new Dictionary<EnemyTypeAndRank, GameObject>();
@@ -67,7 +67,7 @@ public class AssetPreviewManager_V2 : ScriptableObject
 		}
 	}
 
-	// Token: 0x06003F5D RID: 16221 RVA: 0x000E204C File Offset: 0x000E024C
+	// Token: 0x06005891 RID: 22673 RVA: 0x0015224C File Offset: 0x0015044C
 	public static GameObject GetChestPreviewEntry(ChestType chestType)
 	{
 		if (AssetPreviewManager_V2.m_chestPreviewTable == null)
@@ -87,7 +87,7 @@ public class AssetPreviewManager_V2 : ScriptableObject
 		return AssetPreviewManager_V2.Instance.m_defaultPreviewEntry;
 	}
 
-	// Token: 0x06003F5E RID: 16222 RVA: 0x000E20A4 File Offset: 0x000E02A4
+	// Token: 0x06005892 RID: 22674 RVA: 0x001522A4 File Offset: 0x001504A4
 	private static void CreateChestPreviewTable()
 	{
 		AssetPreviewManager_V2.m_chestPreviewTable = new Dictionary<ChestType, GameObject>();
@@ -97,57 +97,57 @@ public class AssetPreviewManager_V2 : ScriptableObject
 		}
 	}
 
-	// Token: 0x04002F0E RID: 12046
+	// Token: 0x04004157 RID: 16727
 	public GameObject m_defaultPreviewEntry;
 
-	// Token: 0x04002F0F RID: 12047
+	// Token: 0x04004158 RID: 16728
 	[Space(10f)]
 	public AssetPreviewManager_V2.EnemyPreviewEntry_V2[] EnemyPreviewEntries;
 
-	// Token: 0x04002F10 RID: 12048
+	// Token: 0x04004159 RID: 16729
 	public AssetPreviewManager_V2.ChestPreviewEntry_V2[] ChestPreviewEntries;
 
-	// Token: 0x04002F11 RID: 12049
+	// Token: 0x0400415A RID: 16730
 	[NonSerialized]
 	public string EntryFolderPath = "Prefabs/Enemy Previews";
 
-	// Token: 0x04002F12 RID: 12050
+	// Token: 0x0400415B RID: 16731
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/AssetPreviewManager_V2";
 
-	// Token: 0x04002F13 RID: 12051
+	// Token: 0x0400415C RID: 16732
 	public const string ASSET_PATH = "Assets/Content/Scriptable Objects/Libraries/AssetPreviewManager_V2.asset";
 
-	// Token: 0x04002F14 RID: 12052
+	// Token: 0x0400415D RID: 16733
 	private static AssetPreviewManager_V2 m_instance;
 
-	// Token: 0x04002F15 RID: 12053
+	// Token: 0x0400415E RID: 16734
 	private static Dictionary<ChestType, GameObject> m_chestPreviewTable;
 
-	// Token: 0x04002F16 RID: 12054
+	// Token: 0x0400415F RID: 16735
 	private static Dictionary<EnemyTypeAndRank, GameObject> m_enemyPreviewTable;
 
-	// Token: 0x02000E1C RID: 3612
+	// Token: 0x02000B5E RID: 2910
 	[Serializable]
 	public class EnemyRankEntry_V2
 	{
-		// Token: 0x06006B81 RID: 27521 RVA: 0x001918EE File Offset: 0x0018FAEE
+		// Token: 0x06005895 RID: 22677 RVA: 0x00030228 File Offset: 0x0002E428
 		public EnemyRankEntry_V2(EnemyRank rank)
 		{
 			this.Rank = rank;
 		}
 
-		// Token: 0x040056CC RID: 22220
+		// Token: 0x04004160 RID: 16736
 		public EnemyRank Rank = EnemyRank.None;
 
-		// Token: 0x040056CD RID: 22221
+		// Token: 0x04004161 RID: 16737
 		public GameObject EntryObj;
 	}
 
-	// Token: 0x02000E1D RID: 3613
+	// Token: 0x02000B5F RID: 2911
 	[Serializable]
 	public class EnemyPreviewEntry_V2
 	{
-		// Token: 0x06006B82 RID: 27522 RVA: 0x00191904 File Offset: 0x0018FB04
+		// Token: 0x06005896 RID: 22678 RVA: 0x001522F0 File Offset: 0x001504F0
 		public EnemyPreviewEntry_V2(EnemyType enemyType)
 		{
 			this.EnemyType = enemyType;
@@ -158,27 +158,27 @@ public class AssetPreviewManager_V2 : ScriptableObject
 			this.RankEntries[3] = new AssetPreviewManager_V2.EnemyRankEntry_V2(EnemyRank.Miniboss);
 		}
 
-		// Token: 0x040056CE RID: 22222
+		// Token: 0x04004162 RID: 16738
 		public EnemyType EnemyType;
 
-		// Token: 0x040056CF RID: 22223
+		// Token: 0x04004163 RID: 16739
 		public AssetPreviewManager_V2.EnemyRankEntry_V2[] RankEntries;
 	}
 
-	// Token: 0x02000E1E RID: 3614
+	// Token: 0x02000B60 RID: 2912
 	[Serializable]
 	public class ChestPreviewEntry_V2
 	{
-		// Token: 0x06006B83 RID: 27523 RVA: 0x00191962 File Offset: 0x0018FB62
+		// Token: 0x06005897 RID: 22679 RVA: 0x0003023E File Offset: 0x0002E43E
 		public ChestPreviewEntry_V2(ChestType chestType)
 		{
 			this.ChestType = chestType;
 		}
 
-		// Token: 0x040056D0 RID: 22224
+		// Token: 0x04004164 RID: 16740
 		public ChestType ChestType;
 
-		// Token: 0x040056D1 RID: 22225
+		// Token: 0x04004165 RID: 16741
 		public GameObject EntryObj;
 	}
 }

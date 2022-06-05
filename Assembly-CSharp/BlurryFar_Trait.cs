@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000323 RID: 803
+// Token: 0x0200056D RID: 1389
 public class BlurryFar_Trait : BaseTrait
 {
-	// Token: 0x17000DA7 RID: 3495
-	// (get) Token: 0x06001FA5 RID: 8101 RVA: 0x00065279 File Offset: 0x00063479
+	// Token: 0x170011D4 RID: 4564
+	// (get) Token: 0x06002C5E RID: 11358 RVA: 0x000189DB File Offset: 0x00016BDB
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class BlurryFar_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FA6 RID: 8102 RVA: 0x00065280 File Offset: 0x00063480
+	// Token: 0x06002C5F RID: 11359 RVA: 0x000189E2 File Offset: 0x00016BE2
 	protected IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -31,7 +31,7 @@ public class BlurryFar_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FA7 RID: 8103 RVA: 0x0006528F File Offset: 0x0006348F
+	// Token: 0x06002C60 RID: 11360 RVA: 0x000189A5 File Offset: 0x00016BA5
 	protected void OnDestroy()
 	{
 		if (this.m_traitMask)
@@ -40,7 +40,7 @@ public class BlurryFar_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FA8 RID: 8104 RVA: 0x000652B0 File Offset: 0x000634B0
+	// Token: 0x06002C61 RID: 11361 RVA: 0x000C57C4 File Offset: 0x000C39C4
 	public override void AssignGreenMask()
 	{
 		base.AssignGreenMask();

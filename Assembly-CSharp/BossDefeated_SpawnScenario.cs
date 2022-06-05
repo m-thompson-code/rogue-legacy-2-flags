@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000639 RID: 1593
+// Token: 0x02000A66 RID: 2662
 public class BossDefeated_SpawnScenario : SpawnScenario
 {
-	// Token: 0x17001455 RID: 5205
-	// (get) Token: 0x0600399B RID: 14747 RVA: 0x000C452C File Offset: 0x000C272C
-	// (set) Token: 0x0600399C RID: 14748 RVA: 0x000C4534 File Offset: 0x000C2734
+	// Token: 0x17001BBC RID: 7100
+	// (get) Token: 0x0600507A RID: 20602 RVA: 0x0002BF34 File Offset: 0x0002A134
+	// (set) Token: 0x0600507B RID: 20603 RVA: 0x0002BF3C File Offset: 0x0002A13C
 	public bool SpawnIfFalse
 	{
 		get
@@ -19,9 +19,9 @@ public class BossDefeated_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x17001456 RID: 5206
-	// (get) Token: 0x0600399D RID: 14749 RVA: 0x000C453D File Offset: 0x000C273D
-	// (set) Token: 0x0600399E RID: 14750 RVA: 0x000C4545 File Offset: 0x000C2745
+	// Token: 0x17001BBD RID: 7101
+	// (get) Token: 0x0600507C RID: 20604 RVA: 0x0002BF45 File Offset: 0x0002A145
+	// (set) Token: 0x0600507D RID: 20605 RVA: 0x0002BF4D File Offset: 0x0002A14D
 	public bool UseBossBiomeID
 	{
 		get
@@ -34,9 +34,9 @@ public class BossDefeated_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x17001457 RID: 5207
-	// (get) Token: 0x0600399F RID: 14751 RVA: 0x000C454E File Offset: 0x000C274E
-	// (set) Token: 0x060039A0 RID: 14752 RVA: 0x000C4556 File Offset: 0x000C2756
+	// Token: 0x17001BBE RID: 7102
+	// (get) Token: 0x0600507E RID: 20606 RVA: 0x0002BF56 File Offset: 0x0002A156
+	// (set) Token: 0x0600507F RID: 20607 RVA: 0x0002BF5E File Offset: 0x0002A15E
 	public BossID BossID
 	{
 		get
@@ -49,8 +49,8 @@ public class BossDefeated_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x17001458 RID: 5208
-	// (get) Token: 0x060039A1 RID: 14753 RVA: 0x000C455F File Offset: 0x000C275F
+	// Token: 0x17001BBF RID: 7103
+	// (get) Token: 0x06005080 RID: 20608 RVA: 0x0000452B File Offset: 0x0000272B
 	public override SpawnScenarioType Type
 	{
 		get
@@ -59,8 +59,8 @@ public class BossDefeated_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x17001459 RID: 5209
-	// (get) Token: 0x060039A2 RID: 14754 RVA: 0x000C4563 File Offset: 0x000C2763
+	// Token: 0x17001BC0 RID: 7104
+	// (get) Token: 0x06005081 RID: 20609 RVA: 0x0002BF67 File Offset: 0x0002A167
 	public override string GizmoDescription
 	{
 		get
@@ -73,19 +73,19 @@ public class BossDefeated_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x060039A3 RID: 14755 RVA: 0x000C4578 File Offset: 0x000C2778
+	// Token: 0x06005082 RID: 20610 RVA: 0x0002BF7C File Offset: 0x0002A17C
 	public override void RunIsTrueCheck(BaseRoom room)
 	{
 		this.RunIsTrueCheck(room.AppearanceBiomeType);
 	}
 
-	// Token: 0x060039A4 RID: 14756 RVA: 0x000C4586 File Offset: 0x000C2786
+	// Token: 0x06005083 RID: 20611 RVA: 0x0002BF8A File Offset: 0x0002A18A
 	public override void RunIsTrueCheck(GridPointManager gridPointManager)
 	{
 		this.RunIsTrueCheck(gridPointManager.Biome);
 	}
 
-	// Token: 0x060039A5 RID: 14757 RVA: 0x000C4594 File Offset: 0x000C2794
+	// Token: 0x06005084 RID: 20612 RVA: 0x00132948 File Offset: 0x00130B48
 	private void RunIsTrueCheck(BiomeType biome)
 	{
 		this.IsTrue = false;
@@ -104,15 +104,15 @@ public class BossDefeated_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x04002C5C RID: 11356
+	// Token: 0x04003CEE RID: 15598
 	[SerializeField]
 	private bool m_spawnIfFalse;
 
-	// Token: 0x04002C5D RID: 11357
+	// Token: 0x04003CEF RID: 15599
 	[SerializeField]
 	private bool m_useBiomeBossID;
 
-	// Token: 0x04002C5E RID: 11358
+	// Token: 0x04003CF0 RID: 15600
 	[SerializeField]
 	private BossID m_bossID;
 }

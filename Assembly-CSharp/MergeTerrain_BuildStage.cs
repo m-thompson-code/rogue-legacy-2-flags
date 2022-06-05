@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-// Token: 0x0200066D RID: 1645
+// Token: 0x02000ADB RID: 2779
 public class MergeTerrain_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B60 RID: 15200 RVA: 0x000CC42F File Offset: 0x000CA62F
+	// Token: 0x06005369 RID: 21353 RVA: 0x0002D546 File Offset: 0x0002B746
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		Stopwatch timer = new Stopwatch();

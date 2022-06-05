@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000533 RID: 1331
+// Token: 0x020008C1 RID: 2241
 public class WaitForXSeconds_SummonRule : BaseSummonRule
 {
-	// Token: 0x17001216 RID: 4630
-	// (get) Token: 0x060030F8 RID: 12536 RVA: 0x000A66B8 File Offset: 0x000A48B8
+	// Token: 0x17001859 RID: 6233
+	// (get) Token: 0x06004446 RID: 17478 RVA: 0x00025A4C File Offset: 0x00023C4C
 	public override SummonRuleType RuleType
 	{
 		get
@@ -15,8 +15,8 @@ public class WaitForXSeconds_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001217 RID: 4631
-	// (get) Token: 0x060030F9 RID: 12537 RVA: 0x000A66BF File Offset: 0x000A48BF
+	// Token: 0x1700185A RID: 6234
+	// (get) Token: 0x06004447 RID: 17479 RVA: 0x00025A53 File Offset: 0x00023C53
 	public override string RuleLabel
 	{
 		get
@@ -25,7 +25,7 @@ public class WaitForXSeconds_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x060030FA RID: 12538 RVA: 0x000A66C6 File Offset: 0x000A48C6
+	// Token: 0x06004448 RID: 17480 RVA: 0x00025A5A File Offset: 0x00023C5A
 	public override IEnumerator RunSummonRule()
 	{
 		if (this.m_waitYield == null)
@@ -41,10 +41,10 @@ public class WaitForXSeconds_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x040026C3 RID: 9923
+	// Token: 0x04003505 RID: 13573
 	[SerializeField]
 	private float m_waitDuration;
 
-	// Token: 0x040026C4 RID: 9924
+	// Token: 0x04003506 RID: 13574
 	private WaitRL_Yield m_waitYield;
 }

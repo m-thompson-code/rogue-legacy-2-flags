@@ -1,9 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020005E1 RID: 1505
+// Token: 0x020009E9 RID: 2537
 public interface IStandingOnExit
 {
-	// Token: 0x060036B0 RID: 14000
+	// Token: 0x06004CC2 RID: 19650
 	void OnStandingExit(GameObject otherRootObj);
 }

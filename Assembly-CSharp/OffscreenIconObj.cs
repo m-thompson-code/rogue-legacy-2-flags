@@ -1,20 +1,20 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200048C RID: 1164
+// Token: 0x0200078D RID: 1933
 public class OffscreenIconObj : MonoBehaviour, IGenericPoolObj
 {
-	// Token: 0x1700108B RID: 4235
-	// (get) Token: 0x06002AEC RID: 10988 RVA: 0x0009155D File Offset: 0x0008F75D
-	// (set) Token: 0x06002AED RID: 10989 RVA: 0x00091565 File Offset: 0x0008F765
+	// Token: 0x170015CE RID: 5582
+	// (get) Token: 0x06003B29 RID: 15145 RVA: 0x000207A9 File Offset: 0x0001E9A9
+	// (set) Token: 0x06003B2A RID: 15146 RVA: 0x000207B1 File Offset: 0x0001E9B1
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x1700108C RID: 4236
-	// (get) Token: 0x06002AEE RID: 10990 RVA: 0x0009156E File Offset: 0x0008F76E
-	// (set) Token: 0x06002AEF RID: 10991 RVA: 0x00091576 File Offset: 0x0008F776
+	// Token: 0x170015CF RID: 5583
+	// (get) Token: 0x06003B2B RID: 15147 RVA: 0x000207BA File Offset: 0x0001E9BA
+	// (set) Token: 0x06003B2C RID: 15148 RVA: 0x000207C2 File Offset: 0x0001E9C2
 	public bool IsAwakeCalled { get; protected set; } = true;
 
-	// Token: 0x06002AF0 RID: 10992 RVA: 0x00091580 File Offset: 0x0008F780
+	// Token: 0x06003B2D RID: 15149 RVA: 0x000F309C File Offset: 0x000F129C
 	public void AttachOffscreenObj(IOffscreenObj offscreenObj, bool isEnemy)
 	{
 		if (isEnemy)
@@ -32,7 +32,7 @@ public class OffscreenIconObj : MonoBehaviour, IGenericPoolObj
 		this.m_iconGO.SetActive(false);
 	}
 
-	// Token: 0x06002AF1 RID: 10993 RVA: 0x000915F0 File Offset: 0x0008F7F0
+	// Token: 0x06003B2E RID: 15150 RVA: 0x000207CB File Offset: 0x0001E9CB
 	private void OnEnable()
 	{
 		if (CameraController.IsInstantiated && !base.transform.parent)
@@ -41,14 +41,14 @@ public class OffscreenIconObj : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x06002AF2 RID: 10994 RVA: 0x00091620 File Offset: 0x0008F820
+	// Token: 0x06003B2F RID: 15151 RVA: 0x000207FB File Offset: 0x0001E9FB
 	private void OnDisable()
 	{
 		this.m_offscreenObj = null;
 		DisablePooledObjectManager.DisablePooledObject(this, false);
 	}
 
-	// Token: 0x06002AF3 RID: 10995 RVA: 0x00091630 File Offset: 0x0008F830
+	// Token: 0x06003B30 RID: 15152 RVA: 0x000F310C File Offset: 0x000F130C
 	private void FixedUpdate()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -159,39 +159,39 @@ public class OffscreenIconObj : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x06002AF4 RID: 10996 RVA: 0x00091B1D File Offset: 0x0008FD1D
+	// Token: 0x06003B31 RID: 15153 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void ResetValues()
 	{
 	}
 
-	// Token: 0x06002AF6 RID: 10998 RVA: 0x00091B2E File Offset: 0x0008FD2E
+	// Token: 0x06003B33 RID: 15155 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002306 RID: 8966
+	// Token: 0x04002F11 RID: 12049
 	private const float ENEMY_BOUNDS_CHECK_BUFFER = 0.5f;
 
-	// Token: 0x04002307 RID: 8967
+	// Token: 0x04002F12 RID: 12050
 	[SerializeField]
 	private SpriteRenderer m_sprite;
 
-	// Token: 0x04002308 RID: 8968
+	// Token: 0x04002F13 RID: 12051
 	[SerializeField]
 	private SpriteRenderer m_enemySprite;
 
-	// Token: 0x04002309 RID: 8969
+	// Token: 0x04002F14 RID: 12052
 	[SerializeField]
 	private GameObject m_bg;
 
-	// Token: 0x0400230A RID: 8970
+	// Token: 0x04002F15 RID: 12053
 	[SerializeField]
 	private GameObject m_iconGO;
 
-	// Token: 0x0400230B RID: 8971
+	// Token: 0x04002F16 RID: 12054
 	private IOffscreenObj m_offscreenObj;
 
-	// Token: 0x0400230C RID: 8972
+	// Token: 0x04002F17 RID: 12055
 	private bool m_isEnemy;
 }

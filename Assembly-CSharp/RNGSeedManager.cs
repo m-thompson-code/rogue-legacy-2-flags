@@ -4,13 +4,13 @@ using System.Globalization;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020006E2 RID: 1762
+// Token: 0x02000B8D RID: 2957
 [CreateAssetMenu(menuName = "Custom/Data/RNG Seed Manager")]
 public class RNGSeedManager : ScriptableObject
 {
-	// Token: 0x170015D9 RID: 5593
-	// (get) Token: 0x06003FF1 RID: 16369 RVA: 0x000E2BD8 File Offset: 0x000E0DD8
-	// (set) Token: 0x06003FF2 RID: 16370 RVA: 0x000E2BDF File Offset: 0x000E0DDF
+	// Token: 0x17001DD1 RID: 7633
+	// (get) Token: 0x06005928 RID: 22824 RVA: 0x0003081F File Offset: 0x0002EA1F
+	// (set) Token: 0x06005929 RID: 22825 RVA: 0x00030826 File Offset: 0x0002EA26
 	public static int MasterSeedOverride
 	{
 		get
@@ -28,8 +28,8 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015DA RID: 5594
-	// (get) Token: 0x06003FF3 RID: 16371 RVA: 0x000E2C0A File Offset: 0x000E0E0A
+	// Token: 0x17001DD2 RID: 7634
+	// (get) Token: 0x0600592A RID: 22826 RVA: 0x00030851 File Offset: 0x0002EA51
 	public static string CurrentWorldSeed
 	{
 		get
@@ -38,8 +38,8 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015DB RID: 5595
-	// (get) Token: 0x06003FF4 RID: 16372 RVA: 0x000E2C1B File Offset: 0x000E0E1B
+	// Token: 0x17001DD3 RID: 7635
+	// (get) Token: 0x0600592B RID: 22827 RVA: 0x00030862 File Offset: 0x0002EA62
 	private static RNGSeedManager Instance
 	{
 		get
@@ -52,8 +52,8 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015DC RID: 5596
-	// (get) Token: 0x06003FF5 RID: 16373 RVA: 0x000E2C4B File Offset: 0x000E0E4B
+	// Token: 0x17001DD4 RID: 7636
+	// (get) Token: 0x0600592C RID: 22828 RVA: 0x00030892 File Offset: 0x0002EA92
 	public static bool IsMasterSeedOverrideSet
 	{
 		get
@@ -62,8 +62,8 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015DD RID: 5597
-	// (get) Token: 0x06003FF6 RID: 16374 RVA: 0x000E2C58 File Offset: 0x000E0E58
+	// Token: 0x17001DD5 RID: 7637
+	// (get) Token: 0x0600592D RID: 22829 RVA: 0x0003089F File Offset: 0x0002EA9F
 	public static bool IsOverrideSet
 	{
 		get
@@ -72,8 +72,8 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015DE RID: 5598
-	// (get) Token: 0x06003FF7 RID: 16375 RVA: 0x000E2C78 File Offset: 0x000E0E78
+	// Token: 0x17001DD6 RID: 7638
+	// (get) Token: 0x0600592E RID: 22830 RVA: 0x000308BF File Offset: 0x0002EABF
 	public static bool IsProjectSeedSet
 	{
 		get
@@ -82,8 +82,8 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015DF RID: 5599
-	// (get) Token: 0x06003FF8 RID: 16376 RVA: 0x000E2C87 File Offset: 0x000E0E87
+	// Token: 0x17001DD7 RID: 7639
+	// (get) Token: 0x0600592F RID: 22831 RVA: 0x000308CE File Offset: 0x0002EACE
 	public static bool IsTempSeedSet
 	{
 		get
@@ -92,9 +92,9 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015E0 RID: 5600
-	// (get) Token: 0x06003FF9 RID: 16377 RVA: 0x000E2C9F File Offset: 0x000E0E9F
-	// (set) Token: 0x06003FFA RID: 16378 RVA: 0x000E2CAB File Offset: 0x000E0EAB
+	// Token: 0x17001DD8 RID: 7640
+	// (get) Token: 0x06005930 RID: 22832 RVA: 0x000308E6 File Offset: 0x0002EAE6
+	// (set) Token: 0x06005931 RID: 22833 RVA: 0x000308F2 File Offset: 0x0002EAF2
 	public static string ProjectSeed
 	{
 		get
@@ -107,9 +107,9 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015E1 RID: 5601
-	// (get) Token: 0x06003FFB RID: 16379 RVA: 0x000E2CB8 File Offset: 0x000E0EB8
-	// (set) Token: 0x06003FFC RID: 16380 RVA: 0x000E2CC5 File Offset: 0x000E0EC5
+	// Token: 0x17001DD9 RID: 7641
+	// (get) Token: 0x06005932 RID: 22834 RVA: 0x000308FF File Offset: 0x0002EAFF
+	// (set) Token: 0x06005933 RID: 22835 RVA: 0x00002FCA File Offset: 0x000011CA
 	public static string TempSeed
 	{
 		get
@@ -123,9 +123,9 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170015E2 RID: 5602
-	// (get) Token: 0x06003FFD RID: 16381 RVA: 0x000E2CC7 File Offset: 0x000E0EC7
-	// (set) Token: 0x06003FFE RID: 16382 RVA: 0x000E2CCE File Offset: 0x000E0ECE
+	// Token: 0x17001DDA RID: 7642
+	// (get) Token: 0x06005934 RID: 22836 RVA: 0x0003090C File Offset: 0x0002EB0C
+	// (set) Token: 0x06005935 RID: 22837 RVA: 0x00030913 File Offset: 0x0002EB13
 	public static Queue<int> PreviousMasterSeedOverrides
 	{
 		get
@@ -138,13 +138,13 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x06003FFF RID: 16383 RVA: 0x000E2CD6 File Offset: 0x000E0ED6
+	// Token: 0x06005936 RID: 22838 RVA: 0x0003091B File Offset: 0x0002EB1B
 	private void OnEnable()
 	{
 		SceneLoader_RL.SceneLoadingEndRelay.AddListener(new Action<string>(this.OnSceneLoaded), false);
 	}
 
-	// Token: 0x06004000 RID: 16384 RVA: 0x000E2CF0 File Offset: 0x000E0EF0
+	// Token: 0x06005937 RID: 22839 RVA: 0x00030935 File Offset: 0x0002EB35
 	private void OnSceneLoaded(string sceneName)
 	{
 		if (SceneLoadingUtility.GetSceneID(sceneName) == SceneID.MainMenu || SceneLoadingUtility.GetSceneID(sceneName) == SceneID.Tutorial)
@@ -153,7 +153,7 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x06004001 RID: 16385 RVA: 0x000E2D0C File Offset: 0x000E0F0C
+	// Token: 0x06005938 RID: 22840 RVA: 0x00152754 File Offset: 0x00150954
 	public static void GenerateNewSeed(string sceneName)
 	{
 		if (RNGSeedManager.m_sceneToPreviousSeedTable.ContainsKey(sceneName))
@@ -194,7 +194,7 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x06004002 RID: 16386 RVA: 0x000E2DFC File Offset: 0x000E0FFC
+	// Token: 0x06005939 RID: 22841 RVA: 0x00152844 File Offset: 0x00150A44
 	public static int GetCurrentSeed(string sceneName)
 	{
 		int result = -1;
@@ -205,7 +205,7 @@ public class RNGSeedManager : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x06004003 RID: 16387 RVA: 0x000E2E25 File Offset: 0x000E1025
+	// Token: 0x0600593A RID: 22842 RVA: 0x0003094F File Offset: 0x0002EB4F
 	public static int GetPreviousSeed(string sceneName)
 	{
 		if (RNGSeedManager.m_sceneToPreviousSeedTable.ContainsKey(sceneName))
@@ -215,13 +215,13 @@ public class RNGSeedManager : ScriptableObject
 		return -1;
 	}
 
-	// Token: 0x06004004 RID: 16388 RVA: 0x000E2E41 File Offset: 0x000E1041
+	// Token: 0x0600593B RID: 22843 RVA: 0x0003096B File Offset: 0x0002EB6B
 	public static string GetSeedAsHex(int seed)
 	{
 		return string.Format("{0}", seed.ToString("X"));
 	}
 
-	// Token: 0x06004005 RID: 16389 RVA: 0x000E2E5C File Offset: 0x000E105C
+	// Token: 0x0600593C RID: 22844 RVA: 0x00152870 File Offset: 0x00150A70
 	private static int GetSeedAsInt(string seed)
 	{
 		int result;
@@ -236,7 +236,7 @@ public class RNGSeedManager : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x06004006 RID: 16390 RVA: 0x000E2E90 File Offset: 0x000E1090
+	// Token: 0x0600593D RID: 22845 RVA: 0x001528A4 File Offset: 0x00150AA4
 	public static bool IsSeedValid(string seed)
 	{
 		if (!string.IsNullOrEmpty(seed))
@@ -254,7 +254,7 @@ public class RNGSeedManager : ScriptableObject
 		return true;
 	}
 
-	// Token: 0x06004007 RID: 16391 RVA: 0x000E2ECC File Offset: 0x000E10CC
+	// Token: 0x0600593E RID: 22846 RVA: 0x00030983 File Offset: 0x0002EB83
 	public static void SetMasterSeedOverride(int seed)
 	{
 		RNGSeedManager.MasterSeedOverride = seed;
@@ -265,18 +265,18 @@ public class RNGSeedManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x06004008 RID: 16392 RVA: 0x000E2EFA File Offset: 0x000E10FA
+	// Token: 0x0600593F RID: 22847 RVA: 0x00002FCA File Offset: 0x000011CA
 	public static void SetProjectSeed(string seed)
 	{
 	}
 
-	// Token: 0x06004009 RID: 16393 RVA: 0x000E2EFC File Offset: 0x000E10FC
+	// Token: 0x06005940 RID: 22848 RVA: 0x000309B1 File Offset: 0x0002EBB1
 	public static void SetTempSeed(string seed)
 	{
 		RNGSeedManager.TempSeed = seed;
 	}
 
-	// Token: 0x0600400A RID: 16394 RVA: 0x000E2F04 File Offset: 0x000E1104
+	// Token: 0x06005941 RID: 22849 RVA: 0x000309B9 File Offset: 0x0002EBB9
 	public static void ClearOverride()
 	{
 		RNGSeedManager.MasterSeedOverride = -1;
@@ -284,34 +284,34 @@ public class RNGSeedManager : ScriptableObject
 		RNGSeedManager.ProjectSeed = string.Empty;
 	}
 
-	// Token: 0x0400310E RID: 12558
+	// Token: 0x0400435D RID: 17245
 	[SerializeField]
 	private string m_projectSeed = "";
 
-	// Token: 0x0400310F RID: 12559
+	// Token: 0x0400435E RID: 17246
 	private static RNGSeedManager m_instance = null;
 
-	// Token: 0x04003110 RID: 12560
+	// Token: 0x0400435F RID: 17247
 	private static int m_masterSeedOverride = -1;
 
-	// Token: 0x04003111 RID: 12561
+	// Token: 0x04004360 RID: 17248
 	private static Dictionary<string, int> m_sceneToCurrentSeedTable = new Dictionary<string, int>();
 
-	// Token: 0x04003112 RID: 12562
+	// Token: 0x04004361 RID: 17249
 	private static Dictionary<string, int> m_sceneToPreviousSeedTable = new Dictionary<string, int>();
 
-	// Token: 0x04003113 RID: 12563
+	// Token: 0x04004362 RID: 17250
 	private static Queue<int> m_previousMasterSeedOverrides = new Queue<int>(5);
 
-	// Token: 0x04003114 RID: 12564
+	// Token: 0x04004363 RID: 17251
 	public const string RESOURCES_PATH = "Scriptable Objects/RNGSeedManager";
 
-	// Token: 0x04003115 RID: 12565
+	// Token: 0x04004364 RID: 17252
 	private const string ASSET_PATH = "Assets/Content/Scriptable Objects/RNGSeedManager.asset";
 
-	// Token: 0x04003116 RID: 12566
+	// Token: 0x04004365 RID: 17253
 	private const string EDITOR_PREFS_SEED_KEY = "Temp Seed (HEX)";
 
-	// Token: 0x04003117 RID: 12567
+	// Token: 0x04004366 RID: 17254
 	private const string WORLD_SCENE_NAME = "World";
 }

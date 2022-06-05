@@ -5,12 +5,12 @@ using Rewired.Data.Mapping;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000225 RID: 549
+// Token: 0x020003DB RID: 987
 [CreateAssetMenu(menuName = "Custom/Libraries/Controller Glyph Library")]
 public class ControllerGlyphLibrary : ScriptableObject
 {
-	// Token: 0x17000B23 RID: 2851
-	// (get) Token: 0x06001678 RID: 5752 RVA: 0x0004614C File Offset: 0x0004434C
+	// Token: 0x17000E4A RID: 3658
+	// (get) Token: 0x06002017 RID: 8215 RVA: 0x00010FFB File Offset: 0x0000F1FB
 	private static ControllerGlyphLibrary Instance
 	{
 		get
@@ -23,8 +23,8 @@ public class ControllerGlyphLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B24 RID: 2852
-	// (get) Token: 0x06001679 RID: 5753 RVA: 0x00046175 File Offset: 0x00044375
+	// Token: 0x17000E4B RID: 3659
+	// (get) Token: 0x06002018 RID: 8216 RVA: 0x00011024 File Offset: 0x0000F224
 	public static TextMeshProUGUI IconTextStyleTemplate
 	{
 		get
@@ -33,7 +33,7 @@ public class ControllerGlyphLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x0600167A RID: 5754 RVA: 0x00046184 File Offset: 0x00044384
+	// Token: 0x06002019 RID: 8217 RVA: 0x000A44CC File Offset: 0x000A26CC
 	public static ControllerGlyphData GetGlyphData(GamepadType gamepadType, bool returnDefaultIfNull = true)
 	{
 		ControllerGlyphData controllerGlyphData = null;
@@ -58,7 +58,7 @@ public class ControllerGlyphLibrary : ScriptableObject
 		return controllerGlyphData;
 	}
 
-	// Token: 0x0600167B RID: 5755 RVA: 0x0004622C File Offset: 0x0004442C
+	// Token: 0x0600201A RID: 8218 RVA: 0x000A4574 File Offset: 0x000A2774
 	public static ControllerGlyphData GetGlyphData(Guid guid, bool returnDefaultIfNull = true)
 	{
 		foreach (ControllerGlyphData controllerGlyphData in ControllerGlyphLibrary.Instance.m_glyphLibrary)
@@ -79,7 +79,7 @@ public class ControllerGlyphLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x0600167C RID: 5756 RVA: 0x000462B8 File Offset: 0x000444B8
+	// Token: 0x0600201B RID: 8219 RVA: 0x00011030 File Offset: 0x0000F230
 	public static GamepadType GetGamepadTypeFromInputIconSetting(InputIconSetting inputIconSetting)
 	{
 		switch (inputIconSetting)
@@ -97,20 +97,20 @@ public class ControllerGlyphLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x040015B3 RID: 5555
+	// Token: 0x04001CC0 RID: 7360
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/ControllerGlyphLibrary";
 
-	// Token: 0x040015B4 RID: 5556
+	// Token: 0x04001CC1 RID: 7361
 	[SerializeField]
 	private TextMeshProUGUI m_iconTextStyleTemplate;
 
-	// Token: 0x040015B5 RID: 5557
+	// Token: 0x04001CC2 RID: 7362
 	[SerializeField]
 	private List<ControllerGlyphData> m_glyphLibrary;
 
-	// Token: 0x040015B6 RID: 5558
+	// Token: 0x04001CC3 RID: 7363
 	public const GamepadType DEFAULT_GAMEPAD_TYPE = GamepadType.Default_Xbox;
 
-	// Token: 0x040015B7 RID: 5559
+	// Token: 0x04001CC4 RID: 7364
 	private static ControllerGlyphLibrary m_instance;
 }

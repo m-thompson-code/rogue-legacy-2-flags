@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020005F2 RID: 1522
+// Token: 0x02000A04 RID: 2564
 [CreateAssetMenu(menuName = "Custom/Biome Rules/Gameplay Mods/Change Game Speed")]
 public class ChangeGameSpeed_GameplayMod_BiomeRule : BiomeRule
 {
-	// Token: 0x17001375 RID: 4981
-	// (get) Token: 0x060036F4 RID: 14068 RVA: 0x000BCDBC File Offset: 0x000BAFBC
+	// Token: 0x17001AB2 RID: 6834
+	// (get) Token: 0x06004D3B RID: 19771 RVA: 0x000046FA File Offset: 0x000028FA
 	public override BiomeRuleExecutionTime ExecutionTime
 	{
 		get
@@ -16,7 +16,7 @@ public class ChangeGameSpeed_GameplayMod_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x060036F5 RID: 14069 RVA: 0x000BCDC0 File Offset: 0x000BAFC0
+	// Token: 0x06004D3C RID: 19772 RVA: 0x00029F2C File Offset: 0x0002812C
 	public override IEnumerator RunRule(BiomeType biome)
 	{
 		if (this.m_speedMultiplier <= 0f)
@@ -32,13 +32,13 @@ public class ChangeGameSpeed_GameplayMod_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x060036F6 RID: 14070 RVA: 0x000BCDCF File Offset: 0x000BAFCF
+	// Token: 0x06004D3D RID: 19773 RVA: 0x000192EE File Offset: 0x000174EE
 	public override void UndoRule(BiomeType biome)
 	{
 		RLTimeScale.SetTimeScale(TimeScaleType.Game, 1f);
 	}
 
-	// Token: 0x04002A56 RID: 10838
+	// Token: 0x04003A7C RID: 14972
 	[SerializeField]
 	private float m_speedMultiplier = 1f;
 }

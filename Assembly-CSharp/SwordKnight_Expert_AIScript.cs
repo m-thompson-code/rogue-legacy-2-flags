@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200013B RID: 315
+// Token: 0x0200022A RID: 554
 public class SwordKnight_Expert_AIScript : SwordKnight_Basic_AIScript
 {
-	// Token: 0x17000556 RID: 1366
-	// (get) Token: 0x060009F6 RID: 2550 RVA: 0x0001FEBB File Offset: 0x0001E0BB
+	// Token: 0x17000724 RID: 1828
+	// (get) Token: 0x06000F65 RID: 3941 RVA: 0x000068D3 File Offset: 0x00004AD3
 	protected override float m_slash_Attack_Speed
 	{
 		get
@@ -13,8 +13,8 @@ public class SwordKnight_Expert_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000557 RID: 1367
-	// (get) Token: 0x060009F7 RID: 2551 RVA: 0x0001FEC2 File Offset: 0x0001E0C2
+	// Token: 0x17000725 RID: 1829
+	// (get) Token: 0x06000F66 RID: 3942 RVA: 0x00003FB0 File Offset: 0x000021B0
 	protected override float m_slash_Attack_Duration
 	{
 		get
@@ -23,8 +23,8 @@ public class SwordKnight_Expert_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000558 RID: 1368
-	// (get) Token: 0x060009F8 RID: 2552 RVA: 0x0001FEC9 File Offset: 0x0001E0C9
+	// Token: 0x17000726 RID: 1830
+	// (get) Token: 0x06000F67 RID: 3943 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override int m_cricket_Attack_ProjectileAmount
 	{
 		get
@@ -33,8 +33,8 @@ public class SwordKnight_Expert_AIScript : SwordKnight_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000559 RID: 1369
-	// (get) Token: 0x060009F9 RID: 2553 RVA: 0x0001FECC File Offset: 0x0001E0CC
+	// Token: 0x17000727 RID: 1831
+	// (get) Token: 0x06000F68 RID: 3944 RVA: 0x000086AA File Offset: 0x000068AA
 	protected override float m_cricket_Attack_ProjectileDelay
 	{
 		get

@@ -2,22 +2,22 @@
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020001BC RID: 444
+// Token: 0x0200032B RID: 811
 public class FireworksAudioController : MonoBehaviour
 {
-	// Token: 0x0600114D RID: 4429 RVA: 0x00032296 File Offset: 0x00030496
+	// Token: 0x06001996 RID: 6550 RVA: 0x0000CED4 File Offset: 0x0000B0D4
 	private void Awake()
 	{
 		this.m_partSys = base.GetComponent<ParticleSystem>();
 	}
 
-	// Token: 0x0600114E RID: 4430 RVA: 0x000322A4 File Offset: 0x000304A4
+	// Token: 0x06001997 RID: 6551 RVA: 0x0000CEE2 File Offset: 0x0000B0E2
 	private void OnEnable()
 	{
 		this.m_particleCount = this.m_partSys.particleCount;
 	}
 
-	// Token: 0x0600114F RID: 4431 RVA: 0x000322B8 File Offset: 0x000304B8
+	// Token: 0x06001998 RID: 6552 RVA: 0x00090554 File Offset: 0x0008E754
 	private void FixedUpdate()
 	{
 		if (this.m_particleCount != this.m_partSys.particleCount)
@@ -34,9 +34,9 @@ public class FireworksAudioController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400123C RID: 4668
+	// Token: 0x04001845 RID: 6213
 	private ParticleSystem m_partSys;
 
-	// Token: 0x0400123D RID: 4669
+	// Token: 0x04001846 RID: 6214
 	private int m_particleCount;
 }

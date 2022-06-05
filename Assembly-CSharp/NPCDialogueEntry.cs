@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02000074 RID: 116
+// Token: 0x0200007C RID: 124
 public class NPCDialogueEntry
 {
-	// Token: 0x060001A8 RID: 424 RVA: 0x00010730 File Offset: 0x0000E930
+	// Token: 0x060001BC RID: 444 RVA: 0x00003B13 File Offset: 0x00001D13
 	public NPCDialogueEntry(string locID, params NPCDialogueCondition[] unlockConditions)
 	{
 		this.LocID = locID;
 		this.UnlockConditions = unlockConditions;
 	}
 
-	// Token: 0x060001A9 RID: 425 RVA: 0x00010746 File Offset: 0x0000E946
+	// Token: 0x060001BD RID: 445 RVA: 0x00003B29 File Offset: 0x00001D29
 	public NPCDialogueEntry(string locID, string titleLocID, string conditionValue, params NPCDialogueCondition[] unlockConditions)
 	{
 		this.LocID = locID;
@@ -19,7 +19,7 @@ public class NPCDialogueEntry
 		this.UnlockConditions = unlockConditions;
 	}
 
-	// Token: 0x060001AA RID: 426 RVA: 0x0001076C File Offset: 0x0000E96C
+	// Token: 0x060001BE RID: 446 RVA: 0x0004CC7C File Offset: 0x0004AE7C
 	public bool IsUnlocked()
 	{
 		if (this.UnlockConditions != null)
@@ -35,15 +35,15 @@ public class NPCDialogueEntry
 		return true;
 	}
 
-	// Token: 0x040003CA RID: 970
+	// Token: 0x040003EB RID: 1003
 	public string LocID;
 
-	// Token: 0x040003CB RID: 971
+	// Token: 0x040003EC RID: 1004
 	public NPCDialogueCondition[] UnlockConditions;
 
-	// Token: 0x040003CC RID: 972
+	// Token: 0x040003ED RID: 1005
 	public string TitleLocID;
 
-	// Token: 0x040003CD RID: 973
+	// Token: 0x040003EE RID: 1006
 	public string ConditionValue;
 }

@@ -5,11 +5,11 @@ using UnityEngine.Events;
 
 namespace SceneManagement_RL
 {
-	// Token: 0x020008C7 RID: 2247
+	// Token: 0x02000E28 RID: 3624
 	public class LoadingGate_SceneTransition : Transition_V2, ISceneLoadingTransition, ITransition
 	{
-		// Token: 0x170017FF RID: 6143
-		// (get) Token: 0x060049C3 RID: 18883 RVA: 0x0010A051 File Offset: 0x00108251
+		// Token: 0x170020C7 RID: 8391
+		// (get) Token: 0x06006628 RID: 26152 RVA: 0x00003DA1 File Offset: 0x00001FA1
 		public override TransitionID ID
 		{
 			get
@@ -18,12 +18,12 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x17001800 RID: 6144
-		// (get) Token: 0x060049C4 RID: 18884 RVA: 0x0010A054 File Offset: 0x00108254
-		// (set) Token: 0x060049C5 RID: 18885 RVA: 0x0010A05C File Offset: 0x0010825C
+		// Token: 0x170020C8 RID: 8392
+		// (get) Token: 0x06006629 RID: 26153 RVA: 0x0003847B File Offset: 0x0003667B
+		// (set) Token: 0x0600662A RID: 26154 RVA: 0x00038483 File Offset: 0x00036683
 		public bool DropPlayer { get; private set; }
 
-		// Token: 0x060049C6 RID: 18886 RVA: 0x0010A065 File Offset: 0x00108265
+		// Token: 0x0600662B RID: 26155 RVA: 0x0003848C File Offset: 0x0003668C
 		protected override void Awake()
 		{
 			base.Awake();
@@ -32,7 +32,7 @@ namespace SceneManagement_RL
 			this.m_animator = base.GetComponent<Animator>();
 		}
 
-		// Token: 0x060049C7 RID: 18887 RVA: 0x0010A0A5 File Offset: 0x001082A5
+		// Token: 0x0600662C RID: 26156 RVA: 0x000384CC File Offset: 0x000366CC
 		public IEnumerator TransitionIn()
 		{
 			this.DropPlayer = false;
@@ -63,7 +63,7 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x060049C8 RID: 18888 RVA: 0x0010A0B4 File Offset: 0x001082B4
+		// Token: 0x0600662D RID: 26157 RVA: 0x000384DB File Offset: 0x000366DB
 		public IEnumerator TransitionOut()
 		{
 			if (this.m_openStartEvent != null)
@@ -99,13 +99,13 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x060049C9 RID: 18889 RVA: 0x0010A0C3 File Offset: 0x001082C3
+		// Token: 0x0600662E RID: 26158 RVA: 0x000384EA File Offset: 0x000366EA
 		public override IEnumerator Run()
 		{
 			yield break;
 		}
 
-		// Token: 0x060049CA RID: 18890 RVA: 0x0010A0CC File Offset: 0x001082CC
+		// Token: 0x0600662F RID: 26159 RVA: 0x0017A6E4 File Offset: 0x001788E4
 		private void Update()
 		{
 			Vector3 localEulerAngles = this.m_loadingGear.localEulerAngles;
@@ -113,49 +113,49 @@ namespace SceneManagement_RL
 			this.m_loadingGear.localEulerAngles = localEulerAngles;
 		}
 
-		// Token: 0x04003E11 RID: 15889
+		// Token: 0x04005300 RID: 21248
 		[SerializeField]
 		private RectTransform m_gate;
 
-		// Token: 0x04003E12 RID: 15890
+		// Token: 0x04005301 RID: 21249
 		[SerializeField]
 		private RectTransform m_archway;
 
-		// Token: 0x04003E13 RID: 15891
+		// Token: 0x04005302 RID: 21250
 		[SerializeField]
 		private CanvasGroup m_blackness;
 
-		// Token: 0x04003E14 RID: 15892
+		// Token: 0x04005303 RID: 21251
 		[SerializeField]
 		private RectTransform m_loadingGear;
 
-		// Token: 0x04003E15 RID: 15893
+		// Token: 0x04005304 RID: 21252
 		[SerializeField]
 		private GameObject m_loadingGatePanel;
 
-		// Token: 0x04003E16 RID: 15894
+		// Token: 0x04005305 RID: 21253
 		[SerializeField]
 		private UnityEvent m_closeStartEvent;
 
-		// Token: 0x04003E17 RID: 15895
+		// Token: 0x04005306 RID: 21254
 		[SerializeField]
 		private UnityEvent m_closeEndEvent;
 
-		// Token: 0x04003E18 RID: 15896
+		// Token: 0x04005307 RID: 21255
 		[SerializeField]
 		private UnityEvent m_openStartEvent;
 
-		// Token: 0x04003E19 RID: 15897
+		// Token: 0x04005308 RID: 21256
 		[SerializeField]
 		private UnityEvent m_openEndEvent;
 
-		// Token: 0x04003E1A RID: 15898
+		// Token: 0x04005309 RID: 21257
 		private float m_gateStartingY;
 
-		// Token: 0x04003E1B RID: 15899
+		// Token: 0x0400530A RID: 21258
 		private float m_archwayStartingScale;
 
-		// Token: 0x04003E1C RID: 15900
+		// Token: 0x0400530B RID: 21259
 		private Animator m_animator;
 	}
 }

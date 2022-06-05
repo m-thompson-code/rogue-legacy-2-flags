@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x0200043A RID: 1082
+// Token: 0x02000702 RID: 1794
 public class HiddenChest_FairyRule : FairyRule
 {
-	// Token: 0x17000FAA RID: 4010
-	// (get) Token: 0x060027BA RID: 10170 RVA: 0x00084229 File Offset: 0x00082429
+	// Token: 0x1700148B RID: 5259
+	// (get) Token: 0x060036C6 RID: 14022 RVA: 0x0001E242 File Offset: 0x0001C442
 	public override string Description
 	{
 		get
@@ -14,8 +14,8 @@ public class HiddenChest_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FAB RID: 4011
-	// (get) Token: 0x060027BB RID: 10171 RVA: 0x00084230 File Offset: 0x00082430
+	// Token: 0x1700148C RID: 5260
+	// (get) Token: 0x060036C7 RID: 14023 RVA: 0x00006732 File Offset: 0x00004932
 	public override FairyRuleID ID
 	{
 		get
@@ -24,8 +24,8 @@ public class HiddenChest_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FAC RID: 4012
-	// (get) Token: 0x060027BC RID: 10172 RVA: 0x00084234 File Offset: 0x00082434
+	// Token: 0x1700148D RID: 5261
+	// (get) Token: 0x060036C8 RID: 14024 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool LockChestAtStart
 	{
 		get
@@ -34,13 +34,13 @@ public class HiddenChest_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027BD RID: 10173 RVA: 0x00084237 File Offset: 0x00082437
+	// Token: 0x060036C9 RID: 14025 RVA: 0x0001E249 File Offset: 0x0001C449
 	public override void RunRule(FairyRoomController fairyRoomController)
 	{
 		this.SetIsRuleActive(true);
 	}
 
-	// Token: 0x060027BE RID: 10174 RVA: 0x00084240 File Offset: 0x00082440
+	// Token: 0x060036CA RID: 14026 RVA: 0x000E4D00 File Offset: 0x000E2F00
 	private void SetIsRuleActive(bool isRuleActive)
 	{
 		float opacity = 1f;
@@ -64,7 +64,7 @@ public class HiddenChest_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027BF RID: 10175 RVA: 0x000842CB File Offset: 0x000824CB
+	// Token: 0x060036CB RID: 14027 RVA: 0x0001E252 File Offset: 0x0001C452
 	private IEnumerator SetParticleOpacity(ChestObj chest, float particleOpacity)
 	{
 		yield return null;
@@ -72,7 +72,7 @@ public class HiddenChest_FairyRule : FairyRule
 		yield break;
 	}
 
-	// Token: 0x060027C0 RID: 10176 RVA: 0x000842E1 File Offset: 0x000824E1
+	// Token: 0x060036CC RID: 14028 RVA: 0x0001E268 File Offset: 0x0001C468
 	public override void StopRule()
 	{
 		base.StopRule();

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200004C RID: 76
+// Token: 0x02000054 RID: 84
 public class DataField<T>
 {
-	// Token: 0x1700002D RID: 45
-	// (get) Token: 0x06000142 RID: 322 RVA: 0x0000C16B File Offset: 0x0000A36B
-	// (set) Token: 0x06000143 RID: 323 RVA: 0x0000C173 File Offset: 0x0000A373
+	// Token: 0x17000033 RID: 51
+	// (get) Token: 0x06000156 RID: 342 RVA: 0x00003781 File Offset: 0x00001981
+	// (set) Token: 0x06000157 RID: 343 RVA: 0x00003789 File Offset: 0x00001989
 	public T Value
 	{
 		get
@@ -20,8 +20,8 @@ public class DataField<T>
 		}
 	}
 
-	// Token: 0x1700002E RID: 46
-	// (get) Token: 0x06000144 RID: 324 RVA: 0x0000C17C File Offset: 0x0000A37C
+	// Token: 0x17000034 RID: 52
+	// (get) Token: 0x06000158 RID: 344 RVA: 0x00003792 File Offset: 0x00001992
 	public T DefaultValue
 	{
 		get
@@ -30,8 +30,8 @@ public class DataField<T>
 		}
 	}
 
-	// Token: 0x1700002F RID: 47
-	// (get) Token: 0x06000145 RID: 325 RVA: 0x0000C184 File Offset: 0x0000A384
+	// Token: 0x17000035 RID: 53
+	// (get) Token: 0x06000159 RID: 345 RVA: 0x0000379A File Offset: 0x0000199A
 	public bool IsDefault
 	{
 		get
@@ -40,24 +40,24 @@ public class DataField<T>
 		}
 	}
 
-	// Token: 0x06000146 RID: 326 RVA: 0x0000C19C File Offset: 0x0000A39C
+	// Token: 0x0600015A RID: 346 RVA: 0x000037B2 File Offset: 0x000019B2
 	public void SetDefaultValue(T defaultValue)
 	{
 		this.m_currentValue = defaultValue;
 		this.m_defaultValue = defaultValue;
 	}
 
-	// Token: 0x06000147 RID: 327 RVA: 0x0000C1AC File Offset: 0x0000A3AC
+	// Token: 0x0600015B RID: 347 RVA: 0x000037C2 File Offset: 0x000019C2
 	public void Reset()
 	{
 		this.Value = this.m_defaultValue;
 	}
 
-	// Token: 0x0400025D RID: 605
+	// Token: 0x0400027E RID: 638
 	[SerializeField]
 	private T m_currentValue;
 
-	// Token: 0x0400025E RID: 606
+	// Token: 0x0400027F RID: 639
 	[SerializeField]
 	private T m_defaultValue;
 }

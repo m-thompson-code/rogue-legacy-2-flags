@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200037B RID: 891
+// Token: 0x02000601 RID: 1537
 public class GlossaryStatusEffectEntry : GlossaryEntry
 {
-	// Token: 0x06002173 RID: 8563 RVA: 0x000693F4 File Offset: 0x000675F4
+	// Token: 0x06002F60 RID: 12128 RVA: 0x000CA2DC File Offset: 0x000C84DC
 	public override void Initialize()
 	{
 		this.m_icon.sprite = IconLibrary.GetStatusEffectSprite(StatusEffectType_RL.GetStatusBarType(this.m_statusEffectType));
@@ -26,7 +26,7 @@ public class GlossaryStatusEffectEntry : GlossaryEntry
 		this.m_descriptionText.text = this.m_statusEffectType.ToString() + " - MISSING DESC LOCID";
 	}
 
-	// Token: 0x04001CF1 RID: 7409
+	// Token: 0x040026C5 RID: 9925
 	[SerializeField]
 	private StatusEffectType m_statusEffectType;
 }

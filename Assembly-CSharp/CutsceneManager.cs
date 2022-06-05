@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x02000692 RID: 1682
+// Token: 0x02000B1B RID: 2843
 public class CutsceneManager
 {
-	// Token: 0x17001535 RID: 5429
-	// (get) Token: 0x06003D16 RID: 15638 RVA: 0x000D3D68 File Offset: 0x000D1F68
+	// Token: 0x17001D01 RID: 7425
+	// (get) Token: 0x060055AB RID: 21931 RVA: 0x0002E8AF File Offset: 0x0002CAAF
 	public static bool IsCutsceneActive
 	{
 		get
@@ -14,8 +14,8 @@ public class CutsceneManager
 		}
 	}
 
-	// Token: 0x17001536 RID: 5430
-	// (get) Token: 0x06003D17 RID: 15639 RVA: 0x000D3D6F File Offset: 0x000D1F6F
+	// Token: 0x17001D02 RID: 7426
+	// (get) Token: 0x060055AC RID: 21932 RVA: 0x0002E8B6 File Offset: 0x0002CAB6
 	public static Tunnel ExitRoomTunnel
 	{
 		get
@@ -24,8 +24,8 @@ public class CutsceneManager
 		}
 	}
 
-	// Token: 0x17001537 RID: 5431
-	// (get) Token: 0x06003D18 RID: 15640 RVA: 0x000D3D76 File Offset: 0x000D1F76
+	// Token: 0x17001D03 RID: 7427
+	// (get) Token: 0x060055AD RID: 21933 RVA: 0x0002E8BD File Offset: 0x0002CABD
 	public static PlayerSaveFlag CutsceneSaveFlag
 	{
 		get
@@ -34,7 +34,7 @@ public class CutsceneManager
 		}
 	}
 
-	// Token: 0x06003D19 RID: 15641 RVA: 0x000D3D7D File Offset: 0x000D1F7D
+	// Token: 0x060055AE RID: 21934 RVA: 0x0002E8C4 File Offset: 0x0002CAC4
 	public static void InitializeCutscene(PlayerSaveFlag saveFlag, Tunnel exitRoomTunnel)
 	{
 		CutsceneManager.m_playCutscene_STATIC = true;
@@ -42,7 +42,7 @@ public class CutsceneManager
 		CutsceneManager.m_exitRoomTunnel_STATIC = exitRoomTunnel;
 	}
 
-	// Token: 0x06003D1A RID: 15642 RVA: 0x000D3D91 File Offset: 0x000D1F91
+	// Token: 0x060055AF RID: 21935 RVA: 0x0002E8D8 File Offset: 0x0002CAD8
 	public static void ResetCutscene()
 	{
 		CutsceneManager.m_exitRoomTunnel_STATIC = null;
@@ -50,7 +50,7 @@ public class CutsceneManager
 		CutsceneManager.m_cutsceneSaveFlag_STATIC = PlayerSaveFlag.None;
 	}
 
-	// Token: 0x06003D1B RID: 15643 RVA: 0x000D3DA8 File Offset: 0x000D1FA8
+	// Token: 0x060055B0 RID: 21936 RVA: 0x00143E48 File Offset: 0x00142048
 	public static void SetTraitsEnabled(bool enabled)
 	{
 		if (!enabled)
@@ -78,12 +78,12 @@ public class CutsceneManager
 		}
 	}
 
-	// Token: 0x04002DCA RID: 11722
+	// Token: 0x04003F95 RID: 16277
 	private static Tunnel m_exitRoomTunnel_STATIC;
 
-	// Token: 0x04002DCB RID: 11723
+	// Token: 0x04003F96 RID: 16278
 	private static PlayerSaveFlag m_cutsceneSaveFlag_STATIC;
 
-	// Token: 0x04002DCC RID: 11724
+	// Token: 0x04003F97 RID: 16279
 	private static bool m_playCutscene_STATIC;
 }

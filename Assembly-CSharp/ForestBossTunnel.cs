@@ -2,17 +2,17 @@
 using System.Collections;
 using RL_Windows;
 
-// Token: 0x0200056A RID: 1386
+// Token: 0x0200093A RID: 2362
 public class ForestBossTunnel : BossTunnel
 {
-	// Token: 0x060032BE RID: 12990 RVA: 0x000ABBB4 File Offset: 0x000A9DB4
+	// Token: 0x06004793 RID: 18323 RVA: 0x00027394 File Offset: 0x00025594
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_healthChangeArgs = new MaxHealthChangeEventArgs(0f, 0f);
 	}
 
-	// Token: 0x060032BF RID: 12991 RVA: 0x000ABBD1 File Offset: 0x000A9DD1
+	// Token: 0x06004794 RID: 18324 RVA: 0x000273B1 File Offset: 0x000255B1
 	protected override IEnumerator EnterTunnelCoroutine()
 	{
 		if (0 + SaveManager.PlayerSaveData.GetRelic(RelicType.Lily1).Level + SaveManager.PlayerSaveData.GetRelic(RelicType.Lily2).Level + SaveManager.PlayerSaveData.GetRelic(RelicType.Lily3).Level > 0)
@@ -30,7 +30,7 @@ public class ForestBossTunnel : BossTunnel
 		yield break;
 	}
 
-	// Token: 0x060032C0 RID: 12992 RVA: 0x000ABBE0 File Offset: 0x000A9DE0
+	// Token: 0x06004795 RID: 18325 RVA: 0x00116408 File Offset: 0x00114608
 	private void RemoveLilyRelics()
 	{
 		int num = 0 + SaveManager.PlayerSaveData.GetRelic(RelicType.Lily1).Level + SaveManager.PlayerSaveData.GetRelic(RelicType.Lily2).Level;
@@ -41,6 +41,6 @@ public class ForestBossTunnel : BossTunnel
 		PlayerManager.GetPlayerController().InitializeHealthMods();
 	}
 
-	// Token: 0x040027B1 RID: 10161
+	// Token: 0x040036DF RID: 14047
 	private MaxHealthChangeEventArgs m_healthChangeArgs;
 }

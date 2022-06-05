@@ -1,13 +1,13 @@
 ﻿using System;
 
-// Token: 0x020002D5 RID: 725
+// Token: 0x020004CA RID: 1226
 [Serializable]
 public enum CastleLockState
 {
-	// Token: 0x04001A0E RID: 6670
+	// Token: 0x04002215 RID: 8725
 	NotLocked,
-	// Token: 0x04001A0F RID: 6671
+	// Token: 0x04002216 RID: 8726
 	TemporaryLock = 10,
-	// Token: 0x04001A10 RID: 6672
+	// Token: 0x04002217 RID: 8727
 	PermanentLock = 20
 }

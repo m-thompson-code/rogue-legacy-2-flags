@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000006 RID: 6
+// Token: 0x02000007 RID: 7
 [ExecuteInEditMode]
 public class MobilePostProcessing : MonoBehaviour
 {
-	// Token: 0x06000017 RID: 23 RVA: 0x00003BFC File Offset: 0x00001DFC
+	// Token: 0x06000018 RID: 24 RVA: 0x0003FDB8 File Offset: 0x0003DFB8
 	private void ResetBlur()
 	{
 		this.Blur = false;
@@ -19,7 +19,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.BlurAlphaChannel = 0f;
 	}
 
-	// Token: 0x06000018 RID: 24 RVA: 0x00003C54 File Offset: 0x00001E54
+	// Token: 0x06000019 RID: 25 RVA: 0x0003FE10 File Offset: 0x0003E010
 	private void ApplyProfileBlur(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableBlurEffect)
@@ -52,7 +52,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000019 RID: 25 RVA: 0x00003CE8 File Offset: 0x00001EE8
+	// Token: 0x0600001A RID: 26 RVA: 0x0003FEA4 File Offset: 0x0003E0A4
 	private void ApplyShaderBlur()
 	{
 		if (this.Blur && this.BlurOverallAmount > 0f)
@@ -67,7 +67,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.BlurKeyword);
 	}
 
-	// Token: 0x0600001A RID: 26 RVA: 0x00003DDF File Offset: 0x00001FDF
+	// Token: 0x0600001B RID: 27 RVA: 0x00002BB1 File Offset: 0x00000DB1
 	private void ResetBloom()
 	{
 		this.Bloom = false;
@@ -78,7 +78,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.BloomSoftness = 0.5f;
 	}
 
-	// Token: 0x0600001B RID: 27 RVA: 0x00003E20 File Offset: 0x00002020
+	// Token: 0x0600001C RID: 28 RVA: 0x0003FF9C File Offset: 0x0003E19C
 	private void ApplyProfileBloom(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableBloomEffect)
@@ -107,7 +107,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600001C RID: 28 RVA: 0x00003EA0 File Offset: 0x000020A0
+	// Token: 0x0600001D RID: 29 RVA: 0x0004001C File Offset: 0x0003E21C
 	private void ApplyShaderBloom()
 	{
 		if (this.Bloom && this.BloomAmount > 0f)
@@ -124,7 +124,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.BloomKeyword);
 	}
 
-	// Token: 0x0600001D RID: 29 RVA: 0x00003FD6 File Offset: 0x000021D6
+	// Token: 0x0600001E RID: 30 RVA: 0x00002BF1 File Offset: 0x00000DF1
 	private void ResetLut()
 	{
 		this.LUT = false;
@@ -132,7 +132,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.SourceLut = null;
 	}
 
-	// Token: 0x0600001E RID: 30 RVA: 0x00003FF1 File Offset: 0x000021F1
+	// Token: 0x0600001F RID: 31 RVA: 0x00002C0C File Offset: 0x00000E0C
 	private void ApplyProfileLut(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableLUTEffect)
@@ -149,7 +149,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600001F RID: 31 RVA: 0x0000402C File Offset: 0x0000222C
+	// Token: 0x06000020 RID: 32 RVA: 0x00040154 File Offset: 0x0003E354
 	private void ApplyShaderLut()
 	{
 		if (this.SourceLut != this.m_previousLut)
@@ -170,7 +170,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.LutKeyword);
 	}
 
-	// Token: 0x06000020 RID: 32 RVA: 0x000040C8 File Offset: 0x000022C8
+	// Token: 0x06000021 RID: 33 RVA: 0x000401F0 File Offset: 0x0003E3F0
 	private void Convert3D(Texture2D temp3DTex)
 	{
 		Color[] pixels = temp3DTex.GetPixels();
@@ -190,7 +190,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_converted3D.Apply();
 	}
 
-	// Token: 0x06000021 RID: 33 RVA: 0x0000415C File Offset: 0x0000235C
+	// Token: 0x06000022 RID: 34 RVA: 0x00040284 File Offset: 0x0003E484
 	private void ResetImageFiltering()
 	{
 		this.ImageFiltering = false;
@@ -202,7 +202,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.Gamma = 0f;
 	}
 
-	// Token: 0x06000022 RID: 34 RVA: 0x000041B4 File Offset: 0x000023B4
+	// Token: 0x06000023 RID: 35 RVA: 0x000402DC File Offset: 0x0003E4DC
 	private void ApplyProfileImageFiltering(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableImageFilteringEffect)
@@ -235,7 +235,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000023 RID: 35 RVA: 0x00004248 File Offset: 0x00002448
+	// Token: 0x06000024 RID: 36 RVA: 0x00040370 File Offset: 0x0003E570
 	private void ApplyShaderImageFiltering()
 	{
 		if (this.ImageFiltering)
@@ -250,7 +250,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.FilterKeyword);
 	}
 
-	// Token: 0x06000024 RID: 36 RVA: 0x00004310 File Offset: 0x00002510
+	// Token: 0x06000025 RID: 37 RVA: 0x00040438 File Offset: 0x0003E638
 	private void ResetGradientMap()
 	{
 		this.GradientMap = false;
@@ -263,7 +263,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.LightCutoff = 1f;
 	}
 
-	// Token: 0x06000025 RID: 37 RVA: 0x00004374 File Offset: 0x00002574
+	// Token: 0x06000026 RID: 38 RVA: 0x0004049C File Offset: 0x0003E69C
 	private void ApplyProfileGradientMap(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableGradientMapEffect)
@@ -300,7 +300,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000026 RID: 38 RVA: 0x00004420 File Offset: 0x00002620
+	// Token: 0x06000027 RID: 39 RVA: 0x00040548 File Offset: 0x0003E748
 	private void ApplyShaderGradientMap()
 	{
 		if (this.GradientMap)
@@ -318,7 +318,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.GradientKeyword);
 	}
 
-	// Token: 0x06000027 RID: 39 RVA: 0x000044F3 File Offset: 0x000026F3
+	// Token: 0x06000028 RID: 40 RVA: 0x00002C45 File Offset: 0x00000E45
 	private void ResetOverlayGradient()
 	{
 		this.OverlayGradient = false;
@@ -327,7 +327,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.OverlayAmount = 0.5f;
 	}
 
-	// Token: 0x06000028 RID: 40 RVA: 0x00004520 File Offset: 0x00002720
+	// Token: 0x06000029 RID: 41 RVA: 0x0004061C File Offset: 0x0003E81C
 	private void ApplyProfileOverlayGradient(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableOverlayGradientEffect)
@@ -348,7 +348,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000029 RID: 41 RVA: 0x00004578 File Offset: 0x00002778
+	// Token: 0x0600002A RID: 42 RVA: 0x00040674 File Offset: 0x0003E874
 	private void ApplyShaderOverlayGradient()
 	{
 		if (this.OverlayGradient)
@@ -362,7 +362,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.OverlayKeyword);
 	}
 
-	// Token: 0x0600002A RID: 42 RVA: 0x000045F0 File Offset: 0x000027F0
+	// Token: 0x0600002B RID: 43 RVA: 0x00002C6F File Offset: 0x00000E6F
 	private void ResetClampBlack()
 	{
 		this.ClampBlack = false;
@@ -370,7 +370,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.ClampFillAmount = 0.5f;
 	}
 
-	// Token: 0x0600002B RID: 43 RVA: 0x0000460F File Offset: 0x0000280F
+	// Token: 0x0600002C RID: 44 RVA: 0x00002C8E File Offset: 0x00000E8E
 	private void ApplyProfileClampBlack(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableClampBlackEffect)
@@ -387,7 +387,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600002C RID: 44 RVA: 0x00004648 File Offset: 0x00002848
+	// Token: 0x0600002D RID: 45 RVA: 0x000406EC File Offset: 0x0003E8EC
 	private void ApplyShaderClampBlack()
 	{
 		if (this.ClampBlack)
@@ -400,7 +400,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.ClampKeyword);
 	}
 
-	// Token: 0x0600002D RID: 45 RVA: 0x000046AC File Offset: 0x000028AC
+	// Token: 0x0600002E RID: 46 RVA: 0x00040750 File Offset: 0x0003E950
 	private void ResetTint()
 	{
 		this.Tint = false;
@@ -413,7 +413,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.TintAlphaChannel = 0f;
 	}
 
-	// Token: 0x0600002E RID: 46 RVA: 0x00004710 File Offset: 0x00002910
+	// Token: 0x0600002F RID: 47 RVA: 0x000407B4 File Offset: 0x0003E9B4
 	private void ApplyProfileTint(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableTintEffect)
@@ -450,7 +450,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600002F RID: 47 RVA: 0x000047BC File Offset: 0x000029BC
+	// Token: 0x06000030 RID: 48 RVA: 0x00040860 File Offset: 0x0003EA60
 	private void ApplyShaderTint()
 	{
 		if (this.Tint)
@@ -465,7 +465,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.TintKeyword);
 	}
 
-	// Token: 0x06000030 RID: 48 RVA: 0x00004864 File Offset: 0x00002A64
+	// Token: 0x06000031 RID: 49 RVA: 0x00002CC7 File Offset: 0x00000EC7
 	private void ResetChromaticAbberation()
 	{
 		this.ChromaticAberration = false;
@@ -473,7 +473,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.FishEyeDistortion = 0f;
 	}
 
-	// Token: 0x06000031 RID: 49 RVA: 0x00004883 File Offset: 0x00002A83
+	// Token: 0x06000032 RID: 50 RVA: 0x00002CE6 File Offset: 0x00000EE6
 	private void ApplyProfileChromaticAbberation(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableChromaticAbberationEffect)
@@ -490,7 +490,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000032 RID: 50 RVA: 0x000048BC File Offset: 0x00002ABC
+	// Token: 0x06000033 RID: 51 RVA: 0x00040908 File Offset: 0x0003EB08
 	private void ApplyShaderChromaticAbberation()
 	{
 		if (this.ChromaticAberration)
@@ -503,14 +503,14 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.ChromaKeyword);
 	}
 
-	// Token: 0x06000033 RID: 51 RVA: 0x0000492A File Offset: 0x00002B2A
+	// Token: 0x06000034 RID: 52 RVA: 0x00002D1F File Offset: 0x00000F1F
 	private void ResetLensDistortion()
 	{
 		this.Distortion = false;
 		this.LensDistortion = 0.5f;
 	}
 
-	// Token: 0x06000034 RID: 52 RVA: 0x0000493E File Offset: 0x00002B3E
+	// Token: 0x06000035 RID: 53 RVA: 0x00002D33 File Offset: 0x00000F33
 	private void ApplyProfileDistortion(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableDistortionEffect)
@@ -523,7 +523,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000035 RID: 53 RVA: 0x00004964 File Offset: 0x00002B64
+	// Token: 0x06000036 RID: 54 RVA: 0x00040978 File Offset: 0x0003EB78
 	private void ApplyShaderDistortion()
 	{
 		if (this.Distortion)
@@ -535,7 +535,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.DistortionKeyword);
 	}
 
-	// Token: 0x06000036 RID: 54 RVA: 0x000049B1 File Offset: 0x00002BB1
+	// Token: 0x06000037 RID: 55 RVA: 0x00002D58 File Offset: 0x00000F58
 	private void ResetVignette()
 	{
 		this.Vignette = false;
@@ -546,7 +546,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.VignetteRoundness = 0.5f;
 	}
 
-	// Token: 0x06000037 RID: 55 RVA: 0x000049F4 File Offset: 0x00002BF4
+	// Token: 0x06000038 RID: 56 RVA: 0x000409C8 File Offset: 0x0003EBC8
 	private void ApplyProfileVignette(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableVignetteEffect)
@@ -575,7 +575,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000038 RID: 56 RVA: 0x00004A74 File Offset: 0x00002C74
+	// Token: 0x06000039 RID: 57 RVA: 0x00040A48 File Offset: 0x0003EC48
 	private void ApplyShaderVignette()
 	{
 		if (this.Vignette)
@@ -592,7 +592,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.VignetteKeyword);
 	}
 
-	// Token: 0x06000039 RID: 57 RVA: 0x00004B41 File Offset: 0x00002D41
+	// Token: 0x0600003A RID: 58 RVA: 0x00002D98 File Offset: 0x00000F98
 	private void ResetMist()
 	{
 		this.Mist = false;
@@ -600,7 +600,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.MistAmount = 0.1f;
 	}
 
-	// Token: 0x0600003A RID: 58 RVA: 0x00004B60 File Offset: 0x00002D60
+	// Token: 0x0600003B RID: 59 RVA: 0x00002DB7 File Offset: 0x00000FB7
 	private void ApplyProfileMist(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableMistEffect)
@@ -617,7 +617,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600003B RID: 59 RVA: 0x00004B9C File Offset: 0x00002D9C
+	// Token: 0x0600003C RID: 60 RVA: 0x00040B18 File Offset: 0x0003ED18
 	private void ApplyShaderMist()
 	{
 		if (this.Mist)
@@ -630,7 +630,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.MistKeyword);
 	}
 
-	// Token: 0x0600003C RID: 60 RVA: 0x00004C04 File Offset: 0x00002E04
+	// Token: 0x0600003D RID: 61 RVA: 0x00040B80 File Offset: 0x0003ED80
 	private void ResetPixelation()
 	{
 		this.Pixelation = false;
@@ -642,7 +642,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.PixelAlphaChannel = 0f;
 	}
 
-	// Token: 0x0600003D RID: 61 RVA: 0x00004C5C File Offset: 0x00002E5C
+	// Token: 0x0600003E RID: 62 RVA: 0x00040BD8 File Offset: 0x0003EDD8
 	private void ApplyProfilePixelation(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnablePixelationEffect)
@@ -675,7 +675,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600003E RID: 62 RVA: 0x00004CF0 File Offset: 0x00002EF0
+	// Token: 0x0600003F RID: 63 RVA: 0x00040C6C File Offset: 0x0003EE6C
 	private void ApplyShaderPixelation()
 	{
 		if (this.Pixelation)
@@ -686,7 +686,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600003F RID: 63 RVA: 0x00004D63 File Offset: 0x00002F63
+	// Token: 0x06000040 RID: 64 RVA: 0x00002DF0 File Offset: 0x00000FF0
 	private void ResetDither()
 	{
 		this.Dither = false;
@@ -694,7 +694,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.DitherLight = MobilePostProcessing.DITHER_LIGHT_DEFAULT;
 	}
 
-	// Token: 0x06000040 RID: 64 RVA: 0x00004D82 File Offset: 0x00002F82
+	// Token: 0x06000041 RID: 65 RVA: 0x00002E0F File Offset: 0x0000100F
 	private void ApplyProfileDither(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableDitherEffect)
@@ -711,7 +711,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000041 RID: 65 RVA: 0x00004DBC File Offset: 0x00002FBC
+	// Token: 0x06000042 RID: 66 RVA: 0x00040CE0 File Offset: 0x0003EEE0
 	private void ApplyShaderDither()
 	{
 		if (this.Dither)
@@ -724,14 +724,14 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.DitherKeyword);
 	}
 
-	// Token: 0x06000042 RID: 66 RVA: 0x00004E1E File Offset: 0x0000301E
+	// Token: 0x06000043 RID: 67 RVA: 0x00002E48 File Offset: 0x00001048
 	private void ResetScreenFlip()
 	{
 		this.ScreenFlipX = false;
 		this.ScreenFlipY = false;
 	}
 
-	// Token: 0x06000043 RID: 67 RVA: 0x00004E2E File Offset: 0x0000302E
+	// Token: 0x06000044 RID: 68 RVA: 0x00002E58 File Offset: 0x00001058
 	private void ApplyProfileScreenFlip(MobilePostProcessingProfile profile)
 	{
 		if (profile.OverrideScreenFlipXEffect)
@@ -744,7 +744,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000044 RID: 68 RVA: 0x00004E58 File Offset: 0x00003058
+	// Token: 0x06000045 RID: 69 RVA: 0x00040D44 File Offset: 0x0003EF44
 	private void ApplyShaderScreenFlip()
 	{
 		if (this.ScreenFlipX)
@@ -763,7 +763,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.ScreenFlipYKeyword);
 	}
 
-	// Token: 0x06000045 RID: 69 RVA: 0x00004EB8 File Offset: 0x000030B8
+	// Token: 0x06000046 RID: 70 RVA: 0x00002E82 File Offset: 0x00001082
 	private void ResetAnimatedOverlay()
 	{
 		this.AnimatedOverlay = false;
@@ -773,7 +773,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.AnimOverlayStrength = 0.5f;
 	}
 
-	// Token: 0x06000046 RID: 70 RVA: 0x00004EEC File Offset: 0x000030EC
+	// Token: 0x06000047 RID: 71 RVA: 0x00040DA4 File Offset: 0x0003EFA4
 	private void ApplyProfileAnimatedOverlay(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableAnimatedOverlayEffect)
@@ -798,7 +798,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000047 RID: 71 RVA: 0x00004F58 File Offset: 0x00003158
+	// Token: 0x06000048 RID: 72 RVA: 0x00040E10 File Offset: 0x0003F010
 	private void ApplyShaderAnimatedOverlay()
 	{
 		if (this.AnimatedOverlay)
@@ -813,7 +813,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.AnimOverlayKeyword);
 	}
 
-	// Token: 0x06000048 RID: 72 RVA: 0x00004FEC File Offset: 0x000031EC
+	// Token: 0x06000049 RID: 73 RVA: 0x00002EB4 File Offset: 0x000010B4
 	private void ResetCircularDarkness()
 	{
 		this.CircularDarkness = false;
@@ -822,7 +822,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.CircDarknessSoftness = 0.5f;
 	}
 
-	// Token: 0x06000049 RID: 73 RVA: 0x00005018 File Offset: 0x00003218
+	// Token: 0x0600004A RID: 74 RVA: 0x00040EA4 File Offset: 0x0003F0A4
 	private void ApplyProfileCircularDarkness(MobilePostProcessingProfile profile)
 	{
 		if (profile.EnableCircularDarknessEffect)
@@ -843,7 +843,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600004A RID: 74 RVA: 0x00005070 File Offset: 0x00003270
+	// Token: 0x0600004B RID: 75 RVA: 0x00040EFC File Offset: 0x0003F0FC
 	private void ApplyShaderCircularDarkness()
 	{
 		if (this.CircularDarkness)
@@ -857,7 +857,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_material.DisableKeyword(MobilePostProcessing.CircDarknessKeyword);
 	}
 
-	// Token: 0x0600004B RID: 75 RVA: 0x000050FC File Offset: 0x000032FC
+	// Token: 0x0600004C RID: 76 RVA: 0x00040F88 File Offset: 0x0003F188
 	public void Start()
 	{
 		if (this.m_material == null)
@@ -876,7 +876,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_converted3D.wrapMode = TextureWrapMode.Clamp;
 	}
 
-	// Token: 0x0600004C RID: 76 RVA: 0x0000517C File Offset: 0x0000337C
+	// Token: 0x0600004D RID: 77 RVA: 0x00041008 File Offset: 0x0003F208
 	public void LateUpdate()
 	{
 		if (this.baseProfile != this.m_previousProfile)
@@ -896,7 +896,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600004D RID: 77 RVA: 0x0000520C File Offset: 0x0000340C
+	// Token: 0x0600004E RID: 78 RVA: 0x00002EDE File Offset: 0x000010DE
 	private void OnDestroy()
 	{
 		if (this.m_converted3D != null)
@@ -906,35 +906,35 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_converted3D = null;
 	}
 
-	// Token: 0x0600004E RID: 78 RVA: 0x0000522E File Offset: 0x0000342E
+	// Token: 0x0600004F RID: 79 RVA: 0x00002F00 File Offset: 0x00001100
 	public void AddTraitOverride(MobilePostProcessingProfile overrideProfile)
 	{
 		this.m_traitOverrides.Add(overrideProfile);
 		this.m_isDirty = true;
 	}
 
-	// Token: 0x0600004F RID: 79 RVA: 0x00005243 File Offset: 0x00003443
+	// Token: 0x06000050 RID: 80 RVA: 0x00002F15 File Offset: 0x00001115
 	public void RemoveTraitOverride(MobilePostProcessingProfile overrideProfile)
 	{
 		this.m_traitOverrides.Remove(overrideProfile);
 		this.m_isDirty = true;
 	}
 
-	// Token: 0x06000050 RID: 80 RVA: 0x00005259 File Offset: 0x00003459
+	// Token: 0x06000051 RID: 81 RVA: 0x00002F2B File Offset: 0x0000112B
 	public void AddDimensionOverride(MobilePostProcessingProfile dimensionProfile)
 	{
 		this.m_dimensionOverrides.Add(dimensionProfile);
 		this.m_isDirty = true;
 	}
 
-	// Token: 0x06000051 RID: 81 RVA: 0x0000526E File Offset: 0x0000346E
+	// Token: 0x06000052 RID: 82 RVA: 0x00002F40 File Offset: 0x00001140
 	public void RemoveDimensionOverride(MobilePostProcessingProfile dimensionProfile)
 	{
 		this.m_dimensionOverrides.Remove(dimensionProfile);
 		this.m_isDirty = true;
 	}
 
-	// Token: 0x06000052 RID: 82 RVA: 0x00005284 File Offset: 0x00003484
+	// Token: 0x06000053 RID: 83 RVA: 0x00002F56 File Offset: 0x00001156
 	public void SetBaseProfile(MobilePostProcessingProfile profile)
 	{
 		this.StopLerpToProfile();
@@ -942,13 +942,13 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_isDirty = true;
 	}
 
-	// Token: 0x06000053 RID: 83 RVA: 0x0000529A File Offset: 0x0000349A
+	// Token: 0x06000054 RID: 84 RVA: 0x00002F6C File Offset: 0x0000116C
 	public void ForceDirty()
 	{
 		this.m_isDirty = true;
 	}
 
-	// Token: 0x06000054 RID: 84 RVA: 0x000052A3 File Offset: 0x000034A3
+	// Token: 0x06000055 RID: 85 RVA: 0x00002F75 File Offset: 0x00001175
 	public void LerpToProfile(MobilePostProcessingProfile profile, float lerpSpeed)
 	{
 		this.StopLerpToProfile();
@@ -958,7 +958,7 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000055 RID: 85 RVA: 0x000052CC File Offset: 0x000034CC
+	// Token: 0x06000056 RID: 86 RVA: 0x00002F9E File Offset: 0x0000119E
 	private IEnumerator LerpToProfileCoroutine(MobilePostProcessingProfile profile, float lerpSpeed)
 	{
 		if (this.baseProfile.EnableBlurEffect && profile.EnableBlurEffect)
@@ -1266,7 +1266,7 @@ public class MobilePostProcessing : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000056 RID: 86 RVA: 0x000052EC File Offset: 0x000034EC
+	// Token: 0x06000057 RID: 87 RVA: 0x00041098 File Offset: 0x0003F298
 	public void StopLerpToProfile()
 	{
 		if (this.m_lerpToProfileCoroutine != null)
@@ -1285,7 +1285,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.m_lerpToProfileCoroutine = null;
 	}
 
-	// Token: 0x06000057 RID: 87 RVA: 0x00005350 File Offset: 0x00003550
+	// Token: 0x06000058 RID: 88 RVA: 0x000410FC File Offset: 0x0003F2FC
 	private void ApplyEffects()
 	{
 		if (this.baseProfile == null)
@@ -1307,7 +1307,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.ApplyShader();
 	}
 
-	// Token: 0x06000058 RID: 88 RVA: 0x000053EC File Offset: 0x000035EC
+	// Token: 0x06000059 RID: 89 RVA: 0x00041198 File Offset: 0x0003F398
 	private void ResetToDefaults()
 	{
 		this.ResetBlur();
@@ -1329,7 +1329,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.ResetCircularDarkness();
 	}
 
-	// Token: 0x06000059 RID: 89 RVA: 0x00005460 File Offset: 0x00003660
+	// Token: 0x0600005A RID: 90 RVA: 0x0004120C File Offset: 0x0003F40C
 	private void ApplyProfile(MobilePostProcessingProfile profile)
 	{
 		this.ApplyProfileBlur(profile);
@@ -1351,7 +1351,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.ApplyProfileCircularDarkness(profile);
 	}
 
-	// Token: 0x0600005A RID: 90 RVA: 0x000054E4 File Offset: 0x000036E4
+	// Token: 0x0600005B RID: 91 RVA: 0x00041290 File Offset: 0x0003F490
 	public void ApplyShader()
 	{
 		this.ApplyShaderBlur();
@@ -1373,7 +1373,7 @@ public class MobilePostProcessing : MonoBehaviour
 		this.ApplyShaderCircularDarkness();
 	}
 
-	// Token: 0x0600005B RID: 91 RVA: 0x00005558 File Offset: 0x00003758
+	// Token: 0x0600005C RID: 92 RVA: 0x00041304 File Offset: 0x0003F504
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		RenderTexture renderTexture = null;
@@ -1442,739 +1442,739 @@ public class MobilePostProcessing : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04000011 RID: 17
+	// Token: 0x04000013 RID: 19
 	[Space]
 	public RenderTexture Mask;
 
-	// Token: 0x04000012 RID: 18
+	// Token: 0x04000014 RID: 20
 	[SerializeField]
 	private MobilePostProcessingProfile baseProfile;
 
-	// Token: 0x04000013 RID: 19
+	// Token: 0x04000015 RID: 21
 	private static readonly int ID_maskTexture = Shader.PropertyToID("_MaskTex");
 
-	// Token: 0x04000014 RID: 20
+	// Token: 0x04000016 RID: 22
 	public static readonly string BlurKeyword = "BLUR";
 
-	// Token: 0x04000015 RID: 21
+	// Token: 0x04000017 RID: 23
 	public const float BLUR_OVERALL_AMOUNT_DEFAULT = 1f;
 
-	// Token: 0x04000016 RID: 22
+	// Token: 0x04000018 RID: 24
 	public const float BLUR_BASELINE_AMOUNT_DEFAULT = 0f;
 
-	// Token: 0x04000017 RID: 23
+	// Token: 0x04000019 RID: 25
 	public const float BLUR_RED_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x04000018 RID: 24
+	// Token: 0x0400001A RID: 26
 	public const float BLUR_GREEN_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x04000019 RID: 25
+	// Token: 0x0400001B RID: 27
 	public const float BLUR_BLUE_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x0400001A RID: 26
+	// Token: 0x0400001C RID: 28
 	public const float BLUR_ALPHA_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x0400001B RID: 27
+	// Token: 0x0400001D RID: 29
 	private static readonly int ID_blurTex = Shader.PropertyToID("_BlurTex");
 
-	// Token: 0x0400001C RID: 28
+	// Token: 0x0400001E RID: 30
 	private static readonly int ID_blurOverallAmount = Shader.PropertyToID("_BlurOverallAmount");
 
-	// Token: 0x0400001D RID: 29
+	// Token: 0x0400001F RID: 31
 	private static readonly int ID_blurBaselineAmount = Shader.PropertyToID("_BlurBaselineAmount");
 
-	// Token: 0x0400001E RID: 30
+	// Token: 0x04000020 RID: 32
 	private static readonly int ID_blurRGBAChannels = Shader.PropertyToID("_BlurRGBAChannels");
 
-	// Token: 0x0400001F RID: 31
+	// Token: 0x04000021 RID: 33
 	[Space]
 	public bool Blur;
 
-	// Token: 0x04000020 RID: 32
+	// Token: 0x04000022 RID: 34
 	[Range(0f, 1f)]
 	public float BlurOverallAmount = 1f;
 
-	// Token: 0x04000021 RID: 33
+	// Token: 0x04000023 RID: 35
 	[Range(0f, 1f)]
 	public float BlurBaselineAmount;
 
-	// Token: 0x04000022 RID: 34
+	// Token: 0x04000024 RID: 36
 	[Range(-1f, 1f)]
 	public float BlurRedChannel;
 
-	// Token: 0x04000023 RID: 35
+	// Token: 0x04000025 RID: 37
 	[Range(-1f, 1f)]
 	public float BlurGreenChannel;
 
-	// Token: 0x04000024 RID: 36
+	// Token: 0x04000026 RID: 38
 	[Range(-1f, 1f)]
 	public float BlurBlueChannel;
 
-	// Token: 0x04000025 RID: 37
+	// Token: 0x04000027 RID: 39
 	[Range(-1f, 1f)]
 	public float BlurAlphaChannel;
 
-	// Token: 0x04000026 RID: 38
+	// Token: 0x04000028 RID: 40
 	public static readonly string BloomKeyword = "BLOOM";
 
-	// Token: 0x04000027 RID: 39
+	// Token: 0x04000029 RID: 41
 	public static readonly Color BLOOM_COLOR_DEFAULT = Color.white;
 
-	// Token: 0x04000028 RID: 40
+	// Token: 0x0400002A RID: 42
 	public const float BLOOM_AMOUNT_DEFAULT = 1f;
 
-	// Token: 0x04000029 RID: 41
+	// Token: 0x0400002B RID: 43
 	public const float BLOOM_DIFFUSE_DEFAULT = 0.5f;
 
-	// Token: 0x0400002A RID: 42
+	// Token: 0x0400002C RID: 44
 	public const float BLOOM_THRESHOLD_DEFAULT = 0.5f;
 
-	// Token: 0x0400002B RID: 43
+	// Token: 0x0400002D RID: 45
 	public const float BLOOM_SOFTNESS_DEFAULT = 0.5f;
 
-	// Token: 0x0400002C RID: 44
+	// Token: 0x0400002E RID: 46
 	private static readonly int ID_bloomColor = Shader.PropertyToID("_BloomColor");
 
-	// Token: 0x0400002D RID: 45
+	// Token: 0x0400002F RID: 47
 	private static readonly int ID_bloomDiffuse = Shader.PropertyToID("_BloomDiffuse");
 
-	// Token: 0x0400002E RID: 46
+	// Token: 0x04000030 RID: 48
 	private static readonly int ID_bloomData = Shader.PropertyToID("_BloomData");
 
-	// Token: 0x0400002F RID: 47
+	// Token: 0x04000031 RID: 49
 	[Space]
 	public bool Bloom;
 
-	// Token: 0x04000030 RID: 48
+	// Token: 0x04000032 RID: 50
 	public Color BloomColor = MobilePostProcessing.BLOOM_COLOR_DEFAULT;
 
-	// Token: 0x04000031 RID: 49
+	// Token: 0x04000033 RID: 51
 	[Range(0f, 5f)]
 	public float BloomAmount = 1f;
 
-	// Token: 0x04000032 RID: 50
+	// Token: 0x04000034 RID: 52
 	[Range(0f, 1f)]
 	public float BloomDiffuse = 0.5f;
 
-	// Token: 0x04000033 RID: 51
+	// Token: 0x04000035 RID: 53
 	[Range(0f, 1f)]
 	public float BloomThreshold = 0.5f;
 
-	// Token: 0x04000034 RID: 52
+	// Token: 0x04000036 RID: 54
 	[Range(0f, 1f)]
 	public float BloomSoftness = 0.5f;
 
-	// Token: 0x04000035 RID: 53
+	// Token: 0x04000037 RID: 55
 	public static readonly string LutKeyword = "LUT";
 
-	// Token: 0x04000036 RID: 54
+	// Token: 0x04000038 RID: 56
 	public const Texture2D SOURCE_LUT_DEFAULT = null;
 
-	// Token: 0x04000037 RID: 55
+	// Token: 0x04000039 RID: 57
 	public const float LUT_AMOUNT_DEFAULT = 0.5f;
 
-	// Token: 0x04000038 RID: 56
+	// Token: 0x0400003A RID: 58
 	private static readonly int ID_lutTexture = Shader.PropertyToID("_LutTex");
 
-	// Token: 0x04000039 RID: 57
+	// Token: 0x0400003B RID: 59
 	private static readonly int ID_lutAmount = Shader.PropertyToID("_LutAmount");
 
-	// Token: 0x0400003A RID: 58
+	// Token: 0x0400003C RID: 60
 	[Space]
 	public bool LUT;
 
-	// Token: 0x0400003B RID: 59
+	// Token: 0x0400003D RID: 61
 	[Range(0f, 1f)]
 	public float LutAmount = 0.5f;
 
-	// Token: 0x0400003C RID: 60
+	// Token: 0x0400003E RID: 62
 	public Texture2D SourceLut;
 
-	// Token: 0x0400003D RID: 61
+	// Token: 0x0400003F RID: 63
 	public static readonly string FilterKeyword = "FILTER";
 
-	// Token: 0x0400003E RID: 62
+	// Token: 0x04000040 RID: 64
 	public static readonly Color COLOR_DEFAULT = Color.white;
 
-	// Token: 0x0400003F RID: 63
+	// Token: 0x04000041 RID: 65
 	public const float CONTRAST_DEFAULT = 0f;
 
-	// Token: 0x04000040 RID: 64
+	// Token: 0x04000042 RID: 66
 	public const float BRIGHTNESS_DEFAULT = 0f;
 
-	// Token: 0x04000041 RID: 65
+	// Token: 0x04000043 RID: 67
 	public const float SATURATION_DEFAULT = 0f;
 
-	// Token: 0x04000042 RID: 66
+	// Token: 0x04000044 RID: 68
 	public const float EXPOSURE_DEFAULT = 0f;
 
-	// Token: 0x04000043 RID: 67
+	// Token: 0x04000045 RID: 69
 	public const float GAMMA_DEFAULT = 0f;
 
-	// Token: 0x04000044 RID: 68
+	// Token: 0x04000046 RID: 70
 	private static readonly int ID_filterColor = Shader.PropertyToID("_FilterColor");
 
-	// Token: 0x04000045 RID: 69
+	// Token: 0x04000047 RID: 71
 	private static readonly int ID_filterContrast = Shader.PropertyToID("_FilterContrast");
 
-	// Token: 0x04000046 RID: 70
+	// Token: 0x04000048 RID: 72
 	private static readonly int ID_filterBrightness = Shader.PropertyToID("_FilterBrightness");
 
-	// Token: 0x04000047 RID: 71
+	// Token: 0x04000049 RID: 73
 	private static readonly int ID_filterSaturation = Shader.PropertyToID("_FilterSaturation");
 
-	// Token: 0x04000048 RID: 72
+	// Token: 0x0400004A RID: 74
 	[Space]
 	public bool ImageFiltering;
 
-	// Token: 0x04000049 RID: 73
+	// Token: 0x0400004B RID: 75
 	public Color Color = Color.white;
 
-	// Token: 0x0400004A RID: 74
+	// Token: 0x0400004C RID: 76
 	[Range(0f, 1f)]
 	public float Contrast;
 
-	// Token: 0x0400004B RID: 75
+	// Token: 0x0400004D RID: 77
 	[Range(-1f, 1f)]
 	public float Brightness;
 
-	// Token: 0x0400004C RID: 76
+	// Token: 0x0400004E RID: 78
 	[Range(-1f, 1f)]
 	public float Saturation;
 
-	// Token: 0x0400004D RID: 77
+	// Token: 0x0400004F RID: 79
 	[Range(-1f, 1f)]
 	public float Exposure;
 
-	// Token: 0x0400004E RID: 78
+	// Token: 0x04000050 RID: 80
 	[Range(-1f, 1f)]
 	public float Gamma;
 
-	// Token: 0x0400004F RID: 79
+	// Token: 0x04000051 RID: 81
 	public static readonly string GradientKeyword = "GRADIENT";
 
-	// Token: 0x04000050 RID: 80
+	// Token: 0x04000052 RID: 82
 	public static readonly Color GRADIENT_BASE_DEFAULT = Color.black;
 
-	// Token: 0x04000051 RID: 81
+	// Token: 0x04000053 RID: 83
 	public static readonly Color GRADIENT_DARK_DEFAULT = Color.white;
 
-	// Token: 0x04000052 RID: 82
+	// Token: 0x04000054 RID: 84
 	public static readonly Color GRADIENT_MID_DEFAULT = Color.white;
 
-	// Token: 0x04000053 RID: 83
+	// Token: 0x04000055 RID: 85
 	public static readonly Color GRADIENT_LIGHT_DEFAULT = Color.white;
 
-	// Token: 0x04000054 RID: 84
+	// Token: 0x04000056 RID: 86
 	public const float GRADIENT_AMOUNT_DEFAULT = 0.5f;
 
-	// Token: 0x04000055 RID: 85
+	// Token: 0x04000057 RID: 87
 	public const float DARK_CUTOFF_DEFAULT = 0f;
 
-	// Token: 0x04000056 RID: 86
+	// Token: 0x04000058 RID: 88
 	public const float LIGHT_CUTOFF_DEFAULT = 1f;
 
-	// Token: 0x04000057 RID: 87
+	// Token: 0x04000059 RID: 89
 	private static readonly int ID_gradientBase = Shader.PropertyToID("_GradientBase");
 
-	// Token: 0x04000058 RID: 88
+	// Token: 0x0400005A RID: 90
 	private static readonly int ID_gradientDark = Shader.PropertyToID("_GradientDark");
 
-	// Token: 0x04000059 RID: 89
+	// Token: 0x0400005B RID: 91
 	private static readonly int ID_gradientMid = Shader.PropertyToID("_GradientMid");
 
-	// Token: 0x0400005A RID: 90
+	// Token: 0x0400005C RID: 92
 	private static readonly int ID_gradientLight = Shader.PropertyToID("_GradientLight");
 
-	// Token: 0x0400005B RID: 91
+	// Token: 0x0400005D RID: 93
 	private static readonly int ID_gradientAmount = Shader.PropertyToID("_GradientAmount");
 
-	// Token: 0x0400005C RID: 92
+	// Token: 0x0400005E RID: 94
 	private static readonly int ID_gradientDarkCutoff = Shader.PropertyToID("_GradientDarkCutoff");
 
-	// Token: 0x0400005D RID: 93
+	// Token: 0x0400005F RID: 95
 	private static readonly int ID_gradientLightCutoff = Shader.PropertyToID("_GradientLightCutoff");
 
-	// Token: 0x0400005E RID: 94
+	// Token: 0x04000060 RID: 96
 	[Space]
 	public bool GradientMap;
 
-	// Token: 0x0400005F RID: 95
+	// Token: 0x04000061 RID: 97
 	public Color GradientBase = MobilePostProcessing.GRADIENT_BASE_DEFAULT;
 
-	// Token: 0x04000060 RID: 96
+	// Token: 0x04000062 RID: 98
 	public Color GradientDark = MobilePostProcessing.GRADIENT_DARK_DEFAULT;
 
-	// Token: 0x04000061 RID: 97
+	// Token: 0x04000063 RID: 99
 	public Color GradientMid = MobilePostProcessing.GRADIENT_MID_DEFAULT;
 
-	// Token: 0x04000062 RID: 98
+	// Token: 0x04000064 RID: 100
 	public Color GradientLight = MobilePostProcessing.GRADIENT_LIGHT_DEFAULT;
 
-	// Token: 0x04000063 RID: 99
+	// Token: 0x04000065 RID: 101
 	[Range(0f, 1f)]
 	public float GradientAmount = 0.5f;
 
-	// Token: 0x04000064 RID: 100
+	// Token: 0x04000066 RID: 102
 	[Range(0f, 0.3f)]
 	public float DarkCutoff;
 
-	// Token: 0x04000065 RID: 101
+	// Token: 0x04000067 RID: 103
 	[Range(0.7f, 1f)]
 	public float LightCutoff = 1f;
 
-	// Token: 0x04000066 RID: 102
+	// Token: 0x04000068 RID: 104
 	public static readonly string OverlayKeyword = "OVERLAY";
 
-	// Token: 0x04000067 RID: 103
+	// Token: 0x04000069 RID: 105
 	public static readonly Color OVERLAY_TOP_DEFAULT = Color.white;
 
-	// Token: 0x04000068 RID: 104
+	// Token: 0x0400006A RID: 106
 	public static readonly Color OVERLAY_BOTTOM_DEFAULT = Color.black;
 
-	// Token: 0x04000069 RID: 105
+	// Token: 0x0400006B RID: 107
 	public const float OVERLAY_AMOUNT_DEFAULT = 0.5f;
 
-	// Token: 0x0400006A RID: 106
+	// Token: 0x0400006C RID: 108
 	private static readonly int ID_overlayTop = Shader.PropertyToID("_OverlayTop");
 
-	// Token: 0x0400006B RID: 107
+	// Token: 0x0400006D RID: 109
 	private static readonly int ID_overlayBottom = Shader.PropertyToID("_OverlayBottom");
 
-	// Token: 0x0400006C RID: 108
+	// Token: 0x0400006E RID: 110
 	private static readonly int ID_overlayAmount = Shader.PropertyToID("_OverlayAmount");
 
-	// Token: 0x0400006D RID: 109
+	// Token: 0x0400006F RID: 111
 	[Space]
 	public bool OverlayGradient;
 
-	// Token: 0x0400006E RID: 110
+	// Token: 0x04000070 RID: 112
 	public Color OverlayTop = MobilePostProcessing.OVERLAY_TOP_DEFAULT;
 
-	// Token: 0x0400006F RID: 111
+	// Token: 0x04000071 RID: 113
 	public Color OverlayBottom = MobilePostProcessing.OVERLAY_BOTTOM_DEFAULT;
 
-	// Token: 0x04000070 RID: 112
+	// Token: 0x04000072 RID: 114
 	[Range(0f, 1f)]
 	public float OverlayAmount = 0.5f;
 
-	// Token: 0x04000071 RID: 113
+	// Token: 0x04000073 RID: 115
 	public static readonly string ClampKeyword = "CLAMP";
 
-	// Token: 0x04000072 RID: 114
+	// Token: 0x04000074 RID: 116
 	public static readonly Color CLAMP_COLOR_DEFAULT = Color.black;
 
-	// Token: 0x04000073 RID: 115
+	// Token: 0x04000075 RID: 117
 	public const float CLAMP_FILL_AMOUNT_DEFAULT = 0.5f;
 
-	// Token: 0x04000074 RID: 116
+	// Token: 0x04000076 RID: 118
 	private static readonly int ID_clampColor = Shader.PropertyToID("_ClampColor");
 
-	// Token: 0x04000075 RID: 117
+	// Token: 0x04000077 RID: 119
 	private static readonly int ID_clampFillAmount = Shader.PropertyToID("_ClampFillAmount");
 
-	// Token: 0x04000076 RID: 118
+	// Token: 0x04000078 RID: 120
 	[Space]
 	public bool ClampBlack;
 
-	// Token: 0x04000077 RID: 119
+	// Token: 0x04000079 RID: 121
 	public Color ClampColor = MobilePostProcessing.CLAMP_COLOR_DEFAULT;
 
-	// Token: 0x04000078 RID: 120
+	// Token: 0x0400007A RID: 122
 	[Range(0f, 1f)]
 	public float ClampFillAmount = 0.5f;
 
-	// Token: 0x04000079 RID: 121
+	// Token: 0x0400007B RID: 123
 	public static readonly string TintKeyword = "TINT";
 
-	// Token: 0x0400007A RID: 122
+	// Token: 0x0400007C RID: 124
 	public static readonly Color TINT_COLOR_DEFAULT = Color.black;
 
-	// Token: 0x0400007B RID: 123
+	// Token: 0x0400007D RID: 125
 	public const float TINT_OVERALL_AMOUNT_DEFAULT = 1f;
 
-	// Token: 0x0400007C RID: 124
+	// Token: 0x0400007E RID: 126
 	public const float TINT_BASELINE_AMOUNT_DEFAULT = 0f;
 
-	// Token: 0x0400007D RID: 125
+	// Token: 0x0400007F RID: 127
 	public const float TINT_RED_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x0400007E RID: 126
+	// Token: 0x04000080 RID: 128
 	public const float TINT_GREEN_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x0400007F RID: 127
+	// Token: 0x04000081 RID: 129
 	public const float TINT_BLUE_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x04000080 RID: 128
+	// Token: 0x04000082 RID: 130
 	public const float TINT_ALPHA_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x04000081 RID: 129
+	// Token: 0x04000083 RID: 131
 	private static readonly int ID_tintColor = Shader.PropertyToID("_TintColor");
 
-	// Token: 0x04000082 RID: 130
+	// Token: 0x04000084 RID: 132
 	private static readonly int ID_tintOverallAmount = Shader.PropertyToID("_TintOverallAmount");
 
-	// Token: 0x04000083 RID: 131
+	// Token: 0x04000085 RID: 133
 	private static readonly int ID_tintBaselineAmount = Shader.PropertyToID("_TintBaselineAmount");
 
-	// Token: 0x04000084 RID: 132
+	// Token: 0x04000086 RID: 134
 	private static readonly int ID_tintRGBAChannels = Shader.PropertyToID("_TintRGBAChannels");
 
-	// Token: 0x04000085 RID: 133
+	// Token: 0x04000087 RID: 135
 	[Space]
 	public bool Tint;
 
-	// Token: 0x04000086 RID: 134
+	// Token: 0x04000088 RID: 136
 	public Color TintColor = MobilePostProcessing.TINT_COLOR_DEFAULT;
 
-	// Token: 0x04000087 RID: 135
+	// Token: 0x04000089 RID: 137
 	[Range(0f, 1f)]
 	public float TintOverallAmount = 1f;
 
-	// Token: 0x04000088 RID: 136
+	// Token: 0x0400008A RID: 138
 	[Range(0f, 1f)]
 	public float TintBaselineAmount;
 
-	// Token: 0x04000089 RID: 137
+	// Token: 0x0400008B RID: 139
 	[Range(-1f, 1f)]
 	public float TintRedChannel;
 
-	// Token: 0x0400008A RID: 138
+	// Token: 0x0400008C RID: 140
 	[Range(-1f, 1f)]
 	public float TintGreenChannel;
 
-	// Token: 0x0400008B RID: 139
+	// Token: 0x0400008D RID: 141
 	[Range(-1f, 1f)]
 	public float TintBlueChannel;
 
-	// Token: 0x0400008C RID: 140
+	// Token: 0x0400008E RID: 142
 	[Range(-1f, 1f)]
 	public float TintAlphaChannel;
 
-	// Token: 0x0400008D RID: 141
+	// Token: 0x0400008F RID: 143
 	public static readonly string ChromaKeyword = "CHROMA";
 
-	// Token: 0x0400008E RID: 142
+	// Token: 0x04000090 RID: 144
 	public const float OFFSET_DEFAULT = 1f;
 
-	// Token: 0x0400008F RID: 143
+	// Token: 0x04000091 RID: 145
 	public const float FISH_EYE_DISTORTION_DEFAULT = 0f;
 
-	// Token: 0x04000090 RID: 144
+	// Token: 0x04000092 RID: 146
 	private static readonly int ID_chromaOffset = Shader.PropertyToID("_ChromaOffset");
 
-	// Token: 0x04000091 RID: 145
+	// Token: 0x04000093 RID: 147
 	private static readonly int ID_chromaFishEye = Shader.PropertyToID("_ChromaFishEye");
 
-	// Token: 0x04000092 RID: 146
+	// Token: 0x04000094 RID: 148
 	[Space]
 	public bool ChromaticAberration;
 
-	// Token: 0x04000093 RID: 147
+	// Token: 0x04000095 RID: 149
 	public float Offset = 1f;
 
-	// Token: 0x04000094 RID: 148
+	// Token: 0x04000096 RID: 150
 	[Range(-1f, 1f)]
 	public float FishEyeDistortion;
 
-	// Token: 0x04000095 RID: 149
+	// Token: 0x04000097 RID: 151
 	public static readonly string DistortionKeyword = "DISTORTION";
 
-	// Token: 0x04000096 RID: 150
+	// Token: 0x04000098 RID: 152
 	public const float LENS_DISTORTION_DEFAULT = 0.5f;
 
-	// Token: 0x04000097 RID: 151
+	// Token: 0x04000099 RID: 153
 	private static readonly int ID_lensdistortion = Shader.PropertyToID("_LensDistortion");
 
-	// Token: 0x04000098 RID: 152
+	// Token: 0x0400009A RID: 154
 	[Space]
 	public bool Distortion;
 
-	// Token: 0x04000099 RID: 153
+	// Token: 0x0400009B RID: 155
 	[Range(0f, 1f)]
 	public float LensDistortion = 0.5f;
 
-	// Token: 0x0400009A RID: 154
+	// Token: 0x0400009C RID: 156
 	public static readonly string VignetteKeyword = "VIGNETTE";
 
-	// Token: 0x0400009B RID: 155
+	// Token: 0x0400009D RID: 157
 	public static readonly Vector2 VIGNETTE_CENTER_DEFAULT = new Vector2(0.5f, 0.5f);
 
-	// Token: 0x0400009C RID: 156
+	// Token: 0x0400009E RID: 158
 	public static readonly Color VIGNETTE_COLOR_DEFAULT = Color.black;
 
-	// Token: 0x0400009D RID: 157
+	// Token: 0x0400009F RID: 159
 	public const float VIGNETTE_AMOUNT_DEFAULT = 0.5f;
 
-	// Token: 0x0400009E RID: 158
+	// Token: 0x040000A0 RID: 160
 	public const float VIGNETTE_SOFTNESS_DEFAULT = 0.5f;
 
-	// Token: 0x0400009F RID: 159
+	// Token: 0x040000A1 RID: 161
 	public const float VIGNETTE_ROUNDNESS_DEFAULT = 0.5f;
 
-	// Token: 0x040000A0 RID: 160
+	// Token: 0x040000A2 RID: 162
 	private static readonly int ID_vignetteColor = Shader.PropertyToID("_VignetteColor");
 
-	// Token: 0x040000A1 RID: 161
+	// Token: 0x040000A3 RID: 163
 	private static readonly int ID_vignetteAmount = Shader.PropertyToID("_VignetteAmount");
 
-	// Token: 0x040000A2 RID: 162
+	// Token: 0x040000A4 RID: 164
 	private static readonly int ID_vignetteSoftness = Shader.PropertyToID("_VignetteSoftness");
 
-	// Token: 0x040000A3 RID: 163
+	// Token: 0x040000A5 RID: 165
 	private static readonly int ID_vignetteCenter = Shader.PropertyToID("_VignetteCenter");
 
-	// Token: 0x040000A4 RID: 164
+	// Token: 0x040000A6 RID: 166
 	private static readonly int ID_vignetteRoundness = Shader.PropertyToID("_VignetteRoundness");
 
-	// Token: 0x040000A5 RID: 165
+	// Token: 0x040000A7 RID: 167
 	[Space]
 	public bool Vignette;
 
-	// Token: 0x040000A6 RID: 166
+	// Token: 0x040000A8 RID: 168
 	public Vector2 VignetteCenter = MobilePostProcessing.VIGNETTE_CENTER_DEFAULT;
 
-	// Token: 0x040000A7 RID: 167
-	public Color VignetteColor = MobilePostProcessing.VIGNETTE_COLOR_DEFAULT;
-
-	// Token: 0x040000A8 RID: 168
-	[Range(0f, 1f)]
-	public float VignetteAmount = 0.5f;
-
 	// Token: 0x040000A9 RID: 169
-	[Range(0.001f, 1f)]
-	public float VignetteSoftness = 0.5f;
+	public Color VignetteColor = MobilePostProcessing.VIGNETTE_COLOR_DEFAULT;
 
 	// Token: 0x040000AA RID: 170
 	[Range(0f, 1f)]
-	public float VignetteRoundness = 0.5f;
+	public float VignetteAmount = 0.5f;
 
 	// Token: 0x040000AB RID: 171
-	public static readonly string MistKeyword = "MIST";
+	[Range(0.001f, 1f)]
+	public float VignetteSoftness = 0.5f;
 
 	// Token: 0x040000AC RID: 172
-	public static readonly Color MIST_COLOR_DEFAULT = Color.white;
+	[Range(0f, 1f)]
+	public float VignetteRoundness = 0.5f;
 
 	// Token: 0x040000AD RID: 173
-	public const float MIST_AMOUNT_DEFAULT = 0.1f;
+	public static readonly string MistKeyword = "MIST";
 
 	// Token: 0x040000AE RID: 174
-	private static readonly int ID_mistColor = Shader.PropertyToID("_MistColor");
+	public static readonly Color MIST_COLOR_DEFAULT = Color.white;
 
 	// Token: 0x040000AF RID: 175
-	private static readonly int ID_mistAmount = Shader.PropertyToID("_MistAmount");
+	public const float MIST_AMOUNT_DEFAULT = 0.1f;
 
 	// Token: 0x040000B0 RID: 176
+	private static readonly int ID_mistColor = Shader.PropertyToID("_MistColor");
+
+	// Token: 0x040000B1 RID: 177
+	private static readonly int ID_mistAmount = Shader.PropertyToID("_MistAmount");
+
+	// Token: 0x040000B2 RID: 178
 	[Space]
 	public bool Mist;
 
-	// Token: 0x040000B1 RID: 177
+	// Token: 0x040000B3 RID: 179
 	public Color MistColor = MobilePostProcessing.MIST_COLOR_DEFAULT;
 
-	// Token: 0x040000B2 RID: 178
+	// Token: 0x040000B4 RID: 180
 	[Range(0f, 1f)]
 	public float MistAmount = 0.1f;
 
-	// Token: 0x040000B3 RID: 179
+	// Token: 0x040000B5 RID: 181
 	public static readonly Vector2 PIXEL_RESOLUTION_DEFAULT = new Vector2(100f, 100f);
 
-	// Token: 0x040000B4 RID: 180
+	// Token: 0x040000B6 RID: 182
 	public const float PIXEL_BASELINE_AMOUNT_DEFAULT = 0f;
 
-	// Token: 0x040000B5 RID: 181
+	// Token: 0x040000B7 RID: 183
 	public const float PIXEL_RED_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x040000B6 RID: 182
+	// Token: 0x040000B8 RID: 184
 	public const float PIXEL_GREEN_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x040000B7 RID: 183
+	// Token: 0x040000B9 RID: 185
 	public const float PIXEL_BLUE_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x040000B8 RID: 184
+	// Token: 0x040000BA RID: 186
 	public const float PIXEL_ALPHA_CHANNEL_DEFAULT = 0f;
 
-	// Token: 0x040000B9 RID: 185
+	// Token: 0x040000BB RID: 187
 	private static readonly int ID_pixelResolution = Shader.PropertyToID("_PixelResolution");
 
-	// Token: 0x040000BA RID: 186
+	// Token: 0x040000BC RID: 188
 	private static readonly int ID_pixelBaselineAmount = Shader.PropertyToID("_PixelBaselineAmount");
 
-	// Token: 0x040000BB RID: 187
+	// Token: 0x040000BD RID: 189
 	private static readonly int ID_pixelRGBAChannels = Shader.PropertyToID("_PixelRGBAChannels");
 
-	// Token: 0x040000BC RID: 188
+	// Token: 0x040000BE RID: 190
 	[Space]
 	public bool Pixelation;
 
-	// Token: 0x040000BD RID: 189
+	// Token: 0x040000BF RID: 191
 	public Vector2 PixelResolution = MobilePostProcessing.PIXEL_RESOLUTION_DEFAULT;
 
-	// Token: 0x040000BE RID: 190
+	// Token: 0x040000C0 RID: 192
 	[Range(0f, 1f)]
 	public float PixelBaselineAmount;
 
-	// Token: 0x040000BF RID: 191
+	// Token: 0x040000C1 RID: 193
 	[Range(-1f, 1f)]
 	public float PixelRedChannel;
 
-	// Token: 0x040000C0 RID: 192
+	// Token: 0x040000C2 RID: 194
 	[Range(-1f, 1f)]
 	public float PixelGreenChannel;
 
-	// Token: 0x040000C1 RID: 193
+	// Token: 0x040000C3 RID: 195
 	[Range(-1f, 1f)]
 	public float PixelBlueChannel;
 
-	// Token: 0x040000C2 RID: 194
+	// Token: 0x040000C4 RID: 196
 	[Range(-1f, 1f)]
 	public float PixelAlphaChannel;
 
-	// Token: 0x040000C3 RID: 195
+	// Token: 0x040000C5 RID: 197
 	public static readonly string DitherKeyword = "DITHER";
 
-	// Token: 0x040000C4 RID: 196
+	// Token: 0x040000C6 RID: 198
 	public static readonly Color DITHER_DARK_DEFAULT = Color.black;
 
-	// Token: 0x040000C5 RID: 197
+	// Token: 0x040000C7 RID: 199
 	public static readonly Color DITHER_LIGHT_DEFAULT = Color.white;
 
-	// Token: 0x040000C6 RID: 198
+	// Token: 0x040000C8 RID: 200
 	private static readonly int ID_ditherDark = Shader.PropertyToID("_DitherDark");
 
-	// Token: 0x040000C7 RID: 199
+	// Token: 0x040000C9 RID: 201
 	private static readonly int ID_ditherLight = Shader.PropertyToID("_DitherLight");
 
-	// Token: 0x040000C8 RID: 200
+	// Token: 0x040000CA RID: 202
 	[Space]
 	public bool Dither;
 
-	// Token: 0x040000C9 RID: 201
+	// Token: 0x040000CB RID: 203
 	public Color DitherDark = MobilePostProcessing.DITHER_DARK_DEFAULT;
 
-	// Token: 0x040000CA RID: 202
+	// Token: 0x040000CC RID: 204
 	public Color DitherLight = MobilePostProcessing.DITHER_LIGHT_DEFAULT;
 
-	// Token: 0x040000CB RID: 203
+	// Token: 0x040000CD RID: 205
 	public static readonly string ScreenFlipXKeyword = "SCREENFLIP_X";
 
-	// Token: 0x040000CC RID: 204
+	// Token: 0x040000CE RID: 206
 	public static readonly string ScreenFlipYKeyword = "SCREENFLIP_Y";
 
-	// Token: 0x040000CD RID: 205
+	// Token: 0x040000CF RID: 207
 	[Space]
 	public bool ScreenFlipX;
 
-	// Token: 0x040000CE RID: 206
+	// Token: 0x040000D0 RID: 208
 	public bool ScreenFlipY;
 
-	// Token: 0x040000CF RID: 207
+	// Token: 0x040000D1 RID: 209
 	public static readonly string AnimOverlayKeyword = "ANIMOVERLAY";
 
-	// Token: 0x040000D0 RID: 208
+	// Token: 0x040000D2 RID: 210
 	public static readonly Texture2D ANIMOVERLAY_TEXTURE_DEFAULT = null;
 
-	// Token: 0x040000D1 RID: 209
+	// Token: 0x040000D3 RID: 211
 	public static readonly Vector2 ANIMOVERLAY_SPRITESHEET_SIZE_DEFAULT = Vector2.one;
 
-	// Token: 0x040000D2 RID: 210
+	// Token: 0x040000D4 RID: 212
 	public const int ANIMOVERLAY_FRAMERATE_DEFAULT = 30;
 
-	// Token: 0x040000D3 RID: 211
+	// Token: 0x040000D5 RID: 213
 	public const float ANIMOVERLAY_STRENGTH_DEFAULT = 0.5f;
 
-	// Token: 0x040000D4 RID: 212
+	// Token: 0x040000D6 RID: 214
 	private static readonly int ID_animOverlayTexture = Shader.PropertyToID("_AnimOverlayTex");
 
-	// Token: 0x040000D5 RID: 213
+	// Token: 0x040000D7 RID: 215
 	private static readonly int ID_animOverlaySpritesheetSize = Shader.PropertyToID("_AnimOverlaySpritesheetSize");
 
-	// Token: 0x040000D6 RID: 214
+	// Token: 0x040000D8 RID: 216
 	private static readonly int ID_animOverlayFramerate = Shader.PropertyToID("_AnimOverlayFramerate");
 
-	// Token: 0x040000D7 RID: 215
+	// Token: 0x040000D9 RID: 217
 	private static readonly int ID_animOverlayStrength = Shader.PropertyToID("_AnimOverlayStrength");
 
-	// Token: 0x040000D8 RID: 216
+	// Token: 0x040000DA RID: 218
 	[Space]
 	public bool AnimatedOverlay;
 
-	// Token: 0x040000D9 RID: 217
+	// Token: 0x040000DB RID: 219
 	public Texture2D AnimOverlayTexture = MobilePostProcessing.ANIMOVERLAY_TEXTURE_DEFAULT;
 
-	// Token: 0x040000DA RID: 218
+	// Token: 0x040000DC RID: 220
 	public Vector2 AnimOverlaySpritesheetSize = MobilePostProcessing.ANIMOVERLAY_SPRITESHEET_SIZE_DEFAULT;
 
-	// Token: 0x040000DB RID: 219
+	// Token: 0x040000DD RID: 221
 	[Range(0f, 60f)]
 	public int AnimOverlayFramerate = 30;
 
-	// Token: 0x040000DC RID: 220
+	// Token: 0x040000DE RID: 222
 	[Range(0f, 1f)]
 	public float AnimOverlayStrength = 0.5f;
 
-	// Token: 0x040000DD RID: 221
+	// Token: 0x040000DF RID: 223
 	public static readonly string CircDarknessKeyword = "CIRCDARKNESS";
 
-	// Token: 0x040000DE RID: 222
+	// Token: 0x040000E0 RID: 224
 	public static readonly Color CIRCDARKNESS_COLOR_DEFAULT = Color.black;
 
-	// Token: 0x040000DF RID: 223
+	// Token: 0x040000E1 RID: 225
 	public const float CIRCDARKNESS_AMOUNT_DEFAULT = 0.5f;
 
-	// Token: 0x040000E0 RID: 224
+	// Token: 0x040000E2 RID: 226
 	public const float CIRCDARKNESS_SOFTNESS_DEFAULT = 0.5f;
 
-	// Token: 0x040000E1 RID: 225
+	// Token: 0x040000E3 RID: 227
 	private static readonly int ID_circDarknessColor = Shader.PropertyToID("_CircDarknessColor");
 
-	// Token: 0x040000E2 RID: 226
+	// Token: 0x040000E4 RID: 228
 	private static readonly int ID_circDarknessAmount = Shader.PropertyToID("_CircDarknessAmount");
 
-	// Token: 0x040000E3 RID: 227
+	// Token: 0x040000E5 RID: 229
 	private static readonly int ID_circDarknessSoftness = Shader.PropertyToID("_CircDarknessSoftness");
 
-	// Token: 0x040000E4 RID: 228
+	// Token: 0x040000E6 RID: 230
 	private static readonly int ID_circDarknessCenter = Shader.PropertyToID("_CircDarknessCenter");
 
-	// Token: 0x040000E5 RID: 229
+	// Token: 0x040000E7 RID: 231
 	[Space]
 	public bool CircularDarkness;
 
-	// Token: 0x040000E6 RID: 230
+	// Token: 0x040000E8 RID: 232
 	public Color CircDarknessColor = MobilePostProcessing.CIRCDARKNESS_COLOR_DEFAULT;
 
-	// Token: 0x040000E7 RID: 231
+	// Token: 0x040000E9 RID: 233
 	[Range(0f, 1f)]
 	public float CircDarknessAmount = 0.5f;
 
-	// Token: 0x040000E8 RID: 232
+	// Token: 0x040000EA RID: 234
 	[Range(0.001f, 1f)]
 	public float CircDarknessSoftness = 0.5f;
 
-	// Token: 0x040000E9 RID: 233
+	// Token: 0x040000EB RID: 235
 	private Material m_material;
 
-	// Token: 0x040000EA RID: 234
+	// Token: 0x040000EC RID: 236
 	private MobilePostProcessingProfile m_previousProfile;
 
-	// Token: 0x040000EB RID: 235
+	// Token: 0x040000ED RID: 237
 	private Texture2D m_previousLut;
 
-	// Token: 0x040000EC RID: 236
+	// Token: 0x040000EE RID: 238
 	private Texture3D m_converted3D;
 
-	// Token: 0x040000ED RID: 237
+	// Token: 0x040000EF RID: 239
 	private List<MobilePostProcessingProfile> m_traitOverrides = new List<MobilePostProcessingProfile>(2);
 
-	// Token: 0x040000EE RID: 238
+	// Token: 0x040000F0 RID: 240
 	private List<MobilePostProcessingProfile> m_dimensionOverrides = new List<MobilePostProcessingProfile>(2);
 
-	// Token: 0x040000EF RID: 239
+	// Token: 0x040000F1 RID: 241
 	private bool m_isDirty;
 
-	// Token: 0x040000F0 RID: 240
+	// Token: 0x040000F2 RID: 242
 	private Coroutine m_lerpToProfileCoroutine;
 
-	// Token: 0x040000F1 RID: 241
+	// Token: 0x040000F3 RID: 243
 	private Tween[] m_tweenArray = new Tween[15];
 }

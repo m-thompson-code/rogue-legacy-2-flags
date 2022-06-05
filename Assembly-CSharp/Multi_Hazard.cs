@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200044F RID: 1103
+// Token: 0x0200072B RID: 1835
 public class Multi_Hazard : Hazard
 {
-	// Token: 0x17000FFF RID: 4095
-	// (get) Token: 0x060028AB RID: 10411 RVA: 0x000864FD File Offset: 0x000846FD
+	// Token: 0x17001506 RID: 5382
+	// (get) Token: 0x0600382B RID: 14379 RVA: 0x0001ED32 File Offset: 0x0001CF32
 	public List<IHazard> Hazards
 	{
 		get
@@ -15,7 +15,7 @@ public class Multi_Hazard : Hazard
 		}
 	}
 
-	// Token: 0x060028AC RID: 10412 RVA: 0x00086505 File Offset: 0x00084705
+	// Token: 0x0600382C RID: 14380 RVA: 0x0001ED3A File Offset: 0x0001CF3A
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		Debug.LogFormat("<color=red>| {0} | This method should not have been called. Let Paul know</color>", new object[]
@@ -24,7 +24,7 @@ public class Multi_Hazard : Hazard
 		});
 	}
 
-	// Token: 0x060028AD RID: 10413 RVA: 0x0008651C File Offset: 0x0008471C
+	// Token: 0x0600382D RID: 14381 RVA: 0x000E76D0 File Offset: 0x000E58D0
 	public virtual void Initialize(PivotPoint pivot, int width, HazardArgs hazardArgs)
 	{
 		this.m_hazards.Clear();
@@ -63,7 +63,7 @@ public class Multi_Hazard : Hazard
 		}
 	}
 
-	// Token: 0x060028AE RID: 10414 RVA: 0x000866DC File Offset: 0x000848DC
+	// Token: 0x0600382E RID: 14382 RVA: 0x0001ED50 File Offset: 0x0001CF50
 	public override void ResetHazard()
 	{
 		if (!Application.isEditor)
@@ -72,7 +72,7 @@ public class Multi_Hazard : Hazard
 		}
 	}
 
-	// Token: 0x060028AF RID: 10415 RVA: 0x000866EC File Offset: 0x000848EC
+	// Token: 0x0600382F RID: 14383 RVA: 0x000E7890 File Offset: 0x000E5A90
 	private void ResetHazards()
 	{
 		if (base.gameObject != null && this.m_hazards != null)
@@ -88,7 +88,7 @@ public class Multi_Hazard : Hazard
 		}
 	}
 
-	// Token: 0x060028B0 RID: 10416 RVA: 0x00086764 File Offset: 0x00084964
+	// Token: 0x06003830 RID: 14384 RVA: 0x000E7908 File Offset: 0x000E5B08
 	public void Reset()
 	{
 		if (this.m_hazards != null)
@@ -104,7 +104,7 @@ public class Multi_Hazard : Hazard
 		}
 	}
 
-	// Token: 0x060028B1 RID: 10417 RVA: 0x000867D4 File Offset: 0x000849D4
+	// Token: 0x06003831 RID: 14385 RVA: 0x000E7978 File Offset: 0x000E5B78
 	public override void SetIsCulled(bool culled)
 	{
 		if (!this)
@@ -120,18 +120,18 @@ public class Multi_Hazard : Hazard
 		}
 	}
 
-	// Token: 0x04002196 RID: 8598
+	// Token: 0x04002D16 RID: 11542
 	[SerializeField]
 	private HazardType m_hazardType = HazardType.None;
 
-	// Token: 0x04002197 RID: 8599
+	// Token: 0x04002D17 RID: 11543
 	[SerializeField]
 	private float m_rotationOffset;
 
-	// Token: 0x04002198 RID: 8600
+	// Token: 0x04002D18 RID: 11544
 	[SerializeField]
 	private float m_positionOffset = 0.5f;
 
-	// Token: 0x04002199 RID: 8601
+	// Token: 0x04002D19 RID: 11545
 	protected List<IHazard> m_hazards = new List<IHazard>();
 }

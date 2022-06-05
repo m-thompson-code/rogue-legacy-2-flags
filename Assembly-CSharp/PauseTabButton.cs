@@ -3,17 +3,17 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Token: 0x020003D3 RID: 979
+// Token: 0x0200066D RID: 1645
 public class PauseTabButton : MonoBehaviour, IPointerClickHandler, IEventSystemHandler, ISelectHandler
 {
-	// Token: 0x17000EC8 RID: 3784
-	// (get) Token: 0x06002409 RID: 9225 RVA: 0x00076024 File Offset: 0x00074224
-	// (set) Token: 0x0600240A RID: 9226 RVA: 0x0007602C File Offset: 0x0007422C
+	// Token: 0x1700135F RID: 4959
+	// (get) Token: 0x0600322D RID: 12845 RVA: 0x0001B88F File Offset: 0x00019A8F
+	// (set) Token: 0x0600322E RID: 12846 RVA: 0x0001B897 File Offset: 0x00019A97
 	public PauseTabSelectedHandler OnSelectEvent { get; set; }
 
-	// Token: 0x17000EC9 RID: 3785
-	// (get) Token: 0x0600240B RID: 9227 RVA: 0x00076035 File Offset: 0x00074235
-	// (set) Token: 0x0600240C RID: 9228 RVA: 0x0007603D File Offset: 0x0007423D
+	// Token: 0x17001360 RID: 4960
+	// (get) Token: 0x0600322F RID: 12847 RVA: 0x0001B8A0 File Offset: 0x00019AA0
+	// (set) Token: 0x06003230 RID: 12848 RVA: 0x0001B8A8 File Offset: 0x00019AA8
 	public WindowID WindowToDisplay
 	{
 		get
@@ -26,7 +26,7 @@ public class PauseTabButton : MonoBehaviour, IPointerClickHandler, IEventSystemH
 		}
 	}
 
-	// Token: 0x0600240D RID: 9229 RVA: 0x00076048 File Offset: 0x00074248
+	// Token: 0x06003231 RID: 12849 RVA: 0x000D5F8C File Offset: 0x000D418C
 	public void OnSelect(BaseEventData eventData)
 	{
 		if (WindowManager.GetIsWindowOpen(WindowID.ConfirmMenu) || WindowManager.GetIsWindowOpen(WindowID.ConfirmMenuBig))
@@ -54,13 +54,13 @@ public class PauseTabButton : MonoBehaviour, IPointerClickHandler, IEventSystemH
 		}
 	}
 
-	// Token: 0x0600240E RID: 9230 RVA: 0x000760B4 File Offset: 0x000742B4
+	// Token: 0x06003232 RID: 12850 RVA: 0x0001B8B1 File Offset: 0x00019AB1
 	public void OnPointerClick(PointerEventData eventData)
 	{
 		this.OnSelect(eventData);
 	}
 
-	// Token: 0x04001E8F RID: 7823
+	// Token: 0x040028D1 RID: 10449
 	[SerializeField]
 	private WindowID m_windowToDisplay;
 }

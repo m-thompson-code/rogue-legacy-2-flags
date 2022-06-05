@@ -2,10 +2,10 @@
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x0200029B RID: 667
+// Token: 0x02000469 RID: 1129
 public class ReturnToMainMenuOptionItem : ExecuteImmediateOptionItem
 {
-	// Token: 0x060019FB RID: 6651 RVA: 0x00051DBC File Offset: 0x0004FFBC
+	// Token: 0x060023F6 RID: 9206 RVA: 0x000AE5A8 File Offset: 0x000AC7A8
 	public override void ActivateOption()
 	{
 		base.ActivateOption();

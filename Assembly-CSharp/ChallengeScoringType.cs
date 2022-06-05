@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000711 RID: 1809
+// Token: 0x02000BC4 RID: 3012
 public enum ChallengeScoringType
 {
-	// Token: 0x04003304 RID: 13060
+	// Token: 0x0400457F RID: 17791
 	Platform,
-	// Token: 0x04003305 RID: 13061
+	// Token: 0x04004580 RID: 17792
 	Battle
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200077C RID: 1916
+// Token: 0x02000C3D RID: 3133
 public class StatusEffectType_RL
 {
-	// Token: 0x06004153 RID: 16723 RVA: 0x000E83E4 File Offset: 0x000E65E4
+	// Token: 0x06005AD0 RID: 23248 RVA: 0x001578AC File Offset: 0x00155AAC
 	public static StatusBarEntryType GetStatusBarType(StatusEffectType statusEffectType)
 	{
 		if (statusEffectType <= StatusEffectType.Enemy_AppliesInvuln)
@@ -243,7 +243,7 @@ public class StatusEffectType_RL
 		return StatusBarEntryType.Combo;
 	}
 
-	// Token: 0x06004154 RID: 16724 RVA: 0x000E8688 File Offset: 0x000E6888
+	// Token: 0x06005AD1 RID: 23249 RVA: 0x00157B50 File Offset: 0x00155D50
 	public static StatusEffectType GetStatusEffectType(StatusBarEntryType statusBarType)
 	{
 		switch (statusBarType)
@@ -324,8 +324,8 @@ public class StatusEffectType_RL
 		return StatusEffectType.None;
 	}
 
-	// Token: 0x1700164A RID: 5706
-	// (get) Token: 0x06004155 RID: 16725 RVA: 0x000E87FE File Offset: 0x000E69FE
+	// Token: 0x17001E46 RID: 7750
+	// (get) Token: 0x06005AD2 RID: 23250 RVA: 0x00031D61 File Offset: 0x0002FF61
 	public static StatusEffectType[] TypeArray
 	{
 		get
@@ -338,6 +338,6 @@ public class StatusEffectType_RL
 		}
 	}
 
-	// Token: 0x040037E0 RID: 14304
+	// Token: 0x04004A90 RID: 19088
 	private static StatusEffectType[] m_typeArray;
 }

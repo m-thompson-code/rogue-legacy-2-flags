@@ -1,20 +1,20 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000695 RID: 1685
+// Token: 0x02000B1E RID: 2846
 public class DisablePooledObjectManager : MonoBehaviour
 {
-	// Token: 0x1700153A RID: 5434
-	// (get) Token: 0x06003D2E RID: 15662 RVA: 0x000D447D File Offset: 0x000D267D
-	// (set) Token: 0x06003D2F RID: 15663 RVA: 0x000D4484 File Offset: 0x000D2684
+	// Token: 0x17001D06 RID: 7430
+	// (get) Token: 0x060055C3 RID: 21955 RVA: 0x0002E9FC File Offset: 0x0002CBFC
+	// (set) Token: 0x060055C4 RID: 21956 RVA: 0x0002EA03 File Offset: 0x0002CC03
 	public static DisablePooledObjectManager Instance { get; private set; }
 
-	// Token: 0x1700153B RID: 5435
-	// (get) Token: 0x06003D30 RID: 15664 RVA: 0x000D448C File Offset: 0x000D268C
-	// (set) Token: 0x06003D31 RID: 15665 RVA: 0x000D4493 File Offset: 0x000D2693
+	// Token: 0x17001D07 RID: 7431
+	// (get) Token: 0x060055C5 RID: 21957 RVA: 0x0002EA0B File Offset: 0x0002CC0B
+	// (set) Token: 0x060055C6 RID: 21958 RVA: 0x0002EA12 File Offset: 0x0002CC12
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06003D32 RID: 15666 RVA: 0x000D449B File Offset: 0x000D269B
+	// Token: 0x060055C7 RID: 21959 RVA: 0x0002EA1A File Offset: 0x0002CC1A
 	private void Awake()
 	{
 		if (!DisablePooledObjectManager.Instance)
@@ -26,7 +26,7 @@ public class DisablePooledObjectManager : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06003D33 RID: 15667 RVA: 0x000D44C1 File Offset: 0x000D26C1
+	// Token: 0x060055C8 RID: 21960 RVA: 0x0002EA40 File Offset: 0x0002CC40
 	public static void DisablePooledObject(IGenericPoolObj pooledObj, bool reattachToOwnerPool = false)
 	{
 		if (!DisablePooledObjectManager.IsInitialized)
@@ -40,13 +40,13 @@ public class DisablePooledObjectManager : MonoBehaviour
 		pooledObj.IsFreePoolObj = true;
 	}
 
-	// Token: 0x06003D34 RID: 15668 RVA: 0x000D44EB File Offset: 0x000D26EB
+	// Token: 0x060055C9 RID: 21961 RVA: 0x0002EA6A File Offset: 0x0002CC6A
 	private void OnDestroy()
 	{
 		DisablePooledObjectManager.Instance = null;
 		DisablePooledObjectManager.IsInitialized = false;
 	}
 
-	// Token: 0x04002DD4 RID: 11732
+	// Token: 0x04003F9F RID: 16287
 	public static GameObject DisablePoolObjsHelper_STATIC;
 }

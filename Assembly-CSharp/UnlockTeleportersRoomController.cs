@@ -1,15 +1,15 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000517 RID: 1303
+// Token: 0x0200088B RID: 2187
 public class UnlockTeleportersRoomController : MonoBehaviour
 {
-	// Token: 0x0600304B RID: 12363 RVA: 0x000A5541 File Offset: 0x000A3741
+	// Token: 0x06004307 RID: 17159 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Start()
 	{
 	}
 
-	// Token: 0x0600304C RID: 12364 RVA: 0x000A5543 File Offset: 0x000A3743
+	// Token: 0x06004308 RID: 17160 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Update()
 	{
 	}

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000056 RID: 86
+// Token: 0x0200005E RID: 94
 [Serializable]
 public class DataField_EquipmentType : DataField<EquipmentCategoryType>
 {

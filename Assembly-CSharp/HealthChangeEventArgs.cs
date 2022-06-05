@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020007B3 RID: 1971
+// Token: 0x02000C79 RID: 3193
 public class HealthChangeEventArgs : EventArgs
 {
-	// Token: 0x06004251 RID: 16977 RVA: 0x000EBB7B File Offset: 0x000E9D7B
+	// Token: 0x06005BDA RID: 23514 RVA: 0x00032591 File Offset: 0x00030791
 	public HealthChangeEventArgs(IHealth healthObj, float newHealth, float prevHealth)
 	{
 		this.Initialise(healthObj, newHealth, prevHealth);
 	}
 
-	// Token: 0x06004252 RID: 16978 RVA: 0x000EBB8C File Offset: 0x000E9D8C
+	// Token: 0x06005BDB RID: 23515 RVA: 0x000325A2 File Offset: 0x000307A2
 	public void Initialise(IHealth healthObj, float newHealth, float prevHealth)
 	{
 		this.HealthObj = healthObj;
@@ -17,18 +17,18 @@ public class HealthChangeEventArgs : EventArgs
 		this.PrevHealthValue = prevHealth;
 	}
 
-	// Token: 0x17001674 RID: 5748
-	// (get) Token: 0x06004253 RID: 16979 RVA: 0x000EBBA3 File Offset: 0x000E9DA3
-	// (set) Token: 0x06004254 RID: 16980 RVA: 0x000EBBAB File Offset: 0x000E9DAB
+	// Token: 0x17001E72 RID: 7794
+	// (get) Token: 0x06005BDC RID: 23516 RVA: 0x000325B9 File Offset: 0x000307B9
+	// (set) Token: 0x06005BDD RID: 23517 RVA: 0x000325C1 File Offset: 0x000307C1
 	public IHealth HealthObj { get; private set; }
 
-	// Token: 0x17001675 RID: 5749
-	// (get) Token: 0x06004255 RID: 16981 RVA: 0x000EBBB4 File Offset: 0x000E9DB4
-	// (set) Token: 0x06004256 RID: 16982 RVA: 0x000EBBBC File Offset: 0x000E9DBC
+	// Token: 0x17001E73 RID: 7795
+	// (get) Token: 0x06005BDE RID: 23518 RVA: 0x000325CA File Offset: 0x000307CA
+	// (set) Token: 0x06005BDF RID: 23519 RVA: 0x000325D2 File Offset: 0x000307D2
 	public float NewHealthValue { get; private set; }
 
-	// Token: 0x17001676 RID: 5750
-	// (get) Token: 0x06004257 RID: 16983 RVA: 0x000EBBC5 File Offset: 0x000E9DC5
-	// (set) Token: 0x06004258 RID: 16984 RVA: 0x000EBBCD File Offset: 0x000E9DCD
+	// Token: 0x17001E74 RID: 7796
+	// (get) Token: 0x06005BE0 RID: 23520 RVA: 0x000325DB File Offset: 0x000307DB
+	// (set) Token: 0x06005BE1 RID: 23521 RVA: 0x000325E3 File Offset: 0x000307E3
 	public float PrevHealthValue { get; private set; }
 }

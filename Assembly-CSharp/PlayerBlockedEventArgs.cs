@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x020007B6 RID: 1974
+// Token: 0x02000C7C RID: 3196
 public class PlayerBlockedEventArgs : EventArgs
 {
-	// Token: 0x06004267 RID: 16999 RVA: 0x000EBC73 File Offset: 0x000E9E73
+	// Token: 0x06005BF0 RID: 23536 RVA: 0x00032689 File Offset: 0x00030889
 	public PlayerBlockedEventArgs(IDamageObj damageObj)
 	{
 		this.Initialize(damageObj);
 	}
 
-	// Token: 0x06004268 RID: 17000 RVA: 0x000EBC82 File Offset: 0x000E9E82
+	// Token: 0x06005BF1 RID: 23537 RVA: 0x00032698 File Offset: 0x00030898
 	public void Initialize(IDamageObj damageObj)
 	{
 		this.DamageObj = damageObj;
 	}
 
-	// Token: 0x1700167C RID: 5756
-	// (get) Token: 0x06004269 RID: 17001 RVA: 0x000EBC8B File Offset: 0x000E9E8B
-	// (set) Token: 0x0600426A RID: 17002 RVA: 0x000EBC93 File Offset: 0x000E9E93
+	// Token: 0x17001E7A RID: 7802
+	// (get) Token: 0x06005BF2 RID: 23538 RVA: 0x000326A1 File Offset: 0x000308A1
+	// (set) Token: 0x06005BF3 RID: 23539 RVA: 0x000326A9 File Offset: 0x000308A9
 	public IDamageObj DamageObj { get; private set; }
 }

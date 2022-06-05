@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200063A RID: 1594
+// Token: 0x02000A67 RID: 2663
 public class Difficulty_SpawnScenario : SpawnScenario
 {
-	// Token: 0x1700145A RID: 5210
-	// (get) Token: 0x060039A7 RID: 14759 RVA: 0x000C45F5 File Offset: 0x000C27F5
-	// (set) Token: 0x060039A8 RID: 14760 RVA: 0x000C45FD File Offset: 0x000C27FD
+	// Token: 0x17001BC1 RID: 7105
+	// (get) Token: 0x06005086 RID: 20614 RVA: 0x0002BFA0 File Offset: 0x0002A1A0
+	// (set) Token: 0x06005087 RID: 20615 RVA: 0x0002BFA8 File Offset: 0x0002A1A8
 	public int Difficulty
 	{
 		get
@@ -20,9 +20,9 @@ public class Difficulty_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x1700145B RID: 5211
-	// (get) Token: 0x060039A9 RID: 14761 RVA: 0x000C4606 File Offset: 0x000C2806
-	// (set) Token: 0x060039AA RID: 14762 RVA: 0x000C460E File Offset: 0x000C280E
+	// Token: 0x17001BC2 RID: 7106
+	// (get) Token: 0x06005088 RID: 20616 RVA: 0x0002BFB1 File Offset: 0x0002A1B1
+	// (set) Token: 0x06005089 RID: 20617 RVA: 0x0002BFB9 File Offset: 0x0002A1B9
 	public int ComparisonOperatorIndex
 	{
 		get
@@ -35,8 +35,8 @@ public class Difficulty_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x1700145C RID: 5212
-	// (get) Token: 0x060039AB RID: 14763 RVA: 0x000C4618 File Offset: 0x000C2818
+	// Token: 0x17001BC3 RID: 7107
+	// (get) Token: 0x0600508A RID: 20618 RVA: 0x001329A4 File Offset: 0x00130BA4
 	public override string GizmoDescription
 	{
 		get
@@ -45,8 +45,8 @@ public class Difficulty_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x1700145D RID: 5213
-	// (get) Token: 0x060039AC RID: 14764 RVA: 0x000C4648 File Offset: 0x000C2848
+	// Token: 0x17001BC4 RID: 7108
+	// (get) Token: 0x0600508B RID: 20619 RVA: 0x00005315 File Offset: 0x00003515
 	public override SpawnScenarioType Type
 	{
 		get
@@ -55,19 +55,19 @@ public class Difficulty_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x060039AD RID: 14765 RVA: 0x000C464C File Offset: 0x000C284C
+	// Token: 0x0600508C RID: 20620 RVA: 0x0002BFC2 File Offset: 0x0002A1C2
 	public override void RunIsTrueCheck(BaseRoom room)
 	{
 		this.GetIsTrue();
 	}
 
-	// Token: 0x060039AE RID: 14766 RVA: 0x000C4654 File Offset: 0x000C2854
+	// Token: 0x0600508D RID: 20621 RVA: 0x0002BFC2 File Offset: 0x0002A1C2
 	public override void RunIsTrueCheck(GridPointManager gridPointManager)
 	{
 		this.GetIsTrue();
 	}
 
-	// Token: 0x060039AF RID: 14767 RVA: 0x000C465C File Offset: 0x000C285C
+	// Token: 0x0600508E RID: 20622 RVA: 0x001329D4 File Offset: 0x00130BD4
 	private void GetIsTrue()
 	{
 		switch (Difficulty_SpawnScenario.INDEX_TO_COMPARISON_OPERATOR_TABLE[this.ComparisonOperatorIndex])
@@ -95,15 +95,15 @@ public class Difficulty_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x04002C5F RID: 11359
+	// Token: 0x04003CF1 RID: 15601
 	[SerializeField]
 	private int m_level;
 
-	// Token: 0x04002C60 RID: 11360
+	// Token: 0x04003CF2 RID: 15602
 	[SerializeField]
 	private int m_comparisonOperator;
 
-	// Token: 0x04002C61 RID: 11361
+	// Token: 0x04003CF3 RID: 15603
 	private static Dictionary<int, ComparisonOperators_RL> INDEX_TO_COMPARISON_OPERATOR_TABLE = new Dictionary<int, ComparisonOperators_RL>
 	{
 		{
@@ -128,7 +128,7 @@ public class Difficulty_SpawnScenario : SpawnScenario
 		}
 	};
 
-	// Token: 0x04002C62 RID: 11362
+	// Token: 0x04003CF4 RID: 15604
 	private static Dictionary<int, string> INDEX_TO_STRING_TABLE = new Dictionary<int, string>
 	{
 		{

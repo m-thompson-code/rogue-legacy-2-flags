@@ -6,17 +6,17 @@ using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x0200096D RID: 2413
+	// Token: 0x02000F1D RID: 3869
 	[AddComponentMenu("Corgi Engine/Character/Core/Corgi Controller")]
 	public class CorgiController : MonoBehaviour
 	{
-		// Token: 0x17001AFA RID: 6906
-		// (get) Token: 0x06005197 RID: 20887 RVA: 0x00120183 File Offset: 0x0011E383
-		// (set) Token: 0x06005198 RID: 20888 RVA: 0x0012018B File Offset: 0x0011E38B
+		// Token: 0x17002441 RID: 9281
+		// (get) Token: 0x06006F98 RID: 28568 RVA: 0x0003D8A3 File Offset: 0x0003BAA3
+		// (set) Token: 0x06006F99 RID: 28569 RVA: 0x0003D8AB File Offset: 0x0003BAAB
 		public CorgiControllerState State { get; protected set; }
 
-		// Token: 0x17001AFB RID: 6907
-		// (get) Token: 0x06005199 RID: 20889 RVA: 0x00120194 File Offset: 0x0011E394
+		// Token: 0x17002442 RID: 9282
+		// (get) Token: 0x06006F9A RID: 28570 RVA: 0x0003D8B4 File Offset: 0x0003BAB4
 		public CorgiControllerParameters Parameters
 		{
 			get
@@ -25,18 +25,18 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001AFC RID: 6908
-		// (get) Token: 0x0600519A RID: 20890 RVA: 0x001201A6 File Offset: 0x0011E3A6
-		// (set) Token: 0x0600519B RID: 20891 RVA: 0x001201AE File Offset: 0x0011E3AE
+		// Token: 0x17002443 RID: 9283
+		// (get) Token: 0x06006F9B RID: 28571 RVA: 0x0003D8C6 File Offset: 0x0003BAC6
+		// (set) Token: 0x06006F9C RID: 28572 RVA: 0x0003D8CE File Offset: 0x0003BACE
 		public GameObject StandingOnLastFrame { get; protected set; }
 
-		// Token: 0x17001AFD RID: 6909
-		// (get) Token: 0x0600519C RID: 20892 RVA: 0x001201B7 File Offset: 0x0011E3B7
-		// (set) Token: 0x0600519D RID: 20893 RVA: 0x001201BF File Offset: 0x0011E3BF
+		// Token: 0x17002444 RID: 9284
+		// (get) Token: 0x06006F9D RID: 28573 RVA: 0x0003D8D7 File Offset: 0x0003BAD7
+		// (set) Token: 0x06006F9E RID: 28574 RVA: 0x0003D8DF File Offset: 0x0003BADF
 		public Collider2D StandingOnCollider { get; protected set; }
 
-		// Token: 0x17001AFE RID: 6910
-		// (get) Token: 0x0600519E RID: 20894 RVA: 0x001201C8 File Offset: 0x0011E3C8
+		// Token: 0x17002445 RID: 9285
+		// (get) Token: 0x06006F9F RID: 28575 RVA: 0x0003D8E8 File Offset: 0x0003BAE8
 		public Vector2 Velocity
 		{
 			get
@@ -45,18 +45,18 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001AFF RID: 6911
-		// (get) Token: 0x0600519F RID: 20895 RVA: 0x001201D0 File Offset: 0x0011E3D0
-		// (set) Token: 0x060051A0 RID: 20896 RVA: 0x001201D8 File Offset: 0x0011E3D8
+		// Token: 0x17002446 RID: 9286
+		// (get) Token: 0x06006FA0 RID: 28576 RVA: 0x0003D8F0 File Offset: 0x0003BAF0
+		// (set) Token: 0x06006FA1 RID: 28577 RVA: 0x0003D8F8 File Offset: 0x0003BAF8
 		public Vector2 ForcesApplied { get; protected set; }
 
-		// Token: 0x17001B00 RID: 6912
-		// (get) Token: 0x060051A1 RID: 20897 RVA: 0x001201E1 File Offset: 0x0011E3E1
-		// (set) Token: 0x060051A2 RID: 20898 RVA: 0x001201E9 File Offset: 0x0011E3E9
+		// Token: 0x17002447 RID: 9287
+		// (get) Token: 0x06006FA2 RID: 28578 RVA: 0x0003D901 File Offset: 0x0003BB01
+		// (set) Token: 0x06006FA3 RID: 28579 RVA: 0x0003D909 File Offset: 0x0003BB09
 		public GameObject CurrentWallCollider { get; protected set; }
 
-		// Token: 0x17001B01 RID: 6913
-		// (get) Token: 0x060051A3 RID: 20899 RVA: 0x001201F2 File Offset: 0x0011E3F2
+		// Token: 0x17002448 RID: 9288
+		// (get) Token: 0x06006FA4 RID: 28580 RVA: 0x0003D912 File Offset: 0x0003BB12
 		public Vector3 ColliderSize
 		{
 			get
@@ -65,8 +65,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B02 RID: 6914
-		// (get) Token: 0x060051A4 RID: 20900 RVA: 0x00120214 File Offset: 0x0011E414
+		// Token: 0x17002449 RID: 9289
+		// (get) Token: 0x06006FA5 RID: 28581 RVA: 0x0018E0DC File Offset: 0x0018C2DC
 		public Vector3 ColliderCenterPosition
 		{
 			get
@@ -75,8 +75,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B03 RID: 6915
-		// (get) Token: 0x060051A5 RID: 20901 RVA: 0x00120234 File Offset: 0x0011E434
+		// Token: 0x1700244A RID: 9290
+		// (get) Token: 0x06006FA6 RID: 28582 RVA: 0x0018E0FC File Offset: 0x0018C2FC
 		public virtual Vector3 ColliderBottomPosition
 		{
 			get
@@ -88,8 +88,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B04 RID: 6916
-		// (get) Token: 0x060051A6 RID: 20902 RVA: 0x001202A0 File Offset: 0x0011E4A0
+		// Token: 0x1700244B RID: 9291
+		// (get) Token: 0x06006FA7 RID: 28583 RVA: 0x0018E168 File Offset: 0x0018C368
 		public virtual Vector3 ColliderLeftPosition
 		{
 			get
@@ -101,8 +101,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B05 RID: 6917
-		// (get) Token: 0x060051A7 RID: 20903 RVA: 0x0012030C File Offset: 0x0011E50C
+		// Token: 0x1700244C RID: 9292
+		// (get) Token: 0x06006FA8 RID: 28584 RVA: 0x0018E1D4 File Offset: 0x0018C3D4
 		public virtual Vector3 ColliderTopPosition
 		{
 			get
@@ -114,8 +114,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B06 RID: 6918
-		// (get) Token: 0x060051A8 RID: 20904 RVA: 0x00120378 File Offset: 0x0011E578
+		// Token: 0x1700244D RID: 9293
+		// (get) Token: 0x06006FA9 RID: 28585 RVA: 0x0018E240 File Offset: 0x0018C440
 		public virtual Vector3 ColliderRightPosition
 		{
 			get
@@ -127,8 +127,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B07 RID: 6919
-		// (get) Token: 0x060051A9 RID: 20905 RVA: 0x001203E1 File Offset: 0x0011E5E1
+		// Token: 0x1700244E RID: 9294
+		// (get) Token: 0x06006FAA RID: 28586 RVA: 0x0003D934 File Offset: 0x0003BB34
 		public float Friction
 		{
 			get
@@ -137,8 +137,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B08 RID: 6920
-		// (get) Token: 0x060051AA RID: 20906 RVA: 0x001203E9 File Offset: 0x0011E5E9
+		// Token: 0x1700244F RID: 9295
+		// (get) Token: 0x06006FAB RID: 28587 RVA: 0x0003D93C File Offset: 0x0003BB3C
 		public virtual Vector3 BoundsTopLeftCorner
 		{
 			get
@@ -147,8 +147,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B09 RID: 6921
-		// (get) Token: 0x060051AB RID: 20907 RVA: 0x001203F6 File Offset: 0x0011E5F6
+		// Token: 0x17002450 RID: 9296
+		// (get) Token: 0x06006FAC RID: 28588 RVA: 0x0003D949 File Offset: 0x0003BB49
 		public virtual Vector3 BoundsBottomLeftCorner
 		{
 			get
@@ -157,8 +157,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B0A RID: 6922
-		// (get) Token: 0x060051AC RID: 20908 RVA: 0x00120403 File Offset: 0x0011E603
+		// Token: 0x17002451 RID: 9297
+		// (get) Token: 0x06006FAD RID: 28589 RVA: 0x0003D956 File Offset: 0x0003BB56
 		public virtual Vector3 BoundsTopRightCorner
 		{
 			get
@@ -167,8 +167,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B0B RID: 6923
-		// (get) Token: 0x060051AD RID: 20909 RVA: 0x00120410 File Offset: 0x0011E610
+		// Token: 0x17002452 RID: 9298
+		// (get) Token: 0x06006FAE RID: 28590 RVA: 0x0003D963 File Offset: 0x0003BB63
 		public virtual Vector3 BoundsBottomRightCorner
 		{
 			get
@@ -177,8 +177,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B0C RID: 6924
-		// (get) Token: 0x060051AE RID: 20910 RVA: 0x0012041D File Offset: 0x0011E61D
+		// Token: 0x17002453 RID: 9299
+		// (get) Token: 0x06006FAF RID: 28591 RVA: 0x0003D970 File Offset: 0x0003BB70
 		public virtual Vector3 BoundsTop
 		{
 			get
@@ -187,8 +187,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B0D RID: 6925
-		// (get) Token: 0x060051AF RID: 20911 RVA: 0x0012043F File Offset: 0x0011E63F
+		// Token: 0x17002454 RID: 9300
+		// (get) Token: 0x06006FB0 RID: 28592 RVA: 0x0003D992 File Offset: 0x0003BB92
 		public virtual Vector3 BoundsBottom
 		{
 			get
@@ -197,8 +197,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B0E RID: 6926
-		// (get) Token: 0x060051B0 RID: 20912 RVA: 0x00120461 File Offset: 0x0011E661
+		// Token: 0x17002455 RID: 9301
+		// (get) Token: 0x06006FB1 RID: 28593 RVA: 0x0003D9B4 File Offset: 0x0003BBB4
 		public virtual Vector3 BoundsRight
 		{
 			get
@@ -207,8 +207,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B0F RID: 6927
-		// (get) Token: 0x060051B1 RID: 20913 RVA: 0x00120483 File Offset: 0x0011E683
+		// Token: 0x17002456 RID: 9302
+		// (get) Token: 0x06006FB2 RID: 28594 RVA: 0x0003D9D6 File Offset: 0x0003BBD6
 		public virtual Vector3 BoundsLeft
 		{
 			get
@@ -217,8 +217,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B10 RID: 6928
-		// (get) Token: 0x060051B2 RID: 20914 RVA: 0x001204A5 File Offset: 0x0011E6A5
+		// Token: 0x17002457 RID: 9303
+		// (get) Token: 0x06006FB3 RID: 28595 RVA: 0x0003D9F8 File Offset: 0x0003BBF8
 		public virtual Vector3 BoundsCenter
 		{
 			get
@@ -227,8 +227,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B11 RID: 6929
-		// (get) Token: 0x060051B3 RID: 20915 RVA: 0x001204B2 File Offset: 0x0011E6B2
+		// Token: 0x17002458 RID: 9304
+		// (get) Token: 0x06006FB4 RID: 28596 RVA: 0x0003DA05 File Offset: 0x0003BC05
 		public LayerMask SavedPlatformMask
 		{
 			get
@@ -237,17 +237,17 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B12 RID: 6930
-		// (get) Token: 0x060051B4 RID: 20916 RVA: 0x001204BA File Offset: 0x0011E6BA
-		// (set) Token: 0x060051B5 RID: 20917 RVA: 0x001204C2 File Offset: 0x0011E6C2
+		// Token: 0x17002459 RID: 9305
+		// (get) Token: 0x06006FB5 RID: 28597 RVA: 0x0003DA0D File Offset: 0x0003BC0D
+		// (set) Token: 0x06006FB6 RID: 28598 RVA: 0x0003DA15 File Offset: 0x0003BC15
 		public bool IsWithinJumpLeeway { get; protected set; }
 
-		// Token: 0x17001B13 RID: 6931
-		// (get) Token: 0x060051B6 RID: 20918 RVA: 0x001204CB File Offset: 0x0011E6CB
-		// (set) Token: 0x060051B7 RID: 20919 RVA: 0x001204D3 File Offset: 0x0011E6D3
+		// Token: 0x1700245A RID: 9306
+		// (get) Token: 0x06006FB7 RID: 28599 RVA: 0x0003DA1E File Offset: 0x0003BC1E
+		// (set) Token: 0x06006FB8 RID: 28600 RVA: 0x0003DA26 File Offset: 0x0003BC26
 		public bool IsInitialized { get; protected set; }
 
-		// Token: 0x060051B8 RID: 20920 RVA: 0x001204DC File Offset: 0x0011E6DC
+		// Token: 0x06006FB9 RID: 28601 RVA: 0x0018E2AC File Offset: 0x0018C4AC
 		protected virtual void Awake()
 		{
 			this.SavePlatformMask();
@@ -257,7 +257,7 @@ namespace MoreMountains.CorgiEngine
 			this.PlatformMask |= this.MidHeightOneWayPlatformMask;
 		}
 
-		// Token: 0x060051B9 RID: 20921 RVA: 0x00120577 File Offset: 0x0011E777
+		// Token: 0x06006FBA RID: 28602 RVA: 0x0003DA2F File Offset: 0x0003BC2F
 		public void SavePlatformMask()
 		{
 			if (!this.m_savePlatformMaskSet)
@@ -267,13 +267,13 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051BA RID: 20922 RVA: 0x00120594 File Offset: 0x0011E794
+		// Token: 0x06006FBB RID: 28603 RVA: 0x0003DA4C File Offset: 0x0003BC4C
 		protected virtual void Start()
 		{
 			this.Initialization();
 		}
 
-		// Token: 0x060051BB RID: 20923 RVA: 0x0012059C File Offset: 0x0011E79C
+		// Token: 0x06006FBC RID: 28604 RVA: 0x0018E348 File Offset: 0x0018C548
 		protected virtual void Initialization()
 		{
 			this._transform = base.transform;
@@ -294,55 +294,55 @@ namespace MoreMountains.CorgiEngine
 			this.SetRaysParameters();
 		}
 
-		// Token: 0x060051BC RID: 20924 RVA: 0x00120687 File Offset: 0x0011E887
+		// Token: 0x06006FBD RID: 28605 RVA: 0x0003DA54 File Offset: 0x0003BC54
 		public virtual void AddForce(Vector2 force)
 		{
 			this._velocity += force;
 			this._externalForce += force;
 		}
 
-		// Token: 0x060051BD RID: 20925 RVA: 0x001206AD File Offset: 0x0011E8AD
+		// Token: 0x06006FBE RID: 28606 RVA: 0x0003DA7A File Offset: 0x0003BC7A
 		public virtual void AddHorizontalForce(float x)
 		{
 			this._velocity.x = this._velocity.x + x;
 			this._externalForce.x = this._externalForce.x + x;
 		}
 
-		// Token: 0x060051BE RID: 20926 RVA: 0x001206CF File Offset: 0x0011E8CF
+		// Token: 0x06006FBF RID: 28607 RVA: 0x0003DA9C File Offset: 0x0003BC9C
 		public virtual void AddVerticalForce(float y)
 		{
 			this._velocity.y = this._velocity.y + y;
 			this._externalForce.y = this._externalForce.y + y;
 		}
 
-		// Token: 0x060051BF RID: 20927 RVA: 0x001206F1 File Offset: 0x0011E8F1
+		// Token: 0x06006FC0 RID: 28608 RVA: 0x0003DABE File Offset: 0x0003BCBE
 		public virtual void SetForce(Vector2 force)
 		{
 			this._velocity = force;
 			this._externalForce = force;
 		}
 
-		// Token: 0x060051C0 RID: 20928 RVA: 0x00120701 File Offset: 0x0011E901
+		// Token: 0x06006FC1 RID: 28609 RVA: 0x0003DACE File Offset: 0x0003BCCE
 		public virtual void SetHorizontalForce(float x)
 		{
 			this._velocity.x = x;
 			this._externalForce.x = x;
 		}
 
-		// Token: 0x060051C1 RID: 20929 RVA: 0x0012071B File Offset: 0x0011E91B
+		// Token: 0x06006FC2 RID: 28610 RVA: 0x0003DAE8 File Offset: 0x0003BCE8
 		public virtual void SetVerticalForce(float y)
 		{
 			this._velocity.y = y;
 			this._externalForce.y = y;
 		}
 
-		// Token: 0x060051C2 RID: 20930 RVA: 0x00120735 File Offset: 0x0011E935
+		// Token: 0x06006FC3 RID: 28611 RVA: 0x0003DB02 File Offset: 0x0003BD02
 		protected virtual void LateUpdate()
 		{
 			this.EveryFrame();
 		}
 
-		// Token: 0x060051C3 RID: 20931 RVA: 0x00120740 File Offset: 0x0011E940
+		// Token: 0x06006FC4 RID: 28612 RVA: 0x0018E434 File Offset: 0x0018C634
 		protected virtual void EveryFrame()
 		{
 			this.ApplyGravity();
@@ -375,7 +375,7 @@ namespace MoreMountains.CorgiEngine
 			this.FrameExit();
 		}
 
-		// Token: 0x060051C4 RID: 20932 RVA: 0x00120804 File Offset: 0x0011EA04
+		// Token: 0x06006FC5 RID: 28613 RVA: 0x0018E4F8 File Offset: 0x0018C6F8
 		protected virtual void FrameInitialization()
 		{
 			this._contactList.Clear();
@@ -387,7 +387,7 @@ namespace MoreMountains.CorgiEngine
 			this.State.Reset();
 		}
 
-		// Token: 0x060051C5 RID: 20933 RVA: 0x0012087C File Offset: 0x0011EA7C
+		// Token: 0x06006FC6 RID: 28614 RVA: 0x0003DB0A File Offset: 0x0003BD0A
 		protected virtual void FrameExit()
 		{
 			if (this.StandingOnLastFrame)
@@ -396,7 +396,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051C6 RID: 20934 RVA: 0x0012089C File Offset: 0x0011EA9C
+		// Token: 0x06006FC7 RID: 28615 RVA: 0x0018E570 File Offset: 0x0018C770
 		protected virtual void DetermineMovementDirection()
 		{
 			this._movementDirection = this._storedMovementDirection;
@@ -411,7 +411,7 @@ namespace MoreMountains.CorgiEngine
 			this._storedMovementDirection = this._movementDirection;
 		}
 
-		// Token: 0x060051C7 RID: 20935 RVA: 0x00120924 File Offset: 0x0011EB24
+		// Token: 0x06006FC8 RID: 28616 RVA: 0x0018E5F8 File Offset: 0x0018C7F8
 		protected virtual void ApplyGravity()
 		{
 			this._currentGravity = this.Parameters.Gravity;
@@ -433,7 +433,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051C8 RID: 20936 RVA: 0x001209D4 File Offset: 0x0011EBD4
+		// Token: 0x06006FC9 RID: 28617 RVA: 0x0018E6A8 File Offset: 0x0018C8A8
 		protected virtual void HandleMovingPlatforms()
 		{
 			if (this._movingPlatform != null)
@@ -460,7 +460,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051C9 RID: 20937 RVA: 0x00120B2D File Offset: 0x0011ED2D
+		// Token: 0x06006FCA RID: 28618 RVA: 0x0003DB2A File Offset: 0x0003BD2A
 		public virtual void DetachFromMovingPlatform()
 		{
 			if (this._movingPlatform == null)
@@ -473,7 +473,7 @@ namespace MoreMountains.CorgiEngine
 			this._movingPlatformCurrentGravity = 0f;
 		}
 
-		// Token: 0x060051CA RID: 20938 RVA: 0x00120B64 File Offset: 0x0011ED64
+		// Token: 0x06006FCB RID: 28619 RVA: 0x0018E804 File Offset: 0x0018CA04
 		public virtual bool CastRays(CorgiController.RaycastDirections direction, float rayLength, Color color, ref RaycastHit2D[] storageArray)
 		{
 			bool result = false;
@@ -554,19 +554,19 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051CB RID: 20939 RVA: 0x0012118F File Offset: 0x0011F38F
+		// Token: 0x06006FCC RID: 28620 RVA: 0x0003DB60 File Offset: 0x0003BD60
 		protected virtual void CastRaysToTheLeft()
 		{
 			this.CastRaysToTheSides(-1f);
 		}
 
-		// Token: 0x060051CC RID: 20940 RVA: 0x0012119C File Offset: 0x0011F39C
+		// Token: 0x06006FCD RID: 28621 RVA: 0x0003DB6D File Offset: 0x0003BD6D
 		protected virtual void CastRaysToTheRight()
 		{
 			this.CastRaysToTheSides(1f);
 		}
 
-		// Token: 0x060051CD RID: 20941 RVA: 0x001211AC File Offset: 0x0011F3AC
+		// Token: 0x06006FCE RID: 28622 RVA: 0x0018EE30 File Offset: 0x0018D030
 		protected virtual void CastRaysToTheSides(float raysDirection)
 		{
 			this._horizontalRayCastFromBottom = (this._boundsBottomRightCorner + this._boundsBottomLeftCorner) / 2f;
@@ -639,7 +639,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051CE RID: 20942 RVA: 0x0012158C File Offset: 0x0011F78C
+		// Token: 0x06006FCF RID: 28623 RVA: 0x0018F210 File Offset: 0x0018D410
 		protected virtual void CastRaysBelow()
 		{
 			this._friction = 0f;
@@ -777,7 +777,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051CF RID: 20943 RVA: 0x00121C9C File Offset: 0x0011FE9C
+		// Token: 0x06006FD0 RID: 28624 RVA: 0x0018F920 File Offset: 0x0018DB20
 		protected virtual void CastRaysAbove()
 		{
 			if (this._newPosition.y < 0f)
@@ -828,7 +828,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051D0 RID: 20944 RVA: 0x00121F28 File Offset: 0x00120128
+		// Token: 0x06006FD1 RID: 28625 RVA: 0x0018FBAC File Offset: 0x0018DDAC
 		protected virtual void StickToSlope()
 		{
 			if (this._newPosition.y >= 0f || !this.StickWhenWalkingDownSlopes || !this.State.WasGroundedLastFrame || this._externalForce.y > 0f || this._movingPlatform != null)
@@ -860,7 +860,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051D1 RID: 20945 RVA: 0x001220E8 File Offset: 0x001202E8
+		// Token: 0x06006FD2 RID: 28626 RVA: 0x0018FD6C File Offset: 0x0018DF6C
 		protected virtual void ComputeNewSpeed()
 		{
 			if (Time.deltaTime > 0f)
@@ -878,7 +878,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051D2 RID: 20946 RVA: 0x001221EC File Offset: 0x001203EC
+		// Token: 0x06006FD3 RID: 28627 RVA: 0x0018FE70 File Offset: 0x0018E070
 		protected virtual void SetStates()
 		{
 			if (!this.State.WasGroundedLastFrame && this.State.IsCollidingBelow)
@@ -891,7 +891,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051D3 RID: 20947 RVA: 0x0012225C File Offset: 0x0012045C
+		// Token: 0x06006FD4 RID: 28628 RVA: 0x0018FEE0 File Offset: 0x0018E0E0
 		public virtual void SetRaysParameters()
 		{
 			Vector2 offset = this._boxCollider.offset;
@@ -917,13 +917,13 @@ namespace MoreMountains.CorgiEngine
 			this._boundsHeight = Vector2.Distance(this._boundsBottomLeftCorner, this._boundsTopLeftCorner);
 		}
 
-		// Token: 0x060051D4 RID: 20948 RVA: 0x00122405 File Offset: 0x00120605
+		// Token: 0x06006FD5 RID: 28629 RVA: 0x0003DB7A File Offset: 0x0003BD7A
 		public virtual void SetIgnoreCollider(Collider2D newIgnoredCollider)
 		{
 			this._ignoredCollider = newIgnoredCollider;
 		}
 
-		// Token: 0x060051D5 RID: 20949 RVA: 0x0012240E File Offset: 0x0012060E
+		// Token: 0x06006FD6 RID: 28630 RVA: 0x0003DB83 File Offset: 0x0003BD83
 		public virtual IEnumerator DisableCollisions(float duration)
 		{
 			if (this.m_waitYield == null)
@@ -940,7 +940,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x060051D6 RID: 20950 RVA: 0x00122424 File Offset: 0x00120624
+		// Token: 0x06006FD7 RID: 28631 RVA: 0x0019008C File Offset: 0x0018E28C
 		public virtual void CollisionsOn()
 		{
 			this.PlatformMask = this._platformMaskSave;
@@ -950,13 +950,13 @@ namespace MoreMountains.CorgiEngine
 			this.PlatformMask |= this.MidHeightOneWayPlatformMask;
 		}
 
-		// Token: 0x060051D7 RID: 20951 RVA: 0x001224C5 File Offset: 0x001206C5
+		// Token: 0x06006FD8 RID: 28632 RVA: 0x0003DB99 File Offset: 0x0003BD99
 		public virtual void CollisionsOff()
 		{
 			this.PlatformMask = 0;
 		}
 
-		// Token: 0x060051D8 RID: 20952 RVA: 0x001224D3 File Offset: 0x001206D3
+		// Token: 0x06006FD9 RID: 28633 RVA: 0x0003DBA7 File Offset: 0x0003BDA7
 		public virtual IEnumerator DisableCollisionsWithOneWayPlatforms(float duration)
 		{
 			if (this.DetachmentMethod == CorgiController.DetachmentMethods.Layer)
@@ -990,7 +990,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x060051D9 RID: 20953 RVA: 0x001224E9 File Offset: 0x001206E9
+		// Token: 0x06006FDA RID: 28634 RVA: 0x0003DBBD File Offset: 0x0003BDBD
 		public virtual IEnumerator DisableCollisionsWithMovingPlatforms(float duration)
 		{
 			if (this.DetachmentMethod == CorgiController.DetachmentMethods.Layer)
@@ -1024,7 +1024,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x060051DA RID: 20954 RVA: 0x00122500 File Offset: 0x00120700
+		// Token: 0x06006FDB RID: 28635 RVA: 0x00190130 File Offset: 0x0018E330
 		public virtual void CollisionsOffWithOneWayPlatformsLayer()
 		{
 			this.PlatformMask -= this.OneWayPlatformMask;
@@ -1032,26 +1032,26 @@ namespace MoreMountains.CorgiEngine
 			this.PlatformMask -= this.MidHeightOneWayPlatformMask;
 		}
 
-		// Token: 0x060051DB RID: 20955 RVA: 0x00122574 File Offset: 0x00120774
+		// Token: 0x06006FDC RID: 28636 RVA: 0x001901A4 File Offset: 0x0018E3A4
 		public virtual void CollisionsOffWithMovingPlatformsLayer()
 		{
 			this.PlatformMask -= this.MovingPlatformMask;
 			this.PlatformMask -= this.MovingOneWayPlatformMask;
 		}
 
-		// Token: 0x060051DC RID: 20956 RVA: 0x001225C5 File Offset: 0x001207C5
+		// Token: 0x06006FDD RID: 28637 RVA: 0x0003DBD3 File Offset: 0x0003BDD3
 		public virtual void ResetParameters()
 		{
 			this._overrideParameters = this.DefaultParameters;
 		}
 
-		// Token: 0x060051DD RID: 20957 RVA: 0x001225D3 File Offset: 0x001207D3
+		// Token: 0x06006FDE RID: 28638 RVA: 0x0003DBE1 File Offset: 0x0003BDE1
 		public virtual void SlowFall(float factor)
 		{
 			this._fallSlowFactor = factor;
 		}
 
-		// Token: 0x060051DE RID: 20958 RVA: 0x001225DC File Offset: 0x001207DC
+		// Token: 0x06006FDF RID: 28639 RVA: 0x0003DBEA File Offset: 0x0003BDEA
 		public virtual void GravityActive(bool state)
 		{
 			if (state)
@@ -1062,7 +1062,7 @@ namespace MoreMountains.CorgiEngine
 			this._gravityActive = false;
 		}
 
-		// Token: 0x060051DF RID: 20959 RVA: 0x001225F0 File Offset: 0x001207F0
+		// Token: 0x06006FE0 RID: 28640 RVA: 0x001901F8 File Offset: 0x0018E3F8
 		public virtual void ResizeCollider(Vector2 newSize)
 		{
 			float d = this._originalColliderOffset.y - (this._originalColliderSize.y - newSize.y) / 2f;
@@ -1072,7 +1072,7 @@ namespace MoreMountains.CorgiEngine
 			this.State.ColliderResized = true;
 		}
 
-		// Token: 0x060051E0 RID: 20960 RVA: 0x0012265B File Offset: 0x0012085B
+		// Token: 0x06006FE1 RID: 28641 RVA: 0x0003DBFE File Offset: 0x0003BDFE
 		public virtual void ResetColliderSize()
 		{
 			this._boxCollider.size = this._originalColliderSize;
@@ -1081,7 +1081,7 @@ namespace MoreMountains.CorgiEngine
 			this.State.ColliderResized = false;
 		}
 
-		// Token: 0x060051E1 RID: 20961 RVA: 0x00122694 File Offset: 0x00120894
+		// Token: 0x06006FE2 RID: 28642 RVA: 0x00190264 File Offset: 0x0018E464
 		public virtual bool CanGoBackToOriginalSize()
 		{
 			if (this._boxCollider.size == this._originalColliderSize)
@@ -1096,19 +1096,19 @@ namespace MoreMountains.CorgiEngine
 			return !flag && !flag2;
 		}
 
-		// Token: 0x060051E2 RID: 20962 RVA: 0x001227C3 File Offset: 0x001209C3
+		// Token: 0x06006FE3 RID: 28643 RVA: 0x0000360E File Offset: 0x0000180E
 		public virtual float Width()
 		{
 			return this._boundsWidth;
 		}
 
-		// Token: 0x060051E3 RID: 20963 RVA: 0x001227CB File Offset: 0x001209CB
+		// Token: 0x06006FE4 RID: 28644 RVA: 0x00003616 File Offset: 0x00001816
 		public virtual float Height()
 		{
 			return this._boundsHeight;
 		}
 
-		// Token: 0x060051E4 RID: 20964 RVA: 0x001227D4 File Offset: 0x001209D4
+		// Token: 0x06006FE5 RID: 28645 RVA: 0x00190394 File Offset: 0x0018E594
 		protected virtual void OnCorgiColliderHit()
 		{
 			foreach (RaycastHit2D raycastHit2D in this._contactList)
@@ -1126,7 +1126,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051E5 RID: 20965 RVA: 0x0012288C File Offset: 0x00120A8C
+		// Token: 0x06006FE6 RID: 28646 RVA: 0x0019044C File Offset: 0x0018E64C
 		protected virtual void OnTriggerEnter2D(Collider2D collider)
 		{
 			CorgiControllerPhysicsVolume2D componentNoAlloc = collider.gameObject.GetComponentNoAlloc<CorgiControllerPhysicsVolume2D>();
@@ -1144,12 +1144,12 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x060051E6 RID: 20966 RVA: 0x001228EC File Offset: 0x00120AEC
+		// Token: 0x06006FE7 RID: 28647 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void OnTriggerStay2D(Collider2D collider)
 		{
 		}
 
-		// Token: 0x060051E7 RID: 20967 RVA: 0x001228EE File Offset: 0x00120AEE
+		// Token: 0x06006FE8 RID: 28648 RVA: 0x0003DC34 File Offset: 0x0003BE34
 		protected virtual void OnTriggerExit2D(Collider2D collider)
 		{
 			if (collider.gameObject.GetComponentNoAlloc<CorgiControllerPhysicsVolume2D>() != null)
@@ -1158,253 +1158,253 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x040043A2 RID: 17314
+		// Token: 0x040059D4 RID: 22996
 		[Header("Default Parameters")]
 		public CorgiControllerParameters DefaultParameters;
 
-		// Token: 0x040043A3 RID: 17315
+		// Token: 0x040059D5 RID: 22997
 		[Header("Collision Masks")]
 		[Information("You need to define what layer(s) this character will consider a walkable platform/moving platform etc. By default, you want Platforms, MovingPlatforms, OneWayPlatforms, MovingOneWayPlatforms, in this order.", InformationAttribute.InformationType.Info, false)]
 		public LayerMask PlatformMask = 0;
 
-		// Token: 0x040043A4 RID: 17316
+		// Token: 0x040059D6 RID: 22998
 		public LayerMask MovingPlatformMask = 0;
 
-		// Token: 0x040043A5 RID: 17317
+		// Token: 0x040059D7 RID: 22999
 		public LayerMask OneWayPlatformMask = 0;
 
-		// Token: 0x040043A6 RID: 17318
+		// Token: 0x040059D8 RID: 23000
 		public LayerMask MovingOneWayPlatformMask = 0;
 
-		// Token: 0x040043A7 RID: 17319
+		// Token: 0x040059D9 RID: 23001
 		public LayerMask MidHeightOneWayPlatformMask = 0;
 
-		// Token: 0x040043A8 RID: 17320
+		// Token: 0x040059DA RID: 23002
 		public CorgiController.DetachmentMethods DetachmentMethod;
 
-		// Token: 0x040043A9 RID: 17321
+		// Token: 0x040059DB RID: 23003
 		[ReadOnly]
 		public GameObject StandingOn;
 
-		// Token: 0x040043AE RID: 17326
+		// Token: 0x040059E0 RID: 23008
 		[Header("Raycasting")]
 		[Information("Here you can define how many rays are cast horizontally and vertically. You'll want them as far as possible from each other, but close enough that no obstacle or enemy can fit between 2 rays.", InformationAttribute.InformationType.Info, false)]
 		public int NumberOfHorizontalRays = 4;
 
-		// Token: 0x040043AF RID: 17327
+		// Token: 0x040059E1 RID: 23009
 		public int NumberOfVerticalRays = 4;
 
-		// Token: 0x040043B0 RID: 17328
+		// Token: 0x040059E2 RID: 23010
 		public float HorizontalRayOffset = 0.05f;
 
-		// Token: 0x040043B1 RID: 17329
+		// Token: 0x040059E3 RID: 23011
 		[Tooltip("Honestly don't know what this is for. If character is not hooking to slopes when running up them, tweak this number until they do.")]
 		public float VerticalRayOffset;
 
-		// Token: 0x040043B2 RID: 17330
+		// Token: 0x040059E4 RID: 23012
 		public float CrouchedRaycastLengthMultiplier = 1f;
 
-		// Token: 0x040043B3 RID: 17331
+		// Token: 0x040059E5 RID: 23013
 		public bool CastRaysOnBothSides = true;
 
-		// Token: 0x040043B4 RID: 17332
+		// Token: 0x040059E6 RID: 23014
 		[Header("Stickiness")]
 		[Information("Here you can define whether or not you want your character stick to slopes when walking down them, and how long the raycast handling that should be (0 means automatic length).", InformationAttribute.InformationType.Info, false)]
 		public bool StickWhenWalkingDownSlopes = true;
 
-		// Token: 0x040043B5 RID: 17333
+		// Token: 0x040059E7 RID: 23015
 		public float StickyRaycastLength = 1.25f;
 
-		// Token: 0x040043B8 RID: 17336
+		// Token: 0x040059EA RID: 23018
 		protected CorgiControllerParameters _overrideParameters;
 
-		// Token: 0x040043B9 RID: 17337
+		// Token: 0x040059EB RID: 23019
 		protected Vector2 _velocity;
 
-		// Token: 0x040043BA RID: 17338
+		// Token: 0x040059EC RID: 23020
 		protected float _friction;
 
-		// Token: 0x040043BB RID: 17339
+		// Token: 0x040059ED RID: 23021
 		protected float _fallSlowFactor;
 
-		// Token: 0x040043BC RID: 17340
+		// Token: 0x040059EE RID: 23022
 		protected float _currentGravity;
 
-		// Token: 0x040043BD RID: 17341
+		// Token: 0x040059EF RID: 23023
 		protected Vector2 _externalForce;
 
-		// Token: 0x040043BE RID: 17342
+		// Token: 0x040059F0 RID: 23024
 		protected Vector2 _newPosition;
 
-		// Token: 0x040043BF RID: 17343
+		// Token: 0x040059F1 RID: 23025
 		protected Transform _transform;
 
-		// Token: 0x040043C0 RID: 17344
+		// Token: 0x040059F2 RID: 23026
 		protected BoxCollider2D _boxCollider;
 
-		// Token: 0x040043C1 RID: 17345
+		// Token: 0x040059F3 RID: 23027
 		protected LayerMask _platformMaskSave;
 
-		// Token: 0x040043C2 RID: 17346
+		// Token: 0x040059F4 RID: 23028
 		protected LayerMask _raysBelowLayerMaskPlatforms;
 
-		// Token: 0x040043C3 RID: 17347
+		// Token: 0x040059F5 RID: 23029
 		protected LayerMask _raysBelowLayerMaskPlatformsWithoutOneWay;
 
-		// Token: 0x040043C4 RID: 17348
+		// Token: 0x040059F6 RID: 23030
 		protected LayerMask _raysBelowLayerMaskPlatformsWithoutMidHeight;
 
-		// Token: 0x040043C5 RID: 17349
+		// Token: 0x040059F7 RID: 23031
 		protected int _savedBelowLayer;
 
-		// Token: 0x040043C6 RID: 17350
+		// Token: 0x040059F8 RID: 23032
 		protected MMPathMovement _movingPlatform;
 
-		// Token: 0x040043C7 RID: 17351
+		// Token: 0x040059F9 RID: 23033
 		protected float _movingPlatformCurrentGravity;
 
-		// Token: 0x040043C8 RID: 17352
+		// Token: 0x040059FA RID: 23034
 		protected bool _gravityActive = true;
 
-		// Token: 0x040043C9 RID: 17353
+		// Token: 0x040059FB RID: 23035
 		protected Collider2D _ignoredCollider;
 
-		// Token: 0x040043CA RID: 17354
+		// Token: 0x040059FC RID: 23036
 		protected const float _smallValue = 0.0001f;
 
-		// Token: 0x040043CB RID: 17355
+		// Token: 0x040059FD RID: 23037
 		protected const float _obstacleHeightTolerance = 0.05f;
 
-		// Token: 0x040043CC RID: 17356
+		// Token: 0x040059FE RID: 23038
 		protected const float _movingPlatformsGravity = -500f;
 
-		// Token: 0x040043CD RID: 17357
+		// Token: 0x040059FF RID: 23039
 		protected Vector2 _originalColliderSize;
 
-		// Token: 0x040043CE RID: 17358
+		// Token: 0x04005A00 RID: 23040
 		protected Vector2 _originalColliderOffset;
 
-		// Token: 0x040043CF RID: 17359
+		// Token: 0x04005A01 RID: 23041
 		protected Vector2 _originalSizeRaycastOrigin;
 
-		// Token: 0x040043D0 RID: 17360
+		// Token: 0x04005A02 RID: 23042
 		protected Vector3 _crossBelowSlopeAngle;
 
-		// Token: 0x040043D1 RID: 17361
+		// Token: 0x04005A03 RID: 23043
 		protected RaycastHit2D[] _sideHitsStorage;
 
-		// Token: 0x040043D2 RID: 17362
+		// Token: 0x04005A04 RID: 23044
 		protected RaycastHit2D[] _belowHitsStorage;
 
-		// Token: 0x040043D3 RID: 17363
+		// Token: 0x04005A05 RID: 23045
 		protected RaycastHit2D[] _aboveHitsStorage;
 
-		// Token: 0x040043D4 RID: 17364
+		// Token: 0x04005A06 RID: 23046
 		protected RaycastHit2D _stickRaycast;
 
-		// Token: 0x040043D5 RID: 17365
+		// Token: 0x04005A07 RID: 23047
 		protected float _movementDirection;
 
-		// Token: 0x040043D6 RID: 17366
+		// Token: 0x04005A08 RID: 23048
 		protected float _storedMovementDirection = 1f;
 
-		// Token: 0x040043D7 RID: 17367
+		// Token: 0x04005A09 RID: 23049
 		protected const float _movementDirectionThreshold = 0.0001f;
 
-		// Token: 0x040043D8 RID: 17368
+		// Token: 0x04005A0A RID: 23050
 		protected Vector2 _horizontalRayCastFromBottom = Vector2.zero;
 
-		// Token: 0x040043D9 RID: 17369
+		// Token: 0x04005A0B RID: 23051
 		protected Vector2 _horizontalRayCastToTop = Vector2.zero;
 
-		// Token: 0x040043DA RID: 17370
+		// Token: 0x04005A0C RID: 23052
 		protected Vector2 _verticalRayCastFromLeft = Vector2.zero;
 
-		// Token: 0x040043DB RID: 17371
+		// Token: 0x04005A0D RID: 23053
 		protected Vector2 _verticalRayCastToRight = Vector2.zero;
 
-		// Token: 0x040043DC RID: 17372
+		// Token: 0x04005A0E RID: 23054
 		protected Vector2 _aboveRayCastStart = Vector2.zero;
 
-		// Token: 0x040043DD RID: 17373
+		// Token: 0x04005A0F RID: 23055
 		protected Vector2 _aboveRayCastEnd = Vector2.zero;
 
-		// Token: 0x040043DE RID: 17374
+		// Token: 0x04005A10 RID: 23056
 		protected Vector2 _stickRayCastOrigin = Vector2.zero;
 
-		// Token: 0x040043DF RID: 17375
+		// Token: 0x04005A11 RID: 23057
 		protected Vector3 _colliderBottomCenterPosition;
 
-		// Token: 0x040043E0 RID: 17376
+		// Token: 0x04005A12 RID: 23058
 		protected Vector3 _colliderLeftCenterPosition;
 
-		// Token: 0x040043E1 RID: 17377
+		// Token: 0x04005A13 RID: 23059
 		protected Vector3 _colliderRightCenterPosition;
 
-		// Token: 0x040043E2 RID: 17378
+		// Token: 0x04005A14 RID: 23060
 		protected Vector3 _colliderTopCenterPosition;
 
-		// Token: 0x040043E3 RID: 17379
+		// Token: 0x04005A15 RID: 23061
 		protected MMPathMovement _movingPlatformTest;
 
-		// Token: 0x040043E4 RID: 17380
+		// Token: 0x04005A16 RID: 23062
 		protected RaycastHit2D[] _raycastNonAlloc = new RaycastHit2D[0];
 
-		// Token: 0x040043E5 RID: 17381
+		// Token: 0x04005A17 RID: 23063
 		protected Vector2 _boundsTopLeftCorner;
 
-		// Token: 0x040043E6 RID: 17382
+		// Token: 0x04005A18 RID: 23064
 		protected Vector2 _boundsBottomLeftCorner;
 
-		// Token: 0x040043E7 RID: 17383
+		// Token: 0x04005A19 RID: 23065
 		protected Vector2 _boundsTopRightCorner;
 
-		// Token: 0x040043E8 RID: 17384
+		// Token: 0x04005A1A RID: 23066
 		protected Vector2 _boundsBottomRightCorner;
 
-		// Token: 0x040043E9 RID: 17385
+		// Token: 0x04005A1B RID: 23067
 		protected Vector2 _boundsCenter;
 
-		// Token: 0x040043EA RID: 17386
+		// Token: 0x04005A1C RID: 23068
 		protected float _boundsWidth;
 
-		// Token: 0x040043EB RID: 17387
+		// Token: 0x04005A1D RID: 23069
 		protected float _boundsHeight;
 
-		// Token: 0x040043EC RID: 17388
+		// Token: 0x04005A1E RID: 23070
 		protected List<RaycastHit2D> _contactList;
 
-		// Token: 0x040043ED RID: 17389
+		// Token: 0x04005A1F RID: 23071
 		protected bool m_savePlatformMaskSet;
 
-		// Token: 0x040043EE RID: 17390
+		// Token: 0x04005A20 RID: 23072
 		private WaitRL_Yield m_waitYield;
 
-		// Token: 0x040043EF RID: 17391
+		// Token: 0x04005A21 RID: 23073
 		private WaitRL_Yield m_oneWayWaitYield;
 
-		// Token: 0x040043F0 RID: 17392
+		// Token: 0x04005A22 RID: 23074
 		private WaitRL_Yield m_platformWaitYield;
 
-		// Token: 0x02000F1D RID: 3869
+		// Token: 0x02000F1E RID: 3870
 		public enum RaycastDirections
 		{
-			// Token: 0x04005A94 RID: 23188
+			// Token: 0x04005A24 RID: 23076
 			up,
-			// Token: 0x04005A95 RID: 23189
+			// Token: 0x04005A25 RID: 23077
 			down,
-			// Token: 0x04005A96 RID: 23190
+			// Token: 0x04005A26 RID: 23078
 			left,
-			// Token: 0x04005A97 RID: 23191
+			// Token: 0x04005A27 RID: 23079
 			right
 		}
 
-		// Token: 0x02000F1E RID: 3870
+		// Token: 0x02000F1F RID: 3871
 		public enum DetachmentMethods
 		{
-			// Token: 0x04005A99 RID: 23193
+			// Token: 0x04005A29 RID: 23081
 			Layer,
-			// Token: 0x04005A9A RID: 23194
+			// Token: 0x04005A2A RID: 23082
 			Object
 		}
 	}

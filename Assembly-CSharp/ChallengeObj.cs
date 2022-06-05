@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x020001CD RID: 461
+// Token: 0x02000347 RID: 839
 [Serializable]
 public class ChallengeObj
 {
-	// Token: 0x17000A0A RID: 2570
-	// (get) Token: 0x06001296 RID: 4758 RVA: 0x00036B21 File Offset: 0x00034D21
+	// Token: 0x17000CDA RID: 3290
+	// (get) Token: 0x06001B14 RID: 6932 RVA: 0x0000E0A6 File Offset: 0x0000C2A6
 	public FoundState FoundState
 	{
 		get
@@ -23,8 +23,8 @@ public class ChallengeObj
 		}
 	}
 
-	// Token: 0x17000A0B RID: 2571
-	// (get) Token: 0x06001297 RID: 4759 RVA: 0x00036B46 File Offset: 0x00034D46
+	// Token: 0x17000CDB RID: 3291
+	// (get) Token: 0x06001B15 RID: 6933 RVA: 0x0000E0CB File Offset: 0x0000C2CB
 	public int MaxLevel
 	{
 		get
@@ -37,8 +37,8 @@ public class ChallengeObj
 		}
 	}
 
-	// Token: 0x17000A0C RID: 2572
-	// (get) Token: 0x06001298 RID: 4760 RVA: 0x00036B62 File Offset: 0x00034D62
+	// Token: 0x17000CDC RID: 3292
+	// (get) Token: 0x06001B16 RID: 6934 RVA: 0x0000E0E7 File Offset: 0x0000C2E7
 	public int MaxEquippableLevel
 	{
 		get
@@ -47,8 +47,8 @@ public class ChallengeObj
 		}
 	}
 
-	// Token: 0x17000A0D RID: 2573
-	// (get) Token: 0x06001299 RID: 4761 RVA: 0x00036B6A File Offset: 0x00034D6A
+	// Token: 0x17000CDD RID: 3293
+	// (get) Token: 0x06001B17 RID: 6935 RVA: 0x0000E0EF File Offset: 0x0000C2EF
 	public bool HasMaxBlueprints
 	{
 		get
@@ -57,8 +57,8 @@ public class ChallengeObj
 		}
 	}
 
-	// Token: 0x17000A0E RID: 2574
-	// (get) Token: 0x0600129A RID: 4762 RVA: 0x00036B7D File Offset: 0x00034D7D
+	// Token: 0x17000CDE RID: 3294
+	// (get) Token: 0x06001B18 RID: 6936 RVA: 0x0000E102 File Offset: 0x0000C302
 	public ChallengeData ChallengeData
 	{
 		get
@@ -67,8 +67,8 @@ public class ChallengeObj
 		}
 	}
 
-	// Token: 0x17000A0F RID: 2575
-	// (get) Token: 0x0600129B RID: 4763 RVA: 0x00036B8A File Offset: 0x00034D8A
+	// Token: 0x17000CDF RID: 3295
+	// (get) Token: 0x06001B19 RID: 6937 RVA: 0x0000E10F File Offset: 0x0000C30F
 	public ChallengeScoringType ScoringType
 	{
 		get
@@ -77,33 +77,33 @@ public class ChallengeObj
 		}
 	}
 
-	// Token: 0x0600129C RID: 4764 RVA: 0x00036B97 File Offset: 0x00034D97
+	// Token: 0x06001B1A RID: 6938 RVA: 0x0000E11C File Offset: 0x0000C31C
 	public ChallengeObj(ChallengeType challengeType)
 	{
 		this.ChallengeType = challengeType;
 	}
 
-	// Token: 0x040012F9 RID: 4857
+	// Token: 0x0400192C RID: 6444
 	public ChallengeType ChallengeType;
 
-	// Token: 0x040012FA RID: 4858
+	// Token: 0x0400192D RID: 6445
 	public int TotalHighScore;
 
-	// Token: 0x040012FB RID: 4859
+	// Token: 0x0400192E RID: 6446
 	public Dictionary<ClassType, int> ClassHighScores = new Dictionary<ClassType, int>();
 
-	// Token: 0x040012FC RID: 4860
+	// Token: 0x0400192F RID: 6447
 	public float BestTime = float.MaxValue;
 
-	// Token: 0x040012FD RID: 4861
+	// Token: 0x04001930 RID: 6448
 	public float BestTimeWithoutHandicaps = float.MaxValue;
 
-	// Token: 0x040012FE RID: 4862
+	// Token: 0x04001931 RID: 6449
 	public int FoundLevel = -3;
 
-	// Token: 0x040012FF RID: 4863
+	// Token: 0x04001932 RID: 6450
 	public int EquippedLevel;
 
-	// Token: 0x04001300 RID: 4864
+	// Token: 0x04001933 RID: 6451
 	public int UpgradeBlueprintsFound;
 }

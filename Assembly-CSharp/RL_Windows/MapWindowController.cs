@@ -7,11 +7,11 @@ using UnityEngine.UI;
 
 namespace RL_Windows
 {
-	// Token: 0x020008B8 RID: 2232
+	// Token: 0x02000DF0 RID: 3568
 	public class MapWindowController : WindowController
 	{
-		// Token: 0x170017D4 RID: 6100
-		// (get) Token: 0x060048BD RID: 18621 RVA: 0x00104FEB File Offset: 0x001031EB
+		// Token: 0x17002058 RID: 8280
+		// (get) Token: 0x06006443 RID: 25667 RVA: 0x00004792 File Offset: 0x00002992
 		public override WindowID ID
 		{
 			get
@@ -20,8 +20,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017D5 RID: 6101
-		// (get) Token: 0x060048BE RID: 18622 RVA: 0x00104FEE File Offset: 0x001031EE
+		// Token: 0x17002059 RID: 8281
+		// (get) Token: 0x06006444 RID: 25668 RVA: 0x0002836B File Offset: 0x0002656B
 		public Scene Scene
 		{
 			get
@@ -30,12 +30,12 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017D6 RID: 6102
-		// (get) Token: 0x060048BF RID: 18623 RVA: 0x00104FFB File Offset: 0x001031FB
-		// (set) Token: 0x060048C0 RID: 18624 RVA: 0x00105003 File Offset: 0x00103203
+		// Token: 0x1700205A RID: 8282
+		// (get) Token: 0x06006445 RID: 25669 RVA: 0x00037667 File Offset: 0x00035867
+		// (set) Token: 0x06006446 RID: 25670 RVA: 0x0003766F File Offset: 0x0003586F
 		private bool IsMapMade { get; set; }
 
-		// Token: 0x060048C1 RID: 18625 RVA: 0x0010500C File Offset: 0x0010320C
+		// Token: 0x06006447 RID: 25671 RVA: 0x00173ED0 File Offset: 0x001720D0
 		private void Awake()
 		{
 			this.m_onCancelButtonDown = new Action<InputActionEventData>(this.OnCancelButtonDown);
@@ -46,7 +46,7 @@ namespace RL_Windows
 			this.m_zoomMapVertical = new Action<InputActionEventData>(this.ZoomMapVertical);
 		}
 
-		// Token: 0x060048C2 RID: 18626 RVA: 0x0010508C File Offset: 0x0010328C
+		// Token: 0x06006448 RID: 25672 RVA: 0x00173F50 File Offset: 0x00172150
 		protected override void OnOpen()
 		{
 			this.m_windowCanvas.gameObject.SetActive(true);
@@ -70,7 +70,7 @@ namespace RL_Windows
 			base.StartCoroutine(this.RunEnterAnimation());
 		}
 
-		// Token: 0x060048C3 RID: 18627 RVA: 0x00105170 File Offset: 0x00103370
+		// Token: 0x06006449 RID: 25673 RVA: 0x00174034 File Offset: 0x00172234
 		protected override void OnClose()
 		{
 			MapWindowController.EnteredFromOtherSubmenu = false;
@@ -81,7 +81,7 @@ namespace RL_Windows
 			this.UnsubscribeFromRewiredInputEvents();
 		}
 
-		// Token: 0x060048C4 RID: 18628 RVA: 0x001051BF File Offset: 0x001033BF
+		// Token: 0x0600644A RID: 25674 RVA: 0x00037678 File Offset: 0x00035878
 		protected IEnumerator RunEnterAnimation()
 		{
 			RewiredMapController.SetCurrentMapEnabled(false);
@@ -139,31 +139,31 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x060048C5 RID: 18629 RVA: 0x001051CE File Offset: 0x001033CE
+		// Token: 0x0600644B RID: 25675 RVA: 0x00037687 File Offset: 0x00035887
 		protected override void OnFocus()
 		{
 			this.SubscribeToRewiredInputEvents();
 		}
 
-		// Token: 0x060048C6 RID: 18630 RVA: 0x001051D6 File Offset: 0x001033D6
+		// Token: 0x0600644C RID: 25676 RVA: 0x0003768F File Offset: 0x0003588F
 		protected override void OnLostFocus()
 		{
 			this.UnsubscribeFromRewiredInputEvents();
 		}
 
-		// Token: 0x060048C7 RID: 18631 RVA: 0x001051DE File Offset: 0x001033DE
+		// Token: 0x0600644D RID: 25677 RVA: 0x00027E04 File Offset: 0x00026004
 		protected override void OnPause()
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x060048C8 RID: 18632 RVA: 0x001051E5 File Offset: 0x001033E5
+		// Token: 0x0600644E RID: 25678 RVA: 0x00027E04 File Offset: 0x00026004
 		protected override void OnUnpause()
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x060048C9 RID: 18633 RVA: 0x001051EC File Offset: 0x001033EC
+		// Token: 0x0600644F RID: 25679 RVA: 0x00028116 File Offset: 0x00026316
 		protected virtual void OnCancelButtonDown(InputActionEventData obj)
 		{
 			if (WindowManager.GetIsWindowOpen(WindowID.Pause))
@@ -174,25 +174,25 @@ namespace RL_Windows
 			WindowManager.SetWindowIsOpen(this.ID, false);
 		}
 
-		// Token: 0x060048CA RID: 18634 RVA: 0x00105208 File Offset: 0x00103408
+		// Token: 0x06006450 RID: 25680 RVA: 0x00037697 File Offset: 0x00035897
 		protected virtual void OnConfirmButtonDown(InputActionEventData obj)
 		{
 			base.StartCoroutine(this.TweenCameraToPlayer(0.25f));
 		}
 
-		// Token: 0x060048CB RID: 18635 RVA: 0x0010521C File Offset: 0x0010341C
+		// Token: 0x06006451 RID: 25681 RVA: 0x000376AB File Offset: 0x000358AB
 		protected virtual void OnYButtonDown(InputActionEventData obj)
 		{
 			this.ToggleLegend();
 		}
 
-		// Token: 0x060048CC RID: 18636 RVA: 0x00105224 File Offset: 0x00103424
+		// Token: 0x06006452 RID: 25682 RVA: 0x000376B3 File Offset: 0x000358B3
 		public override void Initialize()
 		{
 			base.Initialize();
 		}
 
-		// Token: 0x060048CD RID: 18637 RVA: 0x0010522C File Offset: 0x0010342C
+		// Token: 0x06006453 RID: 25683 RVA: 0x00174084 File Offset: 0x00172284
 		protected virtual void SubscribeToRewiredInputEvents()
 		{
 			if (ReInput.isReady)
@@ -207,7 +207,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048CE RID: 18638 RVA: 0x001052F0 File Offset: 0x001034F0
+		// Token: 0x06006454 RID: 25684 RVA: 0x00174148 File Offset: 0x00172348
 		protected virtual void UnsubscribeFromRewiredInputEvents()
 		{
 			if (ReInput.isReady)
@@ -222,13 +222,13 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048CF RID: 18639 RVA: 0x001053B2 File Offset: 0x001035B2
+		// Token: 0x06006455 RID: 25685 RVA: 0x000376BB File Offset: 0x000358BB
 		private void ToggleLegend()
 		{
 			this.m_legend.SetActive(!this.m_legend.activeSelf);
 		}
 
-		// Token: 0x060048D0 RID: 18640 RVA: 0x001053D0 File Offset: 0x001035D0
+		// Token: 0x06006456 RID: 25686 RVA: 0x0017420C File Offset: 0x0017240C
 		protected virtual void MoveMapHorizontal(InputActionEventData inputActionEventData)
 		{
 			float num = inputActionEventData.GetAxis();
@@ -245,7 +245,7 @@ namespace RL_Windows
 			MapController.SetMapCameraPosition(position);
 		}
 
-		// Token: 0x060048D1 RID: 18641 RVA: 0x00105464 File Offset: 0x00103664
+		// Token: 0x06006457 RID: 25687 RVA: 0x001742A0 File Offset: 0x001724A0
 		protected virtual void MoveMapVertical(InputActionEventData inputActionEventData)
 		{
 			float num = inputActionEventData.GetAxis();
@@ -262,7 +262,7 @@ namespace RL_Windows
 			MapController.SetMapCameraPosition(position);
 		}
 
-		// Token: 0x060048D2 RID: 18642 RVA: 0x001054F8 File Offset: 0x001036F8
+		// Token: 0x06006458 RID: 25688 RVA: 0x00174334 File Offset: 0x00172534
 		private void ZoomMapVertical(InputActionEventData eventData)
 		{
 			float num = 14f;
@@ -282,7 +282,7 @@ namespace RL_Windows
 			this.m_uvGridImage.uvRect = uvRect;
 		}
 
-		// Token: 0x060048D3 RID: 18643 RVA: 0x001055C4 File Offset: 0x001037C4
+		// Token: 0x06006459 RID: 25689 RVA: 0x000376D6 File Offset: 0x000358D6
 		private IEnumerator TweenCameraToPlayer(float duration)
 		{
 			RewiredMapController.SetCurrentMapEnabled(false);
@@ -313,77 +313,77 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x04003D61 RID: 15713
+		// Token: 0x040051C0 RID: 20928
 		public static bool EnteredFromOtherSubmenu;
 
-		// Token: 0x04003D62 RID: 15714
+		// Token: 0x040051C1 RID: 20929
 		[SerializeField]
 		private Camera m_mapCamera;
 
-		// Token: 0x04003D63 RID: 15715
+		// Token: 0x040051C2 RID: 20930
 		[SerializeField]
 		private Ferr2DT_PathTerrain m_mapFerr2DObj;
 
-		// Token: 0x04003D64 RID: 15716
+		// Token: 0x040051C3 RID: 20931
 		[SerializeField]
 		private GameObject m_mapHorizontalDoor;
 
-		// Token: 0x04003D65 RID: 15717
+		// Token: 0x040051C4 RID: 20932
 		[SerializeField]
 		private GameObject m_mapVerticalDoor;
 
-		// Token: 0x04003D66 RID: 15718
+		// Token: 0x040051C5 RID: 20933
 		[SerializeField]
 		private GameObject m_mapEnemyIcon;
 
-		// Token: 0x04003D67 RID: 15719
+		// Token: 0x040051C6 RID: 20934
 		[SerializeField]
 		private GameObject m_legend;
 
-		// Token: 0x04003D68 RID: 15720
+		// Token: 0x040051C7 RID: 20935
 		[Header("Animation Objects")]
 		[SerializeField]
 		private CanvasGroup m_shadowsCanvasGroup;
 
-		// Token: 0x04003D69 RID: 15721
+		// Token: 0x040051C8 RID: 20936
 		[SerializeField]
 		private CanvasGroup m_fadeBGCanvasGroup;
 
-		// Token: 0x04003D6A RID: 15722
+		// Token: 0x040051C9 RID: 20937
 		[SerializeField]
 		private CanvasGroup m_gridAndRTCanvasGroup;
 
-		// Token: 0x04003D6B RID: 15723
+		// Token: 0x040051CA RID: 20938
 		[SerializeField]
 		private CanvasGroup m_legendCanvasGroup;
 
-		// Token: 0x04003D6C RID: 15724
+		// Token: 0x040051CB RID: 20939
 		[SerializeField]
 		private RawImage m_uvGridImage;
 
-		// Token: 0x04003D6D RID: 15725
+		// Token: 0x040051CC RID: 20940
 		[SerializeField]
 		private GameObject m_yellowStarsGO;
 
-		// Token: 0x04003D6E RID: 15726
+		// Token: 0x040051CD RID: 20941
 		private GameObject m_mapObj;
 
-		// Token: 0x04003D6F RID: 15727
+		// Token: 0x040051CE RID: 20942
 		private Action<InputActionEventData> m_onCancelButtonDown;
 
-		// Token: 0x04003D70 RID: 15728
+		// Token: 0x040051CF RID: 20943
 		private Action<InputActionEventData> m_moveMapHorizontal;
 
-		// Token: 0x04003D71 RID: 15729
+		// Token: 0x040051D0 RID: 20944
 		private Action<InputActionEventData> m_moveMapVertical;
 
-		// Token: 0x04003D72 RID: 15730
+		// Token: 0x040051D1 RID: 20945
 		private Action<InputActionEventData> m_onYButtonDown;
 
-		// Token: 0x04003D73 RID: 15731
+		// Token: 0x040051D2 RID: 20946
 		private Action<InputActionEventData> m_onConfirmButtonDown;
 
-		// Token: 0x04003D74 RID: 15732
+		// Token: 0x040051D3 RID: 20947
 		private Action<InputActionEventData> m_zoomMapVertical;
 	}
 }

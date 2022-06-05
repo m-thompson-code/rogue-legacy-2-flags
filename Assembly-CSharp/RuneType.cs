@@ -1,60 +1,60 @@
 ﻿using System;
 
-// Token: 0x02000769 RID: 1897
+// Token: 0x02000C2A RID: 3114
 public enum RuneType
 {
-	// Token: 0x04003656 RID: 13910
+	// Token: 0x04004906 RID: 18694
 	None,
-	// Token: 0x04003657 RID: 13911
+	// Token: 0x04004907 RID: 18695
 	ArmorRegen = 10,
-	// Token: 0x04003658 RID: 13912
+	// Token: 0x04004908 RID: 18696
 	Dash = 30,
-	// Token: 0x04003659 RID: 13913
+	// Token: 0x04004909 RID: 18697
 	DoubleJump = 40,
-	// Token: 0x0400365A RID: 13914
+	// Token: 0x0400490A RID: 18698
 	GoldGain = 70,
-	// Token: 0x0400365B RID: 13915
+	// Token: 0x0400490B RID: 18699
 	Haste = 90,
-	// Token: 0x0400365C RID: 13916
+	// Token: 0x0400490C RID: 18700
 	Lifesteal = 100,
-	// Token: 0x0400365D RID: 13917
+	// Token: 0x0400490D RID: 18701
 	Magnet = 110,
-	// Token: 0x0400365E RID: 13918
+	// Token: 0x0400490E RID: 18702
 	ReturnDamage = 120,
-	// Token: 0x0400365F RID: 13919
+	// Token: 0x0400490F RID: 18703
 	ManaRegen = 130,
-	// Token: 0x04003660 RID: 13920
+	// Token: 0x04004910 RID: 18704
 	MaxMana = 140,
-	// Token: 0x04003661 RID: 13921
+	// Token: 0x04004911 RID: 18705
 	ManaOnSpinKick = 150,
-	// Token: 0x04003662 RID: 13922
+	// Token: 0x04004912 RID: 18706
 	StatusEffectDuration = 160,
-	// Token: 0x04003663 RID: 13923
+	// Token: 0x04004913 RID: 18707
 	SoulSteal = 170,
-	// Token: 0x04003664 RID: 13924
+	// Token: 0x04004914 RID: 18708
 	ResolveGain = 180,
-	// Token: 0x04003665 RID: 13925
+	// Token: 0x04004915 RID: 18709
 	OreGain = 190,
-	// Token: 0x04003666 RID: 13926
+	// Token: 0x04004916 RID: 18710
 	RuneOreGain = 200,
-	// Token: 0x04003667 RID: 13927
+	// Token: 0x04004917 RID: 18711
 	WeaponCritChanceAdd = 210,
-	// Token: 0x04003668 RID: 13928
+	// Token: 0x04004918 RID: 18712
 	MagicCritChanceAdd = 220,
-	// Token: 0x04003669 RID: 13929
+	// Token: 0x04004919 RID: 18713
 	WeaponCritDot = 230,
-	// Token: 0x0400366A RID: 13930
+	// Token: 0x0400491A RID: 18714
 	MagicCritDot = 240,
-	// Token: 0x0400366B RID: 13931
+	// Token: 0x0400491B RID: 18715
 	WeaponCritDamageAdd = 250,
-	// Token: 0x0400366C RID: 13932
+	// Token: 0x0400491C RID: 18716
 	MagicCritDamageAdd = 260,
-	// Token: 0x0400366D RID: 13933
+	// Token: 0x0400491D RID: 18717
 	SuperCritChanceAdd = 270,
-	// Token: 0x0400366E RID: 13934
+	// Token: 0x0400491E RID: 18718
 	SuperCritDamageAdd = 280,
-	// Token: 0x0400366F RID: 13935
+	// Token: 0x0400491F RID: 18719
 	ArmorMinBlock = 290,
-	// Token: 0x04003670 RID: 13936
+	// Token: 0x04004920 RID: 18720
 	ArmorHealth = 300
 }

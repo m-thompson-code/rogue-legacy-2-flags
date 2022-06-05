@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002B8 RID: 696
+// Token: 0x020004A7 RID: 1191
 public class RangeDamageBonusCurseIndicator : MonoBehaviour
 {
-	// Token: 0x06001BB3 RID: 7091 RVA: 0x00059484 File Offset: 0x00057684
+	// Token: 0x06002667 RID: 9831 RVA: 0x000B62D8 File Offset: 0x000B44D8
 	private void Awake()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.RelicLevelChanged, new Action<MonoBehaviour, EventArgs>(this.ToggleRangeEffect));
@@ -13,7 +13,7 @@ public class RangeDamageBonusCurseIndicator : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, new Action<MonoBehaviour, EventArgs>(this.ToggleRangeEffect));
 	}
 
-	// Token: 0x06001BB4 RID: 7092 RVA: 0x000594DC File Offset: 0x000576DC
+	// Token: 0x06002668 RID: 9832 RVA: 0x000B6330 File Offset: 0x000B4530
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.RelicLevelChanged, new Action<MonoBehaviour, EventArgs>(this.ToggleRangeEffect));
@@ -22,7 +22,7 @@ public class RangeDamageBonusCurseIndicator : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, new Action<MonoBehaviour, EventArgs>(this.ToggleRangeEffect));
 	}
 
-	// Token: 0x06001BB5 RID: 7093 RVA: 0x00059534 File Offset: 0x00057734
+	// Token: 0x06002669 RID: 9833 RVA: 0x00015644 File Offset: 0x00013844
 	private void OnEnable()
 	{
 		if (this.m_playerController && this.m_playerController.IsInitialized)
@@ -31,7 +31,7 @@ public class RangeDamageBonusCurseIndicator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BB6 RID: 7094 RVA: 0x00059558 File Offset: 0x00057758
+	// Token: 0x0600266A RID: 9834 RVA: 0x000B6388 File Offset: 0x000B4588
 	private void ToggleRangeEffect(object sender, EventArgs args)
 	{
 		float num = 0.9444444f;
@@ -55,7 +55,7 @@ public class RangeDamageBonusCurseIndicator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BB7 RID: 7095 RVA: 0x00059657 File Offset: 0x00057857
+	// Token: 0x0600266B RID: 9835 RVA: 0x00015668 File Offset: 0x00013868
 	public void DisableRangeEffect()
 	{
 		if (this.m_rangeEffect && this.m_rangeEffect.isActiveAndEnabled)
@@ -65,13 +65,13 @@ public class RangeDamageBonusCurseIndicator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400195D RID: 6493
+	// Token: 0x0400214A RID: 8522
 	private const string RANGE_EFFECT_NAME = "TelescopeRelicRangeIndicator_Effect";
 
-	// Token: 0x0400195E RID: 6494
+	// Token: 0x0400214B RID: 8523
 	[SerializeField]
 	private PlayerController m_playerController;
 
-	// Token: 0x0400195F RID: 6495
+	// Token: 0x0400214C RID: 8524
 	private BaseEffect m_rangeEffect;
 }

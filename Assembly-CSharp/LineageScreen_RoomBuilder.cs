@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020002DD RID: 733
+// Token: 0x020004D4 RID: 1236
 public class LineageScreen_RoomBuilder : MonoBehaviour
 {
-	// Token: 0x17000CD2 RID: 3282
-	// (get) Token: 0x06001D33 RID: 7475 RVA: 0x0006043B File Offset: 0x0005E63B
+	// Token: 0x1700105D RID: 4189
+	// (get) Token: 0x06002806 RID: 10246 RVA: 0x000167DE File Offset: 0x000149DE
 	public List<GameObject> PortraitList
 	{
 		get
@@ -15,8 +15,8 @@ public class LineageScreen_RoomBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000CD3 RID: 3283
-	// (get) Token: 0x06001D34 RID: 7476 RVA: 0x00060443 File Offset: 0x0005E643
+	// Token: 0x1700105E RID: 4190
+	// (get) Token: 0x06002807 RID: 10247 RVA: 0x000167E6 File Offset: 0x000149E6
 	public List<Vector3> RoomPositionList
 	{
 		get
@@ -25,7 +25,7 @@ public class LineageScreen_RoomBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001D35 RID: 7477 RVA: 0x0006044C File Offset: 0x0005E64C
+	// Token: 0x06002808 RID: 10248 RVA: 0x000BC6E4 File Offset: 0x000BA8E4
 	private void Awake()
 	{
 		this.m_portraitList = new List<GameObject>();
@@ -35,7 +35,7 @@ public class LineageScreen_RoomBuilder : MonoBehaviour
 		this.m_portrait.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06001D36 RID: 7478 RVA: 0x000604A4 File Offset: 0x0005E6A4
+	// Token: 0x06002809 RID: 10249 RVA: 0x000BC73C File Offset: 0x000BA93C
 	private void ConstructPortraitRooms(int numPortraits)
 	{
 		float num = 21f;
@@ -84,36 +84,36 @@ public class LineageScreen_RoomBuilder : MonoBehaviour
 		gameObject.transform.position = position3;
 	}
 
-	// Token: 0x04001B2F RID: 6959
+	// Token: 0x0400233B RID: 9019
 	public const int NUM_PORTRAIT_ROWS = 7;
 
-	// Token: 0x04001B30 RID: 6960
+	// Token: 0x0400233C RID: 9020
 	public const int NUM_PORTRAIT_COLUMNS = 3;
 
-	// Token: 0x04001B31 RID: 6961
+	// Token: 0x0400233D RID: 9021
 	public const int NUM_PORTRAITS_PER_ROOM = 21;
 
-	// Token: 0x04001B32 RID: 6962
+	// Token: 0x0400233E RID: 9022
 	private int DEBUG_NUM_PORTRAITS = 40;
 
-	// Token: 0x04001B33 RID: 6963
+	// Token: 0x0400233F RID: 9023
 	[SerializeField]
 	private Room m_startingRoom;
 
-	// Token: 0x04001B34 RID: 6964
+	// Token: 0x04002340 RID: 9024
 	[SerializeField]
 	private Room m_portraitRoom;
 
-	// Token: 0x04001B35 RID: 6965
+	// Token: 0x04002341 RID: 9025
 	[SerializeField]
 	private GameObject m_portrait;
 
-	// Token: 0x04001B36 RID: 6966
+	// Token: 0x04002342 RID: 9026
 	private List<GameObject> m_portraitList;
 
-	// Token: 0x04001B37 RID: 6967
+	// Token: 0x04002343 RID: 9027
 	private List<Vector3> m_roomPositionList;
 
-	// Token: 0x04001B38 RID: 6968
+	// Token: 0x04002344 RID: 9028
 	private Vector3 m_portraitStartingPosOffset = new Vector3(3f, -2f, 0f);
 }

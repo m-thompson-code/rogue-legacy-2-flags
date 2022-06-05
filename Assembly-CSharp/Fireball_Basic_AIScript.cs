@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000C9 RID: 201
+// Token: 0x0200013F RID: 319
 public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IHitResponse
 {
-	// Token: 0x0600059D RID: 1437 RVA: 0x00018272 File Offset: 0x00016472
+	// Token: 0x0600083C RID: 2108 RVA: 0x00005F15 File Offset: 0x00004115
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -15,7 +15,7 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		};
 	}
 
-	// Token: 0x0600059E RID: 1438 RVA: 0x00018292 File Offset: 0x00016492
+	// Token: 0x0600083D RID: 2109 RVA: 0x00005F35 File Offset: 0x00004135
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -23,7 +23,7 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		this.m_trailRenderer = base.EnemyController.GetComponentInChildren<TrailRenderer>();
 	}
 
-	// Token: 0x0600059F RID: 1439 RVA: 0x000182C1 File Offset: 0x000164C1
+	// Token: 0x0600083E RID: 2110 RVA: 0x00005F64 File Offset: 0x00004164
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -33,8 +33,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002AF RID: 687
-	// (get) Token: 0x060005A0 RID: 1440 RVA: 0x000182E1 File Offset: 0x000164E1
+	// Token: 0x1700038D RID: 909
+	// (get) Token: 0x0600083F RID: 2111 RVA: 0x00005F84 File Offset: 0x00004184
 	protected virtual string FIREBALL_PROJECTILE
 	{
 		get
@@ -43,8 +43,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002B0 RID: 688
-	// (get) Token: 0x060005A1 RID: 1441 RVA: 0x000182E8 File Offset: 0x000164E8
+	// Token: 0x1700038E RID: 910
+	// (get) Token: 0x06000840 RID: 2112 RVA: 0x00005F8B File Offset: 0x0000418B
 	protected virtual string FIREBALL_HOMING_PROJECTILE
 	{
 		get
@@ -53,8 +53,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002B1 RID: 689
-	// (get) Token: 0x060005A2 RID: 1442 RVA: 0x000182EF File Offset: 0x000164EF
+	// Token: 0x1700038F RID: 911
+	// (get) Token: 0x06000841 RID: 2113 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -63,8 +63,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002B2 RID: 690
-	// (get) Token: 0x060005A3 RID: 1443 RVA: 0x00018300 File Offset: 0x00016500
+	// Token: 0x17000390 RID: 912
+	// (get) Token: 0x06000842 RID: 2114 RVA: 0x00005F92 File Offset: 0x00004192
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -73,8 +73,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002B3 RID: 691
-	// (get) Token: 0x060005A4 RID: 1444 RVA: 0x00018311 File Offset: 0x00016511
+	// Token: 0x17000391 RID: 913
+	// (get) Token: 0x06000843 RID: 2115 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -83,8 +83,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002B4 RID: 692
-	// (get) Token: 0x060005A5 RID: 1445 RVA: 0x00018322 File Offset: 0x00016522
+	// Token: 0x17000392 RID: 914
+	// (get) Token: 0x06000844 RID: 2116 RVA: 0x00005FA3 File Offset: 0x000041A3
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -93,8 +93,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002B5 RID: 693
-	// (get) Token: 0x060005A6 RID: 1446 RVA: 0x00018329 File Offset: 0x00016529
+	// Token: 0x17000393 RID: 915
+	// (get) Token: 0x06000845 RID: 2117 RVA: 0x00005FA3 File Offset: 0x000041A3
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -103,8 +103,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002B6 RID: 694
-	// (get) Token: 0x060005A7 RID: 1447 RVA: 0x00018330 File Offset: 0x00016530
+	// Token: 0x17000394 RID: 916
+	// (get) Token: 0x06000846 RID: 2118 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_fireballSpeedMultiplier
 	{
 		get
@@ -113,8 +113,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002B7 RID: 695
-	// (get) Token: 0x060005A8 RID: 1448 RVA: 0x00018337 File Offset: 0x00016537
+	// Token: 0x17000395 RID: 917
+	// (get) Token: 0x06000847 RID: 2119 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_dropsFireballsWhileWalking
 	{
 		get
@@ -123,8 +123,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002B8 RID: 696
-	// (get) Token: 0x060005A9 RID: 1449 RVA: 0x0001833A File Offset: 0x0001653A
+	// Token: 0x17000396 RID: 918
+	// (get) Token: 0x06000848 RID: 2120 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected virtual float m_timeBetweenWalkTowardFireballDrops
 	{
 		get
@@ -133,7 +133,7 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x060005AA RID: 1450 RVA: 0x00018344 File Offset: 0x00016544
+	// Token: 0x06000849 RID: 2121 RVA: 0x000628C8 File Offset: 0x00060AC8
 	private void FixedUpdate()
 	{
 		if (!base.IsInitialized)
@@ -160,8 +160,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002B9 RID: 697
-	// (get) Token: 0x060005AB RID: 1451 RVA: 0x000183D2 File Offset: 0x000165D2
+	// Token: 0x17000397 RID: 919
+	// (get) Token: 0x0600084A RID: 2122 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_TellIntro_AnimSpeed
 	{
 		get
@@ -170,8 +170,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002BA RID: 698
-	// (get) Token: 0x060005AC RID: 1452 RVA: 0x000183D9 File Offset: 0x000165D9
+	// Token: 0x17000398 RID: 920
+	// (get) Token: 0x0600084B RID: 2123 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_TellIntro_Delay
 	{
 		get
@@ -180,8 +180,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002BB RID: 699
-	// (get) Token: 0x060005AD RID: 1453 RVA: 0x000183E0 File Offset: 0x000165E0
+	// Token: 0x17000399 RID: 921
+	// (get) Token: 0x0600084C RID: 2124 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_TellHold_AnimSpeed
 	{
 		get
@@ -190,8 +190,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002BC RID: 700
-	// (get) Token: 0x060005AE RID: 1454 RVA: 0x000183E7 File Offset: 0x000165E7
+	// Token: 0x1700039A RID: 922
+	// (get) Token: 0x0600084D RID: 2125 RVA: 0x00005FAA File Offset: 0x000041AA
 	protected virtual float m_dash_TellHold_Delay
 	{
 		get
@@ -200,8 +200,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002BD RID: 701
-	// (get) Token: 0x060005AF RID: 1455 RVA: 0x000183EE File Offset: 0x000165EE
+	// Token: 0x1700039B RID: 923
+	// (get) Token: 0x0600084E RID: 2126 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_AttackIntro_AnimSpeed
 	{
 		get
@@ -210,8 +210,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002BE RID: 702
-	// (get) Token: 0x060005B0 RID: 1456 RVA: 0x000183F5 File Offset: 0x000165F5
+	// Token: 0x1700039C RID: 924
+	// (get) Token: 0x0600084F RID: 2127 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_AttackIntro_Delay
 	{
 		get
@@ -220,8 +220,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002BF RID: 703
-	// (get) Token: 0x060005B1 RID: 1457 RVA: 0x000183FC File Offset: 0x000165FC
+	// Token: 0x1700039D RID: 925
+	// (get) Token: 0x06000850 RID: 2128 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_AttackHold_AnimSpeed
 	{
 		get
@@ -230,8 +230,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002C0 RID: 704
-	// (get) Token: 0x060005B2 RID: 1458 RVA: 0x00018403 File Offset: 0x00016603
+	// Token: 0x1700039E RID: 926
+	// (get) Token: 0x06000851 RID: 2129 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_AttackHold_Delay
 	{
 		get
@@ -240,8 +240,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002C1 RID: 705
-	// (get) Token: 0x060005B3 RID: 1459 RVA: 0x0001840A File Offset: 0x0001660A
+	// Token: 0x1700039F RID: 927
+	// (get) Token: 0x06000852 RID: 2130 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_Exit_AnimSpeed
 	{
 		get
@@ -250,8 +250,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002C2 RID: 706
-	// (get) Token: 0x060005B4 RID: 1460 RVA: 0x00018411 File Offset: 0x00016611
+	// Token: 0x170003A0 RID: 928
+	// (get) Token: 0x06000853 RID: 2131 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_Exit_Delay
 	{
 		get
@@ -260,8 +260,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002C3 RID: 707
-	// (get) Token: 0x060005B5 RID: 1461 RVA: 0x00018418 File Offset: 0x00016618
+	// Token: 0x170003A1 RID: 929
+	// (get) Token: 0x06000854 RID: 2132 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected virtual float m_dash_Exit_ForceIdle
 	{
 		get
@@ -270,8 +270,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002C4 RID: 708
-	// (get) Token: 0x060005B6 RID: 1462 RVA: 0x0001841F File Offset: 0x0001661F
+	// Token: 0x170003A2 RID: 930
+	// (get) Token: 0x06000855 RID: 2133 RVA: 0x00005FB1 File Offset: 0x000041B1
 	protected virtual float m_dash_Exit_AttackCD
 	{
 		get
@@ -280,8 +280,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002C5 RID: 709
-	// (get) Token: 0x060005B7 RID: 1463 RVA: 0x00018426 File Offset: 0x00016626
+	// Token: 0x170003A3 RID: 931
+	// (get) Token: 0x06000856 RID: 2134 RVA: 0x00004548 File Offset: 0x00002748
 	protected virtual float m_dash_Attack_ForwardSpeedOverride
 	{
 		get
@@ -290,8 +290,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002C6 RID: 710
-	// (get) Token: 0x060005B8 RID: 1464 RVA: 0x0001842D File Offset: 0x0001662D
+	// Token: 0x170003A4 RID: 932
+	// (get) Token: 0x06000857 RID: 2135 RVA: 0x00005FB8 File Offset: 0x000041B8
 	protected virtual float m_dash_Attack_Duration
 	{
 		get
@@ -300,8 +300,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002C7 RID: 711
-	// (get) Token: 0x060005B9 RID: 1465 RVA: 0x00018434 File Offset: 0x00016634
+	// Token: 0x170003A5 RID: 933
+	// (get) Token: 0x06000858 RID: 2136 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_dropsFireballsDuringDashAttack
 	{
 		get
@@ -310,8 +310,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002C8 RID: 712
-	// (get) Token: 0x060005BA RID: 1466 RVA: 0x00018437 File Offset: 0x00016637
+	// Token: 0x170003A6 RID: 934
+	// (get) Token: 0x06000859 RID: 2137 RVA: 0x00003D8C File Offset: 0x00001F8C
 	protected virtual float m_fireballDropDuringDashInterval
 	{
 		get
@@ -320,7 +320,7 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x060005BB RID: 1467 RVA: 0x0001843E File Offset: 0x0001663E
+	// Token: 0x0600085A RID: 2138 RVA: 0x00005FBF File Offset: 0x000041BF
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -361,7 +361,7 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		yield break;
 	}
 
-	// Token: 0x060005BC RID: 1468 RVA: 0x0001844D File Offset: 0x0001664D
+	// Token: 0x0600085B RID: 2139 RVA: 0x00005FCE File Offset: 0x000041CE
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -394,7 +394,7 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		yield break;
 	}
 
-	// Token: 0x060005BD RID: 1469 RVA: 0x0001845C File Offset: 0x0001665C
+	// Token: 0x0600085C RID: 2140 RVA: 0x00005FDD File Offset: 0x000041DD
 	private IEnumerator DropFireballDuringDash()
 	{
 		int numFireballs = (int)(this.m_dash_Attack_Duration / this.m_fireballDropDuringDashInterval);
@@ -423,8 +423,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		yield break;
 	}
 
-	// Token: 0x170002C9 RID: 713
-	// (get) Token: 0x060005BE RID: 1470 RVA: 0x0001846B File Offset: 0x0001666B
+	// Token: 0x170003A7 RID: 935
+	// (get) Token: 0x0600085D RID: 2141 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual int m_spawnFireballOnHitCount
 	{
 		get
@@ -433,8 +433,8 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x170002CA RID: 714
-	// (get) Token: 0x060005BF RID: 1471 RVA: 0x0001846E File Offset: 0x0001666E
+	// Token: 0x170003A8 RID: 936
+	// (get) Token: 0x0600085E RID: 2142 RVA: 0x00005FEC File Offset: 0x000041EC
 	protected virtual Vector2 m_spawnFireballOnHitSpeedModRange
 	{
 		get
@@ -443,7 +443,7 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x060005C0 RID: 1472 RVA: 0x00018480 File Offset: 0x00016680
+	// Token: 0x0600085F RID: 2143 RVA: 0x00062958 File Offset: 0x00060B58
 	public void BodyOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (this.m_spawnFireballOnHitCount > 0)
@@ -462,7 +462,7 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		}
 	}
 
-	// Token: 0x060005C1 RID: 1473 RVA: 0x0001852C File Offset: 0x0001672C
+	// Token: 0x06000860 RID: 2144 RVA: 0x00062A04 File Offset: 0x00060C04
 	private void DropFireball(bool homing = false)
 	{
 		float num = 270f;
@@ -481,7 +481,7 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		this.FireProjectile(this.FIREBALL_PROJECTILE, 0, false, num, this.m_fireballSpeedMultiplier, true, true, true);
 	}
 
-	// Token: 0x060005C2 RID: 1474 RVA: 0x000185EB File Offset: 0x000167EB
+	// Token: 0x06000861 RID: 2145 RVA: 0x00005FFD File Offset: 0x000041FD
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.EnemyController.FollowTarget = true;
@@ -490,24 +490,24 @@ public class Fireball_Basic_AIScript : BaseAIScript, IBodyOnEnterHitResponse, IH
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x040009F9 RID: 2553
+	// Token: 0x04000C1D RID: 3101
 	private TrailRenderer m_trailRenderer;
 
-	// Token: 0x040009FA RID: 2554
+	// Token: 0x04000C1E RID: 3102
 	private float m_timeSinceLastWalkTowardsFireball;
 
-	// Token: 0x040009FB RID: 2555
+	// Token: 0x04000C1F RID: 3103
 	protected const string DASH_TELL_INTRO = "Dash_Tell_Intro";
 
-	// Token: 0x040009FC RID: 2556
+	// Token: 0x04000C20 RID: 3104
 	protected const string DASH_TELL_HOLD = "Dash_Tell_Hold";
 
-	// Token: 0x040009FD RID: 2557
+	// Token: 0x04000C21 RID: 3105
 	protected const string DASH_ATTACK_INTRO = "Dash_Attack_Intro";
 
-	// Token: 0x040009FE RID: 2558
+	// Token: 0x04000C22 RID: 3106
 	protected const string DASH_ATTACK_HOLD = "Dash_Attack_Hold";
 
-	// Token: 0x040009FF RID: 2559
+	// Token: 0x04000C23 RID: 3107
 	protected const string DASH_EXIT = "Dash_Exit";
 }

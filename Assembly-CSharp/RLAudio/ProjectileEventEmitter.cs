@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x0200090C RID: 2316
+	// Token: 0x02000E89 RID: 3721
 	public class ProjectileEventEmitter : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001876 RID: 6262
-		// (get) Token: 0x06004BF1 RID: 19441 RVA: 0x00110E3F File Offset: 0x0010F03F
-		// (set) Token: 0x06004BF2 RID: 19442 RVA: 0x00110E47 File Offset: 0x0010F047
+		// Token: 0x1700216F RID: 8559
+		// (get) Token: 0x060068EC RID: 26860 RVA: 0x0003A1DF File Offset: 0x000383DF
+		// (set) Token: 0x060068ED RID: 26861 RVA: 0x0003A1E7 File Offset: 0x000383E7
 		public string DeathEvent
 		{
 			get
@@ -22,8 +22,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001877 RID: 6263
-		// (get) Token: 0x06004BF3 RID: 19443 RVA: 0x00110E50 File Offset: 0x0010F050
+		// Token: 0x17002170 RID: 8560
+		// (get) Token: 0x060068EE RID: 26862 RVA: 0x0003A1F0 File Offset: 0x000383F0
 		public string Description
 		{
 			get
@@ -36,8 +36,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001878 RID: 6264
-		// (get) Token: 0x06004BF4 RID: 19444 RVA: 0x00110E76 File Offset: 0x0010F076
+		// Token: 0x17002171 RID: 8561
+		// (get) Token: 0x060068EF RID: 26863 RVA: 0x0003A216 File Offset: 0x00038416
 		private bool HasLifetimeEvent
 		{
 			get
@@ -46,14 +46,14 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001879 RID: 6265
-		// (get) Token: 0x06004BF5 RID: 19445 RVA: 0x00110E86 File Offset: 0x0010F086
-		// (set) Token: 0x06004BF6 RID: 19446 RVA: 0x00110E8E File Offset: 0x0010F08E
+		// Token: 0x17002172 RID: 8562
+		// (get) Token: 0x060068F0 RID: 26864 RVA: 0x0003A226 File Offset: 0x00038426
+		// (set) Token: 0x060068F1 RID: 26865 RVA: 0x0003A22E File Offset: 0x0003842E
 		public string HitBreakableEvent { get; private set; }
 
-		// Token: 0x1700187A RID: 6266
-		// (get) Token: 0x06004BF7 RID: 19447 RVA: 0x00110E97 File Offset: 0x0010F097
-		// (set) Token: 0x06004BF8 RID: 19448 RVA: 0x00110E9F File Offset: 0x0010F09F
+		// Token: 0x17002173 RID: 8563
+		// (get) Token: 0x060068F2 RID: 26866 RVA: 0x0003A237 File Offset: 0x00038437
+		// (set) Token: 0x060068F3 RID: 26867 RVA: 0x0003A23F File Offset: 0x0003843F
 		public string HitSurfaceEvent
 		{
 			get
@@ -66,9 +66,9 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700187B RID: 6267
-		// (get) Token: 0x06004BF9 RID: 19449 RVA: 0x00110EA8 File Offset: 0x0010F0A8
-		// (set) Token: 0x06004BFA RID: 19450 RVA: 0x00110EB0 File Offset: 0x0010F0B0
+		// Token: 0x17002174 RID: 8564
+		// (get) Token: 0x060068F4 RID: 26868 RVA: 0x0003A248 File Offset: 0x00038448
+		// (set) Token: 0x060068F5 RID: 26869 RVA: 0x0003A250 File Offset: 0x00038450
 		public string LifetimeEvent
 		{
 			get
@@ -81,9 +81,9 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700187C RID: 6268
-		// (get) Token: 0x06004BFB RID: 19451 RVA: 0x00110EB9 File Offset: 0x0010F0B9
-		// (set) Token: 0x06004BFC RID: 19452 RVA: 0x00110EC1 File Offset: 0x0010F0C1
+		// Token: 0x17002175 RID: 8565
+		// (get) Token: 0x060068F6 RID: 26870 RVA: 0x0003A259 File Offset: 0x00038459
+		// (set) Token: 0x060068F7 RID: 26871 RVA: 0x0003A261 File Offset: 0x00038461
 		public string SpawnEvent
 		{
 			get
@@ -96,7 +96,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BFD RID: 19453 RVA: 0x00110ECC File Offset: 0x0010F0CC
+		// Token: 0x060068F8 RID: 26872 RVA: 0x00180FC8 File Offset: 0x0017F1C8
 		protected virtual void Awake()
 		{
 			this.m_projectile = base.GetComponent<Projectile_RL>();
@@ -130,7 +130,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BFE RID: 19454 RVA: 0x00110FD8 File Offset: 0x0010F1D8
+		// Token: 0x060068F9 RID: 26873 RVA: 0x001810D4 File Offset: 0x0017F2D4
 		protected string GetName()
 		{
 			int num = base.name.IndexOf("(Clone)");
@@ -142,7 +142,7 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004BFF RID: 19455 RVA: 0x0011100F File Offset: 0x0010F20F
+		// Token: 0x060068FA RID: 26874 RVA: 0x0003A26A File Offset: 0x0003846A
 		protected virtual void OnDisable()
 		{
 			if (this.GetIsEventPlaying(this.m_lifeTimeEventInstance))
@@ -151,7 +151,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C00 RID: 19456 RVA: 0x0011102C File Offset: 0x0010F22C
+		// Token: 0x060068FB RID: 26875 RVA: 0x0018110C File Offset: 0x0017F30C
 		protected virtual void OnDestroy()
 		{
 			this.m_projectile.OnSpawnRelay.RemoveListener(new Action<Projectile_RL, GameObject>(this.OnSpawn));
@@ -163,7 +163,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C01 RID: 19457 RVA: 0x001110A0 File Offset: 0x0010F2A0
+		// Token: 0x060068FC RID: 26876 RVA: 0x00181180 File Offset: 0x0017F380
 		protected bool GetIsEventPlaying(EventInstance eventInstance)
 		{
 			if (eventInstance.isValid())
@@ -175,7 +175,7 @@ namespace RLAudio
 			return false;
 		}
 
-		// Token: 0x06004C02 RID: 19458 RVA: 0x001110CC File Offset: 0x0010F2CC
+		// Token: 0x060068FD RID: 26877 RVA: 0x001811AC File Offset: 0x0017F3AC
 		protected virtual void OnCollision(Projectile_RL projectile, GameObject colliderObj)
 		{
 			this.m_lastGameObjectHit = colliderObj;
@@ -190,7 +190,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C03 RID: 19459 RVA: 0x00111134 File Offset: 0x0010F334
+		// Token: 0x060068FE RID: 26878 RVA: 0x00181214 File Offset: 0x0017F414
 		protected void OnDeath(Projectile_RL projectile, GameObject colliderObj)
 		{
 			if (this.GetIsEventPlaying(this.m_lifeTimeEventInstance))
@@ -223,7 +223,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C04 RID: 19460 RVA: 0x001111E8 File Offset: 0x0010F3E8
+		// Token: 0x060068FF RID: 26879 RVA: 0x001812C8 File Offset: 0x0017F4C8
 		protected virtual void OnSpawn(Projectile_RL projectile, GameObject colliderObj)
 		{
 			if (this.m_playSpawnAudioAutomatically && this.m_playSpawnAudio)
@@ -238,84 +238,84 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C05 RID: 19461 RVA: 0x00111269 File Offset: 0x0010F469
+		// Token: 0x06006900 RID: 26880 RVA: 0x0003A286 File Offset: 0x00038486
 		public void SetPlaySpawnAudio(bool playSpawnAudio)
 		{
 			this.m_playSpawnAudio = playSpawnAudio;
 		}
 
-		// Token: 0x06004C06 RID: 19462 RVA: 0x00111272 File Offset: 0x0010F472
+		// Token: 0x06006901 RID: 26881 RVA: 0x0003A28F File Offset: 0x0003848F
 		public void SetPlayLifetimeAudio(bool playLifetimeAudio)
 		{
 			this.m_playLifetimeAudio = playLifetimeAudio;
 		}
 
-		// Token: 0x06004C07 RID: 19463 RVA: 0x0011127B File Offset: 0x0010F47B
+		// Token: 0x06006902 RID: 26882 RVA: 0x0003A298 File Offset: 0x00038498
 		public void SetPlayDeathAudio(bool playDeathAudio)
 		{
 			this.m_playDeathAudio = playDeathAudio;
 		}
 
-		// Token: 0x04003FF5 RID: 16373
+		// Token: 0x04005555 RID: 21845
 		[SerializeField]
 		protected bool m_onlyPlayCollisionWhenHitTerrain;
 
-		// Token: 0x04003FF6 RID: 16374
+		// Token: 0x04005556 RID: 21846
 		[SerializeField]
 		protected bool m_playSpawnAudioAutomatically = true;
 
-		// Token: 0x04003FF7 RID: 16375
+		// Token: 0x04005557 RID: 21847
 		protected Projectile_RL m_projectile;
 
-		// Token: 0x04003FF8 RID: 16376
+		// Token: 0x04005558 RID: 21848
 		protected string m_deathEvent;
 
-		// Token: 0x04003FF9 RID: 16377
+		// Token: 0x04005559 RID: 21849
 		protected string m_lifetimeEvent;
 
-		// Token: 0x04003FFA RID: 16378
+		// Token: 0x0400555A RID: 21850
 		protected string m_hitSurfaceEvent;
 
-		// Token: 0x04003FFB RID: 16379
+		// Token: 0x0400555B RID: 21851
 		protected EventInstance m_lifeTimeEventInstance;
 
-		// Token: 0x04003FFC RID: 16380
+		// Token: 0x0400555C RID: 21852
 		protected string m_description;
 
-		// Token: 0x04003FFD RID: 16381
+		// Token: 0x0400555D RID: 21853
 		protected string m_trimmedName = string.Empty;
 
-		// Token: 0x04003FFE RID: 16382
+		// Token: 0x0400555E RID: 21854
 		protected string m_spawnEvent;
 
-		// Token: 0x04003FFF RID: 16383
+		// Token: 0x0400555F RID: 21855
 		protected GameObject m_lastGameObjectHit;
 
-		// Token: 0x04004000 RID: 16384
+		// Token: 0x04005560 RID: 21856
 		private Action<Projectile_RL, GameObject> m_onCollision;
 
-		// Token: 0x04004001 RID: 16385
+		// Token: 0x04005561 RID: 21857
 		private Action<Projectile_RL, GameObject> m_onDeath;
 
-		// Token: 0x04004002 RID: 16386
+		// Token: 0x04005562 RID: 21858
 		private bool m_playSpawnAudio = true;
 
-		// Token: 0x04004003 RID: 16387
+		// Token: 0x04005563 RID: 21859
 		private bool m_playLifetimeAudio = true;
 
-		// Token: 0x04004004 RID: 16388
+		// Token: 0x04005564 RID: 21860
 		private bool m_playDeathAudio = true;
 
-		// Token: 0x04004005 RID: 16389
+		// Token: 0x04005565 RID: 21861
 		protected const string WALL_SPELL_PROJECTILE_NAME_STARTS_WITH = "DamageWall";
 
-		// Token: 0x04004006 RID: 16390
+		// Token: 0x04005566 RID: 21862
 		protected const string PROJECTILE_DEATH_DUE_TO_WALL_SPELL_AUDIO_PATH = "event:/SFX/Spells/sfx_spell_blueWall_hit";
 
-		// Token: 0x04004007 RID: 16391
+		// Token: 0x04005567 RID: 21863
 		protected const string STATIC_WALL_PROJECTILE_NAME_STARTS_WITH = "StaticWall";
 
-		// Token: 0x04004008 RID: 16392
+		// Token: 0x04005568 RID: 21864
 		protected const string PROJECTILE_DEATH_DUE_TO_STATIC_WALL_AUDIO_PATH = "event:/SFX/Spells/sfx_spell_shieldWall_damageAbsorb";
 	}
 }

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x02000488 RID: 1160
+// Token: 0x02000787 RID: 1927
 public class MergeRoomChunkManager : MonoBehaviour
 {
-	// Token: 0x17001086 RID: 4230
-	// (get) Token: 0x06002ACE RID: 10958 RVA: 0x00090EC1 File Offset: 0x0008F0C1
+	// Token: 0x170015C7 RID: 5575
+	// (get) Token: 0x06003B02 RID: 15106 RVA: 0x00020622 File Offset: 0x0001E822
 	public IRelayLink<Vector2> PlayerEnteredChunkRelay
 	{
 		get
@@ -16,14 +16,14 @@ public class MergeRoomChunkManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001087 RID: 4231
-	// (get) Token: 0x06002ACF RID: 10959 RVA: 0x00090ECE File Offset: 0x0008F0CE
-	// (set) Token: 0x06002AD0 RID: 10960 RVA: 0x00090ED6 File Offset: 0x0008F0D6
+	// Token: 0x170015C8 RID: 5576
+	// (get) Token: 0x06003B03 RID: 15107 RVA: 0x0002062F File Offset: 0x0001E82F
+	// (set) Token: 0x06003B04 RID: 15108 RVA: 0x00020637 File Offset: 0x0001E837
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x17001088 RID: 4232
-	// (get) Token: 0x06002AD1 RID: 10961 RVA: 0x00090EDF File Offset: 0x0008F0DF
-	// (set) Token: 0x06002AD2 RID: 10962 RVA: 0x00090EE7 File Offset: 0x0008F0E7
+	// Token: 0x170015C9 RID: 5577
+	// (get) Token: 0x06003B05 RID: 15109 RVA: 0x00020640 File Offset: 0x0001E840
+	// (set) Token: 0x06003B06 RID: 15110 RVA: 0x00020648 File Offset: 0x0001E848
 	public MergeRoom MergeRoom
 	{
 		get
@@ -36,14 +36,14 @@ public class MergeRoomChunkManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002AD3 RID: 10963 RVA: 0x00090EF0 File Offset: 0x0008F0F0
+	// Token: 0x06003B07 RID: 15111 RVA: 0x00020651 File Offset: 0x0001E851
 	private void Awake()
 	{
 		this.m_onEnterMergeRoom = new Action<object, EventArgs>(this.OnEnterMergeRoom);
 		this.m_onExitMergeRoom = new Action<object, EventArgs>(this.OnExitMergeRoom);
 	}
 
-	// Token: 0x06002AD4 RID: 10964 RVA: 0x00090F16 File Offset: 0x0008F116
+	// Token: 0x06003B08 RID: 15112 RVA: 0x00020677 File Offset: 0x0001E877
 	private void OnDestroy()
 	{
 		if (this.MergeRoom)
@@ -53,21 +53,21 @@ public class MergeRoomChunkManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002AD5 RID: 10965 RVA: 0x00090F53 File Offset: 0x0008F153
+	// Token: 0x06003B09 RID: 15113 RVA: 0x000206B4 File Offset: 0x0001E8B4
 	private void OnEnterMergeRoom(object sender, EventArgs args)
 	{
 		this.m_runManager = true;
 		this.m_currentChunkIndex = -1;
 	}
 
-	// Token: 0x06002AD6 RID: 10966 RVA: 0x00090F63 File Offset: 0x0008F163
+	// Token: 0x06003B0A RID: 15114 RVA: 0x000206C4 File Offset: 0x0001E8C4
 	private void OnExitMergeRoom(object sender, EventArgs args)
 	{
 		this.m_runManager = false;
 		this.m_currentChunkIndex = -1;
 	}
 
-	// Token: 0x06002AD7 RID: 10967 RVA: 0x00090F74 File Offset: 0x0008F174
+	// Token: 0x06003B0B RID: 15115 RVA: 0x000F2AD4 File Offset: 0x000F0CD4
 	public void Initialize(MergeRoom mergeRoom, List<Room> rooms)
 	{
 		this.MergeRoom = mergeRoom;
@@ -86,7 +86,7 @@ public class MergeRoomChunkManager : MonoBehaviour
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x06002AD8 RID: 10968 RVA: 0x00091045 File Offset: 0x0008F245
+	// Token: 0x06003B0C RID: 15116 RVA: 0x000206D4 File Offset: 0x0001E8D4
 	private int SortChunks(Vector2 a, Vector2 b)
 	{
 		if (a.x < b.x)
@@ -100,7 +100,7 @@ public class MergeRoomChunkManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06002AD9 RID: 10969 RVA: 0x00091068 File Offset: 0x0008F268
+	// Token: 0x06003B0D RID: 15117 RVA: 0x000F2BA8 File Offset: 0x000F0DA8
 	private void FixedUpdate()
 	{
 		if (this.IsInitialized && this.m_runManager)
@@ -151,7 +151,7 @@ public class MergeRoomChunkManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002ADA RID: 10970 RVA: 0x000911A0 File Offset: 0x0008F3A0
+	// Token: 0x06003B0E RID: 15118 RVA: 0x000F2CE0 File Offset: 0x000F0EE0
 	private void UpdateChunkIndex()
 	{
 		int num = this.m_mergeRoomChunks.Length;
@@ -192,27 +192,27 @@ public class MergeRoomChunkManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040022F4 RID: 8948
+	// Token: 0x04002EFA RID: 12026
 	private MergeRoom m_mergeRoom;
 
-	// Token: 0x040022F5 RID: 8949
+	// Token: 0x04002EFB RID: 12027
 	private Relay<Vector2> m_playerEnteredChunkRelay = new Relay<Vector2>();
 
-	// Token: 0x040022F6 RID: 8950
+	// Token: 0x04002EFC RID: 12028
 	private Vector2[] m_mergeRoomChunks;
 
-	// Token: 0x040022F7 RID: 8951
+	// Token: 0x04002EFD RID: 12029
 	private PlayerController m_playerController;
 
-	// Token: 0x040022F8 RID: 8952
+	// Token: 0x04002EFE RID: 12030
 	private int m_currentChunkIndex;
 
-	// Token: 0x040022F9 RID: 8953
+	// Token: 0x04002EFF RID: 12031
 	private Action<object, EventArgs> m_onEnterMergeRoom;
 
-	// Token: 0x040022FA RID: 8954
+	// Token: 0x04002F00 RID: 12032
 	private Action<object, EventArgs> m_onExitMergeRoom;
 
-	// Token: 0x040022FB RID: 8955
+	// Token: 0x04002F01 RID: 12033
 	private bool m_runManager;
 }

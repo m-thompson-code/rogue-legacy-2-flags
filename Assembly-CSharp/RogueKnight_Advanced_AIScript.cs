@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200010D RID: 269
+// Token: 0x020001B3 RID: 435
 public class RogueKnight_Advanced_AIScript : RogueKnight_Basic_AIScript
 {
-	// Token: 0x17000469 RID: 1129
-	// (get) Token: 0x06000839 RID: 2105 RVA: 0x0001C19B File Offset: 0x0001A39B
+	// Token: 0x170005A5 RID: 1445
+	// (get) Token: 0x06000BF2 RID: 3058 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override int m_dash_NumDashes
 	{
 		get

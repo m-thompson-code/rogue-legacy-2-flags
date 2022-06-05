@@ -3,10 +3,10 @@ using MoreMountains.CorgiEngine;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020004D5 RID: 1237
+// Token: 0x0200080B RID: 2059
 public class HealingRoomPropController : DualChoicePropController, ILocalizable
 {
-	// Token: 0x06002E12 RID: 11794 RVA: 0x0009B688 File Offset: 0x00099888
+	// Token: 0x06003F72 RID: 16242 RVA: 0x000FDC38 File Offset: 0x000FBE38
 	protected override void Awake()
 	{
 		this.m_healthChangeArgs = new MaxHealthChangeEventArgs(0f, 0f);
@@ -15,7 +15,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		base.Awake();
 	}
 
-	// Token: 0x06002E13 RID: 11795 RVA: 0x0009B6D8 File Offset: 0x000998D8
+	// Token: 0x06003F73 RID: 16243 RVA: 0x000FDC88 File Offset: 0x000FBE88
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerManaChange, this.m_updateTooltips);
@@ -25,7 +25,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06002E14 RID: 11796 RVA: 0x0009B724 File Offset: 0x00099924
+	// Token: 0x06003F74 RID: 16244 RVA: 0x000230E9 File Offset: 0x000212E9
 	protected override void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -33,7 +33,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		this.RemovePlayerEventListeners();
 	}
 
-	// Token: 0x06002E15 RID: 11797 RVA: 0x0009B73F File Offset: 0x0009993F
+	// Token: 0x06003F75 RID: 16245 RVA: 0x00023104 File Offset: 0x00021304
 	private void RemovePlayerEventListeners()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerManaChange, this.m_updateTooltips);
@@ -42,7 +42,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.RelicStatsChanged, this.m_updateTooltips);
 	}
 
-	// Token: 0x06002E16 RID: 11798 RVA: 0x0009B774 File Offset: 0x00099974
+	// Token: 0x06003F76 RID: 16246 RVA: 0x000FDCD4 File Offset: 0x000FBED4
 	private void CalculateHealthAndManaRestored(PlayerController playerController, out float hpGain, out float mpGain)
 	{
 		float num = (float)playerController.ActualMaxHealth;
@@ -58,7 +58,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		mpGain = Mathf.Clamp(mpGain, 0f, num2);
 	}
 
-	// Token: 0x06002E17 RID: 11799 RVA: 0x0009B7F0 File Offset: 0x000999F0
+	// Token: 0x06003F77 RID: 16247 RVA: 0x000FDD50 File Offset: 0x000FBF50
 	private void CalculateMaxHealthGain(PlayerController playerController, out float damageDealt, out float maxHealthGained)
 	{
 		damageDealt = (float)Mathf.Clamp(Mathf.Abs(Mathf.CeilToInt((float)playerController.ActualMaxHealth * -0.3f)), 1, int.MaxValue);
@@ -78,7 +78,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		maxHealthGained = (float)(actualMaxHealth - playerController.ActualMaxHealth);
 	}
 
-	// Token: 0x06002E18 RID: 11800 RVA: 0x0009B89C File Offset: 0x00099A9C
+	// Token: 0x06003F78 RID: 16248 RVA: 0x000FDDFC File Offset: 0x000FBFFC
 	private void UpdateTooltips(MonoBehaviour sender, EventArgs args)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -92,7 +92,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		base.RightInfoTextBox.SubHeaderText.text = string.Format(LocalizationManager.GetString("LOC_ID_HEALING_ROOM_SUBHEADER_MAX_HEALTH_1", false, false), (int)num3, (int)num4);
 	}
 
-	// Token: 0x06002E19 RID: 11801 RVA: 0x0009B924 File Offset: 0x00099B24
+	// Token: 0x06003F79 RID: 16249 RVA: 0x000FDE84 File Offset: 0x000FC084
 	protected override void InitializePooledPropOnEnter()
 	{
 		base.InitializePooledPropOnEnter();
@@ -105,7 +105,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		this.UpdateTooltips(null, null);
 	}
 
-	// Token: 0x06002E1A RID: 11802 RVA: 0x0009B9D4 File Offset: 0x00099BD4
+	// Token: 0x06003F7A RID: 16250 RVA: 0x000FDF34 File Offset: 0x000FC134
 	public void RestoreHPMP()
 	{
 		this.RemovePlayerEventListeners();
@@ -124,7 +124,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		this.DisableProp(true);
 	}
 
-	// Token: 0x06002E1B RID: 11803 RVA: 0x0009BAB8 File Offset: 0x00099CB8
+	// Token: 0x06003F7B RID: 16251 RVA: 0x000FE018 File Offset: 0x000FC218
 	public void IncreaseMaxHealth()
 	{
 		this.RemovePlayerEventListeners();
@@ -150,7 +150,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		this.DisableProp(false);
 	}
 
-	// Token: 0x06002E1C RID: 11804 RVA: 0x0009BB8C File Offset: 0x00099D8C
+	// Token: 0x06003F7C RID: 16252 RVA: 0x00023138 File Offset: 0x00021338
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 		if (firstTimeDisabled)
@@ -164,7 +164,7 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		base.DisableProp(firstTimeDisabled);
 	}
 
-	// Token: 0x06002E1D RID: 11805 RVA: 0x0009BBBC File Offset: 0x00099DBC
+	// Token: 0x06003F7D RID: 16253 RVA: 0x000FE0EC File Offset: 0x000FC2EC
 	public void RefreshText(object sender, EventArgs args)
 	{
 		base.LeftInfoTextBox.HeaderText.text = LocalizationManager.GetString("LOC_ID_HEALING_ROOM_TITLE_RESTORE_HEALTH_1", false, false);
@@ -174,12 +174,12 @@ public class HealingRoomPropController : DualChoicePropController, ILocalizable
 		this.UpdateTooltips(null, null);
 	}
 
-	// Token: 0x040024C7 RID: 9415
+	// Token: 0x04003199 RID: 12697
 	private MaxHealthChangeEventArgs m_healthChangeArgs;
 
-	// Token: 0x040024C8 RID: 9416
+	// Token: 0x0400319A RID: 12698
 	private Action<MonoBehaviour, EventArgs> m_updateTooltips;
 
-	// Token: 0x040024C9 RID: 9417
+	// Token: 0x0400319B RID: 12699
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 }

@@ -3,21 +3,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Token: 0x020003AF RID: 943
+// Token: 0x02000644 RID: 1604
 public class JournalOmniUIEntry : BaseOmniUIEntry
 {
-	// Token: 0x17000E62 RID: 3682
-	// (get) Token: 0x060022DC RID: 8924 RVA: 0x00071988 File Offset: 0x0006FB88
-	// (set) Token: 0x060022DD RID: 8925 RVA: 0x00071990 File Offset: 0x0006FB90
+	// Token: 0x170012F5 RID: 4853
+	// (get) Token: 0x060030F4 RID: 12532 RVA: 0x0001AE85 File Offset: 0x00019085
+	// (set) Token: 0x060030F5 RID: 12533 RVA: 0x0001AE8D File Offset: 0x0001908D
 	public int JournalIndex { get; private set; }
 
-	// Token: 0x17000E63 RID: 3683
-	// (get) Token: 0x060022DE RID: 8926 RVA: 0x00071999 File Offset: 0x0006FB99
-	// (set) Token: 0x060022DF RID: 8927 RVA: 0x000719A1 File Offset: 0x0006FBA1
+	// Token: 0x170012F6 RID: 4854
+	// (get) Token: 0x060030F6 RID: 12534 RVA: 0x0001AE96 File Offset: 0x00019096
+	// (set) Token: 0x060030F7 RID: 12535 RVA: 0x0001AE9E File Offset: 0x0001909E
 	public JournalType JournalType { get; private set; }
 
-	// Token: 0x17000E64 RID: 3684
-	// (get) Token: 0x060022E0 RID: 8928 RVA: 0x000719AC File Offset: 0x0006FBAC
+	// Token: 0x170012F7 RID: 4855
+	// (get) Token: 0x060030F8 RID: 12536 RVA: 0x000D218C File Offset: 0x000D038C
 	public override EventArgs EntryEventArgs
 	{
 		get
@@ -34,8 +34,8 @@ public class JournalOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000E65 RID: 3685
-	// (get) Token: 0x060022E1 RID: 8929 RVA: 0x00071A24 File Offset: 0x0006FC24
+	// Token: 0x170012F8 RID: 4856
+	// (get) Token: 0x060030F9 RID: 12537 RVA: 0x000D2204 File Offset: 0x000D0404
 	public override bool IsEntryActive
 	{
 		get
@@ -51,7 +51,7 @@ public class JournalOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x060022E2 RID: 8930 RVA: 0x00071A9C File Offset: 0x0006FC9C
+	// Token: 0x060030FA RID: 12538 RVA: 0x000D227C File Offset: 0x000D047C
 	private void UpdateJournalTypeAndIndex()
 	{
 		JournalCategoryType highlightedCategory = (this.m_windowController as JournalOmniUIWindowController).HighlightedCategory;
@@ -90,7 +90,7 @@ public class JournalOmniUIEntry : BaseOmniUIEntry
 		this.m_titleText.text = string.Format(LocalizationManager.GetString("LOC_ID_JOURNAL_JOURNAL_TITLE_1", false, false), arg);
 	}
 
-	// Token: 0x060022E3 RID: 8931 RVA: 0x00071BB0 File Offset: 0x0006FDB0
+	// Token: 0x060030FB RID: 12539 RVA: 0x000D2390 File Offset: 0x000D0590
 	public override void UpdateActive()
 	{
 		JournalCategoryType highlightedCategory = (this.m_windowController as JournalOmniUIWindowController).HighlightedCategory;
@@ -114,7 +114,7 @@ public class JournalOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x060022E4 RID: 8932 RVA: 0x00071C20 File Offset: 0x0006FE20
+	// Token: 0x060030FC RID: 12540 RVA: 0x000D2400 File Offset: 0x000D0600
 	public override void Initialize(IOmniUIWindowController windowController)
 	{
 		base.Initialize(windowController);
@@ -132,7 +132,7 @@ public class JournalOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x060022E5 RID: 8933 RVA: 0x00071CB4 File Offset: 0x0006FEB4
+	// Token: 0x060030FD RID: 12541 RVA: 0x000D2494 File Offset: 0x000D0694
 	public override void SetEntryIndex(int index)
 	{
 		base.SetEntryIndex(index);
@@ -140,17 +140,17 @@ public class JournalOmniUIEntry : BaseOmniUIEntry
 		this.UpdateJournalTypeAndIndex();
 	}
 
-	// Token: 0x060022E6 RID: 8934 RVA: 0x00071CE4 File Offset: 0x0006FEE4
+	// Token: 0x060030FE RID: 12542 RVA: 0x0001AEA7 File Offset: 0x000190A7
 	public override void OnSelect(BaseEventData eventData)
 	{
 		(this.m_windowController as JournalOmniUIWindowController).ResetDescriptionScrollBar();
 		base.OnSelect(eventData);
 	}
 
-	// Token: 0x04001DED RID: 7661
+	// Token: 0x04002816 RID: 10262
 	[SerializeField]
 	private TMP_Text m_journalNumber;
 
-	// Token: 0x04001DF0 RID: 7664
+	// Token: 0x04002819 RID: 10265
 	private JournalOmniUIDescriptionEventArgs m_eventArgs;
 }

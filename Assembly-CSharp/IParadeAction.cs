@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x020002A5 RID: 677
+// Token: 0x02000476 RID: 1142
 public interface IParadeAction
 {
-	// Token: 0x06001A22 RID: 6690
+	// Token: 0x0600242C RID: 9260
 	IEnumerator TriggerAction(ParadeController controller);
 }

@@ -3,11 +3,11 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200039C RID: 924
+// Token: 0x0200062E RID: 1582
 public class ChallengeOmniUIEnterButton : OmniUIButton, IChallengeOmniUIButton
 {
-	// Token: 0x17000E49 RID: 3657
-	// (get) Token: 0x06002272 RID: 8818 RVA: 0x0006FCA6 File Offset: 0x0006DEA6
+	// Token: 0x170012DC RID: 4828
+	// (get) Token: 0x0600308A RID: 12426 RVA: 0x0001A983 File Offset: 0x00018B83
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -16,12 +16,12 @@ public class ChallengeOmniUIEnterButton : OmniUIButton, IChallengeOmniUIButton
 		}
 	}
 
-	// Token: 0x17000E4A RID: 3658
-	// (get) Token: 0x06002273 RID: 8819 RVA: 0x0006FCAE File Offset: 0x0006DEAE
-	// (set) Token: 0x06002274 RID: 8820 RVA: 0x0006FCB6 File Offset: 0x0006DEB6
+	// Token: 0x170012DD RID: 4829
+	// (get) Token: 0x0600308B RID: 12427 RVA: 0x0001A98B File Offset: 0x00018B8B
+	// (set) Token: 0x0600308C RID: 12428 RVA: 0x0001A993 File Offset: 0x00018B93
 	public ChallengeType ChallengeType { get; set; }
 
-	// Token: 0x06002275 RID: 8821 RVA: 0x0006FCBF File Offset: 0x0006DEBF
+	// Token: 0x0600308D RID: 12429 RVA: 0x0001A99C File Offset: 0x00018B9C
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -32,7 +32,7 @@ public class ChallengeOmniUIEnterButton : OmniUIButton, IChallengeOmniUIButton
 		this.m_descriptionEventArgs.Initialize(this.ChallengeType, OmniUIButtonType.Purchasing);
 	}
 
-	// Token: 0x06002276 RID: 8822 RVA: 0x0006FCEE File Offset: 0x0006DEEE
+	// Token: 0x0600308E RID: 12430 RVA: 0x0001A9CB File Offset: 0x00018BCB
 	public override void OnConfirmButtonPressed()
 	{
 		if (!this.IsButtonActive)
@@ -44,7 +44,7 @@ public class ChallengeOmniUIEnterButton : OmniUIButton, IChallengeOmniUIButton
 		this.EnterChallenge();
 	}
 
-	// Token: 0x06002277 RID: 8823 RVA: 0x0006FD0C File Offset: 0x0006DF0C
+	// Token: 0x0600308F RID: 12431 RVA: 0x000D09E8 File Offset: 0x000CEBE8
 	public override void UpdateState()
 	{
 		this.m_deselectedSprite.SetAlpha(1f);
@@ -64,7 +64,7 @@ public class ChallengeOmniUIEnterButton : OmniUIButton, IChallengeOmniUIButton
 		this.IsButtonActive = false;
 	}
 
-	// Token: 0x06002278 RID: 8824 RVA: 0x0006FD79 File Offset: 0x0006DF79
+	// Token: 0x06003090 RID: 12432 RVA: 0x0001A9E8 File Offset: 0x00018BE8
 	private void EnterChallenge()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ChallengeNPC, false);
@@ -72,13 +72,13 @@ public class ChallengeOmniUIEnterButton : OmniUIButton, IChallengeOmniUIButton
 		Messenger<UIMessenger, UIEvent>.Broadcast(UIEvent.ChallengeNPC_EnterChallenge, this, this.ButtonEventArgs);
 	}
 
-	// Token: 0x04001DBE RID: 7614
+	// Token: 0x040027D7 RID: 10199
 	[SerializeField]
 	private TMP_Text m_enterText;
 
-	// Token: 0x04001DBF RID: 7615
+	// Token: 0x040027D8 RID: 10200
 	private ChallengeOmniUIDescriptionEventArgs m_descriptionEventArgs;
 
-	// Token: 0x04001DC0 RID: 7616
+	// Token: 0x040027D9 RID: 10201
 	private PurchaseBoxDialogueEventArgs m_purchaseDialogueArgs = new PurchaseBoxDialogueEventArgs(PurchaseBoxDialogueType.Welcome);
 }

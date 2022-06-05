@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200041E RID: 1054
+// Token: 0x020006D7 RID: 1751
 public class OnTimeoutEffectTrigger : BaseEffectTrigger
 {
-	// Token: 0x17000F86 RID: 3974
-	// (get) Token: 0x060026F6 RID: 9974 RVA: 0x00081C12 File Offset: 0x0007FE12
+	// Token: 0x1700144D RID: 5197
+	// (get) Token: 0x060035B1 RID: 13745 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool RequiresCollider
 	{
 		get
@@ -14,8 +14,8 @@ public class OnTimeoutEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x17000F87 RID: 3975
-	// (get) Token: 0x060026F7 RID: 9975 RVA: 0x00081C18 File Offset: 0x0007FE18
+	// Token: 0x1700144E RID: 5198
+	// (get) Token: 0x060035B2 RID: 13746 RVA: 0x000E1FB8 File Offset: 0x000E01B8
 	public override Vector3 Midpoint
 	{
 		get
@@ -32,7 +32,7 @@ public class OnTimeoutEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026F8 RID: 9976 RVA: 0x00081C74 File Offset: 0x0007FE74
+	// Token: 0x060035B3 RID: 13747 RVA: 0x000E2014 File Offset: 0x000E0214
 	protected override void Awake()
 	{
 		base.Awake();
@@ -45,7 +45,7 @@ public class OnTimeoutEffectTrigger : BaseEffectTrigger
 		this.m_invokeTimeoutTrigger = new Action<GameObject>(this.InvokeTimeoutTrigger);
 	}
 
-	// Token: 0x060026F9 RID: 9977 RVA: 0x00081CD4 File Offset: 0x0007FED4
+	// Token: 0x060035B4 RID: 13748 RVA: 0x000E2074 File Offset: 0x000E0274
 	private void OnEnable()
 	{
 		IEffectTriggerEvent_OnTimeout[] effectTriggerEventArray = this.m_effectTriggerEventArray;
@@ -55,7 +55,7 @@ public class OnTimeoutEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026FA RID: 9978 RVA: 0x00081D0C File Offset: 0x0007FF0C
+	// Token: 0x060035B5 RID: 13749 RVA: 0x000E20AC File Offset: 0x000E02AC
 	private void OnDisable()
 	{
 		IEffectTriggerEvent_OnTimeout[] effectTriggerEventArray = this.m_effectTriggerEventArray;
@@ -65,7 +65,7 @@ public class OnTimeoutEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026FB RID: 9979 RVA: 0x00081D44 File Offset: 0x0007FF44
+	// Token: 0x060035B6 RID: 13750 RVA: 0x000E20E4 File Offset: 0x000E02E4
 	private void InvokeTimeoutTrigger(GameObject otherObj)
 	{
 		GameObject root = otherObj.GetRoot(false);
@@ -111,15 +111,15 @@ public class OnTimeoutEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x040020C0 RID: 8384
+	// Token: 0x04002BA6 RID: 11174
 	private IEffectTriggerEvent_OnTimeout[] m_effectTriggerEventArray;
 
-	// Token: 0x040020C1 RID: 8385
+	// Token: 0x04002BA7 RID: 11175
 	private Collider2D m_collider;
 
-	// Token: 0x040020C2 RID: 8386
+	// Token: 0x04002BA8 RID: 11176
 	private BaseCharacterController m_charController;
 
-	// Token: 0x040020C3 RID: 8387
+	// Token: 0x04002BA9 RID: 11177
 	private Action<GameObject> m_invokeTimeoutTrigger;
 }

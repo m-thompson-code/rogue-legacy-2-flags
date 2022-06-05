@@ -3,10 +3,10 @@ using System.Collections;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004F8 RID: 1272
+// Token: 0x02000854 RID: 2132
 public class ClownEntranceRoomController : BaseSpecialRoomController
 {
-	// Token: 0x06002F8F RID: 12175 RVA: 0x000A2DD0 File Offset: 0x000A0FD0
+	// Token: 0x060041BC RID: 16828 RVA: 0x0002467E File Offset: 0x0002287E
 	public ChestObj GetChest(ClownGoalType goalType)
 	{
 		switch (goalType)
@@ -22,7 +22,7 @@ public class ClownEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F90 RID: 12176 RVA: 0x000A2DFE File Offset: 0x000A0FFE
+	// Token: 0x060041BD RID: 16829 RVA: 0x000246AC File Offset: 0x000228AC
 	private IEnumerator Start()
 	{
 		while (base.Room == null)
@@ -61,7 +61,7 @@ public class ClownEntranceRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002F91 RID: 12177 RVA: 0x000A2E10 File Offset: 0x000A1010
+	// Token: 0x060041BE RID: 16830 RVA: 0x001087E0 File Offset: 0x001069E0
 	public void UnlockChestReward(ClownGoalType goalType)
 	{
 		switch (goalType)
@@ -82,7 +82,7 @@ public class ClownEntranceRoomController : BaseSpecialRoomController
 		this.m_tunnel.SetIsLocked(true);
 	}
 
-	// Token: 0x06002F92 RID: 12178 RVA: 0x000A2EB0 File Offset: 0x000A10B0
+	// Token: 0x060041BF RID: 16831 RVA: 0x00108880 File Offset: 0x00106A80
 	public void TriggerDialogue(GameObject obj)
 	{
 		this.m_tunnel.SetIsLocked(false);
@@ -93,15 +93,15 @@ public class ClownEntranceRoomController : BaseSpecialRoomController
 		WindowManager.SetWindowIsOpen(WindowID.Dialogue, true);
 	}
 
-	// Token: 0x040025E6 RID: 9702
+	// Token: 0x04003370 RID: 13168
 	private ChestObj m_bronzeChest;
 
-	// Token: 0x040025E7 RID: 9703
+	// Token: 0x04003371 RID: 13169
 	private ChestObj m_silverChest;
 
-	// Token: 0x040025E8 RID: 9704
+	// Token: 0x04003372 RID: 13170
 	private ChestObj m_goldChest;
 
-	// Token: 0x040025E9 RID: 9705
+	// Token: 0x04003373 RID: 13171
 	private Tunnel m_tunnel;
 }

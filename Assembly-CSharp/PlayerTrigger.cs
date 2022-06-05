@@ -3,21 +3,21 @@ using System.Collections;
 using Rewired;
 using UnityEngine;
 
-// Token: 0x020002DC RID: 732
+// Token: 0x020004D1 RID: 1233
 public class PlayerTrigger : MonoBehaviour
 {
 	// Token: 0x14000001 RID: 1
-	// (add) Token: 0x06001D21 RID: 7457 RVA: 0x00060038 File Offset: 0x0005E238
-	// (remove) Token: 0x06001D22 RID: 7458 RVA: 0x00060070 File Offset: 0x0005E270
+	// (add) Token: 0x060027EB RID: 10219 RVA: 0x000BC28C File Offset: 0x000BA48C
+	// (remove) Token: 0x060027EC RID: 10220 RVA: 0x000BC2C4 File Offset: 0x000BA4C4
 	public event EventHandler<EventArgs> PlayerEnter;
 
 	// Token: 0x14000002 RID: 2
-	// (add) Token: 0x06001D23 RID: 7459 RVA: 0x000600A8 File Offset: 0x0005E2A8
-	// (remove) Token: 0x06001D24 RID: 7460 RVA: 0x000600E0 File Offset: 0x0005E2E0
+	// (add) Token: 0x060027ED RID: 10221 RVA: 0x000BC2FC File Offset: 0x000BA4FC
+	// (remove) Token: 0x060027EE RID: 10222 RVA: 0x000BC334 File Offset: 0x000BA534
 	public event EventHandler<EventArgs> PlayerExit;
 
-	// Token: 0x17000CD0 RID: 3280
-	// (get) Token: 0x06001D25 RID: 7461 RVA: 0x00060115 File Offset: 0x0005E315
+	// Token: 0x17001059 RID: 4185
+	// (get) Token: 0x060027EF RID: 10223 RVA: 0x000166FE File Offset: 0x000148FE
 	public bool IsTriggerActive
 	{
 		get
@@ -26,12 +26,12 @@ public class PlayerTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000CD1 RID: 3281
-	// (get) Token: 0x06001D26 RID: 7462 RVA: 0x00060132 File Offset: 0x0005E332
-	// (set) Token: 0x06001D27 RID: 7463 RVA: 0x0006013A File Offset: 0x0005E33A
+	// Token: 0x1700105A RID: 4186
+	// (get) Token: 0x060027F0 RID: 10224 RVA: 0x0001671B File Offset: 0x0001491B
+	// (set) Token: 0x060027F1 RID: 10225 RVA: 0x00016723 File Offset: 0x00014923
 	public bool IsPlayerInTrigger { get; private set; }
 
-	// Token: 0x06001D28 RID: 7464 RVA: 0x00060143 File Offset: 0x0005E343
+	// Token: 0x060027F2 RID: 10226 RVA: 0x0001672C File Offset: 0x0001492C
 	private IEnumerator Start()
 	{
 		if (this.m_requireButtonPress)
@@ -60,13 +60,13 @@ public class PlayerTrigger : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001D29 RID: 7465 RVA: 0x00060152 File Offset: 0x0005E352
+	// Token: 0x060027F3 RID: 10227 RVA: 0x0001673B File Offset: 0x0001493B
 	private void OnEnable()
 	{
 		this.Reset();
 	}
 
-	// Token: 0x06001D2A RID: 7466 RVA: 0x0006015A File Offset: 0x0005E35A
+	// Token: 0x060027F4 RID: 10228 RVA: 0x00016743 File Offset: 0x00014943
 	private void OnDestroy()
 	{
 		if (ReInput.isReady)
@@ -75,7 +75,7 @@ public class PlayerTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001D2B RID: 7467 RVA: 0x00060188 File Offset: 0x0005E388
+	// Token: 0x060027F5 RID: 10229 RVA: 0x000BC36C File Offset: 0x000BA56C
 	public static PlayerTrigger CreateInstance(Vector2 size, Vector2 position, Transform parent = null)
 	{
 		GameObject gameObject = new GameObject("Exit");
@@ -90,7 +90,7 @@ public class PlayerTrigger : MonoBehaviour
 		return playerTrigger;
 	}
 
-	// Token: 0x06001D2C RID: 7468 RVA: 0x00060208 File Offset: 0x0005E408
+	// Token: 0x060027F6 RID: 10230 RVA: 0x000BC3EC File Offset: 0x000BA5EC
 	public void SetTriggerActive(bool isActive)
 	{
 		if (isActive)
@@ -112,7 +112,7 @@ public class PlayerTrigger : MonoBehaviour
 		this.m_collider.enabled = isActive;
 	}
 
-	// Token: 0x06001D2D RID: 7469 RVA: 0x00060270 File Offset: 0x0005E470
+	// Token: 0x060027F7 RID: 10231 RVA: 0x0001676F File Offset: 0x0001496F
 	public void Reset()
 	{
 		this.IsPlayerInTrigger = false;
@@ -122,7 +122,7 @@ public class PlayerTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001D2E RID: 7470 RVA: 0x00060294 File Offset: 0x0005E494
+	// Token: 0x060027F8 RID: 10232 RVA: 0x000BC454 File Offset: 0x000BA654
 	private void OnInteractButtonDown(InputActionEventData inputActionEventData)
 	{
 		if (this.m_requireButtonPress && this.IsPlayerInTrigger && !PlayerManager.GetPlayerController().CharacterCorgi.IsFrozen)
@@ -142,7 +142,7 @@ public class PlayerTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001D2F RID: 7471 RVA: 0x00060309 File Offset: 0x0005E509
+	// Token: 0x060027F9 RID: 10233 RVA: 0x00016792 File Offset: 0x00014992
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.CompareTag("Player") || collision.CompareTag("Player_Dodging"))
@@ -151,7 +151,7 @@ public class PlayerTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001D30 RID: 7472 RVA: 0x0006032C File Offset: 0x0005E52C
+	// Token: 0x060027FA RID: 10234 RVA: 0x000BC4CC File Offset: 0x000BA6CC
 	private void PlayerEnterTrigger()
 	{
 		if (this.m_printDebug)
@@ -173,7 +173,7 @@ public class PlayerTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001D31 RID: 7473 RVA: 0x000603A4 File Offset: 0x0005E5A4
+	// Token: 0x060027FB RID: 10235 RVA: 0x000BC544 File Offset: 0x000BA744
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		if (this.m_printDebug)
@@ -198,18 +198,18 @@ public class PlayerTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001B28 RID: 6952
+	// Token: 0x0400232F RID: 9007
 	[SerializeField]
 	private bool m_requireButtonPress;
 
-	// Token: 0x04001B29 RID: 6953
+	// Token: 0x04002330 RID: 9008
 	[SerializeField]
 	private GameObject m_pressButtonIndicator;
 
-	// Token: 0x04001B2A RID: 6954
+	// Token: 0x04002331 RID: 9009
 	[SerializeField]
 	private bool m_printDebug;
 
-	// Token: 0x04001B2B RID: 6955
+	// Token: 0x04002332 RID: 9010
 	private Collider2D m_collider;
 }

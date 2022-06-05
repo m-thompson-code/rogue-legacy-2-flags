@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200008A RID: 138
+// Token: 0x02000092 RID: 146
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
 public class WanderLogicAttribute : Attribute
 {

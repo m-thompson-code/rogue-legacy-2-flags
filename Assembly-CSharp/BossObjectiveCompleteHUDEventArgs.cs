@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200038A RID: 906
+// Token: 0x02000617 RID: 1559
 public class BossObjectiveCompleteHUDEventArgs : ObjectiveCompleteHUDEventArgs
 {
-	// Token: 0x060021DB RID: 8667 RVA: 0x0006B8DF File Offset: 0x00069ADF
+	// Token: 0x06002FE7 RID: 12263 RVA: 0x0001A3B2 File Offset: 0x000185B2
 	public BossObjectiveCompleteHUDEventArgs(EnemyType enemyType, EnemyRank enemyRank, float displayDuration = 5f, string titleTextOverride = null, string subtitleTextOverride = null, string descriptionTextOverride = null) : base(ObjectiveCompleteHUDType.Boss, displayDuration, null, null, null)
 	{
 		this.Initialize(enemyType, enemyRank, displayDuration, titleTextOverride, subtitleTextOverride, descriptionTextOverride);
 	}
 
-	// Token: 0x060021DC RID: 8668 RVA: 0x0006B8FB File Offset: 0x00069AFB
+	// Token: 0x06002FE8 RID: 12264 RVA: 0x0001A3CE File Offset: 0x000185CE
 	public void Initialize(EnemyType enemyType, EnemyRank enemyRank, float displayDuration = 5f, string titleTextOverride = null, string subtitleTextOverride = null, string descriptionTextOverride = null)
 	{
 		base.Initialize(ObjectiveCompleteHUDType.Boss, displayDuration, titleTextOverride, subtitleTextOverride, descriptionTextOverride);
@@ -17,13 +17,13 @@ public class BossObjectiveCompleteHUDEventArgs : ObjectiveCompleteHUDEventArgs
 		this.EnemyRank = enemyRank;
 	}
 
-	// Token: 0x17000E2E RID: 3630
-	// (get) Token: 0x060021DD RID: 8669 RVA: 0x0006B919 File Offset: 0x00069B19
-	// (set) Token: 0x060021DE RID: 8670 RVA: 0x0006B921 File Offset: 0x00069B21
+	// Token: 0x170012BD RID: 4797
+	// (get) Token: 0x06002FE9 RID: 12265 RVA: 0x0001A3EC File Offset: 0x000185EC
+	// (set) Token: 0x06002FEA RID: 12266 RVA: 0x0001A3F4 File Offset: 0x000185F4
 	public EnemyType EnemyType { get; private set; }
 
-	// Token: 0x17000E2F RID: 3631
-	// (get) Token: 0x060021DF RID: 8671 RVA: 0x0006B92A File Offset: 0x00069B2A
-	// (set) Token: 0x060021E0 RID: 8672 RVA: 0x0006B932 File Offset: 0x00069B32
+	// Token: 0x170012BE RID: 4798
+	// (get) Token: 0x06002FEB RID: 12267 RVA: 0x0001A3FD File Offset: 0x000185FD
+	// (set) Token: 0x06002FEC RID: 12268 RVA: 0x0001A405 File Offset: 0x00018605
 	public EnemyRank EnemyRank { get; private set; }
 }

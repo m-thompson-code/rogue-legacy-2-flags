@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x0200068E RID: 1678
+// Token: 0x02000B16 RID: 2838
 public class ChallengeManager : MonoBehaviour
 {
-	// Token: 0x06003CC8 RID: 15560 RVA: 0x000D21C8 File Offset: 0x000D03C8
+	// Token: 0x0600555A RID: 21850 RVA: 0x0002E563 File Offset: 0x0002C763
 	private void Awake()
 	{
 		this.m_onStartGlobalTimer = new Action<MonoBehaviour, EventArgs>(this.OnStartGlobalTimer);
@@ -15,7 +15,7 @@ public class ChallengeManager : MonoBehaviour
 		this.Initialize();
 	}
 
-	// Token: 0x06003CC9 RID: 15561 RVA: 0x000D2208 File Offset: 0x000D0408
+	// Token: 0x0600555B RID: 21851 RVA: 0x001425EC File Offset: 0x001407EC
 	private void Initialize()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.StartGlobalTimer, this.m_onStartGlobalTimer);
@@ -28,7 +28,7 @@ public class ChallengeManager : MonoBehaviour
 		ChallengeManager.m_isInitialized = true;
 	}
 
-	// Token: 0x06003CCA RID: 15562 RVA: 0x000D2258 File Offset: 0x000D0458
+	// Token: 0x0600555C RID: 21852 RVA: 0x0002E5A1 File Offset: 0x0002C7A1
 	private void OnDestroy()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.StartGlobalTimer, this.m_onStartGlobalTimer);
@@ -36,8 +36,8 @@ public class ChallengeManager : MonoBehaviour
 		ChallengeManager.m_isDisposed = true;
 	}
 
-	// Token: 0x17001527 RID: 5415
-	// (get) Token: 0x06003CCB RID: 15563 RVA: 0x000D227A File Offset: 0x000D047A
+	// Token: 0x17001CF3 RID: 7411
+	// (get) Token: 0x0600555D RID: 21853 RVA: 0x0002E5C3 File Offset: 0x0002C7C3
 	public static ChallengeManager Instance
 	{
 		get
@@ -52,8 +52,8 @@ public class ChallengeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001528 RID: 5416
-	// (get) Token: 0x06003CCC RID: 15564 RVA: 0x000D22A4 File Offset: 0x000D04A4
+	// Token: 0x17001CF4 RID: 7412
+	// (get) Token: 0x0600555E RID: 21854 RVA: 0x0002E5ED File Offset: 0x0002C7ED
 	public static bool IsInitialized
 	{
 		get
@@ -62,8 +62,8 @@ public class ChallengeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001529 RID: 5417
-	// (get) Token: 0x06003CCD RID: 15565 RVA: 0x000D22AB File Offset: 0x000D04AB
+	// Token: 0x17001CF5 RID: 7413
+	// (get) Token: 0x0600555F RID: 21855 RVA: 0x0002E5F4 File Offset: 0x0002C7F4
 	public static bool IsDisposed
 	{
 		get
@@ -72,8 +72,8 @@ public class ChallengeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700152A RID: 5418
-	// (get) Token: 0x06003CCE RID: 15566 RVA: 0x000D22B2 File Offset: 0x000D04B2
+	// Token: 0x17001CF6 RID: 7414
+	// (get) Token: 0x06005560 RID: 21856 RVA: 0x0002E5FB File Offset: 0x0002C7FB
 	public static bool IsInChallenge
 	{
 		get
@@ -82,33 +82,33 @@ public class ChallengeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700152B RID: 5419
-	// (get) Token: 0x06003CCF RID: 15567 RVA: 0x000D22C1 File Offset: 0x000D04C1
-	// (set) Token: 0x06003CD0 RID: 15568 RVA: 0x000D22C8 File Offset: 0x000D04C8
+	// Token: 0x17001CF7 RID: 7415
+	// (get) Token: 0x06005561 RID: 21857 RVA: 0x0002E60A File Offset: 0x0002C80A
+	// (set) Token: 0x06005562 RID: 21858 RVA: 0x0002E611 File Offset: 0x0002C811
 	public static ChallengeObj ActiveChallenge { get; private set; }
 
-	// Token: 0x1700152C RID: 5420
-	// (get) Token: 0x06003CD1 RID: 15569 RVA: 0x000D22D0 File Offset: 0x000D04D0
-	// (set) Token: 0x06003CD2 RID: 15570 RVA: 0x000D22D7 File Offset: 0x000D04D7
+	// Token: 0x17001CF8 RID: 7416
+	// (get) Token: 0x06005563 RID: 21859 RVA: 0x0002E619 File Offset: 0x0002C819
+	// (set) Token: 0x06005564 RID: 21860 RVA: 0x0002E620 File Offset: 0x0002C820
 	public static ChallengeTunnelController ChallengeTunnelController { get; set; }
 
-	// Token: 0x1700152D RID: 5421
-	// (get) Token: 0x06003CD3 RID: 15571 RVA: 0x000D22DF File Offset: 0x000D04DF
-	// (set) Token: 0x06003CD4 RID: 15572 RVA: 0x000D22E6 File Offset: 0x000D04E6
+	// Token: 0x17001CF9 RID: 7417
+	// (get) Token: 0x06005565 RID: 21861 RVA: 0x0002E628 File Offset: 0x0002C828
+	// (set) Token: 0x06005566 RID: 21862 RVA: 0x0002E62F File Offset: 0x0002C82F
 	public static int HitsTaken { get; set; }
 
-	// Token: 0x1700152E RID: 5422
-	// (get) Token: 0x06003CD5 RID: 15573 RVA: 0x000D22EE File Offset: 0x000D04EE
-	// (set) Token: 0x06003CD6 RID: 15574 RVA: 0x000D22F5 File Offset: 0x000D04F5
+	// Token: 0x17001CFA RID: 7418
+	// (get) Token: 0x06005567 RID: 21863 RVA: 0x0002E637 File Offset: 0x0002C837
+	// (set) Token: 0x06005568 RID: 21864 RVA: 0x0002E63E File Offset: 0x0002C83E
 	public static bool NeedsSave { get; set; }
 
-	// Token: 0x06003CD7 RID: 15575 RVA: 0x000D22FD File Offset: 0x000D04FD
+	// Token: 0x06005569 RID: 21865 RVA: 0x0002E646 File Offset: 0x0002C846
 	public static bool DoesChallengeExist(ChallengeType challengeType)
 	{
 		return ChallengeManager.GetChallenge(challengeType) != null;
 	}
 
-	// Token: 0x06003CD8 RID: 15576 RVA: 0x000D2308 File Offset: 0x000D0508
+	// Token: 0x0600556A RID: 21866 RVA: 0x0014263C File Offset: 0x0014083C
 	public static bool CanEnterChallenge(ChallengeType challengeType, bool suppressLogs = true)
 	{
 		if (!ChallengeManager.DoesChallengeExist(challengeType))
@@ -136,7 +136,7 @@ public class ChallengeManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003CD9 RID: 15577 RVA: 0x000D2364 File Offset: 0x000D0564
+	// Token: 0x0600556B RID: 21867 RVA: 0x00142698 File Offset: 0x00140898
 	public static bool CanEquip(ChallengeType challengeType, bool suppressLogs = true)
 	{
 		if (!ChallengeManager.DoesChallengeExist(challengeType))
@@ -177,14 +177,14 @@ public class ChallengeManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003CDA RID: 15578 RVA: 0x000D23EF File Offset: 0x000D05EF
+	// Token: 0x0600556C RID: 21868 RVA: 0x0002E651 File Offset: 0x0002C851
 	public static List<ChallengeType> GetAllChallengesWithFoundState(FoundState foundState)
 	{
 		ChallengeManager.GetAllChallengesWithFoundState(foundState, ChallengeManager.m_challengeTypeListHelper);
 		return ChallengeManager.m_challengeTypeListHelper;
 	}
 
-	// Token: 0x06003CDB RID: 15579 RVA: 0x000D2404 File Offset: 0x000D0604
+	// Token: 0x0600556D RID: 21869 RVA: 0x00142724 File Offset: 0x00140924
 	public static void GetAllChallengesWithFoundState(FoundState foundState, List<ChallengeType> results)
 	{
 		results.Clear();
@@ -198,7 +198,7 @@ public class ChallengeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003CDC RID: 15580 RVA: 0x000D2478 File Offset: 0x000D0678
+	// Token: 0x0600556E RID: 21870 RVA: 0x00142798 File Offset: 0x00140998
 	public static FoundState GetFoundState(ChallengeType challengeType)
 	{
 		ChallengeObj challenge = ChallengeManager.GetChallenge(challengeType);
@@ -218,7 +218,7 @@ public class ChallengeManager : MonoBehaviour
 		return foundState;
 	}
 
-	// Token: 0x06003CDD RID: 15581 RVA: 0x000D24A8 File Offset: 0x000D06A8
+	// Token: 0x0600556F RID: 21871 RVA: 0x001427C8 File Offset: 0x001409C8
 	public static bool SetFoundState(ChallengeType challengeType, FoundState foundState, bool overrideValues, bool runEvents = true)
 	{
 		ChallengeObj challenge = ChallengeManager.GetChallenge(challengeType);
@@ -246,7 +246,7 @@ public class ChallengeManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06003CDE RID: 15582 RVA: 0x000D252C File Offset: 0x000D072C
+	// Token: 0x06005570 RID: 21872 RVA: 0x0014284C File Offset: 0x00140A4C
 	public static int GetUpgradeBlueprintsFound(ChallengeType challengeType, bool ignoreInfinitePurchasePower = false)
 	{
 		ChallengeObj challenge = ChallengeManager.GetChallenge(challengeType);
@@ -257,7 +257,7 @@ public class ChallengeManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003CDF RID: 15583 RVA: 0x000D2558 File Offset: 0x000D0758
+	// Token: 0x06005571 RID: 21873 RVA: 0x00142878 File Offset: 0x00140A78
 	public static bool SetUpgradeBlueprintsFound(ChallengeType challengeType, int level, bool additive, bool runEvents = true)
 	{
 		ChallengeObj challenge = ChallengeManager.GetChallenge(challengeType);
@@ -283,7 +283,7 @@ public class ChallengeManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003CE0 RID: 15584 RVA: 0x000D25C4 File Offset: 0x000D07C4
+	// Token: 0x06005572 RID: 21874 RVA: 0x001428E4 File Offset: 0x00140AE4
 	public static int GetChallengeEquippedLevel(ChallengeType challengeType)
 	{
 		ChallengeObj challenge = ChallengeManager.GetChallenge(challengeType);
@@ -294,7 +294,7 @@ public class ChallengeManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003CE1 RID: 15585 RVA: 0x000D25F0 File Offset: 0x000D07F0
+	// Token: 0x06005573 RID: 21875 RVA: 0x00142910 File Offset: 0x00140B10
 	public static bool SetChallengeEquippedLevel(ChallengeType challengeType, int level, bool additive, bool runEvents = true)
 	{
 		ChallengeObj challenge = ChallengeManager.GetChallenge(challengeType);
@@ -319,13 +319,13 @@ public class ChallengeManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06003CE2 RID: 15586 RVA: 0x000D263A File Offset: 0x000D083A
+	// Token: 0x06005574 RID: 21876 RVA: 0x0002E663 File Offset: 0x0002C863
 	public static ChallengeObj GetChallenge(ChallengeType challengeType)
 	{
 		return SaveManager.ModeSaveData.ChallengeDict[challengeType];
 	}
 
-	// Token: 0x06003CE3 RID: 15587 RVA: 0x000D264C File Offset: 0x000D084C
+	// Token: 0x06005575 RID: 21877 RVA: 0x0014295C File Offset: 0x00140B5C
 	public static int GetTotalTrophiesEarned(bool includeTutorialPurified)
 	{
 		int num = 0;
@@ -339,7 +339,7 @@ public class ChallengeManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003CE4 RID: 15588 RVA: 0x000D268C File Offset: 0x000D088C
+	// Token: 0x06005576 RID: 21878 RVA: 0x0014299C File Offset: 0x00140B9C
 	public static int GetTotalTrophiesEarnedOfRank(ChallengeTrophyRank trophyRank, bool includeTutorialPurified)
 	{
 		int num = 0;
@@ -353,7 +353,7 @@ public class ChallengeManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003CE5 RID: 15589 RVA: 0x000D26D0 File Offset: 0x000D08D0
+	// Token: 0x06005577 RID: 21879 RVA: 0x001429E0 File Offset: 0x00140BE0
 	public static int GetTotalTrophiesEarnedOfRankOrHigher(ChallengeTrophyRank trophyRank, bool includeTutorialPurified)
 	{
 		int num = 0;
@@ -367,7 +367,7 @@ public class ChallengeManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003CE6 RID: 15590 RVA: 0x000D2711 File Offset: 0x000D0911
+	// Token: 0x06005578 RID: 21880 RVA: 0x0002E675 File Offset: 0x0002C875
 	public static void SetActiveChallenge(ChallengeType challengeType)
 	{
 		if (challengeType == ChallengeType.None)
@@ -379,7 +379,7 @@ public class ChallengeManager : MonoBehaviour
 		ChallengeManager.HitsTaken = 0;
 	}
 
-	// Token: 0x06003CE7 RID: 15591 RVA: 0x000D272E File Offset: 0x000D092E
+	// Token: 0x06005579 RID: 21881 RVA: 0x0002E692 File Offset: 0x0002C892
 	public static float GetActiveHandicapMod()
 	{
 		if (ChallengeManager.ActiveChallenge.ChallengeData.ScoringType == ChallengeScoringType.Battle)
@@ -389,7 +389,7 @@ public class ChallengeManager : MonoBehaviour
 		return 0f;
 	}
 
-	// Token: 0x06003CE8 RID: 15592 RVA: 0x000D2763 File Offset: 0x000D0963
+	// Token: 0x0600557A RID: 21882 RVA: 0x0002E6C7 File Offset: 0x0002C8C7
 	public static void ReturnToDriftHouseWithTransition()
 	{
 		if (!SceneLoader_RL.IsRunningTransitionWithLogic)
@@ -401,13 +401,13 @@ public class ChallengeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003CE9 RID: 15593 RVA: 0x000D2792 File Offset: 0x000D0992
+	// Token: 0x0600557B RID: 21883 RVA: 0x0002E6F6 File Offset: 0x0002C8F6
 	public static ClassType GetChallengeClassOverride(ChallengeType challengeType)
 	{
 		return ChallengeManager.GetChallenge(challengeType).ChallengeData.ClassOverride;
 	}
 
-	// Token: 0x06003CEA RID: 15594 RVA: 0x000D27A4 File Offset: 0x000D09A4
+	// Token: 0x0600557C RID: 21884 RVA: 0x00142A24 File Offset: 0x00140C24
 	public static void SetupCharacter()
 	{
 		ChallengeManager.Instance.m_storedCharData = SaveManager.PlayerSaveData.CurrentCharacter.Clone();
@@ -518,7 +518,7 @@ public class ChallengeManager : MonoBehaviour
 		LineageWindowController.CharacterLoadedFromLineage = false;
 	}
 
-	// Token: 0x06003CEB RID: 15595 RVA: 0x000D2E28 File Offset: 0x000D1028
+	// Token: 0x0600557D RID: 21885 RVA: 0x001430A8 File Offset: 0x001412A8
 	public static void RestoreCharacter(bool updateVisuals)
 	{
 		foreach (KeyValuePair<SoulShopType, int> keyValuePair in ChallengeManager.Instance.m_storedSoulShopDict)
@@ -570,7 +570,7 @@ public class ChallengeManager : MonoBehaviour
 		LineageWindowController.CharacterLoadedFromLineage = false;
 	}
 
-	// Token: 0x06003CEC RID: 15596 RVA: 0x000D31A4 File Offset: 0x000D13A4
+	// Token: 0x0600557E RID: 21886 RVA: 0x00143424 File Offset: 0x00141624
 	public static float ApplyStatCap(float actualStat, bool isDexterityOrFocus = false)
 	{
 		float num = (float)ChallengeManager.ActiveChallenge.ChallengeData.BaseHandicap;
@@ -581,7 +581,7 @@ public class ChallengeManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003CED RID: 15597 RVA: 0x000D31D0 File Offset: 0x000D13D0
+	// Token: 0x0600557F RID: 21887 RVA: 0x00143450 File Offset: 0x00141650
 	private void OnStartGlobalTimer(MonoBehaviour sender, EventArgs args)
 	{
 		if (ChallengeManager.IsInChallenge)
@@ -595,7 +595,7 @@ public class ChallengeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003CEE RID: 15598 RVA: 0x000D322D File Offset: 0x000D142D
+	// Token: 0x06005580 RID: 21888 RVA: 0x0002E708 File Offset: 0x0002C908
 	private void OnStopGlobalTimer(MonoBehaviour sender, EventArgs args)
 	{
 		if (ChallengeManager.IsInChallenge)
@@ -605,13 +605,13 @@ public class ChallengeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003CEF RID: 15599 RVA: 0x000D324D File Offset: 0x000D144D
+	// Token: 0x06005581 RID: 21889 RVA: 0x0002E728 File Offset: 0x0002C928
 	private void OnPlayerHitIncreaseTimer(object sender, EventArgs args)
 	{
 		GlobalTimerHUDController.ElapsedTime += 0f;
 	}
 
-	// Token: 0x06003CF0 RID: 15600 RVA: 0x000D3260 File Offset: 0x000D1460
+	// Token: 0x06005582 RID: 21890 RVA: 0x001434B0 File Offset: 0x001416B0
 	public static void UpdateChallengeScore(ChallengeType challengeType, ClassType classType, int newScore, float newTime, bool usingHandicaps)
 	{
 		ChallengeObj challenge = ChallengeManager.GetChallenge(challengeType);
@@ -643,7 +643,7 @@ public class ChallengeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003CF1 RID: 15601 RVA: 0x000D333C File Offset: 0x000D153C
+	// Token: 0x06005583 RID: 21891 RVA: 0x0014358C File Offset: 0x0014178C
 	public static ChallengeTrophyRank GetChallengeTrophyRank(ChallengeType challengeType, bool checkForSisyphusTrophy = true)
 	{
 		ChallengeObj challenge = ChallengeManager.GetChallenge(challengeType);
@@ -717,7 +717,7 @@ public class ChallengeManager : MonoBehaviour
 		return ChallengeTrophyRank.None;
 	}
 
-	// Token: 0x06003CF2 RID: 15602 RVA: 0x000D345C File Offset: 0x000D165C
+	// Token: 0x06005584 RID: 21892 RVA: 0x001436AC File Offset: 0x001418AC
 	public static float CalculateActiveChallengeScore(ChallengeCompleteStatsEntryType statType)
 	{
 		switch (statType)
@@ -741,7 +741,7 @@ public class ChallengeManager : MonoBehaviour
 		return 0f;
 	}
 
-	// Token: 0x06003CF3 RID: 15603 RVA: 0x000D356C File Offset: 0x000D176C
+	// Token: 0x06005585 RID: 21893 RVA: 0x001437BC File Offset: 0x001419BC
 	public static string GetChallengeLetterGrade(ChallengeType challengeType, float score)
 	{
 		int num = ChallengeManager.m_letterGradeArray.Length;
@@ -749,7 +749,7 @@ public class ChallengeManager : MonoBehaviour
 		return ChallengeManager.m_letterGradeArray[num2];
 	}
 
-	// Token: 0x06003CF4 RID: 15604 RVA: 0x000D35A0 File Offset: 0x000D17A0
+	// Token: 0x06005586 RID: 21894 RVA: 0x001437F0 File Offset: 0x001419F0
 	public static int GetChallengeClassHighScore(ChallengeType challengeType, ClassType classType)
 	{
 		int result;
@@ -760,67 +760,67 @@ public class ChallengeManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003CF5 RID: 15605 RVA: 0x000D35C5 File Offset: 0x000D17C5
+	// Token: 0x06005587 RID: 21895 RVA: 0x0002E73A File Offset: 0x0002C93A
 	public static int GetTotalTrophyCount()
 	{
 		return Challenge_EV.CHALLENGE_ORDER.Length;
 	}
 
-	// Token: 0x04002DA4 RID: 11684
+	// Token: 0x04003F6D RID: 16237
 	private static bool m_isDisposed;
 
-	// Token: 0x04002DA5 RID: 11685
+	// Token: 0x04003F6E RID: 16238
 	private static bool m_isInitialized;
 
-	// Token: 0x04002DA6 RID: 11686
+	// Token: 0x04003F6F RID: 16239
 	private CharacterData m_storedCharData;
 
-	// Token: 0x04002DA7 RID: 11687
+	// Token: 0x04003F70 RID: 16240
 	private Dictionary<RelicType, int> m_storedRelicDict = new Dictionary<RelicType, int>();
 
-	// Token: 0x04002DA8 RID: 11688
+	// Token: 0x04003F71 RID: 16241
 	private Dictionary<RuneType, int> m_storedRuneDict = new Dictionary<RuneType, int>();
 
-	// Token: 0x04002DA9 RID: 11689
+	// Token: 0x04003F72 RID: 16242
 	private Dictionary<ClassType, int> m_storedMasteryXPTable = new Dictionary<ClassType, int>();
 
-	// Token: 0x04002DAA RID: 11690
+	// Token: 0x04003F73 RID: 16243
 	private Dictionary<SkillTreeType, int> m_storedSkillTreeDict = new Dictionary<SkillTreeType, int>();
 
-	// Token: 0x04002DAB RID: 11691
+	// Token: 0x04003F74 RID: 16244
 	private Dictionary<BurdenType, int> m_storedBurdenDict = new Dictionary<BurdenType, int>();
 
-	// Token: 0x04002DAC RID: 11692
+	// Token: 0x04003F75 RID: 16245
 	private Dictionary<SoulShopType, int> m_storedSoulShopDict = new Dictionary<SoulShopType, int>();
 
-	// Token: 0x04002DAD RID: 11693
+	// Token: 0x04003F76 RID: 16246
 	private Dictionary<HeirloomType, int> m_storedHeirloomLevelDict = new Dictionary<HeirloomType, int>();
 
-	// Token: 0x04002DAE RID: 11694
+	// Token: 0x04003F77 RID: 16247
 	private float m_storedTemporaryMaxHealthMods;
 
-	// Token: 0x04002DAF RID: 11695
+	// Token: 0x04003F78 RID: 16248
 	private int m_storedNGPlusLevel;
 
-	// Token: 0x04002DB0 RID: 11696
+	// Token: 0x04003F79 RID: 16249
 	private TraitChangedEventArgs m_traitChangedArgs;
 
-	// Token: 0x04002DB1 RID: 11697
+	// Token: 0x04003F7A RID: 16250
 	private Action<MonoBehaviour, EventArgs> m_onStartGlobalTimer;
 
-	// Token: 0x04002DB2 RID: 11698
+	// Token: 0x04003F7B RID: 16251
 	private Action<MonoBehaviour, EventArgs> m_onStopGlobalTimer;
 
-	// Token: 0x04002DB3 RID: 11699
+	// Token: 0x04003F7C RID: 16252
 	private Action<MonoBehaviour, EventArgs> m_onPlayerHitIncreaseTimer;
 
-	// Token: 0x04002DB4 RID: 11700
+	// Token: 0x04003F7D RID: 16253
 	private static ChallengeManager m_challengeManager = null;
 
-	// Token: 0x04002DB9 RID: 11705
+	// Token: 0x04003F82 RID: 16258
 	private static List<ChallengeType> m_challengeTypeListHelper = new List<ChallengeType>();
 
-	// Token: 0x04002DBA RID: 11706
+	// Token: 0x04003F83 RID: 16259
 	private static readonly string[] m_letterGradeArray = new string[]
 	{
 		"C+",

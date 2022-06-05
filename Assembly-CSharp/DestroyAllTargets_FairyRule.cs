@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000430 RID: 1072
+// Token: 0x020006F7 RID: 1783
 public class DestroyAllTargets_FairyRule : KillAllEnemies_FairyRule
 {
-	// Token: 0x17000F94 RID: 3988
-	// (get) Token: 0x06002768 RID: 10088 RVA: 0x000831F5 File Offset: 0x000813F5
+	// Token: 0x17001475 RID: 5237
+	// (get) Token: 0x06003671 RID: 13937 RVA: 0x0001DF28 File Offset: 0x0001C128
 	public override string Description
 	{
 		get
@@ -13,8 +13,8 @@ public class DestroyAllTargets_FairyRule : KillAllEnemies_FairyRule
 		}
 	}
 
-	// Token: 0x17000F95 RID: 3989
-	// (get) Token: 0x06002769 RID: 10089 RVA: 0x0008321B File Offset: 0x0008141B
+	// Token: 0x17001476 RID: 5238
+	// (get) Token: 0x06003672 RID: 13938 RVA: 0x00006CB3 File Offset: 0x00004EB3
 	public override FairyRuleID ID
 	{
 		get

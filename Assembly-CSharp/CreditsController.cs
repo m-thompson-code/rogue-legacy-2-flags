@@ -6,10 +6,10 @@ using RL_Windows;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020001DE RID: 478
+// Token: 0x02000365 RID: 869
 public class CreditsController : MonoBehaviour
 {
-	// Token: 0x060013C1 RID: 5057 RVA: 0x0003BF80 File Offset: 0x0003A180
+	// Token: 0x06001C72 RID: 7282 RVA: 0x000990C0 File Offset: 0x000972C0
 	private void Awake()
 	{
 		this.m_toggleSpeedUp = new Action<InputActionEventData>(this.ToggleSpeedUp);
@@ -30,7 +30,7 @@ public class CreditsController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060013C2 RID: 5058 RVA: 0x0003C080 File Offset: 0x0003A280
+	// Token: 0x06001C73 RID: 7283 RVA: 0x000991C0 File Offset: 0x000973C0
 	private void OnEnable()
 	{
 		AnimBehaviourEventEmitter.DisableEmitter_STATIC = true;
@@ -46,7 +46,7 @@ public class CreditsController : MonoBehaviour
 		base.StartCoroutine(this.CreditRoll());
 	}
 
-	// Token: 0x060013C3 RID: 5059 RVA: 0x0003C140 File Offset: 0x0003A340
+	// Token: 0x06001C74 RID: 7284 RVA: 0x00099280 File Offset: 0x00097480
 	private void OnDisable()
 	{
 		AnimBehaviourEventEmitter.DisableEmitter_STATIC = false;
@@ -60,7 +60,7 @@ public class CreditsController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060013C4 RID: 5060 RVA: 0x0003C1BC File Offset: 0x0003A3BC
+	// Token: 0x06001C75 RID: 7285 RVA: 0x0000EB6B File Offset: 0x0000CD6B
 	private IEnumerator Start()
 	{
 		yield return new WaitForSeconds(0.2f);
@@ -69,7 +69,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013C5 RID: 5061 RVA: 0x0003C1C4 File Offset: 0x0003A3C4
+	// Token: 0x06001C76 RID: 7286 RVA: 0x000992FC File Offset: 0x000974FC
 	private void ToggleSpeedUp(InputActionEventData eventData)
 	{
 		if (this.m_confirmMenuActive)
@@ -89,7 +89,7 @@ public class CreditsController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060013C6 RID: 5062 RVA: 0x0003C21A File Offset: 0x0003A41A
+	// Token: 0x06001C77 RID: 7287 RVA: 0x0000EB73 File Offset: 0x0000CD73
 	private void LoadNextScene(InputActionEventData eventData)
 	{
 		if (this.m_confirmMenuActive)
@@ -108,7 +108,7 @@ public class CreditsController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060013C7 RID: 5063 RVA: 0x0003C24A File Offset: 0x0003A44A
+	// Token: 0x06001C78 RID: 7288 RVA: 0x0000EBA3 File Offset: 0x0000CDA3
 	private IEnumerator CreditRoll()
 	{
 		this.m_confirmMenuDelay = Time.time + 2.5f;
@@ -132,7 +132,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013C8 RID: 5064 RVA: 0x0003C25C File Offset: 0x0003A45C
+	// Token: 0x06001C79 RID: 7289 RVA: 0x00099354 File Offset: 0x00097554
 	private void OnCancelPressed(InputActionEventData obj)
 	{
 		if (Time.time < this.m_confirmMenuDelay)
@@ -161,7 +161,7 @@ public class CreditsController : MonoBehaviour
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x060013C9 RID: 5065 RVA: 0x0003C328 File Offset: 0x0003A528
+	// Token: 0x06001C7A RID: 7290 RVA: 0x00099420 File Offset: 0x00097620
 	private void ConfirmSkipCredits()
 	{
 		base.StopAllCoroutines();
@@ -171,7 +171,7 @@ public class CreditsController : MonoBehaviour
 		this.LoadNextScene(default(InputActionEventData));
 	}
 
-	// Token: 0x060013CA RID: 5066 RVA: 0x0003C360 File Offset: 0x0003A560
+	// Token: 0x06001C7B RID: 7291 RVA: 0x0000EBB2 File Offset: 0x0000CDB2
 	private void CancelConfirmMenuSelection()
 	{
 		this.m_confirmMenuActive = false;
@@ -180,7 +180,7 @@ public class CreditsController : MonoBehaviour
 		RewiredMapController.SetMapEnabled(GameInputMode.Window, true);
 	}
 
-	// Token: 0x060013CB RID: 5067 RVA: 0x0003C380 File Offset: 0x0003A580
+	// Token: 0x06001C7C RID: 7292 RVA: 0x00099458 File Offset: 0x00097658
 	private void InitializeLook(ClassType classType, bool useLeft)
 	{
 		CharacterData characterData = useLeft ? this.m_leftCharData : this.m_rightCharData;
@@ -191,7 +191,7 @@ public class CreditsController : MonoBehaviour
 		LookCreator.DisableAllWeaponGeo(lookObj);
 	}
 
-	// Token: 0x060013CC RID: 5068 RVA: 0x0003C3D2 File Offset: 0x0003A5D2
+	// Token: 0x06001C7D RID: 7293 RVA: 0x0000EBD2 File Offset: 0x0000CDD2
 	private IEnumerator PlayAnimation(Animator animator, int layerIndex, params string[] states)
 	{
 		foreach (string stateName in states)
@@ -207,7 +207,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013CD RID: 5069 RVA: 0x0003C3EF File Offset: 0x0003A5EF
+	// Token: 0x06001C7E RID: 7294 RVA: 0x0000EBEF File Offset: 0x0000CDEF
 	private IEnumerator StartPlayerAnimations()
 	{
 		CDGHelper.Shuffle<int>(this.m_animArray);
@@ -269,7 +269,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013CE RID: 5070 RVA: 0x0003C3FE File Offset: 0x0003A5FE
+	// Token: 0x06001C7F RID: 7295 RVA: 0x0000EBFE File Offset: 0x0000CDFE
 	private IEnumerator BowAnimation()
 	{
 		this.InitializeLook(ClassType.SwordClass, true);
@@ -302,7 +302,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013CF RID: 5071 RVA: 0x0003C40D File Offset: 0x0003A60D
+	// Token: 0x06001C80 RID: 7296 RVA: 0x0000EC0D File Offset: 0x0000CE0D
 	private IEnumerator TwirlAnimation()
 	{
 		this.InitializeLook(ClassType.LuteClass, false);
@@ -343,7 +343,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013D0 RID: 5072 RVA: 0x0003C41C File Offset: 0x0003A61C
+	// Token: 0x06001C81 RID: 7297 RVA: 0x0000EC1C File Offset: 0x0000CE1C
 	private IEnumerator TwirlUpAnimation()
 	{
 		this.InitializeLook(ClassType.LuteClass, false);
@@ -380,7 +380,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013D1 RID: 5073 RVA: 0x0003C42B File Offset: 0x0003A62B
+	// Token: 0x06001C82 RID: 7298 RVA: 0x0000EC2B File Offset: 0x0000CE2B
 	private IEnumerator FireballAnimation()
 	{
 		this.m_leftPlayer.transform.position = this.m_leftPlayerStartingPos;
@@ -453,7 +453,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013D2 RID: 5074 RVA: 0x0003C43A File Offset: 0x0003A63A
+	// Token: 0x06001C83 RID: 7299 RVA: 0x0000EC3A File Offset: 0x0000CE3A
 	private IEnumerator RandomDeathAnimation()
 	{
 		this.InitializeLook(ClassType.AxeClass, false);
@@ -486,7 +486,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013D3 RID: 5075 RVA: 0x0003C449 File Offset: 0x0003A649
+	// Token: 0x06001C84 RID: 7300 RVA: 0x0000EC49 File Offset: 0x0000CE49
 	private IEnumerator RetireAnimation()
 	{
 		this.InitializeLook(ClassType.AxeClass, false);
@@ -520,7 +520,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013D4 RID: 5076 RVA: 0x0003C458 File Offset: 0x0003A658
+	// Token: 0x06001C85 RID: 7301 RVA: 0x0000EC58 File Offset: 0x0000CE58
 	private IEnumerator LookDistanceAnimation()
 	{
 		this.m_leftPlayer.transform.position = this.m_leftPlayerStartingPos;
@@ -553,7 +553,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013D5 RID: 5077 RVA: 0x0003C467 File Offset: 0x0003A667
+	// Token: 0x06001C86 RID: 7302 RVA: 0x0000EC67 File Offset: 0x0000CE67
 	private IEnumerator KickDownAnimation()
 	{
 		this.m_rightPlayer.transform.position = new Vector3(-10000f, 0f, this.m_rightPlayerStartingPos.z);
@@ -587,7 +587,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013D6 RID: 5078 RVA: 0x0003C476 File Offset: 0x0003A676
+	// Token: 0x06001C87 RID: 7303 RVA: 0x0000EC76 File Offset: 0x0000CE76
 	private IEnumerator BowFartAnimation()
 	{
 		this.InitializeLook(ClassType.SwordClass, true);
@@ -636,7 +636,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013D7 RID: 5079 RVA: 0x0003C485 File Offset: 0x0003A685
+	// Token: 0x06001C88 RID: 7304 RVA: 0x0000EC85 File Offset: 0x0000CE85
 	private IEnumerator BoxingAnimation()
 	{
 		this.m_leftPlayer.transform.position = this.m_leftPlayerStartingPos;
@@ -710,7 +710,7 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060013D8 RID: 5080 RVA: 0x0003C494 File Offset: 0x0003A694
+	// Token: 0x06001C89 RID: 7305 RVA: 0x0000EC94 File Offset: 0x0000CE94
 	private IEnumerator EatPizza()
 	{
 		this.m_rightPlayer.gameObject.SetActive(false);
@@ -745,92 +745,92 @@ public class CreditsController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04001396 RID: 5014
+	// Token: 0x040019F2 RID: 6642
 	public static bool IsEndingScroll;
 
-	// Token: 0x04001397 RID: 5015
+	// Token: 0x040019F3 RID: 6643
 	private const float SCROLL_SPEED = 150f;
 
-	// Token: 0x04001398 RID: 5016
+	// Token: 0x040019F4 RID: 6644
 	[SerializeField]
 	private RectTransform m_creditsPanel;
 
-	// Token: 0x04001399 RID: 5017
+	// Token: 0x040019F5 RID: 6645
 	[SerializeField]
 	private GameObject m_finalLogo;
 
-	// Token: 0x0400139A RID: 5018
+	// Token: 0x040019F6 RID: 6646
 	[SerializeField]
 	private GameObject m_centrePoint;
 
-	// Token: 0x0400139B RID: 5019
+	// Token: 0x040019F7 RID: 6647
 	[SerializeField]
 	private GameObject m_fastForwardObj;
 
-	// Token: 0x0400139C RID: 5020
+	// Token: 0x040019F8 RID: 6648
 	[SerializeField]
 	private Canvas m_canvas;
 
-	// Token: 0x0400139D RID: 5021
+	// Token: 0x040019F9 RID: 6649
 	[Header("Animations")]
 	[SerializeField]
 	private PlayerLookController m_leftPlayer;
 
-	// Token: 0x0400139E RID: 5022
+	// Token: 0x040019FA RID: 6650
 	[SerializeField]
 	private PlayerLookController m_rightPlayer;
 
-	// Token: 0x0400139F RID: 5023
+	// Token: 0x040019FB RID: 6651
 	[SerializeField]
 	private Animator m_pizzaGirl;
 
-	// Token: 0x040013A0 RID: 5024
+	// Token: 0x040019FC RID: 6652
 	[SerializeField]
 	private CanvasGroup m_leftOverlay;
 
-	// Token: 0x040013A1 RID: 5025
+	// Token: 0x040019FD RID: 6653
 	[SerializeField]
 	private CanvasGroup m_rightOverlay;
 
-	// Token: 0x040013A2 RID: 5026
+	// Token: 0x040019FE RID: 6654
 	private Action<InputActionEventData> m_toggleSpeedUp;
 
-	// Token: 0x040013A3 RID: 5027
+	// Token: 0x040019FF RID: 6655
 	private Action<InputActionEventData> m_loadNextScene;
 
-	// Token: 0x040013A4 RID: 5028
+	// Token: 0x04001A00 RID: 6656
 	private Action<InputActionEventData> m_onCancelPressed;
 
-	// Token: 0x040013A5 RID: 5029
+	// Token: 0x04001A01 RID: 6657
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x040013A6 RID: 5030
+	// Token: 0x04001A02 RID: 6658
 	private Action m_confirmSkipCredits;
 
-	// Token: 0x040013A7 RID: 5031
+	// Token: 0x04001A03 RID: 6659
 	private Vector3 m_leftPlayerStartingPos;
 
-	// Token: 0x040013A8 RID: 5032
+	// Token: 0x04001A04 RID: 6660
 	private Vector3 m_rightPlayerStartingPos;
 
-	// Token: 0x040013A9 RID: 5033
+	// Token: 0x04001A05 RID: 6661
 	private CharacterData m_leftCharData;
 
-	// Token: 0x040013AA RID: 5034
+	// Token: 0x04001A06 RID: 6662
 	private CharacterData m_rightCharData;
 
-	// Token: 0x040013AB RID: 5035
+	// Token: 0x04001A07 RID: 6663
 	private bool m_scrollingComplete;
 
-	// Token: 0x040013AC RID: 5036
+	// Token: 0x04001A08 RID: 6664
 	private int[] m_animArray;
 
-	// Token: 0x040013AD RID: 5037
+	// Token: 0x04001A09 RID: 6665
 	private int m_animIndex;
 
-	// Token: 0x040013AE RID: 5038
+	// Token: 0x04001A0A RID: 6666
 	private bool m_confirmMenuActive;
 
-	// Token: 0x040013AF RID: 5039
+	// Token: 0x04001A0B RID: 6667
 	private float m_confirmMenuDelay;
 }

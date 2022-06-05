@@ -1,31 +1,31 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200024E RID: 590
+// Token: 0x0200040B RID: 1035
 [Serializable]
 public class SkyPaletteEntry
 {
-	// Token: 0x040016EB RID: 5867
+	// Token: 0x04001E03 RID: 7683
 	public SkyPaletteType SkyPaletteType;
 
-	// Token: 0x040016EC RID: 5868
+	// Token: 0x04001E04 RID: 7684
 	public Color SkyColor;
 
-	// Token: 0x040016ED RID: 5869
+	// Token: 0x04001E05 RID: 7685
 	public Color HorizonColor;
 
-	// Token: 0x040016EE RID: 5870
+	// Token: 0x04001E06 RID: 7686
 	public Color CloudMainColor;
 
-	// Token: 0x040016EF RID: 5871
+	// Token: 0x04001E07 RID: 7687
 	public Color CloudHighlightColor;
 
-	// Token: 0x040016F0 RID: 5872
+	// Token: 0x04001E08 RID: 7688
 	public Color StarColor;
 
-	// Token: 0x040016F1 RID: 5873
+	// Token: 0x04001E09 RID: 7689
 	public Color GodRayColor;
 
-	// Token: 0x040016F2 RID: 5874
+	// Token: 0x04001E0A RID: 7690
 	public Color SkyLightColor;
 }

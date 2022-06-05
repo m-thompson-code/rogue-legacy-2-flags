@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000252 RID: 594
+// Token: 0x0200040F RID: 1039
 [CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Special Platform Library")]
 public class SpecialPlatformLibrary : ScriptableObject
 {
-	// Token: 0x17000B62 RID: 2914
-	// (get) Token: 0x06001777 RID: 6007 RVA: 0x00049154 File Offset: 0x00047354
+	// Token: 0x17000E8F RID: 3727
+	// (get) Token: 0x0600212A RID: 8490 RVA: 0x000A6A40 File Offset: 0x000A4C40
 	private static SpecialPlatformLibrary Instance
 	{
 		get
@@ -30,9 +30,9 @@ public class SpecialPlatformLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B63 RID: 2915
-	// (get) Token: 0x06001778 RID: 6008 RVA: 0x000491B4 File Offset: 0x000473B4
-	// (set) Token: 0x06001779 RID: 6009 RVA: 0x000491C0 File Offset: 0x000473C0
+	// Token: 0x17000E90 RID: 3728
+	// (get) Token: 0x0600212B RID: 8491 RVA: 0x00011A5C File Offset: 0x0000FC5C
+	// (set) Token: 0x0600212C RID: 8492 RVA: 0x00011A68 File Offset: 0x0000FC68
 	public static BiomeSpecialPlatformEntry[] SpecialPlatformsInBiomes
 	{
 		get
@@ -48,9 +48,9 @@ public class SpecialPlatformLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000B64 RID: 2916
-	// (get) Token: 0x0600177A RID: 6010 RVA: 0x000491D4 File Offset: 0x000473D4
-	// (set) Token: 0x0600177B RID: 6011 RVA: 0x000491E0 File Offset: 0x000473E0
+	// Token: 0x17000E91 RID: 3729
+	// (get) Token: 0x0600212D RID: 8493 RVA: 0x00011A7C File Offset: 0x0000FC7C
+	// (set) Token: 0x0600212E RID: 8494 RVA: 0x00011A88 File Offset: 0x0000FC88
 	public static SpecialPlatformType[] DefaultSpecialPlatformsInBiomes
 	{
 		get
@@ -66,7 +66,7 @@ public class SpecialPlatformLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x0600177C RID: 6012 RVA: 0x000491F4 File Offset: 0x000473F4
+	// Token: 0x0600212F RID: 8495 RVA: 0x000A6AA0 File Offset: 0x000A4CA0
 	private static void CreateEntryTable()
 	{
 		SpecialPlatformLibrary.m_entryTable = new Dictionary<SpecialPlatformType, SpecialPlatformLibrary.SpecialPlatformEntry>();
@@ -76,7 +76,7 @@ public class SpecialPlatformLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x0600177D RID: 6013 RVA: 0x0004923C File Offset: 0x0004743C
+	// Token: 0x06002130 RID: 8496 RVA: 0x000A6AE8 File Offset: 0x000A4CE8
 	public static SpecialPlatform CreatePlatformInstance(SpecialPlatformType type, bool isActive = true)
 	{
 		if (SpecialPlatformLibrary.m_entryTable == null)
@@ -97,7 +97,7 @@ public class SpecialPlatformLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x0600177E RID: 6014 RVA: 0x000492A8 File Offset: 0x000474A8
+	// Token: 0x06002131 RID: 8497 RVA: 0x000A6B54 File Offset: 0x000A4D54
 	public static SpecialPlatformType[] GetPlatformTypesInBiome(BiomeType biome)
 	{
 		if (SpecialPlatformLibrary.m_specialPlatformsInBiomeTable == null)
@@ -112,7 +112,7 @@ public class SpecialPlatformLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x0600177F RID: 6015 RVA: 0x000492E4 File Offset: 0x000474E4
+	// Token: 0x06002132 RID: 8498 RVA: 0x000A6B90 File Offset: 0x000A4D90
 	private static void InitialiseSpecialPlatformTable()
 	{
 		SpecialPlatformLibrary.m_specialPlatformsInBiomeTable = new Dictionary<BiomeType, SpecialPlatformType[]>();
@@ -122,41 +122,41 @@ public class SpecialPlatformLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x04001708 RID: 5896
+	// Token: 0x04001E20 RID: 7712
 	[SerializeField]
 	private SpecialPlatformLibrary.SpecialPlatformEntry[] m_entries;
 
-	// Token: 0x04001709 RID: 5897
+	// Token: 0x04001E21 RID: 7713
 	[SerializeField]
 	private BiomeSpecialPlatformEntry[] m_specialPlatformsInBiomes;
 
-	// Token: 0x0400170A RID: 5898
+	// Token: 0x04001E22 RID: 7714
 	[SerializeField]
 	private SpecialPlatformType[] m_defaultSpecialPlatformsInBiomes;
 
-	// Token: 0x0400170B RID: 5899
+	// Token: 0x04001E23 RID: 7715
 	private const string RESOURCES_PATH = "Scriptable Objects/Libraries/SpecialPlatformLibrary";
 
-	// Token: 0x0400170C RID: 5900
+	// Token: 0x04001E24 RID: 7716
 	private const string EDITOR_PATH = "Assets/Content/Scriptable Objects/Libraries/SpecialPlatformLibrary.asset";
 
-	// Token: 0x0400170D RID: 5901
+	// Token: 0x04001E25 RID: 7717
 	private static Dictionary<SpecialPlatformType, SpecialPlatformLibrary.SpecialPlatformEntry> m_entryTable;
 
-	// Token: 0x0400170E RID: 5902
+	// Token: 0x04001E26 RID: 7718
 	private static SpecialPlatformLibrary m_instance;
 
-	// Token: 0x0400170F RID: 5903
+	// Token: 0x04001E27 RID: 7719
 	private static Dictionary<BiomeType, SpecialPlatformType[]> m_specialPlatformsInBiomeTable;
 
-	// Token: 0x02000B36 RID: 2870
+	// Token: 0x02000410 RID: 1040
 	[Serializable]
 	private class SpecialPlatformEntry
 	{
-		// Token: 0x04004BAD RID: 19373
+		// Token: 0x04001E28 RID: 7720
 		public SpecialPlatformType Type;
 
-		// Token: 0x04004BAE RID: 19374
+		// Token: 0x04001E29 RID: 7721
 		public SpecialPlatform Prefab;
 	}
 }

@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020007F9 RID: 2041
+// Token: 0x02000CBF RID: 3263
 public class FPSCounter_RL : MonoBehaviour
 {
-	// Token: 0x170016EC RID: 5868
-	// (get) Token: 0x060043CA RID: 17354 RVA: 0x000ED9AF File Offset: 0x000EBBAF
+	// Token: 0x17001EEA RID: 7914
+	// (get) Token: 0x06005D53 RID: 23891 RVA: 0x000335B9 File Offset: 0x000317B9
 	private bool IsEnabled
 	{
 		get
@@ -15,13 +15,13 @@ public class FPSCounter_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060043CB RID: 17355 RVA: 0x000ED9BC File Offset: 0x000EBBBC
+	// Token: 0x06005D54 RID: 23892 RVA: 0x000335C6 File Offset: 0x000317C6
 	private void Awake()
 	{
 		this.m_onToggleFPSCounter = new Action<MonoBehaviour, EventArgs>(this.OnToggleFPSCounter);
 	}
 
-	// Token: 0x060043CC RID: 17356 RVA: 0x000ED9D0 File Offset: 0x000EBBD0
+	// Token: 0x06005D55 RID: 23893 RVA: 0x000335DA File Offset: 0x000317DA
 	protected virtual void Start()
 	{
 		this.m_panel.SetActive(false);
@@ -29,13 +29,13 @@ public class FPSCounter_RL : MonoBehaviour
 		Messenger<DebugMessenger, DebugEvent>.AddListener(DebugEvent.ToggleFPSCounter, this.m_onToggleFPSCounter);
 	}
 
-	// Token: 0x060043CD RID: 17357 RVA: 0x000ED9F7 File Offset: 0x000EBBF7
+	// Token: 0x06005D56 RID: 23894 RVA: 0x00033601 File Offset: 0x00031801
 	private void OnDestroy()
 	{
 		Messenger<DebugMessenger, DebugEvent>.RemoveListener(DebugEvent.ToggleFPSCounter, this.m_onToggleFPSCounter);
 	}
 
-	// Token: 0x060043CE RID: 17358 RVA: 0x000EDA08 File Offset: 0x000EBC08
+	// Token: 0x06005D57 RID: 23895 RVA: 0x0015B82C File Offset: 0x00159A2C
 	private void OnToggleFPSCounter(MonoBehaviour arg1, EventArgs arg2)
 	{
 		this.m_panel.SetActive(!this.m_panel.activeInHierarchy);
@@ -59,7 +59,7 @@ public class FPSCounter_RL : MonoBehaviour
 		}));
 	}
 
-	// Token: 0x060043CF RID: 17359 RVA: 0x000EDAB4 File Offset: 0x000EBCB4
+	// Token: 0x06005D58 RID: 23896 RVA: 0x0015B8D8 File Offset: 0x00159AD8
 	protected virtual void Update()
 	{
 		if (!this.IsEnabled)
@@ -82,37 +82,37 @@ public class FPSCounter_RL : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040039F5 RID: 14837
+	// Token: 0x04004CBA RID: 19642
 	[SerializeField]
 	private GameObject m_panel;
 
-	// Token: 0x040039F6 RID: 14838
+	// Token: 0x04004CBB RID: 19643
 	[SerializeField]
 	private TMP_Text _text;
 
-	// Token: 0x040039F7 RID: 14839
+	// Token: 0x04004CBC RID: 19644
 	[SerializeField]
 	private float m_updateInterval = 0.3f;
 
-	// Token: 0x040039F8 RID: 14840
+	// Token: 0x04004CBD RID: 19645
 	private int m_storedVSyncCount;
 
-	// Token: 0x040039F9 RID: 14841
+	// Token: 0x04004CBE RID: 19646
 	protected float _framesAccumulated;
 
-	// Token: 0x040039FA RID: 14842
+	// Token: 0x04004CBF RID: 19647
 	protected float _framesDrawnInTheInterval;
 
-	// Token: 0x040039FB RID: 14843
+	// Token: 0x04004CC0 RID: 19648
 	protected float _timeLeft;
 
-	// Token: 0x040039FC RID: 14844
+	// Token: 0x04004CC1 RID: 19649
 	protected int _currentFPS;
 
-	// Token: 0x040039FD RID: 14845
+	// Token: 0x04004CC2 RID: 19650
 	private Action<MonoBehaviour, EventArgs> m_onToggleFPSCounter;
 
-	// Token: 0x040039FE RID: 14846
+	// Token: 0x04004CC3 RID: 19651
 	private static string[] _stringsFrom00To300 = new string[]
 	{
 		"00",

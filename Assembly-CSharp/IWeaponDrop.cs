@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020005DB RID: 1499
+// Token: 0x020009E3 RID: 2531
 public interface IWeaponDrop : ISpecialItemDrop
 {
-	// Token: 0x17001361 RID: 4961
-	// (get) Token: 0x060036A8 RID: 13992
+	// Token: 0x17001A8E RID: 6798
+	// (get) Token: 0x06004CBA RID: 19642
 	AbilityType WeaponType { get; }
 }

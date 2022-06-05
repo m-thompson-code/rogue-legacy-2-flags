@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006C5 RID: 1733
+// Token: 0x02000B70 RID: 2928
 [Serializable]
 public class BodyWeightObject : ILookWeight
 {
-	// Token: 0x170015BC RID: 5564
-	// (get) Token: 0x06003FAA RID: 16298 RVA: 0x000E24FB File Offset: 0x000E06FB
+	// Token: 0x17001DB4 RID: 7604
+	// (get) Token: 0x060058E1 RID: 22753 RVA: 0x0003059A File Offset: 0x0002E79A
 	public BodyTypeWeightParam BodyTypeWeightParam
 	{
 		get
@@ -15,8 +15,8 @@ public class BodyWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x170015BD RID: 5565
-	// (get) Token: 0x06003FAB RID: 16299 RVA: 0x000E2503 File Offset: 0x000E0703
+	// Token: 0x17001DB5 RID: 7605
+	// (get) Token: 0x060058E2 RID: 22754 RVA: 0x000305A2 File Offset: 0x0002E7A2
 	public int BlendShapeWeight
 	{
 		get
@@ -25,8 +25,8 @@ public class BodyWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x170015BE RID: 5566
-	// (get) Token: 0x06003FAC RID: 16300 RVA: 0x000E250B File Offset: 0x000E070B
+	// Token: 0x17001DB6 RID: 7606
+	// (get) Token: 0x060058E3 RID: 22755 RVA: 0x000305AA File Offset: 0x0002E7AA
 	public float MaleWeight
 	{
 		get
@@ -35,8 +35,8 @@ public class BodyWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x170015BF RID: 5567
-	// (get) Token: 0x06003FAD RID: 16301 RVA: 0x000E2513 File Offset: 0x000E0713
+	// Token: 0x17001DB7 RID: 7607
+	// (get) Token: 0x060058E4 RID: 22756 RVA: 0x000305B2 File Offset: 0x0002E7B2
 	public float FemaleWeight
 	{
 		get
@@ -45,8 +45,8 @@ public class BodyWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x170015C0 RID: 5568
-	// (get) Token: 0x06003FAE RID: 16302 RVA: 0x000E251B File Offset: 0x000E071B
+	// Token: 0x17001DB8 RID: 7608
+	// (get) Token: 0x060058E5 RID: 22757 RVA: 0x000305BA File Offset: 0x0002E7BA
 	public string[] Tags
 	{
 		get
@@ -55,8 +55,8 @@ public class BodyWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x170015C1 RID: 5569
-	// (get) Token: 0x06003FAF RID: 16303 RVA: 0x000E2523 File Offset: 0x000E0723
+	// Token: 0x17001DB9 RID: 7609
+	// (get) Token: 0x060058E6 RID: 22758 RVA: 0x000305C2 File Offset: 0x0002E7C2
 	public bool ExcludeFromWeighing
 	{
 		get
@@ -65,27 +65,27 @@ public class BodyWeightObject : ILookWeight
 		}
 	}
 
-	// Token: 0x04002F5D RID: 12125
+	// Token: 0x040041AC RID: 16812
 	[SerializeField]
 	private BodyTypeWeightParam m_bodyTypeWeightParam = BodyTypeWeightParam.None;
 
-	// Token: 0x04002F5E RID: 12126
+	// Token: 0x040041AD RID: 16813
 	[SerializeField]
 	private int m_blendShapeWeight = 100;
 
-	// Token: 0x04002F5F RID: 12127
+	// Token: 0x040041AE RID: 16814
 	[SerializeField]
 	private bool m_excludeFromWeighing;
 
-	// Token: 0x04002F60 RID: 12128
+	// Token: 0x040041AF RID: 16815
 	[SerializeField]
 	private float m_maleWeight = 1f;
 
-	// Token: 0x04002F61 RID: 12129
+	// Token: 0x040041B0 RID: 16816
 	[SerializeField]
 	private float m_femaleWeight = 1f;
 
-	// Token: 0x04002F62 RID: 12130
+	// Token: 0x040041B1 RID: 16817
 	[SerializeField]
 	private string[] m_tags;
 }

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000301 RID: 769
+// Token: 0x02000524 RID: 1316
 public class EnemyFreeHitStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D45 RID: 3397
-	// (get) Token: 0x06001E94 RID: 7828 RVA: 0x000630D3 File Offset: 0x000612D3
+	// Token: 0x17001126 RID: 4390
+	// (get) Token: 0x06002A69 RID: 10857 RVA: 0x00017BA1 File Offset: 0x00015DA1
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyFreeHitStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D46 RID: 3398
-	// (get) Token: 0x06001E95 RID: 7829 RVA: 0x000630DA File Offset: 0x000612DA
+	// Token: 0x17001127 RID: 4391
+	// (get) Token: 0x06002A6A RID: 10858 RVA: 0x00017838 File Offset: 0x00015A38
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,18 +25,18 @@ public class EnemyFreeHitStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D47 RID: 3399
-	// (get) Token: 0x06001E96 RID: 7830 RVA: 0x000630E1 File Offset: 0x000612E1
-	// (set) Token: 0x06001E97 RID: 7831 RVA: 0x000630E9 File Offset: 0x000612E9
+	// Token: 0x17001128 RID: 4392
+	// (get) Token: 0x06002A6B RID: 10859 RVA: 0x00017BA8 File Offset: 0x00015DA8
+	// (set) Token: 0x06002A6C RID: 10860 RVA: 0x00017BB0 File Offset: 0x00015DB0
 	public float FreeHitRegenerationOverride { get; set; } = -1f;
 
-	// Token: 0x17000D48 RID: 3400
-	// (get) Token: 0x06001E98 RID: 7832 RVA: 0x000630F2 File Offset: 0x000612F2
-	// (set) Token: 0x06001E99 RID: 7833 RVA: 0x000630FA File Offset: 0x000612FA
+	// Token: 0x17001129 RID: 4393
+	// (get) Token: 0x06002A6D RID: 10861 RVA: 0x00017BB9 File Offset: 0x00015DB9
+	// (set) Token: 0x06002A6E RID: 10862 RVA: 0x00017BC1 File Offset: 0x00015DC1
 	public int FreeHitCountOverride { get; set; } = -1;
 
-	// Token: 0x17000D49 RID: 3401
-	// (get) Token: 0x06001E9A RID: 7834 RVA: 0x00063103 File Offset: 0x00061303
+	// Token: 0x1700112A RID: 4394
+	// (get) Token: 0x06002A6F RID: 10863 RVA: 0x00017BCA File Offset: 0x00015DCA
 	public int HitCount
 	{
 		get
@@ -45,14 +45,14 @@ public class EnemyFreeHitStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E9B RID: 7835 RVA: 0x0006310B File Offset: 0x0006130B
+	// Token: 0x06002A70 RID: 10864 RVA: 0x00017BD2 File Offset: 0x00015DD2
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onEnemyHit = new Action<object, CharacterHitEventArgs>(this.OnEnemyHit);
 	}
 
-	// Token: 0x06001E9C RID: 7836 RVA: 0x00063125 File Offset: 0x00061325
+	// Token: 0x06002A71 RID: 10865 RVA: 0x00017BEC File Offset: 0x00015DEC
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_totalHitCount = 4;
@@ -77,7 +77,7 @@ public class EnemyFreeHitStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001E9D RID: 7837 RVA: 0x00063134 File Offset: 0x00061334
+	// Token: 0x06002A72 RID: 10866 RVA: 0x000C1A04 File Offset: 0x000BFC04
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -89,7 +89,7 @@ public class EnemyFreeHitStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E9E RID: 7838 RVA: 0x00063189 File Offset: 0x00061389
+	// Token: 0x06002A73 RID: 10867 RVA: 0x00017BFB File Offset: 0x00015DFB
 	private void OnEnemyHit(object sender, CharacterHitEventArgs args)
 	{
 		if (args != null && args.Attacker.BaseDamage > 0f)
@@ -102,7 +102,7 @@ public class EnemyFreeHitStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E9F RID: 7839 RVA: 0x000631C6 File Offset: 0x000613C6
+	// Token: 0x06002A74 RID: 10868 RVA: 0x00017C38 File Offset: 0x00015E38
 	private IEnumerator EnemyHitCoroutine()
 	{
 		this.m_hitCount--;
@@ -123,7 +123,7 @@ public class EnemyFreeHitStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001EA0 RID: 7840 RVA: 0x000631D5 File Offset: 0x000613D5
+	// Token: 0x06002A75 RID: 10869 RVA: 0x00017C47 File Offset: 0x00015E47
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -133,18 +133,18 @@ public class EnemyFreeHitStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x04001BC1 RID: 7105
+	// Token: 0x04002465 RID: 9317
 	private float m_freeHitRegenerationAmount;
 
-	// Token: 0x04001BC2 RID: 7106
+	// Token: 0x04002466 RID: 9318
 	private int m_hitCount;
 
-	// Token: 0x04001BC3 RID: 7107
+	// Token: 0x04002467 RID: 9319
 	private int m_totalHitCount;
 
-	// Token: 0x04001BC4 RID: 7108
+	// Token: 0x04002468 RID: 9320
 	private Coroutine m_rechargeCoroutine;
 
-	// Token: 0x04001BC5 RID: 7109
+	// Token: 0x04002469 RID: 9321
 	private Action<object, CharacterHitEventArgs> m_onEnemyHit;
 }

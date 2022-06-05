@@ -3,13 +3,13 @@ using System.Collections;
 
 namespace SceneManagement_RL
 {
-	// Token: 0x020008CB RID: 2251
+	// Token: 0x02000E35 RID: 3637
 	public interface ISceneLoadingTransition : ITransition
 	{
-		// Token: 0x060049DC RID: 18908
+		// Token: 0x06006677 RID: 26231
 		IEnumerator TransitionOut();
 
-		// Token: 0x060049DD RID: 18909
+		// Token: 0x06006678 RID: 26232
 		IEnumerator TransitionIn();
 	}
 }

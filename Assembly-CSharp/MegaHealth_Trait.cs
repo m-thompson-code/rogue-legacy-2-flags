@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000350 RID: 848
+// Token: 0x020005BA RID: 1466
 public class MegaHealth_Trait : BaseTrait
 {
-	// Token: 0x17000DD3 RID: 3539
-	// (get) Token: 0x06002052 RID: 8274 RVA: 0x0006670E File Offset: 0x0006490E
+	// Token: 0x1700122E RID: 4654
+	// (get) Token: 0x06002DAF RID: 11695 RVA: 0x00019212 File Offset: 0x00017412
 	public override TraitType TraitType
 	{
 		get
@@ -14,7 +14,7 @@ public class MegaHealth_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002053 RID: 8275 RVA: 0x00066715 File Offset: 0x00064915
+	// Token: 0x06002DB0 RID: 11696 RVA: 0x00019219 File Offset: 0x00017419
 	public IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -27,7 +27,7 @@ public class MegaHealth_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06002054 RID: 8276 RVA: 0x0006671D File Offset: 0x0006491D
+	// Token: 0x06002DB1 RID: 11697 RVA: 0x00018A1E File Offset: 0x00016C1E
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

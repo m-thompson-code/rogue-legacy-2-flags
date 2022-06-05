@@ -2,11 +2,11 @@
 using Rewired;
 using UnityEngine;
 
-// Token: 0x020006A9 RID: 1705
+// Token: 0x02000B46 RID: 2886
 public class RumbleManager
 {
-	// Token: 0x17001572 RID: 5490
-	// (get) Token: 0x06003E83 RID: 16003 RVA: 0x000DC48B File Offset: 0x000DA68B
+	// Token: 0x17001D5C RID: 7516
+	// (get) Token: 0x0600577E RID: 22398 RVA: 0x0002FA4F File Offset: 0x0002DC4F
 	public static bool IsPaused
 	{
 		get
@@ -15,8 +15,8 @@ public class RumbleManager
 		}
 	}
 
-	// Token: 0x17001573 RID: 5491
-	// (get) Token: 0x06003E84 RID: 16004 RVA: 0x000DC492 File Offset: 0x000DA692
+	// Token: 0x17001D5D RID: 7517
+	// (get) Token: 0x0600577F RID: 22399 RVA: 0x0002FA56 File Offset: 0x0002DC56
 	public static bool IsRumbling
 	{
 		get
@@ -25,8 +25,8 @@ public class RumbleManager
 		}
 	}
 
-	// Token: 0x17001574 RID: 5492
-	// (get) Token: 0x06003E85 RID: 16005 RVA: 0x000DC4A2 File Offset: 0x000DA6A2
+	// Token: 0x17001D5E RID: 7518
+	// (get) Token: 0x06005780 RID: 22400 RVA: 0x0002FA66 File Offset: 0x0002DC66
 	public static bool IsLeftRumbling
 	{
 		get
@@ -35,8 +35,8 @@ public class RumbleManager
 		}
 	}
 
-	// Token: 0x17001575 RID: 5493
-	// (get) Token: 0x06003E86 RID: 16006 RVA: 0x000DC4B0 File Offset: 0x000DA6B0
+	// Token: 0x17001D5F RID: 7519
+	// (get) Token: 0x06005781 RID: 22401 RVA: 0x0002FA74 File Offset: 0x0002DC74
 	public static bool IsRightRumbling
 	{
 		get
@@ -45,7 +45,7 @@ public class RumbleManager
 		}
 	}
 
-	// Token: 0x06003E87 RID: 16007 RVA: 0x000DC4C0 File Offset: 0x000DA6C0
+	// Token: 0x06005782 RID: 22402 RVA: 0x0014C894 File Offset: 0x0014AA94
 	public static void StartRumble(bool useLeftMotor, bool useRightMotor, float amount, float duration = 0f, bool stopAllRumbleFirst = true)
 	{
 		if (!ReInput.isReady)
@@ -108,7 +108,7 @@ public class RumbleManager
 		}
 	}
 
-	// Token: 0x06003E88 RID: 16008 RVA: 0x000DC610 File Offset: 0x000DA810
+	// Token: 0x06005783 RID: 22403 RVA: 0x0014C9E4 File Offset: 0x0014ABE4
 	public static void Start3DRumble(float amount, Vector2 emitterPos, Vector2 listenerPos, float duration = 0f, float distDeltaMod = 1f)
 	{
 		float num = 2f;
@@ -129,7 +129,7 @@ public class RumbleManager
 		RumbleManager.StartRumble(false, true, num4 * amount, duration, false);
 	}
 
-	// Token: 0x06003E89 RID: 16009 RVA: 0x000DC6E8 File Offset: 0x000DA8E8
+	// Token: 0x06005784 RID: 22404 RVA: 0x0014CABC File Offset: 0x0014ACBC
 	public static void StopRumble(bool stopLeftMotor = true, bool stopRightMotor = true)
 	{
 		RumbleManager.m_isPaused = false;
@@ -161,7 +161,7 @@ public class RumbleManager
 		}
 	}
 
-	// Token: 0x06003E8A RID: 16010 RVA: 0x000DC7B4 File Offset: 0x000DA9B4
+	// Token: 0x06005785 RID: 22405 RVA: 0x0014CB88 File Offset: 0x0014AD88
 	public static void SetRumblePaused(bool paused)
 	{
 		if (RumbleManager.m_isPaused == paused)
@@ -204,7 +204,7 @@ public class RumbleManager
 		}
 	}
 
-	// Token: 0x06003E8B RID: 16011 RVA: 0x000DC888 File Offset: 0x000DAA88
+	// Token: 0x06005786 RID: 22406 RVA: 0x0014CC5C File Offset: 0x0014AE5C
 	private static float GetMotorAmount(bool getRightMotor)
 	{
 		if (!ReInput.isReady)
@@ -227,30 +227,30 @@ public class RumbleManager
 		return num;
 	}
 
-	// Token: 0x04002E85 RID: 11909
+	// Token: 0x040040A7 RID: 16551
 	private const float MOTOR_DISTANCE_DELTA = 2f;
 
-	// Token: 0x04002E86 RID: 11910
+	// Token: 0x040040A8 RID: 16552
 	private const float MAX_DISTANCE = 10f;
 
-	// Token: 0x04002E87 RID: 11911
+	// Token: 0x040040A9 RID: 16553
 	private static float m_leftStartRumbleTimer;
 
-	// Token: 0x04002E88 RID: 11912
+	// Token: 0x040040AA RID: 16554
 	private static float m_rightStartRumbleTimer;
 
-	// Token: 0x04002E89 RID: 11913
+	// Token: 0x040040AB RID: 16555
 	private static float m_leftPausedDuration;
 
-	// Token: 0x04002E8A RID: 11914
+	// Token: 0x040040AC RID: 16556
 	private static float m_rightPausedDuration;
 
-	// Token: 0x04002E8B RID: 11915
+	// Token: 0x040040AD RID: 16557
 	private static float m_leftMotorPauseAmount;
 
-	// Token: 0x04002E8C RID: 11916
+	// Token: 0x040040AE RID: 16558
 	private static float m_rightMotorPauseAmount;
 
-	// Token: 0x04002E8D RID: 11917
+	// Token: 0x040040AF RID: 16559
 	private static bool m_isPaused;
 }

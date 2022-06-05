@@ -5,10 +5,10 @@ using Sigtrap.Relays;
 using Spawn;
 using UnityEngine;
 
-// Token: 0x0200062C RID: 1580
+// Token: 0x02000A59 RID: 2649
 public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawnController, ICameraLayerController, ISetSpawnType, IMirror
 {
-	// Token: 0x0600390A RID: 14602 RVA: 0x000C297C File Offset: 0x000C0B7C
+	// Token: 0x06004FE9 RID: 20457 RVA: 0x001313BC File Offset: 0x0012F5BC
 	public static DecoController[] GetPrefabDecoControllers(Prop propPrefab)
 	{
 		DecoController[] components;
@@ -21,8 +21,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		return components;
 	}
 
-	// Token: 0x1700141A RID: 5146
-	// (get) Token: 0x0600390B RID: 14603 RVA: 0x000C29AE File Offset: 0x000C0BAE
+	// Token: 0x17001B81 RID: 7041
+	// (get) Token: 0x06004FEA RID: 20458 RVA: 0x0002B9AD File Offset: 0x00029BAD
 	public SpriteDrawMode SpriteRendererDrawMode
 	{
 		get
@@ -31,8 +31,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x1700141B RID: 5147
-	// (get) Token: 0x0600390C RID: 14604 RVA: 0x000C29B6 File Offset: 0x000C0BB6
+	// Token: 0x17001B82 RID: 7042
+	// (get) Token: 0x06004FEB RID: 20459 RVA: 0x0002B9B5 File Offset: 0x00029BB5
 	public Vector2 SpriteRendererSize
 	{
 		get
@@ -41,8 +41,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x1700141C RID: 5148
-	// (get) Token: 0x0600390D RID: 14605 RVA: 0x000C29BE File Offset: 0x000C0BBE
+	// Token: 0x17001B83 RID: 7043
+	// (get) Token: 0x06004FEC RID: 20460 RVA: 0x0002B9BD File Offset: 0x00029BBD
 	public DecoSpawnData[][] DecoSpawnData
 	{
 		get
@@ -51,8 +51,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x1700141D RID: 5149
-	// (get) Token: 0x0600390E RID: 14606 RVA: 0x000C29C6 File Offset: 0x000C0BC6
+	// Token: 0x17001B84 RID: 7044
+	// (get) Token: 0x06004FED RID: 20461 RVA: 0x0002B9C5 File Offset: 0x00029BC5
 	public IRelayLink BeforePropInstanceInitializedRelay
 	{
 		get
@@ -61,8 +61,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x1700141E RID: 5150
-	// (get) Token: 0x0600390F RID: 14607 RVA: 0x000C29D3 File Offset: 0x000C0BD3
+	// Token: 0x17001B85 RID: 7045
+	// (get) Token: 0x06004FEE RID: 20462 RVA: 0x0002B9D2 File Offset: 0x00029BD2
 	public IRelayLink OnPropInstanceInitializedRelay
 	{
 		get
@@ -71,9 +71,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x1700141F RID: 5151
-	// (get) Token: 0x06003910 RID: 14608 RVA: 0x000C29E0 File Offset: 0x000C0BE0
-	// (set) Token: 0x06003911 RID: 14609 RVA: 0x000C29E8 File Offset: 0x000C0BE8
+	// Token: 0x17001B86 RID: 7046
+	// (get) Token: 0x06004FEF RID: 20463 RVA: 0x0002B9DF File Offset: 0x00029BDF
+	// (set) Token: 0x06004FF0 RID: 20464 RVA: 0x0002B9E7 File Offset: 0x00029BE7
 	public bool DisableCulling
 	{
 		get
@@ -86,8 +86,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001420 RID: 5152
-	// (get) Token: 0x06003912 RID: 14610 RVA: 0x000C29F1 File Offset: 0x000C0BF1
+	// Token: 0x17001B87 RID: 7047
+	// (get) Token: 0x06004FF1 RID: 20465 RVA: 0x0002B9F0 File Offset: 0x00029BF0
 	public bool IsBreakable
 	{
 		get
@@ -96,8 +96,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001421 RID: 5153
-	// (get) Token: 0x06003913 RID: 14611 RVA: 0x000C2A12 File Offset: 0x000C0C12
+	// Token: 0x17001B88 RID: 7048
+	// (get) Token: 0x06004FF2 RID: 20466 RVA: 0x0002BA11 File Offset: 0x00029C11
 	public int ActualSubLayer
 	{
 		get
@@ -106,8 +106,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001422 RID: 5154
-	// (get) Token: 0x06003914 RID: 14612 RVA: 0x000C2A21 File Offset: 0x000C0C21
+	// Token: 0x17001B89 RID: 7049
+	// (get) Token: 0x06004FF3 RID: 20467 RVA: 0x0002BA20 File Offset: 0x00029C20
 	public CameraLayer CameraLayer
 	{
 		get
@@ -120,9 +120,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001423 RID: 5155
-	// (get) Token: 0x06003915 RID: 14613 RVA: 0x000C2A3D File Offset: 0x000C0C3D
-	// (set) Token: 0x06003916 RID: 14614 RVA: 0x000C2A45 File Offset: 0x000C0C45
+	// Token: 0x17001B8A RID: 7050
+	// (get) Token: 0x06004FF4 RID: 20468 RVA: 0x0002BA3C File Offset: 0x00029C3C
+	// (set) Token: 0x06004FF5 RID: 20469 RVA: 0x0002BA44 File Offset: 0x00029C44
 	public PropSpawnControllerData Data
 	{
 		get
@@ -135,9 +135,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001424 RID: 5156
-	// (get) Token: 0x06003917 RID: 14615 RVA: 0x000C2A4E File Offset: 0x000C0C4E
-	// (set) Token: 0x06003918 RID: 14616 RVA: 0x000C2A56 File Offset: 0x000C0C56
+	// Token: 0x17001B8B RID: 7051
+	// (get) Token: 0x06004FF6 RID: 20470 RVA: 0x0002BA4D File Offset: 0x00029C4D
+	// (set) Token: 0x06004FF7 RID: 20471 RVA: 0x0002BA55 File Offset: 0x00029C55
 	public bool IsMirrored
 	{
 		get
@@ -150,8 +150,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001425 RID: 5157
-	// (get) Token: 0x06003919 RID: 14617 RVA: 0x000C2A5F File Offset: 0x000C0C5F
+	// Token: 0x17001B8C RID: 7052
+	// (get) Token: 0x06004FF8 RID: 20472 RVA: 0x0002BA5E File Offset: 0x00029C5E
 	public bool ShouldSpawn
 	{
 		get
@@ -160,9 +160,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001426 RID: 5158
-	// (get) Token: 0x0600391A RID: 14618 RVA: 0x000C2A8A File Offset: 0x000C0C8A
-	// (set) Token: 0x0600391B RID: 14619 RVA: 0x000C2A92 File Offset: 0x000C0C92
+	// Token: 0x17001B8D RID: 7053
+	// (get) Token: 0x06004FF9 RID: 20473 RVA: 0x0002BA89 File Offset: 0x00029C89
+	// (set) Token: 0x06004FFA RID: 20474 RVA: 0x0002BA91 File Offset: 0x00029C91
 	public bool Override
 	{
 		get
@@ -178,9 +178,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001427 RID: 5159
-	// (get) Token: 0x0600391C RID: 14620 RVA: 0x000C2AA2 File Offset: 0x000C0CA2
-	// (set) Token: 0x0600391D RID: 14621 RVA: 0x000C2AAA File Offset: 0x000C0CAA
+	// Token: 0x17001B8E RID: 7054
+	// (get) Token: 0x06004FFB RID: 20475 RVA: 0x0002BAA1 File Offset: 0x00029CA1
+	// (set) Token: 0x06004FFC RID: 20476 RVA: 0x0002BAA9 File Offset: 0x00029CA9
 	public Prop OverrideProp
 	{
 		get
@@ -196,9 +196,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001428 RID: 5160
-	// (get) Token: 0x0600391E RID: 14622 RVA: 0x000C2ABA File Offset: 0x000C0CBA
-	// (set) Token: 0x0600391F RID: 14623 RVA: 0x000C2AC2 File Offset: 0x000C0CC2
+	// Token: 0x17001B8F RID: 7055
+	// (get) Token: 0x06004FFD RID: 20477 RVA: 0x0002BAB9 File Offset: 0x00029CB9
+	// (set) Token: 0x06004FFE RID: 20478 RVA: 0x0002BAC1 File Offset: 0x00029CC1
 	public Prop PropInstance
 	{
 		get
@@ -211,9 +211,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001429 RID: 5161
-	// (get) Token: 0x06003920 RID: 14624 RVA: 0x000C2ACB File Offset: 0x000C0CCB
-	// (set) Token: 0x06003921 RID: 14625 RVA: 0x000C2AD3 File Offset: 0x000C0CD3
+	// Token: 0x17001B90 RID: 7056
+	// (get) Token: 0x06004FFF RID: 20479 RVA: 0x0002BACA File Offset: 0x00029CCA
+	// (set) Token: 0x06005000 RID: 20480 RVA: 0x0002BAD2 File Offset: 0x00029CD2
 	public Prop PropPrefab
 	{
 		get
@@ -233,14 +233,14 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x06003922 RID: 14626 RVA: 0x000C2B0D File Offset: 0x000C0D0D
+	// Token: 0x06005001 RID: 20481 RVA: 0x0002BB0C File Offset: 0x00029D0C
 	public void ForcePropPrefab(Prop propPrefab)
 	{
 		this.PropPrefab = propPrefab;
 	}
 
-	// Token: 0x1700142A RID: 5162
-	// (get) Token: 0x06003923 RID: 14627 RVA: 0x000C2B16 File Offset: 0x000C0D16
+	// Token: 0x17001B91 RID: 7057
+	// (get) Token: 0x06005002 RID: 20482 RVA: 0x0002BB15 File Offset: 0x00029D15
 	public Prop[] BreakableDecoInstances
 	{
 		get
@@ -249,8 +249,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x1700142B RID: 5163
-	// (get) Token: 0x06003924 RID: 14628 RVA: 0x000C2B1E File Offset: 0x000C0D1E
+	// Token: 0x17001B92 RID: 7058
+	// (get) Token: 0x06005003 RID: 20483 RVA: 0x0002BB1D File Offset: 0x00029D1D
 	public BiomePropsEntry[] PropTable
 	{
 		get
@@ -259,8 +259,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x1700142C RID: 5164
-	// (get) Token: 0x06003925 RID: 14629 RVA: 0x000C2B2B File Offset: 0x000C0D2B
+	// Token: 0x17001B93 RID: 7059
+	// (get) Token: 0x06005004 RID: 20484 RVA: 0x0002BB2A File Offset: 0x00029D2A
 	public Prop[] DefaultProps
 	{
 		get
@@ -269,8 +269,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x1700142D RID: 5165
-	// (get) Token: 0x06003926 RID: 14630 RVA: 0x000C2B38 File Offset: 0x000C0D38
+	// Token: 0x17001B94 RID: 7060
+	// (get) Token: 0x06005005 RID: 20485 RVA: 0x0002BB37 File Offset: 0x00029D37
 	public BaseRoom Room
 	{
 		get
@@ -279,9 +279,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x1700142E RID: 5166
-	// (get) Token: 0x06003927 RID: 14631 RVA: 0x000C2B40 File Offset: 0x000C0D40
-	// (set) Token: 0x06003928 RID: 14632 RVA: 0x000C2B63 File Offset: 0x000C0D63
+	// Token: 0x17001B95 RID: 7061
+	// (get) Token: 0x06005006 RID: 20486 RVA: 0x0002BB3F File Offset: 0x00029D3F
+	// (set) Token: 0x06005007 RID: 20487 RVA: 0x0002BB62 File Offset: 0x00029D62
 	public SpawnLogicController SpawnLogicController
 	{
 		get
@@ -299,8 +299,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x1700142F RID: 5167
-	// (get) Token: 0x06003929 RID: 14633 RVA: 0x000C2B6C File Offset: 0x000C0D6C
+	// Token: 0x17001B96 RID: 7062
+	// (get) Token: 0x06005008 RID: 20488 RVA: 0x0002BB6B File Offset: 0x00029D6B
 	public int SubLayer
 	{
 		get
@@ -313,8 +313,8 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001430 RID: 5168
-	// (get) Token: 0x0600392A RID: 14634 RVA: 0x000C2B88 File Offset: 0x000C0D88
+	// Token: 0x17001B97 RID: 7063
+	// (get) Token: 0x06005009 RID: 20489 RVA: 0x0002BB87 File Offset: 0x00029D87
 	public int SubLayerMod
 	{
 		get
@@ -327,9 +327,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001431 RID: 5169
-	// (get) Token: 0x0600392B RID: 14635 RVA: 0x000C2BA4 File Offset: 0x000C0DA4
-	// (set) Token: 0x0600392C RID: 14636 RVA: 0x000C2BAC File Offset: 0x000C0DAC
+	// Token: 0x17001B98 RID: 7064
+	// (get) Token: 0x0600500A RID: 20490 RVA: 0x0002BBA3 File Offset: 0x00029DA3
+	// (set) Token: 0x0600500B RID: 20491 RVA: 0x0002BBAB File Offset: 0x00029DAB
 	public bool IsOverrideSubLayer
 	{
 		get
@@ -342,9 +342,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001432 RID: 5170
-	// (get) Token: 0x0600392D RID: 14637 RVA: 0x000C2BB5 File Offset: 0x000C0DB5
-	// (set) Token: 0x0600392E RID: 14638 RVA: 0x000C2BBD File Offset: 0x000C0DBD
+	// Token: 0x17001B99 RID: 7065
+	// (get) Token: 0x0600500C RID: 20492 RVA: 0x0002BBB4 File Offset: 0x00029DB4
+	// (set) Token: 0x0600500D RID: 20493 RVA: 0x0002BBBC File Offset: 0x00029DBC
 	public int SubLayerOverride
 	{
 		get
@@ -357,9 +357,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001433 RID: 5171
-	// (get) Token: 0x0600392F RID: 14639 RVA: 0x000C2BC6 File Offset: 0x000C0DC6
-	// (set) Token: 0x06003930 RID: 14640 RVA: 0x000C2BCE File Offset: 0x000C0DCE
+	// Token: 0x17001B9A RID: 7066
+	// (get) Token: 0x0600500E RID: 20494 RVA: 0x0002BBC5 File Offset: 0x00029DC5
+	// (set) Token: 0x0600500F RID: 20495 RVA: 0x0002BBCD File Offset: 0x00029DCD
 	public bool IsOverrideSubLayerMod
 	{
 		get
@@ -372,9 +372,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001434 RID: 5172
-	// (get) Token: 0x06003931 RID: 14641 RVA: 0x000C2BD7 File Offset: 0x000C0DD7
-	// (set) Token: 0x06003932 RID: 14642 RVA: 0x000C2BDF File Offset: 0x000C0DDF
+	// Token: 0x17001B9B RID: 7067
+	// (get) Token: 0x06005010 RID: 20496 RVA: 0x0002BBD6 File Offset: 0x00029DD6
+	// (set) Token: 0x06005011 RID: 20497 RVA: 0x0002BBDE File Offset: 0x00029DDE
 	public int SubLayerModOverride
 	{
 		get
@@ -387,9 +387,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001435 RID: 5173
-	// (get) Token: 0x06003933 RID: 14643 RVA: 0x000C2BE8 File Offset: 0x000C0DE8
-	// (set) Token: 0x06003934 RID: 14644 RVA: 0x000C2BF0 File Offset: 0x000C0DF0
+	// Token: 0x17001B9C RID: 7068
+	// (get) Token: 0x06005012 RID: 20498 RVA: 0x0002BBE7 File Offset: 0x00029DE7
+	// (set) Token: 0x06005013 RID: 20499 RVA: 0x0002BBEF File Offset: 0x00029DEF
 	public bool IsOverrideCameraLayer
 	{
 		get
@@ -402,9 +402,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001436 RID: 5174
-	// (get) Token: 0x06003935 RID: 14645 RVA: 0x000C2BF9 File Offset: 0x000C0DF9
-	// (set) Token: 0x06003936 RID: 14646 RVA: 0x000C2C01 File Offset: 0x000C0E01
+	// Token: 0x17001B9D RID: 7069
+	// (get) Token: 0x06005014 RID: 20500 RVA: 0x0002BBF8 File Offset: 0x00029DF8
+	// (set) Token: 0x06005015 RID: 20501 RVA: 0x0002BC00 File Offset: 0x00029E00
 	public CameraLayer CameraLayerOverride
 	{
 		get
@@ -417,9 +417,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001437 RID: 5175
-	// (get) Token: 0x06003937 RID: 14647 RVA: 0x000C2C0A File Offset: 0x000C0E0A
-	// (set) Token: 0x06003938 RID: 14648 RVA: 0x000C2C12 File Offset: 0x000C0E12
+	// Token: 0x17001B9E RID: 7070
+	// (get) Token: 0x06005016 RID: 20502 RVA: 0x0002BC09 File Offset: 0x00029E09
+	// (set) Token: 0x06005017 RID: 20503 RVA: 0x0002BC11 File Offset: 0x00029E11
 	public bool IsOverrideZPosition
 	{
 		get
@@ -432,9 +432,9 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x17001438 RID: 5176
-	// (get) Token: 0x06003939 RID: 14649 RVA: 0x000C2C1B File Offset: 0x000C0E1B
-	// (set) Token: 0x0600393A RID: 14650 RVA: 0x000C2C23 File Offset: 0x000C0E23
+	// Token: 0x17001B9F RID: 7071
+	// (get) Token: 0x06005018 RID: 20504 RVA: 0x0002BC1A File Offset: 0x00029E1A
+	// (set) Token: 0x06005019 RID: 20505 RVA: 0x0002BC22 File Offset: 0x00029E22
 	public float ZPositionOverride
 	{
 		get
@@ -447,7 +447,7 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x0600393B RID: 14651 RVA: 0x000C2C2C File Offset: 0x000C0E2C
+	// Token: 0x0600501A RID: 20506 RVA: 0x001313F0 File Offset: 0x0012F5F0
 	private void Start()
 	{
 		if (this.Override)
@@ -470,7 +470,7 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x0600393C RID: 14652 RVA: 0x000C2C84 File Offset: 0x000C0E84
+	// Token: 0x0600501B RID: 20507 RVA: 0x00131448 File Offset: 0x0012F648
 	private void GetPropInstance()
 	{
 		try
@@ -504,13 +504,13 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		});
 	}
 
-	// Token: 0x0600393D RID: 14653 RVA: 0x000C2D94 File Offset: 0x000C0F94
+	// Token: 0x0600501C RID: 20508 RVA: 0x0002BC2B File Offset: 0x00029E2B
 	public void Mirror()
 	{
 		this.IsMirrored = true;
 	}
 
-	// Token: 0x0600393E RID: 14654 RVA: 0x000C2DA0 File Offset: 0x000C0FA0
+	// Token: 0x0600501D RID: 20509 RVA: 0x00131558 File Offset: 0x0012F758
 	public void InitializePropInstance()
 	{
 		if (this.ShouldSpawn && this.PropPrefab && this.PropPrefab.gameObject)
@@ -566,7 +566,7 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x0600393F RID: 14655 RVA: 0x000C2F60 File Offset: 0x000C1160
+	// Token: 0x0600501E RID: 20510 RVA: 0x00131718 File Offset: 0x0012F918
 	private void OnDisable()
 	{
 		if (this.PropInstance)
@@ -585,7 +585,7 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x06003940 RID: 14656 RVA: 0x000C2FCB File Offset: 0x000C11CB
+	// Token: 0x0600501F RID: 20511 RVA: 0x0002BC34 File Offset: 0x00029E34
 	public bool Spawn()
 	{
 		if (this.Room == null)
@@ -599,7 +599,7 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		return this.PropPrefab;
 	}
 
-	// Token: 0x06003941 RID: 14657 RVA: 0x000C3008 File Offset: 0x000C1208
+	// Token: 0x06005020 RID: 20512 RVA: 0x00131784 File Offset: 0x0012F984
 	public void SetSpawnType()
 	{
 		if (this.Override)
@@ -635,7 +635,7 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		this.SetDecoTypes(this.PropPrefab);
 	}
 
-	// Token: 0x06003942 RID: 14658 RVA: 0x000C30C0 File Offset: 0x000C12C0
+	// Token: 0x06005021 RID: 20513 RVA: 0x0013183C File Offset: 0x0012FA3C
 	private void SetDecoTypes(Prop prop)
 	{
 		if (!prop)
@@ -674,126 +674,126 @@ public class PropSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawn
 		}
 	}
 
-	// Token: 0x06003943 RID: 14659 RVA: 0x000C31DC File Offset: 0x000C13DC
+	// Token: 0x06005022 RID: 20514 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void SetCameraLayer(CameraLayer value)
 	{
 	}
 
-	// Token: 0x06003944 RID: 14660 RVA: 0x000C31DE File Offset: 0x000C13DE
+	// Token: 0x06005023 RID: 20515 RVA: 0x0002BC6F File Offset: 0x00029E6F
 	public void SetRoom(BaseRoom value)
 	{
 		this.m_room = value;
 	}
 
-	// Token: 0x06003945 RID: 14661 RVA: 0x000C31E7 File Offset: 0x000C13E7
+	// Token: 0x06005024 RID: 20516 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void SetSubLayer(int subLayer, bool isDeco = false)
 	{
 	}
 
-	// Token: 0x06003948 RID: 14664 RVA: 0x000C321D File Offset: 0x000C141D
+	// Token: 0x06005027 RID: 20519 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISpawnController.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002C01 RID: 11265
+	// Token: 0x04003C93 RID: 15507
 	[SerializeField]
 	private bool m_override;
 
-	// Token: 0x04002C02 RID: 11266
+	// Token: 0x04003C94 RID: 15508
 	[SerializeField]
 	private Prop m_overrideProp;
 
-	// Token: 0x04002C03 RID: 11267
+	// Token: 0x04003C95 RID: 15509
 	[SerializeField]
 	private PropSpawnControllerData m_spawnControllerData;
 
-	// Token: 0x04002C04 RID: 11268
+	// Token: 0x04003C96 RID: 15510
 	[SerializeField]
 	private bool m_isOverrideSubLayer;
 
-	// Token: 0x04002C05 RID: 11269
+	// Token: 0x04003C97 RID: 15511
 	[SerializeField]
 	private int m_subLayerOverride;
 
-	// Token: 0x04002C06 RID: 11270
+	// Token: 0x04003C98 RID: 15512
 	[SerializeField]
 	private bool m_isOverrideSubLayerMod;
 
-	// Token: 0x04002C07 RID: 11271
+	// Token: 0x04003C99 RID: 15513
 	[SerializeField]
 	private int m_subLayerModOverride;
 
-	// Token: 0x04002C08 RID: 11272
+	// Token: 0x04003C9A RID: 15514
 	[SerializeField]
 	private bool m_isOverrideCameraLayer;
 
-	// Token: 0x04002C09 RID: 11273
+	// Token: 0x04003C9B RID: 15515
 	[SerializeField]
 	private bool m_isOverrideZPosition;
 
-	// Token: 0x04002C0A RID: 11274
+	// Token: 0x04003C9C RID: 15516
 	[SerializeField]
 	private float m_zPositionOverride;
 
-	// Token: 0x04002C0B RID: 11275
+	// Token: 0x04003C9D RID: 15517
 	[SerializeField]
 	private CameraLayer m_cameraLayerOverride;
 
-	// Token: 0x04002C0C RID: 11276
+	// Token: 0x04003C9E RID: 15518
 	[SerializeField]
 	private bool m_disableCulling;
 
-	// Token: 0x04002C0D RID: 11277
+	// Token: 0x04003C9F RID: 15519
 	[SerializeField]
 	private SpriteDrawMode m_spriteRendererDrawMode;
 
-	// Token: 0x04002C0E RID: 11278
+	// Token: 0x04003CA0 RID: 15520
 	[SerializeField]
 	private Vector2 m_spriteRendererSize;
 
-	// Token: 0x04002C0F RID: 11279
+	// Token: 0x04003CA1 RID: 15521
 	private static List<Prop> m_breakableDecoPropsHelper_STATIC = new List<Prop>();
 
-	// Token: 0x04002C10 RID: 11280
+	// Token: 0x04003CA2 RID: 15522
 	private Prop m_propInstance;
 
-	// Token: 0x04002C11 RID: 11281
+	// Token: 0x04003CA3 RID: 15523
 	private Prop m_propPrefab;
 
-	// Token: 0x04002C12 RID: 11282
+	// Token: 0x04003CA4 RID: 15524
 	private int m_cachedPropPrefabNameHash;
 
-	// Token: 0x04002C13 RID: 11283
+	// Token: 0x04003CA5 RID: 15525
 	private Prop[] m_breakableDecoPropInstances;
 
-	// Token: 0x04002C14 RID: 11284
+	// Token: 0x04003CA6 RID: 15526
 	private bool m_breakableDecoPropsArrayInitialized;
 
-	// Token: 0x04002C15 RID: 11285
+	// Token: 0x04003CA7 RID: 15527
 	private BaseRoom m_room;
 
-	// Token: 0x04002C16 RID: 11286
+	// Token: 0x04003CA8 RID: 15528
 	private SpawnLogicController m_spawnLogicController;
 
-	// Token: 0x04002C17 RID: 11287
+	// Token: 0x04003CA9 RID: 15529
 	private SpriteRenderer m_spriteRenderer;
 
-	// Token: 0x04002C18 RID: 11288
+	// Token: 0x04003CAA RID: 15530
 	private bool m_isMirrored;
 
-	// Token: 0x04002C19 RID: 11289
+	// Token: 0x04003CAB RID: 15531
 	private Relay m_onPropInstanceInitializedRelay = new Relay();
 
-	// Token: 0x04002C1A RID: 11290
+	// Token: 0x04003CAC RID: 15532
 	private Relay m_beforePropInstanceInitializedRelay = new Relay();
 
-	// Token: 0x04002C1B RID: 11291
+	// Token: 0x04003CAD RID: 15533
 	private bool m_hasCheckedForSpawnLogicController;
 
-	// Token: 0x04002C1C RID: 11292
+	// Token: 0x04003CAE RID: 15534
 	private DecoSpawnData[][] m_decoSpawnDataArray;
 
-	// Token: 0x04002C1D RID: 11293
+	// Token: 0x04003CAF RID: 15535
 	private static Dictionary<Prop, DecoController[]> m_propPrefabDecoControllers_STATIC = new Dictionary<Prop, DecoController[]>();
 }

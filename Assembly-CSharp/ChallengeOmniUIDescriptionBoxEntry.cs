@@ -2,10 +2,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x0200039B RID: 923
+// Token: 0x0200062C RID: 1580
 public class ChallengeOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<ChallengeOmniUIDescriptionEventArgs, ChallengeOmniUIDescriptionBoxEntry.ChallengeOmniUIDescriptionBoxType>
 {
-	// Token: 0x0600226F RID: 8815 RVA: 0x0006F72C File Offset: 0x0006D92C
+	// Token: 0x06003087 RID: 12423 RVA: 0x000D0474 File Offset: 0x000CE674
 	protected override void DisplayDescriptionBox(ChallengeOmniUIDescriptionEventArgs args)
 	{
 		ChallengeType challengeType = args.ChallengeType;
@@ -179,7 +179,7 @@ public class ChallengeOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<
 		}
 	}
 
-	// Token: 0x06002270 RID: 8816 RVA: 0x0006FC08 File Offset: 0x0006DE08
+	// Token: 0x06003088 RID: 12424 RVA: 0x000D0950 File Offset: 0x000CEB50
 	private string ToTimeFormat(float elapsedSeconds)
 	{
 		int num = (int)(elapsedSeconds / 3600f);
@@ -204,20 +204,20 @@ public class ChallengeOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<
 		return result;
 	}
 
-	// Token: 0x04001DBD RID: 7613
+	// Token: 0x040027D1 RID: 10193
 	[SerializeField]
 	private Image m_frame;
 
-	// Token: 0x02000C0A RID: 3082
+	// Token: 0x0200062D RID: 1581
 	public enum ChallengeOmniUIDescriptionBoxType
 	{
-		// Token: 0x04004EA9 RID: 20137
+		// Token: 0x040027D3 RID: 10195
 		None,
-		// Token: 0x04004EAA RID: 20138
+		// Token: 0x040027D4 RID: 10196
 		Title,
-		// Token: 0x04004EAB RID: 20139
+		// Token: 0x040027D5 RID: 10197
 		Description,
-		// Token: 0x04004EAC RID: 20140
+		// Token: 0x040027D6 RID: 10198
 		Controls
 	}
 }

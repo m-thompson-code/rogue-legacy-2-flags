@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02000500 RID: 1280
+// Token: 0x02000868 RID: 2152
 public class ForestBossRoomController : BossRoomController
 {
-	// Token: 0x06002FE1 RID: 12257 RVA: 0x000A3E18 File Offset: 0x000A2018
+	// Token: 0x06004255 RID: 16981 RVA: 0x00024BC7 File Offset: 0x00022DC7
 	protected override void Awake()
 	{
 		this.m_sentrySpawners = base.gameObject.GetComponentsInChildren<IHazardSpawnController>();
 		base.Awake();
 	}
 
-	// Token: 0x06002FE2 RID: 12258 RVA: 0x000A3E34 File Offset: 0x000A2034
+	// Token: 0x06004256 RID: 16982 RVA: 0x0010A85C File Offset: 0x00108A5C
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -25,6 +25,6 @@ public class ForestBossRoomController : BossRoomController
 		}
 	}
 
-	// Token: 0x04002631 RID: 9777
+	// Token: 0x040033EF RID: 13295
 	private IHazardSpawnController[] m_sentrySpawners;
 }

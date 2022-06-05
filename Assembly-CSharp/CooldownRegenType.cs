@@ -1,32 +1,32 @@
 ﻿using System;
 
-// Token: 0x0200071F RID: 1823
+// Token: 0x02000BD2 RID: 3026
 public enum CooldownRegenType
 {
-	// Token: 0x0400337A RID: 13178
+	// Token: 0x040045F6 RID: 17910
 	None,
-	// Token: 0x0400337B RID: 13179
+	// Token: 0x040045F7 RID: 17911
 	Timer = 10,
-	// Token: 0x0400337C RID: 13180
+	// Token: 0x040045F8 RID: 17912
 	Timer_Small,
-	// Token: 0x0400337D RID: 13181
+	// Token: 0x040045F9 RID: 17913
 	EnemyKilled = 20,
-	// Token: 0x0400337E RID: 13182
+	// Token: 0x040045FA RID: 17914
 	EnemyKilled_Small,
-	// Token: 0x0400337F RID: 13183
+	// Token: 0x040045FB RID: 17915
 	EnemyHit = 30,
-	// Token: 0x04003380 RID: 13184
+	// Token: 0x040045FC RID: 17916
 	EnemyHit_Small,
-	// Token: 0x04003381 RID: 13185
+	// Token: 0x040045FD RID: 17917
 	PlayerHit = 40,
-	// Token: 0x04003382 RID: 13186
+	// Token: 0x040045FE RID: 17918
 	PlayerHit_Small,
-	// Token: 0x04003383 RID: 13187
+	// Token: 0x040045FF RID: 17919
 	MeatPickedUp = 50,
-	// Token: 0x04003384 RID: 13188
+	// Token: 0x04004600 RID: 17920
 	MeatPickedUp_Small,
-	// Token: 0x04003385 RID: 13189
+	// Token: 0x04004601 RID: 17921
 	SpinKick = 60,
-	// Token: 0x04003386 RID: 13190
+	// Token: 0x04004602 RID: 17922
 	SpinKick_Small
 }

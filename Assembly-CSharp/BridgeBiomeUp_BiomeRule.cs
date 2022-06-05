@@ -3,12 +3,12 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020005ED RID: 1517
+// Token: 0x020009F5 RID: 2549
 [CreateAssetMenu(menuName = "Custom/Biome Rules/Bridge Biome Up")]
 public class BridgeBiomeUp_BiomeRule : BiomeRule, IAudioEventEmitter
 {
-	// Token: 0x1700136A RID: 4970
-	// (get) Token: 0x060036CD RID: 14029 RVA: 0x000BC93B File Offset: 0x000BAB3B
+	// Token: 0x17001A97 RID: 6807
+	// (get) Token: 0x06004CDF RID: 19679 RVA: 0x000046FA File Offset: 0x000028FA
 	public override BiomeRuleExecutionTime ExecutionTime
 	{
 		get
@@ -17,8 +17,8 @@ public class BridgeBiomeUp_BiomeRule : BiomeRule, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x1700136B RID: 4971
-	// (get) Token: 0x060036CE RID: 14030 RVA: 0x000BC93F File Offset: 0x000BAB3F
+	// Token: 0x17001A98 RID: 6808
+	// (get) Token: 0x06004CE0 RID: 19680 RVA: 0x00029C69 File Offset: 0x00027E69
 	public string Description
 	{
 		get
@@ -27,7 +27,7 @@ public class BridgeBiomeUp_BiomeRule : BiomeRule, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x060036CF RID: 14031 RVA: 0x000BC946 File Offset: 0x000BAB46
+	// Token: 0x06004CE1 RID: 19681 RVA: 0x00029C70 File Offset: 0x00027E70
 	public override IEnumerator RunRule(BiomeType biome)
 	{
 		if (!this.m_actionsInitialized)
@@ -47,7 +47,7 @@ public class BridgeBiomeUp_BiomeRule : BiomeRule, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x060036D0 RID: 14032 RVA: 0x000BC955 File Offset: 0x000BAB55
+	// Token: 0x06004CE2 RID: 19682 RVA: 0x00029C7F File Offset: 0x00027E7F
 	public override void UndoRule(BiomeType biome)
 	{
 		if (this.m_actionsInitialized)
@@ -57,7 +57,7 @@ public class BridgeBiomeUp_BiomeRule : BiomeRule, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x060036D1 RID: 14033 RVA: 0x000BC978 File Offset: 0x000BAB78
+	// Token: 0x06004CE3 RID: 19683 RVA: 0x0012A7D8 File Offset: 0x001289D8
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		RoomViaDoorEventArgs roomViaDoorEventArgs = args as RoomViaDoorEventArgs;
@@ -72,7 +72,7 @@ public class BridgeBiomeUp_BiomeRule : BiomeRule, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x060036D2 RID: 14034 RVA: 0x000BC9C1 File Offset: 0x000BABC1
+	// Token: 0x06004CE4 RID: 19684 RVA: 0x00029CA2 File Offset: 0x00027EA2
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		if (this.m_attackCoroutine != null && this.m_currentRoom)
@@ -82,7 +82,7 @@ public class BridgeBiomeUp_BiomeRule : BiomeRule, IAudioEventEmitter
 		this.m_attackCoroutine = null;
 	}
 
-	// Token: 0x060036D3 RID: 14035 RVA: 0x000BC9F0 File Offset: 0x000BABF0
+	// Token: 0x06004CE5 RID: 19685 RVA: 0x00029CD1 File Offset: 0x00027ED1
 	public IEnumerator Attack_Coroutine()
 	{
 		float num = 5f;
@@ -128,27 +128,27 @@ public class BridgeBiomeUp_BiomeRule : BiomeRule, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x04002A33 RID: 10803
+	// Token: 0x04003A31 RID: 14897
 	private const string WARNING_PROJECTILE = "BridgeBiomeUpCannonBallWarningProjectile";
 
-	// Token: 0x04002A34 RID: 10804
+	// Token: 0x04003A32 RID: 14898
 	private const string CANNONBALL_PROJECTILE = "BridgeBiomeUpCannonBallProjectile";
 
-	// Token: 0x04002A35 RID: 10805
+	// Token: 0x04003A33 RID: 14899
 	private BaseRoom m_currentRoom;
 
-	// Token: 0x04002A36 RID: 10806
+	// Token: 0x04003A34 RID: 14900
 	private Action<object, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04002A37 RID: 10807
+	// Token: 0x04003A35 RID: 14901
 	private Action<object, EventArgs> m_onPlayerExitRoom;
 
-	// Token: 0x04002A38 RID: 10808
+	// Token: 0x04003A36 RID: 14902
 	private bool m_actionsInitialized;
 
-	// Token: 0x04002A39 RID: 10809
+	// Token: 0x04003A37 RID: 14903
 	private Coroutine m_attackCoroutine;
 
-	// Token: 0x04002A3A RID: 10810
+	// Token: 0x04003A38 RID: 14904
 	private WaitRL_Yield m_waitBetweenCannonballRows;
 }

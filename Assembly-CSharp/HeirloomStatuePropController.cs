@@ -6,10 +6,10 @@ using RL_Windows;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020004D6 RID: 1238
+// Token: 0x0200080C RID: 2060
 public class HeirloomStatuePropController : BaseSpecialPropController, IRoomConsumer
 {
-	// Token: 0x06002E1F RID: 11807 RVA: 0x0009BC4C File Offset: 0x00099E4C
+	// Token: 0x06003F7F RID: 16255 RVA: 0x000FE174 File Offset: 0x000FC374
 	protected override void Awake()
 	{
 		base.Awake();
@@ -23,7 +23,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		this.m_challengeHeirloom = new Action(this.ChallengeHeirloom);
 	}
 
-	// Token: 0x06002E20 RID: 11808 RVA: 0x0009BCFC File Offset: 0x00099EFC
+	// Token: 0x06003F80 RID: 16256 RVA: 0x00023170 File Offset: 0x00021370
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 		base.DisableProp(firstTimeDisabled);
@@ -31,7 +31,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		this.m_iconSprite.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06002E21 RID: 11809 RVA: 0x0009BD24 File Offset: 0x00099F24
+	// Token: 0x06003F81 RID: 16257 RVA: 0x000FE224 File Offset: 0x000FC424
 	protected override void InitializePooledPropOnEnter()
 	{
 		this.m_heirloomRoom = base.Room.gameObject.GetComponent<HeirloomRoomController>();
@@ -45,7 +45,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		this.m_iconSprite.gameObject.SetActive(true);
 	}
 
-	// Token: 0x06002E22 RID: 11810 RVA: 0x0009BDAA File Offset: 0x00099FAA
+	// Token: 0x06003F82 RID: 16258 RVA: 0x00023196 File Offset: 0x00021396
 	public void TriggerHeirloom()
 	{
 		if (!this.m_heirloomRoom.IsFinalRoom)
@@ -57,7 +57,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		base.StartCoroutine(this.TriggerHeirloomCompleteCoroutine());
 	}
 
-	// Token: 0x06002E23 RID: 11811 RVA: 0x0009BDDC File Offset: 0x00099FDC
+	// Token: 0x06003F83 RID: 16259 RVA: 0x000FE2AC File Offset: 0x000FC4AC
 	private void InitializeConfirmMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -77,7 +77,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x06002E24 RID: 11812 RVA: 0x0009BE6B File Offset: 0x0009A06B
+	// Token: 0x06003F84 RID: 16260 RVA: 0x000231C6 File Offset: 0x000213C6
 	private IEnumerator TriggerHeirloomCoroutine()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -161,7 +161,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		yield break;
 	}
 
-	// Token: 0x06002E25 RID: 11813 RVA: 0x0009BE7A File Offset: 0x0009A07A
+	// Token: 0x06003F85 RID: 16261 RVA: 0x000231D5 File Offset: 0x000213D5
 	private void CancelConfirmMenuSelection()
 	{
 		this.RunInsightDiscovered();
@@ -170,14 +170,14 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		AudioManager.PlayOneShot(null, "event:/SFX/Interactables/sfx_heirloom_farewell", base.transform.position);
 	}
 
-	// Token: 0x06002E26 RID: 11814 RVA: 0x0009BEA7 File Offset: 0x0009A0A7
+	// Token: 0x06003F86 RID: 16262 RVA: 0x00023202 File Offset: 0x00021402
 	private void ChallengeHeirloom()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 		base.StartCoroutine(this.ChallengeHeirloomCoroutine());
 	}
 
-	// Token: 0x06002E27 RID: 11815 RVA: 0x0009BEBE File Offset: 0x0009A0BE
+	// Token: 0x06003F87 RID: 16263 RVA: 0x00023219 File Offset: 0x00021419
 	private IEnumerator ChallengeHeirloomCoroutine()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -218,7 +218,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		yield break;
 	}
 
-	// Token: 0x06002E28 RID: 11816 RVA: 0x0009BECD File Offset: 0x0009A0CD
+	// Token: 0x06003F88 RID: 16264 RVA: 0x00023228 File Offset: 0x00021428
 	private IEnumerator TeleportPlayer()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -267,7 +267,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		yield break;
 	}
 
-	// Token: 0x06002E29 RID: 11817 RVA: 0x0009BEDC File Offset: 0x0009A0DC
+	// Token: 0x06003F89 RID: 16265 RVA: 0x00023237 File Offset: 0x00021437
 	private void ApplyHeirloomAbility()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -275,7 +275,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		playerController.InitializeAbilities();
 	}
 
-	// Token: 0x06002E2A RID: 11818 RVA: 0x0009BF07 File Offset: 0x0009A107
+	// Token: 0x06003F8A RID: 16266 RVA: 0x00023262 File Offset: 0x00021462
 	private IEnumerator TriggerHeirloomCompleteCoroutine()
 	{
 		SaveManager.PlayerSaveData.SetHeirloomLevel(this.m_heirloomRoom.HeirloomType, 1, false, true);
@@ -333,7 +333,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		yield break;
 	}
 
-	// Token: 0x06002E2B RID: 11819 RVA: 0x0009BF18 File Offset: 0x0009A118
+	// Token: 0x06003F8B RID: 16267 RVA: 0x000FE33C File Offset: 0x000FC53C
 	private bool RunInsightDiscovered()
 	{
 		InsightType insightFromHeirloomType = InsightType_RL.GetInsightFromHeirloomType(this.m_heirloomRoom.HeirloomType);
@@ -354,7 +354,7 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		return false;
 	}
 
-	// Token: 0x06002E2C RID: 11820 RVA: 0x0009BFA8 File Offset: 0x0009A1A8
+	// Token: 0x06003F8C RID: 16268 RVA: 0x000FE3CC File Offset: 0x000FC5CC
 	protected void Update()
 	{
 		if (!this.m_disableIconHoverAnim)
@@ -365,58 +365,58 @@ public class HeirloomStatuePropController : BaseSpecialPropController, IRoomCons
 		}
 	}
 
-	// Token: 0x040024CA RID: 9418
+	// Token: 0x0400319C RID: 12700
 	private const string SFX_GREETING_NAME = "event:/SFX/Interactables/sfx_heirloom_greeting";
 
-	// Token: 0x040024CB RID: 9419
+	// Token: 0x0400319D RID: 12701
 	private const string SFX_FAREWELL_NAME = "event:/SFX/Interactables/sfx_heirloom_farewell";
 
-	// Token: 0x040024CC RID: 9420
+	// Token: 0x0400319E RID: 12702
 	[SerializeField]
 	private GameObject m_playerPosObj;
 
-	// Token: 0x040024CD RID: 9421
+	// Token: 0x0400319F RID: 12703
 	[SerializeField]
 	private GameObject m_distortPosObj;
 
-	// Token: 0x040024CE RID: 9422
+	// Token: 0x040031A0 RID: 12704
 	[SerializeField]
 	private GameObject m_heirloomParticlesGO;
 
-	// Token: 0x040024CF RID: 9423
+	// Token: 0x040031A1 RID: 12705
 	[SerializeField]
 	private SpriteRenderer m_iconSprite;
 
-	// Token: 0x040024D0 RID: 9424
+	// Token: 0x040031A2 RID: 12706
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040024D1 RID: 9425
+	// Token: 0x040031A3 RID: 12707
 	private HeirloomWarp_Effect m_warpEffect;
 
-	// Token: 0x040024D2 RID: 9426
+	// Token: 0x040031A4 RID: 12708
 	private float m_iconStartingY;
 
-	// Token: 0x040024D3 RID: 9427
+	// Token: 0x040031A5 RID: 12709
 	private HeirloomRoomController m_heirloomRoom;
 
-	// Token: 0x040024D4 RID: 9428
+	// Token: 0x040031A6 RID: 12710
 	private Vector3 m_storedIconScale;
 
-	// Token: 0x040024D5 RID: 9429
+	// Token: 0x040031A7 RID: 12711
 	private bool m_disableIconHoverAnim;
 
-	// Token: 0x040024D6 RID: 9430
+	// Token: 0x040031A8 RID: 12712
 	private List<ParticleSystem> m_nonAllocParticleSystemList = new List<ParticleSystem>();
 
-	// Token: 0x040024D7 RID: 9431
+	// Token: 0x040031A9 RID: 12713
 	private InsightObjectiveCompleteHUDEventArgs m_insightEventArgs;
 
-	// Token: 0x040024D8 RID: 9432
+	// Token: 0x040031AA RID: 12714
 	private float m_storedFallMultiplier;
 
-	// Token: 0x040024D9 RID: 9433
+	// Token: 0x040031AB RID: 12715
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x040024DA RID: 9434
+	// Token: 0x040031AC RID: 12716
 	private Action m_challengeHeirloom;
 }

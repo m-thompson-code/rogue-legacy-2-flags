@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000344 RID: 836
+// Token: 0x020005A6 RID: 1446
 public class Generic_Trait : BaseTrait
 {
-	// Token: 0x17000DC6 RID: 3526
-	// (get) Token: 0x0600202B RID: 8235 RVA: 0x000664A5 File Offset: 0x000646A5
+	// Token: 0x17001215 RID: 4629
+	// (get) Token: 0x06002D5E RID: 11614 RVA: 0x00019080 File Offset: 0x00017280
 	public override TraitType TraitType
 	{
 		get
@@ -14,7 +14,7 @@ public class Generic_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x04001C52 RID: 7250
+	// Token: 0x040025BD RID: 9661
 	[SerializeField]
 	private TraitType m_traitType;
 }

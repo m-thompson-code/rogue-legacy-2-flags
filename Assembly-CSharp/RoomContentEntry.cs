@@ -2,12 +2,12 @@
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x0200067F RID: 1663
+// Token: 0x02000AFE RID: 2814
 [Serializable]
 public class RoomContentEntry
 {
-	// Token: 0x170014ED RID: 5357
-	// (get) Token: 0x06003C10 RID: 15376 RVA: 0x000CFF23 File Offset: 0x000CE123
+	// Token: 0x17001CAB RID: 7339
+	// (get) Token: 0x0600546C RID: 21612 RVA: 0x0002DBB8 File Offset: 0x0002BDB8
 	public RoomContentType ContentType
 	{
 		get
@@ -16,8 +16,8 @@ public class RoomContentEntry
 		}
 	}
 
-	// Token: 0x170014EE RID: 5358
-	// (get) Token: 0x06003C11 RID: 15377 RVA: 0x000CFF2B File Offset: 0x000CE12B
+	// Token: 0x17001CAC RID: 7340
+	// (get) Token: 0x0600546D RID: 21613 RVA: 0x0002DBC0 File Offset: 0x0002BDC0
 	public Vector2 LocalPosition
 	{
 		get
@@ -26,8 +26,8 @@ public class RoomContentEntry
 		}
 	}
 
-	// Token: 0x170014EF RID: 5359
-	// (get) Token: 0x06003C12 RID: 15378 RVA: 0x000CFF33 File Offset: 0x000CE133
+	// Token: 0x17001CAD RID: 7341
+	// (get) Token: 0x0600546E RID: 21614 RVA: 0x0002DBC8 File Offset: 0x0002BDC8
 	public SpawnConditionsEntry[] SpawnConditions
 	{
 		get
@@ -36,7 +36,7 @@ public class RoomContentEntry
 		}
 	}
 
-	// Token: 0x06003C13 RID: 15379 RVA: 0x000CFF3B File Offset: 0x000CE13B
+	// Token: 0x0600546F RID: 21615 RVA: 0x0002DBD0 File Offset: 0x0002BDD0
 	public RoomContentEntry(RoomContentType contentType, Vector2 localPosition, SpawnConditionsEntry[] spawnConditions)
 	{
 		this.m_contentType = contentType;
@@ -44,7 +44,7 @@ public class RoomContentEntry
 		this.m_spawnConditions = spawnConditions;
 	}
 
-	// Token: 0x06003C14 RID: 15380 RVA: 0x000CFF58 File Offset: 0x000CE158
+	// Token: 0x06005470 RID: 21616 RVA: 0x0013FE24 File Offset: 0x0013E024
 	public bool GetIsSpawned(GridPointManager gridPointManager)
 	{
 		foreach (SpawnConditionsEntry spawnConditionsEntry in this.SpawnConditions)
@@ -88,15 +88,15 @@ public class RoomContentEntry
 		return result;
 	}
 
-	// Token: 0x04002D47 RID: 11591
+	// Token: 0x04003EEE RID: 16110
 	[SerializeField]
 	private RoomContentType m_contentType;
 
-	// Token: 0x04002D48 RID: 11592
+	// Token: 0x04003EEF RID: 16111
 	[SerializeField]
 	private Vector2 m_localPosition;
 
-	// Token: 0x04002D49 RID: 11593
+	// Token: 0x04003EF0 RID: 16112
 	[SerializeField]
 	private SpawnConditionsEntry[] m_spawnConditions;
 }

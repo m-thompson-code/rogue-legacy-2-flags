@@ -5,12 +5,12 @@ using Foreground;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020004B3 RID: 1203
+// Token: 0x020007CA RID: 1994
 [ExecuteInEditMode]
 public class Room : BaseRoom, ISummoner, ILevelConsumer
 {
-	// Token: 0x17001102 RID: 4354
-	// (get) Token: 0x06002C74 RID: 11380 RVA: 0x00096A01 File Offset: 0x00094C01
+	// Token: 0x17001669 RID: 5737
+	// (get) Token: 0x06003D1D RID: 15645 RVA: 0x00021CBF File Offset: 0x0001FEBF
 	public IRelayLink<object, EventArgs> DoorClosedRelay
 	{
 		get
@@ -19,8 +19,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001103 RID: 4355
-	// (get) Token: 0x06002C75 RID: 11381 RVA: 0x00096A0E File Offset: 0x00094C0E
+	// Token: 0x1700166A RID: 5738
+	// (get) Token: 0x06003D1E RID: 15646 RVA: 0x00021CCC File Offset: 0x0001FECC
 	public IRelayLink<object, RoomConnectedEventArgs> RoomConnectedRelay
 	{
 		get
@@ -29,8 +29,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001104 RID: 4356
-	// (get) Token: 0x06002C76 RID: 11382 RVA: 0x00096A1B File Offset: 0x00094C1B
+	// Token: 0x1700166B RID: 5739
+	// (get) Token: 0x06003D1F RID: 15647 RVA: 0x00021CD9 File Offset: 0x0001FED9
 	public IRelayLink<object, EventArgs> RoomMergedRelay
 	{
 		get
@@ -39,8 +39,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001105 RID: 4357
-	// (get) Token: 0x06002C77 RID: 11383 RVA: 0x00096A28 File Offset: 0x00094C28
+	// Token: 0x1700166C RID: 5740
+	// (get) Token: 0x06003D20 RID: 15648 RVA: 0x000F7E8C File Offset: 0x000F608C
 	public override bool SpawnedAsEasyRoom
 	{
 		get
@@ -50,8 +50,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001106 RID: 4358
-	// (get) Token: 0x06002C78 RID: 11384 RVA: 0x00096A85 File Offset: 0x00094C85
+	// Token: 0x1700166D RID: 5741
+	// (get) Token: 0x06003D21 RID: 15649 RVA: 0x00021CE6 File Offset: 0x0001FEE6
 	public int LevelOverride
 	{
 		get
@@ -60,8 +60,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001107 RID: 4359
-	// (get) Token: 0x06002C79 RID: 11385 RVA: 0x00096A8D File Offset: 0x00094C8D
+	// Token: 0x1700166E RID: 5742
+	// (get) Token: 0x06003D22 RID: 15650 RVA: 0x00021CEE File Offset: 0x0001FEEE
 	public override BiomeArtData BiomeArtDataOverride
 	{
 		get
@@ -70,8 +70,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001108 RID: 4360
-	// (get) Token: 0x06002C7A RID: 11386 RVA: 0x00096A95 File Offset: 0x00094C95
+	// Token: 0x1700166F RID: 5743
+	// (get) Token: 0x06003D23 RID: 15651 RVA: 0x00021CF6 File Offset: 0x0001FEF6
 	public BiomeType AppearanceOverride
 	{
 		get
@@ -80,8 +80,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001109 RID: 4361
-	// (get) Token: 0x06002C7B RID: 11387 RVA: 0x00096AA0 File Offset: 0x00094CA0
+	// Token: 0x17001670 RID: 5744
+	// (get) Token: 0x06003D24 RID: 15652 RVA: 0x000F7EEC File Offset: 0x000F60EC
 	public override Bounds Bounds
 	{
 		get
@@ -101,9 +101,9 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700110A RID: 4362
-	// (get) Token: 0x06002C7C RID: 11388 RVA: 0x00096BBE File Offset: 0x00094DBE
-	// (set) Token: 0x06002C7D RID: 11389 RVA: 0x00096BC6 File Offset: 0x00094DC6
+	// Token: 0x17001671 RID: 5745
+	// (get) Token: 0x06003D25 RID: 15653 RVA: 0x00021CFE File Offset: 0x0001FEFE
+	// (set) Token: 0x06003D26 RID: 15654 RVA: 0x00021D06 File Offset: 0x0001FF06
 	public int RoomNumber
 	{
 		get
@@ -116,8 +116,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700110B RID: 4363
-	// (get) Token: 0x06002C7E RID: 11390 RVA: 0x00096BCF File Offset: 0x00094DCF
+	// Token: 0x17001672 RID: 5746
+	// (get) Token: 0x06003D27 RID: 15655 RVA: 0x00021D0F File Offset: 0x0001FF0F
 	public bool CanFlip
 	{
 		get
@@ -126,9 +126,9 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700110C RID: 4364
-	// (get) Token: 0x06002C7F RID: 11391 RVA: 0x00096BD7 File Offset: 0x00094DD7
-	// (set) Token: 0x06002C80 RID: 11392 RVA: 0x00096BDF File Offset: 0x00094DDF
+	// Token: 0x17001673 RID: 5747
+	// (get) Token: 0x06003D28 RID: 15656 RVA: 0x00021D17 File Offset: 0x0001FF17
+	// (set) Token: 0x06003D29 RID: 15657 RVA: 0x00021D1F File Offset: 0x0001FF1F
 	public bool CanMerge
 	{
 		get
@@ -141,8 +141,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700110D RID: 4365
-	// (get) Token: 0x06002C81 RID: 11393 RVA: 0x00096BE8 File Offset: 0x00094DE8
+	// Token: 0x17001674 RID: 5748
+	// (get) Token: 0x06003D2A RID: 15658 RVA: 0x000F800C File Offset: 0x000F620C
 	public Vector2 Coordinates
 	{
 		get
@@ -152,8 +152,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700110E RID: 4366
-	// (get) Token: 0x06002C82 RID: 11394 RVA: 0x00096C43 File Offset: 0x00094E43
+	// Token: 0x17001675 RID: 5749
+	// (get) Token: 0x06003D2B RID: 15659 RVA: 0x00021D28 File Offset: 0x0001FF28
 	public override bool DisableRoomLetterBoxing
 	{
 		get
@@ -162,8 +162,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700110F RID: 4367
-	// (get) Token: 0x06002C83 RID: 11395 RVA: 0x00096C4B File Offset: 0x00094E4B
+	// Token: 0x17001676 RID: 5750
+	// (get) Token: 0x06003D2C RID: 15660 RVA: 0x00021D30 File Offset: 0x0001FF30
 	public override bool DisableRoomSaving
 	{
 		get
@@ -172,8 +172,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001110 RID: 4368
-	// (get) Token: 0x06002C84 RID: 11396 RVA: 0x00096C53 File Offset: 0x00094E53
+	// Token: 0x17001677 RID: 5751
+	// (get) Token: 0x06003D2D RID: 15661 RVA: 0x00021D38 File Offset: 0x0001FF38
 	public GlobalTeleporterController GlobalTeleporter
 	{
 		get
@@ -187,14 +187,14 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001111 RID: 4369
-	// (get) Token: 0x06002C85 RID: 11397 RVA: 0x00096C84 File Offset: 0x00094E84
-	// (set) Token: 0x06002C86 RID: 11398 RVA: 0x00096C8C File Offset: 0x00094E8C
+	// Token: 0x17001678 RID: 5752
+	// (get) Token: 0x06003D2E RID: 15662 RVA: 0x00021D69 File Offset: 0x0001FF69
+	// (set) Token: 0x06003D2F RID: 15663 RVA: 0x00021D71 File Offset: 0x0001FF71
 	public GridPointManager GridPointManager { get; private set; }
 
-	// Token: 0x17001112 RID: 4370
-	// (get) Token: 0x06002C87 RID: 11399 RVA: 0x00096C95 File Offset: 0x00094E95
-	// (set) Token: 0x06002C88 RID: 11400 RVA: 0x00096C9D File Offset: 0x00094E9D
+	// Token: 0x17001679 RID: 5753
+	// (get) Token: 0x06003D30 RID: 15664 RVA: 0x00021D7A File Offset: 0x0001FF7A
+	// (set) Token: 0x06003D31 RID: 15665 RVA: 0x00021D82 File Offset: 0x0001FF82
 	public bool IsDirty
 	{
 		get
@@ -207,18 +207,18 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001113 RID: 4371
-	// (get) Token: 0x06002C89 RID: 11401 RVA: 0x00096CA6 File Offset: 0x00094EA6
-	// (set) Token: 0x06002C8A RID: 11402 RVA: 0x00096CAE File Offset: 0x00094EAE
+	// Token: 0x1700167A RID: 5754
+	// (get) Token: 0x06003D32 RID: 15666 RVA: 0x00021D8B File Offset: 0x0001FF8B
+	// (set) Token: 0x06003D33 RID: 15667 RVA: 0x00021D93 File Offset: 0x0001FF93
 	public bool IsInitialised { get; private set; }
 
-	// Token: 0x17001114 RID: 4372
-	// (get) Token: 0x06002C8B RID: 11403 RVA: 0x00096CB7 File Offset: 0x00094EB7
-	// (set) Token: 0x06002C8C RID: 11404 RVA: 0x00096CBF File Offset: 0x00094EBF
+	// Token: 0x1700167B RID: 5755
+	// (get) Token: 0x06003D34 RID: 15668 RVA: 0x00021D9C File Offset: 0x0001FF9C
+	// (set) Token: 0x06003D35 RID: 15669 RVA: 0x00021DA4 File Offset: 0x0001FFA4
 	public bool IsMirrored { get; private set; }
 
-	// Token: 0x17001115 RID: 4373
-	// (get) Token: 0x06002C8D RID: 11405 RVA: 0x00096CC8 File Offset: 0x00094EC8
+	// Token: 0x1700167C RID: 5756
+	// (get) Token: 0x06003D36 RID: 15670 RVA: 0x000F8068 File Offset: 0x000F6268
 	public bool IsStandardSize
 	{
 		get
@@ -227,8 +227,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001116 RID: 4374
-	// (get) Token: 0x06002C8E RID: 11406 RVA: 0x00096CFE File Offset: 0x00094EFE
+	// Token: 0x1700167D RID: 5757
+	// (get) Token: 0x06003D37 RID: 15671 RVA: 0x00021DAD File Offset: 0x0001FFAD
 	public override int Level
 	{
 		get
@@ -237,8 +237,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001117 RID: 4375
-	// (get) Token: 0x06002C8F RID: 11407 RVA: 0x00096D06 File Offset: 0x00094F06
+	// Token: 0x1700167E RID: 5758
+	// (get) Token: 0x06003D38 RID: 15672 RVA: 0x00021DB5 File Offset: 0x0001FFB5
 	public PlayerRoomSpawn PlayerSpawn
 	{
 		get
@@ -251,14 +251,14 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001118 RID: 4376
-	// (get) Token: 0x06002C90 RID: 11408 RVA: 0x00096D28 File Offset: 0x00094F28
-	// (set) Token: 0x06002C91 RID: 11409 RVA: 0x00096D30 File Offset: 0x00094F30
+	// Token: 0x1700167F RID: 5759
+	// (get) Token: 0x06003D39 RID: 15673 RVA: 0x00021DD7 File Offset: 0x0001FFD7
+	// (set) Token: 0x06003D3A RID: 15674 RVA: 0x00021DDF File Offset: 0x0001FFDF
 	public RoomEnemyManager RoomEnemyManager { get; private set; }
 
-	// Token: 0x17001119 RID: 4377
-	// (get) Token: 0x06002C92 RID: 11410 RVA: 0x00096D39 File Offset: 0x00094F39
-	// (set) Token: 0x06002C93 RID: 11411 RVA: 0x00096D41 File Offset: 0x00094F41
+	// Token: 0x17001680 RID: 5760
+	// (get) Token: 0x06003D3B RID: 15675 RVA: 0x00021DE8 File Offset: 0x0001FFE8
+	// (set) Token: 0x06003D3C RID: 15676 RVA: 0x00021DF0 File Offset: 0x0001FFF0
 	public RoomID RoomID
 	{
 		get
@@ -271,8 +271,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700111A RID: 4378
-	// (get) Token: 0x06002C94 RID: 11412 RVA: 0x00096D4C File Offset: 0x00094F4C
+	// Token: 0x17001681 RID: 5761
+	// (get) Token: 0x06003D3D RID: 15677 RVA: 0x000F80A0 File Offset: 0x000F62A0
 	public Vector2Int Size
 	{
 		get
@@ -291,8 +291,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700111B RID: 4379
-	// (get) Token: 0x06002C95 RID: 11413 RVA: 0x00096DB2 File Offset: 0x00094FB2
+	// Token: 0x17001682 RID: 5762
+	// (get) Token: 0x06003D3E RID: 15678 RVA: 0x00021DF9 File Offset: 0x0001FFF9
 	public override SpecialRoomType SpecialRoomType
 	{
 		get
@@ -301,9 +301,9 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700111C RID: 4380
-	// (get) Token: 0x06002C96 RID: 11414 RVA: 0x00096DC4 File Offset: 0x00094FC4
-	// (set) Token: 0x06002C97 RID: 11415 RVA: 0x00096DCC File Offset: 0x00094FCC
+	// Token: 0x17001683 RID: 5763
+	// (get) Token: 0x06003D3F RID: 15679 RVA: 0x00021E0B File Offset: 0x0002000B
+	// (set) Token: 0x06003D40 RID: 15680 RVA: 0x00021E13 File Offset: 0x00020013
 	public Vector2Int UnitDimensions
 	{
 		get
@@ -316,9 +316,9 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700111D RID: 4381
-	// (get) Token: 0x06002C98 RID: 11416 RVA: 0x00096DD5 File Offset: 0x00094FD5
-	// (set) Token: 0x06002C99 RID: 11417 RVA: 0x00096E05 File Offset: 0x00095005
+	// Token: 0x17001684 RID: 5764
+	// (get) Token: 0x06003D41 RID: 15681 RVA: 0x00021E1C File Offset: 0x0002001C
+	// (set) Token: 0x06003D42 RID: 15682 RVA: 0x00021E4C File Offset: 0x0002004C
 	public GameObject DoorsLocation
 	{
 		get
@@ -336,9 +336,9 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700111E RID: 4382
-	// (get) Token: 0x06002C9A RID: 11418 RVA: 0x00096E20 File Offset: 0x00095020
-	// (set) Token: 0x06002C9B RID: 11419 RVA: 0x00096E7B File Offset: 0x0009507B
+	// Token: 0x17001685 RID: 5765
+	// (get) Token: 0x06003D43 RID: 15683 RVA: 0x000F8108 File Offset: 0x000F6308
+	// (set) Token: 0x06003D44 RID: 15684 RVA: 0x00021E66 File Offset: 0x00020066
 	public GameObject WallsLocation
 	{
 		get
@@ -361,8 +361,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x1700111F RID: 4383
-	// (get) Token: 0x06002C9C RID: 11420 RVA: 0x00096E98 File Offset: 0x00095098
+	// Token: 0x17001686 RID: 5766
+	// (get) Token: 0x06003D45 RID: 15685 RVA: 0x000F8164 File Offset: 0x000F6364
 	public Transform EnemyLocation
 	{
 		get
@@ -382,8 +382,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001120 RID: 4384
-	// (get) Token: 0x06002C9D RID: 11421 RVA: 0x00096F1C File Offset: 0x0009511C
+	// Token: 0x17001687 RID: 5767
+	// (get) Token: 0x06003D46 RID: 15686 RVA: 0x000F81E8 File Offset: 0x000F63E8
 	public Transform OneWayLocation
 	{
 		get
@@ -407,8 +407,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001121 RID: 4385
-	// (get) Token: 0x06002C9E RID: 11422 RVA: 0x00096FA7 File Offset: 0x000951A7
+	// Token: 0x17001688 RID: 5768
+	// (get) Token: 0x06003D47 RID: 15687 RVA: 0x00021E80 File Offset: 0x00020080
 	public override bool AllowItemDrops
 	{
 		get
@@ -417,8 +417,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001122 RID: 4386
-	// (get) Token: 0x06002C9F RID: 11423 RVA: 0x00096FAF File Offset: 0x000951AF
+	// Token: 0x17001689 RID: 5769
+	// (get) Token: 0x06003D48 RID: 15688 RVA: 0x00021E88 File Offset: 0x00020088
 	public bool IsEasy
 	{
 		get
@@ -427,8 +427,8 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17001123 RID: 4387
-	// (get) Token: 0x06002CA0 RID: 11424 RVA: 0x00096FB7 File Offset: 0x000951B7
+	// Token: 0x1700168A RID: 5770
+	// (get) Token: 0x06003D49 RID: 15689 RVA: 0x00021E90 File Offset: 0x00020090
 	public bool DisableOneWaysAtBottomDoors
 	{
 		get
@@ -437,7 +437,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002CA1 RID: 11425 RVA: 0x00096FC0 File Offset: 0x000951C0
+	// Token: 0x06003D4A RID: 15690 RVA: 0x000F8274 File Offset: 0x000F6474
 	private void Start()
 	{
 		if (Application.isPlaying)
@@ -449,7 +449,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002CA2 RID: 11426 RVA: 0x0009701C File Offset: 0x0009521C
+	// Token: 0x06003D4B RID: 15691 RVA: 0x000F82D0 File Offset: 0x000F64D0
 	protected override void OnDestroy()
 	{
 		if (Application.isPlaying && this.Doors != null)
@@ -462,12 +462,12 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		base.OnDestroy();
 	}
 
-	// Token: 0x06002CA3 RID: 11427 RVA: 0x00097068 File Offset: 0x00095268
+	// Token: 0x06003D4C RID: 15692 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void OnDrawGizmos()
 	{
 	}
 
-	// Token: 0x06002CA4 RID: 11428 RVA: 0x0009706C File Offset: 0x0009526C
+	// Token: 0x06003D4D RID: 15693 RVA: 0x000F831C File Offset: 0x000F651C
 	public void Initialise(BiomeType biome, RoomType roomType, int roomNumber = -1)
 	{
 		if (this.GridPointManager != null && this.GridPointManager.AppearanceOverride != BiomeType.None)
@@ -511,14 +511,14 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		this.IsInitialised = true;
 	}
 
-	// Token: 0x06002CA5 RID: 11429 RVA: 0x0009717B File Offset: 0x0009537B
+	// Token: 0x06003D4E RID: 15694 RVA: 0x00021E98 File Offset: 0x00020098
 	public void Initialise(GridPointManager gridPointManager)
 	{
 		this.GridPointManager = gridPointManager;
 		this.Initialise(gridPointManager.Biome, gridPointManager.RoomType, gridPointManager.RoomNumber);
 	}
 
-	// Token: 0x06002CA6 RID: 11430 RVA: 0x0009719C File Offset: 0x0009539C
+	// Token: 0x06003D4F RID: 15695 RVA: 0x000F842C File Offset: 0x000F662C
 	private void AddConnectedRoom(BaseRoom room)
 	{
 		if (room == null)
@@ -532,7 +532,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002CA7 RID: 11431 RVA: 0x000971EC File Offset: 0x000953EC
+	// Token: 0x06003D50 RID: 15696 RVA: 0x000F847C File Offset: 0x000F667C
 	private void ApplyBiomeArtData(BiomeArtData biomeArtData)
 	{
 		Renderer component = base.GetComponent<Renderer>();
@@ -559,7 +559,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		this.UpdateFerr2DSetting(base.TerrainManager.OneWays, settings2);
 	}
 
-	// Token: 0x06002CA8 RID: 11432 RVA: 0x00097280 File Offset: 0x00095480
+	// Token: 0x06003D51 RID: 15697 RVA: 0x000F8510 File Offset: 0x000F6710
 	public void CalculateRoomLevel()
 	{
 		int roomNumber = this.RoomNumber;
@@ -592,7 +592,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		this.SetLevel(num);
 	}
 
-	// Token: 0x06002CA9 RID: 11433 RVA: 0x0009736C File Offset: 0x0009556C
+	// Token: 0x06003D52 RID: 15698 RVA: 0x000F85FC File Offset: 0x000F67FC
 	public void InjectLevel()
 	{
 		foreach (ILevelConsumer levelConsumer in base.GetComponentsInChildren<ILevelConsumer>())
@@ -604,19 +604,19 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002CAA RID: 11434 RVA: 0x000973A2 File Offset: 0x000955A2
+	// Token: 0x06003D53 RID: 15699 RVA: 0x00021EB9 File Offset: 0x000200B9
 	public void MoveToCoordinates(Vector2 coords)
 	{
 		base.transform.position = GridController.GetWorldPositionFromRoomCoordinates(coords, this.Size);
 	}
 
-	// Token: 0x06002CAB RID: 11435 RVA: 0x000973C0 File Offset: 0x000955C0
+	// Token: 0x06003D54 RID: 15700 RVA: 0x00021ED7 File Offset: 0x000200D7
 	public void OnMerge()
 	{
 		this.m_roomMergedRelay.Dispatch(this, EventArgs.Empty);
 	}
 
-	// Token: 0x06002CAC RID: 11436 RVA: 0x000973D4 File Offset: 0x000955D4
+	// Token: 0x06003D55 RID: 15701 RVA: 0x000F8634 File Offset: 0x000F6834
 	private void UpdateVisualAppearance()
 	{
 		BiomeType terrainBiomeType = ArtUtility.GetTerrainBiomeType(this);
@@ -628,7 +628,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		this.ApplyBiomeArtData(biomeArtData);
 	}
 
-	// Token: 0x06002CAD RID: 11437 RVA: 0x00097408 File Offset: 0x00095608
+	// Token: 0x06003D56 RID: 15702 RVA: 0x000F8668 File Offset: 0x000F6868
 	private void UpdateFerr2DSetting(IEnumerable<Ferr2DT_PathTerrain> ferr2DObjects, Ferr2DSettings settings)
 	{
 		if (!settings.Master)
@@ -656,7 +656,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002CAE RID: 11438 RVA: 0x000974F0 File Offset: 0x000956F0
+	// Token: 0x06003D57 RID: 15703 RVA: 0x000F8750 File Offset: 0x000F6950
 	private void AddDoorEventHandlers(Door door)
 	{
 		door.DoorDestroyedRelay.AddListener(new Action<object, EventArgs>(this.OnDoorDestroyed), false);
@@ -665,7 +665,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		door.CloseRelay.AddListener(new Action<object, DoorEventArgs>(this.OnDoorClose), false);
 	}
 
-	// Token: 0x06002CAF RID: 11439 RVA: 0x00097564 File Offset: 0x00095764
+	// Token: 0x06003D58 RID: 15704 RVA: 0x000F87C4 File Offset: 0x000F69C4
 	private void RemoveDoor(Door door)
 	{
 		this.Doors.Remove(door);
@@ -675,7 +675,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		door.CloseRelay.RemoveListener(new Action<object, DoorEventArgs>(this.OnDoorClose));
 	}
 
-	// Token: 0x06002CB0 RID: 11440 RVA: 0x000975DE File Offset: 0x000957DE
+	// Token: 0x06003D59 RID: 15705 RVA: 0x00021EEA File Offset: 0x000200EA
 	protected virtual void DispatchRoomConnectedRelay(BaseRoom room)
 	{
 		if (this.m_roomConnectedEventArgs == null)
@@ -689,7 +689,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		this.m_roomConnectedRelay.Dispatch(this, this.m_roomConnectedEventArgs);
 	}
 
-	// Token: 0x06002CB1 RID: 11441 RVA: 0x00097618 File Offset: 0x00095818
+	// Token: 0x06003D5A RID: 15706 RVA: 0x000F8840 File Offset: 0x000F6A40
 	private void OnDoorClose(object sender, DoorEventArgs eventArgs)
 	{
 		Door door = eventArgs.Door;
@@ -697,7 +697,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		this.m_doorClosedRelay.Dispatch(this, EventArgs.Empty);
 	}
 
-	// Token: 0x06002CB2 RID: 11442 RVA: 0x00097644 File Offset: 0x00095844
+	// Token: 0x06003D5B RID: 15707 RVA: 0x000F886C File Offset: 0x000F6A6C
 	private void OnDoorConnect(object sender, DoorConnectEventArgs eventArgs)
 	{
 		if (!(eventArgs.DoorB != null))
@@ -720,14 +720,14 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		});
 	}
 
-	// Token: 0x06002CB3 RID: 11443 RVA: 0x000976E8 File Offset: 0x000958E8
+	// Token: 0x06003D5C RID: 15708 RVA: 0x000F8910 File Offset: 0x000F6B10
 	private void OnDoorDestroyed(object sender, EventArgs eventArgs)
 	{
 		Door door = sender as Door;
 		this.RemoveDoor(door);
 	}
 
-	// Token: 0x06002CB4 RID: 11444 RVA: 0x00097704 File Offset: 0x00095904
+	// Token: 0x06003D5D RID: 15709 RVA: 0x000F892C File Offset: 0x000F6B2C
 	protected override int GetDecoSeed()
 	{
 		int result = -1;
@@ -738,7 +738,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		return result;
 	}
 
-	// Token: 0x06002CB5 RID: 11445 RVA: 0x00097728 File Offset: 0x00095928
+	// Token: 0x06003D5E RID: 15710 RVA: 0x000F8950 File Offset: 0x000F6B50
 	protected override int GetSpecialPropSeed()
 	{
 		int result = -1;
@@ -749,7 +749,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		return result;
 	}
 
-	// Token: 0x06002CB6 RID: 11446 RVA: 0x0009774C File Offset: 0x0009594C
+	// Token: 0x06003D5F RID: 15711 RVA: 0x000F8974 File Offset: 0x000F6B74
 	public Door GetDoor(RoomSide side, int doorNumber)
 	{
 		Door result = null;
@@ -768,7 +768,7 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		return result;
 	}
 
-	// Token: 0x06002CB7 RID: 11447 RVA: 0x00097798 File Offset: 0x00095998
+	// Token: 0x06003D60 RID: 15712 RVA: 0x000F89C0 File Offset: 0x000F6BC0
 	public List<Door> GetDoorsOnSide(RoomSide side)
 	{
 		if (side != RoomSide.Any)
@@ -789,13 +789,13 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		return this.Doors;
 	}
 
-	// Token: 0x06002CB8 RID: 11448 RVA: 0x000977F5 File Offset: 0x000959F5
+	// Token: 0x06003D61 RID: 15713 RVA: 0x00021F22 File Offset: 0x00020122
 	public List<Door> GetDoorsOnSideCopy(RoomSide side)
 	{
 		return this.GetDoorsOnSide(side).ToList<Door>();
 	}
 
-	// Token: 0x06002CB9 RID: 11449 RVA: 0x00097803 File Offset: 0x00095A03
+	// Token: 0x06003D62 RID: 15714 RVA: 0x00021F30 File Offset: 0x00020130
 	public void SetCanMerge(bool canMerge)
 	{
 		if (this.CanMerge != canMerge)
@@ -804,140 +804,140 @@ public class Room : BaseRoom, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002CBA RID: 11450 RVA: 0x00097815 File Offset: 0x00095A15
+	// Token: 0x06003D63 RID: 15715 RVA: 0x00021F42 File Offset: 0x00020142
 	public void SetIsMirrored(bool isMirrored)
 	{
 		this.IsMirrored = isMirrored;
 	}
 
-	// Token: 0x06002CBB RID: 11451 RVA: 0x0009781E File Offset: 0x00095A1E
+	// Token: 0x06003D64 RID: 15716 RVA: 0x00021F4B File Offset: 0x0002014B
 	public override void SetLevel(int value)
 	{
 		this.m_level = value;
 		this.InjectLevel();
 	}
 
-	// Token: 0x06002CBC RID: 11452 RVA: 0x0009782D File Offset: 0x00095A2D
+	// Token: 0x06003D65 RID: 15717 RVA: 0x00021F5A File Offset: 0x0002015A
 	public void SetUnitDimensions(int unitWidth, int unitHeight)
 	{
 		this.UnitDimensions = new Vector2Int(unitWidth, unitHeight);
 	}
 
-	// Token: 0x06002CBD RID: 11453 RVA: 0x0009783C File Offset: 0x00095A3C
+	// Token: 0x06003D66 RID: 15718 RVA: 0x00021F69 File Offset: 0x00020169
 	public void ForceBiomeArtDataOverride(BiomeArtData biomeArtDataOverride)
 	{
 		this.m_biomeArtDataOverride = biomeArtDataOverride;
 	}
 
-	// Token: 0x06002CBE RID: 11454 RVA: 0x00097845 File Offset: 0x00095A45
+	// Token: 0x06003D67 RID: 15719 RVA: 0x00021F72 File Offset: 0x00020172
 	public void ResetBounds()
 	{
 		this.m_bounds = default(Bounds);
 	}
 
-	// Token: 0x06002CC1 RID: 11457 RVA: 0x000978D4 File Offset: 0x00095AD4
+	// Token: 0x06003D6A RID: 15722 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISummoner.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040023F2 RID: 9202
+	// Token: 0x04003053 RID: 12371
 	[SerializeField]
 	private bool m_canMerge = true;
 
-	// Token: 0x040023F3 RID: 9203
+	// Token: 0x04003054 RID: 12372
 	[SerializeField]
 	private bool m_canFlip = true;
 
-	// Token: 0x040023F4 RID: 9204
+	// Token: 0x04003055 RID: 12373
 	[SerializeField]
 	private bool m_disableRoomSaving;
 
-	// Token: 0x040023F5 RID: 9205
+	// Token: 0x04003056 RID: 12374
 	[SerializeField]
 	private bool m_disableRoomLetteringBoxing;
 
-	// Token: 0x040023F6 RID: 9206
+	// Token: 0x04003057 RID: 12375
 	[SerializeField]
 	private bool m_disableOneWaysAtBottomDoors;
 
-	// Token: 0x040023F7 RID: 9207
+	// Token: 0x04003058 RID: 12376
 	[SerializeField]
 	private BiomeType m_appearanceOverride;
 
-	// Token: 0x040023F8 RID: 9208
+	// Token: 0x04003059 RID: 12377
 	[SerializeField]
 	private BiomeArtData m_biomeArtDataOverride;
 
-	// Token: 0x040023F9 RID: 9209
+	// Token: 0x0400305A RID: 12378
 	[SerializeField]
 	private int m_levelOverride = -1;
 
-	// Token: 0x040023FA RID: 9210
+	// Token: 0x0400305B RID: 12379
 	[SerializeField]
 	private bool m_allowItemDrops = true;
 
-	// Token: 0x040023FB RID: 9211
+	// Token: 0x0400305C RID: 12380
 	[SerializeField]
 	private bool m_isEasy;
 
-	// Token: 0x040023FC RID: 9212
+	// Token: 0x0400305D RID: 12381
 	[SerializeField]
 	[HideInInspector]
 	private Vector2Int m_unitDimensions = new Vector2Int(32, 18);
 
-	// Token: 0x040023FD RID: 9213
+	// Token: 0x0400305E RID: 12382
 	[SerializeField]
 	[HideInInspector]
 	private RoomID m_roomID;
 
-	// Token: 0x040023FE RID: 9214
+	// Token: 0x0400305F RID: 12383
 	[SerializeField]
 	[HideInInspector]
 	private bool m_isDirty = true;
 
-	// Token: 0x040023FF RID: 9215
+	// Token: 0x04003060 RID: 12384
 	private Bounds m_bounds;
 
-	// Token: 0x04002400 RID: 9216
+	// Token: 0x04003061 RID: 12385
 	private bool m_hasSearchedForGlobalTeleporter;
 
-	// Token: 0x04002401 RID: 9217
+	// Token: 0x04003062 RID: 12386
 	private GlobalTeleporterController m_globalTeleporter;
 
-	// Token: 0x04002402 RID: 9218
+	// Token: 0x04003063 RID: 12387
 	private PlayerRoomSpawn m_spawn;
 
-	// Token: 0x04002403 RID: 9219
+	// Token: 0x04003064 RID: 12388
 	private int m_roomNumber = -1;
 
-	// Token: 0x04002404 RID: 9220
+	// Token: 0x04003065 RID: 12389
 	protected GameObject m_doorsLocation;
 
-	// Token: 0x04002405 RID: 9221
+	// Token: 0x04003066 RID: 12390
 	protected GameObject m_walls;
 
-	// Token: 0x04002406 RID: 9222
+	// Token: 0x04003067 RID: 12391
 	protected Transform m_enemies;
 
-	// Token: 0x04002407 RID: 9223
+	// Token: 0x04003068 RID: 12392
 	private int m_level = -1;
 
-	// Token: 0x04002408 RID: 9224
+	// Token: 0x04003069 RID: 12393
 	protected Transform m_oneWayLocation;
 
-	// Token: 0x04002409 RID: 9225
+	// Token: 0x0400306A RID: 12394
 	private RoomConnectedEventArgs m_roomConnectedEventArgs;
 
-	// Token: 0x0400240A RID: 9226
+	// Token: 0x0400306B RID: 12395
 	protected Relay<object, EventArgs> m_doorClosedRelay = new Relay<object, EventArgs>();
 
-	// Token: 0x0400240B RID: 9227
+	// Token: 0x0400306C RID: 12396
 	protected Relay<object, RoomConnectedEventArgs> m_roomConnectedRelay = new Relay<object, RoomConnectedEventArgs>();
 
-	// Token: 0x0400240C RID: 9228
+	// Token: 0x0400306D RID: 12397
 	protected Relay<object, EventArgs> m_roomMergedRelay = new Relay<object, EventArgs>();
 
-	// Token: 0x04002411 RID: 9233
+	// Token: 0x04003072 RID: 12402
 	private static List<Door> m_doorListHelper_STATIC = new List<Door>();
 }

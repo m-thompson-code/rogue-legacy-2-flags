@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000821 RID: 2081
+// Token: 0x02000CF8 RID: 3320
 public class ZeroOutRotation : MonoBehaviour
 {
-	// Token: 0x060044EC RID: 17644 RVA: 0x000F50CA File Offset: 0x000F32CA
+	// Token: 0x06005EB8 RID: 24248 RVA: 0x00034392 File Offset: 0x00032592
 	private IEnumerator Start()
 	{
 		Prop prop = base.GetComponentInParent<Prop>();
@@ -24,7 +24,7 @@ public class ZeroOutRotation : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060044ED RID: 17645 RVA: 0x000F50DC File Offset: 0x000F32DC
+	// Token: 0x06005EB9 RID: 24249 RVA: 0x00162C4C File Offset: 0x00160E4C
 	public void ZeroOut()
 	{
 		base.gameObject.transform.eulerAngles = Vector3.zero;
@@ -36,7 +36,7 @@ public class ZeroOutRotation : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060044EE RID: 17646 RVA: 0x000F5180 File Offset: 0x000F3380
+	// Token: 0x06005EBA RID: 24250 RVA: 0x00162CF0 File Offset: 0x00160EF0
 	public void AverageNonUniformScaling()
 	{
 		Transform parent = base.transform.parent;
@@ -46,7 +46,7 @@ public class ZeroOutRotation : MonoBehaviour
 		base.transform.SetParent(parent);
 	}
 
-	// Token: 0x04003AC6 RID: 15046
+	// Token: 0x04004DCA RID: 19914
 	[SerializeField]
 	private bool m_counterNonUniformScaling;
 }

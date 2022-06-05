@@ -3,26 +3,26 @@ using UnityEngine;
 
 namespace Spawn
 {
-	// Token: 0x02000895 RID: 2197
+	// Token: 0x02000DC2 RID: 3522
 	[CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Spawn Controller Data/Prop")]
 	public class PropSpawnControllerData : ScriptableObject
 	{
-		// Token: 0x04003CD6 RID: 15574
+		// Token: 0x04005104 RID: 20740
 		public CameraLayer CameraLayer = CameraLayer.Game;
 
-		// Token: 0x04003CD7 RID: 15575
+		// Token: 0x04005105 RID: 20741
 		public int SubLayer;
 
-		// Token: 0x04003CD8 RID: 15576
+		// Token: 0x04005106 RID: 20742
 		public int SubLayerMod;
 
-		// Token: 0x04003CD9 RID: 15577
+		// Token: 0x04005107 RID: 20743
 		public BiomePropsEntry[] PropsPerBiome;
 
-		// Token: 0x04003CDA RID: 15578
+		// Token: 0x04005108 RID: 20744
 		public Prop[] DefaultProps;
 
-		// Token: 0x04003CDB RID: 15579
+		// Token: 0x04005109 RID: 20745
 		public PropTags Tags;
 	}
 }

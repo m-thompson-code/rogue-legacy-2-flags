@@ -2,16 +2,16 @@
 
 namespace Unity.Cloud.UserReporting
 {
-	// Token: 0x02000838 RID: 2104
+	// Token: 0x02000D1E RID: 3358
 	public enum UserReportAppearanceHint
 	{
-		// Token: 0x04003B34 RID: 15156
+		// Token: 0x04004E75 RID: 20085
 		Normal,
-		// Token: 0x04003B35 RID: 15157
+		// Token: 0x04004E76 RID: 20086
 		Landscape,
-		// Token: 0x04003B36 RID: 15158
+		// Token: 0x04004E77 RID: 20087
 		Portrait,
-		// Token: 0x04003B37 RID: 15159
+		// Token: 0x04004E78 RID: 20088
 		Large
 	}
 }

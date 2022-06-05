@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006A1 RID: 1697
+// Token: 0x02000B3C RID: 2876
 public class MouseCursorManager : MonoBehaviour
 {
-	// Token: 0x1700155C RID: 5468
-	// (get) Token: 0x06003E08 RID: 15880 RVA: 0x000D95CF File Offset: 0x000D77CF
+	// Token: 0x17001D44 RID: 7492
+	// (get) Token: 0x060056FA RID: 22266 RVA: 0x0002F54D File Offset: 0x0002D74D
 	private static MouseCursorManager Instance
 	{
 		get
@@ -14,13 +14,13 @@ public class MouseCursorManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700155D RID: 5469
-	// (get) Token: 0x06003E09 RID: 15881 RVA: 0x000D95D6 File Offset: 0x000D77D6
-	// (set) Token: 0x06003E0A RID: 15882 RVA: 0x000D95DD File Offset: 0x000D77DD
+	// Token: 0x17001D45 RID: 7493
+	// (get) Token: 0x060056FB RID: 22267 RVA: 0x0002F554 File Offset: 0x0002D754
+	// (set) Token: 0x060056FC RID: 22268 RVA: 0x0002F55B File Offset: 0x0002D75B
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x1700155E RID: 5470
-	// (get) Token: 0x06003E0B RID: 15883 RVA: 0x000D95E5 File Offset: 0x000D77E5
+	// Token: 0x17001D46 RID: 7494
+	// (get) Token: 0x060056FD RID: 22269 RVA: 0x0002F563 File Offset: 0x0002D763
 	public static bool IsCursorVisible
 	{
 		get
@@ -29,7 +29,7 @@ public class MouseCursorManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E0C RID: 15884 RVA: 0x000D95F1 File Offset: 0x000D77F1
+	// Token: 0x060056FE RID: 22270 RVA: 0x0002F56F File Offset: 0x0002D76F
 	public static void SetCursorVisible(bool visible)
 	{
 		if (MouseCursorManager.Instance.m_cursorVisible != visible)
@@ -39,13 +39,13 @@ public class MouseCursorManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E0D RID: 15885 RVA: 0x000D9611 File Offset: 0x000D7811
+	// Token: 0x060056FF RID: 22271 RVA: 0x0002F58F File Offset: 0x0002D78F
 	public static void SetCursorType(CursorIconType cursorType)
 	{
 		Cursor.SetCursor(IconLibrary.GetCursorIconTexture(cursorType), Vector2.zero, CursorMode.Auto);
 	}
 
-	// Token: 0x06003E0E RID: 15886 RVA: 0x000D9624 File Offset: 0x000D7824
+	// Token: 0x06005700 RID: 22272 RVA: 0x0002F5A2 File Offset: 0x0002D7A2
 	private void Awake()
 	{
 		if (MouseCursorManager.m_cursorManager == null)
@@ -57,7 +57,7 @@ public class MouseCursorManager : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06003E0F RID: 15887 RVA: 0x000D964B File Offset: 0x000D784B
+	// Token: 0x06005701 RID: 22273 RVA: 0x0002F5C9 File Offset: 0x0002D7C9
 	private void Initialize()
 	{
 		MouseCursorManager.SetCursorType(CursorIconType.Standard);
@@ -65,9 +65,9 @@ public class MouseCursorManager : MonoBehaviour
 		MouseCursorManager.IsInitialized = true;
 	}
 
-	// Token: 0x04002E3E RID: 11838
+	// Token: 0x0400405B RID: 16475
 	private bool m_cursorVisible = true;
 
-	// Token: 0x04002E3F RID: 11839
+	// Token: 0x0400405C RID: 16476
 	private static MouseCursorManager m_cursorManager;
 }

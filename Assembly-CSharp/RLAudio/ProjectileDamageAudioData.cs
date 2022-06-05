@@ -2,11 +2,11 @@
 
 namespace RLAudio
 {
-	// Token: 0x0200090B RID: 2315
+	// Token: 0x02000E88 RID: 3720
 	public class ProjectileDamageAudioData : BaseDamageAudioData
 	{
-		// Token: 0x17001874 RID: 6260
-		// (get) Token: 0x06004BEC RID: 19436 RVA: 0x00110D6A File Offset: 0x0010EF6A
+		// Token: 0x1700216D RID: 8557
+		// (get) Token: 0x060068E7 RID: 26855 RVA: 0x0003A1B3 File Offset: 0x000383B3
 		public override string BreakableDamageAudioPath
 		{
 			get
@@ -19,8 +19,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001875 RID: 6261
-		// (get) Token: 0x06004BED RID: 19437 RVA: 0x00110D80 File Offset: 0x0010EF80
+		// Token: 0x1700216E RID: 8558
+		// (get) Token: 0x060068E8 RID: 26856 RVA: 0x0003A1C9 File Offset: 0x000383C9
 		public override string CharacterDamageAudioPath
 		{
 			get
@@ -33,7 +33,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BEE RID: 19438 RVA: 0x00110D98 File Offset: 0x0010EF98
+		// Token: 0x060068E9 RID: 26857 RVA: 0x00180F28 File Offset: 0x0017F128
 		private string GetProjectileName()
 		{
 			string text = base.name;
@@ -48,7 +48,7 @@ namespace RLAudio
 			return text;
 		}
 
-		// Token: 0x06004BEF RID: 19439 RVA: 0x00110DFC File Offset: 0x0010EFFC
+		// Token: 0x060068EA RID: 26858 RVA: 0x00180F8C File Offset: 0x0017F18C
 		private void SetAudioPaths()
 		{
 			this.m_arePathsSet = true;
@@ -60,13 +60,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003FF2 RID: 16370
+		// Token: 0x04005552 RID: 21842
 		private string m_characterDamageAudioPath;
 
-		// Token: 0x04003FF3 RID: 16371
+		// Token: 0x04005553 RID: 21843
 		private string m_breakableDamageAudioEventPath;
 
-		// Token: 0x04003FF4 RID: 16372
+		// Token: 0x04005554 RID: 21844
 		private bool m_arePathsSet;
 	}
 }

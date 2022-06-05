@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020003E2 RID: 994
+// Token: 0x02000682 RID: 1666
 public class StatusBarController : MonoBehaviour
 {
-	// Token: 0x06002493 RID: 9363 RVA: 0x00079D34 File Offset: 0x00077F34
+	// Token: 0x060032CF RID: 13007 RVA: 0x000DA01C File Offset: 0x000D821C
 	public bool HasActiveStatusBarEntry(StatusBarEntryType uiType)
 	{
 		foreach (StatusBarEntry statusBarEntry in this.m_activeStatusBarList)
@@ -18,7 +18,7 @@ public class StatusBarController : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06002494 RID: 9364 RVA: 0x00079D98 File Offset: 0x00077F98
+	// Token: 0x060032D0 RID: 13008 RVA: 0x000DA080 File Offset: 0x000D8280
 	public StatusBarEntry GetActiveStatusBarEntry(StatusBarEntryType uiType)
 	{
 		foreach (StatusBarEntry statusBarEntry in this.m_activeStatusBarList)
@@ -31,12 +31,12 @@ public class StatusBarController : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x17000ED6 RID: 3798
-	// (get) Token: 0x06002495 RID: 9365 RVA: 0x00079DFC File Offset: 0x00077FFC
-	// (set) Token: 0x06002496 RID: 9366 RVA: 0x00079E04 File Offset: 0x00078004
+	// Token: 0x17001375 RID: 4981
+	// (get) Token: 0x060032D1 RID: 13009 RVA: 0x0001BC67 File Offset: 0x00019E67
+	// (set) Token: 0x060032D2 RID: 13010 RVA: 0x0001BC6F File Offset: 0x00019E6F
 	public bool Active { get; set; } = true;
 
-	// Token: 0x06002497 RID: 9367 RVA: 0x00079E0D File Offset: 0x0007800D
+	// Token: 0x060032D3 RID: 13011 RVA: 0x0001BC78 File Offset: 0x00019E78
 	private void Awake()
 	{
 		this.m_canvas = base.GetComponent<Canvas>();
@@ -44,7 +44,7 @@ public class StatusBarController : MonoBehaviour
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06002498 RID: 9368 RVA: 0x00079E34 File Offset: 0x00078034
+	// Token: 0x060032D4 RID: 13012 RVA: 0x000DA0E4 File Offset: 0x000D82E4
 	public void ResetPositionAndScale(BaseCharacterController charController)
 	{
 		base.transform.localScale = Vector3.one;
@@ -63,7 +63,7 @@ public class StatusBarController : MonoBehaviour
 		base.transform.eulerAngles = Vector3.zero;
 	}
 
-	// Token: 0x06002499 RID: 9369 RVA: 0x00079F08 File Offset: 0x00078108
+	// Token: 0x060032D5 RID: 13013 RVA: 0x000DA1B8 File Offset: 0x000D83B8
 	private void OnDisable()
 	{
 		foreach (StatusBarEntry statusBarEntry in this.m_activeStatusBarList)
@@ -74,7 +74,7 @@ public class StatusBarController : MonoBehaviour
 		this.SetCanvasVisible(true);
 	}
 
-	// Token: 0x0600249A RID: 9370 RVA: 0x00079F70 File Offset: 0x00078170
+	// Token: 0x060032D6 RID: 13014 RVA: 0x0001BC9E File Offset: 0x00019E9E
 	public void ApplyUIEffect(StatusBarEntryType uiType)
 	{
 		if (!this.Active)
@@ -88,7 +88,7 @@ public class StatusBarController : MonoBehaviour
 		this.GetInitializedStatusBarEntry(uiType).StartNoCounterOrTimer(uiType);
 	}
 
-	// Token: 0x0600249B RID: 9371 RVA: 0x00079FA1 File Offset: 0x000781A1
+	// Token: 0x060032D7 RID: 13015 RVA: 0x0001BCCF File Offset: 0x00019ECF
 	public void ApplyUIEffect(StatusBarEntryType uiType, float duration)
 	{
 		if (!this.Active)
@@ -105,7 +105,7 @@ public class StatusBarController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600249C RID: 9372 RVA: 0x00079FE0 File Offset: 0x000781E0
+	// Token: 0x060032D8 RID: 13016 RVA: 0x0001BD0E File Offset: 0x00019F0E
 	public void ApplyUIEffect(StatusBarEntryType uiType, int maxCount, int currentCount)
 	{
 		if (!this.Active)
@@ -119,7 +119,7 @@ public class StatusBarController : MonoBehaviour
 		this.GetInitializedStatusBarEntry(uiType).StartCounter(uiType, maxCount, currentCount);
 	}
 
-	// Token: 0x0600249D RID: 9373 RVA: 0x0007A014 File Offset: 0x00078214
+	// Token: 0x060032D9 RID: 13017 RVA: 0x000DA220 File Offset: 0x000D8420
 	public void ApplyUIEffect(StatusBarEntryType uiType, float duration, int maxCount, int currentCount)
 	{
 		if (!this.Active)
@@ -136,7 +136,7 @@ public class StatusBarController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600249E RID: 9374 RVA: 0x0007A064 File Offset: 0x00078264
+	// Token: 0x060032DA RID: 13018 RVA: 0x000DA270 File Offset: 0x000D8470
 	private StatusBarEntry GetInitializedStatusBarEntry(StatusBarEntryType uiType)
 	{
 		StatusBarEntry statusBarEntry = this.GetActiveStatusBarEntry(uiType);
@@ -152,7 +152,7 @@ public class StatusBarController : MonoBehaviour
 		return statusBarEntry;
 	}
 
-	// Token: 0x0600249F RID: 9375 RVA: 0x0007A0C0 File Offset: 0x000782C0
+	// Token: 0x060032DB RID: 13019 RVA: 0x000DA2CC File Offset: 0x000D84CC
 	public void StopUIEffect(StatusBarEntryType uiType)
 	{
 		foreach (StatusBarEntry statusBarEntry in this.m_activeStatusBarList)
@@ -165,7 +165,7 @@ public class StatusBarController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060024A0 RID: 9376 RVA: 0x0007A130 File Offset: 0x00078330
+	// Token: 0x060032DC RID: 13020 RVA: 0x000DA33C File Offset: 0x000D853C
 	public void StopAllUIEffects()
 	{
 		foreach (StatusBarEntry statusBarEntry in this.m_activeStatusBarList)
@@ -178,7 +178,7 @@ public class StatusBarController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060024A1 RID: 9377 RVA: 0x0007A198 File Offset: 0x00078398
+	// Token: 0x060032DD RID: 13021 RVA: 0x000DA3A4 File Offset: 0x000D85A4
 	private void Update()
 	{
 		if (this.m_activeStatusBarList.Count > 0)
@@ -199,29 +199,29 @@ public class StatusBarController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060024A2 RID: 9378 RVA: 0x0007A21E File Offset: 0x0007841E
+	// Token: 0x060032DE RID: 13022 RVA: 0x0001BD41 File Offset: 0x00019F41
 	public void RemoveStatusBarEntry(StatusBarEntry statusBar)
 	{
 		this.m_activeStatusBarList.Remove(statusBar);
 	}
 
-	// Token: 0x060024A3 RID: 9379 RVA: 0x0007A22D File Offset: 0x0007842D
+	// Token: 0x060032DF RID: 13023 RVA: 0x0001BD50 File Offset: 0x00019F50
 	public void SetCanvasVisible(bool visible)
 	{
 		this.m_canvas.enabled = visible;
 	}
 
-	// Token: 0x04001F17 RID: 7959
+	// Token: 0x0400298F RID: 10639
 	[SerializeField]
 	private bool m_disableAutoPosition;
 
-	// Token: 0x04001F18 RID: 7960
+	// Token: 0x04002990 RID: 10640
 	[SerializeField]
 	private float m_baseScaleOverride;
 
-	// Token: 0x04001F19 RID: 7961
+	// Token: 0x04002991 RID: 10641
 	private Canvas m_canvas;
 
-	// Token: 0x04001F1A RID: 7962
+	// Token: 0x04002992 RID: 10642
 	private List<StatusBarEntry> m_activeStatusBarList = new List<StatusBarEntry>();
 }

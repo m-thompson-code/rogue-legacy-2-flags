@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000316 RID: 790
+// Token: 0x02000555 RID: 1365
 public class StatusEffectTester : MonoBehaviour
 {
-	// Token: 0x06001F4B RID: 8011 RVA: 0x0006468A File Offset: 0x0006288A
+	// Token: 0x06002BC8 RID: 11208 RVA: 0x000185D1 File Offset: 0x000167D1
 	private IEnumerator Start()
 	{
 		yield return new WaitForSeconds(0.5f);
@@ -13,7 +13,7 @@ public class StatusEffectTester : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001F4C RID: 8012 RVA: 0x0006469C File Offset: 0x0006289C
+	// Token: 0x06002BC9 RID: 11209 RVA: 0x000C4868 File Offset: 0x000C2A68
 	public void StartStatusEffect()
 	{
 		if (this.m_statusEffectToAdd == StatusEffectType.None)
@@ -37,7 +37,7 @@ public class StatusEffectTester : MonoBehaviour
 		playerController.StatusEffectController.StartStatusEffect(this.m_statusEffectToAdd, this.m_duration, caster);
 	}
 
-	// Token: 0x06001F4D RID: 8013 RVA: 0x00064760 File Offset: 0x00062960
+	// Token: 0x06002BCA RID: 11210 RVA: 0x000C492C File Offset: 0x000C2B2C
 	public void StopStatusEffect()
 	{
 		if (this.m_statusEffectToAdd == StatusEffectType.None)
@@ -59,15 +59,15 @@ public class StatusEffectTester : MonoBehaviour
 		playerController.StatusEffectController.StopStatusEffect(this.m_statusEffectToAdd, true);
 	}
 
-	// Token: 0x04001C0A RID: 7178
+	// Token: 0x04002514 RID: 9492
 	[SerializeField]
 	private StatusEffectType m_statusEffectToAdd;
 
-	// Token: 0x04001C0B RID: 7179
+	// Token: 0x04002515 RID: 9493
 	[SerializeField]
 	private bool m_applyOnlyToExpertEnemies;
 
-	// Token: 0x04001C0C RID: 7180
+	// Token: 0x04002516 RID: 9494
 	[SerializeField]
 	private float m_duration = 5f;
 }

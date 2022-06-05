@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Rewired.Demos
 {
-	// Token: 0x0200094A RID: 2378
+	// Token: 0x02000EE9 RID: 3817
 	[AddComponentMenu("")]
 	public class Bullet : MonoBehaviour
 	{
-		// Token: 0x06005094 RID: 20628 RVA: 0x0011C8E0 File Offset: 0x0011AAE0
+		// Token: 0x06006E6F RID: 28271 RVA: 0x0003CBC0 File Offset: 0x0003ADC0
 		private void Start()
 		{
 			if (this.lifeTime > 0f)
@@ -17,7 +17,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005095 RID: 20629 RVA: 0x0011C908 File Offset: 0x0011AB08
+		// Token: 0x06006E70 RID: 28272 RVA: 0x0003CBE8 File Offset: 0x0003ADE8
 		private void Update()
 		{
 			if (this.die && Time.time >= this.deathTime)
@@ -26,13 +26,13 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x040042E0 RID: 17120
+		// Token: 0x040058C5 RID: 22725
 		public float lifeTime = 3f;
 
-		// Token: 0x040042E1 RID: 17121
+		// Token: 0x040058C6 RID: 22726
 		private bool die;
 
-		// Token: 0x040042E2 RID: 17122
+		// Token: 0x040058C7 RID: 22727
 		private float deathTime;
 	}
 }

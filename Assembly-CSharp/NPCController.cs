@@ -5,11 +5,11 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x0200026A RID: 618
+// Token: 0x02000431 RID: 1073
 public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmitter
 {
-	// Token: 0x17000BD7 RID: 3031
-	// (get) Token: 0x0600188F RID: 6287 RVA: 0x0004CF4B File Offset: 0x0004B14B
+	// Token: 0x17000F16 RID: 3862
+	// (get) Token: 0x06002278 RID: 8824 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -18,8 +18,8 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x17000BD8 RID: 3032
-	// (get) Token: 0x06001890 RID: 6288 RVA: 0x0004CF54 File Offset: 0x0004B154
+	// Token: 0x17000F17 RID: 3863
+	// (get) Token: 0x06002279 RID: 8825 RVA: 0x000AACD0 File Offset: 0x000A8ED0
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -28,8 +28,8 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x17000BD9 RID: 3033
-	// (get) Token: 0x06001891 RID: 6289 RVA: 0x0004CF6C File Offset: 0x0004B16C
+	// Token: 0x17000F18 RID: 3864
+	// (get) Token: 0x0600227A RID: 8826 RVA: 0x000AACE8 File Offset: 0x000A8EE8
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -38,8 +38,8 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x17000BDA RID: 3034
-	// (get) Token: 0x06001892 RID: 6290 RVA: 0x0004CF7A File Offset: 0x0004B17A
+	// Token: 0x17000F19 RID: 3865
+	// (get) Token: 0x0600227B RID: 8827 RVA: 0x000126F1 File Offset: 0x000108F1
 	public NPCType NPCType
 	{
 		get
@@ -48,17 +48,17 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x17000BDB RID: 3035
-	// (get) Token: 0x06001893 RID: 6291 RVA: 0x0004CF82 File Offset: 0x0004B182
-	// (set) Token: 0x06001894 RID: 6292 RVA: 0x0004CF8A File Offset: 0x0004B18A
+	// Token: 0x17000F1A RID: 3866
+	// (get) Token: 0x0600227C RID: 8828 RVA: 0x000126F9 File Offset: 0x000108F9
+	// (set) Token: 0x0600227D RID: 8829 RVA: 0x00012701 File Offset: 0x00010901
 	public Animator Animator { get; private set; }
 
-	// Token: 0x17000BDC RID: 3036
-	// (get) Token: 0x06001895 RID: 6293 RVA: 0x0004CF93 File Offset: 0x0004B193
-	// (set) Token: 0x06001896 RID: 6294 RVA: 0x0004CF9B File Offset: 0x0004B19B
+	// Token: 0x17000F1B RID: 3867
+	// (get) Token: 0x0600227E RID: 8830 RVA: 0x0001270A File Offset: 0x0001090A
+	// (set) Token: 0x0600227F RID: 8831 RVA: 0x00012712 File Offset: 0x00010912
 	public NPCState CurrentState { get; private set; } = NPCState.Idle;
 
-	// Token: 0x06001897 RID: 6295 RVA: 0x0004CFA4 File Offset: 0x0004B1A4
+	// Token: 0x06002280 RID: 8832 RVA: 0x000AACF8 File Offset: 0x000A8EF8
 	private void Awake()
 	{
 		this.Animator = base.GetComponent<Animator>();
@@ -68,7 +68,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.SkillTree_Closed, this.m_onSkillTreeClosed);
 	}
 
-	// Token: 0x06001898 RID: 6296 RVA: 0x0004CFFB File Offset: 0x0004B1FB
+	// Token: 0x06002281 RID: 8833 RVA: 0x0001271B File Offset: 0x0001091B
 	private void OnEnable()
 	{
 		if (this.Animator)
@@ -79,7 +79,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		this.UpdateHeartState();
 	}
 
-	// Token: 0x06001899 RID: 6297 RVA: 0x0004D01C File Offset: 0x0004B21C
+	// Token: 0x06002282 RID: 8834 RVA: 0x000AAD50 File Offset: 0x000A8F50
 	private void AssignAnimatorNPCType()
 	{
 		if (this.Animator && !this.m_animatorNPCTypeAssigned)
@@ -92,13 +92,13 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x0600189A RID: 6298 RVA: 0x0004D06D File Offset: 0x0004B26D
+	// Token: 0x06002283 RID: 8835 RVA: 0x0001273C File Offset: 0x0001093C
 	private void OnDisable()
 	{
 		this.m_animatorNPCTypeAssigned = false;
 	}
 
-	// Token: 0x0600189B RID: 6299 RVA: 0x0004D076 File Offset: 0x0004B276
+	// Token: 0x06002284 RID: 8836 RVA: 0x00012745 File Offset: 0x00010945
 	private void OnSkillTreeOpened(object sender, EventArgs args)
 	{
 		if (this.Animator)
@@ -111,7 +111,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x0600189C RID: 6300 RVA: 0x0004D0A5 File Offset: 0x0004B2A5
+	// Token: 0x06002285 RID: 8837 RVA: 0x00012774 File Offset: 0x00010974
 	private void OnSkillTreeClosed(object sender, EventArgs args)
 	{
 		if (this.Animator)
@@ -124,14 +124,14 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x0600189D RID: 6301 RVA: 0x0004D0D3 File Offset: 0x0004B2D3
+	// Token: 0x06002286 RID: 8838 RVA: 0x000127A2 File Offset: 0x000109A2
 	private void OnDestroy()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.SkillTree_Opened, this.m_onSkillTreeOpened);
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.SkillTree_Closed, this.m_onSkillTreeClosed);
 	}
 
-	// Token: 0x0600189E RID: 6302 RVA: 0x0004D0F0 File Offset: 0x0004B2F0
+	// Token: 0x06002287 RID: 8839 RVA: 0x000AADA4 File Offset: 0x000A8FA4
 	private int GetStateHash(NPCState state)
 	{
 		switch (state)
@@ -153,7 +153,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x0600189F RID: 6303 RVA: 0x0004D144 File Offset: 0x0004B344
+	// Token: 0x06002288 RID: 8840 RVA: 0x000AADF8 File Offset: 0x000A8FF8
 	public void SetNPCState(NPCState state, bool skipTransition = false)
 	{
 		if (!this.Animator)
@@ -177,7 +177,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		this.EatPizza();
 	}
 
-	// Token: 0x060018A0 RID: 6304 RVA: 0x0004D21C File Offset: 0x0004B41C
+	// Token: 0x06002289 RID: 8841 RVA: 0x000AAED0 File Offset: 0x000A90D0
 	private void EatPizza()
 	{
 		if (this.m_eatPizzaCoroutine != null)
@@ -199,7 +199,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		this.m_eatPizzaCoroutine = base.StartCoroutine(this.EatPizzaCoroutine());
 	}
 
-	// Token: 0x060018A1 RID: 6305 RVA: 0x0004D274 File Offset: 0x0004B474
+	// Token: 0x0600228A RID: 8842 RVA: 0x000127BE File Offset: 0x000109BE
 	private IEnumerator EatPizzaCoroutine()
 	{
 		float delay = UnityEngine.Random.Range(5f, 45f);
@@ -223,7 +223,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		yield break;
 	}
 
-	// Token: 0x060018A2 RID: 6306 RVA: 0x0004D284 File Offset: 0x0004B484
+	// Token: 0x0600228B RID: 8843 RVA: 0x000AAF28 File Offset: 0x000A9128
 	public void RunNextNPCDialogue(Action onDialogueComplete = null)
 	{
 		int index = SaveManager.PlayerSaveData.GetNPCDialoguesRead(this.NPCType) + 1;
@@ -231,7 +231,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		SaveManager.PlayerSaveData.TriggerGlobalNPCDialogueCD = true;
 	}
 
-	// Token: 0x060018A3 RID: 6307 RVA: 0x0004D2B8 File Offset: 0x0004B4B8
+	// Token: 0x0600228C RID: 8844 RVA: 0x000AAF5C File Offset: 0x000A915C
 	public void RepeatLastNPCDialogue(Action onDialogueComplete = null)
 	{
 		int num = SaveManager.PlayerSaveData.GetNPCDialoguesRead(this.NPCType);
@@ -239,7 +239,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		this.RunNPCDialogueAtIndex(num, onDialogueComplete);
 	}
 
-	// Token: 0x060018A4 RID: 6308 RVA: 0x0004D2FC File Offset: 0x0004B4FC
+	// Token: 0x0600228D RID: 8845 RVA: 0x000AAFA0 File Offset: 0x000A91A0
 	private void RunNPCDialogueAtIndex(int index, Action onDialogueComplete = null)
 	{
 		NPCDialogueEntry[] array;
@@ -274,7 +274,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x060018A5 RID: 6309 RVA: 0x0004D3A4 File Offset: 0x0004B5A4
+	// Token: 0x0600228E RID: 8846 RVA: 0x000AB048 File Offset: 0x000A9248
 	public void UpdateHeartState()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround)
@@ -291,8 +291,8 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x17000BDD RID: 3037
-	// (get) Token: 0x060018A6 RID: 6310 RVA: 0x0004D404 File Offset: 0x0004B604
+	// Token: 0x17000F1C RID: 3868
+	// (get) Token: 0x0600228F RID: 8847 RVA: 0x000127CD File Offset: 0x000109CD
 	public bool IsBestFriend
 	{
 		get
@@ -301,7 +301,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x060018A7 RID: 6311 RVA: 0x0004D411 File Offset: 0x0004B611
+	// Token: 0x06002290 RID: 8848 RVA: 0x000127DA File Offset: 0x000109DA
 	public static bool GetBestFriendState(NPCType npcType)
 	{
 		if (npcType == NPCType.ChallengeHood)
@@ -315,7 +315,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		return SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.FinalBoss_Prime_Defeated_FirstTime);
 	}
 
-	// Token: 0x060018A8 RID: 6312 RVA: 0x0004D445 File Offset: 0x0004B645
+	// Token: 0x06002291 RID: 8849 RVA: 0x0001280E File Offset: 0x00010A0E
 	public void ShowHeart()
 	{
 		if (this.m_heartGO)
@@ -324,7 +324,7 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x060018A9 RID: 6313 RVA: 0x0004D460 File Offset: 0x0004B660
+	// Token: 0x06002292 RID: 8850 RVA: 0x00012829 File Offset: 0x00010A29
 	public void HideHeart()
 	{
 		if (this.m_heartGO)
@@ -333,59 +333,59 @@ public class NPCController : MonoBehaviour, IDisplaySpeechBubble, IAudioEventEmi
 		}
 	}
 
-	// Token: 0x060018AA RID: 6314 RVA: 0x0004D47C File Offset: 0x0004B67C
+	// Token: 0x06002293 RID: 8851 RVA: 0x000AB0A8 File Offset: 0x000A92A8
 	private bool CanEatPizza()
 	{
 		NPCType npctype = this.NPCType;
 		return npctype <= NPCType.Totem;
 	}
 
-	// Token: 0x040017E5 RID: 6117
+	// Token: 0x04001F24 RID: 7972
 	[SerializeField]
 	private NPCType m_npcType;
 
-	// Token: 0x040017E6 RID: 6118
+	// Token: 0x04001F25 RID: 7973
 	[SerializeField]
 	[EventRef]
 	private string m_eatPizzaAudioEvent;
 
-	// Token: 0x040017E7 RID: 6119
+	// Token: 0x04001F26 RID: 7974
 	[SerializeField]
 	private GameObject m_heartGO;
 
-	// Token: 0x040017E8 RID: 6120
+	// Token: 0x04001F27 RID: 7975
 	private static int NPC_ANIMATOR_PARAM = Animator.StringToHash("NPC");
 
-	// Token: 0x040017E9 RID: 6121
+	// Token: 0x04001F28 RID: 7976
 	private static int m_idleHash = Animator.StringToHash("Idle");
 
-	// Token: 0x040017EA RID: 6122
+	// Token: 0x04001F29 RID: 7977
 	private static int m_atAttentionHash = Animator.StringToHash("StandingAtAttention");
 
-	// Token: 0x040017EB RID: 6123
+	// Token: 0x04001F2A RID: 7978
 	private static int m_speakingHash = Animator.StringToHash("Speaking");
 
-	// Token: 0x040017EC RID: 6124
+	// Token: 0x04001F2B RID: 7979
 	private static int m_speakingPauseHash = Animator.StringToHash("SpeakingPause");
 
-	// Token: 0x040017ED RID: 6125
+	// Token: 0x04001F2C RID: 7980
 	private static int m_emote1Hash = Animator.StringToHash("Emote1");
 
-	// Token: 0x040017EE RID: 6126
+	// Token: 0x04001F2D RID: 7981
 	private static int m_emote2Hash = Animator.StringToHash("Emote2");
 
-	// Token: 0x040017EF RID: 6127
+	// Token: 0x04001F2E RID: 7982
 	private static int EAT_PIZZA_ANIMATOR_STATE_HASH = Animator.StringToHash("EatPizza");
 
-	// Token: 0x040017F0 RID: 6128
+	// Token: 0x04001F2F RID: 7983
 	private Coroutine m_eatPizzaCoroutine;
 
-	// Token: 0x040017F1 RID: 6129
+	// Token: 0x04001F30 RID: 7984
 	private bool m_animatorNPCTypeAssigned;
 
-	// Token: 0x040017F2 RID: 6130
+	// Token: 0x04001F31 RID: 7985
 	private Action<MonoBehaviour, EventArgs> m_onSkillTreeOpened;
 
-	// Token: 0x040017F3 RID: 6131
+	// Token: 0x04001F32 RID: 7986
 	private Action<MonoBehaviour, EventArgs> m_onSkillTreeClosed;
 }

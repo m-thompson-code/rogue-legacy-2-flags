@@ -2,10 +2,10 @@
 
 namespace Unity.Cloud.UserReporting
 {
-	// Token: 0x02000836 RID: 2102
+	// Token: 0x02000D1B RID: 3355
 	public static class PngHelper
 	{
-		// Token: 0x06004576 RID: 17782 RVA: 0x000F7C6F File Offset: 0x000F5E6F
+		// Token: 0x06005FAC RID: 24492 RVA: 0x00034BEC File Offset: 0x00032DEC
 		public static int GetPngHeightFromBase64Data(string data)
 		{
 			if (data == null || data.Length < 32)
@@ -17,7 +17,7 @@ namespace Unity.Cloud.UserReporting
 			return BitConverter.ToInt32(array, 0);
 		}
 
-		// Token: 0x06004577 RID: 17783 RVA: 0x000F7CA3 File Offset: 0x000F5EA3
+		// Token: 0x06005FAD RID: 24493 RVA: 0x00034C20 File Offset: 0x00032E20
 		public static int GetPngWidthFromBase64Data(string data)
 		{
 			if (data == null || data.Length < 32)
@@ -29,7 +29,7 @@ namespace Unity.Cloud.UserReporting
 			return BitConverter.ToInt32(array, 0);
 		}
 
-		// Token: 0x06004578 RID: 17784 RVA: 0x000F7CD8 File Offset: 0x000F5ED8
+		// Token: 0x06005FAE RID: 24494 RVA: 0x001656EC File Offset: 0x001638EC
 		private static byte[] Slice(byte[] source, int start, int end)
 		{
 			if (end < 0)

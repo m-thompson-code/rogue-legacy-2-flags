@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200041C RID: 1052
+// Token: 0x020006D4 RID: 1748
 public class OnLandedEffectTrigger : BaseEffectTrigger
 {
-	// Token: 0x17000F82 RID: 3970
-	// (get) Token: 0x060026E7 RID: 9959 RVA: 0x000816DF File Offset: 0x0007F8DF
+	// Token: 0x17001447 RID: 5191
+	// (get) Token: 0x0600359C RID: 13724 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool RequiresCollider
 	{
 		get
@@ -15,8 +15,8 @@ public class OnLandedEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x17000F83 RID: 3971
-	// (get) Token: 0x060026E8 RID: 9960 RVA: 0x000816E4 File Offset: 0x0007F8E4
+	// Token: 0x17001448 RID: 5192
+	// (get) Token: 0x0600359D RID: 13725 RVA: 0x000E1A3C File Offset: 0x000DFC3C
 	public override Vector3 Midpoint
 	{
 		get
@@ -33,7 +33,7 @@ public class OnLandedEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026E9 RID: 9961 RVA: 0x00081740 File Offset: 0x0007F940
+	// Token: 0x0600359E RID: 13726 RVA: 0x000E1A98 File Offset: 0x000DFC98
 	protected override void Awake()
 	{
 		base.Awake();
@@ -47,13 +47,13 @@ public class OnLandedEffectTrigger : BaseEffectTrigger
 		this.m_invokeOnLandedTrigger = new Action<CorgiController_RL>(this.InvokeOnLandedTrigger);
 	}
 
-	// Token: 0x060026EA RID: 9962 RVA: 0x000817B2 File Offset: 0x0007F9B2
+	// Token: 0x0600359F RID: 13727 RVA: 0x0001D73D File Offset: 0x0001B93D
 	private void OnEnable()
 	{
 		base.StartCoroutine(this.AddTrigger());
 	}
 
-	// Token: 0x060026EB RID: 9963 RVA: 0x000817C1 File Offset: 0x0007F9C1
+	// Token: 0x060035A0 RID: 13728 RVA: 0x0001D74C File Offset: 0x0001B94C
 	private IEnumerator AddTrigger()
 	{
 		while (!this.m_corgiController.IsInitialized)
@@ -68,7 +68,7 @@ public class OnLandedEffectTrigger : BaseEffectTrigger
 		yield break;
 	}
 
-	// Token: 0x060026EC RID: 9964 RVA: 0x000817D0 File Offset: 0x0007F9D0
+	// Token: 0x060035A1 RID: 13729 RVA: 0x000E1B0C File Offset: 0x000DFD0C
 	private void OnDisable()
 	{
 		IEffectTriggerEvent_OnLanded[] effectTriggerEventArray = this.m_effectTriggerEventArray;
@@ -78,7 +78,7 @@ public class OnLandedEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026ED RID: 9965 RVA: 0x00081808 File Offset: 0x0007FA08
+	// Token: 0x060035A2 RID: 13730 RVA: 0x000E1B44 File Offset: 0x000DFD44
 	private void InvokeOnLandedTrigger(CorgiController_RL otherCorgi)
 	{
 		GameObject gameObject = otherCorgi.gameObject;
@@ -136,18 +136,18 @@ public class OnLandedEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x040020B7 RID: 8375
+	// Token: 0x04002B9A RID: 11162
 	private IEffectTriggerEvent_OnLanded[] m_effectTriggerEventArray;
 
-	// Token: 0x040020B8 RID: 8376
+	// Token: 0x04002B9B RID: 11163
 	private Collider2D m_collider;
 
-	// Token: 0x040020B9 RID: 8377
+	// Token: 0x04002B9C RID: 11164
 	private BaseCharacterController m_charController;
 
-	// Token: 0x040020BA RID: 8378
+	// Token: 0x04002B9D RID: 11165
 	private CorgiController_RL m_corgiController;
 
-	// Token: 0x040020BB RID: 8379
+	// Token: 0x04002B9E RID: 11166
 	private Action<CorgiController_RL> m_invokeOnLandedTrigger;
 }

@@ -2,16 +2,16 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004A0 RID: 1184
+// Token: 0x020007A8 RID: 1960
 public class LastTicksSkillCritProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B55 RID: 11093 RVA: 0x00092FBD File Offset: 0x000911BD
+	// Token: 0x06003BB0 RID: 15280 RVA: 0x00020D22 File Offset: 0x0001EF22
 	private void OnEnable()
 	{
 		base.StartCoroutine(this.TriggerSkillCritCoroutine());
 	}
 
-	// Token: 0x06002B56 RID: 11094 RVA: 0x00092FCC File Offset: 0x000911CC
+	// Token: 0x06003BB1 RID: 15281 RVA: 0x00020D31 File Offset: 0x0001EF31
 	private IEnumerator TriggerSkillCritCoroutine()
 	{
 		float repeatHitDuration = base.SourceProjectile.HitboxController.RepeatHitDuration;
@@ -39,12 +39,12 @@ public class LastTicksSkillCritProjectileLogic : BaseProjectileLogic
 		yield break;
 	}
 
-	// Token: 0x04002343 RID: 9027
+	// Token: 0x04002F6A RID: 12138
 	[SerializeField]
 	[Tooltip("The lifespan of a projectile is not reliable, because it is often tied to how long the ability is cast. Therefore you need to manually count how many ticks and input it here.")]
 	private int m_projectileNumTicks;
 
-	// Token: 0x04002344 RID: 9028
+	// Token: 0x04002F6B RID: 12139
 	[SerializeField]
 	private int m_lastTicksTrigger;
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200020A RID: 522
+// Token: 0x020003BB RID: 955
 public enum HolidayType
 {
-	// Token: 0x04001521 RID: 5409
+	// Token: 0x04001C1E RID: 7198
 	None,
-	// Token: 0x04001522 RID: 5410
+	// Token: 0x04001C1F RID: 7199
 	Halloween,
-	// Token: 0x04001523 RID: 5411
+	// Token: 0x04001C20 RID: 7200
 	Christmas
 }

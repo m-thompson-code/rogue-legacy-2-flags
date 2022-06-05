@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000B0 RID: 176
+// Token: 0x020000FC RID: 252
 public class ElementalDash_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x060003FD RID: 1021 RVA: 0x000156DE File Offset: 0x000138DE
+	// Token: 0x060005A6 RID: 1446 RVA: 0x00005134 File Offset: 0x00003334
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -17,8 +17,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000193 RID: 403
-	// (get) Token: 0x060003FE RID: 1022 RVA: 0x0001570C File Offset: 0x0001390C
+	// Token: 0x1700021F RID: 543
+	// (get) Token: 0x060005A7 RID: 1447 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -27,8 +27,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000194 RID: 404
-	// (get) Token: 0x060003FF RID: 1023 RVA: 0x0001571D File Offset: 0x0001391D
+	// Token: 0x17000220 RID: 544
+	// (get) Token: 0x060005A8 RID: 1448 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -37,8 +37,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000195 RID: 405
-	// (get) Token: 0x06000400 RID: 1024 RVA: 0x0001572E File Offset: 0x0001392E
+	// Token: 0x17000221 RID: 545
+	// (get) Token: 0x060005A9 RID: 1449 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -47,8 +47,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000196 RID: 406
-	// (get) Token: 0x06000401 RID: 1025 RVA: 0x0001573F File Offset: 0x0001393F
+	// Token: 0x17000222 RID: 546
+	// (get) Token: 0x060005AA RID: 1450 RVA: 0x00005065 File Offset: 0x00003265
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -57,8 +57,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000197 RID: 407
-	// (get) Token: 0x06000402 RID: 1026 RVA: 0x00015750 File Offset: 0x00013950
+	// Token: 0x17000223 RID: 547
+	// (get) Token: 0x060005AB RID: 1451 RVA: 0x00005076 File Offset: 0x00003276
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -67,14 +67,14 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000403 RID: 1027 RVA: 0x00015761 File Offset: 0x00013961
+	// Token: 0x060005AC RID: 1452 RVA: 0x00005162 File Offset: 0x00003362
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
 		enemyController.Animator.SetInteger("ElementalType", this.m_elementalType);
 	}
 
-	// Token: 0x06000404 RID: 1028 RVA: 0x00015780 File Offset: 0x00013980
+	// Token: 0x060005AD RID: 1453 RVA: 0x00005181 File Offset: 0x00003381
 	private void OnEnable()
 	{
 		if (base.IsInitialized)
@@ -83,8 +83,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000198 RID: 408
-	// (get) Token: 0x06000405 RID: 1029 RVA: 0x000157A5 File Offset: 0x000139A5
+	// Token: 0x17000224 RID: 548
+	// (get) Token: 0x060005AE RID: 1454 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_shoot_TellIntro_AnimSpeed
 	{
 		get
@@ -93,8 +93,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000199 RID: 409
-	// (get) Token: 0x06000406 RID: 1030 RVA: 0x000157AC File Offset: 0x000139AC
+	// Token: 0x17000225 RID: 549
+	// (get) Token: 0x060005AF RID: 1455 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_shoot_TellHold_AnimSpeed
 	{
 		get
@@ -103,8 +103,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700019A RID: 410
-	// (get) Token: 0x06000407 RID: 1031 RVA: 0x000157B3 File Offset: 0x000139B3
+	// Token: 0x17000226 RID: 550
+	// (get) Token: 0x060005B0 RID: 1456 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected virtual float m_shoot_Tell_Delay
 	{
 		get
@@ -113,8 +113,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700019B RID: 411
-	// (get) Token: 0x06000408 RID: 1032 RVA: 0x000157BA File Offset: 0x000139BA
+	// Token: 0x17000227 RID: 551
+	// (get) Token: 0x060005B1 RID: 1457 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_shoot_AttackIntro_AnimSpeed
 	{
 		get
@@ -123,8 +123,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700019C RID: 412
-	// (get) Token: 0x06000409 RID: 1033 RVA: 0x000157C1 File Offset: 0x000139C1
+	// Token: 0x17000228 RID: 552
+	// (get) Token: 0x060005B2 RID: 1458 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_AttackIntro_Delay
 	{
 		get
@@ -133,8 +133,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700019D RID: 413
-	// (get) Token: 0x0600040A RID: 1034 RVA: 0x000157C8 File Offset: 0x000139C8
+	// Token: 0x17000229 RID: 553
+	// (get) Token: 0x060005B3 RID: 1459 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_shoot_AttackHold_AnimSpeed
 	{
 		get
@@ -143,8 +143,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700019E RID: 414
-	// (get) Token: 0x0600040B RID: 1035 RVA: 0x000157CF File Offset: 0x000139CF
+	// Token: 0x1700022A RID: 554
+	// (get) Token: 0x060005B4 RID: 1460 RVA: 0x00004FE5 File Offset: 0x000031E5
 	protected virtual float m_shoot_AttackHold_Delay
 	{
 		get
@@ -153,8 +153,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700019F RID: 415
-	// (get) Token: 0x0600040C RID: 1036 RVA: 0x000157D6 File Offset: 0x000139D6
+	// Token: 0x1700022B RID: 555
+	// (get) Token: 0x060005B5 RID: 1461 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_shoot_Exit_AnimSpeed
 	{
 		get
@@ -163,8 +163,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001A0 RID: 416
-	// (get) Token: 0x0600040D RID: 1037 RVA: 0x000157DD File Offset: 0x000139DD
+	// Token: 0x1700022C RID: 556
+	// (get) Token: 0x060005B6 RID: 1462 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_Exit_Delay
 	{
 		get
@@ -173,8 +173,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001A1 RID: 417
-	// (get) Token: 0x0600040E RID: 1038 RVA: 0x000157E4 File Offset: 0x000139E4
+	// Token: 0x1700022D RID: 557
+	// (get) Token: 0x060005B7 RID: 1463 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected virtual float m_shoot_Exit_ForceIdle
 	{
 		get
@@ -183,8 +183,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001A2 RID: 418
-	// (get) Token: 0x0600040F RID: 1039 RVA: 0x000157EB File Offset: 0x000139EB
+	// Token: 0x1700022E RID: 558
+	// (get) Token: 0x060005B8 RID: 1464 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_Exit_AttackCD
 	{
 		get
@@ -193,8 +193,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001A3 RID: 419
-	// (get) Token: 0x06000410 RID: 1040 RVA: 0x000157F2 File Offset: 0x000139F2
+	// Token: 0x1700022F RID: 559
+	// (get) Token: 0x060005B9 RID: 1465 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_shoot_TotalShots
 	{
 		get
@@ -203,8 +203,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001A4 RID: 420
-	// (get) Token: 0x06000411 RID: 1041 RVA: 0x000157F5 File Offset: 0x000139F5
+	// Token: 0x17000230 RID: 560
+	// (get) Token: 0x060005BA RID: 1466 RVA: 0x00004FE5 File Offset: 0x000031E5
 	protected virtual float m_shoot_TotalShotDuration
 	{
 		get
@@ -213,8 +213,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001A5 RID: 421
-	// (get) Token: 0x06000412 RID: 1042 RVA: 0x000157FC File Offset: 0x000139FC
+	// Token: 0x17000231 RID: 561
+	// (get) Token: 0x060005BB RID: 1467 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_RandAngleOffset
 	{
 		get
@@ -223,8 +223,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001A6 RID: 422
-	// (get) Token: 0x06000413 RID: 1043 RVA: 0x00015803 File Offset: 0x00013A03
+	// Token: 0x17000232 RID: 562
+	// (get) Token: 0x060005BC RID: 1468 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_shoot_EnableSpreadShot
 	{
 		get
@@ -233,8 +233,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001A7 RID: 423
-	// (get) Token: 0x06000414 RID: 1044 RVA: 0x00015806 File Offset: 0x00013A06
+	// Token: 0x17000233 RID: 563
+	// (get) Token: 0x060005BD RID: 1469 RVA: 0x000046FA File Offset: 0x000028FA
 	protected virtual int m_shoot_SpreadShot_Angle
 	{
 		get
@@ -243,7 +243,7 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000415 RID: 1045 RVA: 0x0001580A File Offset: 0x00013A0A
+	// Token: 0x060005BE RID: 1470 RVA: 0x000051A6 File Offset: 0x000033A6
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -288,8 +288,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x170001A8 RID: 424
-	// (get) Token: 0x06000416 RID: 1046 RVA: 0x00015819 File Offset: 0x00013A19
+	// Token: 0x17000234 RID: 564
+	// (get) Token: 0x060005BF RID: 1471 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_voidwall_TellIntro_AnimSpeed
 	{
 		get
@@ -298,8 +298,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001A9 RID: 425
-	// (get) Token: 0x06000417 RID: 1047 RVA: 0x00015820 File Offset: 0x00013A20
+	// Token: 0x17000235 RID: 565
+	// (get) Token: 0x060005C0 RID: 1472 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_voidWall_TellHold_AnimSpeed
 	{
 		get
@@ -308,8 +308,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001AA RID: 426
-	// (get) Token: 0x06000418 RID: 1048 RVA: 0x00015827 File Offset: 0x00013A27
+	// Token: 0x17000236 RID: 566
+	// (get) Token: 0x060005C1 RID: 1473 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected virtual float m_voidWall_Tell_Delay
 	{
 		get
@@ -318,8 +318,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001AB RID: 427
-	// (get) Token: 0x06000419 RID: 1049 RVA: 0x0001582E File Offset: 0x00013A2E
+	// Token: 0x17000237 RID: 567
+	// (get) Token: 0x060005C2 RID: 1474 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_voidWall_AttackIntro_AnimSpeed
 	{
 		get
@@ -328,8 +328,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001AC RID: 428
-	// (get) Token: 0x0600041A RID: 1050 RVA: 0x00015835 File Offset: 0x00013A35
+	// Token: 0x17000238 RID: 568
+	// (get) Token: 0x060005C3 RID: 1475 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_voidWall_AttackIntro_Delay
 	{
 		get
@@ -338,8 +338,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001AD RID: 429
-	// (get) Token: 0x0600041B RID: 1051 RVA: 0x0001583C File Offset: 0x00013A3C
+	// Token: 0x17000239 RID: 569
+	// (get) Token: 0x060005C4 RID: 1476 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_voidWall_AttackHold_AnimSpeed
 	{
 		get
@@ -348,8 +348,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001AE RID: 430
-	// (get) Token: 0x0600041C RID: 1052 RVA: 0x00015843 File Offset: 0x00013A43
+	// Token: 0x1700023A RID: 570
+	// (get) Token: 0x060005C5 RID: 1477 RVA: 0x00004FE5 File Offset: 0x000031E5
 	protected virtual float m_voidWall_AttackHold_Delay
 	{
 		get
@@ -358,8 +358,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001AF RID: 431
-	// (get) Token: 0x0600041D RID: 1053 RVA: 0x0001584A File Offset: 0x00013A4A
+	// Token: 0x1700023B RID: 571
+	// (get) Token: 0x060005C6 RID: 1478 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_voidWall_Exit_AnimSpeed
 	{
 		get
@@ -368,8 +368,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001B0 RID: 432
-	// (get) Token: 0x0600041E RID: 1054 RVA: 0x00015851 File Offset: 0x00013A51
+	// Token: 0x1700023C RID: 572
+	// (get) Token: 0x060005C7 RID: 1479 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_voidWall_Exit_Delay
 	{
 		get
@@ -378,8 +378,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001B1 RID: 433
-	// (get) Token: 0x0600041F RID: 1055 RVA: 0x00015858 File Offset: 0x00013A58
+	// Token: 0x1700023D RID: 573
+	// (get) Token: 0x060005C8 RID: 1480 RVA: 0x000050CB File Offset: 0x000032CB
 	protected virtual float m_voidWall_Exit_ForceIdle
 	{
 		get
@@ -388,8 +388,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001B2 RID: 434
-	// (get) Token: 0x06000420 RID: 1056 RVA: 0x0001585F File Offset: 0x00013A5F
+	// Token: 0x1700023E RID: 574
+	// (get) Token: 0x060005C9 RID: 1481 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_voidWall_Exit_AttackCD
 	{
 		get
@@ -398,8 +398,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001B3 RID: 435
-	// (get) Token: 0x06000421 RID: 1057 RVA: 0x00015866 File Offset: 0x00013A66
+	// Token: 0x1700023F RID: 575
+	// (get) Token: 0x060005CA RID: 1482 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_voidWall_CreateCenterWall
 	{
 		get
@@ -408,8 +408,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001B4 RID: 436
-	// (get) Token: 0x06000422 RID: 1058 RVA: 0x00015869 File Offset: 0x00013A69
+	// Token: 0x17000240 RID: 576
+	// (get) Token: 0x060005CB RID: 1483 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_voidWall_CreateSideWalls
 	{
 		get
@@ -418,8 +418,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001B5 RID: 437
-	// (get) Token: 0x06000423 RID: 1059 RVA: 0x0001586C File Offset: 0x00013A6C
+	// Token: 0x17000241 RID: 577
+	// (get) Token: 0x060005CC RID: 1484 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float m_voidWall_SideWallsOffset
 	{
 		get
@@ -428,8 +428,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001B6 RID: 438
-	// (get) Token: 0x06000424 RID: 1060 RVA: 0x00015873 File Offset: 0x00013A73
+	// Token: 0x17000242 RID: 578
+	// (get) Token: 0x060005CD RID: 1485 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_voidWall_LargeWalls
 	{
 		get
@@ -438,8 +438,8 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170001B7 RID: 439
-	// (get) Token: 0x06000425 RID: 1061 RVA: 0x00015876 File Offset: 0x00013A76
+	// Token: 0x17000243 RID: 579
+	// (get) Token: 0x060005CE RID: 1486 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_voidWall_Appear_Delay
 	{
 		get
@@ -448,7 +448,7 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000426 RID: 1062 RVA: 0x0001587D File Offset: 0x00013A7D
+	// Token: 0x060005CF RID: 1487 RVA: 0x000051B5 File Offset: 0x000033B5
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -525,7 +525,7 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000427 RID: 1063 RVA: 0x0001588C File Offset: 0x00013A8C
+	// Token: 0x060005D0 RID: 1488 RVA: 0x000051C4 File Offset: 0x000033C4
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.OnLBCompleteOrCancelled();
@@ -534,7 +534,7 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		base.StopProjectile(ref this.m_voidWallTellProjectile3);
 	}
 
-	// Token: 0x06000428 RID: 1064 RVA: 0x000158B8 File Offset: 0x00013AB8
+	// Token: 0x060005D1 RID: 1489 RVA: 0x00057D70 File Offset: 0x00055F70
 	private float GetTargetGroundYPos()
 	{
 		LayerMask mask = 256;
@@ -547,58 +547,58 @@ public class ElementalDash_Basic_AIScript : BaseAIScript
 		return base.EnemyController.TargetController.transform.position.y;
 	}
 
-	// Token: 0x04000822 RID: 2082
+	// Token: 0x04000970 RID: 2416
 	[SerializeField]
 	private int m_elementalType;
 
-	// Token: 0x04000823 RID: 2083
+	// Token: 0x04000971 RID: 2417
 	protected const string VOID_WALL_TELL_PROJECTILE = "ElementalDashVoidZoneWarningProjectile";
 
-	// Token: 0x04000824 RID: 2084
+	// Token: 0x04000972 RID: 2418
 	protected Projectile_RL m_voidWallTellProjectile;
 
-	// Token: 0x04000825 RID: 2085
+	// Token: 0x04000973 RID: 2419
 	protected Projectile_RL m_voidWallTellProjectile2;
 
-	// Token: 0x04000826 RID: 2086
+	// Token: 0x04000974 RID: 2420
 	protected Projectile_RL m_voidWallTellProjectile3;
 
-	// Token: 0x04000827 RID: 2087
+	// Token: 0x04000975 RID: 2421
 	protected const string VOIDBALL_TELL_INTRO = "Shoot_Tell_Intro";
 
-	// Token: 0x04000828 RID: 2088
+	// Token: 0x04000976 RID: 2422
 	protected const string VOIDBALL_TELL_HOLD = "Shoot_Tell_Hold";
 
-	// Token: 0x04000829 RID: 2089
+	// Token: 0x04000977 RID: 2423
 	protected const string VOIDBALL_ATTACK_INTRO = "Shoot_Attack_Intro";
 
-	// Token: 0x0400082A RID: 2090
+	// Token: 0x04000978 RID: 2424
 	protected const string VOIDBALL_ATTACK_HOLD = "Shoot_Attack_Hold";
 
-	// Token: 0x0400082B RID: 2091
+	// Token: 0x04000979 RID: 2425
 	protected const string VOIDBALL_EXIT = "Shoot_Exit";
 
-	// Token: 0x0400082C RID: 2092
+	// Token: 0x0400097A RID: 2426
 	protected const string VOIDBALL_PROJECTILE = "ElementalDashVoidProjectile";
 
-	// Token: 0x0400082D RID: 2093
+	// Token: 0x0400097B RID: 2427
 	protected const string VOIDWALL_TELL_INTRO = "Spin_Tell_Intro";
 
-	// Token: 0x0400082E RID: 2094
+	// Token: 0x0400097C RID: 2428
 	protected const string VOIDWALL_TELL_HOLD = "Spin_Tell_Hold";
 
-	// Token: 0x0400082F RID: 2095
+	// Token: 0x0400097D RID: 2429
 	protected const string VOIDWALL_ATTACK_INTRO = "Spin_Attack_Intro";
 
-	// Token: 0x04000830 RID: 2096
+	// Token: 0x0400097E RID: 2430
 	protected const string VOIDWALL_ATTACK_HOLD = "Spin_Attack_Hold";
 
-	// Token: 0x04000831 RID: 2097
+	// Token: 0x0400097F RID: 2431
 	protected const string VOIDWALL_EXIT = "Spin_Exit";
 
-	// Token: 0x04000832 RID: 2098
+	// Token: 0x04000980 RID: 2432
 	protected const string VOIDWALL_PROJECTILE = "ElementalDashVoidZoneProjectile";
 
-	// Token: 0x04000833 RID: 2099
+	// Token: 0x04000981 RID: 2433
 	protected const string VOIDWALL_PROJECTILE_LARGE = "ElementalDashVoidZoneLargeProjectile";
 }

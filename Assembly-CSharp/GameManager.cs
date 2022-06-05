@@ -4,17 +4,17 @@ using RL_Windows;
 using Steamworks;
 using UnityEngine;
 
-// Token: 0x02000699 RID: 1689
+// Token: 0x02000B2A RID: 2858
 public class GameManager : MonoBehaviour
 {
-	// Token: 0x17001546 RID: 5446
-	// (get) Token: 0x06003D9B RID: 15771 RVA: 0x000D6F42 File Offset: 0x000D5142
-	// (set) Token: 0x06003D9C RID: 15772 RVA: 0x000D6F49 File Offset: 0x000D5149
+	// Token: 0x17001D20 RID: 7456
+	// (get) Token: 0x0600565C RID: 22108 RVA: 0x0002EF0C File Offset: 0x0002D10C
+	// (set) Token: 0x0600565D RID: 22109 RVA: 0x0002EF13 File Offset: 0x0002D113
 	public static bool IsApplicationClosing { get; private set; }
 
-	// Token: 0x17001547 RID: 5447
-	// (get) Token: 0x06003D9D RID: 15773 RVA: 0x000D6F51 File Offset: 0x000D5151
-	// (set) Token: 0x06003D9E RID: 15774 RVA: 0x000D6F58 File Offset: 0x000D5158
+	// Token: 0x17001D21 RID: 7457
+	// (get) Token: 0x0600565E RID: 22110 RVA: 0x0002EF1B File Offset: 0x0002D11B
+	// (set) Token: 0x0600565F RID: 22111 RVA: 0x0002EF22 File Offset: 0x0002D122
 	private static GameManager Instance
 	{
 		get
@@ -27,8 +27,8 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001548 RID: 5448
-	// (get) Token: 0x06003D9F RID: 15775 RVA: 0x000D6F60 File Offset: 0x000D5160
+	// Token: 0x17001D22 RID: 7458
+	// (get) Token: 0x06005660 RID: 22112 RVA: 0x0002EF2A File Offset: 0x0002D12A
 	public static bool IsGameManagerInstantiated
 	{
 		get
@@ -37,9 +37,9 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001549 RID: 5449
-	// (get) Token: 0x06003DA0 RID: 15776 RVA: 0x000D6F6C File Offset: 0x000D516C
-	// (set) Token: 0x06003DA1 RID: 15777 RVA: 0x000D6F78 File Offset: 0x000D5178
+	// Token: 0x17001D23 RID: 7459
+	// (get) Token: 0x06005661 RID: 22113 RVA: 0x0002EF36 File Offset: 0x0002D136
+	// (set) Token: 0x06005662 RID: 22114 RVA: 0x0002EF42 File Offset: 0x0002D142
 	public static bool IsGamePaused
 	{
 		get
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DA2 RID: 15778 RVA: 0x000D6F85 File Offset: 0x000D5185
+	// Token: 0x06005663 RID: 22115 RVA: 0x0002EF4F File Offset: 0x0002D14F
 	private void Awake()
 	{
 		if (GameManager.Instance == null)
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DA3 RID: 15779 RVA: 0x000D6FBE File Offset: 0x000D51BE
+	// Token: 0x06005664 RID: 22116 RVA: 0x0002EF88 File Offset: 0x0002D188
 	private IEnumerator Start()
 	{
 		while (!SteamManager.Initialized)
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003DA4 RID: 15780 RVA: 0x000D6FCD File Offset: 0x000D51CD
+	// Token: 0x06005665 RID: 22117 RVA: 0x0002EF97 File Offset: 0x0002D197
 	private void OnSteamOverlayActivated(GameOverlayActivated_t overlayCallback)
 	{
 		if (overlayCallback.m_bActive != 0)
@@ -89,20 +89,20 @@ public class GameManager : MonoBehaviour
 		WindowManager.PauseWhenPossible(false, false);
 	}
 
-	// Token: 0x06003DA5 RID: 15781 RVA: 0x000D6FE6 File Offset: 0x000D51E6
+	// Token: 0x06005666 RID: 22118 RVA: 0x0002EFB0 File Offset: 0x0002D1B0
 	private void OnApplicationFocus(bool focus)
 	{
 		WindowManager.PauseWhenPossible(!focus, false);
 	}
 
-	// Token: 0x06003DA6 RID: 15782 RVA: 0x000D6FF2 File Offset: 0x000D51F2
+	// Token: 0x06005667 RID: 22119 RVA: 0x0002EFBC File Offset: 0x0002D1BC
 	private void OnApplicationQuit()
 	{
 		Debug.Log("Application is closing...");
 		GameManager.IsApplicationClosing = true;
 	}
 
-	// Token: 0x06003DA7 RID: 15783 RVA: 0x000D7004 File Offset: 0x000D5204
+	// Token: 0x06005668 RID: 22120 RVA: 0x0014766C File Offset: 0x0014586C
 	public static void SetIsPaused(bool isPaused)
 	{
 		if (GameManager.IsGamePaused != isPaused)
@@ -124,15 +124,15 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002DF9 RID: 11769
+	// Token: 0x04003FEA RID: 16362
 	private static GameManager m_instance;
 
-	// Token: 0x04002DFA RID: 11770
+	// Token: 0x04003FEB RID: 16363
 	private static GamePauseStateChangeEventArgs m_pauseEventArgs;
 
-	// Token: 0x04002DFB RID: 11771
+	// Token: 0x04003FEC RID: 16364
 	private bool m_isGamePaused;
 
-	// Token: 0x04002DFC RID: 11772
+	// Token: 0x04003FED RID: 16365
 	protected Callback<GameOverlayActivated_t> m_steamOverlayActivated;
 }

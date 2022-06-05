@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace GameEventTracking
 {
-	// Token: 0x020008A8 RID: 2216
+	// Token: 0x02000DDB RID: 3547
 	[Serializable]
 	public struct EnemyTrackerData : IGameEventData
 	{
-		// Token: 0x170017A7 RID: 6055
-		// (get) Token: 0x0600484E RID: 18510 RVA: 0x00103F5E File Offset: 0x0010215E
+		// Token: 0x17002021 RID: 8225
+		// (get) Token: 0x060063AE RID: 25518 RVA: 0x00036F3F File Offset: 0x0003513F
 		public BiomeType Biome
 		{
 			get
@@ -17,8 +17,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017A8 RID: 6056
-		// (get) Token: 0x0600484F RID: 18511 RVA: 0x00103F66 File Offset: 0x00102166
+		// Token: 0x17002022 RID: 8226
+		// (get) Token: 0x060063AF RID: 25519 RVA: 0x00036F47 File Offset: 0x00035147
 		public int BiomeControllerIndex
 		{
 			get
@@ -27,8 +27,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017A9 RID: 6057
-		// (get) Token: 0x06004850 RID: 18512 RVA: 0x00103F6E File Offset: 0x0010216E
+		// Token: 0x17002023 RID: 8227
+		// (get) Token: 0x060063B0 RID: 25520 RVA: 0x00036F4F File Offset: 0x0003514F
 		public int EnemyIndex
 		{
 			get
@@ -37,8 +37,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017AA RID: 6058
-		// (get) Token: 0x06004851 RID: 18513 RVA: 0x00103F76 File Offset: 0x00102176
+		// Token: 0x17002024 RID: 8228
+		// (get) Token: 0x060063B1 RID: 25521 RVA: 0x00036F57 File Offset: 0x00035157
 		public EnemyType EnemyType
 		{
 			get
@@ -47,8 +47,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017AB RID: 6059
-		// (get) Token: 0x06004852 RID: 18514 RVA: 0x00103F7E File Offset: 0x0010217E
+		// Token: 0x17002025 RID: 8229
+		// (get) Token: 0x060063B2 RID: 25522 RVA: 0x00036F5F File Offset: 0x0003515F
 		public EnemyRank EnemyRank
 		{
 			get
@@ -57,8 +57,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017AC RID: 6060
-		// (get) Token: 0x06004853 RID: 18515 RVA: 0x00103F86 File Offset: 0x00102186
+		// Token: 0x17002026 RID: 8230
+		// (get) Token: 0x060063B3 RID: 25523 RVA: 0x00036F67 File Offset: 0x00035167
 		public float TimeStamp
 		{
 			get
@@ -67,8 +67,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017AD RID: 6061
-		// (get) Token: 0x06004854 RID: 18516 RVA: 0x00103F8E File Offset: 0x0010218E
+		// Token: 0x17002027 RID: 8231
+		// (get) Token: 0x060063B4 RID: 25524 RVA: 0x00036F6F File Offset: 0x0003516F
 		public int TimesLoaded
 		{
 			get
@@ -77,7 +77,7 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x06004855 RID: 18517 RVA: 0x00103F98 File Offset: 0x00102198
+		// Token: 0x060063B5 RID: 25525 RVA: 0x00172C08 File Offset: 0x00170E08
 		public EnemyTrackerData(BiomeType biome, int biomeControllerIndex, EnemyType enemyType, EnemyRank enemyRank, int enemyIndex)
 		{
 			this.m_biome = biome;
@@ -89,25 +89,25 @@ namespace GameEventTracking
 			this.m_timesLoaded = SaveManager.StageSaveData.TimesTrackerWasLoaded;
 		}
 
-		// Token: 0x04003D0A RID: 15626
+		// Token: 0x04005151 RID: 20817
 		private BiomeType m_biome;
 
-		// Token: 0x04003D0B RID: 15627
+		// Token: 0x04005152 RID: 20818
 		private int m_enemyIndex;
 
-		// Token: 0x04003D0C RID: 15628
+		// Token: 0x04005153 RID: 20819
 		private EnemyType m_enemyType;
 
-		// Token: 0x04003D0D RID: 15629
+		// Token: 0x04005154 RID: 20820
 		private EnemyRank m_enemyRank;
 
-		// Token: 0x04003D0E RID: 15630
+		// Token: 0x04005155 RID: 20821
 		private int m_biomeControllerIndex;
 
-		// Token: 0x04003D0F RID: 15631
+		// Token: 0x04005156 RID: 20822
 		private float m_timeStamp;
 
-		// Token: 0x04003D10 RID: 15632
+		// Token: 0x04005157 RID: 20823
 		private int m_timesLoaded;
 	}
 }

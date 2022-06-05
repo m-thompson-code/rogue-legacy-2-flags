@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200066A RID: 1642
+// Token: 0x02000AD6 RID: 2774
 public class GenerateRoomSeeds_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B5A RID: 15194 RVA: 0x000CC339 File Offset: 0x000CA539
+	// Token: 0x06005356 RID: 21334 RVA: 0x0002D4D9 File Offset: 0x0002B6D9
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		if (biomeController.GridPointManager != null && biomeController.GridPointManager.GridPointManagers != null && biomeController.GridPointManager.GridPointManagers.Count > 0)

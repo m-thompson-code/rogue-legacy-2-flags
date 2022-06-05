@@ -2,24 +2,24 @@
 using Foreground;
 using UnityEngine;
 
-// Token: 0x020006B6 RID: 1718
+// Token: 0x02000B61 RID: 2913
 [Serializable]
 public class ForegroundBiomeArtData
 {
-	// Token: 0x04002F17 RID: 12055
+	// Token: 0x04004166 RID: 16742
 	public ForegroundLibrary Upper;
 
-	// Token: 0x04002F18 RID: 12056
+	// Token: 0x04004167 RID: 16743
 	public ForegroundLibrary Lower;
 
-	// Token: 0x04002F19 RID: 12057
+	// Token: 0x04004168 RID: 16744
 	[Range(0f, 100f)]
 	public int UpperSpawnOdds = 50;
 
-	// Token: 0x04002F1A RID: 12058
+	// Token: 0x04004169 RID: 16745
 	[Range(0f, 100f)]
 	public int BottomSpawnOdds = 50;
 
-	// Token: 0x04002F1B RID: 12059
+	// Token: 0x0400416A RID: 16746
 	public Material ForegroundSpriteMaterial;
 }

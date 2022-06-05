@@ -3,10 +3,10 @@ using System.Collections;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x020001A6 RID: 422
+// Token: 0x0200030C RID: 780
 public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 {
-	// Token: 0x06001090 RID: 4240 RVA: 0x0002FFBD File Offset: 0x0002E1BD
+	// Token: 0x060018AD RID: 6317 RVA: 0x0000C7E7 File Offset: 0x0000A9E7
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -16,8 +16,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		};
 	}
 
-	// Token: 0x1700093D RID: 2365
-	// (get) Token: 0x06001091 RID: 4241 RVA: 0x0002FFDD File Offset: 0x0002E1DD
+	// Token: 0x17000BEF RID: 3055
+	// (get) Token: 0x060018AE RID: 6318 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public override float AirMovementMod
 	{
 		get
@@ -26,8 +26,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700093E RID: 2366
-	// (get) Token: 0x06001092 RID: 4242 RVA: 0x0002FFE4 File Offset: 0x0002E1E4
+	// Token: 0x17000BF0 RID: 3056
+	// (get) Token: 0x060018AF RID: 6319 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public override float MovementMod
 	{
 		get
@@ -36,8 +36,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700093F RID: 2367
-	// (get) Token: 0x06001093 RID: 4243 RVA: 0x0002FFEB File Offset: 0x0002E1EB
+	// Token: 0x17000BF1 RID: 3057
+	// (get) Token: 0x060018B0 RID: 6320 RVA: 0x0000C807 File Offset: 0x0000AA07
 	public override string ProjectileName
 	{
 		get
@@ -50,8 +50,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000940 RID: 2368
-	// (get) Token: 0x06001094 RID: 4244 RVA: 0x00030002 File Offset: 0x0002E202
+	// Token: 0x17000BF2 RID: 3058
+	// (get) Token: 0x060018B1 RID: 6321 RVA: 0x0000C81E File Offset: 0x0000AA1E
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -64,8 +64,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000941 RID: 2369
-	// (get) Token: 0x06001095 RID: 4245 RVA: 0x00030017 File Offset: 0x0002E217
+	// Token: 0x17000BF3 RID: 3059
+	// (get) Token: 0x060018B2 RID: 6322 RVA: 0x0000C833 File Offset: 0x0000AA33
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -78,8 +78,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000942 RID: 2370
-	// (get) Token: 0x06001096 RID: 4246 RVA: 0x0003002C File Offset: 0x0002E22C
+	// Token: 0x17000BF4 RID: 3060
+	// (get) Token: 0x060018B3 RID: 6323 RVA: 0x0000C848 File Offset: 0x0000AA48
 	protected override float TellAnimSpeed
 	{
 		get
@@ -92,8 +92,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000943 RID: 2371
-	// (get) Token: 0x06001097 RID: 4247 RVA: 0x00030041 File Offset: 0x0002E241
+	// Token: 0x17000BF5 RID: 3061
+	// (get) Token: 0x060018B4 RID: 6324 RVA: 0x0000C833 File Offset: 0x0000AA33
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -106,8 +106,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000944 RID: 2372
-	// (get) Token: 0x06001098 RID: 4248 RVA: 0x00030056 File Offset: 0x0002E256
+	// Token: 0x17000BF6 RID: 3062
+	// (get) Token: 0x060018B5 RID: 6325 RVA: 0x0000C848 File Offset: 0x0000AA48
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -120,8 +120,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000945 RID: 2373
-	// (get) Token: 0x06001099 RID: 4249 RVA: 0x0003006B File Offset: 0x0002E26B
+	// Token: 0x17000BF7 RID: 3063
+	// (get) Token: 0x060018B6 RID: 6326 RVA: 0x0000C833 File Offset: 0x0000AA33
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -134,8 +134,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000946 RID: 2374
-	// (get) Token: 0x0600109A RID: 4250 RVA: 0x00030080 File Offset: 0x0002E280
+	// Token: 0x17000BF8 RID: 3064
+	// (get) Token: 0x060018B7 RID: 6327 RVA: 0x0000C848 File Offset: 0x0000AA48
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -148,8 +148,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000947 RID: 2375
-	// (get) Token: 0x0600109B RID: 4251 RVA: 0x00030095 File Offset: 0x0002E295
+	// Token: 0x17000BF9 RID: 3065
+	// (get) Token: 0x060018B8 RID: 6328 RVA: 0x0000C85D File Offset: 0x0000AA5D
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -162,8 +162,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000948 RID: 2376
-	// (get) Token: 0x0600109C RID: 4252 RVA: 0x000300AA File Offset: 0x0002E2AA
+	// Token: 0x17000BFA RID: 3066
+	// (get) Token: 0x060018B9 RID: 6329 RVA: 0x0000C848 File Offset: 0x0000AA48
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -176,8 +176,8 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000949 RID: 2377
-	// (get) Token: 0x0600109D RID: 4253 RVA: 0x000300BF File Offset: 0x0002E2BF
+	// Token: 0x17000BFB RID: 3067
+	// (get) Token: 0x060018BA RID: 6330 RVA: 0x0000C833 File Offset: 0x0000AA33
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -190,14 +190,14 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x0600109E RID: 4254 RVA: 0x000300D4 File Offset: 0x0002E2D4
+	// Token: 0x060018BB RID: 6331 RVA: 0x0000C872 File Offset: 0x0000AA72
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_stopScythePartSystem = new Action<MonoBehaviour, EventArgs>(this.StopScythePartSystem);
 	}
 
-	// Token: 0x0600109F RID: 4255 RVA: 0x000300F0 File Offset: 0x0002E2F0
+	// Token: 0x060018BC RID: 6332 RVA: 0x0008E51C File Offset: 0x0008C71C
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		base.Initialize(abilityController, castAbilityType);
@@ -219,7 +219,7 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x060010A0 RID: 4256 RVA: 0x000301EE File Offset: 0x0002E3EE
+	// Token: 0x060018BD RID: 6333 RVA: 0x0000C88C File Offset: 0x0000AA8C
 	public override void OnPreDestroy()
 	{
 		if (this.m_partSysAdded)
@@ -229,7 +229,7 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		base.OnPreDestroy();
 	}
 
-	// Token: 0x060010A1 RID: 4257 RVA: 0x00030210 File Offset: 0x0002E410
+	// Token: 0x060018BE RID: 6334 RVA: 0x0008E61C File Offset: 0x0008C81C
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
@@ -243,7 +243,7 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		this.m_weaponTransform = null;
 	}
 
-	// Token: 0x060010A2 RID: 4258 RVA: 0x00030263 File Offset: 0x0002E463
+	// Token: 0x060018BF RID: 6335 RVA: 0x0000C8AD File Offset: 0x0000AAAD
 	private void StopScythePartSystem(object sender, EventArgs args)
 	{
 		if (this.m_partSysAdded)
@@ -252,7 +252,7 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x060010A3 RID: 4259 RVA: 0x0003027C File Offset: 0x0002E47C
+	// Token: 0x060018C0 RID: 6336 RVA: 0x0008E670 File Offset: 0x0008C870
 	public override void PreCastAbility()
 	{
 		base.PreCastAbility();
@@ -265,7 +265,7 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		this.m_continueDashing = false;
 	}
 
-	// Token: 0x060010A4 RID: 4260 RVA: 0x0003030E File Offset: 0x0002E50E
+	// Token: 0x060018C1 RID: 6337 RVA: 0x0000C8C4 File Offset: 0x0000AAC4
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (base.CurrentAbilityAnimState == AbilityAnimState.Attack && !this.m_performedFirstAttack)
@@ -281,7 +281,7 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		yield break;
 	}
 
-	// Token: 0x060010A5 RID: 4261 RVA: 0x00030324 File Offset: 0x0002E524
+	// Token: 0x060018C2 RID: 6338 RVA: 0x0000C8DA File Offset: 0x0000AADA
 	protected IEnumerator PushForward()
 	{
 		float speed = 22f;
@@ -336,7 +336,7 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		yield break;
 	}
 
-	// Token: 0x060010A6 RID: 4262 RVA: 0x00030334 File Offset: 0x0002E534
+	// Token: 0x060018C3 RID: 6339 RVA: 0x0008E704 File Offset: 0x0008C904
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		this.m_abilityController.PlayerController.DisableFriction = false;
@@ -362,14 +362,14 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x060010A7 RID: 4263 RVA: 0x0003040C File Offset: 0x0002E60C
+	// Token: 0x060018C4 RID: 6340 RVA: 0x0000C8E9 File Offset: 0x0000AAE9
 	protected override void OnEnterExitLogic()
 	{
 		this.m_continueDashing = false;
 		base.OnEnterExitLogic();
 	}
 
-	// Token: 0x060010A8 RID: 4264 RVA: 0x0003041C File Offset: 0x0002E61C
+	// Token: 0x060018C5 RID: 6341 RVA: 0x0008E7DC File Offset: 0x0008C9DC
 	protected override void Update()
 	{
 		base.Update();
@@ -390,36 +390,36 @@ public class Scythe_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x040011D3 RID: 4563
+	// Token: 0x040017B9 RID: 6073
 	[SerializeField]
 	private string m_secondProjectileName;
 
-	// Token: 0x040011D4 RID: 4564
+	// Token: 0x040017BA RID: 6074
 	[Space(10f)]
 	[SerializeField]
 	private ParticleSystem m_scytheParticlePartSysPrefab;
 
-	// Token: 0x040011D5 RID: 4565
+	// Token: 0x040017BB RID: 6075
 	private float m_storedFallMultiplier;
 
-	// Token: 0x040011D6 RID: 4566
+	// Token: 0x040017BC RID: 6076
 	private bool m_performedFirstAttack;
 
-	// Token: 0x040011D7 RID: 4567
+	// Token: 0x040017BD RID: 6077
 	private bool m_continueDashing;
 
-	// Token: 0x040011D8 RID: 4568
+	// Token: 0x040017BE RID: 6078
 	private bool m_partSysAdded;
 
-	// Token: 0x040011D9 RID: 4569
+	// Token: 0x040017BF RID: 6079
 	private Transform m_weaponTransform;
 
-	// Token: 0x040011DA RID: 4570
+	// Token: 0x040017C0 RID: 6080
 	private ParticleSystem m_scythePartSys;
 
-	// Token: 0x040011DB RID: 4571
+	// Token: 0x040017C1 RID: 6081
 	private Action<MonoBehaviour, EventArgs> m_stopScythePartSystem;
 
-	// Token: 0x040011DC RID: 4572
+	// Token: 0x040017C2 RID: 6082
 	private bool m_oneWayCollisionDisabled;
 }

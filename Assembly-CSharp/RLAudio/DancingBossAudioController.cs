@@ -7,11 +7,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008EB RID: 2283
+	// Token: 0x02000E5B RID: 3675
 	public class DancingBossAudioController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001851 RID: 6225
-		// (get) Token: 0x06004AEC RID: 19180 RVA: 0x0010D344 File Offset: 0x0010B544
+		// Token: 0x17002134 RID: 8500
+		// (get) Token: 0x060067A5 RID: 26533 RVA: 0x0003937A File Offset: 0x0003757A
 		public string Description
 		{
 			get
@@ -24,7 +24,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AED RID: 19181 RVA: 0x0010D36C File Offset: 0x0010B56C
+		// Token: 0x060067A6 RID: 26534 RVA: 0x0017D580 File Offset: 0x0017B780
 		private void Awake()
 		{
 			this.m_animator = base.GetComponent<Animator>();
@@ -42,13 +42,13 @@ namespace RLAudio
 			this.m_onSummonShotsPortalOpened = new Action<Vector2>(this.OnSummonShotsPortalOpened);
 		}
 
-		// Token: 0x06004AEE RID: 19182 RVA: 0x0010D457 File Offset: 0x0010B657
+		// Token: 0x060067A7 RID: 26535 RVA: 0x000393A0 File Offset: 0x000375A0
 		private void Start()
 		{
 			base.StartCoroutine(this.WaitUntilIntroIsComplete());
 		}
 
-		// Token: 0x06004AEF RID: 19183 RVA: 0x0010D468 File Offset: 0x0010B668
+		// Token: 0x060067A8 RID: 26536 RVA: 0x0017D66C File Offset: 0x0017B86C
 		private void OnDisable()
 		{
 			this.m_isIntroComplete = false;
@@ -70,7 +70,7 @@ namespace RLAudio
 			this.StopAudioEventInstances();
 		}
 
-		// Token: 0x06004AF0 RID: 19184 RVA: 0x0010D570 File Offset: 0x0010B770
+		// Token: 0x060067A9 RID: 26537 RVA: 0x0017D774 File Offset: 0x0017B974
 		private void OnDestroy()
 		{
 			if (this.m_waveShootLoopAudioSources != null)
@@ -112,7 +112,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AF1 RID: 19185 RVA: 0x0010D671 File Offset: 0x0010B871
+		// Token: 0x060067AA RID: 26538 RVA: 0x000393AF File Offset: 0x000375AF
 		private IEnumerator WaitUntilIntroIsComplete()
 		{
 			while (this.m_enemyController.Room == null)
@@ -141,7 +141,7 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004AF2 RID: 19186 RVA: 0x0010D680 File Offset: 0x0010B880
+		// Token: 0x060067AB RID: 26539 RVA: 0x0017D878 File Offset: 0x0017BA78
 		private void OnIntroComplete()
 		{
 			this.m_animator.SetInteger("Phase", 0);
@@ -166,18 +166,18 @@ namespace RLAudio
 			this.m_isIntroComplete = true;
 		}
 
-		// Token: 0x06004AF3 RID: 19187 RVA: 0x0010D7D6 File Offset: 0x0010B9D6
+		// Token: 0x060067AC RID: 26540 RVA: 0x000393BE File Offset: 0x000375BE
 		private void OnSpreadIntroAnimStart()
 		{
 			AudioManager.PlayOneShotAttached(this, this.m_spreadAttackIntroAudioPath, this.m_enemyController.gameObject);
 		}
 
-		// Token: 0x06004AF4 RID: 19188 RVA: 0x0010D7EF File Offset: 0x0010B9EF
+		// Token: 0x060067AD RID: 26541 RVA: 0x00002FCA File Offset: 0x000011CA
 		private void OnSpreadIntroAnimComplete()
 		{
 		}
 
-		// Token: 0x06004AF5 RID: 19189 RVA: 0x0010D7F4 File Offset: 0x0010B9F4
+		// Token: 0x060067AE RID: 26542 RVA: 0x0017D9D0 File Offset: 0x0017BBD0
 		private void OnSpreadAttackAnimStart()
 		{
 			if (!this.m_spreadAttackEventInstance.isValid())
@@ -187,13 +187,13 @@ namespace RLAudio
 			AudioManager.PlayAttached(this, this.m_spreadAttackEventInstance, this.m_enemyController.gameObject);
 		}
 
-		// Token: 0x06004AF6 RID: 19190 RVA: 0x0010D841 File Offset: 0x0010BA41
+		// Token: 0x060067AF RID: 26543 RVA: 0x000393D7 File Offset: 0x000375D7
 		private void OnSpreadAttackAnimComplete()
 		{
 			AudioManager.PlayOneShotAttached(this, this.m_spreadAttackCompleteAudioPath, this.m_enemyController.gameObject);
 		}
 
-		// Token: 0x06004AF7 RID: 19191 RVA: 0x0010D85A File Offset: 0x0010BA5A
+		// Token: 0x060067B0 RID: 26544 RVA: 0x000393F0 File Offset: 0x000375F0
 		private void OnSpreadAttackStart(Vector3 summonPosition)
 		{
 			this.m_spreadAttackSummonPosition = summonPosition;
@@ -204,7 +204,7 @@ namespace RLAudio
 			AudioManager.Play(this, this.m_spreadAttackSummoningAudioEventInstance, summonPosition);
 		}
 
-		// Token: 0x06004AF8 RID: 19192 RVA: 0x0010D894 File Offset: 0x0010BA94
+		// Token: 0x060067B1 RID: 26545 RVA: 0x0003942A File Offset: 0x0003762A
 		private void OnSpreadAttackComplete()
 		{
 			if (this.m_spreadAttackSummoningAudioEventInstance.isValid())
@@ -214,19 +214,19 @@ namespace RLAudio
 			AudioManager.PlayOneShot(this, this.m_spreadAttackDespawnPortalsAudioPath, this.m_spreadAttackSummonPosition);
 		}
 
-		// Token: 0x06004AF9 RID: 19193 RVA: 0x0010D8C1 File Offset: 0x0010BAC1
+		// Token: 0x060067B2 RID: 26546 RVA: 0x00039457 File Offset: 0x00037657
 		private void OnSummonShotsTellStart()
 		{
 			AudioManager.PlayOneShot(this, this.m_summonTellStartAudioPath, this.m_enemyController.transform.position);
 		}
 
-		// Token: 0x06004AFA RID: 19194 RVA: 0x0010D8DF File Offset: 0x0010BADF
+		// Token: 0x060067B3 RID: 26547 RVA: 0x00039475 File Offset: 0x00037675
 		private void OnSummonShotsTellComplete()
 		{
 			AudioManager.PlayOneShot(this, this.m_summonTellCompleteAudioPath, this.m_enemyController.transform.position);
 		}
 
-		// Token: 0x06004AFB RID: 19195 RVA: 0x0010D900 File Offset: 0x0010BB00
+		// Token: 0x060067B4 RID: 26548 RVA: 0x0017DA20 File Offset: 0x0017BC20
 		private void OnSummonShotsAttackStart()
 		{
 			if (!this.m_summonAttackAudioEventInstance.isValid())
@@ -236,7 +236,7 @@ namespace RLAudio
 			AudioManager.Play(this, this.m_summonAttackAudioEventInstance, this.m_enemyController.transform.position);
 		}
 
-		// Token: 0x06004AFC RID: 19196 RVA: 0x0010D94D File Offset: 0x0010BB4D
+		// Token: 0x060067B5 RID: 26549 RVA: 0x00039493 File Offset: 0x00037693
 		private void OnSummonShotsAttackComplete()
 		{
 			if (this.m_summonAttackAudioEventInstance.isValid())
@@ -246,13 +246,13 @@ namespace RLAudio
 			AudioManager.PlayOneShot(this, this.m_summonAttackCompleteAudioPath, this.m_enemyController.transform.position);
 		}
 
-		// Token: 0x06004AFD RID: 19197 RVA: 0x0010D984 File Offset: 0x0010BB84
+		// Token: 0x060067B6 RID: 26550 RVA: 0x000394CA File Offset: 0x000376CA
 		private void OnSummonShotsPortalOpened(Vector2 position)
 		{
 			base.StartCoroutine(this.PlaySummonShotsPortalAudio(position));
 		}
 
-		// Token: 0x06004AFE RID: 19198 RVA: 0x0010D994 File Offset: 0x0010BB94
+		// Token: 0x060067B7 RID: 26551 RVA: 0x000394DA File Offset: 0x000376DA
 		private IEnumerator PlaySummonShotsPortalAudio(Vector2 position)
 		{
 			AudioManager.PlayDelayedOneShot(this, this.m_summonSpawnPortalAudioPath, position, -1f);
@@ -261,13 +261,13 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004AFF RID: 19199 RVA: 0x0010D9AA File Offset: 0x0010BBAA
+		// Token: 0x060067B8 RID: 26552 RVA: 0x000394F0 File Offset: 0x000376F0
 		private void OnWaveFired(DancingBossWaveFiredEventArgs waveFiredEventArgs)
 		{
 			base.StartCoroutine(this.PlayWaveFiredAudio(waveFiredEventArgs));
 		}
 
-		// Token: 0x06004B00 RID: 19200 RVA: 0x0010D9BA File Offset: 0x0010BBBA
+		// Token: 0x060067B9 RID: 26553 RVA: 0x00039500 File Offset: 0x00037700
 		private IEnumerator PlayWaveFiredAudio(DancingBossWaveFiredEventArgs waveInfo)
 		{
 			string shootAudioPath = this.m_verticalWaveShootAudioPath;
@@ -322,7 +322,7 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004B01 RID: 19201 RVA: 0x0010D9D0 File Offset: 0x0010BBD0
+		// Token: 0x060067BA RID: 26554 RVA: 0x0017DA70 File Offset: 0x0017BC70
 		private GameObject GetWaveShootLoopAudioSource()
 		{
 			if (this.m_waveShootLoopAudioSources == null)
@@ -354,20 +354,20 @@ namespace RLAudio
 			return gameObject2;
 		}
 
-		// Token: 0x06004B02 RID: 19202 RVA: 0x0010DAAC File Offset: 0x0010BCAC
+		// Token: 0x060067BB RID: 26555 RVA: 0x0017DB4C File Offset: 0x0017BD4C
 		private void OnSentrySummonStart()
 		{
 			AudioManager.PlayOneShot(this, this.m_summonSentriesStartAudioPath, default(Vector3));
 			this.m_animator.SetInteger("Phase", 1);
 		}
 
-		// Token: 0x06004B03 RID: 19203 RVA: 0x0010DAE0 File Offset: 0x0010BCE0
+		// Token: 0x060067BC RID: 26556 RVA: 0x0017DB80 File Offset: 0x0017BD80
 		private void OnSentrySummonComplete()
 		{
 			AudioManager.PlayOneShot(this, this.m_summonSentriesCompleteAudioPath, default(Vector3));
 		}
 
-		// Token: 0x06004B04 RID: 19204 RVA: 0x0010DB02 File Offset: 0x0010BD02
+		// Token: 0x060067BD RID: 26557 RVA: 0x00039516 File Offset: 0x00037716
 		private void OnBossDefeated()
 		{
 			if (this.m_bossRoomController)
@@ -378,7 +378,7 @@ namespace RLAudio
 			AudioManager.PlayOneShotAttached(this, this.m_hoopMovementEndAudioPath, base.gameObject);
 		}
 
-		// Token: 0x06004B05 RID: 19205 RVA: 0x0010DB40 File Offset: 0x0010BD40
+		// Token: 0x060067BE RID: 26558 RVA: 0x0017DBA4 File Offset: 0x0017BDA4
 		private void StopAudioEventInstances()
 		{
 			if (this.m_hoopAudioEventInstance.isValid())
@@ -407,7 +407,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B06 RID: 19206 RVA: 0x0010DBE3 File Offset: 0x0010BDE3
+		// Token: 0x060067BF RID: 26559 RVA: 0x00039554 File Offset: 0x00037754
 		private void Update()
 		{
 			if (!this.m_isIntroComplete)
@@ -418,7 +418,7 @@ namespace RLAudio
 			this.UpdateFlyingAudio();
 		}
 
-		// Token: 0x06004B07 RID: 19207 RVA: 0x0010DBFC File Offset: 0x0010BDFC
+		// Token: 0x060067C0 RID: 26560 RVA: 0x0017DC48 File Offset: 0x0017BE48
 		private void UpdateFlyingAudio()
 		{
 			bool flag = this.m_enemyController.Velocity.sqrMagnitude > 0f;
@@ -461,7 +461,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B08 RID: 19208 RVA: 0x0010DD58 File Offset: 0x0010BF58
+		// Token: 0x060067C1 RID: 26561 RVA: 0x0017DDA4 File Offset: 0x0017BFA4
 		private void UpdateHoopAudio()
 		{
 			DancingBossAudioController.AttackStateID attackState = this.GetAttackState();
@@ -482,7 +482,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B09 RID: 19209 RVA: 0x0010DDD4 File Offset: 0x0010BFD4
+		// Token: 0x060067C2 RID: 26562 RVA: 0x0017DE20 File Offset: 0x0017C020
 		private DancingBossAudioController.AttackStateID GetAttackState()
 		{
 			DancingBossAudioController.AttackStateID result = DancingBossAudioController.AttackStateID.None;
@@ -512,259 +512,259 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004B0A RID: 19210 RVA: 0x0010DE48 File Offset: 0x0010C048
+		// Token: 0x060067C3 RID: 26563 RVA: 0x0017DE94 File Offset: 0x0017C094
 		private bool GetIsAnimatorStateTag(string tag)
 		{
 			return this.m_animator.GetCurrentAnimatorStateInfo(0).IsTag(tag);
 		}
 
-		// Token: 0x04003ED6 RID: 16086
+		// Token: 0x040053F4 RID: 21492
 		[SerializeField]
 		[EventRef]
 		private string m_hoopMovementAudioPath = string.Empty;
 
-		// Token: 0x04003ED7 RID: 16087
+		// Token: 0x040053F5 RID: 21493
 		[SerializeField]
 		[EventRef]
 		private string m_hoopMovementEndAudioPath = string.Empty;
 
-		// Token: 0x04003ED8 RID: 16088
+		// Token: 0x040053F6 RID: 21494
 		[SerializeField]
 		[EventRef]
 		private string m_flyingAudioPath = string.Empty;
 
-		// Token: 0x04003ED9 RID: 16089
+		// Token: 0x040053F7 RID: 21495
 		[SerializeField]
 		[EventRef]
 		private string m_stopFlyingAudioPath = string.Empty;
 
-		// Token: 0x04003EDA RID: 16090
+		// Token: 0x040053F8 RID: 21496
 		[SerializeField]
 		[EventRef]
 		private string m_changeDirectionWhileFlyingAudioPath = string.Empty;
 
-		// Token: 0x04003EDB RID: 16091
+		// Token: 0x040053F9 RID: 21497
 		[SerializeField]
 		[Range(1f, 100f)]
 		private float m_maxFlyingSpeed = 5f;
 
-		// Token: 0x04003EDC RID: 16092
+		// Token: 0x040053FA RID: 21498
 		[SerializeField]
 		[EventRef]
 		private string m_summonSentriesStartAudioPath = string.Empty;
 
-		// Token: 0x04003EDD RID: 16093
+		// Token: 0x040053FB RID: 21499
 		[SerializeField]
 		[EventRef]
 		private string m_summonSentriesCompleteAudioPath = string.Empty;
 
-		// Token: 0x04003EDE RID: 16094
+		// Token: 0x040053FC RID: 21500
 		[SerializeField]
 		[EventRef]
 		private string m_verticalWaveShootAudioPath = string.Empty;
 
-		// Token: 0x04003EDF RID: 16095
+		// Token: 0x040053FD RID: 21501
 		[SerializeField]
 		[EventRef]
 		private string m_verticalWaveSpawnPortalsAudioPath = string.Empty;
 
-		// Token: 0x04003EE0 RID: 16096
+		// Token: 0x040053FE RID: 21502
 		[SerializeField]
 		[EventRef]
 		private string m_verticalWaveDespawnPortalsAudioPath = string.Empty;
 
-		// Token: 0x04003EE1 RID: 16097
+		// Token: 0x040053FF RID: 21503
 		[SerializeField]
 		[EventRef]
 		private string m_horizontalWaveShootAudioPath = string.Empty;
 
-		// Token: 0x04003EE2 RID: 16098
+		// Token: 0x04005400 RID: 21504
 		[SerializeField]
 		[EventRef]
 		private string m_horizontalWaveSpawnPortalsAudioPath = string.Empty;
 
-		// Token: 0x04003EE3 RID: 16099
+		// Token: 0x04005401 RID: 21505
 		[SerializeField]
 		[EventRef]
 		private string m_horizontalWaveDespawnPortalsAudioPath = string.Empty;
 
-		// Token: 0x04003EE4 RID: 16100
+		// Token: 0x04005402 RID: 21506
 		[SerializeField]
 		[EventRef]
 		private string m_spreadAttackSpawnPortalsAudioPath = string.Empty;
 
-		// Token: 0x04003EE5 RID: 16101
+		// Token: 0x04005403 RID: 21507
 		[SerializeField]
 		[EventRef]
 		private string m_spreadAttackIntroAudioPath = string.Empty;
 
-		// Token: 0x04003EE6 RID: 16102
+		// Token: 0x04005404 RID: 21508
 		[SerializeField]
 		[EventRef]
 		private string m_spreadAttackStartAudioPath = string.Empty;
 
-		// Token: 0x04003EE7 RID: 16103
+		// Token: 0x04005405 RID: 21509
 		[SerializeField]
 		[EventRef]
 		private string m_spreadAttackCompleteAudioPath = string.Empty;
 
-		// Token: 0x04003EE8 RID: 16104
+		// Token: 0x04005406 RID: 21510
 		[SerializeField]
 		[EventRef]
 		private string m_spreadAttackDespawnPortalsAudioPath = string.Empty;
 
-		// Token: 0x04003EE9 RID: 16105
+		// Token: 0x04005407 RID: 21511
 		[SerializeField]
 		[EventRef]
 		private string m_summonTellStartAudioPath = string.Empty;
 
-		// Token: 0x04003EEA RID: 16106
+		// Token: 0x04005408 RID: 21512
 		[SerializeField]
 		[EventRef]
 		private string m_summonTellCompleteAudioPath = string.Empty;
 
-		// Token: 0x04003EEB RID: 16107
+		// Token: 0x04005409 RID: 21513
 		[SerializeField]
 		[EventRef]
 		private string m_summonAttackStartAudioPath = string.Empty;
 
-		// Token: 0x04003EEC RID: 16108
+		// Token: 0x0400540A RID: 21514
 		[SerializeField]
 		[EventRef]
 		private string m_summonAttackCompleteAudioPath = string.Empty;
 
-		// Token: 0x04003EED RID: 16109
+		// Token: 0x0400540B RID: 21515
 		[SerializeField]
 		[EventRef]
 		private string m_summonSpawnPortalAudioPath = string.Empty;
 
-		// Token: 0x04003EEE RID: 16110
+		// Token: 0x0400540C RID: 21516
 		[SerializeField]
 		[EventRef]
 		private string m_summonDespawnPortalAudioPath = string.Empty;
 
-		// Token: 0x04003EEF RID: 16111
+		// Token: 0x0400540D RID: 21517
 		private Animator m_animator;
 
-		// Token: 0x04003EF0 RID: 16112
+		// Token: 0x0400540E RID: 21518
 		private BossRoomController m_bossRoomController;
 
-		// Token: 0x04003EF1 RID: 16113
+		// Token: 0x0400540F RID: 21519
 		private EnemyController m_enemyController;
 
-		// Token: 0x04003EF2 RID: 16114
+		// Token: 0x04005410 RID: 21520
 		private string m_description = string.Empty;
 
-		// Token: 0x04003EF3 RID: 16115
+		// Token: 0x04005411 RID: 21521
 		private DancingBossAudioController.AttackStateID m_previousAttackState;
 
-		// Token: 0x04003EF4 RID: 16116
+		// Token: 0x04005412 RID: 21522
 		private const string HOOP_PARAMETER = "dancingBoss_idleSpeed";
 
-		// Token: 0x04003EF5 RID: 16117
+		// Token: 0x04005413 RID: 21523
 		private const string FLYING_SPEED_PARAMETER = "danceBoss_flySpeed";
 
-		// Token: 0x04003EF6 RID: 16118
+		// Token: 0x04005414 RID: 21524
 		private const int INITIAL_WAVE_AUDIO_SOURCE_COUNT = 4;
 
-		// Token: 0x04003EF7 RID: 16119
+		// Token: 0x04005415 RID: 21525
 		private const string PHASE_ANIMATOR_PARAMETER = "Phase";
 
-		// Token: 0x04003EF8 RID: 16120
+		// Token: 0x04005416 RID: 21526
 		private DancingBossAudioController.FlyingStateID m_currentFlyingState;
 
-		// Token: 0x04003EF9 RID: 16121
+		// Token: 0x04005417 RID: 21527
 		private Vector2 m_previousFlightDirection;
 
-		// Token: 0x04003EFA RID: 16122
+		// Token: 0x04005418 RID: 21528
 		private bool m_isIntroComplete;
 
-		// Token: 0x04003EFB RID: 16123
+		// Token: 0x04005419 RID: 21529
 		private List<GameObject> m_waveShootLoopAudioSources;
 
-		// Token: 0x04003EFC RID: 16124
+		// Token: 0x0400541A RID: 21530
 		private WaitForSeconds m_waitUntilSummonPortalDespawnStart = new WaitForSeconds(1.2f);
 
-		// Token: 0x04003EFD RID: 16125
+		// Token: 0x0400541B RID: 21531
 		private Vector3 m_spreadAttackSummonPosition;
 
-		// Token: 0x04003EFE RID: 16126
+		// Token: 0x0400541C RID: 21532
 		private EventInstance m_hoopAudioEventInstance;
 
-		// Token: 0x04003EFF RID: 16127
+		// Token: 0x0400541D RID: 21533
 		private EventInstance m_flyingAudioEventInstance;
 
-		// Token: 0x04003F00 RID: 16128
+		// Token: 0x0400541E RID: 21534
 		private EventInstance m_spreadAttackSummoningAudioEventInstance;
 
-		// Token: 0x04003F01 RID: 16129
+		// Token: 0x0400541F RID: 21535
 		private EventInstance m_summonAttackAudioEventInstance;
 
-		// Token: 0x04003F02 RID: 16130
+		// Token: 0x04005420 RID: 21536
 		private EventInstance m_spreadAttackEventInstance;
 
-		// Token: 0x04003F03 RID: 16131
+		// Token: 0x04005421 RID: 21537
 		private EventInstance m_waveAttackEventInstance;
 
-		// Token: 0x04003F04 RID: 16132
+		// Token: 0x04005422 RID: 21538
 		private EventInstance m_summoningPortalsEventInstance;
 
-		// Token: 0x04003F05 RID: 16133
+		// Token: 0x04005423 RID: 21539
 		private Action m_onBossDefeated;
 
-		// Token: 0x04003F06 RID: 16134
+		// Token: 0x04005424 RID: 21540
 		private Action m_onSentrySummonStart;
 
-		// Token: 0x04003F07 RID: 16135
+		// Token: 0x04005425 RID: 21541
 		private Action m_onSentrySummonComplete;
 
-		// Token: 0x04003F08 RID: 16136
+		// Token: 0x04005426 RID: 21542
 		private Action<DancingBossWaveFiredEventArgs> m_onWaveFired;
 
-		// Token: 0x04003F09 RID: 16137
+		// Token: 0x04005427 RID: 21543
 		private Action<Vector3> m_onSpreadAttackStart;
 
-		// Token: 0x04003F0A RID: 16138
+		// Token: 0x04005428 RID: 21544
 		private Action m_onSpreadAttackComplete;
 
-		// Token: 0x04003F0B RID: 16139
+		// Token: 0x04005429 RID: 21545
 		private Action m_onSummonShotsTellStart;
 
-		// Token: 0x04003F0C RID: 16140
+		// Token: 0x0400542A RID: 21546
 		private Action m_onSummonShotsTellComplete;
 
-		// Token: 0x04003F0D RID: 16141
+		// Token: 0x0400542B RID: 21547
 		private Action m_onSummonShotsAttackStart;
 
-		// Token: 0x04003F0E RID: 16142
+		// Token: 0x0400542C RID: 21548
 		private Action m_onSummonShotsAttackComplete;
 
-		// Token: 0x04003F0F RID: 16143
+		// Token: 0x0400542D RID: 21549
 		private Action<Vector2> m_onSummonShotsPortalOpened;
 
-		// Token: 0x02000EE1 RID: 3809
+		// Token: 0x02000E5C RID: 3676
 		private enum AttackStateID
 		{
-			// Token: 0x04005993 RID: 22931
+			// Token: 0x0400542F RID: 21551
 			None,
-			// Token: 0x04005994 RID: 22932
+			// Token: 0x04005430 RID: 21552
 			TellIntro,
-			// Token: 0x04005995 RID: 22933
+			// Token: 0x04005431 RID: 21553
 			TellHold,
-			// Token: 0x04005996 RID: 22934
+			// Token: 0x04005432 RID: 21554
 			AttackIntro,
-			// Token: 0x04005997 RID: 22935
+			// Token: 0x04005433 RID: 21555
 			AttackHold,
-			// Token: 0x04005998 RID: 22936
+			// Token: 0x04005434 RID: 21556
 			AttackExit
 		}
 
-		// Token: 0x02000EE2 RID: 3810
+		// Token: 0x02000E5D RID: 3677
 		private enum FlyingStateID
 		{
-			// Token: 0x0400599A RID: 22938
+			// Token: 0x04005436 RID: 21558
 			Stopped,
-			// Token: 0x0400599B RID: 22939
+			// Token: 0x04005437 RID: 21559
 			Flying
 		}
 	}

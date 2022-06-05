@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000737 RID: 1847
+// Token: 0x02000BF5 RID: 3061
 public enum GameInputMode
 {
-	// Token: 0x04003441 RID: 13377
+	// Token: 0x040046BD RID: 18109
 	None,
-	// Token: 0x04003442 RID: 13378
+	// Token: 0x040046BE RID: 18110
 	Window = 10,
-	// Token: 0x04003443 RID: 13379
+	// Token: 0x040046BF RID: 18111
 	Game = 20
 }

@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004F7 RID: 1271
+// Token: 0x02000852 RID: 2130
 public class ClosetRoomController : BaseSpecialRoomController
 {
-	// Token: 0x06002F8B RID: 12171 RVA: 0x000A2D38 File Offset: 0x000A0F38
+	// Token: 0x060041B2 RID: 16818 RVA: 0x00108700 File Offset: 0x00106900
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -21,7 +21,7 @@ public class ClosetRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F8C RID: 12172 RVA: 0x000A2D92 File Offset: 0x000A0F92
+	// Token: 0x060041B3 RID: 16819 RVA: 0x00024631 File Offset: 0x00022831
 	protected override void OnPlayerExitRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (!PlayerManager.GetPlayerController().IsFacingRight)
@@ -31,7 +31,7 @@ public class ClosetRoomController : BaseSpecialRoomController
 		base.OnPlayerExitRoom(sender, eventArgs);
 	}
 
-	// Token: 0x06002F8D RID: 12173 RVA: 0x000A2DB9 File Offset: 0x000A0FB9
+	// Token: 0x060041B4 RID: 16820 RVA: 0x00024658 File Offset: 0x00022858
 	private IEnumerator FixTunnelLayer()
 	{
 		yield return null;
@@ -43,7 +43,7 @@ public class ClosetRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x040025E5 RID: 9701
+	// Token: 0x0400336C RID: 13164
 	[SerializeField]
 	private TunnelSpawnController m_closetTunnelSpawner;
 }

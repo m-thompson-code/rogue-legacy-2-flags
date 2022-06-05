@@ -4,12 +4,12 @@ using System.Linq;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000435 RID: 1077
+// Token: 0x020006FC RID: 1788
 public class FairyRoomController : BaseSpecialRoomController
 {
-	// Token: 0x17000F9C RID: 3996
-	// (get) Token: 0x0600277A RID: 10106 RVA: 0x000832D4 File Offset: 0x000814D4
-	// (set) Token: 0x0600277B RID: 10107 RVA: 0x000832DC File Offset: 0x000814DC
+	// Token: 0x1700147D RID: 5245
+	// (get) Token: 0x06003683 RID: 13955 RVA: 0x0001DFF1 File Offset: 0x0001C1F1
+	// (set) Token: 0x06003684 RID: 13956 RVA: 0x0001DFF9 File Offset: 0x0001C1F9
 	public FairyRoomState State
 	{
 		get
@@ -23,9 +23,9 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x17000F9D RID: 3997
-	// (get) Token: 0x0600277C RID: 10108 RVA: 0x000832F3 File Offset: 0x000814F3
-	// (set) Token: 0x0600277D RID: 10109 RVA: 0x000832FB File Offset: 0x000814FB
+	// Token: 0x1700147E RID: 5246
+	// (get) Token: 0x06003685 RID: 13957 RVA: 0x0001E010 File Offset: 0x0001C210
+	// (set) Token: 0x06003686 RID: 13958 RVA: 0x0001E018 File Offset: 0x0001C218
 	public List<FairyRoomRuleEntry> FairyRoomRuleEntries
 	{
 		get
@@ -38,9 +38,9 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x17000F9E RID: 3998
-	// (get) Token: 0x0600277E RID: 10110 RVA: 0x00083304 File Offset: 0x00081504
-	// (set) Token: 0x0600277F RID: 10111 RVA: 0x0008330C File Offset: 0x0008150C
+	// Token: 0x1700147F RID: 5247
+	// (get) Token: 0x06003687 RID: 13959 RVA: 0x0001E021 File Offset: 0x0001C221
+	// (set) Token: 0x06003688 RID: 13960 RVA: 0x0001E029 File Offset: 0x0001C229
 	public GameObject FairyRuleLocation
 	{
 		get
@@ -53,9 +53,9 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x17000F9F RID: 3999
-	// (get) Token: 0x06002780 RID: 10112 RVA: 0x00083315 File Offset: 0x00081515
-	// (set) Token: 0x06002781 RID: 10113 RVA: 0x0008331D File Offset: 0x0008151D
+	// Token: 0x17001480 RID: 5248
+	// (get) Token: 0x06003689 RID: 13961 RVA: 0x0001E032 File Offset: 0x0001C232
+	// (set) Token: 0x0600368A RID: 13962 RVA: 0x0001E03A File Offset: 0x0001C23A
 	public ChestSpawnController ChestSpawnController
 	{
 		get
@@ -68,9 +68,9 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x17000FA0 RID: 4000
-	// (get) Token: 0x06002782 RID: 10114 RVA: 0x00083326 File Offset: 0x00081526
-	// (set) Token: 0x06002783 RID: 10115 RVA: 0x0008332E File Offset: 0x0008152E
+	// Token: 0x17001481 RID: 5249
+	// (get) Token: 0x0600368B RID: 13963 RVA: 0x0001E043 File Offset: 0x0001C243
+	// (set) Token: 0x0600368C RID: 13964 RVA: 0x0001E04B File Offset: 0x0001C24B
 	public PropSpawnController FairyRoomTriggerSpawner
 	{
 		get
@@ -83,9 +83,9 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x17000FA1 RID: 4001
-	// (get) Token: 0x06002784 RID: 10116 RVA: 0x00083337 File Offset: 0x00081537
-	// (set) Token: 0x06002785 RID: 10117 RVA: 0x0008333F File Offset: 0x0008153F
+	// Token: 0x17001482 RID: 5250
+	// (get) Token: 0x0600368D RID: 13965 RVA: 0x0001E054 File Offset: 0x0001C254
+	// (set) Token: 0x0600368E RID: 13966 RVA: 0x0001E05C File Offset: 0x0001C25C
 	public GameObject RoomTriggerWall
 	{
 		get
@@ -98,13 +98,13 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x17000FA2 RID: 4002
-	// (get) Token: 0x06002786 RID: 10118 RVA: 0x00083348 File Offset: 0x00081548
-	// (set) Token: 0x06002787 RID: 10119 RVA: 0x00083350 File Offset: 0x00081550
+	// Token: 0x17001483 RID: 5251
+	// (get) Token: 0x0600368F RID: 13967 RVA: 0x0001E065 File Offset: 0x0001C265
+	// (set) Token: 0x06003690 RID: 13968 RVA: 0x0001E06D File Offset: 0x0001C26D
 	public ChestObj Chest { get; private set; }
 
-	// Token: 0x17000FA3 RID: 4003
-	// (get) Token: 0x06002788 RID: 10120 RVA: 0x00083359 File Offset: 0x00081559
+	// Token: 0x17001484 RID: 5252
+	// (get) Token: 0x06003691 RID: 13969 RVA: 0x00006CB3 File Offset: 0x00004EB3
 	public override SpecialRoomType SpecialRoomType
 	{
 		get
@@ -113,8 +113,8 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x17000FA4 RID: 4004
-	// (get) Token: 0x06002789 RID: 10121 RVA: 0x0008335D File Offset: 0x0008155D
+	// Token: 0x17001485 RID: 5253
+	// (get) Token: 0x06003692 RID: 13970 RVA: 0x0001E076 File Offset: 0x0001C276
 	public bool IsHiddenFairyRoom
 	{
 		get
@@ -123,7 +123,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x0600278A RID: 10122 RVA: 0x00083368 File Offset: 0x00081568
+	// Token: 0x06003693 RID: 13971 RVA: 0x000E3FF0 File Offset: 0x000E21F0
 	protected override void Awake()
 	{
 		base.Awake();
@@ -148,19 +148,19 @@ public class FairyRoomController : BaseSpecialRoomController
 		this.m_onPlayerDeath = new Action<object, EventArgs>(this.OnPlayerDeath);
 	}
 
-	// Token: 0x0600278B RID: 10123 RVA: 0x0008341C File Offset: 0x0008161C
+	// Token: 0x06003694 RID: 13972 RVA: 0x0001E07E File Offset: 0x0001C27E
 	private void OnEnable()
 	{
 		this.SubscribeToFairyRuleStateChangeEvents(true);
 	}
 
-	// Token: 0x0600278C RID: 10124 RVA: 0x00083425 File Offset: 0x00081625
+	// Token: 0x06003695 RID: 13973 RVA: 0x0001E087 File Offset: 0x0001C287
 	private void OnDisable()
 	{
 		this.SubscribeToFairyRuleStateChangeEvents(false);
 	}
 
-	// Token: 0x0600278D RID: 10125 RVA: 0x00083430 File Offset: 0x00081630
+	// Token: 0x06003696 RID: 13974 RVA: 0x000E40A4 File Offset: 0x000E22A4
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -213,7 +213,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		FairyRoomAudioEventController.DisableAudio = false;
 	}
 
-	// Token: 0x0600278E RID: 10126 RVA: 0x00083580 File Offset: 0x00081780
+	// Token: 0x06003697 RID: 13975 RVA: 0x000E41F4 File Offset: 0x000E23F4
 	private void FairyRoomTriggered()
 	{
 		if (this.m_roomTriggerWall)
@@ -228,7 +228,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.PlayerFairyRoomTriggered, this, this.m_fairyRoomEnteredEventArgs);
 	}
 
-	// Token: 0x0600278F RID: 10127 RVA: 0x000835E4 File Offset: 0x000817E4
+	// Token: 0x06003698 RID: 13976 RVA: 0x000E4258 File Offset: 0x000E2458
 	public void StartFairyRoom()
 	{
 		if (this.State != FairyRoomState.Failed && this.State != FairyRoomState.Passed && this.FairyRoomRuleEntries != null && this.FairyRoomRuleEntries.Count > 0)
@@ -262,14 +262,14 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002790 RID: 10128 RVA: 0x000836BC File Offset: 0x000818BC
+	// Token: 0x06003699 RID: 13977 RVA: 0x0001E090 File Offset: 0x0001C290
 	private void OnPlayerOpenedChest()
 	{
 		this.SetAllFairyRulesPassed();
 		this.RoomCompleted();
 	}
 
-	// Token: 0x06002791 RID: 10129 RVA: 0x000836CC File Offset: 0x000818CC
+	// Token: 0x0600369A RID: 13978 RVA: 0x000E4330 File Offset: 0x000E2530
 	protected override void OnPlayerExitRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (this.Chest)
@@ -296,7 +296,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.PlayerExitFairyRoom, this, this.m_fairyRoomEnteredEventArgs);
 	}
 
-	// Token: 0x06002792 RID: 10130 RVA: 0x0008376C File Offset: 0x0008196C
+	// Token: 0x0600369B RID: 13979 RVA: 0x000E43D0 File Offset: 0x000E25D0
 	private void OnFairyRoomRuleStateChange(FairyRoomRuleStateChangeEventArgs eventArgs)
 	{
 		if (eventArgs.Rule.State == FairyRoomState.Passed)
@@ -348,7 +348,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.FairyRoomRuleStateChange, this, eventArgs);
 	}
 
-	// Token: 0x06002793 RID: 10131 RVA: 0x00083894 File Offset: 0x00081A94
+	// Token: 0x0600369C RID: 13980 RVA: 0x000E44F8 File Offset: 0x000E26F8
 	private void SubscribeToFairyRuleStateChangeEvents(bool addListener)
 	{
 		foreach (FairyRoomRuleEntry fairyRoomRuleEntry in this.FairyRoomRuleEntries)
@@ -373,7 +373,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerDeath, this.m_onPlayerDeath);
 	}
 
-	// Token: 0x06002794 RID: 10132 RVA: 0x00083940 File Offset: 0x00081B40
+	// Token: 0x0600369D RID: 13981 RVA: 0x000E45A4 File Offset: 0x000E27A4
 	private void SetAllFairyRulesFailed()
 	{
 		foreach (FairyRoomRuleEntry fairyRoomRuleEntry in this.FairyRoomRuleEntries)
@@ -385,7 +385,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002795 RID: 10133 RVA: 0x000839A8 File Offset: 0x00081BA8
+	// Token: 0x0600369E RID: 13982 RVA: 0x000E460C File Offset: 0x000E280C
 	private void SetAllFairyRulesPassed()
 	{
 		foreach (FairyRoomRuleEntry fairyRoomRuleEntry in this.FairyRoomRuleEntries)
@@ -398,7 +398,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		this.SubscribeToFairyRuleStateChangeEvents(false);
 	}
 
-	// Token: 0x06002796 RID: 10134 RVA: 0x00083A14 File Offset: 0x00081C14
+	// Token: 0x0600369F RID: 13983 RVA: 0x000E4678 File Offset: 0x000E2878
 	private void DeactivateAllEnemies()
 	{
 		foreach (EnemySpawnController enemySpawnController in base.Room.SpawnControllerManager.EnemySpawnControllers)
@@ -426,7 +426,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		this.m_enemiesDeactivated = true;
 	}
 
-	// Token: 0x06002797 RID: 10135 RVA: 0x00083B18 File Offset: 0x00081D18
+	// Token: 0x060036A0 RID: 13984 RVA: 0x000E477C File Offset: 0x000E297C
 	private void OnExitReactivateEnemies()
 	{
 		foreach (EnemyController enemyController in FairyRoomController.m_deactivatedEnemies_STATIC)
@@ -445,13 +445,13 @@ public class FairyRoomController : BaseSpecialRoomController
 		FairyRoomController.m_deactivatedEnemies_STATIC.Clear();
 	}
 
-	// Token: 0x06002798 RID: 10136 RVA: 0x00083BE4 File Offset: 0x00081DE4
+	// Token: 0x060036A1 RID: 13985 RVA: 0x0001E09E File Offset: 0x0001C29E
 	private void OnPlayerDeath(object sender, EventArgs args)
 	{
 		this.OnExitReactivateEnemies();
 	}
 
-	// Token: 0x06002799 RID: 10137 RVA: 0x00083BEC File Offset: 0x00081DEC
+	// Token: 0x060036A2 RID: 13986 RVA: 0x000E4848 File Offset: 0x000E2A48
 	private void ActivateAllEnemies()
 	{
 		if (!this.m_enemiesDeactivated)
@@ -474,7 +474,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		this.m_enemiesDeactivated = false;
 	}
 
-	// Token: 0x0600279A RID: 10138 RVA: 0x00083C98 File Offset: 0x00081E98
+	// Token: 0x060036A3 RID: 13987 RVA: 0x000E48F4 File Offset: 0x000E2AF4
 	private void RunAllFairyRules(bool areRunning)
 	{
 		foreach (FairyRoomRuleEntry fairyRoomRuleEntry in this.FairyRoomRuleEntries)
@@ -493,7 +493,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x0600279B RID: 10139 RVA: 0x00083D10 File Offset: 0x00081F10
+	// Token: 0x060036A4 RID: 13988 RVA: 0x000E496C File Offset: 0x000E2B6C
 	private void ResetAllFairyRules()
 	{
 		foreach (FairyRoomRuleEntry fairyRoomRuleEntry in this.FairyRoomRuleEntries)
@@ -505,7 +505,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x0600279C RID: 10140 RVA: 0x00083D78 File Offset: 0x00081F78
+	// Token: 0x060036A5 RID: 13989 RVA: 0x000E49D4 File Offset: 0x000E2BD4
 	private void PlayerPassed(bool setRoomComplete = true)
 	{
 		this.State = FairyRoomState.Passed;
@@ -520,7 +520,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x0600279D RID: 10141 RVA: 0x00083DD0 File Offset: 0x00081FD0
+	// Token: 0x060036A6 RID: 13990 RVA: 0x000E4A2C File Offset: 0x000E2C2C
 	private void PlayerFailed(bool setRoomComplete = true)
 	{
 		this.State = FairyRoomState.Failed;
@@ -535,7 +535,7 @@ public class FairyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x0600279E RID: 10142 RVA: 0x00083E29 File Offset: 0x00082029
+	// Token: 0x060036A7 RID: 13991 RVA: 0x0001E0A6 File Offset: 0x0001C2A6
 	protected override void OnRoomDataSaved(bool exitingToMainMenu)
 	{
 		if (!this.m_isHiddenFairyRoom && this.State == FairyRoomState.Running && !exitingToMainMenu)
@@ -545,54 +545,54 @@ public class FairyRoomController : BaseSpecialRoomController
 		base.OnRoomDataSaved(exitingToMainMenu);
 	}
 
-	// Token: 0x0400210E RID: 8462
+	// Token: 0x04002C39 RID: 11321
 	public static EnemyType[] EnemyExceptionArray = new EnemyType[]
 	{
 		EnemyType.BouncySpike,
 		EnemyType.Eggplant
 	};
 
-	// Token: 0x0400210F RID: 8463
+	// Token: 0x04002C3A RID: 11322
 	[SerializeField]
 	private List<FairyRoomRuleEntry> m_fairyRoomRuleEntries;
 
-	// Token: 0x04002110 RID: 8464
+	// Token: 0x04002C3B RID: 11323
 	[SerializeField]
 	private GameObject m_fairyRuleLocation;
 
-	// Token: 0x04002111 RID: 8465
+	// Token: 0x04002C3C RID: 11324
 	[SerializeField]
 	private ChestSpawnController m_chestSpawnController;
 
-	// Token: 0x04002112 RID: 8466
+	// Token: 0x04002C3D RID: 11325
 	[SerializeField]
 	private PropSpawnController m_fairyRoomTriggerSpawner;
 
-	// Token: 0x04002113 RID: 8467
+	// Token: 0x04002C3E RID: 11326
 	[SerializeField]
 	private GameObject m_roomTriggerWall;
 
-	// Token: 0x04002114 RID: 8468
+	// Token: 0x04002C3F RID: 11327
 	private FairyRoomState m_state;
 
-	// Token: 0x04002115 RID: 8469
+	// Token: 0x04002C40 RID: 11328
 	private bool m_enemiesDeactivated;
 
-	// Token: 0x04002116 RID: 8470
+	// Token: 0x04002C41 RID: 11329
 	private bool m_isHiddenFairyRoom;
 
-	// Token: 0x04002117 RID: 8471
+	// Token: 0x04002C42 RID: 11330
 	private FairyRoomEnteredEventArgs m_fairyRoomEnteredEventArgs;
 
-	// Token: 0x04002118 RID: 8472
+	// Token: 0x04002C43 RID: 11331
 	private static List<EnemyController> m_deactivatedEnemies_STATIC = new List<EnemyController>();
 
-	// Token: 0x04002119 RID: 8473
+	// Token: 0x04002C44 RID: 11332
 	private Action m_onPlayerOpenedChest;
 
-	// Token: 0x0400211A RID: 8474
+	// Token: 0x04002C45 RID: 11333
 	private Action<FairyRoomRuleStateChangeEventArgs> m_onFairyRoomRuleStateChange;
 
-	// Token: 0x0400211B RID: 8475
+	// Token: 0x04002C46 RID: 11334
 	private Action<object, EventArgs> m_onPlayerDeath;
 }

@@ -3,11 +3,11 @@ using System.Collections;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x0200032C RID: 812
+// Token: 0x0200057D RID: 1405
 public class CheerOnKills_Trait : BaseTrait
 {
-	// Token: 0x17000DB0 RID: 3504
-	// (get) Token: 0x06001FC2 RID: 8130 RVA: 0x00065436 File Offset: 0x00063636
+	// Token: 0x170011E7 RID: 4583
+	// (get) Token: 0x06002C9F RID: 11423 RVA: 0x00018B42 File Offset: 0x00016D42
 	public override TraitType TraitType
 	{
 		get
@@ -16,7 +16,7 @@ public class CheerOnKills_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FC3 RID: 8131 RVA: 0x0006543D File Offset: 0x0006363D
+	// Token: 0x06002CA0 RID: 11424 RVA: 0x00018B49 File Offset: 0x00016D49
 	protected override void Awake()
 	{
 		base.Awake();
@@ -25,7 +25,7 @@ public class CheerOnKills_Trait : BaseTrait
 		this.m_onEnemyDeath = new Action<MonoBehaviour, EventArgs>(this.OnEnemyDeath);
 	}
 
-	// Token: 0x06001FC4 RID: 8132 RVA: 0x0006547B File Offset: 0x0006367B
+	// Token: 0x06002CA1 RID: 11425 RVA: 0x00018B87 File Offset: 0x00016D87
 	private IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -43,7 +43,7 @@ public class CheerOnKills_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FC5 RID: 8133 RVA: 0x0006548C File Offset: 0x0006368C
+	// Token: 0x06002CA2 RID: 11426 RVA: 0x000C53C4 File Offset: 0x000C35C4
 	public override void AssignGreenMask()
 	{
 		base.AssignGreenMask();
@@ -53,7 +53,7 @@ public class CheerOnKills_Trait : BaseTrait
 		this.m_postProcessOverrideController.Profile.OverrideTintRedChannel = false;
 	}
 
-	// Token: 0x06001FC6 RID: 8134 RVA: 0x000654F8 File Offset: 0x000636F8
+	// Token: 0x06002CA3 RID: 11427 RVA: 0x000C5B58 File Offset: 0x000C3D58
 	private void OnEnemyDeath(MonoBehaviour sender, EventArgs args)
 	{
 		EnemyDeathEventArgs eventArgs = args as EnemyDeathEventArgs;
@@ -61,7 +61,7 @@ public class CheerOnKills_Trait : BaseTrait
 		this.RunCheerCheck(eventArgs);
 	}
 
-	// Token: 0x06001FC7 RID: 8135 RVA: 0x00065524 File Offset: 0x00063724
+	// Token: 0x06002CA4 RID: 11428 RVA: 0x000C5B84 File Offset: 0x000C3D84
 	private void RunCheerCheck(EnemyDeathEventArgs eventArgs)
 	{
 		bool flag = this.m_numEnemiesKilled >= this.m_numEnemiesToKill && this.m_numEnemiesToKill > 0;
@@ -77,7 +77,7 @@ public class CheerOnKills_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FC8 RID: 8136 RVA: 0x000655C4 File Offset: 0x000637C4
+	// Token: 0x06002CA5 RID: 11429 RVA: 0x000C5C24 File Offset: 0x000C3E24
 	private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs args)
 	{
 		this.m_numEnemiesKilled = 0;
@@ -98,7 +98,7 @@ public class CheerOnKills_Trait : BaseTrait
 		this.m_roomSummonRuleController = currentPlayerRoom.GetComponentInChildren<SummonRuleController>();
 	}
 
-	// Token: 0x06001FC9 RID: 8137 RVA: 0x00065640 File Offset: 0x00063840
+	// Token: 0x06002CA6 RID: 11430 RVA: 0x000C5CA0 File Offset: 0x000C3EA0
 	private void OnEnemySummoned(MonoBehaviour sender, EventArgs args)
 	{
 		EnemySummonedEventArgs enemySummonedEventArgs = args as EnemySummonedEventArgs;
@@ -112,13 +112,13 @@ public class CheerOnKills_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FCA RID: 8138 RVA: 0x00065675 File Offset: 0x00063875
+	// Token: 0x06002CA7 RID: 11431 RVA: 0x00018B96 File Offset: 0x00016D96
 	public void ApplyOnEnemy(EnemyController enemy, bool increment)
 	{
 		base.StartCoroutine(this.EnableOnEnemyCoroutine(enemy, increment));
 	}
 
-	// Token: 0x06001FCB RID: 8139 RVA: 0x00065686 File Offset: 0x00063886
+	// Token: 0x06002CA8 RID: 11432 RVA: 0x00018BA7 File Offset: 0x00016DA7
 	private IEnumerator EnableOnEnemyCoroutine(EnemyController enemyInstance, bool increment)
 	{
 		while (!enemyInstance.IsInitialized)
@@ -175,7 +175,7 @@ public class CheerOnKills_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FCC RID: 8140 RVA: 0x000656A3 File Offset: 0x000638A3
+	// Token: 0x06002CA9 RID: 11433 RVA: 0x00018BC4 File Offset: 0x00016DC4
 	public override void DisableOnDeath()
 	{
 		this.PlayerDeathRelay.Dispatch();
@@ -184,7 +184,7 @@ public class CheerOnKills_Trait : BaseTrait
 		base.DisableOnDeath();
 	}
 
-	// Token: 0x06001FCD RID: 8141 RVA: 0x000656D4 File Offset: 0x000638D4
+	// Token: 0x06002CAA RID: 11434 RVA: 0x000C5CD8 File Offset: 0x000C3ED8
 	private void OnDestroy()
 	{
 		if (this.m_traitMask)
@@ -196,30 +196,30 @@ public class CheerOnKills_Trait : BaseTrait
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.EnemySummoned, this.m_onEnemySummoned);
 	}
 
-	// Token: 0x04001C37 RID: 7223
+	// Token: 0x04002573 RID: 9587
 	public Relay<EnemyTypeAndRank> CheerAfterKillRelay = new Relay<EnemyTypeAndRank>();
 
-	// Token: 0x04001C38 RID: 7224
+	// Token: 0x04002574 RID: 9588
 	public Relay RosesThrownRelay = new Relay();
 
-	// Token: 0x04001C39 RID: 7225
+	// Token: 0x04002575 RID: 9589
 	public Relay PlayerDeathRelay = new Relay();
 
-	// Token: 0x04001C3A RID: 7226
+	// Token: 0x04002576 RID: 9590
 	private int m_numEnemiesToKill;
 
-	// Token: 0x04001C3B RID: 7227
+	// Token: 0x04002577 RID: 9591
 	private int m_numEnemiesKilled;
 
-	// Token: 0x04001C3C RID: 7228
+	// Token: 0x04002578 RID: 9592
 	private SummonRuleController m_roomSummonRuleController;
 
-	// Token: 0x04001C3D RID: 7229
+	// Token: 0x04002579 RID: 9593
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04001C3E RID: 7230
+	// Token: 0x0400257A RID: 9594
 	private Action<MonoBehaviour, EventArgs> m_onEnemySummoned;
 
-	// Token: 0x04001C3F RID: 7231
+	// Token: 0x0400257B RID: 9595
 	private Action<MonoBehaviour, EventArgs> m_onEnemyDeath;
 }

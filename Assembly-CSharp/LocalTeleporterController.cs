@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200025C RID: 604
+// Token: 0x0200041B RID: 1051
 [SelectionBase]
 public class LocalTeleporterController : MonoBehaviour, IRootObj
 {
-	// Token: 0x17000B6F RID: 2927
-	// (get) Token: 0x060017AA RID: 6058 RVA: 0x00049813 File Offset: 0x00047A13
+	// Token: 0x17000E9E RID: 3742
+	// (get) Token: 0x06002163 RID: 8547 RVA: 0x00011CBE File Offset: 0x0000FEBE
 	public static bool IsTeleporting
 	{
 		get
@@ -18,9 +18,9 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x17000B70 RID: 2928
-	// (get) Token: 0x060017AB RID: 6059 RVA: 0x0004981A File Offset: 0x00047A1A
-	// (set) Token: 0x060017AC RID: 6060 RVA: 0x00049822 File Offset: 0x00047A22
+	// Token: 0x17000E9F RID: 3743
+	// (get) Token: 0x06002164 RID: 8548 RVA: 0x00011CC5 File Offset: 0x0000FEC5
+	// (set) Token: 0x06002165 RID: 8549 RVA: 0x00011CCD File Offset: 0x0000FECD
 	public Color TeleporterColor
 	{
 		get
@@ -37,8 +37,8 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x17000B71 RID: 2929
-	// (get) Token: 0x060017AD RID: 6061 RVA: 0x0004983F File Offset: 0x00047A3F
+	// Token: 0x17000EA0 RID: 3744
+	// (get) Token: 0x06002166 RID: 8550 RVA: 0x00011CEA File Offset: 0x0000FEEA
 	public LocalTeleporterController TeleporterLocation
 	{
 		get
@@ -47,8 +47,8 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x17000B72 RID: 2930
-	// (get) Token: 0x060017AE RID: 6062 RVA: 0x00049847 File Offset: 0x00047A47
+	// Token: 0x17000EA1 RID: 3745
+	// (get) Token: 0x06002167 RID: 8551 RVA: 0x00011CF2 File Offset: 0x0000FEF2
 	public Animator Animator
 	{
 		get
@@ -57,13 +57,13 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x17000B73 RID: 2931
-	// (get) Token: 0x060017AF RID: 6063 RVA: 0x0004984F File Offset: 0x00047A4F
-	// (set) Token: 0x060017B0 RID: 6064 RVA: 0x00049857 File Offset: 0x00047A57
+	// Token: 0x17000EA2 RID: 3746
+	// (get) Token: 0x06002168 RID: 8552 RVA: 0x00011CFA File Offset: 0x0000FEFA
+	// (set) Token: 0x06002169 RID: 8553 RVA: 0x00011D02 File Offset: 0x0000FF02
 	public Room Room { get; set; }
 
-	// Token: 0x17000B74 RID: 2932
-	// (get) Token: 0x060017B1 RID: 6065 RVA: 0x00049860 File Offset: 0x00047A60
+	// Token: 0x17000EA3 RID: 3747
+	// (get) Token: 0x0600216A RID: 8554 RVA: 0x00011D0B File Offset: 0x0000FF0B
 	public Ferr2DT_PathTerrain LeyLines
 	{
 		get
@@ -72,18 +72,18 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x17000B75 RID: 2933
-	// (get) Token: 0x060017B2 RID: 6066 RVA: 0x00049868 File Offset: 0x00047A68
-	// (set) Token: 0x060017B3 RID: 6067 RVA: 0x00049870 File Offset: 0x00047A70
+	// Token: 0x17000EA4 RID: 3748
+	// (get) Token: 0x0600216B RID: 8555 RVA: 0x00011D13 File Offset: 0x0000FF13
+	// (set) Token: 0x0600216C RID: 8556 RVA: 0x00011D1B File Offset: 0x0000FF1B
 	public int CurrentCornerIndex { get; private set; }
 
-	// Token: 0x17000B76 RID: 2934
-	// (get) Token: 0x060017B4 RID: 6068 RVA: 0x00049879 File Offset: 0x00047A79
-	// (set) Token: 0x060017B5 RID: 6069 RVA: 0x00049881 File Offset: 0x00047A81
+	// Token: 0x17000EA5 RID: 3749
+	// (get) Token: 0x0600216D RID: 8557 RVA: 0x00011D24 File Offset: 0x0000FF24
+	// (set) Token: 0x0600216E RID: 8558 RVA: 0x00011D2C File Offset: 0x0000FF2C
 	public int CornerCount { get; private set; }
 
-	// Token: 0x17000B77 RID: 2935
-	// (get) Token: 0x060017B6 RID: 6070 RVA: 0x0004988A File Offset: 0x00047A8A
+	// Token: 0x17000EA6 RID: 3750
+	// (get) Token: 0x0600216F RID: 8559 RVA: 0x00011D35 File Offset: 0x0000FF35
 	public static List<Vector2> LeylinePoints
 	{
 		get
@@ -92,7 +92,7 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x060017B7 RID: 6071 RVA: 0x00049894 File Offset: 0x00047A94
+	// Token: 0x06002170 RID: 8560 RVA: 0x000A6E90 File Offset: 0x000A5090
 	private void UpdateTeleporterColour()
 	{
 		if (this.m_teleporterSprite && this.m_teleportLocation)
@@ -111,7 +111,7 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x060017B8 RID: 6072 RVA: 0x0004994F File Offset: 0x00047B4F
+	// Token: 0x06002171 RID: 8561 RVA: 0x00011D3C File Offset: 0x0000FF3C
 	private void OnDisable()
 	{
 		if (this.m_interactable)
@@ -121,7 +121,7 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		LocalTeleporterController.m_isTeleporting = false;
 	}
 
-	// Token: 0x060017B9 RID: 6073 RVA: 0x00049980 File Offset: 0x00047B80
+	// Token: 0x06002172 RID: 8562 RVA: 0x00011D6D File Offset: 0x0000FF6D
 	private void OnDestroy()
 	{
 		if (LocalTeleporterController.m_closestTeleporter_STATIC == this)
@@ -130,7 +130,7 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x060017BA RID: 6074 RVA: 0x00049998 File Offset: 0x00047B98
+	// Token: 0x06002173 RID: 8563 RVA: 0x000A6F4C File Offset: 0x000A514C
 	private void OnEnable()
 	{
 		if (this.m_interactable)
@@ -145,7 +145,7 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		this.m_animator.SetBool("Open", false);
 	}
 
-	// Token: 0x060017BB RID: 6075 RVA: 0x00049A00 File Offset: 0x00047C00
+	// Token: 0x06002174 RID: 8564 RVA: 0x000A6FB4 File Offset: 0x000A51B4
 	private void Awake()
 	{
 		this.Room = base.GetComponent<Room>();
@@ -166,7 +166,7 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x060017BC RID: 6076 RVA: 0x00049A94 File Offset: 0x00047C94
+	// Token: 0x06002175 RID: 8565 RVA: 0x000A7048 File Offset: 0x000A5248
 	private void OnInteract(GameObject otherObj)
 	{
 		if (LocalTeleporterController.m_isTeleporting)
@@ -195,14 +195,14 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x060017BD RID: 6077 RVA: 0x00049B3F File Offset: 0x00047D3F
+	// Token: 0x06002176 RID: 8566 RVA: 0x00011D82 File Offset: 0x0000FF82
 	private void StartTeleporterCoroutine()
 	{
 		base.StopAllCoroutines();
 		base.StartCoroutine(this.TeleportPlayerCoroutine());
 	}
 
-	// Token: 0x060017BE RID: 6078 RVA: 0x00049B54 File Offset: 0x00047D54
+	// Token: 0x06002177 RID: 8567 RVA: 0x00011D97 File Offset: 0x0000FF97
 	private IEnumerator StartTeleporterAtEndOfFrameCoroutine()
 	{
 		if (LocalTeleporterController.m_closestTeleporter_STATIC)
@@ -216,7 +216,7 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		yield break;
 	}
 
-	// Token: 0x060017BF RID: 6079 RVA: 0x00049B5C File Offset: 0x00047D5C
+	// Token: 0x06002178 RID: 8568 RVA: 0x00011D9F File Offset: 0x0000FF9F
 	public static void StopTeleportPlayer()
 	{
 		if (LocalTeleporterController.m_closestTeleporter_STATIC)
@@ -225,7 +225,7 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		}
 	}
 
-	// Token: 0x060017C0 RID: 6080 RVA: 0x00049B74 File Offset: 0x00047D74
+	// Token: 0x06002179 RID: 8569 RVA: 0x000A70F4 File Offset: 0x000A52F4
 	private void StopTeleportPlayer_Internal()
 	{
 		base.StopAllCoroutines();
@@ -244,7 +244,7 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		LocalTeleporterController.m_isTeleporting = false;
 	}
 
-	// Token: 0x060017C1 RID: 6081 RVA: 0x00049C1E File Offset: 0x00047E1E
+	// Token: 0x0600217A RID: 8570 RVA: 0x00011DB7 File Offset: 0x0000FFB7
 	private IEnumerator TeleportPlayerCoroutine()
 	{
 		if (this.OnEnterEvent != null)
@@ -435,62 +435,62 @@ public class LocalTeleporterController : MonoBehaviour, IRootObj
 		yield break;
 	}
 
-	// Token: 0x060017C4 RID: 6084 RVA: 0x00049C56 File Offset: 0x00047E56
+	// Token: 0x0600217D RID: 8573 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400172C RID: 5932
+	// Token: 0x04001E48 RID: 7752
 	private const float TELEPORTER_SPEED = 40f;
 
-	// Token: 0x0400172D RID: 5933
+	// Token: 0x04001E49 RID: 7753
 	private static LocalTeleporterController m_closestTeleporter_STATIC;
 
-	// Token: 0x0400172E RID: 5934
+	// Token: 0x04001E4A RID: 7754
 	private static WaitForEndOfFrame m_endOfFrameYield_STATIC = new WaitForEndOfFrame();
 
-	// Token: 0x0400172F RID: 5935
+	// Token: 0x04001E4B RID: 7755
 	[SerializeField]
 	private LocalTeleporterController m_teleportLocation;
 
-	// Token: 0x04001730 RID: 5936
+	// Token: 0x04001E4C RID: 7756
 	[SerializeField]
 	private Ferr2DT_PathTerrain m_leyLines;
 
-	// Token: 0x04001731 RID: 5937
+	// Token: 0x04001E4D RID: 7757
 	[SerializeField]
 	private SpriteRenderer m_teleporterSprite;
 
-	// Token: 0x04001732 RID: 5938
+	// Token: 0x04001E4E RID: 7758
 	[SerializeField]
 	private Color m_teleporterColor = Color.white;
 
-	// Token: 0x04001733 RID: 5939
+	// Token: 0x04001E4F RID: 7759
 	[SerializeField]
 	public UnityEvent_Vector2 OnHitLeyCornerEvent;
 
-	// Token: 0x04001734 RID: 5940
+	// Token: 0x04001E50 RID: 7760
 	[SerializeField]
 	public UnityEvent OnEnterEvent;
 
-	// Token: 0x04001735 RID: 5941
+	// Token: 0x04001E51 RID: 7761
 	[SerializeField]
 	public UnityEvent OnExitEvent;
 
-	// Token: 0x04001736 RID: 5942
+	// Token: 0x04001E52 RID: 7762
 	[SerializeField]
 	private GameObject m_spark;
 
-	// Token: 0x04001737 RID: 5943
+	// Token: 0x04001E53 RID: 7763
 	private Interactable m_interactable;
 
-	// Token: 0x04001738 RID: 5944
+	// Token: 0x04001E54 RID: 7764
 	private Animator m_animator;
 
-	// Token: 0x04001739 RID: 5945
+	// Token: 0x04001E55 RID: 7765
 	private static bool m_isTeleporting;
 
-	// Token: 0x0400173D RID: 5949
+	// Token: 0x04001E59 RID: 7769
 	private static List<Vector2> m_leylineHelperList = new List<Vector2>();
 }

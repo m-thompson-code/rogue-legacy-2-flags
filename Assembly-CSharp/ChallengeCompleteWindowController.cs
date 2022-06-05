@@ -6,11 +6,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000573 RID: 1395
+// Token: 0x02000947 RID: 2375
 public class ChallengeCompleteWindowController : WindowController, ILocalizable
 {
-	// Token: 0x1700127B RID: 4731
-	// (get) Token: 0x06003333 RID: 13107 RVA: 0x000AD18B File Offset: 0x000AB38B
+	// Token: 0x17001948 RID: 6472
+	// (get) Token: 0x06004820 RID: 18464 RVA: 0x000081DE File Offset: 0x000063DE
 	public override WindowID ID
 	{
 		get
@@ -19,14 +19,14 @@ public class ChallengeCompleteWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003334 RID: 13108 RVA: 0x000AD18F File Offset: 0x000AB38F
+	// Token: 0x06004821 RID: 18465 RVA: 0x0002797D File Offset: 0x00025B7D
 	private void Awake()
 	{
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 		this.m_onCancelButtonDown = new Action<InputActionEventData>(this.OnCancelButtonDown);
 	}
 
-	// Token: 0x06003335 RID: 13109 RVA: 0x000AD1B8 File Offset: 0x000AB3B8
+	// Token: 0x06004822 RID: 18466 RVA: 0x001178B0 File Offset: 0x00115AB0
 	public override void Initialize()
 	{
 		this.m_canvasGroup = this.m_windowCanvas.GetComponent<CanvasGroup>();
@@ -37,7 +37,7 @@ public class ChallengeCompleteWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003336 RID: 13110 RVA: 0x000AD208 File Offset: 0x000AB408
+	// Token: 0x06004823 RID: 18467 RVA: 0x00117900 File Offset: 0x00115B00
 	protected override void OnOpen()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -50,7 +50,7 @@ public class ChallengeCompleteWindowController : WindowController, ILocalizable
 		base.StartCoroutine(this.OnOpenCoroutine());
 	}
 
-	// Token: 0x06003337 RID: 13111 RVA: 0x000AD298 File Offset: 0x000AB498
+	// Token: 0x06004824 RID: 18468 RVA: 0x00117990 File Offset: 0x00115B90
 	private void UpdateChallengeScoreAndRank()
 	{
 		ChallengeType challengeType = ChallengeManager.ActiveChallenge.ChallengeType;
@@ -105,7 +105,7 @@ public class ChallengeCompleteWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003338 RID: 13112 RVA: 0x000AD439 File Offset: 0x000AB639
+	// Token: 0x06004825 RID: 18469 RVA: 0x000279A4 File Offset: 0x00025BA4
 	private IEnumerator OnOpenCoroutine()
 	{
 		this.m_canvasGroup.alpha = 0f;
@@ -119,7 +119,7 @@ public class ChallengeCompleteWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x06003339 RID: 13113 RVA: 0x000AD448 File Offset: 0x000AB648
+	// Token: 0x06004826 RID: 18470 RVA: 0x000279B3 File Offset: 0x00025BB3
 	protected override void OnClose()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -128,27 +128,27 @@ public class ChallengeCompleteWindowController : WindowController, ILocalizable
 		this.m_trophyAward.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600333A RID: 13114 RVA: 0x000AD485 File Offset: 0x000AB685
+	// Token: 0x06004827 RID: 18471 RVA: 0x000279F0 File Offset: 0x00025BF0
 	protected override void OnFocus()
 	{
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onCancelButtonDown, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onCancelButtonDown, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Cancel");
 	}
 
-	// Token: 0x0600333B RID: 13115 RVA: 0x000AD4B7 File Offset: 0x000AB6B7
+	// Token: 0x06004828 RID: 18472 RVA: 0x00027A22 File Offset: 0x00025C22
 	protected override void OnLostFocus()
 	{
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onCancelButtonDown, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onCancelButtonDown, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Cancel");
 	}
 
-	// Token: 0x0600333C RID: 13116 RVA: 0x000AD4E9 File Offset: 0x000AB6E9
+	// Token: 0x06004829 RID: 18473 RVA: 0x00027A54 File Offset: 0x00025C54
 	private void OnCancelButtonDown(InputActionEventData data)
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ChallengeComplete, false);
 	}
 
-	// Token: 0x0600333D RID: 13117 RVA: 0x000AD4F4 File Offset: 0x000AB6F4
+	// Token: 0x0600482A RID: 18474 RVA: 0x00117B34 File Offset: 0x00115D34
 	private void UpdateAllStats(ChallengeTrophyRank goalRank)
 	{
 		CharacterData currentCharacter = SaveManager.PlayerSaveData.CurrentCharacter;
@@ -170,7 +170,7 @@ public class ChallengeCompleteWindowController : WindowController, ILocalizable
 		this.m_ratingEntry.UpdateStat(goalRank);
 	}
 
-	// Token: 0x0600333E RID: 13118 RVA: 0x000AD5E0 File Offset: 0x000AB7E0
+	// Token: 0x0600482B RID: 18475 RVA: 0x00117C20 File Offset: 0x00115E20
 	private void Update()
 	{
 		if (this.m_windowCanvas.gameObject.activeSelf)
@@ -180,7 +180,7 @@ public class ChallengeCompleteWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600333F RID: 13119 RVA: 0x000AD634 File Offset: 0x000AB834
+	// Token: 0x0600482C RID: 18476 RVA: 0x00117C74 File Offset: 0x00115E74
 	public void RefreshText(object sender, EventArgs args)
 	{
 		if (this.m_refreshTextNewRank != ChallengeTrophyRank.None)
@@ -204,62 +204,62 @@ public class ChallengeCompleteWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x040027F5 RID: 10229
+	// Token: 0x04003730 RID: 14128
 	[SerializeField]
 	private Image m_ray;
 
-	// Token: 0x040027F6 RID: 10230
+	// Token: 0x04003731 RID: 14129
 	[SerializeField]
 	private GameObject m_biomeLightController;
 
-	// Token: 0x040027F7 RID: 10231
+	// Token: 0x04003732 RID: 14130
 	[SerializeField]
 	private TMP_Text m_bannerName;
 
-	// Token: 0x040027F8 RID: 10232
+	// Token: 0x04003733 RID: 14131
 	[SerializeField]
 	private TMP_Text m_challengeTitle;
 
-	// Token: 0x040027F9 RID: 10233
+	// Token: 0x04003734 RID: 14132
 	[SerializeField]
 	private TMP_Text m_classTitle;
 
-	// Token: 0x040027FA RID: 10234
+	// Token: 0x04003735 RID: 14133
 	[SerializeField]
 	private PlayerLookController m_playerModel;
 
-	// Token: 0x040027FB RID: 10235
+	// Token: 0x04003736 RID: 14134
 	[SerializeField]
 	private ChallengeCompleteStatsEntry[] m_statsEntries;
 
-	// Token: 0x040027FC RID: 10236
+	// Token: 0x04003737 RID: 14135
 	[SerializeField]
 	private ChallengeCompleteStatsEntry m_ratingEntry;
 
-	// Token: 0x040027FD RID: 10237
+	// Token: 0x04003738 RID: 14136
 	[SerializeField]
 	private TMP_Text m_trophyAward;
 
-	// Token: 0x040027FE RID: 10238
+	// Token: 0x04003739 RID: 14137
 	[SerializeField]
 	private Image m_trophyImage;
 
-	// Token: 0x040027FF RID: 10239
+	// Token: 0x0400373A RID: 14138
 	[SerializeField]
 	private GameObject m_empathiesUnlockedGO;
 
-	// Token: 0x04002800 RID: 10240
+	// Token: 0x0400373B RID: 14139
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x04002801 RID: 10241
+	// Token: 0x0400373C RID: 14140
 	private ChallengeTrophyRank m_refreshTextNewRank;
 
-	// Token: 0x04002802 RID: 10242
+	// Token: 0x0400373D RID: 14141
 	private ChallengeTrophyRank m_refreshTextGoalRank;
 
-	// Token: 0x04002803 RID: 10243
+	// Token: 0x0400373E RID: 14142
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x04002804 RID: 10244
+	// Token: 0x0400373F RID: 14143
 	private Action<InputActionEventData> m_onCancelButtonDown;
 }

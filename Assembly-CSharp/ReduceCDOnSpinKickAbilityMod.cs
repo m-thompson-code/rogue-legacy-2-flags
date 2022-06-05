@@ -2,12 +2,12 @@
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x0200016D RID: 365
+// Token: 0x020002A3 RID: 675
 [RequireComponent(typeof(BaseAbility_RL))]
 public class ReduceCDOnSpinKickAbilityMod : MonoBehaviour, IAudioEventEmitter
 {
-	// Token: 0x170006C6 RID: 1734
-	// (get) Token: 0x06000C97 RID: 3223 RVA: 0x00026EE3 File Offset: 0x000250E3
+	// Token: 0x17000920 RID: 2336
+	// (get) Token: 0x060013AA RID: 5034 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -16,26 +16,26 @@ public class ReduceCDOnSpinKickAbilityMod : MonoBehaviour, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06000C98 RID: 3224 RVA: 0x00026EEB File Offset: 0x000250EB
+	// Token: 0x060013AB RID: 5035 RVA: 0x0000A05A File Offset: 0x0000825A
 	private void Awake()
 	{
 		this.m_ability = base.GetComponent<BaseAbility_RL>();
 		this.m_onPlayerDownstrikeBounce = new Action<MonoBehaviour, EventArgs>(this.OnPlayerDownstrikeBounce);
 	}
 
-	// Token: 0x06000C99 RID: 3225 RVA: 0x00026F0B File Offset: 0x0002510B
+	// Token: 0x060013AC RID: 5036 RVA: 0x0000A07A File Offset: 0x0000827A
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerDownstrikeBounce, this.m_onPlayerDownstrikeBounce);
 	}
 
-	// Token: 0x06000C9A RID: 3226 RVA: 0x00026F1A File Offset: 0x0002511A
+	// Token: 0x060013AD RID: 5037 RVA: 0x0000A089 File Offset: 0x00008289
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerDownstrikeBounce, this.m_onPlayerDownstrikeBounce);
 	}
 
-	// Token: 0x06000C9B RID: 3227 RVA: 0x00026F2C File Offset: 0x0002512C
+	// Token: 0x060013AE RID: 5038 RVA: 0x00086010 File Offset: 0x00084210
 	private void OnPlayerDownstrikeBounce(object sender, EventArgs args)
 	{
 		float amount;
@@ -59,21 +59,21 @@ public class ReduceCDOnSpinKickAbilityMod : MonoBehaviour, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x040010A0 RID: 4256
+	// Token: 0x040015D4 RID: 5588
 	[SerializeField]
 	private float m_cooldownReductionAmount;
 
-	// Token: 0x040010A1 RID: 4257
+	// Token: 0x040015D5 RID: 5589
 	[SerializeField]
 	private bool m_isFlat;
 
-	// Token: 0x040010A2 RID: 4258
+	// Token: 0x040015D6 RID: 5590
 	[SerializeField]
 	private bool m_grantChargeStatusAfterSpinkick;
 
-	// Token: 0x040010A3 RID: 4259
+	// Token: 0x040015D7 RID: 5591
 	private BaseAbility_RL m_ability;
 
-	// Token: 0x040010A4 RID: 4260
+	// Token: 0x040015D8 RID: 5592
 	private Action<MonoBehaviour, EventArgs> m_onPlayerDownstrikeBounce;
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200052E RID: 1326
+// Token: 0x020008B6 RID: 2230
 [Serializable]
 public class EnemySummonSerializedData
 {
-	// Token: 0x040026AC RID: 9900
+	// Token: 0x040034DC RID: 13532
 	public string DataType;
 
-	// Token: 0x040026AD RID: 9901
+	// Token: 0x040034DD RID: 13533
 	public string Data;
 }

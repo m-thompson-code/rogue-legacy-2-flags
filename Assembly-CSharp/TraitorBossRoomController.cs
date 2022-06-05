@@ -4,17 +4,17 @@ using FMODUnity;
 using RLAudio;
 using RL_Windows;
 
-// Token: 0x02000515 RID: 1301
+// Token: 0x02000887 RID: 2183
 public class TraitorBossRoomController : BossRoomController
 {
-	// Token: 0x0600303B RID: 12347 RVA: 0x000A52E8 File Offset: 0x000A34E8
+	// Token: 0x060042EB RID: 17131 RVA: 0x0010C2E4 File Offset: 0x0010A4E4
 	protected override void InitializeObjectiveCompleteArgs(float bossDefeatedDisplayDuration)
 	{
 		string @string = LocalizationManager.GetString("LOC_ID_BIG_TEXT_UI_TRAITOR_BOSS_DEFEATED_TITLE_1", false, false);
 		this.m_bossDefeatedArgs.Initialize(base.Boss.EnemyType, EnemyRank.Basic, bossDefeatedDisplayDuration, @string, null, null);
 	}
 
-	// Token: 0x0600303C RID: 12348 RVA: 0x000A531D File Offset: 0x000A351D
+	// Token: 0x060042EC RID: 17132 RVA: 0x00025034 File Offset: 0x00023234
 	protected override IEnumerator StartIntro()
 	{
 		if (MusicManager.CurrentMusicInstance.isValid())
@@ -25,7 +25,7 @@ public class TraitorBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x0600303D RID: 12349 RVA: 0x000A532C File Offset: 0x000A352C
+	// Token: 0x060042ED RID: 17133 RVA: 0x00025043 File Offset: 0x00023243
 	protected override IEnumerator StartOutro()
 	{
 		this.m_waitYield.CreateNew(1f, false);
@@ -99,7 +99,7 @@ public class TraitorBossRoomController : BossRoomController
 		yield break;
 	}
 
-	// Token: 0x0600303E RID: 12350 RVA: 0x000A533B File Offset: 0x000A353B
+	// Token: 0x060042EE RID: 17134 RVA: 0x00025052 File Offset: 0x00023252
 	protected override void TeleportOut()
 	{
 		if (base.TunnelSpawnController && base.TunnelSpawnController.Tunnel)

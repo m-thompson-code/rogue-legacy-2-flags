@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020003EE RID: 1006
+// Token: 0x02000693 RID: 1683
 public class Background : MonoBehaviour, IGenericPoolObj
 {
-	// Token: 0x17000EEB RID: 3819
-	// (get) Token: 0x06002512 RID: 9490 RVA: 0x0007B1FC File Offset: 0x000793FC
-	// (set) Token: 0x06002513 RID: 9491 RVA: 0x0007B204 File Offset: 0x00079404
+	// Token: 0x17001394 RID: 5012
+	// (get) Token: 0x0600336C RID: 13164 RVA: 0x0001C2E0 File Offset: 0x0001A4E0
+	// (set) Token: 0x0600336D RID: 13165 RVA: 0x0001C2E8 File Offset: 0x0001A4E8
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x17000EEC RID: 3820
-	// (get) Token: 0x06002514 RID: 9492 RVA: 0x0007B20D File Offset: 0x0007940D
+	// Token: 0x17001395 RID: 5013
+	// (get) Token: 0x0600336E RID: 13166 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool IsAwakeCalled
 	{
 		get
@@ -19,9 +19,9 @@ public class Background : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17000EED RID: 3821
-	// (get) Token: 0x06002515 RID: 9493 RVA: 0x0007B210 File Offset: 0x00079410
-	// (set) Token: 0x06002516 RID: 9494 RVA: 0x0007B218 File Offset: 0x00079418
+	// Token: 0x17001396 RID: 5014
+	// (get) Token: 0x0600336F RID: 13167 RVA: 0x0001C2F1 File Offset: 0x0001A4F1
+	// (set) Token: 0x06003370 RID: 13168 RVA: 0x0001C2F9 File Offset: 0x0001A4F9
 	public Vector2Int Size
 	{
 		get
@@ -34,8 +34,8 @@ public class Background : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17000EEE RID: 3822
-	// (get) Token: 0x06002517 RID: 9495 RVA: 0x0007B221 File Offset: 0x00079421
+	// Token: 0x17001397 RID: 5015
+	// (get) Token: 0x06003371 RID: 13169 RVA: 0x0001C302 File Offset: 0x0001A502
 	public bool IsTileable
 	{
 		get
@@ -44,7 +44,7 @@ public class Background : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x06002518 RID: 9496 RVA: 0x0007B22C File Offset: 0x0007942C
+	// Token: 0x06003372 RID: 13170 RVA: 0x000DB368 File Offset: 0x000D9568
 	private void OnValidate()
 	{
 		if (this.Size.x < 1 || this.Size.y < 1)
@@ -53,7 +53,7 @@ public class Background : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x06002519 RID: 9497 RVA: 0x0007B268 File Offset: 0x00079468
+	// Token: 0x06003373 RID: 13171 RVA: 0x000DB3A4 File Offset: 0x000D95A4
 	private void Start()
 	{
 		CameraLayerController component = base.GetComponent<CameraLayerController>();
@@ -63,28 +63,28 @@ public class Background : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x0600251A RID: 9498 RVA: 0x0007B28A File Offset: 0x0007948A
+	// Token: 0x06003374 RID: 13172 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void ResetValues()
 	{
 	}
 
-	// Token: 0x0600251B RID: 9499 RVA: 0x0007B28C File Offset: 0x0007948C
+	// Token: 0x06003375 RID: 13173 RVA: 0x0001BE85 File Offset: 0x0001A085
 	private void OnDisable()
 	{
 		DisablePooledObjectManager.DisablePooledObject(this, false);
 	}
 
-	// Token: 0x0600251D RID: 9501 RVA: 0x0007B2AF File Offset: 0x000794AF
+	// Token: 0x06003377 RID: 13175 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04001F5A RID: 8026
+	// Token: 0x040029EC RID: 10732
 	[SerializeField]
 	private Vector2Int m_size = Vector2Int.one;
 
-	// Token: 0x04001F5B RID: 8027
+	// Token: 0x040029ED RID: 10733
 	[SerializeField]
 	private bool m_isTileable = true;
 }

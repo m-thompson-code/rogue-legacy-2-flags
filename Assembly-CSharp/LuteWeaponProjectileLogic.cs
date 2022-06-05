@@ -6,11 +6,11 @@ using FMODUnity;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020004A1 RID: 1185
+// Token: 0x020007AA RID: 1962
 public class LuteWeaponProjectileLogic : BaseProjectileLogic, IBodyOnEnterHitResponse, IHitResponse, IBodyOnStayHitResponse, IHasProjectileNameArray
 {
-	// Token: 0x1700109B RID: 4251
-	// (get) Token: 0x06002B58 RID: 11096 RVA: 0x00092FE3 File Offset: 0x000911E3
+	// Token: 0x170015EA RID: 5610
+	// (get) Token: 0x06003BB9 RID: 15289 RVA: 0x00020D57 File Offset: 0x0001EF57
 	public virtual string[] ProjectileNameArray
 	{
 		get
@@ -26,7 +26,7 @@ public class LuteWeaponProjectileLogic : BaseProjectileLogic, IBodyOnEnterHitRes
 		}
 	}
 
-	// Token: 0x06002B59 RID: 11097 RVA: 0x00093008 File Offset: 0x00091208
+	// Token: 0x06003BBA RID: 15290 RVA: 0x00020D7C File Offset: 0x0001EF7C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -36,14 +36,14 @@ public class LuteWeaponProjectileLogic : BaseProjectileLogic, IBodyOnEnterHitRes
 		}
 	}
 
-	// Token: 0x06002B5A RID: 11098 RVA: 0x00093032 File Offset: 0x00091232
+	// Token: 0x06003BBB RID: 15291 RVA: 0x00020DA6 File Offset: 0x0001EFA6
 	private void OnEnable()
 	{
 		base.StartCoroutine(this.EnableBodyHitboxCoroutine());
 		base.StartCoroutine(this.MaxProjectileCheckCoroutine());
 	}
 
-	// Token: 0x06002B5B RID: 11099 RVA: 0x0009304E File Offset: 0x0009124E
+	// Token: 0x06003BBC RID: 15292 RVA: 0x00020DC2 File Offset: 0x0001EFC2
 	private IEnumerator MaxProjectileCheckCoroutine()
 	{
 		yield return null;
@@ -62,7 +62,7 @@ public class LuteWeaponProjectileLogic : BaseProjectileLogic, IBodyOnEnterHitRes
 		yield break;
 	}
 
-	// Token: 0x06002B5C RID: 11100 RVA: 0x00093060 File Offset: 0x00091260
+	// Token: 0x06003BBD RID: 15293 RVA: 0x000F49CC File Offset: 0x000F2BCC
 	private void OnDisable()
 	{
 		if (base.SourceProjectile.CastAbilityType == CastAbilityType.Weapon)
@@ -75,7 +75,7 @@ public class LuteWeaponProjectileLogic : BaseProjectileLogic, IBodyOnEnterHitRes
 		}
 	}
 
-	// Token: 0x06002B5D RID: 11101 RVA: 0x0009309A File Offset: 0x0009129A
+	// Token: 0x06003BBE RID: 15294 RVA: 0x00020DD1 File Offset: 0x0001EFD1
 	private void OnDestroy()
 	{
 		if (LuteWeaponProjectileLogic.m_maxProjectileList_STATIC.Count > 0)
@@ -88,7 +88,7 @@ public class LuteWeaponProjectileLogic : BaseProjectileLogic, IBodyOnEnterHitRes
 		}
 	}
 
-	// Token: 0x06002B5E RID: 11102 RVA: 0x000930CA File Offset: 0x000912CA
+	// Token: 0x06003BBF RID: 15295 RVA: 0x00020E01 File Offset: 0x0001F001
 	private IEnumerator EnableBodyHitboxCoroutine()
 	{
 		base.SourceProjectile.HitboxController.SetHitboxActiveState(HitboxType.Body, false);
@@ -101,7 +101,7 @@ public class LuteWeaponProjectileLogic : BaseProjectileLogic, IBodyOnEnterHitRes
 		yield break;
 	}
 
-	// Token: 0x06002B5F RID: 11103 RVA: 0x000930D9 File Offset: 0x000912D9
+	// Token: 0x06003BC0 RID: 15296 RVA: 0x00020E10 File Offset: 0x0001F010
 	public void BodyOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (!base.enabled)
@@ -114,13 +114,13 @@ public class LuteWeaponProjectileLogic : BaseProjectileLogic, IBodyOnEnterHitRes
 		}
 	}
 
-	// Token: 0x06002B60 RID: 11104 RVA: 0x0009310B File Offset: 0x0009130B
+	// Token: 0x06003BC1 RID: 15297 RVA: 0x00020E42 File Offset: 0x0001F042
 	public void BodyOnStayHitResponse(IHitboxController otherHBController)
 	{
 		this.BodyOnEnterHitResponse(otherHBController);
 	}
 
-	// Token: 0x06002B61 RID: 11105 RVA: 0x00093114 File Offset: 0x00091314
+	// Token: 0x06003BC2 RID: 15298 RVA: 0x000F4A08 File Offset: 0x000F2C08
 	private void LateUpdate()
 	{
 		if (PlayerManager.IsInstantiated && PlayerManager.GetPlayerController().IsGrounded)
@@ -180,7 +180,7 @@ public class LuteWeaponProjectileLogic : BaseProjectileLogic, IBodyOnEnterHitRes
 		}
 	}
 
-	// Token: 0x06002B62 RID: 11106 RVA: 0x0009335C File Offset: 0x0009155C
+	// Token: 0x06003BC3 RID: 15299 RVA: 0x00020E4B File Offset: 0x0001F04B
 	private static void OnExplosionCollision(Projectile_RL projectile, GameObject colliderObj)
 	{
 		if (PlayerManager.GetPlayerController().CharacterClass.ClassType == ClassType.LuteClass && colliderObj.CompareTag("Enemy"))
@@ -189,40 +189,40 @@ public class LuteWeaponProjectileLogic : BaseProjectileLogic, IBodyOnEnterHitRes
 		}
 	}
 
-	// Token: 0x04002345 RID: 9029
+	// Token: 0x04002F70 RID: 12144
 	[SerializeField]
 	[EventRef]
 	private string m_bounceAudioPath = string.Empty;
 
-	// Token: 0x04002346 RID: 9030
+	// Token: 0x04002F71 RID: 12145
 	private static HashSet<LuteWeaponProjectileLogic> m_luteLogicHashset_STATIC = new HashSet<LuteWeaponProjectileLogic>();
 
-	// Token: 0x04002347 RID: 9031
+	// Token: 0x04002F72 RID: 12146
 	private static List<Projectile_RL> m_maxProjectileList_STATIC = new List<Projectile_RL>();
 
-	// Token: 0x04002348 RID: 9032
+	// Token: 0x04002F73 RID: 12147
 	[SerializeField]
 	private string m_projectileToSpawn;
 
-	// Token: 0x04002349 RID: 9033
+	// Token: 0x04002F74 RID: 12148
 	[SerializeField]
 	private bool m_destroyOnKick;
 
-	// Token: 0x0400234A RID: 9034
+	// Token: 0x04002F75 RID: 12149
 	[SerializeField]
 	private bool m_explodeOnKick;
 
-	// Token: 0x0400234B RID: 9035
+	// Token: 0x04002F76 RID: 12150
 	[SerializeField]
 	private float m_collisionDelayTime;
 
-	// Token: 0x0400234C RID: 9036
+	// Token: 0x04002F77 RID: 12151
 	[NonSerialized]
 	protected string[] m_projectileNameArray;
 
-	// Token: 0x0400234D RID: 9037
+	// Token: 0x04002F78 RID: 12152
 	private static EventInstance m_bounceEventInstance = default(EventInstance);
 
-	// Token: 0x0400234E RID: 9038
+	// Token: 0x04002F79 RID: 12153
 	private static int m_bounceCount = 0;
 }

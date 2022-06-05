@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020000C2 RID: 194
+// Token: 0x02000121 RID: 289
 public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 {
-	// Token: 0x06000516 RID: 1302 RVA: 0x00016988 File Offset: 0x00014B88
+	// Token: 0x0600072B RID: 1835 RVA: 0x0005C608 File Offset: 0x0005A808
 	public static bool CanFire()
 	{
 		for (int i = 0; i < Eyeball_Miniboss_AIScript.m_eyeballSyncList_STATIC.Count; i++)
@@ -25,12 +25,12 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		return true;
 	}
 
-	// Token: 0x17000264 RID: 612
-	// (get) Token: 0x06000517 RID: 1303 RVA: 0x000169F9 File Offset: 0x00014BF9
-	// (set) Token: 0x06000518 RID: 1304 RVA: 0x00016A01 File Offset: 0x00014C01
+	// Token: 0x17000314 RID: 788
+	// (get) Token: 0x0600072C RID: 1836 RVA: 0x00005756 File Offset: 0x00003956
+	// (set) Token: 0x0600072D RID: 1837 RVA: 0x0000575E File Offset: 0x0000395E
 	public bool IsReady { get; private set; }
 
-	// Token: 0x06000519 RID: 1305 RVA: 0x00016A0A File Offset: 0x00014C0A
+	// Token: 0x0600072E RID: 1838 RVA: 0x00005767 File Offset: 0x00003967
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -44,7 +44,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		};
 	}
 
-	// Token: 0x0600051A RID: 1306 RVA: 0x00016A48 File Offset: 0x00014C48
+	// Token: 0x0600072F RID: 1839 RVA: 0x000057A5 File Offset: 0x000039A5
 	private void OnEnable()
 	{
 		this.IsReady = false;
@@ -59,7 +59,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x0600051B RID: 1307 RVA: 0x00016A7E File Offset: 0x00014C7E
+	// Token: 0x06000730 RID: 1840 RVA: 0x000057DB File Offset: 0x000039DB
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -69,7 +69,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x0600051C RID: 1308 RVA: 0x00016A9F File Offset: 0x00014C9F
+	// Token: 0x06000731 RID: 1841 RVA: 0x000057FC File Offset: 0x000039FC
 	private void OnDestroy()
 	{
 		if (base.EnemyController != null)
@@ -78,7 +78,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x0600051D RID: 1309 RVA: 0x00016ACC File Offset: 0x00014CCC
+	// Token: 0x06000732 RID: 1842 RVA: 0x00005829 File Offset: 0x00003A29
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -86,7 +86,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		base.EnemyController.HealthChangeRelay.AddListener(new Action<object, HealthChangeEventArgs>(this.OnBossHit), false);
 	}
 
-	// Token: 0x0600051E RID: 1310 RVA: 0x00016AFC File Offset: 0x00014CFC
+	// Token: 0x06000733 RID: 1843 RVA: 0x0005C67C File Offset: 0x0005A87C
 	private void InitializeModeShiftEye()
 	{
 		if (base.EnemyController.EnemyRank == EnemyRank.Expert)
@@ -98,7 +98,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x0600051F RID: 1311 RVA: 0x00016B58 File Offset: 0x00014D58
+	// Token: 0x06000734 RID: 1844 RVA: 0x0005C6D8 File Offset: 0x0005A8D8
 	private void OnBossHit(object sender, HealthChangeEventArgs args)
 	{
 		if (this.m_modeShifted)
@@ -130,8 +130,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000265 RID: 613
-	// (get) Token: 0x06000520 RID: 1312 RVA: 0x00016C3C File Offset: 0x00014E3C
+	// Token: 0x17000315 RID: 789
+	// (get) Token: 0x06000735 RID: 1845 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ZoneBlast_TellIntro_AnimSpeed
 	{
 		get
@@ -140,8 +140,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000266 RID: 614
-	// (get) Token: 0x06000521 RID: 1313 RVA: 0x00016C43 File Offset: 0x00014E43
+	// Token: 0x17000316 RID: 790
+	// (get) Token: 0x06000736 RID: 1846 RVA: 0x00004565 File Offset: 0x00002765
 	protected virtual float ZoneBlast_TellHold_AnimSpeed
 	{
 		get
@@ -150,8 +150,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000267 RID: 615
-	// (get) Token: 0x06000522 RID: 1314 RVA: 0x00016C4A File Offset: 0x00014E4A
+	// Token: 0x17000317 RID: 791
+	// (get) Token: 0x06000737 RID: 1847 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ZoneBlast_TellHold_Duration
 	{
 		get
@@ -160,8 +160,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000268 RID: 616
-	// (get) Token: 0x06000523 RID: 1315 RVA: 0x00016C51 File Offset: 0x00014E51
+	// Token: 0x17000318 RID: 792
+	// (get) Token: 0x06000738 RID: 1848 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ZoneBlast_AttackIntro_AnimSpeed
 	{
 		get
@@ -170,8 +170,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000269 RID: 617
-	// (get) Token: 0x06000524 RID: 1316 RVA: 0x00016C58 File Offset: 0x00014E58
+	// Token: 0x17000319 RID: 793
+	// (get) Token: 0x06000739 RID: 1849 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float ZoneBlast_AttackIntro_Delay
 	{
 		get
@@ -180,8 +180,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700026A RID: 618
-	// (get) Token: 0x06000525 RID: 1317 RVA: 0x00016C5F File Offset: 0x00014E5F
+	// Token: 0x1700031A RID: 794
+	// (get) Token: 0x0600073A RID: 1850 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ZoneBlast_AttackHold_AnimSpeed
 	{
 		get
@@ -190,8 +190,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700026B RID: 619
-	// (get) Token: 0x06000526 RID: 1318 RVA: 0x00016C66 File Offset: 0x00014E66
+	// Token: 0x1700031B RID: 795
+	// (get) Token: 0x0600073B RID: 1851 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float ZoneBlast_AttackHold_Delay
 	{
 		get
@@ -200,8 +200,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700026C RID: 620
-	// (get) Token: 0x06000527 RID: 1319 RVA: 0x00016C6D File Offset: 0x00014E6D
+	// Token: 0x1700031C RID: 796
+	// (get) Token: 0x0600073C RID: 1852 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float ZoneBlast_Exit_AnimSpeed
 	{
 		get
@@ -210,8 +210,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700026D RID: 621
-	// (get) Token: 0x06000528 RID: 1320 RVA: 0x00016C74 File Offset: 0x00014E74
+	// Token: 0x1700031D RID: 797
+	// (get) Token: 0x0600073D RID: 1853 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float ZoneBlast_Exit_Duration
 	{
 		get
@@ -220,8 +220,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700026E RID: 622
-	// (get) Token: 0x06000529 RID: 1321 RVA: 0x00016C7B File Offset: 0x00014E7B
+	// Token: 0x1700031E RID: 798
+	// (get) Token: 0x0600073E RID: 1854 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float ZoneBlast_Exit_ForceIdle
 	{
 		get
@@ -230,8 +230,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700026F RID: 623
-	// (get) Token: 0x0600052A RID: 1322 RVA: 0x00016C82 File Offset: 0x00014E82
+	// Token: 0x1700031F RID: 799
+	// (get) Token: 0x0600073F RID: 1855 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected virtual float ZoneBlast_Exit_AttackCD
 	{
 		get
@@ -240,8 +240,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000270 RID: 624
-	// (get) Token: 0x0600052B RID: 1323 RVA: 0x00016C89 File Offset: 0x00014E89
+	// Token: 0x17000320 RID: 800
+	// (get) Token: 0x06000740 RID: 1856 RVA: 0x00004762 File Offset: 0x00002962
 	protected virtual int ZoneBlast_Attack_Amount
 	{
 		get
@@ -250,8 +250,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000271 RID: 625
-	// (get) Token: 0x0600052C RID: 1324 RVA: 0x00016C8C File Offset: 0x00014E8C
+	// Token: 0x17000321 RID: 801
+	// (get) Token: 0x06000741 RID: 1857 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float ZoneBlast_AttackHold_DelayBetweenShots
 	{
 		get
@@ -260,8 +260,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000272 RID: 626
-	// (get) Token: 0x0600052D RID: 1325 RVA: 0x00016C93 File Offset: 0x00014E93
+	// Token: 0x17000322 RID: 802
+	// (get) Token: 0x06000742 RID: 1858 RVA: 0x0000547D File Offset: 0x0000367D
 	protected virtual float ZoneBlast_Attack_AngleSpread
 	{
 		get
@@ -270,8 +270,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000273 RID: 627
-	// (get) Token: 0x0600052E RID: 1326 RVA: 0x00016C9A File Offset: 0x00014E9A
+	// Token: 0x17000323 RID: 803
+	// (get) Token: 0x06000743 RID: 1859 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool ZoneBlast_Sync
 	{
 		get
@@ -280,8 +280,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000274 RID: 628
-	// (get) Token: 0x0600052F RID: 1327 RVA: 0x00016C9D File Offset: 0x00014E9D
+	// Token: 0x17000324 RID: 804
+	// (get) Token: 0x06000744 RID: 1860 RVA: 0x00005856 File Offset: 0x00003A56
 	public IRelayLink ShoutAttackWarningAppearedRelay
 	{
 		get
@@ -290,8 +290,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000275 RID: 629
-	// (get) Token: 0x06000530 RID: 1328 RVA: 0x00016CAA File Offset: 0x00014EAA
+	// Token: 0x17000325 RID: 805
+	// (get) Token: 0x06000745 RID: 1861 RVA: 0x00005863 File Offset: 0x00003A63
 	public IRelayLink ShoutAttackExplodedRelay
 	{
 		get
@@ -300,7 +300,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000531 RID: 1329 RVA: 0x00016CB7 File Offset: 0x00014EB7
+	// Token: 0x06000746 RID: 1862 RVA: 0x00005870 File Offset: 0x00003A70
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -374,8 +374,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x17000276 RID: 630
-	// (get) Token: 0x06000532 RID: 1330 RVA: 0x00016CC6 File Offset: 0x00014EC6
+	// Token: 0x17000326 RID: 806
+	// (get) Token: 0x06000747 RID: 1863 RVA: 0x00004A07 File Offset: 0x00002C07
 	protected virtual int Spinning_Fireball_Amount
 	{
 		get
@@ -384,8 +384,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000277 RID: 631
-	// (get) Token: 0x06000533 RID: 1331 RVA: 0x00016CC9 File Offset: 0x00014EC9
+	// Token: 0x17000327 RID: 807
+	// (get) Token: 0x06000748 RID: 1864 RVA: 0x000054AD File Offset: 0x000036AD
 	protected virtual int SpinngFireball_Angle
 	{
 		get
@@ -394,8 +394,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000278 RID: 632
-	// (get) Token: 0x06000534 RID: 1332 RVA: 0x00016CCD File Offset: 0x00014ECD
+	// Token: 0x17000328 RID: 808
+	// (get) Token: 0x06000749 RID: 1865 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool SpinningFireball_Sync
 	{
 		get
@@ -404,7 +404,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000535 RID: 1333 RVA: 0x00016CD0 File Offset: 0x00014ED0
+	// Token: 0x0600074A RID: 1866 RVA: 0x0000587F File Offset: 0x00003A7F
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -451,8 +451,8 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x17000279 RID: 633
-	// (get) Token: 0x06000536 RID: 1334 RVA: 0x00016CDF File Offset: 0x00014EDF
+	// Token: 0x17000329 RID: 809
+	// (get) Token: 0x0600074B RID: 1867 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool HomingFireball_Sync
 	{
 		get
@@ -461,7 +461,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000537 RID: 1335 RVA: 0x00016CE2 File Offset: 0x00014EE2
+	// Token: 0x0600074C RID: 1868 RVA: 0x0000588E File Offset: 0x00003A8E
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -526,7 +526,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x06000538 RID: 1336 RVA: 0x00016CF1 File Offset: 0x00014EF1
+	// Token: 0x0600074D RID: 1869 RVA: 0x0000589D File Offset: 0x00003A9D
 	public override IEnumerator SpawnAnim()
 	{
 		this.m_faceForward = true;
@@ -548,7 +548,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x06000539 RID: 1337 RVA: 0x00016D00 File Offset: 0x00014F00
+	// Token: 0x0600074E RID: 1870 RVA: 0x000058AC File Offset: 0x00003AAC
 	public override IEnumerator DeathAnim()
 	{
 		if (base.EnemyController.EnemyRank == EnemyRank.Expert || Eyeball_Miniboss_AIScript.m_eyeballSyncList_STATIC.Count <= 1)
@@ -570,7 +570,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x0600053A RID: 1338 RVA: 0x00016D0F File Offset: 0x00014F0F
+	// Token: 0x0600074F RID: 1871 RVA: 0x000058BB File Offset: 0x00003ABB
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -595,7 +595,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x0600053B RID: 1339 RVA: 0x00016D1E File Offset: 0x00014F1E
+	// Token: 0x06000750 RID: 1872 RVA: 0x000058CA File Offset: 0x00003ACA
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -629,7 +629,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x0600053C RID: 1340 RVA: 0x00016D2D File Offset: 0x00014F2D
+	// Token: 0x06000751 RID: 1873 RVA: 0x000058D9 File Offset: 0x00003AD9
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.StopProjectile(ref this.m_shoutWarningProjectile);
@@ -637,7 +637,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		this.IsReady = false;
 	}
 
-	// Token: 0x0600053D RID: 1341 RVA: 0x00016D48 File Offset: 0x00014F48
+	// Token: 0x06000752 RID: 1874 RVA: 0x0005A3D4 File Offset: 0x000585D4
 	private void RotateProjectileToHeading(Projectile_RL projectile)
 	{
 		Vector3 position = projectile.transform.position;
@@ -649,7 +649,7 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		projectile.transform.position = vector;
 	}
 
-	// Token: 0x0600053E RID: 1342 RVA: 0x00016DBB File Offset: 0x00014FBB
+	// Token: 0x06000753 RID: 1875 RVA: 0x000058F4 File Offset: 0x00003AF4
 	private void StopAttackEffects()
 	{
 		EffectManager.DisableAllEffectWithName("EyeballBossBlueFireballTell_Effect");
@@ -657,243 +657,243 @@ public class Eyeball_Miniboss_AIScript : Eyeball_Basic_AIScript
 		EffectManager.DisableAllEffectWithName("EyeballBossCurseTell_Effect");
 	}
 
-	// Token: 0x040008B3 RID: 2227
+	// Token: 0x04000A63 RID: 2659
 	private const float PROJECTILE_SPAWN_X_OFFSET = 3f;
 
-	// Token: 0x040008B4 RID: 2228
+	// Token: 0x04000A64 RID: 2660
 	public const EnemyRank MODESHIFT_EYE_RANK = EnemyRank.Expert;
 
-	// Token: 0x040008B5 RID: 2229
+	// Token: 0x04000A65 RID: 2661
 	private static List<Eyeball_Miniboss_AIScript> m_eyeballSyncList_STATIC = new List<Eyeball_Miniboss_AIScript>();
 
-	// Token: 0x040008B7 RID: 2231
+	// Token: 0x04000A67 RID: 2663
 	protected const string ZONE_BLAST_TELL_INTRO = "AreaShot_Tell_Intro";
 
-	// Token: 0x040008B8 RID: 2232
+	// Token: 0x04000A68 RID: 2664
 	protected const string ZONE_BLAST_TELL_HOLD = "AreaShot_Tell_Hold";
 
-	// Token: 0x040008B9 RID: 2233
+	// Token: 0x04000A69 RID: 2665
 	protected const string ZONE_BLAST_ATTACK_INTRO = "AreaShot_Attack_Intro";
 
-	// Token: 0x040008BA RID: 2234
+	// Token: 0x04000A6A RID: 2666
 	protected const string ZONE_BLAST_ATTACK_HOLD = "AreaShot_Attack_Hold";
 
-	// Token: 0x040008BB RID: 2235
+	// Token: 0x04000A6B RID: 2667
 	protected const string ZONE_BLAST_EXIT = "AreaShot_Exit";
 
-	// Token: 0x040008BC RID: 2236
+	// Token: 0x04000A6C RID: 2668
 	protected const string EXPERT_ZONE_BLAST_TELL_INTRO = "Explosion_Tell_Intro";
 
-	// Token: 0x040008BD RID: 2237
+	// Token: 0x04000A6D RID: 2669
 	protected const string EXPERT_ZONE_BLAST_TELL_HOLD = "Explosion_Tell_Hold";
 
-	// Token: 0x040008BE RID: 2238
+	// Token: 0x04000A6E RID: 2670
 	protected const string EXPERT_ZONE_BLAST_ATTACK_INTRO = "Explosion_Attack_Intro";
 
-	// Token: 0x040008BF RID: 2239
+	// Token: 0x04000A6F RID: 2671
 	protected const string EXPERT_ZONE_BLAST_ATTACK_HOLD = "Explosion_Attack_Hold";
 
-	// Token: 0x040008C0 RID: 2240
+	// Token: 0x04000A70 RID: 2672
 	protected const string EXPERT_ZONE_BLAST_EXIT = "Explosion_Exit";
 
-	// Token: 0x040008C1 RID: 2241
+	// Token: 0x04000A71 RID: 2673
 	protected const string ZONE_BULLET_PROJECTILE = "EyeballPassLineBoltProjectile";
 
-	// Token: 0x040008C2 RID: 2242
+	// Token: 0x04000A72 RID: 2674
 	protected const string ZONE_BLAST_PROJECTILE = "EyeballExplosionProjectile";
 
-	// Token: 0x040008C3 RID: 2243
+	// Token: 0x04000A73 RID: 2675
 	protected const string ZONE_BLASTWARNING_PROJECTILE = "EyeballWarningProjectile";
 
-	// Token: 0x040008C4 RID: 2244
+	// Token: 0x04000A74 RID: 2676
 	private Relay m_shoutAttackWarningAppearedRelay = new Relay();
 
-	// Token: 0x040008C5 RID: 2245
+	// Token: 0x04000A75 RID: 2677
 	private Relay m_shoutAttackExplodedRelay = new Relay();
 
-	// Token: 0x040008C6 RID: 2246
+	// Token: 0x04000A76 RID: 2678
 	protected const string SPINNING_FIREBALL_TELL_INTRO = "BurstShot_Tell_Intro";
 
-	// Token: 0x040008C7 RID: 2247
+	// Token: 0x04000A77 RID: 2679
 	protected const string SPINNING_FIREBALL_TELL_HOLD = "BurstShot_Tell_Hold";
 
-	// Token: 0x040008C8 RID: 2248
+	// Token: 0x04000A78 RID: 2680
 	protected const string SPINNING_FIREBALL_ATTACK_INTRO = "BurstShot_Attack_Intro";
 
-	// Token: 0x040008C9 RID: 2249
+	// Token: 0x04000A79 RID: 2681
 	protected const string SPINNING_FIREBALL_ATTACK_HOLD = "BurstShot_Attack_Hold";
 
-	// Token: 0x040008CA RID: 2250
+	// Token: 0x04000A7A RID: 2682
 	protected const string SPINNING_FIREBALL_EXIT = "BurstShot_Exit";
 
-	// Token: 0x040008CB RID: 2251
+	// Token: 0x04000A7B RID: 2683
 	protected const string SPINNING_FIREBALL_PROJECTILE = "EyeballBoltMinibossProjectile";
 
-	// Token: 0x040008CC RID: 2252
+	// Token: 0x04000A7C RID: 2684
 	private Projectile_RL m_shoutWarningProjectile;
 
-	// Token: 0x040008CD RID: 2253
+	// Token: 0x04000A7D RID: 2685
 	protected const string HOMING_FIREBALL_TELL_INTRO = "HomingShot_Tell_Intro";
 
-	// Token: 0x040008CE RID: 2254
+	// Token: 0x04000A7E RID: 2686
 	protected const string HOMING_FIREBALL_TELL_HOLD = "HomingShot_Tell_Hold";
 
-	// Token: 0x040008CF RID: 2255
+	// Token: 0x04000A7F RID: 2687
 	protected const string HOMING_FIREBALL_ATTACK_INTRO = "HomingShot_Attack_Intro";
 
-	// Token: 0x040008D0 RID: 2256
+	// Token: 0x04000A80 RID: 2688
 	protected const string HOMING_FIREBALL_ATTACK_HOLD = "HomingShot_Attack_Hold";
 
-	// Token: 0x040008D1 RID: 2257
+	// Token: 0x04000A81 RID: 2689
 	protected const string HOMING_FIREBALL_EXIT = "HomingShot_Exit";
 
-	// Token: 0x040008D2 RID: 2258
+	// Token: 0x04000A82 RID: 2690
 	protected const string EXPERT_HOMING_FIREBALL_TELL_INTRO = "BounceBullets_Tell_Intro";
 
-	// Token: 0x040008D3 RID: 2259
+	// Token: 0x04000A83 RID: 2691
 	protected const string EXPERT_HOMING_FIREBALL_TELL_HOLD = "BounceBullets_Tell_Hold";
 
-	// Token: 0x040008D4 RID: 2260
+	// Token: 0x04000A84 RID: 2692
 	protected const string EXPERT_HOMING_FIREBALL_ATTACK_INTRO = "BounceBullets_Attack_Intro";
 
-	// Token: 0x040008D5 RID: 2261
+	// Token: 0x04000A85 RID: 2693
 	protected const string EXPERT_HOMING_FIREBALL_ATTACK_HOLD = "BounceBullets_Attack_Hold";
 
-	// Token: 0x040008D6 RID: 2262
+	// Token: 0x04000A86 RID: 2694
 	protected const string EXPERT_HOMING_FIREBALL_EXIT = "BounceBullets_Exit";
 
-	// Token: 0x040008D7 RID: 2263
+	// Token: 0x04000A87 RID: 2695
 	protected const string HOMING_FIREBALL_PROJECTILE = "EyeballBounceBoltMinibossProjectile";
 
-	// Token: 0x040008D8 RID: 2264
+	// Token: 0x04000A88 RID: 2696
 	protected const string CURSE_FIREBALL_PROJECTILE = "EyeballCurseBoltProjectile";
 
-	// Token: 0x040008D9 RID: 2265
+	// Token: 0x04000A89 RID: 2697
 	protected const string SPAWN_IDLE = "Intro_Idle";
 
-	// Token: 0x040008DA RID: 2266
+	// Token: 0x04000A8A RID: 2698
 	protected const string SPAWN_INTRO = "Closed_Moving";
 
-	// Token: 0x040008DB RID: 2267
+	// Token: 0x04000A8B RID: 2699
 	protected const string SPAWN_OPEN = "Open";
 
-	// Token: 0x040008DC RID: 2268
+	// Token: 0x04000A8C RID: 2700
 	protected static int m_spawnOrder_STATIC = 0;
 
-	// Token: 0x040008DD RID: 2269
+	// Token: 0x04000A8D RID: 2701
 	protected const int NUM_OF_STARTING_EYES = 2;
 
-	// Token: 0x040008DE RID: 2270
+	// Token: 0x04000A8E RID: 2702
 	protected float m_spawn_Idle_AnimSpeed = 1f;
 
-	// Token: 0x040008DF RID: 2271
+	// Token: 0x04000A8F RID: 2703
 	protected float m_spawn_Idle_Delay = 1f;
 
-	// Token: 0x040008E0 RID: 2272
+	// Token: 0x04000A90 RID: 2704
 	protected float m_spawn_Intro_AnimSpeed = 1f;
 
-	// Token: 0x040008E1 RID: 2273
+	// Token: 0x04000A91 RID: 2705
 	protected float m_spawn_Intro_Delay = 0.3f;
 
-	// Token: 0x040008E2 RID: 2274
+	// Token: 0x04000A92 RID: 2706
 	protected float m_spawn_Open_AnimSpeed = 1f;
 
-	// Token: 0x040008E3 RID: 2275
+	// Token: 0x04000A93 RID: 2707
 	protected float m_spawn_Open_Delay = 1f;
 
-	// Token: 0x040008E4 RID: 2276
+	// Token: 0x04000A94 RID: 2708
 	protected float m_secondSpawn_Idle_Delay = 1.2f;
 
-	// Token: 0x040008E5 RID: 2277
+	// Token: 0x04000A95 RID: 2709
 	protected float m_secondSpawn_Intro_Delay = 0.4f;
 
-	// Token: 0x040008E6 RID: 2278
+	// Token: 0x04000A96 RID: 2710
 	protected const string DEATH_INTRO = "Death_Intro";
 
-	// Token: 0x040008E7 RID: 2279
+	// Token: 0x04000A97 RID: 2711
 	protected const string DEATH_HOLD = "Death_Loop";
 
-	// Token: 0x040008E8 RID: 2280
+	// Token: 0x04000A98 RID: 2712
 	protected float m_death_Intro_AnimSpeed = 1f;
 
-	// Token: 0x040008E9 RID: 2281
+	// Token: 0x04000A99 RID: 2713
 	protected float m_death_Intro_Delay;
 
-	// Token: 0x040008EA RID: 2282
+	// Token: 0x04000A9A RID: 2714
 	protected float m_death_Hold_AnimSpeed = 1f;
 
-	// Token: 0x040008EB RID: 2283
+	// Token: 0x04000A9B RID: 2715
 	protected float m_death_Hold_Delay = 4.5f;
 
-	// Token: 0x040008EC RID: 2284
+	// Token: 0x04000A9C RID: 2716
 	private const float m_global_AnimationOverride = 1f;
 
-	// Token: 0x040008ED RID: 2285
+	// Token: 0x04000A9D RID: 2717
 	private bool m_modeShifted;
 
-	// Token: 0x040008EE RID: 2286
+	// Token: 0x04000A9E RID: 2718
 	private const string MODE_SHIFT_INTRO = "ModeShift_Intro";
 
-	// Token: 0x040008EF RID: 2287
+	// Token: 0x04000A9F RID: 2719
 	private const string MODE_SHIFT_SCREAM_INTRO = "ModeShift_Scream_Intro";
 
-	// Token: 0x040008F0 RID: 2288
+	// Token: 0x04000AA0 RID: 2720
 	private const string MODE_SHIFT_SCREAM_HOLD = "ModeShift_Scream_Hold";
 
-	// Token: 0x040008F1 RID: 2289
+	// Token: 0x04000AA1 RID: 2721
 	private const string MODE_SHIFT_EXIT = "ModeShift_Scream_Exit";
 
-	// Token: 0x040008F2 RID: 2290
+	// Token: 0x04000AA2 RID: 2722
 	private const float m_modeShift_Intro_AnimSpeed = 1f;
 
-	// Token: 0x040008F3 RID: 2291
+	// Token: 0x04000AA3 RID: 2723
 	private const float m_modeShift_Intro_Delay = 3.25f;
 
-	// Token: 0x040008F4 RID: 2292
+	// Token: 0x04000AA4 RID: 2724
 	private const float m_modeShift_Scream_Intro_AnimSpeed = 1f;
 
-	// Token: 0x040008F5 RID: 2293
+	// Token: 0x04000AA5 RID: 2725
 	private const float m_modeShift_Scream_Intro_Delay = 0f;
 
-	// Token: 0x040008F6 RID: 2294
+	// Token: 0x04000AA6 RID: 2726
 	private const float m_modeShift_Scream_Hold_AnimSpeed = 1f;
 
-	// Token: 0x040008F7 RID: 2295
+	// Token: 0x04000AA7 RID: 2727
 	private const float m_modeShift_Scream_Hold_Delay = 1.25f;
 
-	// Token: 0x040008F8 RID: 2296
+	// Token: 0x04000AA8 RID: 2728
 	private const float m_modeShift_Exit_AnimSpeed = 1f;
 
-	// Token: 0x040008F9 RID: 2297
+	// Token: 0x04000AA9 RID: 2729
 	private const float m_modeShift_Exit_Delay = 0f;
 
-	// Token: 0x040008FA RID: 2298
+	// Token: 0x04000AAA RID: 2730
 	private const float m_modeShift_IdleDuration = 0.1f;
 
-	// Token: 0x040008FB RID: 2299
+	// Token: 0x04000AAB RID: 2731
 	private const float m_modeShift_AttackCD = 99999f;
 
-	// Token: 0x040008FC RID: 2300
+	// Token: 0x04000AAC RID: 2732
 	public const float ModeShift_HealthMod = 0.5f;
 
-	// Token: 0x040008FD RID: 2301
+	// Token: 0x04000AAD RID: 2733
 	protected float m_modeShift_Damage_Mod = 0.1f;
 
-	// Token: 0x040008FE RID: 2302
+	// Token: 0x04000AAE RID: 2734
 	private const float m_modeShift_openEye_Idle_AnimSpeed = 1f;
 
-	// Token: 0x040008FF RID: 2303
+	// Token: 0x04000AAF RID: 2735
 	private const float m_modeShift_openEye_Idle_Delay = 0.5f;
 
-	// Token: 0x04000900 RID: 2304
+	// Token: 0x04000AB0 RID: 2736
 	private const float m_modeShift_openEye_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000901 RID: 2305
+	// Token: 0x04000AB1 RID: 2737
 	private const float m_modeShift_openEye_Intro_Delay = 0.75f;
 
-	// Token: 0x04000902 RID: 2306
+	// Token: 0x04000AB2 RID: 2738
 	private const float m_modeShift_openEye_Open_AnimSpeed = 1f;
 
-	// Token: 0x04000903 RID: 2307
+	// Token: 0x04000AB3 RID: 2739
 	private const float m_modeShift_openEye_Open_Delay = 1f;
 }

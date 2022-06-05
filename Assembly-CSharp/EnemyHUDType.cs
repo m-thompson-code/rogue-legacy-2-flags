@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000374 RID: 884
+// Token: 0x020005F5 RID: 1525
 public enum EnemyHUDType
 {
-	// Token: 0x04001CAA RID: 7338
+	// Token: 0x04002665 RID: 9829
 	None,
-	// Token: 0x04001CAB RID: 7339
+	// Token: 0x04002666 RID: 9830
 	Regular = 10,
-	// Token: 0x04001CAC RID: 7340
+	// Token: 0x04002667 RID: 9831
 	Miniboss = 20,
-	// Token: 0x04001CAD RID: 7341
+	// Token: 0x04002668 RID: 9832
 	Boss = 30
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x020007C5 RID: 1989
+// Token: 0x02000C8B RID: 3211
 public class WorldBuildCompleteEventArgs : EventArgs
 {
-	// Token: 0x060042AD RID: 17069 RVA: 0x000EBF64 File Offset: 0x000EA164
+	// Token: 0x06005C36 RID: 23606 RVA: 0x0003297A File Offset: 0x00030B7A
 	public WorldBuildCompleteEventArgs(int masterSeed, int seed, List<BiomeController> biomeControllers, bool isSuccess)
 	{
 		this.MasterSeed = masterSeed;
@@ -13,21 +13,21 @@ public class WorldBuildCompleteEventArgs : EventArgs
 		this.IsSuccess = isSuccess;
 	}
 
-	// Token: 0x17001691 RID: 5777
-	// (get) Token: 0x060042AE RID: 17070 RVA: 0x000EBF89 File Offset: 0x000EA189
+	// Token: 0x17001E8F RID: 7823
+	// (get) Token: 0x06005C37 RID: 23607 RVA: 0x0003299F File Offset: 0x00030B9F
 	public int MasterSeed { get; }
 
-	// Token: 0x17001692 RID: 5778
-	// (get) Token: 0x060042AF RID: 17071 RVA: 0x000EBF91 File Offset: 0x000EA191
-	// (set) Token: 0x060042B0 RID: 17072 RVA: 0x000EBF99 File Offset: 0x000EA199
+	// Token: 0x17001E90 RID: 7824
+	// (get) Token: 0x06005C38 RID: 23608 RVA: 0x000329A7 File Offset: 0x00030BA7
+	// (set) Token: 0x06005C39 RID: 23609 RVA: 0x000329AF File Offset: 0x00030BAF
 	public int BiomeCreationSeed { get; private set; }
 
-	// Token: 0x17001693 RID: 5779
-	// (get) Token: 0x060042B1 RID: 17073 RVA: 0x000EBFA2 File Offset: 0x000EA1A2
-	// (set) Token: 0x060042B2 RID: 17074 RVA: 0x000EBFAA File Offset: 0x000EA1AA
+	// Token: 0x17001E91 RID: 7825
+	// (get) Token: 0x06005C3A RID: 23610 RVA: 0x000329B8 File Offset: 0x00030BB8
+	// (set) Token: 0x06005C3B RID: 23611 RVA: 0x000329C0 File Offset: 0x00030BC0
 	public List<BiomeController> BiomeControllers { get; private set; }
 
-	// Token: 0x17001694 RID: 5780
-	// (get) Token: 0x060042B3 RID: 17075 RVA: 0x000EBFB3 File Offset: 0x000EA1B3
+	// Token: 0x17001E92 RID: 7826
+	// (get) Token: 0x06005C3C RID: 23612 RVA: 0x000329C9 File Offset: 0x00030BC9
 	public bool IsSuccess { get; }
 }

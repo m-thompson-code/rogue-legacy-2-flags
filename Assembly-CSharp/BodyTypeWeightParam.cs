@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02000707 RID: 1799
+// Token: 0x02000BBA RID: 3002
 public enum BodyTypeWeightParam
 {
-	// Token: 0x040032C4 RID: 12996
+	// Token: 0x0400453F RID: 17727
 	None = -1,
-	// Token: 0x040032C5 RID: 12997
+	// Token: 0x04004540 RID: 17728
 	Male_Light,
-	// Token: 0x040032C6 RID: 12998
+	// Token: 0x04004541 RID: 17729
 	Female_Light,
-	// Token: 0x040032C7 RID: 12999
+	// Token: 0x04004542 RID: 17730
 	Male_Heavy,
-	// Token: 0x040032C8 RID: 13000
+	// Token: 0x04004543 RID: 17731
 	Female_Heavy
 }

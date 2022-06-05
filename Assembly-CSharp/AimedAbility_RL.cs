@@ -5,11 +5,11 @@ using Rewired;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x02000166 RID: 358
+// Token: 0x02000295 RID: 661
 public class AimedAbility_RL : BaseAbility_RL
 {
-	// Token: 0x1700067D RID: 1661
-	// (get) Token: 0x06000BDE RID: 3038 RVA: 0x00023D1C File Offset: 0x00021F1C
+	// Token: 0x170008C9 RID: 2249
+	// (get) Token: 0x060012C7 RID: 4807 RVA: 0x00009888 File Offset: 0x00007A88
 	public float AimAngle
 	{
 		get
@@ -18,8 +18,8 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x1700067E RID: 1662
-	// (get) Token: 0x06000BDF RID: 3039 RVA: 0x00023D24 File Offset: 0x00021F24
+	// Token: 0x170008CA RID: 2250
+	// (get) Token: 0x060012C8 RID: 4808 RVA: 0x00009890 File Offset: 0x00007A90
 	public float UnmoddedAimAngle
 	{
 		get
@@ -28,7 +28,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000BE0 RID: 3040 RVA: 0x00023D2C File Offset: 0x00021F2C
+	// Token: 0x060012C9 RID: 4809 RVA: 0x00009898 File Offset: 0x00007A98
 	protected override void InitializeProjectileNameArray()
 	{
 		if (!string.IsNullOrEmpty(this.m_critProjectileName))
@@ -43,8 +43,8 @@ public class AimedAbility_RL : BaseAbility_RL
 		base.InitializeProjectileNameArray();
 	}
 
-	// Token: 0x1700067F RID: 1663
-	// (get) Token: 0x06000BE1 RID: 3041 RVA: 0x00023D60 File Offset: 0x00021F60
+	// Token: 0x170008CB RID: 2251
+	// (get) Token: 0x060012CA RID: 4810 RVA: 0x000098CC File Offset: 0x00007ACC
 	public override string ProjectileName
 	{
 		get
@@ -57,8 +57,8 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x17000680 RID: 1664
-	// (get) Token: 0x06000BE2 RID: 3042 RVA: 0x00023D84 File Offset: 0x00021F84
+	// Token: 0x170008CC RID: 2252
+	// (get) Token: 0x060012CB RID: 4811 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected virtual AbilityAnimState StateToHoldAttackOn
 	{
 		get
@@ -67,8 +67,8 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x17000681 RID: 1665
-	// (get) Token: 0x06000BE3 RID: 3043 RVA: 0x00023D87 File Offset: 0x00021F87
+	// Token: 0x170008CD RID: 2253
+	// (get) Token: 0x060012CC RID: 4812 RVA: 0x000098F0 File Offset: 0x00007AF0
 	public virtual Vector2 PushbackAmount
 	{
 		get
@@ -77,8 +77,8 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x17000682 RID: 1666
-	// (get) Token: 0x06000BE4 RID: 3044 RVA: 0x00023D8F File Offset: 0x00021F8F
+	// Token: 0x170008CE RID: 2254
+	// (get) Token: 0x060012CD RID: 4813 RVA: 0x000098F8 File Offset: 0x00007AF8
 	public override bool IsAiming
 	{
 		get
@@ -87,8 +87,8 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x17000683 RID: 1667
-	// (get) Token: 0x06000BE5 RID: 3045 RVA: 0x00023D97 File Offset: 0x00021F97
+	// Token: 0x170008CF RID: 2255
+	// (get) Token: 0x060012CE RID: 4814 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool CancelTimeSlowOnFire
 	{
 		get
@@ -97,8 +97,8 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x17000684 RID: 1668
-	// (get) Token: 0x06000BE6 RID: 3046 RVA: 0x00023D9A File Offset: 0x00021F9A
+	// Token: 0x170008D0 RID: 2256
+	// (get) Token: 0x060012CF RID: 4815 RVA: 0x00009900 File Offset: 0x00007B00
 	public IRelayLink KickbackRelay
 	{
 		get
@@ -107,8 +107,8 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x17000685 RID: 1669
-	// (get) Token: 0x06000BE7 RID: 3047 RVA: 0x00023DA7 File Offset: 0x00021FA7
+	// Token: 0x170008D1 RID: 2257
+	// (get) Token: 0x060012D0 RID: 4816 RVA: 0x0000990D File Offset: 0x00007B0D
 	public IRelayLink<float> AimSpeedChangeRelay
 	{
 		get
@@ -117,8 +117,8 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x17000686 RID: 1670
-	// (get) Token: 0x06000BE8 RID: 3048 RVA: 0x00023DB4 File Offset: 0x00021FB4
+	// Token: 0x170008D2 RID: 2258
+	// (get) Token: 0x060012D1 RID: 4817 RVA: 0x0000991A File Offset: 0x00007B1A
 	public IRelayLink SwitchSidesRelay
 	{
 		get
@@ -127,8 +127,8 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x17000687 RID: 1671
-	// (get) Token: 0x06000BE9 RID: 3049 RVA: 0x00023DC1 File Offset: 0x00021FC1
+	// Token: 0x170008D3 RID: 2259
+	// (get) Token: 0x060012D2 RID: 4818 RVA: 0x00009927 File Offset: 0x00007B27
 	public IRelayLink<Projectile_RL> FireProjectileRelay
 	{
 		get
@@ -137,14 +137,14 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000BEA RID: 3050 RVA: 0x00023DCE File Offset: 0x00021FCE
+	// Token: 0x060012D3 RID: 4819 RVA: 0x00009934 File Offset: 0x00007B34
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		base.Initialize(abilityController, castAbilityType);
 		this.InitializeAimLine();
 	}
 
-	// Token: 0x06000BEB RID: 3051 RVA: 0x00023DE0 File Offset: 0x00021FE0
+	// Token: 0x060012D4 RID: 4820 RVA: 0x00082CF8 File Offset: 0x00080EF8
 	protected virtual void InitializeAimLine()
 	{
 		Projectile_RL projectile = ProjectileLibrary.GetProjectile(this.m_projectileName);
@@ -163,7 +163,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000BEC RID: 3052 RVA: 0x00023E7C File Offset: 0x0002207C
+	// Token: 0x060012D5 RID: 4821 RVA: 0x00082D94 File Offset: 0x00080F94
 	public override void PreCastAbility()
 	{
 		base.PreCastAbility();
@@ -182,7 +182,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		this.UpdateAimLine();
 	}
 
-	// Token: 0x06000BED RID: 3053 RVA: 0x00023FBC File Offset: 0x000221BC
+	// Token: 0x060012D6 RID: 4822 RVA: 0x00009944 File Offset: 0x00007B44
 	public override IEnumerator CastAbility()
 	{
 		if (!ReInput.isReady)
@@ -222,7 +222,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		yield break;
 	}
 
-	// Token: 0x06000BEE RID: 3054 RVA: 0x00023FCC File Offset: 0x000221CC
+	// Token: 0x060012D7 RID: 4823 RVA: 0x00082ED4 File Offset: 0x000810D4
 	protected override void EnterAnimationState(AbilityAnimState animState)
 	{
 		if (animState == AbilityAnimState.Attack_Intro)
@@ -237,7 +237,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		base.EnterAnimationState(animState);
 	}
 
-	// Token: 0x06000BEF RID: 3055 RVA: 0x00024022 File Offset: 0x00022222
+	// Token: 0x060012D8 RID: 4824 RVA: 0x00009953 File Offset: 0x00007B53
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (duration <= 0f)
@@ -269,7 +269,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		yield break;
 	}
 
-	// Token: 0x06000BF0 RID: 3056 RVA: 0x00024038 File Offset: 0x00022238
+	// Token: 0x060012D9 RID: 4825 RVA: 0x00009969 File Offset: 0x00007B69
 	protected override void OnExitExitLogic()
 	{
 		if (this.m_continueFireOnHold && (base.CurrentAmmo > 0 || this.m_keepFiringWhenEmpty) && Rewired_RL.Player.GetButton(this.m_abilityController.GetAbilityInputString(base.CastAbilityType)))
@@ -279,7 +279,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		base.OnExitExitLogic();
 	}
 
-	// Token: 0x06000BF1 RID: 3057 RVA: 0x00024078 File Offset: 0x00022278
+	// Token: 0x060012DA RID: 4826 RVA: 0x00082F2C File Offset: 0x0008112C
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		this.m_animator.SetFloat("Attack_Direction", 2f);
@@ -301,7 +301,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x06000BF2 RID: 3058 RVA: 0x00024124 File Offset: 0x00022324
+	// Token: 0x060012DB RID: 4827 RVA: 0x00082FD8 File Offset: 0x000811D8
 	protected override void Update()
 	{
 		base.Update();
@@ -342,7 +342,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000BF3 RID: 3059 RVA: 0x0002432C File Offset: 0x0002252C
+	// Token: 0x060012DC RID: 4828 RVA: 0x000831E0 File Offset: 0x000813E0
 	protected override void FireProjectile()
 	{
 		this.m_abilityController.PlayerController.FallMultiplierOverride = this.m_storedFallMultiplier;
@@ -400,7 +400,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000BF4 RID: 3060 RVA: 0x00024598 File Offset: 0x00022798
+	// Token: 0x060012DD RID: 4829 RVA: 0x0008344C File Offset: 0x0008164C
 	protected virtual void UpdateAimLine()
 	{
 		if (this.m_aimLine)
@@ -508,7 +508,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000BF5 RID: 3061 RVA: 0x00024968 File Offset: 0x00022B68
+	// Token: 0x060012DE RID: 4830 RVA: 0x0008381C File Offset: 0x00081A1C
 	protected virtual void UpdateArrowAim(bool doNotUpdatePlayerAnims = false)
 	{
 		ControllerType lastActiveControllerType = ReInput.controllers.GetLastActiveControllerType();
@@ -599,7 +599,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		this.UpdateAimSpeed();
 	}
 
-	// Token: 0x06000BF6 RID: 3062 RVA: 0x00024C7B File Offset: 0x00022E7B
+	// Token: 0x060012DF RID: 4831 RVA: 0x000099A8 File Offset: 0x00007BA8
 	protected void CancelTimeSlow()
 	{
 		if (this.m_isTimeSlow)
@@ -609,7 +609,7 @@ public class AimedAbility_RL : BaseAbility_RL
 		}
 	}
 
-	// Token: 0x06000BF7 RID: 3063 RVA: 0x00024C98 File Offset: 0x00022E98
+	// Token: 0x060012E0 RID: 4832 RVA: 0x00083B30 File Offset: 0x00081D30
 	private void UpdateAimSpeed()
 	{
 		float t = 0f;
@@ -621,13 +621,13 @@ public class AimedAbility_RL : BaseAbility_RL
 		this.m_aimSpeedChangeRelay.Dispatch(t);
 	}
 
-	// Token: 0x06000BF8 RID: 3064 RVA: 0x00024CFB File Offset: 0x00022EFB
+	// Token: 0x060012E1 RID: 4833 RVA: 0x000099C4 File Offset: 0x00007BC4
 	protected float GetArcHeight(float velocityY, float time, float gravity)
 	{
 		return velocityY * time - gravity * (time * time / 2f);
 	}
 
-	// Token: 0x06000BF9 RID: 3065 RVA: 0x00024D0C File Offset: 0x00022F0C
+	// Token: 0x060012E2 RID: 4834 RVA: 0x000099D5 File Offset: 0x00007BD5
 	protected float GetMaxHeight(float velocityY, float gravity)
 	{
 		if (gravity == 0f)
@@ -637,102 +637,102 @@ public class AimedAbility_RL : BaseAbility_RL
 		return velocityY * velocityY / (2f * gravity);
 	}
 
-	// Token: 0x04001030 RID: 4144
+	// Token: 0x04001548 RID: 5448
 	[SerializeField]
 	protected float m_gravityReductionModWhenAiming = 1f;
 
-	// Token: 0x04001031 RID: 4145
+	// Token: 0x04001549 RID: 5449
 	[SerializeField]
 	protected bool m_stopVelocityWhenAiming;
 
-	// Token: 0x04001032 RID: 4146
+	// Token: 0x0400154A RID: 5450
 	[SerializeField]
 	protected bool m_disableMovementWhileAiming;
 
-	// Token: 0x04001033 RID: 4147
+	// Token: 0x0400154B RID: 5451
 	[SerializeField]
 	private Vector2 m_pushbackAmount = Vector2.zero;
 
-	// Token: 0x04001034 RID: 4148
+	// Token: 0x0400154C RID: 5452
 	[SerializeField]
 	protected bool m_pushbackIgnoresDirection;
 
-	// Token: 0x04001035 RID: 4149
+	// Token: 0x0400154D RID: 5453
 	[SerializeField]
 	protected bool m_continueFireOnHold;
 
-	// Token: 0x04001036 RID: 4150
+	// Token: 0x0400154E RID: 5454
 	[SerializeField]
 	[ConditionalHide("m_continueFireOnHold", true)]
 	protected bool m_keepFiringWhenEmpty;
 
-	// Token: 0x04001037 RID: 4151
+	// Token: 0x0400154F RID: 5455
 	[SerializeField]
 	protected string m_critProjectileName;
 
-	// Token: 0x04001038 RID: 4152
+	// Token: 0x04001550 RID: 5456
 	[Header("Aim Line Settings")]
 	[SerializeField]
 	protected LineRenderer m_aimLine;
 
-	// Token: 0x04001039 RID: 4153
+	// Token: 0x04001551 RID: 5457
 	[SerializeField]
 	protected float m_aimLineLength = 10f;
 
-	// Token: 0x0400103A RID: 4154
+	// Token: 0x04001552 RID: 5458
 	[SerializeField]
 	[Tooltip("Calculate how fast the Player is adjusting their aim. This is mainly used for audio purposes")]
 	protected float m_maxAimSpeedSFXDelta = 90f;
 
-	// Token: 0x0400103B RID: 4155
+	// Token: 0x04001553 RID: 5459
 	[SerializeField]
 	private bool m_useUnmoddedAngle;
 
-	// Token: 0x0400103C RID: 4156
+	// Token: 0x04001554 RID: 5460
 	protected float m_aimAngle;
 
-	// Token: 0x0400103D RID: 4157
+	// Token: 0x04001555 RID: 5461
 	protected float m_unmoddedAngle;
 
-	// Token: 0x0400103E RID: 4158
+	// Token: 0x04001556 RID: 5462
 	protected float m_projSpeed;
 
-	// Token: 0x0400103F RID: 4159
+	// Token: 0x04001557 RID: 5463
 	protected float m_projFallMultiplier;
 
-	// Token: 0x04001040 RID: 4160
+	// Token: 0x04001558 RID: 5464
 	protected float m_projGravityKickInDelay;
 
-	// Token: 0x04001041 RID: 4161
+	// Token: 0x04001559 RID: 5465
 	protected bool m_projIsWeighted;
 
-	// Token: 0x04001042 RID: 4162
+	// Token: 0x0400155A RID: 5466
 	private float m_prevAngle;
 
-	// Token: 0x04001043 RID: 4163
+	// Token: 0x0400155B RID: 5467
 	private bool m_prevIsFacingRight;
 
-	// Token: 0x04001044 RID: 4164
+	// Token: 0x0400155C RID: 5468
 	protected bool m_isAiming;
 
-	// Token: 0x04001045 RID: 4165
+	// Token: 0x0400155D RID: 5469
 	protected float m_storedFallMultiplier;
 
-	// Token: 0x04001046 RID: 4166
+	// Token: 0x0400155E RID: 5470
 	protected bool m_isHovering;
 
-	// Token: 0x04001047 RID: 4167
+	// Token: 0x0400155F RID: 5471
 	private bool m_isTimeSlow;
 
-	// Token: 0x04001048 RID: 4168
+	// Token: 0x04001560 RID: 5472
 	protected Relay m_kickbackRelay = new Relay();
 
-	// Token: 0x04001049 RID: 4169
+	// Token: 0x04001561 RID: 5473
 	protected Relay<float> m_aimSpeedChangeRelay = new Relay<float>();
 
-	// Token: 0x0400104A RID: 4170
+	// Token: 0x04001562 RID: 5474
 	protected Relay m_switchSidesRelay = new Relay();
 
-	// Token: 0x0400104B RID: 4171
+	// Token: 0x04001563 RID: 5475
 	protected Relay<Projectile_RL> m_fireProjectileRelay = new Relay<Projectile_RL>();
 }

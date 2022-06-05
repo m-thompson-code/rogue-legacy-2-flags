@@ -5,11 +5,11 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004D8 RID: 1240
+// Token: 0x02000813 RID: 2067
 public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubble, IAudioEventEmitter
 {
-	// Token: 0x1700116E RID: 4462
-	// (get) Token: 0x06002E39 RID: 11833 RVA: 0x0009C126 File Offset: 0x0009A326
+	// Token: 0x1700171B RID: 5915
+	// (get) Token: 0x06003FB7 RID: 16311 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -18,8 +18,8 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		}
 	}
 
-	// Token: 0x1700116F RID: 4463
-	// (get) Token: 0x06002E3A RID: 11834 RVA: 0x0009C130 File Offset: 0x0009A330
+	// Token: 0x1700171C RID: 5916
+	// (get) Token: 0x06003FB8 RID: 16312 RVA: 0x000FF068 File Offset: 0x000FD268
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -51,8 +51,8 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		}
 	}
 
-	// Token: 0x17001170 RID: 4464
-	// (get) Token: 0x06002E3B RID: 11835 RVA: 0x0009C1F1 File Offset: 0x0009A3F1
+	// Token: 0x1700171D RID: 5917
+	// (get) Token: 0x06003FB9 RID: 16313 RVA: 0x0002339A File Offset: 0x0002159A
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -65,7 +65,7 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		}
 	}
 
-	// Token: 0x06002E3C RID: 11836 RVA: 0x0009C200 File Offset: 0x0009A400
+	// Token: 0x06003FBA RID: 16314 RVA: 0x000FF12C File Offset: 0x000FD32C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -75,7 +75,7 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		this.m_teleportToTraitorFight = new Action(this.TeleportToTraitorFight);
 	}
 
-	// Token: 0x06002E3D RID: 11837 RVA: 0x0009C250 File Offset: 0x0009A450
+	// Token: 0x06003FBB RID: 16315 RVA: 0x000FF17C File Offset: 0x000FD37C
 	public void SetEndingCutsceneStateEnabled(bool enabled)
 	{
 		this.m_interactable.SetIsInteractableActive(!enabled);
@@ -89,7 +89,7 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		this.m_npcController.ShowHeart();
 	}
 
-	// Token: 0x06002E3E RID: 11838 RVA: 0x0009C2A4 File Offset: 0x0009A4A4
+	// Token: 0x06003FBC RID: 16316 RVA: 0x000FF1D0 File Offset: 0x000FD3D0
 	protected override void InitializePooledPropOnEnter()
 	{
 		this.m_endingSpeechBubblePlayed = false;
@@ -131,14 +131,14 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		}
 	}
 
-	// Token: 0x06002E3F RID: 11839 RVA: 0x0009C418 File Offset: 0x0009A618
+	// Token: 0x06003FBD RID: 16317 RVA: 0x000233A7 File Offset: 0x000215A7
 	public void TalkToJohan()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
 		base.StartCoroutine(this.TalkToJohanCoroutine());
 	}
 
-	// Token: 0x06002E40 RID: 11840 RVA: 0x0009C433 File Offset: 0x0009A633
+	// Token: 0x06003FBE RID: 16318 RVA: 0x000233C2 File Offset: 0x000215C2
 	private IEnumerator TalkToJohanCoroutine()
 	{
 		this.m_npcController.SetNPCState(NPCState.AtAttention, false);
@@ -173,7 +173,7 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		yield break;
 	}
 
-	// Token: 0x06002E41 RID: 11841 RVA: 0x0009C442 File Offset: 0x0009A642
+	// Token: 0x06003FBF RID: 16319 RVA: 0x000233D1 File Offset: 0x000215D1
 	private IEnumerator GiveHeirloomCoroutine()
 	{
 		this.m_canGiveLantern = false;
@@ -224,7 +224,7 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		yield break;
 	}
 
-	// Token: 0x06002E42 RID: 11842 RVA: 0x0009C454 File Offset: 0x0009A654
+	// Token: 0x06003FC0 RID: 16320 RVA: 0x000FF344 File Offset: 0x000FD544
 	private void RunDialogue()
 	{
 		DialogueDisplayOverride component = this.m_prop.PropSpawnController.gameObject.GetComponent<DialogueDisplayOverride>();
@@ -261,7 +261,7 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		this.EndInteraction();
 	}
 
-	// Token: 0x06002E43 RID: 11843 RVA: 0x0009C564 File Offset: 0x0009A764
+	// Token: 0x06003FC1 RID: 16321 RVA: 0x000FF454 File Offset: 0x000FD654
 	private void RunGardenDialogue()
 	{
 		bool flag = false;
@@ -310,7 +310,7 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		WindowManager.SetWindowIsOpen(WindowID.Dialogue, true);
 	}
 
-	// Token: 0x06002E44 RID: 11844 RVA: 0x0009C6A4 File Offset: 0x0009A8A4
+	// Token: 0x06003FC2 RID: 16322 RVA: 0x000FF594 File Offset: 0x000FD794
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -329,14 +329,14 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_endInteraction);
 	}
 
-	// Token: 0x06002E45 RID: 11845 RVA: 0x0009C70E File Offset: 0x0009A90E
+	// Token: 0x06003FC3 RID: 16323 RVA: 0x000233E0 File Offset: 0x000215E0
 	private void EndInteraction()
 	{
 		this.m_interactable.SetIsInteractableActive(true);
 		AudioManager.PlayOneShotAttached(this, this.m_farewellAudioEvent, base.gameObject);
 	}
 
-	// Token: 0x06002E46 RID: 11846 RVA: 0x0009C730 File Offset: 0x0009A930
+	// Token: 0x06003FC4 RID: 16324 RVA: 0x000FF600 File Offset: 0x000FD800
 	private void TeleportToTraitorFight()
 	{
 		TunnelSpawnController tunnelSpawnController;
@@ -357,7 +357,7 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		this.EndInteraction();
 	}
 
-	// Token: 0x06002E47 RID: 11847 RVA: 0x0009C7AE File Offset: 0x0009A9AE
+	// Token: 0x06003FC5 RID: 16325 RVA: 0x00023400 File Offset: 0x00021600
 	private IEnumerator MovePlayerToJohan()
 	{
 		PlayerManager.GetPlayerController().SetVelocity(0f, 0f, false);
@@ -376,7 +376,7 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		yield break;
 	}
 
-	// Token: 0x06002E48 RID: 11848 RVA: 0x0009C7C0 File Offset: 0x0009A9C0
+	// Token: 0x06003FC6 RID: 16326 RVA: 0x000FF680 File Offset: 0x000FD880
 	private void RunLanternInsightResolved()
 	{
 		if (SaveManager.PlayerSaveData.GetInsightState(InsightType.HeirloomLantern) < InsightState.ResolvedButNotViewed)
@@ -387,12 +387,12 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		}
 	}
 
-	// Token: 0x06002E49 RID: 11849 RVA: 0x0009C80D File Offset: 0x0009AA0D
+	// Token: 0x06003FC7 RID: 16327 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 	}
 
-	// Token: 0x06002E4A RID: 11850 RVA: 0x0009C810 File Offset: 0x0009AA10
+	// Token: 0x06003FC8 RID: 16328 RVA: 0x000FF6D0 File Offset: 0x000FD8D0
 	public bool IsJohanSpawnConditionTrue(JohanPropController.Johan_SpawnCondition spawnCondition)
 	{
 		if (spawnCondition <= JohanPropController.Johan_SpawnCondition.BridgeBossDefeated)
@@ -461,69 +461,69 @@ public class JohanPropController : BaseSpecialPropController, IDisplaySpeechBubb
 		return true;
 	}
 
-	// Token: 0x040024E2 RID: 9442
+	// Token: 0x040031C8 RID: 12744
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x040024E3 RID: 9443
+	// Token: 0x040031C9 RID: 12745
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x040024E4 RID: 9444
+	// Token: 0x040031CA RID: 12746
 	[SerializeField]
 	[EventRef]
 	private string m_farewellAudioEvent;
 
-	// Token: 0x040024E5 RID: 9445
+	// Token: 0x040031CB RID: 12747
 	private Prop m_prop;
 
-	// Token: 0x040024E6 RID: 9446
+	// Token: 0x040031CC RID: 12748
 	private NPCController m_npcController;
 
-	// Token: 0x040024E7 RID: 9447
+	// Token: 0x040031CD RID: 12749
 	private bool m_canGiveLantern;
 
-	// Token: 0x040024E8 RID: 9448
+	// Token: 0x040031CE RID: 12750
 	private bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x040024E9 RID: 9449
+	// Token: 0x040031CF RID: 12751
 	private bool m_speechBubbleDisabled;
 
-	// Token: 0x040024EA RID: 9450
+	// Token: 0x040031D0 RID: 12752
 	private Action m_endInteraction;
 
-	// Token: 0x040024EB RID: 9451
+	// Token: 0x040031D1 RID: 12753
 	private Action m_teleportToTraitorFight;
 
-	// Token: 0x02000CB4 RID: 3252
+	// Token: 0x02000814 RID: 2068
 	public enum Johan_SpawnCondition
 	{
-		// Token: 0x0400517B RID: 20859
+		// Token: 0x040031D3 RID: 12755
 		None,
-		// Token: 0x0400517C RID: 20860
+		// Token: 0x040031D4 RID: 12756
 		DiedAtLeastOnce = 10,
-		// Token: 0x0400517D RID: 20861
+		// Token: 0x040031D5 RID: 12757
 		TowerBossBeatenAndNotCollectedLantern = 20,
-		// Token: 0x0400517E RID: 20862
+		// Token: 0x040031D6 RID: 12758
 		MemoryHeirloomObtained = 30,
-		// Token: 0x0400517F RID: 20863
+		// Token: 0x040031D7 RID: 12759
 		TowerBossNotBeatenAndLanternInsightNotObtained = 40,
-		// Token: 0x04005180 RID: 20864
+		// Token: 0x040031D8 RID: 12760
 		CastleBossDefeated = 1000,
-		// Token: 0x04005181 RID: 20865
+		// Token: 0x040031D9 RID: 12761
 		BridgeBossDefeated = 1010,
-		// Token: 0x04005182 RID: 20866
+		// Token: 0x040031DA RID: 12762
 		ForestBossDefeated = 1020,
-		// Token: 0x04005183 RID: 20867
+		// Token: 0x040031DB RID: 12763
 		StudyBossDefeated = 1030,
-		// Token: 0x04005184 RID: 20868
+		// Token: 0x040031DC RID: 12764
 		TowerBossDefeated = 1040,
-		// Token: 0x04005185 RID: 20869
+		// Token: 0x040031DD RID: 12765
 		CaveBossDefeated = 1050,
-		// Token: 0x04005186 RID: 20870
+		// Token: 0x040031DE RID: 12766
 		GardenBossDefeated = 1055,
-		// Token: 0x04005187 RID: 20871
+		// Token: 0x040031DF RID: 12767
 		FinalBossDefeated = 1060
 	}
 }

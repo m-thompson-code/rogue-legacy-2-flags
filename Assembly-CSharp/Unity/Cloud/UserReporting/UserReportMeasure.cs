@@ -3,27 +3,27 @@ using System.Collections.Generic;
 
 namespace Unity.Cloud.UserReporting
 {
-	// Token: 0x0200083D RID: 2109
+	// Token: 0x02000D23 RID: 3363
 	public struct UserReportMeasure
 	{
-		// Token: 0x17001741 RID: 5953
-		// (get) Token: 0x060045B0 RID: 17840 RVA: 0x000F8503 File Offset: 0x000F6703
-		// (set) Token: 0x060045B1 RID: 17841 RVA: 0x000F850B File Offset: 0x000F670B
+		// Token: 0x17001F6F RID: 8047
+		// (get) Token: 0x06005FE8 RID: 24552 RVA: 0x00034E3B File Offset: 0x0003303B
+		// (set) Token: 0x06005FE9 RID: 24553 RVA: 0x00034E43 File Offset: 0x00033043
 		public int EndFrameNumber { readonly get; set; }
 
-		// Token: 0x17001742 RID: 5954
-		// (get) Token: 0x060045B2 RID: 17842 RVA: 0x000F8514 File Offset: 0x000F6714
-		// (set) Token: 0x060045B3 RID: 17843 RVA: 0x000F851C File Offset: 0x000F671C
+		// Token: 0x17001F70 RID: 8048
+		// (get) Token: 0x06005FEA RID: 24554 RVA: 0x00034E4C File Offset: 0x0003304C
+		// (set) Token: 0x06005FEB RID: 24555 RVA: 0x00034E54 File Offset: 0x00033054
 		public List<UserReportNamedValue> Metadata { readonly get; set; }
 
-		// Token: 0x17001743 RID: 5955
-		// (get) Token: 0x060045B4 RID: 17844 RVA: 0x000F8525 File Offset: 0x000F6725
-		// (set) Token: 0x060045B5 RID: 17845 RVA: 0x000F852D File Offset: 0x000F672D
+		// Token: 0x17001F71 RID: 8049
+		// (get) Token: 0x06005FEC RID: 24556 RVA: 0x00034E5D File Offset: 0x0003305D
+		// (set) Token: 0x06005FED RID: 24557 RVA: 0x00034E65 File Offset: 0x00033065
 		public List<UserReportMetric> Metrics { readonly get; set; }
 
-		// Token: 0x17001744 RID: 5956
-		// (get) Token: 0x060045B6 RID: 17846 RVA: 0x000F8536 File Offset: 0x000F6736
-		// (set) Token: 0x060045B7 RID: 17847 RVA: 0x000F853E File Offset: 0x000F673E
+		// Token: 0x17001F72 RID: 8050
+		// (get) Token: 0x06005FEE RID: 24558 RVA: 0x00034E6E File Offset: 0x0003306E
+		// (set) Token: 0x06005FEF RID: 24559 RVA: 0x00034E76 File Offset: 0x00033076
 		public int StartFrameNumber { readonly get; set; }
 	}
 }

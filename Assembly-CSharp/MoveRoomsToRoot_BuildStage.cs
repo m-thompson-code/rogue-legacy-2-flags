@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-// Token: 0x0200066E RID: 1646
+// Token: 0x02000ADD RID: 2781
 public class MoveRoomsToRoot_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B62 RID: 15202 RVA: 0x000CC446 File Offset: 0x000CA646
+	// Token: 0x06005372 RID: 21362 RVA: 0x0002D586 File Offset: 0x0002B786
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		using (List<BaseRoom>.Enumerator enumerator = biomeController.Rooms.GetEnumerator())

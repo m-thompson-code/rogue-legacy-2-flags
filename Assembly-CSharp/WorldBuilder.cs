@@ -5,11 +5,11 @@ using System.Linq;
 using RLWorldCreation;
 using UnityEngine;
 
-// Token: 0x02000686 RID: 1670
+// Token: 0x02000B06 RID: 2822
 public class WorldBuilder : MonoBehaviour
 {
-	// Token: 0x170014FC RID: 5372
-	// (get) Token: 0x06003C37 RID: 15415 RVA: 0x000D0435 File Offset: 0x000CE635
+	// Token: 0x17001CBA RID: 7354
+	// (get) Token: 0x06005496 RID: 21654 RVA: 0x0002DDC6 File Offset: 0x0002BFC6
 	public List<BiomeType> BiomeBuildOrder
 	{
 		get
@@ -18,8 +18,8 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170014FD RID: 5373
-	// (get) Token: 0x06003C38 RID: 15416 RVA: 0x000D043D File Offset: 0x000CE63D
+	// Token: 0x17001CBB RID: 7355
+	// (get) Token: 0x06005497 RID: 21655 RVA: 0x0002DDCE File Offset: 0x0002BFCE
 	public static Dictionary<BiomeType, BiomeController> BiomeControllers
 	{
 		get
@@ -28,8 +28,8 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170014FE RID: 5374
-	// (get) Token: 0x06003C39 RID: 15417 RVA: 0x000D0449 File Offset: 0x000CE649
+	// Token: 0x17001CBC RID: 7356
+	// (get) Token: 0x06005498 RID: 21656 RVA: 0x0002DDDA File Offset: 0x0002BFDA
 	public static bool DeactivateRoomGameObjects
 	{
 		get
@@ -38,9 +38,9 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170014FF RID: 5375
-	// (get) Token: 0x06003C3A RID: 15418 RVA: 0x000D0455 File Offset: 0x000CE655
-	// (set) Token: 0x06003C3B RID: 15419 RVA: 0x000D045D File Offset: 0x000CE65D
+	// Token: 0x17001CBD RID: 7357
+	// (get) Token: 0x06005499 RID: 21657 RVA: 0x0002DDE6 File Offset: 0x0002BFE6
+	// (set) Token: 0x0600549A RID: 21658 RVA: 0x0002DDEE File Offset: 0x0002BFEE
 	public BiomeLayer IncludedBiomes
 	{
 		get
@@ -53,8 +53,8 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001500 RID: 5376
-	// (get) Token: 0x06003C3C RID: 15420 RVA: 0x000D0466 File Offset: 0x000CE666
+	// Token: 0x17001CBE RID: 7358
+	// (get) Token: 0x0600549B RID: 21659 RVA: 0x0002DDF7 File Offset: 0x0002BFF7
 	public BaseRoom StartingRoom
 	{
 		get
@@ -67,13 +67,13 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001501 RID: 5377
-	// (get) Token: 0x06003C3D RID: 15421 RVA: 0x000D0493 File Offset: 0x000CE693
-	// (set) Token: 0x06003C3E RID: 15422 RVA: 0x000D049A File Offset: 0x000CE69A
+	// Token: 0x17001CBF RID: 7359
+	// (get) Token: 0x0600549C RID: 21660 RVA: 0x0002DE24 File Offset: 0x0002C024
+	// (set) Token: 0x0600549D RID: 21661 RVA: 0x0002DE2B File Offset: 0x0002C02B
 	public static WorldBuilder Instance { get; private set; }
 
-	// Token: 0x17001502 RID: 5378
-	// (get) Token: 0x06003C3F RID: 15423 RVA: 0x000D04A2 File Offset: 0x000CE6A2
+	// Token: 0x17001CC0 RID: 7360
+	// (get) Token: 0x0600549E RID: 21662 RVA: 0x0002DE33 File Offset: 0x0002C033
 	public static bool IsInstantiated
 	{
 		get
@@ -82,13 +82,13 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001503 RID: 5379
-	// (get) Token: 0x06003C40 RID: 15424 RVA: 0x000D04AF File Offset: 0x000CE6AF
-	// (set) Token: 0x06003C41 RID: 15425 RVA: 0x000D04B6 File Offset: 0x000CE6B6
+	// Token: 0x17001CC1 RID: 7361
+	// (get) Token: 0x0600549F RID: 21663 RVA: 0x0002DE40 File Offset: 0x0002C040
+	// (set) Token: 0x060054A0 RID: 21664 RVA: 0x0002DE47 File Offset: 0x0002C047
 	public static BiomeBuildStateID State { get; private set; }
 
-	// Token: 0x17001504 RID: 5380
-	// (get) Token: 0x06003C42 RID: 15426 RVA: 0x000D04BE File Offset: 0x000CE6BE
+	// Token: 0x17001CC2 RID: 7362
+	// (get) Token: 0x060054A1 RID: 21665 RVA: 0x0002DE4F File Offset: 0x0002C04F
 	public static bool CreateReports
 	{
 		get
@@ -97,17 +97,17 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001505 RID: 5381
-	// (get) Token: 0x06003C43 RID: 15427 RVA: 0x000D04D2 File Offset: 0x000CE6D2
-	// (set) Token: 0x06003C44 RID: 15428 RVA: 0x000D04D9 File Offset: 0x000CE6D9
+	// Token: 0x17001CC3 RID: 7363
+	// (get) Token: 0x060054A2 RID: 21666 RVA: 0x0002DE63 File Offset: 0x0002C063
+	// (set) Token: 0x060054A3 RID: 21667 RVA: 0x0002DE6A File Offset: 0x0002C06A
 	public static BiomeType FirstBiomeOverride { get; set; }
 
-	// Token: 0x17001506 RID: 5382
-	// (get) Token: 0x06003C45 RID: 15429 RVA: 0x000D04E1 File Offset: 0x000CE6E1
-	// (set) Token: 0x06003C46 RID: 15430 RVA: 0x000D04E9 File Offset: 0x000CE6E9
+	// Token: 0x17001CC4 RID: 7364
+	// (get) Token: 0x060054A4 RID: 21668 RVA: 0x0002DE72 File Offset: 0x0002C072
+	// (set) Token: 0x060054A5 RID: 21669 RVA: 0x0002DE7A File Offset: 0x0002C07A
 	public LevelManager_RL LevelManager { get; private set; }
 
-	// Token: 0x06003C47 RID: 15431 RVA: 0x000D04F4 File Offset: 0x000CE6F4
+	// Token: 0x060054A6 RID: 21670 RVA: 0x0014012C File Offset: 0x0013E32C
 	private void Awake()
 	{
 		if (WorldBuilder.Instance == null)
@@ -123,7 +123,7 @@ public class WorldBuilder : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06003C48 RID: 15432 RVA: 0x000D0540 File Offset: 0x000CE740
+	// Token: 0x060054A7 RID: 21671 RVA: 0x0002DE83 File Offset: 0x0002C083
 	private IEnumerator CreateBiome(BiomeType biome)
 	{
 		BiomeController biomeController = WorldBuilder.CreateBiomeController(biome, base.transform);
@@ -143,7 +143,7 @@ public class WorldBuilder : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003C49 RID: 15433 RVA: 0x000D0558 File Offset: 0x000CE758
+	// Token: 0x060054A8 RID: 21672 RVA: 0x00140178 File Offset: 0x0013E378
 	public static BiomeController CreateBiomeController(BiomeType biome, Transform parent)
 	{
 		BiomeController biomeController = new GameObject(biome.ToString() + "_BiomeController").AddComponent<BiomeController>();
@@ -153,7 +153,7 @@ public class WorldBuilder : MonoBehaviour
 		return biomeController;
 	}
 
-	// Token: 0x06003C4A RID: 15434 RVA: 0x000D05B3 File Offset: 0x000CE7B3
+	// Token: 0x060054A9 RID: 21673 RVA: 0x0002DE99 File Offset: 0x0002C099
 	public static void CreateWorld()
 	{
 		WorldBuilder.State = BiomeBuildStateID.Running;
@@ -164,7 +164,7 @@ public class WorldBuilder : MonoBehaviour
 		WorldBuilder.Instance.StartCoroutine(WorldBuilder.Instance.CreateWorldCoroutine(null));
 	}
 
-	// Token: 0x06003C4B RID: 15435 RVA: 0x000D05E2 File Offset: 0x000CE7E2
+	// Token: 0x060054AA RID: 21674 RVA: 0x0002DEC8 File Offset: 0x0002C0C8
 	public static void CreateWorld(StageSaveData stageSaveData)
 	{
 		if (stageSaveData == null)
@@ -175,7 +175,7 @@ public class WorldBuilder : MonoBehaviour
 		WorldBuilder.Instance.StartCoroutine(WorldBuilder.Instance.CreateWorldCoroutine(stageSaveData));
 	}
 
-	// Token: 0x06003C4C RID: 15436 RVA: 0x000D060E File Offset: 0x000CE80E
+	// Token: 0x060054AB RID: 21675 RVA: 0x0002DEF4 File Offset: 0x0002C0F4
 	private IEnumerator CreateWorldCoroutine(StageSaveData stageSaveData = null)
 	{
 		while (!SharedWorldObjects_Loader.IsInitialized)
@@ -324,7 +324,7 @@ public class WorldBuilder : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003C4D RID: 15437 RVA: 0x000D0624 File Offset: 0x000CE824
+	// Token: 0x060054AC RID: 21676 RVA: 0x001401D4 File Offset: 0x0013E3D4
 	private Vector2 GetRoomContentWorldPosition(GridPointManager room, Vector2 roomContentLocalPosition)
 	{
 		Vector2 worldPositionFromRoomCoordinates = GridController.GetWorldPositionFromRoomCoordinates(GridController.GetRoomCoordinatesFromGridCoordinates(room.GridCoordinates), room.Size);
@@ -336,7 +336,7 @@ public class WorldBuilder : MonoBehaviour
 		return worldPositionFromRoomCoordinates + a * roomContentLocalPosition;
 	}
 
-	// Token: 0x06003C4E RID: 15438 RVA: 0x000D0680 File Offset: 0x000CE880
+	// Token: 0x060054AD RID: 21677 RVA: 0x00140230 File Offset: 0x0013E430
 	private void DeactivateRooms(BiomeType biome)
 	{
 		if (WorldBuilder.DeactivateRoomGameObjects)
@@ -348,12 +348,12 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001507 RID: 5383
-	// (get) Token: 0x06003C4F RID: 15439 RVA: 0x000D06E8 File Offset: 0x000CE8E8
-	// (set) Token: 0x06003C50 RID: 15440 RVA: 0x000D06EF File Offset: 0x000CE8EF
+	// Token: 0x17001CC5 RID: 7365
+	// (get) Token: 0x060054AE RID: 21678 RVA: 0x0002DF0A File Offset: 0x0002C10A
+	// (set) Token: 0x060054AF RID: 21679 RVA: 0x0002DF11 File Offset: 0x0002C111
 	public static BaseRoom OldCastleTransitionRoom { get; private set; }
 
-	// Token: 0x06003C51 RID: 15441 RVA: 0x000D06F7 File Offset: 0x000CE8F7
+	// Token: 0x060054B0 RID: 21680 RVA: 0x0002DF19 File Offset: 0x0002C119
 	public static IEnumerator InstantiateBiome(BiomeType biome)
 	{
 		if (biome == BiomeType.Castle)
@@ -396,7 +396,7 @@ public class WorldBuilder : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003C52 RID: 15442 RVA: 0x000D0706 File Offset: 0x000CE906
+	// Token: 0x060054B1 RID: 21681 RVA: 0x0002DF28 File Offset: 0x0002C128
 	public static BiomeController GetBiomeController(BiomeType biome)
 	{
 		if (WorldBuilder.BiomeControllers != null && WorldBuilder.BiomeControllers.ContainsKey(biome))
@@ -406,7 +406,7 @@ public class WorldBuilder : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003C53 RID: 15443 RVA: 0x000D0729 File Offset: 0x000CE929
+	// Token: 0x060054B2 RID: 21682 RVA: 0x0002DF4B File Offset: 0x0002C14B
 	public void PreserveFirstBiomeOverride()
 	{
 		if (WorldBuilder.FirstBiomeOverride == BiomeType.None)
@@ -415,7 +415,7 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003C54 RID: 15444 RVA: 0x000D0740 File Offset: 0x000CE940
+	// Token: 0x060054B3 RID: 21683 RVA: 0x00140298 File Offset: 0x0013E498
 	private void OnBiomeCreatorFail()
 	{
 		WorldBuilder.State = BiomeBuildStateID.Failed;
@@ -425,7 +425,7 @@ public class WorldBuilder : MonoBehaviour
 		this.Cleanup();
 	}
 
-	// Token: 0x06003C55 RID: 15445 RVA: 0x000D07A0 File Offset: 0x000CE9A0
+	// Token: 0x060054B4 RID: 21684 RVA: 0x001402F8 File Offset: 0x0013E4F8
 	private void Cleanup()
 	{
 		base.StopAllCoroutines();
@@ -442,13 +442,13 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003C56 RID: 15446 RVA: 0x000D0824 File Offset: 0x000CEA24
+	// Token: 0x060054B5 RID: 21685 RVA: 0x0002DF5F File Offset: 0x0002C15F
 	private void OnDestroy()
 	{
 		WorldBuilder.Instance = null;
 	}
 
-	// Token: 0x06003C57 RID: 15447 RVA: 0x000D082C File Offset: 0x000CEA2C
+	// Token: 0x060054B6 RID: 21686 RVA: 0x0002DF67 File Offset: 0x0002C167
 	public static void Reset()
 	{
 		WorldBuilder.State = BiomeBuildStateID.None;
@@ -459,7 +459,7 @@ public class WorldBuilder : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003C58 RID: 15448 RVA: 0x000D085F File Offset: 0x000CEA5F
+	// Token: 0x060054B7 RID: 21687 RVA: 0x0002DF9A File Offset: 0x0002C19A
 	private IEnumerator RunBuildStage<T>(BiomeController biomeController) where T : IBiomeBuildStage, new()
 	{
 		T t = Activator.CreateInstance<T>();
@@ -467,45 +467,45 @@ public class WorldBuilder : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04002D5F RID: 11615
+	// Token: 0x04003F08 RID: 16136
 	private const float ROOM_CONTENT_POSITION_X_MULTIPLIER = 1f;
 
-	// Token: 0x04002D60 RID: 11616
+	// Token: 0x04003F09 RID: 16137
 	private const float ROOM_CONTENT_POSITION_Y_MULTIPLIER = 1f;
 
-	// Token: 0x04002D61 RID: 11617
+	// Token: 0x04003F0A RID: 16138
 	[SerializeField]
 	[HideInInspector]
 	private BiomeLayer m_includedBiomes = BiomeLayer.Castle;
 
-	// Token: 0x04002D62 RID: 11618
+	// Token: 0x04003F0B RID: 16139
 	[SerializeField]
 	private BiomeCreator m_biomeCreator;
 
-	// Token: 0x04002D63 RID: 11619
+	// Token: 0x04003F0C RID: 16140
 	[SerializeField]
 	private bool m_instantiateRooms = true;
 
-	// Token: 0x04002D64 RID: 11620
+	// Token: 0x04003F0D RID: 16141
 	[SerializeField]
 	private bool m_deactivateRoomGameObjects = true;
 
-	// Token: 0x04002D65 RID: 11621
+	// Token: 0x04003F0E RID: 16142
 	[SerializeField]
 	private bool m_printSeedsToConsole = true;
 
-	// Token: 0x04002D66 RID: 11622
+	// Token: 0x04003F0F RID: 16143
 	[SerializeField]
 	private bool m_mergeRooms = true;
 
-	// Token: 0x04002D67 RID: 11623
+	// Token: 0x04003F10 RID: 16144
 	[SerializeField]
 	[HideInInspector]
 	private List<BiomeType> m_biomeBuildOrder;
 
-	// Token: 0x04002D68 RID: 11624
+	// Token: 0x04003F11 RID: 16145
 	private BiomeType m_firstBiome;
 
-	// Token: 0x04002D69 RID: 11625
+	// Token: 0x04003F12 RID: 16146
 	private Dictionary<BiomeType, BiomeController> m_biomeControllers;
 }

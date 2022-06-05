@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine.EventSystems;
 
-// Token: 0x020003A4 RID: 932
+// Token: 0x02000637 RID: 1591
 public class EnchantressOmniUIEntry : BaseOmniUIEntry
 {
-	// Token: 0x17000E53 RID: 3667
-	// (get) Token: 0x060022A2 RID: 8866 RVA: 0x00070CC5 File Offset: 0x0006EEC5
-	// (set) Token: 0x060022A3 RID: 8867 RVA: 0x00070CCD File Offset: 0x0006EECD
+	// Token: 0x170012E6 RID: 4838
+	// (get) Token: 0x060030BA RID: 12474 RVA: 0x0001ABAC File Offset: 0x00018DAC
+	// (set) Token: 0x060030BB RID: 12475 RVA: 0x0001ABB4 File Offset: 0x00018DB4
 	public RuneType RuneType { get; protected set; }
 
-	// Token: 0x17000E54 RID: 3668
-	// (get) Token: 0x060022A4 RID: 8868 RVA: 0x00070CD6 File Offset: 0x0006EED6
+	// Token: 0x170012E7 RID: 4839
+	// (get) Token: 0x060030BC RID: 12476 RVA: 0x0001ABBD File Offset: 0x00018DBD
 	public override EventArgs EntryEventArgs
 	{
 		get
@@ -27,8 +27,8 @@ public class EnchantressOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000E55 RID: 3669
-	// (get) Token: 0x060022A5 RID: 8869 RVA: 0x00070D0C File Offset: 0x0006EF0C
+	// Token: 0x170012E8 RID: 4840
+	// (get) Token: 0x060030BD RID: 12477 RVA: 0x0001ABF3 File Offset: 0x00018DF3
 	public override bool IsEntryActive
 	{
 		get
@@ -37,7 +37,7 @@ public class EnchantressOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x060022A6 RID: 8870 RVA: 0x00070D20 File Offset: 0x0006EF20
+	// Token: 0x060030BE RID: 12478 RVA: 0x000D17CC File Offset: 0x000CF9CC
 	public void Initialize(RuneType runeType, EnchantressOmniUIWindowController windowController)
 	{
 		this.RuneType = runeType;
@@ -51,7 +51,7 @@ public class EnchantressOmniUIEntry : BaseOmniUIEntry
 		this.m_titleText.text = @string;
 	}
 
-	// Token: 0x060022A7 RID: 8871 RVA: 0x00070D88 File Offset: 0x0006EF88
+	// Token: 0x060030BF RID: 12479 RVA: 0x000D1834 File Offset: 0x000CFA34
 	public override void UpdateActive()
 	{
 		RuneData runeData = RuneLibrary.GetRuneData(this.RuneType);
@@ -69,7 +69,7 @@ public class EnchantressOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x060022A8 RID: 8872 RVA: 0x00070DE8 File Offset: 0x0006EFE8
+	// Token: 0x060030C0 RID: 12480 RVA: 0x000D1894 File Offset: 0x000CFA94
 	public override void UpdateState()
 	{
 		if (RuneManager.GetFoundState(this.RuneType) == FoundState.FoundButNotViewed)
@@ -101,7 +101,7 @@ public class EnchantressOmniUIEntry : BaseOmniUIEntry
 		this.m_titleText.text = @string;
 	}
 
-	// Token: 0x060022A9 RID: 8873 RVA: 0x00070EC6 File Offset: 0x0006F0C6
+	// Token: 0x060030C1 RID: 12481 RVA: 0x0001AC07 File Offset: 0x00018E07
 	public override void OnSelect(BaseEventData eventData)
 	{
 		if (!base.Interactable)
@@ -116,6 +116,6 @@ public class EnchantressOmniUIEntry : BaseOmniUIEntry
 		base.OnSelect(eventData);
 	}
 
-	// Token: 0x04001DD8 RID: 7640
+	// Token: 0x040027F8 RID: 10232
 	private EnchantressOmniUIDescriptionEventArgs m_eventArgs;
 }

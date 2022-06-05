@@ -1,17 +1,17 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000824 RID: 2084
+// Token: 0x02000CFD RID: 3325
 public class FramerateMonitor : UserReportingMonitor
 {
-	// Token: 0x060044F7 RID: 17655 RVA: 0x000F5350 File Offset: 0x000F3550
+	// Token: 0x06005ECF RID: 24271 RVA: 0x00034439 File Offset: 0x00032639
 	public FramerateMonitor()
 	{
 		this.MaximumDurationInSeconds = 10f;
 		this.MinimumFramerate = 15f;
 	}
 
-	// Token: 0x060044F8 RID: 17656 RVA: 0x000F5370 File Offset: 0x000F3570
+	// Token: 0x06005ED0 RID: 24272 RVA: 0x00162F78 File Offset: 0x00161178
 	private void Update()
 	{
 		float deltaTime = Time.deltaTime;
@@ -30,12 +30,12 @@ public class FramerateMonitor : UserReportingMonitor
 		}
 	}
 
-	// Token: 0x04003ACD RID: 15053
+	// Token: 0x04004DD9 RID: 19929
 	private float duration;
 
-	// Token: 0x04003ACE RID: 15054
+	// Token: 0x04004DDA RID: 19930
 	public float MaximumDurationInSeconds;
 
-	// Token: 0x04003ACF RID: 15055
+	// Token: 0x04004DDB RID: 19931
 	public float MinimumFramerate;
 }

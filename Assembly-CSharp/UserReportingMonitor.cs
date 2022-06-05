@@ -3,10 +3,10 @@ using Unity.Cloud.UserReporting;
 using Unity.Cloud.UserReporting.Plugin;
 using UnityEngine;
 
-// Token: 0x02000826 RID: 2086
+// Token: 0x02000CFF RID: 3327
 public class UserReportingMonitor : MonoBehaviour
 {
-	// Token: 0x060044FB RID: 17659 RVA: 0x000F53E4 File Offset: 0x000F35E4
+	// Token: 0x06005ED3 RID: 24275 RVA: 0x00162FD4 File Offset: 0x001611D4
 	public UserReportingMonitor()
 	{
 		this.IsEnabled = true;
@@ -15,7 +15,7 @@ public class UserReportingMonitor : MonoBehaviour
 		this.MonitorName = type.Name;
 	}
 
-	// Token: 0x060044FC RID: 17660 RVA: 0x000F5418 File Offset: 0x000F3618
+	// Token: 0x06005ED4 RID: 24276 RVA: 0x00034457 File Offset: 0x00032657
 	private void Start()
 	{
 		if (UnityUserReporting.CurrentClient == null)
@@ -24,7 +24,7 @@ public class UserReportingMonitor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060044FD RID: 17661 RVA: 0x000F5428 File Offset: 0x000F3628
+	// Token: 0x06005ED5 RID: 24277 RVA: 0x00163008 File Offset: 0x00161208
 	public void Trigger()
 	{
 		if (!this.IsEnabledAfterTrigger)
@@ -68,23 +68,23 @@ public class UserReportingMonitor : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060044FE RID: 17662 RVA: 0x000F54C0 File Offset: 0x000F36C0
+	// Token: 0x06005ED6 RID: 24278 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void Triggered()
 	{
 	}
 
-	// Token: 0x04003AD0 RID: 15056
+	// Token: 0x04004DDC RID: 19932
 	public bool IsEnabled;
 
-	// Token: 0x04003AD1 RID: 15057
+	// Token: 0x04004DDD RID: 19933
 	public bool IsEnabledAfterTrigger;
 
-	// Token: 0x04003AD2 RID: 15058
+	// Token: 0x04004DDE RID: 19934
 	public bool IsHiddenWithoutDimension;
 
-	// Token: 0x04003AD3 RID: 15059
+	// Token: 0x04004DDF RID: 19935
 	public string MonitorName;
 
-	// Token: 0x04003AD4 RID: 15060
+	// Token: 0x04004DE0 RID: 19936
 	public string Summary;
 }

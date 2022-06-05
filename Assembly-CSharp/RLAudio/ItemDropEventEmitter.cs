@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008F5 RID: 2293
+	// Token: 0x02000E6C RID: 3692
 	public class ItemDropEventEmitter : MonoBehaviour, IAudioEventEmitter, ITerrainOnEnterHitResponse, IHitResponse
 	{
-		// Token: 0x1700185E RID: 6238
-		// (get) Token: 0x06004B53 RID: 19283 RVA: 0x0010EE66 File Offset: 0x0010D066
+		// Token: 0x1700214B RID: 8523
+		// (get) Token: 0x0600682A RID: 26666 RVA: 0x00009A7B File Offset: 0x00007C7B
 		public string Description
 		{
 			get
@@ -18,7 +18,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B54 RID: 19284 RVA: 0x0010EE70 File Offset: 0x0010D070
+		// Token: 0x0600682B RID: 26667 RVA: 0x0017EFE8 File Offset: 0x0017D1E8
 		private void Start()
 		{
 			if (!string.IsNullOrEmpty(this.PickupEvent))
@@ -32,40 +32,40 @@ namespace RLAudio
 			this.m_corgi.OnCorgiLandedEnterRelay.AddListener(new Action<CorgiController_RL>(this.OnBounce), false);
 		}
 
-		// Token: 0x06004B55 RID: 19285 RVA: 0x0010EED7 File Offset: 0x0010D0D7
+		// Token: 0x0600682C RID: 26668 RVA: 0x00039A09 File Offset: 0x00037C09
 		private void OnBounce(CorgiController_RL corgiController)
 		{
 			AudioManager.PlayAttached(this, this.m_bounceEventInstance, base.gameObject);
 		}
 
-		// Token: 0x06004B56 RID: 19286 RVA: 0x0010EEEB File Offset: 0x0010D0EB
+		// Token: 0x0600682D RID: 26669 RVA: 0x00039A1D File Offset: 0x00037C1D
 		public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 		{
 			AudioManager.PlayAttached(this, this.m_pickupEventInstance, base.gameObject);
 		}
 
-		// Token: 0x04003F57 RID: 16215
+		// Token: 0x0400549B RID: 21659
 		[EventRef]
 		public string PickupEvent;
 
-		// Token: 0x04003F58 RID: 16216
+		// Token: 0x0400549C RID: 21660
 		public ParamRef[] PickupParams = new ParamRef[0];
 
-		// Token: 0x04003F59 RID: 16217
+		// Token: 0x0400549D RID: 21661
 		[EventRef]
 		public string BounceEvent;
 
-		// Token: 0x04003F5A RID: 16218
+		// Token: 0x0400549E RID: 21662
 		public ParamRef[] BounceParams = new ParamRef[0];
 
-		// Token: 0x04003F5B RID: 16219
+		// Token: 0x0400549F RID: 21663
 		[SerializeField]
 		private CorgiController_RL m_corgi;
 
-		// Token: 0x04003F5C RID: 16220
+		// Token: 0x040054A0 RID: 21664
 		protected EventInstance m_pickupEventInstance;
 
-		// Token: 0x04003F5D RID: 16221
+		// Token: 0x040054A1 RID: 21665
 		protected EventInstance m_bounceEventInstance;
 	}
 }

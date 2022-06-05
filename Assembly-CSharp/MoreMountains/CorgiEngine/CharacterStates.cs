@@ -2,54 +2,54 @@
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x0200096C RID: 2412
+	// Token: 0x02000F1A RID: 3866
 	public class CharacterStates
 	{
 		// Token: 0x02000F1B RID: 3867
 		public enum CharacterConditions
 		{
-			// Token: 0x04005A7F RID: 23167
+			// Token: 0x040059BF RID: 22975
 			Normal,
-			// Token: 0x04005A80 RID: 23168
+			// Token: 0x040059C0 RID: 22976
 			ControlledMovement,
-			// Token: 0x04005A81 RID: 23169
+			// Token: 0x040059C1 RID: 22977
 			Frozen,
-			// Token: 0x04005A82 RID: 23170
+			// Token: 0x040059C2 RID: 22978
 			Paused,
-			// Token: 0x04005A83 RID: 23171
+			// Token: 0x040059C3 RID: 22979
 			Stunned,
-			// Token: 0x04005A84 RID: 23172
+			// Token: 0x040059C4 RID: 22980
 			DisableHorizontalMovement,
-			// Token: 0x04005A85 RID: 23173
+			// Token: 0x040059C5 RID: 22981
 			Dead
 		}
 
 		// Token: 0x02000F1C RID: 3868
 		public enum MovementStates
 		{
-			// Token: 0x04005A87 RID: 23175
+			// Token: 0x040059C7 RID: 22983
 			Null,
-			// Token: 0x04005A88 RID: 23176
+			// Token: 0x040059C8 RID: 22984
 			Idle,
-			// Token: 0x04005A89 RID: 23177
+			// Token: 0x040059C9 RID: 22985
 			Walking,
-			// Token: 0x04005A8A RID: 23178
+			// Token: 0x040059CA RID: 22986
 			Falling,
-			// Token: 0x04005A8B RID: 23179
+			// Token: 0x040059CB RID: 22987
 			Running,
-			// Token: 0x04005A8C RID: 23180
+			// Token: 0x040059CC RID: 22988
 			Dashing,
-			// Token: 0x04005A8D RID: 23181
+			// Token: 0x040059CD RID: 22989
 			DownStriking,
-			// Token: 0x04005A8E RID: 23182
+			// Token: 0x040059CE RID: 22990
 			Jumping,
-			// Token: 0x04005A8F RID: 23183
+			// Token: 0x040059CF RID: 22991
 			Pushing,
-			// Token: 0x04005A90 RID: 23184
+			// Token: 0x040059D0 RID: 22992
 			DoubleJumping,
-			// Token: 0x04005A91 RID: 23185
+			// Token: 0x040059D1 RID: 22993
 			WallJumping,
-			// Token: 0x04005A92 RID: 23186
+			// Token: 0x040059D2 RID: 22994
 			Flying
 		}
 	}

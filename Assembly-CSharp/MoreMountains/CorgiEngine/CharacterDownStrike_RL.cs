@@ -9,18 +9,18 @@ using UnityEngine.Serialization;
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x02000975 RID: 2421
+	// Token: 0x02000F2B RID: 3883
 	[AddComponentMenu("Corgi Engine/Character/Abilities/Character Downstrike RL")]
 	public class CharacterDownStrike_RL : CharacterAbility, IHasProjectileNameArray, IAudioEventEmitter
 	{
-		// Token: 0x0600522A RID: 21034 RVA: 0x00123731 File Offset: 0x00121931
+		// Token: 0x06007043 RID: 28739 RVA: 0x0003D390 File Offset: 0x0003B590
 		public override string HelpBoxText()
 		{
 			return "This component allows your character to dash. Here you can define the distance the dash should cover, how much force to apply, and the cooldown between the end of a dash and the start of the next one.";
 		}
 
-		// Token: 0x17001B2C RID: 6956
-		// (get) Token: 0x0600522B RID: 21035 RVA: 0x00123738 File Offset: 0x00121938
+		// Token: 0x1700247B RID: 9339
+		// (get) Token: 0x06007044 RID: 28740 RVA: 0x0003DF2D File Offset: 0x0003C12D
 		public bool IsTriggeringBounce
 		{
 			get
@@ -29,8 +29,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B2D RID: 6957
-		// (get) Token: 0x0600522C RID: 21036 RVA: 0x00123740 File Offset: 0x00121940
+		// Token: 0x1700247C RID: 9340
+		// (get) Token: 0x06007045 RID: 28741 RVA: 0x0003DF35 File Offset: 0x0003C135
 		public bool AbilityInProgress
 		{
 			get
@@ -39,8 +39,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B2E RID: 6958
-		// (get) Token: 0x0600522D RID: 21037 RVA: 0x00123748 File Offset: 0x00121948
+		// Token: 0x1700247D RID: 9341
+		// (get) Token: 0x06007046 RID: 28742 RVA: 0x00009A7B File Offset: 0x00007C7B
 		public string Description
 		{
 			get
@@ -49,8 +49,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B2F RID: 6959
-		// (get) Token: 0x0600522E RID: 21038 RVA: 0x00123750 File Offset: 0x00121950
+		// Token: 0x1700247E RID: 9342
+		// (get) Token: 0x06007047 RID: 28743 RVA: 0x0019179C File Offset: 0x0018F99C
 		public string[] ProjectileNameArray
 		{
 			get
@@ -71,13 +71,13 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B30 RID: 6960
-		// (get) Token: 0x0600522F RID: 21039 RVA: 0x001237AD File Offset: 0x001219AD
-		// (set) Token: 0x06005230 RID: 21040 RVA: 0x001237B5 File Offset: 0x001219B5
+		// Token: 0x1700247F RID: 9343
+		// (get) Token: 0x06007048 RID: 28744 RVA: 0x0003DF3D File Offset: 0x0003C13D
+		// (set) Token: 0x06007049 RID: 28745 RVA: 0x0003DF45 File Offset: 0x0003C145
 		public OnDownStrikeDelegate OnDownStrikeEvent { get; set; }
 
-		// Token: 0x17001B31 RID: 6961
-		// (get) Token: 0x06005231 RID: 21041 RVA: 0x001237BE File Offset: 0x001219BE
+		// Token: 0x17002480 RID: 9344
+		// (get) Token: 0x0600704A RID: 28746 RVA: 0x0003DF4E File Offset: 0x0003C14E
 		public IRelayLink<Projectile_RL, GameObject> OnSuccessfulDownstrikeRelay
 		{
 			get
@@ -86,8 +86,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B32 RID: 6962
-		// (get) Token: 0x06005232 RID: 21042 RVA: 0x001237C8 File Offset: 0x001219C8
+		// Token: 0x17002481 RID: 9345
+		// (get) Token: 0x0600704B RID: 28747 RVA: 0x001917FC File Offset: 0x0018F9FC
 		public bool IsHoldingDownStrikeAngle
 		{
 			get
@@ -97,7 +97,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005233 RID: 21043 RVA: 0x00123810 File Offset: 0x00121A10
+		// Token: 0x0600704C RID: 28748 RVA: 0x00191844 File Offset: 0x0018FA44
 		protected override void Initialization()
 		{
 			base.Initialization();
@@ -111,7 +111,7 @@ namespace MoreMountains.CorgiEngine
 			this.m_bounce = new Action<Projectile_RL, GameObject>(this.Bounce);
 		}
 
-		// Token: 0x06005234 RID: 21044 RVA: 0x001238BC File Offset: 0x00121ABC
+		// Token: 0x0600704D RID: 28749 RVA: 0x001918F0 File Offset: 0x0018FAF0
 		protected override void HandleInput()
 		{
 			if (this.m_playerController.ConditionState == CharacterStates.CharacterConditions.ControlledMovement)
@@ -134,7 +134,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005235 RID: 21045 RVA: 0x00123948 File Offset: 0x00121B48
+		// Token: 0x0600704E RID: 28750 RVA: 0x0019197C File Offset: 0x0018FB7C
 		public virtual void StartDownStrike(bool ignoreDownstrikeAngle)
 		{
 			bool flag = this._movement.CurrentState == CharacterStates.MovementStates.Dashing && false;
@@ -166,7 +166,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005236 RID: 21046 RVA: 0x00123AA9 File Offset: 0x00121CA9
+		// Token: 0x0600704F RID: 28751 RVA: 0x0003DF56 File Offset: 0x0003C156
 		protected virtual IEnumerator DownStrike()
 		{
 			if (!this.AbilityPermitted || (this._condition.CurrentState != CharacterStates.CharacterConditions.Normal && this._condition.CurrentState != CharacterStates.CharacterConditions.DisableHorizontalMovement))
@@ -285,19 +285,19 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x06005237 RID: 21047 RVA: 0x00123AB8 File Offset: 0x00121CB8
+		// Token: 0x06007050 RID: 28752 RVA: 0x00191AE0 File Offset: 0x0018FCE0
 		private bool EnteredSpinAttackState()
 		{
 			return this._animator.GetCurrentAnimatorStateInfo(0).IsName("SpinKick_Attack") || this._movement.CurrentState != CharacterStates.MovementStates.DownStriking;
 		}
 
-		// Token: 0x06005238 RID: 21048 RVA: 0x00123AF3 File Offset: 0x00121CF3
+		// Token: 0x06007051 RID: 28753 RVA: 0x0003DF65 File Offset: 0x0003C165
 		public override void ProcessAbility()
 		{
 			base.ProcessAbility();
 		}
 
-		// Token: 0x06005239 RID: 21049 RVA: 0x00123AFC File Offset: 0x00121CFC
+		// Token: 0x06007052 RID: 28754 RVA: 0x00191B1C File Offset: 0x0018FD1C
 		public virtual void StopDownStrike()
 		{
 			if (this._downstrikeCoroutine != null)
@@ -324,13 +324,13 @@ namespace MoreMountains.CorgiEngine
 			this.m_inputAngle = 0f;
 		}
 
-		// Token: 0x0600523A RID: 21050 RVA: 0x00123BCB File Offset: 0x00121DCB
+		// Token: 0x06007053 RID: 28755 RVA: 0x0003DF6D File Offset: 0x0003C16D
 		protected void Update()
 		{
 			this.UpdateBounceLockTimer();
 		}
 
-		// Token: 0x0600523B RID: 21051 RVA: 0x00123BD3 File Offset: 0x00121DD3
+		// Token: 0x06007054 RID: 28756 RVA: 0x0003DF75 File Offset: 0x0003C175
 		private void LateUpdate()
 		{
 			if (this.m_triggerBounce)
@@ -339,7 +339,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600523C RID: 21052 RVA: 0x00123BE4 File Offset: 0x00121DE4
+		// Token: 0x06007055 RID: 28757 RVA: 0x00191BEC File Offset: 0x0018FDEC
 		public void Bounce(Projectile_RL projectile, GameObject colliderObj)
 		{
 			this.m_downstrikeEventArgs.Initialise(projectile, colliderObj);
@@ -398,7 +398,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600523D RID: 21053 RVA: 0x00123E01 File Offset: 0x00122001
+		// Token: 0x06007056 RID: 28758 RVA: 0x0003DF86 File Offset: 0x0003C186
 		public void ForceTriggerBounce(float bounceHeight)
 		{
 			this.m_highestBounceAmount = bounceHeight;
@@ -406,7 +406,7 @@ namespace MoreMountains.CorgiEngine
 			DownstrikeProjectile_RL.ConsecutiveStrikes++;
 		}
 
-		// Token: 0x0600523E RID: 21054 RVA: 0x00123E20 File Offset: 0x00122020
+		// Token: 0x06007057 RID: 28759 RVA: 0x00191E0C File Offset: 0x0019000C
 		private void TriggerBounce(bool isDownstriking)
 		{
 			this.m_triggerBounce = false;
@@ -486,7 +486,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600523F RID: 21055 RVA: 0x001241F2 File Offset: 0x001223F2
+		// Token: 0x06007058 RID: 28760 RVA: 0x0003DFA2 File Offset: 0x0003C1A2
 		private IEnumerator DisableBodyHitboxCoroutine()
 		{
 			bool storedBodyHitboxState = this.m_playerController.HitboxController.GetCollider(HitboxType.Body);
@@ -503,7 +503,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x06005240 RID: 21056 RVA: 0x00124204 File Offset: 0x00122404
+		// Token: 0x06007059 RID: 28761 RVA: 0x001921E0 File Offset: 0x001903E0
 		protected void UpdateBounceLockTimer()
 		{
 			if (this.m_bounceLockTimer > 0f)
@@ -517,7 +517,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005241 RID: 21057 RVA: 0x0012426C File Offset: 0x0012246C
+		// Token: 0x0600705A RID: 28762 RVA: 0x00192248 File Offset: 0x00190448
 		protected override void InitializeAnimatorParameters()
 		{
 			this.RegisterAnimatorParameter("Kick_Down", AnimatorControllerParameterType.Bool);
@@ -528,7 +528,7 @@ namespace MoreMountains.CorgiEngine
 			this.RegisterAnimatorParameter("SpinKickExit_Anim_Speed", AnimatorControllerParameterType.Float);
 		}
 
-		// Token: 0x06005242 RID: 21058 RVA: 0x001242C4 File Offset: 0x001224C4
+		// Token: 0x0600705B RID: 28763 RVA: 0x001922A0 File Offset: 0x001904A0
 		public override void UpdateAnimator()
 		{
 			if (!this.SpinKickInstead)
@@ -539,7 +539,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005243 RID: 21059 RVA: 0x00124390 File Offset: 0x00122590
+		// Token: 0x0600705C RID: 28764 RVA: 0x0003DFB1 File Offset: 0x0003C1B1
 		protected void OnDestroy()
 		{
 			if (this.m_playerController && this.m_playerController.ControllerCorgi)
@@ -548,7 +548,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x06005244 RID: 21060 RVA: 0x001243CD File Offset: 0x001225CD
+		// Token: 0x0600705D RID: 28765 RVA: 0x0003DFEE File Offset: 0x0003C1EE
 		private void ResetConsecutiveStrikes(CorgiController corgiController)
 		{
 			if (this.m_firedProjectile != null)
@@ -557,175 +557,175 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x04004428 RID: 17448
+		// Token: 0x04005A77 RID: 23159
 		[Space(10f)]
 		[SerializeField]
 		protected string m_projectileName;
 
-		// Token: 0x04004429 RID: 17449
+		// Token: 0x04005A78 RID: 23160
 		[SerializeField]
 		protected string m_spinKickProjectileName;
 
-		// Token: 0x0400442A RID: 17450
+		// Token: 0x04005A79 RID: 23161
 		[SerializeField]
 		protected string m_resonantSpinKickProjectileName;
 
-		// Token: 0x0400442B RID: 17451
+		// Token: 0x04005A7A RID: 23162
 		[SerializeField]
 		private string m_resonantDownStrikeProjectileName;
 
-		// Token: 0x0400442C RID: 17452
+		// Token: 0x04005A7B RID: 23163
 		[SerializeField]
 		private string m_relicCaltropDropProjectileName;
 
-		// Token: 0x0400442D RID: 17453
+		// Token: 0x04005A7C RID: 23164
 		[SerializeField]
 		private string m_relicCaltropProjectileName;
 
-		// Token: 0x0400442E RID: 17454
+		// Token: 0x04005A7D RID: 23165
 		[Space(10f)]
 		public float AttackDuration = 3f;
 
-		// Token: 0x0400442F RID: 17455
+		// Token: 0x04005A7E RID: 23166
 		public float AttackSpeed = 40f;
 
-		// Token: 0x04004430 RID: 17456
+		// Token: 0x04005A7F RID: 23167
 		public float AttackCooldown;
 
-		// Token: 0x04004431 RID: 17457
+		// Token: 0x04005A80 RID: 23168
 		public float ForwardKickAngle = -70f;
 
-		// Token: 0x04004432 RID: 17458
+		// Token: 0x04005A81 RID: 23169
 		public Vector2Int ForwardKickMinMaxAngle = new Vector2Int(-120, -70);
 
-		// Token: 0x04004433 RID: 17459
+		// Token: 0x04005A82 RID: 23170
 		public Vector2Int DownKickMinMaxAngle = new Vector2Int(-100, -90);
 
-		// Token: 0x04004434 RID: 17460
+		// Token: 0x04005A83 RID: 23171
 		public float AttackBounceHeight = 2f;
 
-		// Token: 0x04004435 RID: 17461
+		// Token: 0x04005A84 RID: 23172
 		public float BounceInputLockDuration = 1f;
 
-		// Token: 0x04004436 RID: 17462
+		// Token: 0x04005A85 RID: 23173
 		public bool AttackButtonTriggersSpinKick;
 
-		// Token: 0x04004437 RID: 17463
+		// Token: 0x04005A86 RID: 23174
 		public bool SpinKickInstead;
 
-		// Token: 0x04004438 RID: 17464
+		// Token: 0x04005A87 RID: 23175
 		[SerializeField]
 		[ConditionalHide("SpinKickInstead", true)]
 		private float m_spinKickTellAnimMultiplier = 1f;
 
-		// Token: 0x04004439 RID: 17465
+		// Token: 0x04005A88 RID: 23176
 		[SerializeField]
 		[ConditionalHide("SpinKickInstead", true)]
 		private float m_spinKickAttackAnimMultiplier = 1f;
 
-		// Token: 0x0400443A RID: 17466
+		// Token: 0x04005A89 RID: 23177
 		[SerializeField]
 		[ConditionalHide("SpinKickInstead", true)]
 		private float m_spinKickExitAnimMultiplier = 1f;
 
-		// Token: 0x0400443B RID: 17467
+		// Token: 0x04005A8A RID: 23178
 		[Header("Bounce Mods")]
 		public bool ResetsDoubleJump;
 
-		// Token: 0x0400443C RID: 17468
+		// Token: 0x04005A8B RID: 23179
 		public bool ResetsDash;
 
-		// Token: 0x0400443D RID: 17469
+		// Token: 0x04005A8C RID: 23180
 		[SerializeField]
 		[FormerlySerializedAs("m_downStrikeBounceUnityEvent")]
 		private UnityEvent m_bounceEffectTriggeredUnityEvent;
 
-		// Token: 0x0400443E RID: 17470
+		// Token: 0x04005A8D RID: 23181
 		protected Vector2 m_computedDashForce;
 
-		// Token: 0x0400443F RID: 17471
+		// Token: 0x04005A8E RID: 23182
 		protected float _cooldownTimeStamp;
 
-		// Token: 0x04004440 RID: 17472
+		// Token: 0x04005A8F RID: 23183
 		protected float _startTime;
 
-		// Token: 0x04004441 RID: 17473
+		// Token: 0x04005A90 RID: 23184
 		protected Vector3 _initialPosition;
 
-		// Token: 0x04004442 RID: 17474
+		// Token: 0x04005A91 RID: 23185
 		protected float _dashDirection;
 
-		// Token: 0x04004443 RID: 17475
+		// Token: 0x04005A92 RID: 23186
 		protected float _distanceTraveled;
 
-		// Token: 0x04004444 RID: 17476
+		// Token: 0x04005A93 RID: 23187
 		protected float _slopeAngleSave;
 
-		// Token: 0x04004445 RID: 17477
+		// Token: 0x04005A94 RID: 23188
 		protected bool _downstrikeEndedNaturally = true;
 
-		// Token: 0x04004446 RID: 17478
+		// Token: 0x04005A95 RID: 23189
 		protected IEnumerator _downstrikeCoroutine;
 
-		// Token: 0x04004447 RID: 17479
+		// Token: 0x04005A96 RID: 23190
 		protected float m_totalDashTime;
 
-		// Token: 0x04004448 RID: 17480
+		// Token: 0x04005A97 RID: 23191
 		protected bool m_attackInProgress;
 
-		// Token: 0x04004449 RID: 17481
+		// Token: 0x04005A98 RID: 23192
 		protected IEnumerator m_attackCoroutine;
 
-		// Token: 0x0400444A RID: 17482
+		// Token: 0x04005A99 RID: 23193
 		protected DownstrikeProjectile_RL m_firedProjectile;
 
-		// Token: 0x0400444B RID: 17483
+		// Token: 0x04005A9A RID: 23194
 		protected float m_inputAngle;
 
-		// Token: 0x0400444C RID: 17484
+		// Token: 0x04005A9B RID: 23195
 		protected Vector2 m_forwardKickRightAngle;
 
-		// Token: 0x0400444D RID: 17485
+		// Token: 0x04005A9C RID: 23196
 		protected Vector2 m_forwardKickLeftAngle;
 
-		// Token: 0x0400444E RID: 17486
+		// Token: 0x04005A9D RID: 23197
 		protected Vector3 m_originalRotation;
 
-		// Token: 0x0400444F RID: 17487
+		// Token: 0x04005A9E RID: 23198
 		protected float m_bounceLockTimer;
 
-		// Token: 0x04004450 RID: 17488
+		// Token: 0x04005A9F RID: 23199
 		private int m_consecutiveStrikes;
 
-		// Token: 0x04004451 RID: 17489
+		// Token: 0x04005AA0 RID: 23200
 		private WaitUntil m_waitUntilSpinKickAttackYield;
 
-		// Token: 0x04004452 RID: 17490
+		// Token: 0x04005AA1 RID: 23201
 		private Action<CorgiController_RL> m_resetConsecutiveStrikes;
 
-		// Token: 0x04004453 RID: 17491
+		// Token: 0x04005AA2 RID: 23202
 		private Action<Projectile_RL, GameObject> m_bounce;
 
-		// Token: 0x04004454 RID: 17492
+		// Token: 0x04005AA3 RID: 23203
 		[NonSerialized]
 		private string[] m_projectileNameArray;
 
-		// Token: 0x04004456 RID: 17494
+		// Token: 0x04005AA5 RID: 23205
 		private Relay<Projectile_RL, GameObject> m_onSuccessfulDownstrikeRelay = new Relay<Projectile_RL, GameObject>();
 
-		// Token: 0x04004457 RID: 17495
+		// Token: 0x04005AA6 RID: 23206
 		private float m_highestBounceAmount = float.MinValue;
 
-		// Token: 0x04004458 RID: 17496
+		// Token: 0x04005AA7 RID: 23207
 		private bool m_triggerBounce;
 
-		// Token: 0x04004459 RID: 17497
+		// Token: 0x04005AA8 RID: 23208
 		private bool m_triggerBounceInvincibility;
 
-		// Token: 0x0400445A RID: 17498
+		// Token: 0x04005AA9 RID: 23209
 		private ForceManaRegenEventArgs m_regenEventArgs = new ForceManaRegenEventArgs(0f, false);
 
-		// Token: 0x0400445B RID: 17499
+		// Token: 0x04005AAA RID: 23210
 		private PlayerDownstrikeEventArgs m_downstrikeEventArgs = new PlayerDownstrikeEventArgs(null, null);
 	}
 }

@@ -1,60 +1,60 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006C7 RID: 1735
+// Token: 0x02000B72 RID: 2930
 public class ChallengeData : ScriptableObject
 {
-	// Token: 0x04002F6D RID: 12141
+	// Token: 0x040041BC RID: 16828
 	public ChallengeType ChallengeType;
 
-	// Token: 0x04002F6E RID: 12142
+	// Token: 0x040041BD RID: 16829
 	public ChallengeScoringType ScoringType;
 
-	// Token: 0x04002F6F RID: 12143
+	// Token: 0x040041BE RID: 16830
 	public ClassType ClassOverride;
 
-	// Token: 0x04002F70 RID: 12144
+	// Token: 0x040041BF RID: 16831
 	public float ParTime;
 
-	// Token: 0x04002F71 RID: 12145
+	// Token: 0x040041C0 RID: 16832
 	public int GoldReq;
 
-	// Token: 0x04002F72 RID: 12146
+	// Token: 0x040041C1 RID: 16833
 	public int SilverReq;
 
-	// Token: 0x04002F73 RID: 12147
+	// Token: 0x040041C2 RID: 16834
 	public int BronzeReq;
 
-	// Token: 0x04002F74 RID: 12148
+	// Token: 0x040041C3 RID: 16835
 	public int Reward;
 
-	// Token: 0x04002F75 RID: 12149
+	// Token: 0x040041C4 RID: 16836
 	public int BaseHandicap;
 
-	// Token: 0x04002F76 RID: 12150
+	// Token: 0x040041C5 RID: 16837
 	public float ScalingHandicap;
 
-	// Token: 0x04002F77 RID: 12151
+	// Token: 0x040041C6 RID: 16838
 	public int MaxHandicap;
 
-	// Token: 0x04002F78 RID: 12152
+	// Token: 0x040041C7 RID: 16839
 	public bool Disabled;
 
-	// Token: 0x04002F79 RID: 12153
+	// Token: 0x040041C8 RID: 16840
 	[Space]
 	[Header("Text Fields")]
 	[Space]
 	public string Title;
 
-	// Token: 0x04002F7A RID: 12154
+	// Token: 0x040041C9 RID: 16841
 	public string Description;
 
-	// Token: 0x04002F7B RID: 12155
+	// Token: 0x040041CA RID: 16842
 	public string Controls;
 
-	// Token: 0x04002F7C RID: 12156
+	// Token: 0x040041CB RID: 16843
 	public string BossRequirementHint;
 
-	// Token: 0x04002F7D RID: 12157
+	// Token: 0x040041CC RID: 16844
 	public string Hint;
 }

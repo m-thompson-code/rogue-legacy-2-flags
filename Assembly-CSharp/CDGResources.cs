@@ -6,11 +6,11 @@ using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
 
-// Token: 0x0200079E RID: 1950
+// Token: 0x02000C61 RID: 3169
 public static class CDGResources
 {
-	// Token: 0x1700165F RID: 5727
-	// (get) Token: 0x060041F8 RID: 16888 RVA: 0x000EB1DA File Offset: 0x000E93DA
+	// Token: 0x17001E5B RID: 7771
+	// (get) Token: 0x06005B75 RID: 23413 RVA: 0x0003225A File Offset: 0x0003045A
 	public static bool IsLoading
 	{
 		get
@@ -19,7 +19,7 @@ public static class CDGResources
 		}
 	}
 
-	// Token: 0x060041F9 RID: 16889 RVA: 0x000EB1E4 File Offset: 0x000E93E4
+	// Token: 0x06005B76 RID: 23414 RVA: 0x0015A150 File Offset: 0x00158350
 	public static void Init(bool loadSynchronous)
 	{
 		if (CDGResources.m_hasInitialized)
@@ -42,7 +42,7 @@ public static class CDGResources
 		new GameObject("Async Loader").AddComponent<CDGResources.CDGResources_AsyncLoader>().LoadBundlesAsync(allAssetBundles);
 	}
 
-	// Token: 0x060041FA RID: 16890 RVA: 0x000EB290 File Offset: 0x000E9490
+	// Token: 0x06005B77 RID: 23415 RVA: 0x0015A1FC File Offset: 0x001583FC
 	public static T Load<T>(string path, string bundleName = "", bool throwOnNull = true) where T : UnityEngine.Object
 	{
 		string text = (typeof(T) == typeof(GameObject)) ? ".prefab" : ".asset";
@@ -60,7 +60,7 @@ public static class CDGResources
 		return t;
 	}
 
-	// Token: 0x060041FB RID: 16891 RVA: 0x000EB334 File Offset: 0x000E9534
+	// Token: 0x06005B78 RID: 23416 RVA: 0x0015A2A0 File Offset: 0x001584A0
 	public static CDGAsyncLoadRequest<T> LoadAsync<T>(string path, string bundleName = "") where T : UnityEngine.Object
 	{
 		string text = (typeof(T) == typeof(GameObject)) ? ".prefab" : ".asset";
@@ -74,25 +74,25 @@ public static class CDGResources
 		return new CDGAsyncLoadRequest<T>(false, default(T), request);
 	}
 
-	// Token: 0x0400393D RID: 14653
+	// Token: 0x04004BF4 RID: 19444
 	private static bool m_hasInitialized;
 
-	// Token: 0x0400393E RID: 14654
+	// Token: 0x04004BF5 RID: 19445
 	private static bool m_isLoading;
 
-	// Token: 0x0400393F RID: 14655
+	// Token: 0x04004BF6 RID: 19446
 	private static Dictionary<string, AssetBundle> m_bundles;
 
-	// Token: 0x04003940 RID: 14656
+	// Token: 0x04004BF7 RID: 19447
 	public const string ROOT_DIRECTORY = "Assets/Content/";
 
-	// Token: 0x04003941 RID: 14657
+	// Token: 0x04004BF8 RID: 19448
 	private const string BUNDLE_SUBDIRECTORY_NAME = "AssetBundles";
 
-	// Token: 0x02000E37 RID: 3639
+	// Token: 0x02000C62 RID: 3170
 	public class CDGResources_AsyncLoader : MonoBehaviour
 	{
-		// Token: 0x06006BC9 RID: 27593 RVA: 0x00192B00 File Offset: 0x00190D00
+		// Token: 0x06005B79 RID: 23417 RVA: 0x00032261 File Offset: 0x00030461
 		public void LoadBundlesAsync(string[] bundleNames)
 		{
 			QualitySettings.asyncUploadTimeSlice = 8;
@@ -101,7 +101,7 @@ public static class CDGResources
 			base.StartCoroutine(this.LoadBundlesCoroutine(bundleNames));
 		}
 
-		// Token: 0x06006BCA RID: 27594 RVA: 0x00192B23 File Offset: 0x00190D23
+		// Token: 0x06005B7A RID: 23418 RVA: 0x00032284 File Offset: 0x00030484
 		private IEnumerator LoadBundlesCoroutine(string[] bundleNames)
 		{
 			Stopwatch sw = new Stopwatch();
@@ -144,7 +144,7 @@ public static class CDGResources
 			yield break;
 		}
 
-		// Token: 0x06006BCB RID: 27595 RVA: 0x00192B3C File Offset: 0x00190D3C
+		// Token: 0x06005B7B RID: 23419 RVA: 0x0015A334 File Offset: 0x00158534
 		private void OnBundleLoaded(AsyncOperation op)
 		{
 			AssetBundle assetBundle = (op as AssetBundleCreateRequest).assetBundle;
@@ -152,10 +152,10 @@ public static class CDGResources
 			this.m_numBundlesLoaded++;
 		}
 
-		// Token: 0x04005739 RID: 22329
+		// Token: 0x04004BF9 RID: 19449
 		private int m_numBundlesLoaded;
 
-		// Token: 0x0400573A RID: 22330
+		// Token: 0x04004BFA RID: 19450
 		private bool m_loadFromMemory;
 	}
 }

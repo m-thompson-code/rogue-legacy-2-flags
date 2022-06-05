@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020007CB RID: 1995
+// Token: 0x02000C91 RID: 3217
 public class EquipmentFoundStateChangeEventArgs : EventArgs
 {
-	// Token: 0x060042D2 RID: 17106 RVA: 0x000EC115 File Offset: 0x000EA315
+	// Token: 0x06005C5B RID: 23643 RVA: 0x00032B2B File Offset: 0x00030D2B
 	public EquipmentFoundStateChangeEventArgs(EquipmentCategoryType equipCat, EquipmentType equipType, FoundState newFoundState)
 	{
 		this.Initialize(equipCat, equipType, newFoundState);
 	}
 
-	// Token: 0x060042D3 RID: 17107 RVA: 0x000EC126 File Offset: 0x000EA326
+	// Token: 0x06005C5C RID: 23644 RVA: 0x00032B3C File Offset: 0x00030D3C
 	public void Initialize(EquipmentCategoryType equipCat, EquipmentType equipType, FoundState newFoundState)
 	{
 		this.EquipmentCategoryType = equipCat;
@@ -17,18 +17,18 @@ public class EquipmentFoundStateChangeEventArgs : EventArgs
 		this.NewEquipmentFoundState = newFoundState;
 	}
 
-	// Token: 0x170016A0 RID: 5792
-	// (get) Token: 0x060042D4 RID: 17108 RVA: 0x000EC13D File Offset: 0x000EA33D
-	// (set) Token: 0x060042D5 RID: 17109 RVA: 0x000EC145 File Offset: 0x000EA345
+	// Token: 0x17001E9E RID: 7838
+	// (get) Token: 0x06005C5D RID: 23645 RVA: 0x00032B53 File Offset: 0x00030D53
+	// (set) Token: 0x06005C5E RID: 23646 RVA: 0x00032B5B File Offset: 0x00030D5B
 	public EquipmentCategoryType EquipmentCategoryType { get; private set; }
 
-	// Token: 0x170016A1 RID: 5793
-	// (get) Token: 0x060042D6 RID: 17110 RVA: 0x000EC14E File Offset: 0x000EA34E
-	// (set) Token: 0x060042D7 RID: 17111 RVA: 0x000EC156 File Offset: 0x000EA356
+	// Token: 0x17001E9F RID: 7839
+	// (get) Token: 0x06005C5F RID: 23647 RVA: 0x00032B64 File Offset: 0x00030D64
+	// (set) Token: 0x06005C60 RID: 23648 RVA: 0x00032B6C File Offset: 0x00030D6C
 	public EquipmentType EquipmentType { get; private set; }
 
-	// Token: 0x170016A2 RID: 5794
-	// (get) Token: 0x060042D8 RID: 17112 RVA: 0x000EC15F File Offset: 0x000EA35F
-	// (set) Token: 0x060042D9 RID: 17113 RVA: 0x000EC167 File Offset: 0x000EA367
+	// Token: 0x17001EA0 RID: 7840
+	// (get) Token: 0x06005C61 RID: 23649 RVA: 0x00032B75 File Offset: 0x00030D75
+	// (set) Token: 0x06005C62 RID: 23650 RVA: 0x00032B7D File Offset: 0x00030D7D
 	public FoundState NewEquipmentFoundState { get; private set; }
 }

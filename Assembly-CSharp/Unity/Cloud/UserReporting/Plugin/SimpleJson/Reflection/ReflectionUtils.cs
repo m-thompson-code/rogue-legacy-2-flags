@@ -7,17 +7,17 @@ using System.Reflection;
 
 namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 {
-	// Token: 0x0200084C RID: 2124
+	// Token: 0x02000D3A RID: 3386
 	[GeneratedCode("reflection-utils", "1.0.0")]
 	internal class ReflectionUtils
 	{
-		// Token: 0x06004665 RID: 18021 RVA: 0x000FBD63 File Offset: 0x000F9F63
+		// Token: 0x060060C4 RID: 24772 RVA: 0x000355A6 File Offset: 0x000337A6
 		public static Type GetTypeInfo(Type type)
 		{
 			return type;
 		}
 
-		// Token: 0x06004666 RID: 18022 RVA: 0x000FBD66 File Offset: 0x000F9F66
+		// Token: 0x060060C5 RID: 24773 RVA: 0x000355A9 File Offset: 0x000337A9
 		public static Attribute GetAttribute(MemberInfo info, Type type)
 		{
 			if (info == null || type == null || !Attribute.IsDefined(info, type))
@@ -27,7 +27,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 			return Attribute.GetCustomAttribute(info, type);
 		}
 
-		// Token: 0x06004667 RID: 18023 RVA: 0x000FBD8C File Offset: 0x000F9F8C
+		// Token: 0x060060C6 RID: 24774 RVA: 0x00168960 File Offset: 0x00166B60
 		public static Type GetGenericListElementType(Type type)
 		{
 			foreach (Type type2 in ((IEnumerable<Type>)type.GetInterfaces()))
@@ -40,7 +40,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 			return ReflectionUtils.GetGenericTypeArguments(type)[0];
 		}
 
-		// Token: 0x06004668 RID: 18024 RVA: 0x000FBE08 File Offset: 0x000FA008
+		// Token: 0x060060C7 RID: 24775 RVA: 0x000355CF File Offset: 0x000337CF
 		public static Attribute GetAttribute(Type objectType, Type attributeType)
 		{
 			if (objectType == null || attributeType == null || !Attribute.IsDefined(objectType, attributeType))
@@ -50,19 +50,19 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 			return Attribute.GetCustomAttribute(objectType, attributeType);
 		}
 
-		// Token: 0x06004669 RID: 18025 RVA: 0x000FBE2E File Offset: 0x000FA02E
+		// Token: 0x060060C8 RID: 24776 RVA: 0x000355F5 File Offset: 0x000337F5
 		public static Type[] GetGenericTypeArguments(Type type)
 		{
 			return type.GetGenericArguments();
 		}
 
-		// Token: 0x0600466A RID: 18026 RVA: 0x000FBE36 File Offset: 0x000FA036
+		// Token: 0x060060C9 RID: 24777 RVA: 0x000355FD File Offset: 0x000337FD
 		public static bool IsTypeGeneric(Type type)
 		{
 			return ReflectionUtils.GetTypeInfo(type).IsGenericType;
 		}
 
-		// Token: 0x0600466B RID: 18027 RVA: 0x000FBE44 File Offset: 0x000FA044
+		// Token: 0x060060CA RID: 24778 RVA: 0x001689DC File Offset: 0x00166BDC
 		public static bool IsTypeGenericeCollectionInterface(Type type)
 		{
 			if (!ReflectionUtils.IsTypeGeneric(type))
@@ -73,25 +73,25 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 			return genericTypeDefinition == typeof(IList<>) || genericTypeDefinition == typeof(ICollection<>) || genericTypeDefinition == typeof(IEnumerable<>);
 		}
 
-		// Token: 0x0600466C RID: 18028 RVA: 0x000FBE98 File Offset: 0x000FA098
+		// Token: 0x060060CB RID: 24779 RVA: 0x0003560A File Offset: 0x0003380A
 		public static bool IsAssignableFrom(Type type1, Type type2)
 		{
 			return ReflectionUtils.GetTypeInfo(type1).IsAssignableFrom(ReflectionUtils.GetTypeInfo(type2));
 		}
 
-		// Token: 0x0600466D RID: 18029 RVA: 0x000FBEAB File Offset: 0x000FA0AB
+		// Token: 0x060060CC RID: 24780 RVA: 0x0003561D File Offset: 0x0003381D
 		public static bool IsTypeDictionary(Type type)
 		{
 			return typeof(IDictionary).IsAssignableFrom(type) || (ReflectionUtils.GetTypeInfo(type).IsGenericType && type.GetGenericTypeDefinition() == typeof(IDictionary<, >));
 		}
 
-		// Token: 0x0600466E RID: 18030 RVA: 0x000FBEE5 File Offset: 0x000FA0E5
+		// Token: 0x060060CD RID: 24781 RVA: 0x00035657 File Offset: 0x00033857
 		public static bool IsNullableType(Type type)
 		{
 			return ReflectionUtils.GetTypeInfo(type).IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>);
 		}
 
-		// Token: 0x0600466F RID: 18031 RVA: 0x000FBF0B File Offset: 0x000FA10B
+		// Token: 0x060060CE RID: 24782 RVA: 0x0003567D File Offset: 0x0003387D
 		public static object ToNullableType(object obj, Type nullableType)
 		{
 			if (obj != null)
@@ -101,19 +101,19 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 			return null;
 		}
 
-		// Token: 0x06004670 RID: 18032 RVA: 0x000FBF23 File Offset: 0x000FA123
+		// Token: 0x060060CF RID: 24783 RVA: 0x00035695 File Offset: 0x00033895
 		public static bool IsValueType(Type type)
 		{
 			return ReflectionUtils.GetTypeInfo(type).IsValueType;
 		}
 
-		// Token: 0x06004671 RID: 18033 RVA: 0x000FBF30 File Offset: 0x000FA130
+		// Token: 0x060060D0 RID: 24784 RVA: 0x000356A2 File Offset: 0x000338A2
 		public static IEnumerable<ConstructorInfo> GetConstructors(Type type)
 		{
 			return type.GetConstructors();
 		}
 
-		// Token: 0x06004672 RID: 18034 RVA: 0x000FBF38 File Offset: 0x000FA138
+		// Token: 0x060060D1 RID: 24785 RVA: 0x00168A30 File Offset: 0x00166C30
 		public static ConstructorInfo GetConstructorInfo(Type type, params Type[] argsType)
 		{
 			foreach (ConstructorInfo constructorInfo in ReflectionUtils.GetConstructors(type))
@@ -141,49 +141,49 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 			return null;
 		}
 
-		// Token: 0x06004673 RID: 18035 RVA: 0x000FBFD4 File Offset: 0x000FA1D4
+		// Token: 0x060060D2 RID: 24786 RVA: 0x000356AA File Offset: 0x000338AA
 		public static IEnumerable<PropertyInfo> GetProperties(Type type)
 		{
 			return type.GetProperties(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
 		}
 
-		// Token: 0x06004674 RID: 18036 RVA: 0x000FBFDE File Offset: 0x000FA1DE
+		// Token: 0x060060D3 RID: 24787 RVA: 0x000356B4 File Offset: 0x000338B4
 		public static IEnumerable<FieldInfo> GetFields(Type type)
 		{
 			return type.GetFields(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
 		}
 
-		// Token: 0x06004675 RID: 18037 RVA: 0x000FBFE8 File Offset: 0x000FA1E8
+		// Token: 0x060060D4 RID: 24788 RVA: 0x000356BE File Offset: 0x000338BE
 		public static MethodInfo GetGetterMethodInfo(PropertyInfo propertyInfo)
 		{
 			return propertyInfo.GetGetMethod(true);
 		}
 
-		// Token: 0x06004676 RID: 18038 RVA: 0x000FBFF1 File Offset: 0x000FA1F1
+		// Token: 0x060060D5 RID: 24789 RVA: 0x000356C7 File Offset: 0x000338C7
 		public static MethodInfo GetSetterMethodInfo(PropertyInfo propertyInfo)
 		{
 			return propertyInfo.GetSetMethod(true);
 		}
 
-		// Token: 0x06004677 RID: 18039 RVA: 0x000FBFFA File Offset: 0x000FA1FA
+		// Token: 0x060060D6 RID: 24790 RVA: 0x000356D0 File Offset: 0x000338D0
 		public static ReflectionUtils.ConstructorDelegate GetContructor(ConstructorInfo constructorInfo)
 		{
 			return ReflectionUtils.GetConstructorByReflection(constructorInfo);
 		}
 
-		// Token: 0x06004678 RID: 18040 RVA: 0x000FC002 File Offset: 0x000FA202
+		// Token: 0x060060D7 RID: 24791 RVA: 0x000356D8 File Offset: 0x000338D8
 		public static ReflectionUtils.ConstructorDelegate GetContructor(Type type, params Type[] argsType)
 		{
 			return ReflectionUtils.GetConstructorByReflection(type, argsType);
 		}
 
-		// Token: 0x06004679 RID: 18041 RVA: 0x000FC00B File Offset: 0x000FA20B
+		// Token: 0x060060D8 RID: 24792 RVA: 0x000356E1 File Offset: 0x000338E1
 		public static ReflectionUtils.ConstructorDelegate GetConstructorByReflection(ConstructorInfo constructorInfo)
 		{
 			return (object[] args) => constructorInfo.Invoke(args);
 		}
 
-		// Token: 0x0600467A RID: 18042 RVA: 0x000FC024 File Offset: 0x000FA224
+		// Token: 0x060060D9 RID: 24793 RVA: 0x00168ACC File Offset: 0x00166CCC
 		public static ReflectionUtils.ConstructorDelegate GetConstructorByReflection(Type type, params Type[] argsType)
 		{
 			ConstructorInfo constructorInfo = ReflectionUtils.GetConstructorInfo(type, argsType);
@@ -194,44 +194,44 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 			return null;
 		}
 
-		// Token: 0x0600467B RID: 18043 RVA: 0x000FC04A File Offset: 0x000FA24A
+		// Token: 0x060060DA RID: 24794 RVA: 0x000356FA File Offset: 0x000338FA
 		public static ReflectionUtils.GetDelegate GetGetMethod(PropertyInfo propertyInfo)
 		{
 			return ReflectionUtils.GetGetMethodByReflection(propertyInfo);
 		}
 
-		// Token: 0x0600467C RID: 18044 RVA: 0x000FC052 File Offset: 0x000FA252
+		// Token: 0x060060DB RID: 24795 RVA: 0x00035702 File Offset: 0x00033902
 		public static ReflectionUtils.GetDelegate GetGetMethod(FieldInfo fieldInfo)
 		{
 			return ReflectionUtils.GetGetMethodByReflection(fieldInfo);
 		}
 
-		// Token: 0x0600467D RID: 18045 RVA: 0x000FC05A File Offset: 0x000FA25A
+		// Token: 0x060060DC RID: 24796 RVA: 0x0003570A File Offset: 0x0003390A
 		public static ReflectionUtils.GetDelegate GetGetMethodByReflection(PropertyInfo propertyInfo)
 		{
 			MethodInfo methodInfo = ReflectionUtils.GetGetterMethodInfo(propertyInfo);
 			return (object source) => methodInfo.Invoke(source, ReflectionUtils.EmptyObjects);
 		}
 
-		// Token: 0x0600467E RID: 18046 RVA: 0x000FC078 File Offset: 0x000FA278
+		// Token: 0x060060DD RID: 24797 RVA: 0x00035728 File Offset: 0x00033928
 		public static ReflectionUtils.GetDelegate GetGetMethodByReflection(FieldInfo fieldInfo)
 		{
 			return (object source) => fieldInfo.GetValue(source);
 		}
 
-		// Token: 0x0600467F RID: 18047 RVA: 0x000FC091 File Offset: 0x000FA291
+		// Token: 0x060060DE RID: 24798 RVA: 0x00035741 File Offset: 0x00033941
 		public static ReflectionUtils.SetDelegate GetSetMethod(PropertyInfo propertyInfo)
 		{
 			return ReflectionUtils.GetSetMethodByReflection(propertyInfo);
 		}
 
-		// Token: 0x06004680 RID: 18048 RVA: 0x000FC099 File Offset: 0x000FA299
+		// Token: 0x060060DF RID: 24799 RVA: 0x00035749 File Offset: 0x00033949
 		public static ReflectionUtils.SetDelegate GetSetMethod(FieldInfo fieldInfo)
 		{
 			return ReflectionUtils.GetSetMethodByReflection(fieldInfo);
 		}
 
-		// Token: 0x06004681 RID: 18049 RVA: 0x000FC0A1 File Offset: 0x000FA2A1
+		// Token: 0x060060E0 RID: 24800 RVA: 0x00035751 File Offset: 0x00033951
 		public static ReflectionUtils.SetDelegate GetSetMethodByReflection(PropertyInfo propertyInfo)
 		{
 			MethodInfo methodInfo = ReflectionUtils.GetSetterMethodInfo(propertyInfo);
@@ -244,7 +244,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 			};
 		}
 
-		// Token: 0x06004682 RID: 18050 RVA: 0x000FC0BF File Offset: 0x000FA2BF
+		// Token: 0x060060E1 RID: 24801 RVA: 0x0003576F File Offset: 0x0003396F
 		public static ReflectionUtils.SetDelegate GetSetMethodByReflection(FieldInfo fieldInfo)
 		{
 			return delegate(object source, object value)
@@ -253,36 +253,36 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 			};
 		}
 
-		// Token: 0x04003B91 RID: 15249
+		// Token: 0x04004EF3 RID: 20211
 		private static readonly object[] EmptyObjects = new object[0];
 
-		// Token: 0x02000E5F RID: 3679
-		// (Invoke) Token: 0x06006CA1 RID: 27809
+		// Token: 0x02000D3B RID: 3387
+		// (Invoke) Token: 0x060060E5 RID: 24805
 		public delegate object GetDelegate(object source);
 
-		// Token: 0x02000E60 RID: 3680
-		// (Invoke) Token: 0x06006CA5 RID: 27813
+		// Token: 0x02000D3C RID: 3388
+		// (Invoke) Token: 0x060060E9 RID: 24809
 		public delegate void SetDelegate(object source, object value);
 
-		// Token: 0x02000E61 RID: 3681
-		// (Invoke) Token: 0x06006CA9 RID: 27817
+		// Token: 0x02000D3D RID: 3389
+		// (Invoke) Token: 0x060060ED RID: 24813
 		public delegate object ConstructorDelegate(params object[] args);
 
-		// Token: 0x02000E62 RID: 3682
-		// (Invoke) Token: 0x06006CAD RID: 27821
+		// Token: 0x02000D3E RID: 3390
+		// (Invoke) Token: 0x060060F1 RID: 24817
 		public delegate TValue ThreadSafeDictionaryValueFactory<TKey, TValue>(TKey key);
 
-		// Token: 0x02000E63 RID: 3683
+		// Token: 0x02000D3F RID: 3391
 		public sealed class ThreadSafeDictionary<TKey, TValue> : IDictionary<TKey, TValue>, ICollection<KeyValuePair<TKey, TValue>>, IEnumerable<KeyValuePair<TKey, TValue>>, IEnumerable
 		{
-			// Token: 0x06006CB0 RID: 27824 RVA: 0x001941A6 File Offset: 0x001923A6
+			// Token: 0x060060F4 RID: 24820 RVA: 0x00035795 File Offset: 0x00033995
 			public ThreadSafeDictionary(ReflectionUtils.ThreadSafeDictionaryValueFactory<TKey, TValue> valueFactory)
 			{
 				this._valueFactory = valueFactory;
 			}
 
-			// Token: 0x1700236A RID: 9066
-			// (get) Token: 0x06006CB1 RID: 27825 RVA: 0x001941C0 File Offset: 0x001923C0
+			// Token: 0x17001FAB RID: 8107
+			// (get) Token: 0x060060F5 RID: 24821 RVA: 0x000357AF File Offset: 0x000339AF
 			public int Count
 			{
 				get
@@ -291,8 +291,8 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 				}
 			}
 
-			// Token: 0x1700236B RID: 9067
-			// (get) Token: 0x06006CB2 RID: 27826 RVA: 0x001941CD File Offset: 0x001923CD
+			// Token: 0x17001FAC RID: 8108
+			// (get) Token: 0x060060F6 RID: 24822 RVA: 0x00027E04 File Offset: 0x00026004
 			public bool IsReadOnly
 			{
 				get
@@ -301,7 +301,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 				}
 			}
 
-			// Token: 0x1700236C RID: 9068
+			// Token: 0x17001FAD RID: 8109
 			public TValue this[TKey key]
 			{
 				get
@@ -314,8 +314,8 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 				}
 			}
 
-			// Token: 0x1700236D RID: 9069
-			// (get) Token: 0x06006CB5 RID: 27829 RVA: 0x001941E4 File Offset: 0x001923E4
+			// Token: 0x17001FAE RID: 8110
+			// (get) Token: 0x060060F9 RID: 24825 RVA: 0x000357C5 File Offset: 0x000339C5
 			public ICollection<TKey> Keys
 			{
 				get
@@ -324,8 +324,8 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 				}
 			}
 
-			// Token: 0x1700236E RID: 9070
-			// (get) Token: 0x06006CB6 RID: 27830 RVA: 0x001941F1 File Offset: 0x001923F1
+			// Token: 0x17001FAF RID: 8111
+			// (get) Token: 0x060060FA RID: 24826 RVA: 0x000357D2 File Offset: 0x000339D2
 			public ICollection<TValue> Values
 			{
 				get
@@ -334,19 +334,19 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 				}
 			}
 
-			// Token: 0x06006CB7 RID: 27831 RVA: 0x001941FE File Offset: 0x001923FE
+			// Token: 0x060060FB RID: 24827 RVA: 0x00027E04 File Offset: 0x00026004
 			public void Add(TKey key, TValue value)
 			{
 				throw new NotImplementedException();
 			}
 
-			// Token: 0x06006CB8 RID: 27832 RVA: 0x00194205 File Offset: 0x00192405
+			// Token: 0x060060FC RID: 24828 RVA: 0x00027E04 File Offset: 0x00026004
 			public void Add(KeyValuePair<TKey, TValue> item)
 			{
 				throw new NotImplementedException();
 			}
 
-			// Token: 0x06006CB9 RID: 27833 RVA: 0x0019420C File Offset: 0x0019240C
+			// Token: 0x060060FD RID: 24829 RVA: 0x00168AF4 File Offset: 0x00166CF4
 			private TValue AddValue(TKey key)
 			{
 				TValue tvalue = this._valueFactory(key);
@@ -373,31 +373,31 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 				return tvalue;
 			}
 
-			// Token: 0x06006CBA RID: 27834 RVA: 0x001942AC File Offset: 0x001924AC
+			// Token: 0x060060FE RID: 24830 RVA: 0x00027E04 File Offset: 0x00026004
 			public void Clear()
 			{
 				throw new NotImplementedException();
 			}
 
-			// Token: 0x06006CBB RID: 27835 RVA: 0x001942B3 File Offset: 0x001924B3
+			// Token: 0x060060FF RID: 24831 RVA: 0x00027E04 File Offset: 0x00026004
 			public bool Contains(KeyValuePair<TKey, TValue> item)
 			{
 				throw new NotImplementedException();
 			}
 
-			// Token: 0x06006CBC RID: 27836 RVA: 0x001942BA File Offset: 0x001924BA
+			// Token: 0x06006100 RID: 24832 RVA: 0x000357DF File Offset: 0x000339DF
 			public bool ContainsKey(TKey key)
 			{
 				return this._dictionary.ContainsKey(key);
 			}
 
-			// Token: 0x06006CBD RID: 27837 RVA: 0x001942C8 File Offset: 0x001924C8
+			// Token: 0x06006101 RID: 24833 RVA: 0x00027E04 File Offset: 0x00026004
 			public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
 			{
 				throw new NotImplementedException();
 			}
 
-			// Token: 0x06006CBE RID: 27838 RVA: 0x001942D0 File Offset: 0x001924D0
+			// Token: 0x06006102 RID: 24834 RVA: 0x00168B94 File Offset: 0x00166D94
 			private TValue Get(TKey key)
 			{
 				if (this._dictionary == null)
@@ -412,44 +412,44 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection
 				return result;
 			}
 
-			// Token: 0x06006CBF RID: 27839 RVA: 0x00194306 File Offset: 0x00192506
+			// Token: 0x06006103 RID: 24835 RVA: 0x000357ED File Offset: 0x000339ED
 			public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
 			{
 				return this._dictionary.GetEnumerator();
 			}
 
-			// Token: 0x06006CC0 RID: 27840 RVA: 0x00194318 File Offset: 0x00192518
+			// Token: 0x06006104 RID: 24836 RVA: 0x000357ED File Offset: 0x000339ED
 			IEnumerator IEnumerable.GetEnumerator()
 			{
 				return this._dictionary.GetEnumerator();
 			}
 
-			// Token: 0x06006CC1 RID: 27841 RVA: 0x0019432A File Offset: 0x0019252A
+			// Token: 0x06006105 RID: 24837 RVA: 0x00027E04 File Offset: 0x00026004
 			public bool Remove(TKey key)
 			{
 				throw new NotImplementedException();
 			}
 
-			// Token: 0x06006CC2 RID: 27842 RVA: 0x00194331 File Offset: 0x00192531
+			// Token: 0x06006106 RID: 24838 RVA: 0x00027E04 File Offset: 0x00026004
 			public bool Remove(KeyValuePair<TKey, TValue> item)
 			{
 				throw new NotImplementedException();
 			}
 
-			// Token: 0x06006CC3 RID: 27843 RVA: 0x00194338 File Offset: 0x00192538
+			// Token: 0x06006107 RID: 24839 RVA: 0x000357FF File Offset: 0x000339FF
 			public bool TryGetValue(TKey key, out TValue value)
 			{
 				value = this[key];
 				return true;
 			}
 
-			// Token: 0x040057D6 RID: 22486
+			// Token: 0x04004EF4 RID: 20212
 			private Dictionary<TKey, TValue> _dictionary;
 
-			// Token: 0x040057D7 RID: 22487
+			// Token: 0x04004EF5 RID: 20213
 			private readonly object _lock = new object();
 
-			// Token: 0x040057D8 RID: 22488
+			// Token: 0x04004EF6 RID: 20214
 			private readonly ReflectionUtils.ThreadSafeDictionaryValueFactory<TKey, TValue> _valueFactory;
 		}
 	}

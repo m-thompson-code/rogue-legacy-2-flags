@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002FB RID: 763
+// Token: 0x02000516 RID: 1302
 public class EnemyArmorShredStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D35 RID: 3381
-	// (get) Token: 0x06001E6E RID: 7790 RVA: 0x00062E0F File Offset: 0x0006100F
+	// Token: 0x17001106 RID: 4358
+	// (get) Token: 0x06002A13 RID: 10771 RVA: 0x00017970 File Offset: 0x00015B70
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyArmorShredStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D36 RID: 3382
-	// (get) Token: 0x06001E6F RID: 7791 RVA: 0x00062E16 File Offset: 0x00061016
+	// Token: 0x17001107 RID: 4359
+	// (get) Token: 0x06002A14 RID: 10772 RVA: 0x00017838 File Offset: 0x00015A38
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class EnemyArmorShredStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E70 RID: 7792 RVA: 0x00062E1D File Offset: 0x0006101D
+	// Token: 0x06002A15 RID: 10773 RVA: 0x00017977 File Offset: 0x00015B77
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.ArmorShred, base.Duration);

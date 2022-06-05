@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 namespace Rewired.Demos.GamepadTemplateUI
 {
-	// Token: 0x0200094E RID: 2382
+	// Token: 0x02000EF4 RID: 3828
 	[RequireComponent(typeof(Image))]
 	public class ControllerUIElement : MonoBehaviour
 	{
-		// Token: 0x17001AD2 RID: 6866
-		// (get) Token: 0x060050B9 RID: 20665 RVA: 0x0011D71E File Offset: 0x0011B91E
+		// Token: 0x17002414 RID: 9236
+		// (get) Token: 0x06006EA6 RID: 28326 RVA: 0x0003CED9 File Offset: 0x0003B0D9
 		private bool hasEffects
 		{
 			get
@@ -18,7 +18,7 @@ namespace Rewired.Demos.GamepadTemplateUI
 			}
 		}
 
-		// Token: 0x060050BA RID: 20666 RVA: 0x0011D73C File Offset: 0x0011B93C
+		// Token: 0x06006EA7 RID: 28327 RVA: 0x0003CEF7 File Offset: 0x0003B0F7
 		private void Awake()
 		{
 			this._image = base.GetComponent<Image>();
@@ -27,7 +27,7 @@ namespace Rewired.Demos.GamepadTemplateUI
 			this.ClearLabels();
 		}
 
-		// Token: 0x060050BB RID: 20667 RVA: 0x0011D770 File Offset: 0x0011B970
+		// Token: 0x06006EA8 RID: 28328 RVA: 0x0018BCDC File Offset: 0x00189EDC
 		public void Activate(float amount)
 		{
 			amount = Mathf.Clamp(amount, -1f, 1f);
@@ -65,7 +65,7 @@ namespace Rewired.Demos.GamepadTemplateUI
 			}
 		}
 
-		// Token: 0x060050BC RID: 20668 RVA: 0x0011D864 File Offset: 0x0011BA64
+		// Token: 0x06006EA9 RID: 28329 RVA: 0x0018BDD0 File Offset: 0x00189FD0
 		public void Deactivate()
 		{
 			if (!this._isActive)
@@ -96,7 +96,7 @@ namespace Rewired.Demos.GamepadTemplateUI
 			}
 		}
 
-		// Token: 0x060050BD RID: 20669 RVA: 0x0011D90C File Offset: 0x0011BB0C
+		// Token: 0x06006EAA RID: 28330 RVA: 0x0018BE78 File Offset: 0x0018A078
 		public void SetLabel(string text, AxisRange labelType)
 		{
 			Text text2;
@@ -131,7 +131,7 @@ namespace Rewired.Demos.GamepadTemplateUI
 			}
 		}
 
-		// Token: 0x060050BE RID: 20670 RVA: 0x0011D998 File Offset: 0x0011BB98
+		// Token: 0x06006EAB RID: 28331 RVA: 0x0018BF04 File Offset: 0x0018A104
 		public void ClearLabels()
 		{
 			if (this._label != null)
@@ -158,53 +158,53 @@ namespace Rewired.Demos.GamepadTemplateUI
 			}
 		}
 
-		// Token: 0x060050BF RID: 20671 RVA: 0x0011DA38 File Offset: 0x0011BC38
+		// Token: 0x06006EAC RID: 28332 RVA: 0x0003CF28 File Offset: 0x0003B128
 		private void RedrawImage()
 		{
 			this._image.color = this._color;
 		}
 
-		// Token: 0x04004303 RID: 17155
+		// Token: 0x04005904 RID: 22788
 		[SerializeField]
 		private Color _highlightColor = Color.white;
 
-		// Token: 0x04004304 RID: 17156
+		// Token: 0x04005905 RID: 22789
 		[SerializeField]
 		private ControllerUIEffect _positiveUIEffect;
 
-		// Token: 0x04004305 RID: 17157
+		// Token: 0x04005906 RID: 22790
 		[SerializeField]
 		private ControllerUIEffect _negativeUIEffect;
 
-		// Token: 0x04004306 RID: 17158
+		// Token: 0x04005907 RID: 22791
 		[SerializeField]
 		private Text _label;
 
-		// Token: 0x04004307 RID: 17159
+		// Token: 0x04005908 RID: 22792
 		[SerializeField]
 		private Text _positiveLabel;
 
-		// Token: 0x04004308 RID: 17160
+		// Token: 0x04005909 RID: 22793
 		[SerializeField]
 		private Text _negativeLabel;
 
-		// Token: 0x04004309 RID: 17161
+		// Token: 0x0400590A RID: 22794
 		[SerializeField]
 		private ControllerUIElement[] _childElements = new ControllerUIElement[0];
 
-		// Token: 0x0400430A RID: 17162
+		// Token: 0x0400590B RID: 22795
 		private Image _image;
 
-		// Token: 0x0400430B RID: 17163
+		// Token: 0x0400590C RID: 22796
 		private Color _color;
 
-		// Token: 0x0400430C RID: 17164
+		// Token: 0x0400590D RID: 22797
 		private Color _origColor;
 
-		// Token: 0x0400430D RID: 17165
+		// Token: 0x0400590E RID: 22798
 		private bool _isActive;
 
-		// Token: 0x0400430E RID: 17166
+		// Token: 0x0400590F RID: 22799
 		private float _highlightAmount;
 	}
 }

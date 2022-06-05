@@ -1,62 +1,62 @@
 ﻿using System;
 
-// Token: 0x02000775 RID: 1909
+// Token: 0x02000C36 RID: 3126
 public enum SoulShopType
 {
-	// Token: 0x04003758 RID: 14168
+	// Token: 0x04004A08 RID: 18952
 	None,
-	// Token: 0x04003759 RID: 14169
+	// Token: 0x04004A09 RID: 18953
 	BaseStats01MaxUp = 10,
-	// Token: 0x0400375A RID: 14170
+	// Token: 0x04004A0A RID: 18954
 	BaseStats02MaxUp = 20,
-	// Token: 0x0400375B RID: 14171
+	// Token: 0x04004A0B RID: 18955
 	BaseStats03MaxUp = 25,
-	// Token: 0x0400375C RID: 14172
+	// Token: 0x04004A0C RID: 18956
 	BaseStats04MaxUp,
-	// Token: 0x0400375D RID: 14173
+	// Token: 0x04004A0D RID: 18957
 	SpecialChosenNGScale = 30,
-	// Token: 0x0400375E RID: 14174
+	// Token: 0x04004A0E RID: 18958
 	MinimumResolveBlock = 40,
-	// Token: 0x0400375F RID: 14175
+	// Token: 0x04004A0F RID: 18959
 	MaxMasteryFlat = 50,
-	// Token: 0x04003760 RID: 14176
+	// Token: 0x04004A10 RID: 18960
 	MaxCharonDonationFlat = 60,
-	// Token: 0x04003761 RID: 14177
+	// Token: 0x04004A11 RID: 18961
 	ReduceBurdenFlat = 70,
-	// Token: 0x04003762 RID: 14178
+	// Token: 0x04004A12 RID: 18962
 	BurdenOverload = 80,
-	// Token: 0x04003763 RID: 14179
+	// Token: 0x04004A13 RID: 18963
 	MaxEquipmentDrops = 90,
-	// Token: 0x04003764 RID: 14180
+	// Token: 0x04004A14 RID: 18964
 	MaxRuneDrops = 100,
-	// Token: 0x04003765 RID: 14181
+	// Token: 0x04004A15 RID: 18965
 	ChooseYourClass = 110,
-	// Token: 0x04003766 RID: 14182
+	// Token: 0x04004A16 RID: 18966
 	ChooseYourSpell = 120,
-	// Token: 0x04003767 RID: 14183
+	// Token: 0x04004A17 RID: 18967
 	ArcherVariant = 1000,
-	// Token: 0x04003768 RID: 14184
+	// Token: 0x04004A18 RID: 18968
 	AxeVariant = 1010,
-	// Token: 0x04003769 RID: 14185
+	// Token: 0x04004A19 RID: 18969
 	BoxerVariant = 1020,
-	// Token: 0x0400376A RID: 14186
+	// Token: 0x04004A1A RID: 18970
 	LadleVariant = 1030,
-	// Token: 0x0400376B RID: 14187
+	// Token: 0x04004A1B RID: 18971
 	SwordVariant = 1040,
-	// Token: 0x0400376C RID: 14188
+	// Token: 0x04004A1C RID: 18972
 	LuteVariant = 1050,
-	// Token: 0x0400376D RID: 14189
+	// Token: 0x04004A1D RID: 18973
 	WandVariant = 1060,
-	// Token: 0x0400376E RID: 14190
+	// Token: 0x04004A1E RID: 18974
 	ForceRandomizeKit = 1500,
-	// Token: 0x0400376F RID: 14191
+	// Token: 0x04004A1F RID: 18975
 	UnlockJukebox = 1510,
-	// Token: 0x04003770 RID: 14192
+	// Token: 0x04004A20 RID: 18976
 	OreAetherSwap = 2000,
-	// Token: 0x04003771 RID: 14193
+	// Token: 0x04004A21 RID: 18977
 	AetherOreSwap = 2010,
-	// Token: 0x04003772 RID: 14194
+	// Token: 0x04004A22 RID: 18978
 	SoulSwap = 2020,
-	// Token: 0x04003773 RID: 14195
+	// Token: 0x04004A23 RID: 18979
 	UnlockOverload = 5000
 }

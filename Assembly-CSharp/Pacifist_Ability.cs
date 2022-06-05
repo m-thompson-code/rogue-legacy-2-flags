@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x020001A3 RID: 419
+// Token: 0x02000307 RID: 775
 public class Pacifist_Ability : Sword_Ability, IAttack, IAbility
 {
 }

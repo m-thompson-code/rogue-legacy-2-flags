@@ -2,22 +2,22 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Token: 0x02000273 RID: 627
+// Token: 0x0200043C RID: 1084
 public class OptionItemButton : MonoBehaviour, IPointerUpHandler, IEventSystemHandler, IPointerDownHandler
 {
-	// Token: 0x06001900 RID: 6400 RVA: 0x0004E794 File Offset: 0x0004C994
+	// Token: 0x060022EF RID: 8943 RVA: 0x00012AFE File Offset: 0x00010CFE
 	private void Awake()
 	{
 		this.m_baseOptionItem = base.GetComponentInParent<BaseOptionItem>();
 	}
 
-	// Token: 0x06001901 RID: 6401 RVA: 0x0004E7A2 File Offset: 0x0004C9A2
+	// Token: 0x060022F0 RID: 8944 RVA: 0x00012B0C File Offset: 0x00010D0C
 	public void OnPointerUp(PointerEventData eventData)
 	{
 		this.m_pointerDown = false;
 	}
 
-	// Token: 0x06001902 RID: 6402 RVA: 0x0004E7AB File Offset: 0x0004C9AB
+	// Token: 0x060022F1 RID: 8945 RVA: 0x00012B15 File Offset: 0x00010D15
 	public void OnPointerDown(PointerEventData eventData)
 	{
 		if (!this.m_baseOptionItem.Interactable)
@@ -33,7 +33,7 @@ public class OptionItemButton : MonoBehaviour, IPointerUpHandler, IEventSystemHa
 		this.HandleClick();
 	}
 
-	// Token: 0x06001903 RID: 6403 RVA: 0x0004E7E0 File Offset: 0x0004C9E0
+	// Token: 0x060022F2 RID: 8946 RVA: 0x000AC204 File Offset: 0x000AA404
 	private void Update()
 	{
 		if (!this.m_pointerDown)
@@ -66,7 +66,7 @@ public class OptionItemButton : MonoBehaviour, IPointerUpHandler, IEventSystemHa
 		}
 	}
 
-	// Token: 0x06001904 RID: 6404 RVA: 0x0004E862 File Offset: 0x0004CA62
+	// Token: 0x060022F3 RID: 8947 RVA: 0x00012B47 File Offset: 0x00010D47
 	private void HandleClick()
 	{
 		if (this.m_buttonType == OptionItemButton.OptionItemButtonType.Increment)
@@ -77,28 +77,28 @@ public class OptionItemButton : MonoBehaviour, IPointerUpHandler, IEventSystemHa
 		this.m_baseOptionItem.InvokeDecrement();
 	}
 
-	// Token: 0x04001826 RID: 6182
+	// Token: 0x04001F6B RID: 8043
 	[SerializeField]
 	private OptionItemButton.OptionItemButtonType m_buttonType;
 
-	// Token: 0x04001827 RID: 6183
+	// Token: 0x04001F6C RID: 8044
 	private BaseOptionItem m_baseOptionItem;
 
-	// Token: 0x04001828 RID: 6184
+	// Token: 0x04001F6D RID: 8045
 	private float m_timeSinceClick;
 
-	// Token: 0x04001829 RID: 6185
+	// Token: 0x04001F6E RID: 8046
 	private bool m_pointerDown;
 
-	// Token: 0x0400182A RID: 6186
+	// Token: 0x04001F6F RID: 8047
 	private bool m_previousPointerDown;
 
-	// Token: 0x02000B42 RID: 2882
+	// Token: 0x0200043D RID: 1085
 	private enum OptionItemButtonType
 	{
-		// Token: 0x04004BDB RID: 19419
+		// Token: 0x04001F71 RID: 8049
 		Increment,
-		// Token: 0x04004BDC RID: 19420
+		// Token: 0x04001F72 RID: 8050
 		Decrement
 	}
 }

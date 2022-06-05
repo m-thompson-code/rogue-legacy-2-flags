@@ -5,10 +5,10 @@ using System.Linq;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000653 RID: 1619
+// Token: 0x02000A9B RID: 2715
 public class CheckConnectionRoomsBuildRule
 {
-	// Token: 0x06003ACE RID: 15054 RVA: 0x000C9561 File Offset: 0x000C7761
+	// Token: 0x06005219 RID: 21017 RVA: 0x0002CC16 File Offset: 0x0002AE16
 	public virtual IEnumerator UpdateConnectionPoint(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		RoomSide connectDirection = biomeController.BiomeData.ConnectDirection;
@@ -39,7 +39,7 @@ public class CheckConnectionRoomsBuildRule
 		yield break;
 	}
 
-	// Token: 0x06003ACF RID: 15055 RVA: 0x000C9580 File Offset: 0x000C7780
+	// Token: 0x0600521A RID: 21018 RVA: 0x00137BBC File Offset: 0x00135DBC
 	private IEnumerable<GridPoint> GetGridPointsWithAvailableDoorsOnSide(BiomeController biomeController, RoomSide side)
 	{
 		GridPoint[] array = (from gridPoint in biomeController.GridPointManager.GridPoints
@@ -57,7 +57,7 @@ public class CheckConnectionRoomsBuildRule
 		return list;
 	}
 
-	// Token: 0x06003AD0 RID: 15056 RVA: 0x000C9604 File Offset: 0x000C7804
+	// Token: 0x0600521B RID: 21019 RVA: 0x00137C40 File Offset: 0x00135E40
 	private void ReplaceRoomAndSetConnectionPoint(BiomeCreator biomeCreator, BiomeController biomeController, RoomSide side, BiomeController connectsToBiomeController, RoomMetaData transitionRoomMetaData, IEnumerable<GridPoint> gridPointsOnSideOfTransitionRoom, IEnumerable<GridPoint> gridPointsWithSpace, IEnumerable<GridPoint> gridPointsWhereTransitionRoomFits)
 	{
 		List<GridPoint> first = biomeCreator.GetGridPointsOfRoomType(connectsToBiomeController, RoomType.Standard).ToList<GridPoint>();
@@ -104,7 +104,7 @@ public class CheckConnectionRoomsBuildRule
 		}
 	}
 
-	// Token: 0x06003AD1 RID: 15057 RVA: 0x000C9754 File Offset: 0x000C7954
+	// Token: 0x0600521C RID: 21020 RVA: 0x00137D90 File Offset: 0x00135F90
 	private static void SetConnectionPoint(RoomSide side, BiomeController connectsToBiomeController, RoomMetaData transitionRoomMetaData, GridPoint centerMost)
 	{
 		int num = transitionRoomMetaData.Size.x;
@@ -123,7 +123,7 @@ public class CheckConnectionRoomsBuildRule
 		connectsToBiomeController.GridPointManager.SetConnectionPoint(side, centerMost, list);
 	}
 
-	// Token: 0x06003AD2 RID: 15058 RVA: 0x000C97C4 File Offset: 0x000C79C4
+	// Token: 0x0600521D RID: 21021 RVA: 0x00137E00 File Offset: 0x00136000
 	protected static GridPoint GetCentermostConnectionPoint(BiomeController biomeController, RoomSide side, IEnumerable<GridPoint> connectionPoints)
 	{
 		RoomSide key = RoomSide.Top;

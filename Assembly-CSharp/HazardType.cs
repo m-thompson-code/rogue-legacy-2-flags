@@ -1,84 +1,84 @@
 ﻿using System;
 
-// Token: 0x0200022F RID: 559
+// Token: 0x020003EC RID: 1004
 public enum HazardType
 {
-	// Token: 0x040015FF RID: 5631
+	// Token: 0x04001D17 RID: 7447
 	BiomeSpecific,
-	// Token: 0x04001600 RID: 5632
+	// Token: 0x04001D18 RID: 7448
 	Buzzsaw = 10,
-	// Token: 0x04001601 RID: 5633
+	// Token: 0x04001D19 RID: 7449
 	Orbiter = 20,
-	// Token: 0x04001602 RID: 5634
+	// Token: 0x04001D1A RID: 7450
 	Triple_Orbiter,
-	// Token: 0x04001603 RID: 5635
+	// Token: 0x04001D1B RID: 7451
 	SpikeTrap = 30,
-	// Token: 0x04001604 RID: 5636
+	// Token: 0x04001D1C RID: 7452
 	Multi_SpikeTrap = 40,
-	// Token: 0x04001605 RID: 5637
+	// Token: 0x04001D1D RID: 7453
 	WallTurret_Standard = 50,
-	// Token: 0x04001606 RID: 5638
+	// Token: 0x04001D1E RID: 7454
 	Multi_StandardWallTurret = 60,
-	// Token: 0x04001607 RID: 5639
+	// Token: 0x04001D1F RID: 7455
 	WallTurret_FlameThrower = 70,
-	// Token: 0x04001608 RID: 5640
+	// Token: 0x04001D20 RID: 7456
 	Multi_FlameThrowerWallTurret = 80,
-	// Token: 0x04001609 RID: 5641
+	// Token: 0x04001D21 RID: 7457
 	Windmill = 90,
-	// Token: 0x0400160A RID: 5642
+	// Token: 0x04001D22 RID: 7458
 	BreakableSpike = 100,
-	// Token: 0x0400160B RID: 5643
+	// Token: 0x04001D23 RID: 7459
 	Multi_BreakableSpike = 110,
-	// Token: 0x0400160C RID: 5644
+	// Token: 0x04001D24 RID: 7460
 	BreakableSpikeTall = 115,
-	// Token: 0x0400160D RID: 5645
+	// Token: 0x04001D25 RID: 7461
 	Multi_BreakableSpikeTall,
-	// Token: 0x0400160E RID: 5646
+	// Token: 0x04001D26 RID: 7462
 	PressurePlate = 120,
-	// Token: 0x0400160F RID: 5647
+	// Token: 0x04001D27 RID: 7463
 	PressurePlate_Trigger = 130,
-	// Token: 0x04001610 RID: 5648
+	// Token: 0x04001D28 RID: 7464
 	RaycastTurret_Arrow = 140,
-	// Token: 0x04001611 RID: 5649
+	// Token: 0x04001D29 RID: 7465
 	Multi_RaycastTurret_Arrow = 150,
-	// Token: 0x04001612 RID: 5650
+	// Token: 0x04001D2A RID: 7466
 	ShrinkOnDash = 160,
-	// Token: 0x04001613 RID: 5651
+	// Token: 0x04001D2B RID: 7467
 	SpringTrap = 170,
-	// Token: 0x04001614 RID: 5652
+	// Token: 0x04001D2C RID: 7468
 	Multi_SpringTrap = 180,
-	// Token: 0x04001615 RID: 5653
+	// Token: 0x04001D2D RID: 7469
 	Conveyor = 190,
-	// Token: 0x04001616 RID: 5654
+	// Token: 0x04001D2E RID: 7470
 	SnowMound = 200,
-	// Token: 0x04001617 RID: 5655
+	// Token: 0x04001D2F RID: 7471
 	Sentry = 210,
-	// Token: 0x04001618 RID: 5656
+	// Token: 0x04001D30 RID: 7472
 	Bodies = 220,
-	// Token: 0x04001619 RID: 5657
+	// Token: 0x04001D31 RID: 7473
 	Multi_Bodies = 230,
-	// Token: 0x0400161A RID: 5658
+	// Token: 0x04001D32 RID: 7474
 	TallSpike = 250,
-	// Token: 0x0400161B RID: 5659
+	// Token: 0x04001D33 RID: 7475
 	ProximityMine = 260,
-	// Token: 0x0400161C RID: 5660
+	// Token: 0x04001D34 RID: 7476
 	VoidTrap = 270,
-	// Token: 0x0400161D RID: 5661
+	// Token: 0x04001D35 RID: 7477
 	ExhaustPoint = 280,
-	// Token: 0x0400161E RID: 5662
+	// Token: 0x04001D36 RID: 7478
 	RaycastTurret_Curse = 290,
-	// Token: 0x0400161F RID: 5663
+	// Token: 0x04001D37 RID: 7479
 	Multi_RaycastTurret_Curse = 300,
-	// Token: 0x04001620 RID: 5664
+	// Token: 0x04001D38 RID: 7480
 	HomingVine = 310,
-	// Token: 0x04001621 RID: 5665
+	// Token: 0x04001D39 RID: 7481
 	ProximityProjectile = 320,
-	// Token: 0x04001622 RID: 5666
+	// Token: 0x04001D3A RID: 7482
 	IceCrystal = 330,
-	// Token: 0x04001623 RID: 5667
+	// Token: 0x04001D3B RID: 7483
 	SentryWithIce = 335,
-	// Token: 0x04001624 RID: 5668
+	// Token: 0x04001D3C RID: 7484
 	RisingWater = 340,
-	// Token: 0x04001625 RID: 5669
+	// Token: 0x04001D3D RID: 7485
 	None = 1000
 }

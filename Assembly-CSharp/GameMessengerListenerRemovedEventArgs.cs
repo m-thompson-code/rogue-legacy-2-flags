@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020007AE RID: 1966
+// Token: 0x02000C74 RID: 3188
 public class GameMessengerListenerRemovedEventArgs : EventArgs
 {
-	// Token: 0x06004230 RID: 16944 RVA: 0x000EBA07 File Offset: 0x000E9C07
+	// Token: 0x06005BB9 RID: 23481 RVA: 0x0003241D File Offset: 0x0003061D
 	public GameMessengerListenerRemovedEventArgs(string eventID, MonoBehaviour monoBehaviour, string method, int frameNumber)
 	{
 		this.Event = eventID;
@@ -13,23 +13,23 @@ public class GameMessengerListenerRemovedEventArgs : EventArgs
 		this.FrameNumber = Time.frameCount;
 	}
 
-	// Token: 0x17001668 RID: 5736
-	// (get) Token: 0x06004231 RID: 16945 RVA: 0x000EBA2F File Offset: 0x000E9C2F
-	// (set) Token: 0x06004232 RID: 16946 RVA: 0x000EBA37 File Offset: 0x000E9C37
+	// Token: 0x17001E66 RID: 7782
+	// (get) Token: 0x06005BBA RID: 23482 RVA: 0x00032445 File Offset: 0x00030645
+	// (set) Token: 0x06005BBB RID: 23483 RVA: 0x0003244D File Offset: 0x0003064D
 	public string Event { get; private set; }
 
-	// Token: 0x17001669 RID: 5737
-	// (get) Token: 0x06004233 RID: 16947 RVA: 0x000EBA40 File Offset: 0x000E9C40
-	// (set) Token: 0x06004234 RID: 16948 RVA: 0x000EBA48 File Offset: 0x000E9C48
+	// Token: 0x17001E67 RID: 7783
+	// (get) Token: 0x06005BBC RID: 23484 RVA: 0x00032456 File Offset: 0x00030656
+	// (set) Token: 0x06005BBD RID: 23485 RVA: 0x0003245E File Offset: 0x0003065E
 	public MonoBehaviour MonoBehaviour { get; private set; }
 
-	// Token: 0x1700166A RID: 5738
-	// (get) Token: 0x06004235 RID: 16949 RVA: 0x000EBA51 File Offset: 0x000E9C51
-	// (set) Token: 0x06004236 RID: 16950 RVA: 0x000EBA59 File Offset: 0x000E9C59
+	// Token: 0x17001E68 RID: 7784
+	// (get) Token: 0x06005BBE RID: 23486 RVA: 0x00032467 File Offset: 0x00030667
+	// (set) Token: 0x06005BBF RID: 23487 RVA: 0x0003246F File Offset: 0x0003066F
 	public string Method { get; private set; }
 
-	// Token: 0x1700166B RID: 5739
-	// (get) Token: 0x06004237 RID: 16951 RVA: 0x000EBA62 File Offset: 0x000E9C62
-	// (set) Token: 0x06004238 RID: 16952 RVA: 0x000EBA6A File Offset: 0x000E9C6A
+	// Token: 0x17001E69 RID: 7785
+	// (get) Token: 0x06005BC0 RID: 23488 RVA: 0x00032478 File Offset: 0x00030678
+	// (set) Token: 0x06005BC1 RID: 23489 RVA: 0x00032480 File Offset: 0x00030680
 	public int FrameNumber { get; private set; }
 }

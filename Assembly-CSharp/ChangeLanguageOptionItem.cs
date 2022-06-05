@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200027E RID: 638
+// Token: 0x02000449 RID: 1097
 public class ChangeLanguageOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001948 RID: 6472 RVA: 0x0004F4D0 File Offset: 0x0004D6D0
+	// Token: 0x06002337 RID: 9015 RVA: 0x000ACACC File Offset: 0x000AACCC
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class ChangeLanguageOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001949 RID: 6473 RVA: 0x0004F520 File Offset: 0x0004D720
+	// Token: 0x06002338 RID: 9016 RVA: 0x000ACB1C File Offset: 0x000AAD1C
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[LocalizationManager.AvailableLanguages.Length];
@@ -28,13 +28,13 @@ public class ChangeLanguageOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x0600194A RID: 6474 RVA: 0x0004F58E File Offset: 0x0004D78E
+	// Token: 0x06002339 RID: 9017 RVA: 0x00012F28 File Offset: 0x00011128
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed language to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x0600194B RID: 6475 RVA: 0x0004F5A5 File Offset: 0x0004D7A5
+	// Token: 0x0600233A RID: 9018 RVA: 0x00012F3F File Offset: 0x0001113F
 	public override void ConfirmOptionChange()
 	{
 		SaveManager.ConfigData.Language = LocalizationManager.AvailableLanguages[this.m_selectedIndex];

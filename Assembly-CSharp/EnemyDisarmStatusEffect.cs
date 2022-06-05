@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002FE RID: 766
+// Token: 0x0200051C RID: 1308
 public class EnemyDisarmStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D3D RID: 3389
-	// (get) Token: 0x06001E7E RID: 7806 RVA: 0x00062F09 File Offset: 0x00061109
+	// Token: 0x17001114 RID: 4372
+	// (get) Token: 0x06002A35 RID: 10805 RVA: 0x00017A13 File Offset: 0x00015C13
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyDisarmStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D3E RID: 3390
-	// (get) Token: 0x06001E7F RID: 7807 RVA: 0x00062F10 File Offset: 0x00061110
+	// Token: 0x17001115 RID: 4373
+	// (get) Token: 0x06002A36 RID: 10806 RVA: 0x00017838 File Offset: 0x00015A38
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class EnemyDisarmStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E80 RID: 7808 RVA: 0x00062F17 File Offset: 0x00061117
+	// Token: 0x06002A37 RID: 10807 RVA: 0x00017A1A File Offset: 0x00015C1A
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.Disarm, base.Duration);

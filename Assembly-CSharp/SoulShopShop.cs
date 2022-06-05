@@ -6,11 +6,11 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200055C RID: 1372
+// Token: 0x02000923 RID: 2339
 public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudioEventEmitter, IRoomConsumer
 {
-	// Token: 0x1700125C RID: 4700
-	// (get) Token: 0x06003268 RID: 12904 RVA: 0x000AAB32 File Offset: 0x000A8D32
+	// Token: 0x1700190F RID: 6415
+	// (get) Token: 0x06004707 RID: 18183 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -19,13 +19,13 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		}
 	}
 
-	// Token: 0x1700125D RID: 4701
-	// (get) Token: 0x06003269 RID: 12905 RVA: 0x000AAB3A File Offset: 0x000A8D3A
-	// (set) Token: 0x0600326A RID: 12906 RVA: 0x000AAB42 File Offset: 0x000A8D42
+	// Token: 0x17001910 RID: 6416
+	// (get) Token: 0x06004708 RID: 18184 RVA: 0x00026F48 File Offset: 0x00025148
+	// (set) Token: 0x06004709 RID: 18185 RVA: 0x00026F50 File Offset: 0x00025150
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x1700125E RID: 4702
-	// (get) Token: 0x0600326B RID: 12907 RVA: 0x000AAB4B File Offset: 0x000A8D4B
+	// Token: 0x17001911 RID: 6417
+	// (get) Token: 0x0600470A RID: 18186 RVA: 0x00026F59 File Offset: 0x00025159
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -34,8 +34,8 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		}
 	}
 
-	// Token: 0x1700125F RID: 4703
-	// (get) Token: 0x0600326C RID: 12908 RVA: 0x000AAB53 File Offset: 0x000A8D53
+	// Token: 0x17001912 RID: 6418
+	// (get) Token: 0x0600470B RID: 18187 RVA: 0x00026F61 File Offset: 0x00025161
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -48,7 +48,7 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		}
 	}
 
-	// Token: 0x0600326D RID: 12909 RVA: 0x000AAB60 File Offset: 0x000A8D60
+	// Token: 0x0600470C RID: 18188 RVA: 0x00026F6E File Offset: 0x0002516E
 	private bool HasEventDialogue()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround && !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.SeenParade))
@@ -58,7 +58,7 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		return !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.SoulShopDialogue_Intro);
 	}
 
-	// Token: 0x0600326E RID: 12910 RVA: 0x000AABA0 File Offset: 0x000A8DA0
+	// Token: 0x0600470D RID: 18189 RVA: 0x00115104 File Offset: 0x00113304
 	private void Awake()
 	{
 		this.m_interactable = base.GetComponent<Interactable>();
@@ -67,14 +67,14 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		this.m_closeSoulShopUnityEvent = new UnityAction(this.CloseSoulShop);
 	}
 
-	// Token: 0x0600326F RID: 12911 RVA: 0x000AABEF File Offset: 0x000A8DEF
+	// Token: 0x0600470E RID: 18190 RVA: 0x00026FAD File Offset: 0x000251AD
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x06003270 RID: 12912 RVA: 0x000AAC16 File Offset: 0x000A8E16
+	// Token: 0x0600470F RID: 18191 RVA: 0x00026FD4 File Offset: 0x000251D4
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -83,14 +83,14 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		}
 	}
 
-	// Token: 0x06003271 RID: 12913 RVA: 0x000AAC42 File Offset: 0x000A8E42
+	// Token: 0x06004710 RID: 18192 RVA: 0x00027000 File Offset: 0x00025200
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		this.m_endingSpeechBubblePlayed = false;
 		base.StartCoroutine(this.SetSpeechBubbleCoroutine());
 	}
 
-	// Token: 0x06003272 RID: 12914 RVA: 0x000AAC58 File Offset: 0x000A8E58
+	// Token: 0x06004711 RID: 18193 RVA: 0x00027016 File Offset: 0x00025216
 	private IEnumerator SetSpeechBubbleCoroutine()
 	{
 		yield return null;
@@ -105,7 +105,7 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		yield break;
 	}
 
-	// Token: 0x06003273 RID: 12915 RVA: 0x000AAC68 File Offset: 0x000A8E68
+	// Token: 0x06004712 RID: 18194 RVA: 0x00115154 File Offset: 0x00113354
 	public void OpenSoulShop()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
@@ -117,7 +117,7 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		base.StartCoroutine(this.OpenSoulShopCoroutine());
 	}
 
-	// Token: 0x06003274 RID: 12916 RVA: 0x000AACB5 File Offset: 0x000A8EB5
+	// Token: 0x06004713 RID: 18195 RVA: 0x00027025 File Offset: 0x00025225
 	private IEnumerator OpenSoulShopCoroutine()
 	{
 		AudioManager.PlayOneShotAttached(this, this.m_greetingAudioEvent, base.gameObject);
@@ -153,7 +153,7 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		yield break;
 	}
 
-	// Token: 0x06003275 RID: 12917 RVA: 0x000AACC4 File Offset: 0x000A8EC4
+	// Token: 0x06004714 RID: 18196 RVA: 0x001151A4 File Offset: 0x001133A4
 	private void RunNPCIntroDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.SoulShopDialogue_Intro, true);
@@ -163,7 +163,7 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_displayShopWindow);
 	}
 
-	// Token: 0x06003276 RID: 12918 RVA: 0x000AAD28 File Offset: 0x000A8F28
+	// Token: 0x06004715 RID: 18197 RVA: 0x00115208 File Offset: 0x00113408
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -193,13 +193,13 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeSoulShop);
 	}
 
-	// Token: 0x06003277 RID: 12919 RVA: 0x000AADC7 File Offset: 0x000A8FC7
+	// Token: 0x06004716 RID: 18198 RVA: 0x00027034 File Offset: 0x00025234
 	private void DisplayShopWindow()
 	{
 		base.StartCoroutine(this.DisplayShopWindowCoroutine());
 	}
 
-	// Token: 0x06003278 RID: 12920 RVA: 0x000AADD6 File Offset: 0x000A8FD6
+	// Token: 0x06004717 RID: 18199 RVA: 0x00027043 File Offset: 0x00025243
 	private IEnumerator DisplayShopWindowCoroutine()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.SoulShop))
@@ -212,7 +212,7 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		yield break;
 	}
 
-	// Token: 0x06003279 RID: 12921 RVA: 0x000AADE5 File Offset: 0x000A8FE5
+	// Token: 0x06004718 RID: 18200 RVA: 0x00027052 File Offset: 0x00025252
 	public void CloseSoulShop()
 	{
 		if (WindowManager.GetIsWindowLoaded(WindowID.SoulShop))
@@ -223,7 +223,7 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		this.m_npcController.SetNPCState(NPCState.Idle, false);
 	}
 
-	// Token: 0x0600327A RID: 12922 RVA: 0x000AAE20 File Offset: 0x000A9020
+	// Token: 0x06004719 RID: 18201 RVA: 0x0002708D File Offset: 0x0002528D
 	private void OnDisable()
 	{
 		if (this.m_interactable)
@@ -232,7 +232,7 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		}
 	}
 
-	// Token: 0x0600327B RID: 12923 RVA: 0x000AAE3B File Offset: 0x000A903B
+	// Token: 0x0600471A RID: 18202 RVA: 0x000270A8 File Offset: 0x000252A8
 	private IEnumerator MovePlayerToNPC()
 	{
 		PlayerManager.GetPlayerController().SetVelocity(0f, 0f, false);
@@ -256,41 +256,41 @@ public class SoulShopShop : MonoBehaviour, IDisplaySpeechBubble, IRootObj, IAudi
 		yield break;
 	}
 
-	// Token: 0x0600327D RID: 12925 RVA: 0x000AAE52 File Offset: 0x000A9052
+	// Token: 0x0600471C RID: 18204 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400278F RID: 10127
+	// Token: 0x0400369F RID: 13983
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x04002790 RID: 10128
+	// Token: 0x040036A0 RID: 13984
 	[SerializeField]
 	private NPCController m_npcController;
 
-	// Token: 0x04002791 RID: 10129
+	// Token: 0x040036A1 RID: 13985
 	[SerializeField]
 	private SpeechBubbleController m_speechBubble;
 
-	// Token: 0x04002792 RID: 10130
+	// Token: 0x040036A2 RID: 13986
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x04002793 RID: 10131
+	// Token: 0x040036A3 RID: 13987
 	private Interactable m_interactable;
 
-	// Token: 0x04002794 RID: 10132
+	// Token: 0x040036A4 RID: 13988
 	private bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x04002795 RID: 10133
+	// Token: 0x040036A5 RID: 13989
 	private Action m_displayShopWindow;
 
-	// Token: 0x04002796 RID: 10134
+	// Token: 0x040036A6 RID: 13990
 	private Action m_closeSoulShop;
 
-	// Token: 0x04002797 RID: 10135
+	// Token: 0x040036A7 RID: 13991
 	private UnityAction m_closeSoulShopUnityEvent;
 }

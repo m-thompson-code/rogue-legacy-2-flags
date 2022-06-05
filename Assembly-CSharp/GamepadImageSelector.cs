@@ -4,11 +4,11 @@ using Rewired;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000292 RID: 658
+// Token: 0x0200045E RID: 1118
 public class GamepadImageSelector : MonoBehaviour
 {
-	// Token: 0x17000BF7 RID: 3063
-	// (get) Token: 0x060019BB RID: 6587 RVA: 0x000508B1 File Offset: 0x0004EAB1
+	// Token: 0x17000F38 RID: 3896
+	// (get) Token: 0x060023AA RID: 9130 RVA: 0x00013A10 File Offset: 0x00011C10
 	public GamepadType GamepadType
 	{
 		get
@@ -17,13 +17,13 @@ public class GamepadImageSelector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BF8 RID: 3064
-	// (get) Token: 0x060019BC RID: 6588 RVA: 0x000508B9 File Offset: 0x0004EAB9
-	// (set) Token: 0x060019BD RID: 6589 RVA: 0x000508C1 File Offset: 0x0004EAC1
+	// Token: 0x17000F39 RID: 3897
+	// (get) Token: 0x060023AB RID: 9131 RVA: 0x00013A18 File Offset: 0x00011C18
+	// (set) Token: 0x060023AC RID: 9132 RVA: 0x00013A20 File Offset: 0x00011C20
 	public int ControllerID { get; set; }
 
-	// Token: 0x17000BF9 RID: 3065
-	// (get) Token: 0x060019BE RID: 6590 RVA: 0x000508CA File Offset: 0x0004EACA
+	// Token: 0x17000F3A RID: 3898
+	// (get) Token: 0x060023AD RID: 9133 RVA: 0x00013A29 File Offset: 0x00011C29
 	public bool IsXboxSeries
 	{
 		get
@@ -32,13 +32,13 @@ public class GamepadImageSelector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060019BF RID: 6591 RVA: 0x000508D2 File Offset: 0x0004EAD2
+	// Token: 0x060023AE RID: 9134 RVA: 0x00013A31 File Offset: 0x00011C31
 	private void Awake()
 	{
 		this.DeactivateAllImages();
 	}
 
-	// Token: 0x060019C0 RID: 6592 RVA: 0x000508DC File Offset: 0x0004EADC
+	// Token: 0x060023AF RID: 9135 RVA: 0x000AD144 File Offset: 0x000AB344
 	public void EnableGamepadImage(string actionName, Pole axis, bool disableAllOthers)
 	{
 		ActionElementMap actionElementMap = Rewired_RL.GetActionElementMap(true, actionName, axis, false, this.ControllerID);
@@ -76,7 +76,7 @@ public class GamepadImageSelector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060019C1 RID: 6593 RVA: 0x000509E4 File Offset: 0x0004EBE4
+	// Token: 0x060023B0 RID: 9136 RVA: 0x000AD24C File Offset: 0x000AB44C
 	private Image GetImageFromActionName(string actionName)
 	{
 		if (actionName != null)
@@ -209,7 +209,7 @@ public class GamepadImageSelector : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x060019C2 RID: 6594 RVA: 0x00050C8C File Offset: 0x0004EE8C
+	// Token: 0x060023B1 RID: 9137 RVA: 0x000AD4F4 File Offset: 0x000AB6F4
 	private void DeactivateAllImages()
 	{
 		if (this.m_rbButtonImage.gameObject.activeSelf)
@@ -262,107 +262,107 @@ public class GamepadImageSelector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001848 RID: 6216
+	// Token: 0x04001F99 RID: 8089
 	private static List<ActionElementMap> m_aemListHelper = new List<ActionElementMap>();
 
-	// Token: 0x04001849 RID: 6217
+	// Token: 0x04001F9A RID: 8090
 	private const string DpadUp_Name = "DpadUp";
 
-	// Token: 0x0400184A RID: 6218
+	// Token: 0x04001F9B RID: 8091
 	private const string DpadDown_Name = "DpadDown";
 
-	// Token: 0x0400184B RID: 6219
+	// Token: 0x04001F9C RID: 8092
 	private const string DpadLeft_Name = "DpadLeft";
 
-	// Token: 0x0400184C RID: 6220
+	// Token: 0x04001F9D RID: 8093
 	private const string DpadRight_Name = "DpadRight";
 
-	// Token: 0x0400184D RID: 6221
+	// Token: 0x04001F9E RID: 8094
 	private const string L3_Name = "L3";
 
-	// Token: 0x0400184E RID: 6222
+	// Token: 0x04001F9F RID: 8095
 	private const string R3_Name = "R3";
 
-	// Token: 0x0400184F RID: 6223
+	// Token: 0x04001FA0 RID: 8096
 	private const string LB_Name = "Left Button";
 
-	// Token: 0x04001850 RID: 6224
+	// Token: 0x04001FA1 RID: 8097
 	private const string LT_Name = "Left Trigger";
 
-	// Token: 0x04001851 RID: 6225
+	// Token: 0x04001FA2 RID: 8098
 	private const string RB_Name = "Right Button";
 
-	// Token: 0x04001852 RID: 6226
+	// Token: 0x04001FA3 RID: 8099
 	private const string RT_Name = "Right Trigger";
 
-	// Token: 0x04001853 RID: 6227
+	// Token: 0x04001FA4 RID: 8100
 	private const string X_Name = "X";
 
-	// Token: 0x04001854 RID: 6228
+	// Token: 0x04001FA5 RID: 8101
 	private const string A_Name = "A";
 
-	// Token: 0x04001855 RID: 6229
+	// Token: 0x04001FA6 RID: 8102
 	private const string B_Name = "B";
 
-	// Token: 0x04001856 RID: 6230
+	// Token: 0x04001FA7 RID: 8103
 	private const string Y_Name = "Y";
 
-	// Token: 0x04001857 RID: 6231
+	// Token: 0x04001FA8 RID: 8104
 	private const string TouchPad_Name = "TouchPad";
 
-	// Token: 0x04001858 RID: 6232
+	// Token: 0x04001FA9 RID: 8105
 	[SerializeField]
 	private GamepadType m_gamepadType;
 
-	// Token: 0x04001859 RID: 6233
+	// Token: 0x04001FAA RID: 8106
 	[SerializeField]
 	private Image m_rbButtonImage;
 
-	// Token: 0x0400185A RID: 6234
+	// Token: 0x04001FAB RID: 8107
 	[SerializeField]
 	private Image m_lbButtonImage;
 
-	// Token: 0x0400185B RID: 6235
+	// Token: 0x04001FAC RID: 8108
 	[SerializeField]
 	private Image m_rtButtonImage;
 
-	// Token: 0x0400185C RID: 6236
+	// Token: 0x04001FAD RID: 8109
 	[SerializeField]
 	private Image m_ltButtonImage;
 
-	// Token: 0x0400185D RID: 6237
+	// Token: 0x04001FAE RID: 8110
 	[SerializeField]
 	private Image m_l3ButtonImage;
 
-	// Token: 0x0400185E RID: 6238
+	// Token: 0x04001FAF RID: 8111
 	[SerializeField]
 	private Image m_r3ButtonImage;
 
-	// Token: 0x0400185F RID: 6239
+	// Token: 0x04001FB0 RID: 8112
 	[SerializeField]
 	private Image m_xButtonImage;
 
-	// Token: 0x04001860 RID: 6240
+	// Token: 0x04001FB1 RID: 8113
 	[SerializeField]
 	private Image m_bButtonImage;
 
-	// Token: 0x04001861 RID: 6241
+	// Token: 0x04001FB2 RID: 8114
 	[SerializeField]
 	private Image m_yButtonImage;
 
-	// Token: 0x04001862 RID: 6242
+	// Token: 0x04001FB3 RID: 8115
 	[SerializeField]
 	private Image m_aButtonImage;
 
-	// Token: 0x04001863 RID: 6243
+	// Token: 0x04001FB4 RID: 8116
 	[SerializeField]
 	private Image m_dpadButtonImage;
 
-	// Token: 0x04001864 RID: 6244
+	// Token: 0x04001FB5 RID: 8117
 	[SerializeField]
 	private Image m_touchPadImage;
 
-	// Token: 0x04001865 RID: 6245
+	// Token: 0x04001FB6 RID: 8118
 	[SerializeField]
 	private bool m_isXboxSeries;
 }

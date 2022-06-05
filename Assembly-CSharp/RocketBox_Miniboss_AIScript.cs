@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200010C RID: 268
+// Token: 0x020001B2 RID: 434
 public class RocketBox_Miniboss_AIScript : RocketBox_Basic_AIScript
 {
-	// Token: 0x17000464 RID: 1124
-	// (get) Token: 0x06000833 RID: 2099 RVA: 0x0001C17C File Offset: 0x0001A37C
+	// Token: 0x170005A0 RID: 1440
+	// (get) Token: 0x06000BEC RID: 3052 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override int m_shoot_NumberOfBullets
 	{
 		get
@@ -13,8 +13,8 @@ public class RocketBox_Miniboss_AIScript : RocketBox_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000465 RID: 1125
-	// (get) Token: 0x06000834 RID: 2100 RVA: 0x0001C17F File Offset: 0x0001A37F
+	// Token: 0x170005A1 RID: 1441
+	// (get) Token: 0x06000BED RID: 3053 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_shoot_VerticalBullets
 	{
 		get
@@ -23,8 +23,8 @@ public class RocketBox_Miniboss_AIScript : RocketBox_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000466 RID: 1126
-	// (get) Token: 0x06000835 RID: 2101 RVA: 0x0001C182 File Offset: 0x0001A382
+	// Token: 0x170005A2 RID: 1442
+	// (get) Token: 0x06000BEE RID: 3054 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_shoot_HomingBullets
 	{
 		get
@@ -33,8 +33,8 @@ public class RocketBox_Miniboss_AIScript : RocketBox_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000467 RID: 1127
-	// (get) Token: 0x06000836 RID: 2102 RVA: 0x0001C185 File Offset: 0x0001A385
+	// Token: 0x170005A3 RID: 1443
+	// (get) Token: 0x06000BEF RID: 3055 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected override float m_explosion_WarningDuration
 	{
 		get
@@ -43,8 +43,8 @@ public class RocketBox_Miniboss_AIScript : RocketBox_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000468 RID: 1128
-	// (get) Token: 0x06000837 RID: 2103 RVA: 0x0001C18C File Offset: 0x0001A38C
+	// Token: 0x170005A4 RID: 1444
+	// (get) Token: 0x06000BF0 RID: 3056 RVA: 0x0000569A File Offset: 0x0000389A
 	protected override float m_explosion_AttackCD
 	{
 		get

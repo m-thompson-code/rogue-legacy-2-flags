@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000177 RID: 375
+// Token: 0x020002B6 RID: 694
 public class ScreenSlice_Ability : BaseAbility_RL, ISpell, IAbility
 {
-	// Token: 0x17000711 RID: 1809
-	// (get) Token: 0x06000D1D RID: 3357 RVA: 0x00027DF6 File Offset: 0x00025FF6
+	// Token: 0x1700097B RID: 2427
+	// (get) Token: 0x06001462 RID: 5218 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -13,8 +13,8 @@ public class ScreenSlice_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000712 RID: 1810
-	// (get) Token: 0x06000D1E RID: 3358 RVA: 0x00027DFD File Offset: 0x00025FFD
+	// Token: 0x1700097C RID: 2428
+	// (get) Token: 0x06001463 RID: 5219 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -23,8 +23,8 @@ public class ScreenSlice_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000713 RID: 1811
-	// (get) Token: 0x06000D1F RID: 3359 RVA: 0x00027E04 File Offset: 0x00026004
+	// Token: 0x1700097D RID: 2429
+	// (get) Token: 0x06001464 RID: 5220 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellAnimSpeed
 	{
 		get
@@ -33,8 +33,8 @@ public class ScreenSlice_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000714 RID: 1812
-	// (get) Token: 0x06000D20 RID: 3360 RVA: 0x00027E0B File Offset: 0x0002600B
+	// Token: 0x1700097E RID: 2430
+	// (get) Token: 0x06001465 RID: 5221 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -43,8 +43,8 @@ public class ScreenSlice_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000715 RID: 1813
-	// (get) Token: 0x06000D21 RID: 3361 RVA: 0x00027E12 File Offset: 0x00026012
+	// Token: 0x1700097F RID: 2431
+	// (get) Token: 0x06001466 RID: 5222 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -53,8 +53,8 @@ public class ScreenSlice_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000716 RID: 1814
-	// (get) Token: 0x06000D22 RID: 3362 RVA: 0x00027E19 File Offset: 0x00026019
+	// Token: 0x17000980 RID: 2432
+	// (get) Token: 0x06001467 RID: 5223 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -63,8 +63,8 @@ public class ScreenSlice_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000717 RID: 1815
-	// (get) Token: 0x06000D23 RID: 3363 RVA: 0x00027E20 File Offset: 0x00026020
+	// Token: 0x17000981 RID: 2433
+	// (get) Token: 0x06001468 RID: 5224 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -73,8 +73,8 @@ public class ScreenSlice_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000718 RID: 1816
-	// (get) Token: 0x06000D24 RID: 3364 RVA: 0x00027E27 File Offset: 0x00026027
+	// Token: 0x17000982 RID: 2434
+	// (get) Token: 0x06001469 RID: 5225 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -83,8 +83,8 @@ public class ScreenSlice_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x17000719 RID: 1817
-	// (get) Token: 0x06000D25 RID: 3365 RVA: 0x00027E2E File Offset: 0x0002602E
+	// Token: 0x17000983 RID: 2435
+	// (get) Token: 0x0600146A RID: 5226 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -93,8 +93,8 @@ public class ScreenSlice_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x1700071A RID: 1818
-	// (get) Token: 0x06000D26 RID: 3366 RVA: 0x00027E35 File Offset: 0x00026035
+	// Token: 0x17000984 RID: 2436
+	// (get) Token: 0x0600146B RID: 5227 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get

@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x020001D1 RID: 465
+// Token: 0x0200034D RID: 845
 public static class CharacterCreator
 {
-	// Token: 0x060012B7 RID: 4791 RVA: 0x000370C8 File Offset: 0x000352C8
+	// Token: 0x06001B3B RID: 6971 RVA: 0x0009469C File Offset: 0x0009289C
 	public static CharacterData GenerateRandomCharacter(List<CharacterData> charsAlreadyChosen = null, bool forceRandomizeKit = false)
 	{
 		CharacterData characterData = new CharacterData();
@@ -100,7 +100,7 @@ public static class CharacterCreator
 		return characterData;
 	}
 
-	// Token: 0x060012B8 RID: 4792 RVA: 0x00037348 File Offset: 0x00035548
+	// Token: 0x06001B3C RID: 6972 RVA: 0x0009491C File Offset: 0x00092B1C
 	private static void ApplyRandomizeKitTrait(CharacterData charData)
 	{
 		AbilityType[] availableWeapons = CharacterCreator.GetAvailableWeapons(ClassType.CURIO_SHOPPE_CLASS);
@@ -121,7 +121,7 @@ public static class CharacterCreator
 		charData.Talent = abilityType2;
 	}
 
-	// Token: 0x060012B9 RID: 4793 RVA: 0x000373E8 File Offset: 0x000355E8
+	// Token: 0x06001B3D RID: 6973 RVA: 0x000949BC File Offset: 0x00092BBC
 	public static void GenerateClass(ClassType classType, CharacterData charDataToMod)
 	{
 		charDataToMod.ClassType = classType;
@@ -156,7 +156,7 @@ public static class CharacterCreator
 		charDataToMod.Talent = abilityType3;
 	}
 
-	// Token: 0x060012BA RID: 4794 RVA: 0x000374FC File Offset: 0x000356FC
+	// Token: 0x06001B3E RID: 6974 RVA: 0x00094AD0 File Offset: 0x00092CD0
 	public static bool GetRandomGender(bool useUnityRandom)
 	{
 		int num = RNGManager.GetRandomNumber(RngID.Lineage, "GetRandomGender", 0, 2);
@@ -167,7 +167,7 @@ public static class CharacterCreator
 		return num > 0;
 	}
 
-	// Token: 0x060012BB RID: 4795 RVA: 0x00037527 File Offset: 0x00035727
+	// Token: 0x06001B3F RID: 6975 RVA: 0x0000E28A File Offset: 0x0000C48A
 	public static string[] GetAvailableNames(bool isFemale)
 	{
 		if (!isFemale)
@@ -177,7 +177,7 @@ public static class CharacterCreator
 		return LocalizationManager.FemaleNameArray;
 	}
 
-	// Token: 0x060012BC RID: 4796 RVA: 0x00037538 File Offset: 0x00035738
+	// Token: 0x06001B40 RID: 6976 RVA: 0x00094AFC File Offset: 0x00092CFC
 	public static List<ClassType> GetAvailableClasses()
 	{
 		CharacterCreator.m_classList.Clear();
@@ -209,26 +209,26 @@ public static class CharacterCreator
 		return CharacterCreator.m_classList;
 	}
 
-	// Token: 0x060012BD RID: 4797 RVA: 0x0003762D File Offset: 0x0003582D
+	// Token: 0x06001B41 RID: 6977 RVA: 0x0000E29A File Offset: 0x0000C49A
 	public static AbilityType[] GetAvailableWeapons(ClassType classType)
 	{
 		return ClassLibrary.GetClassData(classType).WeaponData.WeaponAbilityArray;
 	}
 
-	// Token: 0x060012BE RID: 4798 RVA: 0x0003763F File Offset: 0x0003583F
+	// Token: 0x06001B42 RID: 6978 RVA: 0x0000E2AC File Offset: 0x0000C4AC
 	public static AbilityType[] GetAvailableSpells(ClassType classType)
 	{
 		return ClassLibrary.GetClassData(classType).SpellData.SpellAbilityArray;
 	}
 
-	// Token: 0x060012BF RID: 4799 RVA: 0x00037654 File Offset: 0x00035854
+	// Token: 0x06001B43 RID: 6979 RVA: 0x00094BF4 File Offset: 0x00092DF4
 	public static AbilityType[] GetAvailableTalents(ClassType classType)
 	{
 		ClassData classData = ClassLibrary.GetClassData(classType);
 		return classData.TalentData.TalentAbilityArray;
 	}
 
-	// Token: 0x060012C0 RID: 4800 RVA: 0x00037678 File Offset: 0x00035878
+	// Token: 0x06001B44 RID: 6980 RVA: 0x00094C18 File Offset: 0x00092E18
 	public static Vector2Int GetRandomTraits(bool forceRandomizeKit = false)
 	{
 		TraitType traitType = TraitType.None;
@@ -353,7 +353,7 @@ public static class CharacterCreator
 		return new Vector2Int((int)traitType, (int)traitType2);
 	}
 
-	// Token: 0x060012C1 RID: 4801 RVA: 0x00037908 File Offset: 0x00035B08
+	// Token: 0x06001B45 RID: 6981 RVA: 0x00094EA8 File Offset: 0x000930A8
 	private static bool AreTraitsCompatible(TraitType traitType1, TraitType traitType2)
 	{
 		BaseTrait trait = TraitLibrary.GetTrait(traitType1);
@@ -363,7 +363,7 @@ public static class CharacterCreator
 		return flag && flag2;
 	}
 
-	// Token: 0x060012C2 RID: 4802 RVA: 0x00037964 File Offset: 0x00035B64
+	// Token: 0x06001B46 RID: 6982 RVA: 0x00094F04 File Offset: 0x00093104
 	public static void GenerateRandomLook(CharacterData charData)
 	{
 		bool isFemale = charData.IsFemale;
@@ -376,7 +376,7 @@ public static class CharacterCreator
 		charData.HairColorType = CharacterCreator.GetRandomLook(isFemale, LookType.HairColor);
 	}
 
-	// Token: 0x060012C3 RID: 4803 RVA: 0x000379D0 File Offset: 0x00035BD0
+	// Token: 0x06001B47 RID: 6983 RVA: 0x00094F70 File Offset: 0x00093170
 	public static int GetRandomLook(bool isFemale, LookType lookType)
 	{
 		IList list = null;
@@ -440,6 +440,6 @@ public static class CharacterCreator
 		return num3;
 	}
 
-	// Token: 0x04001310 RID: 4880
+	// Token: 0x04001949 RID: 6473
 	private static List<ClassType> m_classList = new List<ClassType>();
 }

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000202 RID: 514
+// Token: 0x020003AE RID: 942
 public class GenericPool_RL<T> where T : MonoBehaviour, IGenericPoolObj
 {
-	// Token: 0x17000AFA RID: 2810
-	// (get) Token: 0x060015B6 RID: 5558 RVA: 0x00043928 File Offset: 0x00041B28
+	// Token: 0x17000E15 RID: 3605
+	// (get) Token: 0x06001F2A RID: 7978 RVA: 0x000105C7 File Offset: 0x0000E7C7
 	public List<T> ObjectList
 	{
 		get
@@ -15,8 +15,8 @@ public class GenericPool_RL<T> where T : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17000AFB RID: 2811
-	// (get) Token: 0x060015B7 RID: 5559 RVA: 0x00043930 File Offset: 0x00041B30
+	// Token: 0x17000E16 RID: 3606
+	// (get) Token: 0x06001F2B RID: 7979 RVA: 0x000A1EF0 File Offset: 0x000A00F0
 	public bool HasActiveObjects
 	{
 		get
@@ -39,22 +39,22 @@ public class GenericPool_RL<T> where T : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17000AFC RID: 2812
-	// (get) Token: 0x060015B8 RID: 5560 RVA: 0x00043998 File Offset: 0x00041B98
-	// (set) Token: 0x060015B9 RID: 5561 RVA: 0x000439A0 File Offset: 0x00041BA0
+	// Token: 0x17000E17 RID: 3607
+	// (get) Token: 0x06001F2C RID: 7980 RVA: 0x000105CF File Offset: 0x0000E7CF
+	// (set) Token: 0x06001F2D RID: 7981 RVA: 0x000105D7 File Offset: 0x0000E7D7
 	public int PoolSize { get; private set; }
 
-	// Token: 0x17000AFD RID: 2813
-	// (get) Token: 0x060015BA RID: 5562 RVA: 0x000439A9 File Offset: 0x00041BA9
-	// (set) Token: 0x060015BB RID: 5563 RVA: 0x000439B1 File Offset: 0x00041BB1
+	// Token: 0x17000E18 RID: 3608
+	// (get) Token: 0x06001F2E RID: 7982 RVA: 0x000105E0 File Offset: 0x0000E7E0
+	// (set) Token: 0x06001F2F RID: 7983 RVA: 0x000105E8 File Offset: 0x0000E7E8
 	public bool IsPoolingDisabled { get; private set; }
 
-	// Token: 0x17000AFE RID: 2814
-	// (get) Token: 0x060015BC RID: 5564 RVA: 0x000439BA File Offset: 0x00041BBA
-	// (set) Token: 0x060015BD RID: 5565 RVA: 0x000439C2 File Offset: 0x00041BC2
+	// Token: 0x17000E19 RID: 3609
+	// (get) Token: 0x06001F30 RID: 7984 RVA: 0x000105F1 File Offset: 0x0000E7F1
+	// (set) Token: 0x06001F31 RID: 7985 RVA: 0x000105F9 File Offset: 0x0000E7F9
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x060015BE RID: 5566 RVA: 0x000439CC File Offset: 0x00041BCC
+	// Token: 0x06001F32 RID: 7986 RVA: 0x000A1F58 File Offset: 0x000A0158
 	public void Initialize(T prefab, int poolSize, bool disablePooling, bool disableAwakeOnCreation = true)
 	{
 		if (this.IsInitialized)
@@ -87,7 +87,7 @@ public class GenericPool_RL<T> where T : MonoBehaviour, IGenericPoolObj
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x060015BF RID: 5567 RVA: 0x00043AAC File Offset: 0x00041CAC
+	// Token: 0x06001F33 RID: 7987 RVA: 0x000A2038 File Offset: 0x000A0238
 	private T CreateNew()
 	{
 		T t = default(T);
@@ -124,7 +124,7 @@ public class GenericPool_RL<T> where T : MonoBehaviour, IGenericPoolObj
 		return t;
 	}
 
-	// Token: 0x060015C0 RID: 5568 RVA: 0x00043BA4 File Offset: 0x00041DA4
+	// Token: 0x06001F34 RID: 7988 RVA: 0x000A2130 File Offset: 0x000A0330
 	public void ResizePool(int newSize)
 	{
 		if (this.m_genericList == null)
@@ -157,7 +157,7 @@ public class GenericPool_RL<T> where T : MonoBehaviour, IGenericPoolObj
 		this.PoolSize = newSize;
 	}
 
-	// Token: 0x060015C1 RID: 5569 RVA: 0x00043C40 File Offset: 0x00041E40
+	// Token: 0x06001F35 RID: 7989 RVA: 0x000A21CC File Offset: 0x000A03CC
 	public T GetFreeObj()
 	{
 		if (!this.IsPoolingDisabled)
@@ -191,7 +191,7 @@ public class GenericPool_RL<T> where T : MonoBehaviour, IGenericPoolObj
 		return t2;
 	}
 
-	// Token: 0x060015C2 RID: 5570 RVA: 0x00043D14 File Offset: 0x00041F14
+	// Token: 0x06001F36 RID: 7990 RVA: 0x000A22A0 File Offset: 0x000A04A0
 	public bool DisableAll()
 	{
 		bool result;
@@ -210,7 +210,7 @@ public class GenericPool_RL<T> where T : MonoBehaviour, IGenericPoolObj
 		return result;
 	}
 
-	// Token: 0x060015C3 RID: 5571 RVA: 0x00043D80 File Offset: 0x00041F80
+	// Token: 0x06001F37 RID: 7991 RVA: 0x000A230C File Offset: 0x000A050C
 	private void ReparentAllPooledObjects(object sender, EventArgs args)
 	{
 		foreach (T t in this.m_genericList)
@@ -227,7 +227,7 @@ public class GenericPool_RL<T> where T : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x060015C4 RID: 5572 RVA: 0x00043E24 File Offset: 0x00042024
+	// Token: 0x06001F38 RID: 7992 RVA: 0x000A23B0 File Offset: 0x000A05B0
 	public void DestroyPool()
 	{
 		foreach (T t in this.m_genericList)
@@ -243,15 +243,15 @@ public class GenericPool_RL<T> where T : MonoBehaviour, IGenericPoolObj
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.UpdatePools, this.m_reparentAllPooledObjects);
 	}
 
-	// Token: 0x040014E7 RID: 5351
+	// Token: 0x04001BCE RID: 7118
 	private T m_sourcePrefab;
 
-	// Token: 0x040014E8 RID: 5352
+	// Token: 0x04001BCF RID: 7119
 	private List<T> m_genericList;
 
-	// Token: 0x040014E9 RID: 5353
+	// Token: 0x04001BD0 RID: 7120
 	private Action<MonoBehaviour, EventArgs> m_reparentAllPooledObjects;
 
-	// Token: 0x040014EA RID: 5354
+	// Token: 0x04001BD1 RID: 7121
 	private bool m_disableAwakeOnCreation;
 }

@@ -1,182 +1,182 @@
 ﻿using System;
 
-// Token: 0x020006FA RID: 1786
+// Token: 0x02000BAD RID: 2989
 public enum AbilityType
 {
-	// Token: 0x040031E1 RID: 12769
+	// Token: 0x0400445C RID: 17500
 	None,
-	// Token: 0x040031E2 RID: 12770
+	// Token: 0x0400445D RID: 17501
 	Random = 5,
-	// Token: 0x040031E3 RID: 12771
+	// Token: 0x0400445E RID: 17502
 	____WEAPON_ABILITIES____ = 10,
-	// Token: 0x040031E4 RID: 12772
+	// Token: 0x0400445F RID: 17503
 	SwordWeapon = 20,
-	// Token: 0x040031E5 RID: 12773
+	// Token: 0x04004460 RID: 17504
 	PacifistWeapon,
-	// Token: 0x040031E6 RID: 12774
+	// Token: 0x04004461 RID: 17505
 	SwordBeamWeapon,
-	// Token: 0x040031E7 RID: 12775
+	// Token: 0x04004462 RID: 17506
 	SpearWeapon = 30,
-	// Token: 0x040031E8 RID: 12776
+	// Token: 0x04004463 RID: 17507
 	AxeWeapon = 40,
-	// Token: 0x040031E9 RID: 12777
+	// Token: 0x04004464 RID: 17508
 	AxeSpinnerWeapon,
-	// Token: 0x040031EA RID: 12778
+	// Token: 0x04004465 RID: 17509
 	BowWeapon = 50,
-	// Token: 0x040031EB RID: 12779
+	// Token: 0x04004466 RID: 17510
 	KunaiWeapon,
-	// Token: 0x040031EC RID: 12780
+	// Token: 0x04004467 RID: 17511
 	BolaWeapon,
-	// Token: 0x040031ED RID: 12781
+	// Token: 0x04004468 RID: 17512
 	KineticBowWeapon,
-	// Token: 0x040031EE RID: 12782
+	// Token: 0x04004469 RID: 17513
 	PistolWeapon,
-	// Token: 0x040031EF RID: 12783
+	// Token: 0x0400446A RID: 17514
 	GroundBowWeapon,
-	// Token: 0x040031F0 RID: 12784
+	// Token: 0x0400446B RID: 17515
 	DragonPistolWeapon,
-	// Token: 0x040031F1 RID: 12785
+	// Token: 0x0400446C RID: 17516
 	FryingPanWeapon = 60,
-	// Token: 0x040031F2 RID: 12786
+	// Token: 0x0400446D RID: 17517
 	SpoonsWeapon,
-	// Token: 0x040031F3 RID: 12787
+	// Token: 0x0400446E RID: 17518
 	ChakramWeapon,
-	// Token: 0x040031F4 RID: 12788
+	// Token: 0x0400446F RID: 17519
 	TonfaWeapon = 64,
-	// Token: 0x040031F5 RID: 12789
+	// Token: 0x04004470 RID: 17520
 	DualBladesWeapon = 66,
-	// Token: 0x040031F6 RID: 12790
+	// Token: 0x04004471 RID: 17521
 	BoxingGloveWeapon = 68,
-	// Token: 0x040031F7 RID: 12791
+	// Token: 0x04004472 RID: 17522
 	MagicWandWeapon = 70,
-	// Token: 0x040031F8 RID: 12792
+	// Token: 0x04004473 RID: 17523
 	CannonWeapon = 80,
-	// Token: 0x040031F9 RID: 12793
+	// Token: 0x04004474 RID: 17524
 	SaberWeapon = 90,
-	// Token: 0x040031FA RID: 12794
+	// Token: 0x04004475 RID: 17525
 	FirstWeapon = 100,
-	// Token: 0x040031FB RID: 12795
+	// Token: 0x04004476 RID: 17526
 	DaggerWeapon = 110,
-	// Token: 0x040031FC RID: 12796
+	// Token: 0x04004477 RID: 17527
 	LanceWeapon = 120,
-	// Token: 0x040031FD RID: 12797
+	// Token: 0x04004478 RID: 17528
 	ScytheWeapon = 122,
-	// Token: 0x040031FE RID: 12798
+	// Token: 0x04004479 RID: 17529
 	KatanaWeapon = 124,
-	// Token: 0x040031FF RID: 12799
+	// Token: 0x0400447A RID: 17530
 	ExplosiveHandsWeapon = 126,
-	// Token: 0x04003200 RID: 12800
+	// Token: 0x0400447B RID: 17531
 	LuteWeapon,
-	// Token: 0x04003201 RID: 12801
+	// Token: 0x0400447C RID: 17532
 	AstroWandWeapon,
-	// Token: 0x04003202 RID: 12802
+	// Token: 0x0400447D RID: 17533
 	____SPELL_ABILITIES____ = 130,
-	// Token: 0x04003203 RID: 12803
+	// Token: 0x0400447E RID: 17534
 	FireballSpell = 140,
-	// Token: 0x04003204 RID: 12804
+	// Token: 0x0400447F RID: 17535
 	PoisonBombSpell,
-	// Token: 0x04003205 RID: 12805
+	// Token: 0x04004480 RID: 17536
 	AxeSpell = 145,
-	// Token: 0x04003206 RID: 12806
+	// Token: 0x04004481 RID: 17537
 	TrackerDotSpell,
-	// Token: 0x04003207 RID: 12807
+	// Token: 0x04004482 RID: 17538
 	BoomerangSpell = 150,
-	// Token: 0x04003208 RID: 12808
+	// Token: 0x04004483 RID: 17539
 	FlameBarrierSpell = 155,
-	// Token: 0x04003209 RID: 12809
+	// Token: 0x04004484 RID: 17540
 	DamageZoneSpell,
-	// Token: 0x0400320A RID: 12810
+	// Token: 0x04004485 RID: 17541
 	DamageWallSpell = 160,
-	// Token: 0x0400320B RID: 12811
+	// Token: 0x04004486 RID: 17542
 	FlameThrowerSpell = 162,
-	// Token: 0x0400320C RID: 12812
+	// Token: 0x04004487 RID: 17543
 	RicochetSpikesSpell = 165,
-	// Token: 0x0400320D RID: 12813
+	// Token: 0x04004488 RID: 17544
 	StraightBoltSpell = 178,
-	// Token: 0x0400320E RID: 12814
+	// Token: 0x04004489 RID: 17545
 	EnergyBounceSpell = 180,
-	// Token: 0x0400320F RID: 12815
+	// Token: 0x0400448A RID: 17546
 	PoolBallSpell,
-	// Token: 0x04003210 RID: 12816
+	// Token: 0x0400448B RID: 17547
 	SporeStrikeSpell,
-	// Token: 0x04003211 RID: 12817
+	// Token: 0x0400448C RID: 17548
 	GravityWellSpell,
-	// Token: 0x04003212 RID: 12818
+	// Token: 0x0400448D RID: 17549
 	AilmentCurseSpell,
-	// Token: 0x04003213 RID: 12819
+	// Token: 0x0400448E RID: 17550
 	LightningSpell,
-	// Token: 0x04003214 RID: 12820
+	// Token: 0x0400448F RID: 17551
 	TimeBombSpell,
-	// Token: 0x04003215 RID: 12821
+	// Token: 0x04004490 RID: 17552
 	SporeSpreadSpell,
-	// Token: 0x04003216 RID: 12822
+	// Token: 0x04004491 RID: 17553
 	ScreenSliceSpell,
-	// Token: 0x04003217 RID: 12823
+	// Token: 0x04004492 RID: 17554
 	FreezeStrikeSpell,
-	// Token: 0x04003218 RID: 12824
+	// Token: 0x04004493 RID: 17555
 	____TALENT_ABILITIES____,
-	// Token: 0x04003219 RID: 12825
+	// Token: 0x04004494 RID: 17556
 	ShieldBlockTalent = 200,
-	// Token: 0x0400321A RID: 12826
+	// Token: 0x04004495 RID: 17557
 	ShoutTalent = 210,
-	// Token: 0x0400321B RID: 12827
+	// Token: 0x04004496 RID: 17558
 	Counter = 220,
-	// Token: 0x0400321C RID: 12828
+	// Token: 0x04004497 RID: 17559
 	CookingTalent = 225,
-	// Token: 0x0400321D RID: 12829
+	// Token: 0x04004498 RID: 17560
 	TimeSlow = 230,
-	// Token: 0x0400321E RID: 12830
+	// Token: 0x04004499 RID: 17561
 	CreatePlatformTalent = 240,
-	// Token: 0x0400321F RID: 12831
+	// Token: 0x0400449A RID: 17562
 	HpMpSwapTalent = 250,
-	// Token: 0x04003220 RID: 12832
+	// Token: 0x0400449B RID: 17563
 	CloakTalent = 260,
-	// Token: 0x04003221 RID: 12833
+	// Token: 0x0400449C RID: 17564
 	CloakStrikeTalent,
-	// Token: 0x04003222 RID: 12834
+	// Token: 0x0400449D RID: 17565
 	BombardTalent = 270,
-	// Token: 0x04003223 RID: 12835
+	// Token: 0x0400449E RID: 17566
 	Dodge = 280,
-	// Token: 0x04003224 RID: 12836
+	// Token: 0x0400449F RID: 17567
 	RollTalent = 290,
-	// Token: 0x04003225 RID: 12837
+	// Token: 0x040044A0 RID: 17568
 	ManaBombTalent = 294,
-	// Token: 0x04003226 RID: 12838
+	// Token: 0x040044A1 RID: 17569
 	ReloadTalent,
-	// Token: 0x04003227 RID: 12839
+	// Token: 0x040044A2 RID: 17570
 	KineticReloadTalent,
-	// Token: 0x04003228 RID: 12840
+	// Token: 0x040044A3 RID: 17571
 	KiStrikeTalent = 300,
-	// Token: 0x04003229 RID: 12841
+	// Token: 0x040044A4 RID: 17572
 	CrescendoTalent = 305,
-	// Token: 0x0400322A RID: 12842
+	// Token: 0x040044A5 RID: 17573
 	Log = 310,
-	// Token: 0x0400322B RID: 12843
+	// Token: 0x040044A6 RID: 17574
 	EmpowerSpellTalent = 315,
-	// Token: 0x0400322C RID: 12844
+	// Token: 0x040044A7 RID: 17575
 	Siphon = 320,
-	// Token: 0x0400322D RID: 12845
+	// Token: 0x040044A8 RID: 17576
 	SpearSpinTalent = 325,
-	// Token: 0x0400322E RID: 12846
+	// Token: 0x040044A9 RID: 17577
 	Steal = 330,
-	// Token: 0x0400322F RID: 12847
+	// Token: 0x040044AA RID: 17578
 	SuperFart = 335,
-	// Token: 0x04003230 RID: 12848
+	// Token: 0x040044AB RID: 17579
 	KnockoutTalent = 340,
-	// Token: 0x04003231 RID: 12849
+	// Token: 0x040044AC RID: 17580
 	StaticWallTalent = 342,
-	// Token: 0x04003232 RID: 12850
+	// Token: 0x040044AD RID: 17581
 	TeleSliceTalent = 344,
-	// Token: 0x04003233 RID: 12851
+	// Token: 0x040044AE RID: 17582
 	CrowsNestTalent = 346,
-	// Token: 0x04003234 RID: 12852
+	// Token: 0x040044AF RID: 17583
 	CometTalent,
-	// Token: 0x04003235 RID: 12853
+	// Token: 0x040044B0 RID: 17584
 	____SPECIAL_ABILITIES____ = 349,
-	// Token: 0x04003236 RID: 12854
+	// Token: 0x040044B1 RID: 17585
 	WeaponAbilitySwap,
-	// Token: 0x04003237 RID: 12855
+	// Token: 0x040044B2 RID: 17586
 	SpellAbilitySwap = 360,
-	// Token: 0x04003238 RID: 12856
+	// Token: 0x040044B3 RID: 17587
 	TalentAbilitySwap = 370
 }

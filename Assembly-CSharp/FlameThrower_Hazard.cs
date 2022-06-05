@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200044B RID: 1099
+// Token: 0x02000721 RID: 1825
 public class FlameThrower_Hazard : Turret_Hazard
 {
-	// Token: 0x17000FE3 RID: 4067
-	// (get) Token: 0x06002864 RID: 10340 RVA: 0x00085D07 File Offset: 0x00083F07
+	// Token: 0x170014E0 RID: 5344
+	// (get) Token: 0x060037C4 RID: 14276 RVA: 0x0001E9C6 File Offset: 0x0001CBC6
 	public override string[] ProjectileNameArray
 	{
 		get
@@ -23,8 +23,8 @@ public class FlameThrower_Hazard : Turret_Hazard
 		}
 	}
 
-	// Token: 0x17000FE4 RID: 4068
-	// (get) Token: 0x06002865 RID: 10341 RVA: 0x00085D34 File Offset: 0x00083F34
+	// Token: 0x170014E1 RID: 5345
+	// (get) Token: 0x060037C5 RID: 14277 RVA: 0x0001E9F3 File Offset: 0x0001CBF3
 	public float FlameDuration
 	{
 		get
@@ -33,8 +33,8 @@ public class FlameThrower_Hazard : Turret_Hazard
 		}
 	}
 
-	// Token: 0x17000FE5 RID: 4069
-	// (get) Token: 0x06002866 RID: 10342 RVA: 0x00085D42 File Offset: 0x00083F42
+	// Token: 0x170014E2 RID: 5346
+	// (get) Token: 0x060037C6 RID: 14278 RVA: 0x0001EA01 File Offset: 0x0001CC01
 	public override float LoopFireDelay
 	{
 		get
@@ -43,7 +43,7 @@ public class FlameThrower_Hazard : Turret_Hazard
 		}
 	}
 
-	// Token: 0x06002867 RID: 10343 RVA: 0x00085D58 File Offset: 0x00083F58
+	// Token: 0x060037C7 RID: 14279 RVA: 0x000E6D5C File Offset: 0x000E4F5C
 	protected override void PlayTell()
 	{
 		float num = this.m_startingProjectileAngle + base.transform.localEulerAngles.z;
@@ -67,7 +67,7 @@ public class FlameThrower_Hazard : Turret_Hazard
 		base.PlayTell();
 	}
 
-	// Token: 0x06002868 RID: 10344 RVA: 0x00085E2C File Offset: 0x0008402C
+	// Token: 0x060037C8 RID: 14280 RVA: 0x000E6E30 File Offset: 0x000E5030
 	protected override void FireProjectile()
 	{
 		if (base.InAttackRange)
@@ -105,7 +105,7 @@ public class FlameThrower_Hazard : Turret_Hazard
 		this.PrepFiringLogic();
 	}
 
-	// Token: 0x06002869 RID: 10345 RVA: 0x00085F84 File Offset: 0x00084184
+	// Token: 0x060037C9 RID: 14281 RVA: 0x0001EA16 File Offset: 0x0001CC16
 	protected override void Update()
 	{
 		base.Update();
@@ -117,7 +117,7 @@ public class FlameThrower_Hazard : Turret_Hazard
 		}
 	}
 
-	// Token: 0x0600286A RID: 10346 RVA: 0x00085FBB File Offset: 0x000841BB
+	// Token: 0x060037CA RID: 14282 RVA: 0x0001EA4D File Offset: 0x0001CC4D
 	protected override void PrepFiringLogic()
 	{
 		base.PrepFiringLogic();
@@ -128,7 +128,7 @@ public class FlameThrower_Hazard : Turret_Hazard
 		}
 	}
 
-	// Token: 0x0600286B RID: 10347 RVA: 0x00085FE9 File Offset: 0x000841E9
+	// Token: 0x060037CB RID: 14283 RVA: 0x0001EA7B File Offset: 0x0001CC7B
 	private IEnumerator StopProjectileParticleSystem(Projectile_RL projectile)
 	{
 		ParticleSystem partSys = projectile.GetComponentInChildren<ParticleSystem>();
@@ -148,7 +148,7 @@ public class FlameThrower_Hazard : Turret_Hazard
 		yield break;
 	}
 
-	// Token: 0x0600286C RID: 10348 RVA: 0x00085FF8 File Offset: 0x000841F8
+	// Token: 0x060037CC RID: 14284 RVA: 0x000E6F88 File Offset: 0x000E5188
 	public override void ResetHazard()
 	{
 		this.m_startFlameCounter = false;
@@ -165,15 +165,15 @@ public class FlameThrower_Hazard : Turret_Hazard
 		base.ResetHazard();
 	}
 
-	// Token: 0x04002178 RID: 8568
+	// Token: 0x04002CE2 RID: 11490
 	private bool m_startFlameCounter;
 
-	// Token: 0x04002179 RID: 8569
+	// Token: 0x04002CE3 RID: 11491
 	private float m_flameDurationEndTime;
 
-	// Token: 0x0400217A RID: 8570
+	// Token: 0x04002CE4 RID: 11492
 	private Projectile_RL m_flameProjectile;
 
-	// Token: 0x0400217B RID: 8571
+	// Token: 0x04002CE5 RID: 11493
 	private Projectile_RL m_flameWarningProjectile;
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000631 RID: 1585
+// Token: 0x02000A5E RID: 2654
 public class RoomSwappable : MonoBehaviour
 {
 }

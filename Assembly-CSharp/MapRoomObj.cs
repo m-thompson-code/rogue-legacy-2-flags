@@ -1,15 +1,15 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000484 RID: 1156
+// Token: 0x02000781 RID: 1921
 public class MapRoomObj : MonoBehaviour
 {
-	// Token: 0x06002AA2 RID: 10914 RVA: 0x000906CC File Offset: 0x0008E8CC
+	// Token: 0x06003ACD RID: 15053 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Start()
 	{
 	}
 
-	// Token: 0x06002AA3 RID: 10915 RVA: 0x000906CE File Offset: 0x0008E8CE
+	// Token: 0x06003ACE RID: 15054 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Update()
 	{
 	}

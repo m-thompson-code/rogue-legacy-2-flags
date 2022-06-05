@@ -8,11 +8,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Token: 0x02000574 RID: 1396
+// Token: 0x02000949 RID: 2377
 public class ConfirmMenuWindowController : WindowController, ILocalizable
 {
-	// Token: 0x1700127C RID: 4732
-	// (get) Token: 0x06003341 RID: 13121 RVA: 0x000AD6CB File Offset: 0x000AB8CB
+	// Token: 0x1700194B RID: 6475
+	// (get) Token: 0x06004834 RID: 18484 RVA: 0x00027A75 File Offset: 0x00025C75
 	protected bool InputDelayed
 	{
 		get
@@ -21,8 +21,8 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x1700127D RID: 4733
-	// (get) Token: 0x06003342 RID: 13122 RVA: 0x000AD6DA File Offset: 0x000AB8DA
+	// Token: 0x1700194C RID: 6476
+	// (get) Token: 0x06004835 RID: 18485 RVA: 0x00027A84 File Offset: 0x00025C84
 	public override WindowID ID
 	{
 		get
@@ -35,7 +35,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003343 RID: 13123 RVA: 0x000AD6EC File Offset: 0x000AB8EC
+	// Token: 0x06004836 RID: 18486 RVA: 0x00117D9C File Offset: 0x00115F9C
 	private void Awake()
 	{
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
@@ -44,7 +44,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		this.m_onVerticalPressed = new Action<InputActionEventData>(this.OnVerticalPressed);
 	}
 
-	// Token: 0x06003344 RID: 13124 RVA: 0x000AD744 File Offset: 0x000AB944
+	// Token: 0x06004837 RID: 18487 RVA: 0x00117DF4 File Offset: 0x00115FF4
 	public override void Initialize()
 	{
 		base.Initialize();
@@ -65,18 +65,18 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		this.m_activeButtonList = new List<ConfirmMenu_Button>();
 	}
 
-	// Token: 0x06003345 RID: 13125 RVA: 0x000AD7EA File Offset: 0x000AB9EA
+	// Token: 0x06004838 RID: 18488 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void OnPointerExit()
 	{
 	}
 
-	// Token: 0x06003346 RID: 13126 RVA: 0x000AD7EC File Offset: 0x000AB9EC
+	// Token: 0x06004839 RID: 18489 RVA: 0x00027A93 File Offset: 0x00025C93
 	private void OnPointerEnter(ConfirmMenu_Button button)
 	{
 		this.SetSelectedButton(button.Index);
 	}
 
-	// Token: 0x06003347 RID: 13127 RVA: 0x000AD7FA File Offset: 0x000AB9FA
+	// Token: 0x0600483A RID: 18490 RVA: 0x00027AA1 File Offset: 0x00025CA1
 	private void PlayClickSFX(ConfirmMenu_Button button)
 	{
 		if (this.m_selectOptionEvent != null)
@@ -85,7 +85,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003348 RID: 13128 RVA: 0x000AD810 File Offset: 0x000ABA10
+	// Token: 0x0600483B RID: 18491 RVA: 0x00117E9C File Offset: 0x0011609C
 	private void SetSelectedButton(int index)
 	{
 		if (index == this.m_selectedButtonIndex)
@@ -118,19 +118,19 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003349 RID: 13129 RVA: 0x000AD8CC File Offset: 0x000ABACC
+	// Token: 0x0600483C RID: 18492 RVA: 0x00027AB6 File Offset: 0x00025CB6
 	protected override void OnFocus()
 	{
 		this.AddInputListeners();
 	}
 
-	// Token: 0x0600334A RID: 13130 RVA: 0x000AD8D4 File Offset: 0x000ABAD4
+	// Token: 0x0600483D RID: 18493 RVA: 0x00027ABE File Offset: 0x00025CBE
 	protected override void OnLostFocus()
 	{
 		this.RemoveInputListeners();
 	}
 
-	// Token: 0x0600334B RID: 13131 RVA: 0x000AD8DC File Offset: 0x000ABADC
+	// Token: 0x0600483E RID: 18494 RVA: 0x00117F58 File Offset: 0x00116158
 	protected override void OnOpen()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -144,7 +144,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600334C RID: 13132 RVA: 0x000AD93A File Offset: 0x000ABB3A
+	// Token: 0x0600483F RID: 18495 RVA: 0x00027AC6 File Offset: 0x00025CC6
 	private IEnumerator RunOpenAnimCoroutine()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -184,7 +184,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x0600334D RID: 13133 RVA: 0x000AD949 File Offset: 0x000ABB49
+	// Token: 0x06004840 RID: 18496 RVA: 0x00027AD5 File Offset: 0x00025CD5
 	private IEnumerator ConfirmButtonDelayCoroutine()
 	{
 		foreach (ConfirmMenu_Button confirmMenu_Button in this.m_activeButtonList)
@@ -212,7 +212,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x0600334E RID: 13134 RVA: 0x000AD958 File Offset: 0x000ABB58
+	// Token: 0x06004841 RID: 18497 RVA: 0x00117FB8 File Offset: 0x001161B8
 	protected override void OnClose()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -241,13 +241,13 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		this.m_buttonDelayTime = 0f;
 	}
 
-	// Token: 0x0600334F RID: 13135 RVA: 0x000ADA1B File Offset: 0x000ABC1B
+	// Token: 0x06004842 RID: 18498 RVA: 0x00027AE4 File Offset: 0x00025CE4
 	public void SetStartingSelectedButton(int startingButtonIndex)
 	{
 		this.m_startingButtonIndex = startingButtonIndex;
 	}
 
-	// Token: 0x06003350 RID: 13136 RVA: 0x000ADA24 File Offset: 0x000ABC24
+	// Token: 0x06004843 RID: 18499 RVA: 0x0011807C File Offset: 0x0011627C
 	public void SetNumberOfButtons(int numButtons)
 	{
 		if (numButtons < 1 || numButtons >= this.m_buttonArray.Length)
@@ -277,13 +277,13 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		this.SetBGHeight(970f + num);
 	}
 
-	// Token: 0x06003351 RID: 13137 RVA: 0x000ADAF3 File Offset: 0x000ABCF3
+	// Token: 0x06004844 RID: 18500 RVA: 0x00027AED File Offset: 0x00025CED
 	public void SetButtonDelayTime(float delayTime)
 	{
 		this.m_buttonDelayTime = delayTime;
 	}
 
-	// Token: 0x06003352 RID: 13138 RVA: 0x000ADAFC File Offset: 0x000ABCFC
+	// Token: 0x06004845 RID: 18501 RVA: 0x00027AF6 File Offset: 0x00025CF6
 	public ConfirmMenu_Button GetButtonAtIndex(int index)
 	{
 		if (index < 0 || index >= this.m_activeButtonList.Count)
@@ -294,7 +294,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		return this.m_activeButtonList[index];
 	}
 
-	// Token: 0x06003353 RID: 13139 RVA: 0x000ADB3C File Offset: 0x000ABD3C
+	// Token: 0x06004846 RID: 18502 RVA: 0x0011814C File Offset: 0x0011634C
 	private void SetBGHeight(float height)
 	{
 		Vector2 sizeDelta = this.m_confirmBoxBGRectTransform.sizeDelta;
@@ -303,7 +303,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		LayoutRebuilder.ForceRebuildLayoutImmediate(this.m_confirmBoxBGRectTransform);
 	}
 
-	// Token: 0x06003354 RID: 13140 RVA: 0x000ADB74 File Offset: 0x000ABD74
+	// Token: 0x06004847 RID: 18503 RVA: 0x00027B33 File Offset: 0x00025D33
 	public void SetTitleText(string text, bool isLocID)
 	{
 		if (isLocID)
@@ -316,7 +316,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		this.m_refreshTitleTextLocID = null;
 	}
 
-	// Token: 0x06003355 RID: 13141 RVA: 0x000ADBA7 File Offset: 0x000ABDA7
+	// Token: 0x06004848 RID: 18504 RVA: 0x00027B66 File Offset: 0x00025D66
 	public void SetDescriptionText(string text, bool isLocID)
 	{
 		if (isLocID)
@@ -329,13 +329,13 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		this.m_refreshDescriptionTextLocID = null;
 	}
 
-	// Token: 0x06003356 RID: 13142 RVA: 0x000ADBDA File Offset: 0x000ABDDA
+	// Token: 0x06004849 RID: 18505 RVA: 0x00027B99 File Offset: 0x00025D99
 	public void SetOnCancelAction(Action cancelAction)
 	{
 		this.m_onCancelAction = cancelAction;
 	}
 
-	// Token: 0x06003357 RID: 13143 RVA: 0x000ADBE4 File Offset: 0x000ABDE4
+	// Token: 0x0600484A RID: 18506 RVA: 0x00118184 File Offset: 0x00116384
 	public void ApplyMATHack()
 	{
 		if (!this.m_playerMATHackApplied)
@@ -350,7 +350,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003358 RID: 13144 RVA: 0x000ADC48 File Offset: 0x000ABE48
+	// Token: 0x0600484B RID: 18507 RVA: 0x001181E8 File Offset: 0x001163E8
 	private void OnConfirmPressed(InputActionEventData data)
 	{
 		if (data.IsCurrentInputSource(ControllerType.Mouse))
@@ -371,7 +371,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003359 RID: 13145 RVA: 0x000ADCAE File Offset: 0x000ABEAE
+	// Token: 0x0600484C RID: 18508 RVA: 0x00027BA2 File Offset: 0x00025DA2
 	private void OnCancelPressed(InputActionEventData data)
 	{
 		if (this.InputDelayed)
@@ -384,7 +384,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600335A RID: 13146 RVA: 0x000ADCCC File Offset: 0x000ABECC
+	// Token: 0x0600484D RID: 18509 RVA: 0x00118250 File Offset: 0x00116450
 	private void OnVerticalPressed(InputActionEventData data)
 	{
 		if (this.InputDelayed)
@@ -427,7 +427,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600335B RID: 13147 RVA: 0x000ADD50 File Offset: 0x000ABF50
+	// Token: 0x0600484E RID: 18510 RVA: 0x001182D4 File Offset: 0x001164D4
 	private void AddInputListeners()
 	{
 		if (ReInput.isReady)
@@ -439,7 +439,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600335C RID: 13148 RVA: 0x000ADDC8 File Offset: 0x000ABFC8
+	// Token: 0x0600484F RID: 18511 RVA: 0x0011834C File Offset: 0x0011654C
 	private void RemoveInputListeners()
 	{
 		if (ReInput.isReady)
@@ -451,7 +451,7 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600335D RID: 13149 RVA: 0x000ADE40 File Offset: 0x000AC040
+	// Token: 0x06004850 RID: 18512 RVA: 0x001183C4 File Offset: 0x001165C4
 	public void RefreshText(object sender, EventArgs args)
 	{
 		if (!string.IsNullOrEmpty(this.m_refreshTitleTextLocID))
@@ -469,107 +469,107 @@ public class ConfirmMenuWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x04002805 RID: 10245
+	// Token: 0x04003743 RID: 14147
 	private const float DEFAULT_ONE_BUTTON_BG_HEIGHT = 765f;
 
-	// Token: 0x04002806 RID: 10246
+	// Token: 0x04003744 RID: 14148
 	private const float DEFAULT_ONE_BUTTON_BIG_BG_HEIGHT = 970f;
 
-	// Token: 0x04002807 RID: 10247
+	// Token: 0x04003745 RID: 14149
 	public const float BUTTON_HEIGHT = 100f;
 
-	// Token: 0x04002808 RID: 10248
+	// Token: 0x04003746 RID: 14150
 	[SerializeField]
 	private RectTransform m_confirmBoxBGRectTransform;
 
-	// Token: 0x04002809 RID: 10249
+	// Token: 0x04003747 RID: 14151
 	[SerializeField]
 	private CanvasGroup m_fadeBGCanvasGroup;
 
-	// Token: 0x0400280A RID: 10250
+	// Token: 0x04003748 RID: 14152
 	[SerializeField]
 	private Image m_backgroundImage;
 
-	// Token: 0x0400280B RID: 10251
+	// Token: 0x04003749 RID: 14153
 	[SerializeField]
 	private Material m_backgroundHackMaterial;
 
-	// Token: 0x0400280C RID: 10252
+	// Token: 0x0400374A RID: 14154
 	[SerializeField]
 	private TMP_Text m_titleText;
 
-	// Token: 0x0400280D RID: 10253
+	// Token: 0x0400374B RID: 14155
 	[SerializeField]
 	private TMP_Text m_descriptionText;
 
-	// Token: 0x0400280E RID: 10254
+	// Token: 0x0400374C RID: 14156
 	[SerializeField]
 	private GameObject m_confirmMenuBox;
 
-	// Token: 0x0400280F RID: 10255
+	// Token: 0x0400374D RID: 14157
 	[SerializeField]
 	private TMP_Text m_buttonDelayCountdownText;
 
-	// Token: 0x04002810 RID: 10256
+	// Token: 0x0400374E RID: 14158
 	[SerializeField]
 	private bool m_isBigWindow;
 
-	// Token: 0x04002811 RID: 10257
+	// Token: 0x0400374F RID: 14159
 	[Space(10f)]
 	[SerializeField]
 	private UnityEvent m_windowOpenedEvent;
 
-	// Token: 0x04002812 RID: 10258
+	// Token: 0x04003750 RID: 14160
 	[SerializeField]
 	private UnityEvent m_windowClosedEvent;
 
-	// Token: 0x04002813 RID: 10259
+	// Token: 0x04003751 RID: 14161
 	[SerializeField]
 	private UnityEvent m_changeSelectedOptionEvent;
 
-	// Token: 0x04002814 RID: 10260
+	// Token: 0x04003752 RID: 14162
 	[SerializeField]
 	private UnityEvent m_selectOptionEvent;
 
-	// Token: 0x04002815 RID: 10261
+	// Token: 0x04003753 RID: 14163
 	private ConfirmMenu_Button[] m_buttonArray;
 
-	// Token: 0x04002816 RID: 10262
+	// Token: 0x04003754 RID: 14164
 	private List<ConfirmMenu_Button> m_activeButtonList;
 
-	// Token: 0x04002817 RID: 10263
+	// Token: 0x04003755 RID: 14165
 	private int m_selectedButtonIndex;
 
-	// Token: 0x04002818 RID: 10264
+	// Token: 0x04003756 RID: 14166
 	private Action m_onCancelAction;
 
-	// Token: 0x04002819 RID: 10265
+	// Token: 0x04003757 RID: 14167
 	private Vector3 m_storedBoxScale;
 
-	// Token: 0x0400281A RID: 10266
+	// Token: 0x04003758 RID: 14168
 	private int m_startingButtonIndex;
 
-	// Token: 0x0400281B RID: 10267
+	// Token: 0x04003759 RID: 14169
 	private bool m_playerMATHackApplied;
 
-	// Token: 0x0400281C RID: 10268
+	// Token: 0x0400375A RID: 14170
 	private float m_buttonDelayTime;
 
-	// Token: 0x0400281D RID: 10269
+	// Token: 0x0400375B RID: 14171
 	private string m_refreshTitleTextLocID;
 
-	// Token: 0x0400281E RID: 10270
+	// Token: 0x0400375C RID: 14172
 	private string m_refreshDescriptionTextLocID;
 
-	// Token: 0x0400281F RID: 10271
+	// Token: 0x0400375D RID: 14173
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x04002820 RID: 10272
+	// Token: 0x0400375E RID: 14174
 	private Action<InputActionEventData> m_onConfirmPressed;
 
-	// Token: 0x04002821 RID: 10273
+	// Token: 0x0400375F RID: 14175
 	private Action<InputActionEventData> m_onCancelPressed;
 
-	// Token: 0x04002822 RID: 10274
+	// Token: 0x04003760 RID: 14176
 	private Action<InputActionEventData> m_onVerticalPressed;
 }

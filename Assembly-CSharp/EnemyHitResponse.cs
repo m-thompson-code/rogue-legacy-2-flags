@@ -3,10 +3,10 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020001F4 RID: 500
+// Token: 0x02000393 RID: 915
 public class EnemyHitResponse : BaseCharacterHitResponse
 {
-	// Token: 0x0600154E RID: 5454 RVA: 0x00041417 File Offset: 0x0003F617
+	// Token: 0x06001E8D RID: 7821 RVA: 0x0000FF1E File Offset: 0x0000E11E
 	protected override void Awake()
 	{
 		base.Awake();
@@ -14,7 +14,7 @@ public class EnemyHitResponse : BaseCharacterHitResponse
 		this.m_hasInteractable = (this.m_enemyController.GetComponent<Interactable>() != null);
 	}
 
-	// Token: 0x0600154F RID: 5455 RVA: 0x00041447 File Offset: 0x0003F647
+	// Token: 0x06001E8E RID: 7822 RVA: 0x0000FF4E File Offset: 0x0000E14E
 	protected override void HandleHitResponse(IHitboxController otherHBController)
 	{
 		if (otherHBController != null && otherHBController.CollisionType == CollisionType.Hazard && this.m_enemyController.IsFlying)
@@ -28,7 +28,7 @@ public class EnemyHitResponse : BaseCharacterHitResponse
 		base.HandleHitResponse(otherHBController);
 	}
 
-	// Token: 0x06001550 RID: 5456 RVA: 0x00041480 File Offset: 0x0003F680
+	// Token: 0x06001E8F RID: 7823 RVA: 0x0009FA08 File Offset: 0x0009DC08
 	protected override float CharacterDamaged(IDamageObj damageObj, GameObject otherRootObj, out CriticalStrikeType critType, out float damageBlocked, float damageOverride = -1f, bool trueDamage = false)
 	{
 		Projectile_RL projectile_RL = damageObj as Projectile_RL;
@@ -302,7 +302,7 @@ public class EnemyHitResponse : BaseCharacterHitResponse
 		return num;
 	}
 
-	// Token: 0x06001551 RID: 5457 RVA: 0x00041F98 File Offset: 0x00040198
+	// Token: 0x06001E90 RID: 7824 RVA: 0x0000FF84 File Offset: 0x0000E184
 	private IEnumerator ResetStunAnimState()
 	{
 		this.m_enemyController.Animator.SetBool(base.StunnedAnimParamName, true);
@@ -316,7 +316,7 @@ public class EnemyHitResponse : BaseCharacterHitResponse
 		yield break;
 	}
 
-	// Token: 0x06001552 RID: 5458 RVA: 0x00041FA8 File Offset: 0x000401A8
+	// Token: 0x06001E91 RID: 7825 RVA: 0x000A0520 File Offset: 0x0009E720
 	protected override void CharacterKnockedBack(IDamageObj damageObj, GameObject otherRootObj)
 	{
 		Vector2 b = (damageObj == null) ? Vector2.one : damageObj.ExternalKnockbackMod;
@@ -358,15 +358,15 @@ public class EnemyHitResponse : BaseCharacterHitResponse
 		}
 	}
 
-	// Token: 0x0400148D RID: 5261
+	// Token: 0x04001B47 RID: 6983
 	private EnemyController m_enemyController;
 
-	// Token: 0x0400148E RID: 5262
+	// Token: 0x04001B48 RID: 6984
 	private static float m_timeSlowdownCDTimer;
 
-	// Token: 0x0400148F RID: 5263
+	// Token: 0x04001B49 RID: 6985
 	private bool m_hasInteractable;
 
-	// Token: 0x04001490 RID: 5264
+	// Token: 0x04001B4A RID: 6986
 	private WaitRL_Yield m_stunWaitYield;
 }

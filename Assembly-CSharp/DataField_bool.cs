@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000051 RID: 81
+// Token: 0x02000059 RID: 89
 [Serializable]
 public class DataField_bool : DataField<bool>
 {

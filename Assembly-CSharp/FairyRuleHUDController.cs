@@ -5,11 +5,11 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020001F9 RID: 505
+// Token: 0x0200039C RID: 924
 public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 {
-	// Token: 0x17000AE8 RID: 2792
-	// (get) Token: 0x06001566 RID: 5478 RVA: 0x000424DE File Offset: 0x000406DE
+	// Token: 0x17000DFA RID: 3578
+	// (get) Token: 0x06001EB7 RID: 7863 RVA: 0x00010117 File Offset: 0x0000E317
 	public CanvasGroup Panel
 	{
 		get
@@ -18,8 +18,8 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x17000AE9 RID: 2793
-	// (get) Token: 0x06001567 RID: 5479 RVA: 0x000424E6 File Offset: 0x000406E6
+	// Token: 0x17000DFB RID: 3579
+	// (get) Token: 0x06001EB8 RID: 7864 RVA: 0x0001011F File Offset: 0x0000E31F
 	public CanvasGroup BGCanvasGroup
 	{
 		get
@@ -28,7 +28,7 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06001568 RID: 5480 RVA: 0x000424F0 File Offset: 0x000406F0
+	// Token: 0x06001EB9 RID: 7865 RVA: 0x000A0C00 File Offset: 0x0009EE00
 	private void Awake()
 	{
 		if (FairyRuleHUDController.m_hudEntryArray_STATIC == null)
@@ -50,7 +50,7 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 	}
 
-	// Token: 0x06001569 RID: 5481 RVA: 0x000425C0 File Offset: 0x000407C0
+	// Token: 0x06001EBA RID: 7866 RVA: 0x000A0CD0 File Offset: 0x0009EED0
 	private void Start()
 	{
 		this.SetHUDIsVisible(false);
@@ -63,7 +63,7 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		this.BGCanvasGroup.alpha = 0.7f;
 	}
 
-	// Token: 0x0600156A RID: 5482 RVA: 0x00042638 File Offset: 0x00040838
+	// Token: 0x06001EBB RID: 7867 RVA: 0x000A0D48 File Offset: 0x0009EF48
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterFairyRoom, this.m_onPlayerEnterFairyRoom);
@@ -79,13 +79,13 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x0600156B RID: 5483 RVA: 0x000426B0 File Offset: 0x000408B0
+	// Token: 0x06001EBC RID: 7868 RVA: 0x00010127 File Offset: 0x0000E327
 	private void OnPlayerDeath(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		this.SetHUDIsVisible(false);
 	}
 
-	// Token: 0x0600156C RID: 5484 RVA: 0x000426BC File Offset: 0x000408BC
+	// Token: 0x06001EBD RID: 7869 RVA: 0x000A0DC0 File Offset: 0x0009EFC0
 	private void OnPlayerEnterFairyRoom(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		base.StopAllCoroutines();
@@ -157,7 +157,7 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		this.SetHUDIsVisible(true);
 	}
 
-	// Token: 0x0600156D RID: 5485 RVA: 0x00042950 File Offset: 0x00040B50
+	// Token: 0x06001EBE RID: 7870 RVA: 0x000A1054 File Offset: 0x0009F254
 	private void OnFairyRoomStateChange(object sender, EventArgs args)
 	{
 		FairyRoomState state = (args as FairyRoomEnteredEventArgs).FairyRoomController.State;
@@ -191,7 +191,7 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		this.m_orbImage.color = color;
 	}
 
-	// Token: 0x0600156E RID: 5486 RVA: 0x000429CD File Offset: 0x00040BCD
+	// Token: 0x06001EBF RID: 7871 RVA: 0x00010130 File Offset: 0x0000E330
 	private IEnumerator FairyTimerCoroutine(TimeLimit_FairyRule fairyRule, FairyRuleHUDEntry hudEntry)
 	{
 		this.m_timerValue = 0f;
@@ -209,7 +209,7 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x0600156F RID: 5487 RVA: 0x000429EC File Offset: 0x00040BEC
+	// Token: 0x06001EC0 RID: 7872 RVA: 0x000A10D4 File Offset: 0x0009F2D4
 	private void OnPlayerExitFairyRoom(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		FairyRoomEnteredEventArgs fairyRoomEnteredEventArgs = eventArgs as FairyRoomEnteredEventArgs;
@@ -219,7 +219,7 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06001570 RID: 5488 RVA: 0x00042A20 File Offset: 0x00040C20
+	// Token: 0x06001EC1 RID: 7873 RVA: 0x000A1108 File Offset: 0x0009F308
 	private void OnFairyRuleStateChange(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		FairyRoomRuleStateChangeEventArgs fairyRoomRuleStateChangeEventArgs = eventArgs as FairyRoomRuleStateChangeEventArgs;
@@ -273,26 +273,26 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06001571 RID: 5489 RVA: 0x00042B6C File Offset: 0x00040D6C
+	// Token: 0x06001EC2 RID: 7874 RVA: 0x0001014D File Offset: 0x0000E34D
 	private void SetHUDIsVisible(bool isVisible)
 	{
 		this.Panel.gameObject.SetActive(isVisible);
 		this.m_particleEffect.gameObject.SetActive(isVisible);
 	}
 
-	// Token: 0x06001572 RID: 5490 RVA: 0x00042B90 File Offset: 0x00040D90
+	// Token: 0x06001EC3 RID: 7875 RVA: 0x00010171 File Offset: 0x0000E371
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06001573 RID: 5491 RVA: 0x00042B9F File Offset: 0x00040D9F
+	// Token: 0x06001EC4 RID: 7876 RVA: 0x00010180 File Offset: 0x0000E380
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06001574 RID: 5492 RVA: 0x00042BB0 File Offset: 0x00040DB0
+	// Token: 0x06001EC5 RID: 7877 RVA: 0x000A1254 File Offset: 0x0009F454
 	public void RefreshText(object sender, EventArgs args)
 	{
 		if (this.m_fairyRoomController)
@@ -315,64 +315,64 @@ public class FairyRuleHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x040014A9 RID: 5289
+	// Token: 0x04001B71 RID: 7025
 	[SerializeField]
 	private CanvasGroup m_panel;
 
-	// Token: 0x040014AA RID: 5290
+	// Token: 0x04001B72 RID: 7026
 	[SerializeField]
 	private GameObject m_entryGroup;
 
-	// Token: 0x040014AB RID: 5291
+	// Token: 0x04001B73 RID: 7027
 	[SerializeField]
 	private CanvasGroup m_bgCanvasGroup;
 
-	// Token: 0x040014AC RID: 5292
+	// Token: 0x04001B74 RID: 7028
 	[SerializeField]
 	private FairyRuleHUDEntry m_fairyRuleHUDEntryPrefab;
 
-	// Token: 0x040014AD RID: 5293
+	// Token: 0x04001B75 RID: 7029
 	[SerializeField]
 	private FadeOutHUDCollider m_fairyHUDCollider;
 
-	// Token: 0x040014AE RID: 5294
+	// Token: 0x04001B76 RID: 7030
 	[SerializeField]
 	private ParticleSystem m_particleEffect;
 
-	// Token: 0x040014AF RID: 5295
+	// Token: 0x04001B77 RID: 7031
 	[SerializeField]
 	private Image m_orbImage;
 
-	// Token: 0x040014B0 RID: 5296
+	// Token: 0x04001B78 RID: 7032
 	private FairyRoomController m_fairyRoomController;
 
-	// Token: 0x040014B1 RID: 5297
+	// Token: 0x04001B79 RID: 7033
 	private Dictionary<FairyRule, FairyRuleHUDEntry> m_hudEntryTable;
 
-	// Token: 0x040014B2 RID: 5298
+	// Token: 0x04001B7A RID: 7034
 	private static FairyRuleHUDEntry[] m_hudEntryArray_STATIC;
 
-	// Token: 0x040014B3 RID: 5299
+	// Token: 0x04001B7B RID: 7035
 	private Tween m_fadeInTween;
 
-	// Token: 0x040014B4 RID: 5300
+	// Token: 0x04001B7C RID: 7036
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterFairyRoom;
 
-	// Token: 0x040014B5 RID: 5301
+	// Token: 0x04001B7D RID: 7037
 	private Action<MonoBehaviour, EventArgs> m_onFairyRoomStateChange;
 
-	// Token: 0x040014B6 RID: 5302
+	// Token: 0x04001B7E RID: 7038
 	private Action<MonoBehaviour, EventArgs> m_onPlayerExitFairyRoom;
 
-	// Token: 0x040014B7 RID: 5303
+	// Token: 0x04001B7F RID: 7039
 	private Action<MonoBehaviour, EventArgs> m_onPlayerDeath;
 
-	// Token: 0x040014B8 RID: 5304
+	// Token: 0x04001B80 RID: 7040
 	private Action<MonoBehaviour, EventArgs> m_onFairyRuleStateChange;
 
-	// Token: 0x040014B9 RID: 5305
+	// Token: 0x04001B81 RID: 7041
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x040014BA RID: 5306
+	// Token: 0x04001B82 RID: 7042
 	private float m_timerValue;
 }

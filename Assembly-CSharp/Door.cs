@@ -6,11 +6,11 @@ using MoreMountains.CorgiEngine;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x02000401 RID: 1025
+// Token: 0x020006AF RID: 1711
 public class Door : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x17000F48 RID: 3912
-	// (get) Token: 0x06002618 RID: 9752 RVA: 0x0007DC04 File Offset: 0x0007BE04
+	// Token: 0x170013FD RID: 5117
+	// (get) Token: 0x0600349D RID: 13469 RVA: 0x0001CE01 File Offset: 0x0001B001
 	public IRelayLink<object, DoorEventArgs> PlayerEnterRelay
 	{
 		get
@@ -19,8 +19,8 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F49 RID: 3913
-	// (get) Token: 0x06002619 RID: 9753 RVA: 0x0007DC11 File Offset: 0x0007BE11
+	// Token: 0x170013FE RID: 5118
+	// (get) Token: 0x0600349E RID: 13470 RVA: 0x0001CE0E File Offset: 0x0001B00E
 	public IRelayLink<object, DoorEventArgs> CloseRelay
 	{
 		get
@@ -29,8 +29,8 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F4A RID: 3914
-	// (get) Token: 0x0600261A RID: 9754 RVA: 0x0007DC1E File Offset: 0x0007BE1E
+	// Token: 0x170013FF RID: 5119
+	// (get) Token: 0x0600349F RID: 13471 RVA: 0x0001CE1B File Offset: 0x0001B01B
 	public IRelayLink<object, DoorConnectEventArgs> DoorConnectRelay
 	{
 		get
@@ -39,8 +39,8 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F4B RID: 3915
-	// (get) Token: 0x0600261B RID: 9755 RVA: 0x0007DC2B File Offset: 0x0007BE2B
+	// Token: 0x17001400 RID: 5120
+	// (get) Token: 0x060034A0 RID: 13472 RVA: 0x0001CE28 File Offset: 0x0001B028
 	public IRelayLink<object, DoorConnectEventArgs> DoorDisconnectRelay
 	{
 		get
@@ -49,8 +49,8 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F4C RID: 3916
-	// (get) Token: 0x0600261C RID: 9756 RVA: 0x0007DC38 File Offset: 0x0007BE38
+	// Token: 0x17001401 RID: 5121
+	// (get) Token: 0x060034A1 RID: 13473 RVA: 0x0001CE35 File Offset: 0x0001B035
 	public IRelayLink<object, EventArgs> DoorDestroyedRelay
 	{
 		get
@@ -59,8 +59,8 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F4D RID: 3917
-	// (get) Token: 0x0600261D RID: 9757 RVA: 0x0007DC45 File Offset: 0x0007BE45
+	// Token: 0x17001402 RID: 5122
+	// (get) Token: 0x060034A2 RID: 13474 RVA: 0x0001CE42 File Offset: 0x0001B042
 	public BaseRoom Room
 	{
 		get
@@ -69,7 +69,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x0600261E RID: 9758 RVA: 0x0007DC50 File Offset: 0x0007BE50
+	// Token: 0x060034A3 RID: 13475 RVA: 0x000DDC0C File Offset: 0x000DBE0C
 	public void SetRoom(BaseRoom value)
 	{
 		if (this.m_room)
@@ -98,8 +98,8 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F4E RID: 3918
-	// (get) Token: 0x0600261F RID: 9759 RVA: 0x0007DD1C File Offset: 0x0007BF1C
+	// Token: 0x17001403 RID: 5123
+	// (get) Token: 0x060034A4 RID: 13476 RVA: 0x000DDCD8 File Offset: 0x000DBED8
 	public Ferr2DT_PathTerrain Ferr2D
 	{
 		get
@@ -119,9 +119,9 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F4F RID: 3919
-	// (get) Token: 0x06002620 RID: 9760 RVA: 0x0007DD70 File Offset: 0x0007BF70
-	// (set) Token: 0x06002621 RID: 9761 RVA: 0x0007DD78 File Offset: 0x0007BF78
+	// Token: 0x17001404 RID: 5124
+	// (get) Token: 0x060034A5 RID: 13477 RVA: 0x0001CE4A File Offset: 0x0001B04A
+	// (set) Token: 0x060034A6 RID: 13478 RVA: 0x0001CE52 File Offset: 0x0001B052
 	public Door ConnectedDoor
 	{
 		get
@@ -134,8 +134,8 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F50 RID: 3920
-	// (get) Token: 0x06002622 RID: 9762 RVA: 0x0007DD81 File Offset: 0x0007BF81
+	// Token: 0x17001405 RID: 5125
+	// (get) Token: 0x060034A7 RID: 13479 RVA: 0x0001CE5B File Offset: 0x0001B05B
 	public BaseRoom ConnectedRoom
 	{
 		get
@@ -148,23 +148,23 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F51 RID: 3921
-	// (get) Token: 0x06002623 RID: 9763 RVA: 0x0007DD9E File Offset: 0x0007BF9E
-	// (set) Token: 0x06002624 RID: 9764 RVA: 0x0007DDA6 File Offset: 0x0007BFA6
+	// Token: 0x17001406 RID: 5126
+	// (get) Token: 0x060034A8 RID: 13480 RVA: 0x0001CE78 File Offset: 0x0001B078
+	// (set) Token: 0x060034A9 RID: 13481 RVA: 0x0001CE80 File Offset: 0x0001B080
 	public GridPointManager GridPointManager { get; private set; }
 
-	// Token: 0x17000F52 RID: 3922
-	// (get) Token: 0x06002625 RID: 9765 RVA: 0x0007DDAF File Offset: 0x0007BFAF
-	// (set) Token: 0x06002626 RID: 9766 RVA: 0x0007DDB7 File Offset: 0x0007BFB7
+	// Token: 0x17001407 RID: 5127
+	// (get) Token: 0x060034AA RID: 13482 RVA: 0x0001CE89 File Offset: 0x0001B089
+	// (set) Token: 0x060034AB RID: 13483 RVA: 0x0001CE91 File Offset: 0x0001B091
 	public Vector2Int GridPointCoordinates { get; private set; }
 
-	// Token: 0x17000F53 RID: 3923
-	// (get) Token: 0x06002627 RID: 9767 RVA: 0x0007DDC0 File Offset: 0x0007BFC0
-	// (set) Token: 0x06002628 RID: 9768 RVA: 0x0007DDC8 File Offset: 0x0007BFC8
+	// Token: 0x17001408 RID: 5128
+	// (get) Token: 0x060034AC RID: 13484 RVA: 0x0001CE9A File Offset: 0x0001B09A
+	// (set) Token: 0x060034AD RID: 13485 RVA: 0x0001CEA2 File Offset: 0x0001B0A2
 	public Vector2 Coordinates { get; private set; }
 
-	// Token: 0x17000F54 RID: 3924
-	// (get) Token: 0x06002629 RID: 9769 RVA: 0x0007DDD1 File Offset: 0x0007BFD1
+	// Token: 0x17001409 RID: 5129
+	// (get) Token: 0x060034AE RID: 13486 RVA: 0x0001CEAB File Offset: 0x0001B0AB
 	public bool DisabledFromLevelEditor
 	{
 		get
@@ -173,9 +173,9 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F55 RID: 3925
-	// (get) Token: 0x0600262A RID: 9770 RVA: 0x0007DDD9 File Offset: 0x0007BFD9
-	// (set) Token: 0x0600262B RID: 9771 RVA: 0x0007DDE1 File Offset: 0x0007BFE1
+	// Token: 0x1700140A RID: 5130
+	// (get) Token: 0x060034AF RID: 13487 RVA: 0x0001CEB3 File Offset: 0x0001B0B3
+	// (set) Token: 0x060034B0 RID: 13488 RVA: 0x0001CEBB File Offset: 0x0001B0BB
 	public Vector2 CenterPoint
 	{
 		get
@@ -188,9 +188,9 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F56 RID: 3926
-	// (get) Token: 0x0600262C RID: 9772 RVA: 0x0007DDEA File Offset: 0x0007BFEA
-	// (set) Token: 0x0600262D RID: 9773 RVA: 0x0007DDF2 File Offset: 0x0007BFF2
+	// Token: 0x1700140B RID: 5131
+	// (get) Token: 0x060034B1 RID: 13489 RVA: 0x0001CEC4 File Offset: 0x0001B0C4
+	// (set) Token: 0x060034B2 RID: 13490 RVA: 0x0001CECC File Offset: 0x0001B0CC
 	public int Number
 	{
 		get
@@ -203,9 +203,9 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F57 RID: 3927
-	// (get) Token: 0x0600262E RID: 9774 RVA: 0x0007DDFB File Offset: 0x0007BFFB
-	// (set) Token: 0x0600262F RID: 9775 RVA: 0x0007DE03 File Offset: 0x0007C003
+	// Token: 0x1700140C RID: 5132
+	// (get) Token: 0x060034B3 RID: 13491 RVA: 0x0001CED5 File Offset: 0x0001B0D5
+	// (set) Token: 0x060034B4 RID: 13492 RVA: 0x0001CEDD File Offset: 0x0001B0DD
 	public RoomSide Side
 	{
 		get
@@ -218,19 +218,19 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F58 RID: 3928
-	// (get) Token: 0x06002630 RID: 9776 RVA: 0x0007DE0C File Offset: 0x0007C00C
-	// (set) Token: 0x06002631 RID: 9777 RVA: 0x0007DE14 File Offset: 0x0007C014
+	// Token: 0x1700140D RID: 5133
+	// (get) Token: 0x060034B5 RID: 13493 RVA: 0x0001CEE6 File Offset: 0x0001B0E6
+	// (set) Token: 0x060034B6 RID: 13494 RVA: 0x0001CEEE File Offset: 0x0001B0EE
 	public GameObject OneWay { get; private set; }
 
-	// Token: 0x06002632 RID: 9778 RVA: 0x0007DE1D File Offset: 0x0007C01D
+	// Token: 0x060034B7 RID: 13495 RVA: 0x0001CEF7 File Offset: 0x0001B0F7
 	public void SetOneWay(GameObject oneWay)
 	{
 		this.OneWay = oneWay;
 	}
 
-	// Token: 0x17000F59 RID: 3929
-	// (get) Token: 0x06002633 RID: 9779 RVA: 0x0007DE26 File Offset: 0x0007C026
+	// Token: 0x1700140E RID: 5134
+	// (get) Token: 0x060034B8 RID: 13496 RVA: 0x0001CF00 File Offset: 0x0001B100
 	public GameObject GameObject
 	{
 		get
@@ -243,8 +243,8 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F5A RID: 3930
-	// (get) Token: 0x06002634 RID: 9780 RVA: 0x0007DE39 File Offset: 0x0007C039
+	// Token: 0x1700140F RID: 5135
+	// (get) Token: 0x060034B9 RID: 13497 RVA: 0x0001CF13 File Offset: 0x0001B113
 	public bool IsBiomeTransitionPoint
 	{
 		get
@@ -253,9 +253,9 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x17000F5B RID: 3931
-	// (get) Token: 0x06002635 RID: 9781 RVA: 0x0007DE44 File Offset: 0x0007C044
-	// (set) Token: 0x06002636 RID: 9782 RVA: 0x0007DE4C File Offset: 0x0007C04C
+	// Token: 0x17001410 RID: 5136
+	// (get) Token: 0x060034BA RID: 13498 RVA: 0x0001CF1E File Offset: 0x0001B11E
+	// (set) Token: 0x060034BB RID: 13499 RVA: 0x0001CF26 File Offset: 0x0001B126
 	public BiomeType TransitionsToBiome
 	{
 		get
@@ -268,13 +268,13 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002637 RID: 9783 RVA: 0x0007DE55 File Offset: 0x0007C055
+	// Token: 0x060034BC RID: 13500 RVA: 0x0001CF2F File Offset: 0x0001B12F
 	public void SetIsBiomeTransitionPoint(BiomeType biome)
 	{
 		this.TransitionsToBiome = biome;
 	}
 
-	// Token: 0x06002638 RID: 9784 RVA: 0x0007DE60 File Offset: 0x0007C060
+	// Token: 0x060034BD RID: 13501 RVA: 0x000DDD2C File Offset: 0x000DBF2C
 	private void Awake()
 	{
 		this.m_onPlayerEnterRoom = new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom);
@@ -283,7 +283,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		this.m_onConnectedDoorDestroyed = new Action<object, EventArgs>(this.OnConnectedDoorDestroyed);
 	}
 
-	// Token: 0x06002639 RID: 9785 RVA: 0x0007DEB8 File Offset: 0x0007C0B8
+	// Token: 0x060034BE RID: 13502 RVA: 0x000DDD84 File Offset: 0x000DBF84
 	private void Start()
 	{
 		MeshRenderer component = base.GetComponent<MeshRenderer>();
@@ -303,7 +303,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x0600263A RID: 9786 RVA: 0x0007DF1C File Offset: 0x0007C11C
+	// Token: 0x060034BF RID: 13503 RVA: 0x000DDDE8 File Offset: 0x000DBFE8
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (!this.m_hasExitTriggerBeenCreated)
@@ -326,7 +326,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		});
 	}
 
-	// Token: 0x0600263B RID: 9787 RVA: 0x0007DFAC File Offset: 0x0007C1AC
+	// Token: 0x060034C0 RID: 13504 RVA: 0x000DDE78 File Offset: 0x000DC078
 	private void OnPlayerExitRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (this.m_exitTrigger != null && this.m_exitTrigger.IsTriggerActive)
@@ -346,13 +346,13 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x0600263C RID: 9788 RVA: 0x0007E03B File Offset: 0x0007C23B
+	// Token: 0x060034C1 RID: 13505 RVA: 0x0001CF38 File Offset: 0x0001B138
 	private void OnRoomDestroyed(object sender, EventArgs eventArgs)
 	{
 		this.SetRoom(null);
 	}
 
-	// Token: 0x0600263D RID: 9789 RVA: 0x0007E044 File Offset: 0x0007C244
+	// Token: 0x060034C2 RID: 13506 RVA: 0x000DDF08 File Offset: 0x000DC108
 	private void CreateExitTrigger()
 	{
 		Vector2 exitColliderSize = this.GetExitColliderSize();
@@ -380,13 +380,13 @@ public class Door : MonoBehaviour, IRoomConsumer
 		this.m_exitTrigger.SetTriggerActive(false);
 	}
 
-	// Token: 0x0600263E RID: 9790 RVA: 0x0007E120 File Offset: 0x0007C320
+	// Token: 0x060034C3 RID: 13507 RVA: 0x0001CF41 File Offset: 0x0001B141
 	private Vector2 GetExitColliderSize()
 	{
 		return new Vector2(32f, 18f);
 	}
 
-	// Token: 0x0600263F RID: 9791 RVA: 0x0007E134 File Offset: 0x0007C334
+	// Token: 0x060034C4 RID: 13508 RVA: 0x000DDFE4 File Offset: 0x000DC1E4
 	private Vector2 GetExitColliderOffset(Vector2 size)
 	{
 		Vector2 vector = Vector2.zero;
@@ -435,7 +435,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		return vector;
 	}
 
-	// Token: 0x06002640 RID: 9792 RVA: 0x0007E284 File Offset: 0x0007C484
+	// Token: 0x060034C5 RID: 13509 RVA: 0x000DE134 File Offset: 0x000DC334
 	private void CreateLedge()
 	{
 		if (GameUtility.IsInGame && !WorldBuilder.DeactivateRoomGameObjects)
@@ -492,7 +492,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002641 RID: 9793 RVA: 0x0007E424 File Offset: 0x0007C624
+	// Token: 0x060034C6 RID: 13510 RVA: 0x000DE2D4 File Offset: 0x000DC4D4
 	private void CreateLedge(Vector2 size, Vector2 position)
 	{
 		GameObject gameObject = new GameObject("Ledge", new Type[]
@@ -505,7 +505,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		gameObject.GetComponent<BoxCollider2D>().size = size;
 	}
 
-	// Token: 0x06002642 RID: 9794 RVA: 0x0007E48C File Offset: 0x0007C68C
+	// Token: 0x060034C7 RID: 13511 RVA: 0x000DE33C File Offset: 0x000DC53C
 	private void OnPlayerEnterExitTrigger(object sender, EventArgs eventArgs)
 	{
 		if (this.m_exitTriggerCoroutine != null)
@@ -520,7 +520,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		this.m_exitTriggerCoroutine = base.StartCoroutine(this.OnPlayerStayExitTrigger());
 	}
 
-	// Token: 0x06002643 RID: 9795 RVA: 0x0007E4E3 File Offset: 0x0007C6E3
+	// Token: 0x060034C8 RID: 13512 RVA: 0x0001CF52 File Offset: 0x0001B152
 	private IEnumerator OnPlayerStayExitTrigger()
 	{
 		while (this.m_exitTrigger.IsPlayerInTrigger)
@@ -547,7 +547,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		yield break;
 	}
 
-	// Token: 0x06002644 RID: 9796 RVA: 0x0007E4F4 File Offset: 0x0007C6F4
+	// Token: 0x060034C9 RID: 13513 RVA: 0x000DE394 File Offset: 0x000DC594
 	private bool GetOnTriggerStayExitRoom()
 	{
 		GameObject player = PlayerManager.GetPlayer();
@@ -622,20 +622,20 @@ public class Door : MonoBehaviour, IRoomConsumer
 		return result;
 	}
 
-	// Token: 0x06002645 RID: 9797 RVA: 0x0007E7E8 File Offset: 0x0007C9E8
+	// Token: 0x060034CA RID: 13514 RVA: 0x0001CF61 File Offset: 0x0001B161
 	public void InitialiseInEditor(RoomSide side, int number)
 	{
 		this.Side = side;
 		this.Number = number;
 	}
 
-	// Token: 0x06002646 RID: 9798 RVA: 0x0007E7F8 File Offset: 0x0007C9F8
+	// Token: 0x060034CB RID: 13515 RVA: 0x0001CF71 File Offset: 0x0001B171
 	private void OnDestroy()
 	{
 		this.m_doorDestroyedRelay.Dispatch(this, EventArgs.Empty);
 	}
 
-	// Token: 0x06002647 RID: 9799 RVA: 0x0007E80C File Offset: 0x0007CA0C
+	// Token: 0x060034CC RID: 13516 RVA: 0x000DE688 File Offset: 0x000DC888
 	public void Close(bool replaceWithWall = true)
 	{
 		if (replaceWithWall)
@@ -662,7 +662,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06002648 RID: 9800 RVA: 0x0007E92C File Offset: 0x0007CB2C
+	// Token: 0x060034CD RID: 13517 RVA: 0x000DE7A8 File Offset: 0x000DC9A8
 	private void AddRoomEventHandlers()
 	{
 		this.m_room.PlayerEnterRelay.AddListener(this.m_onPlayerEnterRoom, false);
@@ -670,7 +670,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		this.m_room.RoomDestroyedRelay.AddListener(this.m_onRoomDestroyed, false);
 	}
 
-	// Token: 0x06002649 RID: 9801 RVA: 0x0007E984 File Offset: 0x0007CB84
+	// Token: 0x060034CE RID: 13518 RVA: 0x000DE800 File Offset: 0x000DCA00
 	private void RemoveRoomEventHandlers()
 	{
 		this.m_room.PlayerEnterRelay.RemoveListener(this.m_onPlayerEnterRoom);
@@ -678,7 +678,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		this.m_room.RoomDestroyedRelay.RemoveListener(this.m_onRoomDestroyed);
 	}
 
-	// Token: 0x0600264A RID: 9802 RVA: 0x0007E9D6 File Offset: 0x0007CBD6
+	// Token: 0x060034CF RID: 13519 RVA: 0x0001CF84 File Offset: 0x0001B184
 	private void OnDrawGizmosSelected()
 	{
 		if (Application.isPlaying)
@@ -687,7 +687,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x0600264B RID: 9803 RVA: 0x0007E9F4 File Offset: 0x0007CBF4
+	// Token: 0x060034D0 RID: 13520 RVA: 0x000DE854 File Offset: 0x000DCA54
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.CompareTag("Door"))
@@ -719,7 +719,7 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x0600264C RID: 9804 RVA: 0x0007EAD0 File Offset: 0x0007CCD0
+	// Token: 0x060034D1 RID: 13521 RVA: 0x000DE930 File Offset: 0x000DCB30
 	private void OnConnectedDoorDestroyed(object sender, EventArgs eventArgs)
 	{
 		if (this.ConnectedDoor)
@@ -738,88 +738,88 @@ public class Door : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x04001FCF RID: 8143
+	// Token: 0x04002A86 RID: 10886
 	private const int LEDGE_LENGTH = 4;
 
-	// Token: 0x04001FD0 RID: 8144
+	// Token: 0x04002A87 RID: 10887
 	private const int LEDGE_THICKNESS = 1;
 
-	// Token: 0x04001FD1 RID: 8145
+	// Token: 0x04002A88 RID: 10888
 	private Ferr2DT_PathTerrain m_terrain;
 
-	// Token: 0x04001FD2 RID: 8146
+	// Token: 0x04002A89 RID: 10889
 	private BaseRoom m_room;
 
-	// Token: 0x04001FD3 RID: 8147
+	// Token: 0x04002A8A RID: 10890
 	private Door m_connectedDoor;
 
-	// Token: 0x04001FD4 RID: 8148
+	// Token: 0x04002A8B RID: 10891
 	private PolygonCollider2D m_collider;
 
-	// Token: 0x04001FD5 RID: 8149
+	// Token: 0x04002A8C RID: 10892
 	private Vector2 m_centerPoint;
 
-	// Token: 0x04001FD6 RID: 8150
+	// Token: 0x04002A8D RID: 10893
 	private PlayerTrigger m_exitTrigger;
 
-	// Token: 0x04001FD7 RID: 8151
+	// Token: 0x04002A8E RID: 10894
 	private Coroutine m_exitTriggerCoroutine;
 
-	// Token: 0x04001FD8 RID: 8152
+	// Token: 0x04002A8F RID: 10895
 	private Vector2 m_roomCoordinates = new Vector2(-10000f, -10000f);
 
-	// Token: 0x04001FD9 RID: 8153
+	// Token: 0x04002A90 RID: 10896
 	private bool m_hasExitTriggerBeenCreated;
 
-	// Token: 0x04001FDA RID: 8154
+	// Token: 0x04002A91 RID: 10897
 	private BiomeType m_transitionsToBiome;
 
-	// Token: 0x04001FDB RID: 8155
+	// Token: 0x04002A92 RID: 10898
 	private Relay<object, DoorEventArgs> m_playerEnterRelay = new Relay<object, DoorEventArgs>();
 
-	// Token: 0x04001FDC RID: 8156
+	// Token: 0x04002A93 RID: 10899
 	private Relay<object, DoorEventArgs> m_closeRelay = new Relay<object, DoorEventArgs>();
 
-	// Token: 0x04001FDD RID: 8157
+	// Token: 0x04002A94 RID: 10900
 	private Relay<object, DoorConnectEventArgs> m_doorConnectRelay = new Relay<object, DoorConnectEventArgs>();
 
-	// Token: 0x04001FDE RID: 8158
+	// Token: 0x04002A95 RID: 10901
 	private Relay<object, DoorConnectEventArgs> m_doorDisconnectRelay = new Relay<object, DoorConnectEventArgs>();
 
-	// Token: 0x04001FDF RID: 8159
+	// Token: 0x04002A96 RID: 10902
 	private Relay<object, EventArgs> m_doorDestroyedRelay = new Relay<object, EventArgs>();
 
-	// Token: 0x04001FE0 RID: 8160
+	// Token: 0x04002A97 RID: 10903
 	private DoorConnectEventArgs m_doorConnectEventArgs;
 
-	// Token: 0x04001FE1 RID: 8161
+	// Token: 0x04002A98 RID: 10904
 	private DoorEventArgs m_doorArgs;
 
-	// Token: 0x04001FE2 RID: 8162
+	// Token: 0x04002A99 RID: 10905
 	private Action<object, EventArgs> m_onConnectedDoorDestroyed;
 
-	// Token: 0x04001FE3 RID: 8163
+	// Token: 0x04002A9A RID: 10906
 	private Action<object, RoomViaDoorEventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04001FE4 RID: 8164
+	// Token: 0x04002A9B RID: 10907
 	private Action<object, RoomViaDoorEventArgs> m_onPlayerExitRoom;
 
-	// Token: 0x04001FE5 RID: 8165
+	// Token: 0x04002A9C RID: 10908
 	private Action<object, EventArgs> m_onRoomDestroyed;
 
-	// Token: 0x04001FE6 RID: 8166
+	// Token: 0x04002A9D RID: 10909
 	[SerializeField]
 	private RoomSide m_side = RoomSide.None;
 
-	// Token: 0x04001FE7 RID: 8167
+	// Token: 0x04002A9E RID: 10910
 	[SerializeField]
 	private int m_index = -1;
 
-	// Token: 0x04001FE8 RID: 8168
+	// Token: 0x04002A9F RID: 10911
 	[SerializeField]
 	private bool m_disableDoor;
 
-	// Token: 0x04001FE9 RID: 8169
+	// Token: 0x04002AA0 RID: 10912
 	[SerializeField]
 	private bool m_disableLedge;
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200003D RID: 61
+// Token: 0x02000040 RID: 64
 [Serializable]
 public class MyClass
 {
-	// Token: 0x040000F4 RID: 244
+	// Token: 0x040000FD RID: 253
 	public int i;
 
-	// Token: 0x040000F5 RID: 245
+	// Token: 0x040000FE RID: 254
 	public string str;
 }

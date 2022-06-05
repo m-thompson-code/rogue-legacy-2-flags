@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x020000FE RID: 254
+// Token: 0x0200019D RID: 413
 public class Ninja_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x060007E8 RID: 2024 RVA: 0x0001B4E2 File Offset: 0x000196E2
+	// Token: 0x06000B77 RID: 2935 RVA: 0x0000712C File Offset: 0x0000532C
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -13,8 +13,8 @@ public class Ninja_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000447 RID: 1095
-	// (get) Token: 0x060007E9 RID: 2025 RVA: 0x0001B4F8 File Offset: 0x000196F8
+	// Token: 0x17000575 RID: 1397
+	// (get) Token: 0x06000B78 RID: 2936 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected virtual int NumberOfShurikens
 	{
 		get
@@ -23,7 +23,7 @@ public class Ninja_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060007EA RID: 2026 RVA: 0x0001B4FB File Offset: 0x000196FB
+	// Token: 0x06000B79 RID: 2937 RVA: 0x00007142 File Offset: 0x00005342
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -58,33 +58,33 @@ public class Ninja_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x04000B4E RID: 2894
+	// Token: 0x04000E10 RID: 3600
 	protected float m_shurikenSpreadAngle = 60f;
 
-	// Token: 0x04000B4F RID: 2895
+	// Token: 0x04000E11 RID: 3601
 	protected float m_shoot_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B50 RID: 2896
+	// Token: 0x04000E12 RID: 3602
 	protected float m_shoot_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000B51 RID: 2897
+	// Token: 0x04000E13 RID: 3603
 	protected float m_shoot_Tell_Delay = 1f;
 
-	// Token: 0x04000B52 RID: 2898
+	// Token: 0x04000E14 RID: 3604
 	protected float m_shoot_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000B53 RID: 2899
+	// Token: 0x04000E15 RID: 3605
 	protected float m_shoot_AttackIntro_Delay;
 
-	// Token: 0x04000B54 RID: 2900
+	// Token: 0x04000E16 RID: 3606
 	protected float m_shoot_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000B55 RID: 2901
+	// Token: 0x04000E17 RID: 3607
 	protected float m_shoot_AttackHold_Delay;
 
-	// Token: 0x04000B56 RID: 2902
+	// Token: 0x04000E18 RID: 3608
 	protected float m_shoot_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000B57 RID: 2903
+	// Token: 0x04000E19 RID: 3609
 	protected float m_shoot_Exit_Delay;
 }

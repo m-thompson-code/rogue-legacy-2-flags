@@ -4,11 +4,11 @@ using Rewired;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000293 RID: 659
+// Token: 0x0200045F RID: 1119
 public class GamepadImageSelectorController : MonoBehaviour
 {
-	// Token: 0x17000BFA RID: 3066
-	// (get) Token: 0x060019C5 RID: 6597 RVA: 0x00050E5E File Offset: 0x0004F05E
+	// Token: 0x17000F3B RID: 3899
+	// (get) Token: 0x060023B4 RID: 9140 RVA: 0x00013A45 File Offset: 0x00011C45
 	public GamepadType CurrentGamepadType
 	{
 		get
@@ -17,17 +17,17 @@ public class GamepadImageSelectorController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000BFB RID: 3067
-	// (get) Token: 0x060019C6 RID: 6598 RVA: 0x00050E66 File Offset: 0x0004F066
-	// (set) Token: 0x060019C7 RID: 6599 RVA: 0x00050E6E File Offset: 0x0004F06E
+	// Token: 0x17000F3C RID: 3900
+	// (get) Token: 0x060023B5 RID: 9141 RVA: 0x00013A4D File Offset: 0x00011C4D
+	// (set) Token: 0x060023B6 RID: 9142 RVA: 0x00013A55 File Offset: 0x00011C55
 	public GamepadImageSelector ActiveSelector { get; private set; }
 
-	// Token: 0x17000BFC RID: 3068
-	// (get) Token: 0x060019C8 RID: 6600 RVA: 0x00050E77 File Offset: 0x0004F077
-	// (set) Token: 0x060019C9 RID: 6601 RVA: 0x00050E7E File Offset: 0x0004F07E
+	// Token: 0x17000F3D RID: 3901
+	// (get) Token: 0x060023B7 RID: 9143 RVA: 0x00013A5E File Offset: 0x00011C5E
+	// (set) Token: 0x060023B8 RID: 9144 RVA: 0x00013A65 File Offset: 0x00011C65
 	public static int ControllerID { get; private set; } = -1;
 
-	// Token: 0x060019CA RID: 6602 RVA: 0x00050E88 File Offset: 0x0004F088
+	// Token: 0x060023B9 RID: 9145 RVA: 0x000AD6B4 File Offset: 0x000AB8B4
 	private void Awake()
 	{
 		this.m_gamepadSelectorTable = new Dictionary<GamepadType, GamepadImageSelector>();
@@ -47,7 +47,7 @@ public class GamepadImageSelectorController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060019CB RID: 6603 RVA: 0x00050EF4 File Offset: 0x0004F0F4
+	// Token: 0x060023BA RID: 9146 RVA: 0x000AD720 File Offset: 0x000AB920
 	private void OnEnable()
 	{
 		if (ReInput.controllers.GetLastActiveController().identifier.controllerType == ControllerType.Joystick)
@@ -100,13 +100,13 @@ public class GamepadImageSelectorController : MonoBehaviour
 		this.m_resetToDefaultGlyphConverter.ForcedGamepadType = this.m_currentGamepadType;
 	}
 
-	// Token: 0x060019CC RID: 6604 RVA: 0x000510A4 File Offset: 0x0004F2A4
+	// Token: 0x060023BB RID: 9147 RVA: 0x00013A6D File Offset: 0x00011C6D
 	private void OnDisable()
 	{
 		ReInput.ControllerDisconnectedEvent -= this.OnControllerDisconnected;
 	}
 
-	// Token: 0x060019CD RID: 6605 RVA: 0x000510B8 File Offset: 0x0004F2B8
+	// Token: 0x060023BC RID: 9148 RVA: 0x000AD8D0 File Offset: 0x000ABAD0
 	private void OnControllerDisconnected(ControllerStatusChangedEventArgs args)
 	{
 		if (args.controllerType == ControllerType.Joystick && args.controllerId == GamepadImageSelectorController.ControllerID)
@@ -115,13 +115,13 @@ public class GamepadImageSelectorController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001867 RID: 6247
+	// Token: 0x04001FB8 RID: 8120
 	[SerializeField]
 	private TextGlyphConverter m_resetToDefaultGlyphConverter;
 
-	// Token: 0x04001868 RID: 6248
+	// Token: 0x04001FB9 RID: 8121
 	private GamepadType m_currentGamepadType;
 
-	// Token: 0x04001869 RID: 6249
+	// Token: 0x04001FBA RID: 8122
 	private Dictionary<GamepadType, GamepadImageSelector> m_gamepadSelectorTable;
 }

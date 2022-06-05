@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200035B RID: 859
+// Token: 0x020005CC RID: 1484
 public class Oversaturate_Trait : BaseTrait
 {
-	// Token: 0x17000DEC RID: 3564
-	// (get) Token: 0x06002086 RID: 8326 RVA: 0x00066ABB File Offset: 0x00064CBB
+	// Token: 0x17001251 RID: 4689
+	// (get) Token: 0x06002E07 RID: 11783 RVA: 0x00017E0D File Offset: 0x0001600D
 	public override TraitType TraitType
 	{
 		get

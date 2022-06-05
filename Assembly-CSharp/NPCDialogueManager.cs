@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x020001EB RID: 491
+// Token: 0x02000383 RID: 899
 public class NPCDialogueManager : MonoBehaviour
 {
-	// Token: 0x17000A75 RID: 2677
-	// (get) Token: 0x06001433 RID: 5171 RVA: 0x0003D543 File Offset: 0x0003B743
-	// (set) Token: 0x06001434 RID: 5172 RVA: 0x0003D54A File Offset: 0x0003B74A
+	// Token: 0x17000D73 RID: 3443
+	// (get) Token: 0x06001D48 RID: 7496 RVA: 0x0000F1F4 File Offset: 0x0000D3F4
+	// (set) Token: 0x06001D49 RID: 7497 RVA: 0x0000F1FB File Offset: 0x0000D3FB
 	private static NPCDialogueManager Instance
 	{
 		get
@@ -21,31 +21,31 @@ public class NPCDialogueManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A76 RID: 2678
-	// (get) Token: 0x06001435 RID: 5173 RVA: 0x0003D552 File Offset: 0x0003B752
-	// (set) Token: 0x06001436 RID: 5174 RVA: 0x0003D559 File Offset: 0x0003B759
+	// Token: 0x17000D74 RID: 3444
+	// (get) Token: 0x06001D4A RID: 7498 RVA: 0x0000F203 File Offset: 0x0000D403
+	// (set) Token: 0x06001D4B RID: 7499 RVA: 0x0000F20A File Offset: 0x0000D40A
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06001437 RID: 5175 RVA: 0x0003D561 File Offset: 0x0003B761
+	// Token: 0x06001D4C RID: 7500 RVA: 0x0000F212 File Offset: 0x0000D412
 	private void Awake()
 	{
 		NPCDialogueManager.Instance = this;
 		NPCDialogueManager.IsInitialized = true;
 	}
 
-	// Token: 0x06001438 RID: 5176 RVA: 0x0003D56F File Offset: 0x0003B76F
+	// Token: 0x06001D4D RID: 7501 RVA: 0x0000F220 File Offset: 0x0000D420
 	private void OnDestroy()
 	{
 		NPCDialogueManager.IsInitialized = false;
 	}
 
-	// Token: 0x06001439 RID: 5177 RVA: 0x0003D577 File Offset: 0x0003B777
+	// Token: 0x06001D4E RID: 7502 RVA: 0x0000F228 File Offset: 0x0000D428
 	private void OnLevelEditorWorldCreationComplete(object sender, EventArgs args)
 	{
 		this.PopulateNPCDialogues_Internal(OnPlayManager.CurrentBiome == BiomeType.HubTown);
 	}
 
-	// Token: 0x0600143A RID: 5178 RVA: 0x0003D588 File Offset: 0x0003B788
+	// Token: 0x06001D4F RID: 7503 RVA: 0x0009C1E0 File Offset: 0x0009A3E0
 	private void GetAvailableNPCDialogues(List<NPCType> availableDialogues, List<NPCType> priorityDialogues)
 	{
 		availableDialogues.Clear();
@@ -80,7 +80,7 @@ public class NPCDialogueManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600143B RID: 5179 RVA: 0x0003D640 File Offset: 0x0003B840
+	// Token: 0x06001D50 RID: 7504 RVA: 0x0009C298 File Offset: 0x0009A498
 	private void PopulateNPCDialogues_Internal(bool inHubtown)
 	{
 		SaveManager.PlayerSaveData.PopulatedNPCDialoguesList.Clear();
@@ -138,7 +138,7 @@ public class NPCDialogueManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600143C RID: 5180 RVA: 0x0003D780 File Offset: 0x0003B980
+	// Token: 0x06001D51 RID: 7505 RVA: 0x0009C3D8 File Offset: 0x0009A5D8
 	private int DialogueSort(NPCType a, NPCType b)
 	{
 		int num = NPCDialogue_EV.NPCDialogueOrderList.IndexOf(a);
@@ -154,7 +154,7 @@ public class NPCDialogueManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x0600143D RID: 5181 RVA: 0x0003D7B4 File Offset: 0x0003B9B4
+	// Token: 0x06001D52 RID: 7506 RVA: 0x0009C40C File Offset: 0x0009A60C
 	private bool IsPriorityDialogue_Internal(NPCType npcType)
 	{
 		NPCDialogueEntry[] array;
@@ -170,13 +170,13 @@ public class NPCDialogueManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x0600143E RID: 5182 RVA: 0x0003D800 File Offset: 0x0003BA00
+	// Token: 0x06001D53 RID: 7507 RVA: 0x0000F239 File Offset: 0x0000D439
 	public static void PopulateNPCDialogues(bool inHubtown)
 	{
 		NPCDialogueManager.Instance.PopulateNPCDialogues_Internal(inHubtown);
 	}
 
-	// Token: 0x0600143F RID: 5183 RVA: 0x0003D80D File Offset: 0x0003BA0D
+	// Token: 0x06001D54 RID: 7508 RVA: 0x0000F246 File Offset: 0x0000D446
 	public static void InitializeGlobalDialogueCD()
 	{
 		if (SaveManager.PlayerSaveData.TriggerGlobalNPCDialogueCD)
@@ -186,7 +186,7 @@ public class NPCDialogueManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001440 RID: 5184 RVA: 0x0003D834 File Offset: 0x0003BA34
+	// Token: 0x06001D55 RID: 7509 RVA: 0x0009C458 File Offset: 0x0009A658
 	public static int GetHighestUnlockedNPCDialogue(NPCType npcType)
 	{
 		int result = -1;
@@ -203,7 +203,7 @@ public class NPCDialogueManager : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x06001441 RID: 5185 RVA: 0x0003D870 File Offset: 0x0003BA70
+	// Token: 0x06001D56 RID: 7510 RVA: 0x0009C494 File Offset: 0x0009A694
 	public static bool AllNPCDialoguesRead(NPCType npcType)
 	{
 		int num = 0;
@@ -215,7 +215,7 @@ public class NPCDialogueManager : MonoBehaviour
 		return num > 0 && npcdialoguesRead >= num - 1;
 	}
 
-	// Token: 0x06001442 RID: 5186 RVA: 0x0003D8B4 File Offset: 0x0003BAB4
+	// Token: 0x06001D57 RID: 7511 RVA: 0x0009C4D8 File Offset: 0x0009A6D8
 	public static void ReduceAllNPCDialogueCooldowns(int reductionAmount)
 	{
 		foreach (NPCType npctype in NPCType_RL.TypeArray)
@@ -227,7 +227,7 @@ public class NPCDialogueManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001443 RID: 5187 RVA: 0x0003D8EC File Offset: 0x0003BAEC
+	// Token: 0x06001D58 RID: 7512 RVA: 0x0009C510 File Offset: 0x0009A710
 	public static bool CanSpeak(NPCType npcType)
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom >= EndingSpawnRoomType.AboveGround)
@@ -238,7 +238,7 @@ public class NPCDialogueManager : MonoBehaviour
 		return (SaveManager.PlayerSaveData.GlobalNPCDialogueCD <= 0 || flag) && SaveManager.PlayerSaveData.PopulatedNPCDialoguesList.Contains(npcType);
 	}
 
-	// Token: 0x06001444 RID: 5188 RVA: 0x0003D930 File Offset: 0x0003BB30
+	// Token: 0x06001D59 RID: 7513 RVA: 0x0009C554 File Offset: 0x0009A754
 	public static void MarkNPCAsSpoken(NPCType npcType, bool isNPCDialogue, NPCController npcController)
 	{
 		if (NPCDialogueManager.CanSpeak(npcType))
@@ -293,7 +293,7 @@ public class NPCDialogueManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001445 RID: 5189 RVA: 0x0003DAA0 File Offset: 0x0003BCA0
+	// Token: 0x06001D5A RID: 7514 RVA: 0x0009C6C4 File Offset: 0x0009A8C4
 	public static int GetTotalCompleteDialogues()
 	{
 		int num = 0;
@@ -307,13 +307,13 @@ public class NPCDialogueManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06001446 RID: 5190 RVA: 0x0003DAD8 File Offset: 0x0003BCD8
+	// Token: 0x06001D5B RID: 7515 RVA: 0x0000F26A File Offset: 0x0000D46A
 	public static bool IsPriorityDialogue(NPCType npcType)
 	{
 		return NPCDialogueManager.Instance.IsPriorityDialogue_Internal(npcType);
 	}
 
-	// Token: 0x06001447 RID: 5191 RVA: 0x0003DAE8 File Offset: 0x0003BCE8
+	// Token: 0x06001D5C RID: 7516 RVA: 0x0009C6FC File Offset: 0x0009A8FC
 	public static bool SageTotemNewNameRevealed()
 	{
 		int num = -1;
@@ -331,6 +331,6 @@ public class NPCDialogueManager : MonoBehaviour
 		return num > -1 && SaveManager.PlayerSaveData.GetNPCDialoguesRead(NPCType.Totem) >= num;
 	}
 
-	// Token: 0x04001414 RID: 5140
+	// Token: 0x04001AB4 RID: 6836
 	private static NPCDialogueManager m_instance;
 }

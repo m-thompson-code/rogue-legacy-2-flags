@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000599 RID: 1433
+// Token: 0x020009A0 RID: 2464
 [ExecuteInEditMode]
 public class AngryOnHit_Effect : MonoBehaviour
 {
-	// Token: 0x060035F2 RID: 13810 RVA: 0x000BC031 File Offset: 0x000BA231
+	// Token: 0x06004C04 RID: 19460 RVA: 0x00029A4F File Offset: 0x00027C4F
 	private void OnEnable()
 	{
 		if (this.m_material == null)
@@ -14,7 +14,7 @@ public class AngryOnHit_Effect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060035F3 RID: 13811 RVA: 0x000BC058 File Offset: 0x000BA258
+	// Token: 0x06004C05 RID: 19461 RVA: 0x0012A118 File Offset: 0x00128318
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		if (this.Amount == 0f && this.m_previousAmount == 0f)
@@ -29,17 +29,17 @@ public class AngryOnHit_Effect : MonoBehaviour
 		Graphics.Blit(source, destination, this.m_material);
 	}
 
-	// Token: 0x04002A0B RID: 10763
+	// Token: 0x04003A05 RID: 14853
 	[Range(0f, 1f)]
 	public float Amount;
 
-	// Token: 0x04002A0C RID: 10764
+	// Token: 0x04003A06 RID: 14854
 	[SerializeField]
 	private Color m_fullAngryColor;
 
-	// Token: 0x04002A0D RID: 10765
+	// Token: 0x04003A07 RID: 14855
 	private Material m_material;
 
-	// Token: 0x04002A0E RID: 10766
+	// Token: 0x04003A08 RID: 14856
 	private float m_previousAmount;
 }

@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000579 RID: 1401
+// Token: 0x0200095A RID: 2394
 public class DialogueWindowEntry : MonoBehaviour
 {
-	// Token: 0x17001283 RID: 4739
-	// (get) Token: 0x06003393 RID: 13203 RVA: 0x000AE9B4 File Offset: 0x000ACBB4
+	// Token: 0x17001968 RID: 6504
+	// (get) Token: 0x060048C8 RID: 18632 RVA: 0x00027F41 File Offset: 0x00026141
 	public TMP_Text TitleText
 	{
 		get
@@ -15,8 +15,8 @@ public class DialogueWindowEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001284 RID: 4740
-	// (get) Token: 0x06003394 RID: 13204 RVA: 0x000AE9BC File Offset: 0x000ACBBC
+	// Token: 0x17001969 RID: 6505
+	// (get) Token: 0x060048C9 RID: 18633 RVA: 0x00027F49 File Offset: 0x00026149
 	public TMP_Text DialogueText
 	{
 		get
@@ -25,8 +25,8 @@ public class DialogueWindowEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001285 RID: 4741
-	// (get) Token: 0x06003395 RID: 13205 RVA: 0x000AE9C4 File Offset: 0x000ACBC4
+	// Token: 0x1700196A RID: 6506
+	// (get) Token: 0x060048CA RID: 18634 RVA: 0x00027F51 File Offset: 0x00026151
 	public GameObject ArrowObj
 	{
 		get
@@ -35,8 +35,8 @@ public class DialogueWindowEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001286 RID: 4742
-	// (get) Token: 0x06003396 RID: 13206 RVA: 0x000AE9CC File Offset: 0x000ACBCC
+	// Token: 0x1700196B RID: 6507
+	// (get) Token: 0x060048CB RID: 18635 RVA: 0x00027F59 File Offset: 0x00026159
 	public RectTransform RectTransform
 	{
 		get
@@ -45,8 +45,8 @@ public class DialogueWindowEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001287 RID: 4743
-	// (get) Token: 0x06003397 RID: 13207 RVA: 0x000AE9D4 File Offset: 0x000ACBD4
+	// Token: 0x1700196C RID: 6508
+	// (get) Token: 0x060048CC RID: 18636 RVA: 0x00027F61 File Offset: 0x00026161
 	public CanvasGroup CanvasGroup
 	{
 		get
@@ -55,8 +55,8 @@ public class DialogueWindowEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001288 RID: 4744
-	// (get) Token: 0x06003398 RID: 13208 RVA: 0x000AE9DC File Offset: 0x000ACBDC
+	// Token: 0x1700196D RID: 6509
+	// (get) Token: 0x060048CD RID: 18637 RVA: 0x00027F69 File Offset: 0x00026169
 	public Typewrite_RL Typewrite
 	{
 		get
@@ -65,27 +65,27 @@ public class DialogueWindowEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002859 RID: 10329
+	// Token: 0x040037BF RID: 14271
 	[SerializeField]
 	private TMP_Text m_titleText;
 
-	// Token: 0x0400285A RID: 10330
+	// Token: 0x040037C0 RID: 14272
 	[SerializeField]
 	private TMP_Text m_dialogueText;
 
-	// Token: 0x0400285B RID: 10331
+	// Token: 0x040037C1 RID: 14273
 	[SerializeField]
 	private GameObject m_arrowObj;
 
-	// Token: 0x0400285C RID: 10332
+	// Token: 0x040037C2 RID: 14274
 	[SerializeField]
 	private RectTransform m_rectTransform;
 
-	// Token: 0x0400285D RID: 10333
+	// Token: 0x040037C3 RID: 14275
 	[SerializeField]
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x0400285E RID: 10334
+	// Token: 0x040037C4 RID: 14276
 	[SerializeField]
 	private Typewrite_RL m_typeWriter;
 }

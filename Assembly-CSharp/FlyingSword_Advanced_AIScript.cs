@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000E9 RID: 233
+// Token: 0x02000178 RID: 376
 public class FlyingSword_Advanced_AIScript : FlyingSword_Basic_AIScript
 {
-	// Token: 0x170003C6 RID: 966
-	// (get) Token: 0x0600071D RID: 1821 RVA: 0x0001A15D File Offset: 0x0001835D
+	// Token: 0x170004D4 RID: 1236
+	// (get) Token: 0x06000A4C RID: 2636 RVA: 0x00006988 File Offset: 0x00004B88
 	protected override float m_thrust_Attack_TurnRate
 	{
 		get
@@ -13,8 +13,8 @@ public class FlyingSword_Advanced_AIScript : FlyingSword_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003C7 RID: 967
-	// (get) Token: 0x0600071E RID: 1822 RVA: 0x0001A164 File Offset: 0x00018364
+	// Token: 0x170004D5 RID: 1237
+	// (get) Token: 0x06000A4D RID: 2637 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_thrust_SpawnProjectilesAtEnd
 	{
 		get

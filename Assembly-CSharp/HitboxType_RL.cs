@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000740 RID: 1856
+// Token: 0x02000BFE RID: 3070
 public class HitboxType_RL
 {
-	// Token: 0x17001633 RID: 5683
-	// (get) Token: 0x06004106 RID: 16646 RVA: 0x000E64B6 File Offset: 0x000E46B6
+	// Token: 0x17001E2F RID: 7727
+	// (get) Token: 0x06005A83 RID: 23171 RVA: 0x00031912 File Offset: 0x0002FB12
 	public static HitboxType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class HitboxType_RL
 		}
 	}
 
-	// Token: 0x04003486 RID: 13446
+	// Token: 0x04004702 RID: 18178
 	private static HitboxType[] m_hbTypeArray;
 }

@@ -2,10 +2,10 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000380 RID: 896
+// Token: 0x02000608 RID: 1544
 public class LineageGoldFlagController : MonoBehaviour
 {
-	// Token: 0x0600218B RID: 8587 RVA: 0x0006A1B0 File Offset: 0x000683B0
+	// Token: 0x06002F7F RID: 12159 RVA: 0x000CAFF0 File Offset: 0x000C91F0
 	public void SetGoldGain(float goldGain)
 	{
 		if (goldGain == 0f)
@@ -33,23 +33,23 @@ public class LineageGoldFlagController : MonoBehaviour
 		this.m_sparklesGO.SetActive(false);
 	}
 
-	// Token: 0x04001D0A RID: 7434
+	// Token: 0x040026EB RID: 9963
 	[SerializeField]
 	private TMP_Text m_text;
 
-	// Token: 0x04001D0B RID: 7435
+	// Token: 0x040026EC RID: 9964
 	[SerializeField]
 	private GameObject m_goldBannerGO;
 
-	// Token: 0x04001D0C RID: 7436
+	// Token: 0x040026ED RID: 9965
 	[SerializeField]
 	private GameObject m_greyBannerGO;
 
-	// Token: 0x04001D0D RID: 7437
+	// Token: 0x040026EE RID: 9966
 	[SerializeField]
 	private GameObject m_goldCoin;
 
-	// Token: 0x04001D0E RID: 7438
+	// Token: 0x040026EF RID: 9967
 	[SerializeField]
 	private GameObject m_sparklesGO;
 }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000810 RID: 2064
+// Token: 0x02000CE0 RID: 3296
 public class ScenePrefab_Loader : MonoBehaviour
 {
-	// Token: 0x0600443F RID: 17471 RVA: 0x000F174C File Offset: 0x000EF94C
+	// Token: 0x06005DF3 RID: 24051 RVA: 0x0015F2CC File Offset: 0x0015D4CC
 	private void Awake()
 	{
 		GameObject gameObject;
@@ -17,10 +17,10 @@ public class ScenePrefab_Loader : MonoBehaviour
 		UnityEngine.Object.Instantiate<GameObject>(gameObject);
 	}
 
-	// Token: 0x04003A4A RID: 14922
+	// Token: 0x04004D30 RID: 19760
 	[SerializeField]
 	private string m_prefabPath;
 
-	// Token: 0x04003A4B RID: 14923
+	// Token: 0x04004D31 RID: 19761
 	private static Dictionary<string, GameObject> m_scenePrefabDict = new Dictionary<string, GameObject>();
 }

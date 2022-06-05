@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020005E2 RID: 1506
+// Token: 0x020009EA RID: 2538
 public interface ISummoner : ILevelConsumer
 {
-	// Token: 0x17001368 RID: 4968
-	// (get) Token: 0x060036B1 RID: 14001
+	// Token: 0x17001A95 RID: 6805
+	// (get) Token: 0x06004CC3 RID: 19651
 	GameObject gameObject { get; }
 }

@@ -2,28 +2,28 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x020003E4 RID: 996
+// Token: 0x02000685 RID: 1669
 public class StatusBarEntryManager : MonoBehaviour
 {
-	// Token: 0x17000EDB RID: 3803
-	// (get) Token: 0x060024BC RID: 9404 RVA: 0x0007A519 File Offset: 0x00078719
-	// (set) Token: 0x060024BD RID: 9405 RVA: 0x0007A520 File Offset: 0x00078720
+	// Token: 0x1700137C RID: 4988
+	// (get) Token: 0x060032FE RID: 13054 RVA: 0x0001BEB4 File Offset: 0x0001A0B4
+	// (set) Token: 0x060032FF RID: 13055 RVA: 0x0001BEBB File Offset: 0x0001A0BB
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x060024BE RID: 9406 RVA: 0x0007A528 File Offset: 0x00078728
+	// Token: 0x06003300 RID: 13056 RVA: 0x0001BEC3 File Offset: 0x0001A0C3
 	private void Awake()
 	{
 		this.Initialize();
 		SceneManager.sceneLoaded += this.OnSceneLoaded;
 	}
 
-	// Token: 0x060024BF RID: 9407 RVA: 0x0007A541 File Offset: 0x00078741
+	// Token: 0x06003301 RID: 13057 RVA: 0x0001BEDC File Offset: 0x0001A0DC
 	private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
 		StatusBarEntryManager.DisableAllStatusBarEntries();
 	}
 
-	// Token: 0x060024C0 RID: 9408 RVA: 0x0007A548 File Offset: 0x00078748
+	// Token: 0x06003302 RID: 13058 RVA: 0x0001BEE3 File Offset: 0x0001A0E3
 	private void OnDestroy()
 	{
 		StatusBarEntryManager.IsInitialized = false;
@@ -33,7 +33,7 @@ public class StatusBarEntryManager : MonoBehaviour
 		StatusBarEntryManager.m_statusBarManager = null;
 	}
 
-	// Token: 0x060024C1 RID: 9409 RVA: 0x0007A579 File Offset: 0x00078779
+	// Token: 0x06003303 RID: 13059 RVA: 0x0001BF14 File Offset: 0x0001A114
 	private void Initialize()
 	{
 		this.m_statusBarPool = new GenericPool_RL<StatusBarEntry>();
@@ -41,8 +41,8 @@ public class StatusBarEntryManager : MonoBehaviour
 		StatusBarEntryManager.IsInitialized = true;
 	}
 
-	// Token: 0x17000EDC RID: 3804
-	// (get) Token: 0x060024C2 RID: 9410 RVA: 0x0007A5A1 File Offset: 0x000787A1
+	// Token: 0x1700137D RID: 4989
+	// (get) Token: 0x06003304 RID: 13060 RVA: 0x0001BF3C File Offset: 0x0001A13C
 	private static StatusBarEntryManager Instance
 	{
 		get
@@ -55,7 +55,7 @@ public class StatusBarEntryManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060024C3 RID: 9411 RVA: 0x0007A5C0 File Offset: 0x000787C0
+	// Token: 0x06003305 RID: 13061 RVA: 0x0001BF5B File Offset: 0x0001A15B
 	public static StatusBarEntry GetFreeStatusBarEntry()
 	{
 		if (!StatusBarEntryManager.IsInitialized)
@@ -65,7 +65,7 @@ public class StatusBarEntryManager : MonoBehaviour
 		return StatusBarEntryManager.Instance.m_statusBarPool.GetFreeObj();
 	}
 
-	// Token: 0x060024C4 RID: 9412 RVA: 0x0007A5E2 File Offset: 0x000787E2
+	// Token: 0x06003306 RID: 13062 RVA: 0x0001BF7D File Offset: 0x0001A17D
 	public static void DisableAllStatusBarEntries()
 	{
 		if (StatusBarEntryManager.IsInitialized)
@@ -74,16 +74,16 @@ public class StatusBarEntryManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001F26 RID: 7974
+	// Token: 0x040029A4 RID: 10660
 	private const int POOL_SIZE = 20;
 
-	// Token: 0x04001F27 RID: 7975
+	// Token: 0x040029A5 RID: 10661
 	[SerializeField]
 	private StatusBarEntry m_statusBarPrefab;
 
-	// Token: 0x04001F28 RID: 7976
+	// Token: 0x040029A6 RID: 10662
 	private GenericPool_RL<StatusBarEntry> m_statusBarPool;
 
-	// Token: 0x04001F29 RID: 7977
+	// Token: 0x040029A7 RID: 10663
 	private static StatusBarEntryManager m_statusBarManager;
 }

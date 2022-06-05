@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000403 RID: 1027
+// Token: 0x020006B2 RID: 1714
 public class DoorPlatformHitboxTagOverride : MonoBehaviour
 {
-	// Token: 0x0600264E RID: 9806 RVA: 0x0007EBB5 File Offset: 0x0007CDB5
+	// Token: 0x060034D9 RID: 13529 RVA: 0x0001CFB9 File Offset: 0x0001B1B9
 	private IEnumerator Start()
 	{
 		HitboxControllerLite m_hitboxController = base.GetComponent<HitboxControllerLite>();

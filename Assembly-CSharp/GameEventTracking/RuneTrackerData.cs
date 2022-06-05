@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace GameEventTracking
 {
-	// Token: 0x020008AD RID: 2221
+	// Token: 0x02000DE0 RID: 3552
 	[Serializable]
 	public struct RuneTrackerData : ISpecialItemData, IGameEventData
 	{
-		// Token: 0x0600486F RID: 18543 RVA: 0x0010419A File Offset: 0x0010239A
+		// Token: 0x060063CF RID: 25551 RVA: 0x00037082 File Offset: 0x00035282
 		public RuneTrackerData(RuneType runeType)
 		{
 			this.m_runeType = runeType;
@@ -15,8 +15,8 @@ namespace GameEventTracking
 			this.m_timeStamp = (float)Time.frameCount;
 		}
 
-		// Token: 0x170017C3 RID: 6083
-		// (get) Token: 0x06004870 RID: 18544 RVA: 0x001041BF File Offset: 0x001023BF
+		// Token: 0x1700203D RID: 8253
+		// (get) Token: 0x060063D0 RID: 25552 RVA: 0x000370A7 File Offset: 0x000352A7
 		public RuneType RuneType
 		{
 			get
@@ -25,8 +25,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017C4 RID: 6084
-		// (get) Token: 0x06004871 RID: 18545 RVA: 0x001041C7 File Offset: 0x001023C7
+		// Token: 0x1700203E RID: 8254
+		// (get) Token: 0x060063D1 RID: 25553 RVA: 0x000370AF File Offset: 0x000352AF
 		public float TimeStamp
 		{
 			get
@@ -35,8 +35,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017C5 RID: 6085
-		// (get) Token: 0x06004872 RID: 18546 RVA: 0x001041CF File Offset: 0x001023CF
+		// Token: 0x1700203F RID: 8255
+		// (get) Token: 0x060063D2 RID: 25554 RVA: 0x000370B7 File Offset: 0x000352B7
 		public int TimesLoaded
 		{
 			get
@@ -45,13 +45,13 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x04003D27 RID: 15655
+		// Token: 0x0400516E RID: 20846
 		private RuneType m_runeType;
 
-		// Token: 0x04003D28 RID: 15656
+		// Token: 0x0400516F RID: 20847
 		private float m_timeStamp;
 
-		// Token: 0x04003D29 RID: 15657
+		// Token: 0x04005170 RID: 20848
 		private int m_timesLoaded;
 	}
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000708 RID: 1800
+// Token: 0x02000BBB RID: 3003
 public class BodyTypeWeightParam_RL
 {
 }

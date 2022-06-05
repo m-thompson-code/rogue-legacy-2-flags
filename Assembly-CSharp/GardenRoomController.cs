@@ -4,10 +4,10 @@ using FMODUnity;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000501 RID: 1281
+// Token: 0x02000869 RID: 2153
 public class GardenRoomController : BaseSpecialRoomController
 {
-	// Token: 0x06002FE4 RID: 12260 RVA: 0x000A3E88 File Offset: 0x000A2088
+	// Token: 0x06004258 RID: 16984 RVA: 0x00024BE0 File Offset: 0x00022DE0
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -19,7 +19,7 @@ public class GardenRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002FE5 RID: 12261 RVA: 0x000A3EC3 File Offset: 0x000A20C3
+	// Token: 0x06004259 RID: 16985 RVA: 0x00024C1B File Offset: 0x00022E1B
 	private IEnumerator FlipPlayer()
 	{
 		yield return null;
@@ -31,7 +31,7 @@ public class GardenRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002FE6 RID: 12262 RVA: 0x000A3ECB File Offset: 0x000A20CB
+	// Token: 0x0600425A RID: 16986 RVA: 0x00024C23 File Offset: 0x00022E23
 	private IEnumerator PlaySong()
 	{
 		float delay = Time.time + 2f;

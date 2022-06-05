@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020007D2 RID: 2002
+// Token: 0x02000C98 RID: 3224
 public class LineageHeirChangedEventArgs : EventArgs
 {
-	// Token: 0x060042FE RID: 17150 RVA: 0x000EC2FC File Offset: 0x000EA4FC
+	// Token: 0x06005C87 RID: 23687 RVA: 0x00032D12 File Offset: 0x00030F12
 	public LineageHeirChangedEventArgs(CharacterData charData, bool classLocked, bool spellLocked)
 	{
 		this.Initialize(charData, classLocked, spellLocked);
 	}
 
-	// Token: 0x060042FF RID: 17151 RVA: 0x000EC30D File Offset: 0x000EA50D
+	// Token: 0x06005C88 RID: 23688 RVA: 0x00032D23 File Offset: 0x00030F23
 	public void Initialize(CharacterData charData, bool classLocked, bool spellLocked)
 	{
 		this.CharacterData = charData;
@@ -17,18 +17,18 @@ public class LineageHeirChangedEventArgs : EventArgs
 		this.SpellLocked = spellLocked;
 	}
 
-	// Token: 0x170016AF RID: 5807
-	// (get) Token: 0x06004300 RID: 17152 RVA: 0x000EC324 File Offset: 0x000EA524
-	// (set) Token: 0x06004301 RID: 17153 RVA: 0x000EC32C File Offset: 0x000EA52C
+	// Token: 0x17001EAD RID: 7853
+	// (get) Token: 0x06005C89 RID: 23689 RVA: 0x00032D3A File Offset: 0x00030F3A
+	// (set) Token: 0x06005C8A RID: 23690 RVA: 0x00032D42 File Offset: 0x00030F42
 	public CharacterData CharacterData { get; private set; }
 
-	// Token: 0x170016B0 RID: 5808
-	// (get) Token: 0x06004302 RID: 17154 RVA: 0x000EC335 File Offset: 0x000EA535
-	// (set) Token: 0x06004303 RID: 17155 RVA: 0x000EC33D File Offset: 0x000EA53D
+	// Token: 0x17001EAE RID: 7854
+	// (get) Token: 0x06005C8B RID: 23691 RVA: 0x00032D4B File Offset: 0x00030F4B
+	// (set) Token: 0x06005C8C RID: 23692 RVA: 0x00032D53 File Offset: 0x00030F53
 	public bool ClassLocked { get; private set; }
 
-	// Token: 0x170016B1 RID: 5809
-	// (get) Token: 0x06004304 RID: 17156 RVA: 0x000EC346 File Offset: 0x000EA546
-	// (set) Token: 0x06004305 RID: 17157 RVA: 0x000EC34E File Offset: 0x000EA54E
+	// Token: 0x17001EAF RID: 7855
+	// (get) Token: 0x06005C8D RID: 23693 RVA: 0x00032D5C File Offset: 0x00030F5C
+	// (set) Token: 0x06005C8E RID: 23694 RVA: 0x00032D64 File Offset: 0x00030F64
 	public bool SpellLocked { get; private set; }
 }

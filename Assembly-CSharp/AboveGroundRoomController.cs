@@ -5,10 +5,10 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004E8 RID: 1256
+// Token: 0x02000835 RID: 2101
 public class AboveGroundRoomController : BaseSpecialRoomController
 {
-	// Token: 0x06002F05 RID: 12037 RVA: 0x000A0484 File Offset: 0x0009E684
+	// Token: 0x060040DD RID: 16605 RVA: 0x00104188 File Offset: 0x00102388
 	protected override void Awake()
 	{
 		base.Awake();
@@ -20,19 +20,19 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		this.m_skillTreeWindowClosed = new Action<object, EventArgs>(this.SkillTreeWindowClosed);
 	}
 
-	// Token: 0x06002F06 RID: 12038 RVA: 0x000A04F9 File Offset: 0x0009E6F9
+	// Token: 0x060040DE RID: 16606 RVA: 0x00023DFF File Offset: 0x00021FFF
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.SkillTree_Closed, this.m_skillTreeWindowClosed);
 	}
 
-	// Token: 0x06002F07 RID: 12039 RVA: 0x000A0508 File Offset: 0x0009E708
+	// Token: 0x060040DF RID: 16607 RVA: 0x00023E0E File Offset: 0x0002200E
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.SkillTree_Closed, this.m_skillTreeWindowClosed);
 	}
 
-	// Token: 0x06002F08 RID: 12040 RVA: 0x000A0517 File Offset: 0x0009E717
+	// Token: 0x060040E0 RID: 16608 RVA: 0x00023E1D File Offset: 0x0002201D
 	private void SkillTreeWindowClosed(object sender, EventArgs eventArgs)
 	{
 		if (PlayerManager.IsInstantiated)
@@ -42,7 +42,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.PlayerEnterHubTown, this, null);
 	}
 
-	// Token: 0x06002F09 RID: 12041 RVA: 0x000A0534 File Offset: 0x0009E734
+	// Token: 0x060040E1 RID: 16609 RVA: 0x00104200 File Offset: 0x00102400
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -106,7 +106,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F0A RID: 12042 RVA: 0x000A0818 File Offset: 0x0009EA18
+	// Token: 0x060040E2 RID: 16610 RVA: 0x00023E39 File Offset: 0x00022039
 	private IEnumerator OpenSkillTreeCoroutine()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -134,7 +134,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002F0B RID: 12043 RVA: 0x000A0827 File Offset: 0x0009EA27
+	// Token: 0x060040E3 RID: 16611 RVA: 0x00023E48 File Offset: 0x00022048
 	private IEnumerator GiveAchievementsCoroutine()
 	{
 		float delay = Time.time + 2f;
@@ -159,7 +159,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002F0C RID: 12044 RVA: 0x000A082F File Offset: 0x0009EA2F
+	// Token: 0x060040E4 RID: 16612 RVA: 0x00023E50 File Offset: 0x00022050
 	private IEnumerator UpdateHeartStateCoroutine()
 	{
 		yield return null;
@@ -183,7 +183,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002F0D RID: 12045 RVA: 0x000A0840 File Offset: 0x0009EA40
+	// Token: 0x060040E5 RID: 16613 RVA: 0x001044E4 File Offset: 0x001026E4
 	private void UpdateHeartState(string objName, bool isEnemySpawner)
 	{
 		if (!isEnemySpawner)
@@ -213,7 +213,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F0E RID: 12046 RVA: 0x000A08D7 File Offset: 0x0009EAD7
+	// Token: 0x060040E6 RID: 16614 RVA: 0x00023E5F File Offset: 0x0002205F
 	private IEnumerator FlipPlayer()
 	{
 		yield return null;
@@ -225,13 +225,13 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002F0F RID: 12047 RVA: 0x000A08DF File Offset: 0x0009EADF
+	// Token: 0x060040E7 RID: 16615 RVA: 0x00023E67 File Offset: 0x00022067
 	public void PlayTrueEnding()
 	{
 		base.StartCoroutine(this.TrueEndingCoroutine());
 	}
 
-	// Token: 0x06002F10 RID: 12048 RVA: 0x000A08EE File Offset: 0x0009EAEE
+	// Token: 0x060040E8 RID: 16616 RVA: 0x00023E76 File Offset: 0x00022076
 	private IEnumerator TrueEndingCoroutine()
 	{
 		PlayerController player = PlayerManager.GetPlayerController();
@@ -465,7 +465,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002F11 RID: 12049 RVA: 0x000A0900 File Offset: 0x0009EB00
+	// Token: 0x060040E9 RID: 16617 RVA: 0x0010457C File Offset: 0x0010277C
 	private Vector3 GetTrueEndPosition(AboveGroundRoomController.TrueEndPos posType)
 	{
 		if (posType < (AboveGroundRoomController.TrueEndPos)this.m_trueEndPosArrayTransform.childCount)
@@ -475,7 +475,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		return Vector3.zero;
 	}
 
-	// Token: 0x06002F12 RID: 12050 RVA: 0x000A0934 File Offset: 0x0009EB34
+	// Token: 0x060040EA RID: 16618 RVA: 0x00023E85 File Offset: 0x00022085
 	private IEnumerator PlayerJumpTraitorCoroutine()
 	{
 		yield return PlayerMovementHelper.JumpPlayer(1.5f);
@@ -483,7 +483,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002F13 RID: 12051 RVA: 0x000A093C File Offset: 0x0009EB3C
+	// Token: 0x060040EB RID: 16619 RVA: 0x00023E8D File Offset: 0x0002208D
 	private IEnumerator OpenNewGamePlusConfirmWindowCoroutine(float delay)
 	{
 		delay = Time.time + delay;
@@ -515,7 +515,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002F14 RID: 12052 RVA: 0x000A0952 File Offset: 0x0009EB52
+	// Token: 0x060040EC RID: 16620 RVA: 0x00023EA3 File Offset: 0x000220A3
 	private void NewGamePlusConfirmComplete()
 	{
 		AudioManager.SetSFXPaused(false);
@@ -523,7 +523,7 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.SeenNGConfirmWindow, true);
 	}
 
-	// Token: 0x06002F15 RID: 12053 RVA: 0x000A0974 File Offset: 0x0009EB74
+	// Token: 0x060040ED RID: 16621 RVA: 0x001045B0 File Offset: 0x001027B0
 	private void FixedUpdate()
 	{
 		if (Time.time < this.m_regenTick + 0.05f)
@@ -560,117 +560,117 @@ public class AboveGroundRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x0400256E RID: 9582
+	// Token: 0x040032B6 RID: 12982
 	private const string SFX_DRAGON_CALL_NAME = "event:/UI/FrontEnd/ui_fe_trueEnding_01_dragonCall";
 
-	// Token: 0x0400256F RID: 9583
+	// Token: 0x040032B7 RID: 12983
 	private const string SFX_DRAGON_SWOOP_NAME = "event:/UI/FrontEnd/ui_fe_trueEnding_02_dragonSwoop";
 
-	// Token: 0x04002570 RID: 9584
+	// Token: 0x040032B8 RID: 12984
 	private const string SFX_DRAGON_APPROACH_NAME = "event:/UI/FrontEnd/ui_fe_trueEnding_03_dragonApproach";
 
-	// Token: 0x04002571 RID: 9585
+	// Token: 0x040032B9 RID: 12985
 	private const string SFX_DRAGON_LAND_NAME = "event:/UI/FrontEnd/ui_fe_trueEnding_04_dragonLand";
 
-	// Token: 0x04002572 RID: 9586
+	// Token: 0x040032BA RID: 12986
 	private const string SFX_DRAGON_SETTLE_NAME = "event:/UI/FrontEnd/ui_fe_trueEnding_05_dragonSettle";
 
-	// Token: 0x04002573 RID: 9587
+	// Token: 0x040032BB RID: 12987
 	private const string SFX_DRAGON_SPIT_NAME = "event:/UI/FrontEnd/ui_fe_trueEnding_06_dragonSpit";
 
-	// Token: 0x04002574 RID: 9588
+	// Token: 0x040032BC RID: 12988
 	private const string SFX_PIZZA_GIRL_NOTICE_NAME = "event:/SFX/Interactables/sfx_pizzaGirl_farewell";
 
-	// Token: 0x04002575 RID: 9589
+	// Token: 0x040032BD RID: 12989
 	[SerializeField]
 	private PropSpawnController m_paradeSign;
 
-	// Token: 0x04002576 RID: 9590
+	// Token: 0x040032BE RID: 12990
 	[SerializeField]
 	private GameObject m_paradeWall;
 
-	// Token: 0x04002577 RID: 9591
+	// Token: 0x040032BF RID: 12991
 	[SerializeField]
 	private GameObject m_skillTreeWall;
 
-	// Token: 0x04002578 RID: 9592
+	// Token: 0x040032C0 RID: 12992
 	[SerializeField]
 	private GameObject m_charonPostParadeSpawnPos;
 
-	// Token: 0x04002579 RID: 9593
+	// Token: 0x040032C1 RID: 12993
 	[SerializeField]
 	private PropSpawnController m_charonProp;
 
-	// Token: 0x0400257A RID: 9594
+	// Token: 0x040032C2 RID: 12994
 	[SerializeField]
 	private PropSpawnController m_manorDoorProp;
 
-	// Token: 0x0400257B RID: 9595
+	// Token: 0x040032C3 RID: 12995
 	[Header("True Ending Props")]
 	[SerializeField]
 	private GameObject m_trueEndTrigger;
 
-	// Token: 0x0400257C RID: 9596
+	// Token: 0x040032C4 RID: 12996
 	[SerializeField]
 	private PropSpawnController m_traitorSpawner;
 
-	// Token: 0x0400257D RID: 9597
+	// Token: 0x040032C5 RID: 12997
 	[SerializeField]
 	private PropSpawnController m_dragonSilhouetteSpawner;
 
-	// Token: 0x0400257E RID: 9598
+	// Token: 0x040032C6 RID: 12998
 	[SerializeField]
 	private PropSpawnController m_dragonSpawner;
 
-	// Token: 0x0400257F RID: 9599
+	// Token: 0x040032C7 RID: 12999
 	[SerializeField]
 	private PropSpawnController m_pizzaGirlProp;
 
-	// Token: 0x04002580 RID: 9600
+	// Token: 0x040032C8 RID: 13000
 	[SerializeField]
 	private SpriteRenderer m_hugPicRenderer;
 
-	// Token: 0x04002581 RID: 9601
+	// Token: 0x040032C9 RID: 13001
 	[SerializeField]
 	private Transform m_trueEndFollowObj;
 
-	// Token: 0x04002582 RID: 9602
+	// Token: 0x040032CA RID: 13002
 	[SerializeField]
 	private CinemachineVirtualCameraManager m_trueEndVcam;
 
-	// Token: 0x04002583 RID: 9603
+	// Token: 0x040032CB RID: 13003
 	[SerializeField]
 	private AnimationCurve m_trueEndBlend;
 
-	// Token: 0x04002584 RID: 9604
+	// Token: 0x040032CC RID: 13004
 	[SerializeField]
 	private Transform m_trueEndPosArrayTransform;
 
-	// Token: 0x04002585 RID: 9605
+	// Token: 0x040032CD RID: 13005
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002586 RID: 9606
+	// Token: 0x040032CE RID: 13006
 	private CinemachineBlendDefinition m_followBlend;
 
-	// Token: 0x04002587 RID: 9607
+	// Token: 0x040032CF RID: 13007
 	private Action m_newGamePlusConfirmComplete;
 
-	// Token: 0x04002588 RID: 9608
+	// Token: 0x040032D0 RID: 13008
 	private Action<object, EventArgs> m_skillTreeWindowClosed;
 
-	// Token: 0x04002589 RID: 9609
+	// Token: 0x040032D1 RID: 13009
 	private float m_regenTick;
 
-	// Token: 0x02000CC6 RID: 3270
+	// Token: 0x02000836 RID: 2102
 	private enum TrueEndPos
 	{
-		// Token: 0x040051DD RID: 20957
+		// Token: 0x040032D3 RID: 13011
 		SilhouetteCamPos,
-		// Token: 0x040051DE RID: 20958
+		// Token: 0x040032D4 RID: 13012
 		DragonCamPos,
-		// Token: 0x040051DF RID: 20959
+		// Token: 0x040032D5 RID: 13013
 		TraitorSpawnPosStart,
-		// Token: 0x040051E0 RID: 20960
+		// Token: 0x040032D6 RID: 13014
 		TraitorSpawnPosEnd
 	}
 }

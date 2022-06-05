@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200053D RID: 1341
+// Token: 0x020008D5 RID: 2261
 public class Interact_TextPopup : TextPopupObj
 {
-	// Token: 0x0600311E RID: 12574 RVA: 0x000A6949 File Offset: 0x000A4B49
+	// Token: 0x060044A8 RID: 17576 RVA: 0x00025C3E File Offset: 0x00023E3E
 	protected override IEnumerator SpawnEffectCoroutine()
 	{
 		Vector3 localScale = base.transform.localScale;

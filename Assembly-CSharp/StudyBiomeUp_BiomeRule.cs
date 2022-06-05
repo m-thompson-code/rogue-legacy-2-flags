@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020005F8 RID: 1528
+// Token: 0x02000A0F RID: 2575
 [CreateAssetMenu(menuName = "Custom/Biome Rules/Study Biome Up")]
 public class StudyBiomeUp_BiomeRule : BiomeRule
 {
-	// Token: 0x1700137C RID: 4988
-	// (get) Token: 0x06003710 RID: 14096 RVA: 0x000BCF6A File Offset: 0x000BB16A
+	// Token: 0x17001AC3 RID: 6851
+	// (get) Token: 0x06004D75 RID: 19829 RVA: 0x000046FA File Offset: 0x000028FA
 	public override BiomeRuleExecutionTime ExecutionTime
 	{
 		get
@@ -16,7 +16,7 @@ public class StudyBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x06003711 RID: 14097 RVA: 0x000BCF6E File Offset: 0x000BB16E
+	// Token: 0x06004D76 RID: 19830 RVA: 0x0002A0D4 File Offset: 0x000282D4
 	public override IEnumerator RunRule(BiomeType biome)
 	{
 		if (!this.m_actionsInitialized)
@@ -35,7 +35,7 @@ public class StudyBiomeUp_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x06003712 RID: 14098 RVA: 0x000BCF7D File Offset: 0x000BB17D
+	// Token: 0x06004D77 RID: 19831 RVA: 0x0002A0E3 File Offset: 0x000282E3
 	public override void UndoRule(BiomeType biome)
 	{
 		if (this.m_actionsInitialized)
@@ -45,7 +45,7 @@ public class StudyBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x06003713 RID: 14099 RVA: 0x000BCFA0 File Offset: 0x000BB1A0
+	// Token: 0x06004D78 RID: 19832 RVA: 0x0012B8FC File Offset: 0x00129AFC
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		RoomViaDoorEventArgs roomViaDoorEventArgs = args as RoomViaDoorEventArgs;
@@ -62,15 +62,15 @@ public class StudyBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x06003714 RID: 14100 RVA: 0x000BD028 File Offset: 0x000BB228
+	// Token: 0x06004D79 RID: 19833 RVA: 0x0002A106 File Offset: 0x00028306
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		this.StopVoidAttack();
 		this.m_voidAttackCoroutine = null;
 	}
 
-	// Token: 0x1700137D RID: 4989
-	// (get) Token: 0x06003715 RID: 14101 RVA: 0x000BD037 File Offset: 0x000BB237
+	// Token: 0x17001AC4 RID: 6852
+	// (get) Token: 0x06004D7A RID: 19834 RVA: 0x0002A115 File Offset: 0x00028315
 	private Vector2 m_voidAttack_Initial_Delay
 	{
 		get
@@ -79,8 +79,8 @@ public class StudyBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x1700137E RID: 4990
-	// (get) Token: 0x06003716 RID: 14102 RVA: 0x000BD03E File Offset: 0x000BB23E
+	// Token: 0x17001AC5 RID: 6853
+	// (get) Token: 0x06004D7B RID: 19835 RVA: 0x0002A11C File Offset: 0x0002831C
 	private Vector2 m_voidAttackRandomDelay
 	{
 		get
@@ -89,7 +89,7 @@ public class StudyBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x06003717 RID: 14103 RVA: 0x000BD045 File Offset: 0x000BB245
+	// Token: 0x06004D7C RID: 19836 RVA: 0x0002A123 File Offset: 0x00028323
 	public IEnumerator Void_Attack_Coroutine()
 	{
 		float delay = Time.time + UnityEngine.Random.Range(this.m_voidAttack_Initial_Delay.x, this.m_voidAttack_Initial_Delay.y);
@@ -108,7 +108,7 @@ public class StudyBiomeUp_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x06003718 RID: 14104 RVA: 0x000BD054 File Offset: 0x000BB254
+	// Token: 0x06004D7D RID: 19837 RVA: 0x0002A132 File Offset: 0x00028332
 	private IEnumerator FireVoidProjectile()
 	{
 		float startingAngle = 0f;
@@ -147,7 +147,7 @@ public class StudyBiomeUp_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x06003719 RID: 14105 RVA: 0x000BD063 File Offset: 0x000BB263
+	// Token: 0x06004D7E RID: 19838 RVA: 0x0002A141 File Offset: 0x00028341
 	private void StopVoidAttack()
 	{
 		this.StopProjectile(ref this.m_voidAttack_Projectile);
@@ -158,7 +158,7 @@ public class StudyBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x0600371A RID: 14106 RVA: 0x000BD0A3 File Offset: 0x000BB2A3
+	// Token: 0x06004D7F RID: 19839 RVA: 0x00029EAA File Offset: 0x000280AA
 	protected void StopProjectile(ref Projectile_RL projectile)
 	{
 		if (projectile && projectile.isActiveAndEnabled)
@@ -168,42 +168,42 @@ public class StudyBiomeUp_BiomeRule : BiomeRule
 		projectile = null;
 	}
 
-	// Token: 0x04002A63 RID: 10851
+	// Token: 0x04003A99 RID: 15001
 	private const string VOID_ATTACK_WARNING_PROJECTILE = "StudyBiomeUpVoidWarningProjectile";
 
-	// Token: 0x04002A64 RID: 10852
+	// Token: 0x04003A9A RID: 15002
 	private const string VOID_ATTACK_PROJECTILE = "StudyBiomeUpVoidProjectile";
 
-	// Token: 0x04002A65 RID: 10853
+	// Token: 0x04003A9B RID: 15003
 	private BaseRoom m_currentRoom;
 
-	// Token: 0x04002A66 RID: 10854
+	// Token: 0x04003A9C RID: 15004
 	private Action<object, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04002A67 RID: 10855
+	// Token: 0x04003A9D RID: 15005
 	private Action<object, EventArgs> m_onPlayerExitRoom;
 
-	// Token: 0x04002A68 RID: 10856
+	// Token: 0x04003A9E RID: 15006
 	private bool m_actionsInitialized;
 
-	// Token: 0x04002A69 RID: 10857
+	// Token: 0x04003A9F RID: 15007
 	public static Vector2 VOID_WAVE_INITIAL_DELAY = new Vector2(1.5f, 3.5f);
 
-	// Token: 0x04002A6A RID: 10858
+	// Token: 0x04003AA0 RID: 15008
 	public static Vector2 VOID_WAVE_RANDOM_DELAY = new Vector2(10f, 12f);
 
-	// Token: 0x04002A6B RID: 10859
+	// Token: 0x04003AA1 RID: 15009
 	public const float VOID_WAVE_WARNING_DURATION = 1.5f;
 
-	// Token: 0x04002A6C RID: 10860
+	// Token: 0x04003AA2 RID: 15010
 	private float m_voidAttackWarningDuration = 2.5f;
 
-	// Token: 0x04002A6D RID: 10861
+	// Token: 0x04003AA3 RID: 15011
 	private Projectile_RL m_voidAttack_WarningProjectile;
 
-	// Token: 0x04002A6E RID: 10862
+	// Token: 0x04003AA4 RID: 15012
 	private Projectile_RL m_voidAttack_Projectile;
 
-	// Token: 0x04002A6F RID: 10863
+	// Token: 0x04003AA5 RID: 15013
 	private Coroutine m_voidAttackCoroutine;
 }

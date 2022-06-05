@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008FD RID: 2301
+	// Token: 0x02000E77 RID: 3703
 	public class OnEnterEventEmitter : AnimBehaviourEventEmitter
 	{
-		// Token: 0x06004B96 RID: 19350 RVA: 0x0010FB78 File Offset: 0x0010DD78
+		// Token: 0x0600687F RID: 26751 RVA: 0x00039D36 File Offset: 0x00037F36
 		public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
 			base.OnStateEnter(animator, stateInfo, layerIndex);
@@ -22,7 +22,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B97 RID: 19351 RVA: 0x0010FBB0 File Offset: 0x0010DDB0
+		// Token: 0x06006880 RID: 26752 RVA: 0x0017FEB8 File Offset: 0x0017E0B8
 		public override void OnStateUpdate(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
 		{
 			if (this.m_timeAsPercent == 0f)
@@ -41,7 +41,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B98 RID: 19352 RVA: 0x0010FBFC File Offset: 0x0010DDFC
+		// Token: 0x06006881 RID: 26753 RVA: 0x00039D6D File Offset: 0x00037F6D
 		public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
 			if (!base.GetShouldPlay(animator))
@@ -54,16 +54,16 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003F92 RID: 16274
+		// Token: 0x040054E4 RID: 21732
 		[SerializeField]
 		private bool m_stopOnExit;
 
-		// Token: 0x04003F93 RID: 16275
+		// Token: 0x040054E5 RID: 21733
 		[SerializeField]
 		[Range(0f, 3f)]
 		private float m_timeAsPercent;
 
-		// Token: 0x04003F94 RID: 16276
+		// Token: 0x040054E6 RID: 21734
 		private bool m_hasPlayed;
 	}
 }

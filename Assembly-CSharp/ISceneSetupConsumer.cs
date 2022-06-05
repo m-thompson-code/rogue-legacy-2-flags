@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000625 RID: 1573
+// Token: 0x02000A51 RID: 2641
 public interface ISceneSetupConsumer
 {
-	// Token: 0x17001404 RID: 5124
-	// (get) Token: 0x060038CD RID: 14541
-	// (set) Token: 0x060038CE RID: 14542
+	// Token: 0x17001B69 RID: 7017
+	// (get) Token: 0x06004FA6 RID: 20390
+	// (set) Token: 0x06004FA7 RID: 20391
 	ISceneSetup SceneSetup { get; set; }
 }

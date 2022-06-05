@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000539 RID: 1337
+// Token: 0x020008CD RID: 2253
 public class CharacterHitCritical_TextPopup : TextPopupObj
 {
-	// Token: 0x06003114 RID: 12564 RVA: 0x000A6837 File Offset: 0x000A4A37
+	// Token: 0x06004486 RID: 17542 RVA: 0x00025BA5 File Offset: 0x00023DA5
 	protected override IEnumerator SpawnEffectCoroutine()
 	{
 		int length = base.Text.Replace("-", "").Length;
@@ -38,7 +38,7 @@ public class CharacterHitCritical_TextPopup : TextPopupObj
 		yield break;
 	}
 
-	// Token: 0x06003115 RID: 12565 RVA: 0x000A6848 File Offset: 0x000A4A48
+	// Token: 0x06004487 RID: 17543 RVA: 0x0010EA64 File Offset: 0x0010CC64
 	private void SetBackingActive(SpriteRenderer backing)
 	{
 		if (this.m_twoNumberBacking != backing && this.m_twoNumberBacking.gameObject.activeSelf)
@@ -59,18 +59,18 @@ public class CharacterHitCritical_TextPopup : TextPopupObj
 		}
 	}
 
-	// Token: 0x040026CC RID: 9932
+	// Token: 0x04003526 RID: 13606
 	private static bool FLIP_XPOS_STATIC;
 
-	// Token: 0x040026CD RID: 9933
+	// Token: 0x04003527 RID: 13607
 	[SerializeField]
 	private SpriteRenderer m_twoNumberBacking;
 
-	// Token: 0x040026CE RID: 9934
+	// Token: 0x04003528 RID: 13608
 	[SerializeField]
 	private SpriteRenderer m_threeNumberBacking;
 
-	// Token: 0x040026CF RID: 9935
+	// Token: 0x04003529 RID: 13609
 	[SerializeField]
 	private SpriteRenderer m_fourNumberBacking;
 }

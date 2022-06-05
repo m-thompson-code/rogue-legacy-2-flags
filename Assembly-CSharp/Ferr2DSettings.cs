@@ -1,13 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006B9 RID: 1721
+// Token: 0x02000B64 RID: 2916
 [Serializable]
 public class Ferr2DSettings
 {
-	// Token: 0x1700159C RID: 5532
-	// (get) Token: 0x06003F6B RID: 16235 RVA: 0x000E219C File Offset: 0x000E039C
-	// (set) Token: 0x06003F6C RID: 16236 RVA: 0x000E21A4 File Offset: 0x000E03A4
+	// Token: 0x17001D94 RID: 7572
+	// (get) Token: 0x060058A2 RID: 22690 RVA: 0x000302D6 File Offset: 0x0002E4D6
+	// (set) Token: 0x060058A3 RID: 22691 RVA: 0x000302DE File Offset: 0x0002E4DE
 	public Ferr2DT_PathTerrain Master
 	{
 		get
@@ -20,8 +20,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x1700159D RID: 5533
-	// (get) Token: 0x06003F6D RID: 16237 RVA: 0x000E21AD File Offset: 0x000E03AD
+	// Token: 0x17001D95 RID: 7573
+	// (get) Token: 0x060058A4 RID: 22692 RVA: 0x000302E7 File Offset: 0x0002E4E7
 	public Ferr2DT_Material Material
 	{
 		get
@@ -34,8 +34,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x1700159E RID: 5534
-	// (get) Token: 0x06003F6E RID: 16238 RVA: 0x000E21CF File Offset: 0x000E03CF
+	// Token: 0x17001D96 RID: 7574
+	// (get) Token: 0x060058A5 RID: 22693 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public bool InteriorGridVerts
 	{
 		get
@@ -44,8 +44,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x1700159F RID: 5535
-	// (get) Token: 0x06003F6F RID: 16239 RVA: 0x000E21D2 File Offset: 0x000E03D2
+	// Token: 0x17001D97 RID: 7575
+	// (get) Token: 0x060058A6 RID: 22694 RVA: 0x00030309 File Offset: 0x0002E509
 	public float GridSpacing
 	{
 		get
@@ -54,8 +54,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x170015A0 RID: 5536
-	// (get) Token: 0x06003F70 RID: 16240 RVA: 0x000E21D9 File Offset: 0x000E03D9
+	// Token: 0x17001D98 RID: 7576
+	// (get) Token: 0x060058A7 RID: 22695 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public Ferr2DT_ColorType ColorType
 	{
 		get
@@ -64,8 +64,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x170015A1 RID: 5537
-	// (get) Token: 0x06003F71 RID: 16241 RVA: 0x000E21DC File Offset: 0x000E03DC
+	// Token: 0x17001D99 RID: 7577
+	// (get) Token: 0x060058A8 RID: 22696 RVA: 0x00030309 File Offset: 0x0002E509
 	public float VertexGradientDistance
 	{
 		get
@@ -74,8 +74,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x170015A2 RID: 5538
-	// (get) Token: 0x06003F72 RID: 16242 RVA: 0x000E21E3 File Offset: 0x000E03E3
+	// Token: 0x17001D9A RID: 7578
+	// (get) Token: 0x060058A9 RID: 22697 RVA: 0x00030310 File Offset: 0x0002E510
 	public Gradient VertexGradient
 	{
 		get
@@ -88,8 +88,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x170015A3 RID: 5539
-	// (get) Token: 0x06003F73 RID: 16243 RVA: 0x000E2200 File Offset: 0x000E0400
+	// Token: 0x17001D9B RID: 7579
+	// (get) Token: 0x060058AA RID: 22698 RVA: 0x0003032D File Offset: 0x0002E52D
 	public float PixelsPerUnit
 	{
 		get
@@ -102,8 +102,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x170015A4 RID: 5540
-	// (get) Token: 0x06003F74 RID: 16244 RVA: 0x000E2221 File Offset: 0x000E0421
+	// Token: 0x17001D9C RID: 7580
+	// (get) Token: 0x060058AB RID: 22699 RVA: 0x0003034E File Offset: 0x0002E54E
 	public bool CreateTangents
 	{
 		get
@@ -112,8 +112,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x170015A5 RID: 5541
-	// (get) Token: 0x06003F75 RID: 16245 RVA: 0x000E223E File Offset: 0x000E043E
+	// Token: 0x17001D9D RID: 7581
+	// (get) Token: 0x060058AC RID: 22700 RVA: 0x0003036B File Offset: 0x0002E56B
 	public int SortingLayer
 	{
 		get
@@ -126,8 +126,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x170015A6 RID: 5542
-	// (get) Token: 0x06003F76 RID: 16246 RVA: 0x000E2260 File Offset: 0x000E0460
+	// Token: 0x17001D9E RID: 7582
+	// (get) Token: 0x060058AD RID: 22701 RVA: 0x0003038D File Offset: 0x0002E58D
 	public float FillZ
 	{
 		get
@@ -140,8 +140,8 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x170015A7 RID: 5543
-	// (get) Token: 0x06003F77 RID: 16247 RVA: 0x000E2281 File Offset: 0x000E0481
+	// Token: 0x17001D9F RID: 7583
+	// (get) Token: 0x060058AE RID: 22702 RVA: 0x000303AE File Offset: 0x0002E5AE
 	public int OrderInLayer
 	{
 		get
@@ -154,13 +154,13 @@ public class Ferr2DSettings
 		}
 	}
 
-	// Token: 0x06003F78 RID: 16248 RVA: 0x000E22A3 File Offset: 0x000E04A3
+	// Token: 0x060058AF RID: 22703 RVA: 0x000303D0 File Offset: 0x0002E5D0
 	public void Update(Ferr2DT_PathTerrain masterPrefab)
 	{
 		this.Master = masterPrefab;
 	}
 
-	// Token: 0x04002F1F RID: 12063
+	// Token: 0x0400416E RID: 16750
 	[SerializeField]
 	private Ferr2DT_PathTerrain m_master;
 }

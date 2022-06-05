@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000366 RID: 870
+// Token: 0x020005DE RID: 1502
 public class UpsideDown_Trait : BaseTrait
 {
-	// Token: 0x17000DF8 RID: 3576
-	// (get) Token: 0x060020B2 RID: 8370 RVA: 0x00066E45 File Offset: 0x00065045
+	// Token: 0x17001267 RID: 4711
+	// (get) Token: 0x06002E57 RID: 11863 RVA: 0x00017DE0 File Offset: 0x00015FE0
 	public override TraitType TraitType
 	{
 		get
@@ -14,7 +14,7 @@ public class UpsideDown_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x060020B3 RID: 8371 RVA: 0x00066E4C File Offset: 0x0006504C
+	// Token: 0x06002E58 RID: 11864 RVA: 0x000C7D34 File Offset: 0x000C5F34
 	public override void DisableOnDeath()
 	{
 		base.DisableOnDeath();
@@ -25,7 +25,7 @@ public class UpsideDown_Trait : BaseTrait
 		playerController.transform.position = midpoint;
 	}
 
-	// Token: 0x060020B4 RID: 8372 RVA: 0x00066EA4 File Offset: 0x000650A4
+	// Token: 0x06002E59 RID: 11865 RVA: 0x000C7D8C File Offset: 0x000C5F8C
 	public void ApplyDeathDefy(bool reset)
 	{
 		if (!reset)
@@ -41,6 +41,6 @@ public class UpsideDown_Trait : BaseTrait
 		PlayerManager.GetPlayerController().transform.position = this.m_storedDeathDefyPos;
 	}
 
-	// Token: 0x04001C6A RID: 7274
+	// Token: 0x0400260C RID: 9740
 	private Vector3 m_storedDeathDefyPos;
 }

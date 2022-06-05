@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020005B6 RID: 1462
+// Token: 0x020009BE RID: 2494
 public class TurretHazardArgs : HazardArgs
 {
-	// Token: 0x06003648 RID: 13896 RVA: 0x000BC28C File Offset: 0x000BA48C
+	// Token: 0x06004C5A RID: 19546 RVA: 0x00029B69 File Offset: 0x00027D69
 	public TurretHazardArgs(StateID initialState, TurretLogicType logicType, bool useHalfLoopDelay, float initialFireDelay, float loopFireDelay, float projectileSpeedMod) : base(initialState)
 	{
 		this.UseHalfLoopDelay = useHalfLoopDelay;
@@ -13,28 +13,28 @@ public class TurretHazardArgs : HazardArgs
 		this.ProjectileSpeedMod = projectileSpeedMod;
 	}
 
-	// Token: 0x1700132B RID: 4907
-	// (get) Token: 0x06003649 RID: 13897 RVA: 0x000BC2BB File Offset: 0x000BA4BB
-	// (set) Token: 0x0600364A RID: 13898 RVA: 0x000BC2C3 File Offset: 0x000BA4C3
+	// Token: 0x17001A58 RID: 6744
+	// (get) Token: 0x06004C5B RID: 19547 RVA: 0x00029B98 File Offset: 0x00027D98
+	// (set) Token: 0x06004C5C RID: 19548 RVA: 0x00029BA0 File Offset: 0x00027DA0
 	public TurretLogicType LogicType { get; private set; }
 
-	// Token: 0x1700132C RID: 4908
-	// (get) Token: 0x0600364B RID: 13899 RVA: 0x000BC2CC File Offset: 0x000BA4CC
-	// (set) Token: 0x0600364C RID: 13900 RVA: 0x000BC2D4 File Offset: 0x000BA4D4
+	// Token: 0x17001A59 RID: 6745
+	// (get) Token: 0x06004C5D RID: 19549 RVA: 0x00029BA9 File Offset: 0x00027DA9
+	// (set) Token: 0x06004C5E RID: 19550 RVA: 0x00029BB1 File Offset: 0x00027DB1
 	public float InitialFireDelay { get; private set; }
 
-	// Token: 0x1700132D RID: 4909
-	// (get) Token: 0x0600364D RID: 13901 RVA: 0x000BC2DD File Offset: 0x000BA4DD
-	// (set) Token: 0x0600364E RID: 13902 RVA: 0x000BC2E5 File Offset: 0x000BA4E5
+	// Token: 0x17001A5A RID: 6746
+	// (get) Token: 0x06004C5F RID: 19551 RVA: 0x00029BBA File Offset: 0x00027DBA
+	// (set) Token: 0x06004C60 RID: 19552 RVA: 0x00029BC2 File Offset: 0x00027DC2
 	public float LoopFireDelay { get; private set; }
 
-	// Token: 0x1700132E RID: 4910
-	// (get) Token: 0x0600364F RID: 13903 RVA: 0x000BC2EE File Offset: 0x000BA4EE
-	// (set) Token: 0x06003650 RID: 13904 RVA: 0x000BC2F6 File Offset: 0x000BA4F6
+	// Token: 0x17001A5B RID: 6747
+	// (get) Token: 0x06004C61 RID: 19553 RVA: 0x00029BCB File Offset: 0x00027DCB
+	// (set) Token: 0x06004C62 RID: 19554 RVA: 0x00029BD3 File Offset: 0x00027DD3
 	public float ProjectileSpeedMod { get; private set; }
 
-	// Token: 0x1700132F RID: 4911
-	// (get) Token: 0x06003651 RID: 13905 RVA: 0x000BC2FF File Offset: 0x000BA4FF
-	// (set) Token: 0x06003652 RID: 13906 RVA: 0x000BC307 File Offset: 0x000BA507
+	// Token: 0x17001A5C RID: 6748
+	// (get) Token: 0x06004C63 RID: 19555 RVA: 0x00029BDC File Offset: 0x00027DDC
+	// (set) Token: 0x06004C64 RID: 19556 RVA: 0x00029BE4 File Offset: 0x00027DE4
 	public bool UseHalfLoopDelay { get; private set; }
 }

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000423 RID: 1059
+// Token: 0x020006DE RID: 1758
 public class GenericEffect : BaseEffect
 {
-	// Token: 0x17000F8C RID: 3980
-	// (get) Token: 0x06002715 RID: 10005 RVA: 0x0008265E File Offset: 0x0008085E
+	// Token: 0x17001455 RID: 5205
+	// (get) Token: 0x060035D6 RID: 13782 RVA: 0x0001D878 File Offset: 0x0001BA78
 	private bool HasParticleSystem
 	{
 		get
@@ -15,8 +15,8 @@ public class GenericEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x17000F8D RID: 3981
-	// (get) Token: 0x06002716 RID: 10006 RVA: 0x0008266B File Offset: 0x0008086B
+	// Token: 0x17001456 RID: 5206
+	// (get) Token: 0x060035D7 RID: 13783 RVA: 0x0001D885 File Offset: 0x0001BA85
 	private bool HasAnimator
 	{
 		get
@@ -25,8 +25,8 @@ public class GenericEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x17000F8E RID: 3982
-	// (get) Token: 0x06002717 RID: 10007 RVA: 0x00082678 File Offset: 0x00080878
+	// Token: 0x17001457 RID: 5207
+	// (get) Token: 0x060035D8 RID: 13784 RVA: 0x0001D892 File Offset: 0x0001BA92
 	public Animator Animator
 	{
 		get
@@ -35,8 +35,8 @@ public class GenericEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x17000F8F RID: 3983
-	// (get) Token: 0x06002718 RID: 10008 RVA: 0x00082680 File Offset: 0x00080880
+	// Token: 0x17001458 RID: 5208
+	// (get) Token: 0x060035D9 RID: 13785 RVA: 0x0001D89A File Offset: 0x0001BA9A
 	public ParticleSystem ParticleSystem
 	{
 		get
@@ -45,7 +45,7 @@ public class GenericEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x06002719 RID: 10009 RVA: 0x00082688 File Offset: 0x00080888
+	// Token: 0x060035DA RID: 13786 RVA: 0x000E2B40 File Offset: 0x000E0D40
 	protected override void Awake()
 	{
 		base.Awake();
@@ -59,7 +59,7 @@ public class GenericEffect : BaseEffect
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x0600271A RID: 10010 RVA: 0x000826F8 File Offset: 0x000808F8
+	// Token: 0x060035DB RID: 13787 RVA: 0x000E2BB0 File Offset: 0x000E0DB0
 	public override void Play(float duration = 0f, EffectStopType stopType = EffectStopType.Gracefully)
 	{
 		base.Play(duration, stopType);
@@ -78,7 +78,7 @@ public class GenericEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x0600271B RID: 10011 RVA: 0x00082766 File Offset: 0x00080966
+	// Token: 0x060035DC RID: 13788 RVA: 0x0001D8A2 File Offset: 0x0001BAA2
 	private IEnumerator PlayTimer(float duration, EffectStopType stopType)
 	{
 		if (duration > 0f)
@@ -94,7 +94,7 @@ public class GenericEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x0600271C RID: 10012 RVA: 0x0008277C File Offset: 0x0008097C
+	// Token: 0x060035DD RID: 13789 RVA: 0x0001D8B8 File Offset: 0x0001BAB8
 	private IEnumerator PlayTimedAnimator(float duration, EffectStopType stopType)
 	{
 		if (!this.m_hasStopParam && duration == 0f && stopType == EffectStopType.Immediate)
@@ -153,7 +153,7 @@ public class GenericEffect : BaseEffect
 		yield break;
 	}
 
-	// Token: 0x0600271D RID: 10013 RVA: 0x00082799 File Offset: 0x00080999
+	// Token: 0x060035DE RID: 13790 RVA: 0x0001D8D5 File Offset: 0x0001BAD5
 	private IEnumerator PlayTimedParticleSystem(float duration, EffectStopType stopType)
 	{
 		this.m_particleSystem.Clear();
@@ -233,7 +233,7 @@ public class GenericEffect : BaseEffect
 		yield break;
 	}
 
-	// Token: 0x0600271E RID: 10014 RVA: 0x000827B6 File Offset: 0x000809B6
+	// Token: 0x060035DF RID: 13791 RVA: 0x0001D8F2 File Offset: 0x0001BAF2
 	protected override void PlayComplete()
 	{
 		base.PlayComplete();
@@ -243,7 +243,7 @@ public class GenericEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x0600271F RID: 10015 RVA: 0x000827DC File Offset: 0x000809DC
+	// Token: 0x060035E0 RID: 13792 RVA: 0x000E2C20 File Offset: 0x000E0E20
 	public override void Stop(EffectStopType stopType)
 	{
 		base.StopAllCoroutines();
@@ -270,7 +270,7 @@ public class GenericEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x06002720 RID: 10016 RVA: 0x00082840 File Offset: 0x00080A40
+	// Token: 0x060035E1 RID: 13793 RVA: 0x0001D918 File Offset: 0x0001BB18
 	private IEnumerator StopGracefullyCoroutine()
 	{
 		if (this.HasParticleSystem && this.m_particleSystem.isPlaying)
@@ -291,7 +291,7 @@ public class GenericEffect : BaseEffect
 		yield break;
 	}
 
-	// Token: 0x06002721 RID: 10017 RVA: 0x0008284F File Offset: 0x00080A4F
+	// Token: 0x060035E2 RID: 13794 RVA: 0x0001D927 File Offset: 0x0001BB27
 	private IEnumerator StopParticleSystemGracefullyCoroutine()
 	{
 		this.m_particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmitting);
@@ -309,7 +309,7 @@ public class GenericEffect : BaseEffect
 		yield break;
 	}
 
-	// Token: 0x06002722 RID: 10018 RVA: 0x0008285E File Offset: 0x00080A5E
+	// Token: 0x060035E3 RID: 13795 RVA: 0x0001D936 File Offset: 0x0001BB36
 	private IEnumerator StopAnimatorGracefullyCoroutine()
 	{
 		if (this.m_hasStopParam)
@@ -326,7 +326,7 @@ public class GenericEffect : BaseEffect
 		yield break;
 	}
 
-	// Token: 0x06002723 RID: 10019 RVA: 0x0008286D File Offset: 0x00080A6D
+	// Token: 0x060035E4 RID: 13796 RVA: 0x0001D945 File Offset: 0x0001BB45
 	public override void ResetValues()
 	{
 		base.ResetValues();
@@ -336,28 +336,28 @@ public class GenericEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x040020D1 RID: 8401
+	// Token: 0x04002BC2 RID: 11202
 	[SerializeField]
 	private bool m_useUnscaledTime;
 
-	// Token: 0x040020D2 RID: 8402
+	// Token: 0x04002BC3 RID: 11203
 	private ParticleSystem m_particleSystem;
 
-	// Token: 0x040020D3 RID: 8403
+	// Token: 0x04002BC4 RID: 11204
 	private Animator m_animator;
 
-	// Token: 0x040020D4 RID: 8404
+	// Token: 0x04002BC5 RID: 11205
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040020D5 RID: 8405
+	// Token: 0x04002BC6 RID: 11206
 	private bool m_hasStopParam;
 
-	// Token: 0x040020D6 RID: 8406
+	// Token: 0x04002BC7 RID: 11207
 	private AnimatorUpdateMode m_storedUpdateMode;
 
-	// Token: 0x040020D7 RID: 8407
+	// Token: 0x04002BC8 RID: 11208
 	private bool m_stoppingParticleSystem;
 
-	// Token: 0x040020D8 RID: 8408
+	// Token: 0x04002BC9 RID: 11209
 	private bool m_stoppingAnimator;
 }

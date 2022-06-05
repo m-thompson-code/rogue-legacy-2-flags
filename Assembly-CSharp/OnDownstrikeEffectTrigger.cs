@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000419 RID: 1049
+// Token: 0x020006D1 RID: 1745
 public class OnDownstrikeEffectTrigger : BaseEffectTrigger
 {
-	// Token: 0x17000F7C RID: 3964
-	// (get) Token: 0x060026D3 RID: 9939 RVA: 0x0008123B File Offset: 0x0007F43B
+	// Token: 0x17001441 RID: 5185
+	// (get) Token: 0x06003588 RID: 13704 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool RequiresCollider
 	{
 		get
@@ -14,8 +14,8 @@ public class OnDownstrikeEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x17000F7D RID: 3965
-	// (get) Token: 0x060026D4 RID: 9940 RVA: 0x0008123E File Offset: 0x0007F43E
+	// Token: 0x17001442 RID: 5186
+	// (get) Token: 0x06003589 RID: 13705 RVA: 0x0001D5F6 File Offset: 0x0001B7F6
 	public override Vector3 Midpoint
 	{
 		get
@@ -24,14 +24,14 @@ public class OnDownstrikeEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026D5 RID: 9941 RVA: 0x0008124B File Offset: 0x0007F44B
+	// Token: 0x0600358A RID: 13706 RVA: 0x0001D603 File Offset: 0x0001B803
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onPlayerBounce = new Action<Projectile_RL, GameObject>(this.OnPlayerBounce);
 	}
 
-	// Token: 0x060026D6 RID: 9942 RVA: 0x00081265 File Offset: 0x0007F465
+	// Token: 0x0600358B RID: 13707 RVA: 0x0001D61D File Offset: 0x0001B81D
 	private void OnEnable()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -40,7 +40,7 @@ public class OnDownstrikeEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026D7 RID: 9943 RVA: 0x0008128A File Offset: 0x0007F48A
+	// Token: 0x0600358C RID: 13708 RVA: 0x0001D642 File Offset: 0x0001B842
 	private void OnDisable()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -49,7 +49,7 @@ public class OnDownstrikeEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026D8 RID: 9944 RVA: 0x000812AE File Offset: 0x0007F4AE
+	// Token: 0x0600358D RID: 13709 RVA: 0x0001D666 File Offset: 0x0001B866
 	private void OnPlayerBounce(Projectile_RL downstrikeProj, GameObject rootCollidedObj)
 	{
 		if (rootCollidedObj == this.m_rootObj)
@@ -58,7 +58,7 @@ public class OnDownstrikeEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026D9 RID: 9945 RVA: 0x000812C8 File Offset: 0x0007F4C8
+	// Token: 0x0600358E RID: 13710 RVA: 0x000E17F0 File Offset: 0x000DF9F0
 	private void TriggerBounceEvent(Projectile_RL downstrikeProj)
 	{
 		Vector3 vector = downstrikeProj.Midpoint;
@@ -94,6 +94,6 @@ public class OnDownstrikeEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x040020B2 RID: 8370
+	// Token: 0x04002B95 RID: 11157
 	private Action<Projectile_RL, GameObject> m_onPlayerBounce;
 }

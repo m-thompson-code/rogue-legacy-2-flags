@@ -3,16 +3,16 @@ using UnityEngine;
 
 namespace RLTests
 {
-	// Token: 0x02000882 RID: 2178
+	// Token: 0x02000DA2 RID: 3490
 	public class AnimatorMemoryAllocation_Test : MonoBehaviour
 	{
-		// Token: 0x060047A9 RID: 18345 RVA: 0x00101EFD File Offset: 0x001000FD
+		// Token: 0x060062A7 RID: 25255 RVA: 0x00036569 File Offset: 0x00034769
 		private void Awake()
 		{
 			this.m_animator = base.GetComponent<Animator>();
 		}
 
-		// Token: 0x060047AA RID: 18346 RVA: 0x00101F0B File Offset: 0x0010010B
+		// Token: 0x060062A8 RID: 25256 RVA: 0x00036577 File Offset: 0x00034777
 		private void Update()
 		{
 			if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -21,7 +21,7 @@ namespace RLTests
 			}
 		}
 
-		// Token: 0x060047AB RID: 18347 RVA: 0x00101F20 File Offset: 0x00100120
+		// Token: 0x060062A9 RID: 25257 RVA: 0x001708DC File Offset: 0x0016EADC
 		private void GetValue()
 		{
 			string name = this.m_animator.name;
@@ -46,15 +46,15 @@ namespace RLTests
 			}
 		}
 
-		// Token: 0x04003C99 RID: 15513
+		// Token: 0x0400509B RID: 20635
 		[SerializeField]
 		private string m_parameterName;
 
-		// Token: 0x04003C9A RID: 15514
+		// Token: 0x0400509C RID: 20636
 		[SerializeField]
 		private AnimatorParameterType m_parameterType;
 
-		// Token: 0x04003C9B RID: 15515
+		// Token: 0x0400509D RID: 20637
 		private Animator m_animator;
 	}
 }

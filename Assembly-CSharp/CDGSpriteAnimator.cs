@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020001C8 RID: 456
+// Token: 0x0200033F RID: 831
 public class CDGSpriteAnimator : MonoBehaviour
 {
-	// Token: 0x0600126D RID: 4717 RVA: 0x00035CE4 File Offset: 0x00033EE4
+	// Token: 0x06001AE3 RID: 6883 RVA: 0x0000DF15 File Offset: 0x0000C115
 	private void OnEnable()
 	{
 		this.m_frameCounter = 0f;
@@ -13,7 +13,7 @@ public class CDGSpriteAnimator : MonoBehaviour
 		base.StartCoroutine(this.Animate());
 	}
 
-	// Token: 0x0600126E RID: 4718 RVA: 0x00035D05 File Offset: 0x00033F05
+	// Token: 0x06001AE4 RID: 6884 RVA: 0x0000DF36 File Offset: 0x0000C136
 	private IEnumerator Animate()
 	{
 		for (;;)
@@ -49,33 +49,33 @@ public class CDGSpriteAnimator : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x040012D0 RID: 4816
+	// Token: 0x040018FA RID: 6394
 	[SerializeField]
 	private SpriteRenderer m_renderer;
 
-	// Token: 0x040012D1 RID: 4817
+	// Token: 0x040018FB RID: 6395
 	[SerializeField]
 	private Sprite[] m_sprites;
 
-	// Token: 0x040012D2 RID: 4818
+	// Token: 0x040018FC RID: 6396
 	[SerializeField]
 	private int m_introFrames;
 
-	// Token: 0x040012D3 RID: 4819
+	// Token: 0x040018FD RID: 6397
 	[SerializeField]
 	private int m_fps;
 
-	// Token: 0x040012D4 RID: 4820
+	// Token: 0x040018FE RID: 6398
 	[SerializeField]
 	private bool m_loop;
 
-	// Token: 0x040012D5 RID: 4821
+	// Token: 0x040018FF RID: 6399
 	[SerializeField]
 	private float m_loopingDelay;
 
-	// Token: 0x040012D6 RID: 4822
+	// Token: 0x04001900 RID: 6400
 	private float m_frameCounter;
 
-	// Token: 0x040012D7 RID: 4823
+	// Token: 0x04001901 RID: 6401
 	private int m_lastSpriteIndex;
 }

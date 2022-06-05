@@ -1,86 +1,86 @@
 ﻿using System;
 
-// Token: 0x0200078B RID: 1931
+// Token: 0x02000C4C RID: 3148
 public enum WindowID
 {
-	// Token: 0x040038FB RID: 14587
+	// Token: 0x04004BAB RID: 19371
 	None,
-	// Token: 0x040038FC RID: 14588
+	// Token: 0x04004BAC RID: 19372
 	Options,
-	// Token: 0x040038FD RID: 14589
+	// Token: 0x04004BAD RID: 19373
 	Pause,
-	// Token: 0x040038FE RID: 14590
+	// Token: 0x04004BAE RID: 19374
 	SkillTree,
-	// Token: 0x040038FF RID: 14591
+	// Token: 0x04004BAF RID: 19375
 	SkillTreePopUp,
-	// Token: 0x04003900 RID: 14592
+	// Token: 0x04004BB0 RID: 19376
 	Blacksmith,
-	// Token: 0x04003901 RID: 14593
+	// Token: 0x04004BB1 RID: 19377
 	Map,
-	// Token: 0x04003902 RID: 14594
+	// Token: 0x04004BB2 RID: 19378
 	Lineage,
-	// Token: 0x04003903 RID: 14595
+	// Token: 0x04004BB3 RID: 19379
 	Dialogue,
-	// Token: 0x04003904 RID: 14596
+	// Token: 0x04004BB4 RID: 19380
 	MainMenu,
-	// Token: 0x04003905 RID: 14597
+	// Token: 0x04004BB5 RID: 19381
 	Enchantress,
-	// Token: 0x04003906 RID: 14598
+	// Token: 0x04004BB6 RID: 19382
 	SpecialItemDrop,
-	// Token: 0x04003907 RID: 14599
+	// Token: 0x04004BB7 RID: 19383
 	PlayerDeath,
-	// Token: 0x04003908 RID: 14600
+	// Token: 0x04004BB8 RID: 19384
 	Suboptions,
-	// Token: 0x04003909 RID: 14601
+	// Token: 0x04004BB9 RID: 19385
 	PlayerCard,
-	// Token: 0x0400390A RID: 14602
+	// Token: 0x04004BBA RID: 19386
 	Teleporter,
-	// Token: 0x0400390B RID: 14603
+	// Token: 0x04004BBB RID: 19387
 	Disclaimer,
-	// Token: 0x0400390C RID: 14604
+	// Token: 0x04004BBC RID: 19388
 	ProfileSelect,
-	// Token: 0x0400390D RID: 14605
+	// Token: 0x04004BBD RID: 19389
 	Journal,
-	// Token: 0x0400390E RID: 14606
+	// Token: 0x04004BBE RID: 19390
 	Geneticist,
-	// Token: 0x0400390F RID: 14607
+	// Token: 0x04004BBF RID: 19391
 	Jukebox,
-	// Token: 0x04003910 RID: 14608
+	// Token: 0x04004BC0 RID: 19392
 	ConfirmMenu,
-	// Token: 0x04003911 RID: 14609
+	// Token: 0x04004BC1 RID: 19393
 	Backup,
-	// Token: 0x04003912 RID: 14610
+	// Token: 0x04004BC2 RID: 19394
 	BossIntro,
-	// Token: 0x04003913 RID: 14611
+	// Token: 0x04004BC3 RID: 19395
 	GearCard,
-	// Token: 0x04003914 RID: 14612
+	// Token: 0x04004BC4 RID: 19396
 	DeathDefy,
-	// Token: 0x04003915 RID: 14613
+	// Token: 0x04004BC5 RID: 19397
 	InsightCard,
-	// Token: 0x04003916 RID: 14614
+	// Token: 0x04004BC6 RID: 19398
 	UserReport,
-	// Token: 0x04003917 RID: 14615
+	// Token: 0x04004BC7 RID: 19399
 	Credits,
-	// Token: 0x04003918 RID: 14616
+	// Token: 0x04004BC8 RID: 19400
 	EndGameStats,
-	// Token: 0x04003919 RID: 14617
+	// Token: 0x04004BC9 RID: 19401
 	Totem,
-	// Token: 0x0400391A RID: 14618
+	// Token: 0x04004BCA RID: 19402
 	CameraDebug,
-	// Token: 0x0400391B RID: 14619
+	// Token: 0x04004BCB RID: 19403
 	ChallengeNPC,
-	// Token: 0x0400391C RID: 14620
+	// Token: 0x04004BCC RID: 19404
 	NewGamePlusNPC,
-	// Token: 0x0400391D RID: 14621
+	// Token: 0x04004BCD RID: 19405
 	TimelineCard,
-	// Token: 0x0400391E RID: 14622
+	// Token: 0x04004BCE RID: 19406
 	ChallengeComplete,
-	// Token: 0x0400391F RID: 14623
+	// Token: 0x04004BCF RID: 19407
 	SoulShop,
-	// Token: 0x04003920 RID: 14624
+	// Token: 0x04004BD0 RID: 19408
 	Glossary,
-	// Token: 0x04003921 RID: 14625
+	// Token: 0x04004BD1 RID: 19409
 	Quest,
-	// Token: 0x04003922 RID: 14626
+	// Token: 0x04004BD2 RID: 19410
 	ConfirmMenuBig
 }

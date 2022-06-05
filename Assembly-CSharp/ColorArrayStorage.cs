@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000038 RID: 56
+// Token: 0x0200003B RID: 59
 [Serializable]
 public class ColorArrayStorage : SerializableDictionary.Storage<Color[]>
 {

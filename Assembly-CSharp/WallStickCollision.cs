@@ -2,16 +2,16 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020003EC RID: 1004
+// Token: 0x0200068F RID: 1679
 public class WallStickCollision : MonoBehaviour
 {
-	// Token: 0x17000EE8 RID: 3816
-	// (get) Token: 0x06002500 RID: 9472 RVA: 0x0007ADB0 File Offset: 0x00078FB0
-	// (set) Token: 0x06002501 RID: 9473 RVA: 0x0007ADB8 File Offset: 0x00078FB8
+	// Token: 0x1700138D RID: 5005
+	// (get) Token: 0x0600334E RID: 13134 RVA: 0x0001C1FC File Offset: 0x0001A3FC
+	// (set) Token: 0x0600334F RID: 13135 RVA: 0x0001C204 File Offset: 0x0001A404
 	public StickToWallCollisionDelegate OnStickEvent { get; set; }
 
-	// Token: 0x17000EE9 RID: 3817
-	// (get) Token: 0x06002502 RID: 9474 RVA: 0x0007ADC1 File Offset: 0x00078FC1
+	// Token: 0x1700138E RID: 5006
+	// (get) Token: 0x06003350 RID: 13136 RVA: 0x0001C20D File Offset: 0x0001A40D
 	public bool StickingToWall
 	{
 		get
@@ -20,12 +20,12 @@ public class WallStickCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EEA RID: 3818
-	// (get) Token: 0x06002503 RID: 9475 RVA: 0x0007ADD8 File Offset: 0x00078FD8
-	// (set) Token: 0x06002504 RID: 9476 RVA: 0x0007ADE0 File Offset: 0x00078FE0
+	// Token: 0x1700138F RID: 5007
+	// (get) Token: 0x06003351 RID: 13137 RVA: 0x0001C224 File Offset: 0x0001A424
+	// (set) Token: 0x06003352 RID: 13138 RVA: 0x0001C22C File Offset: 0x0001A42C
 	public RaycastHit2D LastHitRaycast { get; set; }
 
-	// Token: 0x06002505 RID: 9477 RVA: 0x0007ADEC File Offset: 0x00078FEC
+	// Token: 0x06003353 RID: 13139 RVA: 0x000DAE8C File Offset: 0x000D908C
 	private void Awake()
 	{
 		GameObject root = this.GetRoot(false);
@@ -34,7 +34,7 @@ public class WallStickCollision : MonoBehaviour
 		this.m_stickToWall = new Action<CorgiController_RL>(this.StickToWall);
 	}
 
-	// Token: 0x06002506 RID: 9478 RVA: 0x0007AE28 File Offset: 0x00079028
+	// Token: 0x06003354 RID: 13140 RVA: 0x000DAEC8 File Offset: 0x000D90C8
 	private void OnEnable()
 	{
 		if (!this.m_stickListenerAdded)
@@ -49,7 +49,7 @@ public class WallStickCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002507 RID: 9479 RVA: 0x0007AE7C File Offset: 0x0007907C
+	// Token: 0x06003355 RID: 13141 RVA: 0x0001C235 File Offset: 0x0001A435
 	private IEnumerator EnableCollisionCoroutine()
 	{
 		yield return new WaitUntil(() => this.m_controller.IsInitialized);
@@ -58,7 +58,7 @@ public class WallStickCollision : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002508 RID: 9480 RVA: 0x0007AE8B File Offset: 0x0007908B
+	// Token: 0x06003356 RID: 13142 RVA: 0x0001C244 File Offset: 0x0001A444
 	private void OnDisable()
 	{
 		if (this.m_stickListenerAdded)
@@ -68,7 +68,7 @@ public class WallStickCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002509 RID: 9481 RVA: 0x0007AEB8 File Offset: 0x000790B8
+	// Token: 0x06003357 RID: 13143 RVA: 0x000DAF1C File Offset: 0x000D911C
 	private void StickToWall(CorgiController_RL corgiController)
 	{
 		if (!base.isActiveAndEnabled)
@@ -94,13 +94,13 @@ public class WallStickCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600250A RID: 9482 RVA: 0x0007AF76 File Offset: 0x00079176
+	// Token: 0x06003358 RID: 13144 RVA: 0x0001C271 File Offset: 0x0001A471
 	private void LateUpdate()
 	{
 		this.ConstrainEnemyMovementToRoom();
 	}
 
-	// Token: 0x0600250B RID: 9483 RVA: 0x0007AF80 File Offset: 0x00079180
+	// Token: 0x06003359 RID: 13145 RVA: 0x000DAFDC File Offset: 0x000D91DC
 	private void ConstrainEnemyMovementToRoom()
 	{
 		Rect collisionBounds = this.m_controller.CollisionBounds;
@@ -150,12 +150,12 @@ public class WallStickCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001F51 RID: 8017
+	// Token: 0x040029DA RID: 10714
 	private BaseCharacterController m_controller;
 
-	// Token: 0x04001F52 RID: 8018
+	// Token: 0x040029DB RID: 10715
 	private bool m_stickListenerAdded;
 
-	// Token: 0x04001F53 RID: 8019
+	// Token: 0x040029DC RID: 10716
 	private Action<CorgiController_RL> m_stickToWall;
 }

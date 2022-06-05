@@ -9,11 +9,11 @@ using UnityEngine.UI;
 
 namespace RL_Windows
 {
-	// Token: 0x020008BB RID: 2235
+	// Token: 0x02000DF6 RID: 3574
 	public class SpecialItemDropWindowController : WindowController, ILocalizable
 	{
-		// Token: 0x170017DF RID: 6111
-		// (get) Token: 0x06004908 RID: 18696 RVA: 0x001069CB File Offset: 0x00104BCB
+		// Token: 0x17002069 RID: 8297
+		// (get) Token: 0x060064A0 RID: 25760 RVA: 0x00004A89 File Offset: 0x00002C89
 		public override WindowID ID
 		{
 			get
@@ -22,14 +22,14 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004909 RID: 18697 RVA: 0x001069CF File Offset: 0x00104BCF
+		// Token: 0x060064A1 RID: 25761 RVA: 0x00037879 File Offset: 0x00035A79
 		private void Awake()
 		{
 			this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 			this.m_onConfirmButtonDown = new Action<InputActionEventData>(this.OnConfirmButtonDown);
 		}
 
-		// Token: 0x0600490A RID: 18698 RVA: 0x001069F6 File Offset: 0x00104BF6
+		// Token: 0x060064A2 RID: 25762 RVA: 0x000378A0 File Offset: 0x00035AA0
 		public override void Initialize()
 		{
 			base.Initialize();
@@ -38,7 +38,7 @@ namespace RL_Windows
 			this.m_displayNextYield = new WaitUntil(() => this.m_displayNextEntry);
 		}
 
-		// Token: 0x0600490B RID: 18699 RVA: 0x00106A32 File Offset: 0x00104C32
+		// Token: 0x060064A3 RID: 25763 RVA: 0x000378DC File Offset: 0x00035ADC
 		public void AddSpecialItemDrop(ISpecialItemDrop specialItemDrop)
 		{
 			if (specialItemDrop != null)
@@ -48,7 +48,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600490C RID: 18700 RVA: 0x00106A54 File Offset: 0x00104C54
+		// Token: 0x060064A4 RID: 25764 RVA: 0x00175B70 File Offset: 0x00173D70
 		private void ClearSpecialItemEntryArray()
 		{
 			this.m_numActiveEntries = 0;
@@ -58,7 +58,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600490D RID: 18701 RVA: 0x00106A80 File Offset: 0x00104C80
+		// Token: 0x060064A5 RID: 25765 RVA: 0x00175B9C File Offset: 0x00173D9C
 		protected override void OnFocus()
 		{
 			if (ReInput.isReady && base.RewiredPlayer != null)
@@ -68,7 +68,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600490E RID: 18702 RVA: 0x00106ACC File Offset: 0x00104CCC
+		// Token: 0x060064A6 RID: 25766 RVA: 0x00175BE8 File Offset: 0x00173DE8
 		protected override void OnLostFocus()
 		{
 			if (ReInput.isReady && base.RewiredPlayer != null)
@@ -78,7 +78,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x0600490F RID: 18703 RVA: 0x00106B18 File Offset: 0x00104D18
+		// Token: 0x060064A7 RID: 25767 RVA: 0x000378FD File Offset: 0x00035AFD
 		private void OnConfirmButtonDown(InputActionEventData obj)
 		{
 			if (this.m_currentEntryIndex >= this.m_numActiveEntries - 1)
@@ -90,7 +90,7 @@ namespace RL_Windows
 			this.m_displayNextEntry = true;
 		}
 
-		// Token: 0x06004910 RID: 18704 RVA: 0x00106B48 File Offset: 0x00104D48
+		// Token: 0x060064A8 RID: 25768 RVA: 0x00175C34 File Offset: 0x00173E34
 		protected override void OnOpen()
 		{
 			AudioManager.SetEnemySFXPaused(true);
@@ -107,7 +107,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004911 RID: 18705 RVA: 0x00106BC4 File Offset: 0x00104DC4
+		// Token: 0x060064A9 RID: 25769 RVA: 0x00175CB0 File Offset: 0x00173EB0
 		protected override void OnClose()
 		{
 			AudioManager.SetEnemySFXPaused(false);
@@ -121,13 +121,13 @@ namespace RL_Windows
 			saveBatch.End();
 		}
 
-		// Token: 0x06004912 RID: 18706 RVA: 0x00106C22 File Offset: 0x00104E22
+		// Token: 0x060064AA RID: 25770 RVA: 0x0003792A File Offset: 0x00035B2A
 		private void Update()
 		{
 			this.m_textBGCanvasGroup.alpha = this.m_descriptionText.alpha;
 		}
 
-		// Token: 0x06004913 RID: 18707 RVA: 0x00106C3A File Offset: 0x00104E3A
+		// Token: 0x060064AB RID: 25771 RVA: 0x00037942 File Offset: 0x00035B42
 		private IEnumerator RunOnEnterAnimation()
 		{
 			this.m_bgCanvasGroup.alpha = 0f;
@@ -149,7 +149,7 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x06004914 RID: 18708 RVA: 0x00106C49 File Offset: 0x00104E49
+		// Token: 0x060064AC RID: 25772 RVA: 0x00037951 File Offset: 0x00035B51
 		private IEnumerator FadeOutAnimationCoroutine()
 		{
 			this.m_animator.SetTrigger("Exit");
@@ -158,7 +158,7 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x06004915 RID: 18709 RVA: 0x00106C58 File Offset: 0x00104E58
+		// Token: 0x060064AD RID: 25773 RVA: 0x00037960 File Offset: 0x00035B60
 		private IEnumerator DisplayEntryCoroutine(ISpecialItemDrop specialItem)
 		{
 			RewiredMapController.SetCurrentMapEnabled(false);
@@ -170,7 +170,7 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x06004916 RID: 18710 RVA: 0x00106C70 File Offset: 0x00104E70
+		// Token: 0x060064AE RID: 25774 RVA: 0x00175D10 File Offset: 0x00173F10
 		private void InitializeSpecialItemEntry(ISpecialItemDrop specialItem)
 		{
 			this.m_iconFrameImage.gameObject.SetActive(true);
@@ -297,7 +297,7 @@ namespace RL_Windows
 			this.m_descriptionText.text = text3;
 		}
 
-		// Token: 0x06004917 RID: 18711 RVA: 0x001072C0 File Offset: 0x001054C0
+		// Token: 0x060064AF RID: 25775 RVA: 0x00037976 File Offset: 0x00035B76
 		private IEnumerator OnExitCoroutine()
 		{
 			TweenManager.TweenTo_UnscaledTime(this.m_bgCanvasGroup, 0.25f, new EaseDelegate(Ease.None), new object[]
@@ -314,7 +314,7 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x06004918 RID: 18712 RVA: 0x001072D0 File Offset: 0x001054D0
+		// Token: 0x060064B0 RID: 25776 RVA: 0x00176360 File Offset: 0x00174560
 		private void SetAnimatorToIdle()
 		{
 			foreach (AnimatorControllerParameter animatorControllerParameter in this.m_animator.parameters)
@@ -334,7 +334,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004919 RID: 18713 RVA: 0x00107334 File Offset: 0x00105534
+		// Token: 0x060064B1 RID: 25777 RVA: 0x001763C4 File Offset: 0x001745C4
 		public void RefreshText(object sender, EventArgs args)
 		{
 			if (this.m_currentEntryIndex >= 0 && this.m_currentEntryIndex < this.m_specialItemDropArray.Length)
@@ -344,82 +344,82 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x04003D9E RID: 15774
+		// Token: 0x04005207 RID: 20999
 		private const int ITEM_DROP_ENTRY_POOLSIZE = 5;
 
-		// Token: 0x04003D9F RID: 15775
+		// Token: 0x04005208 RID: 21000
 		[SerializeField]
 		private CanvasGroup m_bgCanvasGroup;
 
-		// Token: 0x04003DA0 RID: 15776
+		// Token: 0x04005209 RID: 21001
 		[SerializeField]
 		private CanvasGroup m_textBGCanvasGroup;
 
-		// Token: 0x04003DA1 RID: 15777
+		// Token: 0x0400520A RID: 21002
 		[Header("Text Objects")]
 		[SerializeField]
 		private TMP_Text m_itemFoundText;
 
-		// Token: 0x04003DA2 RID: 15778
+		// Token: 0x0400520B RID: 21003
 		[SerializeField]
 		private TMP_Text m_itemNameText;
 
-		// Token: 0x04003DA3 RID: 15779
+		// Token: 0x0400520C RID: 21004
 		[SerializeField]
 		private TMP_Text m_descriptionText;
 
-		// Token: 0x04003DA4 RID: 15780
+		// Token: 0x0400520D RID: 21005
 		[Header("Icons")]
 		[SerializeField]
 		private Image m_iconImage;
 
-		// Token: 0x04003DA5 RID: 15781
+		// Token: 0x0400520E RID: 21006
 		[SerializeField]
 		private Image m_iconFrameImage;
 
-		// Token: 0x04003DA6 RID: 15782
+		// Token: 0x0400520F RID: 21007
 		[SerializeField]
 		private Sprite m_genericIconFrameSprite;
 
-		// Token: 0x04003DA7 RID: 15783
+		// Token: 0x04005210 RID: 21008
 		[SerializeField]
 		private Sprite m_runeIconFrameSprite;
 
-		// Token: 0x04003DA8 RID: 15784
+		// Token: 0x04005211 RID: 21009
 		[SerializeField]
 		private Animator m_animator;
 
-		// Token: 0x04003DA9 RID: 15785
+		// Token: 0x04005212 RID: 21010
 		private ISpecialItemDrop[] m_specialItemDropArray;
 
-		// Token: 0x04003DAA RID: 15786
+		// Token: 0x04005213 RID: 21011
 		private int m_currentEntryIndex;
 
-		// Token: 0x04003DAB RID: 15787
+		// Token: 0x04005214 RID: 21012
 		private int m_numActiveEntries;
 
-		// Token: 0x04003DAC RID: 15788
+		// Token: 0x04005215 RID: 21013
 		private bool m_displayNextEntry;
 
-		// Token: 0x04003DAD RID: 15789
+		// Token: 0x04005216 RID: 21014
 		private WaitRL_Yield m_waitYield;
 
-		// Token: 0x04003DAE RID: 15790
+		// Token: 0x04005217 RID: 21015
 		private WaitUntil m_displayNextYield;
 
-		// Token: 0x04003DAF RID: 15791
+		// Token: 0x04005218 RID: 21016
 		private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-		// Token: 0x04003DB0 RID: 15792
+		// Token: 0x04005219 RID: 21017
 		public Relay<SpecialItemType> WindowOpenedRelay = new Relay<SpecialItemType>();
 
-		// Token: 0x04003DB1 RID: 15793
+		// Token: 0x0400521A RID: 21018
 		public Relay<SpecialItemType> WindowClosedRelay = new Relay<SpecialItemType>();
 
-		// Token: 0x04003DB2 RID: 15794
+		// Token: 0x0400521B RID: 21019
 		public Relay<SpecialItemType> ItemRevealedRelay = new Relay<SpecialItemType>();
 
-		// Token: 0x04003DB3 RID: 15795
+		// Token: 0x0400521C RID: 21020
 		private Action<InputActionEventData> m_onConfirmButtonDown;
 	}
 }

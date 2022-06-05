@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000E8 RID: 232
+// Token: 0x02000177 RID: 375
 public class FlyingSkull_Miniboss_AIScript : FlyingSkull_Basic_AIScript
 {
-	// Token: 0x170003C2 RID: 962
-	// (get) Token: 0x06000718 RID: 1816 RVA: 0x0001A149 File Offset: 0x00018349
+	// Token: 0x170004D0 RID: 1232
+	// (get) Token: 0x06000A47 RID: 2631 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_shoot_ShootNear
 	{
 		get
@@ -13,8 +13,8 @@ public class FlyingSkull_Miniboss_AIScript : FlyingSkull_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003C3 RID: 963
-	// (get) Token: 0x06000719 RID: 1817 RVA: 0x0001A14C File Offset: 0x0001834C
+	// Token: 0x170004D1 RID: 1233
+	// (get) Token: 0x06000A48 RID: 2632 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_shoot_ShootFar
 	{
 		get
@@ -23,8 +23,8 @@ public class FlyingSkull_Miniboss_AIScript : FlyingSkull_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003C4 RID: 964
-	// (get) Token: 0x0600071A RID: 1818 RVA: 0x0001A14F File Offset: 0x0001834F
+	// Token: 0x170004D2 RID: 1234
+	// (get) Token: 0x06000A49 RID: 2633 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override int m_shoot_TotalShots
 	{
 		get
@@ -33,8 +33,8 @@ public class FlyingSkull_Miniboss_AIScript : FlyingSkull_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170003C5 RID: 965
-	// (get) Token: 0x0600071B RID: 1819 RVA: 0x0001A152 File Offset: 0x00018352
+	// Token: 0x170004D3 RID: 1235
+	// (get) Token: 0x06000A4A RID: 2634 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_shoot_ShootMirror
 	{
 		get

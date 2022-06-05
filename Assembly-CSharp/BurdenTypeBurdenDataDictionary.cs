@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000014 RID: 20
+// Token: 0x02000017 RID: 23
 [Serializable]
 public class BurdenTypeBurdenDataDictionary : SerializableDictionary<BurdenType, BurdenData>
 {

@@ -1,78 +1,78 @@
 ﻿using System;
 
-// Token: 0x0200072B RID: 1835
+// Token: 0x02000BE9 RID: 3049
 public enum EffectType
 {
-	// Token: 0x040033B4 RID: 13236
+	// Token: 0x04004630 RID: 17968
 	None,
-	// Token: 0x040033B5 RID: 13237
+	// Token: 0x04004631 RID: 17969
 	AirJump = 10,
-	// Token: 0x040033B6 RID: 13238
+	// Token: 0x04004632 RID: 17970
 	Dash = 20,
-	// Token: 0x040033B7 RID: 13239
+	// Token: 0x04004633 RID: 17971
 	DashLines,
-	// Token: 0x040033B8 RID: 13240
+	// Token: 0x04004634 RID: 17972
 	DashSilhouette,
-	// Token: 0x040033B9 RID: 13241
+	// Token: 0x04004635 RID: 17973
 	DashDust = 25,
-	// Token: 0x040033BA RID: 13242
+	// Token: 0x04004636 RID: 17974
 	JumpUp = 30,
-	// Token: 0x040033BB RID: 13243
+	// Token: 0x04004637 RID: 17975
 	JumpUpDust,
-	// Token: 0x040033BC RID: 13244
+	// Token: 0x04004638 RID: 17976
 	JumpForward = 35,
-	// Token: 0x040033BD RID: 13245
+	// Token: 0x04004639 RID: 17977
 	LandedDust = 40,
-	// Token: 0x040033BE RID: 13246
+	// Token: 0x0400463A RID: 17978
 	GroundDustDirectional = 45,
-	// Token: 0x040033BF RID: 13247
+	// Token: 0x0400463B RID: 17979
 	FootstepDust = 50,
-	// Token: 0x040033C0 RID: 13248
+	// Token: 0x0400463C RID: 17980
 	Downstrike = 60,
-	// Token: 0x040033C1 RID: 13249
+	// Token: 0x0400463D RID: 17981
 	DownstrikeLand = 70,
-	// Token: 0x040033C2 RID: 13250
+	// Token: 0x0400463E RID: 17982
 	DownstrikeLandShockwave,
-	// Token: 0x040033C3 RID: 13251
+	// Token: 0x0400463F RID: 17983
 	SpellcastTell = 80,
-	// Token: 0x040033C4 RID: 13252
+	// Token: 0x04004640 RID: 17984
 	Spellcast = 85,
-	// Token: 0x040033C5 RID: 13253
+	// Token: 0x04004641 RID: 17985
 	BounceSpin = 90,
-	// Token: 0x040033C6 RID: 13254
+	// Token: 0x04004642 RID: 17986
 	DustCloudSmall = 100,
-	// Token: 0x040033C7 RID: 13255
+	// Token: 0x04004643 RID: 17987
 	WoodDestroyedParticles = 120,
-	// Token: 0x040033C8 RID: 13256
+	// Token: 0x04004644 RID: 17988
 	WoodDamageParticles = 130,
-	// Token: 0x040033C9 RID: 13257
+	// Token: 0x04004645 RID: 17989
 	MetalDestroyedParticles = 140,
-	// Token: 0x040033CA RID: 13258
+	// Token: 0x04004646 RID: 17990
 	MetalDamageParticles = 150,
-	// Token: 0x040033CB RID: 13259
+	// Token: 0x04004647 RID: 17991
 	FlameFlareParticles = 160,
-	// Token: 0x040033CC RID: 13260
+	// Token: 0x04004648 RID: 17992
 	LanternFallingSparksParticles = 170,
-	// Token: 0x040033CD RID: 13261
+	// Token: 0x04004649 RID: 17993
 	LandedOnAnimation = 200,
-	// Token: 0x040033CE RID: 13262
+	// Token: 0x0400464A RID: 17994
 	JumpedOffAnimation = 210,
-	// Token: 0x040033CF RID: 13263
+	// Token: 0x0400464B RID: 17995
 	WobbleAnimation = 220,
-	// Token: 0x040033D0 RID: 13264
+	// Token: 0x0400464C RID: 17996
 	SwayAnimation = 230,
-	// Token: 0x040033D1 RID: 13265
+	// Token: 0x0400464D RID: 17997
 	FireballSmokeTrail = 300,
-	// Token: 0x040033D2 RID: 13266
+	// Token: 0x0400464E RID: 17998
 	FireballMuzzleFlash,
-	// Token: 0x040033D3 RID: 13267
+	// Token: 0x0400464F RID: 17999
 	FireballTimeOut,
-	// Token: 0x040033D4 RID: 13268
+	// Token: 0x04004650 RID: 18000
 	Sparkle = 400,
-	// Token: 0x040033D5 RID: 13269
+	// Token: 0x04004651 RID: 18001
 	HitSparksGeneric = 410,
-	// Token: 0x040033D6 RID: 13270
+	// Token: 0x04004652 RID: 18002
 	HitSparksSlash = 420,
-	// Token: 0x040033D7 RID: 13271
+	// Token: 0x04004653 RID: 18003
 	HitSparksInvincible = 430
 }

@@ -2,12 +2,12 @@
 using Cinemachine;
 using UnityEngine;
 
-// Token: 0x02000691 RID: 1681
+// Token: 0x02000B1A RID: 2842
 public class CinemachineVirtualCameraManager : MonoBehaviour
 {
-	// Token: 0x17001531 RID: 5425
-	// (get) Token: 0x06003D08 RID: 15624 RVA: 0x000D3BED File Offset: 0x000D1DED
-	// (set) Token: 0x06003D09 RID: 15625 RVA: 0x000D3C03 File Offset: 0x000D1E03
+	// Token: 0x17001CFD RID: 7421
+	// (get) Token: 0x0600559D RID: 21917 RVA: 0x0002E835 File Offset: 0x0002CA35
+	// (set) Token: 0x0600559E RID: 21918 RVA: 0x0002E84B File Offset: 0x0002CA4B
 	public Vector2 ConfinerSize
 	{
 		get
@@ -24,9 +24,9 @@ public class CinemachineVirtualCameraManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001532 RID: 5426
-	// (get) Token: 0x06003D0A RID: 15626 RVA: 0x000D3C0C File Offset: 0x000D1E0C
-	// (set) Token: 0x06003D0B RID: 15627 RVA: 0x000D3C14 File Offset: 0x000D1E14
+	// Token: 0x17001CFE RID: 7422
+	// (get) Token: 0x0600559F RID: 21919 RVA: 0x0002E854 File Offset: 0x0002CA54
+	// (set) Token: 0x060055A0 RID: 21920 RVA: 0x0002E85C File Offset: 0x0002CA5C
 	public bool IsActiveVirtualCamera
 	{
 		get
@@ -39,9 +39,9 @@ public class CinemachineVirtualCameraManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001533 RID: 5427
-	// (get) Token: 0x06003D0C RID: 15628 RVA: 0x000D3C1D File Offset: 0x000D1E1D
-	// (set) Token: 0x06003D0D RID: 15629 RVA: 0x000D3C25 File Offset: 0x000D1E25
+	// Token: 0x17001CFF RID: 7423
+	// (get) Token: 0x060055A1 RID: 21921 RVA: 0x0002E865 File Offset: 0x0002CA65
+	// (set) Token: 0x060055A2 RID: 21922 RVA: 0x0002E86D File Offset: 0x0002CA6D
 	public bool IsInitialised
 	{
 		get
@@ -54,8 +54,8 @@ public class CinemachineVirtualCameraManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001534 RID: 5428
-	// (get) Token: 0x06003D0E RID: 15630 RVA: 0x000D3C2E File Offset: 0x000D1E2E
+	// Token: 0x17001D00 RID: 7424
+	// (get) Token: 0x060055A3 RID: 21923 RVA: 0x0002E876 File Offset: 0x0002CA76
 	public CinemachineVirtualCamera VirtualCamera
 	{
 		get
@@ -64,19 +64,19 @@ public class CinemachineVirtualCameraManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D0F RID: 15631 RVA: 0x000D3C36 File Offset: 0x000D1E36
+	// Token: 0x060055A4 RID: 21924 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void Start()
 	{
 	}
 
-	// Token: 0x06003D10 RID: 15632 RVA: 0x000D3C38 File Offset: 0x000D1E38
+	// Token: 0x060055A5 RID: 21925 RVA: 0x0002E87E File Offset: 0x0002CA7E
 	private void OnDisable()
 	{
 		this.IsActiveVirtualCamera = false;
 		this.SetFollowTarget(null);
 	}
 
-	// Token: 0x06003D11 RID: 15633 RVA: 0x000D3C48 File Offset: 0x000D1E48
+	// Token: 0x060055A6 RID: 21926 RVA: 0x00143D50 File Offset: 0x00141F50
 	private void Initialise()
 	{
 		BaseRoom componentInParent = base.GetComponentInParent<BaseRoom>();
@@ -103,7 +103,7 @@ public class CinemachineVirtualCameraManager : MonoBehaviour
 		this.IsInitialised = true;
 	}
 
-	// Token: 0x06003D12 RID: 15634 RVA: 0x000D3CD4 File Offset: 0x000D1ED4
+	// Token: 0x060055A7 RID: 21927 RVA: 0x00143DDC File Offset: 0x00141FDC
 	public void SetIsActiveCamera(bool isActiveCamera)
 	{
 		if (!this.IsInitialised)
@@ -128,28 +128,28 @@ public class CinemachineVirtualCameraManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D13 RID: 15635 RVA: 0x000D3D3F File Offset: 0x000D1F3F
+	// Token: 0x060055A8 RID: 21928 RVA: 0x0002E88E File Offset: 0x0002CA8E
 	public void SetFollowTarget(Transform target)
 	{
 		this.VirtualCamera.Follow = target;
 	}
 
-	// Token: 0x06003D14 RID: 15636 RVA: 0x000D3D4D File Offset: 0x000D1F4D
+	// Token: 0x060055A9 RID: 21929 RVA: 0x0002E89C File Offset: 0x0002CA9C
 	public void SetLensSize(float size)
 	{
 		this.VirtualCamera.m_Lens.OrthographicSize = size;
 	}
 
-	// Token: 0x04002DC6 RID: 11718
+	// Token: 0x04003F91 RID: 16273
 	[SerializeField]
 	private CinemachineVirtualCamera m_virtualCamera;
 
-	// Token: 0x04002DC7 RID: 11719
+	// Token: 0x04003F92 RID: 16274
 	private bool m_isActiveVirtualCamera;
 
-	// Token: 0x04002DC8 RID: 11720
+	// Token: 0x04003F93 RID: 16275
 	private bool m_isInitialised;
 
-	// Token: 0x04002DC9 RID: 11721
+	// Token: 0x04003F94 RID: 16276
 	private Vector2 m_confinerSize;
 }

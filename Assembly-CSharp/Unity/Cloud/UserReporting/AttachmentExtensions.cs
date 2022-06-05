@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Unity.Cloud.UserReporting
 {
-	// Token: 0x02000835 RID: 2101
+	// Token: 0x02000D1A RID: 3354
 	public static class AttachmentExtensions
 	{
-		// Token: 0x06004574 RID: 17780 RVA: 0x000F7C2B File Offset: 0x000F5E2B
+		// Token: 0x06005FAA RID: 24490 RVA: 0x00034BA8 File Offset: 0x00032DA8
 		public static void AddJson(this List<UserReportAttachment> instance, string name, string fileName, string contents)
 		{
 			if (instance != null)
@@ -16,7 +16,7 @@ namespace Unity.Cloud.UserReporting
 			}
 		}
 
-		// Token: 0x06004575 RID: 17781 RVA: 0x000F7C4D File Offset: 0x000F5E4D
+		// Token: 0x06005FAB RID: 24491 RVA: 0x00034BCA File Offset: 0x00032DCA
 		public static void AddText(this List<UserReportAttachment> instance, string name, string fileName, string contents)
 		{
 			if (instance != null)

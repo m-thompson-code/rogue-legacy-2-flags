@@ -7,12 +7,12 @@ using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
 {
-	// Token: 0x02000973 RID: 2419
+	// Token: 0x02000F28 RID: 3880
 	[AddComponentMenu("Corgi Engine/Character/Abilities/Character Dash RL")]
 	public class CharacterDash_RL : CharacterDash, IHasProjectileNameArray
 	{
-		// Token: 0x17001B24 RID: 6948
-		// (get) Token: 0x06005212 RID: 21010 RVA: 0x00122EB6 File Offset: 0x001210B6
+		// Token: 0x17002471 RID: 9329
+		// (get) Token: 0x06007025 RID: 28709 RVA: 0x0003DE0C File Offset: 0x0003C00C
 		public string[] ProjectileNameArray
 		{
 			get
@@ -29,8 +29,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B25 RID: 6949
-		// (get) Token: 0x06005213 RID: 21011 RVA: 0x00122EE2 File Offset: 0x001210E2
+		// Token: 0x17002472 RID: 9330
+		// (get) Token: 0x06007026 RID: 28710 RVA: 0x0003DE38 File Offset: 0x0003C038
 		public IRelayLink DashRelay
 		{
 			get
@@ -39,8 +39,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B26 RID: 6950
-		// (get) Token: 0x06005214 RID: 21012 RVA: 0x00122EEF File Offset: 0x001210EF
+		// Token: 0x17002473 RID: 9331
+		// (get) Token: 0x06007027 RID: 28711 RVA: 0x0003DE45 File Offset: 0x0003C045
 		public IRelayLink DashCompleteRelay
 		{
 			get
@@ -49,8 +49,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B27 RID: 6951
-		// (get) Token: 0x06005215 RID: 21013 RVA: 0x00122EFC File Offset: 0x001210FC
+		// Token: 0x17002474 RID: 9332
+		// (get) Token: 0x06007028 RID: 28712 RVA: 0x0003DE52 File Offset: 0x0003C052
 		public bool IsVoidDashing
 		{
 			get
@@ -59,8 +59,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B28 RID: 6952
-		// (get) Token: 0x06005216 RID: 21014 RVA: 0x00122F16 File Offset: 0x00121116
+		// Token: 0x17002475 RID: 9333
+		// (get) Token: 0x06007029 RID: 28713 RVA: 0x0003DE6C File Offset: 0x0003C06C
 		public bool IsDashing
 		{
 			get
@@ -69,9 +69,9 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B29 RID: 6953
-		// (get) Token: 0x06005217 RID: 21015 RVA: 0x00122F1E File Offset: 0x0012111E
-		// (set) Token: 0x06005218 RID: 21016 RVA: 0x00122F3B File Offset: 0x0012113B
+		// Token: 0x17002476 RID: 9334
+		// (get) Token: 0x0600702A RID: 28714 RVA: 0x0003DE74 File Offset: 0x0003C074
+		// (set) Token: 0x0600702B RID: 28715 RVA: 0x0003D39F File Offset: 0x0003B59F
 		public override float DashDistance
 		{
 			get
@@ -88,9 +88,9 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B2A RID: 6954
-		// (get) Token: 0x06005219 RID: 21017 RVA: 0x00122F44 File Offset: 0x00121144
-		// (set) Token: 0x0600521A RID: 21018 RVA: 0x00122F4C File Offset: 0x0012114C
+		// Token: 0x17002477 RID: 9335
+		// (get) Token: 0x0600702C RID: 28716 RVA: 0x0003DE91 File Offset: 0x0003C091
+		// (set) Token: 0x0600702D RID: 28717 RVA: 0x0003DE99 File Offset: 0x0003C099
 		public int TotalDashesAllowed
 		{
 			get
@@ -103,8 +103,8 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x17001B2B RID: 6955
-		// (get) Token: 0x0600521B RID: 21019 RVA: 0x00122F55 File Offset: 0x00121155
+		// Token: 0x17002478 RID: 9336
+		// (get) Token: 0x0600702E RID: 28718 RVA: 0x0003DEA2 File Offset: 0x0003C0A2
 		public int NumDashesAvailable
 		{
 			get
@@ -113,7 +113,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600521C RID: 21020 RVA: 0x00122F60 File Offset: 0x00121160
+		// Token: 0x0600702F RID: 28719 RVA: 0x00190B40 File Offset: 0x0018ED40
 		protected override void HandleInput()
 		{
 			if (this.m_playerController.ConditionState == CharacterStates.CharacterConditions.ControlledMovement)
@@ -131,7 +131,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600521D RID: 21021 RVA: 0x00122FD4 File Offset: 0x001211D4
+		// Token: 0x06007030 RID: 28720 RVA: 0x00190BB4 File Offset: 0x0018EDB4
 		public override void ProcessAbility()
 		{
 			if (this._controller.Velocity.y <= 0.1f && this._controller.State.IsGrounded && this._movement.CurrentState != CharacterStates.MovementStates.Dashing)
@@ -150,7 +150,7 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		// Token: 0x0600521E RID: 21022 RVA: 0x00123080 File Offset: 0x00121280
+		// Token: 0x06007031 RID: 28721 RVA: 0x0003DEAA File Offset: 0x0003C0AA
 		public override void StartDash()
 		{
 			if (!this.IsAbilityPermitted())
@@ -161,7 +161,7 @@ namespace MoreMountains.CorgiEngine
 			this.InitiateDash();
 		}
 
-		// Token: 0x0600521F RID: 21023 RVA: 0x0012309C File Offset: 0x0012129C
+		// Token: 0x06007032 RID: 28722 RVA: 0x00190C60 File Offset: 0x0018EE60
 		public virtual bool IsAbilityPermitted()
 		{
 			bool flag = this.m_playerController.MovementState == CharacterStates.MovementStates.DownStriking && false;
@@ -200,7 +200,7 @@ namespace MoreMountains.CorgiEngine
 			return true;
 		}
 
-		// Token: 0x06005220 RID: 21024 RVA: 0x00123238 File Offset: 0x00121438
+		// Token: 0x06007033 RID: 28723 RVA: 0x00190DFC File Offset: 0x0018EFFC
 		public override void InitiateDash()
 		{
 			if (this.m_playerController && this.m_playerController.IsInitialized)
@@ -277,7 +277,7 @@ namespace MoreMountains.CorgiEngine
 			base.StartCoroutine(this._dashCoroutine);
 		}
 
-		// Token: 0x06005221 RID: 21025 RVA: 0x001235AB File Offset: 0x001217AB
+		// Token: 0x06007034 RID: 28724 RVA: 0x0003DEC6 File Offset: 0x0003C0C6
 		protected override IEnumerator Dash()
 		{
 			bool isVoidDash = SaveManager.PlayerSaveData.GetHeirloomLevel(HeirloomType.UnlockVoidDash) > 0;
@@ -402,7 +402,7 @@ namespace MoreMountains.CorgiEngine
 			yield break;
 		}
 
-		// Token: 0x06005222 RID: 21026 RVA: 0x001235BC File Offset: 0x001217BC
+		// Token: 0x06007035 RID: 28725 RVA: 0x00191170 File Offset: 0x0018F370
 		public override void StopDash()
 		{
 			if (this._dashCoroutine != null)
@@ -429,50 +429,50 @@ namespace MoreMountains.CorgiEngine
 			this.m_dashCompleteRelay.Dispatch();
 		}
 
-		// Token: 0x06005223 RID: 21027 RVA: 0x0012369F File Offset: 0x0012189F
+		// Token: 0x06007036 RID: 28726 RVA: 0x0003DED5 File Offset: 0x0003C0D5
 		public void ResetNumberOfDashes()
 		{
 			this.m_numDashesAvailable = this.m_totalDashesAllowed;
 		}
 
-		// Token: 0x06005224 RID: 21028 RVA: 0x001236B0 File Offset: 0x001218B0
+		// Token: 0x06007037 RID: 28727 RVA: 0x00191254 File Offset: 0x0018F454
 		public override void UpdateAnimator()
 		{
 			bool abilityInProgress = this.m_playerController.CharacterDownStrike.AbilityInProgress;
 			MMAnimator.UpdateAnimatorBool(this._animator, "Dashing", this._movement.CurrentState == CharacterStates.MovementStates.Dashing && !abilityInProgress, this._character._animatorParameters);
 		}
 
-		// Token: 0x0400441E RID: 17438
+		// Token: 0x04005A64 RID: 23140
 		[NonSerialized]
 		private string[] m_projectileNameArray;
 
-		// Token: 0x0400441F RID: 17439
+		// Token: 0x04005A65 RID: 23141
 		protected Vector2 m_computedDashForce;
 
-		// Token: 0x04004420 RID: 17440
+		// Token: 0x04005A66 RID: 23142
 		public bool EnableOmnidash = true;
 
-		// Token: 0x04004421 RID: 17441
+		// Token: 0x04005A67 RID: 23143
 		[SerializeField]
 		private int m_totalDashesAllowed = 1;
 
-		// Token: 0x04004422 RID: 17442
+		// Token: 0x04005A68 RID: 23144
 		[SerializeField]
 		private int m_numDashesAvailable = 1;
 
-		// Token: 0x04004423 RID: 17443
+		// Token: 0x04005A69 RID: 23145
 		private bool m_dashInProgress;
 
-		// Token: 0x04004424 RID: 17444
+		// Token: 0x04005A6A RID: 23146
 		private bool m_dashRightPressed;
 
-		// Token: 0x04004425 RID: 17445
+		// Token: 0x04005A6B RID: 23147
 		private bool m_isRecoveryDash;
 
-		// Token: 0x04004426 RID: 17446
+		// Token: 0x04005A6C RID: 23148
 		private Relay m_dashRelay = new Relay();
 
-		// Token: 0x04004427 RID: 17447
+		// Token: 0x04005A6D RID: 23149
 		private Relay m_dashCompleteRelay = new Relay();
 	}
 }

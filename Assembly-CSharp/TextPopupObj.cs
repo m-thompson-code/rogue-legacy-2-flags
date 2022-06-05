@@ -3,11 +3,11 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000540 RID: 1344
+// Token: 0x020008DB RID: 2267
 public abstract class TextPopupObj : MonoBehaviour, IGenericPoolObj
 {
-	// Token: 0x17001224 RID: 4644
-	// (get) Token: 0x06003124 RID: 12580 RVA: 0x000A698E File Offset: 0x000A4B8E
+	// Token: 0x17001881 RID: 6273
+	// (get) Token: 0x060044C0 RID: 17600 RVA: 0x00025CB0 File Offset: 0x00023EB0
 	public float Alpha
 	{
 		get
@@ -16,28 +16,28 @@ public abstract class TextPopupObj : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17001225 RID: 4645
-	// (get) Token: 0x06003125 RID: 12581 RVA: 0x000A699B File Offset: 0x000A4B9B
-	// (set) Token: 0x06003126 RID: 12582 RVA: 0x000A69A3 File Offset: 0x000A4BA3
+	// Token: 0x17001882 RID: 6274
+	// (get) Token: 0x060044C1 RID: 17601 RVA: 0x00025CBD File Offset: 0x00023EBD
+	// (set) Token: 0x060044C2 RID: 17602 RVA: 0x00025CC5 File Offset: 0x00023EC5
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x17001226 RID: 4646
-	// (get) Token: 0x06003127 RID: 12583 RVA: 0x000A69AC File Offset: 0x000A4BAC
-	// (set) Token: 0x06003128 RID: 12584 RVA: 0x000A69B4 File Offset: 0x000A4BB4
+	// Token: 0x17001883 RID: 6275
+	// (get) Token: 0x060044C3 RID: 17603 RVA: 0x00025CCE File Offset: 0x00023ECE
+	// (set) Token: 0x060044C4 RID: 17604 RVA: 0x00025CD6 File Offset: 0x00023ED6
 	public bool IsAwakeCalled { get; protected set; }
 
-	// Token: 0x17001227 RID: 4647
-	// (get) Token: 0x06003129 RID: 12585 RVA: 0x000A69BD File Offset: 0x000A4BBD
-	// (set) Token: 0x0600312A RID: 12586 RVA: 0x000A69C5 File Offset: 0x000A4BC5
+	// Token: 0x17001884 RID: 6276
+	// (get) Token: 0x060044C5 RID: 17605 RVA: 0x00025CDF File Offset: 0x00023EDF
+	// (set) Token: 0x060044C6 RID: 17606 RVA: 0x00025CE7 File Offset: 0x00023EE7
 	public float InitialDelay { get; set; }
 
-	// Token: 0x17001228 RID: 4648
-	// (get) Token: 0x0600312B RID: 12587 RVA: 0x000A69CE File Offset: 0x000A4BCE
-	// (set) Token: 0x0600312C RID: 12588 RVA: 0x000A69D6 File Offset: 0x000A4BD6
+	// Token: 0x17001885 RID: 6277
+	// (get) Token: 0x060044C7 RID: 17607 RVA: 0x00025CF0 File Offset: 0x00023EF0
+	// (set) Token: 0x060044C8 RID: 17608 RVA: 0x00025CF8 File Offset: 0x00023EF8
 	public GameObject Source { get; set; }
 
-	// Token: 0x17001229 RID: 4649
-	// (get) Token: 0x0600312D RID: 12589 RVA: 0x000A69DF File Offset: 0x000A4BDF
+	// Token: 0x17001886 RID: 6278
+	// (get) Token: 0x060044C9 RID: 17609 RVA: 0x00025D01 File Offset: 0x00023F01
 	public TMP_Text TMPText
 	{
 		get
@@ -46,8 +46,8 @@ public abstract class TextPopupObj : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x1700122A RID: 4650
-	// (get) Token: 0x0600312E RID: 12590 RVA: 0x000A69E7 File Offset: 0x000A4BE7
+	// Token: 0x17001887 RID: 6279
+	// (get) Token: 0x060044CA RID: 17610 RVA: 0x00025D09 File Offset: 0x00023F09
 	public string Text
 	{
 		get
@@ -56,7 +56,7 @@ public abstract class TextPopupObj : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x0600312F RID: 12591 RVA: 0x000A69F4 File Offset: 0x000A4BF4
+	// Token: 0x060044CB RID: 17611 RVA: 0x00025D16 File Offset: 0x00023F16
 	public void SetText(string text, TextAlignmentOptions alignmentOptions)
 	{
 		this.m_locItem.enabled = false;
@@ -64,7 +64,7 @@ public abstract class TextPopupObj : MonoBehaviour, IGenericPoolObj
 		this.m_tmpText.alignment = alignmentOptions;
 	}
 
-	// Token: 0x06003130 RID: 12592 RVA: 0x000A6A1A File Offset: 0x000A4C1A
+	// Token: 0x060044CC RID: 17612 RVA: 0x00025D3C File Offset: 0x00023F3C
 	public void SetLocIDText(string locID, StringGenderType genderType)
 	{
 		this.m_locItem.enabled = true;
@@ -72,7 +72,7 @@ public abstract class TextPopupObj : MonoBehaviour, IGenericPoolObj
 		this.m_locItem.SetString(locID);
 	}
 
-	// Token: 0x06003131 RID: 12593 RVA: 0x000A6A40 File Offset: 0x000A4C40
+	// Token: 0x060044CD RID: 17613 RVA: 0x0010F298 File Offset: 0x0010D498
 	private void Awake()
 	{
 		this.m_tmpText = base.GetComponentInChildren<TMP_Text>();
@@ -83,13 +83,13 @@ public abstract class TextPopupObj : MonoBehaviour, IGenericPoolObj
 		this.IsAwakeCalled = true;
 	}
 
-	// Token: 0x06003132 RID: 12594 RVA: 0x000A6A99 File Offset: 0x000A4C99
+	// Token: 0x060044CE RID: 17614 RVA: 0x00025D62 File Offset: 0x00023F62
 	public void Spawn()
 	{
 		base.StartCoroutine(this.SpawnCoroutine());
 	}
 
-	// Token: 0x06003133 RID: 12595 RVA: 0x000A6AA8 File Offset: 0x000A4CA8
+	// Token: 0x060044CF RID: 17615 RVA: 0x00025D71 File Offset: 0x00023F71
 	private IEnumerator SpawnCoroutine()
 	{
 		if (this.InitialDelay > 0f)
@@ -151,16 +151,16 @@ public abstract class TextPopupObj : MonoBehaviour, IGenericPoolObj
 		yield break;
 	}
 
-	// Token: 0x06003134 RID: 12596
+	// Token: 0x060044D0 RID: 17616
 	protected abstract IEnumerator SpawnEffectCoroutine();
 
-	// Token: 0x06003135 RID: 12597 RVA: 0x000A6AB7 File Offset: 0x000A4CB7
+	// Token: 0x060044D1 RID: 17617 RVA: 0x0001BE85 File Offset: 0x0001A085
 	protected virtual void OnDisable()
 	{
 		DisablePooledObjectManager.DisablePooledObject(this, false);
 	}
 
-	// Token: 0x06003136 RID: 12598 RVA: 0x000A6AC0 File Offset: 0x000A4CC0
+	// Token: 0x060044D2 RID: 17618 RVA: 0x0010F2F4 File Offset: 0x0010D4F4
 	public virtual void ResetValues()
 	{
 		base.StopAllCoroutines();
@@ -177,34 +177,34 @@ public abstract class TextPopupObj : MonoBehaviour, IGenericPoolObj
 		this.Source = null;
 	}
 
-	// Token: 0x06003138 RID: 12600 RVA: 0x000A6B8C File Offset: 0x000A4D8C
+	// Token: 0x060044D4 RID: 17620 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040026D1 RID: 9937
+	// Token: 0x04003548 RID: 13640
 	[SerializeField]
 	private bool m_disableTweenAnimations;
 
-	// Token: 0x040026D2 RID: 9938
+	// Token: 0x04003549 RID: 13641
 	[SerializeField]
 	[ConditionalHide("m_disableTweenAnimations", true)]
 	protected float m_animationClipDuration = 1f;
 
-	// Token: 0x040026D3 RID: 9939
+	// Token: 0x0400354A RID: 13642
 	[SerializeField]
 	private bool m_useUnscaledTime;
 
-	// Token: 0x040026D4 RID: 9940
+	// Token: 0x0400354B RID: 13643
 	protected TMP_Text m_tmpText;
 
-	// Token: 0x040026D5 RID: 9941
+	// Token: 0x0400354C RID: 13644
 	protected LocalizationItem m_locItem;
 
-	// Token: 0x040026D6 RID: 9942
+	// Token: 0x0400354D RID: 13645
 	protected TextGlyphConverter m_textGlyphConverter;
 
-	// Token: 0x040026D7 RID: 9943
+	// Token: 0x0400354E RID: 13646
 	protected int m_storedLayer;
 }

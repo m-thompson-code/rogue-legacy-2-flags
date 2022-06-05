@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000513 RID: 1299
+// Token: 0x02000884 RID: 2180
 public class TowerBossEntranceRoomController : BossEntranceRoomController
 {
-	// Token: 0x06003031 RID: 12337 RVA: 0x000A4F84 File Offset: 0x000A3184
+	// Token: 0x060042DB RID: 17115 RVA: 0x0010BE68 File Offset: 0x0010A068
 	public override void SetBossTunnelState(BossTunnelState state, bool skipToIdleState)
 	{
 		Animator animator = base.BossTunnelSpawner.Tunnel.Animator;
@@ -65,7 +65,7 @@ public class TowerBossEntranceRoomController : BossEntranceRoomController
 		}
 	}
 
-	// Token: 0x04002653 RID: 9811
+	// Token: 0x04003430 RID: 13360
 	[SerializeField]
 	private PropSpawnController m_sunPropSpawner;
 }

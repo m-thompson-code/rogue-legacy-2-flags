@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000FB RID: 251
+// Token: 0x0200019A RID: 410
 public class MimicChest_Expert_AIScript : MimicChest_Basic_AIScript
 {
-	// Token: 0x17000441 RID: 1089
-	// (get) Token: 0x060007DF RID: 2015 RVA: 0x0001B49E File Offset: 0x0001969E
+	// Token: 0x1700056F RID: 1391
+	// (get) Token: 0x06000B6E RID: 2926 RVA: 0x00006EBF File Offset: 0x000050BF
 	protected override Vector2 JumpHeight
 	{
 		get
@@ -14,8 +14,8 @@ public class MimicChest_Expert_AIScript : MimicChest_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000442 RID: 1090
-	// (get) Token: 0x060007E0 RID: 2016 RVA: 0x0001B4AF File Offset: 0x000196AF
+	// Token: 0x17000570 RID: 1392
+	// (get) Token: 0x06000B6F RID: 2927 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected override int DeathCoinAttack_CoinSpreadAmount
 	{
 		get
@@ -24,8 +24,8 @@ public class MimicChest_Expert_AIScript : MimicChest_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000443 RID: 1091
-	// (get) Token: 0x060007E1 RID: 2017 RVA: 0x0001B4B2 File Offset: 0x000196B2
+	// Token: 0x17000571 RID: 1393
+	// (get) Token: 0x06000B70 RID: 2928 RVA: 0x00003CC4 File Offset: 0x00001EC4
 	protected override float DeathCoinAttack_AngleSpread
 	{
 		get
@@ -34,8 +34,8 @@ public class MimicChest_Expert_AIScript : MimicChest_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000444 RID: 1092
-	// (get) Token: 0x060007E2 RID: 2018 RVA: 0x0001B4B9 File Offset: 0x000196B9
+	// Token: 0x17000572 RID: 1394
+	// (get) Token: 0x06000B71 RID: 2929 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_canDashWake
 	{
 		get
@@ -44,8 +44,8 @@ public class MimicChest_Expert_AIScript : MimicChest_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000445 RID: 1093
-	// (get) Token: 0x060007E3 RID: 2019 RVA: 0x0001B4BC File Offset: 0x000196BC
+	// Token: 0x17000573 RID: 1395
+	// (get) Token: 0x06000B72 RID: 2930 RVA: 0x00005FB1 File Offset: 0x000041B1
 	protected override float m_dashWakeActivationRange
 	{
 		get
@@ -54,8 +54,8 @@ public class MimicChest_Expert_AIScript : MimicChest_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000446 RID: 1094
-	// (get) Token: 0x060007E4 RID: 2020 RVA: 0x0001B4C3 File Offset: 0x000196C3
+	// Token: 0x17000574 RID: 1396
+	// (get) Token: 0x06000B73 RID: 2931 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float m_dashWakeAttackOdds
 	{
 		get

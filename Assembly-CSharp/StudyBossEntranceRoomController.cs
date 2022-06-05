@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200050F RID: 1295
+// Token: 0x0200087E RID: 2174
 public class StudyBossEntranceRoomController : BossEntranceRoomController
 {
-	// Token: 0x0600301E RID: 12318 RVA: 0x000A4A00 File Offset: 0x000A2C00
+	// Token: 0x060042BC RID: 17084 RVA: 0x0010B618 File Offset: 0x00109818
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);

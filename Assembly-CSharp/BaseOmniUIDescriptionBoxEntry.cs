@@ -3,10 +3,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000391 RID: 913
+// Token: 0x0200061F RID: 1567
 public abstract class BaseOmniUIDescriptionBoxEntry<T, U> : MonoBehaviour where T : EventArgs where U : Enum
 {
-	// Token: 0x06002209 RID: 8713 RVA: 0x0006C684 File Offset: 0x0006A884
+	// Token: 0x0600301B RID: 12315 RVA: 0x000CD628 File Offset: 0x000CB828
 	protected virtual void DisplayNullDescriptionBox(MonoBehaviour sender)
 	{
 		if (this.m_titleText)
@@ -23,10 +23,10 @@ public abstract class BaseOmniUIDescriptionBoxEntry<T, U> : MonoBehaviour where 
 		}
 	}
 
-	// Token: 0x0600220A RID: 8714
+	// Token: 0x0600301C RID: 12316
 	protected abstract void DisplayDescriptionBox(T args);
 
-	// Token: 0x0600220B RID: 8715 RVA: 0x0006C6E8 File Offset: 0x0006A8E8
+	// Token: 0x0600301D RID: 12317 RVA: 0x000CD68C File Offset: 0x000CB88C
 	private void UpdateEntry(MonoBehaviour sender, EventArgs args)
 	{
 		if (args == null)
@@ -63,25 +63,25 @@ public abstract class BaseOmniUIDescriptionBoxEntry<T, U> : MonoBehaviour where 
 		this.DisplayDescriptionBox(t);
 	}
 
-	// Token: 0x0600220C RID: 8716 RVA: 0x0006C7F0 File Offset: 0x0006A9F0
+	// Token: 0x0600301E RID: 12318 RVA: 0x0001A637 File Offset: 0x00018837
 	protected virtual void Awake()
 	{
 		this.m_updateEntry = new Action<MonoBehaviour, EventArgs>(this.UpdateEntry);
 	}
 
-	// Token: 0x0600220D RID: 8717 RVA: 0x0006C804 File Offset: 0x0006AA04
+	// Token: 0x0600301F RID: 12319 RVA: 0x0001A64B File Offset: 0x0001884B
 	protected void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.OmniUI_UpdateDescription, this.m_updateEntry);
 	}
 
-	// Token: 0x0600220E RID: 8718 RVA: 0x0006C813 File Offset: 0x0006AA13
+	// Token: 0x06003020 RID: 12320 RVA: 0x0001A65A File Offset: 0x0001885A
 	protected void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.OmniUI_UpdateDescription, this.m_updateEntry);
 	}
 
-	// Token: 0x0600220F RID: 8719 RVA: 0x0006C822 File Offset: 0x0006AA22
+	// Token: 0x06003021 RID: 12321 RVA: 0x0001A669 File Offset: 0x00018869
 	protected string ColoredString(string text, Color color)
 	{
 		return string.Concat(new string[]
@@ -94,7 +94,7 @@ public abstract class BaseOmniUIDescriptionBoxEntry<T, U> : MonoBehaviour where 
 		});
 	}
 
-	// Token: 0x06002210 RID: 8720 RVA: 0x0006C854 File Offset: 0x0006AA54
+	// Token: 0x06003022 RID: 12322 RVA: 0x000CD794 File Offset: 0x000CB994
 	protected string PercentString(float value)
 	{
 		value *= 100f;
@@ -106,7 +106,7 @@ public abstract class BaseOmniUIDescriptionBoxEntry<T, U> : MonoBehaviour where 
 		return string.Format(LocalizationManager.GetString("LOC_ID_GENERAL_UI_PERCENT_1", false, false), text);
 	}
 
-	// Token: 0x06002211 RID: 8721 RVA: 0x0006C8B0 File Offset: 0x0006AAB0
+	// Token: 0x06003023 RID: 12323 RVA: 0x000CD7F0 File Offset: 0x000CB9F0
 	protected string PlusSymbolString(float value, bool isPercent, bool addSymbolToZero = true)
 	{
 		string text = isPercent ? this.PercentString(value) : value.ToCIString();
@@ -128,7 +128,7 @@ public abstract class BaseOmniUIDescriptionBoxEntry<T, U> : MonoBehaviour where 
 		}
 	}
 
-	// Token: 0x06002212 RID: 8722 RVA: 0x0006C900 File Offset: 0x0006AB00
+	// Token: 0x06003024 RID: 12324 RVA: 0x000CD840 File Offset: 0x000CBA40
 	protected string ColoredValueString(float value, bool addBrackets, bool isPercent, bool lowerIsBetter, bool hideZero = true)
 	{
 		if (hideZero && value == 0f)
@@ -159,47 +159,47 @@ public abstract class BaseOmniUIDescriptionBoxEntry<T, U> : MonoBehaviour where 
 		return this.ColoredString(text, color);
 	}
 
-	// Token: 0x04001D88 RID: 7560
+	// Token: 0x04002783 RID: 10115
 	protected static Color BenefitColor = new Color(0.05882353f, 0.50980395f, 0f);
 
-	// Token: 0x04001D89 RID: 7561
+	// Token: 0x04002784 RID: 10116
 	protected static Color DeficitColor = new Color(0.8392157f, 0f, 0f);
 
-	// Token: 0x04001D8A RID: 7562
+	// Token: 0x04002785 RID: 10117
 	protected static Color OriginalColor = new Color(0.3254902f, 0.24705882f, 0.27450982f);
 
-	// Token: 0x04001D8B RID: 7563
+	// Token: 0x04002786 RID: 10118
 	[SerializeField]
 	protected CanvasGroup m_textCanvasGroup;
 
-	// Token: 0x04001D8C RID: 7564
+	// Token: 0x04002787 RID: 10119
 	[SerializeField]
 	protected U m_descriptionType;
 
-	// Token: 0x04001D8D RID: 7565
+	// Token: 0x04002788 RID: 10120
 	[SerializeField]
 	protected Image m_icon;
 
-	// Token: 0x04001D8E RID: 7566
+	// Token: 0x04002789 RID: 10121
 	[SerializeField]
 	protected GameObject m_iconGO;
 
-	// Token: 0x04001D8F RID: 7567
+	// Token: 0x0400278A RID: 10122
 	[SerializeField]
 	protected GameObject m_inactiveIconGO;
 
-	// Token: 0x04001D90 RID: 7568
+	// Token: 0x0400278B RID: 10123
 	[SerializeField]
 	protected TMP_Text m_titleText;
 
-	// Token: 0x04001D91 RID: 7569
+	// Token: 0x0400278C RID: 10124
 	[SerializeField]
 	protected TMP_Text m_text1;
 
-	// Token: 0x04001D92 RID: 7570
+	// Token: 0x0400278D RID: 10125
 	[SerializeField]
 	protected TMP_Text m_text2;
 
-	// Token: 0x04001D93 RID: 7571
+	// Token: 0x0400278E RID: 10126
 	private Action<MonoBehaviour, EventArgs> m_updateEntry;
 }

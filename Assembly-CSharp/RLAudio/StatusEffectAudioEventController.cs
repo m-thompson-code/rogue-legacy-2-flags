@@ -6,11 +6,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000917 RID: 2327
+	// Token: 0x02000E94 RID: 3732
 	public class StatusEffectAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001888 RID: 6280
-		// (get) Token: 0x06004C49 RID: 19529 RVA: 0x00112043 File Offset: 0x00110243
+		// Token: 0x17002181 RID: 8577
+		// (get) Token: 0x06006944 RID: 26948 RVA: 0x0003A678 File Offset: 0x00038878
 		public string Description
 		{
 			get
@@ -23,7 +23,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C4A RID: 19530 RVA: 0x0011206C File Offset: 0x0011026C
+		// Token: 0x06006945 RID: 26949 RVA: 0x00181D18 File Offset: 0x0017FF18
 		protected virtual void Awake()
 		{
 			foreach (BaseStatusEffect baseStatusEffect in base.gameObject.GetComponents<BaseStatusEffect>())
@@ -41,7 +41,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C4B RID: 19531 RVA: 0x00112124 File Offset: 0x00110324
+		// Token: 0x06006946 RID: 26950 RVA: 0x00181DD0 File Offset: 0x0017FFD0
 		private void OnDestroy()
 		{
 			foreach (KeyValuePair<StatusEffectType, EventInstance> keyValuePair in this.m_lifetimeAudioEventTable)
@@ -54,7 +54,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C4C RID: 19532 RVA: 0x0011218C File Offset: 0x0011038C
+		// Token: 0x06006947 RID: 26951 RVA: 0x00181E38 File Offset: 0x00180038
 		protected virtual void OnStatusEffectStart(BaseStatusEffect statusEffect)
 		{
 			if (StatusEffectAudioEventController.START_AUDIO_TABLE.ContainsKey(statusEffect.StatusEffectType))
@@ -72,7 +72,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C4D RID: 19533 RVA: 0x00112219 File Offset: 0x00110419
+		// Token: 0x06006948 RID: 26952 RVA: 0x0003A69E File Offset: 0x0003889E
 		protected virtual IEnumerator UpdateStatusEffectParameter(BaseStatusEffect statusEffect)
 		{
 			EventInstance eventInstance = this.m_lifetimeAudioEventTable[statusEffect.StatusEffectType];
@@ -107,7 +107,7 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004C4E RID: 19534 RVA: 0x00112230 File Offset: 0x00110430
+		// Token: 0x06006949 RID: 26953 RVA: 0x00181EC8 File Offset: 0x001800C8
 		protected virtual void OnStatusEffectStop(BaseStatusEffect statusEffect)
 		{
 			if (this.m_lifetimeAudioEventTable.ContainsKey(statusEffect.StatusEffectType))
@@ -121,13 +121,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x0400403C RID: 16444
+		// Token: 0x0400559C RID: 21916
 		private string m_description = string.Empty;
 
-		// Token: 0x0400403D RID: 16445
+		// Token: 0x0400559D RID: 21917
 		private Dictionary<StatusEffectType, EventInstance> m_lifetimeAudioEventTable = new Dictionary<StatusEffectType, EventInstance>();
 
-		// Token: 0x0400403E RID: 16446
+		// Token: 0x0400559E RID: 21918
 		private static Dictionary<StatusEffectType, string> START_AUDIO_TABLE = new Dictionary<StatusEffectType, string>
 		{
 			{
@@ -136,7 +136,7 @@ namespace RLAudio
 			}
 		};
 
-		// Token: 0x0400403F RID: 16447
+		// Token: 0x0400559F RID: 21919
 		private static Dictionary<StatusEffectType, string> LIFETIME_AUDIO_TABLE = new Dictionary<StatusEffectType, string>
 		{
 			{
@@ -153,7 +153,7 @@ namespace RLAudio
 			}
 		};
 
-		// Token: 0x04004040 RID: 16448
+		// Token: 0x040055A0 RID: 21920
 		private static Dictionary<StatusEffectType, string> LIFETIME_PARAMETER_NAME_TABLE = new Dictionary<StatusEffectType, string>
 		{
 			{
@@ -162,7 +162,7 @@ namespace RLAudio
 			}
 		};
 
-		// Token: 0x04004041 RID: 16449
+		// Token: 0x040055A1 RID: 21921
 		private static Dictionary<StatusEffectType, string> STOP_AUDIO_TABLE = new Dictionary<StatusEffectType, string>
 		{
 			{

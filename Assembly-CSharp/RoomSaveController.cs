@@ -4,11 +4,11 @@ using SceneManagement_RL;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020004B6 RID: 1206
+// Token: 0x020007CE RID: 1998
 public class RoomSaveController
 {
-	// Token: 0x1700112B RID: 4395
-	// (get) Token: 0x06002CDD RID: 11485 RVA: 0x00097E2D File Offset: 0x0009602D
+	// Token: 0x17001692 RID: 5778
+	// (get) Token: 0x06003D89 RID: 15753 RVA: 0x00022147 File Offset: 0x00020347
 	public IRelayLink<bool> OnRoomDataSavedRelay
 	{
 		get
@@ -17,8 +17,8 @@ public class RoomSaveController
 		}
 	}
 
-	// Token: 0x1700112C RID: 4396
-	// (get) Token: 0x06002CDE RID: 11486 RVA: 0x00097E3A File Offset: 0x0009603A
+	// Token: 0x17001693 RID: 5779
+	// (get) Token: 0x06003D8A RID: 15754 RVA: 0x00022154 File Offset: 0x00020354
 	public IRelayLink OnRoomDataLoadedRelay
 	{
 		get
@@ -27,13 +27,13 @@ public class RoomSaveController
 		}
 	}
 
-	// Token: 0x1700112D RID: 4397
-	// (get) Token: 0x06002CDF RID: 11487 RVA: 0x00097E47 File Offset: 0x00096047
-	// (set) Token: 0x06002CE0 RID: 11488 RVA: 0x00097E4E File Offset: 0x0009604E
+	// Token: 0x17001694 RID: 5780
+	// (get) Token: 0x06003D8B RID: 15755 RVA: 0x00022161 File Offset: 0x00020361
+	// (set) Token: 0x06003D8C RID: 15756 RVA: 0x00022168 File Offset: 0x00020368
 	public static bool DisableCutsceneSaving { get; set; }
 
-	// Token: 0x1700112E RID: 4398
-	// (get) Token: 0x06002CE1 RID: 11489 RVA: 0x00097E58 File Offset: 0x00096058
+	// Token: 0x17001695 RID: 5781
+	// (get) Token: 0x06003D8D RID: 15757 RVA: 0x000F8E40 File Offset: 0x000F7040
 	public bool CanSaveRoom
 	{
 		get
@@ -42,17 +42,17 @@ public class RoomSaveController
 		}
 	}
 
-	// Token: 0x1700112F RID: 4399
-	// (get) Token: 0x06002CE2 RID: 11490 RVA: 0x00097EB8 File Offset: 0x000960B8
+	// Token: 0x17001696 RID: 5782
+	// (get) Token: 0x06003D8E RID: 15758 RVA: 0x00022170 File Offset: 0x00020370
 	public BaseRoom Room { get; }
 
-	// Token: 0x06002CE3 RID: 11491 RVA: 0x00097EC0 File Offset: 0x000960C0
+	// Token: 0x06003D8F RID: 15759 RVA: 0x00022178 File Offset: 0x00020378
 	public RoomSaveController(BaseRoom room)
 	{
 		this.Room = room;
 	}
 
-	// Token: 0x06002CE4 RID: 11492 RVA: 0x00097EE8 File Offset: 0x000960E8
+	// Token: 0x06003D90 RID: 15760 RVA: 0x000F8EA0 File Offset: 0x000F70A0
 	public void OnPlayerEnter_LoadStageData()
 	{
 		this.InitializeBreakablePropsList();
@@ -114,7 +114,7 @@ public class RoomSaveController
 		}
 	}
 
-	// Token: 0x06002CE5 RID: 11493 RVA: 0x000980AC File Offset: 0x000962AC
+	// Token: 0x06003D91 RID: 15761 RVA: 0x000F9064 File Offset: 0x000F7264
 	private void InitializeBreakablePropsList()
 	{
 		if (this.m_breakablePropsList == null)
@@ -130,7 +130,7 @@ public class RoomSaveController
 		}
 	}
 
-	// Token: 0x06002CE6 RID: 11494 RVA: 0x0009811C File Offset: 0x0009631C
+	// Token: 0x06003D92 RID: 15762 RVA: 0x000F90D4 File Offset: 0x000F72D4
 	private void InitializeRoomSaveData(RoomSaveData roomData, bool forceReinitialize)
 	{
 		if (forceReinitialize)
@@ -182,7 +182,7 @@ public class RoomSaveController
 		}
 	}
 
-	// Token: 0x06002CE7 RID: 11495 RVA: 0x00098290 File Offset: 0x00096490
+	// Token: 0x06003D93 RID: 15763 RVA: 0x000F9248 File Offset: 0x000F7448
 	public void SaveRoomState(RoomSaveData roomData, bool exitingToMainMenu)
 	{
 		if (roomData == null)
@@ -258,7 +258,7 @@ public class RoomSaveController
 		this.m_onRoomDataSavedRelay.Dispatch(exitingToMainMenu);
 	}
 
-	// Token: 0x06002CE8 RID: 11496 RVA: 0x00098528 File Offset: 0x00096728
+	// Token: 0x06003D94 RID: 15764 RVA: 0x000F94E0 File Offset: 0x000F76E0
 	public void LoadRoomState(RoomSaveData roomData)
 	{
 		if (roomData == null)
@@ -312,7 +312,7 @@ public class RoomSaveController
 		this.m_onRoomDataLoadedRelay.Dispatch();
 	}
 
-	// Token: 0x06002CE9 RID: 11497 RVA: 0x000986D4 File Offset: 0x000968D4
+	// Token: 0x06003D95 RID: 15765 RVA: 0x000F968C File Offset: 0x000F788C
 	public void OnPlayerExit_SaveStageData()
 	{
 		SaveFileSystem.SaveBatch saveBatch = SaveFileSystem.BeginSaveBatch(SaveManager.CurrentProfile);
@@ -336,12 +336,12 @@ public class RoomSaveController
 		saveBatch.End();
 	}
 
-	// Token: 0x04002418 RID: 9240
+	// Token: 0x0400307B RID: 12411
 	private Relay<bool> m_onRoomDataSavedRelay = new Relay<bool>();
 
-	// Token: 0x04002419 RID: 9241
+	// Token: 0x0400307C RID: 12412
 	private Relay m_onRoomDataLoadedRelay = new Relay();
 
-	// Token: 0x0400241B RID: 9243
+	// Token: 0x0400307E RID: 12414
 	private List<PropSpawnController> m_breakablePropsList;
 }

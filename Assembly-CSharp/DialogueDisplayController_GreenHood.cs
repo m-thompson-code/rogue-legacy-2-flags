@@ -3,11 +3,11 @@ using RLAudio;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x020001ED RID: 493
+// Token: 0x02000387 RID: 903
 public class DialogueDisplayController_GreenHood : DialogueDisplayController, IAudioEventEmitter
 {
-	// Token: 0x17000A79 RID: 2681
-	// (get) Token: 0x06001453 RID: 5203 RVA: 0x0003DD41 File Offset: 0x0003BF41
+	// Token: 0x17000D7B RID: 3451
+	// (get) Token: 0x06001D74 RID: 7540 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -16,27 +16,27 @@ public class DialogueDisplayController_GreenHood : DialogueDisplayController, IA
 		}
 	}
 
-	// Token: 0x06001454 RID: 5204 RVA: 0x0003DD49 File Offset: 0x0003BF49
+	// Token: 0x06001D75 RID: 7541 RVA: 0x0000F31E File Offset: 0x0000D51E
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onDialogueEndHandler = new Action(this.OnDialogueEndHandler);
 	}
 
-	// Token: 0x06001455 RID: 5205 RVA: 0x0003DD63 File Offset: 0x0003BF63
+	// Token: 0x06001D76 RID: 7542 RVA: 0x0000F338 File Offset: 0x0000D538
 	private void OnEnable()
 	{
 		base.GetComponent<NPCController>().SetNPCState(NPCState.AtAttention, true);
 	}
 
-	// Token: 0x06001456 RID: 5206 RVA: 0x0003DD72 File Offset: 0x0003BF72
+	// Token: 0x06001D77 RID: 7543 RVA: 0x0000F347 File Offset: 0x0000D547
 	protected override void StartDialogue()
 	{
 		base.StartDialogue();
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_onDialogueEndHandler);
 	}
 
-	// Token: 0x06001457 RID: 5207 RVA: 0x0003DD88 File Offset: 0x0003BF88
+	// Token: 0x06001D78 RID: 7544 RVA: 0x0009CA38 File Offset: 0x0009AC38
 	private void OnDialogueEndHandler()
 	{
 		base.GetComponent<Interactable>().gameObject.SetActive(false);
@@ -48,10 +48,10 @@ public class DialogueDisplayController_GreenHood : DialogueDisplayController, IA
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0400141F RID: 5151
+	// Token: 0x04001AC6 RID: 6854
 	[SerializeField]
 	private UnityEvent m_onDialogueSpokenEvent;
 
-	// Token: 0x04001420 RID: 5152
+	// Token: 0x04001AC7 RID: 6855
 	private Action m_onDialogueEndHandler;
 }

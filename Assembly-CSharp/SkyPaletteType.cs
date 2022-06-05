@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x0200024D RID: 589
+// Token: 0x0200040A RID: 1034
 public enum SkyPaletteType
 {
-	// Token: 0x040016E6 RID: 5862
+	// Token: 0x04001DFE RID: 7678
 	None,
-	// Token: 0x040016E7 RID: 5863
+	// Token: 0x04001DFF RID: 7679
 	Default = 10,
-	// Token: 0x040016E8 RID: 5864
+	// Token: 0x04001E00 RID: 7680
 	BloodRed = 20,
-	// Token: 0x040016E9 RID: 5865
+	// Token: 0x04001E01 RID: 7681
 	BlueSky = 30,
-	// Token: 0x040016EA RID: 5866
+	// Token: 0x04001E02 RID: 7682
 	Night = 40
 }

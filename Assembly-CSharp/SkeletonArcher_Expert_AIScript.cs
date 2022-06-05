@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000113 RID: 275
+// Token: 0x020001C2 RID: 450
 public class SkeletonArcher_Expert_AIScript : SkeletonArcher_Basic_AIScript
 {
-	// Token: 0x17000494 RID: 1172
-	// (get) Token: 0x06000879 RID: 2169 RVA: 0x0001C5C6 File Offset: 0x0001A7C6
+	// Token: 0x170005E2 RID: 1506
+	// (get) Token: 0x06000C68 RID: 3176 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_shoot_ExtraArrowCount
 	{
 		get
@@ -14,8 +14,8 @@ public class SkeletonArcher_Expert_AIScript : SkeletonArcher_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000495 RID: 1173
-	// (get) Token: 0x0600087A RID: 2170 RVA: 0x0001C5C9 File Offset: 0x0001A7C9
+	// Token: 0x170005E3 RID: 1507
+	// (get) Token: 0x06000C69 RID: 3177 RVA: 0x00007629 File Offset: 0x00005829
 	protected override Vector2 m_jump_Power
 	{
 		get

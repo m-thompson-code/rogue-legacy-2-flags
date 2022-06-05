@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 namespace Rewired.Demos
 {
-	// Token: 0x02000945 RID: 2373
+	// Token: 0x02000EE3 RID: 3811
 	[AddComponentMenu("")]
 	[RequireComponent(typeof(RectTransform))]
 	public sealed class UIPointer : UIBehaviour
 	{
-		// Token: 0x17001ACB RID: 6859
-		// (get) Token: 0x06005074 RID: 20596 RVA: 0x0011C1EA File Offset: 0x0011A3EA
-		// (set) Token: 0x06005075 RID: 20597 RVA: 0x0011C1F2 File Offset: 0x0011A3F2
+		// Token: 0x17002409 RID: 9225
+		// (get) Token: 0x06006E4E RID: 28238 RVA: 0x0003CA08 File Offset: 0x0003AC08
+		// (set) Token: 0x06006E4F RID: 28239 RVA: 0x0003CA10 File Offset: 0x0003AC10
 		public bool autoSort
 		{
 			get
@@ -33,7 +33,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005076 RID: 20598 RVA: 0x0011C214 File Offset: 0x0011A414
+		// Token: 0x06006E50 RID: 28240 RVA: 0x0018A9CC File Offset: 0x00188BCC
 		protected override void Awake()
 		{
 			base.Awake();
@@ -53,7 +53,7 @@ namespace Rewired.Demos
 			this.GetDependencies();
 		}
 
-		// Token: 0x06005077 RID: 20599 RVA: 0x0011C26C File Offset: 0x0011A46C
+		// Token: 0x06006E51 RID: 28241 RVA: 0x0003CA31 File Offset: 0x0003AC31
 		private void Update()
 		{
 			if (this._autoSort && base.transform.GetSiblingIndex() < base.transform.parent.childCount - 1)
@@ -62,21 +62,21 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005078 RID: 20600 RVA: 0x0011C2A0 File Offset: 0x0011A4A0
+		// Token: 0x06006E52 RID: 28242 RVA: 0x0003CA65 File Offset: 0x0003AC65
 		protected override void OnTransformParentChanged()
 		{
 			base.OnTransformParentChanged();
 			this.GetDependencies();
 		}
 
-		// Token: 0x06005079 RID: 20601 RVA: 0x0011C2AE File Offset: 0x0011A4AE
+		// Token: 0x06006E53 RID: 28243 RVA: 0x0003CA73 File Offset: 0x0003AC73
 		protected override void OnCanvasGroupChanged()
 		{
 			base.OnCanvasGroupChanged();
 			this.GetDependencies();
 		}
 
-		// Token: 0x0600507A RID: 20602 RVA: 0x0011C2BC File Offset: 0x0011A4BC
+		// Token: 0x06006E54 RID: 28244 RVA: 0x0018AA24 File Offset: 0x00188C24
 		public void OnScreenPositionChanged(Vector2 screenPosition)
 		{
 			if (this._canvas == null)
@@ -94,23 +94,23 @@ namespace Rewired.Demos
 			base.transform.localPosition = new Vector3(vector.x, vector.y, base.transform.localPosition.z);
 		}
 
-		// Token: 0x0600507B RID: 20603 RVA: 0x0011C341 File Offset: 0x0011A541
+		// Token: 0x06006E55 RID: 28245 RVA: 0x0003CA81 File Offset: 0x0003AC81
 		private void GetDependencies()
 		{
 			this._canvas = base.transform.root.GetComponentInChildren<Canvas>();
 		}
 
-		// Token: 0x040042CB RID: 17099
+		// Token: 0x040058AE RID: 22702
 		[Tooltip("Should the hardware pointer be hidden?")]
 		[SerializeField]
 		private bool _hideHardwarePointer = true;
 
-		// Token: 0x040042CC RID: 17100
+		// Token: 0x040058AF RID: 22703
 		[Tooltip("Sets the pointer to the last sibling in the parent hierarchy. Do not enable this on multiple UIPointers under the same parent transform or they will constantly fight each other for dominance.")]
 		[SerializeField]
 		private bool _autoSort = true;
 
-		// Token: 0x040042CD RID: 17101
+		// Token: 0x040058B0 RID: 22704
 		private Canvas _canvas;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000732 RID: 1842
+// Token: 0x02000BF0 RID: 3056
 public static class EquipmentType_RL
 {
-	// Token: 0x1700162F RID: 5679
-	// (get) Token: 0x060040FD RID: 16637 RVA: 0x000E63AC File Offset: 0x000E45AC
+	// Token: 0x17001E2B RID: 7723
+	// (get) Token: 0x06005A7A RID: 23162 RVA: 0x00031876 File Offset: 0x0002FA76
 	public static EquipmentType[] TypeArray
 	{
 		get
@@ -17,8 +17,8 @@ public static class EquipmentType_RL
 		}
 	}
 
-	// Token: 0x17001630 RID: 5680
-	// (get) Token: 0x060040FE RID: 16638 RVA: 0x000E63D3 File Offset: 0x000E45D3
+	// Token: 0x17001E2C RID: 7724
+	// (get) Token: 0x06005A7B RID: 23163 RVA: 0x0003189D File Offset: 0x0002FA9D
 	public static EquipmentCategoryType[] CategoryTypeArray
 	{
 		get
@@ -31,7 +31,7 @@ public static class EquipmentType_RL
 		}
 	}
 
-	// Token: 0x060040FF RID: 16639 RVA: 0x000E63FC File Offset: 0x000E45FC
+	// Token: 0x06005A7C RID: 23164 RVA: 0x00155E20 File Offset: 0x00154020
 	public static EquipmentCategoryType GetFinalGearCategoryType(SpecialItemType specialItemType)
 	{
 		if (specialItemType <= SpecialItemType.FinalGear_Helm)
@@ -63,9 +63,9 @@ public static class EquipmentType_RL
 		return EquipmentCategoryType.None;
 	}
 
-	// Token: 0x04003434 RID: 13364
+	// Token: 0x040046B0 RID: 18096
 	private static EquipmentType[] m_typeArray;
 
-	// Token: 0x04003435 RID: 13365
+	// Token: 0x040046B1 RID: 18097
 	private static EquipmentCategoryType[] m_categoryTypeArray;
 }

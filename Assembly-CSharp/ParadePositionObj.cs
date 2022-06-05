@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002A8 RID: 680
+// Token: 0x0200047E RID: 1150
 public class ParadePositionObj : MonoBehaviour
 {
-	// Token: 0x06001A41 RID: 6721 RVA: 0x00052F04 File Offset: 0x00051104
+	// Token: 0x0600245F RID: 9311 RVA: 0x000AF794 File Offset: 0x000AD994
 	private void OnDrawGizmos()
 	{
 		Vector3 position = base.transform.position;

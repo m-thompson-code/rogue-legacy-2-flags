@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000762 RID: 1890
+// Token: 0x02000C20 RID: 3104
 public class RelicModType_RL
 {
-	// Token: 0x1700163E RID: 5694
-	// (get) Token: 0x06004129 RID: 16681 RVA: 0x000E725B File Offset: 0x000E545B
+	// Token: 0x17001E3A RID: 7738
+	// (get) Token: 0x06005AA6 RID: 23206 RVA: 0x00031AFB File Offset: 0x0002FCFB
 	public static RelicModType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class RelicModType_RL
 		}
 	}
 
-	// Token: 0x040035A8 RID: 13736
+	// Token: 0x04004824 RID: 18468
 	private static RelicModType[] m_typeArray;
 }

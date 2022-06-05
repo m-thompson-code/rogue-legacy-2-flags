@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000028 RID: 40
+// Token: 0x0200002B RID: 43
 [Serializable]
 public class SkillTreeTypeSpriteDictionary : SerializableDictionary<SkillTreeType, Sprite>
 {

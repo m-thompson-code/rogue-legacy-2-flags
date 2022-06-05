@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000459 RID: 1113
+// Token: 0x02000742 RID: 1858
 public class ShrinkOnDash_Hazard : Hazard
 {
-	// Token: 0x0600291A RID: 10522 RVA: 0x00087F59 File Offset: 0x00086159
+	// Token: 0x060038DC RID: 14556 RVA: 0x0001F3B0 File Offset: 0x0001D5B0
 	protected override void Awake()
 	{
 		base.Awake();
@@ -13,20 +13,20 @@ public class ShrinkOnDash_Hazard : Hazard
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x0600291B RID: 10523 RVA: 0x00087F84 File Offset: 0x00086184
+	// Token: 0x060038DD RID: 14557 RVA: 0x0001F3DB File Offset: 0x0001D5DB
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerDash, this.m_onPlayerDash);
 	}
 
-	// Token: 0x0600291C RID: 10524 RVA: 0x00087F93 File Offset: 0x00086193
+	// Token: 0x060038DE RID: 14558 RVA: 0x0001F3EA File Offset: 0x0001D5EA
 	protected override void OnDisable()
 	{
 		base.OnDisable();
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerDash, this.m_onPlayerDash);
 	}
 
-	// Token: 0x0600291D RID: 10525 RVA: 0x00087FA8 File Offset: 0x000861A8
+	// Token: 0x060038DF RID: 14559 RVA: 0x000E9AA8 File Offset: 0x000E7CA8
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		base.InitialState = hazardArgs.InitialState;
@@ -59,14 +59,14 @@ public class ShrinkOnDash_Hazard : Hazard
 		base.transform.localScale = new Vector3(this.m_initialScale, this.m_initialScale, base.transform.localScale.z);
 	}
 
-	// Token: 0x0600291E RID: 10526 RVA: 0x00088040 File Offset: 0x00086240
+	// Token: 0x060038E0 RID: 14560 RVA: 0x0001F3FF File Offset: 0x0001D5FF
 	private void OnPlayerDash(MonoBehaviour sender, EventArgs args)
 	{
 		this.StopShrinkCoroutine();
 		base.StartCoroutine(this.ShrinkCoroutine());
 	}
 
-	// Token: 0x0600291F RID: 10527 RVA: 0x00088058 File Offset: 0x00086258
+	// Token: 0x060038E1 RID: 14561 RVA: 0x000E9B40 File Offset: 0x000E7D40
 	private void StopShrinkCoroutine()
 	{
 		base.StopAllCoroutines();
@@ -80,7 +80,7 @@ public class ShrinkOnDash_Hazard : Hazard
 		}
 	}
 
-	// Token: 0x06002920 RID: 10528 RVA: 0x000880B5 File Offset: 0x000862B5
+	// Token: 0x060038E2 RID: 14562 RVA: 0x0001F414 File Offset: 0x0001D614
 	private IEnumerator ShrinkCoroutine()
 	{
 		float num = 0.25f;
@@ -108,25 +108,25 @@ public class ShrinkOnDash_Hazard : Hazard
 		yield break;
 	}
 
-	// Token: 0x06002921 RID: 10529 RVA: 0x000880C4 File Offset: 0x000862C4
+	// Token: 0x060038E3 RID: 14563 RVA: 0x0001F423 File Offset: 0x0001D623
 	public override void ResetHazard()
 	{
 		this.StopShrinkCoroutine();
 		base.transform.localScale = new Vector3(this.m_initialScale, this.m_initialScale, base.transform.localScale.z);
 	}
 
-	// Token: 0x040021E5 RID: 8677
+	// Token: 0x04002D93 RID: 11667
 	private float m_initialScale;
 
-	// Token: 0x040021E6 RID: 8678
+	// Token: 0x04002D94 RID: 11668
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040021E7 RID: 8679
+	// Token: 0x04002D95 RID: 11669
 	private Tween m_shrinkTween;
 
-	// Token: 0x040021E8 RID: 8680
+	// Token: 0x04002D96 RID: 11670
 	private Tween m_growTween;
 
-	// Token: 0x040021E9 RID: 8681
+	// Token: 0x04002D97 RID: 11671
 	private Action<MonoBehaviour, EventArgs> m_onPlayerDash;
 }

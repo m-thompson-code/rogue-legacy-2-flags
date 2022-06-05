@@ -6,11 +6,11 @@ using UnityEngine.Serialization;
 
 namespace RLAudio
 {
-	// Token: 0x020008D1 RID: 2257
+	// Token: 0x02000E3E RID: 3646
 	public class AimedAbilityAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x1700181A RID: 6170
-		// (get) Token: 0x06004A16 RID: 18966 RVA: 0x0010AC3C File Offset: 0x00108E3C
+		// Token: 0x170020F6 RID: 8438
+		// (get) Token: 0x060066BD RID: 26301 RVA: 0x000388AE File Offset: 0x00036AAE
 		public string Description
 		{
 			get
@@ -19,7 +19,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A17 RID: 18967 RVA: 0x0010AC44 File Offset: 0x00108E44
+		// Token: 0x060066BE RID: 26302 RVA: 0x0017B7CC File Offset: 0x001799CC
 		protected virtual void Start()
 		{
 			this.m_aimedAbility = base.GetComponent<AimedAbility_RL>();
@@ -44,7 +44,7 @@ namespace RLAudio
 			});
 		}
 
-		// Token: 0x06004A18 RID: 18968 RVA: 0x0010AD98 File Offset: 0x00108F98
+		// Token: 0x060066BF RID: 26303 RVA: 0x000388B5 File Offset: 0x00036AB5
 		protected void OnSwitchSides()
 		{
 			if (this.m_switchSideEventInstance.isValid())
@@ -53,7 +53,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A19 RID: 18969 RVA: 0x0010ADBC File Offset: 0x00108FBC
+		// Token: 0x060066C0 RID: 26304 RVA: 0x0017B920 File Offset: 0x00179B20
 		protected PARAMETER_ID GetAimSpeedParameterID()
 		{
 			PARAMETER_ID result = default(PARAMETER_ID);
@@ -71,7 +71,7 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004A1A RID: 18970 RVA: 0x0010AE0B File Offset: 0x0010900B
+		// Token: 0x060066C1 RID: 26305 RVA: 0x000388D6 File Offset: 0x00036AD6
 		protected virtual void OnAbilityFired(Projectile_RL projectile)
 		{
 			this.m_isAbilityStarted = false;
@@ -82,7 +82,7 @@ namespace RLAudio
 			AudioManager.Stop(this.m_aimEventInstance, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 		}
 
-		// Token: 0x06004A1B RID: 18971 RVA: 0x0010AE40 File Offset: 0x00109040
+		// Token: 0x060066C2 RID: 26306 RVA: 0x0017B970 File Offset: 0x00179B70
 		private void OnBeginAbility()
 		{
 			this.m_isAbilityStarted = true;
@@ -97,7 +97,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A1C RID: 18972 RVA: 0x0010AEAC File Offset: 0x001090AC
+		// Token: 0x060066C3 RID: 26307 RVA: 0x0017B9DC File Offset: 0x00179BDC
 		protected void OnAimSpeedChange(float changeAsPercentOfMax)
 		{
 			PLAYBACK_STATE playback_STATE;
@@ -112,7 +112,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A1D RID: 18973 RVA: 0x0010AF26 File Offset: 0x00109126
+		// Token: 0x060066C4 RID: 26308 RVA: 0x0003890A File Offset: 0x00036B0A
 		protected void OnKickback()
 		{
 			if (this.m_kickbackEventInstance.isValid())
@@ -121,7 +121,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A1E RID: 18974 RVA: 0x0010AF48 File Offset: 0x00109148
+		// Token: 0x060066C5 RID: 26309 RVA: 0x0017BA58 File Offset: 0x00179C58
 		private void OnDestroy()
 		{
 			if (this.m_beginAbilityEventInstance.isValid())
@@ -146,65 +146,65 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003E44 RID: 15940
+		// Token: 0x04005356 RID: 21334
 		[SerializeField]
 		[EventRef]
 		[FormerlySerializedAs("m_bowDrawEventPath")]
 		protected string m_abilityBeginEventPath;
 
-		// Token: 0x04003E45 RID: 15941
+		// Token: 0x04005357 RID: 21335
 		[SerializeField]
 		[EventRef]
 		[FormerlySerializedAs("m_bowAimEventPath")]
 		protected string m_aimEventPath;
 
-		// Token: 0x04003E46 RID: 15942
+		// Token: 0x04005358 RID: 21336
 		[SerializeField]
 		[EventRef]
 		protected string m_switchSidesEventPath;
 
-		// Token: 0x04003E47 RID: 15943
+		// Token: 0x04005359 RID: 21337
 		[SerializeField]
 		[EventRef]
 		[FormerlySerializedAs("m_bowFiredEventPath")]
 		protected string m_abilityFiredEventPath;
 
-		// Token: 0x04003E48 RID: 15944
+		// Token: 0x0400535A RID: 21338
 		[SerializeField]
 		[EventRef]
 		protected string m_kickbackEventPath;
 
-		// Token: 0x04003E49 RID: 15945
+		// Token: 0x0400535B RID: 21339
 		protected const string AIM_SPEED_PARAMETER_NAME = "aim_speed";
 
-		// Token: 0x04003E4A RID: 15946
+		// Token: 0x0400535C RID: 21340
 		protected const float MIN_AIM_SPEED_DELTA = 0.1f;
 
-		// Token: 0x04003E4B RID: 15947
+		// Token: 0x0400535D RID: 21341
 		protected AimedAbility_RL m_aimedAbility;
 
-		// Token: 0x04003E4C RID: 15948
+		// Token: 0x0400535E RID: 21342
 		protected bool m_isAbilityStarted;
 
-		// Token: 0x04003E4D RID: 15949
+		// Token: 0x0400535F RID: 21343
 		protected PARAMETER_ID m_aimSpeedParameterID;
 
-		// Token: 0x04003E4E RID: 15950
+		// Token: 0x04005360 RID: 21344
 		protected float m_prevAimSpeedChange;
 
-		// Token: 0x04003E4F RID: 15951
+		// Token: 0x04005361 RID: 21345
 		protected EventInstance m_aimEventInstance;
 
-		// Token: 0x04003E50 RID: 15952
+		// Token: 0x04005362 RID: 21346
 		protected EventInstance m_beginAbilityEventInstance;
 
-		// Token: 0x04003E51 RID: 15953
+		// Token: 0x04005363 RID: 21347
 		protected EventInstance m_switchSideEventInstance;
 
-		// Token: 0x04003E52 RID: 15954
+		// Token: 0x04005364 RID: 21348
 		protected EventInstance m_abilityFiredEventInstance;
 
-		// Token: 0x04003E53 RID: 15955
+		// Token: 0x04005365 RID: 21349
 		protected EventInstance m_kickbackEventInstance;
 	}
 }

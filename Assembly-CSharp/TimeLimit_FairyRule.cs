@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000442 RID: 1090
+// Token: 0x0200070C RID: 1804
 public class TimeLimit_FairyRule : FairyRule
 {
-	// Token: 0x17000FC2 RID: 4034
-	// (get) Token: 0x060027F9 RID: 10233 RVA: 0x00084776 File Offset: 0x00082976
+	// Token: 0x170014A7 RID: 5287
+	// (get) Token: 0x06003711 RID: 14097 RVA: 0x0001E49E File Offset: 0x0001C69E
 	public override string Description
 	{
 		get
@@ -15,8 +15,8 @@ public class TimeLimit_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FC3 RID: 4035
-	// (get) Token: 0x060027FA RID: 10234 RVA: 0x000847A4 File Offset: 0x000829A4
+	// Token: 0x170014A8 RID: 5288
+	// (get) Token: 0x06003712 RID: 14098 RVA: 0x000E503C File Offset: 0x000E323C
 	public virtual string TimeRemainingDescription
 	{
 		get
@@ -29,8 +29,8 @@ public class TimeLimit_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FC4 RID: 4036
-	// (get) Token: 0x060027FB RID: 10235 RVA: 0x0008480F File Offset: 0x00082A0F
+	// Token: 0x170014A9 RID: 5289
+	// (get) Token: 0x06003713 RID: 14099 RVA: 0x000046FA File Offset: 0x000028FA
 	public override FairyRuleID ID
 	{
 		get
@@ -39,8 +39,8 @@ public class TimeLimit_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FC5 RID: 4037
-	// (get) Token: 0x060027FC RID: 10236 RVA: 0x00084813 File Offset: 0x00082A13
+	// Token: 0x170014AA RID: 5290
+	// (get) Token: 0x06003714 RID: 14100 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool LockChestAtStart
 	{
 		get
@@ -49,13 +49,13 @@ public class TimeLimit_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FC6 RID: 4038
-	// (get) Token: 0x060027FD RID: 10237 RVA: 0x00084816 File Offset: 0x00082A16
-	// (set) Token: 0x060027FE RID: 10238 RVA: 0x0008481E File Offset: 0x00082A1E
+	// Token: 0x170014AB RID: 5291
+	// (get) Token: 0x06003715 RID: 14101 RVA: 0x0001E4CA File Offset: 0x0001C6CA
+	// (set) Token: 0x06003716 RID: 14102 RVA: 0x0001E4D2 File Offset: 0x0001C6D2
 	public float TimeElapsed { get; private set; }
 
-	// Token: 0x17000FC7 RID: 4039
-	// (get) Token: 0x060027FF RID: 10239 RVA: 0x00084827 File Offset: 0x00082A27
+	// Token: 0x170014AC RID: 5292
+	// (get) Token: 0x06003717 RID: 14103 RVA: 0x0001E4DB File Offset: 0x0001C6DB
 	public float TimeRemaining
 	{
 		get
@@ -64,7 +64,7 @@ public class TimeLimit_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x06002800 RID: 10240 RVA: 0x00084849 File Offset: 0x00082A49
+	// Token: 0x06003718 RID: 14104 RVA: 0x0001E4FD File Offset: 0x0001C6FD
 	public override void RunRule(FairyRoomController fairyRoomController)
 	{
 		this.TimeElapsed = 0f;
@@ -72,7 +72,7 @@ public class TimeLimit_FairyRule : FairyRule
 		base.StartCoroutine(this.RunTimer(fairyRoomController));
 	}
 
-	// Token: 0x06002801 RID: 10241 RVA: 0x0008486C File Offset: 0x00082A6C
+	// Token: 0x06003719 RID: 14105 RVA: 0x0001E520 File Offset: 0x0001C720
 	private IEnumerator RunTimer(FairyRoomController fairyRoomController)
 	{
 		while (this.TimeElapsed <= (float)this.m_timeLimit)
@@ -99,21 +99,21 @@ public class TimeLimit_FairyRule : FairyRule
 		yield break;
 	}
 
-	// Token: 0x06002802 RID: 10242 RVA: 0x00084882 File Offset: 0x00082A82
+	// Token: 0x0600371A RID: 14106 RVA: 0x0001E479 File Offset: 0x0001C679
 	public override void StopRule()
 	{
 		base.StopRule();
 		base.StopAllCoroutines();
 	}
 
-	// Token: 0x06002803 RID: 10243 RVA: 0x00084890 File Offset: 0x00082A90
+	// Token: 0x0600371B RID: 14107 RVA: 0x0001E536 File Offset: 0x0001C736
 	public override void ResetRule()
 	{
 		this.TimeElapsed = 0f;
 		base.ResetRule();
 	}
 
-	// Token: 0x0400213E RID: 8510
+	// Token: 0x04002C72 RID: 11378
 	[SerializeField]
 	protected int m_timeLimit = 10;
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020005B1 RID: 1457
+// Token: 0x020009B9 RID: 2489
 public interface IGenericPoolObj
 {
-	// Token: 0x17001321 RID: 4897
-	// (get) Token: 0x06003638 RID: 13880
+	// Token: 0x17001A4E RID: 6734
+	// (get) Token: 0x06004C4A RID: 19530
 	GameObject gameObject { get; }
 
-	// Token: 0x06003639 RID: 13881
+	// Token: 0x06004C4B RID: 19531
 	void ResetValues();
 
-	// Token: 0x17001322 RID: 4898
-	// (get) Token: 0x0600363A RID: 13882
+	// Token: 0x17001A4F RID: 6735
+	// (get) Token: 0x06004C4C RID: 19532
 	bool IsAwakeCalled { get; }
 
-	// Token: 0x17001323 RID: 4899
-	// (get) Token: 0x0600363B RID: 13883
-	// (set) Token: 0x0600363C RID: 13884
+	// Token: 0x17001A50 RID: 6736
+	// (get) Token: 0x06004C4D RID: 19533
+	// (set) Token: 0x06004C4E RID: 19534
 	bool IsFreePoolObj { get; set; }
 }

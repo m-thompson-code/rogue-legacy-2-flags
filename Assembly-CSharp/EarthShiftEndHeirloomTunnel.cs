@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000568 RID: 1384
+// Token: 0x02000938 RID: 2360
 public class EarthShiftEndHeirloomTunnel : Tunnel
 {
-	// Token: 0x060032BA RID: 12986 RVA: 0x000AB9D4 File Offset: 0x000A9BD4
+	// Token: 0x0600478F RID: 18319 RVA: 0x00116238 File Offset: 0x00114438
 	public override void ForceEnterTunnel(bool animate, Tunnel tempDestinationOverride = null)
 	{
 		BiomeController biomeController;

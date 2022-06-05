@@ -2,10 +2,10 @@
 using RL_Windows;
 using SceneManagement_RL;
 
-// Token: 0x02000299 RID: 665
+// Token: 0x02000467 RID: 1127
 public class RestartChallengeOptionItem : ExecuteImmediateOptionItem
 {
-	// Token: 0x060019EB RID: 6635 RVA: 0x00051A28 File Offset: 0x0004FC28
+	// Token: 0x060023E6 RID: 9190 RVA: 0x00013BD1 File Offset: 0x00011DD1
 	protected override void Awake()
 	{
 		base.Awake();
@@ -13,14 +13,14 @@ public class RestartChallengeOptionItem : ExecuteImmediateOptionItem
 		this.m_confirmRestartChallenge = new Action(this.ConfirmRestartChallenge);
 	}
 
-	// Token: 0x060019EC RID: 6636 RVA: 0x00051A54 File Offset: 0x0004FC54
+	// Token: 0x060023E7 RID: 9191 RVA: 0x00013BFD File Offset: 0x00011DFD
 	public override void ActivateOption()
 	{
 		this.InitializeConfirmRestartChallengeMenu();
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x060019ED RID: 6637 RVA: 0x00051A64 File Offset: 0x0004FC64
+	// Token: 0x060023E8 RID: 9192 RVA: 0x000AE344 File Offset: 0x000AC544
 	private void InitializeConfirmRestartChallengeMenu()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -40,7 +40,7 @@ public class RestartChallengeOptionItem : ExecuteImmediateOptionItem
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x060019EE RID: 6638 RVA: 0x00051AF3 File Offset: 0x0004FCF3
+	// Token: 0x060023E9 RID: 9193 RVA: 0x00013C0D File Offset: 0x00011E0D
 	private void ConfirmRestartChallenge()
 	{
 		WindowManager.CloseAllOpenWindows();
@@ -49,7 +49,7 @@ public class RestartChallengeOptionItem : ExecuteImmediateOptionItem
 		SceneLoader_RL.RunTransitionWithLogic(new Action(this.ChallengeRestartTransition), TransitionID.FadeToBlackNoLoading, false);
 	}
 
-	// Token: 0x060019EF RID: 6639 RVA: 0x00051B20 File Offset: 0x0004FD20
+	// Token: 0x060023EA RID: 9194 RVA: 0x000AE3D4 File Offset: 0x000AC5D4
 	private void ChallengeRestartTransition()
 	{
 		ChallengeType challengeType = ChallengeManager.ActiveChallenge.ChallengeType;
@@ -59,15 +59,15 @@ public class RestartChallengeOptionItem : ExecuteImmediateOptionItem
 		RLTimeScale.Reset();
 	}
 
-	// Token: 0x060019F0 RID: 6640 RVA: 0x00051B5A File Offset: 0x0004FD5A
+	// Token: 0x060023EB RID: 9195 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenuSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x0400187F RID: 6271
+	// Token: 0x04001FD6 RID: 8150
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x04001880 RID: 6272
+	// Token: 0x04001FD7 RID: 8151
 	private Action m_confirmRestartChallenge;
 }

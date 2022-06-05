@@ -3,10 +3,10 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x0200011A RID: 282
+// Token: 0x020001D7 RID: 471
 public class Skeleton_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x0600089F RID: 2207 RVA: 0x0001CD34 File Offset: 0x0001AF34
+	// Token: 0x06000CE2 RID: 3298 RVA: 0x0006ECB4 File Offset: 0x0006CEB4
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -22,8 +22,8 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x1700049C RID: 1180
-	// (get) Token: 0x060008A0 RID: 2208 RVA: 0x0001CD8D File Offset: 0x0001AF8D
+	// Token: 0x17000606 RID: 1542
+	// (get) Token: 0x06000CE3 RID: 3299 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -32,8 +32,8 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700049D RID: 1181
-	// (get) Token: 0x060008A1 RID: 2209 RVA: 0x0001CD9E File Offset: 0x0001AF9E
+	// Token: 0x17000607 RID: 1543
+	// (get) Token: 0x06000CE4 RID: 3300 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -42,8 +42,8 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700049E RID: 1182
-	// (get) Token: 0x060008A2 RID: 2210 RVA: 0x0001CDAF File Offset: 0x0001AFAF
+	// Token: 0x17000608 RID: 1544
+	// (get) Token: 0x06000CE5 RID: 3301 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -52,8 +52,8 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700049F RID: 1183
-	// (get) Token: 0x060008A3 RID: 2211 RVA: 0x0001CDC0 File Offset: 0x0001AFC0
+	// Token: 0x17000609 RID: 1545
+	// (get) Token: 0x06000CE6 RID: 3302 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_jumpLandingMakesBones
 	{
 		get
@@ -62,8 +62,8 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x170004A0 RID: 1184
-	// (get) Token: 0x060008A4 RID: 2212 RVA: 0x0001CDC3 File Offset: 0x0001AFC3
+	// Token: 0x1700060A RID: 1546
+	// (get) Token: 0x06000CE7 RID: 3303 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_jump_tweak_X
 	{
 		get
@@ -72,7 +72,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060008A5 RID: 2213 RVA: 0x0001CDC6 File Offset: 0x0001AFC6
+	// Token: 0x06000CE8 RID: 3304 RVA: 0x000078BB File Offset: 0x00005ABB
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -90,7 +90,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008A6 RID: 2214 RVA: 0x0001CDD5 File Offset: 0x0001AFD5
+	// Token: 0x06000CE9 RID: 3305 RVA: 0x000078CA File Offset: 0x00005ACA
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -107,7 +107,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008A7 RID: 2215 RVA: 0x0001CDE4 File Offset: 0x0001AFE4
+	// Token: 0x06000CEA RID: 3306 RVA: 0x000078D9 File Offset: 0x00005AD9
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -124,7 +124,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008A8 RID: 2216 RVA: 0x0001CDF3 File Offset: 0x0001AFF3
+	// Token: 0x06000CEB RID: 3307 RVA: 0x000078E8 File Offset: 0x00005AE8
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -170,7 +170,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008A9 RID: 2217 RVA: 0x0001CE02 File Offset: 0x0001B002
+	// Token: 0x06000CEC RID: 3308 RVA: 0x000078F7 File Offset: 0x00005AF7
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -207,7 +207,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008AA RID: 2218 RVA: 0x0001CE11 File Offset: 0x0001B011
+	// Token: 0x06000CED RID: 3309 RVA: 0x00007906 File Offset: 0x00005B06
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -237,7 +237,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008AB RID: 2219 RVA: 0x0001CE20 File Offset: 0x0001B020
+	// Token: 0x06000CEE RID: 3310 RVA: 0x00007915 File Offset: 0x00005B15
 	public IEnumerator Single_Attack_Throw_Bone(int throwAngle)
 	{
 		yield return this.Default_TellIntroAndLoop("ThrowBone_Tell_Intro", this.m_throwBone_TellIntro_AnimationSpeed, "ThrowBone_Tell_Hold", this.m_throwBone_TellHold_AnimationSpeed, 0.5f);
@@ -276,7 +276,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008AC RID: 2220 RVA: 0x0001CE36 File Offset: 0x0001B036
+	// Token: 0x06000CEF RID: 3311 RVA: 0x0000792B File Offset: 0x00005B2B
 	public IEnumerator Single_Attack_Throw_Rib()
 	{
 		yield return this.Default_TellIntroAndLoop("ChestBone_Tell_Intro", this.m_throwRib_TellIntro_AnimationSpeed, "ChestBone_Tell_Hold", this.m_throwRib_TellHold_AnimationSpeed, 0.75f);
@@ -314,7 +314,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008AD RID: 2221 RVA: 0x0001CE45 File Offset: 0x0001B045
+	// Token: 0x06000CF0 RID: 3312 RVA: 0x0000793A File Offset: 0x00005B3A
 	public IEnumerator Single_Action_Jump()
 	{
 		float num = this.m_jump_Power.x;
@@ -336,7 +336,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008AE RID: 2222 RVA: 0x0001CE54 File Offset: 0x0001B054
+	// Token: 0x06000CF1 RID: 3313 RVA: 0x00007949 File Offset: 0x00005B49
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -371,8 +371,8 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x170004A1 RID: 1185
-	// (get) Token: 0x060008AF RID: 2223 RVA: 0x0001CE63 File Offset: 0x0001B063
+	// Token: 0x1700060B RID: 1547
+	// (get) Token: 0x06000CF2 RID: 3314 RVA: 0x0000452F File Offset: 0x0000272F
 	protected virtual float m_modeShift_Damage_Mod
 	{
 		get
@@ -381,7 +381,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060008B0 RID: 2224 RVA: 0x0001CE6A File Offset: 0x0001B06A
+	// Token: 0x06000CF3 RID: 3315 RVA: 0x00007958 File Offset: 0x00005B58
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -406,7 +406,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008B1 RID: 2225 RVA: 0x0001CE79 File Offset: 0x0001B079
+	// Token: 0x06000CF4 RID: 3316 RVA: 0x00007967 File Offset: 0x00005B67
 	public override IEnumerator SpawnAnim()
 	{
 		base.EnemyController.Visuals.SetActive(false);
@@ -424,7 +424,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008B2 RID: 2226 RVA: 0x0001CE88 File Offset: 0x0001B088
+	// Token: 0x06000CF5 RID: 3317 RVA: 0x00007976 File Offset: 0x00005B76
 	public override IEnumerator DeathAnim()
 	{
 		BossRoomController component = base.EnemyController.Room.gameObject.GetComponent<BossRoomController>();
@@ -444,7 +444,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x060008B3 RID: 2227 RVA: 0x0001CE97 File Offset: 0x0001B097
+	// Token: 0x06000CF6 RID: 3318 RVA: 0x00007985 File Offset: 0x00005B85
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -455,7 +455,7 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x060008B4 RID: 2228 RVA: 0x0001CEBB File Offset: 0x0001B0BB
+	// Token: 0x06000CF7 RID: 3319 RVA: 0x00007768 File Offset: 0x00005968
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.EnemyController.DisableOffscreenWarnings = true;
@@ -463,232 +463,232 @@ public class Skeleton_Basic_AIScript : BaseAIScript
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x04000C0B RID: 3083
+	// Token: 0x04000F36 RID: 3894
 	public UnityEvent_GameObject JumpEvent;
 
-	// Token: 0x04000C0C RID: 3084
+	// Token: 0x04000F37 RID: 3895
 	protected float m_throwBone_TellIntro_AnimationSpeed = 0.85f;
 
-	// Token: 0x04000C0D RID: 3085
+	// Token: 0x04000F38 RID: 3896
 	protected float m_throwBone_TellHold_AnimationSpeed = 1.3f;
 
-	// Token: 0x04000C0E RID: 3086
+	// Token: 0x04000F39 RID: 3897
 	protected const float m_throwBone_TellIntroAndHold_Delay = 0.5f;
 
-	// Token: 0x04000C0F RID: 3087
+	// Token: 0x04000F3A RID: 3898
 	protected float m_throwBone_AttackIntro_AnimationSpeed = 0.8f;
 
-	// Token: 0x04000C10 RID: 3088
+	// Token: 0x04000F3B RID: 3899
 	protected float m_throwBone_AttackIntro_Delay;
 
-	// Token: 0x04000C11 RID: 3089
+	// Token: 0x04000F3C RID: 3900
 	protected float m_throwBone_AttackHold_AnimationSpeed = 0.8f;
 
-	// Token: 0x04000C12 RID: 3090
+	// Token: 0x04000F3D RID: 3901
 	protected const float m_throwBone_AttackHold_Delay = 0.6f;
 
-	// Token: 0x04000C13 RID: 3091
+	// Token: 0x04000F3E RID: 3902
 	protected float m_throwBone_Exit_AnimationSpeed = 0.65f;
 
-	// Token: 0x04000C14 RID: 3092
+	// Token: 0x04000F3F RID: 3903
 	protected float m_throwBone_Exit_Delay = 0.15f;
 
-	// Token: 0x04000C15 RID: 3093
+	// Token: 0x04000F40 RID: 3904
 	protected int m_BoneNear_Angle = 83;
 
-	// Token: 0x04000C16 RID: 3094
+	// Token: 0x04000F41 RID: 3905
 	protected int m_FarBoneAngle = 70;
 
-	// Token: 0x04000C17 RID: 3095
+	// Token: 0x04000F42 RID: 3906
 	protected int m_miniBoss_Bone_ThrowAmount = 8;
 
-	// Token: 0x04000C18 RID: 3096
+	// Token: 0x04000F43 RID: 3907
 	protected Vector2 m_miniBoss_Bone_ThrowAngle = new Vector2(55f, 85f);
 
-	// Token: 0x04000C19 RID: 3097
+	// Token: 0x04000F44 RID: 3908
 	protected float m_throwBone_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000C1A RID: 3098
+	// Token: 0x04000F45 RID: 3909
 	protected float m_throwBone_AttackCD;
 
-	// Token: 0x04000C1B RID: 3099
+	// Token: 0x04000F46 RID: 3910
 	protected float m_throwRib_TellIntro_AnimationSpeed = 0.75f;
 
-	// Token: 0x04000C1C RID: 3100
+	// Token: 0x04000F47 RID: 3911
 	protected float m_throwRib_TellHold_AnimationSpeed = 1.35f;
 
-	// Token: 0x04000C1D RID: 3101
+	// Token: 0x04000F48 RID: 3912
 	protected const float m_throwRib_TellIntroAndHold_Delay = 0.75f;
 
-	// Token: 0x04000C1E RID: 3102
+	// Token: 0x04000F49 RID: 3913
 	protected float m_throwRib_AttackIntro_AnimationSpeed = 1.1f;
 
-	// Token: 0x04000C1F RID: 3103
+	// Token: 0x04000F4A RID: 3914
 	protected float m_throwRib_AttackIntro_Delay;
 
-	// Token: 0x04000C20 RID: 3104
+	// Token: 0x04000F4B RID: 3915
 	protected float m_throwRib_AttackHold_AnimationSpeed = 1.1f;
 
-	// Token: 0x04000C21 RID: 3105
+	// Token: 0x04000F4C RID: 3916
 	protected float m_throwRib_AttackHold_Delay = 1f;
 
-	// Token: 0x04000C22 RID: 3106
+	// Token: 0x04000F4D RID: 3917
 	protected float m_throwRib_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000C23 RID: 3107
+	// Token: 0x04000F4E RID: 3918
 	protected float m_throwRib_Exit_Delay;
 
-	// Token: 0x04000C24 RID: 3108
+	// Token: 0x04000F4F RID: 3919
 	protected int m_throwRib_Angle;
 
-	// Token: 0x04000C25 RID: 3109
+	// Token: 0x04000F50 RID: 3920
 	protected float m_throwRib_secondRibSpeedMod = 1.35f;
 
-	// Token: 0x04000C26 RID: 3110
+	// Token: 0x04000F51 RID: 3921
 	protected float m_throwRib_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000C27 RID: 3111
+	// Token: 0x04000F52 RID: 3922
 	protected float m_throwRib_Exit_AttackCD = 2f;
 
-	// Token: 0x04000C28 RID: 3112
+	// Token: 0x04000F53 RID: 3923
 	protected float m_miniBoss_Rib_ThrowAmount = 1f;
 
-	// Token: 0x04000C29 RID: 3113
+	// Token: 0x04000F54 RID: 3924
 	protected float m_miniBoss_Rib_ThrowPower = 1f;
 
-	// Token: 0x04000C2A RID: 3114
+	// Token: 0x04000F55 RID: 3925
 	protected Vector2 m_miniBoss_Rib_ThrowHeight = new Vector2(6f, 6f);
 
-	// Token: 0x04000C2B RID: 3115
+	// Token: 0x04000F56 RID: 3926
 	protected float m_miniBoss_Rib_LoopDelay = 0.9f;
 
-	// Token: 0x04000C2C RID: 3116
+	// Token: 0x04000F57 RID: 3927
 	protected float m_jump_Tell_Delay = 0.4f;
 
-	// Token: 0x04000C2D RID: 3117
+	// Token: 0x04000F58 RID: 3928
 	protected float m_jump_Tell_AnimationSpeed = 0.75f;
 
-	// Token: 0x04000C2E RID: 3118
+	// Token: 0x04000F59 RID: 3929
 	protected Vector2 m_jump_Power = new Vector2(0f, 27f);
 
-	// Token: 0x04000C2F RID: 3119
+	// Token: 0x04000F5A RID: 3930
 	protected int m_miniBoss_Bone_JumpAmount = 5;
 
-	// Token: 0x04000C30 RID: 3120
+	// Token: 0x04000F5B RID: 3931
 	protected float m_jump_Exit_Delay;
 
-	// Token: 0x04000C31 RID: 3121
+	// Token: 0x04000F5C RID: 3932
 	protected float m_jump_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000C32 RID: 3122
+	// Token: 0x04000F5D RID: 3933
 	protected float m_jump_Exit_AttackCD;
 
-	// Token: 0x04000C33 RID: 3123
+	// Token: 0x04000F5E RID: 3934
 	protected Vector2 m_jumpAndThrowBone_ProjectileSpawnDelay = new Vector2(0f, 0f);
 
-	// Token: 0x04000C34 RID: 3124
+	// Token: 0x04000F5F RID: 3935
 	protected float m_jumpAndThrowBone_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000C35 RID: 3125
+	// Token: 0x04000F60 RID: 3936
 	protected float m_jumpAndThrowBone_Exit_AttackCD = 1.25f;
 
-	// Token: 0x04000C36 RID: 3126
+	// Token: 0x04000F61 RID: 3937
 	protected Vector2 m_jump_Tweaker_Add = new Vector2(-12f, 0f);
 
-	// Token: 0x04000C37 RID: 3127
+	// Token: 0x04000F62 RID: 3938
 	protected Vector2 m_miniBoss_Land_ThrowAngle = new Vector2(25f, 30f);
 
-	// Token: 0x04000C38 RID: 3128
+	// Token: 0x04000F63 RID: 3939
 	protected Vector2 m_miniBoss_Land_ThrowPower = new Vector2(0.75f, 1f);
 
-	// Token: 0x04000C39 RID: 3129
+	// Token: 0x04000F64 RID: 3940
 	protected float m_dance_AttackIntro_AnimationSpeed = 1.1f;
 
-	// Token: 0x04000C3A RID: 3130
+	// Token: 0x04000F65 RID: 3941
 	protected float m_dance_AttackIntro_Delay = 1f;
 
-	// Token: 0x04000C3B RID: 3131
+	// Token: 0x04000F66 RID: 3942
 	protected float m_dance_AttackHold_Delay = 1f;
 
-	// Token: 0x04000C3C RID: 3132
+	// Token: 0x04000F67 RID: 3943
 	protected float m_dance_Exit_ForceIdle = 1f;
 
-	// Token: 0x04000C3D RID: 3133
+	// Token: 0x04000F68 RID: 3944
 	protected float m_dance_Exit_AttackCD = 5f;
 
-	// Token: 0x04000C3E RID: 3134
+	// Token: 0x04000F69 RID: 3945
 	protected const string MODE_SHIFT_TELL_INTRO = "ModeShift_Intro";
 
-	// Token: 0x04000C3F RID: 3135
+	// Token: 0x04000F6A RID: 3946
 	protected const string MODE_SHIFT_ATTACK_INTRO = "ModeShift_Scream_Intro";
 
-	// Token: 0x04000C40 RID: 3136
+	// Token: 0x04000F6B RID: 3947
 	protected const string MODE_SHIFT_ATTACK_HOLD = "ModeShift_Scream_Hold";
 
-	// Token: 0x04000C41 RID: 3137
+	// Token: 0x04000F6C RID: 3948
 	protected const string MODE_SHIFT_EXIT = "ModeShift_Scream_Exit";
 
-	// Token: 0x04000C42 RID: 3138
+	// Token: 0x04000F6D RID: 3949
 	protected float m_modeShift_Tell_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000C43 RID: 3139
+	// Token: 0x04000F6E RID: 3950
 	protected float m_modeShift_TellIntro_Delay = 0.5f;
 
-	// Token: 0x04000C44 RID: 3140
+	// Token: 0x04000F6F RID: 3951
 	protected float m_modeShift_Attack_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000C45 RID: 3141
+	// Token: 0x04000F70 RID: 3952
 	protected float m_modeShift_Attack_Intro_Delay;
 
-	// Token: 0x04000C46 RID: 3142
+	// Token: 0x04000F71 RID: 3953
 	protected float m_modeShift_Attack_Hold_AnimSpeed = 1f;
 
-	// Token: 0x04000C47 RID: 3143
+	// Token: 0x04000F72 RID: 3954
 	protected float m_modeShift_Attack_Hold_Delay = 2f;
 
-	// Token: 0x04000C48 RID: 3144
+	// Token: 0x04000F73 RID: 3955
 	protected float m_modeShift_Exit_AnimSpeed = 1f;
 
-	// Token: 0x04000C49 RID: 3145
+	// Token: 0x04000F74 RID: 3956
 	protected float m_modeShift_Exit_Delay;
 
-	// Token: 0x04000C4A RID: 3146
+	// Token: 0x04000F75 RID: 3957
 	[NonSerialized]
 	public bool ModeShiftComplete_SpawnSecondBoss;
 
-	// Token: 0x04000C4B RID: 3147
+	// Token: 0x04000F76 RID: 3958
 	protected const string SPAWN_IDLE = "Intro_Idle";
 
-	// Token: 0x04000C4C RID: 3148
+	// Token: 0x04000F77 RID: 3959
 	protected const string SPAWN_INTRO = "Intro";
 
-	// Token: 0x04000C4D RID: 3149
+	// Token: 0x04000F78 RID: 3960
 	protected float m_spawn_Idle_AnimSpeed = 1f;
 
-	// Token: 0x04000C4E RID: 3150
+	// Token: 0x04000F79 RID: 3961
 	protected float m_spawn_Idle_Delay;
 
-	// Token: 0x04000C4F RID: 3151
+	// Token: 0x04000F7A RID: 3962
 	protected float m_spawn_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000C50 RID: 3152
+	// Token: 0x04000F7B RID: 3963
 	protected float m_spawn_Intro_Delay;
 
-	// Token: 0x04000C51 RID: 3153
+	// Token: 0x04000F7C RID: 3964
 	protected const string DEATH_INTRO = "Death_Intro";
 
-	// Token: 0x04000C52 RID: 3154
+	// Token: 0x04000F7D RID: 3965
 	protected const string DEATH_HOLD = "Death_Loop";
 
-	// Token: 0x04000C53 RID: 3155
+	// Token: 0x04000F7E RID: 3966
 	protected float m_death_Intro_AnimSpeed = 1f;
 
-	// Token: 0x04000C54 RID: 3156
+	// Token: 0x04000F7F RID: 3967
 	protected float m_death_Intro_Delay;
 
-	// Token: 0x04000C55 RID: 3157
+	// Token: 0x04000F80 RID: 3968
 	protected float m_death_Hold_AnimSpeed = 1f;
 
-	// Token: 0x04000C56 RID: 3158
+	// Token: 0x04000F81 RID: 3969
 	protected float m_death_Hold_Delay = 4.5f;
 }

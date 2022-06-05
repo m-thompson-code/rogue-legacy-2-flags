@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000428 RID: 1064
+// Token: 0x020006EC RID: 1772
 public class SlowTimeEffect : BaseEffect
 {
-	// Token: 0x06002739 RID: 10041 RVA: 0x00082B1F File Offset: 0x00080D1F
+	// Token: 0x06003630 RID: 13872 RVA: 0x0001DBB2 File Offset: 0x0001BDB2
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x0600273A RID: 10042 RVA: 0x00082B38 File Offset: 0x00080D38
+	// Token: 0x06003631 RID: 13873 RVA: 0x0001DBCB File Offset: 0x0001BDCB
 	public override void Play(float duration, EffectStopType stopType)
 	{
 		base.Play(duration, stopType);
@@ -25,7 +25,7 @@ public class SlowTimeEffect : BaseEffect
 		this.SlowTime();
 	}
 
-	// Token: 0x0600273B RID: 10043 RVA: 0x00082B62 File Offset: 0x00080D62
+	// Token: 0x06003632 RID: 13874 RVA: 0x0001DBF5 File Offset: 0x0001BDF5
 	public override void Stop(EffectStopType stopType)
 	{
 		if (base.IsPlaying)
@@ -35,7 +35,7 @@ public class SlowTimeEffect : BaseEffect
 		this.PlayComplete();
 	}
 
-	// Token: 0x0600273C RID: 10044 RVA: 0x00082B82 File Offset: 0x00080D82
+	// Token: 0x06003633 RID: 13875 RVA: 0x0001DC15 File Offset: 0x0001BE15
 	private void SlowTime()
 	{
 		if (this.m_slowCoroutine != null)
@@ -49,7 +49,7 @@ public class SlowTimeEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x0600273D RID: 10045 RVA: 0x00082BBE File Offset: 0x00080DBE
+	// Token: 0x06003634 RID: 13876 RVA: 0x0001DC51 File Offset: 0x0001BE51
 	private IEnumerator SlowTimeCoroutine()
 	{
 		base.IsPlaying = true;
@@ -70,7 +70,7 @@ public class SlowTimeEffect : BaseEffect
 		yield break;
 	}
 
-	// Token: 0x0600273E RID: 10046 RVA: 0x00082BCD File Offset: 0x00080DCD
+	// Token: 0x06003635 RID: 13877 RVA: 0x0001DC60 File Offset: 0x0001BE60
 	protected override void OnDisable()
 	{
 		if (base.IsPlaying)
@@ -80,22 +80,22 @@ public class SlowTimeEffect : BaseEffect
 		base.OnDisable();
 	}
 
-	// Token: 0x040020EA RID: 8426
+	// Token: 0x04002C05 RID: 11269
 	private const float FIXED_DELTA_TIME = 0.016666668f;
 
-	// Token: 0x040020EB RID: 8427
+	// Token: 0x04002C06 RID: 11270
 	[SerializeField]
 	private float m_timeScaleValue = 1f;
 
-	// Token: 0x040020EC RID: 8428
+	// Token: 0x04002C07 RID: 11271
 	private float m_slowDuration;
 
-	// Token: 0x040020ED RID: 8429
+	// Token: 0x04002C08 RID: 11272
 	private Coroutine m_slowCoroutine;
 
-	// Token: 0x040020EE RID: 8430
+	// Token: 0x04002C09 RID: 11273
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040020EF RID: 8431
+	// Token: 0x04002C0A RID: 11274
 	private TimeScaleType m_slowTimeScaleType;
 }

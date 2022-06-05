@@ -3,15 +3,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000377 RID: 887
+// Token: 0x020005FB RID: 1531
 public class GearCardEntry : MonoBehaviour
 {
-	// Token: 0x17000E0F RID: 3599
-	// (get) Token: 0x06002147 RID: 8519 RVA: 0x00068B91 File Offset: 0x00066D91
-	// (set) Token: 0x06002148 RID: 8520 RVA: 0x00068B99 File Offset: 0x00066D99
+	// Token: 0x17001292 RID: 4754
+	// (get) Token: 0x06002F2E RID: 12078 RVA: 0x00019D68 File Offset: 0x00017F68
+	// (set) Token: 0x06002F2F RID: 12079 RVA: 0x00019D70 File Offset: 0x00017F70
 	public GearCardEntry.GearCardEntryType GearCardType { get; private set; }
 
-	// Token: 0x06002149 RID: 8521 RVA: 0x00068BA4 File Offset: 0x00066DA4
+	// Token: 0x06002F30 RID: 12080 RVA: 0x000C9AB4 File Offset: 0x000C7CB4
 	public void SetAsEquipment(EquipmentCategoryType category, EquipmentType equipType)
 	{
 		EquipmentData equipmentData = EquipmentLibrary.GetEquipmentData(category, equipType);
@@ -31,7 +31,7 @@ public class GearCardEntry : MonoBehaviour
 		this.GearCardType = GearCardEntry.GearCardEntryType.Equipment;
 	}
 
-	// Token: 0x0600214A RID: 8522 RVA: 0x00068C40 File Offset: 0x00066E40
+	// Token: 0x06002F31 RID: 12081 RVA: 0x000C9B50 File Offset: 0x000C7D50
 	public void SetAsRune(RuneType runeType)
 	{
 		RuneData runeData = RuneLibrary.GetRuneData(runeType);
@@ -47,7 +47,7 @@ public class GearCardEntry : MonoBehaviour
 		this.GearCardType = GearCardEntry.GearCardEntryType.Rune;
 	}
 
-	// Token: 0x0600214B RID: 8523 RVA: 0x00068CD4 File Offset: 0x00066ED4
+	// Token: 0x06002F32 RID: 12082 RVA: 0x000C9BE4 File Offset: 0x000C7DE4
 	public void SetAsHeirloom(HeirloomType heirloomType)
 	{
 		HeirloomData heirloomData = HeirloomLibrary.GetHeirloomData(heirloomType);
@@ -57,7 +57,7 @@ public class GearCardEntry : MonoBehaviour
 		this.GearCardType = GearCardEntry.GearCardEntryType.Heirloom;
 	}
 
-	// Token: 0x0600214C RID: 8524 RVA: 0x00068D30 File Offset: 0x00066F30
+	// Token: 0x06002F33 RID: 12083 RVA: 0x000C9C40 File Offset: 0x000C7E40
 	public void SetAsRelic(RelicType relicType)
 	{
 		RelicData relicData = RelicLibrary.GetRelicData(relicType);
@@ -89,7 +89,7 @@ public class GearCardEntry : MonoBehaviour
 		this.GearCardType = GearCardEntry.GearCardEntryType.Relic;
 	}
 
-	// Token: 0x0600214D RID: 8525 RVA: 0x00068E80 File Offset: 0x00067080
+	// Token: 0x06002F34 RID: 12084 RVA: 0x000C9D90 File Offset: 0x000C7F90
 	public void SetAsUnity(EquipmentSetBonusType unityType, float bonusGain)
 	{
 		if (this.m_icon.transform.parent.gameObject.activeSelf)
@@ -117,30 +117,30 @@ public class GearCardEntry : MonoBehaviour
 		titleText.text += LocalizationManager.GetString(EquipmentSetLibrary.GetEquipmentSetBonusLocID(unityType), false, false);
 	}
 
-	// Token: 0x04001CD3 RID: 7379
+	// Token: 0x0400269D RID: 9885
 	[SerializeField]
 	private TMP_Text m_descriptionText;
 
-	// Token: 0x04001CD4 RID: 7380
+	// Token: 0x0400269E RID: 9886
 	[SerializeField]
 	private TMP_Text m_titleText;
 
-	// Token: 0x04001CD5 RID: 7381
+	// Token: 0x0400269F RID: 9887
 	[SerializeField]
 	private Image m_icon;
 
-	// Token: 0x02000BFD RID: 3069
+	// Token: 0x020005FC RID: 1532
 	public enum GearCardEntryType
 	{
-		// Token: 0x04004E60 RID: 20064
+		// Token: 0x040026A2 RID: 9890
 		None,
-		// Token: 0x04004E61 RID: 20065
+		// Token: 0x040026A3 RID: 9891
 		Equipment,
-		// Token: 0x04004E62 RID: 20066
+		// Token: 0x040026A4 RID: 9892
 		Rune,
-		// Token: 0x04004E63 RID: 20067
+		// Token: 0x040026A5 RID: 9893
 		Heirloom,
-		// Token: 0x04004E64 RID: 20068
+		// Token: 0x040026A6 RID: 9894
 		Relic
 	}
 }

@@ -5,10 +5,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000396 RID: 918
+// Token: 0x02000625 RID: 1573
 public class BlacksmithOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<BlacksmithOmniUIDescriptionEventArgs, BlacksmithOmniUIDescriptionBoxEntry.BlacksmithOmniUIDescriptionBoxType>
 {
-	// Token: 0x0600224D RID: 8781 RVA: 0x0006DE85 File Offset: 0x0006C085
+	// Token: 0x0600305F RID: 12383 RVA: 0x0001A873 File Offset: 0x00018A73
 	protected override void DisplayNullDescriptionBox(MonoBehaviour sender)
 	{
 		base.DisplayNullDescriptionBox(sender);
@@ -19,7 +19,7 @@ public class BlacksmithOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry
 		}
 	}
 
-	// Token: 0x0600224E RID: 8782 RVA: 0x0006DEB8 File Offset: 0x0006C0B8
+	// Token: 0x06003060 RID: 12384 RVA: 0x000CEBCC File Offset: 0x000CCDCC
 	protected override void DisplayDescriptionBox(BlacksmithOmniUIDescriptionEventArgs args)
 	{
 		if (this.m_descriptionType != BlacksmithOmniUIDescriptionBoxEntry.BlacksmithOmniUIDescriptionBoxType.Unity && this.m_descriptionType != BlacksmithOmniUIDescriptionBoxEntry.BlacksmithOmniUIDescriptionBoxType.UnityDescription1 && this.m_descriptionType != BlacksmithOmniUIDescriptionBoxEntry.BlacksmithOmniUIDescriptionBoxType.UnityDescription2 && this.m_descriptionType != BlacksmithOmniUIDescriptionBoxEntry.BlacksmithOmniUIDescriptionBoxType.UnityDescription3)
@@ -324,7 +324,7 @@ public class BlacksmithOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry
 		}
 	}
 
-	// Token: 0x0600224F RID: 8783 RVA: 0x0006EA4C File Offset: 0x0006CC4C
+	// Token: 0x06003061 RID: 12385 RVA: 0x000CF760 File Offset: 0x000CD960
 	private void FireUnityBonusEvents(EquipmentType equipmentType, int requiredUnityLevel)
 	{
 		int num = EquipmentManager.Get_EquipmentSet_TotalEquippedLevel(equipmentType);
@@ -345,7 +345,7 @@ public class BlacksmithOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry
 		}
 	}
 
-	// Token: 0x06002250 RID: 8784 RVA: 0x0006EAC6 File Offset: 0x0006CCC6
+	// Token: 0x06003062 RID: 12386 RVA: 0x0001A8A5 File Offset: 0x00018AA5
 	private IEnumerator RunRevealUnityEffect(TMP_Text text, string newText)
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -363,7 +363,7 @@ public class BlacksmithOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry
 		yield break;
 	}
 
-	// Token: 0x06002251 RID: 8785 RVA: 0x0006EAE4 File Offset: 0x0006CCE4
+	// Token: 0x06003063 RID: 12387 RVA: 0x000CF7DC File Offset: 0x000CD9DC
 	private void SetStatString(float playerVal, float itemVal, float itemNextLevelVal, float equippedItemVal, bool lowerIsBetter, bool isPercent, BlacksmithOmniUIDescriptionEventArgs args)
 	{
 		EquipmentObj equipped = EquipmentManager.GetEquipped(args.CategoryType);
@@ -433,47 +433,47 @@ public class BlacksmithOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry
 		}
 	}
 
-	// Token: 0x04001DAF RID: 7599
+	// Token: 0x040027AF RID: 10159
 	[SerializeField]
 	private UnityEvent m_unityBonusOnUnityEvent;
 
-	// Token: 0x04001DB0 RID: 7600
+	// Token: 0x040027B0 RID: 10160
 	[SerializeField]
 	private UnityEvent m_unityBonusOffUnityEvent;
 
-	// Token: 0x04001DB1 RID: 7601
+	// Token: 0x040027B1 RID: 10161
 	private Dictionary<EquipmentType, int> m_previousEquipmentSetLevel = new Dictionary<EquipmentType, int>();
 
-	// Token: 0x02000C08 RID: 3080
+	// Token: 0x02000626 RID: 1574
 	public enum BlacksmithOmniUIDescriptionBoxType
 	{
-		// Token: 0x04004E95 RID: 20117
+		// Token: 0x040027B3 RID: 10163
 		None,
-		// Token: 0x04004E96 RID: 20118
+		// Token: 0x040027B4 RID: 10164
 		Title,
-		// Token: 0x04004E97 RID: 20119
+		// Token: 0x040027B5 RID: 10165
 		UnityDescription1,
-		// Token: 0x04004E98 RID: 20120
+		// Token: 0x040027B6 RID: 10166
 		UnityDescription2,
-		// Token: 0x04004E99 RID: 20121
+		// Token: 0x040027B7 RID: 10167
 		UnityDescription3,
-		// Token: 0x04004E9A RID: 20122
+		// Token: 0x040027B8 RID: 10168
 		Weight,
-		// Token: 0x04004E9B RID: 20123
+		// Token: 0x040027B9 RID: 10169
 		Encumberance,
-		// Token: 0x04004E9C RID: 20124
+		// Token: 0x040027BA RID: 10170
 		Strength,
-		// Token: 0x04004E9D RID: 20125
+		// Token: 0x040027BB RID: 10171
 		Vitality,
-		// Token: 0x04004E9E RID: 20126
+		// Token: 0x040027BC RID: 10172
 		Magic,
-		// Token: 0x04004E9F RID: 20127
+		// Token: 0x040027BD RID: 10173
 		Armor,
-		// Token: 0x04004EA0 RID: 20128
+		// Token: 0x040027BE RID: 10174
 		Dexterity,
-		// Token: 0x04004EA1 RID: 20129
+		// Token: 0x040027BF RID: 10175
 		Focus,
-		// Token: 0x04004EA2 RID: 20130
+		// Token: 0x040027C0 RID: 10176
 		Unity
 	}
 }

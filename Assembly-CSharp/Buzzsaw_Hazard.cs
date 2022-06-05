@@ -4,11 +4,11 @@ using FMOD.Studio;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000446 RID: 1094
+// Token: 0x02000715 RID: 1813
 public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, IHitResponse
 {
-	// Token: 0x17000FCB RID: 4043
-	// (get) Token: 0x0600281E RID: 10270 RVA: 0x00084E00 File Offset: 0x00083000
+	// Token: 0x170014BA RID: 5306
+	// (get) Token: 0x06003754 RID: 14164 RVA: 0x000E584C File Offset: 0x000E3A4C
 	public float SawPosition
 	{
 		get
@@ -19,7 +19,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x0600281F RID: 10271 RVA: 0x00084E3E File Offset: 0x0008303E
+	// Token: 0x06003755 RID: 14165 RVA: 0x0001E710 File Offset: 0x0001C910
 	protected override void Awake()
 	{
 		base.Awake();
@@ -27,7 +27,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		this.m_retractWaitYield = new WaitRL_Yield(2f, false);
 	}
 
-	// Token: 0x06002820 RID: 10272 RVA: 0x00084E64 File Offset: 0x00083064
+	// Token: 0x06003756 RID: 14166 RVA: 0x000E588C File Offset: 0x000E3A8C
 	public override void Initialize(PivotPoint pivot, int width, HazardArgs hazardArgs)
 	{
 		base.Initialize(pivot, width, hazardArgs);
@@ -45,7 +45,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x06002821 RID: 10273 RVA: 0x00084F21 File Offset: 0x00083121
+	// Token: 0x06003757 RID: 14167 RVA: 0x0001E735 File Offset: 0x0001C935
 	private IEnumerator SetHalfBoundsWidthCoroutine()
 	{
 		while (!this.m_hbController.IsInitialized)
@@ -57,7 +57,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		yield break;
 	}
 
-	// Token: 0x06002822 RID: 10274 RVA: 0x00084F30 File Offset: 0x00083130
+	// Token: 0x06003758 RID: 14168 RVA: 0x000E594C File Offset: 0x000E3B4C
 	private void FixedUpdate()
 	{
 		Vector3 localPosition = this.m_pivot.transform.localPosition;
@@ -111,7 +111,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x06002823 RID: 10275 RVA: 0x000850A0 File Offset: 0x000832A0
+	// Token: 0x06003759 RID: 14169 RVA: 0x000E5ABC File Offset: 0x000E3CBC
 	public override void ResetHazard()
 	{
 		this.m_movementStartTime = Time.time;
@@ -148,7 +148,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		base.ResetHazard();
 	}
 
-	// Token: 0x06002824 RID: 10276 RVA: 0x00085194 File Offset: 0x00083394
+	// Token: 0x0600375A RID: 14170 RVA: 0x000E5BB0 File Offset: 0x000E3DB0
 	public void BodyOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (!otherHBController.IsNativeNull() && !otherHBController.RootGameObject.GetComponent<DownstrikeProjectile_RL>())
@@ -162,7 +162,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		this.m_retractBuzzsawCoroutine = base.StartCoroutine(this.RetractBuzzsawCoroutine());
 	}
 
-	// Token: 0x06002825 RID: 10277 RVA: 0x000851E2 File Offset: 0x000833E2
+	// Token: 0x0600375B RID: 14171 RVA: 0x0001E744 File Offset: 0x0001C944
 	private IEnumerator RetractBuzzsawCoroutine()
 	{
 		this.RetractBuzzsaw();
@@ -172,7 +172,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		yield break;
 	}
 
-	// Token: 0x06002826 RID: 10278 RVA: 0x000851F4 File Offset: 0x000833F4
+	// Token: 0x0600375C RID: 14172 RVA: 0x000E5C00 File Offset: 0x000E3E00
 	private void RetractBuzzsaw()
 	{
 		AudioManager.PlayOneShot(null, "event:/SFX/Enemies/sfx_hazard_sawTrap_destroy", this.m_buzzSawSprite.transform.position);
@@ -185,7 +185,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		this.m_resonantParticleEffect.SetActive(false);
 	}
 
-	// Token: 0x06002827 RID: 10279 RVA: 0x0008526C File Offset: 0x0008346C
+	// Token: 0x0600375D RID: 14173 RVA: 0x000E5C78 File Offset: 0x000E3E78
 	private void ExtractBuzzsaw()
 	{
 		if (this.m_buzzSawEventInstance.isValid())
@@ -197,7 +197,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		this.m_resonantParticleEffect.SetActive(true);
 	}
 
-	// Token: 0x06002828 RID: 10280 RVA: 0x000852C6 File Offset: 0x000834C6
+	// Token: 0x0600375E RID: 14174 RVA: 0x0001E753 File Offset: 0x0001C953
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -207,7 +207,7 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x06002829 RID: 10281 RVA: 0x000852E7 File Offset: 0x000834E7
+	// Token: 0x0600375F RID: 14175 RVA: 0x0001E774 File Offset: 0x0001C974
 	private void OnDestroy()
 	{
 		if (this.m_buzzSawEventInstance.isValid())
@@ -216,45 +216,45 @@ public class Buzzsaw_Hazard : SingleLine_Multi_Hazard, IBodyOnEnterHitResponse, 
 		}
 	}
 
-	// Token: 0x0400214F RID: 8527
+	// Token: 0x04002C97 RID: 11415
 	private const string POSITION_PARAMETER_NAME = "sawPosition";
 
-	// Token: 0x04002150 RID: 8528
+	// Token: 0x04002C98 RID: 11416
 	private const string ACTIVE_PARAMETER_NAME = "sawActive";
 
-	// Token: 0x04002151 RID: 8529
+	// Token: 0x04002C99 RID: 11417
 	[SerializeField]
 	private GameObject m_buzzSawSprite;
 
-	// Token: 0x04002152 RID: 8530
+	// Token: 0x04002C9A RID: 11418
 	[SerializeField]
 	private SpriteRenderer m_lineSprite;
 
-	// Token: 0x04002153 RID: 8531
+	// Token: 0x04002C9B RID: 11419
 	[SerializeField]
 	private GameObject m_resonantParticleEffect;
 
-	// Token: 0x04002154 RID: 8532
+	// Token: 0x04002C9C RID: 11420
 	private bool m_movingRight;
 
-	// Token: 0x04002155 RID: 8533
+	// Token: 0x04002C9D RID: 11421
 	private float m_buzzsawHalfWidth;
 
-	// Token: 0x04002156 RID: 8534
+	// Token: 0x04002C9E RID: 11422
 	private float m_buzzsawHeight;
 
-	// Token: 0x04002157 RID: 8535
+	// Token: 0x04002C9F RID: 11423
 	private IHitboxController m_hbController;
 
-	// Token: 0x04002158 RID: 8536
+	// Token: 0x04002CA0 RID: 11424
 	private WaitRL_Yield m_retractWaitYield;
 
-	// Token: 0x04002159 RID: 8537
+	// Token: 0x04002CA1 RID: 11425
 	private Coroutine m_retractBuzzsawCoroutine;
 
-	// Token: 0x0400215A RID: 8538
+	// Token: 0x04002CA2 RID: 11426
 	private float m_movementStartTime;
 
-	// Token: 0x0400215B RID: 8539
+	// Token: 0x04002CA3 RID: 11427
 	private EventInstance m_buzzSawEventInstance;
 }

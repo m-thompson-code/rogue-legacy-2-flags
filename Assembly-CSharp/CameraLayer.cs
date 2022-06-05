@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x0200070D RID: 1805
+// Token: 0x02000BC0 RID: 3008
 public enum CameraLayer
 {
-	// Token: 0x040032F3 RID: 13043
+	// Token: 0x0400456E RID: 17774
 	None,
-	// Token: 0x040032F4 RID: 13044
+	// Token: 0x0400456F RID: 17775
 	Game,
-	// Token: 0x040032F5 RID: 13045
+	// Token: 0x04004570 RID: 17776
 	Foreground_PERSP,
-	// Token: 0x040032F6 RID: 13046
+	// Token: 0x04004571 RID: 17777
 	Foreground_ORTHO = 16,
-	// Token: 0x040032F7 RID: 13047
+	// Token: 0x04004572 RID: 17778
 	Background_ORTHO = 32,
-	// Token: 0x040032F8 RID: 13048
+	// Token: 0x04004573 RID: 17779
 	Background_Near_PERSP = 64,
-	// Token: 0x040032F9 RID: 13049
+	// Token: 0x04004574 RID: 17780
 	Background_Wall = 128,
-	// Token: 0x040032FA RID: 13050
+	// Token: 0x04004575 RID: 17781
 	Background_Far_PERSP = 4,
-	// Token: 0x040032FB RID: 13051
+	// Token: 0x04004576 RID: 17782
 	ForegroundLights = 8,
-	// Token: 0x040032FC RID: 13052
+	// Token: 0x04004577 RID: 17783
 	Any = -1
 }

@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace RLWorldCreation
 {
-	// Token: 0x0200088C RID: 2188
+	// Token: 0x02000DAC RID: 3500
 	public class RoomReplacedEventArgs : BiomeCreationEventArgs
 	{
-		// Token: 0x060047D2 RID: 18386 RVA: 0x00102208 File Offset: 0x00100408
+		// Token: 0x060062D0 RID: 25296 RVA: 0x001709C0 File Offset: 0x0016EBC0
 		public RoomReplacedEventArgs(RoomMetaData originalMetaData, bool originalIsMirrored, Vector2Int originalSize, List<DoorLocation> originalDoorLocations, RoomMetaData replacementMetaData, bool replacementIsMirrored, Vector2Int replacementSize, IEnumerable<DoorLocation> replacementDoorLocations)
 		{
 			this.OriginalMetaData = originalMetaData;
@@ -21,28 +21,28 @@ namespace RLWorldCreation
 			this.ReplacementDoorLocations = replacementDoorLocations;
 		}
 
-		// Token: 0x04003CB9 RID: 15545
+		// Token: 0x040050BB RID: 20667
 		private RoomMetaData OriginalMetaData;
 
-		// Token: 0x04003CBA RID: 15546
+		// Token: 0x040050BC RID: 20668
 		private bool OriginalIsMirrored;
 
-		// Token: 0x04003CBB RID: 15547
+		// Token: 0x040050BD RID: 20669
 		private Vector2Int OriginalSize;
 
-		// Token: 0x04003CBC RID: 15548
+		// Token: 0x040050BE RID: 20670
 		private List<DoorLocation> OriginalDoorLocations;
 
-		// Token: 0x04003CBD RID: 15549
+		// Token: 0x040050BF RID: 20671
 		private RoomMetaData ReplacementMetaData;
 
-		// Token: 0x04003CBE RID: 15550
+		// Token: 0x040050C0 RID: 20672
 		private bool ReplacementIsMirrored;
 
-		// Token: 0x04003CBF RID: 15551
+		// Token: 0x040050C1 RID: 20673
 		private Vector2Int ReplacementSize;
 
-		// Token: 0x04003CC0 RID: 15552
+		// Token: 0x040050C2 RID: 20674
 		private IEnumerable<DoorLocation> ReplacementDoorLocations;
 	}
 }

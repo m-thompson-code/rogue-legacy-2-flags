@@ -2,11 +2,11 @@
 using FMODUnity;
 using UnityEngine;
 
-// Token: 0x02000186 RID: 390
+// Token: 0x020002CF RID: 719
 public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 {
-	// Token: 0x17000775 RID: 1909
-	// (get) Token: 0x06000DE4 RID: 3556 RVA: 0x0002AD49 File Offset: 0x00028F49
+	// Token: 0x170009F3 RID: 2547
+	// (get) Token: 0x06001565 RID: 5477 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -15,8 +15,8 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000776 RID: 1910
-	// (get) Token: 0x06000DE5 RID: 3557 RVA: 0x0002AD50 File Offset: 0x00028F50
+	// Token: 0x170009F4 RID: 2548
+	// (get) Token: 0x06001566 RID: 5478 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -25,8 +25,8 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000777 RID: 1911
-	// (get) Token: 0x06000DE6 RID: 3558 RVA: 0x0002AD57 File Offset: 0x00028F57
+	// Token: 0x170009F5 RID: 2549
+	// (get) Token: 0x06001567 RID: 5479 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float TellAnimSpeed
 	{
 		get
@@ -35,8 +35,8 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000778 RID: 1912
-	// (get) Token: 0x06000DE7 RID: 3559 RVA: 0x0002AD5E File Offset: 0x00028F5E
+	// Token: 0x170009F6 RID: 2550
+	// (get) Token: 0x06001568 RID: 5480 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -45,8 +45,8 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000779 RID: 1913
-	// (get) Token: 0x06000DE8 RID: 3560 RVA: 0x0002AD65 File Offset: 0x00028F65
+	// Token: 0x170009F7 RID: 2551
+	// (get) Token: 0x06001569 RID: 5481 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -55,8 +55,8 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700077A RID: 1914
-	// (get) Token: 0x06000DE9 RID: 3561 RVA: 0x0002AD6C File Offset: 0x00028F6C
+	// Token: 0x170009F8 RID: 2552
+	// (get) Token: 0x0600156A RID: 5482 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -65,8 +65,8 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700077B RID: 1915
-	// (get) Token: 0x06000DEA RID: 3562 RVA: 0x0002AD73 File Offset: 0x00028F73
+	// Token: 0x170009F9 RID: 2553
+	// (get) Token: 0x0600156B RID: 5483 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -75,8 +75,8 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700077C RID: 1916
-	// (get) Token: 0x06000DEB RID: 3563 RVA: 0x0002AD7C File Offset: 0x00028F7C
+	// Token: 0x170009FA RID: 2554
+	// (get) Token: 0x0600156C RID: 5484 RVA: 0x00089E70 File Offset: 0x00088070
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -97,8 +97,8 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700077D RID: 1917
-	// (get) Token: 0x06000DEC RID: 3564 RVA: 0x0002ADE8 File Offset: 0x00028FE8
+	// Token: 0x170009FB RID: 2555
+	// (get) Token: 0x0600156D RID: 5485 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -107,8 +107,8 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700077E RID: 1918
-	// (get) Token: 0x06000DED RID: 3565 RVA: 0x0002ADEF File Offset: 0x00028FEF
+	// Token: 0x170009FC RID: 2556
+	// (get) Token: 0x0600156E RID: 5486 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -117,14 +117,14 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000DEE RID: 3566 RVA: 0x0002ADF6 File Offset: 0x00028FF6
+	// Token: 0x0600156F RID: 5487 RVA: 0x0000AA65 File Offset: 0x00008C65
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
 		this.m_reloadLoopEmitter.Play();
 	}
 
-	// Token: 0x06000DEF RID: 3567 RVA: 0x0002AE0C File Offset: 0x0002900C
+	// Token: 0x06001570 RID: 5488 RVA: 0x00089EDC File Offset: 0x000880DC
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		base.StopAbility(abilityInterrupted);
@@ -147,11 +147,11 @@ public class Reload_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x04001102 RID: 4354
+	// Token: 0x04001677 RID: 5751
 	[SerializeField]
 	private StudioEventEmitter m_reloadSuccessEmitter;
 
-	// Token: 0x04001103 RID: 4355
+	// Token: 0x04001678 RID: 5752
 	[SerializeField]
 	private StudioEventEmitter m_reloadLoopEmitter;
 }

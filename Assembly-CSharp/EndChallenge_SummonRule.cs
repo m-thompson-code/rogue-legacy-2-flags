@@ -4,12 +4,12 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x0200051F RID: 1311
+// Token: 0x02000897 RID: 2199
 [Serializable]
 public class EndChallenge_SummonRule : BaseSummonRule
 {
-	// Token: 0x170011E2 RID: 4578
-	// (get) Token: 0x0600307F RID: 12415 RVA: 0x000A5CE2 File Offset: 0x000A3EE2
+	// Token: 0x170017FF RID: 6143
+	// (get) Token: 0x06004353 RID: 17235 RVA: 0x0002537C File Offset: 0x0002357C
 	public override SummonRuleType RuleType
 	{
 		get
@@ -18,8 +18,8 @@ public class EndChallenge_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011E3 RID: 4579
-	// (get) Token: 0x06003080 RID: 12416 RVA: 0x000A5CE9 File Offset: 0x000A3EE9
+	// Token: 0x17001800 RID: 6144
+	// (get) Token: 0x06004354 RID: 17236 RVA: 0x00025383 File Offset: 0x00023583
 	public override Color BoxColor
 	{
 		get
@@ -28,8 +28,8 @@ public class EndChallenge_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011E4 RID: 4580
-	// (get) Token: 0x06003081 RID: 12417 RVA: 0x000A5CF0 File Offset: 0x000A3EF0
+	// Token: 0x17001801 RID: 6145
+	// (get) Token: 0x06004355 RID: 17237 RVA: 0x0002538A File Offset: 0x0002358A
 	public override string RuleLabel
 	{
 		get
@@ -38,7 +38,7 @@ public class EndChallenge_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x06003082 RID: 12418 RVA: 0x000A5CF7 File Offset: 0x000A3EF7
+	// Token: 0x06004356 RID: 17238 RVA: 0x00025391 File Offset: 0x00023591
 	public override IEnumerator RunSummonRule()
 	{
 		MusicManager.StopMusic();
@@ -78,7 +78,7 @@ public class EndChallenge_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x04002686 RID: 9862
+	// Token: 0x0400347A RID: 13434
 	[SerializeField]
 	private ChallengeType m_challengeType;
 }

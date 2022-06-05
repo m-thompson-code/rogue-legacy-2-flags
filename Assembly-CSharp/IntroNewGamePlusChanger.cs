@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200020F RID: 527
+// Token: 0x020003C2 RID: 962
 public class IntroNewGamePlusChanger : MonoBehaviour
 {
-	// Token: 0x06001626 RID: 5670 RVA: 0x00045089 File Offset: 0x00043289
+	// Token: 0x06001FC2 RID: 8130 RVA: 0x00010C26 File Offset: 0x0000EE26
 	private void Awake()
 	{
 		this.m_castleGO.SetActive(false);
@@ -12,7 +12,7 @@ public class IntroNewGamePlusChanger : MonoBehaviour
 		this.UpdateCrowns(true);
 	}
 
-	// Token: 0x06001627 RID: 5671 RVA: 0x000450AC File Offset: 0x000432AC
+	// Token: 0x06001FC3 RID: 8131 RVA: 0x000A3868 File Offset: 0x000A1A68
 	public void UpdateMainMenu()
 	{
 		if (SaveManager.PlayerSaveData.HighestNGPlusBeaten > -1)
@@ -44,7 +44,7 @@ public class IntroNewGamePlusChanger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001628 RID: 5672 RVA: 0x00045170 File Offset: 0x00043370
+	// Token: 0x06001FC4 RID: 8132 RVA: 0x000A392C File Offset: 0x000A1B2C
 	private void UpdateCrowns(bool setToDefault)
 	{
 		int num = this.m_crownGOArray.Length;
@@ -66,22 +66,22 @@ public class IntroNewGamePlusChanger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001549 RID: 5449
+	// Token: 0x04001C4C RID: 7244
 	[SerializeField]
 	private IntroSkyColourChanger m_introSkyColourChanger;
 
-	// Token: 0x0400154A RID: 5450
+	// Token: 0x04001C4D RID: 7245
 	[SerializeField]
 	private GameObject m_castleGO;
 
-	// Token: 0x0400154B RID: 5451
+	// Token: 0x04001C4E RID: 7246
 	[SerializeField]
 	private GameObject m_moonGO;
 
-	// Token: 0x0400154C RID: 5452
+	// Token: 0x04001C4F RID: 7247
 	[SerializeField]
 	private GameObject[] m_crownGOArray;
 
-	// Token: 0x0400154D RID: 5453
+	// Token: 0x04001C50 RID: 7248
 	private bool m_changedToNewGamePlus;
 }

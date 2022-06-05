@@ -1,20 +1,20 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002E8 RID: 744
+// Token: 0x020004F2 RID: 1266
 public class SetSortOrderLayer : MonoBehaviour
 {
-	// Token: 0x06001D83 RID: 7555 RVA: 0x0006126C File Offset: 0x0005F46C
+	// Token: 0x060028C8 RID: 10440 RVA: 0x00016E19 File Offset: 0x00015019
 	private void Start()
 	{
 		this.m_meshRenderer.sortingLayerName = this.m_layerName;
 	}
 
-	// Token: 0x04001B73 RID: 7027
+	// Token: 0x040023BE RID: 9150
 	[SerializeField]
 	private MeshRenderer m_meshRenderer;
 
-	// Token: 0x04001B74 RID: 7028
+	// Token: 0x040023BF RID: 9151
 	[SerializeField]
 	private string m_layerName = "";
 }

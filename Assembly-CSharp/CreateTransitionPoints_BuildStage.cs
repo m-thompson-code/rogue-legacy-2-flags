@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using Spawn;
 using UnityEngine;
 
-// Token: 0x02000667 RID: 1639
+// Token: 0x02000AC9 RID: 2761
 public class CreateTransitionPoints_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B38 RID: 15160 RVA: 0x000CB7C5 File Offset: 0x000C99C5
+	// Token: 0x060052FF RID: 21247 RVA: 0x0002D22F File Offset: 0x0002B42F
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		List<Door> transitionPoints = this.GetTransitionPoints(biomeController);
@@ -24,7 +24,7 @@ public class CreateTransitionPoints_BuildStage : IBiomeBuildStage
 		yield break;
 	}
 
-	// Token: 0x06003B39 RID: 15161 RVA: 0x000CB7DC File Offset: 0x000C99DC
+	// Token: 0x06005300 RID: 21248 RVA: 0x0013A794 File Offset: 0x00138994
 	private static void CreateTransitionPoint(Door door, BiomeType doorLeadsToBiome)
 	{
 		Prop[] array = CreateTransitionPoints_BuildStage.m_dataTable[door.Side].DefaultProps;
@@ -50,7 +50,7 @@ public class CreateTransitionPoints_BuildStage : IBiomeBuildStage
 		prop.SetRoom(door.Room);
 	}
 
-	// Token: 0x06003B3A RID: 15162 RVA: 0x000CB907 File Offset: 0x000C9B07
+	// Token: 0x06005301 RID: 21249 RVA: 0x0002D245 File Offset: 0x0002B445
 	public static IEnumerator RunFromLevelEditor(BiomeType leadsToBiome, Door door)
 	{
 		if (!GameUtility.IsInLevelEditor)
@@ -65,7 +65,7 @@ public class CreateTransitionPoints_BuildStage : IBiomeBuildStage
 		yield break;
 	}
 
-	// Token: 0x06003B3B RID: 15163 RVA: 0x000CB920 File Offset: 0x000C9B20
+	// Token: 0x06005302 RID: 21250 RVA: 0x0013A8C0 File Offset: 0x00138AC0
 	private static void PopulateDataTable()
 	{
 		foreach (RoomSide key in new RoomSide[]
@@ -98,7 +98,7 @@ public class CreateTransitionPoints_BuildStage : IBiomeBuildStage
 		}
 	}
 
-	// Token: 0x06003B3C RID: 15164 RVA: 0x000CB9B0 File Offset: 0x000C9BB0
+	// Token: 0x06005303 RID: 21251 RVA: 0x0013A950 File Offset: 0x00138B50
 	private List<Door> GetTransitionPoints(BiomeController biomeController)
 	{
 		List<Door> list = new List<Door>();
@@ -124,15 +124,15 @@ public class CreateTransitionPoints_BuildStage : IBiomeBuildStage
 		return list;
 	}
 
-	// Token: 0x04002D06 RID: 11526
+	// Token: 0x04003E3E RID: 15934
 	private static string TOP_DOOR_DATA = "Scriptable Objects/Spawn Controller Data/Props/TransitionPointTop_Editor_Data";
 
-	// Token: 0x04002D07 RID: 11527
+	// Token: 0x04003E3F RID: 15935
 	private static string BOTTOM_DOOR_DATA = "Scriptable Objects/Spawn Controller Data/Props/TransitionPointBottom_Editor_Data";
 
-	// Token: 0x04002D08 RID: 11528
+	// Token: 0x04003E40 RID: 15936
 	private static string SIDE_DOOR_DATA = "Scriptable Objects/Spawn Controller Data/Props/TransitionPointSide_Editor_Data";
 
-	// Token: 0x04002D09 RID: 11529
+	// Token: 0x04003E41 RID: 15937
 	private static Dictionary<RoomSide, PropSpawnControllerData> m_dataTable = new Dictionary<RoomSide, PropSpawnControllerData>();
 }

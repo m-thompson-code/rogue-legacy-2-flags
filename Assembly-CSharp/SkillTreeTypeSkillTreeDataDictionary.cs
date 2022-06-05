@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200002C RID: 44
+// Token: 0x0200002F RID: 47
 [Serializable]
 public class SkillTreeTypeSkillTreeDataDictionary : SerializableDictionary<SkillTreeType, SkillTreeData>
 {

@@ -2,12 +2,12 @@
 using System.Reflection;
 using UnityEngine;
 
-// Token: 0x020002D9 RID: 729
+// Token: 0x020004CE RID: 1230
 [Serializable]
 public class CachedPlayerData
 {
-	// Token: 0x17000CAC RID: 3244
-	// (get) Token: 0x06001CE9 RID: 7401 RVA: 0x0005F4E8 File Offset: 0x0005D6E8
+	// Token: 0x17001035 RID: 4149
+	// (get) Token: 0x060027B3 RID: 10163 RVA: 0x00016550 File Offset: 0x00014750
 	public int CurrentExhaust
 	{
 		get
@@ -16,8 +16,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CAD RID: 3245
-	// (get) Token: 0x06001CEA RID: 7402 RVA: 0x0005F4F0 File Offset: 0x0005D6F0
+	// Token: 0x17001036 RID: 4150
+	// (get) Token: 0x060027B4 RID: 10164 RVA: 0x00016558 File Offset: 0x00014758
 	public int CurrentSpellAmmo
 	{
 		get
@@ -26,8 +26,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CAE RID: 3246
-	// (get) Token: 0x06001CEB RID: 7403 RVA: 0x0005F4F8 File Offset: 0x0005D6F8
+	// Token: 0x17001037 RID: 4151
+	// (get) Token: 0x060027B5 RID: 10165 RVA: 0x00016560 File Offset: 0x00014760
 	public int CurrentTalentAmmo
 	{
 		get
@@ -36,8 +36,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CAF RID: 3247
-	// (get) Token: 0x06001CEC RID: 7404 RVA: 0x0005F500 File Offset: 0x0005D700
+	// Token: 0x17001038 RID: 4152
+	// (get) Token: 0x060027B6 RID: 10166 RVA: 0x00016568 File Offset: 0x00014768
 	public int CurrentWeaponAmmo
 	{
 		get
@@ -46,8 +46,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CB0 RID: 3248
-	// (get) Token: 0x06001CED RID: 7405 RVA: 0x0005F508 File Offset: 0x0005D708
+	// Token: 0x17001039 RID: 4153
+	// (get) Token: 0x060027B7 RID: 10167 RVA: 0x00016570 File Offset: 0x00014770
 	public float ActualResolve
 	{
 		get
@@ -56,8 +56,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CB1 RID: 3249
-	// (get) Token: 0x06001CEE RID: 7406 RVA: 0x0005F510 File Offset: 0x0005D710
+	// Token: 0x1700103A RID: 4154
+	// (get) Token: 0x060027B8 RID: 10168 RVA: 0x00016578 File Offset: 0x00014778
 	public int CurrentHealth
 	{
 		get
@@ -66,8 +66,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CB2 RID: 3250
-	// (get) Token: 0x06001CEF RID: 7407 RVA: 0x0005F518 File Offset: 0x0005D718
+	// Token: 0x1700103B RID: 4155
+	// (get) Token: 0x060027B9 RID: 10169 RVA: 0x00016580 File Offset: 0x00014780
 	public int CurrentMana
 	{
 		get
@@ -76,8 +76,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CB3 RID: 3251
-	// (get) Token: 0x06001CF0 RID: 7408 RVA: 0x0005F520 File Offset: 0x0005D720
+	// Token: 0x1700103C RID: 4156
+	// (get) Token: 0x060027BA RID: 10170 RVA: 0x00016588 File Offset: 0x00014788
 	public int SpellOrbs
 	{
 		get
@@ -86,8 +86,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CB4 RID: 3252
-	// (get) Token: 0x06001CF1 RID: 7409 RVA: 0x0005F528 File Offset: 0x0005D728
+	// Token: 0x1700103D RID: 4157
+	// (get) Token: 0x060027BB RID: 10171 RVA: 0x00016590 File Offset: 0x00014790
 	public int CurrentArmor
 	{
 		get
@@ -96,8 +96,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CB5 RID: 3253
-	// (get) Token: 0x06001CF2 RID: 7410 RVA: 0x0005F530 File Offset: 0x0005D730
+	// Token: 0x1700103E RID: 4158
+	// (get) Token: 0x060027BC RID: 10172 RVA: 0x00016598 File Offset: 0x00014798
 	public int Level
 	{
 		get
@@ -106,8 +106,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CB6 RID: 3254
-	// (get) Token: 0x06001CF3 RID: 7411 RVA: 0x0005F538 File Offset: 0x0005D738
+	// Token: 0x1700103F RID: 4159
+	// (get) Token: 0x060027BD RID: 10173 RVA: 0x000165A0 File Offset: 0x000147A0
 	public int VitalityStat
 	{
 		get
@@ -116,8 +116,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CB7 RID: 3255
-	// (get) Token: 0x06001CF4 RID: 7412 RVA: 0x0005F540 File Offset: 0x0005D740
+	// Token: 0x17001040 RID: 4160
+	// (get) Token: 0x060027BE RID: 10174 RVA: 0x000165A8 File Offset: 0x000147A8
 	public int ModdedVitalityStat
 	{
 		get
@@ -126,8 +126,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CB8 RID: 3256
-	// (get) Token: 0x06001CF5 RID: 7413 RVA: 0x0005F548 File Offset: 0x0005D748
+	// Token: 0x17001041 RID: 4161
+	// (get) Token: 0x060027BF RID: 10175 RVA: 0x000165B0 File Offset: 0x000147B0
 	public float StrengthStat
 	{
 		get
@@ -136,8 +136,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CB9 RID: 3257
-	// (get) Token: 0x06001CF6 RID: 7414 RVA: 0x0005F550 File Offset: 0x0005D750
+	// Token: 0x17001042 RID: 4162
+	// (get) Token: 0x060027C0 RID: 10176 RVA: 0x000165B8 File Offset: 0x000147B8
 	public float ModdedStrengthStat
 	{
 		get
@@ -146,8 +146,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CBA RID: 3258
-	// (get) Token: 0x06001CF7 RID: 7415 RVA: 0x0005F558 File Offset: 0x0005D758
+	// Token: 0x17001043 RID: 4163
+	// (get) Token: 0x060027C1 RID: 10177 RVA: 0x000165C0 File Offset: 0x000147C0
 	public float MagicStat
 	{
 		get
@@ -156,8 +156,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CBB RID: 3259
-	// (get) Token: 0x06001CF8 RID: 7416 RVA: 0x0005F560 File Offset: 0x0005D760
+	// Token: 0x17001044 RID: 4164
+	// (get) Token: 0x060027C2 RID: 10178 RVA: 0x000165C8 File Offset: 0x000147C8
 	public float ModdedMagicStat
 	{
 		get
@@ -166,8 +166,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CBC RID: 3260
-	// (get) Token: 0x06001CF9 RID: 7417 RVA: 0x0005F568 File Offset: 0x0005D768
+	// Token: 0x17001045 RID: 4165
+	// (get) Token: 0x060027C3 RID: 10179 RVA: 0x000165D0 File Offset: 0x000147D0
 	public float MagicCritChance
 	{
 		get
@@ -176,8 +176,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CBD RID: 3261
-	// (get) Token: 0x06001CFA RID: 7418 RVA: 0x0005F570 File Offset: 0x0005D770
+	// Token: 0x17001046 RID: 4166
+	// (get) Token: 0x060027C4 RID: 10180 RVA: 0x000165D8 File Offset: 0x000147D8
 	public float ModdedMagicCritChance
 	{
 		get
@@ -186,8 +186,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CBE RID: 3262
-	// (get) Token: 0x06001CFB RID: 7419 RVA: 0x0005F578 File Offset: 0x0005D778
+	// Token: 0x17001047 RID: 4167
+	// (get) Token: 0x060027C5 RID: 10181 RVA: 0x000165E0 File Offset: 0x000147E0
 	public float MagicCritDmg
 	{
 		get
@@ -196,8 +196,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CBF RID: 3263
-	// (get) Token: 0x06001CFC RID: 7420 RVA: 0x0005F580 File Offset: 0x0005D780
+	// Token: 0x17001048 RID: 4168
+	// (get) Token: 0x060027C6 RID: 10182 RVA: 0x000165E8 File Offset: 0x000147E8
 	public float ModdedMagicCritDmg
 	{
 		get
@@ -206,8 +206,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CC0 RID: 3264
-	// (get) Token: 0x06001CFD RID: 7421 RVA: 0x0005F588 File Offset: 0x0005D788
+	// Token: 0x17001049 RID: 4169
+	// (get) Token: 0x060027C7 RID: 10183 RVA: 0x000165F0 File Offset: 0x000147F0
 	public float CritChance
 	{
 		get
@@ -216,8 +216,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CC1 RID: 3265
-	// (get) Token: 0x06001CFE RID: 7422 RVA: 0x0005F590 File Offset: 0x0005D790
+	// Token: 0x1700104A RID: 4170
+	// (get) Token: 0x060027C8 RID: 10184 RVA: 0x000165F8 File Offset: 0x000147F8
 	public float ModdedCritChance
 	{
 		get
@@ -226,8 +226,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CC2 RID: 3266
-	// (get) Token: 0x06001CFF RID: 7423 RVA: 0x0005F598 File Offset: 0x0005D798
+	// Token: 0x1700104B RID: 4171
+	// (get) Token: 0x060027C9 RID: 10185 RVA: 0x00016600 File Offset: 0x00014800
 	public float CritDamage
 	{
 		get
@@ -236,8 +236,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CC3 RID: 3267
-	// (get) Token: 0x06001D00 RID: 7424 RVA: 0x0005F5A0 File Offset: 0x0005D7A0
+	// Token: 0x1700104C RID: 4172
+	// (get) Token: 0x060027CA RID: 10186 RVA: 0x00016608 File Offset: 0x00014808
 	public float ModdedCritDamage
 	{
 		get
@@ -246,8 +246,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CC4 RID: 3268
-	// (get) Token: 0x06001D01 RID: 7425 RVA: 0x0005F5A8 File Offset: 0x0005D7A8
+	// Token: 0x1700104D RID: 4173
+	// (get) Token: 0x060027CB RID: 10187 RVA: 0x00016610 File Offset: 0x00014810
 	public float DexterityStat
 	{
 		get
@@ -256,8 +256,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CC5 RID: 3269
-	// (get) Token: 0x06001D02 RID: 7426 RVA: 0x0005F5B0 File Offset: 0x0005D7B0
+	// Token: 0x1700104E RID: 4174
+	// (get) Token: 0x060027CC RID: 10188 RVA: 0x00016618 File Offset: 0x00014818
 	public float ModdedDexterityStat
 	{
 		get
@@ -266,8 +266,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CC6 RID: 3270
-	// (get) Token: 0x06001D03 RID: 7427 RVA: 0x0005F5B8 File Offset: 0x0005D7B8
+	// Token: 0x1700104F RID: 4175
+	// (get) Token: 0x060027CD RID: 10189 RVA: 0x00016620 File Offset: 0x00014820
 	public float FocusStat
 	{
 		get
@@ -276,8 +276,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CC7 RID: 3271
-	// (get) Token: 0x06001D04 RID: 7428 RVA: 0x0005F5C0 File Offset: 0x0005D7C0
+	// Token: 0x17001050 RID: 4176
+	// (get) Token: 0x060027CE RID: 10190 RVA: 0x00016628 File Offset: 0x00014828
 	public float ModdedFocusStat
 	{
 		get
@@ -286,8 +286,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CC8 RID: 3272
-	// (get) Token: 0x06001D05 RID: 7429 RVA: 0x0005F5C8 File Offset: 0x0005D7C8
+	// Token: 0x17001051 RID: 4177
+	// (get) Token: 0x060027CF RID: 10191 RVA: 0x00016630 File Offset: 0x00014830
 	public int Weight
 	{
 		get
@@ -296,8 +296,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CC9 RID: 3273
-	// (get) Token: 0x06001D06 RID: 7430 RVA: 0x0005F5D0 File Offset: 0x0005D7D0
+	// Token: 0x17001052 RID: 4178
+	// (get) Token: 0x060027D0 RID: 10192 RVA: 0x00016638 File Offset: 0x00014838
 	public int RuneWeight
 	{
 		get
@@ -306,8 +306,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CCA RID: 3274
-	// (get) Token: 0x06001D07 RID: 7431 RVA: 0x0005F5D8 File Offset: 0x0005D7D8
+	// Token: 0x17001053 RID: 4179
+	// (get) Token: 0x060027D1 RID: 10193 RVA: 0x00016640 File Offset: 0x00014840
 	public float Cooldown
 	{
 		get
@@ -316,8 +316,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CCB RID: 3275
-	// (get) Token: 0x06001D08 RID: 7432 RVA: 0x0005F5E0 File Offset: 0x0005D7E0
+	// Token: 0x17001054 RID: 4180
+	// (get) Token: 0x060027D2 RID: 10194 RVA: 0x00016648 File Offset: 0x00014848
 	public int BaseArmor
 	{
 		get
@@ -326,8 +326,8 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CCC RID: 3276
-	// (get) Token: 0x06001D09 RID: 7433 RVA: 0x0005F5E8 File Offset: 0x0005D7E8
+	// Token: 0x17001055 RID: 4181
+	// (get) Token: 0x060027D3 RID: 10195 RVA: 0x00016650 File Offset: 0x00014850
 	public int SoulsCollected
 	{
 		get
@@ -336,12 +336,12 @@ public class CachedPlayerData
 		}
 	}
 
-	// Token: 0x17000CCD RID: 3277
-	// (get) Token: 0x06001D0A RID: 7434 RVA: 0x0005F5F0 File Offset: 0x0005D7F0
-	// (set) Token: 0x06001D0B RID: 7435 RVA: 0x0005F5F8 File Offset: 0x0005D7F8
+	// Token: 0x17001056 RID: 4182
+	// (get) Token: 0x060027D4 RID: 10196 RVA: 0x00016658 File Offset: 0x00014858
+	// (set) Token: 0x060027D5 RID: 10197 RVA: 0x00016660 File Offset: 0x00014860
 	public int LastCachedUpdate_FrameCount { get; private set; }
 
-	// Token: 0x06001D0C RID: 7436 RVA: 0x0005F604 File Offset: 0x0005D804
+	// Token: 0x060027D6 RID: 10198 RVA: 0x000BB900 File Offset: 0x000B9B00
 	public void ForceValue(string fieldName, object value)
 	{
 		FieldInfo field = base.GetType().GetField(fieldName, BindingFlags.NonPublic);
@@ -353,7 +353,7 @@ public class CachedPlayerData
 		Debug.Log("Failed to force cached player data value: " + fieldName + ". Field not found.");
 	}
 
-	// Token: 0x06001D0D RID: 7437 RVA: 0x0005F648 File Offset: 0x0005D848
+	// Token: 0x060027D7 RID: 10199 RVA: 0x000BB944 File Offset: 0x000B9B44
 	public void UpdateData()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -444,108 +444,108 @@ public class CachedPlayerData
 		Debug.Log("<color=red>Failed to update cached player data.  PlayerManager is disposed or not instantiated yet.</color>");
 	}
 
-	// Token: 0x06001D0E RID: 7438 RVA: 0x0005F9BF File Offset: 0x0005DBBF
+	// Token: 0x060027D8 RID: 10200 RVA: 0x00016669 File Offset: 0x00014869
 	public CachedPlayerData Clone()
 	{
 		return base.MemberwiseClone() as CachedPlayerData;
 	}
 
-	// Token: 0x04001AE3 RID: 6883
+	// Token: 0x040022EA RID: 8938
 	private int m_currentExhaust;
 
-	// Token: 0x04001AE4 RID: 6884
+	// Token: 0x040022EB RID: 8939
 	private int m_currentSpellAmmo;
 
-	// Token: 0x04001AE5 RID: 6885
+	// Token: 0x040022EC RID: 8940
 	private int m_currentTalentAmmo;
 
-	// Token: 0x04001AE6 RID: 6886
+	// Token: 0x040022ED RID: 8941
 	private int m_currentWeaponAmmo;
 
-	// Token: 0x04001AE7 RID: 6887
+	// Token: 0x040022EE RID: 8942
 	private float m_actualResolve;
 
-	// Token: 0x04001AE8 RID: 6888
+	// Token: 0x040022EF RID: 8943
 	private int m_currentHealth;
 
-	// Token: 0x04001AE9 RID: 6889
+	// Token: 0x040022F0 RID: 8944
 	private int m_currentMana;
 
-	// Token: 0x04001AEA RID: 6890
+	// Token: 0x040022F1 RID: 8945
 	private int m_spellOrbs;
 
-	// Token: 0x04001AEB RID: 6891
+	// Token: 0x040022F2 RID: 8946
 	private int m_shields;
 
-	// Token: 0x04001AEC RID: 6892
+	// Token: 0x040022F3 RID: 8947
 	private int m_level;
 
-	// Token: 0x04001AED RID: 6893
+	// Token: 0x040022F4 RID: 8948
 	private int m_actualVitality;
 
-	// Token: 0x04001AEE RID: 6894
+	// Token: 0x040022F5 RID: 8949
 	private int m_moddedVitality;
 
-	// Token: 0x04001AEF RID: 6895
+	// Token: 0x040022F6 RID: 8950
 	private float m_actualStrength;
 
-	// Token: 0x04001AF0 RID: 6896
+	// Token: 0x040022F7 RID: 8951
 	private float m_moddedActualStrength;
 
-	// Token: 0x04001AF1 RID: 6897
+	// Token: 0x040022F8 RID: 8952
 	private float m_actualMagic;
 
-	// Token: 0x04001AF2 RID: 6898
+	// Token: 0x040022F9 RID: 8953
 	private float m_moddedActualMagic;
 
-	// Token: 0x04001AF3 RID: 6899
+	// Token: 0x040022FA RID: 8954
 	private float m_magicCritChance;
 
-	// Token: 0x04001AF4 RID: 6900
+	// Token: 0x040022FB RID: 8955
 	private float m_moddedMagicCritChance;
 
-	// Token: 0x04001AF5 RID: 6901
+	// Token: 0x040022FC RID: 8956
 	private float m_magicCritDmg;
 
-	// Token: 0x04001AF6 RID: 6902
+	// Token: 0x040022FD RID: 8957
 	private float m_moddedMagicCritDmg;
 
-	// Token: 0x04001AF7 RID: 6903
+	// Token: 0x040022FE RID: 8958
 	private float m_critChance;
 
-	// Token: 0x04001AF8 RID: 6904
+	// Token: 0x040022FF RID: 8959
 	private float m_moddedCritChance;
 
-	// Token: 0x04001AF9 RID: 6905
+	// Token: 0x04002300 RID: 8960
 	private float m_critDamage;
 
-	// Token: 0x04001AFA RID: 6906
+	// Token: 0x04002301 RID: 8961
 	private float m_moddedCritDamage;
 
-	// Token: 0x04001AFB RID: 6907
+	// Token: 0x04002302 RID: 8962
 	private float m_dexterity;
 
-	// Token: 0x04001AFC RID: 6908
+	// Token: 0x04002303 RID: 8963
 	private float m_moddedDexterity;
 
-	// Token: 0x04001AFD RID: 6909
+	// Token: 0x04002304 RID: 8964
 	private float m_focus;
 
-	// Token: 0x04001AFE RID: 6910
+	// Token: 0x04002305 RID: 8965
 	private float m_moddedFocus;
 
-	// Token: 0x04001AFF RID: 6911
+	// Token: 0x04002306 RID: 8966
 	private int m_weight;
 
-	// Token: 0x04001B00 RID: 6912
+	// Token: 0x04002307 RID: 8967
 	private int m_runeWeight;
 
-	// Token: 0x04001B01 RID: 6913
+	// Token: 0x04002308 RID: 8968
 	private float m_cooldown;
 
-	// Token: 0x04001B02 RID: 6914
+	// Token: 0x04002309 RID: 8969
 	private int m_baseArmor;
 
-	// Token: 0x04001B03 RID: 6915
+	// Token: 0x0400230A RID: 8970
 	private int m_soulsCollected;
 }

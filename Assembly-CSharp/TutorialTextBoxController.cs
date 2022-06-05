@@ -5,12 +5,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x020003E9 RID: 1001
+// Token: 0x0200068A RID: 1674
 public class TutorialTextBoxController : MonoBehaviour
 {
-	// Token: 0x17000EE4 RID: 3812
-	// (get) Token: 0x060024E1 RID: 9441 RVA: 0x0007A8A5 File Offset: 0x00078AA5
-	// (set) Token: 0x060024E2 RID: 9442 RVA: 0x0007A8AD File Offset: 0x00078AAD
+	// Token: 0x17001385 RID: 4997
+	// (get) Token: 0x06003323 RID: 13091 RVA: 0x0001C0B3 File Offset: 0x0001A2B3
+	// (set) Token: 0x06003324 RID: 13092 RVA: 0x0001C0BB File Offset: 0x0001A2BB
 	public bool StickToCamera
 	{
 		get
@@ -23,9 +23,9 @@ public class TutorialTextBoxController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EE5 RID: 3813
-	// (get) Token: 0x060024E3 RID: 9443 RVA: 0x0007A8B6 File Offset: 0x00078AB6
-	// (set) Token: 0x060024E4 RID: 9444 RVA: 0x0007A8BE File Offset: 0x00078ABE
+	// Token: 0x17001386 RID: 4998
+	// (get) Token: 0x06003325 RID: 13093 RVA: 0x0001C0C4 File Offset: 0x0001A2C4
+	// (set) Token: 0x06003326 RID: 13094 RVA: 0x0001C0CC File Offset: 0x0001A2CC
 	public ConditionFlag MustHaveConditions
 	{
 		get
@@ -38,9 +38,9 @@ public class TutorialTextBoxController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EE6 RID: 3814
-	// (get) Token: 0x060024E5 RID: 9445 RVA: 0x0007A8C7 File Offset: 0x00078AC7
-	// (set) Token: 0x060024E6 RID: 9446 RVA: 0x0007A8CF File Offset: 0x00078ACF
+	// Token: 0x17001387 RID: 4999
+	// (get) Token: 0x06003327 RID: 13095 RVA: 0x0001C0D5 File Offset: 0x0001A2D5
+	// (set) Token: 0x06003328 RID: 13096 RVA: 0x0001C0DD File Offset: 0x0001A2DD
 	public ConditionFlag MustNotHaveConditions
 	{
 		get
@@ -53,7 +53,7 @@ public class TutorialTextBoxController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060024E7 RID: 9447 RVA: 0x0007A8D8 File Offset: 0x00078AD8
+	// Token: 0x06003329 RID: 13097 RVA: 0x000DA7F8 File Offset: 0x000D89F8
 	private void Awake()
 	{
 		this.m_disableCanvasAction = new Action(this.DisableCanvas);
@@ -66,7 +66,7 @@ public class TutorialTextBoxController : MonoBehaviour
 		this.m_onPlayerExitRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerExitRoom);
 	}
 
-	// Token: 0x060024E8 RID: 9448 RVA: 0x0007A943 File Offset: 0x00078B43
+	// Token: 0x0600332A RID: 13098 RVA: 0x0001C0E6 File Offset: 0x0001A2E6
 	private IEnumerator Start()
 	{
 		while (!SceneManager.GetActiveScene().isLoaded)
@@ -88,7 +88,7 @@ public class TutorialTextBoxController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060024E9 RID: 9449 RVA: 0x0007A954 File Offset: 0x00078B54
+	// Token: 0x0600332B RID: 13099 RVA: 0x000DA864 File Offset: 0x000D8A64
 	private void OnEnable()
 	{
 		if (this.m_stickToCamera)
@@ -109,7 +109,7 @@ public class TutorialTextBoxController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060024EA RID: 9450 RVA: 0x0007A9F3 File Offset: 0x00078BF3
+	// Token: 0x0600332C RID: 13100 RVA: 0x0001C0F5 File Offset: 0x0001A2F5
 	private void OnDisable()
 	{
 		if (this.m_stickToCamera)
@@ -119,20 +119,20 @@ public class TutorialTextBoxController : MonoBehaviour
 		this.m_displayText = false;
 	}
 
-	// Token: 0x060024EB RID: 9451 RVA: 0x0007AA11 File Offset: 0x00078C11
+	// Token: 0x0600332D RID: 13101 RVA: 0x0001C113 File Offset: 0x0001A313
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		this.HideText();
 	}
 
-	// Token: 0x060024EC RID: 9452 RVA: 0x0007AA19 File Offset: 0x00078C19
+	// Token: 0x0600332E RID: 13102 RVA: 0x0001C11B File Offset: 0x0001A31B
 	private void RemoveFromCamera(Scene arg0, Scene arg1)
 	{
 		SceneManager.activeSceneChanged -= this.RemoveFromCamera;
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x060024ED RID: 9453 RVA: 0x0007AA38 File Offset: 0x00078C38
+	// Token: 0x0600332F RID: 13103 RVA: 0x000DA904 File Offset: 0x000D8B04
 	public void HideText()
 	{
 		if (!this.m_canvasGroup.gameObject.activeSelf)
@@ -153,13 +153,13 @@ public class TutorialTextBoxController : MonoBehaviour
 		this.m_fadeTween.ID = "TutorialTextTween";
 	}
 
-	// Token: 0x060024EE RID: 9454 RVA: 0x0007AAE9 File Offset: 0x00078CE9
+	// Token: 0x06003330 RID: 13104 RVA: 0x0001C139 File Offset: 0x0001A339
 	private void DisableCanvas()
 	{
 		this.m_canvasGroup.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060024EF RID: 9455 RVA: 0x0007AAFC File Offset: 0x00078CFC
+	// Token: 0x06003331 RID: 13105 RVA: 0x000DA9B8 File Offset: 0x000D8BB8
 	public void DisplayText()
 	{
 		if (!this.AllMustHaveConditionsMet() || !this.AllMustNotHaveConditionsMet())
@@ -184,7 +184,7 @@ public class TutorialTextBoxController : MonoBehaviour
 		this.m_fadeTween.ID = "TutorialTextTween";
 	}
 
-	// Token: 0x060024F0 RID: 9456 RVA: 0x0007ABC0 File Offset: 0x00078DC0
+	// Token: 0x06003332 RID: 13106 RVA: 0x000DAA7C File Offset: 0x000D8C7C
 	private bool AllMustHaveConditionsMet()
 	{
 		if (this.m_mustHaveConditions == ConditionFlag.None)
@@ -201,7 +201,7 @@ public class TutorialTextBoxController : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x060024F1 RID: 9457 RVA: 0x0007AC04 File Offset: 0x00078E04
+	// Token: 0x06003333 RID: 13107 RVA: 0x000DAAC0 File Offset: 0x000D8CC0
 	private bool AllMustNotHaveConditionsMet()
 	{
 		if (this.m_mustNotHaveConditions == ConditionFlag.None)
@@ -218,52 +218,52 @@ public class TutorialTextBoxController : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x04001F3D RID: 7997
+	// Token: 0x040029BB RID: 10683
 	private const float FADE_DURATION = 0.25f;
 
-	// Token: 0x04001F3E RID: 7998
+	// Token: 0x040029BC RID: 10684
 	private const float BACKGROUND_OPACITY = 0.425f;
 
-	// Token: 0x04001F3F RID: 7999
+	// Token: 0x040029BD RID: 10685
 	private Vector3 TUTORIAL_TEXT_POSITION = new Vector3(0f, 6f, 1f);
 
-	// Token: 0x04001F40 RID: 8000
+	// Token: 0x040029BE RID: 10686
 	[SerializeField]
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x04001F41 RID: 8001
+	// Token: 0x040029BF RID: 10687
 	[SerializeField]
 	private TMP_Text m_text;
 
-	// Token: 0x04001F42 RID: 8002
+	// Token: 0x040029C0 RID: 10688
 	[SerializeField]
 	private bool m_stickToCamera;
 
-	// Token: 0x04001F43 RID: 8003
+	// Token: 0x040029C1 RID: 10689
 	[SerializeField]
 	private ConditionFlag m_mustHaveConditions;
 
-	// Token: 0x04001F44 RID: 8004
+	// Token: 0x040029C2 RID: 10690
 	[SerializeField]
 	private ConditionFlag m_mustNotHaveConditions;
 
-	// Token: 0x04001F45 RID: 8005
+	// Token: 0x040029C3 RID: 10691
 	[SerializeField]
 	private StudioEventEmitter m_showEventEmitter;
 
-	// Token: 0x04001F46 RID: 8006
+	// Token: 0x040029C4 RID: 10692
 	[SerializeField]
 	private StudioEventEmitter m_hideEventEmitter;
 
-	// Token: 0x04001F47 RID: 8007
+	// Token: 0x040029C5 RID: 10693
 	private Tween m_fadeTween;
 
-	// Token: 0x04001F48 RID: 8008
+	// Token: 0x040029C6 RID: 10694
 	private Action<MonoBehaviour, EventArgs> m_onPlayerExitRoom;
 
-	// Token: 0x04001F49 RID: 8009
+	// Token: 0x040029C7 RID: 10695
 	private Action m_disableCanvasAction;
 
-	// Token: 0x04001F4A RID: 8010
+	// Token: 0x040029C8 RID: 10696
 	private bool m_displayText;
 }

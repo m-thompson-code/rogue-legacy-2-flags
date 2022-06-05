@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200070E RID: 1806
+// Token: 0x02000BC1 RID: 3009
 public struct CameraLayerAndSubLayer
 {
-	// Token: 0x060040DC RID: 16604 RVA: 0x000E5A19 File Offset: 0x000E3C19
+	// Token: 0x06005A25 RID: 23077 RVA: 0x000314AA File Offset: 0x0002F6AA
 	public CameraLayerAndSubLayer(CameraLayer cameraLayer, int subLayer)
 	{
 		this.CameraLayer = cameraLayer;
 		this.SubLayer = subLayer;
 	}
 
-	// Token: 0x17001625 RID: 5669
-	// (get) Token: 0x060040DD RID: 16605 RVA: 0x000E5A29 File Offset: 0x000E3C29
+	// Token: 0x17001E21 RID: 7713
+	// (get) Token: 0x06005A26 RID: 23078 RVA: 0x000314BA File Offset: 0x0002F6BA
 	public readonly CameraLayer CameraLayer { get; }
 
-	// Token: 0x17001626 RID: 5670
-	// (get) Token: 0x060040DE RID: 16606 RVA: 0x000E5A31 File Offset: 0x000E3C31
+	// Token: 0x17001E22 RID: 7714
+	// (get) Token: 0x06005A27 RID: 23079 RVA: 0x000314C2 File Offset: 0x0002F6C2
 	public readonly int SubLayer { get; }
 }

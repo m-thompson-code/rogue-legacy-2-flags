@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020005E3 RID: 1507
+// Token: 0x020009EB RID: 2539
 public interface ITerrainOnEnterHitResponse : IHitResponse
 {
-	// Token: 0x060036B2 RID: 14002
+	// Token: 0x06004CC4 RID: 19652
 	void TerrainOnEnterHitResponse(IHitboxController otherHBController);
 }

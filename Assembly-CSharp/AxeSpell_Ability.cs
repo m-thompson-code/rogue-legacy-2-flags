@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000171 RID: 369
+// Token: 0x020002AA RID: 682
 public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 {
-	// Token: 0x170006DE RID: 1758
-	// (get) Token: 0x06000CC4 RID: 3268 RVA: 0x00027246 File Offset: 0x00025446
+	// Token: 0x1700093E RID: 2366
+	// (get) Token: 0x060013E9 RID: 5097 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -13,8 +13,8 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006DF RID: 1759
-	// (get) Token: 0x06000CC5 RID: 3269 RVA: 0x0002724D File Offset: 0x0002544D
+	// Token: 0x1700093F RID: 2367
+	// (get) Token: 0x060013EA RID: 5098 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -23,8 +23,8 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006E0 RID: 1760
-	// (get) Token: 0x06000CC6 RID: 3270 RVA: 0x00027254 File Offset: 0x00025454
+	// Token: 0x17000940 RID: 2368
+	// (get) Token: 0x060013EB RID: 5099 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float TellAnimSpeed
 	{
 		get
@@ -33,8 +33,8 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006E1 RID: 1761
-	// (get) Token: 0x06000CC7 RID: 3271 RVA: 0x0002725B File Offset: 0x0002545B
+	// Token: 0x17000941 RID: 2369
+	// (get) Token: 0x060013EC RID: 5100 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -43,8 +43,8 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006E2 RID: 1762
-	// (get) Token: 0x06000CC8 RID: 3272 RVA: 0x00027262 File Offset: 0x00025462
+	// Token: 0x17000942 RID: 2370
+	// (get) Token: 0x060013ED RID: 5101 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -53,8 +53,8 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006E3 RID: 1763
-	// (get) Token: 0x06000CC9 RID: 3273 RVA: 0x00027269 File Offset: 0x00025469
+	// Token: 0x17000943 RID: 2371
+	// (get) Token: 0x060013EE RID: 5102 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -63,8 +63,8 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006E4 RID: 1764
-	// (get) Token: 0x06000CCA RID: 3274 RVA: 0x00027270 File Offset: 0x00025470
+	// Token: 0x17000944 RID: 2372
+	// (get) Token: 0x060013EF RID: 5103 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -73,8 +73,8 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006E5 RID: 1765
-	// (get) Token: 0x06000CCB RID: 3275 RVA: 0x00027277 File Offset: 0x00025477
+	// Token: 0x17000945 RID: 2373
+	// (get) Token: 0x060013F0 RID: 5104 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -83,8 +83,8 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006E6 RID: 1766
-	// (get) Token: 0x06000CCC RID: 3276 RVA: 0x0002727E File Offset: 0x0002547E
+	// Token: 0x17000946 RID: 2374
+	// (get) Token: 0x060013F1 RID: 5105 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -93,8 +93,8 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006E7 RID: 1767
-	// (get) Token: 0x06000CCD RID: 3277 RVA: 0x00027285 File Offset: 0x00025485
+	// Token: 0x17000947 RID: 2375
+	// (get) Token: 0x060013F2 RID: 5106 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -103,7 +103,7 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x06000CCE RID: 3278 RVA: 0x0002728C File Offset: 0x0002548C
+	// Token: 0x060013F3 RID: 5107 RVA: 0x00086320 File Offset: 0x00084520
 	protected override void FireProjectile()
 	{
 		if (this.ProjectileName != null)
@@ -118,12 +118,12 @@ public class AxeSpell_Ability : BaseAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x040010AA RID: 4266
+	// Token: 0x040015E9 RID: 5609
 	private float m_fireAngle = 85f;
 
-	// Token: 0x040010AB RID: 4267
+	// Token: 0x040015EA RID: 5610
 	private float m_fireAngle2 = 75f;
 
-	// Token: 0x040010AC RID: 4268
+	// Token: 0x040015EB RID: 5611
 	private float m_fireAngle3 = 65f;
 }

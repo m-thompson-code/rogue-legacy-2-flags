@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000541 RID: 1345
+// Token: 0x020008DD RID: 2269
 public class TraitorRelic_TextPopup : TextPopupObj
 {
-	// Token: 0x1700122B RID: 4651
-	// (get) Token: 0x06003139 RID: 12601 RVA: 0x000A6B94 File Offset: 0x000A4D94
-	// (set) Token: 0x0600313A RID: 12602 RVA: 0x000A6B9C File Offset: 0x000A4D9C
+	// Token: 0x1700188A RID: 6282
+	// (get) Token: 0x060044DB RID: 17627 RVA: 0x00025DAA File Offset: 0x00023FAA
+	// (set) Token: 0x060044DC RID: 17628 RVA: 0x0010F634 File Offset: 0x0010D834
 	public RelicType RelicType
 	{
 		get
@@ -22,7 +22,7 @@ public class TraitorRelic_TextPopup : TextPopupObj
 		}
 	}
 
-	// Token: 0x0600313B RID: 12603 RVA: 0x000A6BC9 File Offset: 0x000A4DC9
+	// Token: 0x060044DD RID: 17629 RVA: 0x00025DB2 File Offset: 0x00023FB2
 	protected override IEnumerator SpawnEffectCoroutine()
 	{
 		float speed = 0.35f;
@@ -67,10 +67,10 @@ public class TraitorRelic_TextPopup : TextPopupObj
 		yield break;
 	}
 
-	// Token: 0x040026DC RID: 9948
+	// Token: 0x04003558 RID: 13656
 	[SerializeField]
 	private SpriteRenderer m_relicIcon;
 
-	// Token: 0x040026DD RID: 9949
+	// Token: 0x04003559 RID: 13657
 	private RelicType m_relicType;
 }

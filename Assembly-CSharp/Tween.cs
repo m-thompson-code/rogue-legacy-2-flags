@@ -5,26 +5,26 @@ using Sigtrap.Relays;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200081C RID: 2076
+// Token: 0x02000CF2 RID: 3314
 public class Tween : MonoBehaviour, IGenericPoolObj
 {
-	// Token: 0x170016FF RID: 5887
-	// (get) Token: 0x0600449F RID: 17567 RVA: 0x000F3B8E File Offset: 0x000F1D8E
-	// (set) Token: 0x060044A0 RID: 17568 RVA: 0x000F3B96 File Offset: 0x000F1D96
+	// Token: 0x17001F0B RID: 7947
+	// (get) Token: 0x06005E65 RID: 24165 RVA: 0x00034073 File Offset: 0x00032273
+	// (set) Token: 0x06005E66 RID: 24166 RVA: 0x0003407B File Offset: 0x0003227B
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x17001700 RID: 5888
-	// (get) Token: 0x060044A1 RID: 17569 RVA: 0x000F3B9F File Offset: 0x000F1D9F
-	// (set) Token: 0x060044A2 RID: 17570 RVA: 0x000F3BA7 File Offset: 0x000F1DA7
+	// Token: 0x17001F0C RID: 7948
+	// (get) Token: 0x06005E67 RID: 24167 RVA: 0x00034084 File Offset: 0x00032284
+	// (set) Token: 0x06005E68 RID: 24168 RVA: 0x0003408C File Offset: 0x0003228C
 	public bool IsAwakeCalled { get; protected set; } = true;
 
-	// Token: 0x17001701 RID: 5889
-	// (get) Token: 0x060044A3 RID: 17571 RVA: 0x000F3BB0 File Offset: 0x000F1DB0
-	// (set) Token: 0x060044A4 RID: 17572 RVA: 0x000F3BB8 File Offset: 0x000F1DB8
+	// Token: 0x17001F0D RID: 7949
+	// (get) Token: 0x06005E69 RID: 24169 RVA: 0x00034095 File Offset: 0x00032295
+	// (set) Token: 0x06005E6A RID: 24170 RVA: 0x0003409D File Offset: 0x0003229D
 	public string TweenedObjectName { get; private set; }
 
-	// Token: 0x17001702 RID: 5890
-	// (get) Token: 0x060044A5 RID: 17573 RVA: 0x000F3BC1 File Offset: 0x000F1DC1
+	// Token: 0x17001F0E RID: 7950
+	// (get) Token: 0x06005E6B RID: 24171 RVA: 0x000340A6 File Offset: 0x000322A6
 	public bool UseUnscaledTime
 	{
 		get
@@ -33,13 +33,13 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17001703 RID: 5891
-	// (get) Token: 0x060044A6 RID: 17574 RVA: 0x000F3BC9 File Offset: 0x000F1DC9
-	// (set) Token: 0x060044A7 RID: 17575 RVA: 0x000F3BD1 File Offset: 0x000F1DD1
+	// Token: 0x17001F0F RID: 7951
+	// (get) Token: 0x06005E6C RID: 24172 RVA: 0x000340AE File Offset: 0x000322AE
+	// (set) Token: 0x06005E6D RID: 24173 RVA: 0x000340B6 File Offset: 0x000322B6
 	public float CoroutineStartTime { get; private set; }
 
-	// Token: 0x17001704 RID: 5892
-	// (get) Token: 0x060044A8 RID: 17576 RVA: 0x000F3BDA File Offset: 0x000F1DDA
+	// Token: 0x17001F10 RID: 7952
+	// (get) Token: 0x06005E6E RID: 24174 RVA: 0x000340BF File Offset: 0x000322BF
 	public float TweenStartTime
 	{
 		get
@@ -48,8 +48,8 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17001705 RID: 5893
-	// (get) Token: 0x060044A9 RID: 17577 RVA: 0x000F3BE2 File Offset: 0x000F1DE2
+	// Token: 0x17001F11 RID: 7953
+	// (get) Token: 0x06005E6F RID: 24175 RVA: 0x000340C7 File Offset: 0x000322C7
 	public float TweenEndTime
 	{
 		get
@@ -58,8 +58,8 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17001706 RID: 5894
-	// (get) Token: 0x060044AA RID: 17578 RVA: 0x000F3BEA File Offset: 0x000F1DEA
+	// Token: 0x17001F12 RID: 7954
+	// (get) Token: 0x06005E70 RID: 24176 RVA: 0x000340CF File Offset: 0x000322CF
 	public float CoroutineElapsedTime
 	{
 		get
@@ -72,8 +72,8 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17001707 RID: 5895
-	// (get) Token: 0x060044AB RID: 17579 RVA: 0x000F3BFF File Offset: 0x000F1DFF
+	// Token: 0x17001F13 RID: 7955
+	// (get) Token: 0x06005E71 RID: 24177 RVA: 0x000340E4 File Offset: 0x000322E4
 	public object[] PropertyArray
 	{
 		get
@@ -82,8 +82,8 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17001708 RID: 5896
-	// (get) Token: 0x060044AC RID: 17580 RVA: 0x000F3C07 File Offset: 0x000F1E07
+	// Token: 0x17001F14 RID: 7956
+	// (get) Token: 0x06005E72 RID: 24178 RVA: 0x000340EC File Offset: 0x000322EC
 	public IRelayLink OnTweenCompleteRelay
 	{
 		get
@@ -92,13 +92,13 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x17001709 RID: 5897
-	// (get) Token: 0x060044AD RID: 17581 RVA: 0x000F3C14 File Offset: 0x000F1E14
-	// (set) Token: 0x060044AE RID: 17582 RVA: 0x000F3C1C File Offset: 0x000F1E1C
+	// Token: 0x17001F15 RID: 7957
+	// (get) Token: 0x06005E73 RID: 24179 RVA: 0x000340F9 File Offset: 0x000322F9
+	// (set) Token: 0x06005E74 RID: 24180 RVA: 0x00034101 File Offset: 0x00032301
 	public Coroutine TweenCoroutine { get; private set; }
 
-	// Token: 0x1700170A RID: 5898
-	// (get) Token: 0x060044AF RID: 17583 RVA: 0x000F3C25 File Offset: 0x000F1E25
+	// Token: 0x17001F16 RID: 7958
+	// (get) Token: 0x06005E75 RID: 24181 RVA: 0x0003410A File Offset: 0x0003230A
 	public bool Paused
 	{
 		get
@@ -107,14 +107,14 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x060044B0 RID: 17584 RVA: 0x000F3C2D File Offset: 0x000F1E2D
+	// Token: 0x06005E76 RID: 24182 RVA: 0x00034112 File Offset: 0x00032312
 	public void SetPaused(bool pause)
 	{
 		this.m_paused = pause;
 	}
 
-	// Token: 0x1700170B RID: 5899
-	// (get) Token: 0x060044B1 RID: 17585 RVA: 0x000F3C36 File Offset: 0x000F1E36
+	// Token: 0x17001F17 RID: 7959
+	// (get) Token: 0x06005E77 RID: 24183 RVA: 0x0003411B File Offset: 0x0003231B
 	public object TweenedObj
 	{
 		get
@@ -123,17 +123,17 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x1700170C RID: 5900
-	// (get) Token: 0x060044B2 RID: 17586 RVA: 0x000F3C3E File Offset: 0x000F1E3E
-	// (set) Token: 0x060044B3 RID: 17587 RVA: 0x000F3C46 File Offset: 0x000F1E46
+	// Token: 0x17001F18 RID: 7960
+	// (get) Token: 0x06005E78 RID: 24184 RVA: 0x00034123 File Offset: 0x00032323
+	// (set) Token: 0x06005E79 RID: 24185 RVA: 0x0003412B File Offset: 0x0003232B
 	public bool IsType { get; private set; }
 
-	// Token: 0x1700170D RID: 5901
-	// (get) Token: 0x060044B4 RID: 17588 RVA: 0x000F3C4F File Offset: 0x000F1E4F
-	// (set) Token: 0x060044B5 RID: 17589 RVA: 0x000F3C57 File Offset: 0x000F1E57
+	// Token: 0x17001F19 RID: 7961
+	// (get) Token: 0x06005E7A RID: 24186 RVA: 0x00034134 File Offset: 0x00032334
+	// (set) Token: 0x06005E7B RID: 24187 RVA: 0x0003413C File Offset: 0x0003233C
 	public string ID { get; set; }
 
-	// Token: 0x060044B6 RID: 17590 RVA: 0x000F3C60 File Offset: 0x000F1E60
+	// Token: 0x06005E7C RID: 24188 RVA: 0x0016158C File Offset: 0x0015F78C
 	public void SetValues(object tweenObject, float duration, bool useUnscaledTime, EaseDelegate ease, bool tweenTo, object[] properties)
 	{
 		if (tweenObject is Type)
@@ -193,7 +193,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		this.m_tweenEndTime -= num2;
 	}
 
-	// Token: 0x060044B7 RID: 17591 RVA: 0x000F3E14 File Offset: 0x000F2014
+	// Token: 0x06005E7D RID: 24189 RVA: 0x00161740 File Offset: 0x0015F940
 	public void AddCustomEndHandler(object methodObject, string functionName, params object[] args)
 	{
 		if (methodObject == null)
@@ -222,7 +222,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		this.m_methodArgs = args;
 	}
 
-	// Token: 0x060044B8 RID: 17592 RVA: 0x000F3EC0 File Offset: 0x000F20C0
+	// Token: 0x06005E7E RID: 24190 RVA: 0x001617EC File Offset: 0x0015F9EC
 	public void AddCustomEndHandler_Type(Type objectType, string functionName, params object[] args)
 	{
 		Type[] array = new Type[args.Length];
@@ -247,7 +247,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		this.m_methodArgs = args;
 	}
 
-	// Token: 0x060044B9 RID: 17593 RVA: 0x000F3F4D File Offset: 0x000F214D
+	// Token: 0x06005E7F RID: 24191 RVA: 0x00034145 File Offset: 0x00032345
 	public void StartTween()
 	{
 		this.CoroutineStartTime = Time.time;
@@ -258,7 +258,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		this.TweenCoroutine = base.StartCoroutine(this.UpdateCoroutine());
 	}
 
-	// Token: 0x060044BA RID: 17594 RVA: 0x000F3F7F File Offset: 0x000F217F
+	// Token: 0x06005E80 RID: 24192 RVA: 0x00034177 File Offset: 0x00032377
 	public void StopTween(bool runEndHandlers)
 	{
 		this.m_endTween = true;
@@ -266,7 +266,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		this.m_endTweenWithoutEndHandlers = !runEndHandlers;
 	}
 
-	// Token: 0x060044BB RID: 17595 RVA: 0x000F3F99 File Offset: 0x000F2199
+	// Token: 0x06005E81 RID: 24193 RVA: 0x00034191 File Offset: 0x00032391
 	public void StopTweenWithConditionChecks(bool runEndHandlers, object tweenedObj, string id = null)
 	{
 		if (!base.isActiveAndEnabled)
@@ -284,7 +284,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		this.StopTween(runEndHandlers);
 	}
 
-	// Token: 0x060044BC RID: 17596 RVA: 0x000F3FCC File Offset: 0x000F21CC
+	// Token: 0x06005E82 RID: 24194 RVA: 0x000341C4 File Offset: 0x000323C4
 	public void EndTween(bool runEndHandlers)
 	{
 		this.m_endTween = true;
@@ -292,7 +292,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		this.m_endTweenWithoutEndHandlers = !runEndHandlers;
 	}
 
-	// Token: 0x060044BD RID: 17597 RVA: 0x000F3FE8 File Offset: 0x000F21E8
+	// Token: 0x06005E83 RID: 24195 RVA: 0x0016187C File Offset: 0x0015FA7C
 	private void InvokeEndHandlers()
 	{
 		this.m_onTweenCompleteRelay.Dispatch();
@@ -306,7 +306,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x060044BE RID: 17598 RVA: 0x000F403C File Offset: 0x000F223C
+	// Token: 0x06005E84 RID: 24196 RVA: 0x001618D0 File Offset: 0x0015FAD0
 	private void InitializeTween()
 	{
 		int num = 0;
@@ -399,7 +399,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x060044BF RID: 17599 RVA: 0x000F4386 File Offset: 0x000F2586
+	// Token: 0x06005E85 RID: 24197 RVA: 0x000341DE File Offset: 0x000323DE
 	public IEnumerator UpdateCoroutine()
 	{
 		float coroutineElapsedTime = Time.time;
@@ -540,7 +540,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		yield break;
 	}
 
-	// Token: 0x060044C0 RID: 17600 RVA: 0x000F4398 File Offset: 0x000F2598
+	// Token: 0x06005E86 RID: 24198 RVA: 0x00161C1C File Offset: 0x0015FE1C
 	private void UpdateStructValues(int index)
 	{
 		if (this.m_propertyInfo[index] != null)
@@ -551,7 +551,7 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		this.m_structObjs[index] = this.m_fieldInfo[index].GetValue(this.m_tweenedObject);
 	}
 
-	// Token: 0x060044C1 RID: 17601 RVA: 0x000F43F0 File Offset: 0x000F25F0
+	// Token: 0x06005E87 RID: 24199 RVA: 0x00161C74 File Offset: 0x0015FE74
 	public void Complete()
 	{
 		if (!this.m_endTweenImmediately && this.m_tweenedObject != null && !this.m_tweenedObject.Equals(null))
@@ -639,13 +639,13 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060044C2 RID: 17602 RVA: 0x000F46B2 File Offset: 0x000F28B2
+	// Token: 0x06005E88 RID: 24200 RVA: 0x0001BE85 File Offset: 0x0001A085
 	private void OnDisable()
 	{
 		DisablePooledObjectManager.DisablePooledObject(this, false);
 	}
 
-	// Token: 0x060044C3 RID: 17603 RVA: 0x000F46BC File Offset: 0x000F28BC
+	// Token: 0x06005E89 RID: 24201 RVA: 0x00161F38 File Offset: 0x00160138
 	public void ResetValues()
 	{
 		this.m_tweenedObject = null;
@@ -686,96 +686,96 @@ public class Tween : MonoBehaviour, IGenericPoolObj
 		}
 	}
 
-	// Token: 0x060044C5 RID: 17605 RVA: 0x000F4867 File Offset: 0x000F2A67
+	// Token: 0x06005E8B RID: 24203 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04003A8E RID: 14990
+	// Token: 0x04004D8E RID: 19854
 	private const int MAX_PROPERTY_COUNT = 10;
 
-	// Token: 0x04003A8F RID: 14991
+	// Token: 0x04004D8F RID: 19855
 	private const string DELAY_STRING = "delay";
 
-	// Token: 0x04003A90 RID: 14992
+	// Token: 0x04004D90 RID: 19856
 	private const string SUBTRACT_STRING = "subtract";
 
-	// Token: 0x04003A91 RID: 14993
+	// Token: 0x04004D91 RID: 19857
 	private PropertyInfo[] m_propertyInfo = new PropertyInfo[10];
 
-	// Token: 0x04003A92 RID: 14994
+	// Token: 0x04004D92 RID: 19858
 	private FieldInfo[] m_fieldInfo = new FieldInfo[10];
 
-	// Token: 0x04003A93 RID: 14995
+	// Token: 0x04004D93 RID: 19859
 	private object[] m_structObjs = new object[10];
 
-	// Token: 0x04003A94 RID: 14996
+	// Token: 0x04004D94 RID: 19860
 	private PropertyInfo[] m_structPropertyInfo = new PropertyInfo[10];
 
-	// Token: 0x04003A95 RID: 14997
+	// Token: 0x04004D95 RID: 19861
 	private FieldInfo[] m_structFieldInfo = new FieldInfo[10];
 
-	// Token: 0x04003A96 RID: 14998
+	// Token: 0x04004D96 RID: 19862
 	private string[] m_structName = new string[10];
 
-	// Token: 0x04003A97 RID: 14999
+	// Token: 0x04004D97 RID: 19863
 	private object m_tweenedObject;
 
-	// Token: 0x04003A98 RID: 15000
+	// Token: 0x04004D98 RID: 19864
 	private float m_tweenStartTime;
 
-	// Token: 0x04003A99 RID: 15001
+	// Token: 0x04004D99 RID: 19865
 	private float m_tweenEndTime;
 
-	// Token: 0x04003A9A RID: 15002
+	// Token: 0x04004D9A RID: 19866
 	private float[] m_initialValues;
 
-	// Token: 0x04003A9B RID: 15003
+	// Token: 0x04004D9B RID: 19867
 	private bool m_tweenTo;
 
-	// Token: 0x04003A9C RID: 15004
+	// Token: 0x04004D9C RID: 19868
 	private EaseDelegate m_ease;
 
-	// Token: 0x04003A9D RID: 15005
+	// Token: 0x04004D9D RID: 19869
 	private bool m_useUnscaledTime;
 
-	// Token: 0x04003A9E RID: 15006
+	// Token: 0x04004D9E RID: 19870
 	private bool m_paused;
 
-	// Token: 0x04003A9F RID: 15007
+	// Token: 0x04004D9F RID: 19871
 	private bool m_updatesForegroundPostProcessing;
 
-	// Token: 0x04003AA0 RID: 15008
+	// Token: 0x04004DA0 RID: 19872
 	private object[] m_propertiesList;
 
-	// Token: 0x04003AA1 RID: 15009
+	// Token: 0x04004DA1 RID: 19873
 	private bool m_tweenStarted;
 
-	// Token: 0x04003AA2 RID: 15010
+	// Token: 0x04004DA2 RID: 19874
 	private bool m_endTween;
 
-	// Token: 0x04003AA3 RID: 15011
+	// Token: 0x04004DA3 RID: 19875
 	private bool m_endTweenImmediately;
 
-	// Token: 0x04003AA4 RID: 15012
+	// Token: 0x04004DA4 RID: 19876
 	private bool m_endTweenWithoutEndHandlers;
 
-	// Token: 0x04003AA5 RID: 15013
+	// Token: 0x04004DA5 RID: 19877
 	private object m_methodObject;
 
-	// Token: 0x04003AA6 RID: 15014
+	// Token: 0x04004DA6 RID: 19878
 	private object[] m_methodArgs;
 
-	// Token: 0x04003AA7 RID: 15015
+	// Token: 0x04004DA7 RID: 19879
 	private MethodInfo m_methodInfo;
 
-	// Token: 0x04003AA8 RID: 15016
+	// Token: 0x04004DA8 RID: 19880
 	private const string m_nullString = "null";
 
-	// Token: 0x04003AAD RID: 15021
+	// Token: 0x04004DAD RID: 19885
 	private Relay m_onTweenCompleteRelay = new Relay();
 
-	// Token: 0x04003AAE RID: 15022
+	// Token: 0x04004DAE RID: 19886
 	public UnityEvent OnTweenComplete_UnityEvent;
 }

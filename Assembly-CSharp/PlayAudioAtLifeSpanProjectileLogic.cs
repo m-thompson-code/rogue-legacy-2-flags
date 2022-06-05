@@ -3,10 +3,10 @@ using System.Collections;
 using FMODUnity;
 using UnityEngine;
 
-// Token: 0x020004A7 RID: 1191
+// Token: 0x020007B3 RID: 1971
 public class PlayAudioAtLifeSpanProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B8C RID: 11148 RVA: 0x00093E4F File Offset: 0x0009204F
+	// Token: 0x06003BF9 RID: 15353 RVA: 0x00021189 File Offset: 0x0001F389
 	private void OnEnable()
 	{
 		if (base.SourceProjectile)
@@ -15,7 +15,7 @@ public class PlayAudioAtLifeSpanProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002B8D RID: 11149 RVA: 0x00093E6B File Offset: 0x0009206B
+	// Token: 0x06003BFA RID: 15354 RVA: 0x000211A5 File Offset: 0x0001F3A5
 	private IEnumerator PlayAudioCoroutine()
 	{
 		float num = base.SourceProjectile.Lifespan * this.m_triggerAtNormalizedLifeSpan;
@@ -28,11 +28,11 @@ public class PlayAudioAtLifeSpanProjectileLogic : BaseProjectileLogic
 		yield break;
 	}
 
-	// Token: 0x04002368 RID: 9064
+	// Token: 0x04002F9E RID: 12190
 	[SerializeField]
 	private float m_triggerAtNormalizedLifeSpan = 0.8f;
 
-	// Token: 0x04002369 RID: 9065
+	// Token: 0x04002F9F RID: 12191
 	[SerializeField]
 	private StudioEventEmitter m_eventEmitter;
 }

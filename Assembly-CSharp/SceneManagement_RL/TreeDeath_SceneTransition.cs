@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace SceneManagement_RL
 {
-	// Token: 0x020008CD RID: 2253
+	// Token: 0x02000E37 RID: 3639
 	public class TreeDeath_SceneTransition : HestiaDeath_SceneTransition
 	{
-		// Token: 0x17001807 RID: 6151
-		// (get) Token: 0x060049E3 RID: 18915 RVA: 0x0010A4A9 File Offset: 0x001086A9
+		// Token: 0x170020E1 RID: 8417
+		// (get) Token: 0x0600667E RID: 26238 RVA: 0x00038651 File Offset: 0x00036851
 		protected override string AmbienceSFXName
 		{
 			get
@@ -16,8 +16,8 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x17001808 RID: 6152
-		// (get) Token: 0x060049E4 RID: 18916 RVA: 0x0010A4B0 File Offset: 0x001086B0
+		// Token: 0x170020E2 RID: 8418
+		// (get) Token: 0x0600667F RID: 26239 RVA: 0x0002855A File Offset: 0x0002675A
 		public override TransitionID ID
 		{
 			get
@@ -26,7 +26,7 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x060049E5 RID: 18917 RVA: 0x0010A4B4 File Offset: 0x001086B4
+		// Token: 0x06006680 RID: 26240 RVA: 0x0017B1AC File Offset: 0x001793AC
 		protected override void InitializeText()
 		{
 			int num = Mathf.Min((int)SaveManager.PlayerSaveData.TreeCutsceneDisplayCount, Ending_EV.TREE_CUTSCENE_DIALOGUE_1_LOCID.Length - 1);

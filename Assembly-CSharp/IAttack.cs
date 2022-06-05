@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x020005A0 RID: 1440
+// Token: 0x020009A8 RID: 2472
 public interface IAttack : IAbility
 {
 }

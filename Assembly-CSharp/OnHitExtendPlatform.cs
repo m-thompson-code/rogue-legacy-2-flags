@@ -2,22 +2,22 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004C7 RID: 1223
+// Token: 0x020007E9 RID: 2025
 public class OnHitExtendPlatform : SpecialPlatform, IBodyOnEnterHitResponse, IHitResponse, IRoomConsumer
 {
-	// Token: 0x1700114B RID: 4427
-	// (get) Token: 0x06002D72 RID: 11634 RVA: 0x00099CC1 File Offset: 0x00097EC1
-	// (set) Token: 0x06002D73 RID: 11635 RVA: 0x00099CC9 File Offset: 0x00097EC9
+	// Token: 0x170016C6 RID: 5830
+	// (get) Token: 0x06003E5A RID: 15962 RVA: 0x000227C8 File Offset: 0x000209C8
+	// (set) Token: 0x06003E5B RID: 15963 RVA: 0x000227D0 File Offset: 0x000209D0
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x06002D74 RID: 11636 RVA: 0x00099CD2 File Offset: 0x00097ED2
+	// Token: 0x06003E5C RID: 15964 RVA: 0x000227D9 File Offset: 0x000209D9
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_animator = base.GetComponent<Animator>();
 	}
 
-	// Token: 0x06002D75 RID: 11637 RVA: 0x00099CE6 File Offset: 0x00097EE6
+	// Token: 0x06003E5D RID: 15965 RVA: 0x000227ED File Offset: 0x000209ED
 	protected override IEnumerator Start()
 	{
 		yield return base.Start();
@@ -37,12 +37,12 @@ public class OnHitExtendPlatform : SpecialPlatform, IBodyOnEnterHitResponse, IHi
 		yield break;
 	}
 
-	// Token: 0x06002D76 RID: 11638 RVA: 0x00099CF5 File Offset: 0x00097EF5
+	// Token: 0x06003E5E RID: 15966 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void SetState(StateID state)
 	{
 	}
 
-	// Token: 0x06002D77 RID: 11639 RVA: 0x00099CF8 File Offset: 0x00097EF8
+	// Token: 0x06003E5F RID: 15967 RVA: 0x000FAFF8 File Offset: 0x000F91F8
 	private void SetPlatformState(bool platformExtended)
 	{
 		this.m_platformExtended = platformExtended;
@@ -59,7 +59,7 @@ public class OnHitExtendPlatform : SpecialPlatform, IBodyOnEnterHitResponse, IHi
 		this.m_bodyCollider.gameObject.layer = this.m_storedBodyLayer;
 	}
 
-	// Token: 0x06002D78 RID: 11640 RVA: 0x00099D96 File Offset: 0x00097F96
+	// Token: 0x06003E60 RID: 15968 RVA: 0x000227FC File Offset: 0x000209FC
 	public void BodyOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		this.SetPlatformState(!this.m_platformExtended);
@@ -68,7 +68,7 @@ public class OnHitExtendPlatform : SpecialPlatform, IBodyOnEnterHitResponse, IHi
 		base.StartCoroutine(this.RetractPlatformCoroutine());
 	}
 
-	// Token: 0x06002D79 RID: 11641 RVA: 0x00099DC5 File Offset: 0x00097FC5
+	// Token: 0x06003E61 RID: 15969 RVA: 0x0002282B File Offset: 0x00020A2B
 	private IEnumerator RetractPlatformCoroutine()
 	{
 		float startTime = Time.time;
@@ -88,13 +88,13 @@ public class OnHitExtendPlatform : SpecialPlatform, IBodyOnEnterHitResponse, IHi
 		yield break;
 	}
 
-	// Token: 0x06002D7A RID: 11642 RVA: 0x00099DD4 File Offset: 0x00097FD4
+	// Token: 0x06003E62 RID: 15970 RVA: 0x0002283A File Offset: 0x00020A3A
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		this.ResetPlatform();
 	}
 
-	// Token: 0x06002D7B RID: 11643 RVA: 0x00099DDC File Offset: 0x00097FDC
+	// Token: 0x06003E63 RID: 15971 RVA: 0x000FB098 File Offset: 0x000F9298
 	private void ResetPlatform()
 	{
 		base.StopAllCoroutines();
@@ -106,14 +106,14 @@ public class OnHitExtendPlatform : SpecialPlatform, IBodyOnEnterHitResponse, IHi
 		this.m_bodyCollider.gameObject.layer = this.m_storedBodyLayer;
 	}
 
-	// Token: 0x06002D7C RID: 11644 RVA: 0x00099E4A File Offset: 0x0009804A
+	// Token: 0x06003E64 RID: 15972 RVA: 0x00022842 File Offset: 0x00020A42
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerExitRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerExitRoom), false);
 	}
 
-	// Token: 0x06002D7D RID: 11645 RVA: 0x00099E71 File Offset: 0x00098071
+	// Token: 0x06003E65 RID: 15973 RVA: 0x00022869 File Offset: 0x00020A69
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -122,34 +122,34 @@ public class OnHitExtendPlatform : SpecialPlatform, IBodyOnEnterHitResponse, IHi
 		}
 	}
 
-	// Token: 0x0400246E RID: 9326
+	// Token: 0x040030F6 RID: 12534
 	[SerializeField]
 	private SpriteRenderer m_platformSprite;
 
-	// Token: 0x0400246F RID: 9327
+	// Token: 0x040030F7 RID: 12535
 	private BoxCollider2D m_platformCollider;
 
-	// Token: 0x04002470 RID: 9328
+	// Token: 0x040030F8 RID: 12536
 	private Collider2D m_bodyCollider;
 
-	// Token: 0x04002471 RID: 9329
+	// Token: 0x040030F9 RID: 12537
 	private BlinkPulseEffect m_blinkPulseEffect;
 
-	// Token: 0x04002472 RID: 9330
+	// Token: 0x040030FA RID: 12538
 	private Animator m_animator;
 
-	// Token: 0x04002473 RID: 9331
+	// Token: 0x040030FB RID: 12539
 	private int m_storedTerrainLayer;
 
-	// Token: 0x04002474 RID: 9332
+	// Token: 0x040030FC RID: 12540
 	private int m_storedPlatformLayer;
 
-	// Token: 0x04002475 RID: 9333
+	// Token: 0x040030FD RID: 12541
 	private int m_storedBodyLayer;
 
-	// Token: 0x04002476 RID: 9334
+	// Token: 0x040030FE RID: 12542
 	private bool m_platformExtended;
 
-	// Token: 0x04002477 RID: 9335
+	// Token: 0x040030FF RID: 12543
 	private bool m_isInitialized;
 }

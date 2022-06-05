@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020007FE RID: 2046
+// Token: 0x02000CC6 RID: 3270
 public class InstantiateOnDebugBuild : MonoBehaviour
 {
-	// Token: 0x04003A14 RID: 14868
+	// Token: 0x04004CE0 RID: 19680
 	[SerializeField]
 	private GameObject[] m_prefabs;
 }

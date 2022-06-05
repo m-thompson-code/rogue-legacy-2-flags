@@ -1,22 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200054D RID: 1357
+// Token: 0x02000901 RID: 2305
 public class CheckSkillTreeUnlockController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x17001244 RID: 4676
-	// (get) Token: 0x060031DA RID: 12762 RVA: 0x000A88D9 File Offset: 0x000A6AD9
-	// (set) Token: 0x060031DB RID: 12763 RVA: 0x000A88E1 File Offset: 0x000A6AE1
+	// Token: 0x170018D3 RID: 6355
+	// (get) Token: 0x0600460C RID: 17932 RVA: 0x0002678E File Offset: 0x0002498E
+	// (set) Token: 0x0600460D RID: 17933 RVA: 0x00026796 File Offset: 0x00024996
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x060031DC RID: 12764 RVA: 0x000A88EA File Offset: 0x000A6AEA
+	// Token: 0x0600460E RID: 17934 RVA: 0x0002679F File Offset: 0x0002499F
 	private void Awake()
 	{
 		this.m_spawner = base.GetComponent<ISpawnController>();
 		this.m_onPlayerEnterRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerEnterRoom);
 	}
 
-	// Token: 0x060031DD RID: 12765 RVA: 0x000A890A File Offset: 0x000A6B0A
+	// Token: 0x0600460F RID: 17935 RVA: 0x000267BF File Offset: 0x000249BF
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
@@ -24,7 +24,7 @@ public class CheckSkillTreeUnlockController : MonoBehaviour, IRoomConsumer
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterHubTown, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x060031DE RID: 12766 RVA: 0x000A893E File Offset: 0x000A6B3E
+	// Token: 0x06004610 RID: 17936 RVA: 0x000267F3 File Offset: 0x000249F3
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -34,7 +34,7 @@ public class CheckSkillTreeUnlockController : MonoBehaviour, IRoomConsumer
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterHubTown, this.m_onPlayerEnterRoom);
 	}
 
-	// Token: 0x060031DF RID: 12767 RVA: 0x000A8978 File Offset: 0x000A6B78
+	// Token: 0x06004611 RID: 17937 RVA: 0x00112860 File Offset: 0x00110A60
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		bool flag = SkillTreeManager.GetSkillObjLevel(this.m_skillToCheckUnlock) > 0;
@@ -88,22 +88,22 @@ public class CheckSkillTreeUnlockController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x04002742 RID: 10050
+	// Token: 0x04003617 RID: 13847
 	[SerializeField]
 	private SkillTreeType m_skillToCheckUnlock;
 
-	// Token: 0x04002743 RID: 10051
+	// Token: 0x04003618 RID: 13848
 	[SerializeField]
 	private bool m_disableWhenUnlocked;
 
-	// Token: 0x04002744 RID: 10052
+	// Token: 0x04003619 RID: 13849
 	[SerializeField]
 	[Tooltip("If enabled, will be considered unlocked if Global_EV.UNLOCK_ALL_SHOPS == true.")]
 	private bool m_isShop;
 
-	// Token: 0x04002746 RID: 10054
+	// Token: 0x0400361B RID: 13851
 	private ISpawnController m_spawner;
 
-	// Token: 0x04002747 RID: 10055
+	// Token: 0x0400361C RID: 13852
 	private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 }

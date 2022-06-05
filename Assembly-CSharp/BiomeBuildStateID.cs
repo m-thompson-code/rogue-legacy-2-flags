@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000701 RID: 1793
+// Token: 0x02000BB4 RID: 2996
 public enum BiomeBuildStateID
 {
-	// Token: 0x0400328A RID: 12938
+	// Token: 0x04004505 RID: 17669
 	None,
-	// Token: 0x0400328B RID: 12939
+	// Token: 0x04004506 RID: 17670
 	Complete,
-	// Token: 0x0400328C RID: 12940
+	// Token: 0x04004507 RID: 17671
 	Failed,
-	// Token: 0x0400328D RID: 12941
+	// Token: 0x04004508 RID: 17672
 	Running
 }

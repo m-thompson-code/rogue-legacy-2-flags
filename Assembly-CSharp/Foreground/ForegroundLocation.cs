@@ -2,18 +2,18 @@
 
 namespace Foreground
 {
-	// Token: 0x02000899 RID: 2201
+	// Token: 0x02000DC6 RID: 3526
 	public enum ForegroundLocation
 	{
-		// Token: 0x04003CE9 RID: 15593
+		// Token: 0x04005117 RID: 20759
 		None,
-		// Token: 0x04003CEA RID: 15594
+		// Token: 0x04005118 RID: 20760
 		LowerLeftCorner = 10,
-		// Token: 0x04003CEB RID: 15595
+		// Token: 0x04005119 RID: 20761
 		LowerRightCorner = 15,
-		// Token: 0x04003CEC RID: 15596
+		// Token: 0x0400511A RID: 20762
 		UpperLeftCorner = 20,
-		// Token: 0x04003CED RID: 15597
+		// Token: 0x0400511B RID: 20763
 		UpperRightCorner = 25
 	}
 }

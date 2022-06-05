@@ -5,17 +5,17 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x02000503 RID: 1283
+// Token: 0x0200086D RID: 2157
 public class HallwayRoomController : BaseSpecialRoomController
 {
-	// Token: 0x06002FEB RID: 12267 RVA: 0x000A3FD7 File Offset: 0x000A21D7
+	// Token: 0x0600426B RID: 17003 RVA: 0x00024C60 File Offset: 0x00022E60
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_displayNextMemory = new Action(this.DisplayNextMemory);
 	}
 
-	// Token: 0x06002FEC RID: 12268 RVA: 0x000A3FF4 File Offset: 0x000A21F4
+	// Token: 0x0600426C RID: 17004 RVA: 0x0010AA94 File Offset: 0x00108C94
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -31,7 +31,7 @@ public class HallwayRoomController : BaseSpecialRoomController
 		base.StartCoroutine(this.StartEarthShiftChallengeCoroutine());
 	}
 
-	// Token: 0x06002FED RID: 12269 RVA: 0x000A407A File Offset: 0x000A227A
+	// Token: 0x0600426D RID: 17005 RVA: 0x00024C7A File Offset: 0x00022E7A
 	private IEnumerator FixTunnelLayer()
 	{
 		yield return null;
@@ -43,7 +43,7 @@ public class HallwayRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002FEE RID: 12270 RVA: 0x000A4089 File Offset: 0x000A2289
+	// Token: 0x0600426E RID: 17006 RVA: 0x00024C89 File Offset: 0x00022E89
 	private IEnumerator StartEarthShiftChallengeCoroutine()
 	{
 		float delay = Time.time + 2f;
@@ -82,7 +82,7 @@ public class HallwayRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x06002FEF RID: 12271 RVA: 0x000A4094 File Offset: 0x000A2294
+	// Token: 0x0600426F RID: 17007 RVA: 0x0010AB1C File Offset: 0x00108D1C
 	private void SetMemoriesEnabled()
 	{
 		if (BurdenManager.IsBurdenActive(BurdenType.FinalBossUp) && !this.m_memoryProps.IsNativeNull() && this.m_memoryProps.Length != 0)
@@ -94,7 +94,7 @@ public class HallwayRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002FF0 RID: 12272 RVA: 0x000A40DC File Offset: 0x000A22DC
+	// Token: 0x06004270 RID: 17008 RVA: 0x0010AB64 File Offset: 0x00108D64
 	private void SetMemoryActive(int index)
 	{
 		Prop propInstance = this.m_memoryProps[index].PropInstance;
@@ -106,7 +106,7 @@ public class HallwayRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002FF1 RID: 12273 RVA: 0x000A4134 File Offset: 0x000A2334
+	// Token: 0x06004271 RID: 17009 RVA: 0x0010ABBC File Offset: 0x00108DBC
 	private void DisplayNextMemory()
 	{
 		this.m_memoryProps[this.m_memoryIndex].PropInstance.GetComponent<JournalSpecialPropController>().FinishedReadingRelay.RemoveListener(this.m_displayNextMemory);
@@ -117,7 +117,7 @@ public class HallwayRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002FF2 RID: 12274 RVA: 0x000A4195 File Offset: 0x000A2395
+	// Token: 0x06004272 RID: 17010 RVA: 0x00024C91 File Offset: 0x00022E91
 	private IEnumerator FlipPlayer()
 	{
 		yield return null;
@@ -129,17 +129,17 @@ public class HallwayRoomController : BaseSpecialRoomController
 		yield break;
 	}
 
-	// Token: 0x04002633 RID: 9779
+	// Token: 0x040033F7 RID: 13303
 	[SerializeField]
 	private TunnelSpawnController m_closetTunnelSpawner;
 
-	// Token: 0x04002634 RID: 9780
+	// Token: 0x040033F8 RID: 13304
 	[SerializeField]
 	private PropSpawnController[] m_memoryProps;
 
-	// Token: 0x04002635 RID: 9781
+	// Token: 0x040033F9 RID: 13305
 	private Action m_displayNextMemory;
 
-	// Token: 0x04002636 RID: 9782
+	// Token: 0x040033FA RID: 13306
 	private int m_memoryIndex;
 }

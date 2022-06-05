@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000607 RID: 1543
+// Token: 0x02000A28 RID: 2600
 public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProjectileNameArray
 {
-	// Token: 0x170013D4 RID: 5076
-	// (get) Token: 0x060037FF RID: 14335 RVA: 0x000BF6DC File Offset: 0x000BD8DC
+	// Token: 0x17001B2B RID: 6955
+	// (get) Token: 0x06004E9C RID: 20124 RVA: 0x0012DE90 File Offset: 0x0012C090
 	public string[] ProjectileNameArray
 	{
 		get
@@ -27,9 +27,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013D5 RID: 5077
-	// (get) Token: 0x06003800 RID: 14336 RVA: 0x000BF737 File Offset: 0x000BD937
-	// (set) Token: 0x06003801 RID: 14337 RVA: 0x000BF73F File Offset: 0x000BD93F
+	// Token: 0x17001B2C RID: 6956
+	// (get) Token: 0x06004E9D RID: 20125 RVA: 0x0002ACEA File Offset: 0x00028EEA
+	// (set) Token: 0x06004E9E RID: 20126 RVA: 0x0002ACF2 File Offset: 0x00028EF2
 	public EnemyController EnemyInstance
 	{
 		get
@@ -42,9 +42,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013D6 RID: 5078
-	// (get) Token: 0x06003802 RID: 14338 RVA: 0x000BF748 File Offset: 0x000BD948
-	// (set) Token: 0x06003803 RID: 14339 RVA: 0x000BF750 File Offset: 0x000BD950
+	// Token: 0x17001B2D RID: 6957
+	// (get) Token: 0x06004E9F RID: 20127 RVA: 0x0002ACFB File Offset: 0x00028EFB
+	// (set) Token: 0x06004EA0 RID: 20128 RVA: 0x0002AD03 File Offset: 0x00028F03
 	public int EnemyIndex
 	{
 		get
@@ -57,9 +57,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013D7 RID: 5079
-	// (get) Token: 0x06003804 RID: 14340 RVA: 0x000BF759 File Offset: 0x000BD959
-	// (set) Token: 0x06003805 RID: 14341 RVA: 0x000BF761 File Offset: 0x000BD961
+	// Token: 0x17001B2E RID: 6958
+	// (get) Token: 0x06004EA1 RID: 20129 RVA: 0x0002AD0C File Offset: 0x00028F0C
+	// (set) Token: 0x06004EA2 RID: 20130 RVA: 0x0002AD14 File Offset: 0x00028F14
 	public bool ForceCommander
 	{
 		get
@@ -72,9 +72,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013D8 RID: 5080
-	// (get) Token: 0x06003806 RID: 14342 RVA: 0x000BF76A File Offset: 0x000BD96A
-	// (set) Token: 0x06003807 RID: 14343 RVA: 0x000BF772 File Offset: 0x000BD972
+	// Token: 0x17001B2F RID: 6959
+	// (get) Token: 0x06004EA3 RID: 20131 RVA: 0x0002AD1D File Offset: 0x00028F1D
+	// (set) Token: 0x06004EA4 RID: 20132 RVA: 0x0002AD25 File Offset: 0x00028F25
 	public bool ForceFlying
 	{
 		get
@@ -87,8 +87,8 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013D9 RID: 5081
-	// (get) Token: 0x06003808 RID: 14344 RVA: 0x000BF77B File Offset: 0x000BD97B
+	// Token: 0x17001B30 RID: 6960
+	// (get) Token: 0x06004EA5 RID: 20133 RVA: 0x00003713 File Offset: 0x00001913
 	public GameObject GameObject
 	{
 		get
@@ -97,9 +97,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013DA RID: 5082
-	// (get) Token: 0x06003809 RID: 14345 RVA: 0x000BF783 File Offset: 0x000BD983
-	// (set) Token: 0x0600380A RID: 14346 RVA: 0x000BF78B File Offset: 0x000BD98B
+	// Token: 0x17001B31 RID: 6961
+	// (get) Token: 0x06004EA6 RID: 20134 RVA: 0x0002AD2E File Offset: 0x00028F2E
+	// (set) Token: 0x06004EA7 RID: 20135 RVA: 0x0002AD36 File Offset: 0x00028F36
 	public int ID
 	{
 		get
@@ -112,9 +112,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013DB RID: 5083
-	// (get) Token: 0x0600380B RID: 14347 RVA: 0x000BF794 File Offset: 0x000BD994
-	// (set) Token: 0x0600380C RID: 14348 RVA: 0x000BF7A6 File Offset: 0x000BD9A6
+	// Token: 0x17001B32 RID: 6962
+	// (get) Token: 0x06004EA8 RID: 20136 RVA: 0x0002AD3F File Offset: 0x00028F3F
+	// (set) Token: 0x06004EA9 RID: 20137 RVA: 0x0002AD51 File Offset: 0x00028F51
 	public bool IsDead
 	{
 		get
@@ -127,8 +127,8 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013DC RID: 5084
-	// (get) Token: 0x0600380D RID: 14349 RVA: 0x000BF7AF File Offset: 0x000BD9AF
+	// Token: 0x17001B33 RID: 6963
+	// (get) Token: 0x06004EAA RID: 20138 RVA: 0x0002AD5A File Offset: 0x00028F5A
 	public bool ShouldSpawn
 	{
 		get
@@ -137,9 +137,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013DD RID: 5085
-	// (get) Token: 0x0600380E RID: 14350 RVA: 0x000BF7CC File Offset: 0x000BD9CC
-	// (set) Token: 0x0600380F RID: 14351 RVA: 0x000BF7D4 File Offset: 0x000BD9D4
+	// Token: 0x17001B34 RID: 6964
+	// (get) Token: 0x06004EAB RID: 20139 RVA: 0x0002AD77 File Offset: 0x00028F77
+	// (set) Token: 0x06004EAC RID: 20140 RVA: 0x0002AD7F File Offset: 0x00028F7F
 	public int Level
 	{
 		get
@@ -152,9 +152,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013DE RID: 5086
-	// (get) Token: 0x06003810 RID: 14352 RVA: 0x000BF7DD File Offset: 0x000BD9DD
-	// (set) Token: 0x06003811 RID: 14353 RVA: 0x000BF7E5 File Offset: 0x000BD9E5
+	// Token: 0x17001B35 RID: 6965
+	// (get) Token: 0x06004EAD RID: 20141 RVA: 0x0002AD88 File Offset: 0x00028F88
+	// (set) Token: 0x06004EAE RID: 20142 RVA: 0x0002AD90 File Offset: 0x00028F90
 	public bool Override
 	{
 		get
@@ -167,9 +167,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013DF RID: 5087
-	// (get) Token: 0x06003812 RID: 14354 RVA: 0x000BF7EE File Offset: 0x000BD9EE
-	// (set) Token: 0x06003813 RID: 14355 RVA: 0x000BF7F6 File Offset: 0x000BD9F6
+	// Token: 0x17001B36 RID: 6966
+	// (get) Token: 0x06004EAF RID: 20143 RVA: 0x0002AD99 File Offset: 0x00028F99
+	// (set) Token: 0x06004EB0 RID: 20144 RVA: 0x0002ADA1 File Offset: 0x00028FA1
 	public bool OverrideLevel
 	{
 		get
@@ -182,9 +182,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013E0 RID: 5088
-	// (get) Token: 0x06003814 RID: 14356 RVA: 0x000BF7FF File Offset: 0x000BD9FF
-	// (set) Token: 0x06003815 RID: 14357 RVA: 0x000BF823 File Offset: 0x000BDA23
+	// Token: 0x17001B37 RID: 6967
+	// (get) Token: 0x06004EB1 RID: 20145 RVA: 0x0002ADAA File Offset: 0x00028FAA
+	// (set) Token: 0x06004EB2 RID: 20146 RVA: 0x0002ADCE File Offset: 0x00028FCE
 	public EnemyRank Rank
 	{
 		get
@@ -201,8 +201,8 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013E1 RID: 5089
-	// (get) Token: 0x06003816 RID: 14358 RVA: 0x000BF82C File Offset: 0x000BDA2C
+	// Token: 0x17001B38 RID: 6968
+	// (get) Token: 0x06004EB3 RID: 20147 RVA: 0x0002ADD7 File Offset: 0x00028FD7
 	public BaseRoom Room
 	{
 		get
@@ -211,9 +211,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013E2 RID: 5090
-	// (get) Token: 0x06003817 RID: 14359 RVA: 0x000BF834 File Offset: 0x000BDA34
-	// (set) Token: 0x06003818 RID: 14360 RVA: 0x000BF857 File Offset: 0x000BDA57
+	// Token: 0x17001B39 RID: 6969
+	// (get) Token: 0x06004EB4 RID: 20148 RVA: 0x0002ADDF File Offset: 0x00028FDF
+	// (set) Token: 0x06004EB5 RID: 20149 RVA: 0x0002AE02 File Offset: 0x00029002
 	public SpawnLogicController SpawnLogicController
 	{
 		get
@@ -231,9 +231,9 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x170013E3 RID: 5091
-	// (get) Token: 0x06003819 RID: 14361 RVA: 0x000BF860 File Offset: 0x000BDA60
-	// (set) Token: 0x0600381A RID: 14362 RVA: 0x000BF868 File Offset: 0x000BDA68
+	// Token: 0x17001B3A RID: 6970
+	// (get) Token: 0x06004EB6 RID: 20150 RVA: 0x0002AE0B File Offset: 0x0002900B
+	// (set) Token: 0x06004EB7 RID: 20151 RVA: 0x0002AE13 File Offset: 0x00029013
 	public EnemyType Type
 	{
 		get
@@ -246,25 +246,25 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x0600381B RID: 14363 RVA: 0x000BF871 File Offset: 0x000BDA71
+	// Token: 0x06004EB8 RID: 20152 RVA: 0x0002AE1C File Offset: 0x0002901C
 	private void Awake()
 	{
 		this.m_onEnemyDeath = new Action<object, EnemyDeathEventArgs>(this.OnEnemyDeath);
 		this.m_onEnemyTimedOut = new Action<object, EnemyActivationStateChangedEventArgs>(this.OnEnemyTimedOut);
 	}
 
-	// Token: 0x0600381C RID: 14364 RVA: 0x000BF897 File Offset: 0x000BDA97
+	// Token: 0x06004EB9 RID: 20153 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void OnDrawGizmos()
 	{
 	}
 
-	// Token: 0x0600381D RID: 14365 RVA: 0x000BF899 File Offset: 0x000BDA99
+	// Token: 0x06004EBA RID: 20154 RVA: 0x0002AE42 File Offset: 0x00029042
 	private void OnDrawGizmosSelected()
 	{
 		Gizmos.DrawSphere(this.m_spawnPoint, 0.5f);
 	}
 
-	// Token: 0x0600381E RID: 14366 RVA: 0x000BF8AC File Offset: 0x000BDAAC
+	// Token: 0x06004EBB RID: 20155 RVA: 0x0012DEEC File Offset: 0x0012C0EC
 	private Vector3 GetSpawnPoint(bool isFlying)
 	{
 		if (isFlying)
@@ -294,7 +294,7 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		return base.transform.position;
 	}
 
-	// Token: 0x0600381F RID: 14367 RVA: 0x000BF9BC File Offset: 0x000BDBBC
+	// Token: 0x06004EBC RID: 20156 RVA: 0x0012DFFC File Offset: 0x0012C1FC
 	private void ResetEnemyPosition(EnemyController enemy)
 	{
 		if (this.m_spawnPoint == new Vector3(-1000f, -1000f, -1000f))
@@ -305,7 +305,7 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		enemy.ResetPositionForSpawnController(this.m_spawnPoint, this.m_spawnCollider);
 	}
 
-	// Token: 0x06003820 RID: 14368 RVA: 0x000BFA20 File Offset: 0x000BDC20
+	// Token: 0x06004EBD RID: 20157 RVA: 0x0002AE54 File Offset: 0x00029054
 	public void SetColor(Color color)
 	{
 		if (!Application.isPlaying)
@@ -315,25 +315,25 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x06003821 RID: 14369 RVA: 0x000BFA46 File Offset: 0x000BDC46
+	// Token: 0x06004EBE RID: 20158 RVA: 0x0002AE7A File Offset: 0x0002907A
 	public void SetForceCommander(bool forceCommander)
 	{
 		this.ForceCommander = forceCommander;
 	}
 
-	// Token: 0x06003822 RID: 14370 RVA: 0x000BFA4F File Offset: 0x000BDC4F
+	// Token: 0x06004EBF RID: 20159 RVA: 0x0002AE83 File Offset: 0x00029083
 	public void SetForceFlying(bool forceFlying)
 	{
 		this.ForceFlying = forceFlying;
 	}
 
-	// Token: 0x06003823 RID: 14371 RVA: 0x000BFA58 File Offset: 0x000BDC58
+	// Token: 0x06004EC0 RID: 20160 RVA: 0x0002AE8C File Offset: 0x0002908C
 	public void SetRoom(BaseRoom value)
 	{
 		this.m_room = value;
 	}
 
-	// Token: 0x06003824 RID: 14372 RVA: 0x000BFA61 File Offset: 0x000BDC61
+	// Token: 0x06004EC1 RID: 20161 RVA: 0x0002AE95 File Offset: 0x00029095
 	public void SetEnemy(EnemyType enemyType, EnemyRank enemyRank, int enemyLevel)
 	{
 		if (!this.Override)
@@ -352,13 +352,13 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x06003825 RID: 14373 RVA: 0x000BFA99 File Offset: 0x000BDC99
+	// Token: 0x06004EC2 RID: 20162 RVA: 0x0002AECD File Offset: 0x000290CD
 	public void SetEnemyIndex(int index)
 	{
 		this.EnemyIndex = index;
 	}
 
-	// Token: 0x06003826 RID: 14374 RVA: 0x000BFAA2 File Offset: 0x000BDCA2
+	// Token: 0x06004EC3 RID: 20163 RVA: 0x0002AED6 File Offset: 0x000290D6
 	public void ForceEnemyDead(bool disableEnemy = true)
 	{
 		if (this.EnemyInstance)
@@ -375,13 +375,13 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		this.IsDead = true;
 	}
 
-	// Token: 0x06003827 RID: 14375 RVA: 0x000BFADA File Offset: 0x000BDCDA
+	// Token: 0x06004EC4 RID: 20164 RVA: 0x0002AF0E File Offset: 0x0002910E
 	public void ResetIsDead()
 	{
 		this.IsDead = false;
 	}
 
-	// Token: 0x06003828 RID: 14376 RVA: 0x000BFAE3 File Offset: 0x000BDCE3
+	// Token: 0x06004EC5 RID: 20165 RVA: 0x0002AF17 File Offset: 0x00029117
 	private void OnEnemyDeath(object sender, EnemyDeathEventArgs eventArgs)
 	{
 		this.IsDead = true;
@@ -389,7 +389,7 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		this.EnemyInstance.OnReactivationTimedOutRelay.RemoveListener(this.m_onEnemyTimedOut);
 	}
 
-	// Token: 0x06003829 RID: 14377 RVA: 0x000BFB1A File Offset: 0x000BDD1A
+	// Token: 0x06004EC6 RID: 20166 RVA: 0x0002AF4E File Offset: 0x0002914E
 	private void OnEnemyTimedOut(object sender, EnemyActivationStateChangedEventArgs eventArgs)
 	{
 		if (eventArgs.Enemy != null)
@@ -398,7 +398,7 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x0600382A RID: 14378 RVA: 0x000BFB36 File Offset: 0x000BDD36
+	// Token: 0x06004EC7 RID: 20167 RVA: 0x0002AF6A File Offset: 0x0002916A
 	public void RemoveListeners()
 	{
 		if (this.EnemyInstance)
@@ -408,7 +408,7 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x0600382B RID: 14379 RVA: 0x000BFB74 File Offset: 0x000BDD74
+	// Token: 0x06004EC8 RID: 20168 RVA: 0x0012E060 File Offset: 0x0012C260
 	public void InitializeEnemyInstance()
 	{
 		if (!this.ShouldSpawn)
@@ -450,7 +450,7 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		});
 	}
 
-	// Token: 0x0600382C RID: 14380 RVA: 0x000BFCCC File Offset: 0x000BDECC
+	// Token: 0x06004EC9 RID: 20169 RVA: 0x0012E1B8 File Offset: 0x0012C3B8
 	private void OnDisable()
 	{
 		if (this.EnemyInstance)
@@ -465,16 +465,16 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	}
 
-	// Token: 0x0600382F RID: 14383 RVA: 0x000BFF1D File Offset: 0x000BE11D
+	// Token: 0x06004ECC RID: 20172 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISpawnController.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002AD1 RID: 10961
+	// Token: 0x04003B34 RID: 15156
 	private const int GROUNDING_RAYCAST_DISTANCE = 20;
 
-	// Token: 0x04002AD2 RID: 10962
+	// Token: 0x04003B35 RID: 15157
 	public static Dictionary<Color, int> ColorTable = new Dictionary<Color, int>
 	{
 		{
@@ -511,7 +511,7 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	};
 
-	// Token: 0x04002AD3 RID: 10963
+	// Token: 0x04003B36 RID: 15158
 	public static Dictionary<int, Color> IDToColorTable = new Dictionary<int, Color>
 	{
 		{
@@ -548,7 +548,7 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	};
 
-	// Token: 0x04002AD4 RID: 10964
+	// Token: 0x04003B37 RID: 15159
 	public static Dictionary<Color, string> ColorNameTable = new Dictionary<Color, string>
 	{
 		{
@@ -585,78 +585,78 @@ public class EnemySpawnController : MonoBehaviour, ISpawnController, IHasProject
 		}
 	};
 
-	// Token: 0x04002AD5 RID: 10965
+	// Token: 0x04003B38 RID: 15160
 	private EnemyController m_enemy;
 
-	// Token: 0x04002AD6 RID: 10966
+	// Token: 0x04003B39 RID: 15161
 	private Vector3 m_spawnPoint = new Vector3(-1000f, -1000f, -1000f);
 
-	// Token: 0x04002AD7 RID: 10967
+	// Token: 0x04003B3A RID: 15162
 	private BaseRoom m_room;
 
-	// Token: 0x04002AD8 RID: 10968
+	// Token: 0x04003B3B RID: 15163
 	private SpawnLogicController m_spawnLogic;
 
-	// Token: 0x04002AD9 RID: 10969
+	// Token: 0x04003B3C RID: 15164
 	private int m_enemyIndex = -1;
 
-	// Token: 0x04002ADA RID: 10970
+	// Token: 0x04003B3D RID: 15165
 	private string m_gizmoText = "";
 
-	// Token: 0x04002ADB RID: 10971
+	// Token: 0x04003B3E RID: 15166
 	private static RaycastHit2D[] m_raycastAllocArray = new RaycastHit2D[5];
 
-	// Token: 0x04002ADC RID: 10972
+	// Token: 0x04003B3F RID: 15167
 	private Collider2D m_spawnCollider;
 
-	// Token: 0x04002ADD RID: 10973
+	// Token: 0x04003B40 RID: 15168
 	public static string[] EmptyProjectileNameArray_STATIC = new string[0];
 
-	// Token: 0x04002ADE RID: 10974
+	// Token: 0x04003B41 RID: 15169
 	private bool m_isDead;
 
-	// Token: 0x04002ADF RID: 10975
+	// Token: 0x04003B42 RID: 15170
 	private Action<object, EnemyDeathEventArgs> m_onEnemyDeath;
 
-	// Token: 0x04002AE0 RID: 10976
+	// Token: 0x04003B43 RID: 15171
 	private Action<object, EnemyActivationStateChangedEventArgs> m_onEnemyTimedOut;
 
-	// Token: 0x04002AE1 RID: 10977
+	// Token: 0x04003B44 RID: 15172
 	[SerializeField]
 	private bool m_forceFlying;
 
-	// Token: 0x04002AE2 RID: 10978
+	// Token: 0x04003B45 RID: 15173
 	[SerializeField]
 	private bool m_forceCommander;
 
-	// Token: 0x04002AE3 RID: 10979
+	// Token: 0x04003B46 RID: 15174
 	[SerializeField]
 	private bool m_override;
 
-	// Token: 0x04002AE4 RID: 10980
+	// Token: 0x04003B47 RID: 15175
 	[SerializeField]
 	private bool m_overrideLevel;
 
-	// Token: 0x04002AE5 RID: 10981
+	// Token: 0x04003B48 RID: 15176
 	[SerializeField]
 	private EnemyType m_type;
 
-	// Token: 0x04002AE6 RID: 10982
+	// Token: 0x04003B49 RID: 15177
 	[SerializeField]
 	private EnemyRank m_rank = EnemyRank.None;
 
-	// Token: 0x04002AE7 RID: 10983
+	// Token: 0x04003B4A RID: 15178
 	[SerializeField]
 	private int m_level = -1;
 
-	// Token: 0x04002AE8 RID: 10984
+	// Token: 0x04003B4B RID: 15179
 	[SerializeField]
 	private int m_id = -1;
 
-	// Token: 0x04002AE9 RID: 10985
+	// Token: 0x04003B4C RID: 15180
 	[NonSerialized]
 	private string[] m_projectileNameArray;
 
-	// Token: 0x04002AEA RID: 10986
+	// Token: 0x04003B4D RID: 15181
 	private bool m_hasCheckedForSpawnLogicController;
 }

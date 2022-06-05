@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace Rooms
 {
-	// Token: 0x020008CF RID: 2255
+	// Token: 0x02000E39 RID: 3641
 	public static class RoomContentMetaDataFactory
 	{
-		// Token: 0x060049F1 RID: 18929 RVA: 0x0010A69C File Offset: 0x0010889C
+		// Token: 0x0600668C RID: 26252 RVA: 0x0017B320 File Offset: 0x00179520
 		public static string CreateContentMetaData(RoomMetaData room)
 		{
 			Room prefab = room.GetPrefab(true);
@@ -48,10 +48,10 @@ namespace Rooms
 			return "Scriptable Objects/Room Content/" + room.ID.SceneName + "/" + str;
 		}
 
-		// Token: 0x04003E34 RID: 15924
+		// Token: 0x0400533E RID: 21310
 		public const string ASSET_PATH = "Assets/Content/Scriptable Objects/Room Content";
 
-		// Token: 0x04003E35 RID: 15925
+		// Token: 0x0400533F RID: 21311
 		public const string RESOURCE_PATH = "Scriptable Objects/Room Content";
 	}
 }

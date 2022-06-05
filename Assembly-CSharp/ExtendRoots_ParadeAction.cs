@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002A2 RID: 674
+// Token: 0x02000470 RID: 1136
 public class ExtendRoots_ParadeAction : MonoBehaviour, IParadeAction
 {
-	// Token: 0x06001A1D RID: 6685 RVA: 0x0005231A File Offset: 0x0005051A
+	// Token: 0x06002418 RID: 9240 RVA: 0x0001406D File Offset: 0x0001226D
 	public IEnumerator TriggerAction(ParadeController controller)
 	{
 		controller.SetRootMoveAudioParam(true);
@@ -29,16 +29,16 @@ public class ExtendRoots_ParadeAction : MonoBehaviour, IParadeAction
 		yield break;
 	}
 
-	// Token: 0x04001886 RID: 6278
+	// Token: 0x04001FDD RID: 8157
 	[SerializeField]
 	private ExtendRoots_ParadeAction.ExtendRootEntry[] m_rootsToExtend;
 
-	// Token: 0x02000B47 RID: 2887
+	// Token: 0x02000471 RID: 1137
 	[Serializable]
 	private class ExtendRootEntry
 	{
-		// Token: 0x17001E7C RID: 7804
-		// (get) Token: 0x06005C68 RID: 23656 RVA: 0x0015D4B7 File Offset: 0x0015B6B7
+		// Token: 0x17000F44 RID: 3908
+		// (get) Token: 0x0600241A RID: 9242 RVA: 0x00014083 File Offset: 0x00012283
 		public float Delay
 		{
 			get
@@ -47,8 +47,8 @@ public class ExtendRoots_ParadeAction : MonoBehaviour, IParadeAction
 			}
 		}
 
-		// Token: 0x17001E7D RID: 7805
-		// (get) Token: 0x06005C69 RID: 23657 RVA: 0x0015D4BF File Offset: 0x0015B6BF
+		// Token: 0x17000F45 RID: 3909
+		// (get) Token: 0x0600241B RID: 9243 RVA: 0x0001408B File Offset: 0x0001228B
 		public Animator Animator
 		{
 			get
@@ -57,11 +57,11 @@ public class ExtendRoots_ParadeAction : MonoBehaviour, IParadeAction
 			}
 		}
 
-		// Token: 0x04004BEC RID: 19436
+		// Token: 0x04001FDE RID: 8158
 		[SerializeField]
 		private Animator m_animator;
 
-		// Token: 0x04004BED RID: 19437
+		// Token: 0x04001FDF RID: 8159
 		[SerializeField]
 		private float m_delay;
 	}

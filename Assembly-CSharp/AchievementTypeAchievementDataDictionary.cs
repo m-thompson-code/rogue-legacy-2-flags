@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200000B RID: 11
+// Token: 0x0200000E RID: 14
 [Serializable]
 public class AchievementTypeAchievementDataDictionary : SerializableDictionary<AchievementType, AchievementData>
 {

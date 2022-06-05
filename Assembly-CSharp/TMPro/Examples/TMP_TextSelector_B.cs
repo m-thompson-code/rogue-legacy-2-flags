@@ -4,10 +4,10 @@ using UnityEngine.EventSystems;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000864 RID: 2148
+	// Token: 0x02000D6F RID: 3439
 	public class TMP_TextSelector_B : MonoBehaviour, IPointerEnterHandler, IEventSystemHandler, IPointerExitHandler, IPointerClickHandler, IPointerUpHandler
 	{
-		// Token: 0x06004716 RID: 18198 RVA: 0x000FEF98 File Offset: 0x000FD198
+		// Token: 0x060061CF RID: 25039 RVA: 0x0016C464 File Offset: 0x0016A664
 		private void Awake()
 		{
 			this.m_TextMeshPro = base.gameObject.GetComponent<TextMeshProUGUI>();
@@ -26,19 +26,19 @@ namespace TMPro.Examples
 			this.m_TextPopup_RectTransform.gameObject.SetActive(false);
 		}
 
-		// Token: 0x06004717 RID: 18199 RVA: 0x000FF038 File Offset: 0x000FD238
+		// Token: 0x060061D0 RID: 25040 RVA: 0x00035E9C File Offset: 0x0003409C
 		private void OnEnable()
 		{
 			TMPro_EventManager.TEXT_CHANGED_EVENT.Add(new Action<UnityEngine.Object>(this.ON_TEXT_CHANGED));
 		}
 
-		// Token: 0x06004718 RID: 18200 RVA: 0x000FF050 File Offset: 0x000FD250
+		// Token: 0x060061D1 RID: 25041 RVA: 0x00035EB4 File Offset: 0x000340B4
 		private void OnDisable()
 		{
 			TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(new Action<UnityEngine.Object>(this.ON_TEXT_CHANGED));
 		}
 
-		// Token: 0x06004719 RID: 18201 RVA: 0x000FF068 File Offset: 0x000FD268
+		// Token: 0x060061D2 RID: 25042 RVA: 0x00035ECC File Offset: 0x000340CC
 		private void ON_TEXT_CHANGED(UnityEngine.Object obj)
 		{
 			if (obj == this.m_TextMeshPro)
@@ -47,7 +47,7 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x0600471A RID: 18202 RVA: 0x000FF090 File Offset: 0x000FD290
+		// Token: 0x060061D3 RID: 25043 RVA: 0x0016C504 File Offset: 0x0016A704
 		private void LateUpdate()
 		{
 			if (this.isHoveringObject)
@@ -167,29 +167,29 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x0600471B RID: 18203 RVA: 0x000FF75B File Offset: 0x000FD95B
+		// Token: 0x060061D4 RID: 25044 RVA: 0x00035EF2 File Offset: 0x000340F2
 		public void OnPointerEnter(PointerEventData eventData)
 		{
 			this.isHoveringObject = true;
 		}
 
-		// Token: 0x0600471C RID: 18204 RVA: 0x000FF764 File Offset: 0x000FD964
+		// Token: 0x060061D5 RID: 25045 RVA: 0x00035EFB File Offset: 0x000340FB
 		public void OnPointerExit(PointerEventData eventData)
 		{
 			this.isHoveringObject = false;
 		}
 
-		// Token: 0x0600471D RID: 18205 RVA: 0x000FF76D File Offset: 0x000FD96D
+		// Token: 0x060061D6 RID: 25046 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void OnPointerClick(PointerEventData eventData)
 		{
 		}
 
-		// Token: 0x0600471E RID: 18206 RVA: 0x000FF76F File Offset: 0x000FD96F
+		// Token: 0x060061D7 RID: 25047 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void OnPointerUp(PointerEventData eventData)
 		{
 		}
 
-		// Token: 0x0600471F RID: 18207 RVA: 0x000FF774 File Offset: 0x000FD974
+		// Token: 0x060061D8 RID: 25048 RVA: 0x0016CBD0 File Offset: 0x0016ADD0
 		private void RestoreCachedVertexAttributes(int index)
 		{
 			if (index == -1 || index > this.m_TextMeshPro.textInfo.characterCount - 1)
@@ -248,46 +248,46 @@ namespace TMPro.Examples
 			this.m_TextMeshPro.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
 		}
 
-		// Token: 0x04003C20 RID: 15392
+		// Token: 0x04004FBE RID: 20414
 		public RectTransform TextPopup_Prefab_01;
 
-		// Token: 0x04003C21 RID: 15393
+		// Token: 0x04004FBF RID: 20415
 		private RectTransform m_TextPopup_RectTransform;
 
-		// Token: 0x04003C22 RID: 15394
+		// Token: 0x04004FC0 RID: 20416
 		private TextMeshProUGUI m_TextPopup_TMPComponent;
 
-		// Token: 0x04003C23 RID: 15395
+		// Token: 0x04004FC1 RID: 20417
 		private const string k_LinkText = "You have selected link <#ffff00>";
 
-		// Token: 0x04003C24 RID: 15396
+		// Token: 0x04004FC2 RID: 20418
 		private const string k_WordText = "Word Index: <#ffff00>";
 
-		// Token: 0x04003C25 RID: 15397
+		// Token: 0x04004FC3 RID: 20419
 		private TextMeshProUGUI m_TextMeshPro;
 
-		// Token: 0x04003C26 RID: 15398
+		// Token: 0x04004FC4 RID: 20420
 		private Canvas m_Canvas;
 
-		// Token: 0x04003C27 RID: 15399
+		// Token: 0x04004FC5 RID: 20421
 		private Camera m_Camera;
 
-		// Token: 0x04003C28 RID: 15400
+		// Token: 0x04004FC6 RID: 20422
 		private bool isHoveringObject;
 
-		// Token: 0x04003C29 RID: 15401
+		// Token: 0x04004FC7 RID: 20423
 		private int m_selectedWord = -1;
 
-		// Token: 0x04003C2A RID: 15402
+		// Token: 0x04004FC8 RID: 20424
 		private int m_selectedLink = -1;
 
-		// Token: 0x04003C2B RID: 15403
+		// Token: 0x04004FC9 RID: 20425
 		private int m_lastIndex = -1;
 
-		// Token: 0x04003C2C RID: 15404
+		// Token: 0x04004FCA RID: 20426
 		private Matrix4x4 m_matrix;
 
-		// Token: 0x04003C2D RID: 15405
+		// Token: 0x04004FCB RID: 20427
 		private TMP_MeshInfo[] m_cachedMeshInfoVertexData;
 	}
 }

@@ -1,40 +1,40 @@
 ﻿using System;
 
-// Token: 0x02000746 RID: 1862
+// Token: 0x02000C04 RID: 3076
 public enum SpecialItemType
 {
-	// Token: 0x040034C4 RID: 13508
+	// Token: 0x04004740 RID: 18240
 	None,
-	// Token: 0x040034C5 RID: 13509
+	// Token: 0x04004741 RID: 18241
 	Gold = 10,
-	// Token: 0x040034C6 RID: 13510
+	// Token: 0x04004742 RID: 18242
 	Stat = 20,
-	// Token: 0x040034C7 RID: 13511
+	// Token: 0x04004743 RID: 18243
 	Blueprint = 30,
-	// Token: 0x040034C8 RID: 13512
+	// Token: 0x04004744 RID: 18244
 	Rune = 40,
-	// Token: 0x040034C9 RID: 13513
+	// Token: 0x04004745 RID: 18245
 	Weapon = 50,
-	// Token: 0x040034CA RID: 13514
+	// Token: 0x04004746 RID: 18246
 	Ore = 60,
-	// Token: 0x040034CB RID: 13515
+	// Token: 0x04004747 RID: 18247
 	Relic = 70,
-	// Token: 0x040034CC RID: 13516
+	// Token: 0x04004748 RID: 18248
 	Heirloom = 80,
-	// Token: 0x040034CD RID: 13517
+	// Token: 0x04004749 RID: 18249
 	Soul = 90,
-	// Token: 0x040034CE RID: 13518
+	// Token: 0x0400474A RID: 18250
 	Ability = 100,
-	// Token: 0x040034CF RID: 13519
+	// Token: 0x0400474B RID: 18251
 	Challenge = 110,
-	// Token: 0x040034D0 RID: 13520
+	// Token: 0x0400474C RID: 18252
 	FinalGear_Weapon = 200,
-	// Token: 0x040034D1 RID: 13521
+	// Token: 0x0400474D RID: 18253
 	FinalGear_Helm = 210,
-	// Token: 0x040034D2 RID: 13522
+	// Token: 0x0400474E RID: 18254
 	FinalGear_Chest = 220,
-	// Token: 0x040034D3 RID: 13523
+	// Token: 0x0400474F RID: 18255
 	FinalGear_Cape = 230,
-	// Token: 0x040034D4 RID: 13524
+	// Token: 0x04004750 RID: 18256
 	FinalGear_Trinket = 240
 }

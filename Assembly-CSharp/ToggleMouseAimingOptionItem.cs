@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200029E RID: 670
+// Token: 0x0200046C RID: 1132
 public class ToggleMouseAimingOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001A08 RID: 6664 RVA: 0x0005201D File Offset: 0x0005021D
+	// Token: 0x06002403 RID: 9219 RVA: 0x00013D90 File Offset: 0x00011F90
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class ToggleMouseAimingOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001A09 RID: 6665 RVA: 0x00052055 File Offset: 0x00050255
+	// Token: 0x06002404 RID: 9220 RVA: 0x00013DC8 File Offset: 0x00011FC8
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class ToggleMouseAimingOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001A0A RID: 6666 RVA: 0x0005208F File Offset: 0x0005028F
+	// Token: 0x06002405 RID: 9221 RVA: 0x00013E02 File Offset: 0x00012002
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed toggle mouse aiming to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001A0B RID: 6667 RVA: 0x000520A6 File Offset: 0x000502A6
+	// Token: 0x06002406 RID: 9222 RVA: 0x00013E19 File Offset: 0x00012019
 	public override void ConfirmOptionChange()
 	{
 		if (this.m_selectedIndex == 0)

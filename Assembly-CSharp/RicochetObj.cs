@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002C1 RID: 705
+// Token: 0x020004B4 RID: 1204
 public class RicochetObj : MonoBehaviour, IRicochetObj, IRootObj
 {
-	// Token: 0x17000C92 RID: 3218
-	// (get) Token: 0x06001C08 RID: 7176 RVA: 0x0005A720 File Offset: 0x00058920
-	// (set) Token: 0x06001C09 RID: 7177 RVA: 0x0005A728 File Offset: 0x00058928
+	// Token: 0x17001019 RID: 4121
+	// (get) Token: 0x060026CA RID: 9930 RVA: 0x00015B7B File Offset: 0x00013D7B
+	// (set) Token: 0x060026CB RID: 9931 RVA: 0x00015B83 File Offset: 0x00013D83
 	public Vector2 ExternalRicochetKnockbackAmount
 	{
 		get
@@ -19,13 +19,13 @@ public class RicochetObj : MonoBehaviour, IRicochetObj, IRootObj
 		}
 	}
 
-	// Token: 0x06001C0B RID: 7179 RVA: 0x0005A744 File Offset: 0x00058944
+	// Token: 0x060026CD RID: 9933 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04001988 RID: 6536
+	// Token: 0x04002183 RID: 8579
 	[SerializeField]
 	private Vector2 m_externalRicochetKnockbackAmount = Player_EV.PLAYER_BASE_KNOCKBACK_DISTANCE;
 }

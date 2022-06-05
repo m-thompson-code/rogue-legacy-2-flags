@@ -2,11 +2,11 @@
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x0200043C RID: 1084
+// Token: 0x02000705 RID: 1797
 public class NoAttacking_FairyRule : FairyRule
 {
-	// Token: 0x17000FB0 RID: 4016
-	// (get) Token: 0x060027CD RID: 10189 RVA: 0x000844A3 File Offset: 0x000826A3
+	// Token: 0x17001493 RID: 5267
+	// (get) Token: 0x060036DF RID: 14047 RVA: 0x0001E31A File Offset: 0x0001C51A
 	public override string Description
 	{
 		get
@@ -15,8 +15,8 @@ public class NoAttacking_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FB1 RID: 4017
-	// (get) Token: 0x060027CE RID: 10190 RVA: 0x000844AA File Offset: 0x000826AA
+	// Token: 0x17001494 RID: 5268
+	// (get) Token: 0x060036E0 RID: 14048 RVA: 0x0000452B File Offset: 0x0000272B
 	public override FairyRuleID ID
 	{
 		get
@@ -25,8 +25,8 @@ public class NoAttacking_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FB2 RID: 4018
-	// (get) Token: 0x060027CF RID: 10191 RVA: 0x000844AE File Offset: 0x000826AE
+	// Token: 0x17001495 RID: 5269
+	// (get) Token: 0x060036E1 RID: 14049 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool LockChestAtStart
 	{
 		get
@@ -35,13 +35,13 @@ public class NoAttacking_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027D0 RID: 10192 RVA: 0x000844B1 File Offset: 0x000826B1
+	// Token: 0x060036E2 RID: 14050 RVA: 0x0001E321 File Offset: 0x0001C521
 	private void Awake()
 	{
 		this.m_onAbilityCast = new Action<MonoBehaviour, EventArgs>(this.OnAbilityCast);
 	}
 
-	// Token: 0x060027D1 RID: 10193 RVA: 0x000844C8 File Offset: 0x000826C8
+	// Token: 0x060036E3 RID: 14051 RVA: 0x000E4EEC File Offset: 0x000E30EC
 	public override void RunRule(FairyRoomController fairyRoomController)
 	{
 		CharacterDownStrike_RL characterDownStrike = PlayerManager.GetPlayerController().CharacterDownStrike;
@@ -51,7 +51,7 @@ public class NoAttacking_FairyRule : FairyRule
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerWeaponAbilityCast, this.m_onAbilityCast);
 	}
 
-	// Token: 0x060027D2 RID: 10194 RVA: 0x00084528 File Offset: 0x00082728
+	// Token: 0x060036E4 RID: 14052 RVA: 0x000E4F4C File Offset: 0x000E314C
 	private void OnAbilityCast(object sender, EventArgs args)
 	{
 		AbilityUsedEventArgs abilityUsedEventArgs = args as AbilityUsedEventArgs;
@@ -62,7 +62,7 @@ public class NoAttacking_FairyRule : FairyRule
 		base.SetIsFailed();
 	}
 
-	// Token: 0x060027D3 RID: 10195 RVA: 0x00084554 File Offset: 0x00082754
+	// Token: 0x060036E5 RID: 14053 RVA: 0x000E4F78 File Offset: 0x000E3178
 	public override void StopRule()
 	{
 		base.StopRule();
@@ -73,6 +73,6 @@ public class NoAttacking_FairyRule : FairyRule
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerWeaponAbilityCast, this.m_onAbilityCast);
 	}
 
-	// Token: 0x04002138 RID: 8504
+	// Token: 0x04002C69 RID: 11369
 	private Action<MonoBehaviour, EventArgs> m_onAbilityCast;
 }

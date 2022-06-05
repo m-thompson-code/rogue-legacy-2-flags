@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x0200090F RID: 2319
+	// Token: 0x02000E8C RID: 3724
 	public class ReenactmentControllerAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001880 RID: 6272
-		// (get) Token: 0x06004C15 RID: 19477 RVA: 0x00111552 File Offset: 0x0010F752
+		// Token: 0x17002179 RID: 8569
+		// (get) Token: 0x06006910 RID: 26896 RVA: 0x0003A37D File Offset: 0x0003857D
 		public string Description
 		{
 			get
@@ -22,7 +22,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C16 RID: 19478 RVA: 0x00111578 File Offset: 0x0010F778
+		// Token: 0x06006911 RID: 26897 RVA: 0x0018153C File Offset: 0x0017F73C
 		private void Awake()
 		{
 			ReenactmentController component = base.GetComponent<ReenactmentController>();
@@ -32,7 +32,7 @@ namespace RLAudio
 			component.OnItemTrackerTriggeredRelay.AddListener(new Action<ItemTrackerData>(this.OnGoldGain), false);
 		}
 
-		// Token: 0x06004C17 RID: 19479 RVA: 0x001115F0 File Offset: 0x0010F7F0
+		// Token: 0x06006912 RID: 26898 RVA: 0x001815B4 File Offset: 0x0017F7B4
 		private void OnDestroy()
 		{
 			ReenactmentController component = base.GetComponent<ReenactmentController>();
@@ -42,13 +42,13 @@ namespace RLAudio
 			component.OnItemTrackerTriggeredRelay.RemoveListener(new Action<ItemTrackerData>(this.OnGoldGain));
 		}
 
-		// Token: 0x06004C18 RID: 19480 RVA: 0x00111664 File Offset: 0x0010F864
+		// Token: 0x06006913 RID: 26899 RVA: 0x00181628 File Offset: 0x0017F828
 		private void OnGoldGain(ItemTrackerData goldData)
 		{
 			AudioManager.Play(this, this.m_goldGainEventPath, default(Vector3));
 		}
 
-		// Token: 0x06004C19 RID: 19481 RVA: 0x00111688 File Offset: 0x0010F888
+		// Token: 0x06006914 RID: 26900 RVA: 0x0018164C File Offset: 0x0017F84C
 		private void OnChestOpened(ChestTrackerData chestData)
 		{
 			AudioManager.Play(this, this.m_chestOpenedEventPath, default(Vector3));
@@ -58,13 +58,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C1A RID: 19482 RVA: 0x001116C8 File Offset: 0x0010F8C8
+		// Token: 0x06006915 RID: 26901 RVA: 0x0018168C File Offset: 0x0017F88C
 		private void OnEnemyKilled(EnemyTrackerData enemyData)
 		{
 			AudioManager.Play(this, this.m_enemyKilledEventPath, default(Vector3));
 		}
 
-		// Token: 0x06004C1B RID: 19483 RVA: 0x001116EC File Offset: 0x0010F8EC
+		// Token: 0x06006916 RID: 26902 RVA: 0x001816B0 File Offset: 0x0017F8B0
 		private void OnRoomEntered(RoomTrackerData roomData)
 		{
 			foreach (GridPointManager gridPointManager in WorldBuilder.GetBiomeController(roomData.Biome).GridPointManager.GridPointManagers)
@@ -82,37 +82,37 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x0400400C RID: 16396
+		// Token: 0x0400556C RID: 21868
 		[SerializeField]
 		[EventRef]
 		private string m_smallRoomEnteredEventPath;
 
-		// Token: 0x0400400D RID: 16397
+		// Token: 0x0400556D RID: 21869
 		[SerializeField]
 		[EventRef]
 		private string m_largeRoomEnteredEventPath;
 
-		// Token: 0x0400400E RID: 16398
+		// Token: 0x0400556E RID: 21870
 		[SerializeField]
 		[EventRef]
 		private string m_enemyKilledEventPath;
 
-		// Token: 0x0400400F RID: 16399
+		// Token: 0x0400556F RID: 21871
 		[SerializeField]
 		[EventRef]
 		private string m_chestOpenedEventPath;
 
-		// Token: 0x04004010 RID: 16400
+		// Token: 0x04005570 RID: 21872
 		[SerializeField]
 		[EventRef]
 		private string m_goldGainEventPath;
 
-		// Token: 0x04004011 RID: 16401
+		// Token: 0x04005571 RID: 21873
 		[SerializeField]
 		[EventRef]
 		private string m_discoveryEventPath;
 
-		// Token: 0x04004012 RID: 16402
+		// Token: 0x04005572 RID: 21874
 		private string m_description = string.Empty;
 	}
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x0200006A RID: 106
+// Token: 0x02000072 RID: 114
 public class Insight_EV
 {
-	// Token: 0x0400038F RID: 911
+	// Token: 0x040003B0 RID: 944
 	public const float INSIGHT_PLAYER_DAMAGE_MOD = 1.15f;
 
-	// Token: 0x04000390 RID: 912
+	// Token: 0x040003B1 RID: 945
 	public const float INSIGHT_BOSS_DAMAGE_MOD = 1f;
 
-	// Token: 0x04000391 RID: 913
+	// Token: 0x040003B2 RID: 946
 	public const float INSIGHT_FINALBOSS_PLAYER_DAMAGE_MOD = 0.05f;
 
-	// Token: 0x04000392 RID: 914
+	// Token: 0x040003B3 RID: 947
 	public const float INSIGHT_FINALBOSS_DAMAGE_MOD = 0f;
 
-	// Token: 0x04000393 RID: 915
+	// Token: 0x040003B4 RID: 948
 	public static Dictionary<InsightType, InsightLocIDEntry> LocIDTable = new Dictionary<InsightType, InsightLocIDEntry>
 	{
 		{
@@ -321,7 +321,7 @@ public class Insight_EV
 		}
 	};
 
-	// Token: 0x04000394 RID: 916
+	// Token: 0x040003B5 RID: 949
 	public static Dictionary<string, InsightUnlockEntry> InsightUnlockTable = new Dictionary<string, InsightUnlockEntry>
 	{
 		{

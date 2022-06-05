@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000770 RID: 1904
+// Token: 0x02000C31 RID: 3121
 public class ShaderID_RL
 {
-	// Token: 0x0600414A RID: 16714 RVA: 0x000E81CC File Offset: 0x000E63CC
+	// Token: 0x06005AC7 RID: 23239 RVA: 0x00157728 File Offset: 0x00155928
 	public static int GetShaderID(ShaderID shaderID)
 	{
 		switch (shaderID)
@@ -42,45 +42,45 @@ public class ShaderID_RL
 		}
 	}
 
-	// Token: 0x040036A1 RID: 13985
+	// Token: 0x04004951 RID: 18769
 	public static readonly int _AlphaBlendColor = Shader.PropertyToID("_AlphaBlendColor");
 
-	// Token: 0x040036A2 RID: 13986
+	// Token: 0x04004952 RID: 18770
 	public static readonly int _RimLightColor = Shader.PropertyToID("_RimLightColor");
 
-	// Token: 0x040036A3 RID: 13987
+	// Token: 0x04004953 RID: 18771
 	public static readonly int _MultiplyColor = Shader.PropertyToID("_MultiplyColor");
 
-	// Token: 0x040036A4 RID: 13988
+	// Token: 0x04004954 RID: 18772
 	public static readonly int _AddColor = Shader.PropertyToID("_AddColor");
 
-	// Token: 0x040036A5 RID: 13989
+	// Token: 0x04004955 RID: 18773
 	public static readonly int _MainColor = Shader.PropertyToID("_MainColor");
 
-	// Token: 0x040036A6 RID: 13990
+	// Token: 0x04004956 RID: 18774
 	public static readonly int _ShieldToggle = Shader.PropertyToID("_ShieldToggle");
 
-	// Token: 0x040036A7 RID: 13991
+	// Token: 0x04004957 RID: 18775
 	public static readonly int _Dissolve = Shader.PropertyToID("_Dissolve");
 
-	// Token: 0x040036A8 RID: 13992
+	// Token: 0x04004958 RID: 18776
 	public static readonly int _Opacity = Shader.PropertyToID("_Opacity");
 
-	// Token: 0x040036A9 RID: 13993
+	// Token: 0x04004959 RID: 18777
 	public static readonly int _RimBias = Shader.PropertyToID("_RimBias");
 
-	// Token: 0x040036AA RID: 13994
+	// Token: 0x0400495A RID: 18778
 	public static readonly int _RimScale = Shader.PropertyToID("_RimScale");
 
-	// Token: 0x040036AB RID: 13995
+	// Token: 0x0400495B RID: 18779
 	public static readonly int _ArmorColor = Shader.PropertyToID("_ArmorColor");
 
-	// Token: 0x040036AC RID: 13996
+	// Token: 0x0400495C RID: 18780
 	public static readonly int _CapeColor = Shader.PropertyToID("_CapeColor");
 
-	// Token: 0x040036AD RID: 13997
+	// Token: 0x0400495D RID: 18781
 	public static readonly int _HelmetColor = Shader.PropertyToID("_HelmetColor");
 
-	// Token: 0x040036AE RID: 13998
+	// Token: 0x0400495E RID: 18782
 	public static readonly int _OutlineScale = Shader.PropertyToID("_OutlineScale");
 }

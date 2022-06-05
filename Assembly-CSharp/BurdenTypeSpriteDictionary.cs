@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000013 RID: 19
+// Token: 0x02000016 RID: 22
 [Serializable]
 public class BurdenTypeSpriteDictionary : SerializableDictionary<BurdenType, Sprite>
 {

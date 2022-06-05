@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020000CF RID: 207
+// Token: 0x0200014C RID: 332
 public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 {
-	// Token: 0x060005EC RID: 1516 RVA: 0x00018AFD File Offset: 0x00016CFD
+	// Token: 0x060008AF RID: 2223 RVA: 0x000061BB File Offset: 0x000043BB
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -17,8 +17,8 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		};
 	}
 
-	// Token: 0x170002E4 RID: 740
-	// (get) Token: 0x060005ED RID: 1517 RVA: 0x00018B2B File Offset: 0x00016D2B
+	// Token: 0x170003CE RID: 974
+	// (get) Token: 0x060008B0 RID: 2224 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected override float m_flameWalk_Exit_ForceIdle
 	{
 		get
@@ -27,8 +27,8 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170002E5 RID: 741
-	// (get) Token: 0x060005EE RID: 1518 RVA: 0x00018B32 File Offset: 0x00016D32
+	// Token: 0x170003CF RID: 975
+	// (get) Token: 0x060008B1 RID: 2225 RVA: 0x00003E63 File Offset: 0x00002063
 	protected override float m_flameWalk_AttackCD
 	{
 		get
@@ -37,8 +37,8 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170002E6 RID: 742
-	// (get) Token: 0x060005EF RID: 1519 RVA: 0x00018B39 File Offset: 0x00016D39
+	// Token: 0x170003D0 RID: 976
+	// (get) Token: 0x060008B2 RID: 2226 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected override float m_flameWalk_AttackMoveSpeed
 	{
 		get
@@ -47,8 +47,8 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170002E7 RID: 743
-	// (get) Token: 0x060005F0 RID: 1520 RVA: 0x00018B40 File Offset: 0x00016D40
+	// Token: 0x170003D1 RID: 977
+	// (get) Token: 0x060008B3 RID: 2227 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected virtual float m_jumpAttack_Exit_ForceIdle
 	{
 		get
@@ -57,8 +57,8 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170002E8 RID: 744
-	// (get) Token: 0x060005F1 RID: 1521 RVA: 0x00018B47 File Offset: 0x00016D47
+	// Token: 0x170003D2 RID: 978
+	// (get) Token: 0x060008B4 RID: 2228 RVA: 0x00003E63 File Offset: 0x00002063
 	protected virtual float m_jumpAttack_AttackCD
 	{
 		get
@@ -67,8 +67,8 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170002E9 RID: 745
-	// (get) Token: 0x060005F2 RID: 1522 RVA: 0x00018B4E File Offset: 0x00016D4E
+	// Token: 0x170003D3 RID: 979
+	// (get) Token: 0x060008B5 RID: 2229 RVA: 0x000061E9 File Offset: 0x000043E9
 	protected virtual Vector2 m_jumpAttack_Power
 	{
 		get
@@ -77,8 +77,8 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170002EA RID: 746
-	// (get) Token: 0x060005F3 RID: 1523 RVA: 0x00018B5F File Offset: 0x00016D5F
+	// Token: 0x170003D4 RID: 980
+	// (get) Token: 0x060008B6 RID: 2230 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_jumpAttack_hasMultipleFlames
 	{
 		get
@@ -87,8 +87,8 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170002EB RID: 747
-	// (get) Token: 0x060005F4 RID: 1524 RVA: 0x00018B62 File Offset: 0x00016D62
+	// Token: 0x170003D5 RID: 981
+	// (get) Token: 0x060008B7 RID: 2231 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected virtual float m_jumpAttack_AttackDuration
 	{
 		get
@@ -97,8 +97,8 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170002EC RID: 748
-	// (get) Token: 0x060005F5 RID: 1525 RVA: 0x00018B69 File Offset: 0x00016D69
+	// Token: 0x170003D6 RID: 982
+	// (get) Token: 0x060008B8 RID: 2232 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_jumpAttack_AttackMoveSpeed
 	{
 		get
@@ -107,7 +107,7 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		}
 	}
 
-	// Token: 0x060005F6 RID: 1526 RVA: 0x00018B70 File Offset: 0x00016D70
+	// Token: 0x060008B9 RID: 2233 RVA: 0x000061FA File Offset: 0x000043FA
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -182,39 +182,39 @@ public class Flamer_Miniboss_AIScript : Flamer_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x04000A37 RID: 2615
+	// Token: 0x04000C78 RID: 3192
 	protected const string FLAMEWALK_LINEBOLT_MINIBOSS_PROJECTILE = "FlamerLineBoltMinibossProjectile";
 
-	// Token: 0x04000A38 RID: 2616
+	// Token: 0x04000C79 RID: 3193
 	protected float m_jump_Tell_Delay = 0.75f;
 
-	// Token: 0x04000A39 RID: 2617
+	// Token: 0x04000C7A RID: 3194
 	protected float m_jump_Tell_AnimationSpeed = 0.75f;
 
-	// Token: 0x04000A3A RID: 2618
+	// Token: 0x04000C7B RID: 3195
 	protected float m_jumpAttack_TellIntro_AnimationSpeed = 0.85f;
 
-	// Token: 0x04000A3B RID: 2619
+	// Token: 0x04000C7C RID: 3196
 	protected float m_jumpAttack_TellHold_AnimationSpeed = 1.3f;
 
-	// Token: 0x04000A3C RID: 2620
+	// Token: 0x04000C7D RID: 3197
 	protected float m_jumpAttack_Tell_Delay = 0.5f;
 
-	// Token: 0x04000A3D RID: 2621
+	// Token: 0x04000C7E RID: 3198
 	protected float m_jumpAttack_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000A3E RID: 2622
+	// Token: 0x04000C7F RID: 3199
 	protected float m_jumpAttack_AttackIntro_Delay;
 
-	// Token: 0x04000A3F RID: 2623
+	// Token: 0x04000C80 RID: 3200
 	protected float m_jumpAttack_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000A40 RID: 2624
+	// Token: 0x04000C81 RID: 3201
 	protected float m_jumpAttack_AttackHold_Delay;
 
-	// Token: 0x04000A41 RID: 2625
+	// Token: 0x04000C82 RID: 3202
 	protected float m_jumpAttack_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000A42 RID: 2626
+	// Token: 0x04000C83 RID: 3203
 	protected float m_jumpAttack_Exit_Delay;
 }

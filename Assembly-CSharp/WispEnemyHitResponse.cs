@@ -3,16 +3,16 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020003ED RID: 1005
+// Token: 0x02000691 RID: 1681
 public class WispEnemyHitResponse : EnemyHitResponse
 {
-	// Token: 0x0600250E RID: 9486 RVA: 0x0007B168 File Offset: 0x00079368
+	// Token: 0x06003362 RID: 13154 RVA: 0x0001C29D File Offset: 0x0001A49D
 	private void OnEnable()
 	{
 		this.m_sprite.SetActive(true);
 	}
 
-	// Token: 0x0600250F RID: 9487 RVA: 0x0007B178 File Offset: 0x00079378
+	// Token: 0x06003363 RID: 13155 RVA: 0x000DB228 File Offset: 0x000D9428
 	public override void StartHitResponse(GameObject otherRootGameObj, IDamageObj damageObj, float damageOverride = -1f, bool trueDamage = false, bool fireEvents = true)
 	{
 		if (damageObj is DownstrikeProjectile_RL)
@@ -31,7 +31,7 @@ public class WispEnemyHitResponse : EnemyHitResponse
 		}
 	}
 
-	// Token: 0x06002510 RID: 9488 RVA: 0x0007B1DE File Offset: 0x000793DE
+	// Token: 0x06003364 RID: 13156 RVA: 0x0001C2AB File Offset: 0x0001A4AB
 	private IEnumerator BlinkCoroutine(float duration)
 	{
 		this.m_sprite.SetActive(false);
@@ -57,17 +57,17 @@ public class WispEnemyHitResponse : EnemyHitResponse
 		yield break;
 	}
 
-	// Token: 0x04001F56 RID: 8022
+	// Token: 0x040029E2 RID: 10722
 	[SerializeField]
 	private GameObject m_sprite;
 
-	// Token: 0x04001F57 RID: 8023
+	// Token: 0x040029E3 RID: 10723
 	[SerializeField]
 	private DamageAudioController m_damageAudioController;
 
-	// Token: 0x04001F58 RID: 8024
+	// Token: 0x040029E4 RID: 10724
 	private const float m_blinkInterval = 0.05f;
 
-	// Token: 0x04001F59 RID: 8025
+	// Token: 0x040029E5 RID: 10725
 	private Coroutine m_blinkCoroutine;
 }

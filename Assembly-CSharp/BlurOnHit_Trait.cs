@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000321 RID: 801
+// Token: 0x02000568 RID: 1384
 public class BlurOnHit_Trait : BaseTrait
 {
-	// Token: 0x17000DA5 RID: 3493
-	// (get) Token: 0x06001F95 RID: 8085 RVA: 0x00064F87 File Offset: 0x00063187
+	// Token: 0x170011CC RID: 4556
+	// (get) Token: 0x06002C3C RID: 11324 RVA: 0x0001890F File Offset: 0x00016B0F
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class BlurOnHit_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001F96 RID: 8086 RVA: 0x00064F8E File Offset: 0x0006318E
+	// Token: 0x06002C3D RID: 11325 RVA: 0x00018916 File Offset: 0x00016B16
 	protected override void Awake()
 	{
 		base.Awake();
@@ -23,7 +23,7 @@ public class BlurOnHit_Trait : BaseTrait
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.BiomeEnter, new Action<MonoBehaviour, EventArgs>(this.OnBiomeEnter));
 	}
 
-	// Token: 0x06001F97 RID: 8087 RVA: 0x00064FBB File Offset: 0x000631BB
+	// Token: 0x06002C3E RID: 11326 RVA: 0x00018943 File Offset: 0x00016B43
 	private IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -42,7 +42,7 @@ public class BlurOnHit_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001F98 RID: 8088 RVA: 0x00064FCC File Offset: 0x000631CC
+	// Token: 0x06002C3F RID: 11327 RVA: 0x000C53C4 File Offset: 0x000C35C4
 	public override void AssignGreenMask()
 	{
 		base.AssignGreenMask();
@@ -52,7 +52,7 @@ public class BlurOnHit_Trait : BaseTrait
 		this.m_postProcessOverrideController.Profile.OverrideTintRedChannel = false;
 	}
 
-	// Token: 0x06001F99 RID: 8089 RVA: 0x00065038 File Offset: 0x00063238
+	// Token: 0x06002C40 RID: 11328 RVA: 0x000C5430 File Offset: 0x000C3630
 	private void OnPlayerHit(MonoBehaviour sender, EventArgs args)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -64,7 +64,7 @@ public class BlurOnHit_Trait : BaseTrait
 		base.StartCoroutine(this.BlurCoroutine());
 	}
 
-	// Token: 0x06001F9A RID: 8090 RVA: 0x0006506F File Offset: 0x0006326F
+	// Token: 0x06002C41 RID: 11329 RVA: 0x00018952 File Offset: 0x00016B52
 	private IEnumerator BlurCoroutine()
 	{
 		this.m_blurGameObject.SetActive(true);
@@ -87,7 +87,7 @@ public class BlurOnHit_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001F9B RID: 8091 RVA: 0x00065080 File Offset: 0x00063280
+	// Token: 0x06002C42 RID: 11330 RVA: 0x000C5468 File Offset: 0x000C3668
 	public override void DisableOnCutscene()
 	{
 		if (this.m_blurTween)
@@ -100,7 +100,7 @@ public class BlurOnHit_Trait : BaseTrait
 		base.DisableOnCutscene();
 	}
 
-	// Token: 0x06001F9C RID: 8092 RVA: 0x000650D4 File Offset: 0x000632D4
+	// Token: 0x06002C43 RID: 11331 RVA: 0x000C54BC File Offset: 0x000C36BC
 	public override void DisableOnDeath()
 	{
 		if (this.m_blurTween)
@@ -113,7 +113,7 @@ public class BlurOnHit_Trait : BaseTrait
 		base.DisableOnDeath();
 	}
 
-	// Token: 0x06001F9D RID: 8093 RVA: 0x00065128 File Offset: 0x00063328
+	// Token: 0x06002C44 RID: 11332 RVA: 0x000C5510 File Offset: 0x000C3710
 	private void OnBiomeEnter(object sender, EventArgs args)
 	{
 		if (this.m_blurTween)
@@ -125,7 +125,7 @@ public class BlurOnHit_Trait : BaseTrait
 		CameraController.ForegroundPostProcessing.TintBaselineAmount = 0f;
 	}
 
-	// Token: 0x06001F9E RID: 8094 RVA: 0x00065178 File Offset: 0x00063378
+	// Token: 0x06002C45 RID: 11333 RVA: 0x000C5560 File Offset: 0x000C3760
 	private void OnDestroy()
 	{
 		if (this.m_traitMask)
@@ -139,16 +139,16 @@ public class BlurOnHit_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x04001C33 RID: 7219
+	// Token: 0x04002557 RID: 9559
 	[SerializeField]
 	private GameObject m_blurGameObject;
 
-	// Token: 0x04001C34 RID: 7220
+	// Token: 0x04002558 RID: 9560
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04001C35 RID: 7221
+	// Token: 0x04002559 RID: 9561
 	private Tween m_blurTween;
 
-	// Token: 0x04001C36 RID: 7222
+	// Token: 0x0400255A RID: 9562
 	private Action<MonoBehaviour, EventArgs> m_onPlayerHit;
 }

@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000919 RID: 2329
+	// Token: 0x02000E97 RID: 3735
 	public class Surface : MonoBehaviour
 	{
-		// Token: 0x17001889 RID: 6281
-		// (get) Token: 0x06004C51 RID: 19537 RVA: 0x00112355 File Offset: 0x00110555
+		// Token: 0x17002184 RID: 8580
+		// (get) Token: 0x06006952 RID: 26962 RVA: 0x0003A6E9 File Offset: 0x000388E9
 		public SurfaceType SurfaceType
 		{
 			get
@@ -16,7 +16,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04004057 RID: 16471
+		// Token: 0x040055BF RID: 21951
 		[SerializeField]
 		private SurfaceType m_surfaceType;
 	}

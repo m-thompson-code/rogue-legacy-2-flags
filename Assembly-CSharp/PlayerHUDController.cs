@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Token: 0x020003D9 RID: 985
+// Token: 0x02000676 RID: 1654
 public class PlayerHUDController : MonoBehaviour, ILocalizable
 {
-	// Token: 0x06002432 RID: 9266 RVA: 0x0007794C File Offset: 0x00075B4C
+	// Token: 0x0600325C RID: 12892 RVA: 0x000D79EC File Offset: 0x000D5BEC
 	private void Awake()
 	{
 		this.m_fadeOutHUDCollider.SetCanvasGroup(this.m_hudCanvasGroup);
@@ -28,13 +28,13 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 	}
 
-	// Token: 0x06002433 RID: 9267 RVA: 0x00077A67 File Offset: 0x00075C67
+	// Token: 0x0600325D RID: 12893 RVA: 0x0001BA19 File Offset: 0x00019C19
 	private void OnDestroy()
 	{
 		SceneManager.sceneLoaded -= this.OnSceneLoaded;
 	}
 
-	// Token: 0x06002434 RID: 9268 RVA: 0x00077A7C File Offset: 0x00075C7C
+	// Token: 0x0600325E RID: 12894 RVA: 0x000D7B08 File Offset: 0x000D5D08
 	private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
 	{
 		if (GameUtility.SceneHasRooms && SceneLoadingUtility.ActiveScene.name != SceneLoadingUtility.GetSceneName(SceneID.Lineage))
@@ -51,7 +51,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002435 RID: 9269 RVA: 0x00077ADE File Offset: 0x00075CDE
+	// Token: 0x0600325F RID: 12895 RVA: 0x0001BA2C File Offset: 0x00019C2C
 	private IEnumerator Start()
 	{
 		this.m_spellOrbStoredPos = this.m_spellOrbIcon.transform.parent.localPosition;
@@ -70,7 +70,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x06002436 RID: 9270 RVA: 0x00077AF0 File Offset: 0x00075CF0
+	// Token: 0x06003260 RID: 12896 RVA: 0x000D7B6C File Offset: 0x000D5D6C
 	private void OnEnable()
 	{
 		this.m_spellOrbIcon.gameObject.SetActive(false);
@@ -90,7 +90,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06002437 RID: 9271 RVA: 0x00077BC0 File Offset: 0x00075DC0
+	// Token: 0x06003261 RID: 12897 RVA: 0x000D7C3C File Offset: 0x000D5E3C
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.DisplayPlayerHUD, this.m_tweenInHUD);
@@ -109,7 +109,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06002438 RID: 9272 RVA: 0x00077C80 File Offset: 0x00075E80
+	// Token: 0x06003262 RID: 12898 RVA: 0x000D7CFC File Offset: 0x000D5EFC
 	private void TweenOutHUD(object sender, EventArgs args)
 	{
 		this.m_storedFadeOutHUDAlpha = 1f;
@@ -152,7 +152,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		});
 	}
 
-	// Token: 0x06002439 RID: 9273 RVA: 0x00077DC0 File Offset: 0x00075FC0
+	// Token: 0x06003263 RID: 12899 RVA: 0x000D7E3C File Offset: 0x000D603C
 	private void TweenInHUD(object sender, EventArgs args)
 	{
 		float duration = 0f;
@@ -185,7 +185,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		});
 	}
 
-	// Token: 0x0600243A RID: 9274 RVA: 0x00077EAC File Offset: 0x000760AC
+	// Token: 0x06003264 RID: 12900 RVA: 0x000D7F28 File Offset: 0x000D6128
 	private void OnWorldCreated(object sender, EventArgs args)
 	{
 		if (this.m_playerHUDAlphaTween)
@@ -207,7 +207,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.m_minimapFrameGO.SetActive(false);
 	}
 
-	// Token: 0x0600243B RID: 9275 RVA: 0x00077F50 File Offset: 0x00076150
+	// Token: 0x06003265 RID: 12901 RVA: 0x000D7FCC File Offset: 0x000D61CC
 	private void OnSkillTreeOpen(object sender, EventArgs eventArgs)
 	{
 		if (this.m_playerHUDAlphaTween && this.m_playerHUDAlphaTween.isActiveAndEnabled && this.m_playerHUDAlphaTween.ID == "HUDFadeTween")
@@ -219,7 +219,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.m_minimapCanvasGroup.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600243C RID: 9276 RVA: 0x00077FCC File Offset: 0x000761CC
+	// Token: 0x06003266 RID: 12902 RVA: 0x000D8048 File Offset: 0x000D6248
 	private void OnSkillTreeClosed(object sender, EventArgs eventArgs)
 	{
 		this.m_hudCanvasGroup.alpha = this.m_storedFadeOutHUDAlpha;
@@ -232,7 +232,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.m_minimapFrameGO.SetActive(false);
 	}
 
-	// Token: 0x0600243D RID: 9277 RVA: 0x00078020 File Offset: 0x00076220
+	// Token: 0x06003267 RID: 12903 RVA: 0x000D809C File Offset: 0x000D629C
 	private void OnSkillLevelChanged(object sender, EventArgs eventArgs)
 	{
 		this.m_levelText.text = string.Format(LocalizationManager.GetString("LOC_ID_HUD_TITLE_CHARACTER_LEVEL_1", false, false), SkillTreeManager.GetTotalSkillObjLevel());
@@ -241,7 +241,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.m_resolveTransform.anchoredPosition = anchoredPosition;
 	}
 
-	// Token: 0x0600243E RID: 9278 RVA: 0x00078080 File Offset: 0x00076280
+	// Token: 0x06003268 RID: 12904 RVA: 0x000D80FC File Offset: 0x000D62FC
 	private void OnHealthChange(object sender, EventArgs eventArgs)
 	{
 		if (PlayerHUDController.IgnoreHealthChangeEvents)
@@ -255,14 +255,14 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.UpdateExhaust(playerController);
 	}
 
-	// Token: 0x0600243F RID: 9279 RVA: 0x000780B8 File Offset: 0x000762B8
+	// Token: 0x06003269 RID: 12905 RVA: 0x000D8134 File Offset: 0x000D6334
 	private void OnExhaustChange(object sender, EventArgs eventArgs)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
 		this.UpdateExhaust(playerController);
 	}
 
-	// Token: 0x06002440 RID: 9280 RVA: 0x000780D4 File Offset: 0x000762D4
+	// Token: 0x0600326A RID: 12906 RVA: 0x000D8150 File Offset: 0x000D6350
 	private void UpdateExhaust(PlayerController playerController)
 	{
 		float num = (float)playerController.CurrentExhaust * 0.01f;
@@ -283,7 +283,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.m_hpExhaustBar.fillAmount = 1f - num4;
 	}
 
-	// Token: 0x06002441 RID: 9281 RVA: 0x000781A4 File Offset: 0x000763A4
+	// Token: 0x0600326B RID: 12907 RVA: 0x000D8220 File Offset: 0x000D6420
 	private void OnMaxHealthChange(object sender, EventArgs eventArgs)
 	{
 		MaxHealthChangeEventArgs maxHealthChangeEventArgs = eventArgs as MaxHealthChangeEventArgs;
@@ -314,7 +314,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002442 RID: 9282 RVA: 0x000782D4 File Offset: 0x000764D4
+	// Token: 0x0600326C RID: 12908 RVA: 0x000D8350 File Offset: 0x000D6550
 	private void UpdateHealth(PlayerController playerController)
 	{
 		bool flag = (this.m_storedCurrentArmor > 0 && playerController.CurrentArmor <= 0) || (this.m_storedCurrentArmor <= 0 && playerController.CurrentArmor > 0);
@@ -368,7 +368,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002443 RID: 9283 RVA: 0x00078518 File Offset: 0x00076718
+	// Token: 0x0600326D RID: 12909 RVA: 0x000D8594 File Offset: 0x000D6794
 	private void OnManaChange(object sender, EventArgs eventArgs)
 	{
 		ManaChangeEventArgs manaChangeEventArgs = eventArgs as ManaChangeEventArgs;
@@ -376,13 +376,13 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.UpdateSpellOrbs(PlayerManager.GetPlayerController());
 	}
 
-	// Token: 0x06002444 RID: 9284 RVA: 0x00078543 File Offset: 0x00076743
+	// Token: 0x0600326E RID: 12910 RVA: 0x0001BA3B File Offset: 0x00019C3B
 	private void OnResolveChange(object sender, EventArgs eventArgs)
 	{
 		this.UpdateResolve(PlayerManager.GetPlayerController());
 	}
 
-	// Token: 0x06002445 RID: 9285 RVA: 0x00078550 File Offset: 0x00076750
+	// Token: 0x0600326F RID: 12911 RVA: 0x000D85C0 File Offset: 0x000D67C0
 	private void UpdateMana(PlayerController player)
 	{
 		if (this.m_storedMaxMP != (float)player.ActualMaxMana)
@@ -400,7 +400,7 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.m_mpText.text = string.Format("{0} / {1}", player.CurrentManaAsInt, player.ActualMaxMana);
 	}
 
-	// Token: 0x06002446 RID: 9286 RVA: 0x0007861C File Offset: 0x0007681C
+	// Token: 0x06003270 RID: 12912 RVA: 0x000D868C File Offset: 0x000D688C
 	private void UpdateShield(PlayerController playerController)
 	{
 		int currentArmor = playerController.CurrentArmor;
@@ -451,12 +451,12 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.m_storedCurrentArmor = currentArmor;
 	}
 
-	// Token: 0x06002447 RID: 9287 RVA: 0x0007879C File Offset: 0x0007699C
+	// Token: 0x06003271 RID: 12913 RVA: 0x000D880C File Offset: 0x000D6A0C
 	private void UpdateSpellOrbs(PlayerController playerController)
 	{
 	}
 
-	// Token: 0x06002448 RID: 9288 RVA: 0x000787AC File Offset: 0x000769AC
+	// Token: 0x06003272 RID: 12914 RVA: 0x000D881C File Offset: 0x000D6A1C
 	private void UpdateResolve(PlayerController playerController)
 	{
 		float actualResolve = playerController.ActualResolve;
@@ -473,191 +473,191 @@ public class PlayerHUDController : MonoBehaviour, ILocalizable
 		this.m_resolveText.text = string.Format(LocalizationManager.GetString("LOC_ID_GENERAL_UI_PERCENT_1", false, false), Mathf.RoundToInt(actualResolve * 100f));
 	}
 
-	// Token: 0x06002449 RID: 9289 RVA: 0x0007881D File Offset: 0x00076A1D
+	// Token: 0x06003273 RID: 12915 RVA: 0x0001BA48 File Offset: 0x00019C48
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.OnSkillLevelChanged(null, null);
 	}
 
-	// Token: 0x04001EA8 RID: 7848
+	// Token: 0x04002917 RID: 10519
 	private const float MIN_HP_BAR_3_DIGITS_WIDTH = 320f;
 
-	// Token: 0x04001EA9 RID: 7849
+	// Token: 0x04002918 RID: 10520
 	private const float MIN_HP_BAR_2_DIGITS_WIDTH = 270f;
 
-	// Token: 0x04001EAA RID: 7850
+	// Token: 0x04002919 RID: 10521
 	private const float MIN_MP_BAR_3_DIGITS_WIDTH = 280f;
 
-	// Token: 0x04001EAB RID: 7851
+	// Token: 0x0400291A RID: 10522
 	private const float MIN_MP_BAR_2_DIGITS_WIDTH = 230f;
 
-	// Token: 0x04001EAC RID: 7852
+	// Token: 0x0400291B RID: 10523
 	private const float MAX_HP_BAR_WIDTH = 1000f;
 
-	// Token: 0x04001EAD RID: 7853
+	// Token: 0x0400291C RID: 10524
 	private const float MAX_MP_BAR_WIDTH = 800f;
 
-	// Token: 0x04001EAE RID: 7854
+	// Token: 0x0400291D RID: 10525
 	private const float APPROXIMATE_MAX_HP = 1000f;
 
-	// Token: 0x04001EAF RID: 7855
+	// Token: 0x0400291E RID: 10526
 	private const float APPROXIMATE_MAX_MP = 500f;
 
-	// Token: 0x04001EB0 RID: 7856
+	// Token: 0x0400291F RID: 10527
 	private const string HUD_FADE_TWEEN_ID = "HUDFadeTween";
 
-	// Token: 0x04001EB1 RID: 7857
+	// Token: 0x04002920 RID: 10528
 	[SerializeField]
 	private CanvasGroup m_hudCanvasGroup;
 
-	// Token: 0x04001EB2 RID: 7858
+	// Token: 0x04002921 RID: 10529
 	[SerializeField]
 	private CanvasGroup m_minimapCanvasGroup;
 
-	// Token: 0x04001EB3 RID: 7859
+	// Token: 0x04002922 RID: 10530
 	[SerializeField]
 	private GameObject m_minimapFrameGO;
 
-	// Token: 0x04001EB4 RID: 7860
+	// Token: 0x04002923 RID: 10531
 	[SerializeField]
 	private TMP_Text m_levelText;
 
-	// Token: 0x04001EB5 RID: 7861
+	// Token: 0x04002924 RID: 10532
 	[SerializeField]
 	private RectTransform m_hpBarPanelRectTransform;
 
-	// Token: 0x04001EB6 RID: 7862
+	// Token: 0x04002925 RID: 10533
 	[SerializeField]
 	private Image m_hpBar;
 
-	// Token: 0x04001EB7 RID: 7863
+	// Token: 0x04002926 RID: 10534
 	[SerializeField]
 	private RectTransform m_hpBarRectTransform;
 
-	// Token: 0x04001EB8 RID: 7864
+	// Token: 0x04002927 RID: 10535
 	[SerializeField]
 	private Image m_hpExhaustBar;
 
-	// Token: 0x04001EB9 RID: 7865
+	// Token: 0x04002928 RID: 10536
 	[SerializeField]
 	private RectTransform m_hpExhaustBarRectTransform;
 
-	// Token: 0x04001EBA RID: 7866
+	// Token: 0x04002929 RID: 10537
 	[SerializeField]
 	private TMP_Text m_hpText;
 
-	// Token: 0x04001EBB RID: 7867
+	// Token: 0x0400292A RID: 10538
 	[SerializeField]
 	private RectTransform m_mpBarRectTransform;
 
-	// Token: 0x04001EBC RID: 7868
+	// Token: 0x0400292B RID: 10539
 	[SerializeField]
 	private Image m_mpBar;
 
-	// Token: 0x04001EBD RID: 7869
+	// Token: 0x0400292C RID: 10540
 	[SerializeField]
 	private TMP_Text m_mpText;
 
-	// Token: 0x04001EBE RID: 7870
+	// Token: 0x0400292D RID: 10541
 	[SerializeField]
 	private RectTransform m_shieldIcon;
 
-	// Token: 0x04001EBF RID: 7871
+	// Token: 0x0400292E RID: 10542
 	[SerializeField]
 	private TMP_Text m_shieldText;
 
-	// Token: 0x04001EC0 RID: 7872
+	// Token: 0x0400292F RID: 10543
 	[SerializeField]
 	private GameObject m_spellOrbIcon;
 
-	// Token: 0x04001EC1 RID: 7873
+	// Token: 0x04002930 RID: 10544
 	[SerializeField]
 	private TMP_Text m_spellOrbText;
 
-	// Token: 0x04001EC2 RID: 7874
+	// Token: 0x04002931 RID: 10545
 	[SerializeField]
 	private TMP_Text m_resolveText;
 
-	// Token: 0x04001EC3 RID: 7875
+	// Token: 0x04002932 RID: 10546
 	[SerializeField]
 	private RectTransform m_resolveTransform;
 
-	// Token: 0x04001EC4 RID: 7876
+	// Token: 0x04002933 RID: 10547
 	[SerializeField]
 	private FadeOutHUDCollider m_fadeOutHUDCollider;
 
-	// Token: 0x04001EC5 RID: 7877
+	// Token: 0x04002934 RID: 10548
 	private Vector3 m_spellOrbStoredPos;
 
-	// Token: 0x04001EC6 RID: 7878
+	// Token: 0x04002935 RID: 10549
 	private float m_storedMaxHP;
 
-	// Token: 0x04001EC7 RID: 7879
+	// Token: 0x04002936 RID: 10550
 	private float m_storedMaxMP;
 
-	// Token: 0x04001EC8 RID: 7880
+	// Token: 0x04002937 RID: 10551
 	private Tween m_playerHUDAlphaTween;
 
-	// Token: 0x04001EC9 RID: 7881
+	// Token: 0x04002938 RID: 10552
 	private Tween m_minimapHUDAlphaTween;
 
-	// Token: 0x04001ECA RID: 7882
+	// Token: 0x04002939 RID: 10553
 	private TextPopupObj m_maxHealthTextPopup;
 
-	// Token: 0x04001ECB RID: 7883
+	// Token: 0x0400293A RID: 10554
 	private int m_lastMaxHealthChange;
 
-	// Token: 0x04001ECC RID: 7884
+	// Token: 0x0400293B RID: 10555
 	private float m_storedFadeOutHUDAlpha = 1f;
 
-	// Token: 0x04001ECD RID: 7885
+	// Token: 0x0400293C RID: 10556
 	private float m_storedFadeOutMinimapHUDAlpha = 1f;
 
-	// Token: 0x04001ECE RID: 7886
+	// Token: 0x0400293D RID: 10557
 	private BoxCollider2D m_fadeOutHPCollider;
 
-	// Token: 0x04001ECF RID: 7887
+	// Token: 0x0400293E RID: 10558
 	private Action<MonoBehaviour, EventArgs> m_tweenInHUD;
 
-	// Token: 0x04001ED0 RID: 7888
+	// Token: 0x0400293F RID: 10559
 	private Action<MonoBehaviour, EventArgs> m_tweenOutHUD;
 
-	// Token: 0x04001ED1 RID: 7889
+	// Token: 0x04002940 RID: 10560
 	private Action<MonoBehaviour, EventArgs> m_onWorldCreated;
 
-	// Token: 0x04001ED2 RID: 7890
+	// Token: 0x04002941 RID: 10561
 	private Action<MonoBehaviour, EventArgs> m_onHealthChange;
 
-	// Token: 0x04001ED3 RID: 7891
+	// Token: 0x04002942 RID: 10562
 	private Action<MonoBehaviour, EventArgs> m_onExhaustChange;
 
-	// Token: 0x04001ED4 RID: 7892
+	// Token: 0x04002943 RID: 10563
 	private Action<MonoBehaviour, EventArgs> m_onMaxHealthChange;
 
-	// Token: 0x04001ED5 RID: 7893
+	// Token: 0x04002944 RID: 10564
 	private Action<MonoBehaviour, EventArgs> m_onManaChange;
 
-	// Token: 0x04001ED6 RID: 7894
+	// Token: 0x04002945 RID: 10565
 	private Action<MonoBehaviour, EventArgs> m_onResolveChange;
 
-	// Token: 0x04001ED7 RID: 7895
+	// Token: 0x04002946 RID: 10566
 	private Action<MonoBehaviour, EventArgs> m_onSkillTreeOpen;
 
-	// Token: 0x04001ED8 RID: 7896
+	// Token: 0x04002947 RID: 10567
 	private Action<MonoBehaviour, EventArgs> m_onSkillTreeClosed;
 
-	// Token: 0x04001ED9 RID: 7897
+	// Token: 0x04002948 RID: 10568
 	private Action<MonoBehaviour, EventArgs> m_onSkillLevelChanged;
 
-	// Token: 0x04001EDA RID: 7898
+	// Token: 0x04002949 RID: 10569
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x04001EDB RID: 7899
+	// Token: 0x0400294A RID: 10570
 	public static bool IgnoreHealthChangeEvents;
 
-	// Token: 0x04001EDC RID: 7900
+	// Token: 0x0400294B RID: 10571
 	private Tween m_shieldTween;
 
-	// Token: 0x04001EDD RID: 7901
+	// Token: 0x0400294C RID: 10572
 	private int m_storedCurrentArmor;
 }

@@ -7,19 +7,19 @@ using UnityEngine;
 // Token: 0x02000002 RID: 2
 public class ZoomTest : CinemachineExtension
 {
-	// Token: 0x06000001 RID: 1 RVA: 0x00002050 File Offset: 0x00000250
+	// Token: 0x06000001 RID: 1 RVA: 0x00002A70 File Offset: 0x00000C70
 	public bool CameraWasDisplaced(CinemachineVirtualCameraBase vcam)
 	{
 		return base.GetExtraState<ZoomTest.VcamExtraState>(vcam).confinerDisplacement > 0f;
 	}
 
-	// Token: 0x06000002 RID: 2 RVA: 0x00002065 File Offset: 0x00000265
+	// Token: 0x06000002 RID: 2 RVA: 0x00002A85 File Offset: 0x00000C85
 	private void OnValidate()
 	{
 		this.m_Damping = Mathf.Max(0f, this.m_Damping);
 	}
 
-	// Token: 0x06000003 RID: 3 RVA: 0x00002080 File Offset: 0x00000280
+	// Token: 0x06000003 RID: 3 RVA: 0x0003E348 File Offset: 0x0003C548
 	private bool ValidatePathCache()
 	{
 		this.m_pathCache = null;
@@ -66,7 +66,7 @@ public class ZoomTest : CinemachineExtension
 		return false;
 	}
 
-	// Token: 0x06000004 RID: 4 RVA: 0x000021FC File Offset: 0x000003FC
+	// Token: 0x06000004 RID: 4 RVA: 0x0003E4C4 File Offset: 0x0003C6C4
 	private Vector3 ConfinePointMod(Vector3 camPos)
 	{
 		if (this.m_BoundingShape2D.OverlapPoint(camPos))
@@ -130,7 +130,7 @@ public class ZoomTest : CinemachineExtension
 		return vector2;
 	}
 
-	// Token: 0x06000005 RID: 5 RVA: 0x0000242C File Offset: 0x0000062C
+	// Token: 0x06000005 RID: 5 RVA: 0x0003E6F4 File Offset: 0x0003C8F4
 	private Vector3 ConfinePoint(Vector3 camPos)
 	{
 		if (this.m_BoundingShape2D.OverlapPoint(camPos))
@@ -167,7 +167,7 @@ public class ZoomTest : CinemachineExtension
 		return a - vector;
 	}
 
-	// Token: 0x06000006 RID: 6 RVA: 0x00002554 File Offset: 0x00000754
+	// Token: 0x06000006 RID: 6 RVA: 0x0003E81C File Offset: 0x0003CA1C
 	protected virtual void PostPipelineStageCallback3(CinemachineVirtualCameraBase vcam, CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
 	{
 		if (this.m_BoundingShape2D == null)
@@ -205,7 +205,7 @@ public class ZoomTest : CinemachineExtension
 		vector8.y = vector6.y;
 	}
 
-	// Token: 0x06000007 RID: 7 RVA: 0x0000272C File Offset: 0x0000092C
+	// Token: 0x06000007 RID: 7 RVA: 0x0003E9F4 File Offset: 0x0003CBF4
 	protected virtual void PostPipelineStageCallback5(CinemachineVirtualCameraBase vcam, CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
 	{
 		if (this.m_BoundingShape2D == null)
@@ -419,7 +419,7 @@ public class ZoomTest : CinemachineExtension
 		}
 	}
 
-	// Token: 0x06000008 RID: 8 RVA: 0x00002F6C File Offset: 0x0000116C
+	// Token: 0x06000008 RID: 8 RVA: 0x0003F234 File Offset: 0x0003D434
 	protected override void PostPipelineStageCallback(CinemachineVirtualCameraBase vcam, CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
 	{
 		if (this.m_BoundingShape2D == null)
@@ -541,13 +541,13 @@ public class ZoomTest : CinemachineExtension
 		}
 	}
 
-	// Token: 0x06000009 RID: 9 RVA: 0x000035D5 File Offset: 0x000017D5
+	// Token: 0x06000009 RID: 9 RVA: 0x00002A9D File Offset: 0x00000C9D
 	private bool AlmostZero(float value)
 	{
 		return value < 0.01f && value > -0.01f;
 	}
 
-	// Token: 0x0600000A RID: 10 RVA: 0x000035EC File Offset: 0x000017EC
+	// Token: 0x0600000A RID: 10 RVA: 0x0003F8A0 File Offset: 0x0003DAA0
 	protected void PostPipelineStageCallbackOld(CinemachineVirtualCameraBase vcam, CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
 	{
 		if (this.m_BoundingShape2D == null)
@@ -629,7 +629,7 @@ public class ZoomTest : CinemachineExtension
 		}
 	}
 
-	// Token: 0x0600000B RID: 11 RVA: 0x00003938 File Offset: 0x00001B38
+	// Token: 0x0600000B RID: 11 RVA: 0x0003FBEC File Offset: 0x0003DDEC
 	private Vector3 ConfineScreenEdges(CinemachineVirtualCameraBase vcam, ref CameraState state)
 	{
 		Quaternion rotation = Quaternion.Inverse(state.CorrectedOrientation);
@@ -691,13 +691,13 @@ public class ZoomTest : CinemachineExtension
 	[Range(0f, 10f)]
 	public float m_Damping;
 
-	// Token: 0x02000979 RID: 2425
+	// Token: 0x02000003 RID: 3
 	private class VcamExtraState
 	{
-		// Token: 0x04004495 RID: 17557
+		// Token: 0x04000008 RID: 8
 		public Vector3 m_previousDisplacement;
 
-		// Token: 0x04004496 RID: 17558
+		// Token: 0x04000009 RID: 9
 		public float confinerDisplacement;
 	}
 }

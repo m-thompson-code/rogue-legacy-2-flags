@@ -3,15 +3,15 @@ using Rewired;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000817 RID: 2071
+// Token: 0x02000CE9 RID: 3305
 public class StringReplacementUtility : MonoBehaviour, ITextChangedObj
 {
-	// Token: 0x06004465 RID: 17509 RVA: 0x000F21CA File Offset: 0x000F03CA
+	// Token: 0x06005E25 RID: 24101 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void LastControllerChanged(Controller controller)
 	{
 	}
 
-	// Token: 0x06004466 RID: 17510 RVA: 0x000F21CC File Offset: 0x000F03CC
+	// Token: 0x06005E26 RID: 24102 RVA: 0x00033D5F File Offset: 0x00031F5F
 	private void Awake()
 	{
 		this.m_text = base.GetComponent<TMP_Text>();
@@ -22,7 +22,7 @@ public class StringReplacementUtility : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x06004467 RID: 17511 RVA: 0x000F21FA File Offset: 0x000F03FA
+	// Token: 0x06005E27 RID: 24103 RVA: 0x00033D8D File Offset: 0x00031F8D
 	private void OnDestroy()
 	{
 		if (this.m_listenerApplied)
@@ -31,7 +31,7 @@ public class StringReplacementUtility : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x06004468 RID: 17512 RVA: 0x000F2210 File Offset: 0x000F0410
+	// Token: 0x06005E28 RID: 24104 RVA: 0x0015FE20 File Offset: 0x0015E020
 	public void OnTextChanged()
 	{
 		if (this.m_stringsToReplace != null && this.m_stringsToReplace.Length != 0)
@@ -55,24 +55,24 @@ public class StringReplacementUtility : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x04003A5D RID: 14941
+	// Token: 0x04004D50 RID: 19792
 	[SerializeField]
 	private StringReplacementUtility.ReplacementStringEntry[] m_stringsToReplace;
 
-	// Token: 0x04003A5E RID: 14942
+	// Token: 0x04004D51 RID: 19793
 	private TMP_Text m_text;
 
-	// Token: 0x04003A5F RID: 14943
+	// Token: 0x04004D52 RID: 19794
 	private bool m_listenerApplied;
 
-	// Token: 0x02000E44 RID: 3652
+	// Token: 0x02000CEA RID: 3306
 	[Serializable]
 	private struct ReplacementStringEntry
 	{
-		// Token: 0x04005769 RID: 22377
+		// Token: 0x04004D53 RID: 19795
 		public string TextToRemove;
 
-		// Token: 0x0400576A RID: 22378
+		// Token: 0x04004D54 RID: 19796
 		public string TextToAdd;
 	}
 }

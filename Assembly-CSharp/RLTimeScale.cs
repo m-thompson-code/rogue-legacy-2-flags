@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020002B7 RID: 695
+// Token: 0x020004A6 RID: 1190
 public class RLTimeScale
 {
-	// Token: 0x17000C84 RID: 3204
-	// (get) Token: 0x06001BA8 RID: 7080 RVA: 0x00059269 File Offset: 0x00057469
+	// Token: 0x17001007 RID: 4103
+	// (get) Token: 0x0600265C RID: 9820 RVA: 0x000155E2 File Offset: 0x000137E2
 	public static TimeScaleType[] TypeArray
 	{
 		get
@@ -19,12 +19,12 @@ public class RLTimeScale
 		}
 	}
 
-	// Token: 0x17000C85 RID: 3205
-	// (get) Token: 0x06001BA9 RID: 7081 RVA: 0x00059290 File Offset: 0x00057490
-	// (set) Token: 0x06001BAA RID: 7082 RVA: 0x00059297 File Offset: 0x00057497
+	// Token: 0x17001008 RID: 4104
+	// (get) Token: 0x0600265D RID: 9821 RVA: 0x00015609 File Offset: 0x00013809
+	// (set) Token: 0x0600265E RID: 9822 RVA: 0x00015610 File Offset: 0x00013810
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06001BAB RID: 7083 RVA: 0x000592A0 File Offset: 0x000574A0
+	// Token: 0x0600265F RID: 9823 RVA: 0x000B6128 File Offset: 0x000B4328
 	public static TimeScaleType GetAvailableSlowTimeStack()
 	{
 		if (!RLTimeScale.IsInitialized)
@@ -45,7 +45,7 @@ public class RLTimeScale
 		return TimeScaleType.SlowTimeEffectStack1;
 	}
 
-	// Token: 0x06001BAC RID: 7084 RVA: 0x000592EC File Offset: 0x000574EC
+	// Token: 0x06002660 RID: 9824 RVA: 0x000B6174 File Offset: 0x000B4374
 	private static void Initialize()
 	{
 		RLTimeScale.m_timeScaleDict = new Dictionary<TimeScaleType, float>(RLTimeScale.TypeArray.Length);
@@ -56,7 +56,7 @@ public class RLTimeScale
 		RLTimeScale.IsInitialized = true;
 	}
 
-	// Token: 0x06001BAD RID: 7085 RVA: 0x00059338 File Offset: 0x00057538
+	// Token: 0x06002661 RID: 9825 RVA: 0x000B61C0 File Offset: 0x000B43C0
 	public static void SetTimeScale(TimeScaleType timeScaleType, float value)
 	{
 		if (!RLTimeScale.IsInitialized)
@@ -95,7 +95,7 @@ public class RLTimeScale
 		}
 	}
 
-	// Token: 0x06001BAE RID: 7086 RVA: 0x00059415 File Offset: 0x00057615
+	// Token: 0x06002662 RID: 9826 RVA: 0x00015618 File Offset: 0x00013818
 	public static float GetTimeScale(TimeScaleType timeScaleType)
 	{
 		if (!RLTimeScale.IsInitialized)
@@ -105,8 +105,8 @@ public class RLTimeScale
 		return RLTimeScale.m_timeScaleDict[timeScaleType];
 	}
 
-	// Token: 0x17000C86 RID: 3206
-	// (get) Token: 0x06001BAF RID: 7087 RVA: 0x0005942E File Offset: 0x0005762E
+	// Token: 0x17001009 RID: 4105
+	// (get) Token: 0x06002663 RID: 9827 RVA: 0x00015631 File Offset: 0x00013831
 	public static float TimeScale
 	{
 		get
@@ -115,7 +115,7 @@ public class RLTimeScale
 		}
 	}
 
-	// Token: 0x06001BB0 RID: 7088 RVA: 0x00059438 File Offset: 0x00057638
+	// Token: 0x06002664 RID: 9828 RVA: 0x000B62A0 File Offset: 0x000B44A0
 	public static void SetAllTimeScale(float value)
 	{
 		if (!RLTimeScale.IsInitialized)
@@ -129,15 +129,15 @@ public class RLTimeScale
 		}
 	}
 
-	// Token: 0x06001BB1 RID: 7089 RVA: 0x0005946E File Offset: 0x0005766E
+	// Token: 0x06002665 RID: 9829 RVA: 0x00015638 File Offset: 0x00013838
 	public static void Reset()
 	{
 		RLTimeScale.SetAllTimeScale(1f);
 	}
 
-	// Token: 0x0400195A RID: 6490
+	// Token: 0x04002147 RID: 8519
 	private static Dictionary<TimeScaleType, float> m_timeScaleDict;
 
-	// Token: 0x0400195B RID: 6491
+	// Token: 0x04002148 RID: 8520
 	private static TimeScaleType[] m_typeArray;
 }

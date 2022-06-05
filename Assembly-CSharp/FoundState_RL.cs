@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000736 RID: 1846
+// Token: 0x02000BF4 RID: 3060
 public class FoundState_RL
 {
 }

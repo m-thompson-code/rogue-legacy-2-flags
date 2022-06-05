@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x020004B4 RID: 1204
+// Token: 0x020007CB RID: 1995
 public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, ISetSpawnType
 {
-	// Token: 0x17001124 RID: 4388
-	// (get) Token: 0x06002CC2 RID: 11458 RVA: 0x000978DC File Offset: 0x00095ADC
+	// Token: 0x1700168B RID: 5771
+	// (get) Token: 0x06003D6B RID: 15723 RVA: 0x00021F8C File Offset: 0x0002018C
 	public EnemySpawnController[] EnemySpawnControllers
 	{
 		get
@@ -20,8 +20,8 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		}
 	}
 
-	// Token: 0x17001125 RID: 4389
-	// (get) Token: 0x06002CC3 RID: 11459 RVA: 0x000978FD File Offset: 0x00095AFD
+	// Token: 0x1700168C RID: 5772
+	// (get) Token: 0x06003D6C RID: 15724 RVA: 0x00021FAD File Offset: 0x000201AD
 	public BaseRoom Room
 	{
 		get
@@ -30,7 +30,7 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		}
 	}
 
-	// Token: 0x06002CC4 RID: 11460 RVA: 0x00097905 File Offset: 0x00095B05
+	// Token: 0x06003D6D RID: 15725 RVA: 0x00021FB5 File Offset: 0x000201B5
 	public void SetRoom(BaseRoom room)
 	{
 		if (room is MergeRoom)
@@ -44,8 +44,8 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		}
 	}
 
-	// Token: 0x17001126 RID: 4390
-	// (get) Token: 0x06002CC5 RID: 11461 RVA: 0x0009792D File Offset: 0x00095B2D
+	// Token: 0x1700168D RID: 5773
+	// (get) Token: 0x06003D6E RID: 15726 RVA: 0x00021FDD File Offset: 0x000201DD
 	public bool HasRequiredReferences
 	{
 		get
@@ -54,13 +54,13 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		}
 	}
 
-	// Token: 0x17001127 RID: 4391
-	// (get) Token: 0x06002CC6 RID: 11462 RVA: 0x0009794B File Offset: 0x00095B4B
-	// (set) Token: 0x06002CC7 RID: 11463 RVA: 0x00097953 File Offset: 0x00095B53
+	// Token: 0x1700168E RID: 5774
+	// (get) Token: 0x06003D6F RID: 15727 RVA: 0x00021FFB File Offset: 0x000201FB
+	// (set) Token: 0x06003D70 RID: 15728 RVA: 0x00022003 File Offset: 0x00020203
 	public bool IsInitialised { get; private set; }
 
-	// Token: 0x17001128 RID: 4392
-	// (get) Token: 0x06002CC8 RID: 11464 RVA: 0x0009795C File Offset: 0x00095B5C
+	// Token: 0x1700168F RID: 5775
+	// (get) Token: 0x06003D71 RID: 15729 RVA: 0x0002200C File Offset: 0x0002020C
 	public int Level
 	{
 		get
@@ -69,7 +69,7 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		}
 	}
 
-	// Token: 0x06002CC9 RID: 11465 RVA: 0x00097964 File Offset: 0x00095B64
+	// Token: 0x06003D72 RID: 15730 RVA: 0x00022014 File Offset: 0x00020214
 	public void SetLevel(int value)
 	{
 		this.m_level = value;
@@ -79,7 +79,7 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		}
 	}
 
-	// Token: 0x06002CCA RID: 11466 RVA: 0x0009797B File Offset: 0x00095B7B
+	// Token: 0x06003D73 RID: 15731 RVA: 0x0002202B File Offset: 0x0002022B
 	private void Initialise()
 	{
 		if (this.Room.IsNativeNull())
@@ -97,7 +97,7 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		this.IsInitialised = true;
 	}
 
-	// Token: 0x06002CCB RID: 11467 RVA: 0x000979B4 File Offset: 0x00095BB4
+	// Token: 0x06003D74 RID: 15732 RVA: 0x000F8A94 File Offset: 0x000F6C94
 	public void SetSpawnType()
 	{
 		Room room = this.Room as Room;
@@ -134,7 +134,7 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		throw new InvalidCastException("{0}: Can't cast Room as Room", Time.frameCount);
 	}
 
-	// Token: 0x06002CCC RID: 11468 RVA: 0x00097B08 File Offset: 0x00095D08
+	// Token: 0x06003D75 RID: 15733 RVA: 0x000F8BE8 File Offset: 0x000F6DE8
 	private List<EnemySpawnController> GetEnemySpawnerList(IGrouping<int, EnemySpawnController> enemySpawnerGroup, bool commanderOnly, bool flyingOnly)
 	{
 		RoomEnemyManager.m_enemySpawnerListHelper_STATIC.Clear();
@@ -148,7 +148,7 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		return RoomEnemyManager.m_enemySpawnerListHelper_STATIC;
 	}
 
-	// Token: 0x06002CCD RID: 11469 RVA: 0x00097B7C File Offset: 0x00095D7C
+	// Token: 0x06003D76 RID: 15734 RVA: 0x000F8C5C File Offset: 0x000F6E5C
 	private void SetupEnemySpawnControllers(List<EnemySpawnController> enemySpawnControllers, BiomeType biome, bool commanderOnly, bool flyingOnly, RoomType roomType)
 	{
 		if (enemySpawnControllers.Count > 0)
@@ -178,7 +178,7 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		}
 	}
 
-	// Token: 0x06002CCE RID: 11470 RVA: 0x00097C44 File Offset: 0x00095E44
+	// Token: 0x06003D77 RID: 15735 RVA: 0x000F8D24 File Offset: 0x000F6F24
 	private EnemyTypeAndRank GetRandomEnemyTypeAndRank(BiomeType biome, bool flyingOnly, bool commanderOnly, RoomType roomType)
 	{
 		EnemyTypeAndRank result = new EnemyTypeAndRank(EnemyType.None, EnemyRank.None);
@@ -212,12 +212,12 @@ public class RoomEnemyManager : MonoBehaviour, IRoomConsumer, ILevelConsumer, IS
 		return result;
 	}
 
-	// Token: 0x04002412 RID: 9234
+	// Token: 0x04003073 RID: 12403
 	private int m_level = -1;
 
-	// Token: 0x04002413 RID: 9235
+	// Token: 0x04003074 RID: 12404
 	private BaseRoom m_room;
 
-	// Token: 0x04002415 RID: 9237
+	// Token: 0x04003076 RID: 12406
 	private static List<EnemySpawnController> m_enemySpawnerListHelper_STATIC = new List<EnemySpawnController>();
 }

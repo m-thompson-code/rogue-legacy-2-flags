@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000416 RID: 1046
+// Token: 0x020006CE RID: 1742
 public class OnDamageEffectTrigger : BaseEffectTrigger
 {
-	// Token: 0x17000F78 RID: 3960
-	// (get) Token: 0x060026C0 RID: 9920 RVA: 0x00080C0F File Offset: 0x0007EE0F
+	// Token: 0x1700143D RID: 5181
+	// (get) Token: 0x06003575 RID: 13685 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool RequiresCollider
 	{
 		get
@@ -14,8 +14,8 @@ public class OnDamageEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x17000F79 RID: 3961
-	// (get) Token: 0x060026C1 RID: 9921 RVA: 0x00080C14 File Offset: 0x0007EE14
+	// Token: 0x1700143E RID: 5182
+	// (get) Token: 0x06003576 RID: 13686 RVA: 0x000E1250 File Offset: 0x000DF450
 	public override Vector3 Midpoint
 	{
 		get
@@ -32,7 +32,7 @@ public class OnDamageEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026C2 RID: 9922 RVA: 0x00080C70 File Offset: 0x0007EE70
+	// Token: 0x06003577 RID: 13687 RVA: 0x000E12AC File Offset: 0x000DF4AC
 	protected override void Awake()
 	{
 		base.Awake();
@@ -45,7 +45,7 @@ public class OnDamageEffectTrigger : BaseEffectTrigger
 		this.m_invokeOnDamageTrigger = new Action<GameObject, float, bool>(this.InvokeOnDamageTrigger);
 	}
 
-	// Token: 0x060026C3 RID: 9923 RVA: 0x00080CD4 File Offset: 0x0007EED4
+	// Token: 0x06003578 RID: 13688 RVA: 0x000E1310 File Offset: 0x000DF510
 	private void OnEnable()
 	{
 		IEffectTriggerEvent_OnDamage[] effectTriggerEventArray = this.m_effectTriggerEventArray;
@@ -55,7 +55,7 @@ public class OnDamageEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026C4 RID: 9924 RVA: 0x00080D0C File Offset: 0x0007EF0C
+	// Token: 0x06003579 RID: 13689 RVA: 0x000E1348 File Offset: 0x000DF548
 	private void OnDisable()
 	{
 		IEffectTriggerEvent_OnDamage[] effectTriggerEventArray = this.m_effectTriggerEventArray;
@@ -65,7 +65,7 @@ public class OnDamageEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x060026C5 RID: 9925 RVA: 0x00080D44 File Offset: 0x0007EF44
+	// Token: 0x0600357A RID: 13690 RVA: 0x000E1380 File Offset: 0x000DF580
 	private void InvokeOnDamageTrigger(GameObject attacker, float damageTaken, bool isCrit)
 	{
 		GameObject root = attacker.GetRoot(false);
@@ -111,15 +111,15 @@ public class OnDamageEffectTrigger : BaseEffectTrigger
 		}
 	}
 
-	// Token: 0x040020A7 RID: 8359
+	// Token: 0x04002B8A RID: 11146
 	private IEffectTriggerEvent_OnDamage[] m_effectTriggerEventArray;
 
-	// Token: 0x040020A8 RID: 8360
+	// Token: 0x04002B8B RID: 11147
 	private Collider2D m_collider;
 
-	// Token: 0x040020A9 RID: 8361
+	// Token: 0x04002B8C RID: 11148
 	private BaseCharacterController m_charController;
 
-	// Token: 0x040020AA RID: 8362
+	// Token: 0x04002B8D RID: 11149
 	private Action<GameObject, float, bool> m_invokeOnDamageTrigger;
 }

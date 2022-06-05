@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200048D RID: 1165
+// Token: 0x0200078E RID: 1934
 public class OneWay : MonoBehaviour, IPlayHitEffect
 {
-	// Token: 0x1700108D RID: 4237
-	// (get) Token: 0x06002AF7 RID: 10999 RVA: 0x00091B36 File Offset: 0x0008FD36
+	// Token: 0x170015D0 RID: 5584
+	// (get) Token: 0x06003B34 RID: 15156 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public bool PlayDirectionalHitEffect
 	{
 		get
@@ -14,8 +14,8 @@ public class OneWay : MonoBehaviour, IPlayHitEffect
 		}
 	}
 
-	// Token: 0x1700108E RID: 4238
-	// (get) Token: 0x06002AF8 RID: 11000 RVA: 0x00091B39 File Offset: 0x0008FD39
+	// Token: 0x170015D1 RID: 5585
+	// (get) Token: 0x06003B35 RID: 15157 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool PlayHitEffect
 	{
 		get
@@ -24,8 +24,8 @@ public class OneWay : MonoBehaviour, IPlayHitEffect
 		}
 	}
 
-	// Token: 0x1700108F RID: 4239
-	// (get) Token: 0x06002AF9 RID: 11001 RVA: 0x00091B3C File Offset: 0x0008FD3C
+	// Token: 0x170015D2 RID: 5586
+	// (get) Token: 0x06003B36 RID: 15158 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string EffectNameOverride
 	{
 		get
@@ -34,7 +34,7 @@ public class OneWay : MonoBehaviour, IPlayHitEffect
 		}
 	}
 
-	// Token: 0x06002AFA RID: 11002 RVA: 0x00091B40 File Offset: 0x0008FD40
+	// Token: 0x06003B37 RID: 15159 RVA: 0x000F35FC File Offset: 0x000F17FC
 	public void SetVisuals(BiomeType biomeType, BaseRoom room)
 	{
 		BiomeArtData biomeArtData = room.BiomeArtDataOverride;
@@ -72,7 +72,7 @@ public class OneWay : MonoBehaviour, IPlayHitEffect
 		this.UpdateFerr2DSettings(ferr2DSettings);
 	}
 
-	// Token: 0x06002AFB RID: 11003 RVA: 0x00091C00 File Offset: 0x0008FE00
+	// Token: 0x06003B38 RID: 15160 RVA: 0x000F36BC File Offset: 0x000F18BC
 	private void UpdateFerr2DSettings(Ferr2DSettings settings)
 	{
 		Ferr2DT_PathTerrain component = base.GetComponent<Ferr2DT_PathTerrain>();

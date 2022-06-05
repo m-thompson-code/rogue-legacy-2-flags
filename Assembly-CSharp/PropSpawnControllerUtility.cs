@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200080A RID: 2058
+// Token: 0x02000CD2 RID: 3282
 [CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Prop Spawn Controller Utility")]
 public class PropSpawnControllerUtility : ScriptableObject
 {
-	// Token: 0x170016F0 RID: 5872
-	// (get) Token: 0x0600440F RID: 17423 RVA: 0x000F0D44 File Offset: 0x000EEF44
+	// Token: 0x17001EEE RID: 7918
+	// (get) Token: 0x06005D98 RID: 23960 RVA: 0x0015E89C File Offset: 0x0015CA9C
 	private static PropSpawnControllerUtility Instance
 	{
 		get
@@ -29,7 +29,7 @@ public class PropSpawnControllerUtility : ScriptableObject
 		}
 	}
 
-	// Token: 0x06004410 RID: 17424 RVA: 0x000F0DA4 File Offset: 0x000EEFA4
+	// Token: 0x06005D99 RID: 23961 RVA: 0x0015E8FC File Offset: 0x0015CAFC
 	public static Color GetColor(CameraLayer cameraLayer, int subLayer)
 	{
 		Color result = Color.white;
@@ -82,13 +82,13 @@ public class PropSpawnControllerUtility : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x06004411 RID: 17425 RVA: 0x000F0EBD File Offset: 0x000EF0BD
+	// Token: 0x06005D9A RID: 23962 RVA: 0x00033827 File Offset: 0x00031A27
 	public static Vector2Int GetGameSubLayerRange(CameraLayer cameraLayer)
 	{
 		return CameraLayerUtility.GetSubLayerRange(cameraLayer);
 	}
 
-	// Token: 0x06004412 RID: 17426 RVA: 0x000F0EC8 File Offset: 0x000EF0C8
+	// Token: 0x06005D9B RID: 23963 RVA: 0x0015EA18 File Offset: 0x0015CC18
 	public static int GetSortingLayerID(CameraLayer cameraLayer)
 	{
 		if (cameraLayer <= CameraLayer.Foreground_ORTHO)
@@ -125,13 +125,13 @@ public class PropSpawnControllerUtility : ScriptableObject
 		return SortingLayer.NameToID("GameEditorProps");
 	}
 
-	// Token: 0x06004413 RID: 17427 RVA: 0x000F0F51 File Offset: 0x000EF151
+	// Token: 0x06005D9C RID: 23964 RVA: 0x0002B621 File Offset: 0x00029821
 	public static int GetSortOrder(CameraLayer cameraLayer, int subLayer)
 	{
 		return subLayer;
 	}
 
-	// Token: 0x06004414 RID: 17428 RVA: 0x000F0F54 File Offset: 0x000EF154
+	// Token: 0x06005D9D RID: 23965 RVA: 0x0015EAA4 File Offset: 0x0015CCA4
 	public static float GetZPosition(CameraLayer cameraLayer, int subLayer)
 	{
 		if (cameraLayer == CameraLayer.Foreground_ORTHO || cameraLayer == CameraLayer.Foreground_PERSP || (cameraLayer == CameraLayer.Game && subLayer > 0))
@@ -145,84 +145,84 @@ public class PropSpawnControllerUtility : ScriptableObject
 		return PropSpawnControllerUtility.Instance.m_sortOrders.DefaultZPosition;
 	}
 
-	// Token: 0x04003A28 RID: 14888
+	// Token: 0x04004CF4 RID: 19700
 	[SerializeField]
 	private PropSpawnControllerUtility.PropSpawnControllerColors m_colors;
 
-	// Token: 0x04003A29 RID: 14889
+	// Token: 0x04004CF5 RID: 19701
 	[SerializeField]
 	private PropSpawnControllerUtility.PropSpawnControllerSortOrder m_sortOrders;
 
-	// Token: 0x04003A2A RID: 14890
+	// Token: 0x04004CF6 RID: 19702
 	private const string GAME_SORTING_LAYER_NAME = "GameEditorProps";
 
-	// Token: 0x04003A2B RID: 14891
+	// Token: 0x04004CF7 RID: 19703
 	private const string FOREGROUND_SORTING_LAYER_NAME = "ForegroundEditorProps";
 
-	// Token: 0x04003A2C RID: 14892
+	// Token: 0x04004CF8 RID: 19704
 	private const string BACKGROUND_SORTING_LAYER_NAME = "BackgroundEditorProps";
 
-	// Token: 0x04003A2D RID: 14893
+	// Token: 0x04004CF9 RID: 19705
 	private const string FOREGROUND_PERSP_SORTING_LAYER_NAME = "ForegroundPerspEditorProps";
 
-	// Token: 0x04003A2E RID: 14894
+	// Token: 0x04004CFA RID: 19706
 	private const string BACKGROUND_PERSP_NEAR_SORTING_LAYER_NAME = "BackgroundPerspNearEditorProps";
 
-	// Token: 0x04003A2F RID: 14895
+	// Token: 0x04004CFB RID: 19707
 	private const string BACKGROUND_PERSP_FAR_SORTING_LAYER_NAME = "BackgroundPerspFarEditorProps";
 
-	// Token: 0x04003A30 RID: 14896
+	// Token: 0x04004CFC RID: 19708
 	private const string RESOURCES_PATH = "Scriptable Objects/PropSpawnControllerUtility";
 
-	// Token: 0x04003A31 RID: 14897
+	// Token: 0x04004CFD RID: 19709
 	public const string EDITOR_PATH = "Assets/Content/Scriptable Objects/PropSpawnControllerUtility.asset";
 
-	// Token: 0x04003A32 RID: 14898
+	// Token: 0x04004CFE RID: 19710
 	private static PropSpawnControllerUtility m_instance;
 
-	// Token: 0x02000E3A RID: 3642
+	// Token: 0x02000CD3 RID: 3283
 	[Serializable]
 	private class PropSpawnControllerColors
 	{
-		// Token: 0x04005742 RID: 22338
+		// Token: 0x04004CFF RID: 19711
 		public Color BackgroundPerspFarMaxColor = new Color(0.6f, 0.9f, 0.8f);
 
-		// Token: 0x04005743 RID: 22339
+		// Token: 0x04004D00 RID: 19712
 		public Color BackgroundPerspFarMinColor = new Color(0.4f, 0.6f, 0.8f);
 
-		// Token: 0x04005744 RID: 22340
+		// Token: 0x04004D01 RID: 19713
 		public Color BackgroundPerspNearMaxColor = new Color(0.6f, 0.9f, 0.8f);
 
-		// Token: 0x04005745 RID: 22341
+		// Token: 0x04004D02 RID: 19714
 		public Color BackgroundPerspNearMinColor = new Color(0.4f, 0.6f, 0.8f);
 
-		// Token: 0x04005746 RID: 22342
+		// Token: 0x04004D03 RID: 19715
 		public Color BackgroundOrthoColor = new Color(0.8f, 0.6f, 0.6f);
 
-		// Token: 0x04005747 RID: 22343
+		// Token: 0x04004D04 RID: 19716
 		public Color GameColor = new Color(0.53f, 0.05f, 0.63f);
 
-		// Token: 0x04005748 RID: 22344
+		// Token: 0x04004D05 RID: 19717
 		public Color ForegroundOrthoColor = new Color(0.55f, 0.55f, 0.6f);
 
-		// Token: 0x04005749 RID: 22345
+		// Token: 0x04004D06 RID: 19718
 		public Color ForegroundPerspMaxColor = new Color(0.4f, 0.4f, 0.45f);
 
-		// Token: 0x0400574A RID: 22346
+		// Token: 0x04004D07 RID: 19719
 		public Color ForegroundPerspMinColor = new Color(0f, 0f, 0.1f);
 	}
 
-	// Token: 0x02000E3B RID: 3643
+	// Token: 0x02000CD4 RID: 3284
 	[Serializable]
 	private class PropSpawnControllerSortOrder
 	{
-		// Token: 0x0400574B RID: 22347
+		// Token: 0x04004D08 RID: 19720
 		public float DefaultZPosition = -0.5f;
 
-		// Token: 0x0400574C RID: 22348
+		// Token: 0x04004D09 RID: 19721
 		public float BackgroundZPosition = 1f;
 
-		// Token: 0x0400574D RID: 22349
+		// Token: 0x04004D0A RID: 19722
 		public float ForegroundZPosition = -1f;
 	}
 }

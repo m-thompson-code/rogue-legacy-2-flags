@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000170 RID: 368
+// Token: 0x020002A9 RID: 681
 public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 {
-	// Token: 0x170006D1 RID: 1745
-	// (get) Token: 0x06000CB5 RID: 3253 RVA: 0x000271C2 File Offset: 0x000253C2
+	// Token: 0x17000931 RID: 2353
+	// (get) Token: 0x060013DA RID: 5082 RVA: 0x0000676B File Offset: 0x0000496B
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -14,8 +14,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006D2 RID: 1746
-	// (get) Token: 0x06000CB6 RID: 3254 RVA: 0x000271C9 File Offset: 0x000253C9
+	// Token: 0x17000932 RID: 2354
+	// (get) Token: 0x060013DB RID: 5083 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -24,8 +24,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006D3 RID: 1747
-	// (get) Token: 0x06000CB7 RID: 3255 RVA: 0x000271D0 File Offset: 0x000253D0
+	// Token: 0x17000933 RID: 2355
+	// (get) Token: 0x060013DC RID: 5084 RVA: 0x00003C62 File Offset: 0x00001E62
 	protected override float TellAnimSpeed
 	{
 		get
@@ -34,8 +34,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006D4 RID: 1748
-	// (get) Token: 0x06000CB8 RID: 3256 RVA: 0x000271D7 File Offset: 0x000253D7
+	// Token: 0x17000934 RID: 2356
+	// (get) Token: 0x060013DD RID: 5085 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -44,8 +44,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006D5 RID: 1749
-	// (get) Token: 0x06000CB9 RID: 3257 RVA: 0x000271DE File Offset: 0x000253DE
+	// Token: 0x17000935 RID: 2357
+	// (get) Token: 0x060013DE RID: 5086 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -54,8 +54,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006D6 RID: 1750
-	// (get) Token: 0x06000CBA RID: 3258 RVA: 0x000271E5 File Offset: 0x000253E5
+	// Token: 0x17000936 RID: 2358
+	// (get) Token: 0x060013DF RID: 5087 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -64,8 +64,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006D7 RID: 1751
-	// (get) Token: 0x06000CBB RID: 3259 RVA: 0x000271EC File Offset: 0x000253EC
+	// Token: 0x17000937 RID: 2359
+	// (get) Token: 0x060013E0 RID: 5088 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -74,8 +74,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006D8 RID: 1752
-	// (get) Token: 0x06000CBC RID: 3260 RVA: 0x000271F3 File Offset: 0x000253F3
+	// Token: 0x17000938 RID: 2360
+	// (get) Token: 0x060013E1 RID: 5089 RVA: 0x0000452F File Offset: 0x0000272F
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -84,8 +84,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006D9 RID: 1753
-	// (get) Token: 0x06000CBD RID: 3261 RVA: 0x000271FA File Offset: 0x000253FA
+	// Token: 0x17000939 RID: 2361
+	// (get) Token: 0x060013E2 RID: 5090 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -94,8 +94,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006DA RID: 1754
-	// (get) Token: 0x06000CBE RID: 3262 RVA: 0x00027201 File Offset: 0x00025401
+	// Token: 0x1700093A RID: 2362
+	// (get) Token: 0x060013E3 RID: 5091 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -104,8 +104,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006DB RID: 1755
-	// (get) Token: 0x06000CBF RID: 3263 RVA: 0x00027208 File Offset: 0x00025408
+	// Token: 0x1700093B RID: 2363
+	// (get) Token: 0x060013E4 RID: 5092 RVA: 0x00006764 File Offset: 0x00004964
 	protected virtual float GravityReduction
 	{
 		get
@@ -114,8 +114,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006DC RID: 1756
-	// (get) Token: 0x06000CC0 RID: 3264 RVA: 0x0002720F File Offset: 0x0002540F
+	// Token: 0x1700093C RID: 2364
+	// (get) Token: 0x060013E5 RID: 5093 RVA: 0x0000A1D5 File Offset: 0x000083D5
 	protected virtual Vector2 BowPushbackAmount
 	{
 		get
@@ -124,8 +124,8 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x170006DD RID: 1757
-	// (get) Token: 0x06000CC1 RID: 3265 RVA: 0x00027220 File Offset: 0x00025420
+	// Token: 0x1700093D RID: 2365
+	// (get) Token: 0x060013E6 RID: 5094 RVA: 0x0000A1E6 File Offset: 0x000083E6
 	public override Vector2 PushbackAmount
 	{
 		get
@@ -134,7 +134,7 @@ public class AimedAbilityFast_RL : AimedAbility_RL, ISpell, IAbility
 		}
 	}
 
-	// Token: 0x06000CC2 RID: 3266 RVA: 0x00027228 File Offset: 0x00025428
+	// Token: 0x060013E7 RID: 5095 RVA: 0x0000A1EE File Offset: 0x000083EE
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		this.m_gravityReductionModWhenAiming = this.GravityReduction;

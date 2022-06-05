@@ -3,12 +3,12 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000518 RID: 1304
+// Token: 0x0200088C RID: 2188
 public class SpeechBubbleController : MonoBehaviour
 {
-	// Token: 0x170011D1 RID: 4561
-	// (get) Token: 0x0600304E RID: 12366 RVA: 0x000A554D File Offset: 0x000A374D
-	// (set) Token: 0x0600304F RID: 12367 RVA: 0x000A5555 File Offset: 0x000A3755
+	// Token: 0x170017E6 RID: 6118
+	// (get) Token: 0x0600430A RID: 17162 RVA: 0x00025161 File Offset: 0x00023361
+	// (set) Token: 0x0600430B RID: 17163 RVA: 0x00025169 File Offset: 0x00023369
 	public bool DisplayOffscreen
 	{
 		get
@@ -21,12 +21,12 @@ public class SpeechBubbleController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170011D2 RID: 4562
-	// (get) Token: 0x06003050 RID: 12368 RVA: 0x000A555E File Offset: 0x000A375E
-	// (set) Token: 0x06003051 RID: 12369 RVA: 0x000A5566 File Offset: 0x000A3766
+	// Token: 0x170017E7 RID: 6119
+	// (get) Token: 0x0600430C RID: 17164 RVA: 0x00025172 File Offset: 0x00023372
+	// (set) Token: 0x0600430D RID: 17165 RVA: 0x0002517A File Offset: 0x0002337A
 	public SpeechBubbleType SpeechBubbleType { get; private set; }
 
-	// Token: 0x06003052 RID: 12370 RVA: 0x000A5570 File Offset: 0x000A3770
+	// Token: 0x0600430E RID: 17166 RVA: 0x0010C820 File Offset: 0x0010AA20
 	public void SetSpeechBubbleType(SpeechBubbleType bubbleType)
 	{
 		this.SpeechBubbleType = bubbleType;
@@ -51,7 +51,7 @@ public class SpeechBubbleController : MonoBehaviour
 		this.m_speechBubbleText.text = "!";
 	}
 
-	// Token: 0x06003053 RID: 12371 RVA: 0x000A5618 File Offset: 0x000A3818
+	// Token: 0x0600430F RID: 17167 RVA: 0x0010C8C8 File Offset: 0x0010AAC8
 	private void Awake()
 	{
 		this.m_startingPos = base.transform.localPosition;
@@ -63,7 +63,7 @@ public class SpeechBubbleController : MonoBehaviour
 		this.m_onSkillTreeClosed = new Action<MonoBehaviour, EventArgs>(this.OnSkillTreeClosed);
 	}
 
-	// Token: 0x06003054 RID: 12372 RVA: 0x000A5694 File Offset: 0x000A3894
+	// Token: 0x06004310 RID: 17168 RVA: 0x0010C944 File Offset: 0x0010AB44
 	private void Start()
 	{
 		this.m_offscreenArrowStartingPos = this.m_offscreenArrowGO.transform.localPosition;
@@ -77,7 +77,7 @@ public class SpeechBubbleController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003055 RID: 12373 RVA: 0x000A5728 File Offset: 0x000A3928
+	// Token: 0x06004311 RID: 17169 RVA: 0x00025183 File Offset: 0x00023383
 	private void OnEnable()
 	{
 		if (this.m_displayOffscreen)
@@ -91,7 +91,7 @@ public class SpeechBubbleController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003056 RID: 12374 RVA: 0x000A575B File Offset: 0x000A395B
+	// Token: 0x06004312 RID: 17170 RVA: 0x000251B6 File Offset: 0x000233B6
 	private void OnDisable()
 	{
 		if (this.m_displayOffscreen)
@@ -101,19 +101,19 @@ public class SpeechBubbleController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003057 RID: 12375 RVA: 0x000A577F File Offset: 0x000A397F
+	// Token: 0x06004313 RID: 17171 RVA: 0x000251DA File Offset: 0x000233DA
 	private void OnSkillTreeOpened(object sender, EventArgs args)
 	{
 		this.m_isInSkillTree = true;
 	}
 
-	// Token: 0x06003058 RID: 12376 RVA: 0x000A5788 File Offset: 0x000A3988
+	// Token: 0x06004314 RID: 17172 RVA: 0x000251E3 File Offset: 0x000233E3
 	private void OnSkillTreeClosed(object sender, EventArgs args)
 	{
 		this.m_isInSkillTree = false;
 	}
 
-	// Token: 0x06003059 RID: 12377 RVA: 0x000A5791 File Offset: 0x000A3991
+	// Token: 0x06004315 RID: 17173 RVA: 0x000251EC File Offset: 0x000233EC
 	public void SetBGColor(Color color)
 	{
 		if (this.m_bg)
@@ -122,13 +122,13 @@ public class SpeechBubbleController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600305A RID: 12378 RVA: 0x000A57AC File Offset: 0x000A39AC
+	// Token: 0x06004316 RID: 17174 RVA: 0x00025207 File Offset: 0x00023407
 	public void SetOverrideText(string text)
 	{
 		this.m_overrideText = text;
 	}
 
-	// Token: 0x0600305B RID: 12379 RVA: 0x000A57B8 File Offset: 0x000A39B8
+	// Token: 0x06004317 RID: 17175 RVA: 0x0010C9D8 File Offset: 0x0010ABD8
 	public void SetSpeechBubbleEnabled(bool enable)
 	{
 		if (GameManager.IsApplicationClosing)
@@ -183,7 +183,7 @@ public class SpeechBubbleController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600305C RID: 12380 RVA: 0x000A58A4 File Offset: 0x000A3AA4
+	// Token: 0x06004318 RID: 17176 RVA: 0x0010CAC4 File Offset: 0x0010ACC4
 	private void LateUpdate()
 	{
 		if (this.m_displayOffscreen)
@@ -268,62 +268,62 @@ public class SpeechBubbleController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400265F RID: 9823
+	// Token: 0x04003447 RID: 13383
 	[SerializeField]
 	private TMP_Text m_speechBubbleText;
 
-	// Token: 0x04002660 RID: 9824
+	// Token: 0x04003448 RID: 13384
 	[SerializeField]
 	private SpriteRenderer m_bg;
 
-	// Token: 0x04002661 RID: 9825
+	// Token: 0x04003449 RID: 13385
 	[SerializeField]
 	private GameObject m_arrowGO;
 
-	// Token: 0x04002662 RID: 9826
+	// Token: 0x0400344A RID: 13386
 	[SerializeField]
 	private GameObject m_offscreenArrowGO;
 
-	// Token: 0x04002663 RID: 9827
+	// Token: 0x0400344B RID: 13387
 	[SerializeField]
 	private bool m_displayOffscreen;
 
-	// Token: 0x04002664 RID: 9828
+	// Token: 0x0400344C RID: 13388
 	private Tween m_appearTween;
 
-	// Token: 0x04002665 RID: 9829
+	// Token: 0x0400344D RID: 13389
 	private Tween m_bounceTween;
 
-	// Token: 0x04002666 RID: 9830
+	// Token: 0x0400344E RID: 13390
 	private Tween m_scaleTween;
 
-	// Token: 0x04002667 RID: 9831
+	// Token: 0x0400344F RID: 13391
 	private Vector3 m_startingPos;
 
-	// Token: 0x04002668 RID: 9832
+	// Token: 0x04003450 RID: 13392
 	private Vector3 m_absStartingPos;
 
-	// Token: 0x04002669 RID: 9833
+	// Token: 0x04003451 RID: 13393
 	private Vector3 m_offscreenArrowStartingPos;
 
-	// Token: 0x0400266A RID: 9834
+	// Token: 0x04003452 RID: 13394
 	private int m_storedLayer;
 
-	// Token: 0x0400266B RID: 9835
+	// Token: 0x04003453 RID: 13395
 	private bool m_isInSkillTree;
 
-	// Token: 0x0400266C RID: 9836
+	// Token: 0x04003454 RID: 13396
 	private IDisplaySpeechBubble[] m_displaySpeechBubbleConditions;
 
-	// Token: 0x0400266D RID: 9837
+	// Token: 0x04003455 RID: 13397
 	private string m_overrideText;
 
-	// Token: 0x0400266E RID: 9838
+	// Token: 0x04003456 RID: 13398
 	private bool m_isFlipped;
 
-	// Token: 0x0400266F RID: 9839
+	// Token: 0x04003457 RID: 13399
 	private Action<MonoBehaviour, EventArgs> m_onSkillTreeOpened;
 
-	// Token: 0x04002670 RID: 9840
+	// Token: 0x04003458 RID: 13400
 	private Action<MonoBehaviour, EventArgs> m_onSkillTreeClosed;
 }

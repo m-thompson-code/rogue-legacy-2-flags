@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using Rewired;
 
-// Token: 0x0200080D RID: 2061
+// Token: 0x02000CD8 RID: 3288
 public static class RewiredMapController
 {
-	// Token: 0x170016F1 RID: 5873
-	// (get) Token: 0x0600441F RID: 17439 RVA: 0x000F121F File Offset: 0x000EF41F
-	// (set) Token: 0x06004420 RID: 17440 RVA: 0x000F1226 File Offset: 0x000EF426
+	// Token: 0x17001EF1 RID: 7921
+	// (get) Token: 0x06005DB0 RID: 23984 RVA: 0x000338D6 File Offset: 0x00031AD6
+	// (set) Token: 0x06005DB1 RID: 23985 RVA: 0x000338DD File Offset: 0x00031ADD
 	public static bool IsInCutscene { get; private set; }
 
-	// Token: 0x06004421 RID: 17441 RVA: 0x000F122E File Offset: 0x000EF42E
+	// Token: 0x06005DB2 RID: 23986 RVA: 0x000338E5 File Offset: 0x00031AE5
 	private static Rewired_RL.MapCategoryType[] GetMapCategoryTypes(GameInputMode inputMode)
 	{
 		return RewiredMapController.m_gameModeCategoryDict[inputMode];
 	}
 
-	// Token: 0x170016F2 RID: 5874
-	// (get) Token: 0x06004422 RID: 17442 RVA: 0x000F123B File Offset: 0x000EF43B
+	// Token: 0x17001EF2 RID: 7922
+	// (get) Token: 0x06005DB3 RID: 23987 RVA: 0x000338F2 File Offset: 0x00031AF2
 	public static GameInputMode CurrentGameInputMode
 	{
 		get
@@ -26,7 +26,7 @@ public static class RewiredMapController
 		}
 	}
 
-	// Token: 0x06004423 RID: 17443 RVA: 0x000F1242 File Offset: 0x000EF442
+	// Token: 0x06005DB4 RID: 23988 RVA: 0x000338F9 File Offset: 0x00031AF9
 	public static void SetMap(GameInputMode inputMode)
 	{
 		if (ReInput.isReady)
@@ -37,7 +37,7 @@ public static class RewiredMapController
 		}
 	}
 
-	// Token: 0x06004424 RID: 17444 RVA: 0x000F1278 File Offset: 0x000EF478
+	// Token: 0x06005DB5 RID: 23989 RVA: 0x0003392F File Offset: 0x00031B2F
 	public static void DisableAllMap()
 	{
 		if (ReInput.isReady)
@@ -46,7 +46,7 @@ public static class RewiredMapController
 		}
 	}
 
-	// Token: 0x06004425 RID: 17445 RVA: 0x000F12A0 File Offset: 0x000EF4A0
+	// Token: 0x06005DB6 RID: 23990 RVA: 0x0015EE70 File Offset: 0x0015D070
 	public static void SetMapEnabled(GameInputMode inputMode, bool enabled)
 	{
 		if (ReInput.isReady)
@@ -65,7 +65,7 @@ public static class RewiredMapController
 		}
 	}
 
-	// Token: 0x06004426 RID: 17446 RVA: 0x000F130C File Offset: 0x000EF50C
+	// Token: 0x06005DB7 RID: 23991 RVA: 0x0015EEDC File Offset: 0x0015D0DC
 	public static void SetIsInCutscene(bool inCutscene)
 	{
 		if (inCutscene)
@@ -85,20 +85,20 @@ public static class RewiredMapController
 		RewiredMapController.IsInCutscene = inCutscene;
 	}
 
-	// Token: 0x06004427 RID: 17447 RVA: 0x000F13A3 File Offset: 0x000EF5A3
+	// Token: 0x06005DB8 RID: 23992 RVA: 0x00033954 File Offset: 0x00031B54
 	public static void SetCurrentMapEnabled(bool enabled)
 	{
 		RewiredMapController.SetMapEnabled(RewiredMapController.m_currentGameInputMode, enabled);
 	}
 
-	// Token: 0x06004428 RID: 17448 RVA: 0x000F13B0 File Offset: 0x000EF5B0
+	// Token: 0x06005DB9 RID: 23993 RVA: 0x00033961 File Offset: 0x00031B61
 	public static void SetMouseEnabled(bool enabled)
 	{
 		ReInput.controllers.Mouse.enabled = enabled;
 	}
 
-	// Token: 0x170016F3 RID: 5875
-	// (get) Token: 0x06004429 RID: 17449 RVA: 0x000F13C2 File Offset: 0x000EF5C2
+	// Token: 0x17001EF3 RID: 7923
+	// (get) Token: 0x06005DBA RID: 23994 RVA: 0x00033973 File Offset: 0x00031B73
 	public static bool IsCurrentMapEnabled
 	{
 		get
@@ -107,7 +107,7 @@ public static class RewiredMapController
 		}
 	}
 
-	// Token: 0x0600442A RID: 17450 RVA: 0x000F13D0 File Offset: 0x000EF5D0
+	// Token: 0x06005DBB RID: 23995 RVA: 0x0015EF74 File Offset: 0x0015D174
 	public static bool IsMapEnabled(GameInputMode inputMode)
 	{
 		if (!ReInput.isReady)
@@ -127,13 +127,13 @@ public static class RewiredMapController
 		return ReInput.players.GetPlayer(0).controllers.maps.GetMap(controllerType, 0, Rewired_RL.GetMapCategoryID(categoryType), 0).enabled;
 	}
 
-	// Token: 0x04003A41 RID: 14913
+	// Token: 0x04004D1D RID: 19741
 	private static bool m_shouldGameInputBeEnabled = false;
 
-	// Token: 0x04003A42 RID: 14914
+	// Token: 0x04004D1E RID: 19742
 	private static GameInputMode m_currentGameInputMode = GameInputMode.Game;
 
-	// Token: 0x04003A43 RID: 14915
+	// Token: 0x04004D1F RID: 19743
 	private static Dictionary<GameInputMode, Rewired_RL.MapCategoryType[]> m_gameModeCategoryDict = new Dictionary<GameInputMode, Rewired_RL.MapCategoryType[]>
 	{
 		{

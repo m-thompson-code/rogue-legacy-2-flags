@@ -2,10 +2,10 @@
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020003B7 RID: 951
+// Token: 0x0200064D RID: 1613
 public class NewGamePlusOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<NewGamePlusOmniUIDescriptionEventArgs, NewGamePlusOmniUIDescriptionBoxEntry.NewGamePlusOmniUIDescriptionBoxType>
 {
-	// Token: 0x06002328 RID: 9000 RVA: 0x0007271C File Offset: 0x0007091C
+	// Token: 0x06003140 RID: 12608 RVA: 0x000D2D0C File Offset: 0x000D0F0C
 	protected override void DisplayNullDescriptionBox(MonoBehaviour sender)
 	{
 		base.DisplayNullDescriptionBox(sender);
@@ -31,7 +31,7 @@ public class NewGamePlusOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntr
 		}
 	}
 
-	// Token: 0x06002329 RID: 9001 RVA: 0x000727A8 File Offset: 0x000709A8
+	// Token: 0x06003141 RID: 12609 RVA: 0x000D2D98 File Offset: 0x000D0F98
 	protected override void DisplayDescriptionBox(NewGamePlusOmniUIDescriptionEventArgs args)
 	{
 		BurdenType burdenType = args.BurdenType;
@@ -135,16 +135,16 @@ public class NewGamePlusOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntr
 		}
 	}
 
-	// Token: 0x02000C0F RID: 3087
+	// Token: 0x0200064E RID: 1614
 	public enum NewGamePlusOmniUIDescriptionBoxType
 	{
-		// Token: 0x04004EC2 RID: 20162
+		// Token: 0x04002832 RID: 10290
 		None,
-		// Token: 0x04004EC3 RID: 20163
+		// Token: 0x04002833 RID: 10291
 		Title,
-		// Token: 0x04004EC4 RID: 20164
+		// Token: 0x04002834 RID: 10292
 		Description,
-		// Token: 0x04004EC5 RID: 20165
+		// Token: 0x04002835 RID: 10293
 		Controls
 	}
 }

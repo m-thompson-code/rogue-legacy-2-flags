@@ -6,16 +6,16 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000546 RID: 1350
+// Token: 0x020008E8 RID: 2280
 public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer, IAudioEventEmitter
 {
-	// Token: 0x1700122F RID: 4655
-	// (get) Token: 0x06003153 RID: 12627 RVA: 0x000A6DF8 File Offset: 0x000A4FF8
-	// (set) Token: 0x06003154 RID: 12628 RVA: 0x000A6E00 File Offset: 0x000A5000
+	// Token: 0x1700189A RID: 6298
+	// (get) Token: 0x06004519 RID: 17689 RVA: 0x00025F26 File Offset: 0x00024126
+	// (set) Token: 0x0600451A RID: 17690 RVA: 0x00025F2E File Offset: 0x0002412E
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17001230 RID: 4656
-	// (get) Token: 0x06003155 RID: 12629 RVA: 0x000A6E09 File Offset: 0x000A5009
+	// Token: 0x1700189B RID: 6299
+	// (get) Token: 0x0600451B RID: 17691 RVA: 0x00025F37 File Offset: 0x00024137
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -24,8 +24,8 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		}
 	}
 
-	// Token: 0x17001231 RID: 4657
-	// (get) Token: 0x06003156 RID: 12630 RVA: 0x000A6E11 File Offset: 0x000A5011
+	// Token: 0x1700189C RID: 6300
+	// (get) Token: 0x0600451C RID: 17692 RVA: 0x000047A7 File Offset: 0x000029A7
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -34,7 +34,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		}
 	}
 
-	// Token: 0x06003157 RID: 12631 RVA: 0x000A6E14 File Offset: 0x000A5014
+	// Token: 0x0600451D RID: 17693 RVA: 0x0010FEB4 File Offset: 0x0010E0B4
 	private bool HasEventDialogue()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround)
@@ -44,8 +44,8 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		return !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.ArchitectDialogue_Intro);
 	}
 
-	// Token: 0x17001232 RID: 4658
-	// (get) Token: 0x06003158 RID: 12632 RVA: 0x000A6E60 File Offset: 0x000A5060
+	// Token: 0x1700189D RID: 6301
+	// (get) Token: 0x0600451E RID: 17694 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -54,7 +54,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		}
 	}
 
-	// Token: 0x06003159 RID: 12633 RVA: 0x000A6E68 File Offset: 0x000A5068
+	// Token: 0x0600451F RID: 17695 RVA: 0x0010FF00 File Offset: 0x0010E100
 	private void Awake()
 	{
 		this.m_interactable = base.GetComponent<Interactable>();
@@ -68,14 +68,14 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		this.m_permanentCastleLockConfirmMenu = new Action(this.PermanentCastleLockConfirmMenu);
 	}
 
-	// Token: 0x0600315A RID: 12634 RVA: 0x000A6F11 File Offset: 0x000A5111
+	// Token: 0x06004520 RID: 17696 RVA: 0x00025F3F File Offset: 0x0002413F
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x0600315B RID: 12635 RVA: 0x000A6F38 File Offset: 0x000A5138
+	// Token: 0x06004521 RID: 17697 RVA: 0x00025F66 File Offset: 0x00024166
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -84,25 +84,25 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		}
 	}
 
-	// Token: 0x0600315C RID: 12636 RVA: 0x000A6F64 File Offset: 0x000A5164
+	// Token: 0x06004522 RID: 17698 RVA: 0x00025F92 File Offset: 0x00024192
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.SkillTree_Closed, this.m_onSkillTreeClosed);
 	}
 
-	// Token: 0x0600315D RID: 12637 RVA: 0x000A6F73 File Offset: 0x000A5173
+	// Token: 0x06004523 RID: 17699 RVA: 0x00025FA1 File Offset: 0x000241A1
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.SkillTree_Closed, this.m_onSkillTreeClosed);
 	}
 
-	// Token: 0x0600315E RID: 12638 RVA: 0x000A6F82 File Offset: 0x000A5182
+	// Token: 0x06004524 RID: 17700 RVA: 0x00025FB0 File Offset: 0x000241B0
 	private void Start()
 	{
 		this.OnPlayerEnterRoom(null, null);
 	}
 
-	// Token: 0x0600315F RID: 12639 RVA: 0x000A6F8C File Offset: 0x000A518C
+	// Token: 0x06004525 RID: 17701 RVA: 0x0010FFAC File Offset: 0x0010E1AC
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		this.m_endingSpeechBubblePlayed = false;
@@ -147,13 +147,13 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		this.UpdateText();
 	}
 
-	// Token: 0x06003160 RID: 12640 RVA: 0x000A70D2 File Offset: 0x000A52D2
+	// Token: 0x06004526 RID: 17702 RVA: 0x00025FBA File Offset: 0x000241BA
 	private void OnSkillTreeClosed(object sender, EventArgs args)
 	{
 		this.UpdateText();
 	}
 
-	// Token: 0x06003161 RID: 12641 RVA: 0x000A70DC File Offset: 0x000A52DC
+	// Token: 0x06004527 RID: 17703 RVA: 0x001100F4 File Offset: 0x0010E2F4
 	private void InitializeDrillState(bool isInAboveGroundRoom)
 	{
 		if (SaveManager.PlayerSaveData.CastleLockState == CastleLockState.NotLocked || isInAboveGroundRoom)
@@ -166,7 +166,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		this.m_npcController.Animator.Play("Architect_Drill_Locked", 1, 1f);
 	}
 
-	// Token: 0x06003162 RID: 12642 RVA: 0x000A715C File Offset: 0x000A535C
+	// Token: 0x06004528 RID: 17704 RVA: 0x00110174 File Offset: 0x0010E374
 	private void UpdateText()
 	{
 		float num = -(1f - NPC_EV.GetArchitectGoldMod((int)(SaveManager.PlayerSaveData.TimesCastleLocked + 1)));
@@ -184,7 +184,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		this.m_temporaryLockText.text = "[Coin_Icon] " + str;
 	}
 
-	// Token: 0x06003163 RID: 12643 RVA: 0x000A71E5 File Offset: 0x000A53E5
+	// Token: 0x06004529 RID: 17705 RVA: 0x00025FC2 File Offset: 0x000241C2
 	public void OpenArchitect()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
@@ -192,7 +192,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		base.StartCoroutine(this.OpenArchitectCoroutine());
 	}
 
-	// Token: 0x06003164 RID: 12644 RVA: 0x000A7206 File Offset: 0x000A5406
+	// Token: 0x0600452A RID: 17706 RVA: 0x00025FE3 File Offset: 0x000241E3
 	public void CloseArchitectShop()
 	{
 		if (this.m_npcController.CurrentState != NPCState.Idle)
@@ -203,7 +203,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		this.m_interactable.SetIsInteractableActive(true);
 	}
 
-	// Token: 0x06003165 RID: 12645 RVA: 0x000A7241 File Offset: 0x000A5441
+	// Token: 0x0600452B RID: 17707 RVA: 0x0002601E File Offset: 0x0002421E
 	private IEnumerator OpenArchitectCoroutine()
 	{
 		AudioManager.PlayOneShotAttached(this, this.m_greetingAudioEvent, base.gameObject);
@@ -228,7 +228,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		yield break;
 	}
 
-	// Token: 0x06003166 RID: 12646 RVA: 0x000A7250 File Offset: 0x000A5450
+	// Token: 0x0600452C RID: 17708 RVA: 0x0002602D File Offset: 0x0002422D
 	private void DisplayArchitectWindow()
 	{
 		if (this.m_canLockCastle)
@@ -240,7 +240,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		this.RunArchitectFailedIntroDialogue();
 	}
 
-	// Token: 0x06003167 RID: 12647 RVA: 0x000A7270 File Offset: 0x000A5470
+	// Token: 0x0600452D RID: 17709 RVA: 0x00110200 File Offset: 0x0010E400
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -270,7 +270,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeArchitectShop);
 	}
 
-	// Token: 0x06003168 RID: 12648 RVA: 0x000A7310 File Offset: 0x000A5510
+	// Token: 0x0600452E RID: 17710 RVA: 0x001102A0 File Offset: 0x0010E4A0
 	private void RunArchitectFailedIntroDialogue()
 	{
 		DialogueManager.StartNewDialogue(this.m_npcController, NPCState.Idle);
@@ -279,7 +279,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeArchitectShop);
 	}
 
-	// Token: 0x06003169 RID: 12649 RVA: 0x000A7364 File Offset: 0x000A5564
+	// Token: 0x0600452F RID: 17711 RVA: 0x001102F4 File Offset: 0x0010E4F4
 	private void RunArchitectIntroDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.ArchitectDialogue_Intro, true);
@@ -294,7 +294,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_runArchitectFailedIntroDialogue);
 	}
 
-	// Token: 0x0600316A RID: 12650 RVA: 0x000A73DC File Offset: 0x000A55DC
+	// Token: 0x06004530 RID: 17712 RVA: 0x0011036C File Offset: 0x0010E56C
 	private void InitializeArchitectConfirmMenu()
 	{
 		string arg = Mathf.RoundToInt((1f - NPC_EV.GetArchitectGoldMod((int)(SaveManager.PlayerSaveData.TimesCastleLocked + 1))) * 100f).ToString();
@@ -315,14 +315,14 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		AudioManager.PlayOneShot(this, this.m_interactOpenAudioEvent, default(Vector3));
 	}
 
-	// Token: 0x0600316B RID: 12651 RVA: 0x000A74F3 File Offset: 0x000A56F3
+	// Token: 0x06004531 RID: 17713 RVA: 0x0002604C File Offset: 0x0002424C
 	private void CancelConfirmMenu()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, false);
 		this.CloseArchitectShop();
 	}
 
-	// Token: 0x0600316C RID: 12652 RVA: 0x000A7504 File Offset: 0x000A5704
+	// Token: 0x06004532 RID: 17714 RVA: 0x00110484 File Offset: 0x0010E684
 	private void UnlockCastleConfirmMenu()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, false);
@@ -330,7 +330,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		AudioManager.PlayOneShot(this, this.m_selectDoNotLockAudioEvent, default(Vector3));
 	}
 
-	// Token: 0x0600316D RID: 12653 RVA: 0x000A753C File Offset: 0x000A573C
+	// Token: 0x06004533 RID: 17715 RVA: 0x001104BC File Offset: 0x0010E6BC
 	private void TemporaryCastleLockConfirmMenu()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, false);
@@ -338,7 +338,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		AudioManager.PlayOneShot(this, this.m_selectLockOnceAudioEvent, default(Vector3));
 	}
 
-	// Token: 0x0600316E RID: 12654 RVA: 0x000A7578 File Offset: 0x000A5778
+	// Token: 0x06004534 RID: 17716 RVA: 0x001104F8 File Offset: 0x0010E6F8
 	private void PermanentCastleLockConfirmMenu()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenuBig, false);
@@ -346,7 +346,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		AudioManager.PlayOneShot(this, this.m_selectLockAlwaysAudioEvent, default(Vector3));
 	}
 
-	// Token: 0x0600316F RID: 12655 RVA: 0x000A75B1 File Offset: 0x000A57B1
+	// Token: 0x06004535 RID: 17717 RVA: 0x0002605C File Offset: 0x0002425C
 	private IEnumerator SetLockState(CastleLockState lockState)
 	{
 		this.m_npcController.SetNPCState(NPCState.Idle, false);
@@ -404,7 +404,7 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		yield break;
 	}
 
-	// Token: 0x06003170 RID: 12656 RVA: 0x000A75C7 File Offset: 0x000A57C7
+	// Token: 0x06004536 RID: 17718 RVA: 0x00026072 File Offset: 0x00024272
 	private IEnumerator MovePlayerToArchitect()
 	{
 		PlayerManager.GetPlayerController().SetVelocity(0f, 0f, false);
@@ -428,98 +428,98 @@ public class ArchitectShop : MonoBehaviour, IDisplaySpeechBubble, IRoomConsumer,
 		yield break;
 	}
 
-	// Token: 0x040026E3 RID: 9955
+	// Token: 0x04003577 RID: 13687
 	private const int NPC_ANIM_LAYER = 0;
 
-	// Token: 0x040026E4 RID: 9956
+	// Token: 0x04003578 RID: 13688
 	private const int DRILL_ANIM_LAYER = 1;
 
-	// Token: 0x040026E5 RID: 9957
+	// Token: 0x04003579 RID: 13689
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x040026E6 RID: 9958
+	// Token: 0x0400357A RID: 13690
 	[SerializeField]
 	private TMP_Text m_temporaryLockText;
 
-	// Token: 0x040026E7 RID: 9959
+	// Token: 0x0400357B RID: 13691
 	[SerializeField]
 	private NPCController m_npcController;
 
-	// Token: 0x040026E8 RID: 9960
+	// Token: 0x0400357C RID: 13692
 	[SerializeField]
 	private GameObject[] m_drillGOs;
 
-	// Token: 0x040026E9 RID: 9961
+	// Token: 0x0400357D RID: 13693
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x040026EA RID: 9962
+	// Token: 0x0400357E RID: 13694
 	[SerializeField]
 	[EventRef]
 	private string m_farewellAudioEvent;
 
-	// Token: 0x040026EB RID: 9963
+	// Token: 0x0400357F RID: 13695
 	[SerializeField]
 	[EventRef]
 	private string m_mechanismLockAudioEvent;
 
-	// Token: 0x040026EC RID: 9964
+	// Token: 0x04003580 RID: 13696
 	[SerializeField]
 	[EventRef]
 	private string m_mechanismUnlockAudioEvent;
 
-	// Token: 0x040026ED RID: 9965
+	// Token: 0x04003581 RID: 13697
 	[SerializeField]
 	[EventRef]
 	private string m_interactOpenAudioEvent;
 
-	// Token: 0x040026EE RID: 9966
+	// Token: 0x04003582 RID: 13698
 	[SerializeField]
 	[EventRef]
 	private string m_selectLockOnceAudioEvent;
 
-	// Token: 0x040026EF RID: 9967
+	// Token: 0x04003583 RID: 13699
 	[SerializeField]
 	[EventRef]
 	private string m_selectLockAlwaysAudioEvent;
 
-	// Token: 0x040026F0 RID: 9968
+	// Token: 0x04003584 RID: 13700
 	[SerializeField]
 	[EventRef]
 	private string m_selectDoNotLockAudioEvent;
 
-	// Token: 0x040026F1 RID: 9969
+	// Token: 0x04003585 RID: 13701
 	private bool m_canLockCastle;
 
-	// Token: 0x040026F2 RID: 9970
+	// Token: 0x04003586 RID: 13702
 	private Interactable m_interactable;
 
-	// Token: 0x040026F3 RID: 9971
+	// Token: 0x04003587 RID: 13703
 	private bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x040026F4 RID: 9972
+	// Token: 0x04003588 RID: 13704
 	private Action<MonoBehaviour, EventArgs> m_onSkillTreeClosed;
 
-	// Token: 0x040026F5 RID: 9973
+	// Token: 0x04003589 RID: 13705
 	private Action m_closeArchitectShop;
 
-	// Token: 0x040026F6 RID: 9974
+	// Token: 0x0400358A RID: 13706
 	private Action m_displayArchitectWindow;
 
-	// Token: 0x040026F7 RID: 9975
+	// Token: 0x0400358B RID: 13707
 	private Action m_runArchitectFailedIntroDialogue;
 
-	// Token: 0x040026F8 RID: 9976
+	// Token: 0x0400358C RID: 13708
 	private Action m_cancelConfirmMenu;
 
-	// Token: 0x040026F9 RID: 9977
+	// Token: 0x0400358D RID: 13709
 	private Action m_unlockCastleConfirmMenu;
 
-	// Token: 0x040026FA RID: 9978
+	// Token: 0x0400358E RID: 13710
 	private Action m_temporaryCastleLockConfirmMenu;
 
-	// Token: 0x040026FB RID: 9979
+	// Token: 0x0400358F RID: 13711
 	private Action m_permanentCastleLockConfirmMenu;
 }

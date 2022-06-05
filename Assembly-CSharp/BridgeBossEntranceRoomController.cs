@@ -4,11 +4,11 @@ using RLAudio;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020004EE RID: 1262
+// Token: 0x02000845 RID: 2117
 public class BridgeBossEntranceRoomController : BossEntranceRoomController, IAudioEventEmitter
 {
-	// Token: 0x170011B1 RID: 4529
-	// (get) Token: 0x06002F63 RID: 12131 RVA: 0x000A2133 File Offset: 0x000A0333
+	// Token: 0x1700178E RID: 6030
+	// (get) Token: 0x06004172 RID: 16754 RVA: 0x000243CD File Offset: 0x000225CD
 	public string Description
 	{
 		get
@@ -21,14 +21,14 @@ public class BridgeBossEntranceRoomController : BossEntranceRoomController, IAud
 		}
 	}
 
-	// Token: 0x06002F64 RID: 12132 RVA: 0x000A2159 File Offset: 0x000A0359
+	// Token: 0x06004173 RID: 16755 RVA: 0x000243F3 File Offset: 0x000225F3
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x06002F65 RID: 12133 RVA: 0x000A2174 File Offset: 0x000A0374
+	// Token: 0x06004174 RID: 16756 RVA: 0x0010760C File Offset: 0x0010580C
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		bool flag = SaveManager.PlayerSaveData.GetFlag(this.m_bossBeatenFlag) && BossEntranceRoomController.RunDoorCrumbleAnimation;
@@ -46,7 +46,7 @@ public class BridgeBossEntranceRoomController : BossEntranceRoomController, IAud
 		}
 	}
 
-	// Token: 0x06002F66 RID: 12134 RVA: 0x000A220D File Offset: 0x000A040D
+	// Token: 0x06004175 RID: 16757 RVA: 0x0002440C File Offset: 0x0002260C
 	private IEnumerator GateOpenAnimCoroutine()
 	{
 		RewiredMapController.SetIsInCutscene(true);
@@ -98,27 +98,27 @@ public class BridgeBossEntranceRoomController : BossEntranceRoomController, IAud
 		yield break;
 	}
 
-	// Token: 0x040025C6 RID: 9670
+	// Token: 0x0400333D RID: 13117
 	[SerializeField]
 	private PropSpawnController m_gateSpawner;
 
-	// Token: 0x040025C7 RID: 9671
+	// Token: 0x0400333E RID: 13118
 	[SerializeField]
 	private GameObject m_gateEndingPosGO;
 
-	// Token: 0x040025C8 RID: 9672
+	// Token: 0x0400333F RID: 13119
 	[SerializeField]
 	private Transform m_cameraMovementObj;
 
-	// Token: 0x040025C9 RID: 9673
+	// Token: 0x04003340 RID: 13120
 	private Vector3 m_gateStartingPos;
 
-	// Token: 0x040025CA RID: 9674
+	// Token: 0x04003341 RID: 13121
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040025CB RID: 9675
+	// Token: 0x04003342 RID: 13122
 	private string m_description = string.Empty;
 
-	// Token: 0x040025CC RID: 9676
+	// Token: 0x04003343 RID: 13123
 	private const string GATE_OPENING_SFX_AUDIO_PATH = "event:/SFX/Interactables/sfx_env_gate_openSequence";
 }

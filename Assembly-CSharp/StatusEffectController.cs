@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000315 RID: 789
+// Token: 0x02000554 RID: 1364
 public class StatusEffectController : MonoBehaviour
 {
-	// Token: 0x17000D85 RID: 3461
-	// (get) Token: 0x06001F34 RID: 7988 RVA: 0x0006425C File Offset: 0x0006245C
+	// Token: 0x1700119E RID: 4510
+	// (get) Token: 0x06002BB1 RID: 11185 RVA: 0x0001851F File Offset: 0x0001671F
 	public bool HasInvulnStack
 	{
 		get
@@ -15,17 +15,17 @@ public class StatusEffectController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000D86 RID: 3462
-	// (get) Token: 0x06001F35 RID: 7989 RVA: 0x00064276 File Offset: 0x00062476
-	// (set) Token: 0x06001F36 RID: 7990 RVA: 0x0006427E File Offset: 0x0006247E
+	// Token: 0x1700119F RID: 4511
+	// (get) Token: 0x06002BB2 RID: 11186 RVA: 0x00018539 File Offset: 0x00016739
+	// (set) Token: 0x06002BB3 RID: 11187 RVA: 0x00018541 File Offset: 0x00016741
 	public bool ImmuneToAllStatusEffects { get; set; }
 
-	// Token: 0x17000D87 RID: 3463
-	// (get) Token: 0x06001F37 RID: 7991 RVA: 0x00064287 File Offset: 0x00062487
-	// (set) Token: 0x06001F38 RID: 7992 RVA: 0x0006428F File Offset: 0x0006248F
+	// Token: 0x170011A0 RID: 4512
+	// (get) Token: 0x06002BB4 RID: 11188 RVA: 0x0001854A File Offset: 0x0001674A
+	// (set) Token: 0x06002BB5 RID: 11189 RVA: 0x00018552 File Offset: 0x00016752
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x06001F39 RID: 7993 RVA: 0x00064298 File Offset: 0x00062498
+	// Token: 0x06002BB6 RID: 11190 RVA: 0x000C44F8 File Offset: 0x000C26F8
 	public bool HasAnyActiveStatusEffect(bool includeCommanderBuffs)
 	{
 		foreach (StatusEffectType statusEffectType in StatusEffectType_RL.TypeArray)
@@ -38,7 +38,7 @@ public class StatusEffectController : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06001F3A RID: 7994 RVA: 0x000642DC File Offset: 0x000624DC
+	// Token: 0x06002BB7 RID: 11191 RVA: 0x000C453C File Offset: 0x000C273C
 	public bool HasAnyActiveTintedStatusEffect()
 	{
 		foreach (StatusEffectType key in StatusEffectType_RL.TypeArray)
@@ -52,14 +52,14 @@ public class StatusEffectController : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06001F3B RID: 7995 RVA: 0x00064324 File Offset: 0x00062524
+	// Token: 0x06002BB8 RID: 11192 RVA: 0x000C4584 File Offset: 0x000C2784
 	public bool HasStatusEffect(StatusEffectType statusEffectType)
 	{
 		BaseStatusEffect baseStatusEffect;
 		return this.m_statusEffectTable.TryGetValue(statusEffectType, out baseStatusEffect) && baseStatusEffect.IsPlaying;
 	}
 
-	// Token: 0x06001F3C RID: 7996 RVA: 0x0006434C File Offset: 0x0006254C
+	// Token: 0x06002BB9 RID: 11193 RVA: 0x000C45AC File Offset: 0x000C27AC
 	public BaseStatusEffect GetStatusEffect(StatusEffectType statusEffectType)
 	{
 		BaseStatusEffect result;
@@ -70,14 +70,14 @@ public class StatusEffectController : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06001F3D RID: 7997 RVA: 0x0006436C File Offset: 0x0006256C
+	// Token: 0x06002BBA RID: 11194 RVA: 0x0001855B File Offset: 0x0001675B
 	public void Initialize(BaseCharacterController charController)
 	{
 		this.m_charController = charController;
 		this.InitializeStatusEffects();
 	}
 
-	// Token: 0x06001F3E RID: 7998 RVA: 0x0006437C File Offset: 0x0006257C
+	// Token: 0x06002BBB RID: 11195 RVA: 0x000C45CC File Offset: 0x000C27CC
 	private void InitializeStatusEffects()
 	{
 		this.m_immunityList = new List<StatusEffectType>();
@@ -92,7 +92,7 @@ public class StatusEffectController : MonoBehaviour
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x06001F3F RID: 7999 RVA: 0x000643EE File Offset: 0x000625EE
+	// Token: 0x06002BBC RID: 11196 RVA: 0x0001856A File Offset: 0x0001676A
 	private void OnDisable()
 	{
 		if (!GameManager.IsApplicationClosing)
@@ -101,7 +101,7 @@ public class StatusEffectController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F40 RID: 8000 RVA: 0x00064400 File Offset: 0x00062600
+	// Token: 0x06002BBD RID: 11197 RVA: 0x000C4640 File Offset: 0x000C2840
 	public void StartStatusEffect(StatusEffectType statusEffectType, float duration, IDamageObj caster)
 	{
 		if (StatusEffectController.DISABLE_ADDING_STATUS_EFFECTS)
@@ -149,7 +149,7 @@ public class StatusEffectController : MonoBehaviour
 		baseStatusEffect.StartEffect(duration, caster);
 	}
 
-	// Token: 0x06001F41 RID: 8001 RVA: 0x000644EC File Offset: 0x000626EC
+	// Token: 0x06002BBE RID: 11198 RVA: 0x000C472C File Offset: 0x000C292C
 	public void StopStatusEffect(StatusEffectType statusEffectType, bool interrupted)
 	{
 		BaseStatusEffect baseStatusEffect;
@@ -163,7 +163,7 @@ public class StatusEffectController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F42 RID: 8002 RVA: 0x00064534 File Offset: 0x00062734
+	// Token: 0x06002BBF RID: 11199 RVA: 0x000C4774 File Offset: 0x000C2974
 	public void StopAllStatusEffects(bool interrupted)
 	{
 		foreach (StatusEffectType key in StatusEffectType_RL.TypeArray)
@@ -177,7 +177,7 @@ public class StatusEffectController : MonoBehaviour
 		this.m_invulnStatusEffectStacks.Clear();
 	}
 
-	// Token: 0x06001F43 RID: 8003 RVA: 0x00064583 File Offset: 0x00062783
+	// Token: 0x06002BC0 RID: 11200 RVA: 0x0001857A File Offset: 0x0001677A
 	public void AddStatusEffectImmunity(StatusEffectType immunityType)
 	{
 		if (!this.m_immunityList.Contains(immunityType))
@@ -186,13 +186,13 @@ public class StatusEffectController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F44 RID: 8004 RVA: 0x0006459F File Offset: 0x0006279F
+	// Token: 0x06002BC1 RID: 11201 RVA: 0x00018596 File Offset: 0x00016796
 	public void RemoveStatusEffectImmunity(StatusEffectType immunityType)
 	{
 		this.m_immunityList.Remove(immunityType);
 	}
 
-	// Token: 0x06001F45 RID: 8005 RVA: 0x000645B0 File Offset: 0x000627B0
+	// Token: 0x06002BC2 RID: 11202 RVA: 0x000C47C4 File Offset: 0x000C29C4
 	public void SetStatusEffectHidden(StatusEffectType statusEffectType, bool hide)
 	{
 		BaseStatusEffect statusEffect = this.GetStatusEffect(statusEffectType);
@@ -202,7 +202,7 @@ public class StatusEffectController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F46 RID: 8006 RVA: 0x000645D4 File Offset: 0x000627D4
+	// Token: 0x06002BC3 RID: 11203 RVA: 0x000C47E8 File Offset: 0x000C29E8
 	public void SetAllStatusEffectsHidden(bool hide)
 	{
 		foreach (KeyValuePair<StatusEffectType, BaseStatusEffect> keyValuePair in this.m_statusEffectTable)
@@ -217,13 +217,13 @@ public class StatusEffectController : MonoBehaviour
 		this.m_charController.StatusBarController.SetCanvasVisible(true);
 	}
 
-	// Token: 0x06001F47 RID: 8007 RVA: 0x00064654 File Offset: 0x00062854
+	// Token: 0x06002BC4 RID: 11204 RVA: 0x000185A5 File Offset: 0x000167A5
 	public void AddStatusEffectInvulnStack(StatusEffectType statusEffectType)
 	{
 		this.m_invulnStatusEffectStacks.Add(statusEffectType);
 	}
 
-	// Token: 0x06001F48 RID: 8008 RVA: 0x00064663 File Offset: 0x00062863
+	// Token: 0x06002BC5 RID: 11205 RVA: 0x000185B4 File Offset: 0x000167B4
 	public void RemoveStatusEffectInvulnStack(StatusEffectType statusEffectType)
 	{
 		if (this.m_invulnStatusEffectStacks.Contains(statusEffectType))
@@ -232,18 +232,18 @@ public class StatusEffectController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001C03 RID: 7171
+	// Token: 0x0400250D RID: 9485
 	public static bool DISABLE_ADDING_STATUS_EFFECTS;
 
-	// Token: 0x04001C04 RID: 7172
+	// Token: 0x0400250E RID: 9486
 	private BaseCharacterController m_charController;
 
-	// Token: 0x04001C05 RID: 7173
+	// Token: 0x0400250F RID: 9487
 	private List<StatusEffectType> m_immunityList;
 
-	// Token: 0x04001C06 RID: 7174
+	// Token: 0x04002510 RID: 9488
 	private HashSet<StatusEffectType> m_invulnStatusEffectStacks;
 
-	// Token: 0x04001C07 RID: 7175
+	// Token: 0x04002511 RID: 9489
 	private Dictionary<StatusEffectType, BaseStatusEffect> m_statusEffectTable;
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020002D1 RID: 721
+// Token: 0x020004C6 RID: 1222
 public class GameModeType_RL
 {
-	// Token: 0x17000CA5 RID: 3237
-	// (get) Token: 0x06001C8B RID: 7307 RVA: 0x0005CD00 File Offset: 0x0005AF00
+	// Token: 0x1700102E RID: 4142
+	// (get) Token: 0x06002755 RID: 10069 RVA: 0x00016231 File Offset: 0x00014431
 	public static GameModeType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class GameModeType_RL
 		}
 	}
 
-	// Token: 0x040019EF RID: 6639
+	// Token: 0x040021F6 RID: 8694
 	private static GameModeType[] m_typeArray;
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200061E RID: 1566
+// Token: 0x02000A41 RID: 2625
 [Serializable]
 public class ListenerEntry
 {
-	// Token: 0x06003883 RID: 14467 RVA: 0x000C10EB File Offset: 0x000BF2EB
+	// Token: 0x06004F27 RID: 20263 RVA: 0x0002B26C File Offset: 0x0002946C
 	public ListenerEntry(string eventID, MonoBehaviour monoBehaviour, string method, int frameNumber)
 	{
 		this.Event = eventID;
@@ -15,18 +15,18 @@ public class ListenerEntry
 		this.FrameNumber = Time.frameCount;
 	}
 
-	// Token: 0x04002BB1 RID: 11185
+	// Token: 0x04003C1E RID: 15390
 	public string Event;
 
-	// Token: 0x04002BB2 RID: 11186
+	// Token: 0x04003C1F RID: 15391
 	public MonoBehaviour MonoBehaviour;
 
-	// Token: 0x04002BB3 RID: 11187
+	// Token: 0x04003C20 RID: 15392
 	public string MonoBehaviourName;
 
-	// Token: 0x04002BB4 RID: 11188
+	// Token: 0x04003C21 RID: 15393
 	public string Method;
 
-	// Token: 0x04002BB5 RID: 11189
+	// Token: 0x04003C22 RID: 15394
 	public int FrameNumber;
 }

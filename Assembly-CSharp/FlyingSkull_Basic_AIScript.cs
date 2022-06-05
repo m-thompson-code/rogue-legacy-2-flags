@@ -3,10 +3,10 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020000E6 RID: 230
+// Token: 0x02000172 RID: 370
 public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 {
-	// Token: 0x060006E4 RID: 1764 RVA: 0x00019EFD File Offset: 0x000180FD
+	// Token: 0x06000A01 RID: 2561 RVA: 0x000068E9 File Offset: 0x00004AE9
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -15,8 +15,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		};
 	}
 
-	// Token: 0x17000396 RID: 918
-	// (get) Token: 0x060006E5 RID: 1765 RVA: 0x00019F13 File Offset: 0x00018113
+	// Token: 0x1700049E RID: 1182
+	// (get) Token: 0x06000A02 RID: 2562 RVA: 0x00003DEF File Offset: 0x00001FEF
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -25,8 +25,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x17000397 RID: 919
-	// (get) Token: 0x060006E6 RID: 1766 RVA: 0x00019F24 File Offset: 0x00018124
+	// Token: 0x1700049F RID: 1183
+	// (get) Token: 0x06000A03 RID: 2563 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -35,8 +35,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x17000398 RID: 920
-	// (get) Token: 0x060006E7 RID: 1767 RVA: 0x00019F35 File Offset: 0x00018135
+	// Token: 0x170004A0 RID: 1184
+	// (get) Token: 0x06000A04 RID: 2564 RVA: 0x00003E00 File Offset: 0x00002000
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -45,8 +45,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x17000399 RID: 921
-	// (get) Token: 0x060006E8 RID: 1768 RVA: 0x00019F46 File Offset: 0x00018146
+	// Token: 0x170004A1 RID: 1185
+	// (get) Token: 0x06000A05 RID: 2565 RVA: 0x00005065 File Offset: 0x00003265
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -55,8 +55,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x1700039A RID: 922
-	// (get) Token: 0x060006E9 RID: 1769 RVA: 0x00019F57 File Offset: 0x00018157
+	// Token: 0x170004A2 RID: 1186
+	// (get) Token: 0x06000A06 RID: 2566 RVA: 0x00005076 File Offset: 0x00003276
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -65,8 +65,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x1700039B RID: 923
-	// (get) Token: 0x060006EA RID: 1770 RVA: 0x00019F68 File Offset: 0x00018168
+	// Token: 0x170004A3 RID: 1187
+	// (get) Token: 0x06000A07 RID: 2567 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_shoot_TellIntro_AnimationSpeed
 	{
 		get
@@ -75,8 +75,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x1700039C RID: 924
-	// (get) Token: 0x060006EB RID: 1771 RVA: 0x00019F6F File Offset: 0x0001816F
+	// Token: 0x170004A4 RID: 1188
+	// (get) Token: 0x06000A08 RID: 2568 RVA: 0x00004536 File Offset: 0x00002736
 	protected virtual float m_shoot_TellHold_AnimationSpeed
 	{
 		get
@@ -85,8 +85,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x1700039D RID: 925
-	// (get) Token: 0x060006EC RID: 1772 RVA: 0x00019F76 File Offset: 0x00018176
+	// Token: 0x170004A5 RID: 1189
+	// (get) Token: 0x06000A09 RID: 2569 RVA: 0x00004A90 File Offset: 0x00002C90
 	protected virtual float m_shoot_Tell_Delay
 	{
 		get
@@ -95,8 +95,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x1700039E RID: 926
-	// (get) Token: 0x060006ED RID: 1773 RVA: 0x00019F7D File Offset: 0x0001817D
+	// Token: 0x170004A6 RID: 1190
+	// (get) Token: 0x06000A0A RID: 2570 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_shoot_AttackIntro_AnimationSpeed
 	{
 		get
@@ -105,8 +105,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x1700039F RID: 927
-	// (get) Token: 0x060006EE RID: 1774 RVA: 0x00019F84 File Offset: 0x00018184
+	// Token: 0x170004A7 RID: 1191
+	// (get) Token: 0x06000A0B RID: 2571 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_AttackIntro_Delay
 	{
 		get
@@ -115,8 +115,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003A0 RID: 928
-	// (get) Token: 0x060006EF RID: 1775 RVA: 0x00019F8B File Offset: 0x0001818B
+	// Token: 0x170004A8 RID: 1192
+	// (get) Token: 0x06000A0C RID: 2572 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_shoot_AttackHold_AnimationSpeed
 	{
 		get
@@ -125,8 +125,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003A1 RID: 929
-	// (get) Token: 0x060006F0 RID: 1776 RVA: 0x00019F92 File Offset: 0x00018192
+	// Token: 0x170004A9 RID: 1193
+	// (get) Token: 0x06000A0D RID: 2573 RVA: 0x00004FE5 File Offset: 0x000031E5
 	protected virtual float m_shoot_AttackHold_Delay
 	{
 		get
@@ -135,8 +135,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003A2 RID: 930
-	// (get) Token: 0x060006F1 RID: 1777 RVA: 0x00019F99 File Offset: 0x00018199
+	// Token: 0x170004AA RID: 1194
+	// (get) Token: 0x06000A0E RID: 2574 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_shoot_Exit_AnimationSpeed
 	{
 		get
@@ -145,8 +145,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003A3 RID: 931
-	// (get) Token: 0x060006F2 RID: 1778 RVA: 0x00019FA0 File Offset: 0x000181A0
+	// Token: 0x170004AB RID: 1195
+	// (get) Token: 0x06000A0F RID: 2575 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_Exit_Delay
 	{
 		get
@@ -155,8 +155,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003A4 RID: 932
-	// (get) Token: 0x060006F3 RID: 1779 RVA: 0x00019FA7 File Offset: 0x000181A7
+	// Token: 0x170004AC RID: 1196
+	// (get) Token: 0x06000A10 RID: 2576 RVA: 0x000050CB File Offset: 0x000032CB
 	protected virtual float m_shoot_Exit_ForceIdle
 	{
 		get
@@ -165,8 +165,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003A5 RID: 933
-	// (get) Token: 0x060006F4 RID: 1780 RVA: 0x00019FAE File Offset: 0x000181AE
+	// Token: 0x170004AD RID: 1197
+	// (get) Token: 0x06000A11 RID: 2577 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_Exit_AttackCD
 	{
 		get
@@ -175,8 +175,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003A6 RID: 934
-	// (get) Token: 0x060006F5 RID: 1781 RVA: 0x00019FB5 File Offset: 0x000181B5
+	// Token: 0x170004AE RID: 1198
+	// (get) Token: 0x06000A12 RID: 2578 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_BeforeTellDelay
 	{
 		get
@@ -185,8 +185,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003A7 RID: 935
-	// (get) Token: 0x060006F6 RID: 1782 RVA: 0x00019FBC File Offset: 0x000181BC
+	// Token: 0x170004AF RID: 1199
+	// (get) Token: 0x06000A13 RID: 2579 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_shoot_AfterAttackDelay
 	{
 		get
@@ -195,8 +195,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003A8 RID: 936
-	// (get) Token: 0x060006F7 RID: 1783 RVA: 0x00019FC3 File Offset: 0x000181C3
+	// Token: 0x170004B0 RID: 1200
+	// (get) Token: 0x06000A14 RID: 2580 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_shoot_TotalShots
 	{
 		get
@@ -205,8 +205,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003A9 RID: 937
-	// (get) Token: 0x060006F8 RID: 1784 RVA: 0x00019FC6 File Offset: 0x000181C6
+	// Token: 0x170004B1 RID: 1201
+	// (get) Token: 0x06000A15 RID: 2581 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float m_shoot_MultiShotDelay
 	{
 		get
@@ -215,8 +215,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003AA RID: 938
-	// (get) Token: 0x060006F9 RID: 1785 RVA: 0x00019FCD File Offset: 0x000181CD
+	// Token: 0x170004B2 RID: 1202
+	// (get) Token: 0x06000A16 RID: 2582 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_shoot_ShootNear
 	{
 		get
@@ -225,8 +225,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003AB RID: 939
-	// (get) Token: 0x060006FA RID: 1786 RVA: 0x00019FD0 File Offset: 0x000181D0
+	// Token: 0x170004B3 RID: 1203
+	// (get) Token: 0x06000A17 RID: 2583 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_shoot_ShootFar
 	{
 		get
@@ -235,8 +235,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003AC RID: 940
-	// (get) Token: 0x060006FB RID: 1787 RVA: 0x00019FD3 File Offset: 0x000181D3
+	// Token: 0x170004B4 RID: 1204
+	// (get) Token: 0x06000A18 RID: 2584 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual bool m_shoot_ShootMirror
 	{
 		get
@@ -245,7 +245,7 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x060006FC RID: 1788 RVA: 0x00019FD6 File Offset: 0x000181D6
+	// Token: 0x06000A19 RID: 2585 RVA: 0x000068FF File Offset: 0x00004AFF
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -302,8 +302,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x170003AD RID: 941
-	// (get) Token: 0x060006FD RID: 1789 RVA: 0x00019FE5 File Offset: 0x000181E5
+	// Token: 0x170004B5 RID: 1205
+	// (get) Token: 0x06000A1A RID: 2586 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_TellIntro_AnimSpeed
 	{
 		get
@@ -312,8 +312,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003AE RID: 942
-	// (get) Token: 0x060006FE RID: 1790 RVA: 0x00019FEC File Offset: 0x000181EC
+	// Token: 0x170004B6 RID: 1206
+	// (get) Token: 0x06000A1B RID: 2587 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_TellIntro_Delay
 	{
 		get
@@ -322,8 +322,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003AF RID: 943
-	// (get) Token: 0x060006FF RID: 1791 RVA: 0x00019FF3 File Offset: 0x000181F3
+	// Token: 0x170004B7 RID: 1207
+	// (get) Token: 0x06000A1C RID: 2588 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected virtual float m_dash_TellHold_AnimSpeed
 	{
 		get
@@ -332,8 +332,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003B0 RID: 944
-	// (get) Token: 0x06000700 RID: 1792 RVA: 0x00019FFA File Offset: 0x000181FA
+	// Token: 0x170004B8 RID: 1208
+	// (get) Token: 0x06000A1D RID: 2589 RVA: 0x00006780 File Offset: 0x00004980
 	protected virtual float m_dash_TellHold_Delay
 	{
 		get
@@ -342,8 +342,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003B1 RID: 945
-	// (get) Token: 0x06000701 RID: 1793 RVA: 0x0001A001 File Offset: 0x00018201
+	// Token: 0x170004B9 RID: 1209
+	// (get) Token: 0x06000A1E RID: 2590 RVA: 0x00004573 File Offset: 0x00002773
 	protected virtual float m_dash_AttackIntro_AnimSpeed
 	{
 		get
@@ -352,8 +352,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003B2 RID: 946
-	// (get) Token: 0x06000702 RID: 1794 RVA: 0x0001A008 File Offset: 0x00018208
+	// Token: 0x170004BA RID: 1210
+	// (get) Token: 0x06000A1F RID: 2591 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float m_dash_AttackIntro_Delay
 	{
 		get
@@ -362,8 +362,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003B3 RID: 947
-	// (get) Token: 0x06000703 RID: 1795 RVA: 0x0001A00F File Offset: 0x0001820F
+	// Token: 0x170004BB RID: 1211
+	// (get) Token: 0x06000A20 RID: 2592 RVA: 0x00004573 File Offset: 0x00002773
 	protected virtual float m_dash_AttackHold_AnimSpeed
 	{
 		get
@@ -372,8 +372,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003B4 RID: 948
-	// (get) Token: 0x06000704 RID: 1796 RVA: 0x0001A016 File Offset: 0x00018216
+	// Token: 0x170004BC RID: 1212
+	// (get) Token: 0x06000A21 RID: 2593 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_AttackHold_Delay
 	{
 		get
@@ -382,8 +382,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003B5 RID: 949
-	// (get) Token: 0x06000705 RID: 1797 RVA: 0x0001A01D File Offset: 0x0001821D
+	// Token: 0x170004BD RID: 1213
+	// (get) Token: 0x06000A22 RID: 2594 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_Exit_AnimSpeed
 	{
 		get
@@ -392,8 +392,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003B6 RID: 950
-	// (get) Token: 0x06000706 RID: 1798 RVA: 0x0001A024 File Offset: 0x00018224
+	// Token: 0x170004BE RID: 1214
+	// (get) Token: 0x06000A23 RID: 2595 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_Exit_Delay
 	{
 		get
@@ -402,8 +402,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003B7 RID: 951
-	// (get) Token: 0x06000707 RID: 1799 RVA: 0x0001A02B File Offset: 0x0001822B
+	// Token: 0x170004BF RID: 1215
+	// (get) Token: 0x06000A24 RID: 2596 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected virtual float m_dash_Exit_ForceIdle
 	{
 		get
@@ -412,8 +412,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003B8 RID: 952
-	// (get) Token: 0x06000708 RID: 1800 RVA: 0x0001A032 File Offset: 0x00018232
+	// Token: 0x170004C0 RID: 1216
+	// (get) Token: 0x06000A25 RID: 2597 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_Exit_AttackCD
 	{
 		get
@@ -422,8 +422,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003B9 RID: 953
-	// (get) Token: 0x06000709 RID: 1801 RVA: 0x0001A039 File Offset: 0x00018239
+	// Token: 0x170004C1 RID: 1217
+	// (get) Token: 0x06000A26 RID: 2598 RVA: 0x00003DA4 File Offset: 0x00001FA4
 	protected virtual float m_dash_Attack_Speed
 	{
 		get
@@ -432,8 +432,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003BA RID: 954
-	// (get) Token: 0x0600070A RID: 1802 RVA: 0x0001A040 File Offset: 0x00018240
+	// Token: 0x170004C2 RID: 1218
+	// (get) Token: 0x06000A27 RID: 2599 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_Tell_Duration
 	{
 		get
@@ -442,8 +442,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003BB RID: 955
-	// (get) Token: 0x0600070B RID: 1803 RVA: 0x0001A047 File Offset: 0x00018247
+	// Token: 0x170004C3 RID: 1219
+	// (get) Token: 0x06000A28 RID: 2600 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_Attack_Duration
 	{
 		get
@@ -452,8 +452,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003BC RID: 956
-	// (get) Token: 0x0600070C RID: 1804 RVA: 0x0001A04E File Offset: 0x0001824E
+	// Token: 0x170004C4 RID: 1220
+	// (get) Token: 0x06000A29 RID: 2601 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_dropsBonesDuringDashAttack
 	{
 		get
@@ -462,8 +462,8 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x170003BD RID: 957
-	// (get) Token: 0x0600070D RID: 1805 RVA: 0x0001A051 File Offset: 0x00018251
+	// Token: 0x170004C5 RID: 1221
+	// (get) Token: 0x06000A2A RID: 2602 RVA: 0x000047A7 File Offset: 0x000029A7
 	protected virtual int m_bonesDroppedDuringDashCount
 	{
 		get
@@ -472,7 +472,7 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x0600070E RID: 1806 RVA: 0x0001A054 File Offset: 0x00018254
+	// Token: 0x06000A2B RID: 2603 RVA: 0x0000690E File Offset: 0x00004B0E
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -519,7 +519,7 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x0600070F RID: 1807 RVA: 0x0001A064 File Offset: 0x00018264
+	// Token: 0x06000A2C RID: 2604 RVA: 0x00067988 File Offset: 0x00065B88
 	private void SetDashVelocity()
 	{
 		Vector3 v = Vector2.left;
@@ -532,7 +532,7 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		base.EnemyController.FlyingMovementType = FlyingMovementType.Towards;
 	}
 
-	// Token: 0x06000710 RID: 1808 RVA: 0x0001A0C4 File Offset: 0x000182C4
+	// Token: 0x06000A2D RID: 2605 RVA: 0x000679E8 File Offset: 0x00065BE8
 	private void LeanIntoDash()
 	{
 		float z = 20f;
@@ -543,7 +543,7 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		base.EnemyController.Pivot.transform.localRotation = Quaternion.Euler(0f, 0f, z);
 	}
 
-	// Token: 0x06000711 RID: 1809 RVA: 0x0001A10F File Offset: 0x0001830F
+	// Token: 0x06000A2E RID: 2606 RVA: 0x0000691D File Offset: 0x00004B1D
 	private IEnumerator DropBonesDuringDash()
 	{
 		float timeBetweenDrops = this.m_dash_Attack_Duration / (float)this.m_bonesDroppedDuringDashCount;
@@ -569,54 +569,54 @@ public class FlyingSkull_Basic_AIScript : BaseAIScript, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x04000ADD RID: 2781
+	// Token: 0x04000D59 RID: 3417
 	private const string SHOOT_PREP_AUDIO_EVENT_PATH = "event:/SFX/Enemies/sfx_enemy_flyingSkull_shoot_prep";
 
-	// Token: 0x04000ADE RID: 2782
+	// Token: 0x04000D5A RID: 3418
 	private const string SHOOT_AUDIO_EVENT_PATH = "event:/SFX/Enemies/sfx_enemy_flyingSkull_shoot";
 
-	// Token: 0x04000ADF RID: 2783
+	// Token: 0x04000D5B RID: 3419
 	private const string DASH_PREP_AUDIO_EVENT_PATH = "event:/SFX/Enemies/sfx_enemy_flyingSkull_dash_prep";
 
-	// Token: 0x04000AE0 RID: 2784
+	// Token: 0x04000D5C RID: 3420
 	private const string DASH_AUDIO_EVENT_PATH = "event:/SFX/Enemies/sfx_enemy_flyingSkull_dash";
 
-	// Token: 0x04000AE1 RID: 2785
+	// Token: 0x04000D5D RID: 3421
 	protected int m_NearBone_Angle = 7;
 
-	// Token: 0x04000AE2 RID: 2786
+	// Token: 0x04000D5E RID: 3422
 	protected int m_FarBoneAngle = 20;
 
-	// Token: 0x04000AE3 RID: 2787
+	// Token: 0x04000D5F RID: 3423
 	private const string BONE_PROJECTILE = "FlyingSkullBoneProjectile";
 
-	// Token: 0x04000AE4 RID: 2788
+	// Token: 0x04000D60 RID: 3424
 	protected const string SINGLE_TELL_INTRO = "SingleShot_Tell_Intro";
 
-	// Token: 0x04000AE5 RID: 2789
+	// Token: 0x04000D61 RID: 3425
 	protected const string SINGLE_TELL_HOLD = "SingleShot_Tell_Hold";
 
-	// Token: 0x04000AE6 RID: 2790
+	// Token: 0x04000D62 RID: 3426
 	protected const string SINGLE_ATTACK_INTRO = "SingleShot_Attack_Intro";
 
-	// Token: 0x04000AE7 RID: 2791
+	// Token: 0x04000D63 RID: 3427
 	protected const string SINGLE_ATTACK_HOLD = "SingleShot_Attack_Hold";
 
-	// Token: 0x04000AE8 RID: 2792
+	// Token: 0x04000D64 RID: 3428
 	protected const string SINGLE_ATTACK_EXIT = "SingleShot_Exit";
 
-	// Token: 0x04000AE9 RID: 2793
+	// Token: 0x04000D65 RID: 3429
 	protected const string MULTI_TELL_INTRO = "MultiShot_Tell_Intro";
 
-	// Token: 0x04000AEA RID: 2794
+	// Token: 0x04000D66 RID: 3430
 	protected const string MULTI_TELL_HOLD = "MultiShot_Tell_Hold";
 
-	// Token: 0x04000AEB RID: 2795
+	// Token: 0x04000D67 RID: 3431
 	protected const string MULTI_ATTACK_INTRO = "MultiShot_Attack_Intro";
 
-	// Token: 0x04000AEC RID: 2796
+	// Token: 0x04000D68 RID: 3432
 	protected const string MULTI_ATTACK_HOLD = "MultiShot_Attack_Hold";
 
-	// Token: 0x04000AED RID: 2797
+	// Token: 0x04000D69 RID: 3433
 	protected const string MULTI_ATTACK_EXIT = "MultiShot_Exit";
 }

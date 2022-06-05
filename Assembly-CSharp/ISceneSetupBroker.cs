@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02000624 RID: 1572
+// Token: 0x02000A50 RID: 2640
 public interface ISceneSetupBroker
 {
-	// Token: 0x060038CC RID: 14540
+	// Token: 0x06004FA5 RID: 20389
 	void InjectSceneSetup();
 }

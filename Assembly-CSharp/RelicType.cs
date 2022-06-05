@@ -1,174 +1,174 @@
 ﻿using System;
 
-// Token: 0x02000763 RID: 1891
+// Token: 0x02000C21 RID: 3105
 public enum RelicType
 {
-	// Token: 0x040035AA RID: 13738
+	// Token: 0x04004826 RID: 18470
 	None,
-	// Token: 0x040035AB RID: 13739
+	// Token: 0x04004827 RID: 18471
 	ExtraLife = 10,
-	// Token: 0x040035AC RID: 13740
+	// Token: 0x04004828 RID: 18472
 	ExtraLifeUsed = 15,
-	// Token: 0x040035AD RID: 13741
+	// Token: 0x04004829 RID: 18473
 	ExtraLife_Unity = 17,
-	// Token: 0x040035AE RID: 13742
+	// Token: 0x0400482A RID: 18474
 	ExtraLife_UnityUsed,
-	// Token: 0x040035AF RID: 13743
+	// Token: 0x0400482B RID: 18475
 	LowMultiJump = 20,
-	// Token: 0x040035B0 RID: 13744
+	// Token: 0x0400482C RID: 18476
 	BonusDamageCurse = 30,
-	// Token: 0x040035B1 RID: 13745
+	// Token: 0x0400482D RID: 18477
 	GoldDeathCurse = 40,
-	// Token: 0x040035B2 RID: 13746
+	// Token: 0x0400482E RID: 18478
 	GodMode = 50,
-	// Token: 0x040035B3 RID: 13747
+	// Token: 0x0400482F RID: 18479
 	FreeEnemyKill = 60,
-	// Token: 0x040035B4 RID: 13748
+	// Token: 0x04004830 RID: 18480
 	TakeNoDamage = 70,
-	// Token: 0x040035B5 RID: 13749
+	// Token: 0x04004831 RID: 18481
 	BonusDamageOnNextHit = 80,
-	// Token: 0x040035B6 RID: 13750
+	// Token: 0x04004832 RID: 18482
 	PlatformOnAerial = 90,
-	// Token: 0x040035B7 RID: 13751
+	// Token: 0x04004833 RID: 18483
 	ChestHealthRestore = 100,
-	// Token: 0x040035B8 RID: 13752
+	// Token: 0x04004834 RID: 18484
 	MeatMaxHealth = 110,
-	// Token: 0x040035B9 RID: 13753
+	// Token: 0x04004835 RID: 18485
 	MeatChanceUp = 120,
-	// Token: 0x040035BA RID: 13754
+	// Token: 0x04004836 RID: 18486
 	ExtendInvuln = 130,
-	// Token: 0x040035BB RID: 13755
+	// Token: 0x04004837 RID: 18487
 	InvulnDamageBuff = 140,
-	// Token: 0x040035BC RID: 13756
+	// Token: 0x04004838 RID: 18488
 	DamageBuffStatusEffect = 150,
-	// Token: 0x040035BD RID: 13757
+	// Token: 0x04004839 RID: 18489
 	DamageReductionStatusEffect = 160,
-	// Token: 0x040035BE RID: 13758
+	// Token: 0x0400483A RID: 18490
 	AttackCooldown = 170,
-	// Token: 0x040035BF RID: 13759
+	// Token: 0x0400483B RID: 18491
 	RelicAmountDamageUp = 180,
-	// Token: 0x040035C0 RID: 13760
+	// Token: 0x0400483C RID: 18492
 	WeaponsBurnAdd = 190,
-	// Token: 0x040035C1 RID: 13761
+	// Token: 0x0400483D RID: 18493
 	SpellsBurnAdd = 200,
-	// Token: 0x040035C2 RID: 13762
+	// Token: 0x0400483E RID: 18494
 	SpellsDamageCloud = 210,
-	// Token: 0x040035C3 RID: 13763
+	// Token: 0x0400483F RID: 18495
 	EnemiesDropMeat = 220,
-	// Token: 0x040035C4 RID: 13764
+	// Token: 0x04004840 RID: 18496
 	NoSpikeDamage = 230,
-	// Token: 0x040035C5 RID: 13765
+	// Token: 0x04004841 RID: 18497
 	BonusMana = 240,
-	// Token: 0x040035C6 RID: 13766
+	// Token: 0x04004842 RID: 18498
 	SpinKickArmorBreak = 250,
-	// Token: 0x040035C7 RID: 13767
+	// Token: 0x04004843 RID: 18499
 	NoGoldXPBonus = 260,
-	// Token: 0x040035C8 RID: 13768
+	// Token: 0x04004844 RID: 18500
 	ManaRestoreOnHurt = 270,
-	// Token: 0x040035C9 RID: 13769
+	// Token: 0x04004845 RID: 18501
 	MagicDamageEnemyCount = 280,
-	// Token: 0x040035CA RID: 13770
+	// Token: 0x04004846 RID: 18502
 	FreeFairyChest = 290,
-	// Token: 0x040035CB RID: 13771
+	// Token: 0x04004847 RID: 18503
 	FreeFairyChestUsed = 295,
-	// Token: 0x040035CC RID: 13772
+	// Token: 0x04004848 RID: 18504
 	DashStrikeDamageUp = 300,
-	// Token: 0x040035CD RID: 13773
+	// Token: 0x04004849 RID: 18505
 	ResolveCombatChallenge = 310,
-	// Token: 0x040035CE RID: 13774
+	// Token: 0x0400484A RID: 18506
 	ResolveCombatChallengeUsed = 315,
-	// Token: 0x040035CF RID: 13775
+	// Token: 0x0400484B RID: 18507
 	CritKillsHeal = 320,
-	// Token: 0x040035D0 RID: 13776
+	// Token: 0x0400484C RID: 18508
 	AllCritDamageUp = 330,
-	// Token: 0x040035D1 RID: 13777
+	// Token: 0x0400484D RID: 18509
 	AllCritChanceUp = 340,
-	// Token: 0x040035D2 RID: 13778
+	// Token: 0x0400484E RID: 18510
 	MaxManaDamage = 350,
-	// Token: 0x040035D3 RID: 13779
+	// Token: 0x0400484F RID: 18511
 	SporeburstKillAdd = 360,
-	// Token: 0x040035D4 RID: 13780
+	// Token: 0x04004850 RID: 18512
 	FatalBlowDodge = 370,
-	// Token: 0x040035D5 RID: 13781
+	// Token: 0x04004851 RID: 18513
 	GoldIntoResolve = 380,
-	// Token: 0x040035D6 RID: 13782
+	// Token: 0x04004852 RID: 18514
 	AimSlowTime = 390,
-	// Token: 0x040035D7 RID: 13783
+	// Token: 0x04004853 RID: 18515
 	WeaponsComboAdd = 400,
-	// Token: 0x040035D8 RID: 13784
+	// Token: 0x04004854 RID: 18516
 	MaxHealthStatBonus = 410,
-	// Token: 0x040035D9 RID: 13785
+	// Token: 0x04004855 RID: 18517
 	LowHealthStatBonus = 420,
-	// Token: 0x040035DA RID: 13786
+	// Token: 0x04004856 RID: 18518
 	FreeHitRegenerate = 430,
-	// Token: 0x040035DB RID: 13787
+	// Token: 0x04004857 RID: 18519
 	ManaDamageReduction = 440,
-	// Token: 0x040035DC RID: 13788
+	// Token: 0x04004858 RID: 18520
 	GoldCombatChallenge = 450,
-	// Token: 0x040035DD RID: 13789
+	// Token: 0x04004859 RID: 18521
 	FoodHealsMore = 470,
-	// Token: 0x040035DE RID: 13790
+	// Token: 0x0400485A RID: 18522
 	SuperCritChanceUp = 480,
-	// Token: 0x040035DF RID: 13791
+	// Token: 0x0400485B RID: 18523
 	WeaponSwap = 500,
-	// Token: 0x040035E0 RID: 13792
+	// Token: 0x0400485C RID: 18524
 	SpellSwap,
-	// Token: 0x040035E1 RID: 13793
+	// Token: 0x0400485D RID: 18525
 	TalentSwap,
-	// Token: 0x040035E2 RID: 13794
+	// Token: 0x0400485E RID: 18526
 	SpellKillMaxMana = 510,
-	// Token: 0x040035E3 RID: 13795
+	// Token: 0x0400485F RID: 18527
 	AttackExhaust = 520,
-	// Token: 0x040035E4 RID: 13796
+	// Token: 0x04004860 RID: 18528
 	WeaponsPoisonAdd = 530,
-	// Token: 0x040035E5 RID: 13797
+	// Token: 0x04004861 RID: 18529
 	LowResolveWeaponDamage = 540,
-	// Token: 0x040035E6 RID: 13798
+	// Token: 0x04004862 RID: 18530
 	LowResolveMagicDamage = 550,
-	// Token: 0x040035E7 RID: 13799
+	// Token: 0x04004863 RID: 18531
 	GoldCombatChallengeUsed = 560,
-	// Token: 0x040035E8 RID: 13800
+	// Token: 0x04004864 RID: 18532
 	OnHitAreaDamage = 570,
-	// Token: 0x040035E9 RID: 13801
+	// Token: 0x04004865 RID: 18533
 	GroundDamageBonus = 580,
-	// Token: 0x040035EA RID: 13802
+	// Token: 0x04004866 RID: 18534
 	ProjectileDashStart = 590,
-	// Token: 0x040035EB RID: 13803
+	// Token: 0x04004867 RID: 18535
 	ReplacementRelic = 600,
-	// Token: 0x040035EC RID: 13804
+	// Token: 0x04004868 RID: 18536
 	SkillCritBonus = 610,
-	// Token: 0x040035ED RID: 13805
+	// Token: 0x04004869 RID: 18537
 	RangeDamageBonusCurse = 620,
-	// Token: 0x040035EE RID: 13806
+	// Token: 0x0400486A RID: 18538
 	SpinKickLeavesCaltrops = 630,
-	// Token: 0x040035EF RID: 13807
+	// Token: 0x0400486B RID: 18539
 	FlightBonusCurse = 640,
-	// Token: 0x040035F0 RID: 13808
+	// Token: 0x0400486C RID: 18540
 	DamageAuraOnHit = 650,
-	// Token: 0x040035F1 RID: 13809
+	// Token: 0x0400486D RID: 18541
 	LandShockwave = 660,
-	// Token: 0x040035F2 RID: 13810
+	// Token: 0x0400486E RID: 18542
 	FoodChallenge = 670,
-	// Token: 0x040035F3 RID: 13811
+	// Token: 0x0400486F RID: 18543
 	FoodChallengeUsed,
-	// Token: 0x040035F4 RID: 13812
+	// Token: 0x04004870 RID: 18544
 	FreeCastSpell = 680,
-	// Token: 0x040035F5 RID: 13813
+	// Token: 0x04004871 RID: 18545
 	NoAttackDamageBonus = 690,
-	// Token: 0x040035F6 RID: 13814
+	// Token: 0x04004872 RID: 18546
 	DamageNoHitChallenge = 700,
-	// Token: 0x040035F7 RID: 13815
+	// Token: 0x04004873 RID: 18547
 	DamageNoHitChallengeUsed,
-	// Token: 0x040035F8 RID: 13816
+	// Token: 0x04004874 RID: 18548
 	SpinKickDamageBonus = 710,
-	// Token: 0x040035F9 RID: 13817
+	// Token: 0x04004875 RID: 18549
 	Lily1 = 1000,
-	// Token: 0x040035FA RID: 13818
+	// Token: 0x04004876 RID: 18550
 	Lily2 = 1010,
-	// Token: 0x040035FB RID: 13819
+	// Token: 0x04004877 RID: 18551
 	Lily3 = 1020,
-	// Token: 0x040035FC RID: 13820
+	// Token: 0x04004878 RID: 18552
 	DragonKeyBlack = 2000,
-	// Token: 0x040035FD RID: 13821
+	// Token: 0x04004879 RID: 18553
 	DragonKeyWhite = 2010
 }

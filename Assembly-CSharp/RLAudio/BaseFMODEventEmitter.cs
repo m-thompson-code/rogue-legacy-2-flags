@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008E0 RID: 2272
+	// Token: 0x02000E50 RID: 3664
 	public abstract class BaseFMODEventEmitter : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001845 RID: 6213
-		// (get) Token: 0x06004AAF RID: 19119 RVA: 0x0010C941 File Offset: 0x0010AB41
+		// Token: 0x17002128 RID: 8488
+		// (get) Token: 0x06006768 RID: 26472 RVA: 0x00009A7B File Offset: 0x00007C7B
 		public string Description
 		{
 			get
@@ -18,17 +18,17 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001846 RID: 6214
-		// (get) Token: 0x06004AB0 RID: 19120 RVA: 0x0010C949 File Offset: 0x0010AB49
-		// (set) Token: 0x06004AB1 RID: 19121 RVA: 0x0010C951 File Offset: 0x0010AB51
+		// Token: 0x17002129 RID: 8489
+		// (get) Token: 0x06006769 RID: 26473 RVA: 0x00038FCE File Offset: 0x000371CE
+		// (set) Token: 0x0600676A RID: 26474 RVA: 0x00038FD6 File Offset: 0x000371D6
 		public bool Is3D { get; private set; }
 
-		// Token: 0x17001847 RID: 6215
-		// (get) Token: 0x06004AB2 RID: 19122 RVA: 0x0010C95A File Offset: 0x0010AB5A
-		// (set) Token: 0x06004AB3 RID: 19123 RVA: 0x0010C962 File Offset: 0x0010AB62
+		// Token: 0x1700212A RID: 8490
+		// (get) Token: 0x0600676B RID: 26475 RVA: 0x00038FDF File Offset: 0x000371DF
+		// (set) Token: 0x0600676C RID: 26476 RVA: 0x00038FE7 File Offset: 0x000371E7
 		public bool IsInitialized { get; protected set; }
 
-		// Token: 0x06004AB4 RID: 19124 RVA: 0x0010C96B File Offset: 0x0010AB6B
+		// Token: 0x0600676D RID: 26477 RVA: 0x00038FF0 File Offset: 0x000371F0
 		private void Awake()
 		{
 			if (!this.IsInitialized)
@@ -37,7 +37,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AB5 RID: 19125 RVA: 0x0010C97B File Offset: 0x0010AB7B
+		// Token: 0x0600676E RID: 26478 RVA: 0x00039000 File Offset: 0x00037200
 		private void OnEnable()
 		{
 			if (!this.IsInitialized)
@@ -50,7 +50,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AB6 RID: 19126 RVA: 0x0010C999 File Offset: 0x0010AB99
+		// Token: 0x0600676F RID: 26479 RVA: 0x0003901E File Offset: 0x0003721E
 		private void OnDisable()
 		{
 			if (this.m_stopOnDisable)
@@ -59,7 +59,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AB7 RID: 19127 RVA: 0x0010C9A9 File Offset: 0x0010ABA9
+		// Token: 0x06006770 RID: 26480 RVA: 0x0003902E File Offset: 0x0003722E
 		private void OnDestroy()
 		{
 			if (this.m_eventInstance.isValid())
@@ -68,7 +68,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AB8 RID: 19128 RVA: 0x0010C9C4 File Offset: 0x0010ABC4
+		// Token: 0x06006771 RID: 26481 RVA: 0x0017CF3C File Offset: 0x0017B13C
 		protected virtual void Initialize()
 		{
 			if (!string.IsNullOrEmpty(this.m_eventPath))
@@ -91,10 +91,10 @@ namespace RLAudio
 			this.IsInitialized = true;
 		}
 
-		// Token: 0x06004AB9 RID: 19129
+		// Token: 0x06006772 RID: 26482
 		public abstract void Play();
 
-		// Token: 0x06004ABA RID: 19130 RVA: 0x0010CA34 File Offset: 0x0010AC34
+		// Token: 0x06006773 RID: 26483 RVA: 0x00039049 File Offset: 0x00037249
 		public void Stop()
 		{
 			if (this.m_eventInstance.isValid())
@@ -103,20 +103,20 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003EAD RID: 16045
+		// Token: 0x040053CB RID: 21451
 		[SerializeField]
 		[EventRef]
 		protected string m_eventPath;
 
-		// Token: 0x04003EAE RID: 16046
+		// Token: 0x040053CC RID: 21452
 		[SerializeField]
 		protected bool m_playOnEnable = true;
 
-		// Token: 0x04003EAF RID: 16047
+		// Token: 0x040053CD RID: 21453
 		[SerializeField]
 		protected bool m_stopOnDisable = true;
 
-		// Token: 0x04003EB0 RID: 16048
+		// Token: 0x040053CE RID: 21454
 		protected EventInstance m_eventInstance;
 	}
 }

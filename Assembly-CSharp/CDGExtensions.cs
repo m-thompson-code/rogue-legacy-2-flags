@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x0200079D RID: 1949
+// Token: 0x02000C60 RID: 3168
 public static class CDGExtensions
 {
-	// Token: 0x060041E2 RID: 16866 RVA: 0x000EAD24 File Offset: 0x000E8F24
+	// Token: 0x06005B5F RID: 23391 RVA: 0x00159D20 File Offset: 0x00157F20
 	public static Transform FindDeep(this Transform aParent, string aName)
 	{
 		Transform transform = aParent.Find(aName);
@@ -25,7 +25,7 @@ public static class CDGExtensions
 		return null;
 	}
 
-	// Token: 0x060041E3 RID: 16867 RVA: 0x000EAD9C File Offset: 0x000E8F9C
+	// Token: 0x06005B60 RID: 23392 RVA: 0x00159D98 File Offset: 0x00157F98
 	public static void FindAllTransforms(this Transform parent, List<Transform> outputList)
 	{
 		for (int i = 0; i < parent.childCount; i++)
@@ -36,7 +36,7 @@ public static class CDGExtensions
 		}
 	}
 
-	// Token: 0x060041E4 RID: 16868 RVA: 0x000EADD0 File Offset: 0x000E8FD0
+	// Token: 0x06005B61 RID: 23393 RVA: 0x00159DCC File Offset: 0x00157FCC
 	public static string FullHierarchyPath(this GameObject gameObject)
 	{
 		string text = gameObject.name;
@@ -49,7 +49,7 @@ public static class CDGExtensions
 		return text;
 	}
 
-	// Token: 0x060041E5 RID: 16869 RVA: 0x000EAE18 File Offset: 0x000E9018
+	// Token: 0x06005B62 RID: 23394 RVA: 0x00159E14 File Offset: 0x00158014
 	public static GameObject FindObjectReference(this GameObject gameObject, string id)
 	{
 		ObjectReferenceFinder component = gameObject.GetComponent<ObjectReferenceFinder>();
@@ -60,7 +60,7 @@ public static class CDGExtensions
 		return null;
 	}
 
-	// Token: 0x060041E6 RID: 16870 RVA: 0x000EAE40 File Offset: 0x000E9040
+	// Token: 0x06005B63 RID: 23395 RVA: 0x00159E3C File Offset: 0x0015803C
 	public static T FindObjectReference<T>(this GameObject gameObject, string id, bool searchAllChildren = false, bool includeInactive = false) where T : UnityEngine.Object
 	{
 		ObjectReferenceFinder component = gameObject.GetComponent<ObjectReferenceFinder>();
@@ -71,7 +71,7 @@ public static class CDGExtensions
 		return default(T);
 	}
 
-	// Token: 0x060041E7 RID: 16871 RVA: 0x000EAE70 File Offset: 0x000E9070
+	// Token: 0x06005B64 RID: 23396 RVA: 0x00159E6C File Offset: 0x0015806C
 	public static bool Intersects(this Rect r1, Rect r2, out Rect area)
 	{
 		area = default(Rect);
@@ -90,13 +90,13 @@ public static class CDGExtensions
 		return false;
 	}
 
-	// Token: 0x060041E8 RID: 16872 RVA: 0x000EAF24 File Offset: 0x000E9124
+	// Token: 0x06005B65 RID: 23397 RVA: 0x000321F9 File Offset: 0x000303F9
 	public static GameObject GetRoot(this Component obj, bool includeInactive = false)
 	{
 		return obj.gameObject.GetRoot(includeInactive);
 	}
 
-	// Token: 0x060041E9 RID: 16873 RVA: 0x000EAF34 File Offset: 0x000E9134
+	// Token: 0x06005B66 RID: 23398 RVA: 0x00159F20 File Offset: 0x00158120
 	public static GameObject GetRoot(this GameObject obj, bool includeInactive = false)
 	{
 		if (obj.transform.parent == null)
@@ -112,19 +112,19 @@ public static class CDGExtensions
 		return result;
 	}
 
-	// Token: 0x060041EA RID: 16874 RVA: 0x000EAF6B File Offset: 0x000E916B
+	// Token: 0x06005B67 RID: 23399 RVA: 0x00032207 File Offset: 0x00030407
 	public static bool Contains(this LayerMask mask, int layer)
 	{
 		return (mask.value & 1 << layer) > 0;
 	}
 
-	// Token: 0x060041EB RID: 16875 RVA: 0x000EAF7E File Offset: 0x000E917E
+	// Token: 0x06005B68 RID: 23400 RVA: 0x0003221A File Offset: 0x0003041A
 	public static bool Contains(this LayerMask mask, GameObject gameobject)
 	{
 		return (mask.value & 1 << gameobject.layer) > 0;
 	}
 
-	// Token: 0x060041EC RID: 16876 RVA: 0x000EAF98 File Offset: 0x000E9198
+	// Token: 0x06005B69 RID: 23401 RVA: 0x00159F58 File Offset: 0x00158158
 	public static void SetLayerRecursively(this GameObject gameObject, LayerMask layer, bool includeInactive = false)
 	{
 		CDGExtensions.m_recursiveLayersHelper.Clear();
@@ -135,7 +135,7 @@ public static class CDGExtensions
 		}
 	}
 
-	// Token: 0x060041ED RID: 16877 RVA: 0x000EB008 File Offset: 0x000E9208
+	// Token: 0x06005B6A RID: 23402 RVA: 0x00159FC8 File Offset: 0x001581C8
 	public static void SetAlpha(this Image image, float alpha)
 	{
 		Color color = image.color;
@@ -143,7 +143,7 @@ public static class CDGExtensions
 		image.color = color;
 	}
 
-	// Token: 0x060041EE RID: 16878 RVA: 0x000EB02C File Offset: 0x000E922C
+	// Token: 0x06005B6B RID: 23403 RVA: 0x00159FC8 File Offset: 0x001581C8
 	public static void SetAlpha(this RawImage image, float alpha)
 	{
 		Color color = image.color;
@@ -151,7 +151,7 @@ public static class CDGExtensions
 		image.color = color;
 	}
 
-	// Token: 0x060041EF RID: 16879 RVA: 0x000EB050 File Offset: 0x000E9250
+	// Token: 0x06005B6C RID: 23404 RVA: 0x00159FEC File Offset: 0x001581EC
 	public static void SetAlpha(this SpriteRenderer image, float alpha)
 	{
 		Color color = image.color;
@@ -159,7 +159,7 @@ public static class CDGExtensions
 		image.color = color;
 	}
 
-	// Token: 0x060041F0 RID: 16880 RVA: 0x000EB074 File Offset: 0x000E9274
+	// Token: 0x06005B6D RID: 23405 RVA: 0x0015A010 File Offset: 0x00158210
 	public static T[] InsertAt<T>(this T[] source, int index, T element)
 	{
 		T[] array = new T[source.Length + 1];
@@ -178,7 +178,7 @@ public static class CDGExtensions
 		return array;
 	}
 
-	// Token: 0x060041F1 RID: 16881 RVA: 0x000EB0CC File Offset: 0x000E92CC
+	// Token: 0x06005B6E RID: 23406 RVA: 0x0015A068 File Offset: 0x00158268
 	public static T[] RemoveAt<T>(this T[] source, int index)
 	{
 		T[] array = new T[source.Length - 1];
@@ -193,7 +193,7 @@ public static class CDGExtensions
 		return array;
 	}
 
-	// Token: 0x060041F2 RID: 16882 RVA: 0x000EB110 File Offset: 0x000E9310
+	// Token: 0x06005B6F RID: 23407 RVA: 0x0015A0AC File Offset: 0x001582AC
 	public static T[] Remove<T>(this T[] source, T element)
 	{
 		int num = source.IndexOf(element);
@@ -204,7 +204,7 @@ public static class CDGExtensions
 		return source;
 	}
 
-	// Token: 0x060041F3 RID: 16883 RVA: 0x000EB134 File Offset: 0x000E9334
+	// Token: 0x06005B70 RID: 23408 RVA: 0x0015A0D0 File Offset: 0x001582D0
 	public static T[] Add<T>(this T[] source, T element)
 	{
 		T[] array = new T[source.Length + 1];
@@ -216,7 +216,7 @@ public static class CDGExtensions
 		return array;
 	}
 
-	// Token: 0x060041F4 RID: 16884 RVA: 0x000EB178 File Offset: 0x000E9378
+	// Token: 0x06005B71 RID: 23409 RVA: 0x0015A114 File Offset: 0x00158314
 	public static int IndexOf<T>(this T[] source, T element)
 	{
 		for (int i = 0; i < source.Length; i++)
@@ -229,18 +229,18 @@ public static class CDGExtensions
 		return -1;
 	}
 
-	// Token: 0x060041F5 RID: 16885 RVA: 0x000EB1B2 File Offset: 0x000E93B2
+	// Token: 0x06005B72 RID: 23410 RVA: 0x00032232 File Offset: 0x00030432
 	public static bool IsNativeNull(this object obj)
 	{
 		return obj == null || obj.Equals(null);
 	}
 
-	// Token: 0x060041F6 RID: 16886 RVA: 0x000EB1C0 File Offset: 0x000E93C0
+	// Token: 0x06005B73 RID: 23411 RVA: 0x00032240 File Offset: 0x00030440
 	public static string ToCIString(this float value)
 	{
 		return value.ToString(LocalizationManager.GetCurrentCultureInfo());
 	}
 
-	// Token: 0x0400393C RID: 14652
+	// Token: 0x04004BF3 RID: 19443
 	private static List<Transform> m_recursiveLayersHelper = new List<Transform>();
 }

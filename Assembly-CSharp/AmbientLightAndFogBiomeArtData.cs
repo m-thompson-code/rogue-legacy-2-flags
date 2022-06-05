@@ -2,13 +2,13 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-// Token: 0x020006BD RID: 1725
+// Token: 0x02000B68 RID: 2920
 [Serializable]
 public class AmbientLightAndFogBiomeArtData
 {
-	// Token: 0x170015B0 RID: 5552
-	// (get) Token: 0x06003F8F RID: 16271 RVA: 0x000E238C File Offset: 0x000E058C
-	// (set) Token: 0x06003F90 RID: 16272 RVA: 0x000E2394 File Offset: 0x000E0594
+	// Token: 0x17001DA8 RID: 7592
+	// (get) Token: 0x060058C6 RID: 22726 RVA: 0x000304A1 File Offset: 0x0002E6A1
+	// (set) Token: 0x060058C7 RID: 22727 RVA: 0x000304A9 File Offset: 0x0002E6A9
 	public bool Fog
 	{
 		get
@@ -24,8 +24,8 @@ public class AmbientLightAndFogBiomeArtData
 		}
 	}
 
-	// Token: 0x170015B1 RID: 5553
-	// (get) Token: 0x06003F91 RID: 16273 RVA: 0x000E23A4 File Offset: 0x000E05A4
+	// Token: 0x17001DA9 RID: 7593
+	// (get) Token: 0x060058C8 RID: 22728 RVA: 0x00152350 File Offset: 0x00150550
 	public FogMode FogMode
 	{
 		get
@@ -50,9 +50,9 @@ public class AmbientLightAndFogBiomeArtData
 		}
 	}
 
-	// Token: 0x170015B2 RID: 5554
-	// (get) Token: 0x06003F92 RID: 16274 RVA: 0x000E23F7 File Offset: 0x000E05F7
-	// (set) Token: 0x06003F93 RID: 16275 RVA: 0x000E23FF File Offset: 0x000E05FF
+	// Token: 0x17001DAA RID: 7594
+	// (get) Token: 0x060058C9 RID: 22729 RVA: 0x000304B9 File Offset: 0x0002E6B9
+	// (set) Token: 0x060058CA RID: 22730 RVA: 0x000304C1 File Offset: 0x0002E6C1
 	public int FogModeIndex
 	{
 		get
@@ -65,9 +65,9 @@ public class AmbientLightAndFogBiomeArtData
 		}
 	}
 
-	// Token: 0x170015B3 RID: 5555
-	// (get) Token: 0x06003F94 RID: 16276 RVA: 0x000E2408 File Offset: 0x000E0608
-	// (set) Token: 0x06003F95 RID: 16277 RVA: 0x000E2410 File Offset: 0x000E0610
+	// Token: 0x17001DAB RID: 7595
+	// (get) Token: 0x060058CB RID: 22731 RVA: 0x000304CA File Offset: 0x0002E6CA
+	// (set) Token: 0x060058CC RID: 22732 RVA: 0x000304D2 File Offset: 0x0002E6D2
 	public Color FogColor
 	{
 		get
@@ -83,9 +83,9 @@ public class AmbientLightAndFogBiomeArtData
 		}
 	}
 
-	// Token: 0x170015B4 RID: 5556
-	// (get) Token: 0x06003F96 RID: 16278 RVA: 0x000E2420 File Offset: 0x000E0620
-	// (set) Token: 0x06003F97 RID: 16279 RVA: 0x000E2428 File Offset: 0x000E0628
+	// Token: 0x17001DAC RID: 7596
+	// (get) Token: 0x060058CD RID: 22733 RVA: 0x000304E2 File Offset: 0x0002E6E2
+	// (set) Token: 0x060058CE RID: 22734 RVA: 0x000304EA File Offset: 0x0002E6EA
 	public float FogDensity
 	{
 		get
@@ -101,9 +101,9 @@ public class AmbientLightAndFogBiomeArtData
 		}
 	}
 
-	// Token: 0x170015B5 RID: 5557
-	// (get) Token: 0x06003F98 RID: 16280 RVA: 0x000E2438 File Offset: 0x000E0638
-	// (set) Token: 0x06003F99 RID: 16281 RVA: 0x000E2440 File Offset: 0x000E0640
+	// Token: 0x17001DAD RID: 7597
+	// (get) Token: 0x060058CF RID: 22735 RVA: 0x000304FA File Offset: 0x0002E6FA
+	// (set) Token: 0x060058D0 RID: 22736 RVA: 0x00030502 File Offset: 0x0002E702
 	public float FogStartDistance
 	{
 		get
@@ -119,9 +119,9 @@ public class AmbientLightAndFogBiomeArtData
 		}
 	}
 
-	// Token: 0x170015B6 RID: 5558
-	// (get) Token: 0x06003F9A RID: 16282 RVA: 0x000E2450 File Offset: 0x000E0650
-	// (set) Token: 0x06003F9B RID: 16283 RVA: 0x000E2458 File Offset: 0x000E0658
+	// Token: 0x17001DAE RID: 7598
+	// (get) Token: 0x060058D1 RID: 22737 RVA: 0x00030512 File Offset: 0x0002E712
+	// (set) Token: 0x060058D2 RID: 22738 RVA: 0x0003051A File Offset: 0x0002E71A
 	public float FogEndDistance
 	{
 		get
@@ -137,8 +137,8 @@ public class AmbientLightAndFogBiomeArtData
 		}
 	}
 
-	// Token: 0x170015B7 RID: 5559
-	// (get) Token: 0x06003F9C RID: 16284 RVA: 0x000E2468 File Offset: 0x000E0668
+	// Token: 0x17001DAF RID: 7599
+	// (get) Token: 0x060058D3 RID: 22739 RVA: 0x0003052A File Offset: 0x0002E72A
 	public Color AmbientLightColor
 	{
 		get
@@ -147,8 +147,8 @@ public class AmbientLightAndFogBiomeArtData
 		}
 	}
 
-	// Token: 0x170015B8 RID: 5560
-	// (get) Token: 0x06003F9D RID: 16285 RVA: 0x000E246F File Offset: 0x000E066F
+	// Token: 0x17001DB0 RID: 7600
+	// (get) Token: 0x060058D4 RID: 22740 RVA: 0x000047A4 File Offset: 0x000029A4
 	public AmbientMode AmbientMode
 	{
 		get
@@ -157,9 +157,9 @@ public class AmbientLightAndFogBiomeArtData
 		}
 	}
 
-	// Token: 0x170015B9 RID: 5561
-	// (get) Token: 0x06003F9E RID: 16286 RVA: 0x000E2472 File Offset: 0x000E0672
-	// (set) Token: 0x06003F9F RID: 16287 RVA: 0x000E247A File Offset: 0x000E067A
+	// Token: 0x17001DB1 RID: 7601
+	// (get) Token: 0x060058D5 RID: 22741 RVA: 0x00030531 File Offset: 0x0002E731
+	// (set) Token: 0x060058D6 RID: 22742 RVA: 0x00030539 File Offset: 0x0002E739
 	public Light LightMasterPrefab
 	{
 		get
@@ -172,35 +172,35 @@ public class AmbientLightAndFogBiomeArtData
 		}
 	}
 
-	// Token: 0x04002F28 RID: 12072
+	// Token: 0x04004177 RID: 16759
 	[SerializeField]
 	private bool m_fog;
 
-	// Token: 0x04002F29 RID: 12073
+	// Token: 0x04004178 RID: 16760
 	[SerializeField]
 	private int m_fogModeIndex;
 
-	// Token: 0x04002F2A RID: 12074
+	// Token: 0x04004179 RID: 16761
 	[SerializeField]
 	private FogMode m_fogMode = FogMode.Linear;
 
-	// Token: 0x04002F2B RID: 12075
+	// Token: 0x0400417A RID: 16762
 	[SerializeField]
 	private Color m_fogColor;
 
-	// Token: 0x04002F2C RID: 12076
+	// Token: 0x0400417B RID: 16763
 	[SerializeField]
 	private float m_fogDensity;
 
-	// Token: 0x04002F2D RID: 12077
+	// Token: 0x0400417C RID: 16764
 	[SerializeField]
 	private float m_fogStartDistance;
 
-	// Token: 0x04002F2E RID: 12078
+	// Token: 0x0400417D RID: 16765
 	[SerializeField]
 	private float m_fogEndDistance;
 
-	// Token: 0x04002F2F RID: 12079
+	// Token: 0x0400417E RID: 16766
 	[SerializeField]
 	private Light m_lightMasterPrefab;
 }

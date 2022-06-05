@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x02000723 RID: 1827
+// Token: 0x02000BD6 RID: 3030
 public enum DialoguePortraitType
 {
-	// Token: 0x0400338D RID: 13197
+	// Token: 0x04004609 RID: 17929
 	None,
-	// Token: 0x0400338E RID: 13198
+	// Token: 0x0400460A RID: 17930
 	CastleBoss,
-	// Token: 0x0400338F RID: 13199
+	// Token: 0x0400460B RID: 17931
 	Generic,
-	// Token: 0x04003390 RID: 13200
+	// Token: 0x0400460C RID: 17932
 	QuestionMark,
-	// Token: 0x04003391 RID: 13201
+	// Token: 0x0400460D RID: 17933
 	ForestBoss,
-	// Token: 0x04003392 RID: 13202
+	// Token: 0x0400460E RID: 17934
 	StudyBoss,
-	// Token: 0x04003393 RID: 13203
+	// Token: 0x0400460F RID: 17935
 	TowerBoss,
-	// Token: 0x04003394 RID: 13204
+	// Token: 0x04004610 RID: 17936
 	CaveBoss,
-	// Token: 0x04003395 RID: 13205
+	// Token: 0x04004611 RID: 17937
 	BridgeBoss,
-	// Token: 0x04003396 RID: 13206
+	// Token: 0x04004612 RID: 17938
 	BridgeBossMurky
 }

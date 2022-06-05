@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000452 RID: 1106
+// Token: 0x02000730 RID: 1840
 public class PressurePlate_HazardTrigger : Multi_Hazard, ITerrainOnStayHitResponse, IHitResponse, ITerrainOnExitHitResponse
 {
-	// Token: 0x060028CD RID: 10445 RVA: 0x00086E8B File Offset: 0x0008508B
+	// Token: 0x06003859 RID: 14425 RVA: 0x0001EEC7 File Offset: 0x0001D0C7
 	protected override void Awake()
 	{
 		base.Awake();
@@ -13,7 +13,7 @@ public class PressurePlate_HazardTrigger : Multi_Hazard, ITerrainOnStayHitRespon
 		this.m_hbController = base.GetComponentInChildren<IHitboxController>();
 	}
 
-	// Token: 0x060028CE RID: 10446 RVA: 0x00086EB0 File Offset: 0x000850B0
+	// Token: 0x0600385A RID: 14426 RVA: 0x0001EEEC File Offset: 0x0001D0EC
 	private IEnumerator InitializeHitboxes(float width)
 	{
 		while (!this.m_hbController.IsInitialized)
@@ -27,7 +27,7 @@ public class PressurePlate_HazardTrigger : Multi_Hazard, ITerrainOnStayHitRespon
 		yield break;
 	}
 
-	// Token: 0x060028CF RID: 10447 RVA: 0x00086EC8 File Offset: 0x000850C8
+	// Token: 0x0600385B RID: 14427 RVA: 0x000E7FD4 File Offset: 0x000E61D4
 	public override void Initialize(PivotPoint pivot, int width, HazardArgs hazardArgs)
 	{
 		base.Initialize(pivot, width, hazardArgs);
@@ -57,7 +57,7 @@ public class PressurePlate_HazardTrigger : Multi_Hazard, ITerrainOnStayHitRespon
 		this.m_triggerCollider.gameObject.transform.position = this.m_spawnPosition;
 	}
 
-	// Token: 0x060028D0 RID: 10448 RVA: 0x00086FE8 File Offset: 0x000851E8
+	// Token: 0x0600385C RID: 14428 RVA: 0x000E80F4 File Offset: 0x000E62F4
 	public void TerrainOnStayHitResponse(IHitboxController otherHBController)
 	{
 		if (!this.m_plateTriggered && PlayerManager.GetPlayerController().IsGrounded && !this.m_isShooting)
@@ -73,7 +73,7 @@ public class PressurePlate_HazardTrigger : Multi_Hazard, ITerrainOnStayHitRespon
 		}
 	}
 
-	// Token: 0x060028D1 RID: 10449 RVA: 0x00087074 File Offset: 0x00085274
+	// Token: 0x0600385D RID: 14429 RVA: 0x0001EF02 File Offset: 0x0001D102
 	public void TerrainOnExitHitResponse(IHitboxController otherHBController)
 	{
 		if (this.m_plateTriggered && !this.m_isShooting)
@@ -87,7 +87,7 @@ public class PressurePlate_HazardTrigger : Multi_Hazard, ITerrainOnStayHitRespon
 		this.m_plateTriggered = false;
 	}
 
-	// Token: 0x060028D2 RID: 10450 RVA: 0x000870AD File Offset: 0x000852AD
+	// Token: 0x0600385E RID: 14430 RVA: 0x0001EF3B File Offset: 0x0001D13B
 	private IEnumerator TriggerPressurePlate()
 	{
 		this.m_isShooting = true;
@@ -117,7 +117,7 @@ public class PressurePlate_HazardTrigger : Multi_Hazard, ITerrainOnStayHitRespon
 		yield break;
 	}
 
-	// Token: 0x060028D3 RID: 10451 RVA: 0x000870BC File Offset: 0x000852BC
+	// Token: 0x0600385F RID: 14431 RVA: 0x000E8180 File Offset: 0x000E6380
 	public override void ResetHazard()
 	{
 		if (this.m_hazards != null && this.m_isShooting)
@@ -136,29 +136,29 @@ public class PressurePlate_HazardTrigger : Multi_Hazard, ITerrainOnStayHitRespon
 		base.ResetHazard();
 	}
 
-	// Token: 0x040021AA RID: 8618
+	// Token: 0x04002D31 RID: 11569
 	[SerializeField]
 	private GameObject m_visuals;
 
-	// Token: 0x040021AB RID: 8619
+	// Token: 0x04002D32 RID: 11570
 	[SerializeField]
 	private SpriteRenderer m_triggerSprite;
 
-	// Token: 0x040021AC RID: 8620
+	// Token: 0x04002D33 RID: 11571
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040021AD RID: 8621
+	// Token: 0x04002D34 RID: 11572
 	private bool m_plateTriggered;
 
-	// Token: 0x040021AE RID: 8622
+	// Token: 0x04002D35 RID: 11573
 	private bool m_isShooting;
 
-	// Token: 0x040021AF RID: 8623
+	// Token: 0x04002D36 RID: 11574
 	private BoxCollider2D m_triggerCollider;
 
-	// Token: 0x040021B0 RID: 8624
+	// Token: 0x04002D37 RID: 11575
 	private IHitboxController m_hbController;
 
-	// Token: 0x040021B1 RID: 8625
+	// Token: 0x04002D38 RID: 11576
 	private Vector3 m_spawnPosition;
 }

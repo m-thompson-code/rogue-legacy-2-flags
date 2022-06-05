@@ -1,13 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002B9 RID: 697
+// Token: 0x020004A8 RID: 1192
 [Serializable]
 public class RelicObj
 {
-	// Token: 0x17000C87 RID: 3207
-	// (get) Token: 0x06001BB9 RID: 7097 RVA: 0x00059693 File Offset: 0x00057893
-	// (set) Token: 0x06001BBA RID: 7098 RVA: 0x0005969B File Offset: 0x0005789B
+	// Token: 0x1700100A RID: 4106
+	// (get) Token: 0x0600266D RID: 9837 RVA: 0x0001569C File Offset: 0x0001389C
+	// (set) Token: 0x0600266E RID: 9838 RVA: 0x000156A4 File Offset: 0x000138A4
 	public bool WasSeen
 	{
 		get
@@ -20,8 +20,8 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x17000C88 RID: 3208
-	// (get) Token: 0x06001BBB RID: 7099 RVA: 0x000596A4 File Offset: 0x000578A4
+	// Token: 0x1700100B RID: 4107
+	// (get) Token: 0x0600266F RID: 9839 RVA: 0x000156AD File Offset: 0x000138AD
 	public RelicModType RelicModType
 	{
 		get
@@ -30,14 +30,14 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x06001BBC RID: 7100 RVA: 0x000596AC File Offset: 0x000578AC
+	// Token: 0x06002670 RID: 9840 RVA: 0x000156B5 File Offset: 0x000138B5
 	public void SetRelicMod(RelicModType relicMod)
 	{
 		this.m_relicModType = relicMod;
 	}
 
-	// Token: 0x17000C89 RID: 3209
-	// (get) Token: 0x06001BBD RID: 7101 RVA: 0x000596B5 File Offset: 0x000578B5
+	// Token: 0x1700100C RID: 4108
+	// (get) Token: 0x06002671 RID: 9841 RVA: 0x000156BE File Offset: 0x000138BE
 	public int Level
 	{
 		get
@@ -46,13 +46,13 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x06001BBE RID: 7102 RVA: 0x000596BD File Offset: 0x000578BD
+	// Token: 0x06002672 RID: 9842 RVA: 0x000156C6 File Offset: 0x000138C6
 	public void DebugForceLevel(int value)
 	{
 		this.m_level = value;
 	}
 
-	// Token: 0x06001BBF RID: 7103 RVA: 0x000596C8 File Offset: 0x000578C8
+	// Token: 0x06002673 RID: 9843 RVA: 0x000B6488 File Offset: 0x000B4688
 	public void SetLevel(int value, bool additive, bool broadcast = true)
 	{
 		int level = this.m_level;
@@ -87,8 +87,8 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x17000C8A RID: 3210
-	// (get) Token: 0x06001BC0 RID: 7104 RVA: 0x0005977A File Offset: 0x0005797A
+	// Token: 0x1700100D RID: 4109
+	// (get) Token: 0x06002674 RID: 9844 RVA: 0x000156CF File Offset: 0x000138CF
 	public int IntValue
 	{
 		get
@@ -97,7 +97,7 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x06001BC1 RID: 7105 RVA: 0x00059782 File Offset: 0x00057982
+	// Token: 0x06002675 RID: 9845 RVA: 0x000156D7 File Offset: 0x000138D7
 	public void SetIntValue(int value, bool additive, bool broadcast = true)
 	{
 		if (additive)
@@ -115,8 +115,8 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x17000C8B RID: 3211
-	// (get) Token: 0x06001BC2 RID: 7106 RVA: 0x000597BE File Offset: 0x000579BE
+	// Token: 0x1700100E RID: 4110
+	// (get) Token: 0x06002676 RID: 9846 RVA: 0x00015713 File Offset: 0x00013913
 	public float FloatValue
 	{
 		get
@@ -125,7 +125,7 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x06001BC3 RID: 7107 RVA: 0x000597C6 File Offset: 0x000579C6
+	// Token: 0x06002677 RID: 9847 RVA: 0x0001571B File Offset: 0x0001391B
 	public void SetFloatValue(float value, bool additive, bool broadcast = true)
 	{
 		if (additive)
@@ -143,7 +143,7 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x06001BC4 RID: 7108 RVA: 0x00059804 File Offset: 0x00057A04
+	// Token: 0x06002678 RID: 9848 RVA: 0x000B653C File Offset: 0x000B473C
 	public void ApplyRelic(int levelChange)
 	{
 		if (this.m_onPlayerHitLowHealth_nonSerialized == null)
@@ -231,7 +231,7 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x06001BC5 RID: 7109 RVA: 0x00059940 File Offset: 0x00057B40
+	// Token: 0x06002679 RID: 9849 RVA: 0x000B6678 File Offset: 0x000B4878
 	public void StopRelic()
 	{
 		if (this.m_onPlayerHitLowHealth_nonSerialized == null)
@@ -286,7 +286,7 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x06001BC6 RID: 7110 RVA: 0x00059A20 File Offset: 0x00057C20
+	// Token: 0x0600267A RID: 9850 RVA: 0x000B6758 File Offset: 0x000B4958
 	private void OnPlayerHitLowHealth(object sender, EventArgs args)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -309,7 +309,7 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x06001BC7 RID: 7111 RVA: 0x00059A9C File Offset: 0x00057C9C
+	// Token: 0x0600267B RID: 9851 RVA: 0x000B67D4 File Offset: 0x000B49D4
 	private void OnPlayerHitMaxHealth(object sender, EventArgs args)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -332,57 +332,57 @@ public class RelicObj
 		}
 	}
 
-	// Token: 0x17000C8C RID: 3212
-	// (get) Token: 0x06001BC8 RID: 7112 RVA: 0x00059B15 File Offset: 0x00057D15
-	// (set) Token: 0x06001BC9 RID: 7113 RVA: 0x00059B1D File Offset: 0x00057D1D
+	// Token: 0x1700100F RID: 4111
+	// (get) Token: 0x0600267C RID: 9852 RVA: 0x00015757 File Offset: 0x00013957
+	// (set) Token: 0x0600267D RID: 9853 RVA: 0x0001575F File Offset: 0x0001395F
 	public RelicType RelicType { get; private set; }
 
-	// Token: 0x06001BCA RID: 7114 RVA: 0x00059B26 File Offset: 0x00057D26
+	// Token: 0x0600267E RID: 9854 RVA: 0x00015768 File Offset: 0x00013968
 	public RelicObj(RelicType relicType)
 	{
 		this.RelicType = relicType;
 	}
 
-	// Token: 0x04001960 RID: 6496
+	// Token: 0x0400214D RID: 8525
 	private int m_level;
 
-	// Token: 0x04001961 RID: 6497
+	// Token: 0x0400214E RID: 8526
 	private int m_intValue;
 
-	// Token: 0x04001962 RID: 6498
+	// Token: 0x0400214F RID: 8527
 	private float m_floatValue;
 
-	// Token: 0x04001963 RID: 6499
+	// Token: 0x04002150 RID: 8528
 	private bool m_wasSeen;
 
-	// Token: 0x04001964 RID: 6500
+	// Token: 0x04002151 RID: 8529
 	public bool IsFreeRelic;
 
-	// Token: 0x04001965 RID: 6501
+	// Token: 0x04002152 RID: 8530
 	private RelicModType m_relicModType;
 
-	// Token: 0x04001966 RID: 6502
+	// Token: 0x04002153 RID: 8531
 	[NonSerialized]
 	public bool CountsBackwards;
 
-	// Token: 0x04001967 RID: 6503
+	// Token: 0x04002154 RID: 8532
 	private static RelicChangedEventArgs m_relicChangedArgs_STATIC = new RelicChangedEventArgs(RelicType.None);
 
-	// Token: 0x04001968 RID: 6504
+	// Token: 0x04002155 RID: 8533
 	[NonSerialized]
 	private Action<object, HealthChangeEventArgs> m_onPlayerHitLowHealth_nonSerialized;
 
-	// Token: 0x04001969 RID: 6505
+	// Token: 0x04002156 RID: 8534
 	[NonSerialized]
 	private Action<object, HealthChangeEventArgs> m_onPlayerHitMaxHealth_nonSerialized;
 
-	// Token: 0x0400196A RID: 6506
+	// Token: 0x04002157 RID: 8535
 	private bool m_lowHealthStatBonusApplied;
 
-	// Token: 0x0400196B RID: 6507
+	// Token: 0x04002158 RID: 8536
 	private bool m_maxHealthStatBonusApplied;
 
-	// Token: 0x0400196D RID: 6509
+	// Token: 0x0400215A RID: 8538
 	[NonSerialized]
 	private RelicChangedEventArgs m_relicChangedEventArgs;
 }

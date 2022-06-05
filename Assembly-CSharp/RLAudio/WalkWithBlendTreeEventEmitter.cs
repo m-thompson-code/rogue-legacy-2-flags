@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x0200091E RID: 2334
+	// Token: 0x02000E9C RID: 3740
 	public class WalkWithBlendTreeEventEmitter : OnUpdateEventEmitter
 	{
-		// Token: 0x06004C69 RID: 19561 RVA: 0x00112884 File Offset: 0x00110A84
+		// Token: 0x0600696A RID: 26986 RVA: 0x00182560 File Offset: 0x00180760
 		public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
 			float @float = animator.GetFloat(this.m_walkParameter);
@@ -16,11 +16,11 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04004065 RID: 16485
+		// Token: 0x040055CD RID: 21965
 		[SerializeField]
 		private string m_walkParameter = "FacingSpeed";
 
-		// Token: 0x04004066 RID: 16486
+		// Token: 0x040055CE RID: 21966
 		[SerializeField]
 		private Vector2 m_idleRange;
 	}

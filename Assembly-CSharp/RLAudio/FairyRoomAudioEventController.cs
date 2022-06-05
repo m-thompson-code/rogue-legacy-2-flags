@@ -7,11 +7,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008F0 RID: 2288
+	// Token: 0x02000E65 RID: 3685
 	public class FairyRoomAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001856 RID: 6230
-		// (get) Token: 0x06004B2F RID: 19247 RVA: 0x0010E7AC File Offset: 0x0010C9AC
+		// Token: 0x1700213F RID: 8511
+		// (get) Token: 0x060067FA RID: 26618 RVA: 0x00039866 File Offset: 0x00037A66
 		public string Description
 		{
 			get
@@ -24,7 +24,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B30 RID: 19248 RVA: 0x0010E7D0 File Offset: 0x0010C9D0
+		// Token: 0x060067FB RID: 26619 RVA: 0x0017E960 File Offset: 0x0017CB60
 		private void Awake()
 		{
 			this.m_onPlayerTriggerFairyRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerTriggerFairyRoom);
@@ -35,7 +35,7 @@ namespace RLAudio
 			this.m_onTransitionStart = new Action(this.OnTransitionStart);
 		}
 
-		// Token: 0x06004B31 RID: 19249 RVA: 0x0010E84C File Offset: 0x0010CA4C
+		// Token: 0x060067FC RID: 26620 RVA: 0x0017E9DC File Offset: 0x0017CBDC
 		private void Start()
 		{
 			Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerFairyRoomTriggered, this.m_onPlayerTriggerFairyRoom);
@@ -46,7 +46,7 @@ namespace RLAudio
 			SceneLoader_RL.TransitionStartRelay.AddListener(this.m_onTransitionStart, false);
 		}
 
-		// Token: 0x06004B32 RID: 19250 RVA: 0x0010E8AC File Offset: 0x0010CAAC
+		// Token: 0x060067FD RID: 26621 RVA: 0x0017EA3C File Offset: 0x0017CC3C
 		private void OnDestroy()
 		{
 			Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerFairyRoomTriggered, this.m_onPlayerTriggerFairyRoom);
@@ -64,7 +64,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B33 RID: 19251 RVA: 0x0010E92C File Offset: 0x0010CB2C
+		// Token: 0x060067FE RID: 26622 RVA: 0x0017EABC File Offset: 0x0017CCBC
 		private void OnSpecialRoomComplete(MonoBehaviour arg1, EventArgs arg2)
 		{
 			SpecialRoomCompletedEventArgs specialRoomCompletedEventArgs = arg2 as SpecialRoomCompletedEventArgs;
@@ -82,7 +82,7 @@ namespace RLAudio
 			this.StopCountdownTimer();
 		}
 
-		// Token: 0x06004B34 RID: 19252 RVA: 0x0010E99C File Offset: 0x0010CB9C
+		// Token: 0x060067FF RID: 26623 RVA: 0x0017EB2C File Offset: 0x0017CD2C
 		private void OnFairyRuleStateChange(MonoBehaviour arg1, EventArgs arg2)
 		{
 			if (FairyRoomAudioEventController.DisableAudio)
@@ -96,19 +96,19 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B35 RID: 19253 RVA: 0x0010E9DF File Offset: 0x0010CBDF
+		// Token: 0x06006800 RID: 26624 RVA: 0x00039887 File Offset: 0x00037A87
 		private void OnPlayerDeath(MonoBehaviour arg1, EventArgs arg2)
 		{
 			this.StopCountdownTimer();
 		}
 
-		// Token: 0x06004B36 RID: 19254 RVA: 0x0010E9E7 File Offset: 0x0010CBE7
+		// Token: 0x06006801 RID: 26625 RVA: 0x00039887 File Offset: 0x00037A87
 		private void OnTransitionStart()
 		{
 			this.StopCountdownTimer();
 		}
 
-		// Token: 0x06004B37 RID: 19255 RVA: 0x0010E9F0 File Offset: 0x0010CBF0
+		// Token: 0x06006802 RID: 26626 RVA: 0x0017EB70 File Offset: 0x0017CD70
 		private void StopCountdownTimer()
 		{
 			if (this.m_countdownEvent.isValid())
@@ -123,13 +123,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B38 RID: 19256 RVA: 0x0010EA46 File Offset: 0x0010CC46
+		// Token: 0x06006803 RID: 26627 RVA: 0x00039887 File Offset: 0x00037A87
 		private void OnPlayerExitFairyRoom(MonoBehaviour arg1, EventArgs arg2)
 		{
 			this.StopCountdownTimer();
 		}
 
-		// Token: 0x06004B39 RID: 19257 RVA: 0x0010EA50 File Offset: 0x0010CC50
+		// Token: 0x06006804 RID: 26628 RVA: 0x0017EBC8 File Offset: 0x0017CDC8
 		private void OnPlayerTriggerFairyRoom(MonoBehaviour sender, EventArgs eventArgs)
 		{
 			FairyRoomEnteredEventArgs fairyRoomEnteredEventArgs = eventArgs as FairyRoomEnteredEventArgs;
@@ -150,7 +150,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B3A RID: 19258 RVA: 0x0010EB18 File Offset: 0x0010CD18
+		// Token: 0x06006805 RID: 26629 RVA: 0x0003988F File Offset: 0x00037A8F
 		private IEnumerator CountdownTimerCoroutine(TimeLimit_FairyRule fairyRule)
 		{
 			AudioManager.Play(this, this.m_countdownEvent);
@@ -165,62 +165,62 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x04003F3A RID: 16186
+		// Token: 0x04005474 RID: 21620
 		public static bool DisableAudio;
 
-		// Token: 0x04003F3B RID: 16187
+		// Token: 0x04005475 RID: 21621
 		[SerializeField]
 		[EventRef]
 		private string m_countdownTimerEventPath;
 
-		// Token: 0x04003F3C RID: 16188
+		// Token: 0x04005476 RID: 21622
 		[SerializeField]
 		[EventRef]
 		private string m_countdownTimerEndEventPath;
 
-		// Token: 0x04003F3D RID: 16189
+		// Token: 0x04005477 RID: 21623
 		[SerializeField]
 		[EventRef]
 		private string m_victoryEventPath;
 
-		// Token: 0x04003F3E RID: 16190
+		// Token: 0x04005478 RID: 21624
 		[SerializeField]
 		[EventRef]
 		private string m_defeatEventPath;
 
-		// Token: 0x04003F3F RID: 16191
+		// Token: 0x04005479 RID: 21625
 		[SerializeField]
 		[EventRef]
 		private string m_ruleFailedEventPath;
 
-		// Token: 0x04003F40 RID: 16192
+		// Token: 0x0400547A RID: 21626
 		private string m_description;
 
-		// Token: 0x04003F41 RID: 16193
+		// Token: 0x0400547B RID: 21627
 		private EventInstance m_countdownEvent;
 
-		// Token: 0x04003F42 RID: 16194
+		// Token: 0x0400547C RID: 21628
 		private const string COUNTDOWN_PARAMETER_NAME = "fairyTimer";
 
-		// Token: 0x04003F43 RID: 16195
+		// Token: 0x0400547D RID: 21629
 		private Coroutine m_countdownCoroutine;
 
-		// Token: 0x04003F44 RID: 16196
+		// Token: 0x0400547E RID: 21630
 		private Action<MonoBehaviour, EventArgs> m_onPlayerTriggerFairyRoom;
 
-		// Token: 0x04003F45 RID: 16197
+		// Token: 0x0400547F RID: 21631
 		private Action<MonoBehaviour, EventArgs> m_onPlayerExitFairyRoom;
 
-		// Token: 0x04003F46 RID: 16198
+		// Token: 0x04005480 RID: 21632
 		private Action<MonoBehaviour, EventArgs> m_onPlayerDeath;
 
-		// Token: 0x04003F47 RID: 16199
+		// Token: 0x04005481 RID: 21633
 		private Action<MonoBehaviour, EventArgs> m_onFairyRuleStateChange;
 
-		// Token: 0x04003F48 RID: 16200
+		// Token: 0x04005482 RID: 21634
 		private Action<MonoBehaviour, EventArgs> m_onSpecialRoomComplete;
 
-		// Token: 0x04003F49 RID: 16201
+		// Token: 0x04005483 RID: 21635
 		private Action m_onTransitionStart;
 	}
 }

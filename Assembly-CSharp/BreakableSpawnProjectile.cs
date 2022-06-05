@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020003F4 RID: 1012
+// Token: 0x0200069D RID: 1693
 [RequireComponent(typeof(Breakable))]
 public class BreakableSpawnProjectile : MonoBehaviour
 {
-	// Token: 0x17000F23 RID: 3875
-	// (get) Token: 0x0600259A RID: 9626 RVA: 0x0007C533 File Offset: 0x0007A733
+	// Token: 0x170013D2 RID: 5074
+	// (get) Token: 0x06003408 RID: 13320 RVA: 0x00003C70 File Offset: 0x00001E70
 	public float BaseDamage
 	{
 		get
@@ -15,20 +15,20 @@ public class BreakableSpawnProjectile : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600259B RID: 9627 RVA: 0x0007C53A File Offset: 0x0007A73A
+	// Token: 0x06003409 RID: 13321 RVA: 0x0001C8B3 File Offset: 0x0001AAB3
 	private void Awake()
 	{
 		this.m_breakable = base.GetComponent<Breakable>();
 		this.m_breakable.OnDeathEffectTriggerRelay.AddListener(new Action<GameObject>(this.SpawnProjectile), false);
 	}
 
-	// Token: 0x0600259C RID: 9628 RVA: 0x0007C566 File Offset: 0x0007A766
+	// Token: 0x0600340A RID: 13322 RVA: 0x0001C8DF File Offset: 0x0001AADF
 	private void OnEnable()
 	{
 		ProjectileManager.Instance.AddProjectileToPool(this.m_projectileName);
 	}
 
-	// Token: 0x0600259D RID: 9629 RVA: 0x0007C578 File Offset: 0x0007A778
+	// Token: 0x0600340B RID: 13323 RVA: 0x0001C8F1 File Offset: 0x0001AAF1
 	private void OnDestroy()
 	{
 		if (this.m_breakable)
@@ -37,7 +37,7 @@ public class BreakableSpawnProjectile : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600259E RID: 9630 RVA: 0x0007C5A4 File Offset: 0x0007A7A4
+	// Token: 0x0600340C RID: 13324 RVA: 0x000DC294 File Offset: 0x000DA494
 	private void SpawnProjectile(GameObject obj)
 	{
 		if (!string.IsNullOrEmpty(this.m_projectileName))
@@ -57,18 +57,18 @@ public class BreakableSpawnProjectile : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001F93 RID: 8083
+	// Token: 0x04002A34 RID: 10804
 	[SerializeField]
 	private string m_projectileName;
 
-	// Token: 0x04001F94 RID: 8084
+	// Token: 0x04002A35 RID: 10805
 	[SerializeField]
 	private GameObject m_projectileSpawnPos;
 
-	// Token: 0x04001F95 RID: 8085
+	// Token: 0x04002A36 RID: 10806
 	[SerializeField]
 	private bool m_flipBasedOnAttackerPos;
 
-	// Token: 0x04001F96 RID: 8086
+	// Token: 0x04002A37 RID: 10807
 	private Breakable m_breakable;
 }

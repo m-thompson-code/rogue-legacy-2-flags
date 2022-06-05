@@ -3,10 +3,10 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000485 RID: 1157
+// Token: 0x02000782 RID: 1922
 public class MaterialPresetRemover : MonoBehaviour
 {
-	// Token: 0x06002AA5 RID: 10917 RVA: 0x000906D8 File Offset: 0x0008E8D8
+	// Token: 0x06003AD0 RID: 15056 RVA: 0x000F21E4 File Offset: 0x000F03E4
 	private void Awake()
 	{
 		this.m_tmpText = base.GetComponent<TMP_Text>();
@@ -20,13 +20,13 @@ public class MaterialPresetRemover : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002AA6 RID: 10918 RVA: 0x0009072F File Offset: 0x0008E92F
+	// Token: 0x06003AD1 RID: 15057 RVA: 0x0002045D File Offset: 0x0001E65D
 	private void OnEnable()
 	{
 		this.OnLanguageChanged(null, null);
 	}
 
-	// Token: 0x06002AA7 RID: 10919 RVA: 0x0009073C File Offset: 0x0008E93C
+	// Token: 0x06003AD2 RID: 15058 RVA: 0x000F223C File Offset: 0x000F043C
 	private void OnLanguageChanged(object sender, EventArgs args)
 	{
 		if (!LocalizationManager.IsInitialized)
@@ -53,22 +53,22 @@ public class MaterialPresetRemover : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002AA8 RID: 10920 RVA: 0x000907BC File Offset: 0x0008E9BC
+	// Token: 0x06003AD3 RID: 15059 RVA: 0x00020467 File Offset: 0x0001E667
 	private void OnDestroy()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, new Action<MonoBehaviour, EventArgs>(this.OnLanguageChanged));
 	}
 
-	// Token: 0x040022E7 RID: 8935
+	// Token: 0x04002EE7 RID: 12007
 	[SerializeField]
 	private LanguageType[] m_languagesToRemove;
 
-	// Token: 0x040022E8 RID: 8936
+	// Token: 0x04002EE8 RID: 12008
 	private TMP_Text m_tmpText;
 
-	// Token: 0x040022E9 RID: 8937
+	// Token: 0x04002EE9 RID: 12009
 	private Material m_cachedMaterialPreset;
 
-	// Token: 0x040022EA RID: 8938
+	// Token: 0x04002EEA RID: 12010
 	private bool m_materialPresetRemoved;
 }

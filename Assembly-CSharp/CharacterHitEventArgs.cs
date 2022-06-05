@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020007E5 RID: 2021
+// Token: 0x02000CAB RID: 3243
 public class CharacterHitEventArgs : EventArgs
 {
-	// Token: 0x0600436A RID: 17258 RVA: 0x000EC799 File Offset: 0x000EA999
+	// Token: 0x06005CF3 RID: 23795 RVA: 0x000331AF File Offset: 0x000313AF
 	public CharacterHitEventArgs(IDamageObj attacker, BaseCharacterController victim, float damageTaken)
 	{
 		this.Initialize(attacker, victim, damageTaken);
 	}
 
-	// Token: 0x0600436B RID: 17259 RVA: 0x000EC7AA File Offset: 0x000EA9AA
+	// Token: 0x06005CF4 RID: 23796 RVA: 0x000331C0 File Offset: 0x000313C0
 	public void Initialize(IDamageObj attacker, BaseCharacterController victim, float damageTaken)
 	{
 		this.Attacker = attacker;
@@ -17,18 +17,18 @@ public class CharacterHitEventArgs : EventArgs
 		this.DamageTaken = damageTaken;
 	}
 
-	// Token: 0x170016D2 RID: 5842
-	// (get) Token: 0x0600436C RID: 17260 RVA: 0x000EC7C1 File Offset: 0x000EA9C1
-	// (set) Token: 0x0600436D RID: 17261 RVA: 0x000EC7C9 File Offset: 0x000EA9C9
+	// Token: 0x17001ED0 RID: 7888
+	// (get) Token: 0x06005CF5 RID: 23797 RVA: 0x000331D7 File Offset: 0x000313D7
+	// (set) Token: 0x06005CF6 RID: 23798 RVA: 0x000331DF File Offset: 0x000313DF
 	public IDamageObj Attacker { get; private set; }
 
-	// Token: 0x170016D3 RID: 5843
-	// (get) Token: 0x0600436E RID: 17262 RVA: 0x000EC7D2 File Offset: 0x000EA9D2
-	// (set) Token: 0x0600436F RID: 17263 RVA: 0x000EC7DA File Offset: 0x000EA9DA
+	// Token: 0x17001ED1 RID: 7889
+	// (get) Token: 0x06005CF7 RID: 23799 RVA: 0x000331E8 File Offset: 0x000313E8
+	// (set) Token: 0x06005CF8 RID: 23800 RVA: 0x000331F0 File Offset: 0x000313F0
 	public BaseCharacterController Victim { get; private set; }
 
-	// Token: 0x170016D4 RID: 5844
-	// (get) Token: 0x06004370 RID: 17264 RVA: 0x000EC7E3 File Offset: 0x000EA9E3
-	// (set) Token: 0x06004371 RID: 17265 RVA: 0x000EC7EB File Offset: 0x000EA9EB
+	// Token: 0x17001ED2 RID: 7890
+	// (get) Token: 0x06005CF9 RID: 23801 RVA: 0x000331F9 File Offset: 0x000313F9
+	// (set) Token: 0x06005CFA RID: 23802 RVA: 0x00033201 File Offset: 0x00031401
 	public float DamageTaken { get; private set; }
 }

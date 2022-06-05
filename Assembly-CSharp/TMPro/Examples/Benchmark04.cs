@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000859 RID: 2137
+	// Token: 0x02000D5E RID: 3422
 	public class Benchmark04 : MonoBehaviour
 	{
-		// Token: 0x060046EA RID: 18154 RVA: 0x000FD7B0 File Offset: 0x000FB9B0
+		// Token: 0x06006197 RID: 24983 RVA: 0x0016A8BC File Offset: 0x00168ABC
 		private void Start()
 		{
 			this.m_Transform = base.transform;
@@ -36,19 +36,19 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x04003BD7 RID: 15319
+		// Token: 0x04004F5C RID: 20316
 		public int SpawnType;
 
-		// Token: 0x04003BD8 RID: 15320
+		// Token: 0x04004F5D RID: 20317
 		public int MinPointSize = 12;
 
-		// Token: 0x04003BD9 RID: 15321
+		// Token: 0x04004F5E RID: 20318
 		public int MaxPointSize = 64;
 
-		// Token: 0x04003BDA RID: 15322
+		// Token: 0x04004F5F RID: 20319
 		public int Steps = 4;
 
-		// Token: 0x04003BDB RID: 15323
+		// Token: 0x04004F60 RID: 20320
 		private Transform m_Transform;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020000E1 RID: 225
+// Token: 0x0200016B RID: 363
 public class FlyingShield_Advanced_AIScript : FlyingShield_Basic_AIScript
 {
-	// Token: 0x17000365 RID: 869
-	// (get) Token: 0x060006A6 RID: 1702 RVA: 0x00019B19 File Offset: 0x00017D19
+	// Token: 0x17000469 RID: 1129
+	// (get) Token: 0x060009B7 RID: 2487 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_hasTailSpin
 	{
 		get
@@ -13,8 +13,8 @@ public class FlyingShield_Advanced_AIScript : FlyingShield_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000366 RID: 870
-	// (get) Token: 0x060006A7 RID: 1703 RVA: 0x00019B1C File Offset: 0x00017D1C
+	// Token: 0x1700046A RID: 1130
+	// (get) Token: 0x060009B8 RID: 2488 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool m_hasTailRam
 	{
 		get
@@ -23,8 +23,8 @@ public class FlyingShield_Advanced_AIScript : FlyingShield_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000367 RID: 871
-	// (get) Token: 0x060006A8 RID: 1704 RVA: 0x00019B1F File Offset: 0x00017D1F
+	// Token: 0x1700046B RID: 1131
+	// (get) Token: 0x060009B9 RID: 2489 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float m_spinMove_Attack_FlameDrops
 	{
 		get

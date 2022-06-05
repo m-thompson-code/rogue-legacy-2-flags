@@ -3,18 +3,18 @@ using System.Collections.Generic;
 
 namespace GameEventTracking
 {
-	// Token: 0x0200089F RID: 2207
+	// Token: 0x02000DCC RID: 3532
 	public interface IItemEventTrackerState : IGameEventTrackerState
 	{
-		// Token: 0x1700179B RID: 6043
-		// (get) Token: 0x0600481C RID: 18460
+		// Token: 0x1700200D RID: 8205
+		// (get) Token: 0x06006357 RID: 25431
 		List<ChestTrackerData> ChestsOpened { get; }
 
-		// Token: 0x1700179C RID: 6044
-		// (get) Token: 0x0600481D RID: 18461
+		// Token: 0x1700200E RID: 8206
+		// (get) Token: 0x06006358 RID: 25432
 		List<ItemTrackerData> ItemsCollected { get; }
 
-		// Token: 0x0600481E RID: 18462
+		// Token: 0x06006359 RID: 25433
 		void Initialise(List<ChestTrackerData> chestsOpened, List<ItemTrackerData> itemsCollected);
 	}
 }

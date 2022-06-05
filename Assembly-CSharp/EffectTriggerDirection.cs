@@ -1,21 +1,21 @@
 ﻿using System;
 
-// Token: 0x02000414 RID: 1044
+// Token: 0x020006CC RID: 1740
 [Flags]
 public enum EffectTriggerDirection
 {
-	// Token: 0x0400209D RID: 8349
+	// Token: 0x04002B80 RID: 11136
 	None = 0,
-	// Token: 0x0400209E RID: 8350
+	// Token: 0x04002B81 RID: 11137
 	MovingLeft = 2,
-	// Token: 0x0400209F RID: 8351
+	// Token: 0x04002B82 RID: 11138
 	MovingRight = 4,
-	// Token: 0x040020A0 RID: 8352
+	// Token: 0x04002B83 RID: 11139
 	MovingDown = 8,
-	// Token: 0x040020A1 RID: 8353
+	// Token: 0x04002B84 RID: 11140
 	MovingUp = 16,
-	// Token: 0x040020A2 RID: 8354
+	// Token: 0x04002B85 RID: 11141
 	StandingOn = 32,
-	// Token: 0x040020A3 RID: 8355
+	// Token: 0x04002B86 RID: 11142
 	Anywhere = -1
 }

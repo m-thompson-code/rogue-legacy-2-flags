@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
-// Token: 0x0200079C RID: 1948
+// Token: 0x02000C5F RID: 3167
 public class CDGHelper
 {
-	// Token: 0x060041B5 RID: 16821 RVA: 0x000E9B88 File Offset: 0x000E7D88
+	// Token: 0x06005B32 RID: 23346 RVA: 0x00158D2C File Offset: 0x00156F2C
 	public static T FindStaticInstance<T>(bool createNewIfNull) where T : MonoBehaviour
 	{
 		T[] array = UnityEngine.Object.FindObjectsOfType<T>();
@@ -25,7 +25,7 @@ public class CDGHelper
 		return default(T);
 	}
 
-	// Token: 0x060041B6 RID: 16822 RVA: 0x000E9C00 File Offset: 0x000E7E00
+	// Token: 0x06005B33 RID: 23347 RVA: 0x00158DA4 File Offset: 0x00156FA4
 	public static T FindStaticInstance<T>(string instanceName, bool createNewIfNull) where T : Component
 	{
 		GameObject gameObject = GameObject.Find(instanceName);
@@ -48,7 +48,7 @@ public class CDGHelper
 		return t;
 	}
 
-	// Token: 0x060041B7 RID: 16823 RVA: 0x000E9C64 File Offset: 0x000E7E64
+	// Token: 0x06005B34 RID: 23348 RVA: 0x00158E08 File Offset: 0x00157008
 	public static T FindStaticInstance<T>(string instanceName, string prefabPath, bool createNewIfNull) where T : Component
 	{
 		GameObject gameObject = GameObject.Find(instanceName);
@@ -73,7 +73,7 @@ public class CDGHelper
 		return t;
 	}
 
-	// Token: 0x060041B8 RID: 16824 RVA: 0x000E9CEE File Offset: 0x000E7EEE
+	// Token: 0x06005B35 RID: 23349 RVA: 0x0003205D File Offset: 0x0003025D
 	public static int RandomPlusMinus()
 	{
 		if (UnityEngine.Random.Range(0, 2) < 1)
@@ -83,7 +83,7 @@ public class CDGHelper
 		return 1;
 	}
 
-	// Token: 0x060041B9 RID: 16825 RVA: 0x000E9D00 File Offset: 0x000E7F00
+	// Token: 0x06005B36 RID: 23350 RVA: 0x00158E94 File Offset: 0x00157094
 	public static Vector2 AngleToVector(float degAngle)
 	{
 		float num = degAngle;
@@ -100,26 +100,26 @@ public class CDGHelper
 		return result;
 	}
 
-	// Token: 0x060041BA RID: 16826 RVA: 0x000E9D86 File Offset: 0x000E7F86
+	// Token: 0x06005B37 RID: 23351 RVA: 0x0003206C File Offset: 0x0003026C
 	public static float VectorToAngle(Vector2 pt)
 	{
 		return CDGHelper.AngleBetweenPts(Vector2.zero, pt);
 	}
 
-	// Token: 0x060041BB RID: 16827 RVA: 0x000E9D94 File Offset: 0x000E7F94
+	// Token: 0x06005B38 RID: 23352 RVA: 0x00158F1C File Offset: 0x0015711C
 	public static float AngleBetweenPts(Vector2 pt1, Vector2 pt2)
 	{
 		float x = pt2.x - pt1.x;
 		return CDGHelper.WrapAngleDegrees(Mathf.Atan2(pt2.y - pt1.y, x) * 57.29578f, false);
 	}
 
-	// Token: 0x060041BC RID: 16828 RVA: 0x000E9DCE File Offset: 0x000E7FCE
+	// Token: 0x06005B39 RID: 23353 RVA: 0x00032079 File Offset: 0x00030279
 	public static Vector2 VectorBetweenPts(Vector2 pt1, Vector2 pt2)
 	{
 		return new Vector2(pt2.x - pt1.x, pt2.y - pt1.y);
 	}
 
-	// Token: 0x060041BD RID: 16829 RVA: 0x000E9DF0 File Offset: 0x000E7FF0
+	// Token: 0x06005B3A RID: 23354 RVA: 0x00158F58 File Offset: 0x00157158
 	public static float DistanceBetweenPts(Vector2 pt1, Vector2 pt2)
 	{
 		float num = pt2.x - pt1.x;
@@ -127,43 +127,43 @@ public class CDGHelper
 		return Mathf.Sqrt(num * num + num2 * num2);
 	}
 
-	// Token: 0x060041BE RID: 16830 RVA: 0x000E9E24 File Offset: 0x000E8024
+	// Token: 0x06005B3B RID: 23355 RVA: 0x0003209A File Offset: 0x0003029A
 	public static float ConvertToGameUnits(float pixelFloat)
 	{
 		return pixelFloat / 60f;
 	}
 
-	// Token: 0x060041BF RID: 16831 RVA: 0x000E9E2D File Offset: 0x000E802D
+	// Token: 0x06005B3C RID: 23356 RVA: 0x000320A3 File Offset: 0x000302A3
 	public static Vector2 ConvertToGameUnits(Vector2 pixelVector)
 	{
 		return new Vector2(pixelVector.x / 60f, pixelVector.y / 60f);
 	}
 
-	// Token: 0x060041C0 RID: 16832 RVA: 0x000E9E4C File Offset: 0x000E804C
+	// Token: 0x06005B3D RID: 23357 RVA: 0x000320C2 File Offset: 0x000302C2
 	public static float ConvertToPixelUnits(float gameFloat)
 	{
 		return gameFloat * 60f;
 	}
 
-	// Token: 0x060041C1 RID: 16833 RVA: 0x000E9E55 File Offset: 0x000E8055
+	// Token: 0x06005B3E RID: 23358 RVA: 0x000320CB File Offset: 0x000302CB
 	public static Vector2 ConvertToPixelUnits(Vector2 gameVector)
 	{
 		return new Vector2(gameVector.x * 60f, gameVector.y * 60f);
 	}
 
-	// Token: 0x060041C2 RID: 16834 RVA: 0x000E9E74 File Offset: 0x000E8074
+	// Token: 0x06005B3F RID: 23359 RVA: 0x000320EA File Offset: 0x000302EA
 	public static Vector3 ToVector3(Vector2 vector)
 	{
 		return new Vector3(vector.x, vector.y, 0f);
 	}
 
-	// Token: 0x060041C3 RID: 16835 RVA: 0x000E9E8C File Offset: 0x000E808C
+	// Token: 0x06005B40 RID: 23360 RVA: 0x00032102 File Offset: 0x00030302
 	public static Vector3 ToVector3(float value)
 	{
 		return new Vector3(value, value, value);
 	}
 
-	// Token: 0x060041C4 RID: 16836 RVA: 0x000E9E98 File Offset: 0x000E8098
+	// Token: 0x06005B41 RID: 23361 RVA: 0x00158F8C File Offset: 0x0015718C
 	public static Mesh BuildMeshFromPolygonCollider2D(PolygonCollider2D poly2D)
 	{
 		Mesh mesh = new Mesh();
@@ -191,7 +191,7 @@ public class CDGHelper
 		return mesh;
 	}
 
-	// Token: 0x060041C5 RID: 16837 RVA: 0x000E9F7C File Offset: 0x000E817C
+	// Token: 0x06005B42 RID: 23362 RVA: 0x00159070 File Offset: 0x00157270
 	public static Mesh BuildMeshFromPointList(List<Vector2> pointsList)
 	{
 		Mesh mesh = new Mesh();
@@ -211,7 +211,7 @@ public class CDGHelper
 		return mesh;
 	}
 
-	// Token: 0x060041C6 RID: 16838 RVA: 0x000EA018 File Offset: 0x000E8218
+	// Token: 0x06005B43 RID: 23363 RVA: 0x0015910C File Offset: 0x0015730C
 	public static Vector2 RotatedPoint(Vector2 thePoint, Vector2 theOrigin, float theRotation)
 	{
 		theRotation *= 0.017453292f;
@@ -224,7 +224,7 @@ public class CDGHelper
 		};
 	}
 
-	// Token: 0x060041C7 RID: 16839 RVA: 0x000EA0A9 File Offset: 0x000E82A9
+	// Token: 0x06005B44 RID: 23364 RVA: 0x0003210C File Offset: 0x0003030C
 	public static Vector2 ChangeVector2Length(Vector2 thePoint, Vector2 theOrigin, float theLength)
 	{
 		thePoint -= theOrigin;
@@ -232,7 +232,7 @@ public class CDGHelper
 		return thePoint + theOrigin;
 	}
 
-	// Token: 0x060041C8 RID: 16840 RVA: 0x000EA0CC File Offset: 0x000E82CC
+	// Token: 0x06005B45 RID: 23365 RVA: 0x001591A0 File Offset: 0x001573A0
 	public static float GetLockedAngle(float currentAngle, int numberOfDirections)
 	{
 		currentAngle = CDGHelper.WrapAngleDegrees(currentAngle, false);
@@ -261,13 +261,13 @@ public class CDGHelper
 		return currentAngle;
 	}
 
-	// Token: 0x060041C9 RID: 16841 RVA: 0x000EA12E File Offset: 0x000E832E
+	// Token: 0x06005B46 RID: 23366 RVA: 0x0003212D File Offset: 0x0003032D
 	public static float WrapAngleDegrees(float degrees, bool convertToHalfRadius)
 	{
 		return CDGHelper.ToDegrees(CDGHelper.WrapAngleRadians(CDGHelper.ToRadians(degrees), convertToHalfRadius));
 	}
 
-	// Token: 0x060041CA RID: 16842 RVA: 0x000EA144 File Offset: 0x000E8344
+	// Token: 0x06005B47 RID: 23367 RVA: 0x00159204 File Offset: 0x00157404
 	public static float WrapAngleRadians(float radians, bool convertToHalfRadius)
 	{
 		float num = 6.2831855f;
@@ -295,7 +295,7 @@ public class CDGHelper
 		}
 	}
 
-	// Token: 0x060041CB RID: 16843 RVA: 0x000EA190 File Offset: 0x000E8390
+	// Token: 0x06005B48 RID: 23368 RVA: 0x00159250 File Offset: 0x00157450
 	public static float TurnToFaceRadians(Vector2 sourcePosition, Vector2 targetPosition, float sourceTurnSpeedInRads, float sourceOrientationInRads, float elapsedTime, bool convertToHalfRadius)
 	{
 		float x = targetPosition.x - sourcePosition.x;
@@ -315,13 +315,13 @@ public class CDGHelper
 		return CDGHelper.WrapAngleRadians(num2 + num4, convertToHalfRadius);
 	}
 
-	// Token: 0x060041CC RID: 16844 RVA: 0x000EA22C File Offset: 0x000E842C
+	// Token: 0x06005B49 RID: 23369 RVA: 0x00032140 File Offset: 0x00030340
 	public static float TurnToFaceDegrees(Vector2 sourcePosition, Vector2 targetPosition, float sourceTurnSpeedInDegrees, float sourceOrientationInDegrees, float elapsedTime, bool convertToHalfRadius)
 	{
 		return CDGHelper.ToDegrees(CDGHelper.TurnToFaceRadians(sourcePosition, targetPosition, CDGHelper.ToRadians(sourceTurnSpeedInDegrees), CDGHelper.ToRadians(sourceOrientationInDegrees), elapsedTime, convertToHalfRadius));
 	}
 
-	// Token: 0x060041CD RID: 16845 RVA: 0x000EA24C File Offset: 0x000E844C
+	// Token: 0x06005B4A RID: 23370 RVA: 0x001592EC File Offset: 0x001574EC
 	public static int GetRandomOdds(List<float> oddsArray)
 	{
 		int count = oddsArray.Count;
@@ -352,7 +352,7 @@ public class CDGHelper
 		return -1;
 	}
 
-	// Token: 0x060041CE RID: 16846 RVA: 0x000EA2FC File Offset: 0x000E84FC
+	// Token: 0x06005B4B RID: 23371 RVA: 0x0015939C File Offset: 0x0015759C
 	public static int GetRandomOdds(float[] oddsArray)
 	{
 		int num = oddsArray.Length;
@@ -383,7 +383,7 @@ public class CDGHelper
 		return -1;
 	}
 
-	// Token: 0x060041CF RID: 16847 RVA: 0x000EA380 File Offset: 0x000E8580
+	// Token: 0x06005B4C RID: 23372 RVA: 0x00159420 File Offset: 0x00157620
 	public static int GetRandomOdds(List<int> oddsArray)
 	{
 		int count = oddsArray.Count;
@@ -414,7 +414,7 @@ public class CDGHelper
 		return -1;
 	}
 
-	// Token: 0x060041D0 RID: 16848 RVA: 0x000EA424 File Offset: 0x000E8624
+	// Token: 0x06005B4D RID: 23373 RVA: 0x001594C4 File Offset: 0x001576C4
 	public static int GetRandomOdds(int[] oddsArray)
 	{
 		int num = oddsArray.Length;
@@ -445,7 +445,7 @@ public class CDGHelper
 		return -1;
 	}
 
-	// Token: 0x060041D1 RID: 16849 RVA: 0x000EA49C File Offset: 0x000E869C
+	// Token: 0x06005B4E RID: 23374 RVA: 0x0015953C File Offset: 0x0015773C
 	public static void Shuffle<T>(List<T> array)
 	{
 		for (int i = array.Count; i > 1; i--)
@@ -457,7 +457,7 @@ public class CDGHelper
 		}
 	}
 
-	// Token: 0x060041D2 RID: 16850 RVA: 0x000EA4E4 File Offset: 0x000E86E4
+	// Token: 0x06005B4F RID: 23375 RVA: 0x00159584 File Offset: 0x00157784
 	public static void Shuffle<T>(T[] array)
 	{
 		for (int i = array.Length; i > 1; i--)
@@ -469,7 +469,7 @@ public class CDGHelper
 		}
 	}
 
-	// Token: 0x060041D3 RID: 16851 RVA: 0x000EA52C File Offset: 0x000E872C
+	// Token: 0x06005B50 RID: 23376 RVA: 0x001595CC File Offset: 0x001577CC
 	public static T CopyComponent<T>(T original, GameObject destination, bool forceAdd = false) where T : Component
 	{
 		Collider2D collider2D = original as Collider2D;
@@ -501,7 +501,7 @@ public class CDGHelper
 		return component as T;
 	}
 
-	// Token: 0x060041D4 RID: 16852 RVA: 0x000EA6B4 File Offset: 0x000E88B4
+	// Token: 0x06005B51 RID: 23377 RVA: 0x00159754 File Offset: 0x00157954
 	public static bool ComponentsEqual(Component component1, Component component2)
 	{
 		Type type = component1.GetType();
@@ -556,37 +556,37 @@ public class CDGHelper
 		return true;
 	}
 
-	// Token: 0x060041D5 RID: 16853 RVA: 0x000EA866 File Offset: 0x000E8A66
+	// Token: 0x06005B52 RID: 23378 RVA: 0x0003215E File Offset: 0x0003035E
 	public static float ToDegrees(float rads)
 	{
 		return rads * 57.29578f;
 	}
 
-	// Token: 0x060041D6 RID: 16854 RVA: 0x000EA86F File Offset: 0x000E8A6F
+	// Token: 0x06005B53 RID: 23379 RVA: 0x00032167 File Offset: 0x00030367
 	public static float ToRadians(float degrees)
 	{
 		return degrees * 0.017453292f;
 	}
 
-	// Token: 0x060041D7 RID: 16855 RVA: 0x000EA878 File Offset: 0x000E8A78
+	// Token: 0x06005B54 RID: 23380 RVA: 0x00032170 File Offset: 0x00030370
 	public static Color NormalizeRGB(float r, float g, float b, float a)
 	{
 		return new Color(r / 255f, g / 255f, b / 255f, a / 255f);
 	}
 
-	// Token: 0x060041D8 RID: 16856 RVA: 0x000EA89B File Offset: 0x000E8A9B
+	// Token: 0x06005B55 RID: 23381 RVA: 0x00032193 File Offset: 0x00030393
 	public static Color NormalizeRGB(Vector4 color)
 	{
 		return CDGHelper.NormalizeRGB(color.x, color.y, color.z, color.w);
 	}
 
-	// Token: 0x060041D9 RID: 16857 RVA: 0x000EA8BA File Offset: 0x000E8ABA
+	// Token: 0x06005B56 RID: 23382 RVA: 0x000321B2 File Offset: 0x000303B2
 	public static Color NormalizeRGB(Color color)
 	{
 		return CDGHelper.NormalizeRGB(color.r, color.g, color.b, color.a);
 	}
 
-	// Token: 0x060041DA RID: 16858 RVA: 0x000EA8DC File Offset: 0x000E8ADC
+	// Token: 0x06005B57 RID: 23383 RVA: 0x00159908 File Offset: 0x00157B08
 	public static BoxCollider2D ConvertPolyToBoxCollider(PolygonCollider2D polyCollider, bool destroyPolyCollider)
 	{
 		GameObject gameObject = polyCollider.gameObject;
@@ -611,7 +611,7 @@ public class CDGHelper
 		return boxCollider2D;
 	}
 
-	// Token: 0x060041DB RID: 16859 RVA: 0x000EA9B8 File Offset: 0x000E8BB8
+	// Token: 0x06005B58 RID: 23384 RVA: 0x001599E4 File Offset: 0x00157BE4
 	public static bool CanPolyColliderBeBoxCollider(PolygonCollider2D polyCollider)
 	{
 		if (polyCollider.GetTotalPointCount() != 4)
@@ -652,7 +652,7 @@ public class CDGHelper
 		return num == 2 && num2 == 2;
 	}
 
-	// Token: 0x060041DC RID: 16860 RVA: 0x000EAABC File Offset: 0x000E8CBC
+	// Token: 0x06005B59 RID: 23385 RVA: 0x00159AE8 File Offset: 0x00157CE8
 	public static string ToRoman(int number)
 	{
 		if (number < 0 || number > 3999)
@@ -719,19 +719,19 @@ public class CDGHelper
 		return string.Empty;
 	}
 
-	// Token: 0x060041DD RID: 16861 RVA: 0x000EAC5C File Offset: 0x000E8E5C
+	// Token: 0x06005B5A RID: 23386 RVA: 0x000321D1 File Offset: 0x000303D1
 	public static bool IsPercent(float value)
 	{
 		return Mathf.Floor(value) != value;
 	}
 
-	// Token: 0x060041DE RID: 16862 RVA: 0x000EAC6A File Offset: 0x000E8E6A
+	// Token: 0x06005B5B RID: 23387 RVA: 0x000321DF File Offset: 0x000303DF
 	public static int ToPercent(float value)
 	{
 		return Mathf.RoundToInt(value * 100f);
 	}
 
-	// Token: 0x060041DF RID: 16863 RVA: 0x000EAC78 File Offset: 0x000E8E78
+	// Token: 0x06005B5C RID: 23388 RVA: 0x00159C88 File Offset: 0x00157E88
 	public static bool DoCollisionTypesCollide_V2(CollisionType collidesWithType, GameObject other)
 	{
 		TagType tagType = TagType.Untagged;
@@ -754,6 +754,6 @@ public class CDGHelper
 		return (CollisionType_RL.GetEquivalentCollisionType(tagType) & collidesWithType) > CollisionType.None;
 	}
 
-	// Token: 0x0400393B RID: 14651
+	// Token: 0x04004BF2 RID: 19442
 	private static Dictionary<string, TagType> m_tagToEnumTable = new Dictionary<string, TagType>();
 }

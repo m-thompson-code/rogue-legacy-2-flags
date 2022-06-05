@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004F4 RID: 1268
+// Token: 0x0200084F RID: 2127
 public class CaveKeyRoomController : BaseSpecialRoomController
 {
-	// Token: 0x06002F7F RID: 12159 RVA: 0x000A295B File Offset: 0x000A0B5B
+	// Token: 0x060041A6 RID: 16806 RVA: 0x000245A0 File Offset: 0x000227A0
 	protected override void Awake()
 	{
 		base.Awake();
@@ -12,14 +12,14 @@ public class CaveKeyRoomController : BaseSpecialRoomController
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.RelicLevelChanged, this.m_onRelicChanged);
 	}
 
-	// Token: 0x06002F80 RID: 12160 RVA: 0x000A2982 File Offset: 0x000A0B82
+	// Token: 0x060041A7 RID: 16807 RVA: 0x000245C7 File Offset: 0x000227C7
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.RelicLevelChanged, this.m_onRelicChanged);
 	}
 
-	// Token: 0x06002F81 RID: 12161 RVA: 0x000A2997 File Offset: 0x000A0B97
+	// Token: 0x060041A8 RID: 16808 RVA: 0x000245DC File Offset: 0x000227DC
 	private void OnRelicChanged(object sender, EventArgs args)
 	{
 		if (SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.CaveTuningForkTriggered))
@@ -28,6 +28,6 @@ public class CaveKeyRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x040025E2 RID: 9698
+	// Token: 0x04003369 RID: 13161
 	private Action<MonoBehaviour, EventArgs> m_onRelicChanged;
 }

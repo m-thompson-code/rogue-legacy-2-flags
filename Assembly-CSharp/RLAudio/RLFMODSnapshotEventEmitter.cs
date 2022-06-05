@@ -2,10 +2,10 @@
 
 namespace RLAudio
 {
-	// Token: 0x0200090E RID: 2318
+	// Token: 0x02000E8B RID: 3723
 	public class RLFMODSnapshotEventEmitter : BaseFMODEventEmitter
 	{
-		// Token: 0x06004C13 RID: 19475 RVA: 0x0011152F File Offset: 0x0010F72F
+		// Token: 0x0600690E RID: 26894 RVA: 0x0003A35A File Offset: 0x0003855A
 		public override void Play()
 		{
 			if (this.m_eventInstance.isValid())

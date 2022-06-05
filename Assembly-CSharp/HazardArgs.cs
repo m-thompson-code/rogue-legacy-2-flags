@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x020005B3 RID: 1459
+// Token: 0x020009BB RID: 2491
 public class HazardArgs
 {
-	// Token: 0x0600363E RID: 13886 RVA: 0x000BC20E File Offset: 0x000BA40E
+	// Token: 0x06004C50 RID: 19536 RVA: 0x00029AEB File Offset: 0x00027CEB
 	public HazardArgs(StateID initialState)
 	{
 		this.InitialState = initialState;
 	}
 
-	// Token: 0x17001325 RID: 4901
-	// (get) Token: 0x0600363F RID: 13887 RVA: 0x000BC21D File Offset: 0x000BA41D
-	// (set) Token: 0x06003640 RID: 13888 RVA: 0x000BC225 File Offset: 0x000BA425
+	// Token: 0x17001A52 RID: 6738
+	// (get) Token: 0x06004C51 RID: 19537 RVA: 0x00029AFA File Offset: 0x00027CFA
+	// (set) Token: 0x06004C52 RID: 19538 RVA: 0x00029B02 File Offset: 0x00027D02
 	public StateID InitialState { get; protected set; }
 }

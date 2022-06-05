@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002BB RID: 699
+// Token: 0x020004AA RID: 1194
 public class RepeatHit_Check : MonoBehaviour
 {
-	// Token: 0x17000C8E RID: 3214
-	// (get) Token: 0x06001BD4 RID: 7124 RVA: 0x00059C19 File Offset: 0x00057E19
-	// (set) Token: 0x06001BD5 RID: 7125 RVA: 0x00059C21 File Offset: 0x00057E21
+	// Token: 0x17001011 RID: 4113
+	// (get) Token: 0x06002688 RID: 9864 RVA: 0x000157ED File Offset: 0x000139ED
+	// (set) Token: 0x06002689 RID: 9865 RVA: 0x000157F5 File Offset: 0x000139F5
 	public float RepeatHitDuration
 	{
 		get
@@ -19,7 +19,7 @@ public class RepeatHit_Check : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BD6 RID: 7126 RVA: 0x00059C2C File Offset: 0x00057E2C
+	// Token: 0x0600268A RID: 9866 RVA: 0x000B68BC File Offset: 0x000B4ABC
 	private void Awake()
 	{
 		this.m_hitObjectArray = new RepeatHit_Check.HitObjectContainer[10];
@@ -29,7 +29,7 @@ public class RepeatHit_Check : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BD7 RID: 7127 RVA: 0x00059C60 File Offset: 0x00057E60
+	// Token: 0x0600268B RID: 9867 RVA: 0x000B68F0 File Offset: 0x000B4AF0
 	protected void Update()
 	{
 		RepeatHit_Check.HitObjectContainer[] hitObjectArray = this.m_hitObjectArray;
@@ -39,7 +39,7 @@ public class RepeatHit_Check : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BD8 RID: 7128 RVA: 0x00059C8C File Offset: 0x00057E8C
+	// Token: 0x0600268C RID: 9868 RVA: 0x000B691C File Offset: 0x000B4B1C
 	protected void LateUpdate()
 	{
 		RepeatHit_Check.HitObjectContainer[] hitObjectArray = this.m_hitObjectArray;
@@ -49,7 +49,7 @@ public class RepeatHit_Check : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BD9 RID: 7129 RVA: 0x00059CB8 File Offset: 0x00057EB8
+	// Token: 0x0600268D RID: 9869 RVA: 0x000B6948 File Offset: 0x000B4B48
 	public bool AllowCollision(GameObject objCollided)
 	{
 		objCollided = objCollided.transform.root.gameObject;
@@ -73,7 +73,7 @@ public class RepeatHit_Check : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06001BDA RID: 7130 RVA: 0x00059D3C File Offset: 0x00057F3C
+	// Token: 0x0600268E RID: 9870 RVA: 0x000B69CC File Offset: 0x000B4BCC
 	public void ClearCollisionChecks()
 	{
 		if (this.m_hitObjectArray != null)
@@ -87,20 +87,20 @@ public class RepeatHit_Check : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001971 RID: 6513
+	// Token: 0x0400215E RID: 8542
 	private const int REPEAT_HIT_ARRAY_SIZE = 10;
 
-	// Token: 0x04001972 RID: 6514
+	// Token: 0x0400215F RID: 8543
 	[SerializeField]
 	private float m_repeatHitDuration = 0.5f;
 
-	// Token: 0x04001973 RID: 6515
+	// Token: 0x04002160 RID: 8544
 	protected RepeatHit_Check.HitObjectContainer[] m_hitObjectArray;
 
-	// Token: 0x02000B68 RID: 2920
+	// Token: 0x020004AB RID: 1195
 	protected class HitObjectContainer
 	{
-		// Token: 0x06005D21 RID: 23841 RVA: 0x0015F7CF File Offset: 0x0015D9CF
+		// Token: 0x06002690 RID: 9872 RVA: 0x00015811 File Offset: 0x00013A11
 		public void Update()
 		{
 			if (this.ObjectHit == null)
@@ -114,13 +114,13 @@ public class RepeatHit_Check : MonoBehaviour
 			}
 		}
 
-		// Token: 0x04004C82 RID: 19586
+		// Token: 0x04002161 RID: 8545
 		public GameObject ObjectHit;
 
-		// Token: 0x04004C83 RID: 19587
+		// Token: 0x04002162 RID: 8546
 		public float HitDuration;
 
-		// Token: 0x04004C84 RID: 19588
+		// Token: 0x04002163 RID: 8547
 		public bool JustAdded;
 	}
 }

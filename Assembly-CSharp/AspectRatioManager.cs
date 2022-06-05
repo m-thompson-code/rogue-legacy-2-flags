@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000688 RID: 1672
+// Token: 0x02000B0C RID: 2828
 public class AspectRatioManager : MonoBehaviour
 {
-	// Token: 0x17001508 RID: 5384
-	// (get) Token: 0x06003C5C RID: 15452 RVA: 0x000D08D9 File Offset: 0x000CEAD9
+	// Token: 0x17001CCE RID: 7374
+	// (get) Token: 0x060054D5 RID: 21717 RVA: 0x0002E09C File Offset: 0x0002C29C
 	public static AspectRatioManager Instance
 	{
 		get
@@ -20,8 +20,8 @@ public class AspectRatioManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001509 RID: 5385
-	// (get) Token: 0x06003C5D RID: 15453 RVA: 0x000D08FD File Offset: 0x000CEAFD
+	// Token: 0x17001CCF RID: 7375
+	// (get) Token: 0x060054D6 RID: 21718 RVA: 0x0002E0C0 File Offset: 0x0002C2C0
 	public static bool Disable_16_9_Aspect
 	{
 		get
@@ -30,8 +30,8 @@ public class AspectRatioManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700150A RID: 5386
-	// (get) Token: 0x06003C5E RID: 15454 RVA: 0x000D0912 File Offset: 0x000CEB12
+	// Token: 0x17001CD0 RID: 7376
+	// (get) Token: 0x060054D7 RID: 21719 RVA: 0x0002E0D5 File Offset: 0x0002C2D5
 	public static float CurrentGameAspectRatio
 	{
 		get
@@ -40,8 +40,8 @@ public class AspectRatioManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700150B RID: 5387
-	// (get) Token: 0x06003C5F RID: 15455 RVA: 0x000D0920 File Offset: 0x000CEB20
+	// Token: 0x17001CD1 RID: 7377
+	// (get) Token: 0x060054D8 RID: 21720 RVA: 0x00140F84 File Offset: 0x0013F184
 	public static float CurrentScreenAspectRatio
 	{
 		get
@@ -50,8 +50,8 @@ public class AspectRatioManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700150C RID: 5388
-	// (get) Token: 0x06003C60 RID: 15456 RVA: 0x000D094C File Offset: 0x000CEB4C
+	// Token: 0x17001CD2 RID: 7378
+	// (get) Token: 0x060054D9 RID: 21721 RVA: 0x00140FB0 File Offset: 0x0013F1B0
 	public static bool IsScreen_16_9_AspectRatio
 	{
 		get
@@ -61,29 +61,29 @@ public class AspectRatioManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700150D RID: 5389
-	// (get) Token: 0x06003C61 RID: 15457 RVA: 0x000D0978 File Offset: 0x000CEB78
-	// (set) Token: 0x06003C62 RID: 15458 RVA: 0x000D097F File Offset: 0x000CEB7F
+	// Token: 0x17001CD3 RID: 7379
+	// (get) Token: 0x060054DA RID: 21722 RVA: 0x0002E0E1 File Offset: 0x0002C2E1
+	// (set) Token: 0x060054DB RID: 21723 RVA: 0x0002E0E8 File Offset: 0x0002C2E8
 	public static bool ForceEnable_16_9 { get; set; }
 
-	// Token: 0x1700150E RID: 5390
-	// (get) Token: 0x06003C63 RID: 15459 RVA: 0x000D0987 File Offset: 0x000CEB87
-	// (set) Token: 0x06003C64 RID: 15460 RVA: 0x000D098E File Offset: 0x000CEB8E
+	// Token: 0x17001CD4 RID: 7380
+	// (get) Token: 0x060054DC RID: 21724 RVA: 0x0002E0F0 File Offset: 0x0002C2F0
+	// (set) Token: 0x060054DD RID: 21725 RVA: 0x0002E0F7 File Offset: 0x0002C2F7
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06003C65 RID: 15461 RVA: 0x000D0996 File Offset: 0x000CEB96
+	// Token: 0x060054DE RID: 21726 RVA: 0x0002E0FF File Offset: 0x0002C2FF
 	private void Awake()
 	{
 		this.m_onResolutionChanged = new Action<MonoBehaviour, EventArgs>(this.OnResolutionChanged);
 	}
 
-	// Token: 0x06003C66 RID: 15462 RVA: 0x000D09AA File Offset: 0x000CEBAA
+	// Token: 0x060054DF RID: 21727 RVA: 0x0002E113 File Offset: 0x0002C313
 	private void OnDestroy()
 	{
 		AspectRatioManager.IsInitialized = false;
 	}
 
-	// Token: 0x06003C67 RID: 15463 RVA: 0x000D09B2 File Offset: 0x000CEBB2
+	// Token: 0x060054E0 RID: 21728 RVA: 0x0002E11B File Offset: 0x0002C31B
 	private IEnumerator Start()
 	{
 		while (!CameraController.IsInstantiated)
@@ -94,19 +94,19 @@ public class AspectRatioManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003C68 RID: 15464 RVA: 0x000D09C1 File Offset: 0x000CEBC1
+	// Token: 0x060054E1 RID: 21729 RVA: 0x0002E12A File Offset: 0x0002C32A
 	private void OnEnable()
 	{
 		Messenger<SceneMessenger, SceneEvent>.AddListener(SceneEvent.ResolutionChanged, this.m_onResolutionChanged);
 	}
 
-	// Token: 0x06003C69 RID: 15465 RVA: 0x000D09CF File Offset: 0x000CEBCF
+	// Token: 0x060054E2 RID: 21730 RVA: 0x0002E138 File Offset: 0x0002C338
 	private void OnDisable()
 	{
 		Messenger<SceneMessenger, SceneEvent>.RemoveListener(SceneEvent.ResolutionChanged, this.m_onResolutionChanged);
 	}
 
-	// Token: 0x06003C6A RID: 15466 RVA: 0x000D09E0 File Offset: 0x000CEBE0
+	// Token: 0x060054E3 RID: 21731 RVA: 0x00140FDC File Offset: 0x0013F1DC
 	private void OnResolutionChanged(object sender, EventArgs args)
 	{
 		if (!CameraController.IsInstantiated)
@@ -153,18 +153,18 @@ public class AspectRatioManager : MonoBehaviour
 		Messenger<SceneMessenger, SceneEvent>.Broadcast(SceneEvent.AspectRatioChanged, this, null);
 	}
 
-	// Token: 0x04002D70 RID: 11632
+	// Token: 0x04003F2B RID: 16171
 	public const float STANDARD_16_9_ASPECT_RATIO = 1.7777778f;
 
-	// Token: 0x04002D71 RID: 11633
+	// Token: 0x04003F2C RID: 16172
 	private Camera m_camera;
 
-	// Token: 0x04002D72 RID: 11634
+	// Token: 0x04003F2D RID: 16173
 	private float m_currentAspectRatio;
 
-	// Token: 0x04002D73 RID: 11635
+	// Token: 0x04003F2E RID: 16174
 	private Action<MonoBehaviour, EventArgs> m_onResolutionChanged;
 
-	// Token: 0x04002D74 RID: 11636
+	// Token: 0x04003F2F RID: 16175
 	private static AspectRatioManager m_instance;
 }

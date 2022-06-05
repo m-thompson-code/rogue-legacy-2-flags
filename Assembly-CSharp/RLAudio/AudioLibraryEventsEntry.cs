@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008D5 RID: 2261
+	// Token: 0x02000E43 RID: 3651
 	[Serializable]
 	public class AudioLibraryEventsEntry
 	{
-		// Token: 0x17001820 RID: 6176
-		// (get) Token: 0x06004A4A RID: 19018 RVA: 0x0010BB86 File Offset: 0x00109D86
+		// Token: 0x170020FF RID: 8447
+		// (get) Token: 0x060066FA RID: 26362 RVA: 0x00038B22 File Offset: 0x00036D22
 		public string[] EventPaths
 		{
 			get
@@ -18,8 +18,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001821 RID: 6177
-		// (get) Token: 0x06004A4B RID: 19019 RVA: 0x0010BB8E File Offset: 0x00109D8E
+		// Token: 0x17002100 RID: 8448
+		// (get) Token: 0x060066FB RID: 26363 RVA: 0x00038B2A File Offset: 0x00036D2A
 		public AudioSource Source
 		{
 			get
@@ -28,12 +28,12 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003E73 RID: 15987
+		// Token: 0x04005388 RID: 21384
 		[SerializeField]
 		[EventRef]
 		private string[] m_eventPaths;
 
-		// Token: 0x04003E74 RID: 15988
+		// Token: 0x04005389 RID: 21385
 		[SerializeField]
 		private AudioSource m_source;
 	}

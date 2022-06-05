@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x0200067C RID: 1660
+// Token: 0x02000AFB RID: 2811
 public static class ReplaceRoomUtility
 {
-	// Token: 0x06003C06 RID: 15366 RVA: 0x000CFA2C File Offset: 0x000CDC2C
+	// Token: 0x06005462 RID: 21602 RVA: 0x0013F95C File Offset: 0x0013DB5C
 	public static bool ReplaceRoomMetaData(BiomeController biomeController, GridPoint gridPointToReplaceRoom, RoomSide side)
 	{
 		IEnumerable<DoorLocation> replacementDoorLocations = ReplaceRoomUtility.GetReplacementDoorLocations(biomeController, side, gridPointToReplaceRoom.Owner);
@@ -45,7 +45,7 @@ public static class ReplaceRoomUtility
 		return result;
 	}
 
-	// Token: 0x06003C07 RID: 15367 RVA: 0x000CFB74 File Offset: 0x000CDD74
+	// Token: 0x06005463 RID: 21603 RVA: 0x0013FAA4 File Offset: 0x0013DCA4
 	private static IEnumerable<DoorLocation> GetReplacementDoorLocations(BiomeController biomeController, RoomSide side, GridPointManager gridPointManager)
 	{
 		List<DoorLocation> list = new List<DoorLocation>();
@@ -66,7 +66,7 @@ public static class ReplaceRoomUtility
 		return list;
 	}
 
-	// Token: 0x06003C08 RID: 15368 RVA: 0x000CFBE0 File Offset: 0x000CDDE0
+	// Token: 0x06005464 RID: 21604 RVA: 0x0013FB10 File Offset: 0x0013DD10
 	public static RoomSetEntry GetReplacementRoom(BiomeController biomeController, GridPointManager gridPointManager, IEnumerable<DoorLocation> mustHaveAll, IEnumerable<DoorLocation> mustHaveAtLeastOne, bool matchMirrored)
 	{
 		if (gridPointManager.RoomType == RoomType.Mandatory || gridPointManager.RoomType == RoomType.BossEntrance || gridPointManager.RoomType == RoomType.Transition)
@@ -103,7 +103,7 @@ public static class ReplaceRoomUtility
 		return default(RoomSetEntry);
 	}
 
-	// Token: 0x06003C09 RID: 15369 RVA: 0x000CFD40 File Offset: 0x000CDF40
+	// Token: 0x06005465 RID: 21605 RVA: 0x0013FC70 File Offset: 0x0013DE70
 	private static bool EntryContainsDoorLocation(RoomSetEntry entry, DoorLocation locationToFind)
 	{
 		for (int i = 0; i < entry.RoomMetaData.DoorLocations.Length; i++)
@@ -117,7 +117,7 @@ public static class ReplaceRoomUtility
 		return false;
 	}
 
-	// Token: 0x06003C0A RID: 15370 RVA: 0x000CFDA4 File Offset: 0x000CDFA4
+	// Token: 0x06005466 RID: 21606 RVA: 0x0013FCD4 File Offset: 0x0013DED4
 	private static HashSet<RoomSetEntry> GetSetOfRoomsWithDoorLocations(BiomeController biomeController, IEnumerable<DoorLocation> mustHaveAll, IEnumerable<DoorLocation> mustHaveAtLeastOne, BiomeType biome)
 	{
 		HashSet<RoomSetEntry> roomSet = RoomLibrary.GetSetCollection(biome).RoomSet;

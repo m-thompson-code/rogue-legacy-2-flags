@@ -9,21 +9,21 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008FB RID: 2299
+	// Token: 0x02000E74 RID: 3700
 	public class MusicManager : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001862 RID: 6242
-		// (get) Token: 0x06004B6E RID: 19310 RVA: 0x0010F2F9 File Offset: 0x0010D4F9
-		// (set) Token: 0x06004B6F RID: 19311 RVA: 0x0010F300 File Offset: 0x0010D500
+		// Token: 0x17002153 RID: 8531
+		// (get) Token: 0x06006851 RID: 26705 RVA: 0x00039BDE File Offset: 0x00037DDE
+		// (set) Token: 0x06006852 RID: 26706 RVA: 0x00039BE5 File Offset: 0x00037DE5
 		public static SongID CurrentSong { get; private set; }
 
-		// Token: 0x17001863 RID: 6243
-		// (get) Token: 0x06004B70 RID: 19312 RVA: 0x0010F308 File Offset: 0x0010D508
-		// (set) Token: 0x06004B71 RID: 19313 RVA: 0x0010F30F File Offset: 0x0010D50F
+		// Token: 0x17002154 RID: 8532
+		// (get) Token: 0x06006853 RID: 26707 RVA: 0x00039BED File Offset: 0x00037DED
+		// (set) Token: 0x06006854 RID: 26708 RVA: 0x00039BF4 File Offset: 0x00037DF4
 		public static SongID LastSongPlayed { get; private set; }
 
-		// Token: 0x17001864 RID: 6244
-		// (get) Token: 0x06004B72 RID: 19314 RVA: 0x0010F317 File Offset: 0x0010D517
+		// Token: 0x17002155 RID: 8533
+		// (get) Token: 0x06006855 RID: 26709 RVA: 0x00039BFC File Offset: 0x00037DFC
 		public static EventInstance CurrentMusicInstance
 		{
 			get
@@ -32,8 +32,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001865 RID: 6245
-		// (get) Token: 0x06004B73 RID: 19315 RVA: 0x0010F31E File Offset: 0x0010D51E
+		// Token: 0x17002156 RID: 8534
+		// (get) Token: 0x06006856 RID: 26710 RVA: 0x00039C03 File Offset: 0x00037E03
 		public static bool IsPlayingOverride
 		{
 			get
@@ -42,8 +42,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001866 RID: 6246
-		// (get) Token: 0x06004B74 RID: 19316 RVA: 0x0010F325 File Offset: 0x0010D525
+		// Token: 0x17002157 RID: 8535
+		// (get) Token: 0x06006857 RID: 26711 RVA: 0x00009A7B File Offset: 0x00007C7B
 		public string Description
 		{
 			get
@@ -52,12 +52,12 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001867 RID: 6247
-		// (get) Token: 0x06004B75 RID: 19317 RVA: 0x0010F32D File Offset: 0x0010D52D
-		// (set) Token: 0x06004B76 RID: 19318 RVA: 0x0010F334 File Offset: 0x0010D534
+		// Token: 0x17002158 RID: 8536
+		// (get) Token: 0x06006858 RID: 26712 RVA: 0x00039C0A File Offset: 0x00037E0A
+		// (set) Token: 0x06006859 RID: 26713 RVA: 0x00039C11 File Offset: 0x00037E11
 		private static MusicManager Instance { get; set; }
 
-		// Token: 0x06004B77 RID: 19319 RVA: 0x0010F33C File Offset: 0x0010D53C
+		// Token: 0x0600685A RID: 26714 RVA: 0x0017F538 File Offset: 0x0017D738
 		private void Awake()
 		{
 			if (!MusicManager.Instance)
@@ -74,7 +74,7 @@ namespace RLAudio
 			UnityEngine.Object.Destroy(base.gameObject);
 		}
 
-		// Token: 0x06004B78 RID: 19320 RVA: 0x0010F3D4 File Offset: 0x0010D5D4
+		// Token: 0x0600685B RID: 26715 RVA: 0x0017F5D0 File Offset: 0x0017D7D0
 		private void Start()
 		{
 			if (MusicManager.Instance == this)
@@ -90,7 +90,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B79 RID: 19321 RVA: 0x0010F460 File Offset: 0x0010D660
+		// Token: 0x0600685C RID: 26716 RVA: 0x0017F65C File Offset: 0x0017D85C
 		private void OnDestroy()
 		{
 			if (MusicManager.Instance == this)
@@ -104,7 +104,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B7A RID: 19322 RVA: 0x0010F4D4 File Offset: 0x0010D6D4
+		// Token: 0x0600685D RID: 26717 RVA: 0x0017F6D0 File Offset: 0x0017D8D0
 		private void InitializeInstanceLookupTable()
 		{
 			foreach (SongID songID in SongType_RL.TypeArray)
@@ -130,7 +130,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B7B RID: 19323 RVA: 0x0010F550 File Offset: 0x0010D750
+		// Token: 0x0600685E RID: 26718 RVA: 0x0017F74C File Offset: 0x0017D94C
 		private void OnEnterBiome(MonoBehaviour sender, EventArgs args)
 		{
 			if (MusicManager.m_currentMusicInstance.isValid())
@@ -144,7 +144,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B7C RID: 19324 RVA: 0x0010F59D File Offset: 0x0010D79D
+		// Token: 0x0600685F RID: 26719 RVA: 0x00039C19 File Offset: 0x00037E19
 		private void OnSceneStartedLoading(string sceneName)
 		{
 			MusicManager.StopMusic();
@@ -156,7 +156,7 @@ namespace RLAudio
 			MusicManager.m_songToPlayInCave = SongID.None;
 		}
 
-		// Token: 0x06004B7D RID: 19325 RVA: 0x0010F5C8 File Offset: 0x0010D7C8
+		// Token: 0x06006860 RID: 26720 RVA: 0x0017F79C File Offset: 0x0017D99C
 		private void OnBiomeTransitionStart(BiomeType origin, BiomeType destination)
 		{
 			if (AudioUtility.GetHasParameter(MusicManager.m_currentMusicInstance, "leaveLevel"))
@@ -174,7 +174,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B7E RID: 19326 RVA: 0x0010F62C File Offset: 0x0010D82C
+		// Token: 0x06006861 RID: 26721 RVA: 0x0017F800 File Offset: 0x0017DA00
 		private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs args)
 		{
 			if (CutsceneManager.IsCutsceneActive)
@@ -188,7 +188,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B7F RID: 19327 RVA: 0x0010F652 File Offset: 0x0010D852
+		// Token: 0x06006862 RID: 26722 RVA: 0x00039C44 File Offset: 0x00037E44
 		private void OnPlayerDeath(MonoBehaviour sender, EventArgs args)
 		{
 			if (this.m_currentBossRoomController)
@@ -197,7 +197,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B80 RID: 19328 RVA: 0x0010F668 File Offset: 0x0010D868
+		// Token: 0x06006863 RID: 26723 RVA: 0x0017F828 File Offset: 0x0017DA28
 		private void UpdateMusicOnRoomChange(RoomViaDoorEventArgs eventArgs)
 		{
 			if (eventArgs.Room.RoomType == RoomType.Boss && eventArgs.Room.SpecialRoomType != SpecialRoomType.Subboss)
@@ -233,7 +233,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B81 RID: 19329 RVA: 0x0010F710 File Offset: 0x0010D910
+		// Token: 0x06006864 RID: 26724 RVA: 0x0017F8D0 File Offset: 0x0017DAD0
 		private static SongID GetMusicOverride(RoomViaDoorEventArgs eventArgs, out bool hasOverride)
 		{
 			SongID result = SongID.None;
@@ -250,7 +250,7 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004B82 RID: 19330 RVA: 0x0010F754 File Offset: 0x0010D954
+		// Token: 0x06006865 RID: 26725 RVA: 0x0017F914 File Offset: 0x0017DB14
 		private SongID GetBiomeMusicForThisRun(BiomeType biome)
 		{
 			if (biome <= BiomeType.Forest)
@@ -286,7 +286,7 @@ namespace RLAudio
 			return SongID.None;
 		}
 
-		// Token: 0x06004B83 RID: 19331 RVA: 0x0010F7C0 File Offset: 0x0010D9C0
+		// Token: 0x06006866 RID: 26726 RVA: 0x0017F980 File Offset: 0x0017DB80
 		private void SetBiomeMusicForThisRun(BiomeType biome, SongID song)
 		{
 			if (biome <= BiomeType.Forest)
@@ -333,7 +333,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B84 RID: 19332 RVA: 0x0010F82C File Offset: 0x0010DA2C
+		// Token: 0x06006867 RID: 26727 RVA: 0x0017F9EC File Offset: 0x0017DBEC
 		private void PlayBiomeMusic(BiomeType biome)
 		{
 			SongID songID = this.GetBiomeMusicForThisRun(biome);
@@ -358,7 +358,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B85 RID: 19333 RVA: 0x0010F878 File Offset: 0x0010DA78
+		// Token: 0x06006868 RID: 26728 RVA: 0x0017FA38 File Offset: 0x0017DC38
 		public static void PlayMusic(SongID music, bool isOverride, bool skipIntro = false)
 		{
 			if (!MusicLibrary.IsInitialized)
@@ -375,7 +375,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B86 RID: 19334 RVA: 0x0010F8DA File Offset: 0x0010DADA
+		// Token: 0x06006869 RID: 26729 RVA: 0x00039C59 File Offset: 0x00037E59
 		private IEnumerator MusicTrackChangeCoroutine(SongID music, bool isOverride, bool skipIntro)
 		{
 			if (MusicManager.m_currentMusicInstance.isValid() && AudioUtility.GetHasParameter(MusicManager.m_currentMusicInstance, "leaveLevel"))
@@ -437,7 +437,7 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004B87 RID: 19335 RVA: 0x0010F900 File Offset: 0x0010DB00
+		// Token: 0x0600686A RID: 26730 RVA: 0x0017FA9C File Offset: 0x0017DC9C
 		public static void StopMusic()
 		{
 			if (MusicManager.m_currentMusicInstance.isValid())
@@ -451,7 +451,7 @@ namespace RLAudio
 			MusicManager.CurrentSong = SongID.None;
 		}
 
-		// Token: 0x06004B88 RID: 19336 RVA: 0x0010F956 File Offset: 0x0010DB56
+		// Token: 0x0600686B RID: 26731 RVA: 0x00039C7D File Offset: 0x00037E7D
 		public static void StopMusicOverride()
 		{
 			if (MusicManager.m_isPlayingOverride)
@@ -461,7 +461,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B89 RID: 19337 RVA: 0x0010F970 File Offset: 0x0010DB70
+		// Token: 0x0600686C RID: 26732 RVA: 0x0017FAF4 File Offset: 0x0017DCF4
 		private void PlayerEnteredBossRoom(RoomViaDoorEventArgs eventArgs)
 		{
 			this.m_currentBossRoomController = eventArgs.Room.gameObject.GetComponentInChildren<BossRoomController>();
@@ -478,13 +478,13 @@ namespace RLAudio
 			});
 		}
 
-		// Token: 0x06004B8A RID: 19338 RVA: 0x0010F9FD File Offset: 0x0010DBFD
+		// Token: 0x0600686D RID: 26733 RVA: 0x00039C97 File Offset: 0x00037E97
 		private void PlayerDiedInBossRoom()
 		{
 			this.UnsubscribeFromBossRoomEvents();
 		}
 
-		// Token: 0x06004B8B RID: 19339 RVA: 0x0010FA08 File Offset: 0x0010DC08
+		// Token: 0x0600686E RID: 26734 RVA: 0x0017FB84 File Offset: 0x0017DD84
 		private void UnsubscribeFromBossRoomEvents()
 		{
 			this.m_currentBossRoomController.BossTookDamageRelay.RemoveListener(this.m_onBossTookDamage);
@@ -493,7 +493,7 @@ namespace RLAudio
 			this.m_currentBossRoomController = null;
 		}
 
-		// Token: 0x06004B8C RID: 19340 RVA: 0x0010FA61 File Offset: 0x0010DC61
+		// Token: 0x0600686F RID: 26735 RVA: 0x00039C9F File Offset: 0x00037E9F
 		private void OnBossTookDamage(float bossHealthAsPercentage)
 		{
 			if (MusicManager.m_currentMusicInstance.isValid() && AudioUtility.GetHasParameter(MusicManager.m_currentMusicInstance, "bossHealth"))
@@ -502,7 +502,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B8D RID: 19341 RVA: 0x0010FA94 File Offset: 0x0010DC94
+		// Token: 0x06006870 RID: 26736 RVA: 0x0017FBE0 File Offset: 0x0017DDE0
 		private void OnBossOutroStart()
 		{
 			if (MusicManager.m_currentMusicInstance.isValid())
@@ -519,14 +519,14 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B8E RID: 19342 RVA: 0x0010FAEE File Offset: 0x0010DCEE
+		// Token: 0x06006871 RID: 26737 RVA: 0x00039CD0 File Offset: 0x00037ED0
 		private void OnBossDefeated()
 		{
 			this.UnsubscribeFromBossRoomEvents();
 			MusicManager.CurrentSong = SongID.None;
 		}
 
-		// Token: 0x06004B8F RID: 19343 RVA: 0x0010FAFC File Offset: 0x0010DCFC
+		// Token: 0x06006872 RID: 26738 RVA: 0x0017FC3C File Offset: 0x0017DE3C
 		public static void SetBossEncounterParam(float value)
 		{
 			if (AudioUtility.GetHasParameter(MusicManager.m_currentMusicInstance, "bossEncounterProgress"))
@@ -535,88 +535,88 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003F71 RID: 16241
+		// Token: 0x040054BD RID: 21693
 		private const float START_PLAYING_MUSIC_AFTER_TIME = 2f;
 
-		// Token: 0x04003F72 RID: 16242
+		// Token: 0x040054BE RID: 21694
 		private const string LEAVE_LEVEL_PARAMETER = "leaveLevel";
 
-		// Token: 0x04003F73 RID: 16243
+		// Token: 0x040054BF RID: 21695
 		private const float LEAVE_LEVEL_VALUE = 0.51f;
 
-		// Token: 0x04003F74 RID: 16244
+		// Token: 0x040054C0 RID: 21696
 		private const string LEAVE_INTRO_PARAMETER = "leaveIntro";
 
-		// Token: 0x04003F75 RID: 16245
+		// Token: 0x040054C1 RID: 21697
 		private const float LEAVE_INTRO_VALUE = 0.51f;
 
-		// Token: 0x04003F76 RID: 16246
+		// Token: 0x040054C2 RID: 21698
 		private const string BOSS_HEALTH_PARAMETER = "bossHealth";
 
-		// Token: 0x04003F77 RID: 16247
+		// Token: 0x040054C3 RID: 21699
 		private const string BOSS_ENCOUNTER_PROGRESS_PARAMETER = "bossEncounterProgress";
 
-		// Token: 0x04003F78 RID: 16248
+		// Token: 0x040054C4 RID: 21700
 		private const string BOSS_ENCOUNTER_PROGRESS_CAIN_PARAMETER = "bossEncounterProgress_cain";
 
-		// Token: 0x04003F79 RID: 16249
+		// Token: 0x040054C5 RID: 21701
 		private const string SKIP_INTRO_PARAMETER = "skipIntro";
 
-		// Token: 0x04003F7A RID: 16250
+		// Token: 0x040054C6 RID: 21702
 		private const float SKIP_INTRO_VALUE = 0.5f;
 
-		// Token: 0x04003F7B RID: 16251
+		// Token: 0x040054C7 RID: 21703
 		private static EventInstance m_currentMusicInstance;
 
-		// Token: 0x04003F7C RID: 16252
+		// Token: 0x040054C8 RID: 21704
 		private static Dictionary<SongID, EventInstance> m_musicInstanceLookupTable = new Dictionary<SongID, EventInstance>();
 
-		// Token: 0x04003F7D RID: 16253
+		// Token: 0x040054C9 RID: 21705
 		private WaitRL_Yield m_waitBeforePlaying;
 
-		// Token: 0x04003F7E RID: 16254
+		// Token: 0x040054CA RID: 21706
 		private Coroutine changeTrackCoroutine;
 
-		// Token: 0x04003F7F RID: 16255
+		// Token: 0x040054CB RID: 21707
 		private BossRoomController m_currentBossRoomController;
 
-		// Token: 0x04003F80 RID: 16256
+		// Token: 0x040054CC RID: 21708
 		private static bool m_isPlayingOverride;
 
-		// Token: 0x04003F81 RID: 16257
+		// Token: 0x040054CD RID: 21709
 		private static SongID m_songToPlayInCastle;
 
-		// Token: 0x04003F82 RID: 16258
+		// Token: 0x040054CE RID: 21710
 		private static SongID m_songToPlayInBridge;
 
-		// Token: 0x04003F83 RID: 16259
+		// Token: 0x040054CF RID: 21711
 		private static SongID m_songToPlayInForest;
 
-		// Token: 0x04003F84 RID: 16260
+		// Token: 0x040054D0 RID: 21712
 		private static SongID m_songToPlayInStudy;
 
-		// Token: 0x04003F85 RID: 16261
+		// Token: 0x040054D1 RID: 21713
 		private static SongID m_songToPlayInTower;
 
-		// Token: 0x04003F86 RID: 16262
+		// Token: 0x040054D2 RID: 21714
 		private static SongID m_songToPlayInCave;
 
-		// Token: 0x04003F87 RID: 16263
+		// Token: 0x040054D3 RID: 21715
 		private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 
-		// Token: 0x04003F88 RID: 16264
+		// Token: 0x040054D4 RID: 21716
 		private Action<MonoBehaviour, EventArgs> m_onEnterBiome;
 
-		// Token: 0x04003F89 RID: 16265
+		// Token: 0x040054D5 RID: 21717
 		private Action<MonoBehaviour, EventArgs> m_onPlayerDeath;
 
-		// Token: 0x04003F8A RID: 16266
+		// Token: 0x040054D6 RID: 21718
 		private Action<float> m_onBossTookDamage;
 
-		// Token: 0x04003F8B RID: 16267
+		// Token: 0x040054D7 RID: 21719
 		private Action m_onBossDefeated;
 
-		// Token: 0x04003F8C RID: 16268
+		// Token: 0x040054D8 RID: 21720
 		private Action m_onBossOutroStart;
 	}
 }

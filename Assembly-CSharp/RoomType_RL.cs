@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000768 RID: 1896
+// Token: 0x02000C29 RID: 3113
 public class RoomType_RL
 {
-	// Token: 0x17001644 RID: 5700
-	// (get) Token: 0x06004144 RID: 16708 RVA: 0x000E8144 File Offset: 0x000E6344
+	// Token: 0x17001E40 RID: 7744
+	// (get) Token: 0x06005AC1 RID: 23233 RVA: 0x00031C77 File Offset: 0x0002FE77
 	public static RoomType[] RoomTypeArray
 	{
 		get
@@ -17,8 +17,8 @@ public class RoomType_RL
 		}
 	}
 
-	// Token: 0x17001645 RID: 5701
-	// (get) Token: 0x06004145 RID: 16709 RVA: 0x000E816B File Offset: 0x000E636B
+	// Token: 0x17001E41 RID: 7745
+	// (get) Token: 0x06005AC2 RID: 23234 RVA: 0x00031C9E File Offset: 0x0002FE9E
 	public static SpecialRoomType[] SpecialRoomTypeArray
 	{
 		get
@@ -31,9 +31,9 @@ public class RoomType_RL
 		}
 	}
 
-	// Token: 0x04003653 RID: 13907
+	// Token: 0x04004903 RID: 18691
 	private static SpecialRoomType[] m_specialRoomTypeArray;
 
-	// Token: 0x04003654 RID: 13908
+	// Token: 0x04004904 RID: 18692
 	private static RoomType[] m_roomTypeArray;
 }

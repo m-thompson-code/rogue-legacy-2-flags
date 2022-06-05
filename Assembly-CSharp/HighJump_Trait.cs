@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000345 RID: 837
+// Token: 0x020005A7 RID: 1447
 public class HighJump_Trait : BaseTrait
 {
-	// Token: 0x17000DC7 RID: 3527
-	// (get) Token: 0x0600202D RID: 8237 RVA: 0x000664B5 File Offset: 0x000646B5
+	// Token: 0x17001216 RID: 4630
+	// (get) Token: 0x06002D60 RID: 11616 RVA: 0x00017A47 File Offset: 0x00015C47
 	public override TraitType TraitType
 	{
 		get
@@ -14,7 +14,7 @@ public class HighJump_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x0600202E RID: 8238 RVA: 0x000664BC File Offset: 0x000646BC
+	// Token: 0x06002D61 RID: 11617 RVA: 0x00019088 File Offset: 0x00017288
 	private IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -25,7 +25,7 @@ public class HighJump_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x0600202F RID: 8239 RVA: 0x000664CB File Offset: 0x000646CB
+	// Token: 0x06002D62 RID: 11618 RVA: 0x00019097 File Offset: 0x00017297
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)
@@ -34,6 +34,6 @@ public class HighJump_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x04001C53 RID: 7251
+	// Token: 0x040025BE RID: 9662
 	private float m_jumpHeightMultiplier = 1.5f;
 }

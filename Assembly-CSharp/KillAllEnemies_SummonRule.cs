@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000520 RID: 1312
+// Token: 0x02000899 RID: 2201
 [Serializable]
 public class KillAllEnemies_SummonRule : BaseSummonRule
 {
-	// Token: 0x170011E5 RID: 4581
-	// (get) Token: 0x06003084 RID: 12420 RVA: 0x000A5D0E File Offset: 0x000A3F0E
+	// Token: 0x17001804 RID: 6148
+	// (get) Token: 0x0600435E RID: 17246 RVA: 0x000253B7 File Offset: 0x000235B7
 	public override SummonRuleType RuleType
 	{
 		get
@@ -16,8 +16,8 @@ public class KillAllEnemies_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011E6 RID: 4582
-	// (get) Token: 0x06003085 RID: 12421 RVA: 0x000A5D15 File Offset: 0x000A3F15
+	// Token: 0x17001805 RID: 6149
+	// (get) Token: 0x0600435F RID: 17247 RVA: 0x000253BE File Offset: 0x000235BE
 	public override Color BoxColor
 	{
 		get
@@ -26,8 +26,8 @@ public class KillAllEnemies_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011E7 RID: 4583
-	// (get) Token: 0x06003086 RID: 12422 RVA: 0x000A5D1C File Offset: 0x000A3F1C
+	// Token: 0x17001806 RID: 6150
+	// (get) Token: 0x06004360 RID: 17248 RVA: 0x000253C5 File Offset: 0x000235C5
 	public override string RuleLabel
 	{
 		get
@@ -36,7 +36,7 @@ public class KillAllEnemies_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x06003087 RID: 12423 RVA: 0x000A5D23 File Offset: 0x000A3F23
+	// Token: 0x06004361 RID: 17249 RVA: 0x000253CC File Offset: 0x000235CC
 	public override IEnumerator RunSummonRule()
 	{
 		if (this.m_killAllNonSummonedEnemies)
@@ -51,11 +51,11 @@ public class KillAllEnemies_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x04002687 RID: 9863
+	// Token: 0x0400347F RID: 13439
 	[SerializeField]
 	private bool m_killAllNonSummonedEnemies = true;
 
-	// Token: 0x04002688 RID: 9864
+	// Token: 0x04003480 RID: 13440
 	[SerializeField]
 	private bool m_killAllSummonedEnemies = true;
 }

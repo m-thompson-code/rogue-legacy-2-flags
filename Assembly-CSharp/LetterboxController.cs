@@ -2,10 +2,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x02000215 RID: 533
+// Token: 0x020003C8 RID: 968
 public class LetterboxController : MonoBehaviour
 {
-	// Token: 0x0600163F RID: 5695 RVA: 0x0004572A File Offset: 0x0004392A
+	// Token: 0x06001FDB RID: 8155 RVA: 0x00010D67 File Offset: 0x0000EF67
 	private void Awake()
 	{
 		this.SetPillarBoxesEnabled(false, -1f);
@@ -14,13 +14,13 @@ public class LetterboxController : MonoBehaviour
 		this.m_onAspectRatioChanged = new Action<MonoBehaviour, EventArgs>(this.OnAspectRatioChanged);
 	}
 
-	// Token: 0x06001640 RID: 5696 RVA: 0x00045767 File Offset: 0x00043967
+	// Token: 0x06001FDC RID: 8156 RVA: 0x00010DA4 File Offset: 0x0000EFA4
 	private void OnDestroy()
 	{
 		SceneManager.sceneLoaded -= this.OnSceneLoaded;
 	}
 
-	// Token: 0x06001641 RID: 5697 RVA: 0x0004577A File Offset: 0x0004397A
+	// Token: 0x06001FDD RID: 8157 RVA: 0x00010DB7 File Offset: 0x0000EFB7
 	private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
 		if (AspectRatioManager.Disable_16_9_Aspect)
@@ -30,19 +30,19 @@ public class LetterboxController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001642 RID: 5698 RVA: 0x0004579B File Offset: 0x0004399B
+	// Token: 0x06001FDE RID: 8158 RVA: 0x00010DD8 File Offset: 0x0000EFD8
 	private void OnEnable()
 	{
 		Messenger<SceneMessenger, SceneEvent>.AddListener(SceneEvent.AspectRatioChanged, this.m_onAspectRatioChanged);
 	}
 
-	// Token: 0x06001643 RID: 5699 RVA: 0x000457A9 File Offset: 0x000439A9
+	// Token: 0x06001FDF RID: 8159 RVA: 0x00010DE6 File Offset: 0x0000EFE6
 	private void OnDisable()
 	{
 		Messenger<SceneMessenger, SceneEvent>.RemoveListener(SceneEvent.AspectRatioChanged, this.m_onAspectRatioChanged);
 	}
 
-	// Token: 0x06001644 RID: 5700 RVA: 0x000457B8 File Offset: 0x000439B8
+	// Token: 0x06001FE0 RID: 8160 RVA: 0x000A3DAC File Offset: 0x000A1FAC
 	private void OnAspectRatioChanged(object sender, EventArgs args)
 	{
 		this.SetLetterBoxesEnabled(false, -1f);
@@ -62,7 +62,7 @@ public class LetterboxController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001645 RID: 5701 RVA: 0x00045814 File Offset: 0x00043A14
+	// Token: 0x06001FE1 RID: 8161 RVA: 0x000A3E08 File Offset: 0x000A2008
 	private void SetPillarBoxesEnabled(bool enable, float aspectRatio = -1f)
 	{
 		if (aspectRatio != -1f)
@@ -86,7 +86,7 @@ public class LetterboxController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001646 RID: 5702 RVA: 0x000458EC File Offset: 0x00043AEC
+	// Token: 0x06001FE2 RID: 8162 RVA: 0x000A3EE0 File Offset: 0x000A20E0
 	private void SetLetterBoxesEnabled(bool enable, float aspectRatio = -1f)
 	{
 		if (aspectRatio != -1f)
@@ -110,22 +110,22 @@ public class LetterboxController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400157F RID: 5503
+	// Token: 0x04001C82 RID: 7298
 	[SerializeField]
 	private RectTransform m_leftPillarBox;
 
-	// Token: 0x04001580 RID: 5504
+	// Token: 0x04001C83 RID: 7299
 	[SerializeField]
 	private RectTransform m_rightPillarBox;
 
-	// Token: 0x04001581 RID: 5505
+	// Token: 0x04001C84 RID: 7300
 	[SerializeField]
 	private RectTransform m_topLetterBox;
 
-	// Token: 0x04001582 RID: 5506
+	// Token: 0x04001C85 RID: 7301
 	[SerializeField]
 	private RectTransform m_bottomLetterBox;
 
-	// Token: 0x04001583 RID: 5507
+	// Token: 0x04001C86 RID: 7302
 	private Action<MonoBehaviour, EventArgs> m_onAspectRatioChanged;
 }

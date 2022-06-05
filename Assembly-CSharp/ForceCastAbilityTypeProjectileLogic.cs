@@ -2,16 +2,16 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200049E RID: 1182
+// Token: 0x020007A4 RID: 1956
 public class ForceCastAbilityTypeProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B4C RID: 11084 RVA: 0x00092E08 File Offset: 0x00091008
+	// Token: 0x06003BA1 RID: 15265 RVA: 0x00020C99 File Offset: 0x0001EE99
 	private void OnEnable()
 	{
 		base.StartCoroutine(this.SetCastAbilityType());
 	}
 
-	// Token: 0x06002B4D RID: 11085 RVA: 0x00092E17 File Offset: 0x00091017
+	// Token: 0x06003BA2 RID: 15266 RVA: 0x00020CA8 File Offset: 0x0001EEA8
 	private IEnumerator SetCastAbilityType()
 	{
 		yield return null;
@@ -19,7 +19,7 @@ public class ForceCastAbilityTypeProjectileLogic : BaseProjectileLogic
 		yield break;
 	}
 
-	// Token: 0x0400233E RID: 9022
+	// Token: 0x04002F5C RID: 12124
 	[SerializeField]
 	private CastAbilityType m_forcedCastAbilityType;
 }

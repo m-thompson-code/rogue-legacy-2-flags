@@ -10,11 +10,11 @@ using UnityEngine.UI;
 
 namespace RL_Windows
 {
-	// Token: 0x020008BA RID: 2234
+	// Token: 0x02000DF4 RID: 3572
 	public class PauseWindowController : WindowController, IAudioEventEmitter, ILocalizable
 	{
-		// Token: 0x170017DA RID: 6106
-		// (get) Token: 0x060048E8 RID: 18664 RVA: 0x00106277 File Offset: 0x00104477
+		// Token: 0x17002062 RID: 8290
+		// (get) Token: 0x0600647A RID: 25722 RVA: 0x00037782 File Offset: 0x00035982
 		public bool QuestInsightFound
 		{
 			get
@@ -23,8 +23,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017DB RID: 6107
-		// (get) Token: 0x060048E9 RID: 18665 RVA: 0x0010627F File Offset: 0x0010447F
+		// Token: 0x17002063 RID: 8291
+		// (get) Token: 0x0600647B RID: 25723 RVA: 0x0003778A File Offset: 0x0003598A
 		public bool AreControlsEnabled
 		{
 			get
@@ -33,8 +33,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017DC RID: 6108
-		// (get) Token: 0x060048EA RID: 18666 RVA: 0x00106287 File Offset: 0x00104487
+		// Token: 0x17002064 RID: 8292
+		// (get) Token: 0x0600647C RID: 25724 RVA: 0x0002557A File Offset: 0x0002377A
 		public override int SortOrderOverride
 		{
 			get
@@ -43,8 +43,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017DD RID: 6109
-		// (get) Token: 0x060048EB RID: 18667 RVA: 0x0010628E File Offset: 0x0010448E
+		// Token: 0x17002065 RID: 8293
+		// (get) Token: 0x0600647D RID: 25725 RVA: 0x00004A8D File Offset: 0x00002C8D
 		public override WindowID ID
 		{
 			get
@@ -53,8 +53,8 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x170017DE RID: 6110
-		// (get) Token: 0x060048EC RID: 18668 RVA: 0x00106291 File Offset: 0x00104491
+		// Token: 0x17002066 RID: 8294
+		// (get) Token: 0x0600647E RID: 25726 RVA: 0x00009A7B File Offset: 0x00007C7B
 		public string Description
 		{
 			get
@@ -63,7 +63,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048ED RID: 18669 RVA: 0x0010629C File Offset: 0x0010449C
+		// Token: 0x0600647F RID: 25727 RVA: 0x00175418 File Offset: 0x00173618
 		public void SetStartingSubWindow(WindowID id)
 		{
 			for (int i = 0; i < this.m_pauseTabArray.Length; i++)
@@ -76,7 +76,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048EE RID: 18670 RVA: 0x001062D4 File Offset: 0x001044D4
+		// Token: 0x06006480 RID: 25728 RVA: 0x00175450 File Offset: 0x00173650
 		private int GetTabIndex(PauseTabButton tabButton)
 		{
 			for (int i = 0; i < this.m_pauseTabArray.Length; i++)
@@ -89,7 +89,7 @@ namespace RL_Windows
 			return -1;
 		}
 
-		// Token: 0x060048EF RID: 18671 RVA: 0x00106308 File Offset: 0x00104508
+		// Token: 0x06006481 RID: 25729 RVA: 0x00175484 File Offset: 0x00173684
 		private void Awake()
 		{
 			this.m_flapText = this.m_flapRect.GetComponentInChildren<TMP_Text>();
@@ -99,13 +99,13 @@ namespace RL_Windows
 			this.m_onWindowsRBPressed = new Action<InputActionEventData>(this.OnWindowsRBPressed);
 		}
 
-		// Token: 0x060048F0 RID: 18672 RVA: 0x0010636F File Offset: 0x0010456F
+		// Token: 0x06006482 RID: 25730 RVA: 0x00037792 File Offset: 0x00035992
 		public void EnableControls(bool enable)
 		{
 			this.m_controlsEnabled = enable;
 		}
 
-		// Token: 0x060048F1 RID: 18673 RVA: 0x00106378 File Offset: 0x00104578
+		// Token: 0x06006483 RID: 25731 RVA: 0x001754EC File Offset: 0x001736EC
 		public override void Initialize()
 		{
 			base.Initialize();
@@ -118,7 +118,7 @@ namespace RL_Windows
 			this.SetStartingSubWindow(WindowID.Options);
 		}
 
-		// Token: 0x060048F2 RID: 18674 RVA: 0x001063DF File Offset: 0x001045DF
+		// Token: 0x06006484 RID: 25732 RVA: 0x0003779B File Offset: 0x0003599B
 		public void EnableSnapshotEmitter(bool enable)
 		{
 			if (enable)
@@ -129,7 +129,7 @@ namespace RL_Windows
 			this.m_snapshotEventEmitter.Stop();
 		}
 
-		// Token: 0x060048F3 RID: 18675 RVA: 0x001063FC File Offset: 0x001045FC
+		// Token: 0x06006485 RID: 25733 RVA: 0x00175554 File Offset: 0x00173754
 		protected override void OnOpen()
 		{
 			Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -154,7 +154,7 @@ namespace RL_Windows
 			base.StartCoroutine(this.RunOpenAnimation());
 		}
 
-		// Token: 0x060048F4 RID: 18676 RVA: 0x00106491 File Offset: 0x00104691
+		// Token: 0x06006486 RID: 25734 RVA: 0x000377B7 File Offset: 0x000359B7
 		private IEnumerator RunOpenAnimation()
 		{
 			RewiredMapController.SetCurrentMapEnabled(false);
@@ -175,7 +175,7 @@ namespace RL_Windows
 			yield break;
 		}
 
-		// Token: 0x060048F5 RID: 18677 RVA: 0x001064A0 File Offset: 0x001046A0
+		// Token: 0x06006487 RID: 25735 RVA: 0x001755EC File Offset: 0x001737EC
 		protected override void OnClose()
 		{
 			Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -187,7 +187,7 @@ namespace RL_Windows
 			Messenger<UIMessenger, UIEvent>.Broadcast(UIEvent.PauseWindow_Closed, this, null);
 		}
 
-		// Token: 0x060048F6 RID: 18678 RVA: 0x001064F0 File Offset: 0x001046F0
+		// Token: 0x06006488 RID: 25736 RVA: 0x0017563C File Offset: 0x0017383C
 		private void AddInputListeners()
 		{
 			if (ReInput.isReady)
@@ -199,7 +199,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048F7 RID: 18679 RVA: 0x00106564 File Offset: 0x00104764
+		// Token: 0x06006489 RID: 25737 RVA: 0x001756B0 File Offset: 0x001738B0
 		private void RemoveInputListeners()
 		{
 			if (ReInput.isReady)
@@ -211,7 +211,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048F8 RID: 18680 RVA: 0x001065D8 File Offset: 0x001047D8
+		// Token: 0x0600648A RID: 25738 RVA: 0x000377C6 File Offset: 0x000359C6
 		private void OnWindowsStartPressed(InputActionEventData obj)
 		{
 			if (this.m_controlsEnabled)
@@ -220,23 +220,23 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048F9 RID: 18681 RVA: 0x001065E8 File Offset: 0x001047E8
+		// Token: 0x0600648B RID: 25739 RVA: 0x000377D6 File Offset: 0x000359D6
 		private void ClosePauseMenu()
 		{
 			WindowManager.CloseAllOpenWindows();
 		}
 
-		// Token: 0x060048FA RID: 18682 RVA: 0x001065EF File Offset: 0x001047EF
+		// Token: 0x0600648C RID: 25740 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected override void OnFocus()
 		{
 		}
 
-		// Token: 0x060048FB RID: 18683 RVA: 0x001065F1 File Offset: 0x001047F1
+		// Token: 0x0600648D RID: 25741 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected override void OnLostFocus()
 		{
 		}
 
-		// Token: 0x060048FC RID: 18684 RVA: 0x001065F3 File Offset: 0x001047F3
+		// Token: 0x0600648E RID: 25742 RVA: 0x000377DD File Offset: 0x000359DD
 		private void OnWindowsLBPressed(InputActionEventData obj)
 		{
 			if (WindowManager.GetIsWindowOpen(WindowID.ConfirmMenu) || WindowManager.GetIsWindowOpen(WindowID.ConfirmMenuBig))
@@ -249,7 +249,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048FD RID: 18685 RVA: 0x00106616 File Offset: 0x00104816
+		// Token: 0x0600648F RID: 25743 RVA: 0x00037800 File Offset: 0x00035A00
 		private void OnWindowsRBPressed(InputActionEventData obj)
 		{
 			if (WindowManager.GetIsWindowOpen(WindowID.ConfirmMenu) || WindowManager.GetIsWindowOpen(WindowID.ConfirmMenuBig))
@@ -262,7 +262,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x060048FE RID: 18686 RVA: 0x0010663C File Offset: 0x0010483C
+		// Token: 0x06006490 RID: 25744 RVA: 0x00175724 File Offset: 0x00173924
 		public void SelectLeftTab()
 		{
 			this.m_previousTabIndex = this.m_selectedTabIndex;
@@ -282,7 +282,7 @@ namespace RL_Windows
 			this.UpdateSelectedTab(true);
 		}
 
-		// Token: 0x060048FF RID: 18687 RVA: 0x001066CC File Offset: 0x001048CC
+		// Token: 0x06006491 RID: 25745 RVA: 0x001757B4 File Offset: 0x001739B4
 		public void SelectRightTab()
 		{
 			this.m_previousTabIndex = this.m_selectedTabIndex;
@@ -302,7 +302,7 @@ namespace RL_Windows
 			this.UpdateSelectedTab(true);
 		}
 
-		// Token: 0x06004900 RID: 18688 RVA: 0x00106762 File Offset: 0x00104962
+		// Token: 0x06006492 RID: 25746 RVA: 0x00037823 File Offset: 0x00035A23
 		private void SetSelectedTab(PauseTabButton tabButton)
 		{
 			this.m_previousTabIndex = this.m_selectedTabIndex;
@@ -310,7 +310,7 @@ namespace RL_Windows
 			this.UpdateSelectedTab(true);
 		}
 
-		// Token: 0x06004901 RID: 18689 RVA: 0x00106784 File Offset: 0x00104984
+		// Token: 0x06006493 RID: 25747 RVA: 0x0017584C File Offset: 0x00173A4C
 		public void SetSelectedTab(WindowID tabID)
 		{
 			if (this.m_selectTabEvent != null)
@@ -330,7 +330,7 @@ namespace RL_Windows
 			this.SetSelectedTab(selectedTab);
 		}
 
-		// Token: 0x06004902 RID: 18690 RVA: 0x001067D8 File Offset: 0x001049D8
+		// Token: 0x06006494 RID: 25748 RVA: 0x001758A0 File Offset: 0x00173AA0
 		private void UpdateFlap()
 		{
 			PauseTabButton pauseTabButton = this.m_pauseTabArray[this.m_selectedTabIndex];
@@ -340,7 +340,7 @@ namespace RL_Windows
 			this.m_flapText.text = pauseTabButton.GetComponentInChildren<TMP_Text>().text;
 		}
 
-		// Token: 0x06004903 RID: 18691 RVA: 0x00106838 File Offset: 0x00104A38
+		// Token: 0x06006495 RID: 25749 RVA: 0x00175900 File Offset: 0x00173B00
 		private void UpdateSelectedTab(bool enteredFromOtherSubmenu)
 		{
 			PauseTabButton pauseTabButton = this.m_pauseTabArray[this.m_selectedTabIndex];
@@ -367,7 +367,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004904 RID: 18692 RVA: 0x001068C0 File Offset: 0x00104AC0
+		// Token: 0x06006496 RID: 25750 RVA: 0x00175988 File Offset: 0x00173B88
 		private void CheckForQuest()
 		{
 			PauseTabButton pauseTabButton = null;
@@ -399,7 +399,7 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004905 RID: 18693 RVA: 0x00106968 File Offset: 0x00104B68
+		// Token: 0x06006497 RID: 25751 RVA: 0x00175A30 File Offset: 0x00173C30
 		private void OnDestroy()
 		{
 			foreach (PauseTabButton pauseTabButton in this.m_pauseTabArray)
@@ -408,73 +408,73 @@ namespace RL_Windows
 			}
 		}
 
-		// Token: 0x06004906 RID: 18694 RVA: 0x001069AE File Offset: 0x00104BAE
+		// Token: 0x06006498 RID: 25752 RVA: 0x00037845 File Offset: 0x00035A45
 		public void RefreshText(object sender, EventArgs args)
 		{
 			this.UpdateFlap();
 			this.CheckForQuest();
 		}
 
-		// Token: 0x04003D8B RID: 15755
+		// Token: 0x040051F1 RID: 20977
 		public const float BG_FADE_IN_AMOUNT = 0.66667f;
 
-		// Token: 0x04003D8C RID: 15756
+		// Token: 0x040051F2 RID: 20978
 		public const float BG_FADE_IN_DURATION = 0.15f;
 
-		// Token: 0x04003D8D RID: 15757
+		// Token: 0x040051F3 RID: 20979
 		private const WindowID DEFAULT_WINDOW_ID = WindowID.Options;
 
-		// Token: 0x04003D8E RID: 15758
+		// Token: 0x040051F4 RID: 20980
 		[SerializeField]
 		private RectTransform m_menuRectTransform;
 
-		// Token: 0x04003D8F RID: 15759
+		// Token: 0x040051F5 RID: 20981
 		[SerializeField]
 		private RectTransform m_flapRect;
 
-		// Token: 0x04003D90 RID: 15760
+		// Token: 0x040051F6 RID: 20982
 		[SerializeField]
 		private StudioEventEmitter m_snapshotEventEmitter;
 
-		// Token: 0x04003D91 RID: 15761
+		// Token: 0x040051F7 RID: 20983
 		[SerializeField]
 		private UnityEvent m_tabOverEvent;
 
-		// Token: 0x04003D92 RID: 15762
+		// Token: 0x040051F8 RID: 20984
 		[SerializeField]
 		private UnityEvent m_selectTabEvent;
 
-		// Token: 0x04003D93 RID: 15763
+		// Token: 0x040051F9 RID: 20985
 		private PauseTabButton[] m_pauseTabArray;
 
-		// Token: 0x04003D94 RID: 15764
+		// Token: 0x040051FA RID: 20986
 		private TMP_Text m_flapText;
 
-		// Token: 0x04003D95 RID: 15765
+		// Token: 0x040051FB RID: 20987
 		private int m_selectedTabIndex;
 
-		// Token: 0x04003D96 RID: 15766
+		// Token: 0x040051FC RID: 20988
 		private int m_previousTabIndex;
 
-		// Token: 0x04003D97 RID: 15767
+		// Token: 0x040051FD RID: 20989
 		private bool m_rectTransformUpdated;
 
-		// Token: 0x04003D98 RID: 15768
+		// Token: 0x040051FE RID: 20990
 		private bool m_controlsEnabled = true;
 
-		// Token: 0x04003D99 RID: 15769
+		// Token: 0x040051FF RID: 20991
 		private bool m_insightFound;
 
-		// Token: 0x04003D9A RID: 15770
+		// Token: 0x04005200 RID: 20992
 		private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-		// Token: 0x04003D9B RID: 15771
+		// Token: 0x04005201 RID: 20993
 		private Action<InputActionEventData> m_onWindowsStartPressed;
 
-		// Token: 0x04003D9C RID: 15772
+		// Token: 0x04005202 RID: 20994
 		private Action<InputActionEventData> m_onWindowsLBPressed;
 
-		// Token: 0x04003D9D RID: 15773
+		// Token: 0x04005203 RID: 20995
 		private Action<InputActionEventData> m_onWindowsRBPressed;
 	}
 }

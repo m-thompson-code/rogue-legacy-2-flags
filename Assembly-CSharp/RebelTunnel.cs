@@ -3,17 +3,17 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x0200056B RID: 1387
+// Token: 0x0200093C RID: 2364
 public class RebelTunnel : Tunnel
 {
-	// Token: 0x060032C3 RID: 12995 RVA: 0x000ABC8D File Offset: 0x000A9E8D
+	// Token: 0x0600479E RID: 18334 RVA: 0x000273DF File Offset: 0x000255DF
 	protected override void Awake()
 	{
 		this.m_enterTunnelAfterDialogue = new Action(this.EnterTunnelAfterDialogue);
 		base.Awake();
 	}
 
-	// Token: 0x060032C4 RID: 12996 RVA: 0x000ABCA8 File Offset: 0x000A9EA8
+	// Token: 0x0600479F RID: 18335 RVA: 0x0011659C File Offset: 0x0011479C
 	protected override void OnEnable()
 	{
 		bool value = SaveManager.PlayerSaveData.GetHeirloomLevel(HeirloomType.RebelKey) > 0 && SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.Rebel_Door_Opened);
@@ -21,7 +21,7 @@ public class RebelTunnel : Tunnel
 		base.OnEnable();
 	}
 
-	// Token: 0x060032C5 RID: 12997 RVA: 0x000ABCF0 File Offset: 0x000A9EF0
+	// Token: 0x060047A0 RID: 18336 RVA: 0x001165E4 File Offset: 0x001147E4
 	protected override void OnPlayerInteractedWithTunnel(GameObject otherObj)
 	{
 		if (SaveManager.PlayerSaveData.GetHeirloomLevel(HeirloomType.RebelKey) <= 0)
@@ -45,12 +45,12 @@ public class RebelTunnel : Tunnel
 		base.OnPlayerInteractedWithTunnel(null);
 	}
 
-	// Token: 0x060032C6 RID: 12998 RVA: 0x000ABDCE File Offset: 0x000A9FCE
+	// Token: 0x060047A1 RID: 18337 RVA: 0x000273F9 File Offset: 0x000255F9
 	private void EnterTunnelAfterDialogue()
 	{
 		base.OnPlayerInteractedWithTunnel(null);
 	}
 
-	// Token: 0x040027B2 RID: 10162
+	// Token: 0x040036E3 RID: 14051
 	private Action m_enterTunnelAfterDialogue;
 }

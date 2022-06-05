@@ -2,19 +2,19 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004CA RID: 1226
+// Token: 0x020007F1 RID: 2033
 public abstract class SpecialPlatform : MonoBehaviour, IPlayHitEffect
 {
-	// Token: 0x06002D99 RID: 11673
+	// Token: 0x06003E9F RID: 16031
 	public abstract void SetState(StateID state);
 
-	// Token: 0x1700114E RID: 4430
-	// (get) Token: 0x06002D9A RID: 11674 RVA: 0x0009A1E9 File Offset: 0x000983E9
-	// (set) Token: 0x06002D9B RID: 11675 RVA: 0x0009A1F1 File Offset: 0x000983F1
+	// Token: 0x170016D3 RID: 5843
+	// (get) Token: 0x06003EA0 RID: 16032 RVA: 0x00022A1E File Offset: 0x00020C1E
+	// (set) Token: 0x06003EA1 RID: 16033 RVA: 0x00022A26 File Offset: 0x00020C26
 	public float Width { get; set; }
 
-	// Token: 0x1700114F RID: 4431
-	// (get) Token: 0x06002D9C RID: 11676 RVA: 0x0009A1FA File Offset: 0x000983FA
+	// Token: 0x170016D4 RID: 5844
+	// (get) Token: 0x06003EA2 RID: 16034 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public virtual bool PlayDirectionalHitEffect
 	{
 		get
@@ -23,8 +23,8 @@ public abstract class SpecialPlatform : MonoBehaviour, IPlayHitEffect
 		}
 	}
 
-	// Token: 0x17001150 RID: 4432
-	// (get) Token: 0x06002D9D RID: 11677 RVA: 0x0009A1FD File Offset: 0x000983FD
+	// Token: 0x170016D5 RID: 5845
+	// (get) Token: 0x06003EA3 RID: 16035 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public virtual bool PlayHitEffect
 	{
 		get
@@ -33,8 +33,8 @@ public abstract class SpecialPlatform : MonoBehaviour, IPlayHitEffect
 		}
 	}
 
-	// Token: 0x17001151 RID: 4433
-	// (get) Token: 0x06002D9E RID: 11678 RVA: 0x0009A200 File Offset: 0x00098400
+	// Token: 0x170016D6 RID: 5846
+	// (get) Token: 0x06003EA4 RID: 16036 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public virtual string EffectNameOverride
 	{
 		get
@@ -43,13 +43,13 @@ public abstract class SpecialPlatform : MonoBehaviour, IPlayHitEffect
 		}
 	}
 
-	// Token: 0x06002D9F RID: 11679 RVA: 0x0009A203 File Offset: 0x00098403
+	// Token: 0x06003EA5 RID: 16037 RVA: 0x00022A2F File Offset: 0x00020C2F
 	protected virtual void Awake()
 	{
 		this.m_hbController = base.GetComponentInChildren<IHitboxController>();
 	}
 
-	// Token: 0x06002DA0 RID: 11680 RVA: 0x0009A211 File Offset: 0x00098411
+	// Token: 0x06003EA6 RID: 16038 RVA: 0x00022A3D File Offset: 0x00020C3D
 	protected virtual IEnumerator Start()
 	{
 		if (!this.m_hbController.IsNativeNull())
@@ -67,6 +67,6 @@ public abstract class SpecialPlatform : MonoBehaviour, IPlayHitEffect
 		yield break;
 	}
 
-	// Token: 0x0400248B RID: 9355
+	// Token: 0x04003125 RID: 12581
 	protected IHitboxController m_hbController;
 }

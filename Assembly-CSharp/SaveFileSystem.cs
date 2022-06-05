@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-// Token: 0x0200080E RID: 2062
+// Token: 0x02000CD9 RID: 3289
 public static class SaveFileSystem
 {
-	// Token: 0x0600442C RID: 17452 RVA: 0x000F1486 File Offset: 0x000EF686
+	// Token: 0x06005DBD RID: 23997 RVA: 0x0003397F File Offset: 0x00031B7F
 	public static void Initialize()
 	{
 		SaveFileSystem.m_saveFileSystem = new SaveFileSystem.PCSaveFileSystem();
@@ -17,8 +17,8 @@ public static class SaveFileSystem
 		};
 	}
 
-	// Token: 0x170016F4 RID: 5876
-	// (get) Token: 0x0600442D RID: 17453 RVA: 0x000F14B3 File Offset: 0x000EF6B3
+	// Token: 0x17001EF4 RID: 7924
+	// (get) Token: 0x06005DBE RID: 23998 RVA: 0x000339AC File Offset: 0x00031BAC
 	public static string PersistentDataPath
 	{
 		get
@@ -27,8 +27,8 @@ public static class SaveFileSystem
 		}
 	}
 
-	// Token: 0x170016F5 RID: 5877
-	// (get) Token: 0x0600442E RID: 17454 RVA: 0x000F14BF File Offset: 0x000EF6BF
+	// Token: 0x17001EF5 RID: 7925
+	// (get) Token: 0x06005DBF RID: 23999 RVA: 0x000339B8 File Offset: 0x00031BB8
 	public static string BackupFolderName
 	{
 		get
@@ -37,8 +37,8 @@ public static class SaveFileSystem
 		}
 	}
 
-	// Token: 0x170016F6 RID: 5878
-	// (get) Token: 0x0600442F RID: 17455 RVA: 0x000F14CB File Offset: 0x000EF6CB
+	// Token: 0x17001EF6 RID: 7926
+	// (get) Token: 0x06005DC0 RID: 24000 RVA: 0x000339C4 File Offset: 0x00031BC4
 	public static bool IsSaving
 	{
 		get
@@ -47,43 +47,43 @@ public static class SaveFileSystem
 		}
 	}
 
-	// Token: 0x06004430 RID: 17456 RVA: 0x000F14D5 File Offset: 0x000EF6D5
+	// Token: 0x06005DC1 RID: 24001 RVA: 0x000339CE File Offset: 0x00031BCE
 	public static void MountSaveDirectory()
 	{
 		SaveFileSystem.m_saveFileSystem.MountSaveDirectory();
 	}
 
-	// Token: 0x06004431 RID: 17457 RVA: 0x000F14E1 File Offset: 0x000EF6E1
+	// Token: 0x06005DC2 RID: 24002 RVA: 0x000339DA File Offset: 0x00031BDA
 	public static bool DirectoryExists(string path)
 	{
 		return SaveFileSystem.m_saveFileSystem.DirectoryExists(path);
 	}
 
-	// Token: 0x06004432 RID: 17458 RVA: 0x000F14EE File Offset: 0x000EF6EE
+	// Token: 0x06005DC3 RID: 24003 RVA: 0x000339E7 File Offset: 0x00031BE7
 	public static void CreateDirectory(string path)
 	{
 		SaveFileSystem.m_saveFileSystem.CreateDirectory(path);
 	}
 
-	// Token: 0x06004433 RID: 17459 RVA: 0x000F14FB File Offset: 0x000EF6FB
+	// Token: 0x06005DC4 RID: 24004 RVA: 0x000339F4 File Offset: 0x00031BF4
 	public static List<string> GetBackupFilesInDirectory(string path)
 	{
 		return SaveFileSystem.m_saveFileSystem.GetBackupFilesInDirectory(path);
 	}
 
-	// Token: 0x06004434 RID: 17460 RVA: 0x000F1508 File Offset: 0x000EF708
+	// Token: 0x06005DC5 RID: 24005 RVA: 0x00033A01 File Offset: 0x00031C01
 	public static bool FileExists(string path)
 	{
 		return SaveFileSystem.m_saveFileSystem.FileExists(path);
 	}
 
-	// Token: 0x06004435 RID: 17461 RVA: 0x000F1515 File Offset: 0x000EF715
+	// Token: 0x06005DC6 RID: 24006 RVA: 0x00033A0E File Offset: 0x00031C0E
 	public static byte[] ReadAllBytes(string path)
 	{
 		return SaveFileSystem.m_saveFileSystem.ReadAllBytes(path);
 	}
 
-	// Token: 0x06004436 RID: 17462 RVA: 0x000F1524 File Offset: 0x000EF724
+	// Token: 0x06005DC7 RID: 24007 RVA: 0x0015F02C File Offset: 0x0015D22C
 	public static SaveFileSystem.SaveBatch BeginSaveBatch(int profile)
 	{
 		foreach (SaveFileSystem.SaveBatch saveBatch in SaveFileSystem.m_saveBatchPool)
@@ -100,13 +100,13 @@ public static class SaveFileSystem
 		return saveBatch2;
 	}
 
-	// Token: 0x06004437 RID: 17463 RVA: 0x000F15A0 File Offset: 0x000EF7A0
+	// Token: 0x06005DC8 RID: 24008 RVA: 0x00033A1B File Offset: 0x00031C1B
 	private static void SubmitBatchUpdates(SaveFileSystem.SaveBatch batch)
 	{
 		SaveFileSystem.m_saveFileSystem.SubmitBatchUpdates(batch);
 	}
 
-	// Token: 0x06004438 RID: 17464 RVA: 0x000F15AD File Offset: 0x000EF7AD
+	// Token: 0x06005DC9 RID: 24009 RVA: 0x00033A28 File Offset: 0x00031C28
 	public static void WriteAllBytes(SaveFileSystem.SaveBatch batch, string path, byte[] bytes)
 	{
 		batch.IncrementRefCount();
@@ -114,7 +114,7 @@ public static class SaveFileSystem
 		batch.DecrementRefCount();
 	}
 
-	// Token: 0x06004439 RID: 17465 RVA: 0x000F15C8 File Offset: 0x000EF7C8
+	// Token: 0x06005DCA RID: 24010 RVA: 0x00033A43 File Offset: 0x00031C43
 	public static void DeleteFile(SaveFileSystem.SaveBatch batch, string path)
 	{
 		batch.IncrementRefCount();
@@ -122,22 +122,22 @@ public static class SaveFileSystem
 		batch.DecrementRefCount();
 	}
 
-	// Token: 0x04003A45 RID: 14917
+	// Token: 0x04004D21 RID: 19745
 	public const string SAVE_FILE_EXT = ".rc2dat";
 
-	// Token: 0x04003A46 RID: 14918
+	// Token: 0x04004D22 RID: 19746
 	private static SaveFileSystem.ISaveFileSystem m_saveFileSystem;
 
-	// Token: 0x04003A47 RID: 14919
+	// Token: 0x04004D23 RID: 19747
 	private static List<SaveFileSystem.SaveBatch> m_saveBatchPool;
 
-	// Token: 0x04003A48 RID: 14920
+	// Token: 0x04004D24 RID: 19748
 	private static int m_totalBatchRefCount;
 
-	// Token: 0x02000E3D RID: 3645
+	// Token: 0x02000CDA RID: 3290
 	public struct FileUpdateCommand
 	{
-		// Token: 0x06006BD5 RID: 27605 RVA: 0x00192D45 File Offset: 0x00190F45
+		// Token: 0x06005DCB RID: 24011 RVA: 0x00033A5D File Offset: 0x00031C5D
 		public FileUpdateCommand(int profile, string filename, byte[] bytes)
 		{
 			this.Profile = profile;
@@ -145,30 +145,30 @@ public static class SaveFileSystem
 			this.Bytes = bytes;
 		}
 
-		// Token: 0x04005752 RID: 22354
+		// Token: 0x04004D25 RID: 19749
 		public int Profile;
 
-		// Token: 0x04005753 RID: 22355
+		// Token: 0x04004D26 RID: 19750
 		public string BlobName;
 
-		// Token: 0x04005754 RID: 22356
+		// Token: 0x04004D27 RID: 19751
 		public byte[] Bytes;
 	}
 
-	// Token: 0x02000E3E RID: 3646
+	// Token: 0x02000CDB RID: 3291
 	public class SaveBatch
 	{
-		// Token: 0x1700232B RID: 9003
-		// (get) Token: 0x06006BD6 RID: 27606 RVA: 0x00192D5C File Offset: 0x00190F5C
-		// (set) Token: 0x06006BD7 RID: 27607 RVA: 0x00192D64 File Offset: 0x00190F64
+		// Token: 0x17001EF7 RID: 7927
+		// (get) Token: 0x06005DCC RID: 24012 RVA: 0x00033A74 File Offset: 0x00031C74
+		// (set) Token: 0x06005DCD RID: 24013 RVA: 0x00033A7C File Offset: 0x00031C7C
 		public bool IsAvailable { get; private set; }
 
-		// Token: 0x1700232C RID: 9004
-		// (get) Token: 0x06006BD8 RID: 27608 RVA: 0x00192D6D File Offset: 0x00190F6D
-		// (set) Token: 0x06006BD9 RID: 27609 RVA: 0x00192D75 File Offset: 0x00190F75
+		// Token: 0x17001EF8 RID: 7928
+		// (get) Token: 0x06005DCE RID: 24014 RVA: 0x00033A85 File Offset: 0x00031C85
+		// (set) Token: 0x06005DCF RID: 24015 RVA: 0x00033A8D File Offset: 0x00031C8D
 		public int RefCount { get; private set; }
 
-		// Token: 0x06006BDA RID: 27610 RVA: 0x00192D7E File Offset: 0x00190F7E
+		// Token: 0x06005DD0 RID: 24016 RVA: 0x00033A96 File Offset: 0x00031C96
 		public SaveBatch()
 		{
 			this.m_batchEnded = false;
@@ -179,7 +179,7 @@ public static class SaveFileSystem
 			this.IsAvailable = true;
 		}
 
-		// Token: 0x06006BDB RID: 27611 RVA: 0x00192DB0 File Offset: 0x00190FB0
+		// Token: 0x06005DD1 RID: 24017 RVA: 0x0015F0A8 File Offset: 0x0015D2A8
 		public void Initialize(int profile)
 		{
 			this.m_batchEnded = false;
@@ -194,7 +194,7 @@ public static class SaveFileSystem
 			SaveFileSystem.m_totalBatchRefCount++;
 		}
 
-		// Token: 0x06006BDC RID: 27612 RVA: 0x00192DFF File Offset: 0x00190FFF
+		// Token: 0x06005DD2 RID: 24018 RVA: 0x00033AC8 File Offset: 0x00031CC8
 		public void End()
 		{
 			this.m_batchEnded = true;
@@ -209,7 +209,7 @@ public static class SaveFileSystem
 			}
 		}
 
-		// Token: 0x06006BDD RID: 27613 RVA: 0x00192E34 File Offset: 0x00191034
+		// Token: 0x06005DD3 RID: 24019 RVA: 0x0015F0F8 File Offset: 0x0015D2F8
 		public void IncrementRefCount()
 		{
 			int refCount = this.RefCount;
@@ -218,7 +218,7 @@ public static class SaveFileSystem
 			this.m_didAnyWork = true;
 		}
 
-		// Token: 0x06006BDE RID: 27614 RVA: 0x00192E64 File Offset: 0x00191064
+		// Token: 0x06005DD4 RID: 24020 RVA: 0x0015F128 File Offset: 0x0015D328
 		public void DecrementRefCount()
 		{
 			int refCount = this.RefCount;
@@ -234,63 +234,63 @@ public static class SaveFileSystem
 			}
 		}
 
-		// Token: 0x04005755 RID: 22357
+		// Token: 0x04004D28 RID: 19752
 		private bool m_didAnyWork;
 
-		// Token: 0x04005756 RID: 22358
+		// Token: 0x04004D29 RID: 19753
 		private bool m_batchEnded;
 
-		// Token: 0x04005757 RID: 22359
+		// Token: 0x04004D2A RID: 19754
 		public int Profile;
 
-		// Token: 0x04005758 RID: 22360
+		// Token: 0x04004D2B RID: 19755
 		public List<SaveFileSystem.FileUpdateCommand> CommandList;
 	}
 
-	// Token: 0x02000E3F RID: 3647
+	// Token: 0x02000CDC RID: 3292
 	private interface ISaveFileSystem
 	{
-		// Token: 0x1700232D RID: 9005
-		// (get) Token: 0x06006BDF RID: 27615
+		// Token: 0x17001EF9 RID: 7929
+		// (get) Token: 0x06005DD5 RID: 24021
 		string PersistentDataPath { get; }
 
-		// Token: 0x1700232E RID: 9006
-		// (get) Token: 0x06006BE0 RID: 27616
+		// Token: 0x17001EFA RID: 7930
+		// (get) Token: 0x06005DD6 RID: 24022
 		string BackupFolderName { get; }
 
-		// Token: 0x06006BE1 RID: 27617
+		// Token: 0x06005DD7 RID: 24023
 		void MountSaveDirectory();
 
-		// Token: 0x06006BE2 RID: 27618
+		// Token: 0x06005DD8 RID: 24024
 		bool DirectoryExists(string path);
 
-		// Token: 0x06006BE3 RID: 27619
+		// Token: 0x06005DD9 RID: 24025
 		void CreateDirectory(string path);
 
-		// Token: 0x06006BE4 RID: 27620
+		// Token: 0x06005DDA RID: 24026
 		List<string> GetBackupFilesInDirectory(string directoryPath);
 
-		// Token: 0x06006BE5 RID: 27621
+		// Token: 0x06005DDB RID: 24027
 		bool FileExists(string path);
 
-		// Token: 0x06006BE6 RID: 27622
+		// Token: 0x06005DDC RID: 24028
 		byte[] ReadAllBytes(string path);
 
-		// Token: 0x06006BE7 RID: 27623
+		// Token: 0x06005DDD RID: 24029
 		void WriteAllBytes(SaveFileSystem.SaveBatch batch, string path, byte[] bytes);
 
-		// Token: 0x06006BE8 RID: 27624
+		// Token: 0x06005DDE RID: 24030
 		void DeleteFile(SaveFileSystem.SaveBatch batch, string path);
 
-		// Token: 0x06006BE9 RID: 27625
+		// Token: 0x06005DDF RID: 24031
 		void SubmitBatchUpdates(SaveFileSystem.SaveBatch batch);
 	}
 
-	// Token: 0x02000E40 RID: 3648
+	// Token: 0x02000CDD RID: 3293
 	private class PCSaveFileSystem : SaveFileSystem.ISaveFileSystem
 	{
-		// Token: 0x1700232F RID: 9007
-		// (get) Token: 0x06006BEA RID: 27626 RVA: 0x00192EB2 File Offset: 0x001910B2
+		// Token: 0x17001EFB RID: 7931
+		// (get) Token: 0x06005DE0 RID: 24032 RVA: 0x00033AFA File Offset: 0x00031CFA
 		public string PersistentDataPath
 		{
 			get
@@ -299,8 +299,8 @@ public static class SaveFileSystem
 			}
 		}
 
-		// Token: 0x17002330 RID: 9008
-		// (get) Token: 0x06006BEB RID: 27627 RVA: 0x00192EB9 File Offset: 0x001910B9
+		// Token: 0x17001EFC RID: 7932
+		// (get) Token: 0x06005DE1 RID: 24033 RVA: 0x00033B01 File Offset: 0x00031D01
 		public string BackupFolderName
 		{
 			get
@@ -309,54 +309,54 @@ public static class SaveFileSystem
 			}
 		}
 
-		// Token: 0x06006BEC RID: 27628 RVA: 0x00192EC0 File Offset: 0x001910C0
+		// Token: 0x06005DE2 RID: 24034 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void MountSaveDirectory()
 		{
 		}
 
-		// Token: 0x06006BED RID: 27629 RVA: 0x00192EC2 File Offset: 0x001910C2
+		// Token: 0x06005DE3 RID: 24035 RVA: 0x00033B08 File Offset: 0x00031D08
 		public void CreateDirectory(string path)
 		{
 			Directory.CreateDirectory(path);
 		}
 
-		// Token: 0x06006BEE RID: 27630 RVA: 0x00192ECB File Offset: 0x001910CB
+		// Token: 0x06005DE4 RID: 24036 RVA: 0x00033B11 File Offset: 0x00031D11
 		public bool DirectoryExists(string path)
 		{
 			return Directory.Exists(path);
 		}
 
-		// Token: 0x06006BEF RID: 27631 RVA: 0x00192ED3 File Offset: 0x001910D3
+		// Token: 0x06005DE5 RID: 24037 RVA: 0x00033B19 File Offset: 0x00031D19
 		public List<string> GetBackupFilesInDirectory(string path)
 		{
 			return new List<string>(Directory.GetFiles(path, "*.rc2dat"));
 		}
 
-		// Token: 0x06006BF0 RID: 27632 RVA: 0x00192EE5 File Offset: 0x001910E5
+		// Token: 0x06005DE6 RID: 24038 RVA: 0x00033B2B File Offset: 0x00031D2B
 		public bool FileExists(string path)
 		{
 			return File.Exists(path);
 		}
 
-		// Token: 0x06006BF1 RID: 27633 RVA: 0x00192EED File Offset: 0x001910ED
+		// Token: 0x06005DE7 RID: 24039 RVA: 0x00033B33 File Offset: 0x00031D33
 		public byte[] ReadAllBytes(string path)
 		{
 			return File.ReadAllBytes(path);
 		}
 
-		// Token: 0x06006BF2 RID: 27634 RVA: 0x00192EF5 File Offset: 0x001910F5
+		// Token: 0x06005DE8 RID: 24040 RVA: 0x00033B3B File Offset: 0x00031D3B
 		public void WriteAllBytes(SaveFileSystem.SaveBatch batch, string path, byte[] bytes)
 		{
 			File.WriteAllBytes(path, bytes);
 		}
 
-		// Token: 0x06006BF3 RID: 27635 RVA: 0x00192EFE File Offset: 0x001910FE
+		// Token: 0x06005DE9 RID: 24041 RVA: 0x00033B44 File Offset: 0x00031D44
 		public void DeleteFile(SaveFileSystem.SaveBatch batch, string path)
 		{
 			File.Delete(path);
 		}
 
-		// Token: 0x06006BF4 RID: 27636 RVA: 0x00192F06 File Offset: 0x00191106
+		// Token: 0x06005DEA RID: 24042 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void SubmitBatchUpdates(SaveFileSystem.SaveBatch batch)
 		{
 		}

@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020003A3 RID: 931
+// Token: 0x02000635 RID: 1589
 public class EnchantressOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntry<EnchantressOmniUIDescriptionEventArgs, EnchantressOmniUIDescriptionBoxEntry.EnchantressOmniUIDescriptionBoxType>
 {
-	// Token: 0x0600229C RID: 8860 RVA: 0x0007089B File Offset: 0x0006EA9B
+	// Token: 0x060030B4 RID: 12468 RVA: 0x0001AB72 File Offset: 0x00018D72
 	protected override void DisplayNullDescriptionBox(MonoBehaviour sender)
 	{
 		base.DisplayNullDescriptionBox(sender);
@@ -15,7 +15,7 @@ public class EnchantressOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntr
 		}
 	}
 
-	// Token: 0x0600229D RID: 8861 RVA: 0x000708D0 File Offset: 0x0006EAD0
+	// Token: 0x060030B5 RID: 12469 RVA: 0x000D13DC File Offset: 0x000CF5DC
 	protected override void DisplayDescriptionBox(EnchantressOmniUIDescriptionEventArgs args)
 	{
 		RuneType runeType = args.RuneType;
@@ -57,7 +57,7 @@ public class EnchantressOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntr
 		}
 	}
 
-	// Token: 0x0600229E RID: 8862 RVA: 0x000709B4 File Offset: 0x0006EBB4
+	// Token: 0x060030B6 RID: 12470 RVA: 0x000D14C0 File Offset: 0x000CF6C0
 	private void SetRunesOwnedString(RuneObj runeObj, EnchantressOmniUIDescriptionEventArgs args)
 	{
 		int clampedUpgradeLevel = runeObj.ClampedUpgradeLevel;
@@ -80,7 +80,7 @@ public class EnchantressOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntr
 		this.m_text2.text = text.ToString();
 	}
 
-	// Token: 0x0600229F RID: 8863 RVA: 0x00070AA8 File Offset: 0x0006ECA8
+	// Token: 0x060030B7 RID: 12471 RVA: 0x000D15B4 File Offset: 0x000CF7B4
 	private void SetStatString(RuneObj runeObj, EnchantressOmniUIDescriptionEventArgs args)
 	{
 		string @string = LocalizationManager.GetString(runeObj.RuneData.Controls, false, false);
@@ -112,7 +112,7 @@ public class EnchantressOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntr
 		this.m_text2.text = str + " " + base.ColoredValueString(value2, true, flag, lowerIsBetter, false);
 	}
 
-	// Token: 0x060022A0 RID: 8864 RVA: 0x00070BC0 File Offset: 0x0006EDC0
+	// Token: 0x060030B8 RID: 12472 RVA: 0x000D16CC File Offset: 0x000CF8CC
 	private void SetWeightString(RuneObj runeObj, EnchantressOmniUIDescriptionEventArgs args)
 	{
 		int num = 999;
@@ -143,20 +143,20 @@ public class EnchantressOmniUIDescriptionBoxEntry : BaseOmniUIDescriptionBoxEntr
 		this.m_text2.text = str + " " + base.ColoredValueString((float)num3, true, false, lowerIsBetter, false);
 	}
 
-	// Token: 0x02000C0B RID: 3083
+	// Token: 0x02000636 RID: 1590
 	public enum EnchantressOmniUIDescriptionBoxType
 	{
-		// Token: 0x04004EAE RID: 20142
+		// Token: 0x040027F1 RID: 10225
 		None,
-		// Token: 0x04004EAF RID: 20143
+		// Token: 0x040027F2 RID: 10226
 		Title,
-		// Token: 0x04004EB0 RID: 20144
+		// Token: 0x040027F3 RID: 10227
 		Description,
-		// Token: 0x04004EB1 RID: 20145
+		// Token: 0x040027F4 RID: 10228
 		Stat,
-		// Token: 0x04004EB2 RID: 20146
+		// Token: 0x040027F5 RID: 10229
 		Weight,
-		// Token: 0x04004EB3 RID: 20147
+		// Token: 0x040027F6 RID: 10230
 		RunesOwned
 	}
 }

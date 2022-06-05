@@ -6,15 +6,15 @@ using Rewired;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020007FD RID: 2045
+// Token: 0x02000CC5 RID: 3269
 public static class GlobalTextChangedStaticListener
 {
-	// Token: 0x170016ED RID: 5869
-	// (get) Token: 0x060043DE RID: 17374 RVA: 0x000EFB0D File Offset: 0x000EDD0D
-	// (set) Token: 0x060043DF RID: 17375 RVA: 0x000EFB14 File Offset: 0x000EDD14
+	// Token: 0x17001EEB RID: 7915
+	// (get) Token: 0x06005D67 RID: 23911 RVA: 0x00033638 File Offset: 0x00031838
+	// (set) Token: 0x06005D68 RID: 23912 RVA: 0x0003363F File Offset: 0x0003183F
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x060043E0 RID: 17376 RVA: 0x000EFB1C File Offset: 0x000EDD1C
+	// Token: 0x06005D69 RID: 23913 RVA: 0x0015D908 File Offset: 0x0015BB08
 	public static void Initialize()
 	{
 		if (!Application.isPlaying)
@@ -28,7 +28,7 @@ public static class GlobalTextChangedStaticListener
 		GlobalTextChangedStaticListener.IsInitialized = true;
 	}
 
-	// Token: 0x060043E1 RID: 17377 RVA: 0x000EFB77 File Offset: 0x000EDD77
+	// Token: 0x06005D6A RID: 23914 RVA: 0x00033647 File Offset: 0x00031847
 	public static void AddTextChangedListener(TMP_Text text, ITextChangedObj textGlyph)
 	{
 		if (!GlobalTextChangedStaticListener.IsInitialized)
@@ -41,7 +41,7 @@ public static class GlobalTextChangedStaticListener
 		}
 	}
 
-	// Token: 0x060043E2 RID: 17378 RVA: 0x000EFB9E File Offset: 0x000EDD9E
+	// Token: 0x06005D6B RID: 23915 RVA: 0x0003366E File Offset: 0x0003186E
 	public static void RemoveTextChangedListener(TMP_Text text)
 	{
 		if (GlobalTextChangedStaticListener.m_textChangedListenerTable.ContainsKey(text))
@@ -50,13 +50,13 @@ public static class GlobalTextChangedStaticListener
 		}
 	}
 
-	// Token: 0x060043E3 RID: 17379 RVA: 0x000EFBB9 File Offset: 0x000EDDB9
+	// Token: 0x06005D6C RID: 23916 RVA: 0x00033689 File Offset: 0x00031889
 	public static bool HasTextChangedListener(TMP_Text text)
 	{
 		return GlobalTextChangedStaticListener.m_textChangedListenerTable.ContainsKey(text);
 	}
 
-	// Token: 0x060043E4 RID: 17380 RVA: 0x000EFBC6 File Offset: 0x000EDDC6
+	// Token: 0x06005D6D RID: 23917 RVA: 0x00033696 File Offset: 0x00031896
 	public static void AddControllerChangedListener(ITextChangedObj textGlyph)
 	{
 		if (!GlobalTextChangedStaticListener.IsInitialized)
@@ -66,13 +66,13 @@ public static class GlobalTextChangedStaticListener
 		GlobalTextChangedStaticListener.m_controllerChangedListenerSet.Add(textGlyph);
 	}
 
-	// Token: 0x060043E5 RID: 17381 RVA: 0x000EFBE0 File Offset: 0x000EDDE0
+	// Token: 0x06005D6E RID: 23918 RVA: 0x000336B0 File Offset: 0x000318B0
 	public static void RemoveControllerChangedListener(ITextChangedObj textGlyph)
 	{
 		GlobalTextChangedStaticListener.m_controllerChangedListenerSet.Remove(textGlyph);
 	}
 
-	// Token: 0x060043E6 RID: 17382 RVA: 0x000EFBF0 File Offset: 0x000EDDF0
+	// Token: 0x06005D6F RID: 23919 RVA: 0x0015D964 File Offset: 0x0015BB64
 	private static void OnTextChanged(UnityEngine.Object sender)
 	{
 		if (!Application.isPlaying)
@@ -91,7 +91,7 @@ public static class GlobalTextChangedStaticListener
 		}
 	}
 
-	// Token: 0x060043E7 RID: 17383 RVA: 0x000EFC34 File Offset: 0x000EDE34
+	// Token: 0x06005D70 RID: 23920 RVA: 0x0015D9A8 File Offset: 0x0015BBA8
 	public static void ApplyTurkishCulture(TMP_Text tmpText)
 	{
 		TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(GlobalTextChangedStaticListener.m_onTextChanged);
@@ -127,7 +127,7 @@ public static class GlobalTextChangedStaticListener
 		TMPro_EventManager.TEXT_CHANGED_EVENT.Add(GlobalTextChangedStaticListener.m_onTextChanged);
 	}
 
-	// Token: 0x060043E8 RID: 17384 RVA: 0x000EFD10 File Offset: 0x000EDF10
+	// Token: 0x06005D71 RID: 23921 RVA: 0x0015DA84 File Offset: 0x0015BC84
 	private static void OnControllerChanged(Controller controller)
 	{
 		foreach (ITextChangedObj textChangedObj in GlobalTextChangedStaticListener.m_controllerChangedListenerSet)
@@ -136,7 +136,7 @@ public static class GlobalTextChangedStaticListener
 		}
 	}
 
-	// Token: 0x060043E9 RID: 17385 RVA: 0x000EFD60 File Offset: 0x000EDF60
+	// Token: 0x06005D72 RID: 23922 RVA: 0x0015DAD4 File Offset: 0x0015BCD4
 	public static void Dispose()
 	{
 		GlobalTextChangedStaticListener.m_controllerChangedListenerSet.Clear();
@@ -151,15 +151,15 @@ public static class GlobalTextChangedStaticListener
 		GlobalTextChangedStaticListener.IsInitialized = false;
 	}
 
-	// Token: 0x04003A0F RID: 14863
+	// Token: 0x04004CDB RID: 19675
 	private static Dictionary<UnityEngine.Object, ITextChangedObj> m_textChangedListenerTable = new Dictionary<UnityEngine.Object, ITextChangedObj>();
 
-	// Token: 0x04003A10 RID: 14864
+	// Token: 0x04004CDC RID: 19676
 	private static HashSet<ITextChangedObj> m_controllerChangedListenerSet = new HashSet<ITextChangedObj>();
 
-	// Token: 0x04003A11 RID: 14865
+	// Token: 0x04004CDD RID: 19677
 	private static StringBuilder m_stringHelper;
 
-	// Token: 0x04003A12 RID: 14866
+	// Token: 0x04004CDE RID: 19678
 	private static Action<UnityEngine.Object> m_onTextChanged;
 }

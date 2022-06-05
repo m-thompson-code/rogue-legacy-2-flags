@@ -3,12 +3,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000408 RID: 1032
+// Token: 0x020006BE RID: 1726
 public class BurstEffect : BaseEffect
 {
-	// Token: 0x17000F6E RID: 3950
-	// (get) Token: 0x06002694 RID: 9876 RVA: 0x0007FBB9 File Offset: 0x0007DDB9
-	// (set) Token: 0x06002695 RID: 9877 RVA: 0x0007FBC4 File Offset: 0x0007DDC4
+	// Token: 0x1700142F RID: 5167
+	// (get) Token: 0x0600353D RID: 13629 RVA: 0x0001D392 File Offset: 0x0001B592
+	// (set) Token: 0x0600353E RID: 13630 RVA: 0x000E01EC File Offset: 0x000DE3EC
 	public Transform DestinationOverride
 	{
 		get
@@ -29,9 +29,9 @@ public class BurstEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x17000F6F RID: 3951
-	// (get) Token: 0x06002696 RID: 9878 RVA: 0x0007FC03 File Offset: 0x0007DE03
-	// (set) Token: 0x06002697 RID: 9879 RVA: 0x0007FC0C File Offset: 0x0007DE0C
+	// Token: 0x17001430 RID: 5168
+	// (get) Token: 0x0600353F RID: 13631 RVA: 0x0001D39A File Offset: 0x0001B59A
+	// (set) Token: 0x06003540 RID: 13632 RVA: 0x000E022C File Offset: 0x000DE42C
 	public IMidpointObj DestinationMidpointOverride
 	{
 		get
@@ -52,7 +52,7 @@ public class BurstEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x06002698 RID: 9880 RVA: 0x0007FC4C File Offset: 0x0007DE4C
+	// Token: 0x06003541 RID: 13633 RVA: 0x000E026C File Offset: 0x000DE46C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -65,14 +65,14 @@ public class BurstEffect : BaseEffect
 		this.m_burstDelayYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x06002699 RID: 9881 RVA: 0x0007FCA0 File Offset: 0x0007DEA0
+	// Token: 0x06003542 RID: 13634 RVA: 0x0001D3A2 File Offset: 0x0001B5A2
 	public override void Play(float duration = 0f, EffectStopType stopType = EffectStopType.Gracefully)
 	{
 		base.Play(duration, stopType);
 		base.StartCoroutine(this.PlayBurstCoroutine());
 	}
 
-	// Token: 0x0600269A RID: 9882 RVA: 0x0007FCB7 File Offset: 0x0007DEB7
+	// Token: 0x06003543 RID: 13635 RVA: 0x0001D3B9 File Offset: 0x0001B5B9
 	private IEnumerator PlayBurstCoroutine()
 	{
 		Vector3 spawnPos = base.Source.transform.position;
@@ -109,7 +109,7 @@ public class BurstEffect : BaseEffect
 		yield break;
 	}
 
-	// Token: 0x0600269B RID: 9883 RVA: 0x0007FCC8 File Offset: 0x0007DEC8
+	// Token: 0x06003544 RID: 13636 RVA: 0x000E02C0 File Offset: 0x000DE4C0
 	private bool AllParticlesComplete()
 	{
 		BurstLogic[] particleArray = this.m_particleArray;
@@ -123,7 +123,7 @@ public class BurstEffect : BaseEffect
 		return true;
 	}
 
-	// Token: 0x0600269C RID: 9884 RVA: 0x0007FCFC File Offset: 0x0007DEFC
+	// Token: 0x06003545 RID: 13637 RVA: 0x000E02F4 File Offset: 0x000DE4F4
 	public override void Stop(EffectStopType stopType)
 	{
 		foreach (BurstLogic burstLogic in this.m_particleArray)
@@ -142,31 +142,31 @@ public class BurstEffect : BaseEffect
 		this.PlayComplete();
 	}
 
-	// Token: 0x04002054 RID: 8276
+	// Token: 0x04002B2E RID: 11054
 	[SerializeField]
 	private Vector2 m_burstMinMaxMagnitude;
 
-	// Token: 0x04002055 RID: 8277
+	// Token: 0x04002B2F RID: 11055
 	[SerializeField]
 	private Vector2 m_randDelayBetweenBursts;
 
-	// Token: 0x04002056 RID: 8278
+	// Token: 0x04002B30 RID: 11056
 	[SerializeField]
 	private bool m_moveTowardsImmediately;
 
-	// Token: 0x04002057 RID: 8279
+	// Token: 0x04002B31 RID: 11057
 	[SerializeField]
 	private UnityEvent m_effectCompleteUnityEvent;
 
-	// Token: 0x04002058 RID: 8280
+	// Token: 0x04002B32 RID: 11058
 	private BurstLogic[] m_particleArray;
 
-	// Token: 0x04002059 RID: 8281
+	// Token: 0x04002B33 RID: 11059
 	private WaitRL_Yield m_burstDelayYield;
 
-	// Token: 0x0400205A RID: 8282
+	// Token: 0x04002B34 RID: 11060
 	private Transform m_destinationOverride;
 
-	// Token: 0x0400205B RID: 8283
+	// Token: 0x04002B35 RID: 11061
 	private IMidpointObj m_destinationMidpointOverride;
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x020007EB RID: 2027
+// Token: 0x02000CB1 RID: 3249
 public class SpecialItemDroppedEventArgs : EventArgs
 {
-	// Token: 0x06004388 RID: 17288 RVA: 0x000EC8DF File Offset: 0x000EAADF
+	// Token: 0x06005D11 RID: 23825 RVA: 0x000332F5 File Offset: 0x000314F5
 	public SpecialItemDroppedEventArgs(ISpecialItemDrop specialItemDrop)
 	{
 		this.SpecialItemDrop = specialItemDrop;
 	}
 
-	// Token: 0x06004389 RID: 17289 RVA: 0x000EC8EE File Offset: 0x000EAAEE
+	// Token: 0x06005D12 RID: 23826 RVA: 0x00033304 File Offset: 0x00031504
 	public void Initialize(ISpecialItemDrop specialItemDrop)
 	{
 		this.SpecialItemDrop = specialItemDrop;
 	}
 
-	// Token: 0x170016DB RID: 5851
-	// (get) Token: 0x0600438A RID: 17290 RVA: 0x000EC8F7 File Offset: 0x000EAAF7
-	// (set) Token: 0x0600438B RID: 17291 RVA: 0x000EC8FF File Offset: 0x000EAAFF
+	// Token: 0x17001ED9 RID: 7897
+	// (get) Token: 0x06005D13 RID: 23827 RVA: 0x0003330D File Offset: 0x0003150D
+	// (set) Token: 0x06005D14 RID: 23828 RVA: 0x00033315 File Offset: 0x00031515
 	public ISpecialItemDrop SpecialItemDrop { get; private set; }
 }

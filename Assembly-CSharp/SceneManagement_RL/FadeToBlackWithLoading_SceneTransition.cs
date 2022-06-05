@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace SceneManagement_RL
 {
-	// Token: 0x020008C4 RID: 2244
+	// Token: 0x02000E18 RID: 3608
 	public class FadeToBlackWithLoading_SceneTransition : Transition_V2, ISceneLoadingTransition, ITransition
 	{
-		// Token: 0x170017FB RID: 6139
-		// (get) Token: 0x060049A5 RID: 18853 RVA: 0x00109C37 File Offset: 0x00107E37
+		// Token: 0x170020A9 RID: 8361
+		// (get) Token: 0x060065BC RID: 26044 RVA: 0x00004A8D File Offset: 0x00002C8D
 		public override TransitionID ID
 		{
 			get
@@ -17,7 +17,7 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x060049A6 RID: 18854 RVA: 0x00109C3A File Offset: 0x00107E3A
+		// Token: 0x060065BD RID: 26045 RVA: 0x00038159 File Offset: 0x00036359
 		protected override void Awake()
 		{
 			base.Awake();
@@ -25,7 +25,7 @@ namespace SceneManagement_RL
 			base.gameObject.SetLayerRecursively(LayerMask.NameToLayer("UI"), false);
 		}
 
-		// Token: 0x060049A7 RID: 18855 RVA: 0x00109C6D File Offset: 0x00107E6D
+		// Token: 0x060065BE RID: 26046 RVA: 0x0003818C File Offset: 0x0003638C
 		public IEnumerator TransitionIn()
 		{
 			this.m_loadingIndicatorCanvasGroup.alpha = 0f;
@@ -43,7 +43,7 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x060049A8 RID: 18856 RVA: 0x00109C7C File Offset: 0x00107E7C
+		// Token: 0x060065BF RID: 26047 RVA: 0x0003819B File Offset: 0x0003639B
 		public IEnumerator TransitionOut()
 		{
 			this.m_canvasGroup.alpha = 1f;
@@ -60,13 +60,13 @@ namespace SceneManagement_RL
 			yield break;
 		}
 
-		// Token: 0x060049A9 RID: 18857 RVA: 0x00109C8B File Offset: 0x00107E8B
+		// Token: 0x060065C0 RID: 26048 RVA: 0x000381AA File Offset: 0x000363AA
 		public override IEnumerator Run()
 		{
 			yield break;
 		}
 
-		// Token: 0x060049AA RID: 18858 RVA: 0x00109C94 File Offset: 0x00107E94
+		// Token: 0x060065C1 RID: 26049 RVA: 0x001795A8 File Offset: 0x001777A8
 		private void Update()
 		{
 			Vector3 localEulerAngles = this.m_rotatingGear.localEulerAngles;
@@ -74,19 +74,19 @@ namespace SceneManagement_RL
 			this.m_rotatingGear.localEulerAngles = localEulerAngles;
 		}
 
-		// Token: 0x04003DFC RID: 15868
+		// Token: 0x040052B3 RID: 21171
 		[SerializeField]
 		private float m_timeToFade = 1f;
 
-		// Token: 0x04003DFD RID: 15869
+		// Token: 0x040052B4 RID: 21172
 		[SerializeField]
 		private CanvasGroup m_canvasGroup;
 
-		// Token: 0x04003DFE RID: 15870
+		// Token: 0x040052B5 RID: 21173
 		[SerializeField]
 		private CanvasGroup m_loadingIndicatorCanvasGroup;
 
-		// Token: 0x04003DFF RID: 15871
+		// Token: 0x040052B6 RID: 21174
 		[SerializeField]
 		private RectTransform m_rotatingGear;
 	}

@@ -13,11 +13,11 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Token: 0x0200058F RID: 1423
+// Token: 0x02000988 RID: 2440
 public class PlayerDeathWindowController : WindowController, ILocalizable
 {
-	// Token: 0x170012DC RID: 4828
-	// (get) Token: 0x06003534 RID: 13620 RVA: 0x000B760B File Offset: 0x000B580B
+	// Token: 0x170019EF RID: 6639
+	// (get) Token: 0x06004AF7 RID: 19191 RVA: 0x00029102 File Offset: 0x00027302
 	private bool RunVictoryDeathScreen
 	{
 		get
@@ -26,8 +26,8 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x170012DD RID: 4829
-	// (get) Token: 0x06003535 RID: 13621 RVA: 0x000B761B File Offset: 0x000B581B
+	// Token: 0x170019F0 RID: 6640
+	// (get) Token: 0x06004AF8 RID: 19192 RVA: 0x00005303 File Offset: 0x00003503
 	public override WindowID ID
 	{
 		get
@@ -36,8 +36,8 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x170012DE RID: 4830
-	// (get) Token: 0x06003536 RID: 13622 RVA: 0x000B761F File Offset: 0x000B581F
+	// Token: 0x170019F1 RID: 6641
+	// (get) Token: 0x06004AF9 RID: 19193 RVA: 0x0002836B File Offset: 0x0002656B
 	public Scene Scene
 	{
 		get
@@ -46,7 +46,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003537 RID: 13623 RVA: 0x000B762C File Offset: 0x000B582C
+	// Token: 0x06004AFA RID: 19194 RVA: 0x00124038 File Offset: 0x00122238
 	private void Awake()
 	{
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
@@ -56,7 +56,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		this.m_zoomMapVertical = new Action<InputActionEventData>(this.ZoomMapVertical);
 	}
 
-	// Token: 0x06003538 RID: 13624 RVA: 0x000B7694 File Offset: 0x000B5894
+	// Token: 0x06004AFB RID: 19195 RVA: 0x001240A0 File Offset: 0x001222A0
 	public override void Initialize()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -69,7 +69,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		base.Initialize();
 	}
 
-	// Token: 0x06003539 RID: 13625 RVA: 0x000B7754 File Offset: 0x000B5954
+	// Token: 0x06004AFC RID: 19196 RVA: 0x00124160 File Offset: 0x00122360
 	private void OnDestroy()
 	{
 		this.m_reenactmentController.OnRoomTrackerTriggeredRelay.RemoveListener(new Action<RoomTrackerData>(this.OnRoomTrackerEventTriggered));
@@ -78,13 +78,13 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		this.m_reenactmentController.OnItemTrackerTriggeredRelay.RemoveListener(new Action<ItemTrackerData>(this.OnItemTrackerEventTriggered));
 	}
 
-	// Token: 0x0600353A RID: 13626 RVA: 0x000B77D5 File Offset: 0x000B59D5
+	// Token: 0x06004AFD RID: 19197 RVA: 0x00029112 File Offset: 0x00027312
 	public void StopDeathSnapshot()
 	{
 		this.m_deathSnapshot.Stop();
 	}
 
-	// Token: 0x0600353B RID: 13627 RVA: 0x000B77E4 File Offset: 0x000B59E4
+	// Token: 0x06004AFE RID: 19198 RVA: 0x001241E4 File Offset: 0x001223E4
 	protected override void OnOpen()
 	{
 		if (PlayerManager.IsInstantiated && !ChallengeManager.IsInChallenge)
@@ -214,7 +214,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		base.StartCoroutine(this.OnOpenCoroutine());
 	}
 
-	// Token: 0x0600353C RID: 13628 RVA: 0x000B7CBC File Offset: 0x000B5EBC
+	// Token: 0x06004AFF RID: 19199 RVA: 0x001246BC File Offset: 0x001228BC
 	public static void GlobalCharacterDeathResetLogic()
 	{
 		SaveManager.PlayerSaveData.InCastle = false;
@@ -225,7 +225,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.CaveTuningForkTriggered, false);
 	}
 
-	// Token: 0x0600353D RID: 13629 RVA: 0x000B7D14 File Offset: 0x000B5F14
+	// Token: 0x06004B00 RID: 19200 RVA: 0x0002911F File Offset: 0x0002731F
 	private IEnumerator CreateTestTracker()
 	{
 		List<RoomTrackerData> roomTrackerList = GameEventTrackerManager.RoomEventTracker.RoomsEntered;
@@ -281,7 +281,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x0600353E RID: 13630 RVA: 0x000B7D1C File Offset: 0x000B5F1C
+	// Token: 0x06004B01 RID: 19201 RVA: 0x00029127 File Offset: 0x00027327
 	private IEnumerator OnOpenCoroutine()
 	{
 		if (WorldBuilder.IsInstantiated)
@@ -312,7 +312,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x0600353F RID: 13631 RVA: 0x000B7D2C File Offset: 0x000B5F2C
+	// Token: 0x06004B02 RID: 19202 RVA: 0x00124714 File Offset: 0x00122914
 	protected override void OnClose()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
@@ -332,7 +332,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003540 RID: 13632 RVA: 0x000B7DDA File Offset: 0x000B5FDA
+	// Token: 0x06004B03 RID: 19203 RVA: 0x00029136 File Offset: 0x00027336
 	private IEnumerator DeathAnimationCoroutine()
 	{
 		global::PlayerController player = PlayerManager.GetPlayerController();
@@ -502,7 +502,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x06003541 RID: 13633 RVA: 0x000B7DE9 File Offset: 0x000B5FE9
+	// Token: 0x06004B04 RID: 19204 RVA: 0x00029145 File Offset: 0x00027345
 	private IEnumerator VictoryAnimationCoroutine()
 	{
 		global::PlayerController player = PlayerManager.GetPlayerController();
@@ -596,7 +596,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x06003542 RID: 13634 RVA: 0x000B7DF8 File Offset: 0x000B5FF8
+	// Token: 0x06004B05 RID: 19205 RVA: 0x001247C4 File Offset: 0x001229C4
 	private void RunFartEffect()
 	{
 		global::PlayerController playerController = PlayerManager.GetPlayerController();
@@ -636,7 +636,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		});
 	}
 
-	// Token: 0x06003543 RID: 13635 RVA: 0x000B8028 File Offset: 0x000B6228
+	// Token: 0x06004B06 RID: 19206 RVA: 0x001249F4 File Offset: 0x00122BF4
 	private void AddInputListeners()
 	{
 		if (ReInput.isReady)
@@ -648,7 +648,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003544 RID: 13636 RVA: 0x000B80A0 File Offset: 0x000B62A0
+	// Token: 0x06004B07 RID: 19207 RVA: 0x00124A6C File Offset: 0x00122C6C
 	private void RemoveInputListeners()
 	{
 		if (ReInput.isReady)
@@ -660,7 +660,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x06003545 RID: 13637 RVA: 0x000B80F8 File Offset: 0x000B62F8
+	// Token: 0x06004B08 RID: 19208 RVA: 0x00124AC4 File Offset: 0x00122CC4
 	private void MoveMapVertical(InputActionEventData inputActionEventData)
 	{
 		if (!this.m_reenactmentController.IsComplete)
@@ -679,7 +679,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		MapController.SetMapCameraPosition(position);
 	}
 
-	// Token: 0x06003546 RID: 13638 RVA: 0x000B8170 File Offset: 0x000B6370
+	// Token: 0x06004B09 RID: 19209 RVA: 0x00124B3C File Offset: 0x00122D3C
 	private void MoveMapHorizontal(InputActionEventData inputActionEventData)
 	{
 		if (!this.m_reenactmentController.IsComplete)
@@ -698,7 +698,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		MapController.SetMapCameraPosition(position);
 	}
 
-	// Token: 0x06003547 RID: 13639 RVA: 0x000B81E8 File Offset: 0x000B63E8
+	// Token: 0x06004B0A RID: 19210 RVA: 0x00124BB4 File Offset: 0x00122DB4
 	private void ZoomMapVertical(InputActionEventData eventData)
 	{
 		if (!this.m_reenactmentController.IsComplete)
@@ -710,7 +710,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		MapController.DeathMapCamera.orthographicSize = orthographicSize;
 	}
 
-	// Token: 0x06003548 RID: 13640 RVA: 0x000B8240 File Offset: 0x000B6440
+	// Token: 0x06004B0B RID: 19211 RVA: 0x00124C0C File Offset: 0x00122E0C
 	private void OnRestartInLineagePressed(InputActionEventData obj)
 	{
 		if (!this.m_reenactmentController.IsComplete || (!this.m_rankController.IsComplete && this.m_masteryUnlocked))
@@ -750,7 +750,7 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		SceneLoader_RL.LoadScene(SceneID.Lineage, TransitionID.PlayerDeathToLineage);
 	}
 
-	// Token: 0x06003549 RID: 13641 RVA: 0x000B836A File Offset: 0x000B656A
+	// Token: 0x06004B0C RID: 19212 RVA: 0x00029154 File Offset: 0x00027354
 	public void DeactivatePortrait()
 	{
 		this.m_portrait.gameObject.SetActive(false);
@@ -758,14 +758,14 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		this.m_portraitCanvasGroup.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600354A RID: 13642 RVA: 0x000B839F File Offset: 0x000B659F
+	// Token: 0x06004B0D RID: 19213 RVA: 0x00029189 File Offset: 0x00027389
 	private void OnEnemyTrackerEventTriggered(EnemyTrackerData enemyData)
 	{
 		this.m_enemiesKilledCounter++;
 		this.m_enemiesDefeatedAmountText.text = this.m_enemiesKilledCounter.ToString();
 	}
 
-	// Token: 0x0600354B RID: 13643 RVA: 0x000B83C8 File Offset: 0x000B65C8
+	// Token: 0x06004B0E RID: 19214 RVA: 0x00124D38 File Offset: 0x00122F38
 	private void OnItemTrackerEventTriggered(ItemTrackerData itemData)
 	{
 		ItemDropType baseItemDropType = Economy_EV.GetBaseItemDropType(itemData.ItemDropType);
@@ -803,12 +803,12 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600354C RID: 13644 RVA: 0x000B84AF File Offset: 0x000B66AF
+	// Token: 0x06004B0F RID: 19215 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void OnChestTrackerEventTriggered(ChestTrackerData chestData)
 	{
 	}
 
-	// Token: 0x0600354D RID: 13645 RVA: 0x000B84B4 File Offset: 0x000B66B4
+	// Token: 0x06004B10 RID: 19216 RVA: 0x00124E20 File Offset: 0x00123020
 	private void OnRoomTrackerEventTriggered(RoomTrackerData roomData)
 	{
 		MapRoomEntry mapRoomEntry = MapController.GetMapRoomEntry(roomData.Biome, roomData.BiomeControllerIndex);
@@ -979,29 +979,29 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		}
 	}
 
-	// Token: 0x0600354E RID: 13646 RVA: 0x000B8B80 File Offset: 0x000B6D80
+	// Token: 0x06004B11 RID: 19217 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnFocus()
 	{
 	}
 
-	// Token: 0x0600354F RID: 13647 RVA: 0x000B8B82 File Offset: 0x000B6D82
+	// Token: 0x06004B12 RID: 19218 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void OnLostFocus()
 	{
 	}
 
-	// Token: 0x06003550 RID: 13648 RVA: 0x000B8B84 File Offset: 0x000B6D84
+	// Token: 0x06004B13 RID: 19219 RVA: 0x00027E04 File Offset: 0x00026004
 	protected override void OnPause()
 	{
 		throw new NotImplementedException();
 	}
 
-	// Token: 0x06003551 RID: 13649 RVA: 0x000B8B8B File Offset: 0x000B6D8B
+	// Token: 0x06004B14 RID: 19220 RVA: 0x00027E04 File Offset: 0x00026004
 	protected override void OnUnpause()
 	{
 		throw new NotImplementedException();
 	}
 
-	// Token: 0x06003552 RID: 13650 RVA: 0x000B8B92 File Offset: 0x000B6D92
+	// Token: 0x06004B15 RID: 19221 RVA: 0x000291AF File Offset: 0x000273AF
 	public void RefreshText(object sender, EventArgs args)
 	{
 		GameEventTrackerManager.EnemyEventTracker.ForceRefreshText();
@@ -1010,168 +1010,168 @@ public class PlayerDeathWindowController : WindowController, ILocalizable
 		this.m_rankController.UpdateMessage();
 	}
 
-	// Token: 0x04002965 RID: 10597
+	// Token: 0x04003923 RID: 14627
 	private const bool RUN_EVENT_TRACKER_TEST = false;
 
-	// Token: 0x04002966 RID: 10598
+	// Token: 0x04003924 RID: 14628
 	[Space(10f)]
 	[SerializeField]
 	private ReenactmentController m_reenactmentController;
 
-	// Token: 0x04002967 RID: 10599
+	// Token: 0x04003925 RID: 14629
 	[SerializeField]
 	private PlayerDeathSlainByTextController m_slainByController;
 
-	// Token: 0x04002968 RID: 10600
+	// Token: 0x04003926 RID: 14630
 	[SerializeField]
 	private PlayerDeathPartingWordsTextController m_partingWordsController;
 
-	// Token: 0x04002969 RID: 10601
+	// Token: 0x04003927 RID: 14631
 	[SerializeField]
 	private PlayerDeathRankTextController m_rankController;
 
-	// Token: 0x0400296A RID: 10602
+	// Token: 0x04003928 RID: 14632
 	[SerializeField]
 	private GameObject m_deathPanelGO;
 
-	// Token: 0x0400296B RID: 10603
+	// Token: 0x04003929 RID: 14633
 	[SerializeField]
 	private CanvasGroup m_bgCanvasGroup;
 
-	// Token: 0x0400296C RID: 10604
+	// Token: 0x0400392A RID: 14634
 	[SerializeField]
 	private float m_fadeToBlackTime = 1f;
 
-	// Token: 0x0400296D RID: 10605
+	// Token: 0x0400392B RID: 14635
 	[SerializeField]
 	private TMP_Text m_enemiesDefeatedAmountText;
 
-	// Token: 0x0400296E RID: 10606
+	// Token: 0x0400392C RID: 14636
 	[SerializeField]
 	private TMP_Text m_goldCollectedAmountText;
 
-	// Token: 0x0400296F RID: 10607
+	// Token: 0x0400392D RID: 14637
 	[SerializeField]
 	private TMP_Text m_equipmentOreCollectedAmountText;
 
-	// Token: 0x04002970 RID: 10608
+	// Token: 0x0400392E RID: 14638
 	[SerializeField]
 	private TMP_Text m_runeOreCollectedAmountText;
 
-	// Token: 0x04002971 RID: 10609
+	// Token: 0x0400392F RID: 14639
 	[SerializeField]
 	private TMP_Text m_soulCollectedAmountText;
 
-	// Token: 0x04002972 RID: 10610
+	// Token: 0x04003930 RID: 14640
 	[SerializeField]
 	private CanvasGroup m_reenactmentCanvasGroup;
 
-	// Token: 0x04002973 RID: 10611
+	// Token: 0x04003931 RID: 14641
 	[SerializeField]
 	private GridLayoutGroup m_reenactmentGridLayout;
 
-	// Token: 0x04002974 RID: 10612
+	// Token: 0x04003932 RID: 14642
 	[SerializeField]
 	private Image m_line;
 
-	// Token: 0x04002975 RID: 10613
+	// Token: 0x04003933 RID: 14643
 	[SerializeField]
 	private RawImage m_portraitRT;
 
-	// Token: 0x04002976 RID: 10614
+	// Token: 0x04003934 RID: 14644
 	[SerializeField]
 	private CanvasGroup m_portraitCanvasGroup;
 
-	// Token: 0x04002977 RID: 10615
+	// Token: 0x04003935 RID: 14645
 	[SerializeField]
 	private LineagePortrait m_portrait;
 
-	// Token: 0x04002978 RID: 10616
+	// Token: 0x04003936 RID: 14646
 	[SerializeField]
 	private Camera m_portraitRenderCamera;
 
-	// Token: 0x04002979 RID: 10617
+	// Token: 0x04003937 RID: 14647
 	[SerializeField]
 	private GameObject m_portraitRenderGO;
 
-	// Token: 0x0400297A RID: 10618
+	// Token: 0x04003938 RID: 14648
 	[SerializeField]
 	private RectTransform m_playerPositionObj;
 
-	// Token: 0x0400297B RID: 10619
+	// Token: 0x04003939 RID: 14649
 	[Space(10f)]
 	[SerializeField]
 	private UnityEvent m_portraitAppearedUnityEvent;
 
-	// Token: 0x0400297C RID: 10620
+	// Token: 0x0400393A RID: 14650
 	[SerializeField]
 	private UnityEvent m_deathRecapFadeInUnityEvent;
 
-	// Token: 0x0400297D RID: 10621
+	// Token: 0x0400393B RID: 14651
 	[SerializeField]
 	private UnityEvent m_deathRecapFadeOutUnityEvent;
 
-	// Token: 0x0400297E RID: 10622
+	// Token: 0x0400393C RID: 14652
 	[SerializeField]
 	private StudioEventEmitter m_deathSnapshot;
 
-	// Token: 0x0400297F RID: 10623
+	// Token: 0x0400393D RID: 14653
 	private int m_enemiesKilledCounter;
 
-	// Token: 0x04002980 RID: 10624
+	// Token: 0x0400393E RID: 14654
 	private int m_goldCollectedCounter;
 
-	// Token: 0x04002981 RID: 10625
+	// Token: 0x0400393F RID: 14655
 	private int m_equipmentOreCollectedCounter;
 
-	// Token: 0x04002982 RID: 10626
+	// Token: 0x04003940 RID: 14656
 	private int m_runeOreCollectedCounter;
 
-	// Token: 0x04002983 RID: 10627
+	// Token: 0x04003941 RID: 14657
 	private int m_soulCollectedCounter;
 
-	// Token: 0x04002984 RID: 10628
+	// Token: 0x04003942 RID: 14658
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002985 RID: 10629
+	// Token: 0x04003943 RID: 14659
 	private bool m_masteryUnlocked;
 
-	// Token: 0x04002986 RID: 10630
+	// Token: 0x04003944 RID: 14660
 	private bool m_playTreeCutscene;
 
-	// Token: 0x04002987 RID: 10631
+	// Token: 0x04003945 RID: 14661
 	private bool m_playHestiaCutscene;
 
-	// Token: 0x04002988 RID: 10632
+	// Token: 0x04003946 RID: 14662
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x04002989 RID: 10633
+	// Token: 0x04003947 RID: 14663
 	private Action<InputActionEventData> m_onRestartInLineagePressed;
 
-	// Token: 0x0400298A RID: 10634
+	// Token: 0x04003948 RID: 14664
 	private Action<InputActionEventData> m_moveMapHorizontal;
 
-	// Token: 0x0400298B RID: 10635
+	// Token: 0x04003949 RID: 14665
 	private Action<InputActionEventData> m_moveMapVertical;
 
-	// Token: 0x0400298C RID: 10636
+	// Token: 0x0400394A RID: 14666
 	private Action<InputActionEventData> m_zoomMapVertical;
 
-	// Token: 0x0400298D RID: 10637
+	// Token: 0x0400394B RID: 14667
 	private Tween m_cameraZoomTween;
 
-	// Token: 0x0400298E RID: 10638
+	// Token: 0x0400394C RID: 14668
 	private Tween m_cameraMoveTween;
 
-	// Token: 0x0400298F RID: 10639
+	// Token: 0x0400394D RID: 14669
 	private float m_desiredZoomSize;
 
-	// Token: 0x04002990 RID: 10640
+	// Token: 0x0400394E RID: 14670
 	private Vector3 m_desiredCamPos;
 
-	// Token: 0x04002991 RID: 10641
+	// Token: 0x0400394F RID: 14671
 	private Vector4 m_camBoundsRect = new Vector4(float.MaxValue, float.MaxValue, float.MinValue, float.MinValue);
 
-	// Token: 0x04002992 RID: 10642
+	// Token: 0x04003950 RID: 14672
 	private BiomeType m_prevBiomeType = BiomeType.Castle;
 }

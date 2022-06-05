@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x0200064C RID: 1612
+// Token: 0x02000A7B RID: 2683
 public enum TunnelCategory
 {
-	// Token: 0x04002CAF RID: 11439
+	// Token: 0x04003D45 RID: 15685
 	Default,
-	// Token: 0x04002CB0 RID: 11440
+	// Token: 0x04003D46 RID: 15686
 	Boss = 10,
-	// Token: 0x04002CB1 RID: 11441
+	// Token: 0x04003D47 RID: 15687
 	Bonus = 20,
-	// Token: 0x04002CB2 RID: 11442
+	// Token: 0x04003D48 RID: 15688
 	Final = 30,
-	// Token: 0x04002CB3 RID: 11443
+	// Token: 0x04003D49 RID: 15689
 	Fairy = 40
 }

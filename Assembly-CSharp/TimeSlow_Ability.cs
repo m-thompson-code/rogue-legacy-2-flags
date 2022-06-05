@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200018D RID: 397
+// Token: 0x020002DB RID: 731
 public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 {
-	// Token: 0x17000795 RID: 1941
-	// (get) Token: 0x06000E2D RID: 3629 RVA: 0x0002B8B1 File Offset: 0x00029AB1
+	// Token: 0x17000A1D RID: 2589
+	// (get) Token: 0x060015CC RID: 5580 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -15,8 +15,8 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000796 RID: 1942
-	// (get) Token: 0x06000E2E RID: 3630 RVA: 0x0002B8B8 File Offset: 0x00029AB8
+	// Token: 0x17000A1E RID: 2590
+	// (get) Token: 0x060015CD RID: 5581 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -25,8 +25,8 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000797 RID: 1943
-	// (get) Token: 0x06000E2F RID: 3631 RVA: 0x0002B8BF File Offset: 0x00029ABF
+	// Token: 0x17000A1F RID: 2591
+	// (get) Token: 0x060015CE RID: 5582 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellAnimSpeed
 	{
 		get
@@ -35,8 +35,8 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000798 RID: 1944
-	// (get) Token: 0x06000E30 RID: 3632 RVA: 0x0002B8C6 File Offset: 0x00029AC6
+	// Token: 0x17000A20 RID: 2592
+	// (get) Token: 0x060015CF RID: 5583 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -45,8 +45,8 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000799 RID: 1945
-	// (get) Token: 0x06000E31 RID: 3633 RVA: 0x0002B8CD File Offset: 0x00029ACD
+	// Token: 0x17000A21 RID: 2593
+	// (get) Token: 0x060015D0 RID: 5584 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -55,8 +55,8 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700079A RID: 1946
-	// (get) Token: 0x06000E32 RID: 3634 RVA: 0x0002B8D4 File Offset: 0x00029AD4
+	// Token: 0x17000A22 RID: 2594
+	// (get) Token: 0x060015D1 RID: 5585 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -65,8 +65,8 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700079B RID: 1947
-	// (get) Token: 0x06000E33 RID: 3635 RVA: 0x0002B8DB File Offset: 0x00029ADB
+	// Token: 0x17000A23 RID: 2595
+	// (get) Token: 0x060015D2 RID: 5586 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -75,8 +75,8 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700079C RID: 1948
-	// (get) Token: 0x06000E34 RID: 3636 RVA: 0x0002B8E2 File Offset: 0x00029AE2
+	// Token: 0x17000A24 RID: 2596
+	// (get) Token: 0x060015D3 RID: 5587 RVA: 0x000052A9 File Offset: 0x000034A9
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -85,8 +85,8 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700079D RID: 1949
-	// (get) Token: 0x06000E35 RID: 3637 RVA: 0x0002B8E9 File Offset: 0x00029AE9
+	// Token: 0x17000A25 RID: 2597
+	// (get) Token: 0x060015D4 RID: 5588 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -95,8 +95,8 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700079E RID: 1950
-	// (get) Token: 0x06000E36 RID: 3638 RVA: 0x0002B8F0 File Offset: 0x00029AF0
+	// Token: 0x17000A26 RID: 2598
+	// (get) Token: 0x060015D5 RID: 5589 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -105,7 +105,7 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000E37 RID: 3639 RVA: 0x0002B8F7 File Offset: 0x00029AF7
+	// Token: 0x060015D6 RID: 5590 RVA: 0x0000AD0D File Offset: 0x00008F0D
 	public override void PreCastAbility()
 	{
 		if (this.m_spellActive)
@@ -119,7 +119,7 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000E38 RID: 3640 RVA: 0x0002B923 File Offset: 0x00029B23
+	// Token: 0x060015D7 RID: 5591 RVA: 0x0000AD39 File Offset: 0x00008F39
 	public override IEnumerator CastAbility()
 	{
 		if (!this.m_spellActive)
@@ -130,7 +130,7 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000E39 RID: 3641 RVA: 0x0002B934 File Offset: 0x00029B34
+	// Token: 0x060015D8 RID: 5592 RVA: 0x0008AAC8 File Offset: 0x00088CC8
 	protected override void FireProjectile()
 	{
 		RLTimeScale.SetTimeScale(TimeScaleType.TimeSlowAbility, 0.2f);
@@ -145,7 +145,7 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		this.ApplyAbilityCosts();
 	}
 
-	// Token: 0x06000E3A RID: 3642 RVA: 0x0002B9E0 File Offset: 0x00029BE0
+	// Token: 0x060015D9 RID: 5593 RVA: 0x0008AB74 File Offset: 0x00088D74
 	protected override void ApplyAbilityCosts()
 	{
 		if ((base.MaxAmmo > 0 && base.CurrentAmmo <= 0) || (base.ActualCost > 0 && this.m_abilityController.PlayerController.CurrentManaAsInt <= 0))
@@ -159,7 +159,7 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		base.ApplyAbilityCosts();
 	}
 
-	// Token: 0x06000E3B RID: 3643 RVA: 0x0002BA44 File Offset: 0x00029C44
+	// Token: 0x060015DA RID: 5594 RVA: 0x0008ABD8 File Offset: 0x00088DD8
 	private void StopSlowdown()
 	{
 		RLTimeScale.SetTimeScale(TimeScaleType.TimeSlowAbility, 1f);
@@ -173,7 +173,7 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		playerController.CharacterJump.JumpHeightMultiplier = 1f;
 	}
 
-	// Token: 0x06000E3C RID: 3644 RVA: 0x0002BAF1 File Offset: 0x00029CF1
+	// Token: 0x060015DB RID: 5595 RVA: 0x0000AD48 File Offset: 0x00008F48
 	protected void FixedUpdate()
 	{
 		if (!this.m_spellActive)
@@ -186,9 +186,9 @@ public class TimeSlow_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x04001119 RID: 4377
+	// Token: 0x040016A0 RID: 5792
 	private bool m_spellActive;
 
-	// Token: 0x0400111A RID: 4378
+	// Token: 0x040016A1 RID: 5793
 	private float m_ticRateStartTime;
 }

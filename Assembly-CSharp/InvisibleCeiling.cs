@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000465 RID: 1125
+// Token: 0x0200075A RID: 1882
 public class InvisibleCeiling : MonoBehaviour, IMirror
 {
-	// Token: 0x06002976 RID: 10614 RVA: 0x00089292 File Offset: 0x00087492
+	// Token: 0x0600397A RID: 14714 RVA: 0x0001F99F File Offset: 0x0001DB9F
 	private void Awake()
 	{
 		this.m_meshRenderer.enabled = false;
 	}
 
-	// Token: 0x06002977 RID: 10615 RVA: 0x000892A0 File Offset: 0x000874A0
+	// Token: 0x0600397B RID: 14715 RVA: 0x0001F9AD File Offset: 0x0001DBAD
 	public void Mirror()
 	{
 		if (base.transform.right != Vector3.right)
@@ -19,7 +19,7 @@ public class InvisibleCeiling : MonoBehaviour, IMirror
 		}
 	}
 
-	// Token: 0x04002225 RID: 8741
+	// Token: 0x04002DFE RID: 11774
 	[SerializeField]
 	private MeshRenderer m_meshRenderer;
 }

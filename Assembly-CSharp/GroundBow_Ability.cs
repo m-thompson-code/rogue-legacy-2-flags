@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000199 RID: 409
+// Token: 0x020002F1 RID: 753
 public class GroundBow_Ability : Bow_Ability
 {
-	// Token: 0x17000879 RID: 2169
-	// (get) Token: 0x06000F6D RID: 3949 RVA: 0x0002D95B File Offset: 0x0002BB5B
+	// Token: 0x17000B15 RID: 2837
+	// (get) Token: 0x06001748 RID: 5960 RVA: 0x00006CC8 File Offset: 0x00004EC8
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -15,8 +15,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700087A RID: 2170
-	// (get) Token: 0x06000F6E RID: 3950 RVA: 0x0002D962 File Offset: 0x0002BB62
+	// Token: 0x17000B16 RID: 2838
+	// (get) Token: 0x06001749 RID: 5961 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -25,8 +25,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700087B RID: 2171
-	// (get) Token: 0x06000F6F RID: 3951 RVA: 0x0002D969 File Offset: 0x0002BB69
+	// Token: 0x17000B17 RID: 2839
+	// (get) Token: 0x0600174A RID: 5962 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float TellAnimSpeed
 	{
 		get
@@ -35,8 +35,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700087C RID: 2172
-	// (get) Token: 0x06000F70 RID: 3952 RVA: 0x0002D970 File Offset: 0x0002BB70
+	// Token: 0x17000B18 RID: 2840
+	// (get) Token: 0x0600174B RID: 5963 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -45,8 +45,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700087D RID: 2173
-	// (get) Token: 0x06000F71 RID: 3953 RVA: 0x0002D977 File Offset: 0x0002BB77
+	// Token: 0x17000B19 RID: 2841
+	// (get) Token: 0x0600174C RID: 5964 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -55,8 +55,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700087E RID: 2174
-	// (get) Token: 0x06000F72 RID: 3954 RVA: 0x0002D97E File Offset: 0x0002BB7E
+	// Token: 0x17000B1A RID: 2842
+	// (get) Token: 0x0600174D RID: 5965 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -65,8 +65,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700087F RID: 2175
-	// (get) Token: 0x06000F73 RID: 3955 RVA: 0x0002D985 File Offset: 0x0002BB85
+	// Token: 0x17000B1B RID: 2843
+	// (get) Token: 0x0600174E RID: 5966 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -75,8 +75,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x17000880 RID: 2176
-	// (get) Token: 0x06000F74 RID: 3956 RVA: 0x0002D98C File Offset: 0x0002BB8C
+	// Token: 0x17000B1C RID: 2844
+	// (get) Token: 0x0600174F RID: 5967 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -85,8 +85,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x17000881 RID: 2177
-	// (get) Token: 0x06000F75 RID: 3957 RVA: 0x0002D993 File Offset: 0x0002BB93
+	// Token: 0x17000B1D RID: 2845
+	// (get) Token: 0x06001750 RID: 5968 RVA: 0x00004FDE File Offset: 0x000031DE
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -95,8 +95,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x17000882 RID: 2178
-	// (get) Token: 0x06000F76 RID: 3958 RVA: 0x0002D99A File Offset: 0x0002BB9A
+	// Token: 0x17000B1E RID: 2846
+	// (get) Token: 0x06001751 RID: 5969 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -105,8 +105,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x17000883 RID: 2179
-	// (get) Token: 0x06000F77 RID: 3959 RVA: 0x0002D9A1 File Offset: 0x0002BBA1
+	// Token: 0x17000B1F RID: 2847
+	// (get) Token: 0x06001752 RID: 5970 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float GravityReduction
 	{
 		get
@@ -115,8 +115,8 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x17000884 RID: 2180
-	// (get) Token: 0x06000F78 RID: 3960 RVA: 0x0002D9A8 File Offset: 0x0002BBA8
+	// Token: 0x17000B20 RID: 2848
+	// (get) Token: 0x06001753 RID: 5971 RVA: 0x0000BCEF File Offset: 0x00009EEF
 	protected override Vector2 BowPushbackAmount
 	{
 		get
@@ -125,7 +125,7 @@ public class GroundBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x06000F79 RID: 3961 RVA: 0x0002D9B9 File Offset: 0x0002BBB9
+	// Token: 0x06001754 RID: 5972 RVA: 0x0000BD00 File Offset: 0x00009F00
 	public override void PreCastAbility()
 	{
 		this.m_onGround = PlayerManager.GetPlayerController().IsGrounded;
@@ -137,7 +137,7 @@ public class GroundBow_Ability : Bow_Ability
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000F7A RID: 3962 RVA: 0x0002D9E1 File Offset: 0x0002BBE1
+	// Token: 0x06001755 RID: 5973 RVA: 0x0000BD28 File Offset: 0x00009F28
 	public override IEnumerator CastAbility()
 	{
 		if (this.m_onGround)
@@ -148,6 +148,6 @@ public class GroundBow_Ability : Bow_Ability
 		yield break;
 	}
 
-	// Token: 0x04001177 RID: 4471
+	// Token: 0x04001724 RID: 5924
 	private bool m_onGround;
 }

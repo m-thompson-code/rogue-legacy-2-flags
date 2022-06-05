@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace Unity.Screenshots
 {
-	// Token: 0x0200082D RID: 2093
+	// Token: 0x02000D0F RID: 3343
 	public class ScreenshotManager
 	{
-		// Token: 0x06004536 RID: 17718 RVA: 0x000F7241 File Offset: 0x000F5441
+		// Token: 0x06005F38 RID: 24376 RVA: 0x00034753 File Offset: 0x00032953
 		public ScreenshotManager()
 		{
 			this.screenshotRecorder = new ScreenshotRecorder();
@@ -15,7 +15,7 @@ namespace Unity.Screenshots
 			this.screenshotOperations = new List<ScreenshotManager.ScreenshotOperation>();
 		}
 
-		// Token: 0x06004537 RID: 17719 RVA: 0x000F7274 File Offset: 0x000F5474
+		// Token: 0x06005F39 RID: 24377 RVA: 0x00164DF0 File Offset: 0x00162FF0
 		private ScreenshotManager.ScreenshotOperation GetScreenshotOperation()
 		{
 			foreach (ScreenshotManager.ScreenshotOperation screenshotOperation in this.screenshotOperations)
@@ -32,7 +32,7 @@ namespace Unity.Screenshots
 			return screenshotOperation2;
 		}
 
-		// Token: 0x06004538 RID: 17720 RVA: 0x000F72F0 File Offset: 0x000F54F0
+		// Token: 0x06005F3A RID: 24378 RVA: 0x00164E6C File Offset: 0x0016306C
 		public void OnEndOfFrame()
 		{
 			foreach (ScreenshotManager.ScreenshotOperation screenshotOperation in this.screenshotOperations)
@@ -81,7 +81,7 @@ namespace Unity.Screenshots
 			}
 		}
 
-		// Token: 0x06004539 RID: 17721 RVA: 0x000F74A0 File Offset: 0x000F56A0
+		// Token: 0x06005F3B RID: 24379 RVA: 0x0016501C File Offset: 0x0016321C
 		private void ScreenshotCallback(byte[] data, object state)
 		{
 			ScreenshotManager.ScreenshotOperation screenshotOperation = state as ScreenshotManager.ScreenshotOperation;
@@ -92,7 +92,7 @@ namespace Unity.Screenshots
 			}
 		}
 
-		// Token: 0x0600453A RID: 17722 RVA: 0x000F74C5 File Offset: 0x000F56C5
+		// Token: 0x06005F3C RID: 24380 RVA: 0x00034783 File Offset: 0x00032983
 		public void TakeScreenshot(object source, int frameNumber, int maximumWidth, int maximumHeight, Action<int, byte[]> callback)
 		{
 			ScreenshotManager.ScreenshotOperation screenshotOperation = this.GetScreenshotOperation();
@@ -103,64 +103,64 @@ namespace Unity.Screenshots
 			screenshotOperation.Callback = callback;
 		}
 
-		// Token: 0x04003B0F RID: 15119
+		// Token: 0x04004E38 RID: 20024
 		private Action<byte[], object> screenshotCallbackDelegate;
 
-		// Token: 0x04003B10 RID: 15120
+		// Token: 0x04004E39 RID: 20025
 		private List<ScreenshotManager.ScreenshotOperation> screenshotOperations;
 
-		// Token: 0x04003B11 RID: 15121
+		// Token: 0x04004E3A RID: 20026
 		private ScreenshotRecorder screenshotRecorder;
 
-		// Token: 0x02000E53 RID: 3667
+		// Token: 0x02000D10 RID: 3344
 		private class ScreenshotOperation
 		{
-			// Token: 0x17002343 RID: 9027
-			// (get) Token: 0x06006C43 RID: 27715 RVA: 0x00193C50 File Offset: 0x00191E50
-			// (set) Token: 0x06006C44 RID: 27716 RVA: 0x00193C58 File Offset: 0x00191E58
+			// Token: 0x17001F31 RID: 7985
+			// (get) Token: 0x06005F3D RID: 24381 RVA: 0x000347AF File Offset: 0x000329AF
+			// (set) Token: 0x06005F3E RID: 24382 RVA: 0x000347B7 File Offset: 0x000329B7
 			public Action<int, byte[]> Callback { get; set; }
 
-			// Token: 0x17002344 RID: 9028
-			// (get) Token: 0x06006C45 RID: 27717 RVA: 0x00193C61 File Offset: 0x00191E61
-			// (set) Token: 0x06006C46 RID: 27718 RVA: 0x00193C69 File Offset: 0x00191E69
+			// Token: 0x17001F32 RID: 7986
+			// (get) Token: 0x06005F3F RID: 24383 RVA: 0x000347C0 File Offset: 0x000329C0
+			// (set) Token: 0x06005F40 RID: 24384 RVA: 0x000347C8 File Offset: 0x000329C8
 			public byte[] Data { get; set; }
 
-			// Token: 0x17002345 RID: 9029
-			// (get) Token: 0x06006C47 RID: 27719 RVA: 0x00193C72 File Offset: 0x00191E72
-			// (set) Token: 0x06006C48 RID: 27720 RVA: 0x00193C7A File Offset: 0x00191E7A
+			// Token: 0x17001F33 RID: 7987
+			// (get) Token: 0x06005F41 RID: 24385 RVA: 0x000347D1 File Offset: 0x000329D1
+			// (set) Token: 0x06005F42 RID: 24386 RVA: 0x000347D9 File Offset: 0x000329D9
 			public int FrameNumber { get; set; }
 
-			// Token: 0x17002346 RID: 9030
-			// (get) Token: 0x06006C49 RID: 27721 RVA: 0x00193C83 File Offset: 0x00191E83
-			// (set) Token: 0x06006C4A RID: 27722 RVA: 0x00193C8B File Offset: 0x00191E8B
+			// Token: 0x17001F34 RID: 7988
+			// (get) Token: 0x06005F43 RID: 24387 RVA: 0x000347E2 File Offset: 0x000329E2
+			// (set) Token: 0x06005F44 RID: 24388 RVA: 0x000347EA File Offset: 0x000329EA
 			public bool IsAwaiting { get; set; }
 
-			// Token: 0x17002347 RID: 9031
-			// (get) Token: 0x06006C4B RID: 27723 RVA: 0x00193C94 File Offset: 0x00191E94
-			// (set) Token: 0x06006C4C RID: 27724 RVA: 0x00193C9C File Offset: 0x00191E9C
+			// Token: 0x17001F35 RID: 7989
+			// (get) Token: 0x06005F45 RID: 24389 RVA: 0x000347F3 File Offset: 0x000329F3
+			// (set) Token: 0x06005F46 RID: 24390 RVA: 0x000347FB File Offset: 0x000329FB
 			public bool IsComplete { get; set; }
 
-			// Token: 0x17002348 RID: 9032
-			// (get) Token: 0x06006C4D RID: 27725 RVA: 0x00193CA5 File Offset: 0x00191EA5
-			// (set) Token: 0x06006C4E RID: 27726 RVA: 0x00193CAD File Offset: 0x00191EAD
+			// Token: 0x17001F36 RID: 7990
+			// (get) Token: 0x06005F47 RID: 24391 RVA: 0x00034804 File Offset: 0x00032A04
+			// (set) Token: 0x06005F48 RID: 24392 RVA: 0x0003480C File Offset: 0x00032A0C
 			public bool IsInUse { get; set; }
 
-			// Token: 0x17002349 RID: 9033
-			// (get) Token: 0x06006C4F RID: 27727 RVA: 0x00193CB6 File Offset: 0x00191EB6
-			// (set) Token: 0x06006C50 RID: 27728 RVA: 0x00193CBE File Offset: 0x00191EBE
+			// Token: 0x17001F37 RID: 7991
+			// (get) Token: 0x06005F49 RID: 24393 RVA: 0x00034815 File Offset: 0x00032A15
+			// (set) Token: 0x06005F4A RID: 24394 RVA: 0x0003481D File Offset: 0x00032A1D
 			public int MaximumHeight { get; set; }
 
-			// Token: 0x1700234A RID: 9034
-			// (get) Token: 0x06006C51 RID: 27729 RVA: 0x00193CC7 File Offset: 0x00191EC7
-			// (set) Token: 0x06006C52 RID: 27730 RVA: 0x00193CCF File Offset: 0x00191ECF
+			// Token: 0x17001F38 RID: 7992
+			// (get) Token: 0x06005F4B RID: 24395 RVA: 0x00034826 File Offset: 0x00032A26
+			// (set) Token: 0x06005F4C RID: 24396 RVA: 0x0003482E File Offset: 0x00032A2E
 			public int MaximumWidth { get; set; }
 
-			// Token: 0x1700234B RID: 9035
-			// (get) Token: 0x06006C53 RID: 27731 RVA: 0x00193CD8 File Offset: 0x00191ED8
-			// (set) Token: 0x06006C54 RID: 27732 RVA: 0x00193CE0 File Offset: 0x00191EE0
+			// Token: 0x17001F39 RID: 7993
+			// (get) Token: 0x06005F4D RID: 24397 RVA: 0x00034837 File Offset: 0x00032A37
+			// (set) Token: 0x06005F4E RID: 24398 RVA: 0x0003483F File Offset: 0x00032A3F
 			public object Source { get; set; }
 
-			// Token: 0x06006C55 RID: 27733 RVA: 0x00193CEC File Offset: 0x00191EEC
+			// Token: 0x06005F4F RID: 24399 RVA: 0x00165044 File Offset: 0x00163244
 			public void Use()
 			{
 				this.Callback = null;

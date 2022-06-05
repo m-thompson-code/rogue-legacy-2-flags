@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000297 RID: 663
+// Token: 0x02000463 RID: 1123
 public class QuitGameOptionItem : ExecuteImmediateOptionItem
 {
-	// Token: 0x060019DB RID: 6619 RVA: 0x000511F1 File Offset: 0x0004F3F1
+	// Token: 0x060023CA RID: 9162 RVA: 0x00013B6C File Offset: 0x00011D6C
 	public override void ActivateOption()
 	{
 		base.ActivateOption();

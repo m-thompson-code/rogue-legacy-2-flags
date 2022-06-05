@@ -1,57 +1,57 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006EC RID: 1772
+// Token: 0x02000B9A RID: 2970
 public class SkillTreeData : ScriptableObject
 {
-	// Token: 0x04003156 RID: 12630
+	// Token: 0x040043A8 RID: 17320
 	public string Name;
 
-	// Token: 0x04003157 RID: 12631
+	// Token: 0x040043A9 RID: 17321
 	public float FirstLevelStatGain;
 
-	// Token: 0x04003158 RID: 12632
+	// Token: 0x040043AA RID: 17322
 	public float AdditionalLevelStatGain;
 
-	// Token: 0x04003159 RID: 12633
+	// Token: 0x040043AB RID: 17323
 	public int BaseCost;
 
-	// Token: 0x0400315A RID: 12634
+	// Token: 0x040043AC RID: 17324
 	public int Appreciation;
 
-	// Token: 0x0400315B RID: 12635
+	// Token: 0x040043AD RID: 17325
 	public int MaxLevel;
 
-	// Token: 0x0400315C RID: 12636
+	// Token: 0x040043AE RID: 17326
 	public int OverloadLevelCap;
 
-	// Token: 0x0400315D RID: 12637
+	// Token: 0x040043AF RID: 17327
 	public int AdditiveSoulShopLevels;
 
-	// Token: 0x0400315E RID: 12638
+	// Token: 0x040043B0 RID: 17328
 	public bool DisplayBaseStat;
 
-	// Token: 0x0400315F RID: 12639
+	// Token: 0x040043B1 RID: 17329
 	public SkillUnlockState SkillUnlockState;
 
-	// Token: 0x04003160 RID: 12640
+	// Token: 0x040043B2 RID: 17330
 	public int SkillUnlockLevel;
 
-	// Token: 0x04003161 RID: 12641
+	// Token: 0x040043B3 RID: 17331
 	[Space]
 	[Header("Text Fields")]
 	[Space]
 	public string Title;
 
-	// Token: 0x04003162 RID: 12642
+	// Token: 0x040043B4 RID: 17332
 	public string UnitOfMeasurement;
 
-	// Token: 0x04003163 RID: 12643
+	// Token: 0x040043B5 RID: 17333
 	public string StatTitle;
 
-	// Token: 0x04003164 RID: 12644
+	// Token: 0x040043B6 RID: 17334
 	public string Description;
 
-	// Token: 0x04003165 RID: 12645
+	// Token: 0x040043B7 RID: 17335
 	public string SoulShopTag;
 }

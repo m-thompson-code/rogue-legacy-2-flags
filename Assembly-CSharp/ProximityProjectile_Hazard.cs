@@ -3,11 +3,11 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x02000454 RID: 1108
+// Token: 0x02000736 RID: 1846
 public class ProximityProjectile_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjectileNameArray, ITerrainOnEnterHitResponse, IHitResponse
 {
-	// Token: 0x17001007 RID: 4103
-	// (get) Token: 0x060028DE RID: 10462 RVA: 0x00087328 File Offset: 0x00085528
+	// Token: 0x17001518 RID: 5400
+	// (get) Token: 0x0600387C RID: 14460 RVA: 0x0001F00E File Offset: 0x0001D20E
 	public string[] ProjectileNameArray
 	{
 		get
@@ -23,7 +23,7 @@ public class ProximityProjectile_Hazard : Hazard, IPointHazard, IHazard, IRootOb
 		}
 	}
 
-	// Token: 0x060028DF RID: 10463 RVA: 0x0008734C File Offset: 0x0008554C
+	// Token: 0x0600387D RID: 14461 RVA: 0x0001F032 File Offset: 0x0001D232
 	protected override void Awake()
 	{
 		base.Awake();
@@ -31,7 +31,7 @@ public class ProximityProjectile_Hazard : Hazard, IPointHazard, IHazard, IRootOb
 		this.m_hbController = base.GetComponentInChildren<IHitboxController>();
 	}
 
-	// Token: 0x060028E0 RID: 10464 RVA: 0x00087371 File Offset: 0x00085571
+	// Token: 0x0600387E RID: 14462 RVA: 0x0001F057 File Offset: 0x0001D257
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		base.Initialize(hazardArgs);
@@ -39,7 +39,7 @@ public class ProximityProjectile_Hazard : Hazard, IPointHazard, IHazard, IRootOb
 		this.ResetHazard();
 	}
 
-	// Token: 0x060028E1 RID: 10465 RVA: 0x0008739B File Offset: 0x0008559B
+	// Token: 0x0600387F RID: 14463 RVA: 0x0001F081 File Offset: 0x0001D281
 	private IEnumerator FireProjectile()
 	{
 		this.m_state = ProximityProjectile_Hazard.ProximityMineState.Activated;
@@ -68,7 +68,7 @@ public class ProximityProjectile_Hazard : Hazard, IPointHazard, IHazard, IRootOb
 		yield break;
 	}
 
-	// Token: 0x060028E2 RID: 10466 RVA: 0x000873AA File Offset: 0x000855AA
+	// Token: 0x06003880 RID: 14464 RVA: 0x0001F090 File Offset: 0x0001D290
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (this.m_state == ProximityProjectile_Hazard.ProximityMineState.Idle)
@@ -77,7 +77,7 @@ public class ProximityProjectile_Hazard : Hazard, IPointHazard, IHazard, IRootOb
 		}
 	}
 
-	// Token: 0x060028E3 RID: 10467 RVA: 0x000873C1 File Offset: 0x000855C1
+	// Token: 0x06003881 RID: 14465 RVA: 0x0001F0A7 File Offset: 0x0001D2A7
 	public override void ResetHazard()
 	{
 		this.m_state = ProximityProjectile_Hazard.ProximityMineState.Idle;
@@ -85,42 +85,42 @@ public class ProximityProjectile_Hazard : Hazard, IPointHazard, IHazard, IRootOb
 		base.Animator.SetBool("Attacking", false);
 	}
 
-	// Token: 0x060028E5 RID: 10469 RVA: 0x000873F4 File Offset: 0x000855F4
+	// Token: 0x06003883 RID: 14467 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040021BC RID: 8636
+	// Token: 0x04002D51 RID: 11601
 	private const string PROJECTILE_NAME = "ProximityDashBoltProjectile";
 
-	// Token: 0x040021BD RID: 8637
+	// Token: 0x04002D52 RID: 11602
 	private const string SFX_TRIGGER_NAME = "event:/SFX/Enemies/sfx_hazard_voidMushroom_trigger";
 
-	// Token: 0x040021BE RID: 8638
+	// Token: 0x04002D53 RID: 11603
 	private const string SFX_EXPLODE_NAME = "event:/SFX/Enemies/sfx_hazard_voidMushroom_explode";
 
-	// Token: 0x040021BF RID: 8639
+	// Token: 0x04002D54 RID: 11604
 	private ProximityProjectile_Hazard.ProximityMineState m_state;
 
-	// Token: 0x040021C0 RID: 8640
+	// Token: 0x04002D55 RID: 11605
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040021C1 RID: 8641
+	// Token: 0x04002D56 RID: 11606
 	private IHitboxController m_hbController;
 
-	// Token: 0x040021C2 RID: 8642
+	// Token: 0x04002D57 RID: 11607
 	[NonSerialized]
 	private string[] m_projectileNameArray;
 
-	// Token: 0x02000C5B RID: 3163
+	// Token: 0x02000737 RID: 1847
 	private enum ProximityMineState
 	{
-		// Token: 0x0400502A RID: 20522
+		// Token: 0x04002D59 RID: 11609
 		Idle,
-		// Token: 0x0400502B RID: 20523
+		// Token: 0x04002D5A RID: 11610
 		Activated,
-		// Token: 0x0400502C RID: 20524
+		// Token: 0x04002D5B RID: 11611
 		CoolingDown
 	}
 }

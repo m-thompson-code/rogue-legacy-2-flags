@@ -4,10 +4,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020001E2 RID: 482
+// Token: 0x02000379 RID: 889
 public class LevelEditorDebug_HUDController : MonoBehaviour
 {
-	// Token: 0x06001405 RID: 5125 RVA: 0x0003CB9C File Offset: 0x0003AD9C
+	// Token: 0x06001D16 RID: 7446 RVA: 0x0000EFED File Offset: 0x0000D1ED
 	private void Start()
 	{
 		this.m_panel.SetActive(false);
@@ -17,7 +17,7 @@ public class LevelEditorDebug_HUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001406 RID: 5126 RVA: 0x0003CBC0 File Offset: 0x0003ADC0
+	// Token: 0x06001D17 RID: 7447 RVA: 0x0009BA58 File Offset: 0x00099C58
 	private void OnWorldSetup(object sender, EventArgs e)
 	{
 		this.m_isDropdownInitialised = false;
@@ -46,7 +46,7 @@ public class LevelEditorDebug_HUDController : MonoBehaviour
 		this.m_isDropdownInitialised = true;
 	}
 
-	// Token: 0x06001407 RID: 5127 RVA: 0x0003CCA0 File Offset: 0x0003AEA0
+	// Token: 0x06001D18 RID: 7448 RVA: 0x0000F010 File Offset: 0x0000D210
 	private void Update()
 	{
 		if (Input.GetKeyDown("`"))
@@ -55,78 +55,78 @@ public class LevelEditorDebug_HUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001408 RID: 5128 RVA: 0x0003CCB4 File Offset: 0x0003AEB4
+	// Token: 0x06001D19 RID: 7449 RVA: 0x0000F024 File Offset: 0x0000D224
 	public void SetBiome(int selectionIndex)
 	{
 		bool isDropdownInitialised = this.m_isDropdownInitialised;
 	}
 
-	// Token: 0x06001409 RID: 5129 RVA: 0x0003CCBD File Offset: 0x0003AEBD
+	// Token: 0x06001D1A RID: 7450 RVA: 0x0000F024 File Offset: 0x0000D224
 	public void SetTransitionPointBiome(int selectionIndex)
 	{
 		bool isDropdownInitialised = this.m_isDropdownInitialised;
 	}
 
-	// Token: 0x0600140A RID: 5130 RVA: 0x0003CCC6 File Offset: 0x0003AEC6
+	// Token: 0x06001D1B RID: 7451 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void SetHotKeyText()
 	{
 	}
 
-	// Token: 0x0600140B RID: 5131 RVA: 0x0003CCC8 File Offset: 0x0003AEC8
+	// Token: 0x06001D1C RID: 7452 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void ToggleCameraConstrainerIsEnabled()
 	{
 	}
 
-	// Token: 0x0600140C RID: 5132 RVA: 0x0003CCCA File Offset: 0x0003AECA
+	// Token: 0x06001D1D RID: 7453 RVA: 0x0000F02D File Offset: 0x0000D22D
 	private void TogglePanel()
 	{
 		this.m_panel.SetActive(!this.m_panel.activeInHierarchy);
 	}
 
-	// Token: 0x040013CB RID: 5067
+	// Token: 0x04001A68 RID: 6760
 	[SerializeField]
 	private GameObject m_panel;
 
-	// Token: 0x040013CC RID: 5068
+	// Token: 0x04001A69 RID: 6761
 	[SerializeField]
 	private Toggle m_cameraConstrainerToggle;
 
-	// Token: 0x040013CD RID: 5069
+	// Token: 0x04001A6A RID: 6762
 	[SerializeField]
 	private TMP_Dropdown m_dropdown;
 
-	// Token: 0x040013CE RID: 5070
+	// Token: 0x04001A6B RID: 6763
 	[SerializeField]
 	private TMP_Dropdown m_transitionPointDropdown;
 
-	// Token: 0x040013CF RID: 5071
+	// Token: 0x04001A6C RID: 6764
 	[SerializeField]
 	private TextMeshProUGUI m_cycleBiomeHotKey;
 
-	// Token: 0x040013D0 RID: 5072
+	// Token: 0x04001A6D RID: 6765
 	[SerializeField]
 	private TextMeshProUGUI m_cycleCloseDoorHotKey;
 
-	// Token: 0x040013D1 RID: 5073
+	// Token: 0x04001A6E RID: 6766
 	[SerializeField]
 	private TextMeshProUGUI m_cycleCloseAllDoorsHotKey;
 
-	// Token: 0x040013D2 RID: 5074
+	// Token: 0x04001A6F RID: 6767
 	[SerializeField]
 	private TextMeshProUGUI m_flipRoom;
 
-	// Token: 0x040013D3 RID: 5075
+	// Token: 0x04001A70 RID: 6768
 	[SerializeField]
 	private TextMeshProUGUI m_randomizeHazardsHotKey;
 
-	// Token: 0x040013D4 RID: 5076
+	// Token: 0x04001A71 RID: 6769
 	[SerializeField]
 	private TextMeshProUGUI m_difficultyHotKey;
 
-	// Token: 0x040013D5 RID: 5077
+	// Token: 0x04001A72 RID: 6770
 	private Dictionary<int, BiomeType> m_indexToBiomeTable;
 
-	// Token: 0x040013D6 RID: 5078
+	// Token: 0x04001A73 RID: 6771
 	private Dictionary<int, BiomeType> m_indexToTransitionPointBiomeTable = new Dictionary<int, BiomeType>
 	{
 		{
@@ -135,6 +135,6 @@ public class LevelEditorDebug_HUDController : MonoBehaviour
 		}
 	};
 
-	// Token: 0x040013D7 RID: 5079
+	// Token: 0x04001A74 RID: 6772
 	private bool m_isDropdownInitialised;
 }

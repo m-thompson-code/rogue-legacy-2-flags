@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200007B RID: 123
+// Token: 0x02000083 RID: 131
 public class Song_EV : MonoBehaviour
 {
-	// Token: 0x040004DC RID: 1244
+	// Token: 0x040004FD RID: 1277
 	public static List<Color> SpectrumAnalysisGradientList = new List<Color>
 	{
 		Color.green,

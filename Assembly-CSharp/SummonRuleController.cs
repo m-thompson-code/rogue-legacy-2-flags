@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x0200052F RID: 1327
+// Token: 0x020008B7 RID: 2231
 public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceiver, IRoomConsumer
 {
-	// Token: 0x1700120A RID: 4618
-	// (get) Token: 0x060030CD RID: 12493 RVA: 0x000A60A8 File Offset: 0x000A42A8
+	// Token: 0x17001845 RID: 6213
+	// (get) Token: 0x060043FE RID: 17406 RVA: 0x0010DE38 File Offset: 0x0010C038
 	public bool StillSummoning
 	{
 		get
@@ -25,13 +25,13 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		}
 	}
 
-	// Token: 0x1700120B RID: 4619
-	// (get) Token: 0x060030CE RID: 12494 RVA: 0x000A60E4 File Offset: 0x000A42E4
-	// (set) Token: 0x060030CF RID: 12495 RVA: 0x000A60EC File Offset: 0x000A42EC
+	// Token: 0x17001846 RID: 6214
+	// (get) Token: 0x060043FF RID: 17407 RVA: 0x000257DE File Offset: 0x000239DE
+	// (set) Token: 0x06004400 RID: 17408 RVA: 0x000257E6 File Offset: 0x000239E6
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x1700120C RID: 4620
-	// (get) Token: 0x060030D0 RID: 12496 RVA: 0x000A60F5 File Offset: 0x000A42F5
+	// Token: 0x17001847 RID: 6215
+	// (get) Token: 0x06004401 RID: 17409 RVA: 0x000257EF File Offset: 0x000239EF
 	public bool IsArenaComplete
 	{
 		get
@@ -40,8 +40,8 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		}
 	}
 
-	// Token: 0x1700120D RID: 4621
-	// (get) Token: 0x060030D1 RID: 12497 RVA: 0x000A60FD File Offset: 0x000A42FD
+	// Token: 0x17001848 RID: 6216
+	// (get) Token: 0x06004402 RID: 17410 RVA: 0x000257F7 File Offset: 0x000239F7
 	public bool HasArenaStarted
 	{
 		get
@@ -50,9 +50,9 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		}
 	}
 
-	// Token: 0x1700120E RID: 4622
-	// (get) Token: 0x060030D2 RID: 12498 RVA: 0x000A6105 File Offset: 0x000A4305
-	// (set) Token: 0x060030D3 RID: 12499 RVA: 0x000A610D File Offset: 0x000A430D
+	// Token: 0x17001849 RID: 6217
+	// (get) Token: 0x06004403 RID: 17411 RVA: 0x000257FF File Offset: 0x000239FF
+	// (set) Token: 0x06004404 RID: 17412 RVA: 0x00025807 File Offset: 0x00023A07
 	public BaseSummonRule[] SummonRuleArray
 	{
 		get
@@ -65,7 +65,7 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		}
 	}
 
-	// Token: 0x060030D4 RID: 12500 RVA: 0x000A6116 File Offset: 0x000A4316
+	// Token: 0x06004405 RID: 17413 RVA: 0x00025810 File Offset: 0x00023A10
 	public void ForceControllerComplete()
 	{
 		base.StopAllCoroutines();
@@ -73,7 +73,7 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		this.m_isArenaRunning = false;
 	}
 
-	// Token: 0x060030D5 RID: 12501 RVA: 0x000A612C File Offset: 0x000A432C
+	// Token: 0x06004406 RID: 17414 RVA: 0x0010DE74 File Offset: 0x0010C074
 	private void OnEnable()
 	{
 		if (!GameUtility.IsInLevelEditor && WorldBuilder.State != BiomeBuildStateID.Complete)
@@ -99,7 +99,7 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		this.PoolIsBiomeSpecific = false;
 	}
 
-	// Token: 0x060030D6 RID: 12502 RVA: 0x000A61B8 File Offset: 0x000A43B8
+	// Token: 0x06004407 RID: 17415 RVA: 0x0010DF00 File Offset: 0x0010C100
 	private void OnDisable()
 	{
 		foreach (BaseSummonRule baseSummonRule in this.m_summonRuleArray)
@@ -114,7 +114,7 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		this.StopArena(this.IsArenaComplete);
 	}
 
-	// Token: 0x060030D7 RID: 12503 RVA: 0x000A6200 File Offset: 0x000A4400
+	// Token: 0x06004408 RID: 17416 RVA: 0x0010DF48 File Offset: 0x0010C148
 	private void Initialize()
 	{
 		this.m_isInitialized = true;
@@ -125,14 +125,14 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		}
 	}
 
-	// Token: 0x060030D8 RID: 12504 RVA: 0x000A6232 File Offset: 0x000A4432
+	// Token: 0x06004409 RID: 17417 RVA: 0x00025826 File Offset: 0x00023A26
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnter), false);
 	}
 
-	// Token: 0x060030D9 RID: 12505 RVA: 0x000A6259 File Offset: 0x000A4459
+	// Token: 0x0600440A RID: 17418 RVA: 0x0002584D File Offset: 0x00023A4D
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -141,13 +141,13 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		}
 	}
 
-	// Token: 0x060030DA RID: 12506 RVA: 0x000A6285 File Offset: 0x000A4485
+	// Token: 0x0600440B RID: 17419 RVA: 0x00025879 File Offset: 0x00023A79
 	private void OnPlayerEnter(object sender, EventArgs args)
 	{
 		base.StartCoroutine(this.SummonCoroutine());
 	}
 
-	// Token: 0x060030DB RID: 12507 RVA: 0x000A6294 File Offset: 0x000A4494
+	// Token: 0x0600440C RID: 17420 RVA: 0x00025888 File Offset: 0x00023A88
 	public void StartArena()
 	{
 		this.m_isArenaRunning = true;
@@ -158,7 +158,7 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		}
 	}
 
-	// Token: 0x060030DC RID: 12508 RVA: 0x000A62B7 File Offset: 0x000A44B7
+	// Token: 0x0600440D RID: 17421 RVA: 0x000258AB File Offset: 0x00023AAB
 	public void StopArena(bool arenaComplete)
 	{
 		this.m_isArenaRunning = false;
@@ -171,7 +171,7 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		base.StopAllCoroutines();
 	}
 
-	// Token: 0x060030DD RID: 12509 RVA: 0x000A62E8 File Offset: 0x000A44E8
+	// Token: 0x0600440E RID: 17422 RVA: 0x0010DF7C File Offset: 0x0010C17C
 	public void ResetSummonRuleController()
 	{
 		BaseSummonRule[] summonRuleArray = this.m_summonRuleArray;
@@ -182,7 +182,7 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		this.m_isComplete = false;
 	}
 
-	// Token: 0x060030DE RID: 12510 RVA: 0x000A6319 File Offset: 0x000A4519
+	// Token: 0x0600440F RID: 17423 RVA: 0x000258DB File Offset: 0x00023ADB
 	private IEnumerator SummonCoroutine()
 	{
 		this.m_ruleExecutionIndex = 0;
@@ -209,14 +209,14 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		yield break;
 	}
 
-	// Token: 0x060030DF RID: 12511 RVA: 0x000A6328 File Offset: 0x000A4528
+	// Token: 0x06004410 RID: 17424 RVA: 0x0010DFB0 File Offset: 0x0010C1B0
 	public void AddRule(SummonRuleType ruleType)
 	{
 		BaseSummonRule summonRule = SummonRuleType_RL.GetSummonRule(ruleType);
 		this.AddNewRule(summonRule);
 	}
 
-	// Token: 0x060030E0 RID: 12512 RVA: 0x000A6344 File Offset: 0x000A4544
+	// Token: 0x06004411 RID: 17425 RVA: 0x0010DFCC File Offset: 0x0010C1CC
 	private void AddNewRule(BaseSummonRule ruleToAdd)
 	{
 		if (ruleToAdd != null)
@@ -227,7 +227,7 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		}
 	}
 
-	// Token: 0x060030E1 RID: 12513 RVA: 0x000A6374 File Offset: 0x000A4574
+	// Token: 0x06004412 RID: 17426 RVA: 0x0010DFFC File Offset: 0x0010C1FC
 	private void InsertNewRule(BaseSummonRule ruleToAdd, int index)
 	{
 		if (ruleToAdd != null)
@@ -238,7 +238,7 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		}
 	}
 
-	// Token: 0x060030E2 RID: 12514 RVA: 0x000A63A4 File Offset: 0x000A45A4
+	// Token: 0x06004413 RID: 17427 RVA: 0x0010E02C File Offset: 0x0010C22C
 	public void RemoveRule(int index)
 	{
 		List<BaseSummonRule> list = this.m_summonRuleArray.ToList<BaseSummonRule>();
@@ -246,13 +246,13 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		this.m_summonRuleArray = list.ToArray();
 	}
 
-	// Token: 0x060030E3 RID: 12515 RVA: 0x000A63D0 File Offset: 0x000A45D0
+	// Token: 0x06004414 RID: 17428 RVA: 0x000258EA File Offset: 0x00023AEA
 	public BaseSummonRule GetRule(int index)
 	{
 		return this.m_summonRuleArray[index];
 	}
 
-	// Token: 0x060030E4 RID: 12516 RVA: 0x000A63DC File Offset: 0x000A45DC
+	// Token: 0x06004415 RID: 17429 RVA: 0x0010E058 File Offset: 0x0010C258
 	public void OnBeforeSerialize()
 	{
 		if (this.m_serializedObjArray.Length != this.SummonRuleArray.Length)
@@ -281,7 +281,7 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		}
 	}
 
-	// Token: 0x060030E5 RID: 12517 RVA: 0x000A64C4 File Offset: 0x000A46C4
+	// Token: 0x06004416 RID: 17430 RVA: 0x0010E140 File Offset: 0x0010C340
 	public void OnAfterDeserialize()
 	{
 		List<BaseSummonRule> list = new List<BaseSummonRule>();
@@ -302,59 +302,59 @@ public class SummonRuleController : MonoBehaviour, ISerializationCallbackReceive
 		Debug.Log("<color=red>Could not load serialized objects into the summon rules. For some reason the array sizes do not match.</color>");
 	}
 
-	// Token: 0x040026AE RID: 9902
+	// Token: 0x040034DE RID: 13534
 	[NonSerialized]
 	public List<EnemyTypeAndRank> SummonPool = new List<EnemyTypeAndRank>();
 
-	// Token: 0x040026AF RID: 9903
+	// Token: 0x040034DF RID: 13535
 	[NonSerialized]
 	public List<int> SpawnPoints = new List<int>();
 
-	// Token: 0x040026B0 RID: 9904
+	// Token: 0x040034E0 RID: 13536
 	[NonSerialized]
 	public List<int> AvailableSpawnPoints = new List<int>();
 
-	// Token: 0x040026B1 RID: 9905
+	// Token: 0x040034E1 RID: 13537
 	[NonSerialized]
 	public EnemyRank SummonDifficultyOverride = EnemyRank.None;
 
-	// Token: 0x040026B2 RID: 9906
+	// Token: 0x040034E2 RID: 13538
 	[NonSerialized]
 	public int SummonLevelOverride;
 
-	// Token: 0x040026B3 RID: 9907
+	// Token: 0x040034E3 RID: 13539
 	[NonSerialized]
 	public float SavedCurrentEnemyHP;
 
-	// Token: 0x040026B4 RID: 9908
+	// Token: 0x040034E4 RID: 13540
 	[NonSerialized]
 	public bool PoolIsBiomeSpecific;
 
-	// Token: 0x040026B5 RID: 9909
+	// Token: 0x040034E5 RID: 13541
 	[NonSerialized]
 	public bool PlayerInvincibilityActive;
 
-	// Token: 0x040026B6 RID: 9910
+	// Token: 0x040034E6 RID: 13542
 	[SerializeField]
 	private EnemySummonSerializedData[] m_serializedData = new EnemySummonSerializedData[0];
 
-	// Token: 0x040026B7 RID: 9911
+	// Token: 0x040034E7 RID: 13543
 	[SerializeField]
 	private UnityEngine.Object[] m_serializedObjArray = new UnityEngine.Object[0];
 
-	// Token: 0x040026B8 RID: 9912
+	// Token: 0x040034E8 RID: 13544
 	[NonSerialized]
 	public BaseSummonRule[] m_summonRuleArray = new BaseSummonRule[0];
 
-	// Token: 0x040026B9 RID: 9913
+	// Token: 0x040034E9 RID: 13545
 	private bool m_isComplete;
 
-	// Token: 0x040026BA RID: 9914
+	// Token: 0x040034EA RID: 13546
 	private int m_ruleExecutionIndex;
 
-	// Token: 0x040026BB RID: 9915
+	// Token: 0x040034EB RID: 13547
 	private bool m_isArenaRunning;
 
-	// Token: 0x040026BC RID: 9916
+	// Token: 0x040034EC RID: 13548
 	private bool m_isInitialized;
 }

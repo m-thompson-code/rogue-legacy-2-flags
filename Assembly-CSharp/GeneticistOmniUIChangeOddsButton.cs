@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003AA RID: 938
+// Token: 0x0200063D RID: 1597
 public class GeneticistOmniUIChangeOddsButton : OmniUIButton, IGeneticistOmniUIButton
 {
-	// Token: 0x17000E5C RID: 3676
-	// (get) Token: 0x060022C0 RID: 8896 RVA: 0x000713D9 File Offset: 0x0006F5D9
+	// Token: 0x170012EF RID: 4847
+	// (get) Token: 0x060030D8 RID: 12504 RVA: 0x0001ACB1 File Offset: 0x00018EB1
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -15,12 +15,12 @@ public class GeneticistOmniUIChangeOddsButton : OmniUIButton, IGeneticistOmniUIB
 		}
 	}
 
-	// Token: 0x17000E5D RID: 3677
-	// (get) Token: 0x060022C1 RID: 8897 RVA: 0x000713E1 File Offset: 0x0006F5E1
-	// (set) Token: 0x060022C2 RID: 8898 RVA: 0x000713E9 File Offset: 0x0006F5E9
+	// Token: 0x170012F0 RID: 4848
+	// (get) Token: 0x060030D9 RID: 12505 RVA: 0x0001ACB9 File Offset: 0x00018EB9
+	// (set) Token: 0x060030DA RID: 12506 RVA: 0x0001ACC1 File Offset: 0x00018EC1
 	public TraitType TraitType { get; set; }
 
-	// Token: 0x060022C3 RID: 8899 RVA: 0x000713F2 File Offset: 0x0006F5F2
+	// Token: 0x060030DB RID: 12507 RVA: 0x0001ACCA File Offset: 0x00018ECA
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -31,7 +31,7 @@ public class GeneticistOmniUIChangeOddsButton : OmniUIButton, IGeneticistOmniUIB
 		this.m_descriptionEventArgs.Initialize(this.TraitType, this.m_isRightArrow);
 	}
 
-	// Token: 0x060022C4 RID: 8900 RVA: 0x0007142C File Offset: 0x0006F62C
+	// Token: 0x060030DC RID: 12508 RVA: 0x000D1DD0 File Offset: 0x000CFFD0
 	public override void UpdateState()
 	{
 		TraitSpawnOdds traitSpawnOdds = TraitManager.GetTraitSpawnOdds(this.TraitType);
@@ -78,7 +78,7 @@ public class GeneticistOmniUIChangeOddsButton : OmniUIButton, IGeneticistOmniUIB
 		}
 	}
 
-	// Token: 0x060022C5 RID: 8901 RVA: 0x00071520 File Offset: 0x0006F720
+	// Token: 0x060030DD RID: 12509 RVA: 0x000D1EC4 File Offset: 0x000D00C4
 	public override void OnConfirmButtonPressed()
 	{
 		if (this.m_isRightArrow)
@@ -100,14 +100,14 @@ public class GeneticistOmniUIChangeOddsButton : OmniUIButton, IGeneticistOmniUIB
 		base.OnConfirmButtonPressed();
 	}
 
-	// Token: 0x04001DE2 RID: 7650
+	// Token: 0x04002802 RID: 10242
 	[SerializeField]
 	private bool m_isRightArrow;
 
-	// Token: 0x04001DE3 RID: 7651
+	// Token: 0x04002803 RID: 10243
 	[SerializeField]
 	private TMP_Text m_oddsText;
 
-	// Token: 0x04001DE4 RID: 7652
+	// Token: 0x04002804 RID: 10244
 	private GeneticistOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000654 RID: 1620
+// Token: 0x02000A9F RID: 2719
 public class CheckConnectionRoomsBuildRule_Default : CheckConnectionRoomsBuildRule
 {
 }

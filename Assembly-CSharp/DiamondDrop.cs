@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200046F RID: 1135
+// Token: 0x02000765 RID: 1893
 public class DiamondDrop : CoinDrop
 {
-	// Token: 0x1700103D RID: 4157
-	// (get) Token: 0x060029C3 RID: 10691 RVA: 0x00089EBA File Offset: 0x000880BA
+	// Token: 0x17001572 RID: 5490
+	// (get) Token: 0x060039CD RID: 14797 RVA: 0x00005315 File Offset: 0x00003515
 	public override ItemDropType ItemDropType
 	{
 		get

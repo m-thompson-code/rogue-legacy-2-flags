@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020005FE RID: 1534
+// Token: 0x02000A1D RID: 2589
 public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnController, ISpawnController, IRoomConsumer, IIDConsumer
 {
-	// Token: 0x170013B9 RID: 5049
-	// (get) Token: 0x060037AA RID: 14250 RVA: 0x000BEC8F File Offset: 0x000BCE8F
+	// Token: 0x17001B0C RID: 6924
+	// (get) Token: 0x06004E3B RID: 20027 RVA: 0x00003713 File Offset: 0x00001913
 	public GameObject GameObject
 	{
 		get
@@ -14,9 +14,9 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		}
 	}
 
-	// Token: 0x170013BA RID: 5050
-	// (get) Token: 0x060037AB RID: 14251 RVA: 0x000BEC97 File Offset: 0x000BCE97
-	// (set) Token: 0x060037AC RID: 14252 RVA: 0x000BEC9F File Offset: 0x000BCE9F
+	// Token: 0x17001B0D RID: 6925
+	// (get) Token: 0x06004E3C RID: 20028 RVA: 0x0002A922 File Offset: 0x00028B22
+	// (set) Token: 0x06004E3D RID: 20029 RVA: 0x0002A92A File Offset: 0x00028B2A
 	public int ID
 	{
 		get
@@ -29,8 +29,8 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		}
 	}
 
-	// Token: 0x170013BB RID: 5051
-	// (get) Token: 0x060037AD RID: 14253 RVA: 0x000BECA8 File Offset: 0x000BCEA8
+	// Token: 0x17001B0E RID: 6926
+	// (get) Token: 0x06004E3E RID: 20030 RVA: 0x0002A933 File Offset: 0x00028B33
 	public bool ShouldSpawn
 	{
 		get
@@ -39,9 +39,9 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		}
 	}
 
-	// Token: 0x170013BC RID: 5052
-	// (get) Token: 0x060037AE RID: 14254 RVA: 0x000BECC5 File Offset: 0x000BCEC5
-	// (set) Token: 0x060037AF RID: 14255 RVA: 0x000BECCD File Offset: 0x000BCECD
+	// Token: 0x17001B0F RID: 6927
+	// (get) Token: 0x06004E3F RID: 20031 RVA: 0x0002A950 File Offset: 0x00028B50
+	// (set) Token: 0x06004E40 RID: 20032 RVA: 0x0002A958 File Offset: 0x00028B58
 	public BaseRoom Room
 	{
 		get
@@ -54,8 +54,8 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		}
 	}
 
-	// Token: 0x170013BD RID: 5053
-	// (get) Token: 0x060037B0 RID: 14256 RVA: 0x000BECD6 File Offset: 0x000BCED6
+	// Token: 0x17001B10 RID: 6928
+	// (get) Token: 0x06004E41 RID: 20033 RVA: 0x0002A961 File Offset: 0x00028B61
 	public SpawnLogicController SpawnLogicController
 	{
 		get
@@ -69,7 +69,7 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		}
 	}
 
-	// Token: 0x060037B1 RID: 14257 RVA: 0x000BECFC File Offset: 0x000BCEFC
+	// Token: 0x06004E42 RID: 20034 RVA: 0x0012D608 File Offset: 0x0012B808
 	protected virtual void Awake()
 	{
 		SpriteRenderer component = base.GetComponent<SpriteRenderer>();
@@ -79,7 +79,7 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		}
 	}
 
-	// Token: 0x060037B2 RID: 14258 RVA: 0x000BED1F File Offset: 0x000BCF1F
+	// Token: 0x06004E43 RID: 20035 RVA: 0x0002A984 File Offset: 0x00028B84
 	private void OnDisable()
 	{
 		if (base.gameObject.activeInHierarchy)
@@ -88,15 +88,15 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		}
 	}
 
-	// Token: 0x060037B3 RID: 14259
+	// Token: 0x06004E44 RID: 20036
 	protected abstract void Reset();
 
-	// Token: 0x060037B4 RID: 14260 RVA: 0x000BED34 File Offset: 0x000BCF34
+	// Token: 0x06004E45 RID: 20037 RVA: 0x00002FCA File Offset: 0x000011CA
 	public void SetID(int id)
 	{
 	}
 
-	// Token: 0x060037B5 RID: 14261 RVA: 0x000BED38 File Offset: 0x000BCF38
+	// Token: 0x06004E46 RID: 20038 RVA: 0x0012D62C File Offset: 0x0012B82C
 	public virtual void SetRoom(BaseRoom room)
 	{
 		if (this.Room)
@@ -111,10 +111,10 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		this.Room.RoomDestroyedRelay.AddListener(new Action<object, EventArgs>(this.OnRoomDestroyed), false);
 	}
 
-	// Token: 0x060037B6 RID: 14262
+	// Token: 0x06004E47 RID: 20039
 	protected abstract void Spawn();
 
-	// Token: 0x060037B7 RID: 14263 RVA: 0x000BEE0A File Offset: 0x000BD00A
+	// Token: 0x06004E48 RID: 20040 RVA: 0x0002A999 File Offset: 0x00028B99
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (this.ShouldSpawn)
@@ -123,7 +123,7 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		}
 	}
 
-	// Token: 0x060037B8 RID: 14264 RVA: 0x000BEE1A File Offset: 0x000BD01A
+	// Token: 0x06004E49 RID: 20041 RVA: 0x0002A9A9 File Offset: 0x00028BA9
 	private void OnPlayerExitRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (this.ShouldSpawn)
@@ -132,7 +132,7 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		}
 	}
 
-	// Token: 0x060037B9 RID: 14265 RVA: 0x000BEE2C File Offset: 0x000BD02C
+	// Token: 0x06004E4A RID: 20042 RVA: 0x0012D700 File Offset: 0x0012B900
 	private void OnRoomDestroyed(object sender, EventArgs e)
 	{
 		this.Room.PlayerEnterRelay.RemoveListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom));
@@ -140,23 +140,23 @@ public abstract class ComplexSpawnController : MonoBehaviour, IComplexSpawnContr
 		this.Room.RoomDestroyedRelay.RemoveListener(new Action<object, EventArgs>(this.OnRoomDestroyed));
 	}
 
-	// Token: 0x060037BB RID: 14267 RVA: 0x000BEE98 File Offset: 0x000BD098
+	// Token: 0x06004E4C RID: 20044 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISpawnController.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002AB7 RID: 10935
+	// Token: 0x04003B0F RID: 15119
 	[SerializeField]
 	[ReadOnly]
 	private int m_id;
 
-	// Token: 0x04002AB8 RID: 10936
+	// Token: 0x04003B10 RID: 15120
 	private SpawnLogicController m_spawnLogicController;
 
-	// Token: 0x04002AB9 RID: 10937
+	// Token: 0x04003B11 RID: 15121
 	private BaseRoom m_room;
 
-	// Token: 0x04002ABA RID: 10938
+	// Token: 0x04003B12 RID: 15122
 	private bool m_hasCheckedForSpawnController;
 }

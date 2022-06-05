@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020005D9 RID: 1497
+// Token: 0x020009E1 RID: 2529
 public interface IRuneDrop : ISpecialItemDrop
 {
-	// Token: 0x1700135E RID: 4958
-	// (get) Token: 0x060036A5 RID: 13989
+	// Token: 0x17001A8B RID: 6795
+	// (get) Token: 0x06004CB7 RID: 19639
 	RuneType RuneType { get; }
 }

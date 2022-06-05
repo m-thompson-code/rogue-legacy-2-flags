@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200041F RID: 1055
+// Token: 0x020006D8 RID: 1752
 public class OnTouchEnterEffectTrigger : BaseEffectTrigger, IStandingOnEnter
 {
-	// Token: 0x17000F88 RID: 3976
-	// (get) Token: 0x060026FD RID: 9981 RVA: 0x00081EAA File Offset: 0x000800AA
+	// Token: 0x1700144F RID: 5199
+	// (get) Token: 0x060035B8 RID: 13752 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool RequiresCollider
 	{
 		get
@@ -14,8 +14,8 @@ public class OnTouchEnterEffectTrigger : BaseEffectTrigger, IStandingOnEnter
 		}
 	}
 
-	// Token: 0x17000F89 RID: 3977
-	// (get) Token: 0x060026FE RID: 9982 RVA: 0x00081EB0 File Offset: 0x000800B0
+	// Token: 0x17001450 RID: 5200
+	// (get) Token: 0x060035B9 RID: 13753 RVA: 0x000E2244 File Offset: 0x000E0444
 	public override Vector3 Midpoint
 	{
 		get
@@ -28,7 +28,7 @@ public class OnTouchEnterEffectTrigger : BaseEffectTrigger, IStandingOnEnter
 		}
 	}
 
-	// Token: 0x060026FF RID: 9983 RVA: 0x00081EEC File Offset: 0x000800EC
+	// Token: 0x060035BA RID: 13754 RVA: 0x000E2280 File Offset: 0x000E0480
 	protected override void Awake()
 	{
 		base.Awake();
@@ -62,14 +62,14 @@ public class OnTouchEnterEffectTrigger : BaseEffectTrigger, IStandingOnEnter
 		base.gameObject.layer = LayerMask.NameToLayer("Prop_Hitbox");
 	}
 
-	// Token: 0x06002700 RID: 9984 RVA: 0x00081F9A File Offset: 0x0008019A
+	// Token: 0x060035BB RID: 13755 RVA: 0x0001D772 File Offset: 0x0001B972
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		base.StopAllCoroutines();
 		this.HandleCollision(collision);
 	}
 
-	// Token: 0x06002701 RID: 9985 RVA: 0x00081FAC File Offset: 0x000801AC
+	// Token: 0x060035BC RID: 13756 RVA: 0x000E2330 File Offset: 0x000E0530
 	private void HandleCollision(Collider2D collision)
 	{
 		GameObject root = collision.GetRoot(false);
@@ -113,7 +113,7 @@ public class OnTouchEnterEffectTrigger : BaseEffectTrigger, IStandingOnEnter
 		}
 	}
 
-	// Token: 0x06002702 RID: 9986 RVA: 0x000820D4 File Offset: 0x000802D4
+	// Token: 0x060035BD RID: 13757 RVA: 0x000E2458 File Offset: 0x000E0658
 	public void OnStandingEnter(GameObject otherRootObj)
 	{
 		if (!CDGHelper.DoCollisionTypesCollide_V2(base.CanCollideWith, otherRootObj))
@@ -132,6 +132,6 @@ public class OnTouchEnterEffectTrigger : BaseEffectTrigger, IStandingOnEnter
 		}
 	}
 
-	// Token: 0x040020C4 RID: 8388
+	// Token: 0x04002BAA RID: 11178
 	protected Collider2D m_collider;
 }

@@ -5,11 +5,11 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x0200069F RID: 1695
+// Token: 0x02000B39 RID: 2873
 public class LocalizationManager : MonoBehaviour
 {
-	// Token: 0x17001553 RID: 5459
-	// (get) Token: 0x06003DEC RID: 15852 RVA: 0x000D87CB File Offset: 0x000D69CB
+	// Token: 0x17001D3B RID: 7483
+	// (get) Token: 0x060056DD RID: 22237 RVA: 0x0002F3EA File Offset: 0x0002D5EA
 	public static LanguageType[] AvailableLanguages
 	{
 		get
@@ -18,8 +18,8 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001554 RID: 5460
-	// (get) Token: 0x06003DED RID: 15853 RVA: 0x000D87D7 File Offset: 0x000D69D7
+	// Token: 0x17001D3C RID: 7484
+	// (get) Token: 0x060056DE RID: 22238 RVA: 0x0002F3F6 File Offset: 0x0002D5F6
 	public static int NumberOfLanguages
 	{
 		get
@@ -28,8 +28,8 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001555 RID: 5461
-	// (get) Token: 0x06003DEE RID: 15854 RVA: 0x000D87E5 File Offset: 0x000D69E5
+	// Token: 0x17001D3D RID: 7485
+	// (get) Token: 0x060056DF RID: 22239 RVA: 0x0002F404 File Offset: 0x0002D604
 	public static int MaleDictSize
 	{
 		get
@@ -38,8 +38,8 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001556 RID: 5462
-	// (get) Token: 0x06003DEF RID: 15855 RVA: 0x000D87F6 File Offset: 0x000D69F6
+	// Token: 0x17001D3E RID: 7486
+	// (get) Token: 0x060056E0 RID: 22240 RVA: 0x0002F415 File Offset: 0x0002D615
 	public static int FemaleDictSize
 	{
 		get
@@ -48,8 +48,8 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001557 RID: 5463
-	// (get) Token: 0x06003DF0 RID: 15856 RVA: 0x000D8807 File Offset: 0x000D6A07
+	// Token: 0x17001D3F RID: 7487
+	// (get) Token: 0x060056E1 RID: 22241 RVA: 0x0002F426 File Offset: 0x0002D626
 	public static bool IsInitialized
 	{
 		get
@@ -58,8 +58,8 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001558 RID: 5464
-	// (get) Token: 0x06003DF1 RID: 15857 RVA: 0x000D880E File Offset: 0x000D6A0E
+	// Token: 0x17001D40 RID: 7488
+	// (get) Token: 0x060056E2 RID: 22242 RVA: 0x0002F42D File Offset: 0x0002D62D
 	public static string[] MaleNameArray
 	{
 		get
@@ -68,8 +68,8 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001559 RID: 5465
-	// (get) Token: 0x06003DF2 RID: 15858 RVA: 0x000D881A File Offset: 0x000D6A1A
+	// Token: 0x17001D41 RID: 7489
+	// (get) Token: 0x060056E3 RID: 22243 RVA: 0x0002F439 File Offset: 0x0002D639
 	public static string[] FemaleNameArray
 	{
 		get
@@ -78,8 +78,8 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700155A RID: 5466
-	// (get) Token: 0x06003DF3 RID: 15859 RVA: 0x000D8826 File Offset: 0x000D6A26
+	// Token: 0x17001D42 RID: 7490
+	// (get) Token: 0x060056E4 RID: 22244 RVA: 0x0002F445 File Offset: 0x0002D645
 	public static LanguageType CurrentLanguageType
 	{
 		get
@@ -88,7 +88,7 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DF4 RID: 15860 RVA: 0x000D8834 File Offset: 0x000D6A34
+	// Token: 0x060056E5 RID: 22245 RVA: 0x001491B0 File Offset: 0x001473B0
 	public static string GetLanguageLocID(LanguageType languageType)
 	{
 		string result;
@@ -99,13 +99,13 @@ public class LocalizationManager : MonoBehaviour
 		return LocalizationManager.Instance.m_languageLocStringDict[LanguageType.English];
 	}
 
-	// Token: 0x06003DF5 RID: 15861 RVA: 0x000D8867 File Offset: 0x000D6A67
+	// Token: 0x060056E6 RID: 22246 RVA: 0x0002F451 File Offset: 0x0002D651
 	public static CultureInfo GetCurrentCultureInfo()
 	{
 		return LocalizationManager.GetCultureInfo(LocalizationManager.CurrentLanguageType);
 	}
 
-	// Token: 0x06003DF6 RID: 15862 RVA: 0x000D8874 File Offset: 0x000D6A74
+	// Token: 0x060056E7 RID: 22247 RVA: 0x001491E4 File Offset: 0x001473E4
 	public static CultureInfo GetCultureInfo(LanguageType languageType)
 	{
 		CultureInfo result;
@@ -116,8 +116,8 @@ public class LocalizationManager : MonoBehaviour
 		return SaveManager.CultureInfo;
 	}
 
-	// Token: 0x1700155B RID: 5467
-	// (get) Token: 0x06003DF7 RID: 15863 RVA: 0x000D889C File Offset: 0x000D6A9C
+	// Token: 0x17001D43 RID: 7491
+	// (get) Token: 0x060056E8 RID: 22248 RVA: 0x0002F45D File Offset: 0x0002D65D
 	public static LocalizationManager Instance
 	{
 		get
@@ -130,7 +130,7 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DF8 RID: 15864 RVA: 0x000D88BC File Offset: 0x000D6ABC
+	// Token: 0x060056E9 RID: 22249 RVA: 0x0014920C File Offset: 0x0014740C
 	private void Awake()
 	{
 		if (Application.isPlaying && !LocalizationManager.IsInitialized)
@@ -152,7 +152,7 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DF9 RID: 15865 RVA: 0x000D8980 File Offset: 0x000D6B80
+	// Token: 0x060056EA RID: 22250 RVA: 0x001492D0 File Offset: 0x001474D0
 	private void InitializeCultureInfo()
 	{
 		this.m_cultureInfoDict = new Dictionary<LanguageType, CultureInfo>();
@@ -169,7 +169,7 @@ public class LocalizationManager : MonoBehaviour
 		this.m_cultureInfoDict.Add(LanguageType.Chinese_Trad, CultureInfo.GetCultureInfo("zh-TW"));
 	}
 
-	// Token: 0x06003DFA RID: 15866 RVA: 0x000D8A8C File Offset: 0x000D6C8C
+	// Token: 0x060056EB RID: 22251 RVA: 0x0002F47B File Offset: 0x0002D67B
 	private void ChangeLanguage_Internal(LanguageType languageType, bool broadcastEvent)
 	{
 		if (LocalizationManager.CurrentLanguageType != languageType)
@@ -178,13 +178,13 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DFB RID: 15867 RVA: 0x000D8A9D File Offset: 0x000D6C9D
+	// Token: 0x060056EC RID: 22252 RVA: 0x0002F48C File Offset: 0x0002D68C
 	private bool IsValidName(string name)
 	{
 		return !string.IsNullOrWhiteSpace(name) && !name.Contains('\\') && (name.Length < 2 || name[0] != '/' || name[1] != '/');
 	}
 
-	// Token: 0x06003DFC RID: 15868 RVA: 0x000D8AD8 File Offset: 0x000D6CD8
+	// Token: 0x060056ED RID: 22253 RVA: 0x001493DC File Offset: 0x001475DC
 	private void LoadOrCreateCustomNames(bool male)
 	{
 		string text = male ? "male" : "female";
@@ -286,14 +286,14 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DFD RID: 15869 RVA: 0x000D8D60 File Offset: 0x000D6F60
+	// Token: 0x060056EE RID: 22254 RVA: 0x0002F4C6 File Offset: 0x0002D6C6
 	private void LoadNames()
 	{
 		this.LoadOrCreateCustomNames(true);
 		this.LoadOrCreateCustomNames(false);
 	}
 
-	// Token: 0x06003DFE RID: 15870 RVA: 0x000D8D70 File Offset: 0x000D6F70
+	// Token: 0x060056EF RID: 22255 RVA: 0x00149664 File Offset: 0x00147864
 	public static void LoadLanguage(LanguageType languageType, bool broadcastEvent)
 	{
 		if (LocalizationManager.Instance.m_maleLocDict == null)
@@ -458,7 +458,7 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003DFF RID: 15871 RVA: 0x000D9247 File Offset: 0x000D7447
+	// Token: 0x060056F0 RID: 22256 RVA: 0x0002F4D6 File Offset: 0x0002D6D6
 	public static bool ContainsLocID(string locID, bool isFemale)
 	{
 		if (!isFemale)
@@ -468,7 +468,7 @@ public class LocalizationManager : MonoBehaviour
 		return LocalizationManager.Instance.m_femaleLocDict.ContainsKey(locID);
 	}
 
-	// Token: 0x06003E00 RID: 15872 RVA: 0x000D9270 File Offset: 0x000D7470
+	// Token: 0x060056F1 RID: 22257 RVA: 0x00149B3C File Offset: 0x00147D3C
 	public static string GetString(string locID, bool isFemale, out bool isFormatString, bool disableWordScramble = false)
 	{
 		isFormatString = false;
@@ -480,7 +480,7 @@ public class LocalizationManager : MonoBehaviour
 		return @string;
 	}
 
-	// Token: 0x06003E01 RID: 15873 RVA: 0x000D92A4 File Offset: 0x000D74A4
+	// Token: 0x060056F2 RID: 22258 RVA: 0x00149B70 File Offset: 0x00147D70
 	public static string GetString(string locID, bool isFemale, bool disableWordScramble = false)
 	{
 		if (string.IsNullOrWhiteSpace(locID))
@@ -529,7 +529,7 @@ public class LocalizationManager : MonoBehaviour
 		return text;
 	}
 
-	// Token: 0x06003E02 RID: 15874 RVA: 0x000D93BC File Offset: 0x000D75BC
+	// Token: 0x060056F3 RID: 22259 RVA: 0x00149C88 File Offset: 0x00147E88
 	public static string GetLocalizedPlayerName(CharacterData charData)
 	{
 		bool isFemale = charData.IsFemale;
@@ -547,13 +547,13 @@ public class LocalizationManager : MonoBehaviour
 		return text;
 	}
 
-	// Token: 0x06003E03 RID: 15875 RVA: 0x000D943E File Offset: 0x000D763E
+	// Token: 0x060056F4 RID: 22260 RVA: 0x0002F4FC File Offset: 0x0002D6FC
 	public static void ChangeLanguage(LanguageType languageType, bool broadcastEvent)
 	{
 		LocalizationManager.Instance.ChangeLanguage_Internal(languageType, broadcastEvent);
 	}
 
-	// Token: 0x06003E04 RID: 15876 RVA: 0x000D944C File Offset: 0x000D764C
+	// Token: 0x060056F5 RID: 22261 RVA: 0x00149D0C File Offset: 0x00147F0C
 	public static void ForceRefreshAllTextGlyphs()
 	{
 		foreach (TextGlyphConverter textGlyphConverter in UnityEngine.Object.FindObjectsOfType<TextGlyphConverter>())
@@ -565,7 +565,7 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E05 RID: 15877 RVA: 0x000D9488 File Offset: 0x000D7688
+	// Token: 0x060056F6 RID: 22262 RVA: 0x00149D48 File Offset: 0x00147F48
 	public static string GetFormatterGenderForcedString(string formatter, out bool isFemale)
 	{
 		isFemale = false;
@@ -584,16 +584,16 @@ public class LocalizationManager : MonoBehaviour
 		return formatter;
 	}
 
-	// Token: 0x04002E26 RID: 11814
+	// Token: 0x0400403F RID: 16447
 	private const string LINE_BREAK = "</LB>";
 
-	// Token: 0x04002E27 RID: 11815
+	// Token: 0x04004040 RID: 16448
 	private const string FORMATTER_FORCE_M = "[M]";
 
-	// Token: 0x04002E28 RID: 11816
+	// Token: 0x04004041 RID: 16449
 	private const string FORMATTER_FORCE_F = "[F]";
 
-	// Token: 0x04002E29 RID: 11817
+	// Token: 0x04004042 RID: 16450
 	private static readonly string[] NAME_FILE_INSTRUCTIONS = new string[]
 	{
 		"// There must be at least 5 names on this list, otherwise the game will use its default name list.",
@@ -603,7 +603,7 @@ public class LocalizationManager : MonoBehaviour
 		"// Use Notepad++ for best results!"
 	};
 
-	// Token: 0x04002E2A RID: 11818
+	// Token: 0x04004043 RID: 16451
 	private Dictionary<LanguageType, string> m_languageLocStringDict = new Dictionary<LanguageType, string>
 	{
 		{
@@ -652,78 +652,78 @@ public class LocalizationManager : MonoBehaviour
 		}
 	};
 
-	// Token: 0x04002E2B RID: 11819
+	// Token: 0x04004044 RID: 16452
 	[SerializeField]
 	private LanguageTypeTextAssetDictionary m_languageDict;
 
-	// Token: 0x04002E2C RID: 11820
+	// Token: 0x04004045 RID: 16453
 	[SerializeField]
 	private LanguageTypeTextAssetDictionary m_defaultMaleNamesDict;
 
-	// Token: 0x04002E2D RID: 11821
+	// Token: 0x04004046 RID: 16454
 	[SerializeField]
 	private LanguageTypeTextAssetDictionary m_defaultFemaleNamesDict;
 
-	// Token: 0x04002E2E RID: 11822
+	// Token: 0x04004047 RID: 16455
 	[SerializeField]
 	private LocalizationManager.PlatformLocIDReplacement[] m_platformLocIDReplacementArray;
 
-	// Token: 0x04002E2F RID: 11823
+	// Token: 0x04004048 RID: 16456
 	private LanguageType m_currentLanguageType;
 
-	// Token: 0x04002E30 RID: 11824
+	// Token: 0x04004049 RID: 16457
 	private Dictionary<string, string> m_maleLocDict;
 
-	// Token: 0x04002E31 RID: 11825
+	// Token: 0x0400404A RID: 16458
 	private Dictionary<string, string> m_femaleLocDict;
 
-	// Token: 0x04002E32 RID: 11826
+	// Token: 0x0400404B RID: 16459
 	private LanguageType[] m_availableLanguages;
 
-	// Token: 0x04002E33 RID: 11827
+	// Token: 0x0400404C RID: 16460
 	private LanguageChangedEventArgs m_langChangedEventArgs;
 
-	// Token: 0x04002E34 RID: 11828
+	// Token: 0x0400404D RID: 16461
 	private static bool m_isInitialized;
 
-	// Token: 0x04002E35 RID: 11829
+	// Token: 0x0400404E RID: 16462
 	private static bool m_usingMaleNameOverrideList;
 
-	// Token: 0x04002E36 RID: 11830
+	// Token: 0x0400404F RID: 16463
 	private static bool m_usingFemaleNameOverrideList;
 
-	// Token: 0x04002E37 RID: 11831
+	// Token: 0x04004050 RID: 16464
 	private string[] m_maleNameArray;
 
-	// Token: 0x04002E38 RID: 11832
+	// Token: 0x04004051 RID: 16465
 	private string[] m_femaleNameArray;
 
-	// Token: 0x04002E39 RID: 11833
+	// Token: 0x04004052 RID: 16466
 	private Dictionary<LanguageType, CultureInfo> m_cultureInfoDict;
 
-	// Token: 0x04002E3A RID: 11834
+	// Token: 0x04004053 RID: 16467
 	private static LocalizationManager m_manager = null;
 
-	// Token: 0x02000E10 RID: 3600
+	// Token: 0x02000B3A RID: 2874
 	[Serializable]
 	public struct PlatformLocIDReplacement
 	{
-		// Token: 0x06006B4A RID: 27466 RVA: 0x001912C1 File Offset: 0x0018F4C1
+		// Token: 0x060056F9 RID: 22265 RVA: 0x0002F545 File Offset: 0x0002D745
 		public string GetReplacementLocID()
 		{
 			return this.LocIDToReplace;
 		}
 
-		// Token: 0x040056A1 RID: 22177
+		// Token: 0x04004054 RID: 16468
 		public string LocIDToReplace;
 
-		// Token: 0x040056A2 RID: 22178
+		// Token: 0x04004055 RID: 16469
 		public string XboxLocID;
 
-		// Token: 0x040056A3 RID: 22179
+		// Token: 0x04004056 RID: 16470
 		public string PlayStationLocID;
 
-		// Token: 0x040056A4 RID: 22180
+		// Token: 0x04004057 RID: 16471
 		public string NintendoSwitchLocID;
 	}
 }

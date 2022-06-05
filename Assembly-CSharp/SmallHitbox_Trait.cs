@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000360 RID: 864
+// Token: 0x020005D5 RID: 1493
 public class SmallHitbox_Trait : BaseTrait
 {
-	// Token: 0x17000DF1 RID: 3569
-	// (get) Token: 0x06002094 RID: 8340 RVA: 0x00066B51 File Offset: 0x00064D51
+	// Token: 0x1700125A RID: 4698
+	// (get) Token: 0x06002E27 RID: 11815 RVA: 0x0001943C File Offset: 0x0001763C
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class SmallHitbox_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002095 RID: 8341 RVA: 0x00066B58 File Offset: 0x00064D58
+	// Token: 0x06002E28 RID: 11816 RVA: 0x00019443 File Offset: 0x00017643
 	private IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -37,7 +37,7 @@ public class SmallHitbox_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06002096 RID: 8342 RVA: 0x00066B67 File Offset: 0x00064D67
+	// Token: 0x06002E29 RID: 11817 RVA: 0x00019452 File Offset: 0x00017652
 	private void OnDisable()
 	{
 		if (!PlayerManager.IsDisposed && PlayerManager.GetPlayerController())
@@ -46,7 +46,7 @@ public class SmallHitbox_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002097 RID: 8343 RVA: 0x00066B94 File Offset: 0x00064D94
+	// Token: 0x06002E2A RID: 11818 RVA: 0x000C78C8 File Offset: 0x000C5AC8
 	private void OnDestroy()
 	{
 		UnityEngine.Object.DestroyImmediate(this.m_traitSprite);
@@ -58,13 +58,13 @@ public class SmallHitbox_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x04001C5E RID: 7262
+	// Token: 0x040025F5 RID: 9717
 	[SerializeField]
 	private GameObject m_traitSprite;
 
-	// Token: 0x04001C5F RID: 7263
+	// Token: 0x040025F6 RID: 9718
 	private Vector2 m_storedBodyColliderSize;
 
-	// Token: 0x04001C60 RID: 7264
+	// Token: 0x040025F7 RID: 9719
 	private bool m_traitInitialized;
 }

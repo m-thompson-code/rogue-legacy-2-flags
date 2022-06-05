@@ -2,22 +2,22 @@
 
 namespace RLWorldCreation
 {
-	// Token: 0x02000885 RID: 2181
+	// Token: 0x02000DA5 RID: 3493
 	public class SpecialRoomBuildRequestEventArgs : BiomeCreationEventArgs
 	{
-		// Token: 0x060047B3 RID: 18355 RVA: 0x00102077 File Offset: 0x00100277
+		// Token: 0x060062B1 RID: 25265 RVA: 0x000365F1 File Offset: 0x000347F1
 		public SpecialRoomBuildRequestEventArgs(SpecialRoomType specialRoomType, bool isSuccess)
 		{
 			this.SpecialRoomType = specialRoomType;
 			this.IsSuccess = isSuccess;
 		}
 
-		// Token: 0x1700177E RID: 6014
-		// (get) Token: 0x060047B4 RID: 18356 RVA: 0x0010208D File Offset: 0x0010028D
+		// Token: 0x17001FE0 RID: 8160
+		// (get) Token: 0x060062B2 RID: 25266 RVA: 0x00036607 File Offset: 0x00034807
 		public SpecialRoomType SpecialRoomType { get; }
 
-		// Token: 0x1700177F RID: 6015
-		// (get) Token: 0x060047B5 RID: 18357 RVA: 0x00102095 File Offset: 0x00100295
+		// Token: 0x17001FE1 RID: 8161
+		// (get) Token: 0x060062B3 RID: 25267 RVA: 0x0003660F File Offset: 0x0003480F
 		public bool IsSuccess { get; }
 	}
 }

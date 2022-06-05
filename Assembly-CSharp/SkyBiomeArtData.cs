@@ -1,13 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006BB RID: 1723
+// Token: 0x02000B66 RID: 2918
 [Serializable]
 public class SkyBiomeArtData
 {
-	// Token: 0x170015AC RID: 5548
-	// (get) Token: 0x06003F83 RID: 16259 RVA: 0x000E2316 File Offset: 0x000E0516
-	// (set) Token: 0x06003F84 RID: 16260 RVA: 0x000E231E File Offset: 0x000E051E
+	// Token: 0x17001DA4 RID: 7588
+	// (get) Token: 0x060058BA RID: 22714 RVA: 0x0003043B File Offset: 0x0002E63B
+	// (set) Token: 0x060058BB RID: 22715 RVA: 0x00030443 File Offset: 0x0002E643
 	public GameObject SkyPrefab
 	{
 		get
@@ -20,9 +20,9 @@ public class SkyBiomeArtData
 		}
 	}
 
-	// Token: 0x170015AD RID: 5549
-	// (get) Token: 0x06003F85 RID: 16261 RVA: 0x000E2327 File Offset: 0x000E0527
-	// (set) Token: 0x06003F86 RID: 16262 RVA: 0x000E232F File Offset: 0x000E052F
+	// Token: 0x17001DA5 RID: 7589
+	// (get) Token: 0x060058BC RID: 22716 RVA: 0x0003044C File Offset: 0x0002E64C
+	// (set) Token: 0x060058BD RID: 22717 RVA: 0x00030454 File Offset: 0x0002E654
 	public Vector2Int Dimensions
 	{
 		get
@@ -35,11 +35,11 @@ public class SkyBiomeArtData
 		}
 	}
 
-	// Token: 0x04002F24 RID: 12068
+	// Token: 0x04004173 RID: 16755
 	[SerializeField]
 	private GameObject m_skyPrefab;
 
-	// Token: 0x04002F25 RID: 12069
+	// Token: 0x04004174 RID: 16756
 	[SerializeField]
 	private Vector2Int m_dimensions;
 }

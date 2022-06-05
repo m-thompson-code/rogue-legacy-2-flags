@@ -2,10 +2,10 @@
 using Unity.Cloud.UserReporting.Plugin;
 using UnityEngine;
 
-// Token: 0x02000825 RID: 2085
+// Token: 0x02000CFE RID: 3326
 public class UserReportingConfigureOnly : MonoBehaviour
 {
-	// Token: 0x060044F9 RID: 17657 RVA: 0x000F53CC File Offset: 0x000F35CC
+	// Token: 0x06005ED1 RID: 24273 RVA: 0x00034457 File Offset: 0x00032657
 	private void Start()
 	{
 		if (UnityUserReporting.CurrentClient == null)

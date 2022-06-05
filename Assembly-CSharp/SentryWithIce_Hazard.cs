@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000457 RID: 1111
+// Token: 0x0200073D RID: 1853
 public class SentryWithIce_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjectileNameArray
 {
-	// Token: 0x17001012 RID: 4114
-	// (get) Token: 0x060028FF RID: 10495 RVA: 0x000877A7 File Offset: 0x000859A7
+	// Token: 0x17001529 RID: 5417
+	// (get) Token: 0x060038AF RID: 14511 RVA: 0x0001F1F1 File Offset: 0x0001D3F1
 	public string[] ProjectileNameArray
 	{
 		get
@@ -21,14 +21,14 @@ public class SentryWithIce_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHa
 		}
 	}
 
-	// Token: 0x06002900 RID: 10496 RVA: 0x000877CB File Offset: 0x000859CB
+	// Token: 0x060038B0 RID: 14512 RVA: 0x0001F215 File Offset: 0x0001D415
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onSentryStateChange = new Action<Sentry_Hazard, bool>(this.OnSentryStateChange);
 	}
 
-	// Token: 0x06002901 RID: 10497 RVA: 0x000877E8 File Offset: 0x000859E8
+	// Token: 0x060038B1 RID: 14513 RVA: 0x000E8D90 File Offset: 0x000E6F90
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		for (int i = 0; i < this.m_hazards.Length; i++)
@@ -50,13 +50,13 @@ public class SentryWithIce_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHa
 		}
 	}
 
-	// Token: 0x06002902 RID: 10498 RVA: 0x000878CD File Offset: 0x00085ACD
+	// Token: 0x060038B2 RID: 14514 RVA: 0x0001F22F File Offset: 0x0001D42F
 	private void OnSentryStateChange(Sentry_Hazard hazard, bool resting)
 	{
 		(this.m_hazards[1] as IceCrystal_Hazard).SetIceCrystalPaused(resting);
 	}
 
-	// Token: 0x06002903 RID: 10499 RVA: 0x000878E4 File Offset: 0x00085AE4
+	// Token: 0x060038B3 RID: 14515 RVA: 0x000E8E78 File Offset: 0x000E7078
 	public override void ResetHazard()
 	{
 		for (int i = 0; i < this.m_hazards.Length; i++)
@@ -65,7 +65,7 @@ public class SentryWithIce_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHa
 		}
 	}
 
-	// Token: 0x06002904 RID: 10500 RVA: 0x00087914 File Offset: 0x00085B14
+	// Token: 0x060038B4 RID: 14516 RVA: 0x000E8EA8 File Offset: 0x000E70A8
 	public override void SetIsCulled(bool culled)
 	{
 		base.SetIsCulled(culled);
@@ -75,7 +75,7 @@ public class SentryWithIce_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHa
 		}
 	}
 
-	// Token: 0x06002905 RID: 10501 RVA: 0x0008794C File Offset: 0x00085B4C
+	// Token: 0x060038B5 RID: 14517 RVA: 0x000E8EE0 File Offset: 0x000E70E0
 	protected override void OnDisable()
 	{
 		for (int i = 0; i < this.m_hazards.Length; i++)
@@ -95,19 +95,19 @@ public class SentryWithIce_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHa
 		base.OnDisable();
 	}
 
-	// Token: 0x06002907 RID: 10503 RVA: 0x000879DD File Offset: 0x00085BDD
+	// Token: 0x060038B7 RID: 14519 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040021CD RID: 8653
+	// Token: 0x04002D70 RID: 11632
 	private IHazard[] m_hazards = new IHazard[2];
 
-	// Token: 0x040021CE RID: 8654
+	// Token: 0x04002D71 RID: 11633
 	private Action<Sentry_Hazard, bool> m_onSentryStateChange;
 
-	// Token: 0x040021CF RID: 8655
+	// Token: 0x04002D72 RID: 11634
 	[NonSerialized]
 	private string[] m_projectileNameArray;
 }

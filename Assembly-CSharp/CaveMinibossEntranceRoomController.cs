@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004F5 RID: 1269
+// Token: 0x02000850 RID: 2128
 public class CaveMinibossEntranceRoomController : BaseSpecialRoomController
 {
-	// Token: 0x170011B5 RID: 4533
-	// (get) Token: 0x06002F83 RID: 12163 RVA: 0x000A29B8 File Offset: 0x000A0BB8
+	// Token: 0x1700179A RID: 6042
+	// (get) Token: 0x060041AA RID: 16810 RVA: 0x000245F5 File Offset: 0x000227F5
 	public bool IsWhiteDoor
 	{
 		get
@@ -14,7 +14,7 @@ public class CaveMinibossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F84 RID: 12164 RVA: 0x000A29C8 File Offset: 0x000A0BC8
+	// Token: 0x060041AB RID: 16811 RVA: 0x001083C8 File Offset: 0x001065C8
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -57,17 +57,17 @@ public class CaveMinibossEntranceRoomController : BaseSpecialRoomController
 		this.m_bossTunnel.Tunnel.SetIsLocked(false);
 	}
 
-	// Token: 0x06002F85 RID: 12165 RVA: 0x000A2B8A File Offset: 0x000A0D8A
+	// Token: 0x060041AC RID: 16812 RVA: 0x00024604 File Offset: 0x00022804
 	private void OnDisable()
 	{
 		BossEntranceRoomController.RunDoorCrumbleAnimation = false;
 	}
 
-	// Token: 0x040025E3 RID: 9699
+	// Token: 0x0400336A RID: 13162
 	[SerializeField]
 	protected PlayerSaveFlag m_bossBeatenFlag;
 
-	// Token: 0x040025E4 RID: 9700
+	// Token: 0x0400336B RID: 13163
 	[SerializeField]
 	private TunnelSpawnController m_bossTunnel;
 }

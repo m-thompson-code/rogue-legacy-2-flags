@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020003EF RID: 1007
+// Token: 0x02000694 RID: 1684
 public class Barricade : MonoBehaviour
 {
-	// Token: 0x17000EEF RID: 3823
-	// (get) Token: 0x0600251E RID: 9502 RVA: 0x0007B2B7 File Offset: 0x000794B7
+	// Token: 0x17001398 RID: 5016
+	// (get) Token: 0x06003378 RID: 13176 RVA: 0x0001C324 File Offset: 0x0001A524
 	public Ferr2DT_PathTerrain Ferr2D
 	{
 		get
@@ -18,8 +18,8 @@ public class Barricade : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EF0 RID: 3824
-	// (get) Token: 0x0600251F RID: 9503 RVA: 0x0007B2D9 File Offset: 0x000794D9
+	// Token: 0x17001399 RID: 5017
+	// (get) Token: 0x06003379 RID: 13177 RVA: 0x00003713 File Offset: 0x00001913
 	public GameObject GameObject
 	{
 		get
@@ -28,6 +28,6 @@ public class Barricade : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001F5D RID: 8029
+	// Token: 0x040029EF RID: 10735
 	private Ferr2DT_PathTerrain m_ferr2D;
 }

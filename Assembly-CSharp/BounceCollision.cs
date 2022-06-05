@@ -3,11 +3,11 @@ using Sigtrap.Relays;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x020001C5 RID: 453
+// Token: 0x0200033C RID: 828
 public class BounceCollision : MonoBehaviour
 {
-	// Token: 0x170009F5 RID: 2549
-	// (get) Token: 0x0600124E RID: 4686 RVA: 0x000356B0 File Offset: 0x000338B0
+	// Token: 0x17000CC3 RID: 3267
+	// (get) Token: 0x06001AC4 RID: 6852 RVA: 0x0000DD40 File Offset: 0x0000BF40
 	public IRelayLink<GameObject> OnBounceRelay
 	{
 		get
@@ -16,8 +16,8 @@ public class BounceCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170009F6 RID: 2550
-	// (get) Token: 0x0600124F RID: 4687 RVA: 0x000356BD File Offset: 0x000338BD
+	// Token: 0x17000CC4 RID: 3268
+	// (get) Token: 0x06001AC5 RID: 6853 RVA: 0x0000DD4D File Offset: 0x0000BF4D
 	public bool JustBounced
 	{
 		get
@@ -26,7 +26,7 @@ public class BounceCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001250 RID: 4688 RVA: 0x000356CC File Offset: 0x000338CC
+	// Token: 0x06001AC6 RID: 6854 RVA: 0x00093010 File Offset: 0x00091210
 	private void Awake()
 	{
 		GameObject root = this.GetRoot(false);
@@ -35,7 +35,7 @@ public class BounceCollision : MonoBehaviour
 		this.m_bounce = new Action<CorgiController_RL>(this.Bounce);
 	}
 
-	// Token: 0x06001251 RID: 4689 RVA: 0x00035708 File Offset: 0x00033908
+	// Token: 0x06001AC7 RID: 6855 RVA: 0x0009304C File Offset: 0x0009124C
 	private void OnEnable()
 	{
 		if (!this.m_bounceListenerAdded && this.m_controller.IsInitialized)
@@ -46,7 +46,7 @@ public class BounceCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001252 RID: 4690 RVA: 0x0003575F File Offset: 0x0003395F
+	// Token: 0x06001AC8 RID: 6856 RVA: 0x0000DD5C File Offset: 0x0000BF5C
 	private void OnDisable()
 	{
 		if (this.m_bounceListenerAdded)
@@ -57,7 +57,7 @@ public class BounceCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001253 RID: 4691 RVA: 0x000357A0 File Offset: 0x000339A0
+	// Token: 0x06001AC9 RID: 6857 RVA: 0x000930A4 File Offset: 0x000912A4
 	private void Bounce(CorgiController_RL corgiController)
 	{
 		if (this.JustBounced)
@@ -87,7 +87,7 @@ public class BounceCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001254 RID: 4692 RVA: 0x000358C8 File Offset: 0x00033AC8
+	// Token: 0x06001ACA RID: 6858 RVA: 0x000931CC File Offset: 0x000913CC
 	private void BounceTowardsPlayer()
 	{
 		Vector2 vector = CDGHelper.VectorBetweenPts(this.m_controller.Midpoint, PlayerManager.GetPlayerController().Midpoint);
@@ -95,7 +95,7 @@ public class BounceCollision : MonoBehaviour
 		this.m_controller.SetVelocity(vector.x * this.m_controller.Velocity.magnitude, vector.y * this.m_controller.Velocity.magnitude, false);
 	}
 
-	// Token: 0x06001255 RID: 4693 RVA: 0x00035944 File Offset: 0x00033B44
+	// Token: 0x06001ACB RID: 6859 RVA: 0x00093248 File Offset: 0x00091448
 	private void LateUpdate()
 	{
 		if (!this.m_bounceListenerAdded && this.m_controller.IsInitialized)
@@ -107,7 +107,7 @@ public class BounceCollision : MonoBehaviour
 		this.ConstrainEnemyMovementToRoom();
 	}
 
-	// Token: 0x06001256 RID: 4694 RVA: 0x000359A4 File Offset: 0x00033BA4
+	// Token: 0x06001ACC RID: 6860 RVA: 0x000932A8 File Offset: 0x000914A8
 	private void ConstrainEnemyMovementToRoom()
 	{
 		Rect collisionBounds = this.m_controller.CollisionBounds;
@@ -152,29 +152,29 @@ public class BounceCollision : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040012C2 RID: 4802
+	// Token: 0x040018EC RID: 6380
 	[SerializeField]
 	private bool m_bounceTowardsPlayer;
 
-	// Token: 0x040012C3 RID: 4803
+	// Token: 0x040018ED RID: 6381
 	[SerializeField]
 	private UnityEvent BounceUnityEvent;
 
-	// Token: 0x040012C4 RID: 4804
+	// Token: 0x040018EE RID: 6382
 	private const float BOUNCE_CHECK_TIMER = 0.05f;
 
-	// Token: 0x040012C5 RID: 4805
+	// Token: 0x040018EF RID: 6383
 	private BaseCharacterController m_controller;
 
-	// Token: 0x040012C6 RID: 4806
+	// Token: 0x040018F0 RID: 6384
 	private float m_bounceTimer;
 
-	// Token: 0x040012C7 RID: 4807
+	// Token: 0x040018F1 RID: 6385
 	private bool m_bounceListenerAdded;
 
-	// Token: 0x040012C8 RID: 4808
+	// Token: 0x040018F2 RID: 6386
 	private Action<CorgiController_RL> m_bounce;
 
-	// Token: 0x040012C9 RID: 4809
+	// Token: 0x040018F3 RID: 6387
 	private Relay<GameObject> m_onBounceRelay = new Relay<GameObject>();
 }

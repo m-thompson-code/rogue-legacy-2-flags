@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004B8 RID: 1208
+// Token: 0x020007D0 RID: 2000
 [Serializable]
 public class TerrainEdge
 {
-	// Token: 0x06002D00 RID: 11520 RVA: 0x00098B4D File Offset: 0x00096D4D
+	// Token: 0x06003DAC RID: 15788 RVA: 0x00022242 File Offset: 0x00020442
 	public TerrainEdge(Vector2 start, Vector2 end, bool hasEdge)
 	{
 		this.Start = start;
@@ -13,9 +13,9 @@ public class TerrainEdge
 		this.HasEdge = hasEdge;
 	}
 
-	// Token: 0x17001139 RID: 4409
-	// (get) Token: 0x06002D01 RID: 11521 RVA: 0x00098B6A File Offset: 0x00096D6A
-	// (set) Token: 0x06002D02 RID: 11522 RVA: 0x00098B72 File Offset: 0x00096D72
+	// Token: 0x170016A0 RID: 5792
+	// (get) Token: 0x06003DAD RID: 15789 RVA: 0x0002225F File Offset: 0x0002045F
+	// (set) Token: 0x06003DAE RID: 15790 RVA: 0x00022267 File Offset: 0x00020467
 	public Vector2 Start
 	{
 		get
@@ -28,9 +28,9 @@ public class TerrainEdge
 		}
 	}
 
-	// Token: 0x1700113A RID: 4410
-	// (get) Token: 0x06002D03 RID: 11523 RVA: 0x00098B7B File Offset: 0x00096D7B
-	// (set) Token: 0x06002D04 RID: 11524 RVA: 0x00098B83 File Offset: 0x00096D83
+	// Token: 0x170016A1 RID: 5793
+	// (get) Token: 0x06003DAF RID: 15791 RVA: 0x00022270 File Offset: 0x00020470
+	// (set) Token: 0x06003DB0 RID: 15792 RVA: 0x00022278 File Offset: 0x00020478
 	public Vector2 End
 	{
 		get
@@ -43,9 +43,9 @@ public class TerrainEdge
 		}
 	}
 
-	// Token: 0x1700113B RID: 4411
-	// (get) Token: 0x06002D05 RID: 11525 RVA: 0x00098B8C File Offset: 0x00096D8C
-	// (set) Token: 0x06002D06 RID: 11526 RVA: 0x00098B94 File Offset: 0x00096D94
+	// Token: 0x170016A2 RID: 5794
+	// (get) Token: 0x06003DB1 RID: 15793 RVA: 0x00022281 File Offset: 0x00020481
+	// (set) Token: 0x06003DB2 RID: 15794 RVA: 0x00022289 File Offset: 0x00020489
 	public bool HasEdge
 	{
 		get
@@ -58,15 +58,15 @@ public class TerrainEdge
 		}
 	}
 
-	// Token: 0x0400242E RID: 9262
+	// Token: 0x04003091 RID: 12433
 	[SerializeField]
 	private Vector2 m_start;
 
-	// Token: 0x0400242F RID: 9263
+	// Token: 0x04003092 RID: 12434
 	[SerializeField]
 	private Vector2 m_end;
 
-	// Token: 0x04002430 RID: 9264
+	// Token: 0x04003093 RID: 12435
 	[SerializeField]
 	private bool m_hasEdge;
 }

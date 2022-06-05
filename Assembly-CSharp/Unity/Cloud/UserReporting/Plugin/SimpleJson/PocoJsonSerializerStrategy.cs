@@ -8,11 +8,11 @@ using Unity.Cloud.UserReporting.Plugin.SimpleJson.Reflection;
 
 namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 {
-	// Token: 0x0200084B RID: 2123
+	// Token: 0x02000D39 RID: 3385
 	[GeneratedCode("simple-json", "1.0.0")]
 	public class PocoJsonSerializerStrategy : IJsonSerializerStrategy
 	{
-		// Token: 0x0600465A RID: 18010 RVA: 0x000FB230 File Offset: 0x000F9430
+		// Token: 0x060060B9 RID: 24761 RVA: 0x00167E78 File Offset: 0x00166078
 		public PocoJsonSerializerStrategy()
 		{
 			this.ConstructorCache = new ReflectionUtils.ThreadSafeDictionary<Type, ReflectionUtils.ConstructorDelegate>(new ReflectionUtils.ThreadSafeDictionaryValueFactory<Type, ReflectionUtils.ConstructorDelegate>(this.ContructorDelegateFactory));
@@ -20,19 +20,19 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			this.SetCache = new ReflectionUtils.ThreadSafeDictionary<Type, IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>>>(new ReflectionUtils.ThreadSafeDictionaryValueFactory<Type, IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>>>(this.SetterValueFactory));
 		}
 
-		// Token: 0x0600465B RID: 18011 RVA: 0x000FB28B File Offset: 0x000F948B
+		// Token: 0x060060BA RID: 24762 RVA: 0x0002B621 File Offset: 0x00029821
 		protected virtual string MapClrMemberNameToJsonFieldName(string clrPropertyName)
 		{
 			return clrPropertyName;
 		}
 
-		// Token: 0x0600465C RID: 18012 RVA: 0x000FB28E File Offset: 0x000F948E
+		// Token: 0x060060BB RID: 24763 RVA: 0x00035562 File Offset: 0x00033762
 		internal virtual ReflectionUtils.ConstructorDelegate ContructorDelegateFactory(Type key)
 		{
 			return ReflectionUtils.GetContructor(key, key.IsArray ? PocoJsonSerializerStrategy.ArrayConstructorParameterTypes : PocoJsonSerializerStrategy.EmptyTypes);
 		}
 
-		// Token: 0x0600465D RID: 18013 RVA: 0x000FB2AC File Offset: 0x000F94AC
+		// Token: 0x060060BC RID: 24764 RVA: 0x00167ED4 File Offset: 0x001660D4
 		internal virtual IDictionary<string, ReflectionUtils.GetDelegate> GetterValueFactory(Type type)
 		{
 			IDictionary<string, ReflectionUtils.GetDelegate> dictionary = new Dictionary<string, ReflectionUtils.GetDelegate>();
@@ -57,7 +57,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return dictionary;
 		}
 
-		// Token: 0x0600465E RID: 18014 RVA: 0x000FB398 File Offset: 0x000F9598
+		// Token: 0x060060BD RID: 24765 RVA: 0x00167FC0 File Offset: 0x001661C0
 		internal virtual IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>> SetterValueFactory(Type type)
 		{
 			IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>> dictionary = new Dictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>>();
@@ -82,13 +82,13 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return dictionary;
 		}
 
-		// Token: 0x0600465F RID: 18015 RVA: 0x000FB4A4 File Offset: 0x000F96A4
+		// Token: 0x060060BE RID: 24766 RVA: 0x0003557E File Offset: 0x0003377E
 		public virtual bool TrySerializeNonPrimitiveObject(object input, out object output)
 		{
 			return this.TrySerializeKnownTypes(input, out output) || this.TrySerializeUnknownTypes(input, out output);
 		}
 
-		// Token: 0x06004660 RID: 18016 RVA: 0x000FB4BC File Offset: 0x000F96BC
+		// Token: 0x060060BF RID: 24767 RVA: 0x001680CC File Offset: 0x001662CC
 		public virtual object DeserializeObject(object value, Type type)
 		{
 			if (type == null)
@@ -282,13 +282,13 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return obj;
 		}
 
-		// Token: 0x06004661 RID: 18017 RVA: 0x000FBB78 File Offset: 0x000F9D78
+		// Token: 0x060060C0 RID: 24768 RVA: 0x00035594 File Offset: 0x00033794
 		protected virtual object SerializeEnum(Enum p)
 		{
 			return Convert.ToDouble(p, CultureInfo.InvariantCulture);
 		}
 
-		// Token: 0x06004662 RID: 18018 RVA: 0x000FBB8C File Offset: 0x000F9D8C
+		// Token: 0x060060C1 RID: 24769 RVA: 0x00168788 File Offset: 0x00166988
 		protected virtual bool TrySerializeKnownTypes(object input, out object output)
 		{
 			bool result = true;
@@ -328,7 +328,7 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return result;
 		}
 
-		// Token: 0x06004663 RID: 18019 RVA: 0x000FBC6C File Offset: 0x000F9E6C
+		// Token: 0x060060C2 RID: 24770 RVA: 0x00168868 File Offset: 0x00166A68
 		protected virtual bool TrySerializeUnknownTypes(object input, out object output)
 		{
 			if (input == null)
@@ -353,25 +353,25 @@ namespace Unity.Cloud.UserReporting.Plugin.SimpleJson
 			return true;
 		}
 
-		// Token: 0x04003B8B RID: 15243
+		// Token: 0x04004EED RID: 20205
 		internal IDictionary<Type, ReflectionUtils.ConstructorDelegate> ConstructorCache;
 
-		// Token: 0x04003B8C RID: 15244
+		// Token: 0x04004EEE RID: 20206
 		internal IDictionary<Type, IDictionary<string, ReflectionUtils.GetDelegate>> GetCache;
 
-		// Token: 0x04003B8D RID: 15245
+		// Token: 0x04004EEF RID: 20207
 		internal IDictionary<Type, IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>>> SetCache;
 
-		// Token: 0x04003B8E RID: 15246
+		// Token: 0x04004EF0 RID: 20208
 		internal static readonly Type[] EmptyTypes = new Type[0];
 
-		// Token: 0x04003B8F RID: 15247
+		// Token: 0x04004EF1 RID: 20209
 		internal static readonly Type[] ArrayConstructorParameterTypes = new Type[]
 		{
 			typeof(int)
 		};
 
-		// Token: 0x04003B90 RID: 15248
+		// Token: 0x04004EF2 RID: 20210
 		private static readonly string[] Iso8601Format = new string[]
 		{
 			"yyyy-MM-dd\\THH:mm:ss.FFFFFFF\\Z",

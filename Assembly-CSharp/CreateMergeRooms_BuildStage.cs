@@ -2,10 +2,10 @@
 using System.Collections;
 using RLWorldCreation;
 
-// Token: 0x02000663 RID: 1635
+// Token: 0x02000AC1 RID: 2753
 public class CreateMergeRooms_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B30 RID: 15152 RVA: 0x000CB762 File Offset: 0x000C9962
+	// Token: 0x060052DF RID: 21215 RVA: 0x0002D190 File Offset: 0x0002B390
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		MergeRoomStrategy mergeRoomStrategy;

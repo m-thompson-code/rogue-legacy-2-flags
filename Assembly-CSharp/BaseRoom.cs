@@ -7,11 +7,11 @@ using SceneManagement_RL;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020003F0 RID: 1008
+// Token: 0x02000695 RID: 1685
 public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 {
-	// Token: 0x17000EF1 RID: 3825
-	// (get) Token: 0x06002521 RID: 9505 RVA: 0x0007B2E9 File Offset: 0x000794E9
+	// Token: 0x1700139A RID: 5018
+	// (get) Token: 0x0600337B RID: 13179 RVA: 0x0001C346 File Offset: 0x0001A546
 	public IRelayLink<object, RoomViaDoorEventArgs> PlayerEnterRelay
 	{
 		get
@@ -20,8 +20,8 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000EF2 RID: 3826
-	// (get) Token: 0x06002522 RID: 9506 RVA: 0x0007B2F6 File Offset: 0x000794F6
+	// Token: 0x1700139B RID: 5019
+	// (get) Token: 0x0600337C RID: 13180 RVA: 0x0001C353 File Offset: 0x0001A553
 	public IRelayLink<object, RoomViaDoorEventArgs> PlayerExitRelay
 	{
 		get
@@ -30,8 +30,8 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000EF3 RID: 3827
-	// (get) Token: 0x06002523 RID: 9507 RVA: 0x0007B303 File Offset: 0x00079503
+	// Token: 0x1700139C RID: 5020
+	// (get) Token: 0x0600337D RID: 13181 RVA: 0x0001C360 File Offset: 0x0001A560
 	public IRelayLink<object, EventArgs> RoomInitializedRelay
 	{
 		get
@@ -40,8 +40,8 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000EF4 RID: 3828
-	// (get) Token: 0x06002524 RID: 9508 RVA: 0x0007B310 File Offset: 0x00079510
+	// Token: 0x1700139D RID: 5021
+	// (get) Token: 0x0600337E RID: 13182 RVA: 0x0001C36D File Offset: 0x0001A56D
 	public IRelayLink<object, EventArgs> RoomDestroyedRelay
 	{
 		get
@@ -50,40 +50,40 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000EF5 RID: 3829
-	// (get) Token: 0x06002525 RID: 9509
+	// Token: 0x1700139E RID: 5022
+	// (get) Token: 0x0600337F RID: 13183
 	public abstract bool SpawnedAsEasyRoom { get; }
 
-	// Token: 0x17000EF6 RID: 3830
-	// (get) Token: 0x06002526 RID: 9510
+	// Token: 0x1700139F RID: 5023
+	// (get) Token: 0x06003380 RID: 13184
 	public abstract BiomeArtData BiomeArtDataOverride { get; }
 
-	// Token: 0x17000EF7 RID: 3831
-	// (get) Token: 0x06002527 RID: 9511 RVA: 0x0007B31D File Offset: 0x0007951D
-	// (set) Token: 0x06002528 RID: 9512 RVA: 0x0007B325 File Offset: 0x00079525
+	// Token: 0x170013A0 RID: 5024
+	// (get) Token: 0x06003381 RID: 13185 RVA: 0x0001C37A File Offset: 0x0001A57A
+	// (set) Token: 0x06003382 RID: 13186 RVA: 0x0001C382 File Offset: 0x0001A582
 	public BackgroundPoolEntry[] Backgrounds { get; protected set; }
 
-	// Token: 0x17000EF8 RID: 3832
-	// (get) Token: 0x06002529 RID: 9513 RVA: 0x0007B32E File Offset: 0x0007952E
-	// (set) Token: 0x0600252A RID: 9514 RVA: 0x0007B336 File Offset: 0x00079536
+	// Token: 0x170013A1 RID: 5025
+	// (get) Token: 0x06003383 RID: 13187 RVA: 0x0001C38B File Offset: 0x0001A58B
+	// (set) Token: 0x06003384 RID: 13188 RVA: 0x0001C393 File Offset: 0x0001A593
 	public BiomeType AppearanceBiomeType { get; protected set; }
 
-	// Token: 0x17000EF9 RID: 3833
-	// (get) Token: 0x0600252B RID: 9515
+	// Token: 0x170013A2 RID: 5026
+	// (get) Token: 0x06003385 RID: 13189
 	public abstract Bounds Bounds { get; }
 
-	// Token: 0x17000EFA RID: 3834
-	// (get) Token: 0x0600252C RID: 9516 RVA: 0x0007B33F File Offset: 0x0007953F
-	// (set) Token: 0x0600252D RID: 9517 RVA: 0x0007B347 File Offset: 0x00079547
+	// Token: 0x170013A3 RID: 5027
+	// (get) Token: 0x06003386 RID: 13190 RVA: 0x0001C39C File Offset: 0x0001A59C
+	// (set) Token: 0x06003387 RID: 13191 RVA: 0x0001C3A4 File Offset: 0x0001A5A4
 	public Rect BoundsRect { get; protected set; }
 
-	// Token: 0x17000EFB RID: 3835
-	// (get) Token: 0x0600252E RID: 9518 RVA: 0x0007B350 File Offset: 0x00079550
-	// (set) Token: 0x0600252F RID: 9519 RVA: 0x0007B358 File Offset: 0x00079558
+	// Token: 0x170013A4 RID: 5028
+	// (get) Token: 0x06003388 RID: 13192 RVA: 0x0001C3AD File Offset: 0x0001A5AD
+	// (set) Token: 0x06003389 RID: 13193 RVA: 0x0001C3B5 File Offset: 0x0001A5B5
 	public int BiomeControllerIndex { get; protected set; }
 
-	// Token: 0x17000EFC RID: 3836
-	// (get) Token: 0x06002530 RID: 9520 RVA: 0x0007B361 File Offset: 0x00079561
+	// Token: 0x170013A5 RID: 5029
+	// (get) Token: 0x0600338A RID: 13194 RVA: 0x0001C3BE File Offset: 0x0001A5BE
 	public CinemachineVirtualCameraManager CinemachineCamera
 	{
 		get
@@ -96,8 +96,8 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000EFD RID: 3837
-	// (get) Token: 0x06002531 RID: 9521 RVA: 0x0007B382 File Offset: 0x00079582
+	// Token: 0x170013A6 RID: 5030
+	// (get) Token: 0x0600338B RID: 13195 RVA: 0x0001C3DF File Offset: 0x0001A5DF
 	public Collider2D Collider2D
 	{
 		get
@@ -110,9 +110,9 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000EFE RID: 3838
-	// (get) Token: 0x06002532 RID: 9522 RVA: 0x0007B3A3 File Offset: 0x000795A3
-	// (set) Token: 0x06002533 RID: 9523 RVA: 0x0007B3AB File Offset: 0x000795AB
+	// Token: 0x170013A7 RID: 5031
+	// (get) Token: 0x0600338C RID: 13196 RVA: 0x0001C400 File Offset: 0x0001A600
+	// (set) Token: 0x0600338D RID: 13197 RVA: 0x0001C408 File Offset: 0x0001A608
 	public List<BaseRoom> ConnectedRooms
 	{
 		get
@@ -125,8 +125,8 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000EFF RID: 3839
-	// (get) Token: 0x06002534 RID: 9524 RVA: 0x0007B3B4 File Offset: 0x000795B4
+	// Token: 0x170013A8 RID: 5032
+	// (get) Token: 0x0600338E RID: 13198 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public virtual bool DisableRoomLetterBoxing
 	{
 		get
@@ -135,8 +135,8 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000F00 RID: 3840
-	// (get) Token: 0x06002535 RID: 9525 RVA: 0x0007B3B7 File Offset: 0x000795B7
+	// Token: 0x170013A9 RID: 5033
+	// (get) Token: 0x0600338F RID: 13199 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public virtual bool DisableRoomSaving
 	{
 		get
@@ -145,8 +145,8 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000F01 RID: 3841
-	// (get) Token: 0x06002536 RID: 9526 RVA: 0x0007B3BA File Offset: 0x000795BA
+	// Token: 0x170013AA RID: 5034
+	// (get) Token: 0x06003390 RID: 13200 RVA: 0x0001C411 File Offset: 0x0001A611
 	public virtual List<Door> Doors
 	{
 		get
@@ -159,9 +159,9 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000F02 RID: 3842
-	// (get) Token: 0x06002537 RID: 9527 RVA: 0x0007B3DB File Offset: 0x000795DB
-	// (set) Token: 0x06002538 RID: 9528 RVA: 0x0007B3E3 File Offset: 0x000795E3
+	// Token: 0x170013AB RID: 5035
+	// (get) Token: 0x06003391 RID: 13201 RVA: 0x0001C432 File Offset: 0x0001A632
+	// (set) Token: 0x06003392 RID: 13202 RVA: 0x0001C43A File Offset: 0x0001A63A
 	public BiomeType BiomeType
 	{
 		get
@@ -174,32 +174,32 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000F03 RID: 3843
-	// (get) Token: 0x06002539 RID: 9529 RVA: 0x0007B3EC File Offset: 0x000795EC
-	// (set) Token: 0x0600253A RID: 9530 RVA: 0x0007B3F4 File Offset: 0x000795F4
+	// Token: 0x170013AC RID: 5036
+	// (get) Token: 0x06003393 RID: 13203 RVA: 0x0001C443 File Offset: 0x0001A643
+	// (set) Token: 0x06003394 RID: 13204 RVA: 0x0001C44B File Offset: 0x0001A64B
 	public bool IsPlayerInRoom { get; protected set; }
 
-	// Token: 0x17000F04 RID: 3844
-	// (get) Token: 0x0600253B RID: 9531
+	// Token: 0x170013AD RID: 5037
+	// (get) Token: 0x06003395 RID: 13205
 	public abstract int Level { get; }
 
-	// Token: 0x17000F05 RID: 3845
-	// (get) Token: 0x0600253C RID: 9532 RVA: 0x0007B3FD File Offset: 0x000795FD
-	// (set) Token: 0x0600253D RID: 9533 RVA: 0x0007B405 File Offset: 0x00079605
+	// Token: 0x170013AE RID: 5038
+	// (get) Token: 0x06003396 RID: 13206 RVA: 0x0001C454 File Offset: 0x0001A654
+	// (set) Token: 0x06003397 RID: 13207 RVA: 0x0001C45C File Offset: 0x0001A65C
 	public virtual RoomType RoomType { get; protected set; }
 
-	// Token: 0x17000F06 RID: 3846
-	// (get) Token: 0x0600253E RID: 9534 RVA: 0x0007B40E File Offset: 0x0007960E
-	// (set) Token: 0x0600253F RID: 9535 RVA: 0x0007B416 File Offset: 0x00079616
+	// Token: 0x170013AF RID: 5039
+	// (get) Token: 0x06003398 RID: 13208 RVA: 0x0001C465 File Offset: 0x0001A665
+	// (set) Token: 0x06003399 RID: 13209 RVA: 0x0001C46D File Offset: 0x0001A66D
 	public RoomSaveController SaveController { get; protected set; }
 
-	// Token: 0x17000F07 RID: 3847
-	// (get) Token: 0x06002540 RID: 9536 RVA: 0x0007B41F File Offset: 0x0007961F
-	// (set) Token: 0x06002541 RID: 9537 RVA: 0x0007B427 File Offset: 0x00079627
+	// Token: 0x170013B0 RID: 5040
+	// (get) Token: 0x0600339A RID: 13210 RVA: 0x0001C476 File Offset: 0x0001A676
+	// (set) Token: 0x0600339B RID: 13211 RVA: 0x0001C47E File Offset: 0x0001A67E
 	public RoomSpawnControllerManager SpawnControllerManager { get; protected set; }
 
-	// Token: 0x17000F08 RID: 3848
-	// (get) Token: 0x06002542 RID: 9538 RVA: 0x0007B430 File Offset: 0x00079630
+	// Token: 0x170013B1 RID: 5041
+	// (get) Token: 0x0600339C RID: 13212 RVA: 0x0001C487 File Offset: 0x0001A687
 	public virtual SpecialRoomType SpecialRoomType
 	{
 		get
@@ -208,16 +208,16 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x17000F09 RID: 3849
-	// (get) Token: 0x06002543 RID: 9539 RVA: 0x0007B438 File Offset: 0x00079638
-	// (set) Token: 0x06002544 RID: 9540 RVA: 0x0007B440 File Offset: 0x00079640
+	// Token: 0x170013B2 RID: 5042
+	// (get) Token: 0x0600339D RID: 13213 RVA: 0x0001C48F File Offset: 0x0001A68F
+	// (set) Token: 0x0600339E RID: 13214 RVA: 0x0001C497 File Offset: 0x0001A697
 	public RoomTerrainManager TerrainManager { get; protected set; }
 
-	// Token: 0x17000F0A RID: 3850
-	// (get) Token: 0x06002545 RID: 9541 RVA: 0x0007B449 File Offset: 0x00079649
+	// Token: 0x170013B3 RID: 5043
+	// (get) Token: 0x0600339F RID: 13215 RVA: 0x0001C4A0 File Offset: 0x0001A6A0
 	public virtual bool AllowItemDrops { get; }
 
-	// Token: 0x06002546 RID: 9542 RVA: 0x0007B451 File Offset: 0x00079651
+	// Token: 0x060033A0 RID: 13216 RVA: 0x0001C4A8 File Offset: 0x0001A6A8
 	protected virtual void OnDestroy()
 	{
 		if (Application.isPlaying)
@@ -227,25 +227,25 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002547 RID: 9543 RVA: 0x0007B472 File Offset: 0x00079672
+	// Token: 0x060033A1 RID: 13217 RVA: 0x0001C4C9 File Offset: 0x0001A6C9
 	public void SetSpawnControllerManager(RoomSpawnControllerManager spawnControllerManager)
 	{
 		this.SpawnControllerManager = spawnControllerManager;
 	}
 
-	// Token: 0x06002548 RID: 9544 RVA: 0x0007B47B File Offset: 0x0007967B
+	// Token: 0x060033A2 RID: 13218 RVA: 0x0001C4D2 File Offset: 0x0001A6D2
 	public void SetTerrainManager(RoomTerrainManager terrainManager)
 	{
 		this.TerrainManager = terrainManager;
 	}
 
-	// Token: 0x06002549 RID: 9545 RVA: 0x0007B484 File Offset: 0x00079684
+	// Token: 0x060033A3 RID: 13219 RVA: 0x0001C4DB File Offset: 0x0001A6DB
 	public void SetBiomeControllerIndex(int index)
 	{
 		this.BiomeControllerIndex = index;
 	}
 
-	// Token: 0x0600254A RID: 9546 RVA: 0x0007B490 File Offset: 0x00079690
+	// Token: 0x060033A4 RID: 13220 RVA: 0x000DB3C8 File Offset: 0x000D95C8
 	public void InjectRoom()
 	{
 		IRoomConsumer[] componentsInChildren = base.gameObject.GetComponentsInChildren<IRoomConsumer>();
@@ -255,16 +255,16 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x0600254B RID: 9547 RVA: 0x0007B4C0 File Offset: 0x000796C0
+	// Token: 0x060033A5 RID: 13221 RVA: 0x0001C4E4 File Offset: 0x0001A6E4
 	public void SetBackgroundPoolEntries(BackgroundPoolEntry[] backgrounds)
 	{
 		this.Backgrounds = backgrounds;
 	}
 
-	// Token: 0x0600254C RID: 9548
+	// Token: 0x060033A6 RID: 13222
 	public abstract void SetLevel(int level);
 
-	// Token: 0x0600254D RID: 9549 RVA: 0x0007B4C9 File Offset: 0x000796C9
+	// Token: 0x060033A7 RID: 13223 RVA: 0x0001C4ED File Offset: 0x0001A6ED
 	public void PlacePlayerInRoom(Door door)
 	{
 		this.PlacePlayerInRoom_Start();
@@ -279,7 +279,7 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		this.PlacePlayerInRoom_End(door);
 	}
 
-	// Token: 0x0600254E RID: 9550 RVA: 0x0007B4F9 File Offset: 0x000796F9
+	// Token: 0x060033A8 RID: 13224 RVA: 0x0001C51D File Offset: 0x0001A71D
 	public void PlacePlayerInRoom(Vector3 localPosition)
 	{
 		this.PlacePlayerInRoom_Start();
@@ -287,13 +287,13 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		this.PlacePlayerInRoom_End(null);
 	}
 
-	// Token: 0x0600254F RID: 9551 RVA: 0x0007B515 File Offset: 0x00079715
+	// Token: 0x060033A9 RID: 13225 RVA: 0x0001C539 File Offset: 0x0001A739
 	private void PlacePlayerInRoom_Start()
 	{
 		this.IsPlayerInRoom = true;
 	}
 
-	// Token: 0x06002550 RID: 9552 RVA: 0x0007B520 File Offset: 0x00079720
+	// Token: 0x060033AA RID: 13226 RVA: 0x000DB3F8 File Offset: 0x000D95F8
 	private void PlacePlayerInRoom_End(Door door)
 	{
 		RNGManager.SetSeed(RngID.SpecialProps_RoomSeed, this.GetSpecialPropSeed());
@@ -312,13 +312,13 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		this.BroadcastPlayerEnterRoomEvents(door);
 	}
 
-	// Token: 0x06002551 RID: 9553
+	// Token: 0x060033AB RID: 13227
 	protected abstract int GetDecoSeed();
 
-	// Token: 0x06002552 RID: 9554
+	// Token: 0x060033AC RID: 13228
 	protected abstract int GetSpecialPropSeed();
 
-	// Token: 0x06002553 RID: 9555 RVA: 0x0007B58C File Offset: 0x0007978C
+	// Token: 0x060033AD RID: 13229 RVA: 0x000DB464 File Offset: 0x000D9664
 	private void InitializeSpawnControllerInstances()
 	{
 		PropSpawnController[] propSpawnControllers = this.SpawnControllerManager.PropSpawnControllers;
@@ -338,7 +338,7 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002554 RID: 9556 RVA: 0x0007B600 File Offset: 0x00079800
+	// Token: 0x060033AE RID: 13230 RVA: 0x000DB4D8 File Offset: 0x000D96D8
 	private void InitializeBackgrounds()
 	{
 		if (this.Backgrounds == null)
@@ -362,20 +362,20 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002555 RID: 9557 RVA: 0x0007B6B7 File Offset: 0x000798B7
+	// Token: 0x060033AF RID: 13231 RVA: 0x0001C542 File Offset: 0x0001A742
 	private void BroadcastPlayerEnterRoomEvents(Door door)
 	{
 		this.m_playerEnterRelay.Dispatch(this, this.m_roomViaDoorEventArgs);
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.PlayerEnterRoom, this, this.m_roomViaDoorEventArgs);
 	}
 
-	// Token: 0x06002556 RID: 9558 RVA: 0x0007B6D8 File Offset: 0x000798D8
+	// Token: 0x060033B0 RID: 13232 RVA: 0x0001C563 File Offset: 0x0001A763
 	protected void OnPlayerExitViaDoor(object sender, DoorEventArgs eventArgs)
 	{
 		this.PlayerExit(eventArgs.Door);
 	}
 
-	// Token: 0x06002557 RID: 9559 RVA: 0x0007B6E8 File Offset: 0x000798E8
+	// Token: 0x060033B1 RID: 13233 RVA: 0x000DB590 File Offset: 0x000D9790
 	public void PlayerExit(Door door)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -437,7 +437,7 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		}
 	}
 
-	// Token: 0x06002558 RID: 9560 RVA: 0x0007B8CE File Offset: 0x00079ACE
+	// Token: 0x060033B2 RID: 13234 RVA: 0x0001C571 File Offset: 0x0001A771
 	private IEnumerator DelayEnterRoomCoroutine(Door door)
 	{
 		yield return null;
@@ -453,7 +453,7 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		yield break;
 	}
 
-	// Token: 0x06002559 RID: 9561 RVA: 0x0007B8E4 File Offset: 0x00079AE4
+	// Token: 0x060033B3 RID: 13235 RVA: 0x0001C587 File Offset: 0x0001A787
 	private IEnumerator LargeRoomTransitionCoroutine(Door doorBeingExited, Door doorBeingEntered, BaseRoom roomBeingEntered)
 	{
 		this.BroadcastPlayerExitRoomEvents(doorBeingExited);
@@ -462,7 +462,7 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		yield break;
 	}
 
-	// Token: 0x0600255A RID: 9562 RVA: 0x0007B908 File Offset: 0x00079B08
+	// Token: 0x060033B4 RID: 13236 RVA: 0x000DB778 File Offset: 0x000D9978
 	public void BroadcastPlayerExitRoomEvents(Door door)
 	{
 		this.IsPlayerInRoom = false;
@@ -479,42 +479,42 @@ public abstract class BaseRoom : MonoBehaviour, ISummoner, ILevelConsumer
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.PlayerExitRoom, this, this.m_roomViaDoorEventArgs);
 	}
 
-	// Token: 0x0600255C RID: 9564 RVA: 0x0007B9AA File Offset: 0x00079BAA
+	// Token: 0x060033B6 RID: 13238 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISummoner.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04001F5E RID: 8030
+	// Token: 0x040029F0 RID: 10736
 	protected CinemachineVirtualCameraManager m_cinemachineCamera;
 
-	// Token: 0x04001F5F RID: 8031
+	// Token: 0x040029F1 RID: 10737
 	protected Collider2D m_collider;
 
-	// Token: 0x04001F60 RID: 8032
+	// Token: 0x040029F2 RID: 10738
 	protected List<BaseRoom> m_connectedRooms = new List<BaseRoom>();
 
-	// Token: 0x04001F61 RID: 8033
+	// Token: 0x040029F3 RID: 10739
 	protected List<Door> m_doors;
 
-	// Token: 0x04001F62 RID: 8034
+	// Token: 0x040029F4 RID: 10740
 	protected BiomeType m_isInBiome;
 
-	// Token: 0x04001F63 RID: 8035
+	// Token: 0x040029F5 RID: 10741
 	protected RoomViaDoorEventArgs m_roomViaDoorEventArgs;
 
-	// Token: 0x04001F64 RID: 8036
+	// Token: 0x040029F6 RID: 10742
 	protected SpecialRoomType m_specialRoomType;
 
-	// Token: 0x04001F65 RID: 8037
+	// Token: 0x040029F7 RID: 10743
 	protected Relay<object, RoomViaDoorEventArgs> m_playerEnterRelay = new Relay<object, RoomViaDoorEventArgs>();
 
-	// Token: 0x04001F66 RID: 8038
+	// Token: 0x040029F8 RID: 10744
 	protected Relay<object, RoomViaDoorEventArgs> m_playerExitRelay = new Relay<object, RoomViaDoorEventArgs>();
 
-	// Token: 0x04001F67 RID: 8039
+	// Token: 0x040029F9 RID: 10745
 	protected Relay<object, EventArgs> m_roomInitializedRelay = new Relay<object, EventArgs>();
 
-	// Token: 0x04001F68 RID: 8040
+	// Token: 0x040029FA RID: 10746
 	protected Relay<object, EventArgs> m_roomDestroyedRelay = new Relay<object, EventArgs>();
 }

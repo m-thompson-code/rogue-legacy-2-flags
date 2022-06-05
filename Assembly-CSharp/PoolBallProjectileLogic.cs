@@ -3,18 +3,18 @@ using Sigtrap.Relays;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020004A8 RID: 1192
+// Token: 0x020007B5 RID: 1973
 [RequireComponent(typeof(TerrainRicochetProjectile_Logic))]
 public class PoolBallProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B8F RID: 11151 RVA: 0x00093E8D File Offset: 0x0009208D
+	// Token: 0x06003C02 RID: 15362 RVA: 0x000211DE File Offset: 0x0001F3DE
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_ricochetLogic = base.gameObject.GetComponent<TerrainRicochetProjectile_Logic>();
 	}
 
-	// Token: 0x06002B90 RID: 11152 RVA: 0x00093EA8 File Offset: 0x000920A8
+	// Token: 0x06003C03 RID: 15363 RVA: 0x000F55C8 File Offset: 0x000F37C8
 	private void OnRicochet(object sender, EventArgs args)
 	{
 		BaseEffect baseEffect = EffectManager.PlayEffect(base.SourceProjectile.gameObject, base.SourceProjectile.Animator, "PoolBallHit_Effect", base.SourceProjectile.transform.localPosition, -2f, EffectStopType.Gracefully, EffectTriggerDirection.None);
@@ -42,7 +42,7 @@ public class PoolBallProjectileLogic : BaseProjectileLogic
 		this.RicochetRelay.Dispatch(this.m_currentBounces);
 	}
 
-	// Token: 0x06002B91 RID: 11153 RVA: 0x0009405C File Offset: 0x0009225C
+	// Token: 0x06003C04 RID: 15364 RVA: 0x000F577C File Offset: 0x000F397C
 	public void OnEnable()
 	{
 		this.m_startingMagic = base.SourceProjectile.Magic;
@@ -54,28 +54,28 @@ public class PoolBallProjectileLogic : BaseProjectileLogic
 		base.SourceProjectile.transform.localScale = Vector3.one;
 	}
 
-	// Token: 0x06002B92 RID: 11154 RVA: 0x000940F0 File Offset: 0x000922F0
+	// Token: 0x06003C05 RID: 15365 RVA: 0x000211F7 File Offset: 0x0001F3F7
 	private void OnDestroy()
 	{
 		this.m_ricochetLogic.OnRicochet -= this.OnRicochet;
 	}
 
-	// Token: 0x0400236A RID: 9066
+	// Token: 0x04002FA4 RID: 12196
 	[SerializeField]
 	private TMP_Text m_poolBallText;
 
-	// Token: 0x0400236B RID: 9067
+	// Token: 0x04002FA5 RID: 12197
 	public Relay<int> RicochetRelay = new Relay<int>();
 
-	// Token: 0x0400236C RID: 9068
+	// Token: 0x04002FA6 RID: 12198
 	private TerrainRicochetProjectile_Logic m_ricochetLogic;
 
-	// Token: 0x0400236D RID: 9069
+	// Token: 0x04002FA7 RID: 12199
 	private int m_currentBounces;
 
-	// Token: 0x0400236E RID: 9070
+	// Token: 0x04002FA8 RID: 12200
 	private float m_startingMagic;
 
-	// Token: 0x0400236F RID: 9071
+	// Token: 0x04002FA9 RID: 12201
 	private float m_startingCritDamage;
 }

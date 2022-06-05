@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine.SceneManagement;
 
-// Token: 0x02000201 RID: 513
+// Token: 0x020003AD RID: 941
 public static class GameUtility
 {
-	// Token: 0x17000AF4 RID: 2804
-	// (get) Token: 0x060015AE RID: 5550 RVA: 0x00043856 File Offset: 0x00041A56
+	// Token: 0x17000E0F RID: 3599
+	// (get) Token: 0x06001F22 RID: 7970 RVA: 0x00010595 File Offset: 0x0000E795
 	public static bool IsApplicationQuitting
 	{
 		get
@@ -14,8 +14,8 @@ public static class GameUtility
 		}
 	}
 
-	// Token: 0x17000AF5 RID: 2805
-	// (get) Token: 0x060015AF RID: 5551 RVA: 0x00043860 File Offset: 0x00041A60
+	// Token: 0x17000E10 RID: 3600
+	// (get) Token: 0x06001F23 RID: 7971 RVA: 0x000A1E58 File Offset: 0x000A0058
 	public static bool SceneHasRooms
 	{
 		get
@@ -29,8 +29,8 @@ public static class GameUtility
 		}
 	}
 
-	// Token: 0x17000AF6 RID: 2806
-	// (get) Token: 0x060015B0 RID: 5552 RVA: 0x000438E7 File Offset: 0x00041AE7
+	// Token: 0x17000E11 RID: 3601
+	// (get) Token: 0x06001F24 RID: 7972 RVA: 0x0001059C File Offset: 0x0000E79C
 	public static bool IsInGame
 	{
 		get
@@ -39,8 +39,8 @@ public static class GameUtility
 		}
 	}
 
-	// Token: 0x17000AF7 RID: 2807
-	// (get) Token: 0x060015B1 RID: 5553 RVA: 0x000438F4 File Offset: 0x00041AF4
+	// Token: 0x17000E12 RID: 3602
+	// (get) Token: 0x06001F25 RID: 7973 RVA: 0x000A1EE0 File Offset: 0x000A00E0
 	public static bool IsInLevelEditor
 	{
 		get
@@ -49,8 +49,8 @@ public static class GameUtility
 		}
 	}
 
-	// Token: 0x17000AF8 RID: 2808
-	// (get) Token: 0x060015B2 RID: 5554 RVA: 0x00043902 File Offset: 0x00041B02
+	// Token: 0x17000E13 RID: 3603
+	// (get) Token: 0x06001F26 RID: 7974 RVA: 0x00004762 File Offset: 0x00002962
 	public static int MaxDifficulty
 	{
 		get
@@ -59,9 +59,9 @@ public static class GameUtility
 		}
 	}
 
-	// Token: 0x17000AF9 RID: 2809
-	// (get) Token: 0x060015B3 RID: 5555 RVA: 0x00043905 File Offset: 0x00041B05
-	// (set) Token: 0x060015B4 RID: 5556 RVA: 0x0004390C File Offset: 0x00041B0C
+	// Token: 0x17000E14 RID: 3604
+	// (get) Token: 0x06001F27 RID: 7975 RVA: 0x000105A6 File Offset: 0x0000E7A6
+	// (set) Token: 0x06001F28 RID: 7976 RVA: 0x000105AD File Offset: 0x0000E7AD
 	public static int Difficulty
 	{
 		get
@@ -78,27 +78,27 @@ public static class GameUtility
 		}
 	}
 
-	// Token: 0x040014DF RID: 5343
+	// Token: 0x04001BC6 RID: 7110
 	public const string LEVEL_EDITOR_NAME = "LevelEditor";
 
-	// Token: 0x040014E0 RID: 5344
+	// Token: 0x04001BC7 RID: 7111
 	public const string GAME_SCENE_NAME = "World";
 
-	// Token: 0x040014E1 RID: 5345
+	// Token: 0x04001BC8 RID: 7112
 	private static bool m_isSceneOpen;
 
-	// Token: 0x040014E2 RID: 5346
+	// Token: 0x04001BC9 RID: 7113
 	private static bool m_isInLevelEditor;
 
-	// Token: 0x040014E3 RID: 5347
+	// Token: 0x04001BCA RID: 7114
 	private static bool m_isInGame;
 
-	// Token: 0x040014E4 RID: 5348
+	// Token: 0x04001BCB RID: 7115
 	private static bool m_hasChecked;
 
-	// Token: 0x040014E5 RID: 5349
+	// Token: 0x04001BCC RID: 7116
 	private static int m_difficulty;
 
-	// Token: 0x040014E6 RID: 5350
+	// Token: 0x04001BCD RID: 7117
 	private static bool m_applicationQuitting;
 }

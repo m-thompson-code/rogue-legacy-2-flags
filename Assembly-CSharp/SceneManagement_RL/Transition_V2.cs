@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace SceneManagement_RL
 {
-	// Token: 0x020008CC RID: 2252
+	// Token: 0x02000E36 RID: 3638
 	public abstract class Transition_V2 : MonoBehaviour, ITransition
 	{
-		// Token: 0x17001805 RID: 6149
-		// (get) Token: 0x060049DE RID: 18910 RVA: 0x0010A497 File Offset: 0x00108697
+		// Token: 0x170020DF RID: 8415
+		// (get) Token: 0x06006679 RID: 26233 RVA: 0x00003713 File Offset: 0x00001913
 		public GameObject GameObject
 		{
 			get
@@ -17,16 +17,16 @@ namespace SceneManagement_RL
 			}
 		}
 
-		// Token: 0x060049DF RID: 18911 RVA: 0x0010A49F File Offset: 0x0010869F
+		// Token: 0x0600667A RID: 26234 RVA: 0x00002FCA File Offset: 0x000011CA
 		protected virtual void Awake()
 		{
 		}
 
-		// Token: 0x17001806 RID: 6150
-		// (get) Token: 0x060049E0 RID: 18912
+		// Token: 0x170020E0 RID: 8416
+		// (get) Token: 0x0600667B RID: 26235
 		public abstract TransitionID ID { get; }
 
-		// Token: 0x060049E1 RID: 18913
+		// Token: 0x0600667C RID: 26236
 		public abstract IEnumerator Run();
 	}
 }

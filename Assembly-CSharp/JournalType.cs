@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000748 RID: 1864
+// Token: 0x02000C06 RID: 3078
 public enum JournalType
 {
-	// Token: 0x040034D9 RID: 13529
+	// Token: 0x04004755 RID: 18261
 	Journal,
-	// Token: 0x040034DA RID: 13530
+	// Token: 0x04004756 RID: 18262
 	MemoryFragment,
-	// Token: 0x040034DB RID: 13531
+	// Token: 0x04004757 RID: 18263
 	ScarMemory
 }

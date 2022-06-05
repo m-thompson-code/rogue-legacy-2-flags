@@ -3,23 +3,23 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x0200037F RID: 895
+// Token: 0x02000606 RID: 1542
 public class LineageDescriptionUpdater : MonoBehaviour, ILocalizable
 {
-	// Token: 0x06002182 RID: 8578 RVA: 0x0006976D File Offset: 0x0006796D
+	// Token: 0x06002F76 RID: 12150 RVA: 0x00019F6F File Offset: 0x0001816F
 	public void SetLocked(bool locked)
 	{
 		this.m_lockIcon.gameObject.SetActive(locked);
 	}
 
-	// Token: 0x06002183 RID: 8579 RVA: 0x00069780 File Offset: 0x00067980
+	// Token: 0x06002F77 RID: 12151 RVA: 0x00019F82 File Offset: 0x00018182
 	private void Awake()
 	{
 		this.m_onHeirSelected = new Action<MonoBehaviour, EventArgs>(this.OnHeirSelected);
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 	}
 
-	// Token: 0x06002184 RID: 8580 RVA: 0x000697A7 File Offset: 0x000679A7
+	// Token: 0x06002F78 RID: 12152 RVA: 0x00019FA9 File Offset: 0x000181A9
 	private void OnEnable()
 	{
 		this.UpdateFontResize();
@@ -28,14 +28,14 @@ public class LineageDescriptionUpdater : MonoBehaviour, ILocalizable
 		this.SetLocked(false);
 	}
 
-	// Token: 0x06002185 RID: 8581 RVA: 0x000697D0 File Offset: 0x000679D0
+	// Token: 0x06002F79 RID: 12153 RVA: 0x00019FD2 File Offset: 0x000181D2
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.Lineage_SelectedNewHeir, this.m_onHeirSelected);
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06002186 RID: 8582 RVA: 0x000697EC File Offset: 0x000679EC
+	// Token: 0x06002F7A RID: 12154 RVA: 0x000CA65C File Offset: 0x000C885C
 	private void UpdateFontResize()
 	{
 		if (this.m_descriptionText)
@@ -54,7 +54,7 @@ public class LineageDescriptionUpdater : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002187 RID: 8583 RVA: 0x00069858 File Offset: 0x00067A58
+	// Token: 0x06002F7B RID: 12155 RVA: 0x000CA6C8 File Offset: 0x000C88C8
 	private void OnHeirSelected(MonoBehaviour sender, EventArgs args)
 	{
 		LineageHeirChangedEventArgs lineageHeirChangedEventArgs = args as LineageHeirChangedEventArgs;
@@ -63,7 +63,7 @@ public class LineageDescriptionUpdater : MonoBehaviour, ILocalizable
 		this.UpdateText(characterData, lineageHeirChangedEventArgs.ClassLocked, lineageHeirChangedEventArgs.SpellLocked);
 	}
 
-	// Token: 0x06002188 RID: 8584 RVA: 0x00069890 File Offset: 0x00067A90
+	// Token: 0x06002F7C RID: 12156 RVA: 0x000CA700 File Offset: 0x000C8900
 	private void UpdateText(CharacterData charData, bool classLocked, bool spellLocked)
 	{
 		ClassData classData = ClassLibrary.GetClassData(charData.ClassType);
@@ -351,7 +351,7 @@ public class LineageDescriptionUpdater : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x06002189 RID: 8585 RVA: 0x0006A17F File Offset: 0x0006837F
+	// Token: 0x06002F7D RID: 12157 RVA: 0x00019FEE File Offset: 0x000181EE
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.UpdateFontResize();
@@ -361,67 +361,67 @@ public class LineageDescriptionUpdater : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x04001CFD RID: 7421
+	// Token: 0x040026D5 RID: 9941
 	private const int DEFAULT_MIN_FONTSIZE = 20;
 
-	// Token: 0x04001CFE RID: 7422
+	// Token: 0x040026D6 RID: 9942
 	private const int KOREAN_MIN_FONTSIZE = 17;
 
-	// Token: 0x04001CFF RID: 7423
+	// Token: 0x040026D7 RID: 9943
 	public LineageDescriptionUpdater.LineageDescriptionType DescriptionType;
 
-	// Token: 0x04001D00 RID: 7424
+	// Token: 0x040026D8 RID: 9944
 	[SerializeField]
 	private Image m_icon;
 
-	// Token: 0x04001D01 RID: 7425
+	// Token: 0x040026D9 RID: 9945
 	[SerializeField]
 	private Image m_lockIcon;
 
-	// Token: 0x04001D02 RID: 7426
+	// Token: 0x040026DA RID: 9946
 	[SerializeField]
 	private TMP_Text m_titleText;
 
-	// Token: 0x04001D03 RID: 7427
+	// Token: 0x040026DB RID: 9947
 	[SerializeField]
 	private TMP_Text m_descriptionText;
 
-	// Token: 0x04001D04 RID: 7428
+	// Token: 0x040026DC RID: 9948
 	private bool m_classLocked;
 
-	// Token: 0x04001D05 RID: 7429
+	// Token: 0x040026DD RID: 9949
 	private bool m_spellLocked;
 
-	// Token: 0x04001D06 RID: 7430
+	// Token: 0x040026DE RID: 9950
 	private CharacterData m_storedCharData;
 
-	// Token: 0x04001D07 RID: 7431
+	// Token: 0x040026DF RID: 9951
 	private Action<MonoBehaviour, EventArgs> m_onHeirSelected;
 
-	// Token: 0x04001D08 RID: 7432
+	// Token: 0x040026E0 RID: 9952
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x04001D09 RID: 7433
+	// Token: 0x040026E1 RID: 9953
 	private bool m_koreanSizeApplied;
 
-	// Token: 0x02000C00 RID: 3072
+	// Token: 0x02000607 RID: 1543
 	public enum LineageDescriptionType
 	{
-		// Token: 0x04004E6D RID: 20077
+		// Token: 0x040026E3 RID: 9955
 		None,
-		// Token: 0x04004E6E RID: 20078
+		// Token: 0x040026E4 RID: 9956
 		Header,
-		// Token: 0x04004E6F RID: 20079
+		// Token: 0x040026E5 RID: 9957
 		Class,
-		// Token: 0x04004E70 RID: 20080
+		// Token: 0x040026E6 RID: 9958
 		Talent,
-		// Token: 0x04004E71 RID: 20081
+		// Token: 0x040026E7 RID: 9959
 		Weapon,
-		// Token: 0x04004E72 RID: 20082
+		// Token: 0x040026E8 RID: 9960
 		Spell,
-		// Token: 0x04004E73 RID: 20083
+		// Token: 0x040026E9 RID: 9961
 		TraitOne,
-		// Token: 0x04004E74 RID: 20084
+		// Token: 0x040026EA RID: 9962
 		TraitTwo
 	}
 }

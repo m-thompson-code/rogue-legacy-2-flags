@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200029F RID: 671
+// Token: 0x0200046D RID: 1133
 public class ToggleMouseAttackFlipOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001A0D RID: 6669 RVA: 0x000520CF File Offset: 0x000502CF
+	// Token: 0x06002408 RID: 9224 RVA: 0x00013E3A File Offset: 0x0001203A
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class ToggleMouseAttackFlipOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001A0E RID: 6670 RVA: 0x00052107 File Offset: 0x00050307
+	// Token: 0x06002409 RID: 9225 RVA: 0x00013E72 File Offset: 0x00012072
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class ToggleMouseAttackFlipOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001A0F RID: 6671 RVA: 0x00052141 File Offset: 0x00050341
+	// Token: 0x0600240A RID: 9226 RVA: 0x00013EAC File Offset: 0x000120AC
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed toggle mouse attack flip to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001A10 RID: 6672 RVA: 0x00052158 File Offset: 0x00050358
+	// Token: 0x0600240B RID: 9227 RVA: 0x00013EC3 File Offset: 0x000120C3
 	public override void ConfirmOptionChange()
 	{
 		if (this.m_selectedIndex == 0)

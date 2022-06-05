@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200040A RID: 1034
+// Token: 0x020006C1 RID: 1729
 public class DashFlipEFfectCheck : MonoBehaviour
 {
-	// Token: 0x060026A7 RID: 9895 RVA: 0x00080052 File Offset: 0x0007E252
+	// Token: 0x06003556 RID: 13654 RVA: 0x0001D423 File Offset: 0x0001B623
 	private void Awake()
 	{
 		this.m_effect = base.GetComponent<BaseEffect>();
 	}
 
-	// Token: 0x060026A8 RID: 9896 RVA: 0x00080060 File Offset: 0x0007E260
+	// Token: 0x06003557 RID: 13655 RVA: 0x000E0788 File Offset: 0x000DE988
 	private void FixedUpdate()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -23,6 +23,6 @@ public class DashFlipEFfectCheck : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002066 RID: 8294
+	// Token: 0x04002B46 RID: 11078
 	private BaseEffect m_effect;
 }

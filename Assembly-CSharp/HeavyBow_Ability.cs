@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200019A RID: 410
+// Token: 0x020002F3 RID: 755
 public class HeavyBow_Ability : Bow_Ability
 {
-	// Token: 0x17000885 RID: 2181
-	// (get) Token: 0x06000F7D RID: 3965 RVA: 0x0002DA00 File Offset: 0x0002BC00
+	// Token: 0x17000B23 RID: 2851
+	// (get) Token: 0x0600175E RID: 5982 RVA: 0x000052A9 File Offset: 0x000034A9
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -14,8 +14,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x17000886 RID: 2182
-	// (get) Token: 0x06000F7E RID: 3966 RVA: 0x0002DA07 File Offset: 0x0002BC07
+	// Token: 0x17000B24 RID: 2852
+	// (get) Token: 0x0600175F RID: 5983 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -24,8 +24,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x17000887 RID: 2183
-	// (get) Token: 0x06000F7F RID: 3967 RVA: 0x0002DA0E File Offset: 0x0002BC0E
+	// Token: 0x17000B25 RID: 2853
+	// (get) Token: 0x06001760 RID: 5984 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float TellAnimSpeed
 	{
 		get
@@ -34,8 +34,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x17000888 RID: 2184
-	// (get) Token: 0x06000F80 RID: 3968 RVA: 0x0002DA15 File Offset: 0x0002BC15
+	// Token: 0x17000B26 RID: 2854
+	// (get) Token: 0x06001761 RID: 5985 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -44,8 +44,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x17000889 RID: 2185
-	// (get) Token: 0x06000F81 RID: 3969 RVA: 0x0002DA1C File Offset: 0x0002BC1C
+	// Token: 0x17000B27 RID: 2855
+	// (get) Token: 0x06001762 RID: 5986 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -54,8 +54,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700088A RID: 2186
-	// (get) Token: 0x06000F82 RID: 3970 RVA: 0x0002DA23 File Offset: 0x0002BC23
+	// Token: 0x17000B28 RID: 2856
+	// (get) Token: 0x06001763 RID: 5987 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -64,8 +64,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700088B RID: 2187
-	// (get) Token: 0x06000F83 RID: 3971 RVA: 0x0002DA2A File Offset: 0x0002BC2A
+	// Token: 0x17000B29 RID: 2857
+	// (get) Token: 0x06001764 RID: 5988 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -74,8 +74,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700088C RID: 2188
-	// (get) Token: 0x06000F84 RID: 3972 RVA: 0x0002DA31 File Offset: 0x0002BC31
+	// Token: 0x17000B2A RID: 2858
+	// (get) Token: 0x06001765 RID: 5989 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -84,8 +84,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700088D RID: 2189
-	// (get) Token: 0x06000F85 RID: 3973 RVA: 0x0002DA38 File Offset: 0x0002BC38
+	// Token: 0x17000B2B RID: 2859
+	// (get) Token: 0x06001766 RID: 5990 RVA: 0x0000566E File Offset: 0x0000386E
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -94,8 +94,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700088E RID: 2190
-	// (get) Token: 0x06000F86 RID: 3974 RVA: 0x0002DA3F File Offset: 0x0002BC3F
+	// Token: 0x17000B2C RID: 2860
+	// (get) Token: 0x06001767 RID: 5991 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -104,8 +104,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x1700088F RID: 2191
-	// (get) Token: 0x06000F87 RID: 3975 RVA: 0x0002DA46 File Offset: 0x0002BC46
+	// Token: 0x17000B2D RID: 2861
+	// (get) Token: 0x06001768 RID: 5992 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float GravityReduction
 	{
 		get
@@ -114,8 +114,8 @@ public class HeavyBow_Ability : Bow_Ability
 		}
 	}
 
-	// Token: 0x17000890 RID: 2192
-	// (get) Token: 0x06000F88 RID: 3976 RVA: 0x0002DA4D File Offset: 0x0002BC4D
+	// Token: 0x17000B2E RID: 2862
+	// (get) Token: 0x06001769 RID: 5993 RVA: 0x0000BCEF File Offset: 0x00009EEF
 	protected override Vector2 BowPushbackAmount
 	{
 		get

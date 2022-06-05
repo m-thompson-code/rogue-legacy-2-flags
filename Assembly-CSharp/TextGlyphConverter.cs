@@ -6,11 +6,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000819 RID: 2073
+// Token: 0x02000CEC RID: 3308
 public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 {
-	// Token: 0x170016F9 RID: 5881
-	// (get) Token: 0x06004473 RID: 17523 RVA: 0x000F27C7 File Offset: 0x000F09C7
+	// Token: 0x17001F03 RID: 7939
+	// (get) Token: 0x06005E33 RID: 24115 RVA: 0x00033E46 File Offset: 0x00032046
 	public bool IsInitialized
 	{
 		get
@@ -19,9 +19,9 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x170016FA RID: 5882
-	// (get) Token: 0x06004474 RID: 17524 RVA: 0x000F27CF File Offset: 0x000F09CF
-	// (set) Token: 0x06004475 RID: 17525 RVA: 0x000F27D7 File Offset: 0x000F09D7
+	// Token: 0x17001F04 RID: 7940
+	// (get) Token: 0x06005E34 RID: 24116 RVA: 0x00033E4E File Offset: 0x0003204E
+	// (set) Token: 0x06005E35 RID: 24117 RVA: 0x00033E56 File Offset: 0x00032056
 	public bool OverrideControllerType
 	{
 		get
@@ -34,9 +34,9 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x170016FB RID: 5883
-	// (get) Token: 0x06004476 RID: 17526 RVA: 0x000F27E0 File Offset: 0x000F09E0
-	// (set) Token: 0x06004477 RID: 17527 RVA: 0x000F27E8 File Offset: 0x000F09E8
+	// Token: 0x17001F05 RID: 7941
+	// (get) Token: 0x06005E36 RID: 24118 RVA: 0x00033E5F File Offset: 0x0003205F
+	// (set) Token: 0x06005E37 RID: 24119 RVA: 0x00033E67 File Offset: 0x00032067
 	public ControllerType ForcedControllerType
 	{
 		get
@@ -49,8 +49,8 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x170016FC RID: 5884
-	// (get) Token: 0x06004478 RID: 17528 RVA: 0x000F27F1 File Offset: 0x000F09F1
+	// Token: 0x17001F06 RID: 7942
+	// (get) Token: 0x06005E38 RID: 24120 RVA: 0x00033E70 File Offset: 0x00032070
 	public ControllerType CurrentControllerType
 	{
 		get
@@ -63,13 +63,13 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x170016FD RID: 5885
-	// (get) Token: 0x06004479 RID: 17529 RVA: 0x000F2812 File Offset: 0x000F0A12
-	// (set) Token: 0x0600447A RID: 17530 RVA: 0x000F281A File Offset: 0x000F0A1A
+	// Token: 0x17001F07 RID: 7943
+	// (get) Token: 0x06005E39 RID: 24121 RVA: 0x00033E91 File Offset: 0x00032091
+	// (set) Token: 0x06005E3A RID: 24122 RVA: 0x00033E99 File Offset: 0x00032099
 	public GamepadType ForcedGamepadType { get; set; }
 
-	// Token: 0x170016FE RID: 5886
-	// (get) Token: 0x0600447B RID: 17531 RVA: 0x000F2823 File Offset: 0x000F0A23
+	// Token: 0x17001F08 RID: 7944
+	// (get) Token: 0x06005E3B RID: 24123 RVA: 0x00033EA2 File Offset: 0x000320A2
 	public GamepadType CurrentGamepadType
 	{
 		get
@@ -82,20 +82,20 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x0600447C RID: 17532 RVA: 0x000F283A File Offset: 0x000F0A3A
+	// Token: 0x06005E3C RID: 24124 RVA: 0x00033EB9 File Offset: 0x000320B9
 	private void Awake()
 	{
 		this.m_tmpText = base.GetComponent<TMP_Text>();
 		this.m_stringReplacement = base.GetComponent<StringReplacementUtility>();
 	}
 
-	// Token: 0x0600447D RID: 17533 RVA: 0x000F2854 File Offset: 0x000F0A54
+	// Token: 0x06005E3D RID: 24125 RVA: 0x00033ED3 File Offset: 0x000320D3
 	private void Start()
 	{
 		this.Initialize();
 	}
 
-	// Token: 0x0600447E RID: 17534 RVA: 0x000F285C File Offset: 0x000F0A5C
+	// Token: 0x06005E3E RID: 24126 RVA: 0x0016032C File Offset: 0x0015E52C
 	private void OnEnable()
 	{
 		if (this.IsInitialized)
@@ -114,7 +114,7 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x0600447F RID: 17535 RVA: 0x000F28B0 File Offset: 0x000F0AB0
+	// Token: 0x06005E3F RID: 24127 RVA: 0x00033EDB File Offset: 0x000320DB
 	private void OnDisable()
 	{
 		if (this.m_onTextChangedEventAdded)
@@ -129,7 +129,7 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x06004480 RID: 17536 RVA: 0x000F28F0 File Offset: 0x000F0AF0
+	// Token: 0x06005E40 RID: 24128 RVA: 0x00160380 File Offset: 0x0015E580
 	private void Initialize()
 	{
 		if (this.m_tmpText)
@@ -151,7 +151,7 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		throw new Exception("TextGlyphConverter cannot find TextMeshPro text on GameObject.");
 	}
 
-	// Token: 0x06004481 RID: 17537 RVA: 0x000F2960 File Offset: 0x000F0B60
+	// Token: 0x06005E41 RID: 24129 RVA: 0x001603F0 File Offset: 0x0015E5F0
 	public void LastControllerChanged(Controller controller)
 	{
 		if ((this.m_currentlyUsedControllerType == ControllerType.Custom || (this.m_currentlyUsedControllerType != ControllerType.Joystick && controller.type == ControllerType.Joystick) || (this.m_currentlyUsedControllerType == ControllerType.Joystick && controller.type != ControllerType.Joystick) || (this.m_currentlyUsedControllerType == ControllerType.Joystick && this.CurrentGamepadType != RewiredOnStartupController.CurrentActiveGamepadType)) && this.IsInitialized)
@@ -160,13 +160,13 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x06004482 RID: 17538 RVA: 0x000F29C0 File Offset: 0x000F0BC0
+	// Token: 0x06005E42 RID: 24130 RVA: 0x00033F1B File Offset: 0x0003211B
 	public void OnTextChanged()
 	{
 		this.UpdateText(false);
 	}
 
-	// Token: 0x06004483 RID: 17539 RVA: 0x000F29CC File Offset: 0x000F0BCC
+	// Token: 0x06005E43 RID: 24131 RVA: 0x00160450 File Offset: 0x0015E650
 	public void UpdateText(bool forceUpdate)
 	{
 		if (this.m_stringReplacement && this.m_tmpText.text != this.m_stringReplacedText)
@@ -242,14 +242,14 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x06004484 RID: 17540 RVA: 0x000F2C24 File Offset: 0x000F0E24
+	// Token: 0x06005E44 RID: 24132 RVA: 0x00033F24 File Offset: 0x00032124
 	private void AlignGlyphs()
 	{
 		this.AlignKeycodeInputText();
 		this.CorrectSubmeshHeirarchy();
 	}
 
-	// Token: 0x06004485 RID: 17541 RVA: 0x000F2C34 File Offset: 0x000F0E34
+	// Token: 0x06005E45 RID: 24133 RVA: 0x001606A8 File Offset: 0x0015E8A8
 	private void CorrectSubmeshHeirarchy()
 	{
 		foreach (TMP_SubMeshUI tmp_SubMeshUI in this.m_tmpSubmeshList)
@@ -261,7 +261,7 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x06004486 RID: 17542 RVA: 0x000F2C94 File Offset: 0x000F0E94
+	// Token: 0x06005E46 RID: 24134 RVA: 0x00160708 File Offset: 0x0015E908
 	private void AlignKeycodeInputText()
 	{
 		foreach (KeyboardButtonTextAligner keyboardButtonTextAligner in this.m_keyboardTextAlignerList)
@@ -270,7 +270,7 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x06004487 RID: 17543 RVA: 0x000F2CE4 File Offset: 0x000F0EE4
+	// Token: 0x06005E47 RID: 24135 RVA: 0x00160758 File Offset: 0x0015E958
 	private void ApplyGlyphs()
 	{
 		string text = this.m_tmpText.text;
@@ -295,7 +295,7 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		this.m_postAppliedText = this.m_tmpText.text;
 	}
 
-	// Token: 0x06004488 RID: 17544 RVA: 0x000F2D70 File Offset: 0x000F0F70
+	// Token: 0x06005E48 RID: 24136 RVA: 0x001607E4 File Offset: 0x0015E9E4
 	private void ConvertTextGlyphs_V2(string textToConvert, ControllerType controllerType = ControllerType.Custom, GamepadType gamepadType = GamepadType.None)
 	{
 		if (this.IsInitialized)
@@ -374,7 +374,7 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		this.m_tmpText.ForceMeshUpdate(true, false);
 	}
 
-	// Token: 0x06004489 RID: 17545 RVA: 0x000F2F58 File Offset: 0x000F1158
+	// Token: 0x06005E49 RID: 24137 RVA: 0x001609CC File Offset: 0x0015EBCC
 	private bool AddKeyCodeTextToIcon_V2(string actionName, int iconCount, int keyboardIconCount)
 	{
 		if (actionName == "Window_AllMovement_LStick" || actionName == "Window_AllMovement_RStick")
@@ -474,7 +474,7 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		return false;
 	}
 
-	// Token: 0x0600448A RID: 17546 RVA: 0x000F328C File Offset: 0x000F148C
+	// Token: 0x06005E4A RID: 24138 RVA: 0x00160D00 File Offset: 0x0015EF00
 	private void ResetAllKeycodeText_V2()
 	{
 		foreach (KeyboardButtonTextAligner keyboardButtonTextAligner in this.m_keyboardTextAlignerList)
@@ -485,73 +485,73 @@ public class TextGlyphConverter : MonoBehaviour, ITextChangedObj
 		}
 	}
 
-	// Token: 0x04003A66 RID: 14950
+	// Token: 0x04004D5B RID: 19803
 	private static bool m_loggedControllerMissingWarning = false;
 
-	// Token: 0x04003A67 RID: 14951
+	// Token: 0x04004D5C RID: 19804
 	[SerializeField]
 	private bool m_overrideControllerType;
 
-	// Token: 0x04003A68 RID: 14952
+	// Token: 0x04004D5D RID: 19805
 	[SerializeField]
 	[ConditionalHide("m_overrideControllerType", true)]
 	private ControllerType m_forcedControllerType;
 
-	// Token: 0x04003A69 RID: 14953
+	// Token: 0x04004D5E RID: 19806
 	private TMP_Text m_tmpText;
 
-	// Token: 0x04003A6A RID: 14954
+	// Token: 0x04004D5F RID: 19807
 	private string m_preGlyphsAppliedText;
 
-	// Token: 0x04003A6B RID: 14955
+	// Token: 0x04004D60 RID: 19808
 	private string m_postAppliedText;
 
-	// Token: 0x04003A6C RID: 14956
+	// Token: 0x04004D61 RID: 19809
 	private List<TMP_SubMeshUI> m_tmpSubmeshList = new List<TMP_SubMeshUI>(4);
 
-	// Token: 0x04003A6D RID: 14957
+	// Token: 0x04004D62 RID: 19810
 	private List<KeyboardButtonTextAligner> m_keyboardTextAlignerList = new List<KeyboardButtonTextAligner>(4);
 
-	// Token: 0x04003A6E RID: 14958
+	// Token: 0x04004D63 RID: 19811
 	private bool m_isInitialized;
 
-	// Token: 0x04003A6F RID: 14959
+	// Token: 0x04004D64 RID: 19812
 	private ControllerType m_currentlyUsedControllerType = ControllerType.Custom;
 
-	// Token: 0x04003A70 RID: 14960
+	// Token: 0x04004D65 RID: 19813
 	private GamepadType m_currentlyUsedGamepadType;
 
-	// Token: 0x04003A71 RID: 14961
+	// Token: 0x04004D66 RID: 19814
 	private bool m_onTextChangedEventAdded;
 
-	// Token: 0x04003A72 RID: 14962
+	// Token: 0x04004D67 RID: 19815
 	private bool m_onControllerChangedEventAdded;
 
-	// Token: 0x04003A73 RID: 14963
+	// Token: 0x04004D68 RID: 19816
 	private string m_stringReplacedText;
 
-	// Token: 0x04003A74 RID: 14964
+	// Token: 0x04004D69 RID: 19817
 	private StringReplacementUtility m_stringReplacement;
 
-	// Token: 0x04003A75 RID: 14965
+	// Token: 0x04004D6A RID: 19818
 	private List<TextGlyphConverter.TextGlyphEntry> m_assignedGamepadTextGlyphs = new List<TextGlyphConverter.TextGlyphEntry>(4);
 
-	// Token: 0x04003A76 RID: 14966
+	// Token: 0x04004D6B RID: 19819
 	private List<TextGlyphConverter.TextGlyphEntry> m_assignedKeyboardKeyCodes = new List<TextGlyphConverter.TextGlyphEntry>(4);
 
-	// Token: 0x04003A78 RID: 14968
+	// Token: 0x04004D6D RID: 19821
 	private static StringBuilder m_stringBuilderHelper = new StringBuilder();
 
-	// Token: 0x02000E45 RID: 3653
+	// Token: 0x02000CED RID: 3309
 	private struct TextGlyphEntry
 	{
-		// Token: 0x0400576B RID: 22379
+		// Token: 0x04004D6E RID: 19822
 		public string ActionName;
 
-		// Token: 0x0400576C RID: 22380
+		// Token: 0x04004D6F RID: 19823
 		public string GamepadTextGlyph;
 
-		// Token: 0x0400576D RID: 22381
+		// Token: 0x04004D70 RID: 19824
 		public int KeyboardKeyCode;
 	}
 }

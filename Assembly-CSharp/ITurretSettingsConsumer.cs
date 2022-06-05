@@ -1,40 +1,40 @@
 ﻿using System;
 
-// Token: 0x020005D5 RID: 1493
+// Token: 0x020009DD RID: 2525
 public interface ITurretSettingsConsumer
 {
-	// Token: 0x17001356 RID: 4950
-	// (get) Token: 0x06003696 RID: 13974
+	// Token: 0x17001A83 RID: 6787
+	// (get) Token: 0x06004CA8 RID: 19624
 	float InitialFireDelay { get; }
 
-	// Token: 0x17001357 RID: 4951
-	// (get) Token: 0x06003697 RID: 13975
+	// Token: 0x17001A84 RID: 6788
+	// (get) Token: 0x06004CA9 RID: 19625
 	TurretLogicType LogicType { get; }
 
-	// Token: 0x17001358 RID: 4952
-	// (get) Token: 0x06003698 RID: 13976
+	// Token: 0x17001A85 RID: 6789
+	// (get) Token: 0x06004CAA RID: 19626
 	float LoopFireDelay { get; }
 
-	// Token: 0x17001359 RID: 4953
-	// (get) Token: 0x06003699 RID: 13977
+	// Token: 0x17001A86 RID: 6790
+	// (get) Token: 0x06004CAB RID: 19627
 	float ProjectileSpeedMod { get; }
 
-	// Token: 0x1700135A RID: 4954
-	// (get) Token: 0x0600369A RID: 13978
+	// Token: 0x17001A87 RID: 6791
+	// (get) Token: 0x06004CAC RID: 19628
 	bool UseHalfLoopDelay { get; }
 
-	// Token: 0x0600369B RID: 13979
+	// Token: 0x06004CAD RID: 19629
 	void SetInitialFireDelay(float value);
 
-	// Token: 0x0600369C RID: 13980
+	// Token: 0x06004CAE RID: 19630
 	void SetLogic(TurretLogicType logicType);
 
-	// Token: 0x0600369D RID: 13981
+	// Token: 0x06004CAF RID: 19631
 	void SetLoopFireDelay(float value);
 
-	// Token: 0x0600369E RID: 13982
+	// Token: 0x06004CB0 RID: 19632
 	void SetProjectileSpeedMod(float value);
 
-	// Token: 0x0600369F RID: 13983
+	// Token: 0x06004CB1 RID: 19633
 	void SetUseHalfLoopDelay(bool value);
 }

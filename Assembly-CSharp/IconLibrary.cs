@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000238 RID: 568
+// Token: 0x020003F5 RID: 1013
 [CreateAssetMenu(menuName = "Custom/Libraries/Icon Library")]
 public class IconLibrary : ScriptableObject
 {
-	// Token: 0x17000B36 RID: 2870
-	// (get) Token: 0x060016CF RID: 5839 RVA: 0x000472E6 File Offset: 0x000454E6
+	// Token: 0x17000E63 RID: 3683
+	// (get) Token: 0x06002082 RID: 8322 RVA: 0x000113A0 File Offset: 0x0000F5A0
 	private static IconLibrary Instance
 	{
 		get
@@ -20,13 +20,13 @@ public class IconLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x060016D0 RID: 5840 RVA: 0x00047316 File Offset: 0x00045516
+	// Token: 0x06002083 RID: 8323 RVA: 0x000113D0 File Offset: 0x0000F5D0
 	public static Sprite GetDefaultSprite()
 	{
 		return IconLibrary.Instance.m_defaultSprite;
 	}
 
-	// Token: 0x060016D1 RID: 5841 RVA: 0x00047322 File Offset: 0x00045522
+	// Token: 0x06002084 RID: 8324 RVA: 0x000113DC File Offset: 0x0000F5DC
 	public static Sprite GetSquareIconFrameSprite(bool getNotFound)
 	{
 		if (getNotFound)
@@ -36,7 +36,7 @@ public class IconLibrary : ScriptableObject
 		return IconLibrary.Instance.m_squareIconFrameSprite;
 	}
 
-	// Token: 0x060016D2 RID: 5842 RVA: 0x0004733C File Offset: 0x0004553C
+	// Token: 0x06002085 RID: 8325 RVA: 0x000113F6 File Offset: 0x0000F5F6
 	public static Sprite GetHexagonIconFrameSprite(bool getNotFound)
 	{
 		if (getNotFound)
@@ -46,7 +46,7 @@ public class IconLibrary : ScriptableObject
 		return IconLibrary.Instance.m_hexagonIconFrameSprite;
 	}
 
-	// Token: 0x060016D3 RID: 5843 RVA: 0x00047358 File Offset: 0x00045558
+	// Token: 0x06002086 RID: 8326 RVA: 0x000A532C File Offset: 0x000A352C
 	public static Sprite GetSkillTreeIcon(SkillTreeType skillTreeType)
 	{
 		Sprite sprite = null;
@@ -59,19 +59,19 @@ public class IconLibrary : ScriptableObject
 		return sprite;
 	}
 
-	// Token: 0x060016D4 RID: 5844 RVA: 0x000473B0 File Offset: 0x000455B0
+	// Token: 0x06002087 RID: 8327 RVA: 0x00011410 File Offset: 0x0000F610
 	public static Sprite GetSkillTreeLockedIcon()
 	{
 		return IconLibrary.Instance.m_skillTreeLockedIcon;
 	}
 
-	// Token: 0x060016D5 RID: 5845 RVA: 0x000473BC File Offset: 0x000455BC
+	// Token: 0x06002088 RID: 8328 RVA: 0x0001141C File Offset: 0x0000F61C
 	public static Sprite GetSkillTreeSoulLockedIcon()
 	{
 		return IconLibrary.Instance.m_skillTreeSoulLockedIcon;
 	}
 
-	// Token: 0x060016D6 RID: 5846 RVA: 0x000473C8 File Offset: 0x000455C8
+	// Token: 0x06002089 RID: 8329 RVA: 0x000A5384 File Offset: 0x000A3584
 	public static Sprite GetAbilityIcon(AbilityType abilityType, bool returnNullIfNotFound)
 	{
 		Sprite sprite = null;
@@ -97,7 +97,7 @@ public class IconLibrary : ScriptableObject
 		return IconLibrary.Instance.m_defaultSprite;
 	}
 
-	// Token: 0x060016D7 RID: 5847 RVA: 0x00047454 File Offset: 0x00045654
+	// Token: 0x0600208A RID: 8330 RVA: 0x000A5410 File Offset: 0x000A3610
 	public static Sprite GetLargeAbilityIcon(AbilityType abilityType, bool returnNullIfNotFound)
 	{
 		Sprite sprite = null;
@@ -123,7 +123,7 @@ public class IconLibrary : ScriptableObject
 		return IconLibrary.Instance.m_defaultSprite;
 	}
 
-	// Token: 0x060016D8 RID: 5848 RVA: 0x000474E0 File Offset: 0x000456E0
+	// Token: 0x0600208B RID: 8331 RVA: 0x000A549C File Offset: 0x000A369C
 	public static Sprite GetAbilityCooldownIcon(CooldownRegenType cooldownType, bool returnNullIfNotFound)
 	{
 		Sprite sprite = null;
@@ -139,7 +139,7 @@ public class IconLibrary : ScriptableObject
 		return IconLibrary.Instance.m_defaultSprite;
 	}
 
-	// Token: 0x060016D9 RID: 5849 RVA: 0x00047540 File Offset: 0x00045740
+	// Token: 0x0600208C RID: 8332 RVA: 0x000A54FC File Offset: 0x000A36FC
 	public static Sprite GetEquipmentCategoryIcon(EquipmentCategoryType categoryType)
 	{
 		Sprite sprite = null;
@@ -152,7 +152,7 @@ public class IconLibrary : ScriptableObject
 		return sprite;
 	}
 
-	// Token: 0x060016DA RID: 5850 RVA: 0x00047598 File Offset: 0x00045798
+	// Token: 0x0600208D RID: 8333 RVA: 0x000A5554 File Offset: 0x000A3754
 	public static Sprite GetEquipmentIcon(EquipmentCategoryType categoryType, EquipmentType equipmentType)
 	{
 		EquipmentTypeSpriteDictionary equipmentTypeSpriteDictionary = null;
@@ -191,7 +191,7 @@ public class IconLibrary : ScriptableObject
 		return sprite;
 	}
 
-	// Token: 0x060016DB RID: 5851 RVA: 0x00047670 File Offset: 0x00045870
+	// Token: 0x0600208E RID: 8334 RVA: 0x000A562C File Offset: 0x000A382C
 	public static Sprite GetRuneIcon(RuneType runeType)
 	{
 		Sprite sprite = null;
@@ -204,7 +204,7 @@ public class IconLibrary : ScriptableObject
 		return sprite;
 	}
 
-	// Token: 0x060016DC RID: 5852 RVA: 0x000476C8 File Offset: 0x000458C8
+	// Token: 0x0600208F RID: 8335 RVA: 0x000A5684 File Offset: 0x000A3884
 	public static Sprite GetStatusEffectSprite(StatusBarEntryType statusEffectUIType)
 	{
 		Sprite sprite = null;
@@ -217,7 +217,7 @@ public class IconLibrary : ScriptableObject
 		return sprite;
 	}
 
-	// Token: 0x060016DD RID: 5853 RVA: 0x00047720 File Offset: 0x00045920
+	// Token: 0x06002090 RID: 8336 RVA: 0x000A56DC File Offset: 0x000A38DC
 	public static Sprite GetRelicSprite(RelicType relicType, bool getLargeIcon)
 	{
 		Sprite result;
@@ -236,7 +236,7 @@ public class IconLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x060016DE RID: 5854 RVA: 0x000477A0 File Offset: 0x000459A0
+	// Token: 0x06002091 RID: 8337 RVA: 0x000A575C File Offset: 0x000A395C
 	public static Sprite GetHeirloomSprite(HeirloomType heirloomType)
 	{
 		Sprite result;
@@ -248,7 +248,7 @@ public class IconLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x060016DF RID: 5855 RVA: 0x000477F0 File Offset: 0x000459F0
+	// Token: 0x06002092 RID: 8338 RVA: 0x000A57AC File Offset: 0x000A39AC
 	public static Sprite GetTraitIcon(TraitType traitType)
 	{
 		Sprite result;
@@ -260,7 +260,7 @@ public class IconLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x060016E0 RID: 5856 RVA: 0x00047840 File Offset: 0x00045A40
+	// Token: 0x06002093 RID: 8339 RVA: 0x000A57FC File Offset: 0x000A39FC
 	public static Sprite GetClassIcon(ClassType classType)
 	{
 		Sprite result;
@@ -272,7 +272,7 @@ public class IconLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x060016E1 RID: 5857 RVA: 0x00047890 File Offset: 0x00045A90
+	// Token: 0x06002094 RID: 8340 RVA: 0x000A584C File Offset: 0x000A3A4C
 	public static Sprite GetDialoguePortrait(DialoguePortraitType portraitType)
 	{
 		Sprite result;
@@ -284,7 +284,7 @@ public class IconLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x060016E2 RID: 5858 RVA: 0x000478E0 File Offset: 0x00045AE0
+	// Token: 0x06002095 RID: 8341 RVA: 0x000A589C File Offset: 0x000A3A9C
 	public static Sprite GetMiscIcon(MiscIconType iconType)
 	{
 		Sprite result;
@@ -296,7 +296,7 @@ public class IconLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x060016E3 RID: 5859 RVA: 0x00047930 File Offset: 0x00045B30
+	// Token: 0x06002096 RID: 8342 RVA: 0x000A58EC File Offset: 0x000A3AEC
 	public static Sprite GetChallengeIcon(ChallengeType challengeType, ChallengeLibrary.ChallengeIconEntryType entryType)
 	{
 		ChallengeLibrary.ChallengeIconEntry challengeIconEntry;
@@ -320,7 +320,7 @@ public class IconLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x060016E4 RID: 5860 RVA: 0x000479BC File Offset: 0x00045BBC
+	// Token: 0x06002097 RID: 8343 RVA: 0x000A5978 File Offset: 0x000A3B78
 	public static Sprite GetBurdenIcon(BurdenType burdenType)
 	{
 		Sprite result;
@@ -332,7 +332,7 @@ public class IconLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x060016E5 RID: 5861 RVA: 0x00047A0C File Offset: 0x00045C0C
+	// Token: 0x06002098 RID: 8344 RVA: 0x000A59C8 File Offset: 0x000A3BC8
 	public static Sprite GetJournalCategoryIcon(JournalCategoryType categoryType)
 	{
 		Sprite result;
@@ -344,7 +344,7 @@ public class IconLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x060016E6 RID: 5862 RVA: 0x00047A5C File Offset: 0x00045C5C
+	// Token: 0x06002099 RID: 8345 RVA: 0x000A5A18 File Offset: 0x000A3C18
 	public static Sprite GetSoulShopIcon(SoulShopType soulShopType)
 	{
 		Sprite result;
@@ -356,7 +356,7 @@ public class IconLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x060016E7 RID: 5863 RVA: 0x00047AAC File Offset: 0x00045CAC
+	// Token: 0x0600209A RID: 8346 RVA: 0x000A5A68 File Offset: 0x000A3C68
 	public static Texture2D GetCursorIconTexture(CursorIconType cursorType)
 	{
 		Texture2D result;
@@ -368,177 +368,177 @@ public class IconLibrary : ScriptableObject
 		return result;
 	}
 
-	// Token: 0x0400164C RID: 5708
+	// Token: 0x04001D64 RID: 7524
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/IconLibrary";
 
-	// Token: 0x0400164D RID: 5709
+	// Token: 0x04001D65 RID: 7525
 	private const string ASSET_PATH = "Assets/Content/Scriptable Objects/Libraries/IconLibrary.asset";
 
-	// Token: 0x0400164E RID: 5710
+	// Token: 0x04001D66 RID: 7526
 	[Header("Default Sprites")]
 	[SerializeField]
 	private Sprite m_defaultSprite;
 
-	// Token: 0x0400164F RID: 5711
+	// Token: 0x04001D67 RID: 7527
 	[SerializeField]
 	private Sprite m_squareIconFrameSprite;
 
-	// Token: 0x04001650 RID: 5712
+	// Token: 0x04001D68 RID: 7528
 	[SerializeField]
 	private Sprite m_squareNotFoundIconFrameSprite;
 
-	// Token: 0x04001651 RID: 5713
+	// Token: 0x04001D69 RID: 7529
 	[SerializeField]
 	private Sprite m_hexagonIconFrameSprite;
 
-	// Token: 0x04001652 RID: 5714
+	// Token: 0x04001D6A RID: 7530
 	[SerializeField]
 	private Sprite m_hexagonNotFoundIconFrameSprite;
 
-	// Token: 0x04001653 RID: 5715
+	// Token: 0x04001D6B RID: 7531
 	[Header("Skill Tree Icons")]
 	[SerializeField]
 	private SkillTreeTypeSpriteDictionary m_skillTreeIconLibrary;
 
-	// Token: 0x04001654 RID: 5716
+	// Token: 0x04001D6C RID: 7532
 	[SerializeField]
 	private Sprite m_skillTreeLockedIcon;
 
-	// Token: 0x04001655 RID: 5717
+	// Token: 0x04001D6D RID: 7533
 	[SerializeField]
 	private Sprite m_skillTreeSoulLockedIcon;
 
-	// Token: 0x04001656 RID: 5718
+	// Token: 0x04001D6E RID: 7534
 	[Header("Class Icons")]
 	[SerializeField]
 	private ClassTypeSpriteDictionary m_classIconLibrary;
 
-	// Token: 0x04001657 RID: 5719
+	// Token: 0x04001D6F RID: 7535
 	[Header("Ability Icons")]
 	[SerializeField]
 	private AbilityTypeSpriteDictionary m_weaponAbilityIconLibrary;
 
-	// Token: 0x04001658 RID: 5720
+	// Token: 0x04001D70 RID: 7536
 	[SerializeField]
 	private AbilityTypeSpriteDictionary m_weaponAbilityIconLargeLibrary;
 
-	// Token: 0x04001659 RID: 5721
+	// Token: 0x04001D71 RID: 7537
 	[Space(5f)]
 	[SerializeField]
 	private AbilityTypeSpriteDictionary m_spellAbilityIconLibrary;
 
-	// Token: 0x0400165A RID: 5722
+	// Token: 0x04001D72 RID: 7538
 	[SerializeField]
 	private AbilityTypeSpriteDictionary m_spellAbilityIconLargeLibrary;
 
-	// Token: 0x0400165B RID: 5723
+	// Token: 0x04001D73 RID: 7539
 	[Space(5f)]
 	[SerializeField]
 	private AbilityTypeSpriteDictionary m_talentAbilityIconLibrary;
 
-	// Token: 0x0400165C RID: 5724
+	// Token: 0x04001D74 RID: 7540
 	[SerializeField]
 	private AbilityTypeSpriteDictionary m_talentAbilityIconLargeLibrary;
 
-	// Token: 0x0400165D RID: 5725
+	// Token: 0x04001D75 RID: 7541
 	[Space(5f)]
 	[SerializeField]
 	private CooldownRegenTypeSpriteDictionary m_abilityCooldownIconLibrary;
 
-	// Token: 0x0400165E RID: 5726
+	// Token: 0x04001D76 RID: 7542
 	[Header("Equipment Icons")]
 	[SerializeField]
 	private EquipmentCategoryTypeSpriteDictionary m_equipmentCategoryIconLibrary;
 
-	// Token: 0x0400165F RID: 5727
+	// Token: 0x04001D77 RID: 7543
 	[Space(5f)]
 	[SerializeField]
 	private EquipmentTypeSpriteDictionary m_weaponIconLibrary;
 
-	// Token: 0x04001660 RID: 5728
+	// Token: 0x04001D78 RID: 7544
 	[Space(5f)]
 	[SerializeField]
 	private EquipmentTypeSpriteDictionary m_headIconLibrary;
 
-	// Token: 0x04001661 RID: 5729
+	// Token: 0x04001D79 RID: 7545
 	[Space(5f)]
 	[SerializeField]
 	private EquipmentTypeSpriteDictionary m_chestIconLibrary;
 
-	// Token: 0x04001662 RID: 5730
+	// Token: 0x04001D7A RID: 7546
 	[Space(5f)]
 	[SerializeField]
 	private EquipmentTypeSpriteDictionary m_capeIconLibrary;
 
-	// Token: 0x04001663 RID: 5731
+	// Token: 0x04001D7B RID: 7547
 	[Space(5f)]
 	[SerializeField]
 	private EquipmentTypeSpriteDictionary m_trinketIconLibrary;
 
-	// Token: 0x04001664 RID: 5732
+	// Token: 0x04001D7C RID: 7548
 	[Header("Rune Icons")]
 	[SerializeField]
 	private RuneTypeSpriteDictionary m_runeIconLibrary;
 
-	// Token: 0x04001665 RID: 5733
+	// Token: 0x04001D7D RID: 7549
 	[Header("Trait Icons")]
 	[SerializeField]
 	private TraitTypeSpriteDictionary m_traitIconLibrary;
 
-	// Token: 0x04001666 RID: 5734
+	// Token: 0x04001D7E RID: 7550
 	[Header("Status Effect Icons")]
 	[SerializeField]
 	private StatusEffectUITypeSpriteDictionary m_statusEffectIconLibrary;
 
-	// Token: 0x04001667 RID: 5735
+	// Token: 0x04001D7F RID: 7551
 	[Header("Relic Icons")]
 	[SerializeField]
 	private RelicTypeSpriteDictionary m_relicIconLibrary;
 
-	// Token: 0x04001668 RID: 5736
+	// Token: 0x04001D80 RID: 7552
 	[SerializeField]
 	private RelicTypeSpriteDictionary m_relicLargeIconLibrary;
 
-	// Token: 0x04001669 RID: 5737
+	// Token: 0x04001D81 RID: 7553
 	[Header("Heirloom Icons")]
 	[SerializeField]
 	private HeirloomTypeSpriteDictionary m_heirloomIconLibrary;
 
-	// Token: 0x0400166A RID: 5738
+	// Token: 0x04001D82 RID: 7554
 	[Header("Dialogue Portrait Images")]
 	[SerializeField]
 	private DialoguePortraitTypeSpriteDictionary m_dialoguePortraitLibrary;
 
-	// Token: 0x0400166B RID: 5739
+	// Token: 0x04001D83 RID: 7555
 	[Header("Misc Icons")]
 	[SerializeField]
 	private MiscIconTypeSpriteDictionary m_miscIconLibrary;
 
-	// Token: 0x0400166C RID: 5740
+	// Token: 0x04001D84 RID: 7556
 	[Header("Challenge Icons")]
 	[SerializeField]
 	private ChallengeTypeSpriteDictionary m_challengeIconLibrary;
 
-	// Token: 0x0400166D RID: 5741
+	// Token: 0x04001D85 RID: 7557
 	[Header("Burden Icons")]
 	[SerializeField]
 	private BurdenTypeSpriteDictionary m_burdenIconLibrary;
 
-	// Token: 0x0400166E RID: 5742
+	// Token: 0x04001D86 RID: 7558
 	[Header("Journal Category Icons")]
 	[SerializeField]
 	private JournalCategoryTypeSpriteDictionary m_journalCategoryIconLibrary;
 
-	// Token: 0x0400166F RID: 5743
+	// Token: 0x04001D87 RID: 7559
 	[Header("SoulShop Icons")]
 	[SerializeField]
 	private SoulShopTypeSpriteDictionary m_soulShopIconLibrary;
 
-	// Token: 0x04001670 RID: 5744
+	// Token: 0x04001D88 RID: 7560
 	[Header("Mouse Icons")]
 	[SerializeField]
 	private CursorIconTypeTexture2DDictionary m_cursorIconLibrary;
 
-	// Token: 0x04001671 RID: 5745
+	// Token: 0x04001D89 RID: 7561
 	private static IconLibrary m_instance;
 }

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200034C RID: 844
+// Token: 0x020005B3 RID: 1459
 public class MagicBoost_Trait : BaseTrait
 {
-	// Token: 0x17000DCF RID: 3535
-	// (get) Token: 0x06002046 RID: 8262 RVA: 0x0006667A File Offset: 0x0006487A
+	// Token: 0x17001226 RID: 4646
+	// (get) Token: 0x06002D94 RID: 11668 RVA: 0x00019189 File Offset: 0x00017389
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class MagicBoost_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002047 RID: 8263 RVA: 0x00066681 File Offset: 0x00064881
+	// Token: 0x06002D95 RID: 11669 RVA: 0x00019190 File Offset: 0x00017390
 	public IEnumerator Start()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -30,7 +30,7 @@ public class MagicBoost_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06002048 RID: 8264 RVA: 0x00066689 File Offset: 0x00064889
+	// Token: 0x06002D96 RID: 11670 RVA: 0x00018CF5 File Offset: 0x00016EF5
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

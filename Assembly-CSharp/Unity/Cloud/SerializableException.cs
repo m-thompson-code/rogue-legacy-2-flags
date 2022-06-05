@@ -4,15 +4,15 @@ using System.Diagnostics;
 
 namespace Unity.Cloud
 {
-	// Token: 0x02000832 RID: 2098
+	// Token: 0x02000D17 RID: 3351
 	public class SerializableException
 	{
-		// Token: 0x06004556 RID: 17750 RVA: 0x000F7976 File Offset: 0x000F5B76
+		// Token: 0x06005F8C RID: 24460 RVA: 0x00002AD6 File Offset: 0x00000CD6
 		public SerializableException()
 		{
 		}
 
-		// Token: 0x06004557 RID: 17751 RVA: 0x000F7980 File Offset: 0x000F5B80
+		// Token: 0x06005F8D RID: 24461 RVA: 0x00165520 File Offset: 0x00163720
 		public SerializableException(Exception exception)
 		{
 			this.Message = exception.Message;
@@ -52,39 +52,39 @@ namespace Unity.Cloud
 			}
 		}
 
-		// Token: 0x1700171D RID: 5917
-		// (get) Token: 0x06004558 RID: 17752 RVA: 0x000F7AD1 File Offset: 0x000F5CD1
-		// (set) Token: 0x06004559 RID: 17753 RVA: 0x000F7AD9 File Offset: 0x000F5CD9
+		// Token: 0x17001F4B RID: 8011
+		// (get) Token: 0x06005F8E RID: 24462 RVA: 0x00034ACB File Offset: 0x00032CCB
+		// (set) Token: 0x06005F8F RID: 24463 RVA: 0x00034AD3 File Offset: 0x00032CD3
 		public string DetailedProblemIdentifier { get; set; }
 
-		// Token: 0x1700171E RID: 5918
-		// (get) Token: 0x0600455A RID: 17754 RVA: 0x000F7AE2 File Offset: 0x000F5CE2
-		// (set) Token: 0x0600455B RID: 17755 RVA: 0x000F7AEA File Offset: 0x000F5CEA
+		// Token: 0x17001F4C RID: 8012
+		// (get) Token: 0x06005F90 RID: 24464 RVA: 0x00034ADC File Offset: 0x00032CDC
+		// (set) Token: 0x06005F91 RID: 24465 RVA: 0x00034AE4 File Offset: 0x00032CE4
 		public string FullText { get; set; }
 
-		// Token: 0x1700171F RID: 5919
-		// (get) Token: 0x0600455C RID: 17756 RVA: 0x000F7AF3 File Offset: 0x000F5CF3
-		// (set) Token: 0x0600455D RID: 17757 RVA: 0x000F7AFB File Offset: 0x000F5CFB
+		// Token: 0x17001F4D RID: 8013
+		// (get) Token: 0x06005F92 RID: 24466 RVA: 0x00034AED File Offset: 0x00032CED
+		// (set) Token: 0x06005F93 RID: 24467 RVA: 0x00034AF5 File Offset: 0x00032CF5
 		public SerializableException InnerException { get; set; }
 
-		// Token: 0x17001720 RID: 5920
-		// (get) Token: 0x0600455E RID: 17758 RVA: 0x000F7B04 File Offset: 0x000F5D04
-		// (set) Token: 0x0600455F RID: 17759 RVA: 0x000F7B0C File Offset: 0x000F5D0C
+		// Token: 0x17001F4E RID: 8014
+		// (get) Token: 0x06005F94 RID: 24468 RVA: 0x00034AFE File Offset: 0x00032CFE
+		// (set) Token: 0x06005F95 RID: 24469 RVA: 0x00034B06 File Offset: 0x00032D06
 		public string Message { get; set; }
 
-		// Token: 0x17001721 RID: 5921
-		// (get) Token: 0x06004560 RID: 17760 RVA: 0x000F7B15 File Offset: 0x000F5D15
-		// (set) Token: 0x06004561 RID: 17761 RVA: 0x000F7B1D File Offset: 0x000F5D1D
+		// Token: 0x17001F4F RID: 8015
+		// (get) Token: 0x06005F96 RID: 24470 RVA: 0x00034B0F File Offset: 0x00032D0F
+		// (set) Token: 0x06005F97 RID: 24471 RVA: 0x00034B17 File Offset: 0x00032D17
 		public string ProblemIdentifier { get; set; }
 
-		// Token: 0x17001722 RID: 5922
-		// (get) Token: 0x06004562 RID: 17762 RVA: 0x000F7B26 File Offset: 0x000F5D26
-		// (set) Token: 0x06004563 RID: 17763 RVA: 0x000F7B2E File Offset: 0x000F5D2E
+		// Token: 0x17001F50 RID: 8016
+		// (get) Token: 0x06005F98 RID: 24472 RVA: 0x00034B20 File Offset: 0x00032D20
+		// (set) Token: 0x06005F99 RID: 24473 RVA: 0x00034B28 File Offset: 0x00032D28
 		public List<SerializableStackFrame> StackTrace { get; set; }
 
-		// Token: 0x17001723 RID: 5923
-		// (get) Token: 0x06004564 RID: 17764 RVA: 0x000F7B37 File Offset: 0x000F5D37
-		// (set) Token: 0x06004565 RID: 17765 RVA: 0x000F7B3F File Offset: 0x000F5D3F
+		// Token: 0x17001F51 RID: 8017
+		// (get) Token: 0x06005F9A RID: 24474 RVA: 0x00034B31 File Offset: 0x00032D31
+		// (set) Token: 0x06005F9B RID: 24475 RVA: 0x00034B39 File Offset: 0x00032D39
 		public string Type { get; set; }
 	}
 }

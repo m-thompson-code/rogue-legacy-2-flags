@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200034F RID: 847
+// Token: 0x020005B9 RID: 1465
 public class MapReveal_Trait : BaseTrait
 {
-	// Token: 0x17000DD2 RID: 3538
-	// (get) Token: 0x06002050 RID: 8272 RVA: 0x000666FF File Offset: 0x000648FF
+	// Token: 0x1700122D RID: 4653
+	// (get) Token: 0x06002DAD RID: 11693 RVA: 0x0001920B File Offset: 0x0001740B
 	public override TraitType TraitType
 	{
 		get

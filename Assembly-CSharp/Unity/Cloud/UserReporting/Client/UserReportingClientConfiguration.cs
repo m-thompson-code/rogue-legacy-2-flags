@@ -2,10 +2,10 @@
 
 namespace Unity.Cloud.UserReporting.Client
 {
-	// Token: 0x02000851 RID: 2129
+	// Token: 0x02000D4F RID: 3407
 	public class UserReportingClientConfiguration
 	{
-		// Token: 0x060046BC RID: 18108 RVA: 0x000FCC79 File Offset: 0x000FAE79
+		// Token: 0x06006158 RID: 24920 RVA: 0x000359D4 File Offset: 0x00033BD4
 		public UserReportingClientConfiguration()
 		{
 			this.MaximumEventCount = 100;
@@ -14,7 +14,7 @@ namespace Unity.Cloud.UserReporting.Client
 			this.MaximumScreenshotCount = 10;
 		}
 
-		// Token: 0x060046BD RID: 18109 RVA: 0x000FCCA4 File Offset: 0x000FAEA4
+		// Token: 0x06006159 RID: 24921 RVA: 0x000359FF File Offset: 0x00033BFF
 		public UserReportingClientConfiguration(int maximumEventCount, int maximumMeasureCount, int framesPerMeasure, int maximumScreenshotCount)
 		{
 			this.MaximumEventCount = maximumEventCount;
@@ -23,7 +23,7 @@ namespace Unity.Cloud.UserReporting.Client
 			this.MaximumScreenshotCount = maximumScreenshotCount;
 		}
 
-		// Token: 0x060046BE RID: 18110 RVA: 0x000FCCC9 File Offset: 0x000FAEC9
+		// Token: 0x0600615A RID: 24922 RVA: 0x00035A24 File Offset: 0x00033C24
 		public UserReportingClientConfiguration(int maximumEventCount, MetricsGatheringMode metricsGatheringMode, int maximumMeasureCount, int framesPerMeasure, int maximumScreenshotCount)
 		{
 			this.MaximumEventCount = maximumEventCount;
@@ -33,29 +33,29 @@ namespace Unity.Cloud.UserReporting.Client
 			this.MaximumScreenshotCount = maximumScreenshotCount;
 		}
 
-		// Token: 0x17001773 RID: 6003
-		// (get) Token: 0x060046BF RID: 18111 RVA: 0x000FCCF6 File Offset: 0x000FAEF6
-		// (set) Token: 0x060046C0 RID: 18112 RVA: 0x000FCCFE File Offset: 0x000FAEFE
+		// Token: 0x17001FB7 RID: 8119
+		// (get) Token: 0x0600615B RID: 24923 RVA: 0x00035A51 File Offset: 0x00033C51
+		// (set) Token: 0x0600615C RID: 24924 RVA: 0x00035A59 File Offset: 0x00033C59
 		public int FramesPerMeasure { get; internal set; }
 
-		// Token: 0x17001774 RID: 6004
-		// (get) Token: 0x060046C1 RID: 18113 RVA: 0x000FCD07 File Offset: 0x000FAF07
-		// (set) Token: 0x060046C2 RID: 18114 RVA: 0x000FCD0F File Offset: 0x000FAF0F
+		// Token: 0x17001FB8 RID: 8120
+		// (get) Token: 0x0600615D RID: 24925 RVA: 0x00035A62 File Offset: 0x00033C62
+		// (set) Token: 0x0600615E RID: 24926 RVA: 0x00035A6A File Offset: 0x00033C6A
 		public int MaximumEventCount { get; internal set; }
 
-		// Token: 0x17001775 RID: 6005
-		// (get) Token: 0x060046C3 RID: 18115 RVA: 0x000FCD18 File Offset: 0x000FAF18
-		// (set) Token: 0x060046C4 RID: 18116 RVA: 0x000FCD20 File Offset: 0x000FAF20
+		// Token: 0x17001FB9 RID: 8121
+		// (get) Token: 0x0600615F RID: 24927 RVA: 0x00035A73 File Offset: 0x00033C73
+		// (set) Token: 0x06006160 RID: 24928 RVA: 0x00035A7B File Offset: 0x00033C7B
 		public int MaximumMeasureCount { get; internal set; }
 
-		// Token: 0x17001776 RID: 6006
-		// (get) Token: 0x060046C5 RID: 18117 RVA: 0x000FCD29 File Offset: 0x000FAF29
-		// (set) Token: 0x060046C6 RID: 18118 RVA: 0x000FCD31 File Offset: 0x000FAF31
+		// Token: 0x17001FBA RID: 8122
+		// (get) Token: 0x06006161 RID: 24929 RVA: 0x00035A84 File Offset: 0x00033C84
+		// (set) Token: 0x06006162 RID: 24930 RVA: 0x00035A8C File Offset: 0x00033C8C
 		public int MaximumScreenshotCount { get; internal set; }
 
-		// Token: 0x17001777 RID: 6007
-		// (get) Token: 0x060046C7 RID: 18119 RVA: 0x000FCD3A File Offset: 0x000FAF3A
-		// (set) Token: 0x060046C8 RID: 18120 RVA: 0x000FCD42 File Offset: 0x000FAF42
+		// Token: 0x17001FBB RID: 8123
+		// (get) Token: 0x06006163 RID: 24931 RVA: 0x00035A95 File Offset: 0x00033C95
+		// (set) Token: 0x06006164 RID: 24932 RVA: 0x00035A9D File Offset: 0x00033C9D
 		public MetricsGatheringMode MetricsGatheringMode { get; internal set; }
 	}
 }

@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace GameEventTracking
 {
-	// Token: 0x020008A7 RID: 2215
+	// Token: 0x02000DD8 RID: 3544
 	public class GameEventTrackerManager : MonoBehaviour
 	{
-		// Token: 0x170017A3 RID: 6051
-		// (get) Token: 0x06004841 RID: 18497 RVA: 0x00103D7D File Offset: 0x00101F7D
+		// Token: 0x1700201B RID: 8219
+		// (get) Token: 0x06006392 RID: 25490 RVA: 0x00036E1E File Offset: 0x0003501E
 		public static RoomEventTracker RoomEventTracker
 		{
 			get
@@ -18,8 +18,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017A4 RID: 6052
-		// (get) Token: 0x06004842 RID: 18498 RVA: 0x00103D89 File Offset: 0x00101F89
+		// Token: 0x1700201C RID: 8220
+		// (get) Token: 0x06006393 RID: 25491 RVA: 0x00036E2A File Offset: 0x0003502A
 		public static EnemyEventTracker EnemyEventTracker
 		{
 			get
@@ -28,8 +28,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017A5 RID: 6053
-		// (get) Token: 0x06004843 RID: 18499 RVA: 0x00103D95 File Offset: 0x00101F95
+		// Token: 0x1700201D RID: 8221
+		// (get) Token: 0x06006394 RID: 25492 RVA: 0x00036E36 File Offset: 0x00035036
 		public static ItemEventTracker ItemEventTracker
 		{
 			get
@@ -38,8 +38,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017A6 RID: 6054
-		// (get) Token: 0x06004844 RID: 18500 RVA: 0x00103DA1 File Offset: 0x00101FA1
+		// Token: 0x1700201E RID: 8222
+		// (get) Token: 0x06006395 RID: 25493 RVA: 0x00036E42 File Offset: 0x00035042
 		public static bool IsInstantiated
 		{
 			get
@@ -48,7 +48,7 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x06004845 RID: 18501 RVA: 0x00103DAE File Offset: 0x00101FAE
+		// Token: 0x06006396 RID: 25494 RVA: 0x00036E4F File Offset: 0x0003504F
 		private void Awake()
 		{
 			if (GameEventTrackerManager.m_instance == null)
@@ -59,13 +59,13 @@ namespace GameEventTracking
 			UnityEngine.Object.Destroy(base.gameObject);
 		}
 
-		// Token: 0x06004846 RID: 18502 RVA: 0x00103DCF File Offset: 0x00101FCF
+		// Token: 0x06006397 RID: 25495 RVA: 0x00036E70 File Offset: 0x00035070
 		private void OnDestroy()
 		{
 			GameEventTrackerManager.m_instance = null;
 		}
 
-		// Token: 0x06004847 RID: 18503 RVA: 0x00103DD8 File Offset: 0x00101FD8
+		// Token: 0x06006398 RID: 25496 RVA: 0x001728A8 File Offset: 0x00170AA8
 		public static List<IGameEventData> GetGameEvents()
 		{
 			return (from gameEvent in GameEventTrackerManager.GetGameEventsFromTrackers()
@@ -73,7 +73,7 @@ namespace GameEventTracking
 			select gameEvent).ToList<IGameEventData>();
 		}
 
-		// Token: 0x06004848 RID: 18504 RVA: 0x00103E37 File Offset: 0x00102037
+		// Token: 0x06006399 RID: 25497 RVA: 0x00036E78 File Offset: 0x00035078
 		private static IEnumerable<IGameEventData> GetGameEventsFromTrackers()
 		{
 			foreach (IGameEventData gameEventData in GameEventTrackerManager.RoomEventTracker.GetGameEvents())
@@ -95,7 +95,7 @@ namespace GameEventTracking
 			yield break;
 		}
 
-		// Token: 0x06004849 RID: 18505 RVA: 0x00103E40 File Offset: 0x00102040
+		// Token: 0x0600639A RID: 25498 RVA: 0x00036E81 File Offset: 0x00035081
 		public static void Reset()
 		{
 			GameEventTrackerManager.RoomEventTracker.Reset();
@@ -103,7 +103,7 @@ namespace GameEventTracking
 			GameEventTrackerManager.ItemEventTracker.Reset();
 		}
 
-		// Token: 0x0600484A RID: 18506 RVA: 0x00103E60 File Offset: 0x00102060
+		// Token: 0x0600639B RID: 25499 RVA: 0x00172908 File Offset: 0x00170B08
 		public static void RestoreStates(List<IGameEventTrackerState> states)
 		{
 			foreach (IGameEventTrackerState gameEventTrackerState in states)
@@ -131,7 +131,7 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x0600484B RID: 18507 RVA: 0x00103F18 File Offset: 0x00102118
+		// Token: 0x0600639C RID: 25500 RVA: 0x00036EA1 File Offset: 0x000350A1
 		public static void SaveStates(ref List<IGameEventTrackerState> trackerStateList)
 		{
 			trackerStateList.Clear();
@@ -140,19 +140,19 @@ namespace GameEventTracking
 			trackerStateList.Add(GameEventTrackerManager.ItemEventTracker.SaveState());
 		}
 
-		// Token: 0x04003D06 RID: 15622
+		// Token: 0x04005146 RID: 20806
 		[SerializeField]
 		private RoomEventTracker m_roomEventTracker;
 
-		// Token: 0x04003D07 RID: 15623
+		// Token: 0x04005147 RID: 20807
 		[SerializeField]
 		private EnemyEventTracker m_enemyEventTracker;
 
-		// Token: 0x04003D08 RID: 15624
+		// Token: 0x04005148 RID: 20808
 		[SerializeField]
 		private ItemEventTracker m_itemEventTracker;
 
-		// Token: 0x04003D09 RID: 15625
+		// Token: 0x04005149 RID: 20809
 		private static GameEventTrackerManager m_instance;
 	}
 }

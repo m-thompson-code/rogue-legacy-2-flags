@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000346 RID: 838
+// Token: 0x020005A9 RID: 1449
 public class HorizontalDarkness_Trait : BaseTrait
 {
-	// Token: 0x17000DC8 RID: 3528
-	// (get) Token: 0x06002031 RID: 8241 RVA: 0x000664FB File Offset: 0x000646FB
+	// Token: 0x17001219 RID: 4633
+	// (get) Token: 0x06002D6A RID: 11626 RVA: 0x000190DE File Offset: 0x000172DE
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class HorizontalDarkness_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002032 RID: 8242 RVA: 0x00066502 File Offset: 0x00064702
+	// Token: 0x06002D6B RID: 11627 RVA: 0x000190E5 File Offset: 0x000172E5
 	protected IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -32,7 +32,7 @@ public class HorizontalDarkness_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06002033 RID: 8243 RVA: 0x00066514 File Offset: 0x00064714
+	// Token: 0x06002D6C RID: 11628 RVA: 0x000C53C4 File Offset: 0x000C35C4
 	public override void AssignGreenMask()
 	{
 		base.AssignGreenMask();
@@ -42,7 +42,7 @@ public class HorizontalDarkness_Trait : BaseTrait
 		this.m_postProcessOverrideController.Profile.OverrideTintRedChannel = false;
 	}
 
-	// Token: 0x06002034 RID: 8244 RVA: 0x0006657E File Offset: 0x0006477E
+	// Token: 0x06002D6D RID: 11629 RVA: 0x00018D40 File Offset: 0x00016F40
 	public override void DisableOnDeath()
 	{
 		base.DisableOnDeath();

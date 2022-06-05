@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x0200057A RID: 1402
+// Token: 0x0200095B RID: 2395
 public enum EndGameStatsEntryType
 {
-	// Token: 0x04002860 RID: 10336
+	// Token: 0x040037C6 RID: 14278
 	HeirsLost,
-	// Token: 0x04002861 RID: 10337
+	// Token: 0x040037C7 RID: 14279
 	EnemiesDefeated,
-	// Token: 0x04002862 RID: 10338
+	// Token: 0x040037C8 RID: 14280
 	GoldSpent,
-	// Token: 0x04002863 RID: 10339
+	// Token: 0x040037C9 RID: 14281
 	TimePlayed,
-	// Token: 0x04002864 RID: 10340
+	// Token: 0x040037CA RID: 14282
 	FinalScore,
-	// Token: 0x04002865 RID: 10341
+	// Token: 0x040037CB RID: 14283
 	Rating
 }

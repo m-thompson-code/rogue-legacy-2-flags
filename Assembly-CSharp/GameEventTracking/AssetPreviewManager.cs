@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace GameEventTracking
 {
-	// Token: 0x020008B6 RID: 2230
+	// Token: 0x02000DED RID: 3565
 	[CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Asset Preview Manager")]
 	public class AssetPreviewManager : ScriptableObject
 	{
-		// Token: 0x170017D2 RID: 6098
-		// (get) Token: 0x060048AF RID: 18607 RVA: 0x00104C7F File Offset: 0x00102E7F
+		// Token: 0x17002054 RID: 8276
+		// (get) Token: 0x0600642F RID: 25647 RVA: 0x000375C3 File Offset: 0x000357C3
 		private static AssetPreviewManager Instance
 		{
 			get
@@ -22,7 +22,7 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x060048B0 RID: 18608 RVA: 0x00104CA8 File Offset: 0x00102EA8
+		// Token: 0x06006430 RID: 25648 RVA: 0x00173AA0 File Offset: 0x00171CA0
 		public static Sprite GetPreviewImage(ChestType chestType)
 		{
 			if (AssetPreviewManager.m_chestPreviewImageTable == null)
@@ -40,7 +40,7 @@ namespace GameEventTracking
 			return null;
 		}
 
-		// Token: 0x060048B1 RID: 18609 RVA: 0x00104D3C File Offset: 0x00102F3C
+		// Token: 0x06006431 RID: 25649 RVA: 0x00173B34 File Offset: 0x00171D34
 		public static Sprite GetPreviewImage(EnemyType enemyType, EnemyRank enemyRank)
 		{
 			if (AssetPreviewManager.m_enemyPreviewTable == null)
@@ -80,32 +80,32 @@ namespace GameEventTracking
 			return AssetPreviewManager.Instance.m_defaultSprite;
 		}
 
-		// Token: 0x04003D53 RID: 15699
+		// Token: 0x040051AD RID: 20909
 		public List<EnemyPreviewEntry> EnemyPreviewImages;
 
-		// Token: 0x04003D54 RID: 15700
+		// Token: 0x040051AE RID: 20910
 		public List<ChestPreviewEntry> ChestPreviewImages;
 
-		// Token: 0x04003D55 RID: 15701
+		// Token: 0x040051AF RID: 20911
 		[SerializeField]
 		private Sprite m_defaultSprite;
 
-		// Token: 0x04003D56 RID: 15702
+		// Token: 0x040051B0 RID: 20912
 		public string ImageFolderPath = "Textures/UI/DeathScreen";
 
-		// Token: 0x04003D57 RID: 15703
+		// Token: 0x040051B1 RID: 20913
 		public const string RESOURCES_PATH = "Scriptable Objects/Libraries/AssetPreviewManager";
 
-		// Token: 0x04003D58 RID: 15704
+		// Token: 0x040051B2 RID: 20914
 		public const string ASSET_PATH = "Assets/Content/Scriptable Objects/Libraries/AssetPreviewManager.asset";
 
-		// Token: 0x04003D59 RID: 15705
+		// Token: 0x040051B3 RID: 20915
 		private static AssetPreviewManager m_instance;
 
-		// Token: 0x04003D5A RID: 15706
+		// Token: 0x040051B4 RID: 20916
 		private static Dictionary<ChestType, Sprite> m_chestPreviewImageTable;
 
-		// Token: 0x04003D5B RID: 15707
+		// Token: 0x040051B5 RID: 20917
 		private static Dictionary<EnemyTypeAndRank, Sprite> m_enemyPreviewTable;
 	}
 }

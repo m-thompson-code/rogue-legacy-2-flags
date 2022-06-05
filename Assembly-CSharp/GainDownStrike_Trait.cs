@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000340 RID: 832
+// Token: 0x0200059F RID: 1439
 public class GainDownStrike_Trait : BaseTrait
 {
-	// Token: 0x17000DC3 RID: 3523
-	// (get) Token: 0x0600201F RID: 8223 RVA: 0x00066380 File Offset: 0x00064580
+	// Token: 0x1700120E RID: 4622
+	// (get) Token: 0x06002D43 RID: 11587 RVA: 0x0001737E File Offset: 0x0001557E
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class GainDownStrike_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06002020 RID: 8224 RVA: 0x00066387 File Offset: 0x00064587
+	// Token: 0x06002D44 RID: 11588 RVA: 0x00018FDF File Offset: 0x000171DF
 	private IEnumerator Start()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -26,7 +26,7 @@ public class GainDownStrike_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06002021 RID: 8225 RVA: 0x0006638F File Offset: 0x0006458F
+	// Token: 0x06002D45 RID: 11589 RVA: 0x00018FE7 File Offset: 0x000171E7
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

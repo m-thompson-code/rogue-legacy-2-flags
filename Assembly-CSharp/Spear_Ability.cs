@@ -3,11 +3,11 @@ using System.Collections;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x020001A7 RID: 423
+// Token: 0x0200030F RID: 783
 public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 {
-	// Token: 0x1700094A RID: 2378
-	// (get) Token: 0x060010AB RID: 4267 RVA: 0x000304AC File Offset: 0x0002E6AC
+	// Token: 0x17000C00 RID: 3072
+	// (get) Token: 0x060018D4 RID: 6356 RVA: 0x00005319 File Offset: 0x00003519
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -16,8 +16,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700094B RID: 2379
-	// (get) Token: 0x060010AC RID: 4268 RVA: 0x000304B3 File Offset: 0x0002E6B3
+	// Token: 0x17000C01 RID: 3073
+	// (get) Token: 0x060018D5 RID: 6357 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -26,8 +26,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700094C RID: 2380
-	// (get) Token: 0x060010AD RID: 4269 RVA: 0x000304BA File Offset: 0x0002E6BA
+	// Token: 0x17000C02 RID: 3074
+	// (get) Token: 0x060018D6 RID: 6358 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float TellAnimSpeed
 	{
 		get
@@ -36,8 +36,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700094D RID: 2381
-	// (get) Token: 0x060010AE RID: 4270 RVA: 0x000304C1 File Offset: 0x0002E6C1
+	// Token: 0x17000C03 RID: 3075
+	// (get) Token: 0x060018D7 RID: 6359 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -46,8 +46,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700094E RID: 2382
-	// (get) Token: 0x060010AF RID: 4271 RVA: 0x000304C8 File Offset: 0x0002E6C8
+	// Token: 0x17000C04 RID: 3076
+	// (get) Token: 0x060018D8 RID: 6360 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -56,8 +56,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700094F RID: 2383
-	// (get) Token: 0x060010B0 RID: 4272 RVA: 0x000304CF File Offset: 0x0002E6CF
+	// Token: 0x17000C05 RID: 3077
+	// (get) Token: 0x060018D9 RID: 6361 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -66,8 +66,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000950 RID: 2384
-	// (get) Token: 0x060010B1 RID: 4273 RVA: 0x000304D6 File Offset: 0x0002E6D6
+	// Token: 0x17000C06 RID: 3078
+	// (get) Token: 0x060018DA RID: 6362 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -76,8 +76,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000951 RID: 2385
-	// (get) Token: 0x060010B2 RID: 4274 RVA: 0x000304DD File Offset: 0x0002E6DD
+	// Token: 0x17000C07 RID: 3079
+	// (get) Token: 0x060018DB RID: 6363 RVA: 0x0000B4E9 File Offset: 0x000096E9
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -86,8 +86,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000952 RID: 2386
-	// (get) Token: 0x060010B3 RID: 4275 RVA: 0x000304E4 File Offset: 0x0002E6E4
+	// Token: 0x17000C08 RID: 3080
+	// (get) Token: 0x060018DC RID: 6364 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -96,8 +96,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000953 RID: 2387
-	// (get) Token: 0x060010B4 RID: 4276 RVA: 0x000304EB File Offset: 0x0002E6EB
+	// Token: 0x17000C09 RID: 3081
+	// (get) Token: 0x060018DD RID: 6365 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -106,8 +106,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000954 RID: 2388
-	// (get) Token: 0x060010B5 RID: 4277 RVA: 0x000304F2 File Offset: 0x0002E6F2
+	// Token: 0x17000C0A RID: 3082
+	// (get) Token: 0x060018DE RID: 6366 RVA: 0x000052B0 File Offset: 0x000034B0
 	protected override float AttackBounceHeight
 	{
 		get
@@ -116,8 +116,8 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000955 RID: 2389
-	// (get) Token: 0x060010B6 RID: 4278 RVA: 0x000304F9 File Offset: 0x0002E6F9
+	// Token: 0x17000C0B RID: 3083
+	// (get) Token: 0x060018DF RID: 6367 RVA: 0x0000C926 File Offset: 0x0000AB26
 	protected bool IsGrounded
 	{
 		get
@@ -126,14 +126,14 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x060010B7 RID: 4279 RVA: 0x0003051E File Offset: 0x0002E71E
+	// Token: 0x060018E0 RID: 6368 RVA: 0x0000C94B File Offset: 0x0000AB4B
 	protected override void Awake()
 	{
 		this.m_waitFixedUpdateYield = new WaitForFixedUpdate();
 		base.Awake();
 	}
 
-	// Token: 0x060010B8 RID: 4280 RVA: 0x00030534 File Offset: 0x0002E734
+	// Token: 0x060018E1 RID: 6369 RVA: 0x0008EAF0 File Offset: 0x0008CCF0
 	public override void PreCastAbility()
 	{
 		float num = Rewired_RL.Player.GetAxis("MoveHorizontal");
@@ -162,14 +162,14 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		base.PreCastAbility();
 	}
 
-	// Token: 0x060010B9 RID: 4281 RVA: 0x000305FF File Offset: 0x0002E7FF
+	// Token: 0x060018E2 RID: 6370 RVA: 0x0000C95E File Offset: 0x0000AB5E
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		yield return base.ChangeAnim(duration);
 		yield break;
 	}
 
-	// Token: 0x060010BA RID: 4282 RVA: 0x00030618 File Offset: 0x0002E818
+	// Token: 0x060018E3 RID: 6371 RVA: 0x0008EBBC File Offset: 0x0008CDBC
 	protected override void FireProjectile()
 	{
 		Vector2 b = this.m_abilityController.PlayerController.Midpoint - this.m_abilityController.PlayerController.transform.position;
@@ -188,7 +188,7 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x060010BB RID: 4283 RVA: 0x000306E4 File Offset: 0x0002E8E4
+	// Token: 0x060018E4 RID: 6372 RVA: 0x0000C974 File Offset: 0x0000AB74
 	protected virtual IEnumerator GravityYield(float delay)
 	{
 		if (this.m_gravityYield == null)
@@ -205,7 +205,7 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		yield break;
 	}
 
-	// Token: 0x060010BC RID: 4284 RVA: 0x000306FA File Offset: 0x0002E8FA
+	// Token: 0x060018E5 RID: 6373 RVA: 0x0000C98A File Offset: 0x0000AB8A
 	protected virtual IEnumerator PushForward()
 	{
 		float speed = 0f;
@@ -243,7 +243,7 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		yield break;
 	}
 
-	// Token: 0x060010BD RID: 4285 RVA: 0x0003070C File Offset: 0x0002E90C
+	// Token: 0x060018E6 RID: 6374 RVA: 0x0008E00C File Offset: 0x0008C20C
 	private void PreventPlatformDrop()
 	{
 		CorgiController_RL controllerCorgi = this.m_abilityController.PlayerController.ControllerCorgi;
@@ -264,7 +264,7 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x060010BE RID: 4286 RVA: 0x00030834 File Offset: 0x0002EA34
+	// Token: 0x060018E7 RID: 6375 RVA: 0x0008EC88 File Offset: 0x0008CE88
 	protected Spear_Ability.DirectionalAttackAnimLayer GetAttackLayer(PlayerInputDirection direction, out Vector2 attackOffset)
 	{
 		switch (direction)
@@ -282,7 +282,7 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		return Spear_Ability.DirectionalAttackAnimLayer.Right;
 	}
 
-	// Token: 0x060010BF RID: 4287 RVA: 0x00030894 File Offset: 0x0002EA94
+	// Token: 0x060018E8 RID: 6376 RVA: 0x0008ECE8 File Offset: 0x0008CEE8
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_firedProjectile)
@@ -295,61 +295,61 @@ public class Spear_Ability : BaseAbility_RL, IAttack, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x040011DD RID: 4573
+	// Token: 0x040017CB RID: 6091
 	[SerializeField]
 	protected bool m_allowOmniAttack;
 
-	// Token: 0x040011DE RID: 4574
+	// Token: 0x040017CC RID: 6092
 	protected Vector2 m_upAttackOffset = new Vector2(0f, 6f);
 
-	// Token: 0x040011DF RID: 4575
+	// Token: 0x040017CD RID: 6093
 	protected Vector2 m_rightAttackOffset = new Vector2(4f, 2.25f);
 
-	// Token: 0x040011E0 RID: 4576
+	// Token: 0x040017CE RID: 6094
 	protected Vector2 m_downAttackOffset = new Vector2(0.25f, -1.75f);
 
-	// Token: 0x040011E1 RID: 4577
+	// Token: 0x040017CF RID: 6095
 	protected Vector2 m_upRightAttackOffset = new Vector2(3.7f, 4.55f);
 
-	// Token: 0x040011E2 RID: 4578
+	// Token: 0x040017D0 RID: 6096
 	protected Vector2 m_downRightAttackOffset = new Vector2(3.2f, -2.55f);
 
-	// Token: 0x040011E3 RID: 4579
+	// Token: 0x040017D1 RID: 6097
 	private float m_spearAttackAngle;
 
-	// Token: 0x040011E4 RID: 4580
+	// Token: 0x040017D2 RID: 6098
 	private Vector2 m_spearAttackOffset;
 
-	// Token: 0x040011E5 RID: 4581
+	// Token: 0x040017D3 RID: 6099
 	private WaitForFixedUpdate m_waitFixedUpdateYield;
 
-	// Token: 0x040011E6 RID: 4582
+	// Token: 0x040017D4 RID: 6100
 	public const float SpearDashDistance = 0f;
 
-	// Token: 0x040011E7 RID: 4583
+	// Token: 0x040017D5 RID: 6101
 	public const float SpearDashSpeed = 0f;
 
-	// Token: 0x040011E8 RID: 4584
+	// Token: 0x040017D6 RID: 6102
 	public const bool SpearAirStop = false;
 
-	// Token: 0x040011E9 RID: 4585
+	// Token: 0x040017D7 RID: 6103
 	protected WaitRL_Yield m_gravityYield;
 
-	// Token: 0x040011EA RID: 4586
+	// Token: 0x040017D8 RID: 6104
 	protected Coroutine m_gravityYieldCoroutine;
 
-	// Token: 0x02000AE1 RID: 2785
+	// Token: 0x02000310 RID: 784
 	protected enum DirectionalAttackAnimLayer
 	{
-		// Token: 0x04004A84 RID: 19076
+		// Token: 0x040017DA RID: 6106
 		Up,
-		// Token: 0x04004A85 RID: 19077
+		// Token: 0x040017DB RID: 6107
 		UpRight,
-		// Token: 0x04004A86 RID: 19078
+		// Token: 0x040017DC RID: 6108
 		Right,
-		// Token: 0x04004A87 RID: 19079
+		// Token: 0x040017DD RID: 6109
 		DownRight,
-		// Token: 0x04004A88 RID: 19080
+		// Token: 0x040017DE RID: 6110
 		Down
 	}
 }

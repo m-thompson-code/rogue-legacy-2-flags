@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200023E RID: 574
+// Token: 0x020003FB RID: 1019
 public class ProjectileBuffType_RL
 {
-	// Token: 0x17000B41 RID: 2881
-	// (get) Token: 0x0600170E RID: 5902 RVA: 0x00047E22 File Offset: 0x00046022
+	// Token: 0x17000E6E RID: 3694
+	// (get) Token: 0x060020C1 RID: 8385 RVA: 0x000115EC File Offset: 0x0000F7EC
 	public static ProjectileBuffType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class ProjectileBuffType_RL
 		}
 	}
 
-	// Token: 0x0400168F RID: 5775
+	// Token: 0x04001DA7 RID: 7591
 	private static ProjectileBuffType[] m_typeArray;
 }

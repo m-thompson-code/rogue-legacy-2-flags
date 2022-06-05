@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004E9 RID: 1257
+// Token: 0x0200083E RID: 2110
 public class ArenaRoomController : BaseSpecialRoomController
 {
-	// Token: 0x06002F17 RID: 12055 RVA: 0x000A0A58 File Offset: 0x0009EC58
+	// Token: 0x06004119 RID: 16665 RVA: 0x001059B8 File Offset: 0x00103BB8
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -45,7 +45,7 @@ public class ArenaRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x0400258A RID: 9610
+	// Token: 0x040032F4 RID: 13044
 	[SerializeField]
 	private TunnelSpawnController m_tunnelSpawner;
 }

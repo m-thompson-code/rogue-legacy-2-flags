@@ -3,11 +3,11 @@ using SceneManagement_RL;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020002C4 RID: 708
+// Token: 0x020004B9 RID: 1209
 public class RunStatisticsHUDController : MonoBehaviour
 {
-	// Token: 0x17000C93 RID: 3219
-	// (get) Token: 0x06001C2A RID: 7210 RVA: 0x0005B338 File Offset: 0x00059538
+	// Token: 0x1700101C RID: 4124
+	// (get) Token: 0x060026F4 RID: 9972 RVA: 0x00015D90 File Offset: 0x00013F90
 	private bool IsRunning
 	{
 		get
@@ -16,14 +16,14 @@ public class RunStatisticsHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001C2B RID: 7211 RVA: 0x0005B343 File Offset: 0x00059543
+	// Token: 0x060026F5 RID: 9973 RVA: 0x00015D9B File Offset: 0x00013F9B
 	private void Awake()
 	{
 		this.m_onChestOpened = new Action<MonoBehaviour, EventArgs>(this.OnChestOpened);
 		this.m_onSpecialItemDropped = new Action<MonoBehaviour, EventArgs>(this.OnSpecialItemDropped);
 	}
 
-	// Token: 0x06001C2C RID: 7212 RVA: 0x0005B36C File Offset: 0x0005956C
+	// Token: 0x060026F6 RID: 9974 RVA: 0x000B7C54 File Offset: 0x000B5E54
 	private void Start()
 	{
 		if (Application.isEditor)
@@ -45,7 +45,7 @@ public class RunStatisticsHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001C2D RID: 7213 RVA: 0x0005B3D0 File Offset: 0x000595D0
+	// Token: 0x060026F7 RID: 9975 RVA: 0x00015DC1 File Offset: 0x00013FC1
 	private void OnDestroy()
 	{
 		if (Application.isPlaying && this != null && this.m_isSubscribed)
@@ -55,7 +55,7 @@ public class RunStatisticsHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001C2E RID: 7214 RVA: 0x0005B3F7 File Offset: 0x000595F7
+	// Token: 0x060026F8 RID: 9976 RVA: 0x00015DE8 File Offset: 0x00013FE8
 	private void SubscribeToEvents()
 	{
 		this.m_isSubscribed = true;
@@ -64,7 +64,7 @@ public class RunStatisticsHUDController : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.SpecialItemsDropped, this.m_onSpecialItemDropped);
 	}
 
-	// Token: 0x06001C2F RID: 7215 RVA: 0x0005B432 File Offset: 0x00059632
+	// Token: 0x060026F9 RID: 9977 RVA: 0x00015E23 File Offset: 0x00014023
 	private void UnsubscribeFromEvents()
 	{
 		SceneLoader_RL.SceneLoadingEndRelay.RemoveListener(new Action<string>(this.OnSceneLoaded));
@@ -72,7 +72,7 @@ public class RunStatisticsHUDController : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.SpecialItemsDropped, this.m_onSpecialItemDropped);
 	}
 
-	// Token: 0x06001C30 RID: 7216 RVA: 0x0005B468 File Offset: 0x00059668
+	// Token: 0x060026FA RID: 9978 RVA: 0x000B7CB8 File Offset: 0x000B5EB8
 	private void OnSceneLoaded(string sceneName)
 	{
 		this.m_currentScene = SceneLoadingUtility.GetSceneID(sceneName);
@@ -88,7 +88,7 @@ public class RunStatisticsHUDController : MonoBehaviour
 		this.m_panel.SetActive(this.m_currentScene == SceneID.World);
 	}
 
-	// Token: 0x06001C31 RID: 7217 RVA: 0x0005B508 File Offset: 0x00059708
+	// Token: 0x060026FB RID: 9979 RVA: 0x000B7D58 File Offset: 0x000B5F58
 	private void OnSpecialItemDropped(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		SpecialItemType specialItemType = (eventArgs as SpecialItemDroppedEventArgs).SpecialItemDrop.SpecialItemType;
@@ -106,14 +106,14 @@ public class RunStatisticsHUDController : MonoBehaviour
 		this.m_runeCountText.text = string.Format("Rune Count = {0}", this.m_chestCount);
 	}
 
-	// Token: 0x06001C32 RID: 7218 RVA: 0x0005B58E File Offset: 0x0005978E
+	// Token: 0x060026FC RID: 9980 RVA: 0x00015E56 File Offset: 0x00014056
 	private void OnChestOpened(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		this.m_chestCount++;
 		this.m_chestCountText.text = string.Format("Chest Count = {0}", this.m_chestCount);
 	}
 
-	// Token: 0x06001C33 RID: 7219 RVA: 0x0005B5C0 File Offset: 0x000597C0
+	// Token: 0x060026FD RID: 9981 RVA: 0x000B7DE0 File Offset: 0x000B5FE0
 	private void Update()
 	{
 		if (!this.IsRunning)
@@ -134,58 +134,58 @@ public class RunStatisticsHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400198E RID: 6542
+	// Token: 0x04002195 RID: 8597
 	[SerializeField]
 	private GameObject m_panel;
 
-	// Token: 0x0400198F RID: 6543
+	// Token: 0x04002196 RID: 8598
 	[SerializeField]
 	private TextMeshProUGUI m_durationText;
 
-	// Token: 0x04001990 RID: 6544
+	// Token: 0x04002197 RID: 8599
 	[SerializeField]
 	private TextMeshProUGUI m_expCountText;
 
-	// Token: 0x04001991 RID: 6545
+	// Token: 0x04002198 RID: 8600
 	[SerializeField]
 	private TextMeshProUGUI m_chestCountText;
 
-	// Token: 0x04001992 RID: 6546
+	// Token: 0x04002199 RID: 8601
 	[SerializeField]
 	private TextMeshProUGUI m_blueprintCountText;
 
-	// Token: 0x04001993 RID: 6547
+	// Token: 0x0400219A RID: 8602
 	[SerializeField]
 	private TextMeshProUGUI m_runeCountText;
 
-	// Token: 0x04001994 RID: 6548
+	// Token: 0x0400219B RID: 8603
 	[SerializeField]
 	private bool m_isEnabledInEditor = true;
 
-	// Token: 0x04001995 RID: 6549
+	// Token: 0x0400219C RID: 8604
 	private bool m_isSubscribed;
 
-	// Token: 0x04001996 RID: 6550
+	// Token: 0x0400219D RID: 8605
 	private bool m_isPaused;
 
-	// Token: 0x04001997 RID: 6551
+	// Token: 0x0400219E RID: 8606
 	private float m_elapsedTime;
 
-	// Token: 0x04001998 RID: 6552
+	// Token: 0x0400219F RID: 8607
 	private int m_chestCount;
 
-	// Token: 0x04001999 RID: 6553
+	// Token: 0x040021A0 RID: 8608
 	private int m_blueprintCount;
 
-	// Token: 0x0400199A RID: 6554
+	// Token: 0x040021A1 RID: 8609
 	private int m_runeCount;
 
-	// Token: 0x0400199B RID: 6555
+	// Token: 0x040021A2 RID: 8610
 	private SceneID m_currentScene;
 
-	// Token: 0x0400199C RID: 6556
+	// Token: 0x040021A3 RID: 8611
 	private Action<MonoBehaviour, EventArgs> m_onChestOpened;
 
-	// Token: 0x0400199D RID: 6557
+	// Token: 0x040021A4 RID: 8612
 	private Action<MonoBehaviour, EventArgs> m_onSpecialItemDropped;
 }

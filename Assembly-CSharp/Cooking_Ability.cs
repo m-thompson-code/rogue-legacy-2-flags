@@ -4,11 +4,11 @@ using MoreMountains.CorgiEngine;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200017F RID: 383
+// Token: 0x020002C6 RID: 710
 public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 {
-	// Token: 0x17000749 RID: 1865
-	// (get) Token: 0x06000D85 RID: 3461 RVA: 0x00029504 File Offset: 0x00027704
+	// Token: 0x170009C3 RID: 2499
+	// (get) Token: 0x060014FA RID: 5370 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -17,8 +17,8 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700074A RID: 1866
-	// (get) Token: 0x06000D86 RID: 3462 RVA: 0x0002950B File Offset: 0x0002770B
+	// Token: 0x170009C4 RID: 2500
+	// (get) Token: 0x060014FB RID: 5371 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -27,8 +27,8 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700074B RID: 1867
-	// (get) Token: 0x06000D87 RID: 3463 RVA: 0x00029512 File Offset: 0x00027712
+	// Token: 0x170009C5 RID: 2501
+	// (get) Token: 0x060014FC RID: 5372 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float TellAnimSpeed
 	{
 		get
@@ -37,8 +37,8 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700074C RID: 1868
-	// (get) Token: 0x06000D88 RID: 3464 RVA: 0x00029519 File Offset: 0x00027719
+	// Token: 0x170009C6 RID: 2502
+	// (get) Token: 0x060014FD RID: 5373 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -47,8 +47,8 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700074D RID: 1869
-	// (get) Token: 0x06000D89 RID: 3465 RVA: 0x00029520 File Offset: 0x00027720
+	// Token: 0x170009C7 RID: 2503
+	// (get) Token: 0x060014FE RID: 5374 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -57,8 +57,8 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700074E RID: 1870
-	// (get) Token: 0x06000D8A RID: 3466 RVA: 0x00029527 File Offset: 0x00027727
+	// Token: 0x170009C8 RID: 2504
+	// (get) Token: 0x060014FF RID: 5375 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -67,8 +67,8 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x1700074F RID: 1871
-	// (get) Token: 0x06000D8B RID: 3467 RVA: 0x0002952E File Offset: 0x0002772E
+	// Token: 0x170009C9 RID: 2505
+	// (get) Token: 0x06001500 RID: 5376 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -77,8 +77,8 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000750 RID: 1872
-	// (get) Token: 0x06000D8C RID: 3468 RVA: 0x00029535 File Offset: 0x00027735
+	// Token: 0x170009CA RID: 2506
+	// (get) Token: 0x06001501 RID: 5377 RVA: 0x000050CB File Offset: 0x000032CB
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -87,8 +87,8 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000751 RID: 1873
-	// (get) Token: 0x06000D8D RID: 3469 RVA: 0x0002953C File Offset: 0x0002773C
+	// Token: 0x170009CB RID: 2507
+	// (get) Token: 0x06001502 RID: 5378 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -97,8 +97,8 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000752 RID: 1874
-	// (get) Token: 0x06000D8E RID: 3470 RVA: 0x00029543 File Offset: 0x00027743
+	// Token: 0x170009CC RID: 2508
+	// (get) Token: 0x06001503 RID: 5379 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -107,7 +107,7 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000D8F RID: 3471 RVA: 0x0002954C File Offset: 0x0002774C
+	// Token: 0x06001504 RID: 5380 RVA: 0x0008888C File Offset: 0x00086A8C
 	public override void PreCastAbility()
 	{
 		base.PreCastAbility();
@@ -126,14 +126,14 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		this.m_cookingEmitter.Play();
 	}
 
-	// Token: 0x06000D90 RID: 3472 RVA: 0x00029677 File Offset: 0x00027877
+	// Token: 0x06001505 RID: 5381 RVA: 0x0000A2B3 File Offset: 0x000084B3
 	protected override void OnEnterAttackLogic()
 	{
 		this.m_abilityController.BroadcastAbilityCastEvents(base.CastAbilityType);
 		this.FireProjectile();
 	}
 
-	// Token: 0x06000D91 RID: 3473 RVA: 0x00029690 File Offset: 0x00027890
+	// Token: 0x06001506 RID: 5382 RVA: 0x0000A7F5 File Offset: 0x000089F5
 	protected override void OnEnterExitLogic()
 	{
 		Cooking_Ability.HealPlayer();
@@ -141,7 +141,7 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		base.OnEnterExitLogic();
 	}
 
-	// Token: 0x06000D92 RID: 3474 RVA: 0x000296A4 File Offset: 0x000278A4
+	// Token: 0x06001507 RID: 5383 RVA: 0x000889B8 File Offset: 0x00086BB8
 	public static void HealPlayer()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -160,7 +160,7 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		TextPopupManager.DisplayTextAtAbsPos(TextPopupType.HPGained, str + "\n<color=#47FFFB>" + str2 + "</color>", absPos, null, TextAlignmentOptions.Center);
 	}
 
-	// Token: 0x06000D93 RID: 3475 RVA: 0x000297A8 File Offset: 0x000279A8
+	// Token: 0x06001508 RID: 5384 RVA: 0x00088ABC File Offset: 0x00086CBC
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		base.StopAbility(abilityInterrupted);
@@ -181,7 +181,7 @@ public class Cooking_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x040010E2 RID: 4322
+	// Token: 0x04001651 RID: 5713
 	[SerializeField]
 	private StudioEventEmitter m_cookingEmitter;
 }

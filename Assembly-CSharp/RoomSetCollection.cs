@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000247 RID: 583
+// Token: 0x02000404 RID: 1028
 public class RoomSetCollection
 {
-	// Token: 0x17000B57 RID: 2903
-	// (get) Token: 0x0600174E RID: 5966 RVA: 0x000488B4 File Offset: 0x00046AB4
+	// Token: 0x17000E84 RID: 3716
+	// (get) Token: 0x06002101 RID: 8449 RVA: 0x000118DF File Offset: 0x0000FADF
 	public BiomeType Biome { get; }
 
-	// Token: 0x17000B58 RID: 2904
-	// (get) Token: 0x0600174F RID: 5967 RVA: 0x000488BC File Offset: 0x00046ABC
-	// (set) Token: 0x06001750 RID: 5968 RVA: 0x000488C4 File Offset: 0x00046AC4
+	// Token: 0x17000E85 RID: 3717
+	// (get) Token: 0x06002102 RID: 8450 RVA: 0x000118E7 File Offset: 0x0000FAE7
+	// (set) Token: 0x06002103 RID: 8451 RVA: 0x000118EF File Offset: 0x0000FAEF
 	public MandatoryRoomEntry[] MandatoryRooms { get; set; }
 
-	// Token: 0x17000B59 RID: 2905
-	// (get) Token: 0x06001751 RID: 5969 RVA: 0x000488CD File Offset: 0x00046ACD
-	// (set) Token: 0x06001752 RID: 5970 RVA: 0x000488EE File Offset: 0x00046AEE
+	// Token: 0x17000E86 RID: 3718
+	// (get) Token: 0x06002104 RID: 8452 RVA: 0x000118F8 File Offset: 0x0000FAF8
+	// (set) Token: 0x06002105 RID: 8453 RVA: 0x00011919 File Offset: 0x0000FB19
 	public Vector2Int MaxRoomSize
 	{
 		get
@@ -34,22 +34,22 @@ public class RoomSetCollection
 		}
 	}
 
-	// Token: 0x17000B5A RID: 2906
-	// (get) Token: 0x06001753 RID: 5971 RVA: 0x000488F7 File Offset: 0x00046AF7
-	// (set) Token: 0x06001754 RID: 5972 RVA: 0x000488FF File Offset: 0x00046AFF
+	// Token: 0x17000E87 RID: 3719
+	// (get) Token: 0x06002106 RID: 8454 RVA: 0x00011922 File Offset: 0x0000FB22
+	// (set) Token: 0x06002107 RID: 8455 RVA: 0x0001192A File Offset: 0x0000FB2A
 	public HashSet<RoomSetEntry> RoomSet { get; set; }
 
-	// Token: 0x17000B5B RID: 2907
-	// (get) Token: 0x06001755 RID: 5973 RVA: 0x00048908 File Offset: 0x00046B08
-	// (set) Token: 0x06001756 RID: 5974 RVA: 0x00048910 File Offset: 0x00046B10
+	// Token: 0x17000E88 RID: 3720
+	// (get) Token: 0x06002108 RID: 8456 RVA: 0x00011933 File Offset: 0x0000FB33
+	// (set) Token: 0x06002109 RID: 8457 RVA: 0x0001193B File Offset: 0x0000FB3B
 	public Dictionary<RoomType, HashSet<RoomSetEntry>> RoomTypeSets { get; set; }
 
-	// Token: 0x17000B5C RID: 2908
-	// (get) Token: 0x06001757 RID: 5975 RVA: 0x00048919 File Offset: 0x00046B19
-	// (set) Token: 0x06001758 RID: 5976 RVA: 0x00048921 File Offset: 0x00046B21
+	// Token: 0x17000E89 RID: 3721
+	// (get) Token: 0x0600210A RID: 8458 RVA: 0x00011944 File Offset: 0x0000FB44
+	// (set) Token: 0x0600210B RID: 8459 RVA: 0x0001194C File Offset: 0x0000FB4C
 	public RoomMetaData TransitionRoom { get; set; }
 
-	// Token: 0x06001759 RID: 5977 RVA: 0x0004892C File Offset: 0x00046B2C
+	// Token: 0x0600210C RID: 8460 RVA: 0x000A636C File Offset: 0x000A456C
 	public RoomSetCollection(BiomeType biome, RoomPool roomPool)
 	{
 		this.Biome = biome;
@@ -112,13 +112,13 @@ public class RoomSetCollection
 		}
 	}
 
-	// Token: 0x0600175A RID: 5978 RVA: 0x00048B70 File Offset: 0x00046D70
+	// Token: 0x0600210D RID: 8461 RVA: 0x00011955 File Offset: 0x0000FB55
 	public void SetMaxRoomSizeOverride(Vector2Int maxRoomSize)
 	{
 		this.m_maxRoomSizeOverride = maxRoomSize;
 	}
 
-	// Token: 0x0600175B RID: 5979 RVA: 0x00048B7C File Offset: 0x00046D7C
+	// Token: 0x0600210E RID: 8462 RVA: 0x000A65B0 File Offset: 0x000A47B0
 	private void AddRoomsAndMirrorToSet(HashSet<RoomSetEntry> set, IEnumerable<RoomMetaData> roomMetaData, string compiledSceneName = "")
 	{
 		if (set != null && roomMetaData != null)
@@ -157,13 +157,13 @@ public class RoomSetCollection
 		}
 	}
 
-	// Token: 0x0600175C RID: 5980 RVA: 0x00048C50 File Offset: 0x00046E50
+	// Token: 0x0600210F RID: 8463 RVA: 0x0001195E File Offset: 0x0000FB5E
 	public int GetRNGWeightSum(RoomCriteriaLookupCacheKey criteria)
 	{
 		return RoomSetCollection.m_rngWeightSum[criteria];
 	}
 
-	// Token: 0x0600175D RID: 5981 RVA: 0x00048C60 File Offset: 0x00046E60
+	// Token: 0x06002110 RID: 8464 RVA: 0x000A6684 File Offset: 0x000A4884
 	public RoomSetEntry[] GetRoomsMatchingCriteria(RoomCriteriaLookupCacheKey criteria, List<RoomSetEntry> standardRoomPoolOverride)
 	{
 		if (RoomSetCollection.m_roomCriteriaTable == null)
@@ -206,7 +206,7 @@ public class RoomSetCollection
 		return array;
 	}
 
-	// Token: 0x0600175E RID: 5982 RVA: 0x00048E10 File Offset: 0x00047010
+	// Token: 0x06002111 RID: 8465 RVA: 0x000A6834 File Offset: 0x000A4A34
 	private static int SetRoomWeights(RoomSetEntry[] rooms)
 	{
 		int num = 0;
@@ -219,18 +219,18 @@ public class RoomSetCollection
 		return num;
 	}
 
-	// Token: 0x040016CA RID: 5834
+	// Token: 0x04001DE2 RID: 7650
 	private static List<RoomSetEntry> m_roomList = new List<RoomSetEntry>(100);
 
-	// Token: 0x040016CB RID: 5835
+	// Token: 0x04001DE3 RID: 7651
 	private static Dictionary<RoomCriteriaLookupCacheKey, RoomSetEntry[]> m_roomCriteriaTable = null;
 
-	// Token: 0x040016CC RID: 5836
+	// Token: 0x04001DE4 RID: 7652
 	private static Dictionary<RoomCriteriaLookupCacheKey, int> m_rngWeightSum = null;
 
-	// Token: 0x040016CD RID: 5837
+	// Token: 0x04001DE5 RID: 7653
 	private Vector2Int m_maxRoomSizeOverride = Vector2Int.zero;
 
-	// Token: 0x040016CE RID: 5838
+	// Token: 0x04001DE6 RID: 7654
 	private Vector2Int m_maxRoomSize;
 }

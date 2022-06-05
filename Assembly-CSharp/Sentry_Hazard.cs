@@ -4,11 +4,11 @@ using RLAudio;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x02000458 RID: 1112
+// Token: 0x0200073E RID: 1854
 public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjectileNameArray
 {
-	// Token: 0x17001013 RID: 4115
-	// (get) Token: 0x06002908 RID: 10504 RVA: 0x000879E5 File Offset: 0x00085BE5
+	// Token: 0x1700152A RID: 5418
+	// (get) Token: 0x060038B8 RID: 14520 RVA: 0x0001F258 File Offset: 0x0001D458
 	public string[] ProjectileNameArray
 	{
 		get
@@ -24,9 +24,9 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		}
 	}
 
-	// Token: 0x17001014 RID: 4116
-	// (get) Token: 0x06002909 RID: 10505 RVA: 0x00087A09 File Offset: 0x00085C09
-	// (set) Token: 0x0600290A RID: 10506 RVA: 0x00087A11 File Offset: 0x00085C11
+	// Token: 0x1700152B RID: 5419
+	// (get) Token: 0x060038B9 RID: 14521 RVA: 0x0001F27C File Offset: 0x0001D47C
+	// (set) Token: 0x060038BA RID: 14522 RVA: 0x0001F284 File Offset: 0x0001D484
 	public bool IsResting
 	{
 		get
@@ -39,7 +39,7 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		}
 	}
 
-	// Token: 0x0600290B RID: 10507 RVA: 0x00087A1A File Offset: 0x00085C1A
+	// Token: 0x060038BB RID: 14523 RVA: 0x0001F28D File Offset: 0x0001D48D
 	protected override void Awake()
 	{
 		base.Awake();
@@ -47,7 +47,7 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		this.m_waitYield = new WaitRL_Yield(0f, false);
 	}
 
-	// Token: 0x0600290C RID: 10508 RVA: 0x00087A48 File Offset: 0x00085C48
+	// Token: 0x060038BC RID: 14524 RVA: 0x000E8F60 File Offset: 0x000E7160
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerSpellAbilityCast, this.m_onAbilityCast);
@@ -57,7 +57,7 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		this.m_timeThisBecameEnabled = Time.time;
 	}
 
-	// Token: 0x0600290D RID: 10509 RVA: 0x00087A94 File Offset: 0x00085C94
+	// Token: 0x060038BD RID: 14525 RVA: 0x000E8FAC File Offset: 0x000E71AC
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -68,7 +68,7 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		this.m_previousIsPlayerWithinRange = false;
 	}
 
-	// Token: 0x0600290E RID: 10510 RVA: 0x00087AE4 File Offset: 0x00085CE4
+	// Token: 0x060038BE RID: 14526 RVA: 0x000E8FFC File Offset: 0x000E71FC
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		base.Initialize(hazardArgs);
@@ -90,7 +90,7 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		this.ResetHazard();
 	}
 
-	// Token: 0x0600290F RID: 10511 RVA: 0x00087B90 File Offset: 0x00085D90
+	// Token: 0x060038BF RID: 14527 RVA: 0x000E90A8 File Offset: 0x000E72A8
 	private void OnAbilityCast(object sender, EventArgs args)
 	{
 		if (this.m_isShooting)
@@ -112,7 +112,7 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		}
 	}
 
-	// Token: 0x06002910 RID: 10512 RVA: 0x00087C28 File Offset: 0x00085E28
+	// Token: 0x060038C0 RID: 14528 RVA: 0x0001F2B8 File Offset: 0x0001D4B8
 	private IEnumerator FireProjectile()
 	{
 		while (Time.time < this.m_timeThisBecameEnabled + 0.875f)
@@ -147,7 +147,7 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		yield break;
 	}
 
-	// Token: 0x06002911 RID: 10513 RVA: 0x00087C38 File Offset: 0x00085E38
+	// Token: 0x060038C1 RID: 14529 RVA: 0x000E9140 File Offset: 0x000E7340
 	private void FixedUpdate()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -185,7 +185,7 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		}
 	}
 
-	// Token: 0x06002912 RID: 10514 RVA: 0x00087DA1 File Offset: 0x00085FA1
+	// Token: 0x060038C2 RID: 14530 RVA: 0x0001F2C7 File Offset: 0x0001D4C7
 	public void ActivateRestState()
 	{
 		base.StopAllCoroutines();
@@ -195,7 +195,7 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		base.StartCoroutine(this.RestCoroutine());
 	}
 
-	// Token: 0x06002913 RID: 10515 RVA: 0x00087DDE File Offset: 0x00085FDE
+	// Token: 0x060038C3 RID: 14531 RVA: 0x0001F304 File Offset: 0x0001D504
 	private IEnumerator RestCoroutine()
 	{
 		this.SentryRestingRelay.Dispatch(this, true);
@@ -251,13 +251,13 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		yield break;
 	}
 
-	// Token: 0x06002914 RID: 10516 RVA: 0x00087DED File Offset: 0x00085FED
+	// Token: 0x060038C4 RID: 14532 RVA: 0x0001F313 File Offset: 0x0001D513
 	public void StartInRestState(float duration)
 	{
 		base.StartCoroutine(this.StartInRestStateCoroutine(duration));
 	}
 
-	// Token: 0x06002915 RID: 10517 RVA: 0x00087DFD File Offset: 0x00085FFD
+	// Token: 0x060038C5 RID: 14533 RVA: 0x0001F323 File Offset: 0x0001D523
 	private IEnumerator StartInRestStateCoroutine(float duration)
 	{
 		this.IsResting = true;
@@ -296,7 +296,7 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		yield break;
 	}
 
-	// Token: 0x06002916 RID: 10518 RVA: 0x00087E14 File Offset: 0x00086014
+	// Token: 0x060038C6 RID: 14534 RVA: 0x000E92AC File Offset: 0x000E74AC
 	public override void ResetHazard()
 	{
 		if (this.m_restShrinkTween != null)
@@ -324,84 +324,84 @@ public class Sentry_Hazard : Hazard, IPointHazard, IHazard, IRootObj, IHasProjec
 		this.m_interactable.SetIsInteractableActive(false);
 	}
 
-	// Token: 0x06002917 RID: 10519 RVA: 0x00087F1F File Offset: 0x0008611F
+	// Token: 0x060038C7 RID: 14535 RVA: 0x0001F339 File Offset: 0x0001D539
 	public void SetRestDurationOverride(float duration)
 	{
 		this.m_restDurationOverride = duration;
 	}
 
-	// Token: 0x06002919 RID: 10521 RVA: 0x00087F51 File Offset: 0x00086151
+	// Token: 0x060038C9 RID: 14537 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040021D0 RID: 8656
+	// Token: 0x04002D73 RID: 11635
 	[SerializeField]
 	private SpriteRenderer m_sentryEyeRenderer;
 
-	// Token: 0x040021D1 RID: 8657
+	// Token: 0x04002D74 RID: 11636
 	[SerializeField]
 	private SpriteRenderer m_sentryWarningSprite;
 
-	// Token: 0x040021D2 RID: 8658
+	// Token: 0x04002D75 RID: 11637
 	[SerializeField]
 	private Animator m_sentryWarningAnimator;
 
-	// Token: 0x040021D3 RID: 8659
+	// Token: 0x04002D76 RID: 11638
 	[SerializeField]
 	private Interactable m_interactable;
 
-	// Token: 0x040021D4 RID: 8660
+	// Token: 0x04002D77 RID: 11639
 	[SerializeField]
 	private SentryHazardAudioEventController m_audioController;
 
-	// Token: 0x040021D5 RID: 8661
+	// Token: 0x04002D78 RID: 11640
 	public Relay<Sentry_Hazard, bool> SentryRestingRelay = new Relay<Sentry_Hazard, bool>();
 
-	// Token: 0x040021D6 RID: 8662
+	// Token: 0x04002D79 RID: 11641
 	public Relay<bool> PlayerWithinRangeChangeRelay = new Relay<bool>();
 
-	// Token: 0x040021D7 RID: 8663
+	// Token: 0x04002D7A RID: 11642
 	private float m_attackStartTime;
 
-	// Token: 0x040021D8 RID: 8664
+	// Token: 0x04002D7B RID: 11643
 	private float m_radius;
 
-	// Token: 0x040021D9 RID: 8665
+	// Token: 0x04002D7C RID: 11644
 	private bool m_lookingAtPlayer;
 
-	// Token: 0x040021DA RID: 8666
+	// Token: 0x04002D7D RID: 11645
 	private bool m_isShooting;
 
-	// Token: 0x040021DB RID: 8667
+	// Token: 0x04002D7E RID: 11646
 	private float m_storedWarningScaleAmount;
 
-	// Token: 0x040021DC RID: 8668
+	// Token: 0x04002D7F RID: 11647
 	private float m_timeThisBecameEnabled;
 
-	// Token: 0x040021DD RID: 8669
+	// Token: 0x04002D80 RID: 11648
 	private bool m_isResting;
 
-	// Token: 0x040021DE RID: 8670
+	// Token: 0x04002D81 RID: 11649
 	private Tween m_restShrinkTween;
 
-	// Token: 0x040021DF RID: 8671
+	// Token: 0x04002D82 RID: 11650
 	private Tween m_restGrowTween;
 
-	// Token: 0x040021E0 RID: 8672
+	// Token: 0x04002D83 RID: 11651
 	private float m_restDurationOverride = -1f;
 
-	// Token: 0x040021E1 RID: 8673
+	// Token: 0x04002D84 RID: 11652
 	private bool m_previousIsPlayerWithinRange;
 
-	// Token: 0x040021E2 RID: 8674
+	// Token: 0x04002D85 RID: 11653
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040021E3 RID: 8675
+	// Token: 0x04002D86 RID: 11654
 	private Action<MonoBehaviour, EventArgs> m_onAbilityCast;
 
-	// Token: 0x040021E4 RID: 8676
+	// Token: 0x04002D87 RID: 11655
 	[NonSerialized]
 	private string[] m_projectileNameArray;
 }

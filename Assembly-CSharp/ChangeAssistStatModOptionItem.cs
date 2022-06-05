@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000278 RID: 632
+// Token: 0x02000442 RID: 1090
 public class ChangeAssistStatModOptionItem : SelectionListOptionItem
 {
-	// Token: 0x17000BF3 RID: 3059
-	// (get) Token: 0x06001928 RID: 6440 RVA: 0x0004EDFA File Offset: 0x0004CFFA
+	// Token: 0x17000F34 RID: 3892
+	// (get) Token: 0x06002317 RID: 8983 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected override bool UsesLocID
 	{
 		get
@@ -14,8 +14,8 @@ public class ChangeAssistStatModOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x17000BF4 RID: 3060
-	// (get) Token: 0x06001929 RID: 6441 RVA: 0x0004EDFD File Offset: 0x0004CFFD
+	// Token: 0x17000F35 RID: 3893
+	// (get) Token: 0x06002318 RID: 8984 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool PressAndHoldEnabled
 	{
 		get
@@ -24,7 +24,7 @@ public class ChangeAssistStatModOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x0600192A RID: 6442 RVA: 0x0004EE00 File Offset: 0x0004D000
+	// Token: 0x06002319 RID: 8985 RVA: 0x000AC5CC File Offset: 0x000AA7CC
 	private int GetInitialIndex()
 	{
 		float num = 1f;
@@ -46,7 +46,7 @@ public class ChangeAssistStatModOptionItem : SelectionListOptionItem
 		return (Mathf.RoundToInt(num * 100f) - this.m_minValue) / this.m_incrementValue;
 	}
 
-	// Token: 0x0600192B RID: 6443 RVA: 0x0004EE7E File Offset: 0x0004D07E
+	// Token: 0x0600231A RID: 8986 RVA: 0x00012D82 File Offset: 0x00010F82
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -57,7 +57,7 @@ public class ChangeAssistStatModOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x0600192C RID: 6444 RVA: 0x0004EEBC File Offset: 0x0004D0BC
+	// Token: 0x0600231B RID: 8987 RVA: 0x000AC64C File Offset: 0x000AA84C
 	public override void Initialize()
 	{
 		switch (this.m_statType)
@@ -93,13 +93,13 @@ public class ChangeAssistStatModOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x0600192D RID: 6445 RVA: 0x0004EFB8 File Offset: 0x0004D1B8
+	// Token: 0x0600231C RID: 8988 RVA: 0x00012DC0 File Offset: 0x00010FC0
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed " + this.m_statType.ToString() + " to: " + this.m_selectionLocIDArray[this.m_selectedIndex]);
 	}
 
-	// Token: 0x0600192E RID: 6446 RVA: 0x0004EFEC File Offset: 0x0004D1EC
+	// Token: 0x0600231D RID: 8989 RVA: 0x000AC748 File Offset: 0x000AA948
 	public override void ConfirmOptionChange()
 	{
 		float num = (float)(this.m_minValue + this.m_incrementValue * this.m_selectedIndex) / 100f;
@@ -121,7 +121,7 @@ public class ChangeAssistStatModOptionItem : SelectionListOptionItem
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.HouseRulesChanged, null, null);
 	}
 
-	// Token: 0x0600192F RID: 6447 RVA: 0x0004F070 File Offset: 0x0004D270
+	// Token: 0x0600231E RID: 8990 RVA: 0x000AC7CC File Offset: 0x000AA9CC
 	private void Update()
 	{
 		if (!SaveManager.PlayerSaveData.EnableHouseRules)
@@ -134,7 +134,7 @@ public class ChangeAssistStatModOptionItem : SelectionListOptionItem
 		this.m_incrementValueText.alpha = 1f;
 	}
 
-	// Token: 0x06001930 RID: 6448 RVA: 0x0004F0CA File Offset: 0x0004D2CA
+	// Token: 0x0600231F RID: 8991 RVA: 0x00012DF4 File Offset: 0x00010FF4
 	public override void ActivateOption()
 	{
 		if (SaveManager.PlayerSaveData.EnableHouseRules)
@@ -143,29 +143,29 @@ public class ChangeAssistStatModOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x04001835 RID: 6197
+	// Token: 0x04001F7D RID: 8061
 	[SerializeField]
 	private ChangeAssistStatModOptionItem.StatType m_statType;
 
-	// Token: 0x04001836 RID: 6198
+	// Token: 0x04001F7E RID: 8062
 	private int m_minValue;
 
-	// Token: 0x04001837 RID: 6199
+	// Token: 0x04001F7F RID: 8063
 	private int m_maxValue;
 
-	// Token: 0x04001838 RID: 6200
+	// Token: 0x04001F80 RID: 8064
 	private int m_incrementValue;
 
-	// Token: 0x02000B43 RID: 2883
+	// Token: 0x02000443 RID: 1091
 	private enum StatType
 	{
-		// Token: 0x04004BDE RID: 19422
+		// Token: 0x04001F82 RID: 8066
 		EnemyHealth,
-		// Token: 0x04004BDF RID: 19423
+		// Token: 0x04001F83 RID: 8067
 		EnemyDamage,
-		// Token: 0x04004BE0 RID: 19424
+		// Token: 0x04001F84 RID: 8068
 		AimTimeSlow,
-		// Token: 0x04004BE1 RID: 19425
+		// Token: 0x04001F85 RID: 8069
 		BurdenRequirement
 	}
 }

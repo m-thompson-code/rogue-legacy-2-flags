@@ -2,16 +2,16 @@
 using RL_Windows;
 using UnityEngine.Events;
 
-// Token: 0x02000556 RID: 1366
+// Token: 0x02000911 RID: 2321
 public class JukeboxShop : BaseShop, IRoomConsumer, IDisplaySpeechBubble
 {
-	// Token: 0x1700124F RID: 4687
-	// (get) Token: 0x06003225 RID: 12837 RVA: 0x000AA231 File Offset: 0x000A8431
-	// (set) Token: 0x06003226 RID: 12838 RVA: 0x000AA239 File Offset: 0x000A8439
+	// Token: 0x170018EA RID: 6378
+	// (get) Token: 0x0600467C RID: 18044 RVA: 0x00026B83 File Offset: 0x00024D83
+	// (set) Token: 0x0600467D RID: 18045 RVA: 0x00026B8B File Offset: 0x00024D8B
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17001250 RID: 4688
-	// (get) Token: 0x06003227 RID: 12839 RVA: 0x000AA244 File Offset: 0x000A8444
+	// Token: 0x170018EB RID: 6379
+	// (get) Token: 0x0600467E RID: 18046 RVA: 0x0011431C File Offset: 0x0011251C
 	public override bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -27,8 +27,8 @@ public class JukeboxShop : BaseShop, IRoomConsumer, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x17001251 RID: 4689
-	// (get) Token: 0x06003228 RID: 12840 RVA: 0x000AA28B File Offset: 0x000A848B
+	// Token: 0x170018EC RID: 6380
+	// (get) Token: 0x0600467F RID: 18047 RVA: 0x000047A4 File Offset: 0x000029A4
 	public override SpeechBubbleType BubbleType
 	{
 		get
@@ -37,22 +37,22 @@ public class JukeboxShop : BaseShop, IRoomConsumer, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x06003229 RID: 12841 RVA: 0x000AA28E File Offset: 0x000A848E
+	// Token: 0x06004680 RID: 18048 RVA: 0x00026B94 File Offset: 0x00024D94
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_closeShop = new UnityAction(this.CloseShop);
 	}
 
-	// Token: 0x0600322A RID: 12842 RVA: 0x000AA2A9 File Offset: 0x000A84A9
+	// Token: 0x06004681 RID: 18049 RVA: 0x00026BAF File Offset: 0x00024DAF
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x17001252 RID: 4690
-	// (get) Token: 0x0600322B RID: 12843 RVA: 0x000AA2D0 File Offset: 0x000A84D0
+	// Token: 0x170018ED RID: 6381
+	// (get) Token: 0x06004682 RID: 18050 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -61,13 +61,13 @@ public class JukeboxShop : BaseShop, IRoomConsumer, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x0600322C RID: 12844 RVA: 0x000AA2D8 File Offset: 0x000A84D8
+	// Token: 0x06004683 RID: 18051 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected override bool HasEventDialogue()
 	{
 		return false;
 	}
 
-	// Token: 0x0600322D RID: 12845 RVA: 0x000AA2DB File Offset: 0x000A84DB
+	// Token: 0x06004684 RID: 18052 RVA: 0x00026BD6 File Offset: 0x00024DD6
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -76,7 +76,7 @@ public class JukeboxShop : BaseShop, IRoomConsumer, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x0600322E RID: 12846 RVA: 0x000AA308 File Offset: 0x000A8508
+	// Token: 0x06004685 RID: 18053 RVA: 0x00114364 File Offset: 0x00112564
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		SoulShopObj soulShopObj = SaveManager.ModeSaveData.GetSoulShopObj(SoulShopType.UnlockJukebox);
@@ -95,7 +95,7 @@ public class JukeboxShop : BaseShop, IRoomConsumer, IDisplaySpeechBubble
 		}
 	}
 
-	// Token: 0x0600322F RID: 12847 RVA: 0x000AA384 File Offset: 0x000A8584
+	// Token: 0x06004686 RID: 18054 RVA: 0x001143E0 File Offset: 0x001125E0
 	protected override void OpenShop_Internal()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.Jukebox))
@@ -112,16 +112,16 @@ public class JukeboxShop : BaseShop, IRoomConsumer, IDisplaySpeechBubble
 		WindowManager.SetWindowIsOpen(WindowID.Jukebox, true);
 	}
 
-	// Token: 0x06003230 RID: 12848 RVA: 0x000AA3D7 File Offset: 0x000A85D7
+	// Token: 0x06004687 RID: 18055 RVA: 0x00026C02 File Offset: 0x00024E02
 	public override void CloseShop()
 	{
 		base.CloseShop();
 		WindowManager.GetWindowController(WindowID.Jukebox).WindowClosedEvent.RemoveListener(this.m_closeShop);
 	}
 
-	// Token: 0x04002777 RID: 10103
+	// Token: 0x04003661 RID: 13921
 	private UnityAction m_closeShop;
 
-	// Token: 0x04002778 RID: 10104
+	// Token: 0x04003662 RID: 13922
 	public static bool CanSubmitStoreAchievements = true;
 }

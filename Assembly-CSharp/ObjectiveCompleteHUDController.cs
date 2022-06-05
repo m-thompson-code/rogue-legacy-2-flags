@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-// Token: 0x0200038F RID: 911
+// Token: 0x0200061C RID: 1564
 public class ObjectiveCompleteHUDController : MonoBehaviour, ILocalizable
 {
-	// Token: 0x060021F1 RID: 8689 RVA: 0x0006BA40 File Offset: 0x00069C40
+	// Token: 0x06002FFD RID: 12285 RVA: 0x000CC9A8 File Offset: 0x000CABA8
 	private void Awake()
 	{
 		this.m_displayHUD = new Action<MonoBehaviour, EventArgs>(this.DisplayHUD);
@@ -25,7 +25,7 @@ public class ObjectiveCompleteHUDController : MonoBehaviour, ILocalizable
 		SceneManager.sceneLoaded += this.OnSceneLoaded;
 	}
 
-	// Token: 0x060021F2 RID: 8690 RVA: 0x0006BB08 File Offset: 0x00069D08
+	// Token: 0x06002FFE RID: 12286 RVA: 0x000CCA70 File Offset: 0x000CAC70
 	private void OnDestroy()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.DisplayObjectiveCompleteHUD, this.m_displayHUD);
@@ -35,13 +35,13 @@ public class ObjectiveCompleteHUDController : MonoBehaviour, ILocalizable
 		SceneManager.sceneLoaded -= this.OnSceneLoaded;
 	}
 
-	// Token: 0x060021F3 RID: 8691 RVA: 0x0006BB5A File Offset: 0x00069D5A
+	// Token: 0x06002FFF RID: 12287 RVA: 0x0001A512 File Offset: 0x00018712
 	private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
 		this.HideHUD(null, null);
 	}
 
-	// Token: 0x060021F4 RID: 8692 RVA: 0x0006BB64 File Offset: 0x00069D64
+	// Token: 0x06003000 RID: 12288 RVA: 0x000CCAC4 File Offset: 0x000CACC4
 	private void OnPause(object sender, EventArgs args)
 	{
 		GamePauseStateChangeEventArgs gamePauseStateChangeEventArgs = args as GamePauseStateChangeEventArgs;
@@ -76,7 +76,7 @@ public class ObjectiveCompleteHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x060021F5 RID: 8693 RVA: 0x0006BC20 File Offset: 0x00069E20
+	// Token: 0x06003001 RID: 12289 RVA: 0x000CCB80 File Offset: 0x000CAD80
 	private void HideHUD(object sender, EventArgs args)
 	{
 		base.StopAllCoroutines();
@@ -96,7 +96,7 @@ public class ObjectiveCompleteHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x060021F6 RID: 8694 RVA: 0x0006BCAC File Offset: 0x00069EAC
+	// Token: 0x06003002 RID: 12290 RVA: 0x000CCC0C File Offset: 0x000CAE0C
 	private void DisplayHUD(MonoBehaviour sender, EventArgs args)
 	{
 		this.HideHUD(null, null);
@@ -110,7 +110,7 @@ public class ObjectiveCompleteHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x060021F7 RID: 8695 RVA: 0x0006BD04 File Offset: 0x00069F04
+	// Token: 0x06003003 RID: 12291 RVA: 0x000CCC64 File Offset: 0x000CAE64
 	private void UpdateObjectiveCompleteText(ObjectiveCompleteHUDEventArgs objectiveArgs, bool runEvent)
 	{
 		this.m_playerNameText.gameObject.SetActive(false);
@@ -347,7 +347,7 @@ public class ObjectiveCompleteHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x060021F8 RID: 8696 RVA: 0x0006C56B File Offset: 0x0006A76B
+	// Token: 0x06003004 RID: 12292 RVA: 0x0001A51C File Offset: 0x0001871C
 	private IEnumerator DisplayHUDCoroutine(float duration)
 	{
 		float num = 1f;
@@ -374,19 +374,19 @@ public class ObjectiveCompleteHUDController : MonoBehaviour, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x060021F9 RID: 8697 RVA: 0x0006C581 File Offset: 0x0006A781
+	// Token: 0x06003005 RID: 12293 RVA: 0x0001A532 File Offset: 0x00018732
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x060021FA RID: 8698 RVA: 0x0006C590 File Offset: 0x0006A790
+	// Token: 0x06003006 RID: 12294 RVA: 0x0001A541 File Offset: 0x00018741
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x060021FB RID: 8699 RVA: 0x0006C59F File Offset: 0x0006A79F
+	// Token: 0x06003007 RID: 12295 RVA: 0x0001A550 File Offset: 0x00018750
 	public void RefreshText(object sender, EventArgs args)
 	{
 		if (this.m_refreshTextEventArgs != null)
@@ -395,71 +395,71 @@ public class ObjectiveCompleteHUDController : MonoBehaviour, ILocalizable
 		}
 	}
 
-	// Token: 0x04001D6D RID: 7533
+	// Token: 0x04002763 RID: 10083
 	[SerializeField]
 	private TMP_Text m_playerNameText;
 
-	// Token: 0x04001D6E RID: 7534
+	// Token: 0x04002764 RID: 10084
 	[SerializeField]
 	private TMP_Text m_titleText;
 
-	// Token: 0x04001D6F RID: 7535
+	// Token: 0x04002765 RID: 10085
 	[SerializeField]
 	private TMP_Text m_subTitleText;
 
-	// Token: 0x04001D70 RID: 7536
+	// Token: 0x04002766 RID: 10086
 	[SerializeField]
 	private TMP_Text m_descriptionText;
 
-	// Token: 0x04001D71 RID: 7537
+	// Token: 0x04002767 RID: 10087
 	[SerializeField]
 	[Tooltip("Spacer used purely for keeping the spacing correct when disabling the description text.")]
 	private GameObject m_descriptionSpacer;
 
-	// Token: 0x04001D72 RID: 7538
+	// Token: 0x04002768 RID: 10088
 	[SerializeField]
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x04001D73 RID: 7539
+	// Token: 0x04002769 RID: 10089
 	[SerializeField]
 	private GameObject m_canvasGO;
 
-	// Token: 0x04001D74 RID: 7540
+	// Token: 0x0400276A RID: 10090
 	[SerializeField]
 	private UnityEvent m_bossCompleteUnityEvent;
 
-	// Token: 0x04001D75 RID: 7541
+	// Token: 0x0400276B RID: 10091
 	[SerializeField]
 	private UnityEvent m_insightCompleteUnityEvent;
 
-	// Token: 0x04001D76 RID: 7542
+	// Token: 0x0400276C RID: 10092
 	[SerializeField]
 	private UnityEvent m_heirloomCompleteUnityEvent;
 
-	// Token: 0x04001D77 RID: 7543
+	// Token: 0x0400276D RID: 10093
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04001D78 RID: 7544
+	// Token: 0x0400276E RID: 10094
 	private Tween m_tweenIn;
 
-	// Token: 0x04001D79 RID: 7545
+	// Token: 0x0400276F RID: 10095
 	private Tween m_tweenOut;
 
-	// Token: 0x04001D7A RID: 7546
+	// Token: 0x04002770 RID: 10096
 	private float m_storedAlpha;
 
-	// Token: 0x04001D7B RID: 7547
+	// Token: 0x04002771 RID: 10097
 	private ObjectiveCompleteHUDEventArgs m_refreshTextEventArgs;
 
-	// Token: 0x04001D7C RID: 7548
+	// Token: 0x04002772 RID: 10098
 	private Action<MonoBehaviour, EventArgs> m_displayHUD;
 
-	// Token: 0x04001D7D RID: 7549
+	// Token: 0x04002773 RID: 10099
 	private Action<MonoBehaviour, EventArgs> m_hideHUD;
 
-	// Token: 0x04001D7E RID: 7550
+	// Token: 0x04002774 RID: 10100
 	private Action<MonoBehaviour, EventArgs> m_onPause;
 
-	// Token: 0x04001D7F RID: 7551
+	// Token: 0x04002775 RID: 10101
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 }

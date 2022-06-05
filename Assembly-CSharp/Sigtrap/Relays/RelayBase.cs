@@ -3,11 +3,11 @@ using Sigtrap.Relays.Binding;
 
 namespace Sigtrap.Relays
 {
-	// Token: 0x02000950 RID: 2384
+	// Token: 0x02000EF8 RID: 3832
 	public abstract class RelayBase<TDelegate> : IRelayLinkBase<TDelegate> where TDelegate : class
 	{
-		// Token: 0x17001AD4 RID: 6868
-		// (get) Token: 0x060050CF RID: 20687 RVA: 0x0011E12D File Offset: 0x0011C32D
+		// Token: 0x17002417 RID: 9239
+		// (get) Token: 0x06006EC3 RID: 28355 RVA: 0x0003D089 File Offset: 0x0003B289
 		public uint listenerCount
 		{
 			get
@@ -16,8 +16,8 @@ namespace Sigtrap.Relays
 			}
 		}
 
-		// Token: 0x17001AD5 RID: 6869
-		// (get) Token: 0x060050D0 RID: 20688 RVA: 0x0011E135 File Offset: 0x0011C335
+		// Token: 0x17002418 RID: 9240
+		// (get) Token: 0x06006EC4 RID: 28356 RVA: 0x0003D091 File Offset: 0x0003B291
 		public uint oneTimeListenersCount
 		{
 			get
@@ -26,13 +26,13 @@ namespace Sigtrap.Relays
 			}
 		}
 
-		// Token: 0x060050D1 RID: 20689 RVA: 0x0011E13D File Offset: 0x0011C33D
+		// Token: 0x06006EC5 RID: 28357 RVA: 0x0003D099 File Offset: 0x0003B299
 		public bool Contains(TDelegate listener)
 		{
 			return this.Contains(this._listeners, this._count, listener);
 		}
 
-		// Token: 0x060050D2 RID: 20690 RVA: 0x0011E154 File Offset: 0x0011C354
+		// Token: 0x06006EC6 RID: 28358 RVA: 0x0018C688 File Offset: 0x0018A888
 		public bool AddListener(TDelegate listener, bool allowDuplicates = false)
 		{
 			if (!allowDuplicates && this.Contains(listener))
@@ -49,7 +49,7 @@ namespace Sigtrap.Relays
 			return true;
 		}
 
-		// Token: 0x060050D3 RID: 20691 RVA: 0x0011E1CA File Offset: 0x0011C3CA
+		// Token: 0x06006EC7 RID: 28359 RVA: 0x0003D0AE File Offset: 0x0003B2AE
 		public IRelayBinding BindListener(TDelegate listener, bool allowDuplicates = false)
 		{
 			if (this.AddListener(listener, allowDuplicates))
@@ -59,7 +59,7 @@ namespace Sigtrap.Relays
 			return null;
 		}
 
-		// Token: 0x060050D4 RID: 20692 RVA: 0x0011E1E4 File Offset: 0x0011C3E4
+		// Token: 0x06006EC8 RID: 28360 RVA: 0x0018C700 File Offset: 0x0018A900
 		public bool AddOnce(TDelegate listener, bool allowDuplicates = false)
 		{
 			if (!allowDuplicates && this.Contains(this._listenersOnce, this._onceCount, listener))
@@ -83,7 +83,7 @@ namespace Sigtrap.Relays
 			return true;
 		}
 
-		// Token: 0x060050D5 RID: 20693 RVA: 0x0011E278 File Offset: 0x0011C478
+		// Token: 0x06006EC9 RID: 28361 RVA: 0x0018C794 File Offset: 0x0018A994
 		public bool RemoveListener(TDelegate listener)
 		{
 			bool result = false;
@@ -99,7 +99,7 @@ namespace Sigtrap.Relays
 			return result;
 		}
 
-		// Token: 0x060050D6 RID: 20694 RVA: 0x0011E2C4 File Offset: 0x0011C4C4
+		// Token: 0x06006ECA RID: 28362 RVA: 0x0018C7E0 File Offset: 0x0018A9E0
 		public bool RemoveOnce(TDelegate listener)
 		{
 			bool result = false;
@@ -115,7 +115,7 @@ namespace Sigtrap.Relays
 			return result;
 		}
 
-		// Token: 0x060050D7 RID: 20695 RVA: 0x0011E310 File Offset: 0x0011C510
+		// Token: 0x06006ECB RID: 28363 RVA: 0x0018C82C File Offset: 0x0018AA2C
 		public void RemoveAll(bool removePersistentListeners = true, bool removeOneTimeListeners = true)
 		{
 			if (removePersistentListeners)
@@ -130,19 +130,19 @@ namespace Sigtrap.Relays
 			}
 		}
 
-		// Token: 0x060050D8 RID: 20696 RVA: 0x0011E35E File Offset: 0x0011C55E
+		// Token: 0x06006ECC RID: 28364 RVA: 0x0003D0C5 File Offset: 0x0003B2C5
 		protected void RemoveAt(uint i)
 		{
 			this._count = this.RemoveAt(this._listeners, this._count, i);
 		}
 
-		// Token: 0x060050D9 RID: 20697 RVA: 0x0011E379 File Offset: 0x0011C579
+		// Token: 0x06006ECD RID: 28365 RVA: 0x0003D0E0 File Offset: 0x0003B2E0
 		protected void RemoveOnceAt(uint i)
 		{
 			this._onceCount = this.RemoveAt(this._listenersOnce, this._onceCount, i);
 		}
 
-		// Token: 0x060050DA RID: 20698 RVA: 0x0011E394 File Offset: 0x0011C594
+		// Token: 0x06006ECE RID: 28366 RVA: 0x0018C87C File Offset: 0x0018AA7C
 		protected uint RemoveAt(TDelegate[] arr, uint count, uint i)
 		{
 			count -= 1U;
@@ -154,7 +154,7 @@ namespace Sigtrap.Relays
 			return count;
 		}
 
-		// Token: 0x060050DB RID: 20699 RVA: 0x0011E3D4 File Offset: 0x0011C5D4
+		// Token: 0x06006ECF RID: 28367 RVA: 0x0018C8BC File Offset: 0x0018AABC
 		private bool Contains(TDelegate[] arr, uint c, TDelegate d)
 		{
 			for (uint num = 0U; num < c; num += 1U)
@@ -167,7 +167,7 @@ namespace Sigtrap.Relays
 			return false;
 		}
 
-		// Token: 0x060050DC RID: 20700 RVA: 0x0011E40C File Offset: 0x0011C60C
+		// Token: 0x06006ED0 RID: 28368 RVA: 0x0018C8F4 File Offset: 0x0018AAF4
 		private TDelegate[] Expand(TDelegate[] arr, uint cap, uint count)
 		{
 			TDelegate[] array = new TDelegate[cap];
@@ -180,28 +180,28 @@ namespace Sigtrap.Relays
 			return array;
 		}
 
-		// Token: 0x0400432E RID: 17198
+		// Token: 0x04005935 RID: 22837
 		protected bool _hasLink;
 
-		// Token: 0x0400432F RID: 17199
+		// Token: 0x04005936 RID: 22838
 		protected TDelegate[] _listeners = new TDelegate[1];
 
-		// Token: 0x04004330 RID: 17200
+		// Token: 0x04005937 RID: 22839
 		protected uint _count;
 
-		// Token: 0x04004331 RID: 17201
+		// Token: 0x04005938 RID: 22840
 		protected uint _cap = 1U;
 
-		// Token: 0x04004332 RID: 17202
+		// Token: 0x04005939 RID: 22841
 		protected TDelegate[] _listenersOnce;
 
-		// Token: 0x04004333 RID: 17203
+		// Token: 0x0400593A RID: 22842
 		protected uint _onceCount;
 
-		// Token: 0x04004334 RID: 17204
+		// Token: 0x0400593B RID: 22843
 		protected uint _onceCap;
 
-		// Token: 0x04004335 RID: 17205
+		// Token: 0x0400593C RID: 22844
 		protected static IndexOutOfRangeException _eIOOR = new IndexOutOfRangeException("Fewer listeners than expected. See guidelines in Relay.cs on using RemoveListener and RemoveAll within Relay listeners.");
 	}
 }

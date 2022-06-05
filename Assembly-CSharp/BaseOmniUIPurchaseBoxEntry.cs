@@ -2,10 +2,10 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000393 RID: 915
+// Token: 0x02000621 RID: 1569
 public abstract class BaseOmniUIPurchaseBoxEntry<T> : MonoBehaviour where T : EventArgs
 {
-	// Token: 0x0600222F RID: 8751 RVA: 0x0006D1CC File Offset: 0x0006B3CC
+	// Token: 0x06003041 RID: 12353 RVA: 0x000CE028 File Offset: 0x000CC228
 	protected virtual void DisplayNullPurchaseBox()
 	{
 		BaseOmniUIPurchaseBoxEntry<T>.OmniUIPurchaseBoxType descriptionType = this.m_descriptionType;
@@ -31,28 +31,28 @@ public abstract class BaseOmniUIPurchaseBoxEntry<T> : MonoBehaviour where T : Ev
 		}
 	}
 
-	// Token: 0x06002230 RID: 8752
+	// Token: 0x06003042 RID: 12354
 	protected abstract void DisplayPurchaseBox(T args);
 
-	// Token: 0x06002231 RID: 8753 RVA: 0x0006D243 File Offset: 0x0006B443
+	// Token: 0x06003043 RID: 12355 RVA: 0x0001A76F File Offset: 0x0001896F
 	private void Awake()
 	{
 		this.m_updateEntry = new Action<MonoBehaviour, EventArgs>(this.UpdateEntry);
 	}
 
-	// Token: 0x06002232 RID: 8754 RVA: 0x0006D257 File Offset: 0x0006B457
+	// Token: 0x06003044 RID: 12356 RVA: 0x0001A783 File Offset: 0x00018983
 	protected virtual void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.OmniUI_UpdateDescription, this.m_updateEntry);
 	}
 
-	// Token: 0x06002233 RID: 8755 RVA: 0x0006D266 File Offset: 0x0006B466
+	// Token: 0x06003045 RID: 12357 RVA: 0x0001A792 File Offset: 0x00018992
 	protected virtual void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.OmniUI_UpdateDescription, this.m_updateEntry);
 	}
 
-	// Token: 0x06002234 RID: 8756 RVA: 0x0006D278 File Offset: 0x0006B478
+	// Token: 0x06003046 RID: 12358 RVA: 0x000CE0A0 File Offset: 0x000CC2A0
 	private void UpdateEntry(MonoBehaviour sender, EventArgs args)
 	{
 		if (args == null)
@@ -73,31 +73,31 @@ public abstract class BaseOmniUIPurchaseBoxEntry<T> : MonoBehaviour where T : Ev
 		this.DisplayPurchaseBox(t);
 	}
 
-	// Token: 0x04001DA0 RID: 7584
+	// Token: 0x0400279B RID: 10139
 	[SerializeField]
 	protected BaseOmniUIPurchaseBoxEntry<T>.OmniUIPurchaseBoxType m_descriptionType;
 
-	// Token: 0x04001DA1 RID: 7585
+	// Token: 0x0400279C RID: 10140
 	[SerializeField]
 	protected TMP_Text m_text1;
 
-	// Token: 0x04001DA2 RID: 7586
+	// Token: 0x0400279D RID: 10141
 	[SerializeField]
 	protected TMP_Text m_text2;
 
-	// Token: 0x04001DA3 RID: 7587
+	// Token: 0x0400279E RID: 10142
 	private Action<MonoBehaviour, EventArgs> m_updateEntry;
 
-	// Token: 0x02000C07 RID: 3079
+	// Token: 0x02000622 RID: 1570
 	protected enum OmniUIPurchaseBoxType
 	{
-		// Token: 0x04004E90 RID: 20112
+		// Token: 0x040027A0 RID: 10144
 		None,
-		// Token: 0x04004E91 RID: 20113
+		// Token: 0x040027A1 RID: 10145
 		FlavourText,
-		// Token: 0x04004E92 RID: 20114
+		// Token: 0x040027A2 RID: 10146
 		MoneyOwned,
-		// Token: 0x04004E93 RID: 20115
+		// Token: 0x040027A3 RID: 10147
 		MoneyCost
 	}
 }

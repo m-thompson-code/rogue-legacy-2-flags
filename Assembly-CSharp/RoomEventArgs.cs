@@ -1,26 +1,26 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000796 RID: 1942
+// Token: 0x02000C59 RID: 3161
 public class RoomEventArgs : EventArgs
 {
-	// Token: 0x1700165A RID: 5722
-	// (get) Token: 0x06004198 RID: 16792 RVA: 0x000E9AEE File Offset: 0x000E7CEE
-	// (set) Token: 0x06004199 RID: 16793 RVA: 0x000E9AF6 File Offset: 0x000E7CF6
+	// Token: 0x17001E56 RID: 7766
+	// (get) Token: 0x06005B15 RID: 23317 RVA: 0x00031FC4 File Offset: 0x000301C4
+	// (set) Token: 0x06005B16 RID: 23318 RVA: 0x00031FCC File Offset: 0x000301CC
 	public BaseRoom Room { get; protected set; }
 
-	// Token: 0x1700165B RID: 5723
-	// (get) Token: 0x0600419A RID: 16794 RVA: 0x000E9AFF File Offset: 0x000E7CFF
-	// (set) Token: 0x0600419B RID: 16795 RVA: 0x000E9B07 File Offset: 0x000E7D07
+	// Token: 0x17001E57 RID: 7767
+	// (get) Token: 0x06005B17 RID: 23319 RVA: 0x00031FD5 File Offset: 0x000301D5
+	// (set) Token: 0x06005B18 RID: 23320 RVA: 0x00031FDD File Offset: 0x000301DD
 	public float Time { get; protected set; }
 
-	// Token: 0x0600419C RID: 16796 RVA: 0x000E9B10 File Offset: 0x000E7D10
+	// Token: 0x06005B19 RID: 23321 RVA: 0x00031FE6 File Offset: 0x000301E6
 	public RoomEventArgs(BaseRoom room)
 	{
 		this.Initialize(room);
 	}
 
-	// Token: 0x0600419D RID: 16797 RVA: 0x000E9B1F File Offset: 0x000E7D1F
+	// Token: 0x06005B1A RID: 23322 RVA: 0x00031FF5 File Offset: 0x000301F5
 	public void Initialize(BaseRoom room)
 	{
 		this.Room = room;

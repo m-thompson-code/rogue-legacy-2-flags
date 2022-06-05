@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020006BE RID: 1726
+// Token: 0x02000B69 RID: 2921
 [Serializable]
 public class BackgroundBiomeArtData
 {
-	// Token: 0x170015BA RID: 5562
-	// (get) Token: 0x06003FA1 RID: 16289 RVA: 0x000E2492 File Offset: 0x000E0692
-	// (set) Token: 0x06003FA2 RID: 16290 RVA: 0x000E249A File Offset: 0x000E069A
+	// Token: 0x17001DB2 RID: 7602
+	// (get) Token: 0x060058D8 RID: 22744 RVA: 0x00030551 File Offset: 0x0002E751
+	// (set) Token: 0x060058D9 RID: 22745 RVA: 0x00030559 File Offset: 0x0002E759
 	public List<Background> Backgrounds
 	{
 		get
@@ -21,8 +21,8 @@ public class BackgroundBiomeArtData
 		}
 	}
 
-	// Token: 0x170015BB RID: 5563
-	// (get) Token: 0x06003FA3 RID: 16291 RVA: 0x000E24A3 File Offset: 0x000E06A3
+	// Token: 0x17001DB3 RID: 7603
+	// (get) Token: 0x060058DA RID: 22746 RVA: 0x00030562 File Offset: 0x0002E762
 	public bool TileNormally
 	{
 		get
@@ -31,7 +31,7 @@ public class BackgroundBiomeArtData
 		}
 	}
 
-	// Token: 0x06003FA4 RID: 16292 RVA: 0x000E24AB File Offset: 0x000E06AB
+	// Token: 0x060058DB RID: 22747 RVA: 0x0003056A File Offset: 0x0002E76A
 	public void AddBackground()
 	{
 		if (this.Backgrounds == null)
@@ -41,11 +41,11 @@ public class BackgroundBiomeArtData
 		this.Backgrounds.Add(null);
 	}
 
-	// Token: 0x04002F30 RID: 12080
+	// Token: 0x0400417F RID: 16767
 	[SerializeField]
 	private List<Background> m_backgrounds;
 
-	// Token: 0x04002F31 RID: 12081
+	// Token: 0x04004180 RID: 16768
 	[SerializeField]
 	private bool m_tileNormally = true;
 }

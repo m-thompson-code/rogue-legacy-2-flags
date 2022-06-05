@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x0200085A RID: 2138
+	// Token: 0x02000D5F RID: 3423
 	public class CameraController : MonoBehaviour
 	{
-		// Token: 0x060046EC RID: 18156 RVA: 0x000FD924 File Offset: 0x000FBB24
+		// Token: 0x06006199 RID: 24985 RVA: 0x0016AA10 File Offset: 0x00168C10
 		private void Awake()
 		{
 			if (QualitySettings.vSyncCount > 0)
@@ -25,7 +25,7 @@ namespace TMPro.Examples
 			this.previousSmoothing = this.MovementSmoothing;
 		}
 
-		// Token: 0x060046ED RID: 18157 RVA: 0x000FD977 File Offset: 0x000FBB77
+		// Token: 0x0600619A RID: 24986 RVA: 0x00035C31 File Offset: 0x00033E31
 		private void Start()
 		{
 			if (this.CameraTarget == null)
@@ -35,7 +35,7 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x060046EE RID: 18158 RVA: 0x000FD9A8 File Offset: 0x000FBBA8
+		// Token: 0x0600619B RID: 24987 RVA: 0x0016AA64 File Offset: 0x00168C64
 		private void LateUpdate()
 		{
 			this.GetPlayerInput();
@@ -66,7 +66,7 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x060046EF RID: 18159 RVA: 0x000FDB28 File Offset: 0x000FBD28
+		// Token: 0x0600619C RID: 24988 RVA: 0x0016ABE4 File Offset: 0x00168DE4
 		private void GetPlayerInput()
 		{
 			this.moveVector = Vector3.zero;
@@ -191,89 +191,89 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x04003BDC RID: 15324
+		// Token: 0x04004F61 RID: 20321
 		private Transform cameraTransform;
 
-		// Token: 0x04003BDD RID: 15325
+		// Token: 0x04004F62 RID: 20322
 		private Transform dummyTarget;
 
-		// Token: 0x04003BDE RID: 15326
+		// Token: 0x04004F63 RID: 20323
 		public Transform CameraTarget;
 
-		// Token: 0x04003BDF RID: 15327
+		// Token: 0x04004F64 RID: 20324
 		public float FollowDistance = 30f;
 
-		// Token: 0x04003BE0 RID: 15328
+		// Token: 0x04004F65 RID: 20325
 		public float MaxFollowDistance = 100f;
 
-		// Token: 0x04003BE1 RID: 15329
+		// Token: 0x04004F66 RID: 20326
 		public float MinFollowDistance = 2f;
 
-		// Token: 0x04003BE2 RID: 15330
+		// Token: 0x04004F67 RID: 20327
 		public float ElevationAngle = 30f;
 
-		// Token: 0x04003BE3 RID: 15331
+		// Token: 0x04004F68 RID: 20328
 		public float MaxElevationAngle = 85f;
 
-		// Token: 0x04003BE4 RID: 15332
+		// Token: 0x04004F69 RID: 20329
 		public float MinElevationAngle;
 
-		// Token: 0x04003BE5 RID: 15333
+		// Token: 0x04004F6A RID: 20330
 		public float OrbitalAngle;
 
-		// Token: 0x04003BE6 RID: 15334
+		// Token: 0x04004F6B RID: 20331
 		public CameraController.CameraModes CameraMode;
 
-		// Token: 0x04003BE7 RID: 15335
+		// Token: 0x04004F6C RID: 20332
 		public bool MovementSmoothing = true;
 
-		// Token: 0x04003BE8 RID: 15336
+		// Token: 0x04004F6D RID: 20333
 		public bool RotationSmoothing;
 
-		// Token: 0x04003BE9 RID: 15337
+		// Token: 0x04004F6E RID: 20334
 		private bool previousSmoothing;
 
-		// Token: 0x04003BEA RID: 15338
+		// Token: 0x04004F6F RID: 20335
 		public float MovementSmoothingValue = 25f;
 
-		// Token: 0x04003BEB RID: 15339
+		// Token: 0x04004F70 RID: 20336
 		public float RotationSmoothingValue = 5f;
 
-		// Token: 0x04003BEC RID: 15340
+		// Token: 0x04004F71 RID: 20337
 		public float MoveSensitivity = 2f;
 
-		// Token: 0x04003BED RID: 15341
+		// Token: 0x04004F72 RID: 20338
 		private Vector3 currentVelocity = Vector3.zero;
 
-		// Token: 0x04003BEE RID: 15342
+		// Token: 0x04004F73 RID: 20339
 		private Vector3 desiredPosition;
 
-		// Token: 0x04003BEF RID: 15343
+		// Token: 0x04004F74 RID: 20340
 		private float mouseX;
 
-		// Token: 0x04003BF0 RID: 15344
+		// Token: 0x04004F75 RID: 20341
 		private float mouseY;
 
-		// Token: 0x04003BF1 RID: 15345
+		// Token: 0x04004F76 RID: 20342
 		private Vector3 moveVector;
 
-		// Token: 0x04003BF2 RID: 15346
+		// Token: 0x04004F77 RID: 20343
 		private float mouseWheel;
 
-		// Token: 0x04003BF3 RID: 15347
+		// Token: 0x04004F78 RID: 20344
 		private const string event_SmoothingValue = "Slider - Smoothing Value";
 
-		// Token: 0x04003BF4 RID: 15348
+		// Token: 0x04004F79 RID: 20345
 		private const string event_FollowDistance = "Slider - Camera Zoom";
 
-		// Token: 0x02000E76 RID: 3702
+		// Token: 0x02000D60 RID: 3424
 		public enum CameraModes
 		{
-			// Token: 0x040057FA RID: 22522
+			// Token: 0x04004F7B RID: 20347
 			Follow,
-			// Token: 0x040057FB RID: 22523
+			// Token: 0x04004F7C RID: 20348
 			Isometric,
-			// Token: 0x040057FC RID: 22524
+			// Token: 0x04004F7D RID: 20349
 			Free
 		}
 	}

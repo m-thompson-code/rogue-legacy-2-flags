@@ -2,17 +2,17 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020001FA RID: 506
+// Token: 0x0200039F RID: 927
 public class FairyRuleHUDEntry : MonoBehaviour
 {
-	// Token: 0x06001576 RID: 5494 RVA: 0x00042C7D File Offset: 0x00040E7D
+	// Token: 0x06001ED0 RID: 7888 RVA: 0x000101BE File Offset: 0x0000E3BE
 	public void Initialise(string text)
 	{
 		this.m_text.color = this.m_defaultColor;
 		this.SetText(text);
 	}
 
-	// Token: 0x06001577 RID: 5495 RVA: 0x00042C97 File Offset: 0x00040E97
+	// Token: 0x06001ED1 RID: 7889 RVA: 0x000101D8 File Offset: 0x0000E3D8
 	public void SetText(string text)
 	{
 		if (!string.IsNullOrEmpty(text))
@@ -23,7 +23,7 @@ public class FairyRuleHUDEntry : MonoBehaviour
 		this.m_text.text = "Text was not set";
 	}
 
-	// Token: 0x06001578 RID: 5496 RVA: 0x00042CC0 File Offset: 0x00040EC0
+	// Token: 0x06001ED2 RID: 7890 RVA: 0x000A13FC File Offset: 0x0009F5FC
 	public void SetState(FairyRoomState state)
 	{
 		if (state == FairyRoomState.Passed)
@@ -42,19 +42,19 @@ public class FairyRuleHUDEntry : MonoBehaviour
 		this.m_text.color = this.m_defaultColor;
 	}
 
-	// Token: 0x040014BB RID: 5307
+	// Token: 0x04001B8A RID: 7050
 	[SerializeField]
 	private TextMeshProUGUI m_text;
 
-	// Token: 0x040014BC RID: 5308
+	// Token: 0x04001B8B RID: 7051
 	[SerializeField]
 	private Color m_defaultColor = Color.white;
 
-	// Token: 0x040014BD RID: 5309
+	// Token: 0x04001B8C RID: 7052
 	[SerializeField]
 	private Color m_passedColor = Color.green;
 
-	// Token: 0x040014BE RID: 5310
+	// Token: 0x04001B8D RID: 7053
 	[SerializeField]
 	private Color m_failedColor = Color.red;
 }

@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000427 RID: 1063
+// Token: 0x020006EA RID: 1770
 public class SelfAnimateEffect : BaseEffect
 {
-	// Token: 0x06002734 RID: 10036 RVA: 0x00082A01 File Offset: 0x00080C01
+	// Token: 0x06003625 RID: 13861 RVA: 0x0001DB27 File Offset: 0x0001BD27
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_waitYield = new WaitRL_Yield(0f, true);
 	}
 
-	// Token: 0x06002735 RID: 10037 RVA: 0x00082A1A File Offset: 0x00080C1A
+	// Token: 0x06003626 RID: 13862 RVA: 0x0001DB40 File Offset: 0x0001BD40
 	public override void Play(float duration = 0f, EffectStopType stopType = EffectStopType.Gracefully)
 	{
 		base.Play(duration, stopType);
@@ -27,7 +27,7 @@ public class SelfAnimateEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x06002736 RID: 10038 RVA: 0x00082A58 File Offset: 0x00080C58
+	// Token: 0x06003627 RID: 13863 RVA: 0x0001DB7E File Offset: 0x0001BD7E
 	private IEnumerator PlayTimedAnimator(float duration, EffectStopType stopType)
 	{
 		string text = "";
@@ -88,7 +88,7 @@ public class SelfAnimateEffect : BaseEffect
 		yield break;
 	}
 
-	// Token: 0x06002737 RID: 10039 RVA: 0x00082A78 File Offset: 0x00080C78
+	// Token: 0x06003628 RID: 13864 RVA: 0x000E3614 File Offset: 0x000E1814
 	public override void Stop(EffectStopType stopType)
 	{
 		string text = "";
@@ -135,43 +135,43 @@ public class SelfAnimateEffect : BaseEffect
 		this.PlayComplete();
 	}
 
-	// Token: 0x040020E0 RID: 8416
+	// Token: 0x04002BF5 RID: 11253
 	[SerializeField]
 	private string m_movingLeftParamStart;
 
-	// Token: 0x040020E1 RID: 8417
+	// Token: 0x04002BF6 RID: 11254
 	[SerializeField]
 	private string m_movingLeftParamEnd;
 
-	// Token: 0x040020E2 RID: 8418
+	// Token: 0x04002BF7 RID: 11255
 	[SerializeField]
 	private string m_movingRightParamStart;
 
-	// Token: 0x040020E3 RID: 8419
+	// Token: 0x04002BF8 RID: 11256
 	[SerializeField]
 	private string m_movingRightParamEnd;
 
-	// Token: 0x040020E4 RID: 8420
+	// Token: 0x04002BF9 RID: 11257
 	[SerializeField]
 	private string m_movingUpParamStart;
 
-	// Token: 0x040020E5 RID: 8421
+	// Token: 0x04002BFA RID: 11258
 	[SerializeField]
 	private string m_movingUpParamEnd;
 
-	// Token: 0x040020E6 RID: 8422
+	// Token: 0x04002BFB RID: 11259
 	[SerializeField]
 	private string m_movingDownParamStart;
 
-	// Token: 0x040020E7 RID: 8423
+	// Token: 0x04002BFC RID: 11260
 	[SerializeField]
 	private string m_movingDownParamEnd;
 
-	// Token: 0x040020E8 RID: 8424
+	// Token: 0x04002BFD RID: 11261
 	[Space(10f)]
 	[SerializeField]
 	private bool m_runOnlyOnce;
 
-	// Token: 0x040020E9 RID: 8425
+	// Token: 0x04002BFE RID: 11262
 	private WaitRL_Yield m_waitYield;
 }

@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004FD RID: 1277
+// Token: 0x0200085E RID: 2142
 public class EndingSpawnRoomTypeController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x170011C2 RID: 4546
-	// (get) Token: 0x06002FBE RID: 12222 RVA: 0x000A353F File Offset: 0x000A173F
-	// (set) Token: 0x06002FBF RID: 12223 RVA: 0x000A3547 File Offset: 0x000A1747
+	// Token: 0x170017B1 RID: 6065
+	// (get) Token: 0x06004208 RID: 16904 RVA: 0x0002493C File Offset: 0x00022B3C
+	// (set) Token: 0x06004209 RID: 16905 RVA: 0x00024944 File Offset: 0x00022B44
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x170011C3 RID: 4547
-	// (get) Token: 0x06002FC0 RID: 12224 RVA: 0x000A3550 File Offset: 0x000A1750
+	// Token: 0x170017B2 RID: 6066
+	// (get) Token: 0x0600420A RID: 16906 RVA: 0x0002494D File Offset: 0x00022B4D
 	public EndingSpawnRoomType EndingSpawnRoomType
 	{
 		get
@@ -19,14 +19,14 @@ public class EndingSpawnRoomTypeController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002FC1 RID: 12225 RVA: 0x000A3558 File Offset: 0x000A1758
+	// Token: 0x0600420B RID: 16907 RVA: 0x00024955 File Offset: 0x00022B55
 	public virtual void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x06002FC2 RID: 12226 RVA: 0x000A357F File Offset: 0x000A177F
+	// Token: 0x0600420C RID: 16908 RVA: 0x0002497C File Offset: 0x00022B7C
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -35,7 +35,7 @@ public class EndingSpawnRoomTypeController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06002FC3 RID: 12227 RVA: 0x000A35AC File Offset: 0x000A17AC
+	// Token: 0x0600420D RID: 16909 RVA: 0x00109178 File Offset: 0x00107378
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (this.m_endingSpawnRoomType == EndingSpawnRoomType.Docks)
@@ -51,7 +51,7 @@ public class EndingSpawnRoomTypeController : MonoBehaviour, IRoomConsumer
 		SaveManager.PlayerSaveData.EndingSpawnRoom = this.m_endingSpawnRoomType;
 	}
 
-	// Token: 0x04002610 RID: 9744
+	// Token: 0x040033AF RID: 13231
 	[SerializeField]
 	private EndingSpawnRoomType m_endingSpawnRoomType;
 }

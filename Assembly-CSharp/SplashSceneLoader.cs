@@ -6,10 +6,10 @@ using RL_Windows;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020002DE RID: 734
+// Token: 0x020004D5 RID: 1237
 public class SplashSceneLoader : MonoBehaviour
 {
-	// Token: 0x06001D38 RID: 7480 RVA: 0x000606DF File Offset: 0x0005E8DF
+	// Token: 0x0600280B RID: 10251 RVA: 0x00016818 File Offset: 0x00014A18
 	private IEnumerator Start()
 	{
 		Application.backgroundLoadingPriority = ThreadPriority.High;
@@ -65,7 +65,7 @@ public class SplashSceneLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001D39 RID: 7481 RVA: 0x000606EE File Offset: 0x0005E8EE
+	// Token: 0x0600280C RID: 10252 RVA: 0x00016827 File Offset: 0x00014A27
 	private IEnumerator WaitUntilStoreInitialized()
 	{
 		float num = StoreAPIManager.GetInitTimeout();
@@ -91,7 +91,7 @@ public class SplashSceneLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001D3A RID: 7482 RVA: 0x000606FD File Offset: 0x0005E8FD
+	// Token: 0x0600280D RID: 10253 RVA: 0x00016836 File Offset: 0x00014A36
 	private void DisplayLoginFailedWindow()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ConfirmMenu))
@@ -102,7 +102,7 @@ public class SplashSceneLoader : MonoBehaviour
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x06001D3B RID: 7483 RVA: 0x00060720 File Offset: 0x0005E920
+	// Token: 0x0600280E RID: 10254 RVA: 0x000BC950 File Offset: 0x000BAB50
 	private void InitializeAPIFailMenu()
 	{
 		string text;
@@ -121,7 +121,7 @@ public class SplashSceneLoader : MonoBehaviour
 		componentInChildren.sortingOrder = 10;
 	}
 
-	// Token: 0x06001D3C RID: 7484 RVA: 0x000607A4 File Offset: 0x0005E9A4
+	// Token: 0x0600280F RID: 10255 RVA: 0x000BC9D4 File Offset: 0x000BABD4
 	private void Update()
 	{
 		Vector3 localEulerAngles = this.m_rotatingGear.localEulerAngles;
@@ -129,39 +129,39 @@ public class SplashSceneLoader : MonoBehaviour
 		this.m_rotatingGear.localEulerAngles = localEulerAngles;
 	}
 
-	// Token: 0x06001D3D RID: 7485 RVA: 0x000607DF File Offset: 0x0005E9DF
+	// Token: 0x06002810 RID: 10256 RVA: 0x00016856 File Offset: 0x00014A56
 	private void QuitGame()
 	{
 		Application.Quit(10);
 	}
 
-	// Token: 0x06001D3E RID: 7486 RVA: 0x000607E8 File Offset: 0x0005E9E8
+	// Token: 0x06002811 RID: 10257 RVA: 0x0001685F File Offset: 0x00014A5F
 	private void LoadScene()
 	{
 		SceneLoader_RL.LoadScene(SceneID.Disclaimer, this.m_transitionID);
 	}
 
-	// Token: 0x04001B39 RID: 6969
+	// Token: 0x04002345 RID: 9029
 	[SerializeField]
 	private TransitionID m_transitionID;
 
-	// Token: 0x04001B3A RID: 6970
+	// Token: 0x04002346 RID: 9030
 	[SerializeField]
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x04001B3B RID: 6971
+	// Token: 0x04002347 RID: 9031
 	[SerializeField]
 	private StudioEventEmitter m_audioEmitter;
 
-	// Token: 0x04001B3C RID: 6972
+	// Token: 0x04002348 RID: 9032
 	[SerializeField]
 	private SharedGameObjects_Loader m_sharedGameObjectsLoader;
 
-	// Token: 0x04001B3D RID: 6973
+	// Token: 0x04002349 RID: 9033
 	[SerializeField]
 	private CanvasGroup m_loadingIndicatorCanvasGroup;
 
-	// Token: 0x04001B3E RID: 6974
+	// Token: 0x0400234A RID: 9034
 	[SerializeField]
 	private RectTransform m_rotatingGear;
 }

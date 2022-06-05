@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008E2 RID: 2274
+	// Token: 0x02000E52 RID: 3666
 	public class BubbleProjectileAudioController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001849 RID: 6217
-		// (get) Token: 0x06004AC1 RID: 19137 RVA: 0x0010CB44 File Offset: 0x0010AD44
+		// Token: 0x1700212C RID: 8492
+		// (get) Token: 0x0600677A RID: 26490 RVA: 0x000390B3 File Offset: 0x000372B3
 		public string Description
 		{
 			get
@@ -17,7 +17,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AC2 RID: 19138 RVA: 0x0010CB4C File Offset: 0x0010AD4C
+		// Token: 0x0600677B RID: 26491 RVA: 0x0017D054 File Offset: 0x0017B254
 		public void PlaySpawnAudio(float pitch)
 		{
 			if (!this.m_spawnEventInstance.isValid())
@@ -33,13 +33,13 @@ namespace RLAudio
 			AudioManager.Play(this, this.m_spawnEventInstance);
 		}
 
-		// Token: 0x06004AC3 RID: 19139 RVA: 0x0010CBD1 File Offset: 0x0010ADD1
+		// Token: 0x0600677C RID: 26492 RVA: 0x000390BA File Offset: 0x000372BA
 		private void OnDisable()
 		{
 			AudioManager.Play(this, this.m_popEventInstance);
 		}
 
-		// Token: 0x06004AC4 RID: 19140 RVA: 0x0010CBDF File Offset: 0x0010ADDF
+		// Token: 0x0600677D RID: 26493 RVA: 0x000390C8 File Offset: 0x000372C8
 		private void OnDestroy()
 		{
 			if (this.m_spawnEventInstance.isValid())
@@ -52,10 +52,10 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003EB7 RID: 16055
+		// Token: 0x040053D5 RID: 21461
 		private EventInstance m_spawnEventInstance;
 
-		// Token: 0x04003EB8 RID: 16056
+		// Token: 0x040053D6 RID: 21462
 		private EventInstance m_popEventInstance;
 	}
 }

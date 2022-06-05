@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000129 RID: 297
+// Token: 0x020001FD RID: 509
 public class SpellswordBoss_Advanced_AIScript : SpellswordBoss_Basic_AIScript
 {
-	// Token: 0x170004F3 RID: 1267
-	// (get) Token: 0x06000934 RID: 2356 RVA: 0x0001E039 File Offset: 0x0001C239
+	// Token: 0x1700068B RID: 1675
+	// (get) Token: 0x06000E01 RID: 3585 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool UseVariant
 	{
 		get
@@ -13,8 +13,8 @@ public class SpellswordBoss_Advanced_AIScript : SpellswordBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004F4 RID: 1268
-	// (get) Token: 0x06000935 RID: 2357 RVA: 0x0001E03C File Offset: 0x0001C23C
+	// Token: 0x1700068C RID: 1676
+	// (get) Token: 0x06000E02 RID: 3586 RVA: 0x00004792 File Offset: 0x00002992
 	protected override int m_numStaffFireballs_AddSecondMode
 	{
 		get
@@ -23,8 +23,8 @@ public class SpellswordBoss_Advanced_AIScript : SpellswordBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004F5 RID: 1269
-	// (get) Token: 0x06000936 RID: 2358 RVA: 0x0001E03F File Offset: 0x0001C23F
+	// Token: 0x1700068D RID: 1677
+	// (get) Token: 0x06000E03 RID: 3587 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override int m_numDaggerThrowDaggers_SecondModeAdd
 	{
 		get

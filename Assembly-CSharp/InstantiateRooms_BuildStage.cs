@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-// Token: 0x0200066C RID: 1644
+// Token: 0x02000AD9 RID: 2777
 public class InstantiateRooms_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B5D RID: 15197 RVA: 0x000CC357 File Offset: 0x000CA557
+	// Token: 0x0600535F RID: 21343 RVA: 0x0002D506 File Offset: 0x0002B706
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		Stopwatch timer = new Stopwatch();
@@ -37,7 +37,7 @@ public class InstantiateRooms_BuildStage : IBiomeBuildStage
 		yield break;
 	}
 
-	// Token: 0x06003B5E RID: 15198 RVA: 0x000CC368 File Offset: 0x000CA568
+	// Token: 0x06005360 RID: 21344 RVA: 0x0013BCB4 File Offset: 0x00139EB4
 	public static Room CreateRoomInstance(BiomeController biomeController, GridPointManager gridPointManager)
 	{
 		Room room;

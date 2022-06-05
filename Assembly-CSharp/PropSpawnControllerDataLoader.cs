@@ -2,12 +2,12 @@
 using Spawn;
 using UnityEngine;
 
-// Token: 0x0200062D RID: 1581
+// Token: 0x02000A5A RID: 2650
 public class PropSpawnControllerDataLoader : MonoBehaviour
 {
-	// Token: 0x17001439 RID: 5177
-	// (get) Token: 0x06003949 RID: 14665 RVA: 0x000C3225 File Offset: 0x000C1425
-	// (set) Token: 0x0600394A RID: 14666 RVA: 0x000C322D File Offset: 0x000C142D
+	// Token: 0x17001BA0 RID: 7072
+	// (get) Token: 0x06005028 RID: 20520 RVA: 0x0002BCAC File Offset: 0x00029EAC
+	// (set) Token: 0x06005029 RID: 20521 RVA: 0x0002BCB4 File Offset: 0x00029EB4
 	public PropSpawnControllerData[] PropSpawnControllerDataArray
 	{
 		get
@@ -20,7 +20,7 @@ public class PropSpawnControllerDataLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002C1E RID: 11294
+	// Token: 0x04003CB0 RID: 15536
 	[SerializeField]
 	private PropSpawnControllerData[] m_propSpawnControllerDataArray;
 }

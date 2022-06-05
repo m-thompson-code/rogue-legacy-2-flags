@@ -2,11 +2,11 @@
 
 namespace Unity.Cloud.UserReporting
 {
-	// Token: 0x0200083E RID: 2110
+	// Token: 0x02000D24 RID: 3364
 	public struct UserReportMetric
 	{
-		// Token: 0x17001745 RID: 5957
-		// (get) Token: 0x060045B8 RID: 17848 RVA: 0x000F8547 File Offset: 0x000F6747
+		// Token: 0x17001F73 RID: 8051
+		// (get) Token: 0x06005FF0 RID: 24560 RVA: 0x00034E7F File Offset: 0x0003307F
 		public double Average
 		{
 			get
@@ -15,32 +15,32 @@ namespace Unity.Cloud.UserReporting
 			}
 		}
 
-		// Token: 0x17001746 RID: 5958
-		// (get) Token: 0x060045B9 RID: 17849 RVA: 0x000F8557 File Offset: 0x000F6757
-		// (set) Token: 0x060045BA RID: 17850 RVA: 0x000F855F File Offset: 0x000F675F
+		// Token: 0x17001F74 RID: 8052
+		// (get) Token: 0x06005FF1 RID: 24561 RVA: 0x00034E8F File Offset: 0x0003308F
+		// (set) Token: 0x06005FF2 RID: 24562 RVA: 0x00034E97 File Offset: 0x00033097
 		public int Count { readonly get; set; }
 
-		// Token: 0x17001747 RID: 5959
-		// (get) Token: 0x060045BB RID: 17851 RVA: 0x000F8568 File Offset: 0x000F6768
-		// (set) Token: 0x060045BC RID: 17852 RVA: 0x000F8570 File Offset: 0x000F6770
+		// Token: 0x17001F75 RID: 8053
+		// (get) Token: 0x06005FF3 RID: 24563 RVA: 0x00034EA0 File Offset: 0x000330A0
+		// (set) Token: 0x06005FF4 RID: 24564 RVA: 0x00034EA8 File Offset: 0x000330A8
 		public double Maximum { readonly get; set; }
 
-		// Token: 0x17001748 RID: 5960
-		// (get) Token: 0x060045BD RID: 17853 RVA: 0x000F8579 File Offset: 0x000F6779
-		// (set) Token: 0x060045BE RID: 17854 RVA: 0x000F8581 File Offset: 0x000F6781
+		// Token: 0x17001F76 RID: 8054
+		// (get) Token: 0x06005FF5 RID: 24565 RVA: 0x00034EB1 File Offset: 0x000330B1
+		// (set) Token: 0x06005FF6 RID: 24566 RVA: 0x00034EB9 File Offset: 0x000330B9
 		public double Minimum { readonly get; set; }
 
-		// Token: 0x17001749 RID: 5961
-		// (get) Token: 0x060045BF RID: 17855 RVA: 0x000F858A File Offset: 0x000F678A
-		// (set) Token: 0x060045C0 RID: 17856 RVA: 0x000F8592 File Offset: 0x000F6792
+		// Token: 0x17001F77 RID: 8055
+		// (get) Token: 0x06005FF7 RID: 24567 RVA: 0x00034EC2 File Offset: 0x000330C2
+		// (set) Token: 0x06005FF8 RID: 24568 RVA: 0x00034ECA File Offset: 0x000330CA
 		public string Name { readonly get; set; }
 
-		// Token: 0x1700174A RID: 5962
-		// (get) Token: 0x060045C1 RID: 17857 RVA: 0x000F859B File Offset: 0x000F679B
-		// (set) Token: 0x060045C2 RID: 17858 RVA: 0x000F85A3 File Offset: 0x000F67A3
+		// Token: 0x17001F78 RID: 8056
+		// (get) Token: 0x06005FF9 RID: 24569 RVA: 0x00034ED3 File Offset: 0x000330D3
+		// (set) Token: 0x06005FFA RID: 24570 RVA: 0x00034EDB File Offset: 0x000330DB
 		public double Sum { readonly get; set; }
 
-		// Token: 0x060045C3 RID: 17859 RVA: 0x000F85AC File Offset: 0x000F67AC
+		// Token: 0x06005FFB RID: 24571 RVA: 0x00165D48 File Offset: 0x00163F48
 		public void Sample(double value)
 		{
 			if (this.Count == 0)

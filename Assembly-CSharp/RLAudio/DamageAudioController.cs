@@ -7,11 +7,11 @@ using UnityEngine.Serialization;
 
 namespace RLAudio
 {
-	// Token: 0x020008E9 RID: 2281
+	// Token: 0x02000E59 RID: 3673
 	public class DamageAudioController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x1700184E RID: 6222
-		// (get) Token: 0x06004AE2 RID: 19170 RVA: 0x0010D08D File Offset: 0x0010B28D
+		// Token: 0x17002131 RID: 8497
+		// (get) Token: 0x0600679B RID: 26523 RVA: 0x0003930E File Offset: 0x0003750E
 		public string Description
 		{
 			get
@@ -24,7 +24,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AE3 RID: 19171 RVA: 0x0010D0B4 File Offset: 0x0010B2B4
+		// Token: 0x0600679C RID: 26524 RVA: 0x0017D334 File Offset: 0x0017B534
 		protected virtual void Awake()
 		{
 			IEffectTriggerEvent_OnDamage component = base.GetComponent<IEffectTriggerEvent_OnDamage>();
@@ -39,7 +39,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AE4 RID: 19172 RVA: 0x0010D10C File Offset: 0x0010B30C
+		// Token: 0x0600679D RID: 26525 RVA: 0x0017D38C File Offset: 0x0017B58C
 		protected virtual void OnDestroy()
 		{
 			IEffectTriggerEvent_OnDamage component = base.GetComponent<IEffectTriggerEvent_OnDamage>();
@@ -54,7 +54,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AE5 RID: 19173 RVA: 0x0010D160 File Offset: 0x0010B360
+		// Token: 0x0600679E RID: 26526 RVA: 0x0017D3E0 File Offset: 0x0017B5E0
 		protected virtual void OnTakeDamage(GameObject attacker, float damageTaken, bool isCrit)
 		{
 			BaseDamageAudioData component = attacker.GetComponent<BaseDamageAudioData>();
@@ -97,7 +97,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AE6 RID: 19174 RVA: 0x0010D2BC File Offset: 0x0010B4BC
+		// Token: 0x0600679F RID: 26527 RVA: 0x0017D53C File Offset: 0x0017B73C
 		protected virtual void OnDeath(GameObject otherObj)
 		{
 			for (int i = 0; i < this.m_deathAudioEvents.Length; i++)
@@ -109,7 +109,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004AE7 RID: 19175 RVA: 0x0010D2FE File Offset: 0x0010B4FE
+		// Token: 0x060067A0 RID: 26528 RVA: 0x00039334 File Offset: 0x00037534
 		public void PlayImmuneHit()
 		{
 			if (this.m_immuneAudioEvent)
@@ -118,28 +118,28 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003ECE RID: 16078
+		// Token: 0x040053EC RID: 21484
 		[SerializeField]
 		private bool m_isCharacter;
 
-		// Token: 0x04003ECF RID: 16079
+		// Token: 0x040053ED RID: 21485
 		[SerializeField]
 		private StudioEventEmitter m_immuneAudioEvent;
 
-		// Token: 0x04003ED0 RID: 16080
+		// Token: 0x040053EE RID: 21486
 		[SerializeField]
 		private StudioEventEmitter m_critAudioEvent;
 
-		// Token: 0x04003ED1 RID: 16081
+		// Token: 0x040053EF RID: 21487
 		[SerializeField]
 		[FormerlySerializedAs("m_additionalAudioEvents")]
 		private StudioEventEmitter[] m_additionalHitAudioEvents;
 
-		// Token: 0x04003ED2 RID: 16082
+		// Token: 0x040053F0 RID: 21488
 		[SerializeField]
 		private StudioEventEmitter[] m_deathAudioEvents;
 
-		// Token: 0x04003ED3 RID: 16083
+		// Token: 0x040053F1 RID: 21489
 		private string m_description = string.Empty;
 	}
 }

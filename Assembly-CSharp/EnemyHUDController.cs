@@ -4,10 +4,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000375 RID: 885
+// Token: 0x020005F6 RID: 1526
 public class EnemyHUDController : MonoBehaviour
 {
-	// Token: 0x0600212B RID: 8491 RVA: 0x0006821D File Offset: 0x0006641D
+	// Token: 0x06002F00 RID: 12032 RVA: 0x00019BB9 File Offset: 0x00017DB9
 	private static string GetGlobalLocIDOverride(EnemyHUDType hudType)
 	{
 		if (hudType == EnemyHUDType.Regular)
@@ -25,7 +25,7 @@ public class EnemyHUDController : MonoBehaviour
 		return EnemyHUDController.BossEnemyLocIDOverride;
 	}
 
-	// Token: 0x0600212C RID: 8492 RVA: 0x00068248 File Offset: 0x00066448
+	// Token: 0x06002F01 RID: 12033 RVA: 0x000C8FB0 File Offset: 0x000C71B0
 	private void Awake()
 	{
 		this.m_onEnemyHealthChange = new Action<MonoBehaviour, EventArgs>(this.OnEnemyHealthChange);
@@ -42,7 +42,7 @@ public class EnemyHUDController : MonoBehaviour
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600212D RID: 8493 RVA: 0x00068308 File Offset: 0x00066508
+	// Token: 0x06002F02 RID: 12034 RVA: 0x000C9070 File Offset: 0x000C7270
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.EnemyHealthChange, this.m_onEnemyHealthChange);
@@ -53,14 +53,14 @@ public class EnemyHUDController : MonoBehaviour
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.HideEnemyHUD, this.m_onPlayerDeath);
 	}
 
-	// Token: 0x0600212E RID: 8494 RVA: 0x00068362 File Offset: 0x00066562
+	// Token: 0x06002F03 RID: 12035 RVA: 0x00019BE3 File Offset: 0x00017DE3
 	private void OnPlayerDeath(MonoBehaviour sender, EventArgs args)
 	{
 		base.StopAllCoroutines();
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600212F RID: 8495 RVA: 0x00068378 File Offset: 0x00066578
+	// Token: 0x06002F04 RID: 12036 RVA: 0x000C90CC File Offset: 0x000C72CC
 	private void OnEnemyHealthChange(MonoBehaviour sender, EventArgs args)
 	{
 		if (TraitManager.IsTraitActive(TraitType.NoEnemyHealthBar))
@@ -116,7 +116,7 @@ public class EnemyHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002130 RID: 8496 RVA: 0x000684DC File Offset: 0x000666DC
+	// Token: 0x06002F05 RID: 12037 RVA: 0x000C9230 File Offset: 0x000C7430
 	private string GetCommanderText(EnemyController enemy)
 	{
 		string text = LocalizationManager.GetString("LOC_ID_INDEX_COMMANDER_BUFFS_COMMANDER_TITLE_1", false, false);
@@ -131,7 +131,7 @@ public class EnemyHUDController : MonoBehaviour
 		return text.Replace(text, "(" + text + ")");
 	}
 
-	// Token: 0x06002131 RID: 8497 RVA: 0x00068554 File Offset: 0x00066754
+	// Token: 0x06002F06 RID: 12038 RVA: 0x000C92A8 File Offset: 0x000C74A8
 	private void DisplayHealthBar(float newPercent, float prevPercent, int enemyLevel, string locID, bool isKilled, string commanderText)
 	{
 		enemyLevel = Mathf.FloorToInt((float)enemyLevel * 2.5f);
@@ -166,7 +166,7 @@ public class EnemyHUDController : MonoBehaviour
 		base.StartCoroutine(this.BlinkDisplayCoroutine());
 	}
 
-	// Token: 0x06002132 RID: 8498 RVA: 0x00068671 File Offset: 0x00066871
+	// Token: 0x06002F07 RID: 12039 RVA: 0x00019BF7 File Offset: 0x00017DF7
 	private IEnumerator HPGainLossAnimCoroutine(float newFill, float prevFill)
 	{
 		if (prevFill > newFill)
@@ -213,7 +213,7 @@ public class EnemyHUDController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002133 RID: 8499 RVA: 0x0006868E File Offset: 0x0006688E
+	// Token: 0x06002F08 RID: 12040 RVA: 0x00019C14 File Offset: 0x00017E14
 	private IEnumerator TimedDisplayCoroutine()
 	{
 		this.m_waitYield.CreateNew(1.5f, false);
@@ -222,7 +222,7 @@ public class EnemyHUDController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002134 RID: 8500 RVA: 0x0006869D File Offset: 0x0006689D
+	// Token: 0x06002F09 RID: 12041 RVA: 0x00019C23 File Offset: 0x00017E23
 	private IEnumerator BlinkDisplayCoroutine()
 	{
 		int num;
@@ -240,7 +240,7 @@ public class EnemyHUDController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002135 RID: 8501 RVA: 0x000686AC File Offset: 0x000668AC
+	// Token: 0x06002F0A RID: 12042 RVA: 0x00019C32 File Offset: 0x00017E32
 	private void OnPause(object sender, EventArgs eventArgs)
 	{
 		if (this.m_canvasGroup)
@@ -250,7 +250,7 @@ public class EnemyHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002136 RID: 8502 RVA: 0x000686DC File Offset: 0x000668DC
+	// Token: 0x06002F0B RID: 12043 RVA: 0x00019C62 File Offset: 0x00017E62
 	private void OnUnpause(object sender, EventArgs eventArgs)
 	{
 		if (this.m_canvasGroup)
@@ -259,74 +259,74 @@ public class EnemyHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001CAE RID: 7342
+	// Token: 0x04002669 RID: 9833
 	public static string RegularEnemyLocIDOverride = "";
 
-	// Token: 0x04001CAF RID: 7343
+	// Token: 0x0400266A RID: 9834
 	public static string MinibossEnemyLocIDOverride = "";
 
-	// Token: 0x04001CB0 RID: 7344
+	// Token: 0x0400266B RID: 9835
 	public static string BossEnemyLocIDOverride = "";
 
-	// Token: 0x04001CB1 RID: 7345
+	// Token: 0x0400266C RID: 9836
 	private const float DISPLAY_DURATION = 1.5f;
 
-	// Token: 0x04001CB2 RID: 7346
+	// Token: 0x0400266D RID: 9837
 	private const float HP_CHANGE_DURATION = 0.1f;
 
-	// Token: 0x04001CB3 RID: 7347
+	// Token: 0x0400266E RID: 9838
 	private const int NUM_BLINKS = 4;
 
-	// Token: 0x04001CB4 RID: 7348
+	// Token: 0x0400266F RID: 9839
 	private const float BLINK_DURATION = 0.15f;
 
-	// Token: 0x04001CB5 RID: 7349
+	// Token: 0x04002670 RID: 9840
 	[SerializeField]
 	private EnemyHUDType m_hudType;
 
-	// Token: 0x04001CB6 RID: 7350
+	// Token: 0x04002671 RID: 9841
 	[SerializeField]
 	private TMP_Text m_levelText;
 
-	// Token: 0x04001CB7 RID: 7351
+	// Token: 0x04002672 RID: 9842
 	[SerializeField]
 	private Image m_hpBar;
 
-	// Token: 0x04001CB8 RID: 7352
+	// Token: 0x04002673 RID: 9843
 	[SerializeField]
 	private Image m_hpLossBar;
 
-	// Token: 0x04001CB9 RID: 7353
+	// Token: 0x04002674 RID: 9844
 	[SerializeField]
 	private Image m_hpGainBar;
 
-	// Token: 0x04001CBA RID: 7354
+	// Token: 0x04002675 RID: 9845
 	[SerializeField]
 	private TMP_Text m_enemyNameText;
 
-	// Token: 0x04001CBB RID: 7355
+	// Token: 0x04002676 RID: 9846
 	[SerializeField]
 	private TMP_Text m_commanderText;
 
-	// Token: 0x04001CBC RID: 7356
+	// Token: 0x04002677 RID: 9847
 	[SerializeField]
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x04001CBD RID: 7357
+	// Token: 0x04002678 RID: 9848
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04001CBE RID: 7358
+	// Token: 0x04002679 RID: 9849
 	private float m_storedHUDAlpha;
 
-	// Token: 0x04001CBF RID: 7359
+	// Token: 0x0400267A RID: 9850
 	private Action<MonoBehaviour, EventArgs> m_onEnemyHealthChange;
 
-	// Token: 0x04001CC0 RID: 7360
+	// Token: 0x0400267B RID: 9851
 	private Action<MonoBehaviour, EventArgs> m_onPlayerDeath;
 
-	// Token: 0x04001CC1 RID: 7361
+	// Token: 0x0400267C RID: 9852
 	private Action<MonoBehaviour, EventArgs> m_onPause;
 
-	// Token: 0x04001CC2 RID: 7362
+	// Token: 0x0400267D RID: 9853
 	private Action<MonoBehaviour, EventArgs> m_onUnpause;
 }

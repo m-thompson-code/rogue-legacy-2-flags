@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020005D6 RID: 1494
+// Token: 0x020009DE RID: 2526
 public interface IStateConsumer
 {
-	// Token: 0x1700135B RID: 4955
-	// (get) Token: 0x060036A0 RID: 13984
+	// Token: 0x17001A88 RID: 6792
+	// (get) Token: 0x06004CB2 RID: 19634
 	StateID InitialState { get; }
 
-	// Token: 0x060036A1 RID: 13985
+	// Token: 0x06004CB3 RID: 19635
 	void SetInitialState(StateID state);
 }

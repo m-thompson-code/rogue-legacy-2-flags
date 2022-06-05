@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004AB RID: 1195
+// Token: 0x020007B9 RID: 1977
 public class SetAnimParamAtLifeSpanProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002B9B RID: 11163 RVA: 0x000942FE File Offset: 0x000924FE
+	// Token: 0x06003C14 RID: 15380 RVA: 0x000212AA File Offset: 0x0001F4AA
 	private void OnEnable()
 	{
 		if (base.SourceProjectile)
@@ -14,7 +14,7 @@ public class SetAnimParamAtLifeSpanProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002B9C RID: 11164 RVA: 0x0009431A File Offset: 0x0009251A
+	// Token: 0x06003C15 RID: 15381 RVA: 0x000212C6 File Offset: 0x0001F4C6
 	private IEnumerator FlashCoroutine()
 	{
 		float num = base.SourceProjectile.Lifespan * this.m_triggerAtNormalizedLifeSpan;
@@ -53,23 +53,23 @@ public class SetAnimParamAtLifeSpanProjectileLogic : BaseProjectileLogic
 		yield break;
 	}
 
-	// Token: 0x04002372 RID: 9074
+	// Token: 0x04002FAF RID: 12207
 	[SerializeField]
 	private AnimatorControllerParameterType m_animParamType;
 
-	// Token: 0x04002373 RID: 9075
+	// Token: 0x04002FB0 RID: 12208
 	[SerializeField]
 	private float m_triggerAtNormalizedLifeSpan = 0.8f;
 
-	// Token: 0x04002374 RID: 9076
+	// Token: 0x04002FB1 RID: 12209
 	[SerializeField]
 	private string m_animParamName;
 
-	// Token: 0x04002375 RID: 9077
+	// Token: 0x04002FB2 RID: 12210
 	[SerializeField]
 	private float m_numValue;
 
-	// Token: 0x04002376 RID: 9078
+	// Token: 0x04002FB3 RID: 12211
 	[SerializeField]
 	private bool m_boolValue;
 }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020007F8 RID: 2040
+// Token: 0x02000CBE RID: 3262
 public static class EnemyUtility
 {
-	// Token: 0x060043C3 RID: 17347 RVA: 0x000ECEFC File Offset: 0x000EB0FC
+	// Token: 0x06005D4C RID: 23884 RVA: 0x0015ADB4 File Offset: 0x00158FB4
 	private static void InitialiseEnemiesInBiomeTable()
 	{
 		EnemyUtility.m_enemiesInBiomeTable = new Dictionary<BiomeType, List<EnemyTypeAndRank>>();
@@ -49,20 +49,20 @@ public static class EnemyUtility
 		}
 	}
 
-	// Token: 0x060043C4 RID: 17348 RVA: 0x000ED0C4 File Offset: 0x000EB2C4
+	// Token: 0x06005D4D RID: 23885 RVA: 0x0015AF7C File Offset: 0x0015917C
 	public static bool IsFlyingEnemy(EnemyType enemyType, EnemyRank enemyRank)
 	{
 		EnemyData enemyData = EnemyClassLibrary.GetEnemyData(enemyType, enemyRank);
 		return enemyData && enemyData.IsFlying;
 	}
 
-	// Token: 0x060043C5 RID: 17349 RVA: 0x000ED0E9 File Offset: 0x000EB2E9
+	// Token: 0x06005D4E RID: 23886 RVA: 0x0003357B File Offset: 0x0003177B
 	private static bool IsIncludedBiome(BiomeType biome)
 	{
 		return biome != BiomeType.Any && biome != BiomeType.None && biome != BiomeType.Spawn && biome != BiomeType.Special;
 	}
 
-	// Token: 0x060043C6 RID: 17350 RVA: 0x000ED108 File Offset: 0x000EB308
+	// Token: 0x06005D4F RID: 23887 RVA: 0x0015AFA4 File Offset: 0x001591A4
 	public static Bounds GetBounds(GameObject gameObject)
 	{
 		EnemyUtility.m_boundsHelper_STATIC.Clear();
@@ -92,7 +92,7 @@ public static class EnemyUtility
 		return result;
 	}
 
-	// Token: 0x060043C7 RID: 17351 RVA: 0x000ED20C File Offset: 0x000EB40C
+	// Token: 0x06005D50 RID: 23888 RVA: 0x0015B0A8 File Offset: 0x001592A8
 	public static float GetEnemyScale(EnemyController enemyController)
 	{
 		EnemyData enemyData = EnemyClassLibrary.GetEnemyData(enemyController.EnemyType, enemyController.EnemyRank);
@@ -103,7 +103,7 @@ public static class EnemyUtility
 		return 0f;
 	}
 
-	// Token: 0x060043C8 RID: 17352 RVA: 0x000ED240 File Offset: 0x000EB440
+	// Token: 0x06005D51 RID: 23889 RVA: 0x0015B0DC File Offset: 0x001592DC
 	public static List<EnemyTypeAndRank> GetAllEnemiesInBiome(BiomeType biome, bool onlyFlyingEnemies = false)
 	{
 		if (EnemyUtility.m_enemiesInBiomeTable == null)
@@ -231,15 +231,15 @@ public static class EnemyUtility
 		return null;
 	}
 
-	// Token: 0x040039F1 RID: 14833
+	// Token: 0x04004CB6 RID: 19638
 	private static bool DISPLAY_IN_CONSOLE_ON_INITIALISE = false;
 
-	// Token: 0x040039F2 RID: 14834
+	// Token: 0x04004CB7 RID: 19639
 	private static Dictionary<BiomeType, List<EnemyTypeAndRank>> m_enemiesInBiomeTable = null;
 
-	// Token: 0x040039F3 RID: 14835
+	// Token: 0x04004CB8 RID: 19640
 	private static List<Renderer> m_boundsHelper_STATIC = new List<Renderer>();
 
-	// Token: 0x040039F4 RID: 14836
+	// Token: 0x04004CB9 RID: 19641
 	private static List<EnemyTypeAndRank> m_enemiesInBiomeHelper = new List<EnemyTypeAndRank>();
 }

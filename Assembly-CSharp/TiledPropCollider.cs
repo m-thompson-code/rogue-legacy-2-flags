@@ -1,21 +1,21 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000649 RID: 1609
+// Token: 0x02000A78 RID: 2680
 public class TiledPropCollider : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x17001482 RID: 5250
-	// (get) Token: 0x06003A1E RID: 14878 RVA: 0x000C57B9 File Offset: 0x000C39B9
-	// (set) Token: 0x06003A1F RID: 14879 RVA: 0x000C57C1 File Offset: 0x000C39C1
+	// Token: 0x17001BE9 RID: 7145
+	// (get) Token: 0x06005103 RID: 20739 RVA: 0x0002C3AE File Offset: 0x0002A5AE
+	// (set) Token: 0x06005104 RID: 20740 RVA: 0x0002C3B6 File Offset: 0x0002A5B6
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x06003A20 RID: 14880 RVA: 0x000C57CA File Offset: 0x000C39CA
+	// Token: 0x06005105 RID: 20741 RVA: 0x0002C3BF File Offset: 0x0002A5BF
 	private void Awake()
 	{
 		this.m_spriteRenderer = base.GetComponentInChildren<SpriteRenderer>();
 	}
 
-	// Token: 0x06003A21 RID: 14881 RVA: 0x000C57D8 File Offset: 0x000C39D8
+	// Token: 0x06005106 RID: 20742 RVA: 0x0002C3CD File Offset: 0x0002A5CD
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
@@ -25,7 +25,7 @@ public class TiledPropCollider : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06003A22 RID: 14882 RVA: 0x000C580D File Offset: 0x000C3A0D
+	// Token: 0x06005107 RID: 20743 RVA: 0x0002C402 File Offset: 0x0002A602
 	private void OnDestroy()
 	{
 		if (this.Room != null)
@@ -34,17 +34,17 @@ public class TiledPropCollider : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06003A23 RID: 14883 RVA: 0x000C583C File Offset: 0x000C3A3C
+	// Token: 0x06005108 RID: 20744 RVA: 0x001336C0 File Offset: 0x001318C0
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		this.m_collider.size = this.m_spriteRenderer.size;
 		this.m_collider.offset = new Vector2(0f, this.m_spriteRenderer.size.y / 2f);
 	}
 
-	// Token: 0x04002C95 RID: 11413
+	// Token: 0x04003D2B RID: 15659
 	[SerializeField]
 	private BoxCollider2D m_collider;
 
-	// Token: 0x04002C96 RID: 11414
+	// Token: 0x04003D2C RID: 15660
 	private SpriteRenderer m_spriteRenderer;
 }

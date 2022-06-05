@@ -1,41 +1,41 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000685 RID: 1669
+// Token: 0x02000B05 RID: 2821
 public class SpawnConditionOverride
 {
-	// Token: 0x170014F7 RID: 5367
-	// (get) Token: 0x06003C2A RID: 15402 RVA: 0x000D035F File Offset: 0x000CE55F
-	// (set) Token: 0x06003C2B RID: 15403 RVA: 0x000D0367 File Offset: 0x000CE567
+	// Token: 0x17001CB5 RID: 7349
+	// (get) Token: 0x06005489 RID: 21641 RVA: 0x0002DCF0 File Offset: 0x0002BEF0
+	// (set) Token: 0x0600548A RID: 21642 RVA: 0x0002DCF8 File Offset: 0x0002BEF8
 	public BiomeType Biome { get; private set; }
 
-	// Token: 0x170014F8 RID: 5368
-	// (get) Token: 0x06003C2C RID: 15404 RVA: 0x000D0370 File Offset: 0x000CE570
-	// (set) Token: 0x06003C2D RID: 15405 RVA: 0x000D0378 File Offset: 0x000CE578
+	// Token: 0x17001CB6 RID: 7350
+	// (get) Token: 0x0600548B RID: 21643 RVA: 0x0002DD01 File Offset: 0x0002BF01
+	// (set) Token: 0x0600548C RID: 21644 RVA: 0x0002DD09 File Offset: 0x0002BF09
 	public bool HasDash { get; private set; }
 
-	// Token: 0x170014F9 RID: 5369
-	// (get) Token: 0x06003C2E RID: 15406 RVA: 0x000D0381 File Offset: 0x000CE581
-	// (set) Token: 0x06003C2F RID: 15407 RVA: 0x000D0389 File Offset: 0x000CE589
+	// Token: 0x17001CB7 RID: 7351
+	// (get) Token: 0x0600548D RID: 21645 RVA: 0x0002DD12 File Offset: 0x0002BF12
+	// (set) Token: 0x0600548E RID: 21646 RVA: 0x0002DD1A File Offset: 0x0002BF1A
 	public bool HasDoubleJump { get; private set; }
 
-	// Token: 0x170014FA RID: 5370
-	// (get) Token: 0x06003C30 RID: 15408 RVA: 0x000D0392 File Offset: 0x000CE592
-	// (set) Token: 0x06003C31 RID: 15409 RVA: 0x000D039A File Offset: 0x000CE59A
+	// Token: 0x17001CB8 RID: 7352
+	// (get) Token: 0x0600548F RID: 21647 RVA: 0x0002DD23 File Offset: 0x0002BF23
+	// (set) Token: 0x06005490 RID: 21648 RVA: 0x0002DD2B File Offset: 0x0002BF2B
 	public bool OverrideHasDash { get; private set; }
 
-	// Token: 0x170014FB RID: 5371
-	// (get) Token: 0x06003C32 RID: 15410 RVA: 0x000D03A3 File Offset: 0x000CE5A3
-	// (set) Token: 0x06003C33 RID: 15411 RVA: 0x000D03AB File Offset: 0x000CE5AB
+	// Token: 0x17001CB9 RID: 7353
+	// (get) Token: 0x06005491 RID: 21649 RVA: 0x0002DD34 File Offset: 0x0002BF34
+	// (set) Token: 0x06005492 RID: 21650 RVA: 0x0002DD3C File Offset: 0x0002BF3C
 	public bool OverrideHasDoubleJump { get; private set; }
 
-	// Token: 0x06003C34 RID: 15412 RVA: 0x000D03B4 File Offset: 0x000CE5B4
+	// Token: 0x06005493 RID: 21651 RVA: 0x0002DD45 File Offset: 0x0002BF45
 	public SpawnConditionOverride(BiomeType biome)
 	{
 		this.Biome = biome;
 	}
 
-	// Token: 0x06003C35 RID: 15413 RVA: 0x000D03C3 File Offset: 0x000CE5C3
+	// Token: 0x06005494 RID: 21652 RVA: 0x0002DD54 File Offset: 0x0002BF54
 	public void SetIsOverrideOn(SpawnConditionOverrideID condition, bool isOn)
 	{
 		if (condition == SpawnConditionOverrideID.Dash)
@@ -55,7 +55,7 @@ public class SpawnConditionOverride
 		});
 	}
 
-	// Token: 0x06003C36 RID: 15414 RVA: 0x000D03FC File Offset: 0x000CE5FC
+	// Token: 0x06005495 RID: 21653 RVA: 0x0002DD8D File Offset: 0x0002BF8D
 	public void SetOverrideValue(SpawnConditionOverrideID condition, bool value)
 	{
 		if (condition == SpawnConditionOverrideID.Dash)

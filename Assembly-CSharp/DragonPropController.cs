@@ -5,11 +5,11 @@ using RLAudio;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x020004D2 RID: 1234
+// Token: 0x02000800 RID: 2048
 public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBubble, IAudioEventEmitter
 {
-	// Token: 0x17001162 RID: 4450
-	// (get) Token: 0x06002DE7 RID: 11751 RVA: 0x0009A976 File Offset: 0x00098B76
+	// Token: 0x170016F5 RID: 5877
+	// (get) Token: 0x06003F17 RID: 16151 RVA: 0x000047A7 File Offset: 0x000029A7
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -18,8 +18,8 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		}
 	}
 
-	// Token: 0x17001163 RID: 4451
-	// (get) Token: 0x06002DE8 RID: 11752 RVA: 0x0009A979 File Offset: 0x00098B79
+	// Token: 0x170016F6 RID: 5878
+	// (get) Token: 0x06003F18 RID: 16152 RVA: 0x00022EC9 File Offset: 0x000210C9
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -28,8 +28,8 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		}
 	}
 
-	// Token: 0x17001164 RID: 4452
-	// (get) Token: 0x06002DE9 RID: 11753 RVA: 0x0009A981 File Offset: 0x00098B81
+	// Token: 0x170016F7 RID: 5879
+	// (get) Token: 0x06003F19 RID: 16153 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -38,7 +38,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		}
 	}
 
-	// Token: 0x06002DEA RID: 11754 RVA: 0x0009A98C File Offset: 0x00098B8C
+	// Token: 0x06003F1A RID: 16154 RVA: 0x000FC298 File Offset: 0x000FA498
 	private bool HasEventDialogue()
 	{
 		if (CutsceneManager.IsCutsceneActive)
@@ -56,7 +56,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		return !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.DragonDialogue_Intro) || (SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.CaveMiniboss_White_Defeated) && SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.CaveMiniboss_Black_Defeated) && !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.DragonDialogue_BossDoorOpen)) || (SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.CaveBoss_Defeated) && !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.DragonDialogue_AfterDefeatingTubal)) || NPCDialogueManager.CanSpeak(NPCType.Dragon);
 	}
 
-	// Token: 0x06002DEB RID: 11755 RVA: 0x0009AA50 File Offset: 0x00098C50
+	// Token: 0x06003F1B RID: 16155 RVA: 0x000FC35C File Offset: 0x000FA55C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -67,7 +67,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		this.m_endInteraction = new Action(this.EndInteraction);
 	}
 
-	// Token: 0x06002DEC RID: 11756 RVA: 0x0009AAC0 File Offset: 0x00098CC0
+	// Token: 0x06003F1C RID: 16156 RVA: 0x000FC3CC File Offset: 0x000FA5CC
 	public void SetEndingCutsceneStateEnabled(bool enabled)
 	{
 		this.SetChainsEnabled(false);
@@ -82,7 +82,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		this.m_npcController.UpdateHeartState();
 	}
 
-	// Token: 0x06002DED RID: 11757 RVA: 0x0009AB18 File Offset: 0x00098D18
+	// Token: 0x06003F1D RID: 16157 RVA: 0x000FC424 File Offset: 0x000FA624
 	private void SetChainsEnabled(bool enabled)
 	{
 		foreach (GameObject gameObject in this.m_chainsGO)
@@ -94,7 +94,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		}
 	}
 
-	// Token: 0x06002DEE RID: 11758 RVA: 0x0009AB50 File Offset: 0x00098D50
+	// Token: 0x06003F1E RID: 16158 RVA: 0x000FC45C File Offset: 0x000FA65C
 	protected override void InitializePooledPropOnEnter()
 	{
 		this.m_endingSpeechBubblePlayed = false;
@@ -122,14 +122,14 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		}
 	}
 
-	// Token: 0x06002DEF RID: 11759 RVA: 0x0009AC92 File Offset: 0x00098E92
+	// Token: 0x06003F1F RID: 16159 RVA: 0x00022ED1 File Offset: 0x000210D1
 	public void TalkToDragon()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
 		base.StartCoroutine(this.TalkToDragonCoroutine());
 	}
 
-	// Token: 0x06002DF0 RID: 11760 RVA: 0x0009ACAD File Offset: 0x00098EAD
+	// Token: 0x06003F20 RID: 16160 RVA: 0x00022EEC File Offset: 0x000210EC
 	private IEnumerator TalkToDragonCoroutine()
 	{
 		this.m_npcController.SetNPCState(NPCState.AtAttention, false);
@@ -145,7 +145,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		yield break;
 	}
 
-	// Token: 0x06002DF1 RID: 11761 RVA: 0x0009ACBC File Offset: 0x00098EBC
+	// Token: 0x06003F21 RID: 16161 RVA: 0x00022EFB File Offset: 0x000210FB
 	public IEnumerator RunDialogue()
 	{
 		bool flag = SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.CaveMiniboss_White_Defeated);
@@ -275,7 +275,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		yield break;
 	}
 
-	// Token: 0x06002DF2 RID: 11762 RVA: 0x0009ACCC File Offset: 0x00098ECC
+	// Token: 0x06003F22 RID: 16162 RVA: 0x000FC5A0 File Offset: 0x000FA7A0
 	private void PlayDialogueHelper(PlayerSaveFlag playerFlag, string dialogueLocID, bool endInteraction)
 	{
 		if (playerFlag != PlayerSaveFlag.None)
@@ -291,7 +291,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		}
 	}
 
-	// Token: 0x06002DF3 RID: 11763 RVA: 0x0009AD38 File Offset: 0x00098F38
+	// Token: 0x06003F23 RID: 16163 RVA: 0x000FC60C File Offset: 0x000FA80C
 	private void PlayDialogueHelper(PlayerSaveFlag playerFlag, string speakerLocID, string dialogueLocID, bool endInteraction)
 	{
 		if (playerFlag != PlayerSaveFlag.None)
@@ -307,7 +307,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		}
 	}
 
-	// Token: 0x06002DF4 RID: 11764 RVA: 0x0009AD94 File Offset: 0x00098F94
+	// Token: 0x06003F24 RID: 16164 RVA: 0x00022F0A File Offset: 0x0002110A
 	private IEnumerator PetDragon()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -337,7 +337,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		yield break;
 	}
 
-	// Token: 0x06002DF5 RID: 11765 RVA: 0x0009ADA4 File Offset: 0x00098FA4
+	// Token: 0x06003F25 RID: 16165 RVA: 0x000FC668 File Offset: 0x000FA868
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -369,7 +369,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_endInteraction);
 	}
 
-	// Token: 0x06002DF6 RID: 11766 RVA: 0x0009AE5B File Offset: 0x0009905B
+	// Token: 0x06003F26 RID: 16166 RVA: 0x00022F19 File Offset: 0x00021119
 	private IEnumerator MovePlayerToDragon()
 	{
 		PlayerManager.GetPlayerController().SetVelocity(0f, 0f, false);
@@ -388,7 +388,7 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		yield break;
 	}
 
-	// Token: 0x06002DF7 RID: 11767 RVA: 0x0009AE6A File Offset: 0x0009906A
+	// Token: 0x06003F27 RID: 16167 RVA: 0x00022F28 File Offset: 0x00021128
 	private void EndInteraction()
 	{
 		this.m_interactable.SetIsInteractableActive(true);
@@ -396,51 +396,51 @@ public class DragonPropController : BaseSpecialPropController, IDisplaySpeechBub
 		AudioManager.PlayOneShotAttached(this, this.m_farewellAudioEvent, base.gameObject);
 	}
 
-	// Token: 0x06002DF8 RID: 11768 RVA: 0x0009AE90 File Offset: 0x00099090
+	// Token: 0x06003F28 RID: 16168 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 	}
 
-	// Token: 0x040024A9 RID: 9385
+	// Token: 0x0400315C RID: 12636
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x040024AA RID: 9386
+	// Token: 0x0400315D RID: 12637
 	[SerializeField]
 	private GameObject m_playerPetPositionObj;
 
-	// Token: 0x040024AB RID: 9387
+	// Token: 0x0400315E RID: 12638
 	[SerializeField]
 	private GameObject[] m_chainsGO;
 
-	// Token: 0x040024AC RID: 9388
+	// Token: 0x0400315F RID: 12639
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x040024AD RID: 9389
+	// Token: 0x04003160 RID: 12640
 	[SerializeField]
 	[EventRef]
 	private string m_farewellAudioEvent;
 
-	// Token: 0x040024AE RID: 9390
+	// Token: 0x04003161 RID: 12641
 	private NPCController m_npcController;
 
-	// Token: 0x040024AF RID: 9391
+	// Token: 0x04003162 RID: 12642
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040024B0 RID: 9392
+	// Token: 0x04003163 RID: 12643
 	private InsightObjectiveCompleteHUDEventArgs m_insightArgs = new InsightObjectiveCompleteHUDEventArgs(InsightType.None, false, 5f, null, null, null);
 
-	// Token: 0x040024B1 RID: 9393
+	// Token: 0x04003164 RID: 12644
 	private float m_storedInteractIconXPos;
 
-	// Token: 0x040024B2 RID: 9394
+	// Token: 0x04003165 RID: 12645
 	private bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x040024B3 RID: 9395
+	// Token: 0x04003166 RID: 12646
 	private bool m_speechBubbleDisabled;
 
-	// Token: 0x040024B4 RID: 9396
+	// Token: 0x04003167 RID: 12647
 	private Action m_endInteraction;
 }

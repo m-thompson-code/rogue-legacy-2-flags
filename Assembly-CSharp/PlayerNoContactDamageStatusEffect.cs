@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000312 RID: 786
+// Token: 0x0200054A RID: 1354
 public class PlayerNoContactDamageStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D6F RID: 3439
-	// (get) Token: 0x06001F0B RID: 7947 RVA: 0x00063EE8 File Offset: 0x000620E8
+	// Token: 0x1700117A RID: 4474
+	// (get) Token: 0x06002B5E RID: 11102 RVA: 0x00018324 File Offset: 0x00016524
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class PlayerNoContactDamageStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D70 RID: 3440
-	// (get) Token: 0x06001F0C RID: 7948 RVA: 0x00063EEF File Offset: 0x000620EF
+	// Token: 0x1700117B RID: 4475
+	// (get) Token: 0x06002B5F RID: 11103 RVA: 0x0001832B File Offset: 0x0001652B
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class PlayerNoContactDamageStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001F0D RID: 7949 RVA: 0x00063EF6 File Offset: 0x000620F6
+	// Token: 0x06002B60 RID: 11104 RVA: 0x00018332 File Offset: 0x00016532
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		while (Time.time < base.EndTime)

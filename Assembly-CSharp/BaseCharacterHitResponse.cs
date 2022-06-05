@@ -5,11 +5,11 @@ using MoreMountains.CorgiEngine;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020001C0 RID: 448
+// Token: 0x02000332 RID: 818
 public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterHitResponse, IHitResponse, ITerrainOnStayHitResponse, IBodyOnEnterHitResponse, IBodyOnStayHitResponse, IEffectTriggerEvent_OnDamage
 {
-	// Token: 0x170009E3 RID: 2531
-	// (get) Token: 0x060011F7 RID: 4599 RVA: 0x000339C0 File Offset: 0x00031BC0
+	// Token: 0x17000CA7 RID: 3239
+	// (get) Token: 0x06001A4F RID: 6735 RVA: 0x0000D859 File Offset: 0x0000BA59
 	public IRelayLink<object, CharacterHitEventArgs> OnCharacterHitRelay
 	{
 		get
@@ -18,8 +18,8 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x170009E4 RID: 2532
-	// (get) Token: 0x060011F8 RID: 4600 RVA: 0x000339CD File Offset: 0x00031BCD
+	// Token: 0x17000CA8 RID: 3240
+	// (get) Token: 0x06001A50 RID: 6736 RVA: 0x0000D866 File Offset: 0x0000BA66
 	public IRelayLink<GameObject, float, bool> OnDamageEffectTriggerRelay
 	{
 		get
@@ -28,13 +28,13 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x170009E5 RID: 2533
-	// (get) Token: 0x060011F9 RID: 4601 RVA: 0x000339DA File Offset: 0x00031BDA
-	// (set) Token: 0x060011FA RID: 4602 RVA: 0x000339E2 File Offset: 0x00031BE2
+	// Token: 0x17000CA9 RID: 3241
+	// (get) Token: 0x06001A51 RID: 6737 RVA: 0x0000D873 File Offset: 0x0000BA73
+	// (set) Token: 0x06001A52 RID: 6738 RVA: 0x0000D87B File Offset: 0x0000BA7B
 	public bool InvincibilityEffectPlaying { get; protected set; }
 
-	// Token: 0x170009E6 RID: 2534
-	// (get) Token: 0x060011FB RID: 4603 RVA: 0x000339EB File Offset: 0x00031BEB
+	// Token: 0x17000CAA RID: 3242
+	// (get) Token: 0x06001A53 RID: 6739 RVA: 0x0000D884 File Offset: 0x0000BA84
 	public virtual bool TakesDamageWhileStunned
 	{
 		get
@@ -43,8 +43,8 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x170009E7 RID: 2535
-	// (get) Token: 0x060011FC RID: 4604 RVA: 0x000339F3 File Offset: 0x00031BF3
+	// Token: 0x17000CAB RID: 3243
+	// (get) Token: 0x06001A54 RID: 6740 RVA: 0x0000D88C File Offset: 0x0000BA8C
 	public virtual bool TriggerInvincibilityAfterStun
 	{
 		get
@@ -53,8 +53,8 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x170009E8 RID: 2536
-	// (get) Token: 0x060011FD RID: 4605 RVA: 0x000339FB File Offset: 0x00031BFB
+	// Token: 0x17000CAC RID: 3244
+	// (get) Token: 0x06001A55 RID: 6741 RVA: 0x0000D894 File Offset: 0x0000BA94
 	public virtual bool IsInvincible
 	{
 		get
@@ -63,8 +63,8 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x170009E9 RID: 2537
-	// (get) Token: 0x060011FE RID: 4606 RVA: 0x00033A0A File Offset: 0x00031C0A
+	// Token: 0x17000CAD RID: 3245
+	// (get) Token: 0x06001A56 RID: 6742 RVA: 0x0000D8A3 File Offset: 0x0000BAA3
 	public float InvincibleTimer
 	{
 		get
@@ -73,8 +73,8 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x170009EA RID: 2538
-	// (get) Token: 0x060011FF RID: 4607 RVA: 0x00033A12 File Offset: 0x00031C12
+	// Token: 0x17000CAE RID: 3246
+	// (get) Token: 0x06001A57 RID: 6743 RVA: 0x0000D8AB File Offset: 0x0000BAAB
 	public bool IsStunned
 	{
 		get
@@ -83,8 +83,8 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x170009EB RID: 2539
-	// (get) Token: 0x06001200 RID: 4608 RVA: 0x00033A21 File Offset: 0x00031C21
+	// Token: 0x17000CAF RID: 3247
+	// (get) Token: 0x06001A58 RID: 6744 RVA: 0x0000D8BA File Offset: 0x0000BABA
 	public BlinkPulseEffect BlinkPulseEffect
 	{
 		get
@@ -93,17 +93,17 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x170009EC RID: 2540
-	// (get) Token: 0x06001201 RID: 4609 RVA: 0x00033A29 File Offset: 0x00031C29
-	// (set) Token: 0x06001202 RID: 4610 RVA: 0x00033A31 File Offset: 0x00031C31
+	// Token: 0x17000CB0 RID: 3248
+	// (get) Token: 0x06001A59 RID: 6745 RVA: 0x0000D8C2 File Offset: 0x0000BAC2
+	// (set) Token: 0x06001A5A RID: 6746 RVA: 0x0000D8CA File Offset: 0x0000BACA
 	public string StunnedAnimParamName { get; set; } = "Stunned";
 
-	// Token: 0x170009ED RID: 2541
-	// (get) Token: 0x06001203 RID: 4611 RVA: 0x00033A3A File Offset: 0x00031C3A
-	// (set) Token: 0x06001204 RID: 4612 RVA: 0x00033A42 File Offset: 0x00031C42
+	// Token: 0x17000CB1 RID: 3249
+	// (get) Token: 0x06001A5B RID: 6747 RVA: 0x0000D8D3 File Offset: 0x0000BAD3
+	// (set) Token: 0x06001A5C RID: 6748 RVA: 0x0000D8DB File Offset: 0x0000BADB
 	public bool AnimateHitEffectsOnUnscaledTime { get; set; }
 
-	// Token: 0x06001205 RID: 4613 RVA: 0x00033A4C File Offset: 0x00031C4C
+	// Token: 0x06001A5D RID: 6749 RVA: 0x00091440 File Offset: 0x0008F640
 	protected virtual void Awake()
 	{
 		GameObject root = this.GetRoot(false);
@@ -112,7 +112,7 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		this.m_characterHitArgs = new CharacterHitEventArgs(null, null, 0f);
 	}
 
-	// Token: 0x06001206 RID: 4614 RVA: 0x00033A8C File Offset: 0x00031C8C
+	// Token: 0x06001A5E RID: 6750 RVA: 0x00091480 File Offset: 0x0008F680
 	protected virtual void HandleHitResponse(IHitboxController otherHBController)
 	{
 		if (otherHBController == null)
@@ -141,7 +141,7 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x06001207 RID: 4615 RVA: 0x00033B0C File Offset: 0x00031D0C
+	// Token: 0x06001A5F RID: 6751 RVA: 0x00091500 File Offset: 0x0008F700
 	public virtual void StartHitResponse(GameObject otherRootGameObj, IDamageObj damageObj, float damageOverride = -1f, bool trueDamage = false, bool fireEvents = true)
 	{
 		if (this.m_charController.IsDead)
@@ -252,7 +252,7 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x06001208 RID: 4616 RVA: 0x00033E0C File Offset: 0x0003200C
+	// Token: 0x06001A60 RID: 6752 RVA: 0x00091800 File Offset: 0x0008FA00
 	protected virtual void PerformKnockbackPush(GameObject otherRootObj, Vector2 knockbackAmount)
 	{
 		int num;
@@ -279,7 +279,7 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		this.m_charController.SetVelocity(knockbackAmount.x * (float)num, knockbackAmount.y, false);
 	}
 
-	// Token: 0x06001209 RID: 4617 RVA: 0x00033ED8 File Offset: 0x000320D8
+	// Token: 0x06001A61 RID: 6753 RVA: 0x0000D8E4 File Offset: 0x0000BAE4
 	private IEnumerator DisableMovementCoroutine()
 	{
 		this.m_charController.ConditionState = CharacterStates.CharacterConditions.DisableHorizontalMovement;
@@ -296,7 +296,7 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		yield break;
 	}
 
-	// Token: 0x0600120A RID: 4618 RVA: 0x00033EE8 File Offset: 0x000320E8
+	// Token: 0x06001A62 RID: 6754 RVA: 0x000918CC File Offset: 0x0008FACC
 	protected virtual void CharacterStunned(IDamageObj damageObj, GameObject otherRootObj)
 	{
 		this.m_stunTimer = this.m_charController.StunDuration;
@@ -305,7 +305,7 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		this.m_charController.DisableGroundedState();
 	}
 
-	// Token: 0x0600120B RID: 4619 RVA: 0x00033F34 File Offset: 0x00032134
+	// Token: 0x06001A63 RID: 6755 RVA: 0x00091918 File Offset: 0x0008FB18
 	public void StopCharacterStunned()
 	{
 		this.m_stunTimer = 0f;
@@ -320,7 +320,7 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x0600120C RID: 4620 RVA: 0x00033F98 File Offset: 0x00032198
+	// Token: 0x06001A64 RID: 6756 RVA: 0x0009197C File Offset: 0x0008FB7C
 	protected virtual float CharacterDamaged(IDamageObj damageObj, GameObject otherRootObj, out CriticalStrikeType critType, out float damageBlocked, float damageOverride = -1f, bool trueDamage = false)
 	{
 		BaseCharacterHitResponse.GLYPHS_TO_ADD_TO_ENEMY_DAMAGE_HELPER.Clear();
@@ -350,16 +350,16 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		return num;
 	}
 
-	// Token: 0x0600120D RID: 4621
+	// Token: 0x06001A65 RID: 6757
 	protected abstract void CharacterKnockedBack(IDamageObj damageObj, GameObject otherRootObj);
 
-	// Token: 0x0600120E RID: 4622 RVA: 0x0003405C File Offset: 0x0003225C
+	// Token: 0x06001A66 RID: 6758 RVA: 0x0000D8F3 File Offset: 0x0000BAF3
 	protected virtual void CharacterKilled(IDamageObj damageObj, GameObject otherRootObj)
 	{
 		this.m_charController.KillCharacter(otherRootObj, true);
 	}
 
-	// Token: 0x0600120F RID: 4623 RVA: 0x0003406C File Offset: 0x0003226C
+	// Token: 0x06001A67 RID: 6759 RVA: 0x00091A40 File Offset: 0x0008FC40
 	public void SetInvincibleTime(float amount, bool additive, bool playInvincibility)
 	{
 		this.InvincibilityEffectPlaying = false;
@@ -386,7 +386,7 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x06001210 RID: 4624 RVA: 0x000340D8 File Offset: 0x000322D8
+	// Token: 0x06001A68 RID: 6760 RVA: 0x0000D902 File Offset: 0x0000BB02
 	public void StopInvincibleTime()
 	{
 		this.m_hitEffect.StopInvincibilityEffect();
@@ -394,14 +394,14 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		this.InvincibilityEffectPlaying = false;
 	}
 
-	// Token: 0x06001211 RID: 4625 RVA: 0x000340F7 File Offset: 0x000322F7
+	// Token: 0x06001A69 RID: 6761 RVA: 0x0000D921 File Offset: 0x0000BB21
 	protected virtual void Update()
 	{
 		this.UpdateStunTimer();
 		this.UpdateInvincibilityTimer();
 	}
 
-	// Token: 0x06001212 RID: 4626 RVA: 0x00034108 File Offset: 0x00032308
+	// Token: 0x06001A6A RID: 6762 RVA: 0x00091AAC File Offset: 0x0008FCAC
 	protected virtual void UpdateStunTimer()
 	{
 		if (this.m_landCheckDelayTimer > 0f)
@@ -418,7 +418,7 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x06001213 RID: 4627 RVA: 0x00034196 File Offset: 0x00032396
+	// Token: 0x06001A6B RID: 6763 RVA: 0x0000D92F File Offset: 0x0000BB2F
 	protected virtual void UpdateInvincibilityTimer()
 	{
 		if (this.m_invincibilityTimer > 0f)
@@ -431,31 +431,31 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x06001214 RID: 4628 RVA: 0x000341CA File Offset: 0x000323CA
+	// Token: 0x06001A6C RID: 6764 RVA: 0x0000D963 File Offset: 0x0000BB63
 	public void BodyOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		this.HandleHitResponse(otherHBController);
 	}
 
-	// Token: 0x06001215 RID: 4629 RVA: 0x000341D3 File Offset: 0x000323D3
+	// Token: 0x06001A6D RID: 6765 RVA: 0x0000D963 File Offset: 0x0000BB63
 	public void BodyOnStayHitResponse(IHitboxController otherHBController)
 	{
 		this.HandleHitResponse(otherHBController);
 	}
 
-	// Token: 0x06001216 RID: 4630 RVA: 0x000341DC File Offset: 0x000323DC
+	// Token: 0x06001A6E RID: 6766 RVA: 0x0000D963 File Offset: 0x0000BB63
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		this.HandleHitResponse(otherHBController);
 	}
 
-	// Token: 0x06001217 RID: 4631 RVA: 0x000341E5 File Offset: 0x000323E5
+	// Token: 0x06001A6F RID: 6767 RVA: 0x0000D963 File Offset: 0x0000BB63
 	public void TerrainOnStayHitResponse(IHitboxController otherHBController)
 	{
 		this.HandleHitResponse(otherHBController);
 	}
 
-	// Token: 0x06001218 RID: 4632 RVA: 0x000341F0 File Offset: 0x000323F0
+	// Token: 0x06001A70 RID: 6768 RVA: 0x00091B3C File Offset: 0x0008FD3C
 	protected virtual void PlayHitEffect(IDamageObj damageObj, bool noDamageTaken, bool isCrit)
 	{
 		Vector3 collisionPoint = this.m_charController.Midpoint;
@@ -512,7 +512,7 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		}
 	}
 
-	// Token: 0x06001219 RID: 4633 RVA: 0x000343B4 File Offset: 0x000325B4
+	// Token: 0x06001A71 RID: 6769 RVA: 0x00091D00 File Offset: 0x0008FF00
 	protected void PlayDirectionalHitEffect(IDamageObj damageObj, GameObject otherRootObj)
 	{
 		Vector3 collisionPoint = this.m_charController.Midpoint;
@@ -523,63 +523,63 @@ public abstract class BaseCharacterHitResponse : MonoBehaviour, ITerrainOnEnterH
 		EffectManager.PlayDirectionalHitEffect(damageObj, otherRootObj, collisionPoint);
 	}
 
-	// Token: 0x04001287 RID: 4743
+	// Token: 0x04001898 RID: 6296
 	[Header("On-Hit Settings")]
 	[Space(10f)]
 	[SerializeField]
 	[Tooltip("Immediately cancels the stun state after landing if knocked back. If this is true and no knockback is set, the character will immediately break out of their stun state.")]
 	protected bool m_cancelStunWhenLanding;
 
-	// Token: 0x04001288 RID: 4744
+	// Token: 0x04001899 RID: 6297
 	[Header("Invincibility Settings")]
 	[SerializeField]
 	[Tooltip("Makes invincibility only trigger after the character's stun state has completed. Otherwise they kick in at the same time.")]
 	protected bool m_triggerInvincibilityAfterStun = true;
 
-	// Token: 0x04001289 RID: 4745
+	// Token: 0x0400189A RID: 6298
 	[SerializeField]
 	[Tooltip("Makes the character still hittable while in a stunned state.  Trigger Invincibility After Stun takes precendence over this.")]
 	protected bool m_takeDamageWhileStunned;
 
-	// Token: 0x0400128A RID: 4746
+	// Token: 0x0400189B RID: 6299
 	[SerializeField]
 	protected bool m_blinkOnHit = true;
 
-	// Token: 0x0400128B RID: 4747
+	// Token: 0x0400189C RID: 6300
 	[Header("Debug Timers (Read-only)")]
 	[SerializeField]
 	[ReadOnly]
 	protected float m_stunTimer;
 
-	// Token: 0x0400128C RID: 4748
+	// Token: 0x0400189D RID: 6301
 	[SerializeField]
 	[ReadOnly]
 	protected float m_invincibilityTimer;
 
-	// Token: 0x0400128D RID: 4749
+	// Token: 0x0400189E RID: 6302
 	public static List<string> GLYPHS_TO_ADD_TO_ENEMY_DAMAGE_HELPER = new List<string>();
 
-	// Token: 0x0400128E RID: 4750
+	// Token: 0x0400189F RID: 6303
 	public static List<string> GLYPHS_TO_ADD_TO_PLAYER_DAMAGE_HELPER = new List<string>();
 
-	// Token: 0x0400128F RID: 4751
+	// Token: 0x040018A0 RID: 6304
 	protected BaseCharacterController m_charController;
 
-	// Token: 0x04001290 RID: 4752
+	// Token: 0x040018A1 RID: 6305
 	protected BlinkPulseEffect m_hitEffect;
 
-	// Token: 0x04001291 RID: 4753
+	// Token: 0x040018A2 RID: 6306
 	protected CharacterHitEventArgs m_characterHitArgs;
 
-	// Token: 0x04001292 RID: 4754
+	// Token: 0x040018A3 RID: 6307
 	protected float m_landCheckDelay = 0.05f;
 
-	// Token: 0x04001293 RID: 4755
+	// Token: 0x040018A4 RID: 6308
 	protected float m_landCheckDelayTimer;
 
-	// Token: 0x04001294 RID: 4756
+	// Token: 0x040018A5 RID: 6309
 	private Relay<object, CharacterHitEventArgs> m_onCharacterHitRelay = new Relay<object, CharacterHitEventArgs>();
 
-	// Token: 0x04001295 RID: 4757
+	// Token: 0x040018A6 RID: 6310
 	private Relay<GameObject, float, bool> m_onDamageEffectTriggerRelay = new Relay<GameObject, float, bool>();
 }

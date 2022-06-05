@@ -3,27 +3,27 @@ using System.Collections;
 using Steamworks;
 using UnityEngine;
 
-// Token: 0x020006B0 RID: 1712
+// Token: 0x02000B51 RID: 2897
 public class StoreAPIManager : MonoBehaviour
 {
-	// Token: 0x1700158C RID: 5516
-	// (get) Token: 0x06003F0D RID: 16141 RVA: 0x000E04E1 File Offset: 0x000DE6E1
-	// (set) Token: 0x06003F0E RID: 16142 RVA: 0x000E04E8 File Offset: 0x000DE6E8
+	// Token: 0x17001D78 RID: 7544
+	// (get) Token: 0x06005815 RID: 22549 RVA: 0x0002FE64 File Offset: 0x0002E064
+	// (set) Token: 0x06005816 RID: 22550 RVA: 0x0002FE6B File Offset: 0x0002E06B
 	public static StoreAPIManager.StoreInitState InitState { get; private set; }
 
-	// Token: 0x1700158D RID: 5517
-	// (get) Token: 0x06003F0F RID: 16143 RVA: 0x000E04F0 File Offset: 0x000DE6F0
-	// (set) Token: 0x06003F10 RID: 16144 RVA: 0x000E04F7 File Offset: 0x000DE6F7
+	// Token: 0x17001D79 RID: 7545
+	// (get) Token: 0x06005817 RID: 22551 RVA: 0x0002FE73 File Offset: 0x0002E073
+	// (set) Token: 0x06005818 RID: 22552 RVA: 0x0002FE7A File Offset: 0x0002E07A
 	public static StoreAPIManager Instance { get; private set; }
 
-	// Token: 0x06003F11 RID: 16145 RVA: 0x000E04FF File Offset: 0x000DE6FF
+	// Token: 0x06005819 RID: 22553 RVA: 0x0002FE82 File Offset: 0x0002E082
 	private void Awake()
 	{
 		StoreAPIManager.Instance = this;
 		base.StartCoroutine(this.InitializeStoreAPI());
 	}
 
-	// Token: 0x06003F12 RID: 16146 RVA: 0x000E0514 File Offset: 0x000DE714
+	// Token: 0x0600581A RID: 22554 RVA: 0x0002FE97 File Offset: 0x0002E097
 	private IEnumerator InitializeStoreAPI()
 	{
 		StoreAPIManager.m_storeInstance = new StoreAPIManager.SteamStore();
@@ -31,31 +31,31 @@ public class StoreAPIManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003F13 RID: 16147 RVA: 0x000E051C File Offset: 0x000DE71C
+	// Token: 0x0600581B RID: 22555 RVA: 0x0002FE9F File Offset: 0x0002E09F
 	public static string GetPlatformDirectoryName()
 	{
 		return "Steam";
 	}
 
-	// Token: 0x06003F14 RID: 16148 RVA: 0x000E0523 File Offset: 0x000DE723
+	// Token: 0x0600581C RID: 22556 RVA: 0x0002FEA6 File Offset: 0x0002E0A6
 	public static float GetInitTimeout()
 	{
 		return StoreAPIManager.m_storeInstance.InitTimeout;
 	}
 
-	// Token: 0x06003F15 RID: 16149 RVA: 0x000E052F File Offset: 0x000DE72F
+	// Token: 0x0600581D RID: 22557 RVA: 0x0002FEB2 File Offset: 0x0002E0B2
 	public static void GetInitFailureMessage(out string title, out string description)
 	{
 		StoreAPIManager.m_storeInstance.GetInitFailureMessage(out title, out description);
 	}
 
-	// Token: 0x06003F16 RID: 16150 RVA: 0x000E053D File Offset: 0x000DE73D
+	// Token: 0x0600581E RID: 22558 RVA: 0x0002FEC0 File Offset: 0x0002E0C0
 	public static string GetUserIDString()
 	{
 		return StoreAPIManager.m_storeInstance.GetUserID();
 	}
 
-	// Token: 0x06003F17 RID: 16151 RVA: 0x000E054C File Offset: 0x000DE74C
+	// Token: 0x0600581F RID: 22559 RVA: 0x001507AC File Offset: 0x0014E9AC
 	public static void GiveAchievement(AchievementType achievementType, StoreType storeMask)
 	{
 		if (SaveManager.PlayerSaveData.DisableAchievementUnlocks || SaveManager.ModeSaveData.DisableAchievementUnlocks || SaveManager.EquipmentSaveData.DisableAchievementUnlocks)
@@ -74,14 +74,14 @@ public class StoreAPIManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F18 RID: 16152 RVA: 0x000E05B2 File Offset: 0x000DE7B2
+	// Token: 0x06005820 RID: 22560 RVA: 0x0002FECC File Offset: 0x0002E0CC
 	public static void GiveAllUnlockedAchievements()
 	{
 		StoreAPIManager.m_storeInstance.GiveAllUnlockedAchievements();
 		StoreAPIManager.CheckForAllAchievementsAchievement();
 	}
 
-	// Token: 0x06003F19 RID: 16153 RVA: 0x000E05C4 File Offset: 0x000DE7C4
+	// Token: 0x06005821 RID: 22561 RVA: 0x00150814 File Offset: 0x0014EA14
 	private static void CheckForAllAchievementsAchievement()
 	{
 		bool flag = true;
@@ -100,52 +100,52 @@ public class StoreAPIManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002EDD RID: 11997
+	// Token: 0x04004116 RID: 16662
 	private static StoreAPIManager.IStoreAPI m_storeInstance;
 
-	// Token: 0x02000E17 RID: 3607
+	// Token: 0x02000B52 RID: 2898
 	public enum StoreInitState
 	{
-		// Token: 0x040056C2 RID: 22210
+		// Token: 0x04004118 RID: 16664
 		LoggingIn,
-		// Token: 0x040056C3 RID: 22211
+		// Token: 0x04004119 RID: 16665
 		Succeeded,
-		// Token: 0x040056C4 RID: 22212
+		// Token: 0x0400411A RID: 16666
 		Failed
 	}
 
-	// Token: 0x02000E18 RID: 3608
+	// Token: 0x02000B53 RID: 2899
 	private interface IStoreAPI
 	{
-		// Token: 0x1700231D RID: 8989
-		// (get) Token: 0x06006B61 RID: 27489
+		// Token: 0x17001D7A RID: 7546
+		// (get) Token: 0x06005823 RID: 22563
 		StoreType StoreType { get; }
 
-		// Token: 0x1700231E RID: 8990
-		// (get) Token: 0x06006B62 RID: 27490
+		// Token: 0x17001D7B RID: 7547
+		// (get) Token: 0x06005824 RID: 22564
 		float InitTimeout { get; }
 
-		// Token: 0x06006B63 RID: 27491
+		// Token: 0x06005825 RID: 22565
 		IEnumerator Init();
 
-		// Token: 0x06006B64 RID: 27492
+		// Token: 0x06005826 RID: 22566
 		void GetInitFailureMessage(out string title, out string description);
 
-		// Token: 0x06006B65 RID: 27493
+		// Token: 0x06005827 RID: 22567
 		string GetUserID();
 
-		// Token: 0x06006B66 RID: 27494
+		// Token: 0x06005828 RID: 22568
 		void GiveAchievement(AchievementType achievementType);
 
-		// Token: 0x06006B67 RID: 27495
+		// Token: 0x06005829 RID: 22569
 		void GiveAllUnlockedAchievements();
 	}
 
-	// Token: 0x02000E19 RID: 3609
+	// Token: 0x02000B54 RID: 2900
 	private class NoStore : StoreAPIManager.IStoreAPI
 	{
-		// Token: 0x1700231F RID: 8991
-		// (get) Token: 0x06006B68 RID: 27496 RVA: 0x001916AA File Offset: 0x0018F8AA
+		// Token: 0x17001D7C RID: 7548
+		// (get) Token: 0x0600582A RID: 22570 RVA: 0x00003CD2 File Offset: 0x00001ED2
 		public StoreType StoreType
 		{
 			get
@@ -154,8 +154,8 @@ public class StoreAPIManager : MonoBehaviour
 			}
 		}
 
-		// Token: 0x17002320 RID: 8992
-		// (get) Token: 0x06006B69 RID: 27497 RVA: 0x001916AD File Offset: 0x0018F8AD
+		// Token: 0x17001D7D RID: 7549
+		// (get) Token: 0x0600582B RID: 22571 RVA: 0x00003CCB File Offset: 0x00001ECB
 		public float InitTimeout
 		{
 			get
@@ -164,41 +164,41 @@ public class StoreAPIManager : MonoBehaviour
 			}
 		}
 
-		// Token: 0x06006B6A RID: 27498 RVA: 0x001916B4 File Offset: 0x0018F8B4
+		// Token: 0x0600582C RID: 22572 RVA: 0x0002FEDD File Offset: 0x0002E0DD
 		public IEnumerator Init()
 		{
 			StoreAPIManager.InitState = StoreAPIManager.StoreInitState.Succeeded;
 			yield break;
 		}
 
-		// Token: 0x06006B6B RID: 27499 RVA: 0x001916BC File Offset: 0x0018F8BC
+		// Token: 0x0600582D RID: 22573 RVA: 0x0002FEE5 File Offset: 0x0002E0E5
 		public void GetInitFailureMessage(out string title, out string description)
 		{
 			throw new Exception("This should never get called");
 		}
 
-		// Token: 0x06006B6C RID: 27500 RVA: 0x001916C8 File Offset: 0x0018F8C8
+		// Token: 0x0600582E RID: 22574 RVA: 0x0002FEF1 File Offset: 0x0002E0F1
 		public string GetUserID()
 		{
 			return string.Empty;
 		}
 
-		// Token: 0x06006B6D RID: 27501 RVA: 0x001916CF File Offset: 0x0018F8CF
+		// Token: 0x0600582F RID: 22575 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void GiveAchievement(AchievementType achievementType)
 		{
 		}
 
-		// Token: 0x06006B6E RID: 27502 RVA: 0x001916D1 File Offset: 0x0018F8D1
+		// Token: 0x06005830 RID: 22576 RVA: 0x00002FCA File Offset: 0x000011CA
 		public void GiveAllUnlockedAchievements()
 		{
 		}
 	}
 
-	// Token: 0x02000E1A RID: 3610
+	// Token: 0x02000B56 RID: 2902
 	private class SteamStore : StoreAPIManager.IStoreAPI
 	{
-		// Token: 0x17002321 RID: 8993
-		// (get) Token: 0x06006B70 RID: 27504 RVA: 0x001916DB File Offset: 0x0018F8DB
+		// Token: 0x17001D80 RID: 7552
+		// (get) Token: 0x06005838 RID: 22584 RVA: 0x00003DA1 File Offset: 0x00001FA1
 		public StoreType StoreType
 		{
 			get
@@ -207,8 +207,8 @@ public class StoreAPIManager : MonoBehaviour
 			}
 		}
 
-		// Token: 0x17002322 RID: 8994
-		// (get) Token: 0x06006B71 RID: 27505 RVA: 0x001916DE File Offset: 0x0018F8DE
+		// Token: 0x17001D81 RID: 7553
+		// (get) Token: 0x06005839 RID: 22585 RVA: 0x00003C54 File Offset: 0x00001E54
 		public float InitTimeout
 		{
 			get
@@ -217,7 +217,7 @@ public class StoreAPIManager : MonoBehaviour
 			}
 		}
 
-		// Token: 0x06006B72 RID: 27506 RVA: 0x001916E5 File Offset: 0x0018F8E5
+		// Token: 0x0600583A RID: 22586 RVA: 0x0002FF0F File Offset: 0x0002E10F
 		public IEnumerator Init()
 		{
 			while (!SteamManager.Initialized)
@@ -235,7 +235,7 @@ public class StoreAPIManager : MonoBehaviour
 			yield break;
 		}
 
-		// Token: 0x06006B73 RID: 27507 RVA: 0x001916F4 File Offset: 0x0018F8F4
+		// Token: 0x0600583B RID: 22587 RVA: 0x001508AC File Offset: 0x0014EAAC
 		private void OnStatsReceived(UserStatsReceived_t data)
 		{
 			if (data.m_nGameID == 1253920UL)
@@ -253,7 +253,7 @@ public class StoreAPIManager : MonoBehaviour
 			}
 		}
 
-		// Token: 0x06006B74 RID: 27508 RVA: 0x00191748 File Offset: 0x0018F948
+		// Token: 0x0600583C RID: 22588 RVA: 0x0002FF1E File Offset: 0x0002E11E
 		private void OnStatsStored(UserStatsStored_t data)
 		{
 			if (data.m_nGameID == 1253920UL && data.m_eResult != EResult.k_EResultOK)
@@ -265,25 +265,25 @@ public class StoreAPIManager : MonoBehaviour
 			}
 		}
 
-		// Token: 0x06006B75 RID: 27509 RVA: 0x0019177F File Offset: 0x0018F97F
+		// Token: 0x0600583D RID: 22589 RVA: 0x00002FCA File Offset: 0x000011CA
 		private void OnUserAchievementStored(UserAchievementStored_t data)
 		{
 		}
 
-		// Token: 0x06006B76 RID: 27510 RVA: 0x00191781 File Offset: 0x0018F981
+		// Token: 0x0600583E RID: 22590 RVA: 0x0002FF55 File Offset: 0x0002E155
 		public void GetInitFailureMessage(out string title, out string description)
 		{
 			title = LocalizationManager.GetString("LOC_ID_CONFIRM_MENU_STEAM_FAIL_TITLE_1", false, false);
 			description = LocalizationManager.GetString("LOC_ID_CONFIRM_MENU_STEAM_FAIL_DESCRIPTION_1", false, false);
 		}
 
-		// Token: 0x06006B77 RID: 27511 RVA: 0x001917A0 File Offset: 0x0018F9A0
+		// Token: 0x0600583F RID: 22591 RVA: 0x00150900 File Offset: 0x0014EB00
 		public string GetUserID()
 		{
 			return SteamUser.GetSteamID().ToString();
 		}
 
-		// Token: 0x06006B78 RID: 27512 RVA: 0x001917C0 File Offset: 0x0018F9C0
+		// Token: 0x06005840 RID: 22592 RVA: 0x0002FF73 File Offset: 0x0002E173
 		public void GiveAchievement(AchievementType achievementType)
 		{
 			if (SteamManager.Initialized && this.m_statsReceieved)
@@ -296,7 +296,7 @@ public class StoreAPIManager : MonoBehaviour
 			}
 		}
 
-		// Token: 0x06006B79 RID: 27513 RVA: 0x001917F8 File Offset: 0x0018F9F8
+		// Token: 0x06005841 RID: 22593 RVA: 0x00150920 File Offset: 0x0014EB20
 		public void GiveAllUnlockedAchievements()
 		{
 			if (SteamManager.Initialized && this.m_statsReceieved)
@@ -317,19 +317,19 @@ public class StoreAPIManager : MonoBehaviour
 			}
 		}
 
-		// Token: 0x040056C5 RID: 22213
+		// Token: 0x0400411D RID: 16669
 		private Callback<UserStatsReceived_t> m_userStatsRecievedCallback;
 
-		// Token: 0x040056C6 RID: 22214
+		// Token: 0x0400411E RID: 16670
 		private Callback<UserStatsStored_t> m_userStatsStoredCallback;
 
-		// Token: 0x040056C7 RID: 22215
+		// Token: 0x0400411F RID: 16671
 		private Callback<UserAchievementStored_t> m_userAchievementStoredCallback;
 
-		// Token: 0x040056C8 RID: 22216
+		// Token: 0x04004120 RID: 16672
 		private bool m_statsReceieved;
 
-		// Token: 0x040056C9 RID: 22217
+		// Token: 0x04004121 RID: 16673
 		private const ulong GAME_ID = 1253920UL;
 	}
 }

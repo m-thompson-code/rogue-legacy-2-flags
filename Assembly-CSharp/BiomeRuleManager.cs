@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020005EB RID: 1515
+// Token: 0x020009F3 RID: 2547
 public class BiomeRuleManager : MonoBehaviour
 {
-	// Token: 0x060036BD RID: 14013 RVA: 0x000BC3C0 File Offset: 0x000BA5C0
+	// Token: 0x06004CCF RID: 19663 RVA: 0x0012A2B0 File Offset: 0x001284B0
 	private void Awake()
 	{
 		this.m_onBiomeEnter = new Action<MonoBehaviour, EventArgs>(this.OnBiomeEnter);
@@ -22,7 +22,7 @@ public class BiomeRuleManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036BE RID: 14014 RVA: 0x000BC490 File Offset: 0x000BA690
+	// Token: 0x06004CD0 RID: 19664 RVA: 0x0012A380 File Offset: 0x00128580
 	private void Start()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.BiomeEnter, this.m_onBiomeEnter);
@@ -32,7 +32,7 @@ public class BiomeRuleManager : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.LevelEditorWorldCreationComplete, this.m_onLevelEditorWorldCreationComplete);
 	}
 
-	// Token: 0x060036BF RID: 14015 RVA: 0x000BC4DC File Offset: 0x000BA6DC
+	// Token: 0x06004CD1 RID: 19665 RVA: 0x0012A3CC File Offset: 0x001285CC
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.BiomeEnter, this.m_onBiomeEnter);
@@ -43,7 +43,7 @@ public class BiomeRuleManager : MonoBehaviour
 		this.ResetAllRules();
 	}
 
-	// Token: 0x060036C0 RID: 14016 RVA: 0x000BC530 File Offset: 0x000BA730
+	// Token: 0x06004CD2 RID: 19666 RVA: 0x0012A420 File Offset: 0x00128620
 	private void OnLevelEditorWorldCreationComplete(MonoBehaviour sender, EventArgs args)
 	{
 		LevelEditorWorldCreationCompleteEventArgs levelEditorWorldCreationCompleteEventArgs = args as LevelEditorWorldCreationCompleteEventArgs;
@@ -59,7 +59,7 @@ public class BiomeRuleManager : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060036C1 RID: 14017 RVA: 0x000BC578 File Offset: 0x000BA778
+	// Token: 0x06004CD3 RID: 19667 RVA: 0x0012A468 File Offset: 0x00128668
 	private void OnWorldCreationComplete(MonoBehaviour sender, EventArgs args)
 	{
 		WorldBuildCompleteEventArgs worldBuildCompleteEventArgs = args as WorldBuildCompleteEventArgs;
@@ -82,7 +82,7 @@ public class BiomeRuleManager : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060036C2 RID: 14018 RVA: 0x000BC5F8 File Offset: 0x000BA7F8
+	// Token: 0x06004CD4 RID: 19668 RVA: 0x0012A4E8 File Offset: 0x001286E8
 	private void OnBiomeCreationComplete(MonoBehaviour sender, EventArgs args)
 	{
 		BiomeEventArgs biomeEventArgs = args as BiomeEventArgs;
@@ -99,7 +99,7 @@ public class BiomeRuleManager : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060036C3 RID: 14019 RVA: 0x000BC63C File Offset: 0x000BA83C
+	// Token: 0x06004CD5 RID: 19669 RVA: 0x0012A52C File Offset: 0x0012872C
 	private void OnBiomeEnter(MonoBehaviour sender, EventArgs args)
 	{
 		this.ResetAllRules();
@@ -115,7 +115,7 @@ public class BiomeRuleManager : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060036C4 RID: 14020 RVA: 0x000BC67C File Offset: 0x000BA87C
+	// Token: 0x06004CD6 RID: 19670 RVA: 0x0012A56C File Offset: 0x0012876C
 	private void OnBiomeExit(MonoBehaviour sender, EventArgs args)
 	{
 		BiomeEventArgs biomeEventArgs = args as BiomeEventArgs;
@@ -130,7 +130,7 @@ public class BiomeRuleManager : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060036C5 RID: 14021 RVA: 0x000BC6B8 File Offset: 0x000BA8B8
+	// Token: 0x06004CD7 RID: 19671 RVA: 0x0012A5A8 File Offset: 0x001287A8
 	private List<BiomeRule> GetRules_V2(BiomeType biome, BiomeRuleExecutionTime executionTime)
 	{
 		this.m_ruleHelper_STATIC.Clear();
@@ -160,7 +160,7 @@ public class BiomeRuleManager : MonoBehaviour
 		return this.m_ruleHelper_STATIC;
 	}
 
-	// Token: 0x060036C6 RID: 14022 RVA: 0x000BC784 File Offset: 0x000BA984
+	// Token: 0x06004CD8 RID: 19672 RVA: 0x00029C1F File Offset: 0x00027E1F
 	public static SpawnConditionOverride GetSpawnConditionOverride(BiomeType biome)
 	{
 		if (!BiomeRuleManager.m_spawnConditionOverrideTable.ContainsKey(biome))
@@ -170,7 +170,7 @@ public class BiomeRuleManager : MonoBehaviour
 		return BiomeRuleManager.m_spawnConditionOverrideTable[biome];
 	}
 
-	// Token: 0x060036C7 RID: 14023 RVA: 0x000BC7B0 File Offset: 0x000BA9B0
+	// Token: 0x06004CD9 RID: 19673 RVA: 0x0012A674 File Offset: 0x00128874
 	private void RunRules_V2(BiomeType biomeType, BiomeRuleExecutionTime executionTime)
 	{
 		foreach (BiomeRule biomeRule in this.GetRules_V2(biomeType, executionTime))
@@ -183,7 +183,7 @@ public class BiomeRuleManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036C8 RID: 14024 RVA: 0x000BC820 File Offset: 0x000BAA20
+	// Token: 0x06004CDA RID: 19674 RVA: 0x0012A6E4 File Offset: 0x001288E4
 	private void UndoRules_V2(BiomeType biomeType, BiomeRuleExecutionTime executionTime)
 	{
 		foreach (BiomeRule biomeRule in this.GetRules_V2(biomeType, executionTime))
@@ -196,7 +196,7 @@ public class BiomeRuleManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036C9 RID: 14025 RVA: 0x000BC888 File Offset: 0x000BAA88
+	// Token: 0x06004CDB RID: 19675 RVA: 0x0012A74C File Offset: 0x0012894C
 	private void ResetAllRules()
 	{
 		if (this.m_biomeRules == null)
@@ -218,28 +218,28 @@ public class BiomeRuleManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002A29 RID: 10793
+	// Token: 0x04003A27 RID: 14887
 	[SerializeField]
 	private List<BiomeRuleManagerEntry> m_biomeRules;
 
-	// Token: 0x04002A2A RID: 10794
+	// Token: 0x04003A28 RID: 14888
 	private static Dictionary<BiomeType, SpawnConditionOverride> m_spawnConditionOverrideTable = new Dictionary<BiomeType, SpawnConditionOverride>();
 
-	// Token: 0x04002A2B RID: 10795
+	// Token: 0x04003A29 RID: 14889
 	private Action<MonoBehaviour, EventArgs> m_onBiomeEnter;
 
-	// Token: 0x04002A2C RID: 10796
+	// Token: 0x04003A2A RID: 14890
 	private Action<MonoBehaviour, EventArgs> m_onBiomeExit;
 
-	// Token: 0x04002A2D RID: 10797
+	// Token: 0x04003A2B RID: 14891
 	private Action<MonoBehaviour, EventArgs> m_onWorldCreationComplete;
 
-	// Token: 0x04002A2E RID: 10798
+	// Token: 0x04003A2C RID: 14892
 	private Action<MonoBehaviour, EventArgs> m_onBiomeCreationComplete;
 
-	// Token: 0x04002A2F RID: 10799
+	// Token: 0x04003A2D RID: 14893
 	private Action<MonoBehaviour, EventArgs> m_onLevelEditorWorldCreationComplete;
 
-	// Token: 0x04002A30 RID: 10800
+	// Token: 0x04003A2E RID: 14894
 	private List<BiomeRule> m_ruleHelper_STATIC = new List<BiomeRule>();
 }

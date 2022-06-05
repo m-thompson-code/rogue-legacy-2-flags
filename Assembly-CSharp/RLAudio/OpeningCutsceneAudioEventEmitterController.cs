@@ -8,11 +8,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000902 RID: 2306
+	// Token: 0x02000E7C RID: 3708
 	public class OpeningCutsceneAudioEventEmitterController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001868 RID: 6248
-		// (get) Token: 0x06004BA6 RID: 19366 RVA: 0x0010FE75 File Offset: 0x0010E075
+		// Token: 0x1700215B RID: 8539
+		// (get) Token: 0x0600688F RID: 26767 RVA: 0x00039E44 File Offset: 0x00038044
 		public string Description
 		{
 			get
@@ -25,7 +25,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BA7 RID: 19367 RVA: 0x0010FE9C File Offset: 0x0010E09C
+		// Token: 0x06006890 RID: 26768 RVA: 0x00180090 File Offset: 0x0017E290
 		private void Awake()
 		{
 			this.m_startEventIntance = AudioUtility.GetEventInstance(this.m_startAudioEventPath, base.transform);
@@ -44,7 +44,7 @@ namespace RLAudio
 			this.m_mainMenuWindowController.CutsceneDisplayTextRelay.AddListener(new Action<CanvasGroup>(this.OnCutsceneDisplayTextCall), false);
 		}
 
-		// Token: 0x06004BA8 RID: 19368 RVA: 0x00110020 File Offset: 0x0010E220
+		// Token: 0x06006891 RID: 26769 RVA: 0x00180214 File Offset: 0x0017E414
 		private void OnDestroy()
 		{
 			if (this.m_startEventIntance.isValid())
@@ -65,7 +65,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BA9 RID: 19369 RVA: 0x00110094 File Offset: 0x0010E294
+		// Token: 0x06006892 RID: 26770 RVA: 0x00180288 File Offset: 0x0017E488
 		private void OnLoadGame(bool isContinueLegacy)
 		{
 			if (isContinueLegacy)
@@ -77,20 +77,20 @@ namespace RLAudio
 			this.PlayEvent(eventInstance);
 		}
 
-		// Token: 0x06004BAA RID: 19370 RVA: 0x001100D4 File Offset: 0x0010E2D4
+		// Token: 0x06006893 RID: 26771 RVA: 0x001802C8 File Offset: 0x0017E4C8
 		private void OnCloudsAppear()
 		{
 			EventInstance eventInstance = AudioUtility.GetEventInstance(this.m_storyPointboatWavesAndSqueaks, base.transform);
 			this.PlayEvent(eventInstance);
 		}
 
-		// Token: 0x06004BAB RID: 19371 RVA: 0x001100FA File Offset: 0x0010E2FA
+		// Token: 0x06006894 RID: 26772 RVA: 0x00039E6A File Offset: 0x0003806A
 		private void OnCutsceneBlack()
 		{
 			this.PlayEvent(this.m_blackScreenEventInstance);
 		}
 
-		// Token: 0x06004BAC RID: 19372 RVA: 0x00110108 File Offset: 0x0010E308
+		// Token: 0x06006895 RID: 26773 RVA: 0x001802F0 File Offset: 0x0017E4F0
 		private void OnCutsceneStarsAppear()
 		{
 			this.StopEventInstance(this.m_blackScreenEventInstance);
@@ -99,20 +99,20 @@ namespace RLAudio
 			this.PlayEvent(eventInstance);
 		}
 
-		// Token: 0x06004BAD RID: 19373 RVA: 0x00110146 File Offset: 0x0010E346
+		// Token: 0x06006896 RID: 26774 RVA: 0x00039E78 File Offset: 0x00038078
 		private void StopEventInstance(EventInstance eventInstance)
 		{
 			this.m_currentEvents.Remove(eventInstance);
 			AudioManager.Stop(eventInstance, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 		}
 
-		// Token: 0x06004BAE RID: 19374 RVA: 0x0011015C File Offset: 0x0010E35C
+		// Token: 0x06006897 RID: 26775 RVA: 0x00039E8E File Offset: 0x0003808E
 		private void OnCutsceneDisplayTextCall(CanvasGroup canvasGroup)
 		{
 			base.StartCoroutine(this.PlayTextAudio(canvasGroup));
 		}
 
-		// Token: 0x06004BAF RID: 19375 RVA: 0x0011016C File Offset: 0x0010E36C
+		// Token: 0x06006898 RID: 26776 RVA: 0x00039E9E File Offset: 0x0003809E
 		private IEnumerator PlayTextAudio(CanvasGroup canvasGroup)
 		{
 			while (canvasGroup.alpha == 0f)
@@ -160,13 +160,13 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004BB0 RID: 19376 RVA: 0x00110182 File Offset: 0x0010E382
+		// Token: 0x06006899 RID: 26777 RVA: 0x00039EB4 File Offset: 0x000380B4
 		private void OnCutsceneCastleAppears()
 		{
 			this.PlayEvent(this.m_castleAppearsEventInstance);
 		}
 
-		// Token: 0x06004BB1 RID: 19377 RVA: 0x00110190 File Offset: 0x0010E390
+		// Token: 0x0600689A RID: 26778 RVA: 0x00180330 File Offset: 0x0017E530
 		private void OnCutsceneFastForward(bool isFastForwarding)
 		{
 			this.m_isFastForwarding = isFastForwarding;
@@ -183,7 +183,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BB2 RID: 19378 RVA: 0x001101F7 File Offset: 0x0010E3F7
+		// Token: 0x0600689B RID: 26779 RVA: 0x00039EC2 File Offset: 0x000380C2
 		private IEnumerator SetFastForwardParameter(bool isFastForwarding)
 		{
 			float timeStart = Time.unscaledTime;
@@ -211,7 +211,7 @@ namespace RLAudio
 			yield break;
 		}
 
-		// Token: 0x06004BB3 RID: 19379 RVA: 0x00110210 File Offset: 0x0010E410
+		// Token: 0x0600689C RID: 26780 RVA: 0x00180398 File Offset: 0x0017E598
 		private void OnCutsceneComplete()
 		{
 			for (int i = 0; i < this.m_currentEvents.Count; i++)
@@ -224,7 +224,7 @@ namespace RLAudio
 			AudioManager.PlayOneShot(this, this.m_storyPoint07, default(Vector3));
 		}
 
-		// Token: 0x06004BB4 RID: 19380 RVA: 0x00110270 File Offset: 0x0010E470
+		// Token: 0x0600689D RID: 26781 RVA: 0x001803F8 File Offset: 0x0017E5F8
 		private void OnCutsceneStart()
 		{
 			if (this.m_mainMenuMusicPlayer != null)
@@ -239,13 +239,13 @@ namespace RLAudio
 			this.PlayEvent(this.m_startEventIntance);
 		}
 
-		// Token: 0x06004BB5 RID: 19381 RVA: 0x001102C2 File Offset: 0x0010E4C2
+		// Token: 0x0600689E RID: 26782 RVA: 0x00039ED8 File Offset: 0x000380D8
 		private void PlayEvent(EventInstance eventInstance)
 		{
 			this.PlayEvent(eventInstance, Vector3.zero);
 		}
 
-		// Token: 0x06004BB6 RID: 19382 RVA: 0x001102D0 File Offset: 0x0010E4D0
+		// Token: 0x0600689F RID: 26783 RVA: 0x0018044C File Offset: 0x0017E64C
 		private void PlayEvent(EventInstance eventInstance, Vector3 position)
 		{
 			this.m_currentEvents.Add(eventInstance);
@@ -261,130 +261,130 @@ namespace RLAudio
 			eventInstance.release();
 		}
 
-		// Token: 0x04003FA0 RID: 16288
+		// Token: 0x040054F2 RID: 21746
 		[SerializeField]
 		[EventRef]
 		private string m_startAudioEventPath;
 
-		// Token: 0x04003FA1 RID: 16289
+		// Token: 0x040054F3 RID: 21747
 		[SerializeField]
 		[EventRef]
 		private string m_blackScreenAudioEventPath;
 
-		// Token: 0x04003FA2 RID: 16290
+		// Token: 0x040054F4 RID: 21748
 		[SerializeField]
 		[EventRef]
 		private string m_starsAppearAudioEventPath;
 
-		// Token: 0x04003FA3 RID: 16291
+		// Token: 0x040054F5 RID: 21749
 		[SerializeField]
 		[EventRef]
 		private string m_castleAppearsAudioEventPath;
 
-		// Token: 0x04003FA4 RID: 16292
+		// Token: 0x040054F6 RID: 21750
 		[SerializeField]
 		[EventRef]
 		private string m_textAppearsAudioEventPath;
 
-		// Token: 0x04003FA5 RID: 16293
+		// Token: 0x040054F7 RID: 21751
 		[SerializeField]
 		[EventRef]
 		private string m_continueLegacy;
 
-		// Token: 0x04003FA6 RID: 16294
+		// Token: 0x040054F8 RID: 21752
 		[SerializeField]
 		[EventRef]
 		private string m_newLegacy;
 
-		// Token: 0x04003FA7 RID: 16295
+		// Token: 0x040054F9 RID: 21753
 		[SerializeField]
 		[EventRef]
 		private string m_storyPoint00;
 
-		// Token: 0x04003FA8 RID: 16296
+		// Token: 0x040054FA RID: 21754
 		[SerializeField]
 		[EventRef]
 		private string m_storyPoint01;
 
-		// Token: 0x04003FA9 RID: 16297
+		// Token: 0x040054FB RID: 21755
 		[SerializeField]
 		[EventRef]
 		private string m_storyPoint02;
 
-		// Token: 0x04003FAA RID: 16298
+		// Token: 0x040054FC RID: 21756
 		[SerializeField]
 		[EventRef]
 		private string m_storyPoint03;
 
-		// Token: 0x04003FAB RID: 16299
+		// Token: 0x040054FD RID: 21757
 		[SerializeField]
 		[EventRef]
 		private string m_storyPoint04;
 
-		// Token: 0x04003FAC RID: 16300
+		// Token: 0x040054FE RID: 21758
 		[SerializeField]
 		[EventRef]
 		private string m_storyPointBoatInWater;
 
-		// Token: 0x04003FAD RID: 16301
+		// Token: 0x040054FF RID: 21759
 		[SerializeField]
 		[EventRef]
 		private string m_storyPointboatWavesAndSqueaks;
 
-		// Token: 0x04003FAE RID: 16302
+		// Token: 0x04005500 RID: 21760
 		[SerializeField]
 		[EventRef]
 		private string m_storyPoint05;
 
-		// Token: 0x04003FAF RID: 16303
+		// Token: 0x04005501 RID: 21761
 		[SerializeField]
 		[EventRef]
 		private string m_storyPoint06;
 
-		// Token: 0x04003FB0 RID: 16304
+		// Token: 0x04005502 RID: 21762
 		[SerializeField]
 		[EventRef]
 		private string m_storyPoint07;
 
-		// Token: 0x04003FB1 RID: 16305
+		// Token: 0x04005503 RID: 21763
 		[SerializeField]
 		private MusicPlayer m_mainMenuMusicPlayer;
 
-		// Token: 0x04003FB2 RID: 16306
+		// Token: 0x04005504 RID: 21764
 		[SerializeField]
 		private StudioEventEmitter m_mainMenuAmbientSoundEventEmitter;
 
-		// Token: 0x04003FB3 RID: 16307
+		// Token: 0x04005505 RID: 21765
 		private string m_description = string.Empty;
 
-		// Token: 0x04003FB4 RID: 16308
+		// Token: 0x04005506 RID: 21766
 		private MainMenuWindowController m_mainMenuWindowController;
 
-		// Token: 0x04003FB5 RID: 16309
+		// Token: 0x04005507 RID: 21767
 		private EventInstance m_startEventIntance;
 
-		// Token: 0x04003FB6 RID: 16310
+		// Token: 0x04005508 RID: 21768
 		private EventInstance m_blackScreenEventInstance;
 
-		// Token: 0x04003FB7 RID: 16311
+		// Token: 0x04005509 RID: 21769
 		private EventInstance m_starsAppearEventInstance;
 
-		// Token: 0x04003FB8 RID: 16312
+		// Token: 0x0400550A RID: 21770
 		private EventInstance m_castleAppearsEventInstance;
 
-		// Token: 0x04003FB9 RID: 16313
+		// Token: 0x0400550B RID: 21771
 		private bool m_isFastForwarding;
 
-		// Token: 0x04003FBA RID: 16314
+		// Token: 0x0400550C RID: 21772
 		private List<EventInstance> m_currentEvents = new List<EventInstance>();
 
-		// Token: 0x04003FBB RID: 16315
+		// Token: 0x0400550D RID: 21773
 		private float m_currentFastForwardValue;
 
-		// Token: 0x04003FBC RID: 16316
+		// Token: 0x0400550E RID: 21774
 		private Coroutine m_fastForwardCoroutine;
 
-		// Token: 0x04003FBD RID: 16317
+		// Token: 0x0400550F RID: 21775
 		private int m_textEntryNumber;
 	}
 }

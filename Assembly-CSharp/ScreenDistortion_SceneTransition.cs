@@ -5,30 +5,30 @@ using RLAudio;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020002E3 RID: 739
+// Token: 0x020004E6 RID: 1254
 public class ScreenDistortion_SceneTransition : Transition_V2, ISceneLoadingTransition, ITransition, IAudioEventEmitter
 {
-	// Token: 0x06001D5E RID: 7518 RVA: 0x00060A92 File Offset: 0x0005EC92
+	// Token: 0x06002879 RID: 10361 RVA: 0x00016B4C File Offset: 0x00014D4C
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_warpEffect = CameraController.ForegroundPerspCam.GetComponent<HeirloomWarp_Effect>();
 	}
 
-	// Token: 0x06001D5F RID: 7519 RVA: 0x00060AAA File Offset: 0x0005ECAA
+	// Token: 0x0600287A RID: 10362 RVA: 0x00016B64 File Offset: 0x00014D64
 	public void SetDistortInPosition(GameObject obj)
 	{
 		this.m_distortInPosObj = obj;
 	}
 
-	// Token: 0x06001D60 RID: 7520 RVA: 0x00060AB3 File Offset: 0x0005ECB3
+	// Token: 0x0600287B RID: 10363 RVA: 0x00016B6D File Offset: 0x00014D6D
 	public void SetDistortOutPosition(GameObject obj)
 	{
 		this.m_distortOutPosObj = obj;
 	}
 
-	// Token: 0x17000CDA RID: 3290
-	// (get) Token: 0x06001D61 RID: 7521 RVA: 0x00060ABC File Offset: 0x0005ECBC
+	// Token: 0x1700107D RID: 4221
+	// (get) Token: 0x0600287C RID: 10364 RVA: 0x00004792 File Offset: 0x00002992
 	public override TransitionID ID
 	{
 		get
@@ -37,8 +37,8 @@ public class ScreenDistortion_SceneTransition : Transition_V2, ISceneLoadingTran
 		}
 	}
 
-	// Token: 0x17000CDB RID: 3291
-	// (get) Token: 0x06001D62 RID: 7522 RVA: 0x00060ABF File Offset: 0x0005ECBF
+	// Token: 0x1700107E RID: 4222
+	// (get) Token: 0x0600287D RID: 10365 RVA: 0x00016B76 File Offset: 0x00014D76
 	public string Description
 	{
 		get
@@ -51,13 +51,13 @@ public class ScreenDistortion_SceneTransition : Transition_V2, ISceneLoadingTran
 		}
 	}
 
-	// Token: 0x06001D63 RID: 7523 RVA: 0x00060AE5 File Offset: 0x0005ECE5
+	// Token: 0x0600287E RID: 10366 RVA: 0x00016B9C File Offset: 0x00014D9C
 	public override IEnumerator Run()
 	{
 		yield break;
 	}
 
-	// Token: 0x06001D64 RID: 7524 RVA: 0x00060AED File Offset: 0x0005ECED
+	// Token: 0x0600287F RID: 10367 RVA: 0x00016BA4 File Offset: 0x00014DA4
 	public IEnumerator TransitionIn()
 	{
 		if (this.m_distortInPosObj == null)
@@ -80,7 +80,7 @@ public class ScreenDistortion_SceneTransition : Transition_V2, ISceneLoadingTran
 		yield break;
 	}
 
-	// Token: 0x06001D65 RID: 7525 RVA: 0x00060AFC File Offset: 0x0005ECFC
+	// Token: 0x06002880 RID: 10368 RVA: 0x00016BB3 File Offset: 0x00014DB3
 	public IEnumerator TransitionOut()
 	{
 		if (this.m_distortOutPosObj == null)
@@ -102,36 +102,36 @@ public class ScreenDistortion_SceneTransition : Transition_V2, ISceneLoadingTran
 		yield break;
 	}
 
-	// Token: 0x06001D66 RID: 7526 RVA: 0x00060B0B File Offset: 0x0005ED0B
+	// Token: 0x06002881 RID: 10369 RVA: 0x00016BC2 File Offset: 0x00014DC2
 	private void OnDisable()
 	{
 		this.m_distortInPosObj = null;
 		this.m_distortOutPosObj = null;
 	}
 
-	// Token: 0x04001B56 RID: 6998
+	// Token: 0x0400238E RID: 9102
 	[SerializeField]
 	private float m_distortDuration = 1f;
 
-	// Token: 0x04001B57 RID: 6999
+	// Token: 0x0400238F RID: 9103
 	[SerializeField]
 	[EventRef]
 	private string m_transitionInAudioEventPath;
 
-	// Token: 0x04001B58 RID: 7000
+	// Token: 0x04002390 RID: 9104
 	[SerializeField]
 	[EventRef]
 	private string m_transitionOutAudioEventPath;
 
-	// Token: 0x04001B59 RID: 7001
+	// Token: 0x04002391 RID: 9105
 	private GameObject m_distortInPosObj;
 
-	// Token: 0x04001B5A RID: 7002
+	// Token: 0x04002392 RID: 9106
 	private GameObject m_distortOutPosObj;
 
-	// Token: 0x04001B5B RID: 7003
+	// Token: 0x04002393 RID: 9107
 	private HeirloomWarp_Effect m_warpEffect;
 
-	// Token: 0x04001B5C RID: 7004
+	// Token: 0x04002394 RID: 9108
 	private string m_description = string.Empty;
 }

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000309 RID: 777
+// Token: 0x02000536 RID: 1334
 public class GodModeStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D5A RID: 3418
-	// (get) Token: 0x06001ED0 RID: 7888 RVA: 0x0006395E File Offset: 0x00061B5E
+	// Token: 0x1700114F RID: 4431
+	// (get) Token: 0x06002AE1 RID: 10977 RVA: 0x00017F3C File Offset: 0x0001613C
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class GodModeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D5B RID: 3419
-	// (get) Token: 0x06001ED1 RID: 7889 RVA: 0x00063965 File Offset: 0x00061B65
+	// Token: 0x17001150 RID: 4432
+	// (get) Token: 0x06002AE2 RID: 10978 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class GodModeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001ED2 RID: 7890 RVA: 0x0006396C File Offset: 0x00061B6C
+	// Token: 0x06002AE3 RID: 10979 RVA: 0x00017F43 File Offset: 0x00016143
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.GodMode, base.Duration);
@@ -41,7 +41,7 @@ public class GodModeStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001ED3 RID: 7891 RVA: 0x0006397B File Offset: 0x00061B7B
+	// Token: 0x06002AE4 RID: 10980 RVA: 0x00017F52 File Offset: 0x00016152
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -52,9 +52,9 @@ public class GodModeStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x04001BDC RID: 7132
+	// Token: 0x040024A3 RID: 9379
 	private float m_defaultBaseStrength;
 
-	// Token: 0x04001BDD RID: 7133
+	// Token: 0x040024A4 RID: 9380
 	private float m_defaultSpeed;
 }

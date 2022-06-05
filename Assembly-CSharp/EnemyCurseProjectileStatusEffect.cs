@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002FD RID: 765
+// Token: 0x0200051A RID: 1306
 public class EnemyCurseProjectileStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D3A RID: 3386
-	// (get) Token: 0x06001E78 RID: 7800 RVA: 0x00062EC8 File Offset: 0x000610C8
+	// Token: 0x1700110F RID: 4367
+	// (get) Token: 0x06002A29 RID: 10793 RVA: 0x000179CA File Offset: 0x00015BCA
 	public override string[] ProjectileNameArray
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyCurseProjectileStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D3B RID: 3387
-	// (get) Token: 0x06001E79 RID: 7801 RVA: 0x00062ECF File Offset: 0x000610CF
+	// Token: 0x17001110 RID: 4368
+	// (get) Token: 0x06002A2A RID: 10794 RVA: 0x000179D1 File Offset: 0x00015BD1
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -25,8 +25,8 @@ public class EnemyCurseProjectileStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D3C RID: 3388
-	// (get) Token: 0x06001E7A RID: 7802 RVA: 0x00062ED6 File Offset: 0x000610D6
+	// Token: 0x17001111 RID: 4369
+	// (get) Token: 0x06002A2B RID: 10795 RVA: 0x00017838 File Offset: 0x00015A38
 	public override float StartingDurationOverride
 	{
 		get
@@ -35,7 +35,7 @@ public class EnemyCurseProjectileStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E7B RID: 7803 RVA: 0x00062EDD File Offset: 0x000610DD
+	// Token: 0x06002A2C RID: 10796 RVA: 0x000179D8 File Offset: 0x00015BD8
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_hitCooldownTimer = Time.time + 3.5f;
@@ -59,12 +59,12 @@ public class EnemyCurseProjectileStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x04001BB6 RID: 7094
+	// Token: 0x04002445 RID: 9285
 	private static string[] m_projectileNameArray = new string[]
 	{
 		"StatusEffectCurseProjectile"
 	};
 
-	// Token: 0x04001BB7 RID: 7095
+	// Token: 0x04002446 RID: 9286
 	private float m_hitCooldownTimer;
 }

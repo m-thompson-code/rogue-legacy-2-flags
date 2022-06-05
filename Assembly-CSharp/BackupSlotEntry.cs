@@ -4,25 +4,25 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Token: 0x02000370 RID: 880
+// Token: 0x020005F0 RID: 1520
 public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystemHandler, ISelectHandler, IDeselectHandler, IPointerClickHandler
 {
-	// Token: 0x17000E08 RID: 3592
-	// (get) Token: 0x060020EC RID: 8428 RVA: 0x00067489 File Offset: 0x00065689
-	// (set) Token: 0x060020ED RID: 8429 RVA: 0x00067491 File Offset: 0x00065691
+	// Token: 0x17001283 RID: 4739
+	// (get) Token: 0x06002EBB RID: 11963 RVA: 0x0001981B File Offset: 0x00017A1B
+	// (set) Token: 0x06002EBC RID: 11964 RVA: 0x00019823 File Offset: 0x00017A23
 	public bool IsChangeProfileOption { get; private set; }
 
-	// Token: 0x17000E09 RID: 3593
-	// (get) Token: 0x060020EE RID: 8430 RVA: 0x0006749A File Offset: 0x0006569A
-	// (set) Token: 0x060020EF RID: 8431 RVA: 0x000674A2 File Offset: 0x000656A2
+	// Token: 0x17001284 RID: 4740
+	// (get) Token: 0x06002EBD RID: 11965 RVA: 0x0001982C File Offset: 0x00017A2C
+	// (set) Token: 0x06002EBE RID: 11966 RVA: 0x00019834 File Offset: 0x00017A34
 	public BackupSlotSelectedHandler BackupSlotSelected { get; set; }
 
-	// Token: 0x17000E0A RID: 3594
-	// (get) Token: 0x060020F0 RID: 8432 RVA: 0x000674AB File Offset: 0x000656AB
-	// (set) Token: 0x060020F1 RID: 8433 RVA: 0x000674B3 File Offset: 0x000656B3
+	// Token: 0x17001285 RID: 4741
+	// (get) Token: 0x06002EBF RID: 11967 RVA: 0x0001983D File Offset: 0x00017A3D
+	// (set) Token: 0x06002EC0 RID: 11968 RVA: 0x00019845 File Offset: 0x00017A45
 	public int Index { get; private set; }
 
-	// Token: 0x060020F2 RID: 8434 RVA: 0x000674BC File Offset: 0x000656BC
+	// Token: 0x06002EC1 RID: 11969 RVA: 0x0001984E File Offset: 0x00017A4E
 	public void InitializeAsChangeProfileSlotOption(int index)
 	{
 		this.Index = index;
@@ -31,7 +31,7 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		this.m_selectedBG.SetActive(false);
 	}
 
-	// Token: 0x060020F3 RID: 8435 RVA: 0x000674EF File Offset: 0x000656EF
+	// Token: 0x06002EC2 RID: 11970 RVA: 0x00019881 File Offset: 0x00017A81
 	private void Awake()
 	{
 		this.m_cancelConfirmMenuSelection = new Action(this.CancelConfirmMenuSelection);
@@ -39,7 +39,7 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		this.m_returnToMainMenu = new Action(this.ReturnToMainMenu);
 	}
 
-	// Token: 0x060020F4 RID: 8436 RVA: 0x00067528 File Offset: 0x00065728
+	// Token: 0x06002EC3 RID: 11971 RVA: 0x000C857C File Offset: 0x000C677C
 	public void Initialize(int index, string gameModeFilePath, string playerFilePath, string equipmentFilePath, string lineageFilePath, string stageFilePath)
 	{
 		this.Index = index;
@@ -61,7 +61,7 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		this.m_selectedBG.SetActive(false);
 	}
 
-	// Token: 0x060020F5 RID: 8437 RVA: 0x000675DC File Offset: 0x000657DC
+	// Token: 0x06002EC4 RID: 11972 RVA: 0x000198B9 File Offset: 0x00017AB9
 	public virtual void OnPointerClick(PointerEventData eventData)
 	{
 		if (eventData.button != PointerEventData.InputButton.Left)
@@ -71,13 +71,13 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		this.ExecuteButton();
 	}
 
-	// Token: 0x060020F6 RID: 8438 RVA: 0x000675ED File Offset: 0x000657ED
+	// Token: 0x06002EC5 RID: 11973 RVA: 0x000198CA File Offset: 0x00017ACA
 	public virtual void OnPointerEnter(PointerEventData eventData)
 	{
 		this.OnSelect(eventData);
 	}
 
-	// Token: 0x060020F7 RID: 8439 RVA: 0x000675F6 File Offset: 0x000657F6
+	// Token: 0x06002EC6 RID: 11974 RVA: 0x000198D3 File Offset: 0x00017AD3
 	public virtual void OnSelect(BaseEventData eventData)
 	{
 		if (this.BackupSlotSelected != null)
@@ -87,13 +87,13 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		this.m_selectedBG.SetActive(true);
 	}
 
-	// Token: 0x060020F8 RID: 8440 RVA: 0x00067618 File Offset: 0x00065818
+	// Token: 0x06002EC7 RID: 11975 RVA: 0x000198F5 File Offset: 0x00017AF5
 	public virtual void OnDeselect(BaseEventData eventData)
 	{
 		this.m_selectedBG.SetActive(false);
 	}
 
-	// Token: 0x060020F9 RID: 8441 RVA: 0x00067626 File Offset: 0x00065826
+	// Token: 0x06002EC8 RID: 11976 RVA: 0x00019903 File Offset: 0x00017B03
 	public void ExecuteButton()
 	{
 		if (!this.IsChangeProfileOption)
@@ -105,7 +105,7 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		this.ChangeProfileSlot();
 	}
 
-	// Token: 0x060020FA RID: 8442 RVA: 0x00067648 File Offset: 0x00065848
+	// Token: 0x06002EC9 RID: 11977 RVA: 0x000C8630 File Offset: 0x000C6830
 	private void InitializeLoadBackupConfirmMenu()
 	{
 		ConfirmMenuWindowController confirmMenuWindowController = WindowManager.GetWindowController(WindowID.ConfirmMenu) as ConfirmMenuWindowController;
@@ -122,7 +122,7 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		buttonAtIndex2.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x060020FB RID: 8443 RVA: 0x000676E7 File Offset: 0x000658E7
+	// Token: 0x06002ECA RID: 11978 RVA: 0x00019922 File Offset: 0x00017B22
 	private void ChangeProfileSlot()
 	{
 		SaveManager.LoadingFailed = false;
@@ -132,7 +132,7 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		WindowManager.SetWindowIsOpen(WindowID.ProfileSelect, true);
 	}
 
-	// Token: 0x060020FC RID: 8444 RVA: 0x00067710 File Offset: 0x00065910
+	// Token: 0x06002ECB RID: 11979 RVA: 0x000C86D0 File Offset: 0x000C68D0
 	private void StartNewGame()
 	{
 		SaveFileSystem.SaveBatch saveBatch = SaveFileSystem.BeginSaveBatch(SaveManager.CurrentProfile);
@@ -148,7 +148,7 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		WindowManager.SetWindowIsOpen(WindowID.Backup, false);
 	}
 
-	// Token: 0x060020FD RID: 8445 RVA: 0x00067794 File Offset: 0x00065994
+	// Token: 0x06002ECC RID: 11980 RVA: 0x000C8754 File Offset: 0x000C6954
 	private void LoadBackup()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
@@ -219,27 +219,27 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		this.LoadSuccessful();
 	}
 
-	// Token: 0x060020FE RID: 8446 RVA: 0x00067984 File Offset: 0x00065B84
+	// Token: 0x06002ECD RID: 11981 RVA: 0x0001994A File Offset: 0x00017B4A
 	private void LoadFailed()
 	{
 		this.InitializeFailedlLoadConfirmMenu();
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x060020FF RID: 8447 RVA: 0x00067994 File Offset: 0x00065B94
+	// Token: 0x06002ECE RID: 11982 RVA: 0x0001995A File Offset: 0x00017B5A
 	private void LoadSuccessful()
 	{
 		this.InitializeSuccessfulLoadConfirmMenu();
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, true);
 	}
 
-	// Token: 0x06002100 RID: 8448 RVA: 0x000679A4 File Offset: 0x00065BA4
+	// Token: 0x06002ECF RID: 11983 RVA: 0x00013B7B File Offset: 0x00011D7B
 	private void CancelConfirmMenuSelection()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 	}
 
-	// Token: 0x06002101 RID: 8449 RVA: 0x000679B0 File Offset: 0x00065BB0
+	// Token: 0x06002ED0 RID: 11984 RVA: 0x000C8944 File Offset: 0x000C6B44
 	private void InitializeSuccessfulLoadConfirmMenu()
 	{
 		ConfirmMenuWindowController confirmMenuWindowController = WindowManager.GetWindowController(WindowID.ConfirmMenu) as ConfirmMenuWindowController;
@@ -252,14 +252,14 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		buttonAtIndex.SetOnClickAction(this.m_returnToMainMenu);
 	}
 
-	// Token: 0x06002102 RID: 8450 RVA: 0x00067A11 File Offset: 0x00065C11
+	// Token: 0x06002ED1 RID: 11985 RVA: 0x0001996A File Offset: 0x00017B6A
 	private void ReturnToMainMenu()
 	{
 		WindowManager.SetWindowIsOpen(WindowID.ConfirmMenu, false);
 		WindowManager.SetWindowIsOpen(WindowID.Backup, false);
 	}
 
-	// Token: 0x06002103 RID: 8451 RVA: 0x00067A24 File Offset: 0x00065C24
+	// Token: 0x06002ED2 RID: 11986 RVA: 0x000C89A8 File Offset: 0x000C6BA8
 	private void InitializeFailedlLoadConfirmMenu()
 	{
 		ConfirmMenuWindowController confirmMenuWindowController = WindowManager.GetWindowController(WindowID.ConfirmMenu) as ConfirmMenuWindowController;
@@ -272,35 +272,35 @@ public class BackupSlotEntry : MonoBehaviour, IPointerEnterHandler, IEventSystem
 		buttonAtIndex.SetOnClickAction(this.m_cancelConfirmMenuSelection);
 	}
 
-	// Token: 0x04001C82 RID: 7298
+	// Token: 0x0400263A RID: 9786
 	[SerializeField]
 	private TMP_Text m_text;
 
-	// Token: 0x04001C83 RID: 7299
+	// Token: 0x0400263B RID: 9787
 	[SerializeField]
 	private GameObject m_selectedBG;
 
-	// Token: 0x04001C84 RID: 7300
+	// Token: 0x0400263C RID: 9788
 	private string m_playerFilePath;
 
-	// Token: 0x04001C85 RID: 7301
+	// Token: 0x0400263D RID: 9789
 	private string m_equipmentFilePath;
 
-	// Token: 0x04001C86 RID: 7302
+	// Token: 0x0400263E RID: 9790
 	private string m_lineageFilePath;
 
-	// Token: 0x04001C87 RID: 7303
+	// Token: 0x0400263F RID: 9791
 	private string m_stageFilePath;
 
-	// Token: 0x04001C88 RID: 7304
+	// Token: 0x04002640 RID: 9792
 	private string m_gameModeFilePath;
 
-	// Token: 0x04001C89 RID: 7305
+	// Token: 0x04002641 RID: 9793
 	private Action m_cancelConfirmMenuSelection;
 
-	// Token: 0x04001C8A RID: 7306
+	// Token: 0x04002642 RID: 9794
 	private Action m_loadBackup;
 
-	// Token: 0x04001C8B RID: 7307
+	// Token: 0x04002643 RID: 9795
 	private Action m_returnToMainMenu;
 }

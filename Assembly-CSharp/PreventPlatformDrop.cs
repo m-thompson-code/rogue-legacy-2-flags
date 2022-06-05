@@ -4,18 +4,18 @@ using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using UnityEngine;
 
-// Token: 0x020002B2 RID: 690
+// Token: 0x0200049D RID: 1181
 [RequireComponent(typeof(CorgiController))]
 public class PreventPlatformDrop : MonoBehaviour
 {
-	// Token: 0x06001B7A RID: 7034 RVA: 0x00057ED3 File Offset: 0x000560D3
+	// Token: 0x06002616 RID: 9750 RVA: 0x00015296 File Offset: 0x00013496
 	private void Awake()
 	{
 		this.m_controller = base.GetComponent<CorgiController_RL>();
 		this.m_enemyController = base.GetComponent<EnemyController>();
 	}
 
-	// Token: 0x06001B7B RID: 7035 RVA: 0x00057EED File Offset: 0x000560ED
+	// Token: 0x06002617 RID: 9751 RVA: 0x000152B0 File Offset: 0x000134B0
 	private IEnumerator Start()
 	{
 		while (!this.m_controller.IsInitialized || !this.m_enemyController.IsInitialized)
@@ -26,7 +26,7 @@ public class PreventPlatformDrop : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001B7C RID: 7036 RVA: 0x00057EFC File Offset: 0x000560FC
+	// Token: 0x06002618 RID: 9752 RVA: 0x000B4BB8 File Offset: 0x000B2DB8
 	private void FixedUpdate()
 	{
 		if (this.m_controller.State != null && this.m_controller.State.IsGrounded && this.m_controller.StandingOnCollider && !this.m_enemyController.KnockedIntoAir && (this.m_controller.StandingOnCollider.CompareTag("Platform") || this.m_controller.StandingOnCollider.CompareTag("OneWay")))
@@ -35,7 +35,7 @@ public class PreventPlatformDrop : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B7D RID: 7037 RVA: 0x00057F7C File Offset: 0x0005617C
+	// Token: 0x06002619 RID: 9753 RVA: 0x000B4C38 File Offset: 0x000B2E38
 	private void CheckGroundRaycast_V2()
 	{
 		this.m_enemyController.LeftSidePlatformDropPrevented = false;
@@ -72,7 +72,7 @@ public class PreventPlatformDrop : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B7E RID: 7038 RVA: 0x000581FC File Offset: 0x000563FC
+	// Token: 0x0600261A RID: 9754 RVA: 0x000B4EB8 File Offset: 0x000B30B8
 	private void CheckGroundRaycast()
 	{
 		this.m_enemyController.LeftSidePlatformDropPrevented = false;
@@ -129,18 +129,18 @@ public class PreventPlatformDrop : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001928 RID: 6440
+	// Token: 0x04002104 RID: 8452
 	private CorgiController_RL m_controller;
 
-	// Token: 0x04001929 RID: 6441
+	// Token: 0x04002105 RID: 8453
 	private EnemyController m_enemyController;
 
-	// Token: 0x0400192A RID: 6442
+	// Token: 0x04002106 RID: 8454
 	private float m_raycastLength;
 
-	// Token: 0x0400192B RID: 6443
+	// Token: 0x04002107 RID: 8455
 	private RaycastHit2D m_raycastLeft;
 
-	// Token: 0x0400192C RID: 6444
+	// Token: 0x04002108 RID: 8456
 	private RaycastHit2D m_raycastRight;
 }

@@ -2,10 +2,10 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003A1 RID: 929
+// Token: 0x02000633 RID: 1587
 public class ChallengeOmniUIScoreboardEntry : MonoBehaviour
 {
-	// Token: 0x0600228F RID: 8847 RVA: 0x0007027C File Offset: 0x0006E47C
+	// Token: 0x060030A7 RID: 12455 RVA: 0x000D0E40 File Offset: 0x000CF040
 	public void UpdateEntry(ChallengeType challengeType)
 	{
 		ChallengeObj challenge = ChallengeManager.GetChallenge(challengeType);
@@ -59,23 +59,23 @@ public class ChallengeOmniUIScoreboardEntry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001DCB RID: 7627
+	// Token: 0x040027E4 RID: 10212
 	[SerializeField]
 	private ClassType m_scoreboardClassType;
 
-	// Token: 0x04001DCC RID: 7628
+	// Token: 0x040027E5 RID: 10213
 	[SerializeField]
 	private TMP_Text m_titleText;
 
-	// Token: 0x04001DCD RID: 7629
+	// Token: 0x040027E6 RID: 10214
 	[SerializeField]
 	private TMP_Text m_valueText;
 
-	// Token: 0x04001DCE RID: 7630
+	// Token: 0x040027E7 RID: 10215
 	[SerializeField]
 	private bool m_isTotalScore;
 
-	// Token: 0x04001DCF RID: 7631
+	// Token: 0x040027E8 RID: 10216
 	[SerializeField]
 	private bool m_isTrophyEntry;
 }

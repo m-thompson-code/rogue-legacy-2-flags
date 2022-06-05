@@ -2,36 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020004BB RID: 1211
+// Token: 0x020007D3 RID: 2003
 public class RoomTerrainManager
 {
-	// Token: 0x1700113F RID: 4415
-	// (get) Token: 0x06002D10 RID: 11536 RVA: 0x00098CFC File Offset: 0x00096EFC
-	// (set) Token: 0x06002D11 RID: 11537 RVA: 0x00098D04 File Offset: 0x00096F04
+	// Token: 0x170016A6 RID: 5798
+	// (get) Token: 0x06003DBC RID: 15804 RVA: 0x000222C5 File Offset: 0x000204C5
+	// (set) Token: 0x06003DBD RID: 15805 RVA: 0x000222CD File Offset: 0x000204CD
 	public Ferr2DT_PathTerrain[] Hazards { get; private set; }
 
-	// Token: 0x17001140 RID: 4416
-	// (get) Token: 0x06002D12 RID: 11538 RVA: 0x00098D0D File Offset: 0x00096F0D
-	// (set) Token: 0x06002D13 RID: 11539 RVA: 0x00098D15 File Offset: 0x00096F15
+	// Token: 0x170016A7 RID: 5799
+	// (get) Token: 0x06003DBE RID: 15806 RVA: 0x000222D6 File Offset: 0x000204D6
+	// (set) Token: 0x06003DBF RID: 15807 RVA: 0x000222DE File Offset: 0x000204DE
 	public List<Ferr2DT_PathTerrain> OneWays { get; private set; }
 
-	// Token: 0x17001141 RID: 4417
-	// (get) Token: 0x06002D14 RID: 11540 RVA: 0x00098D1E File Offset: 0x00096F1E
-	// (set) Token: 0x06002D15 RID: 11541 RVA: 0x00098D26 File Offset: 0x00096F26
+	// Token: 0x170016A8 RID: 5800
+	// (get) Token: 0x06003DC0 RID: 15808 RVA: 0x000222E7 File Offset: 0x000204E7
+	// (set) Token: 0x06003DC1 RID: 15809 RVA: 0x000222EF File Offset: 0x000204EF
 	public List<Ferr2DT_PathTerrain> Platforms { get; private set; }
 
-	// Token: 0x17001142 RID: 4418
-	// (get) Token: 0x06002D16 RID: 11542 RVA: 0x00098D2F File Offset: 0x00096F2F
+	// Token: 0x170016A9 RID: 5801
+	// (get) Token: 0x06003DC2 RID: 15810 RVA: 0x000222F8 File Offset: 0x000204F8
 	public BaseRoom Room { get; }
 
-	// Token: 0x06002D17 RID: 11543 RVA: 0x00098D37 File Offset: 0x00096F37
+	// Token: 0x06003DC3 RID: 15811 RVA: 0x00022300 File Offset: 0x00020500
 	public RoomTerrainManager(BaseRoom room)
 	{
 		this.Room = room;
 		this.Initialize();
 	}
 
-	// Token: 0x06002D18 RID: 11544 RVA: 0x00098D4C File Offset: 0x00096F4C
+	// Token: 0x06003DC4 RID: 15812 RVA: 0x000F9B80 File Offset: 0x000F7D80
 	public void Initialize()
 	{
 		this.Platforms = new List<Ferr2DT_PathTerrain>();
@@ -61,13 +61,13 @@ public class RoomTerrainManager
 		}
 	}
 
-	// Token: 0x06002D19 RID: 11545 RVA: 0x00098E80 File Offset: 0x00097080
+	// Token: 0x06003DC5 RID: 15813 RVA: 0x00022315 File Offset: 0x00020515
 	public void AddOneWay(Ferr2DT_PathTerrain oneWay)
 	{
 		this.OneWays.Add(oneWay);
 	}
 
-	// Token: 0x06002D1A RID: 11546 RVA: 0x00098E90 File Offset: 0x00097090
+	// Token: 0x06003DC6 RID: 15814 RVA: 0x000F9CB4 File Offset: 0x000F7EB4
 	public void RemoveOneWay(GameObject oneWayGameObject)
 	{
 		for (int i = this.OneWays.Count - 1; i >= 0; i--)
@@ -80,15 +80,15 @@ public class RoomTerrainManager
 		}
 	}
 
-	// Token: 0x06002D1B RID: 11547 RVA: 0x00098EDB File Offset: 0x000970DB
+	// Token: 0x06003DC7 RID: 15815 RVA: 0x00022323 File Offset: 0x00020523
 	public void AddPlatform(Ferr2DT_PathTerrain doorTerrain)
 	{
 		this.Platforms.Add(doorTerrain);
 	}
 
-	// Token: 0x04002438 RID: 9272
+	// Token: 0x0400309B RID: 12443
 	private static List<Ferr2DT_PathTerrain> m_pathTerrainChildrenHelper_STATIC = new List<Ferr2DT_PathTerrain>();
 
-	// Token: 0x04002439 RID: 9273
+	// Token: 0x0400309C RID: 12444
 	private static List<Ferr2DT_PathTerrain> m_hazardsHelper_STATIC = new List<Ferr2DT_PathTerrain>();
 }

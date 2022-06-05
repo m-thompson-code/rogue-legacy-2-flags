@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200044C RID: 1100
+// Token: 0x02000724 RID: 1828
 public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGenericPoolObj, IPlayHitEffect, IRoomConsumer, ILevelConsumer
 {
-	// Token: 0x17000FE6 RID: 4070
-	// (get) Token: 0x0600286E RID: 10350 RVA: 0x00086070 File Offset: 0x00084270
+	// Token: 0x170014E5 RID: 5349
+	// (get) Token: 0x060037D6 RID: 14294 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string RelicDamageTypeString
 	{
 		get
@@ -14,18 +14,18 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FE7 RID: 4071
-	// (get) Token: 0x0600286F RID: 10351 RVA: 0x00086073 File Offset: 0x00084273
-	// (set) Token: 0x06002870 RID: 10352 RVA: 0x0008607B File Offset: 0x0008427B
+	// Token: 0x170014E6 RID: 5350
+	// (get) Token: 0x060037D7 RID: 14295 RVA: 0x0001EAB9 File Offset: 0x0001CCB9
+	// (set) Token: 0x060037D8 RID: 14296 RVA: 0x0001EAC1 File Offset: 0x0001CCC1
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x17000FE8 RID: 4072
-	// (get) Token: 0x06002871 RID: 10353 RVA: 0x00086084 File Offset: 0x00084284
-	// (set) Token: 0x06002872 RID: 10354 RVA: 0x0008608C File Offset: 0x0008428C
+	// Token: 0x170014E7 RID: 5351
+	// (get) Token: 0x060037D9 RID: 14297 RVA: 0x0001EACA File Offset: 0x0001CCCA
+	// (set) Token: 0x060037DA RID: 14298 RVA: 0x0001EAD2 File Offset: 0x0001CCD2
 	public bool IsAwakeCalled { get; protected set; }
 
-	// Token: 0x17000FE9 RID: 4073
-	// (get) Token: 0x06002873 RID: 10355 RVA: 0x00086095 File Offset: 0x00084295
+	// Token: 0x170014E8 RID: 5352
+	// (get) Token: 0x060037DB RID: 14299 RVA: 0x0001EADB File Offset: 0x0001CCDB
 	public Animator Animator
 	{
 		get
@@ -34,8 +34,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FEA RID: 4074
-	// (get) Token: 0x06002874 RID: 10356 RVA: 0x0008609D File Offset: 0x0008429D
+	// Token: 0x170014E9 RID: 5353
+	// (get) Token: 0x060037DC RID: 14300 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public StatusEffectType[] StatusEffectTypes
 	{
 		get
@@ -44,8 +44,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FEB RID: 4075
-	// (get) Token: 0x06002875 RID: 10357 RVA: 0x000860A0 File Offset: 0x000842A0
+	// Token: 0x170014EA RID: 5354
+	// (get) Token: 0x060037DD RID: 14301 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public float[] StatusEffectDurations
 	{
 		get
@@ -54,8 +54,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FEC RID: 4076
-	// (get) Token: 0x06002876 RID: 10358 RVA: 0x000860A3 File Offset: 0x000842A3
+	// Token: 0x170014EB RID: 5355
+	// (get) Token: 0x060037DE RID: 14302 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public bool IsDotDamage
 	{
 		get
@@ -64,8 +64,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FED RID: 4077
-	// (get) Token: 0x06002877 RID: 10359 RVA: 0x000860A6 File Offset: 0x000842A6
+	// Token: 0x170014EC RID: 5356
+	// (get) Token: 0x060037DF RID: 14303 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public virtual bool PlayHitEffect
 	{
 		get
@@ -74,8 +74,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FEE RID: 4078
-	// (get) Token: 0x06002878 RID: 10360 RVA: 0x000860A9 File Offset: 0x000842A9
+	// Token: 0x170014ED RID: 5357
+	// (get) Token: 0x060037E0 RID: 14304 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public virtual bool PlayDirectionalHitEffect
 	{
 		get
@@ -84,8 +84,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FEF RID: 4079
-	// (get) Token: 0x06002879 RID: 10361 RVA: 0x000860AC File Offset: 0x000842AC
+	// Token: 0x170014EE RID: 5358
+	// (get) Token: 0x060037E1 RID: 14305 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string EffectNameOverride
 	{
 		get
@@ -94,8 +94,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FF0 RID: 4080
-	// (get) Token: 0x0600287A RID: 10362 RVA: 0x000860AF File Offset: 0x000842AF
+	// Token: 0x170014EF RID: 5359
+	// (get) Token: 0x060037E2 RID: 14306 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritChance
 	{
 		get
@@ -104,8 +104,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FF1 RID: 4081
-	// (get) Token: 0x0600287B RID: 10363 RVA: 0x000860B6 File Offset: 0x000842B6
+	// Token: 0x170014F0 RID: 5360
+	// (get) Token: 0x060037E3 RID: 14307 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualCritDamage
 	{
 		get
@@ -114,8 +114,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FF2 RID: 4082
-	// (get) Token: 0x0600287C RID: 10364 RVA: 0x000860BD File Offset: 0x000842BD
+	// Token: 0x170014F1 RID: 5361
+	// (get) Token: 0x060037E4 RID: 14308 RVA: 0x0001EAE3 File Offset: 0x0001CCE3
 	public virtual float ActualDamage
 	{
 		get
@@ -124,8 +124,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FF3 RID: 4083
-	// (get) Token: 0x0600287D RID: 10365 RVA: 0x000860CA File Offset: 0x000842CA
+	// Token: 0x170014F2 RID: 5362
+	// (get) Token: 0x060037E5 RID: 14309 RVA: 0x0001EAF0 File Offset: 0x0001CCF0
 	public float ActualKnockbackStrength
 	{
 		get
@@ -134,8 +134,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FF4 RID: 4084
-	// (get) Token: 0x0600287E RID: 10366 RVA: 0x000860D2 File Offset: 0x000842D2
+	// Token: 0x170014F3 RID: 5363
+	// (get) Token: 0x060037E6 RID: 14310 RVA: 0x0001EAF8 File Offset: 0x0001CCF8
 	public float ActualStunStrength
 	{
 		get
@@ -144,8 +144,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FF5 RID: 4085
-	// (get) Token: 0x0600287F RID: 10367 RVA: 0x000860DA File Offset: 0x000842DA
+	// Token: 0x170014F4 RID: 5364
+	// (get) Token: 0x060037E7 RID: 14311 RVA: 0x0001EB00 File Offset: 0x0001CD00
 	public virtual float BaseDamage
 	{
 		get
@@ -154,9 +154,9 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FF6 RID: 4086
-	// (get) Token: 0x06002880 RID: 10368 RVA: 0x000860E2 File Offset: 0x000842E2
-	// (set) Token: 0x06002881 RID: 10369 RVA: 0x000860EA File Offset: 0x000842EA
+	// Token: 0x170014F5 RID: 5365
+	// (get) Token: 0x060037E8 RID: 14312 RVA: 0x0001EB08 File Offset: 0x0001CD08
+	// (set) Token: 0x060037E9 RID: 14313 RVA: 0x0001EB10 File Offset: 0x0001CD10
 	public float BaseStunStrength
 	{
 		get
@@ -169,9 +169,9 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FF7 RID: 4087
-	// (get) Token: 0x06002882 RID: 10370 RVA: 0x000860F3 File Offset: 0x000842F3
-	// (set) Token: 0x06002883 RID: 10371 RVA: 0x000860FB File Offset: 0x000842FB
+	// Token: 0x170014F6 RID: 5366
+	// (get) Token: 0x060037EA RID: 14314 RVA: 0x0001EB19 File Offset: 0x0001CD19
+	// (set) Token: 0x060037EB RID: 14315 RVA: 0x0001EB21 File Offset: 0x0001CD21
 	public float BaseKnockbackStrength
 	{
 		get
@@ -184,8 +184,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FF8 RID: 4088
-	// (get) Token: 0x06002884 RID: 10372 RVA: 0x00086104 File Offset: 0x00084304
+	// Token: 0x170014F7 RID: 5367
+	// (get) Token: 0x060037EC RID: 14316 RVA: 0x0001EB2A File Offset: 0x0001CD2A
 	public Vector2 ExternalKnockbackMod
 	{
 		get
@@ -194,9 +194,9 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FF9 RID: 4089
-	// (get) Token: 0x06002885 RID: 10373 RVA: 0x0008610C File Offset: 0x0008430C
-	// (set) Token: 0x06002886 RID: 10374 RVA: 0x00086114 File Offset: 0x00084314
+	// Token: 0x170014F8 RID: 5368
+	// (get) Token: 0x060037ED RID: 14317 RVA: 0x0001EB32 File Offset: 0x0001CD32
+	// (set) Token: 0x060037EE RID: 14318 RVA: 0x0001EB3A File Offset: 0x0001CD3A
 	public StateID InitialState
 	{
 		get
@@ -209,8 +209,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FFA RID: 4090
-	// (get) Token: 0x06002887 RID: 10375 RVA: 0x0008611D File Offset: 0x0008431D
+	// Token: 0x170014F9 RID: 5369
+	// (get) Token: 0x060037EF RID: 14319 RVA: 0x0001EB19 File Offset: 0x0001CD19
 	public float KnockbackStrength
 	{
 		get
@@ -219,8 +219,8 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FFB RID: 4091
-	// (get) Token: 0x06002888 RID: 10376 RVA: 0x00086125 File Offset: 0x00084325
+	// Token: 0x170014FA RID: 5370
+	// (get) Token: 0x060037F0 RID: 14320 RVA: 0x000046FA File Offset: 0x000028FA
 	public StrikeType StrikeType
 	{
 		get
@@ -229,13 +229,13 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x17000FFC RID: 4092
-	// (get) Token: 0x06002889 RID: 10377 RVA: 0x00086129 File Offset: 0x00084329
-	// (set) Token: 0x0600288A RID: 10378 RVA: 0x00086131 File Offset: 0x00084331
+	// Token: 0x170014FB RID: 5371
+	// (get) Token: 0x060037F1 RID: 14321 RVA: 0x0001EB43 File Offset: 0x0001CD43
+	// (set) Token: 0x060037F2 RID: 14322 RVA: 0x0001EB4B File Offset: 0x0001CD4B
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x17000FFD RID: 4093
-	// (get) Token: 0x0600288B RID: 10379 RVA: 0x0008613A File Offset: 0x0008433A
+	// Token: 0x170014FC RID: 5372
+	// (get) Token: 0x060037F3 RID: 14323 RVA: 0x0001EB54 File Offset: 0x0001CD54
 	public int Level
 	{
 		get
@@ -244,42 +244,42 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x0600288C RID: 10380 RVA: 0x00086142 File Offset: 0x00084342
+	// Token: 0x060037F4 RID: 14324 RVA: 0x0001EB5C File Offset: 0x0001CD5C
 	public void SetLevel(int value)
 	{
 		this.level = value;
 	}
 
-	// Token: 0x0600288D RID: 10381 RVA: 0x0008614B File Offset: 0x0008434B
+	// Token: 0x060037F5 RID: 14325 RVA: 0x0001EB65 File Offset: 0x0001CD65
 	protected virtual void Awake()
 	{
 		this.m_animator = base.GetComponentInChildren<Animator>();
 		this.IsAwakeCalled = true;
 	}
 
-	// Token: 0x0600288E RID: 10382 RVA: 0x00086160 File Offset: 0x00084360
+	// Token: 0x060037F6 RID: 14326 RVA: 0x0001E5AA File Offset: 0x0001C7AA
 	public virtual void Initialize(HazardArgs hazardArgs)
 	{
 		this.InitialState = hazardArgs.InitialState;
 	}
 
-	// Token: 0x0600288F RID: 10383
+	// Token: 0x060037F7 RID: 14327
 	public abstract void ResetHazard();
 
-	// Token: 0x06002890 RID: 10384 RVA: 0x0008616E File Offset: 0x0008436E
+	// Token: 0x060037F8 RID: 14328 RVA: 0x0001E5DF File Offset: 0x0001C7DF
 	public void ResetValues()
 	{
 		this.ResetHazard();
 	}
 
-	// Token: 0x06002891 RID: 10385 RVA: 0x00086176 File Offset: 0x00084376
+	// Token: 0x060037F9 RID: 14329 RVA: 0x0001EB7A File Offset: 0x0001CD7A
 	public virtual void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.SetLevel(room.Level);
 	}
 
-	// Token: 0x06002892 RID: 10386 RVA: 0x0008618C File Offset: 0x0008438C
+	// Token: 0x060037FA RID: 14330 RVA: 0x000E70C4 File Offset: 0x000E52C4
 	public virtual void SetIsCulled(bool culled)
 	{
 		if (!this)
@@ -311,51 +311,51 @@ public abstract class Hazard : MonoBehaviour, IHazard, IRootObj, IDamageObj, IGe
 		}
 	}
 
-	// Token: 0x06002893 RID: 10387 RVA: 0x0008620A File Offset: 0x0008440A
+	// Token: 0x060037FB RID: 14331 RVA: 0x0001BE85 File Offset: 0x0001A085
 	protected virtual void OnDisable()
 	{
 		DisablePooledObjectManager.DisablePooledObject(this, false);
 	}
 
-	// Token: 0x06002895 RID: 10389 RVA: 0x0008623B File Offset: 0x0008443B
+	// Token: 0x060037FD RID: 14333 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IDamageObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x06002896 RID: 10390 RVA: 0x00086243 File Offset: 0x00084443
+	// Token: 0x060037FE RID: 14334 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x06002897 RID: 10391 RVA: 0x0008624B File Offset: 0x0008444B
+	// Token: 0x060037FF RID: 14335 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400217C RID: 8572
+	// Token: 0x04002CEA RID: 11498
 	[SerializeField]
 	private Vector2 m_knockbackMod = new Vector2(1f, 1f);
 
-	// Token: 0x0400217D RID: 8573
+	// Token: 0x04002CEB RID: 11499
 	[SerializeField]
 	private float m_knockbackStrength = 99f;
 
-	// Token: 0x0400217E RID: 8574
+	// Token: 0x04002CEC RID: 11500
 	[SerializeField]
 	protected GameObject m_pivot;
 
-	// Token: 0x0400217F RID: 8575
+	// Token: 0x04002CED RID: 11501
 	private float m_baseStunStrength;
 
-	// Token: 0x04002180 RID: 8576
+	// Token: 0x04002CEE RID: 11502
 	protected StateID m_initialState;
 
-	// Token: 0x04002181 RID: 8577
+	// Token: 0x04002CEF RID: 11503
 	private Animator m_animator;
 
-	// Token: 0x04002185 RID: 8581
+	// Token: 0x04002CF3 RID: 11507
 	private int level;
 }

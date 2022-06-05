@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x02000146 RID: 326
+// Token: 0x02000252 RID: 594
 public class TraitorBoss_Miniboss_AIScript : TraitorBoss_Basic_AIScript
 {
-	// Token: 0x17000601 RID: 1537
-	// (get) Token: 0x06000AF5 RID: 2805 RVA: 0x000221CA File Offset: 0x000203CA
+	// Token: 0x17000807 RID: 2055
+	// (get) Token: 0x0600110C RID: 4364 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override bool is_Gregory
 	{
 		get
@@ -14,7 +14,7 @@ public class TraitorBoss_Miniboss_AIScript : TraitorBoss_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000AF6 RID: 2806 RVA: 0x000221CD File Offset: 0x000203CD
+	// Token: 0x0600110D RID: 4365 RVA: 0x00008F28 File Offset: 0x00007128
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]

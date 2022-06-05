@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020002CD RID: 717
+// Token: 0x020004C2 RID: 1218
 [Serializable]
 public class EquipmentLoadout
 {
-	// Token: 0x06001C7E RID: 7294 RVA: 0x0005C650 File Offset: 0x0005A850
+	// Token: 0x06002748 RID: 10056 RVA: 0x00016186 File Offset: 0x00014386
 	public void LoadLoadout(CharacterData charData)
 	{
 		charData.EdgeEquipmentType = this.WeaponLoadout;
@@ -14,7 +14,7 @@ public class EquipmentLoadout
 		charData.TrinketEquipmentType = this.TrinketLoadOut;
 	}
 
-	// Token: 0x06001C7F RID: 7295 RVA: 0x0005C68E File Offset: 0x0005A88E
+	// Token: 0x06002749 RID: 10057 RVA: 0x000161C4 File Offset: 0x000143C4
 	public void SaveLoadout(CharacterData charData)
 	{
 		this.WeaponLoadout = charData.EdgeEquipmentType;
@@ -24,7 +24,7 @@ public class EquipmentLoadout
 		this.TrinketLoadOut = charData.TrinketEquipmentType;
 	}
 
-	// Token: 0x06001C80 RID: 7296 RVA: 0x0005C6CC File Offset: 0x0005A8CC
+	// Token: 0x0600274A RID: 10058 RVA: 0x000B8B74 File Offset: 0x000B6D74
 	public static void VerifyLoadoutWeight()
 	{
 		CharacterData currentCharacter = SaveManager.PlayerSaveData.CurrentCharacter;
@@ -50,24 +50,24 @@ public class EquipmentLoadout
 		}
 	}
 
-	// Token: 0x06001C81 RID: 7297 RVA: 0x0005C752 File Offset: 0x0005A952
+	// Token: 0x0600274B RID: 10059 RVA: 0x00016202 File Offset: 0x00014402
 	public EquipmentLoadout Clone()
 	{
 		return base.MemberwiseClone() as EquipmentLoadout;
 	}
 
-	// Token: 0x040019DE RID: 6622
+	// Token: 0x040021E5 RID: 8677
 	public EquipmentType WeaponLoadout;
 
-	// Token: 0x040019DF RID: 6623
+	// Token: 0x040021E6 RID: 8678
 	public EquipmentType CapeLoadout;
 
-	// Token: 0x040019E0 RID: 6624
+	// Token: 0x040021E7 RID: 8679
 	public EquipmentType ChestLoadout;
 
-	// Token: 0x040019E1 RID: 6625
+	// Token: 0x040021E8 RID: 8680
 	public EquipmentType HeadLoadout;
 
-	// Token: 0x040019E2 RID: 6626
+	// Token: 0x040021E9 RID: 8681
 	public EquipmentType TrinketLoadOut;
 }

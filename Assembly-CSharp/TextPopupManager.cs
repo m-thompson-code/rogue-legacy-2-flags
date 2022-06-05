@@ -4,24 +4,24 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x020006B2 RID: 1714
+// Token: 0x02000B5A RID: 2906
 public class TextPopupManager : MonoBehaviour
 {
-	// Token: 0x06003F2B RID: 16171 RVA: 0x000E0FD0 File Offset: 0x000DF1D0
+	// Token: 0x0600585F RID: 22623 RVA: 0x00030074 File Offset: 0x0002E274
 	private void Awake()
 	{
 		this.Initialize();
 		SceneManager.sceneLoaded += this.OnSceneLoaded;
 	}
 
-	// Token: 0x06003F2C RID: 16172 RVA: 0x000E0FE9 File Offset: 0x000DF1E9
+	// Token: 0x06005860 RID: 22624 RVA: 0x0003008D File Offset: 0x0002E28D
 	private void OnDestroy()
 	{
 		TextPopupManager.m_isInitialized = false;
 		SceneManager.sceneLoaded -= this.OnSceneLoaded;
 	}
 
-	// Token: 0x06003F2D RID: 16173 RVA: 0x000E1002 File Offset: 0x000DF202
+	// Token: 0x06005861 RID: 22625 RVA: 0x000300A6 File Offset: 0x0002E2A6
 	private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
 		if (TextPopupManager.IsInitialized)
@@ -30,7 +30,7 @@ public class TextPopupManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F2E RID: 16174 RVA: 0x000E1010 File Offset: 0x000DF210
+	// Token: 0x06005862 RID: 22626 RVA: 0x0015137C File Offset: 0x0014F57C
 	private void Initialize()
 	{
 		this.m_popupLockoutDurationTable = new Dictionary<TextPopupType, float>();
@@ -50,7 +50,7 @@ public class TextPopupManager : MonoBehaviour
 		TextPopupManager.m_isInitialized = true;
 	}
 
-	// Token: 0x06003F2F RID: 16175 RVA: 0x000E1110 File Offset: 0x000DF310
+	// Token: 0x06005863 RID: 22627 RVA: 0x0015147C File Offset: 0x0014F67C
 	private TextPopupObj GetTextPopup(TextPopupType popupType)
 	{
 		GenericPool_RL<TextPopupObj> genericPool_RL = null;
@@ -61,8 +61,8 @@ public class TextPopupManager : MonoBehaviour
 		return genericPool_RL.GetFreeObj();
 	}
 
-	// Token: 0x17001591 RID: 5521
-	// (get) Token: 0x06003F30 RID: 16176 RVA: 0x000E1157 File Offset: 0x000DF357
+	// Token: 0x17001D89 RID: 7561
+	// (get) Token: 0x06005864 RID: 22628 RVA: 0x000300B4 File Offset: 0x0002E2B4
 	private static TextPopupManager Instance
 	{
 		get
@@ -75,8 +75,8 @@ public class TextPopupManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001592 RID: 5522
-	// (get) Token: 0x06003F31 RID: 16177 RVA: 0x000E1176 File Offset: 0x000DF376
+	// Token: 0x17001D8A RID: 7562
+	// (get) Token: 0x06005865 RID: 22629 RVA: 0x000300D3 File Offset: 0x0002E2D3
 	public static bool IsInitialized
 	{
 		get
@@ -85,7 +85,7 @@ public class TextPopupManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F32 RID: 16178 RVA: 0x000E1180 File Offset: 0x000DF380
+	// Token: 0x06005866 RID: 22630 RVA: 0x001514C4 File Offset: 0x0014F6C4
 	public static TextPopupObj DisplayTextDefaultPos(TextPopupType popupType, string text, BaseCharacterController charController, bool attachToSource, bool queuePopup = true)
 	{
 		Vector2 spawnPos = charController.Midpoint;
@@ -94,7 +94,7 @@ public class TextPopupManager : MonoBehaviour
 		return TextPopupManager.DisplayText(popupType, text, charController.gameObject, spawnPos, attachToSource, queuePopup);
 	}
 
-	// Token: 0x06003F33 RID: 16179 RVA: 0x000E11DC File Offset: 0x000DF3DC
+	// Token: 0x06005867 RID: 22631 RVA: 0x00151520 File Offset: 0x0014F720
 	public static TextPopupObj DisplayText(TextPopupType popupType, string text, GameObject source, Vector2 spawnPos, bool attachToSource, bool queuePopup = true)
 	{
 		spawnPos.y += 0.5f;
@@ -128,7 +128,7 @@ public class TextPopupManager : MonoBehaviour
 		return textPopup;
 	}
 
-	// Token: 0x06003F34 RID: 16180 RVA: 0x000E12F8 File Offset: 0x000DF4F8
+	// Token: 0x06005868 RID: 22632 RVA: 0x0015163C File Offset: 0x0014F83C
 	public static TextPopupObj DisplayTextAtAbsPos(TextPopupType popupType, string text, Vector2 absPos, GameObject source = null, TextAlignmentOptions alignmentOptions = TextAlignmentOptions.Center)
 	{
 		absPos.y += 0.5f;
@@ -154,7 +154,7 @@ public class TextPopupManager : MonoBehaviour
 		return textPopup;
 	}
 
-	// Token: 0x06003F35 RID: 16181 RVA: 0x000E1424 File Offset: 0x000DF624
+	// Token: 0x06005869 RID: 22633 RVA: 0x00151768 File Offset: 0x0014F968
 	public static TextPopupObj DisplayLocIDText(TextPopupType popupType, string locID, StringGenderType genderType, Vector2 position, float lockoutDuration = 0f)
 	{
 		position.y += 0.5f;
@@ -171,7 +171,7 @@ public class TextPopupManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003F36 RID: 16182 RVA: 0x000E14CC File Offset: 0x000DF6CC
+	// Token: 0x0600586A RID: 22634 RVA: 0x00151810 File Offset: 0x0014FA10
 	private void LateUpdate()
 	{
 		if (this.m_popupYOffsetDict.Count > 0)
@@ -192,7 +192,7 @@ public class TextPopupManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F37 RID: 16183 RVA: 0x000E15AC File Offset: 0x000DF7AC
+	// Token: 0x0600586B RID: 22635 RVA: 0x001518F0 File Offset: 0x0014FAF0
 	public static void DisableAllTextPopups()
 	{
 		foreach (KeyValuePair<TextPopupType, GenericPool_RL<TextPopupObj>> keyValuePair in TextPopupManager.Instance.m_textPopupDict)
@@ -201,7 +201,7 @@ public class TextPopupManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003F38 RID: 16184 RVA: 0x000E160C File Offset: 0x000DF80C
+	// Token: 0x0600586C RID: 22636 RVA: 0x00151950 File Offset: 0x0014FB50
 	public static void DestroyPools()
 	{
 		foreach (KeyValuePair<TextPopupType, GenericPool_RL<TextPopupObj>> keyValuePair in TextPopupManager.Instance.m_textPopupDict)
@@ -211,36 +211,36 @@ public class TextPopupManager : MonoBehaviour
 		TextPopupManager.Instance.m_textPopupDict.Clear();
 	}
 
-	// Token: 0x04002EE8 RID: 12008
+	// Token: 0x04004131 RID: 16689
 	private const float TEXT_POPUP_DELAY_INTERVAL = 0.15f;
 
-	// Token: 0x04002EE9 RID: 12009
+	// Token: 0x04004132 RID: 16690
 	private const float TEXT_POPUP_Y_OFFSET = 0.9f;
 
-	// Token: 0x04002EEA RID: 12010
+	// Token: 0x04004133 RID: 16691
 	private const float TEXT_POPUP_Y_OFFSET_DURATION = 0.1f;
 
-	// Token: 0x04002EEB RID: 12011
+	// Token: 0x04004134 RID: 16692
 	private const string TEXTPOPUPMANAGER_NAME = "TextPopupManager";
 
-	// Token: 0x04002EEC RID: 12012
+	// Token: 0x04004135 RID: 16693
 	private const string RESOURCE_PATH = "Prefabs/Managers/TextPopupManager";
 
-	// Token: 0x04002EED RID: 12013
+	// Token: 0x04004136 RID: 16694
 	private Dictionary<TextPopupType, GenericPool_RL<TextPopupObj>> m_textPopupDict;
 
-	// Token: 0x04002EEE RID: 12014
+	// Token: 0x04004137 RID: 16695
 	private Dictionary<TextPopupType, float> m_popupLockoutDurationTable;
 
-	// Token: 0x04002EEF RID: 12015
+	// Token: 0x04004138 RID: 16696
 	private Dictionary<GameObject, Vector2> m_popupYOffsetDict = new Dictionary<GameObject, Vector2>();
 
-	// Token: 0x04002EF0 RID: 12016
+	// Token: 0x04004139 RID: 16697
 	private List<GameObject> m_offsetClearHelper = new List<GameObject>();
 
-	// Token: 0x04002EF1 RID: 12017
+	// Token: 0x0400413A RID: 16698
 	private static bool m_isInitialized;
 
-	// Token: 0x04002EF2 RID: 12018
+	// Token: 0x0400413B RID: 16699
 	private static TextPopupManager m_textPopupManager;
 }

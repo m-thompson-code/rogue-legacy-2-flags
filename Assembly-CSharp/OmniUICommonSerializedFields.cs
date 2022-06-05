@@ -3,11 +3,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020003C0 RID: 960
+// Token: 0x02000658 RID: 1624
 public class OmniUICommonSerializedFields : MonoBehaviour
 {
-	// Token: 0x17000E90 RID: 3728
-	// (get) Token: 0x06002370 RID: 9072 RVA: 0x0007373F File Offset: 0x0007193F
+	// Token: 0x17001325 RID: 4901
+	// (get) Token: 0x0600318E RID: 12686 RVA: 0x0001B393 File Offset: 0x00019593
 	public CanvasGroup LetterBoxGroup
 	{
 		get
@@ -16,8 +16,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E91 RID: 3729
-	// (get) Token: 0x06002371 RID: 9073 RVA: 0x00073747 File Offset: 0x00071947
+	// Token: 0x17001326 RID: 4902
+	// (get) Token: 0x0600318F RID: 12687 RVA: 0x0001B39B File Offset: 0x0001959B
 	public CanvasGroup MenuCanvasGroup
 	{
 		get
@@ -26,8 +26,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E92 RID: 3730
-	// (get) Token: 0x06002372 RID: 9074 RVA: 0x0007374F File Offset: 0x0007194F
+	// Token: 0x17001327 RID: 4903
+	// (get) Token: 0x06003190 RID: 12688 RVA: 0x0001B3A3 File Offset: 0x000195A3
 	public VerticalLayoutGroup CategoryEntryLayoutGroup
 	{
 		get
@@ -36,8 +36,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E93 RID: 3731
-	// (get) Token: 0x06002373 RID: 9075 RVA: 0x00073757 File Offset: 0x00071957
+	// Token: 0x17001328 RID: 4904
+	// (get) Token: 0x06003191 RID: 12689 RVA: 0x0001B3AB File Offset: 0x000195AB
 	public VerticalLayoutGroup EntryLayoutGroup
 	{
 		get
@@ -46,8 +46,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E94 RID: 3732
-	// (get) Token: 0x06002374 RID: 9076 RVA: 0x0007375F File Offset: 0x0007195F
+	// Token: 0x17001329 RID: 4905
+	// (get) Token: 0x06003192 RID: 12690 RVA: 0x0001B3B3 File Offset: 0x000195B3
 	public GameObject SelectedCategoryIndicator
 	{
 		get
@@ -56,8 +56,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E95 RID: 3733
-	// (get) Token: 0x06002375 RID: 9077 RVA: 0x00073767 File Offset: 0x00071967
+	// Token: 0x1700132A RID: 4906
+	// (get) Token: 0x06003193 RID: 12691 RVA: 0x0001B3BB File Offset: 0x000195BB
 	public TMP_Text ChooseCategoryText
 	{
 		get
@@ -66,8 +66,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E96 RID: 3734
-	// (get) Token: 0x06002376 RID: 9078 RVA: 0x0007376F File Offset: 0x0007196F
+	// Token: 0x1700132B RID: 4907
+	// (get) Token: 0x06003194 RID: 12692 RVA: 0x0001B3C3 File Offset: 0x000195C3
 	public CanvasGroup BackgroundCanvasGroup
 	{
 		get
@@ -76,8 +76,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E97 RID: 3735
-	// (get) Token: 0x06002377 RID: 9079 RVA: 0x00073777 File Offset: 0x00071977
+	// Token: 0x1700132C RID: 4908
+	// (get) Token: 0x06003195 RID: 12693 RVA: 0x0001B3CB File Offset: 0x000195CB
 	public PlayerLookController PlayerModel
 	{
 		get
@@ -86,8 +86,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E98 RID: 3736
-	// (get) Token: 0x06002378 RID: 9080 RVA: 0x0007377F File Offset: 0x0007197F
+	// Token: 0x1700132D RID: 4909
+	// (get) Token: 0x06003196 RID: 12694 RVA: 0x0001B3D3 File Offset: 0x000195D3
 	public GameObject PlayerSpawnPosObj
 	{
 		get
@@ -96,8 +96,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E99 RID: 3737
-	// (get) Token: 0x06002379 RID: 9081 RVA: 0x00073787 File Offset: 0x00071987
+	// Token: 0x1700132E RID: 4910
+	// (get) Token: 0x06003197 RID: 12695 RVA: 0x0001B3DB File Offset: 0x000195DB
 	public GameObject NPCModel
 	{
 		get
@@ -106,8 +106,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E9A RID: 3738
-	// (get) Token: 0x0600237A RID: 9082 RVA: 0x0007378F File Offset: 0x0007198F
+	// Token: 0x1700132F RID: 4911
+	// (get) Token: 0x06003198 RID: 12696 RVA: 0x0001B3E3 File Offset: 0x000195E3
 	public GameObject NPCSpawnPosObj
 	{
 		get
@@ -116,8 +116,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E9B RID: 3739
-	// (get) Token: 0x0600237B RID: 9083 RVA: 0x00073797 File Offset: 0x00071997
+	// Token: 0x17001330 RID: 4912
+	// (get) Token: 0x06003199 RID: 12697 RVA: 0x0001B3EB File Offset: 0x000195EB
 	public NPCController NPCController
 	{
 		get
@@ -126,8 +126,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E9C RID: 3740
-	// (get) Token: 0x0600237C RID: 9084 RVA: 0x0007379F File Offset: 0x0007199F
+	// Token: 0x17001331 RID: 4913
+	// (get) Token: 0x0600319A RID: 12698 RVA: 0x0001B3F3 File Offset: 0x000195F3
 	public CanvasGroup DescriptionBox
 	{
 		get
@@ -136,8 +136,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E9D RID: 3741
-	// (get) Token: 0x0600237D RID: 9085 RVA: 0x000737A7 File Offset: 0x000719A7
+	// Token: 0x17001332 RID: 4914
+	// (get) Token: 0x0600319B RID: 12699 RVA: 0x0001B3FB File Offset: 0x000195FB
 	public CanvasGroup DescriptionBoxRaycastBlocker
 	{
 		get
@@ -146,8 +146,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E9E RID: 3742
-	// (get) Token: 0x0600237E RID: 9086 RVA: 0x000737AF File Offset: 0x000719AF
+	// Token: 0x17001333 RID: 4915
+	// (get) Token: 0x0600319C RID: 12700 RVA: 0x0001B403 File Offset: 0x00019603
 	public CanvasGroup PurchaseBox
 	{
 		get
@@ -156,8 +156,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000E9F RID: 3743
-	// (get) Token: 0x0600237F RID: 9087 RVA: 0x000737B7 File Offset: 0x000719B7
+	// Token: 0x17001334 RID: 4916
+	// (get) Token: 0x0600319D RID: 12701 RVA: 0x0001B40B File Offset: 0x0001960B
 	public GameObject ResetTextbox
 	{
 		get
@@ -166,8 +166,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EA0 RID: 3744
-	// (get) Token: 0x06002380 RID: 9088 RVA: 0x000737BF File Offset: 0x000719BF
+	// Token: 0x17001335 RID: 4917
+	// (get) Token: 0x0600319E RID: 12702 RVA: 0x0001B413 File Offset: 0x00019613
 	public ScrollBarInput_RL ScrollBarInput
 	{
 		get
@@ -176,8 +176,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EA1 RID: 3745
-	// (get) Token: 0x06002381 RID: 9089 RVA: 0x000737C7 File Offset: 0x000719C7
+	// Token: 0x17001336 RID: 4918
+	// (get) Token: 0x0600319F RID: 12703 RVA: 0x0001B41B File Offset: 0x0001961B
 	public Scrollbar ScrollBar
 	{
 		get
@@ -186,8 +186,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EA2 RID: 3746
-	// (get) Token: 0x06002382 RID: 9090 RVA: 0x000737CF File Offset: 0x000719CF
+	// Token: 0x17001337 RID: 4919
+	// (get) Token: 0x060031A0 RID: 12704 RVA: 0x0001B423 File Offset: 0x00019623
 	public ScrollRect ScrollRect
 	{
 		get
@@ -196,8 +196,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EA3 RID: 3747
-	// (get) Token: 0x06002383 RID: 9091 RVA: 0x000737D7 File Offset: 0x000719D7
+	// Token: 0x17001338 RID: 4920
+	// (get) Token: 0x060031A1 RID: 12705 RVA: 0x0001B42B File Offset: 0x0001962B
 	public RectTransform ContentViewport
 	{
 		get
@@ -206,8 +206,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EA4 RID: 3748
-	// (get) Token: 0x06002384 RID: 9092 RVA: 0x000737DF File Offset: 0x000719DF
+	// Token: 0x17001339 RID: 4921
+	// (get) Token: 0x060031A2 RID: 12706 RVA: 0x0001B433 File Offset: 0x00019633
 	public GameObject TopScrollArrow
 	{
 		get
@@ -216,8 +216,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EA5 RID: 3749
-	// (get) Token: 0x06002385 RID: 9093 RVA: 0x000737E7 File Offset: 0x000719E7
+	// Token: 0x1700133A RID: 4922
+	// (get) Token: 0x060031A3 RID: 12707 RVA: 0x0001B43B File Offset: 0x0001963B
 	public Image TopScrollNewSymbol
 	{
 		get
@@ -226,8 +226,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EA6 RID: 3750
-	// (get) Token: 0x06002386 RID: 9094 RVA: 0x000737EF File Offset: 0x000719EF
+	// Token: 0x1700133B RID: 4923
+	// (get) Token: 0x060031A4 RID: 12708 RVA: 0x0001B443 File Offset: 0x00019643
 	public Image TopScrollUpgradeSymbol
 	{
 		get
@@ -236,8 +236,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EA7 RID: 3751
-	// (get) Token: 0x06002387 RID: 9095 RVA: 0x000737F7 File Offset: 0x000719F7
+	// Token: 0x1700133C RID: 4924
+	// (get) Token: 0x060031A5 RID: 12709 RVA: 0x0001B44B File Offset: 0x0001964B
 	public GameObject BottomScrollArrow
 	{
 		get
@@ -246,8 +246,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EA8 RID: 3752
-	// (get) Token: 0x06002388 RID: 9096 RVA: 0x000737FF File Offset: 0x000719FF
+	// Token: 0x1700133D RID: 4925
+	// (get) Token: 0x060031A6 RID: 12710 RVA: 0x0001B453 File Offset: 0x00019653
 	public Image BottomScrollNewSymbol
 	{
 		get
@@ -256,8 +256,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EA9 RID: 3753
-	// (get) Token: 0x06002389 RID: 9097 RVA: 0x00073807 File Offset: 0x00071A07
+	// Token: 0x1700133E RID: 4926
+	// (get) Token: 0x060031A7 RID: 12711 RVA: 0x0001B45B File Offset: 0x0001965B
 	public Image BottomScrollUpgradeSymbol
 	{
 		get
@@ -266,8 +266,8 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000EAA RID: 3754
-	// (get) Token: 0x0600238A RID: 9098 RVA: 0x0007380F File Offset: 0x00071A0F
+	// Token: 0x1700133F RID: 4927
+	// (get) Token: 0x060031A8 RID: 12712 RVA: 0x0001B463 File Offset: 0x00019663
 	public GameObject WarningMessageBox
 	{
 		get
@@ -276,116 +276,116 @@ public class OmniUICommonSerializedFields : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001E21 RID: 7713
+	// Token: 0x0400285A RID: 10330
 	[Header("LetterBox")]
 	[SerializeField]
 	private CanvasGroup m_letterBoxGroup;
 
-	// Token: 0x04001E22 RID: 7714
+	// Token: 0x0400285B RID: 10331
 	[Header("Entries")]
 	[SerializeField]
 	protected CanvasGroup m_menuCanvasGroup;
 
-	// Token: 0x04001E23 RID: 7715
+	// Token: 0x0400285C RID: 10332
 	[SerializeField]
 	private VerticalLayoutGroup m_categoryEntryLayoutGroup;
 
-	// Token: 0x04001E24 RID: 7716
+	// Token: 0x0400285D RID: 10333
 	[SerializeField]
 	private VerticalLayoutGroup m_entryLayoutGroup;
 
-	// Token: 0x04001E25 RID: 7717
+	// Token: 0x0400285E RID: 10334
 	[SerializeField]
 	private GameObject m_selectedCategoryIndicator;
 
-	// Token: 0x04001E26 RID: 7718
+	// Token: 0x0400285F RID: 10335
 	[SerializeField]
 	private TMP_Text m_chooseCategoryText;
 
-	// Token: 0x04001E27 RID: 7719
+	// Token: 0x04002860 RID: 10336
 	[SerializeField]
 	private CanvasGroup m_bgCanvasGroup;
 
-	// Token: 0x04001E28 RID: 7720
+	// Token: 0x04002861 RID: 10337
 	[Header("Models")]
 	[SerializeField]
 	private PlayerLookController m_playerModel;
 
-	// Token: 0x04001E29 RID: 7721
+	// Token: 0x04002862 RID: 10338
 	[SerializeField]
 	private GameObject m_playerSpawnPosObj;
 
-	// Token: 0x04001E2A RID: 7722
+	// Token: 0x04002863 RID: 10339
 	[SerializeField]
 	private GameObject m_NPCModel;
 
-	// Token: 0x04001E2B RID: 7723
+	// Token: 0x04002864 RID: 10340
 	[SerializeField]
 	private GameObject m_npcSpawnPosObj;
 
-	// Token: 0x04001E2C RID: 7724
+	// Token: 0x04002865 RID: 10341
 	[SerializeField]
 	private NPCController m_npcController;
 
-	// Token: 0x04001E2D RID: 7725
+	// Token: 0x04002866 RID: 10342
 	[Header("Description Boxes")]
 	[SerializeField]
 	protected CanvasGroup m_descriptionBox;
 
-	// Token: 0x04001E2E RID: 7726
+	// Token: 0x04002867 RID: 10343
 	[SerializeField]
 	protected CanvasGroup m_descriptionBoxRaycastBlocker;
 
-	// Token: 0x04001E2F RID: 7727
+	// Token: 0x04002868 RID: 10344
 	[SerializeField]
 	private CanvasGroup m_purchaseBox;
 
-	// Token: 0x04001E30 RID: 7728
+	// Token: 0x04002869 RID: 10345
 	[SerializeField]
 	private GameObject m_resetTextbox;
 
-	// Token: 0x04001E31 RID: 7729
+	// Token: 0x0400286A RID: 10346
 	[Header("Scrollbar")]
 	[SerializeField]
 	private ScrollBarInput_RL m_scrollBarInput;
 
-	// Token: 0x04001E32 RID: 7730
+	// Token: 0x0400286B RID: 10347
 	[SerializeField]
 	private Scrollbar m_scrollBar;
 
-	// Token: 0x04001E33 RID: 7731
+	// Token: 0x0400286C RID: 10348
 	[SerializeField]
 	private ScrollRect m_scrollRect;
 
-	// Token: 0x04001E34 RID: 7732
+	// Token: 0x0400286D RID: 10349
 	[SerializeField]
 	private RectTransform m_contentViewport;
 
-	// Token: 0x04001E35 RID: 7733
+	// Token: 0x0400286E RID: 10350
 	[SerializeField]
 	private GameObject m_topScrollArrow;
 
-	// Token: 0x04001E36 RID: 7734
+	// Token: 0x0400286F RID: 10351
 	[SerializeField]
 	private Image m_topScrollNewSymbol;
 
-	// Token: 0x04001E37 RID: 7735
+	// Token: 0x04002870 RID: 10352
 	[SerializeField]
 	private Image m_topScrollUpgradeSymbol;
 
-	// Token: 0x04001E38 RID: 7736
+	// Token: 0x04002871 RID: 10353
 	[SerializeField]
 	private GameObject m_bottomScrollArrow;
 
-	// Token: 0x04001E39 RID: 7737
+	// Token: 0x04002872 RID: 10354
 	[SerializeField]
 	private Image m_bottomScrollNewSymbol;
 
-	// Token: 0x04001E3A RID: 7738
+	// Token: 0x04002873 RID: 10355
 	[SerializeField]
 	private Image m_bottomScrollUpgradeSymbol;
 
-	// Token: 0x04001E3B RID: 7739
+	// Token: 0x04002874 RID: 10356
 	[SerializeField]
 	private GameObject m_warningMessageBox;
 }

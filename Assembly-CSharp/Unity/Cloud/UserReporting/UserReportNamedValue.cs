@@ -2,24 +2,24 @@
 
 namespace Unity.Cloud.UserReporting
 {
-	// Token: 0x0200083F RID: 2111
+	// Token: 0x02000D25 RID: 3365
 	public struct UserReportNamedValue
 	{
-		// Token: 0x060045C4 RID: 17860 RVA: 0x000F8621 File Offset: 0x000F6821
+		// Token: 0x06005FFC RID: 24572 RVA: 0x00034EE4 File Offset: 0x000330E4
 		public UserReportNamedValue(string name, string value)
 		{
 			this.Name = name;
 			this.Value = value;
 		}
 
-		// Token: 0x1700174B RID: 5963
-		// (get) Token: 0x060045C5 RID: 17861 RVA: 0x000F8631 File Offset: 0x000F6831
-		// (set) Token: 0x060045C6 RID: 17862 RVA: 0x000F8639 File Offset: 0x000F6839
+		// Token: 0x17001F79 RID: 8057
+		// (get) Token: 0x06005FFD RID: 24573 RVA: 0x00034EF4 File Offset: 0x000330F4
+		// (set) Token: 0x06005FFE RID: 24574 RVA: 0x00034EFC File Offset: 0x000330FC
 		public string Name { readonly get; set; }
 
-		// Token: 0x1700174C RID: 5964
-		// (get) Token: 0x060045C7 RID: 17863 RVA: 0x000F8642 File Offset: 0x000F6842
-		// (set) Token: 0x060045C8 RID: 17864 RVA: 0x000F864A File Offset: 0x000F684A
+		// Token: 0x17001F7A RID: 8058
+		// (get) Token: 0x06005FFF RID: 24575 RVA: 0x00034F05 File Offset: 0x00033105
+		// (set) Token: 0x06006000 RID: 24576 RVA: 0x00034F0D File Offset: 0x0003310D
 		public string Value { readonly get; set; }
 	}
 }

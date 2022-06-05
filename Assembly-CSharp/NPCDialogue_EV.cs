@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000073 RID: 115
+// Token: 0x0200007B RID: 123
 public static class NPCDialogue_EV
 {
-	// Token: 0x060001A5 RID: 421 RVA: 0x0000F1D0 File Offset: 0x0000D3D0
+	// Token: 0x060001B9 RID: 441 RVA: 0x0004B71C File Offset: 0x0004991C
 	public static int GetNPCDialogueCooldown(NPCType npcType)
 	{
 		switch (npcType)
@@ -32,7 +32,7 @@ public static class NPCDialogue_EV
 		return 0;
 	}
 
-	// Token: 0x060001A6 RID: 422 RVA: 0x0000F230 File Offset: 0x0000D430
+	// Token: 0x060001BA RID: 442 RVA: 0x0004B77C File Offset: 0x0004997C
 	public static string GetNPCTitleLocID(NPCType npcType)
 	{
 		switch (npcType)
@@ -71,22 +71,22 @@ public static class NPCDialogue_EV
 		return null;
 	}
 
-	// Token: 0x040003C1 RID: 961
+	// Token: 0x040003E2 RID: 994
 	public static Vector2Int MAX_DIALOGUE_HUB_TOWN = new Vector2Int(2, 3);
 
-	// Token: 0x040003C2 RID: 962
+	// Token: 0x040003E3 RID: 995
 	public const int MAX_DIALOGUE_KINGDOM = 99;
 
-	// Token: 0x040003C3 RID: 963
+	// Token: 0x040003E4 RID: 996
 	public const int GLOBAL_DIALOGUE_CD = 0;
 
-	// Token: 0x040003C4 RID: 964
+	// Token: 0x040003E5 RID: 997
 	public const bool IGNORE_CHAR_DIALOGUE_CD_IN_TEXT_CHAINS = false;
 
-	// Token: 0x040003C5 RID: 965
+	// Token: 0x040003E6 RID: 998
 	public const bool IGNORE_GLOBAL_DIALOGUE_CD_IN_TEXT_CHAINS = true;
 
-	// Token: 0x040003C6 RID: 966
+	// Token: 0x040003E7 RID: 999
 	public static Dictionary<NPCType, NPCDialogueEntry[]> NPCDialogueTable = new Dictionary<NPCType, NPCDialogueEntry[]>
 	{
 		{
@@ -534,7 +534,7 @@ public static class NPCDialogue_EV
 		}
 	};
 
-	// Token: 0x040003C7 RID: 967
+	// Token: 0x040003E8 RID: 1000
 	public static List<NPCType> NPCDialogueOrderList = new List<NPCType>
 	{
 		NPCType.Charon,
@@ -547,7 +547,7 @@ public static class NPCDialogue_EV
 		NPCType.LivingSafe
 	};
 
-	// Token: 0x040003C8 RID: 968
+	// Token: 0x040003E9 RID: 1001
 	public static string[] PIZZA_GIRL_HUBTOWN_GENERIC_DIALOGUES = new string[]
 	{
 		"LOC_ID_DIALOGUE_TELEPORTER_NPC_TOWN_TALK_REPEAT_1",
@@ -556,7 +556,7 @@ public static class NPCDialogue_EV
 		"LOC_ID_DIALOGUE_TELEPORTER_NPC_TOWN_TALK_REPEAT_4"
 	};
 
-	// Token: 0x040003C9 RID: 969
+	// Token: 0x040003EA RID: 1002
 	public static string[] NEW_GAME_PLUS_ACTIVATE_DIALOGUES = new string[]
 	{
 		"LOC_ID_NG_TEXT_CHANGING_DIMENSIONS_1",

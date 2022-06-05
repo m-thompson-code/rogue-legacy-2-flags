@@ -1,13 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006FE RID: 1790
+// Token: 0x02000BB1 RID: 2993
 [Serializable]
 public class AnimationControllerEntry
 {
-	// Token: 0x1700161B RID: 5659
-	// (get) Token: 0x060040BF RID: 16575 RVA: 0x000E56EE File Offset: 0x000E38EE
-	// (set) Token: 0x060040C0 RID: 16576 RVA: 0x000E56F6 File Offset: 0x000E38F6
+	// Token: 0x17001E17 RID: 7703
+	// (get) Token: 0x06005A08 RID: 23048 RVA: 0x00031281 File Offset: 0x0002F481
+	// (set) Token: 0x06005A09 RID: 23049 RVA: 0x00031289 File Offset: 0x0002F489
 	public int Id
 	{
 		get
@@ -20,9 +20,9 @@ public class AnimationControllerEntry
 		}
 	}
 
-	// Token: 0x1700161C RID: 5660
-	// (get) Token: 0x060040C1 RID: 16577 RVA: 0x000E56FF File Offset: 0x000E38FF
-	// (set) Token: 0x060040C2 RID: 16578 RVA: 0x000E5707 File Offset: 0x000E3907
+	// Token: 0x17001E18 RID: 7704
+	// (get) Token: 0x06005A0A RID: 23050 RVA: 0x00031292 File Offset: 0x0002F492
+	// (set) Token: 0x06005A0B RID: 23051 RVA: 0x0003129A File Offset: 0x0002F49A
 	public string AnimationParameter
 	{
 		get
@@ -35,9 +35,9 @@ public class AnimationControllerEntry
 		}
 	}
 
-	// Token: 0x1700161D RID: 5661
-	// (get) Token: 0x060040C3 RID: 16579 RVA: 0x000E5710 File Offset: 0x000E3910
-	// (set) Token: 0x060040C4 RID: 16580 RVA: 0x000E5718 File Offset: 0x000E3918
+	// Token: 0x17001E19 RID: 7705
+	// (get) Token: 0x06005A0C RID: 23052 RVA: 0x000312A3 File Offset: 0x0002F4A3
+	// (set) Token: 0x06005A0D RID: 23053 RVA: 0x000312AB File Offset: 0x0002F4AB
 	public bool BoolValue
 	{
 		get
@@ -50,9 +50,9 @@ public class AnimationControllerEntry
 		}
 	}
 
-	// Token: 0x1700161E RID: 5662
-	// (get) Token: 0x060040C5 RID: 16581 RVA: 0x000E5721 File Offset: 0x000E3921
-	// (set) Token: 0x060040C6 RID: 16582 RVA: 0x000E5729 File Offset: 0x000E3929
+	// Token: 0x17001E1A RID: 7706
+	// (get) Token: 0x06005A0E RID: 23054 RVA: 0x000312B4 File Offset: 0x0002F4B4
+	// (set) Token: 0x06005A0F RID: 23055 RVA: 0x000312BC File Offset: 0x0002F4BC
 	public int IntValue
 	{
 		get
@@ -65,9 +65,9 @@ public class AnimationControllerEntry
 		}
 	}
 
-	// Token: 0x1700161F RID: 5663
-	// (get) Token: 0x060040C7 RID: 16583 RVA: 0x000E5732 File Offset: 0x000E3932
-	// (set) Token: 0x060040C8 RID: 16584 RVA: 0x000E573A File Offset: 0x000E393A
+	// Token: 0x17001E1B RID: 7707
+	// (get) Token: 0x06005A10 RID: 23056 RVA: 0x000312C5 File Offset: 0x0002F4C5
+	// (set) Token: 0x06005A11 RID: 23057 RVA: 0x000312CD File Offset: 0x0002F4CD
 	public AnimatorControllerParameterType ParameterType
 	{
 		get
@@ -80,9 +80,9 @@ public class AnimationControllerEntry
 		}
 	}
 
-	// Token: 0x17001620 RID: 5664
-	// (get) Token: 0x060040C9 RID: 16585 RVA: 0x000E5743 File Offset: 0x000E3943
-	// (set) Token: 0x060040CA RID: 16586 RVA: 0x000E574B File Offset: 0x000E394B
+	// Token: 0x17001E1C RID: 7708
+	// (get) Token: 0x06005A12 RID: 23058 RVA: 0x000312D6 File Offset: 0x0002F4D6
+	// (set) Token: 0x06005A13 RID: 23059 RVA: 0x000312DE File Offset: 0x0002F4DE
 	public float FloatValue
 	{
 		get
@@ -95,28 +95,28 @@ public class AnimationControllerEntry
 		}
 	}
 
-	// Token: 0x0400327C RID: 12924
+	// Token: 0x040044F7 RID: 17655
 	[SerializeField]
 	[ReadOnly]
 	private int m_id;
 
-	// Token: 0x0400327D RID: 12925
+	// Token: 0x040044F8 RID: 17656
 	[SerializeField]
 	private string m_animationParameter;
 
-	// Token: 0x0400327E RID: 12926
+	// Token: 0x040044F9 RID: 17657
 	[SerializeField]
 	private AnimatorControllerParameterType m_parameterType = AnimatorControllerParameterType.Bool;
 
-	// Token: 0x0400327F RID: 12927
+	// Token: 0x040044FA RID: 17658
 	[SerializeField]
 	private bool m_boolValue;
 
-	// Token: 0x04003280 RID: 12928
+	// Token: 0x040044FB RID: 17659
 	[SerializeField]
 	private int m_intValue;
 
-	// Token: 0x04003281 RID: 12929
+	// Token: 0x040044FC RID: 17660
 	[SerializeField]
 	private float m_floatValue;
 }

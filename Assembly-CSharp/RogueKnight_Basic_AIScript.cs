@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200010E RID: 270
+// Token: 0x020001B4 RID: 436
 public class RogueKnight_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x0600083B RID: 2107 RVA: 0x0001C1A6 File Offset: 0x0001A3A6
+	// Token: 0x06000BF4 RID: 3060 RVA: 0x00007444 File Offset: 0x00005644
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -14,8 +14,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x1700046A RID: 1130
-	// (get) Token: 0x0600083C RID: 2108 RVA: 0x0001C1BC File Offset: 0x0001A3BC
+	// Token: 0x170005A6 RID: 1446
+	// (get) Token: 0x06000BF5 RID: 3061 RVA: 0x00003F6C File Offset: 0x0000216C
 	protected override Vector2 IdleDuration
 	{
 		get
@@ -24,8 +24,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700046B RID: 1131
-	// (get) Token: 0x0600083D RID: 2109 RVA: 0x0001C1CD File Offset: 0x0001A3CD
+	// Token: 0x170005A7 RID: 1447
+	// (get) Token: 0x06000BF6 RID: 3062 RVA: 0x0000745A File Offset: 0x0000565A
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -34,8 +34,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700046C RID: 1132
-	// (get) Token: 0x0600083E RID: 2110 RVA: 0x0001C1DE File Offset: 0x0001A3DE
+	// Token: 0x170005A8 RID: 1448
+	// (get) Token: 0x06000BF7 RID: 3063 RVA: 0x0000746B File Offset: 0x0000566B
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -44,8 +44,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700046D RID: 1133
-	// (get) Token: 0x0600083F RID: 2111 RVA: 0x0001C1EF File Offset: 0x0001A3EF
+	// Token: 0x170005A9 RID: 1449
+	// (get) Token: 0x06000BF8 RID: 3064 RVA: 0x00004AB5 File Offset: 0x00002CB5
 	protected virtual float m_dash_TellIntro_AnimationSpeed
 	{
 		get
@@ -54,8 +54,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700046E RID: 1134
-	// (get) Token: 0x06000840 RID: 2112 RVA: 0x0001C1F6 File Offset: 0x0001A3F6
+	// Token: 0x170005AA RID: 1450
+	// (get) Token: 0x06000BF9 RID: 3065 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_TellHold_AnimationSpeed
 	{
 		get
@@ -64,8 +64,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700046F RID: 1135
-	// (get) Token: 0x06000841 RID: 2113 RVA: 0x0001C1FD File Offset: 0x0001A3FD
+	// Token: 0x170005AB RID: 1451
+	// (get) Token: 0x06000BFA RID: 3066 RVA: 0x0000566E File Offset: 0x0000386E
 	protected virtual float m_dash_TellIntroAndHold_Delay
 	{
 		get
@@ -74,8 +74,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000470 RID: 1136
-	// (get) Token: 0x06000842 RID: 2114 RVA: 0x0001C204 File Offset: 0x0001A404
+	// Token: 0x170005AC RID: 1452
+	// (get) Token: 0x06000BFB RID: 3067 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float m_dash_RepeatTellIntroAndHold_Delay
 	{
 		get
@@ -84,8 +84,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000471 RID: 1137
-	// (get) Token: 0x06000843 RID: 2115 RVA: 0x0001C20B File Offset: 0x0001A40B
+	// Token: 0x170005AD RID: 1453
+	// (get) Token: 0x06000BFC RID: 3068 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_AttackIntro_AnimationSpeed
 	{
 		get
@@ -94,8 +94,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000472 RID: 1138
-	// (get) Token: 0x06000844 RID: 2116 RVA: 0x0001C212 File Offset: 0x0001A412
+	// Token: 0x170005AE RID: 1454
+	// (get) Token: 0x06000BFD RID: 3069 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_AttackIntro_Delay
 	{
 		get
@@ -104,8 +104,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000473 RID: 1139
-	// (get) Token: 0x06000845 RID: 2117 RVA: 0x0001C219 File Offset: 0x0001A419
+	// Token: 0x170005AF RID: 1455
+	// (get) Token: 0x06000BFE RID: 3070 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_dash_AttackHold_AnimationSpeed
 	{
 		get
@@ -114,8 +114,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000474 RID: 1140
-	// (get) Token: 0x06000846 RID: 2118 RVA: 0x0001C220 File Offset: 0x0001A420
+	// Token: 0x170005B0 RID: 1456
+	// (get) Token: 0x06000BFF RID: 3071 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_AttackHold_Delay
 	{
 		get
@@ -124,8 +124,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000475 RID: 1141
-	// (get) Token: 0x06000847 RID: 2119 RVA: 0x0001C227 File Offset: 0x0001A427
+	// Token: 0x170005B1 RID: 1457
+	// (get) Token: 0x06000C00 RID: 3072 RVA: 0x00006780 File Offset: 0x00004980
 	protected virtual float m_dash_Exit_AnimationSpeed
 	{
 		get
@@ -134,8 +134,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000476 RID: 1142
-	// (get) Token: 0x06000848 RID: 2120 RVA: 0x0001C22E File Offset: 0x0001A42E
+	// Token: 0x170005B2 RID: 1458
+	// (get) Token: 0x06000C01 RID: 3073 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_dash_Exit_Delay
 	{
 		get
@@ -144,8 +144,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000477 RID: 1143
-	// (get) Token: 0x06000849 RID: 2121 RVA: 0x0001C235 File Offset: 0x0001A435
+	// Token: 0x170005B3 RID: 1459
+	// (get) Token: 0x06000C02 RID: 3074 RVA: 0x00004520 File Offset: 0x00002720
 	protected virtual float m_dash_Exit_ForceIdle
 	{
 		get
@@ -154,8 +154,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000478 RID: 1144
-	// (get) Token: 0x0600084A RID: 2122 RVA: 0x0001C23C File Offset: 0x0001A43C
+	// Token: 0x170005B4 RID: 1460
+	// (get) Token: 0x06000C03 RID: 3075 RVA: 0x00005319 File Offset: 0x00003519
 	protected virtual float m_dash_AttackCD
 	{
 		get
@@ -164,8 +164,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000479 RID: 1145
-	// (get) Token: 0x0600084B RID: 2123 RVA: 0x0001C243 File Offset: 0x0001A443
+	// Token: 0x170005B5 RID: 1461
+	// (get) Token: 0x06000C04 RID: 3076 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_raiseKnockbackDefenseWhileAttacking
 	{
 		get
@@ -174,8 +174,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700047A RID: 1146
-	// (get) Token: 0x0600084C RID: 2124 RVA: 0x0001C246 File Offset: 0x0001A446
+	// Token: 0x170005B6 RID: 1462
+	// (get) Token: 0x06000C05 RID: 3077 RVA: 0x00004762 File Offset: 0x00002962
 	protected virtual int m_knockbackDefenseBoostOverride
 	{
 		get
@@ -184,8 +184,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700047B RID: 1147
-	// (get) Token: 0x0600084D RID: 2125 RVA: 0x0001C249 File Offset: 0x0001A449
+	// Token: 0x170005B7 RID: 1463
+	// (get) Token: 0x06000C06 RID: 3078 RVA: 0x0000747C File Offset: 0x0000567C
 	protected virtual float m_dash_Attack_Duration
 	{
 		get
@@ -194,8 +194,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700047C RID: 1148
-	// (get) Token: 0x0600084E RID: 2126 RVA: 0x0001C250 File Offset: 0x0001A450
+	// Token: 0x170005B8 RID: 1464
+	// (get) Token: 0x06000C07 RID: 3079 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected virtual float m_dash_Attack_LockDelay
 	{
 		get
@@ -204,8 +204,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700047D RID: 1149
-	// (get) Token: 0x0600084F RID: 2127 RVA: 0x0001C257 File Offset: 0x0001A457
+	// Token: 0x170005B9 RID: 1465
+	// (get) Token: 0x06000C08 RID: 3080 RVA: 0x0000521E File Offset: 0x0000341E
 	protected virtual float m_dash_Attack_Speed
 	{
 		get
@@ -214,8 +214,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700047E RID: 1150
-	// (get) Token: 0x06000850 RID: 2128 RVA: 0x0001C25E File Offset: 0x0001A45E
+	// Token: 0x170005BA RID: 1466
+	// (get) Token: 0x06000C09 RID: 3081 RVA: 0x0000747C File Offset: 0x0000567C
 	protected virtual float m_dash_RepeatAttack_Duration
 	{
 		get
@@ -224,8 +224,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700047F RID: 1151
-	// (get) Token: 0x06000851 RID: 2129 RVA: 0x0001C265 File Offset: 0x0001A465
+	// Token: 0x170005BB RID: 1467
+	// (get) Token: 0x06000C0A RID: 3082 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected virtual float m_dash_RepeatAttack_LockDelay
 	{
 		get
@@ -234,8 +234,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000480 RID: 1152
-	// (get) Token: 0x06000852 RID: 2130 RVA: 0x0001C26C File Offset: 0x0001A46C
+	// Token: 0x170005BC RID: 1468
+	// (get) Token: 0x06000C0B RID: 3083 RVA: 0x0000521E File Offset: 0x0000341E
 	protected virtual float m_dash_RepeatAttack_Speed
 	{
 		get
@@ -244,8 +244,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000481 RID: 1153
-	// (get) Token: 0x06000853 RID: 2131 RVA: 0x0001C273 File Offset: 0x0001A473
+	// Token: 0x170005BD RID: 1469
+	// (get) Token: 0x06000C0C RID: 3084 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected virtual float m_dash_EndGravity_Delay
 	{
 		get
@@ -254,8 +254,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000482 RID: 1154
-	// (get) Token: 0x06000854 RID: 2132 RVA: 0x0001C27A File Offset: 0x0001A47A
+	// Token: 0x170005BE RID: 1470
+	// (get) Token: 0x06000C0D RID: 3085 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_dash_NumDashes
 	{
 		get
@@ -264,8 +264,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000483 RID: 1155
-	// (get) Token: 0x06000855 RID: 2133 RVA: 0x0001C27D File Offset: 0x0001A47D
+	// Token: 0x170005BF RID: 1471
+	// (get) Token: 0x06000C0E RID: 3086 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual int m_dash_OddstoThrowVersusDashing
 	{
 		get
@@ -274,8 +274,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000484 RID: 1156
-	// (get) Token: 0x06000856 RID: 2134 RVA: 0x0001C280 File Offset: 0x0001A480
+	// Token: 0x170005C0 RID: 1472
+	// (get) Token: 0x06000C0F RID: 3087 RVA: 0x00004FE5 File Offset: 0x000031E5
 	protected virtual float m_throw_Exit_ForceIdle
 	{
 		get
@@ -284,8 +284,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000485 RID: 1157
-	// (get) Token: 0x06000857 RID: 2135 RVA: 0x0001C287 File Offset: 0x0001A487
+	// Token: 0x170005C1 RID: 1473
+	// (get) Token: 0x06000C10 RID: 3088 RVA: 0x00007483 File Offset: 0x00005683
 	protected virtual float m_throw_AttackCD
 	{
 		get
@@ -294,8 +294,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000486 RID: 1158
-	// (get) Token: 0x06000858 RID: 2136 RVA: 0x0001C28E File Offset: 0x0001A48E
+	// Token: 0x170005C2 RID: 1474
+	// (get) Token: 0x06000C11 RID: 3089 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_throw_Attack_TargetPlayer
 	{
 		get
@@ -304,8 +304,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000487 RID: 1159
-	// (get) Token: 0x06000859 RID: 2137 RVA: 0x0001C291 File Offset: 0x0001A491
+	// Token: 0x170005C3 RID: 1475
+	// (get) Token: 0x06000C12 RID: 3090 RVA: 0x000047A4 File Offset: 0x000029A4
 	protected virtual int m_throw_Attack_ProjectileAmount
 	{
 		get
@@ -314,8 +314,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000488 RID: 1160
-	// (get) Token: 0x0600085A RID: 2138 RVA: 0x0001C294 File Offset: 0x0001A494
+	// Token: 0x170005C4 RID: 1476
+	// (get) Token: 0x06000C13 RID: 3091 RVA: 0x0000452F File Offset: 0x0000272F
 	protected virtual float m_throw_Attack_ProjectileDelay
 	{
 		get
@@ -324,8 +324,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000489 RID: 1161
-	// (get) Token: 0x0600085B RID: 2139 RVA: 0x0001C29B File Offset: 0x0001A49B
+	// Token: 0x170005C5 RID: 1477
+	// (get) Token: 0x06000C14 RID: 3092 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_throw_RepeatAttack_TargetPlayer
 	{
 		get
@@ -334,8 +334,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700048A RID: 1162
-	// (get) Token: 0x0600085C RID: 2140 RVA: 0x0001C29E File Offset: 0x0001A49E
+	// Token: 0x170005C6 RID: 1478
+	// (get) Token: 0x06000C15 RID: 3093 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_throw_RepeatAttack_ProjectileAmount
 	{
 		get
@@ -344,8 +344,8 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700048B RID: 1163
-	// (get) Token: 0x0600085D RID: 2141 RVA: 0x0001C2A1 File Offset: 0x0001A4A1
+	// Token: 0x170005C7 RID: 1479
+	// (get) Token: 0x06000C16 RID: 3094 RVA: 0x0000452F File Offset: 0x0000272F
 	protected virtual float m_throw_RepeatAttack_ProjectileDelay
 	{
 		get
@@ -354,7 +354,7 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x0600085E RID: 2142 RVA: 0x0001C2A8 File Offset: 0x0001A4A8
+	// Token: 0x06000C17 RID: 3095 RVA: 0x0006BDF4 File Offset: 0x00069FF4
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -365,7 +365,7 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		this.m_aimIndicator.SetActive(false);
 	}
 
-	// Token: 0x0600085F RID: 2143 RVA: 0x0001C2FE File Offset: 0x0001A4FE
+	// Token: 0x06000C18 RID: 3096 RVA: 0x0000748A File Offset: 0x0000568A
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -448,7 +448,7 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000860 RID: 2144 RVA: 0x0001C30D File Offset: 0x0001A50D
+	// Token: 0x06000C19 RID: 3097 RVA: 0x00007499 File Offset: 0x00005699
 	protected IEnumerator DashRepeat()
 	{
 		base.EnemyController.LockFlip = false;
@@ -485,7 +485,7 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000861 RID: 2145 RVA: 0x0001C31C File Offset: 0x0001A51C
+	// Token: 0x06000C1A RID: 3098 RVA: 0x000074A8 File Offset: 0x000056A8
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -530,7 +530,7 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000862 RID: 2146 RVA: 0x0001C32B File Offset: 0x0001A52B
+	// Token: 0x06000C1B RID: 3099 RVA: 0x000074B7 File Offset: 0x000056B7
 	protected IEnumerator ThrowRepeat()
 	{
 		this.StopAndFaceTarget();
@@ -563,7 +563,7 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000863 RID: 2147 RVA: 0x0001C33C File Offset: 0x0001A53C
+	// Token: 0x06000C1C RID: 3100 RVA: 0x0006BE4C File Offset: 0x0006A04C
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.OnLBCompleteOrCancelled();
@@ -574,37 +574,37 @@ public class RogueKnight_Basic_AIScript : BaseAIScript
 		base.EnemyController.LockFlip = false;
 	}
 
-	// Token: 0x04000B93 RID: 2963
+	// Token: 0x04000E6F RID: 3695
 	protected float m_throw_TellIntro_AnimationSpeed = 0.75f;
 
-	// Token: 0x04000B94 RID: 2964
+	// Token: 0x04000E70 RID: 3696
 	protected float m_throw_TellHold_AnimationSpeed = 0.65f;
 
-	// Token: 0x04000B95 RID: 2965
+	// Token: 0x04000E71 RID: 3697
 	protected float m_throw_TellIntroAndHold_Delay = 0.9f;
 
-	// Token: 0x04000B96 RID: 2966
+	// Token: 0x04000E72 RID: 3698
 	protected float m_throw_RepeatTellIntroAndHold_Delay = 0.5f;
 
-	// Token: 0x04000B97 RID: 2967
+	// Token: 0x04000E73 RID: 3699
 	protected float m_throw_AttackIntro_AnimationSpeed = 2f;
 
-	// Token: 0x04000B98 RID: 2968
+	// Token: 0x04000E74 RID: 3700
 	protected float m_throw_AttackIntro_Delay;
 
-	// Token: 0x04000B99 RID: 2969
+	// Token: 0x04000E75 RID: 3701
 	protected float m_throw_AttackHold_AnimationSpeed = 2f;
 
-	// Token: 0x04000B9A RID: 2970
+	// Token: 0x04000E76 RID: 3702
 	protected float m_throw_AttackHold_Delay = 0.25f;
 
-	// Token: 0x04000B9B RID: 2971
+	// Token: 0x04000E77 RID: 3703
 	protected float m_throw_Exit_AnimationSpeed = 0.45f;
 
-	// Token: 0x04000B9C RID: 2972
+	// Token: 0x04000E78 RID: 3704
 	protected float m_throw_Exit_Delay = 0.15f;
 
-	// Token: 0x04000B9D RID: 2973
+	// Token: 0x04000E79 RID: 3705
 	[SerializeField]
 	private GameObject m_aimIndicator;
 }

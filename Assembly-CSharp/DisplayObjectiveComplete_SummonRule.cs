@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200051D RID: 1309
+// Token: 0x02000893 RID: 2195
 [Serializable]
 public class DisplayObjectiveComplete_SummonRule : BaseSummonRule
 {
-	// Token: 0x170011DE RID: 4574
-	// (get) Token: 0x06003077 RID: 12407 RVA: 0x000A5C6E File Offset: 0x000A3E6E
+	// Token: 0x170017F7 RID: 6135
+	// (get) Token: 0x0600433F RID: 17215 RVA: 0x000252E9 File Offset: 0x000234E9
 	public override SummonRuleType RuleType
 	{
 		get
@@ -16,8 +16,8 @@ public class DisplayObjectiveComplete_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011DF RID: 4575
-	// (get) Token: 0x06003078 RID: 12408 RVA: 0x000A5C75 File Offset: 0x000A3E75
+	// Token: 0x170017F8 RID: 6136
+	// (get) Token: 0x06004340 RID: 17216 RVA: 0x000252F0 File Offset: 0x000234F0
 	public override string RuleLabel
 	{
 		get
@@ -26,7 +26,7 @@ public class DisplayObjectiveComplete_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x06003079 RID: 12409 RVA: 0x000A5C7C File Offset: 0x000A3E7C
+	// Token: 0x06004341 RID: 17217 RVA: 0x000252F7 File Offset: 0x000234F7
 	public override IEnumerator RunSummonRule()
 	{
 		ObjectiveCompleteHUDEventArgs objectiveCompleteHUDEventArgs = null;
@@ -56,25 +56,25 @@ public class DisplayObjectiveComplete_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x04002680 RID: 9856
+	// Token: 0x0400346E RID: 13422
 	[SerializeField]
 	private ObjectiveCompleteHUDType m_hudType;
 
-	// Token: 0x04002681 RID: 9857
+	// Token: 0x0400346F RID: 13423
 	[SerializeField]
 	private InsightType m_insightType;
 
-	// Token: 0x04002682 RID: 9858
+	// Token: 0x04003470 RID: 13424
 	[SerializeField]
 	private bool m_insightDiscovered;
 
-	// Token: 0x04002683 RID: 9859
+	// Token: 0x04003471 RID: 13425
 	[SerializeField]
 	private string m_bossLocIDOverride;
 
-	// Token: 0x04002684 RID: 9860
+	// Token: 0x04003472 RID: 13426
 	private InsightObjectiveCompleteHUDEventArgs m_insightCompleteEventArgs = new InsightObjectiveCompleteHUDEventArgs(InsightType.None, false, 5f, null, null, null);
 
-	// Token: 0x04002685 RID: 9861
+	// Token: 0x04003473 RID: 13427
 	private BossObjectiveCompleteHUDEventArgs m_bossCompleteEventArgs = new BossObjectiveCompleteHUDEventArgs(EnemyType.None, EnemyRank.None, 5f, null, null, null);
 }

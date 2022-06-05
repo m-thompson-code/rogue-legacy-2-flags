@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200007A RID: 122
+// Token: 0x02000082 RID: 130
 public class SkillTree_EV
 {
-	// Token: 0x060001B8 RID: 440 RVA: 0x00011384 File Offset: 0x0000F584
+	// Token: 0x060001CC RID: 460 RVA: 0x0004D84C File Offset: 0x0004BA4C
 	public static int GetMaxCharonBonusLevel()
 	{
 		int num = 25;
@@ -16,28 +16,28 @@ public class SkillTree_EV
 		return Mathf.Clamp(num, 0, SkillTree_EV.CHARON_GOLD_STAT_BONUS_MILESTONES.Length);
 	}
 
-	// Token: 0x060001B9 RID: 441 RVA: 0x000113C7 File Offset: 0x0000F5C7
+	// Token: 0x060001CD RID: 461 RVA: 0x00003B78 File Offset: 0x00001D78
 	public static int GetMaxCharonAcceptableGold()
 	{
 		return SkillTree_EV.CHARON_GOLD_STAT_BONUS_MILESTONES[SkillTree_EV.GetMaxCharonBonusLevel() - 1];
 	}
 
-	// Token: 0x040004D2 RID: 1234
+	// Token: 0x040004F3 RID: 1267
 	public const byte SKILLS_UNLOCKED_BEFORE_LABOUR_COSTS_START = 20;
 
-	// Token: 0x040004D3 RID: 1235
+	// Token: 0x040004F4 RID: 1268
 	public const float GLOBAL_SKILL_COST_APPRECIATION_FLAT = 14f;
 
-	// Token: 0x040004D4 RID: 1236
+	// Token: 0x040004F5 RID: 1269
 	public const int GLOBAL_SKILL_COST_ROUNDING = 5;
 
-	// Token: 0x040004D5 RID: 1237
+	// Token: 0x040004F6 RID: 1270
 	public const int GOLD_SAVED_STARTING_CAP = 1000;
 
-	// Token: 0x040004D6 RID: 1238
+	// Token: 0x040004F7 RID: 1271
 	public const float GOLD_SAVED_STARTING_SAVE_AMOUNT_MOD = 0.1f;
 
-	// Token: 0x040004D7 RID: 1239
+	// Token: 0x040004F8 RID: 1272
 	public static int[] CHARON_GOLD_STAT_BONUS_MILESTONES = new int[]
 	{
 		7500,
@@ -143,15 +143,15 @@ public class SkillTree_EV
 		76760000
 	};
 
-	// Token: 0x040004D8 RID: 1240
+	// Token: 0x040004F9 RID: 1273
 	public const int CHARON_GOLD_STAT_BONUS_AMOUNT = 1;
 
-	// Token: 0x040004D9 RID: 1241
+	// Token: 0x040004FA RID: 1274
 	private const int CHARON_GOLD_STAT_BONUS_STARTING_MAX_LEVEL = 25;
 
-	// Token: 0x040004DA RID: 1242
+	// Token: 0x040004FB RID: 1275
 	public const int CHARON_GOLD_RUNE_WEIGHT_BONUS_AMOUNT = 2;
 
-	// Token: 0x040004DB RID: 1243
+	// Token: 0x040004FC RID: 1276
 	public const int CHARON_GOLD_ARMOR_BONUS_AMOUNT = 2;
 }

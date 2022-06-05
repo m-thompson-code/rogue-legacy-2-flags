@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x0200068D RID: 1677
+// Token: 0x02000B15 RID: 2837
 public class CameraZoomChangeEventArgs : EventArgs
 {
-	// Token: 0x06003CC2 RID: 15554 RVA: 0x000D2186 File Offset: 0x000D0386
+	// Token: 0x06005554 RID: 21844 RVA: 0x0002E521 File Offset: 0x0002C721
 	public CameraZoomChangeEventArgs(float zoomLevel, float previousZoomLevel)
 	{
 		this.Initialize(zoomLevel, previousZoomLevel);
 	}
 
-	// Token: 0x06003CC3 RID: 15555 RVA: 0x000D2196 File Offset: 0x000D0396
+	// Token: 0x06005555 RID: 21845 RVA: 0x0002E531 File Offset: 0x0002C731
 	public void Initialize(float zoomLevel, float previousZoomLevel)
 	{
 		this.ZoomLevel = zoomLevel;
 		this.PreviousZoomLevel = previousZoomLevel;
 	}
 
-	// Token: 0x17001525 RID: 5413
-	// (get) Token: 0x06003CC4 RID: 15556 RVA: 0x000D21A6 File Offset: 0x000D03A6
-	// (set) Token: 0x06003CC5 RID: 15557 RVA: 0x000D21AE File Offset: 0x000D03AE
+	// Token: 0x17001CF1 RID: 7409
+	// (get) Token: 0x06005556 RID: 21846 RVA: 0x0002E541 File Offset: 0x0002C741
+	// (set) Token: 0x06005557 RID: 21847 RVA: 0x0002E549 File Offset: 0x0002C749
 	public float ZoomLevel { get; private set; }
 
-	// Token: 0x17001526 RID: 5414
-	// (get) Token: 0x06003CC6 RID: 15558 RVA: 0x000D21B7 File Offset: 0x000D03B7
-	// (set) Token: 0x06003CC7 RID: 15559 RVA: 0x000D21BF File Offset: 0x000D03BF
+	// Token: 0x17001CF2 RID: 7410
+	// (get) Token: 0x06005558 RID: 21848 RVA: 0x0002E552 File Offset: 0x0002C752
+	// (set) Token: 0x06005559 RID: 21849 RVA: 0x0002E55A File Offset: 0x0002C75A
 	public float PreviousZoomLevel { get; private set; }
 }

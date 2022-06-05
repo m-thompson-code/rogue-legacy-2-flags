@@ -2,10 +2,10 @@
 
 namespace RLWorldCreation
 {
-	// Token: 0x02000888 RID: 2184
+	// Token: 0x02000DA8 RID: 3496
 	public class SetRoomCountEventArgs : BiomeCreationEventArgs
 	{
-		// Token: 0x060047BC RID: 18364 RVA: 0x001020E9 File Offset: 0x001002E9
+		// Token: 0x060062BA RID: 25274 RVA: 0x00036663 File Offset: 0x00034863
 		public SetRoomCountEventArgs(int standardCount, int fairyCount, int trapCount, int bonusCount, int mandatoryCount)
 		{
 			this.StandardCount = standardCount;
@@ -15,24 +15,24 @@ namespace RLWorldCreation
 			this.MandatoryCount = mandatoryCount;
 		}
 
-		// Token: 0x17001784 RID: 6020
-		// (get) Token: 0x060047BD RID: 18365 RVA: 0x00102116 File Offset: 0x00100316
+		// Token: 0x17001FE6 RID: 8166
+		// (get) Token: 0x060062BB RID: 25275 RVA: 0x00036690 File Offset: 0x00034890
 		public int StandardCount { get; }
 
-		// Token: 0x17001785 RID: 6021
-		// (get) Token: 0x060047BE RID: 18366 RVA: 0x0010211E File Offset: 0x0010031E
+		// Token: 0x17001FE7 RID: 8167
+		// (get) Token: 0x060062BC RID: 25276 RVA: 0x00036698 File Offset: 0x00034898
 		public int FairyCount { get; }
 
-		// Token: 0x17001786 RID: 6022
-		// (get) Token: 0x060047BF RID: 18367 RVA: 0x00102126 File Offset: 0x00100326
+		// Token: 0x17001FE8 RID: 8168
+		// (get) Token: 0x060062BD RID: 25277 RVA: 0x000366A0 File Offset: 0x000348A0
 		public int TrapCount { get; }
 
-		// Token: 0x17001787 RID: 6023
-		// (get) Token: 0x060047C0 RID: 18368 RVA: 0x0010212E File Offset: 0x0010032E
+		// Token: 0x17001FE9 RID: 8169
+		// (get) Token: 0x060062BE RID: 25278 RVA: 0x000366A8 File Offset: 0x000348A8
 		public int BonusCount { get; }
 
-		// Token: 0x17001788 RID: 6024
-		// (get) Token: 0x060047C1 RID: 18369 RVA: 0x00102136 File Offset: 0x00100336
+		// Token: 0x17001FEA RID: 8170
+		// (get) Token: 0x060062BF RID: 25279 RVA: 0x000366B0 File Offset: 0x000348B0
 		public int MandatoryCount { get; }
 	}
 }

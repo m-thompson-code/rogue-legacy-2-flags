@@ -4,21 +4,21 @@ using UnityEngine;
 
 namespace Unity.Cloud.UserReporting.Plugin
 {
-	// Token: 0x02000845 RID: 2117
+	// Token: 0x02000D30 RID: 3376
 	public class UnityUserReportingUpdater : IEnumerator
 	{
-		// Token: 0x0600460F RID: 17935 RVA: 0x000F9738 File Offset: 0x000F7938
+		// Token: 0x06006066 RID: 24678 RVA: 0x000352BC File Offset: 0x000334BC
 		public UnityUserReportingUpdater()
 		{
 			this.waitForEndOfFrame = new WaitForEndOfFrame();
 		}
 
-		// Token: 0x17001763 RID: 5987
-		// (get) Token: 0x06004610 RID: 17936 RVA: 0x000F974B File Offset: 0x000F794B
-		// (set) Token: 0x06004611 RID: 17937 RVA: 0x000F9753 File Offset: 0x000F7953
+		// Token: 0x17001F9F RID: 8095
+		// (get) Token: 0x06006067 RID: 24679 RVA: 0x000352CF File Offset: 0x000334CF
+		// (set) Token: 0x06006068 RID: 24680 RVA: 0x000352D7 File Offset: 0x000334D7
 		public object Current { get; private set; }
 
-		// Token: 0x06004612 RID: 17938 RVA: 0x000F975C File Offset: 0x000F795C
+		// Token: 0x06006069 RID: 24681 RVA: 0x00166C14 File Offset: 0x00164E14
 		public bool MoveNext()
 		{
 			if (this.step == 0)
@@ -44,16 +44,16 @@ namespace Unity.Cloud.UserReporting.Plugin
 			return false;
 		}
 
-		// Token: 0x06004613 RID: 17939 RVA: 0x000F97CD File Offset: 0x000F79CD
+		// Token: 0x0600606A RID: 24682 RVA: 0x000352E0 File Offset: 0x000334E0
 		public void Reset()
 		{
 			this.step = 0;
 		}
 
-		// Token: 0x04003B71 RID: 15217
+		// Token: 0x04004ECB RID: 20171
 		private int step;
 
-		// Token: 0x04003B72 RID: 15218
+		// Token: 0x04004ECC RID: 20172
 		private WaitForEndOfFrame waitForEndOfFrame;
 	}
 }

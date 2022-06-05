@@ -1,22 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000509 RID: 1289
+// Token: 0x02000878 RID: 2168
 public class PlayerInvincibleRoomController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x170011CC RID: 4556
-	// (get) Token: 0x0600300E RID: 12302 RVA: 0x000A47EC File Offset: 0x000A29EC
-	// (set) Token: 0x0600300F RID: 12303 RVA: 0x000A47F4 File Offset: 0x000A29F4
+	// Token: 0x170017D7 RID: 6103
+	// (get) Token: 0x060042AC RID: 17068 RVA: 0x00024DD9 File Offset: 0x00022FD9
+	// (set) Token: 0x060042AD RID: 17069 RVA: 0x00024DE1 File Offset: 0x00022FE1
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x06003010 RID: 12304 RVA: 0x000A47FD File Offset: 0x000A29FD
+	// Token: 0x060042AE RID: 17070 RVA: 0x00024DEA File Offset: 0x00022FEA
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x06003011 RID: 12305 RVA: 0x000A4824 File Offset: 0x000A2A24
+	// Token: 0x060042AF RID: 17071 RVA: 0x00024E11 File Offset: 0x00023011
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -25,7 +25,7 @@ public class PlayerInvincibleRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06003012 RID: 12306 RVA: 0x000A4850 File Offset: 0x000A2A50
+	// Token: 0x060042B0 RID: 17072 RVA: 0x00024E3D File Offset: 0x0002303D
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs args)
 	{
 		if (!this.m_playerIsInvincible)
@@ -35,7 +35,7 @@ public class PlayerInvincibleRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x06003013 RID: 12307 RVA: 0x000A486C File Offset: 0x000A2A6C
+	// Token: 0x060042B1 RID: 17073 RVA: 0x00024E59 File Offset: 0x00023059
 	private void OnDisable()
 	{
 		if (!PlayerManager.IsDisposed && this.m_playerIsInvincible)
@@ -45,6 +45,6 @@ public class PlayerInvincibleRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x04002643 RID: 9795
+	// Token: 0x04003415 RID: 13333
 	private bool m_playerIsInvincible;
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000634 RID: 1588
+// Token: 0x02000A61 RID: 2657
 [Serializable]
 public class CompiledScene_ScriptableObject : ScriptableObject
 {
-	// Token: 0x1700143F RID: 5183
-	// (get) Token: 0x0600396F RID: 14703 RVA: 0x000C3FDC File Offset: 0x000C21DC
+	// Token: 0x17001BA6 RID: 7078
+	// (get) Token: 0x0600504E RID: 20558 RVA: 0x0002BD0E File Offset: 0x00029F0E
 	public string SceneID
 	{
 		get
@@ -17,8 +17,8 @@ public class CompiledScene_ScriptableObject : ScriptableObject
 		}
 	}
 
-	// Token: 0x17001440 RID: 5184
-	// (get) Token: 0x06003970 RID: 14704 RVA: 0x000C3FE4 File Offset: 0x000C21E4
+	// Token: 0x17001BA7 RID: 7079
+	// (get) Token: 0x0600504F RID: 20559 RVA: 0x00132654 File Offset: 0x00130854
 	public List<Room> RoomList
 	{
 		get
@@ -61,9 +61,9 @@ public class CompiledScene_ScriptableObject : ScriptableObject
 		}
 	}
 
-	// Token: 0x17001441 RID: 5185
-	// (get) Token: 0x06003971 RID: 14705 RVA: 0x000C40D6 File Offset: 0x000C22D6
-	// (set) Token: 0x06003972 RID: 14706 RVA: 0x000C40DE File Offset: 0x000C22DE
+	// Token: 0x17001BA8 RID: 7080
+	// (get) Token: 0x06005050 RID: 20560 RVA: 0x0002BD16 File Offset: 0x00029F16
+	// (set) Token: 0x06005051 RID: 20561 RVA: 0x0002BD1E File Offset: 0x00029F1E
 	public List<RoomMetaData> RoomMetaData
 	{
 		get
@@ -76,22 +76,22 @@ public class CompiledScene_ScriptableObject : ScriptableObject
 		}
 	}
 
-	// Token: 0x04002C40 RID: 11328
+	// Token: 0x04003CD2 RID: 15570
 	[ReadOnly]
 	[SerializeField]
 	private string m_sceneID;
 
-	// Token: 0x04002C41 RID: 11329
+	// Token: 0x04003CD3 RID: 15571
 	[ReadOnly]
 	[SerializeField]
 	private List<RoomMetaData> m_roomMetaData;
 
-	// Token: 0x04002C42 RID: 11330
+	// Token: 0x04003CD4 RID: 15572
 	private string m_debugColour = string.Format("#{0:X2}{1:X2}{2:X2}", 85, 85, 85);
 
-	// Token: 0x04002C43 RID: 11331
+	// Token: 0x04003CD5 RID: 15573
 	private List<Room> m_roomList;
 
-	// Token: 0x04002C44 RID: 11332
+	// Token: 0x04003CD6 RID: 15574
 	private bool m_roomListIsDirty;
 }

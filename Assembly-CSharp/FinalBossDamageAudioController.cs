@@ -3,11 +3,11 @@ using FMODUnity;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020001BB RID: 443
+// Token: 0x0200032A RID: 810
 public class FinalBossDamageAudioController : DamageAudioController
 {
-	// Token: 0x1700098F RID: 2447
-	// (get) Token: 0x0600114A RID: 4426 RVA: 0x00032220 File Offset: 0x00030420
+	// Token: 0x17000C4F RID: 3151
+	// (get) Token: 0x06001993 RID: 6547 RVA: 0x00090510 File Offset: 0x0008E710
 	private bool IsInWhiteMode
 	{
 		get
@@ -21,7 +21,7 @@ public class FinalBossDamageAudioController : DamageAudioController
 		}
 	}
 
-	// Token: 0x0600114B RID: 4427 RVA: 0x00032262 File Offset: 0x00030462
+	// Token: 0x06001994 RID: 6548 RVA: 0x0000CEA0 File Offset: 0x0000B0A0
 	protected override void OnTakeDamage(GameObject attacker, float damageTaken, bool isCrit)
 	{
 		base.OnTakeDamage(attacker, damageTaken, isCrit);
@@ -33,14 +33,14 @@ public class FinalBossDamageAudioController : DamageAudioController
 		AudioManager.Play(this, this.m_darkHitEmitter);
 	}
 
-	// Token: 0x04001239 RID: 4665
+	// Token: 0x04001842 RID: 6210
 	[SerializeField]
 	private StudioEventEmitter m_lightHitEmitter;
 
-	// Token: 0x0400123A RID: 4666
+	// Token: 0x04001843 RID: 6211
 	[SerializeField]
 	private StudioEventEmitter m_darkHitEmitter;
 
-	// Token: 0x0400123B RID: 4667
+	// Token: 0x04001844 RID: 6212
 	private FinalBoss_Basic_AIScript m_logicScript;
 }

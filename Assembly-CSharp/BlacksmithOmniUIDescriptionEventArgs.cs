@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020007D8 RID: 2008
+// Token: 0x02000C9E RID: 3230
 public class BlacksmithOmniUIDescriptionEventArgs : EventArgs
 {
-	// Token: 0x0600431E RID: 17182 RVA: 0x000EC456 File Offset: 0x000EA656
+	// Token: 0x06005CA7 RID: 23719 RVA: 0x00032E6C File Offset: 0x0003106C
 	public BlacksmithOmniUIDescriptionEventArgs(EquipmentCategoryType categoryType, EquipmentType equipType, OmniUIButtonType buttonType)
 	{
 		this.Initialize(categoryType, equipType, buttonType);
 	}
 
-	// Token: 0x0600431F RID: 17183 RVA: 0x000EC467 File Offset: 0x000EA667
+	// Token: 0x06005CA8 RID: 23720 RVA: 0x00032E7D File Offset: 0x0003107D
 	public void Initialize(EquipmentCategoryType categoryType, EquipmentType equipType, OmniUIButtonType buttonType)
 	{
 		this.CategoryType = categoryType;
@@ -17,18 +17,18 @@ public class BlacksmithOmniUIDescriptionEventArgs : EventArgs
 		this.ButtonType = buttonType;
 	}
 
-	// Token: 0x170016B9 RID: 5817
-	// (get) Token: 0x06004320 RID: 17184 RVA: 0x000EC47E File Offset: 0x000EA67E
-	// (set) Token: 0x06004321 RID: 17185 RVA: 0x000EC486 File Offset: 0x000EA686
+	// Token: 0x17001EB7 RID: 7863
+	// (get) Token: 0x06005CA9 RID: 23721 RVA: 0x00032E94 File Offset: 0x00031094
+	// (set) Token: 0x06005CAA RID: 23722 RVA: 0x00032E9C File Offset: 0x0003109C
 	public EquipmentCategoryType CategoryType { get; private set; }
 
-	// Token: 0x170016BA RID: 5818
-	// (get) Token: 0x06004322 RID: 17186 RVA: 0x000EC48F File Offset: 0x000EA68F
-	// (set) Token: 0x06004323 RID: 17187 RVA: 0x000EC497 File Offset: 0x000EA697
+	// Token: 0x17001EB8 RID: 7864
+	// (get) Token: 0x06005CAB RID: 23723 RVA: 0x00032EA5 File Offset: 0x000310A5
+	// (set) Token: 0x06005CAC RID: 23724 RVA: 0x00032EAD File Offset: 0x000310AD
 	public EquipmentType EquipmentType { get; private set; }
 
-	// Token: 0x170016BB RID: 5819
-	// (get) Token: 0x06004324 RID: 17188 RVA: 0x000EC4A0 File Offset: 0x000EA6A0
-	// (set) Token: 0x06004325 RID: 17189 RVA: 0x000EC4A8 File Offset: 0x000EA6A8
+	// Token: 0x17001EB9 RID: 7865
+	// (get) Token: 0x06005CAD RID: 23725 RVA: 0x00032EB6 File Offset: 0x000310B6
+	// (set) Token: 0x06005CAE RID: 23726 RVA: 0x00032EBE File Offset: 0x000310BE
 	public OmniUIButtonType ButtonType { get; private set; }
 }

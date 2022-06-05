@@ -2,7 +2,7 @@
 
 namespace RLWorldCreation
 {
-	// Token: 0x02000884 RID: 2180
+	// Token: 0x02000DA4 RID: 3492
 	public class BiomeCreationEventArgs : EventArgs
 	{
 	}

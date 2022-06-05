@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200063E RID: 1598
+// Token: 0x02000A6B RID: 2667
 public class HasJump_SpawnScenario : SpawnScenario
 {
-	// Token: 0x17001464 RID: 5220
-	// (get) Token: 0x060039C2 RID: 14786 RVA: 0x000C4CCA File Offset: 0x000C2ECA
-	// (set) Token: 0x060039C3 RID: 14787 RVA: 0x000C4CD2 File Offset: 0x000C2ED2
+	// Token: 0x17001BCB RID: 7115
+	// (get) Token: 0x060050A1 RID: 20641 RVA: 0x0002C029 File Offset: 0x0002A229
+	// (set) Token: 0x060050A2 RID: 20642 RVA: 0x0002C031 File Offset: 0x0002A231
 	public bool HasDoubleJump
 	{
 		get
@@ -19,8 +19,8 @@ public class HasJump_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x17001465 RID: 5221
-	// (get) Token: 0x060039C4 RID: 14788 RVA: 0x000C4CDB File Offset: 0x000C2EDB
+	// Token: 0x17001BCC RID: 7116
+	// (get) Token: 0x060050A3 RID: 20643 RVA: 0x00017640 File Offset: 0x00015840
 	public override SpawnScenarioType Type
 	{
 		get
@@ -29,8 +29,8 @@ public class HasJump_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x17001466 RID: 5222
-	// (get) Token: 0x060039C5 RID: 14789 RVA: 0x000C4CDF File Offset: 0x000C2EDF
+	// Token: 0x17001BCD RID: 7117
+	// (get) Token: 0x060050A4 RID: 20644 RVA: 0x0002C03A File Offset: 0x0002A23A
 	public override string GizmoDescription
 	{
 		get
@@ -43,19 +43,19 @@ public class HasJump_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x060039C6 RID: 14790 RVA: 0x000C4CF4 File Offset: 0x000C2EF4
+	// Token: 0x060050A5 RID: 20645 RVA: 0x0002C04F File Offset: 0x0002A24F
 	public override void RunIsTrueCheck(BaseRoom room)
 	{
 		this.RunIsTrueCheck(room.AppearanceBiomeType);
 	}
 
-	// Token: 0x060039C7 RID: 14791 RVA: 0x000C4D02 File Offset: 0x000C2F02
+	// Token: 0x060050A6 RID: 20646 RVA: 0x0002C05D File Offset: 0x0002A25D
 	public override void RunIsTrueCheck(GridPointManager gridPointManager)
 	{
 		this.RunIsTrueCheck(gridPointManager.Biome);
 	}
 
-	// Token: 0x060039C8 RID: 14792 RVA: 0x000C4D10 File Offset: 0x000C2F10
+	// Token: 0x060050A7 RID: 20647 RVA: 0x00132FCC File Offset: 0x001311CC
 	private void RunIsTrueCheck(BiomeType biome)
 	{
 		SpawnConditionOverride spawnConditionOverride = BiomeRuleManager.GetSpawnConditionOverride(biome);
@@ -76,7 +76,7 @@ public class HasJump_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x04002C70 RID: 11376
+	// Token: 0x04003D02 RID: 15618
 	[SerializeField]
 	private bool m_hasDoubleJump;
 }

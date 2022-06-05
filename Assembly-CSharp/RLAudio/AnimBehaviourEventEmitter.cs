@@ -5,15 +5,15 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008D9 RID: 2265
+	// Token: 0x02000E47 RID: 3655
 	public abstract class AnimBehaviourEventEmitter : StateMachineBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001834 RID: 6196
-		// (get) Token: 0x06004A62 RID: 19042 RVA: 0x0010BD18 File Offset: 0x00109F18
-		// (set) Token: 0x06004A63 RID: 19043 RVA: 0x0010BD20 File Offset: 0x00109F20
+		// Token: 0x17002113 RID: 8467
+		// (get) Token: 0x06006712 RID: 26386 RVA: 0x00038BFA File Offset: 0x00036DFA
+		// (set) Token: 0x06006713 RID: 26387 RVA: 0x00038C02 File Offset: 0x00036E02
 		public string Description { get; protected set; }
 
-		// Token: 0x06004A64 RID: 19044 RVA: 0x0010BD2C File Offset: 0x00109F2C
+		// Token: 0x06006714 RID: 26388 RVA: 0x0017C614 File Offset: 0x0017A814
 		protected virtual void InitializeEventInstance(Animator animator)
 		{
 			try
@@ -47,7 +47,7 @@ namespace RLAudio
 			this.m_isInitialized = true;
 		}
 
-		// Token: 0x06004A65 RID: 19045 RVA: 0x0010BDE4 File Offset: 0x00109FE4
+		// Token: 0x06006715 RID: 26389 RVA: 0x0017C6CC File Offset: 0x0017A8CC
 		public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
 			if (AnimBehaviourEventEmitter.DisableEmitter_STATIC)
@@ -86,13 +86,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A66 RID: 19046 RVA: 0x0010BEC5 File Offset: 0x0010A0C5
+		// Token: 0x06006716 RID: 26390 RVA: 0x00038C0B File Offset: 0x00036E0B
 		private void OnDisable()
 		{
 			this.Stop();
 		}
 
-		// Token: 0x06004A67 RID: 19047 RVA: 0x0010BECD File Offset: 0x0010A0CD
+		// Token: 0x06006717 RID: 26391 RVA: 0x00038C13 File Offset: 0x00036E13
 		private void OnDestroy()
 		{
 			if (this.m_eventInstance.isValid())
@@ -101,7 +101,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A68 RID: 19048 RVA: 0x0010BEE8 File Offset: 0x0010A0E8
+		// Token: 0x06006718 RID: 26392 RVA: 0x0017C7B0 File Offset: 0x0017A9B0
 		protected bool GetShouldPlay(Animator animator)
 		{
 			bool result = true;
@@ -119,7 +119,7 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004A69 RID: 19049 RVA: 0x0010BF2C File Offset: 0x0010A12C
+		// Token: 0x06006719 RID: 26393 RVA: 0x0017C7F4 File Offset: 0x0017A9F4
 		private void OnStandingOnParameterChange(object sender, float newValue)
 		{
 			if (this.m_eventInstance.isValid())
@@ -130,7 +130,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A6A RID: 19050 RVA: 0x0010BF6E File Offset: 0x0010A16E
+		// Token: 0x0600671A RID: 26394 RVA: 0x00038C2E File Offset: 0x00036E2E
 		protected void Play(Animator animator)
 		{
 			if (EffectTriggerAnimBehaviour.DISABLE_GLOBALLY)
@@ -147,7 +147,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A6B RID: 19051 RVA: 0x0010BFA0 File Offset: 0x0010A1A0
+		// Token: 0x0600671B RID: 26395 RVA: 0x00038C60 File Offset: 0x00036E60
 		protected void Stop()
 		{
 			if (this.m_eventInstance.isValid())
@@ -156,43 +156,43 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003E87 RID: 16007
+		// Token: 0x0400539C RID: 21404
 		public static bool DisableEmitter_STATIC;
 
-		// Token: 0x04003E88 RID: 16008
+		// Token: 0x0400539D RID: 21405
 		[EventRef]
 		public string Event;
 
-		// Token: 0x04003E89 RID: 16009
+		// Token: 0x0400539E RID: 21406
 		public ParamRef[] Params = new ParamRef[0];
 
-		// Token: 0x04003E8A RID: 16010
+		// Token: 0x0400539F RID: 21407
 		[SerializeField]
 		protected bool m_useSurfaceParameter;
 
-		// Token: 0x04003E8B RID: 16011
+		// Token: 0x040053A0 RID: 21408
 		[SerializeField]
 		protected AnimBehaviourCondition[] m_conditions;
 
-		// Token: 0x04003E8C RID: 16012
+		// Token: 0x040053A1 RID: 21409
 		private const string SURFACE_PARAMETER_NAME = "Surface";
 
-		// Token: 0x04003E8D RID: 16013
+		// Token: 0x040053A2 RID: 21410
 		protected PARAMETER_ID m_surfaceParamaterID;
 
-		// Token: 0x04003E8E RID: 16014
+		// Token: 0x040053A3 RID: 21411
 		protected EventInstance m_eventInstance;
 
-		// Token: 0x04003E8F RID: 16015
+		// Token: 0x040053A4 RID: 21412
 		protected EventDescription m_eventDescription;
 
-		// Token: 0x04003E90 RID: 16016
+		// Token: 0x040053A5 RID: 21413
 		private bool m_hasSearchedForSurfaceController;
 
-		// Token: 0x04003E91 RID: 16017
+		// Token: 0x040053A6 RID: 21414
 		private SurfaceAudioController m_surfaceController;
 
-		// Token: 0x04003E92 RID: 16018
+		// Token: 0x040053A7 RID: 21415
 		private bool m_isInitialized;
 	}
 }

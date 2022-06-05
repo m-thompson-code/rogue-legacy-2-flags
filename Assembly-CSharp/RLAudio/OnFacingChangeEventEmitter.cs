@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008FF RID: 2303
+	// Token: 0x02000E79 RID: 3705
 	public class OnFacingChangeEventEmitter : AnimBehaviourEventEmitter
 	{
-		// Token: 0x06004B9C RID: 19356 RVA: 0x0010FC30 File Offset: 0x0010DE30
+		// Token: 0x06006885 RID: 26757 RVA: 0x0017FF04 File Offset: 0x0017E104
 		public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
 			base.OnStateEnter(animator, stateInfo, layerIndex);
@@ -28,7 +28,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B9D RID: 19357 RVA: 0x0010FCA2 File Offset: 0x0010DEA2
+		// Token: 0x06006886 RID: 26758 RVA: 0x00039D90 File Offset: 0x00037F90
 		public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
 			if (this.m_characterController != null && this.m_characterController.IsFacingRight != this.m_previousIsFacingRightValue)
@@ -38,13 +38,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003F95 RID: 16277
+		// Token: 0x040054E7 RID: 21735
 		private bool m_hasSearchedForCorgiController;
 
-		// Token: 0x04003F96 RID: 16278
+		// Token: 0x040054E8 RID: 21736
 		private BaseCharacterController m_characterController;
 
-		// Token: 0x04003F97 RID: 16279
+		// Token: 0x040054E9 RID: 21737
 		private bool m_previousIsFacingRightValue;
 	}
 }

@@ -3,10 +3,10 @@ using FMODUnity;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020001B7 RID: 439
+// Token: 0x02000326 RID: 806
 public class SetCollisionWithPlayerAudio_StateMachineBehaviour : StateMachineBehaviour
 {
-	// Token: 0x0600113E RID: 4414 RVA: 0x00031FA0 File Offset: 0x000301A0
+	// Token: 0x06001987 RID: 6535 RVA: 0x00090304 File Offset: 0x0008E504
 	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		base.OnStateEnter(animator, stateInfo, layerIndex);
@@ -21,7 +21,7 @@ public class SetCollisionWithPlayerAudio_StateMachineBehaviour : StateMachineBeh
 		this.m_collisionWithPlayerAudioController.SetCollisionWithPlayerAudioOverride(this.m_audioPath);
 	}
 
-	// Token: 0x0600113F RID: 4415 RVA: 0x00032010 File Offset: 0x00030210
+	// Token: 0x06001988 RID: 6536 RVA: 0x0000CE3A File Offset: 0x0000B03A
 	public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		base.OnStateExit(animator, stateInfo, layerIndex);
@@ -31,15 +31,15 @@ public class SetCollisionWithPlayerAudio_StateMachineBehaviour : StateMachineBeh
 		}
 	}
 
-	// Token: 0x0400122C RID: 4652
+	// Token: 0x04001835 RID: 6197
 	[SerializeField]
 	[EventRef]
 	private string m_audioPath = string.Empty;
 
-	// Token: 0x0400122D RID: 4653
+	// Token: 0x04001836 RID: 6198
 	[SerializeField]
 	private bool m_clearOnExit = true;
 
-	// Token: 0x0400122E RID: 4654
+	// Token: 0x04001837 RID: 6199
 	private CollisionWithPlayerAudioController m_collisionWithPlayerAudioController;
 }

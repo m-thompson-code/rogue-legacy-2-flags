@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000797 RID: 1943
+// Token: 0x02000C5A RID: 3162
 public class SelectDoorsToAttachRoomsToEventArgs : EventArgs
 {
-	// Token: 0x0600419E RID: 16798 RVA: 0x000E9B33 File Offset: 0x000E7D33
+	// Token: 0x06005B1B RID: 23323 RVA: 0x00032009 File Offset: 0x00030209
 	public SelectDoorsToAttachRoomsToEventArgs(BaseRoom room, Dictionary<RoomSide, List<int>> doorTable)
 	{
 		this.Room = room;
@@ -13,18 +13,18 @@ public class SelectDoorsToAttachRoomsToEventArgs : EventArgs
 		this.Time = UnityEngine.Time.time;
 	}
 
-	// Token: 0x1700165C RID: 5724
-	// (get) Token: 0x0600419F RID: 16799 RVA: 0x000E9B54 File Offset: 0x000E7D54
-	// (set) Token: 0x060041A0 RID: 16800 RVA: 0x000E9B5C File Offset: 0x000E7D5C
+	// Token: 0x17001E58 RID: 7768
+	// (get) Token: 0x06005B1C RID: 23324 RVA: 0x0003202A File Offset: 0x0003022A
+	// (set) Token: 0x06005B1D RID: 23325 RVA: 0x00032032 File Offset: 0x00030232
 	public BaseRoom Room { get; protected set; }
 
-	// Token: 0x1700165D RID: 5725
-	// (get) Token: 0x060041A1 RID: 16801 RVA: 0x000E9B65 File Offset: 0x000E7D65
-	// (set) Token: 0x060041A2 RID: 16802 RVA: 0x000E9B6D File Offset: 0x000E7D6D
+	// Token: 0x17001E59 RID: 7769
+	// (get) Token: 0x06005B1E RID: 23326 RVA: 0x0003203B File Offset: 0x0003023B
+	// (set) Token: 0x06005B1F RID: 23327 RVA: 0x00032043 File Offset: 0x00030243
 	public Dictionary<RoomSide, List<int>> DoorTable { get; private set; }
 
-	// Token: 0x1700165E RID: 5726
-	// (get) Token: 0x060041A3 RID: 16803 RVA: 0x000E9B76 File Offset: 0x000E7D76
-	// (set) Token: 0x060041A4 RID: 16804 RVA: 0x000E9B7E File Offset: 0x000E7D7E
+	// Token: 0x17001E5A RID: 7770
+	// (get) Token: 0x06005B20 RID: 23328 RVA: 0x0003204C File Offset: 0x0003024C
+	// (set) Token: 0x06005B21 RID: 23329 RVA: 0x00032054 File Offset: 0x00030254
 	public float Time { get; protected set; }
 }

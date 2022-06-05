@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200024F RID: 591
+// Token: 0x0200040C RID: 1036
 [CreateAssetMenu(menuName = "Custom/Libraries/SoulShopLibrary")]
 public class SoulShopLibrary : ScriptableObject
 {
-	// Token: 0x17000B61 RID: 2913
-	// (get) Token: 0x06001773 RID: 6003 RVA: 0x000490D2 File Offset: 0x000472D2
+	// Token: 0x17000E8E RID: 3726
+	// (get) Token: 0x06002126 RID: 8486 RVA: 0x00011A33 File Offset: 0x0000FC33
 	private static SoulShopLibrary Instance
 	{
 		get
@@ -19,7 +19,7 @@ public class SoulShopLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001774 RID: 6004 RVA: 0x000490FC File Offset: 0x000472FC
+	// Token: 0x06002127 RID: 8487 RVA: 0x000A69F0 File Offset: 0x000A4BF0
 	public static SoulShopData GetSoulShopData(SoulShopType soulShopType)
 	{
 		SoulShopData soulShopData;
@@ -36,13 +36,13 @@ public class SoulShopLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x040016F3 RID: 5875
+	// Token: 0x04001E0B RID: 7691
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/SoulShopLibrary";
 
-	// Token: 0x040016F4 RID: 5876
+	// Token: 0x04001E0C RID: 7692
 	[SerializeField]
 	private SoulShopTypeSoulShopDataDictionary m_soulShopLibrary;
 
-	// Token: 0x040016F5 RID: 5877
+	// Token: 0x04001E0D RID: 7693
 	private static SoulShopLibrary m_instance;
 }

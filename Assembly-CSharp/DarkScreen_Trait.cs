@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000330 RID: 816
+// Token: 0x02000586 RID: 1414
 public class DarkScreen_Trait : BaseTrait
 {
-	// Token: 0x17000DB3 RID: 3507
-	// (get) Token: 0x06001FE0 RID: 8160 RVA: 0x00065B63 File Offset: 0x00063D63
+	// Token: 0x170011F4 RID: 4596
+	// (get) Token: 0x06002CDB RID: 11483 RVA: 0x00017FA0 File Offset: 0x000161A0
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class DarkScreen_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FE1 RID: 8161 RVA: 0x00065B67 File Offset: 0x00063D67
+	// Token: 0x06002CDC RID: 11484 RVA: 0x00018D31 File Offset: 0x00016F31
 	protected IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -28,7 +28,7 @@ public class DarkScreen_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FE2 RID: 8162 RVA: 0x00065B78 File Offset: 0x00063D78
+	// Token: 0x06002CDD RID: 11485 RVA: 0x000C53C4 File Offset: 0x000C35C4
 	public override void AssignGreenMask()
 	{
 		base.AssignGreenMask();
@@ -38,14 +38,14 @@ public class DarkScreen_Trait : BaseTrait
 		this.m_postProcessOverrideController.Profile.OverrideTintRedChannel = false;
 	}
 
-	// Token: 0x06001FE3 RID: 8163 RVA: 0x00065BE2 File Offset: 0x00063DE2
+	// Token: 0x06002CDE RID: 11486 RVA: 0x00018D40 File Offset: 0x00016F40
 	public override void DisableOnDeath()
 	{
 		base.DisableOnDeath();
 		this.m_traitMask.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06001FE4 RID: 8164 RVA: 0x00065BFB File Offset: 0x00063DFB
+	// Token: 0x06002CDF RID: 11487 RVA: 0x000189A5 File Offset: 0x00016BA5
 	protected void OnDestroy()
 	{
 		if (this.m_traitMask)

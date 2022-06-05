@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200001D RID: 29
+// Token: 0x02000020 RID: 32
 [Serializable]
 public class RelicTypeSpriteDictionary : SerializableDictionary<RelicType, Sprite>
 {

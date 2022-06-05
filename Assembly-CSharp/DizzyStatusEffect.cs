@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002F8 RID: 760
+// Token: 0x02000510 RID: 1296
 public class DizzyStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D2E RID: 3374
-	// (get) Token: 0x06001E57 RID: 7767 RVA: 0x000629E9 File Offset: 0x00060BE9
+	// Token: 0x170010F9 RID: 4345
+	// (get) Token: 0x060029EA RID: 10730 RVA: 0x00017804 File Offset: 0x00015A04
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class DizzyStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D2F RID: 3375
-	// (get) Token: 0x06001E58 RID: 7768 RVA: 0x000629F0 File Offset: 0x00060BF0
+	// Token: 0x170010FA RID: 4346
+	// (get) Token: 0x060029EB RID: 10731 RVA: 0x00003C54 File Offset: 0x00001E54
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class DizzyStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E59 RID: 7769 RVA: 0x000629F7 File Offset: 0x00060BF7
+	// Token: 0x060029EC RID: 10732 RVA: 0x0001780B File Offset: 0x00015A0B
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.Dizzy, base.Duration);

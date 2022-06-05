@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000633 RID: 1587
+// Token: 0x02000A60 RID: 2656
 public class SceneMessengerDebugger : MessengerDebugger
 {
 }

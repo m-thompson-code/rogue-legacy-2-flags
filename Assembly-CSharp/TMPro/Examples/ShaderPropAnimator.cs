@@ -4,23 +4,23 @@ using UnityEngine;
 
 namespace TMPro.Examples
 {
-	// Token: 0x0200085C RID: 2140
+	// Token: 0x02000D63 RID: 3427
 	public class ShaderPropAnimator : MonoBehaviour
 	{
-		// Token: 0x060046F4 RID: 18164 RVA: 0x000FE26C File Offset: 0x000FC46C
+		// Token: 0x060061A1 RID: 24993 RVA: 0x00035C7D File Offset: 0x00033E7D
 		private void Awake()
 		{
 			this.m_Renderer = base.GetComponent<Renderer>();
 			this.m_Material = this.m_Renderer.material;
 		}
 
-		// Token: 0x060046F5 RID: 18165 RVA: 0x000FE28B File Offset: 0x000FC48B
+		// Token: 0x060061A2 RID: 24994 RVA: 0x00035C9C File Offset: 0x00033E9C
 		private void Start()
 		{
 			base.StartCoroutine(this.AnimateProperties());
 		}
 
-		// Token: 0x060046F6 RID: 18166 RVA: 0x000FE29A File Offset: 0x000FC49A
+		// Token: 0x060061A3 RID: 24995 RVA: 0x00035CAB File Offset: 0x00033EAB
 		private IEnumerator AnimateProperties()
 		{
 			this.m_frame = UnityEngine.Random.Range(0f, 1f);
@@ -34,16 +34,16 @@ namespace TMPro.Examples
 			yield break;
 		}
 
-		// Token: 0x04003BFF RID: 15359
+		// Token: 0x04004F8C RID: 20364
 		private Renderer m_Renderer;
 
-		// Token: 0x04003C00 RID: 15360
+		// Token: 0x04004F8D RID: 20365
 		private Material m_Material;
 
-		// Token: 0x04003C01 RID: 15361
+		// Token: 0x04004F8E RID: 20366
 		public AnimationCurve GlowCurve;
 
-		// Token: 0x04003C02 RID: 15362
+		// Token: 0x04004F8F RID: 20367
 		public float m_frame;
 	}
 }

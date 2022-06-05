@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020003DD RID: 989
+// Token: 0x0200067D RID: 1661
 public class RelicHUDController : MonoBehaviour
 {
-	// Token: 0x06002474 RID: 9332 RVA: 0x0007946C File Offset: 0x0007766C
+	// Token: 0x060032B0 RID: 12976 RVA: 0x000D9804 File Offset: 0x000D7A04
 	private void Awake()
 	{
 		this.m_relicIconGroup.gameObject.SetActive(false);
@@ -38,7 +38,7 @@ public class RelicHUDController : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerDeath, this.m_hideCanvasGroup);
 	}
 
-	// Token: 0x06002475 RID: 9333 RVA: 0x000795B0 File Offset: 0x000777B0
+	// Token: 0x060032B1 RID: 12977 RVA: 0x000D9948 File Offset: 0x000D7B48
 	private void OnDestroy()
 	{
 		if (GameUtility.IsInLevelEditor)
@@ -55,7 +55,7 @@ public class RelicHUDController : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerDeath, this.m_hideCanvasGroup);
 	}
 
-	// Token: 0x06002476 RID: 9334 RVA: 0x00079614 File Offset: 0x00077814
+	// Token: 0x060032B2 RID: 12978 RVA: 0x000D99AC File Offset: 0x000D7BAC
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.RelicLevelChanged, this.m_onRelicChanged);
@@ -65,7 +65,7 @@ public class RelicHUDController : MonoBehaviour
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.SkillTree_Closed, this.m_showCanvasGroup);
 	}
 
-	// Token: 0x06002477 RID: 9335 RVA: 0x00079664 File Offset: 0x00077864
+	// Token: 0x060032B3 RID: 12979 RVA: 0x000D99FC File Offset: 0x000D7BFC
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.RelicLevelChanged, this.m_onRelicChanged);
@@ -75,7 +75,7 @@ public class RelicHUDController : MonoBehaviour
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.SkillTree_Closed, this.m_showCanvasGroup);
 	}
 
-	// Token: 0x06002478 RID: 9336 RVA: 0x000796B2 File Offset: 0x000778B2
+	// Token: 0x060032B4 RID: 12980 RVA: 0x0001BBDD File Offset: 0x00019DDD
 	private void ShowCanvasGroup(object sender, EventArgs args)
 	{
 		if (this.m_activeRelicIconDict.Count > 0)
@@ -84,13 +84,13 @@ public class RelicHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002479 RID: 9337 RVA: 0x000796D3 File Offset: 0x000778D3
+	// Token: 0x060032B5 RID: 12981 RVA: 0x0001BBFE File Offset: 0x00019DFE
 	private void HideCanvasGroup(object sender, EventArgs args)
 	{
 		this.m_relicIconGroup.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600247A RID: 9338 RVA: 0x000796E8 File Offset: 0x000778E8
+	// Token: 0x060032B6 RID: 12982 RVA: 0x000D9A4C File Offset: 0x000D7C4C
 	private void UpdateAllRelics(MonoBehaviour sender, EventArgs args)
 	{
 		bool flag = false;
@@ -130,7 +130,7 @@ public class RelicHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600247B RID: 9339 RVA: 0x000797A4 File Offset: 0x000779A4
+	// Token: 0x060032B7 RID: 12983 RVA: 0x000D9B08 File Offset: 0x000D7D08
 	private void UpdateRelicOrder()
 	{
 		this.m_relicIconPool.Sort(this.m_iconSortMethod);
@@ -145,7 +145,7 @@ public class RelicHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600247C RID: 9340 RVA: 0x0007981C File Offset: 0x00077A1C
+	// Token: 0x060032B8 RID: 12984 RVA: 0x000D9B80 File Offset: 0x000D7D80
 	private int IconSort(RelicHUDIconController a, RelicHUDIconController b)
 	{
 		int relicType = (int)a.RelicType;
@@ -161,7 +161,7 @@ public class RelicHUDController : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x0600247D RID: 9341 RVA: 0x00079844 File Offset: 0x00077A44
+	// Token: 0x060032B9 RID: 12985 RVA: 0x000D9BA8 File Offset: 0x000D7DA8
 	private bool UpdateRelicState(RelicType relicType)
 	{
 		bool result = false;
@@ -195,7 +195,7 @@ public class RelicHUDController : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x0600247E RID: 9342 RVA: 0x000798F0 File Offset: 0x00077AF0
+	// Token: 0x060032BA RID: 12986 RVA: 0x000D9C54 File Offset: 0x000D7E54
 	private RelicHUDIconController GetFreeRelicIcon()
 	{
 		foreach (RelicHUDIconController relicHUDIconController in this.m_relicIconPool)
@@ -215,7 +215,7 @@ public class RelicHUDController : MonoBehaviour
 		return this.m_relicIconPool[count];
 	}
 
-	// Token: 0x0600247F RID: 9343 RVA: 0x000799A4 File Offset: 0x00077BA4
+	// Token: 0x060032BB RID: 12987 RVA: 0x000D9D08 File Offset: 0x000D7F08
 	private void OnRelicChanged(MonoBehaviour sender, EventArgs args)
 	{
 		RelicChangedEventArgs relicChangedEventArgs = args as RelicChangedEventArgs;
@@ -237,7 +237,7 @@ public class RelicHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002480 RID: 9344 RVA: 0x00079A24 File Offset: 0x00077C24
+	// Token: 0x060032BC RID: 12988 RVA: 0x000D9D88 File Offset: 0x000D7F88
 	private void OnRelicPurified(MonoBehaviour sender, EventArgs args)
 	{
 		RelicChangedEventArgs relicChangedEventArgs = args as RelicChangedEventArgs;
@@ -247,38 +247,38 @@ public class RelicHUDController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001F04 RID: 7940
+	// Token: 0x0400297C RID: 10620
 	private const int STARTING_DICTIONARY_SIZE = 5;
 
-	// Token: 0x04001F05 RID: 7941
+	// Token: 0x0400297D RID: 10621
 	[SerializeField]
 	private CanvasGroup m_relicIconGroup;
 
-	// Token: 0x04001F06 RID: 7942
+	// Token: 0x0400297E RID: 10622
 	[SerializeField]
 	private RelicHUDIconController m_relicIconTemplate;
 
-	// Token: 0x04001F07 RID: 7943
+	// Token: 0x0400297F RID: 10623
 	private List<RelicHUDIconController> m_relicIconPool;
 
-	// Token: 0x04001F08 RID: 7944
+	// Token: 0x04002980 RID: 10624
 	private Dictionary<RelicType, RelicHUDIconController> m_activeRelicIconDict;
 
-	// Token: 0x04001F09 RID: 7945
+	// Token: 0x04002981 RID: 10625
 	private Comparison<RelicHUDIconController> m_iconSortMethod;
 
-	// Token: 0x04001F0A RID: 7946
+	// Token: 0x04002982 RID: 10626
 	private Action<MonoBehaviour, EventArgs> m_updateAllRelics;
 
-	// Token: 0x04001F0B RID: 7947
+	// Token: 0x04002983 RID: 10627
 	private Action<MonoBehaviour, EventArgs> m_showCanvasGroup;
 
-	// Token: 0x04001F0C RID: 7948
+	// Token: 0x04002984 RID: 10628
 	private Action<MonoBehaviour, EventArgs> m_hideCanvasGroup;
 
-	// Token: 0x04001F0D RID: 7949
+	// Token: 0x04002985 RID: 10629
 	private Action<MonoBehaviour, EventArgs> m_onRelicChanged;
 
-	// Token: 0x04001F0E RID: 7950
+	// Token: 0x04002986 RID: 10630
 	private Action<MonoBehaviour, EventArgs> m_onRelicPurified;
 }

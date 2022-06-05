@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200030C RID: 780
+// Token: 0x0200053C RID: 1340
 public class ManaBurnStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D61 RID: 3425
-	// (get) Token: 0x06001EE1 RID: 7905 RVA: 0x00063B31 File Offset: 0x00061D31
+	// Token: 0x1700115C RID: 4444
+	// (get) Token: 0x06002B04 RID: 11012 RVA: 0x000065B4 File Offset: 0x000047B4
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -16,8 +16,8 @@ public class ManaBurnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D62 RID: 3426
-	// (get) Token: 0x06001EE2 RID: 7906 RVA: 0x00063B35 File Offset: 0x00061D35
+	// Token: 0x1700115D RID: 4445
+	// (get) Token: 0x06002B05 RID: 11013 RVA: 0x00018023 File Offset: 0x00016223
 	public override float StartingDurationOverride
 	{
 		get
@@ -26,14 +26,14 @@ public class ManaBurnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EE3 RID: 7907 RVA: 0x00063B3C File Offset: 0x00061D3C
+	// Token: 0x06002B06 RID: 11014 RVA: 0x0001802A File Offset: 0x0001622A
 	public override void Initialize(StatusEffectController statusEffectController, BaseCharacterController charController)
 	{
 		base.Initialize(statusEffectController, charController);
 		this.m_regenEventArgs = new ForceManaRegenEventArgs(0f, false);
 	}
 
-	// Token: 0x06001EE4 RID: 7908 RVA: 0x00063B57 File Offset: 0x00061D57
+	// Token: 0x06002B07 RID: 11015 RVA: 0x00018045 File Offset: 0x00016245
 	private IEnumerator PulseCoroutine()
 	{
 		for (;;)
@@ -71,7 +71,7 @@ public class ManaBurnStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001EE5 RID: 7909 RVA: 0x00063B66 File Offset: 0x00061D66
+	// Token: 0x06002B08 RID: 11016 RVA: 0x00018054 File Offset: 0x00016254
 	private IEnumerator BurnManaCoroutine()
 	{
 		for (;;)
@@ -90,7 +90,7 @@ public class ManaBurnStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001EE6 RID: 7910 RVA: 0x00063B75 File Offset: 0x00061D75
+	// Token: 0x06002B09 RID: 11017 RVA: 0x00018063 File Offset: 0x00016263
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.ManaBurn, base.Duration);
@@ -106,7 +106,7 @@ public class ManaBurnStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001EE7 RID: 7911 RVA: 0x00063B84 File Offset: 0x00061D84
+	// Token: 0x06002B0A RID: 11018 RVA: 0x000C3334 File Offset: 0x000C1534
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -126,21 +126,21 @@ public class ManaBurnStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x04001BE2 RID: 7138
+	// Token: 0x040024B7 RID: 9399
 	private ForceManaRegenEventArgs m_regenEventArgs;
 
-	// Token: 0x04001BE3 RID: 7139
+	// Token: 0x040024B8 RID: 9400
 	private static Color m_addColorPulseOn = new Color(0f, 0.14f, 0.3f, 1f);
 
-	// Token: 0x04001BE4 RID: 7140
+	// Token: 0x040024B9 RID: 9401
 	private static Color m_addColorPulseOff = new Color(0f, 0f, 0f, 1f);
 
-	// Token: 0x04001BE5 RID: 7141
+	// Token: 0x040024BA RID: 9402
 	private bool m_pulseOn;
 
-	// Token: 0x04001BE6 RID: 7142
+	// Token: 0x040024BB RID: 9403
 	private BaseEffect m_manaBurnEffect;
 
-	// Token: 0x04001BE7 RID: 7143
+	// Token: 0x040024BC RID: 9404
 	private float m_manaBurnTicRemaining;
 }

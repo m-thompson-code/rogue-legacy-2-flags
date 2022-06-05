@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200055E RID: 1374
+// Token: 0x02000929 RID: 2345
 public class TempTutorialSign : MonoBehaviour
 {
-	// Token: 0x0600327F RID: 12927 RVA: 0x000AAE62 File Offset: 0x000A9062
+	// Token: 0x06004736 RID: 18230 RVA: 0x00027113 File Offset: 0x00025313
 	public void ActivateTutorialSign()
 	{
 		bool isInstantiated = PlayerManager.IsInstantiated;
 	}
 
-	// Token: 0x06003280 RID: 12928 RVA: 0x000AAE6C File Offset: 0x000A906C
+	// Token: 0x06004737 RID: 18231 RVA: 0x00115554 File Offset: 0x00113754
 	private void DisplaySwordTutorial()
 	{
 		string speaker = "Sword Tutorial - Demo";
@@ -18,7 +18,7 @@ public class TempTutorialSign : MonoBehaviour
 		DialogueManager.AddNonLocDialogue(speaker, text, false, DialogueWindowStyle.HorizontalUpper, DialoguePortraitType.None, NPCState.None, 0.015f);
 	}
 
-	// Token: 0x06003281 RID: 12929 RVA: 0x000AAE94 File Offset: 0x000A9094
+	// Token: 0x06004738 RID: 18232 RVA: 0x0011557C File Offset: 0x0011377C
 	private void DisplaySaberTutorial()
 	{
 		string speaker = "Saber Tutorial - Demo";
@@ -26,7 +26,7 @@ public class TempTutorialSign : MonoBehaviour
 		DialogueManager.AddNonLocDialogue(speaker, text, false, DialogueWindowStyle.HorizontalUpper, DialoguePortraitType.None, NPCState.None, 0.015f);
 	}
 
-	// Token: 0x06003282 RID: 12930 RVA: 0x000AAEBC File Offset: 0x000A90BC
+	// Token: 0x06004739 RID: 18233 RVA: 0x001155A4 File Offset: 0x001137A4
 	private void DisplayAxeTutorial()
 	{
 		string speaker = "Axe Tutorial - Demo";
@@ -34,7 +34,7 @@ public class TempTutorialSign : MonoBehaviour
 		DialogueManager.AddNonLocDialogue(speaker, text, false, DialogueWindowStyle.HorizontalUpper, DialoguePortraitType.None, NPCState.None, 0.015f);
 	}
 
-	// Token: 0x06003283 RID: 12931 RVA: 0x000AAEE4 File Offset: 0x000A90E4
+	// Token: 0x0600473A RID: 18234 RVA: 0x001155CC File Offset: 0x001137CC
 	private void DisplayBowTutorial()
 	{
 		string speaker = "Bow Tutorial - Demo";
@@ -42,7 +42,7 @@ public class TempTutorialSign : MonoBehaviour
 		DialogueManager.AddNonLocDialogue(speaker, text, false, DialogueWindowStyle.HorizontalUpper, DialoguePortraitType.None, NPCState.None, 0.015f);
 	}
 
-	// Token: 0x06003284 RID: 12932 RVA: 0x000AAF0C File Offset: 0x000A910C
+	// Token: 0x0600473B RID: 18235 RVA: 0x001155F4 File Offset: 0x001137F4
 	private void DisplayMageTutorial()
 	{
 		string speaker = "Mage Tutorial";

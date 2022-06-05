@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020005EE RID: 1518
+// Token: 0x020009F8 RID: 2552
 [CreateAssetMenu(menuName = "Custom/Biome Rules/Gameplay Mods/Bridge Gold Gain")]
 public class BridgeGoldGain_BiomeRule : BiomeRule
 {
-	// Token: 0x1700136C RID: 4972
-	// (get) Token: 0x060036D5 RID: 14037 RVA: 0x000BCA07 File Offset: 0x000BAC07
-	// (set) Token: 0x060036D6 RID: 14038 RVA: 0x000BCA0E File Offset: 0x000BAC0E
+	// Token: 0x17001A9D RID: 6813
+	// (get) Token: 0x06004CF3 RID: 19699 RVA: 0x00029D16 File Offset: 0x00027F16
+	// (set) Token: 0x06004CF4 RID: 19700 RVA: 0x00029D1D File Offset: 0x00027F1D
 	public static float GoldGainMod { get; private set; }
 
-	// Token: 0x1700136D RID: 4973
-	// (get) Token: 0x060036D7 RID: 14039 RVA: 0x000BCA16 File Offset: 0x000BAC16
+	// Token: 0x17001A9E RID: 6814
+	// (get) Token: 0x06004CF5 RID: 19701 RVA: 0x000046FA File Offset: 0x000028FA
 	public override BiomeRuleExecutionTime ExecutionTime
 	{
 		get
@@ -21,7 +21,7 @@ public class BridgeGoldGain_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x060036D8 RID: 14040 RVA: 0x000BCA1A File Offset: 0x000BAC1A
+	// Token: 0x06004CF6 RID: 19702 RVA: 0x00029D25 File Offset: 0x00027F25
 	public override IEnumerator RunRule(BiomeType biome)
 	{
 		BridgeGoldGain_BiomeRule.GoldGainMod = 0.2f;
@@ -33,7 +33,7 @@ public class BridgeGoldGain_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x060036D9 RID: 14041 RVA: 0x000BCA29 File Offset: 0x000BAC29
+	// Token: 0x06004CF7 RID: 19703 RVA: 0x00029D34 File Offset: 0x00027F34
 	public override void UndoRule(BiomeType biome)
 	{
 		BridgeGoldGain_BiomeRule.GoldGainMod = 0f;

@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-// Token: 0x02000669 RID: 1641
+// Token: 0x02000AD4 RID: 2772
 public class CreateWeather_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B58 RID: 15192 RVA: 0x000CC322 File Offset: 0x000CA522
+	// Token: 0x0600534E RID: 21326 RVA: 0x0002D4B3 File Offset: 0x0002B6B3
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		Dictionary<WeatherBiomeArtData, Weather[]> dictionary = new Dictionary<WeatherBiomeArtData, Weather[]>();

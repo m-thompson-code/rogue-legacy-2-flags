@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000331 RID: 817
+// Token: 0x02000588 RID: 1416
 public class DisableAttackLock_Trait : BaseTrait
 {
-	// Token: 0x17000DB4 RID: 3508
-	// (get) Token: 0x06001FE6 RID: 8166 RVA: 0x00065C22 File Offset: 0x00063E22
+	// Token: 0x170011F7 RID: 4599
+	// (get) Token: 0x06002CE7 RID: 11495 RVA: 0x00018D70 File Offset: 0x00016F70
 	public override TraitType TraitType
 	{
 		get

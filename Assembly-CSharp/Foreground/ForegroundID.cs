@@ -2,22 +2,22 @@
 
 namespace Foreground
 {
-	// Token: 0x0200089A RID: 2202
+	// Token: 0x02000DC7 RID: 3527
 	public struct ForegroundID
 	{
-		// Token: 0x06004811 RID: 18449 RVA: 0x001037AB File Offset: 0x001019AB
+		// Token: 0x0600634C RID: 25420 RVA: 0x00036B2D File Offset: 0x00034D2D
 		public ForegroundID(ForegroundLocation location, float zoomLevel)
 		{
 			this.Location = location;
 			this.ZoomLevel = zoomLevel;
 		}
 
-		// Token: 0x17001797 RID: 6039
-		// (get) Token: 0x06004812 RID: 18450 RVA: 0x001037BB File Offset: 0x001019BB
+		// Token: 0x17002009 RID: 8201
+		// (get) Token: 0x0600634D RID: 25421 RVA: 0x00036B3D File Offset: 0x00034D3D
 		public readonly ForegroundLocation Location { get; }
 
-		// Token: 0x17001798 RID: 6040
-		// (get) Token: 0x06004813 RID: 18451 RVA: 0x001037C3 File Offset: 0x001019C3
+		// Token: 0x1700200A RID: 8202
+		// (get) Token: 0x0600634E RID: 25422 RVA: 0x00036B45 File Offset: 0x00034D45
 		public readonly float ZoomLevel { get; }
 	}
 }

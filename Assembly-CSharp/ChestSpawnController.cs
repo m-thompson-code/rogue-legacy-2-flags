@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x020005FD RID: 1533
+// Token: 0x02000A1B RID: 2587
 public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpawnController, ILevelConsumer, ISetSpawnType
 {
-	// Token: 0x170013AA RID: 5034
-	// (get) Token: 0x06003784 RID: 14212 RVA: 0x000BE6F6 File Offset: 0x000BC8F6
-	// (set) Token: 0x06003785 RID: 14213 RVA: 0x000BE6FE File Offset: 0x000BC8FE
+	// Token: 0x17001AFD RID: 6909
+	// (get) Token: 0x06004E13 RID: 19987 RVA: 0x0002A78E File Offset: 0x0002898E
+	// (set) Token: 0x06004E14 RID: 19988 RVA: 0x0002A796 File Offset: 0x00028996
 	public SpecialItemType SpecialItemOverride
 	{
 		get
@@ -21,9 +21,9 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013AB RID: 5035
-	// (get) Token: 0x06003786 RID: 14214 RVA: 0x000BE707 File Offset: 0x000BC907
-	// (set) Token: 0x06003787 RID: 14215 RVA: 0x000BE70F File Offset: 0x000BC90F
+	// Token: 0x17001AFE RID: 6910
+	// (get) Token: 0x06004E15 RID: 19989 RVA: 0x0002A79F File Offset: 0x0002899F
+	// (set) Token: 0x06004E16 RID: 19990 RVA: 0x0002A7A7 File Offset: 0x000289A7
 	public BossID BossID
 	{
 		get
@@ -39,8 +39,8 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013AC RID: 5036
-	// (get) Token: 0x06003788 RID: 14216 RVA: 0x000BE722 File Offset: 0x000BC922
+	// Token: 0x17001AFF RID: 6911
+	// (get) Token: 0x06004E17 RID: 19991 RVA: 0x00003713 File Offset: 0x00001913
 	public GameObject GameObject
 	{
 		get
@@ -49,9 +49,9 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013AD RID: 5037
-	// (get) Token: 0x06003789 RID: 14217 RVA: 0x000BE72A File Offset: 0x000BC92A
-	// (set) Token: 0x0600378A RID: 14218 RVA: 0x000BE732 File Offset: 0x000BC932
+	// Token: 0x17001B00 RID: 6912
+	// (get) Token: 0x06004E18 RID: 19992 RVA: 0x0002A7BA File Offset: 0x000289BA
+	// (set) Token: 0x06004E19 RID: 19993 RVA: 0x0002A7C2 File Offset: 0x000289C2
 	public int Gold
 	{
 		get
@@ -67,13 +67,13 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013AE RID: 5038
-	// (get) Token: 0x0600378B RID: 14219 RVA: 0x000BE751 File Offset: 0x000BC951
-	// (set) Token: 0x0600378C RID: 14220 RVA: 0x000BE759 File Offset: 0x000BC959
+	// Token: 0x17001B01 RID: 6913
+	// (get) Token: 0x06004E1A RID: 19994 RVA: 0x0002A7E1 File Offset: 0x000289E1
+	// (set) Token: 0x06004E1B RID: 19995 RVA: 0x0002A7E9 File Offset: 0x000289E9
 	public bool IsInitialised { get; private set; }
 
-	// Token: 0x170013AF RID: 5039
-	// (get) Token: 0x0600378D RID: 14221 RVA: 0x000BE762 File Offset: 0x000BC962
+	// Token: 0x17001B02 RID: 6914
+	// (get) Token: 0x06004E1C RID: 19996 RVA: 0x0002A7F2 File Offset: 0x000289F2
 	public bool ShouldSpawn
 	{
 		get
@@ -82,8 +82,8 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013B0 RID: 5040
-	// (get) Token: 0x0600378E RID: 14222 RVA: 0x000BE77F File Offset: 0x000BC97F
+	// Token: 0x17001B03 RID: 6915
+	// (get) Token: 0x06004E1D RID: 19997 RVA: 0x0002A80F File Offset: 0x00028A0F
 	public int Level
 	{
 		get
@@ -92,7 +92,7 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x0600378F RID: 14223 RVA: 0x000BE787 File Offset: 0x000BC987
+	// Token: 0x06004E1E RID: 19998 RVA: 0x0002A817 File Offset: 0x00028A17
 	public void SetLevel(int value)
 	{
 		if ((Application.isPlaying && !this.OverrideLevel) || !Application.isPlaying)
@@ -101,9 +101,9 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013B1 RID: 5041
-	// (get) Token: 0x06003790 RID: 14224 RVA: 0x000BE7A6 File Offset: 0x000BC9A6
-	// (set) Token: 0x06003791 RID: 14225 RVA: 0x000BE7AE File Offset: 0x000BC9AE
+	// Token: 0x17001B04 RID: 6916
+	// (get) Token: 0x06004E1F RID: 19999 RVA: 0x0002A836 File Offset: 0x00028A36
+	// (set) Token: 0x06004E20 RID: 20000 RVA: 0x0002A83E File Offset: 0x00028A3E
 	public bool OverrideGold
 	{
 		get
@@ -116,9 +116,9 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013B2 RID: 5042
-	// (get) Token: 0x06003792 RID: 14226 RVA: 0x000BE7B7 File Offset: 0x000BC9B7
-	// (set) Token: 0x06003793 RID: 14227 RVA: 0x000BE7BF File Offset: 0x000BC9BF
+	// Token: 0x17001B05 RID: 6917
+	// (get) Token: 0x06004E21 RID: 20001 RVA: 0x0002A847 File Offset: 0x00028A47
+	// (set) Token: 0x06004E22 RID: 20002 RVA: 0x0002A84F File Offset: 0x00028A4F
 	public bool OverrideLevel
 	{
 		get
@@ -131,9 +131,9 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013B3 RID: 5043
-	// (get) Token: 0x06003794 RID: 14228 RVA: 0x000BE7C8 File Offset: 0x000BC9C8
-	// (set) Token: 0x06003795 RID: 14229 RVA: 0x000BE7D0 File Offset: 0x000BC9D0
+	// Token: 0x17001B06 RID: 6918
+	// (get) Token: 0x06004E23 RID: 20003 RVA: 0x0002A858 File Offset: 0x00028A58
+	// (set) Token: 0x06004E24 RID: 20004 RVA: 0x0002A860 File Offset: 0x00028A60
 	public bool OverrideType
 	{
 		get
@@ -146,9 +146,9 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013B4 RID: 5044
-	// (get) Token: 0x06003796 RID: 14230 RVA: 0x000BE7D9 File Offset: 0x000BC9D9
-	// (set) Token: 0x06003797 RID: 14231 RVA: 0x000BE7E1 File Offset: 0x000BC9E1
+	// Token: 0x17001B07 RID: 6919
+	// (get) Token: 0x06004E25 RID: 20005 RVA: 0x0002A869 File Offset: 0x00028A69
+	// (set) Token: 0x06004E26 RID: 20006 RVA: 0x0002A871 File Offset: 0x00028A71
 	public BaseRoom Room
 	{
 		get
@@ -161,8 +161,8 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013B5 RID: 5045
-	// (get) Token: 0x06003798 RID: 14232 RVA: 0x000BE7EA File Offset: 0x000BC9EA
+	// Token: 0x17001B08 RID: 6920
+	// (get) Token: 0x06004E27 RID: 20007 RVA: 0x0002A87A File Offset: 0x00028A7A
 	public SpawnLogicController SpawnLogicController
 	{
 		get
@@ -176,9 +176,9 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013B6 RID: 5046
-	// (get) Token: 0x06003799 RID: 14233 RVA: 0x000BE80D File Offset: 0x000BCA0D
-	// (set) Token: 0x0600379A RID: 14234 RVA: 0x000BE815 File Offset: 0x000BCA15
+	// Token: 0x17001B09 RID: 6921
+	// (get) Token: 0x06004E28 RID: 20008 RVA: 0x0002A89D File Offset: 0x00028A9D
+	// (set) Token: 0x06004E29 RID: 20009 RVA: 0x0002A8A5 File Offset: 0x00028AA5
 	public ChestType ChestType
 	{
 		get
@@ -194,17 +194,17 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x170013B7 RID: 5047
-	// (get) Token: 0x0600379B RID: 14235 RVA: 0x000BE834 File Offset: 0x000BCA34
-	// (set) Token: 0x0600379C RID: 14236 RVA: 0x000BE83C File Offset: 0x000BCA3C
+	// Token: 0x17001B0A RID: 6922
+	// (get) Token: 0x06004E2A RID: 20010 RVA: 0x0002A8C4 File Offset: 0x00028AC4
+	// (set) Token: 0x06004E2B RID: 20011 RVA: 0x0002A8CC File Offset: 0x00028ACC
 	public int ChestIndex { get; private set; }
 
-	// Token: 0x170013B8 RID: 5048
-	// (get) Token: 0x0600379D RID: 14237 RVA: 0x000BE845 File Offset: 0x000BCA45
-	// (set) Token: 0x0600379E RID: 14238 RVA: 0x000BE84D File Offset: 0x000BCA4D
+	// Token: 0x17001B0B RID: 6923
+	// (get) Token: 0x06004E2C RID: 20012 RVA: 0x0002A8D5 File Offset: 0x00028AD5
+	// (set) Token: 0x06004E2D RID: 20013 RVA: 0x0002A8DD File Offset: 0x00028ADD
 	public ChestObj ChestInstance { get; private set; }
 
-	// Token: 0x0600379F RID: 14239 RVA: 0x000BE858 File Offset: 0x000BCA58
+	// Token: 0x06004E2E RID: 20014 RVA: 0x0012D1D4 File Offset: 0x0012B3D4
 	private void Start()
 	{
 		SpriteRenderer component = base.gameObject.GetComponent<SpriteRenderer>();
@@ -219,7 +219,7 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		});
 	}
 
-	// Token: 0x060037A0 RID: 14240 RVA: 0x000BE896 File Offset: 0x000BCA96
+	// Token: 0x06004E2F RID: 20015 RVA: 0x0002A8E6 File Offset: 0x00028AE6
 	private void Initialise()
 	{
 		if (GameUtility.IsInLevelEditor)
@@ -229,20 +229,20 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		this.IsInitialised = true;
 	}
 
-	// Token: 0x060037A1 RID: 14241 RVA: 0x000BE8AC File Offset: 0x000BCAAC
+	// Token: 0x06004E30 RID: 20016 RVA: 0x0002A8FC File Offset: 0x00028AFC
 	public void SetSpawnType()
 	{
 		this.InitializeChestType();
 		this.InitializeGoldAmount();
 	}
 
-	// Token: 0x060037A2 RID: 14242 RVA: 0x000BE8BA File Offset: 0x000BCABA
+	// Token: 0x06004E31 RID: 20017 RVA: 0x0002A90A File Offset: 0x00028B0A
 	public void SetChestIndex(int index)
 	{
 		this.ChestIndex = index;
 	}
 
-	// Token: 0x060037A3 RID: 14243 RVA: 0x000BE8C4 File Offset: 0x000BCAC4
+	// Token: 0x06004E32 RID: 20018 RVA: 0x0012D214 File Offset: 0x0012B414
 	private void InitializeChestType()
 	{
 		int roll = RNGManager.GetRandomNumber(RngID.Chest_RoomSeed, string.Format("(ChestSpawnController) InitializeChestType", Array.Empty<object>()), 0, 100);
@@ -260,7 +260,7 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		});
 	}
 
-	// Token: 0x060037A4 RID: 14244 RVA: 0x000BE950 File Offset: 0x000BCB50
+	// Token: 0x06004E33 RID: 20019 RVA: 0x0012D2A0 File Offset: 0x0012B4A0
 	private void InitializeGoldAmount()
 	{
 		if (this.ChestType != ChestType.Boss && this.ChestType != ChestType.Black)
@@ -303,7 +303,7 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x060037A5 RID: 14245 RVA: 0x000BEAB4 File Offset: 0x000BCCB4
+	// Token: 0x06004E34 RID: 20020 RVA: 0x0012D404 File Offset: 0x0012B604
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
@@ -314,7 +314,7 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		}
 	}
 
-	// Token: 0x060037A6 RID: 14246 RVA: 0x000BEAE4 File Offset: 0x000BCCE4
+	// Token: 0x06004E35 RID: 20021 RVA: 0x0012D434 File Offset: 0x0012B634
 	public bool Spawn()
 	{
 		bool result = false;
@@ -330,7 +330,7 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		return result;
 	}
 
-	// Token: 0x060037A7 RID: 14247 RVA: 0x000BEB28 File Offset: 0x000BCD28
+	// Token: 0x06004E36 RID: 20022 RVA: 0x0012D478 File Offset: 0x0012B678
 	public void InitializeChestInstance()
 	{
 		if (!this.ShouldSpawn)
@@ -362,53 +362,53 @@ public class ChestSpawnController : MonoBehaviour, ISimpleSpawnController, ISpaw
 		});
 	}
 
-	// Token: 0x060037A9 RID: 14249 RVA: 0x000BEC87 File Offset: 0x000BCE87
+	// Token: 0x06004E38 RID: 20024 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject ISpawnController.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002AA8 RID: 10920
+	// Token: 0x04003AFF RID: 15103
 	[SerializeField]
 	private SpecialItemType m_specialItemOverride;
 
-	// Token: 0x04002AA9 RID: 10921
+	// Token: 0x04003B00 RID: 15104
 	[SerializeField]
 	private bool m_overrideGold;
 
-	// Token: 0x04002AAA RID: 10922
+	// Token: 0x04003B01 RID: 15105
 	[SerializeField]
 	private bool m_overrideLevel;
 
-	// Token: 0x04002AAB RID: 10923
+	// Token: 0x04003B02 RID: 15106
 	[SerializeField]
 	private bool m_overrideType;
 
-	// Token: 0x04002AAC RID: 10924
+	// Token: 0x04003B03 RID: 15107
 	[SerializeField]
 	private BossID m_bossID;
 
-	// Token: 0x04002AAD RID: 10925
+	// Token: 0x04003B04 RID: 15108
 	[SerializeField]
 	private ChestType m_chestType;
 
-	// Token: 0x04002AAE RID: 10926
+	// Token: 0x04003B05 RID: 15109
 	[SerializeField]
 	private int m_gold;
 
-	// Token: 0x04002AAF RID: 10927
+	// Token: 0x04003B06 RID: 15110
 	[SerializeField]
 	private int m_level = -1;
 
-	// Token: 0x04002AB0 RID: 10928
+	// Token: 0x04003B07 RID: 15111
 	private SpawnLogicController m_spawnLogic;
 
-	// Token: 0x04002AB1 RID: 10929
+	// Token: 0x04003B08 RID: 15112
 	private BaseRoom m_room;
 
-	// Token: 0x04002AB2 RID: 10930
+	// Token: 0x04003B09 RID: 15113
 	private GridPointManager m_gridPointManager;
 
-	// Token: 0x04002AB4 RID: 10932
+	// Token: 0x04003B0B RID: 15115
 	private bool m_hasCheckedForSpawnLogicController;
 }

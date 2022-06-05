@@ -1,17 +1,17 @@
 ﻿using System;
 
-// Token: 0x020005C5 RID: 1477
+// Token: 0x020009CD RID: 2509
 public interface IPlayHitEffect
 {
-	// Token: 0x17001341 RID: 4929
-	// (get) Token: 0x0600366D RID: 13933
+	// Token: 0x17001A6E RID: 6766
+	// (get) Token: 0x06004C7F RID: 19583
 	bool PlayDirectionalHitEffect { get; }
 
-	// Token: 0x17001342 RID: 4930
-	// (get) Token: 0x0600366E RID: 13934
+	// Token: 0x17001A6F RID: 6767
+	// (get) Token: 0x06004C80 RID: 19584
 	bool PlayHitEffect { get; }
 
-	// Token: 0x17001343 RID: 4931
-	// (get) Token: 0x0600366F RID: 13935
+	// Token: 0x17001A70 RID: 6768
+	// (get) Token: 0x06004C81 RID: 19585
 	string EffectNameOverride { get; }
 }

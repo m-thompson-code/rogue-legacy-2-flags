@@ -6,11 +6,11 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200055F RID: 1375
+// Token: 0x0200092A RID: 2346
 public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEventEmitter
 {
-	// Token: 0x17001260 RID: 4704
-	// (get) Token: 0x06003286 RID: 12934 RVA: 0x000AAF3B File Offset: 0x000A913B
+	// Token: 0x1700191B RID: 6427
+	// (get) Token: 0x0600473D RID: 18237 RVA: 0x000047A7 File Offset: 0x000029A7
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -19,8 +19,8 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		}
 	}
 
-	// Token: 0x17001261 RID: 4705
-	// (get) Token: 0x06003287 RID: 12935 RVA: 0x000AAF3E File Offset: 0x000A913E
+	// Token: 0x1700191C RID: 6428
+	// (get) Token: 0x0600473E RID: 18238 RVA: 0x0002711B File Offset: 0x0002531B
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -29,7 +29,7 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		}
 	}
 
-	// Token: 0x06003288 RID: 12936 RVA: 0x000AAF46 File Offset: 0x000A9146
+	// Token: 0x0600473F RID: 18239 RVA: 0x00027123 File Offset: 0x00025323
 	private bool HasEventDialogue()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround && !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.SeenParade))
@@ -39,8 +39,8 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		return !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.TotemDialogue_Intro);
 	}
 
-	// Token: 0x17001262 RID: 4706
-	// (get) Token: 0x06003289 RID: 12937 RVA: 0x000AAF83 File Offset: 0x000A9183
+	// Token: 0x1700191D RID: 6429
+	// (get) Token: 0x06004740 RID: 18240 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -49,7 +49,7 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		}
 	}
 
-	// Token: 0x0600328A RID: 12938 RVA: 0x000AAF8C File Offset: 0x000A918C
+	// Token: 0x06004741 RID: 18241 RVA: 0x0011561C File Offset: 0x0011381C
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -61,20 +61,20 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		this.m_closeTotemShopUnityEvent = new UnityAction(this.CloseTotemShop);
 	}
 
-	// Token: 0x0600328B RID: 12939 RVA: 0x000AB004 File Offset: 0x000A9204
+	// Token: 0x06004742 RID: 18242 RVA: 0x00027160 File Offset: 0x00025360
 	private void OnEnable()
 	{
 		this.m_endingSpeechBubblePlayed = false;
 	}
 
-	// Token: 0x0600328C RID: 12940 RVA: 0x000AB00D File Offset: 0x000A920D
+	// Token: 0x06004743 RID: 18243 RVA: 0x00027169 File Offset: 0x00025369
 	public void OpenTotemShop()
 	{
 		this.m_interactable.SetIsInteractableActive(false);
 		base.StartCoroutine(this.OpenTotemCoroutine());
 	}
 
-	// Token: 0x0600328D RID: 12941 RVA: 0x000AB028 File Offset: 0x000A9228
+	// Token: 0x06004744 RID: 18244 RVA: 0x00027184 File Offset: 0x00025384
 	private IEnumerator OpenTotemCoroutine()
 	{
 		AudioManager.PlayOneShotAttached(this, this.m_greetingAudioEvent, base.gameObject);
@@ -101,7 +101,7 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		yield break;
 	}
 
-	// Token: 0x0600328E RID: 12942 RVA: 0x000AB037 File Offset: 0x000A9237
+	// Token: 0x06004745 RID: 18245 RVA: 0x00027193 File Offset: 0x00025393
 	private IEnumerator MovePlayerToTotem()
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -121,7 +121,7 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		yield break;
 	}
 
-	// Token: 0x0600328F RID: 12943 RVA: 0x000AB048 File Offset: 0x000A9248
+	// Token: 0x06004746 RID: 18246 RVA: 0x00115694 File Offset: 0x00113894
 	private void RunTotemIntroDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.TotemDialogue_Intro, true);
@@ -131,7 +131,7 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_displayTotemShop);
 	}
 
-	// Token: 0x06003290 RID: 12944 RVA: 0x000AB0B4 File Offset: 0x000A92B4
+	// Token: 0x06004747 RID: 18247 RVA: 0x00115700 File Offset: 0x00113900
 	private void RunTotemStatsDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.TotemDialogue_Intro, true);
@@ -141,7 +141,7 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_displayTotemShop);
 	}
 
-	// Token: 0x06003291 RID: 12945 RVA: 0x000AB120 File Offset: 0x000A9320
+	// Token: 0x06004748 RID: 18248 RVA: 0x0011576C File Offset: 0x0011396C
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -171,7 +171,7 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeTotemShop);
 	}
 
-	// Token: 0x06003292 RID: 12946 RVA: 0x000AB1BF File Offset: 0x000A93BF
+	// Token: 0x06004749 RID: 18249 RVA: 0x000271A2 File Offset: 0x000253A2
 	private void DisplayTotemShop()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.Totem))
@@ -182,7 +182,7 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		WindowManager.GetWindowController(WindowID.Totem).WindowClosedEvent.AddListener(this.m_closeTotemShopUnityEvent);
 	}
 
-	// Token: 0x06003293 RID: 12947 RVA: 0x000AB1F0 File Offset: 0x000A93F0
+	// Token: 0x0600474A RID: 18250 RVA: 0x000271D3 File Offset: 0x000253D3
 	private void CloseTotemShop()
 	{
 		if (WindowManager.GetIsWindowLoaded(WindowID.Totem))
@@ -193,47 +193,47 @@ public class TotemShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEv
 		this.m_interactable.SetIsInteractableActive(true);
 	}
 
-	// Token: 0x06003295 RID: 12949 RVA: 0x000AB238 File Offset: 0x000A9438
+	// Token: 0x0600474C RID: 18252 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002799 RID: 10137
+	// Token: 0x040036B6 RID: 14006
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x0400279A RID: 10138
+	// Token: 0x040036B7 RID: 14007
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioEvent;
 
-	// Token: 0x0400279B RID: 10139
+	// Token: 0x040036B8 RID: 14008
 	[SerializeField]
 	[EventRef]
 	private string m_farewellAudioEvent;
 
-	// Token: 0x0400279C RID: 10140
+	// Token: 0x040036B9 RID: 14009
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x0400279D RID: 10141
+	// Token: 0x040036BA RID: 14010
 	private Interactable m_interactable;
 
-	// Token: 0x0400279E RID: 10142
+	// Token: 0x040036BB RID: 14011
 	private NPCController m_npcController;
 
-	// Token: 0x0400279F RID: 10143
+	// Token: 0x040036BC RID: 14012
 	private bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x040027A0 RID: 10144
+	// Token: 0x040036BD RID: 14013
 	private Prop m_prop;
 
-	// Token: 0x040027A1 RID: 10145
+	// Token: 0x040036BE RID: 14014
 	private Action m_displayTotemShop;
 
-	// Token: 0x040027A2 RID: 10146
+	// Token: 0x040036BF RID: 14015
 	private Action m_closeTotemShop;
 
-	// Token: 0x040027A3 RID: 10147
+	// Token: 0x040036C0 RID: 14016
 	private UnityAction m_closeTotemShopUnityEvent;
 }

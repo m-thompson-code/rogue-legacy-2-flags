@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002F7 RID: 759
+// Token: 0x0200050E RID: 1294
 public class DeathDelayStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D2C RID: 3372
-	// (get) Token: 0x06001E52 RID: 7762 RVA: 0x00062986 File Offset: 0x00060B86
+	// Token: 0x170010F5 RID: 4341
+	// (get) Token: 0x060029DF RID: 10719 RVA: 0x00017799 File Offset: 0x00015999
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class DeathDelayStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D2D RID: 3373
-	// (get) Token: 0x06001E53 RID: 7763 RVA: 0x0006298D File Offset: 0x00060B8D
+	// Token: 0x170010F6 RID: 4342
+	// (get) Token: 0x060029E0 RID: 10720 RVA: 0x00003C54 File Offset: 0x00001E54
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,7 +25,7 @@ public class DeathDelayStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E54 RID: 7764 RVA: 0x00062994 File Offset: 0x00060B94
+	// Token: 0x060029E1 RID: 10721 RVA: 0x000177A0 File Offset: 0x000159A0
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		if (this.m_charController.CurrentHealth <= 0f)
@@ -39,7 +39,7 @@ public class DeathDelayStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001E55 RID: 7765 RVA: 0x000629A3 File Offset: 0x00060BA3
+	// Token: 0x060029E2 RID: 10722 RVA: 0x000177AF File Offset: 0x000159AF
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);

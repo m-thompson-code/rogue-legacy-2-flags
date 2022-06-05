@@ -5,10 +5,10 @@ using ClipperLibFerr;
 using Ferr;
 using UnityEngine;
 
-// Token: 0x0200067B RID: 1659
+// Token: 0x02000AF6 RID: 2806
 public static class MergeRoomTools
 {
-	// Token: 0x06003BED RID: 15341 RVA: 0x000CE318 File Offset: 0x000CC518
+	// Token: 0x0600543D RID: 21565 RVA: 0x0013E218 File Offset: 0x0013C418
 	public static GameObject Merge(List<Room> roomsToMerge)
 	{
 		if (roomsToMerge == null)
@@ -28,7 +28,7 @@ public static class MergeRoomTools
 		return mergeRoom.gameObject;
 	}
 
-	// Token: 0x06003BEE RID: 15342 RVA: 0x000CE39C File Offset: 0x000CC59C
+	// Token: 0x0600543E RID: 21566 RVA: 0x0013E29C File Offset: 0x0013C49C
 	private static List<Vector2Int> GetGridPointCoordinatesToFill(MergeRoom mergeRoom)
 	{
 		MergeRoomTools.m_gridPointsHelper.Clear();
@@ -70,7 +70,7 @@ public static class MergeRoomTools
 		return MergeRoomTools.m_gridPointsToFillHelper;
 	}
 
-	// Token: 0x06003BEF RID: 15343 RVA: 0x000CE59C File Offset: 0x000CC79C
+	// Token: 0x0600543F RID: 21567 RVA: 0x0013E49C File Offset: 0x0013C69C
 	public static List<Ferr2DT_PathTerrain> MergeTerrain(BaseRoom room)
 	{
 		BiomeType terrainBiomeType = ArtUtility.GetTerrainBiomeType(room);
@@ -106,7 +106,7 @@ public static class MergeRoomTools
 		return MergeRoomTools.m_decoTerrainHelper;
 	}
 
-	// Token: 0x06003BF0 RID: 15344 RVA: 0x000CE704 File Offset: 0x000CC904
+	// Token: 0x06005440 RID: 21568 RVA: 0x0013E604 File Offset: 0x0013C804
 	private static void CreateFillDecoTerrain(List<Ferr2DT_PathTerrain> decoTerrain, MergeRoom mergeRoom, List<Vector2Int> gridPointCoordsToFill)
 	{
 		BiomeArtData artData = BiomeArtDataLibrary.GetArtData(mergeRoom.AppearanceBiomeType);
@@ -122,7 +122,7 @@ public static class MergeRoomTools
 		}
 	}
 
-	// Token: 0x06003BF1 RID: 15345 RVA: 0x000CE828 File Offset: 0x000CCA28
+	// Token: 0x06005441 RID: 21569 RVA: 0x0013E728 File Offset: 0x0013C928
 	private static List<Ferr2DT_PathTerrain> MergeDecoTerrain(MergeRoom mergeRoom, List<Ferr2DT_PathTerrain> terrainToMerge)
 	{
 		BiomeArtData artData = BiomeArtDataLibrary.GetArtData(mergeRoom.AppearanceBiomeType);
@@ -139,7 +139,7 @@ public static class MergeRoomTools
 		return list;
 	}
 
-	// Token: 0x06003BF2 RID: 15346 RVA: 0x000CE89C File Offset: 0x000CCA9C
+	// Token: 0x06005442 RID: 21570 RVA: 0x0013E79C File Offset: 0x0013C99C
 	private static List<Ferr2DT_PathTerrain> MergeTerrain(Transform parent, BiomeType biome, BiomeArtData biomeArtData, Bounds bounds, IEnumerable<Ferr2DT_PathTerrain> terrainToMerge)
 	{
 		MergeRoomTools.m_mergeTerrainHelper.Clear();
@@ -177,7 +177,7 @@ public static class MergeRoomTools
 		return MergeRoomTools.m_mergeTerrainHelper;
 	}
 
-	// Token: 0x06003BF3 RID: 15347 RVA: 0x000CE9B0 File Offset: 0x000CCBB0
+	// Token: 0x06005443 RID: 21571 RVA: 0x0013E8B0 File Offset: 0x0013CAB0
 	private static void SetDontMergeTerrainMaterial(BiomeType biome, List<Ferr2DT_PathTerrain> dontMergeTerrain)
 	{
 		Ferr2DT_Material ferr2DT_Material;
@@ -205,7 +205,7 @@ public static class MergeRoomTools
 		}
 	}
 
-	// Token: 0x06003BF4 RID: 15348 RVA: 0x000CEA94 File Offset: 0x000CCC94
+	// Token: 0x06005444 RID: 21572 RVA: 0x0013E994 File Offset: 0x0013CB94
 	private static List<Ferr2DT_PathTerrain> DoMerge(Transform parent, BiomeArtData biomeArtData, Bounds bounds, List<Ferr2DT_PathTerrain> terrainToMerge)
 	{
 		bool isInvertedTerrain = terrainToMerge[0].FillMode == Ferr2D_SectionMode.Invert;
@@ -221,7 +221,7 @@ public static class MergeRoomTools
 		return list;
 	}
 
-	// Token: 0x06003BF5 RID: 15349 RVA: 0x000CEB04 File Offset: 0x000CCD04
+	// Token: 0x06005445 RID: 21573 RVA: 0x0013EA04 File Offset: 0x0013CC04
 	private static void ApplyMissingEdgesToUnionResult(List<List<Vector2>> unionResult, Dictionary<Line_RL, Ferr2D_PointData> edgeOverrides)
 	{
 		if (edgeOverrides == null)
@@ -264,7 +264,7 @@ public static class MergeRoomTools
 		}
 	}
 
-	// Token: 0x06003BF6 RID: 15350 RVA: 0x000CECB8 File Offset: 0x000CCEB8
+	// Token: 0x06005446 RID: 21574 RVA: 0x0013EBB8 File Offset: 0x0013CDB8
 	private static Dictionary<Line_RL, Ferr2D_PointData> GetDirectionOverrides(List<Ferr2DT_PathTerrain> terrainToMerge)
 	{
 		Dictionary<Line_RL, Ferr2D_PointData> dictionary = new Dictionary<Line_RL, Ferr2D_PointData>();
@@ -296,7 +296,7 @@ public static class MergeRoomTools
 		return dictionary;
 	}
 
-	// Token: 0x06003BF7 RID: 15351 RVA: 0x000CED9C File Offset: 0x000CCF9C
+	// Token: 0x06005447 RID: 21575 RVA: 0x0013EC9C File Offset: 0x0013CE9C
 	private static List<List<Vector2>> GetTerrainPoints(IEnumerable<Ferr2DT_PathTerrain> terrainToMerge)
 	{
 		List<List<Vector2>> list = new List<List<Vector2>>();
@@ -311,7 +311,7 @@ public static class MergeRoomTools
 		return list;
 	}
 
-	// Token: 0x06003BF8 RID: 15352 RVA: 0x000CEE3C File Offset: 0x000CD03C
+	// Token: 0x06005448 RID: 21576 RVA: 0x0013ED3C File Offset: 0x0013CF3C
 	private static List<Vector2> GetPoints(Ferr2DT_PathTerrain terrain)
 	{
 		List<Vector2> points = terrain.PathData.GetPoints(0);
@@ -323,7 +323,7 @@ public static class MergeRoomTools
 		return list;
 	}
 
-	// Token: 0x06003BF9 RID: 15353 RVA: 0x000CEE88 File Offset: 0x000CD088
+	// Token: 0x06005449 RID: 21577 RVA: 0x0013ED88 File Offset: 0x0013CF88
 	private static Vector2 GetPointInWorldSpaceCoordinates(Vector2 localCoords, Transform transform)
 	{
 		int num = Mathf.RoundToInt(localCoords.x);
@@ -331,7 +331,7 @@ public static class MergeRoomTools
 		return transform.TransformPoint(new Vector2((float)num, (float)num2));
 	}
 
-	// Token: 0x06003BFA RID: 15354 RVA: 0x000CEEC8 File Offset: 0x000CD0C8
+	// Token: 0x0600544A RID: 21578 RVA: 0x0013EDC8 File Offset: 0x0013CFC8
 	private static Ferr2DT_PathTerrain CreateDecorativeTerrain(Transform parent, BiomeArtData biomeArtData, Bounds bounds, List<Vector2> terrainPoints, bool isInvertedTerrain, Dictionary<Line_RL, Ferr2D_PointData> edgeOverrides = null)
 	{
 		Ferr2DT_PathTerrain ferr2DT_PathTerrain = UnityEngine.Object.Instantiate<Ferr2DT_PathTerrain>(RoomPrefabLibrary.DecoTerrainPrefab);
@@ -394,7 +394,7 @@ public static class MergeRoomTools
 		return ferr2DT_PathTerrain;
 	}
 
-	// Token: 0x06003BFB RID: 15355 RVA: 0x000CF188 File Offset: 0x000CD388
+	// Token: 0x0600544B RID: 21579 RVA: 0x0013F088 File Offset: 0x0013D288
 	public static List<List<Vector2>> GetUnion(List<List<Vector2>> points, bool applyOffsetCheck = true)
 	{
 		if (!applyOffsetCheck)
@@ -443,7 +443,7 @@ public static class MergeRoomTools
 		return list4;
 	}
 
-	// Token: 0x06003BFC RID: 15356 RVA: 0x000CF394 File Offset: 0x000CD594
+	// Token: 0x0600544C RID: 21580 RVA: 0x0013F294 File Offset: 0x0013D494
 	private static MergeRoom CreateMergeRoom()
 	{
 		MergeRoomTools.m_mergeRoomNumber++;
@@ -453,13 +453,13 @@ public static class MergeRoomTools
 		return result;
 	}
 
-	// Token: 0x06003BFD RID: 15357 RVA: 0x000CF3D4 File Offset: 0x000CD5D4
+	// Token: 0x0600544D RID: 21581 RVA: 0x0002DB35 File Offset: 0x0002BD35
 	public static void ResetMergeRoomCounter()
 	{
 		MergeRoomTools.m_mergeRoomNumber = 0;
 	}
 
-	// Token: 0x06003BFE RID: 15358 RVA: 0x000CF3DC File Offset: 0x000CD5DC
+	// Token: 0x0600544E RID: 21582 RVA: 0x0013F2D4 File Offset: 0x0013D4D4
 	public static void SetMergeRoomCollider(MergeRoom mergeRoom)
 	{
 		mergeRoom.gameObject.AddComponent<PolygonCollider2D>();
@@ -476,7 +476,7 @@ public static class MergeRoomTools
 		component.SetPath(0, array);
 	}
 
-	// Token: 0x06003BFF RID: 15359 RVA: 0x000CF510 File Offset: 0x000CD710
+	// Token: 0x0600544F RID: 21583 RVA: 0x0013F408 File Offset: 0x0013D608
 	public static void ConvertCompositeColliderToPolygonCollider(CompositeCollider2D compositeCollider)
 	{
 		PolygonCollider2D polygonCollider2D = compositeCollider.gameObject.AddComponent<PolygonCollider2D>();
@@ -532,7 +532,7 @@ public static class MergeRoomTools
 		}
 	}
 
-	// Token: 0x06003C00 RID: 15360 RVA: 0x000CF69C File Offset: 0x000CD89C
+	// Token: 0x06005450 RID: 21584 RVA: 0x0013F594 File Offset: 0x0013D794
 	public static MergeRoom MergeRooms(BiomeController biomeController, List<Room> connectedRooms)
 	{
 		GameObject gameObject = MergeRoomTools.Merge(connectedRooms);
@@ -543,7 +543,7 @@ public static class MergeRoomTools
 		return component;
 	}
 
-	// Token: 0x06003C01 RID: 15361 RVA: 0x000CF6D4 File Offset: 0x000CD8D4
+	// Token: 0x06005451 RID: 21585 RVA: 0x0013F5CC File Offset: 0x0013D7CC
 	public static void MergeConnectedGridPointManagers(BiomeController biomeController, BiomeType biome)
 	{
 		List<GridPointManager> list = (from room in biomeController.GridPointManager.GridPointManagers
@@ -574,7 +574,7 @@ public static class MergeRoomTools
 		}
 	}
 
-	// Token: 0x06003C02 RID: 15362 RVA: 0x000CF7CC File Offset: 0x000CD9CC
+	// Token: 0x06005452 RID: 21586 RVA: 0x0013F6C4 File Offset: 0x0013D8C4
 	public static void MergeGridPointManagers(BiomeController biomeController, List<GridPointManager> connectedRooms)
 	{
 		foreach (GridPointManager gridPointManager in connectedRooms)
@@ -583,7 +583,7 @@ public static class MergeRoomTools
 		}
 	}
 
-	// Token: 0x06003C03 RID: 15363 RVA: 0x000CF818 File Offset: 0x000CDA18
+	// Token: 0x06005453 RID: 21587 RVA: 0x0013F710 File Offset: 0x0013D910
 	private static void GetConnectedRooms(List<Room> connectedRooms, Room room)
 	{
 		connectedRooms.Add(room);
@@ -599,7 +599,7 @@ public static class MergeRoomTools
 		}
 	}
 
-	// Token: 0x06003C04 RID: 15364 RVA: 0x000CF8C8 File Offset: 0x000CDAC8
+	// Token: 0x06005454 RID: 21588 RVA: 0x0013F7C0 File Offset: 0x0013D9C0
 	private static void GetConnectedRooms_V2(List<GridPointManager> connectedRooms, GridPointManager room)
 	{
 		connectedRooms.Add(room);
@@ -624,30 +624,30 @@ public static class MergeRoomTools
 		}
 	}
 
-	// Token: 0x04002D38 RID: 11576
+	// Token: 0x04003ED5 RID: 16085
 	private static int m_mergeRoomNumber = 0;
 
-	// Token: 0x04002D39 RID: 11577
+	// Token: 0x04003ED6 RID: 16086
 	private const int DIRECTION_OVERRIDE_DEFAULT_VALUE = 100;
 
-	// Token: 0x04002D3A RID: 11578
+	// Token: 0x04003ED7 RID: 16087
 	private static List<GridPoint> m_gridPointsHelper = new List<GridPoint>();
 
-	// Token: 0x04002D3B RID: 11579
+	// Token: 0x04003ED8 RID: 16088
 	private static List<Vector2Int> m_gridPointsToFillHelper = new List<Vector2Int>();
 
-	// Token: 0x04002D3C RID: 11580
+	// Token: 0x04003ED9 RID: 16089
 	private static List<Ferr2DT_PathTerrain> m_decoTerrainHelper = new List<Ferr2DT_PathTerrain>();
 
-	// Token: 0x04002D3D RID: 11581
+	// Token: 0x04003EDA RID: 16090
 	private static List<Vector2> m_pointsList = new List<Vector2>();
 
-	// Token: 0x04002D3E RID: 11582
+	// Token: 0x04003EDB RID: 16091
 	private static List<Ferr2DT_PathTerrain> m_mergeTerrainHelper = new List<Ferr2DT_PathTerrain>();
 
-	// Token: 0x04002D3F RID: 11583
+	// Token: 0x04003EDC RID: 16092
 	private static List<Ferr2DT_PathTerrain> m_normalTerrainHelper = new List<Ferr2DT_PathTerrain>();
 
-	// Token: 0x04002D40 RID: 11584
+	// Token: 0x04003EDD RID: 16093
 	private static List<Ferr2DT_PathTerrain> m_invertedTerrainHelper = new List<Ferr2DT_PathTerrain>();
 }

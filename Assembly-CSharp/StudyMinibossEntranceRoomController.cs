@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000511 RID: 1297
+// Token: 0x02000882 RID: 2178
 public class StudyMinibossEntranceRoomController : BaseSpecialRoomController
 {
-	// Token: 0x0600302A RID: 12330 RVA: 0x000A4C90 File Offset: 0x000A2E90
+	// Token: 0x060042D4 RID: 17108 RVA: 0x0010BBF8 File Offset: 0x00109DF8
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -37,20 +37,20 @@ public class StudyMinibossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x0600302B RID: 12331 RVA: 0x000A4DC2 File Offset: 0x000A2FC2
+	// Token: 0x060042D5 RID: 17109 RVA: 0x00024604 File Offset: 0x00022804
 	private void OnDisable()
 	{
 		BossEntranceRoomController.RunDoorCrumbleAnimation = false;
 	}
 
-	// Token: 0x04002650 RID: 9808
+	// Token: 0x0400342D RID: 13357
 	[SerializeField]
 	protected PlayerSaveFlag m_bossBeatenFlag;
 
-	// Token: 0x04002651 RID: 9809
+	// Token: 0x0400342E RID: 13358
 	[SerializeField]
 	private TunnelSpawnController m_bossTunnel;
 
-	// Token: 0x04002652 RID: 9810
+	// Token: 0x0400342F RID: 13359
 	private InsightObjectiveCompleteHUDEventArgs m_insightArgs = new InsightObjectiveCompleteHUDEventArgs(InsightType.None, false, 5f, null, null, null);
 }

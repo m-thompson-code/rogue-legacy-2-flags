@@ -1,60 +1,60 @@
 ﻿using System;
 
-// Token: 0x02000702 RID: 1794
+// Token: 0x02000BB5 RID: 2997
 public enum BiomeType
 {
-	// Token: 0x0400328F RID: 12943
+	// Token: 0x0400450A RID: 17674
 	None,
-	// Token: 0x04003290 RID: 12944
+	// Token: 0x0400450B RID: 17675
 	Editor = 10,
-	// Token: 0x04003291 RID: 12945
+	// Token: 0x0400450C RID: 17676
 	Castle = 20,
-	// Token: 0x04003292 RID: 12946
+	// Token: 0x0400450D RID: 17677
 	Cave = 30,
-	// Token: 0x04003293 RID: 12947
+	// Token: 0x0400450E RID: 17678
 	CaveMiddle = 32,
-	// Token: 0x04003294 RID: 12948
+	// Token: 0x0400450F RID: 17679
 	CaveBottom = 34,
-	// Token: 0x04003295 RID: 12949
+	// Token: 0x04004510 RID: 17680
 	Dragon = 40,
-	// Token: 0x04003296 RID: 12950
+	// Token: 0x04004511 RID: 17681
 	Forest = 50,
-	// Token: 0x04003297 RID: 12951
+	// Token: 0x04004512 RID: 17682
 	ForestTop = 52,
-	// Token: 0x04003298 RID: 12952
+	// Token: 0x04004513 RID: 17683
 	ForestBottom = 54,
-	// Token: 0x04003299 RID: 12953
+	// Token: 0x04004514 RID: 17684
 	Garden = 60,
-	// Token: 0x0400329A RID: 12954
+	// Token: 0x04004515 RID: 17685
 	DriftHouse = 70,
-	// Token: 0x0400329B RID: 12955
+	// Token: 0x04004516 RID: 17686
 	HubTown = 75,
-	// Token: 0x0400329C RID: 12956
+	// Token: 0x04004517 RID: 17687
 	Lake = 80,
-	// Token: 0x0400329D RID: 12957
+	// Token: 0x04004518 RID: 17688
 	Lineage = 85,
-	// Token: 0x0400329E RID: 12958
+	// Token: 0x04004519 RID: 17689
 	Spawn = 90,
-	// Token: 0x0400329F RID: 12959
+	// Token: 0x0400451A RID: 17690
 	Special = 100,
-	// Token: 0x040032A0 RID: 12960
+	// Token: 0x0400451B RID: 17691
 	Stone = 110,
-	// Token: 0x040032A1 RID: 12961
+	// Token: 0x0400451C RID: 17692
 	Study = 120,
-	// Token: 0x040032A2 RID: 12962
+	// Token: 0x0400451D RID: 17693
 	Sunken = 130,
-	// Token: 0x040032A3 RID: 12963
+	// Token: 0x0400451E RID: 17694
 	Tower = 140,
-	// Token: 0x040032A4 RID: 12964
+	// Token: 0x0400451F RID: 17695
 	TowerExterior = 145,
-	// Token: 0x040032A5 RID: 12965
+	// Token: 0x04004520 RID: 17696
 	Town = 150,
-	// Token: 0x040032A6 RID: 12966
+	// Token: 0x04004521 RID: 17697
 	Tutorial = 160,
-	// Token: 0x040032A7 RID: 12967
+	// Token: 0x04004522 RID: 17698
 	Arena = 170,
-	// Token: 0x040032A8 RID: 12968
+	// Token: 0x04004523 RID: 17699
 	Heirloom = 180,
-	// Token: 0x040032A9 RID: 12969
+	// Token: 0x04004524 RID: 17700
 	Any = 1000
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020003FE RID: 1022
+// Token: 0x020006AB RID: 1707
 public interface ILevelConsumer
 {
-	// Token: 0x17000F47 RID: 3911
-	// (get) Token: 0x0600260D RID: 9741
+	// Token: 0x170013FA RID: 5114
+	// (get) Token: 0x0600348C RID: 13452
 	int Level { get; }
 
-	// Token: 0x0600260E RID: 9742
+	// Token: 0x0600348D RID: 13453
 	void SetLevel(int value);
 }

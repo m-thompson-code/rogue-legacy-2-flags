@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020003A9 RID: 937
+// Token: 0x0200063C RID: 1596
 public interface IGeneticistOmniUIButton
 {
-	// Token: 0x17000E5B RID: 3675
-	// (get) Token: 0x060022BE RID: 8894
-	// (set) Token: 0x060022BF RID: 8895
+	// Token: 0x170012EE RID: 4846
+	// (get) Token: 0x060030D6 RID: 12502
+	// (set) Token: 0x060030D7 RID: 12503
 	TraitType TraitType { get; set; }
 }

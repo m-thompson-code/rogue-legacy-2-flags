@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using Ferr;
 using UnityEngine;
 
-// Token: 0x02000217 RID: 535
+// Token: 0x020003CA RID: 970
 [RequireComponent(typeof(Ferr2DT_PathTerrain))]
 public class LeylineController : MonoBehaviour
 {
-	// Token: 0x17000B17 RID: 2839
-	// (get) Token: 0x06001649 RID: 5705 RVA: 0x000459DC File Offset: 0x00043BDC
+	// Token: 0x17000E3E RID: 3646
+	// (get) Token: 0x06001FE5 RID: 8165 RVA: 0x00010DF4 File Offset: 0x0000EFF4
 	public bool UseCircleCorners
 	{
 		get
@@ -17,7 +17,7 @@ public class LeylineController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600164A RID: 5706 RVA: 0x000459E4 File Offset: 0x00043BE4
+	// Token: 0x06001FE6 RID: 8166 RVA: 0x000A3FC0 File Offset: 0x000A21C0
 	private void Start()
 	{
 		Ferr2DT_PathTerrain component = base.GetComponent<Ferr2DT_PathTerrain>();
@@ -46,7 +46,7 @@ public class LeylineController : MonoBehaviour
 		});
 	}
 
-	// Token: 0x04001588 RID: 5512
+	// Token: 0x04001C8B RID: 7307
 	[SerializeField]
 	private bool m_useCircleCorners;
 }

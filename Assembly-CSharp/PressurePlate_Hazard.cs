@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000451 RID: 1105
+// Token: 0x0200072F RID: 1839
 public class PressurePlate_Hazard : Hazard, IHasProjectileNameArray
 {
-	// Token: 0x17001005 RID: 4101
-	// (get) Token: 0x060028C8 RID: 10440 RVA: 0x00086DBD File Offset: 0x00084FBD
+	// Token: 0x17001510 RID: 5392
+	// (get) Token: 0x06003854 RID: 14420 RVA: 0x0001EE6C File Offset: 0x0001D06C
 	public string[] ProjectileNameArray
 	{
 		get
@@ -21,7 +21,7 @@ public class PressurePlate_Hazard : Hazard, IHasProjectileNameArray
 		}
 	}
 
-	// Token: 0x060028C9 RID: 10441 RVA: 0x00086DE4 File Offset: 0x00084FE4
+	// Token: 0x06003855 RID: 14421 RVA: 0x000E7F6C File Offset: 0x000E616C
 	public void Shoot()
 	{
 		this.m_firedProjectile = ProjectileManager.FireProjectile(base.gameObject, this.ProjectileNameArray[0], Vector2.zero, false, 0f, 1f, false, true, true, true);
@@ -30,7 +30,7 @@ public class PressurePlate_Hazard : Hazard, IHasProjectileNameArray
 		this.m_firedProjectile.transform.localEulerAngles = localEulerAngles;
 	}
 
-	// Token: 0x060028CA RID: 10442 RVA: 0x00086E4C File Offset: 0x0008504C
+	// Token: 0x06003856 RID: 14422 RVA: 0x0001EE90 File Offset: 0x0001D090
 	public void StopShooting()
 	{
 		if (this.m_firedProjectile != null && this.m_firedProjectile.isActiveAndEnabled)
@@ -40,16 +40,16 @@ public class PressurePlate_Hazard : Hazard, IHasProjectileNameArray
 		}
 	}
 
-	// Token: 0x060028CB RID: 10443 RVA: 0x00086E7B File Offset: 0x0008507B
+	// Token: 0x06003857 RID: 14423 RVA: 0x0001EEBF File Offset: 0x0001D0BF
 	public override void ResetHazard()
 	{
 		this.StopShooting();
 	}
 
-	// Token: 0x040021A8 RID: 8616
+	// Token: 0x04002D2F RID: 11567
 	[NonSerialized]
 	private string[] m_projectileNameArray;
 
-	// Token: 0x040021A9 RID: 8617
+	// Token: 0x04002D30 RID: 11568
 	private Projectile_RL m_firedProjectile;
 }

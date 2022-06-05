@@ -8,11 +8,11 @@ using SceneManagement_RL;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020002AA RID: 682
+// Token: 0x02000481 RID: 1153
 public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEnterHitResponse, IHitResponse, IHasProjectileNameArray, IAudioEventEmitter
 {
-	// Token: 0x17000C07 RID: 3079
-	// (get) Token: 0x06001A45 RID: 6725 RVA: 0x00052FFC File Offset: 0x000511FC
+	// Token: 0x17000F5A RID: 3930
+	// (get) Token: 0x06002469 RID: 9321 RVA: 0x000142C7 File Offset: 0x000124C7
 	public string[] ProjectileNameArray
 	{
 		get
@@ -21,8 +21,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C08 RID: 3080
-	// (get) Token: 0x06001A46 RID: 6726 RVA: 0x00053004 File Offset: 0x00051204
+	// Token: 0x17000F5B RID: 3931
+	// (get) Token: 0x0600246A RID: 9322 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string RelicDamageTypeString
 	{
 		get
@@ -31,9 +31,9 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C09 RID: 3081
-	// (get) Token: 0x06001A47 RID: 6727 RVA: 0x00053007 File Offset: 0x00051207
-	// (set) Token: 0x06001A48 RID: 6728 RVA: 0x0005300F File Offset: 0x0005120F
+	// Token: 0x17000F5C RID: 3932
+	// (get) Token: 0x0600246B RID: 9323 RVA: 0x000142CF File Offset: 0x000124CF
+	// (set) Token: 0x0600246C RID: 9324 RVA: 0x000142D7 File Offset: 0x000124D7
 	public GameObject RangeBonusDamageCurseIndicatorGO
 	{
 		get
@@ -46,13 +46,13 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C0A RID: 3082
-	// (get) Token: 0x06001A49 RID: 6729 RVA: 0x00053018 File Offset: 0x00051218
-	// (set) Token: 0x06001A4A RID: 6730 RVA: 0x00053020 File Offset: 0x00051220
+	// Token: 0x17000F5D RID: 3933
+	// (get) Token: 0x0600246D RID: 9325 RVA: 0x000142E0 File Offset: 0x000124E0
+	// (set) Token: 0x0600246E RID: 9326 RVA: 0x000142E8 File Offset: 0x000124E8
 	public bool IsMushroomBig { get; private set; }
 
-	// Token: 0x17000C0B RID: 3083
-	// (get) Token: 0x06001A4B RID: 6731 RVA: 0x00053029 File Offset: 0x00051229
+	// Token: 0x17000F5E RID: 3934
+	// (get) Token: 0x0600246F RID: 9327 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -61,14 +61,14 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C0C RID: 3084
-	// (get) Token: 0x06001A4C RID: 6732 RVA: 0x00053031 File Offset: 0x00051231
-	// (set) Token: 0x06001A4D RID: 6733 RVA: 0x00053039 File Offset: 0x00051239
+	// Token: 0x17000F5F RID: 3935
+	// (get) Token: 0x06002470 RID: 9328 RVA: 0x000142F1 File Offset: 0x000124F1
+	// (set) Token: 0x06002471 RID: 9329 RVA: 0x000142F9 File Offset: 0x000124F9
 	public float TimeEnteredRoom { get; private set; }
 
-	// Token: 0x17000C0D RID: 3085
-	// (get) Token: 0x06001A4E RID: 6734 RVA: 0x00053042 File Offset: 0x00051242
-	// (set) Token: 0x06001A4F RID: 6735 RVA: 0x0005304A File Offset: 0x0005124A
+	// Token: 0x17000F60 RID: 3936
+	// (get) Token: 0x06002472 RID: 9330 RVA: 0x00014302 File Offset: 0x00012502
+	// (set) Token: 0x06002473 RID: 9331 RVA: 0x0001430A File Offset: 0x0001250A
 	public GameObject FollowTargetGO
 	{
 		get
@@ -81,9 +81,9 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C0E RID: 3086
-	// (get) Token: 0x06001A50 RID: 6736 RVA: 0x00053053 File Offset: 0x00051253
-	// (set) Token: 0x06001A51 RID: 6737 RVA: 0x00053060 File Offset: 0x00051260
+	// Token: 0x17000F61 RID: 3937
+	// (get) Token: 0x06002474 RID: 9332 RVA: 0x00014313 File Offset: 0x00012513
+	// (set) Token: 0x06002475 RID: 9333 RVA: 0x00014320 File Offset: 0x00012520
 	public bool IsInteractIconVisible
 	{
 		get
@@ -96,13 +96,13 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C0F RID: 3087
-	// (get) Token: 0x06001A52 RID: 6738 RVA: 0x0005306E File Offset: 0x0005126E
-	// (set) Token: 0x06001A53 RID: 6739 RVA: 0x00053076 File Offset: 0x00051276
+	// Token: 0x17000F62 RID: 3938
+	// (get) Token: 0x06002476 RID: 9334 RVA: 0x0001432E File Offset: 0x0001252E
+	// (set) Token: 0x06002477 RID: 9335 RVA: 0x00014336 File Offset: 0x00012536
 	public bool DisableDoorBlock { get; set; }
 
-	// Token: 0x17000C10 RID: 3088
-	// (get) Token: 0x06001A54 RID: 6740 RVA: 0x0005307F File Offset: 0x0005127F
+	// Token: 0x17000F63 RID: 3939
+	// (get) Token: 0x06002478 RID: 9336 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public StatusEffectType[] StatusEffectTypes
 	{
 		get
@@ -111,8 +111,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C11 RID: 3089
-	// (get) Token: 0x06001A55 RID: 6741 RVA: 0x00053082 File Offset: 0x00051282
+	// Token: 0x17000F64 RID: 3940
+	// (get) Token: 0x06002479 RID: 9337 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public float[] StatusEffectDurations
 	{
 		get
@@ -121,18 +121,18 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C12 RID: 3090
-	// (get) Token: 0x06001A56 RID: 6742 RVA: 0x00053085 File Offset: 0x00051285
-	// (set) Token: 0x06001A57 RID: 6743 RVA: 0x0005308D File Offset: 0x0005128D
+	// Token: 0x17000F65 RID: 3941
+	// (get) Token: 0x0600247A RID: 9338 RVA: 0x0001433F File Offset: 0x0001253F
+	// (set) Token: 0x0600247B RID: 9339 RVA: 0x00014347 File Offset: 0x00012547
 	public bool IsSpearSpinning { get; set; }
 
-	// Token: 0x17000C13 RID: 3091
-	// (get) Token: 0x06001A58 RID: 6744 RVA: 0x00053096 File Offset: 0x00051296
-	// (set) Token: 0x06001A59 RID: 6745 RVA: 0x0005309E File Offset: 0x0005129E
+	// Token: 0x17000F66 RID: 3942
+	// (get) Token: 0x0600247C RID: 9340 RVA: 0x00014350 File Offset: 0x00012550
+	// (set) Token: 0x0600247D RID: 9341 RVA: 0x00014358 File Offset: 0x00012558
 	public bool IsBlocking { get; set; }
 
-	// Token: 0x17000C14 RID: 3092
-	// (get) Token: 0x06001A5A RID: 6746 RVA: 0x000530A7 File Offset: 0x000512A7
+	// Token: 0x17000F67 RID: 3943
+	// (get) Token: 0x0600247E RID: 9342 RVA: 0x00014361 File Offset: 0x00012561
 	public bool IsPerfectBlocking
 	{
 		get
@@ -141,18 +141,18 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C15 RID: 3093
-	// (get) Token: 0x06001A5B RID: 6747 RVA: 0x000530C6 File Offset: 0x000512C6
-	// (set) Token: 0x06001A5C RID: 6748 RVA: 0x000530CE File Offset: 0x000512CE
+	// Token: 0x17000F68 RID: 3944
+	// (get) Token: 0x0600247F RID: 9343 RVA: 0x00014380 File Offset: 0x00012580
+	// (set) Token: 0x06002480 RID: 9344 RVA: 0x00014388 File Offset: 0x00012588
 	public bool CloakInterrupted { get; set; }
 
-	// Token: 0x17000C16 RID: 3094
-	// (get) Token: 0x06001A5D RID: 6749 RVA: 0x000530D7 File Offset: 0x000512D7
-	// (set) Token: 0x06001A5E RID: 6750 RVA: 0x000530DF File Offset: 0x000512DF
+	// Token: 0x17000F69 RID: 3945
+	// (get) Token: 0x06002481 RID: 9345 RVA: 0x00014391 File Offset: 0x00012591
+	// (set) Token: 0x06002482 RID: 9346 RVA: 0x00014399 File Offset: 0x00012599
 	public float BlockStartTime { get; set; }
 
-	// Token: 0x17000C17 RID: 3095
-	// (get) Token: 0x06001A5F RID: 6751 RVA: 0x000530E8 File Offset: 0x000512E8
+	// Token: 0x17000F6A RID: 3946
+	// (get) Token: 0x06002483 RID: 9347 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public bool IsDotDamage
 	{
 		get
@@ -161,8 +161,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C18 RID: 3096
-	// (get) Token: 0x06001A60 RID: 6752 RVA: 0x000530EB File Offset: 0x000512EB
+	// Token: 0x17000F6B RID: 3947
+	// (get) Token: 0x06002484 RID: 9348 RVA: 0x000143A2 File Offset: 0x000125A2
 	public IRelayLink<PlayerDeathEventArgs> OnPlayerDeathRelay
 	{
 		get
@@ -171,8 +171,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C19 RID: 3097
-	// (get) Token: 0x06001A61 RID: 6753 RVA: 0x000530F8 File Offset: 0x000512F8
+	// Token: 0x17000F6C RID: 3948
+	// (get) Token: 0x06002485 RID: 9349 RVA: 0x000143AF File Offset: 0x000125AF
 	public IRelayLink<ManaChangeEventArgs> ManaChangeRelay
 	{
 		get
@@ -181,8 +181,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C1A RID: 3098
-	// (get) Token: 0x06001A62 RID: 6754 RVA: 0x00053105 File Offset: 0x00051305
+	// Token: 0x17000F6D RID: 3949
+	// (get) Token: 0x06002486 RID: 9350 RVA: 0x00003DE8 File Offset: 0x00001FE8
 	public override float BaseScaleToOffsetWith
 	{
 		get
@@ -191,9 +191,9 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C1B RID: 3099
-	// (get) Token: 0x06001A63 RID: 6755 RVA: 0x0005310C File Offset: 0x0005130C
-	// (set) Token: 0x06001A64 RID: 6756 RVA: 0x00053114 File Offset: 0x00051314
+	// Token: 0x17000F6E RID: 3950
+	// (get) Token: 0x06002487 RID: 9351 RVA: 0x000143BC File Offset: 0x000125BC
+	// (set) Token: 0x06002488 RID: 9352 RVA: 0x000143C4 File Offset: 0x000125C4
 	public float BaseResolve
 	{
 		get
@@ -206,8 +206,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C1C RID: 3100
-	// (get) Token: 0x06001A65 RID: 6757 RVA: 0x00053120 File Offset: 0x00051320
+	// Token: 0x17000F6F RID: 3951
+	// (get) Token: 0x06002489 RID: 9353 RVA: 0x000AF8EC File Offset: 0x000ADAEC
 	public float ActualResolve
 	{
 		get
@@ -228,29 +228,29 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C1D RID: 3101
-	// (get) Token: 0x06001A66 RID: 6758 RVA: 0x00053192 File Offset: 0x00051392
-	// (set) Token: 0x06001A67 RID: 6759 RVA: 0x0005319A File Offset: 0x0005139A
+	// Token: 0x17000F70 RID: 3952
+	// (get) Token: 0x0600248A RID: 9354 RVA: 0x000143CD File Offset: 0x000125CD
+	// (set) Token: 0x0600248B RID: 9355 RVA: 0x000143D5 File Offset: 0x000125D5
 	public float ResolveAdd { get; private set; }
 
-	// Token: 0x17000C1E RID: 3102
-	// (get) Token: 0x06001A68 RID: 6760 RVA: 0x000531A3 File Offset: 0x000513A3
-	// (set) Token: 0x06001A69 RID: 6761 RVA: 0x000531AB File Offset: 0x000513AB
+	// Token: 0x17000F71 RID: 3953
+	// (get) Token: 0x0600248C RID: 9356 RVA: 0x000143DE File Offset: 0x000125DE
+	// (set) Token: 0x0600248D RID: 9357 RVA: 0x000143E6 File Offset: 0x000125E6
 	public float ResolveMod { get; private set; }
 
-	// Token: 0x17000C1F RID: 3103
-	// (get) Token: 0x06001A6A RID: 6762 RVA: 0x000531B4 File Offset: 0x000513B4
-	// (set) Token: 0x06001A6B RID: 6763 RVA: 0x000531BC File Offset: 0x000513BC
+	// Token: 0x17000F72 RID: 3954
+	// (get) Token: 0x0600248E RID: 9358 RVA: 0x000143EF File Offset: 0x000125EF
+	// (set) Token: 0x0600248F RID: 9359 RVA: 0x000143F7 File Offset: 0x000125F7
 	public virtual int SpellOrbs { get; set; }
 
-	// Token: 0x17000C20 RID: 3104
-	// (get) Token: 0x06001A6C RID: 6764 RVA: 0x000531C5 File Offset: 0x000513C5
-	// (set) Token: 0x06001A6D RID: 6765 RVA: 0x000531CD File Offset: 0x000513CD
+	// Token: 0x17000F73 RID: 3955
+	// (get) Token: 0x06002490 RID: 9360 RVA: 0x00014400 File Offset: 0x00012600
+	// (set) Token: 0x06002491 RID: 9361 RVA: 0x00014408 File Offset: 0x00012608
 	public bool DisableArmor { get; set; }
 
-	// Token: 0x17000C21 RID: 3105
-	// (get) Token: 0x06001A6E RID: 6766 RVA: 0x000531D6 File Offset: 0x000513D6
-	// (set) Token: 0x06001A6F RID: 6767 RVA: 0x000531DE File Offset: 0x000513DE
+	// Token: 0x17000F74 RID: 3956
+	// (get) Token: 0x06002492 RID: 9362 RVA: 0x00014411 File Offset: 0x00012611
+	// (set) Token: 0x06002493 RID: 9363 RVA: 0x00014419 File Offset: 0x00012619
 	public virtual float BaseDexterity
 	{
 		get
@@ -263,8 +263,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C22 RID: 3106
-	// (get) Token: 0x06001A70 RID: 6768 RVA: 0x000531F8 File Offset: 0x000513F8
+	// Token: 0x17000F75 RID: 3957
+	// (get) Token: 0x06002494 RID: 9364 RVA: 0x000AF960 File Offset: 0x000ADB60
 	public virtual float ActualDexterity
 	{
 		get
@@ -278,8 +278,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C23 RID: 3107
-	// (get) Token: 0x06001A71 RID: 6769 RVA: 0x0005324D File Offset: 0x0005144D
+	// Token: 0x17000F76 RID: 3958
+	// (get) Token: 0x06002495 RID: 9365 RVA: 0x00014431 File Offset: 0x00012631
 	public override float ActualCritChance
 	{
 		get
@@ -288,39 +288,39 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C24 RID: 3108
-	// (get) Token: 0x06001A72 RID: 6770 RVA: 0x00053271 File Offset: 0x00051471
-	// (set) Token: 0x06001A73 RID: 6771 RVA: 0x00053279 File Offset: 0x00051479
+	// Token: 0x17000F77 RID: 3959
+	// (get) Token: 0x06002496 RID: 9366 RVA: 0x00014455 File Offset: 0x00012655
+	// (set) Token: 0x06002497 RID: 9367 RVA: 0x0001445D File Offset: 0x0001265D
 	public float DexterityAdd { get; set; }
 
-	// Token: 0x17000C25 RID: 3109
-	// (get) Token: 0x06001A74 RID: 6772 RVA: 0x00053282 File Offset: 0x00051482
-	// (set) Token: 0x06001A75 RID: 6773 RVA: 0x0005328A File Offset: 0x0005148A
+	// Token: 0x17000F78 RID: 3960
+	// (get) Token: 0x06002498 RID: 9368 RVA: 0x00014466 File Offset: 0x00012666
+	// (set) Token: 0x06002499 RID: 9369 RVA: 0x0001446E File Offset: 0x0001266E
 	public float DexterityTemporaryAdd { get; set; }
 
-	// Token: 0x17000C26 RID: 3110
-	// (get) Token: 0x06001A76 RID: 6774 RVA: 0x00053293 File Offset: 0x00051493
-	// (set) Token: 0x06001A77 RID: 6775 RVA: 0x0005329B File Offset: 0x0005149B
+	// Token: 0x17000F79 RID: 3961
+	// (get) Token: 0x0600249A RID: 9370 RVA: 0x00014477 File Offset: 0x00012677
+	// (set) Token: 0x0600249B RID: 9371 RVA: 0x0001447F File Offset: 0x0001267F
 	public float DexterityMod { get; set; }
 
-	// Token: 0x17000C27 RID: 3111
-	// (get) Token: 0x06001A78 RID: 6776 RVA: 0x000532A4 File Offset: 0x000514A4
-	// (set) Token: 0x06001A79 RID: 6777 RVA: 0x000532AC File Offset: 0x000514AC
+	// Token: 0x17000F7A RID: 3962
+	// (get) Token: 0x0600249C RID: 9372 RVA: 0x00014488 File Offset: 0x00012688
+	// (set) Token: 0x0600249D RID: 9373 RVA: 0x00014490 File Offset: 0x00012690
 	public float DexterityTemporaryMod { get; set; }
 
-	// Token: 0x17000C28 RID: 3112
-	// (get) Token: 0x06001A7A RID: 6778 RVA: 0x000532B5 File Offset: 0x000514B5
-	// (set) Token: 0x06001A7B RID: 6779 RVA: 0x000532BD File Offset: 0x000514BD
+	// Token: 0x17000F7B RID: 3963
+	// (get) Token: 0x0600249E RID: 9374 RVA: 0x00014499 File Offset: 0x00012699
+	// (set) Token: 0x0600249F RID: 9375 RVA: 0x000144A1 File Offset: 0x000126A1
 	public float CritChanceAdd { get; set; }
 
-	// Token: 0x17000C29 RID: 3113
-	// (get) Token: 0x06001A7C RID: 6780 RVA: 0x000532C6 File Offset: 0x000514C6
-	// (set) Token: 0x06001A7D RID: 6781 RVA: 0x000532CE File Offset: 0x000514CE
+	// Token: 0x17000F7C RID: 3964
+	// (get) Token: 0x060024A0 RID: 9376 RVA: 0x000144AA File Offset: 0x000126AA
+	// (set) Token: 0x060024A1 RID: 9377 RVA: 0x000144B2 File Offset: 0x000126B2
 	public float CritChanceTemporaryAdd { get; set; }
 
-	// Token: 0x17000C2A RID: 3114
-	// (get) Token: 0x06001A7E RID: 6782 RVA: 0x000532D7 File Offset: 0x000514D7
-	// (set) Token: 0x06001A7F RID: 6783 RVA: 0x000532DF File Offset: 0x000514DF
+	// Token: 0x17000F7D RID: 3965
+	// (get) Token: 0x060024A2 RID: 9378 RVA: 0x000144BB File Offset: 0x000126BB
+	// (set) Token: 0x060024A3 RID: 9379 RVA: 0x000144C3 File Offset: 0x000126C3
 	public virtual float BaseCritDamage
 	{
 		get
@@ -333,8 +333,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C2B RID: 3115
-	// (get) Token: 0x06001A80 RID: 6784 RVA: 0x000532F7 File Offset: 0x000514F7
+	// Token: 0x17000F7E RID: 3966
+	// (get) Token: 0x060024A4 RID: 9380 RVA: 0x000144DB File Offset: 0x000126DB
 	public override float ActualCritDamage
 	{
 		get
@@ -343,19 +343,19 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C2C RID: 3116
-	// (get) Token: 0x06001A81 RID: 6785 RVA: 0x0005331C File Offset: 0x0005151C
-	// (set) Token: 0x06001A82 RID: 6786 RVA: 0x00053324 File Offset: 0x00051524
+	// Token: 0x17000F7F RID: 3967
+	// (get) Token: 0x060024A5 RID: 9381 RVA: 0x00014500 File Offset: 0x00012700
+	// (set) Token: 0x060024A6 RID: 9382 RVA: 0x00014508 File Offset: 0x00012708
 	public virtual float CritDamageAdd { get; set; }
 
-	// Token: 0x17000C2D RID: 3117
-	// (get) Token: 0x06001A83 RID: 6787 RVA: 0x0005332D File Offset: 0x0005152D
-	// (set) Token: 0x06001A84 RID: 6788 RVA: 0x00053335 File Offset: 0x00051535
+	// Token: 0x17000F80 RID: 3968
+	// (get) Token: 0x060024A7 RID: 9383 RVA: 0x00014511 File Offset: 0x00012711
+	// (set) Token: 0x060024A8 RID: 9384 RVA: 0x00014519 File Offset: 0x00012719
 	public virtual float CritDamageTemporaryAdd { get; set; }
 
-	// Token: 0x17000C2E RID: 3118
-	// (get) Token: 0x06001A85 RID: 6789 RVA: 0x0005333E File Offset: 0x0005153E
-	// (set) Token: 0x06001A86 RID: 6790 RVA: 0x00053346 File Offset: 0x00051546
+	// Token: 0x17000F81 RID: 3969
+	// (get) Token: 0x060024A9 RID: 9385 RVA: 0x00014522 File Offset: 0x00012722
+	// (set) Token: 0x060024AA RID: 9386 RVA: 0x0001452A File Offset: 0x0001272A
 	public virtual float BaseFocus
 	{
 		get
@@ -368,8 +368,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C2F RID: 3119
-	// (get) Token: 0x06001A87 RID: 6791 RVA: 0x00053360 File Offset: 0x00051560
+	// Token: 0x17000F82 RID: 3970
+	// (get) Token: 0x060024AB RID: 9387 RVA: 0x000AF9B8 File Offset: 0x000ADBB8
 	public virtual float ActualFocus
 	{
 		get
@@ -383,8 +383,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C30 RID: 3120
-	// (get) Token: 0x06001A88 RID: 6792 RVA: 0x000533B5 File Offset: 0x000515B5
+	// Token: 0x17000F83 RID: 3971
+	// (get) Token: 0x060024AC RID: 9388 RVA: 0x00014542 File Offset: 0x00012742
 	public virtual float ActualMagicCritChance
 	{
 		get
@@ -393,39 +393,39 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C31 RID: 3121
-	// (get) Token: 0x06001A89 RID: 6793 RVA: 0x000533D9 File Offset: 0x000515D9
-	// (set) Token: 0x06001A8A RID: 6794 RVA: 0x000533E1 File Offset: 0x000515E1
+	// Token: 0x17000F84 RID: 3972
+	// (get) Token: 0x060024AD RID: 9389 RVA: 0x00014566 File Offset: 0x00012766
+	// (set) Token: 0x060024AE RID: 9390 RVA: 0x0001456E File Offset: 0x0001276E
 	public virtual float FocusAdd { get; set; }
 
-	// Token: 0x17000C32 RID: 3122
-	// (get) Token: 0x06001A8B RID: 6795 RVA: 0x000533EA File Offset: 0x000515EA
-	// (set) Token: 0x06001A8C RID: 6796 RVA: 0x000533F2 File Offset: 0x000515F2
+	// Token: 0x17000F85 RID: 3973
+	// (get) Token: 0x060024AF RID: 9391 RVA: 0x00014577 File Offset: 0x00012777
+	// (set) Token: 0x060024B0 RID: 9392 RVA: 0x0001457F File Offset: 0x0001277F
 	public virtual float FocusTemporaryAdd { get; set; }
 
-	// Token: 0x17000C33 RID: 3123
-	// (get) Token: 0x06001A8D RID: 6797 RVA: 0x000533FB File Offset: 0x000515FB
-	// (set) Token: 0x06001A8E RID: 6798 RVA: 0x00053403 File Offset: 0x00051603
+	// Token: 0x17000F86 RID: 3974
+	// (get) Token: 0x060024B1 RID: 9393 RVA: 0x00014588 File Offset: 0x00012788
+	// (set) Token: 0x060024B2 RID: 9394 RVA: 0x00014590 File Offset: 0x00012790
 	public float FocusMod { get; set; }
 
-	// Token: 0x17000C34 RID: 3124
-	// (get) Token: 0x06001A8F RID: 6799 RVA: 0x0005340C File Offset: 0x0005160C
-	// (set) Token: 0x06001A90 RID: 6800 RVA: 0x00053414 File Offset: 0x00051614
+	// Token: 0x17000F87 RID: 3975
+	// (get) Token: 0x060024B3 RID: 9395 RVA: 0x00014599 File Offset: 0x00012799
+	// (set) Token: 0x060024B4 RID: 9396 RVA: 0x000145A1 File Offset: 0x000127A1
 	public float FocusTemporaryMod { get; set; }
 
-	// Token: 0x17000C35 RID: 3125
-	// (get) Token: 0x06001A91 RID: 6801 RVA: 0x0005341D File Offset: 0x0005161D
-	// (set) Token: 0x06001A92 RID: 6802 RVA: 0x00053425 File Offset: 0x00051625
+	// Token: 0x17000F88 RID: 3976
+	// (get) Token: 0x060024B5 RID: 9397 RVA: 0x000145AA File Offset: 0x000127AA
+	// (set) Token: 0x060024B6 RID: 9398 RVA: 0x000145B2 File Offset: 0x000127B2
 	public float MagicCritChanceAdd { get; set; }
 
-	// Token: 0x17000C36 RID: 3126
-	// (get) Token: 0x06001A93 RID: 6803 RVA: 0x0005342E File Offset: 0x0005162E
-	// (set) Token: 0x06001A94 RID: 6804 RVA: 0x00053436 File Offset: 0x00051636
+	// Token: 0x17000F89 RID: 3977
+	// (get) Token: 0x060024B7 RID: 9399 RVA: 0x000145BB File Offset: 0x000127BB
+	// (set) Token: 0x060024B8 RID: 9400 RVA: 0x000145C3 File Offset: 0x000127C3
 	public float MagicCritChanceTemporaryAdd { get; set; }
 
-	// Token: 0x17000C37 RID: 3127
-	// (get) Token: 0x06001A95 RID: 6805 RVA: 0x0005343F File Offset: 0x0005163F
-	// (set) Token: 0x06001A96 RID: 6806 RVA: 0x00053447 File Offset: 0x00051647
+	// Token: 0x17000F8A RID: 3978
+	// (get) Token: 0x060024B9 RID: 9401 RVA: 0x000145CC File Offset: 0x000127CC
+	// (set) Token: 0x060024BA RID: 9402 RVA: 0x000145D4 File Offset: 0x000127D4
 	public float BaseMagicCritDamage
 	{
 		get
@@ -438,8 +438,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C38 RID: 3128
-	// (get) Token: 0x06001A97 RID: 6807 RVA: 0x0005345F File Offset: 0x0005165F
+	// Token: 0x17000F8B RID: 3979
+	// (get) Token: 0x060024BB RID: 9403 RVA: 0x000145EC File Offset: 0x000127EC
 	public float ActualMagicCritDamage
 	{
 		get
@@ -448,19 +448,19 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C39 RID: 3129
-	// (get) Token: 0x06001A98 RID: 6808 RVA: 0x00053484 File Offset: 0x00051684
-	// (set) Token: 0x06001A99 RID: 6809 RVA: 0x0005348C File Offset: 0x0005168C
+	// Token: 0x17000F8C RID: 3980
+	// (get) Token: 0x060024BC RID: 9404 RVA: 0x00014611 File Offset: 0x00012811
+	// (set) Token: 0x060024BD RID: 9405 RVA: 0x00014619 File Offset: 0x00012819
 	public float MagicCritDamageAdd { get; set; }
 
-	// Token: 0x17000C3A RID: 3130
-	// (get) Token: 0x06001A9A RID: 6810 RVA: 0x00053495 File Offset: 0x00051695
-	// (set) Token: 0x06001A9B RID: 6811 RVA: 0x0005349D File Offset: 0x0005169D
+	// Token: 0x17000F8D RID: 3981
+	// (get) Token: 0x060024BE RID: 9406 RVA: 0x00014622 File Offset: 0x00012822
+	// (set) Token: 0x060024BF RID: 9407 RVA: 0x0001462A File Offset: 0x0001282A
 	public float MagicCritDamageTemporaryAdd { get; set; }
 
-	// Token: 0x17000C3B RID: 3131
-	// (get) Token: 0x06001A9C RID: 6812 RVA: 0x000534A6 File Offset: 0x000516A6
-	// (set) Token: 0x06001A9D RID: 6813 RVA: 0x000534AE File Offset: 0x000516AE
+	// Token: 0x17000F8E RID: 3982
+	// (get) Token: 0x060024C0 RID: 9408 RVA: 0x00014633 File Offset: 0x00012833
+	// (set) Token: 0x060024C1 RID: 9409 RVA: 0x0001463B File Offset: 0x0001283B
 	public int BaseArmor
 	{
 		get
@@ -473,9 +473,9 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C3C RID: 3132
-	// (get) Token: 0x06001A9E RID: 6814 RVA: 0x000534C2 File Offset: 0x000516C2
-	// (set) Token: 0x06001A9F RID: 6815 RVA: 0x000534CA File Offset: 0x000516CA
+	// Token: 0x17000F8F RID: 3983
+	// (get) Token: 0x060024C2 RID: 9410 RVA: 0x0001464F File Offset: 0x0001284F
+	// (set) Token: 0x060024C3 RID: 9411 RVA: 0x00014657 File Offset: 0x00012857
 	public int CurrentArmor
 	{
 		get
@@ -488,8 +488,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C3D RID: 3133
-	// (get) Token: 0x06001AA0 RID: 6816 RVA: 0x000534DF File Offset: 0x000516DF
+	// Token: 0x17000F90 RID: 3984
+	// (get) Token: 0x060024C4 RID: 9412 RVA: 0x0001466C File Offset: 0x0001286C
 	public int ActualArmor
 	{
 		get
@@ -498,14 +498,14 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C3E RID: 3134
-	// (get) Token: 0x06001AA1 RID: 6817 RVA: 0x000534F9 File Offset: 0x000516F9
-	// (set) Token: 0x06001AA2 RID: 6818 RVA: 0x00053501 File Offset: 0x00051701
+	// Token: 0x17000F91 RID: 3985
+	// (get) Token: 0x060024C5 RID: 9413 RVA: 0x00014686 File Offset: 0x00012886
+	// (set) Token: 0x060024C6 RID: 9414 RVA: 0x0001468E File Offset: 0x0001288E
 	public int ArmorAdds { get; set; }
 
-	// Token: 0x17000C3F RID: 3135
-	// (get) Token: 0x06001AA3 RID: 6819 RVA: 0x0005350A File Offset: 0x0005170A
-	// (set) Token: 0x06001AA4 RID: 6820 RVA: 0x00053512 File Offset: 0x00051712
+	// Token: 0x17000F92 RID: 3986
+	// (get) Token: 0x060024C7 RID: 9415 RVA: 0x00014697 File Offset: 0x00012897
+	// (set) Token: 0x060024C8 RID: 9416 RVA: 0x0001469F File Offset: 0x0001289F
 	public int CurrentExhaust
 	{
 		get
@@ -518,7 +518,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001AA5 RID: 6821 RVA: 0x00053524 File Offset: 0x00051724
+	// Token: 0x060024C9 RID: 9417 RVA: 0x000AFA10 File Offset: 0x000ADC10
 	public void SetMasteryXP(int value, bool additive)
 	{
 		int runAccumulatedXP = SaveManager.PlayerSaveData.RunAccumulatedXP;
@@ -526,8 +526,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		SaveManager.PlayerSaveData.RunAccumulatedXP = runAccumulatedXP2;
 	}
 
-	// Token: 0x17000C40 RID: 3136
-	// (get) Token: 0x06001AA6 RID: 6822 RVA: 0x00053554 File Offset: 0x00051754
+	// Token: 0x17000F93 RID: 3987
+	// (get) Token: 0x060024CA RID: 9418 RVA: 0x000AFA40 File Offset: 0x000ADC40
 	public override float ActualStrength
 	{
 		get
@@ -542,8 +542,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C41 RID: 3137
-	// (get) Token: 0x06001AA7 RID: 6823 RVA: 0x00053588 File Offset: 0x00051788
+	// Token: 0x17000F94 RID: 3988
+	// (get) Token: 0x060024CB RID: 9419 RVA: 0x000AFA74 File Offset: 0x000ADC74
 	public override float ActualMagic
 	{
 		get
@@ -558,19 +558,19 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C42 RID: 3138
-	// (get) Token: 0x06001AA8 RID: 6824 RVA: 0x000535BA File Offset: 0x000517BA
-	// (set) Token: 0x06001AA9 RID: 6825 RVA: 0x000535C2 File Offset: 0x000517C2
+	// Token: 0x17000F95 RID: 3989
+	// (get) Token: 0x060024CC RID: 9420 RVA: 0x000146B0 File Offset: 0x000128B0
+	// (set) Token: 0x060024CD RID: 9421 RVA: 0x000146B8 File Offset: 0x000128B8
 	public float CachedHealthOverride { get; set; }
 
-	// Token: 0x17000C43 RID: 3139
-	// (get) Token: 0x06001AAA RID: 6826 RVA: 0x000535CB File Offset: 0x000517CB
-	// (set) Token: 0x06001AAB RID: 6827 RVA: 0x000535D3 File Offset: 0x000517D3
+	// Token: 0x17000F96 RID: 3990
+	// (get) Token: 0x060024CE RID: 9422 RVA: 0x000146C1 File Offset: 0x000128C1
+	// (set) Token: 0x060024CF RID: 9423 RVA: 0x000146C9 File Offset: 0x000128C9
 	public float CachedManaOverride { get; set; }
 
-	// Token: 0x17000C44 RID: 3140
-	// (get) Token: 0x06001AAC RID: 6828 RVA: 0x000535DC File Offset: 0x000517DC
-	// (set) Token: 0x06001AAD RID: 6829 RVA: 0x000535E4 File Offset: 0x000517E4
+	// Token: 0x17000F97 RID: 3991
+	// (get) Token: 0x060024D0 RID: 9424 RVA: 0x000146D2 File Offset: 0x000128D2
+	// (set) Token: 0x060024D1 RID: 9425 RVA: 0x000146DA File Offset: 0x000128DA
 	public int BaseVitality
 	{
 		get
@@ -583,8 +583,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C45 RID: 3141
-	// (get) Token: 0x06001AAE RID: 6830 RVA: 0x000535F8 File Offset: 0x000517F8
+	// Token: 0x17000F98 RID: 3992
+	// (get) Token: 0x060024D2 RID: 9426 RVA: 0x000146EE File Offset: 0x000128EE
 	public int ClassModdedMaxHealth
 	{
 		get
@@ -593,8 +593,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C46 RID: 3142
-	// (get) Token: 0x06001AAF RID: 6831 RVA: 0x0005361C File Offset: 0x0005181C
+	// Token: 0x17000F99 RID: 3993
+	// (get) Token: 0x060024D3 RID: 9427 RVA: 0x000AFAA8 File Offset: 0x000ADCA8
 	public int ActualVitality
 	{
 		get
@@ -610,18 +610,18 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C47 RID: 3143
-	// (get) Token: 0x06001AB0 RID: 6832 RVA: 0x00053672 File Offset: 0x00051872
-	// (set) Token: 0x06001AB1 RID: 6833 RVA: 0x0005367A File Offset: 0x0005187A
+	// Token: 0x17000F9A RID: 3994
+	// (get) Token: 0x060024D4 RID: 9428 RVA: 0x00014712 File Offset: 0x00012912
+	// (set) Token: 0x060024D5 RID: 9429 RVA: 0x0001471A File Offset: 0x0001291A
 	public int VitalityAdd { get; set; }
 
-	// Token: 0x17000C48 RID: 3144
-	// (get) Token: 0x06001AB2 RID: 6834 RVA: 0x00053683 File Offset: 0x00051883
-	// (set) Token: 0x06001AB3 RID: 6835 RVA: 0x0005368B File Offset: 0x0005188B
+	// Token: 0x17000F9B RID: 3995
+	// (get) Token: 0x060024D6 RID: 9430 RVA: 0x00014723 File Offset: 0x00012923
+	// (set) Token: 0x060024D7 RID: 9431 RVA: 0x0001472B File Offset: 0x0001292B
 	public float VitalityMod { get; set; }
 
-	// Token: 0x17000C49 RID: 3145
-	// (get) Token: 0x06001AB4 RID: 6836 RVA: 0x00053694 File Offset: 0x00051894
+	// Token: 0x17000F9C RID: 3996
+	// (get) Token: 0x060024D8 RID: 9432 RVA: 0x00014734 File Offset: 0x00012934
 	public override int BaseMaxHealth
 	{
 		get
@@ -630,8 +630,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C4A RID: 3146
-	// (get) Token: 0x06001AB5 RID: 6837 RVA: 0x000536A8 File Offset: 0x000518A8
+	// Token: 0x17000F9D RID: 3997
+	// (get) Token: 0x060024D9 RID: 9433 RVA: 0x00014748 File Offset: 0x00012948
 	public int VitalityModdedMaxHealth
 	{
 		get
@@ -640,8 +640,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C4B RID: 3147
-	// (get) Token: 0x06001AB6 RID: 6838 RVA: 0x000536BC File Offset: 0x000518BC
+	// Token: 0x17000F9E RID: 3998
+	// (get) Token: 0x060024DA RID: 9434 RVA: 0x000AFB00 File Offset: 0x000ADD00
 	public override int ActualMaxHealth
 	{
 		get
@@ -662,23 +662,23 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C4C RID: 3148
-	// (get) Token: 0x06001AB7 RID: 6839 RVA: 0x0005374B File Offset: 0x0005194B
-	// (set) Token: 0x06001AB8 RID: 6840 RVA: 0x00053753 File Offset: 0x00051953
+	// Token: 0x17000F9F RID: 3999
+	// (get) Token: 0x060024DB RID: 9435 RVA: 0x0001475C File Offset: 0x0001295C
+	// (set) Token: 0x060024DC RID: 9436 RVA: 0x00014764 File Offset: 0x00012964
 	public float TraitMaxHealthMod { get; set; }
 
-	// Token: 0x17000C4D RID: 3149
-	// (get) Token: 0x06001AB9 RID: 6841 RVA: 0x0005375C File Offset: 0x0005195C
-	// (set) Token: 0x06001ABA RID: 6842 RVA: 0x00053764 File Offset: 0x00051964
+	// Token: 0x17000FA0 RID: 4000
+	// (get) Token: 0x060024DD RID: 9437 RVA: 0x0001476D File Offset: 0x0001296D
+	// (set) Token: 0x060024DE RID: 9438 RVA: 0x00014775 File Offset: 0x00012975
 	public float RelicMaxHealthMod { get; set; }
 
-	// Token: 0x17000C4E RID: 3150
-	// (get) Token: 0x06001ABB RID: 6843 RVA: 0x0005376D File Offset: 0x0005196D
-	// (set) Token: 0x06001ABC RID: 6844 RVA: 0x00053775 File Offset: 0x00051975
+	// Token: 0x17000FA1 RID: 4001
+	// (get) Token: 0x060024DF RID: 9439 RVA: 0x0001477E File Offset: 0x0001297E
+	// (set) Token: 0x060024E0 RID: 9440 RVA: 0x00014786 File Offset: 0x00012986
 	public int BaseMaxMana { get; set; }
 
-	// Token: 0x17000C4F RID: 3151
-	// (get) Token: 0x06001ABD RID: 6845 RVA: 0x0005377E File Offset: 0x0005197E
+	// Token: 0x17000FA2 RID: 4002
+	// (get) Token: 0x060024E1 RID: 9441 RVA: 0x0001478F File Offset: 0x0001298F
 	public int ClassModdedMaxMana
 	{
 		get
@@ -687,8 +687,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C50 RID: 3152
-	// (get) Token: 0x06001ABE RID: 6846 RVA: 0x000537AF File Offset: 0x000519AF
+	// Token: 0x17000FA3 RID: 4003
+	// (get) Token: 0x060024E2 RID: 9442 RVA: 0x000147C0 File Offset: 0x000129C0
 	public int ActualMaxMana
 	{
 		get
@@ -697,32 +697,32 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C51 RID: 3153
-	// (get) Token: 0x06001ABF RID: 6847 RVA: 0x000537DC File Offset: 0x000519DC
-	// (set) Token: 0x06001AC0 RID: 6848 RVA: 0x000537E4 File Offset: 0x000519E4
+	// Token: 0x17000FA4 RID: 4004
+	// (get) Token: 0x060024E3 RID: 9443 RVA: 0x000147ED File Offset: 0x000129ED
+	// (set) Token: 0x060024E4 RID: 9444 RVA: 0x000147F5 File Offset: 0x000129F5
 	public int PostModMaxManaAdd { get; set; }
 
-	// Token: 0x17000C52 RID: 3154
-	// (get) Token: 0x06001AC1 RID: 6849 RVA: 0x000537ED File Offset: 0x000519ED
-	// (set) Token: 0x06001AC2 RID: 6850 RVA: 0x000537F5 File Offset: 0x000519F5
+	// Token: 0x17000FA5 RID: 4005
+	// (get) Token: 0x060024E5 RID: 9445 RVA: 0x000147FE File Offset: 0x000129FE
+	// (set) Token: 0x060024E6 RID: 9446 RVA: 0x00014806 File Offset: 0x00012A06
 	public float TraitMaxManaMod { get; set; }
 
-	// Token: 0x17000C53 RID: 3155
-	// (get) Token: 0x06001AC3 RID: 6851 RVA: 0x000537FE File Offset: 0x000519FE
-	// (set) Token: 0x06001AC4 RID: 6852 RVA: 0x00053806 File Offset: 0x00051A06
+	// Token: 0x17000FA6 RID: 4006
+	// (get) Token: 0x060024E7 RID: 9447 RVA: 0x0001480F File Offset: 0x00012A0F
+	// (set) Token: 0x060024E8 RID: 9448 RVA: 0x00014817 File Offset: 0x00012A17
 	public float EquipmentMaxManaMod { get; set; }
 
-	// Token: 0x17000C54 RID: 3156
-	// (get) Token: 0x06001AC5 RID: 6853 RVA: 0x0005380F File Offset: 0x00051A0F
-	// (set) Token: 0x06001AC6 RID: 6854 RVA: 0x00053817 File Offset: 0x00051A17
+	// Token: 0x17000FA7 RID: 4007
+	// (get) Token: 0x060024E9 RID: 9449 RVA: 0x00014820 File Offset: 0x00012A20
+	// (set) Token: 0x060024EA RID: 9450 RVA: 0x00014828 File Offset: 0x00012A28
 	public float ManaRegenMod { get; set; }
 
-	// Token: 0x17000C55 RID: 3157
-	// (get) Token: 0x06001AC7 RID: 6855 RVA: 0x00053820 File Offset: 0x00051A20
-	// (set) Token: 0x06001AC8 RID: 6856 RVA: 0x00053828 File Offset: 0x00051A28
+	// Token: 0x17000FA8 RID: 4008
+	// (get) Token: 0x060024EB RID: 9451 RVA: 0x00014831 File Offset: 0x00012A31
+	// (set) Token: 0x060024EC RID: 9452 RVA: 0x00014839 File Offset: 0x00012A39
 	public float CurrentMana { get; private set; }
 
-	// Token: 0x06001AC9 RID: 6857 RVA: 0x00053834 File Offset: 0x00051A34
+	// Token: 0x060024ED RID: 9453 RVA: 0x000AFB90 File Offset: 0x000ADD90
 	public void SetMana(float value, bool additive, bool runEvents, bool canExceedMax = false)
 	{
 		float currentMana = this.CurrentMana;
@@ -761,7 +761,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001ACA RID: 6858 RVA: 0x000538EC File Offset: 0x00051AEC
+	// Token: 0x060024EE RID: 9454 RVA: 0x000AFC48 File Offset: 0x000ADE48
 	public override void SetHealth(float value, bool additive, bool runEvents)
 	{
 		if ((SaveManager.PlayerSaveData.InHubTown || SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround) && !ChallengeManager.IsInChallenge && ((this.CurrentHealth + value <= 0f && additive) || (value <= 0f && !additive)))
@@ -780,8 +780,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C56 RID: 3158
-	// (get) Token: 0x06001ACB RID: 6859 RVA: 0x00053978 File Offset: 0x00051B78
+	// Token: 0x17000FA9 RID: 4009
+	// (get) Token: 0x060024EF RID: 9455 RVA: 0x00014842 File Offset: 0x00012A42
 	public int CurrentManaAsInt
 	{
 		get
@@ -790,9 +790,9 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C57 RID: 3159
-	// (get) Token: 0x06001ACC RID: 6860 RVA: 0x00053985 File Offset: 0x00051B85
-	// (set) Token: 0x06001ACD RID: 6861 RVA: 0x0005398C File Offset: 0x00051B8C
+	// Token: 0x17000FAA RID: 4010
+	// (get) Token: 0x060024F0 RID: 9456 RVA: 0x0001484F File Offset: 0x00012A4F
+	// (set) Token: 0x060024F1 RID: 9457 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override Vector2 ExternalKnockbackMod
 	{
 		get
@@ -804,13 +804,13 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C58 RID: 3160
-	// (get) Token: 0x06001ACE RID: 6862 RVA: 0x0005398E File Offset: 0x00051B8E
-	// (set) Token: 0x06001ACF RID: 6863 RVA: 0x00053996 File Offset: 0x00051B96
+	// Token: 0x17000FAB RID: 4011
+	// (get) Token: 0x060024F2 RID: 9458 RVA: 0x00014856 File Offset: 0x00012A56
+	// (set) Token: 0x060024F3 RID: 9459 RVA: 0x0001485E File Offset: 0x00012A5E
 	public int BaseRuneWeight { get; set; }
 
-	// Token: 0x17000C59 RID: 3161
-	// (get) Token: 0x06001AD0 RID: 6864 RVA: 0x0005399F File Offset: 0x00051B9F
+	// Token: 0x17000FAC RID: 4012
+	// (get) Token: 0x060024F4 RID: 9460 RVA: 0x00014867 File Offset: 0x00012A67
 	public int ActualRuneWeight
 	{
 		get
@@ -819,18 +819,18 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C5A RID: 3162
-	// (get) Token: 0x06001AD1 RID: 6865 RVA: 0x000539AE File Offset: 0x00051BAE
-	// (set) Token: 0x06001AD2 RID: 6866 RVA: 0x000539B6 File Offset: 0x00051BB6
+	// Token: 0x17000FAD RID: 4013
+	// (get) Token: 0x060024F5 RID: 9461 RVA: 0x00014876 File Offset: 0x00012A76
+	// (set) Token: 0x060024F6 RID: 9462 RVA: 0x0001487E File Offset: 0x00012A7E
 	public int RuneWeightAdds { get; set; }
 
-	// Token: 0x17000C5B RID: 3163
-	// (get) Token: 0x06001AD3 RID: 6867 RVA: 0x000539BF File Offset: 0x00051BBF
-	// (set) Token: 0x06001AD4 RID: 6868 RVA: 0x000539C7 File Offset: 0x00051BC7
+	// Token: 0x17000FAE RID: 4014
+	// (get) Token: 0x060024F7 RID: 9463 RVA: 0x00014887 File Offset: 0x00012A87
+	// (set) Token: 0x060024F8 RID: 9464 RVA: 0x0001488F File Offset: 0x00012A8F
 	public int BaseAllowedEquipmentWeight { get; set; }
 
-	// Token: 0x17000C5C RID: 3164
-	// (get) Token: 0x06001AD5 RID: 6869 RVA: 0x000539D0 File Offset: 0x00051BD0
+	// Token: 0x17000FAF RID: 4015
+	// (get) Token: 0x060024F9 RID: 9465 RVA: 0x00014898 File Offset: 0x00012A98
 	public int ActualAllowedEquipmentWeight
 	{
 		get
@@ -839,19 +839,19 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C5D RID: 3165
-	// (get) Token: 0x06001AD6 RID: 6870 RVA: 0x000539DF File Offset: 0x00051BDF
-	// (set) Token: 0x06001AD7 RID: 6871 RVA: 0x000539E7 File Offset: 0x00051BE7
+	// Token: 0x17000FB0 RID: 4016
+	// (get) Token: 0x060024FA RID: 9466 RVA: 0x000148A7 File Offset: 0x00012AA7
+	// (set) Token: 0x060024FB RID: 9467 RVA: 0x000148AF File Offset: 0x00012AAF
 	public int AllowedEquipmentWeightAdds { get; set; }
 
-	// Token: 0x17000C5E RID: 3166
-	// (get) Token: 0x06001AD8 RID: 6872 RVA: 0x000539F0 File Offset: 0x00051BF0
-	// (set) Token: 0x06001AD9 RID: 6873 RVA: 0x000539F8 File Offset: 0x00051BF8
+	// Token: 0x17000FB1 RID: 4017
+	// (get) Token: 0x060024FC RID: 9468 RVA: 0x000148B8 File Offset: 0x00012AB8
+	// (set) Token: 0x060024FD RID: 9469 RVA: 0x000148C0 File Offset: 0x00012AC0
 	public float AbilityCoolDownMod { get; set; }
 
-	// Token: 0x17000C5F RID: 3167
-	// (get) Token: 0x06001ADA RID: 6874 RVA: 0x00053A01 File Offset: 0x00051C01
-	// (set) Token: 0x06001ADB RID: 6875 RVA: 0x00053A0E File Offset: 0x00051C0E
+	// Token: 0x17000FB2 RID: 4018
+	// (get) Token: 0x060024FE RID: 9470 RVA: 0x000148C9 File Offset: 0x00012AC9
+	// (set) Token: 0x060024FF RID: 9471 RVA: 0x000148D6 File Offset: 0x00012AD6
 	public float BaseMovementSpeed
 	{
 		get
@@ -864,8 +864,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C60 RID: 3168
-	// (get) Token: 0x06001ADC RID: 6876 RVA: 0x00053A1C File Offset: 0x00051C1C
+	// Token: 0x17000FB3 RID: 4019
+	// (get) Token: 0x06002500 RID: 9472 RVA: 0x000148C9 File Offset: 0x00012AC9
 	public float ActualMovementSpeed
 	{
 		get
@@ -874,9 +874,9 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C61 RID: 3169
-	// (get) Token: 0x06001ADD RID: 6877 RVA: 0x00053A29 File Offset: 0x00051C29
-	// (set) Token: 0x06001ADE RID: 6878 RVA: 0x00053A36 File Offset: 0x00051C36
+	// Token: 0x17000FB4 RID: 4020
+	// (get) Token: 0x06002501 RID: 9473 RVA: 0x000148E4 File Offset: 0x00012AE4
+	// (set) Token: 0x06002502 RID: 9474 RVA: 0x000148F1 File Offset: 0x00012AF1
 	public float MovementSpeedMod
 	{
 		get
@@ -889,8 +889,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C62 RID: 3170
-	// (get) Token: 0x06001ADF RID: 6879 RVA: 0x00053A4E File Offset: 0x00051C4E
+	// Token: 0x17000FB5 RID: 4021
+	// (get) Token: 0x06002503 RID: 9475 RVA: 0x00014909 File Offset: 0x00012B09
 	public CharacterDash_RL CharacterDash
 	{
 		get
@@ -899,8 +899,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C63 RID: 3171
-	// (get) Token: 0x06001AE0 RID: 6880 RVA: 0x00053A56 File Offset: 0x00051C56
+	// Token: 0x17000FB6 RID: 4022
+	// (get) Token: 0x06002504 RID: 9476 RVA: 0x00014911 File Offset: 0x00012B11
 	public CharacterDownStrike_RL CharacterDownStrike
 	{
 		get
@@ -909,8 +909,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C64 RID: 3172
-	// (get) Token: 0x06001AE1 RID: 6881 RVA: 0x00053A5E File Offset: 0x00051C5E
+	// Token: 0x17000FB7 RID: 4023
+	// (get) Token: 0x06002505 RID: 9477 RVA: 0x00014919 File Offset: 0x00012B19
 	public CharacterClass CharacterClass
 	{
 		get
@@ -919,8 +919,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C65 RID: 3173
-	// (get) Token: 0x06001AE2 RID: 6882 RVA: 0x00053A66 File Offset: 0x00051C66
+	// Token: 0x17000FB8 RID: 4024
+	// (get) Token: 0x06002506 RID: 9478 RVA: 0x00014921 File Offset: 0x00012B21
 	public CharacterHorizontalMovement_RL CharacterMove
 	{
 		get
@@ -929,8 +929,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C66 RID: 3174
-	// (get) Token: 0x06001AE3 RID: 6883 RVA: 0x00053A6E File Offset: 0x00051C6E
+	// Token: 0x17000FB9 RID: 4025
+	// (get) Token: 0x06002507 RID: 9479 RVA: 0x00014929 File Offset: 0x00012B29
 	public CharacterFlight_RL CharacterFlight
 	{
 		get
@@ -939,8 +939,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C67 RID: 3175
-	// (get) Token: 0x06001AE4 RID: 6884 RVA: 0x00053A76 File Offset: 0x00051C76
+	// Token: 0x17000FBA RID: 4026
+	// (get) Token: 0x06002508 RID: 9480 RVA: 0x00014931 File Offset: 0x00012B31
 	public CharacterJump_RL CharacterJump
 	{
 		get
@@ -949,8 +949,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C68 RID: 3176
-	// (get) Token: 0x06001AE5 RID: 6885 RVA: 0x00053A7E File Offset: 0x00051C7E
+	// Token: 0x17000FBB RID: 4027
+	// (get) Token: 0x06002509 RID: 9481 RVA: 0x00014939 File Offset: 0x00012B39
 	public CastAbility_RL CastAbility
 	{
 		get
@@ -963,8 +963,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C69 RID: 3177
-	// (get) Token: 0x06001AE6 RID: 6886 RVA: 0x00053A9F File Offset: 0x00051C9F
+	// Token: 0x17000FBC RID: 4028
+	// (get) Token: 0x0600250A RID: 9482 RVA: 0x0001495A File Offset: 0x00012B5A
 	public PlayerLookController LookController
 	{
 		get
@@ -973,14 +973,14 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C6A RID: 3178
-	// (get) Token: 0x06001AE7 RID: 6887 RVA: 0x00053AA7 File Offset: 0x00051CA7
-	// (set) Token: 0x06001AE8 RID: 6888 RVA: 0x00053AAF File Offset: 0x00051CAF
+	// Token: 0x17000FBD RID: 4029
+	// (get) Token: 0x0600250B RID: 9483 RVA: 0x00014962 File Offset: 0x00012B62
+	// (set) Token: 0x0600250C RID: 9484 RVA: 0x0001496A File Offset: 0x00012B6A
 	public BaseRoom PreviouslyInRoom { get; private set; }
 
-	// Token: 0x17000C6B RID: 3179
-	// (get) Token: 0x06001AE9 RID: 6889 RVA: 0x00053AB8 File Offset: 0x00051CB8
-	// (set) Token: 0x06001AEA RID: 6890 RVA: 0x00053AC0 File Offset: 0x00051CC0
+	// Token: 0x17000FBE RID: 4030
+	// (get) Token: 0x0600250D RID: 9485 RVA: 0x00014973 File Offset: 0x00012B73
+	// (set) Token: 0x0600250E RID: 9486 RVA: 0x0001497B File Offset: 0x00012B7B
 	public BaseRoom CurrentlyInRoom
 	{
 		get
@@ -994,9 +994,9 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C6C RID: 3180
-	// (get) Token: 0x06001AEB RID: 6891 RVA: 0x00053AD5 File Offset: 0x00051CD5
-	// (set) Token: 0x06001AEC RID: 6892 RVA: 0x00053ADD File Offset: 0x00051CDD
+	// Token: 0x17000FBF RID: 4031
+	// (get) Token: 0x0600250F RID: 9487 RVA: 0x00014990 File Offset: 0x00012B90
+	// (set) Token: 0x06002510 RID: 9488 RVA: 0x00014998 File Offset: 0x00012B98
 	public bool JustRolled
 	{
 		get
@@ -1017,9 +1017,9 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C6D RID: 3181
-	// (get) Token: 0x06001AED RID: 6893 RVA: 0x00053B19 File Offset: 0x00051D19
-	// (set) Token: 0x06001AEE RID: 6894 RVA: 0x00053B20 File Offset: 0x00051D20
+	// Token: 0x17000FC0 RID: 4032
+	// (get) Token: 0x06002511 RID: 9489 RVA: 0x00003CCB File Offset: 0x00001ECB
+	// (set) Token: 0x06002512 RID: 9490 RVA: 0x00002FCA File Offset: 0x000011CA
 	public float BaseKnockbackStrength
 	{
 		get
@@ -1031,8 +1031,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C6E RID: 3182
-	// (get) Token: 0x06001AEF RID: 6895 RVA: 0x00053B22 File Offset: 0x00051D22
+	// Token: 0x17000FC1 RID: 4033
+	// (get) Token: 0x06002513 RID: 9491 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualKnockbackStrength
 	{
 		get
@@ -1041,9 +1041,9 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C6F RID: 3183
-	// (get) Token: 0x06001AF0 RID: 6896 RVA: 0x00053B29 File Offset: 0x00051D29
-	// (set) Token: 0x06001AF1 RID: 6897 RVA: 0x00053B30 File Offset: 0x00051D30
+	// Token: 0x17000FC2 RID: 4034
+	// (get) Token: 0x06002514 RID: 9492 RVA: 0x00003CCB File Offset: 0x00001ECB
+	// (set) Token: 0x06002515 RID: 9493 RVA: 0x00002FCA File Offset: 0x000011CA
 	public float BaseStunStrength
 	{
 		get
@@ -1055,8 +1055,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C70 RID: 3184
-	// (get) Token: 0x06001AF2 RID: 6898 RVA: 0x00053B32 File Offset: 0x00051D32
+	// Token: 0x17000FC3 RID: 4035
+	// (get) Token: 0x06002516 RID: 9494 RVA: 0x00003CCB File Offset: 0x00001ECB
 	public float ActualStunStrength
 	{
 		get
@@ -1065,8 +1065,8 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C71 RID: 3185
-	// (get) Token: 0x06001AF3 RID: 6899 RVA: 0x00053B39 File Offset: 0x00051D39
+	// Token: 0x17000FC4 RID: 4036
+	// (get) Token: 0x06002517 RID: 9495 RVA: 0x000046FA File Offset: 0x000028FA
 	public StrikeType StrikeType
 	{
 		get
@@ -1075,12 +1075,12 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x17000C72 RID: 3186
-	// (get) Token: 0x06001AF4 RID: 6900 RVA: 0x00053B3D File Offset: 0x00051D3D
-	// (set) Token: 0x06001AF5 RID: 6901 RVA: 0x00053B45 File Offset: 0x00051D45
+	// Token: 0x17000FC5 RID: 4037
+	// (get) Token: 0x06002518 RID: 9496 RVA: 0x000149D4 File Offset: 0x00012BD4
+	// (set) Token: 0x06002519 RID: 9497 RVA: 0x000149DC File Offset: 0x00012BDC
 	public Projectile_RL DamageAuraProjectile { get; set; }
 
-	// Token: 0x06001AF6 RID: 6902 RVA: 0x00053B50 File Offset: 0x00051D50
+	// Token: 0x0600251A RID: 9498 RVA: 0x000AFCD4 File Offset: 0x000ADED4
 	protected void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.EquippedChanged, this.m_onEquippedOrLevelChanged);
@@ -1091,7 +1091,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.UpdatePools, this.m_applyPermanentStatusEffects);
 	}
 
-	// Token: 0x06001AF7 RID: 6903 RVA: 0x00053BAC File Offset: 0x00051DAC
+	// Token: 0x0600251B RID: 9499 RVA: 0x000AFD30 File Offset: 0x000ADF30
 	protected void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.EquippedChanged, this.m_onEquippedOrLevelChanged);
@@ -1102,7 +1102,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.UpdatePools, this.m_applyPermanentStatusEffects);
 	}
 
-	// Token: 0x06001AF8 RID: 6904 RVA: 0x00053C05 File Offset: 0x00051E05
+	// Token: 0x0600251C RID: 9500 RVA: 0x000149E5 File Offset: 0x00012BE5
 	private IEnumerator RollCoroutine(float duration)
 	{
 		float startTime = Time.time;
@@ -1114,13 +1114,13 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		yield break;
 	}
 
-	// Token: 0x06001AF9 RID: 6905 RVA: 0x00053C1B File Offset: 0x00051E1B
+	// Token: 0x0600251D RID: 9501 RVA: 0x000149FB File Offset: 0x00012BFB
 	private void OnEquippedOrLevelChanged(MonoBehaviour sender, EventArgs args)
 	{
 		this.InitializeAllMods(true, true);
 	}
 
-	// Token: 0x06001AFA RID: 6906 RVA: 0x00053C28 File Offset: 0x00051E28
+	// Token: 0x0600251E RID: 9502 RVA: 0x000AFD8C File Offset: 0x000ADF8C
 	public float GetActualStatValue(PlayerStat stat)
 	{
 		switch (stat)
@@ -1140,19 +1140,19 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001AFB RID: 6907 RVA: 0x00053C7F File Offset: 0x00051E7F
+	// Token: 0x0600251F RID: 9503 RVA: 0x00014A05 File Offset: 0x00012C05
 	public void UpdateFrameAccumulatedXP(float amount)
 	{
 		this.m_updateAccumulatedXP += amount;
 	}
 
-	// Token: 0x06001AFC RID: 6908 RVA: 0x00053C8F File Offset: 0x00051E8F
+	// Token: 0x06002520 RID: 9504 RVA: 0x00014A15 File Offset: 0x00012C15
 	public void UpdateFrameAccumulatedLifeSteal(float amount)
 	{
 		this.m_updateAccumulatedLifeSteal += amount;
 	}
 
-	// Token: 0x06001AFD RID: 6909 RVA: 0x00053CA0 File Offset: 0x00051EA0
+	// Token: 0x06002521 RID: 9505 RVA: 0x000AFDE4 File Offset: 0x000ADFE4
 	private void LateUpdate()
 	{
 		if (this.m_updateAccumulatedXP > 0f)
@@ -1173,7 +1173,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001AFE RID: 6910 RVA: 0x00053D78 File Offset: 0x00051F78
+	// Token: 0x06002522 RID: 9506 RVA: 0x000AFEBC File Offset: 0x000AE0BC
 	protected override void OnJustGrounded()
 	{
 		if (EffectManager.AnimatorEffectsDisabled(this.m_animator))
@@ -1198,14 +1198,14 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001AFF RID: 6911 RVA: 0x00053E19 File Offset: 0x00052019
+	// Token: 0x06002523 RID: 9507 RVA: 0x00014A25 File Offset: 0x00012C25
 	private void OnRelicChanged(object sender, EventArgs args)
 	{
 		this.InitializeAbilities();
 		this.InitializeAllMods(false, false);
 	}
 
-	// Token: 0x06001B00 RID: 6912 RVA: 0x00053E2C File Offset: 0x0005202C
+	// Token: 0x06002524 RID: 9508 RVA: 0x000AFF60 File Offset: 0x000AE160
 	private void CheckForBiomeChange(BiomeType roomBiome)
 	{
 		if (this.CurrentlyInRoom == null || (this.CurrentlyInRoom != null && this.CurrentlyInRoom.BiomeType != roomBiome))
@@ -1226,7 +1226,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B01 RID: 6913 RVA: 0x00053EC8 File Offset: 0x000520C8
+	// Token: 0x06002525 RID: 9509 RVA: 0x000AFFFC File Offset: 0x000AE1FC
 	protected override void Awake()
 	{
 		base.Awake();
@@ -1252,7 +1252,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.m_applyPermanentStatusEffects = new Action<MonoBehaviour, EventArgs>(this.ApplyPermanentStatusEffects);
 	}
 
-	// Token: 0x06001B02 RID: 6914 RVA: 0x00054014 File Offset: 0x00052214
+	// Token: 0x06002526 RID: 9510 RVA: 0x000B0148 File Offset: 0x000AE348
 	public override void ResetBaseValues()
 	{
 		base.BaseScale = 1.4f;
@@ -1277,7 +1277,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		base.ResetBaseValues();
 	}
 
-	// Token: 0x06001B03 RID: 6915 RVA: 0x000540E4 File Offset: 0x000522E4
+	// Token: 0x06002527 RID: 9511 RVA: 0x000B0218 File Offset: 0x000AE418
 	public void InitializeAbilities()
 	{
 		this.CharacterMove.WalkSpeed = 12f;
@@ -1335,7 +1335,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.CharacterDownStrike.ResetsDash = false;
 	}
 
-	// Token: 0x06001B04 RID: 6916 RVA: 0x00054390 File Offset: 0x00052590
+	// Token: 0x06002528 RID: 9512 RVA: 0x000B04C4 File Offset: 0x000AE6C4
 	public void InitializeAllMods(bool resetHP, bool resetMP)
 	{
 		this.ResetMods();
@@ -1369,7 +1369,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B05 RID: 6917 RVA: 0x00054454 File Offset: 0x00052654
+	// Token: 0x06002529 RID: 9513 RVA: 0x000B0588 File Offset: 0x000AE788
 	public void InitializeHealthMods()
 	{
 		this.InitializeResolveHealthMods();
@@ -1382,7 +1382,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.PlayerResolveChanged, this, null);
 	}
 
-	// Token: 0x06001B06 RID: 6918 RVA: 0x000544B0 File Offset: 0x000526B0
+	// Token: 0x0600252A RID: 9514 RVA: 0x000B05E4 File Offset: 0x000AE7E4
 	private void InitializeVitalityMods()
 	{
 		int num = 0;
@@ -1398,7 +1398,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.VitalityMod = num2;
 	}
 
-	// Token: 0x06001B07 RID: 6919 RVA: 0x00054530 File Offset: 0x00052730
+	// Token: 0x0600252B RID: 9515 RVA: 0x000B0664 File Offset: 0x000AE864
 	private void InitializeTraitHealthMods()
 	{
 		float num = 0f;
@@ -1457,7 +1457,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.TraitMaxHealthMod = num;
 	}
 
-	// Token: 0x06001B08 RID: 6920 RVA: 0x00054650 File Offset: 0x00052850
+	// Token: 0x0600252C RID: 9516 RVA: 0x000B0784 File Offset: 0x000AE984
 	private void InitializeRelicMaxHealthMods()
 	{
 		float num = 0f;
@@ -1467,7 +1467,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.RelicMaxHealthMod = num;
 	}
 
-	// Token: 0x06001B09 RID: 6921 RVA: 0x000546B4 File Offset: 0x000528B4
+	// Token: 0x0600252D RID: 9517 RVA: 0x000B07E8 File Offset: 0x000AE9E8
 	private void InitializeResolveHealthMods()
 	{
 		float num = 0f;
@@ -1501,7 +1501,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.ResolveMod = num5;
 	}
 
-	// Token: 0x06001B0A RID: 6922 RVA: 0x00054798 File Offset: 0x00052998
+	// Token: 0x0600252E RID: 9518 RVA: 0x000B08CC File Offset: 0x000AEACC
 	private void InitializeMaxHealthMods()
 	{
 		float maxHealthMod = 0f;
@@ -1512,7 +1512,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B0B RID: 6923 RVA: 0x000547D0 File Offset: 0x000529D0
+	// Token: 0x0600252F RID: 9519 RVA: 0x000B0904 File Offset: 0x000AEB04
 	public void InitializeManaMods()
 	{
 		this.InitializeMaxManaAdds();
@@ -1523,7 +1523,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.PlayerManaChange, this, this.m_manaChangeEventArgs);
 	}
 
-	// Token: 0x06001B0C RID: 6924 RVA: 0x00054820 File Offset: 0x00052A20
+	// Token: 0x06002530 RID: 9520 RVA: 0x000B0954 File Offset: 0x000AEB54
 	private void InitializeMaxManaAdds()
 	{
 		int num = 0;
@@ -1538,7 +1538,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.PostModMaxManaAdd = num;
 	}
 
-	// Token: 0x06001B0D RID: 6925 RVA: 0x000548A0 File Offset: 0x00052AA0
+	// Token: 0x06002531 RID: 9521 RVA: 0x000B09D4 File Offset: 0x000AEBD4
 	private void InitializeTraitMaxManaMods()
 	{
 		float num = 0f;
@@ -1557,14 +1557,14 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.TraitMaxManaMod = num;
 	}
 
-	// Token: 0x06001B0E RID: 6926 RVA: 0x000548F8 File Offset: 0x00052AF8
+	// Token: 0x06002532 RID: 9522 RVA: 0x000B0A2C File Offset: 0x000AEC2C
 	private void InitializeEquipmentMaxManaMods()
 	{
 		float equipmentMaxManaMod = 0f;
 		this.EquipmentMaxManaMod = equipmentMaxManaMod;
 	}
 
-	// Token: 0x06001B0F RID: 6927 RVA: 0x00054914 File Offset: 0x00052B14
+	// Token: 0x06002533 RID: 9523 RVA: 0x000B0A48 File Offset: 0x000AEC48
 	private void InitializeManaRegenMods()
 	{
 		float num = 0f;
@@ -1575,7 +1575,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.ManaRegenMod = num;
 	}
 
-	// Token: 0x06001B10 RID: 6928 RVA: 0x00054964 File Offset: 0x00052B64
+	// Token: 0x06002534 RID: 9524 RVA: 0x000B0A98 File Offset: 0x000AEC98
 	public void InitializeStrengthMods()
 	{
 		int num = 0;
@@ -1593,7 +1593,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		base.StrengthMod = num2;
 	}
 
-	// Token: 0x06001B11 RID: 6929 RVA: 0x000549EC File Offset: 0x00052BEC
+	// Token: 0x06002535 RID: 9525 RVA: 0x000B0B20 File Offset: 0x000AED20
 	public void InitializeMagicMods()
 	{
 		int num = 0;
@@ -1611,7 +1611,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		base.MagicMod = num2;
 	}
 
-	// Token: 0x06001B12 RID: 6930 RVA: 0x00054A74 File Offset: 0x00052C74
+	// Token: 0x06002536 RID: 9526 RVA: 0x000B0BA8 File Offset: 0x000AEDA8
 	public void InitializeAbilityMods()
 	{
 		float num = 0f;
@@ -1619,7 +1619,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.AbilityCoolDownMod = num;
 	}
 
-	// Token: 0x06001B13 RID: 6931 RVA: 0x00054A98 File Offset: 0x00052C98
+	// Token: 0x06002537 RID: 9527 RVA: 0x000B0BCC File Offset: 0x000AEDCC
 	public void InitializeInvincibilityMods()
 	{
 		float num = 0f;
@@ -1628,7 +1628,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		base.InvincibilityDurationAdd = num;
 	}
 
-	// Token: 0x06001B14 RID: 6932 RVA: 0x00054AD8 File Offset: 0x00052CD8
+	// Token: 0x06002538 RID: 9528 RVA: 0x000B0C0C File Offset: 0x000AEE0C
 	public void InitializeWeightMods()
 	{
 		int num = 0;
@@ -1642,7 +1642,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.RuneWeightAdds = num2;
 	}
 
-	// Token: 0x06001B15 RID: 6933 RVA: 0x00054B28 File Offset: 0x00052D28
+	// Token: 0x06002539 RID: 9529 RVA: 0x000B0C5C File Offset: 0x000AEE5C
 	public void InitializeExhaustMods()
 	{
 		int num = 0;
@@ -1650,7 +1650,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.CurrentExhaust = num;
 	}
 
-	// Token: 0x06001B16 RID: 6934 RVA: 0x00054B58 File Offset: 0x00052D58
+	// Token: 0x0600253A RID: 9530 RVA: 0x000B0C8C File Offset: 0x000AEE8C
 	public void InitializeArmorMods()
 	{
 		int num = 0;
@@ -1666,7 +1666,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.ArmorAdds = (int)((float)num * num2);
 	}
 
-	// Token: 0x06001B17 RID: 6935 RVA: 0x00054BDC File Offset: 0x00052DDC
+	// Token: 0x0600253B RID: 9531 RVA: 0x000B0D10 File Offset: 0x000AEF10
 	public void InitializeCritMods()
 	{
 		float num = 0f;
@@ -1747,7 +1747,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.MagicCritDamageTemporaryAdd = num15;
 	}
 
-	// Token: 0x06001B18 RID: 6936 RVA: 0x00054F7C File Offset: 0x0005317C
+	// Token: 0x0600253C RID: 9532 RVA: 0x000B10B0 File Offset: 0x000AF2B0
 	public override void ResetMods()
 	{
 		this.JustRolled = false;
@@ -1780,7 +1780,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.MagicCritChanceTemporaryAdd = 0f;
 	}
 
-	// Token: 0x06001B19 RID: 6937 RVA: 0x000550A0 File Offset: 0x000532A0
+	// Token: 0x0600253D RID: 9533 RVA: 0x000B11D4 File Offset: 0x000AF3D4
 	public void ResetGravityAndMovement()
 	{
 		if (base.ControllerCorgi)
@@ -1801,7 +1801,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B1A RID: 6938 RVA: 0x00055130 File Offset: 0x00053330
+	// Token: 0x0600253E RID: 9534 RVA: 0x000B1264 File Offset: 0x000AF464
 	public override void ResetCharacter()
 	{
 		base.ResetCharacter();
@@ -1900,7 +1900,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.ApplyPermanentStatusEffects(null, null);
 	}
 
-	// Token: 0x06001B1B RID: 6939 RVA: 0x000554E5 File Offset: 0x000536E5
+	// Token: 0x0600253F RID: 9535 RVA: 0x00014A35 File Offset: 0x00012C35
 	public void ApplyPermanentStatusEffects(object sender, EventArgs args)
 	{
 		if (base.isActiveAndEnabled)
@@ -1909,7 +1909,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B1C RID: 6940 RVA: 0x000554FC File Offset: 0x000536FC
+	// Token: 0x06002540 RID: 9536 RVA: 0x00014A4C File Offset: 0x00012C4C
 	private IEnumerator ApplyPermanentStatusEffectsCoroutine()
 	{
 		yield return null;
@@ -1924,7 +1924,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		yield break;
 	}
 
-	// Token: 0x06001B1D RID: 6941 RVA: 0x0005550B File Offset: 0x0005370B
+	// Token: 0x06002541 RID: 9537 RVA: 0x00014A5B File Offset: 0x00012C5B
 	public override void ResetHealth()
 	{
 		this.CurrentArmor = this.ActualArmor;
@@ -1932,7 +1932,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		base.ResetHealth();
 	}
 
-	// Token: 0x06001B1E RID: 6942 RVA: 0x0005552A File Offset: 0x0005372A
+	// Token: 0x06002542 RID: 9538 RVA: 0x00014A7A File Offset: 0x00012C7A
 	public void ResetMana()
 	{
 		this.SpellOrbs = 0;
@@ -1940,7 +1940,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.SetMana((float)this.ActualMaxMana, false, true, false);
 	}
 
-	// Token: 0x06001B1F RID: 6943 RVA: 0x00055550 File Offset: 0x00053750
+	// Token: 0x06002543 RID: 9539 RVA: 0x000B161C File Offset: 0x000AF81C
 	public override void ResetStates()
 	{
 		this.StopActiveAbilities(true);
@@ -1954,7 +1954,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		base.ResetStates();
 	}
 
-	// Token: 0x06001B20 RID: 6944 RVA: 0x0005559E File Offset: 0x0005379E
+	// Token: 0x06002544 RID: 9540 RVA: 0x00014A9E File Offset: 0x00012C9E
 	public void ResetAbilityCooldowns()
 	{
 		this.m_characterAbilities.ResetAbilityCooldowns(CastAbilityType.Weapon, false);
@@ -1962,7 +1962,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.m_characterAbilities.ResetAbilityCooldowns(CastAbilityType.Spell, false);
 	}
 
-	// Token: 0x06001B21 RID: 6945 RVA: 0x000555C7 File Offset: 0x000537C7
+	// Token: 0x06002545 RID: 9541 RVA: 0x00014AC7 File Offset: 0x00012CC7
 	public void ResetAllAbilityAmmo()
 	{
 		this.m_characterAbilities.ResetAbilityAmmo(CastAbilityType.Weapon, false);
@@ -1970,7 +1970,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.m_characterAbilities.ResetAbilityAmmo(CastAbilityType.Spell, false);
 	}
 
-	// Token: 0x06001B22 RID: 6946 RVA: 0x000555F0 File Offset: 0x000537F0
+	// Token: 0x06002546 RID: 9542 RVA: 0x000B166C File Offset: 0x000AF86C
 	public void StopActiveAbilities(bool stopPersistentAbilities)
 	{
 		this.m_characterAbilities.StopAllAbilities(stopPersistentAbilities);
@@ -1994,7 +1994,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.DisableAbilitiesForXSeconds(0.1f);
 	}
 
-	// Token: 0x06001B23 RID: 6947 RVA: 0x00055696 File Offset: 0x00053896
+	// Token: 0x06002547 RID: 9543 RVA: 0x00014AF0 File Offset: 0x00012CF0
 	public void DisableAbilitiesForXSeconds(float duration)
 	{
 		if (this.m_disableAbilitiesCoroutine != null)
@@ -2009,7 +2009,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.SetAllAbilitiesPermitted(true);
 	}
 
-	// Token: 0x06001B24 RID: 6948 RVA: 0x000556CF File Offset: 0x000538CF
+	// Token: 0x06002548 RID: 9544 RVA: 0x00014B29 File Offset: 0x00012D29
 	private IEnumerator DisableAbilitiesCoroutine(float duration)
 	{
 		this.SetAllAbilitiesPermitted(false);
@@ -2022,7 +2022,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		yield break;
 	}
 
-	// Token: 0x06001B25 RID: 6949 RVA: 0x000556E5 File Offset: 0x000538E5
+	// Token: 0x06002549 RID: 9545 RVA: 0x00014B3F File Offset: 0x00012D3F
 	public void SetAllAbilitiesPermitted(bool permitted)
 	{
 		this.m_characterDash.AbilityPermitted = permitted;
@@ -2032,7 +2032,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.m_characterJump.AbilityPermitted = permitted;
 	}
 
-	// Token: 0x06001B26 RID: 6950 RVA: 0x00055724 File Offset: 0x00053924
+	// Token: 0x0600254A RID: 9546 RVA: 0x000B1714 File Offset: 0x000AF914
 	private float ApplyAssistDamageMods(IDamageObj damageObj, float damageTaken)
 	{
 		float num = damageTaken;
@@ -2043,7 +2043,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		return num;
 	}
 
-	// Token: 0x06001B27 RID: 6951 RVA: 0x00055750 File Offset: 0x00053950
+	// Token: 0x0600254B RID: 9547 RVA: 0x000B1740 File Offset: 0x000AF940
 	public override float CalculateDamageTaken(IDamageObj damageObj, out CriticalStrikeType critType, out float damageBlocked, float damageOverride = -1f, bool trueDamage = false, bool pureCalculation = true)
 	{
 		critType = CriticalStrikeType.None;
@@ -2241,7 +2241,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		return num2;
 	}
 
-	// Token: 0x06001B28 RID: 6952 RVA: 0x00055CD4 File Offset: 0x00053ED4
+	// Token: 0x0600254C RID: 9548 RVA: 0x000B1CC4 File Offset: 0x000AFEC4
 	public override void KillCharacter(GameObject killer, bool broadcastEvent)
 	{
 		if (base.IsDead)
@@ -2291,7 +2291,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		WindowManager.SetWindowIsOpen(WindowID.PlayerDeath, true);
 	}
 
-	// Token: 0x06001B29 RID: 6953 RVA: 0x00055E34 File Offset: 0x00054034
+	// Token: 0x0600254D RID: 9549 RVA: 0x000B1E24 File Offset: 0x000B0024
 	public void EnterRoom(BaseRoom room, Door door, Vector3 localPosition)
 	{
 		this.CheckForBiomeChange(room.BiomeType);
@@ -2316,7 +2316,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B2A RID: 6954 RVA: 0x00055EF0 File Offset: 0x000540F0
+	// Token: 0x0600254E RID: 9550 RVA: 0x000B1EE0 File Offset: 0x000B00E0
 	public void EnterRoom(BaseRoom room)
 	{
 		if (room is Room)
@@ -2328,7 +2328,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.EnterRoom(room, null, Vector3.zero);
 	}
 
-	// Token: 0x06001B2B RID: 6955 RVA: 0x00055F34 File Offset: 0x00054134
+	// Token: 0x0600254F RID: 9551 RVA: 0x000B1F24 File Offset: 0x000B0124
 	public void EnterRoom(Door door)
 	{
 		Vector2 b = new Vector2(0f, 0f);
@@ -2361,13 +2361,13 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.EnterRoom(door.Room, door, localPosition);
 	}
 
-	// Token: 0x06001B2C RID: 6956 RVA: 0x00056070 File Offset: 0x00054270
+	// Token: 0x06002550 RID: 9552 RVA: 0x00014B7D File Offset: 0x00012D7D
 	public void DisableEffectsOnEnterTunnel()
 	{
 		base.StartCoroutine(this.DisableEffectsOnEnterTunnelCoroutine(0.1f));
 	}
 
-	// Token: 0x06001B2D RID: 6957 RVA: 0x00056084 File Offset: 0x00054284
+	// Token: 0x06002551 RID: 9553 RVA: 0x00014B91 File Offset: 0x00012D91
 	private IEnumerator DisableEffectsOnEnterTunnelCoroutine(float duration)
 	{
 		if (this.m_animator)
@@ -2384,7 +2384,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		yield break;
 	}
 
-	// Token: 0x06001B2E RID: 6958 RVA: 0x0005609A File Offset: 0x0005429A
+	// Token: 0x06002552 RID: 9554 RVA: 0x00014BA7 File Offset: 0x00012DA7
 	private IEnumerator ResetCorgiControllerRayParameters()
 	{
 		while (!base.ControllerCorgi.IsInitialized)
@@ -2395,7 +2395,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		yield break;
 	}
 
-	// Token: 0x06001B2F RID: 6959 RVA: 0x000560AC File Offset: 0x000542AC
+	// Token: 0x06002553 RID: 9555 RVA: 0x000B2060 File Offset: 0x000B0260
 	public void WeaponOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		Vector3 collisionPoint = base.Midpoint;
@@ -2422,7 +2422,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B30 RID: 6960 RVA: 0x00056168 File Offset: 0x00054368
+	// Token: 0x06002554 RID: 9556 RVA: 0x00014BB6 File Offset: 0x00012DB6
 	public void PauseGravity(bool stopVelocity, bool lockPlayerControls)
 	{
 		base.ControllerCorgi.GravityActive(false);
@@ -2437,7 +2437,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B31 RID: 6961 RVA: 0x0005619F File Offset: 0x0005439F
+	// Token: 0x06002555 RID: 9557 RVA: 0x00014BED File Offset: 0x00012DED
 	public void ResumeGravity()
 	{
 		base.ControllerCorgi.GravityActive(true);
@@ -2447,7 +2447,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B32 RID: 6962 RVA: 0x000561C0 File Offset: 0x000543C0
+	// Token: 0x06002556 RID: 9558 RVA: 0x000B211C File Offset: 0x000B031C
 	public void SetMushroomBig(bool setMushroomBig, bool animate)
 	{
 		if (setMushroomBig != this.IsMushroomBig)
@@ -2469,7 +2469,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B33 RID: 6963 RVA: 0x0005623B File Offset: 0x0005443B
+	// Token: 0x06002557 RID: 9559 RVA: 0x00014C0B File Offset: 0x00012E0B
 	private IEnumerator MushroomAnimCoroutine(bool growBig)
 	{
 		Vector3 smallScale = new Vector3(1.4f, 1.4f, 1f);
@@ -2513,7 +2513,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		yield break;
 	}
 
-	// Token: 0x06001B34 RID: 6964 RVA: 0x00056251 File Offset: 0x00054451
+	// Token: 0x06002558 RID: 9560 RVA: 0x00014C21 File Offset: 0x00012E21
 	private IEnumerator MushroomIntervalCoroutine(float interval, Vector3 scale)
 	{
 		base.transform.localScale = scale;
@@ -2525,7 +2525,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		yield break;
 	}
 
-	// Token: 0x06001B35 RID: 6965 RVA: 0x0005626E File Offset: 0x0005446E
+	// Token: 0x06002559 RID: 9561 RVA: 0x00014C3E File Offset: 0x00012E3E
 	public void StartOnHitAreaDamageTimer()
 	{
 		if (this.m_onHitAreaDamageCoroutine != null)
@@ -2536,7 +2536,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.m_onHitAreaDamageCoroutine = base.StartCoroutine(this.OnHitAreaDamageCoroutine());
 	}
 
-	// Token: 0x06001B36 RID: 6966 RVA: 0x0005629D File Offset: 0x0005449D
+	// Token: 0x0600255A RID: 9562 RVA: 0x00014C6D File Offset: 0x00012E6D
 	public void StopOnHitAreaDamageTimer()
 	{
 		SaveManager.PlayerSaveData.GetRelic(RelicType.OnHitAreaDamage).SetIntValue(0, false, true);
@@ -2547,7 +2547,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B37 RID: 6967 RVA: 0x000562D1 File Offset: 0x000544D1
+	// Token: 0x0600255B RID: 9563 RVA: 0x00014CA1 File Offset: 0x00012EA1
 	private IEnumerator OnHitAreaDamageCoroutine()
 	{
 		this.m_onHitAreaDamage_waitYield.CreateNew(1f, false);
@@ -2561,7 +2561,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		yield break;
 	}
 
-	// Token: 0x06001B38 RID: 6968 RVA: 0x000562E0 File Offset: 0x000544E0
+	// Token: 0x0600255C RID: 9564 RVA: 0x00014CB0 File Offset: 0x00012EB0
 	public void StartNoAttackDamageBonusTimer()
 	{
 		if (this.m_noAttackDamageBonusCoroutine != null)
@@ -2572,7 +2572,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.m_noAttackDamageBonusCoroutine = base.StartCoroutine(this.NoAttackDamageBonusCoroutine());
 	}
 
-	// Token: 0x06001B39 RID: 6969 RVA: 0x0005630F File Offset: 0x0005450F
+	// Token: 0x0600255D RID: 9565 RVA: 0x00014CDF File Offset: 0x00012EDF
 	public void StopNoAttackDamageBonusTimer()
 	{
 		SaveManager.PlayerSaveData.GetRelic(RelicType.NoAttackDamageBonus).SetIntValue(0, false, true);
@@ -2583,7 +2583,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B3A RID: 6970 RVA: 0x00056343 File Offset: 0x00054543
+	// Token: 0x0600255E RID: 9566 RVA: 0x00014D13 File Offset: 0x00012F13
 	private IEnumerator NoAttackDamageBonusCoroutine()
 	{
 		this.m_noAttackDamageBonus_waitYield.CreateNew(1f, false);
@@ -2597,7 +2597,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		yield break;
 	}
 
-	// Token: 0x06001B3B RID: 6971 RVA: 0x00056352 File Offset: 0x00054552
+	// Token: 0x0600255F RID: 9567 RVA: 0x00014D22 File Offset: 0x00012F22
 	public void StartSpinKicksDropCaltropsTimer()
 	{
 		if (this.m_spinKicksDropCaltropsCoroutine != null)
@@ -2608,7 +2608,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		this.m_spinKicksDropCaltropsCoroutine = base.StartCoroutine(this.SpinKicksDropCaltropsCoroutine());
 	}
 
-	// Token: 0x06001B3C RID: 6972 RVA: 0x00056381 File Offset: 0x00054581
+	// Token: 0x06002560 RID: 9568 RVA: 0x00014D51 File Offset: 0x00012F51
 	public void StopSpinKicksDropCaltropsTimer()
 	{
 		SaveManager.PlayerSaveData.GetRelic(RelicType.SpinKickLeavesCaltrops).SetIntValue(0, false, true);
@@ -2619,7 +2619,7 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		}
 	}
 
-	// Token: 0x06001B3D RID: 6973 RVA: 0x000563B5 File Offset: 0x000545B5
+	// Token: 0x06002561 RID: 9569 RVA: 0x00014D85 File Offset: 0x00012F85
 	private IEnumerator SpinKicksDropCaltropsCoroutine()
 	{
 		RelicObj relicObj = SaveManager.PlayerSaveData.GetRelic(RelicType.SpinKickLeavesCaltrops);
@@ -2637,13 +2637,13 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		yield break;
 	}
 
-	// Token: 0x06001B3F RID: 6975 RVA: 0x00056432 File Offset: 0x00054632
+	// Token: 0x06002563 RID: 9571 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IDamageObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x040018A7 RID: 6311
+	// Token: 0x04002024 RID: 8228
 	private string[] m_projectileNameArray = new string[]
 	{
 		"CreatePlatformTalentProjectile",
@@ -2654,134 +2654,134 @@ public class PlayerController : BaseCharacterController, IDamageObj, IWeaponOnEn
 		"RelicDamageAuraOnHitProjectile"
 	};
 
-	// Token: 0x040018A8 RID: 6312
+	// Token: 0x04002025 RID: 8229
 	[SerializeField]
 	private GameObject m_followTargetGO;
 
-	// Token: 0x040018A9 RID: 6313
+	// Token: 0x04002026 RID: 8230
 	[SerializeField]
 	private GameObject m_rangeBonusRelicIndicatorGO;
 
-	// Token: 0x040018AA RID: 6314
+	// Token: 0x04002027 RID: 8231
 	private int m_baseArmor;
 
-	// Token: 0x040018AB RID: 6315
+	// Token: 0x04002028 RID: 8232
 	private float m_baseCritDamage;
 
-	// Token: 0x040018AC RID: 6316
+	// Token: 0x04002029 RID: 8233
 	private float m_baseDexterity;
 
-	// Token: 0x040018AD RID: 6317
+	// Token: 0x0400202A RID: 8234
 	private float m_baseMagicCritDamage;
 
-	// Token: 0x040018AE RID: 6318
+	// Token: 0x0400202B RID: 8235
 	private float m_baseMagicDexterity;
 
-	// Token: 0x040018AF RID: 6319
+	// Token: 0x0400202C RID: 8236
 	private float m_baseResolve;
 
-	// Token: 0x040018B0 RID: 6320
+	// Token: 0x0400202D RID: 8237
 	private int m_baseVitality;
 
-	// Token: 0x040018B1 RID: 6321
+	// Token: 0x0400202E RID: 8238
 	private CharacterDash_RL m_characterDash;
 
-	// Token: 0x040018B2 RID: 6322
+	// Token: 0x0400202F RID: 8239
 	private CharacterDownStrike_RL m_characterDownStrike;
 
-	// Token: 0x040018B3 RID: 6323
+	// Token: 0x04002030 RID: 8240
 	private CastAbility_RL m_characterAbilities;
 
-	// Token: 0x040018B4 RID: 6324
+	// Token: 0x04002031 RID: 8241
 	private CharacterHorizontalMovement_RL m_characterMove;
 
-	// Token: 0x040018B5 RID: 6325
+	// Token: 0x04002032 RID: 8242
 	private CharacterJump_RL m_characterJump;
 
-	// Token: 0x040018B6 RID: 6326
+	// Token: 0x04002033 RID: 8243
 	private CharacterClass m_characterClass;
 
-	// Token: 0x040018B7 RID: 6327
+	// Token: 0x04002034 RID: 8244
 	private CharacterFlight_RL m_characterFlight;
 
-	// Token: 0x040018B8 RID: 6328
+	// Token: 0x04002035 RID: 8245
 	private PlayerLookController m_lookController;
 
-	// Token: 0x040018B9 RID: 6329
+	// Token: 0x04002036 RID: 8246
 	private InteractIconController m_interactIconController;
 
-	// Token: 0x040018BA RID: 6330
+	// Token: 0x04002037 RID: 8247
 	private BaseRoom m_currentlyInRoom;
 
-	// Token: 0x040018BB RID: 6331
+	// Token: 0x04002038 RID: 8248
 	private Player m_rewiredPlayer;
 
-	// Token: 0x040018BC RID: 6332
+	// Token: 0x04002039 RID: 8249
 	private BiomeEventArgs m_biomeEventArgs;
 
-	// Token: 0x040018BD RID: 6333
+	// Token: 0x0400203A RID: 8250
 	private PlayerDeathEventArgs m_playerDeathEventArgs;
 
-	// Token: 0x040018BE RID: 6334
+	// Token: 0x0400203B RID: 8251
 	private bool m_justRolled;
 
-	// Token: 0x040018BF RID: 6335
+	// Token: 0x0400203C RID: 8252
 	private Coroutine m_rollCoroutine;
 
-	// Token: 0x040018C0 RID: 6336
+	// Token: 0x0400203D RID: 8253
 	protected ManaChangeEventArgs m_manaChangeEventArgs;
 
-	// Token: 0x040018C1 RID: 6337
+	// Token: 0x0400203E RID: 8254
 	private TraitChangedEventArgs m_traitChangeEventArgs;
 
-	// Token: 0x040018C2 RID: 6338
+	// Token: 0x0400203F RID: 8255
 	private Coroutine m_onHitAreaDamageCoroutine;
 
-	// Token: 0x040018C3 RID: 6339
+	// Token: 0x04002040 RID: 8256
 	private Coroutine m_noAttackDamageBonusCoroutine;
 
-	// Token: 0x040018C4 RID: 6340
+	// Token: 0x04002041 RID: 8257
 	private Coroutine m_spinKicksDropCaltropsCoroutine;
 
-	// Token: 0x040018C5 RID: 6341
+	// Token: 0x04002042 RID: 8258
 	private WaitRL_Yield m_onHitAreaDamage_waitYield;
 
-	// Token: 0x040018C6 RID: 6342
+	// Token: 0x04002043 RID: 8259
 	private WaitRL_Yield m_noAttackDamageBonus_waitYield;
 
-	// Token: 0x040018C7 RID: 6343
+	// Token: 0x04002044 RID: 8260
 	private Action<MonoBehaviour, EventArgs> m_onEquippedOrLevelChanged;
 
-	// Token: 0x040018C8 RID: 6344
+	// Token: 0x04002045 RID: 8261
 	private Action<MonoBehaviour, EventArgs> m_onRelicChanged;
 
-	// Token: 0x040018C9 RID: 6345
+	// Token: 0x04002046 RID: 8262
 	private Action<MonoBehaviour, EventArgs> m_applyPermanentStatusEffects;
 
-	// Token: 0x040018D1 RID: 6353
+	// Token: 0x0400204E RID: 8270
 	protected Relay<PlayerDeathEventArgs> m_onPlayerDeathRelay = new Relay<PlayerDeathEventArgs>();
 
-	// Token: 0x040018D2 RID: 6354
+	// Token: 0x0400204F RID: 8271
 	private Relay<ManaChangeEventArgs> m_manaChangeRelay = new Relay<ManaChangeEventArgs>();
 
-	// Token: 0x040018E7 RID: 6375
+	// Token: 0x04002064 RID: 8292
 	private int m_currentArmor;
 
-	// Token: 0x040018E9 RID: 6377
+	// Token: 0x04002066 RID: 8294
 	private int m_currentExhaust;
 
-	// Token: 0x040018FD RID: 6397
+	// Token: 0x0400207A RID: 8314
 	private float m_updateAccumulatedXP;
 
-	// Token: 0x040018FE RID: 6398
+	// Token: 0x0400207B RID: 8315
 	private float m_updateAccumulatedLifeSteal;
 
-	// Token: 0x040018FF RID: 6399
+	// Token: 0x0400207C RID: 8316
 	private TextPopupObj m_xpPopup;
 
-	// Token: 0x04001900 RID: 6400
+	// Token: 0x0400207D RID: 8317
 	private RelicChangedEventArgs m_extraLifeEventArgs = new RelicChangedEventArgs(RelicType.ExtraLife_Unity);
 
-	// Token: 0x04001901 RID: 6401
+	// Token: 0x0400207E RID: 8318
 	private Coroutine m_disableAbilitiesCoroutine;
 }

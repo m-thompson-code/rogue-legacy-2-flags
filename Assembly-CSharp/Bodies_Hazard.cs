@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000444 RID: 1092
+// Token: 0x02000712 RID: 1810
 public class Bodies_Hazard : Hazard
 {
-	// Token: 0x06002811 RID: 10257 RVA: 0x000849D8 File Offset: 0x00082BD8
+	// Token: 0x06003741 RID: 14145 RVA: 0x000E5368 File Offset: 0x000E3568
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		base.Initialize(hazardArgs);
@@ -47,7 +47,7 @@ public class Bodies_Hazard : Hazard
 		}
 	}
 
-	// Token: 0x06002812 RID: 10258 RVA: 0x00084B94 File Offset: 0x00082D94
+	// Token: 0x06003742 RID: 14146 RVA: 0x000E5524 File Offset: 0x000E3724
 	private void CheckGroundRaycast(Vector2 leftSide, Vector2 rightSide)
 	{
 		if (!Physics2D.Raycast(leftSide, Vector2.down, 0.5f, PlayerManager.GetPlayerController().ControllerCorgi.SavedPlatformMask) || !Physics2D.Raycast(rightSide, Vector2.down, 0.5f, PlayerManager.GetPlayerController().ControllerCorgi.SavedPlatformMask))
@@ -56,15 +56,15 @@ public class Bodies_Hazard : Hazard
 		}
 	}
 
-	// Token: 0x06002813 RID: 10259 RVA: 0x00084C0A File Offset: 0x00082E0A
+	// Token: 0x06003743 RID: 14147 RVA: 0x00002FCA File Offset: 0x000011CA
 	public override void ResetHazard()
 	{
 	}
 
-	// Token: 0x04002144 RID: 8516
+	// Token: 0x04002C87 RID: 11399
 	[SerializeField]
 	private GameObject[] m_bodies;
 
-	// Token: 0x04002145 RID: 8517
+	// Token: 0x04002C88 RID: 11400
 	private int m_activeBodyIndex;
 }

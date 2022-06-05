@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000747 RID: 1863
+// Token: 0x02000C05 RID: 3077
 public class ItemDropType_RL
 {
-	// Token: 0x17001635 RID: 5685
-	// (get) Token: 0x0600410C RID: 16652 RVA: 0x000E6568 File Offset: 0x000E4768
+	// Token: 0x17001E31 RID: 7729
+	// (get) Token: 0x06005A89 RID: 23177 RVA: 0x00031960 File Offset: 0x0002FB60
 	public static ItemDropType[] Types
 	{
 		get
@@ -17,8 +17,8 @@ public class ItemDropType_RL
 		}
 	}
 
-	// Token: 0x17001636 RID: 5686
-	// (get) Token: 0x0600410D RID: 16653 RVA: 0x000E658F File Offset: 0x000E478F
+	// Token: 0x17001E32 RID: 7730
+	// (get) Token: 0x06005A8A RID: 23178 RVA: 0x00031987 File Offset: 0x0002FB87
 	public static SpecialItemType[] SpecialTypes
 	{
 		get
@@ -31,12 +31,12 @@ public class ItemDropType_RL
 		}
 	}
 
-	// Token: 0x040034D5 RID: 13525
+	// Token: 0x04004751 RID: 18257
 	public const int MAX_NUM_ITEM_DROPS = 10;
 
-	// Token: 0x040034D6 RID: 13526
+	// Token: 0x04004752 RID: 18258
 	private static ItemDropType[] m_types;
 
-	// Token: 0x040034D7 RID: 13527
+	// Token: 0x04004753 RID: 18259
 	private static SpecialItemType[] m_specialTypes;
 }

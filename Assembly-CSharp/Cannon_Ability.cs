@@ -3,10 +3,10 @@ using System.Collections;
 using Rewired;
 using UnityEngine;
 
-// Token: 0x02000194 RID: 404
+// Token: 0x020002EA RID: 746
 public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 {
-	// Token: 0x06000F1C RID: 3868 RVA: 0x0002CFD5 File Offset: 0x0002B1D5
+	// Token: 0x060016EB RID: 5867 RVA: 0x0000B916 File Offset: 0x00009B16
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -16,13 +16,13 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		};
 	}
 
-	// Token: 0x17000844 RID: 2116
-	// (get) Token: 0x06000F1D RID: 3869 RVA: 0x0002CFF5 File Offset: 0x0002B1F5
-	// (set) Token: 0x06000F1E RID: 3870 RVA: 0x0002CFFD File Offset: 0x0002B1FD
+	// Token: 0x17000ADC RID: 2780
+	// (get) Token: 0x060016EC RID: 5868 RVA: 0x0000B936 File Offset: 0x00009B36
+	// (set) Token: 0x060016ED RID: 5869 RVA: 0x0000B93E File Offset: 0x00009B3E
 	public bool IsShooting { get; private set; }
 
-	// Token: 0x17000845 RID: 2117
-	// (get) Token: 0x06000F1F RID: 3871 RVA: 0x0002D006 File Offset: 0x0002B206
+	// Token: 0x17000ADD RID: 2781
+	// (get) Token: 0x060016EE RID: 5870 RVA: 0x0000B947 File Offset: 0x00009B47
 	public override Vector2 PushbackAmount
 	{
 		get
@@ -35,8 +35,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000846 RID: 2118
-	// (get) Token: 0x06000F20 RID: 3872 RVA: 0x0002D01C File Offset: 0x0002B21C
+	// Token: 0x17000ADE RID: 2782
+	// (get) Token: 0x060016EF RID: 5871 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float GravityReduction
 	{
 		get
@@ -45,8 +45,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000847 RID: 2119
-	// (get) Token: 0x06000F21 RID: 3873 RVA: 0x0002D023 File Offset: 0x0002B223
+	// Token: 0x17000ADF RID: 2783
+	// (get) Token: 0x060016F0 RID: 5872 RVA: 0x0000B95D File Offset: 0x00009B5D
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -59,8 +59,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000848 RID: 2120
-	// (get) Token: 0x06000F22 RID: 3874 RVA: 0x0002D03A File Offset: 0x0002B23A
+	// Token: 0x17000AE0 RID: 2784
+	// (get) Token: 0x060016F1 RID: 5873 RVA: 0x0000B974 File Offset: 0x00009B74
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -73,8 +73,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000849 RID: 2121
-	// (get) Token: 0x06000F23 RID: 3875 RVA: 0x0002D051 File Offset: 0x0002B251
+	// Token: 0x17000AE1 RID: 2785
+	// (get) Token: 0x060016F2 RID: 5874 RVA: 0x0000B98B File Offset: 0x00009B8B
 	protected override float TellAnimSpeed
 	{
 		get
@@ -87,8 +87,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700084A RID: 2122
-	// (get) Token: 0x06000F24 RID: 3876 RVA: 0x0002D068 File Offset: 0x0002B268
+	// Token: 0x17000AE2 RID: 2786
+	// (get) Token: 0x060016F3 RID: 5875 RVA: 0x0000B9A2 File Offset: 0x00009BA2
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -101,8 +101,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700084B RID: 2123
-	// (get) Token: 0x06000F25 RID: 3877 RVA: 0x0002D07F File Offset: 0x0002B27F
+	// Token: 0x17000AE3 RID: 2787
+	// (get) Token: 0x060016F4 RID: 5876 RVA: 0x0000B9B9 File Offset: 0x00009BB9
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -115,8 +115,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700084C RID: 2124
-	// (get) Token: 0x06000F26 RID: 3878 RVA: 0x0002D096 File Offset: 0x0002B296
+	// Token: 0x17000AE4 RID: 2788
+	// (get) Token: 0x060016F5 RID: 5877 RVA: 0x0000B9D0 File Offset: 0x00009BD0
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -129,8 +129,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700084D RID: 2125
-	// (get) Token: 0x06000F27 RID: 3879 RVA: 0x0002D0AD File Offset: 0x0002B2AD
+	// Token: 0x17000AE5 RID: 2789
+	// (get) Token: 0x060016F6 RID: 5878 RVA: 0x0000B9E7 File Offset: 0x00009BE7
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -143,8 +143,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700084E RID: 2126
-	// (get) Token: 0x06000F28 RID: 3880 RVA: 0x0002D0C4 File Offset: 0x0002B2C4
+	// Token: 0x17000AE6 RID: 2790
+	// (get) Token: 0x060016F7 RID: 5879 RVA: 0x0000B9FE File Offset: 0x00009BFE
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -157,8 +157,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700084F RID: 2127
-	// (get) Token: 0x06000F29 RID: 3881 RVA: 0x0002D0DB File Offset: 0x0002B2DB
+	// Token: 0x17000AE7 RID: 2791
+	// (get) Token: 0x060016F8 RID: 5880 RVA: 0x0000BA15 File Offset: 0x00009C15
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -171,8 +171,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000850 RID: 2128
-	// (get) Token: 0x06000F2A RID: 3882 RVA: 0x0002D0F2 File Offset: 0x0002B2F2
+	// Token: 0x17000AE8 RID: 2792
+	// (get) Token: 0x060016F9 RID: 5881 RVA: 0x0000BA2C File Offset: 0x00009C2C
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -185,8 +185,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000851 RID: 2129
-	// (get) Token: 0x06000F2B RID: 3883 RVA: 0x0002D109 File Offset: 0x0002B309
+	// Token: 0x17000AE9 RID: 2793
+	// (get) Token: 0x060016FA RID: 5882 RVA: 0x0000BA43 File Offset: 0x00009C43
 	public override bool HasAttackFlipCheck
 	{
 		get
@@ -195,8 +195,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000852 RID: 2130
-	// (get) Token: 0x06000F2C RID: 3884 RVA: 0x0002D11B File Offset: 0x0002B31B
+	// Token: 0x17000AEA RID: 2794
+	// (get) Token: 0x060016FB RID: 5883 RVA: 0x0000BA55 File Offset: 0x00009C55
 	public override string ProjectileName
 	{
 		get
@@ -209,8 +209,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000853 RID: 2131
-	// (get) Token: 0x06000F2D RID: 3885 RVA: 0x0002D132 File Offset: 0x0002B332
+	// Token: 0x17000AEB RID: 2795
+	// (get) Token: 0x060016FC RID: 5884 RVA: 0x0000BA6C File Offset: 0x00009C6C
 	public override Vector2 ProjectileOffset
 	{
 		get
@@ -223,8 +223,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000854 RID: 2132
-	// (get) Token: 0x06000F2E RID: 3886 RVA: 0x0002D149 File Offset: 0x0002B349
+	// Token: 0x17000AEC RID: 2796
+	// (get) Token: 0x060016FD RID: 5885 RVA: 0x0000BA83 File Offset: 0x00009C83
 	public override AbilityData AbilityData
 	{
 		get
@@ -237,8 +237,8 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000855 RID: 2133
-	// (get) Token: 0x06000F2F RID: 3887 RVA: 0x0002D160 File Offset: 0x0002B360
+	// Token: 0x17000AED RID: 2797
+	// (get) Token: 0x060016FE RID: 5886 RVA: 0x0000BA9A File Offset: 0x00009C9A
 	public override string AbilityTellIntroName
 	{
 		get
@@ -251,14 +251,14 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F30 RID: 3888 RVA: 0x0002D177 File Offset: 0x0002B377
+	// Token: 0x060016FF RID: 5887 RVA: 0x0000BAB1 File Offset: 0x00009CB1
 	public override void Initialize(CastAbility_RL abilityController, CastAbilityType castAbilityType)
 	{
 		base.Initialize(abilityController, castAbilityType);
 		abilityController.Animator.SetBool("FryingPan_UsePirateAudio", true);
 	}
 
-	// Token: 0x06000F31 RID: 3889 RVA: 0x0002D194 File Offset: 0x0002B394
+	// Token: 0x06001700 RID: 5888 RVA: 0x0008BA68 File Offset: 0x00089C68
 	protected override void InitializeAimLine()
 	{
 		Projectile_RL projectile = ProjectileLibrary.GetProjectile(this.m_shootProjectileName);
@@ -277,7 +277,7 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F32 RID: 3890 RVA: 0x0002D22F File Offset: 0x0002B42F
+	// Token: 0x06001701 RID: 5889 RVA: 0x0000BACC File Offset: 0x00009CCC
 	public override void PreCastAbility()
 	{
 		this.IsShooting = this.m_shootButtonHeld;
@@ -289,14 +289,14 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F33 RID: 3891 RVA: 0x0002D263 File Offset: 0x0002B463
+	// Token: 0x06001702 RID: 5890 RVA: 0x0000A2B3 File Offset: 0x000084B3
 	protected override void OnEnterAttackLogic()
 	{
 		this.m_abilityController.BroadcastAbilityCastEvents(base.CastAbilityType);
 		this.FireProjectile();
 	}
 
-	// Token: 0x06000F34 RID: 3892 RVA: 0x0002D27C File Offset: 0x0002B47C
+	// Token: 0x06001703 RID: 5891 RVA: 0x0008BB04 File Offset: 0x00089D04
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -326,7 +326,7 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F35 RID: 3893 RVA: 0x0002D375 File Offset: 0x0002B575
+	// Token: 0x06001704 RID: 5892 RVA: 0x0000BB00 File Offset: 0x00009D00
 	protected override void UpdateArrowAim(bool doNotUpdatePlayerAnims = false)
 	{
 		if (this.IsShooting)
@@ -335,7 +335,7 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F36 RID: 3894 RVA: 0x0002D386 File Offset: 0x0002B586
+	// Token: 0x06001705 RID: 5893 RVA: 0x0000BB11 File Offset: 0x00009D11
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (!this.m_shootButtonHeld)
@@ -359,7 +359,7 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000F37 RID: 3895 RVA: 0x0002D39C File Offset: 0x0002B59C
+	// Token: 0x06001706 RID: 5894 RVA: 0x0000BB27 File Offset: 0x00009D27
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		base.StopAbility(abilityInterrupted);
@@ -369,7 +369,7 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F38 RID: 3896 RVA: 0x0002D3B4 File Offset: 0x0002B5B4
+	// Token: 0x06001707 RID: 5895 RVA: 0x0008BC00 File Offset: 0x00089E00
 	protected override void Update()
 	{
 		if (ReInput.isReady && !GameManager.IsGamePaused && !this.m_shootButtonReleased && !Rewired_RL.Player.GetButton(this.m_abilityController.GetAbilityInputString(base.CastAbilityType)))
@@ -411,86 +411,86 @@ public class Cannon_Ability : AimedAbilityFast_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x0400114D RID: 4429
+	// Token: 0x040016F2 RID: 5874
 	[Header("Shoot Values")]
 	[SerializeField]
 	private string m_shootTellIntroName;
 
-	// Token: 0x0400114E RID: 4430
+	// Token: 0x040016F3 RID: 5875
 	[SerializeField]
 	protected AbilityData m_shootAbilityData;
 
-	// Token: 0x0400114F RID: 4431
+	// Token: 0x040016F4 RID: 5876
 	[SerializeField]
 	protected string m_shootProjectileName;
 
-	// Token: 0x04001150 RID: 4432
+	// Token: 0x040016F5 RID: 5877
 	[SerializeField]
 	protected Vector2 m_shootProjectileOffset;
 
-	// Token: 0x04001152 RID: 4434
+	// Token: 0x040016F7 RID: 5879
 	private float MeleeTellIntroAnimSpeed = 3f;
 
-	// Token: 0x04001153 RID: 4435
+	// Token: 0x040016F8 RID: 5880
 	private float MeleeTellIntroAnimExitDelay;
 
-	// Token: 0x04001154 RID: 4436
+	// Token: 0x040016F9 RID: 5881
 	private float MeleeTellAnimSpeed = 1.5f;
 
-	// Token: 0x04001155 RID: 4437
+	// Token: 0x040016FA RID: 5882
 	private float MeleeTellAnimExitDelay;
 
-	// Token: 0x04001156 RID: 4438
+	// Token: 0x040016FB RID: 5883
 	private float MeleeAttackIntroAnimSpeed = 1.35f;
 
-	// Token: 0x04001157 RID: 4439
+	// Token: 0x040016FC RID: 5884
 	private float MeleeAttackIntroAnimExitDelay;
 
-	// Token: 0x04001158 RID: 4440
+	// Token: 0x040016FD RID: 5885
 	private float MeleeAttackAnimSpeed = 1.25f;
 
-	// Token: 0x04001159 RID: 4441
+	// Token: 0x040016FE RID: 5886
 	private float MeleeAttackAnimExitDelay;
 
-	// Token: 0x0400115A RID: 4442
+	// Token: 0x040016FF RID: 5887
 	private float MeleeExitAnimSpeed = 1.25f;
 
-	// Token: 0x0400115B RID: 4443
+	// Token: 0x04001700 RID: 5888
 	private float MeleeExitAnimExitDelay;
 
-	// Token: 0x0400115C RID: 4444
+	// Token: 0x04001701 RID: 5889
 	private float ShootTellIntroAnimSpeed = 3f;
 
-	// Token: 0x0400115D RID: 4445
+	// Token: 0x04001702 RID: 5890
 	private float ShootTellIntroAnimExitDelay;
 
-	// Token: 0x0400115E RID: 4446
+	// Token: 0x04001703 RID: 5891
 	private float ShootTellAnimSpeed = 1.5f;
 
-	// Token: 0x0400115F RID: 4447
+	// Token: 0x04001704 RID: 5892
 	private float ShootTellAnimExitDelay;
 
-	// Token: 0x04001160 RID: 4448
+	// Token: 0x04001705 RID: 5893
 	private float ShootAttackIntroAnimSpeed = 1.25f;
 
-	// Token: 0x04001161 RID: 4449
+	// Token: 0x04001706 RID: 5894
 	private float ShootAttackIntroAnimExitDelay;
 
-	// Token: 0x04001162 RID: 4450
+	// Token: 0x04001707 RID: 5895
 	private float ShootAttackAnimSpeed = 1.25f;
 
-	// Token: 0x04001163 RID: 4451
+	// Token: 0x04001708 RID: 5896
 	private float ShootAttackAnimExitDelay;
 
-	// Token: 0x04001164 RID: 4452
+	// Token: 0x04001709 RID: 5897
 	private float ShootExitAnimSpeed = 1.25f;
 
-	// Token: 0x04001165 RID: 4453
+	// Token: 0x0400170A RID: 5898
 	private float ShootExitAnimExitDelay;
 
-	// Token: 0x04001166 RID: 4454
+	// Token: 0x0400170B RID: 5899
 	private bool m_shootButtonHeld;
 
-	// Token: 0x04001167 RID: 4455
+	// Token: 0x0400170C RID: 5900
 	private bool m_shootButtonReleased;
 }

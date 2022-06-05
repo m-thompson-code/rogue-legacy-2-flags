@@ -4,11 +4,11 @@ using Cinemachine;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020004F1 RID: 1265
+// Token: 0x0200084B RID: 2123
 public class CastleBossEntranceRoomController : BossEntranceRoomController
 {
-	// Token: 0x170011B4 RID: 4532
-	// (get) Token: 0x06002F73 RID: 12147 RVA: 0x000A2370 File Offset: 0x000A0570
+	// Token: 0x17001797 RID: 6039
+	// (get) Token: 0x06004194 RID: 16788 RVA: 0x000244FD File Offset: 0x000226FD
 	public IRelayLink DoorUnlockedRelay
 	{
 		get
@@ -17,7 +17,7 @@ public class CastleBossEntranceRoomController : BossEntranceRoomController
 		}
 	}
 
-	// Token: 0x06002F74 RID: 12148 RVA: 0x000A237D File Offset: 0x000A057D
+	// Token: 0x06004195 RID: 16789 RVA: 0x0002450A File Offset: 0x0002270A
 	protected override void Awake()
 	{
 		base.Awake();
@@ -26,7 +26,7 @@ public class CastleBossEntranceRoomController : BossEntranceRoomController
 		this.m_onTorchHit = new Action<TorchesRoomPropController>(this.OnTorchHit);
 	}
 
-	// Token: 0x06002F75 RID: 12149 RVA: 0x000A23C0 File Offset: 0x000A05C0
+	// Token: 0x06004196 RID: 16790 RVA: 0x00107C84 File Offset: 0x00105E84
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -57,7 +57,7 @@ public class CastleBossEntranceRoomController : BossEntranceRoomController
 		}
 	}
 
-	// Token: 0x06002F76 RID: 12150 RVA: 0x000A2570 File Offset: 0x000A0770
+	// Token: 0x06004197 RID: 16791 RVA: 0x00107E34 File Offset: 0x00106034
 	protected override void OnPlayerExitRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerExitRoom(sender, eventArgs);
@@ -71,7 +71,7 @@ public class CastleBossEntranceRoomController : BossEntranceRoomController
 		}
 	}
 
-	// Token: 0x06002F77 RID: 12151 RVA: 0x000A25DC File Offset: 0x000A07DC
+	// Token: 0x06004198 RID: 16792 RVA: 0x00107EA0 File Offset: 0x001060A0
 	private void OnTorchHit(TorchesRoomPropController torch)
 	{
 		if (!base.IsRoomComplete && this.m_leftTorchProp && this.m_rightTorchProp && this.m_leftTorchProp.IsFlameOn && this.m_rightTorchProp.IsFlameOn)
@@ -82,7 +82,7 @@ public class CastleBossEntranceRoomController : BossEntranceRoomController
 		}
 	}
 
-	// Token: 0x06002F78 RID: 12152 RVA: 0x000A264A File Offset: 0x000A084A
+	// Token: 0x06004199 RID: 16793 RVA: 0x0002454A File Offset: 0x0002274A
 	private IEnumerator OpenDoorCoroutine()
 	{
 		this.m_doorUnlockedRelay.Dispatch();
@@ -118,39 +118,39 @@ public class CastleBossEntranceRoomController : BossEntranceRoomController
 		yield break;
 	}
 
-	// Token: 0x040025D5 RID: 9685
+	// Token: 0x04003357 RID: 13143
 	[SerializeField]
 	private PropSpawnController m_torch1;
 
-	// Token: 0x040025D6 RID: 9686
+	// Token: 0x04003358 RID: 13144
 	[SerializeField]
 	private PropSpawnController m_torch2;
 
-	// Token: 0x040025D7 RID: 9687
+	// Token: 0x04003359 RID: 13145
 	[SerializeField]
 	private CinemachineVirtualCameraManager m_doorVcam;
 
-	// Token: 0x040025D8 RID: 9688
+	// Token: 0x0400335A RID: 13146
 	private TorchesRoomPropController m_leftTorchProp;
 
-	// Token: 0x040025D9 RID: 9689
+	// Token: 0x0400335B RID: 13147
 	private TorchesRoomPropController m_rightTorchProp;
 
-	// Token: 0x040025DA RID: 9690
+	// Token: 0x0400335C RID: 13148
 	private Relay m_doorUnlockedRelay = new Relay();
 
-	// Token: 0x040025DB RID: 9691
+	// Token: 0x0400335D RID: 13149
 	private Vector3 m_storedTorchPos1;
 
-	// Token: 0x040025DC RID: 9692
+	// Token: 0x0400335E RID: 13150
 	private Vector3 m_storedTorchPos2;
 
-	// Token: 0x040025DD RID: 9693
+	// Token: 0x0400335F RID: 13151
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040025DE RID: 9694
+	// Token: 0x04003360 RID: 13152
 	private InsightObjectiveCompleteHUDEventArgs m_insightEventArgs;
 
-	// Token: 0x040025DF RID: 9695
+	// Token: 0x04003361 RID: 13153
 	private Action<TorchesRoomPropController> m_onTorchHit;
 }

@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x020003BD RID: 957
-// (Invoke) Token: 0x06002355 RID: 9045
+// Token: 0x02000654 RID: 1620
+// (Invoke) Token: 0x0600316D RID: 12653
 public delegate void OmniUIButtonHandler(OmniUIButton button);

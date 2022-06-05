@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace GameEventTracking
 {
-	// Token: 0x020008B4 RID: 2228
+	// Token: 0x02000DEB RID: 3563
 	[Serializable]
 	public class EnemyPreviewEntry
 	{
-		// Token: 0x060048AD RID: 18605 RVA: 0x00104BE4 File Offset: 0x00102DE4
+		// Token: 0x0600642D RID: 25645 RVA: 0x00173A14 File Offset: 0x00171C14
 		public EnemyPreviewEntry(EnemyType enemyType)
 		{
 			this.Type = enemyType;
@@ -22,10 +22,10 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x04003D4F RID: 15695
+		// Token: 0x040051A9 RID: 20905
 		public EnemyType Type;
 
-		// Token: 0x04003D50 RID: 15696
+		// Token: 0x040051AA RID: 20906
 		public List<EnemyRankEntry> RankEntries;
 	}
 }

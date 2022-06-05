@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000287 RID: 647
+// Token: 0x02000453 RID: 1107
 public class DisablePressDownSpinkickOptionItem : SelectionListOptionItem
 {
-	// Token: 0x0600197E RID: 6526 RVA: 0x0004FEF2 File Offset: 0x0004E0F2
+	// Token: 0x0600236D RID: 9069 RVA: 0x0001335D File Offset: 0x0001155D
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -15,7 +15,7 @@ public class DisablePressDownSpinkickOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x0600197F RID: 6527 RVA: 0x0004FF2A File Offset: 0x0004E12A
+	// Token: 0x0600236E RID: 9070 RVA: 0x00013395 File Offset: 0x00011595
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -27,13 +27,13 @@ public class DisablePressDownSpinkickOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001980 RID: 6528 RVA: 0x0004FF64 File Offset: 0x0004E164
+	// Token: 0x0600236F RID: 9071 RVA: 0x000133CF File Offset: 0x000115CF
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Changed disable press down spin kick to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001981 RID: 6529 RVA: 0x0004FF7B File Offset: 0x0004E17B
+	// Token: 0x06002370 RID: 9072 RVA: 0x000133E6 File Offset: 0x000115E6
 	public override void ConfirmOptionChange()
 	{
 		if (this.m_selectedIndex == 0)

@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000911 RID: 2321
+	// Token: 0x02000E8E RID: 3726
 	public class RoomTransitionAudioEventEmitter : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001882 RID: 6274
-		// (get) Token: 0x06004C20 RID: 19488 RVA: 0x001117C0 File Offset: 0x0010F9C0
+		// Token: 0x1700217B RID: 8571
+		// (get) Token: 0x0600691B RID: 26907 RVA: 0x0003A3C7 File Offset: 0x000385C7
 		public string Description
 		{
 			get
@@ -22,25 +22,25 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C21 RID: 19489 RVA: 0x001117E1 File Offset: 0x0010F9E1
+		// Token: 0x0600691C RID: 26908 RVA: 0x0003A3E8 File Offset: 0x000385E8
 		private void Awake()
 		{
 			this.m_onPlayerEnterRoom = new Action<MonoBehaviour, EventArgs>(this.OnPlayerEnterRoom);
 		}
 
-		// Token: 0x06004C22 RID: 19490 RVA: 0x001117F5 File Offset: 0x0010F9F5
+		// Token: 0x0600691D RID: 26909 RVA: 0x0003A3FC File Offset: 0x000385FC
 		private void Start()
 		{
 			Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 		}
 
-		// Token: 0x06004C23 RID: 19491 RVA: 0x00111803 File Offset: 0x0010FA03
+		// Token: 0x0600691E RID: 26910 RVA: 0x0003A40A File Offset: 0x0003860A
 		private void OnDestroy()
 		{
 			Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
 		}
 
-		// Token: 0x06004C24 RID: 19492 RVA: 0x00111814 File Offset: 0x0010FA14
+		// Token: 0x0600691F RID: 26911 RVA: 0x00181758 File Offset: 0x0017F958
 		private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs eventArgs)
 		{
 			RoomViaDoorEventArgs roomViaDoorEventArgs = eventArgs as RoomViaDoorEventArgs;
@@ -67,7 +67,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C25 RID: 19493 RVA: 0x001118F4 File Offset: 0x0010FAF4
+		// Token: 0x06006920 RID: 26912 RVA: 0x00181838 File Offset: 0x0017FA38
 		private void PlayTransition(RoomSide side)
 		{
 			switch (side)
@@ -87,41 +87,41 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04004014 RID: 16404
+		// Token: 0x04005574 RID: 21876
 		[SerializeField]
 		[EventRef]
 		private string m_enterLeftTransitionPath;
 
-		// Token: 0x04004015 RID: 16405
+		// Token: 0x04005575 RID: 21877
 		[SerializeField]
 		[EventRef]
 		private string m_enterRightTransitionPath;
 
-		// Token: 0x04004016 RID: 16406
+		// Token: 0x04005576 RID: 21878
 		[SerializeField]
 		[EventRef]
 		private string m_enterCenterTransitionPath;
 
-		// Token: 0x04004017 RID: 16407
+		// Token: 0x04005577 RID: 21879
 		[SerializeField]
 		[EventRef]
 		private string m_bossEntranceRoomDiscoveredPath;
 
-		// Token: 0x04004018 RID: 16408
+		// Token: 0x04005578 RID: 21880
 		[SerializeField]
 		[EventRef]
 		private string m_enterTransitionRoomPath;
 
-		// Token: 0x04004019 RID: 16409
+		// Token: 0x04005579 RID: 21881
 		private string m_description;
 
-		// Token: 0x0400401A RID: 16410
+		// Token: 0x0400557A RID: 21882
 		private List<BiomeType> m_hasBossRoomBeenDiscovered = new List<BiomeType>();
 
-		// Token: 0x0400401B RID: 16411
+		// Token: 0x0400557B RID: 21883
 		private List<BiomeType> m_hasTransitionRoomBeenDiscovered = new List<BiomeType>();
 
-		// Token: 0x0400401C RID: 16412
+		// Token: 0x0400557C RID: 21884
 		private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 	}
 }

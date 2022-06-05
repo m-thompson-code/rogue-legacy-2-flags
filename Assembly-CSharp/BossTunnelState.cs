@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000562 RID: 1378
+// Token: 0x0200092F RID: 2351
 public enum BossTunnelState
 {
-	// Token: 0x040027A9 RID: 10153
+	// Token: 0x040036CD RID: 14029
 	Closed,
-	// Token: 0x040027AA RID: 10154
+	// Token: 0x040036CE RID: 14030
 	PartlyOpen,
-	// Token: 0x040027AB RID: 10155
+	// Token: 0x040036CF RID: 14031
 	Open,
-	// Token: 0x040027AC RID: 10156
+	// Token: 0x040036D0 RID: 14032
 	Destroyed
 }

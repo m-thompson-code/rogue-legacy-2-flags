@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02000571 RID: 1393
+// Token: 0x02000945 RID: 2373
 public enum ChallengeCompleteStatsEntryType
 {
-	// Token: 0x040027E9 RID: 10217
+	// Token: 0x04003724 RID: 14116
 	BaseScore,
-	// Token: 0x040027EA RID: 10218
+	// Token: 0x04003725 RID: 14117
 	HitsTaken,
-	// Token: 0x040027EB RID: 10219
+	// Token: 0x04003726 RID: 14118
 	Resolve,
-	// Token: 0x040027EC RID: 10220
+	// Token: 0x04003727 RID: 14119
 	Timer,
-	// Token: 0x040027ED RID: 10221
+	// Token: 0x04003728 RID: 14120
 	ParTime,
-	// Token: 0x040027EE RID: 10222
+	// Token: 0x04003729 RID: 14121
 	HandicapMod,
-	// Token: 0x040027EF RID: 10223
+	// Token: 0x0400372A RID: 14122
 	FinalScore,
-	// Token: 0x040027F0 RID: 10224
+	// Token: 0x0400372B RID: 14123
 	Rating
 }

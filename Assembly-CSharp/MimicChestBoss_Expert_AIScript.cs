@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000F7 RID: 247
+// Token: 0x02000191 RID: 401
 public class MimicChestBoss_Expert_AIScript : MimicChestBoss_Basic_AIScript
 {
-	// Token: 0x17000416 RID: 1046
-	// (get) Token: 0x06000799 RID: 1945 RVA: 0x0001AA46 File Offset: 0x00018C46
+	// Token: 0x1700053A RID: 1338
+	// (get) Token: 0x06000B0A RID: 2826 RVA: 0x00006E85 File Offset: 0x00005085
 	protected override Vector2 JumpHeight
 	{
 		get

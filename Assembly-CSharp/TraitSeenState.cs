@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000788 RID: 1928
+// Token: 0x02000C49 RID: 3145
 public enum TraitSeenState
 {
-	// Token: 0x040038F1 RID: 14577
+	// Token: 0x04004BA1 RID: 19361
 	NeverSeen,
-	// Token: 0x040038F2 RID: 14578
+	// Token: 0x04004BA2 RID: 19362
 	SeenOnce,
-	// Token: 0x040038F3 RID: 14579
+	// Token: 0x04004BA3 RID: 19363
 	SeenTwice
 }

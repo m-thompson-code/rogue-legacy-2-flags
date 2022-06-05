@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x0200034D RID: 845
+// Token: 0x020005B6 RID: 1462
 public class ManaCostAndDamageUp_Trait : BaseTrait
 {
-	// Token: 0x17000DD0 RID: 3536
-	// (get) Token: 0x0600204A RID: 8266 RVA: 0x000666B6 File Offset: 0x000648B6
+	// Token: 0x17001229 RID: 4649
+	// (get) Token: 0x06002DA1 RID: 11681 RVA: 0x000191BB File Offset: 0x000173BB
 	public override TraitType TraitType
 	{
 		get
@@ -14,7 +14,7 @@ public class ManaCostAndDamageUp_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x0600204B RID: 8267 RVA: 0x000666BD File Offset: 0x000648BD
+	// Token: 0x06002DA2 RID: 11682 RVA: 0x000191C2 File Offset: 0x000173C2
 	public IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -26,7 +26,7 @@ public class ManaCostAndDamageUp_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x0600204C RID: 8268 RVA: 0x000666CC File Offset: 0x000648CC
+	// Token: 0x06002DA3 RID: 11683 RVA: 0x000191D1 File Offset: 0x000173D1
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

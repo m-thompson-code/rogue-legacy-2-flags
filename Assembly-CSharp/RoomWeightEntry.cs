@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000682 RID: 1666
+// Token: 0x02000B02 RID: 2818
 [Serializable]
 public struct RoomWeightEntry
 {
-	// Token: 0x170014F2 RID: 5362
-	// (get) Token: 0x06003C1E RID: 15390 RVA: 0x000D02A0 File Offset: 0x000CE4A0
+	// Token: 0x17001CB0 RID: 7344
+	// (get) Token: 0x0600547D RID: 21629 RVA: 0x0002DC8C File Offset: 0x0002BE8C
 	public RoomID RoomID
 	{
 		get
@@ -15,8 +15,8 @@ public struct RoomWeightEntry
 		}
 	}
 
-	// Token: 0x170014F3 RID: 5363
-	// (get) Token: 0x06003C1F RID: 15391 RVA: 0x000D02A8 File Offset: 0x000CE4A8
+	// Token: 0x17001CB1 RID: 7345
+	// (get) Token: 0x0600547E RID: 21630 RVA: 0x0002DC94 File Offset: 0x0002BE94
 	public int RNGWeight
 	{
 		get
@@ -25,8 +25,8 @@ public struct RoomWeightEntry
 		}
 	}
 
-	// Token: 0x170014F4 RID: 5364
-	// (get) Token: 0x06003C20 RID: 15392 RVA: 0x000D02B0 File Offset: 0x000CE4B0
+	// Token: 0x17001CB2 RID: 7346
+	// (get) Token: 0x0600547F RID: 21631 RVA: 0x0002DC9C File Offset: 0x0002BE9C
 	public bool IsMirrored
 	{
 		get
@@ -35,13 +35,13 @@ public struct RoomWeightEntry
 		}
 	}
 
-	// Token: 0x06003C21 RID: 15393 RVA: 0x000D02B8 File Offset: 0x000CE4B8
+	// Token: 0x06005480 RID: 21632 RVA: 0x0002DCA4 File Offset: 0x0002BEA4
 	public RoomWeightEntry(RoomID roomID, bool isMirrored)
 	{
 		this = new RoomWeightEntry(roomID, isMirrored, 100);
 	}
 
-	// Token: 0x06003C22 RID: 15394 RVA: 0x000D02C4 File Offset: 0x000CE4C4
+	// Token: 0x06005481 RID: 21633 RVA: 0x0002DCB0 File Offset: 0x0002BEB0
 	public RoomWeightEntry(RoomID roomID, bool isMirrored, int weight)
 	{
 		this.m_roomId = roomID;
@@ -49,24 +49,24 @@ public struct RoomWeightEntry
 		this.m_isMirrored = isMirrored;
 	}
 
-	// Token: 0x06003C23 RID: 15395 RVA: 0x000D02DB File Offset: 0x000CE4DB
+	// Token: 0x06005482 RID: 21634 RVA: 0x0002DCC7 File Offset: 0x0002BEC7
 	public void SetWeight(int weight)
 	{
 		this.m_weight = weight;
 	}
 
-	// Token: 0x04002D54 RID: 11604
+	// Token: 0x04003EFD RID: 16125
 	[SerializeField]
 	private RoomID m_roomId;
 
-	// Token: 0x04002D55 RID: 11605
+	// Token: 0x04003EFE RID: 16126
 	[SerializeField]
 	private int m_weight;
 
-	// Token: 0x04002D56 RID: 11606
+	// Token: 0x04003EFF RID: 16127
 	[SerializeField]
 	private bool m_isMirrored;
 
-	// Token: 0x04002D57 RID: 11607
+	// Token: 0x04003F00 RID: 16128
 	public const int DEFAULT_ROOM_WEIGHT = 100;
 }

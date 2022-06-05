@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000901 RID: 2305
+	// Token: 0x02000E7B RID: 3707
 	public class OnUpdateEventEmitter : AnimBehaviourEventEmitter
 	{
-		// Token: 0x06004BA2 RID: 19362 RVA: 0x0010FD30 File Offset: 0x0010DF30
+		// Token: 0x0600688B RID: 26763 RVA: 0x0017FF78 File Offset: 0x0017E178
 		public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
 			base.OnStateEnter(animator, stateInfo, layerIndex);
@@ -26,7 +26,7 @@ namespace RLAudio
 			this.Reset();
 		}
 
-		// Token: 0x06004BA3 RID: 19363 RVA: 0x0010FD90 File Offset: 0x0010DF90
+		// Token: 0x0600688C RID: 26764 RVA: 0x0017FFD8 File Offset: 0x0017E1D8
 		public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
 			if (!base.GetShouldPlay(animator))
@@ -64,32 +64,32 @@ namespace RLAudio
 			this.m_previousNormalizedTime = num;
 		}
 
-		// Token: 0x06004BA4 RID: 19364 RVA: 0x0010FE47 File Offset: 0x0010E047
+		// Token: 0x0600688D RID: 26765 RVA: 0x00039E16 File Offset: 0x00038016
 		private void Reset()
 		{
 			this.m_nextPlayTimeIndex = 0;
 			this.m_previousNormalizedTime = -1f;
 		}
 
-		// Token: 0x04003F9A RID: 16282
+		// Token: 0x040054EC RID: 21740
 		[SerializeField]
 		[Range(0f, 1f)]
 		private float[] m_playTimes;
 
-		// Token: 0x04003F9B RID: 16283
+		// Token: 0x040054ED RID: 21741
 		[SerializeField]
 		private bool m_skipFirstPlayTimeOnEnter;
 
-		// Token: 0x04003F9C RID: 16284
+		// Token: 0x040054EE RID: 21742
 		private bool m_skippedFirstPlayTime;
 
-		// Token: 0x04003F9D RID: 16285
+		// Token: 0x040054EF RID: 21743
 		private int m_nextPlayTimeIndex = -1;
 
-		// Token: 0x04003F9E RID: 16286
+		// Token: 0x040054F0 RID: 21744
 		private float m_previousNormalizedTime = -1f;
 
-		// Token: 0x04003F9F RID: 16287
+		// Token: 0x040054F1 RID: 21745
 		private bool m_hasWarningBeenLogged;
 	}
 }

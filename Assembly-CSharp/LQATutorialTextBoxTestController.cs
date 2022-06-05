@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000506 RID: 1286
+// Token: 0x02000873 RID: 2163
 public class LQATutorialTextBoxTestController : MonoBehaviour
 {
-	// Token: 0x06003006 RID: 12294 RVA: 0x000A470B File Offset: 0x000A290B
+	// Token: 0x06004298 RID: 17048 RVA: 0x00024D6F File Offset: 0x00022F6F
 	private void OnEnable()
 	{
 		if (this.m_textBoxArray == null)
@@ -15,7 +15,7 @@ public class LQATutorialTextBoxTestController : MonoBehaviour
 		base.StartCoroutine(this.DisplayAllTextBoxes());
 	}
 
-	// Token: 0x06003007 RID: 12295 RVA: 0x000A4728 File Offset: 0x000A2928
+	// Token: 0x06004299 RID: 17049 RVA: 0x0010B3F4 File Offset: 0x001095F4
 	private void Initialize()
 	{
 		Room component = base.GetComponent<Room>();
@@ -37,7 +37,7 @@ public class LQATutorialTextBoxTestController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003008 RID: 12296 RVA: 0x000A47B5 File Offset: 0x000A29B5
+	// Token: 0x0600429A RID: 17050 RVA: 0x00024D8C File Offset: 0x00022F8C
 	private IEnumerator DisplayAllTextBoxes()
 	{
 		yield return null;
@@ -49,6 +49,6 @@ public class LQATutorialTextBoxTestController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04002641 RID: 9793
+	// Token: 0x0400340E RID: 13326
 	private TutorialTextBoxController[] m_textBoxArray;
 }

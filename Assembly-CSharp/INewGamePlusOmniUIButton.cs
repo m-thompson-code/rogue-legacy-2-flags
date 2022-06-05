@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020003B8 RID: 952
+// Token: 0x0200064F RID: 1615
 public interface INewGamePlusOmniUIButton
 {
-	// Token: 0x17000E7D RID: 3709
-	// (get) Token: 0x0600232B RID: 9003
-	// (set) Token: 0x0600232C RID: 9004
+	// Token: 0x17001310 RID: 4880
+	// (get) Token: 0x06003143 RID: 12611
+	// (set) Token: 0x06003144 RID: 12612
 	BurdenType BurdenType { get; set; }
 }

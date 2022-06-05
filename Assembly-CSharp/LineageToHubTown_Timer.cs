@@ -2,15 +2,15 @@
 using System.Diagnostics;
 using UnityEngine;
 
-// Token: 0x020006F6 RID: 1782
+// Token: 0x02000BA9 RID: 2985
 public class LineageToHubTown_Timer : MonoBehaviour
 {
-	// Token: 0x17001611 RID: 5649
-	// (get) Token: 0x0600409E RID: 16542 RVA: 0x000E5091 File Offset: 0x000E3291
-	// (set) Token: 0x0600409F RID: 16543 RVA: 0x000E5098 File Offset: 0x000E3298
+	// Token: 0x17001E0D RID: 7693
+	// (get) Token: 0x060059E7 RID: 23015 RVA: 0x00031121 File Offset: 0x0002F321
+	// (set) Token: 0x060059E8 RID: 23016 RVA: 0x00031128 File Offset: 0x0002F328
 	private static LineageToHubTown_Timer Instance { get; set; }
 
-	// Token: 0x060040A0 RID: 16544 RVA: 0x000E50A0 File Offset: 0x000E32A0
+	// Token: 0x060059E9 RID: 23017 RVA: 0x001548C4 File Offset: 0x00152AC4
 	private void Awake()
 	{
 		if (!LineageToHubTown_Timer.Instance)
@@ -23,26 +23,26 @@ public class LineageToHubTown_Timer : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x060040A1 RID: 16545 RVA: 0x000E50EF File Offset: 0x000E32EF
+	// Token: 0x060059EA RID: 23018 RVA: 0x00031130 File Offset: 0x0002F330
 	private void Start()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.Lineage_ConfirmHeir, this.m_onConfirmHeirInLineage);
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.SkillTree_Opened, this.m_onSkillTreeOpened);
 	}
 
-	// Token: 0x060040A2 RID: 16546 RVA: 0x000E510B File Offset: 0x000E330B
+	// Token: 0x060059EB RID: 23019 RVA: 0x0003114C File Offset: 0x0002F34C
 	private void OnSkillTreeOpened(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		LineageToHubTown_Timer.StopTimer();
 	}
 
-	// Token: 0x060040A3 RID: 16547 RVA: 0x000E5112 File Offset: 0x000E3312
+	// Token: 0x060059EC RID: 23020 RVA: 0x00031153 File Offset: 0x0002F353
 	private void OnConfirmHeirInLineage(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		LineageToHubTown_Timer.StartTimer();
 	}
 
-	// Token: 0x060040A4 RID: 16548 RVA: 0x000E5119 File Offset: 0x000E3319
+	// Token: 0x060059ED RID: 23021 RVA: 0x0003115A File Offset: 0x0002F35A
 	private void OnDestroy()
 	{
 		if (LineageToHubTown_Timer.Instance == this)
@@ -54,7 +54,7 @@ public class LineageToHubTown_Timer : MonoBehaviour
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.SkillTree_Opened, this.m_onSkillTreeOpened);
 	}
 
-	// Token: 0x060040A5 RID: 16549 RVA: 0x000E514E File Offset: 0x000E334E
+	// Token: 0x060059EE RID: 23022 RVA: 0x0003118F File Offset: 0x0002F38F
 	public static void StartTimer()
 	{
 		if (LineageToHubTown_Timer.m_stopwatch == null)
@@ -64,7 +64,7 @@ public class LineageToHubTown_Timer : MonoBehaviour
 		LineageToHubTown_Timer.m_stopwatch.Restart();
 	}
 
-	// Token: 0x060040A6 RID: 16550 RVA: 0x000E516C File Offset: 0x000E336C
+	// Token: 0x060059EF RID: 23023 RVA: 0x00154914 File Offset: 0x00152B14
 	public static void StopTimer()
 	{
 		if (LineageToHubTown_Timer.m_stopwatch != null && LineageToHubTown_Timer.m_stopwatch.IsRunning)
@@ -77,12 +77,12 @@ public class LineageToHubTown_Timer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040031D3 RID: 12755
+	// Token: 0x0400444E RID: 17486
 	private Action<MonoBehaviour, EventArgs> m_onConfirmHeirInLineage;
 
-	// Token: 0x040031D4 RID: 12756
+	// Token: 0x0400444F RID: 17487
 	private Action<MonoBehaviour, EventArgs> m_onSkillTreeOpened;
 
-	// Token: 0x040031D5 RID: 12757
+	// Token: 0x04004450 RID: 17488
 	private static Stopwatch m_stopwatch;
 }

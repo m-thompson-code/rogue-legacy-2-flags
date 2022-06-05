@@ -4,11 +4,11 @@ using RLAudio;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x020002E4 RID: 740
+// Token: 0x020004EA RID: 1258
 public class WhiteFlash_SceneTransition : Transition_V2, ISceneLoadingTransition, ITransition
 {
-	// Token: 0x17000CDC RID: 3292
-	// (get) Token: 0x06001D68 RID: 7528 RVA: 0x00060B39 File Offset: 0x0005ED39
+	// Token: 0x17001085 RID: 4229
+	// (get) Token: 0x06002895 RID: 10389 RVA: 0x00003E42 File Offset: 0x00002042
 	public override TransitionID ID
 	{
 		get
@@ -17,7 +17,7 @@ public class WhiteFlash_SceneTransition : Transition_V2, ISceneLoadingTransition
 		}
 	}
 
-	// Token: 0x06001D69 RID: 7529 RVA: 0x00060B3C File Offset: 0x0005ED3C
+	// Token: 0x06002896 RID: 10390 RVA: 0x00016C35 File Offset: 0x00014E35
 	protected override void Awake()
 	{
 		base.Awake();
@@ -25,7 +25,7 @@ public class WhiteFlash_SceneTransition : Transition_V2, ISceneLoadingTransition
 		base.gameObject.SetLayerRecursively(LayerMask.NameToLayer("UI"), false);
 	}
 
-	// Token: 0x06001D6A RID: 7530 RVA: 0x00060B6F File Offset: 0x0005ED6F
+	// Token: 0x06002897 RID: 10391 RVA: 0x00016C68 File Offset: 0x00014E68
 	public IEnumerator TransitionIn()
 	{
 		this.m_canvasGroup.alpha = 0f;
@@ -38,7 +38,7 @@ public class WhiteFlash_SceneTransition : Transition_V2, ISceneLoadingTransition
 		yield break;
 	}
 
-	// Token: 0x06001D6B RID: 7531 RVA: 0x00060B7E File Offset: 0x0005ED7E
+	// Token: 0x06002898 RID: 10392 RVA: 0x00016C77 File Offset: 0x00014E77
 	public IEnumerator TransitionOut()
 	{
 		this.m_canvasGroup.alpha = 1f;
@@ -50,13 +50,13 @@ public class WhiteFlash_SceneTransition : Transition_V2, ISceneLoadingTransition
 		yield break;
 	}
 
-	// Token: 0x06001D6C RID: 7532 RVA: 0x00060B8D File Offset: 0x0005ED8D
+	// Token: 0x06002899 RID: 10393 RVA: 0x00016C86 File Offset: 0x00014E86
 	public override IEnumerator Run()
 	{
 		yield break;
 	}
 
-	// Token: 0x04001B5D RID: 7005
+	// Token: 0x0400239D RID: 9117
 	[SerializeField]
 	private CanvasGroup m_canvasGroup;
 }

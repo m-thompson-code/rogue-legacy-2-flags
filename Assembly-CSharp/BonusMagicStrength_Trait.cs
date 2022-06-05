@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000326 RID: 806
+// Token: 0x02000572 RID: 1394
 public class BonusMagicStrength_Trait : BaseTrait
 {
-	// Token: 0x17000DAA RID: 3498
-	// (get) Token: 0x06001FB0 RID: 8112 RVA: 0x00065361 File Offset: 0x00063561
+	// Token: 0x170011DB RID: 4571
+	// (get) Token: 0x06002C75 RID: 11381 RVA: 0x00018A4E File Offset: 0x00016C4E
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class BonusMagicStrength_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x06001FB1 RID: 8113 RVA: 0x00065368 File Offset: 0x00063568
+	// Token: 0x06002C76 RID: 11382 RVA: 0x00018A55 File Offset: 0x00016C55
 	public IEnumerator Start()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -26,7 +26,7 @@ public class BonusMagicStrength_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x06001FB2 RID: 8114 RVA: 0x00065370 File Offset: 0x00063570
+	// Token: 0x06002C77 RID: 11383 RVA: 0x00018A5D File Offset: 0x00016C5D
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

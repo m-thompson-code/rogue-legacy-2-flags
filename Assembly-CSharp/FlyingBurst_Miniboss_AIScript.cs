@@ -3,11 +3,11 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020000D7 RID: 215
+// Token: 0x02000159 RID: 345
 public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 {
-	// Token: 0x17000320 RID: 800
-	// (get) Token: 0x0600063C RID: 1596 RVA: 0x0001904A File Offset: 0x0001724A
+	// Token: 0x17000414 RID: 1044
+	// (get) Token: 0x0600091D RID: 2333 RVA: 0x000047A7 File Offset: 0x000029A7
 	protected override int ShootPatternTotalLoops
 	{
 		get
@@ -16,8 +16,8 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000321 RID: 801
-	// (get) Token: 0x0600063D RID: 1597 RVA: 0x0001904D File Offset: 0x0001724D
+	// Token: 0x17000415 RID: 1045
+	// (get) Token: 0x0600091E RID: 2334 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ShootPatternTotalLoopsDelay
 	{
 		get
@@ -26,8 +26,8 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000322 RID: 802
-	// (get) Token: 0x0600063E RID: 1598 RVA: 0x00019054 File Offset: 0x00017254
+	// Token: 0x17000416 RID: 1046
+	// (get) Token: 0x0600091F RID: 2335 RVA: 0x000063F0 File Offset: 0x000045F0
 	protected override float MeleeFireSpread
 	{
 		get
@@ -36,8 +36,8 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000323 RID: 803
-	// (get) Token: 0x0600063F RID: 1599 RVA: 0x0001905B File Offset: 0x0001725B
+	// Token: 0x17000417 RID: 1047
+	// (get) Token: 0x06000920 RID: 2336 RVA: 0x00005320 File Offset: 0x00003520
 	protected override float BasicFireSpread
 	{
 		get
@@ -46,8 +46,8 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000324 RID: 804
-	// (get) Token: 0x06000640 RID: 1600 RVA: 0x00019062 File Offset: 0x00017262
+	// Token: 0x17000418 RID: 1048
+	// (get) Token: 0x06000921 RID: 2337 RVA: 0x000063F7 File Offset: 0x000045F7
 	protected override Vector2 FireballRandSpeedMod
 	{
 		get
@@ -56,8 +56,8 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000325 RID: 805
-	// (get) Token: 0x06000641 RID: 1601 RVA: 0x00019073 File Offset: 0x00017273
+	// Token: 0x17000419 RID: 1049
+	// (get) Token: 0x06000922 RID: 2338 RVA: 0x00004A07 File Offset: 0x00002C07
 	protected override int NumFireballsMelee
 	{
 		get
@@ -66,8 +66,8 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000326 RID: 806
-	// (get) Token: 0x06000642 RID: 1602 RVA: 0x00019076 File Offset: 0x00017276
+	// Token: 0x1700041A RID: 1050
+	// (get) Token: 0x06000923 RID: 2339 RVA: 0x00004A8D File Offset: 0x00002C8D
 	protected override int NumFireballsBasic
 	{
 		get
@@ -76,8 +76,8 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000327 RID: 807
-	// (get) Token: 0x06000643 RID: 1603 RVA: 0x00019079 File Offset: 0x00017279
+	// Token: 0x1700041B RID: 1051
+	// (get) Token: 0x06000924 RID: 2340 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_huntAttack_NumFireballsBasic
 	{
 		get
@@ -86,8 +86,8 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000328 RID: 808
-	// (get) Token: 0x06000644 RID: 1604 RVA: 0x0001907C File Offset: 0x0001727C
+	// Token: 0x1700041C RID: 1052
+	// (get) Token: 0x06000925 RID: 2341 RVA: 0x000063AC File Offset: 0x000045AC
 	protected virtual float m_huntAttack_BasicFireSpread
 	{
 		get
@@ -96,7 +96,7 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		}
 	}
 
-	// Token: 0x06000645 RID: 1605 RVA: 0x00019083 File Offset: 0x00017283
+	// Token: 0x06000926 RID: 2342 RVA: 0x00006408 File Offset: 0x00004608
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -131,7 +131,7 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x06000646 RID: 1606 RVA: 0x00019092 File Offset: 0x00017292
+	// Token: 0x06000927 RID: 2343 RVA: 0x00006417 File Offset: 0x00004617
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -163,54 +163,54 @@ public class FlyingBurst_Miniboss_AIScript : FlyingBurst_Basic_AIScript
 		yield break;
 	}
 
-	// Token: 0x04000A78 RID: 2680
+	// Token: 0x04000CCE RID: 3278
 	protected float m_huntAttack_TellIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000A79 RID: 2681
+	// Token: 0x04000CCF RID: 3279
 	protected float m_huntAttack_TellHold_AnimationSpeed = 2f;
 
-	// Token: 0x04000A7A RID: 2682
+	// Token: 0x04000CD0 RID: 3280
 	protected float m_huntAttack_Tell_Delay = 1.15f;
 
-	// Token: 0x04000A7B RID: 2683
+	// Token: 0x04000CD1 RID: 3281
 	protected float m_huntAttack_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000A7C RID: 2684
+	// Token: 0x04000CD2 RID: 3282
 	protected float m_huntAttack_AttackIntro_Delay;
 
-	// Token: 0x04000A7D RID: 2685
+	// Token: 0x04000CD3 RID: 3283
 	protected float m_huntAttack_AttackHold_AnimationSpeed = 1.25f;
 
-	// Token: 0x04000A7E RID: 2686
+	// Token: 0x04000CD4 RID: 3284
 	protected float m_huntAttack_AttackHold_Delay = 0.4f;
 
-	// Token: 0x04000A7F RID: 2687
+	// Token: 0x04000CD5 RID: 3285
 	protected float m_huntAttack_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000A80 RID: 2688
+	// Token: 0x04000CD6 RID: 3286
 	protected float m_huntAttack_Exit_Delay;
 
-	// Token: 0x04000A81 RID: 2689
+	// Token: 0x04000CD7 RID: 3287
 	protected float m_huntAttack_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000A82 RID: 2690
+	// Token: 0x04000CD8 RID: 3288
 	protected float m_huntAttack_Exit_AttackCD;
 
-	// Token: 0x04000A83 RID: 2691
+	// Token: 0x04000CD9 RID: 3289
 	protected float m_chaseAttack_TellHold_Delay = 1.4f;
 
-	// Token: 0x04000A84 RID: 2692
+	// Token: 0x04000CDA RID: 3290
 	protected float m_chaseAttack_AttackHold_Delay = 0.4f;
 
-	// Token: 0x04000A85 RID: 2693
+	// Token: 0x04000CDB RID: 3291
 	protected float m_chaseAttack_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000A86 RID: 2694
+	// Token: 0x04000CDC RID: 3292
 	protected float m_chaseAttack_Exit_Delay;
 
-	// Token: 0x04000A87 RID: 2695
+	// Token: 0x04000CDD RID: 3293
 	protected float m_chaseAttack_Exit_ForceIdle = 0.15f;
 
-	// Token: 0x04000A88 RID: 2696
+	// Token: 0x04000CDE RID: 3294
 	protected float m_chaseAttack_Exit_AttackCD;
 }

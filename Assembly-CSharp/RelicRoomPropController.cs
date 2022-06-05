@@ -6,11 +6,11 @@ using RL_Windows;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020004DF RID: 1247
+// Token: 0x02000824 RID: 2084
 public class RelicRoomPropController : DualChoicePropController, ILocalizable
 {
-	// Token: 0x17001188 RID: 4488
-	// (get) Token: 0x06002EA0 RID: 11936 RVA: 0x0009E676 File Offset: 0x0009C876
+	// Token: 0x17001743 RID: 5955
+	// (get) Token: 0x06004048 RID: 16456 RVA: 0x000237BE File Offset: 0x000219BE
 	public RelicType LeftRelicType
 	{
 		get
@@ -19,8 +19,8 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		}
 	}
 
-	// Token: 0x17001189 RID: 4489
-	// (get) Token: 0x06002EA1 RID: 11937 RVA: 0x0009E683 File Offset: 0x0009C883
+	// Token: 0x17001744 RID: 5956
+	// (get) Token: 0x06004049 RID: 16457 RVA: 0x000237CB File Offset: 0x000219CB
 	public RelicType RightRelicType
 	{
 		get
@@ -29,8 +29,8 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		}
 	}
 
-	// Token: 0x1700118A RID: 4490
-	// (get) Token: 0x06002EA2 RID: 11938 RVA: 0x0009E690 File Offset: 0x0009C890
+	// Token: 0x17001745 RID: 5957
+	// (get) Token: 0x0600404A RID: 16458 RVA: 0x000237D8 File Offset: 0x000219D8
 	public SpriteRenderer LeftIconTwin
 	{
 		get
@@ -39,8 +39,8 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		}
 	}
 
-	// Token: 0x1700118B RID: 4491
-	// (get) Token: 0x06002EA3 RID: 11939 RVA: 0x0009E698 File Offset: 0x0009C898
+	// Token: 0x17001746 RID: 5958
+	// (get) Token: 0x0600404B RID: 16459 RVA: 0x000237E0 File Offset: 0x000219E0
 	public SpriteRenderer RightIconTwin
 	{
 		get
@@ -49,7 +49,7 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		}
 	}
 
-	// Token: 0x06002EA4 RID: 11940 RVA: 0x0009E6A0 File Offset: 0x0009C8A0
+	// Token: 0x0600404C RID: 16460 RVA: 0x00101DAC File Offset: 0x000FFFAC
 	protected override void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -61,7 +61,7 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		this.m_refreshText = new Action<MonoBehaviour, EventArgs>(this.RefreshText);
 	}
 
-	// Token: 0x06002EA5 RID: 11941 RVA: 0x0009E730 File Offset: 0x0009C930
+	// Token: 0x0600404D RID: 16461 RVA: 0x00101E3C File Offset: 0x0010003C
 	protected override void InitializePooledPropOnEnter()
 	{
 		base.InitializePooledPropOnEnter();
@@ -79,7 +79,7 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		this.RollRelics(this.m_totalRoomRolls, false, true);
 	}
 
-	// Token: 0x06002EA6 RID: 11942 RVA: 0x0009E7A0 File Offset: 0x0009C9A0
+	// Token: 0x0600404E RID: 16462 RVA: 0x00101EAC File Offset: 0x001000AC
 	public void RollRelics(int numRolls, bool addToTotalRoomRolls, bool rollMods = true)
 	{
 		if (this.m_leftTwinSpinCoroutine != null)
@@ -207,7 +207,7 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		this.InitializeTextBox(false);
 	}
 
-	// Token: 0x06002EA7 RID: 11943 RVA: 0x0009EBE0 File Offset: 0x0009CDE0
+	// Token: 0x0600404F RID: 16463 RVA: 0x001022EC File Offset: 0x001004EC
 	private void RollRelicMod(bool leftSide, RngID rngIDToUse)
 	{
 		if (leftSide)
@@ -266,7 +266,7 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		}
 	}
 
-	// Token: 0x06002EA8 RID: 11944 RVA: 0x0009ECEC File Offset: 0x0009CEEC
+	// Token: 0x06004050 RID: 16464 RVA: 0x001023F8 File Offset: 0x001005F8
 	public void InitializeTextBox(bool leftSide)
 	{
 		PlayerManager.GetPlayerController();
@@ -381,7 +381,7 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		}
 	}
 
-	// Token: 0x06002EA9 RID: 11945 RVA: 0x0009F05A File Offset: 0x0009D25A
+	// Token: 0x06004051 RID: 16465 RVA: 0x000237E8 File Offset: 0x000219E8
 	private IEnumerator TwinRelicAnimCoroutine(bool leftSide)
 	{
 		GameObject icon;
@@ -424,7 +424,7 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x06002EAA RID: 11946 RVA: 0x0009F070 File Offset: 0x0009D270
+	// Token: 0x06004052 RID: 16466 RVA: 0x000237FE File Offset: 0x000219FE
 	public static int CalculateHealthCost(float cost, PlayerController playerController, bool applySkillReduc)
 	{
 		if (applySkillReduc)
@@ -434,7 +434,7 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		return Mathf.RoundToInt((float)playerController.ClassModdedMaxHealth * (1f + playerController.TraitMaxHealthMod) * cost);
 	}
 
-	// Token: 0x06002EAB RID: 11947 RVA: 0x0009F0A8 File Offset: 0x0009D2A8
+	// Token: 0x06004053 RID: 16467 RVA: 0x00102768 File Offset: 0x00100968
 	private string GetHealthCostString(RelicData relicData)
 	{
 		PlayerManager.GetPlayerController();
@@ -446,19 +446,19 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		return LocalizationManager.GetString("LOC_ID_RELIC_COST_MAX_HEALTH_1", SaveManager.PlayerSaveData.CurrentCharacter.IsFemale, false);
 	}
 
-	// Token: 0x06002EAC RID: 11948 RVA: 0x0009F0FF File Offset: 0x0009D2FF
+	// Token: 0x06004054 RID: 16468 RVA: 0x00023836 File Offset: 0x00021A36
 	public void ChooseLeftRelic()
 	{
 		base.StartCoroutine(this.ChooseRelic(this.LeftRelicType, (RelicModType)this.m_relicModTypes.x));
 	}
 
-	// Token: 0x06002EAD RID: 11949 RVA: 0x0009F11F File Offset: 0x0009D31F
+	// Token: 0x06004055 RID: 16469 RVA: 0x00023856 File Offset: 0x00021A56
 	public void ChooseRightRelic()
 	{
 		base.StartCoroutine(this.ChooseRelic(this.RightRelicType, (RelicModType)this.m_relicModTypes.y));
 	}
 
-	// Token: 0x06002EAE RID: 11950 RVA: 0x0009F13F File Offset: 0x0009D33F
+	// Token: 0x06004056 RID: 16470 RVA: 0x00023876 File Offset: 0x00021A76
 	private IEnumerator ChooseRelic(RelicType relicType, RelicModType relicModType)
 	{
 		RelicData relicData = RelicLibrary.GetRelicData(relicType);
@@ -529,7 +529,7 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		yield break;
 	}
 
-	// Token: 0x06002EAF RID: 11951 RVA: 0x0009F15C File Offset: 0x0009D35C
+	// Token: 0x06004057 RID: 16471 RVA: 0x001027C0 File Offset: 0x001009C0
 	protected override void DisableProp(bool firstTimeDisabled)
 	{
 		if (firstTimeDisabled)
@@ -545,81 +545,81 @@ public class RelicRoomPropController : DualChoicePropController, ILocalizable
 		this.m_rightIconTwin.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06002EB0 RID: 11952 RVA: 0x0009F1B9 File Offset: 0x0009D3B9
+	// Token: 0x06004058 RID: 16472 RVA: 0x00023893 File Offset: 0x00021A93
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06002EB1 RID: 11953 RVA: 0x0009F1C8 File Offset: 0x0009D3C8
+	// Token: 0x06004059 RID: 16473 RVA: 0x000238A2 File Offset: 0x00021AA2
 	protected override void OnDisable()
 	{
 		base.OnDisable();
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.LanguageChanged, this.m_refreshText);
 	}
 
-	// Token: 0x06002EB2 RID: 11954 RVA: 0x0009F1DD File Offset: 0x0009D3DD
+	// Token: 0x0600405A RID: 16474 RVA: 0x000238B7 File Offset: 0x00021AB7
 	public void RefreshText(object sender, EventArgs args)
 	{
 		this.InitializeTextBox(true);
 		this.InitializeTextBox(false);
 	}
 
-	// Token: 0x04002531 RID: 9521
+	// Token: 0x0400324C RID: 12876
 	[SerializeField]
 	private SpriteRenderer m_leftBeam;
 
-	// Token: 0x04002532 RID: 9522
+	// Token: 0x0400324D RID: 12877
 	[SerializeField]
 	private SpriteRenderer m_rightBeam;
 
-	// Token: 0x04002533 RID: 9523
+	// Token: 0x0400324E RID: 12878
 	[SerializeField]
 	private SpriteRenderer m_leftIconTwin;
 
-	// Token: 0x04002534 RID: 9524
+	// Token: 0x0400324F RID: 12879
 	[SerializeField]
 	private SpriteRenderer m_rightIconTwin;
 
-	// Token: 0x04002535 RID: 9525
+	// Token: 0x04003250 RID: 12880
 	private Vector2Int m_relicTypes;
 
-	// Token: 0x04002536 RID: 9526
+	// Token: 0x04003251 RID: 12881
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002537 RID: 9527
+	// Token: 0x04003252 RID: 12882
 	private int m_totalRoomRolls;
 
-	// Token: 0x04002538 RID: 9528
+	// Token: 0x04003253 RID: 12883
 	private Vector2Int m_relicModTypes;
 
-	// Token: 0x04002539 RID: 9529
+	// Token: 0x04003254 RID: 12884
 	private Vector3 m_leftIconStartingPos;
 
-	// Token: 0x0400253A RID: 9530
+	// Token: 0x04003255 RID: 12885
 	private Vector3 m_rightIconStartingPos;
 
-	// Token: 0x0400253B RID: 9531
+	// Token: 0x04003256 RID: 12886
 	private Vector3 m_leftIconStartingScale;
 
-	// Token: 0x0400253C RID: 9532
+	// Token: 0x04003257 RID: 12887
 	private Vector3 m_rightIconStartingScale;
 
-	// Token: 0x0400253D RID: 9533
+	// Token: 0x04003258 RID: 12888
 	private Coroutine m_leftTwinSpinCoroutine;
 
-	// Token: 0x0400253E RID: 9534
+	// Token: 0x04003259 RID: 12889
 	private Coroutine m_rightTwinSpinCoroutine;
 
-	// Token: 0x0400253F RID: 9535
+	// Token: 0x0400325A RID: 12890
 	private RelicType m_replacedRelic1;
 
-	// Token: 0x04002540 RID: 9536
+	// Token: 0x0400325B RID: 12891
 	private RelicType m_replacedRelic2;
 
-	// Token: 0x04002541 RID: 9537
+	// Token: 0x0400325C RID: 12892
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x04002542 RID: 9538
+	// Token: 0x0400325D RID: 12893
 	private static List<RelicType> m_exclusionList = new List<RelicType>();
 }

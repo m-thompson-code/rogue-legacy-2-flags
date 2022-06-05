@@ -3,16 +3,16 @@ using SceneManagement_RL;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x02000200 RID: 512
+// Token: 0x020003AC RID: 940
 public class GameTimer : MonoBehaviour
 {
-	// Token: 0x17000AF0 RID: 2800
-	// (get) Token: 0x060015A1 RID: 5537 RVA: 0x0004352F File Offset: 0x0004172F
-	// (set) Token: 0x060015A2 RID: 5538 RVA: 0x00043536 File Offset: 0x00041736
+	// Token: 0x17000E0B RID: 3595
+	// (get) Token: 0x06001F15 RID: 7957 RVA: 0x000104BF File Offset: 0x0000E6BF
+	// (set) Token: 0x06001F16 RID: 7958 RVA: 0x000104C6 File Offset: 0x0000E6C6
 	private static GameTimer Instance { get; set; }
 
-	// Token: 0x17000AF1 RID: 2801
-	// (get) Token: 0x060015A3 RID: 5539 RVA: 0x0004353E File Offset: 0x0004173E
+	// Token: 0x17000E0C RID: 3596
+	// (get) Token: 0x06001F17 RID: 7959 RVA: 0x000104CE File Offset: 0x0000E6CE
 	public static float TotalSessionAccumulatedTime
 	{
 		get
@@ -21,8 +21,8 @@ public class GameTimer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000AF2 RID: 2802
-	// (get) Token: 0x060015A4 RID: 5540 RVA: 0x0004354B File Offset: 0x0004174B
+	// Token: 0x17000E0D RID: 3597
+	// (get) Token: 0x06001F18 RID: 7960 RVA: 0x000104DB File Offset: 0x0000E6DB
 	public static float SessionAccumulatedPauseTime
 	{
 		get
@@ -31,8 +31,8 @@ public class GameTimer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000AF3 RID: 2803
-	// (get) Token: 0x060015A5 RID: 5541 RVA: 0x00043557 File Offset: 0x00041757
+	// Token: 0x17000E0E RID: 3598
+	// (get) Token: 0x06001F19 RID: 7961 RVA: 0x000104E7 File Offset: 0x0000E6E7
 	public static float SessionAccumulatedTime
 	{
 		get
@@ -41,7 +41,7 @@ public class GameTimer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015A6 RID: 5542 RVA: 0x0004356C File Offset: 0x0004176C
+	// Token: 0x06001F1A RID: 7962 RVA: 0x000A1C08 File Offset: 0x0009FE08
 	private void Awake()
 	{
 		if (!GameTimer.Instance)
@@ -58,7 +58,7 @@ public class GameTimer : MonoBehaviour
 		throw new Exception("GameTimer instantiated twice. Should not happen.");
 	}
 
-	// Token: 0x060015A7 RID: 5543 RVA: 0x00043604 File Offset: 0x00041804
+	// Token: 0x06001F1B RID: 7963 RVA: 0x000A1CA0 File Offset: 0x0009FEA0
 	private void OnDestroy()
 	{
 		GameTimer.Instance = null;
@@ -70,7 +70,7 @@ public class GameTimer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015A8 RID: 5544 RVA: 0x00043654 File Offset: 0x00041854
+	// Token: 0x06001F1C RID: 7964 RVA: 0x000A1CF0 File Offset: 0x0009FEF0
 	private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
 	{
 		bool flag = false;
@@ -108,7 +108,7 @@ public class GameTimer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015A9 RID: 5545 RVA: 0x00043754 File Offset: 0x00041954
+	// Token: 0x06001F1D RID: 7965 RVA: 0x000104F9 File Offset: 0x0000E6F9
 	public static void ClearSessionAccumulatedTime()
 	{
 		GameTimer.Instance.m_sessionAccumulatedPauseTime = 0f;
@@ -116,7 +116,7 @@ public class GameTimer : MonoBehaviour
 		GameTimer.Instance.m_sessionPauseStartTime = Time.unscaledTime;
 	}
 
-	// Token: 0x060015AA RID: 5546 RVA: 0x00043783 File Offset: 0x00041983
+	// Token: 0x06001F1E RID: 7966 RVA: 0x00010528 File Offset: 0x0000E728
 	private void OnTransitionStarted()
 	{
 		if (!GameManager.IsGamePaused)
@@ -126,7 +126,7 @@ public class GameTimer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015AB RID: 5547 RVA: 0x000437A5 File Offset: 0x000419A5
+	// Token: 0x06001F1F RID: 7967 RVA: 0x0001054A File Offset: 0x0000E74A
 	private void OnTransitionEnded()
 	{
 		if (!GameManager.IsGamePaused)
@@ -136,7 +136,7 @@ public class GameTimer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015AC RID: 5548 RVA: 0x000437C8 File Offset: 0x000419C8
+	// Token: 0x06001F20 RID: 7968 RVA: 0x000A1DF0 File Offset: 0x0009FFF0
 	private void OnGamePauseStateChanged(object sender, EventArgs args)
 	{
 		if (this.m_sessionStarted)
@@ -158,37 +158,37 @@ public class GameTimer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040014D4 RID: 5332
+	// Token: 0x04001BBB RID: 7099
 	private SceneID[] SCENES_TO_TRACK_SESSION_TIME = new SceneID[]
 	{
 		SceneID.World,
 		SceneID.Town
 	};
 
-	// Token: 0x040014D6 RID: 5334
+	// Token: 0x04001BBD RID: 7101
 	private bool m_sessionStarted;
 
-	// Token: 0x040014D7 RID: 5335
+	// Token: 0x04001BBE RID: 7102
 	private bool m_sessionPaused;
 
-	// Token: 0x040014D8 RID: 5336
+	// Token: 0x04001BBF RID: 7103
 	private float m_sessionStartTime;
 
-	// Token: 0x040014D9 RID: 5337
+	// Token: 0x04001BC0 RID: 7104
 	private float m_sessionPauseStartTime;
 
-	// Token: 0x040014DA RID: 5338
+	// Token: 0x04001BC1 RID: 7105
 	private float m_sessionAccumulatedPauseTime;
 
-	// Token: 0x040014DB RID: 5339
+	// Token: 0x04001BC2 RID: 7106
 	private Action<MonoBehaviour, EventArgs> m_onGamePauseStateChanged;
 
-	// Token: 0x040014DC RID: 5340
+	// Token: 0x04001BC3 RID: 7107
 	private Action m_onTransitionStarted;
 
-	// Token: 0x040014DD RID: 5341
+	// Token: 0x04001BC4 RID: 7108
 	private Action m_onTransitionEnded;
 
-	// Token: 0x040014DE RID: 5342
+	// Token: 0x04001BC5 RID: 7109
 	private GamePauseStateChangeEventArgs m_transitionPauseChangeEventArgs = new GamePauseStateChangeEventArgs(false);
 }

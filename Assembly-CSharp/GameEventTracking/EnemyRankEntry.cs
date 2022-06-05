@@ -3,20 +3,20 @@ using UnityEngine;
 
 namespace GameEventTracking
 {
-	// Token: 0x020008B3 RID: 2227
+	// Token: 0x02000DEA RID: 3562
 	[Serializable]
 	public class EnemyRankEntry
 	{
-		// Token: 0x060048AC RID: 18604 RVA: 0x00104BCD File Offset: 0x00102DCD
+		// Token: 0x0600642C RID: 25644 RVA: 0x0003759E File Offset: 0x0003579E
 		public EnemyRankEntry(EnemyRank rank)
 		{
 			this.Rank = rank;
 		}
 
-		// Token: 0x04003D4D RID: 15693
+		// Token: 0x040051A7 RID: 20903
 		public EnemyRank Rank = EnemyRank.None;
 
-		// Token: 0x04003D4E RID: 15694
+		// Token: 0x040051A8 RID: 20904
 		public Sprite PreviewImage;
 	}
 }

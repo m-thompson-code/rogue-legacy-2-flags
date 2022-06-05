@@ -6,32 +6,32 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000041 RID: 65
+// Token: 0x02000047 RID: 71
 [RequireComponent(typeof(CharacterClass))]
 public class CastAbility_RL : CharacterAbility
 {
-	// Token: 0x17000006 RID: 6
-	// (get) Token: 0x060000B5 RID: 181 RVA: 0x0000717F File Offset: 0x0000537F
-	// (set) Token: 0x060000B6 RID: 182 RVA: 0x00007187 File Offset: 0x00005387
+	// Token: 0x17000008 RID: 8
+	// (get) Token: 0x060000BD RID: 189 RVA: 0x0000327B File Offset: 0x0000147B
+	// (set) Token: 0x060000BE RID: 190 RVA: 0x00003283 File Offset: 0x00001483
 	public bool OnPauseResetInput { get; private set; }
 
-	// Token: 0x17000007 RID: 7
-	// (get) Token: 0x060000B7 RID: 183 RVA: 0x00007190 File Offset: 0x00005390
-	// (set) Token: 0x060000B8 RID: 184 RVA: 0x00007198 File Offset: 0x00005398
+	// Token: 0x17000009 RID: 9
+	// (get) Token: 0x060000BF RID: 191 RVA: 0x0000328C File Offset: 0x0000148C
+	// (set) Token: 0x060000C0 RID: 192 RVA: 0x00003294 File Offset: 0x00001494
 	public AbilityType WeaponAbilityType { get; private set; }
 
-	// Token: 0x17000008 RID: 8
-	// (get) Token: 0x060000B9 RID: 185 RVA: 0x000071A1 File Offset: 0x000053A1
-	// (set) Token: 0x060000BA RID: 186 RVA: 0x000071A9 File Offset: 0x000053A9
+	// Token: 0x1700000A RID: 10
+	// (get) Token: 0x060000C1 RID: 193 RVA: 0x0000329D File Offset: 0x0000149D
+	// (set) Token: 0x060000C2 RID: 194 RVA: 0x000032A5 File Offset: 0x000014A5
 	public AbilityType SpellAbilityType { get; private set; }
 
-	// Token: 0x17000009 RID: 9
-	// (get) Token: 0x060000BB RID: 187 RVA: 0x000071B2 File Offset: 0x000053B2
-	// (set) Token: 0x060000BC RID: 188 RVA: 0x000071BA File Offset: 0x000053BA
+	// Token: 0x1700000B RID: 11
+	// (get) Token: 0x060000C3 RID: 195 RVA: 0x000032AE File Offset: 0x000014AE
+	// (set) Token: 0x060000C4 RID: 196 RVA: 0x000032B6 File Offset: 0x000014B6
 	public AbilityType TalentAbilityType { get; private set; }
 
-	// Token: 0x1700000A RID: 10
-	// (get) Token: 0x060000BD RID: 189 RVA: 0x000071C3 File Offset: 0x000053C3
+	// Token: 0x1700000C RID: 12
+	// (get) Token: 0x060000C5 RID: 197 RVA: 0x000032BF File Offset: 0x000014BF
 	public float HorizontalInput
 	{
 		get
@@ -40,8 +40,8 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x1700000B RID: 11
-	// (get) Token: 0x060000BE RID: 190 RVA: 0x000071CC File Offset: 0x000053CC
+	// Token: 0x1700000D RID: 13
+	// (get) Token: 0x060000C6 RID: 198 RVA: 0x00043D84 File Offset: 0x00041F84
 	public bool IsAiming
 	{
 		get
@@ -53,7 +53,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000BF RID: 191 RVA: 0x00007230 File Offset: 0x00005430
+	// Token: 0x060000C7 RID: 199 RVA: 0x000032C7 File Offset: 0x000014C7
 	public string GetAbilityInputString(CastAbilityType castAbilityType)
 	{
 		switch (castAbilityType)
@@ -67,19 +67,19 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x1700000C RID: 12
-	// (get) Token: 0x060000C0 RID: 192 RVA: 0x00007255 File Offset: 0x00005455
-	// (set) Token: 0x060000C1 RID: 193 RVA: 0x0000725D File Offset: 0x0000545D
+	// Token: 0x1700000E RID: 14
+	// (get) Token: 0x060000C8 RID: 200 RVA: 0x000032EC File Offset: 0x000014EC
+	// (set) Token: 0x060000C9 RID: 201 RVA: 0x000032F4 File Offset: 0x000014F4
 	public CastAbilityType LastCastAbilityTypeCasted { get; private set; }
 
-	// Token: 0x060000C2 RID: 194 RVA: 0x00007266 File Offset: 0x00005466
+	// Token: 0x060000CA RID: 202 RVA: 0x000032FD File Offset: 0x000014FD
 	public void SetLastCastAbilityTypeOverride(CastAbilityType castAbilityTypeOverride)
 	{
 		this.LastCastAbilityTypeCasted = castAbilityTypeOverride;
 	}
 
-	// Token: 0x1700000D RID: 13
-	// (get) Token: 0x060000C3 RID: 195 RVA: 0x0000726F File Offset: 0x0000546F
+	// Token: 0x1700000F RID: 15
+	// (get) Token: 0x060000CB RID: 203 RVA: 0x00003306 File Offset: 0x00001506
 	public global::PlayerController PlayerController
 	{
 		get
@@ -88,8 +88,8 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x1700000E RID: 14
-	// (get) Token: 0x060000C4 RID: 196 RVA: 0x00007278 File Offset: 0x00005478
+	// Token: 0x17000010 RID: 16
+	// (get) Token: 0x060000CC RID: 204 RVA: 0x00043DE8 File Offset: 0x00041FE8
 	public bool ActiveAbilitiesAreJumpBreakable
 	{
 		get
@@ -109,8 +109,8 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x1700000F RID: 15
-	// (get) Token: 0x060000C5 RID: 197 RVA: 0x000072F2 File Offset: 0x000054F2
+	// Token: 0x17000011 RID: 17
+	// (get) Token: 0x060000CD RID: 205 RVA: 0x0000330E File Offset: 0x0000150E
 	public bool AnyAbilityInProgress
 	{
 		get
@@ -119,7 +119,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000C6 RID: 198 RVA: 0x0000730F File Offset: 0x0000550F
+	// Token: 0x060000CE RID: 206 RVA: 0x0000332B File Offset: 0x0000152B
 	public bool AbilityInProgress(CastAbilityType castAbilityType)
 	{
 		switch (castAbilityType)
@@ -135,8 +135,8 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x17000010 RID: 16
-	// (get) Token: 0x060000C7 RID: 199 RVA: 0x0000733B File Offset: 0x0000553B
+	// Token: 0x17000012 RID: 18
+	// (get) Token: 0x060000CF RID: 207 RVA: 0x00003357 File Offset: 0x00001557
 	public Animator Animator
 	{
 		get
@@ -145,8 +145,8 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x17000011 RID: 17
-	// (get) Token: 0x060000C8 RID: 200 RVA: 0x00007343 File Offset: 0x00005543
+	// Token: 0x17000013 RID: 19
+	// (get) Token: 0x060000D0 RID: 208 RVA: 0x0000335F File Offset: 0x0000155F
 	public bool IsInitialized
 	{
 		get
@@ -155,7 +155,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000C9 RID: 201 RVA: 0x0000734C File Offset: 0x0000554C
+	// Token: 0x060000D1 RID: 209 RVA: 0x00043E64 File Offset: 0x00042064
 	public BaseAbility_RL GetAbility(CastAbilityType abilityType, bool ignoreOverrides = false)
 	{
 		switch (abilityType)
@@ -180,14 +180,14 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000CA RID: 202 RVA: 0x000073BC File Offset: 0x000055BC
+	// Token: 0x060000D2 RID: 210 RVA: 0x00043ED4 File Offset: 0x000420D4
 	public void SetAbility(CastAbilityType castAbilityType, AbilityType abilityType, bool destroyOldAbility = true)
 	{
 		BaseAbility_RL abilityInstance = this.CreateAbilityInstance(castAbilityType, abilityType);
 		this.SetAbility(castAbilityType, abilityInstance, destroyOldAbility);
 	}
 
-	// Token: 0x060000CB RID: 203 RVA: 0x000073DC File Offset: 0x000055DC
+	// Token: 0x060000D3 RID: 211 RVA: 0x00043EF4 File Offset: 0x000420F4
 	public BaseAbility_RL CreateAbilityInstance(CastAbilityType castAbilityType, AbilityType abilityType)
 	{
 		BaseAbility_RL ability = AbilityLibrary.GetAbility(abilityType);
@@ -202,7 +202,7 @@ public class CastAbility_RL : CharacterAbility
 		return baseAbility_RL;
 	}
 
-	// Token: 0x060000CC RID: 204 RVA: 0x0000742C File Offset: 0x0000562C
+	// Token: 0x060000D4 RID: 212 RVA: 0x00043F44 File Offset: 0x00042144
 	public void SetAbility(CastAbilityType castAbilityType, BaseAbility_RL abilityInstance, bool destroyOldAbility = true)
 	{
 		switch (castAbilityType)
@@ -275,7 +275,7 @@ public class CastAbility_RL : CharacterAbility
 		Messenger<GameMessenger, GameEvent>.Broadcast(GameEvent.ChangeAbility, this, this.m_changeAbilityArgs);
 	}
 
-	// Token: 0x060000CD RID: 205 RVA: 0x00007618 File Offset: 0x00005818
+	// Token: 0x060000D5 RID: 213 RVA: 0x00044130 File Offset: 0x00042330
 	public void ReinitializeAbility(CastAbilityType castAbilityType)
 	{
 		switch (castAbilityType)
@@ -305,7 +305,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000CE RID: 206 RVA: 0x00007684 File Offset: 0x00005884
+	// Token: 0x060000D6 RID: 214 RVA: 0x0004419C File Offset: 0x0004239C
 	private void Awake()
 	{
 		this.m_changeAbilityArgs = new ChangeAbilityEventArgs(CastAbilityType.Weapon, null);
@@ -317,7 +317,7 @@ public class CastAbility_RL : CharacterAbility
 		this.m_onGamePaused = new Action<MonoBehaviour, EventArgs>(this.OnGamePaused);
 	}
 
-	// Token: 0x060000CF RID: 207 RVA: 0x00007704 File Offset: 0x00005904
+	// Token: 0x060000D7 RID: 215 RVA: 0x0004421C File Offset: 0x0004241C
 	protected override void HandleInput()
 	{
 		if (this.m_playerController.ConditionState == CharacterStates.CharacterConditions.ControlledMovement)
@@ -338,14 +338,14 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000D0 RID: 208 RVA: 0x000077B0 File Offset: 0x000059B0
+	// Token: 0x060000D8 RID: 216 RVA: 0x000442C8 File Offset: 0x000424C8
 	public bool IsAbilityPermitted(CastAbilityType abilityType)
 	{
 		BaseAbility_RL ability = this.GetAbility(abilityType, false);
 		return this.IsAbilityPermitted(ability);
 	}
 
-	// Token: 0x060000D1 RID: 209 RVA: 0x000077D0 File Offset: 0x000059D0
+	// Token: 0x060000D9 RID: 217 RVA: 0x000442E8 File Offset: 0x000424E8
 	public bool IsAbilityPermitted(BaseAbility_RL ability)
 	{
 		if (!this.AbilityPermitted)
@@ -509,7 +509,7 @@ public class CastAbility_RL : CharacterAbility
 		return true;
 	}
 
-	// Token: 0x060000D2 RID: 210 RVA: 0x00007BD0 File Offset: 0x00005DD0
+	// Token: 0x060000DA RID: 218 RVA: 0x000446E8 File Offset: 0x000428E8
 	public void StartQueueCoroutine(CastAbilityType castAbilityType)
 	{
 		this.StopQueueCoroutine(castAbilityType);
@@ -529,7 +529,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000D3 RID: 211 RVA: 0x00007C32 File Offset: 0x00005E32
+	// Token: 0x060000DB RID: 219 RVA: 0x00003367 File Offset: 0x00001567
 	private IEnumerator AbilityQueueCoroutine(CastAbilityType castAbilityType)
 	{
 		float duration = Time.time + 0.175f;
@@ -545,7 +545,7 @@ public class CastAbility_RL : CharacterAbility
 		yield break;
 	}
 
-	// Token: 0x060000D4 RID: 212 RVA: 0x00007C48 File Offset: 0x00005E48
+	// Token: 0x060000DC RID: 220 RVA: 0x0004474C File Offset: 0x0004294C
 	public void StopQueueCoroutine(CastAbilityType castAbilityType)
 	{
 		switch (castAbilityType)
@@ -575,7 +575,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000D5 RID: 213 RVA: 0x00007CA6 File Offset: 0x00005EA6
+	// Token: 0x060000DD RID: 221 RVA: 0x0000337D File Offset: 0x0000157D
 	public void StopAllQueueCoroutines()
 	{
 		this.StopQueueCoroutine(CastAbilityType.Weapon);
@@ -583,13 +583,13 @@ public class CastAbility_RL : CharacterAbility
 		this.StopQueueCoroutine(CastAbilityType.Talent);
 	}
 
-	// Token: 0x060000D6 RID: 214 RVA: 0x00007CBD File Offset: 0x00005EBD
+	// Token: 0x060000DE RID: 222 RVA: 0x00003394 File Offset: 0x00001594
 	private void FixedUpdate()
 	{
 		this.PerformAbilityStuckCheck();
 	}
 
-	// Token: 0x060000D7 RID: 215 RVA: 0x00007CC8 File Offset: 0x00005EC8
+	// Token: 0x060000DF RID: 223 RVA: 0x000447AC File Offset: 0x000429AC
 	private void PerformAbilityStuckCheck()
 	{
 		if (this.m_performingStuckCheck)
@@ -622,7 +622,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000D8 RID: 216 RVA: 0x00007E04 File Offset: 0x00006004
+	// Token: 0x060000E0 RID: 224 RVA: 0x000448E8 File Offset: 0x00042AE8
 	public void StartAbility(CastAbilityType abilityType, bool castAbilityOverride = false, bool allowQueuing = false)
 	{
 		if (!this.m_isWeaponAbilityOverridden && abilityType == CastAbilityType.Weapon && this.m_weaponAbility && this.m_weaponAbility.AbilityType == AbilityType.PistolWeapon && (this.m_weaponAbility.CurrentAmmo <= 0 || castAbilityOverride))
@@ -667,7 +667,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000D9 RID: 217 RVA: 0x00007F1C File Offset: 0x0000611C
+	// Token: 0x060000E1 RID: 225 RVA: 0x0000339C File Offset: 0x0000159C
 	protected IEnumerator CastAbility(CastAbilityType abilityType)
 	{
 		BaseAbility_RL ability = this.GetAbility(abilityType, false);
@@ -709,7 +709,7 @@ public class CastAbility_RL : CharacterAbility
 		yield break;
 	}
 
-	// Token: 0x060000DA RID: 218 RVA: 0x00007F34 File Offset: 0x00006134
+	// Token: 0x060000E2 RID: 226 RVA: 0x00044A00 File Offset: 0x00042C00
 	public void BroadcastAbilityCastEvents(CastAbilityType abilityType)
 	{
 		switch (abilityType)
@@ -738,7 +738,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000DB RID: 219 RVA: 0x00007FDC File Offset: 0x000061DC
+	// Token: 0x060000E3 RID: 227 RVA: 0x00044AA8 File Offset: 0x00042CA8
 	public void StopAbility(CastAbilityType abilityType, bool abilityInterrupted)
 	{
 		BaseAbility_RL ability = this.GetAbility(abilityType, false);
@@ -783,7 +783,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000DC RID: 220 RVA: 0x00008100 File Offset: 0x00006300
+	// Token: 0x060000E4 RID: 228 RVA: 0x00044BCC File Offset: 0x00042DCC
 	public void StopPersistentAbility(CastAbilityType abilityType)
 	{
 		BaseAbility_RL ability = this.GetAbility(abilityType, false);
@@ -797,7 +797,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000DD RID: 221 RVA: 0x00008138 File Offset: 0x00006338
+	// Token: 0x060000E5 RID: 229 RVA: 0x00044C04 File Offset: 0x00042E04
 	public void StopAllAbilities(bool stopPersistentAbilities)
 	{
 		if (this.IsInitialized)
@@ -816,7 +816,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000DE RID: 222 RVA: 0x0000818C File Offset: 0x0000638C
+	// Token: 0x060000E6 RID: 230 RVA: 0x00044C58 File Offset: 0x00042E58
 	public void ResetAbilityCooldowns(CastAbilityType abilityType, bool ignoreAbilityOverride = false)
 	{
 		BaseAbility_RL ability = this.GetAbility(abilityType, ignoreAbilityOverride);
@@ -826,7 +826,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000DF RID: 223 RVA: 0x000081B4 File Offset: 0x000063B4
+	// Token: 0x060000E7 RID: 231 RVA: 0x00044C80 File Offset: 0x00042E80
 	public void ResetAbilityAmmo(CastAbilityType abilityType, bool ignoreAbilityOverride = false)
 	{
 		BaseAbility_RL ability = this.GetAbility(abilityType, ignoreAbilityOverride);
@@ -839,7 +839,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000E0 RID: 224 RVA: 0x000081EC File Offset: 0x000063EC
+	// Token: 0x060000E8 RID: 232 RVA: 0x00044CB8 File Offset: 0x00042EB8
 	public void SetAbilityAmmo(CastAbilityType abilityType, int amount, bool ignoreAbilityOverride = false)
 	{
 		BaseAbility_RL ability = this.GetAbility(abilityType, ignoreAbilityOverride);
@@ -853,7 +853,7 @@ public class CastAbility_RL : CharacterAbility
 		}
 	}
 
-	// Token: 0x060000E1 RID: 225 RVA: 0x00008224 File Offset: 0x00006424
+	// Token: 0x060000E9 RID: 233 RVA: 0x00044CF0 File Offset: 0x00042EF0
 	public void InitializeProjectile(Projectile_RL projectile)
 	{
 		projectile.CastAbilityType = this.LastCastAbilityTypeCasted;
@@ -872,7 +872,7 @@ public class CastAbility_RL : CharacterAbility
 		this.m_playerController.CloakInterrupted = false;
 	}
 
-	// Token: 0x060000E2 RID: 226 RVA: 0x00008294 File Offset: 0x00006494
+	// Token: 0x060000EA RID: 234 RVA: 0x00044D60 File Offset: 0x00042F60
 	public void InitializeProjectile(Projectile_RL projectile, CastAbilityType castAbilityTypeOverride)
 	{
 		projectile.CastAbilityType = castAbilityTypeOverride;
@@ -891,107 +891,107 @@ public class CastAbility_RL : CharacterAbility
 		this.m_playerController.CloakInterrupted = false;
 	}
 
-	// Token: 0x060000E3 RID: 227 RVA: 0x000082FF File Offset: 0x000064FF
+	// Token: 0x060000EB RID: 235 RVA: 0x000033B2 File Offset: 0x000015B2
 	protected override void OnEnable()
 	{
 		base.OnEnable();
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.GamePauseStateChange, this.m_onGamePaused);
 	}
 
-	// Token: 0x060000E4 RID: 228 RVA: 0x00008314 File Offset: 0x00006514
+	// Token: 0x060000EC RID: 236 RVA: 0x000033C7 File Offset: 0x000015C7
 	protected override void OnDisable()
 	{
 		base.OnDisable();
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.GamePauseStateChange, this.m_onGamePaused);
 	}
 
-	// Token: 0x060000E5 RID: 229 RVA: 0x00008329 File Offset: 0x00006529
+	// Token: 0x060000ED RID: 237 RVA: 0x000033DC File Offset: 0x000015DC
 	private void OnGamePaused(object sender, EventArgs args)
 	{
 		this.OnPauseResetInput = true;
 	}
 
-	// Token: 0x04000139 RID: 313
+	// Token: 0x04000151 RID: 337
 	[Header("Ability Prefabs")]
 	[SerializeField]
 	[ReadOnly]
 	protected BaseAbility_RL m_weaponAbility;
 
-	// Token: 0x0400013A RID: 314
+	// Token: 0x04000152 RID: 338
 	[SerializeField]
 	[ReadOnly]
 	protected BaseAbility_RL m_spellAbility;
 
-	// Token: 0x0400013B RID: 315
+	// Token: 0x04000153 RID: 339
 	[SerializeField]
 	[ReadOnly]
 	protected BaseAbility_RL m_talentAbility;
 
-	// Token: 0x0400013C RID: 316
+	// Token: 0x04000154 RID: 340
 	[SerializeField]
 	private UnityEvent m_notEnoughManaUnityEvent;
 
-	// Token: 0x0400013D RID: 317
+	// Token: 0x04000155 RID: 341
 	[SerializeField]
 	private UnityEvent m_inCooldownUnityEvent;
 
-	// Token: 0x0400013E RID: 318
+	// Token: 0x04000156 RID: 342
 	protected bool m_weaponAbilityInProgress;
 
-	// Token: 0x0400013F RID: 319
+	// Token: 0x04000157 RID: 343
 	protected bool m_spellAbilityInProgress;
 
-	// Token: 0x04000140 RID: 320
+	// Token: 0x04000158 RID: 344
 	protected bool m_talentAbilityInProgress;
 
-	// Token: 0x04000141 RID: 321
+	// Token: 0x04000159 RID: 345
 	private bool m_isWeaponAbilityOverridden;
 
-	// Token: 0x04000142 RID: 322
+	// Token: 0x0400015A RID: 346
 	private BaseAbility_RL m_weaponAbilityOverride;
 
-	// Token: 0x04000143 RID: 323
+	// Token: 0x0400015B RID: 347
 	protected Coroutine m_weaponCoroutine;
 
-	// Token: 0x04000144 RID: 324
+	// Token: 0x0400015C RID: 348
 	protected Coroutine m_spellCoroutine;
 
-	// Token: 0x04000145 RID: 325
+	// Token: 0x0400015D RID: 349
 	protected Coroutine m_talentCoroutine;
 
-	// Token: 0x04000146 RID: 326
+	// Token: 0x0400015E RID: 350
 	private Coroutine m_weaponQueueCoroutine;
 
-	// Token: 0x04000147 RID: 327
+	// Token: 0x0400015F RID: 351
 	private Coroutine m_spellQueueCoroutine;
 
-	// Token: 0x04000148 RID: 328
+	// Token: 0x04000160 RID: 352
 	private Coroutine m_talentQueueCoroutine;
 
-	// Token: 0x04000149 RID: 329
+	// Token: 0x04000161 RID: 353
 	private AbilityUsedEventArgs m_abilityUsedEventArgs;
 
-	// Token: 0x0400014A RID: 330
+	// Token: 0x04000162 RID: 354
 	private ChangeAbilityEventArgs m_changeAbilityArgs;
 
-	// Token: 0x0400014B RID: 331
+	// Token: 0x04000163 RID: 355
 	private Projectile_RL m_damageProjectileHelper;
 
-	// Token: 0x0400014C RID: 332
+	// Token: 0x04000164 RID: 356
 	private Action<MonoBehaviour, EventArgs> m_onGamePaused;
 
-	// Token: 0x04000152 RID: 338
+	// Token: 0x0400016A RID: 362
 	private float m_textPopupDelay;
 
-	// Token: 0x04000153 RID: 339
+	// Token: 0x0400016B RID: 363
 	private CastAbilityType m_lastCastAbilityPermittedCheck;
 
-	// Token: 0x04000154 RID: 340
+	// Token: 0x0400016C RID: 364
 	private const string EMPTY_STATE_NAME = "Empty";
 
-	// Token: 0x04000155 RID: 341
+	// Token: 0x0400016D RID: 365
 	private bool m_performingStuckCheck;
 
-	// Token: 0x04000156 RID: 342
+	// Token: 0x0400016E RID: 366
 	private float m_stuckCheckDelayTimer;
 }

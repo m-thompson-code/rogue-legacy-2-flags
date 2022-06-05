@@ -2,13 +2,13 @@
 using Rooms;
 using UnityEngine;
 
-// Token: 0x02000246 RID: 582
+// Token: 0x02000403 RID: 1027
 [Serializable]
 public class RoomReferenceEntry
 {
-	// Token: 0x17000B54 RID: 2900
-	// (get) Token: 0x06001748 RID: 5960 RVA: 0x00048882 File Offset: 0x00046A82
-	// (set) Token: 0x06001749 RID: 5961 RVA: 0x0004888A File Offset: 0x00046A8A
+	// Token: 0x17000E81 RID: 3713
+	// (get) Token: 0x060020FB RID: 8443 RVA: 0x000118B5 File Offset: 0x0000FAB5
+	// (set) Token: 0x060020FC RID: 8444 RVA: 0x000118BD File Offset: 0x0000FABD
 	public RoomReferenceType RoomReferenceType
 	{
 		get
@@ -21,9 +21,9 @@ public class RoomReferenceEntry
 		}
 	}
 
-	// Token: 0x17000B55 RID: 2901
-	// (get) Token: 0x0600174A RID: 5962 RVA: 0x00048893 File Offset: 0x00046A93
-	// (set) Token: 0x0600174B RID: 5963 RVA: 0x0004889B File Offset: 0x00046A9B
+	// Token: 0x17000E82 RID: 3714
+	// (get) Token: 0x060020FD RID: 8445 RVA: 0x000118C6 File Offset: 0x0000FAC6
+	// (set) Token: 0x060020FE RID: 8446 RVA: 0x000118CE File Offset: 0x0000FACE
 	public RoomMetaData RoomMetaData
 	{
 		get
@@ -36,8 +36,8 @@ public class RoomReferenceEntry
 		}
 	}
 
-	// Token: 0x17000B56 RID: 2902
-	// (get) Token: 0x0600174C RID: 5964 RVA: 0x000488A4 File Offset: 0x00046AA4
+	// Token: 0x17000E83 RID: 3715
+	// (get) Token: 0x060020FF RID: 8447 RVA: 0x000118D7 File Offset: 0x0000FAD7
 	public string RoomMetaDataPath
 	{
 		get
@@ -46,15 +46,15 @@ public class RoomReferenceEntry
 		}
 	}
 
-	// Token: 0x040016C7 RID: 5831
+	// Token: 0x04001DDF RID: 7647
 	[SerializeField]
 	private RoomReferenceType m_roomReferenceType;
 
-	// Token: 0x040016C8 RID: 5832
+	// Token: 0x04001DE0 RID: 7648
 	[SerializeField]
 	private RoomMetaData m_roomMetaData;
 
-	// Token: 0x040016C9 RID: 5833
+	// Token: 0x04001DE1 RID: 7649
 	[SerializeField]
 	private string m_roomMetaDataPath;
 }

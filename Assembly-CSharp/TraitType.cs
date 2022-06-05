@@ -1,224 +1,224 @@
 ﻿using System;
 
-// Token: 0x02000787 RID: 1927
+// Token: 0x02000C48 RID: 3144
 public enum TraitType
 {
-	// Token: 0x04003883 RID: 14467
+	// Token: 0x04004B33 RID: 19251
 	None,
-	// Token: 0x04003884 RID: 14468
+	// Token: 0x04004B34 RID: 19252
 	NoColor = 10,
-	// Token: 0x04003885 RID: 14469
+	// Token: 0x04004B35 RID: 19253
 	Bald = 20,
-	// Token: 0x04003886 RID: 14470
+	// Token: 0x04004B36 RID: 19254
 	NoHealthBar = 30,
-	// Token: 0x04003887 RID: 14471
+	// Token: 0x04004B37 RID: 19255
 	EasyBreakables = 40,
-	// Token: 0x04003888 RID: 14472
+	// Token: 0x04004B38 RID: 19256
 	Swearing = 50,
-	// Token: 0x04003889 RID: 14473
+	// Token: 0x04004B39 RID: 19257
 	FakeEnemies = 60,
-	// Token: 0x0400388A RID: 14474
+	// Token: 0x04004B3A RID: 19258
 	YouAreSmall = 70,
-	// Token: 0x0400388B RID: 14475
+	// Token: 0x04004B3B RID: 19259
 	ShowEnemiesOnMap = 80,
-	// Token: 0x0400388C RID: 14476
+	// Token: 0x04004B3C RID: 19260
 	PlayerKnockedLow = 90,
-	// Token: 0x0400388D RID: 14477
+	// Token: 0x04004B3D RID: 19261
 	PlayerKnockedFar = 95,
-	// Token: 0x0400388E RID: 14478
+	// Token: 0x04004B3E RID: 19262
 	Disposition = 100,
-	// Token: 0x0400388F RID: 14479
+	// Token: 0x04004B3F RID: 19263
 	YouAreLarge = 110,
-	// Token: 0x04003890 RID: 14480
+	// Token: 0x04004B40 RID: 19264
 	DarkScreen = 120,
-	// Token: 0x04003891 RID: 14481
+	// Token: 0x04004B41 RID: 19265
 	Fart = 130,
-	// Token: 0x04003892 RID: 14482
+	// Token: 0x04004B42 RID: 19266
 	EnemyKnockedLow = 140,
-	// Token: 0x04003893 RID: 14483
+	// Token: 0x04004B43 RID: 19267
 	BreakPropsForMana = 150,
-	// Token: 0x04003894 RID: 14484
+	// Token: 0x04004B44 RID: 19268
 	UpsideDown = 160,
-	// Token: 0x04003895 RID: 14485
+	// Token: 0x04004B45 RID: 19269
 	Oversaturate = 170,
-	// Token: 0x04003896 RID: 14486
+	// Token: 0x04004B46 RID: 19270
 	CuteGame = 180,
-	// Token: 0x04003897 RID: 14487
+	// Token: 0x04004B47 RID: 19271
 	OneHitDeath = 190,
-	// Token: 0x04003898 RID: 14488
+	// Token: 0x04004B48 RID: 19272
 	AngryOnHit = 200,
-	// Token: 0x04003899 RID: 14489
+	// Token: 0x04004B49 RID: 19273
 	CantAttack = 210,
-	// Token: 0x0400389A RID: 14490
+	// Token: 0x04004B4A RID: 19274
 	CanNowAttack,
-	// Token: 0x0400389B RID: 14491
+	// Token: 0x04004B4B RID: 19275
 	OmniDash = 220,
-	// Token: 0x0400389C RID: 14492
+	// Token: 0x04004B4C RID: 19276
 	HighJump = 230,
-	// Token: 0x0400389D RID: 14493
+	// Token: 0x04004B4D RID: 19277
 	InvulnDash = 240,
-	// Token: 0x0400389E RID: 14494
+	// Token: 0x04004B4E RID: 19278
 	BoosWhenHit = 250,
-	// Token: 0x0400389F RID: 14495
+	// Token: 0x04004B4F RID: 19279
 	GainDownStrike = 260,
-	// Token: 0x040038A0 RID: 14496
+	// Token: 0x04004B50 RID: 19280
 	DamageBoost = 270,
-	// Token: 0x040038A1 RID: 14497
+	// Token: 0x04004B51 RID: 19281
 	MagicBoost = 280,
-	// Token: 0x040038A2 RID: 14498
+	// Token: 0x04004B52 RID: 19282
 	EnemyKnockedFar = 290,
-	// Token: 0x040038A3 RID: 14499
+	// Token: 0x04004B53 RID: 19283
 	Dog = 300,
-	// Token: 0x040038A4 RID: 14500
+	// Token: 0x04004B54 RID: 19284
 	LongerCD = 310,
-	// Token: 0x040038A5 RID: 14501
+	// Token: 0x04004B55 RID: 19285
 	BonusHealth = 320,
-	// Token: 0x040038A6 RID: 14502
+	// Token: 0x04004B56 RID: 19286
 	BonusStrength = 330,
-	// Token: 0x040038A7 RID: 14503
+	// Token: 0x04004B57 RID: 19287
 	BonusMagicStrength = 340,
-	// Token: 0x040038A8 RID: 14504
+	// Token: 0x04004B58 RID: 19288
 	FMFFan,
-	// Token: 0x040038A9 RID: 14505
+	// Token: 0x04004B59 RID: 19289
 	NoEnemyHealthBar,
-	// Token: 0x040038AA RID: 14506
+	// Token: 0x04004B5A RID: 19290
 	ManaCostAndDamageUp,
-	// Token: 0x040038AB RID: 14507
+	// Token: 0x04004B5B RID: 19291
 	FreeLife,
-	// Token: 0x040038AC RID: 14508
+	// Token: 0x04004B5C RID: 19292
 	RevealAllChests,
-	// Token: 0x040038AD RID: 14509
+	// Token: 0x04004B5D RID: 19293
 	BounceTerrain = 350,
-	// Token: 0x040038AE RID: 14510
+	// Token: 0x04004B5E RID: 19294
 	LowerStorePrice = 360,
-	// Token: 0x040038AF RID: 14511
+	// Token: 0x04004B5F RID: 19295
 	GameRunsFaster = 370,
-	// Token: 0x040038B0 RID: 14512
+	// Token: 0x04004B60 RID: 19296
 	ChickensAreEnemies = 380,
-	// Token: 0x040038B1 RID: 14513
+	// Token: 0x04004B61 RID: 19297
 	NoMap = 390,
-	// Token: 0x040038B2 RID: 14514
+	// Token: 0x04004B62 RID: 19298
 	FakeSelfDamage = 410,
-	// Token: 0x040038B3 RID: 14515
+	// Token: 0x04004B63 RID: 19299
 	BlurryFar = 420,
-	// Token: 0x040038B4 RID: 14516
+	// Token: 0x04004B64 RID: 19300
 	OldYellowTint = 430,
-	// Token: 0x040038B5 RID: 14517
+	// Token: 0x04004B65 RID: 19301
 	RandomizeSpells = 440,
-	// Token: 0x040038B6 RID: 14518
+	// Token: 0x04004B66 RID: 19302
 	NoProjectileIndicators = 450,
-	// Token: 0x040038B7 RID: 14519
+	// Token: 0x04004B67 RID: 19303
 	HorizontalDarkness = 452,
-	// Token: 0x040038B8 RID: 14520
+	// Token: 0x04004B68 RID: 19304
 	EnemiesCensored = 460,
-	// Token: 0x040038B9 RID: 14521
+	// Token: 0x04004B69 RID: 19305
 	EnemiesBlackFill = 462,
-	// Token: 0x040038BA RID: 14522
+	// Token: 0x04004B6A RID: 19306
 	LowerGravity = 470,
-	// Token: 0x040038BB RID: 14523
+	// Token: 0x04004B6B RID: 19307
 	MagnetRangeBoost = 480,
-	// Token: 0x040038BC RID: 14524
+	// Token: 0x04004B6C RID: 19308
 	CarryFood = 490,
-	// Token: 0x040038BD RID: 14525
+	// Token: 0x04004B6D RID: 19309
 	RandomSounds = 500,
-	// Token: 0x040038BE RID: 14526
+	// Token: 0x04004B6E RID: 19310
 	BlurOnHit = 510,
-	// Token: 0x040038BF RID: 14527
+	// Token: 0x04004B6F RID: 19311
 	ColorTrails = 520,
-	// Token: 0x040038C0 RID: 14528
+	// Token: 0x04004B70 RID: 19312
 	WeaponSpellSwitch = 530,
-	// Token: 0x040038C1 RID: 14529
+	// Token: 0x04004B71 RID: 19313
 	FindBoss = 540,
-	// Token: 0x040038C2 RID: 14530
+	// Token: 0x04004B72 RID: 19314
 	NoMeat = 550,
-	// Token: 0x040038C3 RID: 14531
+	// Token: 0x04004B73 RID: 19315
 	SmallHitbox = 570,
-	// Token: 0x040038C4 RID: 14532
+	// Token: 0x04004B74 RID: 19316
 	CheerOnKills = 580,
-	// Token: 0x040038C5 RID: 14533
+	// Token: 0x04004B75 RID: 19317
 	Retro = 590,
-	// Token: 0x040038C6 RID: 14534
+	// Token: 0x04004B76 RID: 19318
 	CameraZoomOut = 600,
-	// Token: 0x040038C7 RID: 14535
+	// Token: 0x04004B77 RID: 19319
 	CameraZoomIn = 610,
-	// Token: 0x040038C8 RID: 14536
+	// Token: 0x04004B78 RID: 19320
 	FreeRelic,
-	// Token: 0x040038C9 RID: 14537
+	// Token: 0x04004B79 RID: 19321
 	DisableSpikeTraps = 620,
-	// Token: 0x040038CA RID: 14538
+	// Token: 0x04004B7A RID: 19322
 	BackwardSpell = 630,
-	// Token: 0x040038CB RID: 14539
+	// Token: 0x04004B7B RID: 19323
 	GameShake = 640,
-	// Token: 0x040038CC RID: 14540
+	// Token: 0x04004B7C RID: 19324
 	WordScramble = 650,
-	// Token: 0x040038CD RID: 14541
+	// Token: 0x04004B7D RID: 19325
 	GreenPlatformOpen = 660,
-	// Token: 0x040038CE RID: 14542
+	// Token: 0x04004B7E RID: 19326
 	BlurryClose = 670,
-	// Token: 0x040038CF RID: 14543
+	// Token: 0x04004B7F RID: 19327
 	DisableAttackLock = 680,
-	// Token: 0x040038D0 RID: 14544
+	// Token: 0x04004B80 RID: 19328
 	CantSeeChildren = 690,
-	// Token: 0x040038D1 RID: 14545
+	// Token: 0x04004B81 RID: 19329
 	Unused_1 = 720,
-	// Token: 0x040038D2 RID: 14546
+	// Token: 0x04004B82 RID: 19330
 	LifeTimer = 730,
-	// Token: 0x040038D3 RID: 14547
+	// Token: 0x04004B83 RID: 19331
 	SuperFart = 740,
-	// Token: 0x040038D4 RID: 14548
+	// Token: 0x04004B84 RID: 19332
 	HomingBullets = 750,
-	// Token: 0x040038D5 RID: 14549
+	// Token: 0x04004B85 RID: 19333
 	TeleportDamage = 760,
-	// Token: 0x040038D6 RID: 14550
+	// Token: 0x04004B86 RID: 19334
 	FriendsLeave = 770,
-	// Token: 0x040038D7 RID: 14551
+	// Token: 0x04004B87 RID: 19335
 	Vampire = 780,
-	// Token: 0x040038D8 RID: 14552
+	// Token: 0x04004B88 RID: 19336
 	RandomizeWeapons = 790,
-	// Token: 0x040038D9 RID: 14553
+	// Token: 0x04004B89 RID: 19337
 	ChanceHazardMissing = 800,
-	// Token: 0x040038DA RID: 14554
+	// Token: 0x04004B8A RID: 19338
 	NotMovingSlowGame = 810,
-	// Token: 0x040038DB RID: 14555
+	// Token: 0x04004B8B RID: 19339
 	MapReveal = 820,
-	// Token: 0x040038DC RID: 14556
+	// Token: 0x04004B8C RID: 19340
 	NoImmunityWindow = 830,
-	// Token: 0x040038DD RID: 14557
+	// Token: 0x04004B8D RID: 19341
 	NoManaCap = 840,
-	// Token: 0x040038DE RID: 14558
+	// Token: 0x04004B8E RID: 19342
 	MegaHealth = 850,
-	// Token: 0x040038DF RID: 14559
+	// Token: 0x04004B8F RID: 19343
 	ItemsGoFlying = 860,
-	// Token: 0x040038E0 RID: 14560
+	// Token: 0x04004B90 RID: 19344
 	ManaFromHurt = 870,
-	// Token: 0x040038E1 RID: 14561
+	// Token: 0x04004B91 RID: 19345
 	BonusChestGold = 880,
-	// Token: 0x040038E2 RID: 14562
+	// Token: 0x04004B92 RID: 19346
 	SuperHealer = 890,
-	// Token: 0x040038E3 RID: 14563
+	// Token: 0x04004B93 RID: 19347
 	TwinRelics = 900,
-	// Token: 0x040038E4 RID: 14564
+	// Token: 0x04004B94 RID: 19348
 	MushroomGrow = 910,
-	// Token: 0x040038E5 RID: 14565
+	// Token: 0x04004B95 RID: 19349
 	YouAreBlue = 920,
-	// Token: 0x040038E6 RID: 14566
+	// Token: 0x04004B96 RID: 19350
 	SkillCritsOnly = 930,
-	// Token: 0x040038E7 RID: 14567
+	// Token: 0x04004B97 RID: 19351
 	DisarmOnHurt = 940,
-	// Token: 0x040038E8 RID: 14568
+	// Token: 0x04004B98 RID: 19352
 	ExplosiveChests = 950,
-	// Token: 0x040038E9 RID: 14569
+	// Token: 0x04004B99 RID: 19353
 	ExplosiveEnemies = 960,
-	// Token: 0x040038EA RID: 14570
+	// Token: 0x04004B9A RID: 19354
 	HalloweenHoliday = 970,
-	// Token: 0x040038EB RID: 14571
+	// Token: 0x04004B9B RID: 19355
 	ChristmasHoliday,
-	// Token: 0x040038EC RID: 14572
+	// Token: 0x04004B9C RID: 19356
 	ToneDeaf = 980,
-	// Token: 0x040038ED RID: 14573
+	// Token: 0x04004B9D RID: 19357
 	RandomizeKit = 990,
-	// Token: 0x040038EE RID: 14574
+	// Token: 0x04004B9E RID: 19358
 	Antique_Old = 861,
-	// Token: 0x040038EF RID: 14575
+	// Token: 0x04004B9F RID: 19359
 	Antique = 10000
 }

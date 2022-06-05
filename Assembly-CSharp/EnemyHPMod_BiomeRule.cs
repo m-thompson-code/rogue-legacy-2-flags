@@ -3,17 +3,17 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-// Token: 0x020005F4 RID: 1524
+// Token: 0x02000A08 RID: 2568
 [CreateAssetMenu(menuName = "Custom/Biome Rules/Gameplay Mods/Enemy HP Mod")]
 public class EnemyHPMod_BiomeRule : BiomeRule
 {
-	// Token: 0x17001378 RID: 4984
-	// (get) Token: 0x060036FF RID: 14079 RVA: 0x000BCE47 File Offset: 0x000BB047
-	// (set) Token: 0x06003700 RID: 14080 RVA: 0x000BCE4E File Offset: 0x000BB04E
+	// Token: 0x17001AB9 RID: 6841
+	// (get) Token: 0x06004D52 RID: 19794 RVA: 0x00029FD0 File Offset: 0x000281D0
+	// (set) Token: 0x06004D53 RID: 19795 RVA: 0x00029FD7 File Offset: 0x000281D7
 	public static float MaxHealthMod { get; private set; } = 1f;
 
-	// Token: 0x17001379 RID: 4985
-	// (get) Token: 0x06003701 RID: 14081 RVA: 0x000BCE56 File Offset: 0x000BB056
+	// Token: 0x17001ABA RID: 6842
+	// (get) Token: 0x06004D54 RID: 19796 RVA: 0x000046FA File Offset: 0x000028FA
 	public override BiomeRuleExecutionTime ExecutionTime
 	{
 		get
@@ -22,7 +22,7 @@ public class EnemyHPMod_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x06003702 RID: 14082 RVA: 0x000BCE5A File Offset: 0x000BB05A
+	// Token: 0x06004D55 RID: 19797 RVA: 0x00029FDF File Offset: 0x000281DF
 	public override IEnumerator RunRule(BiomeType biome)
 	{
 		EnemyHPMod_BiomeRule.MaxHealthMod = 1f;
@@ -37,18 +37,18 @@ public class EnemyHPMod_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x06003703 RID: 14083 RVA: 0x000BCE69 File Offset: 0x000BB069
+	// Token: 0x06004D56 RID: 19798 RVA: 0x00029FEE File Offset: 0x000281EE
 	public override void UndoRule(BiomeType biome)
 	{
 		EnemyHPMod_BiomeRule.MaxHealthMod = 1f;
 	}
 
-	// Token: 0x04002A5A RID: 10842
+	// Token: 0x04003A86 RID: 14982
 	[SerializeField]
 	[FormerlySerializedAs("m_maxHealthMod")]
 	private float m_ng0MaxHealthMod = 1f;
 
-	// Token: 0x04002A5B RID: 10843
+	// Token: 0x04003A87 RID: 14983
 	[Tooltip("Applies to NG+1 and above")]
 	[SerializeField]
 	private float m_ngPlusMaxHealthMod = 1f;

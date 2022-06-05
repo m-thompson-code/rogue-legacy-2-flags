@@ -2,18 +2,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000206 RID: 518
+// Token: 0x020003B7 RID: 951
 public class HealthUIController : MonoBehaviour
 {
-	// Token: 0x04001513 RID: 5395
+	// Token: 0x04001C10 RID: 7184
 	[SerializeField]
 	private Slider m_healthSlider;
 
-	// Token: 0x04001514 RID: 5396
+	// Token: 0x04001C11 RID: 7185
 	[SerializeField]
 	private Text m_healthText;
 
-	// Token: 0x04001515 RID: 5397
+	// Token: 0x04001C12 RID: 7186
 	[SerializeField]
 	private GameObject m_indicator;
 }

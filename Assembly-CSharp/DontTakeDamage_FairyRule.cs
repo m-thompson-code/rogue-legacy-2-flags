@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000432 RID: 1074
+// Token: 0x020006F9 RID: 1785
 public class DontTakeDamage_FairyRule : DontGetHit_FairyRule
 {
-	// Token: 0x17000F99 RID: 3993
-	// (get) Token: 0x06002774 RID: 10100 RVA: 0x0008329C File Offset: 0x0008149C
+	// Token: 0x1700147A RID: 5242
+	// (get) Token: 0x0600367D RID: 13949 RVA: 0x0001DFC4 File Offset: 0x0001C1C4
 	public override string Description
 	{
 		get
@@ -13,8 +13,8 @@ public class DontTakeDamage_FairyRule : DontGetHit_FairyRule
 		}
 	}
 
-	// Token: 0x17000F9A RID: 3994
-	// (get) Token: 0x06002775 RID: 10101 RVA: 0x000832A3 File Offset: 0x000814A3
+	// Token: 0x1700147B RID: 5243
+	// (get) Token: 0x0600367E RID: 13950 RVA: 0x0001DFCB File Offset: 0x0001C1CB
 	public override FairyRuleID ID
 	{
 		get
@@ -23,8 +23,8 @@ public class DontTakeDamage_FairyRule : DontGetHit_FairyRule
 		}
 	}
 
-	// Token: 0x17000F9B RID: 3995
-	// (get) Token: 0x06002776 RID: 10102 RVA: 0x000832A7 File Offset: 0x000814A7
+	// Token: 0x1700147C RID: 5244
+	// (get) Token: 0x0600367F RID: 13951 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override bool LockChestAtStart
 	{
 		get
@@ -33,7 +33,7 @@ public class DontTakeDamage_FairyRule : DontGetHit_FairyRule
 		}
 	}
 
-	// Token: 0x06002777 RID: 10103 RVA: 0x000832AA File Offset: 0x000814AA
+	// Token: 0x06003680 RID: 13952 RVA: 0x0001DFCF File Offset: 0x0001C1CF
 	protected override void OnPlayerTakeDamage(object sender, EventArgs eventArgs)
 	{
 		if ((eventArgs as CharacterHitEventArgs).DamageTaken > 0f)

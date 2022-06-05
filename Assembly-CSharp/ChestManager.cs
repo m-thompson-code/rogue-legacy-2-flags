@@ -4,12 +4,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x02000690 RID: 1680
+// Token: 0x02000B19 RID: 2841
 public class ChestManager : MonoBehaviour
 {
-	// Token: 0x1700152F RID: 5423
-	// (get) Token: 0x06003CF8 RID: 15608 RVA: 0x000D3704 File Offset: 0x000D1904
-	// (set) Token: 0x06003CF9 RID: 15609 RVA: 0x000D370B File Offset: 0x000D190B
+	// Token: 0x17001CFB RID: 7419
+	// (get) Token: 0x0600558D RID: 21901 RVA: 0x0002E75C File Offset: 0x0002C95C
+	// (set) Token: 0x0600558E RID: 21902 RVA: 0x0002E763 File Offset: 0x0002C963
 	private static ChestManager Instance
 	{
 		get
@@ -22,12 +22,12 @@ public class ChestManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001530 RID: 5424
-	// (get) Token: 0x06003CFA RID: 15610 RVA: 0x000D3713 File Offset: 0x000D1913
-	// (set) Token: 0x06003CFB RID: 15611 RVA: 0x000D371A File Offset: 0x000D191A
+	// Token: 0x17001CFC RID: 7420
+	// (get) Token: 0x0600558F RID: 21903 RVA: 0x0002E76B File Offset: 0x0002C96B
+	// (set) Token: 0x06005590 RID: 21904 RVA: 0x0002E772 File Offset: 0x0002C972
 	public static bool IsInitialized { get; private set; }
 
-	// Token: 0x06003CFC RID: 15612 RVA: 0x000D3724 File Offset: 0x000D1924
+	// Token: 0x06005591 RID: 21905 RVA: 0x0014394C File Offset: 0x00141B4C
 	private void Awake()
 	{
 		if (!ChestManager.Instance)
@@ -41,7 +41,7 @@ public class ChestManager : MonoBehaviour
 		UnityEngine.Object.Destroy(base.gameObject);
 	}
 
-	// Token: 0x06003CFD RID: 15613 RVA: 0x000D3770 File Offset: 0x000D1970
+	// Token: 0x06005592 RID: 21906 RVA: 0x0002E77A File Offset: 0x0002C97A
 	private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
 		if (ChestManager.IsInitialized)
@@ -50,7 +50,7 @@ public class ChestManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003CFE RID: 15614 RVA: 0x000D377E File Offset: 0x000D197E
+	// Token: 0x06005593 RID: 21907 RVA: 0x0002E788 File Offset: 0x0002C988
 	private void OnDestroy()
 	{
 		ChestManager.DestroyPools();
@@ -60,14 +60,14 @@ public class ChestManager : MonoBehaviour
 		SceneManager.sceneLoaded -= this.OnSceneLoaded;
 	}
 
-	// Token: 0x06003CFF RID: 15615 RVA: 0x000D37A8 File Offset: 0x000D19A8
+	// Token: 0x06005594 RID: 21908 RVA: 0x0002E7B2 File Offset: 0x0002C9B2
 	private void Initialize()
 	{
 		ChestManager.m_chestTable = new Dictionary<ChestType, GenericPool_RL<ChestObj>>();
 		ChestManager.IsInitialized = true;
 	}
 
-	// Token: 0x06003D00 RID: 15616 RVA: 0x000D37BC File Offset: 0x000D19BC
+	// Token: 0x06005595 RID: 21909 RVA: 0x00143998 File Offset: 0x00141B98
 	private void Internal_CreateBiomePools(BiomeType biomeType)
 	{
 		Dictionary<ChestType, int> dictionary = new Dictionary<ChestType, int>();
@@ -146,7 +146,7 @@ public class ChestManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D01 RID: 15617 RVA: 0x000D3AB8 File Offset: 0x000D1CB8
+	// Token: 0x06005596 RID: 21910 RVA: 0x0002E7C4 File Offset: 0x0002C9C4
 	private GenericPool_RL<ChestObj> CreatePool(ChestObj prefab, int poolSize)
 	{
 		if (!prefab)
@@ -158,7 +158,7 @@ public class ChestManager : MonoBehaviour
 		return genericPool_RL;
 	}
 
-	// Token: 0x06003D02 RID: 15618 RVA: 0x000D3AD3 File Offset: 0x000D1CD3
+	// Token: 0x06005597 RID: 21911 RVA: 0x0002E7DF File Offset: 0x0002C9DF
 	public static ChestObj GetChest(ChestType chestType)
 	{
 		if (ChestManager.m_chestTable.ContainsKey(chestType))
@@ -172,7 +172,7 @@ public class ChestManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003D03 RID: 15619 RVA: 0x000D3B10 File Offset: 0x000D1D10
+	// Token: 0x06005598 RID: 21912 RVA: 0x00143C94 File Offset: 0x00141E94
 	public static void DestroyPools()
 	{
 		foreach (KeyValuePair<ChestType, GenericPool_RL<ChestObj>> keyValuePair in ChestManager.m_chestTable)
@@ -182,13 +182,13 @@ public class ChestManager : MonoBehaviour
 		ChestManager.m_chestTable.Clear();
 	}
 
-	// Token: 0x06003D04 RID: 15620 RVA: 0x000D3B74 File Offset: 0x000D1D74
+	// Token: 0x06005599 RID: 21913 RVA: 0x0002E819 File Offset: 0x0002CA19
 	public static void CreateBiomePools(BiomeType biome)
 	{
 		ChestManager.Instance.Internal_CreateBiomePools(biome);
 	}
 
-	// Token: 0x06003D05 RID: 15621 RVA: 0x000D3B84 File Offset: 0x000D1D84
+	// Token: 0x0600559A RID: 21914 RVA: 0x00143CF8 File Offset: 0x00141EF8
 	public static void DisableAllChests()
 	{
 		foreach (KeyValuePair<ChestType, GenericPool_RL<ChestObj>> keyValuePair in ChestManager.m_chestTable)
@@ -197,19 +197,19 @@ public class ChestManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002DC0 RID: 11712
+	// Token: 0x04003F8B RID: 16267
 	private const int CULLING_GROUP_SIZE = 100;
 
-	// Token: 0x04002DC1 RID: 11713
+	// Token: 0x04003F8C RID: 16268
 	[SerializeField]
 	private int m_poolSize = 5;
 
-	// Token: 0x04002DC2 RID: 11714
+	// Token: 0x04003F8D RID: 16269
 	private static ChestManager m_instance;
 
-	// Token: 0x04002DC3 RID: 11715
+	// Token: 0x04003F8E RID: 16270
 	private static Dictionary<ChestType, GenericPool_RL<ChestObj>> m_chestTable;
 
-	// Token: 0x04002DC4 RID: 11716
+	// Token: 0x04003F8F RID: 16271
 	public const string RESOURCES_PATH = "Prefabs/Managers/HazardManager";
 }

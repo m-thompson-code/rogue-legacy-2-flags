@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000196 RID: 406
+// Token: 0x020002ED RID: 749
 public class DragonPistolWeapon_Ability : PistolWeapon_Ability
 {
-	// Token: 0x17000860 RID: 2144
-	// (get) Token: 0x06000F46 RID: 3910 RVA: 0x0002D59C File Offset: 0x0002B79C
+	// Token: 0x17000AFA RID: 2810
+	// (get) Token: 0x0600171B RID: 5915 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected override bool CanManuallyReload
 	{
 		get
@@ -14,8 +14,8 @@ public class DragonPistolWeapon_Ability : PistolWeapon_Ability
 		}
 	}
 
-	// Token: 0x17000861 RID: 2145
-	// (get) Token: 0x06000F47 RID: 3911 RVA: 0x0002D59F File Offset: 0x0002B79F
+	// Token: 0x17000AFB RID: 2811
+	// (get) Token: 0x0600171C RID: 5916 RVA: 0x0000BB56 File Offset: 0x00009D56
 	public override string ProjectileName
 	{
 		get
@@ -32,7 +32,7 @@ public class DragonPistolWeapon_Ability : PistolWeapon_Ability
 		}
 	}
 
-	// Token: 0x06000F48 RID: 3912 RVA: 0x0002D5C7 File Offset: 0x0002B7C7
+	// Token: 0x0600171D RID: 5917 RVA: 0x0000BB7E File Offset: 0x00009D7E
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -43,7 +43,7 @@ public class DragonPistolWeapon_Ability : PistolWeapon_Ability
 		};
 	}
 
-	// Token: 0x06000F49 RID: 3913 RVA: 0x0002D5F0 File Offset: 0x0002B7F0
+	// Token: 0x0600171E RID: 5918 RVA: 0x0008BE70 File Offset: 0x0008A070
 	protected override void FireProjectile()
 	{
 		if (base.CurrentAmmo > 5)
@@ -62,14 +62,14 @@ public class DragonPistolWeapon_Ability : PistolWeapon_Ability
 		}
 	}
 
-	// Token: 0x06000F4A RID: 3914 RVA: 0x0002D660 File Offset: 0x0002B860
+	// Token: 0x0600171F RID: 5919 RVA: 0x0000BBA7 File Offset: 0x00009DA7
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		base.StopAbility(abilityInterrupted);
 		base.CurrentAmmo = base.MaxAmmo;
 	}
 
-	// Token: 0x04001168 RID: 4456
+	// Token: 0x04001711 RID: 5905
 	[SerializeField]
 	private string m_fireballProjectileName;
 }

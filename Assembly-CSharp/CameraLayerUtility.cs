@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020001CA RID: 458
+// Token: 0x02000342 RID: 834
 [CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Camera Layer Utility")]
 public class CameraLayerUtility : ScriptableObject
 {
-	// Token: 0x17000A02 RID: 2562
-	// (get) Token: 0x06001272 RID: 4722 RVA: 0x00035D3E File Offset: 0x00033F3E
+	// Token: 0x17000CD2 RID: 3282
+	// (get) Token: 0x06001AEE RID: 6894 RVA: 0x0000DF76 File Offset: 0x0000C176
 	public static int DefaultEnemySubLayer
 	{
 		get
@@ -16,8 +16,8 @@ public class CameraLayerUtility : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000A03 RID: 2563
-	// (get) Token: 0x06001273 RID: 4723 RVA: 0x00035D4A File Offset: 0x00033F4A
+	// Token: 0x17000CD3 RID: 3283
+	// (get) Token: 0x06001AEF RID: 6895 RVA: 0x0000DF82 File Offset: 0x0000C182
 	public static int DefaultPlayerSubLayer
 	{
 		get
@@ -26,8 +26,8 @@ public class CameraLayerUtility : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000A04 RID: 2564
-	// (get) Token: 0x06001274 RID: 4724 RVA: 0x00035D56 File Offset: 0x00033F56
+	// Token: 0x17000CD4 RID: 3284
+	// (get) Token: 0x06001AF0 RID: 6896 RVA: 0x0000DF8E File Offset: 0x0000C18E
 	public static int DefaultProjectileSubLayer
 	{
 		get
@@ -36,8 +36,8 @@ public class CameraLayerUtility : ScriptableObject
 		}
 	}
 
-	// Token: 0x17000A05 RID: 2565
-	// (get) Token: 0x06001275 RID: 4725 RVA: 0x00035D64 File Offset: 0x00033F64
+	// Token: 0x17000CD5 RID: 3285
+	// (get) Token: 0x06001AF1 RID: 6897 RVA: 0x000935A0 File Offset: 0x000917A0
 	private static CameraLayerUtility Instance
 	{
 		get
@@ -60,7 +60,7 @@ public class CameraLayerUtility : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001276 RID: 4726 RVA: 0x00035DC4 File Offset: 0x00033FC4
+	// Token: 0x06001AF2 RID: 6898 RVA: 0x00093600 File Offset: 0x00091800
 	private static float GetForegroundOrthoOffset(int order)
 	{
 		order = Mathf.Clamp(order, CameraLayerUtility.Instance.m_foregroundSubLayerRange.x, CameraLayerUtility.Instance.m_foregroundSubLayerRange.y);
@@ -72,7 +72,7 @@ public class CameraLayerUtility : ScriptableObject
 		return (float)(num - 1 - order) * CameraLayerUtility.Instance.m_distanceBetweenForegroundOrthoSubLayers;
 	}
 
-	// Token: 0x06001277 RID: 4727 RVA: 0x00035E68 File Offset: 0x00034068
+	// Token: 0x06001AF3 RID: 6899 RVA: 0x000936A4 File Offset: 0x000918A4
 	private static float GetForegroundPerspOffset(int order)
 	{
 		order = Mathf.Clamp(order, CameraLayerUtility.Instance.m_foregroundSubLayerRange.x, CameraLayerUtility.Instance.m_foregroundSubLayerRange.y);
@@ -84,7 +84,7 @@ public class CameraLayerUtility : ScriptableObject
 		return (float)(num - 1 - order) * CameraLayerUtility.Instance.m_distanceBetweenForegroundPerspSubLayers;
 	}
 
-	// Token: 0x06001278 RID: 4728 RVA: 0x00035F0C File Offset: 0x0003410C
+	// Token: 0x06001AF4 RID: 6900 RVA: 0x00093748 File Offset: 0x00091948
 	private static float GetGameOffset(int order, bool isProp)
 	{
 		order = Mathf.Clamp(order, CameraLayerUtility.Instance.m_gameSubLayerRange.x, CameraLayerUtility.Instance.m_gameSubLayerRange.y);
@@ -109,7 +109,7 @@ public class CameraLayerUtility : ScriptableObject
 		return (float)(-1 * order) * num2;
 	}
 
-	// Token: 0x06001279 RID: 4729 RVA: 0x00036000 File Offset: 0x00034200
+	// Token: 0x06001AF5 RID: 6901 RVA: 0x0009383C File Offset: 0x00091A3C
 	private static float GetBackgroundFarOffset(int order)
 	{
 		order = Mathf.Clamp(order, CameraLayerUtility.Instance.m_backgroundSubLayerRange.x, CameraLayerUtility.Instance.m_backgroundSubLayerRange.y);
@@ -121,7 +121,7 @@ public class CameraLayerUtility : ScriptableObject
 		return (float)(num - 1 - order) * CameraLayerUtility.Instance.m_distanceBetweenBackgroundFarSubLayers;
 	}
 
-	// Token: 0x0600127A RID: 4730 RVA: 0x000360A4 File Offset: 0x000342A4
+	// Token: 0x06001AF6 RID: 6902 RVA: 0x000938E0 File Offset: 0x00091AE0
 	private static float GetBackgroundNearOffset(int order)
 	{
 		order = Mathf.Clamp(order, CameraLayerUtility.Instance.m_backgroundSubLayerRange.x, CameraLayerUtility.Instance.m_backgroundSubLayerRange.y);
@@ -133,7 +133,7 @@ public class CameraLayerUtility : ScriptableObject
 		return (float)(num - 1 - order) * CameraLayerUtility.Instance.m_distanceBetweenBackgroundNearSubLayers;
 	}
 
-	// Token: 0x0600127B RID: 4731 RVA: 0x00036148 File Offset: 0x00034348
+	// Token: 0x06001AF7 RID: 6903 RVA: 0x00093984 File Offset: 0x00091B84
 	private static float GetBackgroundOrthoOffset(int order)
 	{
 		order = Mathf.Clamp(order, CameraLayerUtility.Instance.m_backgroundSubLayerRange.x, CameraLayerUtility.Instance.m_backgroundSubLayerRange.y);
@@ -145,7 +145,7 @@ public class CameraLayerUtility : ScriptableObject
 		return (float)(num - 1 - order) * CameraLayerUtility.Instance.m_distanceBetweenBackgroundOrthoSubLayers;
 	}
 
-	// Token: 0x0600127C RID: 4732 RVA: 0x000361EC File Offset: 0x000343EC
+	// Token: 0x06001AF8 RID: 6904 RVA: 0x00093A28 File Offset: 0x00091C28
 	public static Vector2Int GetSubLayerRange(CameraLayer cameraLayer)
 	{
 		if (cameraLayer <= CameraLayer.Foreground_ORTHO)
@@ -179,7 +179,7 @@ public class CameraLayerUtility : ScriptableObject
 		return Vector2Int.zero;
 	}
 
-	// Token: 0x0600127D RID: 4733 RVA: 0x00036250 File Offset: 0x00034450
+	// Token: 0x06001AF9 RID: 6905 RVA: 0x00093A8C File Offset: 0x00091C8C
 	public static LayerMask GetLayer(CameraLayer cameraLayer)
 	{
 		if (cameraLayer <= CameraLayer.Foreground_ORTHO)
@@ -220,7 +220,7 @@ public class CameraLayerUtility : ScriptableObject
 		throw new ArgumentOutOfRangeException("cameraLayer", string.Format("No case for Camera Layer ({0})", cameraLayer));
 	}
 
-	// Token: 0x0600127E RID: 4734 RVA: 0x00036328 File Offset: 0x00034528
+	// Token: 0x06001AFA RID: 6906 RVA: 0x00093B64 File Offset: 0x00091D64
 	public static float GetTuckYOffset(CameraLayer cameraLayer, int subLayer)
 	{
 		float zdepth = CameraLayerUtility.GetZDepth(cameraLayer, subLayer, false, false);
@@ -229,7 +229,7 @@ public class CameraLayerUtility : ScriptableObject
 		return Mathf.Lerp(CameraLayerUtility.Instance.m_defaultCameraSizeTuckRange.x, CameraLayerUtility.Instance.m_defaultCameraSizeTuckRange.y, t);
 	}
 
-	// Token: 0x0600127F RID: 4735 RVA: 0x00036370 File Offset: 0x00034570
+	// Token: 0x06001AFB RID: 6907 RVA: 0x00093BAC File Offset: 0x00091DAC
 	public static int GetSpriteOrderInLayer(CameraLayer cameraLayer, int order)
 	{
 		if (CameraLayerUtility.m_zPositionTable == null)
@@ -251,7 +251,7 @@ public class CameraLayerUtility : ScriptableObject
 		return CameraLayerUtility.m_zPositionTable[layerID];
 	}
 
-	// Token: 0x06001280 RID: 4736 RVA: 0x000363D8 File Offset: 0x000345D8
+	// Token: 0x06001AFC RID: 6908 RVA: 0x00093C14 File Offset: 0x00091E14
 	public static float GetZDepth(CameraLayer cameraLayer, int order, bool isProp, bool isDeco = false)
 	{
 		float num = 0f;
@@ -325,7 +325,7 @@ public class CameraLayerUtility : ScriptableObject
 		return num + num2 * num3 + num4;
 	}
 
-	// Token: 0x06001281 RID: 4737 RVA: 0x00036590 File Offset: 0x00034790
+	// Token: 0x06001AFD RID: 6909 RVA: 0x00093DCC File Offset: 0x00091FCC
 	private void Reset()
 	{
 		if (Application.isPlaying)
@@ -340,134 +340,134 @@ public class CameraLayerUtility : ScriptableObject
 		}
 	}
 
-	// Token: 0x040012D9 RID: 4825
+	// Token: 0x04001907 RID: 6407
 	[Header("Game Layer Settings")]
 	[SerializeField]
 	private Vector2Int m_gameSubLayerRange = new Vector2Int(-500, 500);
 
-	// Token: 0x040012DA RID: 4826
+	// Token: 0x04001908 RID: 6408
 	[SerializeField]
 	private Vector2 m_gameZPositionRange = new Vector2(-10f, 10f);
 
-	// Token: 0x040012DB RID: 4827
+	// Token: 0x04001909 RID: 6409
 	[SerializeField]
 	private Vector2 m_propGameZPositionRange = new Vector2(-1f, 1f);
 
-	// Token: 0x040012DC RID: 4828
+	// Token: 0x0400190A RID: 6410
 	[Header("Background Settings")]
 	[SerializeField]
 	private Vector2Int m_backgroundSubLayerRange = new Vector2Int(0, 500);
 
-	// Token: 0x040012DD RID: 4829
+	// Token: 0x0400190B RID: 6411
 	[SerializeField]
 	private Vector2 m_backgroundPerspNearZPositionRange = new Vector2(0.5f, 10f);
 
-	// Token: 0x040012DE RID: 4830
+	// Token: 0x0400190C RID: 6412
 	[SerializeField]
 	private Vector2 m_backgroundPerspFarZPositionRange = new Vector2(20f, 50f);
 
-	// Token: 0x040012DF RID: 4831
+	// Token: 0x0400190D RID: 6413
 	[SerializeField]
 	private Vector2 m_backgroundOrthoZPositionRange = new Vector2(0.5f, 5f);
 
-	// Token: 0x040012E0 RID: 4832
+	// Token: 0x0400190E RID: 6414
 	[Header("Foreground Settings")]
 	[SerializeField]
 	private Vector2Int m_foregroundSubLayerRange = new Vector2Int(0, 500);
 
-	// Token: 0x040012E1 RID: 4833
+	// Token: 0x0400190F RID: 6415
 	[SerializeField]
 	private Vector2 m_foregroundPerspZPositionRange = new Vector2(-5f, -0.5f);
 
-	// Token: 0x040012E2 RID: 4834
+	// Token: 0x04001910 RID: 6416
 	[SerializeField]
 	private Vector2 m_foregroundOrthoZPositionRange = new Vector2(-5f, -0.5f);
 
-	// Token: 0x040012E3 RID: 4835
+	// Token: 0x04001911 RID: 6417
 	[Header("Vertical Tuck Settings")]
 	[SerializeField]
 	private Vector2 m_defaultCameraSizeTuckRange = new Vector2(-0.25f, -0.5f);
 
-	// Token: 0x040012E4 RID: 4836
+	// Token: 0x04001912 RID: 6418
 	[Header("Default Sub Layers")]
 	[SerializeField]
 	private int m_defaultPlayerSubLayer = 5000;
 
-	// Token: 0x040012E5 RID: 4837
+	// Token: 0x04001913 RID: 6419
 	[SerializeField]
 	private int m_defaultEnemySubLayer = 2000;
 
-	// Token: 0x040012E6 RID: 4838
+	// Token: 0x04001914 RID: 6420
 	[SerializeField]
 	private int m_defaultProjectileSubLayer = 9000;
 
-	// Token: 0x040012E7 RID: 4839
+	// Token: 0x04001915 RID: 6421
 	private float m_distanceBetweenForegroundPerspSubLayers = -1f;
 
-	// Token: 0x040012E8 RID: 4840
+	// Token: 0x04001916 RID: 6422
 	private float m_distanceBetweenBackgroundNearSubLayers = -1f;
 
-	// Token: 0x040012E9 RID: 4841
+	// Token: 0x04001917 RID: 6423
 	private float m_distanceBetweenForegroundOrthoSubLayers = -1f;
 
-	// Token: 0x040012EA RID: 4842
+	// Token: 0x04001918 RID: 6424
 	private float m_distanceBetweenBackgroundOrthoSubLayers = -1f;
 
-	// Token: 0x040012EB RID: 4843
+	// Token: 0x04001919 RID: 6425
 	private float m_distanceBetweenBackgroundFarSubLayers = -1f;
 
-	// Token: 0x040012EC RID: 4844
+	// Token: 0x0400191A RID: 6426
 	private float m_gameInitialZPosition = -1f;
 
-	// Token: 0x040012ED RID: 4845
+	// Token: 0x0400191B RID: 6427
 	private float m_distanceBetweenGameSubLayers = -1f;
 
-	// Token: 0x040012EE RID: 4846
+	// Token: 0x0400191C RID: 6428
 	private float m_distanceBetweenPropGameSubLayers = -1f;
 
-	// Token: 0x040012EF RID: 4847
+	// Token: 0x0400191D RID: 6429
 	private static CameraLayerUtility m_instance;
 
-	// Token: 0x040012F0 RID: 4848
+	// Token: 0x0400191E RID: 6430
 	private const float DECO_OFFSET = -1E-05f;
 
-	// Token: 0x040012F1 RID: 4849
+	// Token: 0x0400191F RID: 6431
 	private const string RESOURCES_PATH = "Scriptable Objects/CameraLayerUtility";
 
-	// Token: 0x040012F2 RID: 4850
+	// Token: 0x04001920 RID: 6432
 	public const string ASSET_PATH = "Assets/Content/Scriptable Objects/CameraLayerUtility.asset";
 
-	// Token: 0x040012F3 RID: 4851
+	// Token: 0x04001921 RID: 6433
 	private static Dictionary<CameraLayerUtility.LayerID, int> m_zPositionTable;
 
-	// Token: 0x02000AF1 RID: 2801
+	// Token: 0x02000343 RID: 835
 	[Serializable]
 	private class BiomeSubLayerMultiplierEntry
 	{
-		// Token: 0x04004AC3 RID: 19139
+		// Token: 0x04001922 RID: 6434
 		public BiomeType Biome;
 
-		// Token: 0x04004AC4 RID: 19140
+		// Token: 0x04001923 RID: 6435
 		public float ForegroundMultiplier = 1f;
 
-		// Token: 0x04004AC5 RID: 19141
+		// Token: 0x04001924 RID: 6436
 		public float BackgroundMultiplier = 1f;
 	}
 
-	// Token: 0x02000AF2 RID: 2802
+	// Token: 0x02000344 RID: 836
 	private struct LayerID
 	{
-		// Token: 0x06005AEA RID: 23274 RVA: 0x00157CAD File Offset: 0x00155EAD
+		// Token: 0x06001B01 RID: 6913 RVA: 0x0000DFB8 File Offset: 0x0000C1B8
 		public LayerID(CameraLayer cameraLayer, int subLayer)
 		{
 			this.CameraLayer = cameraLayer;
 			this.SubLayer = subLayer;
 		}
 
-		// Token: 0x04004AC6 RID: 19142
+		// Token: 0x04001925 RID: 6437
 		public CameraLayer CameraLayer;
 
-		// Token: 0x04004AC7 RID: 19143
+		// Token: 0x04001926 RID: 6438
 		public int SubLayer;
 	}
 }

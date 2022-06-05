@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020003A8 RID: 936
+// Token: 0x0200063B RID: 1595
 public class GeneticistOmniUIBuyButton : OmniUIButton, IGeneticistOmniUIButton
 {
-	// Token: 0x17000E59 RID: 3673
-	// (get) Token: 0x060022B7 RID: 8887 RVA: 0x00071238 File Offset: 0x0006F438
+	// Token: 0x170012EC RID: 4844
+	// (get) Token: 0x060030CF RID: 12495 RVA: 0x0001AC69 File Offset: 0x00018E69
 	public override EventArgs ButtonEventArgs
 	{
 		get
@@ -15,12 +15,12 @@ public class GeneticistOmniUIBuyButton : OmniUIButton, IGeneticistOmniUIButton
 		}
 	}
 
-	// Token: 0x17000E5A RID: 3674
-	// (get) Token: 0x060022B8 RID: 8888 RVA: 0x00071240 File Offset: 0x0006F440
-	// (set) Token: 0x060022B9 RID: 8889 RVA: 0x00071248 File Offset: 0x0006F448
+	// Token: 0x170012ED RID: 4845
+	// (get) Token: 0x060030D0 RID: 12496 RVA: 0x0001AC71 File Offset: 0x00018E71
+	// (set) Token: 0x060030D1 RID: 12497 RVA: 0x0001AC79 File Offset: 0x00018E79
 	public TraitType TraitType { get; set; }
 
-	// Token: 0x060022BA RID: 8890 RVA: 0x00071251 File Offset: 0x0006F451
+	// Token: 0x060030D2 RID: 12498 RVA: 0x0001AC82 File Offset: 0x00018E82
 	protected override void InitializeButtonEventArgs()
 	{
 		if (this.m_descriptionEventArgs == null)
@@ -31,7 +31,7 @@ public class GeneticistOmniUIBuyButton : OmniUIButton, IGeneticistOmniUIButton
 		this.m_descriptionEventArgs.Initialize(this.TraitType, true);
 	}
 
-	// Token: 0x060022BB RID: 8891 RVA: 0x00071280 File Offset: 0x0006F480
+	// Token: 0x060030D3 RID: 12499 RVA: 0x000D1C7C File Offset: 0x000CFE7C
 	public override void OnConfirmButtonPressed()
 	{
 		base.OnConfirmButtonPressed();
@@ -57,7 +57,7 @@ public class GeneticistOmniUIBuyButton : OmniUIButton, IGeneticistOmniUIButton
 		this.RunOnConfirmPressedAnimation();
 	}
 
-	// Token: 0x060022BC RID: 8892 RVA: 0x0007132C File Offset: 0x0006F52C
+	// Token: 0x060030D4 RID: 12500 RVA: 0x000D1D28 File Offset: 0x000CFF28
 	public override void UpdateState()
 	{
 		if (TraitManager.GetTraitFoundState(this.TraitType) != FoundState.Purchased)
@@ -85,13 +85,13 @@ public class GeneticistOmniUIBuyButton : OmniUIButton, IGeneticistOmniUIButton
 		}
 	}
 
-	// Token: 0x04001DDE RID: 7646
+	// Token: 0x040027FE RID: 10238
 	[SerializeField]
 	private TMP_Text m_buyText;
 
-	// Token: 0x04001DDF RID: 7647
+	// Token: 0x040027FF RID: 10239
 	private bool m_buttonIsUpgrade;
 
-	// Token: 0x04001DE0 RID: 7648
+	// Token: 0x04002800 RID: 10240
 	private GeneticistOmniUIDescriptionEventArgs m_descriptionEventArgs;
 }

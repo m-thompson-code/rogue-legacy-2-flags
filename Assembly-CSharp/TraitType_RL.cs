@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200078A RID: 1930
+// Token: 0x02000C4B RID: 3147
 public static class TraitType_RL
 {
-	// Token: 0x1700164C RID: 5708
-	// (get) Token: 0x0600415E RID: 16734 RVA: 0x000E9389 File Offset: 0x000E7589
+	// Token: 0x17001E48 RID: 7752
+	// (get) Token: 0x06005ADB RID: 23259 RVA: 0x00031DAF File Offset: 0x0002FFAF
 	public static TraitType[] TypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public static class TraitType_RL
 		}
 	}
 
-	// Token: 0x040038F9 RID: 14585
+	// Token: 0x04004BA9 RID: 19369
 	private static TraitType[] m_typeArray;
 }

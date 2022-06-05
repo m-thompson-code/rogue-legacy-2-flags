@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200052C RID: 1324
+// Token: 0x020008B1 RID: 2225
 [Serializable]
 public class StartArena_SummonRule : BaseSummonRule
 {
-	// Token: 0x17001205 RID: 4613
-	// (get) Token: 0x060030C1 RID: 12481 RVA: 0x000A5FFA File Offset: 0x000A41FA
+	// Token: 0x1700183C RID: 6204
+	// (get) Token: 0x060043E3 RID: 17379 RVA: 0x000256FC File Offset: 0x000238FC
 	public override SummonRuleType RuleType
 	{
 		get
@@ -16,8 +16,8 @@ public class StartArena_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x17001206 RID: 4614
-	// (get) Token: 0x060030C2 RID: 12482 RVA: 0x000A6001 File Offset: 0x000A4201
+	// Token: 0x1700183D RID: 6205
+	// (get) Token: 0x060043E4 RID: 17380 RVA: 0x00025703 File Offset: 0x00023903
 	public override string RuleLabel
 	{
 		get
@@ -26,14 +26,14 @@ public class StartArena_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x060030C3 RID: 12483 RVA: 0x000A6008 File Offset: 0x000A4208
+	// Token: 0x060043E5 RID: 17381 RVA: 0x0002570A File Offset: 0x0002390A
 	public override void Initialize(SummonRuleController summonController)
 	{
 		base.Initialize(summonController);
 		this.m_waitUntilPlayerEnterRoomYield = new WaitUntil(() => PlayerManager.IsInstantiated && PlayerManager.GetCurrentPlayerRoom() != null);
 	}
 
-	// Token: 0x060030C4 RID: 12484 RVA: 0x000A603B File Offset: 0x000A423B
+	// Token: 0x060043E6 RID: 17382 RVA: 0x0002573D File Offset: 0x0002393D
 	public override IEnumerator RunSummonRule()
 	{
 		BoxCollider2D collider = (base.SerializedObject != null) ? (base.SerializedObject as BoxCollider2D) : null;
@@ -69,10 +69,10 @@ public class StartArena_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x040026A3 RID: 9891
+	// Token: 0x040034C3 RID: 13507
 	[SerializeField]
 	private bool m_triggerWithInteractAction;
 
-	// Token: 0x040026A4 RID: 9892
+	// Token: 0x040034C4 RID: 13508
 	private WaitUntil m_waitUntilPlayerEnterRoomYield;
 }

@@ -2,11 +2,11 @@
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020001CC RID: 460
+// Token: 0x02000346 RID: 838
 public class CaveLanternPostProcessingController : MonoBehaviour
 {
-	// Token: 0x17000A06 RID: 2566
-	// (get) Token: 0x06001288 RID: 4744 RVA: 0x0003681D File Offset: 0x00034A1D
+	// Token: 0x17000CD6 RID: 3286
+	// (get) Token: 0x06001B06 RID: 6918 RVA: 0x0000DFF8 File Offset: 0x0000C1F8
 	public static IRelayLink OnAwakeRelay
 	{
 		get
@@ -15,13 +15,13 @@ public class CaveLanternPostProcessingController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A07 RID: 2567
-	// (get) Token: 0x06001289 RID: 4745 RVA: 0x00036824 File Offset: 0x00034A24
-	// (set) Token: 0x0600128A RID: 4746 RVA: 0x0003682B File Offset: 0x00034A2B
+	// Token: 0x17000CD7 RID: 3287
+	// (get) Token: 0x06001B07 RID: 6919 RVA: 0x0000DFFF File Offset: 0x0000C1FF
+	// (set) Token: 0x06001B08 RID: 6920 RVA: 0x0000E006 File Offset: 0x0000C206
 	public static CaveLanternPostProcessingController Instance { get; private set; }
 
-	// Token: 0x17000A08 RID: 2568
-	// (get) Token: 0x0600128B RID: 4747 RVA: 0x00036834 File Offset: 0x00034A34
+	// Token: 0x17000CD8 RID: 3288
+	// (get) Token: 0x06001B09 RID: 6921 RVA: 0x00094020 File Offset: 0x00092220
 	private float DarknessAmountWhenFullyLit
 	{
 		get
@@ -32,8 +32,8 @@ public class CaveLanternPostProcessingController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000A09 RID: 2569
-	// (get) Token: 0x0600128C RID: 4748 RVA: 0x00036874 File Offset: 0x00034A74
+	// Token: 0x17000CD9 RID: 3289
+	// (get) Token: 0x06001B0A RID: 6922 RVA: 0x00094060 File Offset: 0x00092260
 	private float SoftnessWhenFullyLit
 	{
 		get
@@ -44,7 +44,7 @@ public class CaveLanternPostProcessingController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600128D RID: 4749 RVA: 0x000368B4 File Offset: 0x00034AB4
+	// Token: 0x06001B0B RID: 6923 RVA: 0x000940A0 File Offset: 0x000922A0
 	private void Awake()
 	{
 		if (!CaveLanternPostProcessingController.Instance)
@@ -64,7 +64,7 @@ public class CaveLanternPostProcessingController : MonoBehaviour
 		CaveLanternPostProcessingController.m_onAwakeRelay.RemoveAll(true, true);
 	}
 
-	// Token: 0x0600128E RID: 4750 RVA: 0x00036934 File Offset: 0x00034B34
+	// Token: 0x06001B0C RID: 6924 RVA: 0x00094120 File Offset: 0x00092320
 	private void OnEnable()
 	{
 		if (SaveManager.PlayerSaveData.GetHeirloomLevel(HeirloomType.CaveLantern) == 0)
@@ -82,7 +82,7 @@ public class CaveLanternPostProcessingController : MonoBehaviour
 		CameraController.ForegroundPostProcessing.AddDimensionOverride(this.m_profile);
 	}
 
-	// Token: 0x0600128F RID: 4751 RVA: 0x000369C3 File Offset: 0x00034BC3
+	// Token: 0x06001B0D RID: 6925 RVA: 0x0000E00E File Offset: 0x0000C20E
 	private void OnDisable()
 	{
 		if (CameraController.IsInstantiated && CameraController.ForegroundPostProcessing)
@@ -91,7 +91,7 @@ public class CaveLanternPostProcessingController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001290 RID: 4752 RVA: 0x000369E8 File Offset: 0x00034BE8
+	// Token: 0x06001B0E RID: 6926 RVA: 0x0000E033 File Offset: 0x0000C233
 	private void OnDestroy()
 	{
 		if (CaveLanternPostProcessingController.Instance == this)
@@ -100,7 +100,7 @@ public class CaveLanternPostProcessingController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001291 RID: 4753 RVA: 0x000369FD File Offset: 0x00034BFD
+	// Token: 0x06001B0F RID: 6927 RVA: 0x0000E048 File Offset: 0x0000C248
 	public static void EnableCaveLanternEffect()
 	{
 		if (CameraController.IsInstantiated && CameraController.ForegroundPostProcessing)
@@ -109,7 +109,7 @@ public class CaveLanternPostProcessingController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001292 RID: 4754 RVA: 0x00036A26 File Offset: 0x00034C26
+	// Token: 0x06001B10 RID: 6928 RVA: 0x0000E071 File Offset: 0x0000C271
 	public static void DisableCaveLanternEffect()
 	{
 		if (CameraController.IsInstantiated && CameraController.ForegroundPostProcessing)
@@ -118,7 +118,7 @@ public class CaveLanternPostProcessingController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001293 RID: 4755 RVA: 0x00036A50 File Offset: 0x00034C50
+	// Token: 0x06001B11 RID: 6929 RVA: 0x000941B0 File Offset: 0x000923B0
 	public static void SetDimnessPercent(float percent)
 	{
 		if (SaveManager.PlayerSaveData.GetHeirloomLevel(HeirloomType.CaveLantern) == 0)
@@ -136,9 +136,9 @@ public class CaveLanternPostProcessingController : MonoBehaviour
 		CameraController.ForegroundPostProcessing.ForceDirty();
 	}
 
-	// Token: 0x040012F6 RID: 4854
+	// Token: 0x04001929 RID: 6441
 	private MobilePostProcessingProfile m_profile;
 
-	// Token: 0x040012F7 RID: 4855
+	// Token: 0x0400192A RID: 6442
 	private static Relay m_onAwakeRelay = new Relay();
 }

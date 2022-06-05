@@ -3,16 +3,16 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Token: 0x0200039D RID: 925
+// Token: 0x0200062F RID: 1583
 public class ChallengeOmniUIEntry : BaseOmniUIEntry
 {
-	// Token: 0x17000E4B RID: 3659
-	// (get) Token: 0x0600227A RID: 8826 RVA: 0x0006FDAB File Offset: 0x0006DFAB
-	// (set) Token: 0x0600227B RID: 8827 RVA: 0x0006FDB3 File Offset: 0x0006DFB3
+	// Token: 0x170012DE RID: 4830
+	// (get) Token: 0x06003092 RID: 12434 RVA: 0x0001AA1A File Offset: 0x00018C1A
+	// (set) Token: 0x06003093 RID: 12435 RVA: 0x0001AA22 File Offset: 0x00018C22
 	public ChallengeType ChallengeType { get; protected set; }
 
-	// Token: 0x17000E4C RID: 3660
-	// (get) Token: 0x0600227C RID: 8828 RVA: 0x0006FDBC File Offset: 0x0006DFBC
+	// Token: 0x170012DF RID: 4831
+	// (get) Token: 0x06003094 RID: 12436 RVA: 0x0001AA2B File Offset: 0x00018C2B
 	public override EventArgs EntryEventArgs
 	{
 		get
@@ -29,8 +29,8 @@ public class ChallengeOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x17000E4D RID: 3661
-	// (get) Token: 0x0600227D RID: 8829 RVA: 0x0006FDF2 File Offset: 0x0006DFF2
+	// Token: 0x170012E0 RID: 4832
+	// (get) Token: 0x06003095 RID: 12437 RVA: 0x0001AA61 File Offset: 0x00018C61
 	public override bool IsEntryActive
 	{
 		get
@@ -39,7 +39,7 @@ public class ChallengeOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x0600227E RID: 8830 RVA: 0x0006FDFC File Offset: 0x0006DFFC
+	// Token: 0x06003096 RID: 12438 RVA: 0x000D0A58 File Offset: 0x000CEC58
 	public void Initialize(ChallengeType challengeType, ChallengeOmniUIWindowController windowController)
 	{
 		this.ChallengeType = challengeType;
@@ -51,7 +51,7 @@ public class ChallengeOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x0600227F RID: 8831 RVA: 0x0006FE40 File Offset: 0x0006E040
+	// Token: 0x06003097 RID: 12439 RVA: 0x000D0A9C File Offset: 0x000CEC9C
 	public override void UpdateActive()
 	{
 		ChallengeData challengeData = ChallengeLibrary.GetChallengeData(this.ChallengeType);
@@ -69,7 +69,7 @@ public class ChallengeOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x06002280 RID: 8832 RVA: 0x0006FEA0 File Offset: 0x0006E0A0
+	// Token: 0x06003098 RID: 12440 RVA: 0x000D0AFC File Offset: 0x000CECFC
 	public override void UpdateState()
 	{
 		ChallengeObj challenge = ChallengeManager.GetChallenge(this.ChallengeType);
@@ -138,7 +138,7 @@ public class ChallengeOmniUIEntry : BaseOmniUIEntry
 		}
 	}
 
-	// Token: 0x06002281 RID: 8833 RVA: 0x00070067 File Offset: 0x0006E267
+	// Token: 0x06003099 RID: 12441 RVA: 0x0001AA69 File Offset: 0x00018C69
 	public override void OnSelect(BaseEventData eventData)
 	{
 		if (!base.Interactable)
@@ -153,13 +153,13 @@ public class ChallengeOmniUIEntry : BaseOmniUIEntry
 		base.OnSelect(eventData);
 	}
 
-	// Token: 0x04001DC2 RID: 7618
+	// Token: 0x040027DB RID: 10203
 	[SerializeField]
 	private Image m_frame;
 
-	// Token: 0x04001DC4 RID: 7620
+	// Token: 0x040027DD RID: 10205
 	private bool m_isEntryActive = true;
 
-	// Token: 0x04001DC5 RID: 7621
+	// Token: 0x040027DE RID: 10206
 	private ChallengeOmniUIDescriptionEventArgs m_eventArgs;
 }

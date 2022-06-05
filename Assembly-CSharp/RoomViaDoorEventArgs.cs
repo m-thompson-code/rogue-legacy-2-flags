@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020007B0 RID: 1968
+// Token: 0x02000C76 RID: 3190
 public class RoomViaDoorEventArgs : EventArgs
 {
-	// Token: 0x0600423F RID: 16959 RVA: 0x000EBAB5 File Offset: 0x000E9CB5
+	// Token: 0x06005BC8 RID: 23496 RVA: 0x000324CB File Offset: 0x000306CB
 	public RoomViaDoorEventArgs(BaseRoom room, Door viaDoor = null)
 	{
 		this.Initialise(room, viaDoor);
 	}
 
-	// Token: 0x06004240 RID: 16960 RVA: 0x000EBAC5 File Offset: 0x000E9CC5
+	// Token: 0x06005BC9 RID: 23497 RVA: 0x000324DB File Offset: 0x000306DB
 	public void Initialise(BaseRoom room, Door viaDoor = null)
 	{
 		this.Room = room;
 		this.ViaDoor = viaDoor;
 	}
 
-	// Token: 0x1700166E RID: 5742
-	// (get) Token: 0x06004241 RID: 16961 RVA: 0x000EBAD5 File Offset: 0x000E9CD5
-	// (set) Token: 0x06004242 RID: 16962 RVA: 0x000EBADD File Offset: 0x000E9CDD
+	// Token: 0x17001E6C RID: 7788
+	// (get) Token: 0x06005BCA RID: 23498 RVA: 0x000324EB File Offset: 0x000306EB
+	// (set) Token: 0x06005BCB RID: 23499 RVA: 0x000324F3 File Offset: 0x000306F3
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x1700166F RID: 5743
-	// (get) Token: 0x06004243 RID: 16963 RVA: 0x000EBAE6 File Offset: 0x000E9CE6
-	// (set) Token: 0x06004244 RID: 16964 RVA: 0x000EBAEE File Offset: 0x000E9CEE
+	// Token: 0x17001E6D RID: 7789
+	// (get) Token: 0x06005BCC RID: 23500 RVA: 0x000324FC File Offset: 0x000306FC
+	// (set) Token: 0x06005BCD RID: 23501 RVA: 0x00032504 File Offset: 0x00030704
 	public Door ViaDoor { get; private set; }
 }

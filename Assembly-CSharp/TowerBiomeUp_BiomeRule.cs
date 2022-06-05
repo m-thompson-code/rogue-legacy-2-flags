@@ -3,12 +3,12 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020005F9 RID: 1529
+// Token: 0x02000A13 RID: 2579
 [CreateAssetMenu(menuName = "Custom/Biome Rules/Tower Biome Up")]
 public class TowerBiomeUp_BiomeRule : BiomeRule
 {
-	// Token: 0x1700137F RID: 4991
-	// (get) Token: 0x0600371D RID: 14109 RVA: 0x000BD0FF File Offset: 0x000BB2FF
+	// Token: 0x17001ACC RID: 6860
+	// (get) Token: 0x06004D94 RID: 19860 RVA: 0x000046FA File Offset: 0x000028FA
 	public override BiomeRuleExecutionTime ExecutionTime
 	{
 		get
@@ -17,7 +17,7 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x0600371E RID: 14110 RVA: 0x000BD104 File Offset: 0x000BB304
+	// Token: 0x06004D95 RID: 19861 RVA: 0x0012BCE0 File Offset: 0x00129EE0
 	private void Initialize()
 	{
 		this.m_lancerWarningProjectiles = new Projectile_RL[this.m_lancerAttackRandomAmount.y];
@@ -28,7 +28,7 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		this.m_isInitialized = true;
 	}
 
-	// Token: 0x0600371F RID: 14111 RVA: 0x000BD187 File Offset: 0x000BB387
+	// Token: 0x06004D96 RID: 19862 RVA: 0x0002A203 File Offset: 0x00028403
 	public override IEnumerator RunRule(BiomeType biome)
 	{
 		if (BurdenManager.IsBurdenActive(BurdenType.TowerBiomeUp))
@@ -46,7 +46,7 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x06003720 RID: 14112 RVA: 0x000BD196 File Offset: 0x000BB396
+	// Token: 0x06004D97 RID: 19863 RVA: 0x0002A212 File Offset: 0x00028412
 	public override void UndoRule(BiomeType biome)
 	{
 		if (this.m_isInitialized)
@@ -56,7 +56,7 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x06003721 RID: 14113 RVA: 0x000BD1BC File Offset: 0x000BB3BC
+	// Token: 0x06004D98 RID: 19864 RVA: 0x0012BD64 File Offset: 0x00129F64
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		RoomViaDoorEventArgs roomViaDoorEventArgs = args as RoomViaDoorEventArgs;
@@ -86,7 +86,7 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x06003722 RID: 14114 RVA: 0x000BD296 File Offset: 0x000BB496
+	// Token: 0x06004D99 RID: 19865 RVA: 0x0002A235 File Offset: 0x00028435
 	private void OnPlayerExitRoom(object sender, EventArgs args)
 	{
 		if (this.m_isInitialized)
@@ -95,8 +95,8 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x17001380 RID: 4992
-	// (get) Token: 0x06003723 RID: 14115 RVA: 0x000BD2A6 File Offset: 0x000BB4A6
+	// Token: 0x17001ACD RID: 6861
+	// (get) Token: 0x06004D9A RID: 19866 RVA: 0x0002A245 File Offset: 0x00028445
 	private Vector2 m_lancerAttack_InitialDelay
 	{
 		get
@@ -105,8 +105,8 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x17001381 RID: 4993
-	// (get) Token: 0x06003724 RID: 14116 RVA: 0x000BD2AD File Offset: 0x000BB4AD
+	// Token: 0x17001ACE RID: 6862
+	// (get) Token: 0x06004D9B RID: 19867 RVA: 0x0002A24C File Offset: 0x0002844C
 	private Vector2 m_lancerAttackRandomDelay
 	{
 		get
@@ -115,8 +115,8 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x17001382 RID: 4994
-	// (get) Token: 0x06003725 RID: 14117 RVA: 0x000BD2B4 File Offset: 0x000BB4B4
+	// Token: 0x17001ACF RID: 6863
+	// (get) Token: 0x06004D9C RID: 19868 RVA: 0x0002A253 File Offset: 0x00028453
 	private Vector2Int m_lancerAttackRandomAmount
 	{
 		get
@@ -125,8 +125,8 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x17001383 RID: 4995
-	// (get) Token: 0x06003726 RID: 14118 RVA: 0x000BD2BB File Offset: 0x000BB4BB
+	// Token: 0x17001AD0 RID: 6864
+	// (get) Token: 0x06004D9D RID: 19869 RVA: 0x0002A25A File Offset: 0x0002845A
 	private Vector2 m_lancerAttack_RandomSpawnInterval
 	{
 		get
@@ -135,8 +135,8 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x17001384 RID: 4996
-	// (get) Token: 0x06003727 RID: 14119 RVA: 0x000BD2C2 File Offset: 0x000BB4C2
+	// Token: 0x17001AD1 RID: 6865
+	// (get) Token: 0x06004D9E RID: 19870 RVA: 0x0002A261 File Offset: 0x00028461
 	private Vector2 m_lancerAttack_RandomPosXOffset
 	{
 		get
@@ -145,8 +145,8 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x17001385 RID: 4997
-	// (get) Token: 0x06003728 RID: 14120 RVA: 0x000BD2C9 File Offset: 0x000BB4C9
+	// Token: 0x17001AD2 RID: 6866
+	// (get) Token: 0x06004D9F RID: 19871 RVA: 0x0002A268 File Offset: 0x00028468
 	private Vector2 m_lancerAttack_RandomPosYOffset
 	{
 		get
@@ -155,7 +155,7 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		}
 	}
 
-	// Token: 0x06003729 RID: 14121 RVA: 0x000BD2D0 File Offset: 0x000BB4D0
+	// Token: 0x06004DA0 RID: 19872 RVA: 0x0002A26F File Offset: 0x0002846F
 	public IEnumerator Lancer_Attack_Coroutine()
 	{
 		float delay = Time.time + UnityEngine.Random.Range(this.m_lancerAttack_InitialDelay.x, this.m_lancerAttack_InitialDelay.y);
@@ -186,7 +186,7 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x0600372A RID: 14122 RVA: 0x000BD2DF File Offset: 0x000BB4DF
+	// Token: 0x06004DA1 RID: 19873 RVA: 0x0002A27E File Offset: 0x0002847E
 	private IEnumerator FireLancerProjectile(int index)
 	{
 		PlayerController playerController = PlayerManager.GetPlayerController();
@@ -218,7 +218,7 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		yield break;
 	}
 
-	// Token: 0x0600372B RID: 14123 RVA: 0x000BD2F8 File Offset: 0x000BB4F8
+	// Token: 0x06004DA2 RID: 19874 RVA: 0x0012BE40 File Offset: 0x0012A040
 	private void StopLancerAttackCoroutine()
 	{
 		for (int i = 0; i < this.m_lancerProjectiles.Length; i++)
@@ -238,7 +238,7 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		this.m_lancerAttackCoroutine = null;
 	}
 
-	// Token: 0x0600372C RID: 14124 RVA: 0x000BD39C File Offset: 0x000BB59C
+	// Token: 0x06004DA3 RID: 19875 RVA: 0x00029EAA File Offset: 0x000280AA
 	protected void StopProjectile(ref Projectile_RL projectile)
 	{
 		if (projectile && projectile.isActiveAndEnabled)
@@ -248,39 +248,39 @@ public class TowerBiomeUp_BiomeRule : BiomeRule
 		projectile = null;
 	}
 
-	// Token: 0x04002A70 RID: 10864
+	// Token: 0x04003AB3 RID: 15027
 	private const string TOWER_WARNING_PROJECTILE = "TowerBiomeUpWarningProjectile";
 
-	// Token: 0x04002A71 RID: 10865
+	// Token: 0x04003AB4 RID: 15028
 	private const string TOWER_EXPLOSION_PROJECTILE = "TowerBiomeUpExplosionProjectile";
 
-	// Token: 0x04002A72 RID: 10866
+	// Token: 0x04003AB5 RID: 15029
 	private const string TOWER_LANCER_PROJECTILE = "TowerBiomeUpLancerProjectile";
 
-	// Token: 0x04002A73 RID: 10867
+	// Token: 0x04003AB6 RID: 15030
 	private BaseRoom m_currentRoom;
 
-	// Token: 0x04002A74 RID: 10868
+	// Token: 0x04003AB7 RID: 15031
 	private Projectile_RL[] m_lancerWarningProjectiles;
 
-	// Token: 0x04002A75 RID: 10869
+	// Token: 0x04003AB8 RID: 15032
 	private Projectile_RL[] m_lancerProjectiles;
 
-	// Token: 0x04002A76 RID: 10870
+	// Token: 0x04003AB9 RID: 15033
 	private Coroutine m_lancerAttackCoroutine;
 
-	// Token: 0x04002A77 RID: 10871
+	// Token: 0x04003ABA RID: 15034
 	private Coroutine[] m_fireProjectileCoroutines;
 
-	// Token: 0x04002A78 RID: 10872
+	// Token: 0x04003ABB RID: 15035
 	private Action<object, EventArgs> m_onPlayerEnterRoom;
 
-	// Token: 0x04002A79 RID: 10873
+	// Token: 0x04003ABC RID: 15036
 	private Action<object, EventArgs> m_onPlayerExitRoom;
 
-	// Token: 0x04002A7A RID: 10874
+	// Token: 0x04003ABD RID: 15037
 	private bool m_isInitialized;
 
-	// Token: 0x04002A7B RID: 10875
+	// Token: 0x04003ABE RID: 15038
 	private float m_lancerAttackWarningDuration = 1.75f;
 }

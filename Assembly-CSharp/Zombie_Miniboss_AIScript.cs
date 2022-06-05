@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000156 RID: 342
+// Token: 0x0200027E RID: 638
 public class Zombie_Miniboss_AIScript : Zombie_Basic_AIScript
 {
-	// Token: 0x17000674 RID: 1652
-	// (get) Token: 0x06000BB6 RID: 2998 RVA: 0x000233FA File Offset: 0x000215FA
+	// Token: 0x170008B2 RID: 2226
+	// (get) Token: 0x06001275 RID: 4725 RVA: 0x00006F6D File Offset: 0x0000516D
 	protected override Vector2 WalkTowardsDuration
 	{
 		get
@@ -14,8 +14,8 @@ public class Zombie_Miniboss_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000675 RID: 1653
-	// (get) Token: 0x06000BB7 RID: 2999 RVA: 0x0002340B File Offset: 0x0002160B
+	// Token: 0x170008B3 RID: 2227
+	// (get) Token: 0x06001276 RID: 4726 RVA: 0x00006F6D File Offset: 0x0000516D
 	protected override Vector2 WalkAwayDuration
 	{
 		get
@@ -24,8 +24,8 @@ public class Zombie_Miniboss_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000676 RID: 1654
-	// (get) Token: 0x06000BB8 RID: 3000 RVA: 0x0002341C File Offset: 0x0002161C
+	// Token: 0x170008B4 RID: 2228
+	// (get) Token: 0x06001277 RID: 4727 RVA: 0x000052A9 File Offset: 0x000034A9
 	protected override float DigDownAnimSpeed
 	{
 		get
@@ -34,8 +34,8 @@ public class Zombie_Miniboss_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000677 RID: 1655
-	// (get) Token: 0x06000BB9 RID: 3001 RVA: 0x00023423 File Offset: 0x00021623
+	// Token: 0x170008B5 RID: 2229
+	// (get) Token: 0x06001278 RID: 4728 RVA: 0x000052A9 File Offset: 0x000034A9
 	protected override float DigUpAnimSpeed
 	{
 		get
@@ -44,8 +44,8 @@ public class Zombie_Miniboss_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000678 RID: 1656
-	// (get) Token: 0x06000BBA RID: 3002 RVA: 0x0002342A File Offset: 0x0002162A
+	// Token: 0x170008B6 RID: 2230
+	// (get) Token: 0x06001279 RID: 4729 RVA: 0x000096A5 File Offset: 0x000078A5
 	protected override Vector2 swing_Dash_AttackSpeed
 	{
 		get
@@ -54,8 +54,8 @@ public class Zombie_Miniboss_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x17000679 RID: 1657
-	// (get) Token: 0x06000BBB RID: 3003 RVA: 0x0002343B File Offset: 0x0002163B
+	// Token: 0x170008B7 RID: 2231
+	// (get) Token: 0x0600127A RID: 4730 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected override float m_swing_Dash_AttackTime
 	{
 		get
@@ -64,8 +64,8 @@ public class Zombie_Miniboss_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700067A RID: 1658
-	// (get) Token: 0x06000BBC RID: 3004 RVA: 0x00023442 File Offset: 0x00021642
+	// Token: 0x170008B8 RID: 2232
+	// (get) Token: 0x0600127B RID: 4731 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float m_swing_AttackCD
 	{
 		get
@@ -74,8 +74,8 @@ public class Zombie_Miniboss_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700067B RID: 1659
-	// (get) Token: 0x06000BBD RID: 3005 RVA: 0x00023449 File Offset: 0x00021649
+	// Token: 0x170008B9 RID: 2233
+	// (get) Token: 0x0600127C RID: 4732 RVA: 0x000096B6 File Offset: 0x000078B6
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -84,8 +84,8 @@ public class Zombie_Miniboss_AIScript : Zombie_Basic_AIScript
 		}
 	}
 
-	// Token: 0x1700067C RID: 1660
-	// (get) Token: 0x06000BBE RID: 3006 RVA: 0x0002345A File Offset: 0x0002165A
+	// Token: 0x170008BA RID: 2234
+	// (get) Token: 0x0600127D RID: 4733 RVA: 0x000096C7 File Offset: 0x000078C7
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get

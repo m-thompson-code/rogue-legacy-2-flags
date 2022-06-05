@@ -5,11 +5,11 @@ using RL_Windows;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x0200055B RID: 1371
+// Token: 0x0200091F RID: 2335
 public class SkillTreeShop : MonoBehaviour, IRootObj, IAudioEventEmitter
 {
-	// Token: 0x17001259 RID: 4697
-	// (get) Token: 0x06003259 RID: 12889 RVA: 0x000AA8EF File Offset: 0x000A8AEF
+	// Token: 0x17001906 RID: 6406
+	// (get) Token: 0x060046E6 RID: 18150 RVA: 0x00026E64 File Offset: 0x00025064
 	public GameObject HubTownCastleParentObj
 	{
 		get
@@ -18,8 +18,8 @@ public class SkillTreeShop : MonoBehaviour, IRootObj, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x1700125A RID: 4698
-	// (get) Token: 0x0600325A RID: 12890 RVA: 0x000AA8F7 File Offset: 0x000A8AF7
+	// Token: 0x17001907 RID: 6407
+	// (get) Token: 0x060046E7 RID: 18151 RVA: 0x00026E6C File Offset: 0x0002506C
 	public bool IsSkillTreeOpen
 	{
 		get
@@ -28,8 +28,8 @@ public class SkillTreeShop : MonoBehaviour, IRootObj, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x1700125B RID: 4699
-	// (get) Token: 0x0600325B RID: 12891 RVA: 0x000AA8FF File Offset: 0x000A8AFF
+	// Token: 0x17001908 RID: 6408
+	// (get) Token: 0x060046E8 RID: 18152 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -38,32 +38,32 @@ public class SkillTreeShop : MonoBehaviour, IRootObj, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x0600325C RID: 12892 RVA: 0x000AA907 File Offset: 0x000A8B07
+	// Token: 0x060046E9 RID: 18153 RVA: 0x00026E74 File Offset: 0x00025074
 	private void Awake()
 	{
 		this.m_skillTreeWindowClosed = new Action<object, EventArgs>(this.SkillTreeWindowClosed);
 	}
 
-	// Token: 0x0600325D RID: 12893 RVA: 0x000AA91B File Offset: 0x000A8B1B
+	// Token: 0x060046EA RID: 18154 RVA: 0x00026E88 File Offset: 0x00025088
 	private void OnEnable()
 	{
 		Messenger<UIMessenger, UIEvent>.AddListener(UIEvent.SkillTree_Closed, this.m_skillTreeWindowClosed);
 	}
 
-	// Token: 0x0600325E RID: 12894 RVA: 0x000AA92A File Offset: 0x000A8B2A
+	// Token: 0x060046EB RID: 18155 RVA: 0x00026E97 File Offset: 0x00025097
 	private void OnDisable()
 	{
 		Messenger<UIMessenger, UIEvent>.RemoveListener(UIEvent.SkillTree_Closed, this.m_skillTreeWindowClosed);
 	}
 
-	// Token: 0x0600325F RID: 12895 RVA: 0x000AA939 File Offset: 0x000A8B39
+	// Token: 0x060046EC RID: 18156 RVA: 0x00026EA6 File Offset: 0x000250A6
 	private void Start()
 	{
 		this.m_playerEnterPositionObj.SetActive(false);
 		this.m_playerExitPositionObj.SetActive(false);
 	}
 
-	// Token: 0x06003260 RID: 12896 RVA: 0x000AA954 File Offset: 0x000A8B54
+	// Token: 0x060046ED RID: 18157 RVA: 0x00114DF0 File Offset: 0x00112FF0
 	public void OpenSkillTree(bool animate)
 	{
 		if (!this.m_isSkillTreeOpen)
@@ -81,7 +81,7 @@ public class SkillTreeShop : MonoBehaviour, IRootObj, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06003261 RID: 12897 RVA: 0x000AA9C7 File Offset: 0x000A8BC7
+	// Token: 0x060046EE RID: 18158 RVA: 0x00026EC0 File Offset: 0x000250C0
 	private IEnumerator OpenSkillTreeCoroutine()
 	{
 		yield return this.MovePlayerToPosition(this.m_playerEnterPositionObj.transform.position);
@@ -95,7 +95,7 @@ public class SkillTreeShop : MonoBehaviour, IRootObj, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x06003262 RID: 12898 RVA: 0x000AA9D6 File Offset: 0x000A8BD6
+	// Token: 0x060046EF RID: 18159 RVA: 0x00026ECF File Offset: 0x000250CF
 	private IEnumerator MovePlayerToPosition(Vector3 playerPos)
 	{
 		PlayerMovementHelper.StopAllMovementInput();
@@ -104,7 +104,7 @@ public class SkillTreeShop : MonoBehaviour, IRootObj, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x06003263 RID: 12899 RVA: 0x000AA9E8 File Offset: 0x000A8BE8
+	// Token: 0x060046F0 RID: 18160 RVA: 0x00114E64 File Offset: 0x00113064
 	private void EnableSkillTreeCastle(bool enableInHubTown)
 	{
 		if (!enableInHubTown)
@@ -137,14 +137,14 @@ public class SkillTreeShop : MonoBehaviour, IRootObj, IAudioEventEmitter
 		}
 	}
 
-	// Token: 0x06003264 RID: 12900 RVA: 0x000AAAFD File Offset: 0x000A8CFD
+	// Token: 0x060046F1 RID: 18161 RVA: 0x00026EDE File Offset: 0x000250DE
 	private void SkillTreeWindowClosed(object sender, EventArgs eventArgs)
 	{
 		this.EnableSkillTreeCastle(true);
 		base.StartCoroutine(this.CloseSkillTreeCoroutine());
 	}
 
-	// Token: 0x06003265 RID: 12901 RVA: 0x000AAB13 File Offset: 0x000A8D13
+	// Token: 0x060046F2 RID: 18162 RVA: 0x00026EF4 File Offset: 0x000250F4
 	private IEnumerator CloseSkillTreeCoroutine()
 	{
 		yield return null;
@@ -153,27 +153,27 @@ public class SkillTreeShop : MonoBehaviour, IRootObj, IAudioEventEmitter
 		yield break;
 	}
 
-	// Token: 0x06003267 RID: 12903 RVA: 0x000AAB2A File Offset: 0x000A8D2A
+	// Token: 0x060046F4 RID: 18164 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400278A RID: 10122
+	// Token: 0x04003691 RID: 13969
 	[SerializeField]
 	private GameObject m_playerEnterPositionObj;
 
-	// Token: 0x0400278B RID: 10123
+	// Token: 0x04003692 RID: 13970
 	[SerializeField]
 	private GameObject m_playerExitPositionObj;
 
-	// Token: 0x0400278C RID: 10124
+	// Token: 0x04003693 RID: 13971
 	[SerializeField]
 	private GameObject m_castleParentObj;
 
-	// Token: 0x0400278D RID: 10125
+	// Token: 0x04003694 RID: 13972
 	private bool m_isSkillTreeOpen;
 
-	// Token: 0x0400278E RID: 10126
+	// Token: 0x04003695 RID: 13973
 	private Action<object, EventArgs> m_skillTreeWindowClosed;
 }

@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000310 RID: 784
+// Token: 0x02000546 RID: 1350
 [Obsolete("Replaced with CurrentExhaust directly on the PlayerController.")]
 public class PlayerExhaustStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D6A RID: 3434
-	// (get) Token: 0x06001EFB RID: 7931 RVA: 0x00063DA3 File Offset: 0x00061FA3
+	// Token: 0x17001171 RID: 4465
+	// (get) Token: 0x06002B42 RID: 11074 RVA: 0x000181D9 File Offset: 0x000163D9
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -16,8 +16,8 @@ public class PlayerExhaustStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D6B RID: 3435
-	// (get) Token: 0x06001EFC RID: 7932 RVA: 0x00063DAA File Offset: 0x00061FAA
+	// Token: 0x17001172 RID: 4466
+	// (get) Token: 0x06002B43 RID: 11075 RVA: 0x00005319 File Offset: 0x00003519
 	public override float StartingDurationOverride
 	{
 		get
@@ -26,21 +26,21 @@ public class PlayerExhaustStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001EFD RID: 7933 RVA: 0x00063DB1 File Offset: 0x00061FB1
+	// Token: 0x06002B44 RID: 11076 RVA: 0x000181E0 File Offset: 0x000163E0
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onPlayerHit = new Action<MonoBehaviour, EventArgs>(this.OnPlayerHit);
 	}
 
-	// Token: 0x06001EFE RID: 7934 RVA: 0x00063DCB File Offset: 0x00061FCB
+	// Token: 0x06002B45 RID: 11077 RVA: 0x000181FA File Offset: 0x000163FA
 	public void SetTimesStacked(int timesStacked)
 	{
 		base.TimesStacked = Mathf.Clamp(timesStacked, 0, int.MaxValue);
 		this.m_charController.StatusBarController.ApplyUIEffect(StatusBarEntryType.Exhaust, base.Duration, int.MaxValue, base.TimesStacked);
 	}
 
-	// Token: 0x06001EFF RID: 7935 RVA: 0x00063E02 File Offset: 0x00062002
+	// Token: 0x06002B46 RID: 11078 RVA: 0x00018231 File Offset: 0x00016431
 	public override void StartEffect(float duration, IDamageObj caster)
 	{
 		base.StartEffect(duration, caster);
@@ -51,7 +51,7 @@ public class PlayerExhaustStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001F00 RID: 7936 RVA: 0x00063E27 File Offset: 0x00062027
+	// Token: 0x06002B47 RID: 11079 RVA: 0x00018256 File Offset: 0x00016456
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.SetTimesStacked(base.TimesStacked);
@@ -63,12 +63,12 @@ public class PlayerExhaustStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001F01 RID: 7937 RVA: 0x00063E36 File Offset: 0x00062036
+	// Token: 0x06002B48 RID: 11080 RVA: 0x00002FCA File Offset: 0x000011CA
 	private void OnPlayerHit(object sender, EventArgs args)
 	{
 	}
 
-	// Token: 0x06001F02 RID: 7938 RVA: 0x00063E38 File Offset: 0x00062038
+	// Token: 0x06002B49 RID: 11081 RVA: 0x00018265 File Offset: 0x00016465
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
@@ -76,9 +76,9 @@ public class PlayerExhaustStatusEffect : BaseStatusEffect
 		this.m_hitListenerAdded = false;
 	}
 
-	// Token: 0x04001BEA RID: 7146
+	// Token: 0x040024D2 RID: 9426
 	private bool m_hitListenerAdded;
 
-	// Token: 0x04001BEB RID: 7147
+	// Token: 0x040024D3 RID: 9427
 	private Action<MonoBehaviour, EventArgs> m_onPlayerHit;
 }

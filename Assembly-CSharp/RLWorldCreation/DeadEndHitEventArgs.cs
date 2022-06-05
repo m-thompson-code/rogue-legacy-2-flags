@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace RLWorldCreation
 {
-	// Token: 0x0200088A RID: 2186
+	// Token: 0x02000DAA RID: 3498
 	public class DeadEndHitEventArgs : BiomeCreationEventArgs
 	{
-		// Token: 0x060047C4 RID: 18372 RVA: 0x00102155 File Offset: 0x00100355
+		// Token: 0x060062C2 RID: 25282 RVA: 0x000366CF File Offset: 0x000348CF
 		public DeadEndHitEventArgs(int roomNumber, int startLookingIndex, int stopLookingIndex, IEnumerable<GridPointManager> checkedRooms, GridPointManager chosenRoom)
 		{
 			this.RoomNumber = roomNumber;
@@ -16,24 +16,24 @@ namespace RLWorldCreation
 			this.ChosenRoom = chosenRoom;
 		}
 
-		// Token: 0x1700178A RID: 6026
-		// (get) Token: 0x060047C5 RID: 18373 RVA: 0x00102182 File Offset: 0x00100382
+		// Token: 0x17001FEC RID: 8172
+		// (get) Token: 0x060062C3 RID: 25283 RVA: 0x000366FC File Offset: 0x000348FC
 		public int RoomNumber { get; }
 
-		// Token: 0x1700178B RID: 6027
-		// (get) Token: 0x060047C6 RID: 18374 RVA: 0x0010218A File Offset: 0x0010038A
+		// Token: 0x17001FED RID: 8173
+		// (get) Token: 0x060062C4 RID: 25284 RVA: 0x00036704 File Offset: 0x00034904
 		public int StartLookingIndex { get; }
 
-		// Token: 0x1700178C RID: 6028
-		// (get) Token: 0x060047C7 RID: 18375 RVA: 0x00102192 File Offset: 0x00100392
+		// Token: 0x17001FEE RID: 8174
+		// (get) Token: 0x060062C5 RID: 25285 RVA: 0x0003670C File Offset: 0x0003490C
 		public int StopLookingIndex { get; }
 
-		// Token: 0x1700178D RID: 6029
-		// (get) Token: 0x060047C8 RID: 18376 RVA: 0x0010219A File Offset: 0x0010039A
+		// Token: 0x17001FEF RID: 8175
+		// (get) Token: 0x060062C6 RID: 25286 RVA: 0x00036714 File Offset: 0x00034914
 		public IEnumerable<GridPointManager> CheckedRooms { get; }
 
-		// Token: 0x1700178E RID: 6030
-		// (get) Token: 0x060047C9 RID: 18377 RVA: 0x001021A2 File Offset: 0x001003A2
+		// Token: 0x17001FF0 RID: 8176
+		// (get) Token: 0x060062C7 RID: 25287 RVA: 0x0003671C File Offset: 0x0003491C
 		public GridPointManager ChosenRoom { get; }
 	}
 }

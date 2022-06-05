@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000816 RID: 2070
+// Token: 0x02000CE8 RID: 3304
 public static class SpecialItemDropUtility
 {
-	// Token: 0x06004459 RID: 17497 RVA: 0x000F1B90 File Offset: 0x000EFD90
+	// Token: 0x06005E19 RID: 24089 RVA: 0x0015F848 File Offset: 0x0015DA48
 	public static IBlueprintDrop GetBlueprintDrop(int chestLevel, int chestRarityLevel)
 	{
 		EquipmentObj randomEquipment = SpecialItemDropUtility.GetRandomEquipment(chestLevel, chestRarityLevel);
@@ -17,7 +17,7 @@ public static class SpecialItemDropUtility
 		return new BlueprintDrop(randomEquipment.CategoryType, randomEquipment.EquipmentType);
 	}
 
-	// Token: 0x0600445A RID: 17498 RVA: 0x000F1BCC File Offset: 0x000EFDCC
+	// Token: 0x06005E1A RID: 24090 RVA: 0x0015F884 File Offset: 0x0015DA84
 	public static IBlueprintDrop GetFinalBlueprintDrop(EquipmentCategoryType categoryType)
 	{
 		EquipmentObj randomFinalEquipment = SpecialItemDropUtility.GetRandomFinalEquipment(categoryType);
@@ -29,7 +29,7 @@ public static class SpecialItemDropUtility
 		return new BlueprintDrop(randomFinalEquipment.CategoryType, randomFinalEquipment.EquipmentType);
 	}
 
-	// Token: 0x0600445B RID: 17499 RVA: 0x000F1C08 File Offset: 0x000EFE08
+	// Token: 0x06005E1B RID: 24091 RVA: 0x0015F8C0 File Offset: 0x0015DAC0
 	public static IRuneDrop GetRuneDrop(int chestLevel)
 	{
 		RuneType randomRune = SpecialItemDropUtility.GetRandomRune(chestLevel);
@@ -41,7 +41,7 @@ public static class SpecialItemDropUtility
 		return new RuneDrop(randomRune);
 	}
 
-	// Token: 0x0600445C RID: 17500 RVA: 0x000F1C38 File Offset: 0x000EFE38
+	// Token: 0x06005E1C RID: 24092 RVA: 0x0015F8F0 File Offset: 0x0015DAF0
 	public static IChallengeDrop GetChallengeDrop()
 	{
 		ChallengeType randomChallenge = SpecialItemDropUtility.GetRandomChallenge();
@@ -53,20 +53,20 @@ public static class SpecialItemDropUtility
 		return new ChallengeDrop(randomChallenge);
 	}
 
-	// Token: 0x0600445D RID: 17501 RVA: 0x000F1C68 File Offset: 0x000EFE68
+	// Token: 0x06005E1D RID: 24093 RVA: 0x0015F920 File Offset: 0x0015DB20
 	public static IRelicDrop GetRandomRelicDrop()
 	{
 		RelicType[] typeArray = RelicType_RL.TypeArray;
 		return new RelicDrop(typeArray[UnityEngine.Random.Range(1, typeArray.Length)], RelicModType.None);
 	}
 
-	// Token: 0x0600445E RID: 17502 RVA: 0x000F1C91 File Offset: 0x000EFE91
+	// Token: 0x06005E1E RID: 24094 RVA: 0x00033CFA File Offset: 0x00031EFA
 	public static IWeaponDrop GetWeaponDrop()
 	{
 		return new WeaponDrop(AbilityType.AxeWeapon);
 	}
 
-	// Token: 0x0600445F RID: 17503 RVA: 0x000F1CA0 File Offset: 0x000EFEA0
+	// Token: 0x06005E1F RID: 24095 RVA: 0x0015F94C File Offset: 0x0015DB4C
 	private static EquipmentObj GetRandomEquipment(int chestLevel, int chestRarityLevel)
 	{
 		SpecialItemDropUtility.m_equipmentListHelper.Clear();
@@ -114,7 +114,7 @@ public static class SpecialItemDropUtility
 		return null;
 	}
 
-	// Token: 0x06004460 RID: 17504 RVA: 0x000F1E2C File Offset: 0x000F002C
+	// Token: 0x06005E20 RID: 24096 RVA: 0x0015FAD8 File Offset: 0x0015DCD8
 	private static EquipmentObj GetRandomFinalEquipment(EquipmentCategoryType categoryType)
 	{
 		SpecialItemDropUtility.m_equipmentListHelper.Clear();
@@ -159,7 +159,7 @@ public static class SpecialItemDropUtility
 		return null;
 	}
 
-	// Token: 0x06004461 RID: 17505 RVA: 0x000F1F58 File Offset: 0x000F0158
+	// Token: 0x06005E21 RID: 24097 RVA: 0x0015FC04 File Offset: 0x0015DE04
 	private static RuneType GetRandomRune(int chestLevel)
 	{
 		SpecialItemDropUtility.m_runeListHelper.Clear();
@@ -201,7 +201,7 @@ public static class SpecialItemDropUtility
 		return RuneType.None;
 	}
 
-	// Token: 0x06004462 RID: 17506 RVA: 0x000F2090 File Offset: 0x000F0290
+	// Token: 0x06005E22 RID: 24098 RVA: 0x0015FD3C File Offset: 0x0015DF3C
 	private static ChallengeType GetRandomChallenge()
 	{
 		SpecialItemDropUtility.m_challengeListHelper.Clear();
@@ -237,7 +237,7 @@ public static class SpecialItemDropUtility
 		return ChallengeType.None;
 	}
 
-	// Token: 0x06004463 RID: 17507 RVA: 0x000F2173 File Offset: 0x000F0373
+	// Token: 0x06005E23 RID: 24099 RVA: 0x00033D08 File Offset: 0x00031F08
 	private static bool HasHeirloom(RuneType runeType)
 	{
 		if (runeType != RuneType.Dash)
@@ -247,15 +247,15 @@ public static class SpecialItemDropUtility
 		return SaveManager.PlayerSaveData.GetHeirloomLevel(HeirloomType.UnlockAirDash) > 0;
 	}
 
-	// Token: 0x04003A59 RID: 14937
+	// Token: 0x04004D4C RID: 19788
 	private static List<EquipmentObj> m_equipmentListHelper = new List<EquipmentObj>();
 
-	// Token: 0x04003A5A RID: 14938
+	// Token: 0x04004D4D RID: 19789
 	private static List<RuneType> m_runeListHelper = new List<RuneType>();
 
-	// Token: 0x04003A5B RID: 14939
+	// Token: 0x04004D4E RID: 19790
 	private static List<ChallengeType> m_challengeListHelper = new List<ChallengeType>();
 
-	// Token: 0x04003A5C RID: 14940
+	// Token: 0x04004D4F RID: 19791
 	private static List<ChallengeType> m_challengeGoldListHelper = new List<ChallengeType>();
 }

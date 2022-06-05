@@ -2,15 +2,15 @@
 
 namespace GameEventTracking
 {
-	// Token: 0x020008A0 RID: 2208
+	// Token: 0x02000DCD RID: 3533
 	public interface IGameEventData
 	{
-		// Token: 0x1700179D RID: 6045
-		// (get) Token: 0x0600481F RID: 18463
+		// Token: 0x1700200F RID: 8207
+		// (get) Token: 0x0600635A RID: 25434
 		float TimeStamp { get; }
 
-		// Token: 0x1700179E RID: 6046
-		// (get) Token: 0x06004820 RID: 18464
+		// Token: 0x17002010 RID: 8208
+		// (get) Token: 0x0600635B RID: 25435
 		int TimesLoaded { get; }
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200015C RID: 348
+// Token: 0x02000288 RID: 648
 public static class FireProjectileFromRoomPos_AIExtension
 {
-	// Token: 0x06000BCA RID: 3018 RVA: 0x000237F8 File Offset: 0x000219F8
+	// Token: 0x060012A1 RID: 4769 RVA: 0x00082410 File Offset: 0x00080610
 	public static Projectile_RL FireProjectileFromRoomPos(this BaseAIScript aiScript, string projectileName, int spawnPosIndex, bool matchFacing = true, float angle = 0f, float speedMod = 1f)
 	{
 		SpawnPositionController componentInChildren = aiScript.EnemyController.Room.gameObject.GetComponentInChildren<SpawnPositionController>();

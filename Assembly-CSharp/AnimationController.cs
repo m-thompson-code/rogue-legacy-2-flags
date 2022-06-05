@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x020001AD RID: 429
+// Token: 0x0200031B RID: 795
 public class AnimationController : MonoBehaviour
 {
-	// Token: 0x17000984 RID: 2436
-	// (get) Token: 0x0600110E RID: 4366 RVA: 0x0003132D File Offset: 0x0002F52D
-	// (set) Token: 0x0600110F RID: 4367 RVA: 0x00031335 File Offset: 0x0002F535
+	// Token: 0x17000C44 RID: 3140
+	// (get) Token: 0x06001955 RID: 6485 RVA: 0x0000CBE7 File Offset: 0x0000ADE7
+	// (set) Token: 0x06001956 RID: 6486 RVA: 0x0000CBEF File Offset: 0x0000ADEF
 	public Animator Animator
 	{
 		get
@@ -21,9 +21,9 @@ public class AnimationController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000985 RID: 2437
-	// (get) Token: 0x06001110 RID: 4368 RVA: 0x0003133E File Offset: 0x0002F53E
-	// (set) Token: 0x06001111 RID: 4369 RVA: 0x00031346 File Offset: 0x0002F546
+	// Token: 0x17000C45 RID: 3141
+	// (get) Token: 0x06001957 RID: 6487 RVA: 0x0000CBF8 File Offset: 0x0000ADF8
+	// (set) Token: 0x06001958 RID: 6488 RVA: 0x0000CC00 File Offset: 0x0000AE00
 	public List<AnimationControllerEntry> AnimationEntries
 	{
 		get
@@ -36,7 +36,7 @@ public class AnimationController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001112 RID: 4370 RVA: 0x00031350 File Offset: 0x0002F550
+	// Token: 0x06001959 RID: 6489 RVA: 0x0008F8E8 File Offset: 0x0008DAE8
 	private void OnValidate()
 	{
 		if (this.m_entries != null)
@@ -48,7 +48,7 @@ public class AnimationController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001113 RID: 4371 RVA: 0x00031390 File Offset: 0x0002F590
+	// Token: 0x0600195A RID: 6490 RVA: 0x0008F928 File Offset: 0x0008DB28
 	public void Trigger(int animationEntryID)
 	{
 		if (this.Animator != null)
@@ -89,7 +89,7 @@ public class AnimationController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001114 RID: 4372 RVA: 0x00031450 File Offset: 0x0002F650
+	// Token: 0x0600195B RID: 6491 RVA: 0x0008F9E8 File Offset: 0x0008DBE8
 	private AnimationControllerEntry GetEntry(int animationEntryID)
 	{
 		if (this.AnimationEntries != null && this.AnimationEntries.Count > 0 && animationEntryID >= 0 && animationEntryID < this.AnimationEntries.Count)
@@ -114,13 +114,13 @@ public class AnimationController : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06001115 RID: 4373 RVA: 0x000314EC File Offset: 0x0002F6EC
+	// Token: 0x0600195C RID: 6492 RVA: 0x0008FA84 File Offset: 0x0008DC84
 	public bool GetParameterExistsInAnimator(string animatorParameter)
 	{
 		return this.Animator != null && this.Animator.parameters.Any((AnimatorControllerParameter parameter) => parameter.name == animatorParameter);
 	}
 
-	// Token: 0x06001116 RID: 4374 RVA: 0x00031534 File Offset: 0x0002F734
+	// Token: 0x0600195D RID: 6493 RVA: 0x0008FACC File Offset: 0x0008DCCC
 	public bool GetIsParameterTypeValid(AnimationControllerEntry entry)
 	{
 		if (entry != null && this.Animator != null && this.AnimationEntries != null && this.AnimationEntries.Count > 0 && this.GetParameterExistsInAnimator(entry.AnimationParameter))
@@ -140,11 +140,11 @@ public class AnimationController : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x040011FF RID: 4607
+	// Token: 0x04001807 RID: 6151
 	[SerializeField]
 	private Animator m_animator;
 
-	// Token: 0x04001200 RID: 4608
+	// Token: 0x04001808 RID: 6152
 	[SerializeField]
 	private List<AnimationControllerEntry> m_entries;
 }

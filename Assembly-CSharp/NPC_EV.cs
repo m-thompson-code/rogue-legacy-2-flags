@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000075 RID: 117
+// Token: 0x0200007D RID: 125
 public static class NPC_EV
 {
-	// Token: 0x060001AB RID: 427 RVA: 0x000107A8 File Offset: 0x0000E9A8
+	// Token: 0x060001BF RID: 447 RVA: 0x0004CCB8 File Offset: 0x0004AEB8
 	public static float GetArchitectGoldMod(int timesCastleLocked = -1)
 	{
 		if (timesCastleLocked == -1)
@@ -20,22 +20,22 @@ public static class NPC_EV
 		return 1f;
 	}
 
-	// Token: 0x040003CE RID: 974
+	// Token: 0x040003EF RID: 1007
 	public const float TELEPORTER_NG_COST_MULTIPLIER = 2.5f;
 
-	// Token: 0x040003CF RID: 975
+	// Token: 0x040003F0 RID: 1008
 	public const float TELEPORTER_NG_COST_EXPONENTIAL = 250f;
 
-	// Token: 0x040003D0 RID: 976
+	// Token: 0x040003F1 RID: 1009
 	public const float ARCHITECT_BASE_PRICE_MOD = 0f;
 
-	// Token: 0x040003D1 RID: 977
+	// Token: 0x040003F2 RID: 1010
 	public const float ARCHITECT_GOLD_REDUCTION_MOD = 0.2f;
 
-	// Token: 0x040003D2 RID: 978
+	// Token: 0x040003F3 RID: 1011
 	public const float ARCHITECT_MIN_GOLD_MOD = 0.3f;
 
-	// Token: 0x040003D3 RID: 979
+	// Token: 0x040003F4 RID: 1012
 	public static Dictionary<BiomeType, int> PIZZA_GIRL_TELEPORTER_COST_TABLE = new Dictionary<BiomeType, int>
 	{
 		{

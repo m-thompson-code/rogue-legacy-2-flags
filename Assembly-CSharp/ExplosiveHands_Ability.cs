@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000198 RID: 408
+// Token: 0x020002F0 RID: 752
 public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 {
-	// Token: 0x1700086E RID: 2158
-	// (get) Token: 0x06000F5F RID: 3935 RVA: 0x0002D849 File Offset: 0x0002BA49
+	// Token: 0x17000B0A RID: 2826
+	// (get) Token: 0x0600173A RID: 5946 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -14,8 +14,8 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x1700086F RID: 2159
-	// (get) Token: 0x06000F60 RID: 3936 RVA: 0x0002D850 File Offset: 0x0002BA50
+	// Token: 0x17000B0B RID: 2827
+	// (get) Token: 0x0600173B RID: 5947 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -24,8 +24,8 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000870 RID: 2160
-	// (get) Token: 0x06000F61 RID: 3937 RVA: 0x0002D857 File Offset: 0x0002BA57
+	// Token: 0x17000B0C RID: 2828
+	// (get) Token: 0x0600173C RID: 5948 RVA: 0x00003C54 File Offset: 0x00001E54
 	protected override float TellAnimSpeed
 	{
 		get
@@ -34,8 +34,8 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000871 RID: 2161
-	// (get) Token: 0x06000F62 RID: 3938 RVA: 0x0002D85E File Offset: 0x0002BA5E
+	// Token: 0x17000B0D RID: 2829
+	// (get) Token: 0x0600173D RID: 5949 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -44,8 +44,8 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000872 RID: 2162
-	// (get) Token: 0x06000F63 RID: 3939 RVA: 0x0002D865 File Offset: 0x0002BA65
+	// Token: 0x17000B0E RID: 2830
+	// (get) Token: 0x0600173E RID: 5950 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -54,8 +54,8 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000873 RID: 2163
-	// (get) Token: 0x06000F64 RID: 3940 RVA: 0x0002D86C File Offset: 0x0002BA6C
+	// Token: 0x17000B0F RID: 2831
+	// (get) Token: 0x0600173F RID: 5951 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -64,8 +64,8 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000874 RID: 2164
-	// (get) Token: 0x06000F65 RID: 3941 RVA: 0x0002D873 File Offset: 0x0002BA73
+	// Token: 0x17000B10 RID: 2832
+	// (get) Token: 0x06001740 RID: 5952 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -74,8 +74,8 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000875 RID: 2165
-	// (get) Token: 0x06000F66 RID: 3942 RVA: 0x0002D87A File Offset: 0x0002BA7A
+	// Token: 0x17000B11 RID: 2833
+	// (get) Token: 0x06001741 RID: 5953 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -84,8 +84,8 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000876 RID: 2166
-	// (get) Token: 0x06000F67 RID: 3943 RVA: 0x0002D881 File Offset: 0x0002BA81
+	// Token: 0x17000B12 RID: 2834
+	// (get) Token: 0x06001742 RID: 5954 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -94,8 +94,8 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000877 RID: 2167
-	// (get) Token: 0x06000F68 RID: 3944 RVA: 0x0002D888 File Offset: 0x0002BA88
+	// Token: 0x17000B13 RID: 2835
+	// (get) Token: 0x06001743 RID: 5955 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -104,8 +104,8 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x17000878 RID: 2168
-	// (get) Token: 0x06000F69 RID: 3945 RVA: 0x0002D88F File Offset: 0x0002BA8F
+	// Token: 0x17000B14 RID: 2836
+	// (get) Token: 0x06001744 RID: 5956 RVA: 0x0000BC8B File Offset: 0x00009E8B
 	public override string AbilityTellIntroName
 	{
 		get
@@ -118,7 +118,7 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x06000F6A RID: 3946 RVA: 0x0002D8A6 File Offset: 0x0002BAA6
+	// Token: 0x06001745 RID: 5957 RVA: 0x0000BCA2 File Offset: 0x00009EA2
 	public override void PreCastAbility()
 	{
 		if (Time.time - this.m_timeSinceLastCast < 1f)
@@ -133,7 +133,7 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000F6B RID: 3947 RVA: 0x0002D8E4 File Offset: 0x0002BAE4
+	// Token: 0x06001746 RID: 5958 RVA: 0x0008C05C File Offset: 0x0008A25C
 	protected override void FireProjectile()
 	{
 		if (!string.IsNullOrEmpty(this.ProjectileName))
@@ -144,21 +144,21 @@ public class ExplosiveHands_Ability : BaseAbility_RL, IAttack, IAbility
 		}
 	}
 
-	// Token: 0x04001172 RID: 4466
+	// Token: 0x0400171F RID: 5919
 	[SerializeField]
 	private string m_altSpellCast;
 
-	// Token: 0x04001173 RID: 4467
+	// Token: 0x04001720 RID: 5920
 	[SerializeField]
 	private bool m_projectileMatchFacing = true;
 
-	// Token: 0x04001174 RID: 4468
+	// Token: 0x04001721 RID: 5921
 	[SerializeField]
 	private float m_fireAngle;
 
-	// Token: 0x04001175 RID: 4469
+	// Token: 0x04001722 RID: 5922
 	private bool m_useAltCast;
 
-	// Token: 0x04001176 RID: 4470
+	// Token: 0x04001723 RID: 5923
 	private float m_timeSinceLastCast;
 }

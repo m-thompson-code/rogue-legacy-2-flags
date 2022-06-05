@@ -1,17 +1,17 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020002A0 RID: 672
+// Token: 0x0200046E RID: 1134
 public class ToggleSuperInputOptionItem : SelectionListOptionItem
 {
-	// Token: 0x06001A12 RID: 6674 RVA: 0x00052181 File Offset: 0x00050381
+	// Token: 0x0600240D RID: 9229 RVA: 0x00013EE4 File Offset: 0x000120E4
 	protected override void Awake()
 	{
 		base.Awake();
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06001A13 RID: 6675 RVA: 0x00052195 File Offset: 0x00050395
+	// Token: 0x0600240E RID: 9230 RVA: 0x00013EF8 File Offset: 0x000120F8
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -22,7 +22,7 @@ public class ToggleSuperInputOptionItem : SelectionListOptionItem
 		}
 	}
 
-	// Token: 0x06001A14 RID: 6676 RVA: 0x000521CD File Offset: 0x000503CD
+	// Token: 0x0600240F RID: 9231 RVA: 0x00013F30 File Offset: 0x00012130
 	public override void Initialize()
 	{
 		this.m_selectionLocIDArray = new string[]
@@ -34,13 +34,13 @@ public class ToggleSuperInputOptionItem : SelectionListOptionItem
 		base.Initialize();
 	}
 
-	// Token: 0x06001A15 RID: 6677 RVA: 0x00052207 File Offset: 0x00050407
+	// Token: 0x06002410 RID: 9232 RVA: 0x00013F6A File Offset: 0x0001216A
 	public override void InvokeValueChange()
 	{
 		Debug.Log("Toggle Super input Vsync to: " + base.CurrentSelectionString);
 	}
 
-	// Token: 0x06001A16 RID: 6678 RVA: 0x0005221E File Offset: 0x0005041E
+	// Token: 0x06002411 RID: 9233 RVA: 0x00013F81 File Offset: 0x00012181
 	public override void ConfirmOptionChange()
 	{
 		if (this.m_selectedIndex == 1)

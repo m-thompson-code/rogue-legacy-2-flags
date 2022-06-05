@@ -2,16 +2,16 @@
 using Spawn;
 using UnityEngine;
 
-// Token: 0x0200060A RID: 1546
+// Token: 0x02000A2B RID: 2603
 public class Ferr2DSpawnController : SimpleSpawnController
 {
-	// Token: 0x06003838 RID: 14392 RVA: 0x000C0059 File Offset: 0x000BE259
+	// Token: 0x06004ED5 RID: 20181 RVA: 0x0002AFEC File Offset: 0x000291EC
 	private void Awake()
 	{
 		this.m_ferr2D = base.GetComponent<Ferr2DT_PathTerrain>();
 	}
 
-	// Token: 0x06003839 RID: 14393 RVA: 0x000C0068 File Offset: 0x000BE268
+	// Token: 0x06004ED6 RID: 20182 RVA: 0x0012E4F0 File Offset: 0x0012C6F0
 	protected override void DoIsSpawned()
 	{
 		if (base.Room == null)
@@ -53,10 +53,10 @@ public class Ferr2DSpawnController : SimpleSpawnController
 		throw new ArgumentNullException("ferr2DComponent");
 	}
 
-	// Token: 0x04002AEC RID: 10988
+	// Token: 0x04003B4F RID: 15183
 	[SerializeField]
 	private PropSpawnControllerData m_spawnControllerData;
 
-	// Token: 0x04002AED RID: 10989
+	// Token: 0x04003B50 RID: 15184
 	private Ferr2DT_PathTerrain m_ferr2D;
 }

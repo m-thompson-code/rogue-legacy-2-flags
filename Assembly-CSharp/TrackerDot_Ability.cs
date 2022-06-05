@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200017A RID: 378
+// Token: 0x020002BC RID: 700
 public class TrackerDot_Ability : FollowTargetAbility_RL
 {
-	// Token: 0x17000732 RID: 1842
-	// (get) Token: 0x06000D4F RID: 3407 RVA: 0x00028A25 File Offset: 0x00026C25
+	// Token: 0x170009A2 RID: 2466
+	// (get) Token: 0x060014A6 RID: 5286 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override AbilityAnimState StateToHoldAttackOn
 	{
 		get
@@ -14,7 +14,7 @@ public class TrackerDot_Ability : FollowTargetAbility_RL
 		}
 	}
 
-	// Token: 0x06000D50 RID: 3408 RVA: 0x00028A28 File Offset: 0x00026C28
+	// Token: 0x060014A7 RID: 5287 RVA: 0x00087AF0 File Offset: 0x00085CF0
 	protected override void FireProjectile()
 	{
 		if (!string.IsNullOrEmpty(this.ProjectileName))

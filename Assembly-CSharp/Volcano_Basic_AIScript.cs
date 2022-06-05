@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000148 RID: 328
+// Token: 0x02000255 RID: 597
 public class Volcano_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x06000AFA RID: 2810 RVA: 0x000221F0 File Offset: 0x000203F0
+	// Token: 0x06001117 RID: 4375 RVA: 0x00008F56 File Offset: 0x00007156
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -18,8 +18,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000603 RID: 1539
-	// (get) Token: 0x06000AFB RID: 2811 RVA: 0x00022226 File Offset: 0x00020426
+	// Token: 0x1700080B RID: 2059
+	// (get) Token: 0x06001118 RID: 4376 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_flameGout_Exit_ForceIdle
 	{
 		get
@@ -28,8 +28,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000604 RID: 1540
-	// (get) Token: 0x06000AFC RID: 2812 RVA: 0x0002222D File Offset: 0x0002042D
+	// Token: 0x1700080C RID: 2060
+	// (get) Token: 0x06001119 RID: 4377 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_flameGout_AttackCD
 	{
 		get
@@ -38,8 +38,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000605 RID: 1541
-	// (get) Token: 0x06000AFD RID: 2813 RVA: 0x00022234 File Offset: 0x00020434
+	// Token: 0x1700080D RID: 2061
+	// (get) Token: 0x0600111A RID: 4378 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool m_flameGout_hasMultipleFlames
 	{
 		get
@@ -48,8 +48,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000606 RID: 1542
-	// (get) Token: 0x06000AFE RID: 2814 RVA: 0x00022237 File Offset: 0x00020437
+	// Token: 0x1700080E RID: 2062
+	// (get) Token: 0x0600111B RID: 4379 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_flameGout_AttackDuration
 	{
 		get
@@ -58,8 +58,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000607 RID: 1543
-	// (get) Token: 0x06000AFF RID: 2815 RVA: 0x0002223E File Offset: 0x0002043E
+	// Token: 0x1700080F RID: 2063
+	// (get) Token: 0x0600111C RID: 4380 RVA: 0x00004A07 File Offset: 0x00002C07
 	protected virtual int m_flameGout_FireProjectileLoopAmount
 	{
 		get
@@ -68,8 +68,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000608 RID: 1544
-	// (get) Token: 0x06000B00 RID: 2816 RVA: 0x00022241 File Offset: 0x00020441
+	// Token: 0x17000810 RID: 2064
+	// (get) Token: 0x0600111D RID: 4381 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_flameGout_FireProjectileBulletAmount
 	{
 		get
@@ -78,8 +78,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000609 RID: 1545
-	// (get) Token: 0x06000B01 RID: 2817 RVA: 0x00022244 File Offset: 0x00020444
+	// Token: 0x17000811 RID: 2065
+	// (get) Token: 0x0600111E RID: 4382 RVA: 0x00008F8C File Offset: 0x0000718C
 	protected virtual Vector2 m_flameGout_FireProjectileAngle
 	{
 		get
@@ -88,8 +88,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700060A RID: 1546
-	// (get) Token: 0x06000B02 RID: 2818 RVA: 0x00022255 File Offset: 0x00020455
+	// Token: 0x17000812 RID: 2066
+	// (get) Token: 0x0600111F RID: 4383 RVA: 0x00008F9D File Offset: 0x0000719D
 	protected virtual Vector2 m_flameGout_FireProjectileSpeedMod
 	{
 		get
@@ -98,8 +98,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700060B RID: 1547
-	// (get) Token: 0x06000B03 RID: 2819 RVA: 0x00022266 File Offset: 0x00020466
+	// Token: 0x17000813 RID: 2067
+	// (get) Token: 0x06001120 RID: 4384 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_flameGout_AttackMoveSpeed
 	{
 		get
@@ -108,7 +108,7 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000B04 RID: 2820 RVA: 0x0002226D File Offset: 0x0002046D
+	// Token: 0x06001121 RID: 4385 RVA: 0x00008FAE File Offset: 0x000071AE
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -179,8 +179,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x1700060C RID: 1548
-	// (get) Token: 0x06000B05 RID: 2821 RVA: 0x0002227C File Offset: 0x0002047C
+	// Token: 0x17000814 RID: 2068
+	// (get) Token: 0x06001122 RID: 4386 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected virtual float m_alternateGout_Exit_ForceIdle
 	{
 		get
@@ -189,8 +189,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700060D RID: 1549
-	// (get) Token: 0x06000B06 RID: 2822 RVA: 0x00022283 File Offset: 0x00020483
+	// Token: 0x17000815 RID: 2069
+	// (get) Token: 0x06001123 RID: 4387 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected virtual float m_alternateGout_AttackCD
 	{
 		get
@@ -199,8 +199,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700060E RID: 1550
-	// (get) Token: 0x06000B07 RID: 2823 RVA: 0x0002228A File Offset: 0x0002048A
+	// Token: 0x17000816 RID: 2070
+	// (get) Token: 0x06001124 RID: 4388 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected virtual float m_alternateGout_AttackDuration
 	{
 		get
@@ -209,8 +209,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700060F RID: 1551
-	// (get) Token: 0x06000B08 RID: 2824 RVA: 0x00022291 File Offset: 0x00020491
+	// Token: 0x17000817 RID: 2071
+	// (get) Token: 0x06001125 RID: 4389 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_alternateGout_FireProjectileLoopAmount
 	{
 		get
@@ -219,8 +219,8 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000610 RID: 1552
-	// (get) Token: 0x06000B09 RID: 2825 RVA: 0x00022294 File Offset: 0x00020494
+	// Token: 0x17000818 RID: 2072
+	// (get) Token: 0x06001126 RID: 4390 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual int m_alternateGout_FireProjectileBulletAmount
 	{
 		get
@@ -229,7 +229,7 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000B0A RID: 2826 RVA: 0x00022297 File Offset: 0x00020497
+	// Token: 0x06001127 RID: 4391 RVA: 0x00008FBD File Offset: 0x000071BD
 	[CloseLogic]
 	[MediumLogic]
 	[FarLogic]
@@ -275,7 +275,7 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000B0B RID: 2827 RVA: 0x000222A8 File Offset: 0x000204A8
+	// Token: 0x06001128 RID: 4392 RVA: 0x0007EAB4 File Offset: 0x0007CCB4
 	public override void Pause()
 	{
 		base.Pause();
@@ -296,7 +296,7 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000B0C RID: 2828 RVA: 0x0002239C File Offset: 0x0002059C
+	// Token: 0x06001129 RID: 4393 RVA: 0x0007EBA8 File Offset: 0x0007CDA8
 	public override void Unpause()
 	{
 		base.Unpause();
@@ -312,7 +312,7 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000B0D RID: 2829 RVA: 0x00022426 File Offset: 0x00020626
+	// Token: 0x0600112A RID: 4394 RVA: 0x00008FCC File Offset: 0x000071CC
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.StopProjectile(ref this.m_projectile1);
@@ -322,14 +322,14 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		base.OnLBCompleteOrCancelled();
 	}
 
-	// Token: 0x06000B0E RID: 2830 RVA: 0x0002245E File Offset: 0x0002065E
+	// Token: 0x0600112B RID: 4395 RVA: 0x00009004 File Offset: 0x00007204
 	public override void ResetScript()
 	{
 		this.m_wasFrozenWhileFiring = false;
 		base.ResetScript();
 	}
 
-	// Token: 0x06000B0F RID: 2831 RVA: 0x0002246D File Offset: 0x0002066D
+	// Token: 0x0600112C RID: 4396 RVA: 0x00009013 File Offset: 0x00007213
 	protected IEnumerator DelayProjectileWeaponHitbox(Projectile_RL projectile, float delay)
 	{
 		if (delay > 0f)
@@ -347,117 +347,117 @@ public class Volcano_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x04000FA0 RID: 4000
+	// Token: 0x04001429 RID: 5161
 	protected const string FLAME_TELL_PROJECTILE = "VolcanoWarningProjectile";
 
-	// Token: 0x04000FA1 RID: 4001
+	// Token: 0x0400142A RID: 5162
 	protected Projectile_RL m_flameTellProjectile;
 
-	// Token: 0x04000FA2 RID: 4002
+	// Token: 0x0400142B RID: 5163
 	protected Projectile_RL m_projectile1;
 
-	// Token: 0x04000FA3 RID: 4003
+	// Token: 0x0400142C RID: 5164
 	protected Projectile_RL m_projectile2;
 
-	// Token: 0x04000FA4 RID: 4004
+	// Token: 0x0400142D RID: 5165
 	protected Projectile_RL m_projectile3;
 
-	// Token: 0x04000FA5 RID: 4005
+	// Token: 0x0400142E RID: 5166
 	protected bool m_wasFrozenWhileFiring;
 
-	// Token: 0x04000FA6 RID: 4006
+	// Token: 0x0400142F RID: 5167
 	protected const string FLAMEGOUT_TELL_INTRO = "Flame_Tell_Intro";
 
-	// Token: 0x04000FA7 RID: 4007
+	// Token: 0x04001430 RID: 5168
 	protected const string FLAMEGOUT_TELL_HOLD = "Flame_Tell_Hold";
 
-	// Token: 0x04000FA8 RID: 4008
+	// Token: 0x04001431 RID: 5169
 	protected const string FLAMEGOUT_ATTACK_INTRO = "Flame_Attack_Intro";
 
-	// Token: 0x04000FA9 RID: 4009
+	// Token: 0x04001432 RID: 5170
 	protected const string FLAMEGOUT_ATTACK_HOLD = "Flame_Attack_Hold";
 
-	// Token: 0x04000FAA RID: 4010
+	// Token: 0x04001433 RID: 5171
 	protected const string FLAMEGOUT_EXIT = "Flame_Exit";
 
-	// Token: 0x04000FAB RID: 4011
+	// Token: 0x04001434 RID: 5172
 	protected const string FLAMEGOUT_LINEBOLT_PROJECTILE = "VolcanoLineBoltProjectile";
 
-	// Token: 0x04000FAC RID: 4012
+	// Token: 0x04001435 RID: 5173
 	protected const string FLAMEGOUT_WHITEBOLT_PROJECTILE = "VolcanoWhiteBoltProjectile";
 
-	// Token: 0x04000FAD RID: 4013
+	// Token: 0x04001436 RID: 5174
 	protected const string FLAMEGOUT_WHITEBOLT_MINIBOSS_PROJECTILE = "VolcanoWhiteBoltMinibossProjectile";
 
-	// Token: 0x04000FAE RID: 4014
+	// Token: 0x04001437 RID: 5175
 	protected float m_flameGout_TellIntro_AnimationSpeed = 0.85f;
 
-	// Token: 0x04000FAF RID: 4015
+	// Token: 0x04001438 RID: 5176
 	protected float m_flameGout_TellHold_AnimationSpeed = 1.3f;
 
-	// Token: 0x04000FB0 RID: 4016
+	// Token: 0x04001439 RID: 5177
 	protected float m_flameGout_Tell_Delay = 1.15f;
 
-	// Token: 0x04000FB1 RID: 4017
+	// Token: 0x0400143A RID: 5178
 	protected float m_flameGout_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000FB2 RID: 4018
+	// Token: 0x0400143B RID: 5179
 	protected float m_flameGout_AttackIntro_Delay;
 
-	// Token: 0x04000FB3 RID: 4019
+	// Token: 0x0400143C RID: 5180
 	protected float m_flameGout_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000FB4 RID: 4020
+	// Token: 0x0400143D RID: 5181
 	protected float m_flameGout_AttackHold_Delay;
 
-	// Token: 0x04000FB5 RID: 4021
+	// Token: 0x0400143E RID: 5182
 	protected float m_flameGout_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000FB6 RID: 4022
+	// Token: 0x0400143F RID: 5183
 	protected float m_flameGout_Exit_Delay;
 
-	// Token: 0x04000FB7 RID: 4023
+	// Token: 0x04001440 RID: 5184
 	protected const string HOMINGSHOT_TELL_INTRO = "HomingShot_Tell_Intro";
 
-	// Token: 0x04000FB8 RID: 4024
+	// Token: 0x04001441 RID: 5185
 	protected const string HOMINGSHOT_TELL_HOLD = "HomingShot_Tell_Hold";
 
-	// Token: 0x04000FB9 RID: 4025
+	// Token: 0x04001442 RID: 5186
 	protected const string HOMINGSHOT_ATTACK_INTRO = "HomingShot_Attack_Intro";
 
-	// Token: 0x04000FBA RID: 4026
+	// Token: 0x04001443 RID: 5187
 	protected const string HOMINGSHOT_ATTACK_HOLD = "HomingShot_Attack_Hold";
 
-	// Token: 0x04000FBB RID: 4027
+	// Token: 0x04001444 RID: 5188
 	protected const string HOMINGSHOT_EXIT = "HomingShot_Exit";
 
-	// Token: 0x04000FBC RID: 4028
+	// Token: 0x04001445 RID: 5189
 	private const string FLAMEGOUT_HOMINGBOLT_PROJECTILE = "VolcanoHomingBoltProjectile";
 
-	// Token: 0x04000FBD RID: 4029
+	// Token: 0x04001446 RID: 5190
 	protected float m_alternateGout_TellIntro_AnimationSpeed = 0.85f;
 
-	// Token: 0x04000FBE RID: 4030
+	// Token: 0x04001447 RID: 5191
 	protected float m_alternateGout_TellHold_AnimationSpeed = 1.3f;
 
-	// Token: 0x04000FBF RID: 4031
+	// Token: 0x04001448 RID: 5192
 	protected float m_alternateGout_Tell_Delay = 1.45f;
 
-	// Token: 0x04000FC0 RID: 4032
+	// Token: 0x04001449 RID: 5193
 	protected float m_alternateGout_AttackIntro_AnimationSpeed = 1f;
 
-	// Token: 0x04000FC1 RID: 4033
+	// Token: 0x0400144A RID: 5194
 	protected float m_alternateGout_AttackIntro_Delay;
 
-	// Token: 0x04000FC2 RID: 4034
+	// Token: 0x0400144B RID: 5195
 	protected float m_alternateGout_AttackHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000FC3 RID: 4035
+	// Token: 0x0400144C RID: 5196
 	protected float m_alternateGout_AttackHold_Delay;
 
-	// Token: 0x04000FC4 RID: 4036
+	// Token: 0x0400144D RID: 5197
 	protected float m_alternateGout_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000FC5 RID: 4037
+	// Token: 0x0400144E RID: 5198
 	protected float m_alternateGout_Exit_Delay;
 }

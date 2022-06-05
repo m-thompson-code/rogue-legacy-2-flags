@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000640 RID: 1600
+// Token: 0x02000A6D RID: 2669
 public class PlayerFlag_SpawnScenario : SpawnScenario
 {
-	// Token: 0x1700146B RID: 5227
-	// (get) Token: 0x060039D3 RID: 14803 RVA: 0x000C4E7D File Offset: 0x000C307D
-	// (set) Token: 0x060039D4 RID: 14804 RVA: 0x000C4E85 File Offset: 0x000C3085
+	// Token: 0x17001BD2 RID: 7122
+	// (get) Token: 0x060050B2 RID: 20658 RVA: 0x0002C0BE File Offset: 0x0002A2BE
+	// (set) Token: 0x060050B3 RID: 20659 RVA: 0x0002C0C6 File Offset: 0x0002A2C6
 	public string PlayerFlag
 	{
 		get
@@ -19,9 +19,9 @@ public class PlayerFlag_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x1700146C RID: 5228
-	// (get) Token: 0x060039D5 RID: 14805 RVA: 0x000C4E8E File Offset: 0x000C308E
-	// (set) Token: 0x060039D6 RID: 14806 RVA: 0x000C4E96 File Offset: 0x000C3096
+	// Token: 0x17001BD3 RID: 7123
+	// (get) Token: 0x060050B4 RID: 20660 RVA: 0x0002C0CF File Offset: 0x0002A2CF
+	// (set) Token: 0x060050B5 RID: 20661 RVA: 0x0002C0D7 File Offset: 0x0002A2D7
 	public bool FlagIsTrue
 	{
 		get
@@ -34,8 +34,8 @@ public class PlayerFlag_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x1700146D RID: 5229
-	// (get) Token: 0x060039D7 RID: 14807 RVA: 0x000C4E9F File Offset: 0x000C309F
+	// Token: 0x17001BD4 RID: 7124
+	// (get) Token: 0x060050B6 RID: 20662 RVA: 0x000054AD File Offset: 0x000036AD
 	public override SpawnScenarioType Type
 	{
 		get
@@ -44,8 +44,8 @@ public class PlayerFlag_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x1700146E RID: 5230
-	// (get) Token: 0x060039D8 RID: 14808 RVA: 0x000C4EA3 File Offset: 0x000C30A3
+	// Token: 0x17001BD5 RID: 7125
+	// (get) Token: 0x060050B7 RID: 20663 RVA: 0x0002C0E0 File Offset: 0x0002A2E0
 	public override string GizmoDescription
 	{
 		get
@@ -54,19 +54,19 @@ public class PlayerFlag_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x060039D9 RID: 14809 RVA: 0x000C4EC0 File Offset: 0x000C30C0
+	// Token: 0x060050B8 RID: 20664 RVA: 0x0002C0FD File Offset: 0x0002A2FD
 	public override void RunIsTrueCheck(BaseRoom room)
 	{
 		this.RunIsTrueCheck();
 	}
 
-	// Token: 0x060039DA RID: 14810 RVA: 0x000C4EC8 File Offset: 0x000C30C8
+	// Token: 0x060050B9 RID: 20665 RVA: 0x0002C0FD File Offset: 0x0002A2FD
 	public override void RunIsTrueCheck(GridPointManager gridPointManager)
 	{
 		this.RunIsTrueCheck();
 	}
 
-	// Token: 0x060039DB RID: 14811 RVA: 0x000C4ED0 File Offset: 0x000C30D0
+	// Token: 0x060050BA RID: 20666 RVA: 0x001330BC File Offset: 0x001312BC
 	private void RunIsTrueCheck()
 	{
 		PlayerSaveFlag flag;
@@ -76,11 +76,11 @@ public class PlayerFlag_SpawnScenario : SpawnScenario
 		}
 	}
 
-	// Token: 0x04002C76 RID: 11382
+	// Token: 0x04003D08 RID: 15624
 	[SerializeField]
 	private string m_playerFlag;
 
-	// Token: 0x04002C77 RID: 11383
+	// Token: 0x04003D09 RID: 15625
 	[SerializeField]
 	private bool m_flagIsTrue = true;
 }

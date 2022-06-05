@@ -5,11 +5,11 @@ using UnityEngine.Serialization;
 
 namespace RLAudio
 {
-	// Token: 0x020008EA RID: 2282
+	// Token: 0x02000E5A RID: 3674
 	public class DamageAudioData : BaseDamageAudioData
 	{
-		// Token: 0x1700184F RID: 6223
-		// (get) Token: 0x06004AE9 RID: 19177 RVA: 0x0010D32C File Offset: 0x0010B52C
+		// Token: 0x17002132 RID: 8498
+		// (get) Token: 0x060067A2 RID: 26530 RVA: 0x00039362 File Offset: 0x00037562
 		public override string BreakableDamageAudioPath
 		{
 			get
@@ -18,8 +18,8 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x17001850 RID: 6224
-		// (get) Token: 0x06004AEA RID: 19178 RVA: 0x0010D334 File Offset: 0x0010B534
+		// Token: 0x17002133 RID: 8499
+		// (get) Token: 0x060067A3 RID: 26531 RVA: 0x0003936A File Offset: 0x0003756A
 		public override string CharacterDamageAudioPath
 		{
 			get
@@ -28,13 +28,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003ED4 RID: 16084
+		// Token: 0x040053F2 RID: 21490
 		[SerializeField]
 		[EventRef]
 		[FormerlySerializedAs("m_characterFmodEvent")]
 		private string m_breakableAudioEventPath;
 
-		// Token: 0x04003ED5 RID: 16085
+		// Token: 0x040053F3 RID: 21491
 		[SerializeField]
 		[EventRef]
 		[FormerlySerializedAs("m_characterFmodEvent")]

@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000904 RID: 2308
+	// Token: 0x02000E80 RID: 3712
 	public class PlayerAttackAudioEventEmitter : OnEnterEventEmitter
 	{
-		// Token: 0x06004BBF RID: 19391 RVA: 0x001104E8 File Offset: 0x0010E6E8
+		// Token: 0x060068B4 RID: 26804 RVA: 0x0018084C File Offset: 0x0017EA4C
 		public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
 			base.OnStateEnter(animator, stateInfo, layerIndex);

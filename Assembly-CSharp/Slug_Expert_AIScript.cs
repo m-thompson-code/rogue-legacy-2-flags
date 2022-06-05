@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200011F RID: 287
+// Token: 0x020001EB RID: 491
 public class Slug_Expert_AIScript : Slug_Basic_AIScript
 {
-	// Token: 0x170004B8 RID: 1208
-	// (get) Token: 0x060008DD RID: 2269 RVA: 0x0001D73C File Offset: 0x0001B93C
+	// Token: 0x17000640 RID: 1600
+	// (get) Token: 0x06000D7A RID: 3450 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override int m_verticalShot_RepeatAttackPattern
 	{
 		get
@@ -13,8 +13,8 @@ public class Slug_Expert_AIScript : Slug_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004B9 RID: 1209
-	// (get) Token: 0x060008DE RID: 2270 RVA: 0x0001D73F File Offset: 0x0001B93F
+	// Token: 0x17000641 RID: 1601
+	// (get) Token: 0x06000D7B RID: 3451 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected override int m_verticalShot_TotalShotSpread
 	{
 		get
@@ -23,8 +23,8 @@ public class Slug_Expert_AIScript : Slug_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004BA RID: 1210
-	// (get) Token: 0x060008DF RID: 2271 RVA: 0x0001D742 File Offset: 0x0001B942
+	// Token: 0x17000642 RID: 1602
+	// (get) Token: 0x06000D7C RID: 3452 RVA: 0x00003DAB File Offset: 0x00001FAB
 	protected override float m_verticalShot_SpeedMod
 	{
 		get
@@ -33,8 +33,8 @@ public class Slug_Expert_AIScript : Slug_Basic_AIScript
 		}
 	}
 
-	// Token: 0x170004BB RID: 1211
-	// (get) Token: 0x060008E0 RID: 2272 RVA: 0x0001D749 File Offset: 0x0001B949
+	// Token: 0x17000643 RID: 1603
+	// (get) Token: 0x06000D7D RID: 3453 RVA: 0x00007B8D File Offset: 0x00005D8D
 	protected override int m_verticalShot_SideBulletAngleOffset
 	{
 		get

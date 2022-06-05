@@ -10,11 +10,11 @@ using UnityEngine.SceneManagement;
 
 namespace RLAudio
 {
-	// Token: 0x020008D2 RID: 2258
+	// Token: 0x02000E3F RID: 3647
 	public class AmbientSoundController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x1700181B RID: 6171
-		// (get) Token: 0x06004A20 RID: 18976 RVA: 0x0010AFDA File Offset: 0x001091DA
+		// Token: 0x170020F7 RID: 8439
+		// (get) Token: 0x060066C7 RID: 26311 RVA: 0x00009A7B File Offset: 0x00007C7B
 		public string Description
 		{
 			get
@@ -23,9 +23,9 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700181C RID: 6172
-		// (get) Token: 0x06004A21 RID: 18977 RVA: 0x0010AFE2 File Offset: 0x001091E2
-		// (set) Token: 0x06004A22 RID: 18978 RVA: 0x0010AFEA File Offset: 0x001091EA
+		// Token: 0x170020F8 RID: 8440
+		// (get) Token: 0x060066C8 RID: 26312 RVA: 0x0003892B File Offset: 0x00036B2B
+		// (set) Token: 0x060066C9 RID: 26313 RVA: 0x00038933 File Offset: 0x00036B33
 		public EventInstance CurrentEvent
 		{
 			get
@@ -38,9 +38,9 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700181D RID: 6173
-		// (get) Token: 0x06004A23 RID: 18979 RVA: 0x0010AFF3 File Offset: 0x001091F3
-		// (set) Token: 0x06004A24 RID: 18980 RVA: 0x0010AFFB File Offset: 0x001091FB
+		// Token: 0x170020F9 RID: 8441
+		// (get) Token: 0x060066CA RID: 26314 RVA: 0x0003893C File Offset: 0x00036B3C
+		// (set) Token: 0x060066CB RID: 26315 RVA: 0x00038944 File Offset: 0x00036B44
 		public EventInstance CurrentSnapshot
 		{
 			get
@@ -53,9 +53,9 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x1700181E RID: 6174
-		// (get) Token: 0x06004A25 RID: 18981 RVA: 0x0010B004 File Offset: 0x00109204
-		// (set) Token: 0x06004A26 RID: 18982 RVA: 0x0010B00B File Offset: 0x0010920B
+		// Token: 0x170020FA RID: 8442
+		// (get) Token: 0x060066CC RID: 26316 RVA: 0x0003894D File Offset: 0x00036B4D
+		// (set) Token: 0x060066CD RID: 26317 RVA: 0x00038954 File Offset: 0x00036B54
 		public static AmbientSoundController Instance
 		{
 			get
@@ -68,7 +68,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A27 RID: 18983 RVA: 0x0010B014 File Offset: 0x00109214
+		// Token: 0x060066CE RID: 26318 RVA: 0x0017BAE4 File Offset: 0x00179CE4
 		private void Awake()
 		{
 			if (!AmbientSoundController.Instance)
@@ -86,7 +86,7 @@ namespace RLAudio
 			UnityEngine.Object.Destroy(base.gameObject);
 		}
 
-		// Token: 0x06004A28 RID: 18984 RVA: 0x0010B0C0 File Offset: 0x001092C0
+		// Token: 0x060066CF RID: 26319 RVA: 0x0017BB90 File Offset: 0x00179D90
 		private void Start()
 		{
 			Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_onPlayerEnterRoom);
@@ -96,7 +96,7 @@ namespace RLAudio
 			SceneLoader_RL.TransitionStartRelay.AddListener(this.m_onTransitionStart, false);
 		}
 
-		// Token: 0x06004A29 RID: 18985 RVA: 0x0010B114 File Offset: 0x00109314
+		// Token: 0x060066D0 RID: 26320 RVA: 0x0017BBE4 File Offset: 0x00179DE4
 		private void OnDestroy()
 		{
 			if (AmbientSoundController.Instance == this)
@@ -118,7 +118,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A2A RID: 18986 RVA: 0x0010B1A8 File Offset: 0x001093A8
+		// Token: 0x060066D1 RID: 26321 RVA: 0x0017BC78 File Offset: 0x00179E78
 		private void OnBiomeEnter(MonoBehaviour sender, EventArgs args)
 		{
 			if (args is BiomeEventArgs)
@@ -141,7 +141,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A2B RID: 18987 RVA: 0x0010B21B File Offset: 0x0010941B
+		// Token: 0x060066D2 RID: 26322 RVA: 0x0003895C File Offset: 0x00036B5C
 		private void OnTransitionStart()
 		{
 			if (this.StopOnTransition)
@@ -150,7 +150,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A2C RID: 18988 RVA: 0x0010B22C File Offset: 0x0010942C
+		// Token: 0x060066D3 RID: 26323 RVA: 0x0017BCEC File Offset: 0x00179EEC
 		private void OnEnterHubTown()
 		{
 			SceneManager.sceneLoaded -= this.OnHubTownSceneClosed;
@@ -167,7 +167,7 @@ namespace RLAudio
 			this.GetTableKey(BiomeType.HubTown, RoomType.Transition, true);
 		}
 
-		// Token: 0x06004A2D RID: 18989 RVA: 0x0010B2C8 File Offset: 0x001094C8
+		// Token: 0x060066D4 RID: 26324 RVA: 0x0017BD88 File Offset: 0x00179F88
 		private void OnHubTownSceneClosed(Scene scene, LoadSceneMode mode)
 		{
 			SceneManager.sceneLoaded -= this.OnHubTownSceneClosed;
@@ -182,7 +182,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A2E RID: 18990 RVA: 0x0010B32C File Offset: 0x0010952C
+		// Token: 0x060066D5 RID: 26325 RVA: 0x0017BDEC File Offset: 0x00179FEC
 		private void OnSkillTreeWindowOpened()
 		{
 			AmbientSoundController.AmbientSoundControllerTableKey tableKey = this.GetTableKey(BiomeType.HubTown, RoomType.Standard, false);
@@ -194,7 +194,7 @@ namespace RLAudio
 			this.m_inSkillTree = true;
 		}
 
-		// Token: 0x06004A2F RID: 18991 RVA: 0x0010B368 File Offset: 0x00109568
+		// Token: 0x060066D6 RID: 26326 RVA: 0x0017BE28 File Offset: 0x0017A028
 		private void OnSkillTreeWindowClosed()
 		{
 			AmbientSoundController.AmbientSoundControllerTableKey tableKey = this.GetTableKey(BiomeType.HubTown, RoomType.Transition, true);
@@ -206,25 +206,25 @@ namespace RLAudio
 			this.m_inSkillTree = false;
 		}
 
-		// Token: 0x06004A30 RID: 18992 RVA: 0x0010B3A5 File Offset: 0x001095A5
+		// Token: 0x060066D7 RID: 26327 RVA: 0x0003896C File Offset: 0x00036B6C
 		private void OnEnterMainMenu(MonoBehaviour sender, EventArgs args)
 		{
 			this.StopCurrentAmbientSoundAndSnapshot();
 		}
 
-		// Token: 0x06004A31 RID: 18993 RVA: 0x0010B3AD File Offset: 0x001095AD
+		// Token: 0x060066D8 RID: 26328 RVA: 0x00038974 File Offset: 0x00036B74
 		public static EventInstance GetCurrentEventInstance()
 		{
 			return AmbientSoundController.Instance.CurrentEvent;
 		}
 
-		// Token: 0x06004A32 RID: 18994 RVA: 0x0010B3B9 File Offset: 0x001095B9
+		// Token: 0x060066D9 RID: 26329 RVA: 0x0003896C File Offset: 0x00036B6C
 		private void OnPlayerDeath(MonoBehaviour sender, EventArgs args)
 		{
 			this.StopCurrentAmbientSoundAndSnapshot();
 		}
 
-		// Token: 0x06004A33 RID: 18995 RVA: 0x0010B3C4 File Offset: 0x001095C4
+		// Token: 0x060066DA RID: 26330 RVA: 0x0017BE68 File Offset: 0x0017A068
 		private void StopCurrentAmbientSoundAndSnapshot()
 		{
 			if (this.CurrentEvent.isValid())
@@ -239,7 +239,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A34 RID: 18996 RVA: 0x0010B428 File Offset: 0x00109628
+		// Token: 0x060066DB RID: 26331 RVA: 0x0017BECC File Offset: 0x0017A0CC
 		private void OnPlayerEnterRoom(MonoBehaviour sender, EventArgs args)
 		{
 			if (this.m_inSkillTree)
@@ -271,7 +271,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A35 RID: 18997 RVA: 0x0010B4CC File Offset: 0x001096CC
+		// Token: 0x060066DC RID: 26332 RVA: 0x0017BF70 File Offset: 0x0017A170
 		private void AddTableEntry(AmbientSoundController.AmbientSoundControllerTableKey key)
 		{
 			string ambientAudioSnapshotPath = AmbientSoundLibrary.GetAmbientAudioSnapshotPath(key.Biome, key.RoomType, key.IsLarge);
@@ -289,7 +289,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A36 RID: 18998 RVA: 0x0010B570 File Offset: 0x00109770
+		// Token: 0x060066DD RID: 26333 RVA: 0x0017C014 File Offset: 0x0017A214
 		private EventInstance[] GetPotentialAudio(AmbientSoundController.AmbientSoundControllerTableKey key, AmbientSoundOverride soundOverride)
 		{
 			EventInstance[] result;
@@ -304,7 +304,7 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004A37 RID: 18999 RVA: 0x0010B5A8 File Offset: 0x001097A8
+		// Token: 0x060066DE RID: 26334 RVA: 0x0017C04C File Offset: 0x0017A24C
 		private EventInstance GetSnapshot(AmbientSoundController.AmbientSoundControllerTableKey key, AmbientSoundOverride soundOverride)
 		{
 			bool flag = TraitManager.IsInitialized && TraitManager.IsTraitActive(TraitType.OldYellowTint);
@@ -340,7 +340,7 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004A38 RID: 19000 RVA: 0x0010B664 File Offset: 0x00109864
+		// Token: 0x060066DF RID: 26335 RVA: 0x0017C108 File Offset: 0x0017A308
 		private AmbientSoundController.AmbientSoundControllerTableKey GetTableKey(BaseRoom room)
 		{
 			BiomeType appearanceBiomeType = room.AppearanceBiomeType;
@@ -349,13 +349,13 @@ namespace RLAudio
 			return this.GetTableKey(appearanceBiomeType, roomType, isRoomLarge);
 		}
 
-		// Token: 0x06004A39 RID: 19001 RVA: 0x0010B690 File Offset: 0x00109890
+		// Token: 0x060066E0 RID: 26336 RVA: 0x00038980 File Offset: 0x00036B80
 		private AmbientSoundController.AmbientSoundControllerTableKey GetTableKey(BiomeType biome, RoomType roomType, bool isRoomLarge)
 		{
 			return new AmbientSoundController.AmbientSoundControllerTableKey(biome, roomType, isRoomLarge);
 		}
 
-		// Token: 0x06004A3A RID: 19002 RVA: 0x0010B69C File Offset: 0x0010989C
+		// Token: 0x060066E1 RID: 26337 RVA: 0x0017C134 File Offset: 0x0017A334
 		private RoomType GetRoomType(BaseRoom room)
 		{
 			RoomType result = RoomType.Standard;
@@ -389,7 +389,7 @@ namespace RLAudio
 			return result;
 		}
 
-		// Token: 0x06004A3B RID: 19003 RVA: 0x0010B730 File Offset: 0x00109930
+		// Token: 0x060066E2 RID: 26338 RVA: 0x0017C1C8 File Offset: 0x0017A3C8
 		private void PlayAudio(AmbientSoundController.AmbientSoundControllerTableKey key, AmbientSoundOverride ambientSoundOverride)
 		{
 			if (this.m_muteAmbientSFX)
@@ -407,7 +407,7 @@ namespace RLAudio
 			this.PlaySnapshot(snapshot);
 		}
 
-		// Token: 0x06004A3C RID: 19004 RVA: 0x0010B790 File Offset: 0x00109990
+		// Token: 0x060066E3 RID: 26339 RVA: 0x0017C228 File Offset: 0x0017A428
 		public void PlayManorAmbientAudio()
 		{
 			if (this.m_muteAmbientSFX)
@@ -423,7 +423,7 @@ namespace RLAudio
 			this.PlaySnapshot(this.GetSnapshot(tableKey, null));
 		}
 
-		// Token: 0x06004A3D RID: 19005 RVA: 0x0010B7DC File Offset: 0x001099DC
+		// Token: 0x060066E4 RID: 26340 RVA: 0x0017C274 File Offset: 0x0017A474
 		private void PlayRandomAmbientAudio(EventInstance[] eventInstances, bool isRaining)
 		{
 			if (eventInstances.Length != 0)
@@ -448,7 +448,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A3E RID: 19006 RVA: 0x0010B86C File Offset: 0x00109A6C
+		// Token: 0x060066E5 RID: 26341 RVA: 0x0017C304 File Offset: 0x0017A504
 		private void PlaySnapshot(EventInstance eventInstance)
 		{
 			if (eventInstance.isValid() && !this.CurrentSnapshot.Equals(eventInstance))
@@ -459,84 +459,84 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004A3F RID: 19007 RVA: 0x0010B8BD File Offset: 0x00109ABD
+		// Token: 0x060066E6 RID: 26342 RVA: 0x0003898A File Offset: 0x00036B8A
 		public static void SetSnapshotOverride(EventInstance eventInstance)
 		{
 			AmbientSoundController.Instance.m_previousSnapshot = AmbientSoundController.Instance.CurrentSnapshot;
 			AmbientSoundController.Instance.PlaySnapshot(eventInstance);
 		}
 
-		// Token: 0x06004A40 RID: 19008 RVA: 0x0010B8DE File Offset: 0x00109ADE
+		// Token: 0x060066E7 RID: 26343 RVA: 0x000389AB File Offset: 0x00036BAB
 		public static void ClearSnapshotOverride()
 		{
 			AmbientSoundController.Instance.PlaySnapshot(AmbientSoundController.Instance.m_previousSnapshot);
 		}
 
-		// Token: 0x04003E54 RID: 15956
+		// Token: 0x04005366 RID: 21350
 		[SerializeField]
 		private bool m_muteAmbientSFX;
 
-		// Token: 0x04003E55 RID: 15957
+		// Token: 0x04005367 RID: 21351
 		private const string ANTIQUE_TRAIT_SNAPSHOT_PATH = "snapshot:/Trait_Antique";
 
-		// Token: 0x04003E56 RID: 15958
+		// Token: 0x04005368 RID: 21352
 		private const string TONE_DEAF_TRAIT_SNAPSHOT_PATH = "snapshot:/Trait_Tonedeaf";
 
-		// Token: 0x04003E57 RID: 15959
+		// Token: 0x04005369 RID: 21353
 		private Dictionary<AmbientSoundController.AmbientSoundControllerTableKey, EventInstance[]> m_audioInstanceTable = new Dictionary<AmbientSoundController.AmbientSoundControllerTableKey, EventInstance[]>();
 
-		// Token: 0x04003E58 RID: 15960
+		// Token: 0x0400536A RID: 21354
 		private Dictionary<AmbientSoundController.AmbientSoundControllerTableKey, EventInstance> m_snapshotInstanceTable = new Dictionary<AmbientSoundController.AmbientSoundControllerTableKey, EventInstance>();
 
-		// Token: 0x04003E59 RID: 15961
+		// Token: 0x0400536B RID: 21355
 		private EventInstance m_currentEvent;
 
-		// Token: 0x04003E5A RID: 15962
+		// Token: 0x0400536C RID: 21356
 		private EventInstance m_currentSnapshot;
 
-		// Token: 0x04003E5B RID: 15963
+		// Token: 0x0400536D RID: 21357
 		private EventInstance m_previousSnapshot;
 
-		// Token: 0x04003E5C RID: 15964
+		// Token: 0x0400536E RID: 21358
 		private bool m_inSkillTree;
 
-		// Token: 0x04003E5D RID: 15965
+		// Token: 0x0400536F RID: 21359
 		private Action<MonoBehaviour, EventArgs> m_onPlayerEnterRoom;
 
-		// Token: 0x04003E5E RID: 15966
+		// Token: 0x04005370 RID: 21360
 		private Action<MonoBehaviour, EventArgs> m_onPlayerDeath;
 
-		// Token: 0x04003E5F RID: 15967
+		// Token: 0x04005371 RID: 21361
 		private Action<MonoBehaviour, EventArgs> m_onBiomeEnter;
 
-		// Token: 0x04003E60 RID: 15968
+		// Token: 0x04005372 RID: 21362
 		private Action<MonoBehaviour, EventArgs> m_onEnterMainMenu;
 
-		// Token: 0x04003E61 RID: 15969
+		// Token: 0x04005373 RID: 21363
 		private Action m_onTransitionStart;
 
-		// Token: 0x04003E62 RID: 15970
+		// Token: 0x04005374 RID: 21364
 		private UnityAction m_onSkillTreeWindowOpenedUnityEvent;
 
-		// Token: 0x04003E63 RID: 15971
+		// Token: 0x04005375 RID: 21365
 		private UnityAction m_onSkillTreeWindowClosedUnityEvent;
 
-		// Token: 0x04003E64 RID: 15972
+		// Token: 0x04005376 RID: 21366
 		private static AmbientSoundController m_instance;
 
-		// Token: 0x04003E65 RID: 15973
+		// Token: 0x04005377 RID: 21367
 		private static EventInstance m_antiquarianSnapshot;
 
-		// Token: 0x04003E66 RID: 15974
+		// Token: 0x04005378 RID: 21368
 		private static EventInstance m_toneDeafSnapshot;
 
-		// Token: 0x04003E67 RID: 15975
+		// Token: 0x04005379 RID: 21369
 		public bool StopOnTransition = true;
 
-		// Token: 0x02000EDE RID: 3806
+		// Token: 0x02000E40 RID: 3648
 		private struct AmbientSoundControllerTableKey : IEquatable<AmbientSoundController.AmbientSoundControllerTableKey>
 		{
-			// Token: 0x06006EE8 RID: 28392 RVA: 0x0019C733 File Offset: 0x0019A933
+			// Token: 0x060066EA RID: 26346 RVA: 0x000389E6 File Offset: 0x00036BE6
 			public AmbientSoundControllerTableKey(BiomeType biome, RoomType roomType, bool isLarge)
 			{
 				this.Biome = biome;
@@ -544,43 +544,43 @@ namespace RLAudio
 				this.IsLarge = isLarge;
 			}
 
-			// Token: 0x17002407 RID: 9223
-			// (get) Token: 0x06006EE9 RID: 28393 RVA: 0x0019C74A File Offset: 0x0019A94A
+			// Token: 0x170020FB RID: 8443
+			// (get) Token: 0x060066EB RID: 26347 RVA: 0x000389FD File Offset: 0x00036BFD
 			public readonly BiomeType Biome { get; }
 
-			// Token: 0x17002408 RID: 9224
-			// (get) Token: 0x06006EEA RID: 28394 RVA: 0x0019C752 File Offset: 0x0019A952
+			// Token: 0x170020FC RID: 8444
+			// (get) Token: 0x060066EC RID: 26348 RVA: 0x00038A05 File Offset: 0x00036C05
 			public readonly RoomType RoomType { get; }
 
-			// Token: 0x17002409 RID: 9225
-			// (get) Token: 0x06006EEB RID: 28395 RVA: 0x0019C75A File Offset: 0x0019A95A
+			// Token: 0x170020FD RID: 8445
+			// (get) Token: 0x060066ED RID: 26349 RVA: 0x00038A0D File Offset: 0x00036C0D
 			public readonly bool IsLarge { get; }
 
-			// Token: 0x06006EEC RID: 28396 RVA: 0x0019C762 File Offset: 0x0019A962
+			// Token: 0x060066EE RID: 26350 RVA: 0x00038A15 File Offset: 0x00036C15
 			public static bool operator ==(AmbientSoundController.AmbientSoundControllerTableKey keyA, AmbientSoundController.AmbientSoundControllerTableKey keyB)
 			{
 				return keyA.Equals(keyB);
 			}
 
-			// Token: 0x06006EED RID: 28397 RVA: 0x0019C76C File Offset: 0x0019A96C
+			// Token: 0x060066EF RID: 26351 RVA: 0x00038A1F File Offset: 0x00036C1F
 			public static bool operator !=(AmbientSoundController.AmbientSoundControllerTableKey keyA, AmbientSoundController.AmbientSoundControllerTableKey keyB)
 			{
 				return !keyA.Equals(keyB);
 			}
 
-			// Token: 0x06006EEE RID: 28398 RVA: 0x0019C779 File Offset: 0x0019A979
+			// Token: 0x060066F0 RID: 26352 RVA: 0x00038A2C File Offset: 0x00036C2C
 			public bool Equals(AmbientSoundController.AmbientSoundControllerTableKey other)
 			{
 				return this.Biome == other.Biome && this.RoomType == other.RoomType && this.IsLarge == other.IsLarge;
 			}
 
-			// Token: 0x06006EEF RID: 28399 RVA: 0x0019C7AA File Offset: 0x0019A9AA
+			// Token: 0x060066F1 RID: 26353 RVA: 0x00038A5D File Offset: 0x00036C5D
 			public override bool Equals(object obj)
 			{
 				return obj is AmbientSoundController.AmbientSoundControllerTableKey && this.Equals((AmbientSoundController.AmbientSoundControllerTableKey)obj);
 			}
 
-			// Token: 0x06006EF0 RID: 28400 RVA: 0x0019C7C4 File Offset: 0x0019A9C4
+			// Token: 0x060066F2 RID: 26354 RVA: 0x0017C358 File Offset: 0x0017A558
 			public override int GetHashCode()
 			{
 				return ((-1554893279 * -1521134295 + this.Biome.GetHashCode()) * -1521134295 + this.RoomType.GetHashCode()) * -1521134295 + this.IsLarge.GetHashCode();

@@ -3,11 +3,11 @@ using System.Collections;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x02000187 RID: 391
+// Token: 0x020002D0 RID: 720
 public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 {
-	// Token: 0x1700077F RID: 1919
-	// (get) Token: 0x06000DF1 RID: 3569 RVA: 0x0002AECF File Offset: 0x000290CF
+	// Token: 0x170009FD RID: 2557
+	// (get) Token: 0x06001572 RID: 5490 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -16,8 +16,8 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000780 RID: 1920
-	// (get) Token: 0x06000DF2 RID: 3570 RVA: 0x0002AED6 File Offset: 0x000290D6
+	// Token: 0x170009FE RID: 2558
+	// (get) Token: 0x06001573 RID: 5491 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -26,8 +26,8 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000781 RID: 1921
-	// (get) Token: 0x06000DF3 RID: 3571 RVA: 0x0002AEDD File Offset: 0x000290DD
+	// Token: 0x170009FF RID: 2559
+	// (get) Token: 0x06001574 RID: 5492 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float TellAnimSpeed
 	{
 		get
@@ -36,8 +36,8 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000782 RID: 1922
-	// (get) Token: 0x06000DF4 RID: 3572 RVA: 0x0002AEE4 File Offset: 0x000290E4
+	// Token: 0x17000A00 RID: 2560
+	// (get) Token: 0x06001575 RID: 5493 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -46,8 +46,8 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000783 RID: 1923
-	// (get) Token: 0x06000DF5 RID: 3573 RVA: 0x0002AEEB File Offset: 0x000290EB
+	// Token: 0x17000A01 RID: 2561
+	// (get) Token: 0x06001576 RID: 5494 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -56,8 +56,8 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000784 RID: 1924
-	// (get) Token: 0x06000DF6 RID: 3574 RVA: 0x0002AEF2 File Offset: 0x000290F2
+	// Token: 0x17000A02 RID: 2562
+	// (get) Token: 0x06001577 RID: 5495 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -66,8 +66,8 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000785 RID: 1925
-	// (get) Token: 0x06000DF7 RID: 3575 RVA: 0x0002AEF9 File Offset: 0x000290F9
+	// Token: 0x17000A03 RID: 2563
+	// (get) Token: 0x06001578 RID: 5496 RVA: 0x00004FFB File Offset: 0x000031FB
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -76,8 +76,8 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000786 RID: 1926
-	// (get) Token: 0x06000DF8 RID: 3576 RVA: 0x0002AF00 File Offset: 0x00029100
+	// Token: 0x17000A04 RID: 2564
+	// (get) Token: 0x06001579 RID: 5497 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -86,8 +86,8 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000787 RID: 1927
-	// (get) Token: 0x06000DF9 RID: 3577 RVA: 0x0002AF07 File Offset: 0x00029107
+	// Token: 0x17000A05 RID: 2565
+	// (get) Token: 0x0600157A RID: 5498 RVA: 0x00004536 File Offset: 0x00002736
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -96,8 +96,8 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000788 RID: 1928
-	// (get) Token: 0x06000DFA RID: 3578 RVA: 0x0002AF0E File Offset: 0x0002910E
+	// Token: 0x17000A06 RID: 2566
+	// (get) Token: 0x0600157B RID: 5499 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -106,7 +106,7 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000DFB RID: 3579 RVA: 0x0002AF15 File Offset: 0x00029115
+	// Token: 0x0600157C RID: 5500 RVA: 0x0000AA78 File Offset: 0x00008C78
 	public override void PreCastAbility()
 	{
 		base.PreCastAbility();
@@ -114,7 +114,7 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		this.StartCooldownTimer();
 	}
 
-	// Token: 0x06000DFC RID: 3580 RVA: 0x0002AF29 File Offset: 0x00029129
+	// Token: 0x0600157D RID: 5501 RVA: 0x0000AA8C File Offset: 0x00008C8C
 	public override IEnumerator CastAbility()
 	{
 		PlayerController playerController = this.m_abilityController.PlayerController;
@@ -162,7 +162,7 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000DFD RID: 3581 RVA: 0x0002AF38 File Offset: 0x00029138
+	// Token: 0x0600157E RID: 5502 RVA: 0x0000AA9B File Offset: 0x00008C9B
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (base.CurrentAbilityAnimState == AbilityAnimState.Attack)
@@ -180,14 +180,14 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000DFE RID: 3582 RVA: 0x0002AF4E File Offset: 0x0002914E
+	// Token: 0x0600157F RID: 5503 RVA: 0x0000AAB1 File Offset: 0x00008CB1
 	protected override void OnExitExitLogic()
 	{
 		base.OnExitExitLogic();
 		this.m_abilityController.PlayerController.JustRolled = true;
 	}
 
-	// Token: 0x06000DFF RID: 3583 RVA: 0x0002AF68 File Offset: 0x00029168
+	// Token: 0x06001580 RID: 5504 RVA: 0x00089F98 File Offset: 0x00088198
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		PlayerController playerController = this.m_abilityController.PlayerController;
@@ -211,9 +211,9 @@ public class Roll_Ability : BaseAbility_RL, ITalent, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x04001104 RID: 4356
+	// Token: 0x04001679 RID: 5753
 	private float m_rollStartTime;
 
-	// Token: 0x04001105 RID: 4357
+	// Token: 0x0400167A RID: 5754
 	private float m_prevInvincTime;
 }

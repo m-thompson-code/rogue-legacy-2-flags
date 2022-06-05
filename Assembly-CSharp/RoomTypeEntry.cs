@@ -1,15 +1,15 @@
 ﻿using System;
 using Rooms;
 
-// Token: 0x02000680 RID: 1664
+// Token: 0x02000B00 RID: 2816
 public class RoomTypeEntry
 {
-	// Token: 0x06003C15 RID: 15381 RVA: 0x000D00C6 File Offset: 0x000CE2C6
+	// Token: 0x06005474 RID: 21620 RVA: 0x0002DBF9 File Offset: 0x0002BDF9
 	public RoomTypeEntry(RoomType roomType) : this(roomType, RoomSide.Any, null, false)
 	{
 	}
 
-	// Token: 0x06003C16 RID: 15382 RVA: 0x000D00D2 File Offset: 0x000CE2D2
+	// Token: 0x06005475 RID: 21621 RVA: 0x0002DC05 File Offset: 0x0002BE05
 	public RoomTypeEntry(RoomType roomType, RoomSide side, RoomMetaData roomMetaData, bool mustBeEasy)
 	{
 		this.RoomType = roomType;
@@ -18,7 +18,7 @@ public class RoomTypeEntry
 		this.MustBeEasy = mustBeEasy;
 	}
 
-	// Token: 0x06003C17 RID: 15383 RVA: 0x000D010C File Offset: 0x000CE30C
+	// Token: 0x06005476 RID: 21622 RVA: 0x0013FF94 File Offset: 0x0013E194
 	public override string ToString()
 	{
 		string text = "None";
@@ -35,15 +35,15 @@ public class RoomTypeEntry
 		});
 	}
 
-	// Token: 0x04002D4A RID: 11594
+	// Token: 0x04003EF3 RID: 16115
 	public RoomType RoomType = RoomType.None;
 
-	// Token: 0x04002D4B RID: 11595
+	// Token: 0x04003EF4 RID: 16116
 	public RoomMetaData RoomMetaData;
 
-	// Token: 0x04002D4C RID: 11596
+	// Token: 0x04003EF5 RID: 16117
 	public RoomSide Side = RoomSide.Any;
 
-	// Token: 0x04002D4D RID: 11597
+	// Token: 0x04003EF6 RID: 16118
 	public bool MustBeEasy;
 }

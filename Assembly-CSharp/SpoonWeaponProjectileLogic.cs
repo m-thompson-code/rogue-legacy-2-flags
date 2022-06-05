@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004AC RID: 1196
+// Token: 0x020007BB RID: 1979
 public class SpoonWeaponProjectileLogic : BaseProjectileLogic, IHasProjectileNameArray
 {
-	// Token: 0x170010A6 RID: 4262
-	// (get) Token: 0x06002B9E RID: 11166 RVA: 0x0009433C File Offset: 0x0009253C
+	// Token: 0x170015FF RID: 5631
+	// (get) Token: 0x06003C1D RID: 15389 RVA: 0x000212FF File Offset: 0x0001F4FF
 	public virtual string[] ProjectileNameArray
 	{
 		get
@@ -21,9 +21,9 @@ public class SpoonWeaponProjectileLogic : BaseProjectileLogic, IHasProjectileNam
 		}
 	}
 
-	// Token: 0x170010A7 RID: 4263
-	// (get) Token: 0x06002B9F RID: 11167 RVA: 0x00094361 File Offset: 0x00092561
-	// (set) Token: 0x06002BA0 RID: 11168 RVA: 0x00094369 File Offset: 0x00092569
+	// Token: 0x17001600 RID: 5632
+	// (get) Token: 0x06003C1E RID: 15390 RVA: 0x00021324 File Offset: 0x0001F524
+	// (set) Token: 0x06003C1F RID: 15391 RVA: 0x0002132C File Offset: 0x0001F52C
 	public string ProjectileToSpawn
 	{
 		get
@@ -36,9 +36,9 @@ public class SpoonWeaponProjectileLogic : BaseProjectileLogic, IHasProjectileNam
 		}
 	}
 
-	// Token: 0x170010A8 RID: 4264
-	// (get) Token: 0x06002BA1 RID: 11169 RVA: 0x00094372 File Offset: 0x00092572
-	// (set) Token: 0x06002BA2 RID: 11170 RVA: 0x0009437A File Offset: 0x0009257A
+	// Token: 0x17001601 RID: 5633
+	// (get) Token: 0x06003C20 RID: 15392 RVA: 0x00021335 File Offset: 0x0001F535
+	// (set) Token: 0x06003C21 RID: 15393 RVA: 0x0002133D File Offset: 0x0001F53D
 	public Vector2 Offset
 	{
 		get
@@ -51,13 +51,13 @@ public class SpoonWeaponProjectileLogic : BaseProjectileLogic, IHasProjectileNam
 		}
 	}
 
-	// Token: 0x06002BA3 RID: 11171 RVA: 0x00094383 File Offset: 0x00092583
+	// Token: 0x06003C22 RID: 15394 RVA: 0x00021346 File Offset: 0x0001F546
 	private void Start()
 	{
 		base.SourceProjectile.OnDeathRelay.AddListener(new Action<Projectile_RL, GameObject>(this.SpawnProjectile), false);
 	}
 
-	// Token: 0x06002BA4 RID: 11172 RVA: 0x000943A4 File Offset: 0x000925A4
+	// Token: 0x06003C23 RID: 15395 RVA: 0x000F5B0C File Offset: 0x000F3D0C
 	private void SpawnProjectile(Projectile_RL projectile, GameObject colliderObj)
 	{
 		if (!base.enabled)
@@ -138,21 +138,21 @@ public class SpoonWeaponProjectileLogic : BaseProjectileLogic, IHasProjectileNam
 		}
 	}
 
-	// Token: 0x06002BA5 RID: 11173 RVA: 0x00094728 File Offset: 0x00092928
+	// Token: 0x06003C24 RID: 15396 RVA: 0x00021366 File Offset: 0x0001F566
 	private void OnDestroy()
 	{
 		base.SourceProjectile.OnDeathRelay.RemoveListener(new Action<Projectile_RL, GameObject>(this.SpawnProjectile));
 	}
 
-	// Token: 0x04002377 RID: 9079
+	// Token: 0x04002FB8 RID: 12216
 	[SerializeField]
 	private string m_projectileToSpawn;
 
-	// Token: 0x04002378 RID: 9080
+	// Token: 0x04002FB9 RID: 12217
 	[SerializeField]
 	private Vector2 m_offset;
 
-	// Token: 0x04002379 RID: 9081
+	// Token: 0x04002FBA RID: 12218
 	[NonSerialized]
 	protected string[] m_projectileNameArray;
 }

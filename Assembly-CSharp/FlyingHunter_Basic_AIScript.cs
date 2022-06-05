@@ -3,11 +3,11 @@ using System.Collections;
 using RLAudio;
 using UnityEngine;
 
-// Token: 0x020000DE RID: 222
+// Token: 0x02000165 RID: 357
 public class FlyingHunter_Basic_AIScript : BaseAIScript
 {
-	// Token: 0x17000358 RID: 856
-	// (get) Token: 0x06000687 RID: 1671 RVA: 0x000197BE File Offset: 0x000179BE
+	// Token: 0x17000456 RID: 1110
+	// (get) Token: 0x06000986 RID: 2438 RVA: 0x00004A00 File Offset: 0x00002C00
 	protected virtual float TeleportHealthLossTrigger
 	{
 		get
@@ -16,7 +16,7 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000688 RID: 1672 RVA: 0x000197C5 File Offset: 0x000179C5
+	// Token: 0x06000987 RID: 2439 RVA: 0x0000658D File Offset: 0x0000478D
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -25,8 +25,8 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		};
 	}
 
-	// Token: 0x17000359 RID: 857
-	// (get) Token: 0x06000689 RID: 1673 RVA: 0x000197DB File Offset: 0x000179DB
+	// Token: 0x17000457 RID: 1111
+	// (get) Token: 0x06000988 RID: 2440 RVA: 0x0000457A File Offset: 0x0000277A
 	protected virtual float WakeUpChaseDelay
 	{
 		get
@@ -35,8 +35,8 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700035A RID: 858
-	// (get) Token: 0x0600068A RID: 1674 RVA: 0x000197E2 File Offset: 0x000179E2
+	// Token: 0x17000458 RID: 1112
+	// (get) Token: 0x06000989 RID: 2441 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool TeleportOnHit
 	{
 		get
@@ -45,8 +45,8 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700035B RID: 859
-	// (get) Token: 0x0600068B RID: 1675 RVA: 0x000197E5 File Offset: 0x000179E5
+	// Token: 0x17000459 RID: 1113
+	// (get) Token: 0x0600098A RID: 2442 RVA: 0x000065A3 File Offset: 0x000047A3
 	protected virtual Vector2 TeleportDistanceFromPlayer
 	{
 		get
@@ -55,8 +55,8 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700035C RID: 860
-	// (get) Token: 0x0600068C RID: 1676 RVA: 0x000197F6 File Offset: 0x000179F6
+	// Token: 0x1700045A RID: 1114
+	// (get) Token: 0x0600098B RID: 2443 RVA: 0x000065B4 File Offset: 0x000047B4
 	protected virtual int TeleportAngleFromPlayer
 	{
 		get
@@ -65,8 +65,8 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700035D RID: 861
-	// (get) Token: 0x0600068D RID: 1677 RVA: 0x000197FA File Offset: 0x000179FA
+	// Token: 0x1700045B RID: 1115
+	// (get) Token: 0x0600098C RID: 2444 RVA: 0x00006581 File Offset: 0x00004781
 	protected virtual int TeleportOddsToFlipSideOnHit
 	{
 		get
@@ -75,8 +75,8 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700035E RID: 862
-	// (get) Token: 0x0600068E RID: 1678 RVA: 0x000197FE File Offset: 0x000179FE
+	// Token: 0x1700045C RID: 1116
+	// (get) Token: 0x0600098D RID: 2445 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	protected virtual bool TeleportSpawnProjectilesOnHit
 	{
 		get
@@ -85,8 +85,8 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x1700035F RID: 863
-	// (get) Token: 0x0600068F RID: 1679 RVA: 0x00019801 File Offset: 0x00017A01
+	// Token: 0x1700045D RID: 1117
+	// (get) Token: 0x0600098E RID: 2446 RVA: 0x00005FB8 File Offset: 0x000041B8
 	protected virtual float OnHitDelayDuration
 	{
 		get
@@ -95,8 +95,8 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000360 RID: 864
-	// (get) Token: 0x06000690 RID: 1680 RVA: 0x00019808 File Offset: 0x00017A08
+	// Token: 0x1700045E RID: 1118
+	// (get) Token: 0x0600098F RID: 2447 RVA: 0x00005FA3 File Offset: 0x000041A3
 	protected override Vector2 RandomFollowOffsetX
 	{
 		get
@@ -105,8 +105,8 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x17000361 RID: 865
-	// (get) Token: 0x06000691 RID: 1681 RVA: 0x0001980F File Offset: 0x00017A0F
+	// Token: 0x1700045F RID: 1119
+	// (get) Token: 0x06000990 RID: 2448 RVA: 0x00005FA3 File Offset: 0x000041A3
 	protected override Vector2 RandomFollowOffsetY
 	{
 		get
@@ -115,7 +115,7 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000692 RID: 1682 RVA: 0x00019818 File Offset: 0x00017A18
+	// Token: 0x06000991 RID: 2449 RVA: 0x000667DC File Offset: 0x000649DC
 	public override void Initialize(EnemyController enemyController)
 	{
 		base.Initialize(enemyController);
@@ -129,7 +129,7 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		base.EnemyController.DisableDistanceThresholdCheck = true;
 	}
 
-	// Token: 0x06000693 RID: 1683 RVA: 0x00019891 File Offset: 0x00017A91
+	// Token: 0x06000992 RID: 2450 RVA: 0x000065B8 File Offset: 0x000047B8
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -139,7 +139,7 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000694 RID: 1684 RVA: 0x000198B1 File Offset: 0x00017AB1
+	// Token: 0x06000993 RID: 2451 RVA: 0x000065D8 File Offset: 0x000047D8
 	private void OnDestroy()
 	{
 		if (base.EnemyController && this.TeleportOnHit)
@@ -148,7 +148,7 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000695 RID: 1685 RVA: 0x000198EC File Offset: 0x00017AEC
+	// Token: 0x06000994 RID: 2452 RVA: 0x00066858 File Offset: 0x00064A58
 	protected void OnEnemyHit(object sender, CharacterHitEventArgs args)
 	{
 		if (args.DamageTaken > 0f && base.EnemyController.CurrentHealth <= this.m_requiredHPDropToTeleport)
@@ -159,7 +159,7 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x06000696 RID: 1686 RVA: 0x0001995A File Offset: 0x00017B5A
+	// Token: 0x06000995 RID: 2453 RVA: 0x00006611 File Offset: 0x00004811
 	[BasicEnemy]
 	[AdvancedEnemy]
 	[ExpertEnemy]
@@ -288,14 +288,14 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000697 RID: 1687 RVA: 0x00019969 File Offset: 0x00017B69
+	// Token: 0x06000996 RID: 2454 RVA: 0x00006620 File Offset: 0x00004820
 	public override void OnLBCompleteOrCancelled()
 	{
 		base.OnLBCompleteOrCancelled();
 		base.EnemyController.Animator.SetBool("Teleporting", false);
 	}
 
-	// Token: 0x06000698 RID: 1688 RVA: 0x00019987 File Offset: 0x00017B87
+	// Token: 0x06000997 RID: 2455 RVA: 0x0000663E File Offset: 0x0000483E
 	public override IEnumerator WalkTowards()
 	{
 		while (!this.m_chaseTarget)
@@ -313,7 +313,7 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x06000699 RID: 1689 RVA: 0x00019996 File Offset: 0x00017B96
+	// Token: 0x06000998 RID: 2456 RVA: 0x0000664D File Offset: 0x0000484D
 	public override IEnumerator Idle()
 	{
 		if (this.m_chaseTarget)
@@ -327,7 +327,7 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		yield break;
 	}
 
-	// Token: 0x0600069A RID: 1690 RVA: 0x000199A5 File Offset: 0x00017BA5
+	// Token: 0x06000999 RID: 2457 RVA: 0x0000665C File Offset: 0x0000485C
 	public override void ResetScript()
 	{
 		this.GoToSleep();
@@ -336,7 +336,7 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		base.ResetScript();
 	}
 
-	// Token: 0x0600069B RID: 1691 RVA: 0x000199C8 File Offset: 0x00017BC8
+	// Token: 0x0600099A RID: 2458 RVA: 0x000668C8 File Offset: 0x00064AC8
 	private void GoToSleep()
 	{
 		this.m_isSleeping = true;
@@ -347,14 +347,14 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		base.Animator.Play("Sleeping");
 	}
 
-	// Token: 0x0600069C RID: 1692 RVA: 0x00019A21 File Offset: 0x00017C21
+	// Token: 0x0600099B RID: 2459 RVA: 0x0000667C File Offset: 0x0000487C
 	public override void OnEnemyActivated()
 	{
 		this.m_requiredHPDropToTeleport = base.EnemyController.CurrentHealth - (float)base.EnemyController.ActualMaxHealth * this.TeleportHealthLossTrigger;
 		base.OnEnemyActivated();
 	}
 
-	// Token: 0x0600069D RID: 1693 RVA: 0x00019A4E File Offset: 0x00017C4E
+	// Token: 0x0600099C RID: 2460 RVA: 0x000066A9 File Offset: 0x000048A9
 	private void FixedUpdate()
 	{
 		if (base.IsInitialized && (base.LogicController.CurrentRangeState == LogicState.Close || base.LogicController.IsAggroed) && !this.m_chaseTarget)
@@ -363,81 +363,81 @@ public class FlyingHunter_Basic_AIScript : BaseAIScript
 		}
 	}
 
-	// Token: 0x04000ABB RID: 2747
+	// Token: 0x04000D27 RID: 3367
 	private bool m_isSleeping = true;
 
-	// Token: 0x04000ABC RID: 2748
+	// Token: 0x04000D28 RID: 3368
 	private TrailRenderer m_trailRenderer;
 
-	// Token: 0x04000ABD RID: 2749
+	// Token: 0x04000D29 RID: 3369
 	private const string TELEPORT_BEGIN_AUDIO_PATH = "event:/SFX/Enemies/sfx_enemy_flyingHunter_teleport_vanish";
 
-	// Token: 0x04000ABE RID: 2750
+	// Token: 0x04000D2A RID: 3370
 	private const string TELEPORT_END_AUDIO_PATH = "event:/SFX/Enemies/sfx_enemy_flyingHunter_teleport_appear";
 
-	// Token: 0x04000ABF RID: 2751
+	// Token: 0x04000D2B RID: 3371
 	private const string SHOOT_AUDIO_PATH = "event:/SFX/Enemies/sfx_enemy_flyingHunter_shoot";
 
-	// Token: 0x04000AC0 RID: 2752
+	// Token: 0x04000D2C RID: 3372
 	private bool m_chaseTarget;
 
-	// Token: 0x04000AC1 RID: 2753
+	// Token: 0x04000D2D RID: 3373
 	private WaitRL_Yield m_teleportWaitYield;
 
-	// Token: 0x04000AC2 RID: 2754
+	// Token: 0x04000D2E RID: 3374
 	private float m_requiredHPDropToTeleport;
 
-	// Token: 0x04000AC3 RID: 2755
+	// Token: 0x04000D2F RID: 3375
 	private const string TELEPORT_STUNNED_ANIM = "Teleporting";
 
-	// Token: 0x04000AC4 RID: 2756
+	// Token: 0x04000D30 RID: 3376
 	protected float m_teleportStunned_AnimSpeed = 1f;
 
-	// Token: 0x04000AC5 RID: 2757
+	// Token: 0x04000D31 RID: 3377
 	protected float m_teleportStunned_Delay;
 
-	// Token: 0x04000AC6 RID: 2758
+	// Token: 0x04000D32 RID: 3378
 	private const string BURST_TELL_INTRO = "BurstAttack_Tell_Intro";
 
-	// Token: 0x04000AC7 RID: 2759
+	// Token: 0x04000D33 RID: 3379
 	private const string BURST_TELL_HOLD = "BurstAttack_Tell_Hold";
 
-	// Token: 0x04000AC8 RID: 2760
+	// Token: 0x04000D34 RID: 3380
 	private const string BURST_ATTACK_INTRO = "BurstAttack_Attack_Intro";
 
-	// Token: 0x04000AC9 RID: 2761
+	// Token: 0x04000D35 RID: 3381
 	private const string BURST_ATTACK_HOLD = "BurstAttack_Attack_Hold";
 
-	// Token: 0x04000ACA RID: 2762
+	// Token: 0x04000D36 RID: 3382
 	private const string BURST_EXIT = "BurstAttack_Exit";
 
-	// Token: 0x04000ACB RID: 2763
+	// Token: 0x04000D37 RID: 3383
 	private const string BURST_PROJECTILE = "FlyingHunterBoltProjectile";
 
-	// Token: 0x04000ACC RID: 2764
+	// Token: 0x04000D38 RID: 3384
 	protected float m_burst_Tell_AnimationSpeed = 1f;
 
-	// Token: 0x04000ACD RID: 2765
+	// Token: 0x04000D39 RID: 3385
 	protected float m_burst_TellHold_AnimationSpeed = 1f;
 
-	// Token: 0x04000ACE RID: 2766
+	// Token: 0x04000D3A RID: 3386
 	protected float m_burst_TellAndHold_Delay = 0.2f;
 
-	// Token: 0x04000ACF RID: 2767
+	// Token: 0x04000D3B RID: 3387
 	protected float m_burst_AttackIntro_Delay;
 
-	// Token: 0x04000AD0 RID: 2768
+	// Token: 0x04000D3C RID: 3388
 	protected float m_burst_AttackIntro_AnimationSpeed = 2f;
 
-	// Token: 0x04000AD1 RID: 2769
+	// Token: 0x04000D3D RID: 3389
 	protected float m_burst_AttackHold_Delay;
 
-	// Token: 0x04000AD2 RID: 2770
+	// Token: 0x04000D3E RID: 3390
 	protected float m_burst_AttackHold_AnimationSpeed = 2f;
 
-	// Token: 0x04000AD3 RID: 2771
+	// Token: 0x04000D3F RID: 3391
 	protected float m_burst_Exit_AnimationSpeed = 1f;
 
-	// Token: 0x04000AD4 RID: 2772
+	// Token: 0x04000D40 RID: 3392
 	protected float m_burst_Exit_Delay;
 }

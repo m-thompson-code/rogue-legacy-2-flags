@@ -2,11 +2,11 @@
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x02000189 RID: 393
+// Token: 0x020002D6 RID: 726
 public class Shout_Ability : BaseAbility_RL, ITalent, IAbility
 {
-	// Token: 0x1700078A RID: 1930
-	// (get) Token: 0x06000E10 RID: 3600 RVA: 0x0002B3F1 File Offset: 0x000295F1
+	// Token: 0x17000A10 RID: 2576
+	// (get) Token: 0x060015A9 RID: 5545 RVA: 0x0000ABCF File Offset: 0x00008DCF
 	public virtual Vector2 PushbackAmount
 	{
 		get
@@ -15,7 +15,7 @@ public class Shout_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000E11 RID: 3601 RVA: 0x0002B3FC File Offset: 0x000295FC
+	// Token: 0x060015AA RID: 5546 RVA: 0x0008A6D4 File Offset: 0x000888D4
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -41,7 +41,7 @@ public class Shout_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000E12 RID: 3602 RVA: 0x0002B4F0 File Offset: 0x000296F0
+	// Token: 0x060015AB RID: 5547 RVA: 0x0008A7C8 File Offset: 0x000889C8
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		base.StopAbility(abilityInterrupted);
@@ -51,11 +51,11 @@ public class Shout_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x0400110E RID: 4366
+	// Token: 0x04001691 RID: 5777
 	[SerializeField]
 	private Vector2 m_pushbackAmount = Vector2.zero;
 
-	// Token: 0x0400110F RID: 4367
+	// Token: 0x04001692 RID: 5778
 	[HelpBox("OnShoutEvent WARNING: For Player abilities, set FollowTarget to OTHER to properly follow player.", HelpBoxMessageType.Warning)]
 	public UnityEvent_GameObject OnShoutEvent;
 }

@@ -4,11 +4,11 @@ using RLAudio;
 using SceneManagement_RL;
 using UnityEngine;
 
-// Token: 0x0200047E RID: 1150
+// Token: 0x02000774 RID: 1908
 public class LineageRoomController : MonoBehaviour
 {
-	// Token: 0x17001053 RID: 4179
-	// (get) Token: 0x060029FE RID: 10750 RVA: 0x0008AD1A File Offset: 0x00088F1A
+	// Token: 0x17001588 RID: 5512
+	// (get) Token: 0x06003A08 RID: 14856 RVA: 0x0001FE06 File Offset: 0x0001E006
 	public static int NumRooms
 	{
 		get
@@ -17,8 +17,8 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001054 RID: 4180
-	// (get) Token: 0x060029FF RID: 10751 RVA: 0x0008AD24 File Offset: 0x00088F24
+	// Token: 0x17001589 RID: 5513
+	// (get) Token: 0x06003A09 RID: 14857 RVA: 0x000EC89C File Offset: 0x000EAA9C
 	public bool InstantiatingFromLineageWindow
 	{
 		get
@@ -27,8 +27,8 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001055 RID: 4181
-	// (get) Token: 0x06002A00 RID: 10752 RVA: 0x0008AD4A File Offset: 0x00088F4A
+	// Token: 0x1700158A RID: 5514
+	// (get) Token: 0x06003A0A RID: 14858 RVA: 0x0001FE0F File Offset: 0x0001E00F
 	public Room EndingRoom
 	{
 		get
@@ -37,8 +37,8 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001056 RID: 4182
-	// (get) Token: 0x06002A01 RID: 10753 RVA: 0x0008AD52 File Offset: 0x00088F52
+	// Token: 0x1700158B RID: 5515
+	// (get) Token: 0x06003A0B RID: 14859 RVA: 0x0001FE17 File Offset: 0x0001E017
 	public GameObject LineageModelPositionObject
 	{
 		get
@@ -47,8 +47,8 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001057 RID: 4183
-	// (get) Token: 0x06002A02 RID: 10754 RVA: 0x0008AD5A File Offset: 0x00088F5A
+	// Token: 0x1700158C RID: 5516
+	// (get) Token: 0x06003A0C RID: 14860 RVA: 0x0001FE1F File Offset: 0x0001E01F
 	public LineagePortrait LeftPortrait
 	{
 		get
@@ -57,8 +57,8 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001058 RID: 4184
-	// (get) Token: 0x06002A03 RID: 10755 RVA: 0x0008AD62 File Offset: 0x00088F62
+	// Token: 0x1700158D RID: 5517
+	// (get) Token: 0x06003A0D RID: 14861 RVA: 0x0001FE27 File Offset: 0x0001E027
 	public LineagePortrait RightPortrait
 	{
 		get
@@ -67,8 +67,8 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001059 RID: 4185
-	// (get) Token: 0x06002A04 RID: 10756 RVA: 0x0008AD6A File Offset: 0x00088F6A
+	// Token: 0x1700158E RID: 5518
+	// (get) Token: 0x06003A0E RID: 14862 RVA: 0x0001FE2F File Offset: 0x0001E02F
 	public LineagePortrait CentrePortrait
 	{
 		get
@@ -77,12 +77,12 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700105A RID: 4186
-	// (get) Token: 0x06002A05 RID: 10757 RVA: 0x0008AD72 File Offset: 0x00088F72
-	// (set) Token: 0x06002A06 RID: 10758 RVA: 0x0008AD7A File Offset: 0x00088F7A
+	// Token: 0x1700158F RID: 5519
+	// (get) Token: 0x06003A0F RID: 14863 RVA: 0x0001FE37 File Offset: 0x0001E037
+	// (set) Token: 0x06003A10 RID: 14864 RVA: 0x0001FE3F File Offset: 0x0001E03F
 	public bool IsInitialized { get; private set; }
 
-	// Token: 0x06002A07 RID: 10759 RVA: 0x0008AD83 File Offset: 0x00088F83
+	// Token: 0x06003A11 RID: 14865 RVA: 0x0001FE48 File Offset: 0x0001E048
 	public void EnableSpotlight(bool turnOn)
 	{
 		if (this.m_roomType == LineageRoomController.LineageRoomType.Ending)
@@ -96,7 +96,7 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A08 RID: 10760 RVA: 0x0008ADC0 File Offset: 0x00088FC0
+	// Token: 0x06003A12 RID: 14866 RVA: 0x000EC8C4 File Offset: 0x000EAAC4
 	private void Awake()
 	{
 		this.m_room = base.GetComponent<Room>();
@@ -127,7 +127,7 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A09 RID: 10761 RVA: 0x0008AEAB File Offset: 0x000890AB
+	// Token: 0x06003A13 RID: 14867 RVA: 0x0001FE84 File Offset: 0x0001E084
 	private void OnEnable()
 	{
 		if ((this.m_roomType == LineageRoomController.LineageRoomType.Starting || this.m_roomType == LineageRoomController.LineageRoomType.Ending) && !this.InstantiatingFromLineageWindow && WorldBuilder.State == BiomeBuildStateID.Complete)
@@ -136,7 +136,7 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A0A RID: 10762 RVA: 0x0008AEDE File Offset: 0x000890DE
+	// Token: 0x06003A14 RID: 14868 RVA: 0x0001FEB7 File Offset: 0x0001E0B7
 	private IEnumerator OnEnterManorCoroutine()
 	{
 		if (this.m_roomType == LineageRoomController.LineageRoomType.Starting)
@@ -163,7 +163,7 @@ public class LineageRoomController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002A0B RID: 10763 RVA: 0x0008AEED File Offset: 0x000890ED
+	// Token: 0x06003A15 RID: 14869 RVA: 0x0001FEC6 File Offset: 0x0001E0C6
 	private void Start()
 	{
 		if (!LineageRoomController.m_hasBiomeEnterEventBroadcast)
@@ -173,7 +173,7 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A0C RID: 10764 RVA: 0x0008AF0C File Offset: 0x0008910C
+	// Token: 0x06003A16 RID: 14870 RVA: 0x000EC9B0 File Offset: 0x000EABB0
 	private void OnDestroy()
 	{
 		if (this.m_roomTrigger && this.InstantiatingFromLineageWindow)
@@ -210,7 +210,7 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A0D RID: 10765 RVA: 0x0008AFF0 File Offset: 0x000891F0
+	// Token: 0x06003A17 RID: 14871 RVA: 0x000ECA94 File Offset: 0x000EAC94
 	private void Initialize()
 	{
 		if (SaveManager.LineageSaveData.LineageHeirList.Count <= 0)
@@ -308,7 +308,7 @@ public class LineageRoomController : MonoBehaviour
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x06002A0E RID: 10766 RVA: 0x0008B47C File Offset: 0x0008967C
+	// Token: 0x06003A18 RID: 14872 RVA: 0x0001FEE4 File Offset: 0x0001E0E4
 	public static void ResetRoomIndex(LineageRoomController startingRoom, bool instantiatingFromLineageWindow)
 	{
 		if (instantiatingFromLineageWindow)
@@ -321,7 +321,7 @@ public class LineageRoomController : MonoBehaviour
 		LineageRoomController.m_roomIndex = 0;
 	}
 
-	// Token: 0x06002A0F RID: 10767 RVA: 0x0008B4AC File Offset: 0x000896AC
+	// Token: 0x06003A19 RID: 14873 RVA: 0x000ECF20 File Offset: 0x000EB120
 	private void OnHeirSelectionChanged(MonoBehaviour sender, EventArgs args)
 	{
 		if (this.m_roomType == LineageRoomController.LineageRoomType.Ending)
@@ -341,7 +341,7 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A10 RID: 10768 RVA: 0x0008B522 File Offset: 0x00089722
+	// Token: 0x06003A1A RID: 14874 RVA: 0x0001FF12 File Offset: 0x0001E112
 	private IEnumerator SpotlightTweenCoroutine(float desiredSpotlightPos)
 	{
 		float tweenSpeed = 10f * Time.unscaledDeltaTime;
@@ -366,7 +366,7 @@ public class LineageRoomController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002A11 RID: 10769 RVA: 0x0008B538 File Offset: 0x00089738
+	// Token: 0x06003A1B RID: 14875 RVA: 0x000ECF98 File Offset: 0x000EB198
 	private void PositionRoomAtIndex(GameObject room, int index)
 	{
 		Vector3 startingRoomPosition = LineageRoomController.m_startingRoomPosition;
@@ -374,7 +374,7 @@ public class LineageRoomController : MonoBehaviour
 		room.transform.position = startingRoomPosition;
 	}
 
-	// Token: 0x06002A12 RID: 10770 RVA: 0x0008B580 File Offset: 0x00089780
+	// Token: 0x06003A1C RID: 14876 RVA: 0x000ECFE0 File Offset: 0x000EB1E0
 	private void OnEnterRoom(object sender, EventArgs args)
 	{
 		if (LineageRoomController.m_currentRoom != this.m_room)
@@ -397,7 +397,7 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A13 RID: 10771 RVA: 0x0008B610 File Offset: 0x00089810
+	// Token: 0x06003A1D RID: 14877 RVA: 0x000ED070 File Offset: 0x000EB270
 	private void ShiftRooms(bool incremented)
 	{
 		int i = 0;
@@ -424,7 +424,7 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A14 RID: 10772 RVA: 0x0008B6E0 File Offset: 0x000898E0
+	// Token: 0x06003A1E RID: 14878 RVA: 0x000ED140 File Offset: 0x000EB340
 	public void SetupRoom(int roomIndex)
 	{
 		if (this.m_roomType == LineageRoomController.LineageRoomType.Starting)
@@ -485,7 +485,7 @@ public class LineageRoomController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A15 RID: 10773 RVA: 0x0008B858 File Offset: 0x00089A58
+	// Token: 0x06003A1F RID: 14879 RVA: 0x000ED2B8 File Offset: 0x000EB4B8
 	private void SetPortrait(LineagePortrait portrait, int portraitIndex)
 	{
 		CharacterData portraitLook;
@@ -504,7 +504,7 @@ public class LineageRoomController : MonoBehaviour
 		portrait.SetPortraitLook(portraitLook);
 	}
 
-	// Token: 0x06002A16 RID: 10774 RVA: 0x0008B8C4 File Offset: 0x00089AC4
+	// Token: 0x06003A20 RID: 14880 RVA: 0x000ED324 File Offset: 0x000EB524
 	public LineagePortrait GetPortraitAtIndex(int portraitIndex)
 	{
 		if (this.RightPortrait.Index == portraitIndex)
@@ -542,7 +542,7 @@ public class LineageRoomController : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06002A17 RID: 10775 RVA: 0x0008B98C File Offset: 0x00089B8C
+	// Token: 0x06003A21 RID: 14881 RVA: 0x000ED3EC File Offset: 0x000EB5EC
 	private void OnBiomeCreationComplete(MonoBehaviour sender, EventArgs args)
 	{
 		if (GameUtility.IsInLevelEditor)
@@ -569,104 +569,104 @@ public class LineageRoomController : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.BiomeCreationComplete, this.m_onBiomeCreationComplete);
 	}
 
-	// Token: 0x04002259 RID: 8793
+	// Token: 0x04002E35 RID: 11829
 	private static Room[] m_connectingRoomArray;
 
-	// Token: 0x0400225A RID: 8794
+	// Token: 0x04002E36 RID: 11830
 	private static LineageRoomController[] m_connectingRoomControllerArray;
 
-	// Token: 0x0400225B RID: 8795
+	// Token: 0x04002E37 RID: 11831
 	private static Room m_currentRoom;
 
-	// Token: 0x0400225C RID: 8796
+	// Token: 0x04002E38 RID: 11832
 	private static int m_roomIndex;
 
-	// Token: 0x0400225D RID: 8797
+	// Token: 0x04002E39 RID: 11833
 	private static Vector3 m_startingRoomPosition;
 
-	// Token: 0x0400225E RID: 8798
+	// Token: 0x04002E3A RID: 11834
 	public static int NumConnectorRooms;
 
-	// Token: 0x0400225F RID: 8799
+	// Token: 0x04002E3B RID: 11835
 	public static int NumPortraits;
 
-	// Token: 0x04002260 RID: 8800
+	// Token: 0x04002E3C RID: 11836
 	[SerializeField]
 	private LineageRoomController.LineageRoomType m_roomType;
 
-	// Token: 0x04002261 RID: 8801
+	// Token: 0x04002E3D RID: 11837
 	[Header("Starting Room Fields")]
 	[SerializeField]
 	private Room m_connectorRoomPrefab;
 
-	// Token: 0x04002262 RID: 8802
+	// Token: 0x04002E3E RID: 11838
 	[SerializeField]
 	private Room m_endingRoomPrefab;
 
-	// Token: 0x04002263 RID: 8803
+	// Token: 0x04002E3F RID: 11839
 	[Header("Connecting Room Fields")]
 	[SerializeField]
 	private LineagePortrait m_leftPortrait;
 
-	// Token: 0x04002264 RID: 8804
+	// Token: 0x04002E40 RID: 11840
 	[SerializeField]
 	private LineagePortrait m_centrePortrait;
 
-	// Token: 0x04002265 RID: 8805
+	// Token: 0x04002E41 RID: 11841
 	[SerializeField]
 	private LineagePortrait m_rightPortrait;
 
-	// Token: 0x04002266 RID: 8806
+	// Token: 0x04002E42 RID: 11842
 	[Header("End Room Fields")]
 	[SerializeField]
 	private GameObject m_lineageModelPositionObject;
 
-	// Token: 0x04002267 RID: 8807
+	// Token: 0x04002E43 RID: 11843
 	[SerializeField]
 	private GameObject m_finalBossTunnelObject;
 
-	// Token: 0x04002268 RID: 8808
+	// Token: 0x04002E44 RID: 11844
 	[Header("Fields For All Rooms")]
 	[SerializeField]
 	private PlayerTrigger m_roomTrigger;
 
-	// Token: 0x04002269 RID: 8809
+	// Token: 0x04002E45 RID: 11845
 	private Room m_room;
 
-	// Token: 0x0400226A RID: 8810
+	// Token: 0x04002E46 RID: 11846
 	private Room m_endingRoom;
 
-	// Token: 0x0400226B RID: 8811
+	// Token: 0x04002E47 RID: 11847
 	private static bool m_hasBiomeEnterEventBroadcast;
 
-	// Token: 0x0400226C RID: 8812
+	// Token: 0x04002E48 RID: 11848
 	private static GameObject m_sky;
 
-	// Token: 0x0400226D RID: 8813
+	// Token: 0x04002E49 RID: 11849
 	private Animator m_animator;
 
-	// Token: 0x0400226E RID: 8814
+	// Token: 0x04002E4A RID: 11850
 	private Action<MonoBehaviour, EventArgs> m_onHeirSelectionChanged;
 
-	// Token: 0x0400226F RID: 8815
+	// Token: 0x04002E4B RID: 11851
 	private Action<MonoBehaviour, EventArgs> m_onBiomeCreationComplete;
 
-	// Token: 0x04002271 RID: 8817
+	// Token: 0x04002E4D RID: 11853
 	private Coroutine m_spotlightTweenCoroutine;
 
-	// Token: 0x04002272 RID: 8818
+	// Token: 0x04002E4E RID: 11854
 	private float m_currentSpotlightPos;
 
-	// Token: 0x02000C6F RID: 3183
+	// Token: 0x02000775 RID: 1909
 	private enum LineageRoomType
 	{
-		// Token: 0x04005071 RID: 20593
+		// Token: 0x04002E50 RID: 11856
 		None,
-		// Token: 0x04005072 RID: 20594
+		// Token: 0x04002E51 RID: 11857
 		Starting = 10,
-		// Token: 0x04005073 RID: 20595
+		// Token: 0x04002E52 RID: 11858
 		Connecting = 20,
-		// Token: 0x04005074 RID: 20596
+		// Token: 0x04002E53 RID: 11859
 		Ending = 30
 	}
 }

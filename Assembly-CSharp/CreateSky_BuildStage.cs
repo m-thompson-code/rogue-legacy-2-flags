@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-// Token: 0x02000666 RID: 1638
+// Token: 0x02000AC7 RID: 2759
 public class CreateSky_BuildStage : IBiomeBuildStage
 {
-	// Token: 0x06003B36 RID: 15158 RVA: 0x000CB7AE File Offset: 0x000C99AE
+	// Token: 0x060052F7 RID: 21239 RVA: 0x0002D209 File Offset: 0x0002B409
 	public IEnumerator Run(BiomeController biomeController)
 	{
 		Dictionary<SkyBiomeArtData, Sky> dictionary = new Dictionary<SkyBiomeArtData, Sky>();

@@ -4,21 +4,21 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000921 RID: 2337
+	// Token: 0x02000EA0 RID: 3744
 	[CreateAssetMenu(menuName = "Custom/Libraries/Music Library")]
 	public class MusicLibrary : AudioLibrary<MusicLibraryEntry>
 	{
-		// Token: 0x17001895 RID: 6293
-		// (get) Token: 0x06004C86 RID: 19590 RVA: 0x00112CBA File Offset: 0x00110EBA
-		// (set) Token: 0x06004C87 RID: 19591 RVA: 0x00112CC1 File Offset: 0x00110EC1
+		// Token: 0x17002192 RID: 8594
+		// (get) Token: 0x0600698D RID: 27021 RVA: 0x0003A99A File Offset: 0x00038B9A
+		// (set) Token: 0x0600698E RID: 27022 RVA: 0x0003A9A1 File Offset: 0x00038BA1
 		private static MusicLibrary Instance { get; set; }
 
-		// Token: 0x17001896 RID: 6294
-		// (get) Token: 0x06004C88 RID: 19592 RVA: 0x00112CC9 File Offset: 0x00110EC9
-		// (set) Token: 0x06004C89 RID: 19593 RVA: 0x00112CD0 File Offset: 0x00110ED0
+		// Token: 0x17002193 RID: 8595
+		// (get) Token: 0x0600698F RID: 27023 RVA: 0x0003A9A9 File Offset: 0x00038BA9
+		// (set) Token: 0x06006990 RID: 27024 RVA: 0x0003A9B0 File Offset: 0x00038BB0
 		public static bool IsInitialized { get; private set; }
 
-		// Token: 0x06004C8A RID: 19594 RVA: 0x00112CD8 File Offset: 0x00110ED8
+		// Token: 0x06006991 RID: 27025 RVA: 0x0018284C File Offset: 0x00180A4C
 		public static SongID[] GetBiomeMusic(BiomeType biome)
 		{
 			if (MusicLibrary.m_biomeMusicLookupTable.ContainsKey(biome.ToString()))
@@ -28,7 +28,7 @@ namespace RLAudio
 			return MusicLibrary.Instance.m_default.MusicTracks;
 		}
 
-		// Token: 0x06004C8B RID: 19595 RVA: 0x00112D2A File Offset: 0x00110F2A
+		// Token: 0x06006992 RID: 27026 RVA: 0x0003A9B8 File Offset: 0x00038BB8
 		public static string GetFMODEventPath(SongID musicID)
 		{
 			if (MusicLibrary.m_musicIDToFMODEventPathLookupTable.ContainsKey(musicID))
@@ -42,7 +42,7 @@ namespace RLAudio
 			return string.Empty;
 		}
 
-		// Token: 0x06004C8C RID: 19596 RVA: 0x00112D63 File Offset: 0x00110F63
+		// Token: 0x06006993 RID: 27027 RVA: 0x0003A9F1 File Offset: 0x00038BF1
 		public static void Initialize()
 		{
 			MusicLibrary.Instance = CDGResources.Load<MusicLibrary>("Scriptable Objects/Libraries/MusicLibrary", "", true);
@@ -51,7 +51,7 @@ namespace RLAudio
 			MusicLibrary.IsInitialized = true;
 		}
 
-		// Token: 0x06004C8D RID: 19597 RVA: 0x00112D8C File Offset: 0x00110F8C
+		// Token: 0x06006994 RID: 27028 RVA: 0x001828A0 File Offset: 0x00180AA0
 		private static void InitializeBiomeMusicLookupTable()
 		{
 			MusicLibrary.m_biomeMusicLookupTable = new Dictionary<string, MusicLibraryEntry>();
@@ -61,7 +61,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C8E RID: 19598 RVA: 0x00112DF8 File Offset: 0x00110FF8
+		// Token: 0x06006995 RID: 27029 RVA: 0x0018290C File Offset: 0x00180B0C
 		private static void InitializeMusicToFMODEventPathLookupTable()
 		{
 			MusicLibrary.m_musicIDToFMODEventPathLookupTable = new Dictionary<SongID, string>();
@@ -71,20 +71,20 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04004075 RID: 16501
+		// Token: 0x040055E1 RID: 21985
 		[SerializeField]
 		private MusicLookupEntry[] m_lookupEntries;
 
-		// Token: 0x04004078 RID: 16504
+		// Token: 0x040055E4 RID: 21988
 		public const string RESOURCES_PATH = "Scriptable Objects/Libraries/MusicLibrary";
 
-		// Token: 0x04004079 RID: 16505
+		// Token: 0x040055E5 RID: 21989
 		public const string ASSET_PATH = "Assets/Content/Scriptable Objects/Libraries/MusicLibrary.asset";
 
-		// Token: 0x0400407A RID: 16506
+		// Token: 0x040055E6 RID: 21990
 		private static Dictionary<string, MusicLibraryEntry> m_biomeMusicLookupTable;
 
-		// Token: 0x0400407B RID: 16507
+		// Token: 0x040055E7 RID: 21991
 		private static Dictionary<SongID, string> m_musicIDToFMODEventPathLookupTable;
 	}
 }

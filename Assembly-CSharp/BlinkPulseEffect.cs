@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x020001C4 RID: 452
+// Token: 0x02000337 RID: 823
 public class BlinkPulseEffect : MonoBehaviour
 {
-	// Token: 0x170009EE RID: 2542
-	// (get) Token: 0x0600122C RID: 4652 RVA: 0x00034BC3 File Offset: 0x00032DC3
-	// (set) Token: 0x0600122D RID: 4653 RVA: 0x00034BCB File Offset: 0x00032DCB
+	// Token: 0x17000CB4 RID: 3252
+	// (get) Token: 0x06001A8A RID: 6794 RVA: 0x0000DA5F File Offset: 0x0000BC5F
+	// (set) Token: 0x06001A8B RID: 6795 RVA: 0x0000DA67 File Offset: 0x0000BC67
 	public Color BlinkOnHitTint
 	{
 		get
@@ -22,9 +22,9 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170009EF RID: 2543
-	// (get) Token: 0x0600122E RID: 4654 RVA: 0x00034BD4 File Offset: 0x00032DD4
-	// (set) Token: 0x0600122F RID: 4655 RVA: 0x00034BF5 File Offset: 0x00032DF5
+	// Token: 0x17000CB5 RID: 3253
+	// (get) Token: 0x06001A8C RID: 6796 RVA: 0x0000DA70 File Offset: 0x0000BC70
+	// (set) Token: 0x06001A8D RID: 6797 RVA: 0x0000DA91 File Offset: 0x0000BC91
 	public bool UseOverrideDefaultTint
 	{
 		get
@@ -46,9 +46,9 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170009F0 RID: 2544
-	// (get) Token: 0x06001230 RID: 4656 RVA: 0x00034C18 File Offset: 0x00032E18
-	// (set) Token: 0x06001231 RID: 4657 RVA: 0x00034C39 File Offset: 0x00032E39
+	// Token: 0x17000CB6 RID: 3254
+	// (get) Token: 0x06001A8E RID: 6798 RVA: 0x0000DAB4 File Offset: 0x0000BCB4
+	// (set) Token: 0x06001A8F RID: 6799 RVA: 0x0000DAD5 File Offset: 0x0000BCD5
 	public Color DefaultTintOverrideColor
 	{
 		get
@@ -70,14 +70,14 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170009F1 RID: 2545
-	// (get) Token: 0x06001232 RID: 4658 RVA: 0x00034C5C File Offset: 0x00032E5C
-	// (set) Token: 0x06001233 RID: 4659 RVA: 0x00034C64 File Offset: 0x00032E64
+	// Token: 0x17000CB7 RID: 3255
+	// (get) Token: 0x06001A90 RID: 6800 RVA: 0x0000DAF8 File Offset: 0x0000BCF8
+	// (set) Token: 0x06001A91 RID: 6801 RVA: 0x0000DB00 File Offset: 0x0000BD00
 	public bool UseUnscaledTime { get; set; }
 
-	// Token: 0x170009F2 RID: 2546
-	// (get) Token: 0x06001234 RID: 4660 RVA: 0x00034C6D File Offset: 0x00032E6D
-	// (set) Token: 0x06001235 RID: 4661 RVA: 0x00034C75 File Offset: 0x00032E75
+	// Token: 0x17000CB8 RID: 3256
+	// (get) Token: 0x06001A92 RID: 6802 RVA: 0x0000DB09 File Offset: 0x0000BD09
+	// (set) Token: 0x06001A93 RID: 6803 RVA: 0x0000DB11 File Offset: 0x0000BD11
 	public float SingleBlinkDuration
 	{
 		get
@@ -90,8 +90,8 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170009F3 RID: 2547
-	// (get) Token: 0x06001236 RID: 4662 RVA: 0x00034C7E File Offset: 0x00032E7E
+	// Token: 0x17000CB9 RID: 3257
+	// (get) Token: 0x06001A94 RID: 6804 RVA: 0x0000DB1A File Offset: 0x0000BD1A
 	public List<RendererArrayEntry> RendererArrayDefaultTint
 	{
 		get
@@ -104,8 +104,8 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x170009F4 RID: 2548
-	// (get) Token: 0x06001237 RID: 4663 RVA: 0x00034CB4 File Offset: 0x00032EB4
+	// Token: 0x17000CBA RID: 3258
+	// (get) Token: 0x06001A95 RID: 6805 RVA: 0x0000DB50 File Offset: 0x0000BD50
 	public List<Renderer> RendererArray
 	{
 		get
@@ -118,7 +118,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001238 RID: 4664 RVA: 0x00034CEC File Offset: 0x00032EEC
+	// Token: 0x06001A96 RID: 6806 RVA: 0x000924C4 File Offset: 0x000906C4
 	private void Awake()
 	{
 		this.m_blinkWaitYield = new WaitRL_Yield(this.m_singleBlinkDuration, false);
@@ -138,7 +138,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001239 RID: 4665 RVA: 0x00034D71 File Offset: 0x00032F71
+	// Token: 0x06001A97 RID: 6807 RVA: 0x0000DB86 File Offset: 0x0000BD86
 	private void OnEnable()
 	{
 		if (!this.m_isInitialized)
@@ -147,7 +147,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600123A RID: 4666 RVA: 0x00034D84 File Offset: 0x00032F84
+	// Token: 0x06001A98 RID: 6808 RVA: 0x0009254C File Offset: 0x0009074C
 	private void Initialize()
 	{
 		if (!this.m_charController)
@@ -188,7 +188,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		this.m_isInitialized = true;
 	}
 
-	// Token: 0x0600123B RID: 4667 RVA: 0x00034ED0 File Offset: 0x000330D0
+	// Token: 0x06001A99 RID: 6809 RVA: 0x00092698 File Offset: 0x00090898
 	public void ActivateBlackFill(BlackFillType fillType, float fadeInDuration)
 	{
 		if (this.m_charController && fillType == BlackFillType.EnemiesBlackFill_Trait)
@@ -227,7 +227,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600123C RID: 4668 RVA: 0x00034FA4 File Offset: 0x000331A4
+	// Token: 0x06001A9A RID: 6810 RVA: 0x0009276C File Offset: 0x0009096C
 	public void DisableBlackFill(BlackFillType fillType, float fadeOutDuration)
 	{
 		if (this.m_blackFillEffectTable.ContainsKey(fillType))
@@ -262,7 +262,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600123D RID: 4669 RVA: 0x0003506C File Offset: 0x0003326C
+	// Token: 0x06001A9B RID: 6811 RVA: 0x0000DB96 File Offset: 0x0000BD96
 	private IEnumerator BlackFillFadeCoroutine(float duration, bool fadeIn)
 	{
 		while (!this.m_isInitialized)
@@ -309,7 +309,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600123E RID: 4670 RVA: 0x0003508C File Offset: 0x0003328C
+	// Token: 0x06001A9C RID: 6812 RVA: 0x00092834 File Offset: 0x00090A34
 	public void ResetAllBlackFills()
 	{
 		foreach (BlackFillType blackFillType in BlackFillType_RL.TypeArray)
@@ -322,7 +322,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		this.ResetBlackFillState();
 	}
 
-	// Token: 0x0600123F RID: 4671 RVA: 0x000350D8 File Offset: 0x000332D8
+	// Token: 0x06001A9D RID: 6813 RVA: 0x00092880 File Offset: 0x00090A80
 	private void ResetBlackFillState()
 	{
 		if (!this.m_isInitialized)
@@ -344,7 +344,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001240 RID: 4672 RVA: 0x00035154 File Offset: 0x00033354
+	// Token: 0x06001A9E RID: 6814 RVA: 0x000928FC File Offset: 0x00090AFC
 	public void SetRendererArrayColor(Color color)
 	{
 		if (!this.m_isInitialized)
@@ -376,7 +376,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001241 RID: 4673 RVA: 0x0003521C File Offset: 0x0003341C
+	// Token: 0x06001A9F RID: 6815 RVA: 0x000929C4 File Offset: 0x00090BC4
 	public void SetRendererArrayColorLerpFromDefault(Color color, float lerpAmount)
 	{
 		if (!this.m_isInitialized)
@@ -408,7 +408,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001242 RID: 4674 RVA: 0x00035314 File Offset: 0x00033514
+	// Token: 0x06001AA0 RID: 6816 RVA: 0x00092ABC File Offset: 0x00090CBC
 	public void SetRendererArrayColorLerpToDefault(Color color, float lerpAmount)
 	{
 		if (!this.m_isInitialized)
@@ -440,7 +440,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001243 RID: 4675 RVA: 0x0003540C File Offset: 0x0003360C
+	// Token: 0x06001AA1 RID: 6817 RVA: 0x00092BB4 File Offset: 0x00090DB4
 	public void ResetRendererArrayColor()
 	{
 		if (!this.m_isInitialized)
@@ -477,7 +477,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001244 RID: 4676 RVA: 0x000354F5 File Offset: 0x000336F5
+	// Token: 0x06001AA2 RID: 6818 RVA: 0x0000DBB3 File Offset: 0x0000BDB3
 	private void OnDisable()
 	{
 		this.ResetBlackFillState();
@@ -485,13 +485,13 @@ public class BlinkPulseEffect : MonoBehaviour
 		this.StopInvincibilityEffect();
 	}
 
-	// Token: 0x06001245 RID: 4677 RVA: 0x00035509 File Offset: 0x00033709
+	// Token: 0x06001AA3 RID: 6819 RVA: 0x0000DBC7 File Offset: 0x0000BDC7
 	public void StartSingleBlinkEffect()
 	{
 		this.StartSingleBlinkEffect(this.m_blinkOnHitTint);
 	}
 
-	// Token: 0x06001246 RID: 4678 RVA: 0x00035517 File Offset: 0x00033717
+	// Token: 0x06001AA4 RID: 6820 RVA: 0x0000DBD5 File Offset: 0x0000BDD5
 	public void StartSingleBlinkThenInvincibility()
 	{
 		if (!base.gameObject.activeInHierarchy)
@@ -505,7 +505,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		this.m_blinkCoroutine = base.StartCoroutine(this.SingleBlinkThenInvincibilityCoroutine(this.m_blinkOnHitTint));
 	}
 
-	// Token: 0x06001247 RID: 4679 RVA: 0x00035553 File Offset: 0x00033753
+	// Token: 0x06001AA5 RID: 6821 RVA: 0x0000DC11 File Offset: 0x0000BE11
 	private IEnumerator SingleBlinkThenInvincibilityCoroutine(Color blinkColor)
 	{
 		yield return this.SingleBlinkCoroutine(blinkColor);
@@ -513,7 +513,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001248 RID: 4680 RVA: 0x00035569 File Offset: 0x00033769
+	// Token: 0x06001AA6 RID: 6822 RVA: 0x0000DC27 File Offset: 0x0000BE27
 	public void StartSingleBlinkEffect(Color blinkColor)
 	{
 		if (!base.gameObject.activeInHierarchy)
@@ -527,7 +527,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		this.m_blinkCoroutine = base.StartCoroutine(this.SingleBlinkCoroutine(blinkColor));
 	}
 
-	// Token: 0x06001249 RID: 4681 RVA: 0x000355A0 File Offset: 0x000337A0
+	// Token: 0x06001AA7 RID: 6823 RVA: 0x0000DC5E File Offset: 0x0000BE5E
 	private IEnumerator SingleBlinkCoroutine(Color blinkColor)
 	{
 		this.m_blinkWaitYield.CreateNew(this.m_singleBlinkDuration, this.UseUnscaledTime);
@@ -540,7 +540,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600124A RID: 4682 RVA: 0x000355B6 File Offset: 0x000337B6
+	// Token: 0x06001AA8 RID: 6824 RVA: 0x0000DC74 File Offset: 0x0000BE74
 	public void StartInvincibilityEffect(float duration = -1f)
 	{
 		if (this.m_blinkCoroutine != null)
@@ -551,7 +551,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		this.m_invincibilityCoroutine = base.StartCoroutine(this.InvincibilityCoroutine(duration));
 	}
 
-	// Token: 0x0600124B RID: 4683 RVA: 0x000355E5 File Offset: 0x000337E5
+	// Token: 0x06001AA9 RID: 6825 RVA: 0x0000DCA3 File Offset: 0x0000BEA3
 	private IEnumerator InvincibilityCoroutine(float duration = -1f)
 	{
 		if (duration == -1f)
@@ -581,7 +581,7 @@ public class BlinkPulseEffect : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600124C RID: 4684 RVA: 0x000355FB File Offset: 0x000337FB
+	// Token: 0x06001AAA RID: 6826 RVA: 0x0000DCB9 File Offset: 0x0000BEB9
 	public void StopInvincibilityEffect()
 	{
 		if (this.m_invincibilityCoroutine != null)
@@ -595,68 +595,68 @@ public class BlinkPulseEffect : MonoBehaviour
 		this.m_invincibilityEffectOn = false;
 	}
 
-	// Token: 0x040012AD RID: 4781
+	// Token: 0x040018C3 RID: 6339
 	[SerializeField]
 	private float m_invincibilityPulseRate = 0.1f;
 
-	// Token: 0x040012AE RID: 4782
+	// Token: 0x040018C4 RID: 6340
 	[SerializeField]
 	private Color m_invincibilityTint = new Color(Color.black.r, Color.black.g, Color.black.b, 0.8f);
 
-	// Token: 0x040012AF RID: 4783
+	// Token: 0x040018C5 RID: 6341
 	[SerializeField]
 	private float m_singleBlinkDuration = 0.1f;
 
-	// Token: 0x040012B0 RID: 4784
+	// Token: 0x040018C6 RID: 6342
 	[SerializeField]
 	private Color m_blinkOnHitTint = new Color(1f, 1f, 1f, 0.8f);
 
-	// Token: 0x040012B1 RID: 4785
+	// Token: 0x040018C7 RID: 6343
 	[SerializeField]
 	private List<Renderer> m_rendererArray;
 
-	// Token: 0x040012B2 RID: 4786
+	// Token: 0x040018C8 RID: 6344
 	private bool m_invincibilityEffectOn;
 
-	// Token: 0x040012B3 RID: 4787
+	// Token: 0x040018C9 RID: 6345
 	private WaitRL_Yield m_blinkWaitYield;
 
-	// Token: 0x040012B4 RID: 4788
+	// Token: 0x040018CA RID: 6346
 	private WaitRL_Yield m_invincibilityWaitYield;
 
-	// Token: 0x040012B5 RID: 4789
+	// Token: 0x040018CB RID: 6347
 	private Coroutine m_blinkCoroutine;
 
-	// Token: 0x040012B6 RID: 4790
+	// Token: 0x040018CC RID: 6348
 	private Coroutine m_invincibilityCoroutine;
 
-	// Token: 0x040012B7 RID: 4791
+	// Token: 0x040018CD RID: 6349
 	private bool m_isInitialized;
 
-	// Token: 0x040012B8 RID: 4792
+	// Token: 0x040018CE RID: 6350
 	private BaseCharacterController m_charController;
 
-	// Token: 0x040012B9 RID: 4793
+	// Token: 0x040018CF RID: 6351
 	private bool m_useOverrideDefaultTint;
 
-	// Token: 0x040012BA RID: 4794
+	// Token: 0x040018D0 RID: 6352
 	private Color m_defaultTintOverrideColor;
 
-	// Token: 0x040012BB RID: 4795
+	// Token: 0x040018D1 RID: 6353
 	private static MaterialPropertyBlock m_matPropertyBlock_STATIC;
 
-	// Token: 0x040012BC RID: 4796
+	// Token: 0x040018D2 RID: 6354
 	private Coroutine m_blackFillFadeCoroutine;
 
-	// Token: 0x040012BD RID: 4797
+	// Token: 0x040018D3 RID: 6355
 	private bool m_isFadedIn;
 
-	// Token: 0x040012BE RID: 4798
+	// Token: 0x040018D4 RID: 6356
 	private bool m_isFadedOut = true;
 
-	// Token: 0x040012BF RID: 4799
+	// Token: 0x040018D5 RID: 6357
 	private Dictionary<BlackFillType, bool> m_blackFillEffectTable = new Dictionary<BlackFillType, bool>();
 
-	// Token: 0x040012C1 RID: 4801
+	// Token: 0x040018D7 RID: 6359
 	private List<RendererArrayEntry> m_rendererArrayDefaultTint;
 }

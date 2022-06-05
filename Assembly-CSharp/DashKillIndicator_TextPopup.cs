@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 
-// Token: 0x0200053B RID: 1339
+// Token: 0x020008D1 RID: 2257
 public class DashKillIndicator_TextPopup : TextPopupObj
 {
-	// Token: 0x0600311A RID: 12570 RVA: 0x000A6922 File Offset: 0x000A4B22
+	// Token: 0x06004498 RID: 17560 RVA: 0x00025BF9 File Offset: 0x00023DF9
 	protected override IEnumerator SpawnEffectCoroutine()
 	{
 		yield break;

@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008EF RID: 2287
+	// Token: 0x02000E64 RID: 3684
 	public class EyeballMinibossAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001855 RID: 6229
-		// (get) Token: 0x06004B2B RID: 19243 RVA: 0x0010E683 File Offset: 0x0010C883
+		// Token: 0x1700213E RID: 8510
+		// (get) Token: 0x060067F6 RID: 26614 RVA: 0x00039824 File Offset: 0x00037A24
 		public string Description
 		{
 			get
@@ -21,13 +21,13 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B2C RID: 19244 RVA: 0x0010E6A4 File Offset: 0x0010C8A4
+		// Token: 0x060067F7 RID: 26615 RVA: 0x00039845 File Offset: 0x00037A45
 		private void Start()
 		{
 			this.m_enemyController = base.GetComponent<EnemyController>();
 		}
 
-		// Token: 0x06004B2D RID: 19245 RVA: 0x0010E6B4 File Offset: 0x0010C8B4
+		// Token: 0x060067F8 RID: 26616 RVA: 0x0017E878 File Offset: 0x0017CA78
 		private void Update()
 		{
 			if (!this.m_enemyController)
@@ -54,32 +54,32 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003F32 RID: 16178
+		// Token: 0x0400546C RID: 21612
 		[SerializeField]
 		[Tooltip("This is the max move speed per frame. This is used to determine a normalised 'how fast is the Eye moving?' value which is then used as a parameter in its movement audio.")]
 		private float m_maxSpeed = 1f;
 
-		// Token: 0x04003F33 RID: 16179
+		// Token: 0x0400546D RID: 21613
 		[SerializeField]
 		private StudioEventEmitter m_movementEventEmitter;
 
-		// Token: 0x04003F34 RID: 16180
+		// Token: 0x0400546E RID: 21614
 		[SerializeField]
 		private StudioEventEmitter m_movementStopEventEmitter;
 
-		// Token: 0x04003F35 RID: 16181
+		// Token: 0x0400546F RID: 21615
 		private string m_description;
 
-		// Token: 0x04003F36 RID: 16182
+		// Token: 0x04005470 RID: 21616
 		private EnemyController m_enemyController;
 
-		// Token: 0x04003F37 RID: 16183
+		// Token: 0x04005471 RID: 21617
 		private Vector2 m_previousHeading;
 
-		// Token: 0x04003F38 RID: 16184
+		// Token: 0x04005472 RID: 21618
 		private Vector2 m_currentHeading;
 
-		// Token: 0x04003F39 RID: 16185
+		// Token: 0x04005473 RID: 21619
 		private const string MOVE_SPEED_PARAMETER = "moveSpeed";
 	}
 }

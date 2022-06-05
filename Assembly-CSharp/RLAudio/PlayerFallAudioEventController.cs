@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000906 RID: 2310
+	// Token: 0x02000E82 RID: 3714
 	public class PlayerFallAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001869 RID: 6249
-		// (get) Token: 0x06004BC9 RID: 19401 RVA: 0x0011087F File Offset: 0x0010EA7F
+		// Token: 0x17002160 RID: 8544
+		// (get) Token: 0x060068BE RID: 26814 RVA: 0x00039FB3 File Offset: 0x000381B3
 		public string Description
 		{
 			get
@@ -22,7 +22,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BCA RID: 19402 RVA: 0x001108A8 File Offset: 0x0010EAA8
+		// Token: 0x060068BF RID: 26815 RVA: 0x00180BCC File Offset: 0x0017EDCC
 		private void Awake()
 		{
 			this.m_corgiController = base.GetComponent<CorgiController_RL>();
@@ -31,7 +31,7 @@ namespace RLAudio
 			this.m_fallingEventInstance = AudioUtility.GetEventInstance(this.m_fallingEventPath, base.transform);
 		}
 
-		// Token: 0x06004BCB RID: 19403 RVA: 0x00110914 File Offset: 0x0010EB14
+		// Token: 0x060068C0 RID: 26816 RVA: 0x00039FD9 File Offset: 0x000381D9
 		private void OnDestroy()
 		{
 			if (this.m_fallingEventInstance.isValid())
@@ -40,21 +40,21 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004BCC RID: 19404 RVA: 0x0011092F File Offset: 0x0010EB2F
+		// Token: 0x060068C1 RID: 26817 RVA: 0x00039FF4 File Offset: 0x000381F4
 		private void OnPlayerStartFalling(CorgiController_RL corgiController)
 		{
 			this.m_isFalling = true;
 			AudioManager.PlayAttached(this, this.m_fallingEventInstance, base.gameObject);
 		}
 
-		// Token: 0x06004BCD RID: 19405 RVA: 0x0011094A File Offset: 0x0010EB4A
+		// Token: 0x060068C2 RID: 26818 RVA: 0x0003A00F File Offset: 0x0003820F
 		private void OnPlayerLanded(CorgiController_RL corgiController)
 		{
 			this.m_isFalling = false;
 			AudioManager.Stop(this.m_fallingEventInstance, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 		}
 
-		// Token: 0x06004BCE RID: 19406 RVA: 0x00110960 File Offset: 0x0010EB60
+		// Token: 0x060068C3 RID: 26819 RVA: 0x00180C38 File Offset: 0x0017EE38
 		private void Update()
 		{
 			if (this.m_corgiController == null || !this.m_isFalling)
@@ -71,24 +71,24 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x04003FDA RID: 16346
+		// Token: 0x04005537 RID: 21815
 		[SerializeField]
 		[EventRef]
 		private string m_fallingEventPath;
 
-		// Token: 0x04003FDB RID: 16347
+		// Token: 0x04005538 RID: 21816
 		private CorgiController_RL m_corgiController;
 
-		// Token: 0x04003FDC RID: 16348
+		// Token: 0x04005539 RID: 21817
 		private EventInstance m_fallingEventInstance;
 
-		// Token: 0x04003FDD RID: 16349
+		// Token: 0x0400553A RID: 21818
 		private bool m_isFalling;
 
-		// Token: 0x04003FDE RID: 16350
+		// Token: 0x0400553B RID: 21819
 		private string m_description = string.Empty;
 
-		// Token: 0x04003FDF RID: 16351
+		// Token: 0x0400553C RID: 21820
 		private const string FALL_SPEED_PARAMETER = "fallSpeed";
 	}
 }

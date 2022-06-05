@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020005C2 RID: 1474
+// Token: 0x020009CA RID: 2506
 public interface IMidpointObj
 {
-	// Token: 0x1700133B RID: 4923
-	// (get) Token: 0x06003667 RID: 13927
+	// Token: 0x17001A68 RID: 6760
+	// (get) Token: 0x06004C79 RID: 19577
 	Vector3 Midpoint { get; }
 }

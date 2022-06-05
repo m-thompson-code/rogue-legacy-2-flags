@@ -2,15 +2,15 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000543 RID: 1347
+// Token: 0x020008E1 RID: 2273
 public class XPGain_TextPopup : TextPopupObj
 {
-	// Token: 0x1700122C RID: 4652
-	// (get) Token: 0x0600313F RID: 12607 RVA: 0x000A6BF7 File Offset: 0x000A4DF7
-	// (set) Token: 0x06003140 RID: 12608 RVA: 0x000A6BFF File Offset: 0x000A4DFF
+	// Token: 0x1700188F RID: 6287
+	// (get) Token: 0x060044ED RID: 17645 RVA: 0x00025DFE File Offset: 0x00023FFE
+	// (set) Token: 0x060044EE RID: 17646 RVA: 0x00025E06 File Offset: 0x00024006
 	public bool FastPlay { get; set; }
 
-	// Token: 0x06003141 RID: 12609 RVA: 0x000A6C08 File Offset: 0x000A4E08
+	// Token: 0x060044EF RID: 17647 RVA: 0x00025E0F File Offset: 0x0002400F
 	protected override IEnumerator SpawnEffectCoroutine()
 	{
 		float speed = 0.25f;
@@ -45,7 +45,7 @@ public class XPGain_TextPopup : TextPopupObj
 		yield break;
 	}
 
-	// Token: 0x06003142 RID: 12610 RVA: 0x000A6C17 File Offset: 0x000A4E17
+	// Token: 0x060044F0 RID: 17648 RVA: 0x00025E1E File Offset: 0x0002401E
 	public override void ResetValues()
 	{
 		this.FastPlay = false;

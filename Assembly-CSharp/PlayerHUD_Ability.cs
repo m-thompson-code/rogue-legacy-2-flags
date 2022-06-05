@@ -5,10 +5,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020003DA RID: 986
+// Token: 0x02000678 RID: 1656
 public class PlayerHUD_Ability : MonoBehaviour
 {
-	// Token: 0x0600244C RID: 9292 RVA: 0x00078848 File Offset: 0x00076A48
+	// Token: 0x0600327C RID: 12924 RVA: 0x000D8930 File Offset: 0x000D6B30
 	private void Awake()
 	{
 		this.m_valueStringBuilder = new StringBuilder();
@@ -25,7 +25,7 @@ public class PlayerHUD_Ability : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.UpdateAbilityDisarmState, this.m_onUpdateAbilityDisarmStateHandler);
 	}
 
-	// Token: 0x0600244D RID: 9293 RVA: 0x00078908 File Offset: 0x00076B08
+	// Token: 0x0600327D RID: 12925 RVA: 0x000D89F0 File Offset: 0x000D6BF0
 	private void OnDestroy()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.ChangeAbility, this.m_onChangeAbilityHandler);
@@ -35,14 +35,14 @@ public class PlayerHUD_Ability : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.UpdateAbilityDisarmState, this.m_onUpdateAbilityDisarmStateHandler);
 	}
 
-	// Token: 0x0600244E RID: 9294 RVA: 0x00078956 File Offset: 0x00076B56
+	// Token: 0x0600327E RID: 12926 RVA: 0x0001BA87 File Offset: 0x00019C87
 	private void OnEnable()
 	{
 		this.m_abilityReadyGO.SetActive(false);
 		this.InitializeAbilityReadyGO();
 	}
 
-	// Token: 0x0600244F RID: 9295 RVA: 0x0007896C File Offset: 0x00076B6C
+	// Token: 0x0600327F RID: 12927 RVA: 0x000D8A40 File Offset: 0x000D6C40
 	private void InitializeAbilityReadyGO()
 	{
 		if (this.m_assignedAbility)
@@ -59,7 +59,7 @@ public class PlayerHUD_Ability : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002450 RID: 9296 RVA: 0x000789DA File Offset: 0x00076BDA
+	// Token: 0x06003280 RID: 12928 RVA: 0x0001BA9B File Offset: 0x00019C9B
 	private void OnChangeAbilityHandler(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		this.UpdateAssignedAbility();
@@ -67,13 +67,13 @@ public class PlayerHUD_Ability : MonoBehaviour
 		this.UpdateDisarmedState();
 	}
 
-	// Token: 0x06002451 RID: 9297 RVA: 0x000789EE File Offset: 0x00076BEE
+	// Token: 0x06003281 RID: 12929 RVA: 0x0001BAAF File Offset: 0x00019CAF
 	private void OnUpdateAbilityDisarmStateHandler(MonoBehaviour sender, EventArgs args)
 	{
 		this.UpdateDisarmedState();
 	}
 
-	// Token: 0x06002452 RID: 9298 RVA: 0x000789F6 File Offset: 0x00076BF6
+	// Token: 0x06003282 RID: 12930 RVA: 0x0001BAB7 File Offset: 0x00019CB7
 	private IEnumerator Start()
 	{
 		while (!PlayerManager.IsInstantiated)
@@ -88,7 +88,7 @@ public class PlayerHUD_Ability : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002453 RID: 9299 RVA: 0x00078A08 File Offset: 0x00076C08
+	// Token: 0x06003283 RID: 12931 RVA: 0x000D8AB0 File Offset: 0x000D6CB0
 	private void UpdateAssignedAbility()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -154,7 +154,7 @@ public class PlayerHUD_Ability : MonoBehaviour
 		this.m_tempTitleText.text = "NULL";
 	}
 
-	// Token: 0x06002454 RID: 9300 RVA: 0x00078C20 File Offset: 0x00076E20
+	// Token: 0x06003284 RID: 12932 RVA: 0x000D8CC8 File Offset: 0x000D6EC8
 	private void OnAmmoChangeHandler(object sender, EventArgs args)
 	{
 		IAbility abilityObj = (args as PlayerAmmoChangeEventArgs).AbilityObj;
@@ -164,7 +164,7 @@ public class PlayerHUD_Ability : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002455 RID: 9301 RVA: 0x00078C54 File Offset: 0x00076E54
+	// Token: 0x06003285 RID: 12933 RVA: 0x000D8CFC File Offset: 0x000D6EFC
 	private void OnManaChangeHandler(object sender, EventArgs args)
 	{
 		if (this.m_assignedAbility && this.m_assignedAbility.ActualCost > 0)
@@ -184,7 +184,7 @@ public class PlayerHUD_Ability : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002456 RID: 9302 RVA: 0x00078CE4 File Offset: 0x00076EE4
+	// Token: 0x06003286 RID: 12934 RVA: 0x000D8D8C File Offset: 0x000D6F8C
 	private void UpdateAmmo(IAbility ability)
 	{
 		this.m_ammoText.gameObject.SetActive(false);
@@ -210,7 +210,7 @@ public class PlayerHUD_Ability : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002457 RID: 9303 RVA: 0x00078DA4 File Offset: 0x00076FA4
+	// Token: 0x06003287 RID: 12935 RVA: 0x0001BAC6 File Offset: 0x00019CC6
 	private void BeginCooldown(object sender, CooldownEventArgs eventArgs)
 	{
 		if (base.gameObject.activeInHierarchy)
@@ -220,7 +220,7 @@ public class PlayerHUD_Ability : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002458 RID: 9304 RVA: 0x00078DC6 File Offset: 0x00076FC6
+	// Token: 0x06003288 RID: 12936 RVA: 0x0001BAE8 File Offset: 0x00019CE8
 	private IEnumerator CooldownCoroutine()
 	{
 		if (this.m_assignedAbility.ActualCooldownTime > 0f && (this.m_assignedAbility.MaxAmmo == 0 || (this.m_assignedAbility.MaxAmmo != 0 && this.m_assignedAbility.CurrentAmmo == 0)))
@@ -291,7 +291,7 @@ public class PlayerHUD_Ability : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002459 RID: 9305 RVA: 0x00078DD8 File Offset: 0x00076FD8
+	// Token: 0x06003289 RID: 12937 RVA: 0x000D8E4C File Offset: 0x000D704C
 	private bool UpdateTrackedValue()
 	{
 		this.m_valueStringBuilder.Clear();
@@ -337,7 +337,7 @@ public class PlayerHUD_Ability : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x0600245A RID: 9306 RVA: 0x00078F1C File Offset: 0x0007711C
+	// Token: 0x0600328A RID: 12938 RVA: 0x000D8F90 File Offset: 0x000D7190
 	private void UpdateDisarmedState()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -369,93 +369,93 @@ public class PlayerHUD_Ability : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001EDE RID: 7902
+	// Token: 0x04002950 RID: 10576
 	[SerializeField]
 	private TMP_Text m_tempTitleText;
 
-	// Token: 0x04001EDF RID: 7903
+	// Token: 0x04002951 RID: 10577
 	[SerializeField]
 	private Image m_cooldownImage;
 
-	// Token: 0x04001EE0 RID: 7904
+	// Token: 0x04002952 RID: 10578
 	[SerializeField]
 	private TMP_Text m_cooldownText;
 
-	// Token: 0x04001EE1 RID: 7905
+	// Token: 0x04002953 RID: 10579
 	[SerializeField]
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x04001EE2 RID: 7906
+	// Token: 0x04002954 RID: 10580
 	[SerializeField]
 	private CastAbilityType m_castAbilityType;
 
-	// Token: 0x04001EE3 RID: 7907
+	// Token: 0x04002955 RID: 10581
 	[SerializeField]
 	private TMP_Text m_ammoText;
 
-	// Token: 0x04001EE4 RID: 7908
+	// Token: 0x04002956 RID: 10582
 	[SerializeField]
 	private Image m_icon;
 
-	// Token: 0x04001EE5 RID: 7909
+	// Token: 0x04002957 RID: 10583
 	[SerializeField]
 	private TMP_Text m_inputText;
 
-	// Token: 0x04001EE6 RID: 7910
+	// Token: 0x04002958 RID: 10584
 	[SerializeField]
 	private TMP_Text m_manaCostText;
 
-	// Token: 0x04001EE7 RID: 7911
+	// Token: 0x04002959 RID: 10585
 	[SerializeField]
 	private GameObject m_abilityReadyGO;
 
-	// Token: 0x04001EE8 RID: 7912
+	// Token: 0x0400295A RID: 10586
 	[SerializeField]
 	private Image m_cooldownIcon;
 
-	// Token: 0x04001EE9 RID: 7913
+	// Token: 0x0400295B RID: 10587
 	[SerializeField]
 	private GameObject m_disarmedGO;
 
-	// Token: 0x04001EEA RID: 7914
+	// Token: 0x0400295C RID: 10588
 	private const string DECIMAL_COUNT_VALUE_STRING = "<size=60%><voffset=20>.{0:D2}</voffset></size>";
 
-	// Token: 0x04001EEB RID: 7915
+	// Token: 0x0400295D RID: 10589
 	private const string NULL_COOLDOWN_STRING = "--";
 
-	// Token: 0x04001EEC RID: 7916
+	// Token: 0x0400295E RID: 10590
 	private BaseAbility_RL m_assignedAbility;
 
-	// Token: 0x04001EED RID: 7917
+	// Token: 0x0400295F RID: 10591
 	private Animator m_animator;
 
-	// Token: 0x04001EEE RID: 7918
+	// Token: 0x04002960 RID: 10592
 	private Tween m_cdChangeTween;
 
-	// Token: 0x04001EEF RID: 7919
+	// Token: 0x04002961 RID: 10593
 	private int m_trackedValue;
 
-	// Token: 0x04001EF0 RID: 7920
+	// Token: 0x04002962 RID: 10594
 	private StringBuilder m_valueStringBuilder;
 
-	// Token: 0x04001EF1 RID: 7921
+	// Token: 0x04002963 RID: 10595
 	private StringBuilder m_prevValueStringBuilder;
 
-	// Token: 0x04001EF2 RID: 7922
+	// Token: 0x04002964 RID: 10596
 	private bool m_displayingNullCooldownString;
 
-	// Token: 0x04001EF3 RID: 7923
+	// Token: 0x04002965 RID: 10597
 	private Action<MonoBehaviour, EventArgs> m_onChangeAbilityHandler;
 
-	// Token: 0x04001EF4 RID: 7924
+	// Token: 0x04002966 RID: 10598
 	private Action<MonoBehaviour, EventArgs> m_onAmmoChangeHandler;
 
-	// Token: 0x04001EF5 RID: 7925
+	// Token: 0x04002967 RID: 10599
 	private Action<MonoBehaviour, EventArgs> m_onManaChangeHandler;
 
-	// Token: 0x04001EF6 RID: 7926
+	// Token: 0x04002968 RID: 10600
 	private Action<MonoBehaviour, EventArgs> m_onUpdateAbilityDisarmStateHandler;
 
-	// Token: 0x04001EF7 RID: 7927
+	// Token: 0x04002969 RID: 10601
 	private Action<object, CooldownEventArgs> m_beginCooldown;
 }

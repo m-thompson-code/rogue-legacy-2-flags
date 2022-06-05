@@ -1,27 +1,27 @@
 ﻿using System;
 
-// Token: 0x02000064 RID: 100
+// Token: 0x0200006C RID: 108
 public class Equipment_EV
 {
-	// Token: 0x0600016C RID: 364 RVA: 0x0000CE7F File Offset: 0x0000B07F
+	// Token: 0x06000180 RID: 384 RVA: 0x00003903 File Offset: 0x00001B03
 	public static string GetFormatterLocID(EquipmentCategoryType category)
 	{
 		return "LOC_ID_FORMATTER_" + category.ToString().ToUpper() + "_EQUIPMENT_1";
 	}
 
-	// Token: 0x0600016D RID: 365 RVA: 0x0000CEA2 File Offset: 0x0000B0A2
+	// Token: 0x06000181 RID: 385 RVA: 0x00003926 File Offset: 0x00001B26
 	public static string GetCategoryNameLocID(EquipmentCategoryType category)
 	{
 		return "LOC_ID_EQUIPMENT_SLOT_" + category.ToString().ToUpper() + "_1";
 	}
 
-	// Token: 0x0600016E RID: 366 RVA: 0x0000CEC5 File Offset: 0x0000B0C5
+	// Token: 0x06000182 RID: 386 RVA: 0x00003949 File Offset: 0x00001B49
 	public static string GetEquipmentTypeNameLocID(EquipmentType equipType)
 	{
 		return "LOC_ID_EQUIPMENT_MATERIAL_" + equipType.ToString().ToUpper() + "_1";
 	}
 
-	// Token: 0x0600016F RID: 367 RVA: 0x0000CEE8 File Offset: 0x0000B0E8
+	// Token: 0x06000183 RID: 387 RVA: 0x00049618 File Offset: 0x00047818
 	public static string GetFormattedEquipmentName(EquipmentCategoryType category, EquipmentType equipType)
 	{
 		string @string = LocalizationManager.GetString(Equipment_EV.GetFormatterLocID(category), false, true);
@@ -32,34 +32,34 @@ public class Equipment_EV
 		return string.Format(formatterGenderForcedString, string3, string2);
 	}
 
-	// Token: 0x040002C5 RID: 709
+	// Token: 0x040002E6 RID: 742
 	public const int EQUIPMENT_ATTRIBUTE_GAIN_1 = 1;
 
-	// Token: 0x040002C6 RID: 710
+	// Token: 0x040002E7 RID: 743
 	public const int EQUIPMENT_ATTRIBUTE_GAIN_2 = 2;
 
-	// Token: 0x040002C7 RID: 711
+	// Token: 0x040002E8 RID: 744
 	public const int EQUIPMENT_ATTRIBUTE_GAIN_3 = 3;
 
-	// Token: 0x040002C8 RID: 712
+	// Token: 0x040002E9 RID: 745
 	public const float WEIGHT_PERCENT_LEVEL_UP = 0.2f;
 
-	// Token: 0x040002C9 RID: 713
+	// Token: 0x040002EA RID: 746
 	public const float CD_ADD_PER_WEIGHT_LEVEL = 0f;
 
-	// Token: 0x040002CA RID: 714
+	// Token: 0x040002EB RID: 747
 	public const float MANA_REGEN_DOWN_PER_WEIGHT_LEVEL = 0f;
 
-	// Token: 0x040002CB RID: 715
+	// Token: 0x040002EC RID: 748
 	public const float MANA_TOTAL_DOWN_PER_WEIGHT_LEVEL = 0f;
 
-	// Token: 0x040002CC RID: 716
+	// Token: 0x040002ED RID: 749
 	public static readonly float[] CRIT_DAMAGE_BONUS_PER_WEIGHT_LEVEL = new float[4];
 
-	// Token: 0x040002CD RID: 717
+	// Token: 0x040002EE RID: 750
 	public static readonly float[] MAGIC_CRIT_DAMAGE_BONUS_PER_WEIGHT_LEVEL = new float[4];
 
-	// Token: 0x040002CE RID: 718
+	// Token: 0x040002EF RID: 751
 	public static readonly float[] RESOLVE_BONUS_PER_WEIGHT_LEVEL = new float[]
 	{
 		1.25f,
@@ -68,7 +68,7 @@ public class Equipment_EV
 		0.5f
 	};
 
-	// Token: 0x040002CF RID: 719
+	// Token: 0x040002F0 RID: 752
 	public static readonly EquipmentType[] BlacksmithOrder = new EquipmentType[]
 	{
 		EquipmentType.GEAR_BONUS_WEIGHT,

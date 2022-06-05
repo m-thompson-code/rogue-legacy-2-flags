@@ -4,27 +4,27 @@ using UnityEngine;
 
 namespace Foreground
 {
-	// Token: 0x02000896 RID: 2198
+	// Token: 0x02000DC3 RID: 3523
 	public class ForegroundController : MonoBehaviour
 	{
-		// Token: 0x17001793 RID: 6035
-		// (get) Token: 0x060047FD RID: 18429 RVA: 0x00103183 File Offset: 0x00101383
-		// (set) Token: 0x060047FE RID: 18430 RVA: 0x0010318B File Offset: 0x0010138B
+		// Token: 0x17002005 RID: 8197
+		// (get) Token: 0x06006338 RID: 25400 RVA: 0x00036A71 File Offset: 0x00034C71
+		// (set) Token: 0x06006339 RID: 25401 RVA: 0x00036A79 File Offset: 0x00034C79
 		public BaseRoom Room { get; private set; }
 
-		// Token: 0x17001794 RID: 6036
-		// (get) Token: 0x060047FF RID: 18431 RVA: 0x00103194 File Offset: 0x00101394
-		// (set) Token: 0x06004800 RID: 18432 RVA: 0x0010319C File Offset: 0x0010139C
+		// Token: 0x17002006 RID: 8198
+		// (get) Token: 0x0600633A RID: 25402 RVA: 0x00036A82 File Offset: 0x00034C82
+		// (set) Token: 0x0600633B RID: 25403 RVA: 0x00036A8A File Offset: 0x00034C8A
 		public bool IsInitialized { get; private set; }
 
-		// Token: 0x06004801 RID: 18433 RVA: 0x001031A5 File Offset: 0x001013A5
+		// Token: 0x0600633C RID: 25404 RVA: 0x00036A93 File Offset: 0x00034C93
 		private void Awake()
 		{
 			this.m_room.RoomMergedRelay.AddListener(new Action<object, EventArgs>(this.OnRoomMerged), false);
 			this.m_room.RoomDestroyedRelay.AddListener(new Action<object, EventArgs>(this.OnRoomDestroyed), false);
 		}
 
-		// Token: 0x06004802 RID: 18434 RVA: 0x001031E4 File Offset: 0x001013E4
+		// Token: 0x0600633D RID: 25405 RVA: 0x00171D8C File Offset: 0x0016FF8C
 		public void CreateForeground(ForegroundLocation foregroundLocation)
 		{
 			if (this.m_zoomController == null || foregroundLocation == ForegroundLocation.None)
@@ -78,7 +78,7 @@ namespace Foreground
 			}
 		}
 
-		// Token: 0x06004803 RID: 18435 RVA: 0x0010337C File Offset: 0x0010157C
+		// Token: 0x0600633E RID: 25406 RVA: 0x00171F24 File Offset: 0x00170124
 		private Vector3 GetLocalCornerCoordinates(ForegroundLocation location)
 		{
 			if (location <= ForegroundLocation.LowerRightCorner)
@@ -106,7 +106,7 @@ namespace Foreground
 			throw new InvalidOperationException();
 		}
 
-		// Token: 0x06004804 RID: 18436 RVA: 0x001034E4 File Offset: 0x001016E4
+		// Token: 0x0600633F RID: 25407 RVA: 0x0017208C File Offset: 0x0017028C
 		private ForegroundGroup GetRandomForegroundGroupInstance(ForegroundGroup[] potentialForegroundGroups)
 		{
 			int num = 0;
@@ -117,7 +117,7 @@ namespace Foreground
 			return UnityEngine.Object.Instantiate<ForegroundGroup>(potentialForegroundGroups[num], base.transform, false);
 		}
 
-		// Token: 0x06004805 RID: 18437 RVA: 0x0010351C File Offset: 0x0010171C
+		// Token: 0x06006340 RID: 25408 RVA: 0x001720C4 File Offset: 0x001702C4
 		private void Mirror()
 		{
 			bool lowerLeft = this.m_lowerLeft;
@@ -130,7 +130,7 @@ namespace Foreground
 			this.m_upperRight = upperLeft;
 		}
 
-		// Token: 0x06004806 RID: 18438 RVA: 0x00103564 File Offset: 0x00101764
+		// Token: 0x06006341 RID: 25409 RVA: 0x0017210C File Offset: 0x0017030C
 		private void OnRoomMerged(object sender, EventArgs eventArgs)
 		{
 			foreach (ForegroundGroup foregroundGroup in this.m_foregroundGroups)
@@ -144,7 +144,7 @@ namespace Foreground
 			}
 		}
 
-		// Token: 0x06004807 RID: 18439 RVA: 0x001035E0 File Offset: 0x001017E0
+		// Token: 0x06006342 RID: 25410 RVA: 0x00172188 File Offset: 0x00170388
 		private void OnRoomDestroyed(object sender, EventArgs eventArgs)
 		{
 			this.m_room.RoomMergedRelay.RemoveListener(new Action<object, EventArgs>(this.OnRoomMerged));
@@ -152,7 +152,7 @@ namespace Foreground
 			this.IsInitialized = false;
 		}
 
-		// Token: 0x06004808 RID: 18440 RVA: 0x00103630 File Offset: 0x00101830
+		// Token: 0x06006343 RID: 25411 RVA: 0x001721D8 File Offset: 0x001703D8
 		public void Initialize()
 		{
 			if ((GameUtility.IsInLevelEditor && this.m_room != OnPlayManager.CurrentRoom) || BiomeArtDataLibrary.GetArtData(this.m_room.AppearanceBiomeType) == null)
@@ -184,31 +184,31 @@ namespace Foreground
 			this.IsInitialized = true;
 		}
 
-		// Token: 0x04003CDC RID: 15580
+		// Token: 0x0400510A RID: 20746
 		[SerializeField]
 		private bool m_lowerLeft;
 
-		// Token: 0x04003CDD RID: 15581
+		// Token: 0x0400510B RID: 20747
 		[SerializeField]
 		private bool m_lowerRight;
 
-		// Token: 0x04003CDE RID: 15582
+		// Token: 0x0400510C RID: 20748
 		[SerializeField]
 		private bool m_upperLeft;
 
-		// Token: 0x04003CDF RID: 15583
+		// Token: 0x0400510D RID: 20749
 		[SerializeField]
 		private bool m_upperRight;
 
-		// Token: 0x04003CE0 RID: 15584
+		// Token: 0x0400510E RID: 20750
 		[SerializeField]
 		private Room m_room;
 
-		// Token: 0x04003CE1 RID: 15585
+		// Token: 0x0400510F RID: 20751
 		[SerializeField]
 		private CameraZoomController m_zoomController;
 
-		// Token: 0x04003CE4 RID: 15588
+		// Token: 0x04005112 RID: 20754
 		private List<ForegroundGroup> m_foregroundGroups = new List<ForegroundGroup>();
 	}
 }

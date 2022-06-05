@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020006D1 RID: 1745
+// Token: 0x02000B7C RID: 2940
 [CreateAssetMenu(menuName = "Custom/XML Processing Behaviours/Enemy Data (Test)")]
 public class EnemyData : ScriptableObject
 {
-	// Token: 0x06003FC8 RID: 16328 RVA: 0x000E2688 File Offset: 0x000E0888
+	// Token: 0x060058FF RID: 22783 RVA: 0x001523A4 File Offset: 0x001505A4
 	public void SetSpawnInBiome(BiomeType biome, bool value)
 	{
 		if (biome <= BiomeType.DriftHouse)
@@ -107,7 +107,7 @@ public class EnemyData : ScriptableObject
 		}
 	}
 
-	// Token: 0x06003FC9 RID: 16329 RVA: 0x000E2778 File Offset: 0x000E0978
+	// Token: 0x06005900 RID: 22784 RVA: 0x00152494 File Offset: 0x00150694
 	public bool GetSpawnInBiome(BiomeType biome)
 	{
 		if (biome <= BiomeType.DriftHouse)
@@ -190,135 +190,135 @@ public class EnemyData : ScriptableObject
 		return false;
 	}
 
-	// Token: 0x04002FC3 RID: 12227
+	// Token: 0x04004212 RID: 16914
 	public float SummonValue;
 
-	// Token: 0x04002FC4 RID: 12228
+	// Token: 0x04004213 RID: 16915
 	public int Health;
 
-	// Token: 0x04002FC5 RID: 12229
+	// Token: 0x04004214 RID: 16916
 	public int WeaponDamage;
 
-	// Token: 0x04002FC6 RID: 12230
+	// Token: 0x04004215 RID: 16917
 	public int MagicDamage;
 
-	// Token: 0x04002FC7 RID: 12231
+	// Token: 0x04004216 RID: 16918
 	public float Speed;
 
-	// Token: 0x04002FC8 RID: 12232
+	// Token: 0x04004217 RID: 16919
 	public float TurnSpeed;
 
-	// Token: 0x04002FC9 RID: 12233
+	// Token: 0x04004218 RID: 16920
 	public float RestMinCooldown;
 
-	// Token: 0x04002FCA RID: 12234
+	// Token: 0x04004219 RID: 16921
 	public float RestMaxCooldown;
 
-	// Token: 0x04002FCB RID: 12235
+	// Token: 0x0400421A RID: 16922
 	public bool IsFlying;
 
-	// Token: 0x04002FCC RID: 12236
+	// Token: 0x0400421B RID: 16923
 	public bool AlwaysFace;
 
-	// Token: 0x04002FCD RID: 12237
+	// Token: 0x0400421C RID: 16924
 	public bool FallLedge;
 
-	// Token: 0x04002FCE RID: 12238
+	// Token: 0x0400421D RID: 16925
 	public bool CollidesWithPlatforms;
 
-	// Token: 0x04002FCF RID: 12239
+	// Token: 0x0400421E RID: 16926
 	public int StunDefence;
 
-	// Token: 0x04002FD0 RID: 12240
+	// Token: 0x0400421F RID: 16927
 	public int KnockbackDefence;
 
-	// Token: 0x04002FD1 RID: 12241
+	// Token: 0x04004220 RID: 16928
 	public float StunDuration;
 
-	// Token: 0x04002FD2 RID: 12242
+	// Token: 0x04004221 RID: 16929
 	public float KnockbackModX;
 
-	// Token: 0x04002FD3 RID: 12243
+	// Token: 0x04004222 RID: 16930
 	public float KnockbackModY;
 
-	// Token: 0x04002FD4 RID: 12244
+	// Token: 0x04004223 RID: 16931
 	public float Scale;
 
-	// Token: 0x04002FD5 RID: 12245
+	// Token: 0x04004224 RID: 16932
 	public float AnimationSpeed;
 
-	// Token: 0x04002FD6 RID: 12246
+	// Token: 0x04004225 RID: 16933
 	public int GoldMin;
 
-	// Token: 0x04002FD7 RID: 12247
+	// Token: 0x04004226 RID: 16934
 	public int GoldMax;
 
-	// Token: 0x04002FD8 RID: 12248
+	// Token: 0x04004227 RID: 16935
 	public float DropOdds;
 
-	// Token: 0x04002FD9 RID: 12249
+	// Token: 0x04004228 RID: 16936
 	public float MeleeRadius;
 
-	// Token: 0x04002FDA RID: 12250
+	// Token: 0x04004229 RID: 16937
 	public float ProjectileRadius;
 
-	// Token: 0x04002FDB RID: 12251
+	// Token: 0x0400422A RID: 16938
 	public float FarRadius;
 
-	// Token: 0x04002FDC RID: 12252
+	// Token: 0x0400422B RID: 16939
 	[Space]
 	[Header("Spawn in Biome")]
 	[Space]
 	public bool SpawnInCastle;
 
-	// Token: 0x04002FDD RID: 12253
+	// Token: 0x0400422C RID: 16940
 	public bool SpawnInCave;
 
-	// Token: 0x04002FDE RID: 12254
+	// Token: 0x0400422D RID: 16941
 	public bool SpawnInDragon;
 
-	// Token: 0x04002FDF RID: 12255
+	// Token: 0x0400422E RID: 16942
 	public bool SpawnInForest;
 
-	// Token: 0x04002FE0 RID: 12256
+	// Token: 0x0400422F RID: 16943
 	public bool SpawnInGarden;
 
-	// Token: 0x04002FE1 RID: 12257
+	// Token: 0x04004230 RID: 16944
 	public bool SpawnInHome;
 
-	// Token: 0x04002FE2 RID: 12258
+	// Token: 0x04004231 RID: 16945
 	public bool SpawnInLake;
 
-	// Token: 0x04002FE3 RID: 12259
+	// Token: 0x04004232 RID: 16946
 	public bool SpawnInStone;
 
-	// Token: 0x04002FE4 RID: 12260
+	// Token: 0x04004233 RID: 16947
 	public bool SpawnInStudy;
 
-	// Token: 0x04002FE5 RID: 12261
+	// Token: 0x04004234 RID: 16948
 	public bool SpawnInSunken;
 
-	// Token: 0x04002FE6 RID: 12262
+	// Token: 0x04004235 RID: 16949
 	public bool SpawnInTower;
 
-	// Token: 0x04002FE7 RID: 12263
+	// Token: 0x04004236 RID: 16950
 	public bool SpawnInTowerExterior;
 
-	// Token: 0x04002FE8 RID: 12264
+	// Token: 0x04004237 RID: 16951
 	public bool SpawnInTown;
 
-	// Token: 0x04002FE9 RID: 12265
+	// Token: 0x04004238 RID: 16952
 	[Space]
 	[Header("Text Fields")]
 	[Space]
 	public string Title;
 
-	// Token: 0x04002FEA RID: 12266
+	// Token: 0x04004239 RID: 16953
 	public string MoveList;
 
-	// Token: 0x04002FEB RID: 12267
+	// Token: 0x0400423A RID: 16954
 	public string Description01;
 
-	// Token: 0x04002FEC RID: 12268
+	// Token: 0x0400423B RID: 16955
 	public string Description02;
 }

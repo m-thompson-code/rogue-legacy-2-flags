@@ -3,17 +3,17 @@ using System.Collections;
 using Cinemachine;
 using UnityEngine;
 
-// Token: 0x0200042A RID: 1066
+// Token: 0x020006EF RID: 1775
 public class VirtualCameraShakeEffect : BaseEffect
 {
-	// Token: 0x06002745 RID: 10053 RVA: 0x00082CAC File Offset: 0x00080EAC
+	// Token: 0x06003642 RID: 13890 RVA: 0x0001DCCC File Offset: 0x0001BECC
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_waitYield = new WaitRL_Yield(0f, true);
 	}
 
-	// Token: 0x06002746 RID: 10054 RVA: 0x00082CC8 File Offset: 0x00080EC8
+	// Token: 0x06003643 RID: 13891 RVA: 0x000E39A4 File Offset: 0x000E1BA4
 	public override void Play(float duration = 0f, EffectStopType stopType = EffectStopType.Gracefully)
 	{
 		base.Play(duration, stopType);
@@ -34,7 +34,7 @@ public class VirtualCameraShakeEffect : BaseEffect
 		this.PlayComplete();
 	}
 
-	// Token: 0x06002747 RID: 10055 RVA: 0x00082D7A File Offset: 0x00080F7A
+	// Token: 0x06003644 RID: 13892 RVA: 0x0001DCE5 File Offset: 0x0001BEE5
 	private IEnumerator PlayTimedCameraShake(float duration)
 	{
 		this.ShakeVirtualCamera(this.m_shakeSpeed, this.m_shakeAmplitude);
@@ -72,7 +72,7 @@ public class VirtualCameraShakeEffect : BaseEffect
 		yield break;
 	}
 
-	// Token: 0x06002748 RID: 10056 RVA: 0x00082D90 File Offset: 0x00080F90
+	// Token: 0x06003645 RID: 13893 RVA: 0x0001DCFB File Offset: 0x0001BEFB
 	public override void Stop(EffectStopType stopType)
 	{
 		base.StopAllCoroutines();
@@ -82,7 +82,7 @@ public class VirtualCameraShakeEffect : BaseEffect
 		this.PlayComplete();
 	}
 
-	// Token: 0x06002749 RID: 10057 RVA: 0x00082DBC File Offset: 0x00080FBC
+	// Token: 0x06003646 RID: 13894 RVA: 0x0001DD27 File Offset: 0x0001BF27
 	private void ShakeVirtualCamera(float shakeSpeed, float shakeSize)
 	{
 		if (this.m_activeNoise != null)
@@ -92,7 +92,7 @@ public class VirtualCameraShakeEffect : BaseEffect
 		}
 	}
 
-	// Token: 0x0600274A RID: 10058 RVA: 0x00082DE4 File Offset: 0x00080FE4
+	// Token: 0x06003647 RID: 13895 RVA: 0x0001DD4F File Offset: 0x0001BF4F
 	protected override void OnDisable()
 	{
 		this.ShakeVirtualCamera(0f, 0f);
@@ -100,23 +100,23 @@ public class VirtualCameraShakeEffect : BaseEffect
 		base.OnDisable();
 	}
 
-	// Token: 0x040020F3 RID: 8435
+	// Token: 0x04002C11 RID: 11281
 	private CinemachineVirtualCamera m_activeVcam;
 
-	// Token: 0x040020F4 RID: 8436
+	// Token: 0x04002C12 RID: 11282
 	private CinemachineConfiner_RL m_activeConfiner;
 
-	// Token: 0x040020F5 RID: 8437
+	// Token: 0x04002C13 RID: 11283
 	private CinemachineBasicMultiChannelPerlin m_activeNoise;
 
-	// Token: 0x040020F6 RID: 8438
+	// Token: 0x04002C14 RID: 11284
 	[SerializeField]
 	private float m_shakeSpeed;
 
-	// Token: 0x040020F7 RID: 8439
+	// Token: 0x04002C15 RID: 11285
 	[SerializeField]
 	private float m_shakeAmplitude;
 
-	// Token: 0x040020F8 RID: 8440
+	// Token: 0x04002C16 RID: 11286
 	private WaitRL_Yield m_waitYield;
 }

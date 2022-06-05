@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace GameEventTracking
 {
-	// Token: 0x020008AB RID: 2219
+	// Token: 0x02000DDE RID: 3550
 	[Serializable]
 	public struct ChestTrackerData : IGameEventData
 	{
-		// Token: 0x06004862 RID: 18530 RVA: 0x001040C8 File Offset: 0x001022C8
+		// Token: 0x060063C2 RID: 25538 RVA: 0x00172CB0 File Offset: 0x00170EB0
 		public ChestTrackerData(ChestType chestType, bool containsGold, BiomeType biome, int biomeControllerIndex, int chestIndex)
 		{
 			this.m_chestType = chestType;
@@ -19,8 +19,8 @@ namespace GameEventTracking
 			this.m_chestIndex = chestIndex;
 		}
 
-		// Token: 0x170017B8 RID: 6072
-		// (get) Token: 0x06004863 RID: 18531 RVA: 0x00104116 File Offset: 0x00102316
+		// Token: 0x17002032 RID: 8242
+		// (get) Token: 0x060063C3 RID: 25539 RVA: 0x00036FFE File Offset: 0x000351FE
 		public int ChestIndex
 		{
 			get
@@ -29,8 +29,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017B9 RID: 6073
-		// (get) Token: 0x06004864 RID: 18532 RVA: 0x0010411E File Offset: 0x0010231E
+		// Token: 0x17002033 RID: 8243
+		// (get) Token: 0x060063C4 RID: 25540 RVA: 0x00037006 File Offset: 0x00035206
 		public BiomeType Biome
 		{
 			get
@@ -39,8 +39,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017BA RID: 6074
-		// (get) Token: 0x06004865 RID: 18533 RVA: 0x00104126 File Offset: 0x00102326
+		// Token: 0x17002034 RID: 8244
+		// (get) Token: 0x060063C5 RID: 25541 RVA: 0x0003700E File Offset: 0x0003520E
 		public int BiomeControllerIndex
 		{
 			get
@@ -49,8 +49,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017BB RID: 6075
-		// (get) Token: 0x06004866 RID: 18534 RVA: 0x0010412E File Offset: 0x0010232E
+		// Token: 0x17002035 RID: 8245
+		// (get) Token: 0x060063C6 RID: 25542 RVA: 0x00037016 File Offset: 0x00035216
 		public ChestType ChestType
 		{
 			get
@@ -59,8 +59,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017BC RID: 6076
-		// (get) Token: 0x06004867 RID: 18535 RVA: 0x00104136 File Offset: 0x00102336
+		// Token: 0x17002036 RID: 8246
+		// (get) Token: 0x060063C7 RID: 25543 RVA: 0x0003701E File Offset: 0x0003521E
 		public bool ContainsGold
 		{
 			get
@@ -69,8 +69,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017BD RID: 6077
-		// (get) Token: 0x06004868 RID: 18536 RVA: 0x0010413E File Offset: 0x0010233E
+		// Token: 0x17002037 RID: 8247
+		// (get) Token: 0x060063C8 RID: 25544 RVA: 0x00037026 File Offset: 0x00035226
 		public float TimeStamp
 		{
 			get
@@ -79,8 +79,8 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x170017BE RID: 6078
-		// (get) Token: 0x06004869 RID: 18537 RVA: 0x00104146 File Offset: 0x00102346
+		// Token: 0x17002038 RID: 8248
+		// (get) Token: 0x060063C9 RID: 25545 RVA: 0x0003702E File Offset: 0x0003522E
 		public int TimesLoaded
 		{
 			get
@@ -89,25 +89,25 @@ namespace GameEventTracking
 			}
 		}
 
-		// Token: 0x04003D1C RID: 15644
+		// Token: 0x04005163 RID: 20835
 		private float m_timeStamp;
 
-		// Token: 0x04003D1D RID: 15645
+		// Token: 0x04005164 RID: 20836
 		private ChestType m_chestType;
 
-		// Token: 0x04003D1E RID: 15646
+		// Token: 0x04005165 RID: 20837
 		private int m_timesLoaded;
 
-		// Token: 0x04003D1F RID: 15647
+		// Token: 0x04005166 RID: 20838
 		private bool m_containsGold;
 
-		// Token: 0x04003D20 RID: 15648
+		// Token: 0x04005167 RID: 20839
 		private BiomeType m_biome;
 
-		// Token: 0x04003D21 RID: 15649
+		// Token: 0x04005168 RID: 20840
 		private int m_biomeControllerIndex;
 
-		// Token: 0x04003D22 RID: 15650
+		// Token: 0x04005169 RID: 20841
 		private int m_chestIndex;
 	}
 }

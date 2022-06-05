@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000526 RID: 1318
+// Token: 0x020008A5 RID: 2213
 [Serializable]
 public class SetSpawnPoints_SummonRule : BaseSummonRule
 {
-	// Token: 0x170011F3 RID: 4595
-	// (get) Token: 0x0600309E RID: 12446 RVA: 0x000A5E1D File Offset: 0x000A401D
+	// Token: 0x1700181E RID: 6174
+	// (get) Token: 0x0600439C RID: 17308 RVA: 0x00017BA1 File Offset: 0x00015DA1
 	public override SummonRuleType RuleType
 	{
 		get
@@ -16,8 +16,8 @@ public class SetSpawnPoints_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011F4 RID: 4596
-	// (get) Token: 0x0600309F RID: 12447 RVA: 0x000A5E24 File Offset: 0x000A4024
+	// Token: 0x1700181F RID: 6175
+	// (get) Token: 0x0600439D RID: 17309 RVA: 0x0002552A File Offset: 0x0002372A
 	public override Color BoxColor
 	{
 		get
@@ -26,8 +26,8 @@ public class SetSpawnPoints_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x170011F5 RID: 4597
-	// (get) Token: 0x060030A0 RID: 12448 RVA: 0x000A5E2B File Offset: 0x000A402B
+	// Token: 0x17001820 RID: 6176
+	// (get) Token: 0x0600439E RID: 17310 RVA: 0x00025531 File Offset: 0x00023731
 	public override string RuleLabel
 	{
 		get
@@ -36,7 +36,7 @@ public class SetSpawnPoints_SummonRule : BaseSummonRule
 		}
 	}
 
-	// Token: 0x060030A1 RID: 12449 RVA: 0x000A5E32 File Offset: 0x000A4032
+	// Token: 0x0600439F RID: 17311 RVA: 0x00025538 File Offset: 0x00023738
 	public override IEnumerator RunSummonRule()
 	{
 		base.SummonController.SpawnPoints.Clear();
@@ -47,7 +47,7 @@ public class SetSpawnPoints_SummonRule : BaseSummonRule
 		yield break;
 	}
 
-	// Token: 0x04002698 RID: 9880
+	// Token: 0x040034A2 RID: 13474
 	[SerializeField]
 	private int[] m_spawnPointArray = new int[0];
 }

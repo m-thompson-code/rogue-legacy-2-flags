@@ -2,11 +2,11 @@
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x0200043B RID: 1083
+// Token: 0x02000704 RID: 1796
 public class KillAllEnemies_FairyRule : FairyRule
 {
-	// Token: 0x17000FAD RID: 4013
-	// (get) Token: 0x060027C2 RID: 10178 RVA: 0x000842FE File Offset: 0x000824FE
+	// Token: 0x17001490 RID: 5264
+	// (get) Token: 0x060036D4 RID: 14036 RVA: 0x0001E294 File Offset: 0x0001C494
 	public override string Description
 	{
 		get
@@ -15,8 +15,8 @@ public class KillAllEnemies_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FAE RID: 4014
-	// (get) Token: 0x060027C3 RID: 10179 RVA: 0x00084305 File Offset: 0x00082505
+	// Token: 0x17001491 RID: 5265
+	// (get) Token: 0x060036D5 RID: 14037 RVA: 0x00017640 File Offset: 0x00015840
 	public override FairyRuleID ID
 	{
 		get
@@ -25,8 +25,8 @@ public class KillAllEnemies_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x17000FAF RID: 4015
-	// (get) Token: 0x060027C4 RID: 10180 RVA: 0x00084309 File Offset: 0x00082509
+	// Token: 0x17001492 RID: 5266
+	// (get) Token: 0x060036D6 RID: 14038 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool LockChestAtStart
 	{
 		get
@@ -35,19 +35,19 @@ public class KillAllEnemies_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027C5 RID: 10181 RVA: 0x0008430C File Offset: 0x0008250C
+	// Token: 0x060036D7 RID: 14039 RVA: 0x0001E29B File Offset: 0x0001C49B
 	private void Awake()
 	{
 		this.m_checkEnemyDeathCount = new Action<MonoBehaviour, EventArgs>(this.CheckEnemyDeathCount);
 	}
 
-	// Token: 0x060027C6 RID: 10182 RVA: 0x00084320 File Offset: 0x00082520
+	// Token: 0x060036D8 RID: 14040 RVA: 0x0001E2AF File Offset: 0x0001C4AF
 	private void OnDestroy()
 	{
 		this.UnsubscribeFromEnemyDeathEvent();
 	}
 
-	// Token: 0x060027C7 RID: 10183 RVA: 0x00084328 File Offset: 0x00082528
+	// Token: 0x060036D9 RID: 14041 RVA: 0x0001E2B7 File Offset: 0x0001C4B7
 	public override void RunRule(FairyRoomController fairyRoomController)
 	{
 		if (base.State != FairyRoomState.Failed)
@@ -63,14 +63,14 @@ public class KillAllEnemies_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027C8 RID: 10184 RVA: 0x0008435F File Offset: 0x0008255F
+	// Token: 0x060036DA RID: 14042 RVA: 0x0001E2EE File Offset: 0x0001C4EE
 	public override void StopRule()
 	{
 		base.StopRule();
 		this.UnsubscribeFromEnemyDeathEvent();
 	}
 
-	// Token: 0x060027C9 RID: 10185 RVA: 0x0008436D File Offset: 0x0008256D
+	// Token: 0x060036DB RID: 14043 RVA: 0x0001E2FC File Offset: 0x0001C4FC
 	private void UnsubscribeFromEnemyDeathEvent()
 	{
 		if (this.m_isListeningForEnemyDeathEvent)
@@ -80,7 +80,7 @@ public class KillAllEnemies_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x060027CA RID: 10186 RVA: 0x0008438C File Offset: 0x0008258C
+	// Token: 0x060036DC RID: 14044 RVA: 0x000E4DDC File Offset: 0x000E2FDC
 	private bool PerformInitialEnemyDeathCount()
 	{
 		if (PlayerManager.IsInstantiated)
@@ -97,7 +97,7 @@ public class KillAllEnemies_FairyRule : FairyRule
 		return false;
 	}
 
-	// Token: 0x060027CB RID: 10187 RVA: 0x000843E4 File Offset: 0x000825E4
+	// Token: 0x060036DD RID: 14045 RVA: 0x000E4E34 File Offset: 0x000E3034
 	private void CheckEnemyDeathCount(object sender, EventArgs eventArgs)
 	{
 		if (PlayerManager.IsInstantiated)
@@ -121,9 +121,9 @@ public class KillAllEnemies_FairyRule : FairyRule
 		}
 	}
 
-	// Token: 0x04002136 RID: 8502
+	// Token: 0x04002C67 RID: 11367
 	private bool m_isListeningForEnemyDeathEvent;
 
-	// Token: 0x04002137 RID: 8503
+	// Token: 0x04002C68 RID: 11368
 	private Action<MonoBehaviour, EventArgs> m_checkEnemyDeathCount;
 }

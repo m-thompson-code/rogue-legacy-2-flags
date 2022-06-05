@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000758 RID: 1880
+// Token: 0x02000C16 RID: 3094
 public class NPCType_RL
 {
-	// Token: 0x1700163C RID: 5692
-	// (get) Token: 0x0600411D RID: 16669 RVA: 0x000E6D2D File Offset: 0x000E4F2D
+	// Token: 0x17001E38 RID: 7736
+	// (get) Token: 0x06005A9A RID: 23194 RVA: 0x00031AAD File Offset: 0x0002FCAD
 	public static NPCType[] TypeArray
 	{
 		get
@@ -19,7 +19,7 @@ public class NPCType_RL
 		}
 	}
 
-	// Token: 0x0600411E RID: 16670 RVA: 0x000E6D54 File Offset: 0x000E4F54
+	// Token: 0x06005A9B RID: 23195 RVA: 0x0015650C File Offset: 0x0015470C
 	public static bool IsNPCUnlocked(NPCType npcType)
 	{
 		switch (npcType)
@@ -49,7 +49,7 @@ public class NPCType_RL
 		}
 	}
 
-	// Token: 0x0600411F RID: 16671 RVA: 0x000E6DDC File Offset: 0x000E4FDC
+	// Token: 0x06005A9C RID: 23196 RVA: 0x00156594 File Offset: 0x00154794
 	public static bool IsNPCDialogueConditionUnlocked(NPCDialogueEntry entry, NPCDialogueCondition condition)
 	{
 		if (condition <= NPCDialogueCondition.EnchantressUnlocked)
@@ -192,6 +192,6 @@ public class NPCType_RL
 		return true;
 	}
 
-	// Token: 0x04003583 RID: 13699
+	// Token: 0x040047FF RID: 18431
 	private static NPCType[] m_typeArray;
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020001A9 RID: 425
+// Token: 0x02000315 RID: 789
 public class SwordBeam_Ability : Sword_Ability
 {
-	// Token: 0x17000961 RID: 2401
-	// (get) Token: 0x060010CF RID: 4303 RVA: 0x00030A34 File Offset: 0x0002EC34
+	// Token: 0x17000C1D RID: 3101
+	// (get) Token: 0x0600190A RID: 6410 RVA: 0x00004A6C File Offset: 0x00002C6C
 	protected override float TellIntroAnimSpeed
 	{
 		get
@@ -13,8 +13,8 @@ public class SwordBeam_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000962 RID: 2402
-	// (get) Token: 0x060010D0 RID: 4304 RVA: 0x00030A3B File Offset: 0x0002EC3B
+	// Token: 0x17000C1E RID: 3102
+	// (get) Token: 0x0600190B RID: 6411 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellIntroAnimExitDelay
 	{
 		get
@@ -23,8 +23,8 @@ public class SwordBeam_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000963 RID: 2403
-	// (get) Token: 0x060010D1 RID: 4305 RVA: 0x00030A42 File Offset: 0x0002EC42
+	// Token: 0x17000C1F RID: 3103
+	// (get) Token: 0x0600190C RID: 6412 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float TellAnimSpeed
 	{
 		get
@@ -33,8 +33,8 @@ public class SwordBeam_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000964 RID: 2404
-	// (get) Token: 0x060010D2 RID: 4306 RVA: 0x00030A49 File Offset: 0x0002EC49
+	// Token: 0x17000C20 RID: 3104
+	// (get) Token: 0x0600190D RID: 6413 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float TellAnimExitDelay
 	{
 		get
@@ -43,8 +43,8 @@ public class SwordBeam_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000965 RID: 2405
-	// (get) Token: 0x060010D3 RID: 4307 RVA: 0x00030A50 File Offset: 0x0002EC50
+	// Token: 0x17000C21 RID: 3105
+	// (get) Token: 0x0600190E RID: 6414 RVA: 0x00003C70 File Offset: 0x00001E70
 	protected override float AttackIntroAnimSpeed
 	{
 		get
@@ -53,8 +53,8 @@ public class SwordBeam_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000966 RID: 2406
-	// (get) Token: 0x060010D4 RID: 4308 RVA: 0x00030A57 File Offset: 0x0002EC57
+	// Token: 0x17000C22 RID: 3106
+	// (get) Token: 0x0600190F RID: 6415 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float AttackIntroAnimExitDelay
 	{
 		get
@@ -63,8 +63,8 @@ public class SwordBeam_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000967 RID: 2407
-	// (get) Token: 0x060010D5 RID: 4309 RVA: 0x00030A5E File Offset: 0x0002EC5E
+	// Token: 0x17000C23 RID: 3107
+	// (get) Token: 0x06001910 RID: 6416 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float AttackAnimSpeed
 	{
 		get
@@ -73,8 +73,8 @@ public class SwordBeam_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000968 RID: 2408
-	// (get) Token: 0x060010D6 RID: 4310 RVA: 0x00030A65 File Offset: 0x0002EC65
+	// Token: 0x17000C24 RID: 3108
+	// (get) Token: 0x06001911 RID: 6417 RVA: 0x00003CBD File Offset: 0x00001EBD
 	protected override float AttackAnimExitDelay
 	{
 		get
@@ -83,8 +83,8 @@ public class SwordBeam_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x17000969 RID: 2409
-	// (get) Token: 0x060010D7 RID: 4311 RVA: 0x00030A6C File Offset: 0x0002EC6C
+	// Token: 0x17000C25 RID: 3109
+	// (get) Token: 0x06001912 RID: 6418 RVA: 0x00003CE4 File Offset: 0x00001EE4
 	protected override float ExitAnimSpeed
 	{
 		get
@@ -93,8 +93,8 @@ public class SwordBeam_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x1700096A RID: 2410
-	// (get) Token: 0x060010D8 RID: 4312 RVA: 0x00030A73 File Offset: 0x0002EC73
+	// Token: 0x17000C26 RID: 3110
+	// (get) Token: 0x06001913 RID: 6419 RVA: 0x00003CCB File Offset: 0x00001ECB
 	protected override float ExitAnimExitDelay
 	{
 		get
@@ -103,7 +103,7 @@ public class SwordBeam_Ability : Sword_Ability
 		}
 	}
 
-	// Token: 0x060010D9 RID: 4313 RVA: 0x00030A7A File Offset: 0x0002EC7A
+	// Token: 0x06001914 RID: 6420 RVA: 0x0000C9F9 File Offset: 0x0000ABF9
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -114,7 +114,7 @@ public class SwordBeam_Ability : Sword_Ability
 		};
 	}
 
-	// Token: 0x060010DA RID: 4314 RVA: 0x00030AA4 File Offset: 0x0002ECA4
+	// Token: 0x06001915 RID: 6421 RVA: 0x0008F074 File Offset: 0x0008D274
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -122,6 +122,6 @@ public class SwordBeam_Ability : Sword_Ability
 		this.m_abilityController.InitializeProjectile(projectile);
 	}
 
-	// Token: 0x040011EC RID: 4588
+	// Token: 0x040017ED RID: 6125
 	private const string BEAM_PROJECTILE_NAME = "SwordBeamWeaponProjectile";
 }

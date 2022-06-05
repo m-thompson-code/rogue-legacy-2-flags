@@ -9,11 +9,11 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Token: 0x02000583 RID: 1411
+// Token: 0x02000978 RID: 2424
 public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmniUIWindowController where T : BaseOmniUICategoryEntry where U : BaseOmniUIEntry
 {
-	// Token: 0x1700129C RID: 4764
-	// (get) Token: 0x06003446 RID: 13382 RVA: 0x000B2970 File Offset: 0x000B0B70
+	// Token: 0x170019A7 RID: 6567
+	// (get) Token: 0x060049F1 RID: 18929 RVA: 0x00028785 File Offset: 0x00026985
 	public UnityEvent SelectOptionEvent
 	{
 		get
@@ -22,8 +22,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x1700129D RID: 4765
-	// (get) Token: 0x06003447 RID: 13383 RVA: 0x000B2978 File Offset: 0x000B0B78
+	// Token: 0x170019A8 RID: 6568
+	// (get) Token: 0x060049F2 RID: 18930 RVA: 0x0002878D File Offset: 0x0002698D
 	public OmniUICommonSerializedFields CommonFields
 	{
 		get
@@ -32,8 +32,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x1700129E RID: 4766
-	// (get) Token: 0x06003448 RID: 13384 RVA: 0x000B2980 File Offset: 0x000B0B80
+	// Token: 0x170019A9 RID: 6569
+	// (get) Token: 0x060049F3 RID: 18931 RVA: 0x00028795 File Offset: 0x00026995
 	protected GameObject ResetTextbox
 	{
 		get
@@ -42,8 +42,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x1700129F RID: 4767
-	// (get) Token: 0x06003449 RID: 13385 RVA: 0x000B298D File Offset: 0x000B0B8D
+	// Token: 0x170019AA RID: 6570
+	// (get) Token: 0x060049F4 RID: 18932 RVA: 0x000287A2 File Offset: 0x000269A2
 	protected CanvasGroup MenuCanvasGroup
 	{
 		get
@@ -52,8 +52,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012A0 RID: 4768
-	// (get) Token: 0x0600344A RID: 13386 RVA: 0x000B299A File Offset: 0x000B0B9A
+	// Token: 0x170019AB RID: 6571
+	// (get) Token: 0x060049F5 RID: 18933 RVA: 0x000287AF File Offset: 0x000269AF
 	protected PlayerLookController PlayerModel
 	{
 		get
@@ -62,8 +62,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012A1 RID: 4769
-	// (get) Token: 0x0600344B RID: 13387 RVA: 0x000B29A7 File Offset: 0x000B0BA7
+	// Token: 0x170019AC RID: 6572
+	// (get) Token: 0x060049F6 RID: 18934 RVA: 0x000287BC File Offset: 0x000269BC
 	protected GameObject NPCModel
 	{
 		get
@@ -72,8 +72,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012A2 RID: 4770
-	// (get) Token: 0x0600344C RID: 13388 RVA: 0x000B29B4 File Offset: 0x000B0BB4
+	// Token: 0x170019AD RID: 6573
+	// (get) Token: 0x060049F7 RID: 18935 RVA: 0x000287C9 File Offset: 0x000269C9
 	protected NPCController NPCController
 	{
 		get
@@ -82,8 +82,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012A3 RID: 4771
-	// (get) Token: 0x0600344D RID: 13389 RVA: 0x000B29C1 File Offset: 0x000B0BC1
+	// Token: 0x170019AE RID: 6574
+	// (get) Token: 0x060049F8 RID: 18936 RVA: 0x000287D6 File Offset: 0x000269D6
 	protected VerticalLayoutGroup CategoryEntryLayoutGroup
 	{
 		get
@@ -92,8 +92,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012A4 RID: 4772
-	// (get) Token: 0x0600344E RID: 13390 RVA: 0x000B29CE File Offset: 0x000B0BCE
+	// Token: 0x170019AF RID: 6575
+	// (get) Token: 0x060049F9 RID: 18937 RVA: 0x000287E3 File Offset: 0x000269E3
 	protected VerticalLayoutGroup EntryLayoutGroup
 	{
 		get
@@ -102,8 +102,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012A5 RID: 4773
-	// (get) Token: 0x0600344F RID: 13391 RVA: 0x000B29DB File Offset: 0x000B0BDB
+	// Token: 0x170019B0 RID: 6576
+	// (get) Token: 0x060049FA RID: 18938 RVA: 0x000287F0 File Offset: 0x000269F0
 	protected GameObject SelectedCategoryIndicator
 	{
 		get
@@ -112,8 +112,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012A6 RID: 4774
-	// (get) Token: 0x06003450 RID: 13392 RVA: 0x000B29E8 File Offset: 0x000B0BE8
+	// Token: 0x170019B1 RID: 6577
+	// (get) Token: 0x060049FB RID: 18939 RVA: 0x000287FD File Offset: 0x000269FD
 	protected TMP_Text ChooseCategoryText
 	{
 		get
@@ -122,8 +122,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012A7 RID: 4775
-	// (get) Token: 0x06003451 RID: 13393 RVA: 0x000B29F5 File Offset: 0x000B0BF5
+	// Token: 0x170019B2 RID: 6578
+	// (get) Token: 0x060049FC RID: 18940 RVA: 0x0002880A File Offset: 0x00026A0A
 	protected CanvasGroup DescriptionBox
 	{
 		get
@@ -132,8 +132,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012A8 RID: 4776
-	// (get) Token: 0x06003452 RID: 13394 RVA: 0x000B2A02 File Offset: 0x000B0C02
+	// Token: 0x170019B3 RID: 6579
+	// (get) Token: 0x060049FD RID: 18941 RVA: 0x00028817 File Offset: 0x00026A17
 	protected CanvasGroup PurchaseBox
 	{
 		get
@@ -142,8 +142,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012A9 RID: 4777
-	// (get) Token: 0x06003453 RID: 13395 RVA: 0x000B2A0F File Offset: 0x000B0C0F
+	// Token: 0x170019B4 RID: 6580
+	// (get) Token: 0x060049FE RID: 18942 RVA: 0x00028824 File Offset: 0x00026A24
 	protected Scrollbar ScrollBar
 	{
 		get
@@ -152,8 +152,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012AA RID: 4778
-	// (get) Token: 0x06003454 RID: 13396 RVA: 0x000B2A1C File Offset: 0x000B0C1C
+	// Token: 0x170019B5 RID: 6581
+	// (get) Token: 0x060049FF RID: 18943 RVA: 0x00028831 File Offset: 0x00026A31
 	protected ScrollRect ScrollRect
 	{
 		get
@@ -162,8 +162,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012AB RID: 4779
-	// (get) Token: 0x06003455 RID: 13397 RVA: 0x000B2A29 File Offset: 0x000B0C29
+	// Token: 0x170019B6 RID: 6582
+	// (get) Token: 0x06004A00 RID: 18944 RVA: 0x0002883E File Offset: 0x00026A3E
 	protected RectTransform ContentViewport
 	{
 		get
@@ -172,8 +172,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012AC RID: 4780
-	// (get) Token: 0x06003456 RID: 13398 RVA: 0x000B2A36 File Offset: 0x000B0C36
+	// Token: 0x170019B7 RID: 6583
+	// (get) Token: 0x06004A01 RID: 18945 RVA: 0x0002884B File Offset: 0x00026A4B
 	protected GameObject TopScrollArrow
 	{
 		get
@@ -182,8 +182,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012AD RID: 4781
-	// (get) Token: 0x06003457 RID: 13399 RVA: 0x000B2A43 File Offset: 0x000B0C43
+	// Token: 0x170019B8 RID: 6584
+	// (get) Token: 0x06004A02 RID: 18946 RVA: 0x00028858 File Offset: 0x00026A58
 	protected Image TopScrollNewSymbol
 	{
 		get
@@ -192,8 +192,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012AE RID: 4782
-	// (get) Token: 0x06003458 RID: 13400 RVA: 0x000B2A50 File Offset: 0x000B0C50
+	// Token: 0x170019B9 RID: 6585
+	// (get) Token: 0x06004A03 RID: 18947 RVA: 0x00028865 File Offset: 0x00026A65
 	protected Image TopScrollUpgradeSymbol
 	{
 		get
@@ -202,8 +202,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012AF RID: 4783
-	// (get) Token: 0x06003459 RID: 13401 RVA: 0x000B2A5D File Offset: 0x000B0C5D
+	// Token: 0x170019BA RID: 6586
+	// (get) Token: 0x06004A04 RID: 18948 RVA: 0x00028872 File Offset: 0x00026A72
 	protected GameObject BottomScrollArrow
 	{
 		get
@@ -212,8 +212,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012B0 RID: 4784
-	// (get) Token: 0x0600345A RID: 13402 RVA: 0x000B2A6A File Offset: 0x000B0C6A
+	// Token: 0x170019BB RID: 6587
+	// (get) Token: 0x06004A05 RID: 18949 RVA: 0x0002887F File Offset: 0x00026A7F
 	protected Image BottomScrollNewSymbol
 	{
 		get
@@ -222,8 +222,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012B1 RID: 4785
-	// (get) Token: 0x0600345B RID: 13403 RVA: 0x000B2A77 File Offset: 0x000B0C77
+	// Token: 0x170019BC RID: 6588
+	// (get) Token: 0x06004A06 RID: 18950 RVA: 0x0002888C File Offset: 0x00026A8C
 	protected Image BottomScrollUpgradeSymbol
 	{
 		get
@@ -232,8 +232,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012B2 RID: 4786
-	// (get) Token: 0x0600345C RID: 13404 RVA: 0x000B2A84 File Offset: 0x000B0C84
+	// Token: 0x170019BD RID: 6589
+	// (get) Token: 0x06004A07 RID: 18951 RVA: 0x00028899 File Offset: 0x00026A99
 	protected GameObject WarningMessageBox
 	{
 		get
@@ -242,8 +242,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012B3 RID: 4787
-	// (get) Token: 0x0600345D RID: 13405 RVA: 0x000B2A91 File Offset: 0x000B0C91
+	// Token: 0x170019BE RID: 6590
+	// (get) Token: 0x06004A08 RID: 18952 RVA: 0x000288A6 File Offset: 0x00026AA6
 	protected CanvasGroup BackgroundCanvasGroup
 	{
 		get
@@ -252,8 +252,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012B4 RID: 4788
-	// (get) Token: 0x0600345E RID: 13406 RVA: 0x000B2A9E File Offset: 0x000B0C9E
+	// Token: 0x170019BF RID: 6591
+	// (get) Token: 0x06004A09 RID: 18953 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public virtual bool CanReset
 	{
 		get
@@ -262,8 +262,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012B5 RID: 4789
-	// (get) Token: 0x0600345F RID: 13407 RVA: 0x000B2AA1 File Offset: 0x000B0CA1
+	// Token: 0x170019C0 RID: 6592
+	// (get) Token: 0x06004A0A RID: 18954 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public virtual bool CanExit
 	{
 		get
@@ -272,8 +272,8 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012B6 RID: 4790
-	// (get) Token: 0x06003460 RID: 13408 RVA: 0x000B2AA4 File Offset: 0x000B0CA4
+	// Token: 0x170019C1 RID: 6593
+	// (get) Token: 0x06004A0B RID: 18955 RVA: 0x000288B3 File Offset: 0x00026AB3
 	public bool IsInCategories
 	{
 		get
@@ -282,43 +282,43 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x170012B7 RID: 4791
-	// (get) Token: 0x06003461 RID: 13409 RVA: 0x000B2AB9 File Offset: 0x000B0CB9
-	// (set) Token: 0x06003462 RID: 13410 RVA: 0x000B2AC1 File Offset: 0x000B0CC1
+	// Token: 0x170019C2 RID: 6594
+	// (get) Token: 0x06004A0C RID: 18956 RVA: 0x000288C8 File Offset: 0x00026AC8
+	// (set) Token: 0x06004A0D RID: 18957 RVA: 0x000288D0 File Offset: 0x00026AD0
 	public T[] CategoryEntryArray { get; set; }
 
-	// Token: 0x170012B8 RID: 4792
-	// (get) Token: 0x06003463 RID: 13411 RVA: 0x000B2ACA File Offset: 0x000B0CCA
-	// (set) Token: 0x06003464 RID: 13412 RVA: 0x000B2AD2 File Offset: 0x000B0CD2
+	// Token: 0x170019C3 RID: 6595
+	// (get) Token: 0x06004A0E RID: 18958 RVA: 0x000288D9 File Offset: 0x00026AD9
+	// (set) Token: 0x06004A0F RID: 18959 RVA: 0x000288E1 File Offset: 0x00026AE1
 	public U[] EntryArray { get; set; }
 
-	// Token: 0x170012B9 RID: 4793
-	// (get) Token: 0x06003465 RID: 13413 RVA: 0x000B2ADB File Offset: 0x000B0CDB
-	// (set) Token: 0x06003466 RID: 13414 RVA: 0x000B2AE3 File Offset: 0x000B0CE3
+	// Token: 0x170019C4 RID: 6596
+	// (get) Token: 0x06004A10 RID: 18960 RVA: 0x000288EA File Offset: 0x00026AEA
+	// (set) Token: 0x06004A11 RID: 18961 RVA: 0x000288F2 File Offset: 0x00026AF2
 	public T[] ActiveCategoryEntryArray { get; protected set; }
 
-	// Token: 0x170012BA RID: 4794
-	// (get) Token: 0x06003467 RID: 13415 RVA: 0x000B2AEC File Offset: 0x000B0CEC
-	// (set) Token: 0x06003468 RID: 13416 RVA: 0x000B2AF4 File Offset: 0x000B0CF4
+	// Token: 0x170019C5 RID: 6597
+	// (get) Token: 0x06004A12 RID: 18962 RVA: 0x000288FB File Offset: 0x00026AFB
+	// (set) Token: 0x06004A13 RID: 18963 RVA: 0x00028903 File Offset: 0x00026B03
 	public U[] ActiveEntryArray { get; protected set; }
 
-	// Token: 0x170012BB RID: 4795
-	// (get) Token: 0x06003469 RID: 13417 RVA: 0x000B2AFD File Offset: 0x000B0CFD
-	// (set) Token: 0x0600346A RID: 13418 RVA: 0x000B2B05 File Offset: 0x000B0D05
+	// Token: 0x170019C6 RID: 6598
+	// (get) Token: 0x06004A14 RID: 18964 RVA: 0x0002890C File Offset: 0x00026B0C
+	// (set) Token: 0x06004A15 RID: 18965 RVA: 0x00028914 File Offset: 0x00026B14
 	public int SelectedEntryIndex { get; protected set; }
 
-	// Token: 0x170012BC RID: 4796
-	// (get) Token: 0x0600346B RID: 13419 RVA: 0x000B2B0E File Offset: 0x000B0D0E
-	// (set) Token: 0x0600346C RID: 13420 RVA: 0x000B2B16 File Offset: 0x000B0D16
+	// Token: 0x170019C7 RID: 6599
+	// (get) Token: 0x06004A16 RID: 18966 RVA: 0x0002891D File Offset: 0x00026B1D
+	// (set) Token: 0x06004A17 RID: 18967 RVA: 0x00028925 File Offset: 0x00026B25
 	public int SelectedCategoryIndex { get; protected set; }
 
-	// Token: 0x170012BD RID: 4797
-	// (get) Token: 0x0600346D RID: 13421 RVA: 0x000B2B1F File Offset: 0x000B0D1F
-	// (set) Token: 0x0600346E RID: 13422 RVA: 0x000B2B27 File Offset: 0x000B0D27
+	// Token: 0x170019C8 RID: 6600
+	// (get) Token: 0x06004A18 RID: 18968 RVA: 0x0002892E File Offset: 0x00026B2E
+	// (set) Token: 0x06004A19 RID: 18969 RVA: 0x00028936 File Offset: 0x00026B36
 	public int HighlightedCategoryIndex { get; protected set; }
 
-	// Token: 0x170012BE RID: 4798
-	// (get) Token: 0x0600346F RID: 13423 RVA: 0x000B2B30 File Offset: 0x000B0D30
+	// Token: 0x170019C9 RID: 6601
+	// (get) Token: 0x06004A1A RID: 18970 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	public override WindowID ID
 	{
 		get
@@ -327,7 +327,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003470 RID: 13424 RVA: 0x000B2B34 File Offset: 0x000B0D34
+	// Token: 0x06004A1B RID: 18971 RVA: 0x0011F64C File Offset: 0x0011D84C
 	protected virtual void Awake()
 	{
 		Image componentInChildren = this.BackgroundCanvasGroup.GetComponentInChildren<Image>();
@@ -348,7 +348,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.m_onXButtonInputHandler = new Action<InputActionEventData>(this.OnXButtonInputHandler);
 	}
 
-	// Token: 0x06003471 RID: 13425 RVA: 0x000B2C2C File Offset: 0x000B0E2C
+	// Token: 0x06004A1C RID: 18972 RVA: 0x0011F744 File Offset: 0x0011D944
 	public void SetEntryNavigationEnabled(bool enable)
 	{
 		U[] activeEntryArray = this.ActiveEntryArray;
@@ -361,13 +361,13 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.ScrollBar.interactable = enable;
 	}
 
-	// Token: 0x06003472 RID: 13426 RVA: 0x000B2C7F File Offset: 0x000B0E7F
+	// Token: 0x06004A1D RID: 18973 RVA: 0x0002893F File Offset: 0x00026B3F
 	public void SetKeyboardEnabled(bool enable)
 	{
 		this.m_keyboardEnabled = enable;
 	}
 
-	// Token: 0x06003473 RID: 13427 RVA: 0x000B2C88 File Offset: 0x000B0E88
+	// Token: 0x06004A1E RID: 18974 RVA: 0x0011F798 File Offset: 0x0011D998
 	public void SetSelectedEntryIndex(int index, bool playAudio, bool usingMouse)
 	{
 		if (this.ActiveEntryArray.Length == 0)
@@ -411,7 +411,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003474 RID: 13428 RVA: 0x000B2DA8 File Offset: 0x000B0FA8
+	// Token: 0x06004A1F RID: 18975 RVA: 0x0011F8B8 File Offset: 0x0011DAB8
 	protected virtual void AutoScroll(bool scrollingUp, bool usingMouse, bool skipAnimation = false)
 	{
 		GameObject currentSelectedGameObject = EventSystem.current.currentSelectedGameObject;
@@ -535,7 +535,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003475 RID: 13429 RVA: 0x000B314C File Offset: 0x000B134C
+	// Token: 0x06004A20 RID: 18976 RVA: 0x0011FC5C File Offset: 0x0011DE5C
 	public void SetSelectedCategoryIndex(int index, bool playSFX)
 	{
 		if (this.SelectedCategoryIndex != index)
@@ -575,7 +575,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.RunHighlightIndicatorAnimation();
 	}
 
-	// Token: 0x06003476 RID: 13430 RVA: 0x000B32A0 File Offset: 0x000B14A0
+	// Token: 0x06004A21 RID: 18977 RVA: 0x0011FDB0 File Offset: 0x0011DFB0
 	private void SetDescriptionBoxVisibility(bool visible)
 	{
 		if (visible)
@@ -634,7 +634,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003477 RID: 13431 RVA: 0x000B34C4 File Offset: 0x000B16C4
+	// Token: 0x06004A22 RID: 18978 RVA: 0x0011FFD4 File Offset: 0x0011E1D4
 	protected void RunHighlightIndicatorAnimation()
 	{
 		Vector3 localScale = this.SelectedCategoryIndicator.transform.localScale;
@@ -650,7 +650,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		});
 	}
 
-	// Token: 0x06003478 RID: 13432 RVA: 0x000B3558 File Offset: 0x000B1758
+	// Token: 0x06004A23 RID: 18979 RVA: 0x00120068 File Offset: 0x0011E268
 	public void SetHighlightedCategoryIndex(int index, bool playSFX)
 	{
 		if (this.HighlightedCategoryIndex != index)
@@ -683,7 +683,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.RunHighlightIndicatorAnimation();
 	}
 
-	// Token: 0x06003479 RID: 13433 RVA: 0x000B3684 File Offset: 0x000B1884
+	// Token: 0x06004A24 RID: 18980 RVA: 0x00120194 File Offset: 0x0011E394
 	public void SetHighlightedCategory(BaseOmniUICategoryEntry categoryEntry)
 	{
 		for (int i = 0; i < this.ActiveCategoryEntryArray.Length; i++)
@@ -695,7 +695,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x0600347A RID: 13434 RVA: 0x000B36C8 File Offset: 0x000B18C8
+	// Token: 0x06004A25 RID: 18981 RVA: 0x001201D8 File Offset: 0x0011E3D8
 	protected void SetIndicatorPosition()
 	{
 		if (this.SelectedCategoryIndicator != null && this.ActiveCategoryEntryArray != null && this.ActiveCategoryEntryArray.Length != 0)
@@ -704,13 +704,13 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x0600347B RID: 13435
+	// Token: 0x06004A26 RID: 18982
 	protected abstract void CreateCategoryEntries();
 
-	// Token: 0x0600347C RID: 13436
+	// Token: 0x06004A27 RID: 18983
 	protected abstract void CreateEntries();
 
-	// Token: 0x0600347D RID: 13437 RVA: 0x000B3724 File Offset: 0x000B1924
+	// Token: 0x06004A28 RID: 18984 RVA: 0x00120234 File Offset: 0x0011E434
 	public override void Initialize()
 	{
 		if (this.m_hasCategories)
@@ -745,13 +745,13 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		base.Initialize();
 	}
 
-	// Token: 0x0600347E RID: 13438 RVA: 0x000B386C File Offset: 0x000B1A6C
+	// Token: 0x06004A29 RID: 18985 RVA: 0x00028948 File Offset: 0x00026B48
 	private void SetScrollBarDirty(float scrollAmount = 0f)
 	{
 		this.m_updateScrollBar = true;
 	}
 
-	// Token: 0x0600347F RID: 13439 RVA: 0x000B3875 File Offset: 0x000B1A75
+	// Token: 0x06004A2A RID: 18986 RVA: 0x00028951 File Offset: 0x00026B51
 	private void LateUpdate()
 	{
 		if (this.m_updateScrollBar)
@@ -761,7 +761,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003480 RID: 13440 RVA: 0x000B3898 File Offset: 0x000B1A98
+	// Token: 0x06004A2B RID: 18987 RVA: 0x0012037C File Offset: 0x0011E57C
 	protected virtual void UpdateScrollArrows(float scrollAmount)
 	{
 		if ((float)this.ActiveEntryArray.Length * this.m_entryHeight > this.ContentViewport.rect.height)
@@ -805,7 +805,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003481 RID: 13441 RVA: 0x000B3988 File Offset: 0x000B1B88
+	// Token: 0x06004A2C RID: 18988 RVA: 0x0012046C File Offset: 0x0011E66C
 	public virtual void UpdateActiveArrays()
 	{
 		U[] entryArray = this.EntryArray;
@@ -824,7 +824,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003482 RID: 13442 RVA: 0x000B3A14 File Offset: 0x000B1C14
+	// Token: 0x06004A2D RID: 18989 RVA: 0x001204F8 File Offset: 0x0011E6F8
 	public void UpdateAllCategoryEntryStates()
 	{
 		if (this.m_hasCategories)
@@ -837,7 +837,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003483 RID: 13443 RVA: 0x000B3A50 File Offset: 0x000B1C50
+	// Token: 0x06004A2E RID: 18990 RVA: 0x00120534 File Offset: 0x0011E734
 	public virtual void UpdateAllEntryStates()
 	{
 		U[] activeEntryArray = this.ActiveEntryArray;
@@ -847,14 +847,14 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003484 RID: 13444 RVA: 0x000B3A83 File Offset: 0x000B1C83
+	// Token: 0x06004A2F RID: 18991 RVA: 0x00028973 File Offset: 0x00026B73
 	public void UpdateAllStates(MonoBehaviour sender, EventArgs args)
 	{
 		this.UpdateAllCategoryEntryStates();
 		this.UpdateAllEntryStates();
 	}
 
-	// Token: 0x06003485 RID: 13445 RVA: 0x000B3A94 File Offset: 0x000B1C94
+	// Token: 0x06004A30 RID: 18992 RVA: 0x00120568 File Offset: 0x0011E768
 	protected override void OnOpen()
 	{
 		AudioManager.SetEnemySFXPaused(true);
@@ -928,7 +928,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		base.StartCoroutine(this.FadeBlurCoroutine(0.25f, true));
 	}
 
-	// Token: 0x06003486 RID: 13446 RVA: 0x000B3D69 File Offset: 0x000B1F69
+	// Token: 0x06004A31 RID: 18993 RVA: 0x00028981 File Offset: 0x00026B81
 	private IEnumerator FadeBlurCoroutine(float duration, bool fadeIn)
 	{
 		float endAmount = 1f;
@@ -960,13 +960,13 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		yield break;
 	}
 
-	// Token: 0x06003487 RID: 13447 RVA: 0x000B3D7F File Offset: 0x000B1F7F
+	// Token: 0x06004A32 RID: 18994 RVA: 0x00003CD2 File Offset: 0x00001ED2
 	protected virtual int GetEquippedIndex()
 	{
 		return 0;
 	}
 
-	// Token: 0x06003488 RID: 13448 RVA: 0x000B3D82 File Offset: 0x000B1F82
+	// Token: 0x06004A33 RID: 18995 RVA: 0x00028997 File Offset: 0x00026B97
 	protected virtual IEnumerator OnEnterAnimCoroutine()
 	{
 		RewiredMapController.SetCurrentMapEnabled(false);
@@ -1016,7 +1016,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		yield break;
 	}
 
-	// Token: 0x06003489 RID: 13449 RVA: 0x000B3D94 File Offset: 0x000B1F94
+	// Token: 0x06004A34 RID: 18996 RVA: 0x00120840 File Offset: 0x0011EA40
 	protected override void OnClose()
 	{
 		AudioManager.SetEnemySFXPaused(false);
@@ -1028,7 +1028,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		base.StartCoroutine(this.OnExitAnimCoroutine());
 	}
 
-	// Token: 0x0600348A RID: 13450 RVA: 0x000B3DF8 File Offset: 0x000B1FF8
+	// Token: 0x06004A35 RID: 18997 RVA: 0x000289A6 File Offset: 0x00026BA6
 	protected virtual IEnumerator OnExitAnimCoroutine()
 	{
 		CanvasGroup letterBoxGroup = this.m_commonFields.LetterBoxGroup;
@@ -1070,19 +1070,19 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		yield break;
 	}
 
-	// Token: 0x0600348B RID: 13451 RVA: 0x000B3E07 File Offset: 0x000B2007
+	// Token: 0x06004A36 RID: 18998 RVA: 0x000289B5 File Offset: 0x00026BB5
 	protected override void OnFocus()
 	{
 		this.AddInputListeners();
 	}
 
-	// Token: 0x0600348C RID: 13452 RVA: 0x000B3E0F File Offset: 0x000B200F
+	// Token: 0x06004A37 RID: 18999 RVA: 0x000289BD File Offset: 0x00026BBD
 	protected override void OnLostFocus()
 	{
 		this.RemoveInputListeners();
 	}
 
-	// Token: 0x0600348D RID: 13453 RVA: 0x000B3E18 File Offset: 0x000B2018
+	// Token: 0x06004A38 RID: 19000 RVA: 0x001208A4 File Offset: 0x0011EAA4
 	protected virtual void OnConfirmButtonJustPressed()
 	{
 		if (this.m_warningMessageVisible)
@@ -1101,7 +1101,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x0600348E RID: 13454 RVA: 0x000B3E70 File Offset: 0x000B2070
+	// Token: 0x06004A39 RID: 19001 RVA: 0x001208FC File Offset: 0x0011EAFC
 	protected virtual void OnCancelButtonJustPressed()
 	{
 		if (!this.IsInCategories)
@@ -1144,7 +1144,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.HideWarningMessage();
 	}
 
-	// Token: 0x0600348F RID: 13455 RVA: 0x000B3F10 File Offset: 0x000B2110
+	// Token: 0x06004A3A RID: 19002 RVA: 0x0012099C File Offset: 0x0011EB9C
 	protected virtual void DisplayWarningMessage()
 	{
 		this.m_warningMessageVisible = true;
@@ -1161,7 +1161,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		});
 	}
 
-	// Token: 0x06003490 RID: 13456 RVA: 0x000B3FBC File Offset: 0x000B21BC
+	// Token: 0x06004A3B RID: 19003 RVA: 0x00120A48 File Offset: 0x0011EC48
 	protected virtual void HideWarningMessage()
 	{
 		this.m_warningMessageVisible = false;
@@ -1178,7 +1178,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		});
 	}
 
-	// Token: 0x06003491 RID: 13457 RVA: 0x000B4054 File Offset: 0x000B2254
+	// Token: 0x06004A3C RID: 19004 RVA: 0x00120AE0 File Offset: 0x0011ECE0
 	protected virtual void OnLBButtonJustPressed()
 	{
 		if (!this.IsInCategories)
@@ -1193,7 +1193,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003492 RID: 13458 RVA: 0x000B4084 File Offset: 0x000B2284
+	// Token: 0x06004A3D RID: 19005 RVA: 0x00120B10 File Offset: 0x0011ED10
 	protected virtual void OnRBButtonJustPressed()
 	{
 		if (!this.IsInCategories)
@@ -1208,17 +1208,17 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003493 RID: 13459 RVA: 0x000B40C3 File Offset: 0x000B22C3
+	// Token: 0x06004A3E RID: 19006 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnYButtonJustPressed()
 	{
 	}
 
-	// Token: 0x06003494 RID: 13460 RVA: 0x000B40C5 File Offset: 0x000B22C5
+	// Token: 0x06004A3F RID: 19007 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected virtual void OnXButtonJustPressed()
 	{
 	}
 
-	// Token: 0x06003495 RID: 13461 RVA: 0x000B40C8 File Offset: 0x000B22C8
+	// Token: 0x06004A40 RID: 19008 RVA: 0x00120B50 File Offset: 0x0011ED50
 	protected virtual void OnUpButtonJustPressed()
 	{
 		if (this.IsInCategories)
@@ -1241,7 +1241,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.SetSelectedEntryIndex(num2, true, false);
 	}
 
-	// Token: 0x06003496 RID: 13462 RVA: 0x000B4124 File Offset: 0x000B2324
+	// Token: 0x06004A41 RID: 19009 RVA: 0x00120BAC File Offset: 0x0011EDAC
 	protected virtual void OnDownButtonJustPressed()
 	{
 		if (this.IsInCategories)
@@ -1264,7 +1264,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.SetSelectedEntryIndex(num2, true, false);
 	}
 
-	// Token: 0x06003497 RID: 13463 RVA: 0x000B417B File Offset: 0x000B237B
+	// Token: 0x06004A42 RID: 19010 RVA: 0x000289C5 File Offset: 0x00026BC5
 	protected virtual void OnLeftButtonJustPressed()
 	{
 		if (!this.IsInCategories && this.ActiveEntryArray.Length != 0)
@@ -1273,7 +1273,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003498 RID: 13464 RVA: 0x000B41AA File Offset: 0x000B23AA
+	// Token: 0x06004A43 RID: 19011 RVA: 0x000289F4 File Offset: 0x00026BF4
 	protected virtual void OnRightButtonJustPressed()
 	{
 		if (!this.IsInCategories && this.ActiveEntryArray.Length != 0)
@@ -1282,7 +1282,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		}
 	}
 
-	// Token: 0x06003499 RID: 13465 RVA: 0x000B41DC File Offset: 0x000B23DC
+	// Token: 0x06004A44 RID: 19012 RVA: 0x00120C04 File Offset: 0x0011EE04
 	private void AddInputListeners()
 	{
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onConfirmInputHandler, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
@@ -1297,7 +1297,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onXButtonInputHandler, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_X");
 	}
 
-	// Token: 0x0600349A RID: 13466 RVA: 0x000B42DC File Offset: 0x000B24DC
+	// Token: 0x06004A45 RID: 19013 RVA: 0x00120D04 File Offset: 0x0011EF04
 	private void RemoveInputListeners()
 	{
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onConfirmInputHandler, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
@@ -1312,7 +1312,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onXButtonInputHandler, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_X");
 	}
 
-	// Token: 0x0600349B RID: 13467 RVA: 0x000B43DC File Offset: 0x000B25DC
+	// Token: 0x06004A46 RID: 19014 RVA: 0x00028A23 File Offset: 0x00026C23
 	private void OnLBInputHandler(InputActionEventData eventData)
 	{
 		if (!this.m_keyboardEnabled)
@@ -1326,7 +1326,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.OnLBButtonJustPressed();
 	}
 
-	// Token: 0x0600349C RID: 13468 RVA: 0x000B43F6 File Offset: 0x000B25F6
+	// Token: 0x06004A47 RID: 19015 RVA: 0x00028A3D File Offset: 0x00026C3D
 	private void OnRBInputHandler(InputActionEventData eventData)
 	{
 		if (!this.m_keyboardEnabled)
@@ -1340,7 +1340,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.OnRBButtonJustPressed();
 	}
 
-	// Token: 0x0600349D RID: 13469 RVA: 0x000B4410 File Offset: 0x000B2610
+	// Token: 0x06004A48 RID: 19016 RVA: 0x00028A57 File Offset: 0x00026C57
 	private void OnYButtonResetHandler(InputActionEventData eventData)
 	{
 		if (!this.m_keyboardEnabled)
@@ -1354,7 +1354,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.OnYButtonJustPressed();
 	}
 
-	// Token: 0x0600349E RID: 13470 RVA: 0x000B442A File Offset: 0x000B262A
+	// Token: 0x06004A49 RID: 19017 RVA: 0x00028A71 File Offset: 0x00026C71
 	private void OnXButtonInputHandler(InputActionEventData eventData)
 	{
 		if (!this.m_keyboardEnabled)
@@ -1368,7 +1368,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.OnXButtonJustPressed();
 	}
 
-	// Token: 0x0600349F RID: 13471 RVA: 0x000B4444 File Offset: 0x000B2644
+	// Token: 0x06004A4A RID: 19018 RVA: 0x00120E04 File Offset: 0x0011F004
 	private void OnVerticalInputHandler(InputActionEventData eventData)
 	{
 		if (!this.m_keyboardEnabled)
@@ -1396,7 +1396,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.OnDownButtonJustPressed();
 	}
 
-	// Token: 0x060034A0 RID: 13472 RVA: 0x000B44A4 File Offset: 0x000B26A4
+	// Token: 0x06004A4B RID: 19019 RVA: 0x00120E64 File Offset: 0x0011F064
 	private void OnHorizontalInputHandler(InputActionEventData eventData)
 	{
 		if (!this.m_keyboardEnabled)
@@ -1420,7 +1420,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.OnLeftButtonJustPressed();
 	}
 
-	// Token: 0x060034A1 RID: 13473 RVA: 0x000B44F1 File Offset: 0x000B26F1
+	// Token: 0x06004A4C RID: 19020 RVA: 0x00028A8B File Offset: 0x00026C8B
 	private void OnConfirmInputHandler(InputActionEventData eventData)
 	{
 		if (eventData.IsCurrentInputSource(ControllerType.Mouse))
@@ -1438,7 +1438,7 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.OnConfirmButtonJustPressed();
 	}
 
-	// Token: 0x060034A2 RID: 13474 RVA: 0x000B451B File Offset: 0x000B271B
+	// Token: 0x06004A4D RID: 19021 RVA: 0x00028AB5 File Offset: 0x00026CB5
 	protected virtual void OnCancelInputHandler(InputActionEventData eventData)
 	{
 		if (!this.m_keyboardEnabled)
@@ -1448,94 +1448,94 @@ public abstract class BaseOmniUIWindowController<T, U> : WindowController, IOmni
 		this.OnCancelButtonJustPressed();
 	}
 
-	// Token: 0x060034A3 RID: 13475 RVA: 0x000B452C File Offset: 0x000B272C
+	// Token: 0x06004A4E RID: 19022 RVA: 0x00028AC6 File Offset: 0x00026CC6
 	protected virtual void RefreshText(object sender, EventArgs args)
 	{
 		this.UpdateAllEntryStates();
 		Messenger<UIMessenger, UIEvent>.Broadcast(UIEvent.OmniUI_UpdateDescription, this, this.ActiveEntryArray[this.SelectedEntryIndex].EntryEventArgs);
 	}
 
-	// Token: 0x04002914 RID: 10516
+	// Token: 0x040038C3 RID: 14531
 	[Header("Prefabs")]
 	[SerializeField]
 	protected bool m_hasCategories;
 
-	// Token: 0x04002915 RID: 10517
+	// Token: 0x040038C4 RID: 14532
 	[SerializeField]
 	[ConditionalHide("m_hasCategories", true)]
 	protected T m_categoryEntryPrefab;
 
-	// Token: 0x04002916 RID: 10518
+	// Token: 0x040038C5 RID: 14533
 	[SerializeField]
 	protected U m_entryPrefab;
 
-	// Token: 0x04002917 RID: 10519
+	// Token: 0x040038C6 RID: 14534
 	[Header("Common Serialized Fields")]
 	[SerializeField]
 	protected OmniUICommonSerializedFields m_commonFields;
 
-	// Token: 0x04002918 RID: 10520
+	// Token: 0x040038C7 RID: 14535
 	[SerializeField]
 	protected UnityEvent m_changeSelectedOptionEvent;
 
-	// Token: 0x04002919 RID: 10521
+	// Token: 0x040038C8 RID: 14536
 	[SerializeField]
 	protected UnityEvent m_selectOptionEvent;
 
-	// Token: 0x0400291A RID: 10522
+	// Token: 0x040038C9 RID: 14537
 	protected static Material m_blurMaterial_STATIC;
 
-	// Token: 0x0400291B RID: 10523
+	// Token: 0x040038CA RID: 14538
 	protected float m_entryHeight;
 
-	// Token: 0x0400291C RID: 10524
+	// Token: 0x040038CB RID: 14539
 	protected bool m_warningMessageVisible;
 
-	// Token: 0x0400291D RID: 10525
+	// Token: 0x040038CC RID: 14540
 	protected bool m_updateScrollBar;
 
-	// Token: 0x0400291E RID: 10526
+	// Token: 0x040038CD RID: 14541
 	private bool m_keyboardEnabled;
 
-	// Token: 0x0400291F RID: 10527
+	// Token: 0x040038CE RID: 14542
 	private bool m_entryNavigationEnabled;
 
-	// Token: 0x04002920 RID: 10528
+	// Token: 0x040038CF RID: 14543
 	private Vector3 m_storedWarningBoxScale;
 
-	// Token: 0x04002921 RID: 10529
+	// Token: 0x040038D0 RID: 14544
 	private PurchaseBoxDialogueEventArgs m_purchaseDialogueArgs = new PurchaseBoxDialogueEventArgs(PurchaseBoxDialogueType.Welcome);
 
-	// Token: 0x04002922 RID: 10530
+	// Token: 0x040038D1 RID: 14545
 	private Action<MonoBehaviour, EventArgs> m_refreshText;
 
-	// Token: 0x04002923 RID: 10531
+	// Token: 0x040038D2 RID: 14546
 	private Action<MonoBehaviour, EventArgs> m_updateAllStates;
 
-	// Token: 0x04002924 RID: 10532
+	// Token: 0x040038D3 RID: 14547
 	private Action<InputActionEventData> m_onConfirmInputHandler;
 
-	// Token: 0x04002925 RID: 10533
+	// Token: 0x040038D4 RID: 14548
 	private Action<InputActionEventData> m_onCancelInputHandler;
 
-	// Token: 0x04002926 RID: 10534
+	// Token: 0x040038D5 RID: 14549
 	private Action<InputActionEventData> m_onHorizontalInputHandler;
 
-	// Token: 0x04002927 RID: 10535
+	// Token: 0x040038D6 RID: 14550
 	private Action<InputActionEventData> m_onVerticalInputHandler;
 
-	// Token: 0x04002928 RID: 10536
+	// Token: 0x040038D7 RID: 14551
 	private Action<InputActionEventData> m_onLBInputHandler;
 
-	// Token: 0x04002929 RID: 10537
+	// Token: 0x040038D8 RID: 14552
 	private Action<InputActionEventData> m_onRBInputHandler;
 
-	// Token: 0x0400292A RID: 10538
+	// Token: 0x040038D9 RID: 14553
 	private Action<InputActionEventData> m_onYButtonResetHandler;
 
-	// Token: 0x0400292B RID: 10539
+	// Token: 0x040038DA RID: 14554
 	private Action<InputActionEventData> m_onXButtonInputHandler;
 
-	// Token: 0x04002933 RID: 10547
+	// Token: 0x040038E2 RID: 14562
 	private Tween m_scrollTween;
 }

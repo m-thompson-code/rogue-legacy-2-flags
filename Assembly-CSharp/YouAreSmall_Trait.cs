@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200036B RID: 875
+// Token: 0x020005E8 RID: 1512
 public class YouAreSmall_Trait : BaseTrait
 {
-	// Token: 0x17000DFD RID: 3581
-	// (get) Token: 0x060020C3 RID: 8387 RVA: 0x0006700B File Offset: 0x0006520B
+	// Token: 0x17001274 RID: 4724
+	// (get) Token: 0x06002E83 RID: 11907 RVA: 0x0000452B File Offset: 0x0000272B
 	public override TraitType TraitType
 	{
 		get
@@ -15,7 +15,7 @@ public class YouAreSmall_Trait : BaseTrait
 		}
 	}
 
-	// Token: 0x060020C4 RID: 8388 RVA: 0x0006700F File Offset: 0x0006520F
+	// Token: 0x06002E84 RID: 11908 RVA: 0x0001965D File Offset: 0x0001785D
 	private IEnumerator Start()
 	{
 		if (!PlayerManager.IsInstantiated)
@@ -32,7 +32,7 @@ public class YouAreSmall_Trait : BaseTrait
 		yield break;
 	}
 
-	// Token: 0x060020C5 RID: 8389 RVA: 0x00067018 File Offset: 0x00065218
+	// Token: 0x06002E85 RID: 11909 RVA: 0x000C7F64 File Offset: 0x000C6164
 	private void OnDestroy()
 	{
 		if (!PlayerManager.IsDisposed)

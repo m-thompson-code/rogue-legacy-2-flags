@@ -2,11 +2,11 @@
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x02000587 RID: 1415
+// Token: 0x0200097F RID: 2431
 public class GeneticistOmniUIWindowController : BaseOmniUIWindowController<BaseOmniUICategoryEntry, GeneticistOmniUIEntry>
 {
-	// Token: 0x170012CB RID: 4811
-	// (get) Token: 0x060034E6 RID: 13542 RVA: 0x000B5F60 File Offset: 0x000B4160
+	// Token: 0x170019DC RID: 6620
+	// (get) Token: 0x06004AA3 RID: 19107 RVA: 0x00028D77 File Offset: 0x00026F77
 	public override WindowID ID
 	{
 		get
@@ -15,12 +15,12 @@ public class GeneticistOmniUIWindowController : BaseOmniUIWindowController<BaseO
 		}
 	}
 
-	// Token: 0x060034E7 RID: 13543 RVA: 0x000B5F64 File Offset: 0x000B4164
+	// Token: 0x06004AA4 RID: 19108 RVA: 0x00002FCA File Offset: 0x000011CA
 	protected override void CreateCategoryEntries()
 	{
 	}
 
-	// Token: 0x060034E8 RID: 13544 RVA: 0x000B5F68 File Offset: 0x000B4168
+	// Token: 0x06004AA5 RID: 19109 RVA: 0x00122BE8 File Offset: 0x00120DE8
 	protected override void CreateEntries()
 	{
 		if (base.EntryArray != null)
@@ -47,7 +47,7 @@ public class GeneticistOmniUIWindowController : BaseOmniUIWindowController<BaseO
 		base.EntryArray = base.EntryArray.Take(num).ToArray<GeneticistOmniUIEntry>();
 	}
 
-	// Token: 0x060034E9 RID: 13545 RVA: 0x000B608C File Offset: 0x000B428C
+	// Token: 0x06004AA6 RID: 19110 RVA: 0x00122D0C File Offset: 0x00120F0C
 	protected override void UpdateScrollArrows(float scrollAmount)
 	{
 		base.UpdateScrollArrows(scrollAmount);
@@ -123,7 +123,7 @@ public class GeneticistOmniUIWindowController : BaseOmniUIWindowController<BaseO
 		}
 	}
 
-	// Token: 0x060034EA RID: 13546 RVA: 0x000B62BA File Offset: 0x000B44BA
+	// Token: 0x06004AA7 RID: 19111 RVA: 0x00028C7A File Offset: 0x00026E7A
 	private void SetGameObjectActive(GameObject obj, bool active)
 	{
 		if (obj.activeSelf == !active)

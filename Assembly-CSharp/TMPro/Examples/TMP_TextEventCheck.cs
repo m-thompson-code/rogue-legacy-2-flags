@@ -4,10 +4,10 @@ using UnityEngine.Events;
 
 namespace TMPro.Examples
 {
-	// Token: 0x02000861 RID: 2145
+	// Token: 0x02000D6C RID: 3436
 	public class TMP_TextEventCheck : MonoBehaviour
 	{
-		// Token: 0x06004708 RID: 18184 RVA: 0x000FE8DC File Offset: 0x000FCADC
+		// Token: 0x060061C1 RID: 25025 RVA: 0x0016BEA0 File Offset: 0x0016A0A0
 		private void OnEnable()
 		{
 			if (this.TextEventHandler != null)
@@ -20,7 +20,7 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x06004709 RID: 18185 RVA: 0x000FE988 File Offset: 0x000FCB88
+		// Token: 0x060061C2 RID: 25026 RVA: 0x0016BF4C File Offset: 0x0016A14C
 		private void OnDisable()
 		{
 			if (this.TextEventHandler != null)
@@ -33,7 +33,7 @@ namespace TMPro.Examples
 			}
 		}
 
-		// Token: 0x0600470A RID: 18186 RVA: 0x000FEA32 File Offset: 0x000FCC32
+		// Token: 0x060061C3 RID: 25027 RVA: 0x00035DB2 File Offset: 0x00033FB2
 		private void OnCharacterSelection(char c, int index)
 		{
 			Debug.Log(string.Concat(new string[]
@@ -46,7 +46,7 @@ namespace TMPro.Examples
 			}));
 		}
 
-		// Token: 0x0600470B RID: 18187 RVA: 0x000FEA70 File Offset: 0x000FCC70
+		// Token: 0x060061C4 RID: 25028 RVA: 0x00035DF0 File Offset: 0x00033FF0
 		private void OnSpriteSelection(char c, int index)
 		{
 			Debug.Log(string.Concat(new string[]
@@ -59,7 +59,7 @@ namespace TMPro.Examples
 			}));
 		}
 
-		// Token: 0x0600470C RID: 18188 RVA: 0x000FEAB0 File Offset: 0x000FCCB0
+		// Token: 0x060061C5 RID: 25029 RVA: 0x0016BFF8 File Offset: 0x0016A1F8
 		private void OnWordSelection(string word, int firstCharacterIndex, int length)
 		{
 			Debug.Log(string.Concat(new string[]
@@ -74,7 +74,7 @@ namespace TMPro.Examples
 			}));
 		}
 
-		// Token: 0x0600470D RID: 18189 RVA: 0x000FEB08 File Offset: 0x000FCD08
+		// Token: 0x060061C6 RID: 25030 RVA: 0x0016C050 File Offset: 0x0016A250
 		private void OnLineSelection(string lineText, int firstCharacterIndex, int length)
 		{
 			Debug.Log(string.Concat(new string[]
@@ -89,7 +89,7 @@ namespace TMPro.Examples
 			}));
 		}
 
-		// Token: 0x0600470E RID: 18190 RVA: 0x000FEB60 File Offset: 0x000FCD60
+		// Token: 0x060061C7 RID: 25031 RVA: 0x0016C0A8 File Offset: 0x0016A2A8
 		private void OnLinkSelection(string linkID, string linkText, int linkIndex)
 		{
 			Debug.Log(string.Concat(new string[]
@@ -104,7 +104,7 @@ namespace TMPro.Examples
 			}));
 		}
 
-		// Token: 0x04003C19 RID: 15385
+		// Token: 0x04004FB7 RID: 20407
 		public TMP_TextEventHandler TextEventHandler;
 	}
 }

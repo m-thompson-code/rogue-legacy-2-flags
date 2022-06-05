@@ -2,10 +2,10 @@
 
 namespace Unity.Cloud
 {
-	// Token: 0x02000831 RID: 2097
+	// Token: 0x02000D16 RID: 3350
 	public static class Preconditions
 	{
-		// Token: 0x06004554 RID: 17748 RVA: 0x000F7914 File Offset: 0x000F5B14
+		// Token: 0x06005F8A RID: 24458 RVA: 0x001654BC File Offset: 0x001636BC
 		public static void ArgumentIsLessThanOrEqualToLength(object value, int length, string argumentName)
 		{
 			string text = value as string;
@@ -15,7 +15,7 @@ namespace Unity.Cloud
 			}
 		}
 
-		// Token: 0x06004555 RID: 17749 RVA: 0x000F793C File Offset: 0x000F5B3C
+		// Token: 0x06005F8B RID: 24459 RVA: 0x001654E4 File Offset: 0x001636E4
 		public static void ArgumentNotNullOrWhitespace(object value, string argumentName)
 		{
 			if (value == null)

@@ -5,23 +5,23 @@ using RLAudio;
 using Sigtrap.Relays;
 using UnityEngine;
 
-// Token: 0x020004B1 RID: 1201
+// Token: 0x020007C3 RID: 1987
 public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitResponse, IHitResponse, ITerrainOnStayHitResponse, IWeaponOnEnterHitResponse, IWeaponOnStayHitResponse, IBodyOnEnterHitResponse, IBodyOnStayHitResponse, IRootObj, IMidpointObj, IHeading, IEffectVelocity, IEffectTriggerEvent_OnDeath, IEffectTriggerEvent_OnSpawn, IEffectTriggerEvent_OnTimeout, IGenericPoolObj, IPreOnDisable, IPlayHitEffect, IPivotObj, IOffscreenObj
 {
-	// Token: 0x06002BBF RID: 11199 RVA: 0x00094D56 File Offset: 0x00092F56
+	// Token: 0x06003C50 RID: 15440 RVA: 0x00021554 File Offset: 0x0001F754
 	public static bool OwnsProjectile(GameObject go, Projectile_RL projectile)
 	{
 		return projectile && !projectile.m_flagToDestroy && projectile.isActiveAndEnabled && projectile.Owner == go;
 	}
 
-	// Token: 0x06002BC0 RID: 11200 RVA: 0x00094D7E File Offset: 0x00092F7E
+	// Token: 0x06003C51 RID: 15441 RVA: 0x0002157C File Offset: 0x0001F77C
 	public static bool CollisionFlagAllowed(Projectile_RL proj1, Projectile_RL proj2)
 	{
 		return (proj1.CanCollideWithFlags & proj2.CollisionFlags) != ProjectileCollisionFlag.None || (proj2.CanCollideWithFlags & proj1.CollisionFlags) > ProjectileCollisionFlag.None;
 	}
 
-	// Token: 0x170010AA RID: 4266
-	// (get) Token: 0x06002BC1 RID: 11201 RVA: 0x00094DA1 File Offset: 0x00092FA1
+	// Token: 0x17001609 RID: 5641
+	// (get) Token: 0x06003C52 RID: 15442 RVA: 0x0002159F File Offset: 0x0001F79F
 	public bool DisableOffscreenWarnings
 	{
 		get
@@ -30,13 +30,13 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010AB RID: 4267
-	// (get) Token: 0x06002BC2 RID: 11202 RVA: 0x00094DA9 File Offset: 0x00092FA9
-	// (set) Token: 0x06002BC3 RID: 11203 RVA: 0x00094DB1 File Offset: 0x00092FB1
+	// Token: 0x1700160A RID: 5642
+	// (get) Token: 0x06003C53 RID: 15443 RVA: 0x000215A7 File Offset: 0x0001F7A7
+	// (set) Token: 0x06003C54 RID: 15444 RVA: 0x000215AF File Offset: 0x0001F7AF
 	public bool MatchFacing { get; set; }
 
-	// Token: 0x170010AC RID: 4268
-	// (get) Token: 0x06002BC4 RID: 11204 RVA: 0x00094DBA File Offset: 0x00092FBA
+	// Token: 0x1700160B RID: 5643
+	// (get) Token: 0x06003C55 RID: 15445 RVA: 0x000215B8 File Offset: 0x0001F7B8
 	public float InitialRotationSpeed
 	{
 		get
@@ -45,13 +45,13 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010AD RID: 4269
-	// (get) Token: 0x06002BC5 RID: 11205 RVA: 0x00094DC2 File Offset: 0x00092FC2
-	// (set) Token: 0x06002BC6 RID: 11206 RVA: 0x00094DCA File Offset: 0x00092FCA
+	// Token: 0x1700160C RID: 5644
+	// (get) Token: 0x06003C56 RID: 15446 RVA: 0x000215C0 File Offset: 0x0001F7C0
+	// (set) Token: 0x06003C57 RID: 15447 RVA: 0x000215C8 File Offset: 0x0001F7C8
 	public bool IsPersistentProjectile { get; set; }
 
-	// Token: 0x170010AE RID: 4270
-	// (get) Token: 0x06002BC7 RID: 11207 RVA: 0x00094DD3 File Offset: 0x00092FD3
+	// Token: 0x1700160D RID: 5645
+	// (get) Token: 0x06003C58 RID: 15448 RVA: 0x000215D1 File Offset: 0x0001F7D1
 	public bool HasIntro
 	{
 		get
@@ -60,13 +60,13 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010AF RID: 4271
-	// (get) Token: 0x06002BC8 RID: 11208 RVA: 0x00094DDB File Offset: 0x00092FDB
-	// (set) Token: 0x06002BC9 RID: 11209 RVA: 0x00094DE3 File Offset: 0x00092FE3
+	// Token: 0x1700160E RID: 5646
+	// (get) Token: 0x06003C59 RID: 15449 RVA: 0x000215D9 File Offset: 0x0001F7D9
+	// (set) Token: 0x06003C5A RID: 15450 RVA: 0x000215E1 File Offset: 0x0001F7E1
 	public float CDReducDelay { get; set; }
 
-	// Token: 0x170010B0 RID: 4272
-	// (get) Token: 0x06002BCA RID: 11210 RVA: 0x00094DEC File Offset: 0x00092FEC
+	// Token: 0x1700160F RID: 5647
+	// (get) Token: 0x06003C5B RID: 15451 RVA: 0x000215EA File Offset: 0x0001F7EA
 	public bool HasCDReductionDelay
 	{
 		get
@@ -75,18 +75,18 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010B1 RID: 4273
-	// (get) Token: 0x06002BCB RID: 11211 RVA: 0x00094DF4 File Offset: 0x00092FF4
-	// (set) Token: 0x06002BCC RID: 11212 RVA: 0x00094DFC File Offset: 0x00092FFC
+	// Token: 0x17001610 RID: 5648
+	// (get) Token: 0x06003C5C RID: 15452 RVA: 0x000215F2 File Offset: 0x0001F7F2
+	// (set) Token: 0x06003C5D RID: 15453 RVA: 0x000215FA File Offset: 0x0001F7FA
 	public Vector2 CollisionPointOffset { get; set; } = Vector2.zero;
 
-	// Token: 0x170010B2 RID: 4274
-	// (get) Token: 0x06002BCD RID: 11213 RVA: 0x00094E05 File Offset: 0x00093005
-	// (set) Token: 0x06002BCE RID: 11214 RVA: 0x00094E0D File Offset: 0x0009300D
+	// Token: 0x17001611 RID: 5649
+	// (get) Token: 0x06003C5E RID: 15454 RVA: 0x00021603 File Offset: 0x0001F803
+	// (set) Token: 0x06003C5F RID: 15455 RVA: 0x0002160B File Offset: 0x0001F80B
 	public bool IsFreePoolObj { get; set; }
 
-	// Token: 0x170010B3 RID: 4275
-	// (get) Token: 0x06002BCF RID: 11215 RVA: 0x00094E16 File Offset: 0x00093016
+	// Token: 0x17001612 RID: 5650
+	// (get) Token: 0x06003C60 RID: 15456 RVA: 0x00021614 File Offset: 0x0001F814
 	public ProjectileCollisionFlag CanCollideWithFlags
 	{
 		get
@@ -95,8 +95,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010B4 RID: 4276
-	// (get) Token: 0x06002BD0 RID: 11216 RVA: 0x00094E1E File Offset: 0x0009301E
+	// Token: 0x17001613 RID: 5651
+	// (get) Token: 0x06003C61 RID: 15457 RVA: 0x0002161C File Offset: 0x0001F81C
 	public ProjectileCollisionFlag CollisionFlags
 	{
 		get
@@ -105,13 +105,13 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010B5 RID: 4277
-	// (get) Token: 0x06002BD1 RID: 11217 RVA: 0x00094E26 File Offset: 0x00093026
-	// (set) Token: 0x06002BD2 RID: 11218 RVA: 0x00094E2E File Offset: 0x0009302E
+	// Token: 0x17001614 RID: 5652
+	// (get) Token: 0x06003C62 RID: 15458 RVA: 0x00021624 File Offset: 0x0001F824
+	// (set) Token: 0x06003C63 RID: 15459 RVA: 0x0002162C File Offset: 0x0001F82C
 	public bool IsAwakeCalled { get; protected set; }
 
-	// Token: 0x170010B6 RID: 4278
-	// (get) Token: 0x06002BD3 RID: 11219 RVA: 0x00094E37 File Offset: 0x00093037
+	// Token: 0x17001615 RID: 5653
+	// (get) Token: 0x06003C64 RID: 15460 RVA: 0x00021635 File Offset: 0x0001F835
 	public ProjectileEventEmitter AudioEventEmitter
 	{
 		get
@@ -125,13 +125,13 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010B7 RID: 4279
-	// (get) Token: 0x06002BD4 RID: 11220 RVA: 0x00094E67 File Offset: 0x00093067
-	// (set) Token: 0x06002BD5 RID: 11221 RVA: 0x00094E6F File Offset: 0x0009306F
+	// Token: 0x17001616 RID: 5654
+	// (get) Token: 0x06003C65 RID: 15461 RVA: 0x00021665 File Offset: 0x0001F865
+	// (set) Token: 0x06003C66 RID: 15462 RVA: 0x0002166D File Offset: 0x0001F86D
 	public CastAbilityType CastAbilityType { get; set; }
 
-	// Token: 0x170010B8 RID: 4280
-	// (get) Token: 0x06002BD6 RID: 11222 RVA: 0x00094E78 File Offset: 0x00093078
+	// Token: 0x17001617 RID: 5655
+	// (get) Token: 0x06003C67 RID: 15463 RVA: 0x00021676 File Offset: 0x0001F876
 	public bool DestroyOnRoomChange
 	{
 		get
@@ -140,8 +140,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010B9 RID: 4281
-	// (get) Token: 0x06002BD7 RID: 11223 RVA: 0x00094E80 File Offset: 0x00093080
+	// Token: 0x17001618 RID: 5656
+	// (get) Token: 0x06003C68 RID: 15464 RVA: 0x0002167E File Offset: 0x0001F87E
 	public float[] StatusEffectDurations
 	{
 		get
@@ -150,8 +150,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010BA RID: 4282
-	// (get) Token: 0x06002BD8 RID: 11224 RVA: 0x00094E88 File Offset: 0x00093088
+	// Token: 0x17001619 RID: 5657
+	// (get) Token: 0x06003C69 RID: 15465 RVA: 0x00021686 File Offset: 0x0001F886
 	public StatusEffectType[] StatusEffectTypes
 	{
 		get
@@ -160,8 +160,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010BB RID: 4283
-	// (get) Token: 0x06002BD9 RID: 11225 RVA: 0x00094E90 File Offset: 0x00093090
+	// Token: 0x1700161A RID: 5658
+	// (get) Token: 0x06003C6A RID: 15466 RVA: 0x0002168E File Offset: 0x0001F88E
 	public bool IsDotDamage
 	{
 		get
@@ -170,8 +170,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010BC RID: 4284
-	// (get) Token: 0x06002BDA RID: 11226 RVA: 0x00094E98 File Offset: 0x00093098
+	// Token: 0x1700161B RID: 5659
+	// (get) Token: 0x06003C6B RID: 15467 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool PlayHitEffect
 	{
 		get
@@ -180,8 +180,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010BD RID: 4285
-	// (get) Token: 0x06002BDB RID: 11227 RVA: 0x00094E9B File Offset: 0x0009309B
+	// Token: 0x1700161C RID: 5660
+	// (get) Token: 0x06003C6C RID: 15468 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public bool PlayDirectionalHitEffect
 	{
 		get
@@ -190,8 +190,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010BE RID: 4286
-	// (get) Token: 0x06002BDC RID: 11228 RVA: 0x00094E9E File Offset: 0x0009309E
+	// Token: 0x1700161D RID: 5661
+	// (get) Token: 0x06003C6D RID: 15469 RVA: 0x0000F49B File Offset: 0x0000D69B
 	public string EffectNameOverride
 	{
 		get
@@ -200,8 +200,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010BF RID: 4287
-	// (get) Token: 0x06002BDD RID: 11229 RVA: 0x00094EA1 File Offset: 0x000930A1
+	// Token: 0x1700161E RID: 5662
+	// (get) Token: 0x06003C6E RID: 15470 RVA: 0x00021696 File Offset: 0x0001F896
 	public IRelayLink<Projectile_RL, GameObject> OnCollisionRelay
 	{
 		get
@@ -210,14 +210,14 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002BDE RID: 11230 RVA: 0x00094EAE File Offset: 0x000930AE
+	// Token: 0x06003C6F RID: 15471 RVA: 0x000216A3 File Offset: 0x0001F8A3
 	public void ForceDispatchOnCollisionRelay(GameObject otherObj)
 	{
 		this.m_onCollisionRelay.Dispatch(this, otherObj);
 	}
 
-	// Token: 0x170010C0 RID: 4288
-	// (get) Token: 0x06002BDF RID: 11231 RVA: 0x00094EBD File Offset: 0x000930BD
+	// Token: 0x1700161F RID: 5663
+	// (get) Token: 0x06003C70 RID: 15472 RVA: 0x000216B2 File Offset: 0x0001F8B2
 	public IRelayLink<Projectile_RL, GameObject> OnSpawnRelay
 	{
 		get
@@ -226,8 +226,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010C1 RID: 4289
-	// (get) Token: 0x06002BE0 RID: 11232 RVA: 0x00094ECA File Offset: 0x000930CA
+	// Token: 0x17001620 RID: 5664
+	// (get) Token: 0x06003C71 RID: 15473 RVA: 0x000216BF File Offset: 0x0001F8BF
 	public IRelayLink<Projectile_RL, GameObject> OnDeathRelay
 	{
 		get
@@ -236,8 +236,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010C2 RID: 4290
-	// (get) Token: 0x06002BE1 RID: 11233 RVA: 0x00094ED7 File Offset: 0x000930D7
+	// Token: 0x17001621 RID: 5665
+	// (get) Token: 0x06003C72 RID: 15474 RVA: 0x000216CC File Offset: 0x0001F8CC
 	public IRelayLink<GameObject> OnDeathEffectTriggerRelay
 	{
 		get
@@ -246,8 +246,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010C3 RID: 4291
-	// (get) Token: 0x06002BE2 RID: 11234 RVA: 0x00094EE4 File Offset: 0x000930E4
+	// Token: 0x17001622 RID: 5666
+	// (get) Token: 0x06003C73 RID: 15475 RVA: 0x000216D9 File Offset: 0x0001F8D9
 	public IRelayLink<GameObject> OnSpawnEffectTriggerRelay
 	{
 		get
@@ -256,8 +256,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010C4 RID: 4292
-	// (get) Token: 0x06002BE3 RID: 11235 RVA: 0x00094EF1 File Offset: 0x000930F1
+	// Token: 0x17001623 RID: 5667
+	// (get) Token: 0x06003C74 RID: 15476 RVA: 0x000216E6 File Offset: 0x0001F8E6
 	public IRelayLink<GameObject> OnTimeoutEffectTriggerRelay
 	{
 		get
@@ -266,8 +266,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010C5 RID: 4293
-	// (get) Token: 0x06002BE4 RID: 11236 RVA: 0x00094EFE File Offset: 0x000930FE
+	// Token: 0x17001624 RID: 5668
+	// (get) Token: 0x06003C75 RID: 15477 RVA: 0x000216F3 File Offset: 0x0001F8F3
 	public IRelayLink<IPreOnDisable> PreOnDisableRelay
 	{
 		get
@@ -276,8 +276,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010C6 RID: 4294
-	// (get) Token: 0x06002BE5 RID: 11237 RVA: 0x00094F0B File Offset: 0x0009310B
+	// Token: 0x17001625 RID: 5669
+	// (get) Token: 0x06003C76 RID: 15478 RVA: 0x00021700 File Offset: 0x0001F900
 	public IHitboxController HitboxController
 	{
 		get
@@ -286,8 +286,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010C7 RID: 4295
-	// (get) Token: 0x06002BE6 RID: 11238 RVA: 0x00094F13 File Offset: 0x00093113
+	// Token: 0x17001626 RID: 5670
+	// (get) Token: 0x06003C77 RID: 15479 RVA: 0x00021708 File Offset: 0x0001F908
 	public Animator Animator
 	{
 		get
@@ -296,8 +296,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010C8 RID: 4296
-	// (get) Token: 0x06002BE7 RID: 11239 RVA: 0x00094F1B File Offset: 0x0009311B
+	// Token: 0x17001627 RID: 5671
+	// (get) Token: 0x06003C78 RID: 15480 RVA: 0x00021710 File Offset: 0x0001F910
 	public float GravityKickInDelay
 	{
 		get
@@ -306,8 +306,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010C9 RID: 4297
-	// (get) Token: 0x06002BE8 RID: 11240 RVA: 0x00094F23 File Offset: 0x00093123
+	// Token: 0x17001628 RID: 5672
+	// (get) Token: 0x06003C79 RID: 15481 RVA: 0x00021718 File Offset: 0x0001F918
 	public float FallMultiplierOverride
 	{
 		get
@@ -316,8 +316,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010CA RID: 4298
-	// (get) Token: 0x06002BE9 RID: 11241 RVA: 0x00094F2B File Offset: 0x0009312B
+	// Token: 0x17001629 RID: 5673
+	// (get) Token: 0x06003C7A RID: 15482 RVA: 0x00021720 File Offset: 0x0001F920
 	public ProjectileData ProjectileData
 	{
 		get
@@ -326,15 +326,15 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002BEA RID: 11242 RVA: 0x00094F33 File Offset: 0x00093133
+	// Token: 0x06003C7B RID: 15483 RVA: 0x00021728 File Offset: 0x0001F928
 	public void SetProjectileData(ProjectileData projData)
 	{
 		this.m_projectileData = projData;
 	}
 
-	// Token: 0x170010CB RID: 4299
-	// (get) Token: 0x06002BEB RID: 11243 RVA: 0x00094F3C File Offset: 0x0009313C
-	// (set) Token: 0x06002BEC RID: 11244 RVA: 0x00094F44 File Offset: 0x00093144
+	// Token: 0x1700162A RID: 5674
+	// (get) Token: 0x06003C7C RID: 15484 RVA: 0x00021731 File Offset: 0x0001F931
+	// (set) Token: 0x06003C7D RID: 15485 RVA: 0x00021739 File Offset: 0x0001F939
 	public float LifespanTimer
 	{
 		get
@@ -347,8 +347,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010CC RID: 4300
-	// (get) Token: 0x06002BED RID: 11245 RVA: 0x00094F4D File Offset: 0x0009314D
+	// Token: 0x1700162B RID: 5675
+	// (get) Token: 0x06003C7E RID: 15486 RVA: 0x00021742 File Offset: 0x0001F942
 	public StrikeType StrikeType
 	{
 		get
@@ -357,8 +357,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010CD RID: 4301
-	// (get) Token: 0x06002BEE RID: 11246 RVA: 0x00094F55 File Offset: 0x00093155
+	// Token: 0x1700162C RID: 5676
+	// (get) Token: 0x06003C7F RID: 15487 RVA: 0x0002174A File Offset: 0x0001F94A
 	public Vector2 Velocity
 	{
 		get
@@ -371,8 +371,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010CE RID: 4302
-	// (get) Token: 0x06002BEF RID: 11247 RVA: 0x00094F78 File Offset: 0x00093178
+	// Token: 0x1700162D RID: 5677
+	// (get) Token: 0x06003C80 RID: 15488 RVA: 0x000F6524 File Offset: 0x000F4724
 	public Vector2 EffectVelocity
 	{
 		get
@@ -404,8 +404,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010CF RID: 4303
-	// (get) Token: 0x06002BF0 RID: 11248 RVA: 0x00094FF8 File Offset: 0x000931F8
+	// Token: 0x1700162E RID: 5678
+	// (get) Token: 0x06003C81 RID: 15489 RVA: 0x0002176B File Offset: 0x0001F96B
 	public Vector3 Midpoint
 	{
 		get
@@ -418,9 +418,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010D0 RID: 4304
-	// (get) Token: 0x06002BF1 RID: 11249 RVA: 0x00095026 File Offset: 0x00093226
-	// (set) Token: 0x06002BF2 RID: 11250 RVA: 0x0009502E File Offset: 0x0009322E
+	// Token: 0x1700162F RID: 5679
+	// (get) Token: 0x06003C82 RID: 15490 RVA: 0x00021799 File Offset: 0x0001F999
+	// (set) Token: 0x06003C83 RID: 15491 RVA: 0x000217A1 File Offset: 0x0001F9A1
 	public bool ScaleWithOwner
 	{
 		get
@@ -433,9 +433,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010D1 RID: 4305
-	// (get) Token: 0x06002BF3 RID: 11251 RVA: 0x00095037 File Offset: 0x00093237
-	// (set) Token: 0x06002BF4 RID: 11252 RVA: 0x0009503F File Offset: 0x0009323F
+	// Token: 0x17001630 RID: 5680
+	// (get) Token: 0x06003C84 RID: 15492 RVA: 0x000217AA File Offset: 0x0001F9AA
+	// (set) Token: 0x06003C85 RID: 15493 RVA: 0x000217B2 File Offset: 0x0001F9B2
 	public bool CanBeRicocheted
 	{
 		get
@@ -448,9 +448,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010D2 RID: 4306
-	// (get) Token: 0x06002BF5 RID: 11253 RVA: 0x00095048 File Offset: 0x00093248
-	// (set) Token: 0x06002BF6 RID: 11254 RVA: 0x00095050 File Offset: 0x00093250
+	// Token: 0x17001631 RID: 5681
+	// (get) Token: 0x06003C86 RID: 15494 RVA: 0x000217BB File Offset: 0x0001F9BB
+	// (set) Token: 0x06003C87 RID: 15495 RVA: 0x000217C3 File Offset: 0x0001F9C3
 	public bool RicochetsOwnerWhenHits
 	{
 		get
@@ -463,8 +463,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010D3 RID: 4307
-	// (get) Token: 0x06002BF7 RID: 11255 RVA: 0x00095059 File Offset: 0x00093259
+	// Token: 0x17001632 RID: 5682
+	// (get) Token: 0x06003C88 RID: 15496 RVA: 0x000217CC File Offset: 0x0001F9CC
 	public GameObject Pivot
 	{
 		get
@@ -473,9 +473,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010D4 RID: 4308
-	// (get) Token: 0x06002BF8 RID: 11256 RVA: 0x00095061 File Offset: 0x00093261
-	// (set) Token: 0x06002BF9 RID: 11257 RVA: 0x00095069 File Offset: 0x00093269
+	// Token: 0x17001633 RID: 5683
+	// (get) Token: 0x06003C89 RID: 15497 RVA: 0x000217D4 File Offset: 0x0001F9D4
+	// (set) Token: 0x06003C8A RID: 15498 RVA: 0x000217DC File Offset: 0x0001F9DC
 	public bool PivotFollowsOrientation
 	{
 		get
@@ -488,9 +488,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010D5 RID: 4309
-	// (get) Token: 0x06002BFA RID: 11258 RVA: 0x00095072 File Offset: 0x00093272
-	// (set) Token: 0x06002BFB RID: 11259 RVA: 0x0009507A File Offset: 0x0009327A
+	// Token: 0x17001634 RID: 5684
+	// (get) Token: 0x06003C8B RID: 15499 RVA: 0x000217E5 File Offset: 0x0001F9E5
+	// (set) Token: 0x06003C8C RID: 15500 RVA: 0x000217ED File Offset: 0x0001F9ED
 	public virtual bool IgnoreDamageScale
 	{
 		get
@@ -503,8 +503,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010D6 RID: 4310
-	// (get) Token: 0x06002BFC RID: 11260 RVA: 0x00095083 File Offset: 0x00093283
+	// Token: 0x17001635 RID: 5685
+	// (get) Token: 0x06003C8D RID: 15501 RVA: 0x000217F6 File Offset: 0x0001F9F6
 	public virtual DamageType DamageType
 	{
 		get
@@ -513,18 +513,18 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010D7 RID: 4311
-	// (get) Token: 0x06002BFD RID: 11261 RVA: 0x00095090 File Offset: 0x00093290
-	// (set) Token: 0x06002BFE RID: 11262 RVA: 0x00095098 File Offset: 0x00093298
+	// Token: 0x17001636 RID: 5686
+	// (get) Token: 0x06003C8E RID: 15502 RVA: 0x00021803 File Offset: 0x0001FA03
+	// (set) Token: 0x06003C8F RID: 15503 RVA: 0x0002180B File Offset: 0x0001FA0B
 	public virtual float StrengthScale { get; set; }
 
-	// Token: 0x170010D8 RID: 4312
-	// (get) Token: 0x06002BFF RID: 11263 RVA: 0x000950A1 File Offset: 0x000932A1
-	// (set) Token: 0x06002C00 RID: 11264 RVA: 0x000950A9 File Offset: 0x000932A9
+	// Token: 0x17001637 RID: 5687
+	// (get) Token: 0x06003C90 RID: 15504 RVA: 0x00021814 File Offset: 0x0001FA14
+	// (set) Token: 0x06003C91 RID: 15505 RVA: 0x0002181C File Offset: 0x0001FA1C
 	public virtual float MagicScale { get; set; }
 
-	// Token: 0x170010D9 RID: 4313
-	// (get) Token: 0x06002C01 RID: 11265 RVA: 0x000950B2 File Offset: 0x000932B2
+	// Token: 0x17001638 RID: 5688
+	// (get) Token: 0x06003C92 RID: 15506 RVA: 0x00021825 File Offset: 0x0001FA25
 	public virtual float CooldownReductionPerHit
 	{
 		get
@@ -533,8 +533,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010DA RID: 4314
-	// (get) Token: 0x06002C02 RID: 11266 RVA: 0x000950BF File Offset: 0x000932BF
+	// Token: 0x17001639 RID: 5689
+	// (get) Token: 0x06003C93 RID: 15507 RVA: 0x00021832 File Offset: 0x0001FA32
 	public virtual float ManaGainPerHit
 	{
 		get
@@ -543,13 +543,13 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010DB RID: 4315
-	// (get) Token: 0x06002C03 RID: 11267 RVA: 0x000950CC File Offset: 0x000932CC
-	// (set) Token: 0x06002C04 RID: 11268 RVA: 0x000950D4 File Offset: 0x000932D4
+	// Token: 0x1700163A RID: 5690
+	// (get) Token: 0x06003C94 RID: 15508 RVA: 0x0002183F File Offset: 0x0001FA3F
+	// (set) Token: 0x06003C95 RID: 15509 RVA: 0x00021847 File Offset: 0x0001FA47
 	public virtual float BaseStunStrength { get; set; }
 
-	// Token: 0x170010DC RID: 4316
-	// (get) Token: 0x06002C05 RID: 11269 RVA: 0x000950DD File Offset: 0x000932DD
+	// Token: 0x1700163B RID: 5691
+	// (get) Token: 0x06003C96 RID: 15510 RVA: 0x00021850 File Offset: 0x0001FA50
 	public virtual float ActualStunStrength
 	{
 		get
@@ -558,13 +558,13 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010DD RID: 4317
-	// (get) Token: 0x06002C06 RID: 11270 RVA: 0x000950E5 File Offset: 0x000932E5
-	// (set) Token: 0x06002C07 RID: 11271 RVA: 0x000950ED File Offset: 0x000932ED
+	// Token: 0x1700163C RID: 5692
+	// (get) Token: 0x06003C97 RID: 15511 RVA: 0x00021858 File Offset: 0x0001FA58
+	// (set) Token: 0x06003C98 RID: 15512 RVA: 0x00021860 File Offset: 0x0001FA60
 	public virtual float BaseKnockbackStrength { get; set; }
 
-	// Token: 0x170010DE RID: 4318
-	// (get) Token: 0x06002C08 RID: 11272 RVA: 0x000950F6 File Offset: 0x000932F6
+	// Token: 0x1700163D RID: 5693
+	// (get) Token: 0x06003C99 RID: 15513 RVA: 0x00021869 File Offset: 0x0001FA69
 	public virtual float ActualKnockbackStrength
 	{
 		get
@@ -573,24 +573,24 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010DF RID: 4319
-	// (get) Token: 0x06002C09 RID: 11273 RVA: 0x000950FE File Offset: 0x000932FE
-	// (set) Token: 0x06002C0A RID: 11274 RVA: 0x00095106 File Offset: 0x00093306
+	// Token: 0x1700163E RID: 5694
+	// (get) Token: 0x06003C9A RID: 15514 RVA: 0x00021871 File Offset: 0x0001FA71
+	// (set) Token: 0x06003C9B RID: 15515 RVA: 0x00021879 File Offset: 0x0001FA79
 	public virtual Vector2 ExternalKnockbackMod { get; set; }
 
-	// Token: 0x170010E0 RID: 4320
-	// (get) Token: 0x06002C0B RID: 11275 RVA: 0x0009510F File Offset: 0x0009330F
-	// (set) Token: 0x06002C0C RID: 11276 RVA: 0x00095117 File Offset: 0x00093317
+	// Token: 0x1700163F RID: 5695
+	// (get) Token: 0x06003C9C RID: 15516 RVA: 0x00021882 File Offset: 0x0001FA82
+	// (set) Token: 0x06003C9D RID: 15517 RVA: 0x0002188A File Offset: 0x0001FA8A
 	public virtual float Speed { get; set; }
 
-	// Token: 0x170010E1 RID: 4321
-	// (get) Token: 0x06002C0D RID: 11277 RVA: 0x00095120 File Offset: 0x00093320
-	// (set) Token: 0x06002C0E RID: 11278 RVA: 0x00095128 File Offset: 0x00093328
+	// Token: 0x17001640 RID: 5696
+	// (get) Token: 0x06003C9E RID: 15518 RVA: 0x00021893 File Offset: 0x0001FA93
+	// (set) Token: 0x06003C9F RID: 15519 RVA: 0x0002189B File Offset: 0x0001FA9B
 	public virtual float TurnSpeed { get; set; }
 
-	// Token: 0x170010E2 RID: 4322
-	// (get) Token: 0x06002C0F RID: 11279 RVA: 0x00095131 File Offset: 0x00093331
-	// (set) Token: 0x06002C10 RID: 11280 RVA: 0x00095139 File Offset: 0x00093339
+	// Token: 0x17001641 RID: 5697
+	// (get) Token: 0x06003CA0 RID: 15520 RVA: 0x000218A4 File Offset: 0x0001FAA4
+	// (set) Token: 0x06003CA1 RID: 15521 RVA: 0x000218AC File Offset: 0x0001FAAC
 	public virtual float RotationSpeed
 	{
 		get
@@ -603,9 +603,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010E3 RID: 4323
-	// (get) Token: 0x06002C11 RID: 11281 RVA: 0x00095142 File Offset: 0x00093342
-	// (set) Token: 0x06002C12 RID: 11282 RVA: 0x0009514A File Offset: 0x0009334A
+	// Token: 0x17001642 RID: 5698
+	// (get) Token: 0x06003CA2 RID: 15522 RVA: 0x000218B5 File Offset: 0x0001FAB5
+	// (set) Token: 0x06003CA3 RID: 15523 RVA: 0x000218BD File Offset: 0x0001FABD
 	public virtual bool IsWeighted
 	{
 		get
@@ -618,9 +618,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010E4 RID: 4324
-	// (get) Token: 0x06002C13 RID: 11283 RVA: 0x00095153 File Offset: 0x00093353
-	// (set) Token: 0x06002C14 RID: 11284 RVA: 0x0009515B File Offset: 0x0009335B
+	// Token: 0x17001643 RID: 5699
+	// (get) Token: 0x06003CA4 RID: 15524 RVA: 0x000218C6 File Offset: 0x0001FAC6
+	// (set) Token: 0x06003CA5 RID: 15525 RVA: 0x000218CE File Offset: 0x0001FACE
 	public virtual bool SnapToOwner
 	{
 		get
@@ -633,9 +633,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010E5 RID: 4325
-	// (get) Token: 0x06002C15 RID: 11285 RVA: 0x00095164 File Offset: 0x00093364
-	// (set) Token: 0x06002C16 RID: 11286 RVA: 0x0009516C File Offset: 0x0009336C
+	// Token: 0x17001644 RID: 5700
+	// (get) Token: 0x06003CA6 RID: 15526 RVA: 0x000218D7 File Offset: 0x0001FAD7
+	// (set) Token: 0x06003CA7 RID: 15527 RVA: 0x000218DF File Offset: 0x0001FADF
 	public virtual bool CanHitOwner
 	{
 		get
@@ -648,9 +648,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010E6 RID: 4326
-	// (get) Token: 0x06002C17 RID: 11287 RVA: 0x00095175 File Offset: 0x00093375
-	// (set) Token: 0x06002C18 RID: 11288 RVA: 0x0009517D File Offset: 0x0009337D
+	// Token: 0x17001645 RID: 5701
+	// (get) Token: 0x06003CA8 RID: 15528 RVA: 0x000218E8 File Offset: 0x0001FAE8
+	// (set) Token: 0x06003CA9 RID: 15529 RVA: 0x000218F0 File Offset: 0x0001FAF0
 	public virtual bool CanHitWall
 	{
 		get
@@ -664,9 +664,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010E7 RID: 4327
-	// (get) Token: 0x06002C19 RID: 11289 RVA: 0x0009518D File Offset: 0x0009338D
-	// (set) Token: 0x06002C1A RID: 11290 RVA: 0x00095195 File Offset: 0x00093395
+	// Token: 0x17001646 RID: 5702
+	// (get) Token: 0x06003CAA RID: 15530 RVA: 0x00021900 File Offset: 0x0001FB00
+	// (set) Token: 0x06003CAB RID: 15531 RVA: 0x00021908 File Offset: 0x0001FB08
 	public bool DieOnRoomBoundsCollision
 	{
 		get
@@ -679,9 +679,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010E8 RID: 4328
-	// (get) Token: 0x06002C1B RID: 11291 RVA: 0x0009519E File Offset: 0x0009339E
-	// (set) Token: 0x06002C1C RID: 11292 RVA: 0x000951A6 File Offset: 0x000933A6
+	// Token: 0x17001647 RID: 5703
+	// (get) Token: 0x06003CAC RID: 15532 RVA: 0x00021911 File Offset: 0x0001FB11
+	// (set) Token: 0x06003CAD RID: 15533 RVA: 0x00021919 File Offset: 0x0001FB19
 	public virtual bool CanHitBreakables
 	{
 		get
@@ -694,9 +694,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010E9 RID: 4329
-	// (get) Token: 0x06002C1D RID: 11293 RVA: 0x000951AF File Offset: 0x000933AF
-	// (set) Token: 0x06002C1E RID: 11294 RVA: 0x000951B7 File Offset: 0x000933B7
+	// Token: 0x17001648 RID: 5704
+	// (get) Token: 0x06003CAE RID: 15534 RVA: 0x00021922 File Offset: 0x0001FB22
+	// (set) Token: 0x06003CAF RID: 15535 RVA: 0x0002192A File Offset: 0x0001FB2A
 	public virtual bool HitsFlimsyBreakablesOnly
 	{
 		get
@@ -709,9 +709,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010EA RID: 4330
-	// (get) Token: 0x06002C1F RID: 11295 RVA: 0x000951C0 File Offset: 0x000933C0
-	// (set) Token: 0x06002C20 RID: 11296 RVA: 0x000951D2 File Offset: 0x000933D2
+	// Token: 0x17001649 RID: 5705
+	// (get) Token: 0x06003CB0 RID: 15536 RVA: 0x00021933 File Offset: 0x0001FB33
+	// (set) Token: 0x06003CB1 RID: 15537 RVA: 0x00021945 File Offset: 0x0001FB45
 	public virtual bool DieOnWallCollision
 	{
 		get
@@ -724,9 +724,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010EB RID: 4331
-	// (get) Token: 0x06002C21 RID: 11297 RVA: 0x000951DB File Offset: 0x000933DB
-	// (set) Token: 0x06002C22 RID: 11298 RVA: 0x000951E3 File Offset: 0x000933E3
+	// Token: 0x1700164A RID: 5706
+	// (get) Token: 0x06003CB2 RID: 15538 RVA: 0x0002194E File Offset: 0x0001FB4E
+	// (set) Token: 0x06003CB3 RID: 15539 RVA: 0x00021956 File Offset: 0x0001FB56
 	public virtual bool DieOnCharacterCollision
 	{
 		get
@@ -739,8 +739,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010EC RID: 4332
-	// (get) Token: 0x06002C23 RID: 11299 RVA: 0x000951EC File Offset: 0x000933EC
+	// Token: 0x1700164B RID: 5707
+	// (get) Token: 0x06003CB4 RID: 15540 RVA: 0x0002195F File Offset: 0x0001FB5F
 	public virtual float RepeatHitDuration
 	{
 		get
@@ -749,8 +749,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010ED RID: 4333
-	// (get) Token: 0x06002C24 RID: 11300 RVA: 0x000951F9 File Offset: 0x000933F9
+	// Token: 0x1700164C RID: 5708
+	// (get) Token: 0x06003CB5 RID: 15541 RVA: 0x0002196C File Offset: 0x0001FB6C
 	public virtual float Lifespan
 	{
 		get
@@ -759,9 +759,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010EE RID: 4334
-	// (get) Token: 0x06002C25 RID: 11301 RVA: 0x00095206 File Offset: 0x00093406
-	// (set) Token: 0x06002C26 RID: 11302 RVA: 0x0009520E File Offset: 0x0009340E
+	// Token: 0x1700164D RID: 5709
+	// (get) Token: 0x06003CB6 RID: 15542 RVA: 0x00021979 File Offset: 0x0001FB79
+	// (set) Token: 0x06003CB7 RID: 15543 RVA: 0x00021981 File Offset: 0x0001FB81
 	public bool UseOwnerCollisionPoint
 	{
 		get
@@ -774,8 +774,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010EF RID: 4335
-	// (get) Token: 0x06002C27 RID: 11303 RVA: 0x00095218 File Offset: 0x00093418
+	// Token: 0x1700164E RID: 5710
+	// (get) Token: 0x06003CB8 RID: 15544 RVA: 0x000F65A4 File Offset: 0x000F47A4
 	public bool IsFlipped
 	{
 		get
@@ -792,9 +792,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010F0 RID: 4336
-	// (get) Token: 0x06002C28 RID: 11304 RVA: 0x0009528A File Offset: 0x0009348A
-	// (set) Token: 0x06002C29 RID: 11305 RVA: 0x00095292 File Offset: 0x00093492
+	// Token: 0x1700164F RID: 5711
+	// (get) Token: 0x06003CB9 RID: 15545 RVA: 0x0002198A File Offset: 0x0001FB8A
+	// (set) Token: 0x06003CBA RID: 15546 RVA: 0x00021992 File Offset: 0x0001FB92
 	public Vector2 Acceleration
 	{
 		get
@@ -807,9 +807,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010F1 RID: 4337
-	// (get) Token: 0x06002C2A RID: 11306 RVA: 0x0009529B File Offset: 0x0009349B
-	// (set) Token: 0x06002C2B RID: 11307 RVA: 0x000952A8 File Offset: 0x000934A8
+	// Token: 0x17001650 RID: 5712
+	// (get) Token: 0x06003CBB RID: 15547 RVA: 0x0002199B File Offset: 0x0001FB9B
+	// (set) Token: 0x06003CBC RID: 15548 RVA: 0x000219A8 File Offset: 0x0001FBA8
 	public float AccelerationX
 	{
 		get
@@ -822,9 +822,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010F2 RID: 4338
-	// (get) Token: 0x06002C2C RID: 11308 RVA: 0x000952B6 File Offset: 0x000934B6
-	// (set) Token: 0x06002C2D RID: 11309 RVA: 0x000952C3 File Offset: 0x000934C3
+	// Token: 0x17001651 RID: 5713
+	// (get) Token: 0x06003CBD RID: 15549 RVA: 0x000219B6 File Offset: 0x0001FBB6
+	// (set) Token: 0x06003CBE RID: 15550 RVA: 0x000219C3 File Offset: 0x0001FBC3
 	public float AccelerationY
 	{
 		get
@@ -837,9 +837,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010F3 RID: 4339
-	// (get) Token: 0x06002C2E RID: 11310 RVA: 0x000952D1 File Offset: 0x000934D1
-	// (set) Token: 0x06002C2F RID: 11311 RVA: 0x000952DC File Offset: 0x000934DC
+	// Token: 0x17001652 RID: 5714
+	// (get) Token: 0x06003CBF RID: 15551 RVA: 0x000219D1 File Offset: 0x0001FBD1
+	// (set) Token: 0x06003CC0 RID: 15552 RVA: 0x000F6618 File Offset: 0x000F4818
 	public Vector2 Heading
 	{
 		get
@@ -857,9 +857,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010F4 RID: 4340
-	// (get) Token: 0x06002C30 RID: 11312 RVA: 0x0009532A File Offset: 0x0009352A
-	// (set) Token: 0x06002C31 RID: 11313 RVA: 0x00095338 File Offset: 0x00093538
+	// Token: 0x17001653 RID: 5715
+	// (get) Token: 0x06003CC1 RID: 15553 RVA: 0x000219D9 File Offset: 0x0001FBD9
+	// (set) Token: 0x06003CC2 RID: 15554 RVA: 0x000F6668 File Offset: 0x000F4868
 	public float HeadingX
 	{
 		get
@@ -877,9 +877,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010F5 RID: 4341
-	// (get) Token: 0x06002C32 RID: 11314 RVA: 0x0009538B File Offset: 0x0009358B
-	// (set) Token: 0x06002C33 RID: 11315 RVA: 0x00095398 File Offset: 0x00093598
+	// Token: 0x17001654 RID: 5716
+	// (get) Token: 0x06003CC3 RID: 15555 RVA: 0x000219E6 File Offset: 0x0001FBE6
+	// (set) Token: 0x06003CC4 RID: 15556 RVA: 0x000F66BC File Offset: 0x000F48BC
 	public float HeadingY
 	{
 		get
@@ -897,9 +897,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010F6 RID: 4342
-	// (get) Token: 0x06002C34 RID: 11316 RVA: 0x000953EB File Offset: 0x000935EB
-	// (set) Token: 0x06002C35 RID: 11317 RVA: 0x000953F3 File Offset: 0x000935F3
+	// Token: 0x17001655 RID: 5717
+	// (get) Token: 0x06003CC5 RID: 15557 RVA: 0x000219F3 File Offset: 0x0001FBF3
+	// (set) Token: 0x06003CC6 RID: 15558 RVA: 0x000219FB File Offset: 0x0001FBFB
 	public float Orientation
 	{
 		get
@@ -917,9 +917,9 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010F7 RID: 4343
-	// (get) Token: 0x06002C36 RID: 11318 RVA: 0x00095431 File Offset: 0x00093631
-	// (set) Token: 0x06002C37 RID: 11319 RVA: 0x00095439 File Offset: 0x00093639
+	// Token: 0x17001656 RID: 5718
+	// (get) Token: 0x06003CC7 RID: 15559 RVA: 0x00021A39 File Offset: 0x0001FC39
+	// (set) Token: 0x06003CC8 RID: 15560 RVA: 0x00021A41 File Offset: 0x0001FC41
 	public GameObject Owner
 	{
 		get
@@ -938,8 +938,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010F8 RID: 4344
-	// (get) Token: 0x06002C38 RID: 11320 RVA: 0x00095468 File Offset: 0x00093668
+	// Token: 0x17001657 RID: 5719
+	// (get) Token: 0x06003CC9 RID: 15561 RVA: 0x00021A70 File Offset: 0x0001FC70
 	public BaseCharacterController OwnerController
 	{
 		get
@@ -948,8 +948,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010F9 RID: 4345
-	// (get) Token: 0x06002C39 RID: 11321 RVA: 0x00095470 File Offset: 0x00093670
+	// Token: 0x17001658 RID: 5720
+	// (get) Token: 0x06003CCA RID: 15562 RVA: 0x00021A78 File Offset: 0x0001FC78
 	public float BaseDamage
 	{
 		get
@@ -962,8 +962,8 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010FA RID: 4346
-	// (get) Token: 0x06002C3A RID: 11322 RVA: 0x000954A3 File Offset: 0x000936A3
+	// Token: 0x17001659 RID: 5721
+	// (get) Token: 0x06003CCB RID: 15563 RVA: 0x00021AAB File Offset: 0x0001FCAB
 	public virtual float ActualDamage
 	{
 		get
@@ -976,48 +976,48 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x170010FB RID: 4347
-	// (get) Token: 0x06002C3B RID: 11323 RVA: 0x000954CA File Offset: 0x000936CA
-	// (set) Token: 0x06002C3C RID: 11324 RVA: 0x000954D2 File Offset: 0x000936D2
+	// Token: 0x1700165A RID: 5722
+	// (get) Token: 0x06003CCC RID: 15564 RVA: 0x00021AD2 File Offset: 0x0001FCD2
+	// (set) Token: 0x06003CCD RID: 15565 RVA: 0x00021ADA File Offset: 0x0001FCDA
 	public virtual float DamageMod { get; set; }
 
-	// Token: 0x170010FC RID: 4348
-	// (get) Token: 0x06002C3D RID: 11325 RVA: 0x000954DB File Offset: 0x000936DB
-	// (set) Token: 0x06002C3E RID: 11326 RVA: 0x000954E3 File Offset: 0x000936E3
+	// Token: 0x1700165B RID: 5723
+	// (get) Token: 0x06003CCE RID: 15566 RVA: 0x00021AE3 File Offset: 0x0001FCE3
+	// (set) Token: 0x06003CCF RID: 15567 RVA: 0x00021AEB File Offset: 0x0001FCEB
 	public virtual float Magic { get; set; }
 
-	// Token: 0x170010FD RID: 4349
-	// (get) Token: 0x06002C3F RID: 11327 RVA: 0x000954EC File Offset: 0x000936EC
-	// (set) Token: 0x06002C40 RID: 11328 RVA: 0x000954F4 File Offset: 0x000936F4
+	// Token: 0x1700165C RID: 5724
+	// (get) Token: 0x06003CD0 RID: 15568 RVA: 0x00021AF4 File Offset: 0x0001FCF4
+	// (set) Token: 0x06003CD1 RID: 15569 RVA: 0x00021AFC File Offset: 0x0001FCFC
 	public virtual float Strength { get; set; }
 
-	// Token: 0x170010FE RID: 4350
-	// (get) Token: 0x06002C41 RID: 11329 RVA: 0x000954FD File Offset: 0x000936FD
-	// (set) Token: 0x06002C42 RID: 11330 RVA: 0x00095505 File Offset: 0x00093705
+	// Token: 0x1700165D RID: 5725
+	// (get) Token: 0x06003CD2 RID: 15570 RVA: 0x00021B05 File Offset: 0x0001FD05
+	// (set) Token: 0x06003CD3 RID: 15571 RVA: 0x00021B0D File Offset: 0x0001FD0D
 	public virtual float ActualCritChance { get; set; }
 
-	// Token: 0x170010FF RID: 4351
-	// (get) Token: 0x06002C43 RID: 11331 RVA: 0x0009550E File Offset: 0x0009370E
-	// (set) Token: 0x06002C44 RID: 11332 RVA: 0x00095516 File Offset: 0x00093716
+	// Token: 0x1700165E RID: 5726
+	// (get) Token: 0x06003CD4 RID: 15572 RVA: 0x00021B16 File Offset: 0x0001FD16
+	// (set) Token: 0x06003CD5 RID: 15573 RVA: 0x00021B1E File Offset: 0x0001FD1E
 	public virtual float ActualCritDamage { get; set; }
 
-	// Token: 0x17001100 RID: 4352
-	// (get) Token: 0x06002C45 RID: 11333 RVA: 0x0009551F File Offset: 0x0009371F
-	// (set) Token: 0x06002C46 RID: 11334 RVA: 0x00095527 File Offset: 0x00093727
+	// Token: 0x1700165F RID: 5727
+	// (get) Token: 0x06003CD6 RID: 15574 RVA: 0x00021B27 File Offset: 0x0001FD27
+	// (set) Token: 0x06003CD7 RID: 15575 RVA: 0x00021B2F File Offset: 0x0001FD2F
 	public bool DontFireDeathRelay { get; set; }
 
-	// Token: 0x17001101 RID: 4353
-	// (get) Token: 0x06002C47 RID: 11335 RVA: 0x00095530 File Offset: 0x00093730
-	// (set) Token: 0x06002C48 RID: 11336 RVA: 0x00095538 File Offset: 0x00093738
+	// Token: 0x17001660 RID: 5728
+	// (get) Token: 0x06003CD8 RID: 15576 RVA: 0x00021B38 File Offset: 0x0001FD38
+	// (set) Token: 0x06003CD9 RID: 15577 RVA: 0x00021B40 File Offset: 0x0001FD40
 	public string RelicDamageTypeString { get; set; }
 
-	// Token: 0x06002C49 RID: 11337 RVA: 0x00095541 File Offset: 0x00093741
+	// Token: 0x06003CDA RID: 15578 RVA: 0x00021B49 File Offset: 0x0001FD49
 	private void OnEnable()
 	{
 		ProjectileManager.ActiveProjectileCount++;
 	}
 
-	// Token: 0x06002C4A RID: 11338 RVA: 0x00095550 File Offset: 0x00093750
+	// Token: 0x06003CDB RID: 15579 RVA: 0x000F6710 File Offset: 0x000F4910
 	private void OnDisable()
 	{
 		foreach (BaseProjectileLogic baseProjectileLogic in this.m_projectileLogicArray)
@@ -1037,7 +1037,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		this.StopChangeCollisionPointCoroutine();
 	}
 
-	// Token: 0x06002C4B RID: 11339 RVA: 0x000955BC File Offset: 0x000937BC
+	// Token: 0x06003CDC RID: 15580 RVA: 0x000F677C File Offset: 0x000F497C
 	private void Awake()
 	{
 		if (Application.isPlaying)
@@ -1054,7 +1054,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		this.m_detachOnDestruction = (this.m_hasAnimStates && !string.IsNullOrEmpty(this.m_outtroTriggerName));
 	}
 
-	// Token: 0x06002C4C RID: 11340 RVA: 0x0009561C File Offset: 0x0009381C
+	// Token: 0x06003CDD RID: 15581 RVA: 0x000F67DC File Offset: 0x000F49DC
 	private void Start()
 	{
 		this.m_player = PlayerManager.GetPlayerController();
@@ -1074,7 +1074,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		this.m_hbController.SetHitboxActiveState(HitboxType.Platform, hitboxActiveState4);
 	}
 
-	// Token: 0x06002C4D RID: 11341 RVA: 0x000956DC File Offset: 0x000938DC
+	// Token: 0x06003CDE RID: 15582 RVA: 0x000F689C File Offset: 0x000F4A9C
 	private void Initialize()
 	{
 		if (!this.m_ignoreTrailRendererYScaleMatching)
@@ -1122,7 +1122,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		this.ResetValues();
 	}
 
-	// Token: 0x06002C4E RID: 11342 RVA: 0x0009586C File Offset: 0x00093A6C
+	// Token: 0x06003CDF RID: 15583 RVA: 0x000F6A2C File Offset: 0x000F4C2C
 	private void InitializeCollisionSettings()
 	{
 		this.SetCanHitWall(this.CanHitWall);
@@ -1156,7 +1156,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C4F RID: 11343 RVA: 0x00095928 File Offset: 0x00093B28
+	// Token: 0x06003CE0 RID: 15584 RVA: 0x000F6AE8 File Offset: 0x000F4CE8
 	private void SetCanHitWall(bool value)
 	{
 		if (this.m_hbController != null)
@@ -1174,7 +1174,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C50 RID: 11344 RVA: 0x00095970 File Offset: 0x00093B70
+	// Token: 0x06003CE1 RID: 15585 RVA: 0x000F6B30 File Offset: 0x000F4D30
 	private void OnDestroy()
 	{
 		foreach (BaseProjectileLogic baseProjectileLogic in this.m_projectileLogicArray)
@@ -1186,7 +1186,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		this.OnCollisionRelay.RemoveListener(this.m_ricochetPlayer);
 	}
 
-	// Token: 0x06002C51 RID: 11345 RVA: 0x000959C0 File Offset: 0x00093BC0
+	// Token: 0x06003CE2 RID: 15586 RVA: 0x000F6B80 File Offset: 0x000F4D80
 	protected virtual void FixedUpdate()
 	{
 		if (!this.m_isDying)
@@ -1221,7 +1221,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C52 RID: 11346 RVA: 0x00095AC2 File Offset: 0x00093CC2
+	// Token: 0x06003CE3 RID: 15587 RVA: 0x00021B57 File Offset: 0x0001FD57
 	protected virtual bool UpdateDeathState()
 	{
 		if (this.m_flagToDestroy)
@@ -1233,7 +1233,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		return false;
 	}
 
-	// Token: 0x06002C53 RID: 11347 RVA: 0x00095AE2 File Offset: 0x00093CE2
+	// Token: 0x06003CE4 RID: 15588 RVA: 0x00021B77 File Offset: 0x0001FD77
 	public virtual void SetCorgiVelocity(Vector2 velocity)
 	{
 		if (this.m_corgiController)
@@ -1242,7 +1242,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C54 RID: 11348 RVA: 0x00095AFD File Offset: 0x00093CFD
+	// Token: 0x06003CE5 RID: 15589 RVA: 0x00021B92 File Offset: 0x0001FD92
 	public virtual void SetCorgiVelocity(float x, float y)
 	{
 		if (this.m_corgiController)
@@ -1252,7 +1252,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C55 RID: 11349 RVA: 0x00095B24 File Offset: 0x00093D24
+	// Token: 0x06003CE6 RID: 15590 RVA: 0x000F6C84 File Offset: 0x000F4E84
 	public virtual void UpdateMovement()
 	{
 		if (this.TurnSpeed > 0f && this.m_player)
@@ -1338,7 +1338,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C56 RID: 11350 RVA: 0x00095E3C File Offset: 0x0009403C
+	// Token: 0x06003CE7 RID: 15591 RVA: 0x000F6F9C File Offset: 0x000F519C
 	public virtual void Flip()
 	{
 		Vector3 localScale = base.transform.localScale;
@@ -1346,7 +1346,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		base.transform.localScale = localScale;
 	}
 
-	// Token: 0x06002C57 RID: 11351 RVA: 0x00095E70 File Offset: 0x00094070
+	// Token: 0x06003CE8 RID: 15592 RVA: 0x000F6FD0 File Offset: 0x000F51D0
 	public virtual void ResetValues()
 	{
 		this.Owner = null;
@@ -1403,7 +1403,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		this.ResetSpriteRendererColor();
 	}
 
-	// Token: 0x06002C58 RID: 11352 RVA: 0x0009605C File Offset: 0x0009425C
+	// Token: 0x06003CE9 RID: 15593 RVA: 0x000F71BC File Offset: 0x000F53BC
 	public void RemoveAllStatusEffects()
 	{
 		if (this.m_statusEffectTypeArray != null && this.m_statusEffectDurationArray != null)
@@ -1416,7 +1416,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C59 RID: 11353 RVA: 0x0009609C File Offset: 0x0009429C
+	// Token: 0x06003CEA RID: 15594 RVA: 0x000F71FC File Offset: 0x000F53FC
 	public void Spawn()
 	{
 		this.m_wasSpawned = true;
@@ -1439,7 +1439,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C5A RID: 11354 RVA: 0x00096135 File Offset: 0x00094335
+	// Token: 0x06003CEB RID: 15595 RVA: 0x00021BB9 File Offset: 0x0001FDB9
 	private IEnumerator SpawnProjectileCoroutine()
 	{
 		if (this.m_hasAnimStates && this.m_hasIntro)
@@ -1455,7 +1455,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		yield break;
 	}
 
-	// Token: 0x06002C5B RID: 11355 RVA: 0x00096144 File Offset: 0x00094344
+	// Token: 0x06003CEC RID: 15596 RVA: 0x00021BC8 File Offset: 0x0001FDC8
 	private IEnumerator ChangeCollisionPointCoroutine()
 	{
 		this.m_collisionPointChanged = true;
@@ -1466,7 +1466,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		yield break;
 	}
 
-	// Token: 0x06002C5C RID: 11356 RVA: 0x00096153 File Offset: 0x00094353
+	// Token: 0x06003CED RID: 15597 RVA: 0x00021BD7 File Offset: 0x0001FDD7
 	public void StopChangeCollisionPointCoroutine()
 	{
 		if (this.m_collisionPointChanged)
@@ -1480,7 +1480,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C5D RID: 11357 RVA: 0x00096180 File Offset: 0x00094380
+	// Token: 0x06003CEE RID: 15598 RVA: 0x000F7298 File Offset: 0x000F5498
 	protected virtual void Death(GameObject attacker)
 	{
 		this.m_isDying = true;
@@ -1507,7 +1507,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		base.StartCoroutine(this.DestroyProjectileCoroutine(true));
 	}
 
-	// Token: 0x06002C5E RID: 11358 RVA: 0x00096212 File Offset: 0x00094412
+	// Token: 0x06003CEF RID: 15599 RVA: 0x00021C03 File Offset: 0x0001FE03
 	private IEnumerator CanHitSelfCoroutine()
 	{
 		yield break;
@@ -1518,7 +1518,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		yield break;
 	}
 
-	// Token: 0x06002C5F RID: 11359 RVA: 0x00096221 File Offset: 0x00094421
+	// Token: 0x06003CF0 RID: 15600 RVA: 0x00021C12 File Offset: 0x0001FE12
 	protected virtual IEnumerator DestroyProjectileCoroutine(bool animate = false)
 	{
 		if (SaveManager.PlayerSaveData.GetRelic(RelicType.SpellsDamageCloud).Level > 0 && base.CompareTag("PlayerProjectile") && this.CastAbilityType == CastAbilityType.Spell)
@@ -1563,13 +1563,13 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		yield break;
 	}
 
-	// Token: 0x06002C60 RID: 11360 RVA: 0x00096237 File Offset: 0x00094437
+	// Token: 0x06003CF1 RID: 15601 RVA: 0x00021C28 File Offset: 0x0001FE28
 	public void WeaponOnStayHitResponse(IHitboxController otherHBController)
 	{
 		this.WeaponOnEnterHitResponse(otherHBController);
 	}
 
-	// Token: 0x06002C61 RID: 11361 RVA: 0x00096240 File Offset: 0x00094440
+	// Token: 0x06003CF2 RID: 15602 RVA: 0x000F732C File Offset: 0x000F552C
 	public virtual void WeaponOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (CollisionType_RL.IsProjectile(otherHBController.RootGameObject))
@@ -1615,7 +1615,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		this.PerformHitEffectCheck(otherHBController);
 	}
 
-	// Token: 0x06002C62 RID: 11362 RVA: 0x0009636C File Offset: 0x0009456C
+	// Token: 0x06003CF3 RID: 15603 RVA: 0x000F7458 File Offset: 0x000F5658
 	protected void RicochetPlayer(Projectile_RL projectile, GameObject colliderObj)
 	{
 		if (!colliderObj.CompareTag("Enemy") && !colliderObj.CompareTag("Platform"))
@@ -1656,13 +1656,13 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C63 RID: 11363 RVA: 0x000964D9 File Offset: 0x000946D9
+	// Token: 0x06003CF4 RID: 15604 RVA: 0x00021C31 File Offset: 0x0001FE31
 	public void TerrainOnStayHitResponse(IHitboxController otherHBController)
 	{
 		this.TerrainOnEnterHitResponse(otherHBController);
 	}
 
-	// Token: 0x06002C64 RID: 11364 RVA: 0x000964E4 File Offset: 0x000946E4
+	// Token: 0x06003CF5 RID: 15605 RVA: 0x000F75C8 File Offset: 0x000F57C8
 	public void TerrainOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		if (!this.CanHitWall)
@@ -1687,13 +1687,13 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		this.PerformHitEffectCheck(otherHBController);
 	}
 
-	// Token: 0x06002C65 RID: 11365 RVA: 0x0009656C File Offset: 0x0009476C
+	// Token: 0x06003CF6 RID: 15606 RVA: 0x00021C3A File Offset: 0x0001FE3A
 	public void BodyOnStayHitResponse(IHitboxController otherHBController)
 	{
 		this.BodyOnEnterHitResponse(otherHBController);
 	}
 
-	// Token: 0x06002C66 RID: 11366 RVA: 0x00096578 File Offset: 0x00094778
+	// Token: 0x06003CF7 RID: 15607 RVA: 0x000F7650 File Offset: 0x000F5850
 	public void BodyOnEnterHitResponse(IHitboxController otherHBController)
 	{
 		Projectile_RL projectile_RL = null;
@@ -1721,7 +1721,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C67 RID: 11367 RVA: 0x00096628 File Offset: 0x00094828
+	// Token: 0x06003CF8 RID: 15608 RVA: 0x000F7700 File Offset: 0x000F5900
 	public void PerformHitEffectCheck(IHitboxController otherHBController)
 	{
 		Vector3 vector = this.Midpoint + this.CollisionPointOffset;
@@ -1748,7 +1748,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C68 RID: 11368 RVA: 0x000966EC File Offset: 0x000948EC
+	// Token: 0x06003CF9 RID: 15609 RVA: 0x000F77C4 File Offset: 0x000F59C4
 	public void FlagForDestruction(GameObject collidedObj = null)
 	{
 		if (base.gameObject.activeSelf)
@@ -1762,7 +1762,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C69 RID: 11369 RVA: 0x00096764 File Offset: 0x00094964
+	// Token: 0x06003CFA RID: 15610 RVA: 0x000F783C File Offset: 0x000F5A3C
 	public void AttachStatusEffect(StatusEffectType type, float duration = 0f)
 	{
 		if (this.m_statusEffectTypeArray == null)
@@ -1801,7 +1801,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}));
 	}
 
-	// Token: 0x06002C6A RID: 11370 RVA: 0x00096844 File Offset: 0x00094A44
+	// Token: 0x06003CFB RID: 15611 RVA: 0x000F791C File Offset: 0x000F5B1C
 	public void RemoveStatusEffect(StatusEffectType statusEffect)
 	{
 		if (this.m_statusEffectTypeArray == null)
@@ -1816,7 +1816,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C6B RID: 11371 RVA: 0x00096884 File Offset: 0x00094A84
+	// Token: 0x06003CFC RID: 15612 RVA: 0x000F795C File Offset: 0x000F5B5C
 	public void ChangeSpriteRendererColor(Color newColor)
 	{
 		if (!this.m_checkedForRenderer)
@@ -1834,7 +1834,7 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C6C RID: 11372 RVA: 0x000968E3 File Offset: 0x00094AE3
+	// Token: 0x06003CFD RID: 15613 RVA: 0x00021C43 File Offset: 0x0001FE43
 	public void ResetSpriteRendererColor()
 	{
 		if (this.m_spriteRenderer)
@@ -1843,410 +1843,410 @@ public class Projectile_RL : MonoBehaviour, IDamageObj, ITerrainOnEnterHitRespon
 		}
 	}
 
-	// Token: 0x06002C6E RID: 11374 RVA: 0x000969D1 File Offset: 0x00094BD1
+	// Token: 0x06003CFF RID: 15615 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IDamageObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x06002C6F RID: 11375 RVA: 0x000969D9 File Offset: 0x00094BD9
+	// Token: 0x06003D00 RID: 15616 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x06002C70 RID: 11376 RVA: 0x000969E1 File Offset: 0x00094BE1
+	// Token: 0x06003D01 RID: 15617 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IEffectVelocity.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x06002C71 RID: 11377 RVA: 0x000969E9 File Offset: 0x00094BE9
+	// Token: 0x06003D02 RID: 15618 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IGenericPoolObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x06002C72 RID: 11378 RVA: 0x000969F1 File Offset: 0x00094BF1
+	// Token: 0x06003D03 RID: 15619 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IPreOnDisable.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x06002C73 RID: 11379 RVA: 0x000969F9 File Offset: 0x00094BF9
+	// Token: 0x06003D04 RID: 15620 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IOffscreenObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x04002389 RID: 9097
+	// Token: 0x04002FD6 RID: 12246
 	private const int REPEAT_HIT_ARRAY_SIZE = 5;
 
-	// Token: 0x0400238A RID: 9098
+	// Token: 0x04002FD7 RID: 12247
 	[Header("General Settings")]
 	[Tooltip("The Pivot GO on the projectile. Once set, this usually doesn't need to be changed.")]
 	[SerializeField]
 	protected GameObject m_pivot;
 
-	// Token: 0x0400238B RID: 9099
+	// Token: 0x04002FD8 RID: 12248
 	[Tooltip("The XML data for the projectile.")]
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	protected ProjectileData m_projectileData;
 
-	// Token: 0x0400238C RID: 9100
+	// Token: 0x04002FD9 RID: 12249
 	[Tooltip("Determines whether the projectile grows or shrinks based off the Owner's scale. NOTE: If the Owner is a BaseCharacterController, it scales off the BaseScaleToOffsetWith.")]
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	private bool m_scaleWithOwner;
 
-	// Token: 0x0400238D RID: 9101
+	// Token: 0x04002FDA RID: 12250
 	[Tooltip("Parents the Owner to the projectile, so that the projectile follows wherever the Owner goes. If the Owner flips (scale.x == -1) so does the projectile. NOTE: BaseAbility can override the flip by changing its 'Projectile Match Facing' property.")]
 	[SerializeField]
 	private bool m_snapToOwner;
 
-	// Token: 0x0400238E RID: 9102
+	// Token: 0x04002FDB RID: 12251
 	[Tooltip("Determines if the projectile gets destroyed when the player exits the room.")]
 	[SerializeField]
 	private bool m_destroyOnRoomChange = true;
 
-	// Token: 0x0400238F RID: 9103
+	// Token: 0x04002FDC RID: 12252
 	[Header("Visual Settings")]
 	[Tooltip("Determines whether the Visual pivot of the projectile follows the heading it's going in (i.e. does the object visually rotate to match the direction it's going in). NOTE: This field overrides Visual Rotation Speed.")]
 	[SerializeField]
 	private bool m_pivotFollowsOrientation;
 
-	// Token: 0x04002390 RID: 9104
+	// Token: 0x04002FDD RID: 12253
 	[Tooltip("How quickly (in degrees per second) the projectile visually spins in the air. Only the Visual pivot spins, so the projectile does not actually spin. Useful for visuals like a spinning bone projectile. NOTE: If you want to rotate the projectile, use the projectile's Rotation transform.")]
 	[SerializeField]
 	[ConditionalHide("m_pivotFollowsOrientation", true, true)]
 	private float m_visualRotationSpeed;
 
-	// Token: 0x04002391 RID: 9105
+	// Token: 0x04002FDE RID: 12254
 	[Tooltip("We use velocity to determine how effects should occur when two objects interact (for ex. walking past curtains). When a projectile is fired, it uses its own velocity for the effect.  This field uses the Owner's velocity instead.")]
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	private bool m_useOwnerVelocityForEffects;
 
-	// Token: 0x04002392 RID: 9106
+	// Token: 0x04002FDF RID: 12255
 	[Tooltip("Determines what type of strike effect should play when the projectile hits something.")]
 	[SerializeField]
 	private StrikeType m_strikeType = StrikeType.Blunt;
 
-	// Token: 0x04002393 RID: 9107
+	// Token: 0x04002FE0 RID: 12256
 	[Tooltip("Determines if Offscreen warnings appear for this projectile.")]
 	[SerializeField]
 	private bool m_disableOffscreenWarnings;
 
-	// Token: 0x04002394 RID: 9108
+	// Token: 0x04002FE1 RID: 12257
 	[Header("Animation Settings")]
 	[SerializeField]
 	[Tooltip("Setting this to true means the projectile will not be collidable until its intro has played")]
 	private bool m_hasAnimStates;
 
-	// Token: 0x04002395 RID: 9109
+	// Token: 0x04002FE2 RID: 12258
 	[SerializeField]
 	[ConditionalHide("m_hasAnimStates", true)]
 	private bool m_hasIntro;
 
-	// Token: 0x04002396 RID: 9110
+	// Token: 0x04002FE3 RID: 12259
 	[SerializeField]
 	[ConditionalHide("m_hasAnimStates", true)]
 	private bool m_playOuttroOnTimeoutOnly;
 
-	// Token: 0x04002397 RID: 9111
+	// Token: 0x04002FE4 RID: 12260
 	[SerializeField]
 	[ConditionalHide("m_hasAnimStates", true)]
 	private string m_outtroTriggerName;
 
-	// Token: 0x04002398 RID: 9112
+	// Token: 0x04002FE5 RID: 12261
 	[SerializeField]
 	[ConditionalHide("m_hasAnimStates", true)]
 	private int m_animLayer;
 
-	// Token: 0x04002399 RID: 9113
+	// Token: 0x04002FE6 RID: 12262
 	[SerializeField]
 	[Tooltip("Determines whether the projectile keeps moving during its death anim when dashed through")]
 	private bool m_keepMovingWhenDashedThrough;
 
-	// Token: 0x0400239A RID: 9114
+	// Token: 0x04002FE7 RID: 12263
 	[Header("Collision Settings")]
 	[Tooltip("Does this projectile deal dot damage. I.e. does it deal damage but not trigger invincibility.")]
 	[SerializeField]
 	private bool m_isDotDamage;
 
-	// Token: 0x0400239B RID: 9115
+	// Token: 0x04002FE8 RID: 12264
 	[Tooltip("Does this projectile deal hazard damage. This will override the projectile data's strength with Hazard_EV.GetDamageAmount().")]
 	[SerializeField]
 	private bool m_dealsHazardDamage;
 
-	// Token: 0x0400239C RID: 9116
+	// Token: 0x04002FE9 RID: 12265
 	[Tooltip("Used to determine whether we should use the Owner or the projectile as the point of collision. Mostly used for positioning the strike effect and knockback. For ex. if an enemy is knocked back, does he push away from the projectile or the Owner. NOTE: SnapToOwner might be able to replace this field entirely.")]
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	private bool m_useOwnerCollisionPoint = true;
 
-	// Token: 0x0400239D RID: 9117
+	// Token: 0x04002FEA RID: 12266
 	[Tooltip("Determines whether a projectile can hit its owner or not. 99.9% of the time this is false.")]
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	private bool m_canHitOwner;
 
-	// Token: 0x0400239E RID: 9118
+	// Token: 0x04002FEB RID: 12267
 	[Tooltip("Determines if the projectile can hit breakables.")]
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	private bool m_canHitBreakables;
 
-	// Token: 0x0400239F RID: 9119
+	// Token: 0x04002FEC RID: 12268
 	[Tooltip("Determines if the projectile only hits flimsy breakables.")]
 	[SerializeField]
 	[ConditionalHide("m_canHitBreakables", true)]
 	[ReadOnlyOnPlay]
 	private bool m_hitsFlimsyBreakablesOnly;
 
-	// Token: 0x040023A0 RID: 9120
+	// Token: 0x04002FED RID: 12269
 	[Tooltip("Determines if the projectile is allowed to collide with walls.")]
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	private bool m_canHitWall;
 
-	// Token: 0x040023A1 RID: 9121
+	// Token: 0x04002FEE RID: 12270
 	[Tooltip("Determines if the projectile is destroyed when colliding with walls.")]
 	[SerializeField]
 	[ConditionalHide("m_canHitWall", true)]
 	private bool m_dieOnWallCollision;
 
-	// Token: 0x040023A2 RID: 9122
+	// Token: 0x04002FEF RID: 12271
 	[Tooltip("Determines if the projectile is allowed to collide with walls.")]
 	[SerializeField]
 	[ConditionalHide("m_dieOnWallCollision", true)]
 	private bool m_dieOnRoomBoundsCollision;
 
-	// Token: 0x040023A3 RID: 9123
+	// Token: 0x04002FF0 RID: 12272
 	[Tooltip("Determines if the projectile is destroyed when colliding with characters.  This includes breakables.")]
 	[SerializeField]
 	[ReadOnlyOnPlay]
 	private bool m_dieOnCharacterCollision;
 
-	// Token: 0x040023A4 RID: 9124
+	// Token: 0x04002FF1 RID: 12273
 	[Header("Projectile-on-Projectile Collisions")]
 	[Tooltip("The type of projectile I am. This must match the CanCollideWithFlag of the oncoming projectile for a collision to occur.")]
 	[SerializeField]
 	private ProjectileCollisionFlag m_collisionFlag;
 
-	// Token: 0x040023A5 RID: 9125
+	// Token: 0x04002FF2 RID: 12274
 	[Tooltip("Which projectiles I can kill. This must match the CollisionFlag of the oncoming projectile for a collision to occur. Right now only player projectiles can kill other projectiles.")]
 	[SerializeField]
 	private ProjectileCollisionFlag m_canCollideWithFlag;
 
-	// Token: 0x040023A6 RID: 9126
+	// Token: 0x04002FF3 RID: 12275
 	[Tooltip("Determines if the on-hit CD logic has a delay. Only applies to AxeSpinner")]
 	[SerializeField]
 	private bool m_hasCDReductionDelay;
 
-	// Token: 0x040023A7 RID: 9127
+	// Token: 0x04002FF4 RID: 12276
 	[Header("Physics Settings")]
 	[Tooltip("Determines if the projectile falls due to gravity or not.")]
 	[SerializeField]
 	private bool m_isWeighted;
 
-	// Token: 0x040023A8 RID: 9128
+	// Token: 0x04002FF5 RID: 12277
 	[Tooltip("The amount of time before gravity kicks in for a projectile. NOTE: This setting only works if 'Is Weighted' == true.")]
 	[SerializeField]
 	[ConditionalHide("m_isWeighted", true)]
 	private float m_gravityKickInDelay;
 
-	// Token: 0x040023A9 RID: 9129
+	// Token: 0x04002FF6 RID: 12278
 	[Tooltip("A modifier on how much gravity pushes down on the projectile when it is going up. NOTE: This setting only works if 'Is Weighted' == true.")]
 	[SerializeField]
 	[ConditionalHide("m_isWeighted", true)]
 	private float m_ascentMultiplierOverride = 1f;
 
-	// Token: 0x040023AA RID: 9130
+	// Token: 0x04002FF7 RID: 12279
 	[Tooltip("A modifier on how much gravity pushes down on the projectile when it is going down. NOTE: This setting only works if 'Is Weighted' == true.")]
 	[SerializeField]
 	[ConditionalHide("m_isWeighted", true)]
 	private float m_fallMultiplierOverride = 1f;
 
-	// Token: 0x040023AB RID: 9131
+	// Token: 0x04002FF8 RID: 12280
 	[Tooltip("Determines whether the projectile should keep sliding when it hits the ground or if it should stop. NOTE: This only works if the projectile has a CorgiController attached to control its physics (necessary for projectiles that 'bounce' off walls) and 'Is Weighted' == true.")]
 	[SerializeField]
 	[ConditionalHide("m_isWeighted", true)]
 	private bool m_disableFriction;
 
-	// Token: 0x040023AC RID: 9132
+	// Token: 0x04002FF9 RID: 12281
 	[Header("Ricochet Settings")]
 	[Tooltip("Certain enemies knock back the player when the Player's projectile hits the enemy. Set this to false to disable the ricochet logic (For ex. the bow's arrow projectile). NOTE: Affects Player only.")]
 	[SerializeField]
 	private bool m_canBeRicocheted;
 
-	// Token: 0x040023AD RID: 9133
+	// Token: 0x04002FFA RID: 12282
 	[Tooltip("If this is on, the projectile will knock back the Player regardless of whether the enemy is set to ricochet the Player or not. Useful for a trait. NOTE: Only works if 'Can Be Ricocheted' == true and affects Player only.")]
 	[SerializeField]
 	[ConditionalHide("m_canBeRicocheted", true)]
 	private bool m_ricochetsOwnerWhenHits;
 
-	// Token: 0x040023AE RID: 9134
+	// Token: 0x04002FFB RID: 12283
 	[Tooltip("The knockback distance of the ricochet.")]
 	[SerializeField]
 	[ConditionalHide("m_canBeRicocheted", true)]
 	private Vector2 m_ricochetKnockbackDistance = Player_EV.PLAYER_BASE_KNOCKBACK_DISTANCE;
 
-	// Token: 0x040023AF RID: 9135
+	// Token: 0x04002FFC RID: 12284
 	[Tooltip("The control lockout duration of the ricochet.")]
 	[SerializeField]
 	[ConditionalHide("m_canBeRicocheted", true)]
 	private float m_ricochetLockoutDuration = 0.45f;
 
-	// Token: 0x040023B0 RID: 9136
+	// Token: 0x04002FFD RID: 12285
 	[Header("Misc Settings - Programmers only")]
 	[Tooltip("This is purely for artists.  Do not touch.")]
 	[SerializeField]
 	private bool m_ignoreTrailRendererYScaleMatching;
 
-	// Token: 0x040023B1 RID: 9137
+	// Token: 0x04002FFE RID: 12286
 	protected float m_lifeSpanTimer;
 
-	// Token: 0x040023B2 RID: 9138
+	// Token: 0x04002FFF RID: 12287
 	protected GameObject m_owner;
 
-	// Token: 0x040023B3 RID: 9139
+	// Token: 0x04003000 RID: 12288
 	protected BaseCharacterController m_ownerController;
 
-	// Token: 0x040023B4 RID: 9140
+	// Token: 0x04003001 RID: 12289
 	protected IHitboxController m_hbController;
 
-	// Token: 0x040023B5 RID: 9141
+	// Token: 0x04003002 RID: 12290
 	private Animator m_animator;
 
-	// Token: 0x040023B6 RID: 9142
+	// Token: 0x04003003 RID: 12291
 	protected GameObject m_collidedObj;
 
-	// Token: 0x040023B7 RID: 9143
+	// Token: 0x04003004 RID: 12292
 	private PlayerController m_player;
 
-	// Token: 0x040023B8 RID: 9144
+	// Token: 0x04003005 RID: 12293
 	private CorgiController_RL m_corgiController;
 
-	// Token: 0x040023B9 RID: 9145
+	// Token: 0x04003006 RID: 12294
 	private SpriteRenderer m_spriteRenderer;
 
-	// Token: 0x040023BA RID: 9146
+	// Token: 0x04003007 RID: 12295
 	private Color m_startingColor;
 
-	// Token: 0x040023BB RID: 9147
+	// Token: 0x04003008 RID: 12296
 	private bool m_wasSpawned;
 
-	// Token: 0x040023BC RID: 9148
+	// Token: 0x04003009 RID: 12297
 	protected Vector2 m_movement;
 
-	// Token: 0x040023BD RID: 9149
+	// Token: 0x0400300A RID: 12298
 	protected Vector2 m_heading = new Vector2(1f, 0f);
 
-	// Token: 0x040023BE RID: 9150
+	// Token: 0x0400300B RID: 12299
 	protected float m_orientation;
 
-	// Token: 0x040023BF RID: 9151
+	// Token: 0x0400300C RID: 12300
 	protected Vector2 m_acceleration;
 
-	// Token: 0x040023C0 RID: 9152
+	// Token: 0x0400300D RID: 12301
 	protected float m_gravityKickInTimer;
 
-	// Token: 0x040023C1 RID: 9153
+	// Token: 0x0400300E RID: 12302
 	private Vector3 m_initialScale;
 
-	// Token: 0x040023C2 RID: 9154
+	// Token: 0x0400300F RID: 12303
 	private Vector3 m_initialRotation;
 
-	// Token: 0x040023C3 RID: 9155
+	// Token: 0x04003010 RID: 12304
 	private float m_initialRotationSpeed;
 
-	// Token: 0x040023C4 RID: 9156
+	// Token: 0x04003011 RID: 12305
 	private bool m_flagToDestroy;
 
-	// Token: 0x040023C5 RID: 9157
+	// Token: 0x04003012 RID: 12306
 	private bool m_ignoreDamageScale;
 
-	// Token: 0x040023C6 RID: 9158
+	// Token: 0x04003013 RID: 12307
 	private bool m_isDying;
 
-	// Token: 0x040023C7 RID: 9159
+	// Token: 0x04003014 RID: 12308
 	private bool m_hasVelocityParams;
 
-	// Token: 0x040023C8 RID: 9160
+	// Token: 0x04003015 RID: 12309
 	private bool m_collisionPointChanged;
 
-	// Token: 0x040023C9 RID: 9161
+	// Token: 0x04003016 RID: 12310
 	private Action<Projectile_RL, GameObject> m_ricochetPlayer;
 
-	// Token: 0x040023CA RID: 9162
+	// Token: 0x04003017 RID: 12311
 	private bool m_detachOnDestruction;
 
-	// Token: 0x040023CB RID: 9163
+	// Token: 0x04003018 RID: 12312
 	private BaseProjectileLogic[] m_projectileLogicArray;
 
-	// Token: 0x040023CC RID: 9164
+	// Token: 0x04003019 RID: 12313
 	private StatusEffectType[] m_statusEffectTypeArray;
 
-	// Token: 0x040023CD RID: 9165
+	// Token: 0x0400301A RID: 12314
 	private float[] m_statusEffectDurationArray;
 
-	// Token: 0x040023CE RID: 9166
+	// Token: 0x0400301B RID: 12315
 	private VoidDissolveComponent m_voidDissolve;
 
-	// Token: 0x040023CF RID: 9167
+	// Token: 0x0400301C RID: 12316
 	protected Projectile_RL.ProjectileDestructionType m_destructionType;
 
-	// Token: 0x040023D0 RID: 9168
+	// Token: 0x0400301D RID: 12317
 	private bool m_hasSearchedForAudioEventEmitter;
 
-	// Token: 0x040023D1 RID: 9169
+	// Token: 0x0400301E RID: 12318
 	private ProjectileEventEmitter m_audioEventEmitter;
 
-	// Token: 0x040023D9 RID: 9177
+	// Token: 0x04003026 RID: 12326
 	protected Relay<Projectile_RL, GameObject> m_onCollisionRelay = new Relay<Projectile_RL, GameObject>();
 
-	// Token: 0x040023DA RID: 9178
+	// Token: 0x04003027 RID: 12327
 	protected Relay<Projectile_RL, GameObject> m_onSpawnRelay = new Relay<Projectile_RL, GameObject>();
 
-	// Token: 0x040023DB RID: 9179
+	// Token: 0x04003028 RID: 12328
 	protected Relay<Projectile_RL, GameObject> m_onDeathRelay = new Relay<Projectile_RL, GameObject>();
 
-	// Token: 0x040023DC RID: 9180
+	// Token: 0x04003029 RID: 12329
 	protected Relay<GameObject> m_onDeathEffectTriggerRelay = new Relay<GameObject>();
 
-	// Token: 0x040023DD RID: 9181
+	// Token: 0x0400302A RID: 12330
 	protected Relay<GameObject> m_onSpawnEffectTriggerRelay = new Relay<GameObject>();
 
-	// Token: 0x040023DE RID: 9182
+	// Token: 0x0400302B RID: 12331
 	protected Relay<GameObject> m_onTimeoutEffectTriggerRelay = new Relay<GameObject>();
 
-	// Token: 0x040023DF RID: 9183
+	// Token: 0x0400302C RID: 12332
 	private Relay<IPreOnDisable> m_preOnDisableRelay = new Relay<IPreOnDisable>();
 
-	// Token: 0x040023EE RID: 9198
+	// Token: 0x0400303B RID: 12347
 	private WaitForFixedUpdate m_fixedUpdateYield = new WaitForFixedUpdate();
 
-	// Token: 0x040023EF RID: 9199
+	// Token: 0x0400303C RID: 12348
 	private Coroutine m_changeCollPointCoroutine;
 
-	// Token: 0x040023F0 RID: 9200
+	// Token: 0x0400303D RID: 12349
 	private WaitRL_Yield m_canHitOwnerWaitYield;
 
-	// Token: 0x040023F1 RID: 9201
+	// Token: 0x0400303E RID: 12350
 	private bool m_checkedForRenderer;
 
-	// Token: 0x02000C8B RID: 3211
+	// Token: 0x020007C4 RID: 1988
 	protected enum ProjectileDestructionType
 	{
-		// Token: 0x040050E2 RID: 20706
+		// Token: 0x04003040 RID: 12352
 		None,
-		// Token: 0x040050E3 RID: 20707
+		// Token: 0x04003041 RID: 12353
 		TerrainCollision,
-		// Token: 0x040050E4 RID: 20708
+		// Token: 0x04003042 RID: 12354
 		CharacterCollision,
-		// Token: 0x040050E5 RID: 20709
+		// Token: 0x04003043 RID: 12355
 		VoidDashCollision
 	}
 }

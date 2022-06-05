@@ -2,10 +2,10 @@
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x02000180 RID: 384
+// Token: 0x020002C7 RID: 711
 public class CreatePlatform_Ability : GenericSpell_Ability
 {
-	// Token: 0x06000D95 RID: 3477 RVA: 0x0002989F File Offset: 0x00027A9F
+	// Token: 0x0600150A RID: 5386 RVA: 0x0000A808 File Offset: 0x00008A08
 	protected override void Awake()
 	{
 		base.Awake();
@@ -13,19 +13,19 @@ public class CreatePlatform_Ability : GenericSpell_Ability
 		this.m_resumeCooldown = new Action<Projectile_RL, GameObject>(this.ResumeCooldown);
 	}
 
-	// Token: 0x06000D96 RID: 3478 RVA: 0x000298CB File Offset: 0x00027ACB
+	// Token: 0x0600150B RID: 5387 RVA: 0x0000A834 File Offset: 0x00008A34
 	private void OnEnable()
 	{
 		Messenger<GameMessenger, GameEvent>.AddListener(GameEvent.PlayerEnterRoom, this.m_resumeCooldownIfPlayerExitsRoom);
 	}
 
-	// Token: 0x06000D97 RID: 3479 RVA: 0x000298D9 File Offset: 0x00027AD9
+	// Token: 0x0600150C RID: 5388 RVA: 0x0000A842 File Offset: 0x00008A42
 	private void OnDisable()
 	{
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.PlayerEnterRoom, this.m_resumeCooldownIfPlayerExitsRoom);
 	}
 
-	// Token: 0x06000D98 RID: 3480 RVA: 0x000298E8 File Offset: 0x00027AE8
+	// Token: 0x0600150D RID: 5389 RVA: 0x00088BAC File Offset: 0x00086DAC
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
@@ -40,21 +40,21 @@ public class CreatePlatform_Ability : GenericSpell_Ability
 		}
 	}
 
-	// Token: 0x06000D99 RID: 3481 RVA: 0x0002996F File Offset: 0x00027B6F
+	// Token: 0x0600150E RID: 5390 RVA: 0x0000A7CE File Offset: 0x000089CE
 	private void ResumeCooldownIfPlayerExitsRoom(object sender, EventArgs args)
 	{
 		base.DecreaseCooldownOverTime = true;
 		base.DisplayPausedAbilityCooldown = false;
 	}
 
-	// Token: 0x06000D9A RID: 3482 RVA: 0x0002997F File Offset: 0x00027B7F
+	// Token: 0x0600150F RID: 5391 RVA: 0x0000A7CE File Offset: 0x000089CE
 	private void ResumeCooldown(Projectile_RL proj, GameObject obj)
 	{
 		base.DecreaseCooldownOverTime = true;
 		base.DisplayPausedAbilityCooldown = false;
 	}
 
-	// Token: 0x06000D9B RID: 3483 RVA: 0x0002998F File Offset: 0x00027B8F
+	// Token: 0x06001510 RID: 5392 RVA: 0x0000A850 File Offset: 0x00008A50
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		base.StopAbility(abilityInterrupted);
@@ -64,9 +64,9 @@ public class CreatePlatform_Ability : GenericSpell_Ability
 		}
 	}
 
-	// Token: 0x040010E3 RID: 4323
+	// Token: 0x04001652 RID: 5714
 	private Action<MonoBehaviour, EventArgs> m_resumeCooldownIfPlayerExitsRoom;
 
-	// Token: 0x040010E4 RID: 4324
+	// Token: 0x04001653 RID: 5715
 	private Action<Projectile_RL, GameObject> m_resumeCooldown;
 }

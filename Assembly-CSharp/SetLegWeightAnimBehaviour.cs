@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020001B8 RID: 440
+// Token: 0x02000327 RID: 807
 public class SetLegWeightAnimBehaviour : StateMachineBehaviour
 {
-	// Token: 0x06001141 RID: 4417 RVA: 0x00032050 File Offset: 0x00030250
+	// Token: 0x0600198A RID: 6538 RVA: 0x00090374 File Offset: 0x0008E574
 	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		if (PlayerManager.IsInstantiated)
@@ -17,7 +17,7 @@ public class SetLegWeightAnimBehaviour : StateMachineBehaviour
 		}
 	}
 
-	// Token: 0x06001142 RID: 4418 RVA: 0x00032084 File Offset: 0x00030284
+	// Token: 0x0600198B RID: 6539 RVA: 0x000903A8 File Offset: 0x0008E5A8
 	private void UpdateLegLayerWeight(PlayerController playerController, Animator animator)
 	{
 		SetLegWeightAnimBehaviour.m_isGrounded = playerController.IsGrounded;
@@ -44,7 +44,7 @@ public class SetLegWeightAnimBehaviour : StateMachineBehaviour
 		}
 	}
 
-	// Token: 0x06001143 RID: 4419 RVA: 0x00032104 File Offset: 0x00030304
+	// Token: 0x0600198C RID: 6540 RVA: 0x00090428 File Offset: 0x0008E628
 	public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		if (PlayerManager.IsInstantiated)
@@ -62,25 +62,25 @@ public class SetLegWeightAnimBehaviour : StateMachineBehaviour
 		}
 	}
 
-	// Token: 0x0400122F RID: 4655
+	// Token: 0x04001838 RID: 6200
 	[SerializeField]
 	private float m_movingOnGroundLegWeight;
 
-	// Token: 0x04001230 RID: 4656
+	// Token: 0x04001839 RID: 6201
 	[SerializeField]
 	private float m_movingInAirLegWeight;
 
-	// Token: 0x04001231 RID: 4657
+	// Token: 0x0400183A RID: 6202
 	[SerializeField]
 	private float m_stationaryOnGroundLegWeight = 1f;
 
-	// Token: 0x04001232 RID: 4658
+	// Token: 0x0400183B RID: 6203
 	[SerializeField]
 	private float m_stationaryInAirLegWeight;
 
-	// Token: 0x04001233 RID: 4659
+	// Token: 0x0400183C RID: 6204
 	private static bool m_isMoving;
 
-	// Token: 0x04001234 RID: 4660
+	// Token: 0x0400183D RID: 6205
 	private static bool m_isGrounded;
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000782 RID: 1922
+// Token: 0x02000C43 RID: 3139
 public class SummonRuleType_RL
 {
-	// Token: 0x06004158 RID: 16728 RVA: 0x000E8838 File Offset: 0x000E6A38
+	// Token: 0x06005AD5 RID: 23253 RVA: 0x00157CC8 File Offset: 0x00155EC8
 	public static BaseSummonRule GetSummonRule(SummonRuleType ruleType)
 	{
 		BaseSummonRule result = null;

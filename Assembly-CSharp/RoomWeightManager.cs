@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000681 RID: 1665
+// Token: 0x02000B01 RID: 2817
 [CreateAssetMenu(menuName = "Custom/Rogue Legacy 2/Room Weight Manager")]
 public class RoomWeightManager : ScriptableObject
 {
-	// Token: 0x170014F0 RID: 5360
-	// (get) Token: 0x06003C18 RID: 15384 RVA: 0x000D0185 File Offset: 0x000CE385
-	// (set) Token: 0x06003C19 RID: 15385 RVA: 0x000D018D File Offset: 0x000CE38D
+	// Token: 0x17001CAE RID: 7342
+	// (get) Token: 0x06005477 RID: 21623 RVA: 0x0002DC3C File Offset: 0x0002BE3C
+	// (set) Token: 0x06005478 RID: 21624 RVA: 0x0002DC44 File Offset: 0x0002BE44
 	public List<RoomWeightEntry> Entries
 	{
 		get
@@ -21,8 +21,8 @@ public class RoomWeightManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x170014F1 RID: 5361
-	// (get) Token: 0x06003C1A RID: 15386 RVA: 0x000D0196 File Offset: 0x000CE396
+	// Token: 0x17001CAF RID: 7343
+	// (get) Token: 0x06005479 RID: 21625 RVA: 0x0002DC4D File Offset: 0x0002BE4D
 	private static RoomWeightManager Instance
 	{
 		get
@@ -35,7 +35,7 @@ public class RoomWeightManager : ScriptableObject
 		}
 	}
 
-	// Token: 0x06003C1B RID: 15387 RVA: 0x000D01C0 File Offset: 0x000CE3C0
+	// Token: 0x0600547A RID: 21626 RVA: 0x00140010 File Offset: 0x0013E210
 	public static int GetWeight(RoomID roomID, bool isMirrored)
 	{
 		if (!RoomWeightManager.Instance.m_treatMirroredAsDistinct)
@@ -64,24 +64,24 @@ public class RoomWeightManager : ScriptableObject
 		return BiomeCreation_EV.DEFAULT_ROOM_RNG_WEIGHT;
 	}
 
-	// Token: 0x04002D4E RID: 11598
+	// Token: 0x04003EF7 RID: 16119
 	[SerializeField]
 	private List<RoomWeightEntry> m_entries;
 
-	// Token: 0x04002D4F RID: 11599
+	// Token: 0x04003EF8 RID: 16120
 	[SerializeField]
 	private bool m_isEnabled = true;
 
-	// Token: 0x04002D50 RID: 11600
+	// Token: 0x04003EF9 RID: 16121
 	[SerializeField]
 	private bool m_treatMirroredAsDistinct = true;
 
-	// Token: 0x04002D51 RID: 11601
+	// Token: 0x04003EFA RID: 16122
 	private static Dictionary<int, int> m_roomRNGWeightTable;
 
-	// Token: 0x04002D52 RID: 11602
+	// Token: 0x04003EFB RID: 16123
 	private static RoomWeightManager m_instance;
 
-	// Token: 0x04002D53 RID: 11603
+	// Token: 0x04003EFC RID: 16124
 	private const string RESOURCES_PATH = "Scriptable Objects/RoomWeightManager";
 }

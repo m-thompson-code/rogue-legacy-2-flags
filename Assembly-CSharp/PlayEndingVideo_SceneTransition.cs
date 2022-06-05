@@ -6,11 +6,11 @@ using SceneManagement_RL;
 using UnityEngine;
 using UnityEngine.Video;
 
-// Token: 0x020002E2 RID: 738
+// Token: 0x020004E1 RID: 1249
 public class PlayEndingVideo_SceneTransition : Transition_V2, ISceneLoadingTransition, ITransition
 {
-	// Token: 0x17000CD9 RID: 3289
-	// (get) Token: 0x06001D55 RID: 7509 RVA: 0x000609A2 File Offset: 0x0005EBA2
+	// Token: 0x17001074 RID: 4212
+	// (get) Token: 0x06002858 RID: 10328 RVA: 0x00016A64 File Offset: 0x00014C64
 	public override TransitionID ID
 	{
 		get
@@ -19,7 +19,7 @@ public class PlayEndingVideo_SceneTransition : Transition_V2, ISceneLoadingTrans
 		}
 	}
 
-	// Token: 0x06001D56 RID: 7510 RVA: 0x000609A8 File Offset: 0x0005EBA8
+	// Token: 0x06002859 RID: 10329 RVA: 0x000BDE10 File Offset: 0x000BC010
 	protected override void Awake()
 	{
 		base.Awake();
@@ -29,7 +29,7 @@ public class PlayEndingVideo_SceneTransition : Transition_V2, ISceneLoadingTrans
 		this.m_videoPlayer_ErrorReceived = new VideoPlayer.ErrorEventHandler(this.VideoPlayer_ErrorReceived);
 	}
 
-	// Token: 0x06001D57 RID: 7511 RVA: 0x00060A0A File Offset: 0x0005EC0A
+	// Token: 0x0600285A RID: 10330 RVA: 0x00016A68 File Offset: 0x00014C68
 	private void OnDestroy()
 	{
 		if (this.m_audioInstance.isValid())
@@ -38,7 +38,7 @@ public class PlayEndingVideo_SceneTransition : Transition_V2, ISceneLoadingTrans
 		}
 	}
 
-	// Token: 0x06001D58 RID: 7512 RVA: 0x00060A25 File Offset: 0x0005EC25
+	// Token: 0x0600285B RID: 10331 RVA: 0x00016A83 File Offset: 0x00014C83
 	public IEnumerator TransitionIn()
 	{
 		AudioManager.StopAllAudio(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
@@ -137,7 +137,7 @@ public class PlayEndingVideo_SceneTransition : Transition_V2, ISceneLoadingTrans
 		yield break;
 	}
 
-	// Token: 0x06001D59 RID: 7513 RVA: 0x00060A34 File Offset: 0x0005EC34
+	// Token: 0x0600285C RID: 10332 RVA: 0x00016A92 File Offset: 0x00014C92
 	public IEnumerator TransitionOut()
 	{
 		while (this.m_videoPlayer.isPlaying && !this.m_videoPreparationFailed)
@@ -159,7 +159,7 @@ public class PlayEndingVideo_SceneTransition : Transition_V2, ISceneLoadingTrans
 		yield break;
 	}
 
-	// Token: 0x06001D5A RID: 7514 RVA: 0x00060A43 File Offset: 0x0005EC43
+	// Token: 0x0600285D RID: 10333 RVA: 0x00016AA1 File Offset: 0x00014CA1
 	private IEnumerator SyncAudioCoroutine()
 	{
 		float syncTimer = Time.unscaledTime;
@@ -184,7 +184,7 @@ public class PlayEndingVideo_SceneTransition : Transition_V2, ISceneLoadingTrans
 		yield break;
 	}
 
-	// Token: 0x06001D5B RID: 7515 RVA: 0x00060A52 File Offset: 0x0005EC52
+	// Token: 0x0600285E RID: 10334 RVA: 0x00016AB0 File Offset: 0x00014CB0
 	private void VideoPlayer_ErrorReceived(VideoPlayer source, string message)
 	{
 		source.errorReceived -= this.m_videoPlayer_ErrorReceived;
@@ -192,32 +192,32 @@ public class PlayEndingVideo_SceneTransition : Transition_V2, ISceneLoadingTrans
 		Debug.Log("Failed to play video. Error: " + message);
 	}
 
-	// Token: 0x06001D5C RID: 7516 RVA: 0x00060A77 File Offset: 0x0005EC77
+	// Token: 0x0600285F RID: 10335 RVA: 0x00016AD5 File Offset: 0x00014CD5
 	public override IEnumerator Run()
 	{
 		yield break;
 	}
 
-	// Token: 0x04001B4F RID: 6991
+	// Token: 0x0400237B RID: 9083
 	[SerializeField]
 	private float m_timeToFade = 1f;
 
-	// Token: 0x04001B50 RID: 6992
+	// Token: 0x0400237C RID: 9084
 	[SerializeField]
 	private CanvasGroup m_canvasGroup;
 
-	// Token: 0x04001B51 RID: 6993
+	// Token: 0x0400237D RID: 9085
 	private VideoPlayer m_videoPlayer;
 
-	// Token: 0x04001B52 RID: 6994
+	// Token: 0x0400237E RID: 9086
 	private EventInstance m_audioInstance;
 
-	// Token: 0x04001B53 RID: 6995
+	// Token: 0x0400237F RID: 9087
 	private Coroutine m_syncCoroutine;
 
-	// Token: 0x04001B54 RID: 6996
+	// Token: 0x04002380 RID: 9088
 	private VideoPlayer.ErrorEventHandler m_videoPlayer_ErrorReceived;
 
-	// Token: 0x04001B55 RID: 6997
+	// Token: 0x04002381 RID: 9089
 	private bool m_videoPreparationFailed;
 }

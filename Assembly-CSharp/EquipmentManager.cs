@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000698 RID: 1688
+// Token: 0x02000B29 RID: 2857
 public class EquipmentManager : MonoBehaviour
 {
-	// Token: 0x06003D76 RID: 15734 RVA: 0x000D61AE File Offset: 0x000D43AE
+	// Token: 0x06005637 RID: 22071 RVA: 0x0002EE13 File Offset: 0x0002D013
 	private void Awake()
 	{
 		this.Initialize();
 	}
 
-	// Token: 0x06003D77 RID: 15735 RVA: 0x000D61B8 File Offset: 0x000D43B8
+	// Token: 0x06005638 RID: 22072 RVA: 0x001469E0 File Offset: 0x00144BE0
 	private void Initialize()
 	{
 		if (Application.isPlaying)
@@ -28,14 +28,14 @@ public class EquipmentManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D78 RID: 15736 RVA: 0x000D6220 File Offset: 0x000D4420
+	// Token: 0x06005639 RID: 22073 RVA: 0x0002EE1B File Offset: 0x0002D01B
 	private void OnDestroy()
 	{
 		EquipmentManager.m_isDisposed = true;
 	}
 
-	// Token: 0x17001543 RID: 5443
-	// (get) Token: 0x06003D79 RID: 15737 RVA: 0x000D6228 File Offset: 0x000D4428
+	// Token: 0x17001D1D RID: 7453
+	// (get) Token: 0x0600563A RID: 22074 RVA: 0x0002EE23 File Offset: 0x0002D023
 	private static EquipmentManager Instance
 	{
 		get
@@ -50,8 +50,8 @@ public class EquipmentManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001544 RID: 5444
-	// (get) Token: 0x06003D7A RID: 15738 RVA: 0x000D6253 File Offset: 0x000D4453
+	// Token: 0x17001D1E RID: 7454
+	// (get) Token: 0x0600563B RID: 22075 RVA: 0x0002EE4E File Offset: 0x0002D04E
 	public static bool IsInitialized
 	{
 		get
@@ -60,8 +60,8 @@ public class EquipmentManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17001545 RID: 5445
-	// (get) Token: 0x06003D7B RID: 15739 RVA: 0x000D625A File Offset: 0x000D445A
+	// Token: 0x17001D1F RID: 7455
+	// (get) Token: 0x0600563C RID: 22076 RVA: 0x0002EE55 File Offset: 0x0002D055
 	public static bool IsDisposed
 	{
 		get
@@ -70,13 +70,13 @@ public class EquipmentManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D7C RID: 15740 RVA: 0x000D6261 File Offset: 0x000D4461
+	// Token: 0x0600563D RID: 22077 RVA: 0x0002EE5C File Offset: 0x0002D05C
 	public static bool DoesEquipmentExist(EquipmentCategoryType category, EquipmentType equipType)
 	{
 		return EquipmentManager.GetEquipment(category, equipType) != null;
 	}
 
-	// Token: 0x06003D7D RID: 15741 RVA: 0x000D6270 File Offset: 0x000D4470
+	// Token: 0x0600563E RID: 22078 RVA: 0x00146A48 File Offset: 0x00144C48
 	public static List<EquipmentType> GetAllEquipmentWithFoundState(EquipmentCategoryType category, FoundState foundState)
 	{
 		List<EquipmentType> list = new List<EquipmentType>();
@@ -84,7 +84,7 @@ public class EquipmentManager : MonoBehaviour
 		return list;
 	}
 
-	// Token: 0x06003D7E RID: 15742 RVA: 0x000D628C File Offset: 0x000D448C
+	// Token: 0x0600563F RID: 22079 RVA: 0x00146A64 File Offset: 0x00144C64
 	public static void GetAllEquipmentWithFoundState(EquipmentCategoryType category, FoundState foundState, List<EquipmentType> results)
 	{
 		results.Clear();
@@ -98,14 +98,14 @@ public class EquipmentManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D7F RID: 15743 RVA: 0x000D62FC File Offset: 0x000D44FC
+	// Token: 0x06005640 RID: 22080 RVA: 0x00146AD4 File Offset: 0x00144CD4
 	public static bool CanAfford(EquipmentCategoryType category, EquipmentType equipType)
 	{
 		EquipmentObj equipment = EquipmentManager.GetEquipment(category, equipType);
 		return SaveManager.PlayerSaveData.GoldCollectedIncludingBank >= equipment.GoldCostToUpgrade && SaveManager.PlayerSaveData.EquipmentOreCollected >= equipment.OreCostToUpgrade;
 	}
 
-	// Token: 0x06003D80 RID: 15744 RVA: 0x000D6338 File Offset: 0x000D4538
+	// Token: 0x06005641 RID: 22081 RVA: 0x00146B10 File Offset: 0x00144D10
 	public static bool CanPurchaseEquipment(EquipmentCategoryType category, EquipmentType equipType, bool suppressLogs = true)
 	{
 		if (!EquipmentManager.DoesEquipmentExist(category, equipType))
@@ -165,7 +165,7 @@ public class EquipmentManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003D81 RID: 15745 RVA: 0x000D6418 File Offset: 0x000D4618
+	// Token: 0x06005642 RID: 22082 RVA: 0x00146BF0 File Offset: 0x00144DF0
 	public static bool CanEquip(EquipmentCategoryType category, EquipmentType equipType, bool suppressLogs = true)
 	{
 		if (!EquipmentManager.DoesEquipmentExist(category, equipType))
@@ -220,7 +220,7 @@ public class EquipmentManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003D82 RID: 15746 RVA: 0x000D6504 File Offset: 0x000D4704
+	// Token: 0x06005643 RID: 22083 RVA: 0x00146CDC File Offset: 0x00144EDC
 	public static int Get_EquipmentSet_TotalEquippedLevel(EquipmentType equipType)
 	{
 		int num = 0;
@@ -238,7 +238,7 @@ public class EquipmentManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003D83 RID: 15747 RVA: 0x000D6550 File Offset: 0x000D4750
+	// Token: 0x06005644 RID: 22084 RVA: 0x00146D28 File Offset: 0x00144F28
 	public static float Get_EquipmentSet_BonusTypeStatGain(EquipmentSetBonusType bonusType)
 	{
 		EquipmentManager.m_equipTypesUsedHelper.Clear();
@@ -275,7 +275,7 @@ public class EquipmentManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003D84 RID: 15748 RVA: 0x000D664E File Offset: 0x000D484E
+	// Token: 0x06005645 RID: 22085 RVA: 0x0002EE68 File Offset: 0x0002D068
 	public static int Get_EquipmentSet_CurrentLevel(EquipmentType equipType)
 	{
 		if (!SaveManager.EquipmentSaveData.EquipmentSetStateDict.ContainsKey(equipType))
@@ -285,7 +285,7 @@ public class EquipmentManager : MonoBehaviour
 		return SaveManager.EquipmentSaveData.EquipmentSetStateDict[equipType].x;
 	}
 
-	// Token: 0x06003D85 RID: 15749 RVA: 0x000D667C File Offset: 0x000D487C
+	// Token: 0x06005646 RID: 22086 RVA: 0x00146E28 File Offset: 0x00145028
 	public static void Set_EquipmentSet_CurrentLevel(EquipmentType equipType, int level, bool additive)
 	{
 		if (SaveManager.EquipmentSaveData.EquipmentSetStateDict.ContainsKey(equipType))
@@ -298,7 +298,7 @@ public class EquipmentManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D86 RID: 15750 RVA: 0x000D66D6 File Offset: 0x000D48D6
+	// Token: 0x06005647 RID: 22087 RVA: 0x0002EE93 File Offset: 0x0002D093
 	public static int Get_EquipmentSet_LevelViewed(EquipmentType equipType)
 	{
 		if (!SaveManager.EquipmentSaveData.EquipmentSetStateDict.ContainsKey(equipType))
@@ -308,7 +308,7 @@ public class EquipmentManager : MonoBehaviour
 		return SaveManager.EquipmentSaveData.EquipmentSetStateDict[equipType].y;
 	}
 
-	// Token: 0x06003D87 RID: 15751 RVA: 0x000D6704 File Offset: 0x000D4904
+	// Token: 0x06005648 RID: 22088 RVA: 0x00146E84 File Offset: 0x00145084
 	public static void Set_EquipmentSet_LevelViewed(EquipmentType equipType, int level, bool additive)
 	{
 		if (SaveManager.EquipmentSaveData.EquipmentSetStateDict.ContainsKey(equipType))
@@ -321,7 +321,7 @@ public class EquipmentManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D88 RID: 15752 RVA: 0x000D6760 File Offset: 0x000D4960
+	// Token: 0x06005649 RID: 22089 RVA: 0x00146EE0 File Offset: 0x001450E0
 	public static int GetUpgradeBlueprintsFound(EquipmentCategoryType category, EquipmentType equipType, bool ignoreInfinitePurchasePower = false)
 	{
 		EquipmentObj equipment = EquipmentManager.GetEquipment(category, equipType);
@@ -332,7 +332,7 @@ public class EquipmentManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003D89 RID: 15753 RVA: 0x000D678C File Offset: 0x000D498C
+	// Token: 0x0600564A RID: 22090 RVA: 0x00146F0C File Offset: 0x0014510C
 	public static bool SetUpgradeBlueprintsFound(EquipmentCategoryType category, EquipmentType equipType, int level, bool additive, bool runEvents = true)
 	{
 		EquipmentObj equipment = EquipmentManager.GetEquipment(category, equipType);
@@ -374,7 +374,7 @@ public class EquipmentManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003D8A RID: 15754 RVA: 0x000D6878 File Offset: 0x000D4A78
+	// Token: 0x0600564B RID: 22091 RVA: 0x00146FF8 File Offset: 0x001451F8
 	public static int GetUpgradeLevel(EquipmentCategoryType category, EquipmentType equipType)
 	{
 		EquipmentObj equipment = EquipmentManager.GetEquipment(category, equipType);
@@ -385,7 +385,7 @@ public class EquipmentManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003D8B RID: 15755 RVA: 0x000D6898 File Offset: 0x000D4A98
+	// Token: 0x0600564C RID: 22092 RVA: 0x00147018 File Offset: 0x00145218
 	public static bool SetEquipmentUpgradeLevel(EquipmentCategoryType category, EquipmentType equipType, int level, bool additive, bool overrideValues, bool runEvents = true)
 	{
 		EquipmentObj equipment = EquipmentManager.GetEquipment(category, equipType);
@@ -443,7 +443,7 @@ public class EquipmentManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003D8C RID: 15756 RVA: 0x000D69C8 File Offset: 0x000D4BC8
+	// Token: 0x0600564D RID: 22093 RVA: 0x00147148 File Offset: 0x00145348
 	public static FoundState GetFoundState(EquipmentCategoryType category, EquipmentType equipType)
 	{
 		EquipmentObj equipment = EquipmentManager.GetEquipment(category, equipType);
@@ -463,7 +463,7 @@ public class EquipmentManager : MonoBehaviour
 		return foundState;
 	}
 
-	// Token: 0x06003D8D RID: 15757 RVA: 0x000D69F8 File Offset: 0x000D4BF8
+	// Token: 0x0600564E RID: 22094 RVA: 0x00147178 File Offset: 0x00145378
 	public static bool SetFoundState(EquipmentCategoryType category, EquipmentType equipType, FoundState foundState, bool overrideValues, bool runEvents = true)
 	{
 		EquipmentObj equipment = EquipmentManager.GetEquipment(category, equipType);
@@ -498,14 +498,14 @@ public class EquipmentManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06003D8E RID: 15758 RVA: 0x000D6ABC File Offset: 0x000D4CBC
+	// Token: 0x0600564F RID: 22095 RVA: 0x0014723C File Offset: 0x0014543C
 	public static bool IsEquipped(EquipmentCategoryType category, EquipmentType equipType)
 	{
 		EquipmentObj equipped = EquipmentManager.GetEquipped(category);
 		return equipped != null && equipped.EquipmentType == equipType;
 	}
 
-	// Token: 0x06003D8F RID: 15759 RVA: 0x000D6AE0 File Offset: 0x000D4CE0
+	// Token: 0x06005650 RID: 22096 RVA: 0x00147260 File Offset: 0x00145460
 	public static EquipmentObj GetEquipped(EquipmentCategoryType category)
 	{
 		switch (category)
@@ -525,7 +525,7 @@ public class EquipmentManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D90 RID: 15760 RVA: 0x000D6B7C File Offset: 0x000D4D7C
+	// Token: 0x06005651 RID: 22097 RVA: 0x001472FC File Offset: 0x001454FC
 	public static bool SetEquipped(EquipmentCategoryType category, EquipmentType equipmentToEquip, bool runEvents = true)
 	{
 		bool flag = false;
@@ -584,7 +584,7 @@ public class EquipmentManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06003D91 RID: 15761 RVA: 0x000D6CA8 File Offset: 0x000D4EA8
+	// Token: 0x06005652 RID: 22098 RVA: 0x00147428 File Offset: 0x00145628
 	public static float GetMinEquipmentLevelScale()
 	{
 		int num = 0;
@@ -605,7 +605,7 @@ public class EquipmentManager : MonoBehaviour
 		return Mathf.Ceil((float)num * 0.75f);
 	}
 
-	// Token: 0x06003D92 RID: 15762 RVA: 0x000D6D54 File Offset: 0x000D4F54
+	// Token: 0x06005653 RID: 22099 RVA: 0x001474D4 File Offset: 0x001456D4
 	public static EquipmentObj GetEquipment(EquipmentCategoryType category, EquipmentType equipType)
 	{
 		Dictionary<EquipmentType, EquipmentObj> equipmentDict = EquipmentManager.GetEquipmentDict(category);
@@ -617,7 +617,7 @@ public class EquipmentManager : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x06003D93 RID: 15763 RVA: 0x000D6D7C File Offset: 0x000D4F7C
+	// Token: 0x06005654 RID: 22100 RVA: 0x001474FC File Offset: 0x001456FC
 	public static float GetEquippedStatValue(EquipmentCategoryType categoryType, EquipmentStatType equipmentStatType)
 	{
 		EquipmentObj equipped = EquipmentManager.GetEquipped(categoryType);
@@ -628,13 +628,13 @@ public class EquipmentManager : MonoBehaviour
 		return equipped.GetCurrentStatValue(equipmentStatType);
 	}
 
-	// Token: 0x06003D94 RID: 15764 RVA: 0x000D6DA0 File Offset: 0x000D4FA0
+	// Token: 0x06005655 RID: 22101 RVA: 0x0002EEBE File Offset: 0x0002D0BE
 	public static float GetTotalEquippedStatValue(EquipmentStatType equipmentStatType)
 	{
 		return 0f + EquipmentManager.GetEquippedStatValue(EquipmentCategoryType.Weapon, equipmentStatType) + EquipmentManager.GetEquippedStatValue(EquipmentCategoryType.Head, equipmentStatType) + EquipmentManager.GetEquippedStatValue(EquipmentCategoryType.Chest, equipmentStatType) + EquipmentManager.GetEquippedStatValue(EquipmentCategoryType.Cape, equipmentStatType) + EquipmentManager.GetEquippedStatValue(EquipmentCategoryType.Trinket, equipmentStatType);
 	}
 
-	// Token: 0x06003D95 RID: 15765 RVA: 0x000D6DD0 File Offset: 0x000D4FD0
+	// Token: 0x06005656 RID: 22102 RVA: 0x00147520 File Offset: 0x00145720
 	public static int GetWeightLevel()
 	{
 		float currentStatGain = SkillTreeManager.GetSkillTreeObj(SkillTreeType.Weight_CD_Reduce).CurrentStatGain;
@@ -650,7 +650,7 @@ public class EquipmentManager : MonoBehaviour
 		return (int)num5;
 	}
 
-	// Token: 0x06003D96 RID: 15766 RVA: 0x000D6E48 File Offset: 0x000D5048
+	// Token: 0x06005657 RID: 22103 RVA: 0x00147598 File Offset: 0x00145798
 	public static int Get_EquipmentSet_CurrentUnityTier(EquipmentType equipType)
 	{
 		int num = EquipmentManager.Get_EquipmentSet_TotalEquippedLevel(equipType);
@@ -676,13 +676,13 @@ public class EquipmentManager : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06003D97 RID: 15767 RVA: 0x000D6E96 File Offset: 0x000D5096
+	// Token: 0x06005658 RID: 22104 RVA: 0x0002EEED File Offset: 0x0002D0ED
 	public static Dictionary<EquipmentType, EquipmentObj> GetEquipmentDict(EquipmentCategoryType category)
 	{
 		return SaveManager.EquipmentSaveData.GetEquipmentDict(category);
 	}
 
-	// Token: 0x06003D98 RID: 15768 RVA: 0x000D6EA4 File Offset: 0x000D50A4
+	// Token: 0x06005659 RID: 22105 RVA: 0x001475E8 File Offset: 0x001457E8
 	public static int GetTotalAvailableBlueprints(List<EquipmentObj> populatedList = null)
 	{
 		if (populatedList != null)
@@ -714,30 +714,30 @@ public class EquipmentManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x04002DF0 RID: 11760
+	// Token: 0x04003FE1 RID: 16353
 	private const string EQUIPMENT_MANAGER = "EquipmentManager";
 
-	// Token: 0x04002DF1 RID: 11761
+	// Token: 0x04003FE2 RID: 16354
 	private static bool m_isDisposed;
 
-	// Token: 0x04002DF2 RID: 11762
+	// Token: 0x04003FE3 RID: 16355
 	private static bool m_isInitialized;
 
-	// Token: 0x04002DF3 RID: 11763
+	// Token: 0x04003FE4 RID: 16356
 	private EquipmentPurchasedLevelChangeEventArgs m_purchasedLevelChangeArgs;
 
-	// Token: 0x04002DF4 RID: 11764
+	// Token: 0x04003FE5 RID: 16357
 	private EquipmentFoundLevelChangeEventArgs m_foundLevelChangeArgs;
 
-	// Token: 0x04002DF5 RID: 11765
+	// Token: 0x04003FE6 RID: 16358
 	private EquipmentFoundStateChangeEventArgs m_onFoundStateChangeArgs;
 
-	// Token: 0x04002DF6 RID: 11766
+	// Token: 0x04003FE7 RID: 16359
 	private EquippedChangeEventArgs m_onEquippedChangeArgs;
 
-	// Token: 0x04002DF7 RID: 11767
+	// Token: 0x04003FE8 RID: 16360
 	private static EquipmentManager m_equipmentManager = null;
 
-	// Token: 0x04002DF8 RID: 11768
+	// Token: 0x04003FE9 RID: 16361
 	private static List<EquipmentType> m_equipTypesUsedHelper = new List<EquipmentType>();
 }

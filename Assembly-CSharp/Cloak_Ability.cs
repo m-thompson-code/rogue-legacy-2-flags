@@ -3,11 +3,11 @@ using System.Collections;
 using FMODUnity;
 using UnityEngine;
 
-// Token: 0x0200017D RID: 381
+// Token: 0x020002C0 RID: 704
 public class Cloak_Ability : BaseAbility_RL, ITalent, IAbility
 {
-	// Token: 0x17000745 RID: 1861
-	// (get) Token: 0x06000D6C RID: 3436 RVA: 0x00028CFA File Offset: 0x00026EFA
+	// Token: 0x170009B7 RID: 2487
+	// (get) Token: 0x060014C9 RID: 5321 RVA: 0x0000A65F File Offset: 0x0000885F
 	public bool IsCloaked
 	{
 		get
@@ -16,8 +16,8 @@ public class Cloak_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x17000746 RID: 1862
-	// (get) Token: 0x06000D6D RID: 3437 RVA: 0x00028D02 File Offset: 0x00026F02
+	// Token: 0x170009B8 RID: 2488
+	// (get) Token: 0x060014CA RID: 5322 RVA: 0x00003DA1 File Offset: 0x00001FA1
 	public override bool IgnoreStuckCheck
 	{
 		get
@@ -26,14 +26,14 @@ public class Cloak_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000D6E RID: 3438 RVA: 0x00028D05 File Offset: 0x00026F05
+	// Token: 0x060014CB RID: 5323 RVA: 0x0000A667 File Offset: 0x00008867
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_matPropertyBlock = new MaterialPropertyBlock();
 	}
 
-	// Token: 0x06000D6F RID: 3439 RVA: 0x00028D18 File Offset: 0x00026F18
+	// Token: 0x060014CC RID: 5324 RVA: 0x0000A67A File Offset: 0x0000887A
 	private IEnumerator Start()
 	{
 		while (!this.m_abilityController)
@@ -45,14 +45,14 @@ public class Cloak_Ability : BaseAbility_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000D70 RID: 3440 RVA: 0x00028D27 File Offset: 0x00026F27
+	// Token: 0x060014CD RID: 5325 RVA: 0x0000A689 File Offset: 0x00008889
 	public override void PreCastAbility()
 	{
 		this.m_abilityController.StopAllQueueCoroutines();
 		base.PreCastAbility();
 	}
 
-	// Token: 0x06000D71 RID: 3441 RVA: 0x00028D3A File Offset: 0x00026F3A
+	// Token: 0x060014CE RID: 5326 RVA: 0x0000A69C File Offset: 0x0000889C
 	public override IEnumerator CastAbility()
 	{
 		this.m_beginCastingRelay.Dispatch();
@@ -85,7 +85,7 @@ public class Cloak_Ability : BaseAbility_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000D72 RID: 3442 RVA: 0x00028D49 File Offset: 0x00026F49
+	// Token: 0x060014CF RID: 5327 RVA: 0x0000A6AB File Offset: 0x000088AB
 	private IEnumerator BlinkCoroutine()
 	{
 		float startTime = Time.time + 2f;
@@ -122,7 +122,7 @@ public class Cloak_Ability : BaseAbility_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000D73 RID: 3443 RVA: 0x00028D58 File Offset: 0x00026F58
+	// Token: 0x060014D0 RID: 5328 RVA: 0x00087DA4 File Offset: 0x00085FA4
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (!base.IsOnCooldown)
@@ -147,7 +147,7 @@ public class Cloak_Ability : BaseAbility_RL, ITalent, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x06000D74 RID: 3444 RVA: 0x00028E38 File Offset: 0x00027038
+	// Token: 0x060014D1 RID: 5329 RVA: 0x00087E84 File Offset: 0x00086084
 	private void ApplyCloakEffect(bool applyBaseEffect = true)
 	{
 		this.m_baseEffectOn = true;
@@ -172,7 +172,7 @@ public class Cloak_Ability : BaseAbility_RL, ITalent, IAbility
 		this.m_cloakOnAudioEmitter.Play();
 	}
 
-	// Token: 0x06000D75 RID: 3445 RVA: 0x0002901C File Offset: 0x0002721C
+	// Token: 0x060014D2 RID: 5330 RVA: 0x00088068 File Offset: 0x00086268
 	private void RemoveCloakEffect(bool removeBaseEffect = true)
 	{
 		this.m_baseEffectOn = false;
@@ -193,53 +193,53 @@ public class Cloak_Ability : BaseAbility_RL, ITalent, IAbility
 		this.m_cloakOffAudioEmitter.Play();
 	}
 
-	// Token: 0x040010CA RID: 4298
+	// Token: 0x0400162A RID: 5674
 	[SerializeField]
 	private StudioEventEmitter m_cloakOnAudioEmitter;
 
-	// Token: 0x040010CB RID: 4299
+	// Token: 0x0400162B RID: 5675
 	[SerializeField]
 	private StudioEventEmitter m_cloakOffAudioEmitter;
 
-	// Token: 0x040010CC RID: 4300
+	// Token: 0x0400162C RID: 5676
 	private const float BLINK_DURATION = 1f;
 
-	// Token: 0x040010CD RID: 4301
+	// Token: 0x0400162D RID: 5677
 	private const float BLINK_INTERVAL = 0.1f;
 
-	// Token: 0x040010CE RID: 4302
+	// Token: 0x0400162E RID: 5678
 	private Color m_eyeTint = new Color(0.6f, 0f, 0f, 1f);
 
-	// Token: 0x040010CF RID: 4303
+	// Token: 0x0400162F RID: 5679
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x040010D0 RID: 4304
+	// Token: 0x04001630 RID: 5680
 	private bool m_isCloaked;
 
-	// Token: 0x040010D1 RID: 4305
+	// Token: 0x04001631 RID: 5681
 	private PlayerLookController m_lookController;
 
-	// Token: 0x040010D2 RID: 4306
+	// Token: 0x04001632 RID: 5682
 	private BaseEffect m_cloakEffect;
 
-	// Token: 0x040010D3 RID: 4307
+	// Token: 0x04001633 RID: 5683
 	private bool m_baseEffectOn;
 
-	// Token: 0x040010D4 RID: 4308
+	// Token: 0x04001634 RID: 5684
 	private Coroutine m_blinkCoroutine;
 
-	// Token: 0x040010D5 RID: 4309
+	// Token: 0x04001635 RID: 5685
 	private bool m_isCloakStriking;
 
-	// Token: 0x040010D6 RID: 4310
+	// Token: 0x04001636 RID: 5686
 	private Color m_storedEyeColor;
 
-	// Token: 0x040010D7 RID: 4311
+	// Token: 0x04001637 RID: 5687
 	private Color m_storedAlphaBlendEyeColor;
 
-	// Token: 0x040010D8 RID: 4312
+	// Token: 0x04001638 RID: 5688
 	private Color m_storedRimEyeColor;
 
-	// Token: 0x040010D9 RID: 4313
+	// Token: 0x04001639 RID: 5689
 	private MaterialPropertyBlock m_matPropertyBlock;
 }

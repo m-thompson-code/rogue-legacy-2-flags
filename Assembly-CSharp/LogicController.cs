@@ -5,28 +5,28 @@ using System.Reflection;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x02000260 RID: 608
+// Token: 0x02000421 RID: 1057
 [RequireComponent(typeof(EnemyController))]
 [Serializable]
 public class LogicController : MonoBehaviour
 {
-	// Token: 0x17000B78 RID: 2936
-	// (get) Token: 0x060017C6 RID: 6086 RVA: 0x00049C66 File Offset: 0x00047E66
-	// (set) Token: 0x060017C7 RID: 6087 RVA: 0x00049C6E File Offset: 0x00047E6E
+	// Token: 0x17000EAB RID: 3755
+	// (get) Token: 0x0600218B RID: 8587 RVA: 0x00011E25 File Offset: 0x00010025
+	// (set) Token: 0x0600218C RID: 8588 RVA: 0x00011E2D File Offset: 0x0001002D
 	public bool DisableRestLogicInterrupt { get; set; }
 
-	// Token: 0x17000B79 RID: 2937
-	// (get) Token: 0x060017C8 RID: 6088 RVA: 0x00049C77 File Offset: 0x00047E77
-	// (set) Token: 0x060017C9 RID: 6089 RVA: 0x00049C7F File Offset: 0x00047E7F
+	// Token: 0x17000EAC RID: 3756
+	// (get) Token: 0x0600218D RID: 8589 RVA: 0x00011E36 File Offset: 0x00010036
+	// (set) Token: 0x0600218E RID: 8590 RVA: 0x00011E3E File Offset: 0x0001003E
 	public bool DisableDamageDuringInitialDelay { get; set; } = true;
 
-	// Token: 0x17000B7A RID: 2938
-	// (get) Token: 0x060017CA RID: 6090 RVA: 0x00049C88 File Offset: 0x00047E88
-	// (set) Token: 0x060017CB RID: 6091 RVA: 0x00049C90 File Offset: 0x00047E90
+	// Token: 0x17000EAD RID: 3757
+	// (get) Token: 0x0600218F RID: 8591 RVA: 0x00011E47 File Offset: 0x00010047
+	// (set) Token: 0x06002190 RID: 8592 RVA: 0x00011E4F File Offset: 0x0001004F
 	public bool ExecuteLogicInAir { get; set; } = true;
 
-	// Token: 0x17000B7B RID: 2939
-	// (get) Token: 0x060017CC RID: 6092 RVA: 0x00049C99 File Offset: 0x00047E99
+	// Token: 0x17000EAE RID: 3758
+	// (get) Token: 0x06002191 RID: 8593 RVA: 0x00011E58 File Offset: 0x00010058
 	public bool LogicIsActivated
 	{
 		get
@@ -35,19 +35,19 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060017CD RID: 6093 RVA: 0x00049CAB File Offset: 0x00047EAB
+	// Token: 0x06002192 RID: 8594 RVA: 0x00011E6A File Offset: 0x0001006A
 	public void OverrideLogicDelay(float delayOverride)
 	{
 		this.m_logicDelayYield.CreateNew(delayOverride, false);
 	}
 
-	// Token: 0x17000B7C RID: 2940
-	// (get) Token: 0x060017CE RID: 6094 RVA: 0x00049CBA File Offset: 0x00047EBA
-	// (set) Token: 0x060017CF RID: 6095 RVA: 0x00049CC2 File Offset: 0x00047EC2
+	// Token: 0x17000EAF RID: 3759
+	// (get) Token: 0x06002193 RID: 8595 RVA: 0x00011E79 File Offset: 0x00010079
+	// (set) Token: 0x06002194 RID: 8596 RVA: 0x00011E81 File Offset: 0x00010081
 	public bool DisableLogicActivationByDistance { get; set; }
 
-	// Token: 0x17000B7D RID: 2941
-	// (get) Token: 0x060017D0 RID: 6096 RVA: 0x00049CCB File Offset: 0x00047ECB
+	// Token: 0x17000EB0 RID: 3760
+	// (get) Token: 0x06002195 RID: 8597 RVA: 0x00011E8A File Offset: 0x0001008A
 	public bool IsAggroed
 	{
 		get
@@ -56,14 +56,14 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B7E RID: 2942
-	// (get) Token: 0x060017D1 RID: 6097 RVA: 0x00049CDA File Offset: 0x00047EDA
-	// (set) Token: 0x060017D2 RID: 6098 RVA: 0x00049CE2 File Offset: 0x00047EE2
+	// Token: 0x17000EB1 RID: 3761
+	// (get) Token: 0x06002196 RID: 8598 RVA: 0x00011E99 File Offset: 0x00010099
+	// (set) Token: 0x06002197 RID: 8599 RVA: 0x00011EA1 File Offset: 0x000100A1
 	public string ForceExecuteLogicBlockName_OnceOnly { get; set; }
 
-	// Token: 0x17000B7F RID: 2943
-	// (get) Token: 0x060017D3 RID: 6099 RVA: 0x00049CEB File Offset: 0x00047EEB
-	// (set) Token: 0x060017D4 RID: 6100 RVA: 0x00049CF3 File Offset: 0x00047EF3
+	// Token: 0x17000EB2 RID: 3762
+	// (get) Token: 0x06002198 RID: 8600 RVA: 0x00011EAA File Offset: 0x000100AA
+	// (set) Token: 0x06002199 RID: 8601 RVA: 0x00011EB2 File Offset: 0x000100B2
 	public string ForceExecuteLogicBlockName
 	{
 		get
@@ -76,8 +76,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B80 RID: 2944
-	// (get) Token: 0x060017D5 RID: 6101 RVA: 0x00049CFC File Offset: 0x00047EFC
+	// Token: 0x17000EB3 RID: 3763
+	// (get) Token: 0x0600219A RID: 8602 RVA: 0x00011EBB File Offset: 0x000100BB
 	public string PreviousLogicBlockName
 	{
 		get
@@ -86,9 +86,9 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B81 RID: 2945
-	// (get) Token: 0x060017D6 RID: 6102 RVA: 0x00049D04 File Offset: 0x00047F04
-	// (set) Token: 0x060017D7 RID: 6103 RVA: 0x00049D0C File Offset: 0x00047F0C
+	// Token: 0x17000EB4 RID: 3764
+	// (get) Token: 0x0600219B RID: 8603 RVA: 0x00011EC3 File Offset: 0x000100C3
+	// (set) Token: 0x0600219C RID: 8604 RVA: 0x00011ECB File Offset: 0x000100CB
 	public EnemyLogicType EnemyLogicType
 	{
 		get
@@ -101,9 +101,9 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B82 RID: 2946
-	// (get) Token: 0x060017D8 RID: 6104 RVA: 0x00049D15 File Offset: 0x00047F15
-	// (set) Token: 0x060017D9 RID: 6105 RVA: 0x00049D1D File Offset: 0x00047F1D
+	// Token: 0x17000EB5 RID: 3765
+	// (get) Token: 0x0600219D RID: 8605 RVA: 0x00011ED4 File Offset: 0x000100D4
+	// (set) Token: 0x0600219E RID: 8606 RVA: 0x00011EDC File Offset: 0x000100DC
 	public bool PrintDebug
 	{
 		get
@@ -116,8 +116,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B83 RID: 2947
-	// (get) Token: 0x060017DA RID: 6106 RVA: 0x00049D26 File Offset: 0x00047F26
+	// Token: 0x17000EB6 RID: 3766
+	// (get) Token: 0x0600219F RID: 8607 RVA: 0x00011EE5 File Offset: 0x000100E5
 	public bool IsExecutingLogic
 	{
 		get
@@ -126,13 +126,13 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B84 RID: 2948
-	// (get) Token: 0x060017DB RID: 6107 RVA: 0x00049D2E File Offset: 0x00047F2E
-	// (set) Token: 0x060017DC RID: 6108 RVA: 0x00049D36 File Offset: 0x00047F36
+	// Token: 0x17000EB7 RID: 3767
+	// (get) Token: 0x060021A0 RID: 8608 RVA: 0x00011EED File Offset: 0x000100ED
+	// (set) Token: 0x060021A1 RID: 8609 RVA: 0x00011EF5 File Offset: 0x000100F5
 	public float CurrentLogicBlockPercentChance { get; private set; }
 
-	// Token: 0x17000B85 RID: 2949
-	// (get) Token: 0x060017DD RID: 6109 RVA: 0x00049D3F File Offset: 0x00047F3F
+	// Token: 0x17000EB8 RID: 3768
+	// (get) Token: 0x060021A2 RID: 8610 RVA: 0x00011EFE File Offset: 0x000100FE
 	public string CurrentLogicBlockName
 	{
 		get
@@ -141,9 +141,9 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B86 RID: 2950
-	// (get) Token: 0x060017DE RID: 6110 RVA: 0x00049D47 File Offset: 0x00047F47
-	// (set) Token: 0x060017DF RID: 6111 RVA: 0x00049D4F File Offset: 0x00047F4F
+	// Token: 0x17000EB9 RID: 3769
+	// (get) Token: 0x060021A3 RID: 8611 RVA: 0x00011F06 File Offset: 0x00010106
+	// (set) Token: 0x060021A4 RID: 8612 RVA: 0x00011F0E File Offset: 0x0001010E
 	public LogicState CurrentRangeState
 	{
 		get
@@ -156,8 +156,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B87 RID: 2951
-	// (get) Token: 0x060017E0 RID: 6112 RVA: 0x00049D58 File Offset: 0x00047F58
+	// Token: 0x17000EBA RID: 3770
+	// (get) Token: 0x060021A5 RID: 8613 RVA: 0x00011F17 File Offset: 0x00010117
 	public float CloseRange
 	{
 		get
@@ -170,8 +170,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B88 RID: 2952
-	// (get) Token: 0x060017E1 RID: 6113 RVA: 0x00049D79 File Offset: 0x00047F79
+	// Token: 0x17000EBB RID: 3771
+	// (get) Token: 0x060021A6 RID: 8614 RVA: 0x00011F38 File Offset: 0x00010138
 	public float MediumRange
 	{
 		get
@@ -184,8 +184,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B89 RID: 2953
-	// (get) Token: 0x060017E2 RID: 6114 RVA: 0x00049D9A File Offset: 0x00047F9A
+	// Token: 0x17000EBC RID: 3772
+	// (get) Token: 0x060021A7 RID: 8615 RVA: 0x00011F59 File Offset: 0x00010159
 	public float FarRange
 	{
 		get
@@ -198,8 +198,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B8A RID: 2954
-	// (get) Token: 0x060017E3 RID: 6115 RVA: 0x00049DBB File Offset: 0x00047FBB
+	// Token: 0x17000EBD RID: 3773
+	// (get) Token: 0x060021A8 RID: 8616 RVA: 0x00011F7A File Offset: 0x0001017A
 	public LogicController_SO LogicControllerSO
 	{
 		get
@@ -208,8 +208,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B8B RID: 2955
-	// (get) Token: 0x060017E4 RID: 6116 RVA: 0x00049DC3 File Offset: 0x00047FC3
+	// Token: 0x17000EBE RID: 3774
+	// (get) Token: 0x060021A9 RID: 8617 RVA: 0x00011F82 File Offset: 0x00010182
 	public float RestCounter
 	{
 		get
@@ -218,8 +218,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B8C RID: 2956
-	// (get) Token: 0x060017E5 RID: 6117 RVA: 0x00049DCB File Offset: 0x00047FCB
+	// Token: 0x17000EBF RID: 3775
+	// (get) Token: 0x060021AA RID: 8618 RVA: 0x00011F8A File Offset: 0x0001018A
 	public BaseAIScript LogicScript
 	{
 		get
@@ -228,8 +228,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B8D RID: 2957
-	// (get) Token: 0x060017E6 RID: 6118 RVA: 0x00049DD3 File Offset: 0x00047FD3
+	// Token: 0x17000EC0 RID: 3776
+	// (get) Token: 0x060021AB RID: 8619 RVA: 0x00011F92 File Offset: 0x00010192
 	public GameObject Player
 	{
 		get
@@ -238,8 +238,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B8E RID: 2958
-	// (get) Token: 0x060017E7 RID: 6119 RVA: 0x00049DDA File Offset: 0x00047FDA
+	// Token: 0x17000EC1 RID: 3777
+	// (get) Token: 0x060021AC RID: 8620 RVA: 0x00011F99 File Offset: 0x00010199
 	public PlayerController PlayerController
 	{
 		get
@@ -248,8 +248,8 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B8F RID: 2959
-	// (get) Token: 0x060017E8 RID: 6120 RVA: 0x00049DE1 File Offset: 0x00047FE1
+	// Token: 0x17000EC2 RID: 3778
+	// (get) Token: 0x060021AD RID: 8621 RVA: 0x00011FA0 File Offset: 0x000101A0
 	public bool IsInitialized
 	{
 		get
@@ -258,12 +258,12 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000B90 RID: 2960
-	// (get) Token: 0x060017E9 RID: 6121 RVA: 0x00049DE9 File Offset: 0x00047FE9
-	// (set) Token: 0x060017EA RID: 6122 RVA: 0x00049DF1 File Offset: 0x00047FF1
+	// Token: 0x17000EC3 RID: 3779
+	// (get) Token: 0x060021AE RID: 8622 RVA: 0x00011FA8 File Offset: 0x000101A8
+	// (set) Token: 0x060021AF RID: 8623 RVA: 0x00011FB0 File Offset: 0x000101B0
 	public Func<float, bool> IsInRange { get; set; }
 
-	// Token: 0x060017EB RID: 6123 RVA: 0x00049DFC File Offset: 0x00047FFC
+	// Token: 0x060021B0 RID: 8624 RVA: 0x000A7B24 File Offset: 0x000A5D24
 	public void Awake()
 	{
 		if (Application.isPlaying)
@@ -293,7 +293,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060017EC RID: 6124 RVA: 0x00049EC0 File Offset: 0x000480C0
+	// Token: 0x060021B1 RID: 8625 RVA: 0x000A7BE8 File Offset: 0x000A5DE8
 	private void CreateDebugAttackList(LogicState logicState)
 	{
 		foreach (KeyValuePair<string, int> keyValuePair in this.GetMethodNameDictionary(this.EnemyLogicType, logicState))
@@ -305,7 +305,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060017ED RID: 6125 RVA: 0x00049F44 File Offset: 0x00048144
+	// Token: 0x060021B2 RID: 8626 RVA: 0x00011FB9 File Offset: 0x000101B9
 	private IEnumerator Start()
 	{
 		while (!this.m_enemyController.IsInitialized)
@@ -319,13 +319,13 @@ public class LogicController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060017EE RID: 6126 RVA: 0x00049F53 File Offset: 0x00048153
+	// Token: 0x060021B3 RID: 8627 RVA: 0x00011FC8 File Offset: 0x000101C8
 	private void OnEnable()
 	{
 		this.AssignAnimParamRank();
 	}
 
-	// Token: 0x060017EF RID: 6127 RVA: 0x00049F5C File Offset: 0x0004815C
+	// Token: 0x060021B4 RID: 8628 RVA: 0x000A7C6C File Offset: 0x000A5E6C
 	public void AssignAnimParamRank()
 	{
 		if (this.m_enemyController.IsInitialized)
@@ -341,13 +341,13 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060017F0 RID: 6128 RVA: 0x00049FE4 File Offset: 0x000481E4
+	// Token: 0x060021B5 RID: 8629 RVA: 0x00011FD0 File Offset: 0x000101D0
 	private void OnDestroy()
 	{
 		this.m_enemyController.CharacterHitResponse.OnCharacterHitRelay.RemoveListener(new Action<object, CharacterHitEventArgs>(this.TriggerAggro));
 	}
 
-	// Token: 0x060017F1 RID: 6129 RVA: 0x0004A008 File Offset: 0x00048208
+	// Token: 0x060021B6 RID: 8630 RVA: 0x00011FF4 File Offset: 0x000101F4
 	private IEnumerator DelayLogic()
 	{
 		this.m_isDelayed = true;
@@ -373,7 +373,7 @@ public class LogicController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060017F2 RID: 6130 RVA: 0x0004A018 File Offset: 0x00048218
+	// Token: 0x060021B7 RID: 8631 RVA: 0x000A7CF4 File Offset: 0x000A5EF4
 	private void OnDisable()
 	{
 		if (this.m_delayLogicCoroutine != null)
@@ -388,7 +388,7 @@ public class LogicController : MonoBehaviour
 		this.m_enemyController.DeactivateEnemy();
 	}
 
-	// Token: 0x060017F3 RID: 6131 RVA: 0x0004A06B File Offset: 0x0004826B
+	// Token: 0x060021B8 RID: 8632 RVA: 0x00012003 File Offset: 0x00010203
 	public void SetLogicBlockEnabled(string logicBlockName, bool enabled)
 	{
 		if (enabled)
@@ -405,13 +405,13 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060017F4 RID: 6132 RVA: 0x0004A0A6 File Offset: 0x000482A6
+	// Token: 0x060021B9 RID: 8633 RVA: 0x0001203E File Offset: 0x0001023E
 	public void TriggerAggro(object sender, EventArgs args)
 	{
 		this.m_aggroTimer = Enemy_EV.MIN_AGGRO_DURATION;
 	}
 
-	// Token: 0x060017F5 RID: 6133 RVA: 0x0004A0B4 File Offset: 0x000482B4
+	// Token: 0x060021BA RID: 8634 RVA: 0x000A7D48 File Offset: 0x000A5F48
 	public void UpdateLogicReferences()
 	{
 		if (Application.isPlaying && this.m_logicScript && this.m_logicControllerSO)
@@ -431,7 +431,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060017F6 RID: 6134 RVA: 0x0004A14F File Offset: 0x0004834F
+	// Token: 0x060021BB RID: 8635 RVA: 0x0001204B File Offset: 0x0001024B
 	private EnemyLogicType ConvertRankToLogicType(EnemyRank rank)
 	{
 		switch (rank)
@@ -447,7 +447,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060017F7 RID: 6135 RVA: 0x0004A170 File Offset: 0x00048370
+	// Token: 0x060021BC RID: 8636 RVA: 0x000A7DE4 File Offset: 0x000A5FE4
 	private Type GetLogicStateAttributeType(LogicState logicState)
 	{
 		switch (logicState)
@@ -464,7 +464,7 @@ public class LogicController : MonoBehaviour
 		return typeof(RestLogicAttribute);
 	}
 
-	// Token: 0x060017F8 RID: 6136 RVA: 0x0004A1D4 File Offset: 0x000483D4
+	// Token: 0x060021BD RID: 8637 RVA: 0x000A7E48 File Offset: 0x000A6048
 	public StringInt_Dictionary GetMethodNameDictionary(EnemyLogicType enemyLogicType, LogicState logicState)
 	{
 		if (!this.LogicControllerSO)
@@ -537,7 +537,7 @@ public class LogicController : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x060017F9 RID: 6137 RVA: 0x0004A380 File Offset: 0x00048580
+	// Token: 0x060021BE RID: 8638 RVA: 0x000A7FF4 File Offset: 0x000A61F4
 	private static StringMethodInfo_Dictionary GetMethodInfoDictionary(Type logicType, LogicState logicState)
 	{
 		Dictionary<LogicState, StringMethodInfo_Dictionary> dictionary;
@@ -553,7 +553,7 @@ public class LogicController : MonoBehaviour
 		throw new Exception("Could not find method info dict for AIScript type: " + ((logicType != null) ? logicType.ToString() : null) + " with logic state:" + logicState.ToString());
 	}
 
-	// Token: 0x060017FA RID: 6138 RVA: 0x0004A408 File Offset: 0x00048608
+	// Token: 0x060021BF RID: 8639 RVA: 0x000A807C File Offset: 0x000A627C
 	public int GetLogicBlockOddsOverride(LogicState rangeState, string logicBlockName)
 	{
 		Dictionary<string, int> dictionary;
@@ -565,7 +565,7 @@ public class LogicController : MonoBehaviour
 		return -1;
 	}
 
-	// Token: 0x060017FB RID: 6139 RVA: 0x0004A434 File Offset: 0x00048634
+	// Token: 0x060021C0 RID: 8640 RVA: 0x000A80A8 File Offset: 0x000A62A8
 	public void ChangeLogicBlockOdds(LogicState rangeState, string logicBlockName, int newOdds)
 	{
 		if (this.GetMethodNameDictionary(this.EnemyLogicType, rangeState).ContainsKey(logicBlockName))
@@ -586,7 +586,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060017FC RID: 6140 RVA: 0x0004A498 File Offset: 0x00048698
+	// Token: 0x060021C1 RID: 8641 RVA: 0x000A810C File Offset: 0x000A630C
 	public void ResetLogicBlockOddsOverrides(LogicState rangeState, string logicBlockName)
 	{
 		Dictionary<string, int> dictionary;
@@ -602,7 +602,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060017FD RID: 6141 RVA: 0x0004A4DC File Offset: 0x000486DC
+	// Token: 0x060021C2 RID: 8642 RVA: 0x000A8150 File Offset: 0x000A6350
 	public void ResetAllLogicBlockOddsOverrides()
 	{
 		foreach (KeyValuePair<LogicState, Dictionary<string, int>> keyValuePair in this.m_logicBlockOddsOverrideDict)
@@ -612,7 +612,7 @@ public class LogicController : MonoBehaviour
 		this.m_logicBlockOddsOverrideDict.Clear();
 	}
 
-	// Token: 0x060017FE RID: 6142 RVA: 0x0004A540 File Offset: 0x00048740
+	// Token: 0x060021C3 RID: 8643 RVA: 0x000A81B4 File Offset: 0x000A63B4
 	public void InternalUpdate()
 	{
 		if (!this.IsInitialized || !this.LogicScript.IsInitialized || !this.m_enemyController.IsInitialized)
@@ -663,7 +663,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060017FF RID: 6143 RVA: 0x0004A6A4 File Offset: 0x000488A4
+	// Token: 0x060021C4 RID: 8644 RVA: 0x000A8318 File Offset: 0x000A6518
 	private void UpdateLogicActivation()
 	{
 		if (this.m_enemyController && (this.m_enemyController.ForceActivate || this.IsAggroed))
@@ -715,7 +715,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001800 RID: 6144 RVA: 0x0004A870 File Offset: 0x00048A70
+	// Token: 0x060021C5 RID: 8645 RVA: 0x000A84E4 File Offset: 0x000A66E4
 	private void UpdateLBCooldowns(float elapsedTime)
 	{
 		LogicController.m_cooldownReductionHelper.Clear();
@@ -734,7 +734,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001801 RID: 6145 RVA: 0x0004A944 File Offset: 0x00048B44
+	// Token: 0x060021C6 RID: 8646 RVA: 0x0001206A File Offset: 0x0001026A
 	private void UpdateAggroTimer(float elapsedTime)
 	{
 		if (this.m_aggroTimer > 0f)
@@ -743,7 +743,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001802 RID: 6146 RVA: 0x0004A964 File Offset: 0x00048B64
+	// Token: 0x060021C7 RID: 8647 RVA: 0x000A85B8 File Offset: 0x000A67B8
 	private void UpdateLogicState(float elapsedTime)
 	{
 		if (this.IsAggroed && this.m_currentLogicState == LogicState.Wander)
@@ -785,7 +785,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001803 RID: 6147 RVA: 0x0004AA28 File Offset: 0x00048C28
+	// Token: 0x060021C8 RID: 8648 RVA: 0x000A867C File Offset: 0x000A687C
 	private bool IsInRange_Standard(float rangeRadius)
 	{
 		float num = rangeRadius * 0.6f;
@@ -796,7 +796,7 @@ public class LogicController : MonoBehaviour
 		return this.m_rangeRect.Contains(PlayerManager.GetPlayerController().Midpoint);
 	}
 
-	// Token: 0x06001804 RID: 6148 RVA: 0x0004AAB5 File Offset: 0x00048CB5
+	// Token: 0x060021C9 RID: 8649 RVA: 0x00012087 File Offset: 0x00010287
 	private IEnumerator ExecuteLogic(LogicState logicState, string forcedMethodName)
 	{
 		StringInt_Dictionary methodNameDictionary = this.GetMethodNameDictionary(this.EnemyLogicType, logicState);
@@ -897,7 +897,7 @@ public class LogicController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001805 RID: 6149 RVA: 0x0004AAD2 File Offset: 0x00048CD2
+	// Token: 0x060021CA RID: 8650 RVA: 0x000120A4 File Offset: 0x000102A4
 	public void TriggerDeath()
 	{
 		this.m_isExecutingDeathLogic = true;
@@ -905,7 +905,7 @@ public class LogicController : MonoBehaviour
 		this.StopAllLogic(false);
 	}
 
-	// Token: 0x06001806 RID: 6150 RVA: 0x0004AAF8 File Offset: 0x00048CF8
+	// Token: 0x060021CB RID: 8651 RVA: 0x000A870C File Offset: 0x000A690C
 	public void StopAllLogic(bool resetCurrentState = false)
 	{
 		if (!this.IsInitialized)
@@ -927,7 +927,7 @@ public class LogicController : MonoBehaviour
 		this.m_enemyController.AttackingWithContactDamage = false;
 	}
 
-	// Token: 0x06001807 RID: 6151 RVA: 0x0004AB74 File Offset: 0x00048D74
+	// Token: 0x060021CC RID: 8652 RVA: 0x000A8788 File Offset: 0x000A6988
 	public void SetLBCooldown(string logicBlockName, float cooldown, bool ignoreMods)
 	{
 		if (!ignoreMods)
@@ -947,7 +947,7 @@ public class LogicController : MonoBehaviour
 		this.m_cooldownLogicTimersDict[logicBlockName] = cooldown;
 	}
 
-	// Token: 0x06001808 RID: 6152 RVA: 0x0004AC04 File Offset: 0x00048E04
+	// Token: 0x060021CD RID: 8653 RVA: 0x000A8818 File Offset: 0x000A6A18
 	public void EnterRestState(float duration, bool ignoreMods)
 	{
 		this.m_currentLogicState = LogicState.Resting;
@@ -964,7 +964,7 @@ public class LogicController : MonoBehaviour
 		this.m_restStateCounter = duration;
 	}
 
-	// Token: 0x06001809 RID: 6153 RVA: 0x0004AC78 File Offset: 0x00048E78
+	// Token: 0x060021CE RID: 8654 RVA: 0x000A888C File Offset: 0x000A6A8C
 	private Type GetEnemyLogicTypeAttribute(EnemyLogicType logicType)
 	{
 		switch (logicType)
@@ -980,7 +980,7 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600180A RID: 6154 RVA: 0x0004ACC8 File Offset: 0x00048EC8
+	// Token: 0x060021CF RID: 8655 RVA: 0x000A88DC File Offset: 0x000A6ADC
 	private void PopulateStaticMethodInfoDict(EnemyLogicType enemyLogicType, Type logicScriptType)
 	{
 		if (LogicController.m_staticMethodInfoDict.ContainsKey(logicScriptType))
@@ -1026,19 +1026,19 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600180B RID: 6155 RVA: 0x0004AE5E File Offset: 0x0004905E
+	// Token: 0x060021D0 RID: 8656 RVA: 0x000120CA File Offset: 0x000102CA
 	public void Pause()
 	{
 		this.LogicScript.Pause();
 	}
 
-	// Token: 0x0600180C RID: 6156 RVA: 0x0004AE6B File Offset: 0x0004906B
+	// Token: 0x060021D1 RID: 8657 RVA: 0x000120D7 File Offset: 0x000102D7
 	public void Unpause()
 	{
 		this.LogicScript.Unpause();
 	}
 
-	// Token: 0x0600180D RID: 6157 RVA: 0x0004AE78 File Offset: 0x00049078
+	// Token: 0x060021D2 RID: 8658 RVA: 0x000A8A74 File Offset: 0x000A6C74
 	public void ResetLogic()
 	{
 		if (!this.IsInitialized)
@@ -1063,110 +1063,110 @@ public class LogicController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400174A RID: 5962
+	// Token: 0x04001E71 RID: 7793
 	[SerializeField]
 	private bool m_hasNoLogic;
 
-	// Token: 0x0400174B RID: 5963
+	// Token: 0x04001E72 RID: 7794
 	[SerializeField]
 	[HideInInspector]
 	private string m_forceExecuteLogicBlockName;
 
-	// Token: 0x0400174C RID: 5964
+	// Token: 0x04001E73 RID: 7795
 	[SerializeField]
 	[HideInInspector]
 	private bool m_printDebug;
 
-	// Token: 0x0400174D RID: 5965
+	// Token: 0x04001E74 RID: 7796
 	private BaseAIScript m_logicScript;
 
-	// Token: 0x0400174E RID: 5966
+	// Token: 0x04001E75 RID: 7797
 	private LogicController_SO m_logicControllerSO;
 
-	// Token: 0x0400174F RID: 5967
+	// Token: 0x04001E76 RID: 7798
 	private EnemyLogicType m_enemyLogicType;
 
-	// Token: 0x04001750 RID: 5968
+	// Token: 0x04001E77 RID: 7799
 	private bool m_isExecuting;
 
-	// Token: 0x04001751 RID: 5969
+	// Token: 0x04001E78 RID: 7800
 	private string m_currentLogicBlockName;
 
-	// Token: 0x04001752 RID: 5970
+	// Token: 0x04001E79 RID: 7801
 	private string m_previousLogicBlockName;
 
-	// Token: 0x04001753 RID: 5971
+	// Token: 0x04001E7A RID: 7802
 	private bool m_isInitialized;
 
-	// Token: 0x04001754 RID: 5972
+	// Token: 0x04001E7B RID: 7803
 	private LogicState m_currentLogicState;
 
-	// Token: 0x04001755 RID: 5973
+	// Token: 0x04001E7C RID: 7804
 	private float m_restStateCounter;
 
-	// Token: 0x04001756 RID: 5974
+	// Token: 0x04001E7D RID: 7805
 	private bool m_hasExecutedBefore;
 
-	// Token: 0x04001757 RID: 5975
+	// Token: 0x04001E7E RID: 7806
 	private float m_iterateUpdateTime;
 
-	// Token: 0x04001758 RID: 5976
+	// Token: 0x04001E7F RID: 7807
 	private bool m_logicIsActivated;
 
-	// Token: 0x04001759 RID: 5977
+	// Token: 0x04001E80 RID: 7808
 	private float m_reactivationTimeOutTimer;
 
-	// Token: 0x0400175A RID: 5978
+	// Token: 0x04001E81 RID: 7809
 	private float m_aggroTimer;
 
-	// Token: 0x0400175B RID: 5979
+	// Token: 0x04001E82 RID: 7810
 	private EnemyController m_enemyController;
 
-	// Token: 0x0400175C RID: 5980
+	// Token: 0x04001E83 RID: 7811
 	private bool m_isExecutingDeathLogic;
 
-	// Token: 0x0400175D RID: 5981
+	// Token: 0x04001E84 RID: 7812
 	private Dictionary<string, float> m_cooldownLogicTimersDict;
 
-	// Token: 0x0400175E RID: 5982
+	// Token: 0x04001E85 RID: 7813
 	private Coroutine m_delayLogicCoroutine;
 
-	// Token: 0x0400175F RID: 5983
+	// Token: 0x04001E86 RID: 7814
 	private WaitRL_Yield m_logicDelayYield;
 
-	// Token: 0x04001760 RID: 5984
+	// Token: 0x04001E87 RID: 7815
 	private bool m_isDelayed = true;
 
-	// Token: 0x04001761 RID: 5985
+	// Token: 0x04001E88 RID: 7816
 	private List<string> m_disabledLogicBlocksList = new List<string>();
 
-	// Token: 0x04001762 RID: 5986
+	// Token: 0x04001E89 RID: 7817
 	private List<string> m_debugAttackList;
 
-	// Token: 0x04001763 RID: 5987
+	// Token: 0x04001E8A RID: 7818
 	private int m_debugAttackIndex;
 
-	// Token: 0x04001764 RID: 5988
+	// Token: 0x04001E8B RID: 7819
 	private Dictionary<LogicState, Dictionary<string, int>> m_logicBlockOddsOverrideDict = new Dictionary<LogicState, Dictionary<string, int>>();
 
-	// Token: 0x0400176C RID: 5996
+	// Token: 0x04001E93 RID: 7827
 	private static int RANK_STRING_HASH = Animator.StringToHash("Rank");
 
-	// Token: 0x0400176D RID: 5997
+	// Token: 0x04001E94 RID: 7828
 	private static int ISBOSS_STRING_HASH = Animator.StringToHash("IsBoss");
 
-	// Token: 0x0400176E RID: 5998
+	// Token: 0x04001E95 RID: 7829
 	private WaitForFixedUpdate m_waitFixedUpdateYield = new WaitForFixedUpdate();
 
-	// Token: 0x0400176F RID: 5999
+	// Token: 0x04001E96 RID: 7830
 	private bool m_hitboxesDisabled;
 
-	// Token: 0x04001770 RID: 6000
+	// Token: 0x04001E97 RID: 7831
 	private static Dictionary<Type, Dictionary<LogicState, StringMethodInfo_Dictionary>> m_staticMethodInfoDict = new Dictionary<Type, Dictionary<LogicState, StringMethodInfo_Dictionary>>();
 
-	// Token: 0x04001771 RID: 6001
+	// Token: 0x04001E98 RID: 7832
 	private static List<string> m_cooldownReductionHelper = new List<string>();
 
-	// Token: 0x04001772 RID: 6002
+	// Token: 0x04001E99 RID: 7833
 	private Rect m_rangeRect;
 }

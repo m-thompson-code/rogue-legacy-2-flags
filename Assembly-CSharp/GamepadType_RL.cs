@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200073A RID: 1850
+// Token: 0x02000BF8 RID: 3064
 public class GamepadType_RL
 {
-	// Token: 0x17001631 RID: 5681
-	// (get) Token: 0x06004102 RID: 16642 RVA: 0x000E6458 File Offset: 0x000E4658
+	// Token: 0x17001E2D RID: 7725
+	// (get) Token: 0x06005A7F RID: 23167 RVA: 0x000318C4 File Offset: 0x0002FAC4
 	public static GamepadType[] GamepadTypeArray
 	{
 		get
@@ -17,6 +17,6 @@ public class GamepadType_RL
 		}
 	}
 
-	// Token: 0x04003462 RID: 13410
+	// Token: 0x040046DE RID: 18142
 	private static GamepadType[] m_gamepadTypeArray;
 }

@@ -4,10 +4,10 @@ using FMODUnity;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-// Token: 0x02000188 RID: 392
+// Token: 0x020002D3 RID: 723
 public class ShieldBlock_Ability : BaseAbility_RL, ITalent, IAbility
 {
-	// Token: 0x06000E03 RID: 3587 RVA: 0x0002B023 File Offset: 0x00029223
+	// Token: 0x06001590 RID: 5520 RVA: 0x0000AAF8 File Offset: 0x00008CF8
 	protected override void InitializeProjectileNameArray()
 	{
 		this.m_projectileNameArray = new string[]
@@ -17,8 +17,8 @@ public class ShieldBlock_Ability : BaseAbility_RL, ITalent, IAbility
 		};
 	}
 
-	// Token: 0x17000789 RID: 1929
-	// (get) Token: 0x06000E04 RID: 3588 RVA: 0x0002B042 File Offset: 0x00029242
+	// Token: 0x17000A0B RID: 2571
+	// (get) Token: 0x06001591 RID: 5521 RVA: 0x0000AB17 File Offset: 0x00008D17
 	public override string ProjectileName
 	{
 		get
@@ -31,28 +31,28 @@ public class ShieldBlock_Ability : BaseAbility_RL, ITalent, IAbility
 		}
 	}
 
-	// Token: 0x06000E05 RID: 3589 RVA: 0x0002B058 File Offset: 0x00029258
+	// Token: 0x06001592 RID: 5522 RVA: 0x0000AB2D File Offset: 0x00008D2D
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onPlayerBlocked = new Action<MonoBehaviour, EventArgs>(this.OnPlayerBlocked);
 	}
 
-	// Token: 0x06000E06 RID: 3590 RVA: 0x0002B072 File Offset: 0x00029272
+	// Token: 0x06001593 RID: 5523 RVA: 0x0000AB47 File Offset: 0x00008D47
 	public override void PreCastAbility()
 	{
 		base.PreCastAbility();
 		this.m_raiseShieldEmitter.Play();
 	}
 
-	// Token: 0x06000E07 RID: 3591 RVA: 0x0002B085 File Offset: 0x00029285
+	// Token: 0x06001594 RID: 5524 RVA: 0x0000AB5A File Offset: 0x00008D5A
 	protected override void OnEnterExitLogic()
 	{
 		base.OnEnterExitLogic();
 		this.m_lowerShieldEmitter.Play();
 	}
 
-	// Token: 0x06000E08 RID: 3592 RVA: 0x0002B098 File Offset: 0x00029298
+	// Token: 0x06001595 RID: 5525 RVA: 0x0000AB6D File Offset: 0x00008D6D
 	public override IEnumerator CastAbility()
 	{
 		this.m_stopAbilityFlag = false;
@@ -66,7 +66,7 @@ public class ShieldBlock_Ability : BaseAbility_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x06000E09 RID: 3593 RVA: 0x0002B0A8 File Offset: 0x000292A8
+	// Token: 0x06001596 RID: 5526 RVA: 0x0008A238 File Offset: 0x00088438
 	public override void StopAbility(bool abilityInterrupted)
 	{
 		if (this.m_abilityController.PlayerController.IsBlocking)
@@ -85,7 +85,7 @@ public class ShieldBlock_Ability : BaseAbility_RL, ITalent, IAbility
 		base.StopAbility(abilityInterrupted);
 	}
 
-	// Token: 0x06000E0A RID: 3594 RVA: 0x0002B170 File Offset: 0x00029370
+	// Token: 0x06001597 RID: 5527 RVA: 0x0008A300 File Offset: 0x00088500
 	private void OnPlayerBlocked(MonoBehaviour sender, EventArgs args)
 	{
 		if (this.m_abilityController.PlayerController.IsDead)
@@ -130,14 +130,14 @@ public class ShieldBlock_Ability : BaseAbility_RL, ITalent, IAbility
 		this.m_stopAbilityFlag = true;
 	}
 
-	// Token: 0x06000E0B RID: 3595 RVA: 0x0002B3B3 File Offset: 0x000295B3
+	// Token: 0x06001598 RID: 5528 RVA: 0x0000AB7C File Offset: 0x00008D7C
 	protected override void FireProjectile()
 	{
 		base.FireProjectile();
 		this.m_firedProjectile = null;
 	}
 
-	// Token: 0x06000E0C RID: 3596 RVA: 0x0002B3C2 File Offset: 0x000295C2
+	// Token: 0x06001599 RID: 5529 RVA: 0x0000AB8B File Offset: 0x00008D8B
 	protected override IEnumerator ChangeAnim(float duration)
 	{
 		if (base.CurrentAbilityAnimState == AbilityAnimState.Tell)
@@ -151,31 +151,31 @@ public class ShieldBlock_Ability : BaseAbility_RL, ITalent, IAbility
 		yield break;
 	}
 
-	// Token: 0x04001106 RID: 4358
+	// Token: 0x04001682 RID: 5762
 	[SerializeField]
 	private StudioEventEmitter m_raiseShieldEmitter;
 
-	// Token: 0x04001107 RID: 4359
+	// Token: 0x04001683 RID: 5763
 	[SerializeField]
 	private StudioEventEmitter m_lowerShieldEmitter;
 
-	// Token: 0x04001108 RID: 4360
+	// Token: 0x04001684 RID: 5764
 	[SerializeField]
 	private StudioEventEmitter m_blockEmitter;
 
-	// Token: 0x04001109 RID: 4361
+	// Token: 0x04001685 RID: 5765
 	[SerializeField]
 	private StudioEventEmitter m_perfectBlockEmitter;
 
-	// Token: 0x0400110A RID: 4362
+	// Token: 0x04001686 RID: 5766
 	private bool m_stopAbilityFlag;
 
-	// Token: 0x0400110B RID: 4363
+	// Token: 0x04001687 RID: 5767
 	private bool m_isPerfectBlock;
 
-	// Token: 0x0400110C RID: 4364
+	// Token: 0x04001688 RID: 5768
 	private WaitRL_Yield m_fireProjectileWaitYield;
 
-	// Token: 0x0400110D RID: 4365
+	// Token: 0x04001689 RID: 5769
 	private Action<MonoBehaviour, EventArgs> m_onPlayerBlocked;
 }

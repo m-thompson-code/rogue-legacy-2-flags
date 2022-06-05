@@ -6,11 +6,11 @@ using RL_Windows;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x02000549 RID: 1353
+// Token: 0x020008F3 RID: 2291
 public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAudioEventEmitter, IRoomConsumer
 {
-	// Token: 0x1700123A RID: 4666
-	// (get) Token: 0x06003198 RID: 12696 RVA: 0x000A7C47 File Offset: 0x000A5E47
+	// Token: 0x170018B5 RID: 6325
+	// (get) Token: 0x0600458E RID: 17806 RVA: 0x000262A0 File Offset: 0x000244A0
 	public SpeechBubbleType BubbleType
 	{
 		get
@@ -27,8 +27,8 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		}
 	}
 
-	// Token: 0x1700123B RID: 4667
-	// (get) Token: 0x06003199 RID: 12697 RVA: 0x000A7C5D File Offset: 0x000A5E5D
+	// Token: 0x170018B6 RID: 6326
+	// (get) Token: 0x0600458F RID: 17807 RVA: 0x000262B6 File Offset: 0x000244B6
 	public bool ShouldDisplaySpeechBubble
 	{
 		get
@@ -37,7 +37,7 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		}
 	}
 
-	// Token: 0x0600319A RID: 12698 RVA: 0x000A7C76 File Offset: 0x000A5E76
+	// Token: 0x06004590 RID: 17808 RVA: 0x000262CF File Offset: 0x000244CF
 	public static bool HasEventDialogue()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround)
@@ -47,7 +47,7 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		return !SaveManager.PlayerSaveData.GetFlag(PlayerSaveFlag.ChallengeDialogue_Intro);
 	}
 
-	// Token: 0x0600319B RID: 12699 RVA: 0x000A7CB8 File Offset: 0x000A5EB8
+	// Token: 0x06004591 RID: 17809 RVA: 0x00111348 File Offset: 0x0010F548
 	private bool HasUnseenChallenges()
 	{
 		if (SaveManager.PlayerSaveData.EndingSpawnRoom == EndingSpawnRoomType.AboveGround)
@@ -68,13 +68,13 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		return false;
 	}
 
-	// Token: 0x1700123C RID: 4668
-	// (get) Token: 0x0600319C RID: 12700 RVA: 0x000A7D14 File Offset: 0x000A5F14
-	// (set) Token: 0x0600319D RID: 12701 RVA: 0x000A7D1C File Offset: 0x000A5F1C
+	// Token: 0x170018B7 RID: 6327
+	// (get) Token: 0x06004592 RID: 17810 RVA: 0x0002630F File Offset: 0x0002450F
+	// (set) Token: 0x06004593 RID: 17811 RVA: 0x00026317 File Offset: 0x00024517
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x1700123D RID: 4669
-	// (get) Token: 0x0600319E RID: 12702 RVA: 0x000A7D25 File Offset: 0x000A5F25
+	// Token: 0x170018B8 RID: 6328
+	// (get) Token: 0x06004594 RID: 17812 RVA: 0x00009A7B File Offset: 0x00007C7B
 	public string Description
 	{
 		get
@@ -83,7 +83,7 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		}
 	}
 
-	// Token: 0x0600319F RID: 12703 RVA: 0x000A7D30 File Offset: 0x000A5F30
+	// Token: 0x06004595 RID: 17813 RVA: 0x001113A4 File Offset: 0x0010F5A4
 	private void Awake()
 	{
 		this.m_waitYield = new WaitRL_Yield(0f, false);
@@ -94,13 +94,13 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		this.m_closeChallengeWindowUnityEvent = new UnityAction(this.CloseChallengeWindow);
 	}
 
-	// Token: 0x060031A0 RID: 12704 RVA: 0x000A7D9D File Offset: 0x000A5F9D
+	// Token: 0x06004596 RID: 17814 RVA: 0x00026320 File Offset: 0x00024520
 	private void Start()
 	{
 		this.m_playerPositionObj.SetActive(false);
 	}
 
-	// Token: 0x060031A1 RID: 12705 RVA: 0x000A7DAB File Offset: 0x000A5FAB
+	// Token: 0x06004597 RID: 17815 RVA: 0x0002632E File Offset: 0x0002452E
 	private void OnEnable()
 	{
 		this.m_isSleeping = true;
@@ -110,14 +110,14 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		this.m_interactable.SpeechBubble.SetSpeechBubbleEnabled(true);
 	}
 
-	// Token: 0x060031A2 RID: 12706 RVA: 0x000A7DEA File Offset: 0x000A5FEA
+	// Token: 0x06004598 RID: 17816 RVA: 0x0002636D File Offset: 0x0002456D
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom), false);
 	}
 
-	// Token: 0x060031A3 RID: 12707 RVA: 0x000A7E11 File Offset: 0x000A6011
+	// Token: 0x06004599 RID: 17817 RVA: 0x00026394 File Offset: 0x00024594
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -126,13 +126,13 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		}
 	}
 
-	// Token: 0x060031A4 RID: 12708 RVA: 0x000A7E3D File Offset: 0x000A603D
+	// Token: 0x0600459A RID: 17818 RVA: 0x000263C0 File Offset: 0x000245C0
 	private void OnPlayerEnterRoom(object sender, EventArgs args)
 	{
 		ChallengeShop.m_endingSpeechBubblePlayed = false;
 	}
 
-	// Token: 0x060031A5 RID: 12709 RVA: 0x000A7E45 File Offset: 0x000A6045
+	// Token: 0x0600459B RID: 17819 RVA: 0x000263C8 File Offset: 0x000245C8
 	public void OpenChallengeMenu()
 	{
 		this.m_checkForSleep = false;
@@ -141,7 +141,7 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		base.StartCoroutine(this.OpenChallengeMenuCoroutine());
 	}
 
-	// Token: 0x060031A6 RID: 12710 RVA: 0x000A7E6E File Offset: 0x000A606E
+	// Token: 0x0600459C RID: 17820 RVA: 0x000263F1 File Offset: 0x000245F1
 	private IEnumerator OpenChallengeMenuCoroutine()
 	{
 		this.m_snoreEventEmitter.Stop();
@@ -190,7 +190,7 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		yield break;
 	}
 
-	// Token: 0x060031A7 RID: 12711 RVA: 0x000A7E80 File Offset: 0x000A6080
+	// Token: 0x0600459D RID: 17821 RVA: 0x00111414 File Offset: 0x0010F614
 	private void RunNPCIntroDialogue()
 	{
 		SaveManager.PlayerSaveData.SetFlag(PlayerSaveFlag.ChallengeDialogue_Intro, true);
@@ -200,7 +200,7 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_displayChallengeWindow);
 	}
 
-	// Token: 0x060031A8 RID: 12712 RVA: 0x000A7EE4 File Offset: 0x000A60E4
+	// Token: 0x0600459E RID: 17822 RVA: 0x00111478 File Offset: 0x0010F678
 	private void RunEndingDialogue()
 	{
 		string textLocID;
@@ -230,13 +230,13 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		DialogueManager.AddDialogueCompleteEndHandler(this.m_closeChallengeWindow);
 	}
 
-	// Token: 0x060031A9 RID: 12713 RVA: 0x000A7F81 File Offset: 0x000A6181
+	// Token: 0x0600459F RID: 17823 RVA: 0x00026400 File Offset: 0x00024600
 	private void DisplayChallengeWindow()
 	{
 		base.StartCoroutine(this.DisplayChallengeWindowCoroutine());
 	}
 
-	// Token: 0x060031AA RID: 12714 RVA: 0x000A7F90 File Offset: 0x000A6190
+	// Token: 0x060045A0 RID: 17824 RVA: 0x0002640F File Offset: 0x0002460F
 	private IEnumerator DisplayChallengeWindowCoroutine()
 	{
 		if (!WindowManager.GetIsWindowLoaded(WindowID.ChallengeNPC))
@@ -249,7 +249,7 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		yield break;
 	}
 
-	// Token: 0x060031AB RID: 12715 RVA: 0x000A7F9F File Offset: 0x000A619F
+	// Token: 0x060045A1 RID: 17825 RVA: 0x0002641E File Offset: 0x0002461E
 	private IEnumerator MovePlayerToNPC()
 	{
 		PlayerManager.GetPlayerController().SetVelocity(0f, 0f, false);
@@ -261,7 +261,7 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		yield break;
 	}
 
-	// Token: 0x060031AC RID: 12716 RVA: 0x000A7FB0 File Offset: 0x000A61B0
+	// Token: 0x060045A2 RID: 17826 RVA: 0x00111518 File Offset: 0x0010F718
 	private void CloseChallengeWindow()
 	{
 		if (WindowManager.GetIsWindowLoaded(WindowID.ChallengeNPC))
@@ -273,7 +273,7 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		this.m_npcController.SetNPCState(NPCState.AtAttention, false);
 	}
 
-	// Token: 0x060031AD RID: 12717 RVA: 0x000A8008 File Offset: 0x000A6208
+	// Token: 0x060045A3 RID: 17827 RVA: 0x00111570 File Offset: 0x0010F770
 	private void FixedUpdate()
 	{
 		if (!this.m_checkForSleep)
@@ -303,7 +303,7 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		}
 	}
 
-	// Token: 0x060031AE RID: 12718 RVA: 0x000A8079 File Offset: 0x000A6279
+	// Token: 0x060045A4 RID: 17828 RVA: 0x0002642D File Offset: 0x0002462D
 	private IEnumerator SleepCoroutine()
 	{
 		float num = UnityEngine.Random.Range(2f, 4f);
@@ -326,69 +326,69 @@ public class ChallengeShop : MonoBehaviour, IRootObj, IDisplaySpeechBubble, IAud
 		yield break;
 	}
 
-	// Token: 0x060031B0 RID: 12720 RVA: 0x000A8097 File Offset: 0x000A6297
+	// Token: 0x060045A6 RID: 17830 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400270C RID: 9996
+	// Token: 0x040035BC RID: 13756
 	[SerializeField]
 	private GameObject m_playerPositionObj;
 
-	// Token: 0x0400270D RID: 9997
+	// Token: 0x040035BD RID: 13757
 	[SerializeField]
 	private NPCController m_npcController;
 
-	// Token: 0x0400270E RID: 9998
+	// Token: 0x040035BE RID: 13758
 	[SerializeField]
 	[EventRef]
 	private string m_greetingAudioPath;
 
-	// Token: 0x0400270F RID: 9999
+	// Token: 0x040035BF RID: 13759
 	[SerializeField]
 	[EventRef]
 	private string m_wakeupAudioPath;
 
-	// Token: 0x04002710 RID: 10000
+	// Token: 0x040035C0 RID: 13760
 	[SerializeField]
 	[EventRef]
 	private string m_farewellAudioPath;
 
-	// Token: 0x04002711 RID: 10001
+	// Token: 0x040035C1 RID: 13761
 	[SerializeField]
 	private StudioEventEmitter m_snoreEventEmitter;
 
-	// Token: 0x04002712 RID: 10002
+	// Token: 0x040035C2 RID: 13762
 	private Interactable m_interactable;
 
-	// Token: 0x04002713 RID: 10003
+	// Token: 0x040035C3 RID: 13763
 	private bool m_isSleeping = true;
 
-	// Token: 0x04002714 RID: 10004
+	// Token: 0x040035C4 RID: 13764
 	private bool m_isFallingAsleep;
 
-	// Token: 0x04002715 RID: 10005
+	// Token: 0x040035C5 RID: 13765
 	private bool m_checkForSleep;
 
-	// Token: 0x04002716 RID: 10006
+	// Token: 0x040035C6 RID: 13766
 	private Coroutine m_sleepCoroutine;
 
-	// Token: 0x04002717 RID: 10007
+	// Token: 0x040035C7 RID: 13767
 	private WaitRL_Yield m_waitYield;
 
-	// Token: 0x04002718 RID: 10008
+	// Token: 0x040035C8 RID: 13768
 	private SpeechBubbleController m_speechBubble;
 
-	// Token: 0x04002719 RID: 10009
+	// Token: 0x040035C9 RID: 13769
 	private static bool m_endingSpeechBubblePlayed;
 
-	// Token: 0x0400271A RID: 10010
+	// Token: 0x040035CA RID: 13770
 	private Action m_displayChallengeWindow;
 
-	// Token: 0x0400271B RID: 10011
+	// Token: 0x040035CB RID: 13771
 	private Action m_closeChallengeWindow;
 
-	// Token: 0x0400271C RID: 10012
+	// Token: 0x040035CC RID: 13772
 	private UnityAction m_closeChallengeWindowUnityEvent;
 }

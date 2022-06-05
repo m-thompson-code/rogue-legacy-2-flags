@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x020008EC RID: 2284
+	// Token: 0x02000E61 RID: 3681
 	public class DeathScreenXPAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001852 RID: 6226
-		// (get) Token: 0x06004B0C RID: 19212 RVA: 0x0010DFAD File Offset: 0x0010C1AD
+		// Token: 0x1700213B RID: 8507
+		// (get) Token: 0x060067D7 RID: 26583 RVA: 0x000395B0 File Offset: 0x000377B0
 		public string Description
 		{
 			get
@@ -22,7 +22,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B0D RID: 19213 RVA: 0x0010DFD4 File Offset: 0x0010C1D4
+		// Token: 0x060067D8 RID: 26584 RVA: 0x0017E414 File Offset: 0x0017C614
 		private void Awake()
 		{
 			PlayerDeathRankTextController component = base.GetComponent<PlayerDeathRankTextController>();
@@ -32,14 +32,14 @@ namespace RLAudio
 			component.LevelGainedRelay.AddListener(new Action<int>(this.OnLevelGained), false);
 		}
 
-		// Token: 0x06004B0E RID: 19214 RVA: 0x0010E04A File Offset: 0x0010C24A
+		// Token: 0x060067D9 RID: 26585 RVA: 0x000395D6 File Offset: 0x000377D6
 		private void Start()
 		{
 			this.m_xpGainEventInstance = AudioUtility.GetEventInstance(this.m_xpGainAudioPath, base.transform);
 			this.m_xpGainEndEventInstance = AudioUtility.GetEventInstance(this.m_xpGainEndAudioPath, base.transform);
 		}
 
-		// Token: 0x06004B0F RID: 19215 RVA: 0x0010E07A File Offset: 0x0010C27A
+		// Token: 0x060067DA RID: 26586 RVA: 0x00039606 File Offset: 0x00037806
 		private void OnDestroy()
 		{
 			if (this.m_xpGainEventInstance.isValid())
@@ -52,20 +52,20 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004B10 RID: 19216 RVA: 0x0010E0AE File Offset: 0x0010C2AE
+		// Token: 0x060067DB RID: 26587 RVA: 0x0003963A File Offset: 0x0003783A
 		private void OnXPGainStart()
 		{
 			AudioManager.Play(this, this.m_xpGainEventInstance);
 		}
 
-		// Token: 0x06004B11 RID: 19217 RVA: 0x0010E0BC File Offset: 0x0010C2BC
+		// Token: 0x060067DC RID: 26588 RVA: 0x00039648 File Offset: 0x00037848
 		private void OnXPGained(int currentXP, int nextLevelXP)
 		{
 			this.m_percentageComplete = (float)currentXP / (float)nextLevelXP;
 			this.m_xpGainEventInstance.setParameterByName("xp_gain", this.m_percentageComplete, false);
 		}
 
-		// Token: 0x06004B12 RID: 19218 RVA: 0x0010E0E1 File Offset: 0x0010C2E1
+		// Token: 0x060067DD RID: 26589 RVA: 0x0003966D File Offset: 0x0003786D
 		private void OnXPGainComplete()
 		{
 			AudioManager.Stop(this.m_xpGainEventInstance, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
@@ -73,40 +73,40 @@ namespace RLAudio
 			AudioManager.Play(this, this.m_xpGainEndEventInstance);
 		}
 
-		// Token: 0x06004B13 RID: 19219 RVA: 0x0010E114 File Offset: 0x0010C314
+		// Token: 0x060067DE RID: 26590 RVA: 0x0017E48C File Offset: 0x0017C68C
 		private void OnLevelGained(int level)
 		{
 			AudioManager.PlayOneShot(this, this.m_levelUpAudioPath, default(Vector3));
 		}
 
-		// Token: 0x04003F10 RID: 16144
+		// Token: 0x0400544A RID: 21578
 		[SerializeField]
 		[EventRef]
 		private string m_xpGainAudioPath;
 
-		// Token: 0x04003F11 RID: 16145
+		// Token: 0x0400544B RID: 21579
 		[SerializeField]
 		[EventRef]
 		private string m_xpGainEndAudioPath;
 
-		// Token: 0x04003F12 RID: 16146
+		// Token: 0x0400544C RID: 21580
 		[SerializeField]
 		[EventRef]
 		private string m_levelUpAudioPath;
 
-		// Token: 0x04003F13 RID: 16147
+		// Token: 0x0400544D RID: 21581
 		private string m_description = string.Empty;
 
-		// Token: 0x04003F14 RID: 16148
+		// Token: 0x0400544E RID: 21582
 		private EventInstance m_xpGainEventInstance;
 
-		// Token: 0x04003F15 RID: 16149
+		// Token: 0x0400544F RID: 21583
 		private EventInstance m_xpGainEndEventInstance;
 
-		// Token: 0x04003F16 RID: 16150
+		// Token: 0x04005450 RID: 21584
 		private float m_percentageComplete;
 
-		// Token: 0x04003F17 RID: 16151
+		// Token: 0x04005451 RID: 21585
 		private const string XP_PARAMETER = "xp_gain";
 	}
 }

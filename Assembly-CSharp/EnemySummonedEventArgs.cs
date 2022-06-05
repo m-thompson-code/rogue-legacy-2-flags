@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020007B9 RID: 1977
+// Token: 0x02000C7F RID: 3199
 public class EnemySummonedEventArgs : EventArgs
 {
-	// Token: 0x06004279 RID: 17017 RVA: 0x000EBD39 File Offset: 0x000E9F39
+	// Token: 0x06005C02 RID: 23554 RVA: 0x0003274F File Offset: 0x0003094F
 	public EnemySummonedEventArgs(EnemyController summonedEnemy, ISummoner summoner)
 	{
 		this.Initialize(summonedEnemy, summoner);
 	}
 
-	// Token: 0x0600427A RID: 17018 RVA: 0x000EBD49 File Offset: 0x000E9F49
+	// Token: 0x06005C03 RID: 23555 RVA: 0x0003275F File Offset: 0x0003095F
 	public void Initialize(EnemyController summonedEnemy, ISummoner summoner)
 	{
 		this.SummonedEnemy = summonedEnemy;
 		this.Summoner = summoner;
 	}
 
-	// Token: 0x17001682 RID: 5762
-	// (get) Token: 0x0600427B RID: 17019 RVA: 0x000EBD59 File Offset: 0x000E9F59
-	// (set) Token: 0x0600427C RID: 17020 RVA: 0x000EBD61 File Offset: 0x000E9F61
+	// Token: 0x17001E80 RID: 7808
+	// (get) Token: 0x06005C04 RID: 23556 RVA: 0x0003276F File Offset: 0x0003096F
+	// (set) Token: 0x06005C05 RID: 23557 RVA: 0x00032777 File Offset: 0x00030977
 	public ISummoner Summoner { get; private set; }
 
-	// Token: 0x17001683 RID: 5763
-	// (get) Token: 0x0600427D RID: 17021 RVA: 0x000EBD6A File Offset: 0x000E9F6A
-	// (set) Token: 0x0600427E RID: 17022 RVA: 0x000EBD72 File Offset: 0x000E9F72
+	// Token: 0x17001E81 RID: 7809
+	// (get) Token: 0x06005C06 RID: 23558 RVA: 0x00032780 File Offset: 0x00030980
+	// (set) Token: 0x06005C07 RID: 23559 RVA: 0x00032788 File Offset: 0x00030988
 	public EnemyController SummonedEnemy { get; private set; }
 }

@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000226 RID: 550
+// Token: 0x020003DC RID: 988
 [CreateAssetMenu(menuName = "Custom/Libraries/Effect Library")]
 public class EffectLibrary : ScriptableObject
 {
-	// Token: 0x17000B25 RID: 2853
-	// (get) Token: 0x0600167F RID: 5759 RVA: 0x00046301 File Offset: 0x00044501
+	// Token: 0x17000E4C RID: 3660
+	// (get) Token: 0x0600201E RID: 8222 RVA: 0x0001106F File Offset: 0x0000F26F
 	public static EffectLibrary Instance
 	{
 		get
@@ -21,7 +21,7 @@ public class EffectLibrary : ScriptableObject
 		}
 	}
 
-	// Token: 0x06001680 RID: 5760 RVA: 0x0004632A File Offset: 0x0004452A
+	// Token: 0x0600201F RID: 8223 RVA: 0x00011098 File Offset: 0x0000F298
 	public static IEnumerator LoadAsync()
 	{
 		CDGAsyncLoadRequest<EffectLibrary> library = CDGResources.LoadAsync<EffectLibrary>("Scriptable Objects/Libraries/EffectLibrary", "");
@@ -33,7 +33,7 @@ public class EffectLibrary : ScriptableObject
 		yield break;
 	}
 
-	// Token: 0x06001681 RID: 5761 RVA: 0x00046334 File Offset: 0x00044534
+	// Token: 0x06002020 RID: 8224 RVA: 0x000A4600 File Offset: 0x000A2800
 	public static List<EffectEntry> GetEffectEntryList(EffectCategoryType category)
 	{
 		if (category <= EffectCategoryType.Enemies)
@@ -86,53 +86,53 @@ public class EffectLibrary : ScriptableObject
 		return null;
 	}
 
-	// Token: 0x06001682 RID: 5762 RVA: 0x000463DA File Offset: 0x000445DA
+	// Token: 0x06002021 RID: 8225 RVA: 0x000110A0 File Offset: 0x0000F2A0
 	public static EffectEntry GetEffectEntry(EffectCategoryType category, int index)
 	{
 		return EffectLibrary.GetEffectEntryList(category)[index];
 	}
 
-	// Token: 0x06001683 RID: 5763 RVA: 0x000463E8 File Offset: 0x000445E8
+	// Token: 0x06002022 RID: 8226 RVA: 0x000110AE File Offset: 0x0000F2AE
 	public static void AddEffectEntry(EffectCategoryType category, EffectEntry newEffectEntry)
 	{
 		EffectLibrary.GetEffectEntryList(category).Add(newEffectEntry);
 	}
 
-	// Token: 0x040015B8 RID: 5560
+	// Token: 0x04001CC5 RID: 7365
 	public const string RESOURCES_PATH = "Scriptable Objects/Libraries/EffectLibrary";
 
-	// Token: 0x040015B9 RID: 5561
+	// Token: 0x04001CC6 RID: 7366
 	[SerializeField]
 	private List<EffectEntry> m_genericEffectsList = new List<EffectEntry>();
 
-	// Token: 0x040015BA RID: 5562
+	// Token: 0x04001CC7 RID: 7367
 	[SerializeField]
 	private List<EffectEntry> m_playerEffectsList = new List<EffectEntry>();
 
-	// Token: 0x040015BB RID: 5563
+	// Token: 0x04001CC8 RID: 7368
 	[SerializeField]
 	private List<EffectEntry> m_playerInteractionEffectsList = new List<EffectEntry>();
 
-	// Token: 0x040015BC RID: 5564
+	// Token: 0x04001CC9 RID: 7369
 	[SerializeField]
 	private List<EffectEntry> m_enemyEffectsList = new List<EffectEntry>();
 
-	// Token: 0x040015BD RID: 5565
+	// Token: 0x04001CCA RID: 7370
 	[SerializeField]
 	private List<EffectEntry> m_propsEffectList = new List<EffectEntry>();
 
-	// Token: 0x040015BE RID: 5566
+	// Token: 0x04001CCB RID: 7371
 	[SerializeField]
 	private List<EffectEntry> m_projectilesEffectList = new List<EffectEntry>();
 
-	// Token: 0x040015BF RID: 5567
+	// Token: 0x04001CCC RID: 7372
 	[SerializeField]
 	private List<EffectEntry> m_selfAnimationEffectList = new List<EffectEntry>();
 
-	// Token: 0x040015C0 RID: 5568
+	// Token: 0x04001CCD RID: 7373
 	[SerializeField]
 	private List<EffectEntry> m_uiEffectList = new List<EffectEntry>();
 
-	// Token: 0x040015C1 RID: 5569
+	// Token: 0x04001CCE RID: 7374
 	private static EffectLibrary m_instance;
 }

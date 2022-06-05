@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x02000450 RID: 1104
+// Token: 0x0200072C RID: 1836
 public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 {
-	// Token: 0x17001000 RID: 4096
-	// (get) Token: 0x060028B3 RID: 10419 RVA: 0x00086865 File Offset: 0x00084A65
+	// Token: 0x17001507 RID: 5383
+	// (get) Token: 0x06003833 RID: 14387 RVA: 0x00005391 File Offset: 0x00003591
 	public override float BaseDamage
 	{
 		get
@@ -15,9 +15,9 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x17001001 RID: 4097
-	// (get) Token: 0x060028B4 RID: 10420 RVA: 0x0008686C File Offset: 0x00084A6C
-	// (set) Token: 0x060028B5 RID: 10421 RVA: 0x00086874 File Offset: 0x00084A74
+	// Token: 0x17001508 RID: 5384
+	// (get) Token: 0x06003834 RID: 14388 RVA: 0x0001ED88 File Offset: 0x0001CF88
+	// (set) Token: 0x06003835 RID: 14389 RVA: 0x0001ED90 File Offset: 0x0001CF90
 	public float ExpansionPercent
 	{
 		get
@@ -30,9 +30,9 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x17001002 RID: 4098
-	// (get) Token: 0x060028B6 RID: 10422 RVA: 0x0008687D File Offset: 0x00084A7D
-	// (set) Token: 0x060028B7 RID: 10423 RVA: 0x00086885 File Offset: 0x00084A85
+	// Token: 0x17001509 RID: 5385
+	// (get) Token: 0x06003836 RID: 14390 RVA: 0x0001ED99 File Offset: 0x0001CF99
+	// (set) Token: 0x06003837 RID: 14391 RVA: 0x0001EDA1 File Offset: 0x0001CFA1
 	public float CurrentRotation
 	{
 		get
@@ -45,8 +45,8 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x17001003 RID: 4099
-	// (get) Token: 0x060028B8 RID: 10424 RVA: 0x0008688E File Offset: 0x00084A8E
+	// Token: 0x1700150A RID: 5386
+	// (get) Token: 0x06003838 RID: 14392 RVA: 0x0001EDAA File Offset: 0x0001CFAA
 	public float InitialRotation
 	{
 		get
@@ -55,8 +55,8 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x17001004 RID: 4100
-	// (get) Token: 0x060028B9 RID: 10425 RVA: 0x0008689B File Offset: 0x00084A9B
+	// Token: 0x1700150B RID: 5387
+	// (get) Token: 0x06003839 RID: 14393 RVA: 0x0001EDB7 File Offset: 0x0001CFB7
 	public GameObject OrbiterBall
 	{
 		get
@@ -65,14 +65,14 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x060028BA RID: 10426 RVA: 0x000868A3 File Offset: 0x00084AA3
+	// Token: 0x0600383A RID: 14394 RVA: 0x0001EDBF File Offset: 0x0001CFBF
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_hbController = base.GetComponentInChildren<IHitboxController>();
 	}
 
-	// Token: 0x060028BB RID: 10427 RVA: 0x000868B8 File Offset: 0x00084AB8
+	// Token: 0x0600383B RID: 14395 RVA: 0x000E79E0 File Offset: 0x000E5BE0
 	private void OnEnable()
 	{
 		if (!this.m_hbController.IsInitialized)
@@ -90,7 +90,7 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x060028BC RID: 10428 RVA: 0x00086908 File Offset: 0x00084B08
+	// Token: 0x0600383C RID: 14396 RVA: 0x000E7A30 File Offset: 0x000E5C30
 	private void ApplyColorTrails()
 	{
 		if (!this.m_colorTrailApplied)
@@ -107,7 +107,7 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x060028BD RID: 10429 RVA: 0x000869E1 File Offset: 0x00084BE1
+	// Token: 0x0600383D RID: 14397 RVA: 0x0001EDD3 File Offset: 0x0001CFD3
 	private IEnumerator InitializeHBControllerCoroutine()
 	{
 		while (!this.m_hbController.IsInitialized)
@@ -119,7 +119,7 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		yield break;
 	}
 
-	// Token: 0x060028BE RID: 10430 RVA: 0x000869F0 File Offset: 0x00084BF0
+	// Token: 0x0600383E RID: 14398 RVA: 0x0001EDE2 File Offset: 0x0001CFE2
 	private IEnumerator ActivateWeaponHitboxCoroutine()
 	{
 		float startTime = Time.time;
@@ -131,7 +131,7 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		yield break;
 	}
 
-	// Token: 0x060028BF RID: 10431 RVA: 0x00086A00 File Offset: 0x00084C00
+	// Token: 0x0600383F RID: 14399 RVA: 0x000E7B0C File Offset: 0x000E5D0C
 	private void Update()
 	{
 		if (this.m_rotateClockwise)
@@ -165,7 +165,7 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		this.OrbiterBall.transform.localPosition = localPosition;
 	}
 
-	// Token: 0x060028C0 RID: 10432 RVA: 0x00086B6C File Offset: 0x00084D6C
+	// Token: 0x06003840 RID: 14400 RVA: 0x000E7C78 File Offset: 0x000E5E78
 	public override void Initialize(HazardArgs hazardArgs)
 	{
 		base.InitialState = hazardArgs.InitialState;
@@ -206,7 +206,7 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		Debug.LogFormat("<color=red>| {0} | Failed to cast hazardArgs as PointHazardArgs. If you see this message please bug it on Pivotal.</color>", Array.Empty<object>());
 	}
 
-	// Token: 0x060028C1 RID: 10433 RVA: 0x00086C08 File Offset: 0x00084E08
+	// Token: 0x06003841 RID: 14401 RVA: 0x000E7D14 File Offset: 0x000E5F14
 	public override void ResetHazard()
 	{
 		this.CurrentRotation = 0f;
@@ -222,14 +222,14 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		}
 	}
 
-	// Token: 0x060028C2 RID: 10434 RVA: 0x00086CC2 File Offset: 0x00084EC2
+	// Token: 0x06003842 RID: 14402 RVA: 0x0001EDF1 File Offset: 0x0001CFF1
 	private void SetExpansionDuration(float expansionDuration)
 	{
 		this.m_orbiterExpansionTimer = expansionDuration;
 		this.m_orbiterExpansionDuration = expansionDuration;
 	}
 
-	// Token: 0x060028C3 RID: 10435 RVA: 0x00086CD4 File Offset: 0x00084ED4
+	// Token: 0x06003843 RID: 14403 RVA: 0x000E7DD0 File Offset: 0x000E5FD0
 	private void SetRadius(float radius)
 	{
 		this.m_initialPosition = this.OrbiterBall.transform.localPosition;
@@ -243,67 +243,67 @@ public class Orbiter_Hazard : Hazard, IPointHazard, IHazard, IRootObj
 		this.m_initialRadius = radius;
 	}
 
-	// Token: 0x060028C4 RID: 10436 RVA: 0x00086D78 File Offset: 0x00084F78
+	// Token: 0x06003844 RID: 14404 RVA: 0x0001EE01 File Offset: 0x0001D001
 	private void SetRotationSpeed(float rotationSpeed)
 	{
 		this.m_orbiterRotationSpeed = rotationSpeed;
 	}
 
-	// Token: 0x060028C5 RID: 10437 RVA: 0x00086D81 File Offset: 0x00084F81
+	// Token: 0x06003845 RID: 14405 RVA: 0x0001EE0A File Offset: 0x0001D00A
 	protected override void OnDisable()
 	{
 		base.OnDisable();
 		this.m_colorTrailApplied = false;
 	}
 
-	// Token: 0x060028C7 RID: 10439 RVA: 0x00086DB5 File Offset: 0x00084FB5
+	// Token: 0x06003847 RID: 14407 RVA: 0x00003713 File Offset: 0x00001913
 	GameObject IRootObj.get_gameObject()
 	{
 		return base.gameObject;
 	}
 
-	// Token: 0x0400219A RID: 8602
+	// Token: 0x04002D1A RID: 11546
 	[SerializeField]
 	private SpriteRenderer m_orbiterChain;
 
-	// Token: 0x0400219B RID: 8603
+	// Token: 0x04002D1B RID: 11547
 	[SerializeField]
 	private GameObject m_orbiterBall;
 
-	// Token: 0x0400219C RID: 8604
+	// Token: 0x04002D1C RID: 11548
 	[SerializeField]
 	private SpriteRenderer m_orbiterRadius;
 
-	// Token: 0x0400219D RID: 8605
+	// Token: 0x04002D1D RID: 11549
 	private bool m_rotateClockwise = true;
 
-	// Token: 0x0400219E RID: 8606
+	// Token: 0x04002D1E RID: 11550
 	private float m_orbiterRotationSpeed = 100f;
 
-	// Token: 0x0400219F RID: 8607
+	// Token: 0x04002D1F RID: 11551
 	private float m_orbiterExpansionDuration = 2.5f;
 
-	// Token: 0x040021A0 RID: 8608
+	// Token: 0x04002D20 RID: 11552
 	private Vector3 m_initialRotation;
 
-	// Token: 0x040021A1 RID: 8609
+	// Token: 0x04002D21 RID: 11553
 	private Vector3 m_initialPosition;
 
-	// Token: 0x040021A2 RID: 8610
+	// Token: 0x04002D22 RID: 11554
 	private float m_initialRadius;
 
-	// Token: 0x040021A3 RID: 8611
+	// Token: 0x04002D23 RID: 11555
 	private float m_currentRotation;
 
-	// Token: 0x040021A4 RID: 8612
+	// Token: 0x04002D24 RID: 11556
 	private float m_orbiterExpansionTimer;
 
-	// Token: 0x040021A5 RID: 8613
+	// Token: 0x04002D25 RID: 11557
 	private float m_expansionPercent;
 
-	// Token: 0x040021A6 RID: 8614
+	// Token: 0x04002D26 RID: 11558
 	private bool m_colorTrailApplied;
 
-	// Token: 0x040021A7 RID: 8615
+	// Token: 0x04002D27 RID: 11559
 	private IHitboxController m_hbController;
 }

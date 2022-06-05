@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020007F3 RID: 2035
+// Token: 0x02000CB9 RID: 3257
 public class DestroyOnRetailBuild : MonoBehaviour
 {
-	// Token: 0x170016E9 RID: 5865
-	// (get) Token: 0x060043B1 RID: 17329 RVA: 0x000ECAA2 File Offset: 0x000EACA2
-	// (set) Token: 0x060043B2 RID: 17330 RVA: 0x000ECAAA File Offset: 0x000EACAA
+	// Token: 0x17001EE7 RID: 7911
+	// (get) Token: 0x06005D3A RID: 23866 RVA: 0x000334B8 File Offset: 0x000316B8
+	// (set) Token: 0x06005D3B RID: 23867 RVA: 0x000334C0 File Offset: 0x000316C0
 	public Component[] ComponentsToDestroyArray
 	{
 		get
@@ -19,7 +19,7 @@ public class DestroyOnRetailBuild : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060043B3 RID: 17331 RVA: 0x000ECAB4 File Offset: 0x000EACB4
+	// Token: 0x06005D3C RID: 23868 RVA: 0x0015AA2C File Offset: 0x00158C2C
 	private void Awake()
 	{
 		if (this.m_destroyGameObject)
@@ -44,12 +44,12 @@ public class DestroyOnRetailBuild : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040039E3 RID: 14819
+	// Token: 0x04004CA8 RID: 19624
 	[HelpBox("This monobehaviour will trigger because #RETAIL_BUILD is ON. For security reasons, this monobehaviour will only destroy objects that are on this GameObject.", HelpBoxMessageType.Warning)]
 	[SerializeField]
 	private bool m_destroyGameObject;
 
-	// Token: 0x040039E4 RID: 14820
+	// Token: 0x04004CA9 RID: 19625
 	[SerializeField]
 	private Component[] m_componentsToDestroy = new Component[0];
 }

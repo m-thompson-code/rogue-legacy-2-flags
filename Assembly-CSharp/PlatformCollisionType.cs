@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x0200071B RID: 1819
+// Token: 0x02000BCE RID: 3022
 public enum PlatformCollisionType
 {
-	// Token: 0x0400335F RID: 13151
+	// Token: 0x040045DA RID: 17882
 	Character,
-	// Token: 0x04003360 RID: 13152
+	// Token: 0x040045DB RID: 17883
 	Platform_CollidesWithAll,
-	// Token: 0x04003361 RID: 13153
+	// Token: 0x040045DC RID: 17884
 	Platform_CollidesWithPlayer,
-	// Token: 0x04003362 RID: 13154
+	// Token: 0x040045DD RID: 17885
 	Platform_CollidesWithEnemy,
-	// Token: 0x04003363 RID: 13155
+	// Token: 0x040045DE RID: 17886
 	Platform_OneWay
 }

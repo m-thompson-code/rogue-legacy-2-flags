@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace RLAudio
 {
-	// Token: 0x02000915 RID: 2325
+	// Token: 0x02000E92 RID: 3730
 	public class SpearSpinAbilityAudioEventController : MonoBehaviour, IAudioEventEmitter
 	{
-		// Token: 0x17001886 RID: 6278
-		// (get) Token: 0x06004C3C RID: 19516 RVA: 0x00111C9E File Offset: 0x0010FE9E
+		// Token: 0x1700217F RID: 8575
+		// (get) Token: 0x06006937 RID: 26935 RVA: 0x0003A5F8 File Offset: 0x000387F8
 		public string Description
 		{
 			get
@@ -21,7 +21,7 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x06004C3D RID: 19517 RVA: 0x00111CC4 File Offset: 0x0010FEC4
+		// Token: 0x06006938 RID: 26936 RVA: 0x001819FC File Offset: 0x0017FBFC
 		private void Awake()
 		{
 			SpearSpin_Ability component = base.GetComponent<SpearSpin_Ability>();
@@ -30,7 +30,7 @@ namespace RLAudio
 			component.SpinCompleteRelay.AddListener(new Action<bool>(this.OnSpinComplete), false);
 		}
 
-		// Token: 0x06004C3E RID: 19518 RVA: 0x00111D24 File Offset: 0x0010FF24
+		// Token: 0x06006939 RID: 26937 RVA: 0x00181A5C File Offset: 0x0017FC5C
 		private void OnDestroy()
 		{
 			SpearSpin_Ability component = base.GetComponent<SpearSpin_Ability>();
@@ -39,7 +39,7 @@ namespace RLAudio
 			component.SpinCompleteRelay.RemoveListener(new Action<bool>(this.OnSpinComplete));
 		}
 
-		// Token: 0x06004C3F RID: 19519 RVA: 0x00111D80 File Offset: 0x0010FF80
+		// Token: 0x0600693A RID: 26938 RVA: 0x00181AB8 File Offset: 0x0017FCB8
 		private void OnProjectileHit()
 		{
 			float time = Time.time;
@@ -52,13 +52,13 @@ namespace RLAudio
 			this.m_timeOfProjectileLastHit = time;
 		}
 
-		// Token: 0x06004C40 RID: 19520 RVA: 0x00111DC5 File Offset: 0x0010FFC5
+		// Token: 0x0600693B RID: 26939 RVA: 0x0003A61E File Offset: 0x0003881E
 		private void OnSpearSpinStart()
 		{
 			AudioManager.PlayOneShotAttached(this, this.m_spinStartAudioPath, base.gameObject);
 		}
 
-		// Token: 0x06004C41 RID: 19521 RVA: 0x00111DDC File Offset: 0x0010FFDC
+		// Token: 0x0600693C RID: 26940 RVA: 0x00181B00 File Offset: 0x0017FD00
 		private void OnSpinComplete(bool hitProjectileWhileActive)
 		{
 			if (this.m_playSuccessFailAudio)
@@ -72,43 +72,43 @@ namespace RLAudio
 			}
 		}
 
-		// Token: 0x0400402C RID: 16428
+		// Token: 0x0400558C RID: 21900
 		[SerializeField]
 		[EventRef]
 		private string m_spinStartAudioPath;
 
-		// Token: 0x0400402D RID: 16429
+		// Token: 0x0400558D RID: 21901
 		[SerializeField]
 		[EventRef]
 		private string m_singleProjectileHitAudioPath;
 
-		// Token: 0x0400402E RID: 16430
+		// Token: 0x0400558E RID: 21902
 		[SerializeField]
 		[EventRef]
 		private string m_multipleProjectilesHitAudioPath;
 
-		// Token: 0x0400402F RID: 16431
+		// Token: 0x0400558F RID: 21903
 		[SerializeField]
 		[EventRef]
 		private string m_abilitySuccessAudioPath;
 
-		// Token: 0x04004030 RID: 16432
+		// Token: 0x04005590 RID: 21904
 		[SerializeField]
 		[EventRef]
 		private string m_abilityFailAudioPath;
 
-		// Token: 0x04004031 RID: 16433
+		// Token: 0x04005591 RID: 21905
 		[SerializeField]
 		private bool m_playSuccessFailAudio = true;
 
-		// Token: 0x04004032 RID: 16434
+		// Token: 0x04005592 RID: 21906
 		[SerializeField]
 		private float m_timeBetweenProjectileHits = 0.1f;
 
-		// Token: 0x04004033 RID: 16435
+		// Token: 0x04005593 RID: 21907
 		private float m_timeOfProjectileLastHit;
 
-		// Token: 0x04004034 RID: 16436
+		// Token: 0x04005594 RID: 21908
 		private string m_description = string.Empty;
 	}
 }

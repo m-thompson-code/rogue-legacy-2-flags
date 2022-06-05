@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020004A5 RID: 1189
+// Token: 0x020007B0 RID: 1968
 public class OnProjectileDeathProjectileLogic : BaseProjectileLogic, IHasProjectileNameArray
 {
-	// Token: 0x170010A1 RID: 4257
-	// (get) Token: 0x06002B7A RID: 11130 RVA: 0x00093861 File Offset: 0x00091A61
+	// Token: 0x170015F4 RID: 5620
+	// (get) Token: 0x06003BE7 RID: 15335 RVA: 0x0002106C File Offset: 0x0001F26C
 	public virtual string[] ProjectileNameArray
 	{
 		get
@@ -21,9 +21,9 @@ public class OnProjectileDeathProjectileLogic : BaseProjectileLogic, IHasProject
 		}
 	}
 
-	// Token: 0x170010A2 RID: 4258
-	// (get) Token: 0x06002B7B RID: 11131 RVA: 0x00093886 File Offset: 0x00091A86
-	// (set) Token: 0x06002B7C RID: 11132 RVA: 0x0009388E File Offset: 0x00091A8E
+	// Token: 0x170015F5 RID: 5621
+	// (get) Token: 0x06003BE8 RID: 15336 RVA: 0x00021091 File Offset: 0x0001F291
+	// (set) Token: 0x06003BE9 RID: 15337 RVA: 0x00021099 File Offset: 0x0001F299
 	public string ProjectileToSpawn
 	{
 		get
@@ -36,9 +36,9 @@ public class OnProjectileDeathProjectileLogic : BaseProjectileLogic, IHasProject
 		}
 	}
 
-	// Token: 0x170010A3 RID: 4259
-	// (get) Token: 0x06002B7D RID: 11133 RVA: 0x00093897 File Offset: 0x00091A97
-	// (set) Token: 0x06002B7E RID: 11134 RVA: 0x0009389F File Offset: 0x00091A9F
+	// Token: 0x170015F6 RID: 5622
+	// (get) Token: 0x06003BEA RID: 15338 RVA: 0x000210A2 File Offset: 0x0001F2A2
+	// (set) Token: 0x06003BEB RID: 15339 RVA: 0x000210AA File Offset: 0x0001F2AA
 	public Vector2 Offset
 	{
 		get
@@ -51,9 +51,9 @@ public class OnProjectileDeathProjectileLogic : BaseProjectileLogic, IHasProject
 		}
 	}
 
-	// Token: 0x170010A4 RID: 4260
-	// (get) Token: 0x06002B7F RID: 11135 RVA: 0x000938A8 File Offset: 0x00091AA8
-	// (set) Token: 0x06002B80 RID: 11136 RVA: 0x000938B0 File Offset: 0x00091AB0
+	// Token: 0x170015F7 RID: 5623
+	// (get) Token: 0x06003BEC RID: 15340 RVA: 0x000210B3 File Offset: 0x0001F2B3
+	// (set) Token: 0x06003BED RID: 15341 RVA: 0x000210BB File Offset: 0x0001F2BB
 	public bool MatchFacing
 	{
 		get
@@ -66,9 +66,9 @@ public class OnProjectileDeathProjectileLogic : BaseProjectileLogic, IHasProject
 		}
 	}
 
-	// Token: 0x170010A5 RID: 4261
-	// (get) Token: 0x06002B81 RID: 11137 RVA: 0x000938B9 File Offset: 0x00091AB9
-	// (set) Token: 0x06002B82 RID: 11138 RVA: 0x000938C1 File Offset: 0x00091AC1
+	// Token: 0x170015F8 RID: 5624
+	// (get) Token: 0x06003BEE RID: 15342 RVA: 0x000210C4 File Offset: 0x0001F2C4
+	// (set) Token: 0x06003BEF RID: 15343 RVA: 0x000210CC File Offset: 0x0001F2CC
 	public float Angle
 	{
 		get
@@ -81,13 +81,13 @@ public class OnProjectileDeathProjectileLogic : BaseProjectileLogic, IHasProject
 		}
 	}
 
-	// Token: 0x06002B83 RID: 11139 RVA: 0x000938CA File Offset: 0x00091ACA
+	// Token: 0x06003BF0 RID: 15344 RVA: 0x000210D5 File Offset: 0x0001F2D5
 	private void Start()
 	{
 		base.SourceProjectile.OnDeathRelay.AddListener(new Action<Projectile_RL, GameObject>(this.SpawnProjectile), false);
 	}
 
-	// Token: 0x06002B84 RID: 11140 RVA: 0x000938EC File Offset: 0x00091AEC
+	// Token: 0x06003BF1 RID: 15345 RVA: 0x000F5080 File Offset: 0x000F3280
 	protected virtual void SpawnProjectile(Projectile_RL projectile, GameObject colliderObj)
 	{
 		if (!base.enabled)
@@ -180,57 +180,57 @@ public class OnProjectileDeathProjectileLogic : BaseProjectileLogic, IHasProject
 		}
 	}
 
-	// Token: 0x06002B85 RID: 11141 RVA: 0x00093BF7 File Offset: 0x00091DF7
+	// Token: 0x06003BF2 RID: 15346 RVA: 0x000210F6 File Offset: 0x0001F2F6
 	private void OnDestroy()
 	{
 		base.SourceProjectile.OnDeathRelay.RemoveListener(new Action<Projectile_RL, GameObject>(this.SpawnProjectile));
 	}
 
-	// Token: 0x04002359 RID: 9049
+	// Token: 0x04002F8B RID: 12171
 	[SerializeField]
 	private string m_projectileToSpawn;
 
-	// Token: 0x0400235A RID: 9050
+	// Token: 0x04002F8C RID: 12172
 	[SerializeField]
 	private Vector2 m_offset;
 
-	// Token: 0x0400235B RID: 9051
+	// Token: 0x04002F8D RID: 12173
 	[SerializeField]
 	private bool m_matchFacing;
 
-	// Token: 0x0400235C RID: 9052
+	// Token: 0x04002F8E RID: 12174
 	[SerializeField]
 	private float m_angle;
 
-	// Token: 0x0400235D RID: 9053
+	// Token: 0x04002F8F RID: 12175
 	[SerializeField]
 	private bool m_spawnAtCollisionPoint;
 
-	// Token: 0x0400235E RID: 9054
+	// Token: 0x04002F90 RID: 12176
 	[SerializeField]
 	private bool m_ignoreTimeoutDeath;
 
-	// Token: 0x0400235F RID: 9055
+	// Token: 0x04002F91 RID: 12177
 	[SerializeField]
 	private OnProjectileDeathProjectileLogic.SpawnProjectileCollisionType m_spawnCollisionType;
 
-	// Token: 0x04002360 RID: 9056
+	// Token: 0x04002F92 RID: 12178
 	[SerializeField]
 	[Tooltip("Added this specifically for the AstroWand. Allows the spawned projectile to use its own crit chance calculation in the OnEnable method of its ProjectileLogic, rather than being overwritten with its source's crit chance.")]
 	private bool m_useSourceProjectileActualCritChance = true;
 
-	// Token: 0x04002361 RID: 9057
+	// Token: 0x04002F93 RID: 12179
 	[NonSerialized]
 	protected string[] m_projectileNameArray;
 
-	// Token: 0x02000C84 RID: 3204
+	// Token: 0x020007B1 RID: 1969
 	private enum SpawnProjectileCollisionType
 	{
-		// Token: 0x040050C7 RID: 20679
+		// Token: 0x04002F95 RID: 12181
 		Any,
-		// Token: 0x040050C8 RID: 20680
+		// Token: 0x04002F96 RID: 12182
 		PlatformsOnly,
-		// Token: 0x040050C9 RID: 20681
+		// Token: 0x04002F97 RID: 12183
 		CharactersOnly
 	}
 }

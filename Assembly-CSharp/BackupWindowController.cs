@@ -4,11 +4,11 @@ using Rewired;
 using RL_Windows;
 using UnityEngine;
 
-// Token: 0x0200056F RID: 1391
+// Token: 0x02000942 RID: 2370
 public class BackupWindowController : WindowController
 {
-	// Token: 0x17001273 RID: 4723
-	// (get) Token: 0x06003308 RID: 13064 RVA: 0x000AC682 File Offset: 0x000AA882
+	// Token: 0x1700193E RID: 6462
+	// (get) Token: 0x060047EF RID: 18415 RVA: 0x0002770C File Offset: 0x0002590C
 	public override WindowID ID
 	{
 		get
@@ -17,14 +17,14 @@ public class BackupWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003309 RID: 13065 RVA: 0x000AC686 File Offset: 0x000AA886
+	// Token: 0x060047F0 RID: 18416 RVA: 0x00027710 File Offset: 0x00025910
 	private void Awake()
 	{
 		this.m_onConfirmInputHandler = new Action<InputActionEventData>(this.OnConfirmInputHandler);
 		this.m_onVerticalInputHandler = new Action<InputActionEventData>(this.OnVerticalInputHandler);
 	}
 
-	// Token: 0x0600330A RID: 13066 RVA: 0x000AC6AC File Offset: 0x000AA8AC
+	// Token: 0x060047F1 RID: 18417 RVA: 0x00116D74 File Offset: 0x00114F74
 	public override void Initialize()
 	{
 		this.m_backupSlotArray = new BackupSlotEntry[6];
@@ -47,7 +47,7 @@ public class BackupWindowController : WindowController
 		base.Initialize();
 	}
 
-	// Token: 0x0600330B RID: 13067 RVA: 0x000AC7B0 File Offset: 0x000AA9B0
+	// Token: 0x060047F2 RID: 18418 RVA: 0x00116E78 File Offset: 0x00115078
 	private void InitializeBackupArray()
 	{
 		List<string> list = new List<string>(SaveManager.GetBackupPathes(SaveManager.CurrentProfile, SaveDataType.GameMode));
@@ -90,7 +90,7 @@ public class BackupWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600330C RID: 13068 RVA: 0x000AC8E4 File Offset: 0x000AAAE4
+	// Token: 0x060047F3 RID: 18419 RVA: 0x00116FAC File Offset: 0x001151AC
 	protected override void OnOpen()
 	{
 		this.InitializeBackupArray();
@@ -107,13 +107,13 @@ public class BackupWindowController : WindowController
 		this.m_windowCanvas.gameObject.SetActive(true);
 	}
 
-	// Token: 0x0600330D RID: 13069 RVA: 0x000AC943 File Offset: 0x000AAB43
+	// Token: 0x060047F4 RID: 18420 RVA: 0x0000EE94 File Offset: 0x0000D094
 	protected override void OnClose()
 	{
 		this.m_windowCanvas.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600330E RID: 13070 RVA: 0x000AC958 File Offset: 0x000AAB58
+	// Token: 0x060047F5 RID: 18421 RVA: 0x0011700C File Offset: 0x0011520C
 	private void OnVerticalInputHandler(InputActionEventData eventData)
 	{
 		if (this.m_backupSlotArray.Length <= 1)
@@ -163,7 +163,7 @@ public class BackupWindowController : WindowController
 		}
 	}
 
-	// Token: 0x0600330F RID: 13071 RVA: 0x000ACA2A File Offset: 0x000AAC2A
+	// Token: 0x060047F6 RID: 18422 RVA: 0x00027736 File Offset: 0x00025936
 	private void OnConfirmInputHandler(InputActionEventData eventData)
 	{
 		if (eventData.IsCurrentInputSource(ControllerType.Mouse))
@@ -176,7 +176,7 @@ public class BackupWindowController : WindowController
 		}
 	}
 
-	// Token: 0x06003310 RID: 13072 RVA: 0x000ACA54 File Offset: 0x000AAC54
+	// Token: 0x060047F7 RID: 18423 RVA: 0x001170E0 File Offset: 0x001152E0
 	protected virtual void UpdateSelectedBackupEntry(BackupSlotEntry backupSlot)
 	{
 		if (backupSlot.Index == this.m_currentSelectedIndex)
@@ -190,19 +190,19 @@ public class BackupWindowController : WindowController
 		this.m_currentSelectedIndex = backupSlot.Index;
 	}
 
-	// Token: 0x06003311 RID: 13073 RVA: 0x000ACAA4 File Offset: 0x000AACA4
+	// Token: 0x060047F8 RID: 18424 RVA: 0x0002775E File Offset: 0x0002595E
 	protected override void OnFocus()
 	{
 		this.AddInputListeners();
 	}
 
-	// Token: 0x06003312 RID: 13074 RVA: 0x000ACAAC File Offset: 0x000AACAC
+	// Token: 0x060047F9 RID: 18425 RVA: 0x00027766 File Offset: 0x00025966
 	protected override void OnLostFocus()
 	{
 		this.RemoveInputListeners();
 	}
 
-	// Token: 0x06003313 RID: 13075 RVA: 0x000ACAB4 File Offset: 0x000AACB4
+	// Token: 0x060047FA RID: 18426 RVA: 0x00117130 File Offset: 0x00115330
 	private void AddInputListeners()
 	{
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onConfirmInputHandler, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
@@ -210,7 +210,7 @@ public class BackupWindowController : WindowController
 		base.RewiredPlayer.AddInputEventDelegate(this.m_onVerticalInputHandler, UpdateLoopType.Update, InputActionEventType.NegativeButtonRepeating, "Window_Vertical");
 	}
 
-	// Token: 0x06003314 RID: 13076 RVA: 0x000ACB0C File Offset: 0x000AAD0C
+	// Token: 0x060047FB RID: 18427 RVA: 0x00117188 File Offset: 0x00115388
 	private void RemoveInputListeners()
 	{
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onConfirmInputHandler, UpdateLoopType.Update, InputActionEventType.ButtonJustPressed, "Window_Confirm");
@@ -218,23 +218,23 @@ public class BackupWindowController : WindowController
 		base.RewiredPlayer.RemoveInputEventDelegate(this.m_onVerticalInputHandler, UpdateLoopType.Update, InputActionEventType.NegativeButtonRepeating, "Window_Vertical");
 	}
 
-	// Token: 0x040027CC RID: 10188
+	// Token: 0x04003704 RID: 14084
 	[SerializeField]
 	private BackupSlotEntry m_backupSlotPrefab;
 
-	// Token: 0x040027CD RID: 10189
+	// Token: 0x04003705 RID: 14085
 	[SerializeField]
 	private Transform m_contentParentTransform;
 
-	// Token: 0x040027CE RID: 10190
+	// Token: 0x04003706 RID: 14086
 	private BackupSlotEntry[] m_backupSlotArray;
 
-	// Token: 0x040027CF RID: 10191
+	// Token: 0x04003707 RID: 14087
 	private int m_currentSelectedIndex;
 
-	// Token: 0x040027D0 RID: 10192
+	// Token: 0x04003708 RID: 14088
 	private Action<InputActionEventData> m_onConfirmInputHandler;
 
-	// Token: 0x040027D1 RID: 10193
+	// Token: 0x04003709 RID: 14089
 	private Action<InputActionEventData> m_onVerticalInputHandler;
 }

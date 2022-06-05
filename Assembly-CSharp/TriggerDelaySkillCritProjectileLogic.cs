@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020004AF RID: 1199
+// Token: 0x020007C0 RID: 1984
 public class TriggerDelaySkillCritProjectileLogic : BaseProjectileLogic
 {
-	// Token: 0x06002BB4 RID: 11188 RVA: 0x00094B36 File Offset: 0x00092D36
+	// Token: 0x06003C3F RID: 15423 RVA: 0x0002141D File Offset: 0x0001F61D
 	private void OnEnable()
 	{
 		if (this.m_spriteRenderer)
@@ -15,7 +15,7 @@ public class TriggerDelaySkillCritProjectileLogic : BaseProjectileLogic
 		base.StartCoroutine(this.TriggerSkillCritCoroutine());
 	}
 
-	// Token: 0x06002BB5 RID: 11189 RVA: 0x00094B63 File Offset: 0x00092D63
+	// Token: 0x06003C40 RID: 15424 RVA: 0x0002144A File Offset: 0x0001F64A
 	private IEnumerator TriggerSkillCritCoroutine()
 	{
 		float duration = Time.time + this.m_skillCritTriggerDelay;
@@ -41,7 +41,7 @@ public class TriggerDelaySkillCritProjectileLogic : BaseProjectileLogic
 		yield break;
 	}
 
-	// Token: 0x06002BB6 RID: 11190 RVA: 0x00094B72 File Offset: 0x00092D72
+	// Token: 0x06003C41 RID: 15425 RVA: 0x00021459 File Offset: 0x0001F659
 	private void ApplyCrit()
 	{
 		if (base.SourceProjectile.ActualCritChance < 100f)
@@ -50,7 +50,7 @@ public class TriggerDelaySkillCritProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002BB7 RID: 11191 RVA: 0x00094B9D File Offset: 0x00092D9D
+	// Token: 0x06003C42 RID: 15426 RVA: 0x00021484 File Offset: 0x0001F684
 	private void UnapplyCrit()
 	{
 		if (base.SourceProjectile.ActualCritChance >= 100f)
@@ -59,7 +59,7 @@ public class TriggerDelaySkillCritProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002BB8 RID: 11192 RVA: 0x00094BC8 File Offset: 0x00092DC8
+	// Token: 0x06003C43 RID: 15427 RVA: 0x000214AF File Offset: 0x0001F6AF
 	private void EnableCritEffects()
 	{
 		if (this.m_spriteRenderer)
@@ -72,7 +72,7 @@ public class TriggerDelaySkillCritProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002BB9 RID: 11193 RVA: 0x00094C01 File Offset: 0x00092E01
+	// Token: 0x06003C44 RID: 15428 RVA: 0x000214E8 File Offset: 0x0001F6E8
 	private void DisableCritEffects()
 	{
 		if (this.m_spriteRenderer)
@@ -85,33 +85,33 @@ public class TriggerDelaySkillCritProjectileLogic : BaseProjectileLogic
 		}
 	}
 
-	// Token: 0x06002BBA RID: 11194 RVA: 0x00094C3A File Offset: 0x00092E3A
+	// Token: 0x06003C45 RID: 15429 RVA: 0x00021521 File Offset: 0x0001F721
 	private void OnDisable()
 	{
 		this.DisableCritEffects();
 	}
 
-	// Token: 0x04002382 RID: 9090
+	// Token: 0x04002FCB RID: 12235
 	[SerializeField]
 	private float m_skillCritTriggerDelay;
 
-	// Token: 0x04002383 RID: 9091
+	// Token: 0x04002FCC RID: 12236
 	[SerializeField]
 	[Tooltip("Enabling this means that the projectile will crit BEFORE the time delay, and afterwards will only deal regular damage.")]
 	private bool m_onlyCritBeforeDelay;
 
-	// Token: 0x04002384 RID: 9092
+	// Token: 0x04002FCD RID: 12237
 	[SerializeField]
 	private GameObject m_critEffectGO;
 
-	// Token: 0x04002385 RID: 9093
+	// Token: 0x04002FCE RID: 12238
 	[SerializeField]
 	private SpriteRenderer m_spriteRenderer;
 
-	// Token: 0x04002386 RID: 9094
+	// Token: 0x04002FCF RID: 12239
 	[SerializeField]
 	private Color m_critTintColor;
 
-	// Token: 0x04002387 RID: 9095
+	// Token: 0x04002FD0 RID: 12240
 	private Color m_initialTint;
 }

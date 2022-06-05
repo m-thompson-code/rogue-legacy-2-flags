@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200064D RID: 1613
+// Token: 0x02000A7C RID: 2684
 [Serializable]
 public class TunnelSpawnControllerVisuals
 {
-	// Token: 0x06003A46 RID: 14918 RVA: 0x000C5C1C File Offset: 0x000C3E1C
+	// Token: 0x0600512B RID: 20779 RVA: 0x00133954 File Offset: 0x00131B54
 	public void SetSprite(TunnelCategory category, TunnelDirection tunnelType)
 	{
 		Sprite sprite = this.DefaultSprite;
@@ -44,27 +44,27 @@ public class TunnelSpawnControllerVisuals
 		this.SpriteRenderer.sprite = sprite;
 	}
 
-	// Token: 0x04002CB4 RID: 11444
+	// Token: 0x04003D4A RID: 15690
 	public SpriteRenderer SpriteRenderer;
 
-	// Token: 0x04002CB5 RID: 11445
+	// Token: 0x04003D4B RID: 15691
 	public Sprite DefaultSprite;
 
-	// Token: 0x04002CB6 RID: 11446
+	// Token: 0x04003D4C RID: 15692
 	public Sprite EntranceSprite;
 
-	// Token: 0x04002CB7 RID: 11447
+	// Token: 0x04003D4D RID: 15693
 	public Sprite ExitSprite;
 
-	// Token: 0x04002CB8 RID: 11448
+	// Token: 0x04003D4E RID: 15694
 	public Sprite BossEntranceSprite;
 
-	// Token: 0x04002CB9 RID: 11449
+	// Token: 0x04003D4F RID: 15695
 	public Sprite BossExitSprite;
 
-	// Token: 0x04002CBA RID: 11450
+	// Token: 0x04003D50 RID: 15696
 	public Sprite FinalEntranceSprite;
 
-	// Token: 0x04002CBB RID: 11451
+	// Token: 0x04003D51 RID: 15697
 	public Sprite FinalExitSprite;
 }

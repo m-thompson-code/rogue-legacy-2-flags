@@ -3,17 +3,17 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020001AC RID: 428
+// Token: 0x02000319 RID: 793
 public class AbilityAmmoCountUI : MonoBehaviour
 {
-	// Token: 0x06001108 RID: 4360 RVA: 0x0003118B File Offset: 0x0002F38B
+	// Token: 0x06001949 RID: 6473 RVA: 0x0000CB9B File Offset: 0x0000AD9B
 	private void Awake()
 	{
 		this.m_onAbilityCooldownOver = new Action<MonoBehaviour, EventArgs>(this.OnAbilityCooldownOver);
 		this.m_onAbilityUsed = new Action<MonoBehaviour, EventArgs>(this.OnAbilityUsed);
 	}
 
-	// Token: 0x06001109 RID: 4361 RVA: 0x000311B1 File Offset: 0x0002F3B1
+	// Token: 0x0600194A RID: 6474 RVA: 0x0000CBC1 File Offset: 0x0000ADC1
 	private IEnumerator Start()
 	{
 		Debug.LogWarningFormat("{0}: ({1}) is waiting for Player to be instantiated and for Character Class Component to be initialised...", new object[]
@@ -80,7 +80,7 @@ public class AbilityAmmoCountUI : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600110A RID: 4362 RVA: 0x000311C0 File Offset: 0x0002F3C0
+	// Token: 0x0600194B RID: 6475 RVA: 0x0008F5C4 File Offset: 0x0008D7C4
 	private void OnDestroy()
 	{
 		switch (this.m_abilityType)
@@ -100,7 +100,7 @@ public class AbilityAmmoCountUI : MonoBehaviour
 		Messenger<GameMessenger, GameEvent>.RemoveListener(GameEvent.AbilityCooldownOver, this.m_onAbilityCooldownOver);
 	}
 
-	// Token: 0x0600110B RID: 4363 RVA: 0x00031230 File Offset: 0x0002F430
+	// Token: 0x0600194C RID: 6476 RVA: 0x0008F634 File Offset: 0x0008D834
 	private void OnAbilityCooldownOver(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		AbilityCooldownOverEventArgs abilityCooldownOverEventArgs = eventArgs as AbilityCooldownOverEventArgs;
@@ -123,7 +123,7 @@ public class AbilityAmmoCountUI : MonoBehaviour
 		});
 	}
 
-	// Token: 0x0600110C RID: 4364 RVA: 0x000312AC File Offset: 0x0002F4AC
+	// Token: 0x0600194D RID: 6477 RVA: 0x0008F6B0 File Offset: 0x0008D8B0
 	private void OnAbilityUsed(MonoBehaviour sender, EventArgs eventArgs)
 	{
 		AbilityUsedEventArgs abilityUsedEventArgs = eventArgs as AbilityUsedEventArgs;
@@ -146,17 +146,17 @@ public class AbilityAmmoCountUI : MonoBehaviour
 		});
 	}
 
-	// Token: 0x040011FB RID: 4603
+	// Token: 0x04001800 RID: 6144
 	[SerializeField]
 	private CastAbilityType m_abilityType;
 
-	// Token: 0x040011FC RID: 4604
+	// Token: 0x04001801 RID: 6145
 	[SerializeField]
 	private Text m_ammoCountText;
 
-	// Token: 0x040011FD RID: 4605
+	// Token: 0x04001802 RID: 6146
 	private Action<MonoBehaviour, EventArgs> m_onAbilityUsed;
 
-	// Token: 0x040011FE RID: 4606
+	// Token: 0x04001803 RID: 6147
 	private Action<MonoBehaviour, EventArgs> m_onAbilityCooldownOver;
 }

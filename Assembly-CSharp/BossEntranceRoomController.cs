@@ -4,11 +4,11 @@ using Sigtrap.Relays;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-// Token: 0x020004EC RID: 1260
+// Token: 0x02000841 RID: 2113
 public class BossEntranceRoomController : BaseSpecialRoomController
 {
-	// Token: 0x1700119F RID: 4511
-	// (get) Token: 0x06002F33 RID: 12083 RVA: 0x000A114A File Offset: 0x0009F34A
+	// Token: 0x17001778 RID: 6008
+	// (get) Token: 0x06004135 RID: 16693 RVA: 0x00024097 File Offset: 0x00022297
 	public IRelayLink<bool> DoorPartlyOpenedRelay
 	{
 		get
@@ -17,8 +17,8 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x170011A0 RID: 4512
-	// (get) Token: 0x06002F34 RID: 12084 RVA: 0x000A1157 File Offset: 0x0009F357
+	// Token: 0x17001779 RID: 6009
+	// (get) Token: 0x06004136 RID: 16694 RVA: 0x000240A4 File Offset: 0x000222A4
 	public IRelayLink DoorOpenedRelay
 	{
 		get
@@ -27,8 +27,8 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x170011A1 RID: 4513
-	// (get) Token: 0x06002F35 RID: 12085 RVA: 0x000A1164 File Offset: 0x0009F364
+	// Token: 0x1700177A RID: 6010
+	// (get) Token: 0x06004137 RID: 16695 RVA: 0x000240B1 File Offset: 0x000222B1
 	public IRelayLink<bool> DoorDestroyedRelay
 	{
 		get
@@ -37,8 +37,8 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x170011A2 RID: 4514
-	// (get) Token: 0x06002F36 RID: 12086 RVA: 0x000A1171 File Offset: 0x0009F371
+	// Token: 0x1700177B RID: 6011
+	// (get) Token: 0x06004138 RID: 16696 RVA: 0x000240BE File Offset: 0x000222BE
 	public BossTunnelState BossTunnelState
 	{
 		get
@@ -51,8 +51,8 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x170011A3 RID: 4515
-	// (get) Token: 0x06002F37 RID: 12087 RVA: 0x000A11A9 File Offset: 0x0009F3A9
+	// Token: 0x1700177C RID: 6012
+	// (get) Token: 0x06004139 RID: 16697 RVA: 0x000240F6 File Offset: 0x000222F6
 	public TunnelSpawnController BossTunnelSpawner
 	{
 		get
@@ -65,14 +65,14 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F38 RID: 12088 RVA: 0x000A11D2 File Offset: 0x0009F3D2
+	// Token: 0x0600413A RID: 16698 RVA: 0x0002411F File Offset: 0x0002231F
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_displayNextMemory = new Action(this.DisplayNextMemory);
 	}
 
-	// Token: 0x06002F39 RID: 12089 RVA: 0x000A11EC File Offset: 0x0009F3EC
+	// Token: 0x0600413B RID: 16699 RVA: 0x00105F60 File Offset: 0x00104160
 	protected override void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		base.OnPlayerEnterRoom(sender, eventArgs);
@@ -137,7 +137,7 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F3A RID: 12090 RVA: 0x000A1474 File Offset: 0x0009F674
+	// Token: 0x0600413C RID: 16700 RVA: 0x001061E8 File Offset: 0x001043E8
 	private void SetMemoriesEnabled()
 	{
 		if (BurdenManager.IsBurdenActive(this.m_bossUpBurden) && !this.m_memoryProps.IsNativeNull() && this.m_memoryProps.Length != 0)
@@ -149,7 +149,7 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F3B RID: 12091 RVA: 0x000A14BC File Offset: 0x0009F6BC
+	// Token: 0x0600413D RID: 16701 RVA: 0x00106230 File Offset: 0x00104430
 	private void SetMemoryActive(int index)
 	{
 		Prop propInstance = this.m_memoryProps[index].PropInstance;
@@ -161,7 +161,7 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F3C RID: 12092 RVA: 0x000A1514 File Offset: 0x0009F714
+	// Token: 0x0600413E RID: 16702 RVA: 0x00106288 File Offset: 0x00104488
 	private void DisplayNextMemory()
 	{
 		this.m_memoryProps[this.m_memoryIndex].PropInstance.GetComponent<JournalSpecialPropController>().FinishedReadingRelay.RemoveListener(this.m_displayNextMemory);
@@ -172,7 +172,7 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F3D RID: 12093 RVA: 0x000A1578 File Offset: 0x0009F778
+	// Token: 0x0600413F RID: 16703 RVA: 0x001062EC File Offset: 0x001044EC
 	public override void RoomCompleted()
 	{
 		base.RoomCompleted();
@@ -192,7 +192,7 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F3E RID: 12094 RVA: 0x000A1604 File Offset: 0x0009F804
+	// Token: 0x06004140 RID: 16704 RVA: 0x00106378 File Offset: 0x00104578
 	public virtual void SetBossTunnelState(BossTunnelState state, bool skipToIdleState)
 	{
 		Animator animator = this.BossTunnelSpawner.Tunnel.Animator;
@@ -239,7 +239,7 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		}
 	}
 
-	// Token: 0x06002F3F RID: 12095 RVA: 0x000A176D File Offset: 0x0009F96D
+	// Token: 0x06004141 RID: 16705 RVA: 0x00024139 File Offset: 0x00022339
 	protected virtual void OnDisable()
 	{
 		if (!BossEntranceRoomController.CutscenePlayed_DoNotDisableCrumble)
@@ -249,48 +249,48 @@ public class BossEntranceRoomController : BaseSpecialRoomController
 		BossEntranceRoomController.CutscenePlayed_DoNotDisableCrumble = false;
 	}
 
-	// Token: 0x04002599 RID: 9625
+	// Token: 0x04003303 RID: 13059
 	public static bool RunDoorCrumbleAnimation;
 
-	// Token: 0x0400259A RID: 9626
+	// Token: 0x04003304 RID: 13060
 	protected static bool CutscenePlayed_DoNotDisableCrumble;
 
-	// Token: 0x0400259B RID: 9627
+	// Token: 0x04003305 RID: 13061
 	[SerializeField]
 	protected TunnelSpawnController m_bossTunnel;
 
-	// Token: 0x0400259C RID: 9628
+	// Token: 0x04003306 RID: 13062
 	[SerializeField]
 	[FormerlySerializedAs("m_firstTimeLockedFlagCheck")]
 	protected PlayerSaveFlag m_bossBeatenFlag;
 
-	// Token: 0x0400259D RID: 9629
+	// Token: 0x04003307 RID: 13063
 	[SerializeField]
 	protected TunnelSpawnController m_bossUpTunnel;
 
-	// Token: 0x0400259E RID: 9630
+	// Token: 0x04003308 RID: 13064
 	[SerializeField]
 	private BurdenType m_bossUpBurden;
 
-	// Token: 0x0400259F RID: 9631
+	// Token: 0x04003309 RID: 13065
 	[SerializeField]
 	private PropSpawnController[] m_memoryProps;
 
-	// Token: 0x040025A0 RID: 9632
+	// Token: 0x0400330A RID: 13066
 	protected ProximityEventController m_proximityEventController;
 
-	// Token: 0x040025A1 RID: 9633
+	// Token: 0x0400330B RID: 13067
 	protected Relay<bool> m_doorPartlyOpenedRelay = new Relay<bool>();
 
-	// Token: 0x040025A2 RID: 9634
+	// Token: 0x0400330C RID: 13068
 	private Action m_displayNextMemory;
 
-	// Token: 0x040025A3 RID: 9635
+	// Token: 0x0400330D RID: 13069
 	protected Relay m_doorOpenedRelay = new Relay();
 
-	// Token: 0x040025A4 RID: 9636
+	// Token: 0x0400330E RID: 13070
 	protected Relay<bool> m_doorDestroyedRelay = new Relay<bool>();
 
-	// Token: 0x040025A5 RID: 9637
+	// Token: 0x0400330F RID: 13071
 	private int m_memoryIndex;
 }

@@ -5,11 +5,11 @@ using System.Linq;
 using Rooms;
 using UnityEngine;
 
-// Token: 0x0200065D RID: 1629
+// Token: 0x02000AB1 RID: 2737
 public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 {
-	// Token: 0x170014B3 RID: 5299
-	// (get) Token: 0x06003AFE RID: 15102 RVA: 0x000CAC59 File Offset: 0x000C8E59
+	// Token: 0x17001C32 RID: 7218
+	// (get) Token: 0x0600527C RID: 21116 RVA: 0x00017799 File Offset: 0x00015999
 	private BiomeType Tier01Biome
 	{
 		get
@@ -18,8 +18,8 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x170014B4 RID: 5300
-	// (get) Token: 0x06003AFF RID: 15103 RVA: 0x000CAC60 File Offset: 0x000C8E60
+	// Token: 0x17001C33 RID: 7219
+	// (get) Token: 0x0600527D RID: 21117 RVA: 0x0002CE1C File Offset: 0x0002B01C
 	private BiomeType Tier02Biome
 	{
 		get
@@ -28,8 +28,8 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x170014B5 RID: 5301
-	// (get) Token: 0x06003B00 RID: 15104 RVA: 0x000CAC67 File Offset: 0x000C8E67
+	// Token: 0x17001C34 RID: 7220
+	// (get) Token: 0x0600527E RID: 21118 RVA: 0x0002CE1C File Offset: 0x0002B01C
 	private BiomeType Tier03Biome
 	{
 		get
@@ -38,8 +38,8 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x170014B6 RID: 5302
-	// (get) Token: 0x06003B01 RID: 15105 RVA: 0x000CAC6E File Offset: 0x000C8E6E
+	// Token: 0x17001C35 RID: 7221
+	// (get) Token: 0x0600527F RID: 21119 RVA: 0x0002CE23 File Offset: 0x0002B023
 	private Dictionary<RoomSide, int> Tier01Border
 	{
 		get
@@ -66,8 +66,8 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x170014B7 RID: 5303
-	// (get) Token: 0x06003B02 RID: 15106 RVA: 0x000CAC99 File Offset: 0x000C8E99
+	// Token: 0x17001C36 RID: 7222
+	// (get) Token: 0x06005280 RID: 21120 RVA: 0x0002CE4E File Offset: 0x0002B04E
 	private Dictionary<RoomSide, int> Tier02Border
 	{
 		get
@@ -94,8 +94,8 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x170014B8 RID: 5304
-	// (get) Token: 0x06003B03 RID: 15107 RVA: 0x000CACC5 File Offset: 0x000C8EC5
+	// Token: 0x17001C37 RID: 7223
+	// (get) Token: 0x06005281 RID: 21121 RVA: 0x0002CE7A File Offset: 0x0002B07A
 	private Dictionary<RoomSide, int> Tier03Border
 	{
 		get
@@ -122,7 +122,7 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x06003B04 RID: 15108 RVA: 0x000CACF0 File Offset: 0x000C8EF0
+	// Token: 0x06005282 RID: 21122 RVA: 0x0002CEA5 File Offset: 0x0002B0A5
 	public override IEnumerator CreateRooms(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		this.CreateBorders(biomeController);
@@ -132,7 +132,7 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		yield break;
 	}
 
-	// Token: 0x06003B05 RID: 15109 RVA: 0x000CAD10 File Offset: 0x000C8F10
+	// Token: 0x06005283 RID: 21123 RVA: 0x00139704 File Offset: 0x00137904
 	protected override void BuildRoomsAtRandomDoorLocations(BiomeCreator biomeCreator, BiomeController biomeController, int finalRoomCountInBiome, GridPointManager originRoom, List<RoomSetEntry> standardRoomPoolOverride)
 	{
 		foreach (DoorLocation doorLocation in biomeCreator.GetBuildRoomAtDoorLocations(biomeController, originRoom))
@@ -171,7 +171,7 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x06003B06 RID: 15110 RVA: 0x000CAE1C File Offset: 0x000C901C
+	// Token: 0x06005284 RID: 21124 RVA: 0x00139810 File Offset: 0x00137A10
 	private void CreateBorders(BiomeController biomeController)
 	{
 		GridPointManager transitionRoom = biomeController.GridPointManager.GridPointManagers.First<GridPointManager>();
@@ -181,7 +181,7 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		this.m_tier3Border = this.GetBounds(this.Tier03Border, transitionRoom);
 	}
 
-	// Token: 0x06003B07 RID: 15111 RVA: 0x000CAE84 File Offset: 0x000C9084
+	// Token: 0x06005285 RID: 21125 RVA: 0x00139878 File Offset: 0x00137A78
 	protected Bounds GetBounds(Dictionary<RoomSide, int> border, GridPointManager transitionRoom)
 	{
 		int num = transitionRoom.GridCoordinates.x + border[RoomSide.Left];
@@ -193,7 +193,7 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		return result;
 	}
 
-	// Token: 0x06003B08 RID: 15112 RVA: 0x000CAF40 File Offset: 0x000C9140
+	// Token: 0x06005286 RID: 21126 RVA: 0x00139934 File Offset: 0x00137B34
 	protected BiomeType GetBiome(TierID tier)
 	{
 		BiomeType result = this.Tier01Biome;
@@ -208,7 +208,7 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		return result;
 	}
 
-	// Token: 0x06003B09 RID: 15113 RVA: 0x000CAF70 File Offset: 0x000C9170
+	// Token: 0x06005287 RID: 21127 RVA: 0x00139964 File Offset: 0x00137B64
 	protected Bounds GetBorder(TierID tier)
 	{
 		Bounds result = this.m_tier1Border;
@@ -223,13 +223,13 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		return result;
 	}
 
-	// Token: 0x06003B0A RID: 15114 RVA: 0x000CAFA0 File Offset: 0x000C91A0
+	// Token: 0x06005288 RID: 21128 RVA: 0x00139994 File Offset: 0x00137B94
 	private bool GetAreCoordinatesWithinBorder(Vector2Int coordinates, Bounds border)
 	{
 		return (float)coordinates.x < border.max.x && (float)coordinates.y < border.max.y && border.Contains(coordinates);
 	}
 
-	// Token: 0x06003B0B RID: 15115 RVA: 0x000CAFED File Offset: 0x000C91ED
+	// Token: 0x06005289 RID: 21129 RVA: 0x0002CEC2 File Offset: 0x0002B0C2
 	public TierID GetTier(Vector2Int coords)
 	{
 		if (this.GetAreCoordinatesWithinBorder(coords, this.m_tier1Border))
@@ -247,7 +247,7 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		return TierID.None;
 	}
 
-	// Token: 0x06003B0C RID: 15116 RVA: 0x000CB028 File Offset: 0x000C9228
+	// Token: 0x0600528A RID: 21130 RVA: 0x001399E4 File Offset: 0x00137BE4
 	private void CreateTopOfTower(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		CreateRoomsBuildRule_Tower.ReplaceRoomAtTopIfNecessary(biomeCreator, biomeController);
@@ -261,7 +261,7 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		base.CreateSpecificRoom(biomeCreator, biomeController, roomMetaData3, new Vector2Int(num + roomMetaData3.Size.x, y), new DoorLocation(RoomSide.Bottom, 0), BiomeType.TowerExterior, RoomType.BossEntrance, true);
 	}
 
-	// Token: 0x06003B0D RID: 15117 RVA: 0x000CB104 File Offset: 0x000C9304
+	// Token: 0x0600528B RID: 21131 RVA: 0x00139AC0 File Offset: 0x00137CC0
 	private void CreateJournalRoom(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		bool flag = false;
@@ -297,7 +297,7 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		biomeCreator.SetState(biomeController, BiomeBuildStateID.Failed, text);
 	}
 
-	// Token: 0x06003B0E RID: 15118 RVA: 0x000CB22C File Offset: 0x000C942C
+	// Token: 0x0600528C RID: 21132 RVA: 0x00139BE8 File Offset: 0x00137DE8
 	private RoomSetEntry[] GetPotentialRooms(BiomeCreator biomeCreator, BiomeController biomeController, Dictionary<Vector2Int, List<DoorLocation>> roomSizesThatFit, RoomTypeEntry roomRequirements, List<RoomSetEntry> standardRoomPool, out RoomType roomType, BiomeType biome, TierID tier)
 	{
 		roomType = RoomType.None;
@@ -324,7 +324,7 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		return array;
 	}
 
-	// Token: 0x06003B0F RID: 15119 RVA: 0x000CB2E8 File Offset: 0x000C94E8
+	// Token: 0x0600528D RID: 21133 RVA: 0x00139CA4 File Offset: 0x00137EA4
 	private static void ReplaceRoomAtTopIfNecessary(BiomeCreator biomeCreator, BiomeController biomeController)
 	{
 		List<GridPointManager> list = (from point in biomeCreator.GetGridPointsAtExtent(biomeController, RoomSide.Top, 0)
@@ -357,19 +357,19 @@ public class CreateRoomsBuildRule_Tower : CreateRoomsBuildRule
 		}
 	}
 
-	// Token: 0x04002CFA RID: 11514
+	// Token: 0x04003E04 RID: 15876
 	protected Bounds m_defaultBorder;
 
-	// Token: 0x04002CFB RID: 11515
+	// Token: 0x04003E05 RID: 15877
 	protected Bounds m_tier1Border;
 
-	// Token: 0x04002CFC RID: 11516
+	// Token: 0x04003E06 RID: 15878
 	protected Bounds m_tier2Border;
 
-	// Token: 0x04002CFD RID: 11517
+	// Token: 0x04003E07 RID: 15879
 	protected Bounds m_tier3Border;
 
-	// Token: 0x04002CFE RID: 11518
+	// Token: 0x04003E08 RID: 15880
 	private static readonly List<DoorLocation> m_topDoorList = new List<DoorLocation>
 	{
 		new DoorLocation(RoomSide.Top, 0),

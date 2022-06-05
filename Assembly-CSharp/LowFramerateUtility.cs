@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000800 RID: 2048
+// Token: 0x02000CC8 RID: 3272
 public class LowFramerateUtility : MonoBehaviour
 {
 }

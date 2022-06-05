@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace TweenRL
 {
-	// Token: 0x02000871 RID: 2161
+	// Token: 0x02000D8B RID: 3467
 	public class BezierHelperRL
 	{
-		// Token: 0x06004761 RID: 18273 RVA: 0x00100A03 File Offset: 0x000FEC03
+		// Token: 0x0600625E RID: 25182 RVA: 0x000364AA File Offset: 0x000346AA
 		private static double Factorial(int n)
 		{
 			if (BezierHelperRL.FactorialLookup == null)
@@ -25,7 +25,7 @@ namespace TweenRL
 			return BezierHelperRL.FactorialLookup[n];
 		}
 
-		// Token: 0x06004762 RID: 18274 RVA: 0x00100A38 File Offset: 0x000FEC38
+		// Token: 0x0600625F RID: 25183 RVA: 0x0016FEF8 File Offset: 0x0016E0F8
 		private static void CreateFactorialTable()
 		{
 			BezierHelperRL.FactorialLookup = new double[]
@@ -66,7 +66,7 @@ namespace TweenRL
 			};
 		}
 
-		// Token: 0x06004763 RID: 18275 RVA: 0x00100BF8 File Offset: 0x000FEDF8
+		// Token: 0x06006260 RID: 25184 RVA: 0x001700B8 File Offset: 0x0016E2B8
 		private static double Ni(int n, int i)
 		{
 			double num = BezierHelperRL.Factorial(n);
@@ -75,7 +75,7 @@ namespace TweenRL
 			return num / (num2 * num3);
 		}
 
-		// Token: 0x06004764 RID: 18276 RVA: 0x00100C20 File Offset: 0x000FEE20
+		// Token: 0x06006261 RID: 25185 RVA: 0x001700E0 File Offset: 0x0016E2E0
 		private static float Bernstein(int n, int i, float t)
 		{
 			double num;
@@ -99,7 +99,7 @@ namespace TweenRL
 			return (float)(BezierHelperRL.Ni(n, i) * num * num2);
 		}
 
-		// Token: 0x06004765 RID: 18277 RVA: 0x00100C90 File Offset: 0x000FEE90
+		// Token: 0x06006262 RID: 25186 RVA: 0x00170150 File Offset: 0x0016E350
 		public static Vector2 GetBezierPt(Vector2[] b, float elapsedTime)
 		{
 			int num = b.Length;
@@ -114,7 +114,7 @@ namespace TweenRL
 			return new Vector2(num2, num3);
 		}
 
-		// Token: 0x06004766 RID: 18278 RVA: 0x00100CF0 File Offset: 0x000FEEF0
+		// Token: 0x06006263 RID: 25187 RVA: 0x001701B0 File Offset: 0x0016E3B0
 		public static Vector2 GetBezierPt(List<Vector2> b, float elapsedTime)
 		{
 			int count = b.Count;
@@ -129,7 +129,7 @@ namespace TweenRL
 			return new Vector2(num, num2);
 		}
 
-		// Token: 0x06004767 RID: 18279 RVA: 0x00100D54 File Offset: 0x000FEF54
+		// Token: 0x06006264 RID: 25188 RVA: 0x00170214 File Offset: 0x0016E414
 		public static Vector2 GetBezierPt(float[] b, float elapsedTime)
 		{
 			int num = b.Length / 2;
@@ -146,7 +146,7 @@ namespace TweenRL
 			return new Vector2(num3, num4);
 		}
 
-		// Token: 0x04003C6B RID: 15467
+		// Token: 0x04005061 RID: 20577
 		private static double[] FactorialLookup;
 	}
 }

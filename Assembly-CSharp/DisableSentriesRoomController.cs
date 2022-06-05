@@ -1,22 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000604 RID: 1540
+// Token: 0x02000A25 RID: 2597
 public class DisableSentriesRoomController : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x170013D0 RID: 5072
-	// (get) Token: 0x060037EB RID: 14315 RVA: 0x000BF4AA File Offset: 0x000BD6AA
-	// (set) Token: 0x060037EC RID: 14316 RVA: 0x000BF4B2 File Offset: 0x000BD6B2
+	// Token: 0x17001B27 RID: 6951
+	// (get) Token: 0x06004E88 RID: 20104 RVA: 0x0002ABE9 File Offset: 0x00028DE9
+	// (set) Token: 0x06004E89 RID: 20105 RVA: 0x0002ABF1 File Offset: 0x00028DF1
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x060037ED RID: 14317 RVA: 0x000BF4BB File Offset: 0x000BD6BB
+	// Token: 0x06004E8A RID: 20106 RVA: 0x0002ABFA File Offset: 0x00028DFA
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = room;
 		this.Room.PlayerEnterRelay.AddListener(new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnter), false);
 	}
 
-	// Token: 0x060037EE RID: 14318 RVA: 0x000BF4E2 File Offset: 0x000BD6E2
+	// Token: 0x06004E8B RID: 20107 RVA: 0x0002AC21 File Offset: 0x00028E21
 	private void OnDestroy()
 	{
 		if (this.Room)
@@ -25,7 +25,7 @@ public class DisableSentriesRoomController : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x060037EF RID: 14319 RVA: 0x000BF510 File Offset: 0x000BD710
+	// Token: 0x06004E8C RID: 20108 RVA: 0x0012DD64 File Offset: 0x0012BF64
 	private void OnPlayerEnter(object sender, EventArgs args)
 	{
 		ISpawnController[] spawnControllers = this.Room.SpawnControllerManager.SpawnControllers;

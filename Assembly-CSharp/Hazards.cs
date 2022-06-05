@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x02000233 RID: 563
+// Token: 0x020003F0 RID: 1008
 [Serializable]
 public class Hazards
 {
-	// Token: 0x17000B32 RID: 2866
-	// (get) Token: 0x060016BC RID: 5820 RVA: 0x00046EBA File Offset: 0x000450BA
+	// Token: 0x17000E5F RID: 3679
+	// (get) Token: 0x0600206F RID: 8303 RVA: 0x0001131F File Offset: 0x0000F51F
 	public Dictionary<BiomeType, HazardType[]> HazardsInBiomeTable
 	{
 		get
@@ -19,7 +19,7 @@ public class Hazards
 		}
 	}
 
-	// Token: 0x060016BD RID: 5821 RVA: 0x00046ED0 File Offset: 0x000450D0
+	// Token: 0x06002070 RID: 8304 RVA: 0x000A4FA8 File Offset: 0x000A31A8
 	private void InitialiseHazardTable()
 	{
 		this.m_hazardsInBiomeTable = new Dictionary<BiomeType, HazardType[]>();
@@ -29,12 +29,12 @@ public class Hazards
 		}
 	}
 
-	// Token: 0x04001630 RID: 5680
+	// Token: 0x04001D48 RID: 7496
 	public HazardEntry[] HazardsInBiomes;
 
-	// Token: 0x04001631 RID: 5681
+	// Token: 0x04001D49 RID: 7497
 	public HazardType[] DefaultHazardsInBiomes;
 
-	// Token: 0x04001632 RID: 5682
+	// Token: 0x04001D4A RID: 7498
 	private Dictionary<BiomeType, HazardType[]> m_hazardsInBiomeTable;
 }

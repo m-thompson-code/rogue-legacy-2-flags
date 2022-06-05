@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020003F1 RID: 1009
+// Token: 0x02000698 RID: 1688
 public class BoundsObj : MonoBehaviour
 {
-	// Token: 0x17000F0B RID: 3851
-	// (get) Token: 0x0600255D RID: 9565 RVA: 0x0007B9B4 File Offset: 0x00079BB4
+	// Token: 0x170013B8 RID: 5048
+	// (get) Token: 0x060033C3 RID: 13251 RVA: 0x000DB8C8 File Offset: 0x000D9AC8
 	public float Top
 	{
 		get
@@ -19,8 +19,8 @@ public class BoundsObj : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000F0C RID: 3852
-	// (get) Token: 0x0600255E RID: 9566 RVA: 0x0007B9F0 File Offset: 0x00079BF0
+	// Token: 0x170013B9 RID: 5049
+	// (get) Token: 0x060033C4 RID: 13252 RVA: 0x000DB904 File Offset: 0x000D9B04
 	public float Bottom
 	{
 		get
@@ -33,8 +33,8 @@ public class BoundsObj : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000F0D RID: 3853
-	// (get) Token: 0x0600255F RID: 9567 RVA: 0x0007BA40 File Offset: 0x00079C40
+	// Token: 0x170013BA RID: 5050
+	// (get) Token: 0x060033C5 RID: 13253 RVA: 0x000DB954 File Offset: 0x000D9B54
 	public float Left
 	{
 		get
@@ -47,8 +47,8 @@ public class BoundsObj : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000F0E RID: 3854
-	// (get) Token: 0x06002560 RID: 9568 RVA: 0x0007BA90 File Offset: 0x00079C90
+	// Token: 0x170013BB RID: 5051
+	// (get) Token: 0x060033C6 RID: 13254 RVA: 0x000DB9A4 File Offset: 0x000D9BA4
 	public float Right
 	{
 		get
@@ -61,8 +61,8 @@ public class BoundsObj : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000F0F RID: 3855
-	// (get) Token: 0x06002561 RID: 9569 RVA: 0x0007BAE0 File Offset: 0x00079CE0
+	// Token: 0x170013BC RID: 5052
+	// (get) Token: 0x060033C7 RID: 13255 RVA: 0x000DB9F4 File Offset: 0x000D9BF4
 	public Vector3 Center
 	{
 		get
@@ -75,12 +75,12 @@ public class BoundsObj : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000F10 RID: 3856
-	// (get) Token: 0x06002562 RID: 9570 RVA: 0x0007BB0F File Offset: 0x00079D0F
-	// (set) Token: 0x06002563 RID: 9571 RVA: 0x0007BB17 File Offset: 0x00079D17
+	// Token: 0x170013BD RID: 5053
+	// (get) Token: 0x060033C8 RID: 13256 RVA: 0x0001C618 File Offset: 0x0001A818
+	// (set) Token: 0x060033C9 RID: 13257 RVA: 0x0001C620 File Offset: 0x0001A820
 	public Bounds Bounds { get; private set; }
 
-	// Token: 0x06002564 RID: 9572 RVA: 0x0007BB20 File Offset: 0x00079D20
+	// Token: 0x060033CA RID: 13258 RVA: 0x0001C629 File Offset: 0x0001A829
 	private IEnumerator Start()
 	{
 		GameObject rootObj = this.GetRoot(false);
@@ -107,10 +107,10 @@ public class BoundsObj : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04001F73 RID: 8051
+	// Token: 0x04002A0F RID: 10767
 	[SerializeField]
 	private bool m_drawBounds;
 
-	// Token: 0x04001F74 RID: 8052
+	// Token: 0x04002A10 RID: 10768
 	private bool m_boundsSet;
 }

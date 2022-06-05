@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Rewired.Demos
 {
-	// Token: 0x02000943 RID: 2371
+	// Token: 0x02000EE1 RID: 3809
 	[AddComponentMenu("")]
 	public class PlayerMouseSpriteExample : MonoBehaviour
 	{
-		// Token: 0x06005061 RID: 20577 RVA: 0x0011B88C File Offset: 0x00119A8C
+		// Token: 0x06006E3B RID: 28219 RVA: 0x0018A0CC File Offset: 0x001882CC
 		private void Awake()
 		{
 			this.pointer = UnityEngine.Object.Instantiate<GameObject>(this.pointerPrefab);
@@ -31,7 +31,7 @@ namespace Rewired.Demos
 			this.OnScreenPositionChanged(this.mouse.screenPosition);
 		}
 
-		// Token: 0x06005062 RID: 20578 RVA: 0x0011BA00 File Offset: 0x00119C00
+		// Token: 0x06006E3C RID: 28220 RVA: 0x0018A240 File Offset: 0x00188440
 		private void Update()
 		{
 			if (!ReInput.isReady)
@@ -53,7 +53,7 @@ namespace Rewired.Demos
 			}
 		}
 
-		// Token: 0x06005063 RID: 20579 RVA: 0x0011BAD8 File Offset: 0x00119CD8
+		// Token: 0x06006E3D RID: 28221 RVA: 0x0003C9AB File Offset: 0x0003ABAB
 		private void OnDestroy()
 		{
 			if (!ReInput.isReady)
@@ -63,7 +63,7 @@ namespace Rewired.Demos
 			this.mouse.ScreenPositionChangedEvent -= this.OnScreenPositionChanged;
 		}
 
-		// Token: 0x06005064 RID: 20580 RVA: 0x0011BAFC File Offset: 0x00119CFC
+		// Token: 0x06006E3E RID: 28222 RVA: 0x0018A318 File Offset: 0x00188518
 		private void CreateClickEffect(Color color)
 		{
 			GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(this.clickEffectPrefab);
@@ -73,66 +73,66 @@ namespace Rewired.Demos
 			UnityEngine.Object.Destroy(gameObject, 0.5f);
 		}
 
-		// Token: 0x06005065 RID: 20581 RVA: 0x0011BB8C File Offset: 0x00119D8C
+		// Token: 0x06006E3F RID: 28223 RVA: 0x0018A3A8 File Offset: 0x001885A8
 		private void OnScreenPositionChanged(Vector2 position)
 		{
 			Vector3 position2 = Camera.main.ScreenToWorldPoint(new Vector3(position.x, position.y, this.distanceFromCamera));
 			this.pointer.transform.position = position2;
 		}
 
-		// Token: 0x040042BA RID: 17082
+		// Token: 0x0400589D RID: 22685
 		[Tooltip("The Player that will control the mouse")]
 		public int playerId;
 
-		// Token: 0x040042BB RID: 17083
+		// Token: 0x0400589E RID: 22686
 		[Tooltip("The Rewired Action used for the mouse horizontal axis.")]
 		public string horizontalAction = "MouseX";
 
-		// Token: 0x040042BC RID: 17084
+		// Token: 0x0400589F RID: 22687
 		[Tooltip("The Rewired Action used for the mouse vertical axis.")]
 		public string verticalAction = "MouseY";
 
-		// Token: 0x040042BD RID: 17085
+		// Token: 0x040058A0 RID: 22688
 		[Tooltip("The Rewired Action used for the mouse wheel axis.")]
 		public string wheelAction = "MouseWheel";
 
-		// Token: 0x040042BE RID: 17086
+		// Token: 0x040058A1 RID: 22689
 		[Tooltip("The Rewired Action used for the mouse left button.")]
 		public string leftButtonAction = "MouseLeftButton";
 
-		// Token: 0x040042BF RID: 17087
+		// Token: 0x040058A2 RID: 22690
 		[Tooltip("The Rewired Action used for the mouse right button.")]
 		public string rightButtonAction = "MouseRightButton";
 
-		// Token: 0x040042C0 RID: 17088
+		// Token: 0x040058A3 RID: 22691
 		[Tooltip("The Rewired Action used for the mouse middle button.")]
 		public string middleButtonAction = "MouseMiddleButton";
 
-		// Token: 0x040042C1 RID: 17089
+		// Token: 0x040058A4 RID: 22692
 		[Tooltip("The distance from the camera that the pointer will be drawn.")]
 		public float distanceFromCamera = 1f;
 
-		// Token: 0x040042C2 RID: 17090
+		// Token: 0x040058A5 RID: 22693
 		[Tooltip("The scale of the sprite pointer.")]
 		public float spriteScale = 0.05f;
 
-		// Token: 0x040042C3 RID: 17091
+		// Token: 0x040058A6 RID: 22694
 		[Tooltip("The pointer prefab.")]
 		public GameObject pointerPrefab;
 
-		// Token: 0x040042C4 RID: 17092
+		// Token: 0x040058A7 RID: 22695
 		[Tooltip("The click effect prefab.")]
 		public GameObject clickEffectPrefab;
 
-		// Token: 0x040042C5 RID: 17093
+		// Token: 0x040058A8 RID: 22696
 		[Tooltip("Should the hardware pointer be hidden?")]
 		public bool hideHardwarePointer = true;
 
-		// Token: 0x040042C6 RID: 17094
+		// Token: 0x040058A9 RID: 22697
 		[NonSerialized]
 		private GameObject pointer;
 
-		// Token: 0x040042C7 RID: 17095
+		// Token: 0x040058AA RID: 22698
 		[NonSerialized]
 		private PlayerMouse mouse;
 	}

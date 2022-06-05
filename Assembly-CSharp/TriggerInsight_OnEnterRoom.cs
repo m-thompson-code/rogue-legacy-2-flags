@@ -1,22 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200036C RID: 876
+// Token: 0x020005EB RID: 1515
 public class TriggerInsight_OnEnterRoom : MonoBehaviour, IRoomConsumer
 {
-	// Token: 0x17000DFE RID: 3582
-	// (get) Token: 0x060020C7 RID: 8391 RVA: 0x00067087 File Offset: 0x00065287
-	// (set) Token: 0x060020C8 RID: 8392 RVA: 0x0006708F File Offset: 0x0006528F
+	// Token: 0x17001277 RID: 4727
+	// (get) Token: 0x06002E90 RID: 11920 RVA: 0x00019688 File Offset: 0x00017888
+	// (set) Token: 0x06002E91 RID: 11921 RVA: 0x00019690 File Offset: 0x00017890
 	public BaseRoom Room { get; private set; }
 
-	// Token: 0x060020C9 RID: 8393 RVA: 0x00067098 File Offset: 0x00065298
+	// Token: 0x06002E92 RID: 11922 RVA: 0x00019699 File Offset: 0x00017899
 	private void Awake()
 	{
 		this.m_insightEventArgs = new InsightObjectiveCompleteHUDEventArgs(this.m_insightToTrigger, !this.m_isResolved, 5f, null, null, null);
 		this.m_onPlayerEnterRoom = new Action<object, RoomViaDoorEventArgs>(this.OnPlayerEnterRoom);
 	}
 
-	// Token: 0x060020CA RID: 8394 RVA: 0x000670D0 File Offset: 0x000652D0
+	// Token: 0x06002E93 RID: 11923 RVA: 0x000C8134 File Offset: 0x000C6334
 	public void SetRoom(BaseRoom room)
 	{
 		this.Room = (room as Room);
@@ -31,7 +31,7 @@ public class TriggerInsight_OnEnterRoom : MonoBehaviour, IRoomConsumer
 		});
 	}
 
-	// Token: 0x060020CB RID: 8395 RVA: 0x00067124 File Offset: 0x00065324
+	// Token: 0x06002E94 RID: 11924 RVA: 0x000C8188 File Offset: 0x000C6388
 	private void OnPlayerEnterRoom(object sender, RoomViaDoorEventArgs eventArgs)
 	{
 		if (!this.m_isResolved)
@@ -50,7 +50,7 @@ public class TriggerInsight_OnEnterRoom : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x060020CC RID: 8396 RVA: 0x000671A0 File Offset: 0x000653A0
+	// Token: 0x06002E95 RID: 11925 RVA: 0x000196CF File Offset: 0x000178CF
 	private void OnDestroy()
 	{
 		if (this.Room != null)
@@ -59,17 +59,17 @@ public class TriggerInsight_OnEnterRoom : MonoBehaviour, IRoomConsumer
 		}
 	}
 
-	// Token: 0x04001C6D RID: 7277
+	// Token: 0x04002620 RID: 9760
 	[SerializeField]
 	private InsightType m_insightToTrigger;
 
-	// Token: 0x04001C6E RID: 7278
+	// Token: 0x04002621 RID: 9761
 	[SerializeField]
 	private bool m_isResolved;
 
-	// Token: 0x04001C6F RID: 7279
+	// Token: 0x04002622 RID: 9762
 	private InsightObjectiveCompleteHUDEventArgs m_insightEventArgs;
 
-	// Token: 0x04001C70 RID: 7280
+	// Token: 0x04002623 RID: 9763
 	private Action<object, RoomViaDoorEventArgs> m_onPlayerEnterRoom;
 }

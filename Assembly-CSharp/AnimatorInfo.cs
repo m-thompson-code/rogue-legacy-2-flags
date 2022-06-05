@@ -1,39 +1,39 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200078D RID: 1933
+// Token: 0x02000C4E RID: 3150
 public class AnimatorInfo
 {
-	// Token: 0x1700164D RID: 5709
-	// (get) Token: 0x06004162 RID: 16738 RVA: 0x000E93E4 File Offset: 0x000E75E4
-	// (set) Token: 0x06004163 RID: 16739 RVA: 0x000E93EC File Offset: 0x000E75EC
+	// Token: 0x17001E49 RID: 7753
+	// (get) Token: 0x06005ADF RID: 23263 RVA: 0x00031E02 File Offset: 0x00030002
+	// (set) Token: 0x06005AE0 RID: 23264 RVA: 0x00031E0A File Offset: 0x0003000A
 	public AnimatorInfo.AnimatorInfoParameterInternal[] Parameters { get; private set; }
 
-	// Token: 0x1700164E RID: 5710
-	// (get) Token: 0x06004164 RID: 16740 RVA: 0x000E93F5 File Offset: 0x000E75F5
-	// (set) Token: 0x06004165 RID: 16741 RVA: 0x000E93FD File Offset: 0x000E75FD
+	// Token: 0x17001E4A RID: 7754
+	// (get) Token: 0x06005AE1 RID: 23265 RVA: 0x00031E13 File Offset: 0x00030013
+	// (set) Token: 0x06005AE2 RID: 23266 RVA: 0x00031E1B File Offset: 0x0003001B
 	public int StartingStateHash { get; private set; }
 
-	// Token: 0x06004166 RID: 16742 RVA: 0x000E9406 File Offset: 0x000E7606
+	// Token: 0x06005AE3 RID: 23267 RVA: 0x00031E24 File Offset: 0x00030024
 	public bool HasState(Animator animator, string stateName)
 	{
 		return this.GetStateLayerIndex(animator, stateName) != -1;
 	}
 
-	// Token: 0x06004167 RID: 16743 RVA: 0x000E9416 File Offset: 0x000E7616
+	// Token: 0x06005AE4 RID: 23268 RVA: 0x00031E34 File Offset: 0x00030034
 	public bool HasState(Animator animator, int stateNameHash)
 	{
 		return this.GetStateLayerIndex(animator, stateNameHash) != -1;
 	}
 
-	// Token: 0x06004168 RID: 16744 RVA: 0x000E9428 File Offset: 0x000E7628
+	// Token: 0x06005AE5 RID: 23269 RVA: 0x001587E4 File Offset: 0x001569E4
 	public int GetStateLayerIndex(Animator animator, string stateName)
 	{
 		int stateNameHash = Animator.StringToHash(stateName);
 		return this.GetStateLayerIndex(animator, stateNameHash);
 	}
 
-	// Token: 0x06004169 RID: 16745 RVA: 0x000E9444 File Offset: 0x000E7644
+	// Token: 0x06005AE6 RID: 23270 RVA: 0x00158800 File Offset: 0x00156A00
 	public int GetStateLayerIndex(Animator animator, int stateNameHash)
 	{
 		if ((long)(this.m_stateIndex + 1) == (long)((ulong)this.m_stateCount))
@@ -69,7 +69,7 @@ public class AnimatorInfo
 		return animatorInfoStateInternal2.LayerIndex;
 	}
 
-	// Token: 0x0600416A RID: 16746 RVA: 0x000E952C File Offset: 0x000E772C
+	// Token: 0x06005AE7 RID: 23271 RVA: 0x001588E8 File Offset: 0x00156AE8
 	public bool HasParameter(int parameterNameHash)
 	{
 		int num = this.Parameters.Length;
@@ -83,13 +83,13 @@ public class AnimatorInfo
 		return false;
 	}
 
-	// Token: 0x0600416B RID: 16747 RVA: 0x000E9565 File Offset: 0x000E7765
+	// Token: 0x06005AE8 RID: 23272 RVA: 0x00031E44 File Offset: 0x00030044
 	public bool HasParameter(string parameterName)
 	{
 		return this.HasParameter(Animator.StringToHash(parameterName));
 	}
 
-	// Token: 0x0600416C RID: 16748 RVA: 0x000E9574 File Offset: 0x000E7774
+	// Token: 0x06005AE9 RID: 23273 RVA: 0x00158924 File Offset: 0x00156B24
 	public AnimatorInfo(Animator animator)
 	{
 		this.StartingStateHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
@@ -111,7 +111,7 @@ public class AnimatorInfo
 		this.m_states = new AnimatorInfo.AnimatorInfoStateInternal[this.m_stateCount];
 	}
 
-	// Token: 0x0600416D RID: 16749 RVA: 0x000E9644 File Offset: 0x000E7844
+	// Token: 0x06005AEA RID: 23274 RVA: 0x001589F4 File Offset: 0x00156BF4
 	private AnimatorInfo.AnimatorInfoStateInternal[] Expand(AnimatorInfo.AnimatorInfoStateInternal[] arr, uint cap, uint count)
 	{
 		AnimatorInfo.AnimatorInfoStateInternal[] array = new AnimatorInfo.AnimatorInfoStateInternal[cap];
@@ -124,41 +124,41 @@ public class AnimatorInfo
 		return array;
 	}
 
-	// Token: 0x04003924 RID: 14628
+	// Token: 0x04004BD4 RID: 19412
 	private AnimatorInfo.AnimatorInfoStateInternal[] m_states;
 
-	// Token: 0x04003925 RID: 14629
+	// Token: 0x04004BD5 RID: 19413
 	private int m_stateIndex = -1;
 
-	// Token: 0x04003926 RID: 14630
+	// Token: 0x04004BD6 RID: 19414
 	private uint m_stateCount;
 
-	// Token: 0x02000E35 RID: 3637
+	// Token: 0x02000C4F RID: 3151
 	private struct AnimatorInfoStateInternal
 	{
-		// Token: 0x04005732 RID: 22322
+		// Token: 0x04004BD9 RID: 19417
 		public int StateNameHash;
 
-		// Token: 0x04005733 RID: 22323
+		// Token: 0x04004BDA RID: 19418
 		public int LayerIndex;
 	}
 
-	// Token: 0x02000E36 RID: 3638
+	// Token: 0x02000C50 RID: 3152
 	public struct AnimatorInfoParameterInternal
 	{
-		// Token: 0x04005734 RID: 22324
+		// Token: 0x04004BDB RID: 19419
 		public int NameHash;
 
-		// Token: 0x04005735 RID: 22325
+		// Token: 0x04004BDC RID: 19420
 		public int DefaultInt;
 
-		// Token: 0x04005736 RID: 22326
+		// Token: 0x04004BDD RID: 19421
 		public bool DefaultBool;
 
-		// Token: 0x04005737 RID: 22327
+		// Token: 0x04004BDE RID: 19422
 		public float DefaultFloat;
 
-		// Token: 0x04005738 RID: 22328
+		// Token: 0x04004BDF RID: 19423
 		public AnimatorControllerParameterType ParameterType;
 	}
 }

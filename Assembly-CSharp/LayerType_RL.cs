@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200074E RID: 1870
+// Token: 0x02000C0C RID: 3084
 public static class LayerType_RL
 {
-	// Token: 0x06004116 RID: 16662 RVA: 0x000E66EC File Offset: 0x000E48EC
+	// Token: 0x06005A93 RID: 23187 RVA: 0x00155F30 File Offset: 0x00154130
 	public static LayerType ToEnum(string value)
 	{
 		if (value != null)
@@ -252,7 +252,7 @@ public static class LayerType_RL
 		return LayerType.None;
 	}
 
-	// Token: 0x06004117 RID: 16663 RVA: 0x000E6B80 File Offset: 0x000E4D80
+	// Token: 0x06005A94 RID: 23188 RVA: 0x001563C4 File Offset: 0x001545C4
 	public static string ToString(LayerType value)
 	{
 		switch (value)
@@ -319,90 +319,90 @@ public static class LayerType_RL
 		return "";
 	}
 
-	// Token: 0x04003514 RID: 13588
+	// Token: 0x04004790 RID: 18320
 	public const string Default = "Default";
 
-	// Token: 0x04003515 RID: 13589
+	// Token: 0x04004791 RID: 18321
 	public const string TransparentFX = "TransparentFX";
 
-	// Token: 0x04003516 RID: 13590
+	// Token: 0x04004792 RID: 18322
 	public const string Ignore_Raycast = "Ignore Raycast";
 
-	// Token: 0x04003517 RID: 13591
+	// Token: 0x04004793 RID: 18323
 	public const string Water = "Water";
 
-	// Token: 0x04003518 RID: 13592
+	// Token: 0x04004794 RID: 18324
 	public const string UI = "UI";
 
-	// Token: 0x04003519 RID: 13593
+	// Token: 0x04004795 RID: 18325
 	public const string Terrain_Hitbox_ItemDrop = "Terrain_Hitbox_HitsPlayerOnly";
 
-	// Token: 0x0400351A RID: 13594
+	// Token: 0x04004796 RID: 18326
 	public const string Platform_CollidesWithAll = "Platform_CollidesWithAll";
 
-	// Token: 0x0400351B RID: 13595
+	// Token: 0x04004797 RID: 18327
 	public const string Platform_CollidesWithPlayer = "Platform_CollidesWithPlayer";
 
-	// Token: 0x0400351C RID: 13596
+	// Token: 0x04004798 RID: 18328
 	public const string Platform_CollidesWithEnemy = "Platform_CollidesWithEnemy";
 
-	// Token: 0x0400351D RID: 13597
+	// Token: 0x04004799 RID: 18329
 	public const string Platform_OneWay = "Platform_OneWay";
 
-	// Token: 0x0400351E RID: 13598
+	// Token: 0x0400479A RID: 18330
 	public const string Prop_Hitbox = "Prop_Hitbox";
 
-	// Token: 0x0400351F RID: 13599
+	// Token: 0x0400479B RID: 18331
 	public const string Terrain_Hitbox = "Terrain_Hitbox";
 
-	// Token: 0x04003520 RID: 13600
+	// Token: 0x0400479C RID: 18332
 	public const string LevelBounds = "LevelBounds";
 
-	// Token: 0x04003521 RID: 13601
+	// Token: 0x0400479D RID: 18333
 	public const string HELPER_NOTOUCH = "HELPER_NOTOUCH";
 
-	// Token: 0x04003522 RID: 13602
+	// Token: 0x0400479E RID: 18334
 	public const string Weapon_Hitbox = "Weapon_Hitbox";
 
-	// Token: 0x04003523 RID: 13603
+	// Token: 0x0400479F RID: 18335
 	public const string Weapon_Hitbox_HitsPlayerOnly = "Weapon_Hitbox_HitsPlayerOnly";
 
-	// Token: 0x04003524 RID: 13604
+	// Token: 0x040047A0 RID: 18336
 	public const string Terrain_Hitbox_HitsPlatform = "Terrain_Hitbox_HitsPlatform";
 
-	// Token: 0x04003525 RID: 13605
+	// Token: 0x040047A1 RID: 18337
 	public const string Foreground_Persp = "Foreground_Persp";
 
-	// Token: 0x04003526 RID: 13606
+	// Token: 0x040047A2 RID: 18338
 	public const string Body_Hitbox_ForPlayerOnly = "Body_Hitbox_ForPlayerOnly";
 
-	// Token: 0x04003527 RID: 13607
+	// Token: 0x040047A3 RID: 18339
 	public const string Body_Hitbox = "Body_Hitbox";
 
-	// Token: 0x04003528 RID: 13608
+	// Token: 0x040047A4 RID: 18340
 	public const string Background_Persp_Near = "Background_Persp_Near";
 
-	// Token: 0x04003529 RID: 13609
+	// Token: 0x040047A5 RID: 18341
 	public const string Foreground_Ortho = "Foreground_Ortho";
 
-	// Token: 0x0400352A RID: 13610
+	// Token: 0x040047A6 RID: 18342
 	public const string Background_Ortho = "Background_Ortho";
 
-	// Token: 0x0400352B RID: 13611
+	// Token: 0x040047A7 RID: 18343
 	public const string Foreground_Lights = "Foreground_Lights";
 
-	// Token: 0x0400352C RID: 13612
+	// Token: 0x040047A8 RID: 18344
 	public const string Background_Persp_Far = "Background_Persp_Far";
 
-	// Token: 0x0400352D RID: 13613
+	// Token: 0x040047A9 RID: 18345
 	public const string TraitMask = "TraitMask";
 
-	// Token: 0x0400352E RID: 13614
+	// Token: 0x040047AA RID: 18346
 	public const string Solo = "Solo";
 
-	// Token: 0x0400352F RID: 13615
+	// Token: 0x040047AB RID: 18347
 	public const string Character = "Character";
 
-	// Token: 0x04003530 RID: 13616
+	// Token: 0x040047AC RID: 18348
 	public const string TerrainHazard_Hitbox = "TerrainHazard_Hitbox";
 }

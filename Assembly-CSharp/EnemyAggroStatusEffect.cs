@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x020002F9 RID: 761
+// Token: 0x02000512 RID: 1298
 public class EnemyAggroStatusEffect : BaseStatusEffect
 {
-	// Token: 0x17000D30 RID: 3376
-	// (get) Token: 0x06001E5B RID: 7771 RVA: 0x00062A0E File Offset: 0x00060C0E
+	// Token: 0x170010FD RID: 4349
+	// (get) Token: 0x060029F4 RID: 10740 RVA: 0x00017831 File Offset: 0x00015A31
 	public override StatusEffectType StatusEffectType
 	{
 		get
@@ -15,8 +15,8 @@ public class EnemyAggroStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x17000D31 RID: 3377
-	// (get) Token: 0x06001E5C RID: 7772 RVA: 0x00062A15 File Offset: 0x00060C15
+	// Token: 0x170010FE RID: 4350
+	// (get) Token: 0x060029F5 RID: 10741 RVA: 0x00017838 File Offset: 0x00015A38
 	public override float StartingDurationOverride
 	{
 		get
@@ -25,14 +25,14 @@ public class EnemyAggroStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E5D RID: 7773 RVA: 0x00062A1C File Offset: 0x00060C1C
+	// Token: 0x060029F6 RID: 10742 RVA: 0x0001783F File Offset: 0x00015A3F
 	protected override void Awake()
 	{
 		base.Awake();
 		this.m_onEnemyHit = new Action<object, CharacterHitEventArgs>(this.OnEnemyHit);
 	}
 
-	// Token: 0x06001E5E RID: 7774 RVA: 0x00062A36 File Offset: 0x00060C36
+	// Token: 0x060029F7 RID: 10743 RVA: 0x00017859 File Offset: 0x00015A59
 	protected override IEnumerator StartEffectCoroutine(IDamageObj caster, bool justCasted)
 	{
 		this.m_charController.CharacterHitResponse.OnCharacterHitRelay.AddListener(this.m_onEnemyHit, false);
@@ -68,14 +68,14 @@ public class EnemyAggroStatusEffect : BaseStatusEffect
 		yield break;
 	}
 
-	// Token: 0x06001E5F RID: 7775 RVA: 0x00062A45 File Offset: 0x00060C45
+	// Token: 0x060029F8 RID: 10744 RVA: 0x00017868 File Offset: 0x00015A68
 	public override void StopEffect(bool interrupted = false)
 	{
 		base.StopEffect(interrupted);
 		this.m_charController.CharacterHitResponse.OnCharacterHitRelay.RemoveListener(this.m_onEnemyHit);
 	}
 
-	// Token: 0x06001E60 RID: 7776 RVA: 0x00062A6A File Offset: 0x00060C6A
+	// Token: 0x060029F9 RID: 10745 RVA: 0x0001788D File Offset: 0x00015A8D
 	private void OnEnemyHit(object sender, CharacterHitEventArgs args)
 	{
 		if (args != null && args.Attacker.BaseDamage > 0f)
@@ -84,7 +84,7 @@ public class EnemyAggroStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x06001E61 RID: 7777 RVA: 0x00062A9C File Offset: 0x00060C9C
+	// Token: 0x060029FA RID: 10746 RVA: 0x000178BF File Offset: 0x00015ABF
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -94,6 +94,6 @@ public class EnemyAggroStatusEffect : BaseStatusEffect
 		}
 	}
 
-	// Token: 0x04001BB1 RID: 7089
+	// Token: 0x04002431 RID: 9265
 	private Action<object, CharacterHitEventArgs> m_onEnemyHit;
 }
