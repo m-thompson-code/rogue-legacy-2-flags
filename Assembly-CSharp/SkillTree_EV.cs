@@ -1,0 +1,157 @@
+﻿using System;
+using UnityEngine;
+
+// Token: 0x0200007A RID: 122
+public class SkillTree_EV
+{
+	// Token: 0x060001B8 RID: 440 RVA: 0x00011384 File Offset: 0x0000F584
+	public static int GetMaxCharonBonusLevel()
+	{
+		int num = 25;
+		SoulShopObj soulShopObj = SaveManager.ModeSaveData.GetSoulShopObj(SoulShopType.MaxCharonDonationFlat);
+		if (!soulShopObj.IsNativeNull())
+		{
+			num += Mathf.RoundToInt(soulShopObj.CurrentStatGain);
+		}
+		return Mathf.Clamp(num, 0, SkillTree_EV.CHARON_GOLD_STAT_BONUS_MILESTONES.Length);
+	}
+
+	// Token: 0x060001B9 RID: 441 RVA: 0x000113C7 File Offset: 0x0000F5C7
+	public static int GetMaxCharonAcceptableGold()
+	{
+		return SkillTree_EV.CHARON_GOLD_STAT_BONUS_MILESTONES[SkillTree_EV.GetMaxCharonBonusLevel() - 1];
+	}
+
+	// Token: 0x040004D2 RID: 1234
+	public const byte SKILLS_UNLOCKED_BEFORE_LABOUR_COSTS_START = 20;
+
+	// Token: 0x040004D3 RID: 1235
+	public const float GLOBAL_SKILL_COST_APPRECIATION_FLAT = 14f;
+
+	// Token: 0x040004D4 RID: 1236
+	public const int GLOBAL_SKILL_COST_ROUNDING = 5;
+
+	// Token: 0x040004D5 RID: 1237
+	public const int GOLD_SAVED_STARTING_CAP = 1000;
+
+	// Token: 0x040004D6 RID: 1238
+	public const float GOLD_SAVED_STARTING_SAVE_AMOUNT_MOD = 0.1f;
+
+	// Token: 0x040004D7 RID: 1239
+	public static int[] CHARON_GOLD_STAT_BONUS_MILESTONES = new int[]
+	{
+		7500,
+		20150,
+		38250,
+		62100,
+		92000,
+		128250,
+		171150,
+		221000,
+		278100,
+		342750,
+		415250,
+		495900,
+		585000,
+		682850,
+		789750,
+		906000,
+		1031900,
+		1167750,
+		1313850,
+		1470500,
+		1638000,
+		1816650,
+		2006750,
+		2208600,
+		2422500,
+		2648750,
+		2887650,
+		3139500,
+		3404600,
+		3683250,
+		3975750,
+		4282400,
+		4603500,
+		4939350,
+		5290250,
+		5656500,
+		6038400,
+		6436250,
+		6850350,
+		7281000,
+		7728500,
+		8193150,
+		8675250,
+		9175100,
+		9693000,
+		10229250,
+		10784150,
+		11358000,
+		11951100,
+		12563750,
+		13196250,
+		13848900,
+		14522000,
+		15215850,
+		15930750,
+		16667000,
+		17424900,
+		18204750,
+		19006850,
+		19831500,
+		20679000,
+		21549650,
+		22443750,
+		23361600,
+		24303500,
+		25269750,
+		26260650,
+		27276500,
+		28317600,
+		29384250,
+		30476750,
+		31595400,
+		32740500,
+		33912350,
+		35111250,
+		36337500,
+		37591400,
+		38873250,
+		40183350,
+		41522000,
+		42889500,
+		44286150,
+		45712250,
+		47168100,
+		48654000,
+		50170250,
+		51717150,
+		53295000,
+		54904100,
+		56544750,
+		58217250,
+		59921900,
+		61659000,
+		63428850,
+		65231750,
+		67068000,
+		68937900,
+		70841750,
+		72779850,
+		74752500,
+		76760000
+	};
+
+	// Token: 0x040004D8 RID: 1240
+	public const int CHARON_GOLD_STAT_BONUS_AMOUNT = 1;
+
+	// Token: 0x040004D9 RID: 1241
+	private const int CHARON_GOLD_STAT_BONUS_STARTING_MAX_LEVEL = 25;
+
+	// Token: 0x040004DA RID: 1242
+	public const int CHARON_GOLD_RUNE_WEIGHT_BONUS_AMOUNT = 2;
+
+	// Token: 0x040004DB RID: 1243
+	public const int CHARON_GOLD_ARMOR_BONUS_AMOUNT = 2;
+}
